@@ -16,16 +16,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
-<script>window.WH_BUILD = 'f1c7cd549c';</script>
+<script>window.WH_BUILD = 'cff40410c1';</script>
 </head>
 <body>
 <style>
 /* Waaagh Codex: a drill-down reference sheet.
    Armies -> army (search + menu) -> Units | Stratagems | Ranged | Melee | Abilities | Rules
-   -> unit datasheet. A sticky top bar (back, centred title, search) can carry column labels;
-   the controls you tap while reading (datasheet section jumps, stratagem filters) sit in a
-   bar at the bottom, under your thumb. One dark graphite look; orange marks what you can
-   tap and what matters. */
+   -> unit datasheet, which fits one screen with the long text folded away. A sticky top bar
+   (back, centred title, search) can carry column labels; the stratagem filters sit in a bar
+   at the bottom, under your thumb. One dark graphite look; orange marks what you can tap
+   and what matters. */
 :root{
   color-scheme: dark;
   --bg:#161616;
@@ -113,13 +113,9 @@ summary::-webkit-details-marker{display:none}
 .icon-btn svg{width:20px; height:20px}
 .subbar{padding-bottom:5px}
 
-/* ---------- bottom bar: datasheet jumps, stratagem filters ---------- */
+/* ---------- bottom bar: stratagem filters ---------- */
 .bbar{position:fixed; left:0; right:0; bottom:0; z-index:20; background:var(--bg); border-top:1px solid var(--line);
   padding:6px max(16px, env(safe-area-inset-right, 0px)) calc(6px + var(--safe-b)) max(16px, env(safe-area-inset-left, 0px))}
-.jump{display:grid; grid-auto-flow:column; grid-auto-columns:minmax(0,1fr); gap:2px}
-.jump button{min-height:40px; border-radius:7px; font:700 13px/1 var(--f-head); letter-spacing:.05em; text-transform:uppercase; color:var(--muted); text-align:center}
-.jump button[aria-current="true"]{color:var(--accent); background:var(--surface)}
-.jump button:active{background:var(--surface2); color:var(--fg)}
 
 /* ---------- lists ---------- */
 .list{border-top:1px solid var(--line)}
@@ -168,36 +164,54 @@ summary::-webkit-details-marker{display:none}
 
 /* ---------- datasheet ---------- */
 .ds-meta{display:flex; flex-wrap:wrap; gap:2px 10px; align-items:baseline; padding:8px 0 6px; font-size:13px; color:var(--muted)}
-.statwrap{scroll-margin-top:calc(var(--top) + 4px); margin-bottom:10px}
+.statwrap{scroll-margin-top:calc(var(--top) + 4px)}
 .st{display:grid; align-items:stretch; border-radius:6px; overflow:hidden; background:var(--surface)}
 .st > span{text-align:center; padding:5px 0; font:700 18px/1 var(--f-head); border-top:1px solid var(--line); min-width:0; font-variant-numeric:tabular-nums}
 .st > span.h{font:600 11px/1 var(--f-head); letter-spacing:.1em; color:var(--muted); border-top:0; padding:6px 0 4px; background:var(--surface2)}
 .st > span.n{text-align:left; padding-left:8px; font:600 14px/1.15 var(--f-head); display:flex; align-items:center; letter-spacing:.01em}
 .def{margin-top:6px; border-left:2px solid var(--accent); padding:1px 0 1px 8px; font-size:13px; line-height:1.4}
 .def.dmg{border-left-color:var(--muted)}
-.meta-lines{margin-top:6px; font-size:12.5px; color:var(--muted); line-height:1.35}
-.meta-lines .m{display:flex; flex-wrap:wrap; gap:0 12px}
-.fold{border-top:1px solid var(--line); scroll-margin-top:calc(var(--top) + 4px)}
-.fold > summary{display:flex; align-items:center; gap:8px; min-height:40px; padding:4px 0}
-.fold > summary h2{flex:1; font:700 15px/1.1 var(--f-head); letter-spacing:.06em; text-transform:uppercase}
-.fold > summary .c{font:600 12px var(--f-head); color:var(--muted)}
-.fold > summary .chev{width:16px; height:16px}
-.fold > .body{padding-bottom:10px}
-.rulesline{font-size:14.5px; line-height:1.7}
-.rulesline .link{white-space:nowrap}
+.dsl{margin-top:5px; font-size:12.5px; color:var(--muted); line-height:1.35}
+.dsec{margin-top:12px}
+.dsec > .lbl{padding-bottom:3px}
+.dline{padding:7px 2px; border-bottom:1px solid var(--line); font-size:14px; line-height:1.55}
+.dline .link{white-space:nowrap}
+.dsec > .dline:first-child{border-top:1px solid var(--line)}
+.dsec + .dsec{margin-top:0}
+.dsec + .dsec > .dline:first-child{border-top:0}
+/* one-line rows that open: abilities, keywords */
+.abl{border-top:1px solid var(--line)}
+.ab{border-bottom:1px solid var(--line)}
+.ab > summary{display:flex; align-items:center; gap:8px; min-height:38px; padding:5px 2px}
+.ab > summary:active{background:var(--surface)}
+.ab > summary .an{flex:1; min-width:0; display:flex; flex-wrap:wrap; align-items:baseline; gap:0 8px}
+.ab > summary b{font:700 15.5px/1.2 var(--f-head); letter-spacing:.02em}
+.ab > summary b.kh{font:600 11px/1.2 var(--f-head); letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
+.ab > summary small{font:600 11px var(--f-head); letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+.ab > summary .aw{font-size:12.5px; color:var(--muted); white-space:nowrap; text-align:right}
+.ab[open] > summary b{color:var(--accent)}
+.ab > .body{padding:0 2px 10px; font-size:14.5px; line-height:1.42}
+.ab .abt{font-size:12.5px; color:var(--muted); margin-bottom:3px}
 
 /* weapon tables: one weapon = one hairline-separated row (stats + a quiet keyword line).
    Shading means one thing only: these profiles are one weapon, pick one.
    Rules that change the attacks are footnotes under the table. */
 .wt{display:grid}
 .wr, .wh{display:grid; align-items:baseline; column-gap:2px}
-.ranged .wr, .wh.ranged{grid-template-columns:minmax(0,1fr) 32px 44px 28px 26px 28px 36px}
+.ranged .wr, .wh.ranged, .both .wr, .wh.both{grid-template-columns:minmax(0,1fr) 32px 44px 28px 26px 28px 36px}
 .melee .wr, .wh.melee{grid-template-columns:minmax(0,1fr) 44px 28px 26px 28px 36px}
 .wh{padding:0 6px 3px; font:600 11px/1 var(--f-head); letter-spacing:.1em; color:var(--muted); text-align:center; text-transform:uppercase}
 .wh .n{text-align:left}
-.fold .wh{position:sticky; top:var(--top); z-index:3; background:var(--bg); padding-top:5px; box-shadow:0 1px 0 var(--line)}
+.wh.both{position:sticky; top:var(--top); z-index:3; background:var(--bg); padding-top:8px; box-shadow:0 1px 0 var(--line)}
+.wh.both .n{color:var(--fg)}
+.anc{scroll-margin-top:var(--top)}
+.wt.both{margin-top:12px}
+.use{padding:4px 6px 3px; font-size:12.5px; line-height:1.35; color:var(--fg2)}
+.use b{color:var(--accent); font-weight:600}
+.use b.m{color:var(--fg)}
+.mod .sc{font:600 10.5px var(--f-head); letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-right:5px}
 .wb{padding:6px 6px 5px; border-top:1px solid var(--line)}
-.wh + .wb, .who + .wb, .wb:first-child, .wb.g, .wb.g + .wb{border-top:0}
+.wh + .wb, .who + .wb, .use + .wb, .wb:first-child, .wb.g, .wb.g + .wb{border-top:0}
 .wb.g{background:var(--surface); border-radius:6px; margin:3px 0}
 .wr > span{font:700 15.5px/1.25 var(--f-head); text-align:center; min-width:0; font-variant-numeric:tabular-nums}
 .wr > span.n{text-align:left; padding-right:6px; font:600 15px/1.2 var(--f-head); letter-spacing:.01em}
@@ -336,7 +350,7 @@ summary::-webkit-details-marker{display:none}
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="data.js?v=f1c7cd549c"></script>
+<script src="data.js?v=cff40410c1"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -367,9 +381,6 @@ const arrow = '<svg class="go" aria-hidden="true"><use href="#i-down"/></svg>';
 /* ---------- state ---------- */
 const isObj = v => !!v && typeof v === 'object' && !Array.isArray(v);
 const hasOwn = (o, k) => Object.prototype.hasOwnProperty.call(o, k);
-const prefs = { folds:{} };                                                  // datasheet sections you folded
-{ const p = store.get('wh-prefs', {}); if(isObj(p) && isObj(p.folds)) prefs.folds = p.folds; }
-const savePrefs = () => store.set('wh-prefs', { folds:prefs.folds });
 // filters, open cards and search text last for this session, so an update reload keeps them
 const sess = isObj(session.get('wh-session')) ? session.get('wh-session') : {};
 const filt = Object.assign({ phase:'all', turn:'all' }, isObj(sess.filt) ? sess.filt : {});
@@ -685,9 +696,10 @@ function searchIndex(){
       hay:hay(s.name, 'stratagem', s.when, s.target, s.effect, s.src, s.src === 'Core' ? 'core' : 'detachment', s.phases.map(p => PHASE_NAME[p]).join(' '), TURN_NAME[s.turn], s.turn === 'opp' ? 'opponent' : ''), act:{ strat:s.id } });
   }
   const f = factionOf(a);
-  for(const r of f.armyRules) add({ kind:'Rules', title:r.name, sub:f.name + ' army rule' + (r.tag ? ' · ' + r.tag : ''), hay:hay(r.name, r.text, r.tag, 'army rule', (f.aliases || []).map(x => x[0].source).join(' ')), act:{ rule:r.name } });
+  const tableText = t => (t || []).map(r => r.join(' ')).join(' ');
+  for(const r of f.armyRules) add({ kind:'Rules', title:r.name, sub:f.name + ' army rule' + (r.tag ? ' · ' + r.tag : ''), hay:hay(r.name, r.text, tableText(r.table), r.tag, 'army rule', (f.aliases || []).map(x => x[0].source).join(' ')), act:{ rule:r.name } });
   for(const d of detachmentsOf(a)){
-    if(d.rule) add({ kind:'Rules', title:d.rule.name, sub:d.name + ' detachment rule', hay:hay(d.rule.name, d.rule.text, d.name, 'detachment rule'), act:{ rule:d.rule.name } });
+    if(d.rule) add({ kind:'Rules', title:d.rule.name, sub:d.name + ' detachment rule', hay:hay(d.rule.name, d.rule.text, tableText(d.rule.table), d.name, 'detachment rule'), act:{ rule:d.rule.name } });
     for(const e of d.enhancements){
       const u = a.units.find(x => x.enhancement === e.name);
       add({ kind:'Rules', title:e.name, sub:'Enhancement · ' + d.name + (u ? ' · on ' + u.name : e.pts ? ' · ' + e.pts + ' pts' : ''), hay:hay(e.name, e.text, d.name, 'enhancement'), act:{ enh:d.id + '|' + e.name } });
@@ -764,7 +776,7 @@ const colHeader = kind => '<div class="wh ' + kind + '"><span class="n">Weapon</
 function modFrom(m, u){
   const link = (attr, val, label) => '<span class="link" role="button" tabindex="0" data-' + attr + '="' + esc(val) + '">' + esc(label) + '</span>';
   if(m.rule) return link('rule', m.rule, m.from);
-  if(m.src && m.src !== u) return link('unit', m.src.id, m.from + ', ' + (m.src.short || m.src.name));
+  if(m.src && m.src !== u) return link('unit', m.src.id, m.from);   // the condition already names the unit
   const ab = (m.src || u).abilities.find(a => a.name === m.from);
   return ab ? link('ability', abilityKey(ab), m.from) : esc(m.from);
 }
@@ -790,7 +802,7 @@ function weaponBlock(it, keys, mods, u){
     // Hunter weapons: the profile depends on the target; rules that add to Hunter attacks are built in
     const byTarget = it.profiles.some(p => p.hunter);
     const hunterMods = mods.filter(m => m.hunter);
-    return '<div class="wn">' + esc(it.group) + count(it.n) + '<small>' + (byTarget ? 'pick by target' : 'one of ' + it.profiles.length) + '</small></div>' +
+    return '<div class="wn">' + esc(it.group) + count(it.n) + '<small>' + (byTarget ? 'pick one by target' : 'pick one profile') + '</small></div>' +
       it.profiles.map(p => {
         if(!byTarget) return row(prof(p.name), plainCells(p), true) + kwl(p);
         if(!p.hunter) return row(prof(p.name) + '<span class="tq">vs others</span>', plainCells(p), true) + kwl(p);
@@ -800,93 +812,154 @@ function weaponBlock(it, keys, mods, u){
   }
   return row(esc(w0.name) + count(w0.n), plainCells(w0)) + kwl(w0);
 }
-// footnotes: rules with the same condition share one line
+// footnotes: rules with the same condition share one line; a footnote that changes only
+// ranged or only melee attacks on a sheet with both says which
 function modLines(mods, u, hasHunter){
   const groups = new Map();
   for(const m of mods){ const k = norm(m.when); if(!groups.has(k)) groups.set(k, { when:m.when, items:[] }); groups.get(k).items.push(m); }
-  return [...groups.values()].map(g => '<div class="mod"><b>' + esc(g.when) + ':</b> ' + g.items.map(m =>
-    (m.who ? esc(m.who) + ' ' : '') + esc(m.note) + (m.hunter && hasHunter ? ', already in the Hunter rows' : '') + ' <span class="from">(' + modFrom(m, u) + ')</span>').join(' · ') + '</div>').join('');
+  return [...groups.values()].map(g => '<div class="mod">' + (g.items.every(m => m.scope === g.items[0].scope) && g.items[0].scope ? '<i class="sc">' + g.items[0].scope + '</i>' : '') +
+    '<b>' + esc(g.when) + ':</b> ' + g.items.map(m => (m.scope && !g.items.every(x => x.scope === m.scope) ? '<i class="sc">' + m.scope + '</i>' : '') + (m.who ? esc(m.who) + ' ' : '') + esc(m.note) + (m.hunter && hasHunter ? ', already in the Hunter rows' : '') +
+    ' <span class="from">(' + modFrom(m, u) + ')</span>').join(' · ') + '</div>').join('');
 }
-function weaponTable(list, kind, mods, u, withHeader){
-  const keys = kind === 'ranged' ? ['range','A','BS','S','AP','D'] : ['A','WS','S','AP','D'];
-  const items = weaponItems(list);
-  const combined = new Set(items.map(it => it.who || '')).size > 1;
-  const hasHunter = (list || []).some(w => w.hunter) && mods.some(m => m.hunter);
-  const notes = mods.filter(m => !(m.weapon && m.set));
-  let h = '<div class="wt ' + kind + '">' + (withHeader ? colHeader(kind) : ''), lastWho = null;
-  for(const it of items){
-    if(combined && it.who !== lastWho){ h += '<div class="who">' + esc(it.who) + '</div>'; lastWho = it.who; }
-    h += '<div class="wb' + (it.group ? ' g' : '') + '">' + weaponBlock(it, keys, mods, u) + '</div>';
+const RANGED_KEYS = ['range','A','BS','S','AP','D'], MELEE_KEYS = ['A','WS','S','AP','D'];
+/* Which weapons a model uses together and which are a choice (core rules):
+   - ranged: a model shoots with all its ranged weapons, except that a model that is not a
+     MONSTER or VEHICLE uses either its close-quarters (pistol) weapons or its other ones
+   - melee: a model fights with one melee weapon, plus all of its [EXTRA ATTACKS] weapons
+   - a weapon with several profiles: one profile per attack (shown as a shaded block)
+   The gear lists in data.js say which models line carries which weapons. */
+const itemName = it => it.group || it.profiles[0].name;
+const isEA = it => it.profiles.some(w => (w.kw || []).some(k => /^extra attacks/i.test(k)));
+const isCQ = it => it.profiles.some(w => (w.kw || []).some(k => /^(close-quarters|pistol)/i.test(k)));
+const orList = n => n.length < 2 ? n.join('') : n.slice(0, -1).join(', ') + ' or ' + n[n.length - 1];
+const andList = n => n.length < 2 ? n.join('') : n.slice(0, -1).join(', ') + ' and ' + n[n.length - 1];
+function useSentence(set, kind, u){
+  const nm = list => list.map(it => esc(itemName(it)));
+  if(kind === 'ranged'){
+    const cq = set.filter(isCQ), rest = set.filter(it => !isCQ(it));
+    if(cq.length && rest.length && !hasKw(u, 'Monster') && !hasKw(u, 'Vehicle'))
+      return 'Shoots with its ' + orList(nm(cq)) + ' <b>or</b> its ' + andList(nm(rest)) + ', <b>not both</b>.';
+    return '<b>Shoots with ' + (set.length === 2 ? 'both' : 'all of these') + '</b>.';
   }
+  const ea = set.filter(isEA), other = set.filter(it => !isEA(it));
+  const extra = ea.length ? ', <b>plus</b> ' + andList(nm(ea)) + ' (extra attacks)' : '';
+  if(other.length > 1) return 'Fights with ' + orList(nm(other)) + ', <b>only one</b>' + extra + '.';
+  if(other.length === 1) return '<b>Fights with both</b>: ' + nm(other)[0] + extra.replace(', <b>plus</b>', ' plus') + '.';
+  return '<b>Fights with all of these</b> (extra attacks).';
+}
+// the line under a weapons heading that says which of them a model uses
+function useLine(items, kind, u){
+  if(items.length < 2 || !u.gear) return '';
+  const lines = u.gear.map((g, i) => ({ who:u.models[i].replace(/^\d+× /, ''), set:items.filter(it => g.includes(itemName(it))) })).filter(l => l.set.length);
+  const multi = lines.filter(l => l.set.length > 1);
+  if(!multi.length) return lines.length > 1 ? '<p class="use">Different models carry these (see ×).</p>' : '';
+  const key = l => l.set.map(itemName).join('|');
+  const kinds = [...new Map(multi.map(l => [key(l), l])).values()];
+  if(kinds.length === 1 && multi.length === lines.length) return '<p class="use">' + useSentence(kinds[0].set, kind, u) + '</p>';
+  return kinds.map(l => '<p class="use"><b class="m">' + esc(l.who) + ':</b> ' + useSentence(l.set, kind, u) + '</p>').join('');
+}
+function weaponRows(list, keys, mods, u, kind){
+  const items = weaponItems(list);
+  const whos = [...new Set(items.map(it => it.who || ''))];
+  let h = '';
+  for(const who of whos){
+    const mine = items.filter(it => (it.who || '') === who);
+    if(whos.length > 1) h += '<div class="who">' + esc(who) + '</div>';
+    h += useLine(mine, kind, u);
+    for(const it of mine) h += '<div class="wb' + (it.group ? ' g' : '') + '">' + weaponBlock(it, keys, mods, u) + '</div>';
+  }
+  return h;
+}
+// one kind of weapon for one unit (the Ranged and Melee screens)
+function weaponTable(list, kind, mods, u){
+  const notes = mods.filter(m => !(m.weapon && m.set));
+  const hasHunter = (list || []).some(w => w.hunter) && mods.some(m => m.hunter);
+  return '<div class="wt ' + kind + '">' + weaponRows(list, kind === 'ranged' ? RANGED_KEYS : MELEE_KEYS, mods, u, kind) +
+    (notes.length ? '<div class="mods">' + modLines(notes, u, hasHunter) + '</div>' : '') + '</div>';
+}
+// the datasheet: ranged and melee in one table with the same columns, each footnote once
+function unitWeapons(u){
+  const r = u.ranged || [], m = u.melee || [];
+  if(!r.length && !m.length) return '';
+  const mr = unitMods(u, 'ranged'), mm = unitMods(u, 'melee');
+  const head = (id, label, cols) => '<div class="anc" id="sec-' + id + '"></div><div class="wh both"><span class="n">' + label + '</span>' + cols.map(c => '<span>' + c + '</span>').join('') + '</div>';
+  let h = '<div class="wt both">';
+  if(r.length) h += head('ranged', 'Ranged', ['RNG','A','BS','S','AP','D']) + weaponRows(r, RANGED_KEYS, mr, u, 'ranged');
+  if(m.length) h += head('melee', 'Melee', ['','A','WS','S','AP','D']) + weaponRows(m, ['none'].concat(MELEE_KEYS), mm, u, 'melee');
+  const key = x => [x.from, x.when, x.note].join('|');
+  const inR = new Set(mr.map(key)), inM = new Set(mm.map(key)), seen = new Set(), notes = [];
+  for(const x of mr.concat(mm)){
+    const k = key(x);
+    if((x.weapon && x.set) || seen.has(k)) continue;
+    seen.add(k);
+    notes.push(Object.assign({}, x, { scope: !r.length || !m.length || (inR.has(k) && inM.has(k)) ? '' : inR.has(k) ? 'Ranged' : 'Melee' }));
+  }
+  const hasHunter = m.some(w => w.hunter) && mm.some(x => x.hunter);
   if(notes.length) h += '<div class="mods">' + modLines(notes, u, hasHunter) + '</div>';
   return h + '</div>';
 }
 
-/* ---------- screen: datasheet ---------- */
-// whether a section is folded is remembered per section type, on this device
-function fold(id, title, count, body){
-  return '<details class="fold" id="sec-' + id + '" data-fold="' + id + '"' + (prefs.folds[id] !== false ? ' open' : '') + '><summary><h2>' + esc(title) + '</h2>' +
-    (count != null ? '<span class="c">' + esc(count) + '</span>' : '') + chev + '</summary><div class="body">' + body + '</div></details>';
+/* ---------- screen: datasheet ----------
+   Everything a player checks mid-game fits on one screen: stats, what protects the unit,
+   every weapon and the rules that change its attacks, then one line per ability, the
+   unit's rules and stratagems. The full text of anything is one tap away. */
+// "Their Movement", "Your Shooting · Fight", "Any phase"
+function shortWhen(x){
+  const ph = phasesOf(x);
+  if(!ph.length) return '';
+  if(ph.length === PHASES.length) return 'Any phase';
+  return ph.map(p => ({ your:'Your ', opp:'Their ' }[phTurn(x, p)] || '') + PHASE_NAME[p]).join(' · ');
 }
-function abilityList(abs){
-  return '<div class="al">' + abs.map(ab => '<div><div class="ah"><b>' + esc(ab.name) + '</b>' + (ab.who ? '<span class="tg m">' + esc(ab.who) + '</span>' : '') +
-    (ab.tag ? '<span class="tg' + (ab.tag === 'Enhancement' ? '' : ' m') + '">' + esc(ab.tag) + '</span>' : '') +
-    (ab.ph ? '<span class="tg m">' + esc(whenTag(ab)) + '</span>' : '') + '</div>' + rt(ab.text) + '</div>').join('') + '</div>';
+// one line per ability: its name and when it triggers; tap to read it
+function abilityRows(abs){
+  return '<div class="abl">' + abs.map(ab => {
+    const meta = [ab.tag, ab.ph ? whenTag(ab) : ''].filter(Boolean);
+    return '<details class="ab"><summary><span class="an"><b>' + esc(ab.name) + '</b>' + (ab.who ? '<small>' + esc(ab.who) + '</small>' : '') +
+      (ab.tag === 'Enhancement' ? '<span class="tg">Enhancement</span>' : '') + '</span>' +
+      (ab.ph ? '<span class="aw">' + esc(shortWhen(ab)) + '</span>' : '') + chev + '</summary><div class="body">' +
+      (meta.length ? '<p class="abt">' + meta.map(esc).join(' · ') + '</p>' : '') + rt(ab.text) + '</div></details>';
+  }).join('') + '</div>';
 }
 // what matters when this unit is shot or fought: FNP, Lone Operative, -1 AP, the riled-up save
 function defences(u){
   const out = [];
   for(const r of u.rules){ const m = /^feel no pain (\d\+)/i.exec(r); if(m) out.push('Feel No Pain ' + m[1]); }
+  for(const r of unitDetRules(u)) if(r.def && !out.includes(r.def)) out.push(r.def);   // e.g. Knights of Legend: FNP 6+
   for(const ab of u.abilities) if(ab.def) out.push(ab.def);
   const weak = u.stats.filter(s => !/^[2-5]\+$/.test(s.InSv));
   if(weak.length && u.rules.includes('Waaagh!'))
     out.push('Riled up: 5+ InSv' + (weak.length < u.stats.length ? ' (' + weak.map(s => s.name.replace(/ ×\d+$/, '')).join(', ') + ')' : ''));
   return out;
 }
-function datasheetSections(u){
-  return [
-    ['stats', 'Stats', 'Stats'],
-    ['ranged', 'Ranged', 'Ranged weapons', !!(u.ranged && u.ranged.length)],
-    ['melee', 'Melee', 'Melee weapons', !!(u.melee && u.melee.length)],
-    ['abilities', 'Abil.', 'Abilities', u.abilities.some(ab => !ab.damaged)],
-    ['rules', 'Rules', 'Rules'],
-    ['strats', 'Strats', 'Stratagems'],
-    ['keywords', 'Kw', 'Keywords']
-  ].filter(x => x[3] !== false);
-}
+const linkTo = (attr, val, label) => '<span class="link" role="button" tabindex="0" data-' + attr + '="' + esc(val) + '">' + esc(label) + '</span>';
 function screenUnit(){
   const u = unitById(cur.unit);
   if(!u) return '<div class="empty">This unit is no longer in the list.</div>';
-  const own = allStratagems().filter(s => keywordGated(s) && eligible(s).includes(u));
-  const any = allStratagems().filter(s => !keywordGated(s) && eligible(s).includes(u));
-  const multi = u.stats.length > 1;
-  const def = defences(u);
-  const stats = '<div class="statwrap" id="sec-stats"><div class="st num" style="grid-template-columns:' + (multi ? 'minmax(64px,1fr) repeat(7, minmax(26px,36px))' : 'repeat(7, minmax(0,1fr))') + '">' +
-      (multi ? '<span class="h"></span>' : '') + ['M','T','SV','W','LD','OC','INV'].map(k => '<span class="h">' + k + '</span>').join('') +
-      u.stats.map(s => (multi ? '<span class="n">' + esc(s.name) + '</span>' : '') + [s.M, s.T, s.Sv, s.W, s.Ld, s.OC, s.InSv].map(v => '<span>' + esc(v) + '</span>').join('')).join('') + '</div>' +
-    (def.length ? '<div class="def"><span class="il">When targeted</span>' + def.map(esc).join(' · ') + '</div>' : '') +
-    u.abilities.filter(ab => ab.damaged).map(ab => '<div class="def dmg"><span class="il">Damaged ' + esc(ab.damaged) + ' W</span>' + inline(ab.text) + '</div>').join('') +
-    '<div class="meta-lines"><div class="m">' + u.models.map(m => '<span>' + esc(m) + '</span>').join('') + '</div>' +
-      'Base ' + esc([...new Set(u.stats.map(s => s.base))].join(' / ')) + (u.ptsNote ? ' · ' + esc(u.ptsNote) + ' pts' : '') +
-      (u.boostNote ? ' · <i>' + esc(u.boostNote) + '</i>' : '') + '</div></div>';
-  const stratLink = s => '<span class="link" role="button" tabindex="0" data-strat="' + esc(s.id) + '">' + esc(s.name) + '</span>';
-  const body = {
-    ranged: () => weaponTable(u.ranged, 'ranged', unitMods(u, 'ranged'), u, true),
-    melee: () => weaponTable(u.melee, 'melee', unitMods(u, 'melee'), u, true),
-    abilities: () => abilityList(u.abilities.filter(ab => !ab.damaged)),
-    rules: () => '<p class="rulesline">' + unitRules(u).map(r => '<span class="link" role="button" tabindex="0" data-rule="' + esc(r) + '">' + esc(r) + '</span>').join(', ') + '</p>',
-    strats: () => (own.length ? '<div class="list">' + own.map(stratItem).join('') + '</div>' : '') +
-      (any.length ? '<p class="usedby" style="margin-top:8px"><span class="il">Any unit</span>' + any.map(stratLink).join(', ') + '</p>' : ''),
-    keywords: () => '<p class="kwline">' + esc(u.kw.join(', ')) + '</p>' + (u.kwNote ? '<p class="note">' + esc(u.kwNote) + '</p>' : '')
-  };
-  const count = { ranged: weaponItems(u.ranged).length, melee: weaponItems(u.melee).length, abilities: u.abilities.filter(ab => !ab.damaged).length, rules: unitRules(u).length, strats: own.length || null };
+  const strats = allStratagems().filter(s => keywordGated(s) && eligible(s).includes(u));
+  const multi = u.stats.length > 1, def = defences(u);
+  const solo = u.models.length === 1 && /^1× /.test(u.models[0]);
   const meta = [esc(u.role), esc(u.pts) + ' pts' + (u.copies > 1 ? ' each' : '')];
   if(u.copies > 1) meta.push('×' + esc(u.copies) + ' in list');
   if(u.leads) meta.push('leading ' + esc(u.leads));
-  return '<div class="ds-meta"><span>' + meta.join(' · ') + '</span>' + nameTags(u, { noLeads:true, noCopies:true }) + '</div>' + stats +
-    datasheetSections(u).filter(x => x[0] !== 'stats').map(([id, , title]) => fold(id, title, count[id], body[id]())).join('');
+  meta.push(esc([...new Set(u.stats.map(s => s.base))].join(' / ')) + ' base');
+  const abil = u.abilities.filter(ab => !ab.damaged);
+  const weaponKeys = new Set([...(u.ranged || []), ...(u.melee || [])].flatMap(w => w.kw.map(ruleKey)));
+  return '<div class="ds-meta"><span>' + meta.join(' · ') + '</span>' + nameTags(u, { noLeads:true, noCopies:true }) + '</div>' +
+    '<div class="statwrap" id="sec-stats"><div class="st num" style="grid-template-columns:' + (multi ? 'minmax(64px,1fr) repeat(7, minmax(26px,36px))' : 'repeat(7, minmax(0,1fr))') + '">' +
+      (multi ? '<span class="h"></span>' : '') + ['M','T','SV','W','LD','OC','INV'].map(k => '<span class="h">' + k + '</span>').join('') +
+      u.stats.map(s => (multi ? '<span class="n">' + esc(s.name) + '</span>' : '') + [s.M, s.T, s.Sv, s.W, s.Ld, s.OC, s.InSv].map(v => '<span>' + esc(v) + '</span>').join('')).join('') + '</div>' +
+    (u.boostNote ? '<p class="dsl"><i>' + esc(u.boostNote) + '</i></p>' : '') +
+    (!solo ? '<p class="dsl">' + u.models.map(esc).join(' · ') + (u.ptsNote ? ' · ' + esc(u.ptsNote) + ' pts' : '') + '</p>' : '') +
+    (def.length ? '<div class="def"><span class="il">When targeted</span>' + def.map(esc).join(' · ') + '</div>' : '') +
+    u.abilities.filter(ab => ab.damaged).map(ab => { const m = (u.mods || []).find(x => x.from === ab.name);
+      return '<div class="def dmg"><span class="il">Damaged ' + esc(ab.damaged) + ' W</span>' + linkTo('ability', abilityKey(ab), m ? m.note : 'see the rule') + '</div>'; }).join('') + '</div>' +
+    unitWeapons(u) +
+    (abil.length ? '<div class="dsec" id="sec-abilities"><div class="lbl">Abilities</div>' + abilityRows(abil) + '</div>' : '') +
+    '<div class="dsec" id="sec-rules"><p class="dline"><span class="il">Rules</span>' + unitRules(u).filter(r => !weaponKeys.has(ruleKey(r))).map(r => linkTo('rule', r, r)).join(', ') + '</p>' +
+      (strats.length ? '<p class="dline" id="sec-strats"><span class="il">Stratagems</span>' + strats.map(st => linkTo('strat', st.id, st.name)).join(', ') + '</p>' : '') +
+    '<details class="ab" id="sec-keywords"><summary><span class="an"><b class="kh">Keywords</b></span>' + chev + '</summary><div class="body"><p class="kwline">' + esc(u.kw.join(', ')) + '</p>' +
+      (u.kwNote ? '<p class="note">' + esc(u.kwNote) + '</p>' : '') + '</div></details></div>';
 }
-const unitJumps = u => '<div class="jump">' + datasheetSections(u).map(([id, short]) => '<button data-jump="' + id + '">' + short + '</button>').join('') + '</div>';
 
 /* ---------- screens: weapons and abilities by unit ---------- */
 const band = u => '<button class="band" data-unit="' + esc(u.id) + '"><b>' + esc(u.name) + '</b><span class="tgs">' + nameTags(u) + '</span>' + arrow + '</button>';
@@ -895,7 +968,7 @@ function screenWeapons(kind){
   if(!list.length) return '<div class="empty">No ' + kind + ' weapons in this army.</div>';
   return '<div class="slice">' + list.map(u => '<section class="us">' + band(u) + weaponTable(u[kind], kind, unitMods(u, kind), u, false) + '</section>').join('') + '</div>';
 }
-const screenAbilities = () => '<div class="slice">' + army().units.filter(u => u.abilities.length).map(u => '<section class="us">' + band(u) + abilityList(u.abilities) + '</section>').join('') + '</div>';
+const screenAbilities = () => '<div class="slice">' + army().units.filter(u => u.abilities.length).map(u => '<section class="us">' + band(u) + abilityRows(u.abilities) + '</section>').join('') + '</div>';
 
 /* ---------- stratagems ---------- */
 const stratWhenLine = s => [whenTag(s), s.limit, s.cpNote].filter(Boolean).join(' · ');
@@ -920,7 +993,7 @@ function fits(x){
 const phaseOrder = (x, text) => (phasesOf(x).length === PHASES.length ? 10 : 0) + timing(text);
 function phaseItems(){
   const out = [], f = faction(), units = army().units;
-  for(const r of f.armyRules) if(r.ph) out.push({ name:r.name, text:r.text, tag:r.tag, ph:r.ph, turn:r.turn, turns:r.turns, sub:f.name + ' army rule', units:[] });
+  for(const r of f.armyRules) if(r.ph) out.push({ name:r.name, text:r.text, table:r.table, tag:r.tag, ph:r.ph, turn:r.turn, turns:r.turns, sub:f.name + ' army rule', units:[] });
   for(const d of detachments()) if(d.rule && d.rule.ph){
     const us = units.filter(u => matches(d.rule.needs, u));
     if(us.length) out.push({ name:d.rule.name, text:d.rule.text, table:d.rule.table, ph:d.rule.ph, turn:d.rule.turn, turns:d.rule.turns, sub:d.name + ' rule · ' + unitNames(us), units:us });
@@ -990,12 +1063,13 @@ function screenRules(){
   const f = faction(), a = army();
   const taken = new Map(a.units.filter(u => u.enhancement).map(u => [u.enhancement, u]));
   let h = '<div class="sec-h"><h2>Army rules</h2></div><div class="list">' +
-    f.armyRules.map((r, i) => xp(r.name, r.ph ? whenTag(r) : '', r.tag ? '<span class="tg m">' + esc(r.tag) + '</span>' : '', rt(r.text) + (r.table ? ttable(r.table) : ''), i === 0)).join('') + '</div>';
+    f.armyRules.map((r, i) => xp(r.name, r.ph ? whenTag(r) : '', r.tag ? '<span class="tg m">' + esc(r.tag) + '</span>' : '', rt(r.text) + (r.table ? ttable(r.table) : '') +
+      ((r.missing || []).length ? '<p class="note">Not in the app yet: the ' + esc(r.missing.join(' and ')) + ' (they need that Wahapedia page).</p>' : ''), false)).join('') + '</div>';
   for(const d of detachments()){
     const mine = d.enhancements.filter(e => taken.has(e.name)), other = d.enhancements.filter(e => !taken.has(e.name));
     const gap = (d.missing || []).includes('enhancements') ? '<p class="note">The other ' + esc(d.name) + ' enhancements aren’t in the app yet: they need the Wahapedia page.</p>' : '';
     h += '<div class="sec-h"><h2>' + esc(d.name) + '</h2></div><div class="list">' +
-      (d.rule ? xp(d.rule.name, 'Detachment rule', '', rt(d.rule.text) + (d.rule.table ? ttable(d.rule.table) : '') + usedBy('Applies to', a.units.filter(u => matches(d.rule.needs, u))), true) : '') +
+      (d.rule ? xp(d.rule.name, 'Detachment rule', '', rt(d.rule.text) + (d.rule.table ? ttable(d.rule.table) : '') + usedBy('Applies to', a.units.filter(u => matches(d.rule.needs, u))), false) : '') +
       mine.map(e => xp(e.name, 'Enhancement' + (e.pts ? ' · ' + e.pts + ' pts' : ''), '', rt(e.text) + usedBy('On', [taken.get(e.name)]), false)).join('') +
       (other.length ? xp('Other enhancements', other.length + ' not in this list', '',
         other.map(e => '<div class="sub"><b class="nm">' + esc(e.name) + '</b>' + (e.pts ? ' <span class="tg m">' + esc(e.pts) + ' pts</span>' : '') + rt(e.text) + '</div>').join(''), false) : '') +
@@ -1031,7 +1105,7 @@ function render(){
   if(s === 'home') v.innerHTML = screenHome();
   else if(s === 'army') v.innerHTML = screenArmy();
   else if(s === 'units'){ v.innerHTML = screenUnits(); sub = unitsSubbar(); }
-  else if(s === 'unit'){ v.innerHTML = screenUnit(); const u = unitById(cur.unit); if(u) bot = unitJumps(u); }
+  else if(s === 'unit') v.innerHTML = screenUnit();
   else if(s === 'strats'){ v.innerHTML = screenStrats(); bot = stratFilters(); }
   else if(s === 'ranged' || s === 'melee'){ v.innerHTML = screenWeapons(s); sub = '<div class="wt ' + s + '">' + colHeader(s) + '</div>'; }
   else if(s === 'abilities') v.innerHTML = screenAbilities();
@@ -1039,7 +1113,6 @@ function render(){
   setBar('subbar', sub);
   setBar('bbar', bot);
   measure();
-  markJump();
   if(s === 'army'){
     const i = $('#armyQ');
     i.value = query[army().id] || '';
@@ -1061,21 +1134,6 @@ function jumpTo(id, instant){
   measure();
   sec.scrollIntoView({ behavior:instant || matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block:'start' });
 }
-// light up the jump button of the section you are reading
-function markJump(){
-  const btns = $$('#bbar [data-jump]');
-  if(!btns.length) return;
-  const line = $('#top').getBoundingClientRect().bottom + 12;
-  const atEnd = innerHeight + scrollY >= document.documentElement.scrollHeight - 4;
-  let on = btns[0].dataset.jump;
-  for(const b of btns){
-    const sec = $('#sec-' + b.dataset.jump);
-    if(sec && sec.getBoundingClientRect().top <= (atEnd ? innerHeight * .6 : line)) on = b.dataset.jump;
-  }
-  btns.forEach(b => b.setAttribute('aria-current', String(b.dataset.jump === on)));
-}
-let scrollRaf = 0;
-addEventListener('scroll', () => { if(!scrollRaf) scrollRaf = requestAnimationFrame(() => { scrollRaf = 0; markJump(); }); }, { passive:true });
 
 /* ---------- popup sheet ---------- */
 let sheetReturn = null, sheetRule = null;
@@ -1177,7 +1235,6 @@ document.addEventListener('click', e => {
   if(ds.strat){ e.preventDefault(); showStrat(ds.strat); return; }
   if(ds.ability){ showAbility(ds.ability); return; }
   if(ds.enh){ showEnhancement(ds.enh); return; }
-  if(ds.jump){ jumpTo(ds.jump); return; }
   if(ds.phase){ filt.phase = ds.phase; saveSession(); rerender(); return; }
   if(ds.turn){ filt.turn = ds.turn; saveSession(); rerender(); return; }
   if(ds.more){ moreShown.add(ds.more); renderFinder(); return; }
@@ -1188,11 +1245,10 @@ document.addEventListener('click', e => {
     el.textContent = openAll ? 'Collapse all' : 'Expand all';
   }
 });
-// remember folded datasheet sections and expanded stratagem cards
+// remember expanded stratagem cards
 document.addEventListener('toggle', e => {
   const d = e.target;
   if(!d.dataset) return;
-  if(d.dataset.fold){ prefs.folds[d.dataset.fold] = d.open; savePrefs(); }
   if(d.dataset.stratId){
     if(d.open) openStrats.add(d.dataset.stratId); else openStrats.delete(d.dataset.stratId);
     saveSession();

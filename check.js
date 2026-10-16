@@ -88,6 +88,14 @@ function check(file){
           else if(w.group) P(where, 'mod weapon', m.weapon, 'has several profiles; set is ignored');
         }
       }
+      // gear: one list per models line; names must be the unit's weapons, and every weapon carried
+      if(u.gear){
+        if(u.gear.length !== u.models.length) P(where, 'gear has', u.gear.length, 'lines but models has', u.models.length);
+        const names = new Set(weapons.map(w => w.group || w.name));
+        for(const g of u.gear) for(const n of g) if(!names.has(n)) P(where, 'gear names a weapon it does not have:', n);
+        const carried = new Set(u.gear.flat());
+        for(const n of names) if(!carried.has(n)) P(where, 'weapon not in any gear line:', n);
+      }
       if(u.enhancement && !detachmentsOf(a).some(d => d.enhancements.some(e => e.name === u.enhancement))) P(where, 'enhancement not in its detachments:', u.enhancement);
       for(const ab of u.abilities || []) timing(ab, where + ' ability ' + ab.name);
       const names = (u.abilities || []).map(ab => ab.name);
