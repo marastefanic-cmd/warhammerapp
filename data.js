@@ -12,7 +12,7 @@
 ===================================================================== */
 window.WH_DATA = (function(){
 
-const VERSION = '2026-10-16.5';
+const VERSION = '2026-10-16.6';
 
 /* ---------------- core rules (11th edition) ---------------- */
 // Weapon keyword and core ability text, from the BSData wh40k-11e game system.
@@ -185,6 +185,8 @@ const FACTIONS = {
      stats  one row per model profile
      ranged / melee  weapons; "group" joins the ➤ profiles of one weapon
      abilities  ph/turn tag the phase it triggers in
+     mods   abilities that change attacks: set = a variant weapon row with changed stats,
+            note = a reminder line in that weapon table (kind ranged|melee|all)
      rules  core/faction rules that open a glossary entry
      kw     the unit's keywords ("Categories")                              */
 const ARMIES = [
@@ -236,6 +238,10 @@ const ARMIES = [
         { name:'Da Bigger Dey Iz…', ph:['fight'], turn:'either',
           text:'This unit’s melee attacks that target a **MONSTER/VEHICLE** unit can re-roll **wound rolls**.' }
       ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'melee', when:'vs MONSTER/VEHICLE', note:'re-roll wound rolls', from:'Da Bigger Dey Iz…' }
+      ],
       rules:['Feel No Pain 5+','Waaagh!'],
       kw:['Beast Snagga','Character','Epic Hero','Faction: Orks','Monster','Mozrog Skragbad']
     },
@@ -269,6 +275,10 @@ const ARMIES = [
           text:'In your Movement phase, at the start or end of this unit’s move, you can select one friendly **ORKS** unit within 6" of this unit. That unit:\n- Is no longer **battle-shocked**.\n- Is **riled up** until the start of your next turn.' },
         { name:'Krumpin’ Time', who:'Meganobz', ph:['fight'], turn:'either', text:'In the Fight phase, if this unit is **riled up**, this unit has +1 to **hit rolls**.' },
         { name:'Arrogant Invulnerability', who:'Meganobz', text:'Attacks that target this unit have -1 **AP**.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'melee', who:'Meganobz', when:'Riled up', note:'Meganobz +1 to hit rolls', from:'Krumpin’ Time · Fight phase' }
       ],
       rules:['Waaagh!','Leader','Da Boss','Deep Strike'],
       kw:['Character','Epic Hero','Faction: Orks','Infantry','Mega Armour','Nazdreg','Warboss','Explosives','Meganobz'],
@@ -336,6 +346,11 @@ const ARMIES = [
         { name:'Blitz Dem Gitz!', ph:['shooting'], turn:'your', text:'In your Shooting phase, if this unit’s Blitzkannon weapon targets a unit (excluding **MONSTER/VEHICLE** units), that weapon has +6 **A**.' },
         { name:'Cybork Boosta', tag:'Enhancement', text:'**BIG MEK/MEK** model only. This model has +2" **M**.' }
       ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'ranged', weapon:'Blitzkannon', when:'vs non-MONSTER/VEHICLE', set:{ A:'14' }, from:'Blitz Dem Gitz! · your Shooting phase' },
+        { kind:'ranged', when:'Riled up', note:'ranged attacks have [SUSTAINED HITS 1]', from:'Even More Dakka' }
+      ],
       rules:['Deadly Demise 1','Waaagh!'],
       kw:['Big Mek','Big Mek Dakkarig','Character','Faction: Orks','Vehicle','Walker']
     },
@@ -355,6 +370,11 @@ const ARMIES = [
         { name:'Blitz Dem Gitz!', ph:['shooting'], turn:'your', text:'In your Shooting phase, if this unit’s Blitzkannon weapon targets a unit (excluding **MONSTER/VEHICLE** units), that weapon has +6 **A**.' },
         { name:'Dreadherder', tag:'Enhancement', ph:['shooting'], turn:'your',
           text:'**BIG MEK** model only. While this model is within 3" of a friendly **ORKS WALKER** unit (excluding **BIG MEK** units):\n- This model has **Lone Operative**.\n- In your Shooting phase, you can select one friendly **ORKS WALKER** unit within 3" of this model. That unit’s attacks can re-roll **hit rolls** of 1 until the end of the turn.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'ranged', weapon:'Blitzkannon', when:'vs non-MONSTER/VEHICLE', set:{ A:'14' }, from:'Blitz Dem Gitz! · your Shooting phase' },
+        { kind:'ranged', when:'Riled up', note:'ranged attacks have [SUSTAINED HITS 1]', from:'Even More Dakka' }
       ],
       rules:['Deadly Demise 1','Waaagh!'],
       kw:['Big Mek','Big Mek Dakkarig','Character','Faction: Orks','Vehicle','Walker']
@@ -393,6 +413,10 @@ const ARMIES = [
         { name:'Aerial Manoover', ph:['fight'], turn:'opp', text:'At the end of your opponent’s Fight phase, if this unit is **unengaged**, you can place this unit in **strategic reserves**.' },
         { name:'Deff from Above', ph:['shooting'], turn:'your', text:'In your Shooting phase, if this unit made an **ingress move** this turn, this unit’s ranged attacks have +1 to **hit rolls**.' }
       ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'ranged', when:'After an ingress move this turn', note:'+1 to hit rolls', from:'Deff from Above · your Shooting phase' }
+      ],
       rules:['Deep Strike','Waaagh!'],
       kw:['Deffkoptas','Explosives','Faction: Orks','Fly','Mounted','Speed Freeks']
     },
@@ -410,6 +434,10 @@ const ARMIES = [
       ],
       abilities:[
         { name:'Spiteful Power Trip', ph:['shooting','fight'], turn:'either', text:'This unit’s attacks that target a unit that has no models with a **T** of 7+ have +1 to **hit rolls**.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'all', when:'Target has no models with T 7+', note:'+1 to hit rolls', from:'Spiteful Power Trip' }
       ],
       rules:['Deadly Demise 1','Waaagh!'],
       kw:['Faction: Orks','Grots','Killa Kans','Vehicle','Walker']
