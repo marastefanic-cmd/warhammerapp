@@ -213,7 +213,8 @@ const FACTIONS = {
     aliases: [[/^oath/i, 'Code Chivalric'], [/^honoured/i, 'Code Chivalric']],
     armyRules: [
       // Wahapedia wording; the table is the Deed and Quality tables (D6 roll, the oath line as the name).
-      // The 'We pledge to reap a great tally' Deed is Wahapedia's errata wording (the page text already has it).
+      // The 'We pledge to reap a great tally' Deed is Wahapedia's errata wording (the page text already has it),
+      // identical to the Rules Updates in GW's Faction Pack v1.2 (legal from 26 Aug 2026), PDF p27.
       { name:'Code Chivalric',
         text:'If your Army Faction is **IMPERIAL KNIGHTS**, at the end of the Read Mission Objectives step, you must determine your army’s Oath for the coming battle. An Oath consists of two parts - one Deed and one Quality. There are three options for each part, shown below.\nTo determine your army’s Deed, you can either select one Deed or you can randomly select one Deed by rolling a D6 and consulting the relevant table below. The selected Deed will describe what needs to be achieved in order to complete that Deed.\nTo determine your army’s Quality, you can either select one Quality or you can randomly select one Quality by rolling a D6 and consulting the relevant table below. Until the end of the battle, the ability described in the Quality selected applies to all models in your army with this ability.\nThe first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).',
         table:[
@@ -231,7 +232,8 @@ const FACTIONS = {
     detachments: {
       'freeblade-company': {
         name:'Freeblade Company', dp:3,
-        // rule, enhancements and stratagems: Wahapedia wording (Freeblade Company, App. Imperial Knights 11th edition v1.2)
+        // rule, enhancements and stratagems: Wahapedia wording (Freeblade Company, App. Imperial Knights 11th edition v1.2),
+        // checked word for word against GW's Faction Pack v1.2 (legal from 26 Aug 2026), pp5-6, which prints this detachment in full.
         rule:{ name:'Knights of Legend', ph:['command'], turn:'your', needs:{ all:['Faction: Imperial Knights'] },
           // proposed: the app adds this to the "When targeted" line of every unit the rule applies to
           def:'Feel No Pain 6+',
@@ -251,12 +253,15 @@ const FACTIONS = {
             when:'Your Shooting phase or the Fight phase.',
             target:'One **IMPERIAL KNIGHTS** unit from your army that has not been selected to shoot or fight this phase.',
             effect:'Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9" of your unit, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1.' },
-          // ~~DESTRIER~~: Wahapedia's "Keyword does not appear in that faction" marker, not errata
+          // The Faction Pack (p6) prints DESTRIER as a keyword, not struck through: Wahapedia's strike-through is its
+          // "Keyword does not appear in that faction" marker, not errata, so the effect uses the pack's wording.
+          // The pack's Rules Updates entry "Full Tilt Stratagem, Target Section" (PDF p27) is under VALOURSTRIKE LANCE: it is that
+          // detachment's 2CP Full Tilt, a different stratagem, so this one's target stays as printed.
           { id:'full-tilt', name:'Full Tilt', cp:1, phases:['movement'], turn:'your', needs:{ all:['Faction: Imperial Knights'] },
-            note:'Wahapedia strikes through DESTRIER because no Imperial Knights datasheet has that keyword (Knight Destriers have KNIGHT DESTRIER). By the letter, your Knight Destriers add 6"; the evident intent is that they add 9". Agree it with your opponent before the game.',
+            note:'GW’s Faction Pack prints DESTRIER as a keyword, but no Imperial Knights datasheet has it: the Knight Destrier’s keyword is KNIGHT DESTRIER (Wahapedia strikes DESTRIER through for this reason). By the letter, your Knight Destriers add 6"; the evident intent is that they add 9". Agree it with your opponent before the game.',
             when:'Your Movement phase.',
             target:'One **IMPERIAL KNIGHTS** unit from your army.',
-            effect:'Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6" to the Move characteristic of models in your unit, or 9" instead if your unit is an **ARMIGER** or ~~**DESTRIER**~~ unit.' },
+            effect:'Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6" to the Move characteristic of models in your unit, or 9" instead if your unit is an **ARMIGER** or **DESTRIER** unit.' },
           { id:'point-blank-barrage', name:'Point-Blank Barrage', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Faction: Imperial Knights'] },
             when:'Your Shooting phase.',
             target:'One **IMPERIAL KNIGHTS** unit from your army that has not been selected to shoot this phase.',
