@@ -8,7 +8,7 @@
 <body>
 <title>Waaagh Codex</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="theme-color" content="#121611">
+<meta name="theme-color" content="#161616">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -24,40 +24,23 @@
    Sticky nav bar with a back button over a checkered Goff band; every screen is one
    scrolling column; datasheet sections fold open and closed. */
 :root{
+  /* one deliberate look: dark graphite with a single orange accent */
   color-scheme: dark;
-  --bg:#121611;        /* gunmetal with a green cast */
-  --surface:#1a2019;
-  --surface2:#232b22;
-  --line:#303b2e;
-  --fg:#e9eee4;
-  --muted:#9ba796;
-  --accent:#8fc441;    /* waaagh green */
-  --accent-ink:#0f1a06;
-  --dakka:#f0bf3a;     /* bad moons yellow: CP, ranged */
-  --dakka-ink:#231a00;
-  --choppa:#ea6a50;    /* evil sunz red: melee */
-  --check-a:#e9eee4; --check-b:#121611;
-  --shadow:0 10px 30px rgba(0,0,0,.45);
+  --bg:#161616;
+  --surface:#1f1f1f;
+  --surface2:#2a2a2a;
+  --line:#363636;
+  --fg:#ededed;
+  --muted:#9c9c9c;
+  --accent:#ff8a2a;      /* orange: interactive things, CP, highlights */
+  --accent-ink:#1c0d00;  /* text on orange */
+  --accent-soft:color-mix(in srgb, var(--accent) 14%, transparent);
+  --check-a:#3c3c3c; --check-b:#161616;
+  --shadow:0 10px 30px rgba(0,0,0,.5);
   --f-display:'Black Ops One', 'Barlow Condensed', Impact, sans-serif;
   --f-head:'Barlow Condensed', 'Arial Narrow', system-ui, sans-serif;
   --f-body:'Barlow', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --hdr:64px;
-}
-@media (prefers-color-scheme: light){
-  :root:not([data-theme="dark"]){
-    color-scheme: light;
-    --bg:#edf0e8; --surface:#ffffff; --surface2:#f1f4ed; --line:#d3d9cc;
-    --fg:#151a13; --muted:#5a6555; --accent:#4c7c12; --accent-ink:#ffffff;
-    --dakka:#a77300; --dakka-ink:#ffffff; --choppa:#b8381f;
-    --check-a:#151a13; --check-b:#edf0e8; --shadow:0 10px 30px rgba(20,30,10,.18);
-  }
-}
-:root[data-theme="light"]{
-  color-scheme: light;
-  --bg:#edf0e8; --surface:#ffffff; --surface2:#f1f4ed; --line:#d3d9cc;
-  --fg:#151a13; --muted:#5a6555; --accent:#4c7c12; --accent-ink:#ffffff;
-  --dakka:#a77300; --dakka-ink:#ffffff; --choppa:#b8381f;
-  --check-a:#151a13; --check-b:#edf0e8; --shadow:0 10px 30px rgba(20,30,10,.18);
 }
 
 *{box-sizing:border-box}
@@ -106,7 +89,7 @@ h1,h2,h3{margin:0; text-wrap:balance}
 .pill{display:inline-flex; align-items:center; gap:5px; font:700 12px/1 var(--f-head); letter-spacing:.07em; text-transform:uppercase;
   border-radius:999px; padding:5px 9px; border:1px solid var(--line); color:var(--muted); white-space:nowrap}
 .pill.acc{background:var(--accent); border-color:var(--accent); color:var(--accent-ink)}
-.pill.warn{border-color:var(--dakka); color:var(--dakka)}
+.pill.warn{border-color:var(--accent); color:var(--accent)}
 .pills{display:flex; flex-wrap:wrap; gap:6px}
 .muted{color:var(--muted)}
 .rt p{margin:0 0 6px} .rt p:last-child{margin-bottom:0}
@@ -140,7 +123,7 @@ summary::-webkit-details-marker{display:none}
 .mrow b{font:700 18px/1.1 var(--f-head); letter-spacing:.03em}
 .mrow .c{font:600 14px var(--f-head); color:var(--muted); font-variant-numeric:tabular-nums}
 .mrow .go{width:18px; height:18px; color:var(--muted); transform:rotate(-90deg)}
-.ic.units{color:var(--accent)} .ic.strats{color:var(--dakka)} .ic.ranged{color:var(--dakka)} .ic.melee{color:var(--choppa)} .ic.abil{color:var(--accent)} .ic.rules{color:var(--muted)}
+.ic.units{color:var(--accent)} .ic.strats{color:var(--accent)} .ic.ranged{color:var(--accent)} .ic.melee{color:var(--accent)} .ic.abil{color:var(--accent)} .ic.rules{color:var(--muted)}
 
 /* ---------- slices: weapons / abilities by unit ---------- */
 /* each unit opens with a one-line band (its name) over the column labels; both stay pinned while you scroll its rows */
@@ -152,7 +135,7 @@ summary::-webkit-details-marker{display:none}
 .wt.lab > span.h{top:calc(env(safe-area-inset-top, 0px) + var(--hdr) + 34px); padding:6px 0 4px}
 .uhn{display:flex; flex:1; align-items:baseline; gap:8px; min-width:0; max-width:100%; font:700 16.5px/1.1 var(--f-head); letter-spacing:.02em; color:var(--fg); cursor:pointer}
 .uhn .nm{flex:none}
-.uhn small{min-width:0; font:600 12px/1.2 var(--f-body); color:var(--dakka); white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.uhn small{min-width:0; font:600 12px/1.2 var(--f-body); color:var(--accent); white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
 .uhn small.m{color:var(--muted)}
 .uhn::after{content:"\203A"; margin-left:auto; padding-left:6px; color:var(--accent); font-size:20px; line-height:1}
 .slice .al{margin-top:6px}
@@ -165,7 +148,7 @@ summary::-webkit-details-marker{display:none}
 .urow .nm{font:700 18px/1.15 var(--f-head); letter-spacing:.02em}
 .urow .pts{font:700 16px/1 var(--f-head); text-align:right; color:var(--muted)}
 .urow .meta{grid-column:1 / -1; font-size:13px; color:var(--muted); line-height:1.35}
-.urow .meta .tg{color:var(--dakka); font-weight:600}
+.urow .meta .tg{color:var(--accent); font-weight:600}
 .urow .meta .tg.acc{color:var(--accent)}
 .sline{grid-column:1 / -1; display:flex; flex-wrap:wrap; gap:0 12px; margin-top:3px; font:700 15px/1.3 var(--f-head)}
 .sline i{font-style:normal; font-weight:600; font-size:11px; letter-spacing:.1em; color:var(--muted); margin-right:3px}
@@ -179,7 +162,7 @@ summary::-webkit-details-marker{display:none}
 .fold > summary h2{flex:1; font:700 17px/1 var(--f-head); letter-spacing:.07em; text-transform:uppercase}
 .fold > summary .ct{font:600 12.5px var(--f-head); color:var(--muted); letter-spacing:.06em}
 .fold > summary .dot{width:9px; height:9px; border-radius:2px; transform:rotate(45deg); flex:none}
-.dot.stats{background:var(--fg)} .dot.ranged{background:var(--dakka)} .dot.melee{background:var(--choppa)} .dot.abil{background:var(--accent)} .dot.rules{border:2px solid var(--accent)} .dot.kw{border:2px solid var(--muted)}
+.dot.stats{background:var(--fg)} .dot.ranged{background:var(--accent)} .dot.melee{border:2px solid var(--accent)} .dot.abil{background:var(--accent)} .dot.rules{border:2px solid var(--accent)} .dot.kw{border:2px solid var(--muted)}
 .fold > .body{padding-bottom:12px}
 /* stat table: one row per model profile */
 .st{display:grid; align-items:stretch; background:var(--surface); border:1px solid var(--line); border-radius:10px; overflow:hidden}
@@ -202,22 +185,20 @@ summary::-webkit-details-marker{display:none}
 .wt > span.sub{border-top:0}
 .wt > span.n.sub{padding-left:2px}
 .wt > span.n .x{color:var(--muted); font-weight:600; font-size:13px; margin-left:4px; white-space:nowrap}
-.wt > span.n .enh{color:var(--dakka); font-size:11px; letter-spacing:.08em; margin-left:4px}
+.wt > span.n .enh{color:var(--accent); font-size:11px; letter-spacing:.08em; margin-left:4px}
 .wt > span.who{grid-column:1 / -1; text-align:left; font:700 11.5px/1 var(--f-head); letter-spacing:.12em; text-transform:uppercase; color:var(--muted); padding:9px 0 5px}
 .wt > span.mod{grid-column:1 / -1; text-align:left; border-top:0; margin:3px 0 2px; padding:5px 8px; border-radius:7px; font:500 13px/1.35 var(--f-body);
   background:color-mix(in srgb, var(--accent) 13%, transparent); color:var(--fg)}
 .wt > span.mod b{font-weight:700}
 .wt > span.mod .from, .wt > span.n.var small{color:var(--muted); font:500 11.5px var(--f-body); white-space:nowrap}
 .wt > span.mod .from::before{content:"\00b7  "}
-.wt > span.var{border-top:1px dashed var(--line); padding:5px 0 3px; background:color-mix(in srgb, var(--dakka) 7%, transparent)}
-.wt > span.n.var{font:600 13px/1.25 var(--f-body); color:var(--dakka); padding-left:8px}
+.wt > span.var{border-top:1px dashed var(--line); padding:5px 0 3px; background:color-mix(in srgb, var(--accent) 7%, transparent)}
+.wt > span.n.var{font:600 13px/1.25 var(--f-body); color:var(--accent); padding-left:8px}
 .wt > span.varc{grid-column:1 / -1; text-align:left; border-top:0; padding:0 8px 6px; font:500 12.5px/1.3 var(--f-body); color:var(--muted);
-  background:color-mix(in srgb, var(--dakka) 7%, transparent)}
-.wt > span.var i.hi{font-style:normal; display:inline-block; min-width:26px; padding:2px 4px; border-radius:5px; background:var(--dakka); color:var(--dakka-ink)}
+  background:color-mix(in srgb, var(--accent) 7%, transparent)}
+.wt > span.var i.hi{font-style:normal; display:inline-block; min-width:26px; padding:2px 4px; border-radius:5px; background:var(--accent); color:var(--accent-ink)}
 .wt > span.kwl{grid-column:1 / -1; text-align:left; border-top:0; padding:0 0 6px; margin-top:-2px; line-height:1.3}
-.kwl [data-rule]{cursor:pointer; white-space:nowrap; font:700 11px/1.35 var(--f-head); letter-spacing:.05em; text-transform:uppercase; color:var(--muted); padding:0; text-decoration:underline dotted; text-decoration-color:var(--muted); text-underline-offset:2px}
-.wt.ranged .kwl [data-rule]{color:color-mix(in srgb, var(--dakka) 80%, var(--fg))}
-.wt.melee .kwl [data-rule]{color:color-mix(in srgb, var(--choppa) 85%, var(--fg))}
+.kwl [data-rule]{cursor:pointer; white-space:nowrap; font:700 11px/1.35 var(--f-head); letter-spacing:.05em; text-transform:uppercase; color:var(--fg); padding:0; text-decoration:underline dotted; text-decoration-color:var(--accent); text-underline-offset:2px}
 .kwl .sep{color:var(--muted); font-size:11px}
 /* abilities: a divided list, no boxes */
 .al > div{padding:8px 0; border-top:1px solid var(--line)}
@@ -225,7 +206,7 @@ summary::-webkit-details-marker{display:none}
 .al .ah{display:flex; flex-wrap:wrap; align-items:baseline; gap:2px 8px; margin-bottom:2px}
 .al .ah b{font:700 16px/1.2 var(--f-head); letter-spacing:.02em}
 .al .ah .who, .al .ah .tg{font-size:12.5px; color:var(--muted)}
-.al .ah .tg.enh{color:var(--dakka)}
+.al .ah .tg.enh{color:var(--accent)}
 .al .rt{font-size:14.5px; line-height:1.4}
 .chips{display:flex; flex-wrap:wrap; gap:5px}
 .kw{display:inline-flex; align-items:center; gap:5px; font:700 12.5px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; padding:8px 9px; border-radius:8px;
@@ -249,7 +230,7 @@ summary::-webkit-details-marker{display:none}
 .phasebar button[aria-pressed="true"]{border-color:var(--fg); color:var(--fg); background:var(--surface2)}
 .strat{background:var(--surface); border:1px solid var(--line); border-radius:12px}
 .strat > summary{display:grid; grid-template-columns:auto minmax(0,1fr) auto; gap:10px; align-items:center; padding:8px 10px}
-.cpbox{width:38px; height:38px; border-radius:9px; background:var(--dakka); color:var(--dakka-ink); display:grid; place-content:center; text-align:center;
+.cpbox{width:38px; height:38px; border-radius:9px; background:var(--accent); color:var(--accent-ink); display:grid; place-content:center; text-align:center;
   font:700 19px/1 var(--f-head)}
 .cpbox small{display:block; font-size:8.5px; letter-spacing:.1em; margin-top:1px}
 .strat .sn{font:700 16.5px/1.1 var(--f-head); letter-spacing:.02em; text-transform:uppercase}
@@ -269,7 +250,7 @@ summary::-webkit-details-marker{display:none}
 .search svg{width:18px; height:18px; color:var(--muted); flex:none}
 .search input{flex:1; min-width:0; border:0; background:none; padding:12px 0; outline:none}
 .ttable{display:grid; grid-template-columns:auto 1fr; gap:4px 12px; margin-top:8px; font-size:15px}
-.ttable span:nth-child(odd){font:700 16px var(--f-head); color:var(--dakka)}
+.ttable span:nth-child(odd){font:700 16px var(--f-head); color:var(--accent)}
 
 /* ---------- buttons ---------- */
 .btn{display:inline-flex; align-items:center; justify-content:center; gap:6px; min-height:44px; padding:0 14px; border-radius:11px;
@@ -335,7 +316,7 @@ summary::-webkit-details-marker{display:none}
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="data.js?v=2026-10-16.6"></script>
+<script src="data.js?v=2026-10-16.7"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
