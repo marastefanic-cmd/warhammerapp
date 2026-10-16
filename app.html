@@ -112,6 +112,16 @@ summary::-webkit-details-marker{display:none}
 .row .rb span{font-size:13px; color:var(--muted)}
 .row .c{font:600 14px var(--f-head); color:var(--muted); font-variant-numeric:tabular-nums}
 .grp-h{margin:16px 0 4px}
+.pxt{display:flex; flex-wrap:wrap; gap:4px 14px; font:600 15px/1.4 var(--f-head); font-variant-numeric:tabular-nums}
+.pxt b{color:var(--accent)}
+.px{padding:7px 2px 6px; border-bottom:1px solid var(--line)}
+.pxh{display:flex; flex-wrap:wrap; align-items:baseline; gap:2px 8px; margin-bottom:2px}
+.pxh .link{font:700 16px/1.2 var(--f-head); letter-spacing:.02em}
+.pxl{display:grid; grid-template-columns:96px minmax(0,1fr); gap:6px; font-size:14px; line-height:1.35; padding:1px 0}
+.pxn{font:600 14px/1.35 var(--f-head); font-variant-numeric:tabular-nums; color:var(--fg2)}
+.pxn b{color:var(--fg)}
+.pxm.std{color:var(--muted)}
+.pxm i{font-style:normal; color:var(--muted); font-size:12.5px}
 .arow{padding:10px 2px 11px}
 .arow .rb{gap:5px}
 .arow .rb b{display:flex; align-items:baseline; gap:10px; font-size:19px}
@@ -159,15 +169,22 @@ summary::-webkit-details-marker{display:none}
 .dsl{margin-top:5px; font-size:12.5px; color:var(--muted); line-height:1.35}
 .dsec{margin-top:12px}
 .dsec > .lbl{padding-bottom:3px}
-.dline{padding:7px 2px; border-bottom:1px solid var(--line); font-size:14px; line-height:1.55}
+.dline{padding:5px 2px; border-bottom:1px solid var(--line); font-size:14px; line-height:1.5}
+.dline .sep{color:var(--muted)}
+.lbn{margin-left:8px; text-transform:none; letter-spacing:.02em; font-weight:500}
+.lbn .link{color:var(--muted)}
 .dline .link{white-space:nowrap}
 .dsec > .dline:first-child{border-top:1px solid var(--line)}
 .dsec + .dsec{margin-top:0}
 .dsec + .dsec > .dline:first-child{border-top:0}
 /* one-line rows that open: abilities, keywords */
 .abl{border-top:1px solid var(--line)}
+.ab.pf{border-bottom:1px solid var(--line)}
+.ab.pf > summary{min-height:34px}
+.ab.pf .pfl{font-size:12.5px; color:var(--fg2)}
+.ab.pf .wh.both{position:static; box-shadow:none}
 .ab{border-bottom:1px solid var(--line)}
-.ab > summary{display:flex; align-items:center; gap:8px; min-height:38px; padding:5px 2px}
+.ab > summary{display:flex; align-items:center; gap:8px; min-height:34px; padding:3px 2px}
 .ab > summary:active{background:var(--surface)}
 .ab > summary .an{flex:1; min-width:0; display:flex; flex-wrap:wrap; align-items:baseline; gap:0 8px}
 .ab > summary b{font:700 15.5px/1.2 var(--f-head); letter-spacing:.02em}
@@ -175,6 +192,8 @@ summary::-webkit-details-marker{display:none}
 .ab > summary small{font:600 11px var(--f-head); letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
 .ab > summary .aw{font-size:12.5px; color:var(--muted); white-space:nowrap; text-align:right}
 .ab[open] > summary b{color:var(--accent)}
+.ab.na > summary b{color:var(--muted)}
+.ab .tg.once{color:var(--fg2); font-weight:500}
 .ab > .body{padding:0 2px 10px; font-size:14.5px; line-height:1.42}
 .ab .abt{font-size:12.5px; color:var(--muted); margin-bottom:3px}
 
@@ -195,7 +214,20 @@ summary::-webkit-details-marker{display:none}
 .use b{color:var(--accent); font-weight:600}
 .use b.m{color:var(--fg)}
 .mod .sc{font:600 10.5px var(--f-head); letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-right:5px}
-.wb{padding:6px 6px 5px; border-top:1px solid var(--line)}
+.wb{padding:4px 6px 3px; border-top:1px solid var(--line)}
+.wr > span.n2{grid-column:span 2}
+.wh > span.n2{grid-column:span 2}
+.cr{display:inline-block; font:600 10.5px/1.2 var(--f-head); letter-spacing:.07em; text-transform:uppercase; color:var(--muted); margin-left:6px}
+.use.gw{padding-left:0; margin-top:6px}
+.use.gw .who{display:inline; margin:0 6px 0 0}
+@media (max-width:359px){
+  .ranged .wr, .wh.ranged, .both .wr, .wh.both{grid-template-columns:minmax(0,1fr) 28px 38px 24px 22px 26px 30px}
+  .melee .wr, .wh.melee{grid-template-columns:minmax(0,1fr) 38px 24px 22px 26px 30px}
+  .wr.p > span.n{padding-left:2px}
+  .ar{margin-right:1px; font-size:10px}
+  .wr > span.n, .st > span.n{overflow-wrap:anywhere}
+  .st > span.n{font-size:13px; padding-left:6px}
+}
 .wh + .wb, .who + .wb, .use + .wb, .wb:first-child, .wb.g, .wb.g + .wb{border-top:0}
 .wb.g{background:var(--surface); border-radius:6px; margin:3px 0}
 .wr > span{font:700 15.5px/1.25 var(--f-head); text-align:center; min-width:0; font-variant-numeric:tabular-nums}
@@ -224,7 +256,8 @@ summary::-webkit-details-marker{display:none}
 .band{position:sticky; top:var(--top); z-index:4; display:flex; align-items:baseline; gap:8px; width:100%; min-height:40px; margin-top:12px; padding:9px 10px 8px;
   background:var(--surface2); text-align:left; border-radius:6px}
 .band b{font:700 16.5px/1.15 var(--f-head); letter-spacing:.02em}
-.band .tgs{flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.band{flex-wrap:wrap; row-gap:2px}
+.band .tgs{flex:1 1 auto; min-width:0; display:flex; flex-wrap:wrap; gap:0 8px}
 .band .go{align-self:center; color:var(--accent)}
 .slice > .us:first-child .band{margin-top:4px}
 .band + .wt, .band + .al{margin-top:4px}
@@ -311,6 +344,7 @@ summary::-webkit-details-marker{display:none}
     <symbol id="i-blade" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14.5 3.5 20.5 3.5 20.5 9.5 9 21 3 15 14.5 3.5ZM7 12l5 5M4.5 19.5l-1 1"/></symbol>
     <symbol id="i-spark" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3l2.2 6.3L21 12l-6.8 2.7L12 21l-2.2-6.3L3 12l6.8-2.7L12 3Z"/></symbol>
     <symbol id="i-book" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15ZM4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/></symbol>
+    <symbol id="i-base" viewBox="0 0 24 24"><ellipse cx="12" cy="15" rx="9" ry="4" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M3 15v-2c0-2.2 4-4 9-4s9 1.8 9 4v2"/></symbol>
     <symbol id="i-back" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></symbol>
     <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></symbol>
     <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
@@ -356,8 +390,8 @@ const TURN_NAME = { your:'Your turn', opp:'Their turn', either:'Either turn' };
 const ROLE_ORDER = ['Epic Hero','Character','Battleline','Infantry','Mounted','Beast','Swarm','Monster','Vehicle','Dedicated Transport','Fortification','Other'];
 const ROLE_LABEL = { 'Epic Hero':'Epic Heroes', 'Character':'Characters', 'Battleline':'Battleline', 'Infantry':'Infantry', 'Mounted':'Mounted', 'Beast':'Beasts', 'Swarm':'Swarms',
   'Monster':'Monsters', 'Vehicle':'Vehicles', 'Dedicated Transport':'Dedicated Transports', 'Fortification':'Fortifications', 'Other':'Other' };
-const SCREEN_TITLE = { units:'Units', strats:'Stratagems', ranged:'Ranged weapons', melee:'Melee weapons', abilities:'Abilities', rules:'Rules & keywords' };
-const BACK_TITLE = { ranged:'Ranged', melee:'Melee', rules:'Rules' };
+const SCREEN_TITLE = { units:'Units', strats:'Stratagems', ranged:'Ranged weapons', melee:'Melee weapons', abilities:'Abilities', rules:'Rules & keywords', bases:'Bases & proxies' };
+const BACK_TITLE = { ranged:'Ranged', melee:'Melee', rules:'Rules', bases:'Bases' };
 const HUNTER_KW = 'HUNTER: MONSTER/VEHICLE';
 const KEY_LABEL = { range:'RNG', A:'A', BS:'BS', WS:'WS', S:'S', AP:'AP', D:'D' };
 const chev = '<svg class="chev" aria-hidden="true"><use href="#i-down"/></svg>';
@@ -460,6 +494,7 @@ function matches(n, u){
   if(n.all && !n.all.every(k => hasKw(u, k))) return false;
   if(n.any && !n.any.some(k => hasKw(u, k))) return false;
   if(n.none && n.none.some(k => hasKw(u, k))) return false;
+  if(n.unless && matches(n.unless, u)) return false;
   return true;
 }
 const eligible = (s, a) => (a || army()).units.filter(u => matches(s.needs, u));
@@ -482,7 +517,14 @@ function unitNames(units){
 }
 // detachment rules that apply to a unit (by keyword)
 const unitDetRules = u => detachments().filter(d => d.rule && d.rule.needs && matches(d.rule.needs, u)).map(d => d.rule);
-const unitRules = u => u.rules.concat(unitDetRules(u).map(r => r.name).filter(n => !u.rules.includes(n)));
+const unitRules = u => u.rules.concat(unitDetRules(u).map(r => r.name).filter(n => !u.rules.includes(n))).filter(r => !inertRule(r));
+// an army rule that needs units this army doesn't have, e.g. Bondsman with no ARMIGER models
+function inertRule(name){
+  const r = faction().armyRules.find(x => x.name === name);
+  return !!(r && r.needs && !army().units.some(u => matches(r.needs, u)));
+}
+// an ability that can't be used in this list: the data says why, or it is a Bondsman ability with no ARMIGER
+const naReason = ab => ab.na || (/bondsman/i.test(ab.tag || '') && inertRule('Bondsman') ? 'No ARMIGER models in this list' : '');
 // rules other units give this one (Ghazghkull's aura, the Dreadherder's re-rolls)
 function auraMods(u){
   const out = [];
@@ -496,7 +538,8 @@ function auraMods(u){
 // everything that changes this unit's attacks: its own abilities, detachment rules, auras
 function unitMods(u, kind){
   const det = unitDetRules(u).filter(r => r.mod).map(r => Object.assign({ from:r.name, rule:r.name }, r.mod));
-  return (u.mods || []).concat(det, auraMods(u)).filter(m => m.kind === kind || m.kind === 'all');
+  const strat = allStratagems().filter(s => s.mod && eligible(s).includes(u)).map(s => Object.assign({ from:s.name, strat:s.id, cp:s.cp }, s.mod));
+  return (u.mods || []).concat(det, auraMods(u), strat).filter(m => m.kind === kind || m.kind === 'all');
 }
 // phases and turn: turns can override the turn for one phase ("your Shooting phase or the Fight phase")
 const phasesOf = x => x.phases || x.ph || [];
@@ -539,8 +582,8 @@ function ruleFor(label){
   for(const [re, key] of f.aliases || []) if(re.test(clean)){ clean = key; break; }
   const lc = clean.toLowerCase();
   const ar = f.armyRules.find(r => r.name.toLowerCase() === lc);
-  if(ar) return { name:ar.name, key:ar.name, text:ar.text, table:ar.table, src:f.name + ' army rule' };
-  for(const d of detachments()) if(d.rule && d.rule.name.toLowerCase() === lc) return { name:d.rule.name, key:d.rule.name, text:d.rule.text, table:d.rule.table, needs:d.rule.needs, src:d.name + ' detachment rule' };
+  if(ar) return { name:ar.name, key:ar.name, text:ar.text, table:ar.table, missing:ar.missing, note:ar.note, src:f.name + ' army rule' };
+  for(const d of detachments()) if(d.rule && d.rule.name.toLowerCase() === lc) return { name:d.rule.name, key:d.rule.name, text:d.rule.text, table:d.rule.table, needs:d.rule.needs, note:d.rule.note, src:d.name + ' detachment rule' };
   for(const [re, key] of D.ruleAliases) if(re.test(clean)) return { name:clean, key, text:D.rules[key], src:'Core rule' };
   if(D.rules[clean]) return { name:clean, key:clean, text:D.rules[clean], src:'Core rule' };
   return null;
@@ -623,6 +666,7 @@ function screenArmy(){
       row('melee', 'i-blade', 'Melee weapons', weaponCount(a, 'melee')) +
       row('abilities', 'i-spark', 'Abilities', a.units.reduce((t, u) => t + u.abilities.length, 0)) +
       row('rules', 'i-book', 'Rules & keywords', '') +
+      row('bases', 'i-base', 'Bases & proxies', a.units.reduce((t, u) => t + modelCount(u) * (u.copies || 1), 0)) +
     '</div><p class="note">' + esc(a.source) + '</p></div>';
 }
 
@@ -761,6 +805,7 @@ const colHeader = kind => '<div class="wh ' + kind + '"><span class="n">Weapon</
 function modFrom(m, u){
   const link = (attr, val, label) => '<span class="link" role="button" tabindex="0" data-' + attr + '="' + esc(val) + '">' + esc(label) + '</span>';
   if(m.rule) return link('rule', m.rule, m.from);
+  if(m.strat) return link('strat', m.strat, m.cp + 'CP ' + m.from);
   if(m.src && m.src !== u) return link('unit', m.src.id, m.from);   // the condition already names the unit
   const ab = (m.src || u).abilities.find(a => a.name === m.from);
   return ab ? link('ability', abilityKey(ab), m.from) : esc(m.from);
@@ -769,7 +814,8 @@ function modFrom(m, u){
 const bump = (k, v, d) => k === 'AP' ? String(-(Math.abs(parseInt(v, 10) || 0) + d)) : v;
 function weaponBlock(it, keys, mods, u){
   const cell = (v, cls) => '<span>' + (cls ? '<i class="' + cls + '">' + esc(v) + '</i>' : esc(v)) + '</span>';
-  const row = (label, cells, p) => '<div class="wr' + (p ? ' p' : '') + '"><span class="n">' + label + '</span>' + cells.join('') + '</div>';
+  const wide = keys[0] === 'none';   // datasheet melee rows: no range column, the name can use it
+  const row = (label, cells, p) => '<div class="wr' + (p ? ' p' : '') + '"><span class="n' + (wide ? ' n2' : '') + '">' + label + '</span>' + (wide ? cells.slice(1) : cells).join('') + '</div>';
   const plainCells = w => keys.map(k => cell(w[k]));
   const kwl = w => (w.kw || []).length ? '<div class="kwl">' + w.kw.map(x => '<span role="button" tabindex="0" data-rule="' + esc(x) + '">' + esc(x) + '</span>').join(', ') + '</div>' : '';
   const count = n => n ? '<span class="x">×' + esc(n) + '</span>' : '';
@@ -795,16 +841,20 @@ function weaponBlock(it, keys, mods, u){
         return row('<span class="ar">➤</span><span class="link" role="button" tabindex="0" data-rule="Hunter">' + esc(p.name) + '</span><span class="tq">vs MON/VEH</span>', cells, true) + kwl(p);
       }).join('');
   }
-  return row(esc(w0.name) + count(w0.n), plainCells(w0)) + kwl(w0);
+  return row(esc(w0.name) + count(w0.n) + (it.carrier ? '<span class="cr">' + esc(it.carrier) + '</span>' : ''), plainCells(w0)) + kwl(w0);
 }
 // footnotes: rules with the same condition share one line; a footnote that changes only
 // ranged or only melee attacks on a sheet with both says which
 function modLines(mods, u, hasHunter){
   const groups = new Map();
   for(const m of mods){ const k = norm(m.when); if(!groups.has(k)) groups.set(k, { when:m.when, items:[] }); groups.get(k).items.push(m); }
-  return [...groups.values()].map(g => '<div class="mod">' + (g.items.every(m => m.scope === g.items[0].scope) && g.items[0].scope ? '<i class="sc">' + g.items[0].scope + '</i>' : '') +
-    '<b>' + esc(g.when) + ':</b> ' + g.items.map(m => (m.scope && !g.items.every(x => x.scope === m.scope) ? '<i class="sc">' + m.scope + '</i>' : '') + (m.who ? esc(m.who) + ' ' : '') + esc(m.note) + (m.hunter && hasHunter ? ', already in the Hunter rows' : '') +
-    ' <span class="from">(' + modFrom(m, u) + ')</span>').join(' · ') + '</div>').join('');
+  return [...groups.values()].map(g => {
+    const named = g.items.length === 1 && g.when.indexOf(g.items[0].from) >= 0 ? g.items[0] : null;
+    const when = named ? esc(g.when).replace(esc(named.from), modFrom(named, u)) : esc(g.when);
+    return '<div class="mod">' + (g.items.every(m => m.scope === g.items[0].scope) && g.items[0].scope ? '<i class="sc">' + g.items[0].scope + '</i>' : '') +
+      '<b>' + when + ':</b> ' + g.items.map(m => (m.scope && !g.items.every(x => x.scope === m.scope) ? '<i class="sc">' + m.scope + '</i>' : '') + (m.who ? esc(m.who) + ' ' : '') + esc(m.note) +
+      (m.hunter && hasHunter ? ' on every attack (the Hunter rows show it)' : '') + (m === named ? '' : ' <span class="from">(' + modFrom(m, u) + ')</span>')).join(' · ') + '</div>';
+  }).join('');
 }
 const RANGED_KEYS = ['range','A','BS','S','AP','D'], MELEE_KEYS = ['A','WS','S','AP','D'];
 /* Which weapons a model uses together and which are a choice (core rules):
@@ -823,24 +873,33 @@ function useSentence(set, kind, u){
   if(kind === 'ranged'){
     const cq = set.filter(isCQ), rest = set.filter(it => !isCQ(it));
     if(cq.length && rest.length && !hasKw(u, 'Monster') && !hasKw(u, 'Vehicle'))
-      return 'Shoots with its ' + orList(nm(cq)) + ' <b>or</b> its ' + andList(nm(rest)) + ', <b>not both</b>.';
+      return '<b>Pick one:</b> ' + orList(nm(cq)) + ' <b>or</b> ' + (rest.length > 1 ? 'all of ' : '') + andList(nm(rest)) + '.';
     return '<b>Shoots with ' + (set.length === 2 ? 'both' : 'all of these') + '</b>.';
   }
   const ea = set.filter(isEA), other = set.filter(it => !isEA(it));
   const extra = ea.length ? ', <b>plus</b> ' + andList(nm(ea)) + ' (extra attacks)' : '';
-  if(other.length > 1) return 'Fights with ' + orList(nm(other)) + ', <b>only one</b>' + extra + '.';
-  if(other.length === 1) return '<b>Fights with both</b>: ' + nm(other)[0] + extra.replace(', <b>plus</b>', ' plus') + '.';
+  if(other.length > 1) return '<b>Pick one:</b> ' + orList(nm(other)) + extra + '.';
+  if(other.length === 1) return '<b>Fights with both</b>: ' + nm(other)[0] + extra.replace(', <b>plus</b>', ' +') + '.';
   return '<b>Fights with all of these</b> (extra attacks).';
 }
 // the line under a weapons heading that says which of them a model uses
-function useLine(items, kind, u){
+function useLine(items, kind, u, part){
   if(items.length < 2 || !u.gear) return '';
-  const lines = u.gear.map((g, i) => ({ who:u.models[i].replace(/^\d+× /, ''), set:items.filter(it => g.includes(itemName(it))) })).filter(l => l.set.length);
+  // in an attached unit, the first models line is the leader and the rest the bodyguard
+  const own = i => part == null || (part === 0 ? i === 0 : i > 0);
+  const lines = u.gear.map((g, i) => ({ i, who:u.models[i].replace(/^\d+× /, ''), set:items.filter(it => g.includes(itemName(it))) })).filter(l => l.set.length && own(l.i));
   const multi = lines.filter(l => l.set.length > 1);
-  if(!multi.length) return lines.length > 1 ? '<p class="use">Different models carry these (see ×).</p>' : '';
+  if(!multi.length){
+    if(lines.length < 2) return '';
+    for(const l of lines) for(const it of l.set) if(!it.n) it.carrier = l.who.replace(/ w\/.*$/, '');   // name the one model that has it
+    return '<p class="use"><b class="m">One per model</b> · × = how many carry it.</p>';
+  }
   const key = l => l.set.map(itemName).join('|');
   const kinds = [...new Map(multi.map(l => [key(l), l])).values()];
   if(kinds.length === 1 && multi.length === lines.length) return '<p class="use">' + useSentence(kinds[0].set, kind, u) + '</p>';
+  const said = kinds.map(l => useSentence(l.set, kind, u));
+  if(kind === 'ranged' && said.every(x => /^<b>Shoots with (both|all of these)<\/b>\.$/.test(x)))
+    return '<p class="use"><b>Every model shoots with all its guns</b>' + (multi.length < lines.length ? ' (see ×)' : '') + '.</p>';
   return kinds.map(l => '<p class="use"><b class="m">' + esc(l.who) + ':</b> ' + useSentence(l.set, kind, u) + '</p>').join('');
 }
 function weaponRows(list, keys, mods, u, kind){
@@ -849,8 +908,9 @@ function weaponRows(list, keys, mods, u, kind){
   let h = '';
   for(const who of whos){
     const mine = items.filter(it => (it.who || '') === who);
-    if(whos.length > 1) h += '<div class="who">' + esc(who) + '</div>';
-    h += useLine(mine, kind, u);
+    const ul = useLine(mine, kind, u, u.leads && whos.length > 1 ? (who === whos[0] ? 0 : 1) : null);
+    if(whos.length > 1 && ul.startsWith('<p class="use">') && ul.indexOf('<p', 2) < 0) h += ul.replace('<p class="use">', '<p class="use gw"><span class="who">' + esc(who) + '</span>');
+    else h += (whos.length > 1 ? '<div class="who">' + esc(who) + '</div>' : '') + ul;
     for(const it of mine) h += '<div class="wb' + (it.group ? ' g' : '') + '">' + weaponBlock(it, keys, mods, u) + '</div>';
   }
   return h;
@@ -867,21 +927,35 @@ function unitWeapons(u){
   const r = u.ranged || [], m = u.melee || [];
   if(!r.length && !m.length) return '';
   const mr = unitMods(u, 'ranged'), mm = unitMods(u, 'melee');
-  const head = (id, label, cols) => '<div class="anc" id="sec-' + id + '"></div><div class="wh both"><span class="n">' + label + '</span>' + cols.map(c => '<span>' + c + '</span>').join('') + '</div>';
+  const head = (id, label, cols, wide) => '<div class="anc" id="sec-' + id + '"></div><div class="wh both"><span class="n' + (wide ? ' n2' : '') + '">' + label + '</span>' + cols.map(c => '<span>' + c + '</span>').join('') + '</div>';
   let h = '<div class="wt both">';
-  if(r.length) h += head('ranged', 'Ranged', ['RNG','A','BS','S','AP','D']) + weaponRows(r, RANGED_KEYS, mr, u, 'ranged');
-  if(m.length) h += head('melee', 'Melee', ['','A','WS','S','AP','D']) + weaponRows(m, ['none'].concat(MELEE_KEYS), mm, u, 'melee');
+  const rItems = weaponItems(r);
+  const pistols = m.length && rItems.length > 1 && rItems.every(isCQ);
+  if(pistols){
+    const n = new Map();
+    for(const it of rItems) n.set(itemName(it), (n.get(itemName(it)) || 0) + (it.n || 1));
+    h += '<div class="anc" id="sec-ranged"></div><details class="ab pf"><summary><span class="an"><b class="kh">Ranged</b><span class="pfl">' +
+      esc([...n].map(([k, c]) => k + (c > 1 ? ' ×' + c : '')).join(', ')) + ' · all pistols</span></span>' + chev + '</summary>' +
+      '<div class="wh both"><span class="n"></span>' + ['RNG','A','BS','S','AP','D'].map(c => '<span>' + c + '</span>').join('') + '</div>' + weaponRows(r, RANGED_KEYS, mr, u, 'ranged') + '</details>';
+  } else if(r.length) h += head('ranged', 'Ranged', ['RNG','A','BS','S','AP','D']) + weaponRows(r, RANGED_KEYS, mr, u, 'ranged');
+  if(r.length) h += '<!--R-->';
+  if(m.length) h += head('melee', 'Melee', ['A','WS','S','AP','D'], true) + weaponRows(m, ['none'].concat(MELEE_KEYS), mm, u, 'melee') + '<!--M-->';
   const key = x => [x.from, x.when, x.note].join('|');
   const inR = new Set(mr.map(key)), inM = new Set(mm.map(key)), seen = new Set(), notes = [];
+  const damaged = new Set(u.abilities.filter(ab => ab.damaged).map(ab => ab.name));
   for(const x of mr.concat(mm)){
     const k = key(x);
-    if((x.weapon && x.set) || seen.has(k)) continue;
+    if((x.weapon && x.set) || seen.has(k) || damaged.has(x.from)) continue;
     seen.add(k);
     notes.push(Object.assign({}, x, { scope: !r.length || !m.length || (inR.has(k) && inM.has(k)) ? '' : inR.has(k) ? 'Ranged' : 'Melee' }));
   }
   const hasHunter = m.some(w => w.hunter) && mm.some(x => x.hunter);
-  if(notes.length) h += '<div class="mods">' + modLines(notes, u, hasHunter) + '</div>';
-  return h + '</div>';
+  const block = list => list.length ? '<div class="mods">' + modLines(list, u, hasHunter) + '</div>' : '';
+  const byWhen = new Map();
+  for(const x of notes){ const k = norm(x.when); byWhen.set(k, (byWhen.get(k) || []).concat(x)); }
+  const only = sc => [...byWhen.values()].filter(g => g.every(x => x.scope === sc)).flat().map(x => Object.assign({}, x, { scope:'' }));
+  const rest = [...byWhen.values()].filter(g => !g.every(x => x.scope && x.scope === g[0].scope)).flat();
+  return h.replace('<!--R-->', block(only('Ranged'))).replace('<!--M-->', block(only('Melee'))) + block(rest) + '</div>';
 }
 
 /* ---------- screen: datasheet ----------
@@ -896,54 +970,80 @@ function shortWhen(x){
   return ph.map(p => ({ your:'Your ', opp:'Their ' }[phTurn(x, p)] || '') + PHASE_NAME[p]).join(' · ');
 }
 // one line per ability: its name and when it triggers; tap to read it
+// "Once per battle", "Once per battle round, per army": a limited use is part of the row, not hidden in it
+const onceTag = ab => { const m = /once per [a-z ]+?(, per army)?(?=[),·.]|$)/i.exec((ab.tag || '') + ' ' + ((/\((once per [^)]+)\)/i.exec(ab.text || '') || [])[1] || '')); return m ? m[0].replace(/^o/, 'O') : ''; };
 function abilityRows(abs){
   return '<div class="abl">' + abs.map(ab => {
-    const meta = [ab.tag, ab.ph ? whenTag(ab) : ''].filter(Boolean);
-    return '<details class="ab"><summary><span class="an"><b>' + esc(ab.name) + '</b>' + (ab.who ? '<small>' + esc(ab.who) + '</small>' : '') +
-      (ab.tag === 'Enhancement' ? '<span class="tg">Enhancement</span>' : '') + '</span>' +
-      (ab.ph ? '<span class="aw">' + esc(shortWhen(ab)) + '</span>' : '') + chev + '</summary><div class="body">' +
-      (meta.length ? '<p class="abt">' + meta.map(esc).join(' · ') + '</p>' : '') + rt(ab.text) + '</div></details>';
+    const meta = [ab.tag, ab.ph ? whenTag(ab) : ''].filter(Boolean), na = naReason(ab), once = onceTag(ab);
+    return '<details class="ab' + (na ? ' na' : '') + '"><summary><span class="an"><b>' + esc(ab.name) + '</b>' + (ab.who ? '<small>' + esc(ab.who) + '</small>' : '') +
+      (ab.tag === 'Enhancement' ? '<span class="tg">Enhancement</span>' : '') + (once ? '<span class="tg once">' + esc(once) + '</span>' : '') + (na ? '<span class="tg m">not usable here</span>' : '') + '</span>' +
+      (ab.ph && !na ? '<span class="aw">' + esc(shortWhen(ab)) + '</span>' : '') + chev + '</summary><div class="body">' +
+      (na ? '<p class="abt"><i>' + esc(na) + '</i></p>' : '') + (meta.length ? '<p class="abt">' + meta.map(esc).join(' · ') + '</p>' : '') + rt(ab.text) + '</div></details>';
   }).join('') + '</div>';
 }
-// what matters when this unit is shot or fought: FNP, Lone Operative, -1 AP, the riled-up save
-function defences(u){
+// what matters when this unit is shot or fought: FNP, Lone Operative, -1 AP, the riled-up save.
+// Each entry knows where it comes from, so the datasheet can link it.
+function defenceItems(u){
   const out = [];
-  for(const r of u.rules){ const m = /^feel no pain (\d\+)/i.exec(r); if(m) out.push('Feel No Pain ' + m[1]); }
-  for(const r of unitDetRules(u)) if(r.def && !out.includes(r.def)) out.push(r.def);   // e.g. Knights of Legend: FNP 6+
-  for(const ab of u.abilities) if(ab.def) out.push(ab.def);
+  for(const r of u.rules){ const m = /^feel no pain (\d\+)/i.exec(r); if(m) out.push({ t:'Feel No Pain ' + m[1], a:'rule', v:r }); }
+  for(const r of unitDetRules(u)) if(r.def && !out.some(x => x.t === r.def)) out.push({ t:r.def, a:'rule', v:r.name });   // e.g. Knights of Legend: FNP 6+
+  for(const ab of u.abilities) if(ab.def && !naReason(ab)) out.push({ t:ab.def, a:'ability', v:abilityKey(ab) });
+  for(const s of allStratagems()) if(s.def && eligible(s).includes(u)) out.push({ t:s.cp + 'CP ' + s.name + ': ' + s.def, a:'strat', v:s.id });
   const weak = u.stats.filter(s => !/^[2-5]\+$/.test(s.InSv));
   if(weak.length && u.rules.includes('Waaagh!'))
-    out.push('Riled up: 5+ InSv' + (weak.length < u.stats.length ? ' (' + weak.map(s => s.name.replace(/ ×\d+$/, '')).join(', ') + ')' : ''));
+    out.push({ t:'Riled up: 5+ InSv' + (weak.length < u.stats.length ? ' (' + weak.map(s => s.name.replace(/ ×\d+$/, '')).join(', ') + ')' : ''), a:'rule', v:'Waaagh!' });
   return out;
 }
+const defences = u => defenceItems(u).map(x => x.t);
 const linkTo = (attr, val, label) => '<span class="link" role="button" tabindex="0" data-' + attr + '="' + esc(val) + '">' + esc(label) + '</span>';
+// an ability already on the sheet as a weapons footnote or a "When targeted" entry isn't listed
+// again: its name there opens the full text. Kept: ones you track the use of, enhancements,
+// and ones that also help other units.
+function shownElsewhere(ab, u){
+  if(ab.damaged) return true;
+  if(onceTag(ab) || ab.tag === 'Enhancement' || (u.aura || []).some(m => m.from === ab.name)) return false;
+  return !!ab.def || (u.mods || []).some(m => m.from === ab.name);
+}
+// core stratagems any unit can use are listed only where they suit the unit
+const suits = (s, u) => keywordGated(s) ||
+  (s.id === 'fire-overwatch' && (u.ranged || []).length > 0) ||
+  (s.id === 'rapid-ingress' && (unitRules(u).some(r => ruleKey(r) === 'Deep Strike') || u.abilities.some(ab => /strategic reserves/i.test(ab.text))));
+const modelsText = u => u.models.map(esc).join(' · ') + (u.ptsNote ? ' · ' + esc(u.ptsNote) + ' pts' : '');
 function screenUnit(){
   const u = unitById(cur.unit);
   if(!u) return '<div class="empty">This unit is no longer in the list.</div>';
-  const strats = allStratagems().filter(s => keywordGated(s) && eligible(s).includes(u));
-  const multi = u.stats.length > 1, def = defences(u);
+  const strats = allStratagems().filter(s => eligible(s).includes(u) && suits(s, u));
+  const multi = u.stats.length > 1, def = defenceItems(u);
   const solo = u.models.length === 1 && /^1× /.test(u.models[0]);
+  const longModels = !solo && modelsText(u).length > 70;   // then they go in the Models & keywords popup
   const meta = [esc(u.role), esc(u.pts) + ' pts' + (u.copies > 1 ? ' each' : '')];
   if(u.copies > 1) meta.push('×' + esc(u.copies) + ' in list');
   if(u.leads) meta.push('leading ' + esc(u.leads));
-  meta.push(esc([...new Set(u.stats.map(s => s.base))].join(' / ')) + ' base');
-  const abil = u.abilities.filter(ab => !ab.damaged);
+  const abil = u.abilities.filter(ab => !shownElsewhere(ab, u));
   const weaponKeys = new Set([...(u.ranged || []), ...(u.melee || [])].flatMap(w => w.kw.map(ruleKey)));
+  const statCols = multi ? (innerWidth < 360 ? 'minmax(60px,1fr) repeat(7, minmax(22px,27px))' : 'minmax(64px,1fr) repeat(7, minmax(24px,31px))') : 'repeat(7, minmax(0,1fr))';
+  const attached = u.leads ? '<span class="lbn">' + (D.rules['Attached Units'] ? linkTo('rule', 'Attached Units', '“this unit” = the whole attached unit') : '“this unit” = the whole attached unit') + '</span>' : '';
   return '<div class="ds-meta"><span>' + meta.join(' · ') + '</span>' + nameTags(u, { noLeads:true, noCopies:true }) + '</div>' +
-    '<div class="statwrap" id="sec-stats"><div class="st num" style="grid-template-columns:' + (multi ? 'minmax(64px,1fr) repeat(7, minmax(26px,36px))' : 'repeat(7, minmax(0,1fr))') + '">' +
+    '<div class="statwrap" id="sec-stats"><div class="st num" style="grid-template-columns:' + statCols + '">' +
       (multi ? '<span class="h"></span>' : '') + ['M','T','SV','W','LD','OC','INV'].map(k => '<span class="h">' + k + '</span>').join('') +
       u.stats.map(s => (multi ? '<span class="n">' + esc(s.name) + '</span>' : '') + [s.M, s.T, s.Sv, s.W, s.Ld, s.OC, s.InSv].map(v => '<span>' + esc(v) + '</span>').join('')).join('') + '</div>' +
     (u.boostNote ? '<p class="dsl"><i>' + esc(u.boostNote) + '</i></p>' : '') +
-    (!solo ? '<p class="dsl">' + u.models.map(esc).join(' · ') + (u.ptsNote ? ' · ' + esc(u.ptsNote) + ' pts' : '') + '</p>' : '') +
-    (def.length ? '<div class="def"><span class="il">When targeted</span>' + def.map(esc).join(' · ') + '</div>' : '') +
+    (!solo && !longModels ? '<p class="dsl">' + modelsText(u) + '</p>' : '') +
+    (def.length ? '<div class="def"><span class="il">When targeted</span>' + def.map(x => linkTo(x.a, x.v, x.t)).join(' · ') + '</div>' : '') +
     u.abilities.filter(ab => ab.damaged).map(ab => { const m = (u.mods || []).find(x => x.from === ab.name);
       return '<div class="def dmg"><span class="il">Damaged ' + esc(ab.damaged) + ' W</span>' + linkTo('ability', abilityKey(ab), m ? m.note : 'see the rule') + '</div>'; }).join('') + '</div>' +
     unitWeapons(u) +
-    (abil.length ? '<div class="dsec" id="sec-abilities"><div class="lbl">Abilities</div>' + abilityRows(abil) + '</div>' : '') +
-    '<div class="dsec" id="sec-rules"><p class="dline"><span class="il">Rules</span>' + unitRules(u).filter(r => !weaponKeys.has(ruleKey(r))).map(r => linkTo('rule', r, r)).join(', ') + '</p>' +
-      (strats.length ? '<p class="dline" id="sec-strats"><span class="il">Stratagems</span>' + strats.map(st => linkTo('strat', st.id, st.name)).join(', ') + '</p>' : '') +
-    '<details class="ab" id="sec-keywords"><summary><span class="an"><b class="kh">Keywords</b></span>' + chev + '</summary><div class="body"><p class="kwline">' + esc(u.kw.join(', ')) + '</p>' +
-      (u.kwNote ? '<p class="note">' + esc(u.kwNote) + '</p>' : '') + '</div></details></div>';
+    (abil.length ? '<div class="dsec" id="sec-abilities"><div class="lbl">Abilities' + attached + '</div>' + abilityRows(abil) + '</div>' : '') +
+    '<div class="dsec" id="sec-rules"><p class="dline"><span class="il">Rules</span>' + unitRules(u).filter(r => !weaponKeys.has(ruleKey(r))).map(r => linkTo('rule', r, r)).join(', ') +
+      ' <span class="sep">·</span> ' + linkTo('kw', u.id, longModels ? 'Models & keywords' : 'Keywords') + '</p>' +
+      (strats.length ? '<p class="dline" id="sec-strats"><span class="il">Stratagems</span>' + strats.map(st => linkTo('strat', st.id, st.name)).join(', ') + '</p>' : '') + '</div>';
+}
+// the list-building facts, one tap away
+function showKeywords(id){
+  const u = unitById(id);
+  if(!u) return;
+  openSheet(esc(u.role + ' · ' + u.pts + ' pts'), u.name, '<p class="kwline">' + modelsText(u) + '</p><p class="kwline">Base ' + esc([...new Set(u.stats.map(s => s.base))].join(' / ')) + '</p>' +
+    '<p class="lbl" style="margin-top:12px">Keywords</p><p class="kwline">' + esc(u.kw.join(', ')) + '</p>' + (u.kwNote ? '<p class="note">' + esc(u.kwNote) + '</p>' : ''));
 }
 
 /* ---------- screens: weapons and abilities by unit ---------- */
@@ -976,22 +1076,26 @@ function fits(x){
 }
 // in a phase view: start-of-phase first, end-of-phase last, any-phase stratagems after the rest
 const phaseOrder = (x, text) => (phasesOf(x).length === PHASES.length ? 10 : 0) + timing(text);
+// core rules a unit has that do something in a phase
+const CORE_PHASED = { 'Deep Strike':{ ph:['movement'], turn:'either' }, 'Super-Heavy Walker':{ ph:['movement'], turn:'your' }, 'Firing Deck':{ ph:['shooting'], turn:'your' } };
 function phaseItems(){
   const out = [], f = faction(), units = army().units;
-  for(const r of f.armyRules) if(r.ph) out.push({ name:r.name, text:r.text, table:r.table, tag:r.tag, ph:r.ph, turn:r.turn, turns:r.turns, sub:f.name + ' army rule', units:[] });
+  for(const r of f.armyRules) if(r.ph && !inertRule(r.name)) out.push({ name:r.name, text:r.text, table:r.table, tag:r.tag, ph:r.ph, turn:r.turn, turns:r.turns, sub:f.name + ' army rule', units:[] });
   for(const d of detachments()) if(d.rule && d.rule.ph){
     const us = units.filter(u => matches(d.rule.needs, u));
     if(us.length) out.push({ name:d.rule.name, text:d.rule.text, table:d.rule.table, ph:d.rule.ph, turn:d.rule.turn, turns:d.rule.turns, sub:d.name + ' rule · ' + unitNames(us), units:us });
   }
   for(const u of units) for(const ab of u.abilities){
-    if(!ab.ph) continue;
+    if(!ab.ph || naReason(ab)) continue;
     const key = ab.name + '|' + ab.text;
     let e = out.find(x => x.key === key);
     if(!e){ e = { key, name:ab.name, text:ab.text, tag:ab.tag, ph:ab.ph, turn:ab.turn, turns:ab.turns, units:[] }; out.push(e); }
     e.units.push(u);
   }
-  const ds = units.filter(u => unitRules(u).includes('Deep Strike'));
-  if(ds.length) out.push({ name:'Deep Strike', text:D.rules['Deep Strike'], ph:['movement'], turn:'either', sub:'Core rule · ' + unitNames(ds), units:ds });
+  for(const [key, when] of Object.entries(CORE_PHASED)){
+    const us = units.filter(u => unitRules(u).some(r => ruleKey(r) === key));
+    if(us.length && D.rules[key]) out.push(Object.assign({ name:key, text:D.rules[key], sub:'Core rule · ' + unitNames(us), units:us }, when));
+  }
   for(const e of out) if(!e.sub) e.sub = unitNames(e.units);
   return out;
 }
@@ -1031,7 +1135,7 @@ function screenStrats(){
       (abil.length ? '<div class="list">' + abil.map(a => xp(a.name, a.sub, a.tag ? '<span class="tg m">' + esc(a.tag) + '</span>' : '',
         rt(a.text) + (a.table ? ttable(a.table) : '') + usedBy('Units', a.units), false)).join('') + '</div>' : '');
     // when the opponent shoots or fights, the questions are "what's your save, can I see it"
-    if((p === 'shooting' && filt.turn !== 'your') || p === 'fight') h += '<div class="sec-h"><h2>When targeted</h2></div>' + defenceList();
+    if((p === 'shooting' || p === 'fight') && filt.turn !== 'your') h += '<div class="sec-h"><h2>When targeted</h2></div>' + defenceList();
   }
   const notes = [];
   const gaps = detachments().filter(d => (d.missing || []).includes('stratagems')).map(d => d.name);
@@ -1039,6 +1143,55 @@ function screenStrats(){
   if(blocked.length) notes.push('Not shown, no unit here can use ' + (blocked.length === 1 ? 'it' : 'them') + ': ' + blocked.join(', ') + '.');
   notes.push('All stratagem text is Wahapedia’s wording.');
   return h + notes.map(n => '<p class="note">' + esc(n) + '</p>').join('');
+}
+
+/* ---------- screen: bases & proxies ----------
+   For proxy models on the right bases: how many bases of each size the army needs, and per
+   unit one line per kind of model with what to write on its base. The most common model of a
+   squad is "standard"; the others say what they have that it doesn't (a weapon, an icon, the
+   champion). Leaders and single models get their name, enhancement and Warlord. */
+const modelCount = u => u.models.reduce((t, m) => t + (parseInt(m, 10) || 1), 0);
+const lineParts = m => { const x = /^(\d+)× (.+?)(?: \(([^)]+)\))?$/.exec(m) || [, '1', m]; return { n:+x[1], name:x[2], extra:x[3] || '' }; };
+const baseName = name => name.replace(/ w\/.*$/, '');
+function baseOf(u, name){
+  if(u.stats.length === 1) return u.stats[0].base;
+  const nm = norm(baseName(name)), rows = u.stats.map(s => ({ s, n:norm(s.name.replace(/ ×\d+$/, '')) }));
+  const pre = (a, b) => { let i = 0; while(i < a.length && a[i] === b[i]) i++; return i; };
+  const hit = rows.find(r => r.n === nm) || rows.find(r => nm.startsWith(r.n) || r.n.startsWith(nm)) || rows.slice().sort((x, y) => pre(y.n, nm) - pre(x.n, nm))[0];
+  return hit.s.base;
+}
+function proxyLines(u){
+  const lines = u.models.map((m, i) => Object.assign(lineParts(m), { gear:(u.gear || [])[i] || [], base:baseOf(u, lineParts(m).name) }));
+  const tag = [u.warlord ? 'Warlord' : '', u.enhancement].filter(Boolean);
+  const own = (l, words) => [l.name === u.name || !u.short ? baseName(l.name) : u.short].concat(words).join(' · ');
+  if(lines.length === 1 && lines[0].n === 1) return [Object.assign(lines[0], { mark:own(lines[0], tag), lead:true })];
+  const body = u.leads ? lines.slice(1) : lines;
+  if(u.leads) Object.assign(lines[0], { mark:own(lines[0], tag), lead:true });
+  const std = body.slice().sort((x, y) => y.n - x.n)[0];
+  for(const l of body){
+    if(l === std){ l.mark = 'standard'; l.std = true; continue; }
+    const sb = baseName(std.name), lb = baseName(l.name);
+    const named = lb === sb ? '' : lb.startsWith(sb + ' ') ? lb.slice(sb.length + 1) : lb;
+    const more = l.gear.filter(g => !std.gear.includes(g));
+    l.mark = [named, more.join(' + '), l.extra].filter(Boolean).join(' · ') || 'standard';
+  }
+  return lines;
+}
+function screenBases(){
+  const a = army(), total = new Map();
+  const units = ROLE_ORDER.flatMap(r => a.units.filter(u => (ROLE_ORDER.includes(u.role) ? u.role : 'Other') === r));
+  const cards = units.map(u => {
+    const lines = proxyLines(u), c = u.copies || 1;
+    for(const l of lines) if(/\d/.test(l.base)) total.set(l.base, (total.get(l.base) || 0) + l.n * c);   // "Hull": no base
+    return '<div class="px"><div class="pxh">' + unitLink(u) + (u.leads ? '<span class="tg m">+ ' + esc(u.leads) + '</span>' : '') +
+      (c > 1 ? '<span class="tg m">' + c + ' units: mark them apart (1, 2' + (c > 2 ? ', 3' : '') + ')</span>' : '') + '</div>' +
+      lines.map(l => '<div class="pxl"><span class="pxn">' + l.n + '× <b>' + esc(/\d/.test(l.base) ? l.base : 'no base') + '</b></span><span class="pxm' + (l.std ? ' std' : '') + '">' + esc(l.mark) +
+        (l.std && l.gear.length ? ' <i>' + esc(l.gear.join(', ')) + '</i>' : '') + '</span></div>').join('') + '</div>';
+  });
+  const sizes = [...total].sort((x, y) => (parseFloat(x[0]) || 999) - (parseFloat(y[0]) || 999));
+  return '<p class="lbl grp-h">Bases to print</p><p class="pxt">' + sizes.map(([b, n]) => '<span><b>' + n + '×</b> ' + esc(b) + '</span>').join('') + '</p>' +
+    '<p class="lbl grp-h">What to write on each base</p><div class="list">' + cards.join('') + '</div>' +
+    '<p class="note">From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.</p>';
 }
 
 /* ---------- screen: rules & keywords ---------- */
@@ -1095,6 +1248,7 @@ function render(){
   else if(s === 'ranged' || s === 'melee'){ v.innerHTML = screenWeapons(s); sub = '<div class="wt ' + s + '">' + colHeader(s) + '</div>'; }
   else if(s === 'abilities') v.innerHTML = screenAbilities();
   else if(s === 'rules') v.innerHTML = screenRules();
+  else if(s === 'bases') v.innerHTML = screenBases();
   setBar('subbar', sub);
   setBar('bbar', bot);
   measure();
@@ -1154,7 +1308,8 @@ function showRule(label){
   sheetRule = r.key;   // the rule's own name inside its text is not a link to itself
   const body = rt(r.text) + (r.table ? ttable(r.table) : '');
   sheetRule = null;
-  openSheet(esc(r.src), r.name, body + usedBy('In this army', users));
+  const gap = (r.missing || []).length ? '<p class="note">Not in the app yet: the ' + esc(r.missing.join(' and ')) + '.</p>' : '';
+  openSheet(esc(r.src), r.name, body + (r.note ? '<p class="note it">' + esc(r.note) + '</p>' : '') + gap + usedBy('In this army', users));
 }
 function showStrat(id){
   const s = allStratagems().find(x => x.id === id);
@@ -1220,6 +1375,7 @@ document.addEventListener('click', e => {
   if(ds.strat){ e.preventDefault(); showStrat(ds.strat); return; }
   if(ds.ability){ showAbility(ds.ability); return; }
   if(ds.enh){ showEnhancement(ds.enh); return; }
+  if(ds.kw){ showKeywords(ds.kw); return; }
   if(ds.phase){ filt.phase = ds.phase; saveSession(); rerender(); return; }
   if(ds.turn){ filt.turn = ds.turn; saveSession(); rerender(); return; }
   if(ds.more){ moreShown.add(ds.more); renderFinder(); return; }
