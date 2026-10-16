@@ -2,8 +2,9 @@
    Warhammer companion: data.
    One file holds every army plus the faction and core rules they use.
    To add an army: append an object to ARMIES (units transcribed from the
-   New Recruit PDF), add any new detachments/rules to FACTIONS, then bump
-   VERSION here AND in version.json so installed apps reload themselves.
+   New Recruit PDF), add any new detachments, rules or aliases to FACTIONS /
+   RULES / RULE_ALIASES, bump VERSION, then run `node build.js`.
+   (build.js stamps a content hash, so installed apps reload on any change.)
 
    Text markup used in rules text:
      **bold**   - a line starting "- " is a bullet   - *italic line*
@@ -12,10 +13,11 @@
 ===================================================================== */
 window.WH_DATA = (function(){
 
-const VERSION = '2026-10-16.8';
+const VERSION = '2026-10-16.10';
 
 /* ---------------- core rules (11th edition) ---------------- */
-// Weapon keyword and core ability text, from the BSData wh40k-11e game system.
+// Weapon keyword and core ability text, from the BSData wh40k-11e game system
+// (Snap Shooting from Wahapedia's core rules, 15.09).
 const RULES = {
   'Assault': 'Units containing one or more models with an **[ASSAULT]** weapon can shoot using **assault shooting** (10.05).',
   'Blast': 'Each time you gather attack dice for a **[BLAST]** weapon, add one additional **attack dice** for every five models that were in the target unit in the Select Targets step (rounding down). If this ability takes the form **[BLAST X]**, each time you gather **attack dice** for such a weapon, add **X** additional **attack dice** for every five models that were in the target unit in the Select Targets step (rounding down) instead.\n*Example: a [BLAST 2] weapon with A 3 targeting a 12-model unit gathers 4 extra dice, 7 in total.*',
@@ -39,6 +41,7 @@ const RULES = {
   'Feel No Pain': 'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.',
   'Leader': 'Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.',
   'Lone Operative': 'Unless part of an **attached** unit, this unit is not **visible** to enemy models unless they are within 12" of this unit, and it cannot be targeted by **[INDIRECT FIRE]** weapons unless the attacking model is within 12" of this unit.',
+  'Snap Shooting': 'ELIGIBLE IF: As stated in the rule allowing this shooting type.\nEFFECT: Your unit shoots as described in Making Attacks (04).\nWHILE SHOOTING:\n- You can only target one visible enemy unit within 24" of your unit (and only if it is an eligible target).\n- Each attack only hits on an unmodified hit roll of 6 (irrespective of the attacking weapon’s BS characteristic or any modifiers).\n- You cannot re-roll hit rolls.\nAFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.',
   'Mobile': 'Models with the **MOBILE** keyword can move horizontally through **dense terrain features** (13.06).\n*App note, not rules text: taken from the designer\u2019s note under Super-Heavy Walker; check the core rules for the full MOBILE rule.*'
 };
 
@@ -50,63 +53,66 @@ const RULE_ALIASES = [
   [/^precision/i, 'Precision'], [/^rapid fire/i, 'Rapid Fire'], [/^sustained hits/i, 'Sustained Hits'],
   [/^torrent/i, 'Torrent'], [/^twin-linked/i, 'Twin-linked'], [/^assault/i, 'Assault'],
   [/^deep strike/i, 'Deep Strike'], [/^deadly demise/i, 'Deadly Demise'], [/^feel no pain/i, 'Feel No Pain'],
-  [/^leader/i, 'Leader'], [/^lone operative/i, 'Lone Operative'], [/^mobile/i, 'Mobile']
+  [/^leader/i, 'Leader'], [/^lone operative/i, 'Lone Operative'], [/^mobile/i, 'Mobile'], [/^hunter/i, 'Hunter'], [/^snap shooting/i, 'Snap Shooting']
 ];
 
 /* ---------------- core stratagems ----------------
-   Short summaries, not the rulebook wording (marked "summary" in the app).
-   target: keyword lists checked against each unit's keywords.            */
+   Wahapedia wording (Core Rules, 11th edition, section 15).
+   needs: { all, any, none } keyword lists a unit must match to use it.   */
 const CORE_STRATAGEMS = [
-  { id:'command-re-roll', name:'Command Re-roll', cp:1, kind:'Battle Tactic', phases:['command','movement','shooting','charge','fight'], turn:'either',
-    when:'Any phase, just after you make an Advance, Charge, Damage, Hazard, Hit, Save, Wound or number-of-attacks roll for a friendly unit.',
+  { id:'command-re-roll', name:'Command Re-roll', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either',
+    when:'Any phase, just after you make one of the following rolls for a friendly unit or model:\n- Advance roll\n- Charge roll\n- Damage roll\n- Hazard roll\n- Hit roll\n- Save roll\n- Wound roll\n- A roll to determine the number of attacks generated with a weapon.',
     target:'That unit or model.',
-    effect:'Re-roll that roll. If several dice were rolled together, re-roll one of them (a Charge roll is re-rolled in full).' },
-  { id:'counter-offensive', name:'Counter-offensive', cp:2, kind:'Strategic Ploy', phases:['fight'], turn:'either',
-    when:'Fight phase, just after an enemy unit has fought.',
-    target:'One friendly engaged unit that has not been selected to fight this phase.',
-    effect:'Your unit fights next.' },
-  { id:'epic-challenge', name:'Epic Challenge', cp:1, kind:'Epic Deed', phases:['fight'], turn:'either', needs:{ all:['Character'] },
-    when:'Fight phase, when a friendly CHARACTER unit is selected to fight.',
-    target:'One CHARACTER model in that unit.',
-    effect:'That model’s melee attacks have **[PRECISION]**.' },
-  { id:'insane-bravery', name:'Insane Bravery', cp:1, kind:'Battle Tactic', phases:['command'], turn:'your', limit:'Once per battle',
-    when:'Battle-shock step of your Command phase, just before a friendly unit takes a battle-shock test.',
+    effect:'You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).' },
+  { id:'epic-challenge', name:'Epic Challenge', cp:1, phases:['fight'], turn:'either', needs:{ all:['Character'] },
+    when:'Fight phase, just after a friendly **CHARACTER** unit is selected to fight.',
+    target:'That **CHARACTER** unit.',
+    effect:'Select one **CHARACTER** model in your unit. Until the end of the phase, that model’s melee weapons have the **[PRECISION]** ability.' },
+  { id:'insane-bravery', name:'Insane Bravery', cp:1, phases:['command'], turn:'your', limit:'Once per battle',
+    when:'Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.',
     target:'That unit.',
-    effect:'Your unit automatically passes that test.' },
-  { id:'crushing-impact', name:'Crushing Impact', cp:1, kind:'Strategic Ploy', phases:['charge'], turn:'your', needs:{ any:['Monster','Vehicle'] },
-    when:'Your Charge phase, just after a friendly MONSTER or VEHICLE unit ends a charge move.',
-    target:'That unit, and one enemy unit it is engaged with.',
-    effect:'Roll D6 equal to the **T** of one of its models (max 6). Each 5+ inflicts 1 mortal wound on the enemy unit; each 1 inflicts 1 mortal wound on your unit. (Replaces Tank Shock.)' },
-  { id:'explosives', name:'Explosives', cp:1, kind:'Wargear', phases:['shooting'], turn:'your', needs:{ any:['Explosives','Grenades'] },
+    effect:'That battle-shock roll is automatically successful.',
+    restrictions:'You cannot use this stratagem more than once per battle.' },
+  { id:'explosives', name:'Explosives', cp:1, phases:['shooting'], turn:'your', needs:{ any:['Explosives','Grenades'] },
     when:'Your Shooting phase.',
-    target:'One friendly EXPLOSIVES unit that did not advance this turn, and one visible enemy unit within 8".',
-    effect:'Roll six D6: each 4+ inflicts 1 mortal wound on that enemy unit. (Replaces Grenade.)' },
-  { id:'fire-overwatch', name:'Fire Overwatch', cp:1, kind:'Strategic Ploy', phases:['movement'], turn:'opp', limit:'Once per turn', needs:{ none:['Titanic'] },
+    target:'One friendly unengaged **EXPLOSIVES/GRENADES** unit that is eligible to shoot and did not make an advance move this turn.',
+    effect:'Resolve the following sequence:\n- 1. Select one **EXPLOSIVES/GRENADES** model in your unit.\n- 2. Select one unengaged enemy unit within 8" of and visible to that model.\n- 3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).' },
+  { id:'crushing-impact', name:'Crushing Impact', cp:1, phases:['charge'], turn:'your', needs:{ any:['Monster','Vehicle'] },
+    when:'Your Charge phase, just after a friendly **MONSTER/VEHICLE** unit ends a charge move.',
+    target:'That **MONSTER/VEHICLE** unit.',
+    effect:'Resolve the following sequence:\n- 1. Select one enemy unit engaged with your unit.\n- 2. Select one model in your unit engaged with that enemy unit.\n- 3. Roll a number of D6 equal to the **T** characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).' },
+  { id:'rapid-ingress', name:'Rapid Ingress', cp:1, phases:['movement'], turn:'opp', needs:{ none:['Aircraft'] },
     when:'End of your opponent’s Movement phase.',
-    target:'One friendly unengaged unit (excluding TITANIC).',
-    effect:'Your unit **snap shoots** at one visible enemy unit within 24": hits only on unmodified 6s, and hit rolls cannot be re-rolled.' },
-  { id:'heroic-intervention', name:'Heroic Intervention', cp:1, kind:'Strategic Ploy', phases:['charge'], turn:'opp',
-    when:'Your opponent’s Charge phase, just after an enemy unit ends a charge move.',
-    target:'One friendly unit within 6" that is eligible to charge.',
-    effect:'**1CP:** your unit declares a charge against that enemy unit. **2CP:** it can instead charge any enemy unit within 6".' },
-  { id:'rapid-ingress', name:'Rapid Ingress', cp:1, kind:'Strategic Ploy', phases:['movement'], turn:'opp', needs:{ none:['Aircraft'] },
+    target:'One friendly unit that is in strategic reserves (excluding **AIRCRAFT**).',
+    effect:'Your unit makes an ingress move (20.04).',
+    restrictions:'You cannot use this stratagem during the first battle round.' },
+  { id:'fire-overwatch', name:'Fire Overwatch', cp:1, phases:['movement'], turn:'opp', needs:{ none:['Titanic'] },
     when:'End of your opponent’s Movement phase.',
-    target:'One friendly unit in strategic reserves (excluding AIRCRAFT).',
-    effect:'Your unit makes an **ingress move**.' },
-  { id:'smokescreen', name:'Smokescreen', cp:1, kind:'Wargear', phases:['shooting'], turn:'opp', needs:{ all:['Smoke'] },
-    when:'Your opponent’s Shooting phase, just after an enemy unit selects targets.',
-    target:'One friendly SMOKE unit that was selected as a target.',
-    effect:'Your unit has the **benefit of cover**, and also gives cover to units behind it.' }
+    target:'One friendly unengaged unit (excluding **TITANIC** units).',
+    effect:'Your unit shoots using **snap shooting**.' },
+  { id:'smokescreen', name:'Smokescreen', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Smoke'] },
+    when:'Start of your opponent’s Shooting phase.',
+    target:'One friendly **SMOKE** unit.',
+    effect:'Until the end of the phase, each time an attack targets either your **SMOKE** unit, or a unit that is not fully visible to the attacking model because of one or more models in your **SMOKE** unit, the target has the benefit of cover against that attack (13.08).' },
+  { id:'heroic-intervention', name:'Heroic Intervention', cp:1, phases:['charge'], turn:'opp',
+    when:'End of your opponent’s Charge phase.',
+    target:'One friendly unengaged unit within 12" of one or more enemy units. You can only select a **VEHICLE** unit if it is a **CHARACTER/WALKER** unit.',
+    effect:'Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:\n- **Leap to Defend:** When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.\n- **Into the Fray (+1CP):** When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.' },
+  { id:'counteroffensive', name:'Counteroffensive', cp:2, phases:['fight'], turn:'opp',
+    when:'Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.',
+    target:'One friendly unit that is eligible to fight.',
+    effect:'Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).' }
 ];
 
 /* ---------------- factions ---------------- */
 const FACTIONS = {
   orks: {
     name: 'Orks',
-    glyph: 'WAAAGH!',
+    // words players use for a rule that has another name
+    aliases: [[/^riled up/i, 'Waaagh!']],
     armyRules: [
       { name:'Waaagh!', text:'Friendly **ORKS** units with this ability can:\n- Re-roll **advance rolls**.\n- Become **riled up**, as stated in other rules.\nWhile a unit is **riled up**:\n- That unit has 5+ **InSv**.\n- That unit’s ranged attacks have **[ASSAULT]**.\n- When that unit is selected to make an **advance move**, that **advance move** does not prevent that unit from being **eligible to declare a charge**.' },
-      { name:'War Cry', tag:'Once per battle, per army', ph:['command'], turn:'your', track:'battle',
+      { name:'War Cry', tag:'Once per battle, per army', ph:['command'], turn:'your',
         text:'At the start of the Command phase, you can use this ability. If you do, friendly **ORKS** units with the **Waaagh!** ability are **riled up** until the end of the next turn.' },
       { name:'Da Boss', ph:['command'], turn:'either',
         text:'At the start of the battle round, if a model with this ability is your **WARLORD**, gain 1CP.' }
@@ -114,7 +120,7 @@ const FACTIONS = {
     detachments: {
       'brute-bosses': {
         name:'Brute Bosses', dp:1,
-        rule:{ name:'’Ard As Nails', ph:['fight'], turn:'either',
+        rule:{ name:'’Ard As Nails', ph:['fight'], turn:'either', needs:{ all:['Warboss'] },
           text:'When a friendly **WARBOSS** model is **destroyed**, if this unit has not been **selected to fight** this phase, roll one D6, with +1 to the roll if your unit is **riled up**:\n- On a 3+, do not remove this **WARBOSS** model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this **WARBOSS** model is removed from the battlefield.' },
         enhancements:[
           { name:'Brutal But Kunnin’', pts:30, text:'**WARBOSS** model only. This model’s melee attacks have +1 **D**.' },
@@ -128,7 +134,8 @@ const FACTIONS = {
       },
       'da-big-hunt': {
         name:'Da Big Hunt', dp:1,
-        rule:{ name:'Da Hunt Is On', ph:['shooting','fight'], turn:'either',
+        rule:{ name:'Da Hunt Is On', ph:['shooting','fight'], turn:'either', needs:{ all:['Beast Snagga'] },
+          mod:{ kind:'all', when:'vs MONSTER/VEHICLE', note:'+1 AP' },
           text:'Friendly **BEAST SNAGGA** units’ attacks that target a **MONSTER/VEHICLE** unit have +1 **AP**.' },
         enhancements:[
           { name:'Glory Hog', pts:25, text:'**BEAST SNAGGA** model only. When this unit is selected to make a **fall-back move**, that **fall-back move** does not prevent this unit from being **eligible to declare a charge**.' },
@@ -151,7 +158,8 @@ const FACTIONS = {
       },
       'dread-mob': {
         name:'Dread Mob', dp:1,
-        rule:{ name:'Try Dat Button!', ph:['shooting','fight'], turn:'either',
+        rule:{ name:'Try Dat Button!', ph:['shooting','fight'], turn:'either', needs:{ all:['Walker'], none:['Titanic'] },
+          mod:{ kind:'all', when:'Selected to attack', note:'roll D6: 1–2 +1 A, 3–4 +2 S, 5–6 +1 AP (two dice: hazard roll after)' },
           text:'In your Shooting phase or the Fight phase, when a friendly **ORKS WALKER** unit (excluding **TITANIC** units) is **selected to attack**, you can use this ability. If you do, roll either one D6 or two D6 (keep re-rolling duplicate results). This unit’s attacks have the relevant rule(s):\nIf you rolled two D6, when this unit has attacked, this unit makes one **hazard roll**.',
           table:[['1–2','+1 **A**'],['3–4','+2 **S**'],['5–6','+1 **AP**']] },
         enhancements:[
@@ -178,18 +186,28 @@ const FACTIONS = {
 };
 
 /* ---------------- armies ----------------
+   Army: id, name, faction (key into FACTIONS), points, pointsUsed, battleSize,
+         disposition, detachments (keys), source.
    Unit fields:
-     role   Epic Hero | Character | Battleline | Infantry | Mounted | Monster | Vehicle
-     copies how many identical units the list has (New Recruit prints "x3")
-     models lines from the "Models" box
-     stats  one row per model profile
-     ranged / melee  weapons; "group" joins the ➤ profiles of one weapon
-     abilities  ph/turn tag the phase it triggers in
-     mods   abilities that change attacks (kind ranged|melee|all). With weapon + set, that weapon
-            is shown as two profiles, baseWhen (its normal stats) and when (set applied);
-            otherwise note is a reminder line at the top of the weapon table
-     rules  core/faction rules that open a glossary entry
-     kw     the unit's keywords ("Categories")                              */
+     role        Epic Hero | Character | Battleline | Infantry | Mounted | Monster | Vehicle
+     short       shorter name where two units share one (e.g. Beastboss)
+     pts, ptsNote  points (for the whole attached unit) and how they add up
+     copies      how many identical units the list has (New Recruit prints "x3")
+     warlord, enhancement, leads (name of the unit it leads)
+     models      lines from the "Models" box
+     stats       one row per model profile: M T Sv W Ld OC InSv base
+     boostNote   a stat that already includes an enhancement
+     ranged / melee  weapons: name, range, A, BS|WS, S, AP, D, kw[]
+                 group  joins the "pick one profile" rows of one weapon
+                 who    which model in an attached unit carries it
+                 n      how many models carry it
+                 hunter the Hunter: MONSTER/VEHICLE profile; enh  weapon from an enhancement
+     abilities   name, text, tag, who; ph/turn = the phase it triggers in
+     mods        abilities that change attacks (kind ranged|melee|all, who = only those models).
+                 With weapon + set, that weapon shows two profiles: baseWhen (normal stats)
+                 and when (set applied). Otherwise note is a reminder line in the weapon table.
+     rules       core/faction rules that open a glossary entry
+     kw, kwNote  the unit's keywords ("Categories")                                     */
 const ARMIES = [
 {
   id:'cooking', name:'Cooking', faction:'orks', points:2000, pointsUsed:2000,
@@ -211,7 +229,7 @@ const ARMIES = [
       ],
       abilities:[
         { name:'Supreme Commander', text:'If this model is in your army, it must be your **WARLORD**.' },
-        { name:'Makari, Hoist Dat Banner!', tag:'Once per battle, per army', ph:['movement'], turn:'your', track:'battle',
+        { name:'Makari, Hoist Dat Banner!', tag:'Once per battle, per army', ph:['movement'], turn:'your',
           text:'In your Movement phase, you can select a number of friendly **ORKS** units equal to or less than the current battle round number. Those units are **riled up** until the start of your next turn.\n*Place one Makari token next to the unit, removing it after this ability is used.*' },
         { name:'Da Grand Warlord’s Ladz', text:'While this unit is within 3" of another friendly **ORKS INFANTRY** unit, this unit has **Lone Operative**.' },
         { name:'Prophet of Da Great Waaagh!', tag:'Aura', ph:['fight'], turn:'either',
@@ -272,7 +290,7 @@ const ARMIES = [
         { name:'Nazdreg’s Know-wotz', who:'Nazdreg', text:'- This unit has **Deep Strike**.\n- This unit’s ranged attacks have **[IGNORES COVER]**.' },
         { name:'Supreme Kunnin’', who:'Nazdreg', tag:'Once per phase, per army', ph:['movement'], turn:'opp',
           text:'In your opponent’s Movement phase, when an enemy unit ends a move within 8" of this unit, if this unit is **unengaged**, this unit can:\n- Make a **normal move** of up to D6".\n- Or: if this unit is **riled up**, make a **normal move** of up to 5".' },
-        { name:'Intimidating Motivation', who:'Nazdreg', tag:'Once per battle round, per army', ph:['movement'], turn:'your', track:'round',
+        { name:'Intimidating Motivation', who:'Nazdreg', tag:'Once per battle round, per army', ph:['movement'], turn:'your',
           text:'In your Movement phase, at the start or end of this unit’s move, you can select one friendly **ORKS** unit within 6" of this unit. That unit:\n- Is no longer **battle-shocked**.\n- Is **riled up** until the start of your next turn.' },
         { name:'Krumpin’ Time', who:'Meganobz', ph:['fight'], turn:'either', text:'In the Fight phase, if this unit is **riled up**, this unit has +1 to **hit rolls**.' },
         { name:'Arrogant Invulnerability', who:'Meganobz', text:'Attacks that target this unit have -1 **AP**.' }
@@ -286,22 +304,22 @@ const ARMIES = [
       kwNote:'Explosives and Meganobz come from the attached Meganobz.'
     },
     {
-      id:'beastboss-bbk', name:'Beastboss on Squigosaur', role:'Character', pts:170, enhancement:'Brutal But Kunnin’',
+      id:'beastboss-bbk', name:'Beastboss on Squigosaur', short:'Beastboss', role:'Character', pts:170, enhancement:'Brutal But Kunnin’',
       models:['1× Beastboss on Squigosaur'],
       stats:[{ name:'Beastboss on Squigosaur', M:'10"', T:'9', Sv:'3+', W:'10', Ld:'6+', OC:'3', InSv:'5+', base:'80mm' }],
       ranged:[
         { name:'Slugga', range:'12"', A:'1', BS:'5+', S:'4', AP:'0', D:'1', kw:['CLOSE-QUARTERS','LETHAL HITS: non-MONSTER/VEHICLE'] }
       ],
       melee:[
-        { group:'Beastchoppa', name:'Hunter', hunter:true, range:'Melee', A:'6', WS:'2+', S:'12', AP:'-2', D:'D6+1', kw:[], boosted:true },
-        { group:'Beastchoppa', name:'Standard', range:'Melee', A:'6', WS:'2+', S:'6', AP:'-2', D:'3', kw:['CLEAVE 1'], boosted:true },
-        { name:'Squigosaur’s jaws', range:'Melee', A:'3', WS:'3+', S:'7', AP:'-2', D:'4', kw:['ANTI-MONSTER/VEHICLE 3+','EXTRA ATTACKS'], boosted:true }
+        { group:'Beastchoppa', name:'Hunter', hunter:true, range:'Melee', A:'6', WS:'2+', S:'12', AP:'-2', D:'D6+1', kw:[] },
+        { group:'Beastchoppa', name:'Standard', range:'Melee', A:'6', WS:'2+', S:'6', AP:'-2', D:'3', kw:['CLEAVE 1'] },
+        { name:'Squigosaur’s jaws', range:'Melee', A:'3', WS:'3+', S:'7', AP:'-2', D:'4', kw:['ANTI-MONSTER/VEHICLE 3+','EXTRA ATTACKS'] }
       ],
       boostNote:'Melee D already includes +1 from Brutal But Kunnin’.',
       abilities:[
         { name:'Thundering Stampede', tag:'Aura', ph:['charge'], turn:'your', text:'Friendly **BEAST SNAGGA** units within 6" of this unit have +1 to **charge rolls**.' },
         { name:'Boss of da Hunt', text:'While this unit is within 3" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**.' },
-        { name:'Keep Huntin’!', tag:'Once per battle round, per army', ph:['movement'], turn:'your', track:'round',
+        { name:'Keep Huntin’!', tag:'Once per battle round, per army', ph:['movement'], turn:'your',
           text:'In your Movement phase, at the start or end of this unit’s move, you can select one friendly **BEAST SNAGGA** unit within 6" of this unit. That unit:\n- Is no longer **battle-shocked**.\n- Is **riled up** until the start of your next turn.' },
         { name:'Brutal But Kunnin’', tag:'Enhancement', text:'**WARBOSS** model only. This model’s melee attacks have +1 **D**.' }
       ],
@@ -309,7 +327,7 @@ const ARMIES = [
       kw:['Beast Snagga','Beastboss on Squigosaur','Character','Faction: Orks','Monster','Warboss']
     },
     {
-      id:'beastboss-gobshot', name:'Beastboss on Squigosaur', role:'Character', pts:160, enhancement:'Da Gobshot Thunderbuss',
+      id:'beastboss-gobshot', name:'Beastboss on Squigosaur', short:'Beastboss', role:'Character', pts:160, enhancement:'Da Gobshot Thunderbuss',
       models:['1× Beastboss on Squigosaur'],
       stats:[{ name:'Beastboss on Squigosaur', M:'10"', T:'9', Sv:'3+', W:'10', Ld:'6+', OC:'3', InSv:'5+', base:'80mm' }],
       ranged:[
@@ -324,14 +342,14 @@ const ARMIES = [
       abilities:[
         { name:'Thundering Stampede', tag:'Aura', ph:['charge'], turn:'your', text:'Friendly **BEAST SNAGGA** units within 6" of this unit have +1 to **charge rolls**.' },
         { name:'Boss of da Hunt', text:'While this unit is within 3" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**.' },
-        { name:'Keep Huntin’!', tag:'Once per battle round, per army', ph:['movement'], turn:'your', track:'round',
+        { name:'Keep Huntin’!', tag:'Once per battle round, per army', ph:['movement'], turn:'your',
           text:'In your Movement phase, at the start or end of this unit’s move, you can select one friendly **BEAST SNAGGA** unit within 6" of this unit. That unit:\n- Is no longer **battle-shocked**.\n- Is **riled up** until the start of your next turn.' }
       ],
       rules:['Da Boss','Waaagh!','Feel No Pain 5+'],
       kw:['Beast Snagga','Beastboss on Squigosaur','Character','Faction: Orks','Monster','Warboss']
     },
     {
-      id:'dakkarig-boosta', name:'Big Mek Dakkarig', role:'Character', pts:170, enhancement:'Cybork Boosta',
+      id:'dakkarig-boosta', name:'Big Mek Dakkarig', short:'Big Mek', role:'Character', pts:170, enhancement:'Cybork Boosta',
       models:['1× Big Mek Dakkarig'],
       stats:[{ name:'Big Mek Dakkarig', M:'10"', T:'8', Sv:'3+', W:'11', Ld:'7+', OC:'3', InSv:'5+', base:'90mm' }],
       boostNote:'M already includes +2" from Cybork Boosta.',
@@ -349,15 +367,15 @@ const ARMIES = [
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
-        { kind:'ranged', weapon:'Blitzkannon', baseWhen:'vs MONSTER/VEHICLE', when:'vs anything else', set:{ A:'14' },
-          from:'Blitz Dem Gitz!', note:'+6 A in your Shooting phase only; otherwise A 8.' },
+        { kind:'ranged', weapon:'Blitzkannon', baseWhen:'vs Monster/Vehicle', when:'vs anything else', set:{ A:'14' },
+          from:'Blitz Dem Gitz!', note:'+6 A, your Shooting phase only (else A 8).' },
         { kind:'ranged', when:'Riled up', note:'ranged attacks have [SUSTAINED HITS 1]', from:'Even More Dakka' }
       ],
       rules:['Deadly Demise 1','Waaagh!'],
       kw:['Big Mek','Big Mek Dakkarig','Character','Faction: Orks','Vehicle','Walker']
     },
     {
-      id:'dakkarig-herder', name:'Big Mek Dakkarig', role:'Character', pts:190, enhancement:'Dreadherder',
+      id:'dakkarig-herder', name:'Big Mek Dakkarig', short:'Big Mek', role:'Character', pts:190, enhancement:'Dreadherder',
       models:['1× Big Mek Dakkarig'],
       stats:[{ name:'Big Mek Dakkarig', M:'8"', T:'8', Sv:'3+', W:'11', Ld:'7+', OC:'3', InSv:'5+', base:'90mm' }],
       ranged:[
@@ -375,8 +393,8 @@ const ARMIES = [
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
-        { kind:'ranged', weapon:'Blitzkannon', baseWhen:'vs MONSTER/VEHICLE', when:'vs anything else', set:{ A:'14' },
-          from:'Blitz Dem Gitz!', note:'+6 A in your Shooting phase only; otherwise A 8.' },
+        { kind:'ranged', weapon:'Blitzkannon', baseWhen:'vs Monster/Vehicle', when:'vs anything else', set:{ A:'14' },
+          from:'Blitz Dem Gitz!', note:'+6 A, your Shooting phase only (else A 8).' },
         { kind:'ranged', when:'Riled up', note:'ranged attacks have [SUSTAINED HITS 1]', from:'Even More Dakka' }
       ],
       rules:['Deadly Demise 1','Waaagh!'],
