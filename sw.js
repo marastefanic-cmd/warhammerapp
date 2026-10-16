@@ -1,19 +1,29 @@
 // Service worker for the installed (home screen) copy.
 // Network first for everything of our own, so an update shows up the next time the
-// app opens; the cache is only the offline fallback. VERSION is stamped by build.js:
-// a new stamp makes the browser install this worker again and drop the old cache.
-const VERSION = 'c7e3325920';
+// app opens; the cache is the offline fallback, and also answers when the network is
+// too slow (a weak signal at the table). Fonts never change, so they come from the cache.
+// VERSION is stamped by build.js: a new stamp makes the browser install this worker
+// again and drop the old cache.
+const VERSION = 'd071351cb1';
 const CACHE = 'waaagh-codex-' + VERSION;
-const CORE = ['./', 'index.html', 'data.js', 'manifest.webmanifest', 'icon-192.png', 'icon-180.png', 'icon-512.png'];
+const CORE = ['./', 'index.html', 'data.js', 'manifest.webmanifest', 'icon-192.png', 'icon-180.png', 'icon-512.png', 'icon-maskable.png'];
 
 self.addEventListener('install', e => {
   self.skipWaiting();
-  e.waitUntil(caches.open(CACHE).then(c => c.addAll(CORE.map(u => new Request(u, { cache: 'no-cache' })))).catch(() => {}));
+  // if a file fails to download the install fails and the previous worker stays in charge
+  e.waitUntil(caches.open(CACHE).then(c => c.addAll(CORE.map(u => new Request(u, { cache: 'no-cache' })))));
 });
 self.addEventListener('activate', e => {
-  e.waitUntil(caches.keys()
-    .then(keys => Promise.all(keys.filter(k => k.startsWith('waaagh-codex') && k !== CACHE).map(k => caches.delete(k))))
-    .then(() => self.clients.claim()));
+  // drop older copies only once this one is complete
+  e.waitUntil((async () => {
+    const mine = await caches.open(CACHE);
+    const complete = (await Promise.all(CORE.map(u => mine.match(u)))).every(Boolean);
+    if (complete) {
+      const keys = await caches.keys();
+      await Promise.all(keys.filter(k => k.startsWith('waaagh-codex') && k !== CACHE).map(k => caches.delete(k)));
+    }
+    await self.clients.claim();
+  })());
 });
 
 self.addEventListener('fetch', e => {
@@ -26,15 +36,27 @@ self.addEventListener('fetch', e => {
   if (own && url.pathname.endsWith('version.json')) return; // always straight to the network
   e.respondWith((async () => {
     const cache = await caches.open(CACHE);
-    try {
-      // no-cache revalidates with the server, so GitHub Pages' 10-minute cache can't serve old files
-      const res = await fetch(own ? new Request(req, { cache: 'no-cache' }) : req);
+    const cached = () => cache.match(stripQuery(req), { ignoreSearch: own });
+    if (font) {
+      const hit = await cached();
+      if (hit) return hit;
+    }
+    // no-cache revalidates with the server, so GitHub Pages' 10-minute cache can't serve old files
+    const net = fetch(own ? new Request(req, { cache: 'no-cache' }) : req).then(res => {
       if (res && (res.ok || res.type === 'opaque')) cache.put(stripQuery(req), res.clone());
       return res;
+    });
+    net.catch(() => {});   // a failure is handled below; this only silences the background copy
+    try {
+      // a slow network: show the cached copy after 2.5 s (the fetch still refreshes the cache)
+      const slow = new Promise(resolve => setTimeout(resolve, 2500));
+      const first = await Promise.race([net, slow.then(() => cached())]);
+      return first || await net;
     } catch (err) {
-      const hit = await cache.match(stripQuery(req), { ignoreSearch: own });
+      // offline: this build's copy, else any older copy still stored
+      const hit = await cached() || await caches.match(stripQuery(req), { ignoreSearch: own });
       if (hit) return hit;
-      if (req.mode === 'navigate') { const page = await cache.match('index.html'); if (page) return page; }
+      if (req.mode === 'navigate') { const page = await caches.match('index.html'); if (page) return page; }
       throw err;
     }
   })());

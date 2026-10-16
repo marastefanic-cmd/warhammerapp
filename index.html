@@ -12,27 +12,28 @@
 <link rel="apple-touch-icon" href="icon-180.png">
 <link rel="icon" type="image/png" href="icon-192.png">
 <style>:root{padding-top:env(safe-area-inset-top,0px)}img{max-width:100%}</style>
-<script>window.WH_BUILD = 'c7e3325920';</script>
-</head>
-<body>
 <title>Waaagh Codex</title>
-<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+<script>window.WH_BUILD = 'd071351cb1';</script>
+</head>
+<body>
 <style>
 /* Waaagh Codex: a drill-down reference sheet.
    Armies -> army (search + menu) -> Units | Stratagems | Ranged | Melee | Abilities | Rules
-   -> unit datasheet. A sticky top bar (back, centred title, search) can carry one sub-bar:
-   the datasheet's section jumps, the stratagem filters, or the weapon column labels.
-   One dark graphite look; orange marks what you can tap and what matters. */
+   -> unit datasheet. A sticky top bar (back, centred title, search) can carry column labels;
+   the controls you tap while reading (datasheet section jumps, stratagem filters) sit in a
+   bar at the bottom, under your thumb. One dark graphite look; orange marks what you can
+   tap and what matters. */
 :root{
   color-scheme: dark;
   --bg:#161616;
-  --surface:#1f1f1f;     /* striped rows, cards */
+  --surface:#1f1f1f;     /* multi-profile weapons, cards */
   --surface2:#2a2a2a;    /* bands, selected controls */
   --line:#363636;
   --fg:#ededed;
+  --fg2:#c4c4c4;         /* weapon keywords */
   --muted:#9c9c9c;
   --accent:#ff8a2a;      /* orange */
   --accent-ink:#1c0d00;  /* text on orange */
@@ -40,18 +41,22 @@
   --f-head:'Barlow Condensed', 'Arial Narrow', system-ui, sans-serif;
   --f-body:'Barlow', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --hdr:53px;            /* measured height of the sticky top bar */
+  --bb:0px;              /* measured height of the bottom bar (0 when there is none) */
   --top:calc(env(safe-area-inset-top, 0px) + var(--hdr));
+  --safe-b:env(safe-area-inset-bottom, 0px);
 }
 
 *{box-sizing:border-box}
 html,body{margin:0}
+html{touch-action:manipulation}
+html.lock, html.lock body{overflow:hidden}
 [hidden]{display:none !important}
 body{
   background:var(--bg); color:var(--fg);
   font:16px/1.45 var(--f-body);
   padding-left:max(16px, env(safe-area-inset-left, 0px));
   padding-right:max(16px, env(safe-area-inset-right, 0px));
-  padding-bottom:calc(32px + env(safe-area-inset-bottom, 0px));
+  padding-bottom:calc(32px + max(var(--bb), var(--safe-b)));
   -webkit-tap-highlight-color:transparent;
   -webkit-text-size-adjust:100%;
 }
@@ -60,6 +65,7 @@ button{font:inherit; color:inherit; background:none; border:0; padding:0; cursor
 input{font:inherit; color:var(--fg)}
 :focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:4px}
 b{font-weight:700}
+s{text-decoration-thickness:2px; text-decoration-color:var(--accent)}
 h1,h2,h3,p{margin:0}
 .wrap{max-width:720px; margin:0 auto}
 .num{font-variant-numeric:tabular-nums}
@@ -68,9 +74,11 @@ h1,h2,h3,p{margin:0}
 /* ---------- type roles ---------- */
 .lbl{font:600 11px/1.2 var(--f-head); letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
 .note{font-size:13px; line-height:1.4; color:var(--muted); margin-top:10px}
+.note.it{font-style:italic; margin-top:0}
 .tg{font:600 12px/1.2 var(--f-body); color:var(--accent); white-space:nowrap}
 .tg.m{color:var(--muted)}
-.link{color:var(--fg); text-decoration:underline dotted; text-decoration-color:var(--accent); text-underline-offset:3px}
+.link{color:var(--fg); text-decoration:underline dotted; text-decoration-color:var(--accent); text-underline-offset:3px; padding:5px 0}
+.link:active{color:var(--accent)}
 .chev{width:18px; height:18px; flex:none; color:var(--muted); transition:transform .15s ease}
 details[open] > summary .chev{transform:rotate(180deg)}
 .go{width:18px; height:18px; flex:none; color:var(--muted); transform:rotate(-90deg)}
@@ -83,28 +91,37 @@ summary::-webkit-details-marker{display:none}
 .ttable{display:grid; grid-template-columns:auto 1fr; gap:3px 12px; margin-top:6px}
 .ttable span:nth-child(odd){font:700 15px var(--f-head); color:var(--accent)}
 .empty{padding:20px 12px; text-align:center; color:var(--muted)}
+.il{font:600 11px/1 var(--f-head); letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-right:6px}
+.usedby{font-size:13.5px; color:var(--muted)}
 
 /* ---------- top bar ---------- */
 .top{position:sticky; top:env(safe-area-inset-top, 0px); z-index:20; background:var(--bg); border-bottom:1px solid var(--line);
   margin:0 calc(-1 * max(16px, env(safe-area-inset-right, 0px))) 0 calc(-1 * max(16px, env(safe-area-inset-left, 0px)));
   padding:0 max(16px, env(safe-area-inset-right, 0px)) 0 max(16px, env(safe-area-inset-left, 0px))}
-.top-in{max-width:720px; margin:0 auto; display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr); align-items:center; gap:8px; min-height:52px}
+.top-in{max-width:720px; margin:0 auto; display:grid; grid-template-columns:minmax(64px,1fr) auto minmax(64px,1fr); align-items:center; gap:8px; min-height:52px}
 .back{justify-self:start; display:flex; align-items:center; gap:2px; min-height:44px; max-width:100%; min-width:0; padding-right:6px;
   color:var(--accent); font:700 15px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase}
+.back:active{opacity:.6}
 .back svg{width:20px; height:20px; flex:none; margin-left:-4px}
 .back span{white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
 .ttl{min-width:0; max-width:58vw; text-align:center; font:700 18px/1.1 var(--f-head); letter-spacing:.03em; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
 .icon-btn{justify-self:end; width:44px; height:44px; display:grid; place-items:center; color:var(--fg); margin-right:-10px}
+.icon-btn:active{color:var(--accent)}
 .icon-btn svg{width:20px; height:20px}
-.subbar{padding-bottom:6px}
+.subbar{padding-bottom:5px}
+
+/* ---------- bottom bar: datasheet jumps, stratagem filters ---------- */
+.bbar{position:fixed; left:0; right:0; bottom:0; z-index:20; background:var(--bg); border-top:1px solid var(--line);
+  padding:6px max(16px, env(safe-area-inset-right, 0px)) calc(6px + var(--safe-b)) max(16px, env(safe-area-inset-left, 0px))}
 .jump{display:grid; grid-auto-flow:column; grid-auto-columns:minmax(0,1fr); gap:2px}
-.jump button{min-height:34px; border-radius:7px; font:700 12.5px/1 var(--f-head); letter-spacing:.05em; text-transform:uppercase; color:var(--muted); text-align:center}
+.jump button{min-height:40px; border-radius:7px; font:700 13px/1 var(--f-head); letter-spacing:.05em; text-transform:uppercase; color:var(--muted); text-align:center}
+.jump button[aria-current="true"]{color:var(--accent); background:var(--surface)}
 .jump button:active{background:var(--surface2); color:var(--fg)}
 
 /* ---------- lists ---------- */
 .list{border-top:1px solid var(--line)}
 .row{display:flex; align-items:center; gap:12px; width:100%; min-height:48px; padding:9px 2px; border-bottom:1px solid var(--line); text-align:left}
-.row:active, .urow:active, .res:active{background:var(--surface)}
+.row:active, .urow:active, .res:active, .band:active{background:var(--surface)}
 .row .ic{width:20px; height:20px; flex:none; color:var(--muted)}
 .row .rb{flex:1; min-width:0; display:grid; gap:1px}
 .row .rb b{font:700 17px/1.15 var(--f-head); letter-spacing:.02em}
@@ -127,65 +144,78 @@ summary::-webkit-details-marker{display:none}
 .res mark{background:none; color:var(--accent)}
 .more{width:100%; min-height:40px; text-align:left; padding:0 2px; font:700 13px var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--accent)}
 
-/* ---------- unit list ---------- */
-.urow{display:grid; grid-template-columns:minmax(0,1fr) auto; gap:1px 10px; align-items:baseline; width:100%; text-align:left; padding:8px 2px; border-bottom:1px solid var(--line)}
+/* ---------- unit list: a roster table, column labels once in the top bar ---------- */
+.urow{display:grid; grid-template-columns:minmax(0,1fr) auto; gap:0 10px; align-items:baseline; width:100%; text-align:left; padding:6px 2px 5px; border-bottom:1px solid var(--line)}
 .urow .un{display:flex; flex-wrap:wrap; align-items:baseline; gap:2px 8px; min-width:0}
-.urow .un b{font:700 17px/1.15 var(--f-head); letter-spacing:.02em}
+.urow .un b{font:700 16.5px/1.15 var(--f-head); letter-spacing:.02em}
+.urow .un .x{margin-left:-4px}
 .urow .pts{font:600 15px var(--f-head); color:var(--muted); font-variant-numeric:tabular-nums}
-.urow .meta{grid-column:1 / -1; font-size:13px; color:var(--muted); line-height:1.35}
-.sline{grid-column:1 / -1; display:grid; grid-template-columns:repeat(6, 48px); margin-top:2px; font:700 15px/1.3 var(--f-head); font-variant-numeric:tabular-nums}
-.sline i{font-style:normal; font-weight:600; font-size:10.5px; letter-spacing:.08em; color:var(--muted); margin-right:3px}
+.urow .meta{grid-column:1 / -1; font-size:12.5px; color:var(--muted); line-height:1.3}
+.sline, .uh{display:grid; grid-template-columns:repeat(7, minmax(0, 44px))}
+.sline{grid-column:1 / -1; font:700 15px/1.25 var(--f-head); font-variant-numeric:tabular-nums}
+.uh{padding:0 2px; font:600 11px/1 var(--f-head); letter-spacing:.1em; color:var(--muted); text-transform:uppercase}
 
 /* ---------- datasheet ---------- */
-.ds-meta{display:flex; flex-wrap:wrap; gap:2px 10px; align-items:baseline; padding:10px 0 2px; font-size:13.5px; color:var(--muted)}
+.ds-meta{display:flex; flex-wrap:wrap; gap:2px 10px; align-items:baseline; padding:8px 0 6px; font-size:13px; color:var(--muted)}
+.statwrap{scroll-margin-top:calc(var(--top) + 4px); margin-bottom:10px}
+.st{display:grid; align-items:stretch; border-radius:6px; overflow:hidden; background:var(--surface)}
+.st > span{text-align:center; padding:5px 0; font:700 18px/1 var(--f-head); border-top:1px solid var(--line); min-width:0; font-variant-numeric:tabular-nums}
+.st > span.h{font:600 11px/1 var(--f-head); letter-spacing:.1em; color:var(--muted); border-top:0; padding:6px 0 4px; background:var(--surface2)}
+.st > span.n{text-align:left; padding-left:8px; font:600 14px/1.15 var(--f-head); display:flex; align-items:center; letter-spacing:.01em}
+.def{margin-top:6px; border-left:2px solid var(--accent); padding:1px 0 1px 8px; font-size:13px; line-height:1.4}
+.meta-lines{margin-top:6px; font-size:12.5px; color:var(--muted); line-height:1.35}
+.meta-lines .m{display:flex; flex-wrap:wrap; gap:0 12px}
 .fold{border-top:1px solid var(--line); scroll-margin-top:calc(var(--top) + 4px)}
-.fold:first-of-type{margin-top:8px}
-.fold > summary{display:flex; align-items:center; gap:8px; min-height:44px; padding:6px 0}
-.fold > summary h2{flex:1; font:700 17px/1.1 var(--f-head); letter-spacing:.06em; text-transform:uppercase}
-.fold > summary .c{font:600 13px var(--f-head); color:var(--muted)}
-.fold > .body{padding-bottom:12px}
-/* stat table */
-.st{display:grid; align-items:stretch; background:var(--surface); border-radius:8px; overflow:hidden}
-.st > span{text-align:center; padding:6px 0; font:700 19px/1 var(--f-head); border-top:1px solid var(--line); min-width:0; font-variant-numeric:tabular-nums}
-.st > span.h{font:600 10.5px/1 var(--f-head); letter-spacing:.1em; color:var(--muted); border-top:0; padding:7px 0 5px; background:var(--surface2)}
-.st > span.n{text-align:left; padding-left:10px; font:600 13.5px/1.15 var(--f-body); display:flex; align-items:center}
-.meta-lines{margin-top:7px; font-size:13px; color:var(--muted); line-height:1.4}
+.fold > summary{display:flex; align-items:center; gap:8px; min-height:40px; padding:4px 0}
+.fold > summary h2{flex:1; font:700 15px/1.1 var(--f-head); letter-spacing:.06em; text-transform:uppercase}
+.fold > summary .c{font:600 12px var(--f-head); color:var(--muted)}
+.fold > summary .chev{width:16px; height:16px}
+.fold > .body{padding-bottom:10px}
+.rulesline{font-size:14.5px; line-height:1.7}
+.rulesline .link{white-space:nowrap}
 
-/* weapon tables: every weapon is one block, blocks alternate shades so no weapon hides
-   in its neighbours; multi-profile weapons keep all their profiles inside one block */
-.wt{display:grid; gap:2px}
+/* weapon tables: one weapon = one hairline-separated row (stats + a quiet keyword line).
+   Shading means one thing only: these profiles are one weapon, pick one.
+   Rules that change the attacks are footnotes under the table. */
+.wt{display:grid}
 .wr, .wh{display:grid; align-items:baseline; column-gap:2px}
-.ranged .wr, .wh.ranged{grid-template-columns:minmax(0,1fr) 32px 40px 28px 26px 28px 38px}
-.melee .wr, .wh.melee{grid-template-columns:minmax(0,1fr) 40px 28px 26px 28px 38px}
-.wh{padding:0 8px 4px; font:600 10.5px/1 var(--f-head); letter-spacing:.1em; color:var(--muted); text-align:center; text-transform:uppercase}
+.ranged .wr, .wh.ranged{grid-template-columns:minmax(0,1fr) 32px 44px 28px 26px 28px 36px}
+.melee .wr, .wh.melee{grid-template-columns:minmax(0,1fr) 44px 28px 26px 28px 36px}
+.wh{padding:0 6px 3px; font:600 11px/1 var(--f-head); letter-spacing:.1em; color:var(--muted); text-align:center; text-transform:uppercase}
 .wh .n{text-align:left}
-.fold .wh{position:sticky; top:var(--top); z-index:3; background:var(--bg); padding-top:6px; box-shadow:0 1px 0 var(--line)}
-.wb{padding:7px 8px 6px; border-radius:6px}
-.wb.z{background:var(--surface)}
-.wr > span{font:700 16px/1.25 var(--f-head); text-align:center; min-width:0; font-variant-numeric:tabular-nums}
-.wr > span.n{text-align:left; padding-right:6px; font:600 15.5px/1.2 var(--f-head); letter-spacing:.01em}
-.wr.p > span.n{padding-left:10px; font-weight:600}
-.wr.p + .wr.p, .kwl + .wr.p, .varc + .wr.p{margin-top:5px}
-.ar{color:var(--muted); margin-right:3px; font-size:13px}
-.x{color:var(--muted); font-weight:600; font-size:13px; margin-left:5px; white-space:nowrap}
-.wn{font:700 15.5px/1.2 var(--f-head); letter-spacing:.01em; margin-bottom:3px}
-.wn small{font:500 12px var(--f-body); color:var(--muted); margin-left:8px}
-.kwl{margin-top:1px; font:700 11px/1.3 var(--f-head); letter-spacing:.05em; text-transform:uppercase; color:var(--muted)}
-.wr.p + .kwl{padding-left:10px}
-.kwl [data-rule]{color:var(--fg); white-space:nowrap; padding:6px 0; text-decoration:underline dotted; text-decoration-color:var(--accent); text-underline-offset:2px}
+.fold .wh{position:sticky; top:var(--top); z-index:3; background:var(--bg); padding-top:5px; box-shadow:0 1px 0 var(--line)}
+.wb{padding:6px 6px 5px; border-top:1px solid var(--line)}
+.wh + .wb, .who + .wb, .wb:first-child, .wb.g, .wb.g + .wb{border-top:0}
+.wb.g{background:var(--surface); border-radius:6px; margin:3px 0}
+.wr > span{font:700 15.5px/1.25 var(--f-head); text-align:center; min-width:0; font-variant-numeric:tabular-nums}
+.wr > span.n{text-align:left; padding-right:6px; font:600 15px/1.2 var(--f-head); letter-spacing:.01em}
+.wr.p > span.n{padding-left:8px}
+.wr.p + .wr.p, .kwl + .wr.p{margin-top:4px}
+.ar{color:var(--muted); margin-right:3px; font-size:12px}
+.x{color:var(--muted); font-weight:600; font-size:12.5px; margin-left:5px; white-space:nowrap}
+.tq{font:600 10.5px/1 var(--f-head); letter-spacing:.07em; text-transform:uppercase; color:var(--muted); margin-left:6px; white-space:nowrap; display:inline-block}
+.wn{font:700 15px/1.2 var(--f-head); letter-spacing:.01em; margin-bottom:2px}
+.wn small{font:600 11px/1 var(--f-head); letter-spacing:.09em; text-transform:uppercase; color:var(--muted); margin-left:8px}
+.kwl{font:600 11px/1.3 var(--f-head); letter-spacing:.04em; text-transform:uppercase; color:var(--muted)}
+.wr.p + .kwl{padding-left:8px}
+.kwl [data-rule]{color:var(--fg2); white-space:nowrap; padding:7px 0; text-decoration:underline dotted; text-decoration-color:var(--accent); text-underline-offset:2px}
+.kwl [data-rule]:active{color:var(--accent)}
 .wr i.hi{font-style:normal; display:inline-block; min-width:26px; padding:1px 4px; border-radius:5px; background:var(--accent); color:var(--accent-ink)}
-.varc{padding:2px 0 1px 10px; font-size:12.5px; line-height:1.35; color:var(--muted)}
-.varc b{color:var(--fg); font-weight:600}
-.mod{border-left:2px solid var(--accent); padding:2px 0 2px 8px; margin:2px 0 4px; font-size:13px; line-height:1.35}
-.mod .from{color:var(--muted); white-space:nowrap}
+.wr i.alt{font-style:normal; color:var(--accent)}
+.varc{padding-top:1px; font-size:12.5px; line-height:1.35; color:var(--muted)}
+.varc b{color:var(--accent); font:700 13.5px var(--f-head)}
+.mods{margin-top:6px; display:grid; gap:4px}
+.mod{border-left:2px solid var(--accent); padding:1px 0 1px 8px; font-size:13px; line-height:1.35}
+.mod .from{color:var(--muted)}
 .who{margin:8px 0 2px; font:700 11.5px/1 var(--f-head); letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
-/* slice screens: one pinned band per unit (column labels sit in the top bar) */
-.band{position:sticky; top:var(--top); z-index:4; display:flex; align-items:baseline; gap:8px; width:100%; min-height:40px; margin-top:14px; padding:9px 10px 8px;
+/* slice screens: one band per unit, pinned until the next unit's band pushes it off */
+.us{padding-bottom:4px}
+.band{position:sticky; top:var(--top); z-index:4; display:flex; align-items:baseline; gap:8px; width:100%; min-height:40px; margin-top:12px; padding:9px 10px 8px;
   background:var(--surface2); text-align:left; border-radius:6px}
 .band b{font:700 16.5px/1.15 var(--f-head); letter-spacing:.02em}
 .band .tgs{flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
 .band .go{align-self:center; color:var(--accent)}
-.slice > .band:first-child{margin-top:4px}
+.slice > .us:first-child .band{margin-top:4px}
 .band + .wt, .band + .al{margin-top:4px}
 .subbar .wh{padding-bottom:0}
 /* abilities */
@@ -194,18 +224,15 @@ summary::-webkit-details-marker{display:none}
 .al .ah{display:flex; flex-wrap:wrap; align-items:baseline; gap:1px 8px; margin-bottom:2px}
 .al .ah b{font:700 16px/1.2 var(--f-head); letter-spacing:.02em}
 .al .rt{font-size:14.5px; line-height:1.4}
-.chips{display:flex; flex-wrap:wrap; gap:6px}
-.kw{display:inline-flex; align-items:center; min-height:36px; padding:0 10px; border-radius:8px; border:1px solid var(--line); background:var(--surface);
-  font:700 12.5px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; text-align:left}
-.kw:active{background:var(--surface2)}
 .kwline{font-size:14px; line-height:1.5; color:var(--muted)}
 
 /* ---------- stratagems ---------- */
 .filt{display:grid; gap:4px}
 .seg, .pgrid{display:grid; grid-auto-flow:column; grid-auto-columns:minmax(0,1fr); gap:3px}
-.seg button, .pgrid button{min-height:34px; border-radius:7px; font:700 12.5px/1 var(--f-head); letter-spacing:.04em; text-transform:uppercase; color:var(--muted); text-align:center; background:var(--surface)}
+.seg button, .pgrid button{min-height:36px; border-radius:7px; font:700 13px/1 var(--f-head); letter-spacing:.04em; text-transform:uppercase; color:var(--muted); text-align:center; background:var(--surface)}
+.seg button:active, .pgrid button:active{background:var(--surface2)}
 .seg button[aria-pressed="true"], .pgrid button[aria-pressed="true"]{background:var(--surface2); color:var(--fg); box-shadow:inset 0 0 0 1px var(--line)}
-.seg button.on, .pgrid button.on{color:var(--accent); box-shadow:inset 0 0 0 1px var(--accent)}
+.seg button.on, .pgrid button.on{background:var(--accent); color:var(--accent-ink); box-shadow:none}
 .tools{display:flex; justify-content:flex-end; margin:2px 0 -8px}
 .textbtn{min-height:40px; font:700 12.5px/1 var(--f-head); letter-spacing:.07em; text-transform:uppercase; color:var(--accent)}
 .sec-h{display:flex; align-items:baseline; justify-content:space-between; gap:10px; margin:16px 0 4px}
@@ -213,41 +240,53 @@ summary::-webkit-details-marker{display:none}
 .sec-h .c{font:600 13px var(--f-head); color:var(--muted)}
 .strat{border-bottom:1px solid var(--line)}
 .strat > summary, .shead{display:grid; grid-template-columns:auto minmax(0,1fr) auto; gap:10px; align-items:center; padding:7px 2px; min-height:48px}
+.strat > summary:active, .xp > summary:active{background:var(--surface)}
 .cp{width:32px; height:32px; border-radius:7px; background:var(--surface2); display:grid; place-content:center; text-align:center; font:700 17px/1 var(--f-head); font-variant-numeric:tabular-nums}
-.cp small{display:block; font-size:8.5px; letter-spacing:.1em; color:var(--muted); margin-top:1px}
+.cp small{display:block; font-size:9px; letter-spacing:.1em; color:var(--muted); margin-top:1px}
 .cp.hot{background:var(--accent); color:var(--accent-ink)}
 .cp.hot small{color:var(--accent-ink)}
 .sh{display:grid; gap:1px; min-width:0}
 .sh b{font:700 16.5px/1.15 var(--f-head); letter-spacing:.02em}
 .sh span{font-size:12.5px; color:var(--muted)}
 .sb{padding:0 2px 10px 44px; font-size:14.5px; line-height:1.45; display:grid; gap:5px}
-.il{font:600 11px/1 var(--f-head); letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-right:6px}
 .sb > div > .rt, .sb > div > .rt > p:first-child{display:inline}
-.usedby{font-size:13.5px; color:var(--muted)}
 .sheet .sb{padding:4px 0 0}
+.rem{border-left:2px solid var(--accent); padding:2px 0 2px 8px; margin:6px 0; font-size:14px; line-height:1.4}
+.dl > div{display:grid; gap:1px; padding:6px 2px; border-bottom:1px solid var(--line); font-size:13.5px; line-height:1.4}
+.dl > div:first-child{border-top:1px solid var(--line)}
+.dl .link{font:700 15.5px/1.2 var(--f-head); letter-spacing:.02em; justify-self:start; padding:3px 0}
+.dl i{font-style:normal; font:600 11px var(--f-head); letter-spacing:.08em; color:var(--muted); margin-right:2px}
+.dl .sv{font:700 14.5px var(--f-head); font-variant-numeric:tabular-nums}
 
 /* ---------- rules ---------- */
 .xp{border-bottom:1px solid var(--line)}
 .xp > summary{display:flex; align-items:center; gap:10px; min-height:44px; padding:7px 2px}
-.xp > summary b{flex:1; min-width:0; font:700 16.5px/1.15 var(--f-head); letter-spacing:.02em}
+.xp > summary .xh{flex:1; min-width:0; display:grid; gap:1px}
+.xp > summary b{font:700 16.5px/1.15 var(--f-head); letter-spacing:.02em}
+.xp > summary .xh span{font-size:12.5px; color:var(--muted)}
 .xp > .body{padding:0 2px 10px; font-size:14.5px; line-height:1.45}
 .xp > .body .sub + .sub{margin-top:10px; padding-top:10px; border-top:1px solid var(--line)}
 .xp > .body .sub b.nm{font:700 15.5px/1.2 var(--f-head); letter-spacing:.02em}
+.xp > .body .usedby{margin-top:6px}
 
 /* ---------- popup sheet ---------- */
 .sheet-host{position:fixed; inset:0; z-index:60}
 .sheet-back{position:absolute; inset:0; background:rgba(0,0,0,.55)}
-.sheet{position:absolute; left:0; right:0; bottom:0; max-height:82%; overflow:auto; overscroll-behavior:contain; background:var(--surface);
-  border-radius:16px 16px 0 0; box-shadow:var(--shadow); outline:none;
-  padding:8px max(18px, env(safe-area-inset-right, 0px)) calc(18px + env(safe-area-inset-bottom, 0px)) max(18px, env(safe-area-inset-left, 0px))}
+.sheet{position:absolute; left:0; right:0; bottom:0; max-height:82%; display:flex; flex-direction:column; background:var(--surface);
+  border-radius:16px 16px 0 0; box-shadow:var(--shadow); outline:none; transform:translateY(var(--drag, 0px)); transition:transform .18s ease}
+.sheet.drag{transition:none}
+.sh-in{flex:1 1 auto; min-height:0; overflow:auto; overscroll-behavior:contain; padding:8px max(18px, env(safe-area-inset-right, 0px)) 4px max(18px, env(safe-area-inset-left, 0px))}
+.sh-foot{flex:none; padding:8px max(18px, env(safe-area-inset-right, 0px)) calc(12px + var(--safe-b)) max(18px, env(safe-area-inset-left, 0px)); border-top:1px solid var(--line)}
 .sheet .grab{width:40px; height:4px; border-radius:2px; background:var(--line); margin:4px auto 10px}
 .sheet h2{font:700 22px/1.1 var(--f-head); letter-spacing:.02em; margin:4px 0 8px}
 .sheet .rt{font-size:15px; line-height:1.45}
-.sheet .close{display:flex; align-items:center; justify-content:center; width:100%; min-height:44px; margin-top:14px; border-radius:10px; background:var(--surface2);
+.sheet .usedby{margin-top:8px}
+.sheet .close{display:flex; align-items:center; justify-content:center; width:100%; min-height:44px; border-radius:10px; background:var(--surface2);
   font:700 14px/1 var(--f-head); letter-spacing:.07em; text-transform:uppercase}
-@media (min-width:700px){ .sheet{left:50%; right:auto; width:620px; transform:translateX(-50%); bottom:24px; border-radius:16px} }
+.sheet .close:active{background:var(--line)}
+@media (min-width:700px){ .sheet{left:50%; right:auto; width:620px; transform:translateX(-50%) translateY(var(--drag, 0px)); bottom:24px; border-radius:16px} }
 
-.toast{position:fixed; left:50%; bottom:calc(24px + env(safe-area-inset-bottom, 0px)); transform:translateX(-50%); z-index:70; background:var(--fg); color:var(--bg);
+.toast{position:fixed; left:50%; bottom:calc(16px + max(var(--bb), var(--safe-b))); transform:translateX(-50%); z-index:70; background:var(--fg); color:var(--bg);
   font:700 15px/1.2 var(--f-head); letter-spacing:.04em; padding:10px 16px; border-radius:10px; opacity:0; pointer-events:none; transition:opacity .2s; max-width:86%; text-align:center}
 .toast.show{opacity:1}
 @media (prefers-reduced-motion: reduce){ *{transition:none !important; animation:none !important} }
@@ -274,13 +313,18 @@ summary::-webkit-details-marker{display:none}
 
 <main class="wrap" id="view"></main>
 
+<nav class="bbar" id="bbar" hidden><div class="wrap" id="bbarIn"></div></nav>
+
 <div class="sheet-host" id="sheetHost" hidden>
   <div class="sheet-back" id="sheetBack"></div>
-  <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" tabindex="-1"></div>
+  <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" tabindex="-1">
+    <div class="sh-in" id="sheetIn"></div>
+    <div class="sh-foot"><button class="close" data-close>Close</button></div>
+  </div>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="data.js?v=c7e3325920"></script>
+<script src="data.js?v=d071351cb1"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -288,29 +332,37 @@ const BUILD = window.WH_BUILD || '';      // set by build.js on the installable 
 const $ = s => document.querySelector(s);
 const $$ = s => [...document.querySelectorAll(s)];
 const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const store = {
-  get(k, d){ try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch(e){ return d; } },
-  set(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} }
-};
+const keep = area => ({
+  get(k, d){ try { const v = window[area].getItem(k); return v ? JSON.parse(v) : d; } catch(e){ return d; } },
+  set(k, v){ try { window[area].setItem(k, JSON.stringify(v)); } catch(e){} }
+});
+const store = keep('localStorage'), session = keep('sessionStorage');
 
 const PHASES = [['command','Command','Cmd'], ['movement','Movement','Move'], ['shooting','Shooting','Shoot'], ['charge','Charge','Charge'], ['fight','Fight','Fight']];
 const PHASE_NAME = Object.fromEntries(PHASES.map(([k, l]) => [k, l]));
 const TURN_FILTER = [['all','Any turn'], ['your','Your turn'], ['opp','Their turn']];
-const TURN_NAME = { your:'Your turn', opp:'Opponent’s turn', either:'Either turn' };
+const TURN_NAME = { your:'Your turn', opp:'Their turn', either:'Either turn' };
 const ROLE_ORDER = ['Epic Hero','Character','Battleline','Infantry','Mounted','Monster','Vehicle','Other'];
 const ROLE_LABEL = { 'Epic Hero':'Epic Heroes', 'Character':'Characters', 'Battleline':'Battleline', 'Infantry':'Infantry', 'Mounted':'Mounted', 'Monster':'Monsters', 'Vehicle':'Vehicles', 'Other':'Other' };
 const SCREEN_TITLE = { units:'Units', strats:'Stratagems', ranged:'Ranged weapons', melee:'Melee weapons', abilities:'Abilities', rules:'Rules & keywords' };
 const BACK_TITLE = { ranged:'Ranged', melee:'Melee', rules:'Rules' };
 const HUNTER_KW = 'HUNTER: MONSTER/VEHICLE';
+const KEY_LABEL = { range:'RNG', A:'A', BS:'BS', WS:'WS', S:'S', AP:'AP', D:'D' };
 const chev = '<svg class="chev" aria-hidden="true"><use href="#i-down"/></svg>';
 const arrow = '<svg class="go" aria-hidden="true"><use href="#i-down"/></svg>';
 
 /* ---------- state ---------- */
-const prefs = Object.assign({ folds:{} }, store.get('wh-prefs', {}));     // datasheet sections you folded
+const isObj = v => !!v && typeof v === 'object' && !Array.isArray(v);
+const hasOwn = (o, k) => Object.prototype.hasOwnProperty.call(o, k);
+const prefs = { folds:{} };                                                  // datasheet sections you folded
+{ const p = store.get('wh-prefs', {}); if(isObj(p) && isObj(p.folds)) prefs.folds = p.folds; }
 const savePrefs = () => store.set('wh-prefs', { folds:prefs.folds });
-const filt = { phase:'all', turn:'all' };   // stratagem filters: fresh each time the app opens
-const openStrats = new Set();                // stratagem cards you expanded
-const query = {};                            // search text, per army
+// filters, open cards and search text last for this session, so an update reload keeps them
+const sess = isObj(session.get('wh-session')) ? session.get('wh-session') : {};
+const filt = Object.assign({ phase:'all', turn:'all' }, isObj(sess.filt) ? sess.filt : {});
+const openStrats = new Set(Array.isArray(sess.open) ? sess.open : []);
+const query = Object.assign({}, isObj(sess.query) ? sess.query : {});
+const saveSession = () => session.set('wh-session', { filt, open:[...openStrats], query });
 const moreShown = new Set();                 // search groups you expanded
 let focusSearch = false;
 
@@ -320,6 +372,7 @@ let focusSearch = false;
 let cur = { s:'home', d:0 };
 const plain = c => ({ s:c.s, army:c.army, unit:c.unit, d:c.d || 0, from:c.from });
 const sameScreen = (a, b) => a && b && a.s === b.s && a.army === b.army && a.unit === b.unit;
+const calm = c => c.s === 'home' || c.s === 'army';   // screens where an update reload loses nothing
 function parentOf(c){
   if(c.s === 'unit') return { s:'units', army:c.army };
   if(c.s === 'home' || c.s === 'army') return { s:'home' };
@@ -338,16 +391,19 @@ function valid(c){
   const a = armyById(c.army);
   if(!a) return false;
   if(c.s === 'unit') return a.units.some(u => u.id === c.unit);
-  return c.s === 'army' || c.s in SCREEN_TITLE;
+  return c.s === 'army' || hasOwn(SCREEN_TITLE, c.s);
 }
 // mode: push (default) | 'sheet' (replaces an open popup's entry) | 'replace' (no history to go back to)
+let navAt = -1e9;   // when the screen last changed under your finger
 function go(next, mode){
+  navAt = performance.now();
   if(mode !== 'sheet'){ try { history.replaceState(Object.assign(plain(cur), { y:scrollY }), ''); } catch(e){} }
   const d = mode === 'replace' ? (cur.d || 0) : (cur.d || 0) + 1;
   const from = mode === 'replace' ? (next.s === 'home' ? undefined : backTitle(parentOf(next))) : backTitle(cur);
   if(next.army !== cur.army) moreShown.clear();
   cur = Object.assign(plain(next), { d, from });
   try { mode ? history.replaceState(plain(cur), '') : history.pushState(plain(cur), ''); } catch(e){}
+  if(updateReady && calm(cur)){ reloadNow(); return; }
   render(); scrollTo(0, 0);
 }
 function back(){
@@ -358,13 +414,21 @@ addEventListener('popstate', e => {
   const st = e.state;
   if(st && st.sheet){ if($('#sheetHost').hidden) history.back(); return; }   // stepped forward onto a closed popup: skip it
   hideSheet();
+  navAt = performance.now();
   if(!valid(st)){ cur = { s:'home', d:0 }; render(); return; }
-  if(sameScreen(st, cur)){ cur.d = st.d || 0; return; }                       // only a popup closed
+  if(sameScreen(st, cur)){ cur.d = st.d || 0; cur.from = st.from; renderTop(); return; }   // only a popup closed
   cur = plain(st);
+  if(updateReady && calm(cur)){ reloadNow(); return; }
   render(); scrollTo(0, st.y || 0);
 });
 // rebuild the history chain for a screen, so Back works after reopening the app
+const EMBEDDED = (() => { try { return window.top !== window.self; } catch(e){ return true; } })();
 function restore(target){
+  if(EMBEDDED){   // inside the Claude app: don't add entries to the host page's history
+    cur = Object.assign(plain(target), { d:0, from:target.s === 'home' ? undefined : backTitle(parentOf(target)) });
+    try { history.replaceState(plain(cur), ''); } catch(e){}
+    render(); return;
+  }
   const chain = [];
   for(let c = target; c; c = c.s === 'home' ? null : parentOf(c)) chain.unshift(plain(c));
   chain.forEach((c, i) => { c.d = i; c.from = i ? backTitle(chain[i - 1]) : undefined; });
@@ -401,13 +465,42 @@ function allStratagems(a){
 const usableStrats = a => allStratagems(a).filter(s => eligible(s, a).length);
 const shortName = u => (u.short || u.name) + (u.enhancement ? ' · ' + u.enhancement : '');
 const unitCount = a => a.units.reduce((t, u) => t + (u.copies || 1), 0);
+// "Big Mek ×2, Killa Kans": unit names for a one-line summary
+function unitNames(units){
+  const n = new Map();
+  for(const u of units){ const k = u.short || u.name; n.set(k, (n.get(k) || 0) + 1); }
+  return [...n].map(([k, c]) => k + (c > 1 ? ' ×' + c : '')).join(', ');
+}
 // detachment rules that apply to a unit (by keyword)
 const unitDetRules = u => detachments().filter(d => d.rule && d.rule.needs && matches(d.rule.needs, u)).map(d => d.rule);
 const unitRules = u => u.rules.concat(unitDetRules(u).map(r => r.name).filter(n => !u.rules.includes(n)));
-// abilities and detachment rules that change this unit's attacks
+// rules other units give this one (Ghazghkull's aura, the Dreadherder's re-rolls)
+function auraMods(u){
+  const out = [];
+  for(const src of army().units) for(const m of src.aura || []){
+    const self = src === u;
+    if((self && m.notSelf) || !matches(m.needs, u)) continue;
+    out.push(Object.assign({}, m, { when:self && m.selfWhen ? m.selfWhen : m.when, src }));
+  }
+  return out;
+}
+// everything that changes this unit's attacks: its own abilities, detachment rules, auras
 function unitMods(u, kind){
   const det = unitDetRules(u).filter(r => r.mod).map(r => Object.assign({ from:r.name, rule:r.name }, r.mod));
-  return (u.mods || []).concat(det).filter(m => m.kind === kind || m.kind === 'all');
+  return (u.mods || []).concat(det, auraMods(u)).filter(m => m.kind === kind || m.kind === 'all');
+}
+// phases and turn: turns can override the turn for one phase ("your Shooting phase or the Fight phase")
+const phasesOf = x => x.phases || x.ph || [];
+const phTurn = (x, p) => (x.turns && x.turns[p]) || x.turn || 'either';
+// start-of-phase rules first, end-of-phase rules last
+const timing = text => /^(at )?(the )?start of/i.test(text || '') ? 0 : /^(at )?(the )?end of/i.test(text || '') ? 2 : 1;
+// "Movement · Their turn", "Any phase · Either turn", "Your Shooting / Fight (either turn)"
+function whenTag(x){
+  const ph = phasesOf(x);
+  if(!ph.length) return '';
+  const t = ph.map(p => phTurn(x, p));
+  if(t.every(v => v === t[0])) return (ph.length === PHASES.length ? 'Any phase' : ph.map(p => PHASE_NAME[p]).join(' / ')) + ' · ' + TURN_NAME[t[0]];
+  return ph.map((p, i) => t[i] === 'your' ? 'Your ' + PHASE_NAME[p] : t[i] === 'opp' ? 'Their ' + PHASE_NAME[p] : PHASE_NAME[p] + ' (either turn)').join(' / ');
 }
 // weapons, counting a multi-profile weapon once
 function weaponItems(list){
@@ -428,6 +521,7 @@ function nameTags(u, opts){
   if(u.copies > 1 && !(opts && opts.noCopies)) t.push('<span class="tg m">×' + esc(u.copies) + ' units</span>');
   return t.join('');
 }
+const abilityKey = ab => army().id + '|' + ab.name + '|' + ab.text;
 
 /* ---------- rules and rich text ---------- */
 function ruleFor(label){
@@ -437,13 +531,22 @@ function ruleFor(label){
   const lc = clean.toLowerCase();
   const ar = f.armyRules.find(r => r.name.toLowerCase() === lc);
   if(ar) return { name:ar.name, key:ar.name, text:ar.text, src:f.name + ' army rule' };
-  for(const d of detachments()) if(d.rule && d.rule.name.toLowerCase() === lc) return { name:d.rule.name, key:d.rule.name, text:d.rule.text, table:d.rule.table, src:d.name + ' detachment rule' };
+  for(const d of detachments()) if(d.rule && d.rule.name.toLowerCase() === lc) return { name:d.rule.name, key:d.rule.name, text:d.rule.text, table:d.rule.table, needs:d.rule.needs, src:d.name + ' detachment rule' };
   for(const [re, key] of D.ruleAliases) if(re.test(clean)) return { name:clean, key, text:D.rules[key], src:'Core rule' };
   if(D.rules[clean]) return { name:clean, key:clean, text:D.rules[clean], src:'Core rule' };
   return null;
 }
-// **bold** text; bold terms that name a rule (Deep Strike, riled up, …) open it when tapped
-const inline = s => esc(s).replace(/\*\*(.+?)\*\*/g, (m, t) => ruleFor(t) ? '<b class="rl" role="button" tabindex="0" data-rule="' + t + '">' + t + '</b>' : '<b>' + t + '</b>');
+const ruleKey = label => (ruleFor(label) || {}).key;
+const mentions = (text, key) => new RegExp('\\b' + key.replace(/[-]/g, '.') + '\\b', 'i').test(text);
+// the units in this army a core rule applies to: unit rules, weapon keywords, ability text
+function ruleUsers(key){
+  return army().units.filter(u => unitRules(u).some(r => ruleKey(r) === key) ||
+    [...(u.ranged || []), ...(u.melee || [])].some(w => w.kw.some(k => ruleKey(k) === key) || (w.hunter && key === 'Hunter')) ||
+    u.abilities.some(ab => mentions(ab.text, key)));
+}
+// **bold** text; bold terms that name a rule (Deep Strike, riled up, …) open it when tapped; ~~struck~~ text
+const inline = s => esc(s).replace(/~~(.+?)~~/g, '<s>$1</s>')
+  .replace(/\*\*(.+?)\*\*/g, (m, t) => { const r = ruleFor(t); return r && r.key !== sheetRule ? '<b class="rl" role="button" tabindex="0" data-rule="' + t + '">' + t + '</b>' : '<b>' + t + '</b>'; });
 function rt(text){
   const lines = String(text || '').split('\n');
   let html = '', list = [];
@@ -460,8 +563,9 @@ function rt(text){
 }
 const ttable = t => '<div class="ttable">' + t.map(([k, v]) => '<span>' + esc(k) + '</span><span>' + inline(v) + '</span>').join('') + '</div>';
 const unitLink = u => '<span class="link" role="button" tabindex="0" data-unit="' + esc(u.id) + '">' + esc(shortName(u)) + '</span>';
+const usedBy = (label, units) => units.length ? '<p class="usedby"><span class="il">' + label + '</span>' + units.map(unitLink).join(', ') + '</p>' : '';
 
-/* ---------- top bar ---------- */
+/* ---------- top and bottom bars ---------- */
 function renderTop(){
   let left = '<span></span>', right = '<span></span>';
   if(cur.s !== 'home'){
@@ -470,12 +574,16 @@ function renderTop(){
   }
   $('#topIn').innerHTML = left + '<h1 class="ttl">' + esc(cur.s === 'home' ? 'Waaagh Codex' : titleOf(cur)) + '</h1>' + right;
 }
-function setSubbar(html){
-  const sb = $('#subbar');
-  sb.hidden = !html;
-  sb.innerHTML = html || '';
+function setBar(id, html){
+  const el = $('#' + id);
+  el.hidden = !html;
+  (id === 'bbar' ? $('#bbarIn') : el).innerHTML = html || '';
 }
-const measureTop = () => document.documentElement.style.setProperty('--hdr', $('#top').offsetHeight + 'px');
+function measure(){
+  const r = document.documentElement.style;
+  r.setProperty('--hdr', $('#top').offsetHeight + 'px');
+  r.setProperty('--bb', ($('#bbar').hidden ? 0 : $('#bbar').offsetHeight) + 'px');
+}
 
 /* ---------- screen: armies ---------- */
 function screenHome(){
@@ -507,10 +615,12 @@ function screenArmy(){
 
 /* ---------- search over everything in one army ---------- */
 const KIND_ORDER = ['Units','Weapons','Stratagems','Abilities','Rules'];
-const SYNONYM = { their:'opponent', strat:'stratagem', strats:'stratagem' };
+// shorthand players type; a value with spaces must appear as that phrase
+const SYNONYM = { their:'opponent', strat:'stratagem', strats:'stratagem', fnp:'feel no pain', inv:'invulnerable', invul:'invulnerable', invuln:'invulnerable',
+  dev:'devastating', devs:'devastating', ld:'leadership', cqc:'close-quarters', lethals:'lethal hits', sus:'sustained hits', ds:'deep strike', 'lone-op':'lone operative', loneop:'lone operative' };
 // lower-case, no apostrophes, and "waaagh"/"waagh" alike; hyphens are indexed both ways
-const norm = s => String(s).toLowerCase().replace(/\*\*/g, '').replace(/[’‘'`´]/g, '').replace(/a{2,}/g, 'a');
-const hay = (...parts) => { const t = norm(parts.join(' ')); return t + ' ' + t.replace(/-/g, '') + ' ' + t.replace(/-/g, ' '); };
+const norm = s => String(s).toLowerCase().replace(/\*\*|~~/g, '').replace(/[’‘'`´]/g, '').replace(/a{2,}/g, 'a');
+const hay = (...parts) => { const t = norm(parts.filter(Boolean).join(' ')); return t + ' ' + t.replace(/-/g, '') + ' ' + t.replace(/-/g, ' '); };
 const statLineText = s => 'M ' + s.M + ' · T ' + s.T + ' · Sv ' + s.Sv + ' · W ' + s.W + ' · Ld ' + s.Ld + ' · OC ' + s.OC + (s.InSv !== '–' ? ' · Inv ' + s.InSv : '');
 function weaponStatText(w, kind){
   return [kind === 'ranged' ? w.range : 'Melee', 'A ' + w.A, kind === 'ranged' ? 'BS ' + w.BS : 'WS ' + w.WS, 'S ' + w.S, 'AP ' + w.AP, 'D ' + w.D].join(' · ');
@@ -523,9 +633,11 @@ function searchIndex(){
   const out = [];
   const add = e => { e.hay += ' ' + norm(e.title).replace(/[\s-]/g, ''); out.push(e); };
   for(const u of a.units){
+    const st = u.stats.map(s => ['t' + s.T, 'w' + s.W, 'm' + s.M, 'sv' + s.Sv, 'base ' + s.base].join(' ')).join(' ');
     add({ kind:'Units', title:u.name, s1:u.stats.map(statLineText).join(' / '),
       sub:[u.role, u.pts + ' pts', u.warlord ? 'Warlord' : '', u.enhancement, u.leads ? 'leading ' + u.leads : ''].filter(Boolean).join(' · '),
-      hay:hay(u.name, u.short, u.role, u.kw.join(' '), u.models.join(' '), u.enhancement, u.warlord ? 'warlord' : '', 'stats invulnerable save toughness wounds move leadership'),
+      hay:hay(u.name, u.short, u.role, u.kw.join(' '), u.models.join(' '), u.enhancement, u.warlord ? 'warlord' : '', unitRules(u).join(' '),
+        u.abilities.map(ab => ab.def).join(' '), st, 'stats save toughness wounds move leadership', u.stats.some(s => s.InSv !== '–') ? 'invulnerable' : ''),
       act:{ unit:u.id } });
   }
   // weapons: identical profiles on twin units are listed once
@@ -537,27 +649,23 @@ function searchIndex(){
     const kws = (w.hunter ? [HUNTER_KW] : []).concat(w.kw);
     const vm = (u.mods || []).find(m => m.weapon === w.name && m.set);
     if(wmap.has(key)){ wmap.get(key).units.push(u); continue; }
-    const e = { kind:'Weapons', title, s1, units:[u], kws, vm, who:w.who, hay:hay(title, kind, kws.join(' '), u.name, u.short, w.who), act:{ unit:u.id, sec:kind } };
+    const e = { kind:'Weapons', title, s1, units:[u], kws, vm, who:w.who, hay:hay(title, kind, 'weapon', kws.join(' '), u.name, u.short, w.who), act:{ unit:u.id, sec:kind } };
     wmap.set(key, e); add(e);
   }
   for(const e of wmap.values()){
     e.sub = e.units.map(shortName).join(', ') + (e.who && e.who !== e.units[0].name ? ' (' + e.who + ')' : '') + (e.kws.length ? ' · ' + e.kws.join(', ') : '') +
-      (e.vm ? ' · ' + e.vm.when + ': ' + Object.entries(e.vm.set).map(([k, v]) => k + ' ' + v).join(' ') : '');
+      (e.vm ? ' · ' + Object.entries(e.vm.set).map(([k, v]) => k + ' ' + v).join(' ') + ' ' + e.vm.when : '');
   }
-  abilityIndex.clear();
   for(const u of a.units) for(const ab of u.abilities){
-    const key = a.id + '|' + ab.name + '|' + ab.text;
+    const key = abilityKey(ab);
     if(abilityIndex.has(key)){ abilityIndex.get(key).units.push(u); continue; }
-    const e = { kind:'Abilities', title:ab.name, ab, units:[u], hay:hay(ab.name, ab.text, ab.tag, ab.who, u.name), act:{ ability:key } };
+    const e = { kind:'Abilities', title:ab.name, ab, units:[u], hay:hay(ab.name, 'ability', ab.text, ab.tag, ab.who, ab.def, u.name), act:{ ability:key } };
     abilityIndex.set(key, e); add(e);
   }
-  for(const e of abilityIndex.values()){
-    const names = [...new Set(e.units.map(u => u.name))].map(n => n + (e.units.filter(u => u.name === n).length > 1 ? ' ×' + e.units.filter(u => u.name === n).length : ''));
-    e.sub = names.join(', ') + (e.ab.tag ? ' · ' + e.ab.tag : '');
-  }
+  for(const e of abilityIndex.values()) e.sub = unitNames(e.units) + (e.ab.tag ? ' · ' + e.ab.tag : '') + (e.ab.ph ? ' · ' + whenTag(e.ab) : '');
   for(const s of usableStrats(a)){
     add({ kind:'Stratagems', title:s.name, sub:s.cp + 'CP · ' + (s.src === 'Core' ? 'Core' : s.src) + ' · ' + stratWhenLine(s),
-      hay:hay(s.name, s.when, s.target, s.effect, s.src, s.src === 'Core' ? 'core' : 'detachment', s.phases.map(p => PHASE_NAME[p]).join(' '), TURN_NAME[s.turn]), act:{ strat:s.id } });
+      hay:hay(s.name, 'stratagem', s.when, s.target, s.effect, s.src, s.src === 'Core' ? 'core' : 'detachment', s.phases.map(p => PHASE_NAME[p]).join(' '), TURN_NAME[s.turn], s.turn === 'opp' ? 'opponent' : ''), act:{ strat:s.id } });
   }
   const f = factionOf(a);
   for(const r of f.armyRules) add({ kind:'Rules', title:r.name, sub:f.name + ' army rule' + (r.tag ? ' · ' + r.tag : ''), hay:hay(r.name, r.text, r.tag, 'army rule', (f.aliases || []).map(x => x[0].source).join(' ')), act:{ rule:r.name } });
@@ -585,8 +693,9 @@ function renderFinder(){
   $('#armyMenu').hidden = !!q;
   $('#armyHead').hidden = !!q;
   if(!q){ res.innerHTML = ''; return; }
-  const toks = norm(q).split(/\s+/).filter(Boolean).map(t => SYNONYM[t] || t).map(t => t.replace(/-/g, ''));
+  const toks = norm(q).split(/\s+/).filter(t => /[a-z0-9]/.test(t)).map(t => hasOwn(SYNONYM, t) ? SYNONYM[t] : t).map(t => t.replace(/-/g, ''));
   const nq = toks.join(' ');
+  if(!toks.length){ res.innerHTML = '<div class="empty">Type a name, keyword or rule.</div>'; return; }
   const hits = searchIndex().filter(e => toks.every(t => e.hay.includes(t))).map(e => {
     const tl = norm(e.title).replace(/-/g, '');
     return Object.assign({ score: tl.startsWith(nq) ? 0 : tl.includes(nq) ? 1 : toks.every(t => tl.includes(t)) ? 2 : 3 }, e);
@@ -613,67 +722,86 @@ function renderFinder(){
 }
 
 /* ---------- screen: unit list ---------- */
+const UNIT_COLS = ['M','T','SV','W','LD','OC','INV'];
+const unitsSubbar = () => '<div class="uh">' + UNIT_COLS.map(c => '<span>' + c + '</span>').join('') + '</div>';
 function statLine(u){
   const s = u.stats[0];
-  return '<span class="sline">' + [['M',s.M],['T',s.T],['SV',s.Sv],['W',s.W],['OC',s.OC],['INV',s.InSv]].map(([k, v]) => '<span><i>' + k + '</i>' + esc(v) + '</span>').join('') + '</span>';
+  return '<span class="sline">' + [s.M, s.T, s.Sv, s.W, s.Ld, s.OC, s.InSv].map(v => '<span>' + esc(v) + '</span>').join('') + '</span>';
 }
 function screenUnits(){
   const a = army(), groups = {};
   for(const u of a.units){ const r = ROLE_ORDER.includes(u.role) ? u.role : 'Other'; (groups[r] = groups[r] || []).push(u); }
   return ROLE_ORDER.filter(r => groups[r]).map(r => '<div class="lbl grp-h">' + ROLE_LABEL[r] + '</div><div class="list">' + groups[r].map(u => {
-    const solo = u.models.length === 1 && /^1× /.test(u.models[0]);
-    return '<button class="urow" data-unit="' + esc(u.id) + '"><span class="un"><b>' + esc(u.name) + '</b>' + nameTags(u) + '</span>' +
+    // one model type: its count goes after the name ("Gretchin ×10"), like a weapon count
+    const one = u.models.length === 1 && u.models[0].match(/^(\d+)× /);
+    const n = one && one[1] !== '1' ? '<span class="x">×' + one[1] + '</span>' : '';
+    return '<button class="urow" data-unit="' + esc(u.id) + '"><span class="un"><b>' + esc(u.name) + '</b>' + n + nameTags(u) + '</span>' +
       '<span class="pts">' + esc(u.pts) + (u.copies > 1 ? ' ea' : '') + '</span>' +
-      (!solo && !u.leads ? '<span class="meta">' + esc(u.models.join(', ')) + '</span>' : '') + statLine(u) + '</button>';
+      (!one && !u.leads ? '<span class="meta">' + esc(u.models.join(', ')) + '</span>' : '') + statLine(u) + '</button>';
   }).join('') + '</div>').join('');
 }
 
 /* ---------- weapon tables ---------- */
 const colHeader = kind => '<div class="wh ' + kind + '"><span class="n">Weapon</span>' + (kind === 'ranged' ? ['RNG','A','BS','S','AP','D'] : ['A','WS','S','AP','D']).map(c => '<span>' + c + '</span>').join('') + '</div>';
-function modLine(m){
-  const from = m.rule ? '<span class="link" role="button" tabindex="0" data-rule="' + esc(m.rule) + '">' + esc(m.from) + '</span>' : esc(m.from);
-  return '<div class="mod"><b>' + esc(m.when) + ':</b> ' + esc(m.note) + ' <span class="from">· ' + from + '</span></div>';
+// where a footnote's rule comes from, as a link to its text
+function modFrom(m, u){
+  const link = (attr, val, label) => '<span class="link" role="button" tabindex="0" data-' + attr + '="' + esc(val) + '">' + esc(label) + '</span>';
+  if(m.rule) return link('rule', m.rule, m.from);
+  if(m.src && m.src !== u) return link('unit', m.src.id, m.from + ', ' + (m.src.short || m.src.name));
+  const ab = (m.src || u).abilities.find(a => a.name === m.from);
+  return ab ? link('ability', abilityKey(ab), m.from) : esc(m.from);
 }
-function weaponBlock(it, keys, mods){
-  const vals = w => keys.map(k => w[k]);
-  const row = (label, v, hi, p) => '<div class="wr' + (p ? ' p' : '') + '"><span class="n">' + label + '</span>' +
-    v.map((x, i) => '<span>' + (hi && hi[i] ? '<i class="hi">' + esc(x) + '</i>' : esc(x)) + '</span>').join('') + '</div>';
-  const kwl = w => {
-    const k = (w.hunter ? [HUNTER_KW] : []).concat(w.kw || []);
-    return k.length ? '<div class="kwl">' + k.map(x => '<span role="button" tabindex="0" data-rule="' + esc(x) + '">' + esc(x) + '</span>').join(', ') + '</div>' : '';
-  };
+// AP -2 improved by 1 is AP -3
+const bump = (k, v, d) => k === 'AP' ? String(-(Math.abs(parseInt(v, 10) || 0) + d)) : v;
+function weaponBlock(it, keys, mods, u){
+  const cell = (v, cls) => '<span>' + (cls ? '<i class="' + cls + '">' + esc(v) + '</i>' : esc(v)) + '</span>';
+  const row = (label, cells, p) => '<div class="wr' + (p ? ' p' : '') + '"><span class="n">' + label + '</span>' + cells.join('') + '</div>';
+  const plainCells = w => keys.map(k => cell(w[k]));
+  const kwl = w => (w.kw || []).length ? '<div class="kwl">' + w.kw.map(x => '<span role="button" tabindex="0" data-rule="' + esc(x) + '">' + esc(x) + '</span>').join(', ') + '</div>' : '';
   const count = n => n ? '<span class="x">×' + esc(n) + '</span>' : '';
   const prof = name => '<span class="ar">➤</span>' + esc(name);
   const w0 = it.profiles[0];
-  // an ability that changes this weapon against some targets: one gun, two profiles by target
+  // an ability that changes this weapon against some targets: one row, both values in the cell ("8/14")
   const vm = !it.group && mods.find(m => m.weapon === w0.name && m.set);
   if(vm){
-    return '<div class="wn">' + esc(w0.name) + count(w0.n) + '<small>pick by target</small></div>' +
-      row(prof(vm.baseWhen), vals(w0), null, true) +
-      row(prof(vm.when), keys.map(k => vm.set[k] != null ? vm.set[k] : w0[k]), keys.map(k => vm.set[k] != null), true) +
-      '<div class="varc"><b>' + esc(vm.from) + '</b> ' + esc(vm.note) + '</div>' + kwl(w0);
+    const cells = keys.map(k => vm.set[k] != null ? '<span>' + esc(w0[k]) + '<i class="alt">/' + esc(vm.set[k]) + '</i></span>' : cell(w0[k]));
+    const changed = keys.filter(k => vm.set[k] != null).map(k => KEY_LABEL[k] + ' ' + vm.set[k]).join(', ');
+    return row(esc(w0.name) + count(w0.n), cells) + kwl(w0) +
+      '<div class="varc"><b>' + esc(changed) + '</b> ' + esc(vm.when) + ', ' + esc(vm.note) + ' <span class="from">(' + modFrom(vm, u) + ')</span></div>';
   }
   if(it.group){
-    return '<div class="wn">' + esc(it.group) + count(it.n) + '<small>pick one profile</small></div>' +
-      it.profiles.map(p => row(prof(p.name), vals(p), null, true) + kwl(p)).join('');
+    // Hunter weapons: the profile depends on the target; rules that add to Hunter attacks are built in
+    const byTarget = it.profiles.some(p => p.hunter);
+    const hunterMods = mods.filter(m => m.hunter);
+    return '<div class="wn">' + esc(it.group) + count(it.n) + '<small>' + (byTarget ? 'pick by target' : 'one of ' + it.profiles.length) + '</small></div>' +
+      it.profiles.map(p => {
+        if(!byTarget) return row(prof(p.name), plainCells(p), true) + kwl(p);
+        if(!p.hunter) return row(prof(p.name) + '<span class="tq">vs others</span>', plainCells(p), true) + kwl(p);
+        const cells = keys.map(k => { const d = hunterMods.reduce((t, m) => t + (m.hunter[k] || 0), 0); return d ? cell(bump(k, p[k], d), 'hi') : cell(p[k]); });
+        return row('<span class="ar">➤</span><span class="link" role="button" tabindex="0" data-rule="Hunter">' + esc(p.name) + '</span><span class="tq">vs MON/VEH</span>', cells, true) + kwl(p);
+      }).join('');
   }
-  return row(esc(w0.name) + count(w0.n), vals(w0)) + kwl(w0);
+  return row(esc(w0.name) + count(w0.n), plainCells(w0)) + kwl(w0);
 }
-function weaponTable(list, kind, mods, withHeader){
+// footnotes: rules with the same condition share one line
+function modLines(mods, u, hasHunter){
+  const groups = new Map();
+  for(const m of mods){ const k = norm(m.when); if(!groups.has(k)) groups.set(k, { when:m.when, items:[] }); groups.get(k).items.push(m); }
+  return [...groups.values()].map(g => '<div class="mod"><b>' + esc(g.when) + ':</b> ' + g.items.map(m =>
+    (m.who ? esc(m.who) + ' ' : '') + esc(m.note) + (m.hunter && hasHunter ? ', already in the Hunter rows' : '') + ' <span class="from">(' + modFrom(m, u) + ')</span>').join(' · ') + '</div>').join('');
+}
+function weaponTable(list, kind, mods, u, withHeader){
   const keys = kind === 'ranged' ? ['range','A','BS','S','AP','D'] : ['A','WS','S','AP','D'];
   const items = weaponItems(list);
   const combined = new Set(items.map(it => it.who || '')).size > 1;
-  const reminders = mods.filter(m => !(m.weapon && m.set));
-  let h = '<div class="wt ' + kind + '">' + (withHeader ? colHeader(kind) : '');
-  h += reminders.filter(m => !m.who || !combined).map(modLine).join('');
-  let lastWho = null, z = 0;
+  const hasHunter = (list || []).some(w => w.hunter) && mods.some(m => m.hunter);
+  const notes = mods.filter(m => !(m.weapon && m.set));
+  let h = '<div class="wt ' + kind + '">' + (withHeader ? colHeader(kind) : ''), lastWho = null;
   for(const it of items){
-    if(combined && it.who !== lastWho){
-      h += '<div class="who">' + esc(it.who) + '</div>' + reminders.filter(m => m.who === it.who).map(modLine).join('');
-      lastWho = it.who; z = 0;
-    }
-    h += '<div class="wb' + (z++ % 2 ? '' : ' z') + '">' + weaponBlock(it, keys, mods) + '</div>';
+    if(combined && it.who !== lastWho){ h += '<div class="who">' + esc(it.who) + '</div>'; lastWho = it.who; }
+    h += '<div class="wb' + (it.group ? ' g' : '') + '">' + weaponBlock(it, keys, mods, u) + '</div>';
   }
+  if(notes.length) h += '<div class="mods">' + modLines(notes, u, hasHunter) + '</div>';
   return h + '</div>';
 }
 
@@ -685,144 +813,190 @@ function fold(id, title, count, body){
 }
 function abilityList(abs){
   return '<div class="al">' + abs.map(ab => '<div><div class="ah"><b>' + esc(ab.name) + '</b>' + (ab.who ? '<span class="tg m">' + esc(ab.who) + '</span>' : '') +
-    (ab.tag ? '<span class="tg' + (ab.tag === 'Enhancement' ? '' : ' m') + '">' + esc(ab.tag) + '</span>' : '') + '</div>' + rt(ab.text) + '</div>').join('') + '</div>';
+    (ab.tag ? '<span class="tg' + (ab.tag === 'Enhancement' ? '' : ' m') + '">' + esc(ab.tag) + '</span>' : '') +
+    (ab.ph ? '<span class="tg m">' + esc(whenTag(ab)) + '</span>' : '') + '</div>' + rt(ab.text) + '</div>').join('') + '</div>';
+}
+// what matters when this unit is shot or fought: FNP, Lone Operative, -1 AP, the riled-up save
+function defences(u){
+  const out = [];
+  for(const r of u.rules){ const m = /^feel no pain (\d\+)/i.exec(r); if(m) out.push('Feel No Pain ' + m[1]); }
+  for(const ab of u.abilities) if(ab.def) out.push(ab.def);
+  const weak = u.stats.filter(s => !/^[2-5]\+$/.test(s.InSv));
+  if(weak.length && u.rules.includes('Waaagh!'))
+    out.push('Riled up: 5+ InSv' + (weak.length < u.stats.length ? ' (' + weak.map(s => s.name.replace(/ ×\d+$/, '')).join(', ') + ')' : ''));
+  return out;
 }
 function datasheetSections(u){
-  const strats = allStratagems().filter(s => keywordGated(s) && eligible(s).includes(u));
   return [
-    ['stats', 'Stats', 'Stats', true],
+    ['stats', 'Stats', 'Stats'],
     ['ranged', 'Ranged', 'Ranged weapons', !!(u.ranged && u.ranged.length)],
     ['melee', 'Melee', 'Melee weapons', !!(u.melee && u.melee.length)],
     ['abilities', 'Abil.', 'Abilities', u.abilities.length > 0],
-    ['rules', 'Rules', 'Rules', true],
-    ['strats', 'Strats', 'Stratagems', strats.length > 0],
-    ['keywords', 'Kw', 'Keywords', true]
-  ].filter(x => x[3]).concat([strats]);
+    ['rules', 'Rules', 'Rules'],
+    ['strats', 'Strats', 'Stratagems'],
+    ['keywords', 'Kw', 'Keywords']
+  ].filter(x => x[3] !== false);
 }
 function screenUnit(){
   const u = unitById(cur.unit);
   if(!u) return '<div class="empty">This unit is no longer in the list.</div>';
-  const secs = datasheetSections(u), strats = secs.pop();
+  const own = allStratagems().filter(s => keywordGated(s) && eligible(s).includes(u));
+  const any = allStratagems().filter(s => !keywordGated(s) && eligible(s).includes(u));
   const multi = u.stats.length > 1;
-  const statsBody = '<div class="st num" style="grid-template-columns:' + (multi ? 'minmax(0,1fr) repeat(7, 36px)' : 'repeat(7, minmax(0,1fr))') + '">' +
+  const def = defences(u);
+  const stats = '<div class="statwrap" id="sec-stats"><div class="st num" style="grid-template-columns:' + (multi ? 'minmax(64px,1fr) repeat(7, minmax(26px,36px))' : 'repeat(7, minmax(0,1fr))') + '">' +
       (multi ? '<span class="h"></span>' : '') + ['M','T','SV','W','LD','OC','INV'].map(k => '<span class="h">' + k + '</span>').join('') +
-      u.stats.map(s => (multi ? '<span class="n">' + esc(s.name) + '</span>' : '') + [s.M, s.T, s.Sv, s.W, s.Ld, s.OC, s.InSv].map(v => '<span>' + esc(v) + '</span>').join('')).join('') +
-    '</div><p class="meta-lines">' + esc(u.models.join(' · ')) + ' · Base ' + esc([...new Set(u.stats.map(s => s.base))].join(' / ')) +
-      (u.ptsNote ? ' · ' + esc(u.ptsNote) + ' pts' : '') + (u.boostNote ? '<br><i>' + esc(u.boostNote) + '</i>' : '') + '</p>';
+      u.stats.map(s => (multi ? '<span class="n">' + esc(s.name) + '</span>' : '') + [s.M, s.T, s.Sv, s.W, s.Ld, s.OC, s.InSv].map(v => '<span>' + esc(v) + '</span>').join('')).join('') + '</div>' +
+    (def.length ? '<div class="def"><span class="il">When targeted</span>' + def.map(esc).join(' · ') + '</div>' : '') +
+    '<div class="meta-lines"><div class="m">' + u.models.map(m => '<span>' + esc(m) + '</span>').join('') + '</div>' +
+      'Base ' + esc([...new Set(u.stats.map(s => s.base))].join(' / ')) + (u.ptsNote ? ' · ' + esc(u.ptsNote) + ' pts' : '') +
+      (u.boostNote ? ' · <i>' + esc(u.boostNote) + '</i>' : '') + '</div></div>';
+  const stratLink = s => '<span class="link" role="button" tabindex="0" data-strat="' + esc(s.id) + '">' + esc(s.name) + '</span>';
   const body = {
-    stats: statsBody,
-    ranged: () => weaponTable(u.ranged, 'ranged', unitMods(u, 'ranged'), true),
-    melee: () => weaponTable(u.melee, 'melee', unitMods(u, 'melee'), true),
+    ranged: () => weaponTable(u.ranged, 'ranged', unitMods(u, 'ranged'), u, true),
+    melee: () => weaponTable(u.melee, 'melee', unitMods(u, 'melee'), u, true),
     abilities: () => abilityList(u.abilities),
-    rules: () => '<div class="chips">' + unitRules(u).map(r => '<button class="kw" data-rule="' + esc(r) + '">' + esc(r) + '</button>').join('') + '</div>',
-    strats: () => '<div class="list">' + strats.map(stratItem).join('') + '</div>',
+    rules: () => '<p class="rulesline">' + unitRules(u).map(r => '<span class="link" role="button" tabindex="0" data-rule="' + esc(r) + '">' + esc(r) + '</span>').join(', ') + '</p>',
+    strats: () => (own.length ? '<div class="list">' + own.map(stratItem).join('') + '</div>' : '') +
+      (any.length ? '<p class="usedby" style="margin-top:8px"><span class="il">Any unit</span>' + any.map(stratLink).join(', ') + '</p>' : ''),
     keywords: () => '<p class="kwline">' + esc(u.kw.join(', ')) + '</p>' + (u.kwNote ? '<p class="note">' + esc(u.kwNote) + '</p>' : '')
   };
-  const count = { ranged: weaponItems(u.ranged).length, melee: weaponItems(u.melee).length, abilities: u.abilities.length, rules: unitRules(u).length, strats: strats.length };
+  const count = { ranged: weaponItems(u.ranged).length, melee: weaponItems(u.melee).length, abilities: u.abilities.length, rules: unitRules(u).length, strats: own.length || null };
   const meta = [esc(u.role), esc(u.pts) + ' pts' + (u.copies > 1 ? ' each' : '')];
   if(u.copies > 1) meta.push('×' + esc(u.copies) + ' in list');
   if(u.leads) meta.push('leading ' + esc(u.leads));
-  return '<div class="ds-meta"><span>' + meta.join(' · ') + '</span>' + nameTags(u, { noLeads:true, noCopies:true }) + '</div>' +
-    secs.map(([id, , title]) => fold(id, title, count[id], typeof body[id] === 'function' ? body[id]() : body[id])).join('');
+  return '<div class="ds-meta"><span>' + meta.join(' · ') + '</span>' + nameTags(u, { noLeads:true, noCopies:true }) + '</div>' + stats +
+    datasheetSections(u).filter(x => x[0] !== 'stats').map(([id, , title]) => fold(id, title, count[id], body[id]())).join('');
 }
-const unitSubbar = u => '<div class="jump">' + datasheetSections(u).slice(0, -1).map(([id, short]) => '<button data-jump="' + id + '">' + short + '</button>').join('') + '</div>';
+const unitJumps = u => '<div class="jump">' + datasheetSections(u).map(([id, short]) => '<button data-jump="' + id + '">' + short + '</button>').join('') + '</div>';
 
 /* ---------- screens: weapons and abilities by unit ---------- */
 const band = u => '<button class="band" data-unit="' + esc(u.id) + '"><b>' + esc(u.name) + '</b><span class="tgs">' + nameTags(u) + '</span>' + arrow + '</button>';
 function screenWeapons(kind){
   const list = army().units.filter(u => (u[kind] || []).length);
   if(!list.length) return '<div class="empty">No ' + kind + ' weapons in this army.</div>';
-  return '<div class="slice">' + list.map(u => band(u) + weaponTable(u[kind], kind, unitMods(u, kind), false)).join('') + '</div>';
+  return '<div class="slice">' + list.map(u => '<section class="us">' + band(u) + weaponTable(u[kind], kind, unitMods(u, kind), u, false) + '</section>').join('') + '</div>';
 }
-const screenAbilities = () => '<div class="slice">' + army().units.filter(u => u.abilities.length).map(u => band(u) + abilityList(u.abilities)).join('') + '</div>';
+const screenAbilities = () => '<div class="slice">' + army().units.filter(u => u.abilities.length).map(u => '<section class="us">' + band(u) + abilityList(u.abilities) + '</section>').join('') + '</div>';
 
 /* ---------- stratagems ---------- */
-function stratWhenLine(s){
-  return [s.phases.length === PHASES.length ? 'Any phase' : s.phases.map(p => PHASE_NAME[p]).join(' / '), TURN_NAME[s.turn || 'either'], s.limit].filter(Boolean).join(' · ');
-}
+const stratWhenLine = s => [whenTag(s), s.limit, s.cpNote].filter(Boolean).join(' · ');
 const stratHead = s => '<span class="cp' + (s.cp >= 2 ? ' hot' : '') + '">' + esc(s.cp) + '<small>CP</small></span><span class="sh"><b>' + esc(s.name) + '</b><span>' + esc(stratWhenLine(s)) + '</span></span>';
 function stratBody(s){
   const el = eligible(s);
   return '<div><span class="il">When</span>' + rt(s.when) + '</div><p><span class="il">Target</span>' + inline(s.target) + '</p>' +
     '<div><span class="il">Effect</span>' + rt(s.effect) + '</div>' +
     (s.restrictions ? '<p><span class="il">Restrictions</span>' + inline(s.restrictions) + '</p>' : '') +
+    (s.note ? '<p class="note it">' + esc(s.note) + '</p>' : '') +
     '<p class="usedby"><span class="il">Used by</span>' + (el.length === army().units.length ? 'any unit' : el.map(unitLink).join(', ')) + '</p>';
 }
 const stratItem = s => '<details class="strat" data-strat-id="' + esc(s.id) + '"' + (openStrats.has(s.id) ? ' open' : '') + '><summary>' + stratHead(s) + chev + '</summary><div class="sb">' + stratBody(s) + '</div></details>';
 const turnOk = t => filt.turn === 'all' || !t || t === 'either' || filt.turn === t;
-const phaseOk = ph => filt.phase === 'all' || (ph || []).includes(filt.phase);
-function phaseAbilities(){
-  const out = [];
-  for(const r of faction().armyRules) if(r.ph) out.push({ name:r.name, text:r.text, tag:r.tag, ph:r.ph, turn:r.turn, src:'Army rule', units:[] });
-  for(const d of detachments()) if(d.rule && d.rule.ph && army().units.some(u => matches(d.rule.needs, u)))
-    out.push({ name:d.rule.name, text:d.rule.text, table:d.rule.table, ph:d.rule.ph, turn:d.rule.turn, src:d.name + ' detachment rule', units:army().units.filter(u => matches(d.rule.needs, u)) });
-  for(const u of army().units) for(const ab of u.abilities){
+// does a stratagem or ability fall under the phase and turn filters
+function fits(x){
+  const ph = phasesOf(x);
+  if(filt.phase === 'all') return ph.some(p => turnOk(phTurn(x, p)));
+  return ph.includes(filt.phase) && turnOk(phTurn(x, filt.phase));
+}
+// in a phase view: start-of-phase first, end-of-phase last, any-phase stratagems after the rest
+const phaseOrder = (x, text) => (phasesOf(x).length === PHASES.length ? 10 : 0) + timing(text);
+function phaseItems(){
+  const out = [], f = faction(), units = army().units;
+  for(const r of f.armyRules) if(r.ph) out.push({ name:r.name, text:r.text, tag:r.tag, ph:r.ph, turn:r.turn, turns:r.turns, sub:f.name + ' army rule', units:[] });
+  for(const d of detachments()) if(d.rule && d.rule.ph){
+    const us = units.filter(u => matches(d.rule.needs, u));
+    if(us.length) out.push({ name:d.rule.name, text:d.rule.text, table:d.rule.table, ph:d.rule.ph, turn:d.rule.turn, turns:d.rule.turns, sub:d.name + ' rule · ' + unitNames(us), units:us });
+  }
+  for(const u of units) for(const ab of u.abilities){
     if(!ab.ph) continue;
     const key = ab.name + '|' + ab.text;
     let e = out.find(x => x.key === key);
-    if(!e){ e = { key, name:ab.name, text:ab.text, tag:ab.tag, ph:ab.ph, turn:ab.turn, units:[] }; out.push(e); }
+    if(!e){ e = { key, name:ab.name, text:ab.text, tag:ab.tag, ph:ab.ph, turn:ab.turn, turns:ab.turns, units:[] }; out.push(e); }
     e.units.push(u);
   }
+  const ds = units.filter(u => unitRules(u).includes('Deep Strike'));
+  if(ds.length) out.push({ name:'Deep Strike', text:D.rules['Deep Strike'], ph:['movement'], turn:'either', sub:'Core rule · ' + unitNames(ds), units:ds });
+  for(const e of out) if(!e.sub) e.sub = unitNames(e.units);
   return out;
 }
-function stratSubbar(){
+// the opponent is attacking: each unit's toughness, saves and what protects it
+function defenceList(){
+  return '<div class="dl">' + army().units.map(u => {
+    const multi = u.stats.length > 1;
+    const st = u.stats.map(s => (multi ? esc(s.name.replace(/ ×\d+$/, '')) + ' ' : '') + '<i>T</i>' + esc(s.T) + ' <i>SV</i>' + esc(s.Sv) + (s.InSv !== '–' ? ' <i>INV</i>' + esc(s.InSv) : '') + ' <i>W</i>' + esc(s.W)).join(' / ');
+    const d = defences(u);
+    return '<div>' + unitLink(u) + '<span class="sv">' + st + '</span>' + (d.length ? '<span>' + d.map(esc).join(' · ') + '</span>' : '') + '</div>';
+  }).join('') + '</div>';
+}
+function stratFilters(){
   const btn = (attr, k, label, sel) => '<button data-' + attr + '="' + k + '" aria-pressed="' + (sel === k) + '"' + (sel === k && k !== 'all' ? ' class="on"' : '') + '>' + label + '</button>';
   return '<div class="filt"><div class="seg" role="group" aria-label="Whose turn">' + TURN_FILTER.map(([k, l]) => btn('turn', k, l, filt.turn)).join('') + '</div>' +
     '<div class="pgrid" role="group" aria-label="Phase">' + [['all','All','All']].concat(PHASES).map(([k, , s]) => btn('phase', k, s, filt.phase)).join('') + '</div></div>';
 }
 function screenStrats(){
-  const shown = allStratagems().filter(s => phaseOk(s.phases) && turnOk(s.turn));
+  const p = filt.phase;
+  const shown = allStratagems().filter(fits);
   const usable = shown.filter(s => eligible(s).length);
-  const missing = [...new Set(shown.filter(s => !eligible(s).length).flatMap(s => (s.needs.all || s.needs.any || [])))];
-  let h = usable.length ? '<div class="tools"><button class="textbtn" data-expand>Expand all</button></div>' : '';
+  // stratagems no unit here can use, and the keyword each one is missing
+  const blocked = shown.filter(s => !eligible(s).length).map(s => {
+    const n = s.needs || {}, lack = (n.all || []).filter(k => !army().units.some(u => hasKw(u, k)));
+    return s.name + (lack.length ? ' (' + lack.join(', ').toUpperCase() + ')' : n.any ? ' (' + n.any.join(' or ').toUpperCase() + ')' : '');
+  });
+  const order = list => p === 'all' ? list : list.map((s, i) => [s, i]).sort((x, y) => phaseOrder(x[0], x[0].when) - phaseOrder(y[0], y[0].when) || x[1] - y[1]).map(x => x[0]);
+  let h = usable.length ? '<div class="tools"><button class="textbtn" data-expand>' + (usable.every(s => openStrats.has(s.id)) ? 'Collapse all' : 'Expand all') + '</button></div>' : '';
   for(const [name, list] of detachments().map(d => [d.name, usable.filter(s => s.src === d.name)]).concat([['Core stratagems', usable.filter(s => s.src === 'Core')]])){
-    if(list.length) h += '<div class="sec-h"><h2>' + esc(name) + '</h2><span class="c">' + list.length + '</span></div><div class="list">' + list.map(stratItem).join('') + '</div>';
+    if(list.length) h += '<div class="sec-h"><h2>' + esc(name) + '</h2><span class="c">' + list.length + '</span></div><div class="list">' + order(list).map(stratItem).join('') + '</div>';
   }
   if(!usable.length) h += '<div class="empty">No stratagems for this phase and turn.</div>';
-  if(filt.phase !== 'all'){
-    const abil = phaseAbilities().filter(a => phaseOk(a.ph) && turnOk(a.turn));
-    if(abil.length) h += '<div class="sec-h"><h2>Also this phase</h2><span class="c">' + abil.length + (abil.length === 1 ? ' ability' : ' abilities') + '</span></div><div class="list">' + abil.map(a =>
-      xp(a.name, a.tag ? '<span class="tg m">' + esc(a.tag.replace(', per army', '')) + '</span>' : '',
-        (a.src ? '<p class="lbl">' + esc(a.src) + '</p>' : '') + rt(a.text) + (a.table ? ttable(a.table) : '') + (a.units.length ? '<p class="usedby">' + a.units.map(unitLink).join(', ') + '</p>' : ''), false)).join('') + '</div>';
+  if(p !== 'all'){
+    const rem = faction().armyRules.flatMap(r => (r.remind || []).filter(fits).map(x => '<div class="rem"><span class="link" role="button" tabindex="0" data-rule="' + esc(r.name) + '">' + esc(r.name) + '</span> ' + esc(x.text) + '</div>'));
+    const abil = phaseItems().filter(fits).map((a, i) => [a, i]).sort((x, y) => timing(x[0].text) - timing(y[0].text) || x[1] - y[1]).map(x => x[0]);
+    if(rem.length || abil.length) h += '<div class="sec-h"><h2>Also this phase</h2>' + (abil.length ? '<span class="c">' + abil.length + (abil.length === 1 ? ' ability' : ' abilities') + '</span>' : '') + '</div>' + rem.join('') +
+      (abil.length ? '<div class="list">' + abil.map(a => xp(a.name, a.sub, a.tag ? '<span class="tg m">' + esc(a.tag) + '</span>' : '',
+        rt(a.text) + (a.table ? ttable(a.table) : '') + usedBy('Units', a.units), false)).join('') + '</div>' : '');
+    // when the opponent shoots or fights, the questions are "what's your save, can I see it"
+    if((p === 'shooting' && filt.turn !== 'your') || p === 'fight') h += '<div class="sec-h"><h2>When targeted</h2></div>' + defenceList();
   }
   const notes = [];
-  if(missing.length) notes.push((shown.length - usable.length) + ' more need ' + missing.map(k => k.toUpperCase()).join(' or ') + ', which no unit in this army has.');
+  if(blocked.length) notes.push('Not shown, no unit here can use ' + (blocked.length === 1 ? 'it' : 'them') + ': ' + blocked.join(', ') + '.');
   notes.push('All stratagem text is Wahapedia’s wording.');
   return h + notes.map(n => '<p class="note">' + esc(n) + '</p>').join('');
 }
 
 /* ---------- screen: rules & keywords ---------- */
-const xp = (name, tags, body, open) => '<details class="xp"' + (open ? ' open' : '') + '><summary><b>' + esc(name) + '</b>' + (tags || '') + chev + '</summary><div class="body">' + body + '</div></details>';
+const xp = (name, sub, tags, body, open) => '<details class="xp"' + (open ? ' open' : '') + '><summary><span class="xh"><b>' + esc(name) + '</b>' + (sub ? '<span>' + esc(sub) + '</span>' : '') + '</span>' +
+  (tags || '') + chev + '</summary><div class="body">' + body + '</div></details>';
 function screenRules(){
   const f = faction(), a = army();
   const taken = new Map(a.units.filter(u => u.enhancement).map(u => [u.enhancement, u]));
   let h = '<div class="sec-h"><h2>Army rules</h2></div><div class="list">' +
-    f.armyRules.map((r, i) => xp(r.name, r.tag ? '<span class="tg m">' + esc(r.tag) + '</span>' : '', rt(r.text), i === 0)).join('') + '</div>';
+    f.armyRules.map((r, i) => xp(r.name, r.ph ? whenTag(r) : '', r.tag ? '<span class="tg m">' + esc(r.tag) + '</span>' : '', rt(r.text), i === 0)).join('') + '</div>';
   for(const d of detachments()){
     const mine = d.enhancements.filter(e => taken.has(e.name)), other = d.enhancements.filter(e => !taken.has(e.name));
     h += '<div class="sec-h"><h2>' + esc(d.name) + '</h2></div><div class="list">' +
-      (d.rule ? xp(d.rule.name, '<span class="tg m">detachment rule</span>', rt(d.rule.text) + (d.rule.table ? ttable(d.rule.table) : ''), true) : '') +
-      mine.map(e => xp(e.name, '<span class="tg">' + esc(shortName(taken.get(e.name)).replace(' · ' + e.name, '')) + '</span>', rt(e.text) + '<p class="usedby">On ' + unitLink(taken.get(e.name)) + (e.pts ? ' · ' + esc(e.pts) + ' pts' : '') + '</p>', false)).join('') +
-      (other.length ? xp('Other enhancements', '<span class="tg m">' + other.length + ' not in this list</span>',
+      (d.rule ? xp(d.rule.name, 'Detachment rule', '', rt(d.rule.text) + (d.rule.table ? ttable(d.rule.table) : '') + usedBy('Applies to', a.units.filter(u => matches(d.rule.needs, u))), true) : '') +
+      mine.map(e => xp(e.name, 'Enhancement' + (e.pts ? ' · ' + e.pts + ' pts' : ''), '', rt(e.text) + usedBy('On', [taken.get(e.name)]), false)).join('') +
+      (other.length ? xp('Other enhancements', other.length + ' not in this list', '',
         other.map(e => '<div class="sub"><b class="nm">' + esc(e.name) + '</b>' + (e.pts ? ' <span class="tg m">' + esc(e.pts) + ' pts</span>' : '') + rt(e.text) + '</div>').join(''), false) : '') +
       '</div>';
   }
-  // the core rules and weapon keywords this army actually uses
+  // the core rules and weapon keywords this army actually uses, each listed once
   const used = new Map();
-  for(const u of a.units){
-    for(const r of unitRules(u)) used.set(r, 'ability');
-    for(const w of [...(u.ranged || []), ...(u.melee || [])]){ for(const k of w.kw) used.set(k, 'weapon'); if(w.hunter) used.set('Hunter', 'weapon'); }
-    for(const ab of u.abilities) for(const key of Object.keys(D.rules)) if(new RegExp('\\b' + key.replace(/[-]/g, '.') + '\\b', 'i').test(ab.text)) used.set(key, 'ability');
-  }
-  const groups = { ability:new Map(), weapon:new Map() };
-  for(const [label, kind] of used){
+  const note = (label, kind) => {
     const r = ruleFor(label);
-    if(!r || r.src !== 'Core rule') continue;
-    if(!groups[kind].has(r.key)) groups[kind].set(r.key, { r, names:new Set() });
-    if(label.toLowerCase() !== r.key.toLowerCase()) groups[kind].get(r.key).names.add(label);
+    if(!r || r.src !== 'Core rule') return;
+    const e = used.get(r.key) || { r, kind, labels:new Set() };
+    if(kind === 'weapon') e.kind = 'weapon';
+    if(label.toLowerCase() !== r.key.toLowerCase()) e.labels.add(label);
+    used.set(r.key, e);
+  };
+  for(const u of a.units){
+    for(const r of unitRules(u)) note(r, 'ability');
+    for(const w of [...(u.ranged || []), ...(u.melee || [])]){ for(const k of w.kw) note(k, 'weapon'); if(w.hunter) note('Hunter', 'weapon'); }
+    for(const ab of u.abilities) for(const key of Object.keys(D.rules)) if(mentions(ab.text, key)) note(key, 'ability');
   }
-  const gloss = kind => [...groups[kind].values()].sort((x, y) => x.r.key.localeCompare(y.r.key))
-    .map(g => xp(g.r.key, '', rt(g.r.text) + (g.names.size ? '<p class="note">In this army: ' + esc([...g.names].sort().join(', ')) + '</p>' : ''), false)).join('');
+  const gloss = kind => [...used.values()].filter(e => e.kind === kind).sort((x, y) => x.r.key.localeCompare(y.r.key))
+    .map(e => xp(e.r.key, e.labels.size ? [...e.labels].sort().join(', ') : '', '', rt(e.r.text) + usedBy('In this army', ruleUsers(e.r.key)), false)).join('');
   h += '<div class="sec-h"><h2>Unit rules</h2></div><div class="list">' + gloss('ability') + '</div>';
   h += '<div class="sec-h"><h2>Weapon keywords</h2></div><div class="list">' + gloss('weapon') + '</div>';
   return h + '<p class="note">Force disposition: ' + esc(a.disposition) + '.</p>';
@@ -832,21 +1006,23 @@ function screenRules(){
 function render(){
   renderTop();
   const v = $('#view'), s = cur.s;
-  let sub = '';
+  let sub = '', bot = '';
   if(s === 'home') v.innerHTML = screenHome();
   else if(s === 'army') v.innerHTML = screenArmy();
-  else if(s === 'units') v.innerHTML = screenUnits();
-  else if(s === 'unit'){ v.innerHTML = screenUnit(); const u = unitById(cur.unit); if(u) sub = unitSubbar(u); }
-  else if(s === 'strats'){ v.innerHTML = screenStrats(); sub = stratSubbar(); }
+  else if(s === 'units'){ v.innerHTML = screenUnits(); sub = unitsSubbar(); }
+  else if(s === 'unit'){ v.innerHTML = screenUnit(); const u = unitById(cur.unit); if(u) bot = unitJumps(u); }
+  else if(s === 'strats'){ v.innerHTML = screenStrats(); bot = stratFilters(); }
   else if(s === 'ranged' || s === 'melee'){ v.innerHTML = screenWeapons(s); sub = '<div class="wt ' + s + '">' + colHeader(s) + '</div>'; }
   else if(s === 'abilities') v.innerHTML = screenAbilities();
   else if(s === 'rules') v.innerHTML = screenRules();
-  setSubbar(sub);
-  measureTop();
+  setBar('subbar', sub);
+  setBar('bbar', bot);
+  measure();
+  markJump();
   if(s === 'army'){
     const i = $('#armyQ');
     i.value = query[army().id] || '';
-    const sync = () => { query[army().id] = i.value; moreShown.clear(); renderFinder(); };
+    const sync = () => { query[army().id] = i.value; moreShown.clear(); renderFinder(); saveSession(); };
     i.addEventListener('input', sync);
     i.addEventListener('search', sync);   // the clear button and Escape empty the box without an input event
     i.addEventListener('keydown', e => { if(e.key === 'Enter') i.blur(); });
@@ -860,26 +1036,46 @@ function rerender(){ const y = scrollY; render(); scrollTo(0, y); }
 function jumpTo(id, instant){
   const sec = $('#sec-' + id);
   if(!sec) return;
-  sec.open = true;
-  measureTop();
+  if(sec.tagName === 'DETAILS') sec.open = true;
+  measure();
   sec.scrollIntoView({ behavior:instant || matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block:'start' });
 }
+// light up the jump button of the section you are reading
+function markJump(){
+  const btns = $$('#bbar [data-jump]');
+  if(!btns.length) return;
+  const line = $('#top').getBoundingClientRect().bottom + 12;
+  const atEnd = innerHeight + scrollY >= document.documentElement.scrollHeight - 4;
+  let on = btns[0].dataset.jump;
+  for(const b of btns){
+    const sec = $('#sec-' + b.dataset.jump);
+    if(sec && sec.getBoundingClientRect().top <= (atEnd ? innerHeight * .6 : line)) on = b.dataset.jump;
+  }
+  btns.forEach(b => b.setAttribute('aria-current', String(b.dataset.jump === on)));
+}
+let scrollRaf = 0;
+addEventListener('scroll', () => { if(!scrollRaf) scrollRaf = requestAnimationFrame(() => { scrollRaf = 0; markJump(); }); }, { passive:true });
 
 /* ---------- popup sheet ---------- */
-let sheetReturn = null;
+let sheetReturn = null, sheetRule = null;
 function openSheet(label, title, html){
-  sheetReturn = document.activeElement;
-  $('#sheet').innerHTML = '<div class="grab" aria-hidden="true"></div>' + (label ? '<p class="lbl">' + label + '</p>' : '') + '<h2 id="sheetTitle">' + esc(title) + '</h2>' + html + '<button class="close" data-close>Close</button>';
+  const nested = !$('#sheetHost').hidden;
+  navAt = performance.now();
+  if(!nested) sheetReturn = document.activeElement;
+  $('#sheetIn').innerHTML = '<div class="grab" aria-hidden="true"></div>' + (label ? '<p class="lbl">' + label + '</p>' : '') + '<h2 id="sheetTitle">' + esc(title) + '</h2>' + html;
   $('#sheetHost').hidden = false;
-  $('#top').inert = true; $('#view').inert = true;
-  $('#sheet').scrollTop = 0;
+  document.documentElement.classList.add('lock');
+  $('#top').inert = true; $('#view').inert = true; $('#bbar').inert = true;
+  $('#sheetIn').scrollTop = 0;
   $('#sheet').focus();
-  try { history.pushState(Object.assign(plain(cur), { sheet:1 }), ''); } catch(e){}
+  try { const st = Object.assign(plain(cur), { sheet:1 }); nested && history.state && history.state.sheet ? history.replaceState(st, '') : history.pushState(st, ''); } catch(e){}
 }
 function hideSheet(){
   if($('#sheetHost').hidden) return;
   $('#sheetHost').hidden = true;
-  $('#top').inert = false; $('#view').inert = false;
+  $('#sheet').style.removeProperty('--drag');
+  document.documentElement.classList.remove('lock');
+  $('#top').inert = false; $('#view').inert = false; $('#bbar').inert = false;
   if(sheetReturn && sheetReturn.isConnected) sheetReturn.focus({ preventScroll:true });
 }
 function closeSheet(){
@@ -890,7 +1086,11 @@ function closeSheet(){
 function showRule(label){
   const r = ruleFor(label);
   if(!r){ toast('No rule text stored for ' + label); return; }
-  openSheet(esc(r.src), r.name, rt(r.text) + (r.table ? ttable(r.table) : ''));
+  const users = r.src === 'Core rule' ? ruleUsers(r.key) : r.needs ? army().units.filter(u => matches(r.needs, u)) : [];
+  sheetRule = r.key;   // the rule's own name inside its text is not a link to itself
+  const body = rt(r.text) + (r.table ? ttable(r.table) : '');
+  sheetRule = null;
+  openSheet(esc(r.src), r.name, body + usedBy('In this army', users));
 }
 function showStrat(id){
   const s = allStratagems().find(x => x.id === id);
@@ -899,20 +1099,42 @@ function showStrat(id){
 function showAbility(key){
   searchIndex();
   const e = abilityIndex.get(key);
-  if(e) openSheet(esc('Ability' + (e.ab.tag ? ' · ' + e.ab.tag : '')), e.ab.name, rt(e.ab.text) + '<p class="usedby"><span class="il">Unit</span>' + e.units.map(unitLink).join(', ') + '</p>');
+  if(e) openSheet(esc(['Ability', e.ab.tag, e.ab.ph ? whenTag(e.ab) : ''].filter(Boolean).join(' · ')), e.ab.name, rt(e.ab.text) + usedBy('Unit', e.units));
 }
 function showEnhancement(key){
   const [did, name] = key.split('|');
   const d = detachments().find(x => x.id === did), e = d && d.enhancements.find(x => x.name === name);
   if(!e) return;
   const u = army().units.find(x => x.enhancement === name);
-  openSheet(esc('Enhancement · ' + d.name + (e.pts ? ' · ' + e.pts + ' pts' : '')), e.name, rt(e.text) + (u ? '<p class="usedby"><span class="il">On</span>' + unitLink(u) + '</p>' : '<p class="usedby">Not in this list.</p>'));
+  openSheet(esc('Enhancement · ' + d.name + (e.pts ? ' · ' + e.pts + ' pts' : '')), e.name, rt(e.text) + (u ? usedBy('On', [u]) : '<p class="usedby">Not in this list.</p>'));
 }
+// drag the sheet down to close it
+(() => {
+  const sh = $('#sheet');
+  let y0 = null, dy = 0;
+  sh.addEventListener('touchstart', e => { y0 = $('#sheetIn').scrollTop <= 0 ? e.touches[0].clientY : null; dy = 0; }, { passive:true });
+  sh.addEventListener('touchmove', e => {
+    if(y0 == null) return;
+    dy = e.touches[0].clientY - y0;
+    if(dy < 0){ y0 = null; dy = 0; sh.classList.remove('drag'); sh.style.removeProperty('--drag'); return; }
+    sh.classList.add('drag'); sh.style.setProperty('--drag', dy + 'px');
+  }, { passive:true });
+  sh.addEventListener('touchend', () => {
+    sh.classList.remove('drag');
+    if(y0 != null && dy > 90) closeSheet(); else sh.style.removeProperty('--drag');
+    y0 = null;
+  });
+  $('#sheetBack').addEventListener('touchmove', e => e.preventDefault(), { passive:false });
+})();
 
 let tt = null;
 function toast(m){ const t = $('#toast'); t.textContent = m; t.classList.add('show'); clearTimeout(tt); tt = setTimeout(() => t.classList.remove('show'), 2200); }
 
 /* ---------- events ---------- */
+// a quick double tap must not also hit whatever the new screen put under your finger
+document.addEventListener('click', e => {
+  if(performance.now() - navAt < 350 && !e.target.closest('[data-close]')){ e.preventDefault(); e.stopPropagation(); }
+}, true);
 document.addEventListener('click', e => {
   const el = e.target.closest('button, [role="button"]');
   if(!el) return;
@@ -925,17 +1147,18 @@ document.addEventListener('click', e => {
   if(ds.go){ go({ s:ds.go, army:army().id }); return; }
   if(ds.unit){
     const next = { s:'unit', army:army().id, unit:ds.unit };
+    if(sameScreen(next, cur)){ if(inSheet) closeSheet(); if(ds.sec) jumpTo(ds.sec, true); else scrollTo(0, 0); return; }
     if(inSheet){ hideSheet(); go(next, 'sheet'); } else go(next);
     if(ds.sec) jumpTo(ds.sec, true);
     return;
   }
   if(ds.rule){ e.preventDefault(); showRule(ds.rule); return; }
-  if(ds.strat){ showStrat(ds.strat); return; }
+  if(ds.strat){ e.preventDefault(); showStrat(ds.strat); return; }
   if(ds.ability){ showAbility(ds.ability); return; }
   if(ds.enh){ showEnhancement(ds.enh); return; }
   if(ds.jump){ jumpTo(ds.jump); return; }
-  if(ds.phase){ filt.phase = ds.phase; rerender(); return; }
-  if(ds.turn){ filt.turn = ds.turn; rerender(); return; }
+  if(ds.phase){ filt.phase = ds.phase; saveSession(); rerender(); return; }
+  if(ds.turn){ filt.turn = ds.turn; saveSession(); rerender(); return; }
   if(ds.more){ moreShown.add(ds.more); renderFinder(); return; }
   if(el.hasAttribute('data-expand')){
     const cards = $$('#view details.strat');
@@ -949,7 +1172,12 @@ document.addEventListener('toggle', e => {
   const d = e.target;
   if(!d.dataset) return;
   if(d.dataset.fold){ prefs.folds[d.dataset.fold] = d.open; savePrefs(); }
-  if(d.dataset.stratId){ if(d.open) openStrats.add(d.dataset.stratId); else openStrats.delete(d.dataset.stratId); }
+  if(d.dataset.stratId){
+    if(d.open) openStrats.add(d.dataset.stratId); else openStrats.delete(d.dataset.stratId);
+    saveSession();
+    const x = $('#view [data-expand]');
+    if(x) x.textContent = $$('#view details.strat').every(c => c.open) ? 'Collapse all' : 'Expand all';
+  }
 }, true);
 $('#sheetBack').addEventListener('click', closeSheet);
 addEventListener('keydown', e => {
@@ -959,7 +1187,9 @@ addEventListener('keydown', e => {
   if(t.matches && t.matches('input, textarea')){ t.blur(); return; }
   if(!$('#sheetHost').hidden) closeSheet(); else if(cur.s !== 'home') back();
 });
-addEventListener('resize', measureTop);
+addEventListener('resize', measure);
+if(document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+document.addEventListener('touchstart', () => {}, { passive:true });   // lets :active styles show on iOS
 
 /* ---------- install + live updates ---------- */
 const INSTALLED = matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
@@ -970,35 +1200,67 @@ function installText(){
   if(ON_SITE) return 'Put it on your home screen: Safari → Share → Add to Home Screen.';
   return 'Phone app: open <a class="link" href="' + SITE_URL + '" target="_blank" rel="noopener">' + SITE_URL.replace('https://', '') + '</a> in Safari, then Share → Add to Home Screen.';
 }
+// the home-screen app has no browser back gesture: swipe in from the left edge to go back
+if(INSTALLED){
+  let sx = null, sy = 0;
+  addEventListener('touchstart', e => { const t = e.touches[0]; sx = t.clientX < 24 && $('#sheetHost').hidden && cur.s !== 'home' ? t.clientX : null; sy = t.clientY; }, { passive:true });
+  addEventListener('touchend', e => { if(sx == null) return; const t = e.changedTouches[0]; if(t.clientX - sx > 70 && Math.abs(t.clientY - sy) < 50) back(); sx = null; }, { passive:true });
+}
 if(ON_SITE && 'serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
-// the installed copy compares its build stamp with the site's and reloads once if they differ
-async function checkForUpdate(){
+// the installed copy compares its build stamp with the site's. On opening it reloads at once;
+// later it waits until you are back on the army list or the menu, so it never moves you mid-read.
+let updateReady = null;
+// one reload per new version (a retry after two minutes, in case the first got a stale page);
+// if nothing can be stored, never reload, rather than reload forever
+const RELOAD_KEY = 'wh-reloaded-for';
+function reloadedRecently(v){
+  for(const k of ['sessionStorage','localStorage']){
+    try { const r = JSON.parse(window[k].getItem(RELOAD_KEY) || 'null'); if(r && r.v === v && Date.now() - r.at < 120000) return true; } catch(e){}
+  }
+  return false;
+}
+function markReload(v){
+  for(const k of ['sessionStorage','localStorage']){
+    try { window[k].setItem(RELOAD_KEY, JSON.stringify({ v, at:Date.now() })); if(JSON.parse(window[k].getItem(RELOAD_KEY)).v === v) return true; } catch(e){}
+  }
+  return false;
+}
+function reloadNow(){
+  if(!markReload(updateReady)){ updateReady = null; return; }
+  try { history.replaceState(Object.assign(plain(cur), { y:scrollY }), ''); } catch(e){}
+  saveSession();
+  location.reload();
+}
+async function checkForUpdate(atStart){
   if(!ON_SITE || !BUILD) return;
   try {
     const r = await fetch('version.json?t=' + Date.now(), { cache:'no-store' });
     if(!r.ok) return;
     const v = (await r.json()).version;
-    if(v && v !== BUILD){
-      let last = null; try { last = sessionStorage.getItem('wh-reloaded-for'); } catch(e){}
-      if(last === v) return;
-      try { sessionStorage.setItem('wh-reloaded-for', v); } catch(e){}
-      location.reload();
-    }
+    if(!v || v === BUILD || reloadedRecently(v)) return;
+    updateReady = v;
+    if(atStart || calm(cur)) reloadNow();
   } catch(e){}
 }
-document.addEventListener('visibilitychange', () => { if(document.visibilityState === 'visible') checkForUpdate(); });
+document.addEventListener('visibilitychange', () => { if(document.visibilityState === 'visible') checkForUpdate(false); });
 
 /* ---------- boot ---------- */
+try { history.scrollRestoration = 'manual'; } catch(e){}
 // keep the current history entry if it is a screen (a reload), otherwise rebuild the last screen's chain
 function start(snap){
   const st = history.state;
-  if(st && !st.sheet && valid(st)){ cur = plain(st); render(); if(st.y) scrollTo(0, st.y); }
+  if(snap && snap.filt){ Object.assign(filt, snap.filt); (snap.open || []).forEach(id => openStrats.add(id)); Object.assign(query, snap.query); }
+  if(st && valid(st)){   // a reload: this entry is the screen (with a popup open, the screen under it)
+    cur = plain(st);
+    if(st.sheet){ try { history.replaceState(plain(cur), ''); } catch(e){} }
+    render(); if(st.y) scrollTo(0, st.y);
+  }
   else if(snap && valid(snap.cur)){ restore(snap.cur); if(snap.y) scrollTo(0, snap.y); }
   else { const last = store.get('wh-last'); restore(valid(last) ? last : { s:'home' }); }
-  checkForUpdate();
+  checkForUpdate(true);
 }
 const hot = window.claude && window.claude.hot;
-if(hot && hot.snapshot){ try { hot.snapshot(() => ({ cur:plain(cur), y:scrollY })); } catch(e){} }
+if(hot && hot.snapshot){ try { hot.snapshot(() => ({ cur:plain(cur), y:scrollY, filt, open:[...openStrats], query })); } catch(e){} }
 if(hot && hot.ready) hot.ready(start); else start(hot && hot.data ? hot.data : null);
 </script>
 
