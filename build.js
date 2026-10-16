@@ -2,6 +2,9 @@
 // Builds the installable GitHub Pages copy from app.html, which is also published
 // as-is as the Claude artifact. Run after every change: node build.js
 //  - first runs check.js over data.js and stops if anything is inconsistent
+//  - then refuses to build unless verify/report.json says this exact app.html + data.js passed
+//    every verification (node verify/run.js: BSData, the New Recruit PDFs, GW's rules text,
+//    mechanical rules, every screen, and the sign-off of every judgement the app adds)
 //  - index.html: app.html wrapped in a full page, plus the home-screen tags
 //  - a build stamp (hash of app.html + data.js) in index.html, version.json and sw.js,
 //    so installed apps notice any change and reload themselves
@@ -18,6 +21,16 @@ if (problems.length) { problems.forEach(p => console.error(' -', p)); throw new 
 
 const app = read('app.html');
 const data = read('data.js');
+
+// the gate: only a verified app.html + data.js is built (node verify/run.js writes the report).
+// verify/run.js itself builds with VERIFY_BUILDING=1 to check the screens of the page it is about to verify.
+if (!process.env.VERIFY_BUILDING) {
+  let report = null;
+  try { report = JSON.parse(read('verify/report.json')); } catch (e) {}
+  const hash = crypto.createHash('sha256').update(app + data).digest('hex');
+  if (!report || report.hash !== hash) throw new Error('not verified: app.html or data.js changed since the last verification. Run: node verify/run.js');
+  if (!report.ok) throw new Error('verification failed (see verify/report.json). Fix it, then run: node verify/run.js');
+}
 const m = data.match(/const VERSION = '([^']+)'/);
 if (!m) throw new Error('VERSION not found in data.js');
 const build = crypto.createHash('sha256').update(app).update(data).digest('hex').slice(0, 10);

@@ -1,0 +1,446 @@
+10/16/26, 5:08 PM                                                 Cooking - New Recruit
+
+                                                         Cooking [2000pts]
+  Army Roster [3 Detachment Points, 2000 pts] (Xenos - Orks)
+  • Battle Size: Strike Force (2000 Point limit)
+  • Detachment: Brute Bosses [1Detachment Points], Da Big Hunt [1Detachment Points], Dread Mob
+  [1Detachment Points]
+  • Force Disposition: Purge the Foe
+  • Show/Hide Options
+  NAME                         ROLE      PTS OPTIONS
+   Ghazghkull Thraka                   Epic Hero 290
+   Mozrog Skragbad                     Epic Hero 170
+   Nazdreg                             Epic Hero 165
+   Beastboss on Squigosaur Character 170
+   Beastboss on Squigosaur Character 160
+   Big Mek Dakkarig                    Character 170
+   Big Mek Dakkarig                    Character 190
+   (10) Gretchin                       Infantry        45
+   (10) Gretchin                       Infantry        45
+   (10) Gretchin                       Infantry        45
+   (5) Meganobz                        Infantry        190 Nazdreg
+   (3) Deffkoptas                      Mounted         85
+   (6) Killa Kans                      Vehicle         275
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ace61c5595912a60554b524                                 1/13
+10/16/26, 5:08 PM                                                            Cooking - New Recruit
+     355 PTS                                                        NAZDREG
+   Models                                                                                    Options
+                                                                                             Kustom Blasta X, Moonchewa
+   1x Nazdreg
+                                                                                             • Leading: Meganobz
+   3x Meganob w/ Kombi-weapon and Killsaw                                                    Killsaw, Kombi-weapon
+   2x Meganob w/ Kombi-weapon and Power Klaw                                                 Kombi-weapon, Power Klaw
+   Unit                                                    M         T        Sv         W       LD       OC    InSv      Base
+   Nazdreg - Nazdreg                                       5"        7        2+         8       6+       1     5+        60mm
+   Meganob (x5) - Meganobz                                 5"        6        2+         3       7+       1               40mm
+   Ranged Weapons                                  Range A BS S                AP D Keywords
+   Kustom Blasta X - Skorcha (Nazdreg's
+                                                   12"         3 -       5     -1 1 BLAST 1, TORRENT, IGNORES COVER
+   Know-wotz) - Nazdreg
+   Kustom Blasta X - Gatler (Nazdreg's
+                                                   24"         6 4+ 9          -2 3 HAZARDOUS, IGNORES COVER
+   Know-wotz) - Nazdreg
+   Kustom Blasta X - Shoota (Nazdreg's                                                   LETHAL HITS: non-MONSTER/VEHICLE,
+                                                   18"         4 4+ 5          -1 1
+   Know-wotz) - Nazdreg                                                                  RAPID FIRE 2, IGNORES COVER
+   ➤ Kombi-weapon - Point Blank
+                                         12"                   3 -       5     0    1 BLAST 1, TORRENT, IGNORES COVER
+   (Nazdreg's Know-wotz) (x5) - Meganobz
+   ➤ Kombi-weapon - Kill Shot (Nazdreg's
+                                                   24"         1 5+ 10 -2 3 IGNORES COVER
+   Know-wotz) (x5) - Meganobz
+   ➤ Kombi-weapon - Shoota (Nazdreg's                                                    LETHAL HITS: non-MONSTER/VEHICLE,
+                                                   18"         2 5+ 4          0    1
+   Know-wotz) (x5) - Meganobz                                                            RAPID FIRE 1, IGNORES COVER
+   Melee Weapons                                 Range          A    WS        S      AP     D       Keywords
+   Kustom Blasta X - Nazdreg                     Melee          6    2+        5      -1     1       CLEAVE 1, EXTRA ATTACKS
+   Moonchewa - Nazdreg                           Melee          5    2+        12       -2   3       CLEAVE 1, TWIN-LINKED
+   Killsaw (x3) - Meganobz                       Melee          3    4+        10       -2   3
+   Power Klaw (x2) - Meganobz                    Melee          3    3+        10       -2   2
+   Abilities                                      Description
+                                                    This unit has Deep Strike
+   Nazdreg's Know-wotz - Nazdreg
+                                                    This unit's ranged attacks have [IGNORES COVER].
+                                                  In your opponent's Movement phase, when an enemy unit ends a move
+   Supreme Kunnin' (Once per phase, per           within 8" of this unit, if this unit is unengaged, this unit can:
+   army) - Nazdreg                                  Make a normal move of up to D6".
+                                                    Or: If this unit is riled up, make a normal move of up to 5".
+                                                  In your Movement phase, at the start or end of this unit's move, you
+   Intimidating Motivation (Once per              can select one friendly ORKS unit within 6" of this unit. That unit:
+   battle round, per army) - Nazdreg                Is no longer battle-shocked.
+                                                    Is riled up until the start of your next turn.
+   Krumpin’ Time - Meganobz                       In the Fight phase, if this unit is riled up, this unit has +1 to hit rolls.
+   Arrogant Invulnerability - Meganobz            Attacks that target this unit have -1 AP.
+    Rules Waaagh!, Leader, Da Boss, Deep Strike, Waaagh!, Deep Strike
+
+    Categories Character, Epic Hero, Faction: Orks, Infantry, Mega Armour, Nazdreg, Warboss, Explosives*, Meganobz*,
+               *from combined unit
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ace61c5595912a60554b524                                                                     2/13
+10/16/26, 5:08 PM                                                         Cooking - New Recruit
+     290 PTS                                            GHAZGHKULL THRAKA
+   Models                                  Options
+   1x Ghazghkull Thraka                    Warlord, Adamantine 'Eadbutt, Gork’s Klaw, Mork’s Roar
+   Unit                                        M        T            Sv       W         LD        OC   InSv   Base
+   Ghazghkull Thraka                           8"       10           2+       16        6+        4    4+     80mm
+   Ranged Weapons                   Range A             BS S AP D Keywords
+   ➤ Mork’s Roar - Point
+                                    9"        2D6+2 -              6 -1 1 CLOSE-QUARTERS, TORRENT
+   Blank
+                                                                            LETHAL HITS: non-MONSTER/VEHICLE, RAPID
+   ➤ Mork’s Roar - Aimed            36"       12        5+ 6 -1 1
+                                                                            FIRE 4
+   Melee Weapons              Range A WS S AP D     Keywords
+   Adamantine 'Eadbutt        Melee 1 2+ 14 -2 D3+3 DEVASTATING WOUNDS, EXTRA ATTACKS, PRECISION
+   Gork’s Klaw                Melee      7 2+ 14 -3            4       CLEAVE 2, DEVASTATING WOUNDS
+   Abilities                          Description
+   Supreme Commander                  If this model is in your army, it must be your WARLORD.
+                                      In your Movement phase, you can select a number of friendly ORKS units equal
+   Makari, Hoist Dat Banner!          to or less than the current battle round number. Those units are riled up until the
+   (Once per battle, per army)        start of your next turn.
+                                      Place one Makari token next to the unit, removing it after this ability is used.
+                                      While this unit is within 3" of another friendly ORKS INFANTRY unit, this unit
+   Da Grand Warlord's Ladz
+                                      has Lone Operative.
+                                      While a friendly ORKS unit is within 6" of this unit, that unit's melee attacks have:
+   Prophet of Da Great
+                                       +1 to hit rolls.
+   Waaagh! (Aura)
+                                       +1 to wound rolls.
+    Rules Waaagh!, Da Boss
+
+    Categories Character, Epic Hero, Explosives, Faction: Orks, Ghazghkull Thraka, Infantry, Warboss, Warlord
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ace61c5595912a60554b524                                                              3/13
+10/16/26, 5:08 PM                                                    Cooking - New Recruit
+     170 PTS                                            MOZROG SKRAGBAD
+   Models                                         Options
+   1x Mozrog Skragbad                             Big Chompa’s Jaws, Gutrippa, Thump Gun
+   Unit                                       M           T    Sv        W        LD         OC    InSv    Base
+   Mozrog Skragbad                            10"         9    3+        10       6+         3     4+      80mm
+   Ranged Weapons                  Range          A    BS      S    AP    D    Keywords
+   Thump Gun                       18"            3    5+      6    0     2    ANTI-MONSTER/VEHICLE 4+
+   Melee Weapons                                      Range A WS S       AP D          Keywords
+                                                                                       ANTI-MONSTER/VEHICLE 3+, EXTRA
+   Big Chompa’s Jaws                                  Melee 3 3+ 7       -2 4
+                                                                                       ATTACKS
+   ➤ Gutrippa - Hunter (Hunter:
+                                                      Melee 6 2+ 12 -2 D6+1 LETHAL HITS
+   MONSTER/VEHICLE)
+   ➤ Gutrippa - Standard                              Melee 6 2+ 9       -2 2           CLEAVE 1
+   Abilities            Description
+   Beast Snagga         While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding MONSTER
+   Following            CHARACTER units), this unit has Lone Operative.
+                        In the Fight phase, when this model is destroyed, if this unit has not been selected to
+                        fight this phase, roll one D6:
+   One Last Kill
+                          On a 2+, do not remove this model from the battlefield. When this unit has fought, or at the
+                           end of the phase (whichever comes first), this model is removed from the battlefield.
+   Da Bigger Dey
+   Iz…
+                        This unit's melee attacks that target a MONSTER/VEHICLE unit can re-roll wounds rolls.
+
+    Rules Feel No Pain 5+, Waaagh!
+
+    Categories Beast Snagga, Character, Epic Hero, Faction: Orks, Monster, Mozrog Skragbad
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ace61c5595912a60554b524                                                             4/13
+10/16/26, 5:08 PM                                                   Cooking - New Recruit
+     170 PTS                                      BEASTBOSS ON SQUIGOSAUR
+   Models                                       Options
+   1x Beastboss on Squigosaur                   Brutal But Kunnin', Beastchoppa, Slugga, Squigosaur’s jaws
+   Unit                                                 M      T     Sv       W        LD     OC       InSv   Base
+   Beastboss on Squigosaur                              10"    9     3+       10       6+     3        5+     80mm
+   Ranged Weapons         Range     A BS S AP D Keywords
+   Slugga                 12"       1 5+ 4 0 1 CLOSE-QUARTERS, LETHAL HITS: non-MONSTER/VEHICLE
+   Melee Weapons                                           Range A WS S        AP D         Keywords
+   ➤ Beastchoppa - Hunter (Hunter:
+                                                           Melee 6 2+ 12 -2 D6+1
+   MONSTER/VEHICLE) (Brutal But Kunnin')
+   ➤ Beastchoppa - Standard (Brutal But Kunnin')           Melee 6 2+ 6        -2 3         CLEAVE 1
+                                                                                            ANTI-MONSTER/VEHICLE 3+,
+   Squigosaur’s jaws (Brutal But Kunnin')                  Melee 3 3+ 7        -2 4
+                                                                                            EXTRA ATTACKS
+   Abilities                           Description
+   Thundering Stampede (Aura)          Friendly BEAST SNAGGA units within 6" of this unit have +1 to charge rolls.
+                                        While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding
+   Boss of da Hunt
+                                        MONSTER CHARACTER units), this unit has Lone Operative.
+                                        In your Movement phase, at the start or end of this unit's move, you can select
+   Keep Huntin'! (Once per              one friendly BEAST SNAGGA unit within 6" of this unit. That unit:
+   battle round, per army)                Is no longer battle-shocked.
+                                          Is riled up until the start of your next turn.
+   Brutal But Kunnin'                   WARBOSS model only. This model's melee attacks have +1 D.
+    Rules Da Boss, Waaagh!, Feel No Pain 5+
+
+    Categories Beast Snagga, Beastboss on Squigosaur, Character, Faction: Orks, Monster, Warboss
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ace61c5595912a60554b524                                                              5/13
+10/16/26, 5:08 PM                                                    Cooking - New Recruit
+     160 PTS                                      BEASTBOSS ON SQUIGOSAUR
+   Models                                    Options
+   1x Beastboss on Squigosaur                Da Gobshot Thunderbuss, Beastchoppa, Slugga, Squigosaur’s jaws
+   Unit                                                 M        T    Sv       W        LD    OC    InSv      Base
+   Beastboss on Squigosaur                              10"      9    3+       10       6+    3     5+        80mm
+   Ranged Weapons                 Range A BS S AP D Keywords
+   Da Gobshot Thunderbuss         24"   6 4+ 7 -2 2 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 6
+   Slugga                         12"       1 5+ 4 0           1 CLOSE-QUARTERS, LETHAL HITS: non-MONSTER/VEHICLE
+   Melee Weapons                                        Range A WS S         AP D      Keywords
+   ➤ Beastchoppa - Hunter (Hunter:
+                                                        Melee 6 2+ 12 -2 D6
+   MONSTER/VEHICLE)
+   ➤ Beastchoppa - Standard                             Melee 6 2+ 6         -2 2      CLEAVE 1
+                                                                                       ANTI-MONSTER/VEHICLE 3+, EXTRA
+   Squigosaur’s jaws                                    Melee 3 3+ 7         -2 3
+                                                                                       ATTACKS
+   Abilities                            Description
+   Thundering Stampede (Aura)           Friendly BEAST SNAGGA units within 6" of this unit have +1 to charge rolls.
+                                        While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding
+   Boss of da Hunt
+                                        MONSTER CHARACTER units), this unit has Lone Operative.
+                                        In your Movement phase, at the start or end of this unit's move, you can select
+   Keep Huntin'! (Once per              one friendly BEAST SNAGGA unit within 6" of this unit. That unit:
+   battle round, per army)                Is no longer battle-shocked.
+                                          Is riled up until the start of your next turn.
+    Rules Da Boss, Waaagh!, Feel No Pain 5+
+
+    Categories Beast Snagga, Beastboss on Squigosaur, Character, Faction: Orks, Monster, Warboss
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ace61c5595912a60554b524                                                              6/13
+10/16/26, 5:08 PM                                                       Cooking - New Recruit
+     170 PTS                                              BIG MEK DAKKARIG
+   Models                              Options
+   1x Big Mek Dakkarig                 Cybork Boosta, Blitzkannon, Multi-busta Launcha, Stompy Feet
+   Unit                                                           M       T     Sv       W         LD       OC    InSv      Base
+   Big Mek Dakkarig (Cybork Boosta)                               10"     8     3+       11        7+       3     5+        90mm
+   Ranged Weapons             Range A BS S             AP D Keywords
+   Blitzkannon                24"   8 4+ 7             -2 2 IGNORES COVER, LETHAL HITS: non-MONSTER/VEHICLE
+   Multi-busta Launcha        24"       6 5+ 10 -2             3 IGNORES COVER, LETHAL HITS
+   Melee Weapons                            Range                A      WS           S        AP        D        Keywords
+   Stompy Feet                              Melee                4      3+           6        -1        1
+   Abilities         Description
+   Even More
+                     If this unit is riled up, this unit's ranged attacks have [SUSTAINED HITS 1].
+   Dakka
+   Blitz Dem         In your Shooting phase, if this unit's Blitzkannon weapon targets a unit (excluding
+   Gitz!             MONSTER/VEHICLE units), that weapon has +6 A.
+   Cybork
+                     BIG MEK/MEK model only. This model has +2" M.
+   Boosta
+    Rules Deadly Demise 1, Waaagh!
+
+    Categories Big Mek, Big Mek Dakkarig, Character, Faction: Orks, Vehicle, Walker
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ace61c5595912a60554b524                                                                       7/13
+10/16/26, 5:08 PM                                                     Cooking - New Recruit
+     190 PTS                                                BIG MEK DAKKARIG
+   Models                               Options
+   1x Big Mek Dakkarig                  Dreadherder, Blitzkannon, Multi-busta Launcha, Stompy Feet
+   Unit                                        M        T       Sv      W         LD          OC       InSv     Base
+   Big Mek Dakkarig                            8"       8       3+      11        7+          3        5+       90mm
+   Ranged Weapons             Range A BS          S    AP D Keywords
+   Blitzkannon                24"       8 4+ 7         -2      2 IGNORES COVER, LETHAL HITS: non-MONSTER/VEHICLE
+   Multi-busta Launcha        24"       6 5+ 10 -2             3 IGNORES COVER, LETHAL HITS
+   Melee Weapons                            Range                A    WS          S       AP       D      Keywords
+   Stompy Feet                              Melee                4    3+          6       -1       1
+   Abilities           Description
+   Even More
+                       If this unit is riled up, this unit's ranged attacks have [SUSTAINED HITS 1].
+   Dakka
+                       In your Shooting phase, if this unit's Blitzkannon weapon targets a unit (excluding
+   Blitz Dem Gitz!
+                       MONSTER/VEHICLE units), that weapon has +6 A.
+                       BIG MEK model only. While this model is within 3" of a friendly ORKS WALKER unit
+                       (excluding BIG MEK units):
+   Dreadherder           This model has Lone Operative.
+                         In your Shooting phase, you can select one friendly ORKS WALKER unit within 3" of this
+                          model. That unit's attacks can re-roll hit rolls of 1 until the end of the turn.
+    Rules Deadly Demise 1, Waaagh!
+
+    Categories Big Mek, Big Mek Dakkarig, Character, Faction: Orks, Vehicle, Walker
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ace61c5595912a60554b524                                                           8/13
+10/16/26, 5:08 PM                                                        Cooking - New Recruit
+     45 PTS                                                         GRETCHIN                                                x3
+   Models                                       Options
+   10x Gretchin                                 Grot Blasta, Scavenged Shivs
+   Unit                                    M        T          Sv        W       LD            OC        InSv        Base
+   Gretchin (x10)                          6"       2          6+        1       8+             1                    25mm
+   Ranged Weapons                         Range           A         BS       S    AP       D        Keywords
+   Grot Blasta (x10)                      12"             1         4+       3    0        1        CLOSE-QUARTERS
+   Melee Weapons                                        Range                A   WS         S       AP     D    Keywords
+   Scavenged Shivs (x10)                                Melee                1   5+         2       0      1
+   Abilities               Description
+                           For the purposes of transport capacity, each 2 Gretchin models (rounding up) take up
+   Downtrodden
+                           the space of 1 model.
+   Thievin’                At the end of your Movement phase, if this unit is controlling an objective, that objective
+   Scavengers              is secured.
+    Rules Waaagh!
+
+    Categories Faction: Orks, Gretchin, Grots, Infantry
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ace61c5595912a60554b524                                                                     9/13
+10/16/26, 5:08 PM                                                       Cooking - New Recruit
+     85 PTS                                                    DEFFKOPTAS
+   Models                          Options
+   3x Deffkopta                    Choppa, Rokkit Launcha, Slugga, Spinnin’ Blades
+   Unit                                  M           T       Sv         W     LD         OC     InSv     Base
+   Deffkoptas (x3)                       12"         6       4+         4     7+         2      6+       75x42mm
+   Ranged Weapons                      Range A BS S            AP D Keywords
+   ➤ Rokkit Launcha- Busta
+                                       24"      2 5+ 10 -2 3 LETHAL HITS
+   (x3)
+   ➤ Rokkit Launcha - Blasta
+                                       24"      2 5+ 4         0    1 BLAST 2
+   (x3)
+                                                                        CLOSE-QUARTERS, LETHAL HITS: non-
+   Slugga (x3)                         12"      1 5+ 4         0    1
+                                                                        MONSTER/VEHICLE
+   Melee Weapons                          Range          A     WS       S    AP      D     Keywords
+   Choppa (x3)                            Melee          3     4+       5    -1      1
+   Spinnin’ Blades (x3)                   Melee          4     3+       5    -1      1     CLEAVE 1, HAZARDOUS
+   Abilities           Description
+   Aerial              At the end of your opponent's Fight phase, if this unit is unengaged, you can place this unit
+   Manoover            in strategic reserves.
+   Deff from           In your Shooting phase, if this unit made an ingress move this turn, this unit's ranged attacks
+   Above               have +1 to hit rolls.
+    Rules Deep Strike, Waaagh!
+
+    Categories Deffkoptas, Explosives, Faction: Orks, Fly, Mounted, Speed Freeks
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ace61c5595912a60554b524                                                           10/13
+10/16/26, 5:08 PM                                                          Cooking - New Recruit
+     275 PTS                                                  KILLA KANS
+   Models                                               Options
+   6x Killa Kan                                         Kan Blasta, Kan Klaw
+   Unit                                  M         T         Sv        W          LD          OC    InSv        Base
+   Killa Kan (x6)                        8"        7         3+        5          8+          2     6+          60mm
+   Ranged Weapons                          Range A BS S AP D Keywords
+   ➤ Kan Blasta - Kill Shot (x6)           24"   2 4+ 10 -2 3
+   ➤ Kan Blasta - Point Blank (x6)         12"         3 -        5   -1    1 BLAST 2, TORRENT
+   ➤ Kan Blasta - Dakka (x6)               24"         4 4+ 6         -1    1 BLAST 1, IGNORES COVER, SUSTAINED HITS 1
+   Melee Weapons                              Range               A        WS          S       AP   D      Keywords
+   Kan Klaw (x6)                              Melee               3        4+          8       -2   3
+   Abilities               Description
+   Spiteful Power          This unit's attacks that target a unit that has no models with a T of 7+ have +1 to hit
+   Trip                    rolls.
+    Rules Deadly Demise 1, Waaagh!
+
+    Categories Faction: Orks, Grots, Killa Kans, Vehicle, Walker
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ace61c5595912a60554b524                                                             11/13
+10/16/26, 5:08 PM                                              Cooking - New Recruit
+
+
+  Rules
+  Army Roster (Xenos - Orks)
+    Waaagh!
+    Friendly ORKS with this ability can:
+     Re-roll advance rolls.
+     Become riled up, as stated in other rules.
+       While a unit is riled up:
+          - That unit has 5+ InSv.
+          - That unit's ranged attacks have [ASSAULT].
+          - When that unit is selected to make an advance move, that advance move does not prevent that unit
+       from being eligible to declare a charge.
+    War Cry (Once per battle, per army)
+    At the start of the Command phase, you can use this ability. If you do, friendly ORKS units with the Waaagh!
+    ability are riled up until the end of the next turn.
+
+  'Ard As Nails:
+  When a friendly WARBOSS model is destroyed, if this unit has not been selected to fight this phase, roll one
+  D6, with +1 to the roll if your unit is riled up:
+   On a 3+, do not remove this WARBOSS model from the battlefield. When this unit has fought, or at the end of
+    the phase (whichever comes first), this WARBOSS model is removed from the battlefield.
+
+  Da Boss:
+  At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.
+
+  Da Hunt Is On:
+  Friendly BEAST SNAGGA units' attacks that targets a MONSTER/VEHICLE unit have +1 AP.
+
+  Deadly Demise 1 / Deadly Demise 1:
+  This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the
+  units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that
+  model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds
+  denoted by X (if this is a random number, roll separately for each unit within 6").
+  Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any
+  unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency
+  disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved.
+  Finally, the Impulsor is removed from the battlefield.
+
+  Deep Strike:
+  Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up
+  anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your
+  opponent’s deployment zone.
+
+  Feel No Pain 5+:
+  This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll
+  one D6: on an X+, that wound is not lost.
+
+  Leader:
+  Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one
+  friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an
+  attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one
+  support unit attached to it.
+
+  Try Dat Button!:
+  In your Shooting phase or the Fight phase, when a friendly ORKS WALKER unit (excluding TITANIC units) is
+  selected to attack, you can use this ability. If you do, roll either one D6 or two D6 (keep re-rolling duplicate
+  results). This unit's attacks have the relevant rule(s).
+  If you rolled two D6, when this unit has attacked, this unit makes one hazard roll.
+
+
+https://www.newrecruit.eu/app/Lists/6ace61c5595912a60554b524                                                          12/13
+10/16/26, 5:08 PM                                              Cooking - New Recruit
+
+  Waaagh!:
+  Friendly ORKS with this ability can:
+   Re-roll advance rolls.
+   Become riled up, as stated in other rules.
+     While a unit is riled up:
+        - That unit has 5+ InSv.
+        - That unit's ranged attacks have [ASSAULT].
+        - When that unit is selected to make an advance move, that advance move does not prevent that unit
+     from being eligible to declare a charge.
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ace61c5595912a60554b524                                                 13/13
+

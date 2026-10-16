@@ -1,0 +1,481 @@
+10/16/26, 8:10 PM                                                   Hurrdurr - New Recruit
+
+                                                          Hurrdurr [2000pts]
+  Army Roster [3 Detachment Points, 2000 pts] (Chaos - World Eaters)
+  • Battle Size: Strike Force (2000 Point limit)
+  • Blessings of Khorne Reference
+  • Detachment: Berzerker Warband [2Detachment Points], Vessels of Wrath [1Detachment Points]
+  • Force Disposition: Purge the Foe
+  • Show/Hide Options: Unaligned Forces are visible, Unaligned Fortifications are visible
+  NAME                         ROLE               PTS OPTIONS
+   Khârn the Betrayer                    Epic Hero                115
+   Daemon Prince of Khorne Character                              230 Warlord
+   Daemon Prince of Khorne Character                              235
+   Lord on Juggernaut                    Character                125
+   Slaughterbound                        Character                110
+   (10) Khorne Berzerkers                Battleline               170 Khârn the Betrayer
+   (20) Khorne Berzerkers                Battleline               330 Lord on Juggernaut
+   (3) Eightbound                        Infantry                 125 2x Eightbound
+                                                                         Slaughterbound
+   (3) Exalted Eightbound                Infantry                 130
+                                                                         2x Exalted Eightbound
+   (10) Jakhals                          Infantry                 65
+   Forgefiend                            Vehicle                  145
+   Forgefiend                            Vehicle                  145
+   Chaos Rhino                           Dedicated Transport 75
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad13ca3911438bfe6074c2a                                     1/13
+10/16/26, 8:10 PM                                                 Hurrdurr - New Recruit
+     285 PTS                                            KHÂRN THE BETRAYER
+   Models                                                                         Options
+                                                                                  Gorechild, Plasma pistol
+   1x Khârn the Betrayer
+                                                                                  • Leading: Khorne Berzerkers[1]
+   1x Khorne Berzerker Champion                                                   Chainblade, Plasma pistol
+   7x Khorne Berzerker                                                            Bolt pistol, Chainblade
+   2x Khorne Berzerker w/ eviscerator and plasma pistol                           Khornate eviscerator, Plasma pistol
+   Unit                                                              M      T     Sv        W    LD     OC     InSv      Base
+   Khârn the Betrayer - Khârn the Betrayer                           8"     5     3+        5    6+     1      4+        40mm
+   Khorne Berzerker (x10) - Khorne Berzerkers                        8"     5      3+       2    6+     2                32mm
+   Ranged Weapons                                                         Range     A BS        S AP D Keywords
+   ➤ Plasma pistol - standard - Khârn the Betrayer                        12"       1 3+        7 -2 1 Pistol
+   ➤ Plasma pistol - supercharge - Khârn the Betrayer                     12"       1 3+         8 -3   2    Hazardous, Pistol
+   ➤ Plasma pistol - standard (x3) - Khorne Berzerkers                    12"       1 4+         7 -2   1    Pistol
+   ➤ Plasma pistol - supercharge (x3) - Khorne Berzerkers                 12"       1 4+         8 -3   2    Hazardous, Pistol
+   Bolt pistol (x7) - Khorne Berzerkers                                   12"       1 4+         5 -1   1    Pistol
+   Melee Weapons                                                       Range            A   WS     S    AP     D      Keywords
+   Gorechild - Khârn the Betrayer                                      Melee            9   2+     7    -2     3
+   Chainblade (x8) - Khorne Berzerkers                                    Melee         5   3+     5    -1     1
+   Khornate eviscerator (x2) - Khorne Berzerkers                          Melee         4   3+     8    -2     2
+   Abilities          Description
+   Legendary Killer - While this model is leading a unit, each time a model in that unit makes a melee attack, re-
+   Khârn the Betrayer roll a Hit roll of 1 and re-roll a Wound roll of 1.
+                           At the end of your Charge phase, if this unit is on the battlefield, is unengaged, and
+   The Betrayer -
+                      contains a bodyguard model, this unit makes a leadership roll:
+   Khârn the Betrayer
+                             If that leadership roll is failed, one bodyguard model in this unit is destroyed.
+   Berserker Frenzy        The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set
+   - Khârn the             this model back up on the battlefield as close as possible to where it was destroyed and not
+   Betrayer                within Engagement Range of any enemy units, with 3 wounds remaining.
+                           In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit
+   Blood Surge -
+                           was destroyed as a result of those attacks, this unit can make a surge move of up to
+   Khorne Berzerkers
+                           D6+2".
+   Murderous Charge
+    - Khorne               If this unit made a charge move this turn, this unit’s melee attacks have +1 S.
+   Berzerkers
+                           If the bearer's unit contains 1 or more Icons of Khorne, each time the bearer's unit destroys
+   Icon of Khorne -        an enemy unit, you gain one Bloodshed point. Each time you make a Blessings of Khorne
+   Khorne Berzerkers       roll, roll one additional D6 for each Bloodshed point you have, after which, all your
+                           Bloodshed points are lost.
+    Rules Leader, Blessings of Khorne, Pistol, Hazardous, Blessings of Khorne, Hazardous, Pistol
+
+    Categories Chaos, Character, Epic Hero, Faction: World Eaters, Grenades, Infantry, Khorne, Khârn the Betrayer,
+               Battleline*, Berzerkers*, *from combined unit
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad13ca3911438bfe6074c2a                                                                     2/13
+10/16/26, 8:10 PM                                                   Hurrdurr - New Recruit
+     455 PTS                                            LORD ON JUGGERNAUT
+   Models                                                     Options
+                                                               Archslaughterer, Bladed horn, Exalted chainblade, Plasma pistol
+   1x Lord on Juggernaut
+                                                               • Leading: Khorne Berzerkers[2]
+   1x Khorne Berzerker Champion                                Chainblade, Plasma pistol
+   15x Khorne Berzerker                                        Bolt pistol, Chainblade
+   3x Khorne Berzerker w/ eviscerator and plasma pistol        Khornate eviscerator, Plasma pistol
+   1x Khorne Berzerker w/ eviscerator and plasma pistol        Khornate eviscerator, Plasma pistol, Icon of Khorne
+   Unit                                                           M      T       Sv    W       LD    OC     InSv    Base
+   Lord on Juggernaut - Lord on Juggernaut                        10"    6       3+    7       6+    2      4+      90x52.5mm
+   Khorne Berzerker (x20) - Khorne Berzerkers                     10"    5       3+    2       6+    2              32mm
+   Ranged Weapons                                                        Range         A BS         S AP D Keywords
+   ➤ Plasma pistol - standard - Lord on Juggernaut                       12"           1 3+         7 -2 1 Pistol
+   ➤ Plasma pistol - supercharge - Lord on Juggernaut                     12"          1 3+         8 -3    2   Hazardous, Pistol
+   ➤ Plasma pistol - standard (x5) - Khorne Berzerkers                    12"          1 4+         7 -2    1   Pistol
+   ➤ Plasma pistol - supercharge (x5) - Khorne Berzerkers                 12"          1 4+         8 -3    2   Hazardous, Pistol
+   Bolt pistol (x15) - Khorne Berzerkers                                  12"          1 4+         5 -1    1   Pistol
+   Melee Weapons                                                 Range       A    WS       S   AP     D    Keywords
+   Bladed horn - Lord on Juggernaut                              Melee       5    3+       6   -1     2    Extra Attacks, Lance
+   Exalted chainblade - Lord on Juggernaut                       Melee       8    2+       6   -1     2
+   Chainblade (x16) - Khorne Berzerkers                          Melee       5    3+       5   -1     1
+   Khornate eviscerator (x4) - Khorne Berzerkers                 Melee       4    3+       8   -2     2
+   Abilities                    Description
+                                While this model is leading a unit, models in that unit have a Move characteristic of 10"
+   Aggressive Advance -
+                                and each time a model in that unit makes a Normal, Advance, Fall Back or Charge
+   Lord on Juggernaut
+                                move, it can move horizontally though terrain features.
+                                 Each time this model's unit is selected to fight, you can use this ability. When
+   Crush All Who Stand           determining which models in this unit are eligible to fight, any models in it that are
+   Before Us - Lord on           within 3" of one or more enemy models are eligible to fight. When resolving those
+   Juggernaut                    attacks, such models can target one of those enemy units that is within 3" of them and
+                                 within Engagement Range of their unit.
+   Archslaughterer - Lord         (Once per battle, per army) In your Command phase, you can use this ability. If you
+   on Juggernaut                 do, every Blessing of Khorne is active for this unit until the start of your next turn.
+                                 In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this
+   Blood Surge - Khorne
+                                 unit was destroyed as a result of those attacks, this unit can make a surge move of up
+   Berzerkers
+                                 to D6+2".
+   Murderous Charge -
+                                 If this unit made a charge move this turn, this unit’s melee attacks have +1 S.
+   Khorne Berzerkers
+                                 If the bearer's unit contains 1 or more Icons of Khorne, each time the bearer's unit
+   Icon of Khorne -              destroys an enemy unit, you gain one Bloodshed point. Each time you make a
+   Khorne Berzerkers             Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after
+                                 which, all your Bloodshed points are lost.
+    Rules Leader, Blessings of Khorne, Extra Attacks, Lance, Pistol, Hazardous, Blessings of Khorne, Hazardous, Pistol
+
+    Categories Chaos, Character, Faction: World Eaters, Khorne, Lord on Juggernaut, Mounted, Battleline*, Berzerkers*,
+               Grenades*, Infantry*, *from combined unit
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad13ca3911438bfe6074c2a                                                                        3/13
+10/16/26, 8:10 PM                                                      Hurrdurr - New Recruit
+     240 PTS                                               SLAUGHTERBOUND
+   Models                                                      Options
+                                                                  Battle-lust, Lacerator and daemonic claw
+   1x Slaughterbound
+                                                                  • Leading: Exalted Eightbound
+   1x Exalted Eightbound Champion                                 Chainblades
+   2x Exalted Eightbound                                          Chainblades
+   Unit                                                                M        T    Sv         W   LD   OC   InSv   Base
+   Slaughterbound - Slaughterbound                                     10"      6    3+         6   6+   1    5+     50mm
+   Exalted Eightbound - Exalted Eightbound                             10"      6    3+         3   6+   1    5+     40mm
+   Melee Weapons                                Range A WS S AP D Keywords
+   Lacerator and daemonic claw - Slaughterbound Melee 7 2+ 10 -2 2
+   Chainblades (x3) - Exalted Eightbound                       Melee 5 3+ 8         -3 2 Anti-MONSTER 3+, Anti-VEHICLE 3+
+   Abilities                    Description
+   Rage Eternal -               While this model is leading a unit, in your Command phase, you can return one
+   Slaughterbound               destroyed Bodyguard model to that unit.
+                                Once per battle, at the start of the Fight phase, this model can use this ability. If it
+   Possessed Lord -
+                                does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons
+   Slaughterbound
+                                equipped by this model and those weapons have the [Devastating Wounds] ability.
+   Lord of the Eightbound       If this model is attached to a World Eaters Possessed unit during the Declare Battle
+    - Slaughterbound            Formations step, this model has the Deep Strike and Scouts 6" abilities.
+                                You can re-roll Charge rolls made for the bearer's unit. In addition, while the Unbridled
+   Battle-lust -
+                                Bloodlust Blessing of Khorne is active for your army, add 1 to Charge rolls made for the
+   Slaughterbound
+                                bearer's unit.
+   Rend and Tear -              Each time a model in this unit makes a melee attack that targets a Monster or Vehicle
+   Exalted Eightbound           unit, until the end of the phase, improve the Damage characteristic of that attack by 1.
+    Rules Leader, Deadly Demise D3, Blessings of Khorne, Deep Strike, Scouts 6", Deep Strike, Blessings of Khorne, Anti
+
+    Categories Chaos, Character, Daemon, Faction: World Eaters, Infantry, Khorne, Possessed, Slaughterbound,
+               Exalted Eightbound*, *from combined unit
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad13ca3911438bfe6074c2a                                                                4/13
+10/16/26, 8:10 PM                                                       Hurrdurr - New Recruit
+     230 PTS                                       DAEMON PRINCE OF KHORNE
+   Models                                     Options
+   1x Daemon Prince of Khorne                 Warlord, Helm of Brazen Ire, Hellforged weapons, Infernal cannon
+   Unit                                                 M          T      Sv           W         LD           OC      InSv        Base
+   Daemon Prince of Khorne                              10"        10     2+           10        6+           3       4+          60mm
+   Ranged Weapons                             Range            A        BS         S        AP            D        Keywords
+   Infernal cannon                            24"              3        3+         5        -1            2        Rapid Fire 1
+   Melee Weapons                                               Range           A            WS        S       AP      D      Keywords
+   ➤ Hellforged weapons - strike                               Melee           9            2+        8       -2      3
+   ➤ Hellforged weapons - sweep                                Melee            17          2+        6       -1      1
+   Abilities           Description
+                       While this model is within 3" of one or more friendly World Eaters Infantry units, this model
+   Lord of Murder
+                       has the Lone Operative ability.
+   Devastating         Each time this model makes a Charge move, until the end of the turn, its hellforged weapons
+   Assault             have the [DEVASTATING WOUNDS] ability.
+                       Once per battle round, one model from your army with this ability can use it when a friendly
+   Direct the
+                       World Eaters unit within 12" of this model is targeted with a Stratagem. If it does, reduce the
+   Slaughter
+                       CP cost of that Stratagem by 1CP.
+   Helm of             Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of
+   Brazen Ire          that attack.
+    Rules Deadly Demise D3, Blessings of Khorne, Rapid Fire
+
+    Categories Chaos, Character, Daemon, Daemon Prince, Faction: World Eaters, Khorne, Monster, Warlord
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad13ca3911438bfe6074c2a                                                                             5/13
+10/16/26, 8:10 PM                                                       Hurrdurr - New Recruit
+     235 PTS                                        DAEMON PRINCE OF KHORNE
+   Models                                           Options
+   1x Daemon Prince of Khorne                       Berzerker Glaive, Hellforged weapons, Infernal cannon
+   Unit                                                 M          T      Sv          W         LD        OC       InSv       Base
+   Daemon Prince of Khorne                              10"        10     2+          10        6+        3        4+         60mm
+   Ranged Weapons                             Range            A        BS        S        AP        D         Keywords
+   Infernal cannon                            24"              3        3+        5        -1        2         Rapid Fire 1
+   Melee Weapons                                                               Range        A        WS        S   AP     D   Keywords
+   ➤ Hellforged weapons - strike (Berzerker Glaive)                            Melee        10       2+        8   -2     4
+   ➤ Hellforged weapons - sweep (Berzerker Glaive)                             Melee        18       2+        6   -1     2
+   Abilities           Description
+                       While this model is within 3" of one or more friendly World Eaters Infantry units, this model
+   Lord of Murder
+                       has the Lone Operative ability.
+   Devastating         Each time this model makes a Charge move, until the end of the turn, its hellforged weapons
+   Assault             have the [DEVASTATING WOUNDS] ability.
+                       Once per battle round, one model from your army with this ability can use it when a friendly
+   Direct the
+                       World Eaters unit within 12" of this model is targeted with a Stratagem. If it does, reduce the
+   Slaughter
+                       CP cost of that Stratagem by 1CP.
+   Berzerker           Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks
+   Glaive              weapons) equipped by the bearer.
+    Rules Deadly Demise D3, Blessings of Khorne, Rapid Fire
+
+    Categories Chaos, Character, Daemon, Daemon Prince, Faction: World Eaters, Khorne, Monster
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad13ca3911438bfe6074c2a                                                                             6/13
+10/16/26, 8:10 PM                                                     Hurrdurr - New Recruit
+     125 PTS                                                   EIGHTBOUND
+   Models                                                                                      Options
+   1x Eightbound Champion                                                                      Chainblades
+   2x Eightbound                                                                               Chainblades
+   Unit                              M            T       Sv          W        LD         OC             InSv       Base
+   Eightbound                        10"          6       3+          3        6+         1              5+         40mm
+   Melee Weapons                                Range            A        WS         S         AP        D      Keywords
+   Chainblades (x3)                             Melee             6       3+         8         -2        2
+   Abilities         Description
+                     While a friendly World Eaters unit is within 6" of this unit, each time a model in that unit makes
+   Beacons of
+                     a melee attack that targets a unit (excluding Monsters and Vehicles), add 1 to the Hit roll. If
+   Rage (Aura)
+                     that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well.
+    Rules Scouts 6", Blessings of Khorne
+
+    Categories Chaos, Daemon, Eightbound, Faction: World Eaters, Infantry, Khorne, Possessed
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad13ca3911438bfe6074c2a                                                               7/13
+10/16/26, 8:10 PM                                                       Hurrdurr - New Recruit
+     65 PTS                                                    JAKHALS
+   Models                                                                            Options
+   1x Jakhal Pack Leader                                                              Autopistol, Chainblades
+   1x Dishonoured w/ paired manglers                                                  Paired manglers
+   8x Jakhal                                                                          Autopistol, Chainblades
+   Unit                                                        M        T    Sv       W      LD       OC      InSv       Base
+   Jakhal                                                      7"       4    6+       1      7+       1                  28.5mm
+   Dishonoured w/ paired manglers                              7"       4    6+       1      7+       1                  40mm
+   Ranged Weapons                               Range               A       BS        S          AP       D     Keywords
+   Autopistol (x9)                              12"                 1       4+        3          0        1     Pistol
+   Melee Weapons                                Range               A       WS         S         AP       D     Keywords
+   Chainblades (x9)                             Melee               4       4+         3         0        1
+   Paired manglers                              Melee               5       4+         4         0        1
+   Abilities         Description
+                     At the end of your Command phase, if this unit is within range of an objective marker you
+   Objective
+                     control, that objective marker remains under your control until your opponent's Level of Control
+   Ravaged
+                     over that objective marker is greater than yours at the end of a phase.
+    Rules Blessings of Khorne, Pistol
+
+    Categories Chaos, Faction: World Eaters, Grenades, Infantry, Jakhals, Khorne
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad13ca3911438bfe6074c2a                                                                      8/13
+10/16/26, 8:10 PM                                                       Hurrdurr - New Recruit
+     145 PTS                                                   FORGEFIEND                                                         x2
+   Models            Options
+   1x                2 Hades autocannons (2x Hades autocannon), Ectoplasma cannon and claws (Ectoplasma cannon,
+   Forgefiend        Forgefiend claws)
+   Unit                         M           T          Sv       W         LD         OC              InSv         Base
+   Forgefiend                   10"         10         3+       12        6+         3               5+           120x92mm
+   Ranged Weapons                                Range         A        BS      S          AP        D      Keywords
+   Hades autocannon (x2)                         36"           6        4+      8          -1        2      Rapid Fire 4
+   Ectoplasma cannon                             36"           D3       4+      10         -3        3      Blast, Rapid Fire 1
+   Melee Weapons                                 Range              A     WS          S          AP          D      Keywords
+   Forgefiend claws                              Melee              7     3+           6         0           1
+   Abilities                        Description
+                                    Each time this model makes a ranged attack that targets the closest eligible target
+   Furious Onslaught
+                                    within 18", you can re-roll the Hit roll.
+   Damaged: 1-4 wounds              While this model has 1-4 wounds remaining, each time this model makes an attack,
+   remaining                        subtract 1 from the Hit roll.
+    Rules Deadly Demise D3, Blessings of Khorne, Rapid Fire, Blast
+
+    Categories Chaos, Daemon, Faction: World Eaters, Forgefiend, Khorne, Vehicle, Walker
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad13ca3911438bfe6074c2a                                                                           9/13
+10/16/26, 8:10 PM                                                           Hurrdurr - New Recruit
+     75 PTS                                                    CHAOS RHINO
+   Models                                           Options
+   1x Chaos Rhino                                   Armoured tracks, Combi-bolter
+   Unit                                 M            T         Sv           W          LD             OC           InSv           Base
+   Chaos Rhino                          12"          9         3+           10         6+             2                           Hull
+   Ranged Weapons                             Range             A           BS        S       AP           D       Keywords
+   Combi-bolter                               24"                   2       4+        5       -1           1       Rapid Fire 4
+   Melee Weapons                               Range                    A    WS           S          AP        D       Keywords
+   Armoured tracks                             Melee                    7    3+           6          0         1
+   Abilities           Description
+   Meet Any            In your opponent's Movement phase, each time an enemy unit is set up or ends a Normal,
+   Challenge           Advance or Fall Back move within 8" of this model, any units embarked within it can disembark.
+   Transport        Capacity
+   Chaos            This model has a transport capacity of 12 World Eaters Infantry models. It cannot transport
+   Rhino            Possessed or Terminator models.
+    Rules Deadly Demise D3, Blessings of Khorne, Firing Deck 2, Rapid Fire
+
+    Categories Chaos, Dedicated Transport, Faction: World Eaters, Frame, Khorne, Rhino, Smoke, Transport, Vehicle
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad13ca3911438bfe6074c2a                                                                             10/13
+10/16/26, 8:10 PM                                              Hurrdurr - New Recruit
+
+
+  Rules
+  Anti:
+  This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the
+  target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.
+  Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical
+  wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon
+  against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.
+
+  Blast:
+  Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models
+  that were in the target unit in the Select Targets step (rounding down). If this ability takes the form [BLAST X],
+  each time you gather attack dice for such a weapon, add X additional attack dice for every five models that
+  were in the target unit in the Select Targets step (rounding down) instead.
+  Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would
+  gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+  Blessings of Khorne:
+  If your Army Faction is World Eaters, at the start of the battle round, you can make a Blessings of Khorne roll.
+  To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne. Each Blessing of
+  Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or
+  higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from
+  the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from
+  your army with this ability until the end of the battle round.
+  Example: Ash makes their Blessings of Khorne roll and gets the following dice: 1, 2, 2, 2, 3, 4, 6, 6.
+  First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the
+  following dice: 1, 2, 2, 2, 3, 4.
+  They then use the two 2s to activate Wrathful Devotion (which requires any double), leaving the
+  following dice: 1, 2, 3, 4.
+  However, now that they have activated two Blessings of Khorne, they cannot activate any more
+  and the remaining dice are discarded.
+
+  Deadly Demise D3:
+  This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the
+  units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that
+  model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds
+  denoted by X (if this is a random number, roll separately for each unit within 6").
+  Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any
+  unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency
+  disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved.
+  Finally, the Impulsor is removed from the battlefield.
+
+  Deep Strike:
+  Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up
+  anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your
+  opponent’s deployment zone.
+
+  Extra Attacks:
+  Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will
+  make attacks with those weapons in addition to any others. In the Select Weapons step (04.01), for each of
+  those models, you must select:
+    All of that model’s [EXTRA ATTACKS] weapons.
+    One of that model’s other melee weapons, if possible.
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad13ca3911438bfe6074c2a                                                          11/13
+10/16/26, 8:10 PM                                              Hurrdurr - New Recruit
+
+  Firing Deck 2:
+  This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is
+  selected to shoot, if one or more units are embarked within it, resolve the following sequence:
+
+       1.Select up to X models embarked within this TRANSPORT (excluding models whose units have already
+          been selected to shoot this phase).
+       2.For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons).
+       3.Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its
+          other weapons.
+       4.Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.
+
+
+  Hazardous:
+  Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make
+  a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in
+  the Select Weapons step.
+
+  Lance:
+  Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this
+  turn, add 1 to the wound roll.
+
+  Leader:
+  Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one
+  friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an
+  attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one
+  support unit attached to it.
+
+  Pistol:
+  [PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
+  Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters
+  shooting (10.06). When using another shooting type, for each model in that unit (excluding
+  MONSTER/VEHICLE models), you can only select one of the following to make attacks with:
+   One or more of its [CLOSE-QUARTERS] weapons.
+   One or more of its other ranged weapons.
+
+  Rapid Fire:
+  This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE]
+  weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select
+  Targets step.
+  Example: If a [RAPID FIRE 1] weapon with an A characteristic of 1 targets a unit that is within half range,
+  you would gather one additional attack dice for that weapon (for a total of two for that weapon).
+
+  Relentless Rage:
+  Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+  Scouts 6":
+  This ability always takes the form Scouts X". In the Resolve Pre-battle Abilities step, if every model in a unit has
+  this ability, you can do one of the following:
+    If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment
+     zone.
+    If that unit is wholly within your deployment zone, it can make a scout move.
+    If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if
+     every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED
+     TRANSPORT can make a scout move.
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad13ca3911438bfe6074c2a                                                         12/13
+10/16/26, 8:10 PM                                              Hurrdurr - New Recruit
+
+  Wrath of Khorne:
+  When a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) is selected to fight, that
+  unit's CHARACTER models' melee attacks can have:
+   [CLEAVE 1].
+   Or: +1 AP.
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad13ca3911438bfe6074c2a                                           13/13
+

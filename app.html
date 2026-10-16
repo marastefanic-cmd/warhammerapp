@@ -796,17 +796,19 @@ function renderFinder(){
   $('#armyMenu').hidden = !!q;
   $('#armyHead').hidden = !!q;
   if(!q){ res.innerHTML = ''; return; }
-  const toks = norm(q).split(/\s+/).filter(t => /[a-z0-9]/.test(t)).map(t => hasOwn(SYNONYM, t) ? SYNONYM[t] : t).map(t => t.replace(/-/g, ''));
+  // each word as typed, or its shorthand meaning ("their" also finds "opponent", and still "Thin Their Ranks")
+  const toks = norm(q).split(/\s+/).filter(t => /[a-z0-9]/.test(t)).map(t => t.replace(/-/g, ''));
+  const alts = toks.map(t => hasOwn(SYNONYM, t) ? [t, SYNONYM[t].replace(/-/g, '')] : [t]);
   const nq = toks.join(' ');
   if(!toks.length){ res.innerHTML = '<div class="empty">Type a name, keyword or rule.</div>'; return; }
-  const hits = searchIndex().filter(e => toks.every(t => e.hay.includes(t))).map(e => {
+  const hits = searchIndex().filter(e => alts.every(a => a.some(t => e.hay.includes(t)))).map(e => {
     const tl = norm(e.title).replace(/-/g, '');
     return Object.assign({ score: tl.startsWith(nq) || tl.split(' ').some(w => w.startsWith(nq)) ? 0 : tl.includes(nq) ? 1 : toks.every(t => tl.includes(t)) ? 2 : 3 }, e);
   });
   // nothing found: forgive a plural and a typo or two ("rubrics", "ghazkull")
   if(!hits.length) for(const e of searchIndex()){
     const words = e.words || (e.words = [...new Set(e.hay.split(/[^a-z0-9]+/).filter(Boolean))]);
-    if(toks.every(t => words.some(w => near(w, t)))) hits.push(Object.assign({ score:4 }, e));
+    if(alts.every(a => a.some(t => words.some(w => near(w, t))))) hits.push(Object.assign({ score:4 }, e));
   }
   for(const [re, key] of faction().aliases || []) if(re.test(q)){
     const r = hits.find(e => e.kind === 'Rules' && e.act.rule === key) || searchIndex().find(e => e.kind === 'Rules' && e.act.rule === key);
@@ -1080,16 +1082,9 @@ function defenceItems(u, ph){
 }
 const defences = (u, ph) => defenceItems(u, ph).map(x => x.t);
 const linkTo = (attr, val, label) => '<span class="link" role="button" tabindex="0" data-' + attr + '="' + esc(val) + '">' + esc(label) + '</span>';
-// an ability already on the sheet as a weapons footnote or a "When targeted" entry isn't listed
-// again: its name there opens the full text. Kept: ones you track the use of, enhancements,
-// choices, ones not usable here (greyed, so nobody claims them), ones flagged keep (they do
-// more than the footnote says) and ones that also help other units.
-function shownElsewhere(ab, u){
-  if(ab.damaged) return true;
-  if(ab.keep || naReason(ab) || onceTag(ab) || ab.tag === 'Enhancement' || (u.aura || []).some(m => m.from === ab.name)) return false;
-  if(/pick one/i.test(ab.who || '') || /select one of the following/i.test(ab.text || '')) return false;   // a choice: every option stays in view
-  return !!ab.def || (u.mods || []).some(m => m.from === ab.name);
-}
+// every ability of the datasheet is listed, as on the paper datasheet; footnotes and "When targeted"
+// only repeat it where it matters. The one exception: a Damaged profile is its band under the stats.
+const shownElsewhere = ab => !!ab.damaged;
 // core stratagems any unit can use are listed only where they suit the unit
 const suits = (s, u) => keywordGated(s) || u.abilities.some(ab => (ab.text || '').toLowerCase().includes(s.name.toLowerCase() + ' stratagem')) ||
   (s.id === 'fire-overwatch' && (u.ranged || []).length > 0) ||

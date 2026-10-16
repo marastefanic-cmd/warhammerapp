@@ -1,0 +1,673 @@
+10/13/26, 11:15 AM                                                  Purge Freeblade - New Recruit
+
+                                                    Purge Freeblade [2000pts]
+  Army Roster [3 Detachment Points, 2000 pts] (Imperium - Imperial Knights)
+  • Battle Size: Strike Force (2000 Point limit)
+  • Code Chivalric: Deed, Quality
+  • Detachment: Freeblade Company [3Detachment Points]
+  • Force Disposition: Purge the Foe
+  • Show/Hide Options: Crucible Characters are visible, Imperial Agents are visible, Titans are visible,
+  Unaligned Forces are visible, Unaligned Fortifications are visible
+  NAME              ROLE        PTS OPTIONS
+   Knight Destrier Character 265
+   Knight Destrier Character 265
+   Knight Errant          Character 355
+   Knight Paladin         Character 375
+   Knight Paladin         Character 375
+   Knight Warden Character 365 Warlord
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6abc2099b0640c9391dac3d5?view=2zynlnr                                  1/8
+10/13/26, 11:15 AM                                                  Purge Freeblade - New Recruit
+     375 PTS                                                 KNIGHT PALADIN                                                    x2
+   Models                Options
+   1x                    Questoris heavy stubber, Rapid-fire battle cannon, Stormspear rocket pod, Meltagun, Reaper
+   Knight Paladin        chainsword
+   Unit                              M          T        Sv        W        LD       OC         InSv           Base
+   Knight Paladin                    10"        11       3+        26       6+       10         5+*            170x109mm
+   Ranged Weapons                           Range        A            BS    S       AP     D         Keywords
+   Questoris heavy stubber                  36"          3            3+    4       -1     1         Rapid Fire 3
+   Rapid-fire battle cannon                 72"          D6+3         3+     10     -1     3         Blast, Rapid Fire D6+3
+   Stormspear rocket pod                    48"          3            3+     8      -2     D6
+   Meltagun                                 12"          1            3+     9      -4     D6        Melta 2
+   Melee Weapons                                              Range          A       WS         S       AP      D   Keywords
+   ➤ Reaper chainsword - strike                               Melee          4       3+         14      -4      6
+   ➤ Reaper chainsword - sweep                                Melee          12      3+         9       -3      2
+   Abilities                   Description
+                               Each time this model makes a ranged attack that targets the closest eligible target,
+   Seasoned Noble
+                               improve the Armour Penetration characteristic of that attack by 1.
+   Invulnerable Save
+   (5+*)
+                               This model has a 5+ invulnerable save against ranged attacks.
+
+                               While this model has 1-9 wounds remaining, subtract 5 from this model's Objective
+   Damaged: 1-9
+                               Control characteristic and each time this model makes an attack, subtract 1 from the Hit
+   Wounds Remaining
+                               roll.
+   Abilities               Description
+                           While a model is affected by this ability, weapons equipped by that model have the
+   Paladin’s Duty
+                           [LETHAL HITS] ability, and melee weapons equipped by that model have the [LANCE]
+   (Bondsman)
+                           ability.
+    Rules Deadly Demise D6, Super-Heavy Walker, Code Chivalric, Lethal Hits, Lance, Bondsman, Rapid Fire, Blast, Melta
+
+    Categories Character, Faction: Imperial Knights, Imperium, Knight Paladin, Questoris, Titanic, Towering, Vehicle,
+               Walker
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6abc2099b0640c9391dac3d5?view=2zynlnr                                                           2/8
+10/13/26, 11:15 AM                                                  Purge Freeblade - New Recruit
+     365 PTS                                               KNIGHT WARDEN
+   Models                 Options
+   1x                     Warlord, Avenger gatling cannon, Heavy flamer, Stormspear rocket pod, Meltagun, Reaper
+   Knight Warden          chainsword
+   Unit                              M          T        Sv        W        LD         OC        InSv           Base
+   Knight Warden                     10"        11       3+        26       6+         10        5+*            170x109mm
+   Ranged Weapons                            Range         A       BS       S     AP        D        Keywords
+   Avenger gatling cannon                    36"           18      3+       6     -2        2
+   Heavy flamer                               12"          D6      N/A      5     -1        1        Ignores Cover, Torrent
+   Stormspear rocket pod                      48"          3       3+       8     -2        D6
+   Meltagun                                   12"          1       3+       9     -4        D6       Melta 2
+   Melee Weapons                                                Range        A         WS        S       AP      D   Keywords
+   ➤ Reaper chainsword - strike                                 Melee        4         3+        14      -4      6
+   ➤ Reaper chainsword - sweep                                  Melee        12        3+        9        -3     2
+   Abilities                   Description
+                               Each time this model makes a ranged attack that targets an enemy unit (excluding
+   Thin Their Ranks
+                               Monsters and Vehicles), that attack has the [DEVASTATING WOUNDS] ability.
+   Invulnerable Save
+                               This model has a 5+ invulnerable save against ranged attacks.
+   (5+*)
+                               While this model has 1-9 wounds remaining, subtract 5 from this model's Objective
+   Damaged: 1-9
+                               Control characteristic and each time this model makes an attack, subtract 1 from the Hit
+   Wounds Remaining
+                               roll.
+   Abilities               Description
+                           While a model is affected by this ability, weapons equipped by that model have the
+   Warden's Duty
+                           [SUSTAINED HITS 1] ability, and ranged weapons equipped by that model have the
+   (Bondsman)
+                           [IGNORES COVER] ability.
+    Rules Deadly Demise D6, Super-Heavy Walker, Code Chivalric, Devastating Wounds, Bondsman, Ignores Cover,
+          Sustained Hits, Torrent, Melta
+    Categories Character, Faction: Imperial Knights, Imperium, Knight Warden, Questoris, Titanic, Towering, Vehicle,
+               Walker, Warlord
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6abc2099b0640c9391dac3d5?view=2zynlnr                                                       3/8
+10/13/26, 11:15 AM                                                   Purge Freeblade - New Recruit
+     355 PTS                                                KNIGHT ERRANT
+   Models                      Options
+   1x Knight Errant            Thermal cannon, Stormspear rocket pod, Meltagun, Reaper chainsword
+   Unit                            M          T        Sv           W       LD       OC            InSv         Base
+   Knight Errant                   10"        11       3+           26      6+       10            5+*          170x109mm
+   Ranged Weapons                                Range          A           BS      S         AP          D     Keywords
+   Thermal cannon                                24"            2D3         3+      12        -4          D6    Blast, Melta 6
+   Stormspear rocket pod                         48"            3           3+       8        -2          D6
+   Meltagun                                      12"            1           3+       9        -4          D6    Melta 2
+   Melee Weapons                                              Range           A       WS           S       AP    D     Keywords
+   ➤ Reaper chainsword - strike                               Melee           4       3+           14      -4    6
+   ➤ Reaper chainsword - sweep                                Melee           12         3+        9       -3    2
+   Abilities                   Description
+                               Each time this model makes a ranged attack that targets the closest eligible target, add
+   Aggressive Assault
+                               1 to the Hit roll.
+   Invulnerable Save
+   (5+*)
+                               This model has a 5+ invulnerable save against ranged attacks.
+
+                               While this model has 1-9 wounds remaining, subtract 5 from this model's Objective
+   Damaged: 1-9
+                               Control characteristic and each time this model makes an attack, subtract 1 from the Hit
+   Wounds Remaining
+                               roll.
+   Abilities               Description
+   Errant's Duty           While a model is affected by this ability, you can re-roll Advance rolls made for that model
+   (Bondsman)              and ranged weapons equipped by that model have the [ASSAULT] ability.
+    Rules Deadly Demise D6, Super-Heavy Walker, Code Chivalric, Assault, Bondsman, Melta, Blast
+
+    Categories Character, Faction: Imperial Knights, Imperium, Knight Errant, Questoris, Titanic, Towering, Vehicle,
+               Walker
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6abc2099b0640c9391dac3d5?view=2zynlnr                                                         4/8
+10/13/26, 11:15 AM                                                   Purge Freeblade - New Recruit
+     265 PTS                                                KNIGHT DESTRIER                                                x2
+   Models                      Options
+   1x Knight Destrier          Questoris heavy stubber, Titanic feet, Chastiser gatling cannon, Frag bombard
+   Unit                               M           T         Sv       W          LD       OC          InSv   Base
+   Knight Destrier                    12"         10        3+       18         6+       8           5+*    150x95mm
+   Ranged Weapons                         Range        A         BS       S     AP   D   Keywords
+   Questoris heavy stubber                36"          6         3+       4     -1   1   Assault, Rapid Fire 3
+   Chastiser gatling cannon               24"          12        3+         6   -1   2   Assault
+   Frag bombard                           24"          D6+3      3+         7   -1   2   Assault, Blast, Rapid Fire D6+3
+   Melee Weapons                            Range                A      WS           S        AP        D   Keywords
+   Titanic feet                             Melee                4      4+           7        -1        2
+   Abilities                    Description
+                                While this model has 1-6 wounds remaining, subtract 4 from this model's Objective
+   Damaged: 1-6 Wounds
+                                Control characteristic and each time this model makes an attack, subtract 1 from the
+   Remaining
+                                Hit roll.
+                                If this model is equipped with a thundershock spear and a bellatus reaper chainsword,
+   Thundercharge
+                                add 2 to the Attacks characteristic of melee weapons equipped by this model.
+                                Each time this unit is selected to make a Normal or Advance move, until the end of the
+   Ram Jets
+                                phase, add D3" to the Move characteristic of this model.
+                                Each time this model makes a ranged attack that targets a unit within range of one or
+   Saturation Fire
+                                more objective markers, that attack has the [IGNORES COVER] ability.
+   Invulnerable Save
+                                This model has a 5+ invulnerable save against ranged attacks.
+   (5+*)
+    Rules Deadly Demise D6, Super-Heavy Walker, Code Chivalric, Assault, Rapid Fire, Blast
+
+    Categories Bellatus, Character, Faction: Imperial Knights, Imperium, Knight Destrier, Titanic, Towering, Vehicle, Walker
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6abc2099b0640c9391dac3d5?view=2zynlnr                                                       5/8
+10/13/26, 11:15 AM                                                  Purge Freeblade - New Recruit
+
+
+  Rules
+  Army Roster (Imperium - Imperial Knights)
+    Code Chivalric
+    If your Army Faction is Imperial Knights, at the end of the Read Mission Objectives step, you must determine
+    your army's Oath for the coming battle. An Oath consists of two parts - one Deed and one Quality. There are
+    three options for each part.
+    To determine your army's Deed, you can either select one Deed or you can randomly select one Deed by rolling
+    a D6 and consulting the relevant table. The selected Deed will describe what needs to be achieved in order to
+    complete that Deed.
+    To determine your army's Quality, you can either select one Quality or you can randomly select one Quality by
+    rolling a D6 and consulting the relevant table. Until the end of the battle, the ability described in the Quality
+    selected applies to all models in your army with this ability.
+    The first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army
+    becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in
+    this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle
+    round to 1).
+
+  Assault:
+  Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
+
+  Blast:
+  Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models
+  that were in the target unit in the Select Targets step (rounding down). If this ability takes the form [BLAST X],
+  each time you gather attack dice for such a weapon, add X additional attack dice for every five models that
+  were in the target unit in the Select Targets step (rounding down) instead.
+  Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would
+  gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+  Bondsman:
+  Some Imperial Knights models have a Bondsman ability, tagged with the word ‘Bondsman’. In your Command
+  phase, one or more models from your army with a Bondsman ability can use that ability. For each one that does,
+  select one friendly Armiger model within 12" of that model (you cannot select an Armiger model that is already
+  being affected by a Bondsman ability). Until the start of your next Command phase, that Armiger model is
+  affected by that Bondsman ability.
+
+  Code Chivalric:
+  If your Army Faction is Imperial Knights, at the end of the Read Mission Objectives step, you must determine
+  your army's Oath for the coming battle. An Oath consists of two parts - one Deed and one Quality. There are
+  three options for each part.
+  To determine your army's Deed, you can either select one Deed or you can randomly select one Deed by rolling a
+  D6 and consulting the relevant table. The selected Deed will describe what needs to be achieved in order to
+  complete that Deed.
+  To determine your army's Quality, you can either select one Quality or you can randomly select one Quality by
+  rolling a D6 and consulting the relevant table. Until the end of the battle, the ability described in the Quality
+  selected applies to all models in your army with this ability.
+  The first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army
+  becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in
+  this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round
+  to 1).
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6abc2099b0640c9391dac3d5?view=2zynlnr                                               6/8
+10/13/26, 11:15 AM                                                  Purge Freeblade - New Recruit
+
+  Deadly Demise D6:
+  This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the
+  units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that
+  model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds
+  denoted by X (if this is a random number, roll separately for each unit within 6").
+  Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any
+  unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency
+  disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved.
+  Finally, the Impulsor is removed from the battlefield.
+
+  Devastating Wounds:
+  Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack
+  sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D
+  characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+  Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for
+  each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+  Example: An attack made with a [DEVASTATING WOUNDS] weapon with a D characteristic of 3 results in a
+  critical wound against an Intercessor Squad, so inflicts 3 mortal wounds. The first 2 mortal wounds are
+  sufficient to destroy 1 Intercessor model, so the remaining mortal wound is lost.
+
+  Feel No Pain 6+:
+  This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll
+  one D6: on an X+, that wound is not lost.
+
+  Ignores Cover:
+  Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover
+  against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+  Knights of Legend:
+  Imperial Knights models from your army have the Feel No Pain 6+ ability. In addition, at the start of your
+  Command phase, each Imperial Knights model from your army regains 1 lost wound.
+
+  Lance:
+  Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this
+  turn, add 1 to the wound roll.
+
+  Lethal Hits:
+  Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that
+  attack to automatically wound the target.
+  Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that
+  attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot
+  trigger other abilities such as [DEVASTATING WOUNDS].
+
+  Melta:
+  This ability always takes the form [MELTA X]. Each time a model makes an attack with a [MELTA] weapon, if
+  the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks
+  have been resolved, add X to that weapon’s D characteristic.
+  Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6.
+  While resolving those attacks, that weapon has a D characteristic of D6+2.
+
+  Rapid Fire:
+  This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE]
+  weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select
+  Targets step.
+  Example: If a [RAPID FIRE 1] weapon with an A characteristic of 1 targets a unit that is within half range,
+  you would gather one additional attack dice for that weapon (for a total of two for that weapon).
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6abc2099b0640c9391dac3d5?view=2zynlnr                                            7/8
+10/13/26, 11:15 AM                                                  Purge Freeblade - New Recruit
+
+  Super-Heavy Walker:
+  Each time a unit with this ability makes a normal, advance or fall-back move:
+   Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding
+    TITANIC models) and can move horizontally through sections of terrain features that are 4" or less in
+    height.
+   Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move
+    ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked.
+    Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to
+    move horizontally through dense terrain features (13.06).
+
+  Sustained Hits:
+  This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED
+  HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as
+  denoted by X.
+  Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore
+  hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability).
+
+  Torrent:
+  Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6abc2099b0640c9391dac3d5?view=2zynlnr                                         8/8
+10/13/26, 11:24 AM                                                 Imperial Knights [Warhammer 40,000 11th edition]
+
+
+   STRATAGEMS
+     NOBLE SACRIFICE                                                                                                                       1CP
+     FREEBLADE COMPANY – EPIC DEED STRATAGEM
+     Sensing their end drawing close, the scion overloads their Knight’s plasma core to take the enemy with them.
+     WHEN: Any phase.
+
+     TARGET: One     IMPERIAL KNIGHTS
+                                    unit from your army that was just destroyed. You can target that unit with this Stratagem
+     even though it was just destroyed.
+
+     EFFECT: Your unit’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an
+     ARMIGER unit, instead of only a 6.
+
+
+     STRENGTH FROM EXILE                                                                                                                   1CP
+     FREEBLADE COMPANY – BATTLE TACTIC STRATAGEM
+     Well used to a life without allies or fire support, Freeblades operate more effectively alone.
+     WHEN: Your Shooting phase or the Fight phase.
+
+     TARGET: One     IMPERIAL KNIGHTS unit from your army that has not been selected to shoot or fight this phase.
+     EFFECT: Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units
+     within 9" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.
+
+
+
+
+     FULL TILT                                                                                                                             1CP
+     FREEBLADE COMPANY – WARGEAR STRATAGEM
+     With the enemy before them, their Knight’s machine spirit snarling, and the rush of battle coursing through their veins, this scion
+     pours power into their motive actuators and thunders forward.
+     WHEN: Your Movement phase.
+
+     TARGET: One     IMPERIAL KNIGHTS unit from your army.
+     EFFECT: Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the
+     phase, add 6" to the Move characteristic of models in your unit, or 9" instead if your unit is an    ARMIGER DESTRIER
+                                                                                                              or           unit.
+
+
+     POINT‑BLANK BARRAGE                                                                                                                   1CP
+     FREEBLADE COMPANY – STRATEGIC PLOY STRATAGEM
+     Few can withstand the point‑blank fury of a Knight.
+     WHEN: Your Shooting phase.
+
+     TARGET: One     IMPERIAL KNIGHTS unit from your army that has not been selected to shoot this phase.
+     EFFECT: Until the end of the phase, when making ranged attacks with Blast weapons, models in your unit can target enemy
+     units within Engagement Range of your unit (provided no other friendly units are also within Engagement Range of that
+     enemy unit). In addition, until the end of the phase, your unit does not suffer the penalty to its Hit rolls for being within
+     Engagement Range of one or more enemy units, but each time a model in your unit makes an attack with a Blast weapon
+     that targets a unit within Engagement Range of your unit, on an unmodified Hit roll of 1, your unit suffers 1 mortal wound
+     after all of its attacks have been resolved.
+
+
+
+
+https://wahapedia.ru/wh40k11ed/factions/imperial-knights/                                                                                        6/19
+10/13/26, 11:24 AM                                                Imperial Knights [Warhammer 40,000 11th edition]
+
+     SURVIVOR OF STRIFE                                                                                                              1CP
+     FREEBLADE COMPANY – EPIC DEED STRATAGEM
+     The fires of war have steeled this Freeblade’s resolve.
+     WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets.
+
+     TARGET: One     IMPERIAL KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s
+     attacks.
+
+     EFFECT: Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is
+     greater than the Toughness characteristic of your unit, subtract 1 from the Wound roll.
+
+
+     FLANKING MANOEUVRES                                                                                                             1CP
+     FREEBLADE COMPANY – STRATEGIC PLOY STRATAGEM
+     Eager to earn glory, Knight Armigers focus on swiftly redeploying mid‑battle to flank the foe.
+     WHEN: End of your opponent’s Fight phase.
+
+     TARGET: One     ARMIGER
+                          unit from your army that is within 9" of one or more battlefield edges and not within Engagement
+     Range of one or more enemy units.
+
+     EFFECT: Remove your unit from the battlefield and place it into Strategic Reserves.
+
+
+     FAQ                                                                                                                               Show
+
+
+
+   CRUSADE RULES
+   In this section you’ll find additional rules for playing Crusade battles that are bespoke to              IMPERIAL KNIGHTS units. You can
+   find out more about Crusade armies in the main Crusade rules.
+   This section contains the following rules:
+
+   PILOT AND KNIGHT
+   Whether they fight under the banners of the Questor Imperialis, the Questor Mechanicus or as Freeblades, those who pilot Knight suits are
+   bold and noble warriors for whom honour is all. These rules allow you to follow the progression of your pilots as they complete Chivalric
+   Quests and ascend through the Levels of Honour of their chosen Mastery, acquiring benefits befitting champions of the Imperium.
+
+   AGENDAS
+   IMPERIAL KNIGHTS armies can attempt to achieve unique Agendas in addition to those found in other publications. These represent the
+   factions unique goals and their particular methods of waging war.
+
+   REQUISITIONS
+   IMPERIAL KNIGHTS armies have access to a number of bespoke Requisitions in addition to those found in other publications.
+   BATTLE SCARS AND BURDENS
+   Themed to the warriors that make up an Imperial Knights household, these Battle Scars represent dishonourable burdens that units from
+   your Crusade force may come to bear.
+
+   CRUSADE RELICS
+   In addition to the Crusade Relics presented in other publications, Imperial Knights models can claim one of the Crusade Relics found here.
+
+   CRUSADE BADGES
+   Here you will find three Crusade Badges representing goals you can set yourself when campaigning with your Crusade force. Once one is
+   achieved, you could set yourself a new goal, or take the opportunity to start a new Crusade force.
+
+
+
+https://wahapedia.ru/wh40k11ed/factions/imperial-knights/                                                                                      7/19
+10/3/26, 7:03 PM                                                  Core Rules [Warhammer 40,000 11th edition]
+
+     COMMAND RE-ROLL 15.02                                                                                                           1CP
+     CORE STRATAGEM
+     A great commander can bend even the vagaries of fate and fortune to their will, the better to ensure victory.
+     WHEN: Any phase, just after you make one of the following rolls for a friendly unit or model:
+         Advance roll
+         Charge roll
+         Damage roll
+         Hazard roll
+         Hit roll
+         Save roll
+         Wound roll
+         A roll to determine the number of attacks generated with a weapon.
+
+
+     TARGET: That unit or model.
+
+     EFFECT: You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding
+     charge rolls, which you must re-roll in full).
+
+
+     EPIC CHALLENGE 15.03                                                                                                            1CP
+     CORE STRATAGEM
+     The legends of the 41st millennium are replete with deadly duels between mighty champions.
+     WHEN: Fight phase, just after a friendly   CHARACTER unit is selected to fight.
+     TARGET: That   CHARACTER unit.
+     EFFECT: Select one     CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the
+     [PRECISION] ability.
+
+
+     INSANE BRAVERY 15.04                                                                                                            1CP
+     CORE STRATAGEM
+     Indifferent to their own survival, these warriors hold their ground against seemingly impossible odds.
+     WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+     TARGET: That unit.
+
+     EFFECT: That battle-shock roll is automatically successful.
+
+     RESTRICTIONS: You cannot use this stratagem more than once per battle.
+
+
+
+
+https://wahapedia.ru/wh40k11ed/the-rules/core-rules/#Stratagems                                                                        62/86
+10/3/26, 7:03 PM                                                  Core Rules [Warhammer 40,000 11th edition]
+
+     EXPLOSIVES 15.05                                                                                                               1CP
+     CORE STRATAGEM
+     Priming grenades or other explosives, these warriors draw back and hurl death into the enemy’s midst.
+     WHEN: Your Shooting phase.
+
+     TARGET: One friendly unengaged     EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move
+     this turn.
+
+     EFFECT: Resolve the following sequence:
+      1. Select one   EXPLOSIVES GRENADES
+                                /           model in your unit.
+      2. Select one unengaged enemy unit within 8" of and visible to that model.
+      3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (  06.02
+                                                                            ).
+
+
+
+     ERRATA                                                                                                                         Show
+
+
+     CRUSHING IMPACT 15.06                                                                                                          1CP
+     CORE STRATAGEM
+     In extremis, armoured vehicles and rampaging monsters can use their sheer size as a weapon, ramming and crushing enemies
+     beneath their colossal bulk, though doing so risks sustaining damage in return.
+     WHEN: Your Charge phase, just after a friendly   MONSTER/VEHICLE unit ends a charge move.
+     TARGET: That   MONSTER/VEHICLE unit.
+     EFFECT: Resolve the following sequence:
+      1. Select one enemy unit engaged with your unit.
+      2. Select one model in your unit engaged with that enemy unit.
+      3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each
+         5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+
+
+     ERRATA                                                                                                                         Show
+
+
+     RAPID INGRESS 15.07                                                                                                            1CP
+     CORE STRATAGEM
+     Be it cunning strategy, potent technology or supernatural ritual, there are many means by which a commander may hasten their
+     warriors’ onset.
+     WHEN: End of your opponent’s Movement phase.
+
+     TARGET: One friendly unit that is in strategic reserves (excluding   AIRCRAFT).
+     EFFECT: Your unit makes an ingress move (20.04).
+
+     RESTRICTIONS: You cannot use this stratagem during the first battle round.
+
+
+
+
+https://wahapedia.ru/wh40k11ed/the-rules/core-rules/#Stratagems                                                                        63/86
+10/3/26, 7:03 PM                                                    Core Rules [Warhammer 40,000 11th edition]
+
+     FIRE OVERWATCH 15.08                                                                                                                1CP
+     CORE STRATAGEM
+     A hail of fire can drive back advancing foes.
+     WHEN: End of your opponent’s Movement phase.
+
+     TARGET: One friendly unengaged unit (excluding         TITANIC units).
+     EFFECT: Your unit shoots using snap shooting.
+
+
+     SNAP SHOOTING 15.09
+     ELIGIBLE IF: As stated in the rule allowing this shooting type.
+
+     EFFECT: Your unit shoots as described in Making Attacks ( ).   04
+     WHILE SHOOTING:
+         You can only target one visible enemy unit within 24" of your unit (and only if it is an eligible target).
+         Each attack only hits on an unmodified hit roll of 6 (irrespective of the attacking weapon’s BS characteristic or any
+         modifiers).
+         You cannot re-roll hit rolls.
+
+     AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.
+
+
+     SMOKESCREEN 15.10                                                                                                                   1CP
+     CORE STRATAGEM
+     Even the most skilled marksmen struggle to hit targets veiled by billowing screens of smoke.
+     WHEN: Start of your opponent’s Shooting phase.
+
+     TARGET: One friendly    SMOKE unit.
+     EFFECT: Until the end of the phase, each time an attack targets either your      SMOKE
+                                                                                         unit, or a unit that is not fully visible to
+     the attacking model because of one or more models in your           SMOKE
+                                                                         unit, the target has the benefit of cover against that
+     attack (13.08
+                 ).
+
+
+     HEROIC INTERVENTION 15.11                                                                                                           1CP
+     CORE STRATAGEM
+     Voices raised in furious war cries, your warriors surge forth to meet the enemy’s onslaught head-on.
+     WHEN: End of your opponent’s Charge phase.
+
+     TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a          VEHICLE unit if it is a
+     CHARACTER WALKER
+              /         unit.
+
+     EFFECT: Resolve a charge with your unit (       11.02). While doing so, before making the charge roll, you must select one of the
+     following modes:
+
+
+         Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase
+         and are within the maximum distance.
+
+
+          Into the Fray:                                                                                                                 +1CP
+              When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6.
+              When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the
+              maximum distance.
+
+
+https://wahapedia.ru/wh40k11ed/the-rules/core-rules/#Stratagems                                                                             64/86
+10/3/26, 7:03 PM                                                    Core Rules [Warhammer 40,000 11th edition]
+
+     COUNTEROFFENSIVE 15.12                                                                                                           2CP
+     CORE STRATAGEM
+     In close-quarters combat, the slightest hesitation can leave an opening for a swift foe to exploit.
+     WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+     TARGET: One friendly unit that is eligible to fight.
+
+     EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (
+     12.04
+         ).
+
+
+
+   ACTIONS                                                                                                                           16
+   Actions represent vital battlefield tasks your forces must carry out, from searching for missing archeotech to completing a
+   blasphemous ritual.
+
+
+   PERFORMING ACTIONS 16.01
+   Some rules allow units to perform actions. Each action states:
+        STARTS: When it is started.
+        UNITS: Which friendly units can perform it.
+        USE LIMIT: How many times friendly units can start it.
+        COMPLETES: When it completes.
+        EFFECT: What the effects of completing it are.
+        Any additional restrictions that may apply.
+
+
+      WHERE TO FIND ACTIONS
+      The actions players can use can be found in other publications such as mission packs. All players can use core actions, while other
+      actions may have restrictions such as army faction.
+
+     FAQ                                                                                                                                  Show
+
+
+
+   STARTING AN ACTION
+   A unit is eligible to start an action unless one or more of the following apply to that unit:
+        It is not on the battlefield.
+               AIRCRAFT FORTIFICATION
+        It is an          /               unit.
+        It is battle-shocked.
+        It has an OC characteristic of 0 or ‘-’.
+        It is engaged (unless it is aTITANIC  unit).
+        It made an advance or fall-back move this turn.
+        It started another action this turn.
+
+
+   If a unit starts an action, until the end of the turn:
+        It is not eligible to shoot (excluding    TITANIC units).
+        It is not eligible to declare a charge.
+
+
+   COMPLETING AN ACTION
+   If a unit performing an action makes a move (excluding pile-in and consolidation moves) or leaves the battlefield, that unit does not
+   complete that action. Otherwise, when an action is completed, its ‘Effect’ section is triggered.
+
+
+
+
+https://wahapedia.ru/wh40k11ed/the-rules/core-rules/#Stratagems                                                                              65/86
+

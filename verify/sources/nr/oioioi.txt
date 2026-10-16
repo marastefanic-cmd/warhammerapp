@@ -1,0 +1,501 @@
+10/16/26, 8:11 PM                                                        oioioi - New Recruit
+
+                                                               oioioi [2000pts]
+  Army Roster [3 Detachment Points, 2000 pts] (Chaos - Thousand Sons)
+  • Battle Size: Strike Force (2000 Point limit)
+  • Detachment: Grand Coven [3Detachment Points]
+  • Force Disposition: Priority Assets
+  • Rituals reference
+  • Show/Hide Options: Chaos Knights are visible, Crucible Characters are visible, Legends are
+  visible, Titans are visible, Unaligned Forces are visible, Unaligned Fortifications are visible
+  NAME                                                   ROLE        PTS OPTIONS
+   Magnus the Red                                                         Epic Hero 455
+   Daemon Prince of Tzeentch with wings                                   Character 205
+   Sorcerer                                                               Character 100
+   Sorcerer in Terminator Armour                                          Character 140
+   (5) Rubric Marines                                                     Battleline 115 Sorcerer
+                                                                                                 Sorcerer in Terminator
+   (10) Scarab Occult Terminators                                         Infantry         425
+                                                                                                 Armour
+   (10) Tzaangors                                                         Infantry         75
+   (3) Tzaangor Enlightened                                               Mounted          50
+   (3) Tzaangor Enlightened                                               Mounted          50
+   (3) Tzaangor Enlightened with Fatecaster
+                                                                          Mounted          55    2x Enlightened
+   greatbows
+   Defiler                                                                Vehicle          330
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                                                              1/12
+10/16/26, 8:11 PM                                                         oioioi - New Recruit
+     215 PTS                                                     SORCERER
+   Models                                           Options
+                                                    Force weapon, Inferno bolt pistol, Pandaemonic Delusion, Prosperine khopesh
+   1x Sorcerer
+                                                    • Leading: Rubric Marines
+   1x Aspiring Sorcerer                             Force weapon, Malefic Curse, Warpflame pistol
+   1x Rubric Marine w/ soulreaper cannon Close combat weapon, Soulreaper cannon
+   3x Rubric Marine w/ warpflamer                   Close combat weapon, Warpflamer
+   Unit                                                             M        T   Sv       W        LD       OC       InSv      Base
+   Sorcerer - Sorcerer                                              6"       5   3+       4        6+       1        5+        40mm
+   Rubric Marine - Rubric Marines                                   6"       5   3+        2       7+       2        5+        32mm
+   Aspiring Sorcerer - Rubric Marines                               6"       5   3+        3       6+       2        5+        32mm
+   Ranged Weapons                 Range A             BS       S AP D Keywords
+   Inferno bolt pistol - Sorcerer 12"   1             3+       5 -2 1 Pistol, Lethal Hits
+   Pandaemonic Delusion -
+                                       24"      6     3+       5 -1 1 Psychic, Sustained Hits 3, Lethal Hits
+   Sorcerer
+   Malefic Curse - Rubric                                                Anti-INFANTRY 4+, Devastating Wounds, Ignores
+                                       24"      3     3+       4 -3 1
+   Marines                                                               Cover, Psychic, Lethal Hits
+   Warpflame pistol - Rubric
+   Marines
+                                       12"      D6 N/A 3 -1 1 Ignores Cover, Pistol, Torrent, Lethal Hits
+   Soulreaper cannon - Rubric
+   Marines
+                                       24"      6     3+       6 -2 1 Devastating Wounds, Ignores Cover, Lethal Hits
+   Warpflamer (x3) - Rubric
+   Marines
+                                       12"      D6 N/A 4 -1 1 Ignores Cover, Torrent, Lethal Hits
+
+   Melee Weapons                                                    Range        A   WS        S   AP   D        Keywords
+   Force weapon[1] - Sorcerer                                       Melee        4   3+        6   -1   D3       Psychic, Lethal Hits
+   Prosperine khopesh - Sorcerer                                     Melee       3   3+        5   -2   2        Lethal Hits
+   Force weapon[2] - Rubric Marines                                  Melee       3   3+        6   -1   D3       Psychic, Lethal Hits
+   Close combat weapon (x4) - Rubric Marines                         Melee       2   3+        5   0    1        Lethal Hits
+   Abilities            Description
+                        Once per battle, in your Shooting phase or the Fight phase, this model can use this ability.
+   Twisted Sorceries
+                        If it does, until the end of the phase, improve the Strength and Attacks characteristic of
+   (Psychic) - Sorcerer
+                        Psychic weapons equipped by this model by 3.
+   Empyric Guidance     While this model is leading a unit, weapons equipped by models in that unit have the
+   (Psychic) - Sorcerer [LETHAL HITS] ability.
+                             Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the
+   Bringers of Change
+                             attack targets a unit within range of an objective marker you do not control, you can re-
+   - Rubric Marines
+                             roll the Wound roll instead.
+   Icon of Flame -           Ranged weapons equipped by models in the bearer's unit (excluding Characters) have the
+   Rubric Marines            [Ignores Cover] ability.
+    Rules Leader, Cabal of Sorcerers, Psychic, Pistol, Sustained Hits, Cabal of Sorcerers, Psychic, Anti,
+          Devastating Wounds, Pistol, Torrent, Ignores Cover
+    Categories Chaos, Character, Faction: Thousand Sons, Grenades, Infantry, Psyker, Sorcerer, Tzeentch, Battleline*,
+               Rubric*, Rubric Marines*, Rubricae*, *from combined unit
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                                                                            2/12
+10/16/26, 8:11 PM                                                       oioioi - New Recruit
+     565 PTS                                    SORCERER IN TERMINATOR ARMOUR
+   Models                                                Options
+                                                               Umbralefic Crystal, Force weapon, Gaze of Hate, Inferno combi-
+   1x Sorcerer in Terminator Armour                            bolter
+                                                               • Leading: Scarab Occult Terminators
+   1x Scarab Occult Sorcerer                                   Force weapon, Malefic Curse, Inferno combi-bolter
+   7x Scarab Occult Terminator                                 Inferno combi-bolter, Prosperine khopesh
+   2x
+                                                               Prosperine khopesh, Soulreaper cannon
+   Scarab Occult Terminator w/ soulreaper cannon
+   Unit                                                                               M T Sv           W LD         OC InSv    Base
+   Sorcerer in Terminator Armour - Sorcerer in Terminator Armour                      5" 6 2+          5 6+         1  4+      40mm
+   Scarab Occult Sorcerer - Scarab Occult Terminators                                 5"       6 2+    4       6+   1   4+     40mm
+   Scarab Occult Terminator (x9) - Scarab Occult Terminators                          5"       6 2+    3       7+   1   4+     40mm
+   Ranged Weapons                              Range A BS S          AP D Keywords
+   Gaze of Hate - Sorcerer in                                             Anti-MONSTER 4+, Anti-VEHICLE 4+,
+   Terminator Armour
+                                               18"       3 3+ 4      -3 2
+                                                                          Devastating Wounds, Psychic, Lethal Hits
+   Inferno combi-bolter - Sorcerer in
+   Terminator Armour
+                                               24"       2 3+ 5      -2 1 Rapid Fire 2, Lethal Hits
+
+   Malefic Curse - Scarab Occult                                              Anti-INFANTRY 4+, Devastating Wounds,
+                                               24"       3 3+ 4      -3 1
+   Terminators                                                                Psychic, Lethal Hits
+   Inferno combi-bolter (x8) - Scarab
+   Occult Terminators
+                                               24"       2 3+ 5      -2 1 Rapid Fire 2, Lethal Hits
+   Soulreaper cannon (x2) - Scarab
+   Occult Terminators
+                                               24"       6 3+ 6      -2 1 Devastating Wounds, Lethal Hits
+   Hellfyre missile rack (x2) - Scarab
+   Occult Terminators
+                                               36"       2 3+ 10 -2 3 Lethal Hits
+
+   Melee Weapons                                                        Range      A WS         S AP D          Keywords
+   Force weapon[1] - Sorcerer in Terminator Armour                      Melee      5 3+         6 -1 D3         Psychic, Lethal Hits
+   Force weapon[2] - Scarab Occult Terminators                          Melee      4 3+         6 -1       D3   Psychic, Lethal Hits
+   Prosperine khopesh (x9) - Scarab Occult Terminators                  Melee      3 3+         5 -2       2    Lethal Hits
+   Abilities                          Description
+   Marked by Fate (Psychic) -         At the start of your Shooting phase, select one enemy unit that is visible to this
+   Sorcerer in Terminator             Psyker model. Until the end of the phase, each time a model in this unit makes an
+   Armour                             attack that targets that enemy unit, add 1 to the Hit roll.
+   Empyric Guidance (Psychic)
+                                       While this model is leading a unit, weapons equipped by models in that unit have
+   - Sorcerer in Terminator
+                                       the [LETHAL HITS] ability.
+   Armour
+                                       (Once per battle, per army) In your Command phase, if this unit is unengaged,
+                                       you can use this ability. If you do:
+   Umbralefic Crystal -
+                                        Place this unit in strategic reserves.
+   Sorcerer in Terminator
+                                        This unit has Deep Strike until the start of your next Shooting phase.
+   Armour
+                                        This unit must make an ingress move in your next Movement phase (including in
+                                         your first turn).
+                                       While this unit contains one or more Psyker models, each time an attack targets
+   Rites of Coalescence -
+                                       this unit, subtract 1 from the
+   Scarab Occult Terminators
+                                       Wound roll.
+    Rules Leader, Deep Strike, Cabal of Sorcerers, Psychic, Anti, Devastating Wounds, Rapid Fire, Deep Strike,
+          Cabal of Sorcerers, Psychic, Anti, Devastating Wounds, Rapid Fire
+    Categories Chaos, Character, Faction: Thousand Sons, Infantry, Psyker, Sorcerer, Terminator, Tzeentch, Rubricae*,
+               Scarab Occult*, *from combined unit
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                                                                           3/12
+10/16/26, 8:11 PM                                                             oioioi - New Recruit
+     455 PTS                                                   MAGNUS THE RED
+   Models                            Options
+   1x Magnus the Red                 Blade of Magnus, Gaze of Magnus, Tzeentch's Firestorm, Warlord
+   Unit                                      M         T            Sv         W              LD          OC      InSv        Base
+   Magnus the Red                            14"       11           2+         16             5+          6       4+          100mm
+   Ranged Weapons                      Range         A              BS    S         AP        D       Keywords
+   Gaze of Magnus                      24"           3D3            2+    11        -2        3       Devastating Wounds, Psychic
+   Tzeentch's Firestorm                24"           D6+3           2+    6         -1        2       Blast, Ignores Cover, Psychic
+   Melee Weapons                                   Range       A     WS        S         AP       D    Keywords
+   ➤ Blade of Magnus - strike                      Melee       7     2+        16        -3       3    Devastating Wounds, Psychic
+   ➤ Blade of Magnus - sweep                       Melee       14    2+        8         -1       2     Psychic
+   Abilities                          Description
+   Damaged: 1-6 wounds                While this model has 1-6 wounds remaining, each time this model makes an
+   remaining                          attack, subtract 1 from the Hit roll.
+                                      At the start of the battle round, select one of the abilities in the Crimson King
+   Unearthly Power
+                                      section. Until the start of the next battle round, this model has that ability.
+   Lord of the Planet of the          This model can attempt up to 2 Rituals per turn instead of one, and each time this
+   Sorcerers (Psychic)                model attempts a Ritual, add 2 to the Psychic test result.
+   Crimson King             Effect
+   Impossible Form          Each time an attack is made against this Psyker (excluding Psychic Attacks), subtract 1
+   (Psychic)                from the Damage characteristic of that attack.
+                            At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this
+   Treason of
+                            Psyker. Until the end of the phase, ranged weapons equipped by models in that unit have
+   Tzeentch (Psychic)
+                            the [HAZARDOUS] ability.
+   Time Flux (Aura,         While a friendly Thousand Sons unit is within 6" of this Psyker, add 2" to the Move
+   Psychic)                 characteristic of models in that unit.
+    Rules Deep Strike, Deadly Demise D6, Cabal of Sorcerers, Devastating Wounds, Psychic, Blast, Ignores Cover
+
+    Categories Chaos, Character, Daemon, Epic Hero, Faction: Thousand Sons, Fly, Magnus the Red, Monster, Primarch,
+               Psyker, Tzeentch, Warlord
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                                                                          4/12
+10/16/26, 8:11 PM                                                      oioioi - New Recruit
+     205 PTS                               DAEMON PRINCE OF TZEENTCH WITH WINGS
+   Models                                        Options
+   1x                                                Eldritch Vortex of E'taph, Dark Blessing, Hellforged weapons, Infernal
+   Daemon Prince of Tzeentch with wings              cannon
+   Unit                                                             M       T     Sv          W    LD      OC    InSv   Base
+   Daemon Prince of Tzeentch with wings                             13"     9     2+          10   6+      3     4+     60mm
+   Ranged Weapons                                     Range A BS S AP D Keywords
+   Dark Blessing (Eldritch Vortex of E'taph)          24"   9 2+ 5 -1 2 Ignores Cover, Psychic, Sustained Hits 1
+   Infernal cannon                                    24"      3 2+ 5 -2         2
+   Melee Weapons                                                    Range A          WS S AP D Keywords
+                                                                                               Devastating Wounds,
+   ➤ Hellforged weapons - strike (Eldritch Vortex of E'taph)        Melee 6          2+ 9 -2 4
+                                                                                               Psychic
+   ➤ Hellforged weapons - sweep (Eldritch Vortex of                                                     Devastating Wounds,
+                                                                    Melee 12 2+ 7 -1 2
+   E'taph)                                                                                              Psychic
+   Abilities           Description
+                       In your Movement phase, when this model is set up on the battlefield using the Deep Strike
+                       ability, it can perform an aetherstride. If it does:
+   Aetherstride          It can be set up anywhere on the battlefield more than 6" horizontally away from all enemy
+   (Psychic)              units.
+                         Until the end of the turn, its Dark Blessing has the [Sustained Hits D3] ability.
+                         Until the end of the turn, it is not eligible to declare a charge.
+                       Each time this model makes an attack that targets a Character unit, re-roll a Hit roll of 1 and
+                       re-roll a Wound roll of 1 (if that attack targets a Psyker Character unit, you can re-roll the Hit
+   Hunter of
+                       roll and you can re-roll the Wound roll instead). Each time this model destroys a Character
+   Souls
+                       unit, this model regains up to D3 lost wounds (if that Character unit was a Psyker, this model
+                       regains up to 3 lost wounds instead).
+   Eldritch Vortex
+                       Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.
+   of E'taph
+    Rules Deadly Demise D3, Cabal of Sorcerers, Deep Strike, Ignores Cover, Sustained Hits, Psychic, Devastating Wounds
+
+    Categories Chaos, Character, Daemon, Daemon Prince, Faction: Thousand Sons, Fly, Monster, Psyker, Tzeentch
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                                                                   5/12
+10/16/26, 8:11 PM                                                    oioioi - New Recruit
+     75 PTS                                                    TZAANGORS
+   Models                                                                                   Options
+   1x Twistbray                                                                             Tzaangor blades
+   9x Tzaangor w/ Tzaangor blades                                                           Tzaangor blades
+   Unit                             M         T        Sv        W       LD           OC            InSv         Base
+   Tzaangors                        6"        4        6+        1       7+           1             6+           32mm
+   Melee Weapons                                        Range        A     WS           S      AP          D   Keywords
+   Tzaangor blades (x10)                                Melee        2     4+           5      0           1
+   Abilities           Description
+   Ambushing           At the end of your opponent's turn, if this unit is more than 6" horizontally away from all
+   Hunters             enemy units, you can remove this unit from the battlefield and place it into Strategic Reserves.
+    Rules Scouts 6"
+
+    Categories Chaos, Faction: Thousand Sons, Infantry, Mutant, Tzaangors, Tzeentch
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                                                              6/12
+10/16/26, 8:11 PM                                                       oioioi - New Recruit
+     50 PTS                                            TZAANGOR ENLIGHTENED                                                    x2
+   Models                                                                                      Options
+   1x Aviarch                                                                                  Divining spear
+   2x Divining spear Enlightened                                                               Divining spear
+   Unit                                              M         T   Sv          W        LD         OC      InSv         Base
+   Tzaangor Enlightened                              10"       4   5+          2        7+         2       5+           40mm
+   Melee Weapons                              Range            A   WS         S      AP        D     Keywords
+   Divining spear (x3)                         Melee           3   4+         5      -1        2     Lance, Precision
+   Abilities         Description
+                     Each time this unit makes a Charge move, select one enemy unit within Engagement Range of
+   Prophesied
+                     it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy
+   Doom
+                     unit: for each 4+, that enemy unit suffers 1 mortal wound.
+    Rules Lance, Precision
+
+    Categories Chaos, Faction: Thousand Sons, Fly, Mounted, Mutant, Tzaangor Enlightened, Tzeentch
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                                                                        7/12
+10/16/26, 8:11 PM                                                        oioioi - New Recruit
+     55 PTS                       TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS
+   Models                              Options
+   1x Aviarch                             Close combat weapon, Fatecaster greatbow
+   2x Enlightened                         Close combat weapon, Fatecaster greatbow
+   Unit                                                                      M        T    Sv       W       LD   OC    InSv   Base
+   Tzaangor Enlightened with Fatecaster greatbows                            10"      4    5+       2       7+   2     5+     40mm
+   Ranged Weapons                          Range       A       BS   S   AP   D     Keywords
+   Fatecaster greatbow (x3)                30"         2       4+   5   -2   2     Ignores Cover, Lethal Hits, Precision
+   Melee Weapons                                               Range         A      WS          S       AP       D    Keywords
+   Close combat weapon (x3)                                    Melee         2      4+          4       0        1
+   Abilities        Description
+                    In your opponent's Movement phase, if an enemy unit ends a move within 8" of this unit, if this
+   Malign
+                    unit is not within Engagement Range of one or more enemy units, this unit can make a Normal
+   Trickery
+                    move of up to D6".
+    Rules Ignores Cover, Lethal Hits, Precision
+
+    Categories Chaos, Faction: Thousand Sons, Fly, Mounted, Mutant, Tzaangor Enlightened,
+               Tzaangor Enlightened with Fatecaster Greatbows, Tzeentch
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                                                                         8/12
+10/16/26, 8:11 PM                                                            oioioi - New Recruit
+     330 PTS                                                    DEFILER
+   Models    Options
+   1x               Ectoplasma destructor, 2x Heavy reaper autocannon, Shearing claws, Two excruciator cannons (2x
+   Defiler          Excruciator cannon)
+   Unit                    M            T           Sv         W             LD            OC            InSv        Base
+   Defiler                 12"          11          3+         18            6+            5             5+          160mm
+   Ranged Weapons                             Range      A     BS       S     AP D Keywords
+   Ectoplasma destructor                      36"        D6    3+       12    -3 3 Blast
+   Excruciator cannon (x2)                    36"        6     3+       6     -2    2
+   Heavy reaper autocannon (x2)               48"        4     3+       9     -2    3    Devastating Wounds, Sustained Hits 1
+   Melee Weapons                                    Range           A          WS         S         AP        D       Keywords
+   Shearing claws - strike                          Melee           5          3+         16        -3        D6+1
+   Shearing claws - sweep                           Melee           10         3+         6         -2        1
+   Abilities                 Description
+                             Each time this unit makes a Normal, Advance or Fall Back move, it can move through
+                             models (excluding Titanic models) and terrain features. When doing so, it can move within
+   Scuttling Walker
+                             Engagement Range of enemy models, but cannot end that move within Engagement
+                             Range of them, and any Desperate Escape test is automatically passed.
+                             You can target this unit with the Counteroffensive stratagem, regardless of any other uses
+   Destroyer of              of that stratagem this phase. If you do:
+   Futures (Once per
+                              That use is ‑1 CP.
+   phase, per unit)
+                              That use does not prevent any uses of that stratagem on other units this phase.'
+   Damaged: 1-6              While this model has 1-6 wounds remaining, each time this model makes an attack,
+   wounds remaining          subtract 1 from the Hit roll.
+    Rules Deadly Demise D6, Blast, Sustained Hits, Devastating Wounds
+
+    Categories Chaos, Daemon, Defiler, Faction: Thousand Sons, Tzeentch, Vehicle, Walker
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                                                                     9/12
+10/16/26, 8:11 PM                                                oioioi - New Recruit
+
+
+  Rules
+  Anti:
+  This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the
+  target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.
+  Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical
+  wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon
+  against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.
+
+  Blast:
+  Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models
+  that were in the target unit in the Select Targets step (rounding down). If this ability takes the form [BLAST X],
+  each time you gather attack dice for such a weapon, add X additional attack dice for every five models that
+  were in the target unit in the Select Targets step (rounding down) instead.
+  Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would
+  gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+  Cabal of Sorcerers:
+  If your army Faction is Thousand Sons, at the start of your Shooting phase, one or more models from your army
+  with this ability can attempt Rituals. To do so, select one model from your army with this ability that has not yet
+  attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn,
+  then take a Psychic test by following the sequence below:
+
+       1.Roll 2D6
+       2.Optionally, roll one additional D6 (Channel the Warp). Then, if one or more doubles or triples were rolled
+          during this test, that model's unit suffers D3 mortal wounds.
+       3.If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test
+          result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model
+          manifests that Ritual and you resolve its effects.
+
+
+  Deadly Demise D3 / Deadly Demise D6:
+  This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the
+  units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that
+  model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds
+  denoted by X (if this is a random number, roll separately for each unit within 6").
+  Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any
+  unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency
+  disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved.
+  Finally, the Impulsor is removed from the battlefield.
+
+  Deep Strike:
+  Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up
+  anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your
+  opponent’s deployment zone.
+
+  Devastating Wounds:
+  Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack
+  sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D
+  characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+  Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for
+  each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+  Example: An attack made with a [DEVASTATING WOUNDS] weapon with a D characteristic of 3 results in a
+  critical wound against an Intercessor Squad, so inflicts 3 mortal wounds. The first 2 mortal wounds are
+  sufficient to destroy 1 Intercessor model, so the remaining mortal wound is lost.
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                                                              10/12
+10/16/26, 8:11 PM                                              oioioi - New Recruit
+
+  Ignores Cover:
+  Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover
+  against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+  Kindred Sorcery:
+  In your Command phase, you can select one of the abilities listed below to take effect until the start of your next
+  Command phase. You can only select each of these abilities once per battle.
+  Imbued Manifestation
+  Add 6" to the range characteristic of ranged Psychic weapons equipped by Thousand Sons models in your army.
+  Psychic Maelstrom
+  Each time a Thousand Sons model from your army makes an attack with a Psychic weapon, add 1 to the Wound
+  roll.
+  Wrath of the Immaterium
+  Psychic weapons equipped by Thousand Sons models in your army have the [Devastating Wounds] ability.
+
+  Lance:
+  Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this
+  turn, add 1 to the wound roll.
+
+  Leader:
+  Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one
+  friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an
+  attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one
+  support unit attached to it.
+
+  Lethal Hits:
+  Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that
+  attack to automatically wound the target.
+  Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that
+  attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot
+  trigger other abilities such as [DEVASTATING WOUNDS].
+
+  Pistol:
+  [PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
+  Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters
+  shooting (10.06). When using another shooting type, for each model in that unit (excluding
+  MONSTER/VEHICLE models), you can only select one of the following to make attacks with:
+   One or more of its [CLOSE-QUARTERS] weapons.
+   One or more of its other ranged weapons.
+
+  Precision:
+  While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step
+  (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking
+  models, the active player can select one allocation group that contains one of those visible CHARACTER
+  models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever
+  happens first), that CHARACTER group is the current allocation group.
+
+  Psychic:
+  Each time an attack is made with a [PSYCHIC] weapon, you can ignore any or all modifiers to that attack’s BS
+  or WS characteristic and any or all modifiers to the hit roll. Attacks made with [PSYCHIC] weapons are known
+  as psychic attacks (this can be important for the triggering of other rules).
+
+  Rapid Fire:
+  This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE]
+  weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select
+  Targets step.
+  Example: If a [RAPID FIRE 1] weapon with an A characteristic of 1 targets a unit that is within half range,
+  you would gather one additional attack dice for that weapon (for a total of two for that weapon).
+
+https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                                                       11/12
+10/16/26, 8:11 PM                                              oioioi - New Recruit
+
+  Scouts 6":
+  This ability always takes the form Scouts X". In the Resolve Pre-battle Abilities step, if every model in a unit has
+  this ability, you can do one of the following:
+    If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment
+     zone.
+    If that unit is wholly within your deployment zone, it can make a scout move.
+    If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if
+     every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED
+     TRANSPORT can make a scout move.
+
+  Sustained Hits:
+  This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED
+  HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as
+  denoted by X.
+  Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore
+  hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability).
+
+  Torrent:
+  Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                                                        12/12
+

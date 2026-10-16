@@ -1,0 +1,226 @@
+10/3/26, 7:03 PM                                                  Core Rules [Warhammer 40,000 11th edition]
+
+     COMMAND RE-ROLL 15.02                                                                                                           1CP
+     CORE STRATAGEM
+     A great commander can bend even the vagaries of fate and fortune to their will, the better to ensure victory.
+     WHEN: Any phase, just after you make one of the following rolls for a friendly unit or model:
+         Advance roll
+         Charge roll
+         Damage roll
+         Hazard roll
+         Hit roll
+         Save roll
+         Wound roll
+         A roll to determine the number of attacks generated with a weapon.
+
+
+     TARGET: That unit or model.
+
+     EFFECT: You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding
+     charge rolls, which you must re-roll in full).
+
+
+     EPIC CHALLENGE 15.03                                                                                                            1CP
+     CORE STRATAGEM
+     The legends of the 41st millennium are replete with deadly duels between mighty champions.
+     WHEN: Fight phase, just after a friendly   CHARACTER unit is selected to fight.
+     TARGET: That   CHARACTER unit.
+     EFFECT: Select one     CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the
+     [PRECISION] ability.
+
+
+     INSANE BRAVERY 15.04                                                                                                            1CP
+     CORE STRATAGEM
+     Indifferent to their own survival, these warriors hold their ground against seemingly impossible odds.
+     WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+     TARGET: That unit.
+
+     EFFECT: That battle-shock roll is automatically successful.
+
+     RESTRICTIONS: You cannot use this stratagem more than once per battle.
+
+
+
+
+https://wahapedia.ru/wh40k11ed/the-rules/core-rules/#Stratagems                                                                        62/86
+10/3/26, 7:03 PM                                                  Core Rules [Warhammer 40,000 11th edition]
+
+     EXPLOSIVES 15.05                                                                                                               1CP
+     CORE STRATAGEM
+     Priming grenades or other explosives, these warriors draw back and hurl death into the enemy’s midst.
+     WHEN: Your Shooting phase.
+
+     TARGET: One friendly unengaged     EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move
+     this turn.
+
+     EFFECT: Resolve the following sequence:
+      1. Select one   EXPLOSIVES GRENADES
+                                /           model in your unit.
+      2. Select one unengaged enemy unit within 8" of and visible to that model.
+      3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (  06.02
+                                                                            ).
+
+
+
+     ERRATA                                                                                                                         Show
+
+
+     CRUSHING IMPACT 15.06                                                                                                          1CP
+     CORE STRATAGEM
+     In extremis, armoured vehicles and rampaging monsters can use their sheer size as a weapon, ramming and crushing enemies
+     beneath their colossal bulk, though doing so risks sustaining damage in return.
+     WHEN: Your Charge phase, just after a friendly   MONSTER/VEHICLE unit ends a charge move.
+     TARGET: That   MONSTER/VEHICLE unit.
+     EFFECT: Resolve the following sequence:
+      1. Select one enemy unit engaged with your unit.
+      2. Select one model in your unit engaged with that enemy unit.
+      3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each
+         5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+
+
+     ERRATA                                                                                                                         Show
+
+
+     RAPID INGRESS 15.07                                                                                                            1CP
+     CORE STRATAGEM
+     Be it cunning strategy, potent technology or supernatural ritual, there are many means by which a commander may hasten their
+     warriors’ onset.
+     WHEN: End of your opponent’s Movement phase.
+
+     TARGET: One friendly unit that is in strategic reserves (excluding   AIRCRAFT).
+     EFFECT: Your unit makes an ingress move (20.04).
+
+     RESTRICTIONS: You cannot use this stratagem during the first battle round.
+
+
+
+
+https://wahapedia.ru/wh40k11ed/the-rules/core-rules/#Stratagems                                                                        63/86
+10/3/26, 7:03 PM                                                    Core Rules [Warhammer 40,000 11th edition]
+
+     FIRE OVERWATCH 15.08                                                                                                                1CP
+     CORE STRATAGEM
+     A hail of fire can drive back advancing foes.
+     WHEN: End of your opponent’s Movement phase.
+
+     TARGET: One friendly unengaged unit (excluding         TITANIC units).
+     EFFECT: Your unit shoots using snap shooting.
+
+
+     SNAP SHOOTING 15.09
+     ELIGIBLE IF: As stated in the rule allowing this shooting type.
+
+     EFFECT: Your unit shoots as described in Making Attacks ( ).   04
+     WHILE SHOOTING:
+         You can only target one visible enemy unit within 24" of your unit (and only if it is an eligible target).
+         Each attack only hits on an unmodified hit roll of 6 (irrespective of the attacking weapon’s BS characteristic or any
+         modifiers).
+         You cannot re-roll hit rolls.
+
+     AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.
+
+
+     SMOKESCREEN 15.10                                                                                                                   1CP
+     CORE STRATAGEM
+     Even the most skilled marksmen struggle to hit targets veiled by billowing screens of smoke.
+     WHEN: Start of your opponent’s Shooting phase.
+
+     TARGET: One friendly    SMOKE unit.
+     EFFECT: Until the end of the phase, each time an attack targets either your      SMOKE
+                                                                                         unit, or a unit that is not fully visible to
+     the attacking model because of one or more models in your           SMOKE
+                                                                         unit, the target has the benefit of cover against that
+     attack (13.08
+                 ).
+
+
+     HEROIC INTERVENTION 15.11                                                                                                           1CP
+     CORE STRATAGEM
+     Voices raised in furious war cries, your warriors surge forth to meet the enemy’s onslaught head-on.
+     WHEN: End of your opponent’s Charge phase.
+
+     TARGET: One friendly unengaged unit within 12" of one or more enemy units. You can only select a          VEHICLE unit if it is a
+     CHARACTER WALKER
+              /         unit.
+
+     EFFECT: Resolve a charge with your unit (       11.02). While doing so, before making the charge roll, you must select one of the
+     following modes:
+
+
+         Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase
+         and are within the maximum distance.
+
+
+          Into the Fray:                                                                                                                 +1CP
+              When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6.
+              When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the
+              maximum distance.
+
+
+https://wahapedia.ru/wh40k11ed/the-rules/core-rules/#Stratagems                                                                             64/86
+10/3/26, 7:03 PM                                                    Core Rules [Warhammer 40,000 11th edition]
+
+     COUNTEROFFENSIVE 15.12                                                                                                           2CP
+     CORE STRATAGEM
+     In close-quarters combat, the slightest hesitation can leave an opening for a swift foe to exploit.
+     WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+     TARGET: One friendly unit that is eligible to fight.
+
+     EFFECT: Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (
+     12.04
+         ).
+
+
+
+   ACTIONS                                                                                                                           16
+   Actions represent vital battlefield tasks your forces must carry out, from searching for missing archeotech to completing a
+   blasphemous ritual.
+
+
+   PERFORMING ACTIONS 16.01
+   Some rules allow units to perform actions. Each action states:
+        STARTS: When it is started.
+        UNITS: Which friendly units can perform it.
+        USE LIMIT: How many times friendly units can start it.
+        COMPLETES: When it completes.
+        EFFECT: What the effects of completing it are.
+        Any additional restrictions that may apply.
+
+
+      WHERE TO FIND ACTIONS
+      The actions players can use can be found in other publications such as mission packs. All players can use core actions, while other
+      actions may have restrictions such as army faction.
+
+     FAQ                                                                                                                                  Show
+
+
+
+   STARTING AN ACTION
+   A unit is eligible to start an action unless one or more of the following apply to that unit:
+        It is not on the battlefield.
+               AIRCRAFT FORTIFICATION
+        It is an          /               unit.
+        It is battle-shocked.
+        It has an OC characteristic of 0 or ‘-’.
+        It is engaged (unless it is aTITANIC  unit).
+        It made an advance or fall-back move this turn.
+        It started another action this turn.
+
+
+   If a unit starts an action, until the end of the turn:
+        It is not eligible to shoot (excluding    TITANIC units).
+        It is not eligible to declare a charge.
+
+
+   COMPLETING AN ACTION
+   If a unit performing an action makes a move (excluding pile-in and consolidation moves) or leaves the battlefield, that unit does not
+   complete that action. Otherwise, when an action is completed, its ‘Effect’ section is triggered.
+
+
+
+
+https://wahapedia.ru/wh40k11ed/the-rules/core-rules/#Stratagems                                                                              65/86
+
