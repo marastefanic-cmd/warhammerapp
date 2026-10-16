@@ -38,7 +38,7 @@ const RULES = {
   'Anti': 'This ability always takes the form **[ANTI-X Y+]**. Each time an attack is made with an **[ANTI]** weapon, if the target unit has the keyword denoted by **X**, an unmodified **wound roll** of **Y+** is a **critical wound**.\n*Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.*',
   'Hunter': '**04.01.03 Multiple Weapon Profiles (app):** In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).\nSome of these profiles are known as **Hunter** profiles. **Hunter** profiles can only target units with the specified keywords.\nNote that if a unit is equipped with more than one such weapon, a different profile can be selected for each model within that unit.\n*App note, not rules text: New Recruit prints these weapons as two profiles, one marked “Hunter: MONSTER/VEHICLE”. That profile can only target MONSTER or VEHICLE units; the Standard profile can target any unit. The Hunter rule is in the rules appendix of the Warhammer 40,000 app (Wahapedia 04.01.03), not in the printed Core Rules.*',
 
-  'Deep Strike': 'Each time this unit makes an **ingress move** (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.\n*App note, not rules text: units in reserves arrive from the second battle round onwards; any still in reserves at the end of the third battle round are destroyed (Strategic Reserves, 20.03).*',
+  'Deep Strike': 'Each time this unit makes an **ingress move** (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.\n*App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).*',
   'Deadly Demise': 'This ability always takes the form **Deadly Demise X**. Each time a model in this unit is **destroyed**, after the units embarked within it (if any) have made their **emergency disembark moves**, roll one D6. On a 6, that model suffers a **deadly demise**; each unit within 6" of that model suffers a number of **mortal wounds** denoted by **X** (if this is a random number, roll separately for each unit within 6").',
   'Feel No Pain': 'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.',
   'Leader': 'Before the battle, in the Muster Armies step, for each **leader** and **support** unit in your army, you can select one friendly **bodyguard** unit that unit can **lead**. That unit will then **lead** that **bodyguard** unit for the battle and form an **attached** unit with it.\nUnless otherwise stated, each **bodyguard** unit can only have one **leader** unit and one **support** unit attached to it.',
@@ -67,7 +67,7 @@ const RULES = {
   'Charge': '- 1. **Declare Charge:** Select one friendly unit that has not **declared a charge** this phase and is **eligible to declare a charge** (see below). That unit **declares a charge**.\nA unit is **eligible to declare a charge** if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being **eligible to declare a charge**:\n- It is not within 12" of one or more enemy units.\n- It is **engaged**.\n- It made an **advance** or **fall-back move** this turn.\n- 2. **Make Charge Roll:** Make a **charge roll** by rolling 2D6: the result is the **maximum distance** for the **charge move**.\n- 3. **Attempt Charge:** If it is possible to make a **charge move**, and if you still want to, make a **charge move** with that unit (see opposite). Otherwise, your unit does not make a **charge move**. In either case, the **charge** is then resolved.\n*Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes*',
   'Charge Move': '**MAXIMUM DISTANCE:** **Charge roll**.\n**ELIGIBLE IF:** Your unit declared a charge this phase.\n**EFFECT:** Your unit moves as described in Moving (03).\n**BEFORE MOVING:** Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.\n**WHILE MOVING:**\n- Each model must end its move closer to one or more **charge targets**.\n- Each model that can end its move within 1" of one or more **charge targets** must do so.\n- Each model that can end its move **engaged** with one or more **charge targets** must do so.\n**AFTER MOVING:**\n- Your unit must be **engaged** with all of the **charge targets**.\n- Your unit cannot be **engaged** with one or more enemy units that are not **charge targets**.\n- Until the end of the turn, each model in your unit has the **Fights First** ability (24.13).',
   'Pile-in Move': '**MAXIMUM DISTANCE:** 3"\n**ELIGIBLE IF:** It is the Fight phase and one or more of the following apply to your unit:\n- It is **engaged**.\n- It made a **charge move** this turn.\n- It was selected to make an **overrun fight** this phase (12.06).\n**EFFECT:** Your unit moves as described in Moving (03).\n**BEFORE MOVING:** Select pile-in targets:\n- If your unit is **engaged**, select every enemy unit it is **engaged** with.\n- Otherwise, select one or more enemy units within 5" of your unit.\n**WHILE MOVING:**\n- Models in base-contact with one or more enemy models cannot be moved.\n- Each model that is moved must end its move closer to the closest **pile-in target**, and **engaged** with it if possible.\n**AFTER MOVING:**\n- Your unit must be **engaged**.\n- Each model that started this move **engaged** with an enemy unit must still be **engaged** with that enemy unit.',
-  'Consolidation Move': '**MAXIMUM DISTANCE:** 3"\n**ELIGIBLE IF:** It is the Fight phase and your unit was **eligible to fight** this phase.\n**EFFECT:** Your unit moves as described in Moving (03).\n**BEFORE MOVING:** Select **consolidation mode**:\n- Ongoing Consolidation: If your unit is **engaged**, you must select this mode and select every enemy unit it is **engaged** with.\n- Engaging Consolidation: Otherwise, if your unit is within 3" of one or more enemy units, you must select this mode and select one or more of those enemy units.\n- Objective Consolidation: Otherwise, if your unit is within 3" of one or more **objectives**, you must select this mode and select one of those **objectives**.\n**WHILE MOVING:**\n- Ongoing Consolidation: Models in base-contact with one or more enemy models cannot be moved. Each model that is moved must end its move closer to the closest selected enemy unit, and **engaged** with it if possible.\n- Engaging Consolidation: Each model that is moved must end its move closer to the closest selected enemy unit, and **engaged** with it if possible.\n- Objective Consolidation: Each model that is moved must end its move within range of the selected **objective** if possible, or closer to it if not.\n**AFTER MOVING:**\n- Ongoing Consolidation: Each model that started this move **engaged** with an enemy unit must still be **engaged** with that enemy unit.\n- Engaging Consolidation: Your unit must be **engaged** with all of the selected enemy units. If one or more enemy units **engaged** with your unit have not been **selected to fight** this phase, your opponent must select each of those units, one at a time; when each is selected, it becomes **eligible to fight** and is **selected to fight** (12.04).\n- Objective Consolidation: Your unit must be within range of the selected **objective**.\n*App note, not rules text: this is the printed Core Rules wording. Wahapedia shows an errata that adds the second sentence of Engaging Consolidation to Ongoing Consolidation, and “must be unengaged and within range” for Objective Consolidation; neither is in the Core Rules PDF (01/06/2026) or the Universal Rules Updates v1.1.*',
+  'Consolidation Move': '**MAXIMUM DISTANCE:** 3"\n**ELIGIBLE IF:** It is the Fight phase and your unit was **eligible to fight** this phase.\n**EFFECT:** Your unit moves as described in Moving (03).\n**BEFORE MOVING:** Select **consolidation mode**:\n- Ongoing Consolidation: If your unit is **engaged**, you must select this mode and select every enemy unit it is **engaged** with.\n- Engaging Consolidation: Otherwise, if your unit is within 3" of one or more enemy units, you must select this mode and select one or more of those enemy units.\n- Objective Consolidation: Otherwise, if your unit is within 3" of one or more **objectives**, you must select this mode and select one of those **objectives**.\n**WHILE MOVING:**\n- Ongoing Consolidation: Models in base-contact with one or more enemy models cannot be moved. Each model that is moved must end its move closer to the closest selected enemy unit, and **engaged** with it if possible.\n- Engaging Consolidation: Each model that is moved must end its move closer to the closest selected enemy unit, and **engaged** with it if possible.\n- Objective Consolidation: Each model that is moved must end its move within range of the selected **objective** if possible, or closer to it if not.\n**AFTER MOVING:**\n- Ongoing Consolidation: Each model that started this move **engaged** with an enemy unit must still be **engaged** with that enemy unit.\n- Engaging Consolidation: Your unit must be **engaged** with all of the selected enemy units. If one or more enemy units **engaged** with your unit have not been **selected to fight** this phase, your opponent must select each of those units, one at a time; when each is selected, it becomes **eligible to fight** and is **selected to fight** (12.04).\n- Objective Consolidation: Your unit must be within range of the selected **objective**.\n*App note, not rules text: this is the printed Core Rules wording. Wahapedia lists an errata that adds the second sentence of Engaging Consolidation to Ongoing Consolidation, and its own text of Objective Consolidation reads “must be unengaged and within range”; neither is in the Core Rules PDF (01/06/2026) or the Universal Rules Updates v1.1.*',
   'Benefit of Cover': 'Each time a ranged attack targets a unit, if every model in that unit meets one or more of the following conditions, that unit has the **benefit of cover** against that attack:\n- That model has the **INFANTRY/BEASTS/SWARM** keyword and is within a **terrain area**.\n- That model is not **fully visible** to the attacking model due to one or more intervening **terrain features** and/or one or more intervening **obscuring terrain areas** (see below).\nEach time a ranged attack targets a unit that has the **benefit of cover** against it, worsen the **BS** characteristic of that attack by 1.',
   'Attached Units': 'Some units have the **Leader** or **Support** ability listed on their datasheet (see below). Such units are known as **leader** units and **support** units respectively. Both of these abilities allow such units to **lead** other friendly units (known as **bodyguard** units) to form **attached** units. An **attached** unit is a single unit for all rules purposes. **Leader** and **support** units can only **lead** specific **bodyguard** units, as listed in the Warhammer 40,000 app.\n**19.04 Abilities in Attached Units:** Abilities/rules that affect a single specified model (e.g. from an **enhancement** or an item of wargear) only ever apply to that model, even while part of an **attached** unit.\nOtherwise, abilities/rules that affect a unit (or models in it) apply to every model in an **attached** unit, until the source of that ability/rule is **destroyed**, as shown below.\nSOURCE OF ABILITY/RULE: APPLIES TO THE ATTACHED UNIT UNTIL\n- Leader/support unit: The last model in that **leader**/**support** unit is **destroyed**.*\n- Bodyguard unit (e.g. from a datasheet ability): The last model in that **bodyguard** unit is **destroyed**.\n- A specific model (e.g. the bearer of an **enhancement** or an item of wargear): That model is **destroyed**.\n* This means **leader**/**support** units continue to benefit from their own ‘while this model is **leading** a unit’ abilities even after their **bodyguard** unit is **destroyed**, provided they started the battle in an **attached** unit.\nIn all of the above cases, if that last model was **destroyed** as the result of an attack, the ability it was conferring upon the **attached** unit applies until the attacking unit has resolved all of its attacks.\n*Wahapedia FAQ: When does a model’s or unit’s ability in an attached unit apply to all models in that unit? A rule that applies to ‘this/that unit’ or ‘models in this/that unit’ applies to all models in an attached unit. Rules that just apply to one model in an attached unit (for example, a rule that grants a model Feel No Pain or Lone Operative) only apply to that model, not to all models in the attached unit.*',
   'Strategic Reserves': 'Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding **FORTIFICATIONS**) to place in **strategic reserves**. Instead of setting up these units on the battlefield during deployment, place them to one side; they are **strategic reserves** units, and will arrive later in the battle.\nUnless otherwise stated, the combined points value of all of your **strategic reserves** units (including those embarked within **TRANSPORTS** that are themselves placed in **strategic reserves**) cannot exceed 50% of your points limit for your battle size.\n**20.01.01 Reserves (app):** The term ‘Reserves’ is the same as strategic reserves.\n**20.02 Repositioned Units:** Some rules allow units to be removed from the battlefield and placed in **strategic reserves** during the battle. Units that use such rules are known as **repositioned** units. In addition to any other rules that apply to such units (such as where they can or cannot arrive), all of the following rules apply to them:\n- If used in the Movement phase, such rules can be used on units that have already moved that phase.\n- A **repositioned** unit that is set up in the same turn in which it made an **advance**, **fall-back** or **disembark move** has still made an **advance**, **fall-back** or **disembark move** that turn.\n- When they are removed from the battlefield, any rules that are affecting such units for a specified duration or under specified circumstances continue to affect them while that duration and/or those circumstances apply.\n**20.03 Arriving from Strategic Reserves:** To arrive on the battlefield, each **strategic reserves** unit must make an **ingress move** (see below). Unless otherwise stated, they can only do so from the second battle round onwards.\nAt the end of the third battle round, unless otherwise stated, all **strategic reserves** units that have not made one or more **ingress moves** are **destroyed**, with the following exceptions:\n- Units embarked within **TRANSPORTS** that have made an **ingress move** during the battle.\n- **Repositioned** units (see opposite).',
@@ -88,7 +88,7 @@ const RULE_ALIASES = [
   [/^(below |at |at or below )?(starting|half)[- ]strength$/i, 'Starting Strength'], [/^towering$/i, 'Plunging Fire'], [/^(select|choosing) weapons?$/i, 'Select Weapons'],
   [/^anti-/i, 'Anti'], [/^blast/i, 'Blast'], [/^cleave/i, 'Cleave'], [/^close-quarters/i, 'Close-quarters'],
   [/^pistol/i, 'Close-quarters'], [/^devastating/i, 'Devastating Wounds'], [/^extra attacks/i, 'Extra Attacks'],
-  [/^hazardous/i, 'Hazardous'], [/^ignores cover/i, 'Ignores Cover'], [/^lethal hits/i, 'Lethal Hits'],
+  [/^hazardous(?!( roll| test)s?$)/i, 'Hazardous'], [/^ignores cover/i, 'Ignores Cover'], [/^lethal hits/i, 'Lethal Hits'],
   [/^precision/i, 'Precision'], [/^rapid fire/i, 'Rapid Fire'], [/^sustained hits/i, 'Sustained Hits'],
   [/^torrent/i, 'Torrent'], [/^twin-linked/i, 'Twin-linked'], [/^assault/i, 'Assault'],
   [/^deep strike/i, 'Deep Strike'], [/^deadly demise/i, 'Deadly Demise'], [/^feel no pain/i, 'Feel No Pain'],
@@ -183,7 +183,7 @@ const FACTIONS = {
         remind:[
           { ph:['movement'], turn:'your', text:'Re-roll advance rolls. Riled up: advancing still lets a unit declare a charge.' },
           { ph:['shooting'], turn:'your', text:'Riled up: ranged attacks have [ASSAULT].' },
-          { ph:['charge'], turn:'your', text:'Riled up: a unit that advanced can still declare a charge.' }
+          { ph:['charge'], turn:'your', text:'A unit that was riled up when it advanced can still declare a charge.' }
         ],
         text:'Friendly **ORKS** units with this ability can:\n- Re-roll **advance rolls**.\n- Become **riled up**, as stated in other rules.\nWhile a unit is **riled up**:\n- That unit has 5+ **InSv**.\n- That unit’s ranged attacks have **[ASSAULT]**.\n- When that unit is selected to make an **advance move**, that **advance move** does not prevent that unit from being **eligible to declare a charge**.' },
       { name:'War Cry', tag:'Once per battle, per army', ph:['command'], turn:'either',
@@ -196,8 +196,8 @@ const FACTIONS = {
     detachments: {
       'brute-bosses': {
         name:'Brute Bosses', dp:1,
-        rule:{ name:'’Ard as Nails', ph:['fight'], turn:'either', needs:{ all:['Warboss'] },
-          def:'WARBOSS destroyed before its unit has fought this phase: on a 3+ (+1 riled up) it stays until the unit has fought',
+        rule:{ name:'’Ard as Nails', ph:['fight'], turn:'either', needs:{ all:['Warboss'] }, ask:'Does it work outside the Fight phase? By the letter a WARBOSS destroyed in any phase before its unit has fought stays on a 3+ until the end of that phase; the app lists it in the Fight phase.',
+          def:'WARBOSS destroyed before its unit has fought this phase: on a 3+ (+1 riled up) it stays until the unit has fought or the phase ends',
           text:'When a friendly **WARBOSS** model is **destroyed**, if this unit has not been **selected to fight** this phase, roll one D6, with +1 to the roll if your unit is **riled up**:\n- On a 3+, do not remove this **WARBOSS** model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this **WARBOSS** model is removed from the battlefield.' },
         enhancements:[
           { name:'Brutal But Kunnin’', pts:30, text:'**WARBOSS** model only. This model’s melee attacks have +1 **D**.' },
@@ -211,7 +211,7 @@ const FACTIONS = {
       },
       'da-big-hunt': {
         name:'Da Big Hunt', dp:1,
-        rule:{ name:'Da Hunt is On', ph:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, needs:{ all:['Beast Snagga'] },
+        rule:{ name:'Da Hunt is On', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, needs:{ all:['Beast Snagga'] },
           // hunter: added to the Hunter profiles, which are only used against MONSTER/VEHICLE units
           mod:{ kind:'all', when:'vs MONSTER/VEHICLE', note:'+1 AP', hunter:{ AP:1 } },
           text:'Friendly **BEAST SNAGGA** units’ attacks that target a **MONSTER/VEHICLE** unit have +1 **AP**.' },
@@ -236,7 +236,7 @@ const FACTIONS = {
       },
       'dread-mob': {
         name:'Dread Mob', dp:1,
-        rule:{ name:'Try Dat Button!', ph:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, needs:{ all:['Walker'], none:['Titanic'] },
+        rule:{ name:'Try Dat Button!', ph:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, ask:'With two D6, is a repeated number re-rolled, or a repeated effect (1 and 2 are both +1 A)? The app assumes you always get two different effects.', needs:{ all:['Walker'], none:['Titanic'] },
           mod:{ kind:'all', when:'Optional D6', note:'1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (2 D6: two effects, then a hazard roll)' },
           text:'In your Shooting phase or the Fight phase, when a friendly **ORKS WALKER** unit (excluding **TITANIC** units) is **selected to attack**, you can use this ability. If you do, roll either one D6 or two D6 (keep re-rolling duplicate results). This unit’s attacks have the relevant rule(s):\nIf you rolled two D6, when this unit has attacked, this unit makes one **hazard roll**.',
           table:[['1–2','+1 **A**'],['3–4','+2 **S**'],['5–6','+1 **AP**']] },
@@ -246,8 +246,8 @@ const FACTIONS = {
         ],
         stratagems:[
           { id:'crazed-rampage', name:'Crazed Rampage', cp:1, phases:['fight'], turn:'either', needs:{ all:['Walker'], none:['Titanic'] },
-            note:'No unit in this list is a DEFF DREAD, so the roll is a plain 4+. (Wahapedia strikes DEFF DREAD through, but Deff Dread units do get the +3: a datasheet name counts as a keyword.) Wahapedia FAQ: Fight on Death rules resolve before Deadly Demise, so Deadly Demise resolves once the models are removed.',
-            def:'Fight phase: a model destroyed before the unit has fought stays to fight on a 4+',
+            note:'No unit in this list is a DEFF DREAD, so the roll is a plain 4+. (Wahapedia strikes DEFF DREAD through as a keyword no Orks datasheet has, but the Deff Dread datasheet does have the DEFF DREAD keyword in BSData, which New Recruit uses, so Deff Dreads get the +3.) Wahapedia FAQ: Fight on Death rules resolve before Deadly Demise, so Deadly Demise resolves once the models are removed.',
+            def:'Fight phase: a model destroyed before the unit has fought stays to fight on a 4+ (removed once the unit has fought or at the end of the phase)',
             when:'Fight phase, when an enemy unit targets a friendly **ORKS WALKER** unit (excluding **TITANIC** units).',
             target:'That **ORKS WALKER** unit.',
             effect:'When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +3 to the result if your unit has ~~**DEFF DREAD**~~:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.' },
@@ -274,8 +274,8 @@ const FACTIONS = {
       { name:'Code Chivalric',
         // short reminders shown in the stratagem phase views (app wording, not rules text)
         remind:[
-          { ph:['movement','charge'], turn:'your', text:'Quality 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls.' },
-          { ph:['shooting','fight'], turn:'either', text:'Quality 1–2 (martial valour): each time a Knight shoots or fights, re-roll one Hit roll and one Wound roll.' }
+          { ph:['movement','charge'], turn:'either', turns:{ movement:'your' }, text:'Quality 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls.' },
+          { ph:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, text:'Quality 1–2 (martial valour): each time a Knight shoots or fights, re-roll one Hit roll and one Wound roll.' }
         ],
         text:'If your Army Faction is **IMPERIAL KNIGHTS**, at the end of the Read Mission Objectives step, you must determine your army’s Oath for the coming battle. An Oath consists of two parts - one Deed and one Quality. There are three options for each part, shown below.\nTo determine your army’s Deed, you can either select one Deed or you can randomly select one Deed by rolling a D6 and consulting the relevant table below. The selected Deed will describe what needs to be achieved in order to complete that Deed.\nTo determine your army’s Quality, you can either select one Quality or you can randomly select one Quality by rolling a D6 and consulting the relevant table below. Until the end of the battle, the ability described in the Quality selected applies to all models in your army with this ability.\nThe first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).',
         table:[
@@ -319,6 +319,7 @@ const FACTIONS = {
           // The pack's Rules Updates entry "Full Tilt Stratagem, Target Section" (PDF p27) is under VALOURSTRIKE LANCE: it is that
           // detachment's 2CP Full Tilt, a different stratagem, so this one's target stays as printed.
           { id:'full-tilt', name:'Full Tilt', cp:1, phases:['movement'], turn:'your', needs:{ all:['Faction: Imperial Knights'] },
+            ask:'Do your Knight Destriers add 9" (the evident intent) or 6" (the letter: their keyword is KNIGHT DESTRIER, the pack says DESTRIER)?',
             note:'GW’s Faction Pack prints DESTRIER as a keyword, but no Imperial Knights datasheet has it: the Knight Destrier’s keyword is KNIGHT DESTRIER (Wahapedia strikes DESTRIER through for this reason). By the letter, your Knight Destriers add 6"; the evident intent is that they add 9". Agree it with your opponent before the game.',
             when:'Your Movement phase.',
             target:'One **IMPERIAL KNIGHTS** unit from your army.',
@@ -349,8 +350,8 @@ const FACTIONS = {
         // short reminder shown in the stratagem phase views (app wording, not rules text)
         remind:[
           { ph:['command'], turn:'either', text:'Start of the battle round: roll 8 D6, activate up to two Blessings.' },
-          { ph:['charge'], turn:'either', text:'Unbridled Bloodlust active? +1 to charge rolls (Battle-lust: +1 more for the Slaughterbound’s unit).' },
-          { ph:['fight'], turn:'either', text:'Active Blessings: Martial Excellence [SUSTAINED HITS 1] · Warp Blades [LETHAL HITS] · Decapitating Strikes [DEVASTATING WOUNDS] vs INFANTRY · Rage-fuelled Invigoration: 6" pile-in and consolidation · Total Carnage: fight on death on a 4+. Archslaughterer used: all six for the Lord’s unit.' }
+          { ph:['charge'], turn:'either', text:'Unbridled Bloodlust active? +1 to charge rolls (Battle-lust: +1 more for the Slaughterbound’s unit). Archslaughterer used: it is active for the Lord’s unit.' },
+          { ph:['fight'], turn:'either', text:'Active Blessings: Martial Excellence [SUSTAINED HITS 1] · Warp Blades [LETHAL HITS] · Decapitating Strikes [DEVASTATING WOUNDS] vs INFANTRY · Rage-fuelled Invigoration: 6" pile-in and consolidation · Total Carnage: a model destroyed by a melee attack before it has fought this phase fights on a 4+. Archslaughterer used: all six for the Lord’s unit.' }
         ],
         // Wahapedia wording; the example's "1,2, 2" typo is written "1, 2, 2"
         text:'If your Army Faction is **WORLD EATERS**, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.\n*Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.*\n*First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.*\n*They then use the two 2s to activate Unbridled Bloodlust.*\n*Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.*',
@@ -370,7 +371,7 @@ const FACTIONS = {
         name:'Berzerker Warband', dp:2,
         // Wahapedia wording (the errata "Change to" text is the same as the main text)
         rule:{ name:'Relentless Rage', ph:['fight'], turn:'either', needs:{ all:['Faction: World Eaters'] },
-          tag:'Already in A', note:'Already counted: every A value in this app includes this +1 A. Do not add it again.',
+          tag:'Already in A', note:'Already counted: every melee A value in this app includes this +1 A. Do not add it again.',
           mod:{ kind:'melee', when:'Always', note:'+1 A, already counted in the A values' },
           text:'Friendly **WORLD EATERS** units’ melee attacks have +1 **A**.' },
         enhancements:[
@@ -412,7 +413,7 @@ const FACTIONS = {
       },
       'vessels-of-wrath': {
         name:'Vessels of Wrath', dp:1,
-        rule:{ name:'Wrath of Khorne', ph:['fight'], turn:'either', needs:{ all:['Character'], none:['Epic Hero'] },
+        rule:{ name:'Wrath of Khorne', ph:['fight'], turn:'either', needs:{ all:['Faction: World Eaters','Character'], none:['Epic Hero'] },
           mod:{ kind:'melee', when:'When selected to fight', note:'CHARACTER models: [CLEAVE 1] or +1 AP' },
           text:'When a friendly **WORLD EATERS CHARACTER** unit (excluding **EPIC HERO** units) is **selected to fight**, that unit’s **CHARACTER** models’ melee attacks can have:\n- **[CLEAVE 1]**.\n- Or: +1 **AP**.' },
         enhancements:[
@@ -420,15 +421,15 @@ const FACTIONS = {
           { name:'Gateways to Glory', pts:10, text:'**WORLD EATERS DAEMON PRINCE** model only. This model has:\n- **MOBILE**.\n- +1 to **charge rolls**.' }
         ],
         stratagems:[
-          { id:'scorn-the-witch', def:'Feel No Pain 4+ against mortal wounds', name:'Scorn the Witch', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Character'], none:['Epic Hero'] },
+          { id:'scorn-the-witch', def:'Feel No Pain 4+ against mortal wounds', name:'Scorn the Witch', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Faction: World Eaters','Character'], none:['Epic Hero'] },
             when:'Any phase, when a friendly **WORLD EATERS CHARACTER** unit (excluding **EPIC HERO** units) suffers a **mortal wound**.',
             target:'That **WORLD EATERS CHARACTER** unit.',
             effect:'Your unit has **Feel No Pain 4+** against **mortal wounds**.' },
-          { id:'aspire-to-infamy', mod:{ kind:'melee', when:'When selected to fight', note:'CHARACTER models +1 A, +2 S' }, name:'Aspire to Infamy', cp:1, phases:['fight'], turn:'either', needs:{ all:['Character'], none:['Epic Hero'] },
+          { id:'aspire-to-infamy', mod:{ kind:'melee', when:'When selected to fight', note:'CHARACTER models +1 A, +2 S' }, name:'Aspire to Infamy', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: World Eaters','Character'], none:['Epic Hero'] },
             when:'Fight phase, when a friendly **WORLD EATERS CHARACTER** unit (excluding **EPIC HERO** units) is **selected to fight**.',
             target:'That **WORLD EATERS CHARACTER** unit.',
             effect:'Your unit’s **CHARACTER** models’ melee attacks have:\n- +1 **A**.\n- +2 **S**.' },
-          { id:'punish-the-craven', name:'Punish the Craven', cp:1, phases:['movement'], turn:'opp', needs:{ all:['Character'] },
+          { id:'punish-the-craven', name:'Punish the Craven', cp:1, phases:['movement'], turn:'opp', needs:{ all:['Faction: World Eaters','Character'] },
             when:'Your opponent’s Movement phase, when a unit is selected to make a **fall-back move**, if that unit is **engaged** with a friendly **WORLD EATERS CHARACTER** unit.',
             target:'That **WORLD EATERS CHARACTER** unit.',
             effect:'When an enemy unit **engaged** with your unit is selected to make a **fall-back move**, that enemy unit must use the **desperate escape** mode. If that enemy unit is **battle-shocked**, -1 from those **hazard rolls**.' }
@@ -463,7 +464,7 @@ const FACTIONS = {
         // rule, enhancements and stratagems: Wahapedia, Thousand Sons, Grand Coven
         // needs: the units with Psychic weapons (every one of them is a PSYKER unit)
         rule:{ name:'Kindred Sorcery', ph:['command'], turn:'your', needs:{ all:['Faction: Thousand Sons','Psyker'] },
-          mod:{ kind:'all', when:'Kindred Sorcery (one ability, picked in your Command phase)', note:'Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]' },
+          mod:{ kind:'all', when:'Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle)', note:'Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]' },
           text:'In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.',
           table:[
             ['Imbued Manifestation', 'Add 6" to the Range characteristic of ranged Psychic weapons equipped by **THOUSAND SONS** models from your army.'],
@@ -518,7 +519,7 @@ const FACTIONS = {
     aliases: [[/^synapse range$/i, 'Synapse']],
     armyRules: [
       // Wahapedia wording (the errata "Change to" text has the same words, without the bold)
-      { name:'Synapse',
+      { name:'Synapse', ask:'Is a SYNAPSE unit within its own Synapse Range? The rule says “within 6" of one or more friendly SYNAPSE models”; the app shows the +1 S and the 3D6 Battle-shock tests as conditional.',
         // short reminders shown in the stratagem phase views (app wording, not rules text)
         remind:[
           { ph:['command'], turn:'either', text:'Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.' },
@@ -536,7 +537,7 @@ const FACTIONS = {
       'crusher-stampede': {
         name:'Crusher Stampede', dp:2,
         // Wahapedia wording (the errata "Change to" text has the same words, without the bold)
-        rule:{ name:'Enraged Behemoths', ph:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, needs:{ all:['Faction: Tyranids','Monster'] },
+        rule:{ name:'Enraged Behemoths', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, needs:{ all:['Faction: Tyranids','Monster'] },
           mod:{ kind:'all', when:'Below Starting Strength', note:'+1 to hit rolls; also +1 to wound rolls if Below Half-strength',
             single:{ when:'Lost any wounds (below Starting Strength)', note:'+1 to hit rolls; also +1 to wound rolls at {half} or fewer wounds left' } },
           statNote:{ text:'OC {OC+2} while at Starting Strength, unless Battle-shocked', single:'OC {OC+2} while it has lost no wounds, unless Battle-shocked' },
@@ -661,7 +662,7 @@ const ARMIES = [
         { name:'Supreme Commander', text:'If this model is in your army, it must be your **WARLORD**.' },
         { name:'Makari, Hoist Dat Banner!', tag:'Once per battle, per army', ph:['movement'], turn:'your',
           text:'In your Movement phase, you can select a number of friendly **ORKS** units equal to or less than the current battle round number. Those units are **riled up** until the start of your next turn.\n*Place one Makari token next to the unit, removing it after this ability is used.*' },
-        { name:'Da Grand Warlord’s Ladz', def:'Lone Operative while within 3" of another ORKS INFANTRY unit', text:'While this unit is within 3" of another friendly **ORKS INFANTRY** unit, this unit has **Lone Operative**.' },
+        { name:'Da Grand Warlord’s Ladz', def:'Lone Operative while within 3" of another friendly ORKS INFANTRY unit', text:'While this unit is within 3" of another friendly **ORKS INFANTRY** unit, this unit has **Lone Operative**.' },
         { name:'Prophet of Da Great Waaagh!', tag:'Aura', ph:['fight'], turn:'either',
           text:'While a friendly **ORKS** unit is within 6" of this unit, that unit’s melee attacks have:\n- +1 to **hit rolls**.\n- +1 to **wound rolls**.' }
       ],
@@ -684,8 +685,8 @@ const ARMIES = [
         { group:'Gutrippa', name:'Standard', range:'Melee', A:'6', WS:'2+', S:'9', AP:'-2', D:'2', kw:['CLEAVE 1'] }
       ],
       abilities:[
-        { name:'Beast Snagga Following', na:'Every BEAST SNAGGA unit in this list is a MONSTER CHARACTER', def:'Lone Operative while within 3" of a BEAST SNAGGA unit (not MONSTER CHARACTER)', text:'While this unit is within 3" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**.' },
-        { name:'One Last Kill', ph:['fight'], turn:'either', defPh:['fight'], def:'Destroyed in the Fight phase before fighting: on a 2+ it stays until it has fought',
+        { name:'Beast Snagga Following', na:'Every BEAST SNAGGA unit in this list is a MONSTER CHARACTER', def:'Lone Operative while within 3" of a friendly BEAST SNAGGA unit (not MONSTER CHARACTER)', text:'While this unit is within 3" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**.' },
+        { name:'One Last Kill', ph:['fight'], turn:'either', defPh:['fight'], def:'Destroyed in the Fight phase before fighting: on a 2+ it stays until it has fought or the phase ends',
           text:'In the Fight phase, when this model is **destroyed**, if this unit has not been **selected to fight** this phase, roll one D6:\n- On a 2+, do not remove this model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield.' },
         { name:'Da Bigger Dey Iz…', ph:['fight'], turn:'either',
           text:'This unit’s melee attacks that target a **MONSTER/VEHICLE** unit can re-roll **wound rolls**.' }
@@ -752,7 +753,7 @@ const ARMIES = [
       boostNote:'Melee D already includes +1 from Brutal But Kunnin’.',
       abilities:[
         { name:'Thundering Stampede', tag:'Aura', ph:['charge'], turn:'either', text:'Friendly **BEAST SNAGGA** units within 6" of this unit have +1 to **charge rolls**.' },
-        { name:'Boss of da Hunt', na:'Every BEAST SNAGGA unit in this list is a MONSTER CHARACTER', def:'Lone Operative while within 3" of a BEAST SNAGGA unit (not MONSTER CHARACTER)', text:'While this unit is within 3" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**.' },
+        { name:'Boss of da Hunt', na:'Every BEAST SNAGGA unit in this list is a MONSTER CHARACTER', def:'Lone Operative while within 3" of a friendly BEAST SNAGGA unit (not MONSTER CHARACTER)', text:'While this unit is within 3" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**.' },
         { name:'Keep Huntin’!', tag:'Once per battle round, per army', ph:['movement'], turn:'your',
           text:'In your Movement phase, at the start or end of this unit’s move, you can select one friendly **BEAST SNAGGA** unit within 6" of this unit. That unit:\n- Is no longer **battle-shocked**.\n- Is **riled up** until the start of your next turn.' },
         { name:'Brutal But Kunnin’', tag:'Enhancement', text:'**WARBOSS** model only. This model’s melee attacks have +1 **D**.' }
@@ -775,7 +776,7 @@ const ARMIES = [
       ],
       abilities:[
         { name:'Thundering Stampede', tag:'Aura', ph:['charge'], turn:'either', text:'Friendly **BEAST SNAGGA** units within 6" of this unit have +1 to **charge rolls**.' },
-        { name:'Boss of da Hunt', na:'Every BEAST SNAGGA unit in this list is a MONSTER CHARACTER', def:'Lone Operative while within 3" of a BEAST SNAGGA unit (not MONSTER CHARACTER)', text:'While this unit is within 3" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**.' },
+        { name:'Boss of da Hunt', na:'Every BEAST SNAGGA unit in this list is a MONSTER CHARACTER', def:'Lone Operative while within 3" of a friendly BEAST SNAGGA unit (not MONSTER CHARACTER)', text:'While this unit is within 3" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**.' },
         { name:'Keep Huntin’!', tag:'Once per battle round, per army', ph:['movement'], turn:'your',
           text:'In your Movement phase, at the start or end of this unit’s move, you can select one friendly **BEAST SNAGGA** unit within 6" of this unit. That unit:\n- Is no longer **battle-shocked**.\n- Is **riled up** until the start of your next turn.' }
       ],
@@ -795,7 +796,7 @@ const ARMIES = [
         { name:'Stompy Feet', range:'Melee', A:'4', WS:'3+', S:'6', AP:'-1', D:'1', kw:[] }
       ],
       abilities:[
-        { name:'Even More Dakka', ph:['shooting'], turn:'your', text:'If this unit is **riled up**, this unit’s ranged attacks have **[SUSTAINED HITS 1]**.' },
+        { name:'Even More Dakka', ph:['movement','shooting'], turn:'your', turns:{ movement:'opp' }, text:'If this unit is **riled up**, this unit’s ranged attacks have **[SUSTAINED HITS 1]**.' },
         { name:'Blitz Dem Gitz!', ph:['shooting'], turn:'your', text:'In your Shooting phase, if this unit’s Blitzkannon weapon targets a unit (excluding **MONSTER/VEHICLE** units), that weapon has +6 **A**.' },
         { name:'Cybork Boosta', tag:'Enhancement', text:'**BIG MEK/MEK** model only. This model has +2" **M**.' }
       ],
@@ -819,9 +820,9 @@ const ARMIES = [
         { name:'Stompy Feet', range:'Melee', A:'4', WS:'3+', S:'6', AP:'-1', D:'1', kw:[] }
       ],
       abilities:[
-        { name:'Even More Dakka', ph:['shooting'], turn:'your', text:'If this unit is **riled up**, this unit’s ranged attacks have **[SUSTAINED HITS 1]**.' },
+        { name:'Even More Dakka', ph:['movement','shooting'], turn:'your', turns:{ movement:'opp' }, text:'If this unit is **riled up**, this unit’s ranged attacks have **[SUSTAINED HITS 1]**.' },
         { name:'Blitz Dem Gitz!', ph:['shooting'], turn:'your', text:'In your Shooting phase, if this unit’s Blitzkannon weapon targets a unit (excluding **MONSTER/VEHICLE** units), that weapon has +6 **A**.' },
-        { name:'Dreadherder', tag:'Enhancement', ph:['shooting'], turn:'your', def:'Lone Operative while within 3" of an ORKS WALKER unit (not BIG MEK)',
+        { name:'Dreadherder', tag:'Enhancement', ph:['shooting'], turn:'your', ask:'Can the Dakkarig pick its own unit for the re-roll of 1s? The rule says “one friendly ORKS WALKER unit within 3" of this model”; the app assumes another unit.', def:'Lone Operative while within 3" of a friendly ORKS WALKER unit (not BIG MEK)',
           text:'**BIG MEK** model only. While this model is within 3" of a friendly **ORKS WALKER** unit (excluding **BIG MEK** units):\n- This model has **Lone Operative**.\n- In your Shooting phase, you can select one friendly **ORKS WALKER** unit within 3" of this model. That unit’s attacks can re-roll **hit rolls** of 1 until the end of the turn.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
@@ -1086,7 +1087,7 @@ const ARMIES = [
           text:'While this model is leading a unit, each time a model in that unit makes a melee attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.' },
         { name:'The Betrayer', who:'Khârn the Betrayer', ph:['charge'], turn:'your',
           text:'At the end of your Charge phase, if this unit is on the battlefield, is **unengaged**, and contains a **bodyguard** model, this unit makes a **leadership roll**:\n- If that **leadership roll** is failed, one **bodyguard** model in this unit is **destroyed**.' },
-        { name:'Berserker Frenzy', who:'Khârn the Betrayer', def:'Khârn: the first time he is destroyed, on a 2+ he is set back up with 3 wounds at the end of the phase',
+        { name:'Berserker Frenzy', who:'Khârn the Betrayer', def:'Khârn: the first time he is destroyed, at the end of the phase on a 2+ he is set back up with 3 wounds, as close as possible to where he was destroyed and not within Engagement Range of enemy units',
           text:'The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.' },
         { name:'Blood Surge', who:'Khorne Berzerkers', ph:['shooting'], turn:'opp',
           text:'In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6+2".' },
@@ -1117,11 +1118,11 @@ const ARMIES = [
         { group:'Hellforged weapons', name:'sweep', range:'Melee', A:'17', WS:'2+', S:'6', AP:'-1', D:'1', kw:[] }
       ],
       abilities:[
-        { name:'Lord of Murder', def:'Lone Operative while within 3" of a WORLD EATERS INFANTRY unit',
+        { name:'Lord of Murder', def:'Lone Operative while within 3" of a friendly WORLD EATERS INFANTRY unit',
           text:'While this model is within 3" of one or more friendly **WORLD EATERS INFANTRY** units, this model has the **Lone Operative** ability.' },
         { name:'Devastating Assault', ph:['charge','fight'], turn:'either',
           text:'Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the **[DEVASTATING WOUNDS]** ability.' },
-        { name:'Direct the Slaughter', tag:'Once per battle round', ph:['command','movement','shooting','charge','fight'], turn:'either',
+        { name:'Direct the Slaughter', tag:'Once per battle round, per army', ph:['command','movement','shooting','charge','fight'], turn:'either',
           text:'Once per battle round, one model from your army with this ability can use it when a friendly **WORLD EATERS** unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.' },
         { name:'Helm of Brazen Ire', tag:'Enhancement', def:'-1 D to each attack allocated to this model',
           text:'**WORLD EATERS** model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack.' }
@@ -1146,11 +1147,11 @@ const ARMIES = [
       ],
       boostNote:'Hellforged weapons A and D already include +1 from Berzerker Glaive.',
       abilities:[
-        { name:'Lord of Murder', def:'Lone Operative while within 3" of a WORLD EATERS INFANTRY unit',
+        { name:'Lord of Murder', def:'Lone Operative while within 3" of a friendly WORLD EATERS INFANTRY unit',
           text:'While this model is within 3" of one or more friendly **WORLD EATERS INFANTRY** units, this model has the **Lone Operative** ability.' },
         { name:'Devastating Assault', ph:['charge','fight'], turn:'either',
           text:'Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the **[DEVASTATING WOUNDS]** ability.' },
-        { name:'Direct the Slaughter', tag:'Once per battle round', ph:['command','movement','shooting','charge','fight'], turn:'either',
+        { name:'Direct the Slaughter', tag:'Once per battle round, per army', ph:['command','movement','shooting','charge','fight'], turn:'either',
           text:'Once per battle round, one model from your army with this ability can use it when a friendly **WORLD EATERS** unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.' },
         { name:'Berzerker Glaive', tag:'Enhancement',
           text:'**WORLD EATERS** model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.' }
@@ -1186,7 +1187,7 @@ const ARMIES = [
         { name:'Khornate eviscerator', who:'Khorne Berzerkers', n:4, range:'Melee', A:'4', WS:'3+', S:'8', AP:'-2', D:'2', kw:[] }
       ],
       abilities:[
-        { name:'Aggressive Advance', who:'Lord on Juggernaut', ph:['movement','charge'], turn:'your',
+        { name:'Aggressive Advance', who:'Lord on Juggernaut', ph:['movement','charge'], turn:'your', turns:{ charge:'either' },
           text:'While this model is leading a unit, models in that unit have a Move characteristic of 10" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features.' },
         { name:'Crush All Who Stand Before Us', who:'Lord on Juggernaut', ph:['fight'], turn:'either',
           text:'Each time this model’s unit is selected to fight, you can use this ability. When determining which models in this unit are eligible to fight, any models in it that are within 3" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3" of them and within Engagement Range of their unit.' },
@@ -1196,7 +1197,7 @@ const ARMIES = [
           text:'In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6+2".' },
         { name:'Murderous Charge', who:'Khorne Berzerkers', ph:['fight'], turn:'either',
           text:'If this unit made a charge move this turn, this unit’s melee attacks have +1 S.' },
-        { name:'Icon of Khorne', who:'Khorne Berzerkers', ph:['command'], turn:'either',
+        { name:'Icon of Khorne', who:'Khorne Berzerkers', ph:['command','shooting','fight'], turn:'either', turns:{ shooting:'your' },
           text:'If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
@@ -1380,7 +1381,7 @@ const ARMIES = [
       abilities:[
         { name:'Aetherstride', tag:'Psychic', ph:['movement'], turn:'your', keep:true,
           text:'In your Movement phase, when this model is set up on the battlefield using the **Deep Strike** ability, it can perform an aetherstride. If it does:\n- It can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units.\n- Until the end of the turn, its Dark Blessing has the **[SUSTAINED HITS D3]** ability.\n- Until the end of the turn, it is not eligible to declare a charge.' },
-        { name:'Hunter of Souls', ph:['shooting','fight'], turn:'either', keep:true, turns:{ shooting:'your' },
+        { name:'Hunter of Souls', ph:['movement','shooting','fight'], turn:'either', keep:true, turns:{ movement:'opp', shooting:'your' },
           text:'Each time this model makes an attack that targets a **CHARACTER** unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a **PSYKER CHARACTER** unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a **CHARACTER** unit, this model regains up to D3 lost wounds (if that **CHARACTER** unit was a **PSYKER**, this model regains up to 3 lost wounds instead).' },
         { name:'Eldritch Vortex of E’taph', tag:'Enhancement',
           text:'**THOUSAND SONS** model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.' }
@@ -1402,7 +1403,7 @@ const ARMIES = [
         { name:'Rubric Marine ×4', M:'6"', T:'5', Sv:'3+', W:'2', Ld:'7+', OC:'2', InSv:'5+', base:'32mm' },
         { name:'Aspiring Sorcerer', M:'6"', T:'5', Sv:'3+', W:'3', Ld:'6+', OC:'2', InSv:'5+', base:'32mm' }
       ],
-      boostNote:'[LETHAL HITS] on every weapon comes from Empyric Guidance (while the Sorcerer leads); [IGNORES COVER] on the Rubric Marines’ guns comes from the Icon of Flame.',
+      boostNote:'[LETHAL HITS] on every weapon comes from Empyric Guidance (while the Sorcerer leads); [IGNORES COVER] on Malefic Curse and the soulreaper cannon comes from the Icon of Flame (the warpflamers and warpflame pistol have it on their own profile).',
       ranged:[
         { name:'Inferno bolt pistol', who:'Sorcerer', range:'12"', A:'1', BS:'3+', S:'5', AP:'-2', D:'1', kw:['PISTOL','LETHAL HITS'] },
         { name:'Pandaemonic Delusion', who:'Sorcerer', range:'24"', A:'6', BS:'3+', S:'5', AP:'-1', D:'1', kw:['PSYCHIC','SUSTAINED HITS 3','LETHAL HITS'] },
@@ -1422,14 +1423,14 @@ const ARMIES = [
           text:'Once per battle, in your Shooting phase or the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristic of Psychic weapons equipped by this model by 3.' },
         { name:'Empyric Guidance', who:'Sorcerer', tag:'Psychic',
           text:'While this model is leading a unit, weapons equipped by models in that unit have the **[LETHAL HITS]** ability.' },
-        { name:'Bringers of Change', who:'Rubric Marines', ph:['shooting'], turn:'your',
+        { name:'Bringers of Change', who:'Rubric Marines', ph:['movement','shooting'], turn:'your', turns:{ movement:'opp' },
           text:'Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead.' },
         { name:'Icon of Flame', who:'Rubric Marines',
           text:'Ranged weapons equipped by models in the bearer’s unit (excluding **CHARACTERS**) have the **[IGNORES COVER]** ability.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
-        { kind:'all', who:'Sorcerer', when:'Twisted Sorceries used this phase (once per battle)', note:'Psychic weapons +3 S and +3 A', from:'Twisted Sorceries' },
+        { kind:'all', who:'Sorcerer', when:'Twisted Sorceries used this phase (your Shooting phase or the Fight phase, once per battle)', note:'Psychic weapons +3 S and +3 A', from:'Twisted Sorceries' },
         // "this unit" is the whole attached unit, the Sorcerer included
         { kind:'ranged', when:'Every ranged attack', note:'re-roll wound rolls of 1 (vs a unit within range of an objective marker you do not control: re-roll the wound roll)', from:'Bringers of Change' }
       ],
@@ -1528,7 +1529,7 @@ const ARMIES = [
     },
     {
       id:'defiler', name:'Defiler', role:'Vehicle', pts:330,
-      models:['1× Defiler'], gear:[['Ectoplasma destructor','Heavy reaper autocannon','Shearing claws','Excruciator cannon']],
+      models:['1× Defiler'], gear:[['Ectoplasma destructor','Heavy reaper autocannon','Heavy reaper autocannon','Shearing claws','Excruciator cannon']],
       stats:[{ name:'Defiler', M:'12"', T:'11', Sv:'3+', W:'18', Ld:'6+', OC:'5', InSv:'5+', base:'160mm' }],
       ranged:[
         { name:'Ectoplasma destructor', range:'36"', A:'D6', BS:'3+', S:'12', AP:'-3', D:'3', kw:['BLAST'] },
@@ -1540,7 +1541,7 @@ const ARMIES = [
         { group:'Shearing claws', name:'sweep', range:'Melee', A:'10', WS:'3+', S:'6', AP:'-2', D:'1', kw:[] }
       ],
       abilities:[
-        { name:'Scuttling Walker', ph:['movement'], turn:'your',
+        { name:'Scuttling Walker', ph:['movement','shooting'], turn:'your',
           text:'Each time this unit makes a Normal, Advance or Fall Back move, it can move through models (excluding **TITANIC** models) and terrain features. When doing so, it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.' },
         { name:'Destroyer of Futures', tag:'Once per phase, per unit', ph:['fight'], turn:'opp',
           text:'You can target this unit with the Counteroffensive stratagem, regardless of any other uses of that stratagem this phase. If you do:\n- That use is -1 CP.\n- That use does not prevent any uses of that stratagem on other units this phase.' },
@@ -1600,7 +1601,7 @@ const ARMIES = [
         { name:'Monstrous scything talons', range:'Melee', A:'4', WS:'2+', S:'7', AP:'-2', D:'2', kw:['EXTRA ATTACKS'] }
       ],
       abilities:[
-        { name:'Onslaught', tag:'Aura, Psychic', ph:['movement','shooting'], turn:'your',
+        { name:'Onslaught', tag:'Aura, Psychic', ph:['movement','shooting'], turn:'either', turns:{ shooting:'your' },
           text:'While a friendly **TYRANIDS** unit is within 6" of this model, ranged weapons equipped by models in that unit have the **[ASSAULT]** and **[LETHAL HITS]** abilities.' },
         { name:'Will of the Hive Mind', ph:['command','movement','shooting','charge','fight'], turn:'either',
           text:'Once per battle round, one model from your army with this ability can use it when a friendly **TYRANIDS** unit within 12" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.' },

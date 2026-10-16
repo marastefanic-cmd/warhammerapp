@@ -1,0 +1,1762 @@
+[
+ {
+  "army": "cooking",
+  "kind": "ability-timing",
+  "where": "cooking · Ghazghkull Thraka · Makari, Hoist Dat Banner!",
+  "judgement": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Makari, Hoist Dat Banner!",
+   "text": "In your Movement phase, you can select a number of friendly **ORKS** units equal to or less than the current battle round number. Those units are **riled up** until the start of your next turn.\n*Place one Makari token next to the unit, removing it after this ability is used.*"
+  },
+  "key": "0da5a6fc316d3991"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-tag",
+  "where": "cooking · Ghazghkull Thraka · Makari, Hoist Dat Banner!",
+  "judgement": {
+   "tag": "Once per battle, per army"
+  },
+  "source": {
+   "ability": "Makari, Hoist Dat Banner!",
+   "text": "In your Movement phase, you can select a number of friendly **ORKS** units equal to or less than the current battle round number. Those units are **riled up** until the start of your next turn.\n*Place one Makari token next to the unit, removing it after this ability is used.*"
+  },
+  "key": "8e89f9663256daee"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-def",
+  "where": "cooking · Ghazghkull Thraka · Da Grand Warlord’s Ladz",
+  "judgement": {
+   "def": "Lone Operative while within 3\" of another ORKS INFANTRY unit"
+  },
+  "source": {
+   "ability": "Da Grand Warlord’s Ladz",
+   "text": "While this unit is within 3\" of another friendly **ORKS INFANTRY** unit, this unit has **Lone Operative**."
+  },
+  "key": "49c3c54ab0502889"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-timing",
+  "where": "cooking · Ghazghkull Thraka · Prophet of Da Great Waaagh!",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Prophet of Da Great Waaagh!",
+   "text": "While a friendly **ORKS** unit is within 6\" of this unit, that unit’s melee attacks have:\n- +1 to **hit rolls**.\n- +1 to **wound rolls**."
+  },
+  "key": "5893021178d0cfc9"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-tag",
+  "where": "cooking · Ghazghkull Thraka · Prophet of Da Great Waaagh!",
+  "judgement": {
+   "tag": "Aura"
+  },
+  "source": {
+   "ability": "Prophet of Da Great Waaagh!",
+   "text": "While a friendly **ORKS** unit is within 6\" of this unit, that unit’s melee attacks have:\n- +1 to **hit rolls**.\n- +1 to **wound rolls**."
+  },
+  "key": "b9b4ccab1296b7b1"
+ },
+ {
+  "army": "cooking",
+  "kind": "unit-aura",
+  "where": "cooking · Ghazghkull Thraka",
+  "judgement": {
+   "kind": "melee",
+   "needs": {
+    "all": [
+     "Faction: Orks"
+    ]
+   },
+   "when": "Within 6\" of Ghazghkull",
+   "selfWhen": "Own aura",
+   "note": "+1 to hit, +1 to wound",
+   "from": "Prophet of Da Great Waaagh!"
+  },
+  "source": {
+   "ability": "Prophet of Da Great Waaagh!",
+   "text": "While a friendly **ORKS** unit is within 6\" of this unit, that unit’s melee attacks have:\n- +1 to **hit rolls**.\n- +1 to **wound rolls**."
+  },
+  "key": "0afa9cadc3bcda56"
+ },
+ {
+  "army": "cooking",
+  "kind": "unit-weapons",
+  "where": "cooking · Ghazghkull Thraka",
+  "judgement": {
+   "gear": [
+    [
+     "Adamantine ’Eadbutt",
+     "Gork’s Klaw",
+     "Mork’s Roar"
+    ]
+   ],
+   "weapons": [
+    "Mork’s Roar · Point Blank",
+    "Mork’s Roar · Aimed",
+    "Adamantine ’Eadbutt",
+    "Gork’s Klaw"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Ghazghkull Thraka"
+   ],
+   "leads": null
+  },
+  "key": "ffa43a43f77473b0"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-def",
+  "where": "cooking · Mozrog Skragbad · Beast Snagga Following",
+  "judgement": {
+   "def": "Lone Operative while within 3\" of a BEAST SNAGGA unit (not MONSTER CHARACTER)"
+  },
+  "source": {
+   "ability": "Beast Snagga Following",
+   "text": "While this unit is within 3\" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**."
+  },
+  "key": "66b5cef05cda4945"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-na",
+  "where": "cooking · Mozrog Skragbad · Beast Snagga Following",
+  "judgement": {
+   "na": "Every BEAST SNAGGA unit in this list is a MONSTER CHARACTER",
+   "armyUnits": [
+    "Ghazghkull Thraka [Character, Epic Hero, Explosives, Faction: Orks, Ghazghkull Thraka, Infantry, Warboss, Warlord]",
+    "Mozrog Skragbad [Beast Snagga, Character, Epic Hero, Faction: Orks, Monster, Mozrog Skragbad]",
+    "Nazdreg [Character, Epic Hero, Faction: Orks, Infantry, Mega Armour, Nazdreg, Warboss, Explosives, Meganobz]",
+    "Beastboss on Squigosaur [Beast Snagga, Beastboss on Squigosaur, Character, Faction: Orks, Monster, Warboss]",
+    "Beastboss on Squigosaur [Beast Snagga, Beastboss on Squigosaur, Character, Faction: Orks, Monster, Warboss]",
+    "Big Mek Dakkarig [Big Mek, Big Mek Dakkarig, Character, Faction: Orks, Vehicle, Walker]",
+    "Big Mek Dakkarig [Big Mek, Big Mek Dakkarig, Character, Faction: Orks, Vehicle, Walker]",
+    "Gretchin [Faction: Orks, Gretchin, Grots, Infantry]",
+    "Deffkoptas [Deffkoptas, Explosives, Faction: Orks, Fly, Mounted, Speed Freeks]",
+    "Killa Kans [Faction: Orks, Grots, Killa Kans, Vehicle, Walker]"
+   ]
+  },
+  "source": {
+   "ability": "Beast Snagga Following",
+   "text": "While this unit is within 3\" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**."
+  },
+  "key": "a60588c563fe9ec9"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-timing",
+  "where": "cooking · Mozrog Skragbad · One Last Kill",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "One Last Kill",
+   "text": "In the Fight phase, when this model is **destroyed**, if this unit has not been **selected to fight** this phase, roll one D6:\n- On a 2+, do not remove this model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield."
+  },
+  "key": "e686b1f8e6a41732"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-def",
+  "where": "cooking · Mozrog Skragbad · One Last Kill",
+  "judgement": {
+   "def": "Destroyed in the Fight phase before fighting: on a 2+ it stays until it has fought",
+   "defPh": [
+    "fight"
+   ]
+  },
+  "source": {
+   "ability": "One Last Kill",
+   "text": "In the Fight phase, when this model is **destroyed**, if this unit has not been **selected to fight** this phase, roll one D6:\n- On a 2+, do not remove this model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield."
+  },
+  "key": "f03b5e1267b49b87"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-timing",
+  "where": "cooking · Mozrog Skragbad · Da Bigger Dey Iz…",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Da Bigger Dey Iz…",
+   "text": "This unit’s melee attacks that target a **MONSTER/VEHICLE** unit can re-roll **wound rolls**."
+  },
+  "key": "3888f74cfb047c1b"
+ },
+ {
+  "army": "cooking",
+  "kind": "unit-footnote",
+  "where": "cooking · Mozrog Skragbad",
+  "judgement": {
+   "kind": "melee",
+   "when": "vs MONSTER/VEHICLE",
+   "note": "re-roll wound rolls",
+   "from": "Da Bigger Dey Iz…"
+  },
+  "source": {
+   "ability": "Da Bigger Dey Iz…",
+   "text": "This unit’s melee attacks that target a **MONSTER/VEHICLE** unit can re-roll **wound rolls**."
+  },
+  "key": "5ac1fd5e9c594823"
+ },
+ {
+  "army": "cooking",
+  "kind": "unit-weapons",
+  "where": "cooking · Mozrog Skragbad",
+  "judgement": {
+   "gear": [
+    [
+     "Big Chompa’s Jaws",
+     "Gutrippa",
+     "Thump Gun"
+    ]
+   ],
+   "weapons": [
+    "Thump Gun",
+    "Big Chompa’s Jaws",
+    "Gutrippa · Hunter",
+    "Gutrippa · Standard"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Mozrog Skragbad"
+   ],
+   "leads": null
+  },
+  "key": "b67b8ee603e5076d"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-who",
+  "where": "cooking · Nazdreg · Nazdreg’s Know-wotz",
+  "judgement": {
+   "who": "Nazdreg",
+   "models": [
+    "1× Nazdreg",
+    "3× Meganob w/ Kombi-weapon and Killsaw",
+    "2× Meganob w/ Kombi-weapon and Power Klaw"
+   ]
+  },
+  "source": {
+   "ability": "Nazdreg’s Know-wotz",
+   "text": "- This unit has **Deep Strike**.\n- This unit’s ranged attacks have **[IGNORES COVER]**."
+  },
+  "key": "4208391c8b797673"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-timing",
+  "where": "cooking · Nazdreg · Supreme Kunnin’",
+  "judgement": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
+  },
+  "source": {
+   "ability": "Supreme Kunnin’",
+   "text": "In your opponent’s Movement phase, when an enemy unit ends a move within 8\" of this unit, if this unit is **unengaged**, this unit can:\n- Make a **normal move** of up to D6\".\n- Or: If this unit is **riled up**, make a **normal move** of up to 5\"."
+  },
+  "key": "d49d608879417e1d"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-tag",
+  "where": "cooking · Nazdreg · Supreme Kunnin’",
+  "judgement": {
+   "tag": "Once per phase, per army"
+  },
+  "source": {
+   "ability": "Supreme Kunnin’",
+   "text": "In your opponent’s Movement phase, when an enemy unit ends a move within 8\" of this unit, if this unit is **unengaged**, this unit can:\n- Make a **normal move** of up to D6\".\n- Or: If this unit is **riled up**, make a **normal move** of up to 5\"."
+  },
+  "key": "bb65b1a5937be342"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-who",
+  "where": "cooking · Nazdreg · Supreme Kunnin’",
+  "judgement": {
+   "who": "Nazdreg",
+   "models": [
+    "1× Nazdreg",
+    "3× Meganob w/ Kombi-weapon and Killsaw",
+    "2× Meganob w/ Kombi-weapon and Power Klaw"
+   ]
+  },
+  "source": {
+   "ability": "Supreme Kunnin’",
+   "text": "In your opponent’s Movement phase, when an enemy unit ends a move within 8\" of this unit, if this unit is **unengaged**, this unit can:\n- Make a **normal move** of up to D6\".\n- Or: If this unit is **riled up**, make a **normal move** of up to 5\"."
+  },
+  "key": "06254bc8d1d4ce75"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-timing",
+  "where": "cooking · Nazdreg · Intimidating Motivation",
+  "judgement": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Intimidating Motivation",
+   "text": "In your Movement phase, at the start or end of this unit’s move, you can select one friendly **ORKS** unit within 6\" of this unit. That unit:\n- Is no longer **battle-shocked**.\n- Is **riled up** until the start of your next turn."
+  },
+  "key": "21667ffc1decfa1c"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-tag",
+  "where": "cooking · Nazdreg · Intimidating Motivation",
+  "judgement": {
+   "tag": "Once per battle round, per army"
+  },
+  "source": {
+   "ability": "Intimidating Motivation",
+   "text": "In your Movement phase, at the start or end of this unit’s move, you can select one friendly **ORKS** unit within 6\" of this unit. That unit:\n- Is no longer **battle-shocked**.\n- Is **riled up** until the start of your next turn."
+  },
+  "key": "4966e148aec2307f"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-who",
+  "where": "cooking · Nazdreg · Intimidating Motivation",
+  "judgement": {
+   "who": "Nazdreg",
+   "models": [
+    "1× Nazdreg",
+    "3× Meganob w/ Kombi-weapon and Killsaw",
+    "2× Meganob w/ Kombi-weapon and Power Klaw"
+   ]
+  },
+  "source": {
+   "ability": "Intimidating Motivation",
+   "text": "In your Movement phase, at the start or end of this unit’s move, you can select one friendly **ORKS** unit within 6\" of this unit. That unit:\n- Is no longer **battle-shocked**.\n- Is **riled up** until the start of your next turn."
+  },
+  "key": "13c13ff0ed8da907"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-timing",
+  "where": "cooking · Nazdreg · Krumpin’ Time",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Krumpin’ Time",
+   "text": "In the Fight phase, if this unit is **riled up**, this unit has +1 to **hit rolls**."
+  },
+  "key": "afbdb042f0da43a9"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-who",
+  "where": "cooking · Nazdreg · Krumpin’ Time",
+  "judgement": {
+   "who": "Meganobz",
+   "models": [
+    "1× Nazdreg",
+    "3× Meganob w/ Kombi-weapon and Killsaw",
+    "2× Meganob w/ Kombi-weapon and Power Klaw"
+   ]
+  },
+  "source": {
+   "ability": "Krumpin’ Time",
+   "text": "In the Fight phase, if this unit is **riled up**, this unit has +1 to **hit rolls**."
+  },
+  "key": "020efd96b1446ebc"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-who",
+  "where": "cooking · Nazdreg · Arrogant Invulnerability",
+  "judgement": {
+   "who": "Meganobz",
+   "models": [
+    "1× Nazdreg",
+    "3× Meganob w/ Kombi-weapon and Killsaw",
+    "2× Meganob w/ Kombi-weapon and Power Klaw"
+   ]
+  },
+  "source": {
+   "ability": "Arrogant Invulnerability",
+   "text": "Attacks that target this unit have -1 **AP**."
+  },
+  "key": "40a03520db405ab5"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-def",
+  "where": "cooking · Nazdreg · Arrogant Invulnerability",
+  "judgement": {
+   "def": "Attacks that target this unit have -1 AP"
+  },
+  "source": {
+   "ability": "Arrogant Invulnerability",
+   "text": "Attacks that target this unit have -1 **AP**."
+  },
+  "key": "c0baebbe718a5b4e"
+ },
+ {
+  "army": "cooking",
+  "kind": "unit-footnote",
+  "where": "cooking · Nazdreg",
+  "judgement": {
+   "kind": "melee",
+   "when": "Riled up, Fight phase",
+   "note": "+1 to hit rolls",
+   "from": "Krumpin’ Time"
+  },
+  "source": {
+   "ability": "Krumpin’ Time",
+   "text": "In the Fight phase, if this unit is **riled up**, this unit has +1 to **hit rolls**."
+  },
+  "key": "3c4bb231c3225194"
+ },
+ {
+  "army": "cooking",
+  "kind": "unit-kwNote",
+  "where": "cooking · Nazdreg",
+  "judgement": {
+   "kwNote": "Explosives and Meganobz come from the attached Meganobz."
+  },
+  "source": {
+   "models": [
+    "1× Nazdreg",
+    "3× Meganob w/ Kombi-weapon and Killsaw",
+    "2× Meganob w/ Kombi-weapon and Power Klaw"
+   ],
+   "stats": [
+    "Nazdreg W8 OC1",
+    "Meganob ×5 W3 OC1"
+   ],
+   "weapons": [
+    "Kustom Blasta X Skorcha 3 -1 1 BLAST 1, TORRENT, IGNORES COVER",
+    "Kustom Blasta X Gatler 6 -2 3 HAZARDOUS, IGNORES COVER",
+    "Kustom Blasta X Shoota 4 -1 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 2, IGNORES COVER",
+    "Kombi-weapon Point Blank 3 0 1 BLAST 1, TORRENT, IGNORES COVER",
+    "Kombi-weapon Kill Shot 1 -2 3 IGNORES COVER",
+    "Kombi-weapon Shoota 2 0 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 1, IGNORES COVER",
+    "Kustom Blasta X 6 -1 1 CLEAVE 1, EXTRA ATTACKS",
+    "Moonchewa 5 -2 3 CLEAVE 1, TWIN-LINKED",
+    "Killsaw 3 -2 3",
+    "Power Klaw 3 -2 2"
+   ]
+  },
+  "key": "9b5e8d28353199e5"
+ },
+ {
+  "army": "cooking",
+  "kind": "unit-ptsNote",
+  "where": "cooking · Nazdreg",
+  "judgement": {
+   "ptsNote": "165 + Meganobz 190"
+  },
+  "source": {
+   "models": [
+    "1× Nazdreg",
+    "3× Meganob w/ Kombi-weapon and Killsaw",
+    "2× Meganob w/ Kombi-weapon and Power Klaw"
+   ],
+   "stats": [
+    "Nazdreg W8 OC1",
+    "Meganob ×5 W3 OC1"
+   ],
+   "weapons": [
+    "Kustom Blasta X Skorcha 3 -1 1 BLAST 1, TORRENT, IGNORES COVER",
+    "Kustom Blasta X Gatler 6 -2 3 HAZARDOUS, IGNORES COVER",
+    "Kustom Blasta X Shoota 4 -1 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 2, IGNORES COVER",
+    "Kombi-weapon Point Blank 3 0 1 BLAST 1, TORRENT, IGNORES COVER",
+    "Kombi-weapon Kill Shot 1 -2 3 IGNORES COVER",
+    "Kombi-weapon Shoota 2 0 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 1, IGNORES COVER",
+    "Kustom Blasta X 6 -1 1 CLEAVE 1, EXTRA ATTACKS",
+    "Moonchewa 5 -2 3 CLEAVE 1, TWIN-LINKED",
+    "Killsaw 3 -2 3",
+    "Power Klaw 3 -2 2"
+   ]
+  },
+  "key": "7abc2c8d40093482"
+ },
+ {
+  "army": "cooking",
+  "kind": "unit-weapons",
+  "where": "cooking · Nazdreg",
+  "judgement": {
+   "gear": [
+    [
+     "Kustom Blasta X",
+     "Moonchewa"
+    ],
+    [
+     "Kombi-weapon",
+     "Killsaw"
+    ],
+    [
+     "Kombi-weapon",
+     "Power Klaw"
+    ]
+   ],
+   "weapons": [
+    "Nazdreg · Kustom Blasta X · Skorcha",
+    "Nazdreg · Kustom Blasta X · Gatler",
+    "Nazdreg · Kustom Blasta X · Shoota",
+    "Meganobz · ×5 · Kombi-weapon · Point Blank",
+    "Meganobz · ×5 · Kombi-weapon · Kill Shot",
+    "Meganobz · ×5 · Kombi-weapon · Shoota",
+    "Nazdreg · Kustom Blasta X",
+    "Nazdreg · Moonchewa",
+    "Meganobz · ×3 · Killsaw",
+    "Meganobz · ×2 · Power Klaw"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Nazdreg",
+    "3× Meganob w/ Kombi-weapon and Killsaw",
+    "2× Meganob w/ Kombi-weapon and Power Klaw"
+   ],
+   "leads": "Meganobz"
+  },
+  "key": "a58c5a00ddee38cb"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-timing",
+  "where": "cooking · Beastboss on Squigosaur · Thundering Stampede",
+  "judgement": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Thundering Stampede",
+   "text": "Friendly **BEAST SNAGGA** units within 6\" of this unit have +1 to **charge rolls**."
+  },
+  "key": "9a52e28cde010740"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-tag",
+  "where": "cooking · Beastboss on Squigosaur · Thundering Stampede",
+  "judgement": {
+   "tag": "Aura"
+  },
+  "source": {
+   "ability": "Thundering Stampede",
+   "text": "Friendly **BEAST SNAGGA** units within 6\" of this unit have +1 to **charge rolls**."
+  },
+  "key": "245471d573bda22a"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-def",
+  "where": "cooking · Beastboss on Squigosaur · Boss of da Hunt",
+  "judgement": {
+   "def": "Lone Operative while within 3\" of a BEAST SNAGGA unit (not MONSTER CHARACTER)"
+  },
+  "source": {
+   "ability": "Boss of da Hunt",
+   "text": "While this unit is within 3\" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**."
+  },
+  "key": "2c143b0d30c7f72b"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-na",
+  "where": "cooking · Beastboss on Squigosaur · Boss of da Hunt",
+  "judgement": {
+   "na": "Every BEAST SNAGGA unit in this list is a MONSTER CHARACTER",
+   "armyUnits": [
+    "Ghazghkull Thraka [Character, Epic Hero, Explosives, Faction: Orks, Ghazghkull Thraka, Infantry, Warboss, Warlord]",
+    "Mozrog Skragbad [Beast Snagga, Character, Epic Hero, Faction: Orks, Monster, Mozrog Skragbad]",
+    "Nazdreg [Character, Epic Hero, Faction: Orks, Infantry, Mega Armour, Nazdreg, Warboss, Explosives, Meganobz]",
+    "Beastboss on Squigosaur [Beast Snagga, Beastboss on Squigosaur, Character, Faction: Orks, Monster, Warboss]",
+    "Beastboss on Squigosaur [Beast Snagga, Beastboss on Squigosaur, Character, Faction: Orks, Monster, Warboss]",
+    "Big Mek Dakkarig [Big Mek, Big Mek Dakkarig, Character, Faction: Orks, Vehicle, Walker]",
+    "Big Mek Dakkarig [Big Mek, Big Mek Dakkarig, Character, Faction: Orks, Vehicle, Walker]",
+    "Gretchin [Faction: Orks, Gretchin, Grots, Infantry]",
+    "Deffkoptas [Deffkoptas, Explosives, Faction: Orks, Fly, Mounted, Speed Freeks]",
+    "Killa Kans [Faction: Orks, Grots, Killa Kans, Vehicle, Walker]"
+   ]
+  },
+  "source": {
+   "ability": "Boss of da Hunt",
+   "text": "While this unit is within 3\" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**."
+  },
+  "key": "98a7d93df99251f4"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-timing",
+  "where": "cooking · Beastboss on Squigosaur · Keep Huntin’!",
+  "judgement": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Keep Huntin’!",
+   "text": "In your Movement phase, at the start or end of this unit’s move, you can select one friendly **BEAST SNAGGA** unit within 6\" of this unit. That unit:\n- Is no longer **battle-shocked**.\n- Is **riled up** until the start of your next turn."
+  },
+  "key": "81f1265bf0f761f5"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-tag",
+  "where": "cooking · Beastboss on Squigosaur · Keep Huntin’!",
+  "judgement": {
+   "tag": "Once per battle round, per army"
+  },
+  "source": {
+   "ability": "Keep Huntin’!",
+   "text": "In your Movement phase, at the start or end of this unit’s move, you can select one friendly **BEAST SNAGGA** unit within 6\" of this unit. That unit:\n- Is no longer **battle-shocked**.\n- Is **riled up** until the start of your next turn."
+  },
+  "key": "a058a8d8ded48cc8"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-tag",
+  "where": "cooking · Beastboss on Squigosaur · Brutal But Kunnin’",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Brutal But Kunnin’",
+   "text": "**WARBOSS** model only. This model’s melee attacks have +1 **D**."
+  },
+  "key": "9dbd9fcc381fd424"
+ },
+ {
+  "army": "cooking",
+  "kind": "unit-boostNote",
+  "where": "cooking · Beastboss on Squigosaur",
+  "judgement": {
+   "boostNote": "Melee D already includes +1 from Brutal But Kunnin’."
+  },
+  "source": {
+   "models": [
+    "1× Beastboss on Squigosaur"
+   ],
+   "stats": [
+    "Beastboss on Squigosaur W10 OC3"
+   ],
+   "weapons": [
+    "Slugga 1 0 1 CLOSE-QUARTERS, LETHAL HITS: non-MONSTER/VEHICLE",
+    "Beastchoppa Hunter 6 -2 D6+1",
+    "Beastchoppa Standard 6 -2 3 CLEAVE 1",
+    "Squigosaur’s jaws 3 -2 4 ANTI-MONSTER/VEHICLE 3+, EXTRA ATTACKS"
+   ]
+  },
+  "key": "b38e53acc097cb94"
+ },
+ {
+  "army": "cooking",
+  "kind": "unit-weapons",
+  "where": "cooking · Beastboss on Squigosaur",
+  "judgement": {
+   "gear": [
+    [
+     "Beastchoppa",
+     "Slugga",
+     "Squigosaur’s jaws"
+    ]
+   ],
+   "weapons": [
+    "Slugga",
+    "Beastchoppa · Hunter",
+    "Beastchoppa · Standard",
+    "Squigosaur’s jaws"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Beastboss on Squigosaur"
+   ],
+   "leads": null
+  },
+  "key": "ddadfff6cf84fb13"
+ },
+ {
+  "army": "cooking",
+  "kind": "unit-weapons",
+  "where": "cooking · Beastboss on Squigosaur",
+  "judgement": {
+   "gear": [
+    [
+     "Da Gobshot Thunderbuss",
+     "Beastchoppa",
+     "Slugga",
+     "Squigosaur’s jaws"
+    ]
+   ],
+   "weapons": [
+    "Da Gobshot Thunderbuss",
+    "Slugga",
+    "Beastchoppa · Hunter",
+    "Beastchoppa · Standard",
+    "Squigosaur’s jaws"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Beastboss on Squigosaur"
+   ],
+   "leads": null
+  },
+  "key": "cd03d796c86d8aee"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-timing",
+  "where": "cooking · Big Mek Dakkarig · Even More Dakka",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Even More Dakka",
+   "text": "If this unit is **riled up**, this unit’s ranged attacks have **[SUSTAINED HITS 1]**."
+  },
+  "key": "14161ccf43e96cfd"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-timing",
+  "where": "cooking · Big Mek Dakkarig · Blitz Dem Gitz!",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Blitz Dem Gitz!",
+   "text": "In your Shooting phase, if this unit’s Blitzkannon weapon targets a unit (excluding **MONSTER/VEHICLE** units), that weapon has +6 **A**."
+  },
+  "key": "89f1d3cbee2b629a"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-tag",
+  "where": "cooking · Big Mek Dakkarig · Cybork Boosta",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Cybork Boosta",
+   "text": "**BIG MEK/MEK** model only. This model has +2\" **M**."
+  },
+  "key": "5b039d3f3619db1d"
+ },
+ {
+  "army": "cooking",
+  "kind": "unit-footnote",
+  "where": "cooking · Big Mek Dakkarig",
+  "judgement": {
+   "kind": "ranged",
+   "weapon": "Blitzkannon",
+   "set": {
+    "A": "14"
+   },
+   "when": "vs non-MONSTER/VEHICLE targets",
+   "note": "in your Shooting phase",
+   "from": "Blitz Dem Gitz!"
+  },
+  "source": {
+   "ability": "Blitz Dem Gitz!",
+   "text": "In your Shooting phase, if this unit’s Blitzkannon weapon targets a unit (excluding **MONSTER/VEHICLE** units), that weapon has +6 **A**."
+  },
+  "key": "7444d389c8dda237"
+ },
+ {
+  "army": "cooking",
+  "kind": "unit-footnote",
+  "where": "cooking · Big Mek Dakkarig",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Riled up",
+   "note": "[SUSTAINED HITS 1]",
+   "from": "Even More Dakka"
+  },
+  "source": {
+   "ability": "Even More Dakka",
+   "text": "If this unit is **riled up**, this unit’s ranged attacks have **[SUSTAINED HITS 1]**."
+  },
+  "key": "bae82088ae43cfe6"
+ },
+ {
+  "army": "cooking",
+  "kind": "unit-boostNote",
+  "where": "cooking · Big Mek Dakkarig",
+  "judgement": {
+   "boostNote": "M already includes +2\" from Cybork Boosta."
+  },
+  "source": {
+   "models": [
+    "1× Big Mek Dakkarig"
+   ],
+   "stats": [
+    "Big Mek Dakkarig W11 OC3"
+   ],
+   "weapons": [
+    "Blitzkannon 8 -2 2 IGNORES COVER, LETHAL HITS: non-MONSTER/VEHICLE",
+    "Multi-busta Launcha 6 -2 3 IGNORES COVER, LETHAL HITS",
+    "Stompy Feet 4 -1 1"
+   ]
+  },
+  "key": "6249714a735b7deb"
+ },
+ {
+  "army": "cooking",
+  "kind": "unit-weapons",
+  "where": "cooking · Big Mek Dakkarig",
+  "judgement": {
+   "gear": [
+    [
+     "Blitzkannon",
+     "Multi-busta Launcha",
+     "Stompy Feet"
+    ]
+   ],
+   "weapons": [
+    "Blitzkannon",
+    "Multi-busta Launcha",
+    "Stompy Feet"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Big Mek Dakkarig"
+   ],
+   "leads": null
+  },
+  "key": "fa34fc0a23a23671"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-timing",
+  "where": "cooking · Big Mek Dakkarig · Dreadherder",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Dreadherder",
+   "text": "**BIG MEK** model only. While this model is within 3\" of a friendly **ORKS WALKER** unit (excluding **BIG MEK** units):\n- This model has **Lone Operative**.\n- In your Shooting phase, you can select one friendly **ORKS WALKER** unit within 3\" of this model. That unit’s attacks can re-roll **hit rolls** of 1 until the end of the turn."
+  },
+  "key": "8dff7a09575e7aab"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-tag",
+  "where": "cooking · Big Mek Dakkarig · Dreadherder",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Dreadherder",
+   "text": "**BIG MEK** model only. While this model is within 3\" of a friendly **ORKS WALKER** unit (excluding **BIG MEK** units):\n- This model has **Lone Operative**.\n- In your Shooting phase, you can select one friendly **ORKS WALKER** unit within 3\" of this model. That unit’s attacks can re-roll **hit rolls** of 1 until the end of the turn."
+  },
+  "key": "3050abb455be6ffa"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-def",
+  "where": "cooking · Big Mek Dakkarig · Dreadherder",
+  "judgement": {
+   "def": "Lone Operative while within 3\" of an ORKS WALKER unit (not BIG MEK)"
+  },
+  "source": {
+   "ability": "Dreadherder",
+   "text": "**BIG MEK** model only. While this model is within 3\" of a friendly **ORKS WALKER** unit (excluding **BIG MEK** units):\n- This model has **Lone Operative**.\n- In your Shooting phase, you can select one friendly **ORKS WALKER** unit within 3\" of this model. That unit’s attacks can re-roll **hit rolls** of 1 until the end of the turn."
+  },
+  "key": "35de36554f6c9d8b"
+ },
+ {
+  "army": "cooking",
+  "kind": "unit-aura",
+  "where": "cooking · Big Mek Dakkarig",
+  "judgement": {
+   "kind": "all",
+   "needs": {
+    "all": [
+     "Walker"
+    ]
+   },
+   "notSelf": true,
+   "when": "Picked by the Dreadherder",
+   "note": "re-roll hit rolls of 1 this turn",
+   "from": "Dreadherder"
+  },
+  "source": {
+   "ability": "Dreadherder",
+   "text": "**BIG MEK** model only. While this model is within 3\" of a friendly **ORKS WALKER** unit (excluding **BIG MEK** units):\n- This model has **Lone Operative**.\n- In your Shooting phase, you can select one friendly **ORKS WALKER** unit within 3\" of this model. That unit’s attacks can re-roll **hit rolls** of 1 until the end of the turn."
+  },
+  "key": "e3fcbcb05c5f6fae"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-timing",
+  "where": "cooking · Gretchin · Thievin’ Scavengers",
+  "judgement": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Thievin’ Scavengers",
+   "text": "At the end of your Movement phase, if this unit is controlling an **objective**, that **objective** is **secured**."
+  },
+  "key": "ff6f78dd40c2fb4d"
+ },
+ {
+  "army": "cooking",
+  "kind": "unit-weapons",
+  "where": "cooking · Gretchin",
+  "judgement": {
+   "gear": [
+    [
+     "Grot Blasta",
+     "Scavenged Shivs"
+    ]
+   ],
+   "weapons": [
+    "×10 · Grot Blasta",
+    "×10 · Scavenged Shivs"
+   ]
+  },
+  "source": {
+   "models": [
+    "10× Gretchin"
+   ],
+   "leads": null
+  },
+  "key": "4414049a90c6792c"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-timing",
+  "where": "cooking · Deffkoptas · Aerial Manoover",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "opp"
+  },
+  "source": {
+   "ability": "Aerial Manoover",
+   "text": "At the end of your opponent’s Fight phase, if this unit is **unengaged**, you can place this unit in **strategic reserves**."
+  },
+  "key": "4fb24984512fface"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-timing",
+  "where": "cooking · Deffkoptas · Deff from Above",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Deff from Above",
+   "text": "In your Shooting phase, if this unit made an **ingress move** this turn, this unit’s ranged attacks have +1 to **hit rolls**."
+  },
+  "key": "601fe3548b5fc153"
+ },
+ {
+  "army": "cooking",
+  "kind": "unit-footnote",
+  "where": "cooking · Deffkoptas",
+  "judgement": {
+   "kind": "ranged",
+   "when": "After an ingress move this turn",
+   "note": "+1 to hit rolls",
+   "from": "Deff from Above"
+  },
+  "source": {
+   "ability": "Deff from Above",
+   "text": "In your Shooting phase, if this unit made an **ingress move** this turn, this unit’s ranged attacks have +1 to **hit rolls**."
+  },
+  "key": "566310d103ae5ac1"
+ },
+ {
+  "army": "cooking",
+  "kind": "unit-weapons",
+  "where": "cooking · Deffkoptas",
+  "judgement": {
+   "gear": [
+    [
+     "Choppa",
+     "Rokkit Launcha",
+     "Slugga",
+     "Spinnin’ Blades"
+    ]
+   ],
+   "weapons": [
+    "×3 · Rokkit Launcha · Busta",
+    "×3 · Rokkit Launcha · Blasta",
+    "×3 · Slugga",
+    "×3 · Choppa",
+    "×3 · Spinnin’ Blades"
+   ]
+  },
+  "source": {
+   "models": [
+    "3× Deffkopta"
+   ],
+   "leads": null
+  },
+  "key": "d9d76882d80fa885"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-timing",
+  "where": "cooking · Killa Kans · Spiteful Power Trip",
+  "judgement": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Spiteful Power Trip",
+   "text": "This unit’s attacks that target a unit that has no models with a **T** of 7+ have +1 to **hit rolls**."
+  },
+  "key": "d16ab25b2eba9015"
+ },
+ {
+  "army": "cooking",
+  "kind": "unit-footnote",
+  "where": "cooking · Killa Kans",
+  "judgement": {
+   "kind": "all",
+   "when": "vs units with no T 7+ models",
+   "note": "+1 to hit rolls",
+   "from": "Spiteful Power Trip"
+  },
+  "source": {
+   "ability": "Spiteful Power Trip",
+   "text": "This unit’s attacks that target a unit that has no models with a **T** of 7+ have +1 to **hit rolls**."
+  },
+  "key": "273b23f711ae4fc7"
+ },
+ {
+  "army": "cooking",
+  "kind": "unit-weapons",
+  "where": "cooking · Killa Kans",
+  "judgement": {
+   "gear": [
+    [
+     "Kan Blasta",
+     "Kan Klaw"
+    ]
+   ],
+   "weapons": [
+    "×6 · Kan Blasta · Kill Shot",
+    "×6 · Kan Blasta · Point Blank",
+    "×6 · Kan Blasta · Dakka",
+    "×6 · Kan Klaw"
+   ]
+  },
+  "source": {
+   "models": [
+    "6× Killa Kan"
+   ],
+   "leads": null
+  },
+  "key": "8d3f1d2a65937b68"
+ },
+ {
+  "army": "cooking",
+  "kind": "rule-remind",
+  "where": "orks army rule · Waaagh!",
+  "judgement": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your",
+   "text": "Re-roll advance rolls. Riled up: advancing still lets a unit declare a charge."
+  },
+  "source": {
+   "rule": "Waaagh!",
+   "text": "Friendly **ORKS** units with this ability can:\n- Re-roll **advance rolls**.\n- Become **riled up**, as stated in other rules.\nWhile a unit is **riled up**:\n- That unit has 5+ **InSv**.\n- That unit’s ranged attacks have **[ASSAULT]**.\n- When that unit is selected to make an **advance move**, that **advance move** does not prevent that unit from being **eligible to declare a charge**."
+  },
+  "key": "b9a28170afe479d4"
+ },
+ {
+  "army": "cooking",
+  "kind": "rule-remind",
+  "where": "orks army rule · Waaagh!",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your",
+   "text": "Riled up: ranged attacks have [ASSAULT]."
+  },
+  "source": {
+   "rule": "Waaagh!",
+   "text": "Friendly **ORKS** units with this ability can:\n- Re-roll **advance rolls**.\n- Become **riled up**, as stated in other rules.\nWhile a unit is **riled up**:\n- That unit has 5+ **InSv**.\n- That unit’s ranged attacks have **[ASSAULT]**.\n- When that unit is selected to make an **advance move**, that **advance move** does not prevent that unit from being **eligible to declare a charge**."
+  },
+  "key": "435c34643eb505d9"
+ },
+ {
+  "army": "cooking",
+  "kind": "rule-remind",
+  "where": "orks army rule · Waaagh!",
+  "judgement": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "your",
+   "text": "Riled up: a unit that advanced can still declare a charge."
+  },
+  "source": {
+   "rule": "Waaagh!",
+   "text": "Friendly **ORKS** units with this ability can:\n- Re-roll **advance rolls**.\n- Become **riled up**, as stated in other rules.\nWhile a unit is **riled up**:\n- That unit has 5+ **InSv**.\n- That unit’s ranged attacks have **[ASSAULT]**.\n- When that unit is selected to make an **advance move**, that **advance move** does not prevent that unit from being **eligible to declare a charge**."
+  },
+  "key": "027bb5ef43a3f053"
+ },
+ {
+  "army": "cooking",
+  "kind": "rule-ph",
+  "where": "orks army rule · War Cry",
+  "judgement": {
+   "ph": [
+    "command"
+   ]
+  },
+  "source": {
+   "rule": "War Cry",
+   "text": "At the start of the Command phase, you can use this ability. If you do, friendly **ORKS** units with the **Waaagh!** ability are **riled up** until the end of the next turn."
+  },
+  "key": "026498bae86d7674"
+ },
+ {
+  "army": "cooking",
+  "kind": "rule-turn",
+  "where": "orks army rule · War Cry",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "rule": "War Cry",
+   "text": "At the start of the Command phase, you can use this ability. If you do, friendly **ORKS** units with the **Waaagh!** ability are **riled up** until the end of the next turn."
+  },
+  "key": "4cdc719b5cdc72ec"
+ },
+ {
+  "army": "cooking",
+  "kind": "rule-tag",
+  "where": "orks army rule · War Cry",
+  "judgement": {
+   "tag": "Once per battle, per army"
+  },
+  "source": {
+   "rule": "War Cry",
+   "text": "At the start of the Command phase, you can use this ability. If you do, friendly **ORKS** units with the **Waaagh!** ability are **riled up** until the end of the next turn."
+  },
+  "key": "fe6f0a3e272493d8"
+ },
+ {
+  "army": "cooking",
+  "kind": "rule-ph",
+  "where": "orks army rule · Da Boss",
+  "judgement": {
+   "ph": [
+    "command"
+   ]
+  },
+  "source": {
+   "rule": "Da Boss",
+   "text": "At the start of the battle round, if a model with this ability is your **WARLORD**, gain 1CP.\n*Wahapedia core rules errata (07.01, CP Generated by a Warlord; not in GW’s printed Core Rules): you do not gain the 1CP while your **WARLORD** is destroyed.*"
+  },
+  "key": "1ec4187966aaff02"
+ },
+ {
+  "army": "cooking",
+  "kind": "rule-turn",
+  "where": "orks army rule · Da Boss",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "rule": "Da Boss",
+   "text": "At the start of the battle round, if a model with this ability is your **WARLORD**, gain 1CP.\n*Wahapedia core rules errata (07.01, CP Generated by a Warlord; not in GW’s printed Core Rules): you do not gain the 1CP while your **WARLORD** is destroyed.*"
+  },
+  "key": "4863783bb09b616b"
+ },
+ {
+  "army": "cooking",
+  "kind": "rule-ph",
+  "where": "Brute Bosses rule · ’Ard as Nails",
+  "judgement": {
+   "ph": [
+    "fight"
+   ]
+  },
+  "source": {
+   "rule": "’Ard as Nails",
+   "text": "When a friendly **WARBOSS** model is **destroyed**, if this unit has not been **selected to fight** this phase, roll one D6, with +1 to the roll if your unit is **riled up**:\n- On a 3+, do not remove this **WARBOSS** model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this **WARBOSS** model is removed from the battlefield."
+  },
+  "key": "fac6013de2569a31"
+ },
+ {
+  "army": "cooking",
+  "kind": "rule-turn",
+  "where": "Brute Bosses rule · ’Ard as Nails",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "rule": "’Ard as Nails",
+   "text": "When a friendly **WARBOSS** model is **destroyed**, if this unit has not been **selected to fight** this phase, roll one D6, with +1 to the roll if your unit is **riled up**:\n- On a 3+, do not remove this **WARBOSS** model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this **WARBOSS** model is removed from the battlefield."
+  },
+  "key": "c7952f94ed192333"
+ },
+ {
+  "army": "cooking",
+  "kind": "rule-needs",
+  "where": "Brute Bosses rule · ’Ard as Nails",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Warboss"
+    ]
+   }
+  },
+  "source": {
+   "rule": "’Ard as Nails",
+   "text": "When a friendly **WARBOSS** model is **destroyed**, if this unit has not been **selected to fight** this phase, roll one D6, with +1 to the roll if your unit is **riled up**:\n- On a 3+, do not remove this **WARBOSS** model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this **WARBOSS** model is removed from the battlefield."
+  },
+  "key": "43c9d0aaf25d19fe"
+ },
+ {
+  "army": "cooking",
+  "kind": "rule-def",
+  "where": "Brute Bosses rule · ’Ard as Nails",
+  "judgement": {
+   "def": "WARBOSS destroyed before its unit has fought this phase: on a 3+ (+1 riled up) it stays until the unit has fought"
+  },
+  "source": {
+   "rule": "’Ard as Nails",
+   "text": "When a friendly **WARBOSS** model is **destroyed**, if this unit has not been **selected to fight** this phase, roll one D6, with +1 to the roll if your unit is **riled up**:\n- On a 3+, do not remove this **WARBOSS** model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this **WARBOSS** model is removed from the battlefield."
+  },
+  "key": "09ada46a59962597"
+ },
+ {
+  "army": "cooking",
+  "kind": "rule-ph",
+  "where": "Da Big Hunt rule · Da Hunt is On",
+  "judgement": {
+   "ph": [
+    "shooting",
+    "fight"
+   ]
+  },
+  "source": {
+   "rule": "Da Hunt is On",
+   "text": "Friendly **BEAST SNAGGA** units’ attacks that target a **MONSTER/VEHICLE** unit have +1 **AP**."
+  },
+  "key": "4dd1b69850c811bb"
+ },
+ {
+  "army": "cooking",
+  "kind": "rule-turn",
+  "where": "Da Big Hunt rule · Da Hunt is On",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "rule": "Da Hunt is On",
+   "text": "Friendly **BEAST SNAGGA** units’ attacks that target a **MONSTER/VEHICLE** unit have +1 **AP**."
+  },
+  "key": "10ad5f37ce8a00cd"
+ },
+ {
+  "army": "cooking",
+  "kind": "rule-turns",
+  "where": "Da Big Hunt rule · Da Hunt is On",
+  "judgement": {
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "rule": "Da Hunt is On",
+   "text": "Friendly **BEAST SNAGGA** units’ attacks that target a **MONSTER/VEHICLE** unit have +1 **AP**."
+  },
+  "key": "d429266d0f65b826"
+ },
+ {
+  "army": "cooking",
+  "kind": "rule-needs",
+  "where": "Da Big Hunt rule · Da Hunt is On",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Beast Snagga"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Da Hunt is On",
+   "text": "Friendly **BEAST SNAGGA** units’ attacks that target a **MONSTER/VEHICLE** unit have +1 **AP**."
+  },
+  "key": "a7fe6e9b31f9522e"
+ },
+ {
+  "army": "cooking",
+  "kind": "rule-mod",
+  "where": "Da Big Hunt rule · Da Hunt is On",
+  "judgement": {
+   "mod": {
+    "kind": "all",
+    "when": "vs MONSTER/VEHICLE",
+    "note": "+1 AP",
+    "hunter": {
+     "AP": 1
+    }
+   }
+  },
+  "source": {
+   "rule": "Da Hunt is On",
+   "text": "Friendly **BEAST SNAGGA** units’ attacks that target a **MONSTER/VEHICLE** unit have +1 **AP**."
+  },
+  "key": "20ca783c453305ad"
+ },
+ {
+  "army": "cooking",
+  "kind": "strat-phases",
+  "where": "Da Big Hunt · Where D’ya Fink You’re Going?",
+  "judgement": {
+   "phases": [
+    "movement"
+   ]
+  },
+  "source": {
+   "stratagem": "Where D’ya Fink You’re Going?",
+   "text": "WHEN: Your opponent’s Movement phase, when an enemy unit is selected to make a **fall-back move**, if that enemy unit is **engaged** with a friendly **BEAST SNAGGA** unit.\nTARGET: That **BEAST SNAGGA** unit.\nEFFECT: When an enemy unit **engaged** with your unit is selected to make a **fall-back move**, that enemy unit must use the **desperate escape** mode. If that enemy unit is a **MONSTER/VEHICLE** unit, that enemy unit makes three additional **hazard rolls** for each **BEAST SNAGGA** unit it is **engaged** with, with -1 from those **hazard rolls** if that enemy unit is **battle-shocked**."
+  },
+  "key": "5ca80399823b9d4d"
+ },
+ {
+  "army": "cooking",
+  "kind": "strat-turn",
+  "where": "Da Big Hunt · Where D’ya Fink You’re Going?",
+  "judgement": {
+   "turn": "opp"
+  },
+  "source": {
+   "stratagem": "Where D’ya Fink You’re Going?",
+   "text": "WHEN: Your opponent’s Movement phase, when an enemy unit is selected to make a **fall-back move**, if that enemy unit is **engaged** with a friendly **BEAST SNAGGA** unit.\nTARGET: That **BEAST SNAGGA** unit.\nEFFECT: When an enemy unit **engaged** with your unit is selected to make a **fall-back move**, that enemy unit must use the **desperate escape** mode. If that enemy unit is a **MONSTER/VEHICLE** unit, that enemy unit makes three additional **hazard rolls** for each **BEAST SNAGGA** unit it is **engaged** with, with -1 from those **hazard rolls** if that enemy unit is **battle-shocked**."
+  },
+  "key": "6f38c6d20a694e2b"
+ },
+ {
+  "army": "cooking",
+  "kind": "strat-needs",
+  "where": "Da Big Hunt · Where D’ya Fink You’re Going?",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Beast Snagga"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Where D’ya Fink You’re Going?",
+   "text": "WHEN: Your opponent’s Movement phase, when an enemy unit is selected to make a **fall-back move**, if that enemy unit is **engaged** with a friendly **BEAST SNAGGA** unit.\nTARGET: That **BEAST SNAGGA** unit.\nEFFECT: When an enemy unit **engaged** with your unit is selected to make a **fall-back move**, that enemy unit must use the **desperate escape** mode. If that enemy unit is a **MONSTER/VEHICLE** unit, that enemy unit makes three additional **hazard rolls** for each **BEAST SNAGGA** unit it is **engaged** with, with -1 from those **hazard rolls** if that enemy unit is **battle-shocked**."
+  },
+  "key": "db0140132b0d5778"
+ },
+ {
+  "army": "cooking",
+  "kind": "strat-phases",
+  "where": "Da Big Hunt · Goaded Into Action",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Goaded Into Action",
+   "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit has shot.\nTARGET: One friendly **unengaged** **BEAST SNAGGA** unit that lost a wound as a result of those attacks.\nEFFECT: Your unit can make a **surge move** of up to D6\". If your unit is **riled up**, it can re-roll that D6."
+  },
+  "key": "2de8d5d794d854fd"
+ },
+ {
+  "army": "cooking",
+  "kind": "strat-turn",
+  "where": "Da Big Hunt · Goaded Into Action",
+  "judgement": {
+   "turn": "opp"
+  },
+  "source": {
+   "stratagem": "Goaded Into Action",
+   "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit has shot.\nTARGET: One friendly **unengaged** **BEAST SNAGGA** unit that lost a wound as a result of those attacks.\nEFFECT: Your unit can make a **surge move** of up to D6\". If your unit is **riled up**, it can re-roll that D6."
+  },
+  "key": "0c954ec614b08f88"
+ },
+ {
+  "army": "cooking",
+  "kind": "strat-needs",
+  "where": "Da Big Hunt · Goaded Into Action",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Beast Snagga"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Goaded Into Action",
+   "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit has shot.\nTARGET: One friendly **unengaged** **BEAST SNAGGA** unit that lost a wound as a result of those attacks.\nEFFECT: Your unit can make a **surge move** of up to D6\". If your unit is **riled up**, it can re-roll that D6."
+  },
+  "key": "7d6f39bc28b2a55a"
+ },
+ {
+  "army": "cooking",
+  "kind": "strat-phases",
+  "where": "Da Big Hunt · Instinctive Hunters",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Instinctive Hunters",
+   "text": "WHEN: End of your opponent’s Fight phase.\nTARGET: One friendly **unengaged** **BEAST SNAGGA** unit within 6\" of a battlefield edge.\nEFFECT: Place your unit in **strategic reserves**."
+  },
+  "key": "dd738c67b24291d4"
+ },
+ {
+  "army": "cooking",
+  "kind": "strat-turn",
+  "where": "Da Big Hunt · Instinctive Hunters",
+  "judgement": {
+   "turn": "opp"
+  },
+  "source": {
+   "stratagem": "Instinctive Hunters",
+   "text": "WHEN: End of your opponent’s Fight phase.\nTARGET: One friendly **unengaged** **BEAST SNAGGA** unit within 6\" of a battlefield edge.\nEFFECT: Place your unit in **strategic reserves**."
+  },
+  "key": "c80f94d1003289c5"
+ },
+ {
+  "army": "cooking",
+  "kind": "strat-needs",
+  "where": "Da Big Hunt · Instinctive Hunters",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Beast Snagga"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Instinctive Hunters",
+   "text": "WHEN: End of your opponent’s Fight phase.\nTARGET: One friendly **unengaged** **BEAST SNAGGA** unit within 6\" of a battlefield edge.\nEFFECT: Place your unit in **strategic reserves**."
+  },
+  "key": "61001e33c59484af"
+ },
+ {
+  "army": "cooking",
+  "kind": "rule-ph",
+  "where": "Dread Mob rule · Try Dat Button!",
+  "judgement": {
+   "ph": [
+    "shooting",
+    "fight"
+   ]
+  },
+  "source": {
+   "rule": "Try Dat Button!",
+   "text": "In your Shooting phase or the Fight phase, when a friendly **ORKS WALKER** unit (excluding **TITANIC** units) is **selected to attack**, you can use this ability. If you do, roll either one D6 or two D6 (keep re-rolling duplicate results). This unit’s attacks have the relevant rule(s):\nIf you rolled two D6, when this unit has attacked, this unit makes one **hazard roll**.\n1–2: +1 **A**\n3–4: +2 **S**\n5–6: +1 **AP**"
+  },
+  "key": "321c6d18f3c24f82"
+ },
+ {
+  "army": "cooking",
+  "kind": "rule-turn",
+  "where": "Dread Mob rule · Try Dat Button!",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "rule": "Try Dat Button!",
+   "text": "In your Shooting phase or the Fight phase, when a friendly **ORKS WALKER** unit (excluding **TITANIC** units) is **selected to attack**, you can use this ability. If you do, roll either one D6 or two D6 (keep re-rolling duplicate results). This unit’s attacks have the relevant rule(s):\nIf you rolled two D6, when this unit has attacked, this unit makes one **hazard roll**.\n1–2: +1 **A**\n3–4: +2 **S**\n5–6: +1 **AP**"
+  },
+  "key": "6e625fc7be865aa6"
+ },
+ {
+  "army": "cooking",
+  "kind": "rule-turns",
+  "where": "Dread Mob rule · Try Dat Button!",
+  "judgement": {
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "rule": "Try Dat Button!",
+   "text": "In your Shooting phase or the Fight phase, when a friendly **ORKS WALKER** unit (excluding **TITANIC** units) is **selected to attack**, you can use this ability. If you do, roll either one D6 or two D6 (keep re-rolling duplicate results). This unit’s attacks have the relevant rule(s):\nIf you rolled two D6, when this unit has attacked, this unit makes one **hazard roll**.\n1–2: +1 **A**\n3–4: +2 **S**\n5–6: +1 **AP**"
+  },
+  "key": "9de67b108f809d1e"
+ },
+ {
+  "army": "cooking",
+  "kind": "rule-needs",
+  "where": "Dread Mob rule · Try Dat Button!",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Walker"
+    ],
+    "none": [
+     "Titanic"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Try Dat Button!",
+   "text": "In your Shooting phase or the Fight phase, when a friendly **ORKS WALKER** unit (excluding **TITANIC** units) is **selected to attack**, you can use this ability. If you do, roll either one D6 or two D6 (keep re-rolling duplicate results). This unit’s attacks have the relevant rule(s):\nIf you rolled two D6, when this unit has attacked, this unit makes one **hazard roll**.\n1–2: +1 **A**\n3–4: +2 **S**\n5–6: +1 **AP**"
+  },
+  "key": "07b9e209f273014f"
+ },
+ {
+  "army": "cooking",
+  "kind": "rule-mod",
+  "where": "Dread Mob rule · Try Dat Button!",
+  "judgement": {
+   "mod": {
+    "kind": "all",
+    "when": "Optional D6",
+    "note": "1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (2 D6: two effects, then a hazard roll)"
+   }
+  },
+  "source": {
+   "rule": "Try Dat Button!",
+   "text": "In your Shooting phase or the Fight phase, when a friendly **ORKS WALKER** unit (excluding **TITANIC** units) is **selected to attack**, you can use this ability. If you do, roll either one D6 or two D6 (keep re-rolling duplicate results). This unit’s attacks have the relevant rule(s):\nIf you rolled two D6, when this unit has attacked, this unit makes one **hazard roll**.\n1–2: +1 **A**\n3–4: +2 **S**\n5–6: +1 **AP**"
+  },
+  "key": "9cfd44089a31bcb1"
+ },
+ {
+  "army": "cooking",
+  "kind": "strat-phases",
+  "where": "Dread Mob · Crazed Rampage",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Crazed Rampage",
+   "text": "WHEN: Fight phase, when an enemy unit targets a friendly **ORKS WALKER** unit (excluding **TITANIC** units).\nTARGET: That **ORKS WALKER** unit.\nEFFECT: When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +3 to the result if your unit has ~~**DEFF DREAD**~~:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
+  },
+  "key": "eafaaaf04dc02b88"
+ },
+ {
+  "army": "cooking",
+  "kind": "strat-turn",
+  "where": "Dread Mob · Crazed Rampage",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Crazed Rampage",
+   "text": "WHEN: Fight phase, when an enemy unit targets a friendly **ORKS WALKER** unit (excluding **TITANIC** units).\nTARGET: That **ORKS WALKER** unit.\nEFFECT: When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +3 to the result if your unit has ~~**DEFF DREAD**~~:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
+  },
+  "key": "0d46c1ce090bde07"
+ },
+ {
+  "army": "cooking",
+  "kind": "strat-needs",
+  "where": "Dread Mob · Crazed Rampage",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Walker"
+    ],
+    "none": [
+     "Titanic"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Crazed Rampage",
+   "text": "WHEN: Fight phase, when an enemy unit targets a friendly **ORKS WALKER** unit (excluding **TITANIC** units).\nTARGET: That **ORKS WALKER** unit.\nEFFECT: When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +3 to the result if your unit has ~~**DEFF DREAD**~~:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
+  },
+  "key": "a67a73058e036c3c"
+ },
+ {
+  "army": "cooking",
+  "kind": "strat-def",
+  "where": "Dread Mob · Crazed Rampage",
+  "judgement": {
+   "def": "Fight phase: a model destroyed before the unit has fought stays to fight on a 4+"
+  },
+  "source": {
+   "stratagem": "Crazed Rampage",
+   "text": "WHEN: Fight phase, when an enemy unit targets a friendly **ORKS WALKER** unit (excluding **TITANIC** units).\nTARGET: That **ORKS WALKER** unit.\nEFFECT: When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +3 to the result if your unit has ~~**DEFF DREAD**~~:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
+  },
+  "key": "8f0d7a62c8bb70a8"
+ },
+ {
+  "army": "cooking",
+  "kind": "strat-note",
+  "where": "Dread Mob · Crazed Rampage",
+  "judgement": {
+   "note": "No unit in this list is a DEFF DREAD, so the roll is a plain 4+. (Wahapedia strikes DEFF DREAD through, but Deff Dread units do get the +3: a datasheet name counts as a keyword.) Wahapedia FAQ: Fight on Death rules resolve before Deadly Demise, so Deadly Demise resolves once the models are removed."
+  },
+  "source": {
+   "stratagem": "Crazed Rampage",
+   "text": "WHEN: Fight phase, when an enemy unit targets a friendly **ORKS WALKER** unit (excluding **TITANIC** units).\nTARGET: That **ORKS WALKER** unit.\nEFFECT: When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +3 to the result if your unit has ~~**DEFF DREAD**~~:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
+  },
+  "key": "e75b3dc5950e08c7"
+ },
+ {
+  "army": "cooking",
+  "kind": "strat-phases",
+  "where": "Dread Mob · Dread Power",
+  "judgement": {
+   "phases": [
+    "movement"
+   ]
+  },
+  "source": {
+   "stratagem": "Dread Power",
+   "text": "WHEN: Your Movement phase.\nTARGET: One friendly **ORKS WALKER** unit.\nEFFECT: Your unit is **riled up** until the start of your next turn."
+  },
+  "key": "91c1df4ca4050b21"
+ },
+ {
+  "army": "cooking",
+  "kind": "strat-turn",
+  "where": "Dread Mob · Dread Power",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Dread Power",
+   "text": "WHEN: Your Movement phase.\nTARGET: One friendly **ORKS WALKER** unit.\nEFFECT: Your unit is **riled up** until the start of your next turn."
+  },
+  "key": "92596b7aebf1192c"
+ },
+ {
+  "army": "cooking",
+  "kind": "strat-needs",
+  "where": "Dread Mob · Dread Power",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Walker"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Dread Power",
+   "text": "WHEN: Your Movement phase.\nTARGET: One friendly **ORKS WALKER** unit.\nEFFECT: Your unit is **riled up** until the start of your next turn."
+  },
+  "key": "c0b3b3b1fc276e52"
+ },
+ {
+  "army": "cooking",
+  "kind": "strat-phases",
+  "where": "Dread Mob · Stomping Juggernaut",
+  "judgement": {
+   "phases": [
+    "movement",
+    "charge"
+   ]
+  },
+  "source": {
+   "stratagem": "Stomping Juggernaut",
+   "text": "WHEN: Your Movement/Charge phase, when a friendly **ORKS WALKER** unit is **selected to move** or **declares a charge**.\nTARGET: That **ORKS WALKER** unit.\nEFFECT: Your unit has **MOBILE**."
+  },
+  "key": "061c00da8250764b"
+ },
+ {
+  "army": "cooking",
+  "kind": "strat-turn",
+  "where": "Dread Mob · Stomping Juggernaut",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Stomping Juggernaut",
+   "text": "WHEN: Your Movement/Charge phase, when a friendly **ORKS WALKER** unit is **selected to move** or **declares a charge**.\nTARGET: That **ORKS WALKER** unit.\nEFFECT: Your unit has **MOBILE**."
+  },
+  "key": "b6389513886efba3"
+ },
+ {
+  "army": "cooking",
+  "kind": "strat-needs",
+  "where": "Dread Mob · Stomping Juggernaut",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Walker"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Stomping Juggernaut",
+   "text": "WHEN: Your Movement/Charge phase, when a friendly **ORKS WALKER** unit is **selected to move** or **declares a charge**.\nTARGET: That **ORKS WALKER** unit.\nEFFECT: Your unit has **MOBILE**."
+  },
+  "key": "3056d2c81646fb74"
+ },
+ {
+  "army": "Orks",
+  "kind": "rule-alias",
+  "where": "/^riled up/i",
+  "judgement": {
+   "opens": "Waaagh!"
+  },
+  "source": {
+   "rule": "Waaagh!"
+  },
+  "key": "f0e70350dee90f05"
+ }
+]

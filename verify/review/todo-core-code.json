@@ -1,0 +1,1403 @@
+[
+ {
+  "army": "core",
+  "kind": "strat-phases",
+  "where": "Core · Command Re-roll",
+  "judgement": {
+   "phases": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Command Re-roll",
+   "text": "WHEN: Any phase, just after you make one of the following rolls for a friendly unit or model:\n- **Advance roll**\n- **Charge roll**\n- **Damage roll**\n- **Hazard roll**\n- **Hit roll**\n- **Save roll**\n- **Wound roll**\n- A roll to determine the number of attacks generated with a weapon.\nTARGET: That unit or model.\nEFFECT: You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding **charge rolls**, which you must re-roll in full)."
+  },
+  "key": "8c4f84275cbd4977"
+ },
+ {
+  "army": "core",
+  "kind": "strat-turn",
+  "where": "Core · Command Re-roll",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Command Re-roll",
+   "text": "WHEN: Any phase, just after you make one of the following rolls for a friendly unit or model:\n- **Advance roll**\n- **Charge roll**\n- **Damage roll**\n- **Hazard roll**\n- **Hit roll**\n- **Save roll**\n- **Wound roll**\n- A roll to determine the number of attacks generated with a weapon.\nTARGET: That unit or model.\nEFFECT: You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding **charge rolls**, which you must re-roll in full)."
+  },
+  "key": "0b8a49825e1a49d4"
+ },
+ {
+  "army": "core",
+  "kind": "strat-phases",
+  "where": "Core · Epic Challenge",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Epic Challenge",
+   "text": "WHEN: Fight phase, just after a friendly **CHARACTER** unit is **selected to fight**.\nTARGET: That **CHARACTER** unit.\nEFFECT: Select one **CHARACTER** model in your unit. Until the end of the phase, that model’s melee weapons have the **[PRECISION]** ability."
+  },
+  "key": "e0e525fccccda811"
+ },
+ {
+  "army": "core",
+  "kind": "strat-turn",
+  "where": "Core · Epic Challenge",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Epic Challenge",
+   "text": "WHEN: Fight phase, just after a friendly **CHARACTER** unit is **selected to fight**.\nTARGET: That **CHARACTER** unit.\nEFFECT: Select one **CHARACTER** model in your unit. Until the end of the phase, that model’s melee weapons have the **[PRECISION]** ability."
+  },
+  "key": "307dbc6f7bf5efca"
+ },
+ {
+  "army": "core",
+  "kind": "strat-needs",
+  "where": "Core · Epic Challenge",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Character"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Epic Challenge",
+   "text": "WHEN: Fight phase, just after a friendly **CHARACTER** unit is **selected to fight**.\nTARGET: That **CHARACTER** unit.\nEFFECT: Select one **CHARACTER** model in your unit. Until the end of the phase, that model’s melee weapons have the **[PRECISION]** ability."
+  },
+  "key": "18afe9e5bb3c2fd6"
+ },
+ {
+  "army": "core",
+  "kind": "strat-phases",
+  "where": "Core · Insane Bravery",
+  "judgement": {
+   "phases": [
+    "command"
+   ]
+  },
+  "source": {
+   "stratagem": "Insane Bravery",
+   "text": "WHEN: Battle-shock step of your Command phase, just before you make a **battle-shock roll** for a friendly unit.\nTARGET: That unit.\nEFFECT: That **battle-shock roll** is automatically successful.\nRESTRICTIONS: You cannot use this **stratagem** more than once per battle."
+  },
+  "key": "f247965b9c4f9bc6"
+ },
+ {
+  "army": "core",
+  "kind": "strat-turn",
+  "where": "Core · Insane Bravery",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Insane Bravery",
+   "text": "WHEN: Battle-shock step of your Command phase, just before you make a **battle-shock roll** for a friendly unit.\nTARGET: That unit.\nEFFECT: That **battle-shock roll** is automatically successful.\nRESTRICTIONS: You cannot use this **stratagem** more than once per battle."
+  },
+  "key": "4e80e1b646212a47"
+ },
+ {
+  "army": "core",
+  "kind": "strat-note",
+  "where": "Core · Insane Bravery",
+  "judgement": {
+   "note": "Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07)."
+  },
+  "source": {
+   "stratagem": "Insane Bravery",
+   "text": "WHEN: Battle-shock step of your Command phase, just before you make a **battle-shock roll** for a friendly unit.\nTARGET: That unit.\nEFFECT: That **battle-shock roll** is automatically successful.\nRESTRICTIONS: You cannot use this **stratagem** more than once per battle."
+  },
+  "key": "b9c082ec329df476"
+ },
+ {
+  "army": "core",
+  "kind": "strat-phases",
+  "where": "Core · Explosives",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Explosives",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One friendly **unengaged** **EXPLOSIVES/GRENADES** unit that is **eligible to shoot** and did not make an **advance move** this turn.\nEFFECT: Resolve the following sequence:\n- 1. Select one **EXPLOSIVES/GRENADES** model in your unit.\n- 2. Select one **unengaged** enemy unit within 8\" of and **visible** to that model.\n- 3. Roll six D6: for each 4+, that enemy unit suffers 1 **mortal wound** (06.02)."
+  },
+  "key": "ea570e4174008c93"
+ },
+ {
+  "army": "core",
+  "kind": "strat-turn",
+  "where": "Core · Explosives",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Explosives",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One friendly **unengaged** **EXPLOSIVES/GRENADES** unit that is **eligible to shoot** and did not make an **advance move** this turn.\nEFFECT: Resolve the following sequence:\n- 1. Select one **EXPLOSIVES/GRENADES** model in your unit.\n- 2. Select one **unengaged** enemy unit within 8\" of and **visible** to that model.\n- 3. Roll six D6: for each 4+, that enemy unit suffers 1 **mortal wound** (06.02)."
+  },
+  "key": "ea8d5f2f5d80e089"
+ },
+ {
+  "army": "core",
+  "kind": "strat-needs",
+  "where": "Core · Explosives",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Explosives",
+     "Grenades"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Explosives",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One friendly **unengaged** **EXPLOSIVES/GRENADES** unit that is **eligible to shoot** and did not make an **advance move** this turn.\nEFFECT: Resolve the following sequence:\n- 1. Select one **EXPLOSIVES/GRENADES** model in your unit.\n- 2. Select one **unengaged** enemy unit within 8\" of and **visible** to that model.\n- 3. Roll six D6: for each 4+, that enemy unit suffers 1 **mortal wound** (06.02)."
+  },
+  "key": "b0ac654265d54dc9"
+ },
+ {
+  "army": "core",
+  "kind": "strat-note",
+  "where": "Core · Explosives",
+  "judgement": {
+   "note": "Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem."
+  },
+  "source": {
+   "stratagem": "Explosives",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One friendly **unengaged** **EXPLOSIVES/GRENADES** unit that is **eligible to shoot** and did not make an **advance move** this turn.\nEFFECT: Resolve the following sequence:\n- 1. Select one **EXPLOSIVES/GRENADES** model in your unit.\n- 2. Select one **unengaged** enemy unit within 8\" of and **visible** to that model.\n- 3. Roll six D6: for each 4+, that enemy unit suffers 1 **mortal wound** (06.02)."
+  },
+  "key": "b4f27a3cfb9ea2b6"
+ },
+ {
+  "army": "core",
+  "kind": "strat-phases",
+  "where": "Core · Crushing Impact",
+  "judgement": {
+   "phases": [
+    "charge"
+   ]
+  },
+  "source": {
+   "stratagem": "Crushing Impact",
+   "text": "WHEN: Your Charge phase, just after a friendly **MONSTER/VEHICLE** unit ends a **charge move**.\nTARGET: That **MONSTER/VEHICLE** unit.\nEFFECT: Resolve the following sequence:\n- 1. Select one enemy unit **engaged** with your unit.\n- 2. Select one model in your unit **engaged** with that enemy unit.\n- 3. Roll a number of D6 equal to the **T** characteristic of that model: for each 1, your unit suffers 1 **mortal wound**; for each 5+, that enemy unit suffers 1 **mortal wound** (to a maximum of 6 **mortal wounds** per unit)."
+  },
+  "key": "6f4193f2d2886967"
+ },
+ {
+  "army": "core",
+  "kind": "strat-turn",
+  "where": "Core · Crushing Impact",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Crushing Impact",
+   "text": "WHEN: Your Charge phase, just after a friendly **MONSTER/VEHICLE** unit ends a **charge move**.\nTARGET: That **MONSTER/VEHICLE** unit.\nEFFECT: Resolve the following sequence:\n- 1. Select one enemy unit **engaged** with your unit.\n- 2. Select one model in your unit **engaged** with that enemy unit.\n- 3. Roll a number of D6 equal to the **T** characteristic of that model: for each 1, your unit suffers 1 **mortal wound**; for each 5+, that enemy unit suffers 1 **mortal wound** (to a maximum of 6 **mortal wounds** per unit)."
+  },
+  "key": "9037feff2c5e765b"
+ },
+ {
+  "army": "core",
+  "kind": "strat-needs",
+  "where": "Core · Crushing Impact",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Monster",
+     "Vehicle"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Crushing Impact",
+   "text": "WHEN: Your Charge phase, just after a friendly **MONSTER/VEHICLE** unit ends a **charge move**.\nTARGET: That **MONSTER/VEHICLE** unit.\nEFFECT: Resolve the following sequence:\n- 1. Select one enemy unit **engaged** with your unit.\n- 2. Select one model in your unit **engaged** with that enemy unit.\n- 3. Roll a number of D6 equal to the **T** characteristic of that model: for each 1, your unit suffers 1 **mortal wound**; for each 5+, that enemy unit suffers 1 **mortal wound** (to a maximum of 6 **mortal wounds** per unit)."
+  },
+  "key": "0168fdf9ecf7c37f"
+ },
+ {
+  "army": "core",
+  "kind": "strat-note",
+  "where": "Core · Crushing Impact",
+  "judgement": {
+   "note": "Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem."
+  },
+  "source": {
+   "stratagem": "Crushing Impact",
+   "text": "WHEN: Your Charge phase, just after a friendly **MONSTER/VEHICLE** unit ends a **charge move**.\nTARGET: That **MONSTER/VEHICLE** unit.\nEFFECT: Resolve the following sequence:\n- 1. Select one enemy unit **engaged** with your unit.\n- 2. Select one model in your unit **engaged** with that enemy unit.\n- 3. Roll a number of D6 equal to the **T** characteristic of that model: for each 1, your unit suffers 1 **mortal wound**; for each 5+, that enemy unit suffers 1 **mortal wound** (to a maximum of 6 **mortal wounds** per unit)."
+  },
+  "key": "0c20569e44f49ce2"
+ },
+ {
+  "army": "core",
+  "kind": "strat-phases",
+  "where": "Core · Rapid Ingress",
+  "judgement": {
+   "phases": [
+    "movement"
+   ]
+  },
+  "source": {
+   "stratagem": "Rapid Ingress",
+   "text": "WHEN: End of your opponent’s Movement phase.\nTARGET: One friendly unit that is in **strategic reserves** (excluding **AIRCRAFT**).\nEFFECT: Your unit makes an **ingress move** (20.04).\nRESTRICTIONS: You cannot use this **stratagem** during the first battle round."
+  },
+  "key": "aee46f4535024220"
+ },
+ {
+  "army": "core",
+  "kind": "strat-turn",
+  "where": "Core · Rapid Ingress",
+  "judgement": {
+   "turn": "opp"
+  },
+  "source": {
+   "stratagem": "Rapid Ingress",
+   "text": "WHEN: End of your opponent’s Movement phase.\nTARGET: One friendly unit that is in **strategic reserves** (excluding **AIRCRAFT**).\nEFFECT: Your unit makes an **ingress move** (20.04).\nRESTRICTIONS: You cannot use this **stratagem** during the first battle round."
+  },
+  "key": "bc0f130d00125561"
+ },
+ {
+  "army": "core",
+  "kind": "strat-needs",
+  "where": "Core · Rapid Ingress",
+  "judgement": {
+   "needs": {
+    "none": [
+     "Aircraft"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Rapid Ingress",
+   "text": "WHEN: End of your opponent’s Movement phase.\nTARGET: One friendly unit that is in **strategic reserves** (excluding **AIRCRAFT**).\nEFFECT: Your unit makes an **ingress move** (20.04).\nRESTRICTIONS: You cannot use this **stratagem** during the first battle round."
+  },
+  "key": "93738af1e4eaf618"
+ },
+ {
+  "army": "core",
+  "kind": "strat-phases",
+  "where": "Core · Fire Overwatch",
+  "judgement": {
+   "phases": [
+    "movement"
+   ]
+  },
+  "source": {
+   "stratagem": "Fire Overwatch",
+   "text": "WHEN: End of your opponent’s Movement phase.\nTARGET: One friendly **unengaged** unit (excluding **TITANIC** units).\nEFFECT: Your unit shoots using **snap shooting**."
+  },
+  "key": "7df397384f7d9395"
+ },
+ {
+  "army": "core",
+  "kind": "strat-turn",
+  "where": "Core · Fire Overwatch",
+  "judgement": {
+   "turn": "opp"
+  },
+  "source": {
+   "stratagem": "Fire Overwatch",
+   "text": "WHEN: End of your opponent’s Movement phase.\nTARGET: One friendly **unengaged** unit (excluding **TITANIC** units).\nEFFECT: Your unit shoots using **snap shooting**."
+  },
+  "key": "93dcd4f8af862830"
+ },
+ {
+  "army": "core",
+  "kind": "strat-needs",
+  "where": "Core · Fire Overwatch",
+  "judgement": {
+   "needs": {
+    "none": [
+     "Titanic"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Fire Overwatch",
+   "text": "WHEN: End of your opponent’s Movement phase.\nTARGET: One friendly **unengaged** unit (excluding **TITANIC** units).\nEFFECT: Your unit shoots using **snap shooting**."
+  },
+  "key": "a174127d2045f01b"
+ },
+ {
+  "army": "core",
+  "kind": "strat-phases",
+  "where": "Core · Smokescreen",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Smokescreen",
+   "text": "WHEN: Start of your opponent’s Shooting phase.\nTARGET: One friendly **SMOKE** unit.\nEFFECT: Until the end of the phase, each time an attack targets either your **SMOKE** unit, or a unit that is not **fully visible** to the attacking model because of one or more models in your **SMOKE** unit, the target has the **benefit of cover** against that attack (13.08)."
+  },
+  "key": "60dfba8bfe260dea"
+ },
+ {
+  "army": "core",
+  "kind": "strat-turn",
+  "where": "Core · Smokescreen",
+  "judgement": {
+   "turn": "opp"
+  },
+  "source": {
+   "stratagem": "Smokescreen",
+   "text": "WHEN: Start of your opponent’s Shooting phase.\nTARGET: One friendly **SMOKE** unit.\nEFFECT: Until the end of the phase, each time an attack targets either your **SMOKE** unit, or a unit that is not **fully visible** to the attacking model because of one or more models in your **SMOKE** unit, the target has the **benefit of cover** against that attack (13.08)."
+  },
+  "key": "185956b0a477f4da"
+ },
+ {
+  "army": "core",
+  "kind": "strat-needs",
+  "where": "Core · Smokescreen",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Smoke"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Smokescreen",
+   "text": "WHEN: Start of your opponent’s Shooting phase.\nTARGET: One friendly **SMOKE** unit.\nEFFECT: Until the end of the phase, each time an attack targets either your **SMOKE** unit, or a unit that is not **fully visible** to the attacking model because of one or more models in your **SMOKE** unit, the target has the **benefit of cover** against that attack (13.08)."
+  },
+  "key": "3969cfd0e77f8719"
+ },
+ {
+  "army": "core",
+  "kind": "strat-phases",
+  "where": "Core · Heroic Intervention",
+  "judgement": {
+   "phases": [
+    "charge"
+   ]
+  },
+  "source": {
+   "stratagem": "Heroic Intervention",
+   "text": "WHEN: End of your opponent’s Charge phase.\nTARGET: One friendly **unengaged** unit within 12\" of one or more enemy units. You can only select a **VEHICLE** unit if it is a **CHARACTER/WALKER** unit.\nEFFECT: **Resolve a charge** with your unit (11.02). While doing so, before making the **charge roll**, you must select one of the following modes:\n- **Leap to Defend:** When selecting **charge targets**, you can only select enemy units that made a **charge move** this phase and are within the **maximum distance**.\n- **Into the Fray (+1CP):** When making the **charge roll**, if the result is greater than 6 (after modifiers), change it to 6. When selecting **charge targets**, you can select any enemy units that are within 6\" of your unit and within the **maximum distance**."
+  },
+  "key": "911b920092560922"
+ },
+ {
+  "army": "core",
+  "kind": "strat-turn",
+  "where": "Core · Heroic Intervention",
+  "judgement": {
+   "turn": "opp"
+  },
+  "source": {
+   "stratagem": "Heroic Intervention",
+   "text": "WHEN: End of your opponent’s Charge phase.\nTARGET: One friendly **unengaged** unit within 12\" of one or more enemy units. You can only select a **VEHICLE** unit if it is a **CHARACTER/WALKER** unit.\nEFFECT: **Resolve a charge** with your unit (11.02). While doing so, before making the **charge roll**, you must select one of the following modes:\n- **Leap to Defend:** When selecting **charge targets**, you can only select enemy units that made a **charge move** this phase and are within the **maximum distance**.\n- **Into the Fray (+1CP):** When making the **charge roll**, if the result is greater than 6 (after modifiers), change it to 6. When selecting **charge targets**, you can select any enemy units that are within 6\" of your unit and within the **maximum distance**."
+  },
+  "key": "90e3a85921028ec9"
+ },
+ {
+  "army": "core",
+  "kind": "strat-note",
+  "where": "Core · Heroic Intervention",
+  "judgement": {
+   "note": "Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP."
+  },
+  "source": {
+   "stratagem": "Heroic Intervention",
+   "text": "WHEN: End of your opponent’s Charge phase.\nTARGET: One friendly **unengaged** unit within 12\" of one or more enemy units. You can only select a **VEHICLE** unit if it is a **CHARACTER/WALKER** unit.\nEFFECT: **Resolve a charge** with your unit (11.02). While doing so, before making the **charge roll**, you must select one of the following modes:\n- **Leap to Defend:** When selecting **charge targets**, you can only select enemy units that made a **charge move** this phase and are within the **maximum distance**.\n- **Into the Fray (+1CP):** When making the **charge roll**, if the result is greater than 6 (after modifiers), change it to 6. When selecting **charge targets**, you can select any enemy units that are within 6\" of your unit and within the **maximum distance**."
+  },
+  "key": "2048454965bf9873"
+ },
+ {
+  "army": "core",
+  "kind": "strat-phases",
+  "where": "Core · Counteroffensive",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Counteroffensive",
+   "text": "WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.\nTARGET: One friendly unit that is **eligible to fight**.\nEFFECT: Until the end of the phase, your unit has the **Fights First** ability and it must be the next unit you **select to fight** (12.04)."
+  },
+  "key": "685cea2763bda8f3"
+ },
+ {
+  "army": "core",
+  "kind": "strat-turn",
+  "where": "Core · Counteroffensive",
+  "judgement": {
+   "turn": "opp"
+  },
+  "source": {
+   "stratagem": "Counteroffensive",
+   "text": "WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.\nTARGET: One friendly unit that is **eligible to fight**.\nEFFECT: Until the end of the phase, your unit has the **Fights First** ability and it must be the next unit you **select to fight** (12.04)."
+  },
+  "key": "ee6aba0591e6f19e"
+ },
+ {
+  "army": "core",
+  "kind": "rule-appnote",
+  "where": "Lethal Hits",
+  "judgement": {
+   "note": "*App note, not rules text: the suffix “: non-MONSTER/VEHICLE” reads as applying only against targets that are not MONSTER or VEHICLE units.*"
+  },
+  "source": {
+   "rule": "Lethal Hits",
+   "text": "Each time an attack made with a **[LETHAL HITS]** weapon results in a **critical hit**, you can choose for that attack to automatically wound the target.\n*Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].*"
+  },
+  "key": "31e5897072f81997"
+ },
+ {
+  "army": "core",
+  "kind": "rule-appnote",
+  "where": "Hunter",
+  "judgement": {
+   "note": "*App note, not rules text: New Recruit prints these weapons as two profiles, one marked “Hunter: MONSTER/VEHICLE”. That profile can only target MONSTER or VEHICLE units; the Standard profile can target any unit. The Hunter rule is in the rules appendix of the Warhammer 40,000 app (Wahapedia 04.01.03), not in the printed Core Rules.*"
+  },
+  "source": {
+   "rule": "Hunter",
+   "text": "**04.01.03 Multiple Weapon Profiles (app):** In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).\nSome of these profiles are known as **Hunter** profiles. **Hunter** profiles can only target units with the specified keywords.\nNote that if a unit is equipped with more than one such weapon, a different profile can be selected for each model within that unit."
+  },
+  "key": "f2f3c4d6dee18487"
+ },
+ {
+  "army": "core",
+  "kind": "rule-appnote",
+  "where": "Deep Strike",
+  "judgement": {
+   "note": "*App note, not rules text: units in reserves arrive from the second battle round onwards; any still in reserves at the end of the third battle round are destroyed (Strategic Reserves, 20.03).*"
+  },
+  "source": {
+   "rule": "Deep Strike",
+   "text": "Each time this unit makes an **ingress move** (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+  },
+  "key": "0924b89a98ed63cf"
+ },
+ {
+  "army": "core",
+  "kind": "rule-appnote",
+  "where": "Mobile",
+  "judgement": {
+   "note": "*App note, not rules text: MOBILE has no rule of its own in the core rules; these are the lines of Terrain and Movement (13.06) that name it and that it changes.*"
+  },
+  "source": {
+   "rule": "Mobile",
+   "text": "Terrain and Movement (13.06), dense terrain features:\n- **INFANTRY/BEASTS/SWARM/MOBILE** models can move horizontally through **dense terrain features**.\n- Other models can move horizontally through **dense terrain features** provided that all sections of that **terrain feature** that the moving model’s base would move through are 2\" or less in height."
+  },
+  "key": "f862940edbe95d5b"
+ },
+ {
+  "army": "core",
+  "kind": "rule-appnote",
+  "where": "Selected to Attack",
+  "judgement": {
+   "note": "*App note, not rules text: from the rules appendix in the Warhammer 40,000 app, as Wahapedia prints it (04.01.05); the printed Core Rules do not include it.*"
+  },
+  "source": {
+   "rule": "Selected to Attack",
+   "text": "Some rules use the term **selected to attack**. If a unit is **selected to fight**, **selected to shoot** or chosen to make attacks, that unit is **selected to attack**."
+  },
+  "key": "25ba3bbb347c6d6b"
+ },
+ {
+  "army": "core",
+  "kind": "rule-appnote",
+  "where": "Consolidation Move",
+  "judgement": {
+   "note": "*App note, not rules text: this is the printed Core Rules wording. Wahapedia shows an errata that adds the second sentence of Engaging Consolidation to Ongoing Consolidation, and “must be unengaged and within range” for Objective Consolidation; neither is in the Core Rules PDF (01/06/2026) or the Universal Rules Updates v1.1.*"
+  },
+  "source": {
+   "rule": "Consolidation Move",
+   "text": "**MAXIMUM DISTANCE:** 3\"\n**ELIGIBLE IF:** It is the Fight phase and your unit was **eligible to fight** this phase.\n**EFFECT:** Your unit moves as described in Moving (03).\n**BEFORE MOVING:** Select **consolidation mode**:\n- Ongoing Consolidation: If your unit is **engaged**, you must select this mode and select every enemy unit it is **engaged** with.\n- Engaging Consolidation: Otherwise, if your unit is within 3\" of one or more enemy units, you must select this mode and select one or more of those enemy units.\n- Objective Consolidation: Otherwise, if your unit is within 3\" of one or more **objectives**, you must select this mode and select one of those **objectives**.\n**WHILE MOVING:**\n- Ongoing Consolidation: Models in base-contact with one or more enemy models cannot be moved. Each model that is moved must end its move closer to the closest selected enemy unit, and **engaged** with it if possible.\n- Engaging Consolidation: Each model that is moved must end its move closer to the closest selected enemy unit, and **engaged** with it if possible.\n- Objective Consolidation: Each model that is moved must end its move within range of the selected **objective** if possible, or closer to it if not.\n**AFTER MOVING:**\n- Ongoing Consolidation: Each model that started this move **engaged** with an enemy unit must still be **engaged** with that enemy unit.\n- Engaging Consolidation: Your unit must be **engaged** with all of the selected enemy units. If one or more enemy units **engaged** with your unit have not been **selected to fight** this phase, your opponent must select each of those units, one at a time; when each is selected, it becomes **eligible to fight** and is **selected to fight** (12.04).\n- Objective Consolidation: Your unit must be within range of the selected **objective**."
+  },
+  "key": "503e008b846d2a4e"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^(below |at |at or below )?(starting|half)[- ]strength$/i",
+  "judgement": {
+   "opens": "Starting Strength"
+  },
+  "source": {
+   "rule": "Starting Strength",
+   "text": "The number of models a unit contains at the start of the first battle round is its **starting strength**. The **starting strength** of an **attached** unit is the number of models that unit contains at the start of the first battle round.\nSome rules refer to units being below **starting strength**, "
+  },
+  "key": "60cae8f4067544b3"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^towering$/i",
+  "judgement": {
+   "opens": "Plunging Fire"
+  },
+  "source": {
+   "rule": "Plunging Fire",
+   "text": "Each time a model makes a ranged attack that targets a visible unit containing one or more models on ground level, if one or more of the following conditions apply, improve the **BS** characteristic of that attack by 1:\n- The attacking model is on a section of a terrain feature that is 3\" or more in"
+  },
+  "key": "b60342db49b96b36"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^(select|choosing) weapons?$/i",
+  "judgement": {
+   "opens": "Select Weapons"
+  },
+  "source": {
+   "rule": "Select Weapons",
+   "text": "For each model in the attacking unit, select which weapons that model will make attacks with. Models make ranged attacks with ranged weapons, and make melee attacks with melee weapons.\n**While shooting:** You can select one or more ranged weapons that model has.\n**While fighting:** You must select o"
+  },
+  "key": "e7f2ce799c4d764e"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^anti-/i",
+  "judgement": {
+   "opens": "Anti"
+  },
+  "source": {
+   "rule": "Anti",
+   "text": "This ability always takes the form **[ANTI-X Y+]**. Each time an attack is made with an **[ANTI]** weapon, if the target unit has the keyword denoted by **X**, an unmodified **wound roll** of **Y+** is a **critical wound**.\n*Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE "
+  },
+  "key": "9c7c3e7ddbbd4d79"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^blast/i",
+  "judgement": {
+   "opens": "Blast"
+  },
+  "source": {
+   "rule": "Blast",
+   "text": "Each time you gather **attack dice** for a **[BLAST]** weapon, add one additional **attack dice** for every five models that were in the target unit in the Select Targets step (rounding down).\nIf this ability takes the form **[BLAST X]**, each time you gather **attack dice** for such a weapon, add *"
+  },
+  "key": "58f5b90e7aaa9b10"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^cleave/i",
+  "judgement": {
+   "opens": "Cleave"
+  },
+  "source": {
+   "rule": "Cleave",
+   "text": "This ability always takes the form **[CLEAVE X]**. Each time you gather **attack dice** for a **[CLEAVE]** weapon, if you only selected one target for all of that weapon’s attacks, add **X** additional **attack dice** for every five models that were in the target unit in the Select Targets step (rou"
+  },
+  "key": "92d3aed3d1dc5343"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^pistol/i",
+  "judgement": {
+   "opens": "Close-quarters"
+  },
+  "source": {
+   "rule": "Close-quarters",
+   "text": "Units containing one or more models with a **[CLOSE-QUARTERS]** weapon can shoot using **close-quarters shooting** (10.06). When using another **shooting type**, for each model in that unit (excluding **MONSTER/VEHICLE** models), you can only select one of the following to make attacks with:\n- One o"
+  },
+  "key": "007aefad37a811eb"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^devastating/i",
+  "judgement": {
+   "opens": "Devastating Wounds"
+  },
+  "source": {
+   "rule": "Devastating Wounds",
+   "text": "Each time an attack made with a **[DEVASTATING WOUNDS]** weapon results in a **critical wound**, the attack sequence for that attack ends and the target unit suffers a number of **mortal wounds** equal to the **D** characteristic of that weapon. These are inflicted after resolving any normal damage "
+  },
+  "key": "ac29be93a958f89b"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^extra attacks/i",
+  "judgement": {
+   "opens": "Extra Attacks"
+  },
+  "source": {
+   "rule": "Extra Attacks",
+   "text": "Each time a unit containing one or more models with an **[EXTRA ATTACKS]** weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step (04.01), for each of those models, you must select:\n- All of that model’s **[EXTRA ATTACKS]** weapons.\n- O"
+  },
+  "key": "0adb7282e9469117"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^hazardous/i",
+  "judgement": {
+   "opens": "Hazardous"
+  },
+  "source": {
+   "rule": "Hazardous",
+   "text": "Each time a unit is **selected to shoot** or **selected to fight**, after that unit has resolved all of its attacks, make a number of **hazard rolls** (06.03) for that unit equal to the number of **[HAZARDOUS]** weapons you selected in the Select Weapons step."
+  },
+  "key": "da033937d5a3e4bb"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^ignores cover/i",
+  "judgement": {
+   "opens": "Ignores Cover"
+  },
+  "source": {
+   "rule": "Ignores Cover",
+   "text": "Each time an attack is made with an **[IGNORES COVER]** weapon, the target cannot have the **benefit of cover** against that attack (13.08), including from rules that give a model or unit the **benefit of cover** (e.g. **Stealth**)."
+  },
+  "key": "472a4448d6c83bf3"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^lethal hits/i",
+  "judgement": {
+   "opens": "Lethal Hits"
+  },
+  "source": {
+   "rule": "Lethal Hits",
+   "text": "Each time an attack made with a **[LETHAL HITS]** weapon results in a **critical hit**, you can choose for that attack to automatically wound the target.\n*Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it "
+  },
+  "key": "c0e4acb468dcd793"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^precision/i",
+  "judgement": {
+   "opens": "Precision"
+  },
+  "source": {
+   "rule": "Precision",
+   "text": "While resolving attacks made with one or more **[PRECISION]** weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more **CHARACTER** models **visible** to one or more of the attacking models, the active player can select one allocation group that contains o"
+  },
+  "key": "8affdd8227855ef7"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^rapid fire/i",
+  "judgement": {
+   "opens": "Rapid Fire"
+  },
+  "source": {
+   "rule": "Rapid Fire",
+   "text": "This ability always takes the form **[RAPID FIRE X]**. Each time you gather **attack dice** for a **[RAPID FIRE]** weapon, add **X** additional **attack dice** if the target unit was within half range of that weapon in the Select Targets step."
+  },
+  "key": "74964cd68886ab48"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^sustained hits/i",
+  "judgement": {
+   "opens": "Sustained Hits"
+  },
+  "source": {
+   "rule": "Sustained Hits",
+   "text": "This ability always takes the form **[SUSTAINED HITS X]**. Each time an attack made with a **[SUSTAINED HITS]** weapon results in a **critical hit**, that attack results in a number of additional hits on the target as denoted by **X**."
+  },
+  "key": "8b7b173abe53714f"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^torrent/i",
+  "judgement": {
+   "opens": "Torrent"
+  },
+  "source": {
+   "rule": "Torrent",
+   "text": "Each time an attack is made with a **[TORRENT]** weapon, that attack automatically hits the target."
+  },
+  "key": "914418c97bf72ecb"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^twin-linked/i",
+  "judgement": {
+   "opens": "Twin-linked"
+  },
+  "source": {
+   "rule": "Twin-linked",
+   "text": "Each time an attack is made with a **[TWIN-LINKED]** weapon, you can re-roll the **wound roll**."
+  },
+  "key": "f5803142822f4aa5"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^assault/i",
+  "judgement": {
+   "opens": "Assault"
+  },
+  "source": {
+   "rule": "Assault",
+   "text": "Units containing one or more models with an **[ASSAULT]** weapon can shoot using **assault shooting** (10.05)."
+  },
+  "key": "f8e01071749e457b"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^deep strike/i",
+  "judgement": {
+   "opens": "Deep Strike"
+  },
+  "source": {
+   "rule": "Deep Strike",
+   "text": "Each time this unit makes an **ingress move** (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.\n*App note, not rules text: units in reserv"
+  },
+  "key": "3774c86a09c33053"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^deadly demise/i",
+  "judgement": {
+   "opens": "Deadly Demise"
+  },
+  "source": {
+   "rule": "Deadly Demise",
+   "text": "This ability always takes the form **Deadly Demise X**. Each time a model in this unit is **destroyed**, after the units embarked within it (if any) have made their **emergency disembark moves**, roll one D6. On a 6, that model suffers a **deadly demise**; each unit within 6\" of that model suffers a"
+  },
+  "key": "3152e3c7e12905be"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^feel no pain/i",
+  "judgement": {
+   "opens": "Feel No Pain"
+  },
+  "source": {
+   "rule": "Feel No Pain",
+   "text": "This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost."
+  },
+  "key": "bbf0103a44eeff21"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^(lead|leading|support( units?)?)$/i",
+  "judgement": {
+   "opens": "Leader"
+  },
+  "source": {
+   "rule": "Leader",
+   "text": "Before the battle, in the Muster Armies step, for each **leader** and **support** unit in your army, you can select one friendly **bodyguard** unit that unit can **lead**. That unit will then **lead** that **bodyguard** unit for the battle and form an **attached** unit with it.\nUnless otherwise stat"
+  },
+  "key": "21e9935f6273d7e5"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^lone operative/i",
+  "judgement": {
+   "opens": "Lone Operative"
+  },
+  "source": {
+   "rule": "Lone Operative",
+   "text": "Unless part of an **attached** unit, this unit is not **visible** to enemy models unless they are within 12\" of this unit, and it cannot be targeted by **[INDIRECT FIRE]** weapons unless the attacking model is within 12\" of this unit.\nIf this ability takes the form **Lone Operative X\"**, unless part"
+  },
+  "key": "d73f04aca7c05002"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^mobile/i",
+  "judgement": {
+   "opens": "Mobile"
+  },
+  "source": {
+   "rule": "Mobile",
+   "text": "Terrain and Movement (13.06), dense terrain features:\n- **INFANTRY/BEASTS/SWARM/MOBILE** models can move horizontally through **dense terrain features**.\n- Other models can move horizontally through **dense terrain features** provided that all sections of that **terrain feature** that the moving mod"
+  },
+  "key": "9eb3e6957b95cc6d"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^hunter/i",
+  "judgement": {
+   "opens": "Hunter"
+  },
+  "source": {
+   "rule": "Hunter",
+   "text": "**04.01.03 Multiple Weapon Profiles (app):** In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).\nSome of these profiles are known"
+  },
+  "key": "d4af4bc35df60187"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^snap shooting/i",
+  "judgement": {
+   "opens": "Snap Shooting"
+  },
+  "source": {
+   "rule": "Snap Shooting",
+   "text": "ELIGIBLE IF: As stated in the rule allowing this shooting type.\nEFFECT: Your unit shoots as described in Making Attacks (04).\nWHILE SHOOTING:\n- You can only target one visible enemy unit within 24\" of your unit (and only if it is an eligible target).\n- Each attack only hits on an unmodified hit roll"
+  },
+  "key": "916e4b59b2a5c318"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^fights first/i",
+  "judgement": {
+   "opens": "Fights First"
+  },
+  "source": {
+   "rule": "Fights First",
+   "text": "While every model in a unit has this ability, that unit is a **Fights First** unit.\nSee the Resolve Fights First Combats step in the Fight phase (12.04)."
+  },
+  "key": "bbd6a0e7329629e6"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^actions?$/i",
+  "judgement": {
+   "opens": "Actions"
+  },
+  "source": {
+   "rule": "Actions",
+   "text": "A unit is eligible to start an action unless one or more of the following apply to that unit:\n- It is not on the battlefield.\n- It is an **AIRCRAFT**/**FORTIFICATION** unit.\n- It is battle-shocked.\n- It has an OC characteristic of 0 or ‘-’.\n- It is engaged (unless it is a **TITANIC** unit).\n- It mad"
+  },
+  "key": "28a1b1bc72f1cf1c"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^melta/i",
+  "judgement": {
+   "opens": "Melta"
+  },
+  "source": {
+   "rule": "Melta",
+   "text": "This ability always takes the form **[MELTA X]**. Each time a model makes an attack with a **[MELTA]** weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add **X** to that weapon’s **D** characteristic.\n*"
+  },
+  "key": "826876bb17200d2c"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^lance/i",
+  "judgement": {
+   "opens": "Lance"
+  },
+  "source": {
+   "rule": "Lance",
+   "text": "Each time an attack is made with a **[LANCE]** weapon, if the attacking model’s unit made a **charge move** this turn, add 1 to the **wound roll**."
+  },
+  "key": "0691de7b46f3b733"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^super-heavy walker/i",
+  "judgement": {
+   "opens": "Super-Heavy Walker"
+  },
+  "source": {
+   "rule": "Super-Heavy Walker",
+   "text": "Each time a unit with this ability makes a **normal**, **advance** or **fall-back move**:\n- Models in that unit can move through models (including **MONSTER/VEHICLE** models, but excluding **TITANIC** models) and can move horizontally through sections of **terrain features** that are 4\" or less in h"
+  },
+  "key": "3783b487e78f734a"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^firing deck/i",
+  "judgement": {
+   "opens": "Firing Deck"
+  },
+  "source": {
+   "rule": "Firing Deck",
+   "text": "This ability always takes the form **Firing Deck X**. In your Shooting phase, each time this **TRANSPORT** is **selected to shoot**, if one or more units are embarked within it, resolve the following sequence:\n- 1. Select up to **X** models embarked within this **TRANSPORT** (excluding models whose "
+  },
+  "key": "59655017dedd66aa"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^scouts/i",
+  "judgement": {
+   "opens": "Scouts"
+  },
+  "source": {
+   "rule": "Scouts",
+   "text": "This ability always takes the form **Scouts X\"**. In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following:\n- If that unit is in **strategic reserves**, you can set up that unit anywhere that is wholly within your deployment zone.\n- If that"
+  },
+  "key": "43e3cdc307f44f49"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^psychic$/i",
+  "judgement": {
+   "opens": "Psychic"
+  },
+  "source": {
+   "rule": "Psychic",
+   "text": "Each time an attack is made with a **[PSYCHIC]** weapon, you can ignore any or all modifiers to that attack’s **BS** or **WS** characteristic and any or all modifiers to the **hit roll**. Attacks made with **[PSYCHIC]** weapons are known as **psychic attacks** (this can be important for the triggeri"
+  },
+  "key": "553e59d3f8c0ffff"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^harpooned$/i",
+  "judgement": {
+   "opens": "Harpooned"
+  },
+  "source": {
+   "rule": "Harpooned",
+   "text": "When this unit **declares a charge**, if an enemy **MONSTER/VEHICLE** unit is within 12\" of this unit and was hit by an attack made by this weapon this turn, you can use this ability. If you do:\n- This unit has +2 to **charge rolls** until the end of the phase.\n- This unit must end that **charge mov"
+  },
+  "key": "05ceaa88cf8ca796"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^hazard(ous)? (roll|test)s?$/i",
+  "judgement": {
+   "opens": "Hazard Roll"
+  },
+  "source": {
+   "rule": "Hazard Roll",
+   "text": "To make a **hazard roll** for a unit, roll one D6: on a 1-2, that roll fails and that unit suffers 1 **mortal wound** (see above), or 3 **mortal wounds** instead if each model in that unit is a **MONSTER/VEHICLE** model. If more than one **hazard roll** is required for a unit, make all of those roll"
+  },
+  "key": "9ce616cf6ff02da6"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^mortal wounds?$/i",
+  "judgement": {
+   "opens": "Mortal Wounds"
+  },
+  "source": {
+   "rule": "Mortal Wounds",
+   "text": "Some attacks or rules inflict **mortal wounds** on units. Each time a unit suffers one or more **mortal wounds**, its controlling player must resolve the following sequence for each of those **mortal wounds**, until either all of them have been inflicted or that unit is **destroyed**:\n- **Select Mod"
+  },
+  "key": "64e2fb903ae42f9e"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^leadership (roll|test)s?$/i",
+  "judgement": {
+   "opens": "Battle-shock"
+  },
+  "source": {
+   "rule": "Battle-shock",
+   "text": "**01.06 Leadership Rolls:** To make a **leadership roll** for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the **Ld** characteristics in that unit, that roll succeeds. Otherwise, that roll fails.\n**01.07 Battle-shock Rolls:** To make a **battle-s"
+  },
+  "key": "4714397c0975479e"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^(un)?engage(d|ment( range)?)?$/i",
+  "judgement": {
+   "opens": "Engagement"
+  },
+  "source": {
+   "rule": "Engagement",
+   "text": "A model’s **engagement range** is the area of the battlefield within 2\" horizontally and 5\" vertically of it.\n- While a friendly model is within **engagement range** of one or more enemy models, those models – and the units they belong to – are **engaged** with each other.\n- While a unit contains no"
+  },
+  "key": "4c889b2fd1b4fb67"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^selected to attack$/i",
+  "judgement": {
+   "opens": "Selected to Attack"
+  },
+  "source": {
+   "rule": "Selected to Attack",
+   "text": "Some rules use the term **selected to attack**. If a unit is **selected to fight**, **selected to shoot** or chosen to make attacks, that unit is **selected to attack**.\n*App note, not rules text: from the rules appendix in the Warhammer 40,000 app, as Wahapedia prints it (04.01.05); the printed Cor"
+  },
+  "key": "9ab183854ae0e575"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^(destroy(ed|s)?|fight on death)$/i",
+  "judgement": {
+   "opens": "Destroyed"
+  },
+  "source": {
+   "rule": "Destroyed",
+   "text": "Throughout a battle, models will suffer damage, lose wounds and be **destroyed**. When every model in a unit has been **destroyed**, that unit is **destroyed**.\nWhen a model is **destroyed**, first resolve any rules that are triggered when it is **destroyed**, then it is removed from the battlefield"
+  },
+  "key": "95c6517685c56b6f"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^normal( move)?s?$/i",
+  "judgement": {
+   "opens": "Normal Move"
+  },
+  "source": {
+   "rule": "Normal Move",
+   "text": "**MAXIMUM DISTANCE:** Your unit’s **M** characteristic.\n**ELIGIBLE IF:** Your unit is on the battlefield and **unengaged**.\n**EFFECT:** Your unit moves as described in Moving (03).\n**AFTER MOVING:** Your unit must be **unengaged**.\n**09.05.01 More Than One Normal Move in a Phase (app):** A unit cann"
+  },
+  "key": "6872e35e4cbe7da7"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^advance( move| roll)?s?$/i",
+  "judgement": {
+   "opens": "Advance Move"
+  },
+  "source": {
+   "rule": "Advance Move",
+   "text": "**MAXIMUM DISTANCE:** Advance roll + your unit’s **M** characteristic.\n**ELIGIBLE IF:** Your unit is on the battlefield and **unengaged**.\n**EFFECT:** Your unit moves as described in Moving (03).\n**BEFORE MOVING:** Make an **advance roll** by rolling one D6.\n**AFTER MOVING:**\n- Your unit must be **u"
+  },
+  "key": "9108deafb0cbff00"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^(desperate escape|ordered retreat)( mode| test)?s?$/i",
+  "judgement": {
+   "opens": "Fall-back Move"
+  },
+  "source": {
+   "rule": "Fall-back Move",
+   "text": "**MAXIMUM DISTANCE:** Your unit’s **M** characteristic.\n**ELIGIBLE IF:** Your unit is **engaged**.\n**EFFECT:** Your unit moves as described in Moving (03).\n**BEFORE MOVING:** Select fall-back mode:\n- Ordered Retreat: If your unit is not **battle-shocked**, you can select this mode.\n- Desperate Escap"
+  },
+  "key": "3d7f024547e15420"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^(charges?|charge rolls?|declares? a charge|declared a charge|eligible to declare a charge|resolve a charge)$/i",
+  "judgement": {
+   "opens": "Charge"
+  },
+  "source": {
+   "rule": "Charge",
+   "text": "- 1. **Declare Charge:** Select one friendly unit that has not **declared a charge** this phase and is **eligible to declare a charge** (see below). That unit **declares a charge**.\nA unit is **eligible to declare a charge** if it is on the battlefield, unless otherwise stated. Here are some rules t"
+  },
+  "key": "8b140a87298b587d"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^charge (move|target)s?/i",
+  "judgement": {
+   "opens": "Charge Move"
+  },
+  "source": {
+   "rule": "Charge Move",
+   "text": "**MAXIMUM DISTANCE:** **Charge roll**.\n**ELIGIBLE IF:** Your unit declared a charge this phase.\n**EFFECT:** Your unit moves as described in Moving (03).\n**BEFORE MOVING:** Select one or more enemy units that are within 12\" of your unit and within the maximum distance of your unit; until the end of t"
+  },
+  "key": "9afba01052e3c1e4"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^pile-in( move| target)?s?$/i",
+  "judgement": {
+   "opens": "Pile-in Move"
+  },
+  "source": {
+   "rule": "Pile-in Move",
+   "text": "**MAXIMUM DISTANCE:** 3\"\n**ELIGIBLE IF:** It is the Fight phase and one or more of the following apply to your unit:\n- It is **engaged**.\n- It made a **charge move** this turn.\n- It was selected to make an **overrun fight** this phase (12.06).\n**EFFECT:** Your unit moves as described in Moving (03)."
+  },
+  "key": "f802322a9d8dc75b"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^consolidat(e|ion)( move| mode)?s?$/i",
+  "judgement": {
+   "opens": "Consolidation Move"
+  },
+  "source": {
+   "rule": "Consolidation Move",
+   "text": "**MAXIMUM DISTANCE:** 3\"\n**ELIGIBLE IF:** It is the Fight phase and your unit was **eligible to fight** this phase.\n**EFFECT:** Your unit moves as described in Moving (03).\n**BEFORE MOVING:** Select **consolidation mode**:\n- Ongoing Consolidation: If your unit is **engaged**, you must select this mo"
+  },
+  "key": "3716e2563860f761"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^benefit of cover$/i",
+  "judgement": {
+   "opens": "Benefit of Cover"
+  },
+  "source": {
+   "rule": "Benefit of Cover",
+   "text": "Each time a ranged attack targets a unit, if every model in that unit meets one or more of the following conditions, that unit has the **benefit of cover** against that attack:\n- That model has the **INFANTRY/BEASTS/SWARM** keyword and is within a **terrain area**.\n- That model is not **fully visibl"
+  },
+  "key": "88f067e90f8b408d"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^(attached( units?)?|bodyguard( units?| models?)?)$/i",
+  "judgement": {
+   "opens": "Attached Units"
+  },
+  "source": {
+   "rule": "Attached Units",
+   "text": "Some units have the **Leader** or **Support** ability listed on their datasheet (see below). Such units are known as **leader** units and **support** units respectively. Both of these abilities allow such units to **lead** other friendly units (known as **bodyguard** units) to form **attached** unit"
+  },
+  "key": "6f07a7c83a4f541b"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^((strategic )?reserves|repositioned( units?)?)$/i",
+  "judgement": {
+   "opens": "Strategic Reserves"
+  },
+  "source": {
+   "rule": "Strategic Reserves",
+   "text": "Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding **FORTIFICATIONS**) to place in **strategic reserves**. Instead of setting up these units on the battlefield during deployment, place them to one side; they are **strategic reserves** units"
+  },
+  "key": "836312dea8f3763f"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^ingress moves?$/i",
+  "judgement": {
+   "opens": "Ingress Move"
+  },
+  "source": {
+   "rule": "Ingress Move",
+   "text": "**SET-UP DISTANCE:** 6\"\n**ELIGIBLE IF:** Your unit is in **strategic reserves** (excluding units that are embarked within **TRANSPORTS** that are themselves in **strategic reserves**).\n**EFFECT:** Your unit is set up as described in Set Up (03.02).\n**WHILE MOVING:** Set up your unit wholly within th"
+  },
+  "key": "ca1a81c9c364bcef"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^surge (move|target)s?$/i",
+  "judgement": {
+   "opens": "Surge Move"
+  },
+  "source": {
+   "rule": "Surge Move",
+   "text": "Some rules allow a unit to make a surge move, as described below.\n**MAXIMUM DISTANCE:** As stated in the rule allowing this move type.\n**ELIGIBLE IF:** All of the following apply:\n- The rule allowing this **move type** has been triggered.\n- Your unit is not **battle-shocked**.\n- Your unit is **uneng"
+  },
+  "key": "b938a8aab373de99"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^scout moves?$/i",
+  "judgement": {
+   "opens": "Scout Move"
+  },
+  "source": {
+   "rule": "Scout Move",
+   "text": "**MAXIMUM DISTANCE:** The **X\"** in **Scouts X\"**.\n**ELIGIBLE IF:** It is the Resolve Pre-battle Abilities step, and your unit is wholly within your deployment zone.\n**EFFECT:** Your unit moves as described in Moving (03).\n**AFTER MOVING:** Your unit must be more than 8\" horizontally from all enemy "
+  },
+  "key": "6a9a665463a5064d"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^stealth$/i",
+  "judgement": {
+   "opens": "Stealth"
+  },
+  "source": {
+   "rule": "Stealth",
+   "text": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the **benefit of cover** against that attack (13.08)."
+  },
+  "key": "d6aca4a6ac9326da"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "useSentence",
+  "judgement": {
+   "code": "function useSentence(set, kind, u, who){\n  const nm = list => list.map(it => esc(itemName(it)));\n  const v = (lead, third) => (who ? '<b class=\"m\">' + esc(who) + '</b> ' : '') + '<b class=\"uv\" role=\"button\" tabindex=\"0\" data-rule=\"Select Weapons\">' + (who ? third : lead) + '</b>';\n  if(kind === 'ranged'){\n    const cq = set.filter(isCQ), rest = set.filter(it => !isCQ(it)), big = hasKw(u, 'Monster') ? 'MONSTER' : hasKw(u, 'Vehicle') ? 'VEHICLE' : '';\n    if(cq.length && rest.length && !big)\n      return v('Pick one to shoot:', 'picks one to shoot:') + ' ' + orList(nm(cq)) + ' <b>or</b> ' + (rest.length > 1 ? 'all of ' : '') + andList(nm(rest)) + '.';\n    const guns = modelCount(u) === 1 ? set.reduce((t, it) => t + (+it.n || 1), 0) : set.length;   // a Forgefiend's 2 Hades + 1 cannon: all of these\n    const w = guns === 2 ? 'both' : 'all of these';\n    return v('Shoots with ' + w, 'shoots with ' + w) + (cq.length && rest.length ? ' (a ' + big + ' fires its pistol too)' : '') + '.';\n  }\n  const ea = set.filter(isEA), other = set.filter(it => !isEA(it));\n  const extra = ea.length ? ', <b>plus</b> ' + andList(nm(ea)) + ' on top (extra attacks)' : '';\n  if(other.length > 1) return v('Pick one to fight with:', 'picks one to fight with:') + ' ' + orList(nm(other)) + extra + '.';\n  if(other.length === 1){ const w = ea.length === 1 ? 'both' : 'all of these'; return v('Fights with ' + w + ':', 'fights with ' + w + ':') + ' ' + nm(other)[0] + extra + '.'; }\n  return v('Fights with all of these', 'fights with all of these') + ' (extra attacks).';\n}"
+  },
+  "source": {
+   "implements": "04.01 Select Weapons; Close-quarters (non-MONSTER/VEHICLE: pistols or other ranged weapons); Extra Attacks (24.11); a multi-profile weapon uses one profile (04.01.03)"
+  },
+  "key": "4794442f50e56628"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "useLine",
+  "judgement": {
+   "code": "function useLine(items, kind, u, part){\n  if(items.length < 2 || !u.gear) return '';\n  // in an attached unit, the first models line is the leader and the rest the bodyguard\n  const own = i => part == null || (part === 0 ? i === 0 : i > 0);\n  const lines = u.gear.map((g, i) => ({ i, who:u.models[i].replace(/^\\d+× /, ''), set:items.filter(it => g.includes(itemName(it))) })).filter(l => l.set.length && own(l.i));\n  const multi = lines.filter(l => l.set.length > 1);\n  // a weapon only one model has, in a squad of mixed loadouts: name that model (the champion's pistol)\n  if(lines.length > 1) for(const it of items){ const ls = lines.filter(l => l.set.includes(it)); if(!it.n && !it.carrier && ls.length === 1 && /^1× /.test(u.models[ls[0].i])) it.carrier = ls[0].who.replace(/ w\\/.*$/, ''); }\n  if(!multi.length){\n    if(lines.length < 2) return '';\n    for(const l of lines) for(const it of l.set) if(!it.n) it.carrier = l.who.replace(/ w\\/.*$/, '');   // name the one model that has it\n    return '<p class=\"use\"><b class=\"m\">One of these per model</b> · ×N = how many models have it.</p>';\n  }\n  const key = l => l.set.map(itemName).join('|');\n  const kinds = [...new Map(multi.map(l => [key(l), l])).values()];\n  if(kinds.length === 1 && multi.length === lines.length) return '<p class=\"use\">' + useSentence(kinds[0].set, kind, u) + '</p>';\n  const said = kinds.map(l => useSentence(l.set, kind, u));\n  const others = multi.length < lines.length;\n  if(kind === 'ranged' && said.every(x => /data-rule=\"Select Weapons\">Shoots with/.test(x)))\n    return '<p class=\"use\"><b class=\"uv\" role=\"button\" tabindex=\"0\" data-rule=\"Select Weapons\">Every model shoots with all its guns</b>' + (others ? ' (see ×)' : '') + '.</p>';\n  return kinds.map(l => '<p class=\"use\">' + useSentence(l.set, kind, u, l.who.replace(/ w\\/.*$/, '')) + '</p>').join('') +\n    (others ? '<p class=\"use\"><b class=\"m\">The others:</b> one each (×N = how many models have it).</p>' : '');\n}"
+  },
+  "source": {
+   "implements": "which models carry which weapons (gear per models line); attached units (19.04)"
+  },
+  "key": "a695a4ea5de43479"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "unitMods",
+  "judgement": {
+   "code": "function unitMods(u, kind){\n  const det = unitDetRules(u).filter(r => r.mod).map(r => Object.assign({ from:r.name, rule:r.name }, singleMod(r.mod, u)));\n  const lance = [...new Set((u.melee || []).filter(w => w.kw.some(k => /^lance/i.test(k))).map(w => w.group || w.name))];\n  if(lance.length) det.push({ kind:'melee', when:'Made a charge move this turn', note:andList(lance) + ' +1 to wound', from:'Lance', rule:'Lance' });\n  if(hasKw(u, 'Towering') && D.rules['Plunging Fire']) det.push({ kind:'ranged', when:'Target within 12\" with models on ground level', note:'+1 BS', from:'Plunging Fire', rule:'Plunging Fire' });\n  const strat = allStratagems().filter(s => s.mod && eligible(s).includes(u)).map(s => Object.assign({ from:s.name, strat:s.id, cp:s.cp }, s.mod));\n  return (u.mods || []).concat(det, auraMods(u), strat).filter(m => m.kind === kind || m.kind === 'all');\n}"
+  },
+  "source": {
+   "implements": "which footnotes a unit gets: its own, detachment rules matching its keywords, auras, stratagems it is eligible for; Lance (+1 to wound after a charge); Plunging Fire for TOWERING (22.05)"
+  },
+  "key": "67c737a2161af756"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "singleMod",
+  "judgement": {
+   "code": "const singleMod = (m, u) => m.single && modelCount(u) === 1 ? Object.assign({}, m, { when:m.single.when, note:m.single.note.replace('{half}', halfBelow(u)) }) : m;"
+  },
+  "source": {
+   "implements": "Starting Strength for a one-model unit (Core Rules p86)"
+  },
+  "key": "f5315f4321e9a698"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "halfBelow",
+  "judgement": {
+   "code": "const halfBelow = u => Math.ceil((parseInt(u.stats[0].W, 10) || 0) / 2) - 1;"
+  },
+  "source": {
+   "implements": "Below half-strength for a one-model unit: remaining wounds less than half its W"
+  },
+  "key": "cc7842d6434ba57e"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "defenceItems",
+  "judgement": {
+   "code": "function defenceItems(u, ph){\n  const out = [];\n  for(const r of u.rules){ const m = /^feel no pain (\\d\\+)/i.exec(r); if(m) out.push({ t:'Feel No Pain ' + m[1], a:'rule', v:r }); }\n  for(const r of unitDetRules(u)) if(r.def && !out.some(x => x.t === r.def)) out.push({ t:r.def, a:'rule', v:r.name });   // e.g. Knights of Legend: FNP 6+\n  for(const ab of u.abilities) if(ab.def && !naReason(ab) && !(ph && ab.defPh && !ab.defPh.includes(ph))) out.push({ t:ab.def, a:'ability', v:abilityKey(ab) });\n  for(const s of allStratagems()) if(s.def && eligible(s).includes(u) && !(ph && !s.phases.includes(ph))) out.push({ t:s.cp + 'CP ' + s.name + ': ' + s.def, a:'strat', v:s.id });\n  const weak = u.stats.filter(s => !/^[2-5]\\+$/.test(s.InSv));\n  if(weak.length && u.rules.includes('Waaagh!'))\n    out.push({ t:'Riled up: 5+ INV' + (weak.length < u.stats.length ? ' (' + weak.map(s => s.name.replace(/ ×\\d+$/, '')).join(', ') + ')' : ''), a:'rule', v:'Waaagh!' });\n  return out;\n}"
+  },
+  "source": {
+   "implements": "what protects a unit when targeted: Feel No Pain, defensive abilities, detachment rules, stratagems usable in that phase, the Orks riled-up 5+ invulnerable save"
+  },
+  "key": "b16fef6d7bd17f07"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "onceTag",
+  "judgement": {
+   "code": "const onceTag = ab => {\n  const t = ab.text || '';\n  for(const src of [ab.tag || '', (/\\((once per [^)]+)\\)/i.exec(t) || [])[1] || '', (/^once per [^,.]+(, per (army|unit))?/i.exec(t) || [])[0] || '']){\n    const m = /once per (battle round|battle|phase|turn)(, per (army|unit))?/i.exec(src);\n    if(m) return m[0].replace(/^o/, 'O');\n  }\n  return '';\n};"
+  },
+  "source": {
+   "implements": "\"Once per …\" limits shown on the ability row"
+  },
+  "key": "2105bd7302380541"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "matches",
+  "judgement": {
+   "code": "function matches(n, u){\n  if(!n) return true;\n  if(n.all && !n.all.every(k => hasKw(u, k))) return false;\n  if(n.any && !n.any.some(k => hasKw(u, k))) return false;\n  if(n.none && n.none.some(k => hasKw(u, k))) return false;\n  if(n.unless && matches(n.unless, u)) return false;\n  return true;\n}"
+  },
+  "source": {
+   "implements": "stratagem/rule eligibility by keywords (all / any / none)"
+  },
+  "key": "86d3964b947a7f9b"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "inertRule",
+  "judgement": {
+   "code": "function inertRule(name){\n  const r = faction().armyRules.find(x => x.name === name);\n  return !!(r && r.needs && !army().units.some(u => matches(r.needs, u)));\n}"
+  },
+  "source": {
+   "implements": "rules that do nothing in this list (e.g. Bondsman without ARMIGER models)"
+  },
+  "key": "f155569f299b28dc"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "auraMods",
+  "judgement": {
+   "code": "function auraMods(u){\n  const out = [];\n  for(const src of army().units) for(const m of src.aura || []){\n    const self = src === u;\n    if((self && m.notSelf) || !matches(m.needs, u)) continue;\n    out.push(Object.assign({}, m, { when:self && m.selfWhen ? m.selfWhen : m.when, src }));\n  }\n  return out;\n}"
+  },
+  "source": {
+   "implements": "auras from other units in the list"
+  },
+  "key": "3eb2673c5f83a752"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "phaseItems",
+  "judgement": {
+   "code": "function phaseItems(){\n  const out = [], f = faction(), units = army().units;\n  for(const r of f.armyRules) if(r.ph && !inertRule(r.name)) out.push({ name:r.name, text:r.text, note:r.note, table:r.table, tag:r.tag, ph:r.ph, turn:r.turn, turns:r.turns, sub:f.name + ' army rule', units:[] });\n  for(const d of detachments()) if(d.rule && d.rule.ph){\n    const us = units.filter(u => matches(d.rule.needs, u));\n    if(us.length) out.push({ name:d.rule.name, text:d.rule.text, note:d.rule.note, tag:d.rule.tag, table:d.rule.table, ph:d.rule.ph, turn:d.rule.turn, turns:d.rule.turns, sub:d.name + ' rule · ' + unitNames(us), units:us });\n  }\n  for(const u of units) for(const ab of u.abilities){\n    if(!ab.ph || naReason(ab)) continue;\n    const key = ab.name + '|' + ab.text;\n    let e = out.find(x => x.key === key);\n    if(!e){ e = { key, name:ab.name, text:ab.text, tag:ab.tag, ph:ab.ph, turn:ab.turn, turns:ab.turns, units:[] }; out.push(e); }\n    e.units.push(u);\n  }\n  for(const [key, when] of Object.entries(CORE_PHASED)){\n    const us = units.filter(u => unitRules(u).some(r => ruleKey(r) === key) || [...(u.ranged || []), ...(u.melee || [])].some(w => w.kw.some(k => ruleKey(k) === key)));\n    if(us.length && D.rules[key]) out.push(Object.assign({ name:key, text:D.rules[key], sub:'Core rule · ' + unitNames(us), units:us }, when));\n  }\n  for(const e of out) if(!e.sub) e.sub = unitNames(e.units);\n  return out;\n}"
+  },
+  "source": {
+   "implements": "what is listed under \"Also this phase\""
+  },
+  "key": "6350d3df4e909c6a"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "CORE_PHASED",
+  "judgement": {
+   "code": "const CORE_PHASED = { 'Deep Strike':{ ph:['movement'], turn:'either' }, 'Harpooned':{ ph:['charge'], turn:'your' }, 'Super-Heavy Walker':{ ph:['movement'], turn:'your' }, 'Firing Deck':{ ph:['shooting'], turn:'your' } };"
+  },
+  "source": {
+   "implements": "core rules listed in a phase: Deep Strike, Harpooned, Super-Heavy Walker, Firing Deck"
+  },
+  "key": "24db38d3289e3c8e"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "suits",
+  "judgement": {
+   "code": "const suits = (s, u) => keywordGated(s) || u.abilities.some(ab => (ab.text || '').toLowerCase().includes(s.name.toLowerCase() + ' stratagem')) ||\n  (s.id === 'fire-overwatch' && (u.ranged || []).length > 0) ||\n  (s.id === 'rapid-ingress' && (unitRules(u).some(r => ruleKey(r) === 'Deep Strike') || u.abilities.some(ab => /strategic reserves/i.test(ab.text))));"
+  },
+  "source": {
+   "implements": "which core stratagems a datasheet lists"
+  },
+  "key": "323a0d18158d6a74"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "proxyLines",
+  "judgement": {
+   "code": "function proxyLines(u){\n  const lines = u.models.map((m, i) => Object.assign(lineParts(m), { gear:(u.gear || [])[i] || [], base:baseOf(u, lineParts(m).name) }));\n  const tag = [u.warlord ? 'Warlord' : '', u.enhancement].filter(Boolean);\n  const own = (l, words) => [l.name === u.name || !u.short ? baseName(l.name) : u.short].concat(words).join(' · ');\n  if(lines.length === 1 && lines[0].n === 1) return [Object.assign(lines[0], { mark:own(lines[0], tag), lead:true })];\n  const body = u.leads ? lines.slice(1) : lines;\n  if(u.leads) Object.assign(lines[0], { mark:own(lines[0], tag), lead:true });\n  const std = body.slice().sort((x, y) => y.n - x.n)[0];\n  for(const l of body){\n    if(l === std){ l.mark = 'standard'; l.std = true; continue; }\n    const sb = baseName(std.name), lb = baseName(l.name);\n    const named = lb === sb ? '' : lb.startsWith(sb + ' ') ? lb.slice(sb.length + 1) : lb;\n    const more = l.gear.filter(g => !std.gear.includes(g));\n    l.mark = [named, more.join(' + '), l.extra].filter(Boolean).join(' · ') || 'standard';\n  }\n  return lines;\n}"
+  },
+  "source": {
+   "implements": "Bases & proxies: bases per models line and what to mark"
+  },
+  "key": "a493c970772a43dd"
+ }
+]

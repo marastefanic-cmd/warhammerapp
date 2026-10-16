@@ -4,9 +4,9 @@
 // too slow (a weak signal at the table). Fonts never change, so they come from the cache.
 // VERSION is stamped by build.js: a new stamp makes the browser install this worker
 // again and drop the old cache.
-const VERSION = '5f0f675b69';
+const VERSION = 'b58ebadd4b';
 const CACHE = 'waaagh-codex-' + VERSION;
-const CORE = ['./', 'index.html', 'data.js', 'manifest.webmanifest', 'icon-192.png', 'icon-180.png', 'icon-512.png', 'icon-maskable.png'];
+const CORE = ['./', 'index.html', 'data.js', 'verified.js', 'manifest.webmanifest', 'icon-192.png', 'icon-180.png', 'icon-512.png', 'icon-maskable.png'];
 
 self.addEventListener('install', e => {
   self.skipWaiting();

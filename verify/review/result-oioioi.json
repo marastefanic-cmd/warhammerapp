@@ -1,0 +1,582 @@
+[
+ {
+  "key": "2d74d112cbdff773",
+  "verdict": "ok",
+  "why": "W 16; \"While this model has 1-6 wounds remaining\" - band and W match the datasheet.",
+  "fix": null
+ },
+ {
+  "key": "629b6c3970eb782e",
+  "verdict": "ok",
+  "why": "\"At the start of the battle round\" belongs to the Command phase; the round starts before whichever player goes first, so either turn.",
+  "fix": null
+ },
+ {
+  "key": "09977f74a5caffd5",
+  "verdict": "ok",
+  "why": "Rituals are only attempted \"at the start of your Shooting phase\" (Cabal of Sorcerers), so your Shooting phase.",
+  "fix": null
+ },
+ {
+  "key": "23781a0065f255e6",
+  "verdict": "ok",
+  "why": "NR/datasheet: \"Lord of the Planet of the Sorcerers (Psychic)\".",
+  "fix": null
+ },
+ {
+  "key": "a1c98fd44fb4f47c",
+  "verdict": "ok",
+  "why": "Crimson King section lists \"Impossible Form (Psychic)\".",
+  "fix": null
+ },
+ {
+  "key": "fc640f5c77c3361a",
+  "verdict": "ok",
+  "why": "Crimson King ability of Magnus; Unearthly Power: \"select one of the abilities in the Crimson King section\" each battle round.",
+  "fix": null
+ },
+ {
+  "key": "1d02c60a4aa1d1a2",
+  "verdict": "ok",
+  "why": "Matches \"subtract 1 from the Damage characteristic of that attack\" \"(excluding Psychic Attacks)\"; \"(if picked this round)\" keeps the Unearthly Power condition.",
+  "fix": null
+ },
+ {
+  "key": "31c8f68f1e0927a4",
+  "verdict": "ok",
+  "why": "\"At the start of your opponent’s Shooting phase\".",
+  "fix": null
+ },
+ {
+  "key": "2cde84e1de02397e",
+  "verdict": "ok",
+  "why": "Crimson King section lists \"Treason of Tzeentch (Psychic)\".",
+  "fix": null
+ },
+ {
+  "key": "8190a61db4a912a7",
+  "verdict": "ok",
+  "why": "Crimson King ability of Magnus, one picked per battle round.",
+  "fix": null
+ },
+ {
+  "key": "dfadb4165dfeeed4",
+  "verdict": "ok",
+  "why": "Adds to the Move characteristic, which only sets the distance of your Movement-phase moves (Normal/Advance/Fall Back); Temporal Surge and Malign Trickery moves are \"up to D6\"\", not M.",
+  "fix": null
+ },
+ {
+  "key": "9a0e1a510b7708ff",
+  "verdict": "ok",
+  "why": "Crimson King section lists \"Time Flux (Aura, Psychic)\".",
+  "fix": null
+ },
+ {
+  "key": "6cbc8951fa363ab4",
+  "verdict": "ok",
+  "why": "Crimson King ability of Magnus, one picked per battle round.",
+  "fix": null
+ },
+ {
+  "key": "c7c004470af3aa0a",
+  "verdict": "ok",
+  "why": "\"each time this model makes an attack, subtract 1 from the Hit roll\" while 1-6 wounds remain; all attacks.",
+  "fix": null
+ },
+ {
+  "key": "61275ae031125103",
+  "verdict": "ok",
+  "why": "NR: Blade of Magnus (strike/sweep), Gaze of Magnus, Tzeentch’s Firestorm; one model.",
+  "fix": null
+ },
+ {
+  "key": "da5026a977a07716",
+  "verdict": "ok",
+  "why": "\"In your Movement phase, when this model is set up ... using the Deep Strike ability\" (a Rapid Ingress arrival in their turn does not qualify).",
+  "fix": null
+ },
+ {
+  "key": "0bab4a0ab9a8722f",
+  "verdict": "ok",
+  "why": "NR: \"Aetherstride (Psychic)\".",
+  "fix": null
+ },
+ {
+  "key": "ff74ae51c0cb2423",
+  "verdict": "fix",
+  "why": "No phase in the rule (\"Each time this model makes an attack that targets a CHARACTER unit\"); the Daemon Prince is offered Fire Overwatch (\"End of your opponent’s Movement phase ... Your unit shoots using snap shooting\"), where its wound re-rolls still apply (snap shooting only bans hit re-rolls). App-wide convention leaves Overwatch out; if kept, treat as ok.",
+  "fix": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  }
+ },
+ {
+  "key": "dd2cfd5794734b16",
+  "verdict": "ok",
+  "why": "Grand Coven enhancement taken by this model (NR option list).",
+  "fix": null
+ },
+ {
+  "key": "3a697bf34cf73fb6",
+  "verdict": "ok",
+  "why": "Matches: re-roll Hit roll of 1 and Wound roll of 1 vs CHARACTER; full re-rolls vs PSYKER CHARACTER; any attack (kind all). Healing part stays in the ability text.",
+  "fix": null
+ },
+ {
+  "key": "8726b23e6fe9d9be",
+  "verdict": "ok",
+  "why": "\"Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability\"; Dark Blessing is ranged.",
+  "fix": null
+ },
+ {
+  "key": "334c67a51959573a",
+  "verdict": "ok",
+  "why": "BSData base: Dark Blessing S4 D1, Hellforged strike S8 D3, sweep S6 D1; shown S5/D2, S9/D4, S7/D2 = +1 S and D; Infernal cannon has no [PSYCHIC] and is unchanged. True.",
+  "fix": null
+ },
+ {
+  "key": "fad84df3d55552ce",
+  "verdict": "ok",
+  "why": "NR: Dark Blessing, Infernal cannon, Hellforged weapons (strike/sweep); one MONSTER model.",
+  "fix": null
+ },
+ {
+  "key": "40a6eb1fa30381fc",
+  "verdict": "ok",
+  "why": "\"in your Shooting phase or the Fight phase\" = your Shooting + Fight of either turn.",
+  "fix": null
+ },
+ {
+  "key": "989195b1f35e2db6",
+  "verdict": "ok",
+  "why": "\"Once per battle\" in the text; NR \"Twisted Sorceries (Psychic)\".",
+  "fix": null
+ },
+ {
+  "key": "42429a200f694cdf",
+  "verdict": "ok",
+  "why": "\"this model\" = the Sorcerer.",
+  "fix": null
+ },
+ {
+  "key": "8e074dd83065b0a4",
+  "verdict": "ok",
+  "why": "NR: \"Empyric Guidance (Psychic)\".",
+  "fix": null
+ },
+ {
+  "key": "d474d22b48703968",
+  "verdict": "ok",
+  "why": "The leader’s ability (\"While this model is leading a unit\").",
+  "fix": null
+ },
+ {
+  "key": "52dec13022d0b58b",
+  "verdict": "fix",
+  "why": "\"Each time a model in this unit makes a ranged attack\" has no phase; the unit is offered Fire Overwatch (\"End of your opponent’s Movement phase\"), whose snap-shooting attacks get these wound re-rolls. \"Shooting · Your turn\" reads as a limit the rule does not have. Same app-wide Overwatch convention as Hunter of Souls.",
+  "fix": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "your",
+   "turns": {
+    "movement": "opp"
+   }
+  }
+ },
+ {
+  "key": "57b009df52f459f2",
+  "verdict": "ok",
+  "why": "Rubric Marines datasheet ability (NR \"Bringers of Change - Rubric Marines\"); the screen notes \"this unit\" = whole attached unit.",
+  "fix": null
+ },
+ {
+  "key": "44c5c04a73da019c",
+  "verdict": "ok",
+  "why": "The Icon is carried by a Rubric Marine (NR \"Icon of Flame - Rubric Marines\").",
+  "fix": null
+ },
+ {
+  "key": "a2c3b41f12426743",
+  "verdict": "fix",
+  "why": "Condition drops the phase limit: \"Once per battle, in your Shooting phase or the Fight phase\" - e.g. not during a Fire Overwatch in their Movement phase.",
+  "fix": {
+   "kind": "all",
+   "who": "Sorcerer",
+   "when": "Twisted Sorceries used this phase (your Shooting phase or the Fight phase, once per battle)",
+   "note": "Psychic weapons +3 S and +3 A",
+   "from": "Twisted Sorceries"
+  }
+ },
+ {
+  "key": "626eaf7b06b4bb5a",
+  "verdict": "ok",
+  "why": "Matches \"re-roll a Wound roll of 1 ... within range of an objective marker you do not control, you can re-roll the Wound roll instead\"; every ranged attack (no phase, so Overwatch included).",
+  "fix": null
+ },
+ {
+  "key": "a32ff556f0f6aa69",
+  "verdict": "fix",
+  "why": "Warpflamer [IGNORES COVER, TORRENT] and warpflame pistol [IGNORES COVER, PISTOL, TORRENT] have it natively (BSData/datasheet); only Malefic Curse and the soulreaper cannon get it from \"Ranged weapons ... (excluding CHARACTERS) have the [IGNORES COVER] ability\". As written, losing the Icon bearer would wrongly strip it from the flamers.",
+  "fix": {
+   "boostNote": "[LETHAL HITS] on every weapon comes from Empyric Guidance (while the Sorcerer leads); [IGNORES COVER] on Malefic Curse and the soulreaper cannon comes from the Icon of Flame (the warpflamers and warpflame pistol have it on their own profile)."
+  }
+ },
+ {
+  "key": "b47db1720f346a2f",
+  "verdict": "ok",
+  "why": "NR categories: \"Battleline*, Rubric*, Rubric Marines*, Rubricae*, *from combined unit\".",
+  "fix": null
+ },
+ {
+  "key": "11b0f3d91992aae2",
+  "verdict": "ok",
+  "why": "NR: Sorcerer 100 + (5) Rubric Marines 115 = 215 on the card.",
+  "fix": null
+ },
+ {
+  "key": "fe5b7119632bd741",
+  "verdict": "ok",
+  "why": "Matches NR model lines and counts (warpflamer x3, CCW x4 = soulreaper + 3 warpflamers; Aspiring Sorcerer: Force weapon, Malefic Curse, Warpflame pistol). NR does not say who holds the Icon; any Rubric Marine may.",
+  "fix": null
+ },
+ {
+  "key": "7f7e21b5f742aeab",
+  "verdict": "ok",
+  "why": "\"At the start of your Shooting phase ... Until the end of the phase\".",
+  "fix": null
+ },
+ {
+  "key": "cd0d55bc845278c9",
+  "verdict": "ok",
+  "why": "NR: \"Marked by Fate (Psychic)\".",
+  "fix": null
+ },
+ {
+  "key": "bf602dd68e0fbd8a",
+  "verdict": "ok",
+  "why": "\"this PSYKER model\" = the Sorcerer in Terminator Armour.",
+  "fix": null
+ },
+ {
+  "key": "6aeb44f7e7dd3038",
+  "verdict": "ok",
+  "why": "The leader’s ability.",
+  "fix": null
+ },
+ {
+  "key": "6369b7f3a47d05a4",
+  "verdict": "ok",
+  "why": "\"In your Command phase, if this unit is unengaged\".",
+  "fix": null
+ },
+ {
+  "key": "0b0212d7dc779033",
+  "verdict": "ok",
+  "why": "True; the \"(Once per battle, per army)\" limit is shown from the text (rendered chip \"Once per battle, per army\").",
+  "fix": null
+ },
+ {
+  "key": "3419a390c2c27281",
+  "verdict": "ok",
+  "why": "Enhancement on the Sorcerer in Terminator Armour (NR options).",
+  "fix": null
+ },
+ {
+  "key": "f8c54369f7043c1b",
+  "verdict": "ok",
+  "why": "Scarab Occult Terminators datasheet ability (NR \"Rites of Coalescence - Scarab Occult Terminators\").",
+  "fix": null
+ },
+ {
+  "key": "a4436e2fc77801f3",
+  "verdict": "ok",
+  "why": "Matches \"While this unit contains one or more PSYKER models, each time an attack targets this unit, subtract 1 from the Wound roll\".",
+  "fix": null
+ },
+ {
+  "key": "04c89707906704e3",
+  "verdict": "ok",
+  "why": "Matches \"add 1 to the Hit roll\" vs the unit selected at the start of your Shooting phase, until end of phase - only ranged attacks happen then.",
+  "fix": null
+ },
+ {
+  "key": "dc6b6769c76e7ff3",
+  "verdict": "ok",
+  "why": "No weapon in the unit has native [LETHAL HITS] (BSData), so all of it is Empyric Guidance. True.",
+  "fix": null
+ },
+ {
+  "key": "f50ab0f7c2d0bd07",
+  "verdict": "ok",
+  "why": "NR categories: \"Rubricae*, Scarab Occult*, *from combined unit\".",
+  "fix": null
+ },
+ {
+  "key": "79501100282c2890",
+  "verdict": "ok",
+  "why": "NR: Sorcerer in Terminator Armour 140 (incl. Umbralefic Crystal 30) + (10) Scarab Occult Terminators 425 = 565.",
+  "fix": null
+ },
+ {
+  "key": "6e9518bdb4a4e1b0",
+  "verdict": "ok",
+  "why": "Matches NR: combi-bolter x8 (Scarab Sorcerer + 7), soulreaper x2, hellfyre x2, khopesh x9; Scarab Sorcerer has Force weapon/Malefic Curse/combi-bolter. Hellfyre racks are extra wargear (\"1 in every 5\"), NR gives no bearer; placing them on combi-bolter Terminators is legal.",
+  "fix": null
+ },
+ {
+  "key": "c954e9d960d8054f",
+  "verdict": "ok",
+  "why": "\"At the end of your opponent’s turn\" = after their last phase; filed under their Fight phase (app convention for end of turn).",
+  "fix": null
+ },
+ {
+  "key": "e7e23bb54c7b0bc5",
+  "verdict": "ok",
+  "why": "NR: 1x Twistbray + 9x Tzaangor, all Tzaangor blades = x10.",
+  "fix": null
+ },
+ {
+  "key": "369e1c45c684d79f",
+  "verdict": "ok",
+  "why": "\"Each time this unit makes a Charge move\": your Charge phase, and theirs via Heroic Intervention (MOUNTED unit is eligible).",
+  "fix": null
+ },
+ {
+  "key": "a7b64f37579c67aa",
+  "verdict": "ok",
+  "why": "NR: Aviarch + 2 Enlightened, Divining spear x3.",
+  "fix": null
+ },
+ {
+  "key": "eeb57281f8aad27f",
+  "verdict": "ok",
+  "why": "\"In your opponent’s Movement phase, if an enemy unit ends a move within 8\"\".",
+  "fix": null
+ },
+ {
+  "key": "e70158bb80dab9fd",
+  "verdict": "ok",
+  "why": "NR: Aviarch + 2 Enlightened, each Close combat weapon + Fatecaster greatbow (x3 each).",
+  "fix": null
+ },
+ {
+  "key": "13d9d9178983e7c0",
+  "verdict": "fix",
+  "why": "\"Each time this unit makes a Normal, Advance or Fall Back move\": the Defiler is a THOUSAND SONS unit, so Temporal Surge (Ritual, start of your Shooting phase) can give it \"a Normal move of up to D6\"\", and Scuttling Walker applies to that move too.",
+  "fix": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "your"
+  }
+ },
+ {
+  "key": "e97e13f8366d8a58",
+  "verdict": "ok",
+  "why": "Counteroffensive is used in the \"Fight step of your opponent’s Fight phase\".",
+  "fix": null
+ },
+ {
+  "key": "4645be0303458666",
+  "verdict": "ok",
+  "why": "Datasheet/NR header: \"Destroyer of Futures (Once per phase, per unit)\".",
+  "fix": null
+ },
+ {
+  "key": "ad81991d5c0393f7",
+  "verdict": "ok",
+  "why": "W 18; \"1-6 wounds remaining\".",
+  "fix": null
+ },
+ {
+  "key": "02be78b974eb6522",
+  "verdict": "ok",
+  "why": "NR: Ectoplasma destructor, 2x Heavy reaper autocannon, Two excruciator cannons, Shearing claws; legal per GW Defiler options (baleflamer and HML each swap to a heavy reaper autocannon).",
+  "fix": null
+ },
+ {
+  "key": "ad4096c1299845b0",
+  "verdict": "ok",
+  "why": "\"at the start of your Shooting phase, one or more models ... can attempt Rituals\".",
+  "fix": null
+ },
+ {
+  "key": "88e8a411e064c522",
+  "verdict": "ok",
+  "why": "\"your Shooting phase\".",
+  "fix": null
+ },
+ {
+  "key": "67f725a74dd34244",
+  "verdict": "ok",
+  "why": "\"In your Command phase, you can select one of the abilities listed below\".",
+  "fix": null
+ },
+ {
+  "key": "5a08c6d778b2e6d8",
+  "verdict": "ok",
+  "why": "\"your Command phase\".",
+  "fix": null
+ },
+ {
+  "key": "43d49aaae9bde5d6",
+  "verdict": "ok",
+  "why": "The three effects only touch Psychic weapons of THOUSAND SONS models; in this list the units with Psychic weapons are exactly the PSYKER units (Magnus, Daemon Prince, Sorcerer+Rubrics, Terminator Sorcerer+Scarabs); Tzaangors, Enlightened and Defiler have none. Selects all, misses none.",
+  "fix": null
+ },
+ {
+  "key": "940673c2c907f7df",
+  "verdict": "fix",
+  "why": "Footnote drops the limit \"You can only select each of these abilities once per battle\"; read alone it allows Wrath of the Immaterium every turn.",
+  "fix": {
+   "mod": {
+    "kind": "all",
+    "when": "Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle)",
+    "note": "Psychic weapons only: Imbued Manifestation +6\" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]"
+   }
+  }
+ },
+ {
+  "key": "60ad109532249341",
+  "verdict": "ok",
+  "why": "\"WHEN: Any phase\".",
+  "fix": null
+ },
+ {
+  "key": "74838173ba1e2e72",
+  "verdict": "ok",
+  "why": "Enemy units select targets in either player’s turn (their Shooting, both Fight phases, Overwatch in your turn).",
+  "fix": null
+ },
+ {
+  "key": "0c713661db509068",
+  "verdict": "ok",
+  "why": "\"One THOUSAND SONS unit from your army\"; every unit in this list has Faction: Thousand Sons.",
+  "fix": null
+ },
+ {
+  "key": "83d6f34a55c9a057",
+  "verdict": "ok",
+  "why": "Matches EFFECT: attacking unit’s Psychic weapons get [HAZARDOUS]; your unit FNP 4+ vs Psychic Attacks; used just after targets are selected (When targeted).",
+  "fix": null
+ },
+ {
+  "key": "49596c6cbbb185be",
+  "verdict": "ok",
+  "why": "\"WHEN: Any phase\".",
+  "fix": null
+ },
+ {
+  "key": "20ef1b452e01e6cb",
+  "verdict": "ok",
+  "why": "Saves are failed in either turn.",
+  "fix": null
+ },
+ {
+  "key": "67c5698f26b4ed9f",
+  "verdict": "ok",
+  "why": "\"a THOUSAND SONS PSYKER model\": Magnus, Daemon Prince, the Sorcerer unit (Sorcerer, Aspiring Sorcerer) and the Terminator Sorcerer unit (Sorcerer, Scarab Occult Sorcerer). Non-PSYKER units correctly excluded.",
+  "fix": null
+ },
+ {
+  "key": "218e0d2c4bfa9233",
+  "verdict": "ok",
+  "why": "Matches \"just after a saving throw is failed for a THOUSAND SONS PSYKER model ... Change the Damage characteristic of that attack to 0\".",
+  "fix": null
+ },
+ {
+  "key": "4774dce1cee6cd0b",
+  "verdict": "ok",
+  "why": "\"WHEN: Your Command phase\".",
+  "fix": null
+ },
+ {
+  "key": "59fd20a3bd6c9ce1",
+  "verdict": "ok",
+  "why": "\"Your Command phase\".",
+  "fix": null
+ },
+ {
+  "key": "9ef743a3cfad97fd",
+  "verdict": "ok",
+  "why": "\"TARGET: One THOUSAND SONS PSYKER unit\".",
+  "fix": null
+ },
+ {
+  "key": "b16262a12c3d36aa",
+  "verdict": "ok",
+  "why": "\"WHEN: Your Command phase\".",
+  "fix": null
+ },
+ {
+  "key": "27c57e840c45be25",
+  "verdict": "ok",
+  "why": "\"Your Command phase\".",
+  "fix": null
+ },
+ {
+  "key": "c38829cfd385e069",
+  "verdict": "ok",
+  "why": "\"TARGET: One THOUSAND SONS PSYKER unit ... within range of an objective marker you control\".",
+  "fix": null
+ },
+ {
+  "key": "fb742e66634870ac",
+  "verdict": "ok",
+  "why": "\"WHEN: Your Shooting phase, just after you take a Psychic test\".",
+  "fix": null
+ },
+ {
+  "key": "6963d9f43a348593",
+  "verdict": "ok",
+  "why": "\"Your Shooting phase\".",
+  "fix": null
+ },
+ {
+  "key": "d38b83bc7b30b8e7",
+  "verdict": "ok",
+  "why": "Only models with Cabal of Sorcerers take Psychic tests; in this list those are Magnus, Daemon Prince, Sorcerer(+Rubrics), Terminator Sorcerer(+Scarabs) - all PSYKER units. Exact for this army.",
+  "fix": null
+ },
+ {
+  "key": "ae0f5b5338188fb8",
+  "verdict": "ok",
+  "why": "\"WHEN: Your Shooting phase\".",
+  "fix": null
+ },
+ {
+  "key": "e5aa8dff5d47c375",
+  "verdict": "ok",
+  "why": "\"Your Shooting phase\".",
+  "fix": null
+ },
+ {
+  "key": "251b4f1c1a3e255b",
+  "verdict": "ok",
+  "why": "\"TARGET: One THOUSAND SONS PSYKER unit ... not been selected to shoot\".",
+  "fix": null
+ },
+ {
+  "key": "ace788e7b0d1c63a",
+  "verdict": "ok",
+  "why": "Matches \"add 9\" to the Range ... re-roll the Hit roll and ... the Wound roll\" for Psychic weapons until end of your Shooting phase (only ranged attacks then); shown with \"(2CP Devastating Sorcery)\".",
+  "fix": null
+ },
+ {
+  "key": "46c43037fb5d8758",
+  "verdict": "ok",
+  "why": "\"Psychic test\" is not a Core Rules term; in Thousand Sons rules it only ever means the Cabal of Sorcerers test (Lord of the Planet of the Sorcerers, Arcane Focus, Tzaangor Shaman/Mutalith text). Anchored, faction-scoped pattern: nothing else matches.",
+  "fix": null
+ }
+]

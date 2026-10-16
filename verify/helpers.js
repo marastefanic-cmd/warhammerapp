@@ -46,6 +46,7 @@ function items(D, appSource){
       const unitFacts = { models:u.models, stats:u.stats.map(s => s.name + ' W' + s.W + ' OC' + s.OC), weapons:[...(u.ranged || []), ...(u.melee || [])].map(x => [x.group, x.name, x.A, x.AP, x.D, (x.kw || []).join(', ')].filter(Boolean).join(' ')) };
       for(const ab of u.abilities){
         const src = { ability:ab.name, text:ab.text };
+        if(ab.ask) add(a.id, 'ability-ask', w + ' · ' + ab.name, { ask:ab.ask }, src);
         if(ab.ph || ab.turn) add(a.id, 'ability-timing', w + ' · ' + ab.name, { ph:ab.ph, turn:ab.turn, turns:ab.turns }, src);
         if(ab.tag) add(a.id, 'ability-tag', w + ' · ' + ab.name, { tag:ab.tag }, src);
         if(ab.who) add(a.id, 'ability-who', w + ' · ' + ab.name, { who:ab.who, models:u.models }, src);
@@ -63,14 +64,14 @@ function items(D, appSource){
     const f = fr(a.faction);
     const rulesMeta = (where, r, srcText) => {
       const src = { rule:r.name, text:srcText };
-      for(const k of ['ph', 'turn', 'turns', 'needs', 'def', 'mod', 'note', 'tag', 'statNote', 'missing']) if(r[k] !== undefined) add(a.id, 'rule-' + k, where + ' · ' + r.name, { [k]:r[k] }, src);
+      for(const k of ['ph', 'turn', 'turns', 'needs', 'def', 'mod', 'note', 'tag', 'statNote', 'missing', 'ask']) if(r[k] !== undefined) add(a.id, 'rule-' + k, where + ' · ' + r.name, { [k]:r[k] }, src);
       for(const x of r.remind || []) add(a.id, 'rule-remind', where + ' · ' + r.name, x, src);
     };
     for(const r of f.armyRules) rulesMeta(a.faction + ' army rule', r, r.text + (r.table ? '\n' + r.table.map(t => t.join(': ')).join('\n') : ''));
     for(const id of a.detachments){
       const d = f.detachments[id];
       if(d.rule) rulesMeta(d.name + ' rule', d.rule, d.rule.text + (d.rule.table ? '\n' + d.rule.table.map(t => t.join(': ')).join('\n') : ''));
-      for(const s of d.stratagems || []) for(const k of ['phases', 'turn', 'turns', 'needs', 'mod', 'def', 'note', 'cpNote'])
+      for(const s of d.stratagems || []) for(const k of ['phases', 'turn', 'turns', 'needs', 'mod', 'def', 'note', 'cpNote', 'ask'])
         if(s[k] !== undefined) add(a.id, 'strat-' + k, d.name + ' · ' + s.name, { [k]:s[k] }, { stratagem:s.name, text:stratText(s) });
     }
   }
@@ -102,6 +103,9 @@ const CODE_RULES = {
   CORE_PHASED:'core rules listed in a phase: Deep Strike, Harpooned, Super-Heavy Walker, Firing Deck',
   suits:'which core stratagems a datasheet lists',
   proxyLines:'Bases & proxies: bases per models line and what to mark',
+  quickRef:'Core Rules 07 (battle round), 07.02 (turn), 08 (Command phase), 05.01 hit roll, 05.02 wound roll table, 05.03-05.04 save roll and allocation order (dice values are pictures in the PDF: page 18)',
+  nextPhase:'phase order (07.02): Command, Movement, Shooting, Charge, Fight; then the other player\'s turn',
+  screenPregame:'Before the battle: Warlord, enhancements, attached units, strategic reserves (20.01: at most half the points limit; 20.03: from battle round 2, destroyed at the end of round 3), Deep Strike, transports, Scouts, start of round 1 / every round, once-per-battle items, questions to agree',
 };
 function appFunctions(html){
   const out = {};

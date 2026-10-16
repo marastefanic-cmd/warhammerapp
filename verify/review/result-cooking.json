@@ -1,0 +1,659 @@
+[
+ {
+  "key": "0da5a6fc316d3991",
+  "verdict": "ok",
+  "why": "\"In your Movement phase, you can select…\": your Movement phase only.",
+  "fix": null
+ },
+ {
+  "key": "8e89f9663256daee",
+  "verdict": "ok",
+  "why": "New Recruit PDF and BSData both tag it \"(Once per battle, per army)\".",
+  "fix": null
+ },
+ {
+  "key": "49c3c54ab0502889",
+  "verdict": "fix",
+  "why": "The rule says \"another friendly ORKS INFANTRY unit\". The app drops \"friendly\", so in an Ork mirror an enemy Infantry unit could wrongly be counted.",
+  "fix": {
+   "def": "Lone Operative while within 3\" of another friendly ORKS INFANTRY unit"
+  }
+ },
+ {
+  "key": "5893021178d0cfc9",
+  "verdict": "ok",
+  "why": "The aura affects \"melee attacks\", which are only made in the Fight phase, in either player's turn.",
+  "fix": null
+ },
+ {
+  "key": "b9b4ccab1296b7b1",
+  "verdict": "ok",
+  "why": "New Recruit PDF prints \"Prophet of Da Great Waaagh! (Aura)\".",
+  "fix": null
+ },
+ {
+  "key": "0afa9cadc3bcda56",
+  "verdict": "ok",
+  "why": "\"While a friendly ORKS unit is within 6\" of this unit, that unit's melee attacks have +1 to hit rolls, +1 to wound rolls\". Every unit is Faction: Orks. Core 22.01: \"it is always within range of its own aura ability\", so Own aura is right.",
+  "fix": null
+ },
+ {
+  "key": "ffa43a43f77473b0",
+  "verdict": "ok",
+  "why": "Matches the NR options (\"Adamantine 'Eadbutt, Gork's Klaw, Mork's Roar\") and the profiles: Mork's Roar Point Blank/Aimed, 'Eadbutt, Gork's Klaw.",
+  "fix": null
+ },
+ {
+  "key": "66b5cef05cda4945",
+  "verdict": "fix",
+  "why": "The rule says \"a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units)\". \"friendly\" is dropped. The line is hidden here (n/a), but its wording should still be exact.",
+  "fix": {
+   "def": "Lone Operative while within 3\" of a friendly BEAST SNAGGA unit (not MONSTER CHARACTER)"
+  }
+ },
+ {
+  "key": "a60588c563fe9ec9",
+  "verdict": "ok",
+  "why": "The only BEAST SNAGGA units are Mozrog and the two Beastbosses, and all three are MONSTER + CHARACTER. Meganobz are not BEAST SNAGGA either, so the ability can never switch on.",
+  "fix": null
+ },
+ {
+  "key": "e686b1f8e6a41732",
+  "verdict": "ok",
+  "why": "\"In the Fight phase, when this model is destroyed…\": the Fight phase in either turn.",
+  "fix": null
+ },
+ {
+  "key": "f03b5e1267b49b87",
+  "verdict": "fix",
+  "why": "The limit \"When this unit has fought, or at the end of the phase (whichever comes first), this model is removed\" is dropped. \"Until it has fought\" misses the end-of-phase removal if it never fights.",
+  "fix": {
+   "def": "Destroyed in the Fight phase before fighting: on a 2+ it stays until it has fought or the phase ends",
+   "defPh": [
+    "fight"
+   ]
+  }
+ },
+ {
+  "key": "3888f74cfb047c1b",
+  "verdict": "ok",
+  "why": "\"melee attacks that target a MONSTER/VEHICLE unit\": Fight phase, either turn.",
+  "fix": null
+ },
+ {
+  "key": "5ac1fd5e9c594823",
+  "verdict": "ok",
+  "why": "Melee only, vs MONSTER/VEHICLE, re-roll wound rolls: exact.",
+  "fix": null
+ },
+ {
+  "key": "b67b8ee603e5076d",
+  "verdict": "ok",
+  "why": "Matches the NR options and profiles: Thump Gun; Big Chompa's Jaws; Gutrippa Hunter and Standard.",
+  "fix": null
+ },
+ {
+  "key": "4208391c8b797673",
+  "verdict": "ok",
+  "why": "New Recruit PDF: \"Nazdreg's Know-wotz - Nazdreg\" (its effect covers \"this unit\", the whole attached unit).",
+  "fix": null
+ },
+ {
+  "key": "d49d608879417e1d",
+  "verdict": "ok",
+  "why": "\"In your opponent's Movement phase, when an enemy unit ends a move within 8\"…\"",
+  "fix": null
+ },
+ {
+  "key": "bb65b1a5937be342",
+  "verdict": "ok",
+  "why": "New Recruit PDF and BSData: \"Supreme Kunnin' (Once per phase, per army)\".",
+  "fix": null
+ },
+ {
+  "key": "06254bc8d1d4ce75",
+  "verdict": "ok",
+  "why": "New Recruit PDF: \"Supreme Kunnin' (…) - Nazdreg\".",
+  "fix": null
+ },
+ {
+  "key": "21667ffc1decfa1c",
+  "verdict": "ok",
+  "why": "\"In your Movement phase, at the start or end of this unit's move…\"",
+  "fix": null
+ },
+ {
+  "key": "4966e148aec2307f",
+  "verdict": "ok",
+  "why": "New Recruit PDF: \"Intimidating Motivation (Once per battle round, per army)\".",
+  "fix": null
+ },
+ {
+  "key": "13c13ff0ed8da907",
+  "verdict": "ok",
+  "why": "New Recruit PDF: \"Intimidating Motivation (…) - Nazdreg\".",
+  "fix": null
+ },
+ {
+  "key": "afbdb042f0da43a9",
+  "verdict": "ok",
+  "why": "\"In the Fight phase, if this unit is riled up…\": either turn.",
+  "fix": null
+ },
+ {
+  "key": "020efd96b1446ebc",
+  "verdict": "ok",
+  "why": "New Recruit PDF: \"Krumpin' Time - Meganobz\" (the footnote is correctly shown for the whole unit).",
+  "fix": null
+ },
+ {
+  "key": "40a03520db405ab5",
+  "verdict": "ok",
+  "why": "New Recruit PDF: \"Arrogant Invulnerability - Meganobz\".",
+  "fix": null
+ },
+ {
+  "key": "c0baebbe718a5b4e",
+  "verdict": "ok",
+  "why": "Word for word: \"Attacks that target this unit have -1 AP.\"",
+  "fix": null
+ },
+ {
+  "key": "3c4bb231c3225194",
+  "verdict": "ok",
+  "why": "\"In the Fight phase, if this unit is riled up, this unit has +1 to hit rolls\". Fight-phase attacks are melee.",
+  "fix": null
+ },
+ {
+  "key": "9b5e8d28353199e5",
+  "verdict": "ok",
+  "why": "New Recruit PDF Categories: \"Explosives*, Meganobz*, *from combined unit\".",
+  "fix": null
+ },
+ {
+  "key": "7abc2c8d40093482",
+  "verdict": "ok",
+  "why": "New Recruit PDF: Nazdreg 165 and (5) Meganobz 190, for a total of 355.",
+  "fix": null
+ },
+ {
+  "key": "a58c5a00ddee38cb",
+  "verdict": "ok",
+  "why": "Matches the NR models and options, with Nazdreg's weapons on Nazdreg, Kombi-weapon ×5 and Killsaw ×3 / Power Klaw ×2 on the Meganobz.",
+  "fix": null
+ },
+ {
+  "key": "9a52e28cde010740",
+  "verdict": "ok",
+  "why": "\"+1 to charge rolls\": charge rolls are made in your Charge phase and in theirs (Heroic Intervention, 15.11: \"before making the charge roll\").",
+  "fix": null
+ },
+ {
+  "key": "245471d573bda22a",
+  "verdict": "ok",
+  "why": "New Recruit PDF: \"Thundering Stampede (Aura)\".",
+  "fix": null
+ },
+ {
+  "key": "2c143b0d30c7f72b",
+  "verdict": "fix",
+  "why": "As in item 7: the rule says \"a friendly BEAST SNAGGA unit\"; \"friendly\" is dropped.",
+  "fix": {
+   "def": "Lone Operative while within 3\" of a friendly BEAST SNAGGA unit (not MONSTER CHARACTER)"
+  }
+ },
+ {
+  "key": "98a7d93df99251f4",
+  "verdict": "ok",
+  "why": "As in item 8: every BEAST SNAGGA unit in the list (Mozrog and both Beastbosses) is a MONSTER CHARACTER.",
+  "fix": null
+ },
+ {
+  "key": "81f1265bf0f761f5",
+  "verdict": "ok",
+  "why": "\"In your Movement phase, at the start or end of this unit's move…\"",
+  "fix": null
+ },
+ {
+  "key": "a058a8d8ded48cc8",
+  "verdict": "ok",
+  "why": "New Recruit PDF: \"Keep Huntin'! (Once per battle round, per army)\".",
+  "fix": null
+ },
+ {
+  "key": "9dbd9fcc381fd424",
+  "verdict": "ok",
+  "why": "Brute Bosses enhancement taken by this model (NR options \"Brutal But Kunnin'\").",
+  "fix": null
+ },
+ {
+  "key": "b38e53acc097cb94",
+  "verdict": "ok",
+  "why": "The NR profiles are marked \"(Brutal But Kunnin')\": Beastchoppa D6+1/3 and jaws 4, against D6/2/3 on the other Beastboss. Each is +1 D.",
+  "fix": null
+ },
+ {
+  "key": "ddadfff6cf84fb13",
+  "verdict": "ok",
+  "why": "Matches the NR options and profiles.",
+  "fix": null
+ },
+ {
+  "key": "cd03d796c86d8aee",
+  "verdict": "ok",
+  "why": "Matches NR, Thunderbuss included (the enhancement weapon).",
+  "fix": null
+ },
+ {
+  "key": "14161ccf43e96cfd",
+  "verdict": "fix",
+  "why": "Riled up lasts into their turn (\"until the start of your next turn\"), and Fire Overwatch (15.08, \"End of your opponent's Movement phase\") makes ranged attacks. On a snap-shot 6 (a critical hit), [SUSTAINED HITS 1] applies, so the ability also matters in their Movement phase.",
+  "fix": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "your",
+   "turns": {
+    "movement": "opp"
+   }
+  }
+ },
+ {
+  "key": "89f1d3cbee2b629a",
+  "verdict": "ok",
+  "why": "\"In your Shooting phase, if this unit's Blitzkannon weapon targets…\"",
+  "fix": null
+ },
+ {
+  "key": "5b039d3f3619db1d",
+  "verdict": "ok",
+  "why": "Dread Mob enhancement taken by this model (NR options \"Cybork Boosta\").",
+  "fix": null
+ },
+ {
+  "key": "7444d389c8dda237",
+  "verdict": "ok",
+  "why": "8 A +6 = 14, against non-MONSTER/VEHICLE targets, with the condition \"In your Shooting phase\" kept: exact.",
+  "fix": null
+ },
+ {
+  "key": "bae82088ae43cfe6",
+  "verdict": "ok",
+  "why": "\"If this unit is riled up, this unit's ranged attacks have [SUSTAINED HITS 1]\": exact.",
+  "fix": null
+ },
+ {
+  "key": "6249714a735b7deb",
+  "verdict": "ok",
+  "why": "New Recruit PDF prints \"Big Mek Dakkarig (Cybork Boosta) 10\"\", against 8\" on the other Dakkarig.",
+  "fix": null
+ },
+ {
+  "key": "fa34fc0a23a23671",
+  "verdict": "ok",
+  "why": "Matches the NR options and profiles.",
+  "fix": null
+ },
+ {
+  "key": "8dff7a09575e7aab",
+  "verdict": "ok",
+  "why": "The selection is \"In your Shooting phase\". The Lone Operative half is always on and is covered by the \"When targeted\" line.",
+  "fix": null
+ },
+ {
+  "key": "3050abb455be6ffa",
+  "verdict": "ok",
+  "why": "Dread Mob enhancement taken by this model (NR options \"Dreadherder\").",
+  "fix": null
+ },
+ {
+  "key": "35de36554f6c9d8b",
+  "verdict": "fix",
+  "why": "The rule says \"within 3\" of a friendly ORKS WALKER unit (excluding BIG MEK units)\"; \"friendly\" is dropped.",
+  "fix": {
+   "def": "Lone Operative while within 3\" of a friendly ORKS WALKER unit (not BIG MEK)"
+  }
+ },
+ {
+  "key": "e3fcbcb05c5f6fae",
+  "verdict": "unclear",
+  "why": "The rule says \"select one friendly ORKS WALKER unit within 3\" of this model\", with no \"another\" (compare Ghazghkull's \"another friendly ORKS INFANTRY unit\"). Core 22.01 puts a model in range of its own ability only for Aura abilities, and Dreadherder is not tagged Aura. So whether the Dakkarig can pick its own unit is open. The app (notSelf) says it cannot. Every other part is right: any Orks WALKER, the other Big Mek Dakkarig included; all attacks; until the end of the turn.",
+  "fix": null
+ },
+ {
+  "key": "ff6f78dd40c2fb4d",
+  "verdict": "ok",
+  "why": "\"At the end of your Movement phase…\"",
+  "fix": null
+ },
+ {
+  "key": "4414049a90c6792c",
+  "verdict": "ok",
+  "why": "Matches NR: 10× Grot Blasta, 10× Scavenged Shivs.",
+  "fix": null
+ },
+ {
+  "key": "4fb24984512fface",
+  "verdict": "ok",
+  "why": "\"At the end of your opponent's Fight phase…\"",
+  "fix": null
+ },
+ {
+  "key": "601fe3548b5fc153",
+  "verdict": "ok",
+  "why": "\"In your Shooting phase, if this unit made an ingress move this turn…\"",
+  "fix": null
+ },
+ {
+  "key": "566310d103ae5ac1",
+  "verdict": "ok",
+  "why": "The note leaves out \"In your Shooting phase\", but that changes nothing. The only other time they can shoot after an ingress move is Rapid Ingress then Fire Overwatch, and snap shooting \"only hits on an unmodified hit roll of 6 (irrespective of… any modifiers)\".",
+  "fix": null
+ },
+ {
+  "key": "d9d76882d80fa885",
+  "verdict": "ok",
+  "why": "Matches NR: Rokkit Launcha Busta/Blasta, Slugga, Choppa and Spinnin' Blades, ×3 each.",
+  "fix": null
+ },
+ {
+  "key": "d16ab25b2eba9015",
+  "verdict": "ok",
+  "why": "An always-on hit modifier. Their-turn shooting is only Fire Overwatch, where modifiers do not apply (\"unmodified hit roll of 6\"), so your Shooting phase plus the Fight phase in either turn is complete.",
+  "fix": null
+ },
+ {
+  "key": "273b23f711ae4fc7",
+  "verdict": "ok",
+  "why": "\"attacks that target a unit that has no models with a T of 7+ have +1 to hit rolls\": all attacks, exact.",
+  "fix": null
+ },
+ {
+  "key": "8d3f1d2a65937b68",
+  "verdict": "ok",
+  "why": "Matches NR: Kan Blasta (Kill Shot / Point Blank / Dakka) ×6 and Kan Klaw ×6.",
+  "fix": null
+ },
+ {
+  "key": "b9a28170afe479d4",
+  "verdict": "ok",
+  "why": "Both sentences are true: \"Re-roll advance rolls\", and a unit riled up when selected to advance stays eligible to declare a charge.",
+  "fix": null
+ },
+ {
+  "key": "435c34643eb505d9",
+  "verdict": "ok",
+  "why": "\"That unit's ranged attacks have [ASSAULT]\": true.",
+  "fix": null
+ },
+ {
+  "key": "027bb5ef43a3f053",
+  "verdict": "fix",
+  "why": "The rule is \"When that unit is selected to make an advance move, that advance move does not prevent…\": the unit must be riled up when it advances. A unit riled up after advancing (Makari, Dread Power or Intimidating Motivation later in the phase) still cannot charge, but the reminder would let it.",
+  "fix": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "your",
+   "text": "A unit that was riled up when it advanced can still declare a charge."
+  }
+ },
+ {
+  "key": "026498bae86d7674",
+  "verdict": "ok",
+  "why": "\"At the start of the Command phase\".",
+  "fix": null
+ },
+ {
+  "key": "4cdc719b5cdc72ec",
+  "verdict": "ok",
+  "why": "\"the Command phase\", which can be either player's.",
+  "fix": null
+ },
+ {
+  "key": "fe6f0a3e272493d8",
+  "verdict": "ok",
+  "why": "Wahapedia and NR: \"War Cry (Once per battle, per army)\".",
+  "fix": null
+ },
+ {
+  "key": "1ec4187966aaff02",
+  "verdict": "ok",
+  "why": "\"At the start of the battle round\" goes in the Command phase (brief convention).",
+  "fix": null
+ },
+ {
+  "key": "4863783bb09b616b",
+  "verdict": "ok",
+  "why": "The battle round starts before whichever player goes first, so either.",
+  "fix": null
+ },
+ {
+  "key": "fac6013de2569a31",
+  "verdict": "unclear",
+  "why": "Unlike One Last Kill (\"In the Fight phase\") and Crazed Rampage (\"WHEN: Fight phase\"), 'Ard as Nails has no phase. \"if this unit has not been selected to fight this phase\" is always true outside the Fight phase, so by the letter a destroyed WARBOSS stays (on 3+) until the end of any phase. Read literally, that keeps the model on the table in their Shooting phase. The app takes the fight-on-death (Fight phase) reading. The letter would be all five phases.",
+  "fix": null
+ },
+ {
+  "key": "c7952f94ed192333",
+  "verdict": "ok",
+  "why": "Fight phase in either turn.",
+  "fix": null
+ },
+ {
+  "key": "43c9d0aaf25d19fe",
+  "verdict": "ok",
+  "why": "\"When a friendly WARBOSS model is destroyed\": the WARBOSS units are Ghazghkull, Nazdreg and both Beastbosses. Mozrog has no WARBOSS keyword (BSData/NR).",
+  "fix": null
+ },
+ {
+  "key": "09ada46a59962597",
+  "verdict": "fix",
+  "why": "The limit \"When this unit has fought, or at the end of the phase (whichever comes first)\" is dropped. It matters most if the unit never fights that phase.",
+  "fix": {
+   "def": "WARBOSS destroyed before its unit has fought this phase: on a 3+ (+1 riled up) it stays until the unit has fought or the phase ends"
+  }
+ },
+ {
+  "key": "4dd1b69850c811bb",
+  "verdict": "fix",
+  "why": "An always-on rule for \"attacks that target a MONSTER/VEHICLE unit\". Fire Overwatch (End of your opponent's Movement phase) gives Beast Snagga ranged attacks (Thump Gun, Slugga, Gobshot Thunderbuss), and the +1 AP applies to them. Add their Movement phase.",
+  "fix": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ]
+  }
+ },
+ {
+  "key": "10ad5f37ce8a00cd",
+  "verdict": "ok",
+  "why": "Either turn.",
+  "fix": null
+ },
+ {
+  "key": "d429266d0f65b826",
+  "verdict": "fix",
+  "why": "Goes with item 71: the Movement phase entry is their turn only (Fire Overwatch).",
+  "fix": {
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  }
+ },
+ {
+  "key": "a7fe6e9b31f9522e",
+  "verdict": "ok",
+  "why": "\"Friendly BEAST SNAGGA units' attacks\": selects Mozrog and both Beastbosses.",
+  "fix": null
+ },
+ {
+  "key": "20ca783c453305ad",
+  "verdict": "ok",
+  "why": "All attacks vs MONSTER/VEHICLE get +1 AP. Hunter profiles can only target MONSTER/VEHICLE, so folding it into them (AP -2 to -3) is exact.",
+  "fix": null
+ },
+ {
+  "key": "5ca80399823b9d4d",
+  "verdict": "ok",
+  "why": "WHEN: \"Your opponent's Movement phase\".",
+  "fix": null
+ },
+ {
+  "key": "6f38c6d20a694e2b",
+  "verdict": "ok",
+  "why": "Their turn.",
+  "fix": null
+ },
+ {
+  "key": "db0140132b0d5778",
+  "verdict": "ok",
+  "why": "TARGET: \"That BEAST SNAGGA unit\": Mozrog and both Beastbosses.",
+  "fix": null
+ },
+ {
+  "key": "2de8d5d794d854fd",
+  "verdict": "ok",
+  "why": "WHEN: \"Your opponent's Shooting phase\".",
+  "fix": null
+ },
+ {
+  "key": "0c954ec614b08f88",
+  "verdict": "ok",
+  "why": "Their turn.",
+  "fix": null
+ },
+ {
+  "key": "7d6f39bc28b2a55a",
+  "verdict": "ok",
+  "why": "TARGET: \"unengaged BEAST SNAGGA unit\".",
+  "fix": null
+ },
+ {
+  "key": "dd738c67b24291d4",
+  "verdict": "ok",
+  "why": "WHEN: \"End of your opponent's Fight phase\".",
+  "fix": null
+ },
+ {
+  "key": "c80f94d1003289c5",
+  "verdict": "ok",
+  "why": "Their turn.",
+  "fix": null
+ },
+ {
+  "key": "61001e33c59484af",
+  "verdict": "ok",
+  "why": "TARGET: \"unengaged BEAST SNAGGA unit…\".",
+  "fix": null
+ },
+ {
+  "key": "321c6d18f3c24f82",
+  "verdict": "ok",
+  "why": "\"In your Shooting phase or the Fight phase\".",
+  "fix": null
+ },
+ {
+  "key": "6e625fc7be865aa6",
+  "verdict": "ok",
+  "why": "Either turn (Fight phase).",
+  "fix": null
+ },
+ {
+  "key": "9de67b108f809d1e",
+  "verdict": "ok",
+  "why": "Shooting is \"your Shooting phase\" only.",
+  "fix": null
+ },
+ {
+  "key": "07b9e209f273014f",
+  "verdict": "ok",
+  "why": "\"ORKS WALKER unit (excluding TITANIC units)\": both Dakkarigs and the Killa Kans, all Orks.",
+  "fix": null
+ },
+ {
+  "key": "9cfd44089a31bcb1",
+  "verdict": "unclear",
+  "why": "\"roll either one D6 or two D6 (keep re-rolling duplicate results)\": the table's columns are \"D6 | RESULT\". \"Duplicate results\" can mean the same die value (then 1+2 gives +1 A twice, or once) or the same table result (then two D6 always give two different effects). The app takes the second reading (\"two effects\"). The hazard roll after attacking is correct.",
+  "fix": null
+ },
+ {
+  "key": "eafaaaf04dc02b88",
+  "verdict": "ok",
+  "why": "WHEN: \"Fight phase\".",
+  "fix": null
+ },
+ {
+  "key": "0d46c1ce090bde07",
+  "verdict": "ok",
+  "why": "Either turn.",
+  "fix": null
+ },
+ {
+  "key": "a67a73058e036c3c",
+  "verdict": "ok",
+  "why": "TARGET: \"ORKS WALKER unit (excluding TITANIC units)\": both Dakkarigs and the Killa Kans.",
+  "fix": null
+ },
+ {
+  "key": "8f0d7a62c8bb70a8",
+  "verdict": "fix",
+  "why": "The limit \"When your unit has fought, or at the end of the phase (whichever comes first), that model is removed\" is dropped.",
+  "fix": {
+   "def": "Fight phase: a model destroyed before the unit has fought stays to fight on a 4+ (removed once the unit has fought or at the end of the phase)"
+  }
+ },
+ {
+  "key": "e75b3dc5950e08c7",
+  "verdict": "fix",
+  "why": "The first and third sentences are true (the third is Wahapedia FAQ: \"Fight on Death rules are resolved before Deadly Demise\"). But \"a datasheet name counts as a keyword\" is not a rule. The real reason is that the Deff Dread datasheet itself lists the keyword (BSData categories: Vehicle, Walker, Deff Dread, Faction: Orks). Wahapedia's strike-through tooltip reads \"Keyword does not appear in that faction.\"",
+  "fix": {
+   "note": "No unit in this list is a DEFF DREAD, so the roll is a plain 4+. (Wahapedia strikes DEFF DREAD through as a keyword no Orks datasheet has, but the Deff Dread datasheet does have the DEFF DREAD keyword in BSData, which New Recruit uses, so Deff Dreads get the +3.) Wahapedia FAQ: Fight on Death rules resolve before Deadly Demise, so Deadly Demise resolves once the models are removed."
+  }
+ },
+ {
+  "key": "91c1df4ca4050b21",
+  "verdict": "ok",
+  "why": "WHEN: \"Your Movement phase\".",
+  "fix": null
+ },
+ {
+  "key": "92596b7aebf1192c",
+  "verdict": "ok",
+  "why": "Your turn.",
+  "fix": null
+ },
+ {
+  "key": "c0b3b3b1fc276e52",
+  "verdict": "ok",
+  "why": "TARGET: \"One friendly ORKS WALKER unit\", with no TITANIC exclusion: both Dakkarigs and the Killa Kans.",
+  "fix": null
+ },
+ {
+  "key": "061c00da8250764b",
+  "verdict": "ok",
+  "why": "WHEN: \"Your Movement/Charge phase…\".",
+  "fix": null
+ },
+ {
+  "key": "b6389513886efba3",
+  "verdict": "ok",
+  "why": "Your turn.",
+  "fix": null
+ },
+ {
+  "key": "3056d2c81646fb74",
+  "verdict": "ok",
+  "why": "TARGET: \"That ORKS WALKER unit\".",
+  "fix": null
+ },
+ {
+  "key": "f0e70350dee90f05",
+  "verdict": "ok",
+  "why": "\"riled up\" is defined only by the Waaagh! army rule (\"Become riled up… While a unit is riled up: …\"). Nothing else in this army's text starts with \"riled up\".",
+  "fix": null
+ }
+]

@@ -1,0 +1,882 @@
+[
+ {
+  "key": "09f889140f55da33",
+  "verdict": "ok",
+  "why": "Ranged attacks only; every unit is TITANIC so none can Fire Overwatch (\"excluding TITANIC units\"), leaving only your Shooting phase.",
+  "fix": null
+ },
+ {
+  "key": "9cf930e32c0cb52d",
+  "verdict": "ok",
+  "why": "Datasheet: \"This model has a 5+ invulnerable save against ranged attacks.\" Pack prints \"* Against ranged attacks only\".",
+  "fix": null
+ },
+ {
+  "key": "bf2ab0717b0ea4a6",
+  "verdict": "ok",
+  "why": "Faction Pack v1.2 Rules Updates: Knight Errant Damaged \"While this model has 1-9 wounds remaining\"; W 26.",
+  "fix": null
+ },
+ {
+  "key": "9765f85ba5eeb202",
+  "verdict": "ok",
+  "why": "NR/BSData: \"Warden’s Duty (Bondsman)\"; Bondsman rule: abilities \"tagged with the word ‘Bondsman’\".",
+  "fix": null
+ },
+ {
+  "key": "abfcb64c30428762",
+  "verdict": "ok",
+  "why": "\"targets an enemy unit (excluding MONSTERS and VEHICLES), that attack has the [DEVASTATING WOUNDS] ability\": ranged only, condition and effect exact.",
+  "fix": null
+ },
+ {
+  "key": "3c153f138d7e1693",
+  "verdict": "ok",
+  "why": "\"While this model has 1-9 wounds remaining, subtract 5 from ... OC and ... subtract 1 from the Hit roll\": all attacks, -1 hit, -5 OC.",
+  "fix": null
+ },
+ {
+  "key": "8b0b2af5c99ebd74",
+  "verdict": "ok",
+  "why": "\"weapons equipped by that model have the [SUSTAINED HITS 1] ability\": all weapons, only on the ARMIGER model affected (none in this list).",
+  "fix": null
+ },
+ {
+  "key": "d699ed213cbea41f",
+  "verdict": "ok",
+  "why": "\"ranged weapons equipped by that model have the [IGNORES COVER] ability\": ranged only, ARMIGER only.",
+  "fix": null
+ },
+ {
+  "key": "f60bc79bbd228e3a",
+  "verdict": "ok",
+  "why": "Matches the NR line \"Avenger gatling cannon, Heavy flamer, Stormspear rocket pod, Meltagun, Reaper chainsword\" and BSData wargear (no titanic feet on a Warden); one model carries all, chainsword as strike/sweep profiles.",
+  "fix": null
+ },
+ {
+  "key": "9876dc2bc11dd899",
+  "verdict": "ok",
+  "why": "Ranged-attack modifier; TITANIC, so no Fire Overwatch: your Shooting phase only.",
+  "fix": null
+ },
+ {
+  "key": "aac0d7591d5d2ddf",
+  "verdict": "ok",
+  "why": "NR/BSData: \"Paladin’s Duty (Bondsman)\".",
+  "fix": null
+ },
+ {
+  "key": "0091eb134a44041d",
+  "verdict": "ok",
+  "why": "\"ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1.\"",
+  "fix": null
+ },
+ {
+  "key": "82e570cd089acafa",
+  "verdict": "ok",
+  "why": "\"weapons equipped by that model have the [LETHAL HITS] ability\" (kind all, ARMIGER only).",
+  "fix": null
+ },
+ {
+  "key": "e2c89642f50b1c41",
+  "verdict": "ok",
+  "why": "\"melee weapons equipped by that model have the [LANCE] ability\" (melee, ARMIGER only).",
+  "fix": null
+ },
+ {
+  "key": "fb06d7b8a7dbb4ea",
+  "verdict": "ok",
+  "why": "Matches the NR line \"Questoris heavy stubber, Rapid-fire battle cannon, Stormspear rocket pod, Meltagun, Reaper chainsword\".",
+  "fix": null
+ },
+ {
+  "key": "9f989e7ff99ab615",
+  "verdict": "ok",
+  "why": "Ranged-attack modifier; TITANIC, so your Shooting phase only.",
+  "fix": null
+ },
+ {
+  "key": "e936f57d4687120b",
+  "verdict": "ok",
+  "why": "NR: \"Errant’s Duty (Bondsman)\".",
+  "fix": null
+ },
+ {
+  "key": "bd62b2f936439385",
+  "verdict": "ok",
+  "why": "\"ranged attack that targets the closest eligible target, add 1 to the Hit roll.\"",
+  "fix": null
+ },
+ {
+  "key": "f35069ecd109910a",
+  "verdict": "ok",
+  "why": "\"ranged weapons equipped by that model have the [ASSAULT] ability\" is exact. The other half (\"re-roll Advance rolls\") is not an attack effect, so it does not belong in a weapon footnote; the ability text carries it.",
+  "fix": null
+ },
+ {
+  "key": "e83b22d75c62a36d",
+  "verdict": "ok",
+  "why": "Matches the NR line \"Thermal cannon, Stormspear rocket pod, Meltagun, Reaper chainsword\".",
+  "fix": null
+ },
+ {
+  "key": "8667c723449581d0",
+  "verdict": "ok",
+  "why": "Faction Pack Knight Destrier: W 18, \"DAMAGED: 1-6 WOUNDS REMAINING\".",
+  "fix": null
+ },
+ {
+  "key": "83c2e3919b082822",
+  "verdict": "ok",
+  "why": "Both Destriers carry chastiser gatling cannon, frag bombard, heavy stubber and titanic feet (NR); Thundercharge needs \"a thundershock spear and a bellatus reaper chainsword\" and only the Destrier has it.",
+  "fix": null
+ },
+ {
+  "key": "e77d5f7498438cbf",
+  "verdict": "ok",
+  "why": "\"Each time this unit is selected to make a Normal or Advance move\": your Movement phase; nothing in this list moves Knights in the opponent’s turn.",
+  "fix": null
+ },
+ {
+  "key": "18a852729f3e2615",
+  "verdict": "ok",
+  "why": "Ranged-attack modifier; TITANIC, so your Shooting phase only.",
+  "fix": null
+ },
+ {
+  "key": "af265ebea3742653",
+  "verdict": "ok",
+  "why": "\"ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.\"",
+  "fix": null
+ },
+ {
+  "key": "ddbeced3f243ef6f",
+  "verdict": "ok",
+  "why": "\"While this model has 1-6 wounds remaining, subtract 4 from ... OC and ... subtract 1 from the Hit roll.\"",
+  "fix": null
+ },
+ {
+  "key": "286f30ecd176b339",
+  "verdict": "ok",
+  "why": "Matches the Faction Pack composition \"1 chastiser gatling cannon; 1 frag bombard; 1 Questoris heavy stubber; 1 titanic feet\" and the NR line.",
+  "fix": null
+ },
+ {
+  "key": "5d0339f4d1a3f8d2",
+  "verdict": "fix",
+  "why": "Quality 3–4 adds 1 to \"Charge rolls made for this model\". Knights (VEHICLE CHARACTER WALKER) can take Heroic Intervention (\"End of your opponent’s Charge phase ... before making the charge roll\"), and the app offers it to them. So the reminder also belongs in the opponent’s Charge phase; Move and Advance stay your turn.",
+  "fix": {
+   "ph": [
+    "movement",
+    "charge"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "your"
+   },
+   "text": "Quality 3–4 (eager for the challenge): +2\" Move, +1 to Advance and Charge rolls."
+  }
+ },
+ {
+  "key": "b97bd9dbeed50250",
+  "verdict": "fix",
+  "why": "The trigger is \"Each time this model is selected to shoot or fight\". Knights are TITANIC, so Fire Overwatch (\"excluding TITANIC units\") is out, and none can be selected to shoot in the opponent’s Shooting phase. Shooting is your turn only; fight stays either.",
+  "fix": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   },
+   "text": "Quality 1–2 (martial valour): each time a Knight shoots or fights, re-roll one Hit roll and one Wound roll."
+  }
+ },
+ {
+  "key": "ee3a97454cc6d7d9",
+  "verdict": "ok",
+  "why": "\"In your Command phase, one or more models ... with a Bondsman ability can use that ability.\"",
+  "fix": null
+ },
+ {
+  "key": "c44aad9c98cc77bd",
+  "verdict": "ok",
+  "why": "\"In your Command phase\".",
+  "fix": null
+ },
+ {
+  "key": "8018bd63e4af5718",
+  "verdict": "ok",
+  "why": "\"select one friendly ARMIGER model\": with no ARMIGER the rule is inert, so any:[Armiger] is the right gate (this list has none, and the Duty abilities show \"No ARMIGER models in this list\").",
+  "fix": null
+ },
+ {
+  "key": "035ba314f3f0539b",
+  "verdict": "ok",
+  "why": "FNP 6+ is always on; the only timed part is \"at the start of your Command phase, each IMPERIAL KNIGHTS model ... regains 1 lost wound\".",
+  "fix": null
+ },
+ {
+  "key": "cc5f1dc057f718e8",
+  "verdict": "ok",
+  "why": "\"at the start of your Command phase\".",
+  "fix": null
+ },
+ {
+  "key": "e9f4ee649d902a8e",
+  "verdict": "ok",
+  "why": "\"IMPERIAL KNIGHTS models from your army\": every unit here.",
+  "fix": null
+ },
+ {
+  "key": "ac94a6d604ad5c54",
+  "verdict": "ok",
+  "why": "\"IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability.\"",
+  "fix": null
+ },
+ {
+  "key": "8105780c0e5019de",
+  "verdict": "ok",
+  "why": "WHEN: \"Any phase.\"",
+  "fix": null
+ },
+ {
+  "key": "62254becbc9f2e1e",
+  "verdict": "ok",
+  "why": "Any phase, either player’s turn.",
+  "fix": null
+ },
+ {
+  "key": "993d1a7a751d61d7",
+  "verdict": "ok",
+  "why": "TARGET: \"One IMPERIAL KNIGHTS unit from your army that was just destroyed\": all units, and all have Deadly Demise D6.",
+  "fix": null
+ },
+ {
+  "key": "5367c60cc057313e",
+  "verdict": "ok",
+  "why": "WHEN: \"Your Shooting phase or the Fight phase.\"",
+  "fix": null
+ },
+ {
+  "key": "edd4d195a92b3f63",
+  "verdict": "ok",
+  "why": "Fight phase in either turn; the shooting override is item 6ecf5696f4195e16.",
+  "fix": null
+ },
+ {
+  "key": "6ecf5696f4195e16",
+  "verdict": "ok",
+  "why": "\"Your Shooting phase\": shooting is your turn only.",
+  "fix": null
+ },
+ {
+  "key": "9f95b099784a3975",
+  "verdict": "ok",
+  "why": "TARGET: \"One IMPERIAL KNIGHTS unit from your army that has not been selected to shoot or fight this phase.\"",
+  "fix": null
+ },
+ {
+  "key": "756a91e86e363ee4",
+  "verdict": "ok",
+  "why": "\"if there are no other friendly units within 9\" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1\": all attacks, phases stated.",
+  "fix": null
+ },
+ {
+  "key": "ead3336110483d69",
+  "verdict": "ok",
+  "why": "WHEN: \"Your Movement phase.\"",
+  "fix": null
+ },
+ {
+  "key": "67b6147bab7ca864",
+  "verdict": "ok",
+  "why": "Your Movement phase.",
+  "fix": null
+ },
+ {
+  "key": "cad7d856012723c2",
+  "verdict": "ok",
+  "why": "TARGET: \"One IMPERIAL KNIGHTS unit from your army.\" The pack’s Rules Update adding \"has not been selected to move\" is the Valourstrike Lance (2CP) Full Tilt, not this one.",
+  "fix": null
+ },
+ {
+  "key": "07335634831cb2af",
+  "verdict": "ok",
+  "why": "All true. Pack p6 prints \"an ARMIGER or DESTRIER unit\" in keyword type. The Destrier’s keywords are \"Vehicle, Walker, Titanic, Towering, Bellatus, Character, Imperium, Knight Destrier\" (BSData has no other DESTRIER category). Core 02.05: a rule applies \"only ... to units that have\" the keyword. Wahapedia strikes it through. The note gives both readings and says to agree it.",
+  "fix": null
+ },
+ {
+  "key": "8c232b1fd04844c8",
+  "verdict": "ok",
+  "why": "WHEN: \"Your Shooting phase.\"",
+  "fix": null
+ },
+ {
+  "key": "38dabf55500e7076",
+  "verdict": "ok",
+  "why": "Your Shooting phase.",
+  "fix": null
+ },
+ {
+  "key": "e9940787fd79967f",
+  "verdict": "ok",
+  "why": "TARGET: \"One IMPERIAL KNIGHTS unit from your army...\". The Warden has no Blast weapon but can still use the no-hit-penalty half.",
+  "fix": null
+ },
+ {
+  "key": "abee97793899579b",
+  "verdict": "ok",
+  "why": "WHEN: \"Your opponent’s Shooting phase, just after an enemy unit has selected its targets.\"",
+  "fix": null
+ },
+ {
+  "key": "94e27aa796426add",
+  "verdict": "ok",
+  "why": "Opponent’s Shooting phase.",
+  "fix": null
+ },
+ {
+  "key": "9473f482cfe12cf2",
+  "verdict": "ok",
+  "why": "TARGET: \"One IMPERIAL KNIGHTS unit from your army that was selected as the target...\".",
+  "fix": null
+ },
+ {
+  "key": "b1239f6c266b0434",
+  "verdict": "ok",
+  "why": "\"Until the end of the phase, each time an attack targets your unit, if the Strength ... is greater than the Toughness ... subtract 1 from the Wound roll.\" Phase, condition and effect are all there, and the line is prefixed \"1CP Survivor of Strife\".",
+  "fix": null
+ },
+ {
+  "key": "6c9456ef9f0390b7",
+  "verdict": "ok",
+  "why": "WHEN: \"End of your opponent’s Fight phase.\"",
+  "fix": null
+ },
+ {
+  "key": "d068c1b7d947105c",
+  "verdict": "ok",
+  "why": "Opponent’s Fight phase.",
+  "fix": null
+ },
+ {
+  "key": "de9ecd05bde1cd60",
+  "verdict": "ok",
+  "why": "TARGET: \"One ARMIGER unit from your army...\": no unit here has it, so the app correctly lists it as \"Not shown ... (ARMIGER)\".",
+  "fix": null
+ },
+ {
+  "key": "516259e246f9ef7f",
+  "verdict": "ok",
+  "why": "\"At the start of your Command phase, if this model is on the battlefield, you gain 1CP\".",
+  "fix": null
+ },
+ {
+  "key": "25adb36a13cd57fc",
+  "verdict": "ok",
+  "why": "\"Once per turn, when your opponent targets a unit ... with a stratagem\": any phase, either turn.",
+  "fix": null
+ },
+ {
+  "key": "5c057b8ab9650388",
+  "verdict": "ok",
+  "why": "NR: \"Malign Presence (Aura)\".",
+  "fix": null
+ },
+ {
+  "key": "2ce3632e9ba594a5",
+  "verdict": "ok",
+  "why": "NR: \"Domination of the Hive Mind (Aura)\".",
+  "fix": null
+ },
+ {
+  "key": "f8ea7996c3d7dc60",
+  "verdict": "ok",
+  "why": "Synapse: \"Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.\"",
+  "fix": null
+ },
+ {
+  "key": "6942b25aa0da5a7e",
+  "verdict": "ok",
+  "why": "\"While a friendly TYRANIDS unit is within 9\" of this model, that unit is within your army’s Synapse Range\": the attack effect is the Synapse +1 S on melee. The note says \"so +1 S\", so it does not read as a second bonus. notSelf is fine because the Swarmlord is SYNAPSE itself.",
+  "fix": null
+ },
+ {
+  "key": "86527755ef593c5b",
+  "verdict": "ok",
+  "why": "Matches the NR line \"Bone Sabres, Synaptic Pulse\": one model carries both.",
+  "fix": null
+ },
+ {
+  "key": "2586d98fc66d192c",
+  "verdict": "fix",
+  "why": "Onslaught gives \"[ASSAULT] and [LETHAL HITS]\" to ranged weapons with no turn limit. Every unit here with a ranged weapon is non-TITANIC, so it can Fire Overwatch (\"End of your opponent’s Movement phase\"). Snap shooting \"only hits on an unmodified hit roll of 6\", so every hit is critical and LETHAL HITS auto-wounds. Add the opponent’s Movement phase; shooting stays your turn.",
+  "fix": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  }
+ },
+ {
+  "key": "fb72e7866950640e",
+  "verdict": "ok",
+  "why": "NR: \"Onslaught (Aura, Psychic)\".",
+  "fix": null
+ },
+ {
+  "key": "9128ff6b84440d5d",
+  "verdict": "ok",
+  "why": "\"Once per battle round ... when a friendly TYRANIDS unit within 12\" ... is targeted with a Stratagem\": any phase, either turn.",
+  "fix": null
+ },
+ {
+  "key": "23156cd78aa9039e",
+  "verdict": "ok",
+  "why": "\"Each time the bearer makes a melee attack that targets a MONSTER or VEHICLE unit\": Fight phase, either turn.",
+  "fix": null
+ },
+ {
+  "key": "55fd6f94a01c46f5",
+  "verdict": "ok",
+  "why": "Crusher Stampede enhancement (25 pts), NR option \"Monstrous Nemesis\".",
+  "fix": null
+ },
+ {
+  "key": "c7eddeee6b91a3e6",
+  "verdict": "ok",
+  "why": "\"melee attack that targets a MONSTER or VEHICLE unit, add 1 to the Wound roll.\"",
+  "fix": null
+ },
+ {
+  "key": "6ec39ad6cfed33ec",
+  "verdict": "ok",
+  "why": "\"ranged weapons equipped by models in that unit have the [ASSAULT] and [LETHAL HITS] abilities\"; friendly TYRANIDS within 6\". notSelf is right: the Hive Tyrant has no ranged weapon.",
+  "fix": null
+ },
+ {
+  "key": "4e1d96de622d09b1",
+  "verdict": "ok",
+  "why": "Matches the NR line \"Monstrous bonesword and lash whip, Monstrous scything talons\".",
+  "fix": null
+ },
+ {
+  "key": "2d6685e66aa5c8da",
+  "verdict": "ok",
+  "why": "NR: Nodebeast and 10 Neurogaunts each \"Chitinous claws and teeth\"; \"(x11)\".",
+  "fix": null
+ },
+ {
+  "key": "24da4bd6a53c5f0c",
+  "verdict": "ok",
+  "why": "\"when an enemy unit within Engagement Range of this unit is chosen to Fall Back\": enemy fall-back moves happen in their Movement phase.",
+  "fix": null
+ },
+ {
+  "key": "91f5119feb4e480b",
+  "verdict": "ok",
+  "why": "NR Tyrannofex W 16, \"Damaged: 1-5 Wounds Remaining\".",
+  "fix": null
+ },
+ {
+  "key": "6bd1938c8df953da",
+  "verdict": "ok",
+  "why": "\"At the start of the first battle round\": start of battle round counts as the Command phase, and it comes before either player’s turn, so either.",
+  "fix": null
+ },
+ {
+  "key": "2d1eaca8609e1bcf",
+  "verdict": "ok",
+  "why": "\"At the start of the first battle round, select one of the following\".",
+  "fix": null
+ },
+ {
+  "key": "8a3b372cb39242dc",
+  "verdict": "ok",
+  "why": "\"Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.\"",
+  "fix": null
+ },
+ {
+  "key": "19e04dc3c3104564",
+  "verdict": "ok",
+  "why": "\"In your Command phase, you can use this ability.\"",
+  "fix": null
+ },
+ {
+  "key": "7a7192abcfde6c84",
+  "verdict": "ok",
+  "why": "Text: \"(Once per battle, per unit)\".",
+  "fix": null
+ },
+ {
+  "key": "425ddf6d01b3a8a2",
+  "verdict": "ok",
+  "why": "Talons enhancement (an Upgrade); core FAQ: \"Upgrades are a type of enhancement\".",
+  "fix": null
+ },
+ {
+  "key": "edccbd255a16e5a2",
+  "verdict": "ok",
+  "why": "\"While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.\" There is no OC change on this datasheet.",
+  "fix": null
+ },
+ {
+  "key": "3a4f4a155fb11c00",
+  "verdict": "ok",
+  "why": "\"Select one enemy unit ... each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll.\"",
+  "fix": null
+ },
+ {
+  "key": "3a2f55e77f30de6d",
+  "verdict": "ok",
+  "why": "True. BSData Norn Assimilator base InSv is blank; NR prints the profile \"Norn Assimilator (Synaptoprescience)\" with InSv 4+; \"This unit has 4+ InSv.\"",
+  "fix": null
+ },
+ {
+  "key": "e941f060cea87acc",
+  "verdict": "ok",
+  "why": "Matches NR: Toxinjecter Harpoon (ranged, HARPOONED), Monstrous scything talons, Toxinjecter Harpoon (melee, EXTRA ATTACKS).",
+  "fix": null
+ },
+ {
+  "key": "27fc86f0ddb47f54",
+  "verdict": "ok",
+  "why": "Talons enhancement (an Upgrade); \"Upgrades are a type of enhancement\".",
+  "fix": null
+ },
+ {
+  "key": "42ce08bba16615ad",
+  "verdict": "ok",
+  "why": "\"This model has the Feel No Pain 4+ ability against Mortal Wounds.\"",
+  "fix": null
+ },
+ {
+  "key": "3317021e35794b1e",
+  "verdict": "ok",
+  "why": "True. NR prints the tendril profiles \"(Destabilising Predation)\" with \"Anti-Character 2+\"; the second Emissary (no enhancement) lacks it.",
+  "fix": null
+ },
+ {
+  "key": "26b82ae697280554",
+  "verdict": "ok",
+  "why": "Matches NR: Psychic tendril neuroparasite/neurolance/neuroblast, Monstrous rending claws, Monstrous scything talons.",
+  "fix": null
+ },
+ {
+  "key": "e67650cc6bb48579",
+  "verdict": "ok",
+  "why": "\"Once per battle, when an attack is allocated to this model\".",
+  "fix": null
+ },
+ {
+  "key": "4e4125dbff4c1bdb",
+  "verdict": "ok",
+  "why": "\"Once per battle, when an attack is allocated to this model, you can change the Damage characteristic of that attack to 0.\"",
+  "fix": null
+ },
+ {
+  "key": "d68adf2412074978",
+  "verdict": "ok",
+  "why": "Matches the NR line \"Powerful limbs, Stinger salvoes, Acid spray\".",
+  "fix": null
+ },
+ {
+  "key": "235afc50afac0a18",
+  "verdict": "ok",
+  "why": "True: \"Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\" Your battle-shock step (08.03) is in the Command phase. Either turn also covers tests the opponent forces in their Command phase.",
+  "fix": null
+ },
+ {
+  "key": "6e00976af6f2b75f",
+  "verdict": "ok",
+  "why": "True: \"Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.\" Fight phase, either turn.",
+  "fix": null
+ },
+ {
+  "key": "11a13125ad9f100e",
+  "verdict": "ok",
+  "why": "\"in either player’s Command phase\" (Faction Pack v1.3 wording).",
+  "fix": null
+ },
+ {
+  "key": "3433f137994f64b4",
+  "verdict": "ok",
+  "why": "\"either player’s Command phase\".",
+  "fix": null
+ },
+ {
+  "key": "9b246ac2be652c9c",
+  "verdict": "ok",
+  "why": "True. Wahapedia shows it, and GW’s Tyranids Faction Pack v1.3 FAQ prints the same Q/A: \"No. Insane Bravery can only be used in your Command phase.\" It could cite the GW pack, the higher authority.",
+  "fix": null
+ },
+ {
+  "key": "402ab9cd746aa6e1",
+  "verdict": "ok",
+  "why": "\"once per battle ... you can unleash the Shadow in the Warp\": the player unleashes it once, and it is shown once, as an army rule, not on each unit.",
+  "fix": null
+ },
+ {
+  "key": "3f49b3a1802f0d5b",
+  "verdict": "fix",
+  "why": "\"Each time a TYRANIDS MONSTER model from your army makes an attack ... add 1 to the Wound roll as well if ... Below Half-strength.\" Every MONSTER here is non-TITANIC with a ranged weapon, so it can Fire Overwatch at the end of the opponent’s Movement phase. Snap shooting ignores hit modifiers but not the +1 to wound.",
+  "fix": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ]
+  }
+ },
+ {
+  "key": "4f973a90aa659288",
+  "verdict": "ok",
+  "why": "Either turn: the Fight phase, and (with the fix) the opponent’s Movement phase.",
+  "fix": null
+ },
+ {
+  "key": "4730a5209a443cf2",
+  "verdict": "fix",
+  "why": "The turn per phase must match the added phase: Fire Overwatch is \"End of your opponent’s Movement phase\", and the shooting phase is your own.",
+  "fix": {
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  }
+ },
+ {
+  "key": "36c88aaba95b1356",
+  "verdict": "ok",
+  "why": "\"TYRANIDS MONSTER model from your army\": all but the Neurogaunts.",
+  "fix": null
+ },
+ {
+  "key": "a75a8239eb67c7fb",
+  "verdict": "ok",
+  "why": "Single-model reading is exact (Core Rules p86, Starting Strength and Half-strength: below starting strength = \"remaining wounds are less than its W\"; below half = \"less than half of its W\"). {half} = ceil(W/2)-1 gives 4 for W10 and 7 for W16. Every MONSTER here is a one-model unit.",
+  "fix": null
+ },
+ {
+  "key": "909e57bc7683322b",
+  "verdict": "ok",
+  "why": "\"while a TYRANIDS MONSTER unit ... (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic\"; for one model, at Starting Strength = no wounds lost.",
+  "fix": null
+ },
+ {
+  "key": "8d061fa7920d8006",
+  "verdict": "ok",
+  "why": "WHEN: \"Your opponent’s Shooting phase or the Fight phase\".",
+  "fix": null
+ },
+ {
+  "key": "55a08b915a3ea7c8",
+  "verdict": "ok",
+  "why": "Fight phase in either turn; the shooting override is item c8433eeae24f96d5.",
+  "fix": null
+ },
+ {
+  "key": "c8433eeae24f96d5",
+  "verdict": "ok",
+  "why": "\"Your opponent’s Shooting phase\".",
+  "fix": null
+ },
+ {
+  "key": "2a10d893105139dc",
+  "verdict": "ok",
+  "why": "\"TYRANIDS MONSTER model ... with the Deadly Demise ability that cannot FLY\": all MONSTERs here have Deadly Demise and none has FLY.",
+  "fix": null
+ },
+ {
+  "key": "4a1e7204bd251a77",
+  "verdict": "ok",
+  "why": "WHEN: \"Fight phase.\"",
+  "fix": null
+ },
+ {
+  "key": "3f1f3b35e18b24cf",
+  "verdict": "ok",
+  "why": "Fight phase, either turn.",
+  "fix": null
+ },
+ {
+  "key": "07e193fb9f0f9489",
+  "verdict": "ok",
+  "why": "TARGET: \"One TYRANIDS MONSTER unit from your army\".",
+  "fix": null
+ },
+ {
+  "key": "13a1bafbb46347f4",
+  "verdict": "ok",
+  "why": "\"Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Hit roll\": Fight-phase attacks are melee.",
+  "fix": null
+ },
+ {
+  "key": "b0db0a1110268b97",
+  "verdict": "ok",
+  "why": "WHEN: \"Fight phase, just after an enemy unit has selected its targets.\"",
+  "fix": null
+ },
+ {
+  "key": "7594273457627c22",
+  "verdict": "ok",
+  "why": "Fight phase, either turn.",
+  "fix": null
+ },
+ {
+  "key": "334f8567532cd095",
+  "verdict": "ok",
+  "why": "TARGET: \"One TYRANIDS MONSTER unit from your army that was selected as the target...\".",
+  "fix": null
+ },
+ {
+  "key": "84bd5ba1ef63a645",
+  "verdict": "ok",
+  "why": "WHEN: \"Your Movement phase.\"",
+  "fix": null
+ },
+ {
+  "key": "659aa96563de5113",
+  "verdict": "ok",
+  "why": "Your Movement phase.",
+  "fix": null
+ },
+ {
+  "key": "e7a6b614cf2a5937",
+  "verdict": "ok",
+  "why": "TARGET: \"One TYRANIDS MONSTER unit from your army...\". The TITANIC exclusion is about models moved through, not the target.",
+  "fix": null
+ },
+ {
+  "key": "cffe2a24d218822d",
+  "verdict": "ok",
+  "why": "WHEN: \"Your Shooting phase.\"",
+  "fix": null
+ },
+ {
+  "key": "e2618ad40504b5b0",
+  "verdict": "ok",
+  "why": "Your Shooting phase.",
+  "fix": null
+ },
+ {
+  "key": "e33fb8a6be6ff703",
+  "verdict": "ok",
+  "why": "TARGET: \"One TYRANIDS MONSTER unit from your army...\".",
+  "fix": null
+ },
+ {
+  "key": "4c4a3e5352ca6c8e",
+  "verdict": "ok",
+  "why": "\"ranged weapons ... have the [IGNORES COVER] ability, and ... you can ignore any or all modifiers to ... Ballistic Skill ... and ... to the Hit roll.\"",
+  "fix": null
+ },
+ {
+  "key": "168f3f8f3f5ca671",
+  "verdict": "ok",
+  "why": "WHEN: \"Your Charge phase, just after a TYRANIDS MONSTER model ... ends a Charge move.\"",
+  "fix": null
+ },
+ {
+  "key": "885c721aff8af508",
+  "verdict": "ok",
+  "why": "Your Charge phase. A Heroic Intervention charge in their turn does not qualify.",
+  "fix": null
+ },
+ {
+  "key": "bc074f81110b086a",
+  "verdict": "ok",
+  "why": "TARGET: \"That TYRANIDS MONSTER model.\"",
+  "fix": null
+ },
+ {
+  "key": "b062118bf46a1a97",
+  "verdict": "ok",
+  "why": "\"Friendly NORN EMISSARY/NORN ASSIMILATOR units have the following ability\".",
+  "fix": null
+ },
+ {
+  "key": "53c6814a6f373472",
+  "verdict": "ok",
+  "why": "WHEN: \"Any phase, when a friendly NORN ASSIMILATOR unit suffers a mortal wound.\"",
+  "fix": null
+ },
+ {
+  "key": "02aa503660cddef2",
+  "verdict": "ok",
+  "why": "Any phase, either turn.",
+  "fix": null
+ },
+ {
+  "key": "fabaddbc59357b09",
+  "verdict": "ok",
+  "why": "TARGET: \"That NORN ASSIMILATOR unit.\"",
+  "fix": null
+ },
+ {
+  "key": "f1d8684e52502bb6",
+  "verdict": "ok",
+  "why": "EFFECT: \"Your unit has Feel No Pain 4+ against mortal wounds.\" It is shown as \"1CP Catalytic Biofortification: ...\" on the Assimilators only.",
+  "fix": null
+ },
+ {
+  "key": "ad06aa53ebe29429",
+  "verdict": "ok",
+  "why": "WHEN: \"Fight phase, when a friendly NORN ASSIMILATOR/NORN EMISSARY unit is selected to fight.\"",
+  "fix": null
+ },
+ {
+  "key": "54631371c46e761a",
+  "verdict": "ok",
+  "why": "Fight phase, either turn.",
+  "fix": null
+ },
+ {
+  "key": "f31034917f796a3e",
+  "verdict": "ok",
+  "why": "TARGET: \"That NORN ASSIMILATOR/NORN EMISSARY unit\": either keyword.",
+  "fix": null
+ },
+ {
+  "key": "1d0877b2217cda1f",
+  "verdict": "ok",
+  "why": "\"Your unit’s melee attacks have +2 S\", when selected to fight.",
+  "fix": null
+ },
+ {
+  "key": "04fc12816f090f44",
+  "verdict": "ok",
+  "why": "WHEN: \"Your Shooting phase, when a friendly NORN ASSIMILATOR unit has shot.\"",
+  "fix": null
+ },
+ {
+  "key": "a2880c80dd8fbd65",
+  "verdict": "ok",
+  "why": "Your Shooting phase.",
+  "fix": null
+ },
+ {
+  "key": "011215d87f5b35f8",
+  "verdict": "ok",
+  "why": "TARGET: \"That NORN ASSIMILATOR unit.\"",
+  "fix": null
+ },
+ {
+  "key": "f207a7e1f6fbae30",
+  "verdict": "ok",
+  "why": "\"Honoured\" is defined only in Code Chivalric (\"your army becomes Honoured\"). The pattern is anchored and Imperial Knights only, so World Eaters’ \"Dishonoured\" cannot match. No other IK rule in the app starts with \"Honoured\" (\"Honoured to Serve\" is a Throne-Bonded stratagem the app does not carry).",
+  "fix": null
+ },
+ {
+  "key": "d71a469c88d3c3c3",
+  "verdict": "ok",
+  "why": "Anchored exact match. \"Synapse Range\" is defined in the Synapse army rule (\"is said to be within Synapse Range\") and used bold in Domination of the Hive Mind and Neurocytes.",
+  "fix": null
+ }
+]

@@ -1,0 +1,643 @@
+[
+ {
+  "key": "8c4f84275cbd4977",
+  "verdict": "ok",
+  "why": "Core Rules 15.02 \"WHEN: Any phase, just after you make one of the following rolls…\" = all five 11th-ed phases (command, movement, shooting, charge, fight).",
+  "fix": null
+ },
+ {
+  "key": "0b8a49825e1a49d4",
+  "verdict": "ok",
+  "why": "Printed card has the green \"Used in: Either player's turn\" header; save/hit/wound/damage rolls happen in both turns.",
+  "fix": null
+ },
+ {
+  "key": "e0e525fccccda811",
+  "verdict": "ok",
+  "why": "15.03 \"WHEN: Fight phase, just after a friendly CHARACTER unit is selected to fight.\"",
+  "fix": null
+ },
+ {
+  "key": "307dbc6f7bf5efca",
+  "verdict": "ok",
+  "why": "Green \"Either player's turn\" card; both players select units to fight in every Fight phase.",
+  "fix": null
+ },
+ {
+  "key": "18afe9e5bb3c2fd6",
+  "verdict": "ok",
+  "why": "TARGET \"That CHARACTER unit\": all:[Character] is exact. Attached units carry the leader's CHARACTER keyword (Nazdreg+Meganobz, Khârn+Berzerkers, Sorcerer+Rubrics…); Used-by lists every character unit in all five lists, none missed.",
+  "fix": null
+ },
+ {
+  "key": "f247965b9c4f9bc6",
+  "verdict": "ok",
+  "why": "15.04 \"WHEN: Battle-shock step of your Command phase\".",
+  "fix": null
+ },
+ {
+  "key": "4e80e1b646212a47",
+  "verdict": "ok",
+  "why": "\"…of your Command phase\"; blue \"Your turn\" card.",
+  "fix": null
+ },
+ {
+  "key": "b9c082ec329df476",
+  "verdict": "ok",
+  "why": "Verbatim Wahapedia FAQ under section 15; agrees with 01.07 \"Its controlling player cannot target that unit with stratagems\".",
+  "fix": null
+ },
+ {
+  "key": "ea570e4174008c93",
+  "verdict": "ok",
+  "why": "15.05 \"WHEN: Your Shooting phase.\"",
+  "fix": null
+ },
+ {
+  "key": "ea8d5f2f5d80e089",
+  "verdict": "ok",
+  "why": "\"Your Shooting phase\"; blue \"Your turn\" card.",
+  "fix": null
+ },
+ {
+  "key": "b0ac654265d54dc9",
+  "verdict": "ok",
+  "why": "TARGET \"One friendly unengaged EXPLOSIVES/GRENADES unit\" (slash = or): any:[Explosives,Grenades]. Selects Ghazghkull, Nazdreg, Deffkoptas; Khârn, Lord on Juggernaut, Jakhals; Sorcerer+Rubrics. Unengaged/no-advance are table-time conditions shown in the TARGET text.",
+  "fix": null
+ },
+ {
+  "key": "b4f27a3cfb9ea2b6",
+  "verdict": "ok",
+  "why": "Matches Wahapedia 15.05 errata: \"The Grenade Stratagem is the same as the Explosives stratagem.\"",
+  "fix": null
+ },
+ {
+  "key": "6f4193f2d2886967",
+  "verdict": "ok",
+  "why": "15.06 \"WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.\"",
+  "fix": null
+ },
+ {
+  "key": "9037feff2c5e765b",
+  "verdict": "ok",
+  "why": "\"Your Charge phase\"; blue \"Your turn\" card.",
+  "fix": null
+ },
+ {
+  "key": "0168fdf9ecf7c37f",
+  "verdict": "ok",
+  "why": "TARGET \"That MONSTER/VEHICLE unit\": any:[Monster,Vehicle]; picks every Monster/Vehicle in the five lists (all Knights, Rhino, Forgefiend, Defiler, Kans, Dakkarigs, Tyranid monsters…).",
+  "fix": null
+ },
+ {
+  "key": "0c20569e44f49ce2",
+  "verdict": "ok",
+  "why": "Matches Wahapedia 15.06 errata: \"The Tank Shock Stratagem is the same as the Crushing Impact stratagem.\"",
+  "fix": null
+ },
+ {
+  "key": "aee46f4535024220",
+  "verdict": "ok",
+  "why": "15.07 \"WHEN: End of your opponent's Movement phase.\"",
+  "fix": null
+ },
+ {
+  "key": "bc0f130d00125561",
+  "verdict": "ok",
+  "why": "\"your opponent's Movement phase\"; red \"Opponent's turn\" card.",
+  "fix": null
+ },
+ {
+  "key": "93738af1e4eaf618",
+  "verdict": "ok",
+  "why": "TARGET \"…in strategic reserves (excluding AIRCRAFT)\": none:[Aircraft]. No AIRCRAFT or FORTIFICATION (20.01 excludes them from reserves) in the five lists, so every unit really can be a target.",
+  "fix": null
+ },
+ {
+  "key": "7df397384f7d9395",
+  "verdict": "ok",
+  "why": "11th-ed 15.08 \"WHEN: End of your opponent's Movement phase.\" only (no Charge-phase use any more).",
+  "fix": null
+ },
+ {
+  "key": "93dcd4f8af862830",
+  "verdict": "ok",
+  "why": "Red \"Opponent's turn\" card.",
+  "fix": null
+ },
+ {
+  "key": "a174127d2045f01b",
+  "verdict": "ok",
+  "why": "TARGET \"One friendly unengaged unit (excluding TITANIC units)\": none:[Titanic] is exact; all four Knights correctly excluded. (Units with no ranged weapon — Hive Tyrant, Neurogaunts, Tzaangors, Enlightened, Eightbound, Slaughterbound — are legal targets but cannot attack, 04.01.01; suits() already keeps it off their datasheets, the strat card still says \"any unit\".)",
+  "fix": null
+ },
+ {
+  "key": "60dfba8bfe260dea",
+  "verdict": "ok",
+  "why": "15.10 \"WHEN: Start of your opponent's Shooting phase.\"",
+  "fix": null
+ },
+ {
+  "key": "185956b0a477f4da",
+  "verdict": "ok",
+  "why": "Red \"Opponent's turn\" card.",
+  "fix": null
+ },
+ {
+  "key": "3969cfd0e77f8719",
+  "verdict": "ok",
+  "why": "TARGET \"One friendly SMOKE unit\": all:[Smoke]; only the Chaos Rhino has SMOKE.",
+  "fix": null
+ },
+ {
+  "key": "911b920092560922",
+  "verdict": "ok",
+  "why": "15.11 \"WHEN: End of your opponent's Charge phase.\"",
+  "fix": null
+ },
+ {
+  "key": "90e3a85921028ec9",
+  "verdict": "ok",
+  "why": "Red \"Opponent's turn\" card.",
+  "fix": null
+ },
+ {
+  "key": "2048454965bf9873",
+  "verdict": "ok",
+  "why": "Verbatim Wahapedia FAQ in 15.01 (\"…has an original cost of 2CP\"); consistent with 15.01 \"increase the CP cost of that stratagem by the amount shown\".",
+  "fix": null
+ },
+ {
+  "key": "685cea2763bda8f3",
+  "verdict": "ok",
+  "why": "15.12 \"WHEN: Fight step of your opponent's Fight phase, just after an enemy unit has resolved its attacks.\"",
+  "fix": null
+ },
+ {
+  "key": "ee6aba0591e6f19e",
+  "verdict": "ok",
+  "why": "\"your opponent's Fight phase\"; red \"Opponent's turn\" card (2CP, as data has).",
+  "fix": null
+ },
+ {
+  "key": "31e5897072f81997",
+  "verdict": "ok",
+  "why": "24.01: a weapon ability followed by keywords \"only applies if the target unit has one or more of those keywords\"; Wahapedia FAQ on ANTI-NON-MONSTER/VEHICLE: \"will trigger on any unit that does not have the specified keyword\". Labelled as app note.",
+  "fix": null
+ },
+ {
+  "key": "f2f3c4d6dee18487",
+  "verdict": "ok",
+  "why": "True: BSData/New Recruit names them \"Beastchoppa/Gutrippa - Hunter (Hunter: MONSTER/VEHICLE)\" (the only Hunter profiles in the five lists); 04.01.03 \"Hunter profiles can only target units with the specified keywords\"; the printed Core Rules only point to \"Multiple Weapon Profiles\" in the app.",
+  "fix": null
+ },
+ {
+  "key": "0924b89a98ed63cf",
+  "verdict": "fix",
+  "why": "Drops 20.03's \"Unless otherwise stated\" and the exceptions to destruction (\"Repositioned units\", units embarked in a TRANSPORT that made an ingress move). Wrong in these lists: Umbralefic Crystal (Sorcerer in TA, Deep Strike) \"must make an ingress move in your next Movement phase (including in your first turn)\"; Deffkoptas (Deep Strike) re-enter reserves via Aerial Manoover and are repositioned, so are not destroyed at the end of round 3.",
+  "fix": {
+   "note": "*App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).*"
+  }
+ },
+ {
+  "key": "f862940edbe95d5b",
+  "verdict": "ok",
+  "why": "True: MOBILE has no core-ability entry; it is named only in 13.06 (\"INFANTRY/BEASTS/SWARM/MOBILE models can move horizontally through dense terrain features\") and given by Super-Heavy Walker; the vertical-movement line does not include MOBILE.",
+  "fix": null
+ },
+ {
+  "key": "25ba3bbb347c6d6b",
+  "verdict": "ok",
+  "why": "True: \"selected to attack\" is 04.01.05 in the Wahapedia/app appendix; the term does not appear in the printed Core Rules PDF.",
+  "fix": null
+ },
+ {
+  "key": "503e008b846d2a4e",
+  "verdict": "fix",
+  "why": "The app text matches the printed 12.08, but the note calls both differences an errata: Wahapedia lists only \"12.08 … Ongoing Consolidation — Change to: …\" under Errata; \"Your unit must be unengaged and within range of the selected objective\" is simply Wahapedia's main-text wording.",
+  "fix": {
+   "note": "*App note, not rules text: this is the printed Core Rules wording. Wahapedia lists an errata that adds the second sentence of Engaging Consolidation to Ongoing Consolidation, and its own text of Objective Consolidation reads “must be unengaged and within range”; neither is in the Core Rules PDF (01/06/2026) or the Universal Rules Updates v1.1.*"
+  }
+ },
+ {
+  "key": "60cae8f4067544b3",
+  "verdict": "ok",
+  "why": "Matches \"starting strength\", \"below starting strength\", \"half-strength\", \"Below Half-strength\" (Crusher Stampede); all are defined only in Starting Strength.",
+  "fix": null
+ },
+ {
+  "key": "b60342db49b96b36",
+  "verdict": "ok",
+  "why": "TOWERING appears in the Core Rules only in Plunging Fire (22.05); only bolded there. Keywords lists are not passed to ruleFor.",
+  "fix": null
+ },
+ {
+  "key": "e7f2ce799c4d764e",
+  "verdict": "ok",
+  "why": "Used by the app's own use-line verb; \"select/choosing weapon(s)\" can only mean 04.01.",
+  "fix": null
+ },
+ {
+  "key": "9c7c3e7ddbbd4d79",
+  "verdict": "ok",
+  "why": "Labels: ANTI-MONSTER/VEHICLE 3+/4+, ANTI-INFANTRY 4+, ANTI-CHARACTER 2+, [ANTI-X Y+]; every [ANTI-…] is 24.03.",
+  "fix": null
+ },
+ {
+  "key": "58f5b90e7aaa9b10",
+  "verdict": "ok",
+  "why": "Labels: BLAST, BLAST 1/2, [BLAST X], unit rule \"Blast\". Weapon names like \"Blasta\" are never passed to ruleFor (only keywords, unit rules and bold terms are).",
+  "fix": null
+ },
+ {
+  "key": "92d3aed3d1dc5343",
+  "verdict": "ok",
+  "why": "Labels: CLEAVE 1/2, [CLEAVE X], [CLEAVE 1]; all 24.06.",
+  "fix": null
+ },
+ {
+  "key": "007aefad37a811eb",
+  "verdict": "ok",
+  "why": "24.27: \"[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes. See [CLOSE-QUARTERS].\" The Close-quarters text carries that sentence.",
+  "fix": null
+ },
+ {
+  "key": "ac29be93a958f89b",
+  "verdict": "ok",
+  "why": "Labels: DEVASTATING WOUNDS, [Devastating Wounds], unit rule. Names \"Devastating Assault\"/\"Devastating Sorcery\" exist but are never bolded or passed to ruleFor.",
+  "fix": null
+ },
+ {
+  "key": "0adb7282e9469117",
+  "verdict": "ok",
+  "why": "Labels: EXTRA ATTACKS, [EXTRA ATTACKS], \"[EXTRA ATTACKS]:\" (Select Weapons heading), unit rule; all 24.11.",
+  "fix": null
+ },
+ {
+  "key": "da033937d5a3e4bb",
+  "verdict": "fix",
+  "why": "Also matches \"Hazardous test(s)\"/\"hazardous roll(s)\", which 06.03.01 defines as the hazard roll (\"The term 'Hazardous test' is the same as hazard roll\"); because this pattern comes first, the later Hazard Roll alias never gets them and they would open [HAZARDOUS]. No such label in the five lists yet.",
+  "fix": {
+   "opens": "Hazardous",
+   "pattern": "/^hazardous(?!( roll| test)s?$)/i"
+  }
+ },
+ {
+  "key": "472a4448d6c83bf3",
+  "verdict": "ok",
+  "why": "Labels: IGNORES COVER, [IGNORES COVER], unit rule; all 24.18.",
+  "fix": null
+ },
+ {
+  "key": "c0e4acb468dcd793",
+  "verdict": "ok",
+  "why": "Labels: LETHAL HITS, LETHAL HITS: non-MONSTER/VEHICLE, [LETHAL HITS]; 24.23, the suffix being a 24.01 target restriction of the same ability.",
+  "fix": null
+ },
+ {
+  "key": "8affdd8227855ef7",
+  "verdict": "ok",
+  "why": "Labels: PRECISION, [PRECISION] (incl. Epic Challenge); all 24.28.",
+  "fix": null
+ },
+ {
+  "key": "74964cd68886ab48",
+  "verdict": "ok",
+  "why": "Labels: RAPID FIRE 1/2/3/4/6/D6+3, [RAPID FIRE X]; weapon name \"Rapid-fire battle cannon\" has a hyphen and is never passed to ruleFor.",
+  "fix": null
+ },
+ {
+  "key": "8b7b173abe53714f",
+  "verdict": "ok",
+  "why": "Labels: SUSTAINED HITS 1/3/D3, [SUSTAINED HITS X]; all 24.36.",
+  "fix": null
+ },
+ {
+  "key": "914418c97bf72ecb",
+  "verdict": "ok",
+  "why": "Labels: TORRENT, [TORRENT], unit rule; all 24.37.",
+  "fix": null
+ },
+ {
+  "key": "f5803142822f4aa5",
+  "verdict": "ok",
+  "why": "Labels: TWIN-LINKED, [TWIN-LINKED], unit rule; 24.38.",
+  "fix": null
+ },
+ {
+  "key": "f8e01071749e457b",
+  "verdict": "ok",
+  "why": "Labels: ASSAULT, [ASSAULT], unit rule, and \"assault shooting\" (bold only inside the Assault text itself, where it is not linked); the [ASSAULT] rule is the one that grants assault shooting (10.05).",
+  "fix": null
+ },
+ {
+  "key": "3774c86a09c33053",
+  "verdict": "ok",
+  "why": "Only \"Deep Strike\" (unit rules, detachment/army text); 24.09.",
+  "fix": null
+ },
+ {
+  "key": "3152e3c7e12905be",
+  "verdict": "ok",
+  "why": "Labels: Deadly Demise 1/D3/D6/X, \"deadly demise\"; all 24.08.",
+  "fix": null
+ },
+ {
+  "key": "bbf0103a44eeff21",
+  "verdict": "ok",
+  "why": "Labels: Feel No Pain 4+/5+/6+/X+, bare \"Feel No Pain\"; all 24.12.",
+  "fix": null
+ },
+ {
+  "key": "21e9935f6273d7e5",
+  "verdict": "ok",
+  "why": "\"lead\", \"leading\", \"support\" only occur in the Leader/Attached Units texts; the printed heading is \"LEADER 24.22 / SUPPORT 24.34\" (Support: \"See Attached Units (19)\") with this same text.",
+  "fix": null
+ },
+ {
+  "key": "d73f04aca7c05002",
+  "verdict": "ok",
+  "why": "Labels: Lone Operative, Lone Operative X\"; 24.24.",
+  "fix": null
+ },
+ {
+  "key": "9eb3e6957b95cc6d",
+  "verdict": "ok",
+  "why": "Only \"MOBILE\" (Dread Mob, Super-Heavy Walker, 13.06 text); opens the 13.06 lines that name it.",
+  "fix": null
+ },
+ {
+  "key": "d4af4bc35df60187",
+  "verdict": "ok",
+  "why": "Only \"Hunter\" (the 04.01.03 text and Hunter profiles). Names \"Hunter of Souls\"/\"Hunter's Eye\" exist but are never passed to ruleFor.",
+  "fix": null
+ },
+ {
+  "key": "916e4b59b2a5c318",
+  "verdict": "ok",
+  "why": "Only \"snap shooting\" (Fire Overwatch); 15.09.",
+  "fix": null
+ },
+ {
+  "key": "bbd6a0e7329629e6",
+  "verdict": "ok",
+  "why": "Only \"Fights First\" (Charge Move, Counteroffensive, 24.13).",
+  "fix": null
+ },
+ {
+  "key": "28a1b1bc72f1cf1c",
+  "verdict": "ok",
+  "why": "\"action/actions\" (16); exact-anchored.",
+  "fix": null
+ },
+ {
+  "key": "826876bb17200d2c",
+  "verdict": "ok",
+  "why": "Labels: MELTA 2/6, [MELTA X], unit rule; \"Meltagun\" is a weapon name, never passed to ruleFor.",
+  "fix": null
+ },
+ {
+  "key": "0691de7b46f3b733",
+  "verdict": "ok",
+  "why": "Labels: LANCE, [LANCE]; 24.21.",
+  "fix": null
+ },
+ {
+  "key": "3783b487e78f734a",
+  "verdict": "ok",
+  "why": "Only the Knights' unit rule; 24.35.",
+  "fix": null
+ },
+ {
+  "key": "59655017dedd66aa",
+  "verdict": "ok",
+  "why": "Labels: Firing Deck 2 (Chaos Rhino), Firing Deck X; 24.14.",
+  "fix": null
+ },
+ {
+  "key": "43e3cdc307f44f49",
+  "verdict": "ok",
+  "why": "Labels: Scouts 6\", Scouts X\"; \"scout move\" does not match (no s) and goes to Scout Move.",
+  "fix": null
+ },
+ {
+  "key": "553e59d3f8c0ffff",
+  "verdict": "ok",
+  "why": "Labels: PSYCHIC, [PSYCHIC], unit rule \"Psychic\"; anchored, so \"Psychic test\" (Cabal of Sorcerers) and \"psychic attacks\" are not captured.",
+  "fix": null
+ },
+ {
+  "key": "05ceaa88cf8ca796",
+  "verdict": "ok",
+  "why": "HARPOONED / Harpooned on the Norn Assimilators' Toxinjecter Harpoon.",
+  "fix": null
+ },
+ {
+  "key": "9ce616cf6ff02da6",
+  "verdict": "ok",
+  "why": "Every spelling means 06.03 (incl. 06.03.01 \"Hazardous test\"). Current labels \"hazard roll(s)\"/\"Hazard roll\" reach it; the \"hazardous roll/test\" branch is shadowed by /^hazardous/i (see that item's fix).",
+  "fix": null
+ },
+ {
+  "key": "64e2fb903ae42f9e",
+  "verdict": "ok",
+  "why": "\"mortal wound(s)\"; 06.02.",
+  "fix": null
+ },
+ {
+  "key": "4714397c0975479e",
+  "verdict": "ok",
+  "why": "\"leadership roll\" opens Battle-shock, whose text starts with 01.06 Leadership Rolls.",
+  "fix": null
+ },
+ {
+  "key": "4c889b2fd1b4fb67",
+  "verdict": "ok",
+  "why": "\"engaged\", \"unengaged\", \"engagement range\", \"Engagement Range\"; all defined in Engagement 03.04.",
+  "fix": null
+ },
+ {
+  "key": "9ab183854ae0e575",
+  "verdict": "ok",
+  "why": "Exact \"selected to attack\"; 04.01.05.",
+  "fix": null
+ },
+ {
+  "key": "95c6517685c56b6f",
+  "verdict": "ok",
+  "why": "\"destroyed\" and \"fight on death\" (05.04.05 is included in that text).",
+  "fix": null
+ },
+ {
+  "key": "6872e35e4cbe7da7",
+  "verdict": "ok",
+  "why": "\"normal\", \"Normal\", \"normal move\", \"Normal Move\"; every bare \"normal\" sits in \"normal, advance or fall-back move\" (Super-Heavy Walker, Crusher Stampede).",
+  "fix": null
+ },
+ {
+  "key": "9108deafb0cbff00",
+  "verdict": "ok",
+  "why": "\"advance\", \"advance move\", \"advance roll(s)\"; the Advance Move text defines the advance roll.",
+  "fix": null
+ },
+ {
+  "key": "3d7f024547e15420",
+  "verdict": "ok",
+  "why": "\"desperate escape\" etc. are fall-back modes; 09.07.01 Desperate Escape test is in that text.",
+  "fix": null
+ },
+ {
+  "key": "8b140a87298b587d",
+  "verdict": "ok",
+  "why": "charge/charge roll(s)/declare(s/d) a charge/eligible to declare a charge/resolve a charge: all 11.02 terms.",
+  "fix": null
+ },
+ {
+  "key": "9afba01052e3c1e4",
+  "verdict": "ok",
+  "why": "\"charge move(s)\", \"charge targets\", and the data's \"charge move engaged\" (Harpooned markup) — all Charge Move (11.04).",
+  "fix": null
+ },
+ {
+  "key": "f802322a9d8dc75b",
+  "verdict": "ok",
+  "why": "\"pile-in target\" etc.; Pile-in Move 12.03.",
+  "fix": null
+ },
+ {
+  "key": "3716e2563860f761",
+  "verdict": "ok",
+  "why": "\"consolidation mode\", \"Consolidation move\"; 12.08.",
+  "fix": null
+ },
+ {
+  "key": "88f067e90f8b408d",
+  "verdict": "ok",
+  "why": "Exact \"benefit of cover\"; 13.08.",
+  "fix": null
+ },
+ {
+  "key": "6f07a7c83a4f541b",
+  "verdict": "ok",
+  "why": "\"attached\", \"bodyguard\": both defined in 19.01.",
+  "fix": null
+ },
+ {
+  "key": "836312dea8f3763f",
+  "verdict": "ok",
+  "why": "\"strategic reserves\", \"Strategic Reserves\", \"repositioned\" (20.02 is in that text), \"Reserves\" (20.01.01).",
+  "fix": null
+ },
+ {
+  "key": "ca1a81c9c364bcef",
+  "verdict": "ok",
+  "why": "\"ingress move(s)\"; 20.04.",
+  "fix": null
+ },
+ {
+  "key": "b938a8aab373de99",
+  "verdict": "ok",
+  "why": "\"surge move\", \"surge target\"; Surge Move 21.02.",
+  "fix": null
+ },
+ {
+  "key": "6a9a665463a5064d",
+  "verdict": "ok",
+  "why": "\"scout move\"; Scout Move 24.32.",
+  "fix": null
+ },
+ {
+  "key": "d6aca4a6ac9326da",
+  "verdict": "ok",
+  "why": "Exact \"Stealth\"; 24.33.",
+  "fix": null
+ },
+ {
+  "key": "4794442f50e56628",
+  "verdict": "ok",
+  "why": "Checked every unit of all five lists (39 datasheets) with the app's own functions and the snapshots: Deffkoptas \"Pick one to shoot: Slugga or Rokkit Launcha\" / \"Pick one to fight with: Choppa or Spinnin' Blades\"; Sorcerer and Aspiring Sorcerer pick pistol or psychic gun (24.07 \"you can only select one of… one or more of its [CLOSE-QUARTERS] weapons / one or more of its other ranged weapons\"); Beastboss (Gobshot) \"Shoots with both (a MONSTER fires its pistol too)\" (24.07 excludes MONSTER/VEHICLE); Ghazghkull, Mozrog, Nazdreg, both Beastbosses, Lord on Juggernaut, Hive Tyrant, Norn Assimilators/Emissaries \"Fights with both: X, plus Y on top\" with Y the [EXTRA ATTACKS] weapon (24.11, keywords match BSData); Sorcerer \"Pick one to fight with\" (04.01 \"You must select one melee weapon\"); Knights, Forgefiend, Defiler \"Shoots with all of these\", Dakkarigs, Magnus, DP Tzeentch, Sorcerer TA, Tyrannofex \"Shoots with both\"; multi-profile weapons count once and show \"PICK ONE PROFILE\" (04.01.03). No unit's line is wrong. Latent only: a non-MONSTER/VEHICLE model with 2+ [CLOSE-QUARTERS] items would read \"A or B or …\" though it may fire all its pistols together; no such model in these lists.",
+  "fix": null
+ },
+ {
+  "key": "a695a4ea5de43479",
+  "verdict": "ok",
+  "why": "Gear-per-models-line split is right for every unit: attached units (Nazdreg, Khârn, Lord on Juggernaut, Slaughterbound, Sorcerer, Sorcerer TA) all have the leader as models line 0; \"One of these per model\" for Meganobz, Berzerkers, Jakhals (Paired manglers named to the Dishonoured), Rubrics, Scarab Occult melee; \"Aspiring Sorcerer picks one…\" + \"The others: one each\"; Scarab Occult \"Every model shoots with all its guns\". Counts per weapon match the models lines.",
+  "fix": null
+ },
+ {
+  "key": "67c737a2161af756",
+  "verdict": "fix",
+  "why": "Plunging Fire footnote drops a condition: 23.03 \"The Plunging Fire rule (22.05) has no effect on attacks made by, or targeting, AIRCRAFT units\" (and 22.05 needs a \"visible unit\"); the four Knights would show +1 BS against an AIRCRAFT within 12\". \"+1 BS\" also reads as a worse BS; 22.05 says \"improve the BS characteristic… by 1\". Lance (melee only; Bladed horn, Divining spear) and the rest are right.",
+  "fix": {
+   "code": "function unitMods(u, kind){\n  const det = unitDetRules(u).filter(r => r.mod).map(r => Object.assign({ from:r.name, rule:r.name }, singleMod(r.mod, u)));\n  const lance = [...new Set((u.melee || []).filter(w => w.kw.some(k => /^lance/i.test(k))).map(w => w.group || w.name))];\n  if(lance.length) det.push({ kind:'melee', when:'Made a charge move this turn', note:andList(lance) + ' +1 to wound', from:'Lance', rule:'Lance' });\n  if(hasKw(u, 'Towering') && !hasKw(u, 'Aircraft') && D.rules['Plunging Fire']) det.push({ kind:'ranged', when:'Visible target within 12\" with models on ground level (not AIRCRAFT)', note:'BS improved by 1', from:'Plunging Fire', rule:'Plunging Fire' });\n  const strat = allStratagems().filter(s => s.mod && eligible(s).includes(u)).map(s => Object.assign({ from:s.name, strat:s.id, cp:s.cp }, s.mod));\n  return (u.mods || []).concat(det, auraMods(u), strat).filter(m => m.kind === kind || m.kind === 'all');\n}"
+  }
+ },
+ {
+  "key": "f5315f4321e9a698",
+  "verdict": "ok",
+  "why": "Single wording only when the unit has 1 model (starting strength 1: \"Below starting strength: model's remaining wounds are less than its W\"); attached units count all models so never take it. Used for Enraged Behemoths on the Tyranid monsters.",
+  "fix": null
+ },
+ {
+  "key": "cc7842d6434ba57e",
+  "verdict": "ok",
+  "why": "\"Below half-strength: model's remaining wounds are less than half of its W\": ceil(W/2)-1 is the largest whole number below W/2 for even and odd W (W10→4, W16→7, W9→4).",
+  "fix": null
+ },
+ {
+  "key": "b16fef6d7bd17f07",
+  "verdict": "ok",
+  "why": "FNP from unit rules, det-rule defs, abilities (minus n/a, defPh respected), eligible def stratagems in that phase (all such stratagems in these lists are usable in the opponent's turn), and riled up \"That unit has 5+ InSv\" only for models without a 2+–5+ InSv (Meganobz, Gretchin, Deffkoptas, Killa Kans; not Ghazghkull/Mozrog 4+).",
+  "fix": null
+ },
+ {
+  "key": "2105bd7302380541",
+  "verdict": "fix",
+  "why": "Misses army-wide limits worded \"Once per battle round, one model from your army with this ability can use it…\": Will of the Hive Mind (Hive Tyrant, no tag) shows \"Once per battle round\" without \"per army\"; Direct the Slaughter (2 Daemon Princes) was only right because its tag was hand-set. Derive \", per army\" from that wording.",
+  "fix": {
+   "code": "const onceTag = ab => {\n  const t = ab.text || '', army = /\\bone (model|unit) from your army with this ability\\b/i.test(t);\n  for(const src of [ab.tag || '', (/\\((once per [^)]+)\\)/i.exec(t) || [])[1] || '', (/^once per [^,.]+(, per (army|unit))?/i.exec(t) || [])[0] || '']){\n    const m = /once per (battle round|battle|phase|turn)(, per (army|unit))?/i.exec(src);\n    if(m) return m[0].replace(/^o/, 'O') + (!m[2] && army ? ', per army' : '');\n  }\n  return '';\n};"
+  }
+ },
+ {
+  "key": "86d3964b947a7f9b",
+  "verdict": "ok",
+  "why": "all = every, any = some, none = no keyword, unless = exclude when the sub-test matches (Heroic Intervention: VEHICLE unless CHARACTER/WALKER — Rhino excluded, Forgefiend/Defiler/Knights kept); case-insensitive exact keyword match incl. \"Faction: X\".",
+  "fix": null
+ },
+ {
+  "key": "f155569f299b28dc",
+  "verdict": "ok",
+  "why": "Only army rule with needs is Bondsman (any:[Armiger]); purge-freeblade has no ARMIGER, and the rule (\"select one friendly ARMIGER model within 12\"\") then does nothing.",
+  "fix": null
+ },
+ {
+  "key": "3eb2673c5f83a752",
+  "verdict": "ok",
+  "why": "Applies each source unit's aura to every unit matching its needs, skips the source when notSelf (Dreadherder, Swarmlord, Hive Tyrant, Knight Duties) and uses selfWhen for own-unit auras (Ghazghkull, Eightbound).",
+  "fix": null
+ },
+ {
+  "key": "6350d3df4e909c6a",
+  "verdict": "ok",
+  "why": "Army rules with a phase unless inert (Bondsman dropped), detachment rules only when a unit matches, phased abilities grouped across units minus n/a ones, and core phased rules only for units that have them; the phase/turn filter is applied by fits().",
+  "fix": null
+ },
+ {
+  "key": "24db38d3289e3c8e",
+  "verdict": "ok",
+  "why": "Deep Strike: ingress moves are a Movement-phase move type (09.02) in your turn and via Rapid Ingress at the end of the opponent's Movement phase → movement/either. Harpooned: \"When this unit declares a charge\" → your Charge phase (Heroic Intervention only resolves steps 2–3, Waha FAQ 11.02). Super-Heavy Walker: \"normal, advance or fall-back move\" → your Movement phase. Firing Deck: \"In your Shooting phase\".",
+  "fix": null
+ },
+ {
+  "key": "323a0d18158d6a74",
+  "verdict": "ok",
+  "why": "Keyword-gated core strats on eligible units, plus Fire Overwatch only for units with a ranged weapon, Rapid Ingress for Deep Strike or reserve-placing units (Deffkoptas, Tzaangors, Sorcerer TA), Counteroffensive on the Defiler via Destroyer of Futures; nothing offered that the unit cannot use. Generic ones (Command Re-roll, Insane Bravery, Heroic Intervention) are on the stratagem screen only, by design.",
+  "fix": null
+ },
+ {
+  "key": "a493c970772a43dd",
+  "verdict": "ok",
+  "why": "Checked the Bases screen for all five lists: leaders and single models get name + Warlord/enhancement; the biggest line is \"standard\" and the others name what differs (Power Klaw; Champion · Plasma pistol; Khornate eviscerator + Plasma pistol · Icon of Khorne; Aspiring Sorcerer · Force weapon + Malefic Curse + Warpflame pistol; Soulreaper cannon; Icon of Flame; Hellfyre missile rack; Pack Leader; Dishonoured · Paired manglers; Nodebeast; Twistbray; Aviarch). All correct.",
+  "fix": null
+ }
+]

@@ -60,7 +60,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       const r = await take(s + (extra ? ' ' + JSON.stringify(extra) : ''), `() => { hideSheet(); ${extra ? `Object.assign(filt, ${JSON.stringify(extra)}); openStrats.clear(); allStratagems().forEach(x => openStrats.add(x.id));` : ''} go({ s:'${s}', army:'${a.id}' }); }`);
       r.links.forEach(l => links.add(l));
     };
-    for(const s of ['army','units','ranged','melee','abilities','rules','bases']) await screen(s);
+    for(const s of ['army','pregame','units','ranged','melee','abilities','rules','bases']) await screen(s);
     for(const turn of ['all','your','opp']) for(const phase of ['all','command','movement','shooting','charge','fight']) await screen('strats', { turn, phase });
     for(const u of a.units){
       const r = await take('unit ' + u, `() => { hideSheet(); go({ s:'unit', army:'${a.id}', unit:'${u}' }); }`);

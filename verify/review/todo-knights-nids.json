@@ -1,0 +1,2321 @@
+[
+ {
+  "army": "purge-freeblade",
+  "kind": "ability-timing",
+  "where": "purge-freeblade · Knight Warden · Thin Their Ranks",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Thin Their Ranks",
+   "text": "Each time this model makes a ranged attack that targets an enemy unit (excluding **MONSTERS** and **VEHICLES**), that attack has the **[DEVASTATING WOUNDS]** ability."
+  },
+  "key": "09f889140f55da33"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "ability-def",
+  "where": "purge-freeblade · Knight Destrier · Invulnerable Save (5+*)",
+  "judgement": {
+   "def": "5+ invulnerable save against ranged attacks only"
+  },
+  "source": {
+   "ability": "Invulnerable Save (5+*)",
+   "text": "This model has a 5+ invulnerable save against ranged attacks."
+  },
+  "key": "9cf930e32c0cb52d"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "ability-damaged",
+  "where": "purge-freeblade · Knight Errant · Damaged: 1-9 Wounds Remaining",
+  "judgement": {
+   "damaged": "1-9",
+   "W": "26"
+  },
+  "source": {
+   "ability": "Damaged: 1-9 Wounds Remaining",
+   "text": "While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+  },
+  "key": "bf2ab0717b0ea4a6"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "ability-tag",
+  "where": "purge-freeblade · Knight Warden · Warden’s Duty",
+  "judgement": {
+   "tag": "Bondsman"
+  },
+  "source": {
+   "ability": "Warden’s Duty",
+   "text": "While a model is affected by this ability, weapons equipped by that model have the **[SUSTAINED HITS 1]** ability, and ranged weapons equipped by that model have the **[IGNORES COVER]** ability."
+  },
+  "key": "9765f85ba5eeb202"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "unit-footnote",
+  "where": "purge-freeblade · Knight Warden",
+  "judgement": {
+   "kind": "ranged",
+   "when": "vs non-MONSTER/VEHICLE targets",
+   "note": "ranged attacks have [DEVASTATING WOUNDS]",
+   "from": "Thin Their Ranks"
+  },
+  "source": {
+   "ability": "Thin Their Ranks",
+   "text": "Each time this model makes a ranged attack that targets an enemy unit (excluding **MONSTERS** and **VEHICLES**), that attack has the **[DEVASTATING WOUNDS]** ability."
+  },
+  "key": "abfcb64c30428762"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "unit-footnote",
+  "where": "purge-freeblade · Knight Errant",
+  "judgement": {
+   "kind": "all",
+   "when": "Damaged (1-9 wounds left)",
+   "note": "-1 to hit rolls (and -5 OC)",
+   "from": "Damaged: 1-9 Wounds Remaining"
+  },
+  "source": {
+   "ability": "Damaged: 1-9 Wounds Remaining",
+   "text": "While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+  },
+  "key": "3c153f138d7e1693"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "unit-aura",
+  "where": "purge-freeblade · Knight Warden",
+  "judgement": {
+   "kind": "all",
+   "needs": {
+    "all": [
+     "Armiger"
+    ]
+   },
+   "notSelf": true,
+   "when": "Affected by Warden’s Duty (Bondsman)",
+   "note": "weapons have [SUSTAINED HITS 1]",
+   "from": "Warden’s Duty"
+  },
+  "source": {
+   "ability": "Warden’s Duty",
+   "text": "While a model is affected by this ability, weapons equipped by that model have the **[SUSTAINED HITS 1]** ability, and ranged weapons equipped by that model have the **[IGNORES COVER]** ability."
+  },
+  "key": "8b0b2af5c99ebd74"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "unit-aura",
+  "where": "purge-freeblade · Knight Warden",
+  "judgement": {
+   "kind": "ranged",
+   "needs": {
+    "all": [
+     "Armiger"
+    ]
+   },
+   "notSelf": true,
+   "when": "Affected by Warden’s Duty (Bondsman)",
+   "note": "ranged weapons have [IGNORES COVER]",
+   "from": "Warden’s Duty"
+  },
+  "source": {
+   "ability": "Warden’s Duty",
+   "text": "While a model is affected by this ability, weapons equipped by that model have the **[SUSTAINED HITS 1]** ability, and ranged weapons equipped by that model have the **[IGNORES COVER]** ability."
+  },
+  "key": "d699ed213cbea41f"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "unit-weapons",
+  "where": "purge-freeblade · Knight Warden",
+  "judgement": {
+   "gear": [
+    [
+     "Avenger gatling cannon",
+     "Heavy flamer",
+     "Stormspear rocket pod",
+     "Meltagun",
+     "Reaper chainsword"
+    ]
+   ],
+   "weapons": [
+    "Avenger gatling cannon",
+    "Heavy flamer",
+    "Stormspear rocket pod",
+    "Meltagun",
+    "Reaper chainsword · strike",
+    "Reaper chainsword · sweep"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Knight Warden"
+   ],
+   "leads": null
+  },
+  "key": "f60bc79bbd228e3a"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "ability-timing",
+  "where": "purge-freeblade · Knight Paladin · Seasoned Noble",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Seasoned Noble",
+   "text": "Each time this model makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1."
+  },
+  "key": "9876dc2bc11dd899"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "ability-tag",
+  "where": "purge-freeblade · Knight Paladin · Paladin’s Duty",
+  "judgement": {
+   "tag": "Bondsman"
+  },
+  "source": {
+   "ability": "Paladin’s Duty",
+   "text": "While a model is affected by this ability, weapons equipped by that model have the **[LETHAL HITS]** ability, and melee weapons equipped by that model have the **[LANCE]** ability."
+  },
+  "key": "aac0d7591d5d2ddf"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "unit-footnote",
+  "where": "purge-freeblade · Knight Paladin",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Target is the closest eligible target",
+   "note": "improve AP by 1",
+   "from": "Seasoned Noble"
+  },
+  "source": {
+   "ability": "Seasoned Noble",
+   "text": "Each time this model makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1."
+  },
+  "key": "0091eb134a44041d"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "unit-aura",
+  "where": "purge-freeblade · Knight Paladin",
+  "judgement": {
+   "kind": "all",
+   "needs": {
+    "all": [
+     "Armiger"
+    ]
+   },
+   "notSelf": true,
+   "when": "Affected by Paladin’s Duty (Bondsman)",
+   "note": "weapons have [LETHAL HITS]",
+   "from": "Paladin’s Duty"
+  },
+  "source": {
+   "ability": "Paladin’s Duty",
+   "text": "While a model is affected by this ability, weapons equipped by that model have the **[LETHAL HITS]** ability, and melee weapons equipped by that model have the **[LANCE]** ability."
+  },
+  "key": "82e570cd089acafa"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "unit-aura",
+  "where": "purge-freeblade · Knight Paladin",
+  "judgement": {
+   "kind": "melee",
+   "needs": {
+    "all": [
+     "Armiger"
+    ]
+   },
+   "notSelf": true,
+   "when": "Affected by Paladin’s Duty (Bondsman)",
+   "note": "melee weapons have [LANCE]",
+   "from": "Paladin’s Duty"
+  },
+  "source": {
+   "ability": "Paladin’s Duty",
+   "text": "While a model is affected by this ability, weapons equipped by that model have the **[LETHAL HITS]** ability, and melee weapons equipped by that model have the **[LANCE]** ability."
+  },
+  "key": "e2c89642f50b1c41"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "unit-weapons",
+  "where": "purge-freeblade · Knight Paladin",
+  "judgement": {
+   "gear": [
+    [
+     "Questoris heavy stubber",
+     "Rapid-fire battle cannon",
+     "Stormspear rocket pod",
+     "Meltagun",
+     "Reaper chainsword"
+    ]
+   ],
+   "weapons": [
+    "Questoris heavy stubber",
+    "Rapid-fire battle cannon",
+    "Stormspear rocket pod",
+    "Meltagun",
+    "Reaper chainsword · strike",
+    "Reaper chainsword · sweep"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Knight Paladin"
+   ],
+   "leads": null
+  },
+  "key": "fb06d7b8a7dbb4ea"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "ability-timing",
+  "where": "purge-freeblade · Knight Errant · Aggressive Assault",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Aggressive Assault",
+   "text": "Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll."
+  },
+  "key": "9f989e7ff99ab615"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "ability-tag",
+  "where": "purge-freeblade · Knight Errant · Errant’s Duty",
+  "judgement": {
+   "tag": "Bondsman"
+  },
+  "source": {
+   "ability": "Errant’s Duty",
+   "text": "While a model is affected by this ability, you can re-roll Advance rolls made for that model and ranged weapons equipped by that model have the **[ASSAULT]** ability."
+  },
+  "key": "e936f57d4687120b"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "unit-footnote",
+  "where": "purge-freeblade · Knight Errant",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Target is the closest eligible target",
+   "note": "+1 to hit rolls",
+   "from": "Aggressive Assault"
+  },
+  "source": {
+   "ability": "Aggressive Assault",
+   "text": "Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll."
+  },
+  "key": "bd62b2f936439385"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "unit-aura",
+  "where": "purge-freeblade · Knight Errant",
+  "judgement": {
+   "kind": "ranged",
+   "needs": {
+    "all": [
+     "Armiger"
+    ]
+   },
+   "notSelf": true,
+   "when": "Affected by Errant’s Duty (Bondsman)",
+   "note": "ranged weapons have [ASSAULT]",
+   "from": "Errant’s Duty"
+  },
+  "source": {
+   "ability": "Errant’s Duty",
+   "text": "While a model is affected by this ability, you can re-roll Advance rolls made for that model and ranged weapons equipped by that model have the **[ASSAULT]** ability."
+  },
+  "key": "f35069ecd109910a"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "unit-weapons",
+  "where": "purge-freeblade · Knight Errant",
+  "judgement": {
+   "gear": [
+    [
+     "Thermal cannon",
+     "Stormspear rocket pod",
+     "Meltagun",
+     "Reaper chainsword"
+    ]
+   ],
+   "weapons": [
+    "Thermal cannon",
+    "Stormspear rocket pod",
+    "Meltagun",
+    "Reaper chainsword · strike",
+    "Reaper chainsword · sweep"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Knight Errant"
+   ],
+   "leads": null
+  },
+  "key": "e83b22d75c62a36d"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "ability-damaged",
+  "where": "purge-freeblade · Knight Destrier · Damaged: 1-6 Wounds Remaining",
+  "judgement": {
+   "damaged": "1-6",
+   "W": "18"
+  },
+  "source": {
+   "ability": "Damaged: 1-6 Wounds Remaining",
+   "text": "While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+  },
+  "key": "8667c723449581d0"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "ability-na",
+  "where": "purge-freeblade · Knight Destrier · Thundercharge",
+  "judgement": {
+   "na": "Needs a thundershock spear and bellatus reaper chainsword: not this loadout",
+   "armyUnits": [
+    "Knight Warden [Character, Faction: Imperial Knights, Imperium, Knight Warden, Questoris, Titanic, Towering, Vehicle, Walker, Warlord]",
+    "Knight Paladin [Character, Faction: Imperial Knights, Imperium, Knight Paladin, Questoris, Titanic, Towering, Vehicle, Walker]",
+    "Knight Errant [Character, Faction: Imperial Knights, Imperium, Knight Errant, Questoris, Titanic, Towering, Vehicle, Walker]",
+    "Knight Destrier [Bellatus, Character, Faction: Imperial Knights, Imperium, Knight Destrier, Titanic, Towering, Vehicle, Walker]"
+   ]
+  },
+  "source": {
+   "ability": "Thundercharge",
+   "text": "If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model."
+  },
+  "key": "83c2e3919b082822"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "ability-timing",
+  "where": "purge-freeblade · Knight Destrier · Ram Jets",
+  "judgement": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Ram Jets",
+   "text": "Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3\" to the Move characteristic of this model."
+  },
+  "key": "e77d5f7498438cbf"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "ability-timing",
+  "where": "purge-freeblade · Knight Destrier · Saturation Fire",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Saturation Fire",
+   "text": "Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the **[IGNORES COVER]** ability."
+  },
+  "key": "18a852729f3e2615"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "unit-footnote",
+  "where": "purge-freeblade · Knight Destrier",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Target within range of an objective marker",
+   "note": "ranged attacks have [IGNORES COVER]",
+   "from": "Saturation Fire"
+  },
+  "source": {
+   "ability": "Saturation Fire",
+   "text": "Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the **[IGNORES COVER]** ability."
+  },
+  "key": "af265ebea3742653"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "unit-footnote",
+  "where": "purge-freeblade · Knight Destrier",
+  "judgement": {
+   "kind": "all",
+   "when": "Damaged (1-6 wounds left)",
+   "note": "-1 to hit rolls (and -4 OC)",
+   "from": "Damaged: 1-6 Wounds Remaining"
+  },
+  "source": {
+   "ability": "Damaged: 1-6 Wounds Remaining",
+   "text": "While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+  },
+  "key": "ddbeced3f243ef6f"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "unit-weapons",
+  "where": "purge-freeblade · Knight Destrier",
+  "judgement": {
+   "gear": [
+    [
+     "Questoris heavy stubber",
+     "Titanic feet",
+     "Chastiser gatling cannon",
+     "Frag bombard"
+    ]
+   ],
+   "weapons": [
+    "Questoris heavy stubber",
+    "Chastiser gatling cannon",
+    "Frag bombard",
+    "Titanic feet"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Knight Destrier"
+   ],
+   "leads": null
+  },
+  "key": "286f30ecd176b339"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "rule-remind",
+  "where": "imperial-knights army rule · Code Chivalric",
+  "judgement": {
+   "ph": [
+    "movement",
+    "charge"
+   ],
+   "turn": "your",
+   "text": "Quality 3–4 (eager for the challenge): +2\" Move, +1 to Advance and Charge rolls."
+  },
+  "source": {
+   "rule": "Code Chivalric",
+   "text": "If your Army Faction is **IMPERIAL KNIGHTS**, at the end of the Read Mission Objectives step, you must determine your army’s Oath for the coming battle. An Oath consists of two parts - one Deed and one Quality. There are three options for each part, shown below.\nTo determine your army’s Deed, you can either select one Deed or you can randomly select one Deed by rolling a D6 and consulting the relevant table below. The selected Deed will describe what needs to be achieved in order to complete that Deed.\nTo determine your army’s Quality, you can either select one Quality or you can randomly select one Quality by rolling a D6 and consulting the relevant table below. Until the end of the battle, the ability described in the Quality selected applies to all models in your army with this ability.\nThe first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).\nDeed 1–2 · We vow to lay low the tyrant…: At the start of the battle, select one **CHARACTER** model in your opponent’s army. This Deed is completed at the end of a turn if that **CHARACTER** is destroyed.\nDeed 3–4 · We swear to reclaim the realm…: This deed is completed at the end of your opponent’s turn if you control more objective markers than your opponent.\nDeed 5–6 · We pledge to reap a great tally…: This deed is completed at the end of the battle round if the number of enemy units destroyed this battle round is greater than the battle round number even if those units are subsequently returned to the battlefield (for example, two destroyed enemy units in the first battle round).\nQuality 1–2 · …with our martial valour risen over all: Each time this model is selected to shoot or fight, you can re-roll one **Hit roll** and you can re-roll one **Wound roll**.\nQuality 3–4 · …and we are eager for the challenge: Add 2\" to this model’s Move characteristic and add 1 to **Advance** and **Charge rolls** made for this model.\nQuality 5–6 · …yet shall our legacy be unsullied: Improve this model’s Objective Control characteristic by 2 and its Leadership characteristic by 1."
+  },
+  "key": "5d0339f4d1a3f8d2"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "rule-remind",
+  "where": "imperial-knights army rule · Code Chivalric",
+  "judgement": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "text": "Quality 1–2 (martial valour): each time a Knight shoots or fights, re-roll one Hit roll and one Wound roll."
+  },
+  "source": {
+   "rule": "Code Chivalric",
+   "text": "If your Army Faction is **IMPERIAL KNIGHTS**, at the end of the Read Mission Objectives step, you must determine your army’s Oath for the coming battle. An Oath consists of two parts - one Deed and one Quality. There are three options for each part, shown below.\nTo determine your army’s Deed, you can either select one Deed or you can randomly select one Deed by rolling a D6 and consulting the relevant table below. The selected Deed will describe what needs to be achieved in order to complete that Deed.\nTo determine your army’s Quality, you can either select one Quality or you can randomly select one Quality by rolling a D6 and consulting the relevant table below. Until the end of the battle, the ability described in the Quality selected applies to all models in your army with this ability.\nThe first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).\nDeed 1–2 · We vow to lay low the tyrant…: At the start of the battle, select one **CHARACTER** model in your opponent’s army. This Deed is completed at the end of a turn if that **CHARACTER** is destroyed.\nDeed 3–4 · We swear to reclaim the realm…: This deed is completed at the end of your opponent’s turn if you control more objective markers than your opponent.\nDeed 5–6 · We pledge to reap a great tally…: This deed is completed at the end of the battle round if the number of enemy units destroyed this battle round is greater than the battle round number even if those units are subsequently returned to the battlefield (for example, two destroyed enemy units in the first battle round).\nQuality 1–2 · …with our martial valour risen over all: Each time this model is selected to shoot or fight, you can re-roll one **Hit roll** and you can re-roll one **Wound roll**.\nQuality 3–4 · …and we are eager for the challenge: Add 2\" to this model’s Move characteristic and add 1 to **Advance** and **Charge rolls** made for this model.\nQuality 5–6 · …yet shall our legacy be unsullied: Improve this model’s Objective Control characteristic by 2 and its Leadership characteristic by 1."
+  },
+  "key": "b97bd9dbeed50250"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "rule-ph",
+  "where": "imperial-knights army rule · Bondsman",
+  "judgement": {
+   "ph": [
+    "command"
+   ]
+  },
+  "source": {
+   "rule": "Bondsman",
+   "text": "Some **IMPERIAL KNIGHTS** models have a Bondsman ability, tagged with the word ‘Bondsman’. In your Command phase, one or more models from your army with a Bondsman ability can use that ability. For each one that does, select one friendly **ARMIGER** model within 12\" of that model (you cannot select an **ARMIGER** model that is already being affected by a Bondsman ability). Until the start of your next Command phase, that **ARMIGER** model is affected by that Bondsman ability."
+  },
+  "key": "ee3a97454cc6d7d9"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "rule-turn",
+  "where": "imperial-knights army rule · Bondsman",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "rule": "Bondsman",
+   "text": "Some **IMPERIAL KNIGHTS** models have a Bondsman ability, tagged with the word ‘Bondsman’. In your Command phase, one or more models from your army with a Bondsman ability can use that ability. For each one that does, select one friendly **ARMIGER** model within 12\" of that model (you cannot select an **ARMIGER** model that is already being affected by a Bondsman ability). Until the start of your next Command phase, that **ARMIGER** model is affected by that Bondsman ability."
+  },
+  "key": "c44aad9c98cc77bd"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "rule-needs",
+  "where": "imperial-knights army rule · Bondsman",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Armiger"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Bondsman",
+   "text": "Some **IMPERIAL KNIGHTS** models have a Bondsman ability, tagged with the word ‘Bondsman’. In your Command phase, one or more models from your army with a Bondsman ability can use that ability. For each one that does, select one friendly **ARMIGER** model within 12\" of that model (you cannot select an **ARMIGER** model that is already being affected by a Bondsman ability). Until the start of your next Command phase, that **ARMIGER** model is affected by that Bondsman ability."
+  },
+  "key": "8018bd63e4af5718"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "rule-ph",
+  "where": "Freeblade Company rule · Knights of Legend",
+  "judgement": {
+   "ph": [
+    "command"
+   ]
+  },
+  "source": {
+   "rule": "Knights of Legend",
+   "text": "**IMPERIAL KNIGHTS** models from your army have the **Feel No Pain 6+** ability. In addition, at the start of your Command phase, each **IMPERIAL KNIGHTS** model from your army regains 1 lost wound."
+  },
+  "key": "035ba314f3f0539b"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "rule-turn",
+  "where": "Freeblade Company rule · Knights of Legend",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "rule": "Knights of Legend",
+   "text": "**IMPERIAL KNIGHTS** models from your army have the **Feel No Pain 6+** ability. In addition, at the start of your Command phase, each **IMPERIAL KNIGHTS** model from your army regains 1 lost wound."
+  },
+  "key": "cc5f1dc057f718e8"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "rule-needs",
+  "where": "Freeblade Company rule · Knights of Legend",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Imperial Knights"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Knights of Legend",
+   "text": "**IMPERIAL KNIGHTS** models from your army have the **Feel No Pain 6+** ability. In addition, at the start of your Command phase, each **IMPERIAL KNIGHTS** model from your army regains 1 lost wound."
+  },
+  "key": "e9f4ee649d902a8e"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "rule-def",
+  "where": "Freeblade Company rule · Knights of Legend",
+  "judgement": {
+   "def": "Feel No Pain 6+"
+  },
+  "source": {
+   "rule": "Knights of Legend",
+   "text": "**IMPERIAL KNIGHTS** models from your army have the **Feel No Pain 6+** ability. In addition, at the start of your Command phase, each **IMPERIAL KNIGHTS** model from your army regains 1 lost wound."
+  },
+  "key": "ac94a6d604ad5c54"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "strat-phases",
+  "where": "Freeblade Company · Noble Sacrifice",
+  "judgement": {
+   "phases": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Noble Sacrifice",
+   "text": "WHEN: Any phase.\nTARGET: One **IMPERIAL KNIGHTS** unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.\nEFFECT: Your unit’s **Deadly Demise** ability inflicts **mortal wounds** on a D6 roll of 4+, adding 1 to the result if it is an **ARMIGER** unit, instead of only a 6."
+  },
+  "key": "8105780c0e5019de"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "strat-turn",
+  "where": "Freeblade Company · Noble Sacrifice",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Noble Sacrifice",
+   "text": "WHEN: Any phase.\nTARGET: One **IMPERIAL KNIGHTS** unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.\nEFFECT: Your unit’s **Deadly Demise** ability inflicts **mortal wounds** on a D6 roll of 4+, adding 1 to the result if it is an **ARMIGER** unit, instead of only a 6."
+  },
+  "key": "62254becbc9f2e1e"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "strat-needs",
+  "where": "Freeblade Company · Noble Sacrifice",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Imperial Knights"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Noble Sacrifice",
+   "text": "WHEN: Any phase.\nTARGET: One **IMPERIAL KNIGHTS** unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.\nEFFECT: Your unit’s **Deadly Demise** ability inflicts **mortal wounds** on a D6 roll of 4+, adding 1 to the result if it is an **ARMIGER** unit, instead of only a 6."
+  },
+  "key": "993d1a7a751d61d7"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "strat-phases",
+  "where": "Freeblade Company · Strength from Exile",
+  "judgement": {
+   "phases": [
+    "shooting",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Strength from Exile",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **IMPERIAL KNIGHTS** unit from your army that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9\" of your unit, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1."
+  },
+  "key": "5367c60cc057313e"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "strat-turn",
+  "where": "Freeblade Company · Strength from Exile",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Strength from Exile",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **IMPERIAL KNIGHTS** unit from your army that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9\" of your unit, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1."
+  },
+  "key": "edd4d195a92b3f63"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "strat-turns",
+  "where": "Freeblade Company · Strength from Exile",
+  "judgement": {
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "stratagem": "Strength from Exile",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **IMPERIAL KNIGHTS** unit from your army that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9\" of your unit, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1."
+  },
+  "key": "6ecf5696f4195e16"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "strat-needs",
+  "where": "Freeblade Company · Strength from Exile",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Imperial Knights"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Strength from Exile",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **IMPERIAL KNIGHTS** unit from your army that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9\" of your unit, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1."
+  },
+  "key": "9f95b099784a3975"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "strat-mod",
+  "where": "Freeblade Company · Strength from Exile",
+  "judgement": {
+   "mod": {
+    "kind": "all",
+    "when": "No other friendly unit within 9\"",
+    "note": "re-roll hit and wound rolls of 1 (your Shooting or the Fight phase)"
+   }
+  },
+  "source": {
+   "stratagem": "Strength from Exile",
+   "text": "WHEN: Your Shooting phase or the Fight phase.\nTARGET: One **IMPERIAL KNIGHTS** unit from your army that has not been selected to shoot or fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9\" of your unit, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1."
+  },
+  "key": "756a91e86e363ee4"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "strat-phases",
+  "where": "Freeblade Company · Full Tilt",
+  "judgement": {
+   "phases": [
+    "movement"
+   ]
+  },
+  "source": {
+   "stratagem": "Full Tilt",
+   "text": "WHEN: Your Movement phase.\nTARGET: One **IMPERIAL KNIGHTS** unit from your army.\nEFFECT: Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in your unit, or 9\" instead if your unit is an **ARMIGER** or **DESTRIER** unit."
+  },
+  "key": "ead3336110483d69"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "strat-turn",
+  "where": "Freeblade Company · Full Tilt",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Full Tilt",
+   "text": "WHEN: Your Movement phase.\nTARGET: One **IMPERIAL KNIGHTS** unit from your army.\nEFFECT: Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in your unit, or 9\" instead if your unit is an **ARMIGER** or **DESTRIER** unit."
+  },
+  "key": "67b6147bab7ca864"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "strat-needs",
+  "where": "Freeblade Company · Full Tilt",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Imperial Knights"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Full Tilt",
+   "text": "WHEN: Your Movement phase.\nTARGET: One **IMPERIAL KNIGHTS** unit from your army.\nEFFECT: Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in your unit, or 9\" instead if your unit is an **ARMIGER** or **DESTRIER** unit."
+  },
+  "key": "cad7d856012723c2"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "strat-note",
+  "where": "Freeblade Company · Full Tilt",
+  "judgement": {
+   "note": "GW’s Faction Pack prints DESTRIER as a keyword, but no Imperial Knights datasheet has it: the Knight Destrier’s keyword is KNIGHT DESTRIER (Wahapedia strikes DESTRIER through for this reason). By the letter, your Knight Destriers add 6\"; the evident intent is that they add 9\". Agree it with your opponent before the game."
+  },
+  "source": {
+   "stratagem": "Full Tilt",
+   "text": "WHEN: Your Movement phase.\nTARGET: One **IMPERIAL KNIGHTS** unit from your army.\nEFFECT: Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in your unit, or 9\" instead if your unit is an **ARMIGER** or **DESTRIER** unit."
+  },
+  "key": "07335634831cb2af"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "strat-phases",
+  "where": "Freeblade Company · Point-Blank Barrage",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Point-Blank Barrage",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One **IMPERIAL KNIGHTS** unit from your army that has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, when making ranged attacks with Blast weapons, models in your unit can target enemy units within **Engagement Range** of your unit (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, until the end of the phase, your unit does not suffer the penalty to its **Hit rolls** for being within Engagement Range of one or more enemy units, but each time a model in your unit makes an attack with a Blast weapon that targets a unit within Engagement Range of your unit, on an unmodified Hit roll of 1, your unit suffers 1 **mortal wound** after all of its attacks have been resolved."
+  },
+  "key": "8c232b1fd04844c8"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "strat-turn",
+  "where": "Freeblade Company · Point-Blank Barrage",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Point-Blank Barrage",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One **IMPERIAL KNIGHTS** unit from your army that has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, when making ranged attacks with Blast weapons, models in your unit can target enemy units within **Engagement Range** of your unit (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, until the end of the phase, your unit does not suffer the penalty to its **Hit rolls** for being within Engagement Range of one or more enemy units, but each time a model in your unit makes an attack with a Blast weapon that targets a unit within Engagement Range of your unit, on an unmodified Hit roll of 1, your unit suffers 1 **mortal wound** after all of its attacks have been resolved."
+  },
+  "key": "38dabf55500e7076"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "strat-needs",
+  "where": "Freeblade Company · Point-Blank Barrage",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Imperial Knights"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Point-Blank Barrage",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One **IMPERIAL KNIGHTS** unit from your army that has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, when making ranged attacks with Blast weapons, models in your unit can target enemy units within **Engagement Range** of your unit (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, until the end of the phase, your unit does not suffer the penalty to its **Hit rolls** for being within Engagement Range of one or more enemy units, but each time a model in your unit makes an attack with a Blast weapon that targets a unit within Engagement Range of your unit, on an unmodified Hit roll of 1, your unit suffers 1 **mortal wound** after all of its attacks have been resolved."
+  },
+  "key": "e9940787fd79967f"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "strat-phases",
+  "where": "Freeblade Company · Survivor of Strife",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Survivor of Strife",
+   "text": "WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets.\nTARGET: One **IMPERIAL KNIGHTS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the **Wound roll**."
+  },
+  "key": "abee97793899579b"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "strat-turn",
+  "where": "Freeblade Company · Survivor of Strife",
+  "judgement": {
+   "turn": "opp"
+  },
+  "source": {
+   "stratagem": "Survivor of Strife",
+   "text": "WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets.\nTARGET: One **IMPERIAL KNIGHTS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the **Wound roll**."
+  },
+  "key": "94e27aa796426add"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "strat-needs",
+  "where": "Freeblade Company · Survivor of Strife",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Imperial Knights"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Survivor of Strife",
+   "text": "WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets.\nTARGET: One **IMPERIAL KNIGHTS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the **Wound roll**."
+  },
+  "key": "9473f482cfe12cf2"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "strat-def",
+  "where": "Freeblade Company · Survivor of Strife",
+  "judgement": {
+   "def": "their Shooting phase: -1 to wound when the attack’s S is greater than its T"
+  },
+  "source": {
+   "stratagem": "Survivor of Strife",
+   "text": "WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets.\nTARGET: One **IMPERIAL KNIGHTS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the **Wound roll**."
+  },
+  "key": "b1239f6c266b0434"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "strat-phases",
+  "where": "Freeblade Company · Flanking Manoeuvres",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Flanking Manoeuvres",
+   "text": "WHEN: End of your opponent’s Fight phase.\nTARGET: One **ARMIGER** unit from your army that is within 9\" of one or more battlefield edges and not within **Engagement Range** of one or more enemy units.\nEFFECT: Remove your unit from the battlefield and place it into **Strategic Reserves**."
+  },
+  "key": "6c9456ef9f0390b7"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "strat-turn",
+  "where": "Freeblade Company · Flanking Manoeuvres",
+  "judgement": {
+   "turn": "opp"
+  },
+  "source": {
+   "stratagem": "Flanking Manoeuvres",
+   "text": "WHEN: End of your opponent’s Fight phase.\nTARGET: One **ARMIGER** unit from your army that is within 9\" of one or more battlefield edges and not within **Engagement Range** of one or more enemy units.\nEFFECT: Remove your unit from the battlefield and place it into **Strategic Reserves**."
+  },
+  "key": "d068c1b7d947105c"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "strat-needs",
+  "where": "Freeblade Company · Flanking Manoeuvres",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Armiger"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Flanking Manoeuvres",
+   "text": "WHEN: End of your opponent’s Fight phase.\nTARGET: One **ARMIGER** unit from your army that is within 9\" of one or more battlefield edges and not within **Engagement Range** of one or more enemy units.\nEFFECT: Remove your unit from the battlefield and place it into **Strategic Reserves**."
+  },
+  "key": "de9ecd05bde1cd60"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-timing",
+  "where": "nidzillas · The Swarmlord · Hive Commander",
+  "judgement": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Hive Commander",
+   "text": "At the start of your Command phase, if this model is on the battlefield, you gain 1CP"
+  },
+  "key": "516259e246f9ef7f"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-timing",
+  "where": "nidzillas · The Swarmlord · Malign Presence",
+  "judgement": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Malign Presence",
+   "text": "Once per turn, when your opponent targets a unit from their army within 12\" of this model with a **stratagem**, you can use this ability. If you do increase the CP cost of that use of that **stratagem** by 1CP."
+  },
+  "key": "25adb36a13cd57fc"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-tag",
+  "where": "nidzillas · The Swarmlord · Malign Presence",
+  "judgement": {
+   "tag": "Aura"
+  },
+  "source": {
+   "ability": "Malign Presence",
+   "text": "Once per turn, when your opponent targets a unit from their army within 12\" of this model with a **stratagem**, you can use this ability. If you do increase the CP cost of that use of that **stratagem** by 1CP."
+  },
+  "key": "5c057b8ab9650388"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-tag",
+  "where": "nidzillas · The Swarmlord · Domination of the Hive Mind",
+  "judgement": {
+   "tag": "Aura"
+  },
+  "source": {
+   "ability": "Domination of the Hive Mind",
+   "text": "While a friendly **TYRANIDS** unit is within 9\" of this model, that unit is within your army’s **Synapse Range**."
+  },
+  "key": "2ce3632e9ba594a5"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "unit-footnote",
+  "where": "nidzillas · Tyrannofex",
+  "judgement": {
+   "kind": "melee",
+   "when": "Within Synapse Range",
+   "note": "+1 S",
+   "from": "Synapse",
+   "rule": "Synapse"
+  },
+  "source": {
+   "rule": "Synapse",
+   "text": "If your Army Faction is **TYRANIDS**, while a **TYRANIDS** unit from your army is within 6\" of one or more friendly **SYNAPSE** models, that **TYRANIDS** unit is said to be within Synapse Range of that model and of your army. While a **TYRANIDS** unit from your army is within Synapse Range of your army:\n- Each time that unit takes a **Battle-shock test**, take that test on 3D6 instead of 2D6.\n- Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack."
+  },
+  "key": "f8ea7996c3d7dc60"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "unit-aura",
+  "where": "nidzillas · The Swarmlord",
+  "judgement": {
+   "kind": "melee",
+   "needs": {
+    "all": [
+     "Faction: Tyranids"
+    ]
+   },
+   "notSelf": true,
+   "when": "Within 9\" of the Swarmlord",
+   "note": "within Synapse Range, so +1 S",
+   "from": "Domination of the Hive Mind"
+  },
+  "source": {
+   "ability": "Domination of the Hive Mind",
+   "text": "While a friendly **TYRANIDS** unit is within 9\" of this model, that unit is within your army’s **Synapse Range**."
+  },
+  "key": "6942b25aa0da5a7e"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "unit-weapons",
+  "where": "nidzillas · The Swarmlord",
+  "judgement": {
+   "gear": [
+    [
+     "Bone Sabres",
+     "Synaptic Pulse"
+    ]
+   ],
+   "weapons": [
+    "Synaptic Pulse",
+    "Bone Sabres"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× The Swarmlord"
+   ],
+   "leads": null
+  },
+  "key": "86527755ef593c5b"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-timing",
+  "where": "nidzillas · Hive Tyrant · Onslaught",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Onslaught",
+   "text": "While a friendly **TYRANIDS** unit is within 6\" of this model, ranged weapons equipped by models in that unit have the **[ASSAULT]** and **[LETHAL HITS]** abilities."
+  },
+  "key": "2586d98fc66d192c"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-tag",
+  "where": "nidzillas · Hive Tyrant · Onslaught",
+  "judgement": {
+   "tag": "Aura, Psychic"
+  },
+  "source": {
+   "ability": "Onslaught",
+   "text": "While a friendly **TYRANIDS** unit is within 6\" of this model, ranged weapons equipped by models in that unit have the **[ASSAULT]** and **[LETHAL HITS]** abilities."
+  },
+  "key": "fb72e7866950640e"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-timing",
+  "where": "nidzillas · Hive Tyrant · Will of the Hive Mind",
+  "judgement": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Will of the Hive Mind",
+   "text": "Once per battle round, one model from your army with this ability can use it when a friendly **TYRANIDS** unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
+  },
+  "key": "9128ff6b84440d5d"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-timing",
+  "where": "nidzillas · Hive Tyrant · Monstrous Nemesis",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Monstrous Nemesis",
+   "text": "**TYRANIDS MONSTER** model only. Each time the bearer makes a melee attack that targets a **MONSTER** or **VEHICLE** unit, add 1 to the **Wound roll**."
+  },
+  "key": "23156cd78aa9039e"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-tag",
+  "where": "nidzillas · Hive Tyrant · Monstrous Nemesis",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Monstrous Nemesis",
+   "text": "**TYRANIDS MONSTER** model only. Each time the bearer makes a melee attack that targets a **MONSTER** or **VEHICLE** unit, add 1 to the **Wound roll**."
+  },
+  "key": "55fd6f94a01c46f5"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "unit-footnote",
+  "where": "nidzillas · Hive Tyrant",
+  "judgement": {
+   "kind": "melee",
+   "when": "vs MONSTER/VEHICLE",
+   "note": "+1 to wound rolls",
+   "from": "Monstrous Nemesis"
+  },
+  "source": {
+   "ability": "Monstrous Nemesis",
+   "text": "**TYRANIDS MONSTER** model only. Each time the bearer makes a melee attack that targets a **MONSTER** or **VEHICLE** unit, add 1 to the **Wound roll**."
+  },
+  "key": "c7eddeee6b91a3e6"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "unit-aura",
+  "where": "nidzillas · Hive Tyrant",
+  "judgement": {
+   "kind": "ranged",
+   "needs": {
+    "all": [
+     "Faction: Tyranids"
+    ]
+   },
+   "notSelf": true,
+   "when": "Within 6\" of the Hive Tyrant",
+   "note": "ranged weapons have [ASSAULT] and [LETHAL HITS]",
+   "from": "Onslaught"
+  },
+  "source": {
+   "ability": "Onslaught",
+   "text": "While a friendly **TYRANIDS** unit is within 6\" of this model, ranged weapons equipped by models in that unit have the **[ASSAULT]** and **[LETHAL HITS]** abilities."
+  },
+  "key": "6ec39ad6cfed33ec"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "unit-weapons",
+  "where": "nidzillas · Hive Tyrant",
+  "judgement": {
+   "gear": [
+    [
+     "Monstrous bonesword and lash whip",
+     "Monstrous scything talons"
+    ]
+   ],
+   "weapons": [
+    "Monstrous bonesword and lash whip",
+    "Monstrous scything talons"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Hive Tyrant"
+   ],
+   "leads": null
+  },
+  "key": "4e1d96de622d09b1"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "unit-weapons",
+  "where": "nidzillas · Neurogaunts",
+  "judgement": {
+   "gear": [
+    [
+     "Chitinous claws and teeth"
+    ],
+    [
+     "Chitinous claws and teeth"
+    ]
+   ],
+   "weapons": [
+    "×11 · Chitinous claws and teeth"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Neurogaunt Nodebeast",
+    "10× Neurogaunt"
+   ],
+   "leads": null
+  },
+  "key": "2d6685e66aa5c8da"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-timing",
+  "where": "nidzillas · Norn Assimilator · Harpoon Barbs",
+  "judgement": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
+  },
+  "source": {
+   "ability": "Harpoon Barbs",
+   "text": "Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds."
+  },
+  "key": "24da4bd6a53c5f0c"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-damaged",
+  "where": "nidzillas · Tyrannofex · Damaged: 1-5 Wounds Remaining",
+  "judgement": {
+   "damaged": "1-5",
+   "W": "16"
+  },
+  "source": {
+   "ability": "Damaged: 1-5 Wounds Remaining",
+   "text": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+  },
+  "key": "91f5119feb4e480b"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-timing",
+  "where": "nidzillas · Norn Emissary · Singular Purpose",
+  "judgement": {
+   "ph": [
+    "command"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Singular Purpose",
+   "text": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15."
+  },
+  "key": "6bd1938c8df953da"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-tag",
+  "where": "nidzillas · Norn Emissary · Singular Purpose",
+  "judgement": {
+   "tag": "Start of battle round 1"
+  },
+  "source": {
+   "ability": "Singular Purpose",
+   "text": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15."
+  },
+  "key": "2d1eaca8609e1bcf"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-def",
+  "where": "nidzillas · Norn Emissary · Singular Purpose",
+  "judgement": {
+   "def": "If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it"
+  },
+  "source": {
+   "ability": "Singular Purpose",
+   "text": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15."
+  },
+  "key": "8a3b372cb39242dc"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-timing",
+  "where": "nidzillas · Norn Emissary · Protean Purpose",
+  "judgement": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Protean Purpose",
+   "text": "(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection)."
+  },
+  "key": "19e04dc3c3104564"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-tag",
+  "where": "nidzillas · Norn Emissary · Protean Purpose",
+  "judgement": {
+   "tag": "Once per battle, per unit"
+  },
+  "source": {
+   "ability": "Protean Purpose",
+   "text": "(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection)."
+  },
+  "key": "7a7192abcfde6c84"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-tag",
+  "where": "nidzillas · Norn Assimilator · Synaptoprescience",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Synaptoprescience",
+   "text": "**NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**."
+  },
+  "key": "425ddf6d01b3a8a2"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "unit-footnote",
+  "where": "nidzillas · Tyrannofex",
+  "judgement": {
+   "kind": "all",
+   "when": "Damaged (1-5 wounds left)",
+   "note": "-1 to hit rolls",
+   "from": "Damaged: 1-5 Wounds Remaining"
+  },
+  "source": {
+   "ability": "Damaged: 1-5 Wounds Remaining",
+   "text": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+  },
+  "key": "edccbd255a16e5a2"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "unit-footnote",
+  "where": "nidzillas · Norn Emissary",
+  "judgement": {
+   "kind": "all",
+   "when": "If its Singular Purpose is an enemy unit, vs that unit",
+   "note": "re-roll hit rolls and wound rolls",
+   "from": "Singular Purpose"
+  },
+  "source": {
+   "ability": "Singular Purpose",
+   "text": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15."
+  },
+  "key": "3a4f4a155fb11c00"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "unit-boostNote",
+  "where": "nidzillas · Norn Assimilator",
+  "judgement": {
+   "boostNote": "InSv already includes the 4+ from Synaptoprescience."
+  },
+  "source": {
+   "models": [
+    "1× Norn Assimilator"
+   ],
+   "stats": [
+    "Norn Assimilator W16 OC5"
+   ],
+   "weapons": [
+    "Toxinjecter Harpoon 2 -3 D6+1 HARPOONED",
+    "Monstrous scything talons 6 -2 3",
+    "Toxinjecter Harpoon 4 -3 D6+1 EXTRA ATTACKS"
+   ]
+  },
+  "key": "3a2f55e77f30de6d"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "unit-weapons",
+  "where": "nidzillas · Norn Assimilator",
+  "judgement": {
+   "gear": [
+    [
+     "Monstrous scything talons",
+     "Toxinjecter Harpoon"
+    ]
+   ],
+   "weapons": [
+    "Toxinjecter Harpoon",
+    "Monstrous scything talons",
+    "Toxinjecter Harpoon"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Norn Assimilator"
+   ],
+   "leads": null
+  },
+  "key": "e941f060cea87acc"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-tag",
+  "where": "nidzillas · Norn Emissary · Destabilising Predation",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Destabilising Predation",
+   "text": "**NORN EMISSARY** unit only. This unit’s ranged attacks have **[ANTI-CHARACTER 2+]**."
+  },
+  "key": "27fc86f0ddb47f54"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-def",
+  "where": "nidzillas · Norn Emissary · Unnatural Resistance",
+  "judgement": {
+   "def": "Feel No Pain 4+ against mortal wounds"
+  },
+  "source": {
+   "ability": "Unnatural Resistance",
+   "text": "This model has the **Feel No Pain 4+** ability against Mortal Wounds."
+  },
+  "key": "42ce08bba16615ad"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "unit-boostNote",
+  "where": "nidzillas · Norn Emissary",
+  "judgement": {
+   "boostNote": "Ranged keywords already include [ANTI-CHARACTER 2+] from Destabilising Predation."
+  },
+  "source": {
+   "models": [
+    "1× Norn Emissary"
+   ],
+   "stats": [
+    "Norn Emissary W16 OC5"
+   ],
+   "weapons": [
+    "Psychic tendril neuroparasite 2 -2 D3 PRECISION, PSYCHIC, ANTI-CHARACTER 2+",
+    "Psychic tendril neurolance 2 -3 D6 MELTA 2, PSYCHIC, ANTI-CHARACTER 2+",
+    "Psychic tendril neuroblast 2D6 -2 1 BLAST, PSYCHIC, ANTI-CHARACTER 2+",
+    "Monstrous rending claws 4 -2 2 EXTRA ATTACKS",
+    "Monstrous scything talons 6 -2 3"
+   ]
+  },
+  "key": "3317021e35794b1e"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "unit-weapons",
+  "where": "nidzillas · Norn Emissary",
+  "judgement": {
+   "gear": [
+    [
+     "Monstrous rending claws",
+     "Monstrous scything talons",
+     "Psychic tendril"
+    ]
+   ],
+   "weapons": [
+    "Psychic tendril · neuroparasite",
+    "Psychic tendril · neurolance",
+    "Psychic tendril · neuroblast",
+    "Monstrous rending claws",
+    "Monstrous scything talons"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Norn Emissary"
+   ],
+   "leads": null
+  },
+  "key": "26b82ae697280554"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-tag",
+  "where": "nidzillas · Tyrannofex · Resilient Organism",
+  "judgement": {
+   "tag": "Once per battle"
+  },
+  "source": {
+   "ability": "Resilient Organism",
+   "text": "Once per battle, when an attack is allocated to this model, you can change the Damage characteristic of that attack to 0."
+  },
+  "key": "e67650cc6bb48579"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-def",
+  "where": "nidzillas · Tyrannofex · Resilient Organism",
+  "judgement": {
+   "def": "Once per battle: change the Damage of an attack allocated to it to 0"
+  },
+  "source": {
+   "ability": "Resilient Organism",
+   "text": "Once per battle, when an attack is allocated to this model, you can change the Damage characteristic of that attack to 0."
+  },
+  "key": "4e4125dbff4c1bdb"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "unit-weapons",
+  "where": "nidzillas · Tyrannofex",
+  "judgement": {
+   "gear": [
+    [
+     "Powerful limbs",
+     "Stinger salvoes",
+     "Acid spray"
+    ]
+   ],
+   "weapons": [
+    "Stinger salvoes",
+    "Acid spray",
+    "Powerful limbs"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Tyrannofex"
+   ],
+   "leads": null
+  },
+  "key": "d68adf2412074978"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "rule-remind",
+  "where": "tyranids army rule · Synapse",
+  "judgement": {
+   "ph": [
+    "command"
+   ],
+   "turn": "either",
+   "text": "Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6."
+  },
+  "source": {
+   "rule": "Synapse",
+   "text": "If your Army Faction is **TYRANIDS**, while a **TYRANIDS** unit from your army is within 6\" of one or more friendly **SYNAPSE** models, that **TYRANIDS** unit is said to be within Synapse Range of that model and of your army. While a **TYRANIDS** unit from your army is within Synapse Range of your army:\n- Each time that unit takes a **Battle-shock test**, take that test on 3D6 instead of 2D6.\n- Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack."
+  },
+  "key": "235afc50afac0a18"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "rule-remind",
+  "where": "tyranids army rule · Synapse",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either",
+   "text": "Within Synapse Range: melee attacks have +1 S."
+  },
+  "source": {
+   "rule": "Synapse",
+   "text": "If your Army Faction is **TYRANIDS**, while a **TYRANIDS** unit from your army is within 6\" of one or more friendly **SYNAPSE** models, that **TYRANIDS** unit is said to be within Synapse Range of that model and of your army. While a **TYRANIDS** unit from your army is within Synapse Range of your army:\n- Each time that unit takes a **Battle-shock test**, take that test on 3D6 instead of 2D6.\n- Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack."
+  },
+  "key": "6e00976af6f2b75f"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "rule-ph",
+  "where": "tyranids army rule · Shadow in the Warp",
+  "judgement": {
+   "ph": [
+    "command"
+   ]
+  },
+  "source": {
+   "rule": "Shadow in the Warp",
+   "text": "If your Army Faction is **TYRANIDS**, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a **Battle-shock test**. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more **SYNAPSE** units from your army, subtract 1 from that test."
+  },
+  "key": "11a13125ad9f100e"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "rule-turn",
+  "where": "tyranids army rule · Shadow in the Warp",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "rule": "Shadow in the Warp",
+   "text": "If your Army Faction is **TYRANIDS**, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a **Battle-shock test**. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more **SYNAPSE** units from your army, subtract 1 from that test."
+  },
+  "key": "3433f137994f64b4"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "rule-note",
+  "where": "tyranids army rule · Shadow in the Warp",
+  "judgement": {
+   "note": "Wahapedia FAQ: units targeted by Shadow in the Warp cannot use the Insane Bravery stratagem (“Insane Bravery can only be used in your Command phase”)."
+  },
+  "source": {
+   "rule": "Shadow in the Warp",
+   "text": "If your Army Faction is **TYRANIDS**, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a **Battle-shock test**. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more **SYNAPSE** units from your army, subtract 1 from that test."
+  },
+  "key": "9b246ac2be652c9c"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "rule-tag",
+  "where": "tyranids army rule · Shadow in the Warp",
+  "judgement": {
+   "tag": "Once per battle"
+  },
+  "source": {
+   "rule": "Shadow in the Warp",
+   "text": "If your Army Faction is **TYRANIDS**, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a **Battle-shock test**. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more **SYNAPSE** units from your army, subtract 1 from that test."
+  },
+  "key": "402ab9cd746aa6e1"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "rule-ph",
+  "where": "Crusher Stampede rule · Enraged Behemoths",
+  "judgement": {
+   "ph": [
+    "shooting",
+    "fight"
+   ]
+  },
+  "source": {
+   "rule": "Enraged Behemoths",
+   "text": "Each time a **TYRANIDS MONSTER** model from your army makes an attack, add 1 to the **Hit roll** if that model’s unit is below its Starting Strength, and add 1 to the **Wound roll** as well if that model’s unit is **Below Half-strength**. In addition, while a **TYRANIDS MONSTER** unit from your army (excluding **Battle-shocked** units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit."
+  },
+  "key": "3f49b3a1802f0d5b"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "rule-turn",
+  "where": "Crusher Stampede rule · Enraged Behemoths",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "rule": "Enraged Behemoths",
+   "text": "Each time a **TYRANIDS MONSTER** model from your army makes an attack, add 1 to the **Hit roll** if that model’s unit is below its Starting Strength, and add 1 to the **Wound roll** as well if that model’s unit is **Below Half-strength**. In addition, while a **TYRANIDS MONSTER** unit from your army (excluding **Battle-shocked** units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit."
+  },
+  "key": "4f973a90aa659288"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "rule-turns",
+  "where": "Crusher Stampede rule · Enraged Behemoths",
+  "judgement": {
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "rule": "Enraged Behemoths",
+   "text": "Each time a **TYRANIDS MONSTER** model from your army makes an attack, add 1 to the **Hit roll** if that model’s unit is below its Starting Strength, and add 1 to the **Wound roll** as well if that model’s unit is **Below Half-strength**. In addition, while a **TYRANIDS MONSTER** unit from your army (excluding **Battle-shocked** units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit."
+  },
+  "key": "4730a5209a443cf2"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "rule-needs",
+  "where": "Crusher Stampede rule · Enraged Behemoths",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Tyranids",
+     "Monster"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Enraged Behemoths",
+   "text": "Each time a **TYRANIDS MONSTER** model from your army makes an attack, add 1 to the **Hit roll** if that model’s unit is below its Starting Strength, and add 1 to the **Wound roll** as well if that model’s unit is **Below Half-strength**. In addition, while a **TYRANIDS MONSTER** unit from your army (excluding **Battle-shocked** units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit."
+  },
+  "key": "36c88aaba95b1356"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "rule-mod",
+  "where": "Crusher Stampede rule · Enraged Behemoths",
+  "judgement": {
+   "mod": {
+    "kind": "all",
+    "when": "Below Starting Strength",
+    "note": "+1 to hit rolls; also +1 to wound rolls if Below Half-strength",
+    "single": {
+     "when": "Lost any wounds (below Starting Strength)",
+     "note": "+1 to hit rolls; also +1 to wound rolls at {half} or fewer wounds left"
+    }
+   }
+  },
+  "source": {
+   "rule": "Enraged Behemoths",
+   "text": "Each time a **TYRANIDS MONSTER** model from your army makes an attack, add 1 to the **Hit roll** if that model’s unit is below its Starting Strength, and add 1 to the **Wound roll** as well if that model’s unit is **Below Half-strength**. In addition, while a **TYRANIDS MONSTER** unit from your army (excluding **Battle-shocked** units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit."
+  },
+  "key": "a75a8239eb67c7fb"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "rule-statNote",
+  "where": "Crusher Stampede rule · Enraged Behemoths",
+  "judgement": {
+   "statNote": {
+    "text": "OC {OC+2} while at Starting Strength, unless Battle-shocked",
+    "single": "OC {OC+2} while it has lost no wounds, unless Battle-shocked"
+   }
+  },
+  "source": {
+   "rule": "Enraged Behemoths",
+   "text": "Each time a **TYRANIDS MONSTER** model from your army makes an attack, add 1 to the **Hit roll** if that model’s unit is below its Starting Strength, and add 1 to the **Wound roll** as well if that model’s unit is **Below Half-strength**. In addition, while a **TYRANIDS MONSTER** unit from your army (excluding **Battle-shocked** units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit."
+  },
+  "key": "909e57bc7683322b"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-phases",
+  "where": "Crusher Stampede · Corrosive Viscera",
+  "judgement": {
+   "phases": [
+    "shooting",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Corrosive Viscera",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after a **TYRANIDS MONSTER** model from your army with the **Deadly Demise** ability that cannot **FLY** is destroyed.\nTARGET: That **TYRANIDS MONSTER** model. You can use this Stratagem on that model even though it was just destroyed.\nEFFECT: Do not roll one D6 to determine whether **mortal wounds** are inflicted by your model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted."
+  },
+  "key": "8d061fa7920d8006"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-turn",
+  "where": "Crusher Stampede · Corrosive Viscera",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Corrosive Viscera",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after a **TYRANIDS MONSTER** model from your army with the **Deadly Demise** ability that cannot **FLY** is destroyed.\nTARGET: That **TYRANIDS MONSTER** model. You can use this Stratagem on that model even though it was just destroyed.\nEFFECT: Do not roll one D6 to determine whether **mortal wounds** are inflicted by your model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted."
+  },
+  "key": "55a08b915a3ea7c8"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-turns",
+  "where": "Crusher Stampede · Corrosive Viscera",
+  "judgement": {
+   "turns": {
+    "shooting": "opp"
+   }
+  },
+  "source": {
+   "stratagem": "Corrosive Viscera",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after a **TYRANIDS MONSTER** model from your army with the **Deadly Demise** ability that cannot **FLY** is destroyed.\nTARGET: That **TYRANIDS MONSTER** model. You can use this Stratagem on that model even though it was just destroyed.\nEFFECT: Do not roll one D6 to determine whether **mortal wounds** are inflicted by your model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted."
+  },
+  "key": "c8433eeae24f96d5"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-needs",
+  "where": "Crusher Stampede · Corrosive Viscera",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Tyranids",
+     "Monster"
+    ],
+    "none": [
+     "Fly"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Corrosive Viscera",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after a **TYRANIDS MONSTER** model from your army with the **Deadly Demise** ability that cannot **FLY** is destroyed.\nTARGET: That **TYRANIDS MONSTER** model. You can use this Stratagem on that model even though it was just destroyed.\nEFFECT: Do not roll one D6 to determine whether **mortal wounds** are inflicted by your model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted."
+  },
+  "key": "2a10d893105139dc"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-phases",
+  "where": "Crusher Stampede · Rampaging Monstrosities",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Rampaging Monstrosities",
+   "text": "WHEN: Fight phase.\nTARGET: One **TYRANIDS MONSTER** unit from your army that has not been selected to fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the **Hit roll**."
+  },
+  "key": "4a1e7204bd251a77"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-turn",
+  "where": "Crusher Stampede · Rampaging Monstrosities",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Rampaging Monstrosities",
+   "text": "WHEN: Fight phase.\nTARGET: One **TYRANIDS MONSTER** unit from your army that has not been selected to fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the **Hit roll**."
+  },
+  "key": "3f1f3b35e18b24cf"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-needs",
+  "where": "Crusher Stampede · Rampaging Monstrosities",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Tyranids",
+     "Monster"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Rampaging Monstrosities",
+   "text": "WHEN: Fight phase.\nTARGET: One **TYRANIDS MONSTER** unit from your army that has not been selected to fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the **Hit roll**."
+  },
+  "key": "07e193fb9f0f9489"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-mod",
+  "where": "Crusher Stampede · Rampaging Monstrosities",
+  "judgement": {
+   "mod": {
+    "kind": "melee",
+    "when": "Fight phase",
+    "note": "re-roll hit rolls"
+   }
+  },
+  "source": {
+   "stratagem": "Rampaging Monstrosities",
+   "text": "WHEN: Fight phase.\nTARGET: One **TYRANIDS MONSTER** unit from your army that has not been selected to fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the **Hit roll**."
+  },
+  "key": "13a1bafbb46347f4"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-phases",
+  "where": "Crusher Stampede · Savage Roar",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Savage Roar",
+   "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **TYRANIDS MONSTER** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: That enemy unit must take a **Battle-shock test** and, until the end of the phase, each time a model in that enemy unit makes an attack that targets your unit, subtract 1 from the **Hit roll**. If that Battle-shock test was failed, subtract 1 from the **Wound roll** as well."
+  },
+  "key": "b0db0a1110268b97"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-turn",
+  "where": "Crusher Stampede · Savage Roar",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Savage Roar",
+   "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **TYRANIDS MONSTER** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: That enemy unit must take a **Battle-shock test** and, until the end of the phase, each time a model in that enemy unit makes an attack that targets your unit, subtract 1 from the **Hit roll**. If that Battle-shock test was failed, subtract 1 from the **Wound roll** as well."
+  },
+  "key": "7594273457627c22"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-needs",
+  "where": "Crusher Stampede · Savage Roar",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Tyranids",
+     "Monster"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Savage Roar",
+   "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **TYRANIDS MONSTER** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: That enemy unit must take a **Battle-shock test** and, until the end of the phase, each time a model in that enemy unit makes an attack that targets your unit, subtract 1 from the **Hit roll**. If that Battle-shock test was failed, subtract 1 from the **Wound roll** as well."
+  },
+  "key": "334f8567532cd095"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-phases",
+  "where": "Crusher Stampede · Untrammelled Ferocity",
+  "judgement": {
+   "phases": [
+    "movement"
+   ]
+  },
+  "source": {
+   "stratagem": "Untrammelled Ferocity",
+   "text": "WHEN: Your Movement phase.\nTARGET: One **TYRANIDS MONSTER** unit from your army that has not been selected to move this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and sections of **terrain features** that are 4\" or less in height. When doing so:\n- It can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them.\n- It can also move through sections of terrain features that are more than 4\" in height, but if it does, after its unit has moved, roll one D6: on a 1, your unit is **Battle-shocked**."
+  },
+  "key": "84bd5ba1ef63a645"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-turn",
+  "where": "Crusher Stampede · Untrammelled Ferocity",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Untrammelled Ferocity",
+   "text": "WHEN: Your Movement phase.\nTARGET: One **TYRANIDS MONSTER** unit from your army that has not been selected to move this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and sections of **terrain features** that are 4\" or less in height. When doing so:\n- It can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them.\n- It can also move through sections of terrain features that are more than 4\" in height, but if it does, after its unit has moved, roll one D6: on a 1, your unit is **Battle-shocked**."
+  },
+  "key": "659aa96563de5113"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-needs",
+  "where": "Crusher Stampede · Untrammelled Ferocity",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Tyranids",
+     "Monster"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Untrammelled Ferocity",
+   "text": "WHEN: Your Movement phase.\nTARGET: One **TYRANIDS MONSTER** unit from your army that has not been selected to move this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and sections of **terrain features** that are 4\" or less in height. When doing so:\n- It can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them.\n- It can also move through sections of terrain features that are more than 4\" in height, but if it does, after its unit has moved, roll one D6: on a 1, your unit is **Battle-shocked**."
+  },
+  "key": "e7a6b614cf2a5937"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-phases",
+  "where": "Crusher Stampede · Swarm-guided Salvoes",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Swarm-guided Salvoes",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One **TYRANIDS MONSTER** unit from your army that has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, ranged weapons equipped by models in your unit have the **[IGNORES COVER]** ability, and until the end of the phase each time a model in your unit makes an attack, you can ignore any or all modifiers to that model’s Ballistic Skill characteristic and any or all modifiers to the **Hit roll**."
+  },
+  "key": "cffe2a24d218822d"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-turn",
+  "where": "Crusher Stampede · Swarm-guided Salvoes",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Swarm-guided Salvoes",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One **TYRANIDS MONSTER** unit from your army that has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, ranged weapons equipped by models in your unit have the **[IGNORES COVER]** ability, and until the end of the phase each time a model in your unit makes an attack, you can ignore any or all modifiers to that model’s Ballistic Skill characteristic and any or all modifiers to the **Hit roll**."
+  },
+  "key": "e2618ad40504b5b0"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-needs",
+  "where": "Crusher Stampede · Swarm-guided Salvoes",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Tyranids",
+     "Monster"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Swarm-guided Salvoes",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One **TYRANIDS MONSTER** unit from your army that has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, ranged weapons equipped by models in your unit have the **[IGNORES COVER]** ability, and until the end of the phase each time a model in your unit makes an attack, you can ignore any or all modifiers to that model’s Ballistic Skill characteristic and any or all modifiers to the **Hit roll**."
+  },
+  "key": "e33fb8a6be6ff703"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-mod",
+  "where": "Crusher Stampede · Swarm-guided Salvoes",
+  "judgement": {
+   "mod": {
+    "kind": "ranged",
+    "when": "Your Shooting phase",
+    "note": "[IGNORES COVER] and ignore BS and hit roll modifiers"
+   }
+  },
+  "source": {
+   "stratagem": "Swarm-guided Salvoes",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One **TYRANIDS MONSTER** unit from your army that has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, ranged weapons equipped by models in your unit have the **[IGNORES COVER]** ability, and until the end of the phase each time a model in your unit makes an attack, you can ignore any or all modifiers to that model’s Ballistic Skill characteristic and any or all modifiers to the **Hit roll**."
+  },
+  "key": "4c4a3e5352ca6c8e"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-phases",
+  "where": "Crusher Stampede · Massive Impact",
+  "judgement": {
+   "phases": [
+    "charge"
+   ]
+  },
+  "source": {
+   "stratagem": "Massive Impact",
+   "text": "WHEN: Your Charge phase, just after a **TYRANIDS MONSTER** model from your army ends a **Charge move**.\nTARGET: That **TYRANIDS MONSTER** model.\nEFFECT: Select one enemy unit within **Engagement Range** of your model and roll six D6: for each 4+, that enemy unit suffers 1 **mortal wound**."
+  },
+  "key": "168f3f8f3f5ca671"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-turn",
+  "where": "Crusher Stampede · Massive Impact",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Massive Impact",
+   "text": "WHEN: Your Charge phase, just after a **TYRANIDS MONSTER** model from your army ends a **Charge move**.\nTARGET: That **TYRANIDS MONSTER** model.\nEFFECT: Select one enemy unit within **Engagement Range** of your model and roll six D6: for each 4+, that enemy unit suffers 1 **mortal wound**."
+  },
+  "key": "885c721aff8af508"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-needs",
+  "where": "Crusher Stampede · Massive Impact",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Tyranids",
+     "Monster"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Massive Impact",
+   "text": "WHEN: Your Charge phase, just after a **TYRANIDS MONSTER** model from your army ends a **Charge move**.\nTARGET: That **TYRANIDS MONSTER** model.\nEFFECT: Select one enemy unit within **Engagement Range** of your model and roll six D6: for each 4+, that enemy unit suffers 1 **mortal wound**."
+  },
+  "key": "bc074f81110b086a"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "rule-needs",
+  "where": "Talons of the Norn Queen rule · Higher Imperatives",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Norn Emissary",
+     "Norn Assimilator"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Higher Imperatives",
+   "text": "Friendly **NORN EMISSARY/NORN ASSIMILATOR** units have the following ability:\n**Protean Purpose:** (Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection)."
+  },
+  "key": "b062118bf46a1a97"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-phases",
+  "where": "Talons of the Norn Queen · Catalytic Biofortification",
+  "judgement": {
+   "phases": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Catalytic Biofortification",
+   "text": "WHEN: Any phase, when a friendly **NORN ASSIMILATOR** unit suffers a **mortal wound**.\nTARGET: That **NORN ASSIMILATOR** unit.\nEFFECT: Your unit has **Feel No Pain 4+** against **mortal wounds**."
+  },
+  "key": "53c6814a6f373472"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-turn",
+  "where": "Talons of the Norn Queen · Catalytic Biofortification",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Catalytic Biofortification",
+   "text": "WHEN: Any phase, when a friendly **NORN ASSIMILATOR** unit suffers a **mortal wound**.\nTARGET: That **NORN ASSIMILATOR** unit.\nEFFECT: Your unit has **Feel No Pain 4+** against **mortal wounds**."
+  },
+  "key": "02aa503660cddef2"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-needs",
+  "where": "Talons of the Norn Queen · Catalytic Biofortification",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Norn Assimilator"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Catalytic Biofortification",
+   "text": "WHEN: Any phase, when a friendly **NORN ASSIMILATOR** unit suffers a **mortal wound**.\nTARGET: That **NORN ASSIMILATOR** unit.\nEFFECT: Your unit has **Feel No Pain 4+** against **mortal wounds**."
+  },
+  "key": "fabaddbc59357b09"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-def",
+  "where": "Talons of the Norn Queen · Catalytic Biofortification",
+  "judgement": {
+   "def": "Feel No Pain 4+ against mortal wounds"
+  },
+  "source": {
+   "stratagem": "Catalytic Biofortification",
+   "text": "WHEN: Any phase, when a friendly **NORN ASSIMILATOR** unit suffers a **mortal wound**.\nTARGET: That **NORN ASSIMILATOR** unit.\nEFFECT: Your unit has **Feel No Pain 4+** against **mortal wounds**."
+  },
+  "key": "f1d8684e52502bb6"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-phases",
+  "where": "Talons of the Norn Queen · Lesser Prey",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Lesser Prey",
+   "text": "WHEN: Fight phase, when a friendly **NORN ASSIMILATOR/NORN EMISSARY** unit is **selected to fight**.\nTARGET: That **NORN ASSIMILATOR/NORN EMISSARY** unit.\nEFFECT: Your unit’s melee attacks have +2 **S**."
+  },
+  "key": "ad06aa53ebe29429"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-turn",
+  "where": "Talons of the Norn Queen · Lesser Prey",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Lesser Prey",
+   "text": "WHEN: Fight phase, when a friendly **NORN ASSIMILATOR/NORN EMISSARY** unit is **selected to fight**.\nTARGET: That **NORN ASSIMILATOR/NORN EMISSARY** unit.\nEFFECT: Your unit’s melee attacks have +2 **S**."
+  },
+  "key": "54631371c46e761a"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-needs",
+  "where": "Talons of the Norn Queen · Lesser Prey",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Norn Assimilator",
+     "Norn Emissary"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Lesser Prey",
+   "text": "WHEN: Fight phase, when a friendly **NORN ASSIMILATOR/NORN EMISSARY** unit is **selected to fight**.\nTARGET: That **NORN ASSIMILATOR/NORN EMISSARY** unit.\nEFFECT: Your unit’s melee attacks have +2 **S**."
+  },
+  "key": "f31034917f796a3e"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-mod",
+  "where": "Talons of the Norn Queen · Lesser Prey",
+  "judgement": {
+   "mod": {
+    "kind": "melee",
+    "when": "When selected to fight",
+    "note": "+2 S"
+   }
+  },
+  "source": {
+   "stratagem": "Lesser Prey",
+   "text": "WHEN: Fight phase, when a friendly **NORN ASSIMILATOR/NORN EMISSARY** unit is **selected to fight**.\nTARGET: That **NORN ASSIMILATOR/NORN EMISSARY** unit.\nEFFECT: Your unit’s melee attacks have +2 **S**."
+  },
+  "key": "1d0877b2217cda1f"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-phases",
+  "where": "Talons of the Norn Queen · Tanglestrike Rounds",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Tanglestrike Rounds",
+   "text": "WHEN: Your Shooting phase, when a friendly **NORN ASSIMILATOR** unit has shot.\nTARGET: That **NORN ASSIMILATOR** unit.\nEFFECT: Select one enemy unit hit by those attacks. That enemy unit is **tethered** until the start of your next Command phase:\n- While a unit is **tethered**, that unit has -2\" **M**."
+  },
+  "key": "04fc12816f090f44"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-turn",
+  "where": "Talons of the Norn Queen · Tanglestrike Rounds",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Tanglestrike Rounds",
+   "text": "WHEN: Your Shooting phase, when a friendly **NORN ASSIMILATOR** unit has shot.\nTARGET: That **NORN ASSIMILATOR** unit.\nEFFECT: Select one enemy unit hit by those attacks. That enemy unit is **tethered** until the start of your next Command phase:\n- While a unit is **tethered**, that unit has -2\" **M**."
+  },
+  "key": "a2880c80dd8fbd65"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-needs",
+  "where": "Talons of the Norn Queen · Tanglestrike Rounds",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Norn Assimilator"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Tanglestrike Rounds",
+   "text": "WHEN: Your Shooting phase, when a friendly **NORN ASSIMILATOR** unit has shot.\nTARGET: That **NORN ASSIMILATOR** unit.\nEFFECT: Select one enemy unit hit by those attacks. That enemy unit is **tethered** until the start of your next Command phase:\n- While a unit is **tethered**, that unit has -2\" **M**."
+  },
+  "key": "011215d87f5b35f8"
+ },
+ {
+  "army": "Imperial Knights",
+  "kind": "rule-alias",
+  "where": "/^honoured/i",
+  "judgement": {
+   "opens": "Code Chivalric"
+  },
+  "source": {
+   "rule": "Code Chivalric"
+  },
+  "key": "f207a7e1f6fbae30"
+ },
+ {
+  "army": "Tyranids",
+  "kind": "rule-alias",
+  "where": "/^synapse range$/i",
+  "judgement": {
+   "opens": "Synapse"
+  },
+  "source": {
+   "rule": "Synapse"
+  },
+  "key": "d71a469c88d3c3c3"
+ }
+]

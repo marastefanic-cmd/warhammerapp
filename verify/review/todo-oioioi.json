@@ -1,0 +1,1684 @@
+[
+ {
+  "army": "oioioi",
+  "kind": "ability-damaged",
+  "where": "oioioi · Magnus the Red · Damaged: 1-6 wounds remaining",
+  "judgement": {
+   "damaged": "1-6",
+   "W": "16"
+  },
+  "source": {
+   "ability": "Damaged: 1-6 wounds remaining",
+   "text": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+  },
+  "key": "2d74d112cbdff773"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-timing",
+  "where": "oioioi · Magnus the Red · Unearthly Power",
+  "judgement": {
+   "ph": [
+    "command"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Unearthly Power",
+   "text": "At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability."
+  },
+  "key": "629b6c3970eb782e"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-timing",
+  "where": "oioioi · Magnus the Red · Lord of the Planet of the Sorcerers",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Lord of the Planet of the Sorcerers",
+   "text": "This model can attempt up to 2 **Rituals** per turn instead of one, and each time this model attempts a **Ritual**, add 2 to the **Psychic test** result."
+  },
+  "key": "09977f74a5caffd5"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-tag",
+  "where": "oioioi · Magnus the Red · Lord of the Planet of the Sorcerers",
+  "judgement": {
+   "tag": "Psychic"
+  },
+  "source": {
+   "ability": "Lord of the Planet of the Sorcerers",
+   "text": "This model can attempt up to 2 **Rituals** per turn instead of one, and each time this model attempts a **Ritual**, add 2 to the **Psychic test** result."
+  },
+  "key": "23781a0065f255e6"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-tag",
+  "where": "oioioi · Magnus the Red · Impossible Form",
+  "judgement": {
+   "tag": "Crimson King · Psychic"
+  },
+  "source": {
+   "ability": "Impossible Form",
+   "text": "Each time an attack is made against this **PSYKER** (excluding Psychic Attacks), subtract 1 from the Damage characteristic of that attack."
+  },
+  "key": "a1c98fd44fb4f47c"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-who",
+  "where": "oioioi · Magnus the Red · Impossible Form",
+  "judgement": {
+   "who": "Crimson King: pick one",
+   "models": [
+    "1× Magnus the Red"
+   ]
+  },
+  "source": {
+   "ability": "Impossible Form",
+   "text": "Each time an attack is made against this **PSYKER** (excluding Psychic Attacks), subtract 1 from the Damage characteristic of that attack."
+  },
+  "key": "fc640f5c77c3361a"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-def",
+  "where": "oioioi · Magnus the Red · Impossible Form",
+  "judgement": {
+   "def": "Impossible Form (if picked this round): -1 Damage to attacks against Magnus, excluding psychic attacks"
+  },
+  "source": {
+   "ability": "Impossible Form",
+   "text": "Each time an attack is made against this **PSYKER** (excluding Psychic Attacks), subtract 1 from the Damage characteristic of that attack."
+  },
+  "key": "1d02c60a4aa1d1a2"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-timing",
+  "where": "oioioi · Magnus the Red · Treason of Tzeentch",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "opp"
+  },
+  "source": {
+   "ability": "Treason of Tzeentch",
+   "text": "At the start of your opponent’s Shooting phase, select one enemy unit within 24\" of this **PSYKER**. Until the end of the phase, ranged weapons equipped by models in that unit have the **[HAZARDOUS]** ability."
+  },
+  "key": "31c8f68f1e0927a4"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-tag",
+  "where": "oioioi · Magnus the Red · Treason of Tzeentch",
+  "judgement": {
+   "tag": "Crimson King · Psychic"
+  },
+  "source": {
+   "ability": "Treason of Tzeentch",
+   "text": "At the start of your opponent’s Shooting phase, select one enemy unit within 24\" of this **PSYKER**. Until the end of the phase, ranged weapons equipped by models in that unit have the **[HAZARDOUS]** ability."
+  },
+  "key": "2cde84e1de02397e"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-who",
+  "where": "oioioi · Magnus the Red · Treason of Tzeentch",
+  "judgement": {
+   "who": "Crimson King: pick one",
+   "models": [
+    "1× Magnus the Red"
+   ]
+  },
+  "source": {
+   "ability": "Treason of Tzeentch",
+   "text": "At the start of your opponent’s Shooting phase, select one enemy unit within 24\" of this **PSYKER**. Until the end of the phase, ranged weapons equipped by models in that unit have the **[HAZARDOUS]** ability."
+  },
+  "key": "8190a61db4a912a7"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-timing",
+  "where": "oioioi · Magnus the Red · Time Flux",
+  "judgement": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Time Flux",
+   "text": "While a friendly **THOUSAND SONS** unit is within 6\" of this **PSYKER**, add 2\" to the Move characteristic of models in that unit."
+  },
+  "key": "dfadb4165dfeeed4"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-tag",
+  "where": "oioioi · Magnus the Red · Time Flux",
+  "judgement": {
+   "tag": "Crimson King · Aura, Psychic"
+  },
+  "source": {
+   "ability": "Time Flux",
+   "text": "While a friendly **THOUSAND SONS** unit is within 6\" of this **PSYKER**, add 2\" to the Move characteristic of models in that unit."
+  },
+  "key": "9a0e1a510b7708ff"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-who",
+  "where": "oioioi · Magnus the Red · Time Flux",
+  "judgement": {
+   "who": "Crimson King: pick one",
+   "models": [
+    "1× Magnus the Red"
+   ]
+  },
+  "source": {
+   "ability": "Time Flux",
+   "text": "While a friendly **THOUSAND SONS** unit is within 6\" of this **PSYKER**, add 2\" to the Move characteristic of models in that unit."
+  },
+  "key": "6cbc8951fa363ab4"
+ },
+ {
+  "army": "oioioi",
+  "kind": "unit-footnote",
+  "where": "oioioi · Defiler",
+  "judgement": {
+   "kind": "all",
+   "when": "Damaged (1-6 wounds left)",
+   "note": "-1 to hit rolls",
+   "from": "Damaged: 1-6 wounds remaining"
+  },
+  "source": {
+   "ability": "Damaged: 1-6 wounds remaining",
+   "text": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+  },
+  "key": "c7c004470af3aa0a"
+ },
+ {
+  "army": "oioioi",
+  "kind": "unit-weapons",
+  "where": "oioioi · Magnus the Red",
+  "judgement": {
+   "gear": [
+    [
+     "Blade of Magnus",
+     "Gaze of Magnus",
+     "Tzeentch’s Firestorm"
+    ]
+   ],
+   "weapons": [
+    "Gaze of Magnus",
+    "Tzeentch’s Firestorm",
+    "Blade of Magnus · strike",
+    "Blade of Magnus · sweep"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Magnus the Red"
+   ],
+   "leads": null
+  },
+  "key": "61275ae031125103"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-timing",
+  "where": "oioioi · Daemon Prince of Tzeentch with wings · Aetherstride",
+  "judgement": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Aetherstride",
+   "text": "In your Movement phase, when this model is set up on the battlefield using the **Deep Strike** ability, it can perform an aetherstride. If it does:\n- It can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units.\n- Until the end of the turn, its Dark Blessing has the **[SUSTAINED HITS D3]** ability.\n- Until the end of the turn, it is not eligible to declare a charge."
+  },
+  "key": "da5026a977a07716"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-tag",
+  "where": "oioioi · Daemon Prince of Tzeentch with wings · Aetherstride",
+  "judgement": {
+   "tag": "Psychic"
+  },
+  "source": {
+   "ability": "Aetherstride",
+   "text": "In your Movement phase, when this model is set up on the battlefield using the **Deep Strike** ability, it can perform an aetherstride. If it does:\n- It can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units.\n- Until the end of the turn, its Dark Blessing has the **[SUSTAINED HITS D3]** ability.\n- Until the end of the turn, it is not eligible to declare a charge."
+  },
+  "key": "0bab4a0ab9a8722f"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-timing",
+  "where": "oioioi · Daemon Prince of Tzeentch with wings · Hunter of Souls",
+  "judgement": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Hunter of Souls",
+   "text": "Each time this model makes an attack that targets a **CHARACTER** unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a **PSYKER CHARACTER** unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a **CHARACTER** unit, this model regains up to D3 lost wounds (if that **CHARACTER** unit was a **PSYKER**, this model regains up to 3 lost wounds instead)."
+  },
+  "key": "ff74ae51c0cb2423"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-tag",
+  "where": "oioioi · Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Eldritch Vortex of E’taph",
+   "text": "**THOUSAND SONS** model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer."
+  },
+  "key": "dd2cfd5794734b16"
+ },
+ {
+  "army": "oioioi",
+  "kind": "unit-footnote",
+  "where": "oioioi · Daemon Prince of Tzeentch with wings",
+  "judgement": {
+   "kind": "all",
+   "when": "vs CHARACTER units",
+   "note": "re-roll hit rolls of 1 and wound rolls of 1 (vs PSYKER CHARACTER units: re-roll the hit roll and the wound roll)",
+   "from": "Hunter of Souls"
+  },
+  "source": {
+   "ability": "Hunter of Souls",
+   "text": "Each time this model makes an attack that targets a **CHARACTER** unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a **PSYKER CHARACTER** unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a **CHARACTER** unit, this model regains up to D3 lost wounds (if that **CHARACTER** unit was a **PSYKER**, this model regains up to 3 lost wounds instead)."
+  },
+  "key": "3a697bf34cf73fb6"
+ },
+ {
+  "army": "oioioi",
+  "kind": "unit-footnote",
+  "where": "oioioi · Daemon Prince of Tzeentch with wings",
+  "judgement": {
+   "kind": "ranged",
+   "when": "After an aetherstride this turn",
+   "note": "Dark Blessing has [SUSTAINED HITS D3]",
+   "from": "Aetherstride"
+  },
+  "source": {
+   "ability": "Aetherstride",
+   "text": "In your Movement phase, when this model is set up on the battlefield using the **Deep Strike** ability, it can perform an aetherstride. If it does:\n- It can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units.\n- Until the end of the turn, its Dark Blessing has the **[SUSTAINED HITS D3]** ability.\n- Until the end of the turn, it is not eligible to declare a charge."
+  },
+  "key": "8726b23e6fe9d9be"
+ },
+ {
+  "army": "oioioi",
+  "kind": "unit-boostNote",
+  "where": "oioioi · Daemon Prince of Tzeentch with wings",
+  "judgement": {
+   "boostNote": "S and D of Dark Blessing and Hellforged weapons already include +1 from Eldritch Vortex of E’taph."
+  },
+  "source": {
+   "models": [
+    "1× Daemon Prince of Tzeentch with wings"
+   ],
+   "stats": [
+    "Daemon Prince of Tzeentch with wings W10 OC3"
+   ],
+   "weapons": [
+    "Dark Blessing 9 -1 2 IGNORES COVER, PSYCHIC, SUSTAINED HITS 1",
+    "Infernal cannon 3 -2 2",
+    "Hellforged weapons strike 6 -2 4 DEVASTATING WOUNDS, PSYCHIC",
+    "Hellforged weapons sweep 12 -1 2 DEVASTATING WOUNDS, PSYCHIC"
+   ]
+  },
+  "key": "334c67a51959573a"
+ },
+ {
+  "army": "oioioi",
+  "kind": "unit-weapons",
+  "where": "oioioi · Daemon Prince of Tzeentch with wings",
+  "judgement": {
+   "gear": [
+    [
+     "Dark Blessing",
+     "Hellforged weapons",
+     "Infernal cannon"
+    ]
+   ],
+   "weapons": [
+    "Dark Blessing",
+    "Infernal cannon",
+    "Hellforged weapons · strike",
+    "Hellforged weapons · sweep"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Daemon Prince of Tzeentch with wings"
+   ],
+   "leads": null
+  },
+  "key": "fad84df3d55552ce"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-timing",
+  "where": "oioioi · Sorcerer · Twisted Sorceries",
+  "judgement": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Twisted Sorceries",
+   "text": "Once per battle, in your Shooting phase or the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristic of Psychic weapons equipped by this model by 3."
+  },
+  "key": "40a6eb1fa30381fc"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-tag",
+  "where": "oioioi · Sorcerer · Twisted Sorceries",
+  "judgement": {
+   "tag": "Once per battle · Psychic"
+  },
+  "source": {
+   "ability": "Twisted Sorceries",
+   "text": "Once per battle, in your Shooting phase or the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristic of Psychic weapons equipped by this model by 3."
+  },
+  "key": "989195b1f35e2db6"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-who",
+  "where": "oioioi · Sorcerer · Twisted Sorceries",
+  "judgement": {
+   "who": "Sorcerer",
+   "models": [
+    "1× Sorcerer",
+    "1× Aspiring Sorcerer",
+    "1× Rubric Marine w/ soulreaper cannon",
+    "1× Rubric Marine w/ warpflamer (Icon of Flame)",
+    "2× Rubric Marine w/ warpflamer"
+   ]
+  },
+  "source": {
+   "ability": "Twisted Sorceries",
+   "text": "Once per battle, in your Shooting phase or the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristic of Psychic weapons equipped by this model by 3."
+  },
+  "key": "42429a200f694cdf"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-tag",
+  "where": "oioioi · Sorcerer in Terminator Armour · Empyric Guidance",
+  "judgement": {
+   "tag": "Psychic"
+  },
+  "source": {
+   "ability": "Empyric Guidance",
+   "text": "While this model is leading a unit, weapons equipped by models in that unit have the **[LETHAL HITS]** ability."
+  },
+  "key": "8e074dd83065b0a4"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-who",
+  "where": "oioioi · Sorcerer · Empyric Guidance",
+  "judgement": {
+   "who": "Sorcerer",
+   "models": [
+    "1× Sorcerer",
+    "1× Aspiring Sorcerer",
+    "1× Rubric Marine w/ soulreaper cannon",
+    "1× Rubric Marine w/ warpflamer (Icon of Flame)",
+    "2× Rubric Marine w/ warpflamer"
+   ]
+  },
+  "source": {
+   "ability": "Empyric Guidance",
+   "text": "While this model is leading a unit, weapons equipped by models in that unit have the **[LETHAL HITS]** ability."
+  },
+  "key": "d474d22b48703968"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-timing",
+  "where": "oioioi · Sorcerer · Bringers of Change",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Bringers of Change",
+   "text": "Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead."
+  },
+  "key": "52dec13022d0b58b"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-who",
+  "where": "oioioi · Sorcerer · Bringers of Change",
+  "judgement": {
+   "who": "Rubric Marines",
+   "models": [
+    "1× Sorcerer",
+    "1× Aspiring Sorcerer",
+    "1× Rubric Marine w/ soulreaper cannon",
+    "1× Rubric Marine w/ warpflamer (Icon of Flame)",
+    "2× Rubric Marine w/ warpflamer"
+   ]
+  },
+  "source": {
+   "ability": "Bringers of Change",
+   "text": "Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead."
+  },
+  "key": "57b009df52f459f2"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-who",
+  "where": "oioioi · Sorcerer · Icon of Flame",
+  "judgement": {
+   "who": "Rubric Marines",
+   "models": [
+    "1× Sorcerer",
+    "1× Aspiring Sorcerer",
+    "1× Rubric Marine w/ soulreaper cannon",
+    "1× Rubric Marine w/ warpflamer (Icon of Flame)",
+    "2× Rubric Marine w/ warpflamer"
+   ]
+  },
+  "source": {
+   "ability": "Icon of Flame",
+   "text": "Ranged weapons equipped by models in the bearer’s unit (excluding **CHARACTERS**) have the **[IGNORES COVER]** ability."
+  },
+  "key": "44c5c04a73da019c"
+ },
+ {
+  "army": "oioioi",
+  "kind": "unit-footnote",
+  "where": "oioioi · Sorcerer",
+  "judgement": {
+   "kind": "all",
+   "who": "Sorcerer",
+   "when": "Twisted Sorceries used this phase (once per battle)",
+   "note": "Psychic weapons +3 S and +3 A",
+   "from": "Twisted Sorceries"
+  },
+  "source": {
+   "ability": "Twisted Sorceries",
+   "text": "Once per battle, in your Shooting phase or the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristic of Psychic weapons equipped by this model by 3."
+  },
+  "key": "a2c3b41f12426743"
+ },
+ {
+  "army": "oioioi",
+  "kind": "unit-footnote",
+  "where": "oioioi · Sorcerer",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Every ranged attack",
+   "note": "re-roll wound rolls of 1 (vs a unit within range of an objective marker you do not control: re-roll the wound roll)",
+   "from": "Bringers of Change"
+  },
+  "source": {
+   "ability": "Bringers of Change",
+   "text": "Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead."
+  },
+  "key": "626eaf7b06b4bb5a"
+ },
+ {
+  "army": "oioioi",
+  "kind": "unit-boostNote",
+  "where": "oioioi · Sorcerer",
+  "judgement": {
+   "boostNote": "[LETHAL HITS] on every weapon comes from Empyric Guidance (while the Sorcerer leads); [IGNORES COVER] on the Rubric Marines’ guns comes from the Icon of Flame."
+  },
+  "source": {
+   "models": [
+    "1× Sorcerer",
+    "1× Aspiring Sorcerer",
+    "1× Rubric Marine w/ soulreaper cannon",
+    "1× Rubric Marine w/ warpflamer (Icon of Flame)",
+    "2× Rubric Marine w/ warpflamer"
+   ],
+   "stats": [
+    "Sorcerer W4 OC1",
+    "Rubric Marine ×4 W2 OC2",
+    "Aspiring Sorcerer W3 OC2"
+   ],
+   "weapons": [
+    "Inferno bolt pistol 1 -2 1 PISTOL, LETHAL HITS",
+    "Pandaemonic Delusion 6 -1 1 PSYCHIC, SUSTAINED HITS 3, LETHAL HITS",
+    "Malefic Curse 3 -3 1 ANTI-INFANTRY 4+, DEVASTATING WOUNDS, IGNORES COVER, PSYCHIC, LETHAL HITS",
+    "Warpflame pistol D6 -1 1 IGNORES COVER, PISTOL, TORRENT, LETHAL HITS",
+    "Soulreaper cannon 6 -2 1 DEVASTATING WOUNDS, IGNORES COVER, LETHAL HITS",
+    "Warpflamer D6 -1 1 IGNORES COVER, TORRENT, LETHAL HITS",
+    "Force weapon 4 -1 D3 PSYCHIC, LETHAL HITS",
+    "Prosperine khopesh 3 -2 2 LETHAL HITS",
+    "Force weapon 3 -1 D3 PSYCHIC, LETHAL HITS",
+    "Close combat weapon 2 0 1 LETHAL HITS"
+   ]
+  },
+  "key": "a32ff556f0f6aa69"
+ },
+ {
+  "army": "oioioi",
+  "kind": "unit-kwNote",
+  "where": "oioioi · Sorcerer",
+  "judgement": {
+   "kwNote": "Battleline, Rubric, Rubric Marines and Rubricae come from the attached Rubric Marines."
+  },
+  "source": {
+   "models": [
+    "1× Sorcerer",
+    "1× Aspiring Sorcerer",
+    "1× Rubric Marine w/ soulreaper cannon",
+    "1× Rubric Marine w/ warpflamer (Icon of Flame)",
+    "2× Rubric Marine w/ warpflamer"
+   ],
+   "stats": [
+    "Sorcerer W4 OC1",
+    "Rubric Marine ×4 W2 OC2",
+    "Aspiring Sorcerer W3 OC2"
+   ],
+   "weapons": [
+    "Inferno bolt pistol 1 -2 1 PISTOL, LETHAL HITS",
+    "Pandaemonic Delusion 6 -1 1 PSYCHIC, SUSTAINED HITS 3, LETHAL HITS",
+    "Malefic Curse 3 -3 1 ANTI-INFANTRY 4+, DEVASTATING WOUNDS, IGNORES COVER, PSYCHIC, LETHAL HITS",
+    "Warpflame pistol D6 -1 1 IGNORES COVER, PISTOL, TORRENT, LETHAL HITS",
+    "Soulreaper cannon 6 -2 1 DEVASTATING WOUNDS, IGNORES COVER, LETHAL HITS",
+    "Warpflamer D6 -1 1 IGNORES COVER, TORRENT, LETHAL HITS",
+    "Force weapon 4 -1 D3 PSYCHIC, LETHAL HITS",
+    "Prosperine khopesh 3 -2 2 LETHAL HITS",
+    "Force weapon 3 -1 D3 PSYCHIC, LETHAL HITS",
+    "Close combat weapon 2 0 1 LETHAL HITS"
+   ]
+  },
+  "key": "b47db1720f346a2f"
+ },
+ {
+  "army": "oioioi",
+  "kind": "unit-ptsNote",
+  "where": "oioioi · Sorcerer",
+  "judgement": {
+   "ptsNote": "100 + Rubric Marines 115"
+  },
+  "source": {
+   "models": [
+    "1× Sorcerer",
+    "1× Aspiring Sorcerer",
+    "1× Rubric Marine w/ soulreaper cannon",
+    "1× Rubric Marine w/ warpflamer (Icon of Flame)",
+    "2× Rubric Marine w/ warpflamer"
+   ],
+   "stats": [
+    "Sorcerer W4 OC1",
+    "Rubric Marine ×4 W2 OC2",
+    "Aspiring Sorcerer W3 OC2"
+   ],
+   "weapons": [
+    "Inferno bolt pistol 1 -2 1 PISTOL, LETHAL HITS",
+    "Pandaemonic Delusion 6 -1 1 PSYCHIC, SUSTAINED HITS 3, LETHAL HITS",
+    "Malefic Curse 3 -3 1 ANTI-INFANTRY 4+, DEVASTATING WOUNDS, IGNORES COVER, PSYCHIC, LETHAL HITS",
+    "Warpflame pistol D6 -1 1 IGNORES COVER, PISTOL, TORRENT, LETHAL HITS",
+    "Soulreaper cannon 6 -2 1 DEVASTATING WOUNDS, IGNORES COVER, LETHAL HITS",
+    "Warpflamer D6 -1 1 IGNORES COVER, TORRENT, LETHAL HITS",
+    "Force weapon 4 -1 D3 PSYCHIC, LETHAL HITS",
+    "Prosperine khopesh 3 -2 2 LETHAL HITS",
+    "Force weapon 3 -1 D3 PSYCHIC, LETHAL HITS",
+    "Close combat weapon 2 0 1 LETHAL HITS"
+   ]
+  },
+  "key": "11b0f3d91992aae2"
+ },
+ {
+  "army": "oioioi",
+  "kind": "unit-weapons",
+  "where": "oioioi · Sorcerer",
+  "judgement": {
+   "gear": [
+    [
+     "Force weapon",
+     "Inferno bolt pistol",
+     "Pandaemonic Delusion",
+     "Prosperine khopesh"
+    ],
+    [
+     "Force weapon",
+     "Malefic Curse",
+     "Warpflame pistol"
+    ],
+    [
+     "Close combat weapon",
+     "Soulreaper cannon"
+    ],
+    [
+     "Close combat weapon",
+     "Warpflamer"
+    ],
+    [
+     "Close combat weapon",
+     "Warpflamer"
+    ]
+   ],
+   "weapons": [
+    "Sorcerer · Inferno bolt pistol",
+    "Sorcerer · Pandaemonic Delusion",
+    "Rubric Marines · Malefic Curse",
+    "Rubric Marines · Warpflame pistol",
+    "Rubric Marines · Soulreaper cannon",
+    "Rubric Marines · ×3 · Warpflamer",
+    "Sorcerer · Force weapon",
+    "Sorcerer · Prosperine khopesh",
+    "Rubric Marines · Force weapon",
+    "Rubric Marines · ×4 · Close combat weapon"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Sorcerer",
+    "1× Aspiring Sorcerer",
+    "1× Rubric Marine w/ soulreaper cannon",
+    "1× Rubric Marine w/ warpflamer (Icon of Flame)",
+    "2× Rubric Marine w/ warpflamer"
+   ],
+   "leads": "Rubric Marines"
+  },
+  "key": "fe5b7119632bd741"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-timing",
+  "where": "oioioi · Sorcerer in Terminator Armour · Marked by Fate",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Marked by Fate",
+   "text": "At the start of your Shooting phase, select one enemy unit that is visible to this **PSYKER** model. Until the end of the phase, each time a model in this unit makes an attack that targets that enemy unit, add 1 to the Hit roll."
+  },
+  "key": "7f7e21b5f742aeab"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-tag",
+  "where": "oioioi · Sorcerer in Terminator Armour · Marked by Fate",
+  "judgement": {
+   "tag": "Psychic"
+  },
+  "source": {
+   "ability": "Marked by Fate",
+   "text": "At the start of your Shooting phase, select one enemy unit that is visible to this **PSYKER** model. Until the end of the phase, each time a model in this unit makes an attack that targets that enemy unit, add 1 to the Hit roll."
+  },
+  "key": "cd0d55bc845278c9"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-who",
+  "where": "oioioi · Sorcerer in Terminator Armour · Marked by Fate",
+  "judgement": {
+   "who": "Sorcerer in Terminator Armour",
+   "models": [
+    "1× Sorcerer in Terminator Armour",
+    "1× Scarab Occult Sorcerer",
+    "5× Scarab Occult Terminator",
+    "2× Scarab Occult Terminator w/ hellfyre missile rack",
+    "2× Scarab Occult Terminator w/ soulreaper cannon"
+   ]
+  },
+  "source": {
+   "ability": "Marked by Fate",
+   "text": "At the start of your Shooting phase, select one enemy unit that is visible to this **PSYKER** model. Until the end of the phase, each time a model in this unit makes an attack that targets that enemy unit, add 1 to the Hit roll."
+  },
+  "key": "bf602dd68e0fbd8a"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-who",
+  "where": "oioioi · Sorcerer in Terminator Armour · Empyric Guidance",
+  "judgement": {
+   "who": "Sorcerer in Terminator Armour",
+   "models": [
+    "1× Sorcerer in Terminator Armour",
+    "1× Scarab Occult Sorcerer",
+    "5× Scarab Occult Terminator",
+    "2× Scarab Occult Terminator w/ hellfyre missile rack",
+    "2× Scarab Occult Terminator w/ soulreaper cannon"
+   ]
+  },
+  "source": {
+   "ability": "Empyric Guidance",
+   "text": "While this model is leading a unit, weapons equipped by models in that unit have the **[LETHAL HITS]** ability."
+  },
+  "key": "6aeb44f7e7dd3038"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-timing",
+  "where": "oioioi · Sorcerer in Terminator Armour · Umbralefic Crystal",
+  "judgement": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Umbralefic Crystal",
+   "text": "**THOUSAND SONS** model only. (Once per battle, per army) In your Command phase, if this unit is **unengaged**, you can use this ability. If you do:\n- Place this unit in **strategic reserves**.\n- This unit has **Deep Strike** until the start of your next Shooting phase.\n- This unit must make an **ingress move** in your next Movement phase (including in your first turn)."
+  },
+  "key": "6369b7f3a47d05a4"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-tag",
+  "where": "oioioi · Sorcerer in Terminator Armour · Umbralefic Crystal",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Umbralefic Crystal",
+   "text": "**THOUSAND SONS** model only. (Once per battle, per army) In your Command phase, if this unit is **unengaged**, you can use this ability. If you do:\n- Place this unit in **strategic reserves**.\n- This unit has **Deep Strike** until the start of your next Shooting phase.\n- This unit must make an **ingress move** in your next Movement phase (including in your first turn)."
+  },
+  "key": "0b0212d7dc779033"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-who",
+  "where": "oioioi · Sorcerer in Terminator Armour · Umbralefic Crystal",
+  "judgement": {
+   "who": "Sorcerer in Terminator Armour",
+   "models": [
+    "1× Sorcerer in Terminator Armour",
+    "1× Scarab Occult Sorcerer",
+    "5× Scarab Occult Terminator",
+    "2× Scarab Occult Terminator w/ hellfyre missile rack",
+    "2× Scarab Occult Terminator w/ soulreaper cannon"
+   ]
+  },
+  "source": {
+   "ability": "Umbralefic Crystal",
+   "text": "**THOUSAND SONS** model only. (Once per battle, per army) In your Command phase, if this unit is **unengaged**, you can use this ability. If you do:\n- Place this unit in **strategic reserves**.\n- This unit has **Deep Strike** until the start of your next Shooting phase.\n- This unit must make an **ingress move** in your next Movement phase (including in your first turn)."
+  },
+  "key": "3419a390c2c27281"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-who",
+  "where": "oioioi · Sorcerer in Terminator Armour · Rites of Coalescence",
+  "judgement": {
+   "who": "Scarab Occult Terminators",
+   "models": [
+    "1× Sorcerer in Terminator Armour",
+    "1× Scarab Occult Sorcerer",
+    "5× Scarab Occult Terminator",
+    "2× Scarab Occult Terminator w/ hellfyre missile rack",
+    "2× Scarab Occult Terminator w/ soulreaper cannon"
+   ]
+  },
+  "source": {
+   "ability": "Rites of Coalescence",
+   "text": "While this unit contains one or more **PSYKER** models, each time an attack targets this unit, subtract 1 from the Wound roll."
+  },
+  "key": "f8c54369f7043c1b"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-def",
+  "where": "oioioi · Sorcerer in Terminator Armour · Rites of Coalescence",
+  "judgement": {
+   "def": "-1 to wound rolls against this unit while it contains a PSYKER model"
+  },
+  "source": {
+   "ability": "Rites of Coalescence",
+   "text": "While this unit contains one or more **PSYKER** models, each time an attack targets this unit, subtract 1 from the Wound roll."
+  },
+  "key": "a4436e2fc77801f3"
+ },
+ {
+  "army": "oioioi",
+  "kind": "unit-footnote",
+  "where": "oioioi · Sorcerer in Terminator Armour",
+  "judgement": {
+   "kind": "ranged",
+   "when": "vs the enemy unit picked at the start of your Shooting phase",
+   "note": "+1 to hit rolls",
+   "from": "Marked by Fate"
+  },
+  "source": {
+   "ability": "Marked by Fate",
+   "text": "At the start of your Shooting phase, select one enemy unit that is visible to this **PSYKER** model. Until the end of the phase, each time a model in this unit makes an attack that targets that enemy unit, add 1 to the Hit roll."
+  },
+  "key": "04c89707906704e3"
+ },
+ {
+  "army": "oioioi",
+  "kind": "unit-boostNote",
+  "where": "oioioi · Sorcerer in Terminator Armour",
+  "judgement": {
+   "boostNote": "[LETHAL HITS] on every weapon comes from Empyric Guidance (while the Sorcerer leads)."
+  },
+  "source": {
+   "models": [
+    "1× Sorcerer in Terminator Armour",
+    "1× Scarab Occult Sorcerer",
+    "5× Scarab Occult Terminator",
+    "2× Scarab Occult Terminator w/ hellfyre missile rack",
+    "2× Scarab Occult Terminator w/ soulreaper cannon"
+   ],
+   "stats": [
+    "Sorcerer in Terminator Armour W5 OC1",
+    "Scarab Occult Sorcerer W4 OC1",
+    "Scarab Occult Terminator ×9 W3 OC1"
+   ],
+   "weapons": [
+    "Gaze of Hate 3 -3 2 ANTI-MONSTER 4+, ANTI-VEHICLE 4+, DEVASTATING WOUNDS, PSYCHIC, LETHAL HITS",
+    "Inferno combi-bolter 2 -2 1 RAPID FIRE 2, LETHAL HITS",
+    "Malefic Curse 3 -3 1 ANTI-INFANTRY 4+, DEVASTATING WOUNDS, PSYCHIC, LETHAL HITS",
+    "Inferno combi-bolter 2 -2 1 RAPID FIRE 2, LETHAL HITS",
+    "Soulreaper cannon 6 -2 1 DEVASTATING WOUNDS, LETHAL HITS",
+    "Hellfyre missile rack 2 -2 3 LETHAL HITS",
+    "Force weapon 5 -1 D3 PSYCHIC, LETHAL HITS",
+    "Force weapon 4 -1 D3 PSYCHIC, LETHAL HITS",
+    "Prosperine khopesh 3 -2 2 LETHAL HITS"
+   ]
+  },
+  "key": "dc6b6769c76e7ff3"
+ },
+ {
+  "army": "oioioi",
+  "kind": "unit-kwNote",
+  "where": "oioioi · Sorcerer in Terminator Armour",
+  "judgement": {
+   "kwNote": "Rubricae and Scarab Occult come from the attached Scarab Occult Terminators."
+  },
+  "source": {
+   "models": [
+    "1× Sorcerer in Terminator Armour",
+    "1× Scarab Occult Sorcerer",
+    "5× Scarab Occult Terminator",
+    "2× Scarab Occult Terminator w/ hellfyre missile rack",
+    "2× Scarab Occult Terminator w/ soulreaper cannon"
+   ],
+   "stats": [
+    "Sorcerer in Terminator Armour W5 OC1",
+    "Scarab Occult Sorcerer W4 OC1",
+    "Scarab Occult Terminator ×9 W3 OC1"
+   ],
+   "weapons": [
+    "Gaze of Hate 3 -3 2 ANTI-MONSTER 4+, ANTI-VEHICLE 4+, DEVASTATING WOUNDS, PSYCHIC, LETHAL HITS",
+    "Inferno combi-bolter 2 -2 1 RAPID FIRE 2, LETHAL HITS",
+    "Malefic Curse 3 -3 1 ANTI-INFANTRY 4+, DEVASTATING WOUNDS, PSYCHIC, LETHAL HITS",
+    "Inferno combi-bolter 2 -2 1 RAPID FIRE 2, LETHAL HITS",
+    "Soulreaper cannon 6 -2 1 DEVASTATING WOUNDS, LETHAL HITS",
+    "Hellfyre missile rack 2 -2 3 LETHAL HITS",
+    "Force weapon 5 -1 D3 PSYCHIC, LETHAL HITS",
+    "Force weapon 4 -1 D3 PSYCHIC, LETHAL HITS",
+    "Prosperine khopesh 3 -2 2 LETHAL HITS"
+   ]
+  },
+  "key": "f50ab0f7c2d0bd07"
+ },
+ {
+  "army": "oioioi",
+  "kind": "unit-ptsNote",
+  "where": "oioioi · Sorcerer in Terminator Armour",
+  "judgement": {
+   "ptsNote": "140 + Scarab Occult Terminators 425"
+  },
+  "source": {
+   "models": [
+    "1× Sorcerer in Terminator Armour",
+    "1× Scarab Occult Sorcerer",
+    "5× Scarab Occult Terminator",
+    "2× Scarab Occult Terminator w/ hellfyre missile rack",
+    "2× Scarab Occult Terminator w/ soulreaper cannon"
+   ],
+   "stats": [
+    "Sorcerer in Terminator Armour W5 OC1",
+    "Scarab Occult Sorcerer W4 OC1",
+    "Scarab Occult Terminator ×9 W3 OC1"
+   ],
+   "weapons": [
+    "Gaze of Hate 3 -3 2 ANTI-MONSTER 4+, ANTI-VEHICLE 4+, DEVASTATING WOUNDS, PSYCHIC, LETHAL HITS",
+    "Inferno combi-bolter 2 -2 1 RAPID FIRE 2, LETHAL HITS",
+    "Malefic Curse 3 -3 1 ANTI-INFANTRY 4+, DEVASTATING WOUNDS, PSYCHIC, LETHAL HITS",
+    "Inferno combi-bolter 2 -2 1 RAPID FIRE 2, LETHAL HITS",
+    "Soulreaper cannon 6 -2 1 DEVASTATING WOUNDS, LETHAL HITS",
+    "Hellfyre missile rack 2 -2 3 LETHAL HITS",
+    "Force weapon 5 -1 D3 PSYCHIC, LETHAL HITS",
+    "Force weapon 4 -1 D3 PSYCHIC, LETHAL HITS",
+    "Prosperine khopesh 3 -2 2 LETHAL HITS"
+   ]
+  },
+  "key": "79501100282c2890"
+ },
+ {
+  "army": "oioioi",
+  "kind": "unit-weapons",
+  "where": "oioioi · Sorcerer in Terminator Armour",
+  "judgement": {
+   "gear": [
+    [
+     "Force weapon",
+     "Gaze of Hate",
+     "Inferno combi-bolter"
+    ],
+    [
+     "Force weapon",
+     "Malefic Curse",
+     "Inferno combi-bolter"
+    ],
+    [
+     "Inferno combi-bolter",
+     "Prosperine khopesh"
+    ],
+    [
+     "Inferno combi-bolter",
+     "Prosperine khopesh",
+     "Hellfyre missile rack"
+    ],
+    [
+     "Prosperine khopesh",
+     "Soulreaper cannon"
+    ]
+   ],
+   "weapons": [
+    "Sorcerer in Terminator Armour · Gaze of Hate",
+    "Sorcerer in Terminator Armour · Inferno combi-bolter",
+    "Scarab Occult Terminators · Malefic Curse",
+    "Scarab Occult Terminators · ×8 · Inferno combi-bolter",
+    "Scarab Occult Terminators · ×2 · Soulreaper cannon",
+    "Scarab Occult Terminators · ×2 · Hellfyre missile rack",
+    "Sorcerer in Terminator Armour · Force weapon",
+    "Scarab Occult Terminators · Force weapon",
+    "Scarab Occult Terminators · ×9 · Prosperine khopesh"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Sorcerer in Terminator Armour",
+    "1× Scarab Occult Sorcerer",
+    "5× Scarab Occult Terminator",
+    "2× Scarab Occult Terminator w/ hellfyre missile rack",
+    "2× Scarab Occult Terminator w/ soulreaper cannon"
+   ],
+   "leads": "Scarab Occult Terminators"
+  },
+  "key": "6e9518bdb4a4e1b0"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-timing",
+  "where": "oioioi · Tzaangors · Ambushing Hunters",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "opp"
+  },
+  "source": {
+   "ability": "Ambushing Hunters",
+   "text": "At the end of your opponent’s turn, if this unit is more than 6\" horizontally away from all enemy units, you can remove this unit from the battlefield and place it into **Strategic Reserves**."
+  },
+  "key": "c954e9d960d8054f"
+ },
+ {
+  "army": "oioioi",
+  "kind": "unit-weapons",
+  "where": "oioioi · Tzaangors",
+  "judgement": {
+   "gear": [
+    [
+     "Tzaangor blades"
+    ],
+    [
+     "Tzaangor blades"
+    ]
+   ],
+   "weapons": [
+    "×10 · Tzaangor blades"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Twistbray",
+    "9× Tzaangor w/ Tzaangor blades"
+   ],
+   "leads": null
+  },
+  "key": "e7e23bb54c7b0bc5"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-timing",
+  "where": "oioioi · Tzaangor Enlightened · Prophesied Doom",
+  "judgement": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Prophesied Doom",
+   "text": "Each time this unit makes a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 **mortal wound**."
+  },
+  "key": "369e1c45c684d79f"
+ },
+ {
+  "army": "oioioi",
+  "kind": "unit-weapons",
+  "where": "oioioi · Tzaangor Enlightened",
+  "judgement": {
+   "gear": [
+    [
+     "Divining spear"
+    ],
+    [
+     "Divining spear"
+    ]
+   ],
+   "weapons": [
+    "×3 · Divining spear"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Aviarch",
+    "2× Divining spear Enlightened"
+   ],
+   "leads": null
+  },
+  "key": "a7b64f37579c67aa"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-timing",
+  "where": "oioioi · Tzaangor Enlightened with Fatecaster greatbows · Malign Trickery",
+  "judgement": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
+  },
+  "source": {
+   "ability": "Malign Trickery",
+   "text": "In your opponent’s Movement phase, if an enemy unit ends a move within 8\" of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a **Normal move** of up to D6\"."
+  },
+  "key": "eeb57281f8aad27f"
+ },
+ {
+  "army": "oioioi",
+  "kind": "unit-weapons",
+  "where": "oioioi · Tzaangor Enlightened with Fatecaster greatbows",
+  "judgement": {
+   "gear": [
+    [
+     "Close combat weapon",
+     "Fatecaster greatbow"
+    ],
+    [
+     "Close combat weapon",
+     "Fatecaster greatbow"
+    ]
+   ],
+   "weapons": [
+    "×3 · Fatecaster greatbow",
+    "×3 · Close combat weapon"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Aviarch",
+    "2× Enlightened"
+   ],
+   "leads": null
+  },
+  "key": "e70158bb80dab9fd"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-timing",
+  "where": "oioioi · Defiler · Scuttling Walker",
+  "judgement": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Scuttling Walker",
+   "text": "Each time this unit makes a Normal, Advance or Fall Back move, it can move through models (excluding **TITANIC** models) and terrain features. When doing so, it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed."
+  },
+  "key": "13d9d9178983e7c0"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-timing",
+  "where": "oioioi · Defiler · Destroyer of Futures",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "opp"
+  },
+  "source": {
+   "ability": "Destroyer of Futures",
+   "text": "You can target this unit with the Counteroffensive stratagem, regardless of any other uses of that stratagem this phase. If you do:\n- That use is -1 CP.\n- That use does not prevent any uses of that stratagem on other units this phase."
+  },
+  "key": "e97e13f8366d8a58"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-tag",
+  "where": "oioioi · Defiler · Destroyer of Futures",
+  "judgement": {
+   "tag": "Once per phase, per unit"
+  },
+  "source": {
+   "ability": "Destroyer of Futures",
+   "text": "You can target this unit with the Counteroffensive stratagem, regardless of any other uses of that stratagem this phase. If you do:\n- That use is -1 CP.\n- That use does not prevent any uses of that stratagem on other units this phase."
+  },
+  "key": "4645be0303458666"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-damaged",
+  "where": "oioioi · Defiler · Damaged: 1-6 wounds remaining",
+  "judgement": {
+   "damaged": "1-6",
+   "W": "18"
+  },
+  "source": {
+   "ability": "Damaged: 1-6 wounds remaining",
+   "text": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+  },
+  "key": "ad81991d5c0393f7"
+ },
+ {
+  "army": "oioioi",
+  "kind": "unit-weapons",
+  "where": "oioioi · Defiler",
+  "judgement": {
+   "gear": [
+    [
+     "Ectoplasma destructor",
+     "Heavy reaper autocannon",
+     "Shearing claws",
+     "Excruciator cannon"
+    ]
+   ],
+   "weapons": [
+    "Ectoplasma destructor",
+    "×2 · Excruciator cannon",
+    "×2 · Heavy reaper autocannon",
+    "Shearing claws · strike",
+    "Shearing claws · sweep"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Defiler"
+   ],
+   "leads": null
+  },
+  "key": "02be78b974eb6522"
+ },
+ {
+  "army": "oioioi",
+  "kind": "rule-ph",
+  "where": "thousand-sons army rule · Cabal of Sorcerers",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "rule": "Cabal of Sorcerers",
+   "text": "If your Army Faction is **THOUSAND SONS**, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.\n**Psychic Test Sequence**\n- **Roll 2D6**\n- **Channel the Warp** (Optional): roll one additional D6. Then, if one or more doubles or triples were rolled during this test, that model’s unit suffers D3 mortal wounds.\n- If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects.\n*FAQ (Faction Pack 1.3): Rituals do not all have to be sequenced at the start of the phase: you just pick a model with the Cabal of Sorcerers rule, pick a Ritual to manifest, and attempt it, then repeat the process until you have run out of models or Rituals or both.*\n*FAQ (Faction Pack 1.3): you do not have to choose whether to Channel the Warp before rolling any dice, and doubles or triples only inflict the D3 mortal wounds if you chose to Channel the Warp.*\nDestiny’s Ruin (Psychic) · Warp Charge 5: Select one enemy unit within 24\" of and **visible** to the manifesting model. Until the end of the phase, each time a **THOUSAND SONS** or **SCINTILLATING LEGIONS** model from your army makes an attack that targets that unit, re-roll a **Hit roll** of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.\nTemporal Surge (Psychic) · Warp Charge 6: Select one friendly **THOUSAND SONS** or **SCINTILLATING LEGIONS** unit that is not within **Engagement Range** of one or more enemy units and is within 24\" of and **visible** to the manifesting model. That unit can make a **Normal move** of up to D6\". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6\" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.\nDoombolt (Psychic) · Warp Charge 7: Select one enemy unit within 24\" of and **visible** to the manifesting model (excluding units with the **Lone Operative** ability that are not part of an Attached unit and are not within 12\" of the manifesting model); that unit suffers D3 **mortal wounds**. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.\nTwist of Fate (Psychic) · Warp Charge 9: Select one enemy unit within 24\" of and **visible** to the manifesting model. Until the end of the phase, each time a **THOUSAND SONS** or **SCINTILLATING LEGIONS** model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead."
+  },
+  "key": "ad4096c1299845b0"
+ },
+ {
+  "army": "oioioi",
+  "kind": "rule-turn",
+  "where": "thousand-sons army rule · Cabal of Sorcerers",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "rule": "Cabal of Sorcerers",
+   "text": "If your Army Faction is **THOUSAND SONS**, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.\n**Psychic Test Sequence**\n- **Roll 2D6**\n- **Channel the Warp** (Optional): roll one additional D6. Then, if one or more doubles or triples were rolled during this test, that model’s unit suffers D3 mortal wounds.\n- If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects.\n*FAQ (Faction Pack 1.3): Rituals do not all have to be sequenced at the start of the phase: you just pick a model with the Cabal of Sorcerers rule, pick a Ritual to manifest, and attempt it, then repeat the process until you have run out of models or Rituals or both.*\n*FAQ (Faction Pack 1.3): you do not have to choose whether to Channel the Warp before rolling any dice, and doubles or triples only inflict the D3 mortal wounds if you chose to Channel the Warp.*\nDestiny’s Ruin (Psychic) · Warp Charge 5: Select one enemy unit within 24\" of and **visible** to the manifesting model. Until the end of the phase, each time a **THOUSAND SONS** or **SCINTILLATING LEGIONS** model from your army makes an attack that targets that unit, re-roll a **Hit roll** of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.\nTemporal Surge (Psychic) · Warp Charge 6: Select one friendly **THOUSAND SONS** or **SCINTILLATING LEGIONS** unit that is not within **Engagement Range** of one or more enemy units and is within 24\" of and **visible** to the manifesting model. That unit can make a **Normal move** of up to D6\". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6\" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.\nDoombolt (Psychic) · Warp Charge 7: Select one enemy unit within 24\" of and **visible** to the manifesting model (excluding units with the **Lone Operative** ability that are not part of an Attached unit and are not within 12\" of the manifesting model); that unit suffers D3 **mortal wounds**. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.\nTwist of Fate (Psychic) · Warp Charge 9: Select one enemy unit within 24\" of and **visible** to the manifesting model. Until the end of the phase, each time a **THOUSAND SONS** or **SCINTILLATING LEGIONS** model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead."
+  },
+  "key": "88e8a411e064c522"
+ },
+ {
+  "army": "oioioi",
+  "kind": "rule-ph",
+  "where": "Grand Coven rule · Kindred Sorcery",
+  "judgement": {
+   "ph": [
+    "command"
+   ]
+  },
+  "source": {
+   "rule": "Kindred Sorcery",
+   "text": "In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.\nImbued Manifestation: Add 6\" to the Range characteristic of ranged Psychic weapons equipped by **THOUSAND SONS** models from your army.\nPsychic Maelstrom: Each time a **THOUSAND SONS** model from your army makes an attack with a Psychic weapon, add 1 to the **Wound roll**.\nWrath of the Immaterium: Psychic weapons equipped by **THOUSAND SONS** models from your army have the **[DEVASTATING WOUNDS]** ability."
+  },
+  "key": "67f725a74dd34244"
+ },
+ {
+  "army": "oioioi",
+  "kind": "rule-turn",
+  "where": "Grand Coven rule · Kindred Sorcery",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "rule": "Kindred Sorcery",
+   "text": "In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.\nImbued Manifestation: Add 6\" to the Range characteristic of ranged Psychic weapons equipped by **THOUSAND SONS** models from your army.\nPsychic Maelstrom: Each time a **THOUSAND SONS** model from your army makes an attack with a Psychic weapon, add 1 to the **Wound roll**.\nWrath of the Immaterium: Psychic weapons equipped by **THOUSAND SONS** models from your army have the **[DEVASTATING WOUNDS]** ability."
+  },
+  "key": "5a08c6d778b2e6d8"
+ },
+ {
+  "army": "oioioi",
+  "kind": "rule-needs",
+  "where": "Grand Coven rule · Kindred Sorcery",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Thousand Sons",
+     "Psyker"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Kindred Sorcery",
+   "text": "In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.\nImbued Manifestation: Add 6\" to the Range characteristic of ranged Psychic weapons equipped by **THOUSAND SONS** models from your army.\nPsychic Maelstrom: Each time a **THOUSAND SONS** model from your army makes an attack with a Psychic weapon, add 1 to the **Wound roll**.\nWrath of the Immaterium: Psychic weapons equipped by **THOUSAND SONS** models from your army have the **[DEVASTATING WOUNDS]** ability."
+  },
+  "key": "43d49aaae9bde5d6"
+ },
+ {
+  "army": "oioioi",
+  "kind": "rule-mod",
+  "where": "Grand Coven rule · Kindred Sorcery",
+  "judgement": {
+   "mod": {
+    "kind": "all",
+    "when": "Kindred Sorcery (one ability, picked in your Command phase)",
+    "note": "Psychic weapons only: Imbued Manifestation +6\" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]"
+   }
+  },
+  "source": {
+   "rule": "Kindred Sorcery",
+   "text": "In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.\nImbued Manifestation: Add 6\" to the Range characteristic of ranged Psychic weapons equipped by **THOUSAND SONS** models from your army.\nPsychic Maelstrom: Each time a **THOUSAND SONS** model from your army makes an attack with a Psychic weapon, add 1 to the **Wound roll**.\nWrath of the Immaterium: Psychic weapons equipped by **THOUSAND SONS** models from your army have the **[DEVASTATING WOUNDS]** ability."
+  },
+  "key": "940673c2c907f7df"
+ },
+ {
+  "army": "oioioi",
+  "kind": "strat-phases",
+  "where": "Grand Coven · Psychic Dominion",
+  "judgement": {
+   "phases": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Psychic Dominion",
+   "text": "WHEN: Any phase, just after an enemy unit has selected its targets.\nTARGET: One **THOUSAND SONS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, Psychic weapons equipped by models in the attacking unit have the **[HAZARDOUS]** ability, and models in your unit have the **Feel No Pain 4+** ability against **Psychic Attacks**."
+  },
+  "key": "60ad109532249341"
+ },
+ {
+  "army": "oioioi",
+  "kind": "strat-turn",
+  "where": "Grand Coven · Psychic Dominion",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Psychic Dominion",
+   "text": "WHEN: Any phase, just after an enemy unit has selected its targets.\nTARGET: One **THOUSAND SONS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, Psychic weapons equipped by models in the attacking unit have the **[HAZARDOUS]** ability, and models in your unit have the **Feel No Pain 4+** ability against **Psychic Attacks**."
+  },
+  "key": "74838173ba1e2e72"
+ },
+ {
+  "army": "oioioi",
+  "kind": "strat-needs",
+  "where": "Grand Coven · Psychic Dominion",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Thousand Sons"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Psychic Dominion",
+   "text": "WHEN: Any phase, just after an enemy unit has selected its targets.\nTARGET: One **THOUSAND SONS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, Psychic weapons equipped by models in the attacking unit have the **[HAZARDOUS]** ability, and models in your unit have the **Feel No Pain 4+** ability against **Psychic Attacks**."
+  },
+  "key": "0c713661db509068"
+ },
+ {
+  "army": "oioioi",
+  "kind": "strat-def",
+  "where": "Grand Coven · Psychic Dominion",
+  "judgement": {
+   "def": "Feel No Pain 4+ against psychic attacks; their Psychic weapons get [HAZARDOUS]"
+  },
+  "source": {
+   "stratagem": "Psychic Dominion",
+   "text": "WHEN: Any phase, just after an enemy unit has selected its targets.\nTARGET: One **THOUSAND SONS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, Psychic weapons equipped by models in the attacking unit have the **[HAZARDOUS]** ability, and models in your unit have the **Feel No Pain 4+** ability against **Psychic Attacks**."
+  },
+  "key": "83d6f34a55c9a057"
+ },
+ {
+  "army": "oioioi",
+  "kind": "strat-phases",
+  "where": "Grand Coven · Destined by Fate",
+  "judgement": {
+   "phases": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Destined by Fate",
+   "text": "WHEN: Any phase, just after a saving throw is failed for a **THOUSAND SONS PSYKER** model from your army. If you are using fast dice rolling, this Stratagem can still be used after rolling multiple saving throws at once.\nTARGET: That **PSYKER** model.\nEFFECT: Change the Damage characteristic of that attack to 0. If you are using fast dice rolling, select one of those attacks you failed a saving throw for."
+  },
+  "key": "49596c6cbbb185be"
+ },
+ {
+  "army": "oioioi",
+  "kind": "strat-turn",
+  "where": "Grand Coven · Destined by Fate",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Destined by Fate",
+   "text": "WHEN: Any phase, just after a saving throw is failed for a **THOUSAND SONS PSYKER** model from your army. If you are using fast dice rolling, this Stratagem can still be used after rolling multiple saving throws at once.\nTARGET: That **PSYKER** model.\nEFFECT: Change the Damage characteristic of that attack to 0. If you are using fast dice rolling, select one of those attacks you failed a saving throw for."
+  },
+  "key": "20ef1b452e01e6cb"
+ },
+ {
+  "army": "oioioi",
+  "kind": "strat-needs",
+  "where": "Grand Coven · Destined by Fate",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Thousand Sons",
+     "Psyker"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Destined by Fate",
+   "text": "WHEN: Any phase, just after a saving throw is failed for a **THOUSAND SONS PSYKER** model from your army. If you are using fast dice rolling, this Stratagem can still be used after rolling multiple saving throws at once.\nTARGET: That **PSYKER** model.\nEFFECT: Change the Damage characteristic of that attack to 0. If you are using fast dice rolling, select one of those attacks you failed a saving throw for."
+  },
+  "key": "67c5698f26b4ed9f"
+ },
+ {
+  "army": "oioioi",
+  "kind": "strat-def",
+  "where": "Grand Coven · Destined by Fate",
+  "judgement": {
+   "def": "after a failed save for a PSYKER model, that attack’s Damage becomes 0"
+  },
+  "source": {
+   "stratagem": "Destined by Fate",
+   "text": "WHEN: Any phase, just after a saving throw is failed for a **THOUSAND SONS PSYKER** model from your army. If you are using fast dice rolling, this Stratagem can still be used after rolling multiple saving throws at once.\nTARGET: That **PSYKER** model.\nEFFECT: Change the Damage characteristic of that attack to 0. If you are using fast dice rolling, select one of those attacks you failed a saving throw for."
+  },
+  "key": "218e0d2c4bfa9233"
+ },
+ {
+  "army": "oioioi",
+  "kind": "strat-phases",
+  "where": "Grand Coven · Egotistical Power",
+  "judgement": {
+   "phases": [
+    "command"
+   ]
+  },
+  "source": {
+   "stratagem": "Egotistical Power",
+   "text": "WHEN: Your Command phase.\nTARGET: One **THOUSAND SONS PSYKER** unit from your army.\nEFFECT: Select the Imbued Manifestation, Psychic Maelstrom or Wrath of the Immaterium ability. Until the start of your next Command phase, that ability applies to your unit instead of any other Kindred Sorcery ability, even if you have already selected that ability this battle."
+  },
+  "key": "4774dce1cee6cd0b"
+ },
+ {
+  "army": "oioioi",
+  "kind": "strat-turn",
+  "where": "Grand Coven · Egotistical Power",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Egotistical Power",
+   "text": "WHEN: Your Command phase.\nTARGET: One **THOUSAND SONS PSYKER** unit from your army.\nEFFECT: Select the Imbued Manifestation, Psychic Maelstrom or Wrath of the Immaterium ability. Until the start of your next Command phase, that ability applies to your unit instead of any other Kindred Sorcery ability, even if you have already selected that ability this battle."
+  },
+  "key": "59fd20a3bd6c9ce1"
+ },
+ {
+  "army": "oioioi",
+  "kind": "strat-needs",
+  "where": "Grand Coven · Egotistical Power",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Thousand Sons",
+     "Psyker"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Egotistical Power",
+   "text": "WHEN: Your Command phase.\nTARGET: One **THOUSAND SONS PSYKER** unit from your army.\nEFFECT: Select the Imbued Manifestation, Psychic Maelstrom or Wrath of the Immaterium ability. Until the start of your next Command phase, that ability applies to your unit instead of any other Kindred Sorcery ability, even if you have already selected that ability this battle."
+  },
+  "key": "9ef743a3cfad97fd"
+ },
+ {
+  "army": "oioioi",
+  "kind": "strat-phases",
+  "where": "Grand Coven · Desecration of Worlds",
+  "judgement": {
+   "phases": [
+    "command"
+   ]
+  },
+  "source": {
+   "stratagem": "Desecration of Worlds",
+   "text": "WHEN: Your Command phase.\nTARGET: One **THOUSAND SONS PSYKER** unit from your army within range of an objective marker you control.\nEFFECT: That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
+  },
+  "key": "b16262a12c3d36aa"
+ },
+ {
+  "army": "oioioi",
+  "kind": "strat-turn",
+  "where": "Grand Coven · Desecration of Worlds",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Desecration of Worlds",
+   "text": "WHEN: Your Command phase.\nTARGET: One **THOUSAND SONS PSYKER** unit from your army within range of an objective marker you control.\nEFFECT: That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
+  },
+  "key": "27c57e840c45be25"
+ },
+ {
+  "army": "oioioi",
+  "kind": "strat-needs",
+  "where": "Grand Coven · Desecration of Worlds",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Thousand Sons",
+     "Psyker"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Desecration of Worlds",
+   "text": "WHEN: Your Command phase.\nTARGET: One **THOUSAND SONS PSYKER** unit from your army within range of an objective marker you control.\nEFFECT: That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
+  },
+  "key": "c38829cfd385e069"
+ },
+ {
+  "army": "oioioi",
+  "kind": "strat-phases",
+  "where": "Grand Coven · Arcane Focus",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Arcane Focus",
+   "text": "WHEN: Your Shooting phase, just after you take a Psychic test for a **THOUSAND SONS** model from your army that Channelled the Warp (before resolving that **Ritual**).\nTARGET: That **THOUSAND SONS** model.\nEFFECT: Re-roll all of the D6 rolled for that Psychic test (including the additional D6 for Channelling the Warp)."
+  },
+  "key": "fb742e66634870ac"
+ },
+ {
+  "army": "oioioi",
+  "kind": "strat-turn",
+  "where": "Grand Coven · Arcane Focus",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Arcane Focus",
+   "text": "WHEN: Your Shooting phase, just after you take a Psychic test for a **THOUSAND SONS** model from your army that Channelled the Warp (before resolving that **Ritual**).\nTARGET: That **THOUSAND SONS** model.\nEFFECT: Re-roll all of the D6 rolled for that Psychic test (including the additional D6 for Channelling the Warp)."
+  },
+  "key": "6963d9f43a348593"
+ },
+ {
+  "army": "oioioi",
+  "kind": "strat-needs",
+  "where": "Grand Coven · Arcane Focus",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Thousand Sons",
+     "Psyker"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Arcane Focus",
+   "text": "WHEN: Your Shooting phase, just after you take a Psychic test for a **THOUSAND SONS** model from your army that Channelled the Warp (before resolving that **Ritual**).\nTARGET: That **THOUSAND SONS** model.\nEFFECT: Re-roll all of the D6 rolled for that Psychic test (including the additional D6 for Channelling the Warp)."
+  },
+  "key": "d38b83bc7b30b8e7"
+ },
+ {
+  "army": "oioioi",
+  "kind": "strat-phases",
+  "where": "Grand Coven · Devastating Sorcery",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Devastating Sorcery",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One **THOUSAND SONS PSYKER** unit from your army that has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, add 9\" to the Range characteristic of Psychic weapons equipped by models in your unit, and each time a model in your unit makes an attack with a Psychic weapon, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**."
+  },
+  "key": "ae0f5b5338188fb8"
+ },
+ {
+  "army": "oioioi",
+  "kind": "strat-turn",
+  "where": "Grand Coven · Devastating Sorcery",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Devastating Sorcery",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One **THOUSAND SONS PSYKER** unit from your army that has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, add 9\" to the Range characteristic of Psychic weapons equipped by models in your unit, and each time a model in your unit makes an attack with a Psychic weapon, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**."
+  },
+  "key": "e5aa8dff5d47c375"
+ },
+ {
+  "army": "oioioi",
+  "kind": "strat-needs",
+  "where": "Grand Coven · Devastating Sorcery",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Thousand Sons",
+     "Psyker"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Devastating Sorcery",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One **THOUSAND SONS PSYKER** unit from your army that has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, add 9\" to the Range characteristic of Psychic weapons equipped by models in your unit, and each time a model in your unit makes an attack with a Psychic weapon, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**."
+  },
+  "key": "251b4f1c1a3e255b"
+ },
+ {
+  "army": "oioioi",
+  "kind": "strat-mod",
+  "where": "Grand Coven · Devastating Sorcery",
+  "judgement": {
+   "mod": {
+    "kind": "ranged",
+    "when": "Psychic weapons, your Shooting phase",
+    "note": "+9\" range, re-roll hit and wound rolls"
+   }
+  },
+  "source": {
+   "stratagem": "Devastating Sorcery",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One **THOUSAND SONS PSYKER** unit from your army that has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, add 9\" to the Range characteristic of Psychic weapons equipped by models in your unit, and each time a model in your unit makes an attack with a Psychic weapon, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**."
+  },
+  "key": "ace788e7b0d1c63a"
+ },
+ {
+  "army": "Thousand Sons",
+  "kind": "rule-alias",
+  "where": "/^psychic tests?$/i",
+  "judgement": {
+   "opens": "Cabal of Sorcerers"
+  },
+  "source": {
+   "rule": "Cabal of Sorcerers"
+  },
+  "key": "46c43037fb5d8758"
+ }
+]

@@ -1,0 +1,798 @@
+[
+ {
+  "key": "48ed8b2b13847330",
+  "verdict": "ok",
+  "why": "Melee attacks only happen in the Fight phase, in both turns.",
+  "fix": null
+ },
+ {
+  "key": "b4ed6cf83739211a",
+  "verdict": "ok",
+  "why": "Legendary Killer is on Khârn's datasheet (\"While this model is leading a unit\").",
+  "fix": null
+ },
+ {
+  "key": "d6e995b2d8fa6689",
+  "verdict": "ok",
+  "why": "\"At the end of your Charge phase\" = Charge phase, your turn.",
+  "fix": null
+ },
+ {
+  "key": "f7edc8fe54408e7f",
+  "verdict": "ok",
+  "why": "The Betrayer is Khârn's ability (Faction Pack errata text).",
+  "fix": null
+ },
+ {
+  "key": "747c10431c627403",
+  "verdict": "ok",
+  "why": "Berserker Frenzy is on Khârn's datasheet (\"this model\").",
+  "fix": null
+ },
+ {
+  "key": "c73bc97189015c55",
+  "verdict": "fix",
+  "why": "Drops a limit: the rule says \"set this model back up ... as close as possible to where it was destroyed and not within Engagement Range of any enemy units\".",
+  "fix": {
+   "def": "Khârn: the first time he is destroyed, at the end of the phase on a 2+ he is set back up with 3 wounds, as close as possible to where he was destroyed and not within Engagement Range of enemy units"
+  }
+ },
+ {
+  "key": "e0869998b53fc89e",
+  "verdict": "ok",
+  "why": "\"In your opponent’s Shooting phase, when an enemy unit has shot\" = Shooting, their turn.",
+  "fix": null
+ },
+ {
+  "key": "9b3cdc05e599bee4",
+  "verdict": "ok",
+  "why": "Blood Surge is on the Khorne Berzerkers datasheet (NR: \"Blood Surge - Khorne Berzerkers\").",
+  "fix": null
+ },
+ {
+  "key": "4a400542f3711f10",
+  "verdict": "ok",
+  "why": "+1 S applies to melee attacks (Fight phase); a charge move can be made in either turn (Heroic Intervention), so either turn is right.",
+  "fix": null
+ },
+ {
+  "key": "329f09bdca798db1",
+  "verdict": "ok",
+  "why": "Murderous Charge was added to the Khorne Berzerkers datasheet (Faction Pack errata).",
+  "fix": null
+ },
+ {
+  "key": "7aa06e283a202827",
+  "verdict": "ok",
+  "why": "Icon of Khorne is a Khorne Berzerkers wargear ability.",
+  "fix": null
+ },
+ {
+  "key": "8221dba235f3f67c",
+  "verdict": "ok",
+  "why": "Khârn's unit models (champion, 7 bolt pistol/chainblade, 2 eviscerator/plasma) carry no Icon of Khorne, so \"If the bearer’s unit contains one or more Icons of Khorne\" cannot trigger for this unit; the Lord's unit has the only Icon.",
+  "fix": null
+ },
+ {
+  "key": "1374a4eee5f03036",
+  "verdict": "ok",
+  "why": "Matches \"each time a model in that unit makes a melee attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1\".",
+  "fix": null
+ },
+ {
+  "key": "25625aa24f7450c2",
+  "verdict": "ok",
+  "why": "Matches \"If this unit made a charge move this turn, this unit’s melee attacks have +1 S\".",
+  "fix": null
+ },
+ {
+  "key": "41f5c3fc3d84f28e",
+  "verdict": "ok",
+  "why": "NR: \"Battleline*, Berzerkers*, *from combined unit\".",
+  "fix": null
+ },
+ {
+  "key": "08a220105e94f750",
+  "verdict": "ok",
+  "why": "NR: Khârn 115 + (10) Khorne Berzerkers 170 = 285.",
+  "fix": null
+ },
+ {
+  "key": "fdaafb6702e8e3c2",
+  "verdict": "ok",
+  "why": "Counts match the models lines: plasma pistol 1+2=3, bolt pistol 7, chainblade 1+7=8, eviscerator 2; Khârn has Gorechild and plasma pistol.",
+  "fix": null
+ },
+ {
+  "key": "e9ea19c0454b173d",
+  "verdict": "fix",
+  "why": "Drops \"friendly\": the rule is \"within 3\\\" of one or more friendly WORLD EATERS INFANTRY units\" (matters in a mirror match). The army does have such units (Jakhals, Eightbound, Slaughterbound's and Khârn's/Lord's units).",
+  "fix": {
+   "def": "Lone Operative while within 3\" of a friendly WORLD EATERS INFANTRY unit"
+  }
+ },
+ {
+  "key": "1eba3c91e07867de",
+  "verdict": "ok",
+  "why": "Trigger is a Charge move (your Charge phase, or the opponent's via Heroic Intervention); the [DEVASTATING WOUNDS] matters in the Fight phase of that turn.",
+  "fix": null
+ },
+ {
+  "key": "b4aa6b68533e3b18",
+  "verdict": "ok",
+  "why": "A Stratagem can target a unit in any phase of either turn.",
+  "fix": null
+ },
+ {
+  "key": "a629626640e11c33",
+  "verdict": "fix",
+  "why": "\"Once per battle round, one model from your army with this ability can use it\" is a per-army limit, and this army has two Daemon Princes with it.",
+  "fix": {
+   "tag": "Once per battle round, per army"
+  }
+ },
+ {
+  "key": "a0a9921caaa031d3",
+  "verdict": "ok",
+  "why": "Helm of Brazen Ire is a Berzerker Warband Enhancement.",
+  "fix": null
+ },
+ {
+  "key": "2346cfcf6595a79a",
+  "verdict": "ok",
+  "why": "Matches \"Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic\".",
+  "fix": null
+ },
+ {
+  "key": "d8a7ee4028c33646",
+  "verdict": "ok",
+  "why": "\"Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have [DEVASTATING WOUNDS]\" = charged this turn: DW until end of turn.",
+  "fix": null
+ },
+ {
+  "key": "4e4e83101df4a99b",
+  "verdict": "ok",
+  "why": "Datasheet loadout: Hellforged weapons (strike/sweep) and Infernal cannon.",
+  "fix": null
+ },
+ {
+  "key": "5a18f707958fb766",
+  "verdict": "ok",
+  "why": "Berzerker Glaive is a Berzerker Warband Enhancement.",
+  "fix": null
+ },
+ {
+  "key": "7ad51defea1e3045",
+  "verdict": "ok",
+  "why": "NR glaive profiles strike A10 D4 / sweep A18 D2 vs base A9 D3 / A17 D1: +1 A and +1 D are included.",
+  "fix": null
+ },
+ {
+  "key": "e71c0812aef86171",
+  "verdict": "fix",
+  "why": "A Charge move can also be made in the opponent's Charge phase (core Heroic Intervention: \"Resolve a charge with your unit\"), and \"each time a model in that unit makes a ... Charge move, it can move horizontally through terrain features\" applies then too (the app already treats charges as either-turn for Battle-lust and Devastating Assault).",
+  "fix": {
+   "ph": [
+    "movement",
+    "charge"
+   ],
+   "turn": "your",
+   "turns": {
+    "charge": "either"
+   }
+  }
+ },
+ {
+  "key": "ea627b1a03ffb244",
+  "verdict": "ok",
+  "why": "Aggressive Advance is the Lord on Juggernaut's ability (\"While this model is leading a unit\").",
+  "fix": null
+ },
+ {
+  "key": "8047940d9bc9febb",
+  "verdict": "ok",
+  "why": "\"Each time this model’s unit is selected to fight\" = Fight phase, either turn.",
+  "fix": null
+ },
+ {
+  "key": "a890df5755b7d20d",
+  "verdict": "ok",
+  "why": "Crush All Who Stand Before Us is on the Lord on Juggernaut datasheet.",
+  "fix": null
+ },
+ {
+  "key": "d75c6c43165f4f82",
+  "verdict": "ok",
+  "why": "\"In your Command phase, you can use this ability\".",
+  "fix": null
+ },
+ {
+  "key": "2f417aa6ebf16952",
+  "verdict": "ok",
+  "why": "Archslaughterer is a Vessels of Wrath Enhancement; the app adds \"Once per battle, per army\" from the text to the row (seen in the render).",
+  "fix": null
+ },
+ {
+  "key": "6d72de2d23529f49",
+  "verdict": "ok",
+  "why": "The Enhancement is on the Lord on Juggernaut (NR options).",
+  "fix": null
+ },
+ {
+  "key": "eccdbfa7a2b9d825",
+  "verdict": "ok",
+  "why": "Blood Surge is on the Khorne Berzerkers datasheet.",
+  "fix": null
+ },
+ {
+  "key": "039302018ddab078",
+  "verdict": "ok",
+  "why": "Murderous Charge is on the Khorne Berzerkers datasheet.",
+  "fix": null
+ },
+ {
+  "key": "6d2950c5c8f9987a",
+  "verdict": "fix",
+  "why": "The Icon triggers \"each time you make a Blessings of Khorne roll\", which this army also makes in the Fight phase (Skulls for the Skull Throne!: \"Make a Blessings of Khorne roll\"), and \"each time the bearer’s unit destroys an enemy unit\" (Fight phase, or your Shooting phase with its 20 pistols; an overwatch kill is the only other case).",
+  "fix": {
+   "ph": [
+    "command",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  }
+ },
+ {
+  "key": "14b552e2180cb5fb",
+  "verdict": "ok",
+  "why": "Icon of Khorne is Khorne Berzerkers wargear (borne by the \"w/ eviscerator and plasma pistol (Icon of Khorne)\" model).",
+  "fix": null
+ },
+ {
+  "key": "ffb89a87553f550e",
+  "verdict": "ok",
+  "why": "Khorne Berzerker base M is 8\" (Khârn's unit); 10\" here comes from \"models in that unit have a Move characteristic of 10\\\"\".",
+  "fix": null
+ },
+ {
+  "key": "1245ce399f9123d9",
+  "verdict": "ok",
+  "why": "NR: \"Battleline*, Berzerkers*, Grenades*, Infantry*, *from combined unit\".",
+  "fix": null
+ },
+ {
+  "key": "7ac6a215047d8dab",
+  "verdict": "ok",
+  "why": "NR: Lord on Juggernaut 125 + (20) Khorne Berzerkers 330 = 455.",
+  "fix": null
+ },
+ {
+  "key": "3caf0e1dae20493d",
+  "verdict": "ok",
+  "why": "Counts match: plasma pistol 1+3+1=5, bolt pistol 15, chainblade 1+15=16, eviscerator 3+1=4; Lord has bladed horn, exalted chainblade, plasma pistol.",
+  "fix": null
+ },
+ {
+  "key": "91d2dc1db80cb848",
+  "verdict": "ok",
+  "why": "\"in your Command phase, you can return one destroyed Bodyguard model\".",
+  "fix": null
+ },
+ {
+  "key": "88397ce191c78da6",
+  "verdict": "ok",
+  "why": "Rage Eternal is the Slaughterbound's ability.",
+  "fix": null
+ },
+ {
+  "key": "c21a15604f383269",
+  "verdict": "ok",
+  "why": "\"at the start of the Fight phase\" with no turn restriction = Fight, either turn.",
+  "fix": null
+ },
+ {
+  "key": "231379af293895c5",
+  "verdict": "ok",
+  "why": "\"Once per battle ... this model can use this ability\"; one Slaughterbound in the army.",
+  "fix": null
+ },
+ {
+  "key": "5fc14251069843f4",
+  "verdict": "ok",
+  "why": "Possessed Lord is the Slaughterbound's ability (\"this model\").",
+  "fix": null
+ },
+ {
+  "key": "eabb7a4cbf9dfbf3",
+  "verdict": "ok",
+  "why": "Lord of the Eightbound is the Slaughterbound's ability.",
+  "fix": null
+ },
+ {
+  "key": "807cc3fe795740f7",
+  "verdict": "ok",
+  "why": "Charge rolls are made in your Charge phase and, via Heroic Intervention, in the opponent's.",
+  "fix": null
+ },
+ {
+  "key": "f8b39a4c97702a3b",
+  "verdict": "ok",
+  "why": "Battle-lust is a Berzerker Warband Enhancement.",
+  "fix": null
+ },
+ {
+  "key": "83e312de5e692834",
+  "verdict": "ok",
+  "why": "The Enhancement is on the Slaughterbound (NR options).",
+  "fix": null
+ },
+ {
+  "key": "a0d2b594aafc28a2",
+  "verdict": "ok",
+  "why": "Melee attacks: Fight phase, either turn.",
+  "fix": null
+ },
+ {
+  "key": "217d30d04b7b74e9",
+  "verdict": "ok",
+  "why": "Rend and Tear is on the Exalted Eightbound datasheet (errata text).",
+  "fix": null
+ },
+ {
+  "key": "77f4e335f0bf4290",
+  "verdict": "ok",
+  "why": "Lacerator A7 (6 +1 Relentless Rage) +3 = 10; \"until the end of the phase ... those weapons have the [Devastating Wounds] ability\"; once per battle, start of the Fight phase.",
+  "fix": null
+ },
+ {
+  "key": "4698cb326c6707a9",
+  "verdict": "ok",
+  "why": "\"targets a MONSTER or VEHICLE unit ... improve the Damage characteristic of that attack by 1\"; a bodyguard ability applies to the whole attached unit (Core 19.04).",
+  "fix": null
+ },
+ {
+  "key": "9f3f0c4e6d27f958",
+  "verdict": "ok",
+  "why": "NR: \"Exalted Eightbound*, *from combined unit\".",
+  "fix": null
+ },
+ {
+  "key": "e6f91a10b33a4770",
+  "verdict": "ok",
+  "why": "NR: Slaughterbound 110 + (3) Exalted Eightbound 130 = 240.",
+  "fix": null
+ },
+ {
+  "key": "a356be64dfc112b1",
+  "verdict": "ok",
+  "why": "Slaughterbound: lacerator and daemonic claw; 1 champion + 2 Exalted Eightbound with chainblades = 3.",
+  "fix": null
+ },
+ {
+  "key": "99d6af4a660d498c",
+  "verdict": "ok",
+  "why": "Melee attacks: Fight phase, either turn.",
+  "fix": null
+ },
+ {
+  "key": "976f71d0a024fb15",
+  "verdict": "ok",
+  "why": "NR: \"Beacons of Rage (Aura)\".",
+  "fix": null
+ },
+ {
+  "key": "c77e335eb8001f8e",
+  "verdict": "ok",
+  "why": "Matches the text; \"a model with an aura ability ... is always within range of its own aura ability\" (Core 22.01), so selfWhen is right; every unit here is WORLD EATERS.",
+  "fix": null
+ },
+ {
+  "key": "0458a65dbc212fff",
+  "verdict": "ok",
+  "why": "1 champion + 2 Eightbound, each with chainblades = 3.",
+  "fix": null
+ },
+ {
+  "key": "67cf14adbd92d038",
+  "verdict": "ok",
+  "why": "\"At the end of your Command phase\".",
+  "fix": null
+ },
+ {
+  "key": "1699a451c5eb6e7f",
+  "verdict": "ok",
+  "why": "Pack Leader + 8 Jakhals with autopistol and chainblades = 9; Dishonoured has paired manglers.",
+  "fix": null
+ },
+ {
+  "key": "416a5f9b81853e1a",
+  "verdict": "ok",
+  "why": "Ranged attacks in your Shooting phase; overwatch is snap shooting, where \"You cannot re-roll hit rolls\".",
+  "fix": null
+ },
+ {
+  "key": "46f8f620dbaf790e",
+  "verdict": "ok",
+  "why": "W12, \"While this model has 1-4 wounds remaining\".",
+  "fix": null
+ },
+ {
+  "key": "211bb480ebe7c73a",
+  "verdict": "ok",
+  "why": "Matches \"targets the closest eligible target within 18\\\", you can re-roll the Hit roll\".",
+  "fix": null
+ },
+ {
+  "key": "06944418fc40b340",
+  "verdict": "ok",
+  "why": "\"each time this model makes an attack, subtract 1 from the Hit roll\" = all attacks.",
+  "fix": null
+ },
+ {
+  "key": "74a94217b1e4eeb9",
+  "verdict": "ok",
+  "why": "NR: 2 Hades autocannons, ectoplasma cannon and claws.",
+  "fix": null
+ },
+ {
+  "key": "d5bf0782f33379a7",
+  "verdict": "ok",
+  "why": "\"In your opponent’s Movement phase\" (8\" per errata).",
+  "fix": null
+ },
+ {
+  "key": "ecf21e85a77020f2",
+  "verdict": "ok",
+  "why": "NR labels it \"Transport Capacity\".",
+  "fix": null
+ },
+ {
+  "key": "cc498c58327e5660",
+  "verdict": "ok",
+  "why": "NR: Armoured tracks, Combi-bolter.",
+  "fix": null
+ },
+ {
+  "key": "8bbf7a332aa81e2d",
+  "verdict": "ok",
+  "why": "\"at the start of the battle round\" belongs to the Command phase per the brief; ongoing effects are covered by the reminders.",
+  "fix": null
+ },
+ {
+  "key": "3dbf71e2a3220efa",
+  "verdict": "ok",
+  "why": "Start of the battle round is not tied to one player's turn.",
+  "fix": null
+ },
+ {
+  "key": "e4c004b9b108f7b0",
+  "verdict": "ok",
+  "why": "True: \"roll eight D6. You can then use those dice to activate up to two Blessings of Khorne\".",
+  "fix": null
+ },
+ {
+  "key": "5a9ae969ab8e38d8",
+  "verdict": "fix",
+  "why": "True as written but incomplete: Archslaughterer makes \"every Blessing of Khorne ... active for this unit until the start of your next turn\", so the Lord's unit has Unbridled Bloodlust's +1 to charge rolls even if it was not rolled (the Fight reminder already says this for the other Blessings).",
+  "fix": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "either",
+   "text": "Unbridled Bloodlust active? +1 to charge rolls (Battle-lust: +1 more for the Slaughterbound’s unit). Archslaughterer used: it is active for the Lord’s unit."
+  }
+ },
+ {
+  "key": "7530d24bdd390428",
+  "verdict": "fix",
+  "why": "Total Carnage summary drops a condition: \"Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+ ...\"; \"fight on death\" invites a model that already fought to fight again.",
+  "fix": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either",
+   "text": "Active Blessings: Martial Excellence [SUSTAINED HITS 1] · Warp Blades [LETHAL HITS] · Decapitating Strikes [DEVASTATING WOUNDS] vs INFANTRY · Rage-fuelled Invigoration: 6\" pile-in and consolidation · Total Carnage: a model destroyed by a melee attack before it has fought this phase fights on a 4+. Archslaughterer used: all six for the Lord’s unit."
+  }
+ },
+ {
+  "key": "ba96e74d92ccbc89",
+  "verdict": "ok",
+  "why": "\"melee attacks have +1 A\" only matters in the Fight phase.",
+  "fix": null
+ },
+ {
+  "key": "dafad866f921cb9f",
+  "verdict": "ok",
+  "why": "Always on, both turns.",
+  "fix": null
+ },
+ {
+  "key": "191987dd68a58903",
+  "verdict": "ok",
+  "why": "\"Friendly WORLD EATERS units\".",
+  "fix": null
+ },
+ {
+  "key": "59fa4425d6212738",
+  "verdict": "ok",
+  "why": "Checked against BSData base profiles: every World Eaters melee A in the app is base +1 (e.g. chainblade 4->5, Gorechild 8->9, hellforged 8/16->9/17, armoured tracks 6->7).",
+  "fix": null
+ },
+ {
+  "key": "07f689269cc54975",
+  "verdict": "fix",
+  "why": "\"every A value\" is not literally true: ranged A values (pistols, autocannons) do not and should not include it; the rule is \"melee attacks have +1 A\".",
+  "fix": {
+   "note": "Already counted: every melee A value in this app includes this +1 A. Do not add it again."
+  }
+ },
+ {
+  "key": "0e4da38b92e20cd4",
+  "verdict": "ok",
+  "why": "True: melee A values include it (BSData base +1).",
+  "fix": null
+ },
+ {
+  "key": "d4e6a256331925ee",
+  "verdict": "ok",
+  "why": "\"WHEN: Any phase.\"",
+  "fix": null
+ },
+ {
+  "key": "a1062782614bae03",
+  "verdict": "ok",
+  "why": "Any phase, no turn restriction.",
+  "fix": null
+ },
+ {
+  "key": "e4f4987cee6cb885",
+  "verdict": "ok",
+  "why": "TARGET: \"One WORLD EATERS unit from your army\".",
+  "fix": null
+ },
+ {
+  "key": "b3b7003329574bb5",
+  "verdict": "ok",
+  "why": "\"WHEN: Fight phase.\"",
+  "fix": null
+ },
+ {
+  "key": "93ea47c5d0cce132",
+  "verdict": "ok",
+  "why": "Fight phase of either turn (a charge move can be made in either turn).",
+  "fix": null
+ },
+ {
+  "key": "429b1dfb317daea4",
+  "verdict": "ok",
+  "why": "TARGET: \"One WORLD EATERS unit from your army\".",
+  "fix": null
+ },
+ {
+  "key": "3dfeecad4911b60b",
+  "verdict": "ok",
+  "why": "\"improve the Armour Penetration characteristic of melee weapons ... by 1\" until end of phase, unit \"made a charge move this turn\".",
+  "fix": null
+ },
+ {
+  "key": "9ec4e56724398e07",
+  "verdict": "ok",
+  "why": "\"WHEN: Fight phase, just after an enemy unit has selected its targets.\"",
+  "fix": null
+ },
+ {
+  "key": "d1ba45843b5d09c0",
+  "verdict": "ok",
+  "why": "Enemy units fight in both players' Fight phases.",
+  "fix": null
+ },
+ {
+  "key": "bcc3a89a82071860",
+  "verdict": "ok",
+  "why": "TARGET: \"One WORLD EATERS unit from your army\".",
+  "fix": null
+ },
+ {
+  "key": "fc0d74e71dfbe33b",
+  "verdict": "ok",
+  "why": "\"Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic\".",
+  "fix": null
+ },
+ {
+  "key": "901ed08dde8345e1",
+  "verdict": "ok",
+  "why": "\"WHEN: Fight phase, just after a WORLD EATERS unit from your army destroys a CHARACTER or MONSTER model.\"",
+  "fix": null
+ },
+ {
+  "key": "209f088e96f12b75",
+  "verdict": "ok",
+  "why": "Fight phase of either turn.",
+  "fix": null
+ },
+ {
+  "key": "7f1b9c718d9b665b",
+  "verdict": "ok",
+  "why": "TARGET: \"That WORLD EATERS unit\".",
+  "fix": null
+ },
+ {
+  "key": "efe6a85ddeb9c4a5",
+  "verdict": "ok",
+  "why": "\"WHEN: Your Movement phase, just after ... is selected to Advance\".",
+  "fix": null
+ },
+ {
+  "key": "892b7f06aeaa2155",
+  "verdict": "ok",
+  "why": "\"Your Movement phase\".",
+  "fix": null
+ },
+ {
+  "key": "5350277d096742d2",
+  "verdict": "ok",
+  "why": "KHORNE BERZERKERS: selects Khârn's and the Lord's attached units (an attached unit has all keywords of its component units, Core 19.03); no other unit has it.",
+  "fix": null
+ },
+ {
+  "key": "a4b4180147c1e850",
+  "verdict": "ok",
+  "why": "\"WHEN: Your opponent’s Shooting phase\".",
+  "fix": null
+ },
+ {
+  "key": "b2bfba9afb7fa53c",
+  "verdict": "ok",
+  "why": "\"Your opponent’s Shooting phase\".",
+  "fix": null
+ },
+ {
+  "key": "bffec4d6d92e83f7",
+  "verdict": "ok",
+  "why": "TARGET: \"One KHORNE BERZERKERS unit\": Khârn's and the Lord's units.",
+  "fix": null
+ },
+ {
+  "key": "a532555fd50c5758",
+  "verdict": "ok",
+  "why": "Quoted verbatim from the Wahapedia World Eaters FAQ; consistent with Core 19.04 (a bodyguard ability ends once the attacking unit has resolved its attacks).",
+  "fix": null
+ },
+ {
+  "key": "dd399e49609028fc",
+  "verdict": "ok",
+  "why": "\"is selected to fight\" = Fight phase.",
+  "fix": null
+ },
+ {
+  "key": "fb03df62e5954c81",
+  "verdict": "ok",
+  "why": "Units are selected to fight in both turns.",
+  "fix": null
+ },
+ {
+  "key": "b9a03440387b1baf",
+  "verdict": "fix",
+  "why": "Rule says \"friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units)\"; the faction keyword is missing. Same units selected here (two Daemon Princes, Lord's and Slaughterbound's units; Khârn excluded), but the filter should match the wording.",
+  "fix": {
+   "needs": {
+    "all": [
+     "Faction: World Eaters",
+     "Character"
+    ],
+    "none": [
+     "Epic Hero"
+    ]
+   }
+  }
+ },
+ {
+  "key": "c6414cafe42dd01e",
+  "verdict": "ok",
+  "why": "Choice shown as \"or\", CHARACTER models only, on selection to fight: matches \"can have: [CLEAVE 1]. Or: +1 AP\".",
+  "fix": null
+ },
+ {
+  "key": "e0c2948bc46a034a",
+  "verdict": "ok",
+  "why": "\"WHEN: Any phase\".",
+  "fix": null
+ },
+ {
+  "key": "370d78758068d9b9",
+  "verdict": "ok",
+  "why": "Any phase, either turn.",
+  "fix": null
+ },
+ {
+  "key": "98b3272a81f1b245",
+  "verdict": "fix",
+  "why": "TARGET is \"That WORLD EATERS CHARACTER unit\" (excluding EPIC HERO); faction keyword missing. No change in who is offered in this army.",
+  "fix": {
+   "needs": {
+    "all": [
+     "Faction: World Eaters",
+     "Character"
+    ],
+    "none": [
+     "Epic Hero"
+    ]
+   }
+  }
+ },
+ {
+  "key": "aaf6aa9feef316cb",
+  "verdict": "ok",
+  "why": "\"Your unit has Feel No Pain 4+ against mortal wounds.\"",
+  "fix": null
+ },
+ {
+  "key": "a329d040325f33fd",
+  "verdict": "ok",
+  "why": "\"WHEN: Fight phase, when ... is selected to fight\".",
+  "fix": null
+ },
+ {
+  "key": "2a59ee4f5cc58859",
+  "verdict": "ok",
+  "why": "Fight phase, either turn.",
+  "fix": null
+ },
+ {
+  "key": "86680fcc9c89b55b",
+  "verdict": "fix",
+  "why": "TARGET is \"That WORLD EATERS CHARACTER unit\" (excluding EPIC HERO); faction keyword missing. No change in who is offered in this army.",
+  "fix": {
+   "needs": {
+    "all": [
+     "Faction: World Eaters",
+     "Character"
+    ],
+    "none": [
+     "Epic Hero"
+    ]
+   }
+  }
+ },
+ {
+  "key": "1ad5c7528c89ec8c",
+  "verdict": "ok",
+  "why": "Both bonuses apply (bullets with no \"Or\"): \"CHARACTER models' melee attacks have: +1 A. +2 S.\"",
+  "fix": null
+ },
+ {
+  "key": "ccb453e4fbe446f0",
+  "verdict": "ok",
+  "why": "\"WHEN: Your opponent's Movement phase\".",
+  "fix": null
+ },
+ {
+  "key": "47498fadf3608ff4",
+  "verdict": "ok",
+  "why": "\"Your opponent's Movement phase\".",
+  "fix": null
+ },
+ {
+  "key": "ed64c2b9611ab5ff",
+  "verdict": "fix",
+  "why": "TARGET is \"That WORLD EATERS CHARACTER unit\" (no EPIC HERO exclusion, so Khârn is rightly included); faction keyword missing. No change in who is offered in this army.",
+  "fix": {
+   "needs": {
+    "all": [
+     "Faction: World Eaters",
+     "Character"
+    ]
+   }
+  }
+ },
+ {
+  "key": "1982c067029685fc",
+  "verdict": "ok",
+  "why": "Anchored to the start: matches \"Blessings of Khorne\", \"Blessing of Khorne\" (Archslaughterer) and \"Blessings of Khorne roll\" (Icon, Skulls, Favoured of Khorne), all of which mean the army rule; nothing else in World Eaters text starts that way.",
+  "fix": null
+ }
+]

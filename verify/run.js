@@ -56,5 +56,38 @@ step('helpers', ['verify/helpers.js']);
 
 const ok = Object.values(steps).every(s => s.ok);
 writeJSON(path.join(ROOT, 'verify/report.json'), { hash, at:new Date().toISOString(), ok, steps:Object.fromEntries(Object.entries(steps).map(([k, v]) => [k, { ok:v.ok, summary:v.out.split('\n')[0] }])) });
+writeVerified(ok);
+
+// verified.js: what the app shows under "Checked <date>" (the sources and what was compared)
+function writeVerified(ok){
+  const { readJSON, loadData } = require('./lib');
+  const D = loadData(), out = n => readJSON(path.join(ROOT, 'verify/out', n + '.json'), {});
+  const total = c => typeof c === 'number' ? c : Object.values(c || {}).reduce((t, v) => t + total(v), 0);
+  const help = readJSON(path.join(ROOT, 'verify/out/helpers.json.summary'), {});
+  const render = out('render');
+  const screens = Object.values(render.checked || {}).reduce((t, c) => t + (c.screens || 0), 0);
+  const checks = [
+    { label:'Your New Recruit lists:', detail:'every unit, model count, wargear, enhancement, stat line, weapon profile and ability matches the PDF (' + total(out('nr').checked) + ' facts).' },
+    { label:'BSData,', detail:'the data New Recruit is built from: every stat, weapon, keyword, ability and points value (' + total(out('bsdata').checked) + ' facts).' },
+    { label:'Games Workshop’s rules text:', detail:'every rule, enhancement and stratagem is the wording of GW’s newest official document, or Wahapedia where GW has none (' + total(out('texts').checked) + ' texts).' },
+    { label:'Rules logic:', detail:'each stratagem is offered in the phases its WHEN names and to the units its TARGET names; every number in a reminder is in the rule it cites.' },
+    { label:'The app’s own notes:', detail:(help.approved || 0) + ' footnotes, reminders, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off.' },
+    { label:'Every screen:', detail:screens + ' screens and popups render, list every ability, open every link and find every name in search.' }
+  ];
+  const nr = { cooking:'Cooking', 'purge-freeblade':'Purge Freeblade', hurrdurr:'Hurrdurr', oioioi:'oioioi', nidzillas:'Nidzillas' };
+  const gw = fs.existsSync(path.join(ROOT, 'verify/.cache/gw')) ? fs.readdirSync(path.join(ROOT, 'verify/.cache/gw')).filter(f => f.endsWith('.pdf')).map(f => f.replace(/^eng_(\d\d-\d\d_)?|-[a-z0-9]{10}-[a-z0-9]{10}\.pdf$/g, '').replace(/_/g, ' ')) : [];
+  const sources = [
+    { label:'New Recruit:', detail:D.armies.map(a => (nr[a.id] || a.name)).join(', ') + ' (your PDFs).' },
+    { label:'BSData:', detail:'wh40k-11e, commit 9b8207c.' },
+    { label:'Games Workshop:', detail:gw.join('; ') + '.' },
+    { label:'Wahapedia:', detail:'faction pages for Orks (no GW Faction Pack yet) and the errata and FAQs it lists.' }
+  ];
+  const asks = [];
+  for(const f of Object.values(D.factions)){ for(const r of f.armyRules) if(r.ask) asks.push(r.name); for(const d of Object.values(f.detachments)){ if(d.rule && d.rule.ask) asks.push(d.rule.name); for(const x of d.stratagems || []) if(x.ask) asks.push(x.name); } }
+  for(const a of D.armies) for(const u of a.units) for(const ab of u.abilities) if(ab.ask && !asks.includes(ab.name)) asks.push(ab.name);
+  const v = { ok, build:hash.slice(0, 10), data:D.version, date:new Date().toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' }), checks, sources,
+    asks:asks.length ? asks.length + ' rules in these armies allow two readings (' + asks.join(', ') + '): each army’s Before the battle screen lists the ones it uses, under Agree with your opponent.' : '' };
+  fs.writeFileSync(path.join(ROOT, 'verified.js'), '// written by verify/run.js: the last verification of this app.html + data.js\nwindow.WH_VERIFIED = ' + JSON.stringify(v, null, 1) + ';\n');
+}
 console.log(ok ? '\nVERIFIED: every check passes for this app.html + data.js' : '\nNOT VERIFIED: build.js will refuse to build');
 process.exit(ok ? 0 : 1);

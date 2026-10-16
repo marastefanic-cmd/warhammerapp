@@ -44,6 +44,7 @@ let body = app.replace(/^(<title>.*<\/title>|<link [^>]*>|<meta [^>]*>)\n/gm, (l
 const tag = '<script src="data.js"></script>';
 if (!body.includes(tag)) throw new Error('data.js script tag not found in app.html');
 body = body.replace(tag, `<script src="data.js?v=${build}"></script>`);
+body = body.replace('<script src="verified.js"></script>', `<script src="verified.js?v=${build}"></script>`);
 
 const head = `<!doctype html>
 <html lang="en">
