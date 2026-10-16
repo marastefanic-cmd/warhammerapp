@@ -82,6 +82,11 @@ summary::-webkit-details-marker{display:none}
 .empty{padding:20px 12px; text-align:center; color:var(--muted)}
 .il{font:600 11px/1 var(--f-head); letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-right:6px}
 .usedby{font-size:13.5px; color:var(--muted)}
+.pg{border-top:1px solid var(--line)}
+.pgr{display:grid; grid-template-columns:92px minmax(0,1fr); gap:0 10px; padding:7px 2px 6px; border-bottom:1px solid var(--line)}
+.pgk{font:600 11.5px/1.35 var(--f-head); letter-spacing:.08em; text-transform:uppercase; color:var(--muted); padding-top:3px; hyphens:manual}
+.pgv{font-size:14.5px; line-height:1.55; min-width:0}
+.pgv .from{color:var(--muted)}
 
 /* ---------- top bar ---------- */
 .top{position:sticky; top:env(safe-area-inset-top, 0px); z-index:20; background:var(--bg); border-bottom:1px solid var(--line);
@@ -361,6 +366,7 @@ summary::-webkit-details-marker{display:none}
     <symbol id="i-blade" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14.5 3.5 20.5 3.5 20.5 9.5 9 21 3 15 14.5 3.5ZM7 12l5 5M4.5 19.5l-1 1"/></symbol>
     <symbol id="i-spark" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3l2.2 6.3L21 12l-6.8 2.7L12 21l-2.2-6.3L3 12l6.8-2.7L12 3Z"/></symbol>
     <symbol id="i-book" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15ZM4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/></symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 21V4m0 0h11l-2 4 2 4H5"/></symbol>
     <symbol id="i-base" viewBox="0 0 24 24"><ellipse cx="12" cy="15" rx="9" ry="4" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M3 15v-2c0-2.2 4-4 9-4s9 1.8 9 4v2"/></symbol>
     <symbol id="i-back" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></symbol>
     <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></symbol>
@@ -407,8 +413,8 @@ const TURN_NAME = { your:'Your turn', opp:'Their turn', either:'Either turn' };
 const ROLE_ORDER = ['Epic Hero','Character','Battleline','Infantry','Mounted','Beast','Swarm','Monster','Vehicle','Dedicated Transport','Fortification','Other'];
 const ROLE_LABEL = { 'Epic Hero':'Epic Heroes', 'Character':'Characters', 'Battleline':'Battleline', 'Infantry':'Infantry', 'Mounted':'Mounted', 'Beast':'Beasts', 'Swarm':'Swarms',
   'Monster':'Monsters', 'Vehicle':'Vehicles', 'Dedicated Transport':'Dedicated Transports', 'Fortification':'Fortifications', 'Other':'Other' };
-const SCREEN_TITLE = { units:'Units', strats:'Stratagems', ranged:'Ranged weapons', melee:'Melee weapons', abilities:'Abilities', rules:'Rules & keywords', bases:'Bases & proxies' };
-const BACK_TITLE = { ranged:'Ranged', melee:'Melee', rules:'Rules', bases:'Bases' };
+const SCREEN_TITLE = { pregame:'Before the battle', units:'Units', strats:'Stratagems', ranged:'Ranged weapons', melee:'Melee weapons', abilities:'Abilities', rules:'Rules & keywords', bases:'Bases & proxies' };
+const BACK_TITLE = { pregame:'Pre-game', ranged:'Ranged', melee:'Melee', rules:'Rules', bases:'Bases' };
 const HUNTER_KW = 'HUNTER: MONSTER/VEHICLE';
 const KEY_LABEL = { range:'RNG', A:'A', BS:'BS', WS:'WS', S:'S', AP:'AP', D:'D' };
 const chev = '<svg class="chev" aria-hidden="true"><use href="#i-down"/></svg>';
@@ -691,6 +697,7 @@ function screenArmy(){
     '<label class="search"><svg aria-hidden="true"><use href="#i-search"/></svg><input id="armyQ" type="search" placeholder="Find a unit, weapon, keyword, rule…" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" aria-label="Search this army"></label>' +
     '<div id="qres"></div>' +
     '<div id="armyMenu"><div class="list">' +
+      row('pregame', 'i-flag', 'Before the battle', '') +
       row('units', 'i-units', 'Units', unitCount(a)) +
       row('strats', 'i-cards', 'Stratagems', usableStrats(a).length) +
       row('ranged', 'i-gun', 'Ranged weapons', weaponCount(a, 'ranged')) +
@@ -1285,6 +1292,71 @@ function screenBases(){
     '<p class="note">From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.</p>';
 }
 
+/* ---------- screen: before the battle ----------
+   Everything decided or set up before the first turn, and every once-per-battle resource,
+   gathered from the list: the paper has it spread over many pages. Every line opens its full text. */
+const PREGAME_RE = /before the battle|declare battle formations|read mission objectives|pre-?battle|\bdeploy|redeploy|infiltrat/i;
+function screenPregame(){
+  const a = army(), f = faction(), units = a.units;
+  const row = (k, v) => v ? '<div class="pgr"><span class="pgk">' + k + '</span><span class="pgv">' + v + '</span></div>' : '';
+  const sec = (title, body) => body ? '<div class="sec-h"><h2>' + title + '</h2></div><div class="pg">' + body + '</div>' : '';
+  // the same ability on several units is one line: "Singular Purpose · Assimilator (280), Norn Emissary ×2"
+  const group = list => { const m = new Map(); for(const [u, ab] of list){ const k = ab.name + '|' + ab.text; if(!m.has(k)) m.set(k, { ab, units:[] }); m.get(k).units.push(u); } return [...m.values()]; };
+  const abLine = g => linkTo('ability', abilityKey(g.ab), g.ab.name) + ' <span class="from">· ' + esc(unitNames(g.units)) + '</span>';
+  const rulesOf = units.length ? f.armyRules.filter(r => !inertRule(r.name)).map(r => ({ r, src:f.name + ' army rule' }))
+    .concat(detachments().filter(d => d.rule).map(d => ({ r:d.rule, src:d.name }))) : [];
+  const ruleLine = x => linkTo('rule', x.r.name, x.r.name) + ' <span class="from">· ' + esc(x.src) + '</span>';
+  const nameLink = u => linkTo('unit', u.id, u.short || u.name);   // without its enhancement: the line says it
+  const allAbs = units.flatMap(u => u.abilities.filter(ab => !naReason(ab)).map(ab => [u, ab]));
+
+  // your list
+  const warlord = units.filter(u => u.warlord);
+  const enh = units.filter(u => u.enhancement).map(u => { const e = detachments().flatMap(d => d.enhancements).find(x => x.name === u.enhancement);
+    return linkTo('ability', abilityKey(u.abilities.find(ab => ab.name === u.enhancement) || { name:u.enhancement, text:'' }), u.enhancement) + (e && e.pts ? ' <span class="from">' + e.pts + ' pts</span>' : '') + ' on ' + nameLink(u); });
+  const led = units.filter(u => u.leads).map(u => nameLink(u) + ' leads ' + esc(u.leads));
+  let h = sec('Your list',
+    row('Warlord', warlord.map(unitLink).join(', ')) +
+    row('Enhance&shy;ments', enh.join('<br>')) +
+    row('Attached', led.join('<br>')) +
+    row('Detach&shy;ments', esc(detachments().map(d => d.name + (d.dp ? ' (' + d.dp + ' DP)' : '')).join(', ')) + (a.disposition ? '<br><span class="from">Disposition:</span> ' + esc(a.disposition) : '')) +
+    row('Points', esc(a.pointsUsed + ' / ' + a.points + ' · ' + a.battleSize)));
+
+  // declare battle formations: reserves and transports
+  const ds = units.filter(u => unitRules(u).some(r => ruleKey(r) === 'Deep Strike'));
+  const dsPts = ds.reduce((t, u) => t + (u.pts || 0) * (u.copies || 1), 0), half = Math.floor(a.points / 2);
+  const transports = units.filter(u => hasKw(u, 'Transport')).map(u => { const ab = u.abilities.find(x => /transport capacity/i.test(x.text)); return unitLink(u) + (ab ? ': <span class="from">' + rt(ab.text).replace(/^<p>|<\/p>$/g, '') + '</span>' : ''); });
+  h += sec('Declare battle formations',
+    row('Reserves', linkTo('rule', 'Strategic Reserves', 'Strategic reserves') + ': up to ' + half + ' pts (half the ' + a.points + ' limit); they arrive from battle round 2, and any still off the table at the end of round 3 are destroyed.' +
+      (ds.length ? '<br><span class="from">Can ' + linkTo('rule', 'Deep Strike', 'Deep Strike') + ':</span> ' + ds.map(u => unitLink(u) + ' <span class="from">' + u.pts + ' pts' + (u.copies > 1 ? ' each' : '') + '</span>').join(', ') + (ds.length > 1 ? ' <span class="from">(all: ' + dsPts + ' pts)</span>' : '') : '')) +
+    row('Transports', transports.join('<br>')));
+
+  // deployment and pre-battle abilities
+  const scouts = units.filter(u => unitRules(u).some(r => /^scouts|^infiltrators/i.test(r)));
+  const pre = group(allAbs.filter(([u, ab]) => PREGAME_RE.test(ab.text) && !/start of the first battle round/i.test(ab.text)));
+  h += sec('Deploying',
+    row('Scouts', scouts.map(u => unitLink(u) + ' <span class="from">' + esc(unitRules(u).filter(r => /^scouts|^infiltrators/i.test(r)).join(', ')) + '</span>').join('<br>')) +
+    row('Abilities', pre.map(abLine).join('<br>')) +
+    row('Rules', rulesOf.filter(x => PREGAME_RE.test(x.r.text)).map(ruleLine).join('<br>')));
+
+  // decided at the start of the battle or of every battle round
+  const first = group(allAbs.filter(([u, ab]) => /start of the first battle round/i.test(ab.text)));
+  const round = rulesOf.filter(x => /start of (the|each|every) battle round/i.test(x.r.text)).map(ruleLine)
+    .concat(group(allAbs.filter(([u, ab]) => /start of (the|each|every) battle round/i.test(ab.text) && !/first battle round/i.test(ab.text))).map(abLine));
+  h += sec('Start of the battle', row('Round 1', first.map(abLine).join('<br>')) + row('Every round', round.join('<br>')));
+
+  // once per battle: the resources you spend once
+  const onceB = x => /once per battle(?! round)/i.test(x);
+  const onceRules = f.armyRules.filter(r => !inertRule(r.name) && onceB((r.tag || '') + ' ' + r.text)).map(r => ({ r, src:f.name + ' army rule' }))
+    .concat(detachments().filter(d => d.rule && onceB(d.rule.text)).map(d => ({ r:d.rule, src:d.name })));
+  const onceAbs = group(allAbs.filter(([u, ab]) => onceB((ab.tag || '') + ' ' + ab.text)));
+  const onceStrats = allStratagems().filter(s => eligible(s).length && onceB([s.limit, s.restrictions, s.effect].join(' ')));
+  h += sec('Once per battle',
+    row('Rules', onceRules.map(ruleLine).join('<br>')) +
+    row('Abilities', onceAbs.map(g => abLine(g) + (/per army/i.test(onceTag(g.ab)) ? ' <span class="tg once">per army</span>' : '')).join('<br>')) +
+    row('Strata&shy;gems', onceStrats.map(s => linkTo('strat', s.id, s.cp + 'CP ' + s.name)).join('<br>')));
+  return h + '<p class="note">Gathered from this list’s datasheets and rules; each line opens the full text.</p>';
+}
+
 /* ---------- screen: rules & keywords ---------- */
 const xp = (name, sub, tags, body, open) => '<details class="xp"' + (open ? ' open' : '') + '><summary><span class="xh"><b>' + esc(name) + '</b>' + (sub ? '<span>' + esc(sub) + '</span>' : '') + '</span>' +
   (tags || '') + chev + '</summary><div class="body">' + body + '</div></details>';
@@ -1340,6 +1412,7 @@ function render(){
   else if(s === 'abilities') v.innerHTML = screenAbilities();
   else if(s === 'rules') v.innerHTML = screenRules();
   else if(s === 'bases') v.innerHTML = screenBases();
+  else if(s === 'pregame') v.innerHTML = screenPregame();
   setBar('subbar', sub);
   setBar('bbar', bot);
   measure();
