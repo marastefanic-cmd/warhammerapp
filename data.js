@@ -191,7 +191,7 @@ const FACTIONS = {
         ],
         stratagems:[
           { id:'crazed-rampage', name:'Crazed Rampage', cp:1, phases:['fight'], turn:'either', needs:{ all:['Walker'], none:['Titanic'] },
-            note:'Wahapedia shows DEFF DREAD struck through. No unit in this list has it either way, so the roll is a 4+.',
+            note:'Wahapedia shows DEFF DREAD struck through, but current guides (Tabletop Battles, 1d6chan) still give Deff Dreads the +3. No unit in this list has DEFF DREAD either way, so here the roll is a 4+.',
             when:'Fight phase, when an enemy unit targets a friendly **ORKS WALKER** unit (excluding **TITANIC** units).',
             target:'That **ORKS WALKER** unit.',
             effect:'When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one D6, with +3 to the result if your unit has ~~**DEFF DREAD**~~:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.' },
@@ -239,7 +239,7 @@ const FACTIONS = {
             target:'One **IMPERIAL KNIGHTS** unit from your army that has not been selected to shoot or fight this phase.',
             effect:'Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9" of your unit, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1.' },
           { id:'full-tilt', name:'Full Tilt', cp:1, phases:['movement'], turn:'your', needs:{ all:['Faction: Imperial Knights'] },
-            note:'Wahapedia shows DESTRIER struck through, so as printed only ARMIGER units get 9" (this list has none). The Knight Destriers here have the KNIGHT DESTRIER keyword, not DESTRIER, so as printed they get 6".',
+            note:'Wahapedia shows DESTRIER struck through. Current guides (Tabletop Battles, 1d6chan) read it as Destriers getting 9", which is how most players will play your Knight Destriers. Check with your opponent.',
             when:'Your Movement phase.',
             target:'One **IMPERIAL KNIGHTS** unit from your army.',
             effect:'Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6" to the Move characteristic of models in your unit, or 9" instead if your unit is an **ARMIGER** or ~~**DESTRIER**~~ unit.' },
