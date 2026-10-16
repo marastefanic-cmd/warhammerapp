@@ -10,7 +10,8 @@
 //   bsdata      verify/bsdata.js: every unit fact equals BSData, the data New Recruit is built from
 //   nr          verify/nr.js: everything the owner's New Recruit PDFs print is in the app, identically
 //   texts       verify/texts.js: every rules text equals GW's official documents (or Wahapedia)
-//   screens     verify/render.js: every screen and popup renders; screen-level checks
+//   screens     verify/render.js: every screen and popup renders; screen-level checks; no sideways scroll
+//   small phone the same at 320px wide
 //   snapshots   the text of every screen equals the accepted snapshot (verify/snapshots/)
 //   helpers     verify/helpers.js: every judgement the app adds is signed off (verify/approvals.json)
 const { spawnSync } = require('child_process');
@@ -38,7 +39,9 @@ step('texts', ['verify/texts.js']);
 // the screens need the built page: build it without the gate, check it, and the real build follows
 const b = node(['build.js'], { VERIFY_BUILDING:'1' });
 if(b.status !== 0){ console.log(b.stdout + b.stderr); process.exit(1); }
-step('screens', ['verify/render.js'], { NODE_PATH:process.env.NODE_PATH || spawnSync('npm', ['root', '-g'], { encoding:'utf8' }).stdout.trim() });
+const NODE_PATH = process.env.NODE_PATH || spawnSync('npm', ['root', '-g'], { encoding:'utf8' }).stdout.trim();
+step('screens', ['verify/render.js'], { NODE_PATH });
+step('small phone', ['verify/render.js'], { NODE_PATH, VERIFY_WIDTH:'320' });   // the same checks at 320px, where layouts break first
 
 // snapshots: any change to any screen is shown, and must be accepted on purpose
 const snapDir = path.join(ROOT, 'verify/snapshots'), outDir = path.join(ROOT, 'verify/out/snapshots');

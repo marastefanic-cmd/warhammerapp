@@ -16,11 +16,14 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
 (async () => {
   const site = await serve(ROOT);
   const browser = await chromium.launch({ executablePath:'/opt/pw-browsers/chromium' });
-  const page = await (await browser.newContext({ viewport:{ width:390, height:844 } })).newPage();
+  const W = +(process.env.VERIFY_WIDTH || 390);   // run.js checks 390 (snapshots) and 320 (layout)
+  const page = await (await browser.newContext({ viewport:{ width:W, height:844 } })).newPage();
   const pageErrors = [];
   page.on('pageerror', e => pageErrors.push(e.message));
-  await page.route(/^https?:\/\/(?!127\.0\.0\.1)/, r => r.abort());   // fonts etc.: not needed for text
+  // only the app's own files and its web fonts (the layout checks need the real fonts' widths)
+  await page.route(/^https?:\/\/(?!127\.0\.0\.1|fonts\.googleapis\.com|fonts\.gstatic\.com)/, r => r.abort());
   await page.goto(site.url + 'index.html');
+  await page.evaluate(() => document.fonts.ready);
   await page.evaluate(() => { localStorage.clear(); sessionStorage.clear(); });
   await page.reload();
 
@@ -42,8 +45,9 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
           .map(x => Object.entries(x.dataset).filter(([k]) => ['rule','strat','ability','enh','unit'].includes(k)).map(([k, v]) => k + ':' + v)[0]) }));
         const links = [...document.querySelectorAll('#view [data-rule],#view [data-strat],#view [data-ability],#view [data-enh],#view [data-kw],#sheetIn [data-rule],#sheetIn [data-strat],#sheetIn [data-ability],#sheetIn [data-enh],#sheetIn [data-kw]')]
           .map(x => Object.entries(x.dataset).filter(([k]) => ['rule','strat','ability','enh','kw'].includes(k)).map(([k, v]) => k + ':' + v)[0]);
-        return { title:$('#top').innerText.replace(/\s+/g, ' ').trim(), text:host.innerText, hs, links };
+        return { title:$('#top').innerText.replace(/\s+/g, ' ').trim(), text:host.innerText, hs, links, overflow:document.documentElement.scrollWidth - innerWidth };
       }, [String(fn), HELPER_SEL]);
+      if(r.overflow > 0) fail('no-sideways-scroll', a.id, label, 'the page is ' + r.overflow + 'px wider than the phone');
       snap.push('######## ' + label + ' · ' + r.title + '\n' + r.text.replace(/[ \t]+\n/g, '\n').replace(/\n{3,}/g, '\n\n').trim());
       for(const h of r.hs){
         const t = normText(h.text);
@@ -60,6 +64,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       const r = await take(s + (extra ? ' ' + JSON.stringify(extra) : ''), `() => { hideSheet(); ${extra ? `Object.assign(filt, ${JSON.stringify(extra)}); openStrats.clear(); allStratagems().forEach(x => openStrats.add(x.id));` : ''} go({ s:'${s}', army:'${a.id}' }); }`);
       r.links.forEach(l => links.add(l));
     };
+    if(a === armies[0]) await take('home', `() => { hideSheet(); go({ s:'home' }); }`);
     for(const s of ['army','pregame','units','ranged','melee','abilities','rules','bases']) await screen(s);
     for(const turn of ['all','your','opp']) for(const phase of ['all','command','movement','shooting','charge','fight']) await screen('strats', { turn, phase });
     for(const u of a.units){
@@ -138,14 +143,14 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     }, a.id);
     for(const [check, where, detail] of res) fail(check, a.id, where, detail);
 
-    fs.writeFileSync(path.join(ROOT, 'verify/out/snapshots', a.id + '.txt'), snap.join('\n\n') + '\n');
+    if(W === 390) fs.writeFileSync(path.join(ROOT, 'verify/out/snapshots', a.id + '.txt'), snap.join('\n\n') + '\n');
     counts[a.id] = { screens:snap.length, links:links.size };
   }
   if(pageErrors.length) fail('page-errors', '', '', pageErrors.join(' | '));
 
-  writeJSON(path.join(ROOT, 'verify/out/helpers.json'), [...helpers.values()].map(h => Object.assign(h, { refs:[...h.refs].sort() })).sort((x, y) => x.text.localeCompare(y.text)));
-  writeJSON(path.join(ROOT, 'verify/out/render.json'), { checked:counts, helpers:helpers.size, failures });
-  console.log('render: ' + Object.values(counts).reduce((t, c) => t + c.screens, 0) + ' screens and popups, ' + helpers.size + ' helper texts, ' + failures.length + ' failures');
+  if(W === 390) writeJSON(path.join(ROOT, 'verify/out/helpers.json'), [...helpers.values()].map(h => Object.assign(h, { refs:[...h.refs].sort() })).sort((x, y) => x.text.localeCompare(y.text)));
+  writeJSON(path.join(ROOT, 'verify/out/render' + (W === 390 ? '' : '-' + W) + '.json'), { width:W, checked:counts, helpers:helpers.size, failures });
+  console.log('render at ' + W + 'px: ' + Object.values(counts).reduce((t, c) => t + c.screens, 0) + ' screens and popups, ' + helpers.size + ' helper texts, ' + failures.length + ' failures');
   for(const f of failures.slice(0, 60)) console.log('  ' + f.check + ' · ' + f.army + ' · ' + f.where + ' · ' + f.detail);
   await browser.close(); site.close();
   process.exit(failures.length ? 1 : 0);

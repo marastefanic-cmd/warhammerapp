@@ -41,12 +41,6 @@
   "at": "2026-10-16",
   "why": "Any phase, either turn."
  },
- "02be78b974eb6522": {
-  "verdict": "ok",
-  "by": "review:oioioi",
-  "at": "2026-10-16",
-  "why": "NR: Ectoplasma destructor, 2x Heavy reaper autocannon, Two excruciator cannons, Shearing claws; legal per GW Defiler options (baleflamer and HML each swap to a heavy reaper autocannon)."
- },
  "035ba314f3f0539b": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -497,12 +491,6 @@
   "at": "2026-10-16",
   "why": "\"Once per turn, when your opponent targets a unit ... with a stratagem\": any phase, either turn."
  },
- "25ba3bbb347c6d6b": {
-  "verdict": "ok",
-  "by": "review:core-code",
-  "at": "2026-10-16",
-  "why": "True: \"selected to attack\" is 04.01.05 in the Wahapedia/app appendix; the term does not appear in the printed Core Rules PDF."
- },
  "26b82ae697280554": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -586,6 +574,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "W 16; \"While this model has 1-6 wounds remaining\" - band and W match the datasheet."
+ },
+ "2dc2a46ec9b32a4e": {
+  "verdict": "ok",
+  "by": "review:round2",
+  "at": "2026-10-16",
+  "why": "Only \"MOBILE\" (Super-Heavy Walker) matches; no unit, ability or weapon name starts with \"Mobile\". \"INFANTRY/BEASTS/SWARM/MOBILE\" does not start with it."
  },
  "2de8d5d794d854fd": {
   "verdict": "ok",
@@ -773,6 +767,12 @@
   "at": "2026-10-16",
   "why": "Counts match: plasma pistol 1+3+1=5, bolt pistol 15, chainblade 1+15=16, eviscerator 3+1=4; Lord has bladed horn, exalted chainblade, plasma pistol."
  },
+ "3d58512771b1037d": {
+  "verdict": "ok",
+  "by": "review:round2",
+  "at": "2026-10-16",
+  "why": "\"at the start of your Shooting phase\" = your turn only."
+ },
  "3d7f024547e15420": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -809,6 +809,12 @@
   "at": "2026-10-16",
   "why": "\"once per battle ... you can unleash the Shadow in the Warp\": the player unleashes it once, and it is shown once, as an army rule, not on each unit."
  },
+ "4072d27b284335fd": {
+  "verdict": "ok",
+  "by": "review:round2",
+  "at": "2026-10-16",
+  "why": "True: the printed rules have no MOBILE entry; in 13.06 only the dense-terrain line \"INFANTRY/BEASTS/SWARM/MOBILE models can move horizontally …\" names it, and the next line (the 2\" limit for other models) is what it lifts. Elsewhere MOBILE appears only where Super-Heavy Walker grants it, which the note does not deny."
+ },
  "40a03520db405ab5": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -826,6 +832,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "Ranged attacks in your Shooting phase; overwatch is snap shooting, where \"You cannot re-roll hit rolls\"."
+ },
+ "41c11f0ca452acee": {
+  "verdict": "ok",
+  "by": "review:round2",
+  "at": "2026-10-16",
+  "why": "\"You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit\" (15.11): matches() drops a unit only when it is VEHICLE and neither CHARACTER nor WALKER. In these armies that excludes only the Chaos Rhino; Killa Kans, Forgefiends, Defiler, Dakkarigs and Knights (WALKER) and non-vehicles (e.g. Deffkoptas, MOUNTED) stay eligible. No TITANIC exclusion in this stratagem, correctly."
  },
  "41f5c3fc3d84f28e": {
   "verdict": "ok",
@@ -1187,6 +1199,12 @@
   "at": "2026-10-16",
   "why": "Dread Mob enhancement taken by this model (NR options \"Cybork Boosta\")."
  },
+ "5b3699800fdb329e": {
+  "verdict": "ok",
+  "by": "review:round2",
+  "at": "2026-10-16",
+  "why": "\"keep re-rolling duplicate results\" can mean duplicate dice numbers or duplicate table rows (the table is headed \"D6 RESULT\" with 1-2/3-4/5-6). The ask names both readings with an example, and the app’s reading matches its mod note (\"2 D6: two effects, then a hazard roll\")."
+ },
  "5c057b8ab9650388": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -1439,6 +1457,18 @@
   "at": "2026-10-16",
   "why": "15.06 \"WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.\""
  },
+ "714a50a9a1b932e9": {
+  "verdict": "ok",
+  "by": "review:round2 (its fix)",
+  "at": "2026-10-16",
+  "why": "Fails 3 lines. (1) hurrdurr Scouts row lists \"Slaughterbound · Battle-lust Scouts 6\"\", but Lord of the Eightbound says \"this model has the Deep Strike and Scouts 6\" abilities\" and the Exalted Eightbound have Deep Strike only (NR rules line; BSData) while 24.31 needs \"if every model in a unit has this ability\": that unit cannot scout. The code unions the attached unit’s rules; it needs an every-model check (Deep Strike lists happen to be right: Nazdreg’s \"This unit has Deep Strike\", Exalted Eightbound and Scarab Occult have it). Needs data: slaughterbound partialRules:['Scouts 6\"']. (2) Reserves line drops 20.01’s \"(including those embarked within TRANSPORTS that are themselves placed in strategic reserves)\": hurrdurr’s Rhino. (3) Code Chivalric (\"at the end of the Read Mission Objectives step\") is shown under Deploying, after Declare Battle Formations; it must be done before. Also: Kindred Sorcery under \"Once per battle\" reads as single-use; the text is \"select one … in your Command phase … each of these abilities once per battle\". Rest checked OK in all 5 armies: half points, round-2 arrival, round-3 destruction and its two exceptions, DS lists/points, Rhino capacity, Round 1 (Singular Purpose), Every round (Da Boss, Blessings of Khorne, Unearthly Power), once-per-battle lists and per-army tags, Insane Bravery, asks. Fix tested in a scratch copy: renders with 0 failures."
+ },
+ "726d6c0033043cbc": {
+  "verdict": "ok",
+  "by": "coordinator",
+  "at": "2026-10-16",
+  "why": "Wording adds the round2 reviewer finding (result-round2.json, Synapse ask): the letter suggests yes because the rule does not say other; the question and the app reading are unchanged."
+ },
  "741749fa5f768f7d": {
   "verdict": "ok",
   "by": "review:cooking (its fix)",
@@ -1571,17 +1601,17 @@
   "at": "2026-10-16",
   "why": "\"Each time this model’s unit is selected to fight\" = Fight phase, either turn."
  },
- "805f3b7fdd1ecd07": {
-  "verdict": "ok",
-  "by": "review:core-code (its fix)",
-  "at": "2026-10-16",
-  "why": "The app text matches the printed 12.08, but the note calls both differences an errata: Wahapedia lists only \"12.08 … Ongoing Consolidation — Change to: …\" under Errata; \"Your unit must be unengaged and within range of the selected objective\" is simply Wahapedia's main-text wording."
- },
  "807cc3fe795740f7": {
   "verdict": "ok",
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "Charge rolls are made in your Charge phase and, via Heroic Intervention, in the opponent's."
+ },
+ "80def5a752515294": {
+  "verdict": "ok",
+  "by": "review:round2 (its fix)",
+  "at": "2026-10-16",
+  "why": "Lines above match PDF p42 word for word and the errata matches Wahapedia’s 12.08 box (\"After Moving Section, Ongoing Consolidation, Change to\"); no cached GW PDF (Core Rules 01-06, Universal Rules Updates 1.1, 4 packs) nor the 14 Oct Event Companion has either change. But the precedence is half-stated: the note says the Objective Consolidation wording \"must be unengaged and within range\" comes from the same GW app source as the errata, yet leaves the printed \"Your unit must be within range of the selected objective\" as the line players read, without saying the app wording applies (it changes play: a 3\" objective move may now not end engaged). And \"the printed Ongoing Consolidation line\" is ambiguous (there are three; the errata replaces the After Moving one). Better still: put the unengaged wording in the rule text itself."
  },
  "8105780c0e5019de": {
   "verdict": "ok",
@@ -1691,12 +1721,6 @@
   "at": "2026-10-16",
   "why": "Your Charge phase. A Heroic Intervention charge in their turn does not qualify."
  },
- "88e8a411e064c522": {
-  "verdict": "ok",
-  "by": "review:oioioi",
-  "at": "2026-10-16",
-  "why": "\"your Shooting phase\"."
- },
  "88f067e90f8b408d": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -1714,6 +1738,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "\"In your Shooting phase, if this unit's Blitzkannon weapon targets…\""
+ },
+ "89f4be05bb8d3124": {
+  "verdict": "ok",
+  "by": "review:round2",
+  "at": "2026-10-16",
+  "why": "The text has no phase limit (\"When a friendly WARBOSS model is destroyed, if this unit has not been selected to fight this phase … at the end of the phase … removed\"), unlike One Last Kill (\"In the Fight phase, when …\"); so letter vs evident fight-on-death intent is a real question. The ask states the letter accurately (on a 3+, stays until the end of that phase) and the app’s choice (ph fight, turn either)."
  },
  "8a3b372cb39242dc": {
   "verdict": "ok",
@@ -1798,6 +1828,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "New Recruit PDF and BSData both tag it \"(Once per battle, per army)\"."
+ },
+ "8e8ec726df5a1f14": {
+  "verdict": "ok",
+  "by": "review:round2",
+  "at": "2026-10-16",
+  "why": "\"at the start of your Shooting phase, one or more models … can attempt Rituals\" (pack 1.3 wording); the FAQ only says you need not sequence them all up front. Shooting is the only phase."
  },
  "901ed08dde8345e1": {
   "verdict": "ok",
@@ -1901,6 +1937,12 @@
   "at": "2026-10-16",
   "why": "Fight phase of either turn (a charge move can be made in either turn)."
  },
+ "943e52b7c21f1ae2": {
+  "verdict": "ok",
+  "by": "review:round2",
+  "at": "2026-10-16",
+  "why": "Steps Command→Movement→Shooting→Charge→Fight, and after Fight flips your/their (07.02: the same player always goes first, so turns strictly alternate across rounds too); with turn \"all\" it keeps \"all\"; no button on \"all phases\". Snapshots read \"Next: Your Fight\" → \"Next: Their Command\" → … → \"Next: Your Command\"."
+ },
  "9473f482cfe12cf2": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -1985,12 +2027,6 @@
   "at": "2026-10-16",
   "why": "\"+1 to charge rolls\": charge rolls are made in your Charge phase and in theirs (Heroic Intervention, 15.11: \"before making the charge roll\")."
  },
- "9ab183854ae0e575": {
-  "verdict": "ok",
-  "by": "review:core-code",
-  "at": "2026-10-16",
-  "why": "Exact \"selected to attack\"; 04.01.05."
- },
  "9afba01052e3c1e4": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -2051,12 +2087,6 @@
   "at": "2026-10-16",
   "why": "Shooting is \"your Shooting phase\" only."
  },
- "9eb3e6957b95cc6d": {
-  "verdict": "ok",
-  "by": "review:core-code",
-  "at": "2026-10-16",
-  "why": "Only \"MOBILE\" (Dread Mob, Super-Heavy Walker, 13.06 text); opens the 13.06 lines that name it."
- },
  "9ec4e56724398e07": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -2074,6 +2104,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "NR: \"Exalted Eightbound*, *from combined unit\"."
+ },
+ "9f45e056bd5bb548": {
+  "verdict": "ok",
+  "by": "review:round2",
+  "at": "2026-10-16",
+  "why": "Only \"Deep Strike\" (unit rules, Know-wotz, Umbralefic Crystal, Lord of the Eightbound, Aetherstride) matches; all mean the 24.09 ability."
  },
  "9f95b099784a3975": {
   "verdict": "ok",
@@ -2219,6 +2255,12 @@
   "at": "2026-10-16",
   "why": "Crush All Who Stand Before Us is on the Lord on Juggernaut datasheet."
  },
+ "a8a8a4f5233b55b9": {
+  "verdict": "ok",
+  "by": "review:round2",
+  "at": "2026-10-16",
+  "why": "Checked against PDF pp18-19 and 28-30 (dice images read at 400 dpi): hit 1 fails / 6 critical / ≥BS-WS hit; wound 1 fails / 6 critical, S≥2T 2+, S>T 3+, S=T 4+, S<T 5+, S≤½T 6+; save unmodified 1 inflicts damage, InSv compares the unmodified-by-AP result, Sv after AP, otherwise loses D wounds; 07.01-07.03 and 07.02 order; 08.01-08.05 incl. \"both players gain 1CP\" and battle-shock \"currently battle-shocked / at, or below, half-strength\". Allocation note is a correct compression of 05.03’s three bullets."
+ },
  "aa1d9e706e2b8571": {
   "verdict": "ok",
   "by": "review:hurrdurr (its fix)",
@@ -2272,12 +2314,6 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "WHEN: \"Fight phase, when a friendly NORN ASSIMILATOR/NORN EMISSARY unit is selected to fight.\""
- },
- "ad4096c1299845b0": {
-  "verdict": "ok",
-  "by": "review:oioioi",
-  "at": "2026-10-16",
-  "why": "\"at the start of your Shooting phase, one or more models ... can attempt Rituals\"."
  },
  "ad81991d5c0393f7": {
   "verdict": "ok",
@@ -2561,6 +2597,12 @@
   "at": "2026-10-16",
   "why": "\"TARGET: One THOUSAND SONS PSYKER unit ... within range of an objective marker you control\"."
  },
+ "c3f7d4f46f915ccf": {
+  "verdict": "ok",
+  "by": "review:round2",
+  "at": "2026-10-16",
+  "why": "Anchored exact match; used by Try Dat Button! and Daemon-vehicle texts in the term’s 04.01.05 sense."
+ },
  "c44aad9c98cc77bd": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -2789,6 +2831,18 @@
   "at": "2026-10-16",
   "why": "\"In your Command phase, you can use this ability\"."
  },
+ "d781dcf0a4a43734": {
+  "verdict": "ok",
+  "by": "review:round2",
+  "at": "2026-10-16",
+  "why": "Pack p6: \"or 9\" instead if your unit is an Armiger or Destrier unit\"; the Knight Destrier datasheet keywords are \"…Bellatus, Character, Imperium, Knight Destrier\" (no DESTRIER), and Wahapedia strikes DESTRIER through. No FAQ in the pack. The ask gives both values and both reasons; this list has two Knight Destriers."
+ },
+ "d7cbd41f8f1fb5d0": {
+  "verdict": "ok",
+  "by": "review:round2",
+  "at": "2026-10-16",
+  "why": "Wahapedia prints it as tooltip 04.01.05 linking to its rules appendix; the printed Core Rules do not contain \"selected to attack\" (grep), and their appendix says \"CONTINUED IN THE APP … The Warhammer 40,000 app contains an expanded range of definitions … The following pages present a selection\"."
+ },
  "d8a7ee4028c33646": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -2800,6 +2854,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "Matches NR: Rokkit Launcha Busta/Blasta, Slugga, Choppa and Spinnin' Blades, ×3 each."
+ },
+ "da033937d5a3e4bb": {
+  "verdict": "ok",
+  "by": "review:round2",
+  "at": "2026-10-16",
+  "why": "Every term it matches in the data is the weapon ability (\"HAZARDOUS\", \"[HAZARDOUS]\" in Treason of Tzeentch/Psychic Dominion); \"hazard roll(s)\" does not start with \"hazardous\", and \"hazardous roll(s)/test(s)\" are excluded and caught later by the Hazard Roll alias. No faction alias precedes it."
  },
  "da5026a977a07716": {
   "verdict": "ok",
@@ -2884,6 +2944,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "\"WHEN: Any phase\"."
+ },
+ "e0d30a220ec6605e": {
+  "verdict": "ok",
+  "by": "review:round2",
+  "at": "2026-10-16",
+  "why": "Datasheet (TS pack p7): default 1 Hades battle cannon, 2 excruciator cannons, 1 heavy missile launcher, 1 heavy baleflamer, shearing claws; NR: \"Ectoplasma destructor, 2x Heavy reaper autocannon, Shearing claws, Two excruciator cannons (2x Excruciator cannon)\" = cannon→ectoplasma, baleflamer and HML→heavy reaper autocannons. Weapons ×2/×2, \"Shoots with all of these\" (VEHICLE) and \"Pick one profile\" for the claws are right. (gear lists the excruciators once because BSData sells them as one \"Two excruciator cannons\" entry; gear is only used for membership and is not shown for a 1-model unit.)"
  },
  "e0e525fccccda811": {
   "verdict": "ok",
@@ -3203,11 +3269,11 @@
   "at": "2026-10-16",
   "why": "\"pile-in target\" etc.; Pile-in Move 12.03."
  },
- "f862940edbe95d5b": {
+ "f80a08114c7f3ab4": {
   "verdict": "ok",
-  "by": "review:core-code",
+  "by": "review:round2",
   "at": "2026-10-16",
-  "why": "True: MOBILE has no core-ability entry; it is named only in 13.06 (\"INFANTRY/BEASTS/SWARM/MOBILE models can move horizontally through dense terrain features\") and given by Super-Heavy Walker; the vertical-movement line does not include MOBILE."
+  "why": "Genuinely open: the Dakkarig is itself an ORKS WALKER, its own unit is 0\" from it, and the second bullet (\"select one friendly ORKS WALKER unit within 3\" of this model\") has no \"other\"/\"excluding BIG MEK\" while the first clause does; Dreadherder is not an Aura, so 22.01 (\"always within range of its own aura\") does not settle it. The ask quotes the rule and the app’s reading matches its data (aura notSelf:true, needs Walker; the other Dakkarig can still be picked). Fair to both readings."
  },
  "f8b39a4c97702a3b": {
   "verdict": "ok",

@@ -286,6 +286,7 @@ summary::-webkit-details-marker{display:none}
 .band{flex-wrap:nowrap; row-gap:2px}
 .band b{min-width:0}
 .band .tgs{flex:1 1 auto; min-width:0; display:flex; flex-wrap:wrap; gap:0 8px}
+.band .tgs .tg{white-space:normal}
 .band .go{align-self:center; color:var(--accent); flex:none; margin-left:auto}
 .slice > .us:first-child .band{margin-top:4px}
 .band + .wt, .band + .al{margin-top:4px}
@@ -315,7 +316,7 @@ summary::-webkit-details-marker{display:none}
 .verif{display:flex; align-items:center; gap:10px; width:100%; margin-top:14px; padding:10px 10px; border-radius:6px; background:var(--surface); text-align:left; font-size:13.5px; line-height:1.35; color:var(--fg2)}
 .verif .ic{color:#5fc27a; flex:none}
 .verif b{color:var(--fg); font-weight:600}
-.verif > span{flex:1}
+.verif > span{flex:1; min-width:0; white-space:normal}
 .vchk{margin:3px 0; font-size:14px; line-height:1.45}
 .vchk b{font-weight:600}
 .nextph{display:block; width:100%; min-height:48px; margin:14px 0 4px; border-radius:6px; background:var(--surface2); font:700 15px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--accent)}
@@ -1367,6 +1368,11 @@ function screenPregame(){
   const ruleLine = x => linkTo('rule', x.r.name, x.r.name) + ' <span class="from">· ' + esc(x.src) + '</span>';
   const nameLink = u => linkTo('unit', u.id, u.short || u.name);   // without its enhancement: the line says it
   const allAbs = units.flatMap(u => u.abilities.filter(ab => !naReason(ab)).map(ab => [u, ab]));
+  // Deep Strike (24.09) and Scouts (24.31) work only if every model in the unit has them; u.partialRules names
+  // the rules only some models of an attached unit have (Slaughterbound's Scouts 6": its Exalted Eightbound have none)
+  const everyModel = (u, test) => unitRules(u).some(test) && !(u.partialRules || []).some(test);
+  // rules resolved before Declare Battle Formations (Code Chivalric: end of the Read Mission Objectives step)
+  const early = rulesOf.filter(x => /read mission objectives/i.test(x.r.text));
 
   // your list
   const warlord = units.filter(u => u.warlord);
@@ -1380,22 +1386,24 @@ function screenPregame(){
     row('Detach&shy;ments', esc(detachments().map(d => d.name + (d.dp ? ' (' + d.dp + ' DP)' : '')).join(', ')) + (a.disposition ? '<br><span class="from">Disposition:</span> ' + esc(a.disposition) : '')) +
     row('Points', esc(a.pointsUsed + ' / ' + a.points + ' · ' + a.battleSize)));
 
+  h += sec('Before declaring formations', row('Rules', early.map(ruleLine).join('<br>')));
+
   // declare battle formations: reserves and transports
-  const ds = units.filter(u => unitRules(u).some(r => ruleKey(r) === 'Deep Strike'));
+  const ds = units.filter(u => everyModel(u, r => ruleKey(r) === 'Deep Strike'));
   const dsPts = ds.reduce((t, u) => t + (u.pts || 0) * (u.copies || 1), 0), half = Math.floor(a.points / 2);
   const transports = units.filter(u => hasKw(u, 'Transport')).map(u => { const ab = u.abilities.find(x => /transport capacity/i.test(x.text)); return unitLink(u) + (ab ? ': <span class="from">' + rt(ab.text).replace(/^<p>|<\/p>$/g, '') + '</span>' : ''); });
   h += sec('Declare battle formations',
-    row('Reserves', linkTo('rule', 'Strategic Reserves', 'Strategic reserves') + ': up to ' + half + ' pts (half the ' + a.points + ' limit). Unless a rule says otherwise, they arrive from battle round 2, and any not on the table by the end of round 3 are destroyed (not repositioned units, nor units in a TRANSPORT that arrived).' +
+    row('Reserves', linkTo('rule', 'Strategic Reserves', 'Strategic reserves') + ': up to ' + half + ' pts (half the ' + a.points + ' limit), counting units embarked within a TRANSPORT you place there. Unless a rule says otherwise, they arrive from battle round 2, and any that have not arrived by the end of round 3 are destroyed (not repositioned units, nor units embarked within a TRANSPORT that arrived).' +
       (ds.length ? '<br><span class="from">Can ' + linkTo('rule', 'Deep Strike', 'Deep Strike') + ':</span> ' + ds.map(u => unitLink(u) + ' <span class="from">' + u.pts + ' pts' + (u.copies > 1 ? ' each' : '') + '</span>').join(', ') + (ds.length > 1 ? ' <span class="from">(all: ' + dsPts + ' pts)</span>' : '') : '')) +
     row('Transports', transports.join('<br>')));
 
   // deployment and pre-battle abilities
-  const scouts = units.filter(u => unitRules(u).some(r => /^scouts|^infiltrators/i.test(r)));
+  const scouts = units.filter(u => everyModel(u, r => /^scouts|^infiltrators/i.test(r)));
   const pre = group(allAbs.filter(([u, ab]) => PREGAME_RE.test(ab.text) && !/start of the first battle round/i.test(ab.text)));
   h += sec('Deploying',
     row('Scouts', scouts.map(u => unitLink(u) + ' <span class="from">' + esc(unitRules(u).filter(r => /^scouts|^infiltrators/i.test(r)).join(', ')) + '</span>').join('<br>')) +
     row('Abilities', pre.map(abLine).join('<br>')) +
-    row('Rules', rulesOf.filter(x => PREGAME_RE.test(x.r.text)).map(ruleLine).join('<br>')));
+    row('Rules', rulesOf.filter(x => PREGAME_RE.test(x.r.text) && !early.includes(x)).map(ruleLine).join('<br>')));
 
   // decided at the start of the battle or of every battle round
   const first = group(allAbs.filter(([u, ab]) => /start of the first battle round/i.test(ab.text)));
@@ -1410,7 +1418,7 @@ function screenPregame(){
   const onceAbs = group(allAbs.filter(([u, ab]) => onceB((ab.tag || '') + ' ' + ab.text)));
   const onceStrats = allStratagems().filter(s => eligible(s).length && onceB([s.limit, s.restrictions, s.effect].join(' ')));
   h += sec('Once per battle',
-    row('Rules', onceRules.map(ruleLine).join('<br>')) +
+    row('Rules', onceRules.map(x => ruleLine(x) + (/\beach of these [a-z ]+ once per battle/i.test(x.r.text) ? ' <span class="from">(each of its options once)</span>' : '')).join('<br>')) +
     row('Abilities', onceAbs.map(g => abLine(g) + (/per army/i.test(onceTag(g.ab)) ? ' <span class="tg once">per army</span>' : '')).join('<br>')) +
     row('Strata&shy;gems', onceStrats.map(s => linkTo('strat', s.id, s.cp + 'CP ' + s.name)).join('<br>')));
   // rules this list uses whose wording allows two readings

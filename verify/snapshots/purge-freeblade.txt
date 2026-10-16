@@ -1,0 +1,4263 @@
+######## army · STRATAGEMS Purge Freeblade
+Imperial Knights · 2000 / 2000 pts · Strike Force
+
+Freeblade Company · Disposition: Purge the Foe
+
+Before the battle
+Units
+6
+Stratagems
+12
+Ranged weapons
+14
+Melee weapons
+4
+Abilities
+17
+Rules & keywords
+Bases & proxies
+6
+Keep screen on
+Off
+
+New Recruit, exported 13 Oct 2026
+
+######## pregame · PURGE FREEBLADE Before the battle
+YOUR LIST
+WARLORD
+Knight Warden
+DETACH­MENTS
+Freeblade Company (3 DP)
+Disposition: Purge the Foe
+POINTS
+2000 / 2000 · Strike Force
+BEFORE DECLARING FORMATIONS
+RULES
+Code Chivalric · Imperial Knights army rule
+DECLARE BATTLE FORMATIONS
+RESERVES
+Strategic reserves: up to 1000 pts (half the 2000 limit), counting units embarked within a TRANSPORT you place there. Unless a rule says otherwise, they arrive from battle round 2, and any that have not arrived by the end of round 3 are destroyed (not repositioned units, nor units embarked within a TRANSPORT that arrived).
+ONCE PER BATTLE
+STRATA­GEMS
+1CP Insane Bravery
+AGREE WITH YOUR OPPONENT
+
+Full Tilt Do your Knight Destriers add 9" (the evident intent) or 6" (the letter: their keyword is KNIGHT DESTRIER, the pack says DESTRIER)?
+
+Gathered from this list’s datasheets and rules; each line opens the full text.
+
+######## units · PRE-GAME Units M T SV W LD OC INV
+CHARACTERS
+Knight Warden
+Warlord
+365
+10"
+11
+3+
+26
+6+
+10
+5+*
+Knight Paladin
+×2 units
+375 ea
+10"
+11
+3+
+26
+6+
+10
+5+*
+Knight Errant
+355
+10"
+11
+3+
+26
+6+
+10
+5+*
+Knight Destrier
+×2 units
+265 ea
+12"
+10
+3+
+18
+6+
+8
+5+*
+
+######## ranged · UNITS Ranged weapons WEAPON RNG A BS S AP D
+Knight Warden
+Warlord
+
+Shoots with all of these.
+
+Avenger gatling cannon
+36"
+18
+3+
+6
+-2
+2
+Heavy flamer
+12"
+D6
+–
+5
+-1
+1
+IGNORES COVER, TORRENT
+Stormspear rocket pod
+48"
+3
+3+
+8
+-2
+D6
+Meltagun
+12"
+1
+3+
+9
+-4
+D6
+MELTA 2
+vs non-MONSTER/VEHICLE targets: ranged attacks have [DEVASTATING WOUNDS] (Thin Their Ranks)
+Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) (1CP Strength from Exile)
+Knight Paladin
+×2 units
+
+Shoots with all of these.
+
+Questoris heavy stubber
+36"
+3
+3+
+4
+-1
+1
+RAPID FIRE 3
+Rapid-fire battle cannon
+72"
+D6+3
+3+
+10
+-1
+3
+BLAST, RAPID FIRE D6+3
+Stormspear rocket pod
+48"
+3
+3+
+8
+-2
+D6
+Meltagun
+12"
+1
+3+
+9
+-4
+D6
+MELTA 2
+Target is the closest eligible target: improve AP by 1 (Seasoned Noble)
+Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) (1CP Strength from Exile)
+Knight Errant
+
+Shoots with all of these.
+
+Thermal cannon
+24"
+2D3
+3+
+12
+-4
+D6
+BLAST, MELTA 6
+Stormspear rocket pod
+48"
+3
+3+
+8
+-2
+D6
+Meltagun
+12"
+1
+3+
+9
+-4
+D6
+MELTA 2
+Target is the closest eligible target: +1 to hit rolls (Aggressive Assault)
+Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) (1CP Strength from Exile)
+Knight Destrier
+×2 units
+
+Shoots with all of these.
+
+Questoris heavy stubber
+36"
+6
+3+
+4
+-1
+1
+ASSAULT, RAPID FIRE 3
+Chastiser gatling cannon
+24"
+12
+3+
+6
+-1
+2
+ASSAULT
+Frag bombard
+24"
+D6+3
+3+
+7
+-1
+2
+ASSAULT, BLAST, RAPID FIRE D6+3
+Target within range of an objective marker: ranged attacks have [IGNORES COVER] (Saturation Fire)
+Damaged (1-6 wounds left): -1 to hit rolls (and -4 OC) (Damaged: 1-6 Wounds Remaining)
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) (1CP Strength from Exile)
+
+######## melee · RANGED Melee weapons WEAPON A WS S AP D
+Knight Warden
+Warlord
+Reaper chainswordPICK ONE PROFILE
+➤strike
+4
+3+
+14
+-4
+6
+➤sweep
+12
+3+
+9
+-3
+2
+Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
+No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) (1CP Strength from Exile)
+Knight Paladin
+×2 units
+Reaper chainswordPICK ONE PROFILE
+➤strike
+4
+3+
+14
+-4
+6
+➤sweep
+12
+3+
+9
+-3
+2
+Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
+No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) (1CP Strength from Exile)
+Knight Errant
+Reaper chainswordPICK ONE PROFILE
+➤strike
+4
+3+
+14
+-4
+6
+➤sweep
+12
+3+
+9
+-3
+2
+Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
+No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) (1CP Strength from Exile)
+Knight Destrier
+×2 units
+Titanic feet
+4
+4+
+7
+-1
+2
+Damaged (1-6 wounds left): -1 to hit rolls (and -4 OC) (Damaged: 1-6 Wounds Remaining)
+No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) (1CP Strength from Exile)
+
+######## abilities · MELEE Abilities
+Knight Warden
+Warlord
+Thin Their Ranks
+Your Shooting
+
+Shooting · Your turn
+
+Each time this model makes a ranged attack that targets an enemy unit (excluding MONSTERS and VEHICLES), that attack has the [DEVASTATING WOUNDS] ability.
+
+Invulnerable Save (5+*)
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Damaged: 1-9 Wounds Remaining
+
+While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+Warden’s Duty
+not usable here
+
+No ARMIGER models in this list
+
+Bondsman
+
+While a model is affected by this ability, weapons equipped by that model have the [SUSTAINED HITS 1] ability, and ranged weapons equipped by that model have the [IGNORES COVER] ability.
+
+Knight Paladin
+×2 units
+Seasoned Noble
+Your Shooting
+
+Shooting · Your turn
+
+Each time this model makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1.
+
+Invulnerable Save (5+*)
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Damaged: 1-9 Wounds Remaining
+
+While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+Paladin’s Duty
+not usable here
+
+No ARMIGER models in this list
+
+Bondsman
+
+While a model is affected by this ability, weapons equipped by that model have the [LETHAL HITS] ability, and melee weapons equipped by that model have the [LANCE] ability.
+
+Knight Errant
+Aggressive Assault
+Your Shooting
+
+Shooting · Your turn
+
+Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll.
+
+Invulnerable Save (5+*)
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Damaged: 1-9 Wounds Remaining
+
+While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+Errant’s Duty
+not usable here
+
+No ARMIGER models in this list
+
+Bondsman
+
+While a model is affected by this ability, you can re-roll Advance rolls made for that model and ranged weapons equipped by that model have the [ASSAULT] ability.
+
+Knight Destrier
+×2 units
+Damaged: 1-6 Wounds Remaining
+
+While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+Thundercharge
+not usable here
+
+Needs a thundershock spear and bellatus reaper chainsword: not this loadout
+
+If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model.
+
+Ram Jets
+Your Movement
+
+Movement · Your turn
+
+Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.
+
+Saturation Fire
+Your Shooting
+
+Shooting · Your turn
+
+Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
+
+Invulnerable Save (5+*)
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+######## rules · ABILITIES Rules & keywords
+Quick reference
+Turn order · Command phase · hit, wound and save rolls
+
+BATTLE ROUND (07)
+
+Start of battle round → both players take a turn (the mission says who goes first) → end of battle round.
+
+EACH TURN (07.02)
+
+Start of turn → Command → Movement → Shooting → Charge → Fight → end of turn.
+
+COMMAND PHASE (08)
+
+Start-of-phase rules.
+Gain Core CP: both players gain 1CP.
+Battle-shock: a roll for each of your units that is battle-shocked or at or below half-strength.
+Command abilities.
+End-of-phase rules.
+
+HIT ROLL (05.01)
+
+Unmodified 1
+fails
+Unmodified 6
+critical hit
+≥ BS / WS
+hit
+
+WOUND ROLL (05.02)
+
+Unmodified 1
+fails
+Unmodified 6
+critical wound
+S ≥ 2× T
+2+
+S > T
+3+
+S = T
+4+
+S < T
+5+
+S ≤ ½ T
+6+
+
+SAVE ROLL (05.03, 05.04)
+
+Unmodified 1
+damage
+≥ InSv
+saved (AP does not apply)
+≥ Sv after AP
+saved
+Otherwise
+the model loses D wounds
+
+Allocation: a group of models with a wounded model takes attacks first; CHARACTER models come after all others.
+
+ARMY RULES
+Code Chivalric
+
+If your Army Faction is IMPERIAL KNIGHTS, at the end of the Read Mission Objectives step, you must determine your army’s Oath for the coming battle. An Oath consists of two parts - one Deed and one Quality. There are three options for each part, shown below.
+
+To determine your army’s Deed, you can either select one Deed or you can randomly select one Deed by rolling a D6 and consulting the relevant table below. The selected Deed will describe what needs to be achieved in order to complete that Deed.
+
+To determine your army’s Quality, you can either select one Quality or you can randomly select one Quality by rolling a D6 and consulting the relevant table below. Until the end of the battle, the ability described in the Quality selected applies to all models in your army with this ability.
+
+The first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).
+
+Deed 1–2 · We vow to lay low the tyrant…
+
+At the start of the battle, select one CHARACTER model in your opponent’s army. This Deed is completed at the end of a turn if that CHARACTER is destroyed.
+
+Deed 3–4 · We swear to reclaim the realm…
+
+This deed is completed at the end of your opponent’s turn if you control more objective markers than your opponent.
+
+Deed 5–6 · We pledge to reap a great tally…
+
+This deed is completed at the end of the battle round if the number of enemy units destroyed this battle round is greater than the battle round number even if those units are subsequently returned to the battlefield (for example, two destroyed enemy units in the first battle round).
+
+Quality 1–2 · …with our martial valour risen over all
+
+Each time this model is selected to shoot or fight, you can re-roll one Hit roll and you can re-roll one Wound roll.
+
+Quality 3–4 · …and we are eager for the challenge
+
+Add 2" to this model’s Move characteristic and add 1 to Advance and Charge rolls made for this model.
+
+Quality 5–6 · …yet shall our legacy be unsullied
+
+Improve this model’s Objective Control characteristic by 2 and its Leadership characteristic by 1.
+
+Bondsman
+Command · Your turn
+
+Some IMPERIAL KNIGHTS models have a Bondsman ability, tagged with the word ‘Bondsman’. In your Command phase, one or more models from your army with a Bondsman ability can use that ability. For each one that does, select one friendly ARMIGER model within 12" of that model (you cannot select an ARMIGER model that is already being affected by a Bondsman ability). Until the start of your next Command phase, that ARMIGER model is affected by that Bondsman ability.
+
+FREEBLADE COMPANY
+Knights of Legend
+Detachment rule
+
+IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
+
+APPLIES TOKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+Other enhancements
+4 not in this list
+Bringer of Justice 30 pts
+
+IMPERIAL KNIGHTS model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the Hit roll.
+
+Hunter’s Eye 25 pts
+
+IMPERIAL KNIGHTS model only. Ranged weapons equipped by the bearer have the [IGNORES COVER] ability.
+
+Mysterious Guardian 35 pts
+
+IMPERIAL KNIGHTS model only. (Once per battle, per army) At the end of your opponent’s turn, if this unit is unengaged, you can use this ability. If you do:
+
+Place this unit in strategic reserves.
+This unit has Deep Strike until the start of your next Shooting phase.
+This unit must make an ingress move in your next Movement phase (including in your first turn).
+Sanctuary 20 pts
+
+IMPERIAL KNIGHTS model only. The bearer has a 5+ invulnerable save.
+
+UNIT RULES
+Deadly Demise
+Deadly Demise D6
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+Devastating Wounds
+
+Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+
+Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+
+IN THIS ARMYKnight Warden
+
+Lance
+
+Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
+
+IN THIS ARMYKnight Paladin
+
+Lethal Hits
+
+Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
+
+Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
+
+App note, not rules text: the suffix “: non-MONSTER/VEHICLE” reads as applying only against targets that are not MONSTER or VEHICLE units.
+
+IN THIS ARMYKnight Paladin
+
+Super-Heavy Walker
+
+Each time a unit with this ability makes a normal, advance or fall-back move:
+
+Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding TITANIC models) and can move horizontally through sections of terrain features that are 4" or less in height.
+Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked.
+
+Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).
+
+IN THIS ARMYKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+Sustained Hits
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYKnight Warden
+
+WEAPON KEYWORDS
+Assault
+
+Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
+
+IN THIS ARMYKnight Errant, Knight Destrier
+
+Blast
+
+Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead.
+
+Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+IN THIS ARMYKnight Paladin, Knight Errant, Knight Destrier
+
+Ignores Cover
+
+Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+IN THIS ARMYKnight Warden, Knight Destrier
+
+Melta
+MELTA 2, MELTA 6
+
+This ability always takes the form [MELTA X]. Each time a model makes an attack with a [MELTA] weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add X to that weapon’s D characteristic.
+
+Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6. While resolving those attacks, that weapon has a D characteristic of D6+2.
+
+IN THIS ARMYKnight Warden, Knight Paladin, Knight Errant
+
+Rapid Fire
+RAPID FIRE 3, RAPID FIRE D6+3
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYKnight Paladin, Knight Destrier
+
+Torrent
+
+Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.
+
+IN THIS ARMYKnight Warden
+
+Force disposition: Purge the Foe.
+
+######## bases · RULES Bases & proxies
+BASES TO PRINT
+
+2× 150×95mm
+4× 170×109mm
+
+WHAT TO WRITE ON EACH BASE
+
+Knight Warden
+1× 170×109mm
+Knight Warden · Warlord
+Knight Paladin
+2 units: mark them apart (1, 2)
+1× 170×109mm
+Knight Paladin
+Knight Errant
+1× 170×109mm
+Knight Errant
+Knight Destrier
+2 units: mark them apart (1, 2)
+1× 150×95mm
+Knight Destrier
+
+From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
+
+######## strats {"turn":"all","phase":"all"} · BASES Stratagems
+COLLAPSE ALL
+FREEBLADE COMPANY
+5
+1
+CP
+Noble Sacrifice
+Any phase · Either turn
+WHEN
+
+Any phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.
+
+EFFECT
+
+Your unit’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.
+
+USED BYany unit
+
+1
+CP
+Strength from Exile
+Your Shooting / Fight (either turn)
+WHEN
+
+Your Shooting phase or the Fight phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that has not been selected to shoot or fight this phase.
+
+EFFECT
+
+Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.
+
+USED BYany unit
+
+1
+CP
+Full Tilt
+Movement · Your turn
+WHEN
+
+Your Movement phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army.
+
+EFFECT
+
+Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6" to the Move characteristic of models in your unit, or 9" instead if your unit is an ARMIGER or DESTRIER unit.
+
+GW’s Faction Pack prints DESTRIER as a keyword, but no Imperial Knights datasheet has it: the Knight Destrier’s keyword is KNIGHT DESTRIER (Wahapedia strikes DESTRIER through for this reason). By the letter, your Knight Destriers add 6"; the evident intent is that they add 9". Agree it with your opponent before the game.
+
+Agree with your opponent: Do your Knight Destriers add 9" (the evident intent) or 6" (the letter: their keyword is KNIGHT DESTRIER, the pack says DESTRIER)?
+
+USED BYany unit
+
+1
+CP
+Point-Blank Barrage
+Shooting · Your turn
+WHEN
+
+Your Shooting phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that has not been selected to shoot this phase.
+
+EFFECT
+
+Until the end of the phase, when making ranged attacks with Blast weapons, models in your unit can target enemy units within Engagement Range of your unit (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, until the end of the phase, your unit does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units, but each time a model in your unit makes an attack with a Blast weapon that targets a unit within Engagement Range of your unit, on an unmodified Hit roll of 1, your unit suffers 1 mortal wound after all of its attacks have been resolved.
+
+USED BYany unit
+
+1
+CP
+Survivor of Strife
+Shooting · Their turn
+WHEN
+
+Your opponent’s Shooting phase, just after an enemy unit has selected its targets.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the Wound roll.
+
+USED BYany unit
+
+CORE STRATAGEMS
+7
+1
+CP
+Command Re-roll
+Any phase · Either turn
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+1
+CP
+Epic Challenge
+Fight · Either turn
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYany unit
+
+1
+CP
+Insane Bravery
+Command · Your turn · Once per battle
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+1
+CP
+Crushing Impact
+Charge · Your turn
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYany unit
+
+1
+CP
+Rapid Ingress
+Movement · Their turn
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+1
+CP
+Heroic Intervention
+Charge · Their turn · Into the Fray +1CP
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYany unit
+
+2
+CP
+Counteroffensive
+Fight · Their turn
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+Not shown, no unit here can use them: Flanking Manoeuvres (ARMIGER), Explosives (EXPLOSIVES OR GRENADES), Fire Overwatch, Smokescreen (SMOKE).
+
+All stratagem text is Wahapedia’s wording.
+
+######## strats {"turn":"all","phase":"command"} · STRATAGEMS Stratagems
+COLLAPSE ALL
+FREEBLADE COMPANY
+1
+1
+CP
+Noble Sacrifice
+Any phase · Either turn
+WHEN
+
+Any phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.
+
+EFFECT
+
+Your unit’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.
+
+USED BYany unit
+
+CORE STRATAGEMS
+2
+1
+CP
+Insane Bravery
+Command · Your turn · Once per battle
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+1
+CP
+Command Re-roll
+Any phase · Either turn
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+ALSO THIS PHASE
+1 ability
+Knights of Legend
+Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
+
+UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+NEXT: MOVEMENT ›
+
+All stratagem text is Wahapedia’s wording.
+
+######## strats {"turn":"all","phase":"movement"} · STRATAGEMS Stratagems
+COLLAPSE ALL
+FREEBLADE COMPANY
+2
+1
+CP
+Full Tilt
+Movement · Your turn
+WHEN
+
+Your Movement phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army.
+
+EFFECT
+
+Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6" to the Move characteristic of models in your unit, or 9" instead if your unit is an ARMIGER or DESTRIER unit.
+
+GW’s Faction Pack prints DESTRIER as a keyword, but no Imperial Knights datasheet has it: the Knight Destrier’s keyword is KNIGHT DESTRIER (Wahapedia strikes DESTRIER through for this reason). By the letter, your Knight Destriers add 6"; the evident intent is that they add 9". Agree it with your opponent before the game.
+
+Agree with your opponent: Do your Knight Destriers add 9" (the evident intent) or 6" (the letter: their keyword is KNIGHT DESTRIER, the pack says DESTRIER)?
+
+USED BYany unit
+
+1
+CP
+Noble Sacrifice
+Any phase · Either turn
+WHEN
+
+Any phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.
+
+EFFECT
+
+Your unit’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.
+
+USED BYany unit
+
+CORE STRATAGEMS
+2
+1
+CP
+Rapid Ingress
+Movement · Their turn
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+1
+CP
+Command Re-roll
+Any phase · Either turn
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+ALSO THIS PHASE
+2 abilities
+Code Chivalric Quality 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls.
+Ram Jets
+Knight Destrier
+
+Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.
+
+UNITSKnight Destrier
+
+Super-Heavy Walker
+Core rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+Each time a unit with this ability makes a normal, advance or fall-back move:
+
+Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding TITANIC models) and can move horizontally through sections of terrain features that are 4" or less in height.
+Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked.
+
+Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).
+
+UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+NEXT: SHOOTING ›
+
+Not shown, no unit here can use it: Fire Overwatch.
+
+All stratagem text is Wahapedia’s wording.
+
+######## strats {"turn":"all","phase":"shooting"} · STRATAGEMS Stratagems
+COLLAPSE ALL
+FREEBLADE COMPANY
+4
+1
+CP
+Strength from Exile
+Your Shooting / Fight (either turn)
+WHEN
+
+Your Shooting phase or the Fight phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that has not been selected to shoot or fight this phase.
+
+EFFECT
+
+Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.
+
+USED BYany unit
+
+1
+CP
+Point-Blank Barrage
+Shooting · Your turn
+WHEN
+
+Your Shooting phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that has not been selected to shoot this phase.
+
+EFFECT
+
+Until the end of the phase, when making ranged attacks with Blast weapons, models in your unit can target enemy units within Engagement Range of your unit (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, until the end of the phase, your unit does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units, but each time a model in your unit makes an attack with a Blast weapon that targets a unit within Engagement Range of your unit, on an unmodified Hit roll of 1, your unit suffers 1 mortal wound after all of its attacks have been resolved.
+
+USED BYany unit
+
+1
+CP
+Survivor of Strife
+Shooting · Their turn
+WHEN
+
+Your opponent’s Shooting phase, just after an enemy unit has selected its targets.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the Wound roll.
+
+USED BYany unit
+
+1
+CP
+Noble Sacrifice
+Any phase · Either turn
+WHEN
+
+Any phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.
+
+EFFECT
+
+Your unit’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.
+
+USED BYany unit
+
+CORE STRATAGEMS
+1
+1
+CP
+Command Re-roll
+Any phase · Either turn
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+ALSO THIS PHASE
+4 abilities
+Code Chivalric Quality 1–2 (martial valour): each time a Knight shoots or fights, re-roll one Hit roll and one Wound roll.
+Thin Their Ranks
+Knight Warden
+
+Each time this model makes a ranged attack that targets an enemy unit (excluding MONSTERS and VEHICLES), that attack has the [DEVASTATING WOUNDS] ability.
+
+UNITSKnight Warden
+
+Seasoned Noble
+Knight Paladin
+
+Each time this model makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1.
+
+UNITSKnight Paladin
+
+Aggressive Assault
+Knight Errant
+
+Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll.
+
+UNITSKnight Errant
+
+Saturation Fire
+Knight Destrier
+
+Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
+
+UNITSKnight Destrier
+
+WHEN TARGETED
+
+Every unit: Feel No Pain 6+ · 5+ invulnerable save against ranged attacks only · 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+
+Knight Warden
+T11 SV3+ INV5+* W26
+Knight Paladin
+T11 SV3+ INV5+* W26
+Knight Errant
+T11 SV3+ INV5+* W26
+Knight Destrier
+T10 SV3+ INV5+* W18
+NEXT: CHARGE ›
+
+Not shown, no unit here can use them: Explosives (EXPLOSIVES OR GRENADES), Smokescreen (SMOKE).
+
+All stratagem text is Wahapedia’s wording.
+
+######## strats {"turn":"all","phase":"charge"} · STRATAGEMS Stratagems
+COLLAPSE ALL
+FREEBLADE COMPANY
+1
+1
+CP
+Noble Sacrifice
+Any phase · Either turn
+WHEN
+
+Any phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.
+
+EFFECT
+
+Your unit’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.
+
+USED BYany unit
+
+CORE STRATAGEMS
+3
+1
+CP
+Crushing Impact
+Charge · Your turn
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYany unit
+
+1
+CP
+Heroic Intervention
+Charge · Their turn · Into the Fray +1CP
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYany unit
+
+1
+CP
+Command Re-roll
+Any phase · Either turn
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+ALSO THIS PHASE
+Code Chivalric Quality 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls.
+NEXT: FIGHT ›
+
+All stratagem text is Wahapedia’s wording.
+
+######## strats {"turn":"all","phase":"fight"} · STRATAGEMS Stratagems
+COLLAPSE ALL
+FREEBLADE COMPANY
+2
+1
+CP
+Strength from Exile
+Your Shooting / Fight (either turn)
+WHEN
+
+Your Shooting phase or the Fight phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that has not been selected to shoot or fight this phase.
+
+EFFECT
+
+Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.
+
+USED BYany unit
+
+1
+CP
+Noble Sacrifice
+Any phase · Either turn
+WHEN
+
+Any phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.
+
+EFFECT
+
+Your unit’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.
+
+USED BYany unit
+
+CORE STRATAGEMS
+3
+1
+CP
+Epic Challenge
+Fight · Either turn
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYany unit
+
+2
+CP
+Counteroffensive
+Fight · Their turn
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+1
+CP
+Command Re-roll
+Any phase · Either turn
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+ALSO THIS PHASE
+Code Chivalric Quality 1–2 (martial valour): each time a Knight shoots or fights, re-roll one Hit roll and one Wound roll.
+WHEN TARGETED
+
+Every unit: Feel No Pain 6+ · 5+ invulnerable save against ranged attacks only
+
+Knight Warden
+T11 SV3+ INV5+* W26
+Knight Paladin
+T11 SV3+ INV5+* W26
+Knight Errant
+T11 SV3+ INV5+* W26
+Knight Destrier
+T10 SV3+ INV5+* W18
+NEXT: COMMAND ›
+
+Not shown, no unit here can use it: Flanking Manoeuvres (ARMIGER).
+
+All stratagem text is Wahapedia’s wording.
+
+######## strats {"turn":"your","phase":"all"} · STRATAGEMS Stratagems
+COLLAPSE ALL
+FREEBLADE COMPANY
+4
+1
+CP
+Noble Sacrifice
+Any phase · Either turn
+WHEN
+
+Any phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.
+
+EFFECT
+
+Your unit’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.
+
+USED BYany unit
+
+1
+CP
+Strength from Exile
+Your Shooting / Fight (either turn)
+WHEN
+
+Your Shooting phase or the Fight phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that has not been selected to shoot or fight this phase.
+
+EFFECT
+
+Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.
+
+USED BYany unit
+
+1
+CP
+Full Tilt
+Movement · Your turn
+WHEN
+
+Your Movement phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army.
+
+EFFECT
+
+Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6" to the Move characteristic of models in your unit, or 9" instead if your unit is an ARMIGER or DESTRIER unit.
+
+GW’s Faction Pack prints DESTRIER as a keyword, but no Imperial Knights datasheet has it: the Knight Destrier’s keyword is KNIGHT DESTRIER (Wahapedia strikes DESTRIER through for this reason). By the letter, your Knight Destriers add 6"; the evident intent is that they add 9". Agree it with your opponent before the game.
+
+Agree with your opponent: Do your Knight Destriers add 9" (the evident intent) or 6" (the letter: their keyword is KNIGHT DESTRIER, the pack says DESTRIER)?
+
+USED BYany unit
+
+1
+CP
+Point-Blank Barrage
+Shooting · Your turn
+WHEN
+
+Your Shooting phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that has not been selected to shoot this phase.
+
+EFFECT
+
+Until the end of the phase, when making ranged attacks with Blast weapons, models in your unit can target enemy units within Engagement Range of your unit (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, until the end of the phase, your unit does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units, but each time a model in your unit makes an attack with a Blast weapon that targets a unit within Engagement Range of your unit, on an unmodified Hit roll of 1, your unit suffers 1 mortal wound after all of its attacks have been resolved.
+
+USED BYany unit
+
+CORE STRATAGEMS
+4
+1
+CP
+Command Re-roll
+Any phase · Either turn
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+1
+CP
+Epic Challenge
+Fight · Either turn
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYany unit
+
+1
+CP
+Insane Bravery
+Command · Your turn · Once per battle
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+1
+CP
+Crushing Impact
+Charge · Your turn
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYany unit
+
+Not shown, no unit here can use it: Explosives (EXPLOSIVES OR GRENADES).
+
+All stratagem text is Wahapedia’s wording.
+
+######## strats {"turn":"your","phase":"command"} · STRATAGEMS Stratagems
+COLLAPSE ALL
+FREEBLADE COMPANY
+1
+1
+CP
+Noble Sacrifice
+Any phase · Either turn
+WHEN
+
+Any phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.
+
+EFFECT
+
+Your unit’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.
+
+USED BYany unit
+
+CORE STRATAGEMS
+2
+1
+CP
+Insane Bravery
+Command · Your turn · Once per battle
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+1
+CP
+Command Re-roll
+Any phase · Either turn
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+ALSO THIS PHASE
+1 ability
+Knights of Legend
+Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
+
+UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+NEXT: YOUR MOVEMENT ›
+
+All stratagem text is Wahapedia’s wording.
+
+######## strats {"turn":"your","phase":"movement"} · STRATAGEMS Stratagems
+COLLAPSE ALL
+FREEBLADE COMPANY
+2
+1
+CP
+Full Tilt
+Movement · Your turn
+WHEN
+
+Your Movement phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army.
+
+EFFECT
+
+Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6" to the Move characteristic of models in your unit, or 9" instead if your unit is an ARMIGER or DESTRIER unit.
+
+GW’s Faction Pack prints DESTRIER as a keyword, but no Imperial Knights datasheet has it: the Knight Destrier’s keyword is KNIGHT DESTRIER (Wahapedia strikes DESTRIER through for this reason). By the letter, your Knight Destriers add 6"; the evident intent is that they add 9". Agree it with your opponent before the game.
+
+Agree with your opponent: Do your Knight Destriers add 9" (the evident intent) or 6" (the letter: their keyword is KNIGHT DESTRIER, the pack says DESTRIER)?
+
+USED BYany unit
+
+1
+CP
+Noble Sacrifice
+Any phase · Either turn
+WHEN
+
+Any phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.
+
+EFFECT
+
+Your unit’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.
+
+USED BYany unit
+
+CORE STRATAGEMS
+1
+1
+CP
+Command Re-roll
+Any phase · Either turn
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+ALSO THIS PHASE
+2 abilities
+Code Chivalric Quality 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls.
+Ram Jets
+Knight Destrier
+
+Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.
+
+UNITSKnight Destrier
+
+Super-Heavy Walker
+Core rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+Each time a unit with this ability makes a normal, advance or fall-back move:
+
+Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding TITANIC models) and can move horizontally through sections of terrain features that are 4" or less in height.
+Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked.
+
+Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).
+
+UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+NEXT: YOUR SHOOTING ›
+
+All stratagem text is Wahapedia’s wording.
+
+######## strats {"turn":"your","phase":"shooting"} · STRATAGEMS Stratagems
+COLLAPSE ALL
+FREEBLADE COMPANY
+3
+1
+CP
+Strength from Exile
+Your Shooting / Fight (either turn)
+WHEN
+
+Your Shooting phase or the Fight phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that has not been selected to shoot or fight this phase.
+
+EFFECT
+
+Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.
+
+USED BYany unit
+
+1
+CP
+Point-Blank Barrage
+Shooting · Your turn
+WHEN
+
+Your Shooting phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that has not been selected to shoot this phase.
+
+EFFECT
+
+Until the end of the phase, when making ranged attacks with Blast weapons, models in your unit can target enemy units within Engagement Range of your unit (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, until the end of the phase, your unit does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units, but each time a model in your unit makes an attack with a Blast weapon that targets a unit within Engagement Range of your unit, on an unmodified Hit roll of 1, your unit suffers 1 mortal wound after all of its attacks have been resolved.
+
+USED BYany unit
+
+1
+CP
+Noble Sacrifice
+Any phase · Either turn
+WHEN
+
+Any phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.
+
+EFFECT
+
+Your unit’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.
+
+USED BYany unit
+
+CORE STRATAGEMS
+1
+1
+CP
+Command Re-roll
+Any phase · Either turn
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+ALSO THIS PHASE
+4 abilities
+Code Chivalric Quality 1–2 (martial valour): each time a Knight shoots or fights, re-roll one Hit roll and one Wound roll.
+Thin Their Ranks
+Knight Warden
+
+Each time this model makes a ranged attack that targets an enemy unit (excluding MONSTERS and VEHICLES), that attack has the [DEVASTATING WOUNDS] ability.
+
+UNITSKnight Warden
+
+Seasoned Noble
+Knight Paladin
+
+Each time this model makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1.
+
+UNITSKnight Paladin
+
+Aggressive Assault
+Knight Errant
+
+Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll.
+
+UNITSKnight Errant
+
+Saturation Fire
+Knight Destrier
+
+Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
+
+UNITSKnight Destrier
+
+NEXT: YOUR CHARGE ›
+
+Not shown, no unit here can use it: Explosives (EXPLOSIVES OR GRENADES).
+
+All stratagem text is Wahapedia’s wording.
+
+######## strats {"turn":"your","phase":"charge"} · STRATAGEMS Stratagems
+COLLAPSE ALL
+FREEBLADE COMPANY
+1
+1
+CP
+Noble Sacrifice
+Any phase · Either turn
+WHEN
+
+Any phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.
+
+EFFECT
+
+Your unit’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.
+
+USED BYany unit
+
+CORE STRATAGEMS
+2
+1
+CP
+Crushing Impact
+Charge · Your turn
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYany unit
+
+1
+CP
+Command Re-roll
+Any phase · Either turn
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+ALSO THIS PHASE
+Code Chivalric Quality 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls.
+NEXT: YOUR FIGHT ›
+
+All stratagem text is Wahapedia’s wording.
+
+######## strats {"turn":"your","phase":"fight"} · STRATAGEMS Stratagems
+COLLAPSE ALL
+FREEBLADE COMPANY
+2
+1
+CP
+Strength from Exile
+Your Shooting / Fight (either turn)
+WHEN
+
+Your Shooting phase or the Fight phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that has not been selected to shoot or fight this phase.
+
+EFFECT
+
+Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.
+
+USED BYany unit
+
+1
+CP
+Noble Sacrifice
+Any phase · Either turn
+WHEN
+
+Any phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.
+
+EFFECT
+
+Your unit’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.
+
+USED BYany unit
+
+CORE STRATAGEMS
+2
+1
+CP
+Epic Challenge
+Fight · Either turn
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYany unit
+
+1
+CP
+Command Re-roll
+Any phase · Either turn
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+ALSO THIS PHASE
+Code Chivalric Quality 1–2 (martial valour): each time a Knight shoots or fights, re-roll one Hit roll and one Wound roll.
+NEXT: THEIR COMMAND ›
+
+All stratagem text is Wahapedia’s wording.
+
+######## strats {"turn":"opp","phase":"all"} · STRATAGEMS Stratagems
+COLLAPSE ALL
+FREEBLADE COMPANY
+3
+1
+CP
+Noble Sacrifice
+Any phase · Either turn
+WHEN
+
+Any phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.
+
+EFFECT
+
+Your unit’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.
+
+USED BYany unit
+
+1
+CP
+Strength from Exile
+Your Shooting / Fight (either turn)
+WHEN
+
+Your Shooting phase or the Fight phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that has not been selected to shoot or fight this phase.
+
+EFFECT
+
+Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.
+
+USED BYany unit
+
+1
+CP
+Survivor of Strife
+Shooting · Their turn
+WHEN
+
+Your opponent’s Shooting phase, just after an enemy unit has selected its targets.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the Wound roll.
+
+USED BYany unit
+
+CORE STRATAGEMS
+5
+1
+CP
+Command Re-roll
+Any phase · Either turn
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+1
+CP
+Epic Challenge
+Fight · Either turn
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYany unit
+
+1
+CP
+Rapid Ingress
+Movement · Their turn
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+1
+CP
+Heroic Intervention
+Charge · Their turn · Into the Fray +1CP
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYany unit
+
+2
+CP
+Counteroffensive
+Fight · Their turn
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+Not shown, no unit here can use them: Flanking Manoeuvres (ARMIGER), Fire Overwatch, Smokescreen (SMOKE).
+
+All stratagem text is Wahapedia’s wording.
+
+######## strats {"turn":"opp","phase":"command"} · STRATAGEMS Stratagems
+COLLAPSE ALL
+FREEBLADE COMPANY
+1
+1
+CP
+Noble Sacrifice
+Any phase · Either turn
+WHEN
+
+Any phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.
+
+EFFECT
+
+Your unit’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.
+
+USED BYany unit
+
+CORE STRATAGEMS
+1
+1
+CP
+Command Re-roll
+Any phase · Either turn
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+NEXT: THEIR MOVEMENT ›
+
+All stratagem text is Wahapedia’s wording.
+
+######## strats {"turn":"opp","phase":"movement"} · STRATAGEMS Stratagems
+COLLAPSE ALL
+FREEBLADE COMPANY
+1
+1
+CP
+Noble Sacrifice
+Any phase · Either turn
+WHEN
+
+Any phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.
+
+EFFECT
+
+Your unit’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.
+
+USED BYany unit
+
+CORE STRATAGEMS
+2
+1
+CP
+Rapid Ingress
+Movement · Their turn
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+1
+CP
+Command Re-roll
+Any phase · Either turn
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+NEXT: THEIR SHOOTING ›
+
+Not shown, no unit here can use it: Fire Overwatch.
+
+All stratagem text is Wahapedia’s wording.
+
+######## strats {"turn":"opp","phase":"shooting"} · STRATAGEMS Stratagems
+COLLAPSE ALL
+FREEBLADE COMPANY
+2
+1
+CP
+Survivor of Strife
+Shooting · Their turn
+WHEN
+
+Your opponent’s Shooting phase, just after an enemy unit has selected its targets.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the Wound roll.
+
+USED BYany unit
+
+1
+CP
+Noble Sacrifice
+Any phase · Either turn
+WHEN
+
+Any phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.
+
+EFFECT
+
+Your unit’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.
+
+USED BYany unit
+
+CORE STRATAGEMS
+1
+1
+CP
+Command Re-roll
+Any phase · Either turn
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+WHEN TARGETED
+
+Every unit: Feel No Pain 6+ · 5+ invulnerable save against ranged attacks only · 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+
+Knight Warden
+T11 SV3+ INV5+* W26
+Knight Paladin
+T11 SV3+ INV5+* W26
+Knight Errant
+T11 SV3+ INV5+* W26
+Knight Destrier
+T10 SV3+ INV5+* W18
+NEXT: THEIR CHARGE ›
+
+Not shown, no unit here can use it: Smokescreen (SMOKE).
+
+All stratagem text is Wahapedia’s wording.
+
+######## strats {"turn":"opp","phase":"charge"} · STRATAGEMS Stratagems
+COLLAPSE ALL
+FREEBLADE COMPANY
+1
+1
+CP
+Noble Sacrifice
+Any phase · Either turn
+WHEN
+
+Any phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.
+
+EFFECT
+
+Your unit’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.
+
+USED BYany unit
+
+CORE STRATAGEMS
+2
+1
+CP
+Heroic Intervention
+Charge · Their turn · Into the Fray +1CP
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYany unit
+
+1
+CP
+Command Re-roll
+Any phase · Either turn
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+ALSO THIS PHASE
+Code Chivalric Quality 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls.
+NEXT: THEIR FIGHT ›
+
+All stratagem text is Wahapedia’s wording.
+
+######## strats {"turn":"opp","phase":"fight"} · STRATAGEMS Stratagems
+COLLAPSE ALL
+FREEBLADE COMPANY
+2
+1
+CP
+Strength from Exile
+Your Shooting / Fight (either turn)
+WHEN
+
+Your Shooting phase or the Fight phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that has not been selected to shoot or fight this phase.
+
+EFFECT
+
+Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.
+
+USED BYany unit
+
+1
+CP
+Noble Sacrifice
+Any phase · Either turn
+WHEN
+
+Any phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.
+
+EFFECT
+
+Your unit’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.
+
+USED BYany unit
+
+CORE STRATAGEMS
+3
+1
+CP
+Epic Challenge
+Fight · Either turn
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYany unit
+
+2
+CP
+Counteroffensive
+Fight · Their turn
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+1
+CP
+Command Re-roll
+Any phase · Either turn
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+ALSO THIS PHASE
+Code Chivalric Quality 1–2 (martial valour): each time a Knight shoots or fights, re-roll one Hit roll and one Wound roll.
+WHEN TARGETED
+
+Every unit: Feel No Pain 6+ · 5+ invulnerable save against ranged attacks only
+
+Knight Warden
+T11 SV3+ INV5+* W26
+Knight Paladin
+T11 SV3+ INV5+* W26
+Knight Errant
+T11 SV3+ INV5+* W26
+Knight Destrier
+T10 SV3+ INV5+* W18
+NEXT: YOUR COMMAND ›
+
+Not shown, no unit here can use it: Flanking Manoeuvres (ARMIGER).
+
+All stratagem text is Wahapedia’s wording.
+
+######## unit knight-warden · STRATAGEMS Knight Warden
+Character · 365 pts
+Warlord
+M
+T
+SV
+W
+LD
+OC
+INV
+10"
+11
+3+
+26
+6+
+10
+5+*
+WHEN TARGETEDFeel No Pain 6+ · 5+ invulnerable save against ranged attacks only · 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+DAMAGED 1-9 W-1 to hit rolls (and -5 OC)
+ALL ATTACKS
+No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) (1CP Strength from Exile)
+RANGED
+RNG
+A
+BS
+S
+AP
+D
+
+Shoots with all of these.
+
+Avenger gatling cannon
+36"
+18
+3+
+6
+-2
+2
+Heavy flamer
+12"
+D6
+–
+5
+-1
+1
+IGNORES COVER, TORRENT
+Stormspear rocket pod
+48"
+3
+3+
+8
+-2
+D6
+Meltagun
+12"
+1
+3+
+9
+-4
+D6
+MELTA 2
+vs non-MONSTER/VEHICLE targets: ranged attacks have [DEVASTATING WOUNDS] (Thin Their Ranks)
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+MELEE
+A
+WS
+S
+AP
+D
+Reaper chainswordPICK ONE PROFILE
+➤strike
+4
+3+
+14
+-4
+6
+➤sweep
+12
+3+
+9
+-3
+2
+ABILITIES
+Thin Their Ranks
+Your Shooting
+
+Shooting · Your turn
+
+Each time this model makes a ranged attack that targets an enemy unit (excluding MONSTERS and VEHICLES), that attack has the [DEVASTATING WOUNDS] ability.
+
+Invulnerable Save (5+*)
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Warden’s Duty
+not usable here
+
+No ARMIGER models in this list
+
+Bondsman
+
+While a model is affected by this ability, weapons equipped by that model have the [SUSTAINED HITS 1] ability, and ranged weapons equipped by that model have the [IGNORES COVER] ability.
+
+RULESDeadly Demise D6, Super-Heavy Walker, Code Chivalric, Devastating Wounds, Knights of Legend · Keywords
+
+STRATAGEMSNoble Sacrifice, Strength from Exile, Full Tilt, Point-Blank Barrage, Survivor of Strife, Epic Challenge, Crushing Impact
+
+######## unit knight-paladin · KNIGHT WARDEN Knight Paladin
+Character · 375 pts each · ×2 in list
+M
+T
+SV
+W
+LD
+OC
+INV
+10"
+11
+3+
+26
+6+
+10
+5+*
+WHEN TARGETEDFeel No Pain 6+ · 5+ invulnerable save against ranged attacks only · 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+DAMAGED 1-9 W-1 to hit rolls (and -5 OC)
+ALL ATTACKS
+No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) (1CP Strength from Exile)
+RANGED
+RNG
+A
+BS
+S
+AP
+D
+
+Shoots with all of these.
+
+Questoris heavy stubber
+36"
+3
+3+
+4
+-1
+1
+RAPID FIRE 3
+Rapid-fire battle cannon
+72"
+D6+3
+3+
+10
+-1
+3
+BLAST, RAPID FIRE D6+3
+Stormspear rocket pod
+48"
+3
+3+
+8
+-2
+D6
+Meltagun
+12"
+1
+3+
+9
+-4
+D6
+MELTA 2
+Target is the closest eligible target: improve AP by 1 (Seasoned Noble)
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+MELEE
+A
+WS
+S
+AP
+D
+Reaper chainswordPICK ONE PROFILE
+➤strike
+4
+3+
+14
+-4
+6
+➤sweep
+12
+3+
+9
+-3
+2
+ABILITIES
+Seasoned Noble
+Your Shooting
+
+Shooting · Your turn
+
+Each time this model makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1.
+
+Invulnerable Save (5+*)
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Paladin’s Duty
+not usable here
+
+No ARMIGER models in this list
+
+Bondsman
+
+While a model is affected by this ability, weapons equipped by that model have the [LETHAL HITS] ability, and melee weapons equipped by that model have the [LANCE] ability.
+
+RULESDeadly Demise D6, Super-Heavy Walker, Code Chivalric, Knights of Legend · Keywords
+
+STRATAGEMSNoble Sacrifice, Strength from Exile, Full Tilt, Point-Blank Barrage, Survivor of Strife, Epic Challenge, Crushing Impact
+
+######## unit knight-errant · KNIGHT PALADIN Knight Errant
+Character · 355 pts
+M
+T
+SV
+W
+LD
+OC
+INV
+10"
+11
+3+
+26
+6+
+10
+5+*
+WHEN TARGETEDFeel No Pain 6+ · 5+ invulnerable save against ranged attacks only · 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+DAMAGED 1-9 W-1 to hit rolls (and -5 OC)
+ALL ATTACKS
+No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) (1CP Strength from Exile)
+RANGED
+RNG
+A
+BS
+S
+AP
+D
+
+Shoots with all of these.
+
+Thermal cannon
+24"
+2D3
+3+
+12
+-4
+D6
+BLAST, MELTA 6
+Stormspear rocket pod
+48"
+3
+3+
+8
+-2
+D6
+Meltagun
+12"
+1
+3+
+9
+-4
+D6
+MELTA 2
+Target is the closest eligible target: +1 to hit rolls (Aggressive Assault)
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+MELEE
+A
+WS
+S
+AP
+D
+Reaper chainswordPICK ONE PROFILE
+➤strike
+4
+3+
+14
+-4
+6
+➤sweep
+12
+3+
+9
+-3
+2
+ABILITIES
+Aggressive Assault
+Your Shooting
+
+Shooting · Your turn
+
+Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll.
+
+Invulnerable Save (5+*)
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Errant’s Duty
+not usable here
+
+No ARMIGER models in this list
+
+Bondsman
+
+While a model is affected by this ability, you can re-roll Advance rolls made for that model and ranged weapons equipped by that model have the [ASSAULT] ability.
+
+RULESDeadly Demise D6, Super-Heavy Walker, Code Chivalric, Knights of Legend · Keywords
+
+STRATAGEMSNoble Sacrifice, Strength from Exile, Full Tilt, Point-Blank Barrage, Survivor of Strife, Epic Challenge, Crushing Impact
+
+######## unit knight-destrier · KNIGHT ERRANT Knight Destrier
+Character · 265 pts each · ×2 in list
+M
+T
+SV
+W
+LD
+OC
+INV
+12"
+10
+3+
+18
+6+
+8
+5+*
+WHEN TARGETEDFeel No Pain 6+ · 5+ invulnerable save against ranged attacks only · 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+DAMAGED 1-6 W-1 to hit rolls (and -4 OC)
+ALL ATTACKS
+No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) (1CP Strength from Exile)
+RANGED
+RNG
+A
+BS
+S
+AP
+D
+
+Shoots with all of these.
+
+Questoris heavy stubber
+36"
+6
+3+
+4
+-1
+1
+ASSAULT, RAPID FIRE 3
+Chastiser gatling cannon
+24"
+12
+3+
+6
+-1
+2
+ASSAULT
+Frag bombard
+24"
+D6+3
+3+
+7
+-1
+2
+ASSAULT, BLAST, RAPID FIRE D6+3
+Target within range of an objective marker: ranged attacks have [IGNORES COVER] (Saturation Fire)
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+MELEE
+A
+WS
+S
+AP
+D
+Titanic feet
+4
+4+
+7
+-1
+2
+ABILITIES
+Thundercharge
+not usable here
+
+Needs a thundershock spear and bellatus reaper chainsword: not this loadout
+
+If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model.
+
+Ram Jets
+Your Movement
+
+Movement · Your turn
+
+Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.
+
+Saturation Fire
+Your Shooting
+
+Shooting · Your turn
+
+Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
+
+Invulnerable Save (5+*)
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+RULESDeadly Demise D6, Super-Heavy Walker, Code Chivalric, Knights of Legend · Keywords
+
+STRATAGEMSNoble Sacrifice, Strength from Exile, Full Tilt, Point-Blank Barrage, Survivor of Strife, Epic Challenge, Crushing Impact
+
+######## popup ability:purge-freeblade|Aggressive Assault|Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll. · KNIGHT DESTRIER Purge Freeblade
+ABILITY · SHOOTING · YOUR TURN
+
+Aggressive Assault
+
+Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll.
+
+UNITKnight Errant
+
+######## popup ability:purge-freeblade|Damaged: 1-6 Wounds Remaining|While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. · PURGE FREEBLADE Purge Freeblade
+ABILITY
+
+Damaged: 1-6 Wounds Remaining
+
+While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+UNITKnight Destrier
+
+######## popup ability:purge-freeblade|Damaged: 1-9 Wounds Remaining|While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. · PURGE FREEBLADE Purge Freeblade
+ABILITY
+
+Damaged: 1-9 Wounds Remaining
+
+While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+UNITKnight Warden, Knight Paladin, Knight Errant
+
+######## popup ability:purge-freeblade|Invulnerable Save (5+*)|This model has a 5+ invulnerable save against ranged attacks. · PURGE FREEBLADE Purge Freeblade
+ABILITY
+
+Invulnerable Save (5+*)
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+UNITKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+######## popup ability:purge-freeblade|Saturation Fire|Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the **[IGNORES COVER]** ability. · PURGE FREEBLADE Purge Freeblade
+ABILITY · SHOOTING · YOUR TURN
+
+Saturation Fire
+
+Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
+
+UNITKnight Destrier
+
+######## popup ability:purge-freeblade|Seasoned Noble|Each time this model makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1. · PURGE FREEBLADE Purge Freeblade
+ABILITY · SHOOTING · YOUR TURN
+
+Seasoned Noble
+
+Each time this model makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1.
+
+UNITKnight Paladin
+
+######## popup ability:purge-freeblade|Thin Their Ranks|Each time this model makes a ranged attack that targets an enemy unit (excluding **MONSTERS** and **VEHICLES**), that attack has the **[DEVASTATING WOUNDS]** ability. · PURGE FREEBLADE Purge Freeblade
+ABILITY · SHOOTING · YOUR TURN
+
+Thin Their Ranks
+
+Each time this model makes a ranged attack that targets an enemy unit (excluding MONSTERS and VEHICLES), that attack has the [DEVASTATING WOUNDS] ability.
+
+UNITKnight Warden
+
+######## popup kw:knight-destrier · PURGE FREEBLADE Purge Freeblade
+CHARACTER · 265 PTS
+
+Knight Destrier
+
+1× Knight Destrier
+
+Base 150×95mm
+
+KEYWORDS
+
+Bellatus, Character, Faction: Imperial Knights, Imperium, Knight Destrier, Titanic, Towering, Vehicle, Walker
+
+######## popup kw:knight-errant · PURGE FREEBLADE Purge Freeblade
+CHARACTER · 355 PTS
+
+Knight Errant
+
+1× Knight Errant
+
+Base 170×109mm
+
+KEYWORDS
+
+Character, Faction: Imperial Knights, Imperium, Knight Errant, Questoris, Titanic, Towering, Vehicle, Walker
+
+######## popup kw:knight-paladin · PURGE FREEBLADE Purge Freeblade
+CHARACTER · 375 PTS
+
+Knight Paladin
+
+1× Knight Paladin
+
+Base 170×109mm
+
+KEYWORDS
+
+Character, Faction: Imperial Knights, Imperium, Knight Paladin, Questoris, Titanic, Towering, Vehicle, Walker
+
+######## popup kw:knight-warden · PURGE FREEBLADE Purge Freeblade
+CHARACTER · 365 PTS
+
+Knight Warden
+
+1× Knight Warden
+
+Base 170×109mm
+
+KEYWORDS
+
+Character, Faction: Imperial Knights, Imperium, Knight Warden, Questoris, Titanic, Towering, Vehicle, Walker, Warlord
+
+######## popup rule:ASSAULT · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+ASSAULT
+
+Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
+
+IN THIS ARMYKnight Errant, Knight Destrier
+
+######## popup rule:Advance · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+
+######## popup rule:Advance roll · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+
+######## popup rule:BLAST · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+BLAST
+
+Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead.
+
+Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+IN THIS ARMYKnight Paladin, Knight Errant, Knight Destrier
+
+######## popup rule:Battle-shock · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+######## popup rule:Charge roll · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:Charge rolls · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:Code Chivalric · PURGE FREEBLADE Purge Freeblade
+IMPERIAL KNIGHTS ARMY RULE
+
+Code Chivalric
+
+If your Army Faction is IMPERIAL KNIGHTS, at the end of the Read Mission Objectives step, you must determine your army’s Oath for the coming battle. An Oath consists of two parts - one Deed and one Quality. There are three options for each part, shown below.
+
+To determine your army’s Deed, you can either select one Deed or you can randomly select one Deed by rolling a D6 and consulting the relevant table below. The selected Deed will describe what needs to be achieved in order to complete that Deed.
+
+To determine your army’s Quality, you can either select one Quality or you can randomly select one Quality by rolling a D6 and consulting the relevant table below. Until the end of the battle, the ability described in the Quality selected applies to all models in your army with this ability.
+
+The first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).
+
+Deed 1–2 · We vow to lay low the tyrant…
+
+At the start of the battle, select one CHARACTER model in your opponent’s army. This Deed is completed at the end of a turn if that CHARACTER is destroyed.
+
+Deed 3–4 · We swear to reclaim the realm…
+
+This deed is completed at the end of your opponent’s turn if you control more objective markers than your opponent.
+
+Deed 5–6 · We pledge to reap a great tally…
+
+This deed is completed at the end of the battle round if the number of enemy units destroyed this battle round is greater than the battle round number even if those units are subsequently returned to the battlefield (for example, two destroyed enemy units in the first battle round).
+
+Quality 1–2 · …with our martial valour risen over all
+
+Each time this model is selected to shoot or fight, you can re-roll one Hit roll and you can re-roll one Wound roll.
+
+Quality 3–4 · …and we are eager for the challenge
+
+Add 2" to this model’s Move characteristic and add 1 to Advance and Charge rolls made for this model.
+
+Quality 5–6 · …yet shall our legacy be unsullied
+
+Improve this model’s Objective Control characteristic by 2 and its Leadership characteristic by 1.
+
+######## popup rule:Deadly Demise · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Deadly Demise
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+######## popup rule:Deadly Demise D6 · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Deadly Demise D6
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+######## popup rule:Deadly Demise X · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Deadly Demise X
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+######## popup rule:Deep Strike · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Deep Strike
+
+Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
+
+App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
+
+######## popup rule:Devastating Wounds · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Devastating Wounds
+
+Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+
+Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+
+IN THIS ARMYKnight Warden
+
+######## popup rule:Engagement Range · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+######## popup rule:Feel No Pain 6+ · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Feel No Pain 6+
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+######## popup rule:Fights First · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Fights First
+
+While every model in a unit has this ability, that unit is a Fights First unit.
+
+See the Resolve Fights First Combats step in the Fight phase (12.04).
+
+######## popup rule:Hazard roll · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Hazard Roll
+
+To make a hazard roll for a unit, roll one D6: on a 1-2, that roll fails and that unit suffers 1 mortal wound (see above), or 3 mortal wounds instead if each model in that unit is a MONSTER/VEHICLE model. If more than one hazard roll is required for a unit, make all of those rolls simultaneously.
+
+06.03.01 Hazardous Test (app): The term ‘Hazardous test’ is the same as hazard roll.
+
+Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model in the unit make a hazard roll? No, the unit would make 1 single hazard roll.
+
+Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
+
+######## popup rule:IGNORES COVER · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+IGNORES COVER
+
+Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+IN THIS ARMYKnight Warden, Knight Destrier
+
+######## popup rule:Knights of Legend · PURGE FREEBLADE Purge Freeblade
+FREEBLADE COMPANY DETACHMENT RULE
+
+Knights of Legend
+
+IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
+
+IN THIS ARMYKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+######## popup rule:MELTA 2 · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+MELTA 2
+
+This ability always takes the form [MELTA X]. Each time a model makes an attack with a [MELTA] weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add X to that weapon’s D characteristic.
+
+Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6. While resolving those attacks, that weapon has a D characteristic of D6+2.
+
+IN THIS ARMYKnight Warden, Knight Paladin, Knight Errant
+
+######## popup rule:MELTA 6 · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+MELTA 6
+
+This ability always takes the form [MELTA X]. Each time a model makes an attack with a [MELTA] weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add X to that weapon’s D characteristic.
+
+Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6. While resolving those attacks, that weapon has a D characteristic of D6+2.
+
+IN THIS ARMYKnight Warden, Knight Paladin, Knight Errant
+
+######## popup rule:MOBILE · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+MOBILE
+INFANTRY/BEASTS/SWARM/MOBILE models can move horizontally through dense terrain features.
+Other models can move horizontally through dense terrain features provided that all sections of that terrain feature that the moving model’s base would move through are 2" or less in height.
+
+App note, not rules text: MOBILE has no rule of its own in the core rules; these are the lines of Terrain and Movement (13.06) that name it and that it changes.
+
+######## popup rule:Mortal wounds · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+######## popup rule:Plunging Fire · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Plunging Fire
+
+Each time a model makes a ranged attack that targets a visible unit containing one or more models on ground level, if one or more of the following conditions apply, improve the BS characteristic of that attack by 1:
+
+The attacking model is on a section of a terrain feature that is 3" or more in height.
+The attacking model has the TOWERING keyword and the target unit is within 12".
+
+23.03 Shooting: The Plunging Fire rule (22.05) has no effect on attacks made by, or targeting, AIRCRAFT units.
+
+######## popup rule:RAPID FIRE 3 · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+RAPID FIRE 3
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYKnight Paladin, Knight Destrier
+
+######## popup rule:RAPID FIRE D6+3 · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+RAPID FIRE D6+3
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYKnight Paladin, Knight Destrier
+
+######## popup rule:Resolve a charge · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:Select Weapons · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Select Weapons
+
+For each model in the attacking unit, select which weapons that model will make attacks with. Models make ranged attacks with ranged weapons, and make melee attacks with melee weapons.
+
+While shooting: You can select one or more ranged weapons that model has.
+
+While fighting: You must select one melee weapon that model has.
+
+Sidearms: Some models are equipped with [CLOSE-QUARTERS] weapons in addition to other firearms. Such models can be an exception to the rules in this section, as you may not be able to select all of their weapons to make attacks with.
+
+24.11 [EXTRA ATTACKS]: Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others.
+
+04.01.03 Multiple Weapon Profiles (app): In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).
+
+######## popup rule:Starting Strength · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Starting Strength
+
+The number of models a unit contains at the start of the first battle round is its starting strength. The starting strength of an attached unit is the number of models that unit contains at the start of the first battle round.
+
+Some rules refer to units being below starting strength, or at – or below – half-strength. The meaning of these terms varies depending on a unit’s starting strength, as shown below.
+
+Starting strength of 1:
+
+Below starting strength: model’s remaining wounds are less than its W characteristic.
+At half-strength: model’s remaining wounds are half of its W characteristic.
+Below half-strength: model’s remaining wounds are less than half of its W characteristic.
+
+Starting strength of 2 or more:
+
+Below starting strength: number of remaining models in the unit is less than its starting strength.
+At half-strength: number of remaining models in the unit is half of its starting strength.
+Below half-strength: number of remaining models in the unit is less than half of its starting strength.
+
+Some units cannot be at half-strength: If a model’s W characteristic or a unit’s starting strength cannot be evenly divided in half, that model or unit cannot be at half-strength (but can be below half-strength as described above).
+
+Example: A Captain (1 model) is attached to a unit of Intercessors (5 models). This attached unit has a starting strength of 6. If three Intercessors were destroyed, the unit would be at half-strength. If four Intercessors were destroyed, the unit would be below half-strength. If all of the Intercessors were destroyed, the remaining Captain would be below half-strength, despite having his full wounds remaining.
+
+######## popup rule:Stealth · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Stealth
+
+If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).
+
+######## popup rule:Strategic Reserves · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Strategic Reserves
+
+Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding FORTIFICATIONS) to place in strategic reserves. Instead of setting up these units on the battlefield during deployment, place them to one side; they are strategic reserves units, and will arrive later in the battle.
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+20.01.01 Reserves (app): The term ‘Reserves’ is the same as strategic reserves.
+
+20.02 Repositioned Units: Some rules allow units to be removed from the battlefield and placed in strategic reserves during the battle. Units that use such rules are known as repositioned units. In addition to any other rules that apply to such units (such as where they can or cannot arrive), all of the following rules apply to them:
+
+If used in the Movement phase, such rules can be used on units that have already moved that phase.
+A repositioned unit that is set up in the same turn in which it made an advance, fall-back or disembark move has still made an advance, fall-back or disembark move that turn.
+When they are removed from the battlefield, any rules that are affecting such units for a specified duration or under specified circumstances continue to affect them while that duration and/or those circumstances apply.
+
+20.03 Arriving from Strategic Reserves: To arrive on the battlefield, each strategic reserves unit must make an ingress move (see below). Unless otherwise stated, they can only do so from the second battle round onwards.
+
+At the end of the third battle round, unless otherwise stated, all strategic reserves units that have not made one or more ingress moves are destroyed, with the following exceptions:
+
+Units embarked within TRANSPORTS that have made an ingress move during the battle.
+Repositioned units (see opposite).
+
+######## popup rule:Super-Heavy Walker · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Super-Heavy Walker
+
+Each time a unit with this ability makes a normal, advance or fall-back move:
+
+Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding TITANIC models) and can move horizontally through sections of terrain features that are 4" or less in height.
+Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked.
+
+Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).
+
+IN THIS ARMYKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+######## popup rule:TORRENT · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+TORRENT
+
+Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.
+
+IN THIS ARMYKnight Warden
+
+######## popup rule:[ASSAULT] · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+ASSAULT
+
+Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
+
+IN THIS ARMYKnight Errant, Knight Destrier
+
+######## popup rule:[BLAST X] · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+BLAST X
+
+Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead.
+
+Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+IN THIS ARMYKnight Paladin, Knight Errant, Knight Destrier
+
+######## popup rule:[BLAST] · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+BLAST
+
+Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead.
+
+Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+IN THIS ARMYKnight Paladin, Knight Errant, Knight Destrier
+
+######## popup rule:[DEVASTATING WOUNDS] · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+DEVASTATING WOUNDS
+
+Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+
+Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+
+IN THIS ARMYKnight Warden
+
+######## popup rule:[IGNORES COVER] · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+IGNORES COVER
+
+Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+IN THIS ARMYKnight Warden, Knight Destrier
+
+######## popup rule:[LANCE] · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+LANCE
+
+Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
+
+IN THIS ARMYKnight Paladin
+
+######## popup rule:[LETHAL HITS] · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+LETHAL HITS
+
+Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
+
+Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
+
+IN THIS ARMYKnight Paladin
+
+######## popup rule:[MELTA X] · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+MELTA X
+
+This ability always takes the form [MELTA X]. Each time a model makes an attack with a [MELTA] weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add X to that weapon’s D characteristic.
+
+Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6. While resolving those attacks, that weapon has a D characteristic of D6+2.
+
+IN THIS ARMYKnight Warden, Knight Paladin, Knight Errant
+
+######## popup rule:[MELTA] · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+MELTA
+
+This ability always takes the form [MELTA X]. Each time a model makes an attack with a [MELTA] weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add X to that weapon’s D characteristic.
+
+Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6. While resolving those attacks, that weapon has a D characteristic of D6+2.
+
+IN THIS ARMYKnight Warden, Knight Paladin, Knight Errant
+
+######## popup rule:[PRECISION] · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+PRECISION
+
+While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.
+
+24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
+
+######## popup rule:[RAPID FIRE X] · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+RAPID FIRE X
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYKnight Paladin, Knight Destrier
+
+######## popup rule:[RAPID FIRE] · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+RAPID FIRE
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYKnight Paladin, Knight Destrier
+
+######## popup rule:[SUSTAINED HITS 1] · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+SUSTAINED HITS 1
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYKnight Warden
+
+######## popup rule:[SUSTAINED HITS X] · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+SUSTAINED HITS X
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYKnight Warden
+
+######## popup rule:[SUSTAINED HITS] · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+SUSTAINED HITS
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYKnight Warden
+
+######## popup rule:[TORRENT] · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+TORRENT
+
+Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.
+
+IN THIS ARMYKnight Warden
+
+######## popup rule:advance · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+
+######## popup rule:assault shooting · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+assault shooting
+
+Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
+
+IN THIS ARMYKnight Errant, Knight Destrier
+
+######## popup rule:battle-shock roll · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+######## popup rule:battle-shocked · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+######## popup rule:benefit of cover · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Benefit of Cover
+
+Each time a ranged attack targets a unit, if every model in that unit meets one or more of the following conditions, that unit has the benefit of cover against that attack:
+
+That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area.
+That model is not fully visible to the attacking model due to one or more intervening terrain features and/or one or more intervening obscuring terrain areas (see below).
+
+Each time a ranged attack targets a unit that has the benefit of cover against it, worsen the BS characteristic of that attack by 1.
+
+######## popup rule:charge move · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+
+######## popup rule:charge roll · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:charge rolls · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:charge targets · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+
+######## popup rule:deadly demise · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+deadly demise
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+######## popup rule:desperate escape · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Fall-back Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is engaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select fall-back mode:
+
+Ordered Retreat: If your unit is not battle-shocked, you can select this mode.
+Desperate Escape: Otherwise, you must select this mode. Make a hazard roll for each model in your unit (06.03).
+
+WHILE MOVING:
+
+Desperate Escape: Each model that is moved can be moved through enemy models.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to shoot, declare a charge or start an action.
+Desperate Escape: If your unit is not battle-shocked, you must make a battle-shock roll for your unit (01.07).
+
+Desperate Escape Test (app): Some rules may reference the term ‘Desperate Escape test’. In all instances this means the hazard rolls made for the desperate escape mode of a fall-back move.
+
+Abilities that subtract from a unit’s Desperate Escape test instead subtract from those hazard rolls.
+
+If a stratagem or ability instructs a unit to make a Desperate Escape test, that unit:
+
+Must use the desperate escape mode when it is selected to make a fall-back move.
+Must make one hazard roll for each model in that unit.
+Must make a battle-shock roll.
+
+######## popup rule:destroyed · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Destroyed
+
+Throughout a battle, models will suffer damage, lose wounds and be destroyed. When every model in a unit has been destroyed, that unit is destroyed.
+
+When a model is destroyed, first resolve any rules that are triggered when it is destroyed, then it is removed from the battlefield. If any such rules apply, and if the model was destroyed as the result of an attack, unless otherwise stated, those rules are only resolved and that model is only removed after the attacking unit’s attacks have been resolved. Unless otherwise stated, destroyed models and units cannot use abilities or be selected or targeted by rules.
+
+05.04.05 Fight On Death (app): Some rules enable models to attack after they have been destroyed. When a model under such an effect is destroyed, do not remove it from play.
+
+Those models will stay on the battlefield until their unit is selected to attack and has attacked, or until the end of the phase (whichever comes first). Any rules triggered by those models being destroyed are resolved, and then those destroyed models are removed.
+
+######## popup rule:engaged · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+######## popup rule:fall-back move · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Fall-back Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is engaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select fall-back mode:
+
+Ordered Retreat: If your unit is not battle-shocked, you can select this mode.
+Desperate Escape: Otherwise, you must select this mode. Make a hazard roll for each model in your unit (06.03).
+
+WHILE MOVING:
+
+Desperate Escape: Each model that is moved can be moved through enemy models.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to shoot, declare a charge or start an action.
+Desperate Escape: If your unit is not battle-shocked, you must make a battle-shock roll for your unit (01.07).
+
+Desperate Escape Test (app): Some rules may reference the term ‘Desperate Escape test’. In all instances this means the hazard rolls made for the desperate escape mode of a fall-back move.
+
+Abilities that subtract from a unit’s Desperate Escape test instead subtract from those hazard rolls.
+
+If a stratagem or ability instructs a unit to make a Desperate Escape test, that unit:
+
+Must use the desperate escape mode when it is selected to make a fall-back move.
+Must make one hazard roll for each model in that unit.
+Must make a battle-shock roll.
+
+######## popup rule:hazard rolls · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Hazard Roll
+
+To make a hazard roll for a unit, roll one D6: on a 1-2, that roll fails and that unit suffers 1 mortal wound (see above), or 3 mortal wounds instead if each model in that unit is a MONSTER/VEHICLE model. If more than one hazard roll is required for a unit, make all of those rolls simultaneously.
+
+06.03.01 Hazardous Test (app): The term ‘Hazardous test’ is the same as hazard roll.
+
+Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model in the unit make a hazard roll? No, the unit would make 1 single hazard roll.
+
+Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
+
+######## popup rule:ingress move · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Ingress Move
+
+SET-UP DISTANCE: 6"
+
+ELIGIBLE IF: Your unit is in strategic reserves (excluding units that are embarked within TRANSPORTS that are themselves in strategic reserves).
+
+EFFECT: Your unit is set up as described in Set Up (03.02).
+
+WHILE MOVING: Set up your unit wholly within the set-up distance of one or more battlefield edges and more than 8" horizontally from all enemy units.
+
+Before the Third Battle Round: While doing so, no models can be set up within your opponent’s deployment zone.
+
+AFTER MOVING: Unless otherwise stated, until the start of the next Charge phase, your unit is not eligible to make any other type of move.
+
+20.03.01 Set Up As Reinforcements (app): If a rule mentions a unit being set up on the battlefield as Reinforcements, it means a unit that made an ingress move.
+
+######## popup rule:mortal wound · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+######## popup rule:mortal wounds · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+######## popup rule:normal · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Normal Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+AFTER MOVING: Your unit must be unengaged.
+
+09.05.01 More Than One Normal Move in a Phase (app): A unit cannot make more than one Normal Move in a phase.
+
+######## popup rule:strategic reserves · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Strategic Reserves
+
+Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding FORTIFICATIONS) to place in strategic reserves. Instead of setting up these units on the battlefield during deployment, place them to one side; they are strategic reserves units, and will arrive later in the battle.
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+20.01.01 Reserves (app): The term ‘Reserves’ is the same as strategic reserves.
+
+20.02 Repositioned Units: Some rules allow units to be removed from the battlefield and placed in strategic reserves during the battle. Units that use such rules are known as repositioned units. In addition to any other rules that apply to such units (such as where they can or cannot arrive), all of the following rules apply to them:
+
+If used in the Movement phase, such rules can be used on units that have already moved that phase.
+A repositioned unit that is set up in the same turn in which it made an advance, fall-back or disembark move has still made an advance, fall-back or disembark move that turn.
+When they are removed from the battlefield, any rules that are affecting such units for a specified duration or under specified circumstances continue to affect them while that duration and/or those circumstances apply.
+
+20.03 Arriving from Strategic Reserves: To arrive on the battlefield, each strategic reserves unit must make an ingress move (see below). Unless otherwise stated, they can only do so from the second battle round onwards.
+
+At the end of the third battle round, unless otherwise stated, all strategic reserves units that have not made one or more ingress moves are destroyed, with the following exceptions:
+
+Units embarked within TRANSPORTS that have made an ingress move during the battle.
+Repositioned units (see opposite).
+
+######## popup rule:unengaged · PURGE FREEBLADE Purge Freeblade
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+######## popup strat:crushing-impact · PURGE FREEBLADE Purge Freeblade
+1CP · CHARGE · YOUR TURN
+
+Crushing Impact
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYany unit
+
+######## popup strat:epic-challenge · PURGE FREEBLADE Purge Freeblade
+1CP · FIGHT · EITHER TURN
+
+Epic Challenge
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYany unit
+
+######## popup strat:full-tilt · PURGE FREEBLADE Purge Freeblade
+1CP · MOVEMENT · YOUR TURN
+
+Full Tilt
+WHEN
+
+Your Movement phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army.
+
+EFFECT
+
+Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6" to the Move characteristic of models in your unit, or 9" instead if your unit is an ARMIGER or DESTRIER unit.
+
+GW’s Faction Pack prints DESTRIER as a keyword, but no Imperial Knights datasheet has it: the Knight Destrier’s keyword is KNIGHT DESTRIER (Wahapedia strikes DESTRIER through for this reason). By the letter, your Knight Destriers add 6"; the evident intent is that they add 9". Agree it with your opponent before the game.
+
+Agree with your opponent: Do your Knight Destriers add 9" (the evident intent) or 6" (the letter: their keyword is KNIGHT DESTRIER, the pack says DESTRIER)?
+
+USED BYany unit
+
+######## popup strat:insane-bravery · PURGE FREEBLADE Purge Freeblade
+1CP · COMMAND · YOUR TURN · ONCE PER BATTLE
+
+Insane Bravery
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+######## popup strat:noble-sacrifice · PURGE FREEBLADE Purge Freeblade
+1CP · ANY PHASE · EITHER TURN
+
+Noble Sacrifice
+WHEN
+
+Any phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.
+
+EFFECT
+
+Your unit’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.
+
+USED BYany unit
+
+######## popup strat:point-blank-barrage · PURGE FREEBLADE Purge Freeblade
+1CP · SHOOTING · YOUR TURN
+
+Point-Blank Barrage
+WHEN
+
+Your Shooting phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that has not been selected to shoot this phase.
+
+EFFECT
+
+Until the end of the phase, when making ranged attacks with Blast weapons, models in your unit can target enemy units within Engagement Range of your unit (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, until the end of the phase, your unit does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units, but each time a model in your unit makes an attack with a Blast weapon that targets a unit within Engagement Range of your unit, on an unmodified Hit roll of 1, your unit suffers 1 mortal wound after all of its attacks have been resolved.
+
+USED BYany unit
+
+######## popup strat:strength-from-exile · PURGE FREEBLADE Purge Freeblade
+1CP · YOUR SHOOTING / FIGHT (EITHER TURN)
+
+Strength from Exile
+WHEN
+
+Your Shooting phase or the Fight phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that has not been selected to shoot or fight this phase.
+
+EFFECT
+
+Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.
+
+USED BYany unit
+
+######## popup strat:survivor-of-strife · PURGE FREEBLADE Purge Freeblade
+1CP · SHOOTING · THEIR TURN
+
+Survivor of Strife
+WHEN
+
+Your opponent’s Shooting phase, just after an enemy unit has selected its targets.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the Wound roll.
+
+USED BYany unit
