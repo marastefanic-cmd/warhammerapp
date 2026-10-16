@@ -84,12 +84,12 @@ h1,h2,h3{margin:0; text-wrap:balance}
 
 /* ---------- nav bar ---------- */
 .top{position:sticky; top:env(safe-area-inset-top, 0px); z-index:20; background:var(--bg)}
-.top-in{max-width:720px; margin:0 auto; display:flex; align-items:center; gap:10px; min-height:56px; padding:6px 0}
-.back{flex:none; display:flex; align-items:center; gap:2px; min-height:44px; padding-right:6px; color:var(--accent);
-  font:700 16px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; max-width:46%}
+.top-in{max-width:720px; margin:0 auto; display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,1fr); align-items:center; gap:8px; min-height:52px; padding:4px 0}
+.back{justify-self:start; display:flex; align-items:center; gap:2px; min-height:44px; padding-right:6px; color:var(--accent);
+  font:700 16px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; max-width:100%; min-width:0}
 .back svg{width:22px; height:22px; flex:none; margin-left:-4px}
 .back span{white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
-.ttl{flex:1; min-width:0; font:700 19px/1.1 var(--f-head); letter-spacing:.03em; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.ttl{min-width:0; max-width:58vw; text-align:center; font:700 18px/1.1 var(--f-head); letter-spacing:.03em; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
 .ttl.brand{font:400 25px/1 var(--f-display); letter-spacing:.01em}
 .subbar{display:flex; gap:6px; overflow-x:auto; scrollbar-width:none; padding-bottom:8px}
 .subbar::-webkit-scrollbar{display:none}
@@ -121,7 +121,6 @@ summary{list-style:none; cursor:pointer}
 summary::-webkit-details-marker{display:none}
 
 /* ---------- home: army cards ---------- */
-.hero-h{font:400 34px/1.02 var(--f-display); letter-spacing:.01em; margin-top:6px}
 .acard{display:grid; gap:6px; width:100%; padding:16px; background:var(--surface); border:1px solid var(--line); border-radius:16px; position:relative; overflow:hidden}
 .acard:active{background:var(--surface2)}
 .acard .an{font:400 30px/1 var(--f-display); letter-spacing:.01em; padding-right:30px}
@@ -132,38 +131,31 @@ summary::-webkit-details-marker{display:none}
 .howto a{color:var(--accent)}
 
 /* ---------- army screen ---------- */
-.big2{display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:16px}
-.midbtn{display:flex; align-items:center; gap:12px; padding:12px 14px; border-radius:14px; background:var(--surface); border:1px solid var(--line); text-align:left; min-width:0}
-.midbtn:active{background:var(--surface2)}
-.midbtn .bi{width:26px; height:26px; flex:none}
-.midbtn span{display:grid; gap:2px; min-width:0}
-.midbtn b{font:700 20px/1 var(--f-head); letter-spacing:.04em; text-transform:uppercase}
-.midbtn small{font-size:12.5px; color:var(--muted)}
-.midbtn.ranged .bi{color:var(--dakka)} .midbtn.melee .bi{color:var(--choppa)}
-
-.bigbtn{display:grid; gap:6px; align-content:end; min-height:116px; padding:14px; border-radius:16px; background:var(--surface); border:1px solid var(--line); text-align:left; position:relative; overflow:hidden}
-.bigbtn:active{background:var(--surface2)}
-.bigbtn .bt{font:700 27px/1 var(--f-head); letter-spacing:.04em; text-transform:uppercase}
-.bigbtn .bs{font-size:13.5px; color:var(--muted)}
-.bigbtn .bi{position:absolute; top:12px; left:14px; width:28px; height:28px}
-.bigbtn.units .bi{color:var(--accent)} .bigbtn.strats .bi{color:var(--dakka)}
-.rowbtn{display:flex; align-items:center; gap:12px; width:100%; padding:14px; border-radius:14px; background:var(--surface); border:1px solid var(--line); text-align:left}
-.rowbtn:active{background:var(--surface2)}
-.rowbtn svg.ic{width:24px; height:24px; flex:none; color:var(--muted)}
-.rowbtn .rb{flex:1; min-width:0}
-.rowbtn .rb b{display:block; font:700 18px/1.1 var(--f-head); letter-spacing:.04em; text-transform:uppercase}
-.rowbtn .rb span{font-size:13.5px; color:var(--muted)}
-.rowbtn .go{width:20px; height:20px; flex:none; color:var(--muted); transform:rotate(-90deg)}
+.army-h{font:400 26px/1.05 var(--f-display); letter-spacing:.01em; margin:4px 0 2px}
+.army-sub{font-size:13.5px; color:var(--muted)}
+.menu{margin-top:12px; border-top:1px solid var(--line)}
+.mrow{display:grid; grid-template-columns:24px minmax(0,1fr) auto 18px; gap:12px; align-items:center; width:100%; padding:12px 2px; border-bottom:1px solid var(--line); text-align:left}
+.mrow:active{background:var(--surface)}
+.mrow svg.ic{width:22px; height:22px}
+.mrow b{font:700 18px/1.1 var(--f-head); letter-spacing:.03em}
+.mrow .c{font:600 14px var(--f-head); color:var(--muted); font-variant-numeric:tabular-nums}
+.mrow .go{width:18px; height:18px; color:var(--muted); transform:rotate(-90deg)}
+.ic.units{color:var(--accent)} .ic.strats{color:var(--dakka)} .ic.ranged{color:var(--dakka)} .ic.melee{color:var(--choppa)} .ic.abil{color:var(--accent)} .ic.rules{color:var(--muted)}
 
 /* ---------- slices: weapons / abilities by unit ---------- */
-.uh{display:flex; align-items:baseline; gap:8px; width:100%; text-align:left; padding:16px 0 4px; border-bottom:2px solid var(--line)}
-.uh:first-child{padding-top:4px}
-.uh b{font:700 18px/1.15 var(--f-head); letter-spacing:.02em}
-.uh span{flex:1; min-width:0; font-size:12.5px; color:var(--muted)}
-.uh .tg{color:var(--dakka)}
-.uh svg{width:18px; height:18px; color:var(--accent); transform:rotate(-90deg); flex:none; align-self:center}
-.slice .wt{margin-top:4px}
-.slice .al{margin-top:8px}
+/* each unit opens with a one-line band (its name) over the column labels; both stay pinned while you scroll its rows */
+.slice > .wt, .slice > .ub{margin-top:16px}
+.slice > :first-child{margin-top:0}
+.ub, .wt > span.band{position:sticky; top:calc(env(safe-area-inset-top, 0px) + var(--hdr)); z-index:4; display:flex; align-items:center; height:34px; padding:0 10px;
+  border-radius:8px; background:var(--surface2); border:0; text-align:left}
+.wt > span.band{grid-column:1 / -1}
+.wt.lab > span.h{top:calc(env(safe-area-inset-top, 0px) + var(--hdr) + 34px); padding:6px 0 4px}
+.uhn{display:flex; flex:1; align-items:baseline; gap:8px; min-width:0; max-width:100%; font:700 16.5px/1.1 var(--f-head); letter-spacing:.02em; color:var(--fg); cursor:pointer}
+.uhn .nm{flex:none}
+.uhn small{min-width:0; font:600 12px/1.2 var(--f-body); color:var(--dakka); white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.uhn small.m{color:var(--muted)}
+.uhn::after{content:"\203A"; margin-left:auto; padding-left:6px; color:var(--accent); font-size:20px; line-height:1}
+.slice .al{margin-top:6px}
 
 /* ---------- unit list ---------- */
 .ulist{display:grid; border-top:1px solid var(--line)}
@@ -180,7 +172,7 @@ summary::-webkit-details-marker{display:none}
 .sline .inv{color:var(--accent)}
 
 /* ---------- datasheet ---------- */
-.ds-hero h1{font:400 27px/1.05 var(--f-display); letter-spacing:.01em; margin:4px 0 8px}
+.ds-hero h1{font:700 24px/1.1 var(--f-head); letter-spacing:.02em; margin:3px 0 6px}
 .fold{border-top:1px solid var(--line); scroll-margin-top:calc(var(--hdr) + env(safe-area-inset-top, 0px) + 4px)}
 .fold:first-of-type{margin-top:12px}
 .fold > summary{display:flex; align-items:center; gap:8px; padding:10px 0 8px; min-height:44px}
@@ -201,7 +193,7 @@ summary::-webkit-details-marker{display:none}
 .wt.ranged{grid-template-columns:minmax(0,1fr) 30px 38px 27px 26px 28px 36px}
 .wt.melee{grid-template-columns:minmax(0,1fr) 38px 27px 26px 28px 36px}
 .wt > span{font:700 16px/1.2 var(--f-head); text-align:center; padding:6px 0 5px; border-top:1px solid var(--line); min-width:0; font-variant-numeric:tabular-nums}
-.wt > span.h{font:600 10.5px/1 var(--f-head); letter-spacing:.12em; color:var(--muted); border-top:0; padding:2px 0 6px}
+.wt > span.h{position:sticky; top:calc(env(safe-area-inset-top, 0px) + var(--hdr)); z-index:3; background:var(--bg); font:600 10.5px/1 var(--f-head); letter-spacing:.12em; color:var(--muted); border-top:0; padding:2px 0 6px}
 .wt > span.h.n{text-align:left}
 .wt > span.n{text-align:left; padding-right:6px; font:600 15px/1.2 var(--f-head); letter-spacing:.01em}
 .wt > span.h.n{font:600 10.5px/1 var(--f-head); letter-spacing:.12em; text-transform:uppercase; color:var(--muted)}
@@ -238,11 +230,11 @@ summary::-webkit-details-marker{display:none}
 
 /* ---------- stratagems ---------- */
 .seg{display:grid; grid-auto-flow:column; grid-auto-columns:1fr; gap:4px; background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:4px}
-.seg button{padding:10px 4px; border-radius:9px; font:700 14.5px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--muted); text-align:center}
+.seg button{padding:8px 4px; border-radius:9px; font:700 14.5px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--muted); text-align:center}
 .seg button[aria-pressed="true"]{background:var(--accent); color:var(--accent-ink)}
-.phasebar{display:flex; gap:6px; overflow-x:auto; padding:10px 0 2px; scrollbar-width:none}
+.phasebar{display:flex; gap:6px; overflow-x:auto; padding:8px 0 2px; scrollbar-width:none}
 .phasebar::-webkit-scrollbar{display:none}
-.phasebar button{flex:none; padding:9px 13px; border-radius:999px; border:1px solid var(--line); background:var(--surface);
+.phasebar button{flex:none; padding:7px 12px; border-radius:999px; border:1px solid var(--line); background:var(--surface);
   font:700 14px/1 var(--f-head); letter-spacing:.07em; text-transform:uppercase; color:var(--muted)}
 .phasebar button[aria-pressed="true"]{border-color:var(--fg); color:var(--fg); background:var(--surface2)}
 .strat{background:var(--surface); border:1px solid var(--line); border-radius:12px}
@@ -253,12 +245,13 @@ summary::-webkit-details-marker{display:none}
 .strat .sn{font:700 16.5px/1.1 var(--f-head); letter-spacing:.02em; text-transform:uppercase}
 .strat .src{font-size:12.5px; color:var(--muted); margin-top:2px}
 .strat .body{padding:0 12px 12px; font-size:14.5px}
-.strat dl{margin:0; display:grid; grid-template-columns:auto minmax(0,1fr); gap:7px 10px; border-top:1px solid var(--line); padding-top:10px}
+.strat dl{margin:0; display:grid; grid-template-columns:auto minmax(0,1fr); gap:6px 10px; border-top:1px solid var(--line); padding-top:10px}
 .strat dt{font:700 11.5px/1.7 var(--f-head); letter-spacing:.12em; color:var(--muted); text-transform:uppercase}
 .strat dd{margin:0; min-width:0}
-.strat .units{display:flex; flex-wrap:wrap; gap:6px; margin-top:10px}
-.strat .units .eyebrow{width:100%; margin-bottom:2px}
-.toolrow{display:flex; justify-content:flex-end; margin-top:6px}
+.usedby{margin-top:9px; font-size:13.5px; line-height:1.45; color:var(--muted)}
+.usedby > span:first-child{font:700 11.5px var(--f-head); letter-spacing:.12em; text-transform:uppercase; margin-right:2px}
+.usedby [data-unit]{color:var(--fg); cursor:pointer; text-decoration:underline dotted; text-decoration-color:var(--muted); text-underline-offset:3px}
+.toolrow{display:flex; justify-content:flex-end; margin:2px 0 -14px}
 .linkbtn{font:700 13px/1 var(--f-head); letter-spacing:.08em; text-transform:uppercase; color:var(--accent); padding:10px 0}
 
 /* ---------- rules ---------- */
@@ -332,7 +325,7 @@ summary::-webkit-details-marker{display:none}
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="data.js?v=2026-10-16.4"></script>
+<script src="data.js?v=2026-10-16.5"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -463,6 +456,7 @@ function renderTop(){
   let left = '', title = '', right = '';
   if(c.s === 'home'){
     title = '<div class="ttl brand">Waaagh Codex</div>';
+    left = '<span></span>';
   } else {
     const p = parentOf(c);
     const label = p.s === 'home' ? 'Armies' : p.s === 'army' ? army().name : 'Units';
@@ -470,7 +464,7 @@ function renderTop(){
     const t = { army:'', units:'Units', strats:'Stratagems', ranged:'Ranged weapons', melee:'Melee weapons', abilities:'Abilities', rules:'Army rules', unit:(unitById(c.unit) || {}).name || '' }[c.s];
     title = '<div class="ttl">' + esc(t) + '</div>';
   }
-  $('#topIn').innerHTML = left + title + right;
+  $('#topIn').innerHTML = left + title + (right || '<span></span>');
 }
 function setSubbar(html){
   const sb = $('#subbar');
@@ -498,24 +492,20 @@ function screenHome(){
 /* ---------- screen: one army ---------- */
 function screenArmy(){
   const a = army();
-  const usable = usableStrats(a), nDet = usable.filter(s => s.src !== 'Core').length;
-  return '<div class="eyebrow">' + esc(faction().name + ' · ' + a.pointsUsed + ' / ' + a.points + ' pts · ' + a.battleSize) + '</div>' +
-    '<h1 class="hero-h">' + esc(a.name) + '</h1>' +
-    '<div class="pills" style="margin-top:12px">' + detachments().map(d => '<span class="pill">' + esc(d.name) + '</span>').join('') + '<span class="pill">' + esc(a.disposition) + '</span></div>' +
+  const usable = usableStrats(a);
+  const row = (go, ic, cls, label, count) => '<button class="mrow" data-go="' + go + '"><svg class="ic ' + cls + '" aria-hidden="true"><use href="#' + ic + '"/></svg><b>' + label + '</b><span class="c">' + count + '</span>' + arrow + '</button>';
+  return '<div class="eyebrow">' + esc(faction().name + ' \u00b7 ' + a.pointsUsed + ' / ' + a.points + ' pts \u00b7 ' + a.battleSize) + '</div>' +
+    '<h1 class="army-h">' + esc(a.name) + '</h1>' +
+    '<div class="army-sub">' + esc(detachments().map(d => d.name).join(' \u00b7 ') + ' \u00b7 ' + a.disposition) + '</div>' +
     '<div class="finder"><label class="search"><svg aria-hidden="true"><use href="#i-search"/></svg><input id="armyQ" type="search" placeholder="Find a unit, weapon, keyword, rule\u2026" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" aria-label="Find anything in this army"></label><div id="qres"></div></div>' +
-    '<div id="armyMenu"><div class="big2">' +
-      '<button class="bigbtn units" data-go="units"><svg class="bi" aria-hidden="true"><use href="#i-units"/></svg><span class="bt">Units</span><span class="bs">' + unitCount(a) + ' units · datasheets</span></button>' +
-      '<button class="bigbtn strats" data-go="strats"><svg class="bi" aria-hidden="true"><use href="#i-cards"/></svg><span class="bt">Stratagems</span><span class="bs">' + nDet + ' detachment \u00b7 ' + (usable.length - nDet) + ' core</span></button>' +
-    '</div>' +
-    '<div class="big2" style="margin-top:8px">' +
-      '<button class="midbtn ranged" data-go="ranged"><svg class="bi" aria-hidden="true"><use href="#i-gun"/></svg><span><b>Ranged</b><small>' + countW(a, 'ranged') + ' weapon profiles</small></span></button>' +
-      '<button class="midbtn melee" data-go="melee"><svg class="bi" aria-hidden="true"><use href="#i-blade"/></svg><span><b>Melee</b><small>' + countW(a, 'melee') + ' weapon profiles</small></span></button>' +
-    '</div>' +
-    '<div class="stack" style="margin-top:8px">' +
-      '<button class="rowbtn" data-go="abilities"><svg class="ic" aria-hidden="true"><use href="#i-spark"/></svg><span class="rb"><b>Abilities</b><span>Every unit ability, by unit</span></span>' + arrow + '</button>' +
-      '<button class="rowbtn" data-go="rules"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg><span class="rb"><b>Army rules</b><span>Waaagh!, detachments, keyword glossary</span></span>' + arrow + '</button>' +
-    '</div>' +
-    '<div class="dimnote">' + esc(a.source) + '</div></div>';
+    '<div id="armyMenu"><div class="menu">' +
+      row('units', 'i-units', 'units', 'Units', unitCount(a)) +
+      row('strats', 'i-cards', 'strats', 'Stratagems', usable.length) +
+      row('ranged', 'i-gun', 'ranged', 'Ranged weapons', countW(a, 'ranged')) +
+      row('melee', 'i-blade', 'melee', 'Melee weapons', countW(a, 'melee')) +
+      row('abilities', 'i-spark', 'abil', 'Abilities', a.units.reduce((t, u) => t + u.abilities.length, 0)) +
+      row('rules', 'i-book', 'rules', 'Army rules', '') +
+    '</div><div class="dimnote">' + esc(a.source) + '</div></div>';
 }
 
 /* ---------- find anything: one search over every unit, weapon, ability, stratagem and rule ---------- */
@@ -626,18 +616,16 @@ function screenUnits(){
 
 /* ---------- screens: the same data sliced by weapon type or ability ---------- */
 const countW = (a, kind) => a.units.reduce((t, u) => t + ((u[kind] || []).length), 0);
-function unitHead(u){
-  const bits = [];
-  if(u.enhancement) bits.push('<span class="tg">' + esc(u.enhancement) + '</span>');
-  if(u.leads) bits.push('+ ' + esc(u.leads));
-  if(u.copies > 1) bits.push('×' + u.copies + ' units');
-  return '<button class="uh" data-unit="' + esc(u.id) + '"><b>' + esc(u.name) + '</b><span>' + bits.join(' · ') + '</span><svg aria-hidden="true"><use href="#i-down"/></svg></button>';
+// the unit's name for a slice band: tap it to open the datasheet
+function unitLabel(u){
+  const extra = u.enhancement ? '<small>' + esc(u.enhancement) + '</small>' : u.leads ? '<small class="m">+ ' + esc(u.leads) + '</small>' : u.copies > 1 ? '<small class="m">\u00d7' + u.copies + ' units</small>' : '';
+  return '<span role="button" tabindex="0" class="uhn" data-unit="' + esc(u.id) + '"><span class="nm">' + esc(u.name) + '</span>' + extra + '</span>';
 }
 function screenWeapons(kind){
   const list = army().units.filter(u => (u[kind] || []).length);
   if(!list.length) return '<div class="empty">No ' + kind + ' weapons in this army.</div>';
-  return '<div class="slice">' + list.map(u => unitHead(u) + weaponList(u[kind], kind)).join('') + '</div>' +
-    '<div class="dimnote">Tap a unit name for its full datasheet, or a keyword to read what it does.</div>';
+  return '<div class="slice">' + list.map(u => weaponList(u[kind], kind, unitLabel(u))).join('') + '</div>' +
+    '<div class="dimnote">Tap a unit name for its datasheet, or a keyword to read what it does.</div>';
 }
 function abilityList(abs){
   return '<div class="al">' + abs.map(ab =>
@@ -645,7 +633,7 @@ function abilityList(abs){
     (ab.tag ? '<span class="tg' + (ab.tag === 'Enhancement' ? ' enh' : '') + '">' + esc(ab.tag) + '</span>' : '') + '</div>' + rt(ab.text) + '</div>').join('') + '</div>';
 }
 function screenAbilities(){
-  return '<div class="slice">' + army().units.filter(u => u.abilities.length).map(u => unitHead(u) + abilityList(u.abilities)).join('') + '</div>' +
+  return '<div class="slice">' + army().units.filter(u => u.abilities.length).map(u => '<div class="ub">' + unitLabel(u) + '</div>' + abilityList(u.abilities)).join('') + '</div>' +
     '<div class="dimnote">Army-wide rules such as Waaagh! are under Army rules.</div>';
 }
 
@@ -656,10 +644,10 @@ function fold(id, dotCls, title, count, body){
   return '<details class="fold" id="sec-' + id + '" data-fold="' + id + '"' + (open ? ' open' : '') + '><summary><span class="dot ' + dotCls + '"></span><h2>' + esc(title) + '</h2>' +
     (count != null ? '<span class="ct">' + count + '</span>' : '') + chev + '</summary><div class="body">' + body + '</div></details>';
 }
-function weaponList(list, kind){
+function weaponList(list, kind, label){
   const ranged = kind === 'ranged';
   const cols = ranged ? ['RNG','A','BS','S','AP','D'] : ['A','WS','S','AP','D'];
-  let h = '<div class="wt ' + kind + '"><span class="h n">Weapon</span>' + cols.map(c => '<span class="h">' + c + '</span>').join('');
+  let h = '<div class="wt ' + kind + (label ? ' lab' : '') + '">' + (label ? '<span class="band">' + label + '</span>' : '') + '<span class="h n">Weapon</span>' + cols.map(c => '<span class="h">' + c + '</span>').join('');
   const combined = new Set(list.map(w => w.who || '')).size > 1;
   let lastWho = null, prev = null;
   for(const w of list){
@@ -730,9 +718,10 @@ function stratCard(s, open){
   const el = s.needs ? eligible(s) : [];
   return '<details class="strat"' + (open ? ' open' : '') + '><summary><div class="cpbox num">' + s.cp + '<small>CP</small></div>' +
     '<div style="min-width:0"><div class="sn">' + esc(s.name) + '</div><div class="src">' + esc(stratWhenLine(s)) + (s.limit ? ' · ' + esc(s.limit) : '') + '</div></div>' + chev + '</summary>' +
-    '<div class="body"><dl><dt>Source</dt><dd>' + esc(s.src === 'Core' ? 'Core stratagem' : s.src + ' detachment') + (s.kind ? ' · ' + esc(s.kind) : '') + '</dd>' +
-      '<dt>When</dt><dd>' + inline(s.when) + '</dd><dt>Target</dt><dd>' + inline(s.target) + '</dd><dt>Effect</dt><dd>' + inline(s.effect) + '</dd></dl>' +
-      (el.length ? '<div class="units"><span class="eyebrow">Who can use it</span>' + el.map(u => '<button class="ulink" data-unit="' + esc(u.id) + '">' + esc(shortName(u)) + '</button>').join('') + '</div>' : '') +
+    '<div class="body"><dl>' +
+      '<dt>When</dt><dd>' + inline(s.when) + '</dd><dt>Target</dt><dd>' + inline(s.target) + '</dd><dt>Effect</dt><dd>' + rt(s.effect) + '</dd></dl>' +
+      (el.length ? '<div class="usedby"><span>Used by</span> ' + el.map(u => '<span role="button" tabindex="0" data-unit="' + esc(u.id) + '">' + esc(shortName(u)) + '</span>').join(', ') + '</div>' : '') +
+      (s.src === 'Core' ? '<div class="usedby">Core stratagem' + (s.kind ? ' \u00b7 ' + esc(s.kind) : '') + ' \u00b7 summary, check the core rules for exact wording</div>' : '') +
     '</div></details>';
 }
 const turnOk = t => prefs.turn === 'all' || !t || t === 'either' || prefs.turn === t;
@@ -761,7 +750,7 @@ function screenStrats(){
   let any = false;
   for(const [name, list, d] of groups){
     if(!list.length){
-      if(d && !d.stratagems.length && prefs.phase === 'all' && prefs.turn === 'all') h += '<div class="sec-h"><h2>' + esc(name) + '</h2></div><div class="dimnote" style="margin-top:0">No stratagems in this detachment: it gives you the ' + esc(d.rule.name) + ' rule and its enhancements.</div>';
+      if(d && !d.stratagems.length && prefs.phase === 'all' && prefs.turn === 'all') h += '<div class="sec-h"><h2>' + esc(name) + '</h2><span class="ct">no stratagems</span></div>';
       continue;
     }
     any = true;
@@ -769,7 +758,7 @@ function screenStrats(){
   }
   if(!any) h += '<div class="empty" style="margin-top:14px">No stratagems for this phase and turn.</div>';
   if(hidden) h += '<div class="dimnote">' + hidden + ' more ' + (hidden === 1 ? 'needs' : 'need') + ' a keyword no unit in this army has (for example SMOKE).</div>';
-  h += '<div class="dimnote">Stratagem text is a short summary of the rule. Check your printout for exact wording.</div>';
+  h += '<div class="dimnote">Detachment stratagems are word for word from Wahapedia. Core stratagems are short summaries: check the core rules for exact wording.</div>';
   if(prefs.phase !== 'all'){
     const abil = phaseAbilities().filter(a => phaseOk(a.ph) && turnOk(a.turn));
     if(abil.length) h += '<div class="sec-h"><h2>Also this phase</h2><span class="ct">' + abil.length + ' abilities</span></div><div class="stack">' + abil.map(a =>

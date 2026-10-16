@@ -12,7 +12,7 @@
 ===================================================================== */
 window.WH_DATA = (function(){
 
-const VERSION = '2026-10-16.4';
+const VERSION = '2026-10-16.5';
 
 /* ---------------- core rules (11th edition) ---------------- */
 // Weapon keyword and core ability text, from the BSData wh40k-11e game system.
@@ -105,7 +105,7 @@ const FACTIONS = {
     name: 'Orks',
     glyph: 'WAAAGH!',
     armyRules: [
-      { name:'Waaagh!', text:'Friendly **ORKS** with this ability can:\n- Re-roll **advance rolls**.\n- Become **riled up**, as stated in other rules.\nWhile a unit is **riled up**:\n- That unit has 5+ **InSv**.\n- That unit’s ranged attacks have **[ASSAULT]**.\n- When that unit is selected to make an **advance move**, that **advance move** does not prevent that unit from being **eligible to declare a charge**.' },
+      { name:'Waaagh!', text:'Friendly **ORKS** units with this ability can:\n- Re-roll **advance rolls**.\n- Become **riled up**, as stated in other rules.\nWhile a unit is **riled up**:\n- That unit has 5+ **InSv**.\n- That unit’s ranged attacks have **[ASSAULT]**.\n- When that unit is selected to make an **advance move**, that **advance move** does not prevent that unit from being **eligible to declare a charge**.' },
       { name:'War Cry', tag:'Once per battle, per army', ph:['command'], turn:'your', track:'battle',
         text:'At the start of the Command phase, you can use this ability. If you do, friendly **ORKS** units with the **Waaagh!** ability are **riled up** until the end of the next turn.' },
       { name:'Da Boss', ph:['command'], turn:'either',
@@ -118,11 +118,11 @@ const FACTIONS = {
           text:'When a friendly **WARBOSS** model is **destroyed**, if this unit has not been **selected to fight** this phase, roll one D6, with +1 to the roll if your unit is **riled up**:\n- On a 3+, do not remove this **WARBOSS** model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this **WARBOSS** model is removed from the battlefield.' },
         enhancements:[
           { name:'Brutal But Kunnin’', pts:30, text:'**WARBOSS** model only. This model’s melee attacks have +1 **D**.' },
-          { name:'Da Gobshot Thunderbuss', pts:20, text:'**WARBOSS** model only. Ranged weapon: 24" A6 BS4+ S7 AP-2 D2 [LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 6].' },
+          { name:'Da Gobshot Thunderbuss', pts:20, text:'**WARBOSS** model only. This model has the following weapon:\n- Da Gobshot Thunderbuss: 24" A6 BS4+ S7 AP-2 D2 [LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 6]' },
           { name:'Blitzboss', pts:20, text:'**WARBOSS** model only. A **TRANSPORT** unit (excluding **WALKER** units) this unit is embarked within has:\n- +2" **M**.\n- 5+ **InSv**.' },
-          { name:'Proper Killy', pts:null, text:'**WARBOSS** model only. This model can re-roll **hit rolls** of 1.' },
-          { name:'Morgog’s Finkin’ Cap', pts:null, text:'**WARBOSS** model only. (Once per battle, per army) At the end of your opponent’s Movement phase, if this unit is **unengaged**, this unit can make a **normal move** of:\n- Up to D6".\n- If this unit is **riled up**, you can re-roll that D6.' },
-          { name:'Surly As A Squiggoth', pts:25, text:'**INFANTRY WARBOSS** model only. (Once per battle, per army) At the end of phase in which this model is **destroyed**, roll one D6:\n- On a 2+, set this model back up on the battlefield as close as possible to where it was **destroyed**, **unengaged**, with 3 wounds remaining.' }
+          { name:'Proper Killy', pts:15, text:'**WARBOSS** model only. This model can re-roll **hit rolls** of 1.' },
+          { name:'Morgog’s Finkin’ Cap', pts:50, text:'**WARBOSS** model only. (Once per battle, per army) At the end of your opponent’s Movement phase, if this unit is **unengaged**, this unit can make a **normal move** of:\n- Up to D6".\n- If this unit is **riled up**, you can re-roll that D6.' },
+          { name:'Surly As A Squiggoth', pts:25, text:'**INFANTRY WARBOSS** model only. (Once per battle, per army) At the end of a phase in which this model is **destroyed**, roll one D6:\n- On a 2+, set this model back up on the battlefield as close as possible to where it was **destroyed**, **unengaged**, with 3 wounds remaining.' }
         ],
         stratagems:[]
       },
@@ -135,42 +135,42 @@ const FACTIONS = {
           { name:'It Came From Da Drops', pts:20, text:'**BEASTBOSS ON SQUIGOSAUR** model only. This model has +1 **T**.' }
         ],
         stratagems:[
+          { id:'where-dya-fink', name:'Where D’ya Fink You’re Going?', cp:1, phases:['movement'], turn:'opp', needs:{ all:['Beast Snagga'] },
+            when:'Your opponent’s Movement phase, when an enemy unit is selected to make a fall-back move, if that enemy unit is engaged with a friendly **BEAST SNAGGA** unit.',
+            target:'That **BEAST SNAGGA** unit.',
+            effect:'When an enemy unit engaged with your unit is selected to make a fall-back move, that enemy unit must use the desperate escape mode. If that enemy unit is a **MONSTER/VEHICLE** unit, that enemy unit makes three additional hazard rolls for each **BEAST SNAGGA** unit it is engaged with, with -1 from those hazard rolls if that enemy unit is battle-shocked.' },
           { id:'goaded-into-action', name:'Goaded Into Action', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Beast Snagga'] },
-            when:'Your opponent’s Shooting phase, just after an enemy unit has shot.',
-            target:'One friendly unengaged BEAST SNAGGA unit that lost one or more wounds to those attacks.',
-            effect:'Your unit makes a **surge move** of up to D6". If it is **riled up**, you can re-roll that D6.' },
+            when:'Your opponent’s Shooting phase, when an enemy unit has shot.',
+            target:'One friendly unengaged **BEAST SNAGGA** unit that lost a wound as a result of those attacks.',
+            effect:'Your unit can make a surge move of up to D6". If your unit is riled up, it can re-roll that D6.' },
           { id:'instinctive-hunters', name:'Instinctive Hunters', cp:1, phases:['fight'], turn:'opp', needs:{ all:['Beast Snagga'] },
             when:'End of your opponent’s Fight phase.',
-            target:'One friendly unengaged BEAST SNAGGA unit within 6" of a battlefield edge.',
-            effect:'Place your unit into **strategic reserves**.' },
-          { id:'where-dya-fink', name:'Where D’ya Fink You’re Going?', cp:1, phases:['movement'], turn:'opp', needs:{ all:['Beast Snagga'] },
-            when:'Your opponent’s Movement phase, when an enemy unit engaged with a friendly BEAST SNAGGA unit is selected to fall back.',
-            target:'That BEAST SNAGGA unit.',
-            effect:'The enemy unit must fall back using **desperate escape**. If it is a MONSTER/VEHICLE unit, it makes 3 extra **hazard rolls**.' }
+            target:'One friendly unengaged **BEAST SNAGGA** unit within 6" of a battlefield edge.',
+            effect:'Place your unit in strategic reserves.' }
         ]
       },
       'dread-mob': {
         name:'Dread Mob', dp:1,
         rule:{ name:'Try Dat Button!', ph:['shooting','fight'], turn:'either',
-          text:'In your Shooting phase or the Fight phase, when a friendly **ORKS WALKER** unit (excluding **TITANIC** units) is **selected to attack**, you can use this ability. If you do, roll either one D6 or two D6 (keep re-rolling duplicate results). This unit’s attacks have the relevant rule(s).\nIf you rolled two D6, when this unit has attacked, this unit makes one **hazard roll**.',
+          text:'In your Shooting phase or the Fight phase, when a friendly **ORKS WALKER** unit (excluding **TITANIC** units) is **selected to attack**, you can use this ability. If you do, roll either one D6 or two D6 (keep re-rolling duplicate results). This unit’s attacks have the relevant rule(s):\nIf you rolled two D6, when this unit has attacked, this unit makes one **hazard roll**.',
           table:[['1–2','+1 **A**'],['3–4','+2 **S**'],['5–6','+1 **AP**']] },
         enhancements:[
           { name:'Cybork Boosta', pts:10, text:'**BIG MEK/MEK** model only. This model has +2" **M**.' },
           { name:'Dreadherder', pts:30, text:'**BIG MEK** model only. While this model is within 3" of a friendly **ORKS WALKER** unit (excluding **BIG MEK** units):\n- This model has **Lone Operative**.\n- In your Shooting phase, you can select one friendly **ORKS WALKER** unit within 3" of this model. That unit’s attacks can re-roll **hit rolls** of 1 until the end of the turn.' }
         ],
         stratagems:[
+          { id:'crazed-rampage', name:'Crazed Rampage', cp:1, phases:['fight'], turn:'either', needs:{ all:['Walker'], none:['Titanic'] },
+            when:'Fight phase, when an enemy unit targets a friendly **ORKS WALKER** unit (excluding **TITANIC** units).',
+            target:'That **ORKS WALKER** unit.',
+            effect:'When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one D6, with +3 to the result if your unit has **DEFF DREAD**:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.' },
           { id:'dread-power', name:'Dread Power', cp:1, phases:['movement'], turn:'your', needs:{ all:['Walker'] },
             when:'Your Movement phase.',
-            target:'One friendly ORKS WALKER unit.',
-            effect:'Your unit is **riled up** until the start of your next turn.' },
+            target:'One friendly **ORKS WALKER** unit.',
+            effect:'Your unit is riled up until the start of your next turn.' },
           { id:'stomping-juggernaut', name:'Stomping Juggernaut', cp:1, phases:['movement','charge'], turn:'your', needs:{ all:['Walker'] },
-            when:'Your Movement or Charge phase, when a friendly ORKS WALKER unit is selected to move or declares a charge.',
-            target:'That ORKS WALKER unit.',
-            effect:'Your unit has the **MOBILE** keyword for that move, so it can move through dense terrain.' },
-          { id:'crazed-rampage', name:'Crazed Rampage', cp:1, phases:['fight'], turn:'either', needs:{ all:['Walker'], none:['Titanic'] },
-            when:'Fight phase, when an enemy unit selects a friendly ORKS WALKER unit (excluding TITANIC) as a target.',
-            target:'That ORKS WALKER unit.',
-            effect:'Each time a model in your unit is **destroyed** before your unit has fought this phase, roll one D6 (+3 if it is a DEFF DREAD): on a 4+, do not remove it until your unit has fought or the phase ends.' }
+            when:'Your Movement/Charge phase, when a friendly **ORKS WALKER** unit is selected to move or declares a charge.',
+            target:'That **ORKS WALKER** unit.',
+            effect:'Your unit has **MOBILE**.' }
         ]
       }
     }
@@ -184,7 +184,7 @@ const FACTIONS = {
      models lines from the "Models" box
      stats  one row per model profile
      ranged / melee  weapons; "group" joins the ➤ profiles of one weapon
-     abilities  ph/turn tag the phase; track: battle|round adds a tick box in Game
+     abilities  ph/turn tag the phase it triggers in
      rules  core/faction rules that open a glossary entry
      kw     the unit's keywords ("Categories")                              */
 const ARMIES = [
