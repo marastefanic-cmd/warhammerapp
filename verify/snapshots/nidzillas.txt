@@ -1233,7 +1233,7 @@ USED BYany unit
 
 Not shown, no unit here can use them: Explosives (EXPLOSIVES OR GRENADES), Smokescreen (SMOKE).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"all","phase":"command"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -1356,7 +1356,7 @@ UNITSHive Tyrant · Monstrous Nemesis
 
 NEXT: MOVEMENT ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"all","phase":"movement"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -1501,7 +1501,7 @@ UNITSHive Tyrant · Monstrous Nemesis
 
 NEXT: SHOOTING ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"all","phase":"shooting"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -1660,7 +1660,7 @@ NEXT: CHARGE ›
 
 Not shown, no unit here can use them: Explosives (EXPLOSIVES OR GRENADES), Smokescreen (SMOKE).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"all","phase":"charge"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -1799,7 +1799,7 @@ UNITSHive Tyrant · Monstrous Nemesis
 
 NEXT: FIGHT ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"all","phase":"fight"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2003,7 +2003,7 @@ T12 SV2+ W16
 Once per battle: change the Damage of an attack allocated to it to 0
 NEXT: COMMAND ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"your","phase":"all"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2247,7 +2247,7 @@ USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Syn
 
 Not shown, no unit here can use it: Explosives (EXPLOSIVES OR GRENADES).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"your","phase":"command"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2370,7 +2370,7 @@ UNITSHive Tyrant · Monstrous Nemesis
 
 NEXT: YOUR MOVEMENT ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"your","phase":"movement"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2467,7 +2467,7 @@ UNITSHive Tyrant · Monstrous Nemesis
 
 NEXT: YOUR SHOOTING ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"your","phase":"shooting"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2588,7 +2588,7 @@ NEXT: YOUR CHARGE ›
 
 Not shown, no unit here can use it: Explosives (EXPLOSIVES OR GRENADES).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"your","phase":"charge"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2706,7 +2706,7 @@ UNITSHive Tyrant · Monstrous Nemesis
 
 NEXT: YOUR FIGHT ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"your","phase":"fight"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2872,7 +2872,7 @@ UNITSHive Tyrant · Monstrous Nemesis
 
 NEXT: THEIR COMMAND ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"opp","phase":"all"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -3076,7 +3076,7 @@ USED BYany unit
 
 Not shown, no unit here can use it: Smokescreen (SMOKE).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"opp","phase":"command"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -3164,7 +3164,7 @@ UNITSHive Tyrant · Monstrous Nemesis
 
 NEXT: THEIR MOVEMENT ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"opp","phase":"movement"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -3288,7 +3288,7 @@ UNITSHive Tyrant · Monstrous Nemesis
 
 NEXT: THEIR SHOOTING ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"opp","phase":"shooting"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -3398,7 +3398,7 @@ NEXT: THEIR CHARGE ›
 
 Not shown, no unit here can use it: Smokescreen (SMOKE).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"opp","phase":"charge"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -3487,7 +3487,7 @@ UNITSHive Tyrant · Monstrous Nemesis
 
 NEXT: THEIR FIGHT ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"opp","phase":"fight"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -3691,7 +3691,7 @@ T12 SV2+ W16
 Once per battle: change the Damage of an attack allocated to it to 0
 NEXT: YOUR COMMAND ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## unit swarmlord · STRATAGEMS The Swarmlord
 Epic Hero · 210 pts

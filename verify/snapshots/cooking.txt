@@ -1,4 +1,4 @@
-######## home · Waaagh Codex
+######## home · LAYOUT Waaagh Codex
 YOUR ARMIES
 Cooking
 2000 pts
@@ -1585,7 +1585,7 @@ Brute Bosses has no stratagems (a rule and enhancements only).
 
 Not shown, no unit here can use it: Smokescreen (SMOKE).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"all","phase":"command"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -1655,7 +1655,7 @@ NEXT: MOVEMENT ›
 
 Brute Bosses has no stratagems (a rule and enhancements only).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"all","phase":"movement"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -1852,7 +1852,7 @@ NEXT: SHOOTING ›
 
 Brute Bosses has no stratagems (a rule and enhancements only).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"all","phase":"shooting"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2024,7 +2024,7 @@ Brute Bosses has no stratagems (a rule and enhancements only).
 
 Not shown, no unit here can use it: Smokescreen (SMOKE).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"all","phase":"charge"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2131,7 +2131,7 @@ NEXT: FIGHT ›
 
 Brute Bosses has no stratagems (a rule and enhancements only).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"all","phase":"fight"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2351,7 +2351,7 @@ NEXT: COMMAND ›
 
 Brute Bosses has no stratagems (a rule and enhancements only).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"your","phase":"all"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2518,7 +2518,7 @@ USED BYMozrog Skragbad, Beastboss · Brutal But Kunnin’, Beastboss · Da Gobsh
 
 Brute Bosses has no stratagems (a rule and enhancements only).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"your","phase":"command"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2588,7 +2588,7 @@ NEXT: YOUR MOVEMENT ›
 
 Brute Bosses has no stratagems (a rule and enhancements only).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"your","phase":"movement"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2708,7 +2708,7 @@ NEXT: YOUR SHOOTING ›
 
 Brute Bosses has no stratagems (a rule and enhancements only).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"your","phase":"shooting"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2830,7 +2830,7 @@ NEXT: YOUR CHARGE ›
 
 Brute Bosses has no stratagems (a rule and enhancements only).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"your","phase":"charge"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2916,7 +2916,7 @@ NEXT: YOUR FIGHT ›
 
 Brute Bosses has no stratagems (a rule and enhancements only).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"your","phase":"fight"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -3064,7 +3064,7 @@ NEXT: THEIR COMMAND ›
 
 Brute Bosses has no stratagems (a rule and enhancements only).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"opp","phase":"all"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -3258,7 +3258,7 @@ Brute Bosses has no stratagems (a rule and enhancements only).
 
 Not shown, no unit here can use it: Smokescreen (SMOKE).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"opp","phase":"command"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -3308,7 +3308,7 @@ NEXT: THEIR MOVEMENT ›
 
 Brute Bosses has no stratagems (a rule and enhancements only).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"opp","phase":"movement"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -3431,7 +3431,7 @@ NEXT: THEIR SHOOTING ›
 
 Brute Bosses has no stratagems (a rule and enhancements only).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"opp","phase":"shooting"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -3516,7 +3516,7 @@ Brute Bosses has no stratagems (a rule and enhancements only).
 
 Not shown, no unit here can use it: Smokescreen (SMOKE).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"opp","phase":"charge"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -3582,7 +3582,7 @@ NEXT: THEIR FIGHT ›
 
 Brute Bosses has no stratagems (a rule and enhancements only).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"opp","phase":"fight"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -3802,7 +3802,7 @@ NEXT: YOUR COMMAND ›
 
 Brute Bosses has no stratagems (a rule and enhancements only).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## unit ghazghkull · STRATAGEMS Ghazghkull Thraka
 Epic Hero · 290 pts

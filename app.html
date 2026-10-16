@@ -315,11 +315,29 @@ summary::-webkit-details-marker{display:none}
 .qtab span:nth-child(odd){font:700 15px/1.35 var(--f-head); color:var(--accent)}
 .row .c.on{color:var(--accent)}
 .verif{display:flex; align-items:center; gap:10px; width:100%; margin-top:14px; padding:10px 10px; border-radius:6px; background:var(--surface); text-align:left; font-size:13.5px; line-height:1.35; color:var(--fg2)}
-.verif .ic{color:#5fc27a; flex:none}
+.verif .ic{width:22px; height:22px; color:#5fc27a; flex:none}
 .verif b{color:var(--fg); font-weight:600}
 .verif > span{flex:1; min-width:0; white-space:normal}
 .vchk{margin:3px 0; font-size:14px; line-height:1.45}
 .vchk b{font-weight:600}
+.lead{margin:12px 0 10px; font-size:14.5px; line-height:1.45; color:var(--fg2)}
+.row.lay .rb{display:grid; gap:4px}
+.row.lay .rb span{font-size:13.5px; line-height:1.4; color:var(--muted)}
+.row.lay.on{background:var(--surface)}
+.tabs{display:grid; grid-template-columns:repeat(5, minmax(0, 1fr)); gap:2px; margin:0 -8px}
+.tabs button{display:grid; justify-items:center; gap:2px; min-height:50px; padding:5px 0 3px; border-radius:8px; font:700 11px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--muted)}
+.tabs button .ic{width:22px; height:22px}
+.tabs button.on{color:var(--accent)}
+.tabs button:active{background:var(--surface)}
+.tbl .subbar .filt{padding-top:2px}
+.flips{display:grid; grid-template-columns:1fr 1fr; gap:8px; margin:16px 0 4px}
+.flip{min-height:48px; padding:6px 10px; border-radius:6px; background:var(--surface); font:700 14px/1.15 var(--f-head); letter-spacing:.03em; color:var(--fg2)}
+.flip.p{text-align:left}
+.flip.n{text-align:right; grid-column:2}
+.tick{display:inline-grid; place-items:center; width:26px; height:26px; margin:0 8px 0 0; vertical-align:-6px; border-radius:6px; box-shadow:inset 0 0 0 1.5px var(--line); font:700 15px/1 var(--f-body); color:var(--accent-ink)}
+.tick.on{background:var(--accent); box-shadow:none}
+.usedx{text-decoration:line-through; text-decoration-color:var(--muted); color:var(--muted)}
+.sec-h .textbtn{margin-left:auto}
 .nextph{display:block; width:100%; min-height:48px; margin:14px 0 4px; border-radius:6px; background:var(--surface2); font:700 15px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--accent)}
 .textbtn{min-height:40px; font:700 12.5px/1 var(--f-head); letter-spacing:.07em; text-transform:uppercase; color:var(--accent)}
 .sec-h{display:flex; align-items:baseline; justify-content:space-between; gap:10px; margin:16px 0 4px}
@@ -457,11 +475,52 @@ const saveSession = () => session.set('wh-session', { filt, open:[...openStrats]
 const moreShown = new Set();                 // search groups you expanded
 let focusSearch = false;
 
+/* ---------- layouts ----------
+   Two ways around the same armies: Classic (each army's menu) and Table (tabs at the bottom, the
+   Turn screen with your abilities first, ‹ › between datasheets, once-per-battle ticks). */
+const LAYOUTS = [
+  ['classic', 'Classic', 'Each army opens on its menu: Before the battle, Units, Stratagems, weapons, abilities, rules, bases. Back returns to it.'],
+  ['table', 'Table', 'Tabs at the bottom, in thumb reach: Pre-game · Units · Turn · Rules · Find. Turn shows what your units do this phase before the stratagems. ‹ › flips between datasheets; once-per-battle items can be ticked off until a New game.']
+];
+let LAYOUT = LAYOUTS.some(([k]) => k === store.get('wh-layout')) ? store.get('wh-layout') : '';
+const isTable = () => LAYOUT === 'table';
+function screenLayouts(){
+  return '<p class="lead">Same armies, same checked rules: two ways to move around them. You can switch here at any time (Back from Armies).</p><div class="list">' +
+    LAYOUTS.map(([k, name, text]) => '<button class="row lay' + (LAYOUT === k ? ' on' : '') + '" data-layout="' + k + '"><span class="rb"><b>' + name + (LAYOUT === k ? ' <span class="tg">in use</span>' : '') + '</b><span>' + text + '</span></span>' + arrow + '</button>').join('') + '</div>';
+}
+// Table layout: the tabs, and which one the current screen belongs to
+const TABS = [['pregame', 'i-flag', 'Pre-game'], ['units', 'i-units', 'Units'], ['strats', 'i-cards', 'Turn'], ['rules', 'i-book', 'Rules'], ['army', 'i-search', 'Find']];
+const isTab = s => TABS.some(([k]) => k === s);
+const tabOf = s => ({ unit:'units', bases:'pregame', ranged:'army', melee:'army', abilities:'army' })[s] || s;
+const tabBar = () => '<div class="tabs">' + TABS.map(([s, ic, label]) => '<button data-tab="' + s + '"' + (tabOf(cur.s) === s ? ' class="on" aria-current="page"' : '') + '><svg class="ic" aria-hidden="true"><use href="#' + ic + '"/></svg><span>' + label + '</span></button>').join('') + '</div>';
+// the units in the order of the Units list, for ‹ › on a datasheet
+function unitFlip(u){
+  const order = ROLE_ORDER.flatMap(r => army().units.filter(x => (ROLE_ORDER.includes(x.role) ? x.role : 'Other') === r));
+  const i = order.indexOf(u), prev = order[i - 1], next = order[i + 1];
+  const b = (x, cls, label) => x ? '<button class="flip ' + cls + '" data-flip="' + esc(x.id) + '">' + label + '</button>' : '<span></span>';
+  return '<div class="flips">' + b(prev, 'p', '‹ ' + esc(shortName(prev || {}))) + b(next, 'n', esc(shortName(next || {})) + ' ›') + '</div>';
+}
+// once-per-battle resources ticked off in this game (Table layout), per army, until New game
+const usedKey = () => 'wh-used-' + (cur.army || '');
+const usedSet = () => new Set(Array.isArray(store.get(usedKey())) ? store.get(usedKey()) : []);
+function markOnce(){
+  if(!isTable()) return;
+  const used = usedSet(), h2 = [...document.querySelectorAll('#view .sec-h h2')].find(x => /once per battle/i.test(x.textContent));
+  if(!h2) return;
+  const box = h2.parentElement.nextElementSibling;
+  for(const l of box.querySelectorAll('[data-rule],[data-ability],[data-strat]')){
+    const k = Object.entries(l.dataset).map(([a, v]) => a + ':' + v)[0], on = used.has(k);
+    l.insertAdjacentHTML('beforebegin', '<button class="tick' + (on ? ' on' : '') + '" data-tick="' + esc(k) + '" aria-pressed="' + on + '" aria-label="Used this game">' + (on ? '✓' : '') + '</button>');
+    if(on) l.classList.add('usedx');
+  }
+  h2.parentElement.insertAdjacentHTML('beforeend', '<button class="textbtn" data-newgame>New game</button>');
+}
+
 /* ---------- navigation ----------
    A screen is { s, army, unit } plus d (its depth) and from (what Back returns to).
    Every step forward is a history entry, so the phone's back gesture walks back up. */
 let cur = { s:'home', d:0 };
-const plain = c => ({ s:c.s, army:c.army, unit:c.unit, d:c.d || 0, from:c.from });
+const plain = c => ({ s:c.s, army:c.army, unit:c.unit, d:c.d || 0, from:c.from, root:c.root });
 const sameScreen = (a, b) => a && b && a.s === b.s && a.army === b.army && a.unit === b.unit;
 const calm = c => c.s === 'home' || c.s === 'army';   // screens where an update reload loses nothing
 // the open folds of the screen, by position (a screen renders the same each time), and putting them back
@@ -471,11 +530,16 @@ const spot = () => ({ y:scrollY, open:openFolds() });
 const toSpot = st => { reopen(st && st.open); scrollTo(0, (st && st.y) || 0); };
 function parentOf(c){
   if(c.s === 'unit') return { s:'units', army:c.army };
-  if(c.s === 'home' || c.s === 'army') return { s:'home' };
+  if(c.s === 'home') return { s:'layouts' };
+  if(c.s === 'army') return { s:'home' };
+  if(isTable() && isTab(c.s)) return { s:'home' };
+  if(isTable() && c.s === 'bases') return { s:'pregame', army:c.army };
   return { s:'army', army:c.army };
 }
 function titleOf(c){
+  if(c.s === 'layouts') return 'Layout';
   if(c.s === 'home') return 'Armies';
+  if(c.s === 'strats' && isTable()){ const p = PHASES.find(([k]) => k === filt.phase); return p ? ({ your:'Your ', opp:'Their ' }[filt.turn] || '') + p[1] : 'Turn'; }
   if(c.s === 'army') return (armyById(c.army) || {}).name || '';
   if(c.s === 'unit') return ((armyById(c.army) || { units:[] }).units.find(u => u.id === c.unit) || {}).name || '';
   return SCREEN_TITLE[c.s] || '';
@@ -483,7 +547,7 @@ function titleOf(c){
 const backTitle = c => BACK_TITLE[c.s] || titleOf(c);
 function valid(c){
   if(!c || !c.s) return false;
-  if(c.s === 'home') return true;
+  if(c.s === 'home' || c.s === 'layouts') return true;
   const a = armyById(c.army);
   if(!a) return false;
   if(c.s === 'unit') return a.units.some(u => u.id === c.unit);
@@ -495,13 +559,15 @@ function go(next, mode){
   navAt = performance.now();
   if(mode !== 'sheet'){ try { history.replaceState(Object.assign(plain(cur), spot()), ''); } catch(e){} }
   const d = mode === 'replace' ? (cur.d || 0) : (cur.d || 0) + 1;
-  const from = mode === 'replace' ? (next.s === 'home' ? undefined : backTitle(parentOf(next))) : backTitle(cur);
+  const from = mode === 'replace' ? (next.from || (next.s === 'home' ? undefined : backTitle(parentOf(next)))) : backTitle(cur);
+  const root = isTable() && isTab(next.s) ? d : next.army === cur.army ? cur.root : undefined;   // Table: the depth of this screen's tab
   if(next.army !== cur.army) moreShown.clear();
-  cur = Object.assign(plain(next), { d, from });
+  cur = Object.assign(plain(next), { d, from, root });
   try { mode ? history.replaceState(plain(cur), '') : history.pushState(plain(cur), ''); } catch(e){}
   if(updateReady && calm(cur)){ reloadNow(); return; }
   render(); scrollTo(0, 0);
 }
+let tabTo = null;   // Table: the tab tapped on a screen below another tab; set while history steps back to that tab
 function back(){
   if((cur.d || 0) > 0 && history.state && history.state.d === cur.d && !history.state.sheet){ history.back(); return; }
   go(parentOf(cur), 'replace');
@@ -511,6 +577,7 @@ addEventListener('popstate', e => {
   if(st && st.sheet){ if($('#sheetHost').hidden) history.back(); return; }   // stepped forward onto a closed popup: skip it
   hideSheet();
   navAt = performance.now();
+  if(tabTo){ const t = tabTo; tabTo = null; if(valid(st)) cur = plain(st); go(t, 'replace'); return; }
   if(!valid(st)){ cur = { s:'home', d:0 }; render(); return; }
   if(sameScreen(st, cur)){ cur.d = st.d || 0; cur.from = st.from; renderTop(); return; }   // only a popup closed
   cur = plain(st);
@@ -526,8 +593,8 @@ function restore(target){
     render(); return;
   }
   const chain = [];
-  for(let c = target; c; c = c.s === 'home' ? null : parentOf(c)) chain.unshift(plain(c));
-  chain.forEach((c, i) => { c.d = i; c.from = i ? backTitle(chain[i - 1]) : undefined; });
+  for(let c = target; c; c = c.s === 'layouts' ? null : parentOf(c)) chain.unshift(plain(c));
+  chain.forEach((c, i) => { c.d = i; c.from = i ? backTitle(chain[i - 1]) : undefined; c.root = isTable() && isTab(c.s) ? i : i ? chain[i - 1].root : undefined; });
   try { history.replaceState(chain[0], ''); for(const c of chain.slice(1)) history.pushState(c, ''); } catch(e){}
   cur = chain[chain.length - 1];
   render();
@@ -684,11 +751,11 @@ const usedBy = (label, units) => units.length ? '<p class="usedby"><span class="
 /* ---------- top and bottom bars ---------- */
 function renderTop(){
   let left = '<span></span>', right = '<span></span>';
-  if(cur.s !== 'home'){
+  if(cur.s !== 'layouts'){
     left = '<button class="back" data-back><svg aria-hidden="true"><use href="#i-back"/></svg><span>' + esc(cur.from || backTitle(parentOf(cur))) + '</span></button>';
-    if(cur.s !== 'army') right = '<button class="icon-btn" data-find aria-label="Search this army"><svg aria-hidden="true"><use href="#i-search"/></svg></button>';
+    if(cur.s !== 'army' && cur.s !== 'home') right = '<button class="icon-btn" data-find aria-label="Search this army"><svg aria-hidden="true"><use href="#i-search"/></svg></button>';
   }
-  $('#topIn').innerHTML = left + '<h1 class="ttl">' + esc(cur.s === 'home' ? 'Waaagh Codex' : titleOf(cur)) + '</h1>' + right;
+  $('#topIn').innerHTML = left + '<h1 class="ttl">' + esc(cur.s === 'home' || cur.s === 'layouts' ? 'Waaagh Codex' : titleOf(cur)) + '</h1>' + right;
 }
 function setBar(id, html){
   const el = $('#' + id);
@@ -1283,28 +1350,32 @@ function screenStrats(){
     return s.name + (lack.length ? ' (' + lack.join(', ').toUpperCase() + ')' : n.any ? ' (' + n.any.join(' or ').toUpperCase() + ')' : '');
   });
   const order = list => p === 'all' ? list : list.map((s, i) => [s, i]).sort((x, y) => phaseOrder(x[0], x[0].when) - phaseOrder(y[0], y[0].when) || x[1] - y[1]).map(x => x[0]);
-  let h = usable.length ? '<div class="tools"><button class="textbtn" data-expand>' + (usable.every(s => openStrats.has(s.id)) ? 'Collapse all' : 'Expand all') + '</button></div>' : '';
+  const expand = usable.length ? '<button class="textbtn" data-expand>' + (usable.every(s => openStrats.has(s.id)) ? 'Collapse all' : 'Expand all') + '</button>' : '';
+  let h = '';
   for(const [name, list] of detachments().map(d => [d.name, usable.filter(s => s.src === d.name)]).concat([['Core stratagems', usable.filter(s => s.src === 'Core')]])){
     if(list.length) h += '<div class="sec-h"><h2>' + esc(name) + '</h2><span class="c">' + list.length + '</span></div><div class="list">' + order(list).map(stratItem).join('') + '</div>';
   }
   if(!usable.length) h += '<div class="empty">No stratagems for this phase and turn.</div>';
+  let also = '', tgt = '';
   if(p !== 'all'){
     const rem = faction().armyRules.flatMap(r => (r.remind || []).filter(fits).map(x => '<div class="rem"><span class="link" role="button" tabindex="0" data-rule="' + esc(r.name) + '">' + esc(r.name) + '</span> ' + esc(x.text) + '</div>'));
     const anyPh = a => phasesOf(a).length === PHASES.length ? 1 : 0;   // "any phase" abilities after the ones for this phase
     const abil = phaseItems().filter(fits).map((a, i) => [a, i]).sort((x, y) => anyPh(x[0]) - anyPh(y[0]) || timing(x[0].text) - timing(y[0].text) || x[1] - y[1]).map(x => x[0]);
-    if(rem.length || abil.length) h += '<div class="sec-h"><h2>Also this phase</h2>' + (abil.length ? '<span class="c">' + abil.length + (abil.length === 1 ? ' ability' : ' abilities') + '</span>' : '') + '</div>' + rem.join('') +
+    if(rem.length || abil.length) also = '<div class="sec-h"><h2>' + (isTable() ? 'This phase' : 'Also this phase') + '</h2>' + (abil.length ? '<span class="c">' + abil.length + (abil.length === 1 ? ' ability' : ' abilities') + '</span>' : '') + '</div>' + rem.join('') +
       (abil.length ? '<div class="list">' + abil.map(a => xp(a.name, a.sub, a.tag ? '<span class="tg m">' + esc(a.tag) + '</span>' : '',
         (a.note ? '<p class="note it">' + esc(a.note) + '</p>' : '') + rt(a.text) + (a.table ? ttable(a.table) : '') + usedBy('Units', a.units), false)).join('') + '</div>' : '');
     // when the opponent shoots or fights, the questions are "what's your save, can I see it"
-    if((p === 'shooting' || p === 'fight') && filt.turn !== 'your') h += '<div class="sec-h"><h2>When targeted</h2></div>' + defenceList();
+    if((p === 'shooting' || p === 'fight') && filt.turn !== 'your') tgt = '<div class="sec-h"><h2>When targeted</h2></div>' + defenceList();
   }
+  // Table layout: what your units do this phase first, then the stratagems; Classic: stratagems first
+  h = isTable() && also ? also + (expand ? '<div class="sec-h"><h2>Stratagems</h2>' + expand + '</div>' : '') + h + tgt : (expand ? '<div class="tools">' + expand + '</div>' : '') + h + also + tgt;
   const notes = [];
   const gaps = detachments().filter(d => (d.missing || []).includes('stratagems')).map(d => d.name);
   if(gaps.length) notes.unshift(gaps.join(' and ') + ' stratagems aren’t in the app yet: they need the Wahapedia page.');
   const none = detachments().filter(d => !(d.stratagems || []).length && !(d.missing || []).includes('stratagems')).map(d => d.name);
   if(none.length) notes.unshift(none.join(' and ') + (none.length > 1 ? ' have' : ' has') + ' no stratagems (a rule and enhancements only).');
   if(blocked.length) notes.push('Not shown, no unit here can use ' + (blocked.length === 1 ? 'it' : 'them') + ': ' + blocked.join(', ') + '.');
-  notes.push('All stratagem text is Wahapedia’s wording.');
+  notes.push('Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.');
   return h + nextPhase() + notes.map(n => '<p class="note">' + esc(n) + '</p>').join('');
 }
 
@@ -1495,16 +1566,19 @@ function render(){
   renderTop();
   const v = $('#view'), s = cur.s;
   let sub = '', bot = '';
-  if(s === 'home') v.innerHTML = screenHome();
+  document.body.classList.toggle('tbl', isTable());
+  if(s === 'layouts') v.innerHTML = screenLayouts();
+  else if(s === 'home') v.innerHTML = screenHome();
   else if(s === 'army') v.innerHTML = screenArmy();
   else if(s === 'units'){ v.innerHTML = screenUnits(); sub = unitsSubbar(); }
-  else if(s === 'unit') v.innerHTML = screenUnit();
-  else if(s === 'strats'){ v.innerHTML = screenStrats(); bot = stratFilters(); }
+  else if(s === 'unit') v.innerHTML = screenUnit() + (isTable() && unitById(cur.unit) ? unitFlip(unitById(cur.unit)) : '');
+  else if(s === 'strats'){ v.innerHTML = screenStrats(); if(isTable()) sub = stratFilters(); else bot = stratFilters(); }
   else if(s === 'ranged' || s === 'melee'){ v.innerHTML = screenWeapons(s); sub = '<div class="wt ' + s + '">' + colHeader(s) + '</div>'; }
   else if(s === 'abilities') v.innerHTML = screenAbilities();
   else if(s === 'rules') v.innerHTML = screenRules();
   else if(s === 'bases') v.innerHTML = screenBases();
-  else if(s === 'pregame') v.innerHTML = screenPregame();
+  else if(s === 'pregame'){ v.innerHTML = screenPregame(); markOnce(); }
+  if(isTable() && cur.army) bot = tabBar();
   setBar('subbar', sub);
   setBar('bbar', bot);
   measure();
@@ -1651,6 +1725,16 @@ document.addEventListener('click', e => {
   if(ds.more){ moreShown.add(ds.more); renderFinder(); return; }
   if(el.hasAttribute('data-sback') && sheetStack.length){ const [l, t, h] = sheetStack.pop(); openSheet(l, t, h, true); return; }
   if(el.hasAttribute('data-verified')){ showVerified(); return; }
+  if(ds.layout){ LAYOUT = ds.layout; store.set('wh-layout', LAYOUT); go({ s:'home' }); return; }
+  if(ds.tab){
+    if(ds.tab === cur.s){ scrollTo(0, 0); return; }
+    const next = { s:ds.tab, army:army().id }, up = (cur.d || 0) - (cur.root == null ? cur.d || 0 : cur.root);
+    if(up > 0 && !EMBEDDED && history.state && history.state.d === cur.d){ tabTo = next; history.go(-up); return; }   // drop the screens under the old tab
+    go(next, 'replace'); return;
+  }
+  if(ds.flip){ go({ s:'unit', army:army().id, unit:ds.flip, from:cur.from }, 'replace'); return; }
+  if(ds.tick){ const u = usedSet(); u.has(ds.tick) ? u.delete(ds.tick) : u.add(ds.tick); store.set(usedKey(), [...u]); rerender(); return; }
+  if(el.hasAttribute('data-newgame')){ store.set(usedKey(), []); toast('New game: once-per-battle ticks cleared'); rerender(); return; }
   if(el.hasAttribute('data-awake')){ awake.on = !awake.on; store.set('wh-awake', awake.on); if(awake.on) keepAwake(); else if(awake.lock){ awake.lock.release(); awake.lock = null; } rerender(); return; }
   if(el.hasAttribute('data-expand')){
     const cards = $$('#view details.strat');
@@ -1753,6 +1837,7 @@ function start(snap){
     render(); toSpot(st);
   }
   else if(snap && valid(snap.cur)){ restore(snap.cur); toSpot(snap); }
+  else if(!LAYOUT && !EMBEDDED) restore({ s:'layouts' });   // no layout chosen yet: offer the choice once
   else { const last = store.get('wh-last'); restore(valid(last) ? last : { s:'home' }); if(valid(last)) toSpot(last); }
   checkForUpdate(true);
   keepAwake();

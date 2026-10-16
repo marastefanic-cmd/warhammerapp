@@ -1482,7 +1482,7 @@ Until the end of the phase, your unit has the Fights First ability and it must b
 
 USED BYany unit
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"all","phase":"command"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -1648,7 +1648,7 @@ UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
 
 NEXT: MOVEMENT ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"all","phase":"movement"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -1816,7 +1816,7 @@ UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
 
 NEXT: SHOOTING ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"all","phase":"shooting"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2008,7 +2008,7 @@ Chaos Rhino
 T9 SV3+ W10
 NEXT: CHARGE ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"all","phase":"charge"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2162,7 +2162,7 @@ UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
 
 NEXT: FIGHT ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"all","phase":"fight"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2446,7 +2446,7 @@ Chaos Rhino
 T9 SV3+ W10
 NEXT: COMMAND ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"your","phase":"all"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2676,7 +2676,7 @@ Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact st
 
 USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Forgefiend, Chaos Rhino
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"your","phase":"command"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2842,7 +2842,7 @@ UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
 
 NEXT: YOUR MOVEMENT ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"your","phase":"movement"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2953,7 +2953,7 @@ UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
 
 NEXT: YOUR SHOOTING ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"your","phase":"shooting"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -3080,7 +3080,7 @@ UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
 
 NEXT: YOUR CHARGE ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"your","phase":"charge"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -3213,7 +3213,7 @@ UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
 
 NEXT: YOUR FIGHT ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"your","phase":"fight"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -3454,7 +3454,7 @@ UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
 
 NEXT: THEIR COMMAND ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"opp","phase":"all"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -3725,7 +3725,7 @@ Until the end of the phase, your unit has the Fights First ability and it must b
 
 USED BYany unit
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"opp","phase":"command"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -3849,7 +3849,7 @@ UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
 
 NEXT: THEIR MOVEMENT ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"opp","phase":"movement"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -3994,7 +3994,7 @@ UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
 
 NEXT: THEIR SHOOTING ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"opp","phase":"shooting"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -4138,7 +4138,7 @@ Chaos Rhino
 T9 SV3+ W10
 NEXT: THEIR CHARGE ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"opp","phase":"charge"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -4261,7 +4261,7 @@ UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
 
 NEXT: THEIR FIGHT ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"opp","phase":"fight"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -4545,7 +4545,7 @@ Chaos Rhino
 T9 SV3+ W10
 NEXT: YOUR COMMAND ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## unit kharn · STRATAGEMS Khârn the Betrayer
 Epic Hero · 285 pts · leading Khorne Berzerkers

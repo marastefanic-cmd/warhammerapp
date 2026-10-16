@@ -1346,7 +1346,7 @@ USED BYany unit
 
 Not shown, no unit here can use it: Smokescreen (SMOKE).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"all","phase":"command"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -1505,7 +1505,7 @@ UNITSSorcerer in Terminator Armour · Umbralefic Crystal
 
 NEXT: MOVEMENT ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"all","phase":"movement"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -1665,7 +1665,7 @@ UNITSMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of 
 
 NEXT: SHOOTING ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"all","phase":"shooting"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -1903,7 +1903,7 @@ NEXT: CHARGE ›
 
 Not shown, no unit here can use it: Smokescreen (SMOKE).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"all","phase":"charge"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2022,7 +2022,7 @@ UNITSTzaangor Enlightened
 
 NEXT: FIGHT ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"all","phase":"fight"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2180,7 +2180,7 @@ Defiler
 T11 SV3+ INV5+ W18
 NEXT: COMMAND ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"your","phase":"all"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2389,7 +2389,7 @@ Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact st
 
 USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Defiler
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"your","phase":"command"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2548,7 +2548,7 @@ UNITSSorcerer in Terminator Armour · Umbralefic Crystal
 
 NEXT: YOUR MOVEMENT ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"your","phase":"movement"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2653,7 +2653,7 @@ UNITSMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of 
 
 NEXT: YOUR SHOOTING ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"your","phase":"shooting"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2857,7 +2857,7 @@ UNITSDefiler
 
 NEXT: YOUR CHARGE ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"your","phase":"charge"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2955,7 +2955,7 @@ UNITSTzaangor Enlightened
 
 NEXT: YOUR FIGHT ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"your","phase":"fight"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -3055,7 +3055,7 @@ UNITSSorcerer
 
 NEXT: THEIR COMMAND ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"opp","phase":"all"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -3209,7 +3209,7 @@ USED BYany unit
 
 Not shown, no unit here can use it: Smokescreen (SMOKE).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"opp","phase":"command"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -3285,7 +3285,7 @@ UNITSMagnus the Red
 
 NEXT: THEIR MOVEMENT ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"opp","phase":"movement"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -3418,7 +3418,7 @@ UNITSMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of 
 
 NEXT: THEIR SHOOTING ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"opp","phase":"shooting"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -3521,7 +3521,7 @@ NEXT: THEIR CHARGE ›
 
 Not shown, no unit here can use it: Smokescreen (SMOKE).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"opp","phase":"charge"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -3618,7 +3618,7 @@ UNITSTzaangor Enlightened
 
 NEXT: THEIR FIGHT ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"opp","phase":"fight"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -3776,7 +3776,7 @@ Defiler
 T11 SV3+ INV5+ W18
 NEXT: YOUR COMMAND ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## unit magnus · STRATAGEMS Magnus the Red
 Epic Hero · 455 pts

@@ -883,7 +883,7 @@ USED BYany unit
 
 Not shown, no unit here can use them: Flanking Manoeuvres (ARMIGER), Explosives (EXPLOSIVES OR GRENADES), Fire Overwatch, Smokescreen (SMOKE).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"all","phase":"command"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -963,7 +963,7 @@ UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
 
 NEXT: MOVEMENT ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"all","phase":"movement"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -1076,7 +1076,7 @@ NEXT: SHOOTING ›
 
 Not shown, no unit here can use it: Fire Overwatch.
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"all","phase":"shooting"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -1220,7 +1220,7 @@ NEXT: CHARGE ›
 
 Not shown, no unit here can use them: Explosives (EXPLOSIVES OR GRENADES), Smokescreen (SMOKE).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"all","phase":"charge"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -1316,7 +1316,7 @@ ALSO THIS PHASE
 Code Chivalric Quality 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls.
 NEXT: FIGHT ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"all","phase":"fight"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -1431,7 +1431,7 @@ NEXT: COMMAND ›
 
 Not shown, no unit here can use it: Flanking Manoeuvres (ARMIGER).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"your","phase":"all"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -1592,7 +1592,7 @@ USED BYany unit
 
 Not shown, no unit here can use it: Explosives (EXPLOSIVES OR GRENADES).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"your","phase":"command"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -1672,7 +1672,7 @@ UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
 
 NEXT: YOUR MOVEMENT ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"your","phase":"movement"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -1765,7 +1765,7 @@ UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
 
 NEXT: YOUR SHOOTING ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"your","phase":"shooting"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -1881,7 +1881,7 @@ NEXT: YOUR CHARGE ›
 
 Not shown, no unit here can use it: Explosives (EXPLOSIVES OR GRENADES).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"your","phase":"charge"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -1956,7 +1956,7 @@ ALSO THIS PHASE
 Code Chivalric Quality 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls.
 NEXT: YOUR FIGHT ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"your","phase":"fight"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2041,7 +2041,7 @@ ALSO THIS PHASE
 Code Chivalric Quality 1–2 (martial valour): each time a Knight shoots or fights, re-roll one Hit roll and one Wound roll.
 NEXT: THEIR COMMAND ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"opp","phase":"all"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2195,7 +2195,7 @@ USED BYany unit
 
 Not shown, no unit here can use them: Flanking Manoeuvres (ARMIGER), Fire Overwatch, Smokescreen (SMOKE).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"opp","phase":"command"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2246,7 +2246,7 @@ USED BYany unit
 
 NEXT: THEIR MOVEMENT ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"opp","phase":"movement"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2317,7 +2317,7 @@ NEXT: THEIR SHOOTING ›
 
 Not shown, no unit here can use it: Fire Overwatch.
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"opp","phase":"shooting"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2398,7 +2398,7 @@ NEXT: THEIR CHARGE ›
 
 Not shown, no unit here can use it: Smokescreen (SMOKE).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"opp","phase":"charge"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2472,7 +2472,7 @@ ALSO THIS PHASE
 Code Chivalric Quality 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls.
 NEXT: THEIR FIGHT ›
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## strats {"turn":"opp","phase":"fight"} · STRATAGEMS Stratagems
 COLLAPSE ALL
@@ -2587,7 +2587,7 @@ NEXT: YOUR COMMAND ›
 
 Not shown, no unit here can use it: Flanking Manoeuvres (ARMIGER).
 
-All stratagem text is Wahapedia’s wording.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## unit knight-warden · STRATAGEMS Knight Warden
 Character · 365 pts

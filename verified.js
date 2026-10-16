@@ -1,7 +1,7 @@
 // written by verify/run.js: the last verification of this app.html + data.js
 window.WH_VERIFIED = {
  "ok": true,
- "build": "fcbe833dad",
+ "build": "c5e6db6f2c",
  "data": "2026-10-16.15",
  "date": "16 Oct 2026",
  "checks": [
@@ -27,7 +27,7 @@ window.WH_VERIFIED = {
   },
   {
    "label": "Every screen:",
-   "detail": "760 screens and popups render, list every ability, open every link and find every name in search."
+   "detail": "760 screens and popups render in both layouts, on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
   }
  ],
  "sources": [
