@@ -124,5 +124,14 @@
   "source": "**^^Tyranids Monster^^** only. Each time the bearer makes a melee attack that targets a **^^Monster^^** or **^^Vehicle^^** unit, add 1 to the Wound roll.",
   "reason": "Enhancement text from the owner’s Wahapedia detachment page (\"TYRANIDS MONSTER model only.\"); BSData has \"Tyranids Monster only.\"",
   "evidence": "verify/.cache/waha/tyranids.txt lines 122-123: \"Monstrous Nemesis 25 pts / **TYRANIDS MONSTER** model only. Each time the bearer makes a melee attack that targets a **MONSTER** or **VEHICLE** unit, add 1 to the **Wound roll**.\""
+ },
+ {
+  "army": "nidzillas",
+  "unit": "hive-tyrant",
+  "field": "stats.base",
+  "app": "Hive Tyrant: 60mm",
+  "source": "Hive Tyrant: 50mm",
+  "reason": "GW's base size guide is newer than the community data New Recruit uses; tournaments use GW's guide.",
+  "evidence": "GW Warhammer Event Companion v1.3 (14 Oct 2026, newer than New Recruit and BSData), Base Size Guide, Tyranids, PDF p91: \"Hive Tyrant 60mm\" (verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3820); Wahapedia's Hive Tyrant datasheet also says 60mm."
  }
 ]

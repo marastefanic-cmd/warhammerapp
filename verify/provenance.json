@@ -1,0 +1,4496 @@
+{
+ "generatedBy": "verify/texts.js",
+ "documents": [
+  {
+   "id": "core",
+   "label": "GW Core Rules (11th edition, 01/06/2026)",
+   "file": "verify/.cache/gw/eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.pdf",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "id": "uru",
+   "label": "GW Universal Rules Updates v1.1",
+   "file": "verify/.cache/gw/eng_wh40k_coreandkey_universal_rules_updates-lu3grocned-rphh78bl6k.pdf",
+   "sha256": "e9368c75bf4c9040fa978e7f792080e71d140997def77182dd41e71959185a72"
+  },
+  {
+   "id": "pack:imperial-knights",
+   "label": "GW Faction Pack Imperial Knights v1.2",
+   "file": "verify/.cache/gw/eng_wh40k_faction_pack_imperial_knights-n1irjnjygs-w8jfnk8kdn.pdf",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "id": "pack:world-eaters",
+   "label": "GW Faction Pack World Eaters v1.3",
+   "file": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.pdf",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "id": "pack:thousand-sons",
+   "label": "GW Faction Pack Thousand Sons v1.3",
+   "file": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_thousand_sons-4lioijwxdj-otjrinzt8c.pdf",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "id": "pack:tyranids",
+   "label": "GW Faction Pack Tyranids v1.3",
+   "file": "verify/.cache/gw/eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.pdf",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "id": "waha:orks",
+   "label": "Wahapedia orks (text)",
+   "file": "verify/.cache/waha/orks.txt",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "id": "waha:imperial-knights",
+   "label": "Wahapedia imperial-knights (text)",
+   "file": "verify/.cache/waha/imperial-knights.txt",
+   "sha256": "1fd48b6b3440f46ab46422db464b9a93fe1b2f9f35cafea6de0fbd35cf19e41a"
+  },
+  {
+   "id": "waha:world-eaters",
+   "label": "Wahapedia world-eaters (text)",
+   "file": "verify/.cache/waha/world-eaters.txt",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "id": "waha:thousand-sons",
+   "label": "Wahapedia thousand-sons (text)",
+   "file": "verify/.cache/waha/thousand-sons.txt",
+   "sha256": "cd985855e804e3aa7f538c35e35b16589e3a89d7633f07c3e6f4fbcbd8f9791f"
+  },
+  {
+   "id": "waha:tyranids",
+   "label": "Wahapedia tyranids (text)",
+   "file": "verify/.cache/waha/tyranids.txt",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "id": "wahahtml:orks",
+   "label": "Wahapedia orks",
+   "file": "verify/.cache/waha/orks.html",
+   "sha256": "3d97dfd14d0a29449ea6e9fd43820a3d94e9e25c3b8224347b70081f20350016"
+  },
+  {
+   "id": "wahahtml:imperial-knights",
+   "label": "Wahapedia imperial-knights",
+   "file": "verify/.cache/waha/imperial-knights.html",
+   "sha256": "dd2f905a4594aacba5ef0cfd970a85ca6c09e7f739f7fb8ec1d3af85f1e769c5"
+  },
+  {
+   "id": "wahahtml:world-eaters",
+   "label": "Wahapedia world-eaters",
+   "file": "verify/.cache/waha/world-eaters.html",
+   "sha256": "c34fc3560b84880a96797e55e9e21951aa8a86859bcfa7c20007cb26878be8cd"
+  },
+  {
+   "id": "wahahtml:thousand-sons",
+   "label": "Wahapedia thousand-sons",
+   "file": "verify/.cache/waha/thousand-sons.html",
+   "sha256": "51cfac7e67fb2c7baa4a0d6ce28b63db8aa121633a09f6632252a112336f6981"
+  },
+  {
+   "id": "wahahtml:tyranids",
+   "label": "Wahapedia tyranids",
+   "file": "verify/.cache/waha/tyranids.html",
+   "sha256": "696fca0d5ddc7497dd802027f25cd378324f9fde2e1998fb679a90ae553e536a"
+  },
+  {
+   "id": "wahahtml:core",
+   "label": "Wahapedia core rules",
+   "file": "verify/.cache/waha/core.html",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "id": "packet",
+   "label": "Packet core stratagems (Wahapedia print, 10/3/26)",
+   "file": "verify/sources/packet/core-stratagems.txt",
+   "sha256": "93d9392450c955b6d0146657a4e2f9b08e15e41ed2f12e9e007a519a55e7f61b"
+  }
+ ],
+ "texts": [
+  {
+   "item": "core / rule:Assault / text",
+   "field": "text",
+   "text": "Units containing one or more models with an **[ASSAULT]** weapon can shoot using",
+   "doc": "core",
+   "where": "PDF p79",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Blast / text",
+   "field": "text",
+   "text": "Each time you gather **attack dice** for a **[BLAST]** weapon, add one additiona",
+   "doc": "core",
+   "where": "PDF p79",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Blast / text",
+   "field": "text",
+   "text": "If this ability takes the form **[BLAST X]**, each time you gather **attack dice",
+   "doc": "core",
+   "where": "PDF p79",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Blast / text",
+   "field": "text",
+   "text": "*Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit con",
+   "doc": "core",
+   "where": "PDF p79",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Cleave / text",
+   "field": "text",
+   "text": "This ability always takes the form **[CLEAVE X]**. Each time you gather **attack",
+   "doc": "core",
+   "where": "PDF p79",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Cleave / text",
+   "field": "text",
+   "text": "*Example: If a [CLEAVE 1] weapon with an A characteristic of 3 targets one unit ",
+   "doc": "core",
+   "where": "PDF p79",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Close-quarters / text",
+   "field": "text",
+   "text": "Units containing one or more models with a **[CLOSE-QUARTERS]** weapon can shoot",
+   "doc": "core",
+   "where": "PDF p80",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Close-quarters / text",
+   "field": "text",
+   "text": "- One or more of its **[CLOSE-QUARTERS]** weapons.",
+   "doc": "core",
+   "where": "PDF p80",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Close-quarters / text",
+   "field": "text",
+   "text": "- One or more of its other ranged weapons.",
+   "doc": "core",
+   "where": "PDF p80",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Close-quarters / text",
+   "field": "text",
+   "text": "*[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.*",
+   "doc": "core",
+   "where": "PDF p83",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Devastating Wounds / text",
+   "field": "text",
+   "text": "Each time an attack made with a **[DEVASTATING WOUNDS]** weapon results in a **c",
+   "doc": "core",
+   "where": "PDF p80",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Devastating Wounds / text",
+   "field": "text",
+   "text": "**Mortal wounds** inflicted by **[DEVASTATING WOUNDS]** weapons can damage a max",
+   "doc": "core",
+   "where": "PDF p80",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Extra Attacks / text",
+   "field": "text",
+   "text": "Each time a unit containing one or more models with an **[EXTRA ATTACKS]** weapo",
+   "doc": "core",
+   "where": "PDF p81",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Extra Attacks / text",
+   "field": "text",
+   "text": "- All of that model’s **[EXTRA ATTACKS]** weapons.",
+   "doc": "core",
+   "where": "PDF p81",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Extra Attacks / text",
+   "field": "text",
+   "text": "- One of that model’s other melee weapons, if possible.",
+   "doc": "core",
+   "where": "PDF p81",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Hazardous / text",
+   "field": "text",
+   "text": "Each time a unit is **selected to shoot** or **selected to fight**, after that u",
+   "doc": "core",
+   "where": "PDF p81",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Ignores Cover / text",
+   "field": "text",
+   "text": "Each time an attack is made with an **[IGNORES COVER]** weapon, the target canno",
+   "doc": "core",
+   "where": "PDF p82",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Lethal Hits / text",
+   "field": "text",
+   "text": "Each time an attack made with a **[LETHAL HITS]** weapon results in a **critical",
+   "doc": "core",
+   "where": "PDF p82",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Lethal Hits / text",
+   "field": "text",
+   "text": "*Designer’s Note: Choosing to automatically wound the target means that no wound",
+   "doc": "core",
+   "where": "PDF p82",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Precision / text",
+   "field": "text",
+   "text": "While resolving attacks made with one or more **[PRECISION]** weapons, at the st",
+   "doc": "core",
+   "where": "PDF p84",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Precision / text",
+   "field": "text",
+   "text": "**24.28.01 Precision and Devastating Wounds (app):** **Mortal Wounds** inflicted",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § 24.28.01 Precision and Devastating Wounds",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Rapid Fire / text",
+   "field": "text",
+   "text": "This ability always takes the form **[RAPID FIRE X]**. Each time you gather **at",
+   "doc": "core",
+   "where": "PDF p84",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Sustained Hits / text",
+   "field": "text",
+   "text": "This ability always takes the form **[SUSTAINED HITS X]**. Each time an attack m",
+   "doc": "core",
+   "where": "PDF p85",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Torrent / text",
+   "field": "text",
+   "text": "Each time an attack is made with a **[TORRENT]** weapon, that attack automatical",
+   "doc": "core",
+   "where": "PDF p85",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Twin-linked / text",
+   "field": "text",
+   "text": "Each time an attack is made with a **[TWIN-LINKED]** weapon, you can re-roll the",
+   "doc": "core",
+   "where": "PDF p85",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Anti / text",
+   "field": "text",
+   "text": "This ability always takes the form **[ANTI-X Y+]**. Each time an attack is made ",
+   "doc": "core",
+   "where": "PDF p79",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Anti / text",
+   "field": "text",
+   "text": "*Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit",
+   "doc": "core",
+   "where": "PDF p79",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Hunter / text",
+   "field": "text",
+   "text": "**04.01.03 Multiple Weapon Profiles (app):** In the Select Weapons step (04.01),",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § 04.01.03 Multiple Weapon Profiles",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Hunter / text",
+   "field": "text",
+   "text": "Some of these profiles are known as **Hunter** profiles. **Hunter** profiles can",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § 04.01.03 Multiple Weapon Profiles",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Hunter / text",
+   "field": "text",
+   "text": "Note that if a unit is equipped with more than one such weapon, a different prof",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § 04.01.03 Multiple Weapon Profiles",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Deep Strike / text",
+   "field": "text",
+   "text": "Each time this unit makes an **ingress move** (20.04), if every model in this un",
+   "doc": "core",
+   "where": "PDF p80",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Deadly Demise / text",
+   "field": "text",
+   "text": "This ability always takes the form **Deadly Demise X**. Each time a model in thi",
+   "doc": "core",
+   "where": "PDF p80",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Feel No Pain / text",
+   "field": "text",
+   "text": "This ability always takes the form **Feel No Pain X+**. Each time a model with t",
+   "doc": "core",
+   "where": "PDF p81",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Leader / text",
+   "field": "text",
+   "text": "Before the battle, in the Muster Armies step, for each **leader** and **support*",
+   "doc": "core",
+   "where": "PDF p66",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Leader / text",
+   "field": "text",
+   "text": "Unless otherwise stated, each **bodyguard** unit can only have one **leader** un",
+   "doc": "core",
+   "where": "PDF p66",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Lone Operative / text",
+   "field": "text",
+   "text": "Unless part of an **attached** unit, this unit is not **visible** to enemy model",
+   "doc": "core",
+   "where": "PDF p83",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Lone Operative / text",
+   "field": "text",
+   "text": "If this ability takes the form **Lone Operative X\"**, unless part of an **attach",
+   "doc": "core",
+   "where": "PDF p83",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Lone Operative / text",
+   "field": "text",
+   "text": "**24.24.01 Attached units and Lone Operative (app):** If all models in an attach",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § 24.24.01 Attached units and Lone Operative",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Lone Operative / text",
+   "field": "text",
+   "text": "If a unit has **Lone Operative**, but models in that unit have different range v",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § 24.24.01 Attached units and Lone Operative",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Lone Operative / text",
+   "field": "text",
+   "text": "If an **attached** unit **below starting strength** only contains models with **",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § 24.24.01 Attached units and Lone Operative",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Fights First / text",
+   "field": "text",
+   "text": "While every model in a unit has this ability, that unit is a **Fights First** un",
+   "doc": "core",
+   "where": "PDF p81",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Fights First / text",
+   "field": "text",
+   "text": "See the Resolve Fights First Combats step in the Fight phase (12.04).",
+   "doc": "core",
+   "where": "PDF p81",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Actions / text",
+   "field": "text",
+   "text": "A unit is eligible to start an action unless one or more of the following apply ",
+   "doc": "core",
+   "where": "PDF p58",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Actions / text",
+   "field": "text",
+   "text": "- It is not on the battlefield.",
+   "doc": "core",
+   "where": "PDF p58",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Actions / text",
+   "field": "text",
+   "text": "- It is an **AIRCRAFT**/**FORTIFICATION** unit.",
+   "doc": "core",
+   "where": "PDF p58",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Actions / text",
+   "field": "text",
+   "text": "- It is battle-shocked.",
+   "doc": "core",
+   "where": "PDF p58",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Actions / text",
+   "field": "text",
+   "text": "- It has an OC characteristic of 0 or ‘-’.",
+   "doc": "core",
+   "where": "PDF p58",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Actions / text",
+   "field": "text",
+   "text": "- It is engaged (unless it is a **TITANIC** unit).",
+   "doc": "core",
+   "where": "PDF p58",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Actions / text",
+   "field": "text",
+   "text": "- It made an advance or fall-back move this turn.",
+   "doc": "core",
+   "where": "PDF p58",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Actions / text",
+   "field": "text",
+   "text": "- It started another action this turn.",
+   "doc": "core",
+   "where": "PDF p58",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Actions / text",
+   "field": "text",
+   "text": "If a unit starts an action, until the end of the turn:",
+   "doc": "core",
+   "where": "PDF p58",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Actions / text",
+   "field": "text",
+   "text": "- It is not eligible to shoot (excluding **TITANIC** units).",
+   "doc": "core",
+   "where": "PDF p58",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Actions / text",
+   "field": "text",
+   "text": "- It is not eligible to declare a charge.",
+   "doc": "core",
+   "where": "PDF p58",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Actions / text",
+   "field": "text",
+   "text": "If a unit performing an action makes a move (excluding pile-in and consolidation",
+   "doc": "core",
+   "where": "PDF p58",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Snap Shooting / text",
+   "field": "text",
+   "text": "ELIGIBLE IF: As stated in the rule allowing this shooting type.",
+   "doc": "core",
+   "where": "PDF p57",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Snap Shooting / text",
+   "field": "text",
+   "text": "EFFECT: Your unit shoots as described in Making Attacks (04).",
+   "doc": "core",
+   "where": "PDF p57",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Snap Shooting / text",
+   "field": "text",
+   "text": "WHILE SHOOTING:",
+   "doc": "core",
+   "where": "PDF p57",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Snap Shooting / text",
+   "field": "text",
+   "text": "- You can only target one visible enemy unit within 24\" of your unit (and only i",
+   "doc": "core",
+   "where": "PDF p57",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Snap Shooting / text",
+   "field": "text",
+   "text": "- Each attack only hits on an unmodified hit roll of 6 (irrespective of the atta",
+   "doc": "core",
+   "where": "PDF p57",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Snap Shooting / text",
+   "field": "text",
+   "text": "- You cannot re-roll hit rolls.",
+   "doc": "core",
+   "where": "PDF p57",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Snap Shooting / text",
+   "field": "text",
+   "text": "AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start a",
+   "doc": "core",
+   "where": "PDF p57",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Mobile / text",
+   "field": "text",
+   "text": "- **INFANTRY/BEASTS/SWARM/MOBILE** models can move horizontally through **dense ",
+   "doc": "core",
+   "where": "PDF p48",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Mobile / text",
+   "field": "text",
+   "text": "- Other models can move horizontally through **dense terrain features** provided",
+   "doc": "core",
+   "where": "PDF p48",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Lance / text",
+   "field": "text",
+   "text": "Each time an attack is made with a **[LANCE]** weapon, if the attacking model’s ",
+   "doc": "core",
+   "where": "PDF p82",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Melta / text",
+   "field": "text",
+   "text": "This ability always takes the form **[MELTA X]**. Each time a model makes an att",
+   "doc": "core",
+   "where": "PDF p83",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Melta / text",
+   "field": "text",
+   "text": "*Example: A model targets a unit that is within half range of a [MELTA 2] weapon",
+   "doc": "core",
+   "where": "PDF p83",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Super-Heavy Walker / text",
+   "field": "text",
+   "text": "Each time a unit with this ability makes a **normal**, **advance** or **fall-bac",
+   "doc": "core",
+   "where": "PDF p85",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Super-Heavy Walker / text",
+   "field": "text",
+   "text": "- Models in that unit can move through models (including **MONSTER/VEHICLE** mod",
+   "doc": "core",
+   "where": "PDF p85",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Super-Heavy Walker / text",
+   "field": "text",
+   "text": "- Before moving that unit, you can select for all models in that unit to have th",
+   "doc": "core",
+   "where": "PDF p85",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Super-Heavy Walker / text",
+   "field": "text",
+   "text": "*Designer’s Note: Gaining the MOBILE keyword for the duration of a move will ena",
+   "doc": "core",
+   "where": "PDF p85",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Firing Deck / text",
+   "field": "text",
+   "text": "This ability always takes the form **Firing Deck X**. In your Shooting phase, ea",
+   "doc": "core",
+   "where": "PDF p81",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Firing Deck / text",
+   "field": "text",
+   "text": "- 1. Select up to **X** models embarked within this **TRANSPORT** (excluding mod",
+   "doc": "core",
+   "where": "PDF p81",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Firing Deck / text",
+   "field": "text",
+   "text": "- 2. For each selected model, select one of its ranged weapons (excluding **[ONE",
+   "doc": "core",
+   "where": "PDF p81",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Firing Deck / text",
+   "field": "text",
+   "text": "- 3. Until this **TRANSPORT** has resolved all of its attacks, it has all of tho",
+   "doc": "core",
+   "where": "PDF p81",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Firing Deck / text",
+   "field": "text",
+   "text": "- 4. Until the end of the turn, units embarked within this **TRANSPORT** are not",
+   "doc": "core",
+   "where": "PDF p81",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Scouts / text",
+   "field": "text",
+   "text": "This ability always takes the form **Scouts X\"**. In the Resolve Pre-battle Abil",
+   "doc": "core",
+   "where": "PDF p84",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Scouts / text",
+   "field": "text",
+   "text": "- If that unit is in **strategic reserves**, you can set up that unit anywhere t",
+   "doc": "core",
+   "where": "PDF p84",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Scouts / text",
+   "field": "text",
+   "text": "- If that unit is wholly within your deployment zone, it can make a **scout move",
+   "doc": "core",
+   "where": "PDF p84",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Scouts / text",
+   "field": "text",
+   "text": "- If that unit is embarked within a **DEDICATED TRANSPORT** that is wholly withi",
+   "doc": "core",
+   "where": "PDF p84",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Psychic / text",
+   "field": "text",
+   "text": "Each time an attack is made with a **[PSYCHIC]** weapon, you can ignore any or a",
+   "doc": "core",
+   "where": "PDF p84",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Harpooned / text",
+   "field": "text",
+   "text": "When this unit **declares a charge**, if an enemy **MONSTER/VEHICLE** unit is wi",
+   "doc": "pack:tyranids",
+   "where": "PDF p20",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "core / rule:Harpooned / text",
+   "field": "text",
+   "text": "- This unit has +2 to **charge rolls** until the end of the phase.",
+   "doc": "pack:tyranids",
+   "where": "PDF p20",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "core / rule:Harpooned / text",
+   "field": "text",
+   "text": "- This unit must end that **charge move engaged** with that **MONSTER/VEHICLE** ",
+   "doc": "pack:tyranids",
+   "where": "PDF p20",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "core / rule:Hazard Roll / text",
+   "field": "text",
+   "text": "To make a **hazard roll** for a unit, roll one D6: on a 1-2, that roll fails and",
+   "doc": "core",
+   "where": "PDF p24",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Hazard Roll / text",
+   "field": "text",
+   "text": "**06.03.01 Hazardous Test (app):** The term ‘Hazardous test’ is the same as haza",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § Hazardous Test 06.03.01",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Hazard Roll / text",
+   "field": "text",
+   "text": "*Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model ",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § 06.03 Hazard Rolls",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Hazard Roll / text",
+   "field": "text",
+   "text": "*Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model ",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § 06.03 Hazard Rolls",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Hazard Roll / text",
+   "field": "text",
+   "text": "*Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal ",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § Hazard Rolls 06.03",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Hazard Roll / text",
+   "field": "text",
+   "text": "*Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal ",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § Hazard Rolls 06.03",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Mortal Wounds / text",
+   "field": "text",
+   "text": "Some attacks or rules inflict **mortal wounds** on units. Each time a unit suffe",
+   "doc": "core",
+   "where": "PDF p24",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Mortal Wounds / text",
+   "field": "text",
+   "text": "- **Select Model:** Select one model in that unit by following the first instruc",
+   "doc": "core",
+   "where": "PDF p24",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Mortal Wounds / text",
+   "field": "text",
+   "text": "- If a non-**CHARACTER** model in that unit has lost one or more wounds, you mus",
+   "doc": "core",
+   "where": "PDF p24",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Mortal Wounds / text",
+   "field": "text",
+   "text": "- Otherwise, if that unit contains one or more non-**CHARACTER** models, you mus",
+   "doc": "core",
+   "where": "PDF p24",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Mortal Wounds / text",
+   "field": "text",
+   "text": "- Otherwise, if one or more **CHARACTER** models in that unit have lost one or m",
+   "doc": "core",
+   "where": "PDF p24",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Mortal Wounds / text",
+   "field": "text",
+   "text": "- Otherwise, you must select one **CHARACTER** model in that unit.",
+   "doc": "core",
+   "where": "PDF p24",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Mortal Wounds / text",
+   "field": "text",
+   "text": "- **Resolve Damage:** The selected model loses 1 wound. If this reduces that mod",
+   "doc": "core",
+   "where": "PDF p24",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Mortal Wounds / text",
+   "field": "text",
+   "text": "When resolving **attack dice**, if those attacks inflict a mixture of both **mor",
+   "doc": "core",
+   "where": "PDF p24",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Battle-shock / text",
+   "field": "text",
+   "text": "**01.06 Leadership Rolls:** To make a **leadership roll** for a unit, its contro",
+   "doc": "core",
+   "where": "PDF p9",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Battle-shock / text",
+   "field": "text",
+   "text": "**01.07 Battle-shock Rolls:** To make a **battle-shock roll** for a unit, its co",
+   "doc": "core",
+   "where": "PDF p9",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Battle-shock / text",
+   "field": "text",
+   "text": "- If that roll succeeds, that unit does not become **battle-shocked**.",
+   "doc": "core",
+   "where": "PDF p9",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Battle-shock / text",
+   "field": "text",
+   "text": "- If that roll fails, that unit, and each model in it, is **battle-shocked**.",
+   "doc": "core",
+   "where": "PDF p9",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Battle-shock / text",
+   "field": "text",
+   "text": "While a unit is **battle-shocked**:",
+   "doc": "core",
+   "where": "PDF p9",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Battle-shock / text",
+   "field": "text",
+   "text": "- The Objective Control (**OC**) characteristic of all of its models is modified",
+   "doc": "core",
+   "where": "PDF p9",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Battle-shock / text",
+   "field": "text",
+   "text": "- Its controlling player cannot target that unit with **stratagems** (15).",
+   "doc": "core",
+   "where": "PDF p9",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Battle-shock / text",
+   "field": "text",
+   "text": "- It is not **eligible to start an action** (16), and any **action** it has star",
+   "doc": "core",
+   "where": "PDF p9",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Battle-shock / text",
+   "field": "text",
+   "text": "**01.07.02 Battle-shock Test (app):** The term Battle-shock test is the same as ",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § 01.07.02 Battle-shock Test",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Battle-shock / text",
+   "field": "text",
+   "text": "**08.03 Battle-shock:** The active player must now make one **battle-shock roll*",
+   "doc": "core",
+   "where": "PDF p30",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Battle-shock / text",
+   "field": "text",
+   "text": "- That unit is currently **battle-shocked**.",
+   "doc": "core",
+   "where": "PDF p30",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Battle-shock / text",
+   "field": "text",
+   "text": "- That unit is at, or below, **half-strength**.",
+   "doc": "core",
+   "where": "PDF p30",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Battle-shock / text",
+   "field": "text",
+   "text": "If a unit was **battle-shocked** at the start of this step and its **battle-shoc",
+   "doc": "core",
+   "where": "PDF p30",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Engagement / text",
+   "field": "text",
+   "text": "A model’s **engagement range** is the area of the battlefield within 2\" horizont",
+   "doc": "core",
+   "where": "PDF p14",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Engagement / text",
+   "field": "text",
+   "text": "- While a friendly model is within **engagement range** of one or more enemy mod",
+   "doc": "core",
+   "where": "PDF p14",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Engagement / text",
+   "field": "text",
+   "text": "- While a unit contains no **engaged** models, that unit is **unengaged**.",
+   "doc": "core",
+   "where": "PDF p14",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Engagement / text",
+   "field": "text",
+   "text": "*Wahapedia FAQ: Does my model or unit become engaged while moving through a enem",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § Engagement 03.04",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Engagement / text",
+   "field": "text",
+   "text": "*Wahapedia FAQ: Does my model or unit become engaged while moving through a enem",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § Engagement 03.04",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Selected to Attack / text",
+   "field": "text",
+   "text": "**04.01.05 Selected to Attack (app):** Some rules use the term **selected to att",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § 04.01.05 Selected to Attack",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Destroyed / text",
+   "field": "text",
+   "text": "Throughout a battle, models will suffer damage, lose wounds and be **destroyed**",
+   "doc": "core",
+   "where": "PDF p87",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Destroyed / text",
+   "field": "text",
+   "text": "When a model is **destroyed**, first resolve any rules that are triggered when i",
+   "doc": "core",
+   "where": "PDF p87",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Destroyed / text",
+   "field": "text",
+   "text": "**05.04.05 Fight On Death (app):** Some rules enable models to attack after they",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § 05.04.05 Fight On Death",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Destroyed / text",
+   "field": "text",
+   "text": "Those models will stay on the battlefield until their unit is **selected to atta",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § 05.04.05 Fight On Death",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Normal Move / text",
+   "field": "text",
+   "text": "**MAXIMUM DISTANCE:** Your unit’s **M** characteristic.",
+   "doc": "core",
+   "where": "PDF p33",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Normal Move / text",
+   "field": "text",
+   "text": "**ELIGIBLE IF:** Your unit is on the battlefield and **unengaged**.",
+   "doc": "core",
+   "where": "PDF p33",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Normal Move / text",
+   "field": "text",
+   "text": "**EFFECT:** Your unit moves as described in Moving (03).",
+   "doc": "core",
+   "where": "PDF p33",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Normal Move / text",
+   "field": "text",
+   "text": "**AFTER MOVING:** Your unit must be **unengaged**.",
+   "doc": "core",
+   "where": "PDF p33",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Normal Move / text",
+   "field": "text",
+   "text": "**09.05.01 More Than One Normal Move in a Phase (app):** A unit cannot make more",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § 09.05.01 More Than One Normal Move in a Phase",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Advance Move / text",
+   "field": "text",
+   "text": "**MAXIMUM DISTANCE:** Advance roll + your unit’s **M** characteristic.",
+   "doc": "core",
+   "where": "PDF p33",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Advance Move / text",
+   "field": "text",
+   "text": "**ELIGIBLE IF:** Your unit is on the battlefield and **unengaged**.",
+   "doc": "core",
+   "where": "PDF p33",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Advance Move / text",
+   "field": "text",
+   "text": "**EFFECT:** Your unit moves as described in Moving (03).",
+   "doc": "core",
+   "where": "PDF p33",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Advance Move / text",
+   "field": "text",
+   "text": "**BEFORE MOVING:** Make an **advance roll** by rolling one D6.",
+   "doc": "core",
+   "where": "PDF p33",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Advance Move / text",
+   "field": "text",
+   "text": "**AFTER MOVING:**",
+   "doc": "core",
+   "where": "PDF p33",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Advance Move / text",
+   "field": "text",
+   "text": "- Your unit must be **unengaged**.",
+   "doc": "core",
+   "where": "PDF p33",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Advance Move / text",
+   "field": "text",
+   "text": "- Until the end of the turn, unless otherwise stated, your unit is not **eligibl",
+   "doc": "core",
+   "where": "PDF p33",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Fall-back Move / text",
+   "field": "text",
+   "text": "**MAXIMUM DISTANCE:** Your unit’s **M** characteristic.",
+   "doc": "core",
+   "where": "PDF p33",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Fall-back Move / text",
+   "field": "text",
+   "text": "**ELIGIBLE IF:** Your unit is **engaged**.",
+   "doc": "core",
+   "where": "PDF p33",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Fall-back Move / text",
+   "field": "text",
+   "text": "**EFFECT:** Your unit moves as described in Moving (03).",
+   "doc": "core",
+   "where": "PDF p33",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Fall-back Move / text",
+   "field": "text",
+   "text": "**BEFORE MOVING:** Select fall-back mode:",
+   "doc": "core",
+   "where": "PDF p33",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Fall-back Move / text",
+   "field": "text",
+   "text": "- Ordered Retreat: If your unit is not **battle-shocked**, you can select this m",
+   "doc": "core",
+   "where": "PDF p33",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Fall-back Move / text",
+   "field": "text",
+   "text": "- Desperate Escape: Otherwise, you must select this mode. Make a **hazard roll**",
+   "doc": "core",
+   "where": "PDF p33",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Fall-back Move / text",
+   "field": "text",
+   "text": "**WHILE MOVING:**",
+   "doc": "core",
+   "where": "PDF p33",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Fall-back Move / text",
+   "field": "text",
+   "text": "- Desperate Escape: Each model that is moved can be moved through enemy models.",
+   "doc": "core",
+   "where": "PDF p33",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Fall-back Move / text",
+   "field": "text",
+   "text": "**AFTER MOVING:**",
+   "doc": "core",
+   "where": "PDF p33",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Fall-back Move / text",
+   "field": "text",
+   "text": "- Your unit must be **unengaged**.",
+   "doc": "core",
+   "where": "PDF p33",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Fall-back Move / text",
+   "field": "text",
+   "text": "- Until the end of the turn, unless otherwise stated, your unit is not **eligibl",
+   "doc": "core",
+   "where": "PDF p33",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Fall-back Move / text",
+   "field": "text",
+   "text": "- Desperate Escape: If your unit is not **battle-shocked**, you must make a **ba",
+   "doc": "core",
+   "where": "PDF p33",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Fall-back Move / text",
+   "field": "text",
+   "text": "**Desperate Escape Test (app):** Some rules may reference the term ‘Desperate Es",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § Desperate Escape 09.07.01",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Fall-back Move / text",
+   "field": "text",
+   "text": "Abilities that subtract from a unit’s Desperate Escape test instead subtract fro",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § Desperate Escape 09.07.01",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Fall-back Move / text",
+   "field": "text",
+   "text": "If a **stratagem** or ability instructs a unit to make a Desperate Escape test, ",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § Desperate Escape 09.07.01",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Fall-back Move / text",
+   "field": "text",
+   "text": "- Must use the **desperate escape** mode when it is selected to make a **fall-ba",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § Desperate Escape 09.07.01",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Fall-back Move / text",
+   "field": "text",
+   "text": "- Must make one **hazard roll** for each model in that unit.",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § Desperate Escape 09.07.01",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Fall-back Move / text",
+   "field": "text",
+   "text": "- Must make a **battle-shock roll**.",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § Desperate Escape 09.07.01",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Charge / text",
+   "field": "text",
+   "text": "- 1. **Declare Charge:** Select one friendly unit that has not **declared a char",
+   "doc": "core",
+   "where": "PDF p36",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Charge / text",
+   "field": "text",
+   "text": "A unit is **eligible to declare a charge** if it is on the battlefield, unless o",
+   "doc": "core",
+   "where": "PDF p36",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Charge / text",
+   "field": "text",
+   "text": "- It is not within 12\" of one or more enemy units.",
+   "doc": "core",
+   "where": "PDF p36",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Charge / text",
+   "field": "text",
+   "text": "- It is **engaged**.",
+   "doc": "core",
+   "where": "PDF p36",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Charge / text",
+   "field": "text",
+   "text": "- It made an **advance** or **fall-back move** this turn.",
+   "doc": "core",
+   "where": "PDF p36",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Charge / text",
+   "field": "text",
+   "text": "- 2. **Make Charge Roll:** Make a **charge roll** by rolling 2D6: the result is ",
+   "doc": "core",
+   "where": "PDF p36",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Charge / text",
+   "field": "text",
+   "text": "- 3. **Attempt Charge:** If it is possible to make a **charge move**, and if you",
+   "doc": "core",
+   "where": "PDF p36",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Charge / text",
+   "field": "text",
+   "text": "*Wahapedia FAQ: When a rule instructs you to perform a charge outside of the cha",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § Failed Charges 11.02.01",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Charge / text",
+   "field": "text",
+   "text": "*Wahapedia FAQ: When a rule instructs you to perform a charge outside of the cha",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § Failed Charges 11.02.01",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Charge Move / text",
+   "field": "text",
+   "text": "**MAXIMUM DISTANCE:** **Charge roll**.",
+   "doc": "core",
+   "where": "PDF p37",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Charge Move / text",
+   "field": "text",
+   "text": "**ELIGIBLE IF:** Your unit declared a charge this phase.",
+   "doc": "core",
+   "where": "PDF p37",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Charge Move / text",
+   "field": "text",
+   "text": "**EFFECT:** Your unit moves as described in Moving (03).",
+   "doc": "core",
+   "where": "PDF p37",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Charge Move / text",
+   "field": "text",
+   "text": "**BEFORE MOVING:** Select one or more enemy units that are within 12\" of your un",
+   "doc": "core",
+   "where": "PDF p37",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Charge Move / text",
+   "field": "text",
+   "text": "**WHILE MOVING:**",
+   "doc": "core",
+   "where": "PDF p37",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Charge Move / text",
+   "field": "text",
+   "text": "- Each model must end its move closer to one or more **charge targets**.",
+   "doc": "core",
+   "where": "PDF p37",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Charge Move / text",
+   "field": "text",
+   "text": "- Each model that can end its move within 1\" of one or more **charge targets** m",
+   "doc": "core",
+   "where": "PDF p37",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Charge Move / text",
+   "field": "text",
+   "text": "- Each model that can end its move **engaged** with one or more **charge targets",
+   "doc": "core",
+   "where": "PDF p37",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Charge Move / text",
+   "field": "text",
+   "text": "**AFTER MOVING:**",
+   "doc": "core",
+   "where": "PDF p37",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Charge Move / text",
+   "field": "text",
+   "text": "- Your unit must be **engaged** with all of the **charge targets**.",
+   "doc": "core",
+   "where": "PDF p37",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Charge Move / text",
+   "field": "text",
+   "text": "- Your unit cannot be **engaged** with one or more enemy units that are not **ch",
+   "doc": "core",
+   "where": "PDF p37",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Charge Move / text",
+   "field": "text",
+   "text": "- Until the end of the turn, each model in your unit has the **Fights First** ab",
+   "doc": "core",
+   "where": "PDF p37",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Pile-in Move / text",
+   "field": "text",
+   "text": "**MAXIMUM DISTANCE:** 3\"",
+   "doc": "core",
+   "where": "PDF p38",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Pile-in Move / text",
+   "field": "text",
+   "text": "**ELIGIBLE IF:** It is the Fight phase and one or more of the following apply to",
+   "doc": "core",
+   "where": "PDF p38",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Pile-in Move / text",
+   "field": "text",
+   "text": "- It is **engaged**.",
+   "doc": "core",
+   "where": "PDF p38",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Pile-in Move / text",
+   "field": "text",
+   "text": "- It made a **charge move** this turn.",
+   "doc": "core",
+   "where": "PDF p38",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Pile-in Move / text",
+   "field": "text",
+   "text": "- It was selected to make an **overrun fight** this phase (12.06).",
+   "doc": "core",
+   "where": "PDF p38",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Pile-in Move / text",
+   "field": "text",
+   "text": "**EFFECT:** Your unit moves as described in Moving (03).",
+   "doc": "core",
+   "where": "PDF p38",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Pile-in Move / text",
+   "field": "text",
+   "text": "**BEFORE MOVING:** Select pile-in targets:",
+   "doc": "core",
+   "where": "PDF p38",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Pile-in Move / text",
+   "field": "text",
+   "text": "- If your unit is **engaged**, select every enemy unit it is **engaged** with.",
+   "doc": "core",
+   "where": "PDF p38",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Pile-in Move / text",
+   "field": "text",
+   "text": "- Otherwise, select one or more enemy units within 5\" of your unit.",
+   "doc": "core",
+   "where": "PDF p38",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Pile-in Move / text",
+   "field": "text",
+   "text": "**WHILE MOVING:**",
+   "doc": "core",
+   "where": "PDF p38",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Pile-in Move / text",
+   "field": "text",
+   "text": "- Models in base-contact with one or more enemy models cannot be moved.",
+   "doc": "core",
+   "where": "PDF p38",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Pile-in Move / text",
+   "field": "text",
+   "text": "- Each model that is moved must end its move closer to the closest **pile-in tar",
+   "doc": "core",
+   "where": "PDF p38",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Pile-in Move / text",
+   "field": "text",
+   "text": "**AFTER MOVING:**",
+   "doc": "core",
+   "where": "PDF p38",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Pile-in Move / text",
+   "field": "text",
+   "text": "- Your unit must be **engaged**.",
+   "doc": "core",
+   "where": "PDF p38",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Pile-in Move / text",
+   "field": "text",
+   "text": "- Each model that started this move **engaged** with an enemy unit must still be",
+   "doc": "core",
+   "where": "PDF p38",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Consolidation Move / text",
+   "field": "text",
+   "text": "**MAXIMUM DISTANCE:** 3\"",
+   "doc": "core",
+   "where": "PDF p38",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Consolidation Move / text",
+   "field": "text",
+   "text": "**ELIGIBLE IF:** It is the Fight phase and your unit was **eligible to fight** t",
+   "doc": "core",
+   "where": "PDF p42",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Consolidation Move / text",
+   "field": "text",
+   "text": "**EFFECT:** Your unit moves as described in Moving (03).",
+   "doc": "core",
+   "where": "PDF p42",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Consolidation Move / text",
+   "field": "text",
+   "text": "**BEFORE MOVING:** Select **consolidation mode**:",
+   "doc": "core",
+   "where": "PDF p42",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Consolidation Move / text",
+   "field": "text",
+   "text": "- Ongoing Consolidation: If your unit is **engaged**, you must select this mode ",
+   "doc": "core",
+   "where": "PDF p42",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Consolidation Move / text",
+   "field": "text",
+   "text": "- Engaging Consolidation: Otherwise, if your unit is within 3\" of one or more en",
+   "doc": "core",
+   "where": "PDF p42",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Consolidation Move / text",
+   "field": "text",
+   "text": "- Objective Consolidation: Otherwise, if your unit is within 3\" of one or more *",
+   "doc": "core",
+   "where": "PDF p42",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Consolidation Move / text",
+   "field": "text",
+   "text": "**WHILE MOVING:**",
+   "doc": "core",
+   "where": "PDF p42",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Consolidation Move / text",
+   "field": "text",
+   "text": "- Ongoing Consolidation: Models in base-contact with one or more enemy models ca",
+   "doc": "core",
+   "where": "PDF p42",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Consolidation Move / text",
+   "field": "text",
+   "text": "- Engaging Consolidation: Each model that is moved must end its move closer to t",
+   "doc": "core",
+   "where": "PDF p42",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Consolidation Move / text",
+   "field": "text",
+   "text": "- Objective Consolidation: Each model that is moved must end its move within ran",
+   "doc": "core",
+   "where": "PDF p42",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Consolidation Move / text",
+   "field": "text",
+   "text": "**AFTER MOVING:**",
+   "doc": "core",
+   "where": "PDF p42",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Consolidation Move / text",
+   "field": "text",
+   "text": "- Ongoing Consolidation: Each model that started this move **engaged** with an e",
+   "doc": "core",
+   "where": "PDF p42",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Consolidation Move / text",
+   "field": "text",
+   "text": "- Engaging Consolidation: Your unit must be **engaged** with all of the selected",
+   "doc": "core",
+   "where": "PDF p42",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Consolidation Move / text",
+   "field": "text",
+   "text": "- Objective Consolidation: Your unit must be within range of the selected **obje",
+   "doc": "core",
+   "where": "PDF p42",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Consolidation Move / text",
+   "field": "text",
+   "text": "*Wahapedia core rules errata (12.08 Consolidation Move, After Moving, Ongoing Co",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § 3. End of Charge Phase 11.03",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Benefit of Cover / text",
+   "field": "text",
+   "text": "Each time a ranged attack targets a unit, if every model in that unit meets one ",
+   "doc": "core",
+   "where": "PDF p50",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Benefit of Cover / text",
+   "field": "text",
+   "text": "- That model has the **INFANTRY/BEASTS/SWARM** keyword and is within a **terrain",
+   "doc": "core",
+   "where": "PDF p50",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Benefit of Cover / text",
+   "field": "text",
+   "text": "- That model is not **fully visible** to the attacking model due to one or more ",
+   "doc": "core",
+   "where": "PDF p50",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Benefit of Cover / text",
+   "field": "text",
+   "text": "Each time a ranged attack targets a unit that has the **benefit of cover** again",
+   "doc": "core",
+   "where": "PDF p50",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Attached Units / text",
+   "field": "text",
+   "text": "Some units have the **Leader** or **Support** ability listed on their datasheet ",
+   "doc": "core",
+   "where": "PDF p66",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Attached Units / text",
+   "field": "text",
+   "text": "**19.04 Abilities in Attached Units:** Abilities/rules that affect a single spec",
+   "doc": "core",
+   "where": "PDF p67",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Attached Units / text",
+   "field": "text",
+   "text": "Otherwise, abilities/rules that affect a unit (or models in it) apply to every m",
+   "doc": "core",
+   "where": "PDF p67",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Attached Units / text",
+   "field": "text",
+   "text": "SOURCE OF ABILITY/RULE: APPLIES TO THE ATTACHED UNIT UNTIL",
+   "doc": "core",
+   "where": "PDF p67",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Attached Units / text",
+   "field": "text",
+   "text": "- Leader/support unit: The last model in that **leader**/**support** unit is **d",
+   "doc": "core",
+   "where": "PDF p67",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Attached Units / text",
+   "field": "text",
+   "text": "- Bodyguard unit (e.g. from a datasheet ability): The last model in that **bodyg",
+   "doc": "core",
+   "where": "PDF p67",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Attached Units / text",
+   "field": "text",
+   "text": "- A specific model (e.g. the bearer of an **enhancement** or an item of wargear)",
+   "doc": "core",
+   "where": "PDF p67",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Attached Units / text",
+   "field": "text",
+   "text": "* This means **leader**/**support** units continue to benefit from their own ‘wh",
+   "doc": "core",
+   "where": "PDF p67",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Attached Units / text",
+   "field": "text",
+   "text": "In all of the above cases, if that last model was **destroyed** as the result of",
+   "doc": "core",
+   "where": "PDF p67",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Attached Units / text",
+   "field": "text",
+   "text": "*Wahapedia FAQ: When does a model’s or unit’s ability in an attached unit apply ",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § Revived 01.02.03",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Attached Units / text",
+   "field": "text",
+   "text": "*Wahapedia FAQ: When does a model’s or unit’s ability in an attached unit apply ",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § Revived 01.02.03",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Strategic Reserves / text",
+   "field": "text",
+   "text": "Before the battle, in the Declare Battle Formations step, you can select one or ",
+   "doc": "core",
+   "where": "PDF p68",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Strategic Reserves / text",
+   "field": "text",
+   "text": "Unless otherwise stated, the combined points value of all of your **strategic re",
+   "doc": "core",
+   "where": "PDF p68",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Strategic Reserves / text",
+   "field": "text",
+   "text": "**20.01.01 Reserves (app):** The term ‘Reserves’ is the same as strategic reserv",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § 20.01.01 Reserves",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Strategic Reserves / text",
+   "field": "text",
+   "text": "**20.02 Repositioned Units:** Some rules allow units to be removed from the batt",
+   "doc": "core",
+   "where": "PDF p68",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Strategic Reserves / text",
+   "field": "text",
+   "text": "- If used in the Movement phase, such rules can be used on units that have alrea",
+   "doc": "core",
+   "where": "PDF p68",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Strategic Reserves / text",
+   "field": "text",
+   "text": "- A **repositioned** unit that is set up in the same turn in which it made an **",
+   "doc": "core",
+   "where": "PDF p68",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Strategic Reserves / text",
+   "field": "text",
+   "text": "- When they are removed from the battlefield, any rules that are affecting such ",
+   "doc": "core",
+   "where": "PDF p68",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Strategic Reserves / text",
+   "field": "text",
+   "text": "**20.03 Arriving from Strategic Reserves:** To arrive on the battlefield, each *",
+   "doc": "core",
+   "where": "PDF p69",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Strategic Reserves / text",
+   "field": "text",
+   "text": "At the end of the third battle round, unless otherwise stated, all **strategic r",
+   "doc": "core",
+   "where": "PDF p69",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Strategic Reserves / text",
+   "field": "text",
+   "text": "- Units embarked within **TRANSPORTS** that have made an **ingress move** during",
+   "doc": "core",
+   "where": "PDF p69",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Strategic Reserves / text",
+   "field": "text",
+   "text": "- **Repositioned** units (see opposite).",
+   "doc": "core",
+   "where": "PDF p69",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Ingress Move / text",
+   "field": "text",
+   "text": "**SET-UP DISTANCE:** 6\"",
+   "doc": "core",
+   "where": "PDF p65",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Ingress Move / text",
+   "field": "text",
+   "text": "**ELIGIBLE IF:** Your unit is in **strategic reserves** (excluding units that ar",
+   "doc": "core",
+   "where": "PDF p69",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Ingress Move / text",
+   "field": "text",
+   "text": "**EFFECT:** Your unit is set up as described in Set Up (03.02).",
+   "doc": "core",
+   "where": "PDF p69",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Ingress Move / text",
+   "field": "text",
+   "text": "**WHILE MOVING:** Set up your unit wholly within the **set-up distance** of one ",
+   "doc": "core",
+   "where": "PDF p69",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Ingress Move / text",
+   "field": "text",
+   "text": "- **Before the Third Battle Round:** While doing so, no models can be set up wit",
+   "doc": "core",
+   "where": "PDF p69",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Ingress Move / text",
+   "field": "text",
+   "text": "**AFTER MOVING:** Unless otherwise stated, until the start of the next Charge ph",
+   "doc": "core",
+   "where": "PDF p69",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Ingress Move / text",
+   "field": "text",
+   "text": "**20.03.01 Set Up As Reinforcements (app):** If a rule mentions a unit being set",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § 20.03.01 Set Up As Reinforcements",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / rule:Surge Move / text",
+   "field": "text",
+   "text": "Some rules allow a unit to make a surge move, as described below.",
+   "doc": "core",
+   "where": "PDF p70",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Surge Move / text",
+   "field": "text",
+   "text": "**MAXIMUM DISTANCE:** As stated in the rule allowing this move type.",
+   "doc": "core",
+   "where": "PDF p70",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Surge Move / text",
+   "field": "text",
+   "text": "**ELIGIBLE IF:** All of the following apply:",
+   "doc": "core",
+   "where": "PDF p70",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Surge Move / text",
+   "field": "text",
+   "text": "- The rule allowing this **move type** has been triggered.",
+   "doc": "core",
+   "where": "PDF p70",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Surge Move / text",
+   "field": "text",
+   "text": "- Your unit is not **battle-shocked**.",
+   "doc": "core",
+   "where": "PDF p70",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Surge Move / text",
+   "field": "text",
+   "text": "- Your unit is **unengaged**.",
+   "doc": "core",
+   "where": "PDF p70",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Surge Move / text",
+   "field": "text",
+   "text": "- Your unit has not moved this phase.",
+   "doc": "core",
+   "where": "PDF p70",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Surge Move / text",
+   "field": "text",
+   "text": "**EFFECT:** Your unit moves as described in Moving (03).",
+   "doc": "core",
+   "where": "PDF p70",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Surge Move / text",
+   "field": "text",
+   "text": "**BEFORE MOVING:** Select the closest enemy unit to be the **surge target**.",
+   "doc": "core",
+   "where": "PDF p70",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Surge Move / text",
+   "field": "text",
+   "text": "**WHILE MOVING:**",
+   "doc": "core",
+   "where": "PDF p70",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Surge Move / text",
+   "field": "text",
+   "text": "- Each model must end its move **engaged** with the **surge target** if possible",
+   "doc": "core",
+   "where": "PDF p70",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Surge Move / text",
+   "field": "text",
+   "text": "- Each model that cannot end its move **engaged** with the **surge target** must",
+   "doc": "core",
+   "where": "PDF p70",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Surge Move / text",
+   "field": "text",
+   "text": "**AFTER MOVING:**",
+   "doc": "core",
+   "where": "PDF p70",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Surge Move / text",
+   "field": "text",
+   "text": "- Your unit cannot be **engaged** with one or more enemy units that were not the",
+   "doc": "core",
+   "where": "PDF p70",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Surge Move / text",
+   "field": "text",
+   "text": "- Your unit cannot move again this phase.",
+   "doc": "core",
+   "where": "PDF p70",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Scout Move / text",
+   "field": "text",
+   "text": "**MAXIMUM DISTANCE:** The **X\"** in **Scouts X\"**.",
+   "doc": "core",
+   "where": "PDF p84",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Scout Move / text",
+   "field": "text",
+   "text": "**ELIGIBLE IF:** It is the Resolve Pre-battle Abilities step, and your unit is w",
+   "doc": "core",
+   "where": "PDF p84",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Scout Move / text",
+   "field": "text",
+   "text": "**EFFECT:** Your unit moves as described in Moving (03).",
+   "doc": "core",
+   "where": "PDF p84",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Scout Move / text",
+   "field": "text",
+   "text": "**AFTER MOVING:** Your unit must be more than 8\" horizontally from all enemy uni",
+   "doc": "core",
+   "where": "PDF p84",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Stealth / text",
+   "field": "text",
+   "text": "If every model in a unit has this ability, each time a ranged attack targets tha",
+   "doc": "core",
+   "where": "PDF p85",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Starting Strength / text",
+   "field": "text",
+   "text": "The number of models a unit contains at the start of the first battle round is i",
+   "doc": "core",
+   "where": "PDF p86",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Starting Strength / text",
+   "field": "text",
+   "text": "Some rules refer to units being below **starting strength**, or at – or below – ",
+   "doc": "core",
+   "where": "PDF p86",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Starting Strength / text",
+   "field": "text",
+   "text": "**Starting strength of 1:**",
+   "doc": "core",
+   "where": "PDF p31",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
+   "how": "table column"
+  },
+  {
+   "item": "core / rule:Starting Strength / text",
+   "field": "text",
+   "text": "- Below starting strength: model’s remaining wounds are less than its W characte",
+   "doc": "core",
+   "where": "PDF p86",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
+   "how": "table cell"
+  },
+  {
+   "item": "core / rule:Starting Strength / text",
+   "field": "text",
+   "text": "- At half-strength: model’s remaining wounds are half of its W characteristic.",
+   "doc": "core",
+   "where": "PDF p86",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
+   "how": "table cell"
+  },
+  {
+   "item": "core / rule:Starting Strength / text",
+   "field": "text",
+   "text": "- Below half-strength: model’s remaining wounds are less than half of its W char",
+   "doc": "core",
+   "where": "PDF p86",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
+   "how": "table cell"
+  },
+  {
+   "item": "core / rule:Starting Strength / text",
+   "field": "text",
+   "text": "**Starting strength of 2 or more:**",
+   "doc": "core",
+   "where": "PDF p86",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
+   "how": "table column"
+  },
+  {
+   "item": "core / rule:Starting Strength / text",
+   "field": "text",
+   "text": "- Below starting strength: number of remaining models in the unit is less than i",
+   "doc": "core",
+   "where": "PDF p86",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
+   "how": "table cell"
+  },
+  {
+   "item": "core / rule:Starting Strength / text",
+   "field": "text",
+   "text": "- At half-strength: number of remaining models in the unit is half of its starti",
+   "doc": "core",
+   "where": "PDF p86",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
+   "how": "table cell"
+  },
+  {
+   "item": "core / rule:Starting Strength / text",
+   "field": "text",
+   "text": "- Below half-strength: number of remaining models in the unit is less than half ",
+   "doc": "core",
+   "where": "PDF p86",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833",
+   "how": "table cell"
+  },
+  {
+   "item": "core / rule:Starting Strength / text",
+   "field": "text",
+   "text": "**Some units cannot be at half-strength:** If a model’s W characteristic or a un",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § 01.02.01 Starting Strength and Half-Strength",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9",
+   "lessAuthoritative": true
+  },
+  {
+   "item": "core / rule:Starting Strength / text",
+   "field": "text",
+   "text": "*Example: A Captain (1 model) is attached to a unit of Intercessors (5 models). ",
+   "doc": "core",
+   "where": "PDF p86",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Plunging Fire / text",
+   "field": "text",
+   "text": "Each time a model makes a ranged attack that targets a visible unit containing o",
+   "doc": "core",
+   "where": "PDF p73",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Plunging Fire / text",
+   "field": "text",
+   "text": "- The attacking model is on a section of a terrain feature that is 3\" or more in",
+   "doc": "core",
+   "where": "PDF p73",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Plunging Fire / text",
+   "field": "text",
+   "text": "- The attacking model has the **TOWERING** keyword and the target unit is within",
+   "doc": "core",
+   "where": "PDF p73",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Plunging Fire / text",
+   "field": "text",
+   "text": "**23.03 Shooting:** The **Plunging Fire** rule (22.05) has no effect on attacks ",
+   "doc": "core",
+   "where": "PDF p74",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Select Weapons / text",
+   "field": "text",
+   "text": "For each model in the attacking unit, select which weapons that model will make ",
+   "doc": "core",
+   "where": "PDF p16",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Select Weapons / text",
+   "field": "text",
+   "text": "**While shooting:** You can select one or more ranged weapons that model has.",
+   "doc": "core",
+   "where": "PDF p16",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Select Weapons / text",
+   "field": "text",
+   "text": "**While fighting:** You must select one melee weapon that model has.",
+   "doc": "core",
+   "where": "PDF p16",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Select Weapons / text",
+   "field": "text",
+   "text": "**Sidearms:** Some models are equipped with **[CLOSE-QUARTERS]** weapons in addi",
+   "doc": "core",
+   "where": "PDF p16",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Select Weapons / text",
+   "field": "text",
+   "text": "**24.11 [EXTRA ATTACKS]:** Each time a unit containing one or more models with a",
+   "doc": "core",
+   "where": "PDF p81",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Select Weapons / text",
+   "field": "text",
+   "text": "**04.01.03 Multiple Weapon Profiles (app):** In the Select Weapons step (04.01),",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § 04.01.03 Multiple Weapon Profiles",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "core / coreStratagem:command-re-roll",
+   "field": "name",
+   "doc": "core",
+   "where": "PDF p56 (15.02)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:command-re-roll",
+   "field": "when",
+   "doc": "core",
+   "where": "PDF p56 (15.02)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:command-re-roll",
+   "field": "target",
+   "doc": "core",
+   "where": "PDF p56 (15.02)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:command-re-roll",
+   "field": "effect",
+   "doc": "core",
+   "where": "PDF p56 (15.02)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:epic-challenge",
+   "field": "name",
+   "doc": "core",
+   "where": "PDF p56 (15.03)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:epic-challenge",
+   "field": "when",
+   "doc": "core",
+   "where": "PDF p56 (15.03)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:epic-challenge",
+   "field": "target",
+   "doc": "core",
+   "where": "PDF p56 (15.03)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:epic-challenge",
+   "field": "effect",
+   "doc": "core",
+   "where": "PDF p56 (15.03)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:insane-bravery",
+   "field": "name",
+   "doc": "core",
+   "where": "PDF p56 (15.04)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:insane-bravery",
+   "field": "when",
+   "doc": "core",
+   "where": "PDF p56 (15.04)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:insane-bravery",
+   "field": "target",
+   "doc": "core",
+   "where": "PDF p56 (15.04)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:insane-bravery",
+   "field": "effect",
+   "doc": "core",
+   "where": "PDF p56 (15.04)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:insane-bravery",
+   "field": "restrictions",
+   "doc": "core",
+   "where": "PDF p56 (15.04)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:explosives",
+   "field": "name",
+   "doc": "core",
+   "where": "PDF p56 (15.05)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:explosives",
+   "field": "when",
+   "doc": "core",
+   "where": "PDF p56 (15.05)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:explosives",
+   "field": "target",
+   "doc": "core",
+   "where": "PDF p56 (15.05)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:explosives",
+   "field": "effect",
+   "doc": "core",
+   "where": "PDF p56 (15.05)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:crushing-impact",
+   "field": "name",
+   "doc": "core",
+   "where": "PDF p56 (15.06)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:crushing-impact",
+   "field": "when",
+   "doc": "core",
+   "where": "PDF p56 (15.06)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:crushing-impact",
+   "field": "target",
+   "doc": "core",
+   "where": "PDF p56 (15.06)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:crushing-impact",
+   "field": "effect",
+   "doc": "core",
+   "where": "PDF p56 (15.06)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:rapid-ingress",
+   "field": "name",
+   "doc": "core",
+   "where": "PDF p57 (15.07)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:rapid-ingress",
+   "field": "when",
+   "doc": "core",
+   "where": "PDF p57 (15.07)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:rapid-ingress",
+   "field": "target",
+   "doc": "core",
+   "where": "PDF p57 (15.07)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:rapid-ingress",
+   "field": "effect",
+   "doc": "core",
+   "where": "PDF p57 (15.07)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:rapid-ingress",
+   "field": "restrictions",
+   "doc": "core",
+   "where": "PDF p57 (15.07)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:fire-overwatch",
+   "field": "name",
+   "doc": "core",
+   "where": "PDF p57 (15.08)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:fire-overwatch",
+   "field": "when",
+   "doc": "core",
+   "where": "PDF p57 (15.08)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:fire-overwatch",
+   "field": "target",
+   "doc": "core",
+   "where": "PDF p57 (15.08)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:fire-overwatch",
+   "field": "effect",
+   "doc": "core",
+   "where": "PDF p57 (15.08)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:smokescreen",
+   "field": "name",
+   "doc": "core",
+   "where": "PDF p57 (15.10)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:smokescreen",
+   "field": "when",
+   "doc": "core",
+   "where": "PDF p57 (15.10)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:smokescreen",
+   "field": "target",
+   "doc": "core",
+   "where": "PDF p57 (15.10)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:smokescreen",
+   "field": "effect",
+   "doc": "core",
+   "where": "PDF p57 (15.10)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:heroic-intervention",
+   "field": "name",
+   "doc": "core",
+   "where": "PDF p57 (15.11)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:heroic-intervention",
+   "field": "when",
+   "doc": "core",
+   "where": "PDF p57 (15.11)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:heroic-intervention",
+   "field": "target",
+   "doc": "core",
+   "where": "PDF p57 (15.11)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:heroic-intervention",
+   "field": "effect",
+   "doc": "core",
+   "where": "PDF p57 (15.11)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:counteroffensive",
+   "field": "name",
+   "doc": "core",
+   "where": "PDF p57 (15.12)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:counteroffensive",
+   "field": "when",
+   "doc": "core",
+   "where": "PDF p57 (15.12)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:counteroffensive",
+   "field": "target",
+   "doc": "core",
+   "where": "PDF p57 (15.12)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / coreStratagem:counteroffensive",
+   "field": "effect",
+   "doc": "core",
+   "where": "PDF p57 (15.12)",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "cooking / detachment:brute-bosses",
+   "field": "name",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Brute Bosses 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:brute-bosses/rule",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Brute Bosses 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:brute-bosses/enhancement:Brutal But Kunnin’",
+   "field": "pts",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Brute Bosses 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:brute-bosses/enhancement:Brutal But Kunnin’",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Brute Bosses 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:brute-bosses/enhancement:Da Gobshot Thunderbuss",
+   "field": "pts",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Brute Bosses 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:brute-bosses/enhancement:Da Gobshot Thunderbuss",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Brute Bosses 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:brute-bosses/enhancement:Blitzboss",
+   "field": "pts",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Brute Bosses 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:brute-bosses/enhancement:Blitzboss",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Brute Bosses 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:brute-bosses/enhancement:Proper Killy",
+   "field": "pts",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Brute Bosses 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:brute-bosses/enhancement:Proper Killy",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Brute Bosses 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:brute-bosses/enhancement:Morgog’s Finkin’ Cap",
+   "field": "pts",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Brute Bosses 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:brute-bosses/enhancement:Morgog’s Finkin’ Cap",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Brute Bosses 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:brute-bosses/enhancement:Surly as a Squiggoth",
+   "field": "pts",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Brute Bosses 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:brute-bosses/enhancement:Surly as a Squiggoth",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Brute Bosses 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:da-big-hunt",
+   "field": "name",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Da Big Hunt 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:da-big-hunt/rule",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Da Big Hunt 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:da-big-hunt/enhancement:Glory Hog",
+   "field": "pts",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Da Big Hunt 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:da-big-hunt/enhancement:Glory Hog",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Da Big Hunt 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:da-big-hunt/enhancement:It Came from da Drops",
+   "field": "pts",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Da Big Hunt 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:da-big-hunt/enhancement:It Came from da Drops",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Da Big Hunt 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:da-big-hunt/stratagem:where-dya-fink",
+   "field": "when",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Da Big Hunt 1DP (WHERE D'YA FINK YOU'RE GOING?)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:da-big-hunt/stratagem:where-dya-fink",
+   "field": "target",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Da Big Hunt 1DP (WHERE D'YA FINK YOU'RE GOING?)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:da-big-hunt/stratagem:where-dya-fink",
+   "field": "effect",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Da Big Hunt 1DP (WHERE D'YA FINK YOU'RE GOING?)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:da-big-hunt/stratagem:goaded-into-action",
+   "field": "when",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Da Big Hunt 1DP (GOADED INTO ACTION)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:da-big-hunt/stratagem:goaded-into-action",
+   "field": "target",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Da Big Hunt 1DP (GOADED INTO ACTION)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:da-big-hunt/stratagem:goaded-into-action",
+   "field": "effect",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Da Big Hunt 1DP (GOADED INTO ACTION)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:da-big-hunt/stratagem:instinctive-hunters",
+   "field": "when",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Da Big Hunt 1DP (INSTINCTIVE HUNTERS)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:da-big-hunt/stratagem:instinctive-hunters",
+   "field": "target",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Da Big Hunt 1DP (INSTINCTIVE HUNTERS)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:da-big-hunt/stratagem:instinctive-hunters",
+   "field": "effect",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Da Big Hunt 1DP (INSTINCTIVE HUNTERS)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:dread-mob",
+   "field": "name",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Dread Mob 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:dread-mob/rule",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Dread Mob 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:dread-mob/enhancement:Cybork Boosta",
+   "field": "pts",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Dread Mob 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:dread-mob/enhancement:Cybork Boosta",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Dread Mob 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:dread-mob/enhancement:Dreadherder",
+   "field": "pts",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Dread Mob 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:dread-mob/enhancement:Dreadherder",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Dread Mob 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:dread-mob/stratagem:crazed-rampage",
+   "field": "when",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Dread Mob 1DP (CRAZED RAMPAGE)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:dread-mob/stratagem:crazed-rampage",
+   "field": "target",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Dread Mob 1DP (CRAZED RAMPAGE)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:dread-mob/stratagem:crazed-rampage",
+   "field": "effect",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Dread Mob 1DP (CRAZED RAMPAGE)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:dread-mob/stratagem:dread-power",
+   "field": "when",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Dread Mob 1DP (DREAD POWER)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:dread-mob/stratagem:dread-power",
+   "field": "target",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Dread Mob 1DP (DREAD POWER)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:dread-mob/stratagem:dread-power",
+   "field": "effect",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Dread Mob 1DP (DREAD POWER)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:dread-mob/stratagem:stomping-juggernaut",
+   "field": "when",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Dread Mob 1DP (STOMPING JUGGERNAUT)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:dread-mob/stratagem:stomping-juggernaut",
+   "field": "target",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Dread Mob 1DP (STOMPING JUGGERNAUT)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / detachment:dread-mob/stratagem:stomping-juggernaut",
+   "field": "effect",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Dread Mob 1DP (STOMPING JUGGERNAUT)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "purge-freeblade / detachment:freeblade-company",
+   "field": "name",
+   "doc": "waha:imperial-knights",
+   "where": "Wahapedia imperial-knights § Freeblade Company 3DP",
+   "sha256": "1fd48b6b3440f46ab46422db464b9a93fe1b2f9f35cafea6de0fbd35cf19e41a"
+  },
+  {
+   "item": "purge-freeblade / detachment:freeblade-company/rule",
+   "field": "text",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights v1.2 PDF p5-6",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "purge-freeblade / detachment:freeblade-company/enhancement:Bringer of Justice",
+   "field": "pts",
+   "doc": "waha:imperial-knights",
+   "where": "Wahapedia imperial-knights § Freeblade Company 3DP",
+   "sha256": "1fd48b6b3440f46ab46422db464b9a93fe1b2f9f35cafea6de0fbd35cf19e41a"
+  },
+  {
+   "item": "purge-freeblade / detachment:freeblade-company/enhancement:Bringer of Justice",
+   "field": "text",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights v1.2 PDF p5-6",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "purge-freeblade / detachment:freeblade-company/enhancement:Hunter’s Eye",
+   "field": "pts",
+   "doc": "waha:imperial-knights",
+   "where": "Wahapedia imperial-knights § Freeblade Company 3DP",
+   "sha256": "1fd48b6b3440f46ab46422db464b9a93fe1b2f9f35cafea6de0fbd35cf19e41a"
+  },
+  {
+   "item": "purge-freeblade / detachment:freeblade-company/enhancement:Hunter’s Eye",
+   "field": "text",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights v1.2 PDF p5-6",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "purge-freeblade / detachment:freeblade-company/enhancement:Mysterious Guardian",
+   "field": "pts",
+   "doc": "waha:imperial-knights",
+   "where": "Wahapedia imperial-knights § Freeblade Company 3DP",
+   "sha256": "1fd48b6b3440f46ab46422db464b9a93fe1b2f9f35cafea6de0fbd35cf19e41a"
+  },
+  {
+   "item": "purge-freeblade / detachment:freeblade-company/enhancement:Mysterious Guardian",
+   "field": "text",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights v1.2 PDF p5-6",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "purge-freeblade / detachment:freeblade-company/enhancement:Sanctuary",
+   "field": "pts",
+   "doc": "waha:imperial-knights",
+   "where": "Wahapedia imperial-knights § Freeblade Company 3DP",
+   "sha256": "1fd48b6b3440f46ab46422db464b9a93fe1b2f9f35cafea6de0fbd35cf19e41a"
+  },
+  {
+   "item": "purge-freeblade / detachment:freeblade-company/enhancement:Sanctuary",
+   "field": "text",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights v1.2 PDF p5-6",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "purge-freeblade / detachment:freeblade-company/stratagem:noble-sacrifice",
+   "field": "when",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights v1.2 PDF p6 (NOBLE SACRIFICE)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "purge-freeblade / detachment:freeblade-company/stratagem:noble-sacrifice",
+   "field": "target",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights v1.2 PDF p6 (NOBLE SACRIFICE)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "purge-freeblade / detachment:freeblade-company/stratagem:noble-sacrifice",
+   "field": "effect",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights v1.2 PDF p6 (NOBLE SACRIFICE)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "purge-freeblade / detachment:freeblade-company/stratagem:strength-from-exile",
+   "field": "when",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights v1.2 PDF p6 (STRENGTH FROM EXILE)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "purge-freeblade / detachment:freeblade-company/stratagem:strength-from-exile",
+   "field": "target",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights v1.2 PDF p6 (STRENGTH FROM EXILE)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "purge-freeblade / detachment:freeblade-company/stratagem:strength-from-exile",
+   "field": "effect",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights v1.2 PDF p6 (STRENGTH FROM EXILE)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "purge-freeblade / detachment:freeblade-company/stratagem:full-tilt",
+   "field": "when",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights v1.2 PDF p6 (FULL TILT)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "purge-freeblade / detachment:freeblade-company/stratagem:full-tilt",
+   "field": "target",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights v1.2 PDF p6 (FULL TILT)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "purge-freeblade / detachment:freeblade-company/stratagem:full-tilt",
+   "field": "effect",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights v1.2 PDF p6 (FULL TILT)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "purge-freeblade / detachment:freeblade-company/stratagem:point-blank-barrage",
+   "field": "when",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights v1.2 PDF p6 (POINT‑BLANK BARRAGE)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "purge-freeblade / detachment:freeblade-company/stratagem:point-blank-barrage",
+   "field": "target",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights v1.2 PDF p6 (POINT‑BLANK BARRAGE)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "purge-freeblade / detachment:freeblade-company/stratagem:point-blank-barrage",
+   "field": "effect",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights v1.2 PDF p6 (POINT‑BLANK BARRAGE)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "purge-freeblade / detachment:freeblade-company/stratagem:survivor-of-strife",
+   "field": "when",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights v1.2 PDF p6 (SURVIVOR OF STRIFE)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "purge-freeblade / detachment:freeblade-company/stratagem:survivor-of-strife",
+   "field": "target",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights v1.2 PDF p6 (SURVIVOR OF STRIFE)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "purge-freeblade / detachment:freeblade-company/stratagem:survivor-of-strife",
+   "field": "effect",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights v1.2 PDF p6 (SURVIVOR OF STRIFE)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "purge-freeblade / detachment:freeblade-company/stratagem:flanking-manoeuvres",
+   "field": "when",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights v1.2 PDF p6 (FLANKING MANOEUVRES)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "purge-freeblade / detachment:freeblade-company/stratagem:flanking-manoeuvres",
+   "field": "target",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights v1.2 PDF p6 (FLANKING MANOEUVRES)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "purge-freeblade / detachment:freeblade-company/stratagem:flanking-manoeuvres",
+   "field": "effect",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights v1.2 PDF p6 (FLANKING MANOEUVRES)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "hurrdurr / detachment:berzerker-warband",
+   "field": "name",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / detachment:berzerker-warband/rule / text (Rules Updates)",
+   "field": "text (Rules Updates)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters v1.3 PDF p7, Rules Updates: BERZERKER WARBAND DETACHMENT / Relentless Rage Detachment Rule",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "hurrdurr / detachment:berzerker-warband/enhancement:Berzerker Glaive",
+   "field": "pts",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / detachment:berzerker-warband/enhancement:Berzerker Glaive",
+   "field": "text",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / detachment:berzerker-warband/enhancement:Helm of Brazen Ire",
+   "field": "pts",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / detachment:berzerker-warband/enhancement:Helm of Brazen Ire",
+   "field": "text",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / detachment:berzerker-warband/enhancement:Favoured of Khorne",
+   "field": "pts",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / detachment:berzerker-warband/enhancement:Favoured of Khorne",
+   "field": "text",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / detachment:berzerker-warband/enhancement:Battle-lust",
+   "field": "pts",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / detachment:berzerker-warband/enhancement:Battle-lust",
+   "field": "text",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / detachment:berzerker-warband/stratagem:blood-offering",
+   "field": "when",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (BLOOD OFFERING)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / detachment:berzerker-warband/stratagem:blood-offering",
+   "field": "target",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (BLOOD OFFERING)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / detachment:berzerker-warband/stratagem:blood-offering",
+   "field": "effect",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (BLOOD OFFERING)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / detachment:berzerker-warband/stratagem:hack-and-slash",
+   "field": "when",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (HACK AND SLASH)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / detachment:berzerker-warband/stratagem:hack-and-slash",
+   "field": "target",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (HACK AND SLASH)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / detachment:berzerker-warband/stratagem:hack-and-slash",
+   "field": "effect",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (HACK AND SLASH)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / detachment:berzerker-warband/stratagem:frenzied-resilience",
+   "field": "when",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (FRENZIED RESILIENCE)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / detachment:berzerker-warband/stratagem:frenzied-resilience",
+   "field": "target",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (FRENZIED RESILIENCE)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / detachment:berzerker-warband/stratagem:frenzied-resilience",
+   "field": "effect",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (FRENZIED RESILIENCE)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / detachment:berzerker-warband/stratagem:skulls-for-the-skull-throne",
+   "field": "when",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (SKULLS FOR THE SKULL THRONE!)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / detachment:berzerker-warband/stratagem:skulls-for-the-skull-throne",
+   "field": "target",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (SKULLS FOR THE SKULL THRONE!)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / detachment:berzerker-warband/stratagem:skulls-for-the-skull-throne",
+   "field": "effect",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (SKULLS FOR THE SKULL THRONE!)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / detachment:berzerker-warband/stratagem:apoplectic-frenzy",
+   "field": "when",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (APOPLECTIC FRENZY)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / detachment:berzerker-warband/stratagem:apoplectic-frenzy",
+   "field": "target",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (APOPLECTIC FRENZY)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / detachment:berzerker-warband/stratagem:apoplectic-frenzy",
+   "field": "effect",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (APOPLECTIC FRENZY)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / detachment:berzerker-warband/stratagem:berzerkers-wrath",
+   "field": "when",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (BERZERKER’S WRATH)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / detachment:berzerker-warband/stratagem:berzerkers-wrath / target (Rules Updates)",
+   "field": "target (Rules Updates)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters v1.3 PDF p7, Rules Updates: BERZERKER WARBAND DETACHMENT / Berzerker's Wrath Stratagem, Target and Effect Sections",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "hurrdurr / detachment:berzerker-warband/stratagem:berzerkers-wrath / effect (Rules Updates)",
+   "field": "effect (Rules Updates)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters v1.3 PDF p7, Rules Updates: BERZERKER WARBAND DETACHMENT / Berzerker's Wrath Stratagem, Target and Effect Sections",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "hurrdurr / detachment:vessels-of-wrath",
+   "field": "name",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Vessels of Wrath 1DP",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / detachment:vessels-of-wrath/rule",
+   "field": "text",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters v1.3 PDF p4",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "hurrdurr / detachment:vessels-of-wrath/enhancement:Archslaughterer",
+   "field": "pts",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Vessels of Wrath 1DP",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / detachment:vessels-of-wrath/enhancement:Archslaughterer",
+   "field": "text",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters v1.3 PDF p4",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "hurrdurr / detachment:vessels-of-wrath/enhancement:Gateways to Glory",
+   "field": "pts",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Vessels of Wrath 1DP",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / detachment:vessels-of-wrath/enhancement:Gateways to Glory",
+   "field": "text",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters v1.3 PDF p4",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "hurrdurr / detachment:vessels-of-wrath/stratagem:scorn-the-witch",
+   "field": "when",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters v1.3 PDF p4 (SCORN THE WITCH)",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "hurrdurr / detachment:vessels-of-wrath/stratagem:scorn-the-witch",
+   "field": "target",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters v1.3 PDF p4 (SCORN THE WITCH)",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "hurrdurr / detachment:vessels-of-wrath/stratagem:scorn-the-witch",
+   "field": "effect",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters v1.3 PDF p4 (SCORN THE WITCH)",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "hurrdurr / detachment:vessels-of-wrath/stratagem:aspire-to-infamy",
+   "field": "when",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters v1.3 PDF p4 (ASPIRE TO INFAMY)",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "hurrdurr / detachment:vessels-of-wrath/stratagem:aspire-to-infamy",
+   "field": "target",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters v1.3 PDF p4 (ASPIRE TO INFAMY)",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "hurrdurr / detachment:vessels-of-wrath/stratagem:aspire-to-infamy",
+   "field": "effect",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters v1.3 PDF p4 (ASPIRE TO INFAMY)",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "hurrdurr / detachment:vessels-of-wrath/stratagem:punish-the-craven",
+   "field": "when",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters v1.3 PDF p4 (PUNISH THE CRAVEN)",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "hurrdurr / detachment:vessels-of-wrath/stratagem:punish-the-craven",
+   "field": "target",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters v1.3 PDF p4 (PUNISH THE CRAVEN)",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "hurrdurr / detachment:vessels-of-wrath/stratagem:punish-the-craven",
+   "field": "effect",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters v1.3 PDF p4 (PUNISH THE CRAVEN)",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "oioioi / detachment:grand-coven",
+   "field": "name",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP",
+   "sha256": "cd985855e804e3aa7f538c35e35b16589e3a89d7633f07c3e6f4fbcbd8f9791f"
+  },
+  {
+   "item": "oioioi / detachment:grand-coven/rule",
+   "field": "text",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP",
+   "sha256": "cd985855e804e3aa7f538c35e35b16589e3a89d7633f07c3e6f4fbcbd8f9791f"
+  },
+  {
+   "item": "oioioi / detachment:grand-coven/enhancement:Lord of Forbidden Lore",
+   "field": "pts",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP",
+   "sha256": "cd985855e804e3aa7f538c35e35b16589e3a89d7633f07c3e6f4fbcbd8f9791f"
+  },
+  {
+   "item": "oioioi / detachment:grand-coven/enhancement:Lord of Forbidden Lore",
+   "field": "text",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP",
+   "sha256": "cd985855e804e3aa7f538c35e35b16589e3a89d7633f07c3e6f4fbcbd8f9791f"
+  },
+  {
+   "item": "oioioi / detachment:grand-coven/enhancement:Incandaeum",
+   "field": "pts",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP",
+   "sha256": "cd985855e804e3aa7f538c35e35b16589e3a89d7633f07c3e6f4fbcbd8f9791f"
+  },
+  {
+   "item": "oioioi / detachment:grand-coven/enhancement:Incandaeum / text (Rules Updates)",
+   "field": "text (Rules Updates)",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons v1.3 PDF p9, Rules Updates: GRAND COVEN DETACHMENT / Incandaeum Enhancement",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "oioioi / detachment:grand-coven/enhancement:Umbralefic Crystal",
+   "field": "pts",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP",
+   "sha256": "cd985855e804e3aa7f538c35e35b16589e3a89d7633f07c3e6f4fbcbd8f9791f"
+  },
+  {
+   "item": "oioioi / detachment:grand-coven/enhancement:Umbralefic Crystal / text (Rules Updates)",
+   "field": "text (Rules Updates)",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons v1.3 PDF p9, Rules Updates: GRAND COVEN DETACHMENT / Umbralefic Crystal Enhancement",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "oioioi / detachment:grand-coven/enhancement:Eldritch Vortex of E’taph",
+   "field": "pts",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP",
+   "sha256": "cd985855e804e3aa7f538c35e35b16589e3a89d7633f07c3e6f4fbcbd8f9791f"
+  },
+  {
+   "item": "oioioi / detachment:grand-coven/enhancement:Eldritch Vortex of E’taph",
+   "field": "text",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP",
+   "sha256": "cd985855e804e3aa7f538c35e35b16589e3a89d7633f07c3e6f4fbcbd8f9791f"
+  },
+  {
+   "item": "oioioi / detachment:grand-coven/stratagem:psychic-dominion",
+   "field": "when",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (PSYCHIC DOMINION)",
+   "sha256": "cd985855e804e3aa7f538c35e35b16589e3a89d7633f07c3e6f4fbcbd8f9791f"
+  },
+  {
+   "item": "oioioi / detachment:grand-coven/stratagem:psychic-dominion",
+   "field": "target",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (PSYCHIC DOMINION)",
+   "sha256": "cd985855e804e3aa7f538c35e35b16589e3a89d7633f07c3e6f4fbcbd8f9791f"
+  },
+  {
+   "item": "oioioi / detachment:grand-coven/stratagem:psychic-dominion",
+   "field": "effect",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (PSYCHIC DOMINION)",
+   "sha256": "cd985855e804e3aa7f538c35e35b16589e3a89d7633f07c3e6f4fbcbd8f9791f"
+  },
+  {
+   "item": "oioioi / detachment:grand-coven/stratagem:destined-by-fate",
+   "field": "when",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (DESTINED BY FATE)",
+   "sha256": "cd985855e804e3aa7f538c35e35b16589e3a89d7633f07c3e6f4fbcbd8f9791f"
+  },
+  {
+   "item": "oioioi / detachment:grand-coven/stratagem:destined-by-fate",
+   "field": "target",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (DESTINED BY FATE)",
+   "sha256": "cd985855e804e3aa7f538c35e35b16589e3a89d7633f07c3e6f4fbcbd8f9791f"
+  },
+  {
+   "item": "oioioi / detachment:grand-coven/stratagem:destined-by-fate",
+   "field": "effect",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (DESTINED BY FATE)",
+   "sha256": "cd985855e804e3aa7f538c35e35b16589e3a89d7633f07c3e6f4fbcbd8f9791f"
+  },
+  {
+   "item": "oioioi / detachment:grand-coven/stratagem:egotistical-power",
+   "field": "when",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (EGOTISTICAL POWER)",
+   "sha256": "cd985855e804e3aa7f538c35e35b16589e3a89d7633f07c3e6f4fbcbd8f9791f"
+  },
+  {
+   "item": "oioioi / detachment:grand-coven/stratagem:egotistical-power",
+   "field": "target",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (EGOTISTICAL POWER)",
+   "sha256": "cd985855e804e3aa7f538c35e35b16589e3a89d7633f07c3e6f4fbcbd8f9791f"
+  },
+  {
+   "item": "oioioi / detachment:grand-coven/stratagem:egotistical-power",
+   "field": "effect",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (EGOTISTICAL POWER)",
+   "sha256": "cd985855e804e3aa7f538c35e35b16589e3a89d7633f07c3e6f4fbcbd8f9791f"
+  },
+  {
+   "item": "oioioi / detachment:grand-coven/stratagem:desecration-of-worlds",
+   "field": "when",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (DESECRATION OF WORLDS)",
+   "sha256": "cd985855e804e3aa7f538c35e35b16589e3a89d7633f07c3e6f4fbcbd8f9791f"
+  },
+  {
+   "item": "oioioi / detachment:grand-coven/stratagem:desecration-of-worlds",
+   "field": "target",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (DESECRATION OF WORLDS)",
+   "sha256": "cd985855e804e3aa7f538c35e35b16589e3a89d7633f07c3e6f4fbcbd8f9791f"
+  },
+  {
+   "item": "oioioi / detachment:grand-coven/stratagem:desecration-of-worlds",
+   "field": "effect",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (DESECRATION OF WORLDS)",
+   "sha256": "cd985855e804e3aa7f538c35e35b16589e3a89d7633f07c3e6f4fbcbd8f9791f"
+  },
+  {
+   "item": "oioioi / detachment:grand-coven/stratagem:arcane-focus",
+   "field": "when",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (ARCANE FOCUS)",
+   "sha256": "cd985855e804e3aa7f538c35e35b16589e3a89d7633f07c3e6f4fbcbd8f9791f"
+  },
+  {
+   "item": "oioioi / detachment:grand-coven/stratagem:arcane-focus",
+   "field": "target",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (ARCANE FOCUS)",
+   "sha256": "cd985855e804e3aa7f538c35e35b16589e3a89d7633f07c3e6f4fbcbd8f9791f"
+  },
+  {
+   "item": "oioioi / detachment:grand-coven/stratagem:arcane-focus",
+   "field": "effect",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (ARCANE FOCUS)",
+   "sha256": "cd985855e804e3aa7f538c35e35b16589e3a89d7633f07c3e6f4fbcbd8f9791f"
+  },
+  {
+   "item": "oioioi / detachment:grand-coven/stratagem:devastating-sorcery",
+   "field": "when",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (DEVASTATING SORCERY)",
+   "sha256": "cd985855e804e3aa7f538c35e35b16589e3a89d7633f07c3e6f4fbcbd8f9791f"
+  },
+  {
+   "item": "oioioi / detachment:grand-coven/stratagem:devastating-sorcery",
+   "field": "target",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (DEVASTATING SORCERY)",
+   "sha256": "cd985855e804e3aa7f538c35e35b16589e3a89d7633f07c3e6f4fbcbd8f9791f"
+  },
+  {
+   "item": "oioioi / detachment:grand-coven/stratagem:devastating-sorcery",
+   "field": "effect",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (DEVASTATING SORCERY)",
+   "sha256": "cd985855e804e3aa7f538c35e35b16589e3a89d7633f07c3e6f4fbcbd8f9791f"
+  },
+  {
+   "item": "nidzillas / detachment:crusher-stampede",
+   "field": "name",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "item": "nidzillas / detachment:crusher-stampede/rule / text (Rules Updates)",
+   "field": "text (Rules Updates)",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids v1.3 PDF p19, Rules Updates: CRUSHER STAMPEDE DETACHMENT / Enraged Behemoths Detachment Rule",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "nidzillas / detachment:crusher-stampede/enhancement:Ominous Presence",
+   "field": "pts",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "item": "nidzillas / detachment:crusher-stampede/enhancement:Ominous Presence",
+   "field": "text",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "item": "nidzillas / detachment:crusher-stampede/enhancement:Enraged Reserves",
+   "field": "pts",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "item": "nidzillas / detachment:crusher-stampede/enhancement:Enraged Reserves",
+   "field": "text",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "item": "nidzillas / detachment:crusher-stampede/enhancement:Null Nodules",
+   "field": "pts",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "item": "nidzillas / detachment:crusher-stampede/enhancement:Null Nodules",
+   "field": "text",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "item": "nidzillas / detachment:crusher-stampede/enhancement:Monstrous Nemesis",
+   "field": "pts",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "item": "nidzillas / detachment:crusher-stampede/enhancement:Monstrous Nemesis",
+   "field": "text",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "item": "nidzillas / detachment:crusher-stampede/stratagem:corrosive-viscera",
+   "field": "when",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (CORROSIVE VISCERA)",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "item": "nidzillas / detachment:crusher-stampede/stratagem:corrosive-viscera",
+   "field": "target",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (CORROSIVE VISCERA)",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "item": "nidzillas / detachment:crusher-stampede/stratagem:corrosive-viscera",
+   "field": "effect",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (CORROSIVE VISCERA)",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "item": "nidzillas / detachment:crusher-stampede/stratagem:rampaging-monstrosities",
+   "field": "when",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (RAMPAGING MONSTROSITIES)",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "item": "nidzillas / detachment:crusher-stampede/stratagem:rampaging-monstrosities",
+   "field": "target",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (RAMPAGING MONSTROSITIES)",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "item": "nidzillas / detachment:crusher-stampede/stratagem:rampaging-monstrosities",
+   "field": "effect",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (RAMPAGING MONSTROSITIES)",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "item": "nidzillas / detachment:crusher-stampede/stratagem:savage-roar",
+   "field": "when",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (SAVAGE ROAR)",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "item": "nidzillas / detachment:crusher-stampede/stratagem:savage-roar",
+   "field": "target",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (SAVAGE ROAR)",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "item": "nidzillas / detachment:crusher-stampede/stratagem:savage-roar",
+   "field": "effect",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (SAVAGE ROAR)",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "item": "nidzillas / detachment:crusher-stampede/stratagem:untrammelled-ferocity",
+   "field": "when",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (UNTRAMMELLED FEROCITY)",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "item": "nidzillas / detachment:crusher-stampede/stratagem:untrammelled-ferocity",
+   "field": "target",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (UNTRAMMELLED FEROCITY)",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "item": "nidzillas / detachment:crusher-stampede/stratagem:untrammelled-ferocity / effect (Rules Updates)",
+   "field": "effect (Rules Updates)",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids v1.3 PDF p19, Rules Updates: CRUSHER STAMPEDE DETACHMENT / Untrammelled Ferocity Stratagem, Effect Section",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "nidzillas / detachment:crusher-stampede/stratagem:swarm-guided-salvoes",
+   "field": "when",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (SWARM-GUIDED SALVOES)",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "item": "nidzillas / detachment:crusher-stampede/stratagem:swarm-guided-salvoes",
+   "field": "target",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (SWARM-GUIDED SALVOES)",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "item": "nidzillas / detachment:crusher-stampede/stratagem:swarm-guided-salvoes",
+   "field": "effect",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (SWARM-GUIDED SALVOES)",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "item": "nidzillas / detachment:crusher-stampede/stratagem:massive-impact",
+   "field": "when",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (MASSIVE IMPACT)",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "item": "nidzillas / detachment:crusher-stampede/stratagem:massive-impact",
+   "field": "target",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (MASSIVE IMPACT)",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "item": "nidzillas / detachment:crusher-stampede/stratagem:massive-impact",
+   "field": "effect",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (MASSIVE IMPACT)",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "item": "nidzillas / detachment:talons-of-the-norn-queen",
+   "field": "name",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Talons of the Norn Queen 1DP",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "item": "nidzillas / detachment:talons-of-the-norn-queen/rule",
+   "field": "text",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids v1.3 PDF p3",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "nidzillas / detachment:talons-of-the-norn-queen/enhancement:Destabilising Predation",
+   "field": "pts",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Talons of the Norn Queen 1DP",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "item": "nidzillas / detachment:talons-of-the-norn-queen/enhancement:Destabilising Predation",
+   "field": "text",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids v1.3 PDF p3",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "nidzillas / detachment:talons-of-the-norn-queen/enhancement:Synaptoprescience",
+   "field": "pts",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Talons of the Norn Queen 1DP",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "item": "nidzillas / detachment:talons-of-the-norn-queen/enhancement:Synaptoprescience",
+   "field": "text",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids v1.3 PDF p3",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "nidzillas / detachment:talons-of-the-norn-queen/stratagem:catalytic-biofortification",
+   "field": "when",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids v1.3 PDF p3 (CATALYTIC BIOFORTIFICATION)",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "nidzillas / detachment:talons-of-the-norn-queen/stratagem:catalytic-biofortification",
+   "field": "target",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids v1.3 PDF p3 (CATALYTIC BIOFORTIFICATION)",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "nidzillas / detachment:talons-of-the-norn-queen/stratagem:catalytic-biofortification",
+   "field": "effect",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids v1.3 PDF p3 (CATALYTIC BIOFORTIFICATION)",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "nidzillas / detachment:talons-of-the-norn-queen/stratagem:lesser-prey",
+   "field": "when",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids v1.3 PDF p3 (LESSER PREY)",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "nidzillas / detachment:talons-of-the-norn-queen/stratagem:lesser-prey",
+   "field": "target",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids v1.3 PDF p3 (LESSER PREY)",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "nidzillas / detachment:talons-of-the-norn-queen/stratagem:lesser-prey",
+   "field": "effect",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids v1.3 PDF p3 (LESSER PREY)",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "nidzillas / detachment:talons-of-the-norn-queen/stratagem:tanglestrike-rounds",
+   "field": "when",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids v1.3 PDF p3 (TANGLESTRIKE ROUNDS)",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "nidzillas / detachment:talons-of-the-norn-queen/stratagem:tanglestrike-rounds",
+   "field": "target",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids v1.3 PDF p3 (TANGLESTRIKE ROUNDS)",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "nidzillas / detachment:talons-of-the-norn-queen/stratagem:tanglestrike-rounds",
+   "field": "effect",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids v1.3 PDF p3 (TANGLESTRIKE ROUNDS)",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "cooking / armyRule:Waaagh!",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Army Rules (Waaagh!)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / armyRule:War Cry",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Army Rules (War Cry)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / armyRule:Da Boss",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Army Rules (Da Boss)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking / armyRule:Da Boss / text (marked lines)",
+   "field": "text (marked lines)",
+   "text": "*Wahapedia core rules errata (07.01, CP Generated by a Warlord; not in GW’s prin",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § 1. Start of Battle Round 07.01",
+   "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "purge-freeblade / armyRule:Code Chivalric",
+   "field": "text",
+   "doc": "waha:imperial-knights",
+   "where": "Wahapedia imperial-knights § Army Rules (Code Chivalric)",
+   "sha256": "1fd48b6b3440f46ab46422db464b9a93fe1b2f9f35cafea6de0fbd35cf19e41a"
+  },
+  {
+   "item": "purge-freeblade / armyRule:Code Chivalric/row:Deed 1–2",
+   "field": "text",
+   "doc": "waha:imperial-knights",
+   "where": "Wahapedia imperial-knights § Army Rules (Code Chivalric)",
+   "sha256": "1fd48b6b3440f46ab46422db464b9a93fe1b2f9f35cafea6de0fbd35cf19e41a"
+  },
+  {
+   "item": "purge-freeblade / armyRule:Code Chivalric/row:Deed 3–4",
+   "field": "text",
+   "doc": "waha:imperial-knights",
+   "where": "Wahapedia imperial-knights § Army Rules (Code Chivalric)",
+   "sha256": "1fd48b6b3440f46ab46422db464b9a93fe1b2f9f35cafea6de0fbd35cf19e41a"
+  },
+  {
+   "item": "purge-freeblade / armyRule:Code Chivalric/row:Deed 5–6 / text",
+   "field": "text",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights v1.2 PDF p27, Rules Updates: ARMY RULES / Code Chivalric, ‘We pledge to reap a great tally’ Deed",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "purge-freeblade / armyRule:Code Chivalric/row:Quality 1–2",
+   "field": "text",
+   "doc": "waha:imperial-knights",
+   "where": "Wahapedia imperial-knights § Army Rules (Code Chivalric)",
+   "sha256": "1fd48b6b3440f46ab46422db464b9a93fe1b2f9f35cafea6de0fbd35cf19e41a"
+  },
+  {
+   "item": "purge-freeblade / armyRule:Code Chivalric/row:Quality 3–4",
+   "field": "text",
+   "doc": "waha:imperial-knights",
+   "where": "Wahapedia imperial-knights § Army Rules (Code Chivalric)",
+   "sha256": "1fd48b6b3440f46ab46422db464b9a93fe1b2f9f35cafea6de0fbd35cf19e41a"
+  },
+  {
+   "item": "purge-freeblade / armyRule:Code Chivalric/row:Quality 5–6",
+   "field": "text",
+   "doc": "waha:imperial-knights",
+   "where": "Wahapedia imperial-knights § Army Rules (Code Chivalric)",
+   "sha256": "1fd48b6b3440f46ab46422db464b9a93fe1b2f9f35cafea6de0fbd35cf19e41a"
+  },
+  {
+   "item": "purge-freeblade / armyRule:Bondsman",
+   "field": "text",
+   "doc": "waha:imperial-knights",
+   "where": "Wahapedia imperial-knights § Army Rules (Bondsman)",
+   "sha256": "1fd48b6b3440f46ab46422db464b9a93fe1b2f9f35cafea6de0fbd35cf19e41a"
+  },
+  {
+   "item": "hurrdurr / armyRule:Blessings of Khorne",
+   "field": "text",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Army Rules (Blessings of Khorne)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / armyRule:Blessings of Khorne/row:Unbridled Bloodlust / text",
+   "field": "text",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters v1.3 PDF p7, Rules Updates: ARMY RULES / Blessings of Khorne, Unbridled Bloodlust",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "hurrdurr / armyRule:Blessings of Khorne/row:Rage-fuelled Invigoration",
+   "field": "text",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Army Rules (Blessings of Khorne)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / armyRule:Blessings of Khorne/row:Total Carnage",
+   "field": "text",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Army Rules (Blessings of Khorne)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / armyRule:Blessings of Khorne/row:Martial Excellence",
+   "field": "text",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Army Rules (Blessings of Khorne)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / armyRule:Blessings of Khorne/row:Warp Blades",
+   "field": "text",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Army Rules (Blessings of Khorne)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "hurrdurr / armyRule:Blessings of Khorne/row:Decapitating Strikes",
+   "field": "text",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Army Rules (Blessings of Khorne)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "oioioi / armyRule:Cabal of Sorcerers",
+   "field": "text",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Army Rules (Cabal of Sorcerers)",
+   "sha256": "cd985855e804e3aa7f538c35e35b16589e3a89d7633f07c3e6f4fbcbd8f9791f"
+  },
+  {
+   "item": "oioioi / armyRule:Cabal of Sorcerers / text (marked lines)",
+   "field": "text (marked lines)",
+   "text": "*FAQ (Faction Pack 1.3): Do I need to sequence all of my Cabal of Sorcerers Ritu",
+   "doc": "pack:thousand-sons",
+   "where": "PDF p11",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "oioioi / armyRule:Cabal of Sorcerers / text (marked lines)",
+   "field": "text (marked lines)",
+   "text": "*FAQ (Faction Pack 1.3): Do I need to sequence all of my Cabal of Sorcerers Ritu",
+   "doc": "pack:thousand-sons",
+   "where": "PDF p11",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "oioioi / armyRule:Cabal of Sorcerers / text (marked lines)",
+   "field": "text (marked lines)",
+   "text": "*FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, do I have ",
+   "doc": "pack:thousand-sons",
+   "where": "PDF p11",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "oioioi / armyRule:Cabal of Sorcerers / text (marked lines)",
+   "field": "text (marked lines)",
+   "text": "*FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, do I have ",
+   "doc": "pack:thousand-sons",
+   "where": "PDF p11",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "oioioi / armyRule:Cabal of Sorcerers / text (marked lines)",
+   "field": "text (marked lines)",
+   "text": "*FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, if I roll ",
+   "doc": "pack:thousand-sons",
+   "where": "PDF p11",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "oioioi / armyRule:Cabal of Sorcerers / text (marked lines)",
+   "field": "text (marked lines)",
+   "text": "*FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, if I roll ",
+   "doc": "pack:thousand-sons",
+   "where": "PDF p11",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "oioioi / armyRule:Cabal of Sorcerers/row:Destiny’s Ruin (Psychic) / text",
+   "field": "text",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons v1.3 PDF p9, Rules Updates: ARMY RULES / Destiny’s Ruin (Psychic)",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "oioioi / armyRule:Cabal of Sorcerers/row:Temporal Surge (Psychic) / text",
+   "field": "text",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons v1.3 PDF p9, Rules Updates: ARMY RULES / Temporal Surge (Psychic)",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "oioioi / armyRule:Cabal of Sorcerers/row:Doombolt (Psychic)",
+   "field": "text",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Army Rules (Cabal of Sorcerers)",
+   "sha256": "cd985855e804e3aa7f538c35e35b16589e3a89d7633f07c3e6f4fbcbd8f9791f"
+  },
+  {
+   "item": "oioioi / armyRule:Cabal of Sorcerers/row:Twist of Fate (Psychic) / text",
+   "field": "text",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons v1.3 PDF p9, Rules Updates: ARMY RULES / Twist of Fate (Psychic)",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "oioioi / armyRule:Cabal of Sorcerers / text (first paragraph)",
+   "field": "text (first paragraph)",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons v1.3 PDF p9, Rules Updates: ARMY RULES / Cabal of Sorcerers",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "oioioi / armyRule:Pact of Sorcery",
+   "field": "text",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Army Rules (Pact of Sorcery)",
+   "sha256": "cd985855e804e3aa7f538c35e35b16589e3a89d7633f07c3e6f4fbcbd8f9791f"
+  },
+  {
+   "item": "nidzillas / armyRule:Synapse",
+   "field": "text",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Army Rules (Synapse)",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "item": "nidzillas / armyRule:Synapse / text",
+   "field": "text",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids v1.3 PDF p19, Rules Updates: ARMY RULES / Synapse",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "nidzillas / armyRule:Shadow in the Warp",
+   "field": "text",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Army Rules (Shadow in the Warp)",
+   "sha256": "6500ec30912a229c5337725cf6520cdc0924cfaf4ae24fb7eda4ec160b794f26"
+  },
+  {
+   "item": "nidzillas / armyRule:Shadow in the Warp / text",
+   "field": "text",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids v1.3 PDF p19, Rules Updates: ARMY RULES / Shadow in the Warp",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "cooking / beastboss-bbk / ability:Brutal But Kunnin’",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Brutal But Kunnin’ (Brute Bosses) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "cooking / dakkarig-boosta / ability:Cybork Boosta",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Cybork Boosta (Dread Mob) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "cooking / dakkarig-herder / ability:Dreadherder",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Dreadherder (Dread Mob) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "hurrdurr / daemon-prince-helm / ability:Helm of Brazen Ire",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Helm of Brazen Ire (Berzerker Warband) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "hurrdurr / daemon-prince-glaive / ability:Berzerker Glaive",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Berzerker Glaive (Berzerker Warband) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "hurrdurr / lord-on-juggernaut / ability:Archslaughterer",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Archslaughterer (Vessels of Wrath) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "hurrdurr / slaughterbound / ability:Battle-lust",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Battle-lust (Berzerker Warband) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "oioioi / daemon-prince / ability:Eldritch Vortex of E’taph",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Eldritch Vortex of E’taph (Grand Coven) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "oioioi / sorcerer-terminator / ability:Umbralefic Crystal",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Umbralefic Crystal (Grand Coven) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "nidzillas / hive-tyrant / ability:Monstrous Nemesis",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Monstrous Nemesis (Crusher Stampede) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "nidzillas / norn-assimilator-280 / ability:Protean Purpose",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the detachment rule ability Protean Purpose (Talons of the Norn Queen) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "nidzillas / norn-assimilator-280 / ability:Synaptoprescience",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Synaptoprescience (Talons of the Norn Queen) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "nidzillas / norn-assimilator-300 / ability:Protean Purpose",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the detachment rule ability Protean Purpose (Talons of the Norn Queen) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "nidzillas / norn-assimilator-300 / ability:Synaptoprescience",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Synaptoprescience (Talons of the Norn Queen) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "nidzillas / norn-emissary-dp / ability:Protean Purpose",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the detachment rule ability Protean Purpose (Talons of the Norn Queen) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "nidzillas / norn-emissary-dp / ability:Destabilising Predation",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Destabilising Predation (Talons of the Norn Queen) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "nidzillas / norn-emissary / ability:Protean Purpose",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the detachment rule ability Protean Purpose (Talons of the Norn Queen) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "purge-freeblade / knight-warden / ability:Damaged: 1-9 Wounds Remaining",
+   "field": "ability:Damaged: 1-9 Wounds Remaining",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights v1.2 PDF p27, Rules Updates: DATASHEETS / Canis Rex, Knight Crusader, Knight Defender, Knight Errant, Knight Gallant, Knight Paladin, Knight Preceptor, Knight Warden – Damaged Section",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "purge-freeblade / knight-paladin / ability:Damaged: 1-9 Wounds Remaining",
+   "field": "ability:Damaged: 1-9 Wounds Remaining",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights v1.2 PDF p27, Rules Updates: DATASHEETS / Canis Rex, Knight Crusader, Knight Defender, Knight Errant, Knight Gallant, Knight Paladin, Knight Preceptor, Knight Warden – Damaged Section",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "purge-freeblade / knight-errant / ability:Damaged: 1-9 Wounds Remaining",
+   "field": "ability:Damaged: 1-9 Wounds Remaining",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights v1.2 PDF p27, Rules Updates: DATASHEETS / Canis Rex, Knight Crusader, Knight Defender, Knight Errant, Knight Gallant, Knight Paladin, Knight Preceptor, Knight Warden – Damaged Section",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "hurrdurr / kharn / ability:The Betrayer (Khârn the Betrayer)",
+   "field": "ability:The Betrayer (Khârn the Betrayer)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters v1.3 PDF p8, Rules Updates: DATASHEETS / Khârn the Betrayer, The Betrayer Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "hurrdurr / kharn / ability:Blood Surge (Khorne Berzerkers)",
+   "field": "ability:Blood Surge (Khorne Berzerkers)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters v1.3 PDF p8, Rules Updates: DATASHEETS / Khorne Berzerkers, Blood Surge Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "hurrdurr / kharn / ability:Murderous Charge (Khorne Berzerkers)",
+   "field": "ability:Murderous Charge (Khorne Berzerkers)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters v1.3 PDF p8, Rules Updates: DATASHEETS / Khorne Berzerkers, Abilities Section",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "hurrdurr / kharn / ability:Icon of Khorne (Khorne Berzerkers)",
+   "field": "ability:Icon of Khorne (Khorne Berzerkers)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters v1.3 PDF p8, Rules Updates: DATASHEETS / Khorne Berzerkers, Jakhals – Icon of Khorne Wargear Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "hurrdurr / lord-on-juggernaut / ability:Blood Surge (Khorne Berzerkers)",
+   "field": "ability:Blood Surge (Khorne Berzerkers)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters v1.3 PDF p8, Rules Updates: DATASHEETS / Khorne Berzerkers, Blood Surge Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "hurrdurr / lord-on-juggernaut / ability:Murderous Charge (Khorne Berzerkers)",
+   "field": "ability:Murderous Charge (Khorne Berzerkers)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters v1.3 PDF p8, Rules Updates: DATASHEETS / Khorne Berzerkers, Abilities Section",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "hurrdurr / lord-on-juggernaut / ability:Icon of Khorne (Khorne Berzerkers)",
+   "field": "ability:Icon of Khorne (Khorne Berzerkers)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters v1.3 PDF p8, Rules Updates: DATASHEETS / Khorne Berzerkers, Jakhals – Icon of Khorne Wargear Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "hurrdurr / slaughterbound / ability:Rend and Tear (Exalted Eightbound)",
+   "field": "ability:Rend and Tear (Exalted Eightbound)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters v1.3 PDF p8, Rules Updates: DATASHEETS / Exalted Eightbound, Rend and Tear Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "hurrdurr / chaos-rhino / ability:Meet Any Challenge",
+   "field": "ability:Meet Any Challenge",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters v1.3 PDF p7, Rules Updates: DATASHEETS / Chaos Rhino, Meet Any Challenge Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "oioioi / daemon-prince / ability:Aetherstride",
+   "field": "ability:Aetherstride",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons v1.3 PDF p10, Rules Updates: DATASHEETS / Daemon Prince of Tzeentch with Wings, Aetherstride Ability",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "oioioi / sorcerer-terminator / ability:Marked by Fate (Sorcerer in Terminator Armour)",
+   "field": "ability:Marked by Fate (Sorcerer in Terminator Armour)",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons v1.3 PDF p11, Rules Updates: DATASHEETS / Sorcerer in Terminator Armour, Marked by Fate Ability",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "oioioi / enlightened-greatbows / ability:Malign Trickery",
+   "field": "ability:Malign Trickery",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons v1.3 PDF p11, Rules Updates: DATASHEETS / Tzaangor Enlightened with Fatecaster Greatbows, Malign Trickery Ability",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "nidzillas / swarmlord / ability:Malign Presence",
+   "field": "ability:Malign Presence",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids v1.3 PDF p20, Rules Updates: DATASHEETS / The Swarmlord, Malign Presence Ability",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "nidzillas / hive-tyrant / ability:Onslaught",
+   "field": "ability:Onslaught",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids v1.3 PDF p20, Rules Updates: DATASHEETS / Hive Tyrant, Onslaught Ability",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "nidzillas / hive-tyrant / ability:Will of the Hive Mind",
+   "field": "ability:Will of the Hive Mind",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids v1.3 PDF p20, Rules Updates: DATASHEETS / Hive Tyrant, Winged Hive Tyrant – Will of the Hive Mind Ability",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "core / rule:Harpooned / text",
+   "field": "text",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids v1.3 PDF p20, Rules Updates: DATASHEETS / Norn Assimilator, [HARPOONED] Weapon Ability",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "purge-freeblade / knight-destrier / ability:Damaged: 1-6 Wounds Remaining",
+   "field": "text",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights v1.2 PDF p7-8 (Knight Destrier datasheet)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "purge-freeblade / knight-destrier / ability:Thundercharge",
+   "field": "text",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights v1.2 PDF p7-8 (Knight Destrier datasheet)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "purge-freeblade / knight-destrier / ability:Ram Jets",
+   "field": "text",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights v1.2 PDF p7-8 (Knight Destrier datasheet)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "purge-freeblade / knight-destrier / ability:Saturation Fire",
+   "field": "text",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights v1.2 PDF p7-8 (Knight Destrier datasheet)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "oioioi / defiler / ability:Scuttling Walker",
+   "field": "text",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons v1.3 PDF p7-8 (Defiler datasheet)",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "oioioi / defiler / ability:Destroyer of Futures",
+   "field": "text",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons v1.3 PDF p7-8 (Defiler datasheet)",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "oioioi / defiler / ability:Damaged: 1-6 wounds remaining",
+   "field": "text",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons v1.3 PDF p7-8 (Defiler datasheet)",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  }
+ ]
+}

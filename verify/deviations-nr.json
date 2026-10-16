@@ -464,5 +464,14 @@
   "where": "verify/sources/nr/oioioi.txt p9",
   "reason": "Typo in every source: the text ends with a closing quote mark that opens nowhere (New Recruit, BSData and GW's Thousand Sons pack line 338 all print it). The app leaves the stray mark out.",
   "evidence": "GW Thousand Sons Faction Pack, verify/.cache/gw/eng_30-09_wh40k_faction_pack_thousand_sons-4lioijwxdj-otjrinzt8c.txt lines 331-336 (Defiler datasheet): \"Destroyer of Futures (Once per phase, per unit): You can target this unit with the Counteroffensive stratagem, ... That use does not prevent any uses of that stratagem on other units this phase.\" with no quote mark."
+ },
+ {
+  "army": "nidzillas",
+  "unit": "hive-tyrant",
+  "field": "stats[Hive Tyrant].base",
+  "app": "60mm",
+  "source": "50mm",
+  "reason": "GW's base size guide is newer than the community data New Recruit uses; tournaments use GW's guide.",
+  "evidence": "GW Warhammer Event Companion v1.3 (14 Oct 2026, newer than New Recruit and BSData), Base Size Guide, Tyranids, PDF p91: \"Hive Tyrant 60mm\" (verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3820); Wahapedia's Hive Tyrant datasheet also says 60mm."
  }
 ]

@@ -1,0 +1,262 @@
+[
+ {
+  "army": "cooking",
+  "kind": "ability-ask",
+  "where": "cooking · Big Mek Dakkarig · Dreadherder",
+  "judgement": {
+   "ask": "Can the Dakkarig pick its own unit for the re-roll of 1s? The rule says “one friendly ORKS WALKER unit within 3\" of this model”; the app assumes another unit."
+  },
+  "source": {
+   "ability": "Dreadherder",
+   "text": "**BIG MEK** model only. While this model is within 3\" of a friendly **ORKS WALKER** unit (excluding **BIG MEK** units):\n- This model has **Lone Operative**.\n- In your Shooting phase, you can select one friendly **ORKS WALKER** unit within 3\" of this model. That unit’s attacks can re-roll **hit rolls** of 1 until the end of the turn."
+  },
+  "key": "f80a08114c7f3ab4"
+ },
+ {
+  "army": "cooking",
+  "kind": "rule-ask",
+  "where": "Brute Bosses rule · ’Ard as Nails",
+  "judgement": {
+   "ask": "Does it work outside the Fight phase? By the letter a WARBOSS destroyed in any phase before its unit has fought stays on a 3+ until the end of that phase; the app lists it in the Fight phase."
+  },
+  "source": {
+   "rule": "’Ard as Nails",
+   "text": "When a friendly **WARBOSS** model is **destroyed**, if this unit has not been **selected to fight** this phase, roll one D6, with +1 to the roll if your unit is **riled up**:\n- On a 3+, do not remove this **WARBOSS** model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this **WARBOSS** model is removed from the battlefield."
+  },
+  "key": "89f4be05bb8d3124"
+ },
+ {
+  "army": "cooking",
+  "kind": "rule-ask",
+  "where": "Dread Mob rule · Try Dat Button!",
+  "judgement": {
+   "ask": "With two D6, is a repeated number re-rolled, or a repeated effect (1 and 2 are both +1 A)? The app assumes you always get two different effects."
+  },
+  "source": {
+   "rule": "Try Dat Button!",
+   "text": "In your Shooting phase or the Fight phase, when a friendly **ORKS WALKER** unit (excluding **TITANIC** units) is **selected to attack**, you can use this ability. If you do, roll either one D6 or two D6 (keep re-rolling duplicate results). This unit’s attacks have the relevant rule(s):\nIf you rolled two D6, when this unit has attacked, this unit makes one **hazard roll**.\n1–2: +1 **A**\n3–4: +2 **S**\n5–6: +1 **AP**"
+  },
+  "key": "5b3699800fdb329e"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "strat-ask",
+  "where": "Freeblade Company · Full Tilt",
+  "judgement": {
+   "ask": "Do your Knight Destriers add 9\" (the evident intent) or 6\" (the letter: their keyword is KNIGHT DESTRIER, the pack says DESTRIER)?"
+  },
+  "source": {
+   "stratagem": "Full Tilt",
+   "text": "WHEN: Your Movement phase.\nTARGET: One **IMPERIAL KNIGHTS** unit from your army.\nEFFECT: Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in your unit, or 9\" instead if your unit is an **ARMIGER** or **DESTRIER** unit."
+  },
+  "key": "d781dcf0a4a43734"
+ },
+ {
+  "army": "oioioi",
+  "kind": "unit-weapons",
+  "where": "oioioi · Defiler",
+  "judgement": {
+   "gear": [
+    [
+     "Ectoplasma destructor",
+     "Heavy reaper autocannon",
+     "Heavy reaper autocannon",
+     "Shearing claws",
+     "Excruciator cannon"
+    ]
+   ],
+   "weapons": [
+    "Ectoplasma destructor",
+    "×2 · Excruciator cannon",
+    "×2 · Heavy reaper autocannon",
+    "Shearing claws · strike",
+    "Shearing claws · sweep"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Defiler"
+   ],
+   "leads": null
+  },
+  "key": "e0d30a220ec6605e"
+ },
+ {
+  "army": "oioioi",
+  "kind": "rule-ph",
+  "where": "thousand-sons army rule · Cabal of Sorcerers",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "rule": "Cabal of Sorcerers",
+   "text": "If your Army Faction is **THOUSAND SONS**, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.\n**Psychic Test Sequence**\n- **Roll 2D6**\n- **Channel the Warp** (Optional)\n- Then, if one or more doubles or triples were rolled during this test, that model’s unit suffers D3 mortal wounds.\n- If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects.\n*FAQ (Faction Pack 1.3): Do I need to sequence all of my Cabal of Sorcerers Rituals at the start of my Shooting phase? No, you just pick a model with the Cabal of Sorcerers rule, pick a Ritual to manifest, and attempt it, then repeat the process until you have run out of models or Rituals or both.*\n*FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, do I have to choose whether to Channel the Warp before rolling any dice? No.*\n*FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, if I roll one or more doubles or triples, does my model only suffer D3 mortal wounds if I chose to Channel the Warp? Yes.*\n*App note, not rules text: Channel the Warp means rolling one more D6 for the test (the printed card shows it as a die).*\nDestiny’s Ruin (Psychic) · Warp Charge 5: Select one enemy unit within 24\" of and **visible** to the manifesting model. Until the end of the phase, each time a **THOUSAND SONS** or **SCINTILLATING LEGIONS** model from your army makes an attack that targets that unit, re-roll a **Hit roll** of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.\nTemporal Surge (Psychic) · Warp Charge 6: Select one friendly **THOUSAND SONS** or **SCINTILLATING LEGIONS** unit that is not within **Engagement Range** of one or more enemy units and is within 24\" of and **visible** to the manifesting model. That unit can make a **Normal move** of up to D6\". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6\" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.\nDoombolt (Psychic) · Warp Charge 7: Select one enemy unit within 24\" of and **visible** to the manifesting model (excluding units with the **Lone Operative** ability that are not part of an Attached unit and are not within 12\" of the manifesting model); that unit suffers D3 **mortal wounds**. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.\nTwist of Fate (Psychic) · Warp Charge 9: Select one enemy unit within 24\" of and **visible** to the manifesting model. Until the end of the phase, each time a **THOUSAND SONS** or **SCINTILLATING LEGIONS** model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead."
+  },
+  "key": "8e8ec726df5a1f14"
+ },
+ {
+  "army": "oioioi",
+  "kind": "rule-turn",
+  "where": "thousand-sons army rule · Cabal of Sorcerers",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "rule": "Cabal of Sorcerers",
+   "text": "If your Army Faction is **THOUSAND SONS**, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.\n**Psychic Test Sequence**\n- **Roll 2D6**\n- **Channel the Warp** (Optional)\n- Then, if one or more doubles or triples were rolled during this test, that model’s unit suffers D3 mortal wounds.\n- If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects.\n*FAQ (Faction Pack 1.3): Do I need to sequence all of my Cabal of Sorcerers Rituals at the start of my Shooting phase? No, you just pick a model with the Cabal of Sorcerers rule, pick a Ritual to manifest, and attempt it, then repeat the process until you have run out of models or Rituals or both.*\n*FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, do I have to choose whether to Channel the Warp before rolling any dice? No.*\n*FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, if I roll one or more doubles or triples, does my model only suffer D3 mortal wounds if I chose to Channel the Warp? Yes.*\n*App note, not rules text: Channel the Warp means rolling one more D6 for the test (the printed card shows it as a die).*\nDestiny’s Ruin (Psychic) · Warp Charge 5: Select one enemy unit within 24\" of and **visible** to the manifesting model. Until the end of the phase, each time a **THOUSAND SONS** or **SCINTILLATING LEGIONS** model from your army makes an attack that targets that unit, re-roll a **Hit roll** of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.\nTemporal Surge (Psychic) · Warp Charge 6: Select one friendly **THOUSAND SONS** or **SCINTILLATING LEGIONS** unit that is not within **Engagement Range** of one or more enemy units and is within 24\" of and **visible** to the manifesting model. That unit can make a **Normal move** of up to D6\". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6\" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.\nDoombolt (Psychic) · Warp Charge 7: Select one enemy unit within 24\" of and **visible** to the manifesting model (excluding units with the **Lone Operative** ability that are not part of an Attached unit and are not within 12\" of the manifesting model); that unit suffers D3 **mortal wounds**. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.\nTwist of Fate (Psychic) · Warp Charge 9: Select one enemy unit within 24\" of and **visible** to the manifesting model. Until the end of the phase, each time a **THOUSAND SONS** or **SCINTILLATING LEGIONS** model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead."
+  },
+  "key": "3d58512771b1037d"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "rule-ask",
+  "where": "tyranids army rule · Synapse",
+  "judgement": {
+   "ask": "Is a SYNAPSE unit within its own Synapse Range? The rule says “within 6\" of one or more friendly SYNAPSE models”; the app shows the +1 S and the 3D6 Battle-shock tests as conditional."
+  },
+  "source": {
+   "rule": "Synapse",
+   "text": "If your Army Faction is **TYRANIDS**, while a **TYRANIDS** unit from your army is within 6\" of one or more friendly **SYNAPSE** models, that **TYRANIDS** unit is said to be within Synapse Range of that model and of your army. While a **TYRANIDS** unit from your army is within Synapse Range of your army:\n- Each time that unit takes a **Battle-shock test**, take that test on 3D6 instead of 2D6.\n- Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack."
+  },
+  "key": "991d80c5b3b6eb6c"
+ },
+ {
+  "army": "core",
+  "kind": "strat-needs",
+  "where": "Core · Heroic Intervention",
+  "judgement": {
+   "needs": {
+    "unless": {
+     "all": [
+      "Vehicle"
+     ],
+     "none": [
+      "Character",
+      "Walker"
+     ]
+    }
+   }
+  },
+  "source": {
+   "stratagem": "Heroic Intervention",
+   "text": "WHEN: End of your opponent’s Charge phase.\nTARGET: One friendly **unengaged** unit within 12\" of one or more enemy units. You can only select a **VEHICLE** unit if it is a **CHARACTER/WALKER** unit.\nEFFECT: **Resolve a charge** with your unit (11.02). While doing so, before making the **charge roll**, you must select one of the following modes:\n- **Leap to Defend:** When selecting **charge targets**, you can only select enemy units that made a **charge move** this phase and are within the **maximum distance**.\n- **Into the Fray (+1CP):** When making the **charge roll**, if the result is greater than 6 (after modifiers), change it to 6. When selecting **charge targets**, you can select any enemy units that are within 6\" of your unit and within the **maximum distance**."
+  },
+  "key": "41c11f0ca452acee"
+ },
+ {
+  "army": "core",
+  "kind": "rule-appnote",
+  "where": "Mobile",
+  "judgement": {
+   "note": "*App note, not rules text: MOBILE has no rule of its own in the core rules; these are the lines of Terrain and Movement (13.06) that name it and that it changes.*"
+  },
+  "source": {
+   "rule": "Mobile",
+   "text": "- **INFANTRY/BEASTS/SWARM/MOBILE** models can move horizontally through **dense terrain features**.\n- Other models can move horizontally through **dense terrain features** provided that all sections of that **terrain feature** that the moving model’s base would move through are 2\" or less in height."
+  },
+  "key": "4072d27b284335fd"
+ },
+ {
+  "army": "core",
+  "kind": "rule-appnote",
+  "where": "Selected to Attack",
+  "judgement": {
+   "note": "*App note, not rules text: from the rules appendix in the Warhammer 40,000 app, as Wahapedia prints it (04.01.05); the printed Core Rules do not include it.*"
+  },
+  "source": {
+   "rule": "Selected to Attack",
+   "text": "**04.01.05 Selected to Attack (app):** Some rules use the term **selected to attack**. If a unit is **selected to fight**, **selected to shoot** or chosen to make attacks, that unit is **selected to attack**."
+  },
+  "key": "d7cbd41f8f1fb5d0"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^hazardous(?!( roll| test)s?$)/i",
+  "judgement": {
+   "opens": "Hazardous"
+  },
+  "source": {
+   "rule": "Hazardous",
+   "text": "Each time a unit is **selected to shoot** or **selected to fight**, after that unit has resolved all of its attacks, make a number of **hazard rolls** (06.03) for that unit equal to the number of **[HAZARDOUS]** weapons you selected in the Select Weapons step."
+  },
+  "key": "da033937d5a3e4bb"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^deep strike/i",
+  "judgement": {
+   "opens": "Deep Strike"
+  },
+  "source": {
+   "rule": "Deep Strike",
+   "text": "Each time this unit makes an **ingress move** (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.\n*App note, not rules text: unless a rule s"
+  },
+  "key": "9f45e056bd5bb548"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^mobile/i",
+  "judgement": {
+   "opens": "Mobile"
+  },
+  "source": {
+   "rule": "Mobile",
+   "text": "- **INFANTRY/BEASTS/SWARM/MOBILE** models can move horizontally through **dense terrain features**.\n- Other models can move horizontally through **dense terrain features** provided that all sections of that **terrain feature** that the moving model’s base would move through are 2\" or less in height."
+  },
+  "key": "2dc2a46ec9b32a4e"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^selected to attack$/i",
+  "judgement": {
+   "opens": "Selected to Attack"
+  },
+  "source": {
+   "rule": "Selected to Attack",
+   "text": "**04.01.05 Selected to Attack (app):** Some rules use the term **selected to attack**. If a unit is **selected to fight**, **selected to shoot** or chosen to make attacks, that unit is **selected to attack**.\n*App note, not rules text: from the rules appendix in the Warhammer 40,000 app, as Wahapedi"
+  },
+  "key": "c3f7d4f46f915ccf"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "quickRef",
+  "judgement": {
+   "code": "function quickRef(){\n  const tr = rows => '<div class=\"qtab\">' + rows.map(([k, v]) => '<span>' + k + '</span><span>' + v + '</span>').join('') + '</div>';\n  return xp('Quick reference', 'Turn order · Command phase · hit, wound and save rolls', '',\n    '<p class=\"qh\">Battle round (07)</p><p>Start of battle round → both players take a turn (the mission says who goes first) → end of battle round.</p>' +\n    '<p class=\"qh\">Each turn (07.02)</p><p>Start of turn → Command → Movement → Shooting → Charge → Fight → end of turn.</p>' +\n    '<p class=\"qh\">Command phase (08)</p><ol class=\"qol\"><li>Start-of-phase rules.</li><li>Gain Core CP: both players gain 1CP.</li>' +\n      '<li>' + linkTo('rule', 'Battle-shock', 'Battle-shock') + ': a roll for each of your units that is battle-shocked or at or below ' + linkTo('rule', 'Starting Strength', 'half-strength') + '.</li>' +\n      '<li>Command abilities.</li><li>End-of-phase rules.</li></ol>' +\n    '<p class=\"qh\">Hit roll (05.01)</p>' + tr([['Unmodified 1', 'fails'], ['Unmodified 6', 'critical hit'], ['≥ BS / WS', 'hit']]) +\n    '<p class=\"qh\">Wound roll (05.02)</p>' + tr([['Unmodified 1', 'fails'], ['Unmodified 6', 'critical wound'], ['S ≥ 2× T', '2+'], ['S > T', '3+'], ['S = T', '4+'], ['S < T', '5+'], ['S ≤ ½ T', '6+']]) +\n    '<p class=\"qh\">Save roll (05.03, 05.04)</p>' + tr([['Unmodified 1', 'damage'], ['≥ InSv', 'saved (AP does not apply)'], ['≥ Sv after AP', 'saved'], ['Otherwise', 'the model loses D wounds']]) +\n    '<p class=\"note\">Allocation: a group of models with a wounded model takes attacks first; CHARACTER models come after all others.</p>', false);\n}"
+  },
+  "source": {
+   "implements": "Core Rules 07 (battle round), 07.02 (turn), 08 (Command phase), 05.01 hit roll, 05.02 wound roll table, 05.03-05.04 save roll and allocation order (dice values are pictures in the PDF: page 18)"
+  },
+  "key": "a8a8a4f5233b55b9"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "nextPhase",
+  "judgement": {
+   "code": "function nextPhase(){\n  const i = PHASES.findIndex(([k]) => k === filt.phase);\n  if(i < 0) return '';\n  const last = i === PHASES.length - 1, turn = last && filt.turn !== 'all' ? (filt.turn === 'your' ? 'opp' : 'your') : filt.turn;\n  const [k, label] = PHASES[last ? 0 : i + 1];\n  return '<button class=\"nextph\" data-next=\"' + k + '|' + turn + '\">Next: ' + ({ your:'Your ', opp:'Their ' }[turn] || '') + label + ' <span aria-hidden=\"true\">›</span></button>';\n}"
+  },
+  "source": {
+   "implements": "phase order (07.02): Command, Movement, Shooting, Charge, Fight; then the other player's turn"
+  },
+  "key": "943e52b7c21f1ae2"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "screenPregame",
+  "judgement": {
+   "code": "function screenPregame(){\n  const a = army(), f = faction(), units = a.units;\n  const row = (k, v) => v ? '<div class=\"pgr\"><span class=\"pgk\">' + k + '</span><span class=\"pgv\">' + v + '</span></div>' : '';\n  const sec = (title, body) => body ? '<div class=\"sec-h\"><h2>' + title + '</h2></div><div class=\"pg\">' + body + '</div>' : '';\n  // the same ability on several units is one line: \"Singular Purpose · Assimilator (280), Norn Emissary ×2\"\n  const group = list => { const m = new Map(); for(const [u, ab] of list){ const k = ab.name + '|' + ab.text; if(!m.has(k)) m.set(k, { ab, units:[] }); m.get(k).units.push(u); } return [...m.values()]; };\n  const abLine = g => linkTo('ability', abilityKey(g.ab), g.ab.name) + ' <span class=\"from\">· ' + esc(unitNames(g.units)) + '</span>';\n  const rulesOf = units.length ? f.armyRules.filter(r => !inertRule(r.name)).map(r => ({ r, src:f.name + ' army rule' }))\n    .concat(detachments().filter(d => d.rule).map(d => ({ r:d.rule, src:d.name }))) : [];\n  const ruleLine = x => linkTo('rule', x.r.name, x.r.name) + ' <span class=\"from\">· ' + esc(x.src) + '</span>';\n  const nameLink = u => linkTo('unit', u.id, u.short || u.name);   // without its enhancement: the line says it\n  const allAbs = units.flatMap(u => u.abilities.filter(ab => !naReason(ab)).map(ab => [u, ab]));\n\n  // your list\n  const warlord = units.filter(u => u.warlord);\n  const enh = units.filter(u => u.enhancement).map(u => { const d = detachments().find(x => x.enhancements.some(e => e.name === u.enhancement)), e = d && d.enhancements.find(x => x.name === u.enhancement);\n    return (d ? linkTo('enh', d.id + '|' + u.enhancement, u.enhancement) : esc(u.enhancement)) + (e && e.pts ? ' <span class=\"from\">' + e.pts + ' pts</span>' : '') + ' on ' + nameLink(u); });\n  const led = units.filter(u => u.leads).map(u => nameLink(u) + ' leads ' + esc(u.leads));\n  let h = sec('Your list',\n    row('Warlord', warlord.map(unitLink).join(', ')) +\n    row('Enhance&shy;ments', enh.join('<br>')) +\n    row('Attached', led.join('<br>')) +\n    row('Detach&shy;ments', esc(detachments().map(d => d.name + (d.dp ? ' (' + d.dp + ' DP)' : '')).join(', ')) + (a.disposition ? '<br><span class=\"from\">Disposition:</span> ' + esc(a.disposition) : '')) +\n    row('Points', esc(a.pointsUsed + ' / ' + a.points + ' · ' + a.battleSize)));\n\n  // declare battle formations: reserves and transports\n  const ds = units.filter(u => unitRules(u).some(r => ruleKey(r) === 'Deep Strike'));\n  const dsPts = ds.reduce((t, u) => t + (u.pts || 0) * (u.copies || 1), 0), half = Math.floor(a.points / 2);\n  const transports = units.filter(u => hasKw(u, 'Transport')).map(u => { const ab = u.abilities.find(x => /transport capacity/i.test(x.text)); return unitLink(u) + (ab ? ': <span class=\"from\">' + rt(ab.text).replace(/^<p>|<\\/p>$/g, '') + '</span>' : ''); });\n  h += sec('Declare battle formations',\n    row('Reserves', linkTo('rule', 'Strategic Reserves', 'Strategic reserves') + ': up to ' + half + ' pts (half the ' + a.points + ' limit). Unless a rule says otherwise, they arrive from battle round 2, and any not on the table by the end of round 3 are destroyed (not repositioned units, nor units in a TRANSPORT that arrived).' +\n      (ds.length ? '<br><span class=\"from\">Can ' + linkTo('rule', 'Deep Strike', 'Deep Strike') + ':</span> ' + ds.map(u => unitLink(u) + ' <span class=\"from\">' + u.pts + ' pts' + (u.copies > 1 ? ' each' : '') + '</span>').join(', ') + (ds.length > 1 ? ' <span class=\"from\">(all: ' + dsPts + ' pts)</span>' : '') : '')) +\n    row('Transports', transports.join('<br>')));\n\n  // deployment and pre-battle abilities\n  const scouts = units.filter(u => unitRules(u).some(r => /^scouts|^infiltrators/i.test(r)));\n  const pre = group(allAbs.filter(([u, ab]) => PREGAME_RE.test(ab.text) && !/start of the first battle round/i.test(ab.text)));\n  h += sec('Deploying',\n    row('Scouts', scouts.map(u => unitLink(u) + ' <span class=\"from\">' + esc(unitRules(u).filter(r => /^scouts|^infiltrators/i.test(r)).join(', ')) + '</span>').join('<br>')) +\n    row('Abilities', pre.map(abLine).join('<br>')) +\n    row('Rules', rulesOf.filter(x => PREGAME_RE.test(x.r.text)).map(ruleLine).join('<br>')));\n\n  // decided at the start of the battle or of every battle round\n  const first = group(allAbs.filter(([u, ab]) => /start of the first battle round/i.test(ab.text)));\n  const round = rulesOf.filter(x => /start of (the|each|every) battle round/i.test(x.r.text)).map(ruleLine)\n    .concat(group(allAbs.filter(([u, ab]) => /start of (the|each|every) battle round/i.test(ab.text) && !/first battle round/i.test(ab.text))).map(abLine));\n  h += sec('Start of the battle', row('Round 1', first.map(abLine).join('<br>')) + row('Every round', round.join('<br>')));\n\n  // once per battle: the resources you spend once\n  const onceB = x => /once per battle(?! round)/i.test(x);\n  const onceRules = f.armyRules.filter(r => !inertRule(r.name) && onceB((r.tag || '') + ' ' + r.text)).map(r => ({ r, src:f.name + ' army rule' }))\n    .concat(detachments().filter(d => d.rule && onceB(d.rule.text)).map(d => ({ r:d.rule, src:d.name })));\n  const onceAbs = group(allAbs.filter(([u, ab]) => onceB((ab.tag || '') + ' ' + ab.text)));\n  const onceStrats = allStratagems().filter(s => eligible(s).length && onceB([s.limit, s.restrictions, s.effect].join(' ')));\n  h += sec('Once per battle',\n    row('Rules', onceRules.map(ruleLine).join('<br>')) +\n    row('Abilities', onceAbs.map(g => abLine(g) + (/per army/i.test(onceTag(g.ab)) ? ' <span class=\"tg once\">per army</span>' : '')).join('<br>')) +\n    row('Strata&shy;gems', onceStrats.map(s => linkTo('strat', s.id, s.cp + 'CP ' + s.name)).join('<br>')));\n  // rules this list uses whose wording allows two readings\n  const asks = rulesOf.filter(x => x.r.ask).map(x => [linkTo('rule', x.r.name, x.r.name), x.r.ask])\n    .concat(group(allAbs.filter(([u, ab]) => ab.ask)).map(g => [linkTo('ability', abilityKey(g.ab), g.ab.name), g.ab.ask]))\n    .concat(allStratagems().filter(s => s.ask && eligible(s).length).map(s => [linkTo('strat', s.id, s.name), s.ask]));\n  h += asks.length ? '<div class=\"sec-h\"><h2>Agree with your opponent</h2></div><div class=\"pg\">' + asks.map(([l, q]) => '<p class=\"askl\">' + l + ' <span>' + esc(q) + '</span></p>').join('') + '</div>' : '';\n  return h + '<p class=\"note\">Gathered from this list’s datasheets and rules; each line opens the full text.</p>';\n}"
+  },
+  "source": {
+   "implements": "Before the battle: Warlord, enhancements, attached units, strategic reserves (20.01: at most half the points limit; 20.03: from battle round 2, destroyed at the end of round 3), Deep Strike, transports, Scouts, start of round 1 / every round, once-per-battle items, questions to agree"
+  },
+  "key": "4b051152b323cc11"
+ }
+]

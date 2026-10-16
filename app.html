@@ -167,7 +167,10 @@ summary::-webkit-details-marker{display:none}
 .urow .meta{grid-column:1 / -1; font-size:12.5px; color:var(--muted); line-height:1.3}
 .sline, .uh{display:grid; grid-template-columns:repeat(7, minmax(0, 44px))}
 .sline{grid-column:1 / -1; font:700 15px/1.25 var(--f-head); font-variant-numeric:tabular-nums}
-.slab{grid-column:1 / -1; margin-top:2px; font:600 11.5px/1.2 var(--f-head); letter-spacing:.07em; text-transform:uppercase; color:var(--fg2)}
+.slab{grid-column:1 / -1; display:flex; align-items:center; margin-top:7px; font:700 13px/1.2 var(--f-head); letter-spacing:.07em; text-transform:uppercase; color:var(--fg)}
+.slab .x{margin-left:7px; padding:1px 5px 0; font-size:13px}
+.urow .un .lead{font:700 16.5px/1.15 var(--f-head); letter-spacing:.02em; color:var(--fg2)}
+.urow.att .sline{padding-left:0}
 .uh{padding:0 2px; font:600 11px/1 var(--f-head); letter-spacing:.1em; color:var(--muted); text-transform:uppercase}
 
 /* ---------- datasheet ---------- */
@@ -308,6 +311,7 @@ summary::-webkit-details-marker{display:none}
 .qol{margin:0; padding-left:20px}
 .qtab{display:grid; grid-template-columns:auto 1fr; gap:2px 14px; font-variant-numeric:tabular-nums}
 .qtab span:nth-child(odd){font:700 15px/1.35 var(--f-head); color:var(--accent)}
+.row .c.on{color:var(--accent)}
 .verif{display:flex; align-items:center; gap:10px; width:100%; margin-top:14px; padding:10px 10px; border-radius:6px; background:var(--surface); text-align:left; font-size:13.5px; line-height:1.35; color:var(--fg2)}
 .verif .ic{color:#5fc27a; flex:none}
 .verif b{color:var(--fg); font-weight:600}
@@ -382,6 +386,7 @@ summary::-webkit-details-marker{display:none}
     <symbol id="i-blade" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14.5 3.5 20.5 3.5 20.5 9.5 9 21 3 15 14.5 3.5ZM7 12l5 5M4.5 19.5l-1 1"/></symbol>
     <symbol id="i-spark" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3l2.2 6.3L21 12l-6.8 2.7L12 21l-2.2-6.3L3 12l6.8-2.7L12 3Z"/></symbol>
     <symbol id="i-book" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5v-15ZM4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M4 12.5l5 5L20 6.5"/></symbol>
     <symbol id="i-flag" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 21V4m0 0h11l-2 4 2 4H5"/></symbol>
     <symbol id="i-base" viewBox="0 0 24 24"><ellipse cx="12" cy="15" rx="9" ry="4" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M3 15v-2c0-2.2 4-4 9-4s9 1.8 9 4v2"/></symbol>
@@ -722,6 +727,15 @@ function showVerified(){
     (VER.asks ? '<p class="note">' + esc(VER.asks) + '</p>' : ''));
 }
 
+// keep the phone awake at the table (Screen Wake Lock); asked again whenever the app comes back
+const awake = { on:store.get('wh-awake') === true, lock:null };
+async function keepAwake(){
+  if(!awake.on || awake.lock || document.visibilityState !== 'visible' || !('wakeLock' in navigator)) return;
+  try { awake.lock = await navigator.wakeLock.request('screen'); awake.lock.addEventListener('release', () => { awake.lock = null; }); }
+  catch(e){ awake.on = false; store.set('wh-awake', false); toast('This browser won’t keep the screen on here'); rerender(); }
+}
+document.addEventListener('visibilitychange', keepAwake);
+
 /* ---------- screen: one army (search + menu) ---------- */
 function screenArmy(){
   const a = army();
@@ -740,6 +754,7 @@ function screenArmy(){
       row('abilities', 'i-spark', 'Abilities', a.units.reduce((t, u) => t + u.abilities.length, 0)) +
       row('rules', 'i-book', 'Rules & keywords', '') +
       row('bases', 'i-base', 'Bases & proxies', a.units.reduce((t, u) => t + modelCount(u) * (u.copies || 1), 0)) +
+      ('wakeLock' in navigator ? '<button class="row" data-awake aria-pressed="' + awake.on + '"><svg class="ic" aria-hidden="true"><use href="#i-sun"/></svg><span class="rb"><b>Keep screen on</b></span><span class="c' + (awake.on ? ' on' : '') + '">' + (awake.on ? 'On' : 'Off') + '</span></button>' : '') +
     '</div><p class="note">' + esc(a.source) + '</p></div>';
 }
 
@@ -876,13 +891,11 @@ function renderFinder(){
 /* ---------- screen: unit list ---------- */
 const UNIT_COLS = ['M','T','SV','W','LD','OC','INV'];
 const unitsSubbar = () => '<div class="uh">' + UNIT_COLS.map(c => '<span>' + c + '</span>').join('') + '</div>';
-// an attached unit: the leader's line and each bodyguard profile that takes hits differently (T, Sv, W, InSv)
+// an attached unit: one line per model profile, each named, with how many models have it
 function statLine(u){
   const line = s => '<span class="sline">' + [s.M, s.T, s.Sv, s.W, s.Ld, s.OC, s.InSv].map(v => '<span>' + esc(v) + '</span>').join('') + '</span>';
   if(!u.leads || u.stats.length < 2) return line(u.stats[0]);
-  const def = s => [s.T, s.Sv, s.W, s.InSv].join('|'), shown = [];
-  for(const s of u.stats) if(!shown.some(x => def(x) === def(s))) shown.push(s);
-  return shown.map(s => '<span class="slab">' + esc(s.name.replace(/ ×\d+$/, '')) + '</span>' + line(s)).join('');
+  return u.stats.map(s => '<span class="slab">' + esc(s.name).replace(/ ×(\d+)$/, '<span class="x">×$1</span>') + '</span>' + line(s)).join('');
 }
 function screenUnits(){
   const a = army(), groups = {};
@@ -891,7 +904,8 @@ function screenUnits(){
     // one model type: its count goes after the name ("Gretchin ×10"), like a weapon count
     const one = u.models.length === 1 && u.models[0].match(/^(\d+)× /);
     const n = one && one[1] !== '1' ? '<span class="x">×' + one[1] + '</span>' : '';
-    return '<button class="urow" data-unit="' + esc(u.id) + '"><span class="un"><b>' + esc(u.name) + '</b>' + n + nameTags(u) + '</span>' +
+    const lead = u.leads ? '<span class="lead">+ ' + esc(u.leads) + '</span>' : '';   // an attached unit names its bodyguard as loud as its leader
+    return '<button class="urow' + (u.leads ? ' att' : '') + '" data-unit="' + esc(u.id) + '"><span class="un"><b>' + esc(u.name) + '</b>' + n + nameTags(u, { noLeads:true }) + lead + '</span>' +
       '<span class="pts">' + esc(u.pts) + (u.copies > 1 ? ' ea' : '') + '</span>' +
       (!one && !u.leads ? '<span class="meta">' + esc(u.models.join(', ')) + '</span>' : '') + statLine(u) + '</button>';
   }).join('') + '</div>').join('');
@@ -1624,6 +1638,7 @@ document.addEventListener('click', e => {
   if(ds.more){ moreShown.add(ds.more); renderFinder(); return; }
   if(el.hasAttribute('data-sback') && sheetStack.length){ const [l, t, h] = sheetStack.pop(); openSheet(l, t, h, true); return; }
   if(el.hasAttribute('data-verified')){ showVerified(); return; }
+  if(el.hasAttribute('data-awake')){ awake.on = !awake.on; store.set('wh-awake', awake.on); if(awake.on) keepAwake(); else if(awake.lock){ awake.lock.release(); awake.lock = null; } rerender(); return; }
   if(el.hasAttribute('data-expand')){
     const cards = $$('#view details.strat');
     const openAll = cards.some(d => !d.open);
@@ -1727,6 +1742,7 @@ function start(snap){
   else if(snap && valid(snap.cur)){ restore(snap.cur); toSpot(snap); }
   else { const last = store.get('wh-last'); restore(valid(last) ? last : { s:'home' }); if(valid(last)) toSpot(last); }
   checkForUpdate(true);
+  keepAwake();
 }
 const hot = window.claude && window.claude.hot;
 if(hot && hot.snapshot){ try { hot.snapshot(() => ({ cur:plain(cur), y:scrollY, filt, open:[...openStrats], query })); } catch(e){} }
