@@ -24,6 +24,11 @@ for p in orks imperial-knights world-eaters thousand-sons tyranids; do
   [ -f .cache/waha/$p.html ] || curl -sSf -A "Mozilla/5.0" "https://wahapedia.ru/wh40k11ed/factions/$p/" -o .cache/waha/$p.html
 done
 [ -f .cache/waha/core.html ] || curl -sSf -A "Mozilla/5.0" "https://wahapedia.ru/wh40k11ed/the-rules/core-rules/" -o .cache/waha/core.html
+# Wahapedia datasheet pages of the units in the lists (verify/choice.js reads their pick-one markers)
+mkdir -p .cache/waha/ds
+while read -r fac unit; do
+  [ -f ".cache/waha/ds/${fac}_${unit}.html" ] || curl -sSf -A "Mozilla/5.0" "https://wahapedia.ru/wh40k11ed/factions/$fac/$unit" -o ".cache/waha/ds/${fac}_${unit}.html"
+done < sources/waha-datasheets.txt
 # Wahapedia text extraction the rules-text check reads
 for p in orks imperial-knights world-eaters thousand-sons tyranids core; do
   [ -f .cache/waha/$p.txt ] || python3 -I waha-extract.py .cache/waha/$p.html > .cache/waha/$p.txt

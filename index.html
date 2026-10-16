@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
-<script>window.WH_BUILD = 'a0e3ba44c0';</script>
+<script>window.WH_BUILD = 'fcbe833dad';</script>
 </head>
 <body>
 <style>
@@ -267,6 +267,7 @@ summary::-webkit-details-marker{display:none}
 .x{display:inline-block; margin-left:8px; padding:2px 6px 1px; border-radius:5px; box-shadow:inset 0 0 0 1.5px #5c5c5c; color:var(--fg); font:700 14px/1.1 var(--f-head); letter-spacing:.04em; white-space:nowrap; font-variant-numeric:tabular-nums}
 .tq{font:600 10.5px/1 var(--f-head); letter-spacing:.07em; text-transform:uppercase; color:var(--muted); margin-left:6px; white-space:nowrap; display:inline-block}
 .wn{font:600 15px/1.2 var(--f-head); letter-spacing:.01em; margin-bottom:2px}
+.wn small.fa{color:var(--accent)}
 .wn small{font:600 11px/1 var(--f-head); letter-spacing:.09em; text-transform:uppercase; color:var(--muted); margin-left:8px}
 .kwl{font:600 11px/1.3 var(--f-head); letter-spacing:.04em; text-transform:uppercase; color:var(--muted)}
 .wr.p + .kwl{padding-left:8px}
@@ -430,8 +431,8 @@ summary::-webkit-details-marker{display:none}
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="verified.js?v=a0e3ba44c0"></script>
-<script src="data.js?v=a0e3ba44c0"></script>
+<script src="verified.js?v=fcbe833dad"></script>
+<script src="data.js?v=fcbe833dad"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -962,6 +963,10 @@ function weaponBlock(it, keys, mods, u){
     // Hunter weapons: the profile depends on the target; rules that add to Hunter attacks are built in
     const byTarget = it.profiles.some(p => p.hunter);
     const hunterMods = mods.filter(m => m.hunter);
+    // several guns under one name, every one of them fired (Nazdreg's Kustom Blasta X): not a choice
+    const all = it.profiles.every(p => p.fireAll);
+    if(all) return '<div class="wn">' + named(it.group, it.n) + '<small class="uv fa" role="button" tabindex="0" data-rule="Select Weapons">all ' + it.profiles.length + ' fire</small></div>' +
+      it.profiles.map(p => row('<span class="ar">+</span>' + esc(p.name), plainCells(p), true) + kwl(p)).join('');
     return '<div class="wn">' + named(it.group, it.n) + '<small class="uv" role="button" tabindex="0" data-rule="Select Weapons">' + (byTarget ? 'pick one by target' : 'pick one profile') + '</small></div>' +
       it.profiles.map(p => {
         if(!byTarget) return row(prof(p.name), plainCells(p), true) + kwl(p);
@@ -1049,7 +1054,7 @@ function weaponRows(list, keys, mods, u, kind){
     const ul = useLine(mine, kind, u, u.leads && whos.length > 1 ? (who === whos[0] ? 0 : 1) : null);
     if(whos.length > 1 && ul.startsWith('<p class="use">') && ul.indexOf('<p', 2) < 0) h += ul.replace('<p class="use">', '<p class="use gw"><span class="who">' + esc(who) + '</span>');
     else h += (whos.length > 1 ? '<div class="who">' + esc(who) + '</div>' : '') + ul;
-    for(const it of mine) h += '<div class="wb' + (it.group ? ' g' : '') + '">' + weaponBlock(it, keys, mods, u) + '</div>';
+    for(const it of mine) h += '<div class="wb' + (it.group && !it.profiles.every(p => p.fireAll) ? ' g' : '') + '">' + weaponBlock(it, keys, mods, u) + '</div>';   // shaded = pick one
   }
   return h;
 }

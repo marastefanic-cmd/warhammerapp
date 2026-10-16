@@ -7,6 +7,7 @@
 // Steps (each must pass):
 //   data        check.js: the data is complete and consistent
 //   invariants  verify/invariants.js: mechanical rules (phases, eligibility, cited numbers, counts)
+//   choice      verify/choice.js: every weapon with several profiles is "pick one" or "all fire" as BSData and Wahapedia mark it
 //   bsdata      verify/bsdata.js: every unit fact equals BSData, the data New Recruit is built from
 //   nr          verify/nr.js: everything the owner's New Recruit PDFs print is in the app, identically
 //   texts       verify/texts.js: every rules text equals GW's official documents (or Wahapedia)
@@ -33,6 +34,7 @@ const step = (name, args, env) => {
 const hash = sha(fs.readFileSync(path.join(ROOT, 'app.html'), 'utf8') + fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8'));
 step('data', ['check.js']);
 step('invariants', ['verify/invariants.js']);
+step('choice', ['verify/choice.js']);
 step('bsdata', ['verify/bsdata.js']);
 step('nr', ['verify/nr.js']);
 step('texts', ['verify/texts.js']);

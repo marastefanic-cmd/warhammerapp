@@ -248,8 +248,8 @@ vs MONSTER/VEHICLE: +1 AP (Da Hunt is On)
 Nazdreg
 + Meganobz
 NAZDREG
-Kustom Blasta XPICK ONE PROFILE
-➤Skorcha
+Kustom Blasta XALL 3 FIRE
++Skorcha
 12"
 3
 –
@@ -257,7 +257,7 @@ Kustom Blasta XPICK ONE PROFILE
 -1
 1
 BLAST 1, TORRENT, IGNORES COVER
-➤Gatler
++Gatler
 24"
 6
 4+
@@ -265,7 +265,7 @@ BLAST 1, TORRENT, IGNORES COVER
 -2
 3
 HAZARDOUS, IGNORES COVER
-➤Shoota
++Shoota
 18"
 4
 4+
@@ -4031,8 +4031,8 @@ S
 AP
 D
 NAZDREG
-Kustom Blasta XPICK ONE PROFILE
-➤Skorcha
+Kustom Blasta XALL 3 FIRE
++Skorcha
 12"
 3
 –
@@ -4040,7 +4040,7 @@ Kustom Blasta XPICK ONE PROFILE
 -1
 1
 BLAST 1, TORRENT, IGNORES COVER
-➤Gatler
++Gatler
 24"
 6
 4+
@@ -4048,7 +4048,7 @@ BLAST 1, TORRENT, IGNORES COVER
 -2
 3
 HAZARDOUS, IGNORES COVER
-➤Shoota
++Shoota
 18"
 4
 4+
