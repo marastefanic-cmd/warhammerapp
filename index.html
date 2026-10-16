@@ -190,13 +190,11 @@ summary::-webkit-details-marker{display:none}
 .wt > span.mod{grid-column:1 / -1; text-align:left; border-top:0; margin:3px 0 2px; padding:5px 8px; border-radius:7px; font:500 13px/1.35 var(--f-body);
   background:color-mix(in srgb, var(--accent) 13%, transparent); color:var(--fg)}
 .wt > span.mod b{font-weight:700}
-.wt > span.mod .from, .wt > span.n.var small{color:var(--muted); font:500 11.5px var(--f-body); white-space:nowrap}
+.wt > span.mod .from{color:var(--muted); font:500 11.5px var(--f-body); white-space:nowrap}
 .wt > span.mod .from::before{content:"\00b7  "}
-.wt > span.var{border-top:1px dashed var(--line); padding:5px 0 3px; background:color-mix(in srgb, var(--accent) 7%, transparent)}
-.wt > span.n.var{font:600 13px/1.25 var(--f-body); color:var(--accent); padding-left:8px}
-.wt > span.varc{grid-column:1 / -1; text-align:left; border-top:0; padding:0 8px 6px; font:500 12.5px/1.3 var(--f-body); color:var(--muted);
-  background:color-mix(in srgb, var(--accent) 7%, transparent)}
-.wt > span.var i.hi{font-style:normal; display:inline-block; min-width:26px; padding:2px 4px; border-radius:5px; background:var(--accent); color:var(--accent-ink)}
+.wt > span.varc{grid-column:1 / -1; text-align:left; border-top:0; padding:1px 0 3px; font:500 12.5px/1.35 var(--f-body); color:var(--muted)}
+.wt > span.varc b{color:var(--fg); font-weight:600}
+.wt > span i.hi{font-style:normal; display:inline-block; min-width:26px; padding:1px 4px; border-radius:5px; background:var(--accent); color:var(--accent-ink)}
 .wt > span.kwl{grid-column:1 / -1; text-align:left; border-top:0; padding:0 0 6px; margin-top:-2px; line-height:1.3}
 .kwl [data-rule]{cursor:pointer; white-space:nowrap; font:700 11px/1.35 var(--f-head); letter-spacing:.05em; text-transform:uppercase; color:var(--fg); padding:0; text-decoration:underline dotted; text-decoration-color:var(--accent); text-underline-offset:2px}
 .kwl .sep{color:var(--muted); font-size:11px}
@@ -649,24 +647,28 @@ function weaponList(list, kind, label, mods){
   h += ms.filter(m => !m.weapon).map(modLine).join('');
   const combined = new Set(list.map(w => w.who || '')).size > 1;
   let lastWho = null, prev = null;
+  const cells = (vals, cls, hi) => vals.map((v, i) => '<span' + (cls ? ' class="' + cls + '"' : '') + '>' + (hi && hi[i] ? '<i class="hi">' + esc(v) + '</i>' : esc(v)) + '</span>').join('');
+  const kwList = kws => kws.length ? '<span class="kwl">' + kws.map(k => '<span role="button" tabindex="0" data-rule="' + esc(k) + '">' + esc(k) + '</span>').join('<span class="sep">, </span>') + '</span>' : '';
   for(const w of list){
     if(combined && w.who !== lastWho){ h += '<span class="who">' + esc(w.who || '') + '</span>'; lastWho = w.who; prev = null; }
     const kws = (w.hunter ? ['HUNTER: MONSTER/VEHICLE'] : []).concat(w.kw || []);
+    const vals = keys.map(k => w[k]);
+    const count = w.n ? '<span class="x">\u00d7' + w.n + '</span>' : '';
+    // an ability that changes this weapon's stats against some targets: the same gun, two profiles by target
+    const vm = ms.find(m => m.weapon === w.name && m.set);
+    if(vm && !w.group){
+      h += '<span class="grp">' + esc(w.name) + count + '<small>pick by target</small></span>' +
+        '<span class="n sub">\u27a4 ' + esc(vm.baseWhen) + '</span>' + cells(vals, 'sub') +
+        '<span class="n">\u27a4 ' + esc(vm.when) + '</span>' + cells(keys.map(k => vm.set[k] != null ? vm.set[k] : w[k]), '', keys.map(k => vm.set[k] != null)) +
+        '<span class="varc"><b>' + esc(vm.from) + '</b> ' + esc(vm.note) + '</span>' + kwList(kws);
+      prev = null;
+      continue;
+    }
     const first = w.group && !(prev && prev.group === w.group && prev.who === w.who);
     if(first) h += '<span class="grp">' + esc(w.group) + (w.n ? '<span class="x muted"> \u00d7' + w.n + '</span>' : '') + '<small>pick one profile</small></span>';
     prev = w;
-    const name = (w.group ? '\u27a4 ' + esc(w.name) : esc(w.name) + (w.n ? '<span class="x">\u00d7' + w.n + '</span>' : '')) +
-      (w.enh ? '<span class="enh">ENH</span>' : '');
-    const kwHtml = kws.length ? '<span class="kwl">' + kws.map(k => '<span role="button" tabindex="0" data-rule="' + esc(k) + '">' + esc(k) + '</span>').join('<span class="sep">, </span>') + '</span>' : '';
-    const vals = ranged ? [w.range, w.A, w.BS, w.S, w.AP, w.D] : [w.A, w.WS, w.S, w.AP, w.D];
-    const cls = first ? ' sub' : '';
-    h += '<span class="n' + cls + '">' + name + '</span>' + vals.map(v => '<span' + (cls ? ' class="sub"' : '') + '>' + esc(v) + '</span>').join('') + kwHtml;
-    for(const m of ms.filter(m => m.weapon === w.name && m.set)){
-      const [ab, ...rest] = m.from.split(' \u00b7 ');
-      h += '<span class="n var">\u21b3 ' + esc(ab) + '</span>' +
-        keys.map(k => m.set[k] != null ? '<span class="var"><i class="hi">' + esc(m.set[k]) + '</i></span>' : '<span class="var">' + esc(w[k]) + '</span>').join('') +
-        '<span class="varc">' + esc([m.when].concat(rest).join(', ')) + '</span>';
-    }
+    const name = (w.group ? '\u27a4 ' + esc(w.name) : esc(w.name) + count) + (w.enh ? '<span class="enh">ENH</span>' : '');
+    h += '<span class="n' + (first ? ' sub' : '') + '">' + name + '</span>' + cells(vals, first ? 'sub' : '') + kwList(kws);
   }
   return h + '</div>';
 }

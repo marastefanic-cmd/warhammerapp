@@ -185,8 +185,9 @@ const FACTIONS = {
      stats  one row per model profile
      ranged / melee  weapons; "group" joins the ➤ profiles of one weapon
      abilities  ph/turn tag the phase it triggers in
-     mods   abilities that change attacks: set = a variant weapon row with changed stats,
-            note = a reminder line in that weapon table (kind ranged|melee|all)
+     mods   abilities that change attacks (kind ranged|melee|all). With weapon + set, that weapon
+            is shown as two profiles, baseWhen (its normal stats) and when (set applied);
+            otherwise note is a reminder line at the top of the weapon table
      rules  core/faction rules that open a glossary entry
      kw     the unit's keywords ("Categories")                              */
 const ARMIES = [
@@ -348,7 +349,8 @@ const ARMIES = [
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
-        { kind:'ranged', weapon:'Blitzkannon', when:'vs non-MONSTER/VEHICLE', set:{ A:'14' }, from:'Blitz Dem Gitz! · your Shooting phase' },
+        { kind:'ranged', weapon:'Blitzkannon', baseWhen:'vs MONSTER/VEHICLE', when:'vs anything else', set:{ A:'14' },
+          from:'Blitz Dem Gitz!', note:'+6 A in your Shooting phase only; otherwise A 8.' },
         { kind:'ranged', when:'Riled up', note:'ranged attacks have [SUSTAINED HITS 1]', from:'Even More Dakka' }
       ],
       rules:['Deadly Demise 1','Waaagh!'],
@@ -373,7 +375,8 @@ const ARMIES = [
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
-        { kind:'ranged', weapon:'Blitzkannon', when:'vs non-MONSTER/VEHICLE', set:{ A:'14' }, from:'Blitz Dem Gitz! · your Shooting phase' },
+        { kind:'ranged', weapon:'Blitzkannon', baseWhen:'vs MONSTER/VEHICLE', when:'vs anything else', set:{ A:'14' },
+          from:'Blitz Dem Gitz!', note:'+6 A in your Shooting phase only; otherwise A 8.' },
         { kind:'ranged', when:'Riled up', note:'ranged attacks have [SUSTAINED HITS 1]', from:'Even More Dakka' }
       ],
       rules:['Deadly Demise 1','Waaagh!'],
