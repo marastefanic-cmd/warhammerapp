@@ -307,7 +307,7 @@ const FACTIONS = {
         name:'Berzerker Warband', dp:2,
         // Wahapedia wording (the errata "Change to" text is the same as the main text)
         rule:{ name:'Relentless Rage', ph:['fight'], turn:'either', needs:{ all:['Faction: World Eaters'] },
-          mod:{ kind:'melee', when:'Always', note:'+1 A' },
+          mod:{ kind:'melee', when:'Always', note:'+1 A, already counted in the A values' },
           text:'Friendly **WORLD EATERS** units’ melee attacks have +1 **A**.' },
         enhancements:[
           { name:'Berzerker Glaive', pts:35, text:'**WORLD EATERS** model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.' },
@@ -1027,7 +1027,7 @@ const ARMIES = [
         { name:'Murderous Charge', who:'Khorne Berzerkers', ph:['fight'], turn:'either',
           text:'If this unit made a charge move this turn, this unit’s melee attacks have +1 S.' },
         { name:'Icon of Khorne', who:'Khorne Berzerkers', na:'No Icon of Khorne in this unit',
-          text:'If the bearer’s unit contains 1 or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain one Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.' }
+          text:'If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
@@ -1121,7 +1121,7 @@ const ARMIES = [
       ],
       abilities:[
         { name:'Aggressive Advance', who:'Lord on Juggernaut', ph:['movement','charge'], turn:'your',
-          text:'While this model is leading a unit, models in that unit have a Move characteristic of 10" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally though terrain features.' },
+          text:'While this model is leading a unit, models in that unit have a Move characteristic of 10" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features.' },
         { name:'Crush All Who Stand Before Us', who:'Lord on Juggernaut', ph:['fight'], turn:'either',
           text:'Each time this model’s unit is selected to fight, you can use this ability. When determining which models in this unit are eligible to fight, any models in it that are within 3" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3" of them and within Engagement Range of their unit.' },
         { name:'Archslaughterer', who:'Lord on Juggernaut', tag:'Enhancement', ph:['command'], turn:'your',
@@ -1131,7 +1131,7 @@ const ARMIES = [
         { name:'Murderous Charge', who:'Khorne Berzerkers', ph:['fight'], turn:'either',
           text:'If this unit made a charge move this turn, this unit’s melee attacks have +1 S.' },
         { name:'Icon of Khorne', who:'Khorne Berzerkers', ph:['command'], turn:'either',
-          text:'If the bearer’s unit contains 1 or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain one Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.' }
+          text:'If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
