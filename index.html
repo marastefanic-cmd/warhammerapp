@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
-<script>window.WH_BUILD = '9932ecfbd6';</script>
+<script>window.WH_BUILD = '1f7a15ea9e';</script>
 </head>
 <body>
 <style>
@@ -384,7 +384,7 @@ summary::-webkit-details-marker{display:none}
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="data.js?v=9932ecfbd6"></script>
+<script src="data.js?v=1f7a15ea9e"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -606,7 +606,9 @@ function ruleFor(label){
 const ruleKey = label => (ruleFor(label) || {}).key;
 const mentions = (text, key) => new RegExp('\\b' + key.replace(/[-]/g, '.') + '\\b', 'i').test(text);
 // the units in this army a core rule applies to: unit rules, weapon keywords, ability text
+const CONCEPT = new Set(D.concepts || []);   // general terms (charge, destroyed…) that every unit "uses"
 function ruleUsers(key){
+  if(CONCEPT.has(key)) return [];
   return army().units.filter(u => unitRules(u).some(r => ruleKey(r) === key) ||
     [...(u.ranged || []), ...(u.melee || [])].some(w => w.kw.some(k => ruleKey(k) === key) || (w.hunter && key === 'Hunter')) ||
     u.abilities.some(ab => mentions(ab.text, key)));
@@ -851,9 +853,9 @@ function weaponBlock(it, keys, mods, u){
     return '<div class="wn">' + esc(it.group) + count(it.n) + '<small>' + (byTarget ? 'pick one by target' : 'pick one profile') + '</small></div>' +
       it.profiles.map(p => {
         if(!byTarget) return row(prof(p.name), plainCells(p), true) + kwl(p);
-        if(!p.hunter) return row(prof(p.name) + '<span class="tq">vs others</span>', plainCells(p), true) + kwl(p);
+        if(!p.hunter) return row(prof(p.name) + '<span class="tq">any target</span>', plainCells(p), true) + kwl(p);
         const cells = keys.map(k => { const d = hunterMods.reduce((t, m) => t + (m.hunter[k] || 0), 0); return d ? cell(bump(k, p[k], d), 'hi') : cell(p[k]); });
-        return row('<span class="ar">➤</span><span class="link" role="button" tabindex="0" data-rule="Hunter">' + esc(p.name) + '</span><span class="tq">vs MON/VEH</span>', cells, true) + kwl(p);
+        return row('<span class="ar">➤</span><span class="link" role="button" tabindex="0" data-rule="Hunter">' + esc(p.name) + '</span><span class="tq">MON/VEH only</span>', cells, true) + kwl(p);
       }).join('');
   }
   return row(esc(w0.name) + count(w0.n) + (it.carrier ? '<span class="cr">' + esc(it.carrier) + '</span>' : ''), plainCells(w0)) + kwl(w0);
@@ -1241,7 +1243,7 @@ function screenRules(){
   for(const u of a.units){
     for(const r of unitRules(u)) note(r, 'ability');
     for(const w of [...(u.ranged || []), ...(u.melee || [])]){ for(const k of w.kw) note(k, 'weapon'); if(w.hunter) note('Hunter', 'weapon'); }
-    for(const ab of u.abilities) for(const key of Object.keys(D.rules)) if(mentions(ab.text, key)) note(key, 'ability');
+    for(const ab of u.abilities) for(const key of Object.keys(D.rules)) if(!CONCEPT.has(key) && mentions(ab.text, key)) note(key, 'ability');
   }
   const gloss = kind => [...used.values()].filter(e => e.kind === kind).sort((x, y) => x.r.key.localeCompare(y.r.key))
     .map(e => xp(e.r.key, e.labels.size ? [...e.labels].sort().join(', ') : '', '', rt(e.r.text) + usedBy('In this army', ruleUsers(e.r.key)), false)).join('');
@@ -1324,7 +1326,7 @@ function showRule(label){
   const body = rt(r.text) + (r.table ? ttable(r.table) : '');
   sheetRule = null;
   const gap = (r.missing || []).length ? '<p class="note">Not in the app yet: the ' + esc(r.missing.join(' and ')) + '.</p>' : '';
-  openSheet(esc(r.src), r.name, body + (r.note ? '<p class="note it">' + esc(r.note) + '</p>' : '') + gap + usedBy('In this army', users));
+  openSheet(esc(r.src), CONCEPT.has(r.key) ? r.key : r.name, body + (r.note ? '<p class="note it">' + esc(r.note) + '</p>' : '') + gap + usedBy('In this army', users));
 }
 function showStrat(id){
   const s = allStratagems().find(x => x.id === id);
