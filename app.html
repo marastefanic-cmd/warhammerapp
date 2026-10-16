@@ -150,7 +150,7 @@ summary::-webkit-details-marker{display:none}
 .urow{display:grid; grid-template-columns:minmax(0,1fr) auto; gap:0 10px; align-items:baseline; width:100%; text-align:left; padding:6px 2px 5px; border-bottom:1px solid var(--line)}
 .urow .un{display:flex; flex-wrap:wrap; align-items:baseline; gap:2px 8px; min-width:0}
 .urow .un b{font:700 16.5px/1.15 var(--f-head); letter-spacing:.02em}
-.urow .un .x{margin-left:-4px}
+.urow .un .x{margin-left:0}
 .urow .pts{font:600 15px var(--f-head); color:var(--muted); font-variant-numeric:tabular-nums}
 .urow .meta{grid-column:1 / -1; font-size:12.5px; color:var(--muted); line-height:1.3}
 .sline, .uh{display:grid; grid-template-columns:repeat(7, minmax(0, 44px))}
@@ -171,7 +171,7 @@ summary::-webkit-details-marker{display:none}
 .dsec > .lbl{padding-bottom:3px}
 .dline{padding:5px 2px; border-bottom:1px solid var(--line); font-size:14px; line-height:1.5}
 .dline .sep{color:var(--muted)}
-.lbn{margin-left:8px; text-transform:none; letter-spacing:.02em; font-weight:500}
+.lbn{margin-left:8px; text-transform:none; letter-spacing:.02em; font:500 11.5px/1.2 var(--f-head)}
 .lbn .link{color:var(--muted)}
 .dline .link{white-space:nowrap}
 .dsec > .dline:first-child{border-top:1px solid var(--line)}
@@ -208,6 +208,9 @@ summary::-webkit-details-marker{display:none}
 .wh .n{text-align:left}
 .wh.both{position:sticky; top:var(--top); z-index:3; background:var(--bg); padding-top:8px; box-shadow:0 1px 0 var(--line)}
 .wh.both .n{color:var(--fg)}
+/* datasheet heading levels: unit name (top bar) > section (Ranged, Melee, Abilities, Rules, Stratagems) > model chip (.who) > weapon name */
+.wh.both .n, .ab.pf > summary b.kh, .dsec > .lbl, .dsec .dline > .il{font:700 15.5px/1.1 var(--f-head); letter-spacing:.1em; text-transform:uppercase; color:var(--fg)}
+.wh.both{align-items:baseline}
 .anc{scroll-margin-top:var(--top)}
 .wt.both{margin-top:12px}
 .use{padding:4px 6px 3px; font-size:12.5px; line-height:1.35; color:var(--fg2)}
@@ -218,8 +221,8 @@ summary::-webkit-details-marker{display:none}
 .wr > span.n2{grid-column:span 2}
 .wh > span.n2{grid-column:span 2}
 .cr{display:inline-block; font:600 10.5px/1.2 var(--f-head); letter-spacing:.07em; text-transform:uppercase; color:var(--muted); margin-left:6px}
-.use.gw{padding-left:0; margin-top:6px}
-.use.gw .who{display:inline; margin:0 6px 0 0}
+.use.gw{padding-left:0; margin-top:10px}
+.use.gw .who{display:inline-block; margin:0 7px 0 0; vertical-align:1px}
 @media (max-width:359px){
   .ranged .wr, .wh.ranged, .both .wr, .wh.both{grid-template-columns:minmax(0,1fr) 28px 38px 24px 22px 26px 30px}
   .melee .wr, .wh.melee{grid-template-columns:minmax(0,1fr) 38px 24px 22px 26px 30px}
@@ -227,6 +230,7 @@ summary::-webkit-details-marker{display:none}
   .ar{margin-right:1px; font-size:10px}
   .wr > span.n, .st > span.n{overflow-wrap:anywhere}
   .st > span.n{font-size:13px; padding-left:6px}
+  .x{margin-left:6px; padding:1px 4px 0; font-size:12.5px}
 }
 .wh + .wb, .who + .wb, .use + .wb, .wb:first-child, .wb.g, .wb.g + .wb{border-top:0}
 .wb.g{background:var(--surface); border-radius:6px; margin:3px 0}
@@ -235,7 +239,9 @@ summary::-webkit-details-marker{display:none}
 .wr.p > span.n{padding-left:8px}
 .wr.p + .wr.p, .kwl + .wr.p{margin-top:4px}
 .ar{color:var(--muted); margin-right:3px; font-size:12px}
-.x{color:var(--muted); font-weight:600; font-size:12.5px; margin-left:5px; white-space:nowrap}
+/* a count ("×5"): its own small pill, clear of the name */
+.x{display:inline-block; margin-left:8px; padding:2px 5px 1px; border-radius:4px; background:var(--surface2); color:var(--fg); font:700 13.5px/1.1 var(--f-head); letter-spacing:.03em; white-space:nowrap; font-variant-numeric:tabular-nums}
+.wb.g .x, .st .x{background:var(--line)}
 .tq{font:600 10.5px/1 var(--f-head); letter-spacing:.07em; text-transform:uppercase; color:var(--muted); margin-left:6px; white-space:nowrap; display:inline-block}
 .wn{font:700 15px/1.2 var(--f-head); letter-spacing:.01em; margin-bottom:2px}
 .wn small{font:600 11px/1 var(--f-head); letter-spacing:.09em; text-transform:uppercase; color:var(--muted); margin-left:8px}
@@ -250,7 +256,8 @@ summary::-webkit-details-marker{display:none}
 .mods{margin-top:6px; display:grid; gap:4px}
 .mod{border-left:2px solid var(--accent); padding:1px 0 1px 8px; font-size:13px; line-height:1.35}
 .mod .from{color:var(--muted)}
-.who{margin:8px 0 2px; font:700 11.5px/1 var(--f-head); letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
+/* whose weapons these are (leader vs bodyguard): a chip, not a whisper */
+.who{display:inline-block; justify-self:start; margin:12px 0 4px; padding:4px 8px 3px; border-radius:4px; border:1px solid var(--line); background:var(--surface2); font:700 12.5px/1 var(--f-head); letter-spacing:.09em; text-transform:uppercase; color:var(--fg)}
 /* slice screens: one band per unit, pinned until the next unit's band pushes it off */
 .us{padding-bottom:4px}
 .band{position:sticky; top:var(--top); z-index:4; display:flex; align-items:baseline; gap:8px; width:100%; min-height:40px; margin-top:12px; padding:9px 10px 8px;
@@ -1028,7 +1035,7 @@ function screenUnit(){
   return '<div class="ds-meta"><span>' + meta.join(' · ') + '</span>' + nameTags(u, { noLeads:true, noCopies:true }) + '</div>' +
     '<div class="statwrap" id="sec-stats"><div class="st num" style="grid-template-columns:' + statCols + '">' +
       (multi ? '<span class="h"></span>' : '') + ['M','T','SV','W','LD','OC','INV'].map(k => '<span class="h">' + k + '</span>').join('') +
-      u.stats.map(s => (multi ? '<span class="n">' + esc(s.name) + '</span>' : '') + [s.M, s.T, s.Sv, s.W, s.Ld, s.OC, s.InSv].map(v => '<span>' + esc(v) + '</span>').join('')).join('') + '</div>' +
+      u.stats.map(s => (multi ? '<span class="n">' + esc(s.name).replace(/ ×(\d+)$/, '<span class="x">×$1</span>') + '</span>' : '') + [s.M, s.T, s.Sv, s.W, s.Ld, s.OC, s.InSv].map(v => '<span>' + esc(v) + '</span>').join('')).join('') + '</div>' +
     (u.boostNote ? '<p class="dsl"><i>' + esc(u.boostNote) + '</i></p>' : '') +
     (!solo && !longModels ? '<p class="dsl">' + modelsText(u) + '</p>' : '') +
     (def.length ? '<div class="def"><span class="il">When targeted</span>' + def.map(x => linkTo(x.a, x.v, x.t)).join(' · ') + '</div>' : '') +
