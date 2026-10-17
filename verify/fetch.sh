@@ -3,6 +3,8 @@
 # Usage: sh verify/fetch.sh     (needs github.com, assets.warhammer-community.com, wahapedia.ru)
 set -e
 cd "$(dirname "$0")"; mkdir -p .cache/gw .cache/waha
+# the Wahapedia text extraction (waha-extract.py) needs BeautifulSoup
+python3 -I -c 'import bs4' 2>/dev/null || python3 -m pip install -q beautifulsoup4 2>/dev/null || python3 -m pip install -q --break-system-packages beautifulsoup4
 # BSData: the data New Recruit is built from, pinned
 BSDATA_COMMIT=173d0ef
 [ -d .cache/bsdata ] || git clone -q https://github.com/BSData/wh40k-11e .cache/bsdata
@@ -17,7 +19,7 @@ for f in eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.pdf \
          eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.pdf; do
   out=$(echo "$f" | sed 's/%26/and/')   # GW's file name has an "&"; the cache keeps the old name
   [ -f .cache/gw/$out ] || curl -sSf -A "Mozilla/5.0" "https://assets.warhammer-community.com/$f" -o .cache/gw/$out
-  [ -f .cache/gw/${out%.pdf}.txt ] || pdftotext -layout .cache/gw/$out .cache/gw/${out%.pdf}.txt
+  [ -s .cache/gw/${out%.pdf}.txt ] || pdftotext -layout .cache/gw/$out .cache/gw/${out%.pdf}.txt
 done
 # Wahapedia (changes over time: verify/run.js records the sha256 it checked against)
 for p in orks imperial-knights world-eaters thousand-sons tyranids; do
@@ -31,6 +33,6 @@ while read -r fac unit; do
 done < sources/waha-datasheets.txt
 # Wahapedia text extraction the rules-text check reads
 for p in orks imperial-knights world-eaters thousand-sons tyranids core; do
-  [ -f .cache/waha/$p.txt ] || python3 -I waha-extract.py .cache/waha/$p.html > .cache/waha/$p.txt
+  [ -s .cache/waha/$p.txt ] || python3 -I waha-extract.py .cache/waha/$p.html .cache/waha/$p.txt
 done
 echo "sources in $(pwd)/.cache"

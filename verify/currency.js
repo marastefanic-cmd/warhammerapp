@@ -33,8 +33,9 @@ const slug = s => s.toLowerCase().replace(/[^a-z]+/g, '-').replace(/^-|-$/g, '')
 const problems = [], changes = [], md = [];
 fs.mkdirSync(LATEST, { recursive:true });
 
-// the pinned sources (GW documents, BSData commit) are what texts.js and bsdata.js compare against
-if(!fs.existsSync(path.join(V, '.cache/gw'))){
+// the pinned sources (GW documents, BSData commit) are what texts.js and bsdata.js compare against;
+// fetch.sh only downloads what verify/.cache is missing
+{
   const r = run('sh', [path.join(V, 'fetch.sh')]);
   if(r.status !== 0) problems.push('fetch.sh failed: ' + (r.stderr || r.stdout).trim().split('\n').slice(-3).join(' '));
 }
@@ -116,6 +117,12 @@ else {
 
 /* ---------- 3. Wahapedia ---------- */
 md.push('## Wahapedia', '');
+// waha-extract.py needs BeautifulSoup (a fresh container may not have it)
+if(run('python3', ['-I', '-c', 'import bs4']).status !== 0){
+  run('python3', ['-m', 'pip', 'install', '-q', 'beautifulsoup4']);
+  if(run('python3', ['-I', '-c', 'import bs4']).status !== 0) run('python3', ['-m', 'pip', 'install', '-q', '--break-system-packages', 'beautifulsoup4']);
+  if(run('python3', ['-I', '-c', 'import bs4']).status !== 0) problems.push('Python’s BeautifulSoup (bs4) is missing and could not be installed: the Wahapedia pages can’t be read');
+}
 const wdir = path.join(LATEST, 'waha');
 fs.mkdirSync(path.join(wdir, 'ds'), { recursive:true });
 let wahaOk = true;
