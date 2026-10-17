@@ -5889,228 +5889,236 @@ WORLD EATERS model only. (Once per battle, per army) In your Command phase, you 
 ONLord on Juggernaut · Archslaughterer
 
 ######## popup grant:["Aggressive Advance","lord-on-juggernaut","M 10\"",null] · HURRDURR Hurrdurr
-GRANTED BY AGGRESSIVE ADVANCE
+M 10" · GRANTED BY
 
-M 10"
+Aggressive Advance
 
-Aggressive Advance Lord on Juggernaut
+Lord on Juggernaut
 
 While this model is leading a unit, models in that unit have a Move characteristic of 10" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features.
 
 Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup grant:["Berzerker Glaive","daemon-prince-glaive","D 2",null] · HURRDURR Hurrdurr
-GRANTED BY BERZERKER GLAIVE
+D 2 · GRANTED BY
 
-D 2
+Berzerker Glaive
 
-Berzerker Glaive Enhancement
+Enhancement
 
 WORLD EATERS model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.
 
 Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup grant:["Berzerker Glaive","daemon-prince-glaive","D 4",null] · HURRDURR Hurrdurr
-GRANTED BY BERZERKER GLAIVE
+D 4 · GRANTED BY
 
-D 4
+Berzerker Glaive
 
-Berzerker Glaive Enhancement
+Enhancement
 
 WORLD EATERS model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.
 
 Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup grant:["Berzerker Glaive|Relentless Rage","daemon-prince-glaive","A 10",null] · HURRDURR Hurrdurr
-GRANTED BY BERZERKER GLAIVE AND RELENTLESS RAGE
+A 10 · GRANTED BY
 
-A 10
+Berzerker Glaive + Relentless Rage
 
-Berzerker Glaive Enhancement
+Berzerker Glaive
+
+Enhancement
 
 WORLD EATERS model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.
 
-Relentless Rage Berzerker Warband detachment rule
+Relentless Rage
+
+Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
 Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup grant:["Berzerker Glaive|Relentless Rage","daemon-prince-glaive","A 18",null] · HURRDURR Hurrdurr
-GRANTED BY BERZERKER GLAIVE AND RELENTLESS RAGE
+A 18 · GRANTED BY
 
-A 18
+Berzerker Glaive + Relentless Rage
 
-Berzerker Glaive Enhancement
+Berzerker Glaive
+
+Enhancement
 
 WORLD EATERS model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.
 
-Relentless Rage Berzerker Warband detachment rule
+Relentless Rage
+
+Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
 Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup grant:["Relentless Rage","chaos-rhino","A 7",null] · HURRDURR Hurrdurr
-GRANTED BY RELENTLESS RAGE
+A 7 · GRANTED BY
 
-A 7
+Relentless Rage
 
-Relentless Rage Berzerker Warband detachment rule
+Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
 Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup grant:["Relentless Rage","daemon-prince-helm","A 17",null] · HURRDURR Hurrdurr
-GRANTED BY RELENTLESS RAGE
+A 17 · GRANTED BY
 
-A 17
+Relentless Rage
 
-Relentless Rage Berzerker Warband detachment rule
+Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
 Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup grant:["Relentless Rage","daemon-prince-helm","A 9",null] · HURRDURR Hurrdurr
-GRANTED BY RELENTLESS RAGE
+A 9 · GRANTED BY
 
-A 9
+Relentless Rage
 
-Relentless Rage Berzerker Warband detachment rule
+Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
 Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup grant:["Relentless Rage","eightbound","A 6",null] · HURRDURR Hurrdurr
-GRANTED BY RELENTLESS RAGE
+A 6 · GRANTED BY
 
-A 6
+Relentless Rage
 
-Relentless Rage Berzerker Warband detachment rule
+Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
 Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup grant:["Relentless Rage","forgefiend","A 7",null] · HURRDURR Hurrdurr
-GRANTED BY RELENTLESS RAGE
+A 7 · GRANTED BY
 
-A 7
+Relentless Rage
 
-Relentless Rage Berzerker Warband detachment rule
+Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
 Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup grant:["Relentless Rage","jakhals","A 4",null] · HURRDURR Hurrdurr
-GRANTED BY RELENTLESS RAGE
+A 4 · GRANTED BY
 
-A 4
+Relentless Rage
 
-Relentless Rage Berzerker Warband detachment rule
+Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
 Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup grant:["Relentless Rage","jakhals","A 5",null] · HURRDURR Hurrdurr
-GRANTED BY RELENTLESS RAGE
+A 5 · GRANTED BY
 
-A 5
+Relentless Rage
 
-Relentless Rage Berzerker Warband detachment rule
+Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
 Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup grant:["Relentless Rage","kharn","A 4",null] · HURRDURR Hurrdurr
-GRANTED BY RELENTLESS RAGE
+A 4 · GRANTED BY
 
-A 4
+Relentless Rage
 
-Relentless Rage Berzerker Warband detachment rule
+Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
 Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup grant:["Relentless Rage","kharn","A 5",null] · HURRDURR Hurrdurr
-GRANTED BY RELENTLESS RAGE
+A 5 · GRANTED BY
 
-A 5
+Relentless Rage
 
-Relentless Rage Berzerker Warband detachment rule
+Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
 Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup grant:["Relentless Rage","kharn","A 9",null] · HURRDURR Hurrdurr
-GRANTED BY RELENTLESS RAGE
+A 9 · GRANTED BY
 
-A 9
+Relentless Rage
 
-Relentless Rage Berzerker Warband detachment rule
+Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
 Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup grant:["Relentless Rage","lord-on-juggernaut","A 4",null] · HURRDURR Hurrdurr
-GRANTED BY RELENTLESS RAGE
+A 4 · GRANTED BY
 
-A 4
+Relentless Rage
 
-Relentless Rage Berzerker Warband detachment rule
+Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
 Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup grant:["Relentless Rage","lord-on-juggernaut","A 5",null] · HURRDURR Hurrdurr
-GRANTED BY RELENTLESS RAGE
+A 5 · GRANTED BY
 
-A 5
+Relentless Rage
 
-Relentless Rage Berzerker Warband detachment rule
+Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
 Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup grant:["Relentless Rage","lord-on-juggernaut","A 8",null] · HURRDURR Hurrdurr
-GRANTED BY RELENTLESS RAGE
+A 8 · GRANTED BY
 
-A 8
+Relentless Rage
 
-Relentless Rage Berzerker Warband detachment rule
+Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
 Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup grant:["Relentless Rage","slaughterbound","A 5",null] · HURRDURR Hurrdurr
-GRANTED BY RELENTLESS RAGE
+A 5 · GRANTED BY
 
-A 5
+Relentless Rage
 
-Relentless Rage Berzerker Warband detachment rule
+Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 
 Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup grant:["Relentless Rage","slaughterbound","A 7",null] · HURRDURR Hurrdurr
-GRANTED BY RELENTLESS RAGE
+A 7 · GRANTED BY
 
-A 7
+Relentless Rage
 
-Relentless Rage Berzerker Warband detachment rule
+Berzerker Warband detachment rule
 
 Friendly WORLD EATERS units’ melee attacks have +1 A.
 

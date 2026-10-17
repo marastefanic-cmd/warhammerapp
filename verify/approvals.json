@@ -3773,6 +3773,12 @@
   "at": "2026-10-16",
   "why": "\"WHEN: Your Shooting phase, just after you take a Psychic test\"."
  },
+ "fb9b381ab0082440": {
+  "verdict": "ok",
+  "by": "review:code4",
+  "at": "2026-10-17",
+  "why": "Read against what it implements: \"a value or keyword that a rule of the list already changed … the rule’s text, and that the value shown includes it\". The new layout keeps the same pieces and only reorders them:\n- Label: \"<value> · granted by\" (e.g. \"A 10 · granted by\", \"RAPID FIRE 1 · granted by\").\n- Title: the granting names from w.from/s.from, joined with \" + \" (e.g. \"Berzerker Glaive + Relentless Rage\").\n- Per source, from grantSource: its stored who/tag line or rule source, its stored text and table. The name is repeated as a heading only when there are several sources.\n- The unchanged note: \"Already in the value/keywords shown (as New Recruit and BSData list it/them)\". This is still backed by bsdata.json (grants compared both ways) and nr.json (values and keywords compared cell by cell) with 0 failures.\n- The keyword’s own rule (ruleFor), last.\nNo condition, scope or conclusion is added, and nothing is left out. The marks the popup names are the ones I spot-checked in the previous review, all granted by their named rule’s text. The rest is display only."
+ },
  "fc0d74e71dfbe33b": {
   "verdict": "ok",
   "by": "review:hurrdurr",

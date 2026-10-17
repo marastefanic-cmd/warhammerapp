@@ -4802,11 +4802,11 @@ NORN ASSIMILATOR unit only. This unit has 4+ InSv.
 ONAssimilator (280) · Synaptoprescience
 
 ######## popup grant:["Destabilising Predation","norn-emissary-dp","ANTI-CHARACTER 2+","ANTI-CHARACTER 2+"] · NIDZILLAS Nidzillas
-GRANTED BY DESTABILISING PREDATION
+ANTI-CHARACTER 2+ · GRANTED BY
 
-ANTI-CHARACTER 2+
+Destabilising Predation
 
-Destabilising Predation Enhancement
+Enhancement
 
 NORN EMISSARY unit only. This unit’s ranged attacks have [ANTI-CHARACTER 2+].
 
@@ -4819,22 +4819,22 @@ This ability always takes the form [ANTI-X Y+]. Each time an attack is made with
 Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
 
 ######## popup grant:["Synaptoprescience","norn-assimilator-280","INV 4+",null] · NIDZILLAS Nidzillas
-GRANTED BY SYNAPTOPRESCIENCE
+INV 4+ · GRANTED BY
 
-INV 4+
+Synaptoprescience
 
-Synaptoprescience Enhancement
+Enhancement
 
 NORN ASSIMILATOR unit only. This unit has 4+ InSv.
 
 Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup grant:["Synaptoprescience","norn-assimilator-300","INV 4+",null] · NIDZILLAS Nidzillas
-GRANTED BY SYNAPTOPRESCIENCE
+INV 4+ · GRANTED BY
 
-INV 4+
+Synaptoprescience
 
-Synaptoprescience Enhancement
+Enhancement
 
 NORN ASSIMILATOR unit only. This unit has 4+ InSv.
 

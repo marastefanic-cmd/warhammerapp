@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
-<script>window.WH_BUILD = '9a4cf0b430';</script>
+<script>window.WH_BUILD = '6669b157f0';</script>
 </head>
 <body>
 <style>
@@ -276,7 +276,10 @@ summary::-webkit-details-marker{display:none}
 .msep{display:flex; align-items:center; gap:6px; margin:7px 0 3px; font:600 10.5px/1.2 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--muted)}
 .msep::after{content:''; flex:1; border-top:1px solid var(--line)}
 .gsrc{margin:6px 0 10px; padding:8px 10px; border-left:3px solid var(--accent); background:var(--surface); border-radius:0 8px 8px 0}
-.gh{margin:0 0 4px} .gh .tg{margin-left:4px} .gk2{margin-top:14px}
+.gh{margin:0 0 4px} .gh .tg{margin-left:4px}
+.gw2{margin:0 0 4px; font-size:12.5px; color:var(--muted)}
+.gown{margin-top:16px; padding-top:10px; border-top:1px solid var(--line); color:var(--fg2)}
+.gown, .gown .rt, .gown p, .gown li{font-size:13px; line-height:1.4}
 .wr i.hi{font-style:normal; display:inline-block; min-width:26px; padding:1px 4px; border-radius:5px; background:var(--accent); color:var(--accent-ink)}
 .wr i.hb{display:block; font:700 12px/1.1 var(--f-head); font-style:normal; color:var(--accent)}
 .wr i.alt{font-style:normal; color:var(--accent)}
@@ -456,8 +459,8 @@ summary::-webkit-details-marker{display:none}
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="verified.js?v=9a4cf0b430"></script>
-<script src="data.js?v=9a4cf0b430"></script>
+<script src="verified.js?v=6669b157f0"></script>
+<script src="data.js?v=6669b157f0"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -1717,12 +1720,14 @@ function grantSource(name, u){
   return r ? { name:r.name, what:r.src, text:r.text, table:r.table } : { name, what:'', text:'' };
 }
 function showGrant(names, unitId, what, kw){
+  // the rule that grants it is the headline; the keyword's own rule follows, smaller
   const u = army().units.find(x => x.id === unitId);
-  const src = names.map(n => grantSource(n, u)).map(g => '<div class="gsrc"><p class="gh"><b>' + esc(g.name) + '</b>' + (g.what ? ' <span class="tg m">' + esc(g.what) + '</span>' : '') + '</p>' +
+  const gs = names.map(n => grantSource(n, u));
+  const src = gs.map(g => '<div class="gsrc">' + (gs.length > 1 ? '<p class="gh"><b>' + esc(g.name) + '</b></p>' : '') + (g.what ? '<p class="gw2">' + esc(g.what) + '</p>' : '') +
     rt(g.text) + (g.table ? ttable(g.table) : '') + '</div>').join('');
   const r = kw ? ruleFor(kw) : null;
-  const own = r ? '<p class="gh gk2"><b>' + esc(r.name) + '</b> <span class="tg m">' + esc(r.src) + '</span></p>' + rt(r.text) + (r.table ? ttable(r.table) : '') : '';
-  openSheet('Granted by ' + esc(names.join(' and ')), what, src + '<p class="note">' + (kw ? 'Already in the keywords shown' : 'Already in the value shown') + ' (as New Recruit and BSData list ' + (kw ? 'them' : 'it') + ').</p>' + own);
+  const own = r ? '<div class="gown"><p class="gh"><b>' + esc(r.name) + '</b> <span class="tg m">' + esc(r.src) + '</span></p>' + rt(r.text) + (r.table ? ttable(r.table) : '') + '</div>' : '';
+  openSheet(esc(what) + ' · granted by', gs.map(g => g.name).join(' + '), src + '<p class="note">' + (kw ? 'Already in the keywords shown' : 'Already in the value shown') + ' (as New Recruit and BSData list ' + (kw ? 'them' : 'it') + ').</p>' + own);
 }
 function showStrat(id){
   const s = allStratagems().find(x => x.id === id);

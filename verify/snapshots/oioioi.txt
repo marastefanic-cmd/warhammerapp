@@ -5036,66 +5036,66 @@ This unit must make an ingress move in your next Movement phase (including in yo
 ONSorcerer in Terminator Armour · Umbralefic Crystal
 
 ######## popup grant:["Eldritch Vortex of E’taph","daemon-prince","D 2",null] · OIOIOI oioioi
-GRANTED BY ELDRITCH VORTEX OF E’TAPH
+D 2 · GRANTED BY
 
-D 2
+Eldritch Vortex of E’taph
 
-Eldritch Vortex of E’taph Enhancement
+Enhancement
 
 THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.
 
 Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup grant:["Eldritch Vortex of E’taph","daemon-prince","D 4",null] · OIOIOI oioioi
-GRANTED BY ELDRITCH VORTEX OF E’TAPH
+D 4 · GRANTED BY
 
-D 4
+Eldritch Vortex of E’taph
 
-Eldritch Vortex of E’taph Enhancement
+Enhancement
 
 THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.
 
 Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup grant:["Eldritch Vortex of E’taph","daemon-prince","S 5",null] · OIOIOI oioioi
-GRANTED BY ELDRITCH VORTEX OF E’TAPH
+S 5 · GRANTED BY
 
-S 5
+Eldritch Vortex of E’taph
 
-Eldritch Vortex of E’taph Enhancement
+Enhancement
 
 THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.
 
 Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup grant:["Eldritch Vortex of E’taph","daemon-prince","S 7",null] · OIOIOI oioioi
-GRANTED BY ELDRITCH VORTEX OF E’TAPH
+S 7 · GRANTED BY
 
-S 7
+Eldritch Vortex of E’taph
 
-Eldritch Vortex of E’taph Enhancement
+Enhancement
 
 THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.
 
 Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup grant:["Eldritch Vortex of E’taph","daemon-prince","S 9",null] · OIOIOI oioioi
-GRANTED BY ELDRITCH VORTEX OF E’TAPH
+S 9 · GRANTED BY
 
-S 9
+Eldritch Vortex of E’taph
 
-Eldritch Vortex of E’taph Enhancement
+Enhancement
 
 THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.
 
 Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup grant:["Empyric Guidance","sorcerer","LETHAL HITS","LETHAL HITS"] · OIOIOI oioioi
-GRANTED BY EMPYRIC GUIDANCE
+LETHAL HITS · GRANTED BY
 
-LETHAL HITS
+Empyric Guidance
 
-Empyric Guidance Sorcerer · Psychic
+Sorcerer · Psychic
 
 While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.
 
@@ -5108,11 +5108,11 @@ Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, 
 Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
 
 ######## popup grant:["Empyric Guidance","sorcerer-terminator","LETHAL HITS","LETHAL HITS"] · OIOIOI oioioi
-GRANTED BY EMPYRIC GUIDANCE
+LETHAL HITS · GRANTED BY
 
-LETHAL HITS
+Empyric Guidance
 
-Empyric Guidance Sorcerer in Terminator Armour · Psychic
+Sorcerer in Terminator Armour · Psychic
 
 While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.
 
@@ -5125,11 +5125,11 @@ Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, 
 Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
 
 ######## popup grant:["Icon of Flame","sorcerer","IGNORES COVER","IGNORES COVER"] · OIOIOI oioioi
-GRANTED BY ICON OF FLAME
+IGNORES COVER · GRANTED BY
 
-IGNORES COVER
+Icon of Flame
 
-Icon of Flame Rubric Marines
+Rubric Marines
 
 Ranged weapons equipped by models in the bearer’s unit (excluding CHARACTERS) have the [IGNORES COVER] ability.
 

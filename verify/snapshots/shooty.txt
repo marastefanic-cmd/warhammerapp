@@ -5657,22 +5657,22 @@ ORKS INFANTRY model only (excluding WEIRDBOY models). This model’s ranged atta
 ONBig Mek · Supa-glowy Fing
 
 ######## popup grant:["Cybork Boosta","dakkarig-boosta","M 10\"",null] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
-GRANTED BY CYBORK BOOSTA
+M 10" · GRANTED BY
 
-M 10"
+Cybork Boosta
 
-Cybork Boosta Enhancement
+Enhancement
 
 BIG MEK/MEK model only. This model has +2" M.
 
 Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup grant:["Dakka! Dakka! Dakka!","bigmek-mega","ASSAULT","ASSAULT"] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
-GRANTED BY DAKKA! DAKKA! DAKKA!
+ASSAULT · GRANTED BY
 
-ASSAULT
+Dakka! Dakka! Dakka!
 
-Dakka! Dakka! Dakka! Shoota Boyz detachment rule
+Shoota Boyz detachment rule
 
 Friendly ORKS INFANTRY units’ ranged attacks have:
 
@@ -5686,11 +5686,11 @@ ASSAULT Core rule
 Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
 
 ######## popup grant:["Dakka! Dakka! Dakka!","gretchin","ASSAULT","ASSAULT"] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
-GRANTED BY DAKKA! DAKKA! DAKKA!
+ASSAULT · GRANTED BY
 
-ASSAULT
+Dakka! Dakka! Dakka!
 
-Dakka! Dakka! Dakka! Shoota Boyz detachment rule
+Shoota Boyz detachment rule
 
 Friendly ORKS INFANTRY units’ ranged attacks have:
 
@@ -5704,11 +5704,11 @@ ASSAULT Core rule
 Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
 
 ######## popup grant:["Dakka! Dakka! Dakka!","mek-flashgitz","ASSAULT","ASSAULT"] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
-GRANTED BY DAKKA! DAKKA! DAKKA!
+ASSAULT · GRANTED BY
 
-ASSAULT
+Dakka! Dakka! Dakka!
 
-Dakka! Dakka! Dakka! Shoota Boyz detachment rule
+Shoota Boyz detachment rule
 
 Friendly ORKS INFANTRY units’ ranged attacks have:
 
@@ -5722,11 +5722,11 @@ ASSAULT Core rule
 Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
 
 ######## popup grant:["Dakka! Dakka! Dakka!","mek-tankbustas-1","ASSAULT","ASSAULT"] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
-GRANTED BY DAKKA! DAKKA! DAKKA!
+ASSAULT · GRANTED BY
 
-ASSAULT
+Dakka! Dakka! Dakka!
 
-Dakka! Dakka! Dakka! Shoota Boyz detachment rule
+Shoota Boyz detachment rule
 
 Friendly ORKS INFANTRY units’ ranged attacks have:
 
@@ -5740,11 +5740,11 @@ ASSAULT Core rule
 Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
 
 ######## popup grant:["Dakka! Dakka! Dakka!","mek-tankbustas-2","ASSAULT","ASSAULT"] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
-GRANTED BY DAKKA! DAKKA! DAKKA!
+ASSAULT · GRANTED BY
 
-ASSAULT
+Dakka! Dakka! Dakka!
 
-Dakka! Dakka! Dakka! Shoota Boyz detachment rule
+Shoota Boyz detachment rule
 
 Friendly ORKS INFANTRY units’ ranged attacks have:
 
@@ -5758,11 +5758,11 @@ ASSAULT Core rule
 Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
 
 ######## popup grant:["Dakka! Dakka! Dakka!","warboss","ASSAULT","ASSAULT"] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
-GRANTED BY DAKKA! DAKKA! DAKKA!
+ASSAULT · GRANTED BY
 
-ASSAULT
+Dakka! Dakka! Dakka!
 
-Dakka! Dakka! Dakka! Shoota Boyz detachment rule
+Shoota Boyz detachment rule
 
 Friendly ORKS INFANTRY units’ ranged attacks have:
 
@@ -5776,11 +5776,11 @@ ASSAULT Core rule
 Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
 
 ######## popup grant:["Kustom Dakka","mek-flashgitz","IGNORES COVER","IGNORES COVER"] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
-GRANTED BY KUSTOM DAKKA
+IGNORES COVER · GRANTED BY
 
-IGNORES COVER
+Kustom Dakka
 
-Kustom Dakka Mek
+Mek
 
 This unit’s ranged attacks have [IGNORES COVER].
 
@@ -5791,11 +5791,11 @@ IGNORES COVER Core rule
 Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
 
 ######## popup grant:["Kustom Dakka","mek-tankbustas-1","IGNORES COVER","IGNORES COVER"] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
-GRANTED BY KUSTOM DAKKA
+IGNORES COVER · GRANTED BY
 
-IGNORES COVER
+Kustom Dakka
 
-Kustom Dakka Mek
+Mek
 
 This unit’s ranged attacks have [IGNORES COVER].
 
@@ -5806,11 +5806,11 @@ IGNORES COVER Core rule
 Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
 
 ######## popup grant:["Kustom Dakka","mek-tankbustas-2","IGNORES COVER","IGNORES COVER"] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
-GRANTED BY KUSTOM DAKKA
+IGNORES COVER · GRANTED BY
 
-IGNORES COVER
+Kustom Dakka
 
-Kustom Dakka Mek
+Mek
 
 This unit’s ranged attacks have [IGNORES COVER].
 
@@ -5821,9 +5821,7 @@ IGNORES COVER Core rule
 Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
 
 ######## popup grant:["More Dakka","bigmek-mega","IGNORES COVER","IGNORES COVER"] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
-GRANTED BY MORE DAKKA
-
-IGNORES COVER
+IGNORES COVER · GRANTED BY
 
 More Dakka
 
@@ -5839,11 +5837,11 @@ IGNORES COVER Core rule
 Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
 
 ######## popup grant:["Supa-glowy Fing","bigmek-mega","ANTI-INFANTRY 4+","ANTI-INFANTRY 4+"] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
-GRANTED BY SUPA-GLOWY FING
+ANTI-INFANTRY 4+ · GRANTED BY
 
-ANTI-INFANTRY 4+
+Supa-glowy Fing
 
-Supa-glowy Fing Enhancement
+Enhancement
 
 ORKS INFANTRY model only (excluding WEIRDBOY models). This model’s ranged attacks have:
 
@@ -5860,11 +5858,11 @@ This ability always takes the form [ANTI-X Y+]. Each time an attack is made with
 Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
 
 ######## popup grant:["Supa-glowy Fing","bigmek-mega","DEVASTATING WOUNDS","DEVASTATING WOUNDS"] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
-GRANTED BY SUPA-GLOWY FING
+DEVASTATING WOUNDS · GRANTED BY
 
-DEVASTATING WOUNDS
+Supa-glowy Fing
 
-Supa-glowy Fing Enhancement
+Enhancement
 
 ORKS INFANTRY model only (excluding WEIRDBOY models). This model’s ranged attacks have:
 
@@ -5881,11 +5879,11 @@ Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critica
 Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
 
 ######## popup grant:["Supa-glowy Fing","bigmek-mega","SUPA-HAZARDOUS","SUPA-HAZARDOUS"] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
-GRANTED BY SUPA-GLOWY FING
+SUPA-HAZARDOUS · GRANTED BY
 
-SUPA-HAZARDOUS
+Supa-glowy Fing
 
-Supa-glowy Fing Enhancement
+Enhancement
 
 ORKS INFANTRY model only (excluding WEIRDBOY models). This model’s ranged attacks have:
 
@@ -5900,11 +5898,11 @@ SUPA-HAZARDOUS Shoota Boyz enhancement Supa-glowy Fing
 Each time a unit is selected to shoot, after that unit has resolved all of its attacks, make two hazard rolls for that unit for each [SUPA-HAZARDOUS] weapon you selected in the Select Weapons step.
 
 ######## popup grant:["Supa-snazz Dakka","mek-flashgitz","RAPID FIRE 1","RAPID FIRE 1"] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
-GRANTED BY SUPA-SNAZZ DAKKA
+RAPID FIRE 1 · GRANTED BY
 
-RAPID FIRE 1
+Supa-snazz Dakka
 
-Supa-snazz Dakka Flash Gitz · Upgrade
+Flash Gitz · Upgrade
 
 FLASH GITZ unit only. This unit’s Snazzgun weapons have [RAPID FIRE 1].
 

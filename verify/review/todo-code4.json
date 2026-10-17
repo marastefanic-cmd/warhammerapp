@@ -1,0 +1,14 @@
+[
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "showGrant",
+  "judgement": {
+   "code": "function showGrant(names, unitId, what, kw){\n  // the rule that grants it is the headline; the keyword's own rule follows, smaller\n  const u = army().units.find(x => x.id === unitId);\n  const gs = names.map(n => grantSource(n, u));\n  const src = gs.map(g => '<div class=\"gsrc\">' + (gs.length > 1 ? '<p class=\"gh\"><b>' + esc(g.name) + '</b></p>' : '') + (g.what ? '<p class=\"gw2\">' + esc(g.what) + '</p>' : '') +\n    rt(g.text) + (g.table ? ttable(g.table) : '') + '</div>').join('');\n  const r = kw ? ruleFor(kw) : null;\n  const own = r ? '<div class=\"gown\"><p class=\"gh\"><b>' + esc(r.name) + '</b> <span class=\"tg m\">' + esc(r.src) + '</span></p>' + rt(r.text) + (r.table ? ttable(r.table) : '') + '</div>' : '';\n  openSheet(esc(what) + ' · granted by', gs.map(g => g.name).join(' + '), src + '<p class=\"note\">' + (kw ? 'Already in the keywords shown' : 'Already in the value shown') + ' (as New Recruit and BSData list ' + (kw ? 'them' : 'it') + ').</p>' + own);\n}"
+  },
+  "source": {
+   "implements": "\"Granted by\": a value or keyword that a rule of the list already changed (from BSData's modifiers, checked against New Recruit's \"(…)\" marks): the rule's text, and that the value shown includes it"
+  },
+  "key": "fb9b381ab0082440"
+ }
+]

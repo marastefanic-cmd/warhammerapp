@@ -5157,55 +5157,55 @@ In your Shooting phase, you can select one friendly ORKS WALKER unit within 3" o
 ONBig Mek · Dreadherder
 
 ######## popup grant:["Brutal But Kunnin’","beastboss-bbk","D 3",null] · COOKING Cooking
-GRANTED BY BRUTAL BUT KUNNIN’
+D 3 · GRANTED BY
 
-D 3
+Brutal But Kunnin’
 
-Brutal But Kunnin’ Enhancement
+Enhancement
 
 WARBOSS model only. This model’s melee attacks have +1 D.
 
 Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup grant:["Brutal But Kunnin’","beastboss-bbk","D 4",null] · COOKING Cooking
-GRANTED BY BRUTAL BUT KUNNIN’
+D 4 · GRANTED BY
 
-D 4
+Brutal But Kunnin’
 
-Brutal But Kunnin’ Enhancement
+Enhancement
 
 WARBOSS model only. This model’s melee attacks have +1 D.
 
 Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup grant:["Brutal But Kunnin’","beastboss-bbk","D D6+1",null] · COOKING Cooking
-GRANTED BY BRUTAL BUT KUNNIN’
+D D6+1 · GRANTED BY
 
-D D6+1
+Brutal But Kunnin’
 
-Brutal But Kunnin’ Enhancement
+Enhancement
 
 WARBOSS model only. This model’s melee attacks have +1 D.
 
 Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup grant:["Cybork Boosta","dakkarig-boosta","M 10\"",null] · COOKING Cooking
-GRANTED BY CYBORK BOOSTA
+M 10" · GRANTED BY
 
-M 10"
+Cybork Boosta
 
-Cybork Boosta Enhancement
+Enhancement
 
 BIG MEK/MEK model only. This model has +2" M.
 
 Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup grant:["Nazdreg’s Know-wotz","nazdreg","IGNORES COVER","IGNORES COVER"] · COOKING Cooking
-GRANTED BY NAZDREG’S KNOW-WOTZ
+IGNORES COVER · GRANTED BY
 
-IGNORES COVER
+Nazdreg’s Know-wotz
 
-Nazdreg’s Know-wotz Nazdreg
+Nazdreg
 
 This unit has Deep Strike.
 This unit’s ranged attacks have [IGNORES COVER].
