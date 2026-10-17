@@ -1,4 +1,4 @@
-######## army · STRATAGEMS oioioi
+######## army · TURN oioioi
 Thousand Sons · 2000 / 2000 pts · Strike Force
 
 Grand Coven · Disposition: Priority Assets
@@ -48,6 +48,7 @@ START OF THE BATTLE ROUND
 EVERY ROUND
 Unearthly Power · Magnus the Red
 ONCE PER BATTLE
+NEW GAME
 RULES
 Kindred Sorcery · Grand Coven (each of its options once)
 ABILITIES
@@ -1070,7 +1071,7 @@ Defiler
 
 From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
 
-######## strats {"turn":"all","phase":"all"} · BASES Stratagems
+######## strats {"turn":"all","phase":"all"} · BASES Turn ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
 COLLAPSE ALL
 GRAND COVEN
 6
@@ -1352,7 +1353,48 @@ Not shown, no unit here can use it: Smokescreen (SMOKE).
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## strats {"turn":"all","phase":"command"} · STRATAGEMS Stratagems
+######## strats {"turn":"all","phase":"command"} · COMMAND Command ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+THIS PHASE
+3 abilities
+Unearthly Power
+Magnus the Red
+
+At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.
+
+UNITSMagnus the Red
+
+Kindred Sorcery
+Grand Coven rule · Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer, Sorcerer in Terminator Armour, Tzaangors, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows, Defiler
+
+In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.
+
+Imbued Manifestation
+
+Add 6" to the Range characteristic of ranged Psychic weapons equipped by THOUSAND SONS models from your army.
+
+Psychic Maelstrom
+
+Each time a THOUSAND SONS model from your army makes an attack with a Psychic weapon, add 1 to the Wound roll.
+
+Wrath of the Immaterium
+
+Psychic weapons equipped by THOUSAND SONS models from your army have the [DEVASTATING WOUNDS] ability.
+
+UNITSMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal, Tzaangors, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows, Defiler
+
+Umbralefic Crystal
+Sorcerer in Terminator Armour
+Enhancement
+
+THOUSAND SONS model only. (Once per battle, per army) In your Command phase, if this unit is unengaged, you can use this ability. If you do:
+
+Place this unit in strategic reserves.
+This unit has Deep Strike until the start of your next Shooting phase.
+This unit must make an ingress move in your next Movement phase (including in your first turn).
+
+UNITSSorcerer in Terminator Armour · Umbralefic Crystal
+
+STRATAGEMS
 COLLAPSE ALL
 GRAND COVEN
 4
@@ -1467,15 +1509,13 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-ALSO THIS PHASE
-3 abilities
-Unearthly Power
-Magnus the Red
+NEXT: MOVEMENT ›
 
-At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-UNITSMagnus the Red
-
+######## strats {"turn":"all","phase":"movement"} · MOVEMENT Movement ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+THIS PHASE
+9 abilities
 Kindred Sorcery
 Grand Coven rule · Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer, Sorcerer in Terminator Armour, Tzaangors, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows, Defiler
 
@@ -1495,6 +1535,40 @@ Psychic weapons equipped by THOUSAND SONS models from your army have the [DEVAST
 
 UNITSMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal, Tzaangors, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows, Defiler
 
+Time Flux
+Magnus the Red
+Crimson King · Aura, Psychic
+
+While a friendly THOUSAND SONS unit is within 6" of this PSYKER, add 2" to the Move characteristic of models in that unit.
+
+UNITSMagnus the Red
+
+Aetherstride
+Daemon Prince of Tzeentch with wings
+Psychic
+
+In your Movement phase, when this model is set up on the battlefield using the Deep Strike ability, it can perform an aetherstride. If it does:
+
+It can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units.
+Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability.
+Until the end of the turn, it is not eligible to declare a charge.
+
+UNITSDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph
+
+Hunter of Souls
+Daemon Prince of Tzeentch with wings
+
+Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a CHARACTER unit, this model regains up to D3 lost wounds (if that CHARACTER unit was a PSYKER, this model regains up to 3 lost wounds instead).
+
+UNITSDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph
+
+Bringers of Change
+Sorcerer
+
+Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead.
+
+UNITSSorcerer
+
 Umbralefic Crystal
 Sorcerer in Terminator Armour
 Enhancement
@@ -1507,11 +1581,30 @@ This unit must make an ingress move in your next Movement phase (including in yo
 
 UNITSSorcerer in Terminator Armour · Umbralefic Crystal
 
-NEXT: MOVEMENT ›
+Malign Trickery
+Tzaangor Enlightened with Fatecaster greatbows
 
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+In your opponent’s Movement phase, if an enemy unit ends a move within 8" of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6".
 
-######## strats {"turn":"all","phase":"movement"} · STRATAGEMS Stratagems
+UNITSTzaangor Enlightened with Fatecaster greatbows
+
+Scuttling Walker
+Defiler
+
+Each time this unit makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and terrain features. When doing so, it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.
+
+UNITSDefiler
+
+Deep Strike
+Core rule · Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer in Terminator Armour
+
+Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
+
+App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
+
+UNITSMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer in Terminator Armour · Umbralefic Crystal
+
+STRATAGEMS
 COLLAPSE ALL
 GRAND COVEN
 2
@@ -1608,218 +1701,12 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-ALSO THIS PHASE
-9 abilities
-Kindred Sorcery
-Grand Coven rule · Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer, Sorcerer in Terminator Armour, Tzaangors, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows, Defiler
-
-In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.
-
-Imbued Manifestation
-
-Add 6" to the Range characteristic of ranged Psychic weapons equipped by THOUSAND SONS models from your army.
-
-Psychic Maelstrom
-
-Each time a THOUSAND SONS model from your army makes an attack with a Psychic weapon, add 1 to the Wound roll.
-
-Wrath of the Immaterium
-
-Psychic weapons equipped by THOUSAND SONS models from your army have the [DEVASTATING WOUNDS] ability.
-
-UNITSMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal, Tzaangors, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows, Defiler
-
-Time Flux
-Magnus the Red
-Crimson King · Aura, Psychic
-
-While a friendly THOUSAND SONS unit is within 6" of this PSYKER, add 2" to the Move characteristic of models in that unit.
-
-UNITSMagnus the Red
-
-Aetherstride
-Daemon Prince of Tzeentch with wings
-Psychic
-
-In your Movement phase, when this model is set up on the battlefield using the Deep Strike ability, it can perform an aetherstride. If it does:
-
-It can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units.
-Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability.
-Until the end of the turn, it is not eligible to declare a charge.
-
-UNITSDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph
-
-Hunter of Souls
-Daemon Prince of Tzeentch with wings
-
-Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a CHARACTER unit, this model regains up to D3 lost wounds (if that CHARACTER unit was a PSYKER, this model regains up to 3 lost wounds instead).
-
-UNITSDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph
-
-Bringers of Change
-Sorcerer
-
-Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead.
-
-UNITSSorcerer
-
-Umbralefic Crystal
-Sorcerer in Terminator Armour
-Enhancement
-
-THOUSAND SONS model only. (Once per battle, per army) In your Command phase, if this unit is unengaged, you can use this ability. If you do:
-
-Place this unit in strategic reserves.
-This unit has Deep Strike until the start of your next Shooting phase.
-This unit must make an ingress move in your next Movement phase (including in your first turn).
-
-UNITSSorcerer in Terminator Armour · Umbralefic Crystal
-
-Malign Trickery
-Tzaangor Enlightened with Fatecaster greatbows
-
-In your opponent’s Movement phase, if an enemy unit ends a move within 8" of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6".
-
-UNITSTzaangor Enlightened with Fatecaster greatbows
-
-Scuttling Walker
-Defiler
-
-Each time this unit makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and terrain features. When doing so, it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.
-
-UNITSDefiler
-
-Deep Strike
-Core rule · Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer in Terminator Armour
-
-Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
-
-App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
-
-UNITSMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer in Terminator Armour · Umbralefic Crystal
-
 NEXT: SHOOTING ›
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## strats {"turn":"all","phase":"shooting"} · STRATAGEMS Stratagems
-COLLAPSE ALL
-GRAND COVEN
-4
-1
-CP
-Arcane Focus
-Shooting · Your turn
-WHEN
-
-Your Shooting phase, just after you take a Psychic test for a THOUSAND SONS model from your army that Channelled the Warp (before resolving that Ritual).
-
-TARGETThat THOUSAND SONS model.
-
-EFFECT
-
-Re-roll all of the D6 rolled for that Psychic test (including the additional D6 for Channelling the Warp).
-
-USED BYany unit
-
-2
-CP
-Devastating Sorcery
-Shooting · Your turn
-WHEN
-
-Your Shooting phase.
-
-TARGETOne THOUSAND SONS PSYKER unit from your army that has not been selected to shoot this phase.
-
-EFFECT
-
-Until the end of the phase, add 9" to the Range characteristic of Psychic weapons equipped by models in your unit, and each time a model in your unit makes an attack with a Psychic weapon, you can re-roll the Hit roll and you can re-roll the Wound roll.
-
-USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
-
-1
-CP
-Psychic Dominion
-Any phase · Either turn
-WHEN
-
-Any phase, just after an enemy unit has selected its targets.
-
-TARGETOne THOUSAND SONS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
-
-EFFECT
-
-Until the end of the phase, Psychic weapons equipped by models in the attacking unit have the [HAZARDOUS] ability, and models in your unit have the Feel No Pain 4+ ability against Psychic Attacks.
-
-USED BYany unit
-
-1
-CP
-Destined by Fate
-Any phase · Either turn
-WHEN
-
-Any phase, just after a saving throw is failed for a THOUSAND SONS PSYKER model from your army. If you are using fast dice rolling, this Stratagem can still be used after rolling multiple saving throws at once.
-
-TARGETThat PSYKER model.
-
-EFFECT
-
-Change the Damage characteristic of that attack to 0. If you are using fast dice rolling, select one of those attacks you failed a saving throw for.
-
-USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
-
-CORE STRATAGEMS
-2
-1
-CP
-Explosives
-Shooting · Your turn
-WHEN
-
-Your Shooting phase.
-
-TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
-
-EFFECT
-
-Resolve the following sequence:
-
-1. Select one EXPLOSIVES/GRENADES model in your unit.
-2. Select one unengaged enemy unit within 8" of and visible to that model.
-3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
-
-Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
-
-USED BYSorcerer
-
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-ALSO THIS PHASE
+######## strats {"turn":"all","phase":"shooting"} · SHOOTING Shooting ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+THIS PHASE
 10 abilities
 Treason of Tzeentch
 Magnus the Red
@@ -1941,6 +1828,123 @@ Each time this unit makes a Normal, Advance or Fall Back move, it can move throu
 
 UNITSDefiler
 
+STRATAGEMS
+COLLAPSE ALL
+GRAND COVEN
+4
+1
+CP
+Arcane Focus
+Shooting · Your turn
+WHEN
+
+Your Shooting phase, just after you take a Psychic test for a THOUSAND SONS model from your army that Channelled the Warp (before resolving that Ritual).
+
+TARGETThat THOUSAND SONS model.
+
+EFFECT
+
+Re-roll all of the D6 rolled for that Psychic test (including the additional D6 for Channelling the Warp).
+
+USED BYany unit
+
+2
+CP
+Devastating Sorcery
+Shooting · Your turn
+WHEN
+
+Your Shooting phase.
+
+TARGETOne THOUSAND SONS PSYKER unit from your army that has not been selected to shoot this phase.
+
+EFFECT
+
+Until the end of the phase, add 9" to the Range characteristic of Psychic weapons equipped by models in your unit, and each time a model in your unit makes an attack with a Psychic weapon, you can re-roll the Hit roll and you can re-roll the Wound roll.
+
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+
+1
+CP
+Psychic Dominion
+Any phase · Either turn
+WHEN
+
+Any phase, just after an enemy unit has selected its targets.
+
+TARGETOne THOUSAND SONS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, Psychic weapons equipped by models in the attacking unit have the [HAZARDOUS] ability, and models in your unit have the Feel No Pain 4+ ability against Psychic Attacks.
+
+USED BYany unit
+
+1
+CP
+Destined by Fate
+Any phase · Either turn
+WHEN
+
+Any phase, just after a saving throw is failed for a THOUSAND SONS PSYKER model from your army. If you are using fast dice rolling, this Stratagem can still be used after rolling multiple saving throws at once.
+
+TARGETThat PSYKER model.
+
+EFFECT
+
+Change the Damage characteristic of that attack to 0. If you are using fast dice rolling, select one of those attacks you failed a saving throw for.
+
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+
+CORE STRATAGEMS
+2
+1
+CP
+Explosives
+Shooting · Your turn
+WHEN
+
+Your Shooting phase.
+
+TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one EXPLOSIVES/GRENADES model in your unit.
+2. Select one unengaged enemy unit within 8" of and visible to that model.
+3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
+
+Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+
+USED BYSorcerer
+
+1
+CP
+Command Re-roll
+Any phase · Either turn
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
 WHEN TARGETED
 
 Every unit: 1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; their Psychic weapons get [HAZARDOUS]
@@ -1971,7 +1975,65 @@ Not shown, no unit here can use it: Smokescreen (SMOKE).
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## strats {"turn":"all","phase":"charge"} · STRATAGEMS Stratagems
+######## strats {"turn":"all","phase":"charge"} · CHARGE Charge ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+THIS PHASE
+3 abilities
+Cabal of Sorcerers
+Thousand Sons army rule
+
+If your Army Faction is THOUSAND SONS, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.
+
+Psychic Test Sequence
+
+Roll 2D6
+Channel the Warp (Optional)
+Then, if one or more doubles or triples were rolled during this test, that model’s unit suffers D3 mortal wounds.
+If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects.
+
+FAQ (Faction Pack 1.3): Do I need to sequence all of my Cabal of Sorcerers Rituals at the start of my Shooting phase? No, you just pick a model with the Cabal of Sorcerers rule, pick a Ritual to manifest, and attempt it, then repeat the process until you have run out of models or Rituals or both.
+
+FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, do I have to choose whether to Channel the Warp before rolling any dice? No.
+
+FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, if I roll one or more doubles or triples, does my model only suffer D3 mortal wounds if I chose to Channel the Warp? Yes.
+
+App note, not rules text: Channel the Warp means rolling one more D6 for the test (the printed card shows it as a die).
+
+Destiny’s Ruin (Psychic) · Warp Charge 5
+
+Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, re-roll a Hit roll of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.
+
+Temporal Surge (Psychic) · Warp Charge 6
+
+Select one friendly THOUSAND SONS or SCINTILLATING LEGIONS unit that is not within Engagement Range of one or more enemy units and is within 24" of and visible to the manifesting model. That unit can make a Normal move of up to D6". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.
+
+Doombolt (Psychic) · Warp Charge 7
+
+Select one enemy unit within 24" of and visible to the manifesting model (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12" of the manifesting model); that unit suffers D3 mortal wounds. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.
+
+Twist of Fate (Psychic) · Warp Charge 9
+
+Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead.
+
+Aetherstride
+Daemon Prince of Tzeentch with wings
+Psychic
+
+In your Movement phase, when this model is set up on the battlefield using the Deep Strike ability, it can perform an aetherstride. If it does:
+
+It can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units.
+Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability.
+Until the end of the turn, it is not eligible to declare a charge.
+
+UNITSDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph
+
+Prophesied Doom
+Tzaangor Enlightened
+
+Each time this unit makes a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound.
+
+UNITSTzaangor Enlightened
+
+STRATAGEMS
 COLLAPSE ALL
 GRAND COVEN
 2
@@ -2077,68 +2139,66 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-ALSO THIS PHASE
-3 abilities
-Cabal of Sorcerers
-Thousand Sons army rule
-
-If your Army Faction is THOUSAND SONS, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.
-
-Psychic Test Sequence
-
-Roll 2D6
-Channel the Warp (Optional)
-Then, if one or more doubles or triples were rolled during this test, that model’s unit suffers D3 mortal wounds.
-If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects.
-
-FAQ (Faction Pack 1.3): Do I need to sequence all of my Cabal of Sorcerers Rituals at the start of my Shooting phase? No, you just pick a model with the Cabal of Sorcerers rule, pick a Ritual to manifest, and attempt it, then repeat the process until you have run out of models or Rituals or both.
-
-FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, do I have to choose whether to Channel the Warp before rolling any dice? No.
-
-FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, if I roll one or more doubles or triples, does my model only suffer D3 mortal wounds if I chose to Channel the Warp? Yes.
-
-App note, not rules text: Channel the Warp means rolling one more D6 for the test (the printed card shows it as a die).
-
-Destiny’s Ruin (Psychic) · Warp Charge 5
-
-Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, re-roll a Hit roll of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.
-
-Temporal Surge (Psychic) · Warp Charge 6
-
-Select one friendly THOUSAND SONS or SCINTILLATING LEGIONS unit that is not within Engagement Range of one or more enemy units and is within 24" of and visible to the manifesting model. That unit can make a Normal move of up to D6". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.
-
-Doombolt (Psychic) · Warp Charge 7
-
-Select one enemy unit within 24" of and visible to the manifesting model (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12" of the manifesting model); that unit suffers D3 mortal wounds. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.
-
-Twist of Fate (Psychic) · Warp Charge 9
-
-Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead.
-
-Aetherstride
-Daemon Prince of Tzeentch with wings
-Psychic
-
-In your Movement phase, when this model is set up on the battlefield using the Deep Strike ability, it can perform an aetherstride. If it does:
-
-It can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units.
-Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability.
-Until the end of the turn, it is not eligible to declare a charge.
-
-UNITSDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph
-
-Prophesied Doom
-Tzaangor Enlightened
-
-Each time this unit makes a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound.
-
-UNITSTzaangor Enlightened
-
 NEXT: FIGHT ›
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## strats {"turn":"all","phase":"fight"} · STRATAGEMS Stratagems
+######## strats {"turn":"all","phase":"fight"} · FIGHT Fight ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+THIS PHASE
+5 abilities
+Kindred Sorcery
+Grand Coven rule · Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer, Sorcerer in Terminator Armour, Tzaangors, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows, Defiler
+
+In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.
+
+Imbued Manifestation
+
+Add 6" to the Range characteristic of ranged Psychic weapons equipped by THOUSAND SONS models from your army.
+
+Psychic Maelstrom
+
+Each time a THOUSAND SONS model from your army makes an attack with a Psychic weapon, add 1 to the Wound roll.
+
+Wrath of the Immaterium
+
+Psychic weapons equipped by THOUSAND SONS models from your army have the [DEVASTATING WOUNDS] ability.
+
+UNITSMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal, Tzaangors, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows, Defiler
+
+Hunter of Souls
+Daemon Prince of Tzeentch with wings
+
+Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a CHARACTER unit, this model regains up to D3 lost wounds (if that CHARACTER unit was a PSYKER, this model regains up to 3 lost wounds instead).
+
+UNITSDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph
+
+Twisted Sorceries
+Sorcerer
+Once per battle · Psychic
+
+Once per battle, in your Shooting phase or the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristic of Psychic weapons equipped by this model by 3.
+
+UNITSSorcerer
+
+Destroyer of Futures
+Defiler
+Once per phase, per unit
+
+You can target this unit with the Counteroffensive stratagem, regardless of any other uses of that stratagem this phase. If you do:
+
+That use is -1 CP.
+That use does not prevent any uses of that stratagem on other units this phase.
+
+UNITSDefiler
+
+Ambushing Hunters
+Tzaangors
+
+At the end of your opponent’s turn, if this unit is more than 6" horizontally away from all enemy units, you can remove this unit from the battlefield and place it into Strategic Reserves.
+
+UNITSTzaangors
+
+STRATAGEMS
 COLLAPSE ALL
 GRAND COVEN
 2
@@ -2233,60 +2293,6 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-ALSO THIS PHASE
-5 abilities
-Kindred Sorcery
-Grand Coven rule · Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer, Sorcerer in Terminator Armour, Tzaangors, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows, Defiler
-
-In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.
-
-Imbued Manifestation
-
-Add 6" to the Range characteristic of ranged Psychic weapons equipped by THOUSAND SONS models from your army.
-
-Psychic Maelstrom
-
-Each time a THOUSAND SONS model from your army makes an attack with a Psychic weapon, add 1 to the Wound roll.
-
-Wrath of the Immaterium
-
-Psychic weapons equipped by THOUSAND SONS models from your army have the [DEVASTATING WOUNDS] ability.
-
-UNITSMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal, Tzaangors, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows, Defiler
-
-Hunter of Souls
-Daemon Prince of Tzeentch with wings
-
-Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a CHARACTER unit, this model regains up to D3 lost wounds (if that CHARACTER unit was a PSYKER, this model regains up to 3 lost wounds instead).
-
-UNITSDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph
-
-Twisted Sorceries
-Sorcerer
-Once per battle · Psychic
-
-Once per battle, in your Shooting phase or the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristic of Psychic weapons equipped by this model by 3.
-
-UNITSSorcerer
-
-Destroyer of Futures
-Defiler
-Once per phase, per unit
-
-You can target this unit with the Counteroffensive stratagem, regardless of any other uses of that stratagem this phase. If you do:
-
-That use is -1 CP.
-That use does not prevent any uses of that stratagem on other units this phase.
-
-UNITSDefiler
-
-Ambushing Hunters
-Tzaangors
-
-At the end of your opponent’s turn, if this unit is more than 6" horizontally away from all enemy units, you can remove this unit from the battlefield and place it into Strategic Reserves.
-
-UNITSTzaangors
-
 WHEN TARGETED
 
 Every unit: 1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; their Psychic weapons get [HAZARDOUS]
@@ -2315,7 +2321,7 @@ NEXT: COMMAND ›
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## strats {"turn":"your","phase":"all"} · STRATAGEMS Stratagems
+######## strats {"turn":"your","phase":"all"} · TURN Turn ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
 COLLAPSE ALL
 GRAND COVEN
 6
@@ -2524,7 +2530,48 @@ USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex o
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## strats {"turn":"your","phase":"command"} · STRATAGEMS Stratagems
+######## strats {"turn":"your","phase":"command"} · YOUR COMMAND Your Command ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+THIS PHASE
+3 abilities
+Unearthly Power
+Magnus the Red
+
+At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.
+
+UNITSMagnus the Red
+
+Kindred Sorcery
+Grand Coven rule · Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer, Sorcerer in Terminator Armour, Tzaangors, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows, Defiler
+
+In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.
+
+Imbued Manifestation
+
+Add 6" to the Range characteristic of ranged Psychic weapons equipped by THOUSAND SONS models from your army.
+
+Psychic Maelstrom
+
+Each time a THOUSAND SONS model from your army makes an attack with a Psychic weapon, add 1 to the Wound roll.
+
+Wrath of the Immaterium
+
+Psychic weapons equipped by THOUSAND SONS models from your army have the [DEVASTATING WOUNDS] ability.
+
+UNITSMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal, Tzaangors, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows, Defiler
+
+Umbralefic Crystal
+Sorcerer in Terminator Armour
+Enhancement
+
+THOUSAND SONS model only. (Once per battle, per army) In your Command phase, if this unit is unengaged, you can use this ability. If you do:
+
+Place this unit in strategic reserves.
+This unit has Deep Strike until the start of your next Shooting phase.
+This unit must make an ingress move in your next Movement phase (including in your first turn).
+
+UNITSSorcerer in Terminator Armour · Umbralefic Crystal
+
+STRATAGEMS
 COLLAPSE ALL
 GRAND COVEN
 4
@@ -2639,114 +2686,12 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-ALSO THIS PHASE
-3 abilities
-Unearthly Power
-Magnus the Red
-
-At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.
-
-UNITSMagnus the Red
-
-Kindred Sorcery
-Grand Coven rule · Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer, Sorcerer in Terminator Armour, Tzaangors, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows, Defiler
-
-In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.
-
-Imbued Manifestation
-
-Add 6" to the Range characteristic of ranged Psychic weapons equipped by THOUSAND SONS models from your army.
-
-Psychic Maelstrom
-
-Each time a THOUSAND SONS model from your army makes an attack with a Psychic weapon, add 1 to the Wound roll.
-
-Wrath of the Immaterium
-
-Psychic weapons equipped by THOUSAND SONS models from your army have the [DEVASTATING WOUNDS] ability.
-
-UNITSMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal, Tzaangors, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows, Defiler
-
-Umbralefic Crystal
-Sorcerer in Terminator Armour
-Enhancement
-
-THOUSAND SONS model only. (Once per battle, per army) In your Command phase, if this unit is unengaged, you can use this ability. If you do:
-
-Place this unit in strategic reserves.
-This unit has Deep Strike until the start of your next Shooting phase.
-This unit must make an ingress move in your next Movement phase (including in your first turn).
-
-UNITSSorcerer in Terminator Armour · Umbralefic Crystal
-
 NEXT: YOUR MOVEMENT ›
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## strats {"turn":"your","phase":"movement"} · STRATAGEMS Stratagems
-COLLAPSE ALL
-GRAND COVEN
-2
-1
-CP
-Psychic Dominion
-Any phase · Either turn
-WHEN
-
-Any phase, just after an enemy unit has selected its targets.
-
-TARGETOne THOUSAND SONS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
-
-EFFECT
-
-Until the end of the phase, Psychic weapons equipped by models in the attacking unit have the [HAZARDOUS] ability, and models in your unit have the Feel No Pain 4+ ability against Psychic Attacks.
-
-USED BYany unit
-
-1
-CP
-Destined by Fate
-Any phase · Either turn
-WHEN
-
-Any phase, just after a saving throw is failed for a THOUSAND SONS PSYKER model from your army. If you are using fast dice rolling, this Stratagem can still be used after rolling multiple saving throws at once.
-
-TARGETThat PSYKER model.
-
-EFFECT
-
-Change the Damage characteristic of that attack to 0. If you are using fast dice rolling, select one of those attacks you failed a saving throw for.
-
-USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
-
-CORE STRATAGEMS
-1
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-ALSO THIS PHASE
+######## strats {"turn":"your","phase":"movement"} · YOUR MOVEMENT Your Movement ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+THIS PHASE
 5 abilities
 Time Flux
 Magnus the Red
@@ -2796,46 +2741,10 @@ App note, not rules text: unless a rule says otherwise, units in strategic reser
 
 UNITSMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer in Terminator Armour · Umbralefic Crystal
 
-NEXT: YOUR SHOOTING ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"your","phase":"shooting"} · STRATAGEMS Stratagems
+STRATAGEMS
 COLLAPSE ALL
 GRAND COVEN
-4
-1
-CP
-Arcane Focus
-Shooting · Your turn
-WHEN
-
-Your Shooting phase, just after you take a Psychic test for a THOUSAND SONS model from your army that Channelled the Warp (before resolving that Ritual).
-
-TARGETThat THOUSAND SONS model.
-
-EFFECT
-
-Re-roll all of the D6 rolled for that Psychic test (including the additional D6 for Channelling the Warp).
-
-USED BYany unit
-
 2
-CP
-Devastating Sorcery
-Shooting · Your turn
-WHEN
-
-Your Shooting phase.
-
-TARGETOne THOUSAND SONS PSYKER unit from your army that has not been selected to shoot this phase.
-
-EFFECT
-
-Until the end of the phase, add 9" to the Range characteristic of Psychic weapons equipped by models in your unit, and each time a model in your unit makes an attack with a Psychic weapon, you can re-roll the Hit roll and you can re-roll the Wound roll.
-
-USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
-
 1
 CP
 Psychic Dominion
@@ -2869,29 +2778,7 @@ Change the Damage characteristic of that attack to 0. If you are using fast dice
 USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
 
 CORE STRATAGEMS
-2
 1
-CP
-Explosives
-Shooting · Your turn
-WHEN
-
-Your Shooting phase.
-
-TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
-
-EFFECT
-
-Resolve the following sequence:
-
-1. Select one EXPLOSIVES/GRENADES model in your unit.
-2. Select one unengaged enemy unit within 8" of and visible to that model.
-3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
-
-Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
-
-USED BYSorcerer
-
 1
 CP
 Command Re-roll
@@ -2917,7 +2804,12 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-ALSO THIS PHASE
+NEXT: YOUR SHOOTING ›
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## strats {"turn":"your","phase":"shooting"} · YOUR SHOOTING Your Shooting ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+THIS PHASE
 9 abilities
 Marked by Fate
 Sorcerer in Terminator Armour
@@ -3031,11 +2923,186 @@ Each time this unit makes a Normal, Advance or Fall Back move, it can move throu
 
 UNITSDefiler
 
+STRATAGEMS
+COLLAPSE ALL
+GRAND COVEN
+4
+1
+CP
+Arcane Focus
+Shooting · Your turn
+WHEN
+
+Your Shooting phase, just after you take a Psychic test for a THOUSAND SONS model from your army that Channelled the Warp (before resolving that Ritual).
+
+TARGETThat THOUSAND SONS model.
+
+EFFECT
+
+Re-roll all of the D6 rolled for that Psychic test (including the additional D6 for Channelling the Warp).
+
+USED BYany unit
+
+2
+CP
+Devastating Sorcery
+Shooting · Your turn
+WHEN
+
+Your Shooting phase.
+
+TARGETOne THOUSAND SONS PSYKER unit from your army that has not been selected to shoot this phase.
+
+EFFECT
+
+Until the end of the phase, add 9" to the Range characteristic of Psychic weapons equipped by models in your unit, and each time a model in your unit makes an attack with a Psychic weapon, you can re-roll the Hit roll and you can re-roll the Wound roll.
+
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+
+1
+CP
+Psychic Dominion
+Any phase · Either turn
+WHEN
+
+Any phase, just after an enemy unit has selected its targets.
+
+TARGETOne THOUSAND SONS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, Psychic weapons equipped by models in the attacking unit have the [HAZARDOUS] ability, and models in your unit have the Feel No Pain 4+ ability against Psychic Attacks.
+
+USED BYany unit
+
+1
+CP
+Destined by Fate
+Any phase · Either turn
+WHEN
+
+Any phase, just after a saving throw is failed for a THOUSAND SONS PSYKER model from your army. If you are using fast dice rolling, this Stratagem can still be used after rolling multiple saving throws at once.
+
+TARGETThat PSYKER model.
+
+EFFECT
+
+Change the Damage characteristic of that attack to 0. If you are using fast dice rolling, select one of those attacks you failed a saving throw for.
+
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+
+CORE STRATAGEMS
+2
+1
+CP
+Explosives
+Shooting · Your turn
+WHEN
+
+Your Shooting phase.
+
+TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one EXPLOSIVES/GRENADES model in your unit.
+2. Select one unengaged enemy unit within 8" of and visible to that model.
+3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
+
+Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+
+USED BYSorcerer
+
+1
+CP
+Command Re-roll
+Any phase · Either turn
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
 NEXT: YOUR CHARGE ›
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## strats {"turn":"your","phase":"charge"} · STRATAGEMS Stratagems
+######## strats {"turn":"your","phase":"charge"} · YOUR CHARGE Your Charge ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+THIS PHASE
+3 abilities
+Cabal of Sorcerers
+Thousand Sons army rule
+
+If your Army Faction is THOUSAND SONS, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.
+
+Psychic Test Sequence
+
+Roll 2D6
+Channel the Warp (Optional)
+Then, if one or more doubles or triples were rolled during this test, that model’s unit suffers D3 mortal wounds.
+If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects.
+
+FAQ (Faction Pack 1.3): Do I need to sequence all of my Cabal of Sorcerers Rituals at the start of my Shooting phase? No, you just pick a model with the Cabal of Sorcerers rule, pick a Ritual to manifest, and attempt it, then repeat the process until you have run out of models or Rituals or both.
+
+FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, do I have to choose whether to Channel the Warp before rolling any dice? No.
+
+FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, if I roll one or more doubles or triples, does my model only suffer D3 mortal wounds if I chose to Channel the Warp? Yes.
+
+App note, not rules text: Channel the Warp means rolling one more D6 for the test (the printed card shows it as a die).
+
+Destiny’s Ruin (Psychic) · Warp Charge 5
+
+Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, re-roll a Hit roll of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.
+
+Temporal Surge (Psychic) · Warp Charge 6
+
+Select one friendly THOUSAND SONS or SCINTILLATING LEGIONS unit that is not within Engagement Range of one or more enemy units and is within 24" of and visible to the manifesting model. That unit can make a Normal move of up to D6". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.
+
+Doombolt (Psychic) · Warp Charge 7
+
+Select one enemy unit within 24" of and visible to the manifesting model (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12" of the manifesting model); that unit suffers D3 mortal wounds. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.
+
+Twist of Fate (Psychic) · Warp Charge 9
+
+Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead.
+
+Aetherstride
+Daemon Prince of Tzeentch with wings
+Psychic
+
+In your Movement phase, when this model is set up on the battlefield using the Deep Strike ability, it can perform an aetherstride. If it does:
+
+It can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units.
+Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability.
+Until the end of the turn, it is not eligible to declare a charge.
+
+UNITSDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph
+
+Prophesied Doom
+Tzaangor Enlightened
+
+Each time this unit makes a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound.
+
+UNITSTzaangor Enlightened
+
+STRATAGEMS
 COLLAPSE ALL
 GRAND COVEN
 2
@@ -3120,68 +3187,48 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-ALSO THIS PHASE
-3 abilities
-Cabal of Sorcerers
-Thousand Sons army rule
-
-If your Army Faction is THOUSAND SONS, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.
-
-Psychic Test Sequence
-
-Roll 2D6
-Channel the Warp (Optional)
-Then, if one or more doubles or triples were rolled during this test, that model’s unit suffers D3 mortal wounds.
-If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects.
-
-FAQ (Faction Pack 1.3): Do I need to sequence all of my Cabal of Sorcerers Rituals at the start of my Shooting phase? No, you just pick a model with the Cabal of Sorcerers rule, pick a Ritual to manifest, and attempt it, then repeat the process until you have run out of models or Rituals or both.
-
-FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, do I have to choose whether to Channel the Warp before rolling any dice? No.
-
-FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, if I roll one or more doubles or triples, does my model only suffer D3 mortal wounds if I chose to Channel the Warp? Yes.
-
-App note, not rules text: Channel the Warp means rolling one more D6 for the test (the printed card shows it as a die).
-
-Destiny’s Ruin (Psychic) · Warp Charge 5
-
-Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, re-roll a Hit roll of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.
-
-Temporal Surge (Psychic) · Warp Charge 6
-
-Select one friendly THOUSAND SONS or SCINTILLATING LEGIONS unit that is not within Engagement Range of one or more enemy units and is within 24" of and visible to the manifesting model. That unit can make a Normal move of up to D6". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.
-
-Doombolt (Psychic) · Warp Charge 7
-
-Select one enemy unit within 24" of and visible to the manifesting model (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12" of the manifesting model); that unit suffers D3 mortal wounds. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.
-
-Twist of Fate (Psychic) · Warp Charge 9
-
-Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead.
-
-Aetherstride
-Daemon Prince of Tzeentch with wings
-Psychic
-
-In your Movement phase, when this model is set up on the battlefield using the Deep Strike ability, it can perform an aetherstride. If it does:
-
-It can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units.
-Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability.
-Until the end of the turn, it is not eligible to declare a charge.
-
-UNITSDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph
-
-Prophesied Doom
-Tzaangor Enlightened
-
-Each time this unit makes a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound.
-
-UNITSTzaangor Enlightened
-
 NEXT: YOUR FIGHT ›
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## strats {"turn":"your","phase":"fight"} · STRATAGEMS Stratagems
+######## strats {"turn":"your","phase":"fight"} · YOUR FIGHT Your Fight ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+THIS PHASE
+3 abilities
+Kindred Sorcery
+Grand Coven rule · Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer, Sorcerer in Terminator Armour, Tzaangors, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows, Defiler
+
+In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.
+
+Imbued Manifestation
+
+Add 6" to the Range characteristic of ranged Psychic weapons equipped by THOUSAND SONS models from your army.
+
+Psychic Maelstrom
+
+Each time a THOUSAND SONS model from your army makes an attack with a Psychic weapon, add 1 to the Wound roll.
+
+Wrath of the Immaterium
+
+Psychic weapons equipped by THOUSAND SONS models from your army have the [DEVASTATING WOUNDS] ability.
+
+UNITSMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal, Tzaangors, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows, Defiler
+
+Hunter of Souls
+Daemon Prince of Tzeentch with wings
+
+Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a CHARACTER unit, this model regains up to D3 lost wounds (if that CHARACTER unit was a PSYKER, this model regains up to 3 lost wounds instead).
+
+UNITSDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph
+
+Twisted Sorceries
+Sorcerer
+Once per battle · Psychic
+
+Once per battle, in your Shooting phase or the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristic of Psychic weapons equipped by this model by 3.
+
+UNITSSorcerer
+
+STRATAGEMS
 COLLAPSE ALL
 GRAND COVEN
 2
@@ -3260,47 +3307,11 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-ALSO THIS PHASE
-3 abilities
-Kindred Sorcery
-Grand Coven rule · Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer, Sorcerer in Terminator Armour, Tzaangors, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows, Defiler
-
-In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.
-
-Imbued Manifestation
-
-Add 6" to the Range characteristic of ranged Psychic weapons equipped by THOUSAND SONS models from your army.
-
-Psychic Maelstrom
-
-Each time a THOUSAND SONS model from your army makes an attack with a Psychic weapon, add 1 to the Wound roll.
-
-Wrath of the Immaterium
-
-Psychic weapons equipped by THOUSAND SONS models from your army have the [DEVASTATING WOUNDS] ability.
-
-UNITSMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal, Tzaangors, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows, Defiler
-
-Hunter of Souls
-Daemon Prince of Tzeentch with wings
-
-Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a CHARACTER unit, this model regains up to D3 lost wounds (if that CHARACTER unit was a PSYKER, this model regains up to 3 lost wounds instead).
-
-UNITSDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph
-
-Twisted Sorceries
-Sorcerer
-Once per battle · Psychic
-
-Once per battle, in your Shooting phase or the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristic of Psychic weapons equipped by this model by 3.
-
-UNITSSorcerer
-
 NEXT: THEIR COMMAND ›
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## strats {"turn":"opp","phase":"all"} · STRATAGEMS Stratagems
+######## strats {"turn":"opp","phase":"all"} · TURN Turn ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
 COLLAPSE ALL
 GRAND COVEN
 2
@@ -3454,7 +3465,17 @@ Not shown, no unit here can use it: Smokescreen (SMOKE).
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## strats {"turn":"opp","phase":"command"} · STRATAGEMS Stratagems
+######## strats {"turn":"opp","phase":"command"} · THEIR COMMAND Their Command ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+THIS PHASE
+1 ability
+Unearthly Power
+Magnus the Red
+
+At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.
+
+UNITSMagnus the Red
+
+STRATAGEMS
 COLLAPSE ALL
 GRAND COVEN
 2
@@ -3517,20 +3538,63 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-ALSO THIS PHASE
-1 ability
-Unearthly Power
-Magnus the Red
-
-At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.
-
-UNITSMagnus the Red
-
 NEXT: THEIR MOVEMENT ›
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## strats {"turn":"opp","phase":"movement"} · STRATAGEMS Stratagems
+######## strats {"turn":"opp","phase":"movement"} · THEIR MOVEMENT Their Movement ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+THIS PHASE
+5 abilities
+Kindred Sorcery
+Grand Coven rule · Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer, Sorcerer in Terminator Armour, Tzaangors, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows, Defiler
+
+In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.
+
+Imbued Manifestation
+
+Add 6" to the Range characteristic of ranged Psychic weapons equipped by THOUSAND SONS models from your army.
+
+Psychic Maelstrom
+
+Each time a THOUSAND SONS model from your army makes an attack with a Psychic weapon, add 1 to the Wound roll.
+
+Wrath of the Immaterium
+
+Psychic weapons equipped by THOUSAND SONS models from your army have the [DEVASTATING WOUNDS] ability.
+
+UNITSMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal, Tzaangors, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows, Defiler
+
+Hunter of Souls
+Daemon Prince of Tzeentch with wings
+
+Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a CHARACTER unit, this model regains up to D3 lost wounds (if that CHARACTER unit was a PSYKER, this model regains up to 3 lost wounds instead).
+
+UNITSDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph
+
+Bringers of Change
+Sorcerer
+
+Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead.
+
+UNITSSorcerer
+
+Malign Trickery
+Tzaangor Enlightened with Fatecaster greatbows
+
+In your opponent’s Movement phase, if an enemy unit ends a move within 8" of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6".
+
+UNITSTzaangor Enlightened with Fatecaster greatbows
+
+Deep Strike
+Core rule · Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer in Terminator Armour
+
+Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
+
+App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
+
+UNITSMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer in Terminator Armour · Umbralefic Crystal
+
+STRATAGEMS
 COLLAPSE ALL
 GRAND COVEN
 2
@@ -3627,62 +3691,22 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-ALSO THIS PHASE
-5 abilities
-Kindred Sorcery
-Grand Coven rule · Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer, Sorcerer in Terminator Armour, Tzaangors, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows, Defiler
-
-In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.
-
-Imbued Manifestation
-
-Add 6" to the Range characteristic of ranged Psychic weapons equipped by THOUSAND SONS models from your army.
-
-Psychic Maelstrom
-
-Each time a THOUSAND SONS model from your army makes an attack with a Psychic weapon, add 1 to the Wound roll.
-
-Wrath of the Immaterium
-
-Psychic weapons equipped by THOUSAND SONS models from your army have the [DEVASTATING WOUNDS] ability.
-
-UNITSMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal, Tzaangors, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows, Defiler
-
-Hunter of Souls
-Daemon Prince of Tzeentch with wings
-
-Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a CHARACTER unit, this model regains up to D3 lost wounds (if that CHARACTER unit was a PSYKER, this model regains up to 3 lost wounds instead).
-
-UNITSDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph
-
-Bringers of Change
-Sorcerer
-
-Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead.
-
-UNITSSorcerer
-
-Malign Trickery
-Tzaangor Enlightened with Fatecaster greatbows
-
-In your opponent’s Movement phase, if an enemy unit ends a move within 8" of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6".
-
-UNITSTzaangor Enlightened with Fatecaster greatbows
-
-Deep Strike
-Core rule · Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer in Terminator Armour
-
-Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
-
-App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
-
-UNITSMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer in Terminator Armour · Umbralefic Crystal
-
 NEXT: THEIR SHOOTING ›
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## strats {"turn":"opp","phase":"shooting"} · STRATAGEMS Stratagems
+######## strats {"turn":"opp","phase":"shooting"} · THEIR SHOOTING Their Shooting ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+THIS PHASE
+1 ability
+Treason of Tzeentch
+Magnus the Red
+Crimson King · Psychic
+
+At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this PSYKER. Until the end of the phase, ranged weapons equipped by models in that unit have the [HAZARDOUS] ability.
+
+UNITSMagnus the Red
+
+STRATAGEMS
 COLLAPSE ALL
 GRAND COVEN
 2
@@ -3745,16 +3769,6 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-ALSO THIS PHASE
-1 ability
-Treason of Tzeentch
-Magnus the Red
-Crimson King · Psychic
-
-At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this PSYKER. Until the end of the phase, ranged weapons equipped by models in that unit have the [HAZARDOUS] ability.
-
-UNITSMagnus the Red
-
 WHEN TARGETED
 
 Every unit: 1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; their Psychic weapons get [HAZARDOUS]
@@ -3785,7 +3799,17 @@ Not shown, no unit here can use it: Smokescreen (SMOKE).
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## strats {"turn":"opp","phase":"charge"} · STRATAGEMS Stratagems
+######## strats {"turn":"opp","phase":"charge"} · THEIR CHARGE Their Charge ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+THIS PHASE
+1 ability
+Prophesied Doom
+Tzaangor Enlightened
+
+Each time this unit makes a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound.
+
+UNITSTzaangor Enlightened
+
+STRATAGEMS
 COLLAPSE ALL
 GRAND COVEN
 2
@@ -3869,20 +3893,66 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-ALSO THIS PHASE
-1 ability
-Prophesied Doom
-Tzaangor Enlightened
-
-Each time this unit makes a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound.
-
-UNITSTzaangor Enlightened
-
 NEXT: THEIR FIGHT ›
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## strats {"turn":"opp","phase":"fight"} · STRATAGEMS Stratagems
+######## strats {"turn":"opp","phase":"fight"} · THEIR FIGHT Their Fight ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+THIS PHASE
+5 abilities
+Kindred Sorcery
+Grand Coven rule · Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer, Sorcerer in Terminator Armour, Tzaangors, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows, Defiler
+
+In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.
+
+Imbued Manifestation
+
+Add 6" to the Range characteristic of ranged Psychic weapons equipped by THOUSAND SONS models from your army.
+
+Psychic Maelstrom
+
+Each time a THOUSAND SONS model from your army makes an attack with a Psychic weapon, add 1 to the Wound roll.
+
+Wrath of the Immaterium
+
+Psychic weapons equipped by THOUSAND SONS models from your army have the [DEVASTATING WOUNDS] ability.
+
+UNITSMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal, Tzaangors, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows, Defiler
+
+Hunter of Souls
+Daemon Prince of Tzeentch with wings
+
+Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a CHARACTER unit, this model regains up to D3 lost wounds (if that CHARACTER unit was a PSYKER, this model regains up to 3 lost wounds instead).
+
+UNITSDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph
+
+Twisted Sorceries
+Sorcerer
+Once per battle · Psychic
+
+Once per battle, in your Shooting phase or the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristic of Psychic weapons equipped by this model by 3.
+
+UNITSSorcerer
+
+Destroyer of Futures
+Defiler
+Once per phase, per unit
+
+You can target this unit with the Counteroffensive stratagem, regardless of any other uses of that stratagem this phase. If you do:
+
+That use is -1 CP.
+That use does not prevent any uses of that stratagem on other units this phase.
+
+UNITSDefiler
+
+Ambushing Hunters
+Tzaangors
+
+At the end of your opponent’s turn, if this unit is more than 6" horizontally away from all enemy units, you can remove this unit from the battlefield and place it into Strategic Reserves.
+
+UNITSTzaangors
+
+STRATAGEMS
 COLLAPSE ALL
 GRAND COVEN
 2
@@ -3977,60 +4047,6 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-ALSO THIS PHASE
-5 abilities
-Kindred Sorcery
-Grand Coven rule · Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer, Sorcerer in Terminator Armour, Tzaangors, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows, Defiler
-
-In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.
-
-Imbued Manifestation
-
-Add 6" to the Range characteristic of ranged Psychic weapons equipped by THOUSAND SONS models from your army.
-
-Psychic Maelstrom
-
-Each time a THOUSAND SONS model from your army makes an attack with a Psychic weapon, add 1 to the Wound roll.
-
-Wrath of the Immaterium
-
-Psychic weapons equipped by THOUSAND SONS models from your army have the [DEVASTATING WOUNDS] ability.
-
-UNITSMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal, Tzaangors, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows, Defiler
-
-Hunter of Souls
-Daemon Prince of Tzeentch with wings
-
-Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a CHARACTER unit, this model regains up to D3 lost wounds (if that CHARACTER unit was a PSYKER, this model regains up to 3 lost wounds instead).
-
-UNITSDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph
-
-Twisted Sorceries
-Sorcerer
-Once per battle · Psychic
-
-Once per battle, in your Shooting phase or the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristic of Psychic weapons equipped by this model by 3.
-
-UNITSSorcerer
-
-Destroyer of Futures
-Defiler
-Once per phase, per unit
-
-You can target this unit with the Counteroffensive stratagem, regardless of any other uses of that stratagem this phase. If you do:
-
-That use is -1 CP.
-That use does not prevent any uses of that stratagem on other units this phase.
-
-UNITSDefiler
-
-Ambushing Hunters
-Tzaangors
-
-At the end of your opponent’s turn, if this unit is more than 6" horizontally away from all enemy units, you can remove this unit from the battlefield and place it into Strategic Reserves.
-
-UNITSTzaangors
-
 WHEN TARGETED
 
 Every unit: 1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; their Psychic weapons get [HAZARDOUS]
@@ -4059,7 +4075,7 @@ NEXT: YOUR COMMAND ›
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## unit magnus · STRATAGEMS Magnus the Red
+######## unit magnus · THEIR FIGHT Magnus the Red
 Epic Hero · 455 pts
 Warlord
 M
@@ -4168,6 +4184,8 @@ RULESDeep Strike, Deadly Demise D6, Cabal of Sorcerers, Kindred Sorcery · Keywo
 
 STRATAGEMSPsychic Dominion, Destined by Fate, Egotistical Power, Desecration of Worlds, Arcane Focus, Devastating Sorcery, Epic Challenge, Crushing Impact
 
+Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph ›
+
 ######## unit daemon-prince · MAGNUS THE RED Daemon Prince of Tzeentch with wings
 Character · 205 pts
 Eldritch Vortex of E’taph
@@ -4268,6 +4286,9 @@ THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Ps
 RULESDeadly Demise D3, Cabal of Sorcerers, Deep Strike, Kindred Sorcery · Keywords
 
 STRATAGEMSPsychic Dominion, Destined by Fate, Egotistical Power, Desecration of Worlds, Arcane Focus, Devastating Sorcery, Epic Challenge, Crushing Impact
+
+‹ Magnus the Red
+Sorcerer ›
 
 ######## unit sorcerer · DAEMON PRINCE OF TZEENTCH WITH WINGS Sorcerer
 Character · 215 pts · leading Rubric Marines
@@ -4449,6 +4470,9 @@ RULESLeader, Cabal of Sorcerers, Kindred Sorcery · Models & keywords
 
 STRATAGEMSPsychic Dominion, Destined by Fate, Egotistical Power, Desecration of Worlds, Arcane Focus, Devastating Sorcery, Epic Challenge, Explosives
 
+‹ Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph
+Sorcerer in Terminator Armour · Umbralefic Crystal ›
+
 ######## unit sorcerer-terminator · SORCERER Sorcerer in Terminator Armour
 Character · 565 pts · leading Scarab Occult Terminators
 Umbralefic Crystal
@@ -4621,6 +4645,9 @@ RULESLeader, Deep Strike, Cabal of Sorcerers, Kindred Sorcery · Models & keywor
 
 STRATAGEMSPsychic Dominion, Destined by Fate, Egotistical Power, Desecration of Worlds, Arcane Focus, Devastating Sorcery, Epic Challenge
 
+‹ Sorcerer
+Tzaangors ›
+
 ######## unit tzaangors · SORCERER IN TERMINATOR ARMOUR Tzaangors
 Infantry · 75 pts
 M
@@ -4665,6 +4692,9 @@ At the end of your opponent’s turn, if this unit is more than 6" horizontally 
 RULESScouts 6", Kindred Sorcery · Keywords
 
 STRATAGEMSPsychic Dominion, Arcane Focus
+
+‹ Sorcerer in Terminator Armour · Umbralefic Crystal
+Tzaangor Enlightened ›
 
 ######## unit enlightened · TZAANGORS Tzaangor Enlightened
 Mounted · 50 pts each · ×2 in list
@@ -4712,6 +4742,9 @@ Each time this unit makes a Charge move, select one enemy unit within Engagement
 RULESKindred Sorcery · Keywords
 
 STRATAGEMSPsychic Dominion, Arcane Focus
+
+‹ Tzaangors
+Tzaangor Enlightened with Fatecaster greatbows ›
 
 ######## unit enlightened-greatbows · TZAANGOR ENLIGHTENED Tzaangor Enlightened with Fatecaster greatbows
 Mounted · 55 pts
@@ -4773,6 +4806,9 @@ In your opponent’s Movement phase, if an enemy unit ends a move within 8" of t
 RULESKindred Sorcery · Keywords
 
 STRATAGEMSPsychic Dominion, Arcane Focus
+
+‹ Tzaangor Enlightened
+Defiler ›
 
 ######## unit defiler · TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS Defiler
 Vehicle · 330 pts
@@ -4868,6 +4904,8 @@ That use does not prevent any uses of that stratagem on other units this phase.
 RULESDeadly Demise D6, Kindred Sorcery · Keywords
 
 STRATAGEMSPsychic Dominion, Arcane Focus, Crushing Impact, Counteroffensive
+
+‹ Tzaangor Enlightened with Fatecaster greatbows
 
 ######## popup ability:oioioi|Aetherstride|In your Movement phase, when this model is set up on the battlefield using the **Deep Strike** ability, it can perform an aetherstride. If it does:
 - It can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units.

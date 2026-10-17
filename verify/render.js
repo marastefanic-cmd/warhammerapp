@@ -5,9 +5,7 @@
 //   reminders, use lines, tags, notes), with where it shows and what it cites
 // - verify/out/render.json: the screen-level checks (failures fail the build)
 // Usage: node verify/render.js   (needs a built index.html; NODE_PATH=$(npm root -g) for playwright)
-// VERIFY_WIDTH=320 checks a small phone; VERIFY_LAYOUT=table checks the Table layout (same checks, plus:
-// it shows no app-written text the Classic run didn't, so every sign-off covers it too; snapshots and
-// helpers come from the Classic run at 390).
+// VERIFY_WIDTH=320 checks a small phone (snapshots and helpers come from the run at 390).
 const path = require('path'), fs = require('fs');
 const { ROOT, normText, serve, writeJSON } = require('./lib');
 const { chromium } = require('playwright');
@@ -20,7 +18,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
   const site = await serve(ROOT);
   const browser = await chromium.launch({ executablePath:'/opt/pw-browsers/chromium' });
   const W = +(process.env.VERIFY_WIDTH || 390);   // run.js checks 390 (snapshots) and 320 (layout)
-  const LAY = process.env.VERIFY_LAYOUT || 'classic', main = W === 390 && LAY === 'classic';
+  const main = W === 390;
   const page = await (await browser.newContext({ viewport:{ width:W, height:844 } })).newPage();
   const pageErrors = [];
   page.on('pageerror', e => pageErrors.push(e.message));
@@ -28,7 +26,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
   await page.route(/^https?:\/\/(?!127\.0\.0\.1|fonts\.googleapis\.com|fonts\.gstatic\.com)/, r => r.abort());
   await page.goto(site.url + 'index.html');
   await page.evaluate(() => document.fonts.ready);
-  await page.evaluate(lay => { localStorage.clear(); sessionStorage.clear(); localStorage.setItem('wh-layout', JSON.stringify(lay)); }, LAY);
+  await page.evaluate(() => { localStorage.clear(); sessionStorage.clear(); });
   await page.reload();
 
   const failures = [], helpers = new Map(), counts = {};
@@ -54,7 +52,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       }, [String(fn), HELPER_SEL]);
       if(r.overflow > 0) fail('no-sideways-scroll', a.id, label, 'the page is ' + r.overflow + 'px wider than the phone');
       if(r.bigIcons.length) fail('icon-size', a.id, label, 'icons drawn over 40px (no size set): ' + r.bigIcons.join(', '));
-      if(LAY === 'table' && label !== 'home' && !r.tabs) fail('table-tabs', a.id, label, 'no tab bar');
+      if(label !== 'home' && !r.tabs) fail('tabs', a.id, label, 'no tab bar');
       snap.push('######## ' + label + ' · ' + r.title + '\n' + r.text.replace(/[ \t]+\n/g, '\n').replace(/\n{3,}/g, '\n\n').trim());
       for(const h of r.hs){
         const t = normText(h.text);
@@ -156,12 +154,8 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
   if(pageErrors.length) fail('page-errors', '', '', pageErrors.join(' | '));
 
   if(main) writeJSON(path.join(ROOT, 'verify/out/helpers.json'), [...helpers.values()].map(h => Object.assign(h, { refs:[...h.refs].sort() })).sort((x, y) => x.text.localeCompare(y.text)));
-  else {   // the other runs may not show text the signed-off Classic run doesn't have
-    const known = new Set(JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/out/helpers.json'), 'utf8')).map(h => h.text));
-    for(const h of helpers.values()) if(!known.has(h.text)) fail('helper-not-in-classic', '', h.where[0], h.text.slice(0, 160));
-  }
-  writeJSON(path.join(ROOT, 'verify/out/render' + (main ? '' : '-' + (LAY === 'classic' ? '' : LAY + '-') + W) + '.json'), { width:W, layout:LAY, checked:counts, helpers:helpers.size, failures });
-  console.log('render ' + LAY + ' at ' + W + 'px: ' + Object.values(counts).reduce((t, c) => t + c.screens, 0) + ' screens and popups, ' + helpers.size + ' helper texts, ' + failures.length + ' failures');
+  writeJSON(path.join(ROOT, 'verify/out/render' + (main ? '' : '-' + W) + '.json'), { width:W, checked:counts, helpers:helpers.size, failures });
+  console.log('render at ' + W + 'px: ' + Object.values(counts).reduce((t, c) => t + c.screens, 0) + ' screens and popups, ' + helpers.size + ' helper texts, ' + failures.length + ' failures');
   for(const f of failures.slice(0, 60)) console.log('  ' + f.check + ' · ' + f.army + ' · ' + f.where + ' · ' + f.detail);
   await browser.close(); site.close();
   process.exit(failures.length ? 1 : 0);

@@ -13,7 +13,6 @@
 //   texts       verify/texts.js: every rules text equals GW's official documents (or Wahapedia)
 //   screens     verify/render.js: every screen and popup renders; screen-level checks; no sideways scroll
 //   small phone the same at 320px wide
-//   table       the same for the Table layout, at 390 and 320; it may show no app text the Classic run lacks
 //   snapshots   the text of every screen equals the accepted snapshot (verify/snapshots/)
 //   helpers     verify/helpers.js: every judgement the app adds is signed off (verify/approvals.json)
 // Not part of the gate: verify/currency.js, the weekly check that the sources are still the newest.
@@ -46,8 +45,6 @@ if(b.status !== 0){ console.log(b.stdout + b.stderr); process.exit(1); }
 const NODE_PATH = process.env.NODE_PATH || spawnSync('npm', ['root', '-g'], { encoding:'utf8' }).stdout.trim();
 step('screens', ['verify/render.js'], { NODE_PATH });
 step('small phone', ['verify/render.js'], { NODE_PATH, VERIFY_WIDTH:'320' });   // the same checks at 320px, where layouts break first
-step('table layout', ['verify/render.js'], { NODE_PATH, VERIFY_LAYOUT:'table' });   // the Table layout: same checks, no text Classic lacks
-step('table small', ['verify/render.js'], { NODE_PATH, VERIFY_LAYOUT:'table', VERIFY_WIDTH:'320' });
 
 // snapshots: any change to any screen is shown, and must be accepted on purpose
 const snapDir = path.join(ROOT, 'verify/snapshots'), outDir = path.join(ROOT, 'verify/out/snapshots');
@@ -81,7 +78,7 @@ function writeVerified(ok){
     { label:'Games Workshop’s rules text:', detail:'every rule, enhancement and stratagem is the wording of GW’s newest official document, or Wahapedia where GW has none (' + total(out('texts').checked) + ' texts).' },
     { label:'Rules logic:', detail:'each stratagem is offered in the phases its WHEN names and to the units its TARGET names; every number in a reminder is in the rule it cites.' },
     { label:'The app’s own notes:', detail:(help.approved || 0) + ' footnotes, reminders, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off.' },
-    { label:'Every screen:', detail:screens + ' screens and popups render in both layouts, on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search.' }
+    { label:'Every screen:', detail:screens + ' screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search.' }
   ];
   const nr = { cooking:'Cooking', 'purge-freeblade':'Purge Freeblade', hurrdurr:'Hurrdurr', oioioi:'oioioi', nidzillas:'Nidzillas' };
   const gw = fs.existsSync(path.join(ROOT, 'verify/.cache/gw')) ? fs.readdirSync(path.join(ROOT, 'verify/.cache/gw')).filter(f => f.endsWith('.pdf')).map(f => f.replace(/^eng_(\d\d-\d\d_)?|-[a-z0-9]{10}-[a-z0-9]{10}\.pdf$/g, '').replace(/_/g, ' ')) : [];

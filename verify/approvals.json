@@ -1283,12 +1283,6 @@
   "at": "2026-10-16",
   "why": "\"At the start of the battle round\" belongs to the Command phase; the round starts before whichever player goes first, so either turn."
  },
- "6350d3df4e909c6a": {
-  "verdict": "ok",
-  "by": "review:core-code",
-  "at": "2026-10-16",
-  "why": "Army rules with a phase unless inert (Bondsman dropped), detachment rules only when a unit matches, phased abilities grouped across units minus n/a ones, and core phased rules only for units that have them; the phase/turn filter is applied by fits()."
- },
  "64e2fb903ae42f9e": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -3352,5 +3346,11 @@
   "by": "review:literal (its fix, applied as written)",
   "at": "2026-10-17",
   "why": "24.07 (RULES['Close-quarters']): “When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with: One or more of its [CLOSE-QUARTERS] weapons. One or more of its other ranged weapons.” 10.06 Close-quarters shooting: “Non-MONSTER/Non-VEHICLE Models: You can only select [CLOSE-QUARTERS] weapons to make attacks with”. The sentence ‘Can shoot with A or B, not both (Close-quarters)’ drops 24.07’s condition “When using another shooting type”, so it still offers B in close-quarters shooting, where B can’t be selected. This was point (3) of the earlier audit. The rewrite fixed the ‘all’ wording but not this. Everything else matches: “You can select one or more ranged weapons that model has” (‘can shoot with one or both / one or more of these’), the MONSTER/VEHICLE exclusion, “You must select one melee weapon”, and 24.11 “All of that model’s [EXTRA ATTACKS] weapons. One of that model’s other melee weapons, if possible.” Latent, no change needed today: `big` tests the unit’s keywords, but 24.07 says “each model … (excluding MONSTER/VEHICLE models)” and 19.03 says “models in an attached unit do not gain the keywords of other models”. No attached unit in the five lists mixes MONSTER/VEHICLE and other models, and the data has no per-model keywords."
+ },
+ "1c9aa96f4937e26d": {
+  "verdict": "ok",
+  "by": "review:core-code",
+  "at": "2026-10-16",
+  "why": "Army rules with a phase unless inert (Bondsman dropped), detachment rules only when a unit matches, phased abilities grouped across units minus n/a ones, and core phased rules only for units that have them; the phase/turn filter is applied by fits(). (description renamed to the Turn screen heading \"This phase\"; code unchanged)"
  }
 }

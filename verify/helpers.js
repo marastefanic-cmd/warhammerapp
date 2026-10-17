@@ -99,7 +99,7 @@ const CODE_RULES = {
   matches:'stratagem/rule eligibility by keywords (all / any / none)',
   inertRule:'rules that do nothing in this list (e.g. Bondsman without ARMIGER models)',
   auraMods:'auras from other units in the list',
-  phaseItems:'what is listed under "Also this phase"',
+  phaseItems:'what is listed under "This phase" on the Turn screen',
   CORE_PHASED:'core rules listed in a phase: Deep Strike, Harpooned, Super-Heavy Walker, Firing Deck',
   suits:'which core stratagems a datasheet lists',
   proxyLines:'Bases & proxies: bases per models line and what to mark',

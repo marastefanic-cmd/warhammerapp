@@ -1,4 +1,4 @@
-######## army · STRATAGEMS Purge Freeblade
+######## army · TURN Purge Freeblade
 Imperial Knights · 2000 / 2000 pts · Strike Force
 
 Freeblade Company · Disposition: Purge the Foe
@@ -38,6 +38,7 @@ DECLARE BATTLE FORMATIONS
 RESERVES
 Strategic reserves: unless otherwise stated, up to 1000 pts (50% of the 2000 limit), counting units embarked within a TRANSPORT you place there. Unless otherwise stated, they can only arrive from the second battle round onwards, and any that have not arrived by the end of round 3 are destroyed (not repositioned units, nor units embarked within a TRANSPORT that arrived).
 ONCE PER BATTLE
+NEW GAME
 STRATA­GEMS
 1CP Insane Bravery
 
@@ -648,7 +649,7 @@ Knight Destrier
 
 From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
 
-######## strats {"turn":"all","phase":"all"} · BASES Stratagems
+######## strats {"turn":"all","phase":"all"} · BASES Turn ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
 COLLAPSE ALL
 FREEBLADE COMPANY
 5
@@ -876,7 +877,17 @@ Not shown, no unit here can use them: Flanking Manoeuvres (ARMIGER), Explosives 
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## strats {"turn":"all","phase":"command"} · STRATAGEMS Stratagems
+######## strats {"turn":"all","phase":"command"} · COMMAND Command ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+THIS PHASE
+1 ability
+Knights of Legend
+Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
+
+UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+STRATAGEMS
 COLLAPSE ALL
 FREEBLADE COMPANY
 1
@@ -943,8 +954,33 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-ALSO THIS PHASE
-1 ability
+NEXT: MOVEMENT ›
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## strats {"turn":"all","phase":"movement"} · MOVEMENT Movement ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+THIS PHASE
+3 abilities
+Code Chivalric Quality 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls.
+Ram Jets
+Knight Destrier
+
+Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.
+
+UNITSKnight Destrier
+
+Super-Heavy Walker
+Core rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+Each time a unit with this ability makes a normal, advance or fall-back move:
+
+Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding TITANIC models) and can move horizontally through sections of terrain features that are 4" or less in height.
+Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked.
+
+Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).
+
+UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
 Knights of Legend
 Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
 
@@ -952,11 +988,7 @@ IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addi
 
 UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
 
-NEXT: MOVEMENT ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"all","phase":"movement"} · STRATAGEMS Stratagems
+STRATAGEMS
 COLLAPSE ALL
 FREEBLADE COMPANY
 2
@@ -1037,27 +1069,43 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-ALSO THIS PHASE
-3 abilities
-Code Chivalric Quality 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls.
-Ram Jets
+NEXT: SHOOTING ›
+
+Not shown, no unit here can use it: Fire Overwatch.
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## strats {"turn":"all","phase":"shooting"} · SHOOTING Shooting ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+THIS PHASE
+5 abilities
+Code Chivalric Quality 1–2 (martial valour): each time a Knight shoots or fights, re-roll one Hit roll and one Wound roll.
+Thin Their Ranks
+Knight Warden
+
+Each time this model makes a ranged attack that targets an enemy unit (excluding MONSTERS and VEHICLES), that attack has the [DEVASTATING WOUNDS] ability.
+
+UNITSKnight Warden
+
+Seasoned Noble
+Knight Paladin
+
+Each time this model makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1.
+
+UNITSKnight Paladin
+
+Aggressive Assault
+Knight Errant
+
+Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll.
+
+UNITSKnight Errant
+
+Saturation Fire
 Knight Destrier
 
-Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.
+Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
 
 UNITSKnight Destrier
-
-Super-Heavy Walker
-Core rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
-
-Each time a unit with this ability makes a normal, advance or fall-back move:
-
-Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding TITANIC models) and can move horizontally through sections of terrain features that are 4" or less in height.
-Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked.
-
-Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).
-
-UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
 
 Knights of Legend
 Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
@@ -1066,13 +1114,7 @@ IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addi
 
 UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
 
-NEXT: SHOOTING ›
-
-Not shown, no unit here can use it: Fire Overwatch.
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"all","phase":"shooting"} · STRATAGEMS Stratagems
+STRATAGEMS
 COLLAPSE ALL
 FREEBLADE COMPANY
 4
@@ -1167,44 +1209,6 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-ALSO THIS PHASE
-5 abilities
-Code Chivalric Quality 1–2 (martial valour): each time a Knight shoots or fights, re-roll one Hit roll and one Wound roll.
-Thin Their Ranks
-Knight Warden
-
-Each time this model makes a ranged attack that targets an enemy unit (excluding MONSTERS and VEHICLES), that attack has the [DEVASTATING WOUNDS] ability.
-
-UNITSKnight Warden
-
-Seasoned Noble
-Knight Paladin
-
-Each time this model makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1.
-
-UNITSKnight Paladin
-
-Aggressive Assault
-Knight Errant
-
-Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll.
-
-UNITSKnight Errant
-
-Saturation Fire
-Knight Destrier
-
-Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
-
-UNITSKnight Destrier
-
-Knights of Legend
-Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
-
-IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
-
-UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
-
 WHEN TARGETED
 
 Every unit: Feel No Pain 6+ · 5+ invulnerable save against ranged attacks only · 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
@@ -1223,7 +1227,18 @@ Not shown, no unit here can use them: Explosives (EXPLOSIVES OR GRENADES), Smoke
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## strats {"turn":"all","phase":"charge"} · STRATAGEMS Stratagems
+######## strats {"turn":"all","phase":"charge"} · CHARGE Charge ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+THIS PHASE
+1 ability
+Code Chivalric Quality 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls.
+Knights of Legend
+Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
+
+UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+STRATAGEMS
 COLLAPSE ALL
 FREEBLADE COMPANY
 1
@@ -1313,9 +1328,14 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-ALSO THIS PHASE
+NEXT: FIGHT ›
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## strats {"turn":"all","phase":"fight"} · FIGHT Fight ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+THIS PHASE
 1 ability
-Code Chivalric Quality 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls.
+Code Chivalric Quality 1–2 (martial valour): each time a Knight shoots or fights, re-roll one Hit roll and one Wound roll.
 Knights of Legend
 Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
 
@@ -1323,11 +1343,7 @@ IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addi
 
 UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
 
-NEXT: FIGHT ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"all","phase":"fight"} · STRATAGEMS Stratagems
+STRATAGEMS
 COLLAPSE ALL
 FREEBLADE COMPANY
 2
@@ -1422,16 +1438,6 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-ALSO THIS PHASE
-1 ability
-Code Chivalric Quality 1–2 (martial valour): each time a Knight shoots or fights, re-roll one Hit roll and one Wound roll.
-Knights of Legend
-Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
-
-IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
-
-UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
-
 WHEN TARGETED
 
 Every unit: Feel No Pain 6+ · 5+ invulnerable save against ranged attacks only
@@ -1450,7 +1456,7 @@ Not shown, no unit here can use it: Flanking Manoeuvres (ARMIGER).
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## strats {"turn":"your","phase":"all"} · STRATAGEMS Stratagems
+######## strats {"turn":"your","phase":"all"} · TURN Turn ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
 COLLAPSE ALL
 FREEBLADE COMPANY
 4
@@ -1607,7 +1613,17 @@ Not shown, no unit here can use it: Explosives (EXPLOSIVES OR GRENADES).
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## strats {"turn":"your","phase":"command"} · STRATAGEMS Stratagems
+######## strats {"turn":"your","phase":"command"} · YOUR COMMAND Your Command ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+THIS PHASE
+1 ability
+Knights of Legend
+Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
+
+UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+STRATAGEMS
 COLLAPSE ALL
 FREEBLADE COMPANY
 1
@@ -1674,8 +1690,33 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-ALSO THIS PHASE
-1 ability
+NEXT: YOUR MOVEMENT ›
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## strats {"turn":"your","phase":"movement"} · YOUR MOVEMENT Your Movement ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+THIS PHASE
+3 abilities
+Code Chivalric Quality 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls.
+Ram Jets
+Knight Destrier
+
+Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.
+
+UNITSKnight Destrier
+
+Super-Heavy Walker
+Core rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+Each time a unit with this ability makes a normal, advance or fall-back move:
+
+Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding TITANIC models) and can move horizontally through sections of terrain features that are 4" or less in height.
+Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked.
+
+Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).
+
+UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
 Knights of Legend
 Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
 
@@ -1683,11 +1724,7 @@ IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addi
 
 UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
 
-NEXT: YOUR MOVEMENT ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"your","phase":"movement"} · STRATAGEMS Stratagems
+STRATAGEMS
 COLLAPSE ALL
 FREEBLADE COMPANY
 2
@@ -1750,27 +1787,41 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-ALSO THIS PHASE
-3 abilities
-Code Chivalric Quality 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls.
-Ram Jets
+NEXT: YOUR SHOOTING ›
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## strats {"turn":"your","phase":"shooting"} · YOUR SHOOTING Your Shooting ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+THIS PHASE
+5 abilities
+Code Chivalric Quality 1–2 (martial valour): each time a Knight shoots or fights, re-roll one Hit roll and one Wound roll.
+Thin Their Ranks
+Knight Warden
+
+Each time this model makes a ranged attack that targets an enemy unit (excluding MONSTERS and VEHICLES), that attack has the [DEVASTATING WOUNDS] ability.
+
+UNITSKnight Warden
+
+Seasoned Noble
+Knight Paladin
+
+Each time this model makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1.
+
+UNITSKnight Paladin
+
+Aggressive Assault
+Knight Errant
+
+Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll.
+
+UNITSKnight Errant
+
+Saturation Fire
 Knight Destrier
 
-Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.
+Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
 
 UNITSKnight Destrier
-
-Super-Heavy Walker
-Core rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
-
-Each time a unit with this ability makes a normal, advance or fall-back move:
-
-Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding TITANIC models) and can move horizontally through sections of terrain features that are 4" or less in height.
-Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked.
-
-Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).
-
-UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
 
 Knights of Legend
 Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
@@ -1779,11 +1830,7 @@ IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addi
 
 UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
 
-NEXT: YOUR SHOOTING ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"your","phase":"shooting"} · STRATAGEMS Stratagems
+STRATAGEMS
 COLLAPSE ALL
 FREEBLADE COMPANY
 3
@@ -1862,37 +1909,16 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-ALSO THIS PHASE
-5 abilities
-Code Chivalric Quality 1–2 (martial valour): each time a Knight shoots or fights, re-roll one Hit roll and one Wound roll.
-Thin Their Ranks
-Knight Warden
+NEXT: YOUR CHARGE ›
 
-Each time this model makes a ranged attack that targets an enemy unit (excluding MONSTERS and VEHICLES), that attack has the [DEVASTATING WOUNDS] ability.
+Not shown, no unit here can use it: Explosives (EXPLOSIVES OR GRENADES).
 
-UNITSKnight Warden
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-Seasoned Noble
-Knight Paladin
-
-Each time this model makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1.
-
-UNITSKnight Paladin
-
-Aggressive Assault
-Knight Errant
-
-Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll.
-
-UNITSKnight Errant
-
-Saturation Fire
-Knight Destrier
-
-Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
-
-UNITSKnight Destrier
-
+######## strats {"turn":"your","phase":"charge"} · YOUR CHARGE Your Charge ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+THIS PHASE
+1 ability
+Code Chivalric Quality 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls.
 Knights of Legend
 Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
 
@@ -1900,13 +1926,7 @@ IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addi
 
 UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
 
-NEXT: YOUR CHARGE ›
-
-Not shown, no unit here can use it: Explosives (EXPLOSIVES OR GRENADES).
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"your","phase":"charge"} · STRATAGEMS Stratagems
+STRATAGEMS
 COLLAPSE ALL
 FREEBLADE COMPANY
 1
@@ -1975,9 +1995,14 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-ALSO THIS PHASE
+NEXT: YOUR FIGHT ›
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## strats {"turn":"your","phase":"fight"} · YOUR FIGHT Your Fight ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+THIS PHASE
 1 ability
-Code Chivalric Quality 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls.
+Code Chivalric Quality 1–2 (martial valour): each time a Knight shoots or fights, re-roll one Hit roll and one Wound roll.
 Knights of Legend
 Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
 
@@ -1985,11 +2010,7 @@ IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addi
 
 UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
 
-NEXT: YOUR FIGHT ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"your","phase":"fight"} · STRATAGEMS Stratagems
+STRATAGEMS
 COLLAPSE ALL
 FREEBLADE COMPANY
 2
@@ -2068,21 +2089,11 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-ALSO THIS PHASE
-1 ability
-Code Chivalric Quality 1–2 (martial valour): each time a Knight shoots or fights, re-roll one Hit roll and one Wound roll.
-Knights of Legend
-Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
-
-IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
-
-UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
-
 NEXT: THEIR COMMAND ›
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## strats {"turn":"opp","phase":"all"} · STRATAGEMS Stratagems
+######## strats {"turn":"opp","phase":"all"} · TURN Turn ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
 COLLAPSE ALL
 FREEBLADE COMPANY
 3
@@ -2236,7 +2247,17 @@ Not shown, no unit here can use them: Flanking Manoeuvres (ARMIGER), Fire Overwa
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## strats {"turn":"opp","phase":"command"} · STRATAGEMS Stratagems
+######## strats {"turn":"opp","phase":"command"} · THEIR COMMAND Their Command ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+THIS PHASE
+1 ability
+Knights of Legend
+Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
+
+UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+STRATAGEMS
 COLLAPSE ALL
 FREEBLADE COMPANY
 1
@@ -2283,7 +2304,12 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-ALSO THIS PHASE
+NEXT: THEIR MOVEMENT ›
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## strats {"turn":"opp","phase":"movement"} · THEIR MOVEMENT Their Movement ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+THIS PHASE
 1 ability
 Knights of Legend
 Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
@@ -2292,11 +2318,7 @@ IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addi
 
 UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
 
-NEXT: THEIR MOVEMENT ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"opp","phase":"movement"} · STRATAGEMS Stratagems
+STRATAGEMS
 COLLAPSE ALL
 FREEBLADE COMPANY
 1
@@ -2361,7 +2383,14 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-ALSO THIS PHASE
+NEXT: THEIR SHOOTING ›
+
+Not shown, no unit here can use it: Fire Overwatch.
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## strats {"turn":"opp","phase":"shooting"} · THEIR SHOOTING Their Shooting ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+THIS PHASE
 1 ability
 Knights of Legend
 Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
@@ -2370,13 +2399,7 @@ IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addi
 
 UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
 
-NEXT: THEIR SHOOTING ›
-
-Not shown, no unit here can use it: Fire Overwatch.
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"opp","phase":"shooting"} · STRATAGEMS Stratagems
+STRATAGEMS
 COLLAPSE ALL
 FREEBLADE COMPANY
 2
@@ -2439,15 +2462,6 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-ALSO THIS PHASE
-1 ability
-Knights of Legend
-Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
-
-IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
-
-UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
-
 WHEN TARGETED
 
 Every unit: Feel No Pain 6+ · 5+ invulnerable save against ranged attacks only · 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
@@ -2466,7 +2480,18 @@ Not shown, no unit here can use it: Smokescreen (SMOKE).
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## strats {"turn":"opp","phase":"charge"} · STRATAGEMS Stratagems
+######## strats {"turn":"opp","phase":"charge"} · THEIR CHARGE Their Charge ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+THIS PHASE
+1 ability
+Code Chivalric Quality 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls.
+Knights of Legend
+Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
+
+UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+STRATAGEMS
 COLLAPSE ALL
 FREEBLADE COMPANY
 1
@@ -2534,9 +2559,14 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-ALSO THIS PHASE
+NEXT: THEIR FIGHT ›
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## strats {"turn":"opp","phase":"fight"} · THEIR FIGHT Their Fight ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+THIS PHASE
 1 ability
-Code Chivalric Quality 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls.
+Code Chivalric Quality 1–2 (martial valour): each time a Knight shoots or fights, re-roll one Hit roll and one Wound roll.
 Knights of Legend
 Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
 
@@ -2544,11 +2574,7 @@ IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addi
 
 UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
 
-NEXT: THEIR FIGHT ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"opp","phase":"fight"} · STRATAGEMS Stratagems
+STRATAGEMS
 COLLAPSE ALL
 FREEBLADE COMPANY
 2
@@ -2643,16 +2669,6 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-ALSO THIS PHASE
-1 ability
-Code Chivalric Quality 1–2 (martial valour): each time a Knight shoots or fights, re-roll one Hit roll and one Wound roll.
-Knights of Legend
-Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
-
-IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
-
-UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
-
 WHEN TARGETED
 
 Every unit: Feel No Pain 6+ · 5+ invulnerable save against ranged attacks only
@@ -2671,7 +2687,7 @@ Not shown, no unit here can use it: Flanking Manoeuvres (ARMIGER).
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## unit knight-warden · STRATAGEMS Knight Warden
+######## unit knight-warden · THEIR FIGHT Knight Warden
 Character · 365 pts
 Warlord
 M
@@ -2777,6 +2793,8 @@ While a model is affected by this ability, weapons equipped by that model have t
 RULESDeadly Demise D6, Super-Heavy Walker, Code Chivalric, Devastating Wounds, Knights of Legend · Keywords
 
 STRATAGEMSNoble Sacrifice, Strength from Exile, Full Tilt, Point-Blank Barrage, Survivor of Strife, Epic Challenge, Crushing Impact
+
+Knight Paladin ›
 
 ######## unit knight-paladin · KNIGHT WARDEN Knight Paladin
 Character · 375 pts each · ×2 in list
@@ -2885,6 +2903,9 @@ RULESDeadly Demise D6, Super-Heavy Walker, Code Chivalric, Knights of Legend · 
 
 STRATAGEMSNoble Sacrifice, Strength from Exile, Full Tilt, Point-Blank Barrage, Survivor of Strife, Epic Challenge, Crushing Impact
 
+‹ Knight Warden
+Knight Errant ›
+
 ######## unit knight-errant · KNIGHT PALADIN Knight Errant
 Character · 355 pts
 M
@@ -2984,6 +3005,9 @@ RULESDeadly Demise D6, Super-Heavy Walker, Code Chivalric, Knights of Legend · 
 
 STRATAGEMSNoble Sacrifice, Strength from Exile, Full Tilt, Point-Blank Barrage, Survivor of Strife, Epic Challenge, Crushing Impact
 
+‹ Knight Paladin
+Knight Destrier ›
+
 ######## unit knight-destrier · KNIGHT ERRANT Knight Destrier
 Character · 265 pts each · ×2 in list
 M
@@ -3081,6 +3105,8 @@ This model has a 5+ invulnerable save against ranged attacks.
 RULESDeadly Demise D6, Super-Heavy Walker, Code Chivalric, Knights of Legend · Keywords
 
 STRATAGEMSNoble Sacrifice, Strength from Exile, Full Tilt, Point-Blank Barrage, Survivor of Strife, Epic Challenge, Crushing Impact
+
+‹ Knight Errant
 
 ######## popup ability:purge-freeblade|Aggressive Assault|Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll. · KNIGHT DESTRIER Purge Freeblade
 ABILITY · SHOOTING · YOUR TURN
