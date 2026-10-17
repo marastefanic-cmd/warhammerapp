@@ -15,7 +15,7 @@
 //   small phone the same at 320px wide
 //   snapshots   the text of every screen equals the accepted snapshot (verify/snapshots/)
 //   helpers     verify/helpers.js: every judgement the app adds is signed off (verify/approvals.json)
-// Not part of the gate: verify/currency.js, the weekly check that the sources are still the newest.
+// Not part of the gate: verify/currency.js checks that the sources are still the newest (run by hand).
 const { spawnSync } = require('child_process');
 const fs = require('fs'), path = require('path');
 const { ROOT, sha, writeJSON } = require('./lib');
