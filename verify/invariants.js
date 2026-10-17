@@ -118,8 +118,9 @@ function run(D){
     for(const w of [...(u.ranged || []), ...(u.melee || [])]){
       const g = w.group || w.name; if(seen.has(g + '|' + w.who)) continue; seen.add(g + '|' + w.who);
       const mine = !u.leads ? lines : leaderWho(w) ? lines.slice(0, 1) : lines.slice(1);
-      const carriers = mine.filter(l => l.gear.includes(g)).reduce((t, l) => t + l.n, 0);
-      if(total > 1 && carriers > 1 && +w.n !== carriers) F('weapon-count', a.id + ' · ' + u.name + ' · ' + g, carriers + ' models carry it, the app says ×' + (w.n || 1));
+      // a gear line that names a weapon twice (the Two-Busta Tankbusta) is two of it per model
+      const carriers = mine.reduce((t, l) => t + l.n * l.gear.filter(x => x === g).length, 0);
+      if(total > 1 && carriers > 1 && +w.n !== carriers) F('weapon-count', a.id + ' · ' + u.name + ' · ' + g, carriers + ' carried by its models, the app says ×' + (w.n || 1));
       if(total > 1 && carriers === 1 && w.n && +w.n !== 1) F('weapon-count', a.id + ' · ' + u.name + ' · ' + g, 'one model carries it, the app says ×' + w.n);
     }
     if(u.leads){

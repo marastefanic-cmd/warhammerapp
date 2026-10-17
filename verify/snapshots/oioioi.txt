@@ -47,9 +47,13 @@ Tzaangors Scouts 6"
 START OF THE BATTLE ROUND
 EVERY ROUND
 Unearthly Power · Magnus the Red
-ONCE PER BATTLE
+USES PER BATTLE
+NEW GAME
 RULES
-Kindred Sorcery · Grand Coven (each of its options once)
+Kindred Sorcery · Grand Coven:
+Imbued Manifestation
+Psychic Maelstrom
+Wrath of the Immaterium
 ABILITIES
 Twisted Sorceries · Sorcerer
 Umbralefic Crystal · Sorcerer in Terminator Armour per army
@@ -4202,9 +4206,6 @@ INV
 6+
 3
 4+
-
-S and D of Dark Blessing and Hellforged weapons already include +1 from Eldritch Vortex of E’taph.
-
 WHEN TARGETED1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; their Psychic weapons get [HAZARDOUS] · 1CP Destined by Fate: after a failed save for a PSYKER model, that attack’s Damage becomes 0
 ALL ATTACKS
 vs CHARACTER units: re-roll hit rolls of 1 and wound rolls of 1 (vs PSYKER CHARACTER units: re-roll the hit roll and the wound roll) (Hunter of Souls)
@@ -4323,9 +4324,6 @@ Aspiring Sorcerer
 6+
 2
 5+
-
-[LETHAL HITS] on every weapon comes from Empyric Guidance (while the Sorcerer leads); [IGNORES COVER] on Malefic Curse and the soulreaper cannon comes from the Icon of Flame (the warpflamers and warpflame pistol have it on their own profile).
-
 WHEN TARGETED1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; their Psychic weapons get [HAZARDOUS] · 1CP Destined by Fate: after a failed save for a PSYKER model, that attack’s Damage becomes 0
 ALL ATTACKS · WHOLE UNIT
 Twisted Sorceries used this phase (your Shooting phase or the Fight phase, once per battle): Sorcerer Psychic weapons +3 S and +3 A
@@ -4507,9 +4505,6 @@ Scarab Occult Terminator
 7+
 1
 4+
-
-[LETHAL HITS] on every weapon comes from Empyric Guidance (while the Sorcerer leads).
-
 WHEN TARGETED-1 to wound rolls against this unit while it contains a PSYKER model · 1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; their Psychic weapons get [HAZARDOUS] · 1CP Destined by Fate: after a failed save for a PSYKER model, that attack’s Damage becomes 0
 ALL ATTACKS · WHOLE UNIT
 Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
@@ -5031,6 +5026,110 @@ This unit has Deep Strike until the start of your next Shooting phase.
 This unit must make an ingress move in your next Movement phase (including in your first turn).
 
 ONSorcerer in Terminator Armour · Umbralefic Crystal
+
+######## popup grant:["Eldritch Vortex of E’taph","daemon-prince","D 2",null] · OIOIOI oioioi
+GRANTED BY ELDRITCH VORTEX OF E’TAPH
+
+D 2
+
+Eldritch Vortex of E’taph Enhancement
+
+THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Eldritch Vortex of E’taph","daemon-prince","D 4",null] · OIOIOI oioioi
+GRANTED BY ELDRITCH VORTEX OF E’TAPH
+
+D 4
+
+Eldritch Vortex of E’taph Enhancement
+
+THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Eldritch Vortex of E’taph","daemon-prince","S 5",null] · OIOIOI oioioi
+GRANTED BY ELDRITCH VORTEX OF E’TAPH
+
+S 5
+
+Eldritch Vortex of E’taph Enhancement
+
+THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Eldritch Vortex of E’taph","daemon-prince","S 7",null] · OIOIOI oioioi
+GRANTED BY ELDRITCH VORTEX OF E’TAPH
+
+S 7
+
+Eldritch Vortex of E’taph Enhancement
+
+THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Eldritch Vortex of E’taph","daemon-prince","S 9",null] · OIOIOI oioioi
+GRANTED BY ELDRITCH VORTEX OF E’TAPH
+
+S 9
+
+Eldritch Vortex of E’taph Enhancement
+
+THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Empyric Guidance","sorcerer","LETHAL HITS","LETHAL HITS"] · OIOIOI oioioi
+GRANTED BY EMPYRIC GUIDANCE
+
+LETHAL HITS
+
+Empyric Guidance Sorcerer · Psychic
+
+While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.
+
+Already in the keywords shown (as New Recruit and BSData list them).
+
+LETHAL HITS Core rule
+
+Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
+
+Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
+
+######## popup grant:["Empyric Guidance","sorcerer-terminator","LETHAL HITS","LETHAL HITS"] · OIOIOI oioioi
+GRANTED BY EMPYRIC GUIDANCE
+
+LETHAL HITS
+
+Empyric Guidance Sorcerer in Terminator Armour · Psychic
+
+While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.
+
+Already in the keywords shown (as New Recruit and BSData list them).
+
+LETHAL HITS Core rule
+
+Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
+
+Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
+
+######## popup grant:["Icon of Flame","sorcerer","IGNORES COVER","IGNORES COVER"] · OIOIOI oioioi
+GRANTED BY ICON OF FLAME
+
+IGNORES COVER
+
+Icon of Flame Rubric Marines
+
+Ranged weapons equipped by models in the bearer’s unit (excluding CHARACTERS) have the [IGNORES COVER] ability.
+
+Already in the keywords shown (as New Recruit and BSData list them).
+
+IGNORES COVER Core rule
+
+Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
 
 ######## popup kw:daemon-prince · OIOIOI oioioi
 CHARACTER · 205 PTS

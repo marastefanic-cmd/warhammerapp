@@ -56,7 +56,7 @@ function items(D, appSource){
       }
       for(const m of u.mods || []) add(a.id, 'unit-footnote', w, m, cited(a.id, u, m));
       for(const m of u.aura || []) add(a.id, 'unit-aura', w, m, cited(a.id, u, m));
-      for(const k of ['boostNote', 'kwNote', 'ptsNote', 'note']) if(u[k]) add(a.id, 'unit-' + k, w, { [k]:u[k] }, unitFacts);
+      for(const k of ['kwNote', 'ptsNote', 'note']) if(u[k]) add(a.id, 'unit-' + k, w, { [k]:u[k] }, unitFacts);
       // weapons: which model has which, how many, and the multi-profile groups
       add(a.id, 'unit-weapons', w, { gear:u.gear, weapons:[...(u.ranged || []), ...(u.melee || [])].map(x => [x.who, x.n && '×' + x.n, x.group, x.name].filter(Boolean).join(' · ')) }, { models:u.models, leads:u.leads || null });
     }
@@ -105,6 +105,10 @@ const CODE_RULES = {
   proxyLines:'Bases & proxies: bases per models line and what to mark',
   quickRef:'Core Rules 07 (battle round), 07.02 (turn), 08 (Command phase), 05.01 hit roll, 05.02 wound roll table, 05.03-05.04 save roll and allocation order (dice values are pictures in the PDF: page 18)',
   nextPhase:'phase order (07.02): Command, Movement, Shooting, Charge, Fight; then the other player\'s turn',
+  perBattle:'tick boxes: how many uses a rule allows per battle ("once"/"twice"/"three times per battle") and whether they are counted per army or for each unit',
+  abilityTicks:'tick boxes on an ability row: one set per army, or one per unit copy',
+  grantSource:'"Granted by": which ability, detachment rule or army rule a marked value names',
+  showGrant:'"Granted by": a value or keyword that a rule of the list already changed (from BSData\'s modifiers, checked against New Recruit\'s "(…)" marks): the rule\'s text, and that the value shown includes it',
   screenPregame:'Before the battle: Warlord, enhancements, attached units, strategic reserves (20.01: at most half the points limit; 20.03: from battle round 2, destroyed at the end of round 3), Deep Strike, transports, Scouts, start of round 1 / every round, once-per-battle items',
 };
 function appFunctions(html){

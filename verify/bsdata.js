@@ -17,7 +17,10 @@
                in an ability it uses itself (not one marked na, not one the app only gives to
                other units through an `aura` whose keywords leave the unit out, e.g. a Knight's Bondsman ability); and every
                BSData rule of the unit must be listed
-     points    pts per copy (leader + bodyguard + wargear + enhancement), with the escalation
+     grants    every weapon/stat value BSData's modifiers change, with the rule that changes it,
+               against the app's `from` marks (both ways; see "Granted values" below)
+     points    pts per copy (leader + bodyguard + wargear + enhancements, an UPGRADE on the
+               bodyguard), with the escalation
                for the k-th unit of a datasheet; ptsNote "leader + Bodyguard N"
      gear      every models/gear line resolves to BSData entries; required wargear present;
                no selection BSData hides for this list (enhancement of another detachment)
@@ -398,8 +401,19 @@ function applyToInst(inst, m, times) {
   const ch = inst.chars && inst.chars.find((c) => c.typeId === m.field || c.name === SRC.charName.get(m.field));
   if (ch) ch.value = applyValue(ch.value, m, times);
 }
+// which selection a change comes from: the one whose modifier reaches across (an enhancement's
+// "affects"), or, for a modifier written on the profile itself, the entries its conditions name
+function condNames(m, outer) {
+  const out = []; const walk = (c) => { for (const x of c.conditions || []) if (x.childId && SRC.get(x.childId)) out.push(nn(SRC.get(x.childId).name)); for (const g of [...(c.conditionGroups || []), ...(c.localConditionGroups || [])]) walk(g); };
+  walk(m); for (const o of outer) walk(o); return [...new Set(out)];
+}
+function applyTracked(inst, m, times, by) {
+  const before = inst.chars ? inst.chars.map((c) => c.value) : null;
+  applyToInst(inst, m, times);
+  if (before) inst.chars.forEach((c, i) => { if (c.value !== before[i]) (inst.changes || (inst.changes = [])).push({ char: c.name, by, comment: m.comment ? nn(m.comment) : null, type: m.type, value: String(m.value), before: before[i], after: c.value }); });
+}
 function localMods(obj, inst, sel) {   // modifiers written on the profile / rule / link itself
-  for (const { m, outer } of flatMods(obj)) { if (m.affects) continue; const t = timesActive(m, outer, sel); if (t) applyToInst(inst, m, t); }
+  for (const { m, outer } of flatMods(obj)) { if (m.affects) continue; const t = timesActive(m, outer, sel); if (t) applyTracked(inst, m, t, condNames(m, outer)); }
 }
 
 /* collect each selection's profiles and rules (before the modifiers that reach across selections) */
@@ -453,7 +467,7 @@ function applyAcross(sel) {            // modifiers with "affects", and category
     const { sels, profType } = m.affects ? resolveAffects(m.affects, base) : { sels: [sel], profType: null };
     if (isCat) { for (const s of sels) applyCat(s, m); continue; }
     if (isInfo) { const tg = m.affects === 'group' ? groupOf(base) : sels; for (const s of tg) addInfo(s, m.value, sel); continue; }
-    if (profType) for (const s of sels) for (const p of s.profiles) if (p.typeName === profType) applyToInst(p, m, t);
+    if (profType) for (const s of sels) for (const p of s.profiles) if (p.typeName === profType) applyTracked(p, m, t, [nn(sel.node.name), ...condNames(m, outer)]);
   }
 }
 function applyCat(s, m) {
@@ -645,6 +659,15 @@ function buildUnit(army, u, um, cat, force, issues) {
     const own = items.map((g) => ({ g, name: ((um.gear || {})[g]) || g }));
     for (const it of own) { it.cands = gearCandidates(msel.node, it.name); it.parent = msel; it.cnt = msel.count; }
     if (unitRoot) for (const it of own) if (!it.cands.length) { it.cands = gearCandidates(unitRoot.node, it.name); it.parent = unitRoot; it.cnt = ln.count; }
+    // BSData gives the Two-Busta model its launcha as one selection of 2 (min = max = 2);
+    // the app's gear names it once per weapon: the repeats are that one selection
+    const perPath = (q) => q.filter((n) => n.type === 'upgrade').reduce((c, n) => c * fixedCount(n), 1);
+    for (let j = 0; j < own.length; j++) {
+      const it = own[j]; const f = it.cands.length ? perPath(it.cands[0]) : 1;
+      if (f < 2 || !it.cands.every((q) => perPath(q) === f)) continue;
+      const rep = own.map((x, k) => k).filter((k) => k > j && own[k].name === it.name).slice(0, f - 1);
+      if (rep.length === f - 1) for (const k of rep.reverse()) own.splice(k, 1);
+    }
     const picks = assignGear(own);
     own.forEach((it, j) => {
       if (!picks[j]) { fail('gear', it.g, '', `no BSData wargear "${it.name}" for ${msel.node.name}${it.cands.length ? ' (every place it is offered is taken)' : ''}`); return; }
@@ -661,6 +684,17 @@ function buildUnit(army, u, um, cat, force, issues) {
       const last = p[p.length - 1];
       const already = lead.desc(false).find((d) => d.node.id === last.id);
       (already || addChain(lead, p, 1)).isEnhancement = true;
+    }
+  }
+  // an UPGRADE enhancement goes on the unit it upgrades: the bodyguard (last root)
+  if (u.upgrade) {
+    const host = roots[roots.length - 1];
+    const p = searchBelow(host.node, (k) => k.type === 'upgrade' && nn(k.name) === nn(u.upgrade))[0];
+    if (!p) fail('upgrade', u.upgrade, '', `no upgrade "${u.upgrade}" for ${host.node.name}`);
+    else {
+      const last = p[p.length - 1];
+      const already = host.desc(false).find((d) => d.node.id === last.id);
+      (already || addChain(host, p, 1)).isEnhancement = true;
     }
   }
   if (u.warlord) {
@@ -711,10 +745,10 @@ function unitFacts(roots) {
       if (p.typeName === 'Unit') {
         let count = s.count;
         if (s.kind === 'unit') count = s.desc(false).filter((d) => d.kind === 'model' && !d.profiles.some((q) => q.typeName === 'Unit' && !q.hidden)).reduce((a, d) => a + d.count, 0) || 1;
-        F.stats.push({ root: s.root, name: nn(p.name), ch, count, where: s.where() });
+        F.stats.push({ root: s.root, name: nn(p.name), ch, count, changes: p.changes || [], where: s.where() });
       } else if (WEAPON_TYPES.includes(p.typeName)) {
         const w = parseWeaponName(p.name, s.node.name);
-        F.weapons.push({ root: s.root, kind: p.typeName === 'Ranged Weapons' ? 'ranged' : 'melee', ...w, ch, kw: kwList(ch.Keywords), count: s.count, enh: !!s.isEnhancement, where: `${s.where()} › ${p.name}` });
+        F.weapons.push({ root: s.root, kind: p.typeName === 'Ranged Weapons' ? 'ranged' : 'melee', ...w, ch, kw: kwList(ch.Keywords), count: s.count, enh: !!s.isEnhancement, changes: p.changes || [], where: `${s.where()} › ${p.name}` });
       } else {
         const text = p.chars.map((c) => c.value).join('\n');
         F.abilities.push({ root: s.root, name: nn(p.name), typeName: p.typeName, text, sel: s, infoGroup: p.infoGroup || null, enh: !!s.isEnhancement, where: `${s.where()} › ${p.name}` });
@@ -756,6 +790,72 @@ function splitAbilityName(raw) {       // "Name (Tag) (Tag2)" → { base, tags[]
 const kwBase = (k) => nk(k).replace(/:.*$/, '').replace(/^ANTI-.*$/, 'ANTI').replace(/\s+(D?\d+\+?|D\d+[+-]\d+|\d*D\d+)$/, '').trim();
 
 /* ---------------------------------------------------------------------
+   Granted values: a weapon or stat value that BSData changes, and the rule that changes it.
+   The source of a change is the modifier's comment ("Relentless Rage"), the selection whose
+   modifier it is (an enhancement: "Supa-snazz Dakka") or an entry its conditions name (a
+   detachment: "Shoota Boyz"). A name that is one of the unit's abilities, a detachment rule or
+   army rule of the list, or a detachment of the list (standing for its rule) is the source.
+   A change written on the unit's own datasheet entry is granted by the unit's ability whose text
+   names the keyword ("[IGNORES COVER]") or the characteristic and the new value ('Move
+   characteristic of 10"'); a change no ability names is the datasheet's own profile, not marked.
+   The app marks a granted value `from: { <keyword or field>: name | [names] }`.
+--------------------------------------------------------------------- */
+const CHAR_KEY = { Range: 'range', LD: 'Ld', Base: 'base' };
+const CHAR_WORDS = { M: /\bMove\b|\bM\b/, T: /\bToughness\b|\bT\b/, Sv: /\bSave\b|\bSv\b/, W: /\bWounds characteristic\b|\bW\b/, Ld: /\bLeadership\b|\bLd\b/,
+  OC: /\bObjective Control\b|\bOC\b/, InSv: /\bInSv\b|\binvulnerable save\b/i, A: /\bAttacks\b|\bA\b/, S: /\bStrength\b|\bS\b/, D: /\bDamage\b|\bD\b/,
+  AP: /\bAP\b/, BS: /\bBS\b|\bBallistic Skill\b/, WS: /\bWS\b|\bWeapon Skill\b/, range: /\bRange\b|\bR\b/ };
+function grantNames(army) {
+  const f = DATA.factions[army.faction];
+  const dets = army.detachments.map((d) => f.detachments[d]).filter(Boolean);
+  const m = new Map();
+  for (const d of dets) if (d.rule) { m.set(nn(d.rule.name), d.rule.name); m.set(nn(d.name), d.rule.name); }
+  for (const r of f.armyRules || []) m.set(nn(r.name), r.name);
+  return m;
+}
+// the granted values of one BSData profile, as the app should mark them: Map key → sorted names
+function grantsOf(army, u, prof, appKw) {
+  const out = new Map();
+  const named = grantNames(army);
+  const abil = new Map((u.abilities || []).map((a) => [nn(a.name), a]));
+  const flat = (t) => nn(String(t || '').replace(/\*\*/g, ''));
+  for (const c of prof.changes || []) {
+    const isKw = c.char === 'Keywords';
+    let keys;
+    if (isKw) { const before = new Set(kwList(c.before)); keys = kwList(c.after).filter((k) => !before.has(k)).map((k) => (appKw || []).find((x) => nk(x) === k) || k); }
+    else { if (nn(c.after).replace(/\+0$/, '') === nn(c.before)) continue; keys = [CHAR_KEY[c.char] || c.char]; }
+    for (const key of keys) {
+      const names = new Set();
+      for (const x of [c.comment, ...c.by].filter(Boolean)) {
+        if (abil.has(nn(x))) names.add(abil.get(nn(x)).name);
+        else if (named.has(nn(x))) names.add(named.get(nn(x)));
+      }
+      if (!names.size) {
+        const says = (a) => isKw ? flat(a.text).toUpperCase().includes(`[${nk(key)}]`)
+          : (CHAR_WORDS[key] || /^$/).test(flat(a.text)) && (c.type !== 'set' || flat(a.text).includes(nn(c.after)));
+        const hits = (u.abilities || []).filter(says);
+        if (hits.length === 1) names.add(hits[0].name);
+        else if (hits.length > 1) names.add(`(ambiguous: ${hits.map((a) => a.name).join(' / ')})`);
+      }
+      if (names.size) out.set(key, [...new Set([...(out.get(key) || []), ...names])].sort());
+    }
+  }
+  return out;
+}
+const fromMap = (from) => new Map(Object.entries(from || {}).map(([k, v]) => [k, [].concat(v).slice().sort()]));
+const GRANTS = [];
+function compareGrants(army, u, kind, label, app, prof, appKw, fail, where) {
+  const want = grantsOf(army, u, prof, appKw);
+  const have = fromMap(app.from);
+  const idx = (u[kind] || []).indexOf(app);
+  for (const [k, v] of want) GRANTS.push({ army: army.id, unit: u.id, kind, idx, row: label, key: k, names: v });
+  for (const k of new Set([...want.keys(), ...have.keys()])) {
+    checked('grants');
+    const a = (have.get(k) || []).join(' + '), b = (want.get(k) || []).join(' + ');
+    if (a !== b) fail(`${kind}.from`, `${label}: ${k} ← ${a || '(not marked)'}`, b || '(not changed by a rule)', where);
+  }
+}
+
+/* ---------------------------------------------------------------------
    Compare one unit
 --------------------------------------------------------------------- */
 const COUNT = {};
@@ -782,6 +882,7 @@ function compareUnit(army, u, F, fail) {
       if (nv(row[k], k === 'base') !== nv(best.ch[keyChar(k)], k === 'base')) fail(`stats.${k}`, `${row.name}: ${row[k]}`, `${best.name}: ${best.ch[keyChar(k)]}`, best.where);
     }
     checked('stats'); if (n !== best.count) fail('stats.count', row.name, `${best.name} ×${best.count}`, best.where);
+    compareGrants(army, u, 'stats', row.name, row, best, null, fail, best.where);
   }
   for (const s of F.stats) if (!usedStats.has(s)) { checked('stats'); fail('stats', '', `${s.name} (${['M', 'T', 'Sv', 'W', 'LD', 'OC', 'InSv'].map((k) => s.ch[k]).join(' ')})`, `${s.where}: Unit profile missing in the app`); }
 
@@ -803,13 +904,15 @@ function compareUnit(army, u, F, fail) {
     checked('weapons'); if (!!w.hunter !== !!best.hunter) fail(`${kind}.hunter`, `${label}: ${!!w.hunter}`, best.hunter || 'no Hunter profile', best.where);
     checked('weapons'); if ((w.n || 1) !== best.count) fail(`${kind}.n`, `${label}: ${w.n || 1}`, String(best.count), best.where);
     checked('weapons'); if (!!w.enh !== best.enh) fail(`${kind}.enh`, `${label}: ${!!w.enh}`, best.enh ? 'the enhancement\'s weapon' : 'not from an enhancement', best.where);
+    compareGrants(army, u, kind, label, w, best, w.kw, fail, best.where);
   }
   for (const b of F.weapons) if (!usedW.has(b)) { checked('weapons'); fail(b.kind, '', `${b.full} (${rootName(b.root)})`, `${b.where}: carried per BSData, missing in the app`); }
 
   /* abilities
      - a profile of another type than Abilities (Transport, Crimson King, ...) may carry the
        type's name in the app: the Chaos Rhino's "Transport" profile is app ability "Transport";
-     - BSData's "Leader" ability (the units it can be attached to) is the app's rule "Leader";
+     - BSData's "Leader" or "Support" ability (the units it can be attached to) is the app's
+       rule of that name;
        the unit named in `leads` must be one of the units that text names;
      - an app ability marked `na` (not usable with this loadout) is looked up in the whole
        datasheet, including wargear this list did not take. */
@@ -840,8 +943,8 @@ function compareUnit(army, u, F, fail) {
   for (const b of F.abilities) {
     if (usedA.has(b)) continue;
     checked('abilities');
-    if (b.name === 'Leader' && b.typeName === 'Abilities') {
-      if (!(u.rules || []).map(nn).includes('Leader')) fail('rules', '', 'Leader', `${b.where}: the Leader ability, app rule "Leader" missing`);
+    if ((b.name === 'Leader' || b.name === 'Support') && b.typeName === 'Abilities') {
+      if (!(u.rules || []).map(nn).includes(b.name)) fail('rules', '', b.name, `${b.where}: the ${b.name} ability, app rule "${b.name}" missing`);
       if (u.leads && b.root === F.roots[0] && !nt(b.text).includes(nt(u.leads))) fail('leads', u.leads, b.text, b.where);
       continue;
     }
@@ -899,7 +1002,7 @@ function compareUnit(army, u, F, fail) {
 }
 
 /* ---------------------------------------------------------------------
-   Points: each copy's pts = leader + bodyguard + upgrades + enhancement, with the
+   Points: each copy's pts = leader + bodyguard + upgrades + enhancements, with the
    escalation for the k-th unit of a datasheet; copies of one datasheet may come in any
    order, so the check looks for an order that makes every copy match.
 --------------------------------------------------------------------- */
@@ -1002,7 +1105,7 @@ function main() {
     if (now !== was) remaining.push({ army: '(all)', unit: '(source)', field: 'bsdata.extract', app: 'verify/sources/bsdata-extract.json', source: 'differs from what this check reads in the clone', where: 'run: node verify/bsdata.js --write-extract' });
   }
 
-  const out = { check: 'bsdata', source: { mode: SRC.mode, commit: SRC.commit, pin }, checked: COUNT, failures: remaining, deviations: usedDev.size };
+  const out = { check: 'bsdata', source: { mode: SRC.mode, commit: SRC.commit, pin }, checked: COUNT, failures: remaining, deviations: usedDev.size, grants: GRANTS };
   fs.mkdirSync(path.dirname(P.out), { recursive: true });
   fs.writeFileSync(P.out, JSON.stringify(out, null, 1) + '\n');
   const total = Object.values(COUNT).reduce((a, b) => a + b, 0);

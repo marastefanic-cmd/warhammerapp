@@ -82,6 +82,12 @@ function check(file){
         for(const k of w.kw || []) if(!ruleFor(a, k)) P(where, w.name, 'keyword opens nothing:', k);
         for(const k of (u.ranged || []).includes(w) ? ['range','A','BS','S','AP','D'] : ['A','WS','S','AP','D']) if(w[k] == null) P(where, w.name, 'missing', k);
       }
+      // from: each mark is one of the row's keywords or fields, and names something the app can open
+      for(const x of [...weapons, ...(u.stats || [])]) for(const [k, v] of Object.entries(x.from || {})){
+        const fields = (u.stats || []).includes(x) ? ['M','T','Sv','W','Ld','OC','InSv','base'] : ['range','A','BS','WS','S','AP','D'];
+        if(!(x.kw || []).includes(k) && !fields.includes(k)) P(where, x.name, 'from names neither a keyword nor a field of it:', k);
+        for(const n of [].concat(v)) if(!u.abilities.some(ab => ab.name === n) && !ruleFor(a, n)) P(where, x.name, 'from names nothing the app can open:', n);
+      }
       // a weapon's profiles must sit next to each other (the app joins neighbours only)
       for(const kind of ['ranged','melee']){
         const seen = new Set(); let last = null;

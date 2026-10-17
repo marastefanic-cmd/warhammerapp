@@ -1,0 +1,1315 @@
+[
+ {
+  "army": "shooty",
+  "kind": "ability-timing",
+  "where": "shooty · Wazdakka Gutsmek · Full Throttle",
+  "judgement": {
+   "ph": [
+    "command",
+    "movement",
+    "charge"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Full Throttle",
+   "text": "In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase."
+  },
+  "key": "d391777dcfbd96c6"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-timing",
+  "where": "shooty · Wazdakka Gutsmek · Turbo Engine",
+  "judgement": {
+   "ph": [
+    "movement",
+    "charge"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Turbo Engine",
+   "text": "When this unit is selected to make an **advance**/**fall-back move**, that move does not prevent this unit from being **eligible to declare a charge**."
+  },
+  "key": "a51cc933f48a6d82"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-who",
+  "where": "shooty · Wazdakka Gutsmek · Turbo Engine",
+  "judgement": {
+   "who": "Throttlerokkit Shokka Engine: pick one",
+   "models": [
+    "1× Wazdakka Gutsmek"
+   ]
+  },
+  "source": {
+   "ability": "Turbo Engine",
+   "text": "When this unit is selected to make an **advance**/**fall-back move**, that move does not prevent this unit from being **eligible to declare a charge**."
+  },
+  "key": "a8bae601c029d4ae"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-timing",
+  "where": "shooty · Wazdakka Gutsmek · Pulse Jet",
+  "judgement": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Pulse Jet",
+   "text": "In your Movement phase, when this unit is **selected to move**, if this unit is **unengaged**, this unit can make a **pulse jet move**."
+  },
+  "key": "5ed6689ef3c39cad"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-who",
+  "where": "shooty · Wazdakka Gutsmek · Pulse Jet",
+  "judgement": {
+   "who": "Throttlerokkit Shokka Engine: pick one",
+   "models": [
+    "1× Wazdakka Gutsmek"
+   ]
+  },
+  "source": {
+   "ability": "Pulse Jet",
+   "text": "In your Movement phase, when this unit is **selected to move**, if this unit is **unengaged**, this unit can make a **pulse jet move**."
+  },
+  "key": "03afbb1d377a182d"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-timing",
+  "where": "shooty · Wazdakka Gutsmek · Shokk Attack Engine",
+  "judgement": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Shokk Attack Engine",
+   "text": "In your Command phase, if this unit is **unengaged**, you can place this unit in **strategic reserves**."
+  },
+  "key": "988890d0abd7b673"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-who",
+  "where": "shooty · Wazdakka Gutsmek · Shokk Attack Engine",
+  "judgement": {
+   "who": "Throttlerokkit Shokka Engine: pick one",
+   "models": [
+    "1× Wazdakka Gutsmek"
+   ]
+  },
+  "source": {
+   "ability": "Shokk Attack Engine",
+   "text": "In your Command phase, if this unit is **unengaged**, you can place this unit in **strategic reserves**."
+  },
+  "key": "cd97ae30f8ee4fc6"
+ },
+ {
+  "army": "shooty",
+  "kind": "unit-weapons",
+  "where": "shooty · Wazdakka Gutsmek",
+  "judgement": {
+   "gear": [
+    [
+     "Fixit’s Wrench",
+     "Grabba Dragga",
+     "Psyko-gatler",
+     "Speeding Bulk and Flaming Exhaust"
+    ]
+   ],
+   "weapons": [
+    "Grabba Dragga",
+    "Psyko-gatler",
+    "Fixit’s Wrench",
+    "Grabba Dragga",
+    "Speeding Bulk and Flaming Exhaust"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Wazdakka Gutsmek"
+   ],
+   "leads": null
+  },
+  "key": "3b3c07f5bd4e30e4"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-timing",
+  "where": "shooty · Big Mek in Mega Armour · Fix Dat Armour Up",
+  "judgement": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Fix Dat Armour Up",
+   "text": "In your Command phase, this unit **heals** 3 wounds.\nPlace a Grot Oiler token next to the unit, removing it when this ability is used."
+  },
+  "key": "3ebc0bbf37c6d408"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-tag",
+  "where": "shooty · Big Mek in Mega Armour · Fix Dat Armour Up",
+  "judgement": {
+   "tag": "Once per battle, per unit"
+  },
+  "source": {
+   "ability": "Fix Dat Armour Up",
+   "text": "In your Command phase, this unit **heals** 3 wounds.\nPlace a Grot Oiler token next to the unit, removing it when this ability is used."
+  },
+  "key": "38fe81af906fb4ee"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-tag",
+  "where": "shooty · Big Mek in Mega Armour · Supa-glowy Fing",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Supa-glowy Fing",
+   "text": "**ORKS INFANTRY** model only (excluding **WEIRDBOY** models). This model’s ranged attacks have:\n- **[ANTI-INFANTRY 4+]**.\n- **[DEVASTATING WOUNDS]**.\n- **[SUPA-HAZARDOUS]**."
+  },
+  "key": "ae72d4118ce3e4bf"
+ },
+ {
+  "army": "shooty",
+  "kind": "unit-footnote",
+  "where": "shooty · Big Mek in Mega Armour",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Riled up",
+   "note": "[SUSTAINED HITS 1]",
+   "from": "More Dakka"
+  },
+  "source": {
+   "ability": "More Dakka",
+   "text": "This unit’s ranged attacks have:\n- **[IGNORES COVER]**.\n- If this unit is **riled up**, **[SUSTAINED HITS 1]**."
+  },
+  "key": "67247f752582f9c8"
+ },
+ {
+  "army": "shooty",
+  "kind": "unit-weapons",
+  "where": "shooty · Big Mek in Mega Armour",
+  "judgement": {
+   "gear": [
+    [
+     "Kustom Mega-blasta",
+     "Power Klaw",
+     "Tellyport Blasta"
+    ]
+   ],
+   "weapons": [
+    "Kustom Mega-blasta",
+    "Tellyport Blasta",
+    "Power Klaw"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Big Mek in Mega Armour"
+   ],
+   "leads": null
+  },
+  "key": "3760fbf478878852"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-timing",
+  "where": "shooty · Warboss · Might is Right",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Might is Right",
+   "text": "If this unit made a **charge move** this turn, this model’s melee attacks have:\n- +3 **A**.\n- +2 **S**."
+  },
+  "key": "ef8da100f97135b7"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-timing",
+  "where": "shooty · Warboss · Boss’ Ammo Runt",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Boss’ Ammo Runt",
+   "text": "In your Shooting phase, when this unit is **selected to shoot**, you can use this ability. If you do, this model’s ranged attacks have +1 to **hit rolls**.\nPlace a Boss’ Ammo Runt token next to the unit, removing it when this ability is used."
+  },
+  "key": "8e58403a65b28498"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-tag",
+  "where": "shooty · Warboss · Boss’ Ammo Runt",
+  "judgement": {
+   "tag": "Once per battle, per unit"
+  },
+  "source": {
+   "ability": "Boss’ Ammo Runt",
+   "text": "In your Shooting phase, when this unit is **selected to shoot**, you can use this ability. If you do, this model’s ranged attacks have +1 to **hit rolls**.\nPlace a Boss’ Ammo Runt token next to the unit, removing it when this ability is used."
+  },
+  "key": "7aa7ec2c51e419d0"
+ },
+ {
+  "army": "shooty",
+  "kind": "unit-footnote",
+  "where": "shooty · Warboss",
+  "judgement": {
+   "kind": "melee",
+   "when": "Made a charge move this turn",
+   "note": "+3 A, +2 S",
+   "from": "Might is Right"
+  },
+  "source": {
+   "ability": "Might is Right",
+   "text": "If this unit made a **charge move** this turn, this model’s melee attacks have:\n- +3 **A**.\n- +2 **S**."
+  },
+  "key": "59193c3f5a1d1469"
+ },
+ {
+  "army": "shooty",
+  "kind": "unit-footnote",
+  "where": "shooty · Warboss",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Boss’ Ammo Runt used (your Shooting phase, when selected to shoot)",
+   "note": "+1 to hit rolls",
+   "from": "Boss’ Ammo Runt"
+  },
+  "source": {
+   "ability": "Boss’ Ammo Runt",
+   "text": "In your Shooting phase, when this unit is **selected to shoot**, you can use this ability. If you do, this model’s ranged attacks have +1 to **hit rolls**.\nPlace a Boss’ Ammo Runt token next to the unit, removing it when this ability is used."
+  },
+  "key": "fd21ae46923c1f3a"
+ },
+ {
+  "army": "shooty",
+  "kind": "unit-weapons",
+  "where": "shooty · Warboss",
+  "judgement": {
+   "gear": [
+    [
+     "Kustom Choppa",
+     "Kustom Shoota"
+    ]
+   ],
+   "weapons": [
+    "Kustom Shoota",
+    "Kustom Choppa"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Warboss"
+   ],
+   "leads": null
+  },
+  "key": "0366d0340905c7e3"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-timing",
+  "where": "shooty · Mek · Clever Know-wotz",
+  "judgement": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Clever Know-wotz",
+   "text": "In your Movement phase, at the start or end of this unit’s move, you can select one friendly **ORKS VEHICLE** model (excluding **AIRCRAFT**/**TITANIC** models) within 3\" of this model:\n- That **VEHICLE** model **heals** D3 wounds.\n- That **VEHICLE** model’s attacks have +1 to **hit rolls** until the start of your next Movement phase."
+  },
+  "key": "6b251faaf2d6014f"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-who",
+  "where": "shooty · Mek · Clever Know-wotz",
+  "judgement": {
+   "who": "Mek",
+   "models": [
+    "1× Mek",
+    "1× Nob",
+    "1× Tankbusta w/ Two Busta Rokkit Launchas",
+    "4× Tankbusta w/ Busta Rokkit Launcha"
+   ]
+  },
+  "source": {
+   "ability": "Clever Know-wotz",
+   "text": "In your Movement phase, at the start or end of this unit’s move, you can select one friendly **ORKS VEHICLE** model (excluding **AIRCRAFT**/**TITANIC** models) within 3\" of this model:\n- That **VEHICLE** model **heals** D3 wounds.\n- That **VEHICLE** model’s attacks have +1 to **hit rolls** until the start of your next Movement phase."
+  },
+  "key": "7f16564ce98e8a8c"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-who",
+  "where": "shooty · Mek · Kustom Dakka",
+  "judgement": {
+   "who": "Mek",
+   "models": [
+    "1× Mek",
+    "1× Nob",
+    "1× Tankbusta w/ Two Busta Rokkit Launchas",
+    "4× Tankbusta w/ Busta Rokkit Launcha"
+   ]
+  },
+  "source": {
+   "ability": "Kustom Dakka",
+   "text": "This unit’s ranged attacks have **[IGNORES COVER]**."
+  },
+  "key": "702720775727342e"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-timing",
+  "where": "shooty · Mek · Rokkit Barrage",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Rokkit Barrage",
+   "text": "In your Shooting phase, when this unit has shot, select one enemy unit hit by those attacks. That unit makes a **battle-shock roll**, with -1 to that **battle-shock roll**."
+  },
+  "key": "c2661910b178dd44"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-who",
+  "where": "shooty · Mek · Rokkit Barrage",
+  "judgement": {
+   "who": "Tankbustas",
+   "models": [
+    "1× Mek",
+    "1× Nob",
+    "1× Tankbusta w/ Two Busta Rokkit Launchas",
+    "4× Tankbusta w/ Busta Rokkit Launcha"
+   ]
+  },
+  "source": {
+   "ability": "Rokkit Barrage",
+   "text": "In your Shooting phase, when this unit has shot, select one enemy unit hit by those attacks. That unit makes a **battle-shock roll**, with -1 to that **battle-shock roll**."
+  },
+  "key": "9b70aa3dd23d0081"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-timing",
+  "where": "shooty · Mek · Bomb Squig",
+  "judgement": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Bomb Squig",
+   "text": "In your Movement phase, when this unit ends a **normal move**, you can select one **visible** enemy unit within 12\" of this unit and roll one D6:\n- On a 3+, that enemy unit suffers D3 **mortal wounds**.\n*Place two Bomb Squig tokens next to the unit, removing one each time this ability is used.*"
+  },
+  "key": "90121398a09da076"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-tag",
+  "where": "shooty · Mek · Bomb Squig",
+  "judgement": {
+   "tag": "Once per turn, twice per battle, per unit"
+  },
+  "source": {
+   "ability": "Bomb Squig",
+   "text": "In your Movement phase, when this unit ends a **normal move**, you can select one **visible** enemy unit within 12\" of this unit and roll one D6:\n- On a 3+, that enemy unit suffers D3 **mortal wounds**.\n*Place two Bomb Squig tokens next to the unit, removing one each time this ability is used.*"
+  },
+  "key": "cbcfb662e87e20d7"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-who",
+  "where": "shooty · Mek · Bomb Squig",
+  "judgement": {
+   "who": "Tankbustas",
+   "models": [
+    "1× Mek",
+    "1× Nob",
+    "1× Tankbusta w/ Two Busta Rokkit Launchas",
+    "4× Tankbusta w/ Busta Rokkit Launcha"
+   ]
+  },
+  "source": {
+   "ability": "Bomb Squig",
+   "text": "In your Movement phase, when this unit ends a **normal move**, you can select one **visible** enemy unit within 12\" of this unit and roll one D6:\n- On a 3+, that enemy unit suffers D3 **mortal wounds**.\n*Place two Bomb Squig tokens next to the unit, removing one each time this ability is used.*"
+  },
+  "key": "b6acbc1b3f60e8b2"
+ },
+ {
+  "army": "shooty",
+  "kind": "unit-aura",
+  "where": "shooty · Mek",
+  "judgement": {
+   "kind": "all",
+   "needs": {
+    "all": [
+     "Vehicle"
+    ],
+    "none": [
+     "Aircraft",
+     "Titanic"
+    ]
+   },
+   "when": "Picked by a Mek’s Clever Know-wotz",
+   "note": "that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase",
+   "from": "Clever Know-wotz"
+  },
+  "source": {
+   "ability": "Clever Know-wotz",
+   "text": "In your Movement phase, at the start or end of this unit’s move, you can select one friendly **ORKS VEHICLE** model (excluding **AIRCRAFT**/**TITANIC** models) within 3\" of this model:\n- That **VEHICLE** model **heals** D3 wounds.\n- That **VEHICLE** model’s attacks have +1 to **hit rolls** until the start of your next Movement phase."
+  },
+  "key": "5a23a6fcf9fb51ea"
+ },
+ {
+  "army": "shooty",
+  "kind": "unit-kwNote",
+  "where": "shooty · Mek",
+  "judgement": {
+   "kwNote": "Tankbustas comes from the supported Tankbustas."
+  },
+  "source": {
+   "models": [
+    "1× Mek",
+    "1× Nob",
+    "1× Tankbusta w/ Two Busta Rokkit Launchas",
+    "4× Tankbusta w/ Busta Rokkit Launcha"
+   ],
+   "stats": [
+    "Mek W4 OC1",
+    "Nob W3 OC1",
+    "Tankbusta ×5 W2 OC1"
+   ],
+   "weapons": [
+    "Kustom Mega-slugga 3 -2 3 CLOSE-QUARTERS, HAZARDOUS, IGNORES COVER, ASSAULT",
+    "Rokkit pistol 1 -2 3 CLOSE-QUARTERS, ASSAULT, IGNORES COVER",
+    "Busta Rokkit Launcha Hunter 3 -2 3 ASSAULT, IGNORES COVER",
+    "Busta Rokkit Launcha Standard 2 -2 3 ASSAULT, IGNORES COVER",
+    "Mek’s Toolz 3 0 1",
+    "Choppa 4 -1 1",
+    "Smash Hammer Hunter 3 -2 3",
+    "Smash Hammer Standard 3 -2 2",
+    "Gitstikka 3 0 1"
+   ]
+  },
+  "key": "6925b84bf0c5736c"
+ },
+ {
+  "army": "shooty",
+  "kind": "unit-ptsNote",
+  "where": "shooty · Mek",
+  "judgement": {
+   "ptsNote": "55 + Tankbustas 160"
+  },
+  "source": {
+   "models": [
+    "1× Mek",
+    "1× Nob",
+    "1× Tankbusta w/ Two Busta Rokkit Launchas",
+    "4× Tankbusta w/ Busta Rokkit Launcha"
+   ],
+   "stats": [
+    "Mek W4 OC1",
+    "Nob W3 OC1",
+    "Tankbusta ×5 W2 OC1"
+   ],
+   "weapons": [
+    "Kustom Mega-slugga 3 -2 3 CLOSE-QUARTERS, HAZARDOUS, IGNORES COVER, ASSAULT",
+    "Rokkit pistol 1 -2 3 CLOSE-QUARTERS, ASSAULT, IGNORES COVER",
+    "Busta Rokkit Launcha Hunter 3 -2 3 ASSAULT, IGNORES COVER",
+    "Busta Rokkit Launcha Standard 2 -2 3 ASSAULT, IGNORES COVER",
+    "Mek’s Toolz 3 0 1",
+    "Choppa 4 -1 1",
+    "Smash Hammer Hunter 3 -2 3",
+    "Smash Hammer Standard 3 -2 2",
+    "Gitstikka 3 0 1"
+   ]
+  },
+  "key": "2f1f0d5527dd9aef"
+ },
+ {
+  "army": "shooty",
+  "kind": "unit-weapons",
+  "where": "shooty · Mek",
+  "judgement": {
+   "gear": [
+    [
+     "Kustom Mega-slugga",
+     "Mek’s Toolz"
+    ],
+    [
+     "Choppa",
+     "Rokkit pistol",
+     "Smash Hammer"
+    ],
+    [
+     "Busta Rokkit Launcha",
+     "Busta Rokkit Launcha",
+     "Gitstikka"
+    ],
+    [
+     "Busta Rokkit Launcha",
+     "Gitstikka"
+    ]
+   ],
+   "weapons": [
+    "Mek · Kustom Mega-slugga",
+    "Tankbustas · Rokkit pistol",
+    "Tankbustas · ×6 · Busta Rokkit Launcha · Hunter",
+    "Tankbustas · ×6 · Busta Rokkit Launcha · Standard",
+    "Mek · Mek’s Toolz",
+    "Tankbustas · Choppa",
+    "Tankbustas · Smash Hammer · Hunter",
+    "Tankbustas · Smash Hammer · Standard",
+    "Tankbustas · ×5 · Gitstikka"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Mek",
+    "1× Nob",
+    "1× Tankbusta w/ Two Busta Rokkit Launchas",
+    "4× Tankbusta w/ Busta Rokkit Launcha"
+   ],
+   "leads": "Tankbustas"
+  },
+  "key": "a38030481308f5f8"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-who",
+  "where": "shooty · Mek · Clever Know-wotz",
+  "judgement": {
+   "who": "Mek",
+   "models": [
+    "1× Mek",
+    "1× Kaptin",
+    "9× Flash Gitz"
+   ]
+  },
+  "source": {
+   "ability": "Clever Know-wotz",
+   "text": "In your Movement phase, at the start or end of this unit’s move, you can select one friendly **ORKS VEHICLE** model (excluding **AIRCRAFT**/**TITANIC** models) within 3\" of this model:\n- That **VEHICLE** model **heals** D3 wounds.\n- That **VEHICLE** model’s attacks have +1 to **hit rolls** until the start of your next Movement phase."
+  },
+  "key": "f9eab25031ce4bb7"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-who",
+  "where": "shooty · Mek · Kustom Dakka",
+  "judgement": {
+   "who": "Mek",
+   "models": [
+    "1× Mek",
+    "1× Kaptin",
+    "9× Flash Gitz"
+   ]
+  },
+  "source": {
+   "ability": "Kustom Dakka",
+   "text": "This unit’s ranged attacks have **[IGNORES COVER]**."
+  },
+  "key": "ffd60b68f9984992"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-timing",
+  "where": "shooty · Mek · Finderz Keeperz",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Finderz Keeperz",
+   "text": "In your Shooting phase, if any of the following apply, this unit’s ranged attacks have +1 **AP**.\n- This unit is within range of an **objective**.\n- The target of that attack is within range of an **objective**."
+  },
+  "key": "8c0d55b05e7f3e5a"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-who",
+  "where": "shooty · Mek · Finderz Keeperz",
+  "judgement": {
+   "who": "Flash Gitz",
+   "models": [
+    "1× Mek",
+    "1× Kaptin",
+    "9× Flash Gitz"
+   ]
+  },
+  "source": {
+   "ability": "Finderz Keeperz",
+   "text": "In your Shooting phase, if any of the following apply, this unit’s ranged attacks have +1 **AP**.\n- This unit is within range of an **objective**.\n- The target of that attack is within range of an **objective**."
+  },
+  "key": "d0a621623d627290"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-tag",
+  "where": "shooty · Mek · Supa-snazz Dakka",
+  "judgement": {
+   "tag": "Upgrade"
+  },
+  "source": {
+   "ability": "Supa-snazz Dakka",
+   "text": "**FLASH GITZ** unit only. This unit’s Snazzgun weapons have **[RAPID FIRE 1]**."
+  },
+  "key": "12d5d6ed864ee274"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-who",
+  "where": "shooty · Mek · Supa-snazz Dakka",
+  "judgement": {
+   "who": "Flash Gitz",
+   "models": [
+    "1× Mek",
+    "1× Kaptin",
+    "9× Flash Gitz"
+   ]
+  },
+  "source": {
+   "ability": "Supa-snazz Dakka",
+   "text": "**FLASH GITZ** unit only. This unit’s Snazzgun weapons have **[RAPID FIRE 1]**."
+  },
+  "key": "aee2ee09c2b84801"
+ },
+ {
+  "army": "shooty",
+  "kind": "unit-footnote",
+  "where": "shooty · Mek",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Your Shooting phase, this unit or the target within range of an objective",
+   "note": "+1 AP",
+   "from": "Finderz Keeperz"
+  },
+  "source": {
+   "ability": "Finderz Keeperz",
+   "text": "In your Shooting phase, if any of the following apply, this unit’s ranged attacks have +1 **AP**.\n- This unit is within range of an **objective**.\n- The target of that attack is within range of an **objective**."
+  },
+  "key": "d22236a049b94f81"
+ },
+ {
+  "army": "shooty",
+  "kind": "unit-kwNote",
+  "where": "shooty · Mek",
+  "judgement": {
+   "kwNote": "Flash Gitz comes from the supported Flash Gitz."
+  },
+  "source": {
+   "models": [
+    "1× Mek",
+    "1× Kaptin",
+    "9× Flash Gitz"
+   ],
+   "stats": [
+    "Mek W4 OC1",
+    "Flash Gitz W3 OC1"
+   ],
+   "weapons": [
+    "Kustom Mega-slugga 3 -2 3 CLOSE-QUARTERS, HAZARDOUS, IGNORES COVER, ASSAULT",
+    "Snazzgun Cutta 1 -3 D3+2 HAZARDOUS, MELTA 2, ASSAULT, RAPID FIRE 1, IGNORES COVER",
+    "Snazzgun Dakka 3 -1 2 LETHAL HITS: non-MONSTER/VEHICLE, SUSTAINED HITS 1, ASSAULT, RAPID FIRE 1, IGNORES COVER",
+    "Snazzgun Kill Shot 2 -2 2 HAZARDOUS, ASSAULT, RAPID FIRE 1, IGNORES COVER",
+    "Mek’s Toolz 3 0 1",
+    "Choppa 4 -1 1"
+   ]
+  },
+  "key": "8860e03a83f70856"
+ },
+ {
+  "army": "shooty",
+  "kind": "unit-ptsNote",
+  "where": "shooty · Mek",
+  "judgement": {
+   "ptsNote": "55 + Flash Gitz 245"
+  },
+  "source": {
+   "models": [
+    "1× Mek",
+    "1× Kaptin",
+    "9× Flash Gitz"
+   ],
+   "stats": [
+    "Mek W4 OC1",
+    "Flash Gitz W3 OC1"
+   ],
+   "weapons": [
+    "Kustom Mega-slugga 3 -2 3 CLOSE-QUARTERS, HAZARDOUS, IGNORES COVER, ASSAULT",
+    "Snazzgun Cutta 1 -3 D3+2 HAZARDOUS, MELTA 2, ASSAULT, RAPID FIRE 1, IGNORES COVER",
+    "Snazzgun Dakka 3 -1 2 LETHAL HITS: non-MONSTER/VEHICLE, SUSTAINED HITS 1, ASSAULT, RAPID FIRE 1, IGNORES COVER",
+    "Snazzgun Kill Shot 2 -2 2 HAZARDOUS, ASSAULT, RAPID FIRE 1, IGNORES COVER",
+    "Mek’s Toolz 3 0 1",
+    "Choppa 4 -1 1"
+   ]
+  },
+  "key": "bcbbd82290d33558"
+ },
+ {
+  "army": "shooty",
+  "kind": "unit-weapons",
+  "where": "shooty · Mek",
+  "judgement": {
+   "gear": [
+    [
+     "Kustom Mega-slugga",
+     "Mek’s Toolz"
+    ],
+    [
+     "Choppa",
+     "Snazzgun"
+    ],
+    [
+     "Choppa",
+     "Snazzgun"
+    ]
+   ],
+   "weapons": [
+    "Mek · Kustom Mega-slugga",
+    "Flash Gitz · ×10 · Snazzgun · Cutta",
+    "Flash Gitz · ×10 · Snazzgun · Dakka",
+    "Flash Gitz · ×10 · Snazzgun · Kill Shot",
+    "Mek · Mek’s Toolz",
+    "Flash Gitz · ×10 · Choppa"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Mek",
+    "1× Kaptin",
+    "9× Flash Gitz"
+   ],
+   "leads": "Flash Gitz"
+  },
+  "key": "ccc80907a262c832"
+ },
+ {
+  "army": "shooty",
+  "kind": "rule-ph",
+  "where": "Shoota Boyz rule · Dakka! Dakka! Dakka!",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting"
+   ]
+  },
+  "source": {
+   "rule": "Dakka! Dakka! Dakka!",
+   "text": "Friendly **ORKS INFANTRY** units’ ranged attacks have:\n- **[ASSAULT]**.\n- While this unit is **riled up**, +3\" **R**."
+  },
+  "key": "87acdc950cb3d834"
+ },
+ {
+  "army": "shooty",
+  "kind": "rule-turn",
+  "where": "Shoota Boyz rule · Dakka! Dakka! Dakka!",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "rule": "Dakka! Dakka! Dakka!",
+   "text": "Friendly **ORKS INFANTRY** units’ ranged attacks have:\n- **[ASSAULT]**.\n- While this unit is **riled up**, +3\" **R**."
+  },
+  "key": "3c014e402e4451e1"
+ },
+ {
+  "army": "shooty",
+  "kind": "rule-turns",
+  "where": "Shoota Boyz rule · Dakka! Dakka! Dakka!",
+  "judgement": {
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "rule": "Dakka! Dakka! Dakka!",
+   "text": "Friendly **ORKS INFANTRY** units’ ranged attacks have:\n- **[ASSAULT]**.\n- While this unit is **riled up**, +3\" **R**."
+  },
+  "key": "7a652c3ac27f3762"
+ },
+ {
+  "army": "shooty",
+  "kind": "rule-needs",
+  "where": "Shoota Boyz rule · Dakka! Dakka! Dakka!",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Orks",
+     "Infantry"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Dakka! Dakka! Dakka!",
+   "text": "Friendly **ORKS INFANTRY** units’ ranged attacks have:\n- **[ASSAULT]**.\n- While this unit is **riled up**, +3\" **R**."
+  },
+  "key": "b1fbe33091c45ecf"
+ },
+ {
+  "army": "shooty",
+  "kind": "rule-mod",
+  "where": "Shoota Boyz rule · Dakka! Dakka! Dakka!",
+  "judgement": {
+   "mod": {
+    "kind": "ranged",
+    "when": "Riled up",
+    "note": "+3\" range"
+   }
+  },
+  "source": {
+   "rule": "Dakka! Dakka! Dakka!",
+   "text": "Friendly **ORKS INFANTRY** units’ ranged attacks have:\n- **[ASSAULT]**.\n- While this unit is **riled up**, +3\" **R**."
+  },
+  "key": "48fee28f0bbca22c"
+ },
+ {
+  "army": "shooty",
+  "kind": "strat-phases",
+  "where": "Shoota Boyz · Kustom Dakka",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Kustom Dakka",
+   "text": "WHEN: Your Shooting phase, when a friendly **ORKS INFANTRY** unit is **selected to shoot**.\nTARGET: That **ORKS INFANTRY** unit.\nEFFECT: Your unit’s ranged attacks that target a unit (excluding **MONSTER**/**VEHICLE** units) have +1 to **wound rolls**."
+  },
+  "key": "840bea3c449dc633"
+ },
+ {
+  "army": "shooty",
+  "kind": "strat-turn",
+  "where": "Shoota Boyz · Kustom Dakka",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Kustom Dakka",
+   "text": "WHEN: Your Shooting phase, when a friendly **ORKS INFANTRY** unit is **selected to shoot**.\nTARGET: That **ORKS INFANTRY** unit.\nEFFECT: Your unit’s ranged attacks that target a unit (excluding **MONSTER**/**VEHICLE** units) have +1 to **wound rolls**."
+  },
+  "key": "0a46878ac578653c"
+ },
+ {
+  "army": "shooty",
+  "kind": "strat-needs",
+  "where": "Shoota Boyz · Kustom Dakka",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Orks",
+     "Infantry"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Kustom Dakka",
+   "text": "WHEN: Your Shooting phase, when a friendly **ORKS INFANTRY** unit is **selected to shoot**.\nTARGET: That **ORKS INFANTRY** unit.\nEFFECT: Your unit’s ranged attacks that target a unit (excluding **MONSTER**/**VEHICLE** units) have +1 to **wound rolls**."
+  },
+  "key": "110fbbb49ead4681"
+ },
+ {
+  "army": "shooty",
+  "kind": "strat-mod",
+  "where": "Shoota Boyz · Kustom Dakka",
+  "judgement": {
+   "mod": {
+    "kind": "ranged",
+    "when": "Your Shooting phase, vs non-MONSTER/VEHICLE targets",
+    "note": "+1 to wound rolls"
+   }
+  },
+  "source": {
+   "stratagem": "Kustom Dakka",
+   "text": "WHEN: Your Shooting phase, when a friendly **ORKS INFANTRY** unit is **selected to shoot**.\nTARGET: That **ORKS INFANTRY** unit.\nEFFECT: Your unit’s ranged attacks that target a unit (excluding **MONSTER**/**VEHICLE** units) have +1 to **wound rolls**."
+  },
+  "key": "f41d55a2bb7a839a"
+ },
+ {
+  "army": "shooty",
+  "kind": "strat-phases",
+  "where": "Shoota Boyz · Glowin’ Dakka",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Glowin’ Dakka",
+   "text": "WHEN: Your Shooting phase, when a friendly **ORKS INFANTRY** unit is **selected to shoot**.\nTARGET: That **ORKS INFANTRY** unit.\nEFFECT: Your unit’s ranged attacks that target a unit within 9\" have +1 **AP**."
+  },
+  "key": "081ccf69514d13e6"
+ },
+ {
+  "army": "shooty",
+  "kind": "strat-turn",
+  "where": "Shoota Boyz · Glowin’ Dakka",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Glowin’ Dakka",
+   "text": "WHEN: Your Shooting phase, when a friendly **ORKS INFANTRY** unit is **selected to shoot**.\nTARGET: That **ORKS INFANTRY** unit.\nEFFECT: Your unit’s ranged attacks that target a unit within 9\" have +1 **AP**."
+  },
+  "key": "0b964eb9a9ffac3e"
+ },
+ {
+  "army": "shooty",
+  "kind": "strat-needs",
+  "where": "Shoota Boyz · Glowin’ Dakka",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Orks",
+     "Infantry"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Glowin’ Dakka",
+   "text": "WHEN: Your Shooting phase, when a friendly **ORKS INFANTRY** unit is **selected to shoot**.\nTARGET: That **ORKS INFANTRY** unit.\nEFFECT: Your unit’s ranged attacks that target a unit within 9\" have +1 **AP**."
+  },
+  "key": "9472ec65e5156c9a"
+ },
+ {
+  "army": "shooty",
+  "kind": "strat-mod",
+  "where": "Shoota Boyz · Glowin’ Dakka",
+  "judgement": {
+   "mod": {
+    "kind": "ranged",
+    "when": "Your Shooting phase, target within 9\"",
+    "note": "+1 AP"
+   }
+  },
+  "source": {
+   "stratagem": "Glowin’ Dakka",
+   "text": "WHEN: Your Shooting phase, when a friendly **ORKS INFANTRY** unit is **selected to shoot**.\nTARGET: That **ORKS INFANTRY** unit.\nEFFECT: Your unit’s ranged attacks that target a unit within 9\" have +1 **AP**."
+  },
+  "key": "098196d7b97e7ee8"
+ },
+ {
+  "army": "shooty",
+  "kind": "strat-phases",
+  "where": "Shoota Boyz · Never Enough Dakka",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Never Enough Dakka",
+   "text": "WHEN: Your Shooting phase, when a friendly **ORKS INFANTRY** unit is **selected to shoot**.\nTARGET: That **ORKS INFANTRY** unit.\nEFFECT: Your unit’s ranged attacks have **[SUSTAINED HITS 1]**."
+  },
+  "key": "b394a0e0731a1d24"
+ },
+ {
+  "army": "shooty",
+  "kind": "strat-turn",
+  "where": "Shoota Boyz · Never Enough Dakka",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Never Enough Dakka",
+   "text": "WHEN: Your Shooting phase, when a friendly **ORKS INFANTRY** unit is **selected to shoot**.\nTARGET: That **ORKS INFANTRY** unit.\nEFFECT: Your unit’s ranged attacks have **[SUSTAINED HITS 1]**."
+  },
+  "key": "3a1b4a2b05dc420d"
+ },
+ {
+  "army": "shooty",
+  "kind": "strat-needs",
+  "where": "Shoota Boyz · Never Enough Dakka",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Orks",
+     "Infantry"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Never Enough Dakka",
+   "text": "WHEN: Your Shooting phase, when a friendly **ORKS INFANTRY** unit is **selected to shoot**.\nTARGET: That **ORKS INFANTRY** unit.\nEFFECT: Your unit’s ranged attacks have **[SUSTAINED HITS 1]**."
+  },
+  "key": "209541d50efb7eec"
+ },
+ {
+  "army": "shooty",
+  "kind": "strat-mod",
+  "where": "Shoota Boyz · Never Enough Dakka",
+  "judgement": {
+   "mod": {
+    "kind": "ranged",
+    "when": "Your Shooting phase",
+    "note": "[SUSTAINED HITS 1]"
+   }
+  },
+  "source": {
+   "stratagem": "Never Enough Dakka",
+   "text": "WHEN: Your Shooting phase, when a friendly **ORKS INFANTRY** unit is **selected to shoot**.\nTARGET: That **ORKS INFANTRY** unit.\nEFFECT: Your unit’s ranged attacks have **[SUSTAINED HITS 1]**."
+  },
+  "key": "58ea7cd756f7c62d"
+ },
+ {
+  "army": "shooty",
+  "kind": "rule-ph",
+  "where": "Wreckas rule · Wreckin’ and Lootin’",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "rule": "Wreckin’ and Lootin’",
+   "text": "In your Shooting phase, when a friendly **BREAKA BOYZ**/**FLASH GITZ**/**TANKBUSTAS** unit is **selected to shoot**, if any of the following apply, that unit’s attacks can re-roll **hit rolls** of 1:\n- That unit is within range of an **objective**.\n- The target of that attack is within range of an **objective**."
+  },
+  "key": "9ec3263fdd7638ad"
+ },
+ {
+  "army": "shooty",
+  "kind": "rule-turn",
+  "where": "Wreckas rule · Wreckin’ and Lootin’",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "rule": "Wreckin’ and Lootin’",
+   "text": "In your Shooting phase, when a friendly **BREAKA BOYZ**/**FLASH GITZ**/**TANKBUSTAS** unit is **selected to shoot**, if any of the following apply, that unit’s attacks can re-roll **hit rolls** of 1:\n- That unit is within range of an **objective**.\n- The target of that attack is within range of an **objective**."
+  },
+  "key": "284b5438cc2dd621"
+ },
+ {
+  "army": "shooty",
+  "kind": "rule-needs",
+  "where": "Wreckas rule · Wreckin’ and Lootin’",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Breaka Boyz",
+     "Flash Gitz",
+     "Tankbustas"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Wreckin’ and Lootin’",
+   "text": "In your Shooting phase, when a friendly **BREAKA BOYZ**/**FLASH GITZ**/**TANKBUSTAS** unit is **selected to shoot**, if any of the following apply, that unit’s attacks can re-roll **hit rolls** of 1:\n- That unit is within range of an **objective**.\n- The target of that attack is within range of an **objective**."
+  },
+  "key": "db70644d5fe0d9ec"
+ },
+ {
+  "army": "shooty",
+  "kind": "rule-mod",
+  "where": "Wreckas rule · Wreckin’ and Lootin’",
+  "judgement": {
+   "mod": {
+    "kind": "ranged",
+    "when": "Your Shooting phase, this unit or the target within range of an objective",
+    "note": "can re-roll hit rolls of 1"
+   }
+  },
+  "source": {
+   "rule": "Wreckin’ and Lootin’",
+   "text": "In your Shooting phase, when a friendly **BREAKA BOYZ**/**FLASH GITZ**/**TANKBUSTAS** unit is **selected to shoot**, if any of the following apply, that unit’s attacks can re-roll **hit rolls** of 1:\n- That unit is within range of an **objective**.\n- The target of that attack is within range of an **objective**."
+  },
+  "key": "c38d2fc70d99fcfa"
+ },
+ {
+  "army": "shooty",
+  "kind": "strat-phases",
+  "where": "Wreckas · Drive-by Bustin’",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Drive-by Bustin’",
+   "text": "WHEN: Your Shooting phase, when a friendly **ORKS TRANSPORT** unit is **selected to shoot**.\nTARGET: That **ORKS TRANSPORT** unit.\nEFFECT: Your unit’s ranged attacks with weapons selected for the **Firing Deck** ability have +1 to **hit rolls**."
+  },
+  "key": "6a17e854e0ab8860"
+ },
+ {
+  "army": "shooty",
+  "kind": "strat-turn",
+  "where": "Wreckas · Drive-by Bustin’",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Drive-by Bustin’",
+   "text": "WHEN: Your Shooting phase, when a friendly **ORKS TRANSPORT** unit is **selected to shoot**.\nTARGET: That **ORKS TRANSPORT** unit.\nEFFECT: Your unit’s ranged attacks with weapons selected for the **Firing Deck** ability have +1 to **hit rolls**."
+  },
+  "key": "73f50943dc167694"
+ },
+ {
+  "army": "shooty",
+  "kind": "strat-needs",
+  "where": "Wreckas · Drive-by Bustin’",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Orks",
+     "Transport"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Drive-by Bustin’",
+   "text": "WHEN: Your Shooting phase, when a friendly **ORKS TRANSPORT** unit is **selected to shoot**.\nTARGET: That **ORKS TRANSPORT** unit.\nEFFECT: Your unit’s ranged attacks with weapons selected for the **Firing Deck** ability have +1 to **hit rolls**."
+  },
+  "key": "020223b8548f40bb"
+ },
+ {
+  "army": "shooty",
+  "kind": "strat-phases",
+  "where": "Wreckas · Grab It",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Grab It",
+   "text": "WHEN: Your Shooting phase, when a friendly **unengaged BREAKA BOYZ**/**FLASH GITZ**/**TANKBUSTAS** unit has shot.\nTARGET: That **BREAKA BOYZ**/**FLASH GITZ**/**TANKBUSTAS** unit.\nEFFECT: - Your unit can make a **normal move** of up to 6\", and must end that move within range of an **objective**.\n- Your unit is not **eligible to declare a charge** until the end of the turn."
+  },
+  "key": "a0d782035be2d4db"
+ },
+ {
+  "army": "shooty",
+  "kind": "strat-turn",
+  "where": "Wreckas · Grab It",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Grab It",
+   "text": "WHEN: Your Shooting phase, when a friendly **unengaged BREAKA BOYZ**/**FLASH GITZ**/**TANKBUSTAS** unit has shot.\nTARGET: That **BREAKA BOYZ**/**FLASH GITZ**/**TANKBUSTAS** unit.\nEFFECT: - Your unit can make a **normal move** of up to 6\", and must end that move within range of an **objective**.\n- Your unit is not **eligible to declare a charge** until the end of the turn."
+  },
+  "key": "6d40009d2ea65bd4"
+ },
+ {
+  "army": "shooty",
+  "kind": "strat-needs",
+  "where": "Wreckas · Grab It",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Breaka Boyz",
+     "Flash Gitz",
+     "Tankbustas"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Grab It",
+   "text": "WHEN: Your Shooting phase, when a friendly **unengaged BREAKA BOYZ**/**FLASH GITZ**/**TANKBUSTAS** unit has shot.\nTARGET: That **BREAKA BOYZ**/**FLASH GITZ**/**TANKBUSTAS** unit.\nEFFECT: - Your unit can make a **normal move** of up to 6\", and must end that move within range of an **objective**.\n- Your unit is not **eligible to declare a charge** until the end of the turn."
+  },
+  "key": "dfb83d7cda17de38"
+ },
+ {
+  "army": "shooty",
+  "kind": "strat-phases",
+  "where": "Wreckas · Gun-crazy Show-offs",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Gun-crazy Show-offs",
+   "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit has shot.\nTARGET: One friendly **FLASH GITZ**/**TANKBUSTAS** unit hit by those attacks.\nEFFECT: Your unit shoots using **normal shooting**, but while doing so your unit can only target that enemy unit."
+  },
+  "key": "0ada62b205cc1961"
+ },
+ {
+  "army": "shooty",
+  "kind": "strat-turn",
+  "where": "Wreckas · Gun-crazy Show-offs",
+  "judgement": {
+   "turn": "opp"
+  },
+  "source": {
+   "stratagem": "Gun-crazy Show-offs",
+   "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit has shot.\nTARGET: One friendly **FLASH GITZ**/**TANKBUSTAS** unit hit by those attacks.\nEFFECT: Your unit shoots using **normal shooting**, but while doing so your unit can only target that enemy unit."
+  },
+  "key": "859bd86abf8fc642"
+ },
+ {
+  "army": "shooty",
+  "kind": "strat-needs",
+  "where": "Wreckas · Gun-crazy Show-offs",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Flash Gitz",
+     "Tankbustas"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Gun-crazy Show-offs",
+   "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit has shot.\nTARGET: One friendly **FLASH GITZ**/**TANKBUSTAS** unit hit by those attacks.\nEFFECT: Your unit shoots using **normal shooting**, but while doing so your unit can only target that enemy unit."
+  },
+  "key": "5057786a3abb1ae3"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^supa-hazardous/i",
+  "judgement": {
+   "opens": "Supa-hazardous"
+  },
+  "source": {
+   "rule": "Supa-hazardous",
+   "text": "Each time a unit is **selected to shoot**, after that unit has resolved all of its attacks, make two **hazard rolls** for that unit for each **[SUPA-HAZARDOUS]** weapon you selected in the Select Weapons step."
+  },
+  "key": "8e5b654c2bb01152"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^pulse jet move$/i",
+  "judgement": {
+   "opens": "Pulse Jet Move"
+  },
+  "source": {
+   "rule": "Pulse Jet Move",
+   "text": "**MAXIMUM DISTANCE:** Pulse roll + 18\"\n**ELIGIBLE IF:** As stated in the rule allowing this move type.\n**EFFECT:** Your unit moves as described in Moving (Core Rules, 03).\n**BEFORE MOVING:**\n- Make a **pulse roll** by rolling one D6.\n**WHILE MOVING:**\n- Ignore all vertical distance for the purposes "
+  },
+  "key": "8c97250de7a88ad5"
+ }
+]

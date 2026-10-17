@@ -22,15 +22,15 @@ const path = require('path');
 const vm = require('vm');
 
 const ROOT = path.resolve(__dirname, '..');
-const ARMIES = ['cooking', 'purge-freeblade', 'hurrdurr', 'oioioi', 'nidzillas'];
+const ARMIES = ['cooking', 'shooty', 'purge-freeblade', 'hurrdurr', 'oioioi', 'nidzillas'];
 
 const NORMALISATION = [
   'Quotes: ’ ‘ → \' and “ ” → "; non-breaking hyphen (U+2011) → -; × → x (model counts, stat-row counts, base sizes).',
   'Whitespace collapsed. A wrapped cell is rejoined with a space, or with nothing after a line ending in a hyphen glued to a word ("combi-" + "bolter").',
   'App text markup removed before comparing: **bold**, "- " bullets, *italic* lines, line breaks. Text inside **bold** is compared case-insensitively (NR sets keywords in small capitals: its text layer says "World Eaters Infantry" where the page shows WORLD EATERS INFANTRY, as the app does); all other text is compared exactly, case included. NR bullet glyphs are not in the pdftotext text, so bullets are not compared.',
   'Characteristic cells: NR "-", "N/A" and an empty cell are the app\'s "–". Weapon keywords are compared upper-cased (NR prints "Rapid Fire 3" for some factions, the app always "RAPID FIRE 3"), in order.',
-  'Weapon names: NR "➤" dropped; "[1]"/"[2]" (NR\'s disambiguation of two same-named weapons) dropped; "(xN)" is the app\'s n; " - <unit>" is the app\'s who; "(Hunter: …)" is hunter:true; "A - B" is group A, profile B; a parenthesis naming one of the unit\'s abilities or its enhancement (the profile already includes it) is dropped, and when it names the enhancement the app\'s boostNote must name it.',
-  'Stat rows: " - <unit>" suffix dropped (stat rows are matched by model name); "(xN)" is the app\'s "×N"; a parenthesis naming the enhancement is dropped and the app\'s boostNote must name it; Base compared as printed.',
+  'Weapon names: NR "➤" dropped; "[1]"/"[2]" (NR\'s disambiguation of two same-named weapons) dropped; "(xN)" is the app\'s n; " - <unit>" is the app\'s who; "(Hunter: …)" is hunter:true; "A - B" is group A, profile B; a parenthesis lists the abilities, enhancements and detachment rules already applied to the profile: each name must be one of the names in that weapon\'s `from` marks.',
+  'Stat rows: " - <unit>" suffix dropped (stat rows are matched by model name); "(xN)" is the app\'s "×N"; a parenthesis naming what is already applied must be one of the names in that row\'s `from` marks; Base compared as printed.',
   'Models: "Nx Name" is the app\'s "N× Name", compared as an ordered list. Options per model line: "Warlord" is warlord:true, "• Leading: X[n]" is leads X, an item that is one of the faction\'s enhancements is the enhancement; an NR option "Group (a, b)" counts as its weapons a and b and "2x Weapon" as Weapon; the remaining items that are weapons printed in the unit\'s weapon tables are that line\'s gear, compared as a set; an item that is not a printed weapon (wargear, e.g. Icon of Khorne) must be on the app\'s model line as "N× Name (Item)".',
   'Abilities: matched by name and who (" - <unit>" suffix). NR "Name (Tag)" is the app\'s name + tag. The app may add a tag part NR does not print only when it is "Enhancement" on the unit\'s enhancement, the second header of the NR table the ability sits in (e.g. "Capacity"), the first header of a sub-table (e.g. "Crimson King") or words printed in the ability\'s own NR text (e.g. "Once per battle"); the app\'s who may name a sub-table ("Crimson King: pick one").',
   'Categories (kw) compared as a set; NR\'s "*from combined unit" marks must each be named in the app\'s kwNote. Rules line compared as a set (duplicates dropped); an NR rule that is a weapon ability counts as present when one of the unit\'s weapons has that keyword in the app.',
@@ -271,7 +271,7 @@ const RE = {
   stats: /^\s*Unit\s+M\s+T\s+Sv\s+W\s+LD\s+OC\s+InSv(\s+Base)?$/,
   ranged: /^\s*Ranged Weapons\s+Range\s+A\s+BS\s+S\s+AP\s+D\s+Keywords$/,
   melee: /^\s*Melee Weapons\s+Range\s+A\s+WS\s+S\s+AP\s+D\s+Keywords$/,
-  table: /^\s{1,6}(\S(?:.*?\S)?)\s{2,}(Description|Effect|Capacity)$/,
+  table: /^\s{1,6}(\S(?:.*?\S)?)\s+(Description|Effect|Capacity)$/,   // "Throttlerokkit Shokka Engine Description": one space
   rules: /^\s{1,6}Rules\s+(\S.*)$/,
   cats: /^\s{1,6}Categories\s+(\S.*)$/,
   glossary: /^\s{0,4}Rules$/
@@ -581,13 +581,13 @@ function nrAbility(name, who) {
 }
 // option items of one model line
 function nrOptions(items, enhNames) {
-  const r = { warlord: false, leads: null, enhancement: null, gear: [] };
+  const r = { warlord: false, leads: null, support: false, enhancement: null, gear: [] };
   const enh = new Set(enhNames.map(lc));
   for (const it0 of items) {
     const it = nm(it0);
     let m;
     if (it === 'Warlord') r.warlord = true;
-    else if ((m = /^•\s*Leading:\s*(.+?)(\[\d+\])?$/.exec(it))) r.leads = m[1];
+    else if ((m = /^•\s*(Leading|Supporting):\s*(.+?)(\[\d+\])?$/.exec(it))) { r.leads = m[2]; r.support = m[1] === 'Supporting'; }
     else if (enh.has(lc(it))) { r.enhancement = it; r.enhItem = it; }
     else {
       // "Ectoplasma cannon and claws (Ectoplasma cannon, Forgefiend claws)" counts as its weapons; "2x Weapon" as Weapon
@@ -637,6 +637,8 @@ function compareArmy(D, A, nr, out, srcFile) {
     let c = pool.filter(u => nm(u.name).toUpperCase() === nm(nu.header));
     if (c.length > 1 && c.some(u => u.pts === nu.pts)) c = c.filter(u => u.pts === nu.pts);
     if (c.length > 1) c = c.filter(u => (u.enhancement ? nm(u.enhancement) : null) === enh);
+    // two units printed alike ("Supporting: Tankbustas[1]" and "[2]"): the next one of them
+    if (c.length > 1 && c.every(u => u.pts === c[0].pts && (u.leads || '') === (c[0].leads || ''))) c = [c[0]];
     chk('units');
     if (c.length !== 1) { fail(null, 'unit', c.length ? c.map(u => u.id) : null, nu.header + ' ' + nu.pts + ' PTS' + (nu.copies > 1 ? ' x' + nu.copies : ''), nu.page); continue; }
     pool.splice(pool.indexOf(c[0]), 1);
@@ -676,7 +678,9 @@ function compareArmy(D, A, nr, out, srcFile) {
   }
   for (const r of roster.filter(r => !r.used)) { chk('roster'); fail(null, 'roster line', null, (r.count ? '(' + r.count + ') ' : '') + r.name + ' ' + r.role + ' ' + r.pts, 1); }
 
-  for (const [nu, au] of pairs) compareUnit(nu, au, enhNames, { fail: (f, a, s) => fail(au.id, f, a, s, nu.page), chk, cmp: (c, f, a, s) => cmp(c, au.id, f, a, s, nu.page) });
+  // rules that act on the whole army, which New Recruit names in a weapon's "(…)" when it applied them
+  const armyRuleNames = new Set(A.detachments.map(id => F.detachments[id]).filter(Boolean).map(d => d.rule && d.rule.name).concat(F.armyRules.map(r => r.name)).filter(Boolean).map(x => lc(nm(x))));
+  for (const [nu, au] of pairs) compareUnit(nu, au, enhNames, { armyRuleNames, fail: (f, a, s) => fail(au.id, f, a, s, nu.page), chk, cmp: (c, f, a, s) => cmp(c, au.id, f, a, s, nu.page) });
 
   // glossary: every rule New Recruit prints at the end opens something in the app
   for (const g of nr.glossary) { chk('glossary'); if (!ruleKnown(D, A, g)) fail(null, 'glossary rule', null, g, nr.pageCount); }
@@ -695,7 +699,7 @@ function ruleKnown(D, A, label) {
 }
 
 // ---------------------------------------------------------------- per unit
-function compareUnit(nu, au, enhNames, { fail, chk, cmp }) {
+function compareUnit(nu, au, enhNames, { fail, chk, cmp, armyRuleNames = new Set() }) {
   cmp('pts', 'pts', au.pts, nu.pts);
   cmp('copies', 'copies', au.copies || 1, nu.copies);
 
@@ -725,7 +729,8 @@ function compareUnit(nu, au, enhNames, { fail, chk, cmp }) {
     const appGear = ((au.gear || [])[ak] || []).map(nm).filter(g => !(o.enhItem && g === o.enhItem && !o.gear.includes(g)));
     const nrGear = o.gear.slice();
     if (o.enhItem && appGear.includes(o.enhItem)) nrGear.push(o.enhItem);
-    cmp('gear', 'gear[' + line + ']', uniq(appGear).sort(), uniq(nrGear).sort());
+    // letter case aside: New Recruit's option list can capitalise a weapon its weapon row does not ("Rokkit Pistol" / "Rokkit pistol")
+    cmp('gear', 'gear[' + line + ']', uniq(appGear.map(lc)).sort(), uniq(nrGear.map(lc)).sort());
   });
   // app model lines New Recruit does not print: their gear is unmatched too
   appModels.forEach((l, k) => { if (!nrModels.includes(l)) { chk('gear'); fail('gear[' + l + ']', uniq(((au.gear || [])[k] || []).map(nm)).sort(), null); } });
@@ -737,9 +742,15 @@ function compareUnit(nu, au, enhNames, { fail, chk, cmp }) {
   const appStats = (au.stats || []).map(s => { const m = /^(.*?) x(\d+)$/.exec(nm(s.name)); return { name: m ? m[1] : nm(s.name), n: m ? +m[2] : null, s }; });
   const sKey = x => x.name + (x.n ? ' x' + x.n : '');
   cmp('stats', 'stats (rows)', appStats.map(sKey), nrStats.map(sKey));
+  // "(Dakka! Dakka! Dakka!, Supa-snazz Dakka, Kustom Dakka)": each name must be a source in the row's `from` marks
+  const fromNames = o => new Set(Object.values((o && o.from) || {}).flat().map(x => lc(nm(x))));
+  const annotated = (label, parens, obj) => {
+    for (const p of uniq(parens.flatMap(b => b.split(/,\s*/)))) { chk('from'); boosts.push(p);
+      if (!fromNames(obj).has(lc(p))) fail('from[' + label + ']', obj && obj.from ? JSON.stringify(obj.from) : null, 'New Recruit marks "(' + p + ')" as applied'); }
+  };
   for (const ns of nrStats) {
-    for (const p of ns.parens) boosts.push(p);
     const as = appStats.find(x => x.name === ns.name) ;
+    annotated('stats ' + ns.name, ns.parens, as && as.s);
     if (!as) continue;
     const S = as.s, R = ns.r;
     for (const [ak, nk] of [['M', 'M'], ['T', 'T'], ['Sv', 'Sv'], ['W', 'W'], ['Ld', 'LD'], ['OC', 'OC'], ['InSv', 'InSv'], ['base', 'Base']])
@@ -754,8 +765,8 @@ function compareUnit(nu, au, enhNames, { fail, chk, cmp }) {
     cmp(kind, kind + ' (rows)', appW.map(wKey), nrW.map(wKey));
     const usedA = new Set();
     for (const nw of nrW) {
-      for (const p of nw.parens) boosts.push(p);
       const aw = appW.find(x => !usedA.has(x) && wKey(x) === wKey(nw));
+      annotated(kind + ' ' + wKey(nw), nw.parens, aw && aw.w);
       if (!aw) continue;
       usedA.add(aw);
       const W = aw.w, R = nw.r, key = kind + '[' + wKey(nw) + ']';
@@ -771,13 +782,9 @@ function compareUnit(nu, au, enhNames, { fail, chk, cmp }) {
       cmp(kind, key + '.kw', (W.kw || []).map(k => nm(k).toUpperCase()), splitItems(R.kw).map(k => nm(k).toUpperCase()));
     }
   }
-  // a parenthesis on a stat row or weapon names the enhancement or ability already applied
+  // and each such name is one of the unit's abilities (enhancements included) or a detachment/army rule of the list
   const abilNames = new Set(nu.tables.flatMap(t => t.rows.map(r => lc(nrAbility(r.name, nu.who).base))));
-  for (const p of uniq(boosts)) {
-    chk('boostNote');
-    if (enhLc && lc(p) === enhLc) { if (!au.boostNote || !lc(au.boostNote).includes(enhLc)) fail('boostNote', au.boostNote || null, 'profile marked "(' + p + ')"'); }
-    else if (!abilNames.has(lc(p))) fail('weapon/stat name', null, '(' + p + ')');
-  }
+  for (const p of uniq(boosts)) { chk('from'); if (!abilNames.has(lc(p)) && !armyRuleNames.has(lc(p)) && !(enhLc && lc(p) === enhLc)) fail('weapon/stat name', null, '(' + p + ')'); }
 
   // abilities
   const appA = (au.abilities || []).map(x => ({ name: nm(x.name), who: x.who ? nm(x.who) : null, tag: x.tag ? nm(x.tag) : null, x }));
@@ -799,7 +806,7 @@ function compareUnit(nu, au, enhNames, { fail, chk, cmp }) {
     // tag: NR's "(…)" against the app's tag, less the parts the app may add (see NORMALISATION)
     const enhA = au.enhancement && ax.name === nm(au.enhancement);
     let parts = ax.tag ? ax.tag.split(' · ').map(nm) : [];
-    parts = parts.filter(p => !(p === 'Enhancement' && enhA) && !(sub && (p === nm(na.table) || p === nm(na.col2))) && !(p !== na.paren && lc(na.text).includes(lc(p))));
+    parts = parts.filter(p => !(p === 'Enhancement' && enhA) && !(p === 'Upgrade' && au.upgrade && ax.name === nm(au.upgrade)) && !(sub && (p === nm(na.table) || p === nm(na.col2))) && !(p !== na.paren && lc(na.text).includes(lc(p))));
     // "Invulnerable Save (5+*)": the app keeps NR's parenthesis in the name
     const parenInName = na.paren !== null && ax.name === na.full;
     const appParen = parts.length ? parts.join(', ') : null;

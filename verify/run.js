@@ -75,12 +75,13 @@ function writeVerified(ok){
   const checks = [
     { label:'Your New Recruit lists:', detail:'every unit, model count, wargear, enhancement, stat line, weapon profile and ability matches the PDF (' + total(out('nr').checked) + ' facts).' },
     { label:'BSData,', detail:'the data New Recruit is built from: every stat, weapon, keyword, ability and points value (' + total(out('bsdata').checked) + ' facts).' },
+    { label:'Granted values:', detail:'every keyword or value marked + is one a rule of your list changes in BSData, named as that rule, and matches the rules New Recruit prints beside the weapon (' + ((out('bsdata').checked || {}).grants || 0) + ' values).' },
     { label:'Games Workshop’s rules text:', detail:'every rule, enhancement and stratagem is the wording of GW’s newest official document, or Wahapedia where GW has none (' + total(out('texts').checked) + ' texts).' },
     { label:'Rules logic:', detail:'each stratagem is offered in the phases its WHEN names and to the units its TARGET names; every number in a reminder is in the rule it cites.' },
     { label:'The app’s own notes:', detail:(help.approved || 0) + ' footnotes, reminders, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off.' },
     { label:'Every screen:', detail:screens + ' screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search.' }
   ];
-  const nr = { cooking:'Cooking', 'purge-freeblade':'Purge Freeblade', hurrdurr:'Hurrdurr', oioioi:'oioioi', nidzillas:'Nidzillas' };
+  const nr = { cooking:'Cooking', 'purge-freeblade':'Purge Freeblade', hurrdurr:'Hurrdurr', oioioi:'oioioi', nidzillas:'Nidzillas', shooty:'Me shooty yer’ booty' };
   const gw = fs.existsSync(path.join(ROOT, 'verify/.cache/gw')) ? fs.readdirSync(path.join(ROOT, 'verify/.cache/gw')).filter(f => f.endsWith('.pdf')).map(f => f.replace(/^eng_(\d\d-\d\d_)?|-[a-z0-9]{10}-[a-z0-9]{10}\.pdf$/g, '').replace(/_/g, ' ')) : [];
   const sources = [
     { label:'New Recruit:', detail:D.armies.map(a => (nr[a.id] || a.name)).join(', ') + ' (your PDFs).' },

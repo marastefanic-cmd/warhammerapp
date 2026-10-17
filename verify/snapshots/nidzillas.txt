@@ -42,13 +42,17 @@ Strategic reserves: unless otherwise stated, up to 1000 pts (50% of the 2000 lim
 START OF THE BATTLE ROUND
 FIRST ROUND
 Singular Purpose · Assimilator (280), Assimilator (300), Norn Emissary ×2
-ONCE PER BATTLE
+USES PER BATTLE
+NEW GAME
 RULES
 Shadow in the Warp · Tyranids army rule
-Higher Imperatives · Talons of the Norn Queen
 ABILITIES
-Protean Purpose · Assimilator (280), Assimilator (300), Norn Emissary ×2
-Resilient Organism · Tyrannofex
+Protean Purpose · Assimilator (280) · Synaptoprescience
+Protean Purpose · Assimilator (300) · Synaptoprescience
+Protean Purpose · Norn Emissary · Destabilising Predation
+Protean Purpose · Norn Emissary
+Resilient Organism · Tyrannofex unit 1 of 2
+Resilient Organism · Tyrannofex unit 2 of 2
 STRATA­GEMS
 1CP Insane Bravery
 
@@ -633,6 +637,8 @@ Tyrannofex
 ×2 units
 Resilient Organism
 Once per battle
+Unit 1
+Unit 2
 
 Once per battle
 
@@ -4153,8 +4159,6 @@ INV
 5
 4+
 
-InSv already includes the 4+ from Synaptoprescience.
-
 OC 7 while it has lost no wounds, unless Battle-shocked (Enraged Behemoths)
 
 WHEN TARGETEDIf its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it · 1CP Catalytic Biofortification: Feel No Pain 4+ against mortal wounds
@@ -4263,8 +4267,6 @@ INV
 5
 4+
 
-InSv already includes the 4+ from Synaptoprescience.
-
 OC 7 while it has lost no wounds, unless Battle-shocked (Enraged Behemoths)
 
 WHEN TARGETEDIf its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it · 1CP Catalytic Biofortification: Feel No Pain 4+ against mortal wounds
@@ -4372,8 +4374,6 @@ INV
 7+
 5
 4+
-
-Ranged keywords already include [ANTI-CHARACTER 2+] from Destabilising Predation.
 
 OC 7 while it has lost no wounds, unless Battle-shocked (Enraged Behemoths)
 
@@ -4659,6 +4659,8 @@ Fight phase: re-roll hit rolls (1CP Rampaging Monstrosities)
 ABILITIES
 Resilient Organism
 Once per battle
+Unit 1
+Unit 2
 
 Once per battle
 
@@ -4765,6 +4767,45 @@ NORN ASSIMILATOR unit only. This unit has 4+ InSv.
 
 ONAssimilator (280) · Synaptoprescience
 
+######## popup grant:["Destabilising Predation","norn-emissary-dp","ANTI-CHARACTER 2+","ANTI-CHARACTER 2+"] · NIDZILLAS Nidzillas
+GRANTED BY DESTABILISING PREDATION
+
+ANTI-CHARACTER 2+
+
+Destabilising Predation Enhancement
+
+NORN EMISSARY unit only. This unit’s ranged attacks have [ANTI-CHARACTER 2+].
+
+Already in the keywords shown (as New Recruit and BSData list them).
+
+ANTI-CHARACTER 2+ Core rule
+
+This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.
+
+Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
+
+######## popup grant:["Synaptoprescience","norn-assimilator-280","INV 4+",null] · NIDZILLAS Nidzillas
+GRANTED BY SYNAPTOPRESCIENCE
+
+INV 4+
+
+Synaptoprescience Enhancement
+
+NORN ASSIMILATOR unit only. This unit has 4+ InSv.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Synaptoprescience","norn-assimilator-300","INV 4+",null] · NIDZILLAS Nidzillas
+GRANTED BY SYNAPTOPRESCIENCE
+
+INV 4+
+
+Synaptoprescience Enhancement
+
+NORN ASSIMILATOR unit only. This unit has 4+ InSv.
+
+Already in the value shown (as New Recruit and BSData list it).
+
 ######## popup kw:hive-tyrant · NIDZILLAS Nidzillas
 CHARACTER · 220 PTS
 
@@ -4868,17 +4909,6 @@ Base 120×92mm
 KEYWORDS
 
 Faction: Tyranids, Great Devourer, Monster, Tyrannofex
-
-######## popup rule:ANTI-CHARACTER 2+ · NIDZILLAS Nidzillas
-CORE RULE
-
-ANTI-CHARACTER 2+
-
-This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.
-
-Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
-
-IN THIS ARMYNorn Emissary · Destabilising Predation
 
 ######## popup rule:Advance · NIDZILLAS Nidzillas
 CORE RULE

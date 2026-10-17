@@ -1,0 +1,24 @@
+[
+ {
+  "army": "shooty",
+  "kind": "unit-aura",
+  "where": "shooty · Big Mek Dakkarig",
+  "judgement": {
+   "kind": "all",
+   "needs": {
+    "all": [
+     "Faction: Orks",
+     "Walker"
+    ]
+   },
+   "when": "Picked by the Dreadherder",
+   "note": "re-roll hit rolls of 1 this turn",
+   "from": "Dreadherder"
+  },
+  "source": {
+   "ability": "Dreadherder",
+   "text": "**BIG MEK** model only. While this model is within 3\" of a friendly **ORKS WALKER** unit (excluding **BIG MEK** units):\n- This model has **Lone Operative**.\n- In your Shooting phase, you can select one friendly **ORKS WALKER** unit within 3\" of this model. That unit’s attacks can re-roll **hit rolls** of 1 until the end of the turn."
+  },
+  "key": "30be94740ab7c96f"
+ }
+]

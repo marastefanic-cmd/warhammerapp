@@ -1,0 +1,556 @@
+10/17/26, 8:28 PM                                               Me shooty yer' booty - New Recruit
+
+                                                Me shooty yer' booty [2000pts]
+  Army Roster [3 Detachment Points, 2000 pts] (Xenos - Orks)
+  • Battle Size: Strike Force (2000 Point limit)
+  • Detachment: Dread Mob [1Detachment Points], Shoota Boyz [1Detachment Points], Wreckas
+  [1Detachment Points]
+  • Force Disposition: Purge the Foe
+  • Show/Hide Options
+  NAME                        ROLE       PTS OPTIONS
+   Wazdakka Gutsmek                   Epic Hero 200
+   Big Mek Dakkarig                   Character 190
+   Big Mek Dakkarig                   Character 170
+   Big Mek in Mega Armour Character 115
+   Mek                                Character 55
+   Mek                                Character 55
+   Mek                                Character 55
+   Warboss                            Character 100 Warlord
+   (10) Flash Gitz                    Infantry      245 Mek
+   (10) Gretchin                      Infantry      45
+   (10) Gretchin                      Infantry      45
+   (10) Gretchin                      Infantry      45
+   (6) Tankbustas                     Infantry      160 Mek
+   (6) Tankbustas                     Infantry      160 Mek
+   (3) Deffkoptas                     Mounted       85
+   (6) Killa Kans                     Vehicle       275
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad35f961aa954a39809e50b?view=6ad39018f278581ab3356c91           1/14
+10/17/26, 8:28 PM                                               Me shooty yer' booty - New Recruit
+     215 PTS                                                     MEK
+   Models                                                                 Options
+                                                                          Kustom Mega-slugga, Mek's Toolz
+   1x Mek
+                                                                          • Supporting: Tankbustas[1]
+   1x Nob                                                                 Choppa, Rokkit Pistol, Smash Hammer
+   1x Tankbusta w/ Two Busta Rokkit Launchas                              2x Busta Rokkit Launcha, Gitstikka
+   4x Tankbusta w/ Busta Rokkit Launcha                                   Busta Rokkit Launcha, Gitstikka
+   Unit                                                    M       T     Sv        W       LD        OC     InSv         Base
+   Mek - Mek                                               6"      5     5+        4       7+        1                   32mm
+   Nob - Tankbustas                                        6"      5     4+        3       7+        1                   32mm
+   Tankbusta (x5) - Tankbustas                             6"      5     4+        2       7+        1                   32mm
+   Ranged Weapons                                      Range A BS S            AP D Keywords
+                                                                                    CLOSE-QUARTERS,
+   Kustom Mega-slugga (Kustom Dakka, Dakka!
+                                                        12"      3 4+ 8        -2 3 HAZARDOUS, IGNORES
+   Dakka! Dakka!) - Mek
+                                                                                    COVER, ASSAULT
+   Rokkit pistol (Dakka! Dakka! Dakka!, Kustom                                           CLOSE-QUARTERS, ASSAULT, IGNORES
+                                                        12"      1 4+ 10 -2 3
+   Dakka) - Tankbustas                                                                   COVER
+   ➤ Busta Rokkit Launcha - Hunter (Hunter:
+   MONSTER/VEHICLE) (Dakka! Dakka!                      24"      3 4+ 12 -2 3 ASSAULT, IGNORES COVER
+   Dakka!, Kustom Dakka) (x6) - Tankbustas
+   ➤ Busta Rokkit Launcha - Standard (Dakka!
+   Dakka! Dakka!, Kustom Dakka) (x6) -                  24"      2 4+ 10 -2 3 ASSAULT, IGNORES COVER
+   Tankbustas
+   Melee Weapons                                                                         Range A WS S           AP D Keywords
+   Mek's Toolz - Mek                                                                     Melee 3 3+ 5           0 1
+   Choppa - Tankbustas                                                                   Melee       4 3+   5   -1   1
+   ➤ Smash Hammer - Hunter (Hunter: MONSTER/VEHICLE) - Tankbustas                        Melee       3 3+   12 -2    3
+   ➤ Smash Hammer - Standard - Tankbustas                                                Melee       3 3+   7   -2   2
+   Gitstikka (x5) - Tankbustas                                                           Melee       3 3+   5   0    1
+   Abilities                           Description
+                                       In your Movement phase, at the start or end of this unit's move, you can select
+                                       one friendly ORKS VEHICLE model (excluding AIRCRAFT/TITANIC models)
+                                       within 3" of this model:
+   Clever Know-wotz - Mek
+                                         That VEHICLE model heals D3 wounds.
+                                         That VEHICLE model's attacks have +1 to hit rolls until the start of your
+                                          next Movement phase.
+   Kustom Dakka - Mek                  This unit's ranged attacks have [IGNORES COVER].
+                                       In your Shooting phase, when this unit has shot, select one enemy unit hit by
+   Rokkit Barrage - Tankbustas         those attacks. That unit makes a battle-shock roll, with -1 to that battle-
+                                       shock roll.
+                                       In your Movement phase, when this unit ends a normal move, you can select
+   Bomb Squig (Once per turn,          one visible enemy unit within 12" of this unit and roll one D6:
+   twice per battle, per unit) -         On a 3+, that enemy unit suffers D3 mortal wounds.
+   Tankbustas                             Place two Bomb Squig tokens next to the unit, removing one each time this
+                                          ability is used.
+    Rules Waaagh!, Support, Waaagh!
+
+    Categories Character, Explosives, Faction: Orks, Infantry, Mek, Tankbustas*, *from combined unit
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad35f961aa954a39809e50b?view=6ad39018f278581ab3356c91                                      2/14
+10/17/26, 8:28 PM                                               Me shooty yer' booty - New Recruit
+     215 PTS                                                     MEK
+   Models                                                                 Options
+                                                                          Kustom Mega-slugga, Mek's Toolz
+   1x Mek
+                                                                          • Supporting: Tankbustas[2]
+   1x Nob                                                                 Choppa, Rokkit Pistol, Smash Hammer
+   1x Tankbusta w/ Two Busta Rokkit Launchas                              2x Busta Rokkit Launcha, Gitstikka
+   4x Tankbusta w/ Busta Rokkit Launcha                                   Busta Rokkit Launcha, Gitstikka
+   Unit                                                    M       T     Sv        W       LD        OC     InSv         Base
+   Mek - Mek                                               6"      5     5+        4       7+        1                   32mm
+   Nob - Tankbustas                                        6"      5     4+        3       7+        1                   32mm
+   Tankbusta (x5) - Tankbustas                             6"      5     4+        2       7+        1                   32mm
+   Ranged Weapons                                      Range A BS S            AP D Keywords
+                                                                                    CLOSE-QUARTERS,
+   Kustom Mega-slugga (Kustom Dakka, Dakka!
+                                                        12"      3 4+ 8        -2 3 HAZARDOUS, IGNORES
+   Dakka! Dakka!) - Mek
+                                                                                    COVER, ASSAULT
+   Rokkit pistol (Dakka! Dakka! Dakka!, Kustom                                           CLOSE-QUARTERS, ASSAULT, IGNORES
+   Dakka) - Tankbustas
+                                                        12"      1 4+ 10 -2 3
+                                                                                         COVER
+   ➤ Busta Rokkit Launcha - Hunter (Hunter:
+   MONSTER/VEHICLE) (Dakka! Dakka!                      24"      3 4+ 12 -2 3 ASSAULT, IGNORES COVER
+   Dakka!, Kustom Dakka) (x6) - Tankbustas
+   ➤ Busta Rokkit Launcha - Standard (Dakka!
+   Dakka! Dakka!, Kustom Dakka) (x6) -                  24"      2 4+ 10 -2 3 ASSAULT, IGNORES COVER
+   Tankbustas
+   Melee Weapons                                                                         Range A WS S           AP D Keywords
+   Mek's Toolz - Mek                                                                     Melee 3 3+ 5           0 1
+   Choppa - Tankbustas                                                                   Melee       4 3+   5   -1   1
+   ➤ Smash Hammer - Hunter (Hunter: MONSTER/VEHICLE) - Tankbustas                        Melee       3 3+   12 -2    3
+   ➤ Smash Hammer - Standard - Tankbustas                                                Melee       3 3+   7   -2   2
+   Gitstikka (x5) - Tankbustas                                                           Melee       3 3+   5   0    1
+   Abilities                           Description
+                                       In your Movement phase, at the start or end of this unit's move, you can select
+                                       one friendly ORKS VEHICLE model (excluding AIRCRAFT/TITANIC models)
+                                       within 3" of this model:
+   Clever Know-wotz - Mek
+                                         That VEHICLE model heals D3 wounds.
+                                         That VEHICLE model's attacks have +1 to hit rolls until the start of your
+                                          next Movement phase.
+   Kustom Dakka - Mek                  This unit's ranged attacks have [IGNORES COVER].
+                                       In your Shooting phase, when this unit has shot, select one enemy unit hit by
+   Rokkit Barrage - Tankbustas         those attacks. That unit makes a battle-shock roll, with -1 to that battle-
+                                       shock roll.
+                                       In your Movement phase, when this unit ends a normal move, you can select
+   Bomb Squig (Once per turn,          one visible enemy unit within 12" of this unit and roll one D6:
+   twice per battle, per unit) -         On a 3+, that enemy unit suffers D3 mortal wounds.
+   Tankbustas                             Place two Bomb Squig tokens next to the unit, removing one each time this
+                                          ability is used.
+    Rules Waaagh!, Support, Waaagh!
+
+    Categories Character, Explosives, Faction: Orks, Infantry, Mek, Tankbustas*, *from combined unit
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad35f961aa954a39809e50b?view=6ad39018f278581ab3356c91                                      3/14
+10/17/26, 8:28 PM                                                 Me shooty yer' booty - New Recruit
+     300 PTS                                                       MEK
+   Models                                  Options
+                                           Kustom Mega-slugga, Mek's Toolz
+   1x Mek
+                                           • Supporting: Flash Gitz
+   1x Kaptin                               Choppa, Snazzgun
+   9x Flash Gitz                           Choppa, Snazzgun
+   Unit                                              M      T       Sv          W        LD        OC       InSv       Base
+   Mek - Mek                                         6"     5       5+          4        7+        1                   32mm
+   Flash Gitz - Flash Gitz                           6"     5       4+          3        7+        1                   40mm
+   Ranged Weapons                          Range A BS S AP D                        Keywords
+   Kustom Mega-slugga (Kustom
+                                                                                    CLOSE-QUARTERS, HAZARDOUS, IGNORES
+   Dakka, Dakka! Dakka! Dakka!) -           12"       3 4+ 8 -2 3
+   Mek
+                                                                                    COVER, ASSAULT
+
+   ➤ Snazzgun - Cutta (Dakka!
+   Dakka! Dakka!, Supa-snazz                                                        HAZARDOUS, MELTA 2, ASSAULT, RAPID FIRE
+                                            12"       1 4+ 9 -3 D3+2
+   Dakka, Kustom Dakka) (x10) -                                                     1, IGNORES COVER
+   Flash Gitz
+   ➤ Snazzgun - Dakka (Dakka!
+                                                                                    LETHAL HITS: non-MONSTER/VEHICLE,
+   Dakka! Dakka!, Supa-snazz
+                                            24"       3 4+ 6 -1 2                   SUSTAINED HITS 1, ASSAULT, RAPID FIRE
+   Dakka, Kustom Dakka) (x10) -
+                                                                                    1, IGNORES COVER
+   Flash Gitz
+   ➤ Snazzgun - Kill Shot (Dakka!
+   Dakka! Dakka!, Supa-snazz                                                        HAZARDOUS, ASSAULT, RAPID FIRE
+                                            36"       2 4+ 8 -2 2
+   Dakka, Kustom Dakka) (x10) -                                                     1, IGNORES COVER
+   Flash Gitz
+   Melee Weapons                                          Range             A       WS         S       AP   D      Keywords
+   Mek's Toolz - Mek                                      Melee             3       3+         5       0    1
+   Choppa (x10) - Flash Gitz                              Melee             4       3+         5       -1   1
+   Abilities             Description
+                         In your Movement phase, at the start or end of this unit's move, you can select one friendly
+                         ORKS VEHICLE model (excluding AIRCRAFT/TITANIC models) within 3" of this model:
+   Clever Know-
+                           That VEHICLE model heals D3 wounds.
+   wotz - Mek
+                           That VEHICLE model's attacks have +1 to hit rolls until the start of your next Movement
+                            phase.
+   Kustom Dakka -
+                         This unit's ranged attacks have [IGNORES COVER].
+   Mek
+                         In your Shooting phase, if any of the following apply, this unit's ranged attacks have +1 AP.
+   Finderz Keeperz
+                           This unit is within range of an objective.
+   - Flash Gitz
+                           The target of that attack is within range of an objective.
+   Supa-snazz
+   Dakka - Flash         FLASH GITZ unit only. This unit's Snazzgun weapons have [RAPID FIRE 1].
+   Gitz
+    Rules Waaagh!, Support, Waaagh!
+
+    Categories Character, Explosives, Faction: Orks, Infantry, Mek, Flash Gitz*, *from combined unit
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad35f961aa954a39809e50b?view=6ad39018f278581ab3356c91                                    4/14
+10/17/26, 8:28 PM                                                Me shooty yer' booty - New Recruit
+     200 PTS                                           WAZDAKKA GUTSMEK
+   Models                         Options
+   1x Wazdakka Gutsmek            Fixit's Wrench, Grabba Dragga, Psyko-gatler, Speeding Bulk and Flaming Exhaust
+   Unit                                     M         T     Sv         W          LD        OC        InSv   Base
+   Wazdakka Gutsmek                         14"       8     3+         10         6+        3         4+     120x92mm
+   Ranged Weapons Range A             BS S AP D Keywords
+   Grabba Dragga         12"     1    2+ 10 -2 3 ASSAULT, PRECISION
+                                                          ASSAULT, LETHAL HITS: non-MONSTER/VEHICLE, SUSTAINED
+   Psyko-gatler          24"     12 4+ 6        -2 2
+                                                          HITS 1
+   Melee Weapons                                      Range       A   WS      S        AP   D    Keywords
+   Fixit's Wrench                                     Melee       1   4+      3        0    1    EXTRA ATTACKS
+   Grabba Dragga                                      Melee       6   2+      10       -2   3    CLEAVE 2, LANCE
+   Speeding Bulk and Flaming Exhaust                  Melee       3   2+      5        -1   1    CLEAVE 1, EXTRA ATTACKS
+   Abilities        Description
+   Full             In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability
+   Throttle         until the start of your next Command phase.
+   Throttlerokkit Shokka Engine Description
+                                     When this unit is selected to make an advance/fall-back move, that move does
+   Turbo Engine
+                                     not prevent this unit from being eligible to declare a charge.
+                                     In your Movement phase, when this unit is selected to move, if this unit is
+   Pulse Jet
+                                     unengaged, this unit can make a pulse jet move.
+                                     In your Command phase, if this unit is unengaged, you can place this unit in
+   Shokk Attack Engine
+                                     strategic reserves.
+    Rules Deadly Demise D3, Deep Strike, Lone Operative, Waaagh!
+
+    Categories Character, Epic Hero, Faction: Orks, Mounted, Smoke, Speed Freeks, Vehicle, Wazdakka Gutsmek
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad35f961aa954a39809e50b?view=6ad39018f278581ab3356c91                                 5/14
+10/17/26, 8:28 PM                                                 Me shooty yer' booty - New Recruit
+     190 PTS                                              BIG MEK DAKKARIG
+   Models                              Options
+   1x Big Mek Dakkarig                 Dreadherder, Blitzkannon, Multi-busta Launcha, Stompy Feet
+   Unit                                      M        T      Sv           W         LD          OC         InSv     Base
+   Big Mek Dakkarig                          8"       8      3+           11        7+          3          5+       90mm
+   Ranged Weapons            Range A BS S            AP D Keywords
+   Blitzkannon               24"   8 4+ 7            -2 2 IGNORES COVER, LETHAL HITS: non-MONSTER/VEHICLE
+   Multi-busta Launcha       24"       6 5+ 10 -2          3 IGNORES COVER, LETHAL HITS
+   Melee Weapons                           Range              A        WS            S       AP        D      Keywords
+   Stompy Feet                             Melee              4        3+            6       -1        1
+   Abilities          Description
+   Even More
+                      If this unit is riled up, this unit's ranged attacks have [SUSTAINED HITS 1].
+   Dakka
+                      In your Shooting phase, if this unit's Blitzkannon weapon targets a unit (excluding
+   Blitz Dem Gitz!
+                      MONSTER/VEHICLE units), that weapon has +6 A.
+                      BIG MEK model only. While this model is within 3" of a friendly ORKS WALKER unit
+                      (excluding BIG MEK units):
+   Dreadherder          This model has Lone Operative.
+                        In your Shooting phase, you can select one friendly ORKS WALKER unit within 3" of this
+                         model. That unit's attacks can re-roll hit rolls of 1 until the end of the turn.
+    Rules Deadly Demise 1, Waaagh!
+
+    Categories Big Mek, Big Mek Dakkarig, Character, Faction: Orks, Vehicle, Walker
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad35f961aa954a39809e50b?view=6ad39018f278581ab3356c91                                 6/14
+10/17/26, 8:28 PM                                                 Me shooty yer' booty - New Recruit
+     170 PTS                                            BIG MEK DAKKARIG
+   Models                             Options
+   1x Big Mek Dakkarig                Cybork Boosta, Blitzkannon, Multi-busta Launcha, Stompy Feet
+   Unit                                                        M          T     Sv       W         LD       OC    InSv      Base
+   Big Mek Dakkarig (Cybork Boosta)                            10"         8    3+       11        7+       3     5+        90mm
+   Ranged Weapons            Range A BS S            AP D Keywords
+   Blitzkannon               24"   8 4+ 7            -2 2 IGNORES COVER, LETHAL HITS: non-MONSTER/VEHICLE
+   Multi-busta Launcha       24"       6 5+ 10 -2         3 IGNORES COVER, LETHAL HITS
+   Melee Weapons                           Range              A        WS            S        AP        D        Keywords
+   Stompy Feet                             Melee              4        3+            6        -1        1
+   Abilities         Description
+   Even More
+                     If this unit is riled up, this unit's ranged attacks have [SUSTAINED HITS 1].
+   Dakka
+   Blitz Dem         In your Shooting phase, if this unit's Blitzkannon weapon targets a unit (excluding
+   Gitz!             MONSTER/VEHICLE units), that weapon has +6 A.
+   Cybork
+                     BIG MEK/MEK model only. This model has +2" M.
+   Boosta
+    Rules Deadly Demise 1, Waaagh!
+
+    Categories Big Mek, Big Mek Dakkarig, Character, Faction: Orks, Vehicle, Walker
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad35f961aa954a39809e50b?view=6ad39018f278581ab3356c91                                         7/14
+10/17/26, 8:28 PM                                                Me shooty yer' booty - New Recruit
+     115 PTS                                         BIG MEK IN MEGA ARMOUR
+   Models                                  Options
+   1x Big Mek in Mega Armour               Supa-glowy Fing, Kustom Mega-blasta, Power Klaw, Tellyport Blasta
+   Unit                                                M         T    Sv         W       LD           OC       InSv    Base
+   Big Mek in Mega Armour                              5"        6    2+         5       7+           1                40mm
+   Ranged Weapons                           Range A BS S AP D Keywords
+   Kustom Mega-blasta (More                                      HAZARDOUS, IGNORES COVER, ASSAULT, ANTI-
+   Dakka, Dakka! Dakka!                     24"      3 4+ 9 -2 3 INFANTRY 4+, DEVASTATING WOUNDS, SUPA-
+   Dakka!, Supa-glowy Fing)                                      HAZARDOUS
+   Tellyport Blasta (More                                        BLAST 1, IGNORES COVER, ASSAULT, ANTI-
+   Dakka, Dakka! Dakka!                     12"      6 4+ 9 -2 3 INFANTRY 4+, DEVASTATING WOUNDS, SUPA-
+   Dakka!, Supa-glowy Fing)                                      HAZARDOUS
+   Melee Weapons                          Range              A       WS           S           AP           D    Keywords
+   Power Klaw                             Melee              3       3+           10          -2           2
+   Abilities                               Description
+                                           In your Command phase, this unit heals 3 wounds.
+   Fix Dat Armour Up (Once per
+                                           Place a Grot Oiler token next to the unit, removing it when this ability is
+   battle, per unit)
+                                           used.
+                                           This unit's ranged attacks have:
+   More Dakka                               [IGNORES COVER].
+                                            If this unit is riled up, [SUSTAINED HITS 1].
+                                           ORKS INFANTRY model only (excluding WEIRDBOY models). This
+                                           model’s ranged attacks have:
+   Supa-glowy Fing                          [ANTI-INFANTRY 4+}
+                                            [DEVASTATING WOUNDS].
+                                            [SUPA-HAZARDOUS].
+    Rules Waaagh!, Leader, Supa-hazardous
+
+    Categories Big Mek, Big Mek in Mega Armour, Character, Explosives, Faction: Orks, Infantry, Mega Armour
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad35f961aa954a39809e50b?view=6ad39018f278581ab3356c91                                    8/14
+10/17/26, 8:28 PM                                                 Me shooty yer' booty - New Recruit
+     100 PTS                                                  WARBOSS
+   Models                           Options
+   1x Warboss                       Warlord, Kustom Choppa, Kustom Shoota
+   Unit                        M         T        Sv          W           LD             OC            InSv       Base
+   Warboss                     6"        6        4+          6           6+             1             5+         50mm
+   Ranged Weapons                         Range A BS S AP D Keywords
+   Kustom Shoota (Dakka! Dakka!                             LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE
+   Dakka!)
+                                          18"   4 5+ 4 0 1
+                                                            2, ASSAULT
+   Melee Weapons                              Range            A        WS           S        AP         D    Keywords
+   Kustom Choppa                              Melee            6        2+           7        -2         2    CLEAVE 2
+   Abilities                               Description
+                                             If this unit made a charge move this turn, this model's melee attacks have:
+   Might is Right                              +3 A.
+                                               +2 S.
+                                             In your Shooting phase, when this unit is selected to shoot, you can use
+   Boss' Ammo Runt (Once per                 this ability. If you do, this model's ranged attacks have +1 to hit rolls.
+   battle, per unit)                         Place a Boss' Ammo Runt token next to the unit, removing it when this ability
+                                             is used.
+                                             In your Movement phase, at the start or end of this unit's move, you can
+   Intimidating Motivation (Once per         select one friendly ORKS unit within 6" of this unit. That unit:
+   battle round, per army)                     Is no longer battle-shocked.
+                                               Is riled up until the start of your next turn.
+    Rules Da Boss, Leader, Waaagh!
+
+    Categories Character, Faction: Orks, Grenades, Infantry, Warboss, Warlord
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad35f961aa954a39809e50b?view=6ad39018f278581ab3356c91                                 9/14
+10/17/26, 8:28 PM                                               Me shooty yer' booty - New Recruit
+     45 PTS                                                    GRETCHIN                                                   x3
+   Models                                     Options
+   10x Gretchin                                Grot Blasta, Scavenged Shivs
+   Unit                                  M         T      Sv         W            LD       OC         InSv      Base
+   Gretchin (x10)                        6"        2      6+         1            8+       1                    25mm
+   Ranged Weapons                                         Range      A BS          S AP    D Keywords
+   Grot Blasta (Dakka! Dakka! Dakka!) (x10)               12"        1       4+    3   0   1    CLOSE-QUARTERS, ASSAULT
+   Melee Weapons                                       Range             A        WS       S     AP     D    Keywords
+   Scavenged Shivs (x10)                               Melee             1        5+       2     0      1
+   Abilities              Description
+                          For the purposes of transport capacity, each 2 Gretchin models (rounding up) take up
+   Downtrodden
+                          the space of 1 model.
+   Thievin’               At the end of your Movement phase, if this unit is controlling an objective, that objective
+   Scavengers             is secured.
+    Rules Waaagh!
+
+    Categories Faction: Orks, Gretchin, Grots, Infantry
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad35f961aa954a39809e50b?view=6ad39018f278581ab3356c91                                     10/14
+10/17/26, 8:28 PM                                                 Me shooty yer' booty - New Recruit
+     85 PTS                                                 DEFFKOPTAS
+   Models                         Options
+   3x Deffkopta                   Choppa, Rokkit Launcha, Slugga, Spinnin’ Blades
+   Unit                                 M          T       Sv          W      LD          OC           InSv   Base
+   Deffkoptas (x3)                      12"        6       4+          4      7+          2            6+     75x42mm
+   Ranged Weapons                     Range A BS S           AP D Keywords
+   ➤ Rokkit Launcha- Busta
+                                      24"      2 5+ 10 -2 3 LETHAL HITS
+   (x3)
+   ➤ Rokkit Launcha - Blasta
+                                      24"      2 5+ 4        0     1 BLAST 2
+   (x3)
+                                                                       CLOSE-QUARTERS, LETHAL HITS: non-
+   Slugga (x3)                        12"      1 5+ 4        0     1
+                                                                       MONSTER/VEHICLE
+   Melee Weapons                         Range         A    WS         S     AP       D     Keywords
+   Choppa (x3)                           Melee         3     4+        5     -1       1
+   Spinnin’ Blades (x3)                  Melee         4     3+        5     -1       1     CLEAVE 1, HAZARDOUS
+   Abilities          Description
+   Aerial             At the end of your opponent's Fight phase, if this unit is unengaged, you can place this unit
+   Manoover           in strategic reserves.
+   Deff from          In your Shooting phase, if this unit made an ingress move this turn, this unit's ranged attacks
+   Above              have +1 to hit rolls.
+    Rules Deep Strike, Waaagh!
+
+    Categories Deffkoptas, Explosives, Faction: Orks, Fly, Mounted, Speed Freeks
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad35f961aa954a39809e50b?view=6ad39018f278581ab3356c91                              11/14
+10/17/26, 8:28 PM                                                        Me shooty yer' booty - New Recruit
+     275 PTS                                                 KILLA KANS
+   Models                                              Options
+   6x Killa Kan                                        Kan Blasta, Kan Klaw
+   Unit                                 M         T         Sv               W         LD          OC         InSv        Base
+   Killa Kan (x6)                       8"        7         3+               5         8+          2          6+          60mm
+   Ranged Weapons                           Range A BS           S        AP D Keywords
+   ➤ Kan Blasta - Kill Shot (x6)            24"       2 4+ 10 -2                 3
+   ➤ Kan Blasta - Point Blank (x6)          12"       3 -        5        -1     1 BLAST 2, TORRENT
+   ➤ Kan Blasta - Dakka (x6)                24"       4 4+ 6              -1     1 BLAST 1, IGNORES COVER, SUSTAINED HITS 1
+   Melee Weapons                             Range                   A         WS           S       AP        D      Keywords
+   Kan Klaw (x6)                             Melee                   3           4+         8       -2        3
+   Abilities              Description
+   Spiteful Power         This unit's attacks that target a unit that has no models with a T of 7+ have +1 to hit
+   Trip                   rolls.
+    Rules Deadly Demise 1, Waaagh!
+
+    Categories Faction: Orks, Grots, Killa Kans, Vehicle, Walker
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad35f961aa954a39809e50b?view=6ad39018f278581ab3356c91                                       12/14
+10/17/26, 8:28 PM                                               Me shooty yer' booty - New Recruit
+
+
+  Rules
+  Army Roster (Xenos - Orks)
+    Waaagh!
+    Friendly ORKS with this ability can:
+     Re-roll advance rolls.
+     Become riled up, as stated in other rules.
+       While a unit is riled up:
+          - That unit has 5+ InSv.
+          - That unit's ranged attacks have [ASSAULT].
+          - When that unit is selected to make an advance move, that advance move does not prevent that unit
+       from being eligible to declare a charge.
+    War Cry (Once per battle, per army)
+    At the start of the Command phase, you can use this ability. If you do, friendly ORKS units with the Waaagh!
+    ability are riled up until the end of the next turn.
+
+  Da Boss:
+  At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.
+
+  Dakka! Dakka! Dakka!:
+  Friendly ORKS INFANTRY units’ ranged attacks have [ASSAULT].
+   While this unit is riled up, +3" R.
+
+  Deadly Demise 1 / Deadly Demise 1 / Deadly Demise D3:
+  This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the
+  units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that
+  model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds
+  denoted by X (if this is a random number, roll separately for each unit within 6").
+  Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any
+  unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency
+  disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved.
+  Finally, the Impulsor is removed from the battlefield.
+
+  Deep Strike:
+  Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up
+  anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your
+  opponent’s deployment zone.
+
+  Leader:
+  Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one
+  friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an
+  attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one
+  support unit attached to it.
+
+  Lone Operative:
+  Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12" of this unit,
+  and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12" of this unit.
+  If this ability takes the form Lone Operative X", unless part of an attached unit, this unit is not visible to
+  enemy models unless they are within X" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons
+  unless the attacking model is within X" of this unit.
+
+  Supa-hazardous:
+  Each time a unit is selected to shoot, after that unit has resolved all of its attacks, make two hazard rolls for
+  that unit for each [SUPA-HAZARDOUS] weapon you selected in the Select Weapons step.
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad35f961aa954a39809e50b?view=6ad39018f278581ab3356c91                            13/14
+10/17/26, 8:28 PM                                               Me shooty yer' booty - New Recruit
+
+  Support:
+  Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one
+  friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form
+  an attached unit with it.
+  Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to
+  it.
+
+  Try Dat Button!:
+  In your Shooting phase or the Fight phase, when a friendly ORKS WALKER unit (excluding TITANIC units) is
+  selected to attack, you can use this ability. If you do, roll either one D6 or two D6 (keep re-rolling duplicate
+  results). This unit's attacks have the relevant rule(s).
+  If you rolled two D6, when this unit has attacked, this unit makes one hazard roll.
+
+  Waaagh!:
+  Friendly ORKS with this ability can:
+   Re-roll advance rolls.
+   Become riled up, as stated in other rules.
+     While a unit is riled up:
+        - That unit has 5+ InSv.
+        - That unit's ranged attacks have [ASSAULT].
+        - When that unit is selected to make an advance move, that advance move does not prevent that unit
+     from being eligible to declare a charge.
+
+  Wreckin' and Lootin':
+  In your Shooting phase, when a friendly BREAKA BOYZ/FLASH GITZ/TANKBUSTAS unit is selected to
+  shoot, if any of the following apply, that unit's attacks can re-roll hit rolls of 1:
+    That unit is within range of an objective.
+    The target of that attack is within range of an objective.
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad35f961aa954a39809e50b?view=6ad39018f278581ab3356c91                           14/14
+

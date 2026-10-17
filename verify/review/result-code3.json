@@ -1,0 +1,8 @@
+[
+ {
+  "key": "395cc43d9ac7c845",
+  "verdict": "ok",
+  "fix": null,
+  "why": "Re-review of the changed Uses per battle → Rules part. app.html line 1516 now has: ruleOnce = perBattle(r) && !/per battle\\b(?! round)[^.)]*\\bper unit\\b/i.test(r.text). I ran this filter over every army rule and detachment rule in data.js:\n- Higher Imperatives (its text gives NORN units Protean Purpose \"(Once per battle, per unit)\") → excluded. Its uses are counted only on the four Norn units’ Protean Purpose rows, 1 box each via copyKey, which matches \"per unit\".\n- War Cry (tag \"Once per battle, per army\"), Shadow in the Warp (\"once per battle … you can unleash\") and Kindred Sorcery (\"select each of these abilities once per battle\", 1 box per option) → kept, as before.\nSo nidzillas now gets: Rules: Shadow in the Warp (1 box); Abilities: Protean Purpose ×4 units and Resilient Organism unit 1 of 2 / 2 of 2; Stratagems: Insane Bravery. That matches the words. The rest of the function is unchanged from the version I passed: the reserves line against 20.01/20.03, Deep Strike and Scouts \"every model\", transports, the first-round and every-round lines, Read Mission Objectives, and the list facts.\nNotes, no wrong output today:\n(a) The per-unit test reads r.text only. A rule whose \"per unit\" scope is printed only in its tag would still get an army box. No current army or detachment rule has such a tag.\n(b) The latent \"infiltrat\" / \"\\bdeploy\" items are left as they were, as stated.\n(c) verify/out/snapshots/nidzillas.txt (19:08) is older than this app.html edit (19:22) and still shows the Higher Imperatives line. Re-render to refresh it."
+ }
+]

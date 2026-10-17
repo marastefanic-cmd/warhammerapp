@@ -10,6 +10,7 @@ Everything the app states as a fact is checked against these, mechanically, befo
 | nr/hurrdurr.txt | Hurrdurr - New Recruit.pdf | 2084accb422309e31300ec8a59df97fb4add44b15570c1641b754dcf2adb0ca9 |
 | nr/oioioi.txt | oioioi - New Recruit.pdf | 3e1c5064d56657fccd3f66799912a91b31439fdc910f2ed421305248a668ba84 |
 | nr/nidzillas.txt | Nidzillas - New Recruit.pdf | 513ddc007dd3ed6b0a9b87ceed676f617c0c3fd2a9569de64f009260e4b72613 |
+| nr/shooty.txt | Me shooty yer booty - New Recruit.pdf | 4c0e5befd172eeb489137b8e7efa4e4d3f5041a0111eacec7e7a5e0ed10e4781 |
 | packet/core-stratagems.txt | Core_stratagemy.pdf | d62979edcfd0323c1d3382a6d238f0f87b312fb07f103125ecbccdb6bd96e5a8 |
 
 Text made with `pdftotext -layout <pdf> <txt>` (poppler).

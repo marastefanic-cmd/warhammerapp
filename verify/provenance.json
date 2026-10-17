@@ -112,6 +112,118 @@
  ],
  "texts": [
   {
+   "item": "core / rule:Pulse Jet Move / text",
+   "field": "text",
+   "text": "**MAXIMUM DISTANCE:** Pulse roll + 18\"",
+   "doc": "wahahtml:orks",
+   "where": "Wahapedia orks § Special Move Types",
+   "sha256": "3d97dfd14d0a29449ea6e9fd43820a3d94e9e25c3b8224347b70081f20350016"
+  },
+  {
+   "item": "core / rule:Pulse Jet Move / text",
+   "field": "text",
+   "text": "**ELIGIBLE IF:** As stated in the rule allowing this move type.",
+   "doc": "wahahtml:orks",
+   "where": "Wahapedia orks § Special Move Types",
+   "sha256": "3d97dfd14d0a29449ea6e9fd43820a3d94e9e25c3b8224347b70081f20350016"
+  },
+  {
+   "item": "core / rule:Pulse Jet Move / text",
+   "field": "text",
+   "text": "**EFFECT:** Your unit moves as described in Moving (Core Rules, 03).",
+   "doc": "wahahtml:orks",
+   "where": "Wahapedia orks § Special Move Types",
+   "sha256": "3d97dfd14d0a29449ea6e9fd43820a3d94e9e25c3b8224347b70081f20350016"
+  },
+  {
+   "item": "core / rule:Pulse Jet Move / text",
+   "field": "text",
+   "text": "**BEFORE MOVING:**",
+   "doc": "core",
+   "where": "PDF p33",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Pulse Jet Move / text",
+   "field": "text",
+   "text": "- Make a **pulse roll** by rolling one D6.",
+   "doc": "wahahtml:orks",
+   "where": "Wahapedia orks § Special Move Types",
+   "sha256": "3d97dfd14d0a29449ea6e9fd43820a3d94e9e25c3b8224347b70081f20350016"
+  },
+  {
+   "item": "core / rule:Pulse Jet Move / text",
+   "field": "text",
+   "text": "**WHILE MOVING:**",
+   "doc": "core",
+   "where": "PDF p33",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Pulse Jet Move / text",
+   "field": "text",
+   "text": "- Ignore all vertical distance for the purposes of how far your unit has moved.",
+   "doc": "wahahtml:orks",
+   "where": "Wahapedia orks § Special Move Types",
+   "sha256": "3d97dfd14d0a29449ea6e9fd43820a3d94e9e25c3b8224347b70081f20350016"
+  },
+  {
+   "item": "core / rule:Pulse Jet Move / text",
+   "field": "text",
+   "text": "- Your unit can move through all types of model.",
+   "doc": "wahahtml:orks",
+   "where": "Wahapedia orks § Special Move Types",
+   "sha256": "3d97dfd14d0a29449ea6e9fd43820a3d94e9e25c3b8224347b70081f20350016"
+  },
+  {
+   "item": "core / rule:Pulse Jet Move / text",
+   "field": "text",
+   "text": "- Your unit can move horizontally and vertically through all categories of terra",
+   "doc": "wahahtml:orks",
+   "where": "Wahapedia orks § Special Move Types",
+   "sha256": "3d97dfd14d0a29449ea6e9fd43820a3d94e9e25c3b8224347b70081f20350016"
+  },
+  {
+   "item": "core / rule:Pulse Jet Move / text",
+   "field": "text",
+   "text": "**AFTER MOVING:**",
+   "doc": "core",
+   "where": "PDF p33",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Pulse Jet Move / text",
+   "field": "text",
+   "text": "- Your unit must be unengaged.",
+   "doc": "core",
+   "where": "PDF p33",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Pulse Jet Move / text",
+   "field": "text",
+   "text": "- Until the end of the turn, your unit is not eligible to declare a charge or st",
+   "doc": "wahahtml:orks",
+   "where": "Wahapedia orks § Special Move Types",
+   "sha256": "3d97dfd14d0a29449ea6e9fd43820a3d94e9e25c3b8224347b70081f20350016"
+  },
+  {
+   "item": "core / rule:Pulse Jet Move / text",
+   "field": "text",
+   "text": "- Until the start of your next turn, attacks that target your unit have -1 to hi",
+   "doc": "wahahtml:orks",
+   "where": "Wahapedia orks § Special Move Types",
+   "sha256": "3d97dfd14d0a29449ea6e9fd43820a3d94e9e25c3b8224347b70081f20350016"
+  },
+  {
+   "item": "core / rule:Supa-hazardous / text",
+   "field": "text",
+   "text": "Each time a unit is **selected to shoot**, after that unit has resolved all of i",
+   "doc": "wahahtml:orks",
+   "where": "Wahapedia orks § Enhancements",
+   "sha256": "3d97dfd14d0a29449ea6e9fd43820a3d94e9e25c3b8224347b70081f20350016"
+  },
+  {
    "item": "core / rule:Assault / text",
    "field": "text",
    "text": "Units containing one or more models with an **[ASSAULT]** weapon can shoot using",
@@ -2647,311 +2759,521 @@
    "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
   },
   {
-   "item": "cooking / detachment:brute-bosses",
+   "item": "cooking,shooty / detachment:brute-bosses",
    "field": "name",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Brute Bosses 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:brute-bosses/rule",
+   "item": "cooking,shooty / detachment:brute-bosses/rule",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Brute Bosses 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:brute-bosses/enhancement:Brutal But Kunnin’",
+   "item": "cooking,shooty / detachment:brute-bosses/enhancement:Brutal But Kunnin’",
    "field": "pts",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Brute Bosses 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:brute-bosses/enhancement:Brutal But Kunnin’",
+   "item": "cooking,shooty / detachment:brute-bosses/enhancement:Brutal But Kunnin’",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Brute Bosses 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:brute-bosses/enhancement:Da Gobshot Thunderbuss",
+   "item": "cooking,shooty / detachment:brute-bosses/enhancement:Da Gobshot Thunderbuss",
    "field": "pts",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Brute Bosses 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:brute-bosses/enhancement:Da Gobshot Thunderbuss",
+   "item": "cooking,shooty / detachment:brute-bosses/enhancement:Da Gobshot Thunderbuss",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Brute Bosses 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:brute-bosses/enhancement:Blitzboss",
+   "item": "cooking,shooty / detachment:brute-bosses/enhancement:Blitzboss",
    "field": "pts",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Brute Bosses 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:brute-bosses/enhancement:Blitzboss",
+   "item": "cooking,shooty / detachment:brute-bosses/enhancement:Blitzboss",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Brute Bosses 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:brute-bosses/enhancement:Proper Killy",
+   "item": "cooking,shooty / detachment:brute-bosses/enhancement:Proper Killy",
    "field": "pts",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Brute Bosses 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:brute-bosses/enhancement:Proper Killy",
+   "item": "cooking,shooty / detachment:brute-bosses/enhancement:Proper Killy",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Brute Bosses 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:brute-bosses/enhancement:Morgog’s Finkin’ Cap",
+   "item": "cooking,shooty / detachment:brute-bosses/enhancement:Morgog’s Finkin’ Cap",
    "field": "pts",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Brute Bosses 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:brute-bosses/enhancement:Morgog’s Finkin’ Cap",
+   "item": "cooking,shooty / detachment:brute-bosses/enhancement:Morgog’s Finkin’ Cap",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Brute Bosses 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:brute-bosses/enhancement:Surly as a Squiggoth",
+   "item": "cooking,shooty / detachment:brute-bosses/enhancement:Surly as a Squiggoth",
    "field": "pts",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Brute Bosses 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:brute-bosses/enhancement:Surly as a Squiggoth",
+   "item": "cooking,shooty / detachment:brute-bosses/enhancement:Surly as a Squiggoth",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Brute Bosses 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:da-big-hunt",
+   "item": "cooking,shooty / detachment:da-big-hunt",
    "field": "name",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Da Big Hunt 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:da-big-hunt/rule",
+   "item": "cooking,shooty / detachment:da-big-hunt/rule",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Da Big Hunt 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:da-big-hunt/enhancement:Glory Hog",
+   "item": "cooking,shooty / detachment:da-big-hunt/enhancement:Glory Hog",
    "field": "pts",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Da Big Hunt 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:da-big-hunt/enhancement:Glory Hog",
+   "item": "cooking,shooty / detachment:da-big-hunt/enhancement:Glory Hog",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Da Big Hunt 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:da-big-hunt/enhancement:It Came from da Drops",
+   "item": "cooking,shooty / detachment:da-big-hunt/enhancement:It Came from da Drops",
    "field": "pts",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Da Big Hunt 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:da-big-hunt/enhancement:It Came from da Drops",
+   "item": "cooking,shooty / detachment:da-big-hunt/enhancement:It Came from da Drops",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Da Big Hunt 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:da-big-hunt/stratagem:where-dya-fink",
+   "item": "cooking,shooty / detachment:da-big-hunt/stratagem:where-dya-fink",
    "field": "when",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Da Big Hunt 1DP (WHERE D'YA FINK YOU'RE GOING?)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:da-big-hunt/stratagem:where-dya-fink",
+   "item": "cooking,shooty / detachment:da-big-hunt/stratagem:where-dya-fink",
    "field": "target",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Da Big Hunt 1DP (WHERE D'YA FINK YOU'RE GOING?)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:da-big-hunt/stratagem:where-dya-fink",
+   "item": "cooking,shooty / detachment:da-big-hunt/stratagem:where-dya-fink",
    "field": "effect",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Da Big Hunt 1DP (WHERE D'YA FINK YOU'RE GOING?)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:da-big-hunt/stratagem:goaded-into-action",
+   "item": "cooking,shooty / detachment:da-big-hunt/stratagem:goaded-into-action",
    "field": "when",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Da Big Hunt 1DP (GOADED INTO ACTION)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:da-big-hunt/stratagem:goaded-into-action",
+   "item": "cooking,shooty / detachment:da-big-hunt/stratagem:goaded-into-action",
    "field": "target",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Da Big Hunt 1DP (GOADED INTO ACTION)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:da-big-hunt/stratagem:goaded-into-action",
+   "item": "cooking,shooty / detachment:da-big-hunt/stratagem:goaded-into-action",
    "field": "effect",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Da Big Hunt 1DP (GOADED INTO ACTION)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:da-big-hunt/stratagem:instinctive-hunters",
+   "item": "cooking,shooty / detachment:da-big-hunt/stratagem:instinctive-hunters",
    "field": "when",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Da Big Hunt 1DP (INSTINCTIVE HUNTERS)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:da-big-hunt/stratagem:instinctive-hunters",
+   "item": "cooking,shooty / detachment:da-big-hunt/stratagem:instinctive-hunters",
    "field": "target",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Da Big Hunt 1DP (INSTINCTIVE HUNTERS)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:da-big-hunt/stratagem:instinctive-hunters",
+   "item": "cooking,shooty / detachment:da-big-hunt/stratagem:instinctive-hunters",
    "field": "effect",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Da Big Hunt 1DP (INSTINCTIVE HUNTERS)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:dread-mob",
+   "item": "cooking,shooty / detachment:dread-mob",
    "field": "name",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:dread-mob/rule",
+   "item": "cooking,shooty / detachment:dread-mob/rule",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:dread-mob/enhancement:Cybork Boosta",
+   "item": "cooking,shooty / detachment:dread-mob/enhancement:Cybork Boosta",
    "field": "pts",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:dread-mob/enhancement:Cybork Boosta",
+   "item": "cooking,shooty / detachment:dread-mob/enhancement:Cybork Boosta",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:dread-mob/enhancement:Dreadherder",
+   "item": "cooking,shooty / detachment:dread-mob/enhancement:Dreadherder",
    "field": "pts",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:dread-mob/enhancement:Dreadherder",
+   "item": "cooking,shooty / detachment:dread-mob/enhancement:Dreadherder",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:dread-mob/stratagem:crazed-rampage",
+   "item": "cooking,shooty / detachment:dread-mob/stratagem:crazed-rampage",
    "field": "when",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP (CRAZED RAMPAGE)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:dread-mob/stratagem:crazed-rampage",
+   "item": "cooking,shooty / detachment:dread-mob/stratagem:crazed-rampage",
    "field": "target",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP (CRAZED RAMPAGE)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:dread-mob/stratagem:crazed-rampage",
+   "item": "cooking,shooty / detachment:dread-mob/stratagem:crazed-rampage",
    "field": "effect",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP (CRAZED RAMPAGE)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:dread-mob/stratagem:dread-power",
+   "item": "cooking,shooty / detachment:dread-mob/stratagem:dread-power",
    "field": "when",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP (DREAD POWER)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:dread-mob/stratagem:dread-power",
+   "item": "cooking,shooty / detachment:dread-mob/stratagem:dread-power",
    "field": "target",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP (DREAD POWER)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:dread-mob/stratagem:dread-power",
+   "item": "cooking,shooty / detachment:dread-mob/stratagem:dread-power",
    "field": "effect",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP (DREAD POWER)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:dread-mob/stratagem:stomping-juggernaut",
+   "item": "cooking,shooty / detachment:dread-mob/stratagem:stomping-juggernaut",
    "field": "when",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP (STOMPING JUGGERNAUT)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:dread-mob/stratagem:stomping-juggernaut",
+   "item": "cooking,shooty / detachment:dread-mob/stratagem:stomping-juggernaut",
    "field": "target",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP (STOMPING JUGGERNAUT)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / detachment:dread-mob/stratagem:stomping-juggernaut",
+   "item": "cooking,shooty / detachment:dread-mob/stratagem:stomping-juggernaut",
    "field": "effect",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP (STOMPING JUGGERNAUT)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking,shooty / detachment:shoota-boyz",
+   "field": "name",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Shoota Boyz 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking,shooty / detachment:shoota-boyz/rule",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Shoota Boyz 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking,shooty / detachment:shoota-boyz/enhancement:Supa-glowy Fing",
+   "field": "pts",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Shoota Boyz 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking,shooty / detachment:shoota-boyz/enhancement:Supa-glowy Fing",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Shoota Boyz 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking,shooty / detachment:shoota-boyz/enhancement:Targetin’ Squigs",
+   "field": "pts",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Shoota Boyz 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking,shooty / detachment:shoota-boyz/enhancement:Targetin’ Squigs",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Shoota Boyz 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking,shooty / detachment:shoota-boyz/stratagem:kustom-dakka",
+   "field": "when",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Shoota Boyz 1DP (KUSTOM DAKKA)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking,shooty / detachment:shoota-boyz/stratagem:kustom-dakka",
+   "field": "target",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Shoota Boyz 1DP (KUSTOM DAKKA)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking,shooty / detachment:shoota-boyz/stratagem:kustom-dakka",
+   "field": "effect",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Shoota Boyz 1DP (KUSTOM DAKKA)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking,shooty / detachment:shoota-boyz/stratagem:glowin-dakka",
+   "field": "when",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Shoota Boyz 1DP (GLOWIN' DAKKA)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking,shooty / detachment:shoota-boyz/stratagem:glowin-dakka",
+   "field": "target",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Shoota Boyz 1DP (GLOWIN' DAKKA)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking,shooty / detachment:shoota-boyz/stratagem:glowin-dakka",
+   "field": "effect",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Shoota Boyz 1DP (GLOWIN' DAKKA)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking,shooty / detachment:shoota-boyz/stratagem:never-enough-dakka",
+   "field": "when",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Shoota Boyz 1DP (NEVER ENOUGH DAKKA)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking,shooty / detachment:shoota-boyz/stratagem:never-enough-dakka",
+   "field": "target",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Shoota Boyz 1DP (NEVER ENOUGH DAKKA)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking,shooty / detachment:shoota-boyz/stratagem:never-enough-dakka",
+   "field": "effect",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Shoota Boyz 1DP (NEVER ENOUGH DAKKA)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking,shooty / detachment:wreckas",
+   "field": "name",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Wreckas 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking,shooty / detachment:wreckas/rule",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Wreckas 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking,shooty / detachment:wreckas/enhancement:Kaptin’s Hat",
+   "field": "pts",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Wreckas 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking,shooty / detachment:wreckas/enhancement:Kaptin’s Hat",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Wreckas 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking,shooty / detachment:wreckas/enhancement:Supa-snazz Dakka",
+   "field": "pts",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Wreckas 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking,shooty / detachment:wreckas/enhancement:Supa-snazz Dakka",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Wreckas 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking,shooty / detachment:wreckas/stratagem:drive-by-bustin",
+   "field": "when",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Wreckas 1DP (DRIVE-BY BUSTIN')",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking,shooty / detachment:wreckas/stratagem:drive-by-bustin",
+   "field": "target",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Wreckas 1DP (DRIVE-BY BUSTIN')",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking,shooty / detachment:wreckas/stratagem:drive-by-bustin",
+   "field": "effect",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Wreckas 1DP (DRIVE-BY BUSTIN')",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking,shooty / detachment:wreckas/stratagem:grab-it",
+   "field": "when",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Wreckas 1DP (GRAB IT)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking,shooty / detachment:wreckas/stratagem:grab-it",
+   "field": "target",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Wreckas 1DP (GRAB IT)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking,shooty / detachment:wreckas/stratagem:grab-it",
+   "field": "effect",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Wreckas 1DP (GRAB IT)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking,shooty / detachment:wreckas/stratagem:gun-crazy-show-offs",
+   "field": "when",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Wreckas 1DP (GUN-CRAZY SHOW-OFFS)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking,shooty / detachment:wreckas/stratagem:gun-crazy-show-offs",
+   "field": "target",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Wreckas 1DP (GUN-CRAZY SHOW-OFFS)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "cooking,shooty / detachment:wreckas/stratagem:gun-crazy-show-offs",
+   "field": "effect",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Wreckas 1DP (GUN-CRAZY SHOW-OFFS)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
@@ -3949,28 +4271,28 @@
    "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
   },
   {
-   "item": "cooking / armyRule:Waaagh!",
+   "item": "cooking,shooty / armyRule:Waaagh!",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Army Rules (Waaagh!)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / armyRule:War Cry",
+   "item": "cooking,shooty / armyRule:War Cry",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Army Rules (War Cry)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / armyRule:Da Boss",
+   "item": "cooking,shooty / armyRule:Da Boss",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Army Rules (Da Boss)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "cooking / armyRule:Da Boss / text (marked lines)",
+   "item": "cooking,shooty / armyRule:Da Boss / text (marked lines)",
    "field": "text (marked lines)",
    "text": "*Wahapedia core rules errata (07.01, CP Generated by a Warlord; not in GW’s prin",
    "doc": "wahahtml:core",
@@ -4226,6 +4548,34 @@
    "field": "text",
    "doc": "data.js",
    "where": "same text as the enhancement Dreadherder (Dread Mob) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "shooty / dakkarig-herder / ability:Dreadherder",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Dreadherder (Dread Mob) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "shooty / dakkarig-boosta / ability:Cybork Boosta",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Cybork Boosta (Dread Mob) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "shooty / bigmek-mega / ability:Supa-glowy Fing",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Supa-glowy Fing (Shoota Boyz) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "shooty / mek-flashgitz / ability:Supa-snazz Dakka",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Supa-snazz Dakka (Wreckas) (whose source is recorded under that item)",
    "sha256": null
   },
   {

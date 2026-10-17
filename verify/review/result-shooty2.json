@@ -1,0 +1,8 @@
+[
+ {
+  "key": "30be94740ab7c96f",
+  "verdict": "ok",
+  "why": "“In your Shooting phase, you can select one friendly ORKS WALKER unit within 3\" of this model. That unit’s attacks can re-roll hit rolls of 1 until the end of the turn.” The needs filter is now copied from the text (Faction: Orks + Walker). It adds no BIG MEK or own-unit exclusion: the “(excluding BIG MEK units)” is in the lead-in condition for the Big Mek, not in the pick. “this turn” = “until the end of the turn”, and kind all = “attacks”. Dropping the text’s “can” is a shorter way of saying the same thing; a re-roll in a footnote is still optional.",
+  "fix": null
+ }
+]

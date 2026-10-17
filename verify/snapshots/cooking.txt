@@ -7,6 +7,13 @@ BRUTE BOSSES
 DA BIG HUNT
 DREAD MOB
 PURGE THE FOE
+Me shooty yer’ booty
+2000 pts
+ORKS
+DREAD MOB
+SHOOTA BOYZ
+WRECKAS
+PURGE THE FOE
 Purge Freeblade
 2000 pts
 IMPERIAL KNIGHTS
@@ -81,7 +88,8 @@ Can Deep Strike: Nazdreg 355 pts, Deffkoptas 85 pts (all: 440 pts)
 START OF THE BATTLE ROUND
 EVERY ROUND
 Da Boss · Orks army rule
-ONCE PER BATTLE
+USES PER BATTLE
+NEW GAME
 RULES
 War Cry · Orks army rule
 ABILITIES
@@ -4349,9 +4357,6 @@ INV
 6+
 3
 5+
-
-Melee D already includes +1 from Brutal But Kunnin’.
-
 WHEN TARGETEDFeel No Pain 5+ · Friendly WARBOSS model destroyed while this unit has not been selected to fight this phase: on a 3+ (+1 if your unit is riled up) it is not removed until this unit has fought or the end of the phase · Riled up: 5+ INV
 ALL ATTACKS
 vs MONSTER/VEHICLE: +1 AP (the (+1) on the Hunter rows; add it to the other weapons too) (Da Hunt is On)
@@ -4569,9 +4574,6 @@ INV
 7+
 3
 5+
-
-M already includes +2" from Cybork Boosta.
-
 WHEN TARGETED1CP Crazed Rampage: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (removed once your unit has fought or at the end of the phase) · Riled up: 5+ INV
 ALL ATTACKS
 Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6): 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked) (Try Dat Button!)
@@ -5153,6 +5155,66 @@ This model has Lone Operative.
 In your Shooting phase, you can select one friendly ORKS WALKER unit within 3" of this model. That unit’s attacks can re-roll hit rolls of 1 until the end of the turn.
 
 ONBig Mek · Dreadherder
+
+######## popup grant:["Brutal But Kunnin’","beastboss-bbk","D 3",null] · COOKING Cooking
+GRANTED BY BRUTAL BUT KUNNIN’
+
+D 3
+
+Brutal But Kunnin’ Enhancement
+
+WARBOSS model only. This model’s melee attacks have +1 D.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Brutal But Kunnin’","beastboss-bbk","D 4",null] · COOKING Cooking
+GRANTED BY BRUTAL BUT KUNNIN’
+
+D 4
+
+Brutal But Kunnin’ Enhancement
+
+WARBOSS model only. This model’s melee attacks have +1 D.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Brutal But Kunnin’","beastboss-bbk","D D6+1",null] · COOKING Cooking
+GRANTED BY BRUTAL BUT KUNNIN’
+
+D D6+1
+
+Brutal But Kunnin’ Enhancement
+
+WARBOSS model only. This model’s melee attacks have +1 D.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Cybork Boosta","dakkarig-boosta","M 10\"",null] · COOKING Cooking
+GRANTED BY CYBORK BOOSTA
+
+M 10"
+
+Cybork Boosta Enhancement
+
+BIG MEK/MEK model only. This model has +2" M.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Nazdreg’s Know-wotz","nazdreg","IGNORES COVER","IGNORES COVER"] · COOKING Cooking
+GRANTED BY NAZDREG’S KNOW-WOTZ
+
+IGNORES COVER
+
+Nazdreg’s Know-wotz Nazdreg
+
+This unit has Deep Strike.
+This unit’s ranged attacks have [IGNORES COVER].
+
+Already in the keywords shown (as New Recruit and BSData list them).
+
+IGNORES COVER Core rule
+
+Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
 
 ######## popup kw:beastboss-bbk · COOKING Cooking
 CHARACTER · 170 PTS

@@ -454,8 +454,8 @@ function ssSpecial() {
       : { ok: false, source: 'table row "' + m[1] + '", column ' + (col ? '2 or more' : '1') + ': "' + cell + '"', where: where(DOCS.core, SS[m[1]].off) };
   };
 }
-for (const [key, text] of Object.entries(D.rules))
-  checkLines('rules', 'core', 'rule:' + key, 'text', text, GW_ALL, WAHA_CORE, key === 'Starting Strength' ? { special: ssSpecial() } : {});
+for (const [key, text] of Object.entries(D.rules))   // a faction term (D.ruleSrc) comes from its faction's pages, as detachment texts do
+  checkLines('rules', 'core', 'rule:' + key, 'text', text, (D.ruleSrc || {})[key] ? GW_ALL.concat(FACTIONS.map(f => 'wahahtml:' + f)) : GW_ALL, WAHA_CORE, key === 'Starting Strength' ? { special: ssSpecial() } : {});
 
 
 /* ------------------------------------------------------------------ source parsers: stratagems */
@@ -1090,7 +1090,7 @@ function ruleText(a, label) {
   const lc = clean.toLowerCase();
   const ar = f.armyRules.find(r => r.name.toLowerCase() === lc); if (ar) return { text: ar.text, src: 'army rule ' + ar.name };
   for (const d of a.detachments.map(x => f.detachments[x]).filter(Boolean)) if (d.rule && d.rule.name.toLowerCase() === lc) return { text: d.rule.text, src: 'detachment rule ' + d.rule.name };
-  for (const [re, key] of D.ruleAliases) if (re.test(clean)) return { text: D.rules[key], src: 'core rule ' + key };
+  for (const [re, key] of D.ruleAliases) if (re.test(clean)) return { text: D.rules[key], src: ((D.ruleSrc || {})[key] || 'core rule') + ' ' + key };
   if (D.rules[clean]) return { text: D.rules[clean], src: 'core rule ' + clean };
   return null;
 }
@@ -1115,8 +1115,14 @@ for (const a of D.armies) {
       if (!ref) continue;
       count('unitText');
       prov.push({ item: a.id + ' / ' + u.id + ' / ability:' + ab.name, field: 'text', doc: 'data.js', file: 'data.js', sha256: null, where: 'same text as the ' + ref.what + ' (whose source is recorded under that item)' });
-      if (e && norm(u.enhancement || '') !== norm(e.name)) fail('unitText', a.id, u.id, 'ability:' + ab.name, ab.name, 'the unit has the ' + e.name + ' enhancement text but its enhancement is ' + (u.enhancement || '(none)'), '');
-      if (normField(ab.text) !== normField(ref.text)) fail('unitText', a.id, u.id, 'ability:' + ab.name + '.text', ab.text, 'the ' + ref.what + ' reads: ' + ref.text + ' | ' + diffAt(normField(ab.text), normField(ref.text)), '');
+      if (e && norm((e.upgrade ? u.upgrade : u.enhancement) || '') !== norm(e.name)) fail('unitText', a.id, u.id, 'ability:' + ab.name, ab.name, 'the unit has the ' + e.name + ' enhancement text but its enhancement is ' + (u.enhancement || '(none)'), '');
+      // a "**[X]:** …" definition line of the enhancement may live in the unit's glossary rule X instead
+      // (as New Recruit prints it: the enhancement text, then the rule under Rules); the rule must be
+      // one of the unit's rules and its glossary text must be that line, word for word
+      const defs = String(ref.text).split('\n').filter(l => { const m = /^\*\*\[([^\]]+)\]:\*\*\s*(.*)$/.exec(l.trim()); if (!m) return false;
+        const rt = ruleText(a, m[1]); return (u.rules || []).some(x => norm(x) === norm(m[1])) && rt && normField(rt.text) === normField(m[2]); });
+      const refBody = defs.length && normField(ab.text) !== normField(ref.text) ? String(ref.text).split('\n').filter(l => !defs.includes(l)).join('\n') : ref.text;
+      if (normField(ab.text) !== normField(refBody)) fail('unitText', a.id, u.id, 'ability:' + ab.name + '.text', ab.text, 'the ' + ref.what + ' reads: ' + ref.text + ' | ' + diffAt(normField(ab.text), normField(ref.text)), '');
     }
     for (const name of u.rules || []) {
       count('unitRules');

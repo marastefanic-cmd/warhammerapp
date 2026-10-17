@@ -57,10 +57,11 @@ Lord of the Eightbound · Slaughterbound
 START OF THE BATTLE ROUND
 EVERY ROUND
 Blessings of Khorne · World Eaters army rule
-ONCE PER BATTLE
+USES PER BATTLE
+NEW GAME
 ABILITIES
 Archslaughterer · Lord on Juggernaut per army
-Possessed Lord · Slaughterbound
+Possessed Lord · Slaughterbound · Battle-lust
 STRATA­GEMS
 1CP Insane Bravery
 
@@ -383,7 +384,6 @@ Khornate eviscerator×2
 2
 While Khârn leads this unit: re-roll hit rolls of 1 and wound rolls of 1 (Legendary Killer)
 Made a charge move this turn: +1 S (Murderous Charge) · +1 AP in the Fight phase (1CP Hack and Slash)
-Always: +1 A, already counted in the A values (Relentless Rage)
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
 Daemon Prince of Khorne
 Warlord
@@ -402,7 +402,6 @@ Hellforged weaponsPICK ONE PROFILE
 -1
 1
 Made a charge move this turn: Hellforged weapons have [DEVASTATING WOUNDS] until the end of the turn (Devastating Assault) · +1 AP in the Fight phase (1CP Hack and Slash)
-Always: +1 A, already counted in the A values (Relentless Rage)
 When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne) · CHARACTER models +1 A, +2 S (1CP Aspire to Infamy)
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
 Daemon Prince of Khorne
@@ -421,7 +420,6 @@ Hellforged weaponsPICK ONE PROFILE
 -1
 2
 Made a charge move this turn: Hellforged weapons have [DEVASTATING WOUNDS] until the end of the turn (Devastating Assault) · +1 AP in the Fight phase (1CP Hack and Slash)
-Always: +1 A, already counted in the A values (Relentless Rage)
 When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne) · CHARACTER models +1 A, +2 S (1CP Aspire to Infamy)
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
 Lord on Juggernaut
@@ -459,7 +457,6 @@ Khornate eviscerator×4
 -2
 2
 Made a charge move this turn: +1 S (Murderous Charge) · Bladed horn +1 to wound (Lance) · +1 AP in the Fight phase (1CP Hack and Slash)
-Always: +1 A, already counted in the A values (Relentless Rage)
 When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne) · CHARACTER models +1 A, +2 S (1CP Aspire to Infamy)
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
 Slaughterbound
@@ -482,7 +479,6 @@ Chainblades×3
 2
 ANTI-MONSTER 3+, ANTI-VEHICLE 3+
 vs MONSTER/VEHICLE: +1 D (Rend and Tear)
-Always: +1 A, already counted in the A values (Relentless Rage)
 When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne) · CHARACTER models +1 A, +2 S (1CP Aspire to Infamy)
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
 Made a charge move this turn: +1 AP in the Fight phase (1CP Hack and Slash)
@@ -493,7 +489,6 @@ Chainblades×3
 8
 -2
 2
-Always: +1 A, already counted in the A values (Relentless Rage)
 Own aura, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
 Made a charge move this turn: +1 AP in the Fight phase (1CP Hack and Slash)
 Jakhals
@@ -512,7 +507,6 @@ Paired manglersDISHONOURED
 4
 0
 1
-Always: +1 A, already counted in the A values (Relentless Rage)
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
 Made a charge move this turn: +1 AP in the Fight phase (1CP Hack and Slash)
 Forgefiend
@@ -524,7 +518,6 @@ Forgefiend claws
 0
 1
 Damaged (1-4 wounds left): -1 to hit rolls (Damaged: 1-4 wounds remaining)
-Always: +1 A, already counted in the A values (Relentless Rage)
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
 Made a charge move this turn: +1 AP in the Fight phase (1CP Hack and Slash)
 Chaos Rhino
@@ -534,7 +527,6 @@ Armoured tracks
 6
 0
 1
-Always: +1 A, already counted in the A values (Relentless Rage)
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
 Made a charge move this turn: +1 AP in the Fight phase (1CP Hack and Slash)
 
@@ -4924,7 +4916,6 @@ Khornate eviscerator×2
 WHOLE UNIT
 While Khârn leads this unit: re-roll hit rolls of 1 and wound rolls of 1 (Legendary Killer)
 Made a charge move this turn: +1 S (Murderous Charge) · +1 AP in the Fight phase (1CP Hack and Slash)
-Always: +1 A, already counted in the A values (Relentless Rage)
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
 ABILITIES“this unit” = the whole attached unit
 KHÂRN THE BETRAYER
@@ -5029,7 +5020,6 @@ Hellforged weaponsPICK ONE PROFILE
 -1
 1
 Made a charge move this turn: Hellforged weapons have [DEVASTATING WOUNDS] until the end of the turn (Devastating Assault) · +1 AP in the Fight phase (1CP Hack and Slash)
-Always: +1 A, already counted in the A values (Relentless Rage)
 When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne) · CHARACTER models +1 A, +2 S (1CP Aspire to Infamy)
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
 ABILITIES
@@ -5083,9 +5073,6 @@ INV
 6+
 3
 4+
-
-Hellforged weapons A and D already include +1 from Berzerker Glaive.
-
 WHEN TARGETEDLone Operative while within 3" of a friendly WORLD EATERS INFANTRY unit · 2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it · 1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds
 RANGED
 RNG
@@ -5122,7 +5109,6 @@ Hellforged weaponsPICK ONE PROFILE
 -1
 2
 Made a charge move this turn: Hellforged weapons have [DEVASTATING WOUNDS] until the end of the turn (Devastating Assault) · +1 AP in the Fight phase (1CP Hack and Slash)
-Always: +1 A, already counted in the A values (Relentless Rage)
 When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne) · CHARACTER models +1 A, +2 S (1CP Aspire to Infamy)
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
 ABILITIES
@@ -5186,9 +5172,6 @@ Khorne Berzerker
 6+
 2
 –
-
-Khorne Berzerker M 10" already includes Aggressive Advance.
-
 WHEN TARGETED2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it · 1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds
 RANGED
 Plasma pistol ×6, Bolt pistol ×15 · all pistols
@@ -5283,7 +5266,6 @@ Khornate eviscerator×4
 2
 WHOLE UNIT
 Made a charge move this turn: +1 S (Murderous Charge) · Bladed horn +1 to wound (Lance) · +1 AP in the Fight phase (1CP Hack and Slash)
-Always: +1 A, already counted in the A values (Relentless Rage)
 When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne) · CHARACTER models +1 A, +2 S (1CP Aspire to Infamy)
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
 ABILITIES“this unit” = the whole attached unit
@@ -5392,7 +5374,6 @@ Chainblades×3
 ANTI-MONSTER 3+, ANTI-VEHICLE 3+
 WHOLE UNIT
 vs MONSTER/VEHICLE: +1 D (Rend and Tear)
-Always: +1 A, already counted in the A values (Relentless Rage)
 When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne) · CHARACTER models +1 A, +2 S (1CP Aspire to Infamy)
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
 Made a charge move this turn: +1 AP in the Fight phase (1CP Hack and Slash)
@@ -5472,7 +5453,6 @@ Chainblades×3
 8
 -2
 2
-Always: +1 A, already counted in the A values (Relentless Rage)
 Own aura, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
 Made a charge move this turn: +1 AP in the Fight phase (1CP Hack and Slash)
 ABILITIES
@@ -5556,7 +5536,6 @@ Paired manglersDISHONOURED
 4
 0
 1
-Always: +1 A, already counted in the A values (Relentless Rage)
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
 Made a charge move this turn: +1 AP in the Fight phase (1CP Hack and Slash)
 ABILITIES
@@ -5631,7 +5610,6 @@ Forgefiend claws
 6
 0
 1
-Always: +1 A, already counted in the A values (Relentless Rage)
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
 Made a charge move this turn: +1 AP in the Fight phase (1CP Hack and Slash)
 ABILITIES
@@ -5693,7 +5671,6 @@ Armoured tracks
 6
 0
 1
-Always: +1 A, already counted in the A values (Relentless Rage)
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
 Made a charge move this turn: +1 AP in the Fight phase (1CP Hack and Slash)
 ABILITIES
@@ -5868,6 +5845,234 @@ Archslaughterer
 WORLD EATERS model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, every Blessing of Khorne is active for this unit until the start of your next turn.
 
 ONLord on Juggernaut · Archslaughterer
+
+######## popup grant:["Aggressive Advance","lord-on-juggernaut","M 10\"",null] · HURRDURR Hurrdurr
+GRANTED BY AGGRESSIVE ADVANCE
+
+M 10"
+
+Aggressive Advance Lord on Juggernaut
+
+While this model is leading a unit, models in that unit have a Move characteristic of 10" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Berzerker Glaive","daemon-prince-glaive","D 2",null] · HURRDURR Hurrdurr
+GRANTED BY BERZERKER GLAIVE
+
+D 2
+
+Berzerker Glaive Enhancement
+
+WORLD EATERS model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Berzerker Glaive","daemon-prince-glaive","D 4",null] · HURRDURR Hurrdurr
+GRANTED BY BERZERKER GLAIVE
+
+D 4
+
+Berzerker Glaive Enhancement
+
+WORLD EATERS model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Berzerker Glaive|Relentless Rage","daemon-prince-glaive","A 10",null] · HURRDURR Hurrdurr
+GRANTED BY BERZERKER GLAIVE AND RELENTLESS RAGE
+
+A 10
+
+Berzerker Glaive Enhancement
+
+WORLD EATERS model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.
+
+Relentless Rage Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Berzerker Glaive|Relentless Rage","daemon-prince-glaive","A 18",null] · HURRDURR Hurrdurr
+GRANTED BY BERZERKER GLAIVE AND RELENTLESS RAGE
+
+A 18
+
+Berzerker Glaive Enhancement
+
+WORLD EATERS model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.
+
+Relentless Rage Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","chaos-rhino","A 7",null] · HURRDURR Hurrdurr
+GRANTED BY RELENTLESS RAGE
+
+A 7
+
+Relentless Rage Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","daemon-prince-helm","A 17",null] · HURRDURR Hurrdurr
+GRANTED BY RELENTLESS RAGE
+
+A 17
+
+Relentless Rage Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","daemon-prince-helm","A 9",null] · HURRDURR Hurrdurr
+GRANTED BY RELENTLESS RAGE
+
+A 9
+
+Relentless Rage Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","eightbound","A 6",null] · HURRDURR Hurrdurr
+GRANTED BY RELENTLESS RAGE
+
+A 6
+
+Relentless Rage Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","forgefiend","A 7",null] · HURRDURR Hurrdurr
+GRANTED BY RELENTLESS RAGE
+
+A 7
+
+Relentless Rage Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","jakhals","A 4",null] · HURRDURR Hurrdurr
+GRANTED BY RELENTLESS RAGE
+
+A 4
+
+Relentless Rage Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","jakhals","A 5",null] · HURRDURR Hurrdurr
+GRANTED BY RELENTLESS RAGE
+
+A 5
+
+Relentless Rage Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","kharn","A 4",null] · HURRDURR Hurrdurr
+GRANTED BY RELENTLESS RAGE
+
+A 4
+
+Relentless Rage Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","kharn","A 5",null] · HURRDURR Hurrdurr
+GRANTED BY RELENTLESS RAGE
+
+A 5
+
+Relentless Rage Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","kharn","A 9",null] · HURRDURR Hurrdurr
+GRANTED BY RELENTLESS RAGE
+
+A 9
+
+Relentless Rage Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","lord-on-juggernaut","A 4",null] · HURRDURR Hurrdurr
+GRANTED BY RELENTLESS RAGE
+
+A 4
+
+Relentless Rage Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","lord-on-juggernaut","A 5",null] · HURRDURR Hurrdurr
+GRANTED BY RELENTLESS RAGE
+
+A 5
+
+Relentless Rage Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","lord-on-juggernaut","A 8",null] · HURRDURR Hurrdurr
+GRANTED BY RELENTLESS RAGE
+
+A 8
+
+Relentless Rage Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","slaughterbound","A 5",null] · HURRDURR Hurrdurr
+GRANTED BY RELENTLESS RAGE
+
+A 5
+
+Relentless Rage Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","slaughterbound","A 7",null] · HURRDURR Hurrdurr
+GRANTED BY RELENTLESS RAGE
+
+A 7
+
+Relentless Rage Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup kw:chaos-rhino · HURRDURR Hurrdurr
 DEDICATED TRANSPORT · 75 PTS

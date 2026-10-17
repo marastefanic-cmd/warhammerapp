@@ -322,41 +322,11 @@
  {
   "army": "nidzillas",
   "unit": "norn-assimilator-280",
-  "field": "gear[1x Norn Assimilator]",
-  "app": [
-   "Monstrous scything talons",
-   "Toxinjecter Harpoon"
-  ],
-  "source": [
-   "Monstrous scything talons",
-   "Toxinjecter harpoon"
-  ],
-  "reason": "Proposed: NR spells the weapon two ways on the same page, \"Toxinjecter harpoon\" in the Options column and \"Toxinjecter Harpoon\" in both weapon tables; the app's gear uses the weapon tables' name so the gear points at the printed profiles.",
-  "evidence": "verify/sources/nr/nidzillas.txt page 5: Options \"Synaptoprescience, Monstrous scything talons, Toxinjecter harpoon\"; Ranged and Melee Weapons \"Toxinjecter Harpoon\""
- },
- {
-  "army": "nidzillas",
-  "unit": "norn-assimilator-280",
   "field": "abilities[Singular Purpose].tag",
   "app": "Start of battle round 1",
   "source": null,
   "reason": "Proposed: an app label (tag) NR does not print; it restates when the ability is used, from its own NR text.",
   "evidence": "verify/sources/nr/nidzillas.txt pages 5-8, Singular Purpose: \"At the start of the first battle round, select one of the following: …\""
- },
- {
-  "army": "nidzillas",
-  "unit": "norn-assimilator-300",
-  "field": "gear[1x Norn Assimilator]",
-  "app": [
-   "Monstrous scything talons",
-   "Toxinjecter Harpoon"
-  ],
-  "source": [
-   "Monstrous scything talons",
-   "Toxinjecter harpoon"
-  ],
-  "reason": "Proposed: NR spells the weapon two ways on the same page, \"Toxinjecter harpoon\" in the Options column and \"Toxinjecter Harpoon\" in both weapon tables; the app's gear uses the weapon tables' name so the gear points at the printed profiles.",
-  "evidence": "verify/sources/nr/nidzillas.txt page 6: Options \"Synaptoprescience, Monstrous scything talons, Toxinjecter harpoon\"; Ranged and Melee Weapons \"Toxinjecter Harpoon\""
  },
  {
   "army": "nidzillas",
@@ -473,5 +443,41 @@
   "source": "50mm",
   "reason": "GW's base size guide is newer than the community data New Recruit uses; tournaments use GW's guide.",
   "evidence": "GW Warhammer Event Companion v1.3 (14 Oct 2026, newer than New Recruit and BSData), Base Size Guide, Tyranids, PDF p91: \"Hive Tyrant 60mm\" (verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3820); Wahapedia's Hive Tyrant datasheet also says 60mm."
+ },
+ {
+  "army": "shooty",
+  "unit": "mek-tankbustas-1",
+  "field": "stats[Nob].base",
+  "app": "40mm",
+  "source": "32mm",
+  "reason": "GW's base size guide is newer than the community data New Recruit uses; tournaments use GW's guide.",
+  "evidence": "GW Warhammer Event Companion v1.3 (14 Oct 2026, newer than New Recruit and BSData), Base Size Guide, Orks: \"Tankbustas: Boss Nob 40mm\" (verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3532); New Recruit calls the Tankbustas' Boss Nob \"Nob\"."
+ },
+ {
+  "army": "shooty",
+  "unit": "mek-tankbustas-2",
+  "field": "stats[Nob].base",
+  "app": "40mm",
+  "source": "32mm",
+  "reason": "GW's base size guide is newer than the community data New Recruit uses; tournaments use GW's guide.",
+  "evidence": "GW Warhammer Event Companion v1.3 (14 Oct 2026, newer than New Recruit and BSData), Base Size Guide, Orks: \"Tankbustas: Boss Nob 40mm\" (verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3532); New Recruit calls the Tankbustas' Boss Nob \"Nob\"."
+ },
+ {
+  "army": "shooty",
+  "unit": "wazdakka",
+  "field": "stats[Wazdakka Gutsmek].base",
+  "app": "120mm",
+  "source": "120x92mm",
+  "reason": "GW's base size guide is newer than the community data New Recruit uses; tournaments use GW's guide.",
+  "evidence": "GW Warhammer Event Companion v1.3 (14 Oct 2026, newer than New Recruit and BSData), Base Size Guide, Orks: \"Wazdakka Gutsmek 120mm\" (line 3539; the guide marks oval bases \"Oval Base\", e.g. \"Wazbom Blastajet 120x92mm Oval Base\" two lines below)."
+ },
+ {
+  "army": "shooty",
+  "unit": "bigmek-mega",
+  "field": "abilities[Supa-glowy Fing].text",
+  "app": "ORKS INFANTRY model only (excluding WEIRDBOY models). This model's ranged attacks have: [ANTI-INFANTRY 4+]. [DEVASTATING WOUNDS]. [SUPA-HAZARDOUS].",
+  "source": "ORKS INFANTRY model only (excluding WEIRDBOY models). This model's ranged attacks have: [ANTI-INFANTRY 4+} [DEVASTATING WOUNDS]. [SUPA-HAZARDOUS].",
+  "reason": "New Recruit's text has a typo (a brace and no full stop after [ANTI-INFANTRY 4+]); the app has the enhancement's wording as the rules publish it.",
+  "evidence": "Wahapedia, Orks, Shoota Boyz detachment, enhancement Supa-glowy Fing: \"This model’s ranged attacks have: - [Anti-Infantry 4+]. - [Devastating Wounds]. - [SUPA-HAZARDOUS].\" (verify/.cache/waha/orks.html); verify/texts.js checks the app's text against it."
  }
 ]

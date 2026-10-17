@@ -1,0 +1,470 @@
+[
+ {
+  "key": "d391777dcfbd96c6",
+  "verdict": "ok",
+  "why": "“In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase.” Selection is your Command phase; the abilities it can give take effect in your Command phase (Shokk Attack Engine: “In your Command phase”), your Movement phase (Pulse Jet: “In your Movement phase”; Turbo Engine: advance/fall-back moves, which core 09.02 lists as Movement-phase move types) and your Charge phase (Turbo Engine: “eligible to declare a charge”). None of them can act in the opponent’s turn, so “your” is right.",
+  "fix": null
+ },
+ {
+  "key": "a51cc933f48a6d82",
+  "verdict": "ok",
+  "why": "“When this unit is selected to make an advance/fall-back move, that move does not prevent this unit from being eligible to declare a charge.” Advance and fall-back moves are move types of the Movement phase (core 09.02, active player), and the eligibility matters when declaring a charge (11.02, “It made an advance or fall-back move this turn”). Your Movement and Charge phases are exactly where it acts.",
+  "fix": null
+ },
+ {
+  "key": "a8bae601c029d4ae",
+  "verdict": "ok",
+  "why": "New Recruit prints Turbo Engine under the heading “Throttlerokkit Shokka Engine”, and Full Throttle says “select one Throttlerokkit Shokka Engine ability”; “pick one” is a shorter “select one”. The when and how long stay on the Full Throttle row. Model line is NR’s “1x Wazdakka Gutsmek”.",
+  "fix": null
+ },
+ {
+  "key": "5ed6689ef3c39cad",
+  "verdict": "ok",
+  "why": "“In your Movement phase, when this unit is selected to move … this unit can make a pulse jet move.” The text names your Movement phase. (For the owner: the lasting effects, “Until the end of the turn … not eligible to declare a charge” and “Until the start of your next turn, attacks that target your unit have -1 to hit rolls”, are in the Pulse Jet Move rule, not in this ability’s words, so the tag doesn’t carry them.)",
+  "fix": null
+ },
+ {
+  "key": "03afbb1d377a182d",
+  "verdict": "ok",
+  "why": "Same as Turbo Engine: New Recruit prints Pulse Jet under “Throttlerokkit Shokka Engine”, and Full Throttle says “select one Throttlerokkit Shokka Engine ability”.",
+  "fix": null
+ },
+ {
+  "key": "988890d0abd7b673",
+  "verdict": "ok",
+  "why": "“In your Command phase, if this unit is unengaged, you can place this unit in strategic reserves.” The text names your Command phase.",
+  "fix": null
+ },
+ {
+  "key": "cd97ae30f8ee4fc6",
+  "verdict": "ok",
+  "why": "Same as Turbo Engine: New Recruit prints Shokk Attack Engine under “Throttlerokkit Shokka Engine”, and Full Throttle says “select one Throttlerokkit Shokka Engine ability”.",
+  "fix": null
+ },
+ {
+  "key": "3b3c07f5bd4e30e4",
+  "verdict": "ok",
+  "why": "Matches the New Recruit PDF: options “Fixit's Wrench, Grabba Dragga, Psyko-gatler, Speeding Bulk and Flaming Exhaust” on the single model; ranged rows Grabba Dragga and Psyko-gatler, melee rows Fixit's Wrench, Grabba Dragga, Speeding Bulk and Flaming Exhaust.",
+  "fix": null
+ },
+ {
+  "key": "3ebc0bbf37c6d408",
+  "verdict": "ok",
+  "why": "“In your Command phase, this unit heals 3 wounds.” The text names your Command phase.",
+  "fix": null
+ },
+ {
+  "key": "38fe81af906fb4ee",
+  "verdict": "ok",
+  "why": "New Recruit prints “Fix Dat Armour Up (Once per battle, per unit)”; the text’s single Grot Oiler token agrees.",
+  "fix": null
+ },
+ {
+  "key": "ae72d4118ce3e4bf",
+  "verdict": "ok",
+  "why": "Wahapedia’s Shoota Boyz page lists it under “Enhancements: Supa-glowy Fing 25 pts”.",
+  "fix": null
+ },
+ {
+  "key": "67247f752582f9c8",
+  "verdict": "ok",
+  "why": "“This unit’s ranged attacks have: … If this unit is riled up, [SUSTAINED HITS 1].” Same condition, same effect, ranged only.",
+  "fix": null
+ },
+ {
+  "key": "3760fbf478878852",
+  "verdict": "ok",
+  "why": "Matches the New Recruit PDF: options “Supa-glowy Fing, Kustom Mega-blasta, Power Klaw, Tellyport Blasta” (the enhancement is not a weapon); ranged Kustom Mega-blasta and Tellyport Blasta, melee Power Klaw.",
+  "fix": null
+ },
+ {
+  "key": "ef8da100f97135b7",
+  "verdict": "ok",
+  "why": "“If this unit made a charge move this turn, this model’s melee attacks have +3 A, +2 S.” Melee attacks are made in the Fight phase, and a charge move can happen in either turn (your Charge phase, or Heroic Intervention in theirs: “Resolve a charge with your unit”), so Fight in either turn.",
+  "fix": null
+ },
+ {
+  "key": "8e58403a65b28498",
+  "verdict": "ok",
+  "why": "“In your Shooting phase, when this unit is selected to shoot, you can use this ability.” The text names your Shooting phase.",
+  "fix": null
+ },
+ {
+  "key": "7aa7ec2c51e419d0",
+  "verdict": "ok",
+  "why": "New Recruit prints “Boss' Ammo Runt (Once per battle, per unit)”; the text’s single token agrees.",
+  "fix": null
+ },
+ {
+  "key": "59193c3f5a1d1469",
+  "verdict": "ok",
+  "why": "“If this unit made a charge move this turn, this model’s melee attacks have: +3 A. +2 S.” Same condition and effect, melee only, on the Warboss’s own one-model sheet.",
+  "fix": null
+ },
+ {
+  "key": "fd21ae46923c1f3a",
+  "verdict": "ok",
+  "why": "“In your Shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this model’s ranged attacks have +1 to hit rolls.” The footnote keeps the condition (used, your Shooting phase, when selected to shoot) and adds no duration or scope of its own.",
+  "fix": null
+ },
+ {
+  "key": "0366d0340905c7e3",
+  "verdict": "ok",
+  "why": "Matches the New Recruit PDF: options “Warlord, Kustom Choppa, Kustom Shoota”; ranged Kustom Shoota, melee Kustom Choppa.",
+  "fix": null
+ },
+ {
+  "key": "6b251faaf2d6014f",
+  "verdict": "fix",
+  "why": "“That VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase.” The effect lasts through your Shooting phase, your Fight phase and the opponent’s whole turn, so it takes effect wherever the picked VEHICLE model attacks: your Shooting phase and the Fight phase of either turn. The tag lists only the Movement phase, where the pick and “heals D3 wounds” happen. Nothing in this list lets a VEHICLE shoot in their Shooting phase, and no attacks are made in a Charge or Command phase. Their Movement phase is left out because its only attacks are Fire Overwatch, and snap shooting “only hits on an unmodified hit roll of 6 (irrespective of … any modifiers)”. If the owner wants the convention the app uses for Spiteful Power Trip (listing Overwatch), make movement “either”. The per-phase “turns” override is the app’s own field (data.js: “turns:{ phase:turn } overrides it for one phase”).",
+  "fix": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "your",
+    "shooting": "your"
+   }
+  }
+ },
+ {
+  "key": "7f16564ce98e8a8c",
+  "verdict": "ok",
+  "why": "New Recruit prints “Clever Know-wotz - Mek”; the model lines are NR’s (1x Mek, 1x Nob, 1x Tankbusta w/ Two Busta Rokkit Launchas, 4x Tankbusta w/ Busta Rokkit Launcha).",
+  "fix": null
+ },
+ {
+  "key": "702720775727342e",
+  "verdict": "ok",
+  "why": "New Recruit prints “Kustom Dakka - Mek”; model lines as NR.",
+  "fix": null
+ },
+ {
+  "key": "c2661910b178dd44",
+  "verdict": "ok",
+  "why": "“In your Shooting phase, when this unit has shot …” The text names your Shooting phase. (Gun-crazy Show-offs shooting in their Shooting phase doesn’t trigger it: “In your Shooting phase”.)",
+  "fix": null
+ },
+ {
+  "key": "9b70aa3dd23d0081",
+  "verdict": "ok",
+  "why": "New Recruit prints “Rokkit Barrage - Tankbustas”; model lines as NR.",
+  "fix": null
+ },
+ {
+  "key": "90121398a09da076",
+  "verdict": "ok",
+  "why": "“In your Movement phase, when this unit ends a normal move …” The text names your Movement phase (Grab It’s normal move is in the Shooting phase, so it doesn’t qualify).",
+  "fix": null
+ },
+ {
+  "key": "cbcfb662e87e20d7",
+  "verdict": "ok",
+  "why": "New Recruit prints “Bomb Squig (Once per turn, twice per battle, per unit)”; the text’s “Place two Bomb Squig tokens … removing one each time” agrees.",
+  "fix": null
+ },
+ {
+  "key": "b6acbc1b3f60e8b2",
+  "verdict": "ok",
+  "why": "New Recruit prints “Bomb Squig … - Tankbustas”; model lines as NR.",
+  "fix": null
+ },
+ {
+  "key": "5a23a6fcf9fb51ea",
+  "verdict": "fix",
+  "why": "Text: “select one friendly ORKS VEHICLE model (excluding AIRCRAFT/TITANIC models)”. The needs filter keeps VEHICLE and the AIRCRAFT/TITANIC exclusion but drops ORKS. No unit in this list changes (all are Faction: Orks), but the filter should copy the text’s keywords. The when (“Picked by a Mek’s Clever Know-wotz”) and the note (“that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase”) are literal. (The Dreadherder aura’s needs {all:[Walker]} for “friendly ORKS WALKER unit” has the same gap. It is not in this batch.)",
+  "fix": {
+   "kind": "all",
+   "needs": {
+    "all": [
+     "Faction: Orks",
+     "Vehicle"
+    ],
+    "none": [
+     "Aircraft",
+     "Titanic"
+    ]
+   },
+   "when": "Picked by a Mek’s Clever Know-wotz",
+   "note": "that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase",
+   "from": "Clever Know-wotz"
+  }
+ },
+ {
+  "key": "6925b84bf0c5736c",
+  "verdict": "ok",
+  "why": "New Recruit: “Categories … Tankbustas*, *from combined unit”, and the Mek is “Supporting: Tankbustas”.",
+  "fix": null
+ },
+ {
+  "key": "2f1f0d5527dd9aef",
+  "verdict": "ok",
+  "why": "New Recruit roster: Mek 55 and “(6) Tankbustas … 160 Mek”; the sheet header is 215.",
+  "fix": null
+ },
+ {
+  "key": "a38030481308f5f8",
+  "verdict": "ok",
+  "why": "Matches the New Recruit PDF model lines (Mek: Kustom Mega-slugga, Mek's Toolz; Nob: Choppa, Rokkit Pistol, Smash Hammer; 1x: 2x Busta Rokkit Launcha, Gitstikka; 4x: Busta Rokkit Launcha, Gitstikka) and weapon rows with NR’s counts (Busta Rokkit Launcha x6 Hunter/Standard, Gitstikka x5).",
+  "fix": null
+ },
+ {
+  "key": "f9eab25031ce4bb7",
+  "verdict": "ok",
+  "why": "New Recruit prints “Clever Know-wotz - Mek” on the Flash Gitz sheet; model lines as NR (1x Mek, 1x Kaptin, 9x Flash Gitz).",
+  "fix": null
+ },
+ {
+  "key": "ffd60b68f9984992",
+  "verdict": "ok",
+  "why": "New Recruit prints “Kustom Dakka - Mek”; model lines as NR.",
+  "fix": null
+ },
+ {
+  "key": "8c0d55b05e7f3e5a",
+  "verdict": "ok",
+  "why": "“In your Shooting phase, if any of the following apply …” The text names your Shooting phase.",
+  "fix": null
+ },
+ {
+  "key": "d0a621623d627290",
+  "verdict": "ok",
+  "why": "New Recruit prints “Finderz Keeperz - Flash Gitz”; model lines as NR.",
+  "fix": null
+ },
+ {
+  "key": "12d5d6ed864ee274",
+  "verdict": "ok",
+  "why": "Wahapedia’s Wreckas page lists “Supa-snazz Dakka UPGRADE 25 pts”.",
+  "fix": null
+ },
+ {
+  "key": "aee2ee09c2b84801",
+  "verdict": "ok",
+  "why": "New Recruit prints “Supa-snazz Dakka - Flash Gitz”; model lines as NR.",
+  "fix": null
+ },
+ {
+  "key": "d22236a049b94f81",
+  "verdict": "ok",
+  "why": "“In your Shooting phase, if any of the following apply, this unit’s ranged attacks have +1 AP. This unit is within range of an objective. The target of that attack is within range of an objective.” Same phase, the same two alternative conditions, the same effect.",
+  "fix": null
+ },
+ {
+  "key": "8860e03a83f70856",
+  "verdict": "ok",
+  "why": "New Recruit: “Categories … Flash Gitz*, *from combined unit”, and the Mek is “Supporting: Flash Gitz”.",
+  "fix": null
+ },
+ {
+  "key": "bcbbd82290d33558",
+  "verdict": "ok",
+  "why": "New Recruit roster: Mek 55 and “(10) Flash Gitz … 245 Mek”; the sheet header is 300.",
+  "fix": null
+ },
+ {
+  "key": "ccc80907a262c832",
+  "verdict": "ok",
+  "why": "Matches the New Recruit PDF model lines (Mek: Kustom Mega-slugga, Mek's Toolz; Kaptin and 9x Flash Gitz: Choppa, Snazzgun) and weapon rows with NR’s counts (Snazzgun Cutta/Dakka/Kill Shot x10, Choppa x10).",
+  "fix": null
+ },
+ {
+  "key": "87acdc950cb3d834",
+  "verdict": "ok",
+  "why": "“Friendly ORKS INFANTRY units’ ranged attacks have …” has no phase limit; ranged attacks are made in the Shooting phase and in Fire Overwatch (“End of your opponent’s Movement phase … shoots using snap shooting”). Movement and Shooting are the right phases; the turn per phase is item 7a652c3ac27f3762.",
+  "fix": null
+ },
+ {
+  "key": "3c014e402e4451e1",
+  "verdict": "ok",
+  "why": "With no turn limit in the text and attacks in both players’ turns, “either” is the right default; the per-phase override is corrected in 7a652c3ac27f3762.",
+  "fix": null
+ },
+ {
+  "key": "7a652c3ac27f3762",
+  "verdict": "fix",
+  "why": "Text: “Friendly ORKS INFANTRY units’ ranged attacks have: [ASSAULT]. While this unit is riled up, +3\" R.” No phase or turn limit. With turn “either” and turns {shooting:your}, the tag reads Movement (either turn) / Your Shooting. Two problems. (1) It leaves out their Shooting phase. Gun-crazy Show-offs, a Wreckas stratagem in this list, says “WHEN: Your opponent’s Shooting phase … Your unit shoots using normal shooting” for a FLASH GITZ/TANKBUSTAS unit, and those are ORKS INFANTRY: their ranged attacks have [ASSAULT] and, if riled up (Intimidating Motivation: “riled up until the start of your next turn”), +3\" R. (2) It includes your own Movement phase, where no ranged attacks are made. The Movement entry is for Fire Overwatch (“End of your opponent’s Movement phase”), which is their turn. With rule-turn “either”, the fix gives Their Movement / Shooting (either turn).",
+  "fix": {
+   "turns": {
+    "movement": "opp"
+   }
+  }
+ },
+ {
+  "key": "b1fbe33091c45ecf",
+  "verdict": "ok",
+  "why": "“Friendly ORKS INFANTRY units’” → Faction: Orks + Infantry, copied.",
+  "fix": null
+ },
+ {
+  "key": "48fee28f0bbca22c",
+  "verdict": "ok",
+  "why": "“While this unit is riled up, +3\" R.” on ranged attacks: same condition and effect; the footnote doesn’t say whose riled-up state beyond the text’s “this unit”.",
+  "fix": null
+ },
+ {
+  "key": "840bea3c449dc633",
+  "verdict": "ok",
+  "why": "“WHEN: Your Shooting phase, when a friendly ORKS INFANTRY unit is selected to shoot.” Shooting.",
+  "fix": null
+ },
+ {
+  "key": "0a46878ac578653c",
+  "verdict": "ok",
+  "why": "“WHEN: Your Shooting phase”: your turn.",
+  "fix": null
+ },
+ {
+  "key": "110fbbb49ead4681",
+  "verdict": "ok",
+  "why": "“TARGET: That ORKS INFANTRY unit.” → Faction: Orks + Infantry, copied.",
+  "fix": null
+ },
+ {
+  "key": "f41d55a2bb7a839a",
+  "verdict": "ok",
+  "why": "“WHEN: Your Shooting phase … EFFECT: Your unit’s ranged attacks that target a unit (excluding MONSTER/VEHICLE units) have +1 to wound rolls.” The footnote has the WHEN’s phase, the same target exclusion and the same effect, and it is labelled as the 1CP stratagem.",
+  "fix": null
+ },
+ {
+  "key": "081ccf69514d13e6",
+  "verdict": "ok",
+  "why": "“WHEN: Your Shooting phase, when a friendly ORKS INFANTRY unit is selected to shoot.” Shooting.",
+  "fix": null
+ },
+ {
+  "key": "0b964eb9a9ffac3e",
+  "verdict": "ok",
+  "why": "“WHEN: Your Shooting phase”: your turn.",
+  "fix": null
+ },
+ {
+  "key": "9472ec65e5156c9a",
+  "verdict": "ok",
+  "why": "“TARGET: That ORKS INFANTRY unit.” → Faction: Orks + Infantry, copied.",
+  "fix": null
+ },
+ {
+  "key": "098196d7b97e7ee8",
+  "verdict": "ok",
+  "why": "“Your unit’s ranged attacks that target a unit within 9\" have +1 AP”, WHEN “Your Shooting phase”: same condition and effect.",
+  "fix": null
+ },
+ {
+  "key": "b394a0e0731a1d24",
+  "verdict": "ok",
+  "why": "“WHEN: Your Shooting phase, when a friendly ORKS INFANTRY unit is selected to shoot.” Shooting.",
+  "fix": null
+ },
+ {
+  "key": "3a1b4a2b05dc420d",
+  "verdict": "ok",
+  "why": "“WHEN: Your Shooting phase”: your turn.",
+  "fix": null
+ },
+ {
+  "key": "209541d50efb7eec",
+  "verdict": "ok",
+  "why": "“TARGET: That ORKS INFANTRY unit.” → Faction: Orks + Infantry, copied.",
+  "fix": null
+ },
+ {
+  "key": "58ea7cd756f7c62d",
+  "verdict": "ok",
+  "why": "“Your unit’s ranged attacks have [SUSTAINED HITS 1]”, WHEN “Your Shooting phase”: same.",
+  "fix": null
+ },
+ {
+  "key": "9ec3263fdd7638ad",
+  "verdict": "ok",
+  "why": "“In your Shooting phase, when a friendly BREAKA BOYZ/FLASH GITZ/TANKBUSTAS unit is selected to shoot …” Shooting.",
+  "fix": null
+ },
+ {
+  "key": "284b5438cc2dd621",
+  "verdict": "ok",
+  "why": "“In your Shooting phase”: your turn (Gun-crazy Show-offs shooting in their turn is outside it).",
+  "fix": null
+ },
+ {
+  "key": "db70644d5fe0d9ec",
+  "verdict": "ok",
+  "why": "“a friendly BREAKA BOYZ/FLASH GITZ/TANKBUSTAS unit”: any of the three, copied (the text has no ORKS keyword).",
+  "fix": null
+ },
+ {
+  "key": "c38d2fc70d99fcfa",
+  "verdict": "ok",
+  "why": "“In your Shooting phase, when … selected to shoot, if any of the following apply, that unit’s attacks can re-roll hit rolls of 1: That unit is within range of an objective. The target of that attack is within range of an objective.” Same phase, the same alternative conditions, the same effect. Attacks made when selected to shoot are its ranged attacks.",
+  "fix": null
+ },
+ {
+  "key": "6a17e854e0ab8860",
+  "verdict": "ok",
+  "why": "“WHEN: Your Shooting phase, when a friendly ORKS TRANSPORT unit is selected to shoot.” Shooting.",
+  "fix": null
+ },
+ {
+  "key": "73f50943dc167694",
+  "verdict": "ok",
+  "why": "“WHEN: Your Shooting phase”: your turn.",
+  "fix": null
+ },
+ {
+  "key": "020223b8548f40bb",
+  "verdict": "ok",
+  "why": "“TARGET: That ORKS TRANSPORT unit.” → Faction: Orks + Transport, copied.",
+  "fix": null
+ },
+ {
+  "key": "a0d782035be2d4db",
+  "verdict": "ok",
+  "why": "“WHEN: Your Shooting phase, when a friendly unengaged BREAKA BOYZ/FLASH GITZ/TANKBUSTAS unit has shot.” Stratagem phases follow the WHEN, as elsewhere in the app (Dread Power, Apoplectic Frenzy). The effect’s “not eligible to declare a charge until the end of the turn” is a result of using it in the Shooting phase; it doesn’t make the stratagem usable in the Charge phase.",
+  "fix": null
+ },
+ {
+  "key": "6d40009d2ea65bd4",
+  "verdict": "ok",
+  "why": "“WHEN: Your Shooting phase”: your turn.",
+  "fix": null
+ },
+ {
+  "key": "dfb83d7cda17de38",
+  "verdict": "ok",
+  "why": "“TARGET: That BREAKA BOYZ/FLASH GITZ/TANKBUSTAS unit.”: any of the three, copied. “unengaged” is a state, not a keyword.",
+  "fix": null
+ },
+ {
+  "key": "0ada62b205cc1961",
+  "verdict": "ok",
+  "why": "“WHEN: Your opponent’s Shooting phase, when an enemy unit has shot.” Shooting.",
+  "fix": null
+ },
+ {
+  "key": "859bd86abf8fc642",
+  "verdict": "ok",
+  "why": "“Your opponent’s Shooting phase”: their turn.",
+  "fix": null
+ },
+ {
+  "key": "5057786a3abb1ae3",
+  "verdict": "ok",
+  "why": "“TARGET: One friendly FLASH GITZ/TANKBUSTAS unit hit by those attacks.”: either keyword, copied.",
+  "fix": null
+ },
+ {
+  "key": "8e5b654c2bb01152",
+  "verdict": "ok",
+  "why": "The bold term in Supa-glowy Fing is “[SUPA-HAZARDOUS]”. It opens the Supa-hazardous entry, whose text is the definition Wahapedia prints with that enhancement (“[SUPA-HAZARDOUS]: Each time a unit is selected to shoot …”).",
+  "fix": null
+ },
+ {
+  "key": "8c97250de7a88ad5",
+  "verdict": "ok",
+  "why": "Pulse Jet says “this unit can make a pulse jet move”. That opens the Pulse Jet Move entry, the special move type on Wahapedia’s Orks army-rules page (“PULSE JET MOVE / MAXIMUM DISTANCE: Pulse roll + 18\"”).",
+  "fix": null
+ }
+]

@@ -254,6 +254,12 @@ summary::-webkit-details-marker{display:none}
 .wr.p + .kwl{padding-left:8px}
 .kwl [data-rule]{color:var(--fg2); white-space:nowrap; padding:1px 0 13px; text-decoration:underline dotted; text-decoration-color:var(--accent); text-underline-offset:2px}
 .kwl [data-rule]:active{color:var(--accent)}
+.kwl .gk, .gv{color:var(--accent); text-decoration:underline dotted; text-decoration-color:var(--accent); text-underline-offset:2px; cursor:pointer}
+.kwl .gk{white-space:nowrap; padding:1px 0 13px}
+.gv{font:inherit}
+.kwl .gk::after, .gv::after{content:'+'; font:700 9px/1 var(--f-head); vertical-align:super; margin-left:1px; text-decoration:none; display:inline-block}
+.gsrc{margin:6px 0 10px; padding:8px 10px; border-left:3px solid var(--accent); background:var(--surface); border-radius:0 8px 8px 0}
+.gh{margin:0 0 4px} .gh .tg{margin-left:4px} .gk2{margin-top:14px}
 .wr i.hi{font-style:normal; display:inline-block; min-width:26px; padding:1px 4px; border-radius:5px; background:var(--accent); color:var(--accent-ink)}
 .wr i.hb{display:block; font:700 12px/1.1 var(--f-head); font-style:normal; color:var(--accent)}
 .wr i.alt{font-style:normal; color:var(--accent)}
@@ -328,6 +334,14 @@ summary::-webkit-details-marker{display:none}
 .flip{min-height:48px; padding:6px 10px; border-radius:6px; background:var(--surface); font:700 14px/1.15 var(--f-head); letter-spacing:.03em; color:var(--fg2)}
 .flip.p{text-align:left}
 .flip.n{text-align:right; grid-column:2}
+.ticks{display:inline-flex; align-items:center; gap:6px; margin:0 8px 0 0; vertical-align:-6px}
+.ticks i{font:600 11px/1 var(--f-body); font-style:normal; color:var(--muted)}
+.tick{display:inline-grid; place-items:center; width:26px; height:26px; border-radius:6px; box-shadow:inset 0 0 0 1.5px var(--line); font:700 15px/1 var(--f-body); color:var(--accent-ink)}
+.tick.on{background:var(--accent); box-shadow:none}
+.ab > summary .an .ticks{flex-basis:100%; margin:4px 0 2px; vertical-align:0}
+.tl{display:flex; align-items:flex-start; gap:8px; padding:2px 0}
+.tl > .ticks{flex:none; margin:0; vertical-align:0}
+.tl > span{flex:1; min-width:0; padding-top:1px}
 .sec-h .textbtn{margin-left:auto}
 .nextph{display:block; width:100%; min-height:48px; margin:14px 0 4px; border-radius:6px; background:var(--surface2); font:700 15px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--accent)}
 .textbtn{min-height:40px; font:700 12.5px/1 var(--f-head); letter-spacing:.07em; text-transform:uppercase; color:var(--accent)}
@@ -439,7 +453,7 @@ const keep = area => ({
   set(k, v){ try { window[area].setItem(k, JSON.stringify(v)); } catch(e){} }
 });
 const store = keep('localStorage'), session = keep('sessionStorage');
-try { for(const k of Object.keys(localStorage)) if(/^wh-used-|^wh-layout$/.test(k)) localStorage.removeItem(k); } catch(e){}   // left by earlier versions
+try { localStorage.removeItem('wh-layout'); } catch(e){}   // left by an earlier version
 
 const PHASES = [['command','Command','Cmd'], ['movement','Movement','Move'], ['shooting','Shooting','Shoot'], ['charge','Charge','Charge'], ['fight','Fight','Fight']];
 const PHASE_NAME = Object.fromEntries(PHASES.map(([k, l]) => [k, l]));
@@ -452,6 +466,10 @@ const SCREEN_TITLE = { pregame:'Before the battle', units:'Units', strats:'Strat
 const BACK_TITLE = { pregame:'Pre-game', ranged:'Ranged', melee:'Melee', rules:'Rules', bases:'Bases' };
 const HUNTER_KW = 'HUNTER: MONSTER/VEHICLE';
 const KEY_LABEL = { range:'RNG', A:'A', BS:'BS', WS:'WS', S:'S', AP:'AP', D:'D' };
+// a value or keyword that a rule of the list changes (w.from / s.from, derived from BSData and checked
+// against New Recruit's "(…)" marks): accent colour and "+"; tapping it says which rule
+const grantAttr = (names, u, what) => ' role="button" tabindex="0" data-grant="' + esc([].concat(names).join('|')) + '" data-gu="' + esc(u.id) + '" data-what="' + esc(what) + '"';
+const granted = (x, k, u, html, what) => x.from && x.from[k] ? '<b class="gv"' + grantAttr(x.from[k], u, what) + '>' + html + '</b>' : html;
 const chev = '<svg class="chev" aria-hidden="true"><use href="#i-down"/></svg>';
 const arrow = '<svg class="go" aria-hidden="true"><use href="#i-down"/></svg>';
 
@@ -468,13 +486,36 @@ const moreShown = new Set();                 // search groups you expanded
 let focusSearch = false;
 
 /* ---------- tabs ----------
-   Tabs at the bottom of every army screen (Pre-game · Units · Turn · Rules · Find) and ‹ › between
-   datasheets. The app only shows the packet: nothing a player enters is recorded. */
+   Tabs at the bottom of every army screen (Pre-game · Units · Turn · Rules · Find), ‹ › between
+   datasheets, and tick boxes for the uses a rule allows per battle, kept until New game. */
 // the tabs, and which one the current screen belongs to
 const TABS = [['pregame', 'i-flag', 'Pre-game'], ['units', 'i-units', 'Units'], ['strats', 'i-cards', 'Turn'], ['rules', 'i-book', 'Rules'], ['army', 'i-search', 'Find']];
 const isTab = s => TABS.some(([k]) => k === s);
 const tabOf = s => ({ unit:'units', bases:'pregame', ranged:'army', melee:'army', abilities:'army' })[s] || s;
 const tabBar = () => '<div class="tabs">' + TABS.map(([s, ic, label]) => '<button data-tab="' + s + '"' + (tabOf(cur.s) === s ? ' class="on" aria-current="page"' : '') + '><svg class="ic" aria-hidden="true"><use href="#' + ic + '"/></svg><span>' + label + '</span></button>').join('') + '</div>';
+// uses per battle ticked off in this game (Bomb Squig: twice per battle, per unit), per army, until New game
+const usedKey = () => 'wh-used-' + (cur.army || '');
+const usedSet = () => new Set(Array.isArray(store.get(usedKey())) ? store.get(usedKey()) : []);
+// how many uses per battle the printed limit allows, and whether they are the army's or each unit's
+function perBattle(x, armyWide){
+  const t = [x.tag, x.limit, x.restrictions, x.text, x.effect].filter(Boolean).join(' ');
+  const m = /\b(once|twice|three times) per battle\b(?! round)/i.exec(t);
+  if(!m) return null;
+  return { n:{ once:1, twice:2, 'three times':3 }[m[1].toLowerCase()],
+    army:!!armyWide || /per battle\b(?! round)[^.)]*\bper army\b/i.test(t) || /\bone (model|unit) from your army with this ability\b/i.test(t) };
+}
+const ticks = (key, n, label) => { const used = usedSet();
+  return '<span class="ticks">' + (label ? '<i>' + esc(label) + '</i>' : '') + Array.from({ length:n }, (_, i) => { const k = key + '#' + i, on = used.has(k);
+    return '<button class="tick' + (on ? ' on' : '') + '" data-tick="' + esc(k) + '" aria-pressed="' + on + '" aria-label="Used' + (n > 1 ? ', ' + (i + 1) + ' of ' + n : '') + '">' + (on ? '✓' : '') + '</button>'; }).join('') + '</span>'; };
+// an ability's boxes on one unit: the army's set, or one set per unit (each copy of a ×N unit)
+function abilityTicks(ab, u){
+  const pb = perBattle(ab);
+  if(!pb || !u || naReason(ab)) return '';
+  if(pb.army) return ticks('a:' + ab.name, pb.n);
+  const c = u.copies || 1;
+  return Array.from({ length:c }, (_, i) => ticks(copyKey(ab, u, i), pb.n, c > 1 ? 'Unit ' + (i + 1) : '')).join('');
+}
+const copyKey = (ab, u, i) => 'a:' + ab.name + '|' + u.id + ((u.copies || 1) > 1 ? '.' + i : '');
 // the units in the order of the Units list, for ‹ › on a datasheet
 function unitFlip(u){
   const order = ROLE_ORDER.flatMap(r => army().units.filter(x => (ROLE_ORDER.includes(x.role) ? x.role : 'Other') === r));
@@ -593,7 +634,19 @@ function allStratagems(a){
   return out;
 }
 const usableStrats = a => allStratagems(a).filter(s => eligible(s, a).length);
-const shortName = u => (u.short || u.name) + (u.enhancement ? ' · ' + u.enhancement : '');
+// units that share a name: the unit they are attached to, then which one ("Mek + Tankbustas (1 of 2)"),
+// counted in list order (New Recruit's)
+const sameName = (a, b) => (a.short || a.name) === (b.short || b.name) && (a.enhancement || '') === (b.enhancement || '');
+function twinOf(u){
+  const A = army();
+  if(!A || !A.units.includes(u)) return null;
+  const same = A.units.filter(x => sameName(x, u));
+  if(same.length < 2) return null;
+  const twins = same.filter(x => (x.leads || '') === (u.leads || '') && (x.upgrade || '') === (u.upgrade || ''));
+  return { lead:u.leads || '', i:twins.indexOf(u) + 1, n:twins.length };
+}
+const twinLabel = u => { const t = twinOf(u); return !t ? '' : (t.lead ? ' + ' + t.lead : '') + (t.n > 1 ? ' (' + t.i + ' of ' + t.n + ')' : ''); };
+const shortName = u => (u.short || u.name) + (u.enhancement ? ' · ' + u.enhancement : '') + twinLabel(u);
 const unitCount = a => a.units.reduce((t, u) => t + (u.copies || 1), 0);
 // "Big Mek ×2, Killa Kans": unit names for a one-line summary
 function unitNames(units){
@@ -665,7 +718,9 @@ function nameTags(u, opts){
   const t = [];
   if(u.warlord) t.push('<span class="tg">Warlord</span>');
   if(u.enhancement) t.push('<span class="tg">' + esc(u.enhancement) + '</span>');
+  if(u.upgrade) t.push('<span class="tg">' + esc(u.upgrade) + '</span>');
   if(u.leads && !(opts && opts.noLeads)) t.push('<span class="tg m">+ ' + esc(u.leads) + '</span>');
+  const tw = twinOf(u); if(tw && tw.n > 1) t.push('<span class="tg m">' + tw.i + ' of ' + tw.n + '</span>');
   if(u.copies > 1 && !(opts && opts.noCopies)) t.push('<span class="tg m">×' + esc(u.copies) + ' units</span>');
   return t.join('');
 }
@@ -680,8 +735,9 @@ function ruleFor(label){
   const ar = f.armyRules.find(r => r.name.toLowerCase() === lc);
   if(ar) return { name:ar.name, key:ar.name, text:ar.text, table:ar.table, missing:ar.missing, note:ar.note, src:f.name + ' army rule' };
   for(const d of detachments()) if(d.rule && d.rule.name.toLowerCase() === lc) return { name:d.rule.name, key:d.rule.name, text:d.rule.text, table:d.rule.table, needs:d.rule.needs, note:d.rule.note, src:d.name + ' detachment rule' };
-  for(const [re, key] of D.ruleAliases) if(re.test(clean)) return { name:clean, key, text:D.rules[key], src:'Core rule' };
-  if(D.rules[clean]) return { name:clean, key:clean, text:D.rules[clean], src:'Core rule' };
+  const src = key => (D.ruleSrc || {})[key] || 'Core rule';   // the Orks terms say where they come from
+  for(const [re, key] of D.ruleAliases) if(re.test(clean)) return { name:clean, key, text:D.rules[key], src:src(key) };
+  if(D.rules[clean]) return { name:clean, key:clean, text:D.rules[clean], src:src(clean) };
   return null;
 }
 const ruleKey = label => (ruleFor(label) || {}).key;
@@ -817,7 +873,7 @@ function searchIndex(){
   for(const u of a.units){
     const st = u.stats.map(s => ['t' + s.T, 'w' + s.W, 'm' + s.M, 'sv' + s.Sv, 'base ' + s.base].join(' ')).join(' ');
     add({ kind:'Units', title:u.name, s1:u.stats.map(statLineText).join(' / '),
-      sub:[u.role, u.pts + ' pts', u.warlord ? 'Warlord' : '', u.enhancement, u.leads ? 'leading ' + u.leads : ''].filter(Boolean).join(' · '),
+      sub:[u.role, u.pts + ' pts', u.warlord ? 'Warlord' : '', u.enhancement, u.leads ? (u.support ? 'supporting ' : 'leading ') + u.leads : ''].filter(Boolean).join(' · '),
       hay:hay(u.name, u.short, u.role, u.kw.join(' '), u.models.join(' '), u.enhancement, u.warlord ? 'warlord' : '', unitRules(u).join(' '),
         u.abilities.map(ab => ab.def).join(' '), st, 'stats save toughness wounds move leadership', u.stats.some(s => s.InSv !== '–') ? 'invulnerable' : ''),
       act:{ unit:u.id } });
@@ -964,8 +1020,10 @@ function weaponBlock(it, keys, mods, u){
   const cell = (v, cls) => '<span>' + (cls ? '<i class="' + cls + '">' + esc(v) + '</i>' : esc(v)) + '</span>';
   const wide = keys[0] === 'none';   // datasheet melee rows: no range column, the name can use it
   const row = (label, cells, p) => '<div class="wr' + (p ? ' p' : '') + '"><span class="n' + (wide ? ' n2' : '') + '">' + label + '</span>' + (wide ? cells.slice(1) : cells).join('') + '</div>';
-  const plainCells = w => keys.map(k => cell(w[k]));
-  const kwl = w => (w.kw || []).length ? '<div class="kwl">' + w.kw.map(x => '<span role="button" tabindex="0" data-rule="' + esc(x) + '">' + esc(x) + '</span>').join(', ') + '</div>' : '';
+  const gv = (w, k) => granted(w, k, u, esc(w[k]), (KEY_LABEL[k] || k) + ' ' + w[k]);
+  const plainCells = w => keys.map(k => '<span>' + gv(w, k) + '</span>');
+  const kwl = w => (w.kw || []).length ? '<div class="kwl">' + w.kw.map(x => w.from && w.from[x] ? '<span class="gk" data-rule="' + esc(x) + '"' + grantAttr(w.from[x], u, x) + '>' + esc(x) + '</span>'
+    : '<span role="button" tabindex="0" data-rule="' + esc(x) + '">' + esc(x) + '</span>').join(', ') + '</div>' : '';
   // "Khornate eviscerator ×4": the count wraps with the last word, never alone
   const named = (name, n) => { if(!n) return esc(name); const i = name.lastIndexOf(' '); return esc(name.slice(0, i + 1)) + '<span class="nw">' + esc(name.slice(i + 1)) + '<span class="x">×' + esc(n) + '</span></span>'; };
   const prof = name => '<span class="ar">➤</span>' + esc(name);
@@ -973,7 +1031,7 @@ function weaponBlock(it, keys, mods, u){
   // an ability that changes this weapon against some targets: one row, both values in the cell ("8/14")
   const vm = !it.group && mods.find(m => m.weapon === w0.name && m.set);
   if(vm){
-    const cells = keys.map(k => vm.set[k] != null ? '<span>' + esc(w0[k]) + '<i class="alt">/' + esc(vm.set[k]) + '</i></span>' : cell(w0[k]));
+    const cells = keys.map(k => vm.set[k] != null ? '<span>' + gv(w0, k) + '<i class="alt">/' + esc(vm.set[k]) + '</i></span>' : '<span>' + gv(w0, k) + '</span>');
     const changed = keys.filter(k => vm.set[k] != null).map(k => KEY_LABEL[k] + ' ' + vm.set[k]).join(', ');
     return row(named(w0.name, w0.n), cells) + kwl(w0) +
       '<div class="varc"><b>' + esc(changed) + '</b> ' + esc(vm.when) + ', ' + esc(vm.note) + ' <span class="from">(' + modFrom(vm, u) + ')</span></div>';
@@ -990,7 +1048,7 @@ function weaponBlock(it, keys, mods, u){
       it.profiles.map(p => {
         if(!byTarget) return row(prof(p.name), plainCells(p), true) + kwl(p);
         if(!p.hunter) return row(prof(p.name), plainCells(p), true) + kwl(p);
-        const cells = keys.map(k => { const d = hunterMods.reduce((t, m) => t + (m.hunter[k] || 0), 0); return d ? '<span>' + esc(p[k]) + '<i class="hb">(+' + d + ')</i></span>' : cell(p[k]); });
+        const cells = keys.map(k => { const d = hunterMods.reduce((t, m) => t + (m.hunter[k] || 0), 0); return d ? '<span>' + gv(p, k) + '<i class="hb">(+' + d + ')</i></span>' : '<span>' + gv(p, k) + '</span>'; });
         return row('<span class="ar">➤</span><span class="link" role="button" tabindex="0" data-rule="Hunter">' + esc(p.name) + '</span><span class="tq">MON/VEH only</span>', cells, true) + kwl(p);
       }).join('');
   }
@@ -1082,7 +1140,8 @@ function weaponRows(list, keys, mods, u, kind){
 }
 // one kind of weapon for one unit (the Ranged and Melee screens)
 function weaponTable(list, kind, mods, u){
-  const notes = mods.filter(m => !(m.weapon && m.set));
+  // the same footnote from several units (three Meks' Clever Know-wotz) once, as on the datasheet
+  const seen = new Set(), notes = mods.filter(m => !(m.weapon && m.set)).filter(m => { const k = [m.from, m.when, m.note].join('|'); return !seen.has(k) && seen.add(k); });
   const hasHunter = (list || []).some(w => w.hunter) && mods.some(m => m.hunter);
   return '<div class="wt ' + kind + '">' + weaponRows(list, kind === 'ranged' ? RANGED_KEYS : MELEE_KEYS, mods, u, kind) +
     (notes.length ? '<div class="mods">' + modLines(notes, u, hasHunter) + '</div>' : '') + '</div>';
@@ -1142,6 +1201,7 @@ function shortWhen(x){
 // "Once per battle", "Once per battle round, per army": a limited use is part of the row, not hidden in it
 // (from the tag, a "(Once per …)" in the text, or a text that starts "Once per …,")
 const onceTag = ab => {
+  if(/^(once|twice) per /i.test(ab.tag || '')) return ab.tag.replace(/ · .*$/, '');   // as BSData prints it
   const t = ab.text || '', army = /\bone (model|unit) from your army with this ability\b/i.test(t);
   for(const src of [ab.tag || '', (/\((once per [^)]+)\)/i.exec(t) || [])[1] || '', (/^once per [^,.]+(, per (army|unit))?/i.exec(t) || [])[0] || '']){
     const m = /once per (battle round|battle|phase|turn)(, per (army|unit))?/i.exec(src);
@@ -1151,16 +1211,16 @@ const onceTag = ab => {
 };
 // abilities of one model (the leader, the champion) or one choice ("Crimson King: pick one") sit
 // under its chip, like the weapons; the unit's own come first
-function abilityRows(abs){
+function abilityRows(abs, u){
   const whos = [...new Set(abs.map(ab => ab.who || ''))].sort((x, y) => (x ? 1 : 0) - (y ? 1 : 0));
-  if(whos.length > 1 || whos[0]) return whos.map(w => (w ? '<div class="who">' + esc(w) + '</div>' : '') + abilityList(abs.filter(ab => (ab.who || '') === w))).join('');
-  return abilityList(abs);
+  if(whos.length > 1 || whos[0]) return whos.map(w => (w ? '<div class="who">' + esc(w) + '</div>' : '') + abilityList(abs.filter(ab => (ab.who || '') === w), u)).join('');
+  return abilityList(abs, u);
 }
-function abilityList(abs){
+function abilityList(abs, u){
   return '<div class="abl">' + abs.map(ab => {
     const meta = [ab.tag, ab.ph ? whenTag(ab) : ''].filter(Boolean), na = naReason(ab), once = onceTag(ab);
     return '<details class="ab' + (na ? ' na' : '') + '"><summary><span class="an"><b>' + esc(ab.name) + '</b>' +
-      (ab.tag === 'Enhancement' ? '<span class="tg">Enhancement</span>' : '') + (once ? '<span class="tg once">' + esc(once) + '</span>' : '') + (na ? '<span class="tg m">not usable here</span>' : '') + '</span>' +
+      (ab.tag === 'Enhancement' ? '<span class="tg">Enhancement</span>' : '') + (once ? '<span class="tg once">' + esc(once) + '</span>' : '') + (na ? '<span class="tg m">not usable here</span>' : '') + abilityTicks(ab, u) + '</span>' +
       (ab.ph && !na ? '<span class="aw">' + esc(shortWhen(ab)) + '</span>' : '') + chev + '</summary><div class="body">' +
       (na ? '<p class="abt"><i>' + esc(na) + '</i></p>' : '') + (meta.length ? '<p class="abt">' + meta.map(esc).join(' · ') + '</p>' : '') + rt(ab.text) + '</div></details>';
   }).join('') + '</div>';
@@ -1195,7 +1255,7 @@ function screenUnit(){
   const longModels = !solo && modelsText(u).length > 70;   // then they go in the Models & keywords popup
   const meta = [esc(u.role), esc(u.pts) + ' pts' + (u.copies > 1 ? ' each' : '')];
   if(u.copies > 1) meta.push('×' + esc(u.copies) + ' in list');
-  if(u.leads) meta.push('leading ' + esc(u.leads));
+  if(u.leads) meta.push((u.support ? 'supporting ' : 'leading ') + esc(u.leads));
   const abil = u.abilities.filter(ab => !shownElsewhere(ab, u));
   const weaponKeys = new Set([...(u.ranged || []), ...(u.melee || [])].flatMap(w => w.kw.map(ruleKey)));
   const statCols = multi ? (innerWidth < 360 ? 'minmax(60px,1fr) repeat(7, minmax(22px,27px))' : 'minmax(64px,1fr) repeat(7, minmax(24px,31px))') : 'repeat(7, minmax(0,1fr))';
@@ -1203,8 +1263,8 @@ function screenUnit(){
   return '<div class="ds-meta"><span>' + meta.join(' · ') + '</span>' + nameTags(u, { noLeads:true, noCopies:true }) + '</div>' +
     '<div class="statwrap" id="sec-stats"><div class="st num" style="grid-template-columns:' + statCols + '">' +
       (multi ? '<span class="h"></span>' : '') + ['M','T','SV','W','LD','OC','INV'].map(k => '<span class="h">' + k + '</span>').join('') +
-      u.stats.map(s => (multi ? '<span class="n">' + esc(s.name).replace(/ ×(\d+)$/, '<span class="x">×$1</span>') + '</span>' : '') + [s.M, s.T, s.Sv, s.W, s.Ld, s.OC, s.InSv].map(v => '<span>' + esc(v) + '</span>').join('')).join('') + '</div>' +
-    (u.boostNote ? '<p class="dsl"><i>' + esc(u.boostNote) + '</i></p>' : '') +
+      u.stats.map(s => (multi ? '<span class="n">' + esc(s.name).replace(/ ×(\d+)$/, '<span class="x">×$1</span>') + '</span>' : '') +
+        ['M','T','Sv','W','Ld','OC','InSv'].map((k, i) => '<span>' + granted(s, k, u, esc(s[k]), ['M','T','SV','W','LD','OC','INV'][i] + ' ' + s[k]) + '</span>').join('')).join('') + '</div>' +
     unitDetRules(u).filter(r => r.statNote).map(r => { const n = modelCount(u) === 1 && r.statNote.single ? r.statNote.single : r.statNote.text;
       return '<p class="dsl">' + esc(n.replace(/\{OC\+(\d)\}/, (x, d) => String((parseInt(u.stats[0].OC, 10) || 0) + +d))) + ' (' + linkTo('rule', r.name, r.name) + ')</p>'; }).join('') +
     (!solo && !longModels ? '<p class="dsl">' + modelsText(u) + '</p>' : '') +
@@ -1214,7 +1274,7 @@ function screenUnit(){
       return '<div class="def dmg"><span class="il">Damaged ' + esc(ab.damaged) + ' W</span>' + linkTo('ability', abilityKey(ab), m ? m.note : 'see the rule') +
         (psy ? ' <span class="from">(' + linkTo('rule', 'Psychic', '[PSYCHIC]') + ' weapons can ignore it)</span>' : '') + '</div>'; }).join('') + '</div>' +
     unitWeapons(u) +
-    (abil.length ? '<div class="dsec" id="sec-abilities"><div class="lbl">Abilities' + attached + '</div>' + abilityRows(abil) + '</div>' : '') +
+    (abil.length ? '<div class="dsec" id="sec-abilities"><div class="lbl">Abilities' + attached + '</div>' + abilityRows(abil, u) + '</div>' : '') +
     '<div class="dsec" id="sec-rules"><p class="dline"><span class="il">Rules</span>' + unitRules(u).filter(r => !weaponKeys.has(ruleKey(r))).map(r => linkTo('rule', r, r)).join(', ') +
       ' <span class="sep">·</span> ' + linkTo('kw', u.id, longModels ? 'Models & keywords' : 'Keywords') + '</p>' +
       (strats.length ? '<p class="dline" id="sec-strats"><span class="il">Stratagems</span>' + strats.map(st => linkTo('strat', st.id, st.name)).join(', ') + '</p>' : '') + '</div>';
@@ -1234,7 +1294,7 @@ function screenWeapons(kind){
   if(!list.length) return '<div class="empty">No ' + kind + ' weapons in this army.</div>';
   return '<div class="slice">' + list.map(u => '<section class="us">' + band(u) + weaponTable(u[kind], kind, unitMods(u, kind), u, false) + '</section>').join('') + '</div>';
 }
-const screenAbilities = () => '<div class="slice">' + army().units.filter(u => u.abilities.length).map(u => '<section class="us">' + band(u) + abilityRows(u.abilities) + '</section>').join('') + '</div>';
+const screenAbilities = () => '<div class="slice">' + army().units.filter(u => u.abilities.length).map(u => '<section class="us">' + band(u) + abilityRows(u.abilities, u) + '</section>').join('') + '</div>';
 
 /* ---------- stratagems ---------- */
 const stratWhenLine = s => [whenTag(s), s.limit, s.cpNote].filter(Boolean).join(' · ');
@@ -1419,7 +1479,7 @@ function screenPregame(){
   const warlord = units.filter(u => u.warlord);
   const enh = units.filter(u => u.enhancement).map(u => { const d = detachments().find(x => x.enhancements.some(e => e.name === u.enhancement)), e = d && d.enhancements.find(x => x.name === u.enhancement);
     return (d ? linkTo('enh', d.id + '|' + u.enhancement, u.enhancement) : esc(u.enhancement)) + (e && e.pts ? ' <span class="from">' + e.pts + ' pts</span>' : '') + ' on ' + nameLink(u); });
-  const led = units.filter(u => u.leads).map(u => nameLink(u) + ' leads ' + esc(u.leads));
+  const led = units.filter(u => u.leads).map(u => nameLink(u) + (u.support ? ' supports ' : ' leads ') + esc(u.leads) + (u.copies > 1 ? ' <span class="from">×' + u.copies + ' units</span>' : ''));
   let h = sec('Your list',
     row('Warlord', warlord.map(unitLink).join(', ')) +
     row('Enhance&shy;ments', enh.join('<br>')) +
@@ -1452,16 +1512,26 @@ function screenPregame(){
     .concat(group(allAbs.filter(([u, ab]) => /start of (the|each|every) battle round/i.test(ab.text) && !/first battle round/i.test(ab.text))).map(abLine));
   h += sec('Start of the battle round', row('First round', first.map(abLine).join('<br>')) + row('Every round', round.join('<br>')));
 
-  // once per battle: the resources you spend once
-  const onceB = x => /once per battle(?! round)/i.test(x);
-  const onceRules = f.armyRules.filter(r => !inertRule(r.name) && onceB((r.tag || '') + ' ' + r.text)).map(r => ({ r, src:f.name + ' army rule' }))
-    .concat(detachments().filter(d => d.rule && onceB(d.rule.text)).map(d => ({ r:d.rule, src:d.name })));
-  const onceAbs = group(allAbs.filter(([u, ab]) => onceB((ab.tag || '') + ' ' + ab.text)));
-  const onceStrats = allStratagems().filter(s => eligible(s).length && onceB([s.limit, s.restrictions, s.effect].join(' ')));
-  h += sec('Once per battle',
-    row('Rules', onceRules.map(x => ruleLine(x) + (/\beach of these [a-z ]+ once per battle/i.test(x.r.text) ? ' <span class="from">(each of its options once)</span>' : '')).join('<br>')) +
-    row('Abilities', onceAbs.map(g => abLine(g) + (/per army/i.test(onceTag(g.ab)) ? ' <span class="tg once">per army</span>' : '')).join('<br>')) +
-    row('Strata&shy;gems', onceStrats.map(s => linkTo('strat', s.id, s.cp + 'CP ' + s.name)).join('<br>')));
+  // uses per battle: the resources you spend, ticked off until New game
+  // a rule that gives units a "(Once per battle, per unit)" ability (Higher Imperatives) is ticked on those units, not here
+  const ruleOnce = r => perBattle(r) && !/per battle\b(?! round)[^.)]*\bper unit\b/i.test(r.text || '');
+  const onceRules = f.armyRules.filter(r => !inertRule(r.name) && ruleOnce(r)).map(r => ({ r, src:f.name + ' army rule' }))
+    .concat(detachments().filter(d => d.rule && ruleOnce(d.rule)).map(d => ({ r:d.rule, src:d.name })));
+  const tl = (boxes, text) => '<div class="tl">' + boxes + '<span>' + text + '</span></div>';
+  const ruleTicks = x => { const r = x.r, pb = perBattle(r, true);
+    // "You can only select each of these abilities once per battle" (Kindred Sorcery): a box per option
+    if(/\beach of these [a-z ]+ once per battle/i.test(r.text) && r.table) return '<div class="tl"><span>' + ruleLine(x) + ':</span></div>' + r.table.map(o => tl(ticks('r:' + r.name + ':' + o[0], 1), esc(o[0]))).join('');
+    return tl(ticks('r:' + r.name, pb.n), ruleLine(x)); };
+  const onceAbs = group(allAbs.filter(([u, ab]) => perBattle(ab)));
+  const abTicks = g => perBattle(g.ab).army ? tl(abilityTicks(g.ab, g.units[0]), abLine(g) + ' <span class="tg once">per army</span>')
+    : g.units.flatMap(u => Array.from({ length:u.copies || 1 }, (_, i) => tl(ticks(copyKey(g.ab, u, i), perBattle(g.ab).n),
+        linkTo('ability', abilityKey(g.ab), g.ab.name) + ' · ' + unitLink(u) + (u.copies > 1 ? ' <span class="from">unit ' + (i + 1) + ' of ' + u.copies + '</span>' : '')))).join('');
+  const onceStrats = allStratagems().filter(s => eligible(s).length && perBattle(s));
+  h += sec('Uses per battle',
+    row('Rules', onceRules.map(ruleTicks).join('')) +
+    row('Abilities', onceAbs.map(abTicks).join('')) +
+    row('Strata&shy;gems', onceStrats.map(s => tl(ticks('s:' + s.id, perBattle(s, true).n), linkTo('strat', s.id, s.cp + 'CP ' + s.name))).join('')));
+  if(onceRules.length || onceAbs.length || onceStrats.length) h = h.replace(/(<div class="sec-h"><h2>Uses per battle<\/h2>)/, '$1<button class="textbtn" data-newgame>New game</button>');
   return h + '<p class="note">Gathered from this list’s datasheets and rules; each line opens the full text.</p>';
 }
 
@@ -1612,6 +1682,21 @@ function showRule(label){
   const gap = (r.missing || []).length ? '<p class="note">Not in the app yet: the ' + esc(r.missing.join(' and ')) + '.</p>' : '';
   openSheet(esc(r.src), CONCEPT.has(r.key) ? r.key : r.name, body + (r.note ? '<p class="note it">' + esc(r.note) + '</p>' : '') + gap + usedBy('In this army', users));
 }
+// "Granted by": the rule(s) behind a marked value, their text, then the keyword's own rule
+function grantSource(name, u){
+  const ab = u && u.abilities.find(a => a.name === name);
+  if(ab) return { name, what:[ab.who, ab.tag].filter(Boolean).join(' · '), text:ab.text };
+  const r = ruleFor(name);
+  return r ? { name:r.name, what:r.src, text:r.text, table:r.table } : { name, what:'', text:'' };
+}
+function showGrant(names, unitId, what, kw){
+  const u = army().units.find(x => x.id === unitId);
+  const src = names.map(n => grantSource(n, u)).map(g => '<div class="gsrc"><p class="gh"><b>' + esc(g.name) + '</b>' + (g.what ? ' <span class="tg m">' + esc(g.what) + '</span>' : '') + '</p>' +
+    rt(g.text) + (g.table ? ttable(g.table) : '') + '</div>').join('');
+  const r = kw ? ruleFor(kw) : null;
+  const own = r ? '<p class="gh gk2"><b>' + esc(r.name) + '</b> <span class="tg m">' + esc(r.src) + '</span></p>' + rt(r.text) + (r.table ? ttable(r.table) : '') : '';
+  openSheet('Granted by ' + esc(names.join(' and ')), what, src + '<p class="note">' + (kw ? 'Already in the keywords shown' : 'Already in the value shown') + ' (as New Recruit and BSData list ' + (kw ? 'them' : 'it') + ').</p>' + own);
+}
 function showStrat(id){
   const s = allStratagems().find(x => x.id === id);
   if(s) openSheet(esc(s.cp + 'CP · ' + stratWhenLine(s)), s.name, '<div class="sb">' + stratBody(s) + '</div>');
@@ -1672,6 +1757,7 @@ document.addEventListener('click', e => {
     if(ds.sec) jumpTo(ds.sec, true);
     return;
   }
+  if(ds.grant){ e.preventDefault(); showGrant(ds.grant.split('|'), ds.gu, ds.what, ds.rule || null); return; }
   if(ds.rule){ e.preventDefault(); showRule(ds.rule); return; }
   if(ds.strat){ e.preventDefault(); showStrat(ds.strat); return; }
   if(ds.ability){ showAbility(ds.ability); return; }
@@ -1690,6 +1776,14 @@ document.addEventListener('click', e => {
     go(next, 'replace'); return;
   }
   if(ds.flip){ go({ s:'unit', army:army().id, unit:ds.flip, from:cur.from }, 'replace'); return; }
+  if(ds.tick){
+    e.preventDefault();   // a box on an ability row must not open or close it
+    const u = usedSet(), k = ds.tick, on = !u.has(k);
+    on ? u.add(k) : u.delete(k); store.set(usedKey(), [...u]);
+    document.querySelectorAll('[data-tick="' + CSS.escape(k) + '"]').forEach(b => { b.classList.toggle('on', on); b.setAttribute('aria-pressed', on); b.textContent = on ? '✓' : ''; });
+    return;
+  }
+  if(el.hasAttribute('data-newgame')){ store.set(usedKey(), []); toast('New game: uses per battle cleared'); rerender(); return; }
   if(el.hasAttribute('data-awake')){ awake.on = !awake.on; store.set('wh-awake', awake.on); if(awake.on) keepAwake(); else if(awake.lock){ awake.lock.release(); awake.lock = null; } rerender(); return; }
   if(el.hasAttribute('data-expand')){
     const cards = $$('#view details.strat');

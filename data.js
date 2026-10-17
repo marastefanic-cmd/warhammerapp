@@ -14,13 +14,17 @@
 ===================================================================== */
 window.WH_DATA = (function(){
 
-const VERSION = '2026-10-17.1';
+const VERSION = '2026-10-17.2';
 
 /* ---------------- core rules (11th edition) ---------------- */
 // Weapon keyword and core ability text: the official Core Rules PDF (11th edition), BSData and the
 // Wahapedia rules appendix where marked "(app)"
 // (Snap Shooting and Actions from Wahapedia's core rules, 15.09 and 16).
 const RULES = {
+  // Orks terms (Wahapedia Orks page; RULE_SRC says where): the pulse jet move Wazdakka's Pulse Jet allows,
+  // and [SUPA-HAZARDOUS], which the Shoota Boyz enhancement Supa-glowy Fing defines
+  'Pulse Jet Move': '**MAXIMUM DISTANCE:** Pulse roll + 18"\n**ELIGIBLE IF:** As stated in the rule allowing this move type.\n**EFFECT:** Your unit moves as described in Moving (Core Rules, 03).\n**BEFORE MOVING:**\n- Make a **pulse roll** by rolling one D6.\n**WHILE MOVING:**\n- Ignore all vertical distance for the purposes of how far your unit has moved.\n- Your unit can move through all types of model.\n- Your unit can move horizontally and vertically through all categories of terrain feature.\n**AFTER MOVING:**\n- Your unit must be unengaged.\n- Until the end of the turn, your unit is not eligible to declare a charge or start an action.\n- Until the start of your next turn, attacks that target your unit have -1 to hit rolls.',
+  'Supa-hazardous': 'Each time a unit is **selected to shoot**, after that unit has resolved all of its attacks, make two **hazard rolls** for that unit for each **[SUPA-HAZARDOUS]** weapon you selected in the Select Weapons step.',
   'Assault': 'Units containing one or more models with an **[ASSAULT]** weapon can shoot using **assault shooting** (10.05).',
   'Blast': 'Each time you gather **attack dice** for a **[BLAST]** weapon, add one additional **attack dice** for every five models that were in the target unit in the Select Targets step (rounding down).\nIf this ability takes the form **[BLAST X]**, each time you gather **attack dice** for such a weapon, add **X** additional **attack dice** for every five models that were in the target unit in the Select Targets step (rounding down) instead.\n*Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).*',
   'Cleave': 'This ability always takes the form **[CLEAVE X]**. Each time you gather **attack dice** for a **[CLEAVE]** weapon, if you only selected one target for all of that weapon’s attacks, add **X** additional **attack dice** for every five models that were in the target unit in the Select Targets step (rounding down).\n*Example: If a [CLEAVE 1] weapon with an A characteristic of 3 targets one unit containing 16 models, you would gather three additional attack dice for that weapon (for a total of six for that weapon).*',
@@ -84,7 +88,10 @@ const RULES = {
 };
 
 // Which RULES entry a keyword or rule chip opens ("RAPID FIRE 4" -> "Rapid Fire").
+// where a RULES entry comes from when it is not a core rule
+const RULE_SRC = { 'Pulse Jet Move':'Orks army rule (special move type)', 'Supa-hazardous':'Shoota Boyz enhancement Supa-glowy Fing' };
 const RULE_ALIASES = [
+  [/^supa-hazardous/i, 'Supa-hazardous'], [/^pulse jet move$/i, 'Pulse Jet Move'], [/^support$/i, 'Leader'],
   [/^(below |at |at or below )?(starting|half)[- ]strength$/i, 'Starting Strength'], [/^towering$/i, 'Plunging Fire'], [/^(select|choosing) weapons?$/i, 'Select Weapons'],
   [/^anti-/i, 'Anti'], [/^blast/i, 'Blast'], [/^cleave/i, 'Cleave'], [/^close-quarters/i, 'Close-quarters'],
   [/^pistol/i, 'Close-quarters'], [/^devastating/i, 'Devastating Wounds'], [/^extra attacks/i, 'Extra Attacks'],
@@ -260,6 +267,58 @@ const FACTIONS = {
             target:'That **ORKS WALKER** unit.',
             effect:'Your unit has **MOBILE**.' }
         ]
+      },
+      // Shoota Boyz and Wreckas: Wahapedia wording (Orks, codex; GW publishes no Orks Faction Pack)
+      'shoota-boyz': {
+        name:'Shoota Boyz', dp:1,
+        rule:{ name:'Dakka! Dakka! Dakka!', ph:['movement','shooting'], turn:'either', turns:{ movement:'opp' }, needs:{ all:['Faction: Orks','Infantry'] },
+          mod:{ kind:'ranged', when:'Riled up', note:'+3" range' },
+          text:'Friendly **ORKS INFANTRY** units’ ranged attacks have:\n- **[ASSAULT]**.\n- While this unit is **riled up**, +3" **R**.' },
+        enhancements:[
+          { name:'Supa-glowy Fing', pts:25, text:'**ORKS INFANTRY** model only (excluding **WEIRDBOY** models). This model’s ranged attacks have:\n- **[ANTI-INFANTRY 4+]**.\n- **[DEVASTATING WOUNDS]**.\n- **[SUPA-HAZARDOUS]**.\n**[SUPA-HAZARDOUS]:** Each time a unit is **selected to shoot**, after that unit has resolved all of its attacks, make two **hazard rolls** for that unit for each **[SUPA-HAZARDOUS]** weapon you selected in the Select Weapons step.' },
+          { name:'Targetin’ Squigs', pts:20, text:'**BIG MEK**/**BIGBOSS**/**WARBOSS** model only. This unit’s ranged attacks (excluding **[TORRENT]** attacks) have +3" **R**.' }
+        ],
+        stratagems:[
+          { id:'kustom-dakka', name:'Kustom Dakka', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Faction: Orks','Infantry'] },
+            mod:{ kind:'ranged', when:'Your Shooting phase, vs non-MONSTER/VEHICLE targets', note:'+1 to wound rolls' },
+            when:'Your Shooting phase, when a friendly **ORKS INFANTRY** unit is **selected to shoot**.',
+            target:'That **ORKS INFANTRY** unit.',
+            effect:'Your unit’s ranged attacks that target a unit (excluding **MONSTER**/**VEHICLE** units) have +1 to **wound rolls**.' },
+          { id:'glowin-dakka', name:'Glowin’ Dakka', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Faction: Orks','Infantry'] },
+            mod:{ kind:'ranged', when:'Your Shooting phase, target within 9"', note:'+1 AP' },
+            when:'Your Shooting phase, when a friendly **ORKS INFANTRY** unit is **selected to shoot**.',
+            target:'That **ORKS INFANTRY** unit.',
+            effect:'Your unit’s ranged attacks that target a unit within 9" have +1 **AP**.' },
+          { id:'never-enough-dakka', name:'Never Enough Dakka', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Faction: Orks','Infantry'] },
+            mod:{ kind:'ranged', when:'Your Shooting phase', note:'[SUSTAINED HITS 1]' },
+            when:'Your Shooting phase, when a friendly **ORKS INFANTRY** unit is **selected to shoot**.',
+            target:'That **ORKS INFANTRY** unit.',
+            effect:'Your unit’s ranged attacks have **[SUSTAINED HITS 1]**.' }
+        ]
+      },
+      'wreckas': {
+        name:'Wreckas', dp:1,
+        rule:{ name:'Wreckin’ and Lootin’', ph:['shooting'], turn:'your', needs:{ any:['Breaka Boyz','Flash Gitz','Tankbustas'] },
+          mod:{ kind:'ranged', when:'Your Shooting phase, this unit or the target within range of an objective', note:'can re-roll hit rolls of 1' },
+          text:'In your Shooting phase, when a friendly **BREAKA BOYZ**/**FLASH GITZ**/**TANKBUSTAS** unit is **selected to shoot**, if any of the following apply, that unit’s attacks can re-roll **hit rolls** of 1:\n- That unit is within range of an **objective**.\n- The target of that attack is within range of an **objective**.' },
+        enhancements:[
+          { name:'Kaptin’s Hat', pts:25, text:'**LEADER: FLASH GITZ**\n**BIG MEK**/**WARBOSS INFANTRY** model only. When both players have deployed their armies, you can redeploy up to three friendly **ORKS INFANTRY** units. When doing so, you can set those units up in **strategic reserves**, regardless of how many units are already in strategic reserves.' },
+          { name:'Supa-snazz Dakka', pts:25, upgrade:true, text:'**FLASH GITZ** unit only. This unit’s Snazzgun weapons have **[RAPID FIRE 1]**.' }
+        ],
+        stratagems:[
+          { id:'drive-by-bustin', name:'Drive-by Bustin’', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Faction: Orks','Transport'] },
+            when:'Your Shooting phase, when a friendly **ORKS TRANSPORT** unit is **selected to shoot**.',
+            target:'That **ORKS TRANSPORT** unit.',
+            effect:'Your unit’s ranged attacks with weapons selected for the **Firing Deck** ability have +1 to **hit rolls**.' },
+          { id:'grab-it', name:'Grab It', cp:1, phases:['shooting'], turn:'your', needs:{ any:['Breaka Boyz','Flash Gitz','Tankbustas'] },
+            when:'Your Shooting phase, when a friendly **unengaged BREAKA BOYZ**/**FLASH GITZ**/**TANKBUSTAS** unit has shot.',
+            target:'That **BREAKA BOYZ**/**FLASH GITZ**/**TANKBUSTAS** unit.',
+            effect:'- Your unit can make a **normal move** of up to 6", and must end that move within range of an **objective**.\n- Your unit is not **eligible to declare a charge** until the end of the turn.' },
+          { id:'gun-crazy-show-offs', name:'Gun-crazy Show-offs', cp:1, phases:['shooting'], turn:'opp', needs:{ any:['Flash Gitz','Tankbustas'] },
+            when:'Your opponent’s Shooting phase, when an enemy unit has shot.',
+            target:'One friendly **FLASH GITZ**/**TANKBUSTAS** unit hit by those attacks.',
+            effect:'Your unit shoots using **normal shooting**, but while doing so your unit can only target that enemy unit.' }
+        ]
       }
     }
   },
@@ -370,7 +429,6 @@ const FACTIONS = {
         // Wahapedia wording (the errata "Change to" text is the same as the main text)
         rule:{ name:'Relentless Rage', ph:['fight'], turn:'either', needs:{ all:['Faction: World Eaters'] },
           tag:'Already in A', note:'Already counted: every melee A value in this app includes this +1 A. Do not add it again.',
-          mod:{ kind:'melee', when:'Always', note:'+1 A, already counted in the A values' },
           text:'Friendly **WORLD EATERS** units’ melee attacks have +1 **A**.' },
         enhancements:[
           { name:'Berzerker Glaive', pts:35, text:'**WORLD EATERS** model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.' },
@@ -614,18 +672,22 @@ const FACTIONS = {
      short       shorter name where two units share one (e.g. Beastboss)
      pts, ptsNote  points (for the whole attached unit) and how they add up
      copies      how many identical units the list has (New Recruit prints "x3")
-     warlord, enhancement, leads (name of the unit it leads)
+     warlord, enhancement, leads (name of the unit it leads),
+                 support (it is attached as Support, not Leader), upgrade (an UPGRADE
+                 enhancement the bodyguard has)
      models      lines from the "Models" box
      gear        per models line, the weapons that line carries (weapon name, or group
                  for a multi-profile weapon), from New Recruit's Options column. It tells
                  the app which weapons a model uses together and which are a choice.
      stats       one row per model profile: M T Sv W Ld OC InSv base
-     boostNote   a stat that already includes an enhancement
      ranged / melee  weapons: name, range, A, BS|WS, S, AP, D, kw[]
                  group  joins the "pick one profile" rows of one weapon
                  who    which model in an attached unit carries it
                  n      how many models carry it
                  hunter the Hunter: MONSTER/VEHICLE profile; enh  weapon from an enhancement
+     from        (on a weapon or stats row) values a rule of the list already changed, as
+                 { keyword or field: rule name | [names] }; written from BSData's modifiers
+                 by verify/bsdata.js and checked against them and New Recruit's "(…)" marks
      abilities   name, text, tag, who; ph/turn/turns = the phase it triggers in;
                  def = one-line summary for the datasheet's "When targeted" line
      mods        abilities that change this unit's attacks, shown under its weapon tables:
@@ -706,12 +768,12 @@ const ARMIES = [
       ],
       ranged:[
         // three guns under one name, all fired (no ➤ in New Recruit or BSData, no pick-one marker on Wahapedia)
-        { group:'Kustom Blasta X', fireAll:true, who:'Nazdreg', name:'Skorcha', range:'12"', A:'3', BS:'–', S:'5', AP:'-1', D:'1', kw:['BLAST 1','TORRENT','IGNORES COVER'] },
-        { group:'Kustom Blasta X', fireAll:true, who:'Nazdreg', name:'Gatler', range:'24"', A:'6', BS:'4+', S:'9', AP:'-2', D:'3', kw:['HAZARDOUS','IGNORES COVER'] },
-        { group:'Kustom Blasta X', fireAll:true, who:'Nazdreg', name:'Shoota', range:'18"', A:'4', BS:'4+', S:'5', AP:'-1', D:'1', kw:['LETHAL HITS: non-MONSTER/VEHICLE','RAPID FIRE 2','IGNORES COVER'] },
-        { group:'Kombi-weapon', who:'Meganobz', n:5, name:'Point Blank', range:'12"', A:'3', BS:'–', S:'5', AP:'0', D:'1', kw:['BLAST 1','TORRENT','IGNORES COVER'] },
-        { group:'Kombi-weapon', who:'Meganobz', n:5, name:'Kill Shot', range:'24"', A:'1', BS:'5+', S:'10', AP:'-2', D:'3', kw:['IGNORES COVER'] },
-        { group:'Kombi-weapon', who:'Meganobz', n:5, name:'Shoota', range:'18"', A:'2', BS:'5+', S:'4', AP:'0', D:'1', kw:['LETHAL HITS: non-MONSTER/VEHICLE','RAPID FIRE 1','IGNORES COVER'] }
+        { group:'Kustom Blasta X', fireAll:true, who:'Nazdreg', name:'Skorcha', range:'12"', A:'3', BS:'–', S:'5', AP:'-1', D:'1', kw:['BLAST 1','TORRENT','IGNORES COVER'], from:{ 'IGNORES COVER':'Nazdreg’s Know-wotz' } },
+        { group:'Kustom Blasta X', fireAll:true, who:'Nazdreg', name:'Gatler', range:'24"', A:'6', BS:'4+', S:'9', AP:'-2', D:'3', kw:['HAZARDOUS','IGNORES COVER'], from:{ 'IGNORES COVER':'Nazdreg’s Know-wotz' } },
+        { group:'Kustom Blasta X', fireAll:true, who:'Nazdreg', name:'Shoota', range:'18"', A:'4', BS:'4+', S:'5', AP:'-1', D:'1', kw:['LETHAL HITS: non-MONSTER/VEHICLE','RAPID FIRE 2','IGNORES COVER'], from:{ 'IGNORES COVER':'Nazdreg’s Know-wotz' } },
+        { group:'Kombi-weapon', who:'Meganobz', n:5, name:'Point Blank', range:'12"', A:'3', BS:'–', S:'5', AP:'0', D:'1', kw:['BLAST 1','TORRENT','IGNORES COVER'], from:{ 'IGNORES COVER':'Nazdreg’s Know-wotz' } },
+        { group:'Kombi-weapon', who:'Meganobz', n:5, name:'Kill Shot', range:'24"', A:'1', BS:'5+', S:'10', AP:'-2', D:'3', kw:['IGNORES COVER'], from:{ 'IGNORES COVER':'Nazdreg’s Know-wotz' } },
+        { group:'Kombi-weapon', who:'Meganobz', n:5, name:'Shoota', range:'18"', A:'2', BS:'5+', S:'4', AP:'0', D:'1', kw:['LETHAL HITS: non-MONSTER/VEHICLE','RAPID FIRE 1','IGNORES COVER'], from:{ 'IGNORES COVER':'Nazdreg’s Know-wotz' } }
       ],
       melee:[
         { name:'Kustom Blasta X', who:'Nazdreg', range:'Melee', A:'6', WS:'2+', S:'5', AP:'-1', D:'1', kw:['CLEAVE 1','EXTRA ATTACKS'] },
@@ -745,11 +807,10 @@ const ARMIES = [
         { name:'Slugga', range:'12"', A:'1', BS:'5+', S:'4', AP:'0', D:'1', kw:['CLOSE-QUARTERS','LETHAL HITS: non-MONSTER/VEHICLE'] }
       ],
       melee:[
-        { group:'Beastchoppa', name:'Hunter', hunter:true, range:'Melee', A:'6', WS:'2+', S:'12', AP:'-2', D:'D6+1', kw:[] },
-        { group:'Beastchoppa', name:'Standard', range:'Melee', A:'6', WS:'2+', S:'6', AP:'-2', D:'3', kw:['CLEAVE 1'] },
-        { name:'Squigosaur’s jaws', range:'Melee', A:'3', WS:'3+', S:'7', AP:'-2', D:'4', kw:['ANTI-MONSTER/VEHICLE 3+','EXTRA ATTACKS'] }
+        { group:'Beastchoppa', name:'Hunter', hunter:true, range:'Melee', A:'6', WS:'2+', S:'12', AP:'-2', D:'D6+1', kw:[], from:{ 'D':'Brutal But Kunnin’' } },
+        { group:'Beastchoppa', name:'Standard', range:'Melee', A:'6', WS:'2+', S:'6', AP:'-2', D:'3', kw:['CLEAVE 1'], from:{ 'D':'Brutal But Kunnin’' } },
+        { name:'Squigosaur’s jaws', range:'Melee', A:'3', WS:'3+', S:'7', AP:'-2', D:'4', kw:['ANTI-MONSTER/VEHICLE 3+','EXTRA ATTACKS'], from:{ 'D':'Brutal But Kunnin’' } }
       ],
-      boostNote:'Melee D already includes +1 from Brutal But Kunnin’.',
       abilities:[
         { name:'Thundering Stampede', tag:'Aura', ph:['charge'], turn:'either', text:'Friendly **BEAST SNAGGA** units within 6" of this unit have +1 to **charge rolls**.' },
         { name:'Boss of da Hunt', na:'Every BEAST SNAGGA unit in this list is a MONSTER CHARACTER', def:'Lone Operative while within 3" of a friendly BEAST SNAGGA unit (not MONSTER CHARACTER)', text:'While this unit is within 3" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**.' },
@@ -785,8 +846,7 @@ const ARMIES = [
     {
       id:'dakkarig-boosta', name:'Big Mek Dakkarig', short:'Big Mek', role:'Character', pts:170, enhancement:'Cybork Boosta',
       models:['1× Big Mek Dakkarig'], gear:[['Blitzkannon','Multi-busta Launcha','Stompy Feet']],
-      stats:[{ name:'Big Mek Dakkarig', M:'10"', T:'8', Sv:'3+', W:'11', Ld:'7+', OC:'3', InSv:'5+', base:'90mm' }],
-      boostNote:'M already includes +2" from Cybork Boosta.',
+      stats:[{ name:'Big Mek Dakkarig', M:'10"', T:'8', Sv:'3+', W:'11', Ld:'7+', OC:'3', InSv:'5+', base:'90mm', from:{ 'M':'Cybork Boosta' } }],
       ranged:[
         { name:'Blitzkannon', range:'24"', A:'8', BS:'4+', S:'7', AP:'-2', D:'2', kw:['IGNORES COVER','LETHAL HITS: non-MONSTER/VEHICLE'] },
         { name:'Multi-busta Launcha', range:'24"', A:'6', BS:'5+', S:'10', AP:'-2', D:'3', kw:['IGNORES COVER','LETHAL HITS'] }
@@ -830,7 +890,7 @@ const ARMIES = [
         { kind:'ranged', when:'Riled up', note:'[SUSTAINED HITS 1]', from:'Even More Dakka' }
       ],
       aura:[
-        { kind:'all', needs:{ all:['Walker'] }, when:'Picked by the Dreadherder', note:'re-roll hit rolls of 1 this turn', from:'Dreadherder' }
+        { kind:'all', needs:{ all:['Faction: Orks','Walker'] }, when:'Picked by the Dreadherder', note:'re-roll hit rolls of 1 this turn', from:'Dreadherder' }
       ],
       rules:['Deadly Demise 1','Waaagh!'],
       kw:['Big Mek','Big Mek Dakkarig','Character','Faction: Orks','Vehicle','Walker']
@@ -841,6 +901,323 @@ const ARMIES = [
       stats:[{ name:'Gretchin ×10', M:'6"', T:'2', Sv:'6+', W:'1', Ld:'8+', OC:'1', InSv:'–', base:'25mm' }],
       ranged:[
         { name:'Grot Blasta', n:10, range:'12"', A:'1', BS:'4+', S:'3', AP:'0', D:'1', kw:['CLOSE-QUARTERS'] }
+      ],
+      melee:[
+        { name:'Scavenged Shivs', n:10, range:'Melee', A:'1', WS:'5+', S:'2', AP:'0', D:'1', kw:[] }
+      ],
+      abilities:[
+        { name:'Downtrodden', text:'For the purposes of **transport capacity**, each 2 Gretchin models (rounding up) take up the space of 1 model.' },
+        { name:'Thievin’ Scavengers', ph:['movement'], turn:'your', text:'At the end of your Movement phase, if this unit is controlling an **objective**, that **objective** is **secured**.' }
+      ],
+      rules:['Waaagh!'],
+      kw:['Faction: Orks','Gretchin','Grots','Infantry']
+    },
+    {
+      id:'deffkoptas', name:'Deffkoptas', role:'Mounted', pts:85,
+      models:['3× Deffkopta'], gear:[['Choppa','Rokkit Launcha','Slugga','Spinnin’ Blades']],
+      stats:[{ name:'Deffkoptas ×3', M:'12"', T:'6', Sv:'4+', W:'4', Ld:'7+', OC:'2', InSv:'6+', base:'75×42mm' }],
+      ranged:[
+        { group:'Rokkit Launcha', n:3, name:'Busta', range:'24"', A:'2', BS:'5+', S:'10', AP:'-2', D:'3', kw:['LETHAL HITS'] },
+        { group:'Rokkit Launcha', n:3, name:'Blasta', range:'24"', A:'2', BS:'5+', S:'4', AP:'0', D:'1', kw:['BLAST 2'] },
+        { name:'Slugga', n:3, range:'12"', A:'1', BS:'5+', S:'4', AP:'0', D:'1', kw:['CLOSE-QUARTERS','LETHAL HITS: non-MONSTER/VEHICLE'] }
+      ],
+      melee:[
+        { name:'Choppa', n:3, range:'Melee', A:'3', WS:'4+', S:'5', AP:'-1', D:'1', kw:[] },
+        { name:'Spinnin’ Blades', n:3, range:'Melee', A:'4', WS:'3+', S:'5', AP:'-1', D:'1', kw:['CLEAVE 1','HAZARDOUS'] }
+      ],
+      abilities:[
+        { name:'Aerial Manoover', ph:['fight'], turn:'opp', text:'At the end of your opponent’s Fight phase, if this unit is **unengaged**, you can place this unit in **strategic reserves**.' },
+        { name:'Deff from Above', ph:['shooting'], turn:'your', text:'In your Shooting phase, if this unit made an **ingress move** this turn, this unit’s ranged attacks have +1 to **hit rolls**.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'ranged', when:'Your Shooting phase, after an ingress move this turn', note:'+1 to hit rolls', from:'Deff from Above' }
+      ],
+      rules:['Deep Strike','Waaagh!'],
+      kw:['Deffkoptas','Explosives','Faction: Orks','Fly','Mounted','Speed Freeks']
+    },
+    {
+      id:'killa-kans', name:'Killa Kans', role:'Vehicle', pts:275,
+      models:['6× Killa Kan'], gear:[['Kan Blasta','Kan Klaw']],
+      stats:[{ name:'Killa Kan ×6', M:'8"', T:'7', Sv:'3+', W:'5', Ld:'8+', OC:'2', InSv:'6+', base:'60mm' }],
+      ranged:[
+        { group:'Kan Blasta', n:6, name:'Kill Shot', range:'24"', A:'2', BS:'4+', S:'10', AP:'-2', D:'3', kw:[] },
+        { group:'Kan Blasta', n:6, name:'Point Blank', range:'12"', A:'3', BS:'–', S:'5', AP:'-1', D:'1', kw:['BLAST 2','TORRENT'] },
+        { group:'Kan Blasta', n:6, name:'Dakka', range:'24"', A:'4', BS:'4+', S:'6', AP:'-1', D:'1', kw:['BLAST 1','IGNORES COVER','SUSTAINED HITS 1'] }
+      ],
+      melee:[
+        { name:'Kan Klaw', n:6, range:'Melee', A:'3', WS:'4+', S:'8', AP:'-2', D:'3', kw:[] }
+      ],
+      abilities:[
+        { name:'Spiteful Power Trip', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'This unit’s attacks that target a unit that has no models with a **T** of 7+ have +1 to **hit rolls**.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'all', when:'vs units with no T 7+ models', note:'+1 to hit rolls', from:'Spiteful Power Trip' }
+      ],
+      rules:['Deadly Demise 1','Waaagh!'],
+      kw:['Faction: Orks','Grots','Killa Kans','Vehicle','Walker']
+    }
+  ]
+},
+{
+  id:'shooty', name:'Me shooty yer’ booty', faction:'orks', points:2000, pointsUsed:2000,
+  battleSize:'Strike Force', disposition:'Purge the Foe',
+  detachments:['dread-mob','shoota-boyz','wreckas'],
+  source:'New Recruit, exported 17 Oct 2026',
+  units:[
+    {
+      id:'wazdakka', name:'Wazdakka Gutsmek', role:'Epic Hero', pts:200,
+      models:['1× Wazdakka Gutsmek'], gear:[['Fixit’s Wrench','Grabba Dragga','Psyko-gatler','Speeding Bulk and Flaming Exhaust']],
+      stats:[{ name:'Wazdakka Gutsmek', M:'14"', T:'8', Sv:'3+', W:'10', Ld:'6+', OC:'3', InSv:'4+', base:'120mm' }],
+      ranged:[
+        { name:'Grabba Dragga', range:'12"', A:'1', BS:'2+', S:'10', AP:'-2', D:'3', kw:['ASSAULT','PRECISION'] },
+        { name:'Psyko-gatler', range:'24"', A:'12', BS:'4+', S:'6', AP:'-2', D:'2', kw:['ASSAULT','LETHAL HITS: non-MONSTER/VEHICLE','SUSTAINED HITS 1'] }
+      ],
+      melee:[
+        { name:'Fixit’s Wrench', range:'Melee', A:'1', WS:'4+', S:'3', AP:'0', D:'1', kw:['EXTRA ATTACKS'] },
+        { name:'Grabba Dragga', range:'Melee', A:'6', WS:'2+', S:'10', AP:'-2', D:'3', kw:['CLEAVE 2','LANCE'] },
+        { name:'Speeding Bulk and Flaming Exhaust', range:'Melee', A:'3', WS:'2+', S:'5', AP:'-1', D:'1', kw:['CLEAVE 1','EXTRA ATTACKS'] }
+      ],
+      abilities:[
+        { name:'Full Throttle', ph:['command','movement','charge'], turn:'your',
+          text:'In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase.' },
+        // the three Throttlerokkit Shokka Engine choices for Full Throttle
+        { name:'Turbo Engine', who:'Throttlerokkit Shokka Engine: pick one', ph:['movement','charge'], turn:'your',
+          text:'When this unit is selected to make an **advance**/**fall-back move**, that move does not prevent this unit from being **eligible to declare a charge**.' },
+        { name:'Pulse Jet', who:'Throttlerokkit Shokka Engine: pick one', ph:['movement'], turn:'your',
+          text:'In your Movement phase, when this unit is **selected to move**, if this unit is **unengaged**, this unit can make a **pulse jet move**.' },
+        { name:'Shokk Attack Engine', who:'Throttlerokkit Shokka Engine: pick one', ph:['command'], turn:'your',
+          text:'In your Command phase, if this unit is **unengaged**, you can place this unit in **strategic reserves**.' }
+      ],
+      rules:['Deadly Demise D3','Deep Strike','Lone Operative','Waaagh!'],
+      kw:['Character','Epic Hero','Faction: Orks','Mounted','Smoke','Speed Freeks','Vehicle','Wazdakka Gutsmek']
+    },
+    {
+      id:'dakkarig-herder', name:'Big Mek Dakkarig', short:'Big Mek', role:'Character', pts:190, enhancement:'Dreadherder',
+      models:['1× Big Mek Dakkarig'], gear:[['Blitzkannon','Multi-busta Launcha','Stompy Feet']],
+      stats:[{ name:'Big Mek Dakkarig', M:'8"', T:'8', Sv:'3+', W:'11', Ld:'7+', OC:'3', InSv:'5+', base:'90mm' }],
+      ranged:[
+        { name:'Blitzkannon', range:'24"', A:'8', BS:'4+', S:'7', AP:'-2', D:'2', kw:['IGNORES COVER','LETHAL HITS: non-MONSTER/VEHICLE'] },
+        { name:'Multi-busta Launcha', range:'24"', A:'6', BS:'5+', S:'10', AP:'-2', D:'3', kw:['IGNORES COVER','LETHAL HITS'] }
+      ],
+      melee:[
+        { name:'Stompy Feet', range:'Melee', A:'4', WS:'3+', S:'6', AP:'-1', D:'1', kw:[] }
+      ],
+      abilities:[
+        { name:'Even More Dakka', ph:['movement','shooting'], turn:'your', turns:{ movement:'opp' }, text:'If this unit is **riled up**, this unit’s ranged attacks have **[SUSTAINED HITS 1]**.' },
+        { name:'Blitz Dem Gitz!', ph:['shooting'], turn:'your', text:'In your Shooting phase, if this unit’s Blitzkannon weapon targets a unit (excluding **MONSTER/VEHICLE** units), that weapon has +6 **A**.' },
+        { name:'Dreadherder', tag:'Enhancement', ph:['shooting','fight'], turn:'your', def:'Lone Operative while within 3" of a friendly ORKS WALKER unit (not BIG MEK)',
+          text:'**BIG MEK** model only. While this model is within 3" of a friendly **ORKS WALKER** unit (excluding **BIG MEK** units):\n- This model has **Lone Operative**.\n- In your Shooting phase, you can select one friendly **ORKS WALKER** unit within 3" of this model. That unit’s attacks can re-roll **hit rolls** of 1 until the end of the turn.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'ranged', weapon:'Blitzkannon', set:{ A:'14' }, when:'vs non-MONSTER/VEHICLE targets', note:'in your Shooting phase', from:'Blitz Dem Gitz!' },
+        { kind:'ranged', when:'Riled up', note:'[SUSTAINED HITS 1]', from:'Even More Dakka' }
+      ],
+      aura:[
+        { kind:'all', needs:{ all:['Faction: Orks','Walker'] }, when:'Picked by the Dreadherder', note:'re-roll hit rolls of 1 this turn', from:'Dreadherder' }
+      ],
+      rules:['Deadly Demise 1','Waaagh!'],
+      kw:['Big Mek','Big Mek Dakkarig','Character','Faction: Orks','Vehicle','Walker']
+    },
+    {
+      id:'dakkarig-boosta', name:'Big Mek Dakkarig', short:'Big Mek', role:'Character', pts:170, enhancement:'Cybork Boosta',
+      models:['1× Big Mek Dakkarig'], gear:[['Blitzkannon','Multi-busta Launcha','Stompy Feet']],
+      stats:[{ name:'Big Mek Dakkarig', M:'10"', T:'8', Sv:'3+', W:'11', Ld:'7+', OC:'3', InSv:'5+', base:'90mm', from:{ 'M':'Cybork Boosta' } }],
+      ranged:[
+        { name:'Blitzkannon', range:'24"', A:'8', BS:'4+', S:'7', AP:'-2', D:'2', kw:['IGNORES COVER','LETHAL HITS: non-MONSTER/VEHICLE'] },
+        { name:'Multi-busta Launcha', range:'24"', A:'6', BS:'5+', S:'10', AP:'-2', D:'3', kw:['IGNORES COVER','LETHAL HITS'] }
+      ],
+      melee:[
+        { name:'Stompy Feet', range:'Melee', A:'4', WS:'3+', S:'6', AP:'-1', D:'1', kw:[] }
+      ],
+      abilities:[
+        { name:'Even More Dakka', ph:['movement','shooting'], turn:'your', turns:{ movement:'opp' }, text:'If this unit is **riled up**, this unit’s ranged attacks have **[SUSTAINED HITS 1]**.' },
+        { name:'Blitz Dem Gitz!', ph:['shooting'], turn:'your', text:'In your Shooting phase, if this unit’s Blitzkannon weapon targets a unit (excluding **MONSTER/VEHICLE** units), that weapon has +6 **A**.' },
+        { name:'Cybork Boosta', tag:'Enhancement', text:'**BIG MEK/MEK** model only. This model has +2" **M**.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'ranged', weapon:'Blitzkannon', set:{ A:'14' }, when:'vs non-MONSTER/VEHICLE targets', note:'in your Shooting phase', from:'Blitz Dem Gitz!' },
+        { kind:'ranged', when:'Riled up', note:'[SUSTAINED HITS 1]', from:'Even More Dakka' }
+      ],
+      rules:['Deadly Demise 1','Waaagh!'],
+      kw:['Big Mek','Big Mek Dakkarig','Character','Faction: Orks','Vehicle','Walker']
+    },
+    {
+      id:'bigmek-mega', name:'Big Mek in Mega Armour', short:'Big Mek', role:'Character', pts:115, enhancement:'Supa-glowy Fing',
+      models:['1× Big Mek in Mega Armour'], gear:[['Kustom Mega-blasta','Power Klaw','Tellyport Blasta']],
+      stats:[{ name:'Big Mek in Mega Armour', M:'5"', T:'6', Sv:'2+', W:'5', Ld:'7+', OC:'1', InSv:'–', base:'40mm' }],
+      ranged:[
+        { name:'Kustom Mega-blasta', range:'24"', A:'3', BS:'4+', S:'9', AP:'-2', D:'3', kw:['HAZARDOUS','IGNORES COVER','ASSAULT','ANTI-INFANTRY 4+','DEVASTATING WOUNDS','SUPA-HAZARDOUS'], from:{ 'IGNORES COVER':'More Dakka', 'ASSAULT':'Dakka! Dakka! Dakka!', 'ANTI-INFANTRY 4+':'Supa-glowy Fing', 'DEVASTATING WOUNDS':'Supa-glowy Fing', 'SUPA-HAZARDOUS':'Supa-glowy Fing' } },
+        { name:'Tellyport Blasta', range:'12"', A:'6', BS:'4+', S:'9', AP:'-2', D:'3', kw:['BLAST 1','IGNORES COVER','ASSAULT','ANTI-INFANTRY 4+','DEVASTATING WOUNDS','SUPA-HAZARDOUS'], from:{ 'IGNORES COVER':'More Dakka', 'ASSAULT':'Dakka! Dakka! Dakka!', 'ANTI-INFANTRY 4+':'Supa-glowy Fing', 'DEVASTATING WOUNDS':'Supa-glowy Fing', 'SUPA-HAZARDOUS':'Supa-glowy Fing' } }
+      ],
+      melee:[
+        { name:'Power Klaw', range:'Melee', A:'3', WS:'3+', S:'10', AP:'-2', D:'2', kw:[] }
+      ],
+      abilities:[
+        { name:'Fix Dat Armour Up', tag:'Once per battle, per unit', ph:['command'], turn:'your',
+          text:'In your Command phase, this unit **heals** 3 wounds.\nPlace a Grot Oiler token next to the unit, removing it when this ability is used.' },
+        { name:'More Dakka', text:'This unit’s ranged attacks have:\n- **[IGNORES COVER]**.\n- If this unit is **riled up**, **[SUSTAINED HITS 1]**.' },
+        { name:'Supa-glowy Fing', tag:'Enhancement',
+          text:'**ORKS INFANTRY** model only (excluding **WEIRDBOY** models). This model’s ranged attacks have:\n- **[ANTI-INFANTRY 4+]**.\n- **[DEVASTATING WOUNDS]**.\n- **[SUPA-HAZARDOUS]**.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'ranged', when:'Riled up', note:'[SUSTAINED HITS 1]', from:'More Dakka' }
+      ],
+      rules:['Waaagh!','Leader','Supa-hazardous'],
+      kw:['Big Mek','Big Mek in Mega Armour','Character','Explosives','Faction: Orks','Infantry','Mega Armour']
+    },
+    {
+      id:'warboss', name:'Warboss', role:'Character', pts:100, warlord:true,
+      models:['1× Warboss'], gear:[['Kustom Choppa','Kustom Shoota']],
+      stats:[{ name:'Warboss', M:'6"', T:'6', Sv:'4+', W:'6', Ld:'6+', OC:'1', InSv:'5+', base:'50mm' }],
+      ranged:[
+        { name:'Kustom Shoota', range:'18"', A:'4', BS:'5+', S:'4', AP:'0', D:'1', kw:['LETHAL HITS: non-MONSTER/VEHICLE','RAPID FIRE 2','ASSAULT'], from:{ 'ASSAULT':'Dakka! Dakka! Dakka!' } }
+      ],
+      melee:[
+        { name:'Kustom Choppa', range:'Melee', A:'6', WS:'2+', S:'7', AP:'-2', D:'2', kw:['CLEAVE 2'] }
+      ],
+      abilities:[
+        { name:'Might is Right', ph:['fight'], turn:'either',
+          text:'If this unit made a **charge move** this turn, this model’s melee attacks have:\n- +3 **A**.\n- +2 **S**.' },
+        { name:'Boss’ Ammo Runt', tag:'Once per battle, per unit', ph:['shooting'], turn:'your',
+          text:'In your Shooting phase, when this unit is **selected to shoot**, you can use this ability. If you do, this model’s ranged attacks have +1 to **hit rolls**.\nPlace a Boss’ Ammo Runt token next to the unit, removing it when this ability is used.' },
+        { name:'Intimidating Motivation', tag:'Once per battle round, per army', ph:['movement'], turn:'your',
+          text:'In your Movement phase, at the start or end of this unit’s move, you can select one friendly **ORKS** unit within 6" of this unit. That unit:\n- Is no longer **battle-shocked**.\n- Is **riled up** until the start of your next turn.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'melee', when:'Made a charge move this turn', note:'+3 A, +2 S', from:'Might is Right' },
+        { kind:'ranged', when:'Boss’ Ammo Runt used (your Shooting phase, when selected to shoot)', note:'+1 to hit rolls', from:'Boss’ Ammo Runt' }
+      ],
+      rules:['Da Boss','Leader','Waaagh!'],
+      kw:['Character','Faction: Orks','Grenades','Infantry','Warboss','Warlord']
+    },
+    {
+      id:'mek-tankbustas-1', name:'Mek', role:'Character', pts:215, ptsNote:'55 + Tankbustas 160',
+      leads:'Tankbustas', support:true,
+      models:['1× Mek','1× Nob','1× Tankbusta w/ Two Busta Rokkit Launchas','4× Tankbusta w/ Busta Rokkit Launcha'],
+      gear:[['Kustom Mega-slugga','Mek’s Toolz'],['Choppa','Rokkit pistol','Smash Hammer'],['Busta Rokkit Launcha','Busta Rokkit Launcha','Gitstikka'],['Busta Rokkit Launcha','Gitstikka']],
+      stats:[
+        { name:'Mek', M:'6"', T:'5', Sv:'5+', W:'4', Ld:'7+', OC:'1', InSv:'–', base:'32mm' },
+        { name:'Nob', M:'6"', T:'5', Sv:'4+', W:'3', Ld:'7+', OC:'1', InSv:'–', base:'40mm' },
+        { name:'Tankbusta ×5', M:'6"', T:'5', Sv:'4+', W:'2', Ld:'7+', OC:'1', InSv:'–', base:'32mm' }
+      ],
+      ranged:[
+        { name:'Kustom Mega-slugga', who:'Mek', range:'12"', A:'3', BS:'4+', S:'8', AP:'-2', D:'3', kw:['CLOSE-QUARTERS','HAZARDOUS','IGNORES COVER','ASSAULT'], from:{ 'IGNORES COVER':'Kustom Dakka', 'ASSAULT':'Dakka! Dakka! Dakka!' } },
+        { name:'Rokkit pistol', who:'Tankbustas', range:'12"', A:'1', BS:'4+', S:'10', AP:'-2', D:'3', kw:['CLOSE-QUARTERS','ASSAULT','IGNORES COVER'], from:{ 'ASSAULT':'Dakka! Dakka! Dakka!', 'IGNORES COVER':'Kustom Dakka' } },
+        { group:'Busta Rokkit Launcha', who:'Tankbustas', n:6, name:'Hunter', hunter:true, range:'24"', A:'3', BS:'4+', S:'12', AP:'-2', D:'3', kw:['ASSAULT','IGNORES COVER'], from:{ 'ASSAULT':'Dakka! Dakka! Dakka!', 'IGNORES COVER':'Kustom Dakka' } },
+        { group:'Busta Rokkit Launcha', who:'Tankbustas', n:6, name:'Standard', range:'24"', A:'2', BS:'4+', S:'10', AP:'-2', D:'3', kw:['ASSAULT','IGNORES COVER'], from:{ 'ASSAULT':'Dakka! Dakka! Dakka!', 'IGNORES COVER':'Kustom Dakka' } }
+      ],
+      melee:[
+        { name:'Mek’s Toolz', who:'Mek', range:'Melee', A:'3', WS:'3+', S:'5', AP:'0', D:'1', kw:[] },
+        { name:'Choppa', who:'Tankbustas', range:'Melee', A:'4', WS:'3+', S:'5', AP:'-1', D:'1', kw:[] },
+        { group:'Smash Hammer', who:'Tankbustas', name:'Hunter', hunter:true, range:'Melee', A:'3', WS:'3+', S:'12', AP:'-2', D:'3', kw:[] },
+        { group:'Smash Hammer', who:'Tankbustas', name:'Standard', range:'Melee', A:'3', WS:'3+', S:'7', AP:'-2', D:'2', kw:[] },
+        { name:'Gitstikka', who:'Tankbustas', n:5, range:'Melee', A:'3', WS:'3+', S:'5', AP:'0', D:'1', kw:[] }
+      ],
+      abilities:[
+        { name:'Clever Know-wotz', who:'Mek', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'your' },
+          text:'In your Movement phase, at the start or end of this unit’s move, you can select one friendly **ORKS VEHICLE** model (excluding **AIRCRAFT**/**TITANIC** models) within 3" of this model:\n- That **VEHICLE** model **heals** D3 wounds.\n- That **VEHICLE** model’s attacks have +1 to **hit rolls** until the start of your next Movement phase.' },
+        { name:'Kustom Dakka', who:'Mek', text:'This unit’s ranged attacks have **[IGNORES COVER]**.' },
+        { name:'Rokkit Barrage', who:'Tankbustas', ph:['shooting'], turn:'your',
+          text:'In your Shooting phase, when this unit has shot, select one enemy unit hit by those attacks. That unit makes a **battle-shock roll**, with -1 to that **battle-shock roll**.' },
+        { name:'Bomb Squig', who:'Tankbustas', tag:'Once per turn, twice per battle, per unit', ph:['movement'], turn:'your',
+          text:'In your Movement phase, when this unit ends a **normal move**, you can select one **visible** enemy unit within 12" of this unit and roll one D6:\n- On a 3+, that enemy unit suffers D3 **mortal wounds**.\n*Place two Bomb Squig tokens next to the unit, removing one each time this ability is used.*' }
+      ],
+      aura:[
+        { kind:'all', needs:{ all:['Faction: Orks','Vehicle'], none:['Aircraft','Titanic'] }, when:'Picked by a Mek’s Clever Know-wotz', note:'that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase', from:'Clever Know-wotz' }
+      ],
+      rules:['Waaagh!','Support'],
+      kw:['Character','Explosives','Faction: Orks','Infantry','Mek','Tankbustas'],
+      kwNote:'Tankbustas comes from the supported Tankbustas.'
+    },
+    {
+      id:'mek-tankbustas-2', name:'Mek', role:'Character', pts:215, ptsNote:'55 + Tankbustas 160',
+      leads:'Tankbustas', support:true,
+      models:['1× Mek','1× Nob','1× Tankbusta w/ Two Busta Rokkit Launchas','4× Tankbusta w/ Busta Rokkit Launcha'],
+      gear:[['Kustom Mega-slugga','Mek’s Toolz'],['Choppa','Rokkit pistol','Smash Hammer'],['Busta Rokkit Launcha','Busta Rokkit Launcha','Gitstikka'],['Busta Rokkit Launcha','Gitstikka']],
+      stats:[
+        { name:'Mek', M:'6"', T:'5', Sv:'5+', W:'4', Ld:'7+', OC:'1', InSv:'–', base:'32mm' },
+        { name:'Nob', M:'6"', T:'5', Sv:'4+', W:'3', Ld:'7+', OC:'1', InSv:'–', base:'40mm' },
+        { name:'Tankbusta ×5', M:'6"', T:'5', Sv:'4+', W:'2', Ld:'7+', OC:'1', InSv:'–', base:'32mm' }
+      ],
+      ranged:[
+        { name:'Kustom Mega-slugga', who:'Mek', range:'12"', A:'3', BS:'4+', S:'8', AP:'-2', D:'3', kw:['CLOSE-QUARTERS','HAZARDOUS','IGNORES COVER','ASSAULT'], from:{ 'IGNORES COVER':'Kustom Dakka', 'ASSAULT':'Dakka! Dakka! Dakka!' } },
+        { name:'Rokkit pistol', who:'Tankbustas', range:'12"', A:'1', BS:'4+', S:'10', AP:'-2', D:'3', kw:['CLOSE-QUARTERS','ASSAULT','IGNORES COVER'], from:{ 'ASSAULT':'Dakka! Dakka! Dakka!', 'IGNORES COVER':'Kustom Dakka' } },
+        { group:'Busta Rokkit Launcha', who:'Tankbustas', n:6, name:'Hunter', hunter:true, range:'24"', A:'3', BS:'4+', S:'12', AP:'-2', D:'3', kw:['ASSAULT','IGNORES COVER'], from:{ 'ASSAULT':'Dakka! Dakka! Dakka!', 'IGNORES COVER':'Kustom Dakka' } },
+        { group:'Busta Rokkit Launcha', who:'Tankbustas', n:6, name:'Standard', range:'24"', A:'2', BS:'4+', S:'10', AP:'-2', D:'3', kw:['ASSAULT','IGNORES COVER'], from:{ 'ASSAULT':'Dakka! Dakka! Dakka!', 'IGNORES COVER':'Kustom Dakka' } }
+      ],
+      melee:[
+        { name:'Mek’s Toolz', who:'Mek', range:'Melee', A:'3', WS:'3+', S:'5', AP:'0', D:'1', kw:[] },
+        { name:'Choppa', who:'Tankbustas', range:'Melee', A:'4', WS:'3+', S:'5', AP:'-1', D:'1', kw:[] },
+        { group:'Smash Hammer', who:'Tankbustas', name:'Hunter', hunter:true, range:'Melee', A:'3', WS:'3+', S:'12', AP:'-2', D:'3', kw:[] },
+        { group:'Smash Hammer', who:'Tankbustas', name:'Standard', range:'Melee', A:'3', WS:'3+', S:'7', AP:'-2', D:'2', kw:[] },
+        { name:'Gitstikka', who:'Tankbustas', n:5, range:'Melee', A:'3', WS:'3+', S:'5', AP:'0', D:'1', kw:[] }
+      ],
+      abilities:[
+        { name:'Clever Know-wotz', who:'Mek', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'your' },
+          text:'In your Movement phase, at the start or end of this unit’s move, you can select one friendly **ORKS VEHICLE** model (excluding **AIRCRAFT**/**TITANIC** models) within 3" of this model:\n- That **VEHICLE** model **heals** D3 wounds.\n- That **VEHICLE** model’s attacks have +1 to **hit rolls** until the start of your next Movement phase.' },
+        { name:'Kustom Dakka', who:'Mek', text:'This unit’s ranged attacks have **[IGNORES COVER]**.' },
+        { name:'Rokkit Barrage', who:'Tankbustas', ph:['shooting'], turn:'your',
+          text:'In your Shooting phase, when this unit has shot, select one enemy unit hit by those attacks. That unit makes a **battle-shock roll**, with -1 to that **battle-shock roll**.' },
+        { name:'Bomb Squig', who:'Tankbustas', tag:'Once per turn, twice per battle, per unit', ph:['movement'], turn:'your',
+          text:'In your Movement phase, when this unit ends a **normal move**, you can select one **visible** enemy unit within 12" of this unit and roll one D6:\n- On a 3+, that enemy unit suffers D3 **mortal wounds**.\n*Place two Bomb Squig tokens next to the unit, removing one each time this ability is used.*' }
+      ],
+      aura:[
+        { kind:'all', needs:{ all:['Faction: Orks','Vehicle'], none:['Aircraft','Titanic'] }, when:'Picked by a Mek’s Clever Know-wotz', note:'that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase', from:'Clever Know-wotz' }
+      ],
+      rules:['Waaagh!','Support'],
+      kw:['Character','Explosives','Faction: Orks','Infantry','Mek','Tankbustas'],
+      kwNote:'Tankbustas comes from the supported Tankbustas.'
+    },
+    {
+      id:'mek-flashgitz', name:'Mek', role:'Character', pts:300, ptsNote:'55 + Flash Gitz 245', upgrade:'Supa-snazz Dakka',
+      leads:'Flash Gitz', support:true,
+      models:['1× Mek','1× Kaptin','9× Flash Gitz'],
+      gear:[['Kustom Mega-slugga','Mek’s Toolz'],['Choppa','Snazzgun'],['Choppa','Snazzgun']],
+      stats:[
+        { name:'Mek', M:'6"', T:'5', Sv:'5+', W:'4', Ld:'7+', OC:'1', InSv:'–', base:'32mm' },
+        { name:'Flash Gitz', M:'6"', T:'5', Sv:'4+', W:'3', Ld:'7+', OC:'1', InSv:'–', base:'40mm' }
+      ],
+      ranged:[
+        { name:'Kustom Mega-slugga', who:'Mek', range:'12"', A:'3', BS:'4+', S:'8', AP:'-2', D:'3', kw:['CLOSE-QUARTERS','HAZARDOUS','IGNORES COVER','ASSAULT'], from:{ 'IGNORES COVER':'Kustom Dakka', 'ASSAULT':'Dakka! Dakka! Dakka!' } },
+        { group:'Snazzgun', who:'Flash Gitz', n:10, name:'Cutta', range:'12"', A:'1', BS:'4+', S:'9', AP:'-3', D:'D3+2', kw:['HAZARDOUS','MELTA 2','ASSAULT','RAPID FIRE 1','IGNORES COVER'], from:{ 'ASSAULT':'Dakka! Dakka! Dakka!', 'RAPID FIRE 1':'Supa-snazz Dakka', 'IGNORES COVER':'Kustom Dakka' } },
+        { group:'Snazzgun', who:'Flash Gitz', n:10, name:'Dakka', range:'24"', A:'3', BS:'4+', S:'6', AP:'-1', D:'2', kw:['LETHAL HITS: non-MONSTER/VEHICLE','SUSTAINED HITS 1','ASSAULT','RAPID FIRE 1','IGNORES COVER'], from:{ 'ASSAULT':'Dakka! Dakka! Dakka!', 'RAPID FIRE 1':'Supa-snazz Dakka', 'IGNORES COVER':'Kustom Dakka' } },
+        { group:'Snazzgun', who:'Flash Gitz', n:10, name:'Kill Shot', range:'36"', A:'2', BS:'4+', S:'8', AP:'-2', D:'2', kw:['HAZARDOUS','ASSAULT','RAPID FIRE 1','IGNORES COVER'], from:{ 'ASSAULT':'Dakka! Dakka! Dakka!', 'RAPID FIRE 1':'Supa-snazz Dakka', 'IGNORES COVER':'Kustom Dakka' } }
+      ],
+      melee:[
+        { name:'Mek’s Toolz', who:'Mek', range:'Melee', A:'3', WS:'3+', S:'5', AP:'0', D:'1', kw:[] },
+        { name:'Choppa', who:'Flash Gitz', n:10, range:'Melee', A:'4', WS:'3+', S:'5', AP:'-1', D:'1', kw:[] }
+      ],
+      abilities:[
+        { name:'Clever Know-wotz', who:'Mek', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'your', shooting:'your' },
+          text:'In your Movement phase, at the start or end of this unit’s move, you can select one friendly **ORKS VEHICLE** model (excluding **AIRCRAFT**/**TITANIC** models) within 3" of this model:\n- That **VEHICLE** model **heals** D3 wounds.\n- That **VEHICLE** model’s attacks have +1 to **hit rolls** until the start of your next Movement phase.' },
+        { name:'Kustom Dakka', who:'Mek', text:'This unit’s ranged attacks have **[IGNORES COVER]**.' },
+        { name:'Finderz Keeperz', who:'Flash Gitz', ph:['shooting'], turn:'your',
+          text:'In your Shooting phase, if any of the following apply, this unit’s ranged attacks have +1 **AP**.\n- This unit is within range of an **objective**.\n- The target of that attack is within range of an **objective**.' },
+        { name:'Supa-snazz Dakka', who:'Flash Gitz', tag:'Upgrade', text:'**FLASH GITZ** unit only. This unit’s Snazzgun weapons have **[RAPID FIRE 1]**.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'ranged', when:'Your Shooting phase, this unit or the target within range of an objective', note:'+1 AP', from:'Finderz Keeperz' }
+      ],
+      aura:[
+        { kind:'all', needs:{ all:['Faction: Orks','Vehicle'], none:['Aircraft','Titanic'] }, when:'Picked by a Mek’s Clever Know-wotz', note:'that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase', from:'Clever Know-wotz' }
+      ],
+      rules:['Waaagh!','Support'],
+      kw:['Character','Explosives','Faction: Orks','Infantry','Mek','Flash Gitz'],
+      kwNote:'Flash Gitz comes from the supported Flash Gitz.'
+    },
+    {
+      id:'gretchin', name:'Gretchin', role:'Infantry', pts:45, copies:3,
+      models:['10× Gretchin'], gear:[['Grot Blasta','Scavenged Shivs']],
+      stats:[{ name:'Gretchin ×10', M:'6"', T:'2', Sv:'6+', W:'1', Ld:'8+', OC:'1', InSv:'–', base:'25mm' }],
+      ranged:[
+        { name:'Grot Blasta', n:10, range:'12"', A:'1', BS:'4+', S:'3', AP:'0', D:'1', kw:['CLOSE-QUARTERS','ASSAULT'], from:{ 'ASSAULT':'Dakka! Dakka! Dakka!' } }
       ],
       melee:[
         { name:'Scavenged Shivs', n:10, range:'Melee', A:'1', WS:'5+', S:'2', AP:'0', D:'1', kw:[] }
@@ -1077,9 +1454,9 @@ const ARMIES = [
         { name:'Bolt pistol', who:'Khorne Berzerkers', n:7, range:'12"', A:'1', BS:'4+', S:'5', AP:'-1', D:'1', kw:['PISTOL'] }
       ],
       melee:[
-        { name:'Gorechild', who:'Khârn the Betrayer', range:'Melee', A:'9', WS:'2+', S:'7', AP:'-2', D:'3', kw:[] },
-        { name:'Chainblade', who:'Khorne Berzerkers', n:8, range:'Melee', A:'5', WS:'3+', S:'5', AP:'-1', D:'1', kw:[] },
-        { name:'Khornate eviscerator', who:'Khorne Berzerkers', n:2, range:'Melee', A:'4', WS:'3+', S:'8', AP:'-2', D:'2', kw:[] }
+        { name:'Gorechild', who:'Khârn the Betrayer', range:'Melee', A:'9', WS:'2+', S:'7', AP:'-2', D:'3', kw:[], from:{ 'A':'Relentless Rage' } },
+        { name:'Chainblade', who:'Khorne Berzerkers', n:8, range:'Melee', A:'5', WS:'3+', S:'5', AP:'-1', D:'1', kw:[], from:{ 'A':'Relentless Rage' } },
+        { name:'Khornate eviscerator', who:'Khorne Berzerkers', n:2, range:'Melee', A:'4', WS:'3+', S:'8', AP:'-2', D:'2', kw:[], from:{ 'A':'Relentless Rage' } }
       ],
       abilities:[
         { name:'Legendary Killer', who:'Khârn the Betrayer', ph:['fight'], turn:'either',
@@ -1113,8 +1490,8 @@ const ARMIES = [
         { name:'Infernal cannon', range:'24"', A:'3', BS:'3+', S:'5', AP:'-1', D:'2', kw:['RAPID FIRE 1'] }
       ],
       melee:[
-        { group:'Hellforged weapons', name:'strike', range:'Melee', A:'9', WS:'2+', S:'8', AP:'-2', D:'3', kw:[] },
-        { group:'Hellforged weapons', name:'sweep', range:'Melee', A:'17', WS:'2+', S:'6', AP:'-1', D:'1', kw:[] }
+        { group:'Hellforged weapons', name:'strike', range:'Melee', A:'9', WS:'2+', S:'8', AP:'-2', D:'3', kw:[], from:{ 'A':'Relentless Rage' } },
+        { group:'Hellforged weapons', name:'sweep', range:'Melee', A:'17', WS:'2+', S:'6', AP:'-1', D:'1', kw:[], from:{ 'A':'Relentless Rage' } }
       ],
       abilities:[
         { name:'Lord of Murder', def:'Lone Operative while within 3" of a friendly WORLD EATERS INFANTRY unit',
@@ -1141,10 +1518,9 @@ const ARMIES = [
         { name:'Infernal cannon', range:'24"', A:'3', BS:'3+', S:'5', AP:'-1', D:'2', kw:['RAPID FIRE 1'] }
       ],
       melee:[
-        { group:'Hellforged weapons', name:'strike', range:'Melee', A:'10', WS:'2+', S:'8', AP:'-2', D:'4', kw:[] },
-        { group:'Hellforged weapons', name:'sweep', range:'Melee', A:'18', WS:'2+', S:'6', AP:'-1', D:'2', kw:[] }
+        { group:'Hellforged weapons', name:'strike', range:'Melee', A:'10', WS:'2+', S:'8', AP:'-2', D:'4', kw:[], from:{ 'A':['Berzerker Glaive','Relentless Rage'], 'D':'Berzerker Glaive' } },
+        { group:'Hellforged weapons', name:'sweep', range:'Melee', A:'18', WS:'2+', S:'6', AP:'-1', D:'2', kw:[], from:{ 'A':['Berzerker Glaive','Relentless Rage'], 'D':'Berzerker Glaive' } }
       ],
-      boostNote:'Hellforged weapons A and D already include +1 from Berzerker Glaive.',
       abilities:[
         { name:'Lord of Murder', def:'Lone Operative while within 3" of a friendly WORLD EATERS INFANTRY unit',
           text:'While this model is within 3" of one or more friendly **WORLD EATERS INFANTRY** units, this model has the **Lone Operative** ability.' },
@@ -1169,9 +1545,8 @@ const ARMIES = [
       gear:[['Bladed horn','Exalted chainblade','Plasma pistol'],['Chainblade','Plasma pistol'],['Bolt pistol','Chainblade'],['Khornate eviscerator','Plasma pistol'],['Khornate eviscerator','Plasma pistol']],
       stats:[
         { name:'Lord on Juggernaut', M:'10"', T:'6', Sv:'3+', W:'7', Ld:'6+', OC:'2', InSv:'4+', base:'90×52.5mm' },
-        { name:'Khorne Berzerker ×20', M:'10"', T:'5', Sv:'3+', W:'2', Ld:'6+', OC:'2', InSv:'–', base:'32mm' }
+        { name:'Khorne Berzerker ×20', M:'10"', T:'5', Sv:'3+', W:'2', Ld:'6+', OC:'2', InSv:'–', base:'32mm', from:{ 'M':'Aggressive Advance' } }
       ],
-      boostNote:'Khorne Berzerker M 10" already includes Aggressive Advance.',
       ranged:[
         { group:'Plasma pistol', who:'Lord on Juggernaut', name:'standard', range:'12"', A:'1', BS:'3+', S:'7', AP:'-2', D:'1', kw:['PISTOL'] },
         { group:'Plasma pistol', who:'Lord on Juggernaut', name:'supercharge', range:'12"', A:'1', BS:'3+', S:'8', AP:'-3', D:'2', kw:['HAZARDOUS','PISTOL'] },
@@ -1180,10 +1555,10 @@ const ARMIES = [
         { name:'Bolt pistol', who:'Khorne Berzerkers', n:15, range:'12"', A:'1', BS:'4+', S:'5', AP:'-1', D:'1', kw:['PISTOL'] }
       ],
       melee:[
-        { name:'Bladed horn', who:'Lord on Juggernaut', range:'Melee', A:'5', WS:'3+', S:'6', AP:'-1', D:'2', kw:['EXTRA ATTACKS','LANCE'] },
-        { name:'Exalted chainblade', who:'Lord on Juggernaut', range:'Melee', A:'8', WS:'2+', S:'6', AP:'-1', D:'2', kw:[] },
-        { name:'Chainblade', who:'Khorne Berzerkers', n:16, range:'Melee', A:'5', WS:'3+', S:'5', AP:'-1', D:'1', kw:[] },
-        { name:'Khornate eviscerator', who:'Khorne Berzerkers', n:4, range:'Melee', A:'4', WS:'3+', S:'8', AP:'-2', D:'2', kw:[] }
+        { name:'Bladed horn', who:'Lord on Juggernaut', range:'Melee', A:'5', WS:'3+', S:'6', AP:'-1', D:'2', kw:['EXTRA ATTACKS','LANCE'], from:{ 'A':'Relentless Rage' } },
+        { name:'Exalted chainblade', who:'Lord on Juggernaut', range:'Melee', A:'8', WS:'2+', S:'6', AP:'-1', D:'2', kw:[], from:{ 'A':'Relentless Rage' } },
+        { name:'Chainblade', who:'Khorne Berzerkers', n:16, range:'Melee', A:'5', WS:'3+', S:'5', AP:'-1', D:'1', kw:[], from:{ 'A':'Relentless Rage' } },
+        { name:'Khornate eviscerator', who:'Khorne Berzerkers', n:4, range:'Melee', A:'4', WS:'3+', S:'8', AP:'-2', D:'2', kw:[], from:{ 'A':'Relentless Rage' } }
       ],
       abilities:[
         { name:'Aggressive Advance', who:'Lord on Juggernaut', ph:['movement','charge'], turn:'your', turns:{ charge:'either' },
@@ -1218,8 +1593,8 @@ const ARMIES = [
         { name:'Exalted Eightbound ×3', M:'10"', T:'6', Sv:'3+', W:'3', Ld:'6+', OC:'1', InSv:'5+', base:'40mm' }
       ],
       melee:[
-        { name:'Lacerator and daemonic claw', who:'Slaughterbound', range:'Melee', A:'7', WS:'2+', S:'10', AP:'-2', D:'2', kw:[] },
-        { name:'Chainblades', who:'Exalted Eightbound', n:3, range:'Melee', A:'5', WS:'3+', S:'8', AP:'-3', D:'2', kw:['ANTI-MONSTER 3+','ANTI-VEHICLE 3+'] }
+        { name:'Lacerator and daemonic claw', who:'Slaughterbound', range:'Melee', A:'7', WS:'2+', S:'10', AP:'-2', D:'2', kw:[], from:{ 'A':'Relentless Rage' } },
+        { name:'Chainblades', who:'Exalted Eightbound', n:3, range:'Melee', A:'5', WS:'3+', S:'8', AP:'-3', D:'2', kw:['ANTI-MONSTER 3+','ANTI-VEHICLE 3+'], from:{ 'A':'Relentless Rage' } }
       ],
       abilities:[
         { name:'Rage Eternal', who:'Slaughterbound', ph:['command'], turn:'your',
@@ -1248,7 +1623,7 @@ const ARMIES = [
       models:['1× Eightbound Champion','2× Eightbound'], gear:[['Chainblades'],['Chainblades']],
       stats:[{ name:'Eightbound ×3', M:'10"', T:'6', Sv:'3+', W:'3', Ld:'6+', OC:'1', InSv:'5+', base:'40mm' }],
       melee:[
-        { name:'Chainblades', n:3, range:'Melee', A:'6', WS:'3+', S:'8', AP:'-2', D:'2', kw:[] }
+        { name:'Chainblades', n:3, range:'Melee', A:'6', WS:'3+', S:'8', AP:'-2', D:'2', kw:[], from:{ 'A':'Relentless Rage' } }
       ],
       abilities:[
         { name:'Beacons of Rage', tag:'Aura', ph:['fight'], turn:'either',
@@ -1271,8 +1646,8 @@ const ARMIES = [
         { name:'Autopistol', n:9, range:'12"', A:'1', BS:'4+', S:'3', AP:'0', D:'1', kw:['PISTOL'] }
       ],
       melee:[
-        { name:'Chainblades', n:9, range:'Melee', A:'4', WS:'4+', S:'3', AP:'0', D:'1', kw:[] },
-        { name:'Paired manglers', range:'Melee', A:'5', WS:'4+', S:'4', AP:'0', D:'1', kw:[] }
+        { name:'Chainblades', n:9, range:'Melee', A:'4', WS:'4+', S:'3', AP:'0', D:'1', kw:[], from:{ 'A':'Relentless Rage' } },
+        { name:'Paired manglers', range:'Melee', A:'5', WS:'4+', S:'4', AP:'0', D:'1', kw:[], from:{ 'A':'Relentless Rage' } }
       ],
       abilities:[
         { name:'Objective Ravaged', ph:['command'], turn:'your',
@@ -1290,7 +1665,7 @@ const ARMIES = [
         { name:'Ectoplasma cannon', range:'36"', A:'D3', BS:'4+', S:'10', AP:'-3', D:'3', kw:['BLAST','RAPID FIRE 1'] }
       ],
       melee:[
-        { name:'Forgefiend claws', range:'Melee', A:'7', WS:'3+', S:'6', AP:'0', D:'1', kw:[] }
+        { name:'Forgefiend claws', range:'Melee', A:'7', WS:'3+', S:'6', AP:'0', D:'1', kw:[], from:{ 'A':'Relentless Rage' } }
       ],
       abilities:[
         { name:'Furious Onslaught', ph:['movement','shooting'], turn:'either', turns:{ movement:'opp', shooting:'your' },
@@ -1314,7 +1689,7 @@ const ARMIES = [
         { name:'Combi-bolter', range:'24"', A:'2', BS:'4+', S:'5', AP:'-1', D:'1', kw:['RAPID FIRE 4'] }
       ],
       melee:[
-        { name:'Armoured tracks', range:'Melee', A:'7', WS:'3+', S:'6', AP:'0', D:'1', kw:[] }
+        { name:'Armoured tracks', range:'Melee', A:'7', WS:'3+', S:'6', AP:'0', D:'1', kw:[], from:{ 'A':'Relentless Rage' } }
       ],
       abilities:[
         { name:'Meet Any Challenge', ph:['movement'], turn:'opp',
@@ -1370,14 +1745,13 @@ const ARMIES = [
       id:'daemon-prince', name:'Daemon Prince of Tzeentch with wings', role:'Character', pts:205, enhancement:'Eldritch Vortex of E’taph',
       models:['1× Daemon Prince of Tzeentch with wings'], gear:[['Dark Blessing','Hellforged weapons','Infernal cannon']],
       stats:[{ name:'Daemon Prince of Tzeentch with wings', M:'13"', T:'9', Sv:'2+', W:'10', Ld:'6+', OC:'3', InSv:'4+', base:'60mm' }],
-      boostNote:'S and D of Dark Blessing and Hellforged weapons already include +1 from Eldritch Vortex of E’taph.',
       ranged:[
-        { name:'Dark Blessing', range:'24"', A:'9', BS:'2+', S:'5', AP:'-1', D:'2', kw:['IGNORES COVER','PSYCHIC','SUSTAINED HITS 1'] },
+        { name:'Dark Blessing', range:'24"', A:'9', BS:'2+', S:'5', AP:'-1', D:'2', kw:['IGNORES COVER','PSYCHIC','SUSTAINED HITS 1'], from:{ 'S':'Eldritch Vortex of E’taph', 'D':'Eldritch Vortex of E’taph' } },
         { name:'Infernal cannon', range:'24"', A:'3', BS:'2+', S:'5', AP:'-2', D:'2', kw:[] }
       ],
       melee:[
-        { group:'Hellforged weapons', name:'strike', range:'Melee', A:'6', WS:'2+', S:'9', AP:'-2', D:'4', kw:['DEVASTATING WOUNDS','PSYCHIC'] },
-        { group:'Hellforged weapons', name:'sweep', range:'Melee', A:'12', WS:'2+', S:'7', AP:'-1', D:'2', kw:['DEVASTATING WOUNDS','PSYCHIC'] }
+        { group:'Hellforged weapons', name:'strike', range:'Melee', A:'6', WS:'2+', S:'9', AP:'-2', D:'4', kw:['DEVASTATING WOUNDS','PSYCHIC'], from:{ 'S':'Eldritch Vortex of E’taph', 'D':'Eldritch Vortex of E’taph' } },
+        { group:'Hellforged weapons', name:'sweep', range:'Melee', A:'12', WS:'2+', S:'7', AP:'-1', D:'2', kw:['DEVASTATING WOUNDS','PSYCHIC'], from:{ 'S':'Eldritch Vortex of E’taph', 'D':'Eldritch Vortex of E’taph' } }
       ],
       abilities:[
         { name:'Aetherstride', tag:'Psychic', ph:['movement','shooting','charge'], turn:'your', keep:true,
@@ -1404,20 +1778,19 @@ const ARMIES = [
         { name:'Rubric Marine ×4', M:'6"', T:'5', Sv:'3+', W:'2', Ld:'7+', OC:'2', InSv:'5+', base:'32mm' },
         { name:'Aspiring Sorcerer', M:'6"', T:'5', Sv:'3+', W:'3', Ld:'6+', OC:'2', InSv:'5+', base:'32mm' }
       ],
-      boostNote:'[LETHAL HITS] on every weapon comes from Empyric Guidance (while the Sorcerer leads); [IGNORES COVER] on Malefic Curse and the soulreaper cannon comes from the Icon of Flame (the warpflamers and warpflame pistol have it on their own profile).',
       ranged:[
-        { name:'Inferno bolt pistol', who:'Sorcerer', range:'12"', A:'1', BS:'3+', S:'5', AP:'-2', D:'1', kw:['PISTOL','LETHAL HITS'] },
-        { name:'Pandaemonic Delusion', who:'Sorcerer', range:'24"', A:'6', BS:'3+', S:'5', AP:'-1', D:'1', kw:['PSYCHIC','SUSTAINED HITS 3','LETHAL HITS'] },
-        { name:'Malefic Curse', who:'Rubric Marines', range:'24"', A:'3', BS:'3+', S:'4', AP:'-3', D:'1', kw:['ANTI-INFANTRY 4+','DEVASTATING WOUNDS','IGNORES COVER','PSYCHIC','LETHAL HITS'] },
-        { name:'Warpflame pistol', who:'Rubric Marines', range:'12"', A:'D6', BS:'–', S:'3', AP:'-1', D:'1', kw:['IGNORES COVER','PISTOL','TORRENT','LETHAL HITS'] },
-        { name:'Soulreaper cannon', who:'Rubric Marines', range:'24"', A:'6', BS:'3+', S:'6', AP:'-2', D:'1', kw:['DEVASTATING WOUNDS','IGNORES COVER','LETHAL HITS'] },
-        { name:'Warpflamer', who:'Rubric Marines', n:3, range:'12"', A:'D6', BS:'–', S:'4', AP:'-1', D:'1', kw:['IGNORES COVER','TORRENT','LETHAL HITS'] }
+        { name:'Inferno bolt pistol', who:'Sorcerer', range:'12"', A:'1', BS:'3+', S:'5', AP:'-2', D:'1', kw:['PISTOL','LETHAL HITS'], from:{ 'LETHAL HITS':'Empyric Guidance' } },
+        { name:'Pandaemonic Delusion', who:'Sorcerer', range:'24"', A:'6', BS:'3+', S:'5', AP:'-1', D:'1', kw:['PSYCHIC','SUSTAINED HITS 3','LETHAL HITS'], from:{ 'LETHAL HITS':'Empyric Guidance' } },
+        { name:'Malefic Curse', who:'Rubric Marines', range:'24"', A:'3', BS:'3+', S:'4', AP:'-3', D:'1', kw:['ANTI-INFANTRY 4+','DEVASTATING WOUNDS','IGNORES COVER','PSYCHIC','LETHAL HITS'], from:{ 'IGNORES COVER':'Icon of Flame', 'LETHAL HITS':'Empyric Guidance' } },
+        { name:'Warpflame pistol', who:'Rubric Marines', range:'12"', A:'D6', BS:'–', S:'3', AP:'-1', D:'1', kw:['IGNORES COVER','PISTOL','TORRENT','LETHAL HITS'], from:{ 'LETHAL HITS':'Empyric Guidance' } },
+        { name:'Soulreaper cannon', who:'Rubric Marines', range:'24"', A:'6', BS:'3+', S:'6', AP:'-2', D:'1', kw:['DEVASTATING WOUNDS','IGNORES COVER','LETHAL HITS'], from:{ 'IGNORES COVER':'Icon of Flame', 'LETHAL HITS':'Empyric Guidance' } },
+        { name:'Warpflamer', who:'Rubric Marines', n:3, range:'12"', A:'D6', BS:'–', S:'4', AP:'-1', D:'1', kw:['IGNORES COVER','TORRENT','LETHAL HITS'], from:{ 'LETHAL HITS':'Empyric Guidance' } }
       ],
       melee:[
-        { name:'Force weapon', who:'Sorcerer', range:'Melee', A:'4', WS:'3+', S:'6', AP:'-1', D:'D3', kw:['PSYCHIC','LETHAL HITS'] },
-        { name:'Prosperine khopesh', who:'Sorcerer', range:'Melee', A:'3', WS:'3+', S:'5', AP:'-2', D:'2', kw:['LETHAL HITS'] },
-        { name:'Force weapon', who:'Rubric Marines', range:'Melee', A:'3', WS:'3+', S:'6', AP:'-1', D:'D3', kw:['PSYCHIC','LETHAL HITS'] },
-        { name:'Close combat weapon', who:'Rubric Marines', n:4, range:'Melee', A:'2', WS:'3+', S:'5', AP:'0', D:'1', kw:['LETHAL HITS'] }
+        { name:'Force weapon', who:'Sorcerer', range:'Melee', A:'4', WS:'3+', S:'6', AP:'-1', D:'D3', kw:['PSYCHIC','LETHAL HITS'], from:{ 'LETHAL HITS':'Empyric Guidance' } },
+        { name:'Prosperine khopesh', who:'Sorcerer', range:'Melee', A:'3', WS:'3+', S:'5', AP:'-2', D:'2', kw:['LETHAL HITS'], from:{ 'LETHAL HITS':'Empyric Guidance' } },
+        { name:'Force weapon', who:'Rubric Marines', range:'Melee', A:'3', WS:'3+', S:'6', AP:'-1', D:'D3', kw:['PSYCHIC','LETHAL HITS'], from:{ 'LETHAL HITS':'Empyric Guidance' } },
+        { name:'Close combat weapon', who:'Rubric Marines', n:4, range:'Melee', A:'2', WS:'3+', S:'5', AP:'0', D:'1', kw:['LETHAL HITS'], from:{ 'LETHAL HITS':'Empyric Guidance' } }
       ],
       abilities:[
         { name:'Twisted Sorceries', who:'Sorcerer', tag:'Once per battle · Psychic', ph:['shooting','fight'], turn:'either', turns:{ shooting:'your' },
@@ -1451,19 +1824,18 @@ const ARMIES = [
         { name:'Scarab Occult Sorcerer', M:'5"', T:'6', Sv:'2+', W:'4', Ld:'6+', OC:'1', InSv:'4+', base:'40mm' },
         { name:'Scarab Occult Terminator ×9', M:'5"', T:'6', Sv:'2+', W:'3', Ld:'7+', OC:'1', InSv:'4+', base:'40mm' }
       ],
-      boostNote:'[LETHAL HITS] on every weapon comes from Empyric Guidance (while the Sorcerer leads).',
       ranged:[
-        { name:'Gaze of Hate', who:'Sorcerer in Terminator Armour', range:'18"', A:'3', BS:'3+', S:'4', AP:'-3', D:'2', kw:['ANTI-MONSTER 4+','ANTI-VEHICLE 4+','DEVASTATING WOUNDS','PSYCHIC','LETHAL HITS'] },
-        { name:'Inferno combi-bolter', who:'Sorcerer in Terminator Armour', range:'24"', A:'2', BS:'3+', S:'5', AP:'-2', D:'1', kw:['RAPID FIRE 2','LETHAL HITS'] },
-        { name:'Malefic Curse', who:'Scarab Occult Terminators', range:'24"', A:'3', BS:'3+', S:'4', AP:'-3', D:'1', kw:['ANTI-INFANTRY 4+','DEVASTATING WOUNDS','PSYCHIC','LETHAL HITS'] },
-        { name:'Inferno combi-bolter', who:'Scarab Occult Terminators', n:8, range:'24"', A:'2', BS:'3+', S:'5', AP:'-2', D:'1', kw:['RAPID FIRE 2','LETHAL HITS'] },
-        { name:'Soulreaper cannon', who:'Scarab Occult Terminators', n:2, range:'24"', A:'6', BS:'3+', S:'6', AP:'-2', D:'1', kw:['DEVASTATING WOUNDS','LETHAL HITS'] },
-        { name:'Hellfyre missile rack', who:'Scarab Occult Terminators', n:2, range:'36"', A:'2', BS:'3+', S:'10', AP:'-2', D:'3', kw:['LETHAL HITS'] }
+        { name:'Gaze of Hate', who:'Sorcerer in Terminator Armour', range:'18"', A:'3', BS:'3+', S:'4', AP:'-3', D:'2', kw:['ANTI-MONSTER 4+','ANTI-VEHICLE 4+','DEVASTATING WOUNDS','PSYCHIC','LETHAL HITS'], from:{ 'LETHAL HITS':'Empyric Guidance' } },
+        { name:'Inferno combi-bolter', who:'Sorcerer in Terminator Armour', range:'24"', A:'2', BS:'3+', S:'5', AP:'-2', D:'1', kw:['RAPID FIRE 2','LETHAL HITS'], from:{ 'LETHAL HITS':'Empyric Guidance' } },
+        { name:'Malefic Curse', who:'Scarab Occult Terminators', range:'24"', A:'3', BS:'3+', S:'4', AP:'-3', D:'1', kw:['ANTI-INFANTRY 4+','DEVASTATING WOUNDS','PSYCHIC','LETHAL HITS'], from:{ 'LETHAL HITS':'Empyric Guidance' } },
+        { name:'Inferno combi-bolter', who:'Scarab Occult Terminators', n:8, range:'24"', A:'2', BS:'3+', S:'5', AP:'-2', D:'1', kw:['RAPID FIRE 2','LETHAL HITS'], from:{ 'LETHAL HITS':'Empyric Guidance' } },
+        { name:'Soulreaper cannon', who:'Scarab Occult Terminators', n:2, range:'24"', A:'6', BS:'3+', S:'6', AP:'-2', D:'1', kw:['DEVASTATING WOUNDS','LETHAL HITS'], from:{ 'LETHAL HITS':'Empyric Guidance' } },
+        { name:'Hellfyre missile rack', who:'Scarab Occult Terminators', n:2, range:'36"', A:'2', BS:'3+', S:'10', AP:'-2', D:'3', kw:['LETHAL HITS'], from:{ 'LETHAL HITS':'Empyric Guidance' } }
       ],
       melee:[
-        { name:'Force weapon', who:'Sorcerer in Terminator Armour', range:'Melee', A:'5', WS:'3+', S:'6', AP:'-1', D:'D3', kw:['PSYCHIC','LETHAL HITS'] },
-        { name:'Force weapon', who:'Scarab Occult Terminators', range:'Melee', A:'4', WS:'3+', S:'6', AP:'-1', D:'D3', kw:['PSYCHIC','LETHAL HITS'] },
-        { name:'Prosperine khopesh', who:'Scarab Occult Terminators', n:9, range:'Melee', A:'3', WS:'3+', S:'5', AP:'-2', D:'2', kw:['LETHAL HITS'] }
+        { name:'Force weapon', who:'Sorcerer in Terminator Armour', range:'Melee', A:'5', WS:'3+', S:'6', AP:'-1', D:'D3', kw:['PSYCHIC','LETHAL HITS'], from:{ 'LETHAL HITS':'Empyric Guidance' } },
+        { name:'Force weapon', who:'Scarab Occult Terminators', range:'Melee', A:'4', WS:'3+', S:'6', AP:'-1', D:'D3', kw:['PSYCHIC','LETHAL HITS'], from:{ 'LETHAL HITS':'Empyric Guidance' } },
+        { name:'Prosperine khopesh', who:'Scarab Occult Terminators', n:9, range:'Melee', A:'3', WS:'3+', S:'5', AP:'-2', D:'2', kw:['LETHAL HITS'], from:{ 'LETHAL HITS':'Empyric Guidance' } }
       ],
       abilities:[
         { name:'Marked by Fate', who:'Sorcerer in Terminator Armour', tag:'Psychic', ph:['shooting'], turn:'your',
@@ -1645,8 +2017,7 @@ const ARMIES = [
       id:'norn-assimilator-280', name:'Norn Assimilator', short:'Assimilator (280)', role:'Monster', pts:280, enhancement:'Synaptoprescience',
       models:['1× Norn Assimilator'],
       gear:[['Monstrous scything talons','Toxinjecter Harpoon']],
-      stats:[{ name:'Norn Assimilator', M:'10"', T:'11', Sv:'2+', W:'16', Ld:'7+', OC:'5', InSv:'4+', base:'100mm' }],
-      boostNote:'InSv already includes the 4+ from Synaptoprescience.',
+      stats:[{ name:'Norn Assimilator', M:'10"', T:'11', Sv:'2+', W:'16', Ld:'7+', OC:'5', InSv:'4+', base:'100mm', from:{ 'InSv':'Synaptoprescience' } }],
       ranged:[
         { name:'Toxinjecter Harpoon', range:'12"', A:'2', BS:'2+', S:'12', AP:'-3', D:'D6+1', kw:['HARPOONED'] }
       ],
@@ -1678,8 +2049,7 @@ const ARMIES = [
       id:'norn-assimilator-300', name:'Norn Assimilator', short:'Assimilator (300)', role:'Monster', pts:300, enhancement:'Synaptoprescience',
       models:['1× Norn Assimilator'],
       gear:[['Monstrous scything talons','Toxinjecter Harpoon']],
-      stats:[{ name:'Norn Assimilator', M:'10"', T:'11', Sv:'2+', W:'16', Ld:'7+', OC:'5', InSv:'4+', base:'100mm' }],
-      boostNote:'InSv already includes the 4+ from Synaptoprescience.',
+      stats:[{ name:'Norn Assimilator', M:'10"', T:'11', Sv:'2+', W:'16', Ld:'7+', OC:'5', InSv:'4+', base:'100mm', from:{ 'InSv':'Synaptoprescience' } }],
       ranged:[
         { name:'Toxinjecter Harpoon', range:'12"', A:'2', BS:'2+', S:'12', AP:'-3', D:'D6+1', kw:['HARPOONED'] }
       ],
@@ -1712,11 +2082,10 @@ const ARMIES = [
       models:['1× Norn Emissary'],
       gear:[['Monstrous rending claws','Monstrous scything talons','Psychic tendril']],
       stats:[{ name:'Norn Emissary', M:'10"', T:'11', Sv:'2+', W:'16', Ld:'7+', OC:'5', InSv:'4+', base:'100mm' }],
-      boostNote:'Ranged keywords already include [ANTI-CHARACTER 2+] from Destabilising Predation.',
       ranged:[
-        { group:'Psychic tendril', name:'neuroparasite', range:'18"', A:'2', BS:'2+', S:'8', AP:'-2', D:'D3', kw:['PRECISION','PSYCHIC','ANTI-CHARACTER 2+'] },
-        { group:'Psychic tendril', name:'neurolance', range:'18"', A:'2', BS:'2+', S:'12', AP:'-3', D:'D6', kw:['MELTA 2','PSYCHIC','ANTI-CHARACTER 2+'] },
-        { group:'Psychic tendril', name:'neuroblast', range:'18"', A:'2D6', BS:'2+', S:'6', AP:'-2', D:'1', kw:['BLAST','PSYCHIC','ANTI-CHARACTER 2+'] }
+        { group:'Psychic tendril', name:'neuroparasite', range:'18"', A:'2', BS:'2+', S:'8', AP:'-2', D:'D3', kw:['PRECISION','PSYCHIC','ANTI-CHARACTER 2+'], from:{ 'ANTI-CHARACTER 2+':'Destabilising Predation' } },
+        { group:'Psychic tendril', name:'neurolance', range:'18"', A:'2', BS:'2+', S:'12', AP:'-3', D:'D6', kw:['MELTA 2','PSYCHIC','ANTI-CHARACTER 2+'], from:{ 'ANTI-CHARACTER 2+':'Destabilising Predation' } },
+        { group:'Psychic tendril', name:'neuroblast', range:'18"', A:'2D6', BS:'2+', S:'6', AP:'-2', D:'1', kw:['BLAST','PSYCHIC','ANTI-CHARACTER 2+'], from:{ 'ANTI-CHARACTER 2+':'Destabilising Predation' } }
       ],
       melee:[
         { name:'Monstrous rending claws', range:'Melee', A:'4', WS:'2+', S:'7', AP:'-2', D:'2', kw:['EXTRA ATTACKS'] },
@@ -1806,5 +2175,5 @@ const ARMIES = [
 // core terms (not abilities): kept out of a unit's rule list and the glossary of rules units have
 const CONCEPTS = ['Hazard Roll','Mortal Wounds','Battle-shock','Engagement','Selected to Attack','Destroyed','Normal Move','Advance Move','Fall-back Move','Charge','Charge Move','Pile-in Move','Consolidation Move','Benefit of Cover','Strategic Reserves','Ingress Move','Surge Move','Scout Move','Starting Strength','Select Weapons'];
 
-return { version:VERSION, concepts:CONCEPTS, rules:RULES, ruleAliases:RULE_ALIASES, coreStratagems:CORE_STRATAGEMS, factions:FACTIONS, armies:ARMIES };
+return { version:VERSION, concepts:CONCEPTS, rules:RULES, ruleSrc:RULE_SRC, ruleAliases:RULE_ALIASES, coreStratagems:CORE_STRATAGEMS, factions:FACTIONS, armies:ARMIES };
 })();

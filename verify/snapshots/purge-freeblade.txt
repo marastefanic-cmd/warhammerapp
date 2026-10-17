@@ -37,7 +37,8 @@ Code Chivalric · Imperial Knights army rule
 DECLARE BATTLE FORMATIONS
 RESERVES
 Strategic reserves: unless otherwise stated, up to 1000 pts (50% of the 2000 limit), counting units embarked within a TRANSPORT you place there. Unless otherwise stated, they can only arrive from the second battle round onwards, and any that have not arrived by the end of round 3 are destroyed (not repositioned units, nor units embarked within a TRANSPORT that arrived).
-ONCE PER BATTLE
+USES PER BATTLE
+NEW GAME
 STRATA­GEMS
 1CP Insane Bravery
 
@@ -3889,33 +3890,6 @@ That unit is at, or below, half-strength.
 
 If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
 
-######## popup rule:battle-shocked · PURGE FREEBLADE Purge Freeblade
-CORE RULE
-
-Battle-shock
-
-01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
-
-01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
-
-If that roll succeeds, that unit does not become battle-shocked.
-If that roll fails, that unit, and each model in it, is battle-shocked.
-
-While a unit is battle-shocked:
-
-The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
-Its controlling player cannot target that unit with stratagems (15).
-It is not eligible to start an action (16), and any action it has started cannot be completed.
-
-01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
-
-08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
-
-That unit is currently battle-shocked.
-That unit is at, or below, half-strength.
-
-If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
-
 ######## popup rule:benefit of cover · PURGE FREEBLADE Purge Freeblade
 CORE RULE
 
@@ -4019,41 +3993,21 @@ This ability always takes the form Deadly Demise X. Each time a model in this un
 
 IN THIS ARMYKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
 
-######## popup rule:desperate escape · PURGE FREEBLADE Purge Freeblade
+######## popup rule:declares a charge · PURGE FREEBLADE Purge Freeblade
 CORE RULE
 
-Fall-back Move
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
 
-MAXIMUM DISTANCE: Your unit’s M characteristic.
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
 
-ELIGIBLE IF: Your unit is engaged.
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
 
-EFFECT: Your unit moves as described in Moving (03).
-
-BEFORE MOVING: Select fall-back mode:
-
-Ordered Retreat: If your unit is not battle-shocked, you can select this mode.
-Desperate Escape: Otherwise, you must select this mode. Make a hazard roll for each model in your unit (06.03).
-
-WHILE MOVING:
-
-Desperate Escape: Each model that is moved can be moved through enemy models.
-
-AFTER MOVING:
-
-Your unit must be unengaged.
-Until the end of the turn, unless otherwise stated, your unit is not eligible to shoot, declare a charge or start an action.
-Desperate Escape: If your unit is not battle-shocked, you must make a battle-shock roll for your unit (01.07).
-
-Desperate Escape Test (app): Some rules may reference the term ‘Desperate Escape test’. In all instances this means the hazard rolls made for the desperate escape mode of a fall-back move.
-
-Abilities that subtract from a unit’s Desperate Escape test instead subtract from those hazard rolls.
-
-If a stratagem or ability instructs a unit to make a Desperate Escape test, that unit:
-
-Must use the desperate escape mode when it is selected to make a fall-back move.
-Must make one hazard roll for each model in that unit.
-Must make a battle-shock roll.
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
 ######## popup rule:destroyed · PURGE FREEBLADE Purge Freeblade
 CORE RULE
@@ -4115,19 +4069,6 @@ If a stratagem or ability instructs a unit to make a Desperate Escape test, that
 Must use the desperate escape mode when it is selected to make a fall-back move.
 Must make one hazard roll for each model in that unit.
 Must make a battle-shock roll.
-
-######## popup rule:hazard rolls · PURGE FREEBLADE Purge Freeblade
-CORE RULE
-
-Hazard Roll
-
-To make a hazard roll for a unit, roll one D6: on a 1-2, that roll fails and that unit suffers 1 mortal wound (see above), or 3 mortal wounds instead if each model in that unit is a MONSTER/VEHICLE model. If more than one hazard roll is required for a unit, make all of those rolls simultaneously.
-
-06.03.01 Hazardous Test (app): The term ‘Hazardous test’ is the same as hazard roll.
-
-Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model in the unit make a hazard roll? No, the unit would make 1 single hazard roll.
-
-Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
 
 ######## popup rule:ingress move · PURGE FREEBLADE Purge Freeblade
 CORE RULE
