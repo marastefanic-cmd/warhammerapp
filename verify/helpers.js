@@ -71,11 +71,11 @@ function items(D, appSource){
     for(const id of a.detachments){
       const d = f.detachments[id];
       if(d.rule) rulesMeta(d.name + ' rule', d.rule, d.rule.text + (d.rule.table ? '\n' + d.rule.table.map(t => t.join(': ')).join('\n') : ''));
-      for(const s of d.stratagems || []) for(const k of ['phases', 'turn', 'turns', 'needs', 'mod', 'def', 'note', 'cpNote', 'ask'])
+      for(const s of d.stratagems || []) for(const k of ['phases', 'turn', 'turns', 'needs', 'mod', 'def', 'gist', 'note', 'cpNote', 'ask'])
         if(s[k] !== undefined) add(a.id, 'strat-' + k, d.name + ' · ' + s.name, { [k]:s[k] }, { stratagem:s.name, text:stratText(s) });
     }
   }
-  for(const s of D.coreStratagems) for(const k of ['phases', 'turn', 'turns', 'needs', 'mod', 'def', 'note'])
+  for(const s of D.coreStratagems) for(const k of ['phases', 'turn', 'turns', 'needs', 'mod', 'def', 'gist', 'note'])
     if(s[k] !== undefined) add('core', 'strat-' + k, 'Core · ' + s.name, { [k]:s[k] }, { stratagem:s.name, text:stratText(s) });
   // app notes inside core rules text, and which rule each keyword spelling opens
   for(const [name, text] of Object.entries(D.rules)) for(const line of text.split('\n')) if(/^\*App note/.test(line))
@@ -99,12 +99,8 @@ const CODE_RULES = {
   matches:'stratagem/rule eligibility by keywords (all / any / none)',
   inertRule:'rules that do nothing in this list (e.g. Bondsman without ARMIGER models)',
   auraMods:'auras from other units in the list',
-  phaseItems:'what is listed under "This phase" on the Turn screen',
-  CORE_PHASED:'core rules listed in a phase: Deep Strike, Harpooned, Super-Heavy Walker, Firing Deck',
-  suits:'which core stratagems a datasheet lists',
   proxyLines:'Bases & proxies: bases per models line and what to mark',
   quickRef:'Core Rules 07 (battle round), 07.02 (turn), 08 (Command phase), 05.01 hit roll, 05.02 wound roll table, 05.03-05.04 save roll and allocation order (dice values are pictures in the PDF: page 18)',
-  nextPhase:'phase order (07.02): Command, Movement, Shooting, Charge, Fight; then the other player\'s turn',
   perBattle:'tick boxes: how many uses a rule allows per battle ("once"/"twice"/"three times per battle") and whether they are counted per army or for each unit',
   abilityTicks:'tick boxes on an ability row: one set per army, or one per unit copy',
   grantSource:'"Granted by": which ability, detachment rule or army rule a marked value names',

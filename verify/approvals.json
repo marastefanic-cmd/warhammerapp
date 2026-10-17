@@ -71,6 +71,12 @@
   "at": "2026-10-16",
   "why": "1 champion + 2 Eightbound, each with chainblades = 3."
  },
+ "04a8ae4d39a7f565": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“ranged attacks with weapons selected for the Firing Deck ability have +1 to hit rolls.” Same."
+ },
  "04c89707906704e3": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -142,6 +148,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "NR: Khârn 115 + (10) Khorne Berzerkers 170 = 285."
+ },
+ "08b66a313bef7ae7": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "EFFECT “Your unit makes an ingress move” plus RESTRICTIONS “You cannot use this stratagem during the first battle round.” Same; “in strategic reserves” is from the TARGET."
  },
  "098196d7b97e7ee8": {
   "verdict": "ok",
@@ -281,6 +293,12 @@
   "at": "2026-10-16",
   "why": "Either turn."
  },
+ "10c2d18b4fd4b92e": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.” Same numbers and condition."
+ },
  "110fbbb49ead4681": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -340,6 +358,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "New Recruit PDF: \"Intimidating Motivation (…) - Nazdreg\"."
+ },
+ "13d1504fb4c906be": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“Change the Damage characteristic of that attack to 0.” The second sentence, “If you are using fast dice rolling, select one of those attacks you failed a saving throw for”, only says which attack “that attack” is when saves are rolled together. The gist’s singular “that attack” keeps the one-attack limit, so the meaning is unchanged."
  },
  "14b552e2180cb5fb": {
   "verdict": "ok",
@@ -593,6 +617,18 @@
   "at": "2026-10-16",
   "why": "\"Once per turn, when your opponent targets a unit ... with a stratagem\": any phase, either turn."
  },
+ "26501734dea8331a": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "Word for word the EFFECT: “That battle-shock roll is automatically successful.” The RESTRICTIONS “more than once per battle” are on the row already: the timing line shows the stratagem’s limit “Once per battle” (stratWhenLine adds s.limit)."
+ },
+ "26600be2890f7970": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“that enemy unit must use the desperate escape mode. If that enemy unit is battle-shocked, -1 from those hazard rolls.” Same."
+ },
  "26b82ae697280554": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -700,6 +736,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "WHEN: \"Your opponent's Shooting phase\"."
+ },
+ "2efe1107d6ebd5a7": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "Word for word the EFFECT: “Your unit can make a surge move of up to D6\". If your unit is riled up, it can re-roll that D6.”"
  },
  "2f1f0d5527dd9aef": {
   "verdict": "ok",
@@ -875,6 +917,12 @@
   "at": "2026-10-16",
   "why": "TARGET \"One friendly SMOKE unit\": all:[Smoke]; only the Chaos Rhino has SMOKE."
  },
+ "39fff212d6fde57a": {
+  "verdict": "ok",
+  "by": "review:gists (its fix)",
+  "at": "2026-10-17",
+  "why": "EFFECT: “1. Select one enemy unit engaged with your unit. 2. Select one model in your unit engaged with that enemy unit. 3. Roll a number of D6 equal to the T characteristic of that model …”. The gist’s “the T of one model engaged with an enemy unit” drops “in your unit”, and it drops that the enemy unit must be engaged with your unit. The rolls and the cap (“to a maximum of 6 mortal wounds per unit”) are literal."
+ },
  "3a1b4a2b05dc420d": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -904,6 +952,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "Matches the New Recruit PDF: options “Fixit's Wrench, Grabba Dragga, Psyko-gatler, Speeding Bulk and Flaming Exhaust” on the single model; ranged rows Grabba Dragga and Psyko-gatler, melee rows Fixit's Wrench, Grabba Dragga, Speeding Bulk and Flaming Exhaust."
+ },
+ "3b5301c710246603": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“Select the Imbued Manifestation, Psychic Maelstrom or Wrath of the Immaterium ability. Until the start of your next Command phase, that ability applies to your unit instead of any other Kindred Sorcery ability, even if you have already selected that ability this battle.” Same choice of one, duration and override."
  },
  "3c014e402e4451e1": {
   "verdict": "ok",
@@ -1031,6 +1085,12 @@
   "at": "2026-10-16",
   "why": "\"This model has the Feel No Pain 4+ ability against Mortal Wounds.\""
  },
+ "42e7f382865b6520": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“Do not roll one D6 to determine whether mortal wounds are inflicted by your model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted.” Same."
+ },
  "435c34643eb505d9": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -1145,6 +1205,12 @@
   "at": "2026-10-16",
   "why": "New Recruit PDF: \"Intimidating Motivation (Once per battle round, per army)\"."
  },
+ "4972f255f1a8091e": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "Word for word the EFFECT: “Your unit has MOBILE.”"
+ },
  "49785231823ac34a": {
   "verdict": "ok",
   "by": "review:hurrdurr (its fix)",
@@ -1180,6 +1246,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "\"the Command phase\", which can be either player's."
+ },
+ "4e0d807fa3ba0c1a": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“Until the end of the phase, if your unit Advances, do not make an Advance roll … add 6\" to the Move characteristic … or 9\" instead if your unit is an ARMIGER or DESTRIER unit.” Same."
  },
  "4e1d96de622d09b1": {
   "verdict": "ok",
@@ -1234,6 +1306,18 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "\"At the start of your Command phase, if this model is on the battlefield, you gain 1CP\"."
+ },
+ "5228f78f1af4b85b": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "Word for word the EFFECT: “Remove your unit from the battlefield and place it into Strategic Reserves.”"
+ },
+ "5281c385e56c8931": {
+  "verdict": "ok",
+  "by": "review:gists (its fix)",
+  "at": "2026-10-17",
+  "why": "EFFECT: “Make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne.” The gist drops “use the results to”, which ties the Blessing to that roll; “and activate one Blessing of Khorne” reads as a free pick. The duration (“Until the end of the battle round … in addition to any other Blessings of Khorne that are currently active”) is literal."
  },
  "52c3668253df7eb6": {
   "verdict": "ok",
@@ -1319,6 +1403,12 @@
   "at": "2026-10-16",
   "why": "The aura affects \"melee attacks\", which are only made in the Fight phase, in either player's turn."
  },
+ "58b9d5bc5c887b79": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“Your unit shoots using normal shooting, but while doing so your unit can only target that enemy unit.” Same; “that enemy unit” refers to the WHEN."
+ },
  "58ea7cd756f7c62d": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -1366,6 +1456,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "Melee only, vs MONSTER/VEHICLE, re-roll wound rolls: exact."
+ },
+ "5ae9cac7fe3261a0": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“Do not roll a D6 to determine how far models in your unit can move when they make a surge move. Instead … those models can move up to 8\".” Same; no duration is added."
  },
  "5b039d3f3619db1d": {
   "verdict": "ok",
@@ -1583,6 +1679,12 @@
   "at": "2026-10-16",
   "why": "The leader’s ability."
  },
+ "6b272278ca840600": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“That enemy unit must take a Battle-shock test and, until the end of the phase, each time a model in that enemy unit makes an attack that targets your unit, subtract 1 from the Hit roll. If that Battle-shock test was failed, subtract 1 from the Wound roll as well.” Same; “also” carries the same attacks and duration."
+ },
  "6c9456ef9f0390b7": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -1606,6 +1708,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "The Enhancement is on the Lord on Juggernaut (NR options)."
+ },
+ "6db208da10c3b5d0": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“Until the end of the phase, add 9\" to the Range characteristic of Psychic weapons … each time a model in your unit makes an attack with a Psychic weapon, you can re-roll the Hit roll and you can re-roll the Wound roll.” Same; the re-rolls stay optional and on Psychic weapons."
  },
  "6e00976af6f2b75f": {
   "verdict": "ok",
@@ -1715,6 +1823,12 @@
   "at": "2026-10-16",
   "why": "Fight phase, either turn."
  },
+ "759edf1a0a8bf5c7": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9\" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.” Same duration, condition and re-rolls."
+ },
  "77f4e335f0bf4290": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -1774,6 +1888,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "TARGET: \"unengaged BEAST SNAGGA unit\"."
+ },
+ "7d73d5f4efb7f552": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“Your unit’s CHARACTER models’ melee attacks have: +1 A. +2 S.” Same."
  },
  "7df397384f7d9395": {
   "verdict": "ok",
@@ -1901,6 +2021,12 @@
   "at": "2026-10-17",
   "why": "“Your opponent’s Shooting phase”: their turn."
  },
+ "85a969b3f99d0072": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“Select one enemy unit hit by those attacks. That enemy unit is tethered until the start of your next Command phase: While a unit is tethered, that unit has -2\" M.” Same."
+ },
  "85dc2daea85b5825": {
   "verdict": "ok",
   "by": "review:literal",
@@ -1979,6 +2105,12 @@
   "at": "2026-10-16",
   "why": "\"In your Shooting phase, if this unit's Blitzkannon weapon targets…\""
  },
+ "8a0a04b58d7f4558": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“Select one EXPLOSIVES/GRENADES model in your unit. Select one unengaged enemy unit within 8\" of and visible to that model. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.” Same."
+ },
  "8a3b372cb39242dc": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -2051,6 +2183,12 @@
   "at": "2026-10-16",
   "why": "WHEN: \"Your opponent’s Shooting phase or the Fight phase\"."
  },
+ "8d3a381db49b1b51": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "EFFECT: “must use the desperate escape mode. If that enemy unit is a MONSTER/VEHICLE unit … three additional hazard rolls for each BEAST SNAGGA unit it is engaged with, with -1 from those hazard rolls if that enemy unit is battle-shocked.” Same condition, number and modifier; “them” = those additional hazard rolls."
+ },
  "8d3f1d2a65937b68": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -2062,6 +2200,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "NR: \"Empyric Guidance (Psychic)\"."
+ },
+ "8e57e474a5741a92": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.” Same."
  },
  "8e58403a65b28498": {
   "verdict": "ok",
@@ -2242,6 +2386,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "NR: \"Beacons of Rage (Aura)\"."
+ },
+ "980ff948d3a100d1": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Hit roll.” Same."
  },
  "9876dc2bc11dd899": {
   "verdict": "ok",
@@ -2429,11 +2579,23 @@
   "at": "2026-10-16",
   "why": "Any phase, no turn restriction."
  },
+ "a12e7d11b523b83f": {
+  "verdict": "ok",
+  "by": "review:gists (its fix)",
+  "at": "2026-10-17",
+  "why": "Text: “your unit does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units” applies to all of the unit’s hit rolls. The gist ties it to the Blast weapons (“Blast weapons can target … with no hit penalty”): narrowed. The mortal wound applies “each time a model in your unit makes an attack with a Blast weapon that targets a unit within Engagement Range of your unit, on an unmodified Hit roll of 1 … after all of its attacks have been resolved”. The gist’s “each unmodified hit roll of 1 with them” drops the target condition (so it widens to every Blast attack) and the timing. “(if no other friendly units are)” leaves out what they must not be within: “within Engagement Range of that enemy unit”."
+ },
  "a174127d2045f01b": {
   "verdict": "ok",
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "TARGET \"One friendly unengaged unit (excluding TITANIC units)\": none:[Titanic] is exact; all four Knights correctly excluded. (Units with no ranged weapon — Hive Tyrant, Neurogaunts, Tzaangors, Enlightened, Eightbound, Slaughterbound — are legal targets but cannot attack, 04.01.01; suits() already keeps it off their datasheets, the strat card still says \"any unit\".)"
+ },
+ "a1c499e7334d1bb1": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "Word for word the EFFECT: “Your unit’s ranged attacks have [SUSTAINED HITS 1].”"
  },
  "a1c98fd44fb4f47c": {
   "verdict": "ok",
@@ -2476,6 +2638,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "Matches \"While this unit contains one or more PSYKER models, each time an attack targets this unit, subtract 1 from the Wound roll\"."
+ },
+ "a445f49542696fe4": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced.” Same."
  },
  "a493c970772a43dd": {
   "verdict": "ok",
@@ -2530,6 +2698,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "Single-model reading is exact (Core Rules p86, Starting Strength and Half-strength: below starting strength = \"remaining wounds are less than its W\"; below half = \"less than half of its W\"). {half} = ceil(W/2)-1 gives 4 for W10 and 7 for W16. Every MONSTER here is a one-model unit."
+ },
+ "a783581542fe432f": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“Re-roll all of the D6 rolled for that Psychic test (including the additional D6 for Channelling the Warp).” Same."
  },
  "a7b64f37579c67aa": {
   "verdict": "ok",
@@ -2621,6 +2795,12 @@
   "at": "2026-10-16",
   "why": "W 18; \"1-6 wounds remaining\"."
  },
+ "adfb8b0ae937df52": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“Your unit’s ranged attacks that target a unit within 9\" have +1 AP.” Same."
+ },
  "ae0f5b5338188fb8": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -2680,6 +2860,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "WHEN: \"Fight phase, just after an enemy unit has selected its targets.\""
+ },
+ "b0f5cfeb5612cff6": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“Your unit can make a normal move of up to 6\", and must end that move within range of an objective. Your unit is not eligible to declare a charge until the end of the turn.” “ending within range” states the same end condition; the charge restriction and its duration are kept."
  },
  "b1239f6c266b0434": {
   "verdict": "ok",
@@ -2789,6 +2975,12 @@
   "at": "2026-10-16",
   "why": "\"surge move\", \"surge target\"; Surge Move 21.02."
  },
+ "b99a532d9c0380a6": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the Wound roll.” Same."
+ },
  "b9a28170afe479d4": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -2812,6 +3004,12 @@
   "by": "review:literal",
   "at": "2026-10-17",
   "why": "“While a TYRANIDS unit from your army is within Synapse Range of your army: Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.” No phase or turn limit. The text is shortened with the same condition."
+ },
+ "ba06c5c664298c5d": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.” Same."
  },
  "ba96e74d92ccbc89": {
   "verdict": "ok",
@@ -2891,6 +3089,18 @@
   "at": "2026-10-16",
   "why": "\"ranged attack that targets the closest eligible target, add 1 to the Hit roll.\""
  },
+ "bd84d34d7a9b31c0": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“Select one enemy unit within Engagement Range of your model and roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.” Same."
+ },
+ "bdb105417cb7cae1": {
+  "verdict": "ok",
+  "by": "review:gists (its fix)",
+  "at": "2026-10-17",
+  "why": "EFFECT: “before making the charge roll, you must select one of the following modes”. Leap to Defend: “enemy units that made a charge move this phase and are within the maximum distance”. Into the Fray: “if the result is greater than 6 (after modifiers), change it to 6 … any enemy units that are within 6\" of your unit and within the maximum distance”. The gist drops when the mode is chosen, both “within the maximum distance” conditions, “(after modifiers)”, and “of your unit”."
+ },
  "bde59aa38a35bbe0": {
   "verdict": "ok",
   "by": "review:literal",
@@ -2920,6 +3130,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "TARGET: \"One KHORNE BERZERKERS unit\": Khârn's and the Lord's units."
+ },
+ "c05b371f66dc040d": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“Until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1.” “+1 AP” is the same improvement by 1."
  },
  "c0b3b3b1fc276e52": {
   "verdict": "ok",
@@ -2969,6 +3185,12 @@
   "at": "2026-10-17",
   "why": "“In your Shooting phase, when … selected to shoot, if any of the following apply, that unit’s attacks can re-roll hit rolls of 1: That unit is within range of an objective. The target of that attack is within range of an objective.” Same phase, the same alternative conditions, the same effect. Attacks made when selected to shoot are its ranged attacks."
  },
+ "c3f53360419b4a9e": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack.” Same; nothing added (no minimum)."
+ },
  "c3f7d4f46f915ccf": {
   "verdict": "ok",
   "by": "review:round2",
@@ -2980,6 +3202,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "\"In your Command phase\"."
+ },
+ "c5df75e1d0100700": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "EFFECT: “You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).” The gist keeps both. The roll list it repeats is the WHEN’s, complete."
  },
  "c6414cafe42dd01e": {
   "verdict": "ok",
@@ -3029,6 +3257,12 @@
   "at": "2026-10-16",
   "why": "\"Your opponent’s Shooting phase\"."
  },
+ "c952caab83d5eeb5": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.” Same."
+ },
  "c954e9d960d8054f": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -3046,6 +3280,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "TARGET: \"One IMPERIAL KNIGHTS unit from your army.\" The pack’s Rules Update adding \"has not been selected to move\" is the Valourstrike Lance (2CP) Full Tilt, not this one."
+ },
+ "cb2c7d34813046ec": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "Word for word the EFFECT: “Your unit’s melee attacks have +2 S.”"
  },
  "cbcfb662e87e20d7": {
   "verdict": "ok",
@@ -3106,6 +3346,12 @@
   "by": "review:literal",
   "at": "2026-10-17",
   "why": "Harpooned is now turn either (“When this unit declares a charge …”, and Heroic Intervention lets a unit “Resolve a charge … (11.02)” in the opponent’s Charge phase). Deep Strike: “Each time this unit makes an ingress move”, which happens in your Movement phase and through Rapid Ingress at the end of the opponent’s Movement phase, so Movement, either. Super-Heavy Walker: “Each time a unit with this ability makes a normal, advance or fall-back move”. No Knights rule in the list grants such a move outside your Movement phase, so Movement, your. Firing Deck: “In your Shooting phase”."
+ },
+ "cfd33f92d2a85a47": {
+  "verdict": "ok",
+  "by": "review:gists (its fix)",
+  "at": "2026-10-17",
+  "why": "EFFECT: “each time a model in your unit makes a Normal, Advance or Fall Back move, it can move through …”. The gist drops whose moves: “Normal, Advance and Fall Back moves can pass through”. For the taller terrain the text says “after its unit has moved, roll one D6”, and the gist’s “then roll one D6” loses that timing. The rest is literal: excluding TITANIC, “4\" or less in height”, “cannot end that move within Engagement Range”, “on a 1, your unit is Battle-shocked”."
  },
  "cffe2a24d218822d": {
   "verdict": "ok",
@@ -3203,6 +3449,12 @@
   "at": "2026-10-16",
   "why": "\"In your opponent’s Movement phase\" (8\" per errata)."
  },
+ "d5e516bd6b7c5143": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“Your unit’s ranged attacks that target a unit (excluding MONSTER/VEHICLE units) have +1 to wound rolls.” “against” = “that target”; same exclusion and number."
+ },
  "d68adf2412074978": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -3239,6 +3491,12 @@
   "at": "2026-10-16",
   "why": "\"In your Command phase, you can use this ability\"."
  },
+ "d7a721e5a0f770f0": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "Word for word the EFFECT: “Your unit has Feel No Pain 4+ against mortal wounds.”"
+ },
  "d7cbd41f8f1fb5d0": {
   "verdict": "ok",
   "by": "review:round2",
@@ -3250,6 +3508,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "\"Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have [DEVASTATING WOUNDS]\" = charged this turn: DW until end of turn."
+ },
+ "d8e5051e5c113aa7": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "Word for word the EFFECT: “Your unit has Feel No Pain 4+ against mortal wounds.”"
  },
  "d9d76882d80fa885": {
   "verdict": "ok",
@@ -3347,6 +3611,12 @@
   "at": "2026-10-16",
   "why": "TARGET: \"One ARMIGER unit from your army...\": no unit here has it, so the app correctly lists it as \"Not shown ... (ARMIGER)\"."
  },
+ "df654e88688e1a60": {
+  "verdict": "ok",
+  "by": "review:gists (its fix)",
+  "at": "2026-10-17",
+  "why": "EFFECT: “When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one D6 …” The gist says “before your unit has fought this phase”. A unit has been selected to fight before it has fought, so the gist also allows a model destroyed after selection but before the unit has fought, which the text excludes. The rest is literal: “When your unit has fought, or at the end of the phase (whichever comes first)” = “until your unit has fought or the phase ends”. The struck-through ~~DEFF DREAD~~ +3 is left out as the coordinator describes."
+ },
  "dfadb4165dfeeed4": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -3407,6 +3677,12 @@
   "at": "2026-10-16",
   "why": "True: \"roll eight D6. You can then use those dice to activate up to two Blessings of Khorne\"."
  },
+ "e4cca7ddebe43716": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "Word for word the EFFECT: “Place your unit in strategic reserves.”"
+ },
  "e4f4987cee6cb885": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -3419,6 +3695,12 @@
   "at": "2026-10-16",
   "why": "\"Your Shooting phase\"."
  },
+ "e5ba9360e3f0abfc": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“Until the end of the phase, ranged weapons … have the [IGNORES COVER] ability, and until the end of the phase each time a model in your unit makes an attack, you can ignore any or all modifiers to that model’s Ballistic Skill characteristic and any or all modifiers to the Hit roll.” Same."
+ },
  "e67650cc6bb48579": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -3430,6 +3712,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "\"In the Fight phase, when this model is destroyed…\": the Fight phase in either turn."
+ },
+ "e6e26838129096b2": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight.” Same."
  },
  "e6f91a10b33a4770": {
   "verdict": "ok",
@@ -3472,6 +3760,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "Matches the NR line \"Thermal cannon, Stormspear rocket pod, Meltagun, Reaper chainsword\"."
+ },
+ "e88f06fffd4beae6": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack.” Same."
  },
  "e936f57d4687120b": {
   "verdict": "ok",
@@ -3526,6 +3820,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "Lord of the Eightbound is the Slaughterbound's ability."
+ },
+ "eac0b9dcae9e3d9d": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "Word for word the EFFECT: “Your unit shoots using snap shooting.”"
  },
  "ead3336110483d69": {
   "verdict": "ok",
@@ -3622,6 +3922,12 @@
   "by": "review:oioioi (its fix)",
   "at": "2026-10-16",
   "why": "\"Each time this unit makes a Normal, Advance or Fall Back move\": the Defiler is a THOUSAND SONS unit, so Temporal Surge (Ritual, start of your Shooting phase) can give it \"a Normal move of up to D6\"\", and Scuttling Walker applies to that move too."
+ },
+ "f1ca032a2ae41af7": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "Word for word the EFFECT: “Your unit is riled up until the start of your next turn.”"
  },
  "f1d8684e52502bb6": {
   "verdict": "ok",
@@ -3736,6 +4042,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "Matches the NR options and profiles."
+ },
+ "fa5a68d93a670e33": {
+  "verdict": "ok",
+  "by": "review:gists",
+  "at": "2026-10-17",
+  "why": "“Until the end of the phase, Psychic weapons equipped by models in the attacking unit have the [HAZARDOUS] ability, and models in your unit have the Feel No Pain 4+ ability against Psychic Attacks.” Same."
  },
  "fabaddbc59357b09": {
   "verdict": "ok",

@@ -68,12 +68,12 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     };
     const links = new Set();
     const screen = async (s, extra) => {
-      const r = await take(s + (extra ? ' ' + JSON.stringify(extra) : ''), `() => { hideSheet(); ${extra ? `Object.assign(filt, ${JSON.stringify(extra)}); openStrats.clear(); allStratagems().forEach(x => openStrats.add(x.id));` : ''} go({ s:'${s}', army:'${a.id}' }); }`);
+      const r = await take(s + (extra ? ' ' + JSON.stringify(extra) : ''), `() => { hideSheet(); ${extra ? `openStrats.clear(); allStratagems().forEach(x => openStrats.add(x.id));` : ''} go({ s:'${s}', army:'${a.id}' }); }`);
       r.links.forEach(l => links.add(l));
     };
     if(a === armies[0]) await take('home', `() => { hideSheet(); go({ s:'home' }); }`);
     for(const s of ['army','pregame','units','ranged','melee','abilities','rules','bases']) await screen(s);
-    for(const turn of ['all','your','opp']) for(const phase of ['all','command','movement','shooting','charge','fight']) await screen('strats', { turn, phase });
+    await screen('strats', { open:true });   // every stratagem, unfolded
     for(const u of a.units){
       const r = await take('unit ' + u, `() => { hideSheet(); go({ s:'unit', army:'${a.id}', unit:'${u}' }); }`);
       r.links.forEach(l => links.add(l));
@@ -140,13 +140,6 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
         if(!titles.some(t => t === n || t.startsWith(n + ' – '))) out.push(['search-finds', kind, name]);
       }
       query[armyId] = ''; renderFinder();
-      // "When targeted" in a phase lists only stratagems usable in that phase
-      for(const ph of ['shooting','fight']){
-        Object.assign(filt, { turn:'opp', phase:ph }); go({ s:'strats', army:armyId });
-        const dl = [...document.querySelectorAll('.dl, .rem')].map(x => x.innerText).join('\n');
-        for(const s of allStratagems(A)) if(s.def && !s.phases.includes(ph) && dl.includes(s.cp + 'CP ' + s.name + ':')) out.push(['def-phase', s.id, s.name + ' shown in their ' + ph]);
-      }
-      Object.assign(filt, { turn:'all', phase:'all' });
       return out;
     }, a.id);
     for(const [check, where, detail] of res) fail(check, a.id, where, detail);

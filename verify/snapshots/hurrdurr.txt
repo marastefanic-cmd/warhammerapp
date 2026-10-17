@@ -1,4 +1,4 @@
-######## army · TURN Hurrdurr
+######## army · PURGE FREEBLADE Hurrdurr
 World Eaters · 2000 / 2000 pts · Strike Force
 
 Berzerker Warband · Vessels of Wrath · Disposition: Purge the Foe
@@ -14,7 +14,7 @@ Melee weapons
 16
 Abilities
 31
-Rules & keywords
+Rules
 Bases & proxies
 54
 Keep screen on
@@ -784,7 +784,134 @@ Capacity
 
 This model has a transport capacity of 12 WORLD EATERS INFANTRY models. It cannot transport POSSESSED or TERMINATOR models.
 
-######## rules · ABILITIES Rules & keywords
+######## rules · ABILITIES Rules
+World Eaters · Purge the Foe
+ARMY RULES
+BERZERKER WARBAND
+VESSELS OF WRATH
+CORE RULES
+ARMY RULES
+Blessings of Khorne
+Command · Charge · Fight
+
+If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.
+
+Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.
+
+First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.
+
+They then use the two 2s to activate Unbridled Bloodlust.
+
+Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.
+
+Unbridled Bloodlust · double 1+
+
+This unit has +1 to charge rolls.
+
+Rage-fuelled Invigoration · double 2+
+
+Each time a model in this unit makes a Pile-in or Consolidation move, it can move up to 6" instead of up to 3".
+
+Total Carnage · double 3+
+
+Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.
+
+Martial Excellence · double 4+ or triple 1+
+
+Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.
+
+Warp Blades · double 5+ or triple 2+
+
+Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.
+
+Decapitating Strikes · double 6 or triple 3+
+
+Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
+
+DETACHMENTS
+BERZERKER WARBAND
+Relentless Rage
+Detachment rule
+Fight
+
+Already counted: every melee A value in this app includes this +1 A. Do not add it again.
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+APPLIES TOKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust, Eightbound, Jakhals, Forgefiend, Chaos Rhino
+
+Berzerker Glaive
+Enhancement
+on Daemon Prince
+
+35 pts
+
+WORLD EATERS model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.
+
+ONDaemon Prince · Berzerker Glaive
+
+Helm of Brazen Ire
+Enhancement
+on Daemon Prince
+
+30 pts
+
+WORLD EATERS model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack.
+
+ONDaemon Prince · Helm of Brazen Ire
+
+Battle-lust
+Enhancement
+on Slaughterbound
+
+20 pts
+
+WORLD EATERS model only. You can re-roll Charge rolls made for the bearer’s unit. In addition, while the Unbridled Bloodlust Blessing of Khorne is active for your army, add 1 to Charge rolls made for the bearer’s unit.
+
+ONSlaughterbound · Battle-lust
+
+Other enhancements
+1 not in this list
+Favoured of Khorne 20 pts
+
+WORLD EATERS model only. Each time you make a Blessings of Khorne roll, if the bearer is on the battlefield, you can re-roll up to two of the D6 rolled.
+
+STRATAGEMSBlood Offering, Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Apoplectic Frenzy, Berzerker’s Wrath
+
+VESSELS OF WRATH
+Wrath of Khorne
+Detachment rule
+Fight
+
+When a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) is selected to fight, that unit’s CHARACTER models’ melee attacks can have:
+
+[CLEAVE 1].
+Or: +1 AP.
+
+APPLIES TODaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
+
+Archslaughterer
+Enhancement
+on Lord on Juggernaut
+
+30 pts
+
+WORLD EATERS model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, every Blessing of Khorne is active for this unit until the start of your next turn.
+
+ONLord on Juggernaut · Archslaughterer
+
+Other enhancements
+1 not in this list
+Gateways to Glory 10 pts
+
+WORLD EATERS DAEMON PRINCE model only. This model has:
+
+MOBILE.
++1 to charge rolls.
+
+STRATAGEMSScorn the Witch, Aspire to Infamy, Punish the Craven
+
+CORE RULES
 Quick reference
 Turn order · Command phase · hit, wound and save rolls
 
@@ -843,116 +970,17 @@ the model loses D wounds
 
 Allocation order (05.03): a non-CHARACTER group containing a model that has lost one or more wounds must be first; no CHARACTER group can be earlier than a non-CHARACTER group; CHARACTER groups containing a model that has lost one or more wounds must be earlier than CHARACTER groups containing no wounded models.
 
-ARMY RULES
-Blessings of Khorne
-Start of the battle round
-
-If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.
-
-Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.
-
-First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.
-
-They then use the two 2s to activate Unbridled Bloodlust.
-
-Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.
-
-Unbridled Bloodlust · double 1+
-
-This unit has +1 to charge rolls.
-
-Rage-fuelled Invigoration · double 2+
-
-Each time a model in this unit makes a Pile-in or Consolidation move, it can move up to 6" instead of up to 3".
-
-Total Carnage · double 3+
-
-Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.
-
-Martial Excellence · double 4+ or triple 1+
-
-Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.
-
-Warp Blades · double 5+ or triple 2+
-
-Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.
-
-Decapitating Strikes · double 6 or triple 3+
-
-Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
-
-BERZERKER WARBAND
-Relentless Rage
-Detachment rule
-
-Already counted: every melee A value in this app includes this +1 A. Do not add it again.
-
-Friendly WORLD EATERS units’ melee attacks have +1 A.
-
-APPLIES TOKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust, Eightbound, Jakhals, Forgefiend, Chaos Rhino
-
-Berzerker Glaive
-Enhancement · 35 pts
-
-WORLD EATERS model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.
-
-ONDaemon Prince · Berzerker Glaive
-
-Helm of Brazen Ire
-Enhancement · 30 pts
-
-WORLD EATERS model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack.
-
-ONDaemon Prince · Helm of Brazen Ire
-
-Battle-lust
-Enhancement · 20 pts
-
-WORLD EATERS model only. You can re-roll Charge rolls made for the bearer’s unit. In addition, while the Unbridled Bloodlust Blessing of Khorne is active for your army, add 1 to Charge rolls made for the bearer’s unit.
-
-ONSlaughterbound · Battle-lust
-
-Other enhancements
-1 not in this list
-Favoured of Khorne 20 pts
-
-WORLD EATERS model only. Each time you make a Blessings of Khorne roll, if the bearer is on the battlefield, you can re-roll up to two of the D6 rolled.
-
-VESSELS OF WRATH
-Wrath of Khorne
-Detachment rule
-
-When a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) is selected to fight, that unit’s CHARACTER models’ melee attacks can have:
-
-[CLEAVE 1].
-Or: +1 AP.
-
-APPLIES TODaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-Archslaughterer
-Enhancement · 30 pts
-
-WORLD EATERS model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, every Blessing of Khorne is active for this unit until the start of your next turn.
-
-ONLord on Juggernaut · Archslaughterer
-
-Other enhancements
-1 not in this list
-Gateways to Glory 10 pts
-
-WORLD EATERS DAEMON PRINCE model only. This model has:
-
-MOBILE.
-+1 to charge rolls.
-UNIT RULES
+Unit rules
+7
 Deadly Demise
-Deadly Demise D3
+Daemon Prince ×2, Slaughterbound, Forgefiend, Chaos Rhino
 
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
 IN THIS ARMYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Slaughterbound · Battle-lust, Forgefiend, Chaos Rhino
 
 Deep Strike
+Slaughterbound
 
 Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
 
@@ -961,6 +989,7 @@ App note, not rules text: unless a rule says otherwise, units in strategic reser
 IN THIS ARMYSlaughterbound · Battle-lust
 
 Devastating Wounds
+Daemon Prince ×2, Slaughterbound
 
 Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
 
@@ -969,7 +998,7 @@ Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of 
 IN THIS ARMYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Slaughterbound · Battle-lust
 
 Firing Deck
-Firing Deck 2
+Chaos Rhino
 
 This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence:
 
@@ -981,6 +1010,7 @@ This ability always takes the form Firing Deck X. In your Shooting phase, each t
 IN THIS ARMYChaos Rhino
 
 Leader
+Khârn the Betrayer, Lord on Juggernaut, Slaughterbound
 
 Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.
 
@@ -989,6 +1019,7 @@ Unless otherwise stated, each bodyguard unit can only have one leader unit and o
 IN THIS ARMYKhârn the Betrayer, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
 
 Lone Operative
+Daemon Prince ×2
 
 Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12" of this unit.
 
@@ -1003,7 +1034,7 @@ If an attached unit below starting strength only contains models with Lone Opera
 IN THIS ARMYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
 
 Scouts
-Scouts 6"
+Slaughterbound, Eightbound
 
 This ability always takes the form Scouts X". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following:
 
@@ -1013,7 +1044,8 @@ If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your
 
 IN THIS ARMYSlaughterbound · Battle-lust, Eightbound
 
-WEAPON KEYWORDS
+Weapon keywords
+7
 Anti
 ANTI-MONSTER 3+, ANTI-VEHICLE 3+
 
@@ -1072,8 +1104,6 @@ RAPID FIRE 1, RAPID FIRE 4
 This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
 
 IN THIS ARMYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Forgefiend, Chaos Rhino
-
-Force disposition: Purge the Foe.
 
 ######## bases · RULES Bases & proxies
 BASES TO PRINT
@@ -1146,78 +1176,15 @@ Chaos Rhino
 
 From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
 
-######## strats {"turn":"all","phase":"all"} · BASES Turn ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+######## strats {"open":true} · BASES Stratagems
 COLLAPSE ALL
 BERZERKER WARBAND
 6
 1
 CP
-Blood Offering
-Any phase · Either turn
-WHEN
-
-Any phase.
-
-TARGETOne WORLD EATERS unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.
-
-EFFECT
-
-Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
-
-USED BYany unit
-
-1
-CP
-Hack and Slash
-Fight · Either turn
-WHEN
-
-Fight phase.
-
-TARGETOne WORLD EATERS unit from your army that has not been selected to fight this phase and that made a charge move this turn.
-
-EFFECT
-
-Until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1.
-
-USED BYany unit
-
-2
-CP
-Frenzied Resilience
-Fight · Either turn
-WHEN
-
-Fight phase, just after an enemy unit has selected its targets.
-
-TARGETOne WORLD EATERS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
-
-EFFECT
-
-Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack.
-
-USED BYany unit
-
-1
-CP
-Skulls for the Skull Throne!
-Fight · Either turn
-WHEN
-
-Fight phase, just after a WORLD EATERS unit from your army destroys a CHARACTER or MONSTER model.
-
-TARGETThat WORLD EATERS unit.
-
-EFFECT
-
-Make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne. Until the end of the battle round, that Blessing of Khorne is active in addition to any other Blessings of Khorne that are currently active.
-
-USED BYany unit
-
-1
-CP
 Apoplectic Frenzy
-Movement · Your turn
+Until the end of the turn, your unit is eligible to declare a charge even though it Advanced.
+Movement · Your turn · Khârn the Betrayer, Lord on Juggernaut
 WHEN
 
 Your Movement phase, just after a KHORNE BERZERKERS unit from your army is selected to Advance.
@@ -1233,7 +1200,8 @@ USED BYKhârn the Betrayer, Lord on Juggernaut · Archslaughterer
 1
 CP
 Berzerker’s Wrath
-Shooting · Their turn
+Your unit’s surge move is up to 8" instead of a D6 roll.
+Shooting · Their turn · Khârn the Betrayer, Lord on Juggernaut
 WHEN
 
 Your opponent’s Shooting phase, just after an enemy unit has shot.
@@ -1248,28 +1216,98 @@ Wahapedia FAQ: “After being the target of a ranged attack, can a Leader unit m
 
 USED BYKhârn the Betrayer, Lord on Juggernaut · Archslaughterer
 
+1
+CP
+Hack and Slash
+Until the end of the phase, your unit’s melee weapons have +1 AP.
+Fight · Either turn · Any unit
+WHEN
+
+Fight phase.
+
+TARGETOne WORLD EATERS unit from your army that has not been selected to fight this phase and that made a charge move this turn.
+
+EFFECT
+
+Until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1.
+
+USED BYany unit
+
+2
+CP
+Frenzied Resilience
+Until the end of the phase, -1 Damage to each attack allocated to a model in your unit.
+Fight · Either turn · Any unit
+WHEN
+
+Fight phase, just after an enemy unit has selected its targets.
+
+TARGETOne WORLD EATERS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack.
+
+USED BYany unit
+
+1
+CP
+Skulls for the Skull Throne!
+Make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
+Fight · Either turn · Any unit
+WHEN
+
+Fight phase, just after a WORLD EATERS unit from your army destroys a CHARACTER or MONSTER model.
+
+TARGETThat WORLD EATERS unit.
+
+EFFECT
+
+Make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne. Until the end of the battle round, that Blessing of Khorne is active in addition to any other Blessings of Khorne that are currently active.
+
+USED BYany unit
+
+1
+CP
+Blood Offering
+One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+Any phase · Either turn · Any unit
+WHEN
+
+Any phase.
+
+TARGETOne WORLD EATERS unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.
+
+EFFECT
+
+Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
+
+USED BYany unit
+
 VESSELS OF WRATH
 3
 1
 CP
-Scorn the Witch
-Any phase · Either turn
+Punish the Craven
+That enemy unit must use desperate escape (-1 to those hazard rolls if it is battle-shocked).
+Movement · Their turn · Khârn the Betrayer, Daemon Prince ×2, Lord on Juggernaut, Slaughterbound
 WHEN
 
-Any phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) suffers a mortal wound.
+Your opponent’s Movement phase, when a unit is selected to make a fall-back move, if that unit is engaged with a friendly WORLD EATERS CHARACTER unit.
 
 TARGETThat WORLD EATERS CHARACTER unit.
 
 EFFECT
 
-Your unit has Feel No Pain 4+ against mortal wounds.
+When an enemy unit engaged with your unit is selected to make a fall-back move, that enemy unit must use the desperate escape mode. If that enemy unit is battle-shocked, -1 from those hazard rolls.
 
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
+USED BYKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
 
 1
 CP
 Aspire to Infamy
-Fight · Either turn
+Your unit’s CHARACTER models’ melee attacks have +1 A and +2 S.
+Fight · Either turn · Daemon Prince ×2, Lord on Juggernaut, Slaughterbound
 WHEN
 
 Fight phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) is selected to fight.
@@ -1287,67 +1325,28 @@ USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, L
 
 1
 CP
-Punish the Craven
-Movement · Their turn
+Scorn the Witch
+Your unit has Feel No Pain 4+ against mortal wounds.
+Any phase · Either turn · Daemon Prince ×2, Lord on Juggernaut, Slaughterbound
 WHEN
 
-Your opponent’s Movement phase, when a unit is selected to make a fall-back move, if that unit is engaged with a friendly WORLD EATERS CHARACTER unit.
+Any phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) suffers a mortal wound.
 
 TARGETThat WORLD EATERS CHARACTER unit.
 
 EFFECT
 
-When an enemy unit engaged with your unit is selected to make a fall-back move, that enemy unit must use the desperate escape mode. If that enemy unit is battle-shocked, -1 from those hazard rolls.
+Your unit has Feel No Pain 4+ against mortal wounds.
 
-USED BYKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
+USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
 
 CORE STRATAGEMS
 10
 1
 CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-1
-CP
-Epic Challenge
-Fight · Either turn
-WHEN
-
-Fight phase, just after a friendly CHARACTER unit is selected to fight.
-
-TARGETThat CHARACTER unit.
-
-EFFECT
-
-Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
-
-USED BYKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-1
-CP
 Insane Bravery
-Command · Your turn · Once per battle
+That battle-shock roll is automatically successful.
+Command · Your turn · Once per battle · Any unit
 WHEN
 
 Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
@@ -1366,8 +1365,45 @@ USED BYany unit
 
 1
 CP
+Rapid Ingress
+Your unit in strategic reserves makes an ingress move. Not in the first battle round.
+Movement · Their turn · Any unit
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+1
+CP
+Fire Overwatch
+Your unit shoots using snap shooting.
+Movement · Their turn · Khârn the Betrayer, Daemon Prince ×2, Lord on Juggernaut, Jakhals, Forgefiend, Chaos Rhino
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Jakhals, Forgefiend, Chaos Rhino
+
+1
+CP
 Explosives
-Shooting · Your turn
+One EXPLOSIVES/GRENADES model picks an unengaged enemy unit within 8" and visible: roll six D6, 1 mortal wound for each 4+.
+Shooting · Your turn · Khârn the Betrayer, Lord on Juggernaut, Jakhals
 WHEN
 
 Your Shooting phase.
@@ -1388,64 +1424,9 @@ USED BYKhârn the Betrayer, Lord on Juggernaut · Archslaughterer, Jakhals
 
 1
 CP
-Crushing Impact
-Charge · Your turn
-WHEN
-
-Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
-
-TARGETThat MONSTER/VEHICLE unit.
-
-EFFECT
-
-Resolve the following sequence:
-
-1. Select one enemy unit engaged with your unit.
-2. Select one model in your unit engaged with that enemy unit.
-3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
-
-Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
-
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Forgefiend, Chaos Rhino
-
-1
-CP
-Rapid Ingress
-Movement · Their turn
-WHEN
-
-End of your opponent’s Movement phase.
-
-TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
-
-EFFECT
-
-Your unit makes an ingress move (20.04).
-
-RESTRICTIONSYou cannot use this stratagem during the first battle round.
-
-USED BYany unit
-
-1
-CP
-Fire Overwatch
-Movement · Their turn
-WHEN
-
-End of your opponent’s Movement phase.
-
-TARGETOne friendly unengaged unit (excluding TITANIC units).
-
-EFFECT
-
-Your unit shoots using snap shooting.
-
-USED BYKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Jakhals, Forgefiend, Chaos Rhino
-
-1
-CP
 Smokescreen
-Shooting · Their turn
+Until the end of the phase, the target of an attack has the benefit of cover if it is your SMOKE unit, or not fully visible to the attacker because of models in your SMOKE unit.
+Shooting · Their turn · Chaos Rhino
 WHEN
 
 Start of your opponent’s Shooting phase.
@@ -1460,710 +1441,9 @@ USED BYChaos Rhino
 
 1
 CP
-Heroic Intervention
-Charge · Their turn · Into the Fray +1CP
-WHEN
-
-End of your opponent’s Charge phase.
-
-TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
-
-EFFECT
-
-Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
-
-Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
-Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
-
-Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
-
-USED BYKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust, Eightbound, Jakhals, Forgefiend
-
-2
-CP
-Counteroffensive
-Fight · Their turn
-WHEN
-
-Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
-
-TARGETOne friendly unit that is eligible to fight.
-
-EFFECT
-
-Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
-
-USED BYany unit
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"all","phase":"command"} · COMMAND Command ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-THIS PHASE
-6 abilities
-Blessings of Khorne Start of the battle round: roll 8 D6, activate up to two Blessings.
-Blessings of Khorne
-World Eaters army rule
-
-If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.
-
-Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.
-
-First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.
-
-They then use the two 2s to activate Unbridled Bloodlust.
-
-Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.
-
-Unbridled Bloodlust · double 1+
-
-This unit has +1 to charge rolls.
-
-Rage-fuelled Invigoration · double 2+
-
-Each time a model in this unit makes a Pile-in or Consolidation move, it can move up to 6" instead of up to 3".
-
-Total Carnage · double 3+
-
-Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.
-
-Martial Excellence · double 4+ or triple 1+
-
-Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.
-
-Warp Blades · double 5+ or triple 2+
-
-Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.
-
-Decapitating Strikes · double 6 or triple 3+
-
-Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
-
-Archslaughterer
-Lord on Juggernaut
-Enhancement
-
-WORLD EATERS model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, every Blessing of Khorne is active for this unit until the start of your next turn.
-
-UNITSLord on Juggernaut · Archslaughterer
-
-Icon of Khorne
-Lord on Juggernaut
-
-If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.
-
-UNITSLord on Juggernaut · Archslaughterer
-
-Rage Eternal
-Slaughterbound
-
-While this model is leading a unit, in your Command phase, you can return one destroyed Bodyguard model to that unit.
-
-UNITSSlaughterbound · Battle-lust
-
-Objective Ravaged
-Jakhals
-
-At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
-
-UNITSJakhals
-
-Direct the Slaughter
-Daemon Prince ×2
-Once per battle round, per army
-
-Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
-
-UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
-
-STRATAGEMS
-COLLAPSE ALL
-BERZERKER WARBAND
-1
-1
-CP
-Blood Offering
-Any phase · Either turn
-WHEN
-
-Any phase.
-
-TARGETOne WORLD EATERS unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.
-
-EFFECT
-
-Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
-
-USED BYany unit
-
-VESSELS OF WRATH
-1
-1
-CP
-Scorn the Witch
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) suffers a mortal wound.
-
-TARGETThat WORLD EATERS CHARACTER unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-CORE STRATAGEMS
-2
-1
-CP
-Insane Bravery
-Command · Your turn · Once per battle
-WHEN
-
-Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
-
-TARGETThat unit.
-
-EFFECT
-
-That battle-shock roll is automatically successful.
-
-RESTRICTIONSYou cannot use this stratagem more than once per battle.
-
-Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
-
-USED BYany unit
-
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-NEXT: MOVEMENT ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"all","phase":"movement"} · MOVEMENT Movement ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-THIS PHASE
-6 abilities
-Aggressive Advance
-Lord on Juggernaut
-
-While this model is leading a unit, models in that unit have a Move characteristic of 10" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features.
-
-UNITSLord on Juggernaut · Archslaughterer
-
-Icon of Khorne
-Lord on Juggernaut
-
-If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.
-
-UNITSLord on Juggernaut · Archslaughterer
-
-Furious Onslaught
-Forgefiend
-
-Each time this model makes a ranged attack that targets the closest eligible target within 18", you can re-roll the Hit roll.
-
-UNITSForgefiend
-
-Meet Any Challenge
-Chaos Rhino
-
-In your opponent’s Movement phase, each time an enemy unit is set up or ends a Normal, Advance or Fall Back move within 8" of this model, any units embarked within it can disembark.
-
-UNITSChaos Rhino
-
-Deep Strike
-Core rule · Slaughterbound
-
-Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
-
-App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
-
-UNITSSlaughterbound · Battle-lust
-
-Direct the Slaughter
-Daemon Prince ×2
-Once per battle round, per army
-
-Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
-
-UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
-
-STRATAGEMS
-COLLAPSE ALL
-BERZERKER WARBAND
-2
-1
-CP
-Apoplectic Frenzy
-Movement · Your turn
-WHEN
-
-Your Movement phase, just after a KHORNE BERZERKERS unit from your army is selected to Advance.
-
-TARGETThat KHORNE BERZERKERS unit.
-
-EFFECT
-
-Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced.
-
-USED BYKhârn the Betrayer, Lord on Juggernaut · Archslaughterer
-
-1
-CP
-Blood Offering
-Any phase · Either turn
-WHEN
-
-Any phase.
-
-TARGETOne WORLD EATERS unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.
-
-EFFECT
-
-Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
-
-USED BYany unit
-
-VESSELS OF WRATH
-2
-1
-CP
-Punish the Craven
-Movement · Their turn
-WHEN
-
-Your opponent’s Movement phase, when a unit is selected to make a fall-back move, if that unit is engaged with a friendly WORLD EATERS CHARACTER unit.
-
-TARGETThat WORLD EATERS CHARACTER unit.
-
-EFFECT
-
-When an enemy unit engaged with your unit is selected to make a fall-back move, that enemy unit must use the desperate escape mode. If that enemy unit is battle-shocked, -1 from those hazard rolls.
-
-USED BYKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-1
-CP
-Scorn the Witch
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) suffers a mortal wound.
-
-TARGETThat WORLD EATERS CHARACTER unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-CORE STRATAGEMS
-3
-1
-CP
-Rapid Ingress
-Movement · Their turn
-WHEN
-
-End of your opponent’s Movement phase.
-
-TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
-
-EFFECT
-
-Your unit makes an ingress move (20.04).
-
-RESTRICTIONSYou cannot use this stratagem during the first battle round.
-
-USED BYany unit
-
-1
-CP
-Fire Overwatch
-Movement · Their turn
-WHEN
-
-End of your opponent’s Movement phase.
-
-TARGETOne friendly unengaged unit (excluding TITANIC units).
-
-EFFECT
-
-Your unit shoots using snap shooting.
-
-USED BYKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Jakhals, Forgefiend, Chaos Rhino
-
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-NEXT: SHOOTING ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"all","phase":"shooting"} · SHOOTING Shooting ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-THIS PHASE
-5 abilities
-Blood Surge
-Khârn the Betrayer, Lord on Juggernaut
-
-In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6+2".
-
-UNITSKhârn the Betrayer, Lord on Juggernaut · Archslaughterer
-
-Icon of Khorne
-Lord on Juggernaut
-
-If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.
-
-UNITSLord on Juggernaut · Archslaughterer
-
-Furious Onslaught
-Forgefiend
-
-Each time this model makes a ranged attack that targets the closest eligible target within 18", you can re-roll the Hit roll.
-
-UNITSForgefiend
-
-Firing Deck
-Core rule · Chaos Rhino
-
-This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence:
-
-1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase).
-2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons).
-3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons.
-4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.
-
-UNITSChaos Rhino
-
-Direct the Slaughter
-Daemon Prince ×2
-Once per battle round, per army
-
-Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
-
-UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
-
-STRATAGEMS
-COLLAPSE ALL
-BERZERKER WARBAND
-2
-1
-CP
-Berzerker’s Wrath
-Shooting · Their turn
-WHEN
-
-Your opponent’s Shooting phase, just after an enemy unit has shot.
-
-TARGETOne KHORNE BERZERKERS unit from your army that can make a surge move as a result of those attacks.
-
-EFFECT
-
-Do not roll a D6 to determine how far models in your unit can move when they make a surge move. Instead, when making a surge move, those models can move up to 8".
-
-Wahapedia FAQ: “After being the target of a ranged attack, can a Leader unit make a Blood Surge move if it was previously attached to a unit of Khorne Berzerkers and if the last model in the attached unit was destroyed by that ranged attack?” No.
-
-USED BYKhârn the Betrayer, Lord on Juggernaut · Archslaughterer
-
-1
-CP
-Blood Offering
-Any phase · Either turn
-WHEN
-
-Any phase.
-
-TARGETOne WORLD EATERS unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.
-
-EFFECT
-
-Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
-
-USED BYany unit
-
-VESSELS OF WRATH
-1
-1
-CP
-Scorn the Witch
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) suffers a mortal wound.
-
-TARGETThat WORLD EATERS CHARACTER unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-CORE STRATAGEMS
-3
-1
-CP
-Smokescreen
-Shooting · Their turn
-WHEN
-
-Start of your opponent’s Shooting phase.
-
-TARGETOne friendly SMOKE unit.
-
-EFFECT
-
-Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
-
-USED BYChaos Rhino
-
-1
-CP
-Explosives
-Shooting · Your turn
-WHEN
-
-Your Shooting phase.
-
-TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
-
-EFFECT
-
-Resolve the following sequence:
-
-1. Select one EXPLOSIVES/GRENADES model in your unit.
-2. Select one unengaged enemy unit within 8" of and visible to that model.
-3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
-
-Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
-
-USED BYKhârn the Betrayer, Lord on Juggernaut · Archslaughterer, Jakhals
-
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-WHEN TARGETED
-Khârn the Betrayer
-Khârn the Betrayer T5 SV3+ INV4+ W5 / Khorne Berzerker T5 SV3+ W2
-Khârn: the first time he is destroyed, at the end of the phase on a 2+ he is set back up with 3 wounds, as close as possible to where he was destroyed and not within Engagement Range of enemy units
-Daemon Prince · Helm of Brazen Ire
-T10 SV2+ INV4+ W10
-Lone Operative while within 3" of a friendly WORLD EATERS INFANTRY unit · -1 D to each attack allocated to this model · 1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds
-Daemon Prince · Berzerker Glaive
-T10 SV2+ INV4+ W10
-Lone Operative while within 3" of a friendly WORLD EATERS INFANTRY unit · 1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds
-Lord on Juggernaut · Archslaughterer
-Lord on Juggernaut T6 SV3+ INV4+ W7 / Khorne Berzerker T5 SV3+ W2
-1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds
-Slaughterbound · Battle-lust
-Slaughterbound T6 SV3+ INV5+ W6 / Exalted Eightbound T6 SV3+ INV5+ W3
-1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds
-Eightbound
-T6 SV3+ INV5+ W3
-Jakhals
-Jakhal T4 SV6+ W1 / Dishonoured w/ paired manglers T4 SV6+ W1
-Forgefiend
-T10 SV3+ INV5+ W12
-Chaos Rhino
-T9 SV3+ W10
-NEXT: CHARGE ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"all","phase":"charge"} · CHARGE Charge ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-THIS PHASE
-6 abilities
-Blessings of Khorne Unbridled Bloodlust active? +1 to charge rolls. Battle-lust: while Unbridled Bloodlust is active for your army, add 1 to Charge rolls made for the Slaughterbound’s unit. Archslaughterer used: every Blessing of Khorne is active for the Lord’s unit until the start of your next turn.
-Blessings of Khorne
-World Eaters army rule
-
-If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.
-
-Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.
-
-First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.
-
-They then use the two 2s to activate Unbridled Bloodlust.
-
-Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.
-
-Unbridled Bloodlust · double 1+
-
-This unit has +1 to charge rolls.
-
-Rage-fuelled Invigoration · double 2+
-
-Each time a model in this unit makes a Pile-in or Consolidation move, it can move up to 6" instead of up to 3".
-
-Total Carnage · double 3+
-
-Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.
-
-Martial Excellence · double 4+ or triple 1+
-
-Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.
-
-Warp Blades · double 5+ or triple 2+
-
-Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.
-
-Decapitating Strikes · double 6 or triple 3+
-
-Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
-
-Devastating Assault
-Daemon Prince ×2
-
-Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the [DEVASTATING WOUNDS] ability.
-
-UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
-
-Aggressive Advance
-Lord on Juggernaut
-
-While this model is leading a unit, models in that unit have a Move characteristic of 10" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features.
-
-UNITSLord on Juggernaut · Archslaughterer
-
-Battle-lust
-Slaughterbound
-Enhancement
-
-WORLD EATERS model only. You can re-roll Charge rolls made for the bearer’s unit. In addition, while the Unbridled Bloodlust Blessing of Khorne is active for your army, add 1 to Charge rolls made for the bearer’s unit.
-
-UNITSSlaughterbound · Battle-lust
-
-The Betrayer
-Khârn the Betrayer
-
-At the end of your Charge phase, if this unit is on the battlefield, is unengaged, and contains a bodyguard model, this unit makes a leadership roll:
-
-If that leadership roll is failed, one bodyguard model in this unit is destroyed.
-
-UNITSKhârn the Betrayer
-
-Direct the Slaughter
-Daemon Prince ×2
-Once per battle round, per army
-
-Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
-
-UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
-
-STRATAGEMS
-COLLAPSE ALL
-BERZERKER WARBAND
-1
-1
-CP
-Blood Offering
-Any phase · Either turn
-WHEN
-
-Any phase.
-
-TARGETOne WORLD EATERS unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.
-
-EFFECT
-
-Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
-
-USED BYany unit
-
-VESSELS OF WRATH
-1
-1
-CP
-Scorn the Witch
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) suffers a mortal wound.
-
-TARGETThat WORLD EATERS CHARACTER unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-CORE STRATAGEMS
-3
-1
-CP
 Crushing Impact
-Charge · Your turn
+Pick an enemy unit engaged with your unit and a model in your unit engaged with it; roll D6 equal to that model’s T: each 5+ is 1 mortal wound to that enemy unit, each 1 is 1 to your unit (max 6 per unit).
+Charge · Your turn · Daemon Prince ×2, Forgefiend, Chaos Rhino
 WHEN
 
 Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
@@ -2185,7 +1465,8 @@ USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, F
 1
 CP
 Heroic Intervention
-Charge · Their turn · Into the Fray +1CP
+Your unit resolves a charge; before the charge roll, pick Leap to Defend (only enemy units that made a charge move this phase and are within the maximum distance) or Into the Fray (+1CP: a charge roll over 6 after modifiers becomes 6; any enemy units within 6" of your unit and within the maximum distance).
+Charge · Their turn · Into the Fray +1CP · Khârn the Betrayer, Daemon Prince ×2, Lord on Juggernaut, Slaughterbound, Eightbound, Jakhals, Forgefiend
 WHEN
 
 End of your opponent’s Charge phase.
@@ -2205,271 +1486,9 @@ USED BYKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince �
 
 1
 CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-NEXT: FIGHT ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"all","phase":"fight"} · FIGHT Fight ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-THIS PHASE
-12 abilities
-Blessings of Khorne Active Blessings: Martial Excellence [SUSTAINED HITS 1] · Warp Blades [LETHAL HITS] · Decapitating Strikes [DEVASTATING WOUNDS] vs INFANTRY · Rage-fuelled Invigoration: 6" pile-in and consolidation · Total Carnage: each time a model is destroyed by a melee attack, if it has not fought this phase, on a 4+ it is not removed; it can fight after the attacking unit has finished making its attacks, then is removed. Archslaughterer used: all six for the Lord’s unit.
-Possessed Lord
-Slaughterbound
-Once per battle
-
-Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [Devastating Wounds] ability.
-
-UNITSSlaughterbound · Battle-lust
-
-Blessings of Khorne
-World Eaters army rule
-
-If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.
-
-Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.
-
-First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.
-
-They then use the two 2s to activate Unbridled Bloodlust.
-
-Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.
-
-Unbridled Bloodlust · double 1+
-
-This unit has +1 to charge rolls.
-
-Rage-fuelled Invigoration · double 2+
-
-Each time a model in this unit makes a Pile-in or Consolidation move, it can move up to 6" instead of up to 3".
-
-Total Carnage · double 3+
-
-Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.
-
-Martial Excellence · double 4+ or triple 1+
-
-Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.
-
-Warp Blades · double 5+ or triple 2+
-
-Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.
-
-Decapitating Strikes · double 6 or triple 3+
-
-Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
-
-Relentless Rage
-Berzerker Warband rule · Khârn the Betrayer, Daemon Prince ×2, Lord on Juggernaut, Slaughterbound, Eightbound, Jakhals, Forgefiend, Chaos Rhino
-Already in A
-
-Already counted: every melee A value in this app includes this +1 A. Do not add it again.
-
-Friendly WORLD EATERS units’ melee attacks have +1 A.
-
-UNITSKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust, Eightbound, Jakhals, Forgefiend, Chaos Rhino
-
-Wrath of Khorne
-Vessels of Wrath rule · Daemon Prince ×2, Lord on Juggernaut, Slaughterbound
-
-When a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) is selected to fight, that unit’s CHARACTER models’ melee attacks can have:
-
-[CLEAVE 1].
-Or: +1 AP.
-
-UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-Legendary Killer
-Khârn the Betrayer
-
-While this model is leading a unit, each time a model in that unit makes a melee attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.
-
-UNITSKhârn the Betrayer
-
-Murderous Charge
-Khârn the Betrayer, Lord on Juggernaut
-
-If this unit made a charge move this turn, this unit’s melee attacks have +1 S.
-
-UNITSKhârn the Betrayer, Lord on Juggernaut · Archslaughterer
-
-Devastating Assault
-Daemon Prince ×2
-
-Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the [DEVASTATING WOUNDS] ability.
-
-UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
-
-Crush All Who Stand Before Us
-Lord on Juggernaut
-
-Each time this model’s unit is selected to fight, you can use this ability. When determining which models in this unit are eligible to fight, any models in it that are within 3" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3" of them and within Engagement Range of their unit.
-
-UNITSLord on Juggernaut · Archslaughterer
-
-Icon of Khorne
-Lord on Juggernaut
-
-If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.
-
-UNITSLord on Juggernaut · Archslaughterer
-
-Rend and Tear
-Slaughterbound
-
-Each time a model in this unit makes a melee attack that targets a MONSTER or VEHICLE unit, until the end of the phase, improve the Damage characteristic of that attack by 1.
-
-UNITSSlaughterbound · Battle-lust
-
-Beacons of Rage
-Eightbound
-Aura
-
-While a friendly WORLD EATERS unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding MONSTERS and VEHICLES), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well.
-
-UNITSEightbound
-
-Direct the Slaughter
-Daemon Prince ×2
-Once per battle round, per army
-
-Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
-
-UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
-
-STRATAGEMS
-COLLAPSE ALL
-BERZERKER WARBAND
-4
-1
-CP
-Hack and Slash
-Fight · Either turn
-WHEN
-
-Fight phase.
-
-TARGETOne WORLD EATERS unit from your army that has not been selected to fight this phase and that made a charge move this turn.
-
-EFFECT
-
-Until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1.
-
-USED BYany unit
-
-2
-CP
-Frenzied Resilience
-Fight · Either turn
-WHEN
-
-Fight phase, just after an enemy unit has selected its targets.
-
-TARGETOne WORLD EATERS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
-
-EFFECT
-
-Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack.
-
-USED BYany unit
-
-1
-CP
-Skulls for the Skull Throne!
-Fight · Either turn
-WHEN
-
-Fight phase, just after a WORLD EATERS unit from your army destroys a CHARACTER or MONSTER model.
-
-TARGETThat WORLD EATERS unit.
-
-EFFECT
-
-Make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne. Until the end of the battle round, that Blessing of Khorne is active in addition to any other Blessings of Khorne that are currently active.
-
-USED BYany unit
-
-1
-CP
-Blood Offering
-Any phase · Either turn
-WHEN
-
-Any phase.
-
-TARGETOne WORLD EATERS unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.
-
-EFFECT
-
-Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
-
-USED BYany unit
-
-VESSELS OF WRATH
-2
-1
-CP
-Aspire to Infamy
-Fight · Either turn
-WHEN
-
-Fight phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) is selected to fight.
-
-TARGETThat WORLD EATERS CHARACTER unit.
-
-EFFECT
-
-Your unit’s CHARACTER models’ melee attacks have:
-
-+1 A.
-+2 S.
-
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-1
-CP
-Scorn the Witch
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) suffers a mortal wound.
-
-TARGETThat WORLD EATERS CHARACTER unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-CORE STRATAGEMS
-3
-1
-CP
 Epic Challenge
-Fight · Either turn
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+Fight · Either turn · Khârn the Betrayer, Daemon Prince ×2, Lord on Juggernaut, Slaughterbound
 WHEN
 
 Fight phase, just after a friendly CHARACTER unit is selected to fight.
@@ -2485,7 +1504,8 @@ USED BYKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince �
 2
 CP
 Counteroffensive
-Fight · Their turn
+Until the end of the phase, your unit has Fights First and must be the next unit you select to fight.
+Fight · Their turn · Any unit
 WHEN
 
 Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
@@ -2501,7 +1521,8 @@ USED BYany unit
 1
 CP
 Command Re-roll
-Any phase · Either turn
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+Any phase · Either turn · Any unit
 WHEN
 
 Any phase, just after you make one of the following rolls for a friendly unit or model:
@@ -2523,2309 +1544,9 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-WHEN TARGETED
-
-Every unit: 2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
-
-Khârn the Betrayer
-Khârn the Betrayer T5 SV3+ INV4+ W5 / Khorne Berzerker T5 SV3+ W2
-Khârn: the first time he is destroyed, at the end of the phase on a 2+ he is set back up with 3 wounds, as close as possible to where he was destroyed and not within Engagement Range of enemy units
-Daemon Prince · Helm of Brazen Ire
-T10 SV2+ INV4+ W10
-Lone Operative while within 3" of a friendly WORLD EATERS INFANTRY unit · -1 D to each attack allocated to this model · 1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds
-Daemon Prince · Berzerker Glaive
-T10 SV2+ INV4+ W10
-Lone Operative while within 3" of a friendly WORLD EATERS INFANTRY unit · 1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds
-Lord on Juggernaut · Archslaughterer
-Lord on Juggernaut T6 SV3+ INV4+ W7 / Khorne Berzerker T5 SV3+ W2
-1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds
-Slaughterbound · Battle-lust
-Slaughterbound T6 SV3+ INV5+ W6 / Exalted Eightbound T6 SV3+ INV5+ W3
-1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds
-Eightbound
-T6 SV3+ INV5+ W3
-Jakhals
-Jakhal T4 SV6+ W1 / Dishonoured w/ paired manglers T4 SV6+ W1
-Forgefiend
-T10 SV3+ INV5+ W12
-Chaos Rhino
-T9 SV3+ W10
-NEXT: COMMAND ›
-
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## strats {"turn":"your","phase":"all"} · TURN Turn ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-COLLAPSE ALL
-BERZERKER WARBAND
-5
-1
-CP
-Blood Offering
-Any phase · Either turn
-WHEN
-
-Any phase.
-
-TARGETOne WORLD EATERS unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.
-
-EFFECT
-
-Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
-
-USED BYany unit
-
-1
-CP
-Hack and Slash
-Fight · Either turn
-WHEN
-
-Fight phase.
-
-TARGETOne WORLD EATERS unit from your army that has not been selected to fight this phase and that made a charge move this turn.
-
-EFFECT
-
-Until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1.
-
-USED BYany unit
-
-2
-CP
-Frenzied Resilience
-Fight · Either turn
-WHEN
-
-Fight phase, just after an enemy unit has selected its targets.
-
-TARGETOne WORLD EATERS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
-
-EFFECT
-
-Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack.
-
-USED BYany unit
-
-1
-CP
-Skulls for the Skull Throne!
-Fight · Either turn
-WHEN
-
-Fight phase, just after a WORLD EATERS unit from your army destroys a CHARACTER or MONSTER model.
-
-TARGETThat WORLD EATERS unit.
-
-EFFECT
-
-Make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne. Until the end of the battle round, that Blessing of Khorne is active in addition to any other Blessings of Khorne that are currently active.
-
-USED BYany unit
-
-1
-CP
-Apoplectic Frenzy
-Movement · Your turn
-WHEN
-
-Your Movement phase, just after a KHORNE BERZERKERS unit from your army is selected to Advance.
-
-TARGETThat KHORNE BERZERKERS unit.
-
-EFFECT
-
-Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced.
-
-USED BYKhârn the Betrayer, Lord on Juggernaut · Archslaughterer
-
-VESSELS OF WRATH
-2
-1
-CP
-Scorn the Witch
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) suffers a mortal wound.
-
-TARGETThat WORLD EATERS CHARACTER unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-1
-CP
-Aspire to Infamy
-Fight · Either turn
-WHEN
-
-Fight phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) is selected to fight.
-
-TARGETThat WORLD EATERS CHARACTER unit.
-
-EFFECT
-
-Your unit’s CHARACTER models’ melee attacks have:
-
-+1 A.
-+2 S.
-
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-CORE STRATAGEMS
-5
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-1
-CP
-Epic Challenge
-Fight · Either turn
-WHEN
-
-Fight phase, just after a friendly CHARACTER unit is selected to fight.
-
-TARGETThat CHARACTER unit.
-
-EFFECT
-
-Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
-
-USED BYKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-1
-CP
-Insane Bravery
-Command · Your turn · Once per battle
-WHEN
-
-Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
-
-TARGETThat unit.
-
-EFFECT
-
-That battle-shock roll is automatically successful.
-
-RESTRICTIONSYou cannot use this stratagem more than once per battle.
-
-Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
-
-USED BYany unit
-
-1
-CP
-Explosives
-Shooting · Your turn
-WHEN
-
-Your Shooting phase.
-
-TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
-
-EFFECT
-
-Resolve the following sequence:
-
-1. Select one EXPLOSIVES/GRENADES model in your unit.
-2. Select one unengaged enemy unit within 8" of and visible to that model.
-3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
-
-Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
-
-USED BYKhârn the Betrayer, Lord on Juggernaut · Archslaughterer, Jakhals
-
-1
-CP
-Crushing Impact
-Charge · Your turn
-WHEN
-
-Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
-
-TARGETThat MONSTER/VEHICLE unit.
-
-EFFECT
-
-Resolve the following sequence:
-
-1. Select one enemy unit engaged with your unit.
-2. Select one model in your unit engaged with that enemy unit.
-3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
-
-Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
-
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Forgefiend, Chaos Rhino
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"your","phase":"command"} · YOUR COMMAND Your Command ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-THIS PHASE
-6 abilities
-Blessings of Khorne Start of the battle round: roll 8 D6, activate up to two Blessings.
-Blessings of Khorne
-World Eaters army rule
-
-If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.
-
-Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.
-
-First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.
-
-They then use the two 2s to activate Unbridled Bloodlust.
-
-Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.
-
-Unbridled Bloodlust · double 1+
-
-This unit has +1 to charge rolls.
-
-Rage-fuelled Invigoration · double 2+
-
-Each time a model in this unit makes a Pile-in or Consolidation move, it can move up to 6" instead of up to 3".
-
-Total Carnage · double 3+
-
-Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.
-
-Martial Excellence · double 4+ or triple 1+
-
-Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.
-
-Warp Blades · double 5+ or triple 2+
-
-Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.
-
-Decapitating Strikes · double 6 or triple 3+
-
-Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
-
-Archslaughterer
-Lord on Juggernaut
-Enhancement
-
-WORLD EATERS model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, every Blessing of Khorne is active for this unit until the start of your next turn.
-
-UNITSLord on Juggernaut · Archslaughterer
-
-Icon of Khorne
-Lord on Juggernaut
-
-If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.
-
-UNITSLord on Juggernaut · Archslaughterer
-
-Rage Eternal
-Slaughterbound
-
-While this model is leading a unit, in your Command phase, you can return one destroyed Bodyguard model to that unit.
-
-UNITSSlaughterbound · Battle-lust
-
-Objective Ravaged
-Jakhals
-
-At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
-
-UNITSJakhals
-
-Direct the Slaughter
-Daemon Prince ×2
-Once per battle round, per army
-
-Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
-
-UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
-
-STRATAGEMS
-COLLAPSE ALL
-BERZERKER WARBAND
-1
-1
-CP
-Blood Offering
-Any phase · Either turn
-WHEN
-
-Any phase.
-
-TARGETOne WORLD EATERS unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.
-
-EFFECT
-
-Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
-
-USED BYany unit
-
-VESSELS OF WRATH
-1
-1
-CP
-Scorn the Witch
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) suffers a mortal wound.
-
-TARGETThat WORLD EATERS CHARACTER unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-CORE STRATAGEMS
-2
-1
-CP
-Insane Bravery
-Command · Your turn · Once per battle
-WHEN
-
-Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
-
-TARGETThat unit.
-
-EFFECT
-
-That battle-shock roll is automatically successful.
-
-RESTRICTIONSYou cannot use this stratagem more than once per battle.
-
-Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
-
-USED BYany unit
-
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-NEXT: YOUR MOVEMENT ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"your","phase":"movement"} · YOUR MOVEMENT Your Movement ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-THIS PHASE
-3 abilities
-Aggressive Advance
-Lord on Juggernaut
-
-While this model is leading a unit, models in that unit have a Move characteristic of 10" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features.
-
-UNITSLord on Juggernaut · Archslaughterer
-
-Deep Strike
-Core rule · Slaughterbound
-
-Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
-
-App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
-
-UNITSSlaughterbound · Battle-lust
-
-Direct the Slaughter
-Daemon Prince ×2
-Once per battle round, per army
-
-Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
-
-UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
-
-STRATAGEMS
-COLLAPSE ALL
-BERZERKER WARBAND
-2
-1
-CP
-Apoplectic Frenzy
-Movement · Your turn
-WHEN
-
-Your Movement phase, just after a KHORNE BERZERKERS unit from your army is selected to Advance.
-
-TARGETThat KHORNE BERZERKERS unit.
-
-EFFECT
-
-Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced.
-
-USED BYKhârn the Betrayer, Lord on Juggernaut · Archslaughterer
-
-1
-CP
-Blood Offering
-Any phase · Either turn
-WHEN
-
-Any phase.
-
-TARGETOne WORLD EATERS unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.
-
-EFFECT
-
-Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
-
-USED BYany unit
-
-VESSELS OF WRATH
-1
-1
-CP
-Scorn the Witch
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) suffers a mortal wound.
-
-TARGETThat WORLD EATERS CHARACTER unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-CORE STRATAGEMS
-1
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-NEXT: YOUR SHOOTING ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"your","phase":"shooting"} · YOUR SHOOTING Your Shooting ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-THIS PHASE
-4 abilities
-Icon of Khorne
-Lord on Juggernaut
-
-If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.
-
-UNITSLord on Juggernaut · Archslaughterer
-
-Furious Onslaught
-Forgefiend
-
-Each time this model makes a ranged attack that targets the closest eligible target within 18", you can re-roll the Hit roll.
-
-UNITSForgefiend
-
-Firing Deck
-Core rule · Chaos Rhino
-
-This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence:
-
-1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase).
-2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons).
-3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons.
-4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.
-
-UNITSChaos Rhino
-
-Direct the Slaughter
-Daemon Prince ×2
-Once per battle round, per army
-
-Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
-
-UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
-
-STRATAGEMS
-COLLAPSE ALL
-BERZERKER WARBAND
-1
-1
-CP
-Blood Offering
-Any phase · Either turn
-WHEN
-
-Any phase.
-
-TARGETOne WORLD EATERS unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.
-
-EFFECT
-
-Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
-
-USED BYany unit
-
-VESSELS OF WRATH
-1
-1
-CP
-Scorn the Witch
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) suffers a mortal wound.
-
-TARGETThat WORLD EATERS CHARACTER unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-CORE STRATAGEMS
-2
-1
-CP
-Explosives
-Shooting · Your turn
-WHEN
-
-Your Shooting phase.
-
-TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
-
-EFFECT
-
-Resolve the following sequence:
-
-1. Select one EXPLOSIVES/GRENADES model in your unit.
-2. Select one unengaged enemy unit within 8" of and visible to that model.
-3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
-
-Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
-
-USED BYKhârn the Betrayer, Lord on Juggernaut · Archslaughterer, Jakhals
-
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-NEXT: YOUR CHARGE ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"your","phase":"charge"} · YOUR CHARGE Your Charge ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-THIS PHASE
-6 abilities
-Blessings of Khorne Unbridled Bloodlust active? +1 to charge rolls. Battle-lust: while Unbridled Bloodlust is active for your army, add 1 to Charge rolls made for the Slaughterbound’s unit. Archslaughterer used: every Blessing of Khorne is active for the Lord’s unit until the start of your next turn.
-Blessings of Khorne
-World Eaters army rule
-
-If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.
-
-Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.
-
-First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.
-
-They then use the two 2s to activate Unbridled Bloodlust.
-
-Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.
-
-Unbridled Bloodlust · double 1+
-
-This unit has +1 to charge rolls.
-
-Rage-fuelled Invigoration · double 2+
-
-Each time a model in this unit makes a Pile-in or Consolidation move, it can move up to 6" instead of up to 3".
-
-Total Carnage · double 3+
-
-Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.
-
-Martial Excellence · double 4+ or triple 1+
-
-Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.
-
-Warp Blades · double 5+ or triple 2+
-
-Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.
-
-Decapitating Strikes · double 6 or triple 3+
-
-Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
-
-Devastating Assault
-Daemon Prince ×2
-
-Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the [DEVASTATING WOUNDS] ability.
-
-UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
-
-Aggressive Advance
-Lord on Juggernaut
-
-While this model is leading a unit, models in that unit have a Move characteristic of 10" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features.
-
-UNITSLord on Juggernaut · Archslaughterer
-
-Battle-lust
-Slaughterbound
-Enhancement
-
-WORLD EATERS model only. You can re-roll Charge rolls made for the bearer’s unit. In addition, while the Unbridled Bloodlust Blessing of Khorne is active for your army, add 1 to Charge rolls made for the bearer’s unit.
-
-UNITSSlaughterbound · Battle-lust
-
-The Betrayer
-Khârn the Betrayer
-
-At the end of your Charge phase, if this unit is on the battlefield, is unengaged, and contains a bodyguard model, this unit makes a leadership roll:
-
-If that leadership roll is failed, one bodyguard model in this unit is destroyed.
-
-UNITSKhârn the Betrayer
-
-Direct the Slaughter
-Daemon Prince ×2
-Once per battle round, per army
-
-Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
-
-UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
-
-STRATAGEMS
-COLLAPSE ALL
-BERZERKER WARBAND
-1
-1
-CP
-Blood Offering
-Any phase · Either turn
-WHEN
-
-Any phase.
-
-TARGETOne WORLD EATERS unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.
-
-EFFECT
-
-Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
-
-USED BYany unit
-
-VESSELS OF WRATH
-1
-1
-CP
-Scorn the Witch
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) suffers a mortal wound.
-
-TARGETThat WORLD EATERS CHARACTER unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-CORE STRATAGEMS
-2
-1
-CP
-Crushing Impact
-Charge · Your turn
-WHEN
-
-Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
-
-TARGETThat MONSTER/VEHICLE unit.
-
-EFFECT
-
-Resolve the following sequence:
-
-1. Select one enemy unit engaged with your unit.
-2. Select one model in your unit engaged with that enemy unit.
-3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
-
-Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
-
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Forgefiend, Chaos Rhino
-
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-NEXT: YOUR FIGHT ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"your","phase":"fight"} · YOUR FIGHT Your Fight ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-THIS PHASE
-12 abilities
-Blessings of Khorne Active Blessings: Martial Excellence [SUSTAINED HITS 1] · Warp Blades [LETHAL HITS] · Decapitating Strikes [DEVASTATING WOUNDS] vs INFANTRY · Rage-fuelled Invigoration: 6" pile-in and consolidation · Total Carnage: each time a model is destroyed by a melee attack, if it has not fought this phase, on a 4+ it is not removed; it can fight after the attacking unit has finished making its attacks, then is removed. Archslaughterer used: all six for the Lord’s unit.
-Possessed Lord
-Slaughterbound
-Once per battle
-
-Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [Devastating Wounds] ability.
-
-UNITSSlaughterbound · Battle-lust
-
-Blessings of Khorne
-World Eaters army rule
-
-If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.
-
-Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.
-
-First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.
-
-They then use the two 2s to activate Unbridled Bloodlust.
-
-Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.
-
-Unbridled Bloodlust · double 1+
-
-This unit has +1 to charge rolls.
-
-Rage-fuelled Invigoration · double 2+
-
-Each time a model in this unit makes a Pile-in or Consolidation move, it can move up to 6" instead of up to 3".
-
-Total Carnage · double 3+
-
-Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.
-
-Martial Excellence · double 4+ or triple 1+
-
-Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.
-
-Warp Blades · double 5+ or triple 2+
-
-Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.
-
-Decapitating Strikes · double 6 or triple 3+
-
-Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
-
-Relentless Rage
-Berzerker Warband rule · Khârn the Betrayer, Daemon Prince ×2, Lord on Juggernaut, Slaughterbound, Eightbound, Jakhals, Forgefiend, Chaos Rhino
-Already in A
-
-Already counted: every melee A value in this app includes this +1 A. Do not add it again.
-
-Friendly WORLD EATERS units’ melee attacks have +1 A.
-
-UNITSKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust, Eightbound, Jakhals, Forgefiend, Chaos Rhino
-
-Wrath of Khorne
-Vessels of Wrath rule · Daemon Prince ×2, Lord on Juggernaut, Slaughterbound
-
-When a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) is selected to fight, that unit’s CHARACTER models’ melee attacks can have:
-
-[CLEAVE 1].
-Or: +1 AP.
-
-UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-Legendary Killer
-Khârn the Betrayer
-
-While this model is leading a unit, each time a model in that unit makes a melee attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.
-
-UNITSKhârn the Betrayer
-
-Murderous Charge
-Khârn the Betrayer, Lord on Juggernaut
-
-If this unit made a charge move this turn, this unit’s melee attacks have +1 S.
-
-UNITSKhârn the Betrayer, Lord on Juggernaut · Archslaughterer
-
-Devastating Assault
-Daemon Prince ×2
-
-Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the [DEVASTATING WOUNDS] ability.
-
-UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
-
-Crush All Who Stand Before Us
-Lord on Juggernaut
-
-Each time this model’s unit is selected to fight, you can use this ability. When determining which models in this unit are eligible to fight, any models in it that are within 3" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3" of them and within Engagement Range of their unit.
-
-UNITSLord on Juggernaut · Archslaughterer
-
-Icon of Khorne
-Lord on Juggernaut
-
-If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.
-
-UNITSLord on Juggernaut · Archslaughterer
-
-Rend and Tear
-Slaughterbound
-
-Each time a model in this unit makes a melee attack that targets a MONSTER or VEHICLE unit, until the end of the phase, improve the Damage characteristic of that attack by 1.
-
-UNITSSlaughterbound · Battle-lust
-
-Beacons of Rage
-Eightbound
-Aura
-
-While a friendly WORLD EATERS unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding MONSTERS and VEHICLES), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well.
-
-UNITSEightbound
-
-Direct the Slaughter
-Daemon Prince ×2
-Once per battle round, per army
-
-Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
-
-UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
-
-STRATAGEMS
-COLLAPSE ALL
-BERZERKER WARBAND
-4
-1
-CP
-Hack and Slash
-Fight · Either turn
-WHEN
-
-Fight phase.
-
-TARGETOne WORLD EATERS unit from your army that has not been selected to fight this phase and that made a charge move this turn.
-
-EFFECT
-
-Until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1.
-
-USED BYany unit
-
-2
-CP
-Frenzied Resilience
-Fight · Either turn
-WHEN
-
-Fight phase, just after an enemy unit has selected its targets.
-
-TARGETOne WORLD EATERS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
-
-EFFECT
-
-Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack.
-
-USED BYany unit
-
-1
-CP
-Skulls for the Skull Throne!
-Fight · Either turn
-WHEN
-
-Fight phase, just after a WORLD EATERS unit from your army destroys a CHARACTER or MONSTER model.
-
-TARGETThat WORLD EATERS unit.
-
-EFFECT
-
-Make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne. Until the end of the battle round, that Blessing of Khorne is active in addition to any other Blessings of Khorne that are currently active.
-
-USED BYany unit
-
-1
-CP
-Blood Offering
-Any phase · Either turn
-WHEN
-
-Any phase.
-
-TARGETOne WORLD EATERS unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.
-
-EFFECT
-
-Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
-
-USED BYany unit
-
-VESSELS OF WRATH
-2
-1
-CP
-Aspire to Infamy
-Fight · Either turn
-WHEN
-
-Fight phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) is selected to fight.
-
-TARGETThat WORLD EATERS CHARACTER unit.
-
-EFFECT
-
-Your unit’s CHARACTER models’ melee attacks have:
-
-+1 A.
-+2 S.
-
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-1
-CP
-Scorn the Witch
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) suffers a mortal wound.
-
-TARGETThat WORLD EATERS CHARACTER unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-CORE STRATAGEMS
-2
-1
-CP
-Epic Challenge
-Fight · Either turn
-WHEN
-
-Fight phase, just after a friendly CHARACTER unit is selected to fight.
-
-TARGETThat CHARACTER unit.
-
-EFFECT
-
-Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
-
-USED BYKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-NEXT: THEIR COMMAND ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"opp","phase":"all"} · TURN Turn ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-COLLAPSE ALL
-BERZERKER WARBAND
-5
-1
-CP
-Blood Offering
-Any phase · Either turn
-WHEN
-
-Any phase.
-
-TARGETOne WORLD EATERS unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.
-
-EFFECT
-
-Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
-
-USED BYany unit
-
-1
-CP
-Hack and Slash
-Fight · Either turn
-WHEN
-
-Fight phase.
-
-TARGETOne WORLD EATERS unit from your army that has not been selected to fight this phase and that made a charge move this turn.
-
-EFFECT
-
-Until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1.
-
-USED BYany unit
-
-2
-CP
-Frenzied Resilience
-Fight · Either turn
-WHEN
-
-Fight phase, just after an enemy unit has selected its targets.
-
-TARGETOne WORLD EATERS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
-
-EFFECT
-
-Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack.
-
-USED BYany unit
-
-1
-CP
-Skulls for the Skull Throne!
-Fight · Either turn
-WHEN
-
-Fight phase, just after a WORLD EATERS unit from your army destroys a CHARACTER or MONSTER model.
-
-TARGETThat WORLD EATERS unit.
-
-EFFECT
-
-Make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne. Until the end of the battle round, that Blessing of Khorne is active in addition to any other Blessings of Khorne that are currently active.
-
-USED BYany unit
-
-1
-CP
-Berzerker’s Wrath
-Shooting · Their turn
-WHEN
-
-Your opponent’s Shooting phase, just after an enemy unit has shot.
-
-TARGETOne KHORNE BERZERKERS unit from your army that can make a surge move as a result of those attacks.
-
-EFFECT
-
-Do not roll a D6 to determine how far models in your unit can move when they make a surge move. Instead, when making a surge move, those models can move up to 8".
-
-Wahapedia FAQ: “After being the target of a ranged attack, can a Leader unit make a Blood Surge move if it was previously attached to a unit of Khorne Berzerkers and if the last model in the attached unit was destroyed by that ranged attack?” No.
-
-USED BYKhârn the Betrayer, Lord on Juggernaut · Archslaughterer
-
-VESSELS OF WRATH
-3
-1
-CP
-Scorn the Witch
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) suffers a mortal wound.
-
-TARGETThat WORLD EATERS CHARACTER unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-1
-CP
-Aspire to Infamy
-Fight · Either turn
-WHEN
-
-Fight phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) is selected to fight.
-
-TARGETThat WORLD EATERS CHARACTER unit.
-
-EFFECT
-
-Your unit’s CHARACTER models’ melee attacks have:
-
-+1 A.
-+2 S.
-
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-1
-CP
-Punish the Craven
-Movement · Their turn
-WHEN
-
-Your opponent’s Movement phase, when a unit is selected to make a fall-back move, if that unit is engaged with a friendly WORLD EATERS CHARACTER unit.
-
-TARGETThat WORLD EATERS CHARACTER unit.
-
-EFFECT
-
-When an enemy unit engaged with your unit is selected to make a fall-back move, that enemy unit must use the desperate escape mode. If that enemy unit is battle-shocked, -1 from those hazard rolls.
-
-USED BYKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-CORE STRATAGEMS
-7
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-1
-CP
-Epic Challenge
-Fight · Either turn
-WHEN
-
-Fight phase, just after a friendly CHARACTER unit is selected to fight.
-
-TARGETThat CHARACTER unit.
-
-EFFECT
-
-Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
-
-USED BYKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-1
-CP
-Rapid Ingress
-Movement · Their turn
-WHEN
-
-End of your opponent’s Movement phase.
-
-TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
-
-EFFECT
-
-Your unit makes an ingress move (20.04).
-
-RESTRICTIONSYou cannot use this stratagem during the first battle round.
-
-USED BYany unit
-
-1
-CP
-Fire Overwatch
-Movement · Their turn
-WHEN
-
-End of your opponent’s Movement phase.
-
-TARGETOne friendly unengaged unit (excluding TITANIC units).
-
-EFFECT
-
-Your unit shoots using snap shooting.
-
-USED BYKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Jakhals, Forgefiend, Chaos Rhino
-
-1
-CP
-Smokescreen
-Shooting · Their turn
-WHEN
-
-Start of your opponent’s Shooting phase.
-
-TARGETOne friendly SMOKE unit.
-
-EFFECT
-
-Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
-
-USED BYChaos Rhino
-
-1
-CP
-Heroic Intervention
-Charge · Their turn · Into the Fray +1CP
-WHEN
-
-End of your opponent’s Charge phase.
-
-TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
-
-EFFECT
-
-Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
-
-Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
-Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
-
-Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
-
-USED BYKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust, Eightbound, Jakhals, Forgefiend
-
-2
-CP
-Counteroffensive
-Fight · Their turn
-WHEN
-
-Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
-
-TARGETOne friendly unit that is eligible to fight.
-
-EFFECT
-
-Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
-
-USED BYany unit
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"opp","phase":"command"} · THEIR COMMAND Their Command ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-THIS PHASE
-3 abilities
-Blessings of Khorne Start of the battle round: roll 8 D6, activate up to two Blessings.
-Blessings of Khorne
-World Eaters army rule
-
-If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.
-
-Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.
-
-First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.
-
-They then use the two 2s to activate Unbridled Bloodlust.
-
-Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.
-
-Unbridled Bloodlust · double 1+
-
-This unit has +1 to charge rolls.
-
-Rage-fuelled Invigoration · double 2+
-
-Each time a model in this unit makes a Pile-in or Consolidation move, it can move up to 6" instead of up to 3".
-
-Total Carnage · double 3+
-
-Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.
-
-Martial Excellence · double 4+ or triple 1+
-
-Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.
-
-Warp Blades · double 5+ or triple 2+
-
-Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.
-
-Decapitating Strikes · double 6 or triple 3+
-
-Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
-
-Icon of Khorne
-Lord on Juggernaut
-
-If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.
-
-UNITSLord on Juggernaut · Archslaughterer
-
-Direct the Slaughter
-Daemon Prince ×2
-Once per battle round, per army
-
-Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
-
-UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
-
-STRATAGEMS
-COLLAPSE ALL
-BERZERKER WARBAND
-1
-1
-CP
-Blood Offering
-Any phase · Either turn
-WHEN
-
-Any phase.
-
-TARGETOne WORLD EATERS unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.
-
-EFFECT
-
-Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
-
-USED BYany unit
-
-VESSELS OF WRATH
-1
-1
-CP
-Scorn the Witch
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) suffers a mortal wound.
-
-TARGETThat WORLD EATERS CHARACTER unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-CORE STRATAGEMS
-1
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-NEXT: THEIR MOVEMENT ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"opp","phase":"movement"} · THEIR MOVEMENT Their Movement ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-THIS PHASE
-5 abilities
-Icon of Khorne
-Lord on Juggernaut
-
-If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.
-
-UNITSLord on Juggernaut · Archslaughterer
-
-Furious Onslaught
-Forgefiend
-
-Each time this model makes a ranged attack that targets the closest eligible target within 18", you can re-roll the Hit roll.
-
-UNITSForgefiend
-
-Meet Any Challenge
-Chaos Rhino
-
-In your opponent’s Movement phase, each time an enemy unit is set up or ends a Normal, Advance or Fall Back move within 8" of this model, any units embarked within it can disembark.
-
-UNITSChaos Rhino
-
-Deep Strike
-Core rule · Slaughterbound
-
-Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
-
-App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
-
-UNITSSlaughterbound · Battle-lust
-
-Direct the Slaughter
-Daemon Prince ×2
-Once per battle round, per army
-
-Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
-
-UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
-
-STRATAGEMS
-COLLAPSE ALL
-BERZERKER WARBAND
-1
-1
-CP
-Blood Offering
-Any phase · Either turn
-WHEN
-
-Any phase.
-
-TARGETOne WORLD EATERS unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.
-
-EFFECT
-
-Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
-
-USED BYany unit
-
-VESSELS OF WRATH
-2
-1
-CP
-Punish the Craven
-Movement · Their turn
-WHEN
-
-Your opponent’s Movement phase, when a unit is selected to make a fall-back move, if that unit is engaged with a friendly WORLD EATERS CHARACTER unit.
-
-TARGETThat WORLD EATERS CHARACTER unit.
-
-EFFECT
-
-When an enemy unit engaged with your unit is selected to make a fall-back move, that enemy unit must use the desperate escape mode. If that enemy unit is battle-shocked, -1 from those hazard rolls.
-
-USED BYKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-1
-CP
-Scorn the Witch
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) suffers a mortal wound.
-
-TARGETThat WORLD EATERS CHARACTER unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-CORE STRATAGEMS
-3
-1
-CP
-Rapid Ingress
-Movement · Their turn
-WHEN
-
-End of your opponent’s Movement phase.
-
-TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
-
-EFFECT
-
-Your unit makes an ingress move (20.04).
-
-RESTRICTIONSYou cannot use this stratagem during the first battle round.
-
-USED BYany unit
-
-1
-CP
-Fire Overwatch
-Movement · Their turn
-WHEN
-
-End of your opponent’s Movement phase.
-
-TARGETOne friendly unengaged unit (excluding TITANIC units).
-
-EFFECT
-
-Your unit shoots using snap shooting.
-
-USED BYKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Jakhals, Forgefiend, Chaos Rhino
-
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-NEXT: THEIR SHOOTING ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"opp","phase":"shooting"} · THEIR SHOOTING Their Shooting ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-THIS PHASE
-2 abilities
-Blood Surge
-Khârn the Betrayer, Lord on Juggernaut
-
-In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6+2".
-
-UNITSKhârn the Betrayer, Lord on Juggernaut · Archslaughterer
-
-Direct the Slaughter
-Daemon Prince ×2
-Once per battle round, per army
-
-Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
-
-UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
-
-STRATAGEMS
-COLLAPSE ALL
-BERZERKER WARBAND
-2
-1
-CP
-Berzerker’s Wrath
-Shooting · Their turn
-WHEN
-
-Your opponent’s Shooting phase, just after an enemy unit has shot.
-
-TARGETOne KHORNE BERZERKERS unit from your army that can make a surge move as a result of those attacks.
-
-EFFECT
-
-Do not roll a D6 to determine how far models in your unit can move when they make a surge move. Instead, when making a surge move, those models can move up to 8".
-
-Wahapedia FAQ: “After being the target of a ranged attack, can a Leader unit make a Blood Surge move if it was previously attached to a unit of Khorne Berzerkers and if the last model in the attached unit was destroyed by that ranged attack?” No.
-
-USED BYKhârn the Betrayer, Lord on Juggernaut · Archslaughterer
-
-1
-CP
-Blood Offering
-Any phase · Either turn
-WHEN
-
-Any phase.
-
-TARGETOne WORLD EATERS unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.
-
-EFFECT
-
-Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
-
-USED BYany unit
-
-VESSELS OF WRATH
-1
-1
-CP
-Scorn the Witch
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) suffers a mortal wound.
-
-TARGETThat WORLD EATERS CHARACTER unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-CORE STRATAGEMS
-2
-1
-CP
-Smokescreen
-Shooting · Their turn
-WHEN
-
-Start of your opponent’s Shooting phase.
-
-TARGETOne friendly SMOKE unit.
-
-EFFECT
-
-Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
-
-USED BYChaos Rhino
-
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-WHEN TARGETED
-Khârn the Betrayer
-Khârn the Betrayer T5 SV3+ INV4+ W5 / Khorne Berzerker T5 SV3+ W2
-Khârn: the first time he is destroyed, at the end of the phase on a 2+ he is set back up with 3 wounds, as close as possible to where he was destroyed and not within Engagement Range of enemy units
-Daemon Prince · Helm of Brazen Ire
-T10 SV2+ INV4+ W10
-Lone Operative while within 3" of a friendly WORLD EATERS INFANTRY unit · -1 D to each attack allocated to this model · 1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds
-Daemon Prince · Berzerker Glaive
-T10 SV2+ INV4+ W10
-Lone Operative while within 3" of a friendly WORLD EATERS INFANTRY unit · 1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds
-Lord on Juggernaut · Archslaughterer
-Lord on Juggernaut T6 SV3+ INV4+ W7 / Khorne Berzerker T5 SV3+ W2
-1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds
-Slaughterbound · Battle-lust
-Slaughterbound T6 SV3+ INV5+ W6 / Exalted Eightbound T6 SV3+ INV5+ W3
-1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds
-Eightbound
-T6 SV3+ INV5+ W3
-Jakhals
-Jakhal T4 SV6+ W1 / Dishonoured w/ paired manglers T4 SV6+ W1
-Forgefiend
-T10 SV3+ INV5+ W12
-Chaos Rhino
-T9 SV3+ W10
-NEXT: THEIR CHARGE ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"opp","phase":"charge"} · THEIR CHARGE Their Charge ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-THIS PHASE
-5 abilities
-Blessings of Khorne Unbridled Bloodlust active? +1 to charge rolls. Battle-lust: while Unbridled Bloodlust is active for your army, add 1 to Charge rolls made for the Slaughterbound’s unit. Archslaughterer used: every Blessing of Khorne is active for the Lord’s unit until the start of your next turn.
-Blessings of Khorne
-World Eaters army rule
-
-If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.
-
-Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.
-
-First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.
-
-They then use the two 2s to activate Unbridled Bloodlust.
-
-Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.
-
-Unbridled Bloodlust · double 1+
-
-This unit has +1 to charge rolls.
-
-Rage-fuelled Invigoration · double 2+
-
-Each time a model in this unit makes a Pile-in or Consolidation move, it can move up to 6" instead of up to 3".
-
-Total Carnage · double 3+
-
-Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.
-
-Martial Excellence · double 4+ or triple 1+
-
-Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.
-
-Warp Blades · double 5+ or triple 2+
-
-Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.
-
-Decapitating Strikes · double 6 or triple 3+
-
-Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
-
-Devastating Assault
-Daemon Prince ×2
-
-Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the [DEVASTATING WOUNDS] ability.
-
-UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
-
-Aggressive Advance
-Lord on Juggernaut
-
-While this model is leading a unit, models in that unit have a Move characteristic of 10" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features.
-
-UNITSLord on Juggernaut · Archslaughterer
-
-Battle-lust
-Slaughterbound
-Enhancement
-
-WORLD EATERS model only. You can re-roll Charge rolls made for the bearer’s unit. In addition, while the Unbridled Bloodlust Blessing of Khorne is active for your army, add 1 to Charge rolls made for the bearer’s unit.
-
-UNITSSlaughterbound · Battle-lust
-
-Direct the Slaughter
-Daemon Prince ×2
-Once per battle round, per army
-
-Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
-
-UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
-
-STRATAGEMS
-COLLAPSE ALL
-BERZERKER WARBAND
-1
-1
-CP
-Blood Offering
-Any phase · Either turn
-WHEN
-
-Any phase.
-
-TARGETOne WORLD EATERS unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.
-
-EFFECT
-
-Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
-
-USED BYany unit
-
-VESSELS OF WRATH
-1
-1
-CP
-Scorn the Witch
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) suffers a mortal wound.
-
-TARGETThat WORLD EATERS CHARACTER unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-CORE STRATAGEMS
-2
-1
-CP
-Heroic Intervention
-Charge · Their turn · Into the Fray +1CP
-WHEN
-
-End of your opponent’s Charge phase.
-
-TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
-
-EFFECT
-
-Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
-
-Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
-Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
-
-Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
-
-USED BYKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust, Eightbound, Jakhals, Forgefiend
-
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-NEXT: THEIR FIGHT ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"opp","phase":"fight"} · THEIR FIGHT Their Fight ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-THIS PHASE
-12 abilities
-Blessings of Khorne Active Blessings: Martial Excellence [SUSTAINED HITS 1] · Warp Blades [LETHAL HITS] · Decapitating Strikes [DEVASTATING WOUNDS] vs INFANTRY · Rage-fuelled Invigoration: 6" pile-in and consolidation · Total Carnage: each time a model is destroyed by a melee attack, if it has not fought this phase, on a 4+ it is not removed; it can fight after the attacking unit has finished making its attacks, then is removed. Archslaughterer used: all six for the Lord’s unit.
-Possessed Lord
-Slaughterbound
-Once per battle
-
-Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [Devastating Wounds] ability.
-
-UNITSSlaughterbound · Battle-lust
-
-Blessings of Khorne
-World Eaters army rule
-
-If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.
-
-Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.
-
-First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.
-
-They then use the two 2s to activate Unbridled Bloodlust.
-
-Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.
-
-Unbridled Bloodlust · double 1+
-
-This unit has +1 to charge rolls.
-
-Rage-fuelled Invigoration · double 2+
-
-Each time a model in this unit makes a Pile-in or Consolidation move, it can move up to 6" instead of up to 3".
-
-Total Carnage · double 3+
-
-Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.
-
-Martial Excellence · double 4+ or triple 1+
-
-Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.
-
-Warp Blades · double 5+ or triple 2+
-
-Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.
-
-Decapitating Strikes · double 6 or triple 3+
-
-Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
-
-Relentless Rage
-Berzerker Warband rule · Khârn the Betrayer, Daemon Prince ×2, Lord on Juggernaut, Slaughterbound, Eightbound, Jakhals, Forgefiend, Chaos Rhino
-Already in A
-
-Already counted: every melee A value in this app includes this +1 A. Do not add it again.
-
-Friendly WORLD EATERS units’ melee attacks have +1 A.
-
-UNITSKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust, Eightbound, Jakhals, Forgefiend, Chaos Rhino
-
-Wrath of Khorne
-Vessels of Wrath rule · Daemon Prince ×2, Lord on Juggernaut, Slaughterbound
-
-When a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) is selected to fight, that unit’s CHARACTER models’ melee attacks can have:
-
-[CLEAVE 1].
-Or: +1 AP.
-
-UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-Legendary Killer
-Khârn the Betrayer
-
-While this model is leading a unit, each time a model in that unit makes a melee attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.
-
-UNITSKhârn the Betrayer
-
-Murderous Charge
-Khârn the Betrayer, Lord on Juggernaut
-
-If this unit made a charge move this turn, this unit’s melee attacks have +1 S.
-
-UNITSKhârn the Betrayer, Lord on Juggernaut · Archslaughterer
-
-Devastating Assault
-Daemon Prince ×2
-
-Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the [DEVASTATING WOUNDS] ability.
-
-UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
-
-Crush All Who Stand Before Us
-Lord on Juggernaut
-
-Each time this model’s unit is selected to fight, you can use this ability. When determining which models in this unit are eligible to fight, any models in it that are within 3" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3" of them and within Engagement Range of their unit.
-
-UNITSLord on Juggernaut · Archslaughterer
-
-Icon of Khorne
-Lord on Juggernaut
-
-If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.
-
-UNITSLord on Juggernaut · Archslaughterer
-
-Rend and Tear
-Slaughterbound
-
-Each time a model in this unit makes a melee attack that targets a MONSTER or VEHICLE unit, until the end of the phase, improve the Damage characteristic of that attack by 1.
-
-UNITSSlaughterbound · Battle-lust
-
-Beacons of Rage
-Eightbound
-Aura
-
-While a friendly WORLD EATERS unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding MONSTERS and VEHICLES), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well.
-
-UNITSEightbound
-
-Direct the Slaughter
-Daemon Prince ×2
-Once per battle round, per army
-
-Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
-
-UNITSDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
-
-STRATAGEMS
-COLLAPSE ALL
-BERZERKER WARBAND
-4
-1
-CP
-Hack and Slash
-Fight · Either turn
-WHEN
-
-Fight phase.
-
-TARGETOne WORLD EATERS unit from your army that has not been selected to fight this phase and that made a charge move this turn.
-
-EFFECT
-
-Until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1.
-
-USED BYany unit
-
-2
-CP
-Frenzied Resilience
-Fight · Either turn
-WHEN
-
-Fight phase, just after an enemy unit has selected its targets.
-
-TARGETOne WORLD EATERS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
-
-EFFECT
-
-Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack.
-
-USED BYany unit
-
-1
-CP
-Skulls for the Skull Throne!
-Fight · Either turn
-WHEN
-
-Fight phase, just after a WORLD EATERS unit from your army destroys a CHARACTER or MONSTER model.
-
-TARGETThat WORLD EATERS unit.
-
-EFFECT
-
-Make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne. Until the end of the battle round, that Blessing of Khorne is active in addition to any other Blessings of Khorne that are currently active.
-
-USED BYany unit
-
-1
-CP
-Blood Offering
-Any phase · Either turn
-WHEN
-
-Any phase.
-
-TARGETOne WORLD EATERS unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.
-
-EFFECT
-
-Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
-
-USED BYany unit
-
-VESSELS OF WRATH
-2
-1
-CP
-Aspire to Infamy
-Fight · Either turn
-WHEN
-
-Fight phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) is selected to fight.
-
-TARGETThat WORLD EATERS CHARACTER unit.
-
-EFFECT
-
-Your unit’s CHARACTER models’ melee attacks have:
-
-+1 A.
-+2 S.
-
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-1
-CP
-Scorn the Witch
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) suffers a mortal wound.
-
-TARGETThat WORLD EATERS CHARACTER unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-CORE STRATAGEMS
-3
-1
-CP
-Epic Challenge
-Fight · Either turn
-WHEN
-
-Fight phase, just after a friendly CHARACTER unit is selected to fight.
-
-TARGETThat CHARACTER unit.
-
-EFFECT
-
-Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
-
-USED BYKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
-
-2
-CP
-Counteroffensive
-Fight · Their turn
-WHEN
-
-Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
-
-TARGETOne friendly unit that is eligible to fight.
-
-EFFECT
-
-Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
-
-USED BYany unit
-
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-WHEN TARGETED
-
-Every unit: 2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
-
-Khârn the Betrayer
-Khârn the Betrayer T5 SV3+ INV4+ W5 / Khorne Berzerker T5 SV3+ W2
-Khârn: the first time he is destroyed, at the end of the phase on a 2+ he is set back up with 3 wounds, as close as possible to where he was destroyed and not within Engagement Range of enemy units
-Daemon Prince · Helm of Brazen Ire
-T10 SV2+ INV4+ W10
-Lone Operative while within 3" of a friendly WORLD EATERS INFANTRY unit · -1 D to each attack allocated to this model · 1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds
-Daemon Prince · Berzerker Glaive
-T10 SV2+ INV4+ W10
-Lone Operative while within 3" of a friendly WORLD EATERS INFANTRY unit · 1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds
-Lord on Juggernaut · Archslaughterer
-Lord on Juggernaut T6 SV3+ INV4+ W7 / Khorne Berzerker T5 SV3+ W2
-1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds
-Slaughterbound · Battle-lust
-Slaughterbound T6 SV3+ INV5+ W6 / Exalted Eightbound T6 SV3+ INV5+ W3
-1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds
-Eightbound
-T6 SV3+ INV5+ W3
-Jakhals
-Jakhal T4 SV6+ W1 / Dishonoured w/ paired manglers T4 SV6+ W1
-Forgefiend
-T10 SV3+ INV5+ W12
-Chaos Rhino
-T9 SV3+ W10
-NEXT: YOUR COMMAND ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## unit kharn · THEIR FIGHT Khârn the Betrayer
+######## unit kharn · STRATAGEMS Khârn the Betrayer
 Epic Hero · 285 pts · leading Khorne Berzerkers
 M
 T
@@ -4985,7 +1706,9 @@ If the bearer’s unit contains one or more Icons of Khorne, each time the beare
 
 RULESLeader, Blessings of Khorne, Relentless Rage · Models & keywords
 
-STRATAGEMSBlood Offering, Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Apoplectic Frenzy, Berzerker’s Wrath, Punish the Craven, Epic Challenge, Explosives
+STRATAGEMSBlood Offering, Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Apoplectic Frenzy, Berzerker’s Wrath, Punish the Craven
+
+CORE STRATAGEMSCommand Re-roll, Epic Challenge, Insane Bravery, Explosives, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive
 
 Daemon Prince · Helm of Brazen Ire ›
 
@@ -5078,7 +1801,9 @@ WORLD EATERS model only. Each time an attack is allocated to the bearer, subtrac
 
 RULESDeadly Demise D3, Blessings of Khorne, Relentless Rage, Wrath of Khorne · Keywords
 
-STRATAGEMSBlood Offering, Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Scorn the Witch, Aspire to Infamy, Punish the Craven, Epic Challenge, Crushing Impact
+STRATAGEMSBlood Offering, Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Scorn the Witch, Aspire to Infamy, Punish the Craven
+
+CORE STRATAGEMSCommand Re-roll, Epic Challenge, Insane Bravery, Crushing Impact, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive
 
 ‹ Khârn the Betrayer
 Daemon Prince · Berzerker Glaive ›
@@ -5171,7 +1896,9 @@ WORLD EATERS model only. Add 1 to the Attacks and Damage characteristics of mele
 
 RULESDeadly Demise D3, Blessings of Khorne, Relentless Rage, Wrath of Khorne · Keywords
 
-STRATAGEMSBlood Offering, Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Scorn the Witch, Aspire to Infamy, Punish the Craven, Epic Challenge, Crushing Impact
+STRATAGEMSBlood Offering, Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Scorn the Witch, Aspire to Infamy, Punish the Craven
+
+CORE STRATAGEMSCommand Re-roll, Epic Challenge, Insane Bravery, Crushing Impact, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive
 
 ‹ Daemon Prince · Helm of Brazen Ire
 Lord on Juggernaut · Archslaughterer ›
@@ -5352,7 +2079,9 @@ If the bearer’s unit contains one or more Icons of Khorne, each time the beare
 
 RULESLeader, Blessings of Khorne, Relentless Rage, Wrath of Khorne · Models & keywords
 
-STRATAGEMSBlood Offering, Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Apoplectic Frenzy, Berzerker’s Wrath, Scorn the Witch, Aspire to Infamy, Punish the Craven, Epic Challenge, Explosives
+STRATAGEMSBlood Offering, Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Apoplectic Frenzy, Berzerker’s Wrath, Scorn the Witch, Aspire to Infamy, Punish the Craven
+
+CORE STRATAGEMSCommand Re-roll, Epic Challenge, Insane Bravery, Explosives, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive
 
 ‹ Daemon Prince · Berzerker Glaive
 Slaughterbound · Battle-lust ›
@@ -5454,7 +2183,9 @@ Each time a model in this unit makes a melee attack that targets a MONSTER or VE
 
 RULESLeader, Deadly Demise D3, Blessings of Khorne, Deep Strike, Scouts 6", Relentless Rage, Wrath of Khorne · Models & keywords
 
-STRATAGEMSBlood Offering, Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Scorn the Witch, Aspire to Infamy, Punish the Craven, Epic Challenge
+STRATAGEMSBlood Offering, Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Scorn the Witch, Aspire to Infamy, Punish the Craven
+
+CORE STRATAGEMSCommand Re-roll, Epic Challenge, Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive
 
 ‹ Lord on Juggernaut · Archslaughterer
 Eightbound ›
@@ -5505,6 +2236,8 @@ While a friendly WORLD EATERS unit is within 6" of this unit, each time a model 
 RULESScouts 6", Blessings of Khorne, Relentless Rage · Keywords
 
 STRATAGEMSBlood Offering, Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!
+
+CORE STRATAGEMSCommand Re-roll, Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive
 
 ‹ Slaughterbound · Battle-lust
 Jakhals ›
@@ -5588,7 +2321,9 @@ At the end of your Command phase, if this unit is within range of an objective m
 
 RULESBlessings of Khorne, Relentless Rage · Keywords
 
-STRATAGEMSBlood Offering, Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Explosives
+STRATAGEMSBlood Offering, Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!
+
+CORE STRATAGEMSCommand Re-roll, Insane Bravery, Explosives, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive
 
 ‹ Eightbound
 Forgefiend ›
@@ -5663,7 +2398,9 @@ Each time this model makes a ranged attack that targets the closest eligible tar
 
 RULESDeadly Demise D3, Blessings of Khorne, Relentless Rage · Keywords
 
-STRATAGEMSBlood Offering, Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Crushing Impact
+STRATAGEMSBlood Offering, Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!
+
+CORE STRATAGEMSCommand Re-roll, Insane Bravery, Crushing Impact, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive
 
 ‹ Jakhals
 Chaos Rhino ›
@@ -5731,7 +2468,9 @@ This model has a transport capacity of 12 WORLD EATERS INFANTRY models. It canno
 
 RULESDeadly Demise D3, Blessings of Khorne, Firing Deck 2, Relentless Rage · Keywords
 
-STRATAGEMSBlood Offering, Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Crushing Impact, Smokescreen
+STRATAGEMSBlood Offering, Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!
+
+CORE STRATAGEMSCommand Re-roll, Insane Bravery, Crushing Impact, Rapid Ingress, Fire Overwatch, Smokescreen, Counteroffensive
 
 ‹ Forgefiend
 
@@ -7713,6 +4452,47 @@ Select one of those objective markers. That objective marker remains under your 
 
 USED BYany unit
 
+######## popup strat:command-re-roll · HURRDURR Hurrdurr
+1CP · ANY PHASE · EITHER TURN
+
+Command Re-roll
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+######## popup strat:counteroffensive · HURRDURR Hurrdurr
+2CP · FIGHT · THEIR TURN
+
+Counteroffensive
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
 ######## popup strat:crushing-impact · HURRDURR Hurrdurr
 1CP · CHARGE · YOUR TURN
 
@@ -7773,6 +4553,22 @@ Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
 
 USED BYKhârn the Betrayer, Lord on Juggernaut · Archslaughterer, Jakhals
 
+######## popup strat:fire-overwatch · HURRDURR Hurrdurr
+1CP · MOVEMENT · THEIR TURN
+
+Fire Overwatch
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Jakhals, Forgefiend, Chaos Rhino
+
 ######## popup strat:frenzied-resilience · HURRDURR Hurrdurr
 2CP · FIGHT · EITHER TURN
 
@@ -7804,6 +4600,27 @@ EFFECT
 Until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1.
 
 USED BYany unit
+
+######## popup strat:heroic-intervention · HURRDURR Hurrdurr
+1CP · CHARGE · THEIR TURN · INTO THE FRAY +1CP
+
+Heroic Intervention
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust, Eightbound, Jakhals, Forgefiend
 
 ######## popup strat:insane-bravery · HURRDURR Hurrdurr
 1CP · COMMAND · YOUR TURN · ONCE PER BATTLE
@@ -7840,6 +4657,24 @@ EFFECT
 When an enemy unit engaged with your unit is selected to make a fall-back move, that enemy unit must use the desperate escape mode. If that enemy unit is battle-shocked, -1 from those hazard rolls.
 
 USED BYKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
+
+######## popup strat:rapid-ingress · HURRDURR Hurrdurr
+1CP · MOVEMENT · THEIR TURN
+
+Rapid Ingress
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
 
 ######## popup strat:scorn-the-witch · HURRDURR Hurrdurr
 1CP · ANY PHASE · EITHER TURN

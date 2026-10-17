@@ -1,0 +1,326 @@
+[
+ {
+  "key": "8d3a381db49b1b51",
+  "verdict": "ok",
+  "why": "EFFECT: “must use the desperate escape mode. If that enemy unit is a MONSTER/VEHICLE unit … three additional hazard rolls for each BEAST SNAGGA unit it is engaged with, with -1 from those hazard rolls if that enemy unit is battle-shocked.” Same condition, number and modifier; “them” = those additional hazard rolls.",
+  "fix": null
+ },
+ {
+  "key": "2efe1107d6ebd5a7",
+  "verdict": "ok",
+  "why": "Word for word the EFFECT: “Your unit can make a surge move of up to D6\". If your unit is riled up, it can re-roll that D6.”",
+  "fix": null
+ },
+ {
+  "key": "e4cca7ddebe43716",
+  "verdict": "ok",
+  "why": "Word for word the EFFECT: “Place your unit in strategic reserves.”",
+  "fix": null
+ },
+ {
+  "key": "8a7c30861777c433",
+  "verdict": "fix",
+  "why": "EFFECT: “When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one D6 …” The gist says “before your unit has fought this phase”. A unit has been selected to fight before it has fought, so the gist also allows a model destroyed after selection but before the unit has fought, which the text excludes. The rest is literal: “When your unit has fought, or at the end of the phase (whichever comes first)” = “until your unit has fought or the phase ends”. The struck-through ~~DEFF DREAD~~ +3 is left out as the coordinator describes.",
+  "fix": {
+   "gist": "When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one D6: on a 4+ it is not removed until your unit has fought or the phase ends."
+  }
+ },
+ {
+  "key": "f1ca032a2ae41af7",
+  "verdict": "ok",
+  "why": "Word for word the EFFECT: “Your unit is riled up until the start of your next turn.”",
+  "fix": null
+ },
+ {
+  "key": "4972f255f1a8091e",
+  "verdict": "ok",
+  "why": "Word for word the EFFECT: “Your unit has MOBILE.”",
+  "fix": null
+ },
+ {
+  "key": "d5e516bd6b7c5143",
+  "verdict": "ok",
+  "why": "“Your unit’s ranged attacks that target a unit (excluding MONSTER/VEHICLE units) have +1 to wound rolls.” “against” = “that target”; same exclusion and number.",
+  "fix": null
+ },
+ {
+  "key": "adfb8b0ae937df52",
+  "verdict": "ok",
+  "why": "“Your unit’s ranged attacks that target a unit within 9\" have +1 AP.” Same.",
+  "fix": null
+ },
+ {
+  "key": "a1c499e7334d1bb1",
+  "verdict": "ok",
+  "why": "Word for word the EFFECT: “Your unit’s ranged attacks have [SUSTAINED HITS 1].”",
+  "fix": null
+ },
+ {
+  "key": "04a8ae4d39a7f565",
+  "verdict": "ok",
+  "why": "“ranged attacks with weapons selected for the Firing Deck ability have +1 to hit rolls.” Same.",
+  "fix": null
+ },
+ {
+  "key": "b0f5cfeb5612cff6",
+  "verdict": "ok",
+  "why": "“Your unit can make a normal move of up to 6\", and must end that move within range of an objective. Your unit is not eligible to declare a charge until the end of the turn.” “ending within range” states the same end condition; the charge restriction and its duration are kept.",
+  "fix": null
+ },
+ {
+  "key": "58b9d5bc5c887b79",
+  "verdict": "ok",
+  "why": "“Your unit shoots using normal shooting, but while doing so your unit can only target that enemy unit.” Same; “that enemy unit” refers to the WHEN.",
+  "fix": null
+ },
+ {
+  "key": "10c2d18b4fd4b92e",
+  "verdict": "ok",
+  "why": "“Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.” Same numbers and condition.",
+  "fix": null
+ },
+ {
+  "key": "759edf1a0a8bf5c7",
+  "verdict": "ok",
+  "why": "“Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9\" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.” Same duration, condition and re-rolls.",
+  "fix": null
+ },
+ {
+  "key": "4e0d807fa3ba0c1a",
+  "verdict": "ok",
+  "why": "“Until the end of the phase, if your unit Advances, do not make an Advance roll … add 6\" to the Move characteristic … or 9\" instead if your unit is an ARMIGER or DESTRIER unit.” Same.",
+  "fix": null
+ },
+ {
+  "key": "6e56492de4d4cf3e",
+  "verdict": "fix",
+  "why": "Text: “your unit does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units” applies to all of the unit’s hit rolls. The gist ties it to the Blast weapons (“Blast weapons can target … with no hit penalty”): narrowed. The mortal wound applies “each time a model in your unit makes an attack with a Blast weapon that targets a unit within Engagement Range of your unit, on an unmodified Hit roll of 1 … after all of its attacks have been resolved”. The gist’s “each unmodified hit roll of 1 with them” drops the target condition (so it widens to every Blast attack) and the timing. “(if no other friendly units are)” leaves out what they must not be within: “within Engagement Range of that enemy unit”.",
+  "fix": {
+   "gist": "Until the end of the phase, your unit’s Blast weapons can target enemy units within Engagement Range of it (if no other friendly unit is within Engagement Range of that enemy unit) and it has no hit roll penalty for being within Engagement Range; each unmodified hit roll of 1 with a Blast weapon against a unit within Engagement Range of it is 1 mortal wound to your unit, after all its attacks are resolved."
+  }
+ },
+ {
+  "key": "b99a532d9c0380a6",
+  "verdict": "ok",
+  "why": "“Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the Wound roll.” Same.",
+  "fix": null
+ },
+ {
+  "key": "5228f78f1af4b85b",
+  "verdict": "ok",
+  "why": "Word for word the EFFECT: “Remove your unit from the battlefield and place it into Strategic Reserves.”",
+  "fix": null
+ },
+ {
+  "key": "8e57e474a5741a92",
+  "verdict": "ok",
+  "why": "“Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.” Same.",
+  "fix": null
+ },
+ {
+  "key": "c05b371f66dc040d",
+  "verdict": "ok",
+  "why": "“Until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1.” “+1 AP” is the same improvement by 1.",
+  "fix": null
+ },
+ {
+  "key": "c3f53360419b4a9e",
+  "verdict": "ok",
+  "why": "“Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack.” Same; nothing added (no minimum).",
+  "fix": null
+ },
+ {
+  "key": "208c93906c552ff8",
+  "verdict": "fix",
+  "why": "EFFECT: “Make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne.” The gist drops “use the results to”, which ties the Blessing to that roll; “and activate one Blessing of Khorne” reads as a free pick. The duration (“Until the end of the battle round … in addition to any other Blessings of Khorne that are currently active”) is literal.",
+  "fix": {
+   "gist": "Make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others."
+  }
+ },
+ {
+  "key": "a445f49542696fe4",
+  "verdict": "ok",
+  "why": "“Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced.” Same.",
+  "fix": null
+ },
+ {
+  "key": "5ae9cac7fe3261a0",
+  "verdict": "ok",
+  "why": "“Do not roll a D6 to determine how far models in your unit can move when they make a surge move. Instead … those models can move up to 8\".” Same; no duration is added.",
+  "fix": null
+ },
+ {
+  "key": "d7a721e5a0f770f0",
+  "verdict": "ok",
+  "why": "Word for word the EFFECT: “Your unit has Feel No Pain 4+ against mortal wounds.”",
+  "fix": null
+ },
+ {
+  "key": "7d73d5f4efb7f552",
+  "verdict": "ok",
+  "why": "“Your unit’s CHARACTER models’ melee attacks have: +1 A. +2 S.” Same.",
+  "fix": null
+ },
+ {
+  "key": "26600be2890f7970",
+  "verdict": "ok",
+  "why": "“that enemy unit must use the desperate escape mode. If that enemy unit is battle-shocked, -1 from those hazard rolls.” Same.",
+  "fix": null
+ },
+ {
+  "key": "fa5a68d93a670e33",
+  "verdict": "ok",
+  "why": "“Until the end of the phase, Psychic weapons equipped by models in the attacking unit have the [HAZARDOUS] ability, and models in your unit have the Feel No Pain 4+ ability against Psychic Attacks.” Same.",
+  "fix": null
+ },
+ {
+  "key": "13d1504fb4c906be",
+  "verdict": "ok",
+  "why": "“Change the Damage characteristic of that attack to 0.” The second sentence, “If you are using fast dice rolling, select one of those attacks you failed a saving throw for”, only says which attack “that attack” is when saves are rolled together. The gist’s singular “that attack” keeps the one-attack limit, so the meaning is unchanged.",
+  "fix": null
+ },
+ {
+  "key": "3b5301c710246603",
+  "verdict": "ok",
+  "why": "“Select the Imbued Manifestation, Psychic Maelstrom or Wrath of the Immaterium ability. Until the start of your next Command phase, that ability applies to your unit instead of any other Kindred Sorcery ability, even if you have already selected that ability this battle.” Same choice of one, duration and override.",
+  "fix": null
+ },
+ {
+  "key": "c952caab83d5eeb5",
+  "verdict": "ok",
+  "why": "“That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.” Same.",
+  "fix": null
+ },
+ {
+  "key": "a783581542fe432f",
+  "verdict": "ok",
+  "why": "“Re-roll all of the D6 rolled for that Psychic test (including the additional D6 for Channelling the Warp).” Same.",
+  "fix": null
+ },
+ {
+  "key": "6db208da10c3b5d0",
+  "verdict": "ok",
+  "why": "“Until the end of the phase, add 9\" to the Range characteristic of Psychic weapons … each time a model in your unit makes an attack with a Psychic weapon, you can re-roll the Hit roll and you can re-roll the Wound roll.” Same; the re-rolls stay optional and on Psychic weapons.",
+  "fix": null
+ },
+ {
+  "key": "42e7f382865b6520",
+  "verdict": "ok",
+  "why": "“Do not roll one D6 to determine whether mortal wounds are inflicted by your model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted.” Same.",
+  "fix": null
+ },
+ {
+  "key": "980ff948d3a100d1",
+  "verdict": "ok",
+  "why": "“Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Hit roll.” Same.",
+  "fix": null
+ },
+ {
+  "key": "6b272278ca840600",
+  "verdict": "ok",
+  "why": "“That enemy unit must take a Battle-shock test and, until the end of the phase, each time a model in that enemy unit makes an attack that targets your unit, subtract 1 from the Hit roll. If that Battle-shock test was failed, subtract 1 from the Wound roll as well.” Same; “also” carries the same attacks and duration.",
+  "fix": null
+ },
+ {
+  "key": "1ff22416148fe08a",
+  "verdict": "fix",
+  "why": "EFFECT: “each time a model in your unit makes a Normal, Advance or Fall Back move, it can move through …”. The gist drops whose moves: “Normal, Advance and Fall Back moves can pass through”. For the taller terrain the text says “after its unit has moved, roll one D6”, and the gist’s “then roll one D6” loses that timing. The rest is literal: excluding TITANIC, “4\" or less in height”, “cannot end that move within Engagement Range”, “on a 1, your unit is Battle-shocked”.",
+  "fix": {
+   "gist": "Until the end of the phase, your unit’s Normal, Advance and Fall Back moves can pass through models (excluding TITANIC) and terrain up to 4\" tall, and through Engagement Range without ending there; taller terrain too, but then, after your unit has moved, roll one D6: on a 1, your unit is Battle-shocked."
+  }
+ },
+ {
+  "key": "e5ba9360e3f0abfc",
+  "verdict": "ok",
+  "why": "“Until the end of the phase, ranged weapons … have the [IGNORES COVER] ability, and until the end of the phase each time a model in your unit makes an attack, you can ignore any or all modifiers to that model’s Ballistic Skill characteristic and any or all modifiers to the Hit roll.” Same.",
+  "fix": null
+ },
+ {
+  "key": "bd84d34d7a9b31c0",
+  "verdict": "ok",
+  "why": "“Select one enemy unit within Engagement Range of your model and roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.” Same.",
+  "fix": null
+ },
+ {
+  "key": "d8e5051e5c113aa7",
+  "verdict": "ok",
+  "why": "Word for word the EFFECT: “Your unit has Feel No Pain 4+ against mortal wounds.”",
+  "fix": null
+ },
+ {
+  "key": "cb2c7d34813046ec",
+  "verdict": "ok",
+  "why": "Word for word the EFFECT: “Your unit’s melee attacks have +2 S.”",
+  "fix": null
+ },
+ {
+  "key": "85a969b3f99d0072",
+  "verdict": "ok",
+  "why": "“Select one enemy unit hit by those attacks. That enemy unit is tethered until the start of your next Command phase: While a unit is tethered, that unit has -2\" M.” Same.",
+  "fix": null
+ },
+ {
+  "key": "c5df75e1d0100700",
+  "verdict": "ok",
+  "why": "EFFECT: “You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).” The gist keeps both. The roll list it repeats is the WHEN’s, complete.",
+  "fix": null
+ },
+ {
+  "key": "ba06c5c664298c5d",
+  "verdict": "ok",
+  "why": "“Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.” Same.",
+  "fix": null
+ },
+ {
+  "key": "26501734dea8331a",
+  "verdict": "ok",
+  "why": "Word for word the EFFECT: “That battle-shock roll is automatically successful.” The RESTRICTIONS “more than once per battle” are on the row already: the timing line shows the stratagem’s limit “Once per battle” (stratWhenLine adds s.limit).",
+  "fix": null
+ },
+ {
+  "key": "8a0a04b58d7f4558",
+  "verdict": "ok",
+  "why": "“Select one EXPLOSIVES/GRENADES model in your unit. Select one unengaged enemy unit within 8\" of and visible to that model. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.” Same.",
+  "fix": null
+ },
+ {
+  "key": "26e88445c3b445ae",
+  "verdict": "fix",
+  "why": "EFFECT: “1. Select one enemy unit engaged with your unit. 2. Select one model in your unit engaged with that enemy unit. 3. Roll a number of D6 equal to the T characteristic of that model …”. The gist’s “the T of one model engaged with an enemy unit” drops “in your unit”, and it drops that the enemy unit must be engaged with your unit. The rolls and the cap (“to a maximum of 6 mortal wounds per unit”) are literal.",
+  "fix": {
+   "gist": "Pick an enemy unit engaged with your unit and a model in your unit engaged with it; roll D6 equal to that model’s T: each 5+ is 1 mortal wound to that enemy unit, each 1 is 1 to your unit (max 6 per unit)."
+  }
+ },
+ {
+  "key": "08b66a313bef7ae7",
+  "verdict": "ok",
+  "why": "EFFECT “Your unit makes an ingress move” plus RESTRICTIONS “You cannot use this stratagem during the first battle round.” Same; “in strategic reserves” is from the TARGET.",
+  "fix": null
+ },
+ {
+  "key": "eac0b9dcae9e3d9d",
+  "verdict": "ok",
+  "why": "Word for word the EFFECT: “Your unit shoots using snap shooting.”",
+  "fix": null
+ },
+ {
+  "key": "e88f06fffd4beae6",
+  "verdict": "ok",
+  "why": "“Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack.” Same.",
+  "fix": null
+ },
+ {
+  "key": "bcd1b2a4a7fffd88",
+  "verdict": "fix",
+  "why": "EFFECT: “before making the charge roll, you must select one of the following modes”. Leap to Defend: “enemy units that made a charge move this phase and are within the maximum distance”. Into the Fray: “if the result is greater than 6 (after modifiers), change it to 6 … any enemy units that are within 6\" of your unit and within the maximum distance”. The gist drops when the mode is chosen, both “within the maximum distance” conditions, “(after modifiers)”, and “of your unit”.",
+  "fix": {
+   "gist": "Your unit resolves a charge; before the charge roll, pick Leap to Defend (only enemy units that made a charge move this phase and are within the maximum distance) or Into the Fray (+1CP: a charge roll over 6 after modifiers becomes 6; any enemy units within 6\" of your unit and within the maximum distance)."
+  }
+ },
+ {
+  "key": "e6e26838129096b2",
+  "verdict": "ok",
+  "why": "“Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight.” Same.",
+  "fix": null
+ }
+]

@@ -1,4 +1,4 @@
-######## army · TURN Nidzillas
+######## army · OIOIOI Nidzillas
 Tyranids · 2000 / 2000 pts · Strike Force
 
 Crusher Stampede · Talons of the Norn Queen · Disposition: Purge the Foe
@@ -14,7 +14,7 @@ Melee weapons
 13
 Abilities
 28
-Rules & keywords
+Rules
 Bases & proxies
 30
 Keep screen on
@@ -665,7 +665,96 @@ Damaged: 1-5 Wounds Remaining
 
 While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
 
-######## rules · ABILITIES Rules & keywords
+######## rules · ABILITIES Rules
+Tyranids · Purge the Foe
+ARMY RULES
+CRUSHER STAMPEDE
+TALONS OF THE NORN QUEEN
+CORE RULES
+ARMY RULES
+Synapse
+
+If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:
+
+Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.
+Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.
+Shadow in the Warp
+Once per battle
+Command
+
+Wahapedia FAQ: “Can units targeted by the Shadow in the Warp army rule use the Insane Bravery Stratagem?” “No. Insane Bravery can only be used in your Command phase.”
+
+If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6" of one or more SYNAPSE units from your army, subtract 1 from that test.
+
+DETACHMENTS
+CRUSHER STAMPEDE
+Enraged Behemoths
+Detachment rule
+Any phase
+
+Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
+
+APPLIES TOThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
+
+Monstrous Nemesis
+Enhancement
+on Hive Tyrant
+
+25 pts
+
+TYRANIDS MONSTER model only. Each time the bearer makes a melee attack that targets a MONSTER or VEHICLE unit, add 1 to the Wound roll.
+
+ONHive Tyrant · Monstrous Nemesis
+
+Other enhancements
+3 not in this list
+Ominous Presence 15 pts
+
+TYRANIDS MONSTER model only. Add 3 to the bearer’s Objective Control characteristic.
+
+Enraged Reserves 20 pts
+
+TYRANIDS MONSTER model only. If the bearer is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 3+, do not remove it from play. It can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.
+
+Null Nodules 10 pts
+
+TYRANIDS MONSTER model only. Once per battle, when a Psychic Attack is allocated to the bearer, it can use this ability. If it does, until the end of the phase, the bearer has the Feel No Pain 5+ ability against Psychic Attacks.
+
+STRATAGEMSCorrosive Viscera, Rampaging Monstrosities, Savage Roar, Untrammelled Ferocity, Swarm-guided Salvoes, Massive Impact
+
+TALONS OF THE NORN QUEEN
+Higher Imperatives
+Detachment rule
+
+Friendly NORN EMISSARY/NORN ASSIMILATOR units have the following ability:
+
+Protean Purpose: (Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).
+
+APPLIES TOAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
+
+Destabilising Predation
+Enhancement
+on Norn Emissary
+
+20 pts
+
+NORN EMISSARY unit only. This unit’s ranged attacks have [ANTI-CHARACTER 2+].
+
+ONNorn Emissary · Destabilising Predation
+
+Synaptoprescience
+Enhancement
+on Assimilator (300)
+
+30 pts
+
+NORN ASSIMILATOR unit only. This unit has 4+ InSv.
+
+ONAssimilator (300) · Synaptoprescience
+
+STRATAGEMSCatalytic Biofortification, Lesser Prey, Tanglestrike Rounds
+
+CORE RULES
 Quick reference
 Turn order · Command phase · hit, wound and save rolls
 
@@ -724,95 +813,31 @@ the model loses D wounds
 
 Allocation order (05.03): a non-CHARACTER group containing a model that has lost one or more wounds must be first; no CHARACTER group can be earlier than a non-CHARACTER group; CHARACTER groups containing a model that has lost one or more wounds must be earlier than CHARACTER groups containing no wounded models.
 
-ARMY RULES
-Synapse
-
-If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:
-
-Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.
-Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.
-Shadow in the Warp
-Command · Either turn
-Once per battle
-
-Wahapedia FAQ: “Can units targeted by the Shadow in the Warp army rule use the Insane Bravery Stratagem?” “No. Insane Bravery can only be used in your Command phase.”
-
-If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6" of one or more SYNAPSE units from your army, subtract 1 from that test.
-
-CRUSHER STAMPEDE
-Enraged Behemoths
-Detachment rule
-
-Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
-
-APPLIES TOThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-Monstrous Nemesis
-Enhancement · 25 pts
-
-TYRANIDS MONSTER model only. Each time the bearer makes a melee attack that targets a MONSTER or VEHICLE unit, add 1 to the Wound roll.
-
-ONHive Tyrant · Monstrous Nemesis
-
-Other enhancements
-3 not in this list
-Ominous Presence 15 pts
-
-TYRANIDS MONSTER model only. Add 3 to the bearer’s Objective Control characteristic.
-
-Enraged Reserves 20 pts
-
-TYRANIDS MONSTER model only. If the bearer is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 3+, do not remove it from play. It can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.
-
-Null Nodules 10 pts
-
-TYRANIDS MONSTER model only. Once per battle, when a Psychic Attack is allocated to the bearer, it can use this ability. If it does, until the end of the phase, the bearer has the Feel No Pain 5+ ability against Psychic Attacks.
-
-TALONS OF THE NORN QUEEN
-Higher Imperatives
-Detachment rule
-
-Friendly NORN EMISSARY/NORN ASSIMILATOR units have the following ability:
-
-Protean Purpose: (Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).
-
-APPLIES TOAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
-
-Destabilising Predation
-Enhancement · 20 pts
-
-NORN EMISSARY unit only. This unit’s ranged attacks have [ANTI-CHARACTER 2+].
-
-ONNorn Emissary · Destabilising Predation
-
-Synaptoprescience
-Enhancement · 30 pts
-
-NORN ASSIMILATOR unit only. This unit has 4+ InSv.
-
-ONAssimilator (300) · Synaptoprescience
-
-UNIT RULES
+Unit rules
+5
 Assault
+Hive Tyrant
 
 Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
 
 IN THIS ARMYHive Tyrant · Monstrous Nemesis
 
 Deadly Demise
-Deadly Demise D3, Deadly Demise D6
+The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
 
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
 IN THIS ARMYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
 
 Feel No Pain
+Assimilator (280), Assimilator (300), Norn Emissary ×2
 
 This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
 
 IN THIS ARMYAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
 
 Leader
+The Swarmlord, Hive Tyrant
 
 Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.
 
@@ -821,6 +846,7 @@ Unless otherwise stated, each bodyguard unit can only have one leader unit and o
 IN THIS ARMYThe Swarmlord, Hive Tyrant · Monstrous Nemesis
 
 Lethal Hits
+Hive Tyrant
 
 Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
 
@@ -828,7 +854,8 @@ Designer’s Note: Choosing to automatically wound the target means that no woun
 
 IN THIS ARMYHive Tyrant · Monstrous Nemesis
 
-WEAPON KEYWORDS
+Weapon keywords
+9
 Anti
 ANTI-CHARACTER 2+
 
@@ -901,8 +928,6 @@ Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wou
 
 IN THIS ARMYThe Swarmlord, Hive Tyrant · Monstrous Nemesis
 
-Force disposition: Purge the Foe.
-
 ######## bases · RULES Bases & proxies
 BASES TO PRINT
 
@@ -945,14 +970,35 @@ Tyrannofex
 
 From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
 
-######## strats {"turn":"all","phase":"all"} · BASES Turn ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
+######## strats {"open":true} · BASES Stratagems
 COLLAPSE ALL
 CRUSHER STAMPEDE
 6
 1
 CP
+Untrammelled Ferocity
+Until the end of the phase, your unit’s Normal, Advance and Fall Back moves can pass through models (excluding TITANIC) and terrain up to 4" tall, and through Engagement Range without ending there; taller terrain too, but then, after your unit has moved, roll one D6: on a 1, your unit is Battle-shocked.
+Movement · Your turn · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
+WHEN
+
+Your Movement phase.
+
+TARGETOne TYRANIDS MONSTER unit from your army that has not been selected to move this phase.
+
+EFFECT
+
+Until the end of the phase, each time a model in your unit makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4" or less in height. When doing so:
+
+It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.
+It can also move through sections of terrain features that are more than 4" in height, but if it does, after its unit has moved, roll one D6: on a 1, your unit is Battle-shocked.
+
+USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
+
+1
+CP
 Corrosive Viscera
-Their Shooting / Fight (either turn)
+Its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).
+Their Shooting / Fight (either turn) · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
 WHEN
 
 Your opponent’s Shooting phase or the Fight phase, just after a TYRANIDS MONSTER model from your army with the Deadly Demise ability that cannot FLY is destroyed.
@@ -967,8 +1013,43 @@ USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Syn
 
 1
 CP
+Swarm-guided Salvoes
+Until the end of the phase, your unit’s ranged weapons have [IGNORES COVER], and its attacks can ignore any or all modifiers to BS and to the hit roll.
+Shooting · Your turn · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
+WHEN
+
+Your Shooting phase.
+
+TARGETOne TYRANIDS MONSTER unit from your army that has not been selected to shoot this phase.
+
+EFFECT
+
+Until the end of the phase, ranged weapons equipped by models in your unit have the [IGNORES COVER] ability, and until the end of the phase each time a model in your unit makes an attack, you can ignore any or all modifiers to that model’s Ballistic Skill characteristic and any or all modifiers to the Hit roll.
+
+USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
+
+1
+CP
+Massive Impact
+Select one enemy unit within Engagement Range of your model and roll six D6: 1 mortal wound for each 4+.
+Charge · Your turn · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
+WHEN
+
+Your Charge phase, just after a TYRANIDS MONSTER model from your army ends a Charge move.
+
+TARGETThat TYRANIDS MONSTER model.
+
+EFFECT
+
+Select one enemy unit within Engagement Range of your model and roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.
+
+USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
+
+1
+CP
 Rampaging Monstrosities
-Fight · Either turn
+Until the end of the phase, your unit’s attacks can re-roll the hit roll.
+Fight · Either turn · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
 WHEN
 
 Fight phase.
@@ -984,7 +1065,8 @@ USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Syn
 1
 CP
 Savage Roar
-Fight · Either turn
+That enemy unit takes a Battle-shock test and has -1 to hit your unit until the end of the phase; also -1 to wound if it failed the test.
+Fight · Either turn · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
 WHEN
 
 Fight phase, just after an enemy unit has selected its targets.
@@ -997,79 +1079,32 @@ That enemy unit must take a Battle-shock test and, until the end of the phase, e
 
 USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
 
-1
-CP
-Untrammelled Ferocity
-Movement · Your turn
-WHEN
-
-Your Movement phase.
-
-TARGETOne TYRANIDS MONSTER unit from your army that has not been selected to move this phase.
-
-EFFECT
-
-Until the end of the phase, each time a model in your unit makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4" or less in height. When doing so:
-
-It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.
-It can also move through sections of terrain features that are more than 4" in height, but if it does, after its unit has moved, roll one D6: on a 1, your unit is Battle-shocked.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-1
-CP
-Swarm-guided Salvoes
-Shooting · Your turn
-WHEN
-
-Your Shooting phase.
-
-TARGETOne TYRANIDS MONSTER unit from your army that has not been selected to shoot this phase.
-
-EFFECT
-
-Until the end of the phase, ranged weapons equipped by models in your unit have the [IGNORES COVER] ability, and until the end of the phase each time a model in your unit makes an attack, you can ignore any or all modifiers to that model’s Ballistic Skill characteristic and any or all modifiers to the Hit roll.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-1
-CP
-Massive Impact
-Charge · Your turn
-WHEN
-
-Your Charge phase, just after a TYRANIDS MONSTER model from your army ends a Charge move.
-
-TARGETThat TYRANIDS MONSTER model.
-
-EFFECT
-
-Select one enemy unit within Engagement Range of your model and roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
 TALONS OF THE NORN QUEEN
 3
 1
 CP
-Catalytic Biofortification
-Any phase · Either turn
+Tanglestrike Rounds
+One enemy unit hit by those attacks is tethered (-2" M) until the start of your next Command phase.
+Shooting · Your turn · Assimilator (280), Assimilator (300)
 WHEN
 
-Any phase, when a friendly NORN ASSIMILATOR unit suffers a mortal wound.
+Your Shooting phase, when a friendly NORN ASSIMILATOR unit has shot.
 
 TARGETThat NORN ASSIMILATOR unit.
 
 EFFECT
 
-Your unit has Feel No Pain 4+ against mortal wounds.
+Select one enemy unit hit by those attacks. That enemy unit is tethered until the start of your next Command phase:
+
+While a unit is tethered, that unit has -2" M.
 
 USED BYAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
 
 1
 CP
 Lesser Prey
-Fight · Either turn
+Your unit’s melee attacks have +2 S.
+Fight · Either turn · Assimilator (280), Assimilator (300), Norn Emissary ×2
 WHEN
 
 Fight phase, when a friendly NORN ASSIMILATOR/NORN EMISSARY unit is selected to fight.
@@ -1084,69 +1119,28 @@ USED BYAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptopresc
 
 1
 CP
-Tanglestrike Rounds
-Shooting · Your turn
+Catalytic Biofortification
+Your unit has Feel No Pain 4+ against mortal wounds.
+Any phase · Either turn · Assimilator (280), Assimilator (300)
 WHEN
 
-Your Shooting phase, when a friendly NORN ASSIMILATOR unit has shot.
+Any phase, when a friendly NORN ASSIMILATOR unit suffers a mortal wound.
 
 TARGETThat NORN ASSIMILATOR unit.
 
 EFFECT
 
-Select one enemy unit hit by those attacks. That enemy unit is tethered until the start of your next Command phase:
-
-While a unit is tethered, that unit has -2" M.
+Your unit has Feel No Pain 4+ against mortal wounds.
 
 USED BYAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
 
 CORE STRATAGEMS
-8
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-1
-CP
-Epic Challenge
-Fight · Either turn
-WHEN
-
-Fight phase, just after a friendly CHARACTER unit is selected to fight.
-
-TARGETThat CHARACTER unit.
-
-EFFECT
-
-Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis
-
+10
 1
 CP
 Insane Bravery
-Command · Your turn · Once per battle
+That battle-shock roll is automatically successful.
+Command · Your turn · Once per battle · Any unit
 WHEN
 
 Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
@@ -1165,30 +1159,9 @@ USED BYany unit
 
 1
 CP
-Crushing Impact
-Charge · Your turn
-WHEN
-
-Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
-
-TARGETThat MONSTER/VEHICLE unit.
-
-EFFECT
-
-Resolve the following sequence:
-
-1. Select one enemy unit engaged with your unit.
-2. Select one model in your unit engaged with that enemy unit.
-3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
-
-Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-1
-CP
 Rapid Ingress
-Movement · Their turn
+Your unit in strategic reserves makes an ingress move. Not in the first battle round.
+Movement · Their turn · Any unit
 WHEN
 
 End of your opponent’s Movement phase.
@@ -1206,7 +1179,8 @@ USED BYany unit
 1
 CP
 Fire Overwatch
-Movement · Their turn
+Your unit shoots using snap shooting.
+Movement · Their turn · The Swarmlord, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
 WHEN
 
 End of your opponent’s Movement phase.
@@ -1219,599 +1193,11 @@ Your unit shoots using snap shooting.
 
 USED BYThe Swarmlord, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
 
-1
-CP
-Heroic Intervention
-Charge · Their turn · Into the Fray +1CP
-WHEN
-
-End of your opponent’s Charge phase.
-
-TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
-
-EFFECT
-
-Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
-
-Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
-Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
-
-Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
-
-USED BYany unit
-
-2
-CP
-Counteroffensive
-Fight · Their turn
-WHEN
-
-Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
-
-TARGETOne friendly unit that is eligible to fight.
-
-EFFECT
-
-Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
-
-USED BYany unit
-
-Not shown, no unit here can use them: Explosives (EXPLOSIVES OR GRENADES), Smokescreen (SMOKE).
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"all","phase":"command"} · COMMAND Command ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-THIS PHASE
-7 abilities
-Synapse Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.
-Hive Commander
-The Swarmlord
-
-At the start of your Command phase, if this model is on the battlefield, you gain 1CP
-
-UNITSThe Swarmlord
-
-Shadow in the Warp
-Tyranids army rule
-Once per battle
-
-Wahapedia FAQ: “Can units targeted by the Shadow in the Warp army rule use the Insane Bravery Stratagem?” “No. Insane Bravery can only be used in your Command phase.”
-
-If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6" of one or more SYNAPSE units from your army, subtract 1 from that test.
-
-Protean Purpose
-Assimilator (280), Assimilator (300), Norn Emissary ×2
-Once per battle, per unit
-
-(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).
-
-UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
-
-Singular Purpose
-Assimilator (280), Assimilator (300), Norn Emissary ×2
-Start of battle round 1
-
-At the start of the first battle round, select one of the following:
-
-Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
-Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
-
-UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
-
-Enraged Behemoths
-Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
-
-Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
-
-UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-Malign Presence
-The Swarmlord
-Aura
-
-Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.
-
-UNITSThe Swarmlord
-
-Will of the Hive Mind
-Hive Tyrant
-
-Once per battle round, one model from your army with this ability can use it when a friendly TYRANIDS unit within 12" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.
-
-UNITSHive Tyrant · Monstrous Nemesis
-
-STRATAGEMS
-COLLAPSE ALL
-TALONS OF THE NORN QUEEN
-1
-1
-CP
-Catalytic Biofortification
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly NORN ASSIMILATOR unit suffers a mortal wound.
-
-TARGETThat NORN ASSIMILATOR unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
-
-CORE STRATAGEMS
-2
-1
-CP
-Insane Bravery
-Command · Your turn · Once per battle
-WHEN
-
-Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
-
-TARGETThat unit.
-
-EFFECT
-
-That battle-shock roll is automatically successful.
-
-RESTRICTIONSYou cannot use this stratagem more than once per battle.
-
-Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
-
-USED BYany unit
-
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-NEXT: MOVEMENT ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"all","phase":"movement"} · MOVEMENT Movement ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-THIS PHASE
-6 abilities
-Synapse Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.
-Onslaught
-Hive Tyrant
-Aura, Psychic
-
-While a friendly TYRANIDS unit is within 6" of this model, ranged weapons equipped by models in that unit have the [ASSAULT] and [LETHAL HITS] abilities.
-
-UNITSHive Tyrant · Monstrous Nemesis
-
-Harpoon Barbs
-Assimilator (280), Assimilator (300)
-
-Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.
-
-UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
-
-Singular Purpose
-Assimilator (280), Assimilator (300), Norn Emissary ×2
-Start of battle round 1
-
-At the start of the first battle round, select one of the following:
-
-Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
-Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
-
-UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
-
-Enraged Behemoths
-Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
-
-Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
-
-UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-Malign Presence
-The Swarmlord
-Aura
-
-Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.
-
-UNITSThe Swarmlord
-
-Will of the Hive Mind
-Hive Tyrant
-
-Once per battle round, one model from your army with this ability can use it when a friendly TYRANIDS unit within 12" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.
-
-UNITSHive Tyrant · Monstrous Nemesis
-
-STRATAGEMS
-COLLAPSE ALL
-CRUSHER STAMPEDE
-1
-1
-CP
-Untrammelled Ferocity
-Movement · Your turn
-WHEN
-
-Your Movement phase.
-
-TARGETOne TYRANIDS MONSTER unit from your army that has not been selected to move this phase.
-
-EFFECT
-
-Until the end of the phase, each time a model in your unit makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4" or less in height. When doing so:
-
-It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.
-It can also move through sections of terrain features that are more than 4" in height, but if it does, after its unit has moved, roll one D6: on a 1, your unit is Battle-shocked.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-TALONS OF THE NORN QUEEN
-1
-1
-CP
-Catalytic Biofortification
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly NORN ASSIMILATOR unit suffers a mortal wound.
-
-TARGETThat NORN ASSIMILATOR unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
-
-CORE STRATAGEMS
-3
-1
-CP
-Rapid Ingress
-Movement · Their turn
-WHEN
-
-End of your opponent’s Movement phase.
-
-TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
-
-EFFECT
-
-Your unit makes an ingress move (20.04).
-
-RESTRICTIONSYou cannot use this stratagem during the first battle round.
-
-USED BYany unit
-
-1
-CP
-Fire Overwatch
-Movement · Their turn
-WHEN
-
-End of your opponent’s Movement phase.
-
-TARGETOne friendly unengaged unit (excluding TITANIC units).
-
-EFFECT
-
-Your unit shoots using snap shooting.
-
-USED BYThe Swarmlord, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-NEXT: SHOOTING ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"all","phase":"shooting"} · SHOOTING Shooting ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-THIS PHASE
-5 abilities
-Synapse Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.
-Onslaught
-Hive Tyrant
-Aura, Psychic
-
-While a friendly TYRANIDS unit is within 6" of this model, ranged weapons equipped by models in that unit have the [ASSAULT] and [LETHAL HITS] abilities.
-
-UNITSHive Tyrant · Monstrous Nemesis
-
-Singular Purpose
-Assimilator (280), Assimilator (300), Norn Emissary ×2
-Start of battle round 1
-
-At the start of the first battle round, select one of the following:
-
-Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
-Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
-
-UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
-
-Enraged Behemoths
-Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
-
-Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
-
-UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-Malign Presence
-The Swarmlord
-Aura
-
-Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.
-
-UNITSThe Swarmlord
-
-Will of the Hive Mind
-Hive Tyrant
-
-Once per battle round, one model from your army with this ability can use it when a friendly TYRANIDS unit within 12" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.
-
-UNITSHive Tyrant · Monstrous Nemesis
-
-STRATAGEMS
-COLLAPSE ALL
-CRUSHER STAMPEDE
-2
-1
-CP
-Corrosive Viscera
-Their Shooting / Fight (either turn)
-WHEN
-
-Your opponent’s Shooting phase or the Fight phase, just after a TYRANIDS MONSTER model from your army with the Deadly Demise ability that cannot FLY is destroyed.
-
-TARGETThat TYRANIDS MONSTER model. You can use this Stratagem on that model even though it was just destroyed.
-
-EFFECT
-
-Do not roll one D6 to determine whether mortal wounds are inflicted by your model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-1
-CP
-Swarm-guided Salvoes
-Shooting · Your turn
-WHEN
-
-Your Shooting phase.
-
-TARGETOne TYRANIDS MONSTER unit from your army that has not been selected to shoot this phase.
-
-EFFECT
-
-Until the end of the phase, ranged weapons equipped by models in your unit have the [IGNORES COVER] ability, and until the end of the phase each time a model in your unit makes an attack, you can ignore any or all modifiers to that model’s Ballistic Skill characteristic and any or all modifiers to the Hit roll.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-TALONS OF THE NORN QUEEN
-2
-1
-CP
-Tanglestrike Rounds
-Shooting · Your turn
-WHEN
-
-Your Shooting phase, when a friendly NORN ASSIMILATOR unit has shot.
-
-TARGETThat NORN ASSIMILATOR unit.
-
-EFFECT
-
-Select one enemy unit hit by those attacks. That enemy unit is tethered until the start of your next Command phase:
-
-While a unit is tethered, that unit has -2" M.
-
-USED BYAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
-
-1
-CP
-Catalytic Biofortification
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly NORN ASSIMILATOR unit suffers a mortal wound.
-
-TARGETThat NORN ASSIMILATOR unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
-
-CORE STRATAGEMS
-1
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-WHEN TARGETED
-The Swarmlord
-T10 SV2+ INV4+ W10
-Hive Tyrant · Monstrous Nemesis
-T10 SV2+ INV4+ W10
-Neurogaunts
-Neurogaunt Nodebeast T3 SV6+ W1 / Neurogaunt T3 SV6+ W1
-Assimilator (280) · Synaptoprescience
-T11 SV2+ INV4+ W16
-If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it · 1CP Catalytic Biofortification: Feel No Pain 4+ against mortal wounds
-Assimilator (300) · Synaptoprescience
-T11 SV2+ INV4+ W16
-If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it · 1CP Catalytic Biofortification: Feel No Pain 4+ against mortal wounds
-Norn Emissary · Destabilising Predation
-T11 SV2+ INV4+ W16
-If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it · Feel No Pain 4+ against mortal wounds
-Norn Emissary
-T11 SV2+ INV4+ W16
-If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it · Feel No Pain 4+ against mortal wounds
-Tyrannofex
-T12 SV2+ W16
-Once per battle: change the Damage of an attack allocated to it to 0
-NEXT: CHARGE ›
-
-Not shown, no unit here can use them: Explosives (EXPLOSIVES OR GRENADES), Smokescreen (SMOKE).
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"all","phase":"charge"} · CHARGE Charge ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-THIS PHASE
-5 abilities
-Synapse Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.
-Harpooned
-Core rule · Assimilator (280), Assimilator (300)
-
-When this unit declares a charge, if an enemy MONSTER/VEHICLE unit is within 12" of this unit and was hit by an attack made by this weapon this turn, you can use this ability. If you do:
-
-This unit has +2 to charge rolls until the end of the phase.
-This unit must end that charge move engaged with that MONSTER/VEHICLE unit.
-
-UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
-
-Singular Purpose
-Assimilator (280), Assimilator (300), Norn Emissary ×2
-Start of battle round 1
-
-At the start of the first battle round, select one of the following:
-
-Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
-Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
-
-UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
-
-Enraged Behemoths
-Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
-
-Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
-
-UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-Malign Presence
-The Swarmlord
-Aura
-
-Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.
-
-UNITSThe Swarmlord
-
-Will of the Hive Mind
-Hive Tyrant
-
-Once per battle round, one model from your army with this ability can use it when a friendly TYRANIDS unit within 12" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.
-
-UNITSHive Tyrant · Monstrous Nemesis
-
-STRATAGEMS
-COLLAPSE ALL
-CRUSHER STAMPEDE
-1
-1
-CP
-Massive Impact
-Charge · Your turn
-WHEN
-
-Your Charge phase, just after a TYRANIDS MONSTER model from your army ends a Charge move.
-
-TARGETThat TYRANIDS MONSTER model.
-
-EFFECT
-
-Select one enemy unit within Engagement Range of your model and roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-TALONS OF THE NORN QUEEN
-1
-1
-CP
-Catalytic Biofortification
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly NORN ASSIMILATOR unit suffers a mortal wound.
-
-TARGETThat NORN ASSIMILATOR unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
-
-CORE STRATAGEMS
-3
 1
 CP
 Crushing Impact
-Charge · Your turn
+Pick an enemy unit engaged with your unit and a model in your unit engaged with it; roll D6 equal to that model’s T: each 5+ is 1 mortal wound to that enemy unit, each 1 is 1 to your unit (max 6 per unit).
+Charge · Your turn · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
 WHEN
 
 Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
@@ -1833,7 +1219,8 @@ USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Syn
 1
 CP
 Heroic Intervention
-Charge · Their turn · Into the Fray +1CP
+Your unit resolves a charge; before the charge roll, pick Leap to Defend (only enemy units that made a charge move this phase and are within the maximum distance) or Into the Fray (+1CP: a charge roll over 6 after modifiers becomes 6; any enemy units within 6" of your unit and within the maximum distance).
+Charge · Their turn · Into the Fray +1CP · Any unit
 WHEN
 
 End of your opponent’s Charge phase.
@@ -1853,171 +1240,9 @@ USED BYany unit
 
 1
 CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-NEXT: FIGHT ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"all","phase":"fight"} · FIGHT Fight ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-THIS PHASE
-5 abilities
-Synapse Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.
-Synapse Within Synapse Range: melee attacks have +1 S.
-Monstrous Nemesis
-Hive Tyrant
-Enhancement
-
-TYRANIDS MONSTER model only. Each time the bearer makes a melee attack that targets a MONSTER or VEHICLE unit, add 1 to the Wound roll.
-
-UNITSHive Tyrant · Monstrous Nemesis
-
-Singular Purpose
-Assimilator (280), Assimilator (300), Norn Emissary ×2
-Start of battle round 1
-
-At the start of the first battle round, select one of the following:
-
-Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
-Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
-
-UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
-
-Enraged Behemoths
-Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
-
-Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
-
-UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-Malign Presence
-The Swarmlord
-Aura
-
-Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.
-
-UNITSThe Swarmlord
-
-Will of the Hive Mind
-Hive Tyrant
-
-Once per battle round, one model from your army with this ability can use it when a friendly TYRANIDS unit within 12" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.
-
-UNITSHive Tyrant · Monstrous Nemesis
-
-STRATAGEMS
-COLLAPSE ALL
-CRUSHER STAMPEDE
-3
-1
-CP
-Corrosive Viscera
-Their Shooting / Fight (either turn)
-WHEN
-
-Your opponent’s Shooting phase or the Fight phase, just after a TYRANIDS MONSTER model from your army with the Deadly Demise ability that cannot FLY is destroyed.
-
-TARGETThat TYRANIDS MONSTER model. You can use this Stratagem on that model even though it was just destroyed.
-
-EFFECT
-
-Do not roll one D6 to determine whether mortal wounds are inflicted by your model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-1
-CP
-Rampaging Monstrosities
-Fight · Either turn
-WHEN
-
-Fight phase.
-
-TARGETOne TYRANIDS MONSTER unit from your army that has not been selected to fight this phase.
-
-EFFECT
-
-Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Hit roll.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-1
-CP
-Savage Roar
-Fight · Either turn
-WHEN
-
-Fight phase, just after an enemy unit has selected its targets.
-
-TARGETOne TYRANIDS MONSTER unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
-
-EFFECT
-
-That enemy unit must take a Battle-shock test and, until the end of the phase, each time a model in that enemy unit makes an attack that targets your unit, subtract 1 from the Hit roll. If that Battle-shock test was failed, subtract 1 from the Wound roll as well.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-TALONS OF THE NORN QUEEN
-2
-1
-CP
-Lesser Prey
-Fight · Either turn
-WHEN
-
-Fight phase, when a friendly NORN ASSIMILATOR/NORN EMISSARY unit is selected to fight.
-
-TARGETThat NORN ASSIMILATOR/NORN EMISSARY unit.
-
-EFFECT
-
-Your unit’s melee attacks have +2 S.
-
-USED BYAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
-
-1
-CP
-Catalytic Biofortification
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly NORN ASSIMILATOR unit suffers a mortal wound.
-
-TARGETThat NORN ASSIMILATOR unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
-
-CORE STRATAGEMS
-3
-1
-CP
 Epic Challenge
-Fight · Either turn
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+Fight · Either turn · The Swarmlord, Hive Tyrant
 WHEN
 
 Fight phase, just after a friendly CHARACTER unit is selected to fight.
@@ -2033,7 +1258,8 @@ USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis
 2
 CP
 Counteroffensive
-Fight · Their turn
+Until the end of the phase, your unit has Fights First and must be the next unit you select to fight.
+Fight · Their turn · Any unit
 WHEN
 
 Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
@@ -2049,7 +1275,8 @@ USED BYany unit
 1
 CP
 Command Re-roll
-Any phase · Either turn
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+Any phase · Either turn · Any unit
 WHEN
 
 Any phase, just after you make one of the following rolls for a friendly unit or model:
@@ -2071,1879 +1298,49 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-WHEN TARGETED
-The Swarmlord
-T10 SV2+ INV4+ W10
-Hive Tyrant · Monstrous Nemesis
-T10 SV2+ INV4+ W10
-Neurogaunts
-Neurogaunt Nodebeast T3 SV6+ W1 / Neurogaunt T3 SV6+ W1
-Assimilator (280) · Synaptoprescience
-T11 SV2+ INV4+ W16
-If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it · 1CP Catalytic Biofortification: Feel No Pain 4+ against mortal wounds
-Assimilator (300) · Synaptoprescience
-T11 SV2+ INV4+ W16
-If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it · 1CP Catalytic Biofortification: Feel No Pain 4+ against mortal wounds
-Norn Emissary · Destabilising Predation
-T11 SV2+ INV4+ W16
-If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it · Feel No Pain 4+ against mortal wounds
-Norn Emissary
-T11 SV2+ INV4+ W16
-If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it · Feel No Pain 4+ against mortal wounds
-Tyrannofex
-T12 SV2+ W16
-Once per battle: change the Damage of an attack allocated to it to 0
-NEXT: COMMAND ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"your","phase":"all"} · TURN Turn ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-COLLAPSE ALL
-CRUSHER STAMPEDE
-6
 1
 CP
-Corrosive Viscera
-Their Shooting / Fight (either turn)
-WHEN
-
-Your opponent’s Shooting phase or the Fight phase, just after a TYRANIDS MONSTER model from your army with the Deadly Demise ability that cannot FLY is destroyed.
-
-TARGETThat TYRANIDS MONSTER model. You can use this Stratagem on that model even though it was just destroyed.
-
-EFFECT
-
-Do not roll one D6 to determine whether mortal wounds are inflicted by your model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-1
-CP
-Rampaging Monstrosities
-Fight · Either turn
-WHEN
-
-Fight phase.
-
-TARGETOne TYRANIDS MONSTER unit from your army that has not been selected to fight this phase.
-
-EFFECT
-
-Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Hit roll.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-1
-CP
-Savage Roar
-Fight · Either turn
-WHEN
-
-Fight phase, just after an enemy unit has selected its targets.
-
-TARGETOne TYRANIDS MONSTER unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
-
-EFFECT
-
-That enemy unit must take a Battle-shock test and, until the end of the phase, each time a model in that enemy unit makes an attack that targets your unit, subtract 1 from the Hit roll. If that Battle-shock test was failed, subtract 1 from the Wound roll as well.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-1
-CP
-Untrammelled Ferocity
-Movement · Your turn
-WHEN
-
-Your Movement phase.
-
-TARGETOne TYRANIDS MONSTER unit from your army that has not been selected to move this phase.
-
-EFFECT
-
-Until the end of the phase, each time a model in your unit makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4" or less in height. When doing so:
-
-It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.
-It can also move through sections of terrain features that are more than 4" in height, but if it does, after its unit has moved, roll one D6: on a 1, your unit is Battle-shocked.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-1
-CP
-Swarm-guided Salvoes
-Shooting · Your turn
+Explosives
+One EXPLOSIVES/GRENADES model picks an unengaged enemy unit within 8" and visible: roll six D6, 1 mortal wound for each 4+.
+Shooting · Your turn · No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
 WHEN
 
 Your Shooting phase.
 
-TARGETOne TYRANIDS MONSTER unit from your army that has not been selected to shoot this phase.
-
-EFFECT
-
-Until the end of the phase, ranged weapons equipped by models in your unit have the [IGNORES COVER] ability, and until the end of the phase each time a model in your unit makes an attack, you can ignore any or all modifiers to that model’s Ballistic Skill characteristic and any or all modifiers to the Hit roll.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-1
-CP
-Massive Impact
-Charge · Your turn
-WHEN
-
-Your Charge phase, just after a TYRANIDS MONSTER model from your army ends a Charge move.
-
-TARGETThat TYRANIDS MONSTER model.
-
-EFFECT
-
-Select one enemy unit within Engagement Range of your model and roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-TALONS OF THE NORN QUEEN
-3
-1
-CP
-Catalytic Biofortification
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly NORN ASSIMILATOR unit suffers a mortal wound.
-
-TARGETThat NORN ASSIMILATOR unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
-
-1
-CP
-Lesser Prey
-Fight · Either turn
-WHEN
-
-Fight phase, when a friendly NORN ASSIMILATOR/NORN EMISSARY unit is selected to fight.
-
-TARGETThat NORN ASSIMILATOR/NORN EMISSARY unit.
-
-EFFECT
-
-Your unit’s melee attacks have +2 S.
-
-USED BYAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
-
-1
-CP
-Tanglestrike Rounds
-Shooting · Your turn
-WHEN
-
-Your Shooting phase, when a friendly NORN ASSIMILATOR unit has shot.
-
-TARGETThat NORN ASSIMILATOR unit.
-
-EFFECT
-
-Select one enemy unit hit by those attacks. That enemy unit is tethered until the start of your next Command phase:
-
-While a unit is tethered, that unit has -2" M.
-
-USED BYAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
-
-CORE STRATAGEMS
-4
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-1
-CP
-Epic Challenge
-Fight · Either turn
-WHEN
-
-Fight phase, just after a friendly CHARACTER unit is selected to fight.
-
-TARGETThat CHARACTER unit.
-
-EFFECT
-
-Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis
-
-1
-CP
-Insane Bravery
-Command · Your turn · Once per battle
-WHEN
-
-Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
-
-TARGETThat unit.
-
-EFFECT
-
-That battle-shock roll is automatically successful.
-
-RESTRICTIONSYou cannot use this stratagem more than once per battle.
-
-Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
-
-USED BYany unit
-
-1
-CP
-Crushing Impact
-Charge · Your turn
-WHEN
-
-Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
-
-TARGETThat MONSTER/VEHICLE unit.
+TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
 
 EFFECT
 
 Resolve the following sequence:
 
-1. Select one enemy unit engaged with your unit.
-2. Select one model in your unit engaged with that enemy unit.
-3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+1. Select one EXPLOSIVES/GRENADES model in your unit.
+2. Select one unengaged enemy unit within 8" of and visible to that model.
+3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
 
-Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
 
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
+USED BYno unit in this list (needs EXPLOSIVES OR GRENADES)
 
-Not shown, no unit here can use it: Explosives (EXPLOSIVES OR GRENADES).
+1
+CP
+Smokescreen
+Until the end of the phase, the target of an attack has the benefit of cover if it is your SMOKE unit, or not fully visible to the attacker because of models in your SMOKE unit.
+Shooting · Their turn · No unit in this list can use it (needs SMOKE)
+WHEN
+
+Start of your opponent’s Shooting phase.
+
+TARGETOne friendly SMOKE unit.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
+
+USED BYno unit in this list (needs SMOKE)
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## strats {"turn":"your","phase":"command"} · YOUR COMMAND Your Command ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-THIS PHASE
-7 abilities
-Synapse Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.
-Hive Commander
-The Swarmlord
-
-At the start of your Command phase, if this model is on the battlefield, you gain 1CP
-
-UNITSThe Swarmlord
-
-Shadow in the Warp
-Tyranids army rule
-Once per battle
-
-Wahapedia FAQ: “Can units targeted by the Shadow in the Warp army rule use the Insane Bravery Stratagem?” “No. Insane Bravery can only be used in your Command phase.”
-
-If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6" of one or more SYNAPSE units from your army, subtract 1 from that test.
-
-Protean Purpose
-Assimilator (280), Assimilator (300), Norn Emissary ×2
-Once per battle, per unit
-
-(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).
-
-UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
-
-Singular Purpose
-Assimilator (280), Assimilator (300), Norn Emissary ×2
-Start of battle round 1
-
-At the start of the first battle round, select one of the following:
-
-Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
-Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
-
-UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
-
-Enraged Behemoths
-Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
-
-Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
-
-UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-Malign Presence
-The Swarmlord
-Aura
-
-Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.
-
-UNITSThe Swarmlord
-
-Will of the Hive Mind
-Hive Tyrant
-
-Once per battle round, one model from your army with this ability can use it when a friendly TYRANIDS unit within 12" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.
-
-UNITSHive Tyrant · Monstrous Nemesis
-
-STRATAGEMS
-COLLAPSE ALL
-TALONS OF THE NORN QUEEN
-1
-1
-CP
-Catalytic Biofortification
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly NORN ASSIMILATOR unit suffers a mortal wound.
-
-TARGETThat NORN ASSIMILATOR unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
-
-CORE STRATAGEMS
-2
-1
-CP
-Insane Bravery
-Command · Your turn · Once per battle
-WHEN
-
-Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
-
-TARGETThat unit.
-
-EFFECT
-
-That battle-shock roll is automatically successful.
-
-RESTRICTIONSYou cannot use this stratagem more than once per battle.
-
-Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
-
-USED BYany unit
-
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-NEXT: YOUR MOVEMENT ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"your","phase":"movement"} · YOUR MOVEMENT Your Movement ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-THIS PHASE
-5 abilities
-Synapse Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.
-Onslaught
-Hive Tyrant
-Aura, Psychic
-
-While a friendly TYRANIDS unit is within 6" of this model, ranged weapons equipped by models in that unit have the [ASSAULT] and [LETHAL HITS] abilities.
-
-UNITSHive Tyrant · Monstrous Nemesis
-
-Singular Purpose
-Assimilator (280), Assimilator (300), Norn Emissary ×2
-Start of battle round 1
-
-At the start of the first battle round, select one of the following:
-
-Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
-Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
-
-UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
-
-Enraged Behemoths
-Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
-
-Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
-
-UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-Malign Presence
-The Swarmlord
-Aura
-
-Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.
-
-UNITSThe Swarmlord
-
-Will of the Hive Mind
-Hive Tyrant
-
-Once per battle round, one model from your army with this ability can use it when a friendly TYRANIDS unit within 12" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.
-
-UNITSHive Tyrant · Monstrous Nemesis
-
-STRATAGEMS
-COLLAPSE ALL
-CRUSHER STAMPEDE
-1
-1
-CP
-Untrammelled Ferocity
-Movement · Your turn
-WHEN
-
-Your Movement phase.
-
-TARGETOne TYRANIDS MONSTER unit from your army that has not been selected to move this phase.
-
-EFFECT
-
-Until the end of the phase, each time a model in your unit makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4" or less in height. When doing so:
-
-It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.
-It can also move through sections of terrain features that are more than 4" in height, but if it does, after its unit has moved, roll one D6: on a 1, your unit is Battle-shocked.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-TALONS OF THE NORN QUEEN
-1
-1
-CP
-Catalytic Biofortification
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly NORN ASSIMILATOR unit suffers a mortal wound.
-
-TARGETThat NORN ASSIMILATOR unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
-
-CORE STRATAGEMS
-1
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-NEXT: YOUR SHOOTING ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"your","phase":"shooting"} · YOUR SHOOTING Your Shooting ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-THIS PHASE
-5 abilities
-Synapse Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.
-Onslaught
-Hive Tyrant
-Aura, Psychic
-
-While a friendly TYRANIDS unit is within 6" of this model, ranged weapons equipped by models in that unit have the [ASSAULT] and [LETHAL HITS] abilities.
-
-UNITSHive Tyrant · Monstrous Nemesis
-
-Singular Purpose
-Assimilator (280), Assimilator (300), Norn Emissary ×2
-Start of battle round 1
-
-At the start of the first battle round, select one of the following:
-
-Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
-Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
-
-UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
-
-Enraged Behemoths
-Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
-
-Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
-
-UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-Malign Presence
-The Swarmlord
-Aura
-
-Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.
-
-UNITSThe Swarmlord
-
-Will of the Hive Mind
-Hive Tyrant
-
-Once per battle round, one model from your army with this ability can use it when a friendly TYRANIDS unit within 12" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.
-
-UNITSHive Tyrant · Monstrous Nemesis
-
-STRATAGEMS
-COLLAPSE ALL
-CRUSHER STAMPEDE
-1
-1
-CP
-Swarm-guided Salvoes
-Shooting · Your turn
-WHEN
-
-Your Shooting phase.
-
-TARGETOne TYRANIDS MONSTER unit from your army that has not been selected to shoot this phase.
-
-EFFECT
-
-Until the end of the phase, ranged weapons equipped by models in your unit have the [IGNORES COVER] ability, and until the end of the phase each time a model in your unit makes an attack, you can ignore any or all modifiers to that model’s Ballistic Skill characteristic and any or all modifiers to the Hit roll.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-TALONS OF THE NORN QUEEN
-2
-1
-CP
-Tanglestrike Rounds
-Shooting · Your turn
-WHEN
-
-Your Shooting phase, when a friendly NORN ASSIMILATOR unit has shot.
-
-TARGETThat NORN ASSIMILATOR unit.
-
-EFFECT
-
-Select one enemy unit hit by those attacks. That enemy unit is tethered until the start of your next Command phase:
-
-While a unit is tethered, that unit has -2" M.
-
-USED BYAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
-
-1
-CP
-Catalytic Biofortification
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly NORN ASSIMILATOR unit suffers a mortal wound.
-
-TARGETThat NORN ASSIMILATOR unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
-
-CORE STRATAGEMS
-1
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-NEXT: YOUR CHARGE ›
-
-Not shown, no unit here can use it: Explosives (EXPLOSIVES OR GRENADES).
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"your","phase":"charge"} · YOUR CHARGE Your Charge ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-THIS PHASE
-5 abilities
-Synapse Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.
-Harpooned
-Core rule · Assimilator (280), Assimilator (300)
-
-When this unit declares a charge, if an enemy MONSTER/VEHICLE unit is within 12" of this unit and was hit by an attack made by this weapon this turn, you can use this ability. If you do:
-
-This unit has +2 to charge rolls until the end of the phase.
-This unit must end that charge move engaged with that MONSTER/VEHICLE unit.
-
-UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
-
-Singular Purpose
-Assimilator (280), Assimilator (300), Norn Emissary ×2
-Start of battle round 1
-
-At the start of the first battle round, select one of the following:
-
-Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
-Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
-
-UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
-
-Enraged Behemoths
-Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
-
-Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
-
-UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-Malign Presence
-The Swarmlord
-Aura
-
-Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.
-
-UNITSThe Swarmlord
-
-Will of the Hive Mind
-Hive Tyrant
-
-Once per battle round, one model from your army with this ability can use it when a friendly TYRANIDS unit within 12" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.
-
-UNITSHive Tyrant · Monstrous Nemesis
-
-STRATAGEMS
-COLLAPSE ALL
-CRUSHER STAMPEDE
-1
-1
-CP
-Massive Impact
-Charge · Your turn
-WHEN
-
-Your Charge phase, just after a TYRANIDS MONSTER model from your army ends a Charge move.
-
-TARGETThat TYRANIDS MONSTER model.
-
-EFFECT
-
-Select one enemy unit within Engagement Range of your model and roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-TALONS OF THE NORN QUEEN
-1
-1
-CP
-Catalytic Biofortification
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly NORN ASSIMILATOR unit suffers a mortal wound.
-
-TARGETThat NORN ASSIMILATOR unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
-
-CORE STRATAGEMS
-2
-1
-CP
-Crushing Impact
-Charge · Your turn
-WHEN
-
-Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
-
-TARGETThat MONSTER/VEHICLE unit.
-
-EFFECT
-
-Resolve the following sequence:
-
-1. Select one enemy unit engaged with your unit.
-2. Select one model in your unit engaged with that enemy unit.
-3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
-
-Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-NEXT: YOUR FIGHT ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"your","phase":"fight"} · YOUR FIGHT Your Fight ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-THIS PHASE
-5 abilities
-Synapse Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.
-Synapse Within Synapse Range: melee attacks have +1 S.
-Monstrous Nemesis
-Hive Tyrant
-Enhancement
-
-TYRANIDS MONSTER model only. Each time the bearer makes a melee attack that targets a MONSTER or VEHICLE unit, add 1 to the Wound roll.
-
-UNITSHive Tyrant · Monstrous Nemesis
-
-Singular Purpose
-Assimilator (280), Assimilator (300), Norn Emissary ×2
-Start of battle round 1
-
-At the start of the first battle round, select one of the following:
-
-Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
-Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
-
-UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
-
-Enraged Behemoths
-Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
-
-Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
-
-UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-Malign Presence
-The Swarmlord
-Aura
-
-Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.
-
-UNITSThe Swarmlord
-
-Will of the Hive Mind
-Hive Tyrant
-
-Once per battle round, one model from your army with this ability can use it when a friendly TYRANIDS unit within 12" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.
-
-UNITSHive Tyrant · Monstrous Nemesis
-
-STRATAGEMS
-COLLAPSE ALL
-CRUSHER STAMPEDE
-3
-1
-CP
-Corrosive Viscera
-Their Shooting / Fight (either turn)
-WHEN
-
-Your opponent’s Shooting phase or the Fight phase, just after a TYRANIDS MONSTER model from your army with the Deadly Demise ability that cannot FLY is destroyed.
-
-TARGETThat TYRANIDS MONSTER model. You can use this Stratagem on that model even though it was just destroyed.
-
-EFFECT
-
-Do not roll one D6 to determine whether mortal wounds are inflicted by your model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-1
-CP
-Rampaging Monstrosities
-Fight · Either turn
-WHEN
-
-Fight phase.
-
-TARGETOne TYRANIDS MONSTER unit from your army that has not been selected to fight this phase.
-
-EFFECT
-
-Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Hit roll.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-1
-CP
-Savage Roar
-Fight · Either turn
-WHEN
-
-Fight phase, just after an enemy unit has selected its targets.
-
-TARGETOne TYRANIDS MONSTER unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
-
-EFFECT
-
-That enemy unit must take a Battle-shock test and, until the end of the phase, each time a model in that enemy unit makes an attack that targets your unit, subtract 1 from the Hit roll. If that Battle-shock test was failed, subtract 1 from the Wound roll as well.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-TALONS OF THE NORN QUEEN
-2
-1
-CP
-Lesser Prey
-Fight · Either turn
-WHEN
-
-Fight phase, when a friendly NORN ASSIMILATOR/NORN EMISSARY unit is selected to fight.
-
-TARGETThat NORN ASSIMILATOR/NORN EMISSARY unit.
-
-EFFECT
-
-Your unit’s melee attacks have +2 S.
-
-USED BYAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
-
-1
-CP
-Catalytic Biofortification
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly NORN ASSIMILATOR unit suffers a mortal wound.
-
-TARGETThat NORN ASSIMILATOR unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
-
-CORE STRATAGEMS
-2
-1
-CP
-Epic Challenge
-Fight · Either turn
-WHEN
-
-Fight phase, just after a friendly CHARACTER unit is selected to fight.
-
-TARGETThat CHARACTER unit.
-
-EFFECT
-
-Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis
-
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-NEXT: THEIR COMMAND ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"opp","phase":"all"} · TURN Turn ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-COLLAPSE ALL
-CRUSHER STAMPEDE
-3
-1
-CP
-Corrosive Viscera
-Their Shooting / Fight (either turn)
-WHEN
-
-Your opponent’s Shooting phase or the Fight phase, just after a TYRANIDS MONSTER model from your army with the Deadly Demise ability that cannot FLY is destroyed.
-
-TARGETThat TYRANIDS MONSTER model. You can use this Stratagem on that model even though it was just destroyed.
-
-EFFECT
-
-Do not roll one D6 to determine whether mortal wounds are inflicted by your model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-1
-CP
-Rampaging Monstrosities
-Fight · Either turn
-WHEN
-
-Fight phase.
-
-TARGETOne TYRANIDS MONSTER unit from your army that has not been selected to fight this phase.
-
-EFFECT
-
-Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Hit roll.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-1
-CP
-Savage Roar
-Fight · Either turn
-WHEN
-
-Fight phase, just after an enemy unit has selected its targets.
-
-TARGETOne TYRANIDS MONSTER unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
-
-EFFECT
-
-That enemy unit must take a Battle-shock test and, until the end of the phase, each time a model in that enemy unit makes an attack that targets your unit, subtract 1 from the Hit roll. If that Battle-shock test was failed, subtract 1 from the Wound roll as well.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-TALONS OF THE NORN QUEEN
-2
-1
-CP
-Catalytic Biofortification
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly NORN ASSIMILATOR unit suffers a mortal wound.
-
-TARGETThat NORN ASSIMILATOR unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
-
-1
-CP
-Lesser Prey
-Fight · Either turn
-WHEN
-
-Fight phase, when a friendly NORN ASSIMILATOR/NORN EMISSARY unit is selected to fight.
-
-TARGETThat NORN ASSIMILATOR/NORN EMISSARY unit.
-
-EFFECT
-
-Your unit’s melee attacks have +2 S.
-
-USED BYAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
-
-CORE STRATAGEMS
-6
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-1
-CP
-Epic Challenge
-Fight · Either turn
-WHEN
-
-Fight phase, just after a friendly CHARACTER unit is selected to fight.
-
-TARGETThat CHARACTER unit.
-
-EFFECT
-
-Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis
-
-1
-CP
-Rapid Ingress
-Movement · Their turn
-WHEN
-
-End of your opponent’s Movement phase.
-
-TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
-
-EFFECT
-
-Your unit makes an ingress move (20.04).
-
-RESTRICTIONSYou cannot use this stratagem during the first battle round.
-
-USED BYany unit
-
-1
-CP
-Fire Overwatch
-Movement · Their turn
-WHEN
-
-End of your opponent’s Movement phase.
-
-TARGETOne friendly unengaged unit (excluding TITANIC units).
-
-EFFECT
-
-Your unit shoots using snap shooting.
-
-USED BYThe Swarmlord, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-1
-CP
-Heroic Intervention
-Charge · Their turn · Into the Fray +1CP
-WHEN
-
-End of your opponent’s Charge phase.
-
-TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
-
-EFFECT
-
-Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
-
-Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
-Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
-
-Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
-
-USED BYany unit
-
-2
-CP
-Counteroffensive
-Fight · Their turn
-WHEN
-
-Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
-
-TARGETOne friendly unit that is eligible to fight.
-
-EFFECT
-
-Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
-
-USED BYany unit
-
-Not shown, no unit here can use it: Smokescreen (SMOKE).
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"opp","phase":"command"} · THEIR COMMAND Their Command ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-THIS PHASE
-5 abilities
-Synapse Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.
-Shadow in the Warp
-Tyranids army rule
-Once per battle
-
-Wahapedia FAQ: “Can units targeted by the Shadow in the Warp army rule use the Insane Bravery Stratagem?” “No. Insane Bravery can only be used in your Command phase.”
-
-If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6" of one or more SYNAPSE units from your army, subtract 1 from that test.
-
-Singular Purpose
-Assimilator (280), Assimilator (300), Norn Emissary ×2
-Start of battle round 1
-
-At the start of the first battle round, select one of the following:
-
-Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
-Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
-
-UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
-
-Enraged Behemoths
-Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
-
-Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
-
-UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-Malign Presence
-The Swarmlord
-Aura
-
-Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.
-
-UNITSThe Swarmlord
-
-Will of the Hive Mind
-Hive Tyrant
-
-Once per battle round, one model from your army with this ability can use it when a friendly TYRANIDS unit within 12" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.
-
-UNITSHive Tyrant · Monstrous Nemesis
-
-STRATAGEMS
-COLLAPSE ALL
-TALONS OF THE NORN QUEEN
-1
-1
-CP
-Catalytic Biofortification
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly NORN ASSIMILATOR unit suffers a mortal wound.
-
-TARGETThat NORN ASSIMILATOR unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
-
-CORE STRATAGEMS
-1
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-NEXT: THEIR MOVEMENT ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"opp","phase":"movement"} · THEIR MOVEMENT Their Movement ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-THIS PHASE
-6 abilities
-Synapse Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.
-Onslaught
-Hive Tyrant
-Aura, Psychic
-
-While a friendly TYRANIDS unit is within 6" of this model, ranged weapons equipped by models in that unit have the [ASSAULT] and [LETHAL HITS] abilities.
-
-UNITSHive Tyrant · Monstrous Nemesis
-
-Harpoon Barbs
-Assimilator (280), Assimilator (300)
-
-Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.
-
-UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
-
-Singular Purpose
-Assimilator (280), Assimilator (300), Norn Emissary ×2
-Start of battle round 1
-
-At the start of the first battle round, select one of the following:
-
-Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
-Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
-
-UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
-
-Enraged Behemoths
-Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
-
-Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
-
-UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-Malign Presence
-The Swarmlord
-Aura
-
-Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.
-
-UNITSThe Swarmlord
-
-Will of the Hive Mind
-Hive Tyrant
-
-Once per battle round, one model from your army with this ability can use it when a friendly TYRANIDS unit within 12" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.
-
-UNITSHive Tyrant · Monstrous Nemesis
-
-STRATAGEMS
-COLLAPSE ALL
-TALONS OF THE NORN QUEEN
-1
-1
-CP
-Catalytic Biofortification
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly NORN ASSIMILATOR unit suffers a mortal wound.
-
-TARGETThat NORN ASSIMILATOR unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
-
-CORE STRATAGEMS
-3
-1
-CP
-Rapid Ingress
-Movement · Their turn
-WHEN
-
-End of your opponent’s Movement phase.
-
-TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
-
-EFFECT
-
-Your unit makes an ingress move (20.04).
-
-RESTRICTIONSYou cannot use this stratagem during the first battle round.
-
-USED BYany unit
-
-1
-CP
-Fire Overwatch
-Movement · Their turn
-WHEN
-
-End of your opponent’s Movement phase.
-
-TARGETOne friendly unengaged unit (excluding TITANIC units).
-
-EFFECT
-
-Your unit shoots using snap shooting.
-
-USED BYThe Swarmlord, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-NEXT: THEIR SHOOTING ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"opp","phase":"shooting"} · THEIR SHOOTING Their Shooting ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-THIS PHASE
-4 abilities
-Synapse Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.
-Singular Purpose
-Assimilator (280), Assimilator (300), Norn Emissary ×2
-Start of battle round 1
-
-At the start of the first battle round, select one of the following:
-
-Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
-Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
-
-UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
-
-Enraged Behemoths
-Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
-
-Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
-
-UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-Malign Presence
-The Swarmlord
-Aura
-
-Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.
-
-UNITSThe Swarmlord
-
-Will of the Hive Mind
-Hive Tyrant
-
-Once per battle round, one model from your army with this ability can use it when a friendly TYRANIDS unit within 12" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.
-
-UNITSHive Tyrant · Monstrous Nemesis
-
-STRATAGEMS
-COLLAPSE ALL
-CRUSHER STAMPEDE
-1
-1
-CP
-Corrosive Viscera
-Their Shooting / Fight (either turn)
-WHEN
-
-Your opponent’s Shooting phase or the Fight phase, just after a TYRANIDS MONSTER model from your army with the Deadly Demise ability that cannot FLY is destroyed.
-
-TARGETThat TYRANIDS MONSTER model. You can use this Stratagem on that model even though it was just destroyed.
-
-EFFECT
-
-Do not roll one D6 to determine whether mortal wounds are inflicted by your model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-TALONS OF THE NORN QUEEN
-1
-1
-CP
-Catalytic Biofortification
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly NORN ASSIMILATOR unit suffers a mortal wound.
-
-TARGETThat NORN ASSIMILATOR unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
-
-CORE STRATAGEMS
-1
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-WHEN TARGETED
-The Swarmlord
-T10 SV2+ INV4+ W10
-Hive Tyrant · Monstrous Nemesis
-T10 SV2+ INV4+ W10
-Neurogaunts
-Neurogaunt Nodebeast T3 SV6+ W1 / Neurogaunt T3 SV6+ W1
-Assimilator (280) · Synaptoprescience
-T11 SV2+ INV4+ W16
-If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it · 1CP Catalytic Biofortification: Feel No Pain 4+ against mortal wounds
-Assimilator (300) · Synaptoprescience
-T11 SV2+ INV4+ W16
-If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it · 1CP Catalytic Biofortification: Feel No Pain 4+ against mortal wounds
-Norn Emissary · Destabilising Predation
-T11 SV2+ INV4+ W16
-If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it · Feel No Pain 4+ against mortal wounds
-Norn Emissary
-T11 SV2+ INV4+ W16
-If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it · Feel No Pain 4+ against mortal wounds
-Tyrannofex
-T12 SV2+ W16
-Once per battle: change the Damage of an attack allocated to it to 0
-NEXT: THEIR CHARGE ›
-
-Not shown, no unit here can use it: Smokescreen (SMOKE).
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"opp","phase":"charge"} · THEIR CHARGE Their Charge ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-THIS PHASE
-5 abilities
-Synapse Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.
-Harpooned
-Core rule · Assimilator (280), Assimilator (300)
-
-When this unit declares a charge, if an enemy MONSTER/VEHICLE unit is within 12" of this unit and was hit by an attack made by this weapon this turn, you can use this ability. If you do:
-
-This unit has +2 to charge rolls until the end of the phase.
-This unit must end that charge move engaged with that MONSTER/VEHICLE unit.
-
-UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
-
-Singular Purpose
-Assimilator (280), Assimilator (300), Norn Emissary ×2
-Start of battle round 1
-
-At the start of the first battle round, select one of the following:
-
-Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
-Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
-
-UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
-
-Enraged Behemoths
-Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
-
-Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
-
-UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-Malign Presence
-The Swarmlord
-Aura
-
-Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.
-
-UNITSThe Swarmlord
-
-Will of the Hive Mind
-Hive Tyrant
-
-Once per battle round, one model from your army with this ability can use it when a friendly TYRANIDS unit within 12" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.
-
-UNITSHive Tyrant · Monstrous Nemesis
-
-STRATAGEMS
-COLLAPSE ALL
-TALONS OF THE NORN QUEEN
-1
-1
-CP
-Catalytic Biofortification
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly NORN ASSIMILATOR unit suffers a mortal wound.
-
-TARGETThat NORN ASSIMILATOR unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
-
-CORE STRATAGEMS
-2
-1
-CP
-Heroic Intervention
-Charge · Their turn · Into the Fray +1CP
-WHEN
-
-End of your opponent’s Charge phase.
-
-TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
-
-EFFECT
-
-Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
-
-Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
-Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
-
-Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
-
-USED BYany unit
-
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-NEXT: THEIR FIGHT ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## strats {"turn":"opp","phase":"fight"} · THEIR FIGHT Their Fight ANY TURN YOUR TURN THEIR TURN ALL CMD MOVE SHOOT CHARGE FIGHT
-THIS PHASE
-5 abilities
-Synapse Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.
-Synapse Within Synapse Range: melee attacks have +1 S.
-Monstrous Nemesis
-Hive Tyrant
-Enhancement
-
-TYRANIDS MONSTER model only. Each time the bearer makes a melee attack that targets a MONSTER or VEHICLE unit, add 1 to the Wound roll.
-
-UNITSHive Tyrant · Monstrous Nemesis
-
-Singular Purpose
-Assimilator (280), Assimilator (300), Norn Emissary ×2
-Start of battle round 1
-
-At the start of the first battle round, select one of the following:
-
-Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
-Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
-
-UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
-
-Enraged Behemoths
-Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
-
-Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
-
-UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-Malign Presence
-The Swarmlord
-Aura
-
-Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.
-
-UNITSThe Swarmlord
-
-Will of the Hive Mind
-Hive Tyrant
-
-Once per battle round, one model from your army with this ability can use it when a friendly TYRANIDS unit within 12" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.
-
-UNITSHive Tyrant · Monstrous Nemesis
-
-STRATAGEMS
-COLLAPSE ALL
-CRUSHER STAMPEDE
-3
-1
-CP
-Corrosive Viscera
-Their Shooting / Fight (either turn)
-WHEN
-
-Your opponent’s Shooting phase or the Fight phase, just after a TYRANIDS MONSTER model from your army with the Deadly Demise ability that cannot FLY is destroyed.
-
-TARGETThat TYRANIDS MONSTER model. You can use this Stratagem on that model even though it was just destroyed.
-
-EFFECT
-
-Do not roll one D6 to determine whether mortal wounds are inflicted by your model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-1
-CP
-Rampaging Monstrosities
-Fight · Either turn
-WHEN
-
-Fight phase.
-
-TARGETOne TYRANIDS MONSTER unit from your army that has not been selected to fight this phase.
-
-EFFECT
-
-Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Hit roll.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-1
-CP
-Savage Roar
-Fight · Either turn
-WHEN
-
-Fight phase, just after an enemy unit has selected its targets.
-
-TARGETOne TYRANIDS MONSTER unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
-
-EFFECT
-
-That enemy unit must take a Battle-shock test and, until the end of the phase, each time a model in that enemy unit makes an attack that targets your unit, subtract 1 from the Hit roll. If that Battle-shock test was failed, subtract 1 from the Wound roll as well.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
-TALONS OF THE NORN QUEEN
-2
-1
-CP
-Lesser Prey
-Fight · Either turn
-WHEN
-
-Fight phase, when a friendly NORN ASSIMILATOR/NORN EMISSARY unit is selected to fight.
-
-TARGETThat NORN ASSIMILATOR/NORN EMISSARY unit.
-
-EFFECT
-
-Your unit’s melee attacks have +2 S.
-
-USED BYAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
-
-1
-CP
-Catalytic Biofortification
-Any phase · Either turn
-WHEN
-
-Any phase, when a friendly NORN ASSIMILATOR unit suffers a mortal wound.
-
-TARGETThat NORN ASSIMILATOR unit.
-
-EFFECT
-
-Your unit has Feel No Pain 4+ against mortal wounds.
-
-USED BYAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
-
-CORE STRATAGEMS
-3
-1
-CP
-Epic Challenge
-Fight · Either turn
-WHEN
-
-Fight phase, just after a friendly CHARACTER unit is selected to fight.
-
-TARGETThat CHARACTER unit.
-
-EFFECT
-
-Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
-
-USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis
-
-2
-CP
-Counteroffensive
-Fight · Their turn
-WHEN
-
-Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
-
-TARGETOne friendly unit that is eligible to fight.
-
-EFFECT
-
-Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
-
-USED BYany unit
-
-1
-CP
-Command Re-roll
-Any phase · Either turn
-WHEN
-
-Any phase, just after you make one of the following rolls for a friendly unit or model:
-
-Advance roll
-Charge roll
-Damage roll
-Hazard roll
-Hit roll
-Save roll
-Wound roll
-A roll to determine the number of attacks generated with a weapon.
-
-TARGETThat unit or model.
-
-EFFECT
-
-You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
-
-USED BYany unit
-
-WHEN TARGETED
-The Swarmlord
-T10 SV2+ INV4+ W10
-Hive Tyrant · Monstrous Nemesis
-T10 SV2+ INV4+ W10
-Neurogaunts
-Neurogaunt Nodebeast T3 SV6+ W1 / Neurogaunt T3 SV6+ W1
-Assimilator (280) · Synaptoprescience
-T11 SV2+ INV4+ W16
-If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it · 1CP Catalytic Biofortification: Feel No Pain 4+ against mortal wounds
-Assimilator (300) · Synaptoprescience
-T11 SV2+ INV4+ W16
-If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it · 1CP Catalytic Biofortification: Feel No Pain 4+ against mortal wounds
-Norn Emissary · Destabilising Predation
-T11 SV2+ INV4+ W16
-If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it · Feel No Pain 4+ against mortal wounds
-Norn Emissary
-T11 SV2+ INV4+ W16
-If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it · Feel No Pain 4+ against mortal wounds
-Tyrannofex
-T12 SV2+ W16
-Once per battle: change the Damage of an attack allocated to it to 0
-NEXT: YOUR COMMAND ›
-
-Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
-
-######## unit swarmlord · THEIR FIGHT The Swarmlord
+######## unit swarmlord · STRATAGEMS The Swarmlord
 Epic Hero · 210 pts
 M
 T
@@ -4023,7 +1420,9 @@ While a friendly TYRANIDS unit is within 9" of this model, that unit is within y
 
 RULESDeadly Demise D3, Shadow in the Warp, Synapse, Leader, Enraged Behemoths · Keywords
 
-STRATAGEMSCorrosive Viscera, Rampaging Monstrosities, Savage Roar, Untrammelled Ferocity, Swarm-guided Salvoes, Massive Impact, Epic Challenge, Crushing Impact
+STRATAGEMSCorrosive Viscera, Rampaging Monstrosities, Savage Roar, Untrammelled Ferocity, Swarm-guided Salvoes, Massive Impact
+
+CORE STRATAGEMSCommand Re-roll, Epic Challenge, Insane Bravery, Crushing Impact, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive
 
 Hive Tyrant · Monstrous Nemesis ›
 
@@ -4103,7 +1502,9 @@ TYRANIDS MONSTER model only. Each time the bearer makes a melee attack that targ
 
 RULESDeadly Demise D3, Shadow in the Warp, Synapse, Leader, Enraged Behemoths · Keywords
 
-STRATAGEMSCorrosive Viscera, Rampaging Monstrosities, Savage Roar, Untrammelled Ferocity, Massive Impact, Epic Challenge, Crushing Impact
+STRATAGEMSCorrosive Viscera, Rampaging Monstrosities, Savage Roar, Untrammelled Ferocity, Swarm-guided Salvoes, Massive Impact
+
+CORE STRATAGEMSCommand Re-roll, Epic Challenge, Insane Bravery, Crushing Impact, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive
 
 ‹ The Swarmlord
 Neurogaunts ›
@@ -4157,6 +1558,8 @@ Neurocytes
 While this unit is within Synapse Range of your friendly TYRANIDS unit (excluding NEUROGAUNT units), it has the SYNAPSE keyword.
 
 RULESSynapse · Keywords
+
+CORE STRATAGEMSCommand Re-roll, Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive
 
 ‹ Hive Tyrant · Monstrous Nemesis
 Assimilator (280) · Synaptoprescience ›
@@ -4267,7 +1670,9 @@ NORN ASSIMILATOR unit only. This unit has 4+ InSv.
 
 RULESDeadly Demise D6, Shadow in the Warp, Synapse, Enraged Behemoths, Higher Imperatives · Keywords
 
-STRATAGEMSCorrosive Viscera, Rampaging Monstrosities, Savage Roar, Untrammelled Ferocity, Swarm-guided Salvoes, Massive Impact, Catalytic Biofortification, Lesser Prey, Tanglestrike Rounds, Crushing Impact
+STRATAGEMSCorrosive Viscera, Rampaging Monstrosities, Savage Roar, Untrammelled Ferocity, Swarm-guided Salvoes, Massive Impact, Catalytic Biofortification, Lesser Prey, Tanglestrike Rounds
+
+CORE STRATAGEMSCommand Re-roll, Insane Bravery, Crushing Impact, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive
 
 ‹ Neurogaunts
 Assimilator (300) · Synaptoprescience ›
@@ -4378,7 +1783,9 @@ NORN ASSIMILATOR unit only. This unit has 4+ InSv.
 
 RULESDeadly Demise D6, Shadow in the Warp, Synapse, Enraged Behemoths, Higher Imperatives · Keywords
 
-STRATAGEMSCorrosive Viscera, Rampaging Monstrosities, Savage Roar, Untrammelled Ferocity, Swarm-guided Salvoes, Massive Impact, Catalytic Biofortification, Lesser Prey, Tanglestrike Rounds, Crushing Impact
+STRATAGEMSCorrosive Viscera, Rampaging Monstrosities, Savage Roar, Untrammelled Ferocity, Swarm-guided Salvoes, Massive Impact, Catalytic Biofortification, Lesser Prey, Tanglestrike Rounds
+
+CORE STRATAGEMSCommand Re-roll, Insane Bravery, Crushing Impact, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive
 
 ‹ Assimilator (280) · Synaptoprescience
 Norn Emissary · Destabilising Predation ›
@@ -4502,7 +1909,9 @@ This model has the Feel No Pain 4+ ability against Mortal Wounds.
 
 RULESDeadly Demise D6, Shadow in the Warp, Synapse, Feel No Pain, Enraged Behemoths, Higher Imperatives · Keywords
 
-STRATAGEMSCorrosive Viscera, Rampaging Monstrosities, Savage Roar, Untrammelled Ferocity, Swarm-guided Salvoes, Massive Impact, Lesser Prey, Crushing Impact
+STRATAGEMSCorrosive Viscera, Rampaging Monstrosities, Savage Roar, Untrammelled Ferocity, Swarm-guided Salvoes, Massive Impact, Lesser Prey
+
+CORE STRATAGEMSCommand Re-roll, Insane Bravery, Crushing Impact, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive
 
 ‹ Assimilator (300) · Synaptoprescience
 Norn Emissary ›
@@ -4618,7 +2027,9 @@ This model has the Feel No Pain 4+ ability against Mortal Wounds.
 
 RULESDeadly Demise D6, Shadow in the Warp, Synapse, Feel No Pain, Enraged Behemoths, Higher Imperatives · Keywords
 
-STRATAGEMSCorrosive Viscera, Rampaging Monstrosities, Savage Roar, Untrammelled Ferocity, Swarm-guided Salvoes, Massive Impact, Lesser Prey, Crushing Impact
+STRATAGEMSCorrosive Viscera, Rampaging Monstrosities, Savage Roar, Untrammelled Ferocity, Swarm-guided Salvoes, Massive Impact, Lesser Prey
+
+CORE STRATAGEMSCommand Re-roll, Insane Bravery, Crushing Impact, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive
 
 ‹ Norn Emissary · Destabilising Predation
 Tyrannofex ›
@@ -4702,7 +2113,9 @@ Once per battle, when an attack is allocated to this model, you can change the D
 
 RULESDeadly Demise D6, Synapse, Enraged Behemoths · Keywords
 
-STRATAGEMSCorrosive Viscera, Rampaging Monstrosities, Savage Roar, Untrammelled Ferocity, Swarm-guided Salvoes, Massive Impact, Crushing Impact
+STRATAGEMSCorrosive Viscera, Rampaging Monstrosities, Savage Roar, Untrammelled Ferocity, Swarm-guided Salvoes, Massive Impact
+
+CORE STRATAGEMSCommand Re-roll, Insane Bravery, Crushing Impact, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive
 
 ‹ Norn Emissary
 
@@ -5625,13 +3038,6 @@ One of that model’s other melee weapons, if possible.
 
 IN THIS ARMYHive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
 
-######## popup rule:[HAZARDOUS] · NIDZILLAS Nidzillas
-CORE RULE
-
-HAZARDOUS
-
-Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.
-
 ######## popup rule:[IGNORES COVER] · NIDZILLAS Nidzillas
 CORE RULE
 
@@ -5710,6 +3116,24 @@ Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wou
 
 IN THIS ARMYThe Swarmlord, Hive Tyrant · Monstrous Nemesis
 
+######## popup rule:advance move · NIDZILLAS Nidzillas
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+
 ######## popup rule:assault shooting · NIDZILLAS Nidzillas
 CORE RULE
 
@@ -5768,6 +3192,18 @@ That unit is currently battle-shocked.
 That unit is at, or below, half-strength.
 
 If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+######## popup rule:benefit of cover · NIDZILLAS Nidzillas
+CORE RULE
+
+Benefit of Cover
+
+Each time a ranged attack targets a unit, if every model in that unit meets one or more of the following conditions, that unit has the benefit of cover against that attack:
+
+That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area.
+That model is not fully visible to the attacking model due to one or more intervening terrain features and/or one or more intervening obscuring terrain areas (see below).
+
+Each time a ranged attack targets a unit that has the benefit of cover against it, worsen the BS characteristic of that attack by 1.
 
 ######## popup rule:bodyguard · NIDZILLAS Nidzillas
 CORE RULE
@@ -6102,6 +3538,31 @@ Your unit has Feel No Pain 4+ against mortal wounds.
 
 USED BYAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
 
+######## popup strat:command-re-roll · NIDZILLAS Nidzillas
+1CP · ANY PHASE · EITHER TURN
+
+Command Re-roll
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
 ######## popup strat:corrosive-viscera · NIDZILLAS Nidzillas
 1CP · THEIR SHOOTING / FIGHT (EITHER TURN)
 
@@ -6117,6 +3578,22 @@ EFFECT
 Do not roll one D6 to determine whether mortal wounds are inflicted by your model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted.
 
 USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
+
+######## popup strat:counteroffensive · NIDZILLAS Nidzillas
+2CP · FIGHT · THEIR TURN
+
+Counteroffensive
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
 
 ######## popup strat:crushing-impact · NIDZILLAS Nidzillas
 1CP · CHARGE · YOUR TURN
@@ -6155,6 +3632,43 @@ EFFECT
 Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
 
 USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis
+
+######## popup strat:fire-overwatch · NIDZILLAS Nidzillas
+1CP · MOVEMENT · THEIR TURN
+
+Fire Overwatch
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYThe Swarmlord, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
+
+######## popup strat:heroic-intervention · NIDZILLAS Nidzillas
+1CP · CHARGE · THEIR TURN · INTO THE FRAY +1CP
+
+Heroic Intervention
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYany unit
 
 ######## popup strat:insane-bravery · NIDZILLAS Nidzillas
 1CP · COMMAND · YOUR TURN · ONCE PER BATTLE
@@ -6223,6 +3737,24 @@ EFFECT
 Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Hit roll.
 
 USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
+
+######## popup strat:rapid-ingress · NIDZILLAS Nidzillas
+1CP · MOVEMENT · THEIR TURN
+
+Rapid Ingress
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
 
 ######## popup strat:savage-roar · NIDZILLAS Nidzillas
 1CP · FIGHT · EITHER TURN

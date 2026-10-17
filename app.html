@@ -260,6 +260,17 @@ summary::-webkit-details-marker{display:none}
 .kwl .gk::after, .gv::after{content:'+'; font:700 9px/1 var(--f-head); vertical-align:super; margin-left:1px; text-decoration:none; display:inline-block}
 .msep{display:flex; align-items:center; gap:6px; margin:7px 0 3px; font:600 10.5px/1.2 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--muted)}
 .msep::after{content:''; flex:1; border-top:1px solid var(--line)}
+.strat.none .sh b, .strat.none .sh span.sg{color:var(--muted)}
+.sh span.sg{font-size:13.5px; line-height:1.32; color:var(--fg2); margin:1px 0}
+.rules .dsec{margin-top:22px}
+.rules .ab > summary .aw{white-space:normal; max-width:48%}
+.rules .who{margin-top:14px}
+.rules .dline.rs{font-size:13.5px}
+.rules .dline.rs > .il{font:600 11px/1.2 var(--f-head); letter-spacing:.1em; color:var(--muted); margin-right:6px}
+.jumps{display:flex; flex-wrap:wrap; gap:6px; margin:6px 0 2px}
+.jumps button{font:600 12px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; padding:7px 10px 6px; border:1px solid var(--line); border-radius:999px; background:var(--surface); color:var(--fg2)}
+.jumps button:active{color:var(--accent); border-color:var(--accent)}
+.abl .xp{border-bottom:1px solid var(--line)}
 .gsrc{margin:6px 0 10px; padding:8px 10px; border-left:3px solid var(--accent); background:var(--surface); border-radius:0 8px 8px 0}
 .gh{margin:0 0 4px} .gh .tg{margin-left:4px}
 .gw2{margin:0 0 4px; font-size:12.5px; color:var(--muted)}
@@ -309,12 +320,6 @@ summary::-webkit-details-marker{display:none}
 .kwline{font-size:14px; line-height:1.5; color:var(--muted)}
 
 /* ---------- stratagems ---------- */
-.filt{display:grid; gap:4px}
-.seg, .pgrid{display:grid; grid-auto-flow:column; grid-auto-columns:minmax(0,1fr); gap:3px}
-.seg button, .pgrid button{min-height:36px; border-radius:7px; font:700 13px/1 var(--f-head); letter-spacing:.04em; text-transform:uppercase; color:var(--muted); text-align:center; background:var(--surface)}
-.seg button:active, .pgrid button:active{background:var(--surface2)}
-.seg button[aria-pressed="true"], .pgrid button[aria-pressed="true"]{background:var(--surface2); color:var(--fg); box-shadow:inset 0 0 0 1px var(--line)}
-.seg button.on, .pgrid button.on{background:var(--accent); color:var(--accent-ink); box-shadow:none}
 .tools{display:flex; justify-content:flex-end; margin:2px 0 -8px}
 .qh{margin:10px 0 3px; font:700 12px/1.2 var(--f-head); letter-spacing:.09em; text-transform:uppercase; color:var(--fg)}
 .qh:first-child{margin-top:2px}
@@ -334,7 +339,6 @@ summary::-webkit-details-marker{display:none}
 .tabs button .ic{width:22px; height:22px}
 .tabs button.on{color:var(--accent)}
 .tabs button:active{background:var(--surface)}
-.subbar .filt{padding-top:2px}
 .flips{display:grid; grid-template-columns:1fr 1fr; gap:8px; margin:16px 0 4px}
 .flip{min-height:48px; padding:6px 10px; border-radius:6px; background:var(--surface); font:700 14px/1.15 var(--f-head); letter-spacing:.03em; color:var(--fg2)}
 .flip.p{text-align:left}
@@ -348,7 +352,6 @@ summary::-webkit-details-marker{display:none}
 .tl > .ticks{flex:none; margin:0; vertical-align:0}
 .tl > span{flex:1; min-width:0; padding-top:1px}
 .sec-h .textbtn{margin-left:auto}
-.nextph{display:block; width:100%; min-height:48px; margin:14px 0 4px; border-radius:6px; background:var(--surface2); font:700 15px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--accent)}
 .textbtn{min-height:40px; font:700 12.5px/1 var(--f-head); letter-spacing:.07em; text-transform:uppercase; color:var(--accent)}
 .sec-h{display:flex; align-items:baseline; justify-content:space-between; gap:10px; margin:16px 0 4px}
 .sec-h h2{margin:0}
@@ -462,12 +465,11 @@ try { localStorage.removeItem('wh-layout'); } catch(e){}   // left by an earlier
 
 const PHASES = [['command','Command','Cmd'], ['movement','Movement','Move'], ['shooting','Shooting','Shoot'], ['charge','Charge','Charge'], ['fight','Fight','Fight']];
 const PHASE_NAME = Object.fromEntries(PHASES.map(([k, l]) => [k, l]));
-const TURN_FILTER = [['all','Any turn'], ['your','Your turn'], ['opp','Their turn']];
 const TURN_NAME = { your:'Your turn', opp:'Their turn', either:'Either turn' };
 const ROLE_ORDER = ['Epic Hero','Character','Battleline','Infantry','Mounted','Beast','Swarm','Monster','Vehicle','Dedicated Transport','Fortification','Other'];
 const ROLE_LABEL = { 'Epic Hero':'Epic Heroes', 'Character':'Characters', 'Battleline':'Battleline', 'Infantry':'Infantry', 'Mounted':'Mounted', 'Beast':'Beasts', 'Swarm':'Swarms',
   'Monster':'Monsters', 'Vehicle':'Vehicles', 'Dedicated Transport':'Dedicated Transports', 'Fortification':'Fortifications', 'Other':'Other' };
-const SCREEN_TITLE = { pregame:'Before the battle', units:'Units', strats:'Stratagems', ranged:'Ranged weapons', melee:'Melee weapons', abilities:'Abilities', rules:'Rules & keywords', bases:'Bases & proxies' };
+const SCREEN_TITLE = { pregame:'Before the battle', units:'Units', strats:'Stratagems', ranged:'Ranged weapons', melee:'Melee weapons', abilities:'Abilities', rules:'Rules', bases:'Bases & proxies' };
 const BACK_TITLE = { pregame:'Pre-game', ranged:'Ranged', melee:'Melee', rules:'Rules', bases:'Bases' };
 const HUNTER_KW = 'HUNTER: MONSTER/VEHICLE';
 const KEY_LABEL = { range:'RNG', A:'A', BS:'BS', WS:'WS', S:'S', AP:'AP', D:'D' };
@@ -483,10 +485,9 @@ const isObj = v => !!v && typeof v === 'object' && !Array.isArray(v);
 const hasOwn = (o, k) => Object.prototype.hasOwnProperty.call(o, k);
 // filters, open cards and search text last for this session, so an update reload keeps them
 const sess = isObj(session.get('wh-session')) ? session.get('wh-session') : {};
-const filt = Object.assign({ phase:'all', turn:'all' }, isObj(sess.filt) ? sess.filt : {});
 const openStrats = new Set(Array.isArray(sess.open) ? sess.open : []);
 const query = Object.assign({}, isObj(sess.query) ? sess.query : {});
-const saveSession = () => session.set('wh-session', { filt, open:[...openStrats], query });
+const saveSession = () => session.set('wh-session', { open:[...openStrats], query });
 const moreShown = new Set();                 // search groups you expanded
 let focusSearch = false;
 
@@ -494,7 +495,7 @@ let focusSearch = false;
    Tabs at the bottom of every army screen (Pre-game · Units · Turn · Rules · Find), ‹ › between
    datasheets, and tick boxes for the uses a rule allows per battle, kept until New game. */
 // the tabs, and which one the current screen belongs to
-const TABS = [['pregame', 'i-flag', 'Pre-game'], ['units', 'i-units', 'Units'], ['strats', 'i-cards', 'Turn'], ['rules', 'i-book', 'Rules'], ['army', 'i-search', 'Find']];
+const TABS = [['pregame', 'i-flag', 'Pre-game'], ['units', 'i-units', 'Units'], ['strats', 'i-cards', 'Stratagems'], ['rules', 'i-book', 'Rules'], ['army', 'i-search', 'Find']];
 const isTab = s => TABS.some(([k]) => k === s);
 const tabOf = s => ({ unit:'units', bases:'pregame', ranged:'army', melee:'army', abilities:'army' })[s] || s;
 const tabBar = () => '<div class="tabs">' + TABS.map(([s, ic, label]) => '<button data-tab="' + s + '"' + (tabOf(cur.s) === s ? ' class="on" aria-current="page"' : '') + '><svg class="ic" aria-hidden="true"><use href="#' + ic + '"/></svg><span>' + label + '</span></button>').join('') + '</div>';
@@ -550,7 +551,7 @@ function parentOf(c){
 }
 function titleOf(c){
   if(c.s === 'home') return 'Armies';
-  if(c.s === 'strats'){ const p = PHASES.find(([k]) => k === filt.phase); return p ? ({ your:'Your ', opp:'Their ' }[filt.turn] || '') + p[1] : 'Turn'; }
+  if(c.s === 'strats') return 'Stratagems';
   if(c.s === 'army') return (armyById(c.army) || {}).name || '';
   if(c.s === 'unit') return ((armyById(c.army) || { units:[] }).units.find(u => u.id === c.unit) || {}).name || '';
   return SCREEN_TITLE[c.s] || '';
@@ -630,7 +631,6 @@ function matches(n, u){
   return true;
 }
 const eligible = (s, a) => (a || army()).units.filter(u => matches(s.needs, u));
-const keywordGated = s => !!(s.needs && (s.needs.all || s.needs.any));
 function allStratagems(a){
   a = a || army();
   const out = [];
@@ -661,7 +661,8 @@ function unitNames(units){
 }
 // detachment rules that apply to a unit (by keyword)
 const unitDetRules = u => detachments().filter(d => d.rule && d.rule.needs && matches(d.rule.needs, u)).map(d => d.rule);
-const unitRules = u => u.rules.concat(unitDetRules(u).map(r => r.name).filter(n => !u.rules.includes(n))).filter(r => !inertRule(r));
+const allUnitRules = u => u.rules.concat(unitDetRules(u).map(r => r.name).filter(n => !u.rules.includes(n)));
+const unitRules = u => allUnitRules(u).filter(r => !inertRule(r));   // the ones that do something in this list
 // an army rule that needs units this army doesn't have, e.g. Bondsman with no ARMIGER models
 function inertRule(name){
   const r = faction().armyRules.find(x => x.name === name);
@@ -850,7 +851,7 @@ function screenArmy(){
       row('ranged', 'i-gun', 'Ranged weapons', weaponCount(a, 'ranged')) +
       row('melee', 'i-blade', 'Melee weapons', weaponCount(a, 'melee')) +
       row('abilities', 'i-spark', 'Abilities', a.units.reduce((t, u) => t + u.abilities.length, 0)) +
-      row('rules', 'i-book', 'Rules & keywords', '') +
+      row('rules', 'i-book', 'Rules', '') +
       row('bases', 'i-base', 'Bases & proxies', a.units.reduce((t, u) => t + modelCount(u) * (u.copies || 1), 0)) +
       ('wakeLock' in navigator ? '<button class="row" data-awake aria-pressed="' + awake.on + '"><svg class="ic" aria-hidden="true"><use href="#i-sun"/></svg><span class="rb"><b>Keep screen on</b></span><span class="c' + (awake.on ? ' on' : '') + '">' + (awake.on ? 'On' : 'Off') + '</span></button>' : '') +
     '</div><p class="note">' + esc(a.source) + '</p></div>';
@@ -1257,14 +1258,11 @@ const linkTo = (attr, val, label) => '<span class="link" role="button" tabindex=
 // every ability of the datasheet is listed, as on the paper datasheet; footnotes and "When targeted"
 // only repeat it where it matters. The one exception: a Damaged profile is its band under the stats.
 const shownElsewhere = ab => !!ab.damaged;
-// core stratagems any unit can use are listed only where they suit the unit
-const suits = (s, u) => keywordGated(s) || u.abilities.some(ab => (ab.text || '').toLowerCase().includes(s.name.toLowerCase() + ' stratagem'));
 const modelsText = u => u.models.map(esc).join(' · ') + (u.ptsNote ? ' · ' + esc(u.ptsNote) + ' pts' : '');
 function screenUnit(){
   const u = unitById(cur.unit);
   if(!u) return '<div class="empty">This unit is no longer in the list.</div>';
-  const pointless = s => s.mod && ((s.mod.kind === 'ranged' && !(u.ranged || []).length) || (s.mod.kind === 'melee' && !(u.melee || []).length));
-  const strats = allStratagems().filter(s => eligible(s).includes(u) && suits(s, u) && !pointless(s));
+  const strats = allStratagems().filter(s => eligible(s).includes(u));   // every one it can be the target of
   const multi = u.stats.length > 1, def = defenceItems(u);
   const solo = u.models.length === 1 && /^1× /.test(u.models[0]);
   const longModels = !solo && modelsText(u).length > 70;   // then they go in the Models & keywords popup
@@ -1290,9 +1288,10 @@ function screenUnit(){
         (psy ? ' <span class="from">(' + linkTo('rule', 'Psychic', '[PSYCHIC]') + ' weapons can ignore it)</span>' : '') + '</div>'; }).join('') + '</div>' +
     unitWeapons(u) +
     (abil.length ? '<div class="dsec" id="sec-abilities"><div class="lbl">Abilities' + attached + '</div>' + abilityRows(abil, u) + '</div>' : '') +
-    '<div class="dsec" id="sec-rules"><p class="dline"><span class="il">Rules</span>' + unitRules(u).filter(r => !weaponKeys.has(ruleKey(r))).map(r => linkTo('rule', r, r)).join(', ') +
+    '<div class="dsec" id="sec-rules"><p class="dline"><span class="il">Rules</span>' + allUnitRules(u).filter(r => !weaponKeys.has(ruleKey(r))).map(r => linkTo('rule', r, r) + (inertRule(r) ? ' <span class="from">(no unit in this list it applies to)</span>' : '')).join(', ') +
       ' <span class="sep">·</span> ' + linkTo('kw', u.id, longModels ? 'Models & keywords' : 'Keywords') + '</p>' +
-      (strats.length ? '<p class="dline" id="sec-strats"><span class="il">Stratagems</span>' + strats.map(st => linkTo('strat', st.id, st.name)).join(', ') + '</p>' : '') + '</div>';
+      [['Stratagems', strats.filter(st => st.src !== 'Core')], ['Core stratagems', strats.filter(st => st.src === 'Core')]].map(([l, list], i) => list.length ?
+        '<p class="dline"' + (i ? '' : ' id="sec-strats"') + '><span class="il">' + l + '</span>' + list.map(st => linkTo('strat', st.id, st.name)).join(', ') + '</p>' : '').join('') + '</div>';
 }
 // the list-building facts, one tap away
 function showKeywords(id){
@@ -1313,110 +1312,43 @@ const screenAbilities = () => '<div class="slice">' + army().units.filter(u => u
 
 /* ---------- stratagems ---------- */
 const stratWhenLine = s => [whenTag(s), s.limit, s.cpNote].filter(Boolean).join(' · ');
-const stratHead = s => '<span class="cp' + (s.cp >= 2 ? ' hot' : '') + '">' + esc(s.cp) + '<small>CP</small></span><span class="sh"><b>' + esc(s.name) + '</b><span>' + esc(stratWhenLine(s)) + '</span></span>';
+// the units of this list that can be its target ("any unit" when all can)
+const stratUsers = s => eligible(s).filter(u => !(s.id === 'fire-overwatch' && !(u.ranged || []).length));   // a unit with no gun can be picked but cannot shoot (04.01.01)
+// what a stratagem's TARGET needs that no unit here has (e.g. TRANSPORT)
+const lacks = s => { const n = s.needs || {}, lack = (n.all || []).filter(k => !army().units.some(u => hasKw(u, k))); return lack.length ? lack.join(', ').toUpperCase() : n.any ? n.any.join(' or ').toUpperCase() : ''; };
+const usersLine = s => { const el = stratUsers(s); return !el.length ? 'No unit in this list can use it' + (lacks(s) ? ' (needs ' + lacks(s) + ')' : '') : el.length === army().units.length ? 'Any unit' : unitNames(el); };
+// the row says what it does (gist, from its EFFECT), when, and which of your units can use it
+const stratHead = s => '<span class="cp' + (s.cp >= 2 ? ' hot' : '') + '">' + esc(s.cp) + '<small>CP</small></span><span class="sh"><b>' + esc(s.name) + '</b>' +
+  (s.gist ? '<span class="sg">' + esc(s.gist) + '</span>' : '') + '<span>' + esc(stratWhenLine(s) + ' · ' + usersLine(s)) + '</span></span>';
 // a rule whose wording allows two readings: settle it with the opponent before the game
 function stratBody(s){
-  const el = eligible(s).filter(u => !(s.id === 'fire-overwatch' && !(u.ranged || []).length));   // a unit with no gun can be picked but cannot shoot (04.01.01)
+  const el = stratUsers(s);
   return '<div><span class="il">When</span>' + rt(s.when) + '</div><p><span class="il">Target</span>' + inline(s.target) + '</p>' +
     '<div><span class="il">Effect</span>' + rt(s.effect) + '</div>' +
     (s.restrictions ? '<p><span class="il">Restrictions</span>' + inline(s.restrictions) + '</p>' : '') +
     (s.note ? '<p class="note it">' + esc(s.note) + '</p>' : '') +
-    '<p class="usedby"><span class="il">Used by</span>' + (el.length === army().units.length ? 'any unit' : el.map(unitLink).join(', ')) + '</p>';
+    '<p class="usedby"><span class="il">Used by</span>' + (!el.length ? 'no unit in this list' + (lacks(s) ? ' (needs ' + esc(lacks(s)) + ')' : '') : el.length === army().units.length ? 'any unit' : el.map(unitLink).join(', ')) + '</p>';
 }
-const stratItem = s => '<details class="strat" data-strat-id="' + esc(s.id) + '"' + (openStrats.has(s.id) ? ' open' : '') + '><summary>' + stratHead(s) + chev + '</summary><div class="sb">' + stratBody(s) + '</div></details>';
-const turnOk = t => filt.turn === 'all' || !t || t === 'either' || filt.turn === t;
-// does a stratagem or ability fall under the phase and turn filters
-function fits(x){
-  const ph = phasesOf(x);
-  if(filt.phase === 'all') return ph.some(p => turnOk(phTurn(x, p)));
-  return ph.includes(filt.phase) && turnOk(phTurn(x, filt.phase));
-}
-// in a phase view: start-of-phase first, end-of-phase last, any-phase stratagems after the rest
-const phaseOrder = (x, text) => (phasesOf(x).length === PHASES.length ? 10 : 0) + timing(text);
-// core rules a unit has that do something in a phase
-const CORE_PHASED = { 'Deep Strike':{ ph:['movement'], turn:'either' }, 'Harpooned':{ ph:['charge'], turn:'either' }, 'Super-Heavy Walker':{ ph:['movement'], turn:'your' }, 'Firing Deck':{ ph:['shooting'], turn:'your' } };
-function phaseItems(){
-  const out = [], f = faction(), units = army().units;
-  for(const r of f.armyRules) if(r.ph && !inertRule(r.name)) out.push({ name:r.name, text:r.text, note:r.note, table:r.table, tag:r.tag, ph:r.ph, turn:r.turn, turns:r.turns, sub:f.name + ' army rule', units:[] });
-  for(const d of detachments()) if(d.rule && d.rule.ph){
-    const us = units.filter(u => matches(d.rule.needs, u));
-    if(us.length) out.push({ name:d.rule.name, text:d.rule.text, note:d.rule.note, tag:d.rule.tag, table:d.rule.table, ph:d.rule.ph, turn:d.rule.turn, turns:d.rule.turns, sub:d.name + ' rule · ' + unitNames(us), units:us });
-  }
-  for(const u of units) for(const ab of u.abilities){
-    if(!ab.ph || naReason(ab)) continue;
-    const key = ab.name + '|' + ab.text;
-    let e = out.find(x => x.key === key);
-    if(!e){ e = { key, name:ab.name, text:ab.text, tag:ab.tag, ph:ab.ph, turn:ab.turn, turns:ab.turns, units:[] }; out.push(e); }
-    e.units.push(u);
-  }
-  for(const [key, when] of Object.entries(CORE_PHASED)){
-    const us = units.filter(u => unitRules(u).some(r => ruleKey(r) === key) || [...(u.ranged || []), ...(u.melee || [])].some(w => w.kw.some(k => ruleKey(k) === key)));
-    if(us.length && D.rules[key]) out.push(Object.assign({ name:key, text:D.rules[key], sub:'Core rule · ' + unitNames(us), units:us }, when));
-  }
-  for(const e of out) if(!e.sub) e.sub = unitNames(e.units);
-  return out;
-}
-// the opponent is attacking: each unit's toughness, saves and what protects it
-function defenceList(){
-  const units = army().units, all = units.map(u => defences(u, filt.phase === 'all' ? null : filt.phase));
-  const every = all[0].filter(t => units.length > 1 && all.every(d => d.includes(t)));   // e.g. a stratagem any unit can take: said once
-  return (every.length ? '<p class="rem"><b>Every unit:</b> ' + every.map(esc).join(' · ') + '</p>' : '') + '<div class="dl">' + units.map((u, i) => {
-    const multi = u.stats.length > 1;
-    const st = u.stats.map(s => (multi ? esc(s.name.replace(/ ×\d+$/, '')) + ' ' : '') + '<i>T</i>' + esc(s.T) + ' <i>SV</i>' + esc(s.Sv) + (s.InSv !== '–' ? ' <i>INV</i>' + esc(s.InSv) : '') + ' <i>W</i>' + esc(s.W)).join(' / ');
-    const d = all[i].filter(t => !every.includes(t));
-    return '<div>' + unitLink(u) + '<span class="sv">' + st + '</span>' + (d.length ? '<span>' + d.map(esc).join(' · ') + '</span>' : '') + '</div>';
-  }).join('') + '</div>';
-}
-// the phase after this one: your Fight is followed by their Command, their Fight by your next turn
-function nextPhase(){
-  const i = PHASES.findIndex(([k]) => k === filt.phase);
-  if(i < 0) return '';
-  const last = i === PHASES.length - 1, turn = last && filt.turn !== 'all' ? (filt.turn === 'your' ? 'opp' : 'your') : filt.turn;
-  const [k, label] = PHASES[last ? 0 : i + 1];
-  return '<button class="nextph" data-next="' + k + '|' + turn + '">Next: ' + ({ your:'Your ', opp:'Their ' }[turn] || '') + label + ' <span aria-hidden="true">›</span></button>';
-}
-function stratFilters(){
-  const btn = (attr, k, label, sel) => '<button data-' + attr + '="' + k + '" aria-pressed="' + (sel === k) + '"' + (sel === k && k !== 'all' ? ' class="on"' : '') + '>' + label + '</button>';
-  return '<div class="filt"><div class="seg" role="group" aria-label="Whose turn">' + TURN_FILTER.map(([k, l]) => btn('turn', k, l, filt.turn)).join('') + '</div>' +
-    '<div class="pgrid" role="group" aria-label="Phase">' + [['all','All','All']].concat(PHASES).map(([k, , s]) => btn('phase', k, s, filt.phase)).join('') + '</div></div>';
-}
+const stratItem = s => '<details class="strat' + (stratUsers(s).length ? '' : ' none') + '" data-strat-id="' + esc(s.id) + '"' + (openStrats.has(s.id) ? ' open' : '') + '><summary>' + stratHead(s) + chev + '</summary><div class="sb">' + stratBody(s) + '</div></details>';
+// every stratagem this list can use, by detachment, in phase order (Command first, any-phase ones last)
 function screenStrats(){
-  const p = filt.phase;
-  const shown = allStratagems().filter(fits);
-  const usable = shown.filter(s => eligible(s).length);
-  // stratagems no unit here can use, and the keyword each one is missing
-  const blocked = shown.filter(s => !eligible(s).length).map(s => {
-    const n = s.needs || {}, lack = (n.all || []).filter(k => !army().units.some(u => hasKw(u, k)));
-    return s.name + (lack.length ? ' (' + lack.join(', ').toUpperCase() + ')' : n.any ? ' (' + n.any.join(' or ').toUpperCase() + ')' : '');
-  });
-  const order = list => p === 'all' ? list : list.map((s, i) => [s, i]).sort((x, y) => phaseOrder(x[0], x[0].when) - phaseOrder(y[0], y[0].when) || x[1] - y[1]).map(x => x[0]);
-  const expand = usable.length ? '<button class="textbtn" data-expand>' + (usable.every(s => openStrats.has(s.id)) ? 'Collapse all' : 'Expand all') + '</button>' : '';
-  let h = '';
-  for(const [name, list] of detachments().map(d => [d.name, usable.filter(s => s.src === d.name)]).concat([['Core stratagems', usable.filter(s => s.src === 'Core')]])){
+  const shown = allStratagems();
+  const first = x => { const ph = phasesOf(x); return ph.length === PHASES.length ? 99 : PHASES.findIndex(([k]) => k === ph[0]); };
+  // the ones a unit here can use first, in phase order; then the ones none can (greyed, they say what they need)
+  const order = list => list.map((s, i) => [s, i]).sort((x, y) => (eligible(x[0]).length ? 0 : 1) - (eligible(y[0]).length ? 0 : 1) || first(x[0]) - first(y[0]) || x[1] - y[1]).map(x => x[0]);
+  const expand = shown.length ? '<button class="textbtn" data-expand>' + (shown.every(s => openStrats.has(s.id)) ? 'Collapse all' : 'Expand all') + '</button>' : '';
+  let h = expand ? '<div class="tools">' + expand + '</div>' : '';
+  for(const [name, list] of detachments().map(d => [d.name, shown.filter(s => s.src === d.name)]).concat([['Core stratagems', shown.filter(s => s.src === 'Core')]])){
     if(list.length) h += '<div class="sec-h"><h2>' + esc(name) + '</h2><span class="c">' + list.length + '</span></div><div class="list">' + order(list).map(stratItem).join('') + '</div>';
   }
-  if(!usable.length) h += '<div class="empty">No stratagems for this phase and turn.</div>';
-  let also = '', tgt = '';
-  if(p !== 'all'){
-    const rem = faction().armyRules.flatMap(r => (r.remind || []).filter(fits).map(x => '<div class="rem"><span class="link" role="button" tabindex="0" data-rule="' + esc(r.name) + '">' + esc(r.name) + '</span> ' + esc(x.text) + '</div>'));
-    const anyPh = a => phasesOf(a).length === PHASES.length ? 1 : 0;   // "any phase" abilities after the ones for this phase
-    const abil = phaseItems().filter(fits).map((a, i) => [a, i]).sort((x, y) => anyPh(x[0]) - anyPh(y[0]) || timing(x[0].text) - timing(y[0].text) || x[1] - y[1]).map(x => x[0]);
-    if(rem.length || abil.length) also = '<div class="sec-h"><h2>' + 'This phase' + '</h2>' + (abil.length ? '<span class="c">' + abil.length + (abil.length === 1 ? ' ability' : ' abilities') + '</span>' : '') + '</div>' + rem.join('') +
-      (abil.length ? '<div class="list">' + abil.map(a => xp(a.name, a.sub, a.tag ? '<span class="tg m">' + esc(a.tag) + '</span>' : '',
-        (a.note ? '<p class="note it">' + esc(a.note) + '</p>' : '') + rt(a.text) + (a.table ? ttable(a.table) : '') + usedBy('Units', a.units), false)).join('') + '</div>' : '');
-    // when the opponent shoots or fights, the questions are "what's your save, can I see it"
-    if((p === 'shooting' || p === 'fight') && filt.turn !== 'your') tgt = '<div class="sec-h"><h2>When targeted</h2></div>' + defenceList();
-  }
-  // what your units do this phase first, then the stratagems
-  h = also ? also + (expand ? '<div class="sec-h"><h2>Stratagems</h2>' + expand + '</div>' : '') + h + tgt : (expand ? '<div class="tools">' + expand + '</div>' : '') + h + also + tgt;
+  if(!shown.length) h += '<div class="empty">No stratagems.</div>';
   const notes = [];
   const gaps = detachments().filter(d => (d.missing || []).includes('stratagems')).map(d => d.name);
   if(gaps.length) notes.unshift(gaps.join(' and ') + ' stratagems aren’t in the app yet: they need the Wahapedia page.');
   const none = detachments().filter(d => !(d.stratagems || []).length && !(d.missing || []).includes('stratagems')).map(d => d.name);
   if(none.length) notes.unshift(none.join(' and ') + (none.length > 1 ? ' have' : ' has') + ' no stratagems (a rule and enhancements only).');
-  if(blocked.length) notes.push('Not shown, no unit here can use ' + (blocked.length === 1 ? 'it' : 'them') + ': ' + blocked.join(', ') + '.');
   notes.push('Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.');
-  return h + nextPhase() + notes.map(n => '<p class="note">' + esc(n) + '</p>').join('');
+  return h + notes.map(n => '<p class="note">' + esc(n) + '</p>').join('');
 }
 
 /* ---------- screen: bases & proxies ----------
@@ -1568,25 +1500,50 @@ function quickRef(){
     '<p class="qh">Save roll (05.03, 05.04)</p>' + tr([['Unmodified 1', 'damage'], ['≥ InSv', 'saved (AP does not apply)'], ['≥ Sv after AP', 'saved'], ['Otherwise', 'the model loses D wounds']]) +
     '<p class="note">Allocation order (05.03): a non-CHARACTER group containing a model that has lost one or more wounds must be first; no CHARACTER group can be earlier than a non-CHARACTER group; CHARACTER groups containing a model that has lost one or more wounds must be earlier than CHARACTER groups containing no wounded models.</p>', false);
 }
+/* ---------- screen: rules ----------
+   The rules of this list, laid out like a datasheet: a heading per section, a chip per
+   detachment, one row per rule (its timing on the right, its text one tap away). The core
+   rules the army uses are folded at the bottom, for reference. */
+function ruleRow(name, tags, right, body, cls){
+  return '<details class="ab' + (cls ? ' ' + cls : '') + '"><summary><span class="an"><b>' + esc(name) + '</b>' + (tags || '') + '</span>' +
+    (right ? '<span class="aw">' + esc(right) + '</span>' : '') + chev + '</summary><div class="body">' + body + '</div></details>';
+}
 function screenRules(){
-  const f = faction(), a = army();
-  const taken = new Map(a.units.filter(u => u.enhancement).map(u => [u.enhancement, u]));
-  let h = '<div class="list">' + quickRef() + '</div><div class="sec-h"><h2>Army rules</h2></div><div class="list">' +
-    f.armyRules.map((r, i) => xp(r.name, r.ph ? whenTag(r) : '', r.tag ? '<span class="tg m">' + esc(r.tag) + '</span>' : '', (r.note ? '<p class="note it">' + esc(r.note) + '</p>' : '') + rt(r.text) + (r.table ? ttable(r.table) : '') +
-      ((r.missing || []).length ? '<p class="note">Not in the app yet: the ' + esc(r.missing.join(' and ')) + ' (they need that Wahapedia page).</p>' : ''), false)).join('') + '</div>';
-  for(const d of detachments()){
+  const f = faction(), a = army(), dets = detachments();
+  // enhancements in this list, and upgrades (the bodyguard has those)
+  const taken = new Map();
+  const nm = u => (u.short || u.name) + twinLabel(u);
+  for(const u of a.units){ if(u.enhancement) taken.set(u.enhancement, { u, on:nm(u) }); if(u.upgrade) taken.set(u.upgrade, { u, on:u.leads || nm(u) }); }
+  const note = r => r.note ? '<p class="note it">' + esc(r.note) + '</p>' : '';
+  const anc = id => '<div class="anc" id="sec-' + id + '"></div>';
+  const jumps = [['rl-army', 'Army rules']].concat(dets.map(d => ['rl-' + d.id, d.name]), [['rl-core', 'Core rules']]);
+  let h = '<div class="rules"><div class="ds-meta"><span>' + esc(f.name + ' · ' + a.disposition) + '</span></div>' +
+    '<div class="jumps">' + jumps.map(([id, l]) => '<button data-jump="' + esc(id) + '">' + esc(l) + '</button>').join('') + '</div>';
+  // army rules
+  h += anc('rl-army') + '<div class="dsec"><div class="lbl">Army rules</div><div class="abl">' + f.armyRules.map(r => {
+    const once = r.tag && /^(once|twice) per /i.test(r.tag) ? r.tag : '';
+    return ruleRow(r.name, (once ? '<span class="tg once">' + esc(once) + '</span>' : r.tag ? '<span class="tg m">' + esc(r.tag) + '</span>' : ''), r.ph ? shortWhen(r) : '',
+      note(r) + rt(r.text) + (r.table ? ttable(r.table) : '') + ((r.missing || []).length ? '<p class="note">Not in the app yet: the ' + esc(r.missing.join(' and ')) + ' (they need that Wahapedia page).</p>' : ''));
+  }).join('') + '</div></div>';
+  // detachments: the rule, the enhancements this list takes, the others, its stratagems
+  h += '<div class="dsec"><div class="lbl">Detachments</div>';
+  for(const d of dets){
     const mine = d.enhancements.filter(e => taken.has(e.name)), other = d.enhancements.filter(e => !taken.has(e.name));
     const gap = (d.missing || []).includes('enhancements') ? '<p class="note">The other ' + esc(d.name) + ' enhancements aren’t in the app yet: they need the Wahapedia page.</p>' : '';
-    h += '<div class="sec-h"><h2>' + esc(d.name) + '</h2></div><div class="list">' +
-      (d.rule ? xp(d.rule.name, 'Detachment rule', '', (d.rule.note ? '<p class="note it">' + esc(d.rule.note) + '</p>' : '') + rt(d.rule.text) + (d.rule.table ? ttable(d.rule.table) : '') + usedBy('Applies to', a.units.filter(u => matches(d.rule.needs, u))), false) : '') +
-      mine.map(e => xp(e.name, 'Enhancement' + (e.pts ? ' · ' + e.pts + ' pts' : ''), '', rt(e.text) + usedBy('On', [taken.get(e.name)]), false)).join('') +
-      (other.length ? xp('Other enhancements', other.length + ' not in this list', '',
-        other.map(e => '<div class="sub"><b class="nm">' + esc(e.name) + '</b>' + (e.pts ? ' <span class="tg m">' + esc(e.pts) + ' pts</span>' : '') + rt(e.text) + '</div>').join(''), false) : '') +
-      '</div>' + gap;
+    const strats = d.stratagems || [];
+    h += anc('rl-' + d.id) + '<div class="who">' + esc(d.name) + '</div><div class="abl">' +
+      (d.rule ? ruleRow(d.rule.name, '<span class="tg m">Detachment rule</span>', d.rule.ph ? shortWhen(d.rule) : '',
+        note(d.rule) + rt(d.rule.text) + (d.rule.table ? ttable(d.rule.table) : '') + usedBy('Applies to', a.units.filter(u => matches(d.rule.needs, u)))) : '') +
+      mine.map(e => { const t = taken.get(e.name); return ruleRow(e.name, '<span class="tg">' + (e.upgrade ? 'Upgrade' : 'Enhancement') + '</span>', 'on ' + t.on,
+        (e.pts ? '<p class="abt">' + esc(e.pts) + ' pts</p>' : '') + rt(e.text) + usedBy('On', [t.u])); }).join('') +
+      (other.length ? ruleRow('Other enhancements', '<span class="tg m">' + other.length + ' not in this list</span>', '',
+        other.map(e => '<div class="sub"><b class="nm">' + esc(e.name) + '</b>' + (e.pts ? ' <span class="tg m">' + esc(e.pts) + ' pts</span>' : '') + rt(e.text) + '</div>').join(''), 'oth') : '') +
+      '</div>' + (strats.length ? '<p class="dline rs"><span class="il">Stratagems</span>' + strats.map(st => linkTo('strat', st.id, st.name) + (eligible(st).length ? '' : ' <span class="from">(no unit in this list)</span>')).join(', ') + '</p>' : '') + gap;
   }
-  // the core rules and weapon keywords this army actually uses, each listed once
+  h += '</div>';
+  // the core rules and weapon keywords this army uses, each listed once (folded: players know them)
   const used = new Map();
-  const note = (label, kind) => {
+  const add = (label, kind) => {
     const r = ruleFor(label);
     if(!r || r.src !== 'Core rule') return;
     const e = used.get(r.key) || { r, kind, labels:new Set() };
@@ -1595,15 +1552,18 @@ function screenRules(){
     used.set(r.key, e);
   };
   for(const u of a.units){
-    for(const r of unitRules(u)) note(r, 'ability');
-    for(const w of [...(u.ranged || []), ...(u.melee || [])]){ for(const k of w.kw) note(k, 'weapon'); if(w.hunter) note('Hunter', 'weapon'); }
-    for(const ab of u.abilities) for(const key of Object.keys(D.rules)) if(!CONCEPT.has(key) && mentions(ab.text, key)) note(key, 'ability');
+    for(const r of unitRules(u)) add(r, 'ability');
+    for(const w of [...(u.ranged || []), ...(u.melee || [])]){ for(const k of w.kw) add(k, 'weapon'); if(w.hunter) add('Hunter', 'weapon'); }
+    for(const ab of u.abilities) for(const key of Object.keys(D.rules)) if(!CONCEPT.has(key) && mentions(ab.text, key)) add(key, 'ability');
   }
-  const gloss = kind => [...used.values()].filter(e => e.kind === kind).sort((x, y) => x.r.key.localeCompare(y.r.key))
-    .map(e => xp(e.r.key, e.labels.size ? [...e.labels].sort().join(', ') : '', '', rt(e.r.text) + usedBy('In this army', ruleUsers(e.r.key)), false)).join('');
-  h += '<div class="sec-h"><h2>Unit rules</h2></div><div class="list">' + gloss('ability') + '</div>';
-  h += '<div class="sec-h"><h2>Weapon keywords</h2></div><div class="list">' + gloss('weapon') + '</div>';
-  return h + '<p class="note">Force disposition: ' + esc(a.disposition) + '.</p>';
+  const gloss = kind => [...used.values()].filter(e => e.kind === kind).sort((x, y) => x.r.key.localeCompare(y.r.key));
+  const glossRows = list => list.map(e => xp(e.r.key, e.kind === 'ability' ? unitNames(ruleUsers(e.r.key)) : (e.labels.size ? [...e.labels].sort().join(', ') : ''), '', rt(e.r.text) + usedBy('In this army', ruleUsers(e.r.key)), false)).join('');
+  const ur = gloss('ability'), wk = gloss('weapon');
+  h += anc('rl-core') + '<div class="dsec"><div class="lbl">Core rules</div><div class="abl">' +
+    quickRef() +
+    (ur.length ? ruleRow('Unit rules', '<span class="tg m">' + ur.length + '</span>', '', '<div class="list">' + glossRows(ur) + '</div>') : '') +
+    (wk.length ? ruleRow('Weapon keywords', '<span class="tg m">' + wk.length + '</span>', '', '<div class="list">' + glossRows(wk) + '</div>') : '') + '</div></div>';
+  return h + '</div>';
 }
 
 /* ---------- render ---------- */
@@ -1615,7 +1575,7 @@ function render(){
   else if(s === 'army') v.innerHTML = screenArmy();
   else if(s === 'units'){ v.innerHTML = screenUnits(); sub = unitsSubbar(); }
   else if(s === 'unit') v.innerHTML = screenUnit() + (unitById(cur.unit) ? unitFlip(unitById(cur.unit)) : '');
-  else if(s === 'strats'){ v.innerHTML = screenStrats(); sub = stratFilters(); }
+  else if(s === 'strats') v.innerHTML = screenStrats();
   else if(s === 'ranged' || s === 'melee'){ v.innerHTML = screenWeapons(s); sub = '<div class="wt ' + s + '">' + colHeader(s) + '</div>'; }
   else if(s === 'abilities') v.innerHTML = screenAbilities();
   else if(s === 'rules') v.innerHTML = screenRules();
@@ -1780,10 +1740,8 @@ document.addEventListener('click', e => {
   if(ds.ability){ showAbility(ds.ability); return; }
   if(ds.enh){ showEnhancement(ds.enh); return; }
   if(ds.kw){ showKeywords(ds.kw); return; }
-  if(ds.phase){ filt.phase = ds.phase; saveSession(); render(); scrollTo(0, 0); return; }
-  if(ds.next){ const [p, t] = ds.next.split('|'); filt.phase = p; filt.turn = t; saveSession(); render(); scrollTo(0, 0); return; }
-  if(ds.turn){ filt.turn = ds.turn; saveSession(); render(); scrollTo(0, 0); return; }
   if(ds.more){ moreShown.add(ds.more); renderFinder(); return; }
+  if(ds.jump){ jumpTo(ds.jump); return; }
   if(el.hasAttribute('data-sback') && sheetStack.length){ const [l, t, h] = sheetStack.pop(); openSheet(l, t, h, true); return; }
   if(el.hasAttribute('data-verified')){ showVerified(); return; }
   if(ds.tab){
@@ -1896,7 +1854,7 @@ try { history.scrollRestoration = 'manual'; } catch(e){}
 // keep the current history entry if it is a screen (a reload), otherwise rebuild the last screen's chain
 function start(snap){
   const st = history.state;
-  if(snap && snap.filt){ Object.assign(filt, snap.filt); (snap.open || []).forEach(id => openStrats.add(id)); Object.assign(query, snap.query); }
+  if(snap && snap.open){ snap.open.forEach(id => openStrats.add(id)); Object.assign(query, snap.query || {}); }
   if(st && valid(st)){   // a reload: this entry is the screen (with a popup open, the screen under it)
     cur = plain(st);
     if(st.sheet){ try { history.replaceState(plain(cur), ''); } catch(e){} }
@@ -1908,6 +1866,6 @@ function start(snap){
   keepAwake();
 }
 const hot = window.claude && window.claude.hot;
-if(hot && hot.snapshot){ try { hot.snapshot(() => ({ cur:plain(cur), y:scrollY, filt, open:[...openStrats], query })); } catch(e){} }
+if(hot && hot.snapshot){ try { hot.snapshot(() => ({ cur:plain(cur), y:scrollY, open:[...openStrats], query })); } catch(e){} }
 if(hot && hot.ready) hot.ready(start); else start(hot && hot.data ? hot.data : null);
 </script>
