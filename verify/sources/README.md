@@ -18,3 +18,15 @@ Text made with `pdftotext -layout <pdf> <txt>` (poppler).
 - BSData wh40k-11e at a pinned commit (the data New Recruit is built from)
 - Games Workshop's official PDFs: Core Rules, Universal Rules Updates, Faction Packs
 - Wahapedia faction pages (their sha256 is recorded; a change means a rules update to review)
+
+## The weekly check: verify/currency.js
+Are these still the newest sources? It compares today's with what the last verification used and
+writes verify/out/currency.md. A scheduled session runs it every week and reports what changed for
+these armies; it never changes the app.
+- gw-downloads.json: GW's Warhammer 40,000 downloads list (English) at the last verification
+- waha-baseline/: the text of the Wahapedia faction and core rules pages at the last verification
+  (made by waha-extract.py), so new errata and FAQ boxes show as a diff
+- BSData: the commit pinned in fetch.sh
+
+After the app is updated to new sources and `node verify/run.js` passes, `node verify/currency.js
+--accept` makes today's sources the baseline.

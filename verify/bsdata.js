@@ -24,7 +24,7 @@
    Intentional differences live only in verify/deviations-bsdata.json.
 
    Usage: node verify/bsdata.js [--extract] [--write-extract] [--explain <unitId>]
-                                [--bsdata <dir>] [--data <data.js>]
+                                [--bsdata <dir>] [--data <data.js>] [--out <file>]
      default     the BSData clone in verify/.cache/bsdata (verify/fetch.sh); without it,
                  the pinned extract verify/sources/bsdata-extract.json
      --extract   always use the pinned extract (offline)
@@ -46,7 +46,7 @@ const P = {
   extract: path.join(HERE, 'sources', 'bsdata-extract.json'),
   map: path.join(HERE, 'map-bsdata.json'),
   dev: path.join(HERE, 'deviations-bsdata.json'),
-  out: path.join(HERE, 'out', 'bsdata.json'),
+  out: path.resolve(opt('--out', path.join(HERE, 'out', 'bsdata.json'))),
   fetch: path.join(HERE, 'fetch.sh'),
 };
 const PTS = '51b2-306e-1021-d207';             // BSData cost type "pts"

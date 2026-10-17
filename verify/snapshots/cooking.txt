@@ -480,7 +480,8 @@ GutrippaPICK ONE BY TARGET
 6
 2+
 12
--3
+-2
+(+1)
 D6+1
 LETHAL HITS
 ➤StandardANY TARGET
@@ -497,7 +498,7 @@ Big Chompa’s Jaws
 -2
 4
 ANTI-MONSTER/VEHICLE 3+, EXTRA ATTACKS
-vs MONSTER/VEHICLE: re-roll wound rolls (Da Bigger Dey Iz…) · +1 AP (already in the highlighted Hunter rows; add it to the other weapons yourself) (Da Hunt is On)
+vs MONSTER/VEHICLE: re-roll wound rolls (Da Bigger Dey Iz…) · +1 AP (the (+1) on the Hunter rows; add it to the other weapons too) (Da Hunt is On)
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
 Nazdreg
 + Meganobz
@@ -545,7 +546,8 @@ BeastchoppaPICK ONE BY TARGET
 6
 2+
 12
--3
+-2
+(+1)
 D6+1
 ➤StandardANY TARGET
 6
@@ -561,7 +563,7 @@ Squigosaur’s jaws
 -2
 4
 ANTI-MONSTER/VEHICLE 3+, EXTRA ATTACKS
-vs MONSTER/VEHICLE: +1 AP (already in the highlighted Hunter rows; add it to the other weapons yourself) (Da Hunt is On)
+vs MONSTER/VEHICLE: +1 AP (the (+1) on the Hunter rows; add it to the other weapons too) (Da Hunt is On)
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
 Beastboss on Squigosaur
 Da Gobshot Thunderbuss
@@ -573,7 +575,8 @@ BeastchoppaPICK ONE BY TARGET
 6
 2+
 12
--3
+-2
+(+1)
 D6
 ➤StandardANY TARGET
 6
@@ -589,7 +592,7 @@ Squigosaur’s jaws
 -2
 3
 ANTI-MONSTER/VEHICLE 3+, EXTRA ATTACKS
-vs MONSTER/VEHICLE: +1 AP (already in the highlighted Hunter rows; add it to the other weapons yourself) (Da Hunt is On)
+vs MONSTER/VEHICLE: +1 AP (the (+1) on the Hunter rows; add it to the other weapons too) (Da Hunt is On)
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
 Big Mek Dakkarig
 Cybork Boosta
@@ -3921,7 +3924,7 @@ INV
 4+
 WHEN TARGETEDFeel No Pain 5+ · Destroyed in the Fight phase before fighting: on a 2+ it stays until it has fought or the phase ends
 ALL ATTACKS
-vs MONSTER/VEHICLE: +1 AP (already in the highlighted Hunter rows; add it to the other weapons yourself) (Da Hunt is On) · MELEEre-roll wound rolls (Da Bigger Dey Iz…)
+vs MONSTER/VEHICLE: +1 AP (the (+1) on the Hunter rows; add it to the other weapons too) (Da Hunt is On) · MELEEre-roll wound rolls (Da Bigger Dey Iz…)
 RANGED
 RNG
 A
@@ -3951,7 +3954,8 @@ GutrippaPICK ONE BY TARGET
 6
 2+
 12
--3
+-2
+(+1)
 D6+1
 LETHAL HITS
 ➤StandardANY TARGET
@@ -4186,7 +4190,7 @@ Melee D already includes +1 from Brutal But Kunnin’.
 
 WHEN TARGETEDFeel No Pain 5+ · WARBOSS destroyed before its unit has fought this phase: on a 3+ (+1 riled up) it stays until the unit has fought or the phase ends
 ALL ATTACKS
-vs MONSTER/VEHICLE: +1 AP (already in the highlighted Hunter rows; add it to the other weapons yourself) (Da Hunt is On)
+vs MONSTER/VEHICLE: +1 AP (the (+1) on the Hunter rows; add it to the other weapons too) (Da Hunt is On)
 RANGED
 RNG
 A
@@ -4216,7 +4220,8 @@ BeastchoppaPICK ONE BY TARGET
 6
 2+
 12
--3
+-2
+(+1)
 D6+1
 ➤StandardANY TARGET
 6
@@ -4288,7 +4293,7 @@ INV
 5+
 WHEN TARGETEDFeel No Pain 5+ · WARBOSS destroyed before its unit has fought this phase: on a 3+ (+1 riled up) it stays until the unit has fought or the phase ends
 ALL ATTACKS
-vs MONSTER/VEHICLE: +1 AP (already in the highlighted Hunter rows; add it to the other weapons yourself) (Da Hunt is On)
+vs MONSTER/VEHICLE: +1 AP (the (+1) on the Hunter rows; add it to the other weapons too) (Da Hunt is On)
 RANGED
 RNG
 A
@@ -4329,7 +4334,8 @@ BeastchoppaPICK ONE BY TARGET
 6
 2+
 12
--3
+-2
+(+1)
 D6
 ➤StandardANY TARGET
 6

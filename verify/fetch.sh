@@ -4,7 +4,7 @@
 set -e
 cd "$(dirname "$0")"; mkdir -p .cache/gw .cache/waha
 # BSData: the data New Recruit is built from, pinned
-BSDATA_COMMIT=9b8207c
+BSDATA_COMMIT=173d0ef
 [ -d .cache/bsdata ] || git clone -q https://github.com/BSData/wh40k-11e .cache/bsdata
 git -C .cache/bsdata checkout -q $BSDATA_COMMIT
 # Games Workshop's official documents

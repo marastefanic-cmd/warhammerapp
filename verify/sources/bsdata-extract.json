@@ -1,7 +1,7 @@
 {
  "about": "BSData wh40k-11e, only the entries verify/bsdata.js reads for the five armies in data.js. Regenerate: node verify/bsdata.js --write-extract",
  "repo": "https://github.com/BSData/wh40k-11e",
- "commit": "9b8207cee88888c25b8ec4fa4ec675b5177ebfd5",
+ "commit": "173d0ef81a8eb7e857c8a035ba8624739c28666f",
  "files": {
   "Orks.json": {
    "kind": "catalogue",
@@ -62254,7 +62254,7 @@
      "name": "Army Roster",
      "id": "bb9d-299a-ed60-2d8a",
      "hidden": false,
-     "readme": "#Adeptus Custodes will not be updated with the points from MFM v1.6 until at least 17th October when their Codex is released.\n\n#PLEASE NOTE: Space Marine Legends may have some errors, we are aware and still working on them. We wanted to get the main data out first. Also the Deathwatch Support detachment is not ready yet. It requires quite a bit of reworking. \n\nPlease report any issues with the data via the Report Issue functionality found either at the top right of the app (on web) or in the Roster menu (on mobile), ensuring you select the correct option based on the problem you are experiencing.\n\nIssues with Yellowscribe/TTS should first be reported as New Recruit issues, not data issues.\n\n**PLEASE DO NOT REPORT ISSUES ON DISCORD!**\n",
+     "readme": "#PLEASE NOTE: Space Marine Legends may have some errors, we are aware and still working on them. We wanted to get the main data out first. Also the Deathwatch Support detachment is not ready yet. It requires quite a bit of reworking. \n\nPlease report any issues with the data via the Report Issue functionality found either at the top right of the app (on web) or in the Roster menu (on mobile), ensuring you select the correct option based on the problem you are experiencing.\n\nIssues with Yellowscribe/TTS should first be reported as New Recruit issues, not data issues.\n\n**PLEASE DO NOT REPORT ISSUES ON DISCORD!**\n",
      "categoryLinks": [
       {
        "name": "Configuration",

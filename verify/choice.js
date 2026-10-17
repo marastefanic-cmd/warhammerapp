@@ -12,7 +12,7 @@ const { ROOT, loadData, readJSON, writeJSON } = require('./lib');
 const D = loadData();
 const extract = fs.readFileSync(path.join(ROOT, 'verify/sources/bsdata-extract.json'), 'utf8');
 const bsNames = new Set([...extract.matchAll(/"name":\s*"([^"]+)"/g)].map(m => m[1]));
-const dsDir = path.join(ROOT, 'verify/.cache/waha/ds');
+const dsDir = path.join(process.env.VERIFY_CACHE ? path.resolve(process.env.VERIFY_CACHE) : path.join(ROOT, 'verify/.cache'), 'waha/ds');   // verify/currency.js: the newest pages
 const rows = [];   // [text, pointy]
 if(fs.existsSync(dsDir)) for(const f of fs.readdirSync(dsDir).filter(f => f.endsWith('.html'))){
   const s = fs.readFileSync(path.join(dsDir, f), 'utf8');
@@ -42,7 +42,7 @@ for(const a of D.armies) for(const u of a.units) for(const kind of ['ranged', 'm
   if(problem){ if(dev >= 0) used.add(dev); else failures.push({ check:'weapon-choice', where, detail:problem }); }
 }
 deviations.forEach((d, i) => { if(!used.has(i)) failures.push({ check:'stale-deviation', where:d.unit + ' · ' + d.group, detail:'no longer needed' }); });
-writeJSON(path.join(ROOT, 'verify/out/choice.json'), { checked, wahapediaPages:fs.existsSync(dsDir) ? fs.readdirSync(dsDir).length : 0, failures });
+writeJSON(process.env.VERIFY_OUT ? path.resolve(process.env.VERIFY_OUT, 'choice.json') : path.join(ROOT, 'verify/out/choice.json'), { checked, wahapediaPages:fs.existsSync(dsDir) ? fs.readdirSync(dsDir).length : 0, failures });
 console.log('choice: ' + checked + ' weapons with several profiles checked against BSData and Wahapedia, ' + failures.length + ' failures');
 failures.forEach(f => console.log('  ' + f.check + ' · ' + f.where + ' · ' + f.detail));
 process.exit(failures.length ? 1 : 0);

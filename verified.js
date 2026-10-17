@@ -1,9 +1,9 @@
 // written by verify/run.js: the last verification of this app.html + data.js
 window.WH_VERIFIED = {
  "ok": true,
- "build": "c5e6db6f2c",
+ "build": "377683ea48",
  "data": "2026-10-16.15",
- "date": "16 Oct 2026",
+ "date": "17 Oct 2026",
  "checks": [
   {
    "label": "Your New Recruit lists:",
@@ -37,7 +37,7 @@ window.WH_VERIFIED = {
   },
   {
    "label": "BSData:",
-   "detail": "wh40k-11e, commit 9b8207c."
+   "detail": "wh40k-11e, commit 173d0ef."
   },
   {
    "label": "Games Workshop:",

@@ -16,6 +16,7 @@
 //   table       the same for the Table layout, at 390 and 320; it may show no app text the Classic run lacks
 //   snapshots   the text of every screen equals the accepted snapshot (verify/snapshots/)
 //   helpers     verify/helpers.js: every judgement the app adds is signed off (verify/approvals.json)
+// Not part of the gate: verify/currency.js, the weekly check that the sources are still the newest.
 const { spawnSync } = require('child_process');
 const fs = require('fs'), path = require('path');
 const { ROOT, sha, writeJSON } = require('./lib');
@@ -86,7 +87,7 @@ function writeVerified(ok){
   const gw = fs.existsSync(path.join(ROOT, 'verify/.cache/gw')) ? fs.readdirSync(path.join(ROOT, 'verify/.cache/gw')).filter(f => f.endsWith('.pdf')).map(f => f.replace(/^eng_(\d\d-\d\d_)?|-[a-z0-9]{10}-[a-z0-9]{10}\.pdf$/g, '').replace(/_/g, ' ')) : [];
   const sources = [
     { label:'New Recruit:', detail:D.armies.map(a => (nr[a.id] || a.name)).join(', ') + ' (your PDFs).' },
-    { label:'BSData:', detail:'wh40k-11e, commit 9b8207c.' },
+    { label:'BSData:', detail:'wh40k-11e, commit ' + (fs.readFileSync(path.join(ROOT, 'verify/fetch.sh'), 'utf8').match(/BSDATA_COMMIT=([0-9a-f]+)/) || [, '?'])[1] + '.' },
     { label:'Games Workshop:', detail:gw.join('; ') + '.' },
     { label:'Wahapedia:', detail:'faction pages for Orks (no GW Faction Pack yet) and the errata and FAQs it lists.' }
   ];

@@ -41,7 +41,7 @@ const OUT = path.resolve(arg('--out', path.join(VERIFY, 'out', 'texts.json')));
 const DEVS = path.resolve(arg('--deviations', path.join(VERIFY, 'deviations-texts.json')));
 const PROV = path.resolve(arg('--provenance', path.join(VERIFY, 'provenance.json')));
 const QUIET = process.argv.includes('--quiet');
-const CACHE = path.join(VERIFY, '.cache');
+const CACHE = process.env.VERIFY_CACHE ? path.resolve(process.env.VERIFY_CACHE) : path.join(VERIFY, '.cache');   // verify/currency.js points it at the newest sources
 
 /* ------------------------------------------------------------------ normalisation */
 // One function for app text and source text:

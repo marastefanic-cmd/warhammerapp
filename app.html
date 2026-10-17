@@ -259,6 +259,7 @@ summary::-webkit-details-marker{display:none}
 .kwl [data-rule]{color:var(--fg2); white-space:nowrap; padding:1px 0 13px; text-decoration:underline dotted; text-decoration-color:var(--accent); text-underline-offset:2px}
 .kwl [data-rule]:active{color:var(--accent)}
 .wr i.hi{font-style:normal; display:inline-block; min-width:26px; padding:1px 4px; border-radius:5px; background:var(--accent); color:var(--accent-ink)}
+.wr i.hb{display:block; font:700 12px/1.1 var(--f-head); font-style:normal; color:var(--accent)}
 .wr i.alt{font-style:normal; color:var(--accent)}
 .varc{padding-top:1px; font-size:12.5px; line-height:1.35; color:var(--muted)}
 .varc b{color:var(--accent); font:700 13.5px var(--f-head)}
@@ -992,7 +993,6 @@ function modFrom(m, u){
   return ab ? link('ability', abilityKey(ab), m.from) : esc(m.from);
 }
 // AP -2 improved by 1 is AP -3
-const bump = (k, v, d) => k === 'AP' ? String(-(Math.abs(parseInt(v, 10) || 0) + d)) : v;
 function weaponBlock(it, keys, mods, u){
   const cell = (v, cls) => '<span>' + (cls ? '<i class="' + cls + '">' + esc(v) + '</i>' : esc(v)) + '</span>';
   const wide = keys[0] === 'none';   // datasheet melee rows: no range column, the name can use it
@@ -1023,7 +1023,7 @@ function weaponBlock(it, keys, mods, u){
       it.profiles.map(p => {
         if(!byTarget) return row(prof(p.name), plainCells(p), true) + kwl(p);
         if(!p.hunter) return row(prof(p.name) + '<span class="tq">any target</span>', plainCells(p), true) + kwl(p);
-        const cells = keys.map(k => { const d = hunterMods.reduce((t, m) => t + (m.hunter[k] || 0), 0); return d ? cell(bump(k, p[k], d), 'hi') : cell(p[k]); });
+        const cells = keys.map(k => { const d = hunterMods.reduce((t, m) => t + (m.hunter[k] || 0), 0); return d ? '<span>' + esc(p[k]) + '<i class="hb">(+' + d + ')</i></span>' : cell(p[k]); });
         return row('<span class="ar">➤</span><span class="link" role="button" tabindex="0" data-rule="Hunter">' + esc(p.name) + '</span><span class="tq">MON/VEH only</span>', cells, true) + kwl(p);
       }).join('');
   }
@@ -1039,7 +1039,7 @@ function modLines(mods, u, hasHunter){
     const when = named ? esc(g.when).replace(esc(named.from), modFrom(named, u)) : esc(g.when);
     return '<div class="mod">' + (g.items.every(m => m.scope === g.items[0].scope) && g.items[0].scope ? '<i class="sc">' + g.items[0].scope + '</i>' : '') +
       '<b>' + when + ':</b> ' + g.items.map(m => (m.scope && !g.items.every(x => x.scope === m.scope) ? '<i class="sc">' + m.scope + '</i>' : '') + (m.who ? esc(m.who) + ' ' : '') + esc(m.note) +
-      (m.hunter && hasHunter ? ' (already in the highlighted Hunter rows; add it to the other weapons yourself)' : '') + (m === named ? '' : ' <span class="from">(' + modFrom(m, u) + ')</span>')).join(' · ') + '</div>';
+      (m.hunter && hasHunter ? ' (the (+' + Object.values(m.hunter)[0] + ') on the Hunter rows; add it to the other weapons too)' : '') + (m === named ? '' : ' <span class="from">(' + modFrom(m, u) + ')</span>')).join(' · ') + '</div>';
   }).join('');
 }
 const RANGED_KEYS = ['range','A','BS','S','AP','D'], MELEE_KEYS = ['A','WS','S','AP','D'];

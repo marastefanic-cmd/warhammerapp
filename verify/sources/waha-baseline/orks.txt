@@ -1,0 +1,650 @@
+
+
+######## Army Rules
+Waaagh!
+Friendly **ORKS** units with this ability can:
+- Re-roll advance rolls**.**
+- Become **riled up**, as stated in other rules.
+While a unit is **riled up**:
+- That unit has 5+ InSv.
+- That unit’s ranged attacks have **[ASSAULT]**.
+- When that unit is selected to make an advance move, that **advance move** does not prevent that unit from being eligible to declare a charge.
+**War Cry (Once per battle, per army):** At the start of the Command phase, you can use this ability. If you do, friendly **ORKS** units with the **Waaagh!** ability are **riled up** until the end of the next turn.
+Da Boss
+At the start of the battle round, if a model with this ability is your **WARLORD**, gain 1CP.
+Unstable Energies
+**ORKS PSYKER** units with this ability have a **psyker level** of 1 or higher, specified in that unit’s abilities. Each **psychic ability** has a **psychic level** of 1 or higher, specified in that ability’s name.
+In a battle round, a friendly **ORKS PSYKER** unit can use a number of psychic abilities whose total **psychic level** does not exceed that **PSYKER** unit’s **psyker level**.
+**Example:** In a battle round, a **psyker level 3 PSYKER** unit could use three **psychic level 1**abilities, or one **psychic level 1** ability and one **psychic level 2** ability, or one **psychic level 3** ability.
+Special Move Types
+The following are special **move types** that certain or all of your units are eligible to make.
+PULSE JET MOVE
+**MAXIMUM DISTANCE:** Pulse roll + 18"
+**ELIGIBLE IF:** As stated in the rule allowing this move type.
+**EFFECT:** Your unit moves as described in Moving (Core Rules, 03).
+**BEFORE MOVING:**
+- Make a **pulse roll** by rolling one D6.
+**WHILE MOVING:**
+- Ignore all vertical distance for the purposes of how far your unit has moved.
+- Your unit can move through all types of model.
+- Your unit can move horizontally and vertically through all categories of terrain feature.
+**AFTER MOVING:**
+- Your unit must be unengaged.
+- Until the end of the turn, your unit is not eligible to declare a charge or start an action.
+- Until the start of your next turn, attacks that target your unit have -1 to hit rolls.
+ASSAULT DISEMBARK MOVE18.06
+**SET-UP DISTANCE:** 3"
+**ELIGIBLE IF:**
+- Embarked within a **TRANSPORT** on the battlefield
+- Did not embark within that **TRANSPORT** this phase
+- That **TRANSPORT** has not made an **advance**/**fall-back move** this phase
+**EFFECT:** Set up as described in Set Up (03.02).
+**WHILE MOVING:** Set up each model wholly within the **set-up distance** of that **TRANSPORT**.
+
+
+######## War Horde 3DP
+
+Detachment Rules
+Get Stuck In
+Friendly **ORKS** units’ melee attacks have **[Sustained Hits 1]**.
+Enhancements
+- Headwoppa's Killchoppa 15 pts
+**ORKS** model only. If this unit made a **charge move** this turn, this model’s melee attacks have +1 AP.
+- Da Boss is Watchin' 25 pts
+**ORKS** model only. (Once per battle, per army) In your Movement phase, you can use this ability. If you do, this unit is **riled up** until the start of your next turn.
+- Kunnin' But Brutal 20 pts
+**ORKS** model only. When this unit is selected to make a **fall-back move**, that fall-back move does not prevent this unit from being **eligible to shoot**/**declare a charge**.
+- Follow Me Ladz 20 pts
+**ORKS** model only. This unit has +2" **M**.
+Stratagems
+BREAKIN' HEADS
+1CP
+War Horde Stratagem
+**WHEN:** Any phase, when a friendly **attached ORKS INFANTRY** unit becomes **battle-shocked**.
+**TARGET:** That **ORKS INFANTRY** unit. You can target that unit with this **stratagem** even though it is **battle-shocked**.
+**EFFECT:** Roll one D3:
+- Your unit suffers a number of **mortal wounds** equal to the result.
+- Your unit is no longer **battle-shocked**.
+HIT 'EM HARDER
+1CP
+War Horde Stratagem
+**WHEN:** Fight phase, when a friendly **ORKS** unit is **selected to fight**.
+**TARGET:** That **ORKS** unit.
+**EFFECT:** Your unit’s melee attacks have **[Lethal Hits]**.
+ORKS IS NEVER BEATEN
+1CP
+War Horde Stratagem
+**WHEN:** Fight phase, when an enemy unit targets a friendly **ORKS** unit (excluding **TITANIC** units).
+**TARGET:** That **ORKS** unit.
+**EFFECT:** When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +1 to that roll if your unit is **riled up**:
+- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.
+MOW 'EM DOWN
+1CP
+War Horde Stratagem
+**WHEN:** Fight phase, when a friendly **ORKS VEHICLE** unit (excluding **WALKER** units) that made a **charge move** this turn is **selected to fight**.
+**TARGET:** That **ORKS VEHICLE** unit.
+**EFFECT:** Your unit’s melee attacks have:
+- **[Cleave 1]**.
+- Or: If that attack already has **[CLEAVE]**, +1 to the value of that **[CLEAVE]** (e.g. **[CLEAVE 1]** becomes **[CLEAVE 2]**).
+FUNGUS-FUEL INJECTION
+1CP
+War Horde Stratagem
+**WHEN:** Your Movement phase, when a friendly **ORKS MOUNTED**/**VEHICLE** unit is **selected to move**.
+**TARGET:** That **ORKS MOUNTED**/**VEHICLE** unit.
+**EFFECT:** Your unit has +2" **M**.
+CLOSE-RANGE DAKKA
+1CP
+War Horde Stratagem
+**WHEN:** Your Shooting phase, when a friendly **ORKS** unit is **selected to shoot**.
+**TARGET:** That **ORKS** unit.
+**EFFECT:** Your unit’s ranged attacks have:
+- **[Rapid Fire 1]**.
+- Or: If that attack already has **[RAPID FIRE]**, +1 to the value of that **[RAPID FIRE]** (e.g. **[RAPID FIRE 1]** becomes **[RAPID FIRE 2]**).
+
+
+######## Green Tide 1DP
+
+Detachment Rules
+Mob-handed Brutality
+- Friendly **BOYZ** units’ melee attacks have **[Sustained Hits 1]**.
+- If a friendly **ORKS INFANTRY** unit made a **charge move** this turn, that unit’s melee attacks have **[Lethal Hits: non-Monster/Vehicle]**.
+Enhancements
+- Ferocious Show-off 15 pts
+**ORKS INFANTRY** model only. This model’s melee attacks have:
+- +1 **A**.
+- Or: If this unit has 11+ models, +2 **A**.
+- 'ArdboyzUPGRADE 25 pts
+**BOYZ** unit only. This unit has 4+ **Sv**.
+Stratagems
+UNBRIDLED CARNAGE
+1CP
+Green Tide Stratagem
+**WHEN:** Fight phase, when a friendly **BOYZ** unit that made a **charge move** this turn is **selected to fight**.
+**TARGET:** That **BOYZ** unit.
+**EFFECT:** Your unit’s melee attacks have +1 **A**.
+MOB MENTALITY
+1CP
+Green Tide Stratagem
+**WHEN:** Start of the Battle-shock step of your Command phase.
+**TARGET:** One friendly **ORKS INFANTRY** unit of 13+ models.
+**EFFECT:** Select one **visible** friendly **ORKS** unit within 12" of your unit. That unit’s **battle-shock rolls** are automatically successful.
+'ERE WE GO
+1CP
+Green Tide Stratagem
+**WHEN:** Your Movement phase, when a friendly **BEAST SNAGGA BOYZ**/**BOYZ** unit is **selected to move**.
+**TARGET:** That **BEAST SNAGGA BOYZ**/**BOYZ** unit.
+**EFFECT:** Your unit has +2 to **advance rolls**.
+
+
+######## Bully Boyz 1DP
+
+Detachment Rules
+Displays of Savagery
+Friendly **MEGANOBZ**/**NOBZ** units’ melee attacks have **[Sustained Hits 1]**.
+Enhancements
+- Wimp-kickazUPGRADE 15 pts
+**NOBZ** unit only. When an enemy unit **engaged** with this unit is selected to make a **fall-back move**:
+- That enemy unit must select the **desperate escape** mode.
+- If this unit is **riled up**, that enemy unit has -1 to the **hazard rolls** made for that **desperate escape**.
+- Tellyporta Boss 20 pts
+**MEGA ARMOUR** model only. This unit (excluding **VEHICLE** units) has **Deep Strike**.
+Stratagems
+TOO ARROGANT TO DIE
+1CP
+Bully Boyz Stratagem
+**WHEN:** Fight phase, when an enemy unit targets a friendly **MEGANOBZ**/**NOBZ** unit.
+**TARGET:** That **MEGANOBZ**/**NOBZ** unit.
+**EFFECT:** When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +1 to that roll if your unit is **riled up**:
+- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.
+ARMED TO DA TEEF
+1CP
+Bully Boyz Stratagem
+**WHEN:** Your Shooting phase or the Fight phase, when a friendly **MEGANOBZ**/**NOBZ** unit is **selected to attack**.
+**TARGET:** That **MEGANOBZ**/**NOBZ** unit.
+**EFFECT:** Your unit’s attacks can:
+- Re-roll **hit rolls** of 1.
+- If your unit is **riled up**, re-roll **hit rolls**.
+HULKING BRUTES
+1CP
+Bully Boyz Stratagem
+**WHEN:** Your opponent’s Shooting phase, when an enemy unit targets a friendly **MEGANOBZ**/**NOBZ** unit.
+**TARGET:** That **MEGANOBZ**/**NOBZ** unit.
+**EFFECT:** Ranged attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**.
++1CP
+Or: Ranged attacks that target your unit have -1 to **wound rolls**.
+
+
+######## Runt Swarm 1DP
+
+Detachment Rules
+Sneaky Little Gitz
+- Friendly **GRETCHIN** units have **BATTLELINE**.
+- When a friendly **GRETCHIN** unit is selected to make an **advance**/**fall-back move**, that move does not prevent this unit from being **eligible to start an action**.
+Enhancements
+- Extra SneakyUPGRADE 10 pts
+**GRETCHIN** unit only. This unit has -3" **detection range**.
+- Minefield DetailUPGRADE 10 pts
+**GRETCHIN** unit only. While this unit is not embarked, this unit has **Scouts 6"**.
+Stratagems
+INFESTED WAR ZONE
+2CP
+Runt Swarm Stratagem
+**WHEN:** Any phase, when an enemy unit has attacked.
+**TARGET:** One friendly **GRETCHIN** unit that was just **destroyed**. You can target that unit with this **stratagem** even though that unit was just **destroyed**.
+**EFFECT:** Add a new **GRETCHIN** unit to your army identical to your **destroyed** unit, in **strategic reserves**, at its **starting strength**, with its full wounds remaining.
+SCARPER!
+1CP
+Runt Swarm Stratagem
+**WHEN:** Your opponent’s Movement phase, when an enemy unit ends a move within 8" of a friendly **unengaged GRETCHIN** unit.
+**TARGET:** That **GRETCHIN** unit.
+**EFFECT:** Your unit can make a **normal move** of:
+- Up to D6".
+- Or: Up to 6" instead if your unit is an **attached** unit.
+GROT SHIELDS
+1CP
+Runt Swarm Stratagem
+**WHEN:** Your opponent’s Shooting phase, when an enemy unit targets a friendly **ORKS INFANTRY** unit (excluding **GRETCHIN** units).
+**TARGET:** One friendly **GRETCHIN** unit within 3" of that **ORKS INFANTRY** unit.
+**EFFECT:** When a **hit roll** for that enemy unit’s ranged attacks that target that **ORKS** unit results in a hit, if a model in your **GRETCHIN** unit is on the battlefield, end the attack sequence for that attack and your **GRETCHIN** unit suffers 1 **mortal wound**.
+FAQ
+Show
+Q:When using the Grot Shields stratagem, are hits by **[TORRENT]** weapons considered ’**hit rolls** that result in a hit’?
+A:
+No.
+
+
+######## Shoota Boyz 1DP
+
+Detachment Rules
+Dakka! Dakka! Dakka!
+Friendly **ORKS INFANTRY** units’ ranged attacks have:
+- **[Assault]**.
+- While this unit is **riled up**, +3" **R**.
+Enhancements
+- Supa-glowy Fing 25 pts
+**ORKS INFANTRY** model only (excluding **WEIRDBOY** models). This model’s ranged attacks have:
+- **[Anti-Infantry 4+]**.
+- **[Devastating Wounds]**.
+- **[SUPA-HAZARDOUS]**.
+**[SUPA-HAZARDOUS]**: Each time a unit is **selected to shoot**, after that unit has resolved all of its attacks, make two **hazard rolls** for that unit for each **[SUPA-HAZARDOUS]** weapon you selected in the Select Weapons step.
+- Targetin' Squigs 20 pts
+**BIG MEK**/**BIGBOSS**/**WARBOSS** model only. This unit’s ranged attacks (excluding **[Torrent]** attacks) have +3" **R**.
+Stratagems
+KUSTOM DAKKA
+1CP
+Shoota Boyz Stratagem
+**WHEN:** Your Shooting phase, when a friendly **ORKS INFANTRY** unit is **selected to shoot**.
+**TARGET:** That **ORKS INFANTRY** unit.
+**EFFECT:** Your unit’s ranged attacks that target a unit (excluding **MONSTER**/**VEHICLE** units) have +1 to **wound rolls**.
+GLOWIN' DAKKA
+1CP
+Shoota Boyz Stratagem
+**WHEN:** Your Shooting phase, when a friendly **ORKS INFANTRY** unit is **selected to shoot**.
+**TARGET:** That **ORKS INFANTRY** unit.
+**EFFECT:** Your unit’s ranged attacks that target a unit within 9" have +1 **AP**.
+NEVER ENOUGH DAKKA
+1CP
+Shoota Boyz Stratagem
+**WHEN:** Your Shooting phase, when a friendly **ORKS INFANTRY** unit is **selected to shoot**.
+**TARGET:** That **ORKS INFANTRY** unit.
+**EFFECT:** Your unit’s ranged attacks have **[Sustained Hits 1]**.
+
+
+######## Taktikal Brigade 1DP
+
+Detachment Rules
+Suspiciously Well Organised
+- Friendly **STORMBOYZ** units have **BATTLELINE**.
+- When a friendly **BOYZ**/**KOMMANDOS**/**STORMBOYZ** unit is selected to make a **fall-back move**, that **fall-back move** does not prevent that unit from being **eligible to declare a charge**.
+Enhancements
+- Kill Kommanda 20 pts
+**LEADER: KOMMANDOS
+BIG MEK**/**WARBOSS INFANTRY** model only. While this model is part of an **attached** unit, this model has:
+- **Infiltrators**.
+- **Stealth**.
+- Throat-slittasUPGRADE 15 pts
+**KOMMANDOS**/**STORMBOYZ** unit only. This unit’s melee attacks have **[Lethal Hits: non-Monster/Vehicle]**.
+Stratagems
+DUBIOUS RESTRAINT
+1CP
+Taktikal Brigade Stratagem
+**WHEN:** Start/end of your Movement phase.
+**TARGET:** One friendly **BOYZ**/**KOMMANDOS**/**STORMBOYZ** unit.
+**EFFECT:** Select one **objective** your unit is controlling. That **objective** is **secured**.
+MIND MOSTLY ON THE MISSION
+1CP
+Taktikal Brigade Stratagem
+**WHEN:** Your Movement phase, when a friendly **BOYZ**/**KOMMANDOS**/**STORMBOYZ** unit is selected to make an **advance**/**fall-back move**.
+**TARGET:** That **BOYZ**/**KOMMANDOS**/**STORMBOYZ** unit.
+**EFFECT:** That move does not prevent your unit from being **eligible to start an action**.
+WHILE THEIR BACKS ARE TURNED
+1CP
+Taktikal Brigade Stratagem
+**WHEN:** End of your opponent’s Movement phase.
+**TARGET:** One friendly **unengaged BOYZ**/**KOMMANDOS**/**STORMBOYZ** unit that was **engaged** at the start of the phase.
+**EFFECT:** Your unit can make a **normal move** of up to 6".
+
+
+######## Wreckas 1DP
+
+Detachment Rules
+Wreckin’ and Lootin’
+In your Shooting phase, when a friendly **BREAKA BOYZ**/**FLASH GITZ**/**TANKBUSTAS** unit is **selected to shoot**, if any of the following apply, that unit’s attacks can re-roll **hit rolls** of 1:
+- That unit is within range of an **objective**.
+- The target of that attack is within range of an **objective**.
+Enhancements
+- Kaptin's Hat 25 pts
+**LEADER: FLASH GITZ
+BIG MEK**/**WARBOSS INFANTRY** model only. When both players have deployed their armies, you can redeploy up to three friendly **ORKS INFANTRY** units. When doing so, you can set those units up in **strategic reserves**, regardless of how many units are already in strategic reserves.
+- Supa-snazz DakkaUPGRADE 25 pts
+**FLASH GITZ** unit only. This unit’s Snazzgun weapons have **[Rapid Fire 1]**.
+Stratagems
+DRIVE-BY BUSTIN'
+1CP
+Wreckas Stratagem
+**WHEN:** Your Shooting phase, when a friendly **ORKS TRANSPORT** unit is **selected to shoot**.
+**TARGET:** That **ORKS TRANSPORT** unit.
+**EFFECT:** Your unit’s ranged attacks with weapons selected for the **Firing Deck** ability have +1 to **hit rolls**.
+GRAB IT
+1CP
+Wreckas Stratagem
+**WHEN:** Your Shooting phase, when a friendly **unengaged BREAKA BOYZ**/**FLASH GITZ**/**TANKBUSTAS** unit has shot.
+**TARGET:** That **BREAKA BOYZ**/**FLASH GITZ**/**TANKBUSTAS** unit.
+**EFFECT:**
+- Your unit can make a **normal move** of up to 6", and must end that move within range of an **objective**.
+- Your unit is not **eligible to declare a charge** until the end of the turn.
+GUN-CRAZY SHOW-OFFS
+1CP
+Wreckas Stratagem
+**WHEN:** Your opponent’s Shooting phase, when an enemy unit has shot.
+**TARGET:** One friendly **FLASH GITZ**/**TANKBUSTAS** unit hit by those attacks.
+**EFFECT:** Your unit shoots using **normal shooting**, but while doing so your unit can only target that enemy unit.
+
+
+######## Da Big Hunt 1DP
+
+Detachment Rules
+Da Hunt is On
+Friendly **BEAST SNAGGA** units’ attacks that target a **MONSTER**/**VEHICLE** unit have +1 **AP**.
+Enhancements
+- Glory Hog 25 pts
+**BEAST SNAGGA** model only. When this unit is selected to make a **fall-back move**, that **fall-back move** does not prevent this unit from being **eligible to declare a charge**.
+- It Came from da Drops 20 pts
+**BEASTBOSS ON SQUIGOSAUR** model only. This model has +1 **T**.
+Stratagems
+WHERE D'YA FINK YOU'RE GOING?
+1CP
+Da Big Hunt Stratagem
+**WHEN:** Your opponent’s Movement phase, when an enemy unit is selected to make a **fall-back move**, if that enemy unit is **engaged** with a friendly **BEAST SNAGGA** unit.
+**TARGET:** That **BEAST SNAGGA** unit.
+**EFFECT:** When an enemy unit **engaged** with your unit is selected to make a **fall-back move**, that enemy unit must use the **desperate escape** mode. If that enemy unit is a **MONSTER**/**VEHICLE** unit, that enemy unit makes three additional **hazard rolls** for each **BEAST SNAGGA** unit it is **engaged** with, with -1 from those **hazard rolls** if that enemy unit is **battle-shocked**.
+GOADED INTO ACTION
+1CP
+Da Big Hunt Stratagem
+**WHEN:** Your opponent’s Shooting phase, when an enemy unit has shot.
+**TARGET:** One friendly **unengaged BEAST SNAGGA** unit that lost a wound as a result of those attacks.
+**EFFECT:** Your unit can make a **surge move** of up to D6". If your unit is **riled up**, it can re-roll that D6.
+INSTINCTIVE HUNTERS
+1CP
+Da Big Hunt Stratagem
+**WHEN:** End of your opponent’s Fight phase.
+**TARGET:** One friendly **unengaged BEAST SNAGGA** unit within 6" of a battlefield edge.
+**EFFECT:** Place your unit in **strategic reserves**.
+
+
+######## Madcap Meks 1DP
+
+Detachment Rules
+Unpredictable Genius
+In your Shooting phase, when all of a friendly **BIG MEK**/**MEK GUNZ**/**MORKANAUT**/**WAZBOM BLASTAJET** unit’s ranged attacks target a single enemy unit, roll one D6:
+UNPREDICTABLE GENIUS**
+D6RESULT
+1Dat’s Weird:** The target unit has 4+ **InSv** until your unit has shot.
+**2-3Hop Splat:** Select one other enemy unit within 3" of the target. That unit suffers D3 **mortal wounds**.
+**4Seekerz:** Those attacks have +1 to **hit rolls**.
+**5Lifted:** The target unit has **FLY**, and cannot have the **benefit of cover**, until your unit has shot.
+**6Runtified:** The target unit has -1 **T** until your unit has shot.
+VINDICTIVE ARTILLERISTS
+1CP
+Madcap Meks Stratagem
+**WHEN:** Your Shooting phase, when a friendly **MEK GUNZ** unit is **selected to shoot**.
+**TARGET:** That **MEK GUNZ** unit.
+**EFFECT:** Your unit’s ranged attacks have:
+- **[Lethal Hits]**.
+- Or: **[Sustained Hits 1]**.
+- Or: **[Hazardous]**, **[Lethal Hits]**, **[Sustained Hits 1]**.
+Enhancements
+- Mekwaaagh! Mastermind 30 pts
+**BIG MEK** model only. This unit is **riled up**.
+- Temperamental ShokkaUPGRADE 20 pts
+**BIG MEK WITH SHOKK ATTACK GUN** model only. In your Shooting phase, when this unit is **selected to shoot**, you can roll one D6:
+- On a 1, this model’s Shokk Attack Gun weapon has **[Torrent]**, and when this unit has shot, this model is **destroyed**.
+- On a 2-5, this model’s Shokk Attack Gun weapon has +1 **A**.
+- On a 6, this model’s Shokk Attack Gun weapon has **[Sustained Hits 2]**.
+- Enhanced Runt-mawUPGRADE 10 pts
+**BIG MEK WITH SHOKK ATTACK GUN** model only. When this unit has shot, select one enemy unit hit by those attacks. That unit is **infested with Snotlings** until the start of your next turn.
+- While an enemy unit is **infested with Snotlings**, that unit has -1 to **leadership rolls**.
+
+
+######## Dread Mob 1DP
+
+Detachment Rules
+Try Dat Button!
+In your Shooting phase or the Fight phase, when a friendly **ORKS WALKER** unit (excluding **TITANIC** units) is **selected to attack**, you can use this ability. If you do, roll either one D6 or two D6 (keep re-rolling duplicate results). This unit’s attacks have the relevant rule(s):
+TRY DAT BUTTON!**
+D6RESULT
+1-2**+1 **A
+3-4**+2 **S
+5-6**+1 **AP**
+If you rolled two D6, when this unit has attacked, this unit makes one **hazard roll**.
+Enhancements
+- Cybork Boosta 10 pts
+**BIG MEK**/**MEK** model only. This model has +2" **M**.
+- Dreadherder 30 pts
+**BIG MEK** model only. While this model is within 3" of a friendly **ORKS WALKER** unit (excluding **BIG MEK** units):
+- This model has **Lone Operative**.
+- In your Shooting phase, you can select one friendly **ORKS WALKER** unit within 3" of this model. That unit’s attacks can re-roll **hit rolls** of 1 until the end of the turn.
+Stratagems
+CRAZED RAMPAGE
+1CP
+Dread Mob Stratagem
+**WHEN:** Fight phase, when an enemy unit targets a friendly **ORKS WALKER** unit (excluding **TITANIC** units).
+**TARGET:** That **ORKS WALKER** unit.
+**EFFECT:** When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +3 to the result if your unit has ~~DEFF DREAD~~:
+- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.
+DREAD POWER
+1CP
+Dread Mob Stratagem
+**WHEN:** Your Movement phase.
+**TARGET:** One friendly **ORKS WALKER** unit.
+**EFFECT:** Your unit is **riled up** until the start of your next turn.
+STOMPING JUGGERNAUT
+1CP
+Dread Mob Stratagem
+**WHEN:** Your Movement/Charge phase, when a friendly **ORKS WALKER** unit is **selected to move** or **declares a charge**.
+**TARGET:** That **ORKS WALKER** unit.
+**EFFECT:** Your unit has **MOBILE**.
+
+
+######## Blitz Brigade 1DP
+
+Detachment Rules
+Unstoppable Momentum
+- Friendly **WAGON** units can re-roll **charge rolls**.
+- When a friendly **WAGON** unit is selected to make an **advance move**, that unit can change **advance rolls** to a 6.
+Enhancements
+- Targetin' GizmosUPGRADE 25 pts
+**WAGON** unit only. While a **BIG MEK** model is embarked within this unit:
+- This unit’s ranged attacks have **[Ignores Cover]**.
+- If this unit is **riled up**, this unit’s ranged attacks have **[Sustained Hits 1]**.
+- Boss BoomerUPGRADE 10 pts
+**WAGON** unit only. While a **WARBOSS** model is embarked within this unit, this unit has that **WARBOSS** model’s **Intimidating Motivation**/**Keep Huntin’** ability.
+Stratagems
+KEEP IT RUNNIN'
+1CP
+Blitz Brigade Stratagem
+**WHEN:** End of the Fight phase.
+**TARGET:** One friendly **unengaged ORKS INFANTRY** unit that was **eligible to fight** this phase and is wholly within 6" of a friendly **TRANSPORT** unit that **INFANTRY** unit is able to embark within.
+**EFFECT:** Your **INFANTRY** unit embarks within that **TRANSPORT** unit.
+READIED BRAWLERS
+1CP
+Blitz Brigade Stratagem
+**WHEN:** Your Movement phase, when a friendly **WAGON** unit ends a **normal move**.
+**TARGET:** That **WAGON** unit.
+**EFFECT:** Units embarked within your unit can make an **assault disembark move**.
+IMPENDING KRUNCH
+1CP
+Blitz Brigade Stratagem
+**WHEN:** Your Charge phase, when a friendly **WAGON** unit ends a **charge move**.
+**TARGET:** That **WAGON** unit.
+**EFFECT:** Each enemy unit **engaged** with your unit makes a **battle-shock roll**, with -1 to that **battle-shock roll**.
+
+
+######## Kult of Speed 1DP
+
+Detachment Rules
+Adrenaline Junkies
+- Friendly **WARBIKERS** units have **BATTLELINE**.
+- When a friendly **SPEED FREEKS** unit is selected to make an **advance**/**fall-back move**:
+- That unit’s ranged attacks have **[Assault]** until the end of the turn.
+- That move does not prevent that unit from being **eligible to declare a charge**.
+Enhancements
+- Smoky GubbinzUPGRADE 10 pts
+**SPEED FREEKS** unit only (excluding **AIRCRAFT** units). When an attack targets a unit that is not **fully visible** to the attacking model because of a model in this unit, the target has the **benefit of cover** against that attack.
+- Competitive Streak 15 pts
+**DEFFKILLA WARTRIKE** model only. This unit can re-roll **charge rolls**.
+Stratagems
+DELICIOUS EATING SQUIGS
+1CP
+Kult of Speed Stratagem
+**WHEN:** Your Movement phase.
+**TARGET:** One friendly **RUKKATRUKK SQUIGBUGGIES** unit.
+**EFFECT:** Select any number of friendly **ORKS INFANTRY** units within 3" of your unit. Each selected unit **heals** 3 wounds.
+DAKKASTORM
+1CP
+Kult of Speed Stratagem
+**WHEN:** Your Shooting phase, when a friendly **SPEED FREEKS** unit is **selected to shoot**.
+**TARGET:** That **SPEED FREEKS** unit.
+**EFFECT:** Your unit’s ranged attacks have **[Sustained Hits 1]**.
+SPEEDIEST FREEKS
+1CP
+Kult of Speed Stratagem
+**WHEN:** Your opponent’s Shooting phase, when an enemy unit targets a friendly **SPEED FREEKS** unit.
+**TARGET:** That **SPEED FREEKS** unit.
+**EFFECT:** Ranged attacks that target your unit fail on an unmodified **hit roll** of 1-3.
+
+
+######## Flyboyz 1DP
+
+Detachment Rules
+Skyborne Loons
+- Friendly **ORKS AIRCRAFT** units do not count towards the combined points value of your **strategic reserves** units.
+- While a friendly **ORKS AIRCRAFT**/**DEFFKOPTAS** unit is **riled up**, this unit’s ranged attacks have +1 to **hit rolls**.
+Enhancements
+- FlybossUPGRADE 20 pts
+**ORKS AIRCRAFT** unit only.
+- This unit has **CHARACTER**.
+- When this unit ends an **ingress move**, each friendly **ORKS AIRCRAFT**/**DEFFKOPTAS** unit within 6" of this unit is **riled up** until the start of your next turn.
+- Impulsive ReconUPGRADE 15 pts
+**ORKS AIRCRAFT** unit only. In your first Movement phase, this unit can make an **ingress move**.
+Stratagems
+FLYIN' HEADBUTT
+1CP
+Flyboyz Stratagem
+**WHEN:** Any phase, when a friendly **ORKS AIRCRAFT** unit is **destroyed**, before rolling for any **Deadly Demise**.
+**TARGET:** That **ORKS** unit.
+**EFFECT:** Your unit does not have the **Deadly Demise** ability. Select one enemy unit within 12" of your unit and roll eight D6:
+- For each 4+, that enemy unit suffers 1 **mortal wound**.
+Then remove your unit from the battlefield.
+LONG, UNCONTROLLED BURSTS
+1CP
+Flyboyz Stratagem
+**WHEN:** Your Shooting phase, when a friendly **ORKS AIRCRAFT**/**DEFFKOPTAS** unit is **selected to shoot**.
+**TARGET:** That **ORKS AIRCRAFT**/**DEFFKOPTAS** unit.
+**EFFECT:** When your unit’s ranged attacks target a **FLY** unit, those attacks can re-roll **hit rolls**.
+WHIRLIGIG EVASION
+1CP
+Flyboyz Stratagem
+**WHEN:** Your opponent’s Movement phase, when an enemy unit ends a move.
+**TARGET:** One friendly **unengaged DEFFKOPTAS** unit within 8" of that enemy unit.
+**EFFECT:** Your unit can make a **normal move** of:
+- Up to D6".
+- Or: If your unit is **riled up**, up to 6".
+
+
+######## Brute Bosses 1DP
+
+Detachment Rules
+’Ard as Nails
+When a friendly **WARBOSS** model is **destroyed**, if this unit has not been **selected to fight** this phase, roll one D6, with +1 to the roll if your unit is **riled up**:
+- On a 3+, do not remove this **WARBOSS** model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this **WARBOSS** model is removed from the battlefield.
+Enhancements
+- Surly as a Squiggoth 25 pts
+**INFANTRY WARBOSS** model only. (Once per battle, per army) At the end of a phase in which this model is **destroyed**, roll one D6:
+- On a 2+, set this model back up on the battlefield as close as possible to where it was **destroyed**, **unengaged**, with 3 wounds remaining.
+- Brutal But Kunnin' 30 pts
+**WARBOSS** model only. This model’s melee attacks have +1 **D**.
+- Blitzboss 20 pts
+**WARBOSS** model only. A **TRANSPORT** unit (excluding **WALKER** units) this unit is embarked within has:
+- +2" **M**.
+- 5+ **InSv**.
+- Proper Killy 15 pts
+**WARBOSS** model only. This model can re-roll **hit rolls** of 1.
+- Morgog's Finkin' Cap 50 pts
+**WARBOSS** model only. (Once per battle, per army) At the end of your opponent’s Movement phase, if this unit is **unengaged**, this unit can make a **normal move** of:
+- Up to D6".
+- If this unit is **riled up**, you can re-roll that D6.
+- Da Gobshot Thunderbuss 20 pts
+**WARBOSS** model only. This model has the following weapon:
+RANGED WEAPONS
+RANGE
+A
+BS
+S
+AP
+D
+**Da Gobshot Thunderbuss LETHAL HITS: non-MONSTER/VEHICLE** RAPID FIRE 6
+**Da Gobshot Thunderbuss LETHAL HITS: non-MONSTER/VEHICLE** RAPID FIRE 6
+24"
+6
+4+
+7
+-2
+2
+
+
+######## Wurrband 1DP
+
+Detachment Rules
+Powers of da Waaagh!
+Friendly **ORKS PSYKER** models’ **[Psychic]** attacks have:
+- +1 **S**.
+- +1 **S** for every 5 models in this unit (or embarked within this model).
+Friendly **ORKS PSYKER** models have the following **psychic abilities**:
+**Roar of Mork (psychic level 1):** In your Movement phase, if this unit is not **battle-shocked**, you can make a **psychic roll** for this unit by rolling one D6. If you do:
+- On a 1, this unit is **battle-shocked**.
+- Select one enemy unit (excluding **MONSTER**/**VEHICLE** units) within 12" of this unit. That enemy unit makes a **battle-shock roll**, with -1 from that **battle-shock roll** for every 10 models in this unit.
+**Visions of Violence (psychic level 1):** At the start of the Fight phase, if this unit is not **battle-shocked**, you can make a **psychic roll** for this unit by rolling one D6. If you do:
+- On a 1, this unit is **battle-shocked**.
+- This unit has **Fights First**.
+Enhancements
+- Da Krunch 10 pts
+**ORKS PSYKER** model only. This model has the following weapon.
+RANGED WEAPONS
+RANGE
+A
+BS
+S
+AP
+D
+**Da Krunch BLAST 3** HAZARDOUS LETHAL HITS PSYCHIC
+**Da Krunch BLAST 3** HAZARDOUS LETHAL HITS PSYCHIC
+24"
+3
+4+
+5
+-1
+1
+- 'Eadbanger 15 pts
+**ORKS PSYKER** model only. This model has the following weapon.
+RANGED WEAPONS
+RANGE
+A
+BS
+S
+AP
+D
+**'Eadbanger** HAZARDOUS PRECISION PSYCHIC
+**'Eadbanger** HAZARDOUS PRECISION PSYCHIC
+24"
+2
+4+
+6
+-3
+3
+- Warphead 25 pts
+**ORKS PSYKER** model only. This model:
+- Has **psyker level 2**.
+- Has **Deadly Demise D6**.
+- Can re-roll **psychic rolls**.
+
+
+######## Boarding Actions
+Introduction
+**Within the following pages you will find numerous Boarding Actions Detachments that can be used in your Boarding Actions games. Each lists which units you can include in your army, any modifications to those units’ army rule as presented in their Codex or Index, a Detachment rule unique to that Detachment, and a number of Enhancements and Stratagems that you can use.**
+ARMY FACTION
+A keyword that will be shared by all units in your army.
+MUSTERING RULES
+Which units you are allowed to include in your army.
+FORMING BOARDING SQUADS
+Any additional rules that will apply in the missions Form Boarding Squads step. Note that not all Detachments will have these.
+RULES ADAPTATIONS
+Some units will be unable to use certain abilities in Boarding Actions battles. Where this is the case, these units and their relevant abilities will be listed here.
+ARMY RULE
+Due to the distinct nature of close-quarters battle in Boarding Actions, most army rules require some modifications to their effects. Where this is the case, these will be described here.
+DETACHMENT RULE
+Each faction will have a number of different Detachments to choose from, each with its own Detachment rule to reflect the unique fighting methods of such forces.
+ENHANCEMENTS
+Further Enhancements that you can give to **CHARACTER** models from your army, beyond those(Boarding Actions Enhancments), will be found here.
+STRATAGEMS
+Additional Stratagems that you can use, in addition to those (Boarding Actions Stratagems), will be found here.

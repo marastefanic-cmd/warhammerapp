@@ -1,6 +1,6 @@
 {
- "hash": "c5e6db6f2ccfe91048765dae603129a9189c62e1fac9b6cea906af99215310e2",
- "at": "2026-10-16T23:04:00.956Z",
+ "hash": "377683ea486cd3fad32fb6b9e77e8605688a7534d30b91dfd81bec3530503af3",
+ "at": "2026-10-17T08:12:24.648Z",
  "ok": true,
  "steps": {
   "data": {
@@ -17,7 +17,7 @@
   },
   "bsdata": {
    "ok": true,
-   "summary": "bsdata: 3053 facts checked against BSData 9b8207c (clone) {\"gear\":218,\"stats\":441,\"weapons\":1590,\"abilities\":291,\"keywords\":332,\"rules\":127,\"points\":53,\"extract\":1}; 15 deviations used; 0 failures"
+   "summary": "bsdata: 3053 facts checked against BSData 173d0ef (clone) {\"gear\":218,\"stats\":441,\"weapons\":1590,\"abilities\":291,\"keywords\":332,\"rules\":127,\"points\":53,\"extract\":1}; 15 deviations used; 0 failures"
   },
   "nr": {
    "ok": true,
