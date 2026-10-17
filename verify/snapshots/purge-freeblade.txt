@@ -38,7 +38,6 @@ DECLARE BATTLE FORMATIONS
 RESERVES
 Strategic reserves: unless otherwise stated, up to 1000 pts (50% of the 2000 limit), counting units embarked within a TRANSPORT you place there. Unless otherwise stated, they can only arrive from the second battle round onwards, and any that have not arrived by the end of round 3 are destroyed (not repositioned units, nor units embarked within a TRANSPORT that arrived).
 ONCE PER BATTLE
-NEW GAME
 STRATA­GEMS
 1CP Insane Bravery
 

@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
-<script>window.WH_BUILD = '6d0cdd91b7';</script>
+<script>window.WH_BUILD = 'b6b1bfd8ec';</script>
 </head>
 <body>
 <style>
@@ -343,9 +343,6 @@ summary::-webkit-details-marker{display:none}
 .flip{min-height:48px; padding:6px 10px; border-radius:6px; background:var(--surface); font:700 14px/1.15 var(--f-head); letter-spacing:.03em; color:var(--fg2)}
 .flip.p{text-align:left}
 .flip.n{text-align:right; grid-column:2}
-.tick{display:inline-grid; place-items:center; width:26px; height:26px; margin:0 8px 0 0; vertical-align:-6px; border-radius:6px; box-shadow:inset 0 0 0 1.5px var(--line); font:700 15px/1 var(--f-body); color:var(--accent-ink)}
-.tick.on{background:var(--accent); box-shadow:none}
-.usedx{text-decoration:line-through; text-decoration-color:var(--muted); color:var(--muted)}
 .sec-h .textbtn{margin-left:auto}
 .nextph{display:block; width:100%; min-height:48px; margin:14px 0 4px; border-radius:6px; background:var(--surface2); font:700 15px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--accent)}
 .textbtn{min-height:40px; font:700 12.5px/1 var(--f-head); letter-spacing:.07em; text-transform:uppercase; color:var(--accent)}
@@ -443,8 +440,8 @@ summary::-webkit-details-marker{display:none}
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="verified.js?v=6d0cdd91b7"></script>
-<script src="data.js?v=6d0cdd91b7"></script>
+<script src="verified.js?v=b6b1bfd8ec"></script>
+<script src="data.js?v=b6b1bfd8ec"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -457,6 +454,7 @@ const keep = area => ({
   set(k, v){ try { window[area].setItem(k, JSON.stringify(v)); } catch(e){} }
 });
 const store = keep('localStorage'), session = keep('sessionStorage');
+try { for(const k of Object.keys(localStorage)) if(/^wh-used-|^wh-layout$/.test(k)) localStorage.removeItem(k); } catch(e){}   // left by earlier versions
 
 const PHASES = [['command','Command','Cmd'], ['movement','Movement','Move'], ['shooting','Shooting','Shoot'], ['charge','Charge','Charge'], ['fight','Fight','Fight']];
 const PHASE_NAME = Object.fromEntries(PHASES.map(([k, l]) => [k, l]));
@@ -485,8 +483,8 @@ const moreShown = new Set();                 // search groups you expanded
 let focusSearch = false;
 
 /* ---------- tabs ----------
-   Tabs at the bottom of every army screen (Pre-game · Units · Turn · Rules · Find), ‹ › between
-   datasheets, and once-per-battle items that can be ticked off until New game. */
+   Tabs at the bottom of every army screen (Pre-game · Units · Turn · Rules · Find) and ‹ › between
+   datasheets. The app only shows the packet: nothing a player enters is recorded. */
 // the tabs, and which one the current screen belongs to
 const TABS = [['pregame', 'i-flag', 'Pre-game'], ['units', 'i-units', 'Units'], ['strats', 'i-cards', 'Turn'], ['rules', 'i-book', 'Rules'], ['army', 'i-search', 'Find']];
 const isTab = s => TABS.some(([k]) => k === s);
@@ -498,20 +496,6 @@ function unitFlip(u){
   const i = order.indexOf(u), prev = order[i - 1], next = order[i + 1];
   const b = (x, cls, label) => x ? '<button class="flip ' + cls + '" data-flip="' + esc(x.id) + '">' + label + '</button>' : '<span></span>';
   return '<div class="flips">' + b(prev, 'p', '‹ ' + esc(shortName(prev || {}))) + b(next, 'n', esc(shortName(next || {})) + ' ›') + '</div>';
-}
-// once-per-battle resources ticked off in this game, per army, until New game
-const usedKey = () => 'wh-used-' + (cur.army || '');
-const usedSet = () => new Set(Array.isArray(store.get(usedKey())) ? store.get(usedKey()) : []);
-function markOnce(){
-  const used = usedSet(), h2 = [...document.querySelectorAll('#view .sec-h h2')].find(x => /once per battle/i.test(x.textContent));
-  if(!h2) return;
-  const box = h2.parentElement.nextElementSibling;
-  for(const l of box.querySelectorAll('[data-rule],[data-ability],[data-strat]')){
-    const k = Object.entries(l.dataset).map(([a, v]) => a + ':' + v)[0], on = used.has(k);
-    l.insertAdjacentHTML('beforebegin', '<button class="tick' + (on ? ' on' : '') + '" data-tick="' + esc(k) + '" aria-pressed="' + on + '" aria-label="Used this game">' + (on ? '✓' : '') + '</button>');
-    if(on) l.classList.add('usedx');
-  }
-  h2.parentElement.insertAdjacentHTML('beforeend', '<button class="textbtn" data-newgame>New game</button>');
 }
 
 /* ---------- navigation ----------
@@ -1566,7 +1550,7 @@ function render(){
   else if(s === 'abilities') v.innerHTML = screenAbilities();
   else if(s === 'rules') v.innerHTML = screenRules();
   else if(s === 'bases') v.innerHTML = screenBases();
-  else if(s === 'pregame'){ v.innerHTML = screenPregame(); markOnce(); }
+  else if(s === 'pregame') v.innerHTML = screenPregame();
   if(cur.army) bot = tabBar();
   setBar('subbar', sub);
   setBar('bbar', bot);
@@ -1721,8 +1705,6 @@ document.addEventListener('click', e => {
     go(next, 'replace'); return;
   }
   if(ds.flip){ go({ s:'unit', army:army().id, unit:ds.flip, from:cur.from }, 'replace'); return; }
-  if(ds.tick){ const u = usedSet(); u.has(ds.tick) ? u.delete(ds.tick) : u.add(ds.tick); store.set(usedKey(), [...u]); rerender(); return; }
-  if(el.hasAttribute('data-newgame')){ store.set(usedKey(), []); toast('New game: once-per-battle ticks cleared'); rerender(); return; }
   if(el.hasAttribute('data-awake')){ awake.on = !awake.on; store.set('wh-awake', awake.on); if(awake.on) keepAwake(); else if(awake.lock){ awake.lock.release(); awake.lock = null; } rerender(); return; }
   if(el.hasAttribute('data-expand')){
     const cards = $$('#view details.strat');
