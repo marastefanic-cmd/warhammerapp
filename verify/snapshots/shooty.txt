@@ -1395,12 +1395,12 @@ BASES TO PRINT
 6× 60mm
 3× 75×42mm
 2× 90mm
-1× 120mm
+1× 120×92mm
 
 WHAT TO WRITE ON EACH BASE
 
 Wazdakka Gutsmek
-1× 120mm
+1× 120×92mm
 Wazdakka Gutsmek
 Big Mek · Dreadherder
 1× 90mm
@@ -6045,7 +6045,7 @@ Wazdakka Gutsmek
 
 1× Wazdakka Gutsmek
 
-Base 120mm
+Base 120×92mm
 
 KEYWORDS
 

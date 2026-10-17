@@ -136,15 +136,6 @@
  },
  {
   "army": "shooty",
-  "unit": "wazdakka",
-  "field": "stats.base",
-  "app": "Wazdakka Gutsmek: 120mm",
-  "source": "Wazdakka Gutsmek: 120x92mm",
-  "reason": "GW's base size guide is newer than the community data New Recruit uses; tournaments use GW's guide.",
-  "evidence": "GW Warhammer Event Companion v1.3 (14 Oct 2026, newer than New Recruit and BSData), Base Size Guide, Orks: \"Wazdakka Gutsmek 120mm\" (verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3539; the guide marks oval bases \"Oval Base\", e.g. \"Wazbom Blastajet 120x92mm Oval Base\" two lines below)."
- },
- {
-  "army": "shooty",
   "unit": "bigmek-mega",
   "field": "ability.text",
   "app": "Supa-glowy Fing: **ORKS INFANTRY** model only (excluding **WEIRDBOY** models). This model’s ranged attacks have:\n- **[ANTI-INFANTRY 4+]**.\n- **[DEVASTATING WOUNDS]**.\n- **[SUPA-HAZARDOUS]**.",

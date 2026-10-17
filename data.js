@@ -14,7 +14,7 @@
 ===================================================================== */
 window.WH_DATA = (function(){
 
-const VERSION = '2026-10-17.2';
+const VERSION = '2026-10-17.3';
 
 /* ---------------- core rules (11th edition) ---------------- */
 // Weapon keyword and core ability text: the official Core Rules PDF (11th edition), BSData and the
@@ -969,7 +969,7 @@ const ARMIES = [
     {
       id:'wazdakka', name:'Wazdakka Gutsmek', role:'Epic Hero', pts:200,
       models:['1× Wazdakka Gutsmek'], gear:[['Fixit’s Wrench','Grabba Dragga','Psyko-gatler','Speeding Bulk and Flaming Exhaust']],
-      stats:[{ name:'Wazdakka Gutsmek', M:'14"', T:'8', Sv:'3+', W:'10', Ld:'6+', OC:'3', InSv:'4+', base:'120mm' }],
+      stats:[{ name:'Wazdakka Gutsmek', M:'14"', T:'8', Sv:'3+', W:'10', Ld:'6+', OC:'3', InSv:'4+', base:'120×92mm' }],
       ranged:[
         { name:'Grabba Dragga', range:'12"', A:'1', BS:'2+', S:'10', AP:'-2', D:'3', kw:['ASSAULT','PRECISION'] },
         { name:'Psyko-gatler', range:'24"', A:'12', BS:'4+', S:'6', AP:'-2', D:'2', kw:['ASSAULT','LETHAL HITS: non-MONSTER/VEHICLE','SUSTAINED HITS 1'] }
