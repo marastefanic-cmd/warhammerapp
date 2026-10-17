@@ -1,12 +1,1 @@
-[
- {
-  "check": "strat-needs",
-  "where": "hurrdurr · Apoplectic Frenzy",
-  "reason": "TARGET is a KHORNE BERZERKERS unit; New Recruit gives that datasheet the keyword 'Berzerkers', which needs uses (every WORLD EATERS unit is KHORNE, so KHORNE alone would select all)."
- },
- {
-  "check": "strat-needs",
-  "where": "hurrdurr · Berzerker’s Wrath",
-  "reason": "As Apoplectic Frenzy: KHORNE BERZERKERS is the datasheet, keyword 'Berzerkers' in New Recruit."
- }
-]
+[]

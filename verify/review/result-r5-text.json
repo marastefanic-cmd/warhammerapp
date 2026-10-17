@@ -1,0 +1,86 @@
+[
+ {
+  "key": "f8b59aa5f0c8fa00",
+  "verdict": "ok",
+  "why": "Source: \"In your Shooting phase, if this unit’s Blitzkannon weapon targets a unit (excluding MONSTER/VEHICLE units), that weapon has +6 A.\" Footnote copies the change (+6 A), the condition (non-MONSTER/VEHICLE targets) and the timing (your Shooting phase). Nothing added or dropped.",
+  "fix": null
+ },
+ {
+  "key": "0ed03785b23c144b",
+  "verdict": "fix",
+  "why": "EFFECT: \"roll one D6, with +3 to the result if your unit has DEFF DREAD: On a 4+, do not remove that model\". The gist has no trailing \"…\" but drops the +3 modifier, which changes how often the 4+ succeeds. The rest matches (\"if your unit has not been selected to fight this phase\"; \"When your unit has fought, or at the end of the phase (whichever comes first), that model is removed\"). The fix adds \"…\" rather than restating the +3 clause, so it doesn't have to decide what the ~~ markup on DEFF DREAD means.",
+  "fix": { "gist": "Your model destroyed before your unit is selected to fight: on a 4+ it stays until your unit has fought or the phase ends…" }
+ },
+ {
+  "key": "4de6f1f3c2ad0147",
+  "verdict": "ok",
+  "why": "EFFECT: \"Your unit’s ranged attacks that target a unit (excluding MONSTER/VEHICLE units) have +1 to wound rolls.\" The gist says the same, using \"against a unit\" for \"that target a unit\". Nothing added or dropped.",
+  "fix": null
+ },
+ {
+  "key": "384a3d351d56fd8c",
+  "verdict": "fix",
+  "why": "EFFECT has two separate bullets: \"Your unit can make a normal move of up to 6\", and must end that move within range of an objective.\" and \"Your unit is not eligible to declare a charge until the end of the turn.\" The gist joins them with \"then\", which makes the charge restriction read as a result of making the move. The source applies the restriction whether or not the optional (\"can\") move is made. Trigger \"After shooting\" (\"when ... has shot\") is fine.",
+  "fix": { "gist": "After shooting: can normal move up to 6\", ending within range of an objective; not eligible to declare a charge this turn." }
+ },
+ {
+  "key": "fcc098e5fb2c4ac7",
+  "verdict": "ok",
+  "why": "WHEN: \"when an enemy unit has shot\"; TARGET: \"One friendly FLASH GITZ/TANKBUSTAS unit hit by those attacks\"; EFFECT: \"Your unit shoots using normal shooting, but while doing so your unit can only target that enemy unit.\" The gist puts the trigger first, shortened (the phase is left out, as in the allowed \"After shooting:\" example). \"hit yours\" comes from the TARGET, and \"only at that enemy unit\" = \"can only target that enemy unit\". Nothing added.",
+  "fix": null
+ },
+ {
+  "key": "b0c4ef2345da5aaa",
+  "verdict": "ok",
+  "why": "WHEN lists Advance, Charge, Damage, Hazard, Hit, Save and Wound rolls, plus \"A roll to determine the number of attacks generated with a weapon\". EFFECT: \"You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls...)\". The gist leaves out the number-of-attacks roll and the one-die rule, but it ends with \"…\". Everything it does state is correct, with nothing added.",
+  "fix": null
+ },
+ {
+  "key": "a63f2322eb83abb4",
+  "verdict": "ok",
+  "why": "WHEN: \"just before you make a battle-shock roll for a friendly unit\"; EFFECT: \"That battle-shock roll is automatically successful.\" The gist matches the EFFECT in full. It leaves out \"RESTRICTIONS: You cannot use this stratagem more than once per battle.\" That line is a RESTRICTION, not part of the EFFECT, so by the stated standard it need not appear (optional: add \"(once per battle)\" to match how Rapid Ingress shows its restriction).",
+  "fix": null
+ },
+ {
+  "key": "b9ec4a286394af8d",
+  "verdict": "ok",
+  "why": "EFFECT: \"Select one EXPLOSIVES/GRENADES model in your unit. Select one unengaged enemy unit within 8\" of and visible to that model. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.\" The gist leaves out \"unengaged\" and \"visible\" but ends with \"…\". Its numbers (8\", six D6, 4+, 1 mortal wound) are copied exactly.",
+  "fix": null
+ },
+ {
+  "key": "316ab7d54092cc2e",
+  "verdict": "fix",
+  "why": "EFFECT: \"Select one enemy unit engaged with your unit. Select one model in your unit engaged with that enemy unit. Roll a number of D6 equal to the T characteristic of that model\". The gist's \"an engaged model’s T\" doesn't say whose model, so it could be read as an enemy model's T. That widens the source's \"one model in your unit\" rather than just leaving out detail. \"the engaged enemy unit\" also implies there is only one, where the source says \"select one\". The \"…\" covers the cap (\"to a maximum of 6 mortal wounds per unit\").",
+  "fix": { "gist": "After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…" }
+ },
+ {
+  "key": "3a6f949db7ee767f",
+  "verdict": "ok",
+  "why": "TARGET: \"One friendly unit that is in strategic reserves (excluding AIRCRAFT)\"; EFFECT: \"Your unit makes an ingress move\"; RESTRICTIONS: \"You cannot use this stratagem during the first battle round.\" The gist matches. The AIRCRAFT exclusion is part of the TARGET filter, which \"your unit\" stands for. Nothing added.",
+  "fix": null
+ },
+ {
+  "key": "f26634634e911cf0",
+  "verdict": "ok",
+  "why": "EFFECT: \"Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack.\" The gist keeps the duration, both kinds of unit and the benefit of cover. It leaves out \"to the attacking model\" and the per-attack wording, but ends with \"…\". Nothing added.",
+  "fix": null
+ },
+ {
+  "key": "8ea498ada59595d1",
+  "verdict": "ok",
+  "why": "EFFECT: \"Resolve a charge with your unit. While doing so, before making the charge roll, you must select one of the following modes: Leap to Defend ... Into the Fray (+1CP)\". The gist names the action and both modes, including the +1CP. The mode details are left out, and it ends with \"…\".",
+  "fix": null
+ },
+ {
+  "key": "1b13d688b61b3061",
+  "verdict": "ok",
+  "why": "EFFECT: \"Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight.\" The gist says the same in a different order. Nothing added or dropped.",
+  "fix": null
+ },
+ {
+  "key": "267be2948ab59262",
+  "verdict": "ok",
+  "why": "The rule is titled \"Support\" and its text is about \"each leader and support unit in your army\". Typing \"support unit(s)\" plainly names that rule.",
+  "fix": null
+ }
+]

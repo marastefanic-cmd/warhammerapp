@@ -1,25 +1,25 @@
 // written by verify/run.js: the last verification of this app.html + data.js
 window.WH_VERIFIED = {
  "ok": true,
- "build": "60e9d4f6f7",
- "data": "2026-10-17.4",
+ "build": "734cc8ea99",
+ "data": "2026-10-17.5",
  "date": "17 Oct 2026",
  "checks": [
   {
    "label": "Your New Recruit lists:",
-   "detail": "every unit, model count, wargear, enhancement, stat line, weapon profile and ability matches the PDF (4378 facts)."
+   "detail": "every unit, model count, wargear, enhancement, stat line, weapon profile and ability matches the PDF (857 facts)."
   },
   {
    "label": "BSData,",
-   "detail": "the data New Recruit is built from: every stat, weapon, keyword, ability and points value (4072 facts)."
+   "detail": "the data New Recruit is built from: every stat, weapon, keyword, ability and points value (798 facts)."
   },
   {
    "label": "Granted values:",
-   "detail": "every keyword or value marked + is one a rule of your list changes in BSData, named as that rule, and matches the rules New Recruit prints beside the weapon (103 values)."
+   "detail": "every keyword or value marked + is one a rule of your list changes in BSData, named as that rule, and matches the rules New Recruit prints beside the weapon (32 values)."
   },
   {
    "label": "Games Workshop’s rules text:",
-   "detail": "every rule, enhancement and stratagem is the wording of GW’s newest official document, or Wahapedia where GW has none (1376 texts)."
+   "detail": "every rule, enhancement and stratagem is the wording of GW’s newest official document, or Wahapedia where GW has none (567 texts)."
   },
   {
    "label": "Rules logic:",
@@ -27,17 +27,17 @@ window.WH_VERIFIED = {
   },
   {
    "label": "The app’s own notes:",
-   "detail": "674 footnotes, reminders, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
+   "detail": "246 footnotes, reminders, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
   },
   {
    "label": "Every screen:",
-   "detail": "925 screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
+   "detail": "190 screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
   }
  ],
  "sources": [
   {
    "label": "New Recruit:",
-   "detail": "Cooking, Me shooty yer’ booty, Purge Freeblade, Hurrdurr, oioioi, Nidzillas (your PDFs)."
+   "detail": "Me shooty yer’ booty (your PDF)."
   },
   {
    "label": "BSData:",

@@ -1,0 +1,50 @@
+[
+ {
+  "army": "shooty",
+  "kind": "ability-who",
+  "where": "shooty · Wazdakka Gutsmek · Turbo Engine",
+  "judgement": {
+   "who": "Throttlerokkit Shokka Engine",
+   "models": [
+    "1× Wazdakka Gutsmek"
+   ]
+  },
+  "source": {
+   "ability": "Turbo Engine",
+   "text": "When this unit is selected to make an **advance**/**fall-back move**, that move does not prevent this unit from being **eligible to declare a charge**."
+  },
+  "key": "b59592e3e5a8ea08"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-who",
+  "where": "shooty · Wazdakka Gutsmek · Pulse Jet",
+  "judgement": {
+   "who": "Throttlerokkit Shokka Engine",
+   "models": [
+    "1× Wazdakka Gutsmek"
+   ]
+  },
+  "source": {
+   "ability": "Pulse Jet",
+   "text": "In your Movement phase, when this unit is **selected to move**, if this unit is **unengaged**, this unit can make a **pulse jet move**."
+  },
+  "key": "14bb1393497f9d8d"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-who",
+  "where": "shooty · Wazdakka Gutsmek · Shokk Attack Engine",
+  "judgement": {
+   "who": "Throttlerokkit Shokka Engine",
+   "models": [
+    "1× Wazdakka Gutsmek"
+   ]
+  },
+  "source": {
+   "ability": "Shokk Attack Engine",
+   "text": "In your Command phase, if this unit is **unengaged**, you can place this unit in **strategic reserves**."
+  },
+  "key": "b208367058752c0e"
+ }
+]

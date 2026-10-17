@@ -7,7 +7,7 @@
 // Usage: node verify/render.js   (needs a built index.html; NODE_PATH=$(npm root -g) for playwright)
 // VERIFY_WIDTH=320 checks a small phone (snapshots and helpers come from the run at 390).
 const path = require('path'), fs = require('fs');
-const { ROOT, normText, serve, writeJSON } = require('./lib');
+const { ROOT, normText, serve, writeJSON, sha, loadData } = require('./lib');
 const { chromium } = require('playwright');
 
 // app-written text, by where the app puts it
@@ -23,7 +23,12 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
   const pageErrors = [];
   page.on('pageerror', e => pageErrors.push(e.message));
   // only the app's own files and its web fonts (the layout checks need the real fonts' widths)
-  await page.route(/^https?:\/\/(?!127\.0\.0\.1|fonts\.googleapis\.com|fonts\.gstatic\.com)/, r => r.abort());
+  await page.route(/^https?:\/\/(?!127\.0\.0\.1)/, r => r.abort());   // the app ships its own fonts
+  // verified.js is the result of the last gate run (this one writes it when it ends): a fixed stand-in, as if
+  // this build passed, so the screens and their snapshots do not depend on how the previous run went
+  const build = sha(fs.readFileSync(path.join(ROOT, 'app.html'), 'utf8') + fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8')).slice(0, 10);
+  const stub = { ok:true, build, data:loadData().version, date:'(date of the check)', checks:[{ label:'(checks)', detail:'(as listed by verify/run.js)' }], sources:[{ label:'(sources)', detail:'(as listed by verify/run.js)' }] };
+  await page.route(/\/verified\.js(\?|$)/, r => r.fulfill({ contentType:'application/javascript', body:'window.WH_VERIFIED = ' + JSON.stringify(stub) + ';' }));
   await page.goto(site.url + 'index.html');
   await page.evaluate(() => document.fonts.ready);
   await page.evaluate(() => { localStorage.clear(); sessionStorage.clear(); });
@@ -32,15 +37,17 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
   const failures = [], helpers = new Map(), counts = {};
   const fail = (check, army, where, detail) => failures.push({ check, army, where, detail });
   const armies = await page.evaluate(() => WH_DATA.armies.map(a => ({ id:a.id, units:a.units.map(u => u.id) })));
+  // a fresh folder each run, so a list that left the app leaves no old snapshot behind
+  if(main) fs.rmSync(path.join(ROOT, 'verify/out/snapshots'), { recursive:true, force:true });
   fs.mkdirSync(path.join(ROOT, 'verify/out/snapshots'), { recursive:true });
 
   for(const a of armies){
     const snap = [];
     // one screen: render it, open every fold, keep its text and its helpers
-    const take = async (label, fn) => {
-      const r = await page.evaluate(([fn, sel]) => {
+    const take = async (label, fn, folded) => {
+      const r = await page.evaluate(([fn, sel, folded]) => {
         (0, eval)(fn)();
-        document.querySelectorAll('#view details').forEach(d => d.open = true);
+        if(!folded) document.querySelectorAll('#view details').forEach(d => d.open = true);
         const host = $('#sheetHost').hidden ? $('#view') : $('#sheetIn');
         const found = [...host.querySelectorAll(sel.join(','))].filter(el => !el.parentElement.closest(sel.join(',')));
         const hs = found.map(el => ({ cls:el.className, text:el.innerText, refs:[...el.querySelectorAll('[data-rule],[data-strat],[data-ability],[data-enh],[data-unit]')]
@@ -51,7 +58,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
             : Object.entries(x.dataset).filter(([k]) => ['rule','strat','ability','enh','kw'].includes(k)).map(([k, v]) => k + ':' + v)[0]);
         return { title:$('#top').innerText.replace(/\s+/g, ' ').trim(), text:host.innerText, hs, links, overflow:document.documentElement.scrollWidth - innerWidth,
           bigIcons:[...document.querySelectorAll('#top svg, #view svg, #sheetIn svg, #subbar svg, #bbar svg')].filter(x => x.getBoundingClientRect().width > 40 || x.getBoundingClientRect().height > 40).map(x => (x.getAttribute('class') || '') + ' ' + ((x.querySelector('use') || {}).getAttribute ? x.querySelector('use').getAttribute('href') : '') + ' in .' + x.parentElement.className).slice(0, 3), tabs:document.querySelectorAll('#bbar .tabs button').length === 5 };
-      }, [String(fn), HELPER_SEL]);
+      }, [String(fn), HELPER_SEL, !!folded]);
       if(r.overflow > 0) fail('no-sideways-scroll', a.id, label, 'the page is ' + r.overflow + 'px wider than the phone');
       if(r.bigIcons.length) fail('icon-size', a.id, label, 'icons drawn over 40px (no size set): ' + r.bigIcons.join(', '));
       if(label !== 'home' && !r.tabs) fail('tabs', a.id, label, 'no tab bar');
@@ -68,12 +75,13 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     };
     const links = new Set();
     const screen = async (s, extra) => {
-      const r = await take(s + (extra ? ' ' + JSON.stringify(extra) : ''), `() => { hideSheet(); ${extra ? `openStrats.clear(); allStratagems().forEach(x => openStrats.add(x.id));` : ''} go({ s:'${s}', army:'${a.id}' }); }`);
+      const r = await take(s + (extra ? ' ' + JSON.stringify(extra) : ''), `() => { hideSheet(); openStrats.clear(); ${extra && extra.open ? `allStratagems().forEach(x => openStrats.add(x.id));` : ''} go({ s:'${s}', army:'${a.id}' }); }`, extra && extra.folded);
       r.links.forEach(l => links.add(l));
     };
     if(a === armies[0]) await take('home', `() => { hideSheet(); go({ s:'home' }); }`);
     for(const s of ['army','pregame','units','ranged','melee','abilities','rules','bases']) await screen(s);
-    await screen('strats', { open:true });   // every stratagem, unfolded
+    await screen('strats', { folded:true });   // every stratagem folded: its one-line gist, timing and users
+    await screen('strats', { open:true });     // every stratagem, unfolded
     for(const u of a.units){
       const r = await take('unit ' + u, `() => { hideSheet(); go({ s:'unit', army:'${a.id}', unit:'${u}' }); }`);
       r.links.forEach(l => links.add(l));

@@ -1,0 +1,9 @@
+[
+ {
+  "key": "0c4b1ac13ac744fd",
+  "where": "screenPregame",
+  "verdict": "ok",
+  "why": "Re-ran against the live code (identical to the todo item). Only two lines differ from r6. (1) Every round abilities now use `!/start of the first battle round/i`. Injected test: 'At the start of each battle round (excluding the first battle round)…' now shows in Every round. 'At the start of the first battle round…' (both the ability and the army rule) stays in First round only. Da Boss and the injected 'start of each battle round' rule are still in Every round. So nothing is dropped and nothing is doubled. (2) Transports: the injected capacity text with a bullet and an italic line now reads 'This model has a transport capacity of 12 ORKS INFANTRY models. Each GRETCHIN model takes half a space. It cannot transport MEGA ARMOUR models.' There is no '.;' and no stray '*', the bold inside the italic line is kept, and the text is otherwise word for word. The real list's output is unchanged: Reserves = 20.01/20.03 wording, Deep Strike 285 pts, Da Boss, War Cry, Fix Dat Armour Up, Boss' Ammo Runt, Bomb Squig ×2 units, Insane Bravery. The earlier injected tests still pass: Read Mission Objectives rule and ability, deployment zone not matched, deployed/during deployment matched, a detachment with no enhancements, '(upgrade)'. Not a problem: a one-letter italic line, or one ending in bold ('…**X***'), would keep its asterisks because of the regex's `[^*\\n]` ends. That is display only.",
+  "fix": null
+ }
+]

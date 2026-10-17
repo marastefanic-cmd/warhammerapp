@@ -1,0 +1,8 @@
+[
+ {
+  "key": "b8de0f5f89f76da3",
+  "verdict": "ok",
+  "why": "EFFECT: \"Your unit can make a normal move of up to 6\", and must end that move within range of an objective.\" / \"Your unit is not eligible to declare a charge until the end of the turn.\" The gist keeps the move optional (\"can make\"), the 6\" limit and the end-within-range-of-an-objective requirement (\"ending within range\"). The charge ban stays a separate clause, not tied to the move. Trigger \"After shooting\" = \"when ... has shot\". Nothing added or dropped.",
+  "fix": null
+ }
+]

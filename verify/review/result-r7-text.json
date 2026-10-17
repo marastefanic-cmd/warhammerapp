@@ -1,0 +1,20 @@
+[
+ {
+  "key": "b59592e3e5a8ea08",
+  "verdict": "ok",
+  "why": "Source (New Recruit, shooty.txt line 234): the table heading reads \"Throttlerokkit Shokka Engine Description\" above Turbo Engine, Pulse Jet and Shokk Attack Engine. Full Throttle (line 232) calls them \"one Throttlerokkit Shokka Engine ability\". \"Throttlerokkit Shokka Engine\" is that heading, copied with nothing added; dropping \"pick one\" removed the app's own summary. models \"1× Wazdakka Gutsmek\" matches \"1x Wazdakka Gutsmek\" (line 219).",
+  "fix": null
+ },
+ {
+  "key": "14bb1393497f9d8d",
+  "verdict": "ok",
+  "why": "Source (New Recruit, shooty.txt line 234): the table heading reads \"Throttlerokkit Shokka Engine Description\" above Turbo Engine, Pulse Jet and Shokk Attack Engine. Full Throttle (line 232) calls them \"one Throttlerokkit Shokka Engine ability\". \"Throttlerokkit Shokka Engine\" is that heading, copied with nothing added; dropping \"pick one\" removed the app's own summary. models \"1× Wazdakka Gutsmek\" matches \"1x Wazdakka Gutsmek\" (line 219).",
+  "fix": null
+ },
+ {
+  "key": "b208367058752c0e",
+  "verdict": "ok",
+  "why": "Source (New Recruit, shooty.txt line 234): the table heading reads \"Throttlerokkit Shokka Engine Description\" above Turbo Engine, Pulse Jet and Shokk Attack Engine. Full Throttle (line 232) calls them \"one Throttlerokkit Shokka Engine ability\". \"Throttlerokkit Shokka Engine\" is that heading, copied with nothing added; dropping \"pick one\" removed the app's own summary. models \"1× Wazdakka Gutsmek\" matches \"1x Wazdakka Gutsmek\" (line 219).",
+  "fix": null
+ }
+]

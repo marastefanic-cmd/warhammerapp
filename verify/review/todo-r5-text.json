@@ -1,0 +1,191 @@
+[
+ {
+  "army": "shooty",
+  "kind": "unit-footnote",
+  "where": "shooty · Big Mek Dakkarig",
+  "judgement": {
+   "kind": "ranged",
+   "weapon": "Blitzkannon",
+   "set": {
+    "A": "+6"
+   },
+   "when": "vs non-MONSTER/VEHICLE targets",
+   "note": "in your Shooting phase",
+   "from": "Blitz Dem Gitz!"
+  },
+  "source": {
+   "ability": "Blitz Dem Gitz!",
+   "text": "In your Shooting phase, if this unit’s Blitzkannon weapon targets a unit (excluding **MONSTER/VEHICLE** units), that weapon has +6 **A**."
+  },
+  "key": "f8b59aa5f0c8fa00"
+ },
+ {
+  "army": "shooty",
+  "kind": "strat-gist",
+  "where": "Dread Mob · Crazed Rampage",
+  "judgement": {
+   "gist": "A model of your unit destroyed before your unit is selected to fight: on a 4+ it stays until your unit has fought or the phase ends."
+  },
+  "source": {
+   "stratagem": "Crazed Rampage",
+   "text": "WHEN: Fight phase, when an enemy unit targets a friendly **ORKS WALKER** unit (excluding **TITANIC** units).\nTARGET: That **ORKS WALKER** unit.\nEFFECT: When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +3 to the result if your unit has ~~**DEFF DREAD**~~:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
+  },
+  "key": "0ed03785b23c144b"
+ },
+ {
+  "army": "shooty",
+  "kind": "strat-gist",
+  "where": "Shoota Boyz · Kustom Dakka",
+  "judgement": {
+   "gist": "Your unit’s ranged attacks have +1 to wound rolls against a unit (excluding MONSTER/VEHICLE units)."
+  },
+  "source": {
+   "stratagem": "Kustom Dakka",
+   "text": "WHEN: Your Shooting phase, when a friendly **ORKS INFANTRY** unit is **selected to shoot**.\nTARGET: That **ORKS INFANTRY** unit.\nEFFECT: Your unit’s ranged attacks that target a unit (excluding **MONSTER**/**VEHICLE** units) have +1 to **wound rolls**."
+  },
+  "key": "4de6f1f3c2ad0147"
+ },
+ {
+  "army": "shooty",
+  "kind": "strat-gist",
+  "where": "Wreckas · Grab It",
+  "judgement": {
+   "gist": "After shooting: a normal move of up to 6\" that must end within range of an objective; then not eligible to declare a charge this turn."
+  },
+  "source": {
+   "stratagem": "Grab It",
+   "text": "WHEN: Your Shooting phase, when a friendly **unengaged BREAKA BOYZ**/**FLASH GITZ**/**TANKBUSTAS** unit has shot.\nTARGET: That **BREAKA BOYZ**/**FLASH GITZ**/**TANKBUSTAS** unit.\nEFFECT: - Your unit can make a **normal move** of up to 6\", and must end that move within range of an **objective**.\n- Your unit is not **eligible to declare a charge** until the end of the turn."
+  },
+  "key": "384a3d351d56fd8c"
+ },
+ {
+  "army": "shooty",
+  "kind": "strat-gist",
+  "where": "Wreckas · Gun-crazy Show-offs",
+  "judgement": {
+   "gist": "After an enemy unit has shot and hit yours: your unit shoots using normal shooting, but only at that enemy unit."
+  },
+  "source": {
+   "stratagem": "Gun-crazy Show-offs",
+   "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit has shot.\nTARGET: One friendly **FLASH GITZ**/**TANKBUSTAS** unit hit by those attacks.\nEFFECT: Your unit shoots using **normal shooting**, but while doing so your unit can only target that enemy unit."
+  },
+  "key": "fcc098e5fb2c4ac7"
+ },
+ {
+  "army": "core",
+  "kind": "strat-gist",
+  "where": "Core · Command Re-roll",
+  "judgement": {
+   "gist": "Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…"
+  },
+  "source": {
+   "stratagem": "Command Re-roll",
+   "text": "WHEN: Any phase, just after you make one of the following rolls for a friendly unit or model:\n- **Advance roll**\n- **Charge roll**\n- **Damage roll**\n- **Hazard roll**\n- **Hit roll**\n- **Save roll**\n- **Wound roll**\n- A roll to determine the number of attacks generated with a weapon.\nTARGET: That unit or model.\nEFFECT: You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding **charge rolls**, which you must re-roll in full)."
+  },
+  "key": "b0c4ef2345da5aaa"
+ },
+ {
+  "army": "core",
+  "kind": "strat-gist",
+  "where": "Core · Insane Bravery",
+  "judgement": {
+   "gist": "The battle-shock roll you are about to make for your unit is automatically successful."
+  },
+  "source": {
+   "stratagem": "Insane Bravery",
+   "text": "WHEN: Battle-shock step of your Command phase, just before you make a **battle-shock roll** for a friendly unit.\nTARGET: That unit.\nEFFECT: That **battle-shock roll** is automatically successful.\nRESTRICTIONS: You cannot use this **stratagem** more than once per battle."
+  },
+  "key": "a63f2322eb83abb4"
+ },
+ {
+  "army": "core",
+  "kind": "strat-gist",
+  "where": "Core · Explosives",
+  "judgement": {
+   "gist": "One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8\", 1 mortal wound for each 4+…"
+  },
+  "source": {
+   "stratagem": "Explosives",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One friendly **unengaged** **EXPLOSIVES/GRENADES** unit that is **eligible to shoot** and did not make an **advance move** this turn.\nEFFECT: Resolve the following sequence:\n- 1. Select one **EXPLOSIVES/GRENADES** model in your unit.\n- 2. Select one **unengaged** enemy unit within 8\" of and **visible** to that model.\n- 3. Roll six D6: for each 4+, that enemy unit suffers 1 **mortal wound** (06.02)."
+  },
+  "key": "b9ec4a286394af8d"
+ },
+ {
+  "army": "core",
+  "kind": "strat-gist",
+  "where": "Core · Crushing Impact",
+  "judgement": {
+   "gist": "After the charge: D6 equal to an engaged model’s T; each 5+ is 1 mortal wound to the engaged enemy unit, each 1 is 1 to yours…"
+  },
+  "source": {
+   "stratagem": "Crushing Impact",
+   "text": "WHEN: Your Charge phase, just after a friendly **MONSTER/VEHICLE** unit ends a **charge move**.\nTARGET: That **MONSTER/VEHICLE** unit.\nEFFECT: Resolve the following sequence:\n- 1. Select one enemy unit **engaged** with your unit.\n- 2. Select one model in your unit **engaged** with that enemy unit.\n- 3. Roll a number of D6 equal to the **T** characteristic of that model: for each 1, your unit suffers 1 **mortal wound**; for each 5+, that enemy unit suffers 1 **mortal wound** (to a maximum of 6 **mortal wounds** per unit)."
+  },
+  "key": "316ab7d54092cc2e"
+ },
+ {
+  "army": "core",
+  "kind": "strat-gist",
+  "where": "Core · Rapid Ingress",
+  "judgement": {
+   "gist": "Your unit in strategic reserves makes an ingress move (not in the first battle round)."
+  },
+  "source": {
+   "stratagem": "Rapid Ingress",
+   "text": "WHEN: End of your opponent’s Movement phase.\nTARGET: One friendly unit that is in **strategic reserves** (excluding **AIRCRAFT**).\nEFFECT: Your unit makes an **ingress move** (20.04).\nRESTRICTIONS: You cannot use this **stratagem** during the first battle round."
+  },
+  "key": "3a6f949db7ee767f"
+ },
+ {
+  "army": "core",
+  "kind": "strat-gist",
+  "where": "Core · Smokescreen",
+  "judgement": {
+   "gist": "Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…"
+  },
+  "source": {
+   "stratagem": "Smokescreen",
+   "text": "WHEN: Start of your opponent’s Shooting phase.\nTARGET: One friendly **SMOKE** unit.\nEFFECT: Until the end of the phase, each time an attack targets either your **SMOKE** unit, or a unit that is not **fully visible** to the attacking model because of one or more models in your **SMOKE** unit, the target has the **benefit of cover** against that attack (13.08)."
+  },
+  "key": "f26634634e911cf0"
+ },
+ {
+  "army": "core",
+  "kind": "strat-gist",
+  "where": "Core · Heroic Intervention",
+  "judgement": {
+   "gist": "Your unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…"
+  },
+  "source": {
+   "stratagem": "Heroic Intervention",
+   "text": "WHEN: End of your opponent’s Charge phase.\nTARGET: One friendly **unengaged** unit within 12\" of one or more enemy units. You can only select a **VEHICLE** unit if it is a **CHARACTER/WALKER** unit.\nEFFECT: **Resolve a charge** with your unit (11.02). While doing so, before making the **charge roll**, you must select one of the following modes:\n- **Leap to Defend:** When selecting **charge targets**, you can only select enemy units that made a **charge move** this phase and are within the **maximum distance**.\n- **Into the Fray (+1CP):** When making the **charge roll**, if the result is greater than 6 (after modifiers), change it to 6. When selecting **charge targets**, you can select any enemy units that are within 6\" of your unit and within the **maximum distance**."
+  },
+  "key": "8ea498ada59595d1"
+ },
+ {
+  "army": "core",
+  "kind": "strat-gist",
+  "where": "Core · Counteroffensive",
+  "judgement": {
+   "gist": "Your unit has Fights First until the end of the phase and must be the next unit you select to fight."
+  },
+  "source": {
+   "stratagem": "Counteroffensive",
+   "text": "WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.\nTARGET: One friendly unit that is **eligible to fight**.\nEFFECT: Until the end of the phase, your unit has the **Fights First** ability and it must be the next unit you **select to fight** (12.04)."
+  },
+  "key": "1b13d688b61b3061"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^support units?$/i",
+  "judgement": {
+   "opens": "Support"
+  },
+  "source": {
+   "rule": "Support",
+   "text": "Before the battle, in the Muster Armies step, for each **leader** and **support** unit in your army, you can select one friendly **bodyguard** unit that unit can **lead**. That unit will then **lead** that **bodyguard** unit for the battle and form an **attached** unit with it.\nUnless otherwise stat"
+  },
+  "key": "267be2948ab59262"
+ }
+]

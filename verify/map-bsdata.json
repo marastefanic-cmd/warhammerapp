@@ -1,22 +1,11 @@
 {
-  "_about": "How data.js names map to BSData (wh40k-11e) where they are not the same. Units are found by exact name (after nn() normalisation); only differences go here. units[\"army/unitId\"]: entry/leadsEntry = BSData root entry names, models = {app model name: BSData model entry}, gear = {app gear name: BSData wargear entry}.",
-  "catalogues": {
-    "orks": "Xenos - Orks",
-    "imperial-knights": "Imperium - Imperial Knights",
-    "world-eaters": "Chaos - World Eaters",
-    "thousand-sons": "Chaos - Thousand Sons",
-    "tyranids": "Xenos - Tyranids"
-  },
-  "battleSize": {
-    "Strike Force": "2. Strike Force (2000 Point limit)"
-  },
-  "detachments": {},
-  "units": {
-    "oioioi/sorcerer-terminator": {
-      "_why": "New Recruit lists the hellfyre missile racks for the unit; the models carrying them are plain Scarab Occult Terminators",
-      "models": {
-        "Scarab Occult Terminator w/ hellfyre missile rack": "Scarab Occult Terminator"
-      }
-    }
-  }
+ "_about": "How data.js names map to BSData (wh40k-11e) where they are not the same. Units are found by exact name (after nn() normalisation); only differences go here. units[\"army/unitId\"]: entry/leadsEntry = BSData root entry names, models = {app model name: BSData model entry}, gear = {app gear name: BSData wargear entry}.",
+ "catalogues": {
+  "orks": "Xenos - Orks"
+ },
+ "battleSize": {
+  "Strike Force": "2. Strike Force (2000 Point limit)"
+ },
+ "detachments": {},
+ "units": {}
 }

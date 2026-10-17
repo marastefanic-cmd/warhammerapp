@@ -81,10 +81,9 @@ function writeVerified(ok){
     { label:'The app’s own notes:', detail:(help.approved || 0) + ' footnotes, reminders, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off.' },
     { label:'Every screen:', detail:screens + ' screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search.' }
   ];
-  const nr = { cooking:'Cooking', 'purge-freeblade':'Purge Freeblade', hurrdurr:'Hurrdurr', oioioi:'oioioi', nidzillas:'Nidzillas', shooty:'Me shooty yer’ booty' };
   const gw = fs.existsSync(path.join(ROOT, 'verify/.cache/gw')) ? fs.readdirSync(path.join(ROOT, 'verify/.cache/gw')).filter(f => f.endsWith('.pdf')).map(f => f.replace(/^eng_(\d\d-\d\d_)?|-[a-z0-9]{10}-[a-z0-9]{10}\.pdf$/g, '').replace(/_/g, ' ')) : [];
   const sources = [
-    { label:'New Recruit:', detail:D.armies.map(a => (nr[a.id] || a.name)).join(', ') + ' (your PDFs).' },
+    { label:'New Recruit:', detail:D.armies.map(a => a.name).join(', ') + ' (your PDF' + (D.armies.length > 1 ? 's' : '') + ').' },
     { label:'BSData:', detail:'wh40k-11e, commit ' + (fs.readFileSync(path.join(ROOT, 'verify/fetch.sh'), 'utf8').match(/BSDATA_COMMIT=([0-9a-f]+)/) || [, '?'])[1] + '.' },
     { label:'Games Workshop:', detail:gw.join('; ') + '.' },
     { label:'Wahapedia:', detail:'faction pages for Orks (no GW Faction Pack yet) and the errata and FAQs it lists.' }

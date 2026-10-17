@@ -7,6 +7,7 @@
 // summarises, so changing either one voids its approval: it must be checked again.
 //
 // node verify/helpers.js            list items without an approval (verify/out/helpers-todo.json)
+// node verify/helpers.js --prune    also drop approvals of judgements that no longer exist
 // approvals live in verify/approvals.json: { key: { verdict:'ok', by, at, why } }
 const fs = require('fs'), path = require('path');
 const { ROOT, key, loadData, readJSON, writeJSON } = require('./lib');
@@ -126,6 +127,8 @@ if(require.main === module){
   const uniq = new Map(list.map(x => [x.key, x]));
   const todo = [...uniq.values()].filter(x => !approvals[x.key] || approvals[x.key].verdict !== 'ok');
   const stale = Object.keys(approvals).filter(k => !uniq.has(k));
+  // --prune: drop approvals of judgements that no longer exist (a removed list, a rewritten text); git keeps them
+  if(process.argv.includes('--prune') && stale.length){ for(const k of stale) delete approvals[k]; writeJSON(path.join(ROOT, 'verify/approvals.json'), approvals); console.log('pruned ' + stale.length + ' stale approvals'); stale.length = 0; }
   writeJSON(path.join(ROOT, 'verify/out/helpers-todo.json'), todo);
   writeJSON(path.join(ROOT, 'verify/out/helpers-all.json'), [...uniq.values()]);
   writeJSON(path.join(ROOT, 'verify/out/helpers.json.summary'), { items:uniq.size, approved:uniq.size - todo.length, todo:todo.length, stale:stale.length });

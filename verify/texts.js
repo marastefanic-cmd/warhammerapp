@@ -94,16 +94,11 @@ function must(f, hint) {
 }
 const GWFILES = {
   core: 'eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.pdf',
-  uru: 'eng_wh40k_coreandkey_universal_rules_updates-lu3grocned-rphh78bl6k.pdf',
-  'pack:imperial-knights': 'eng_wh40k_faction_pack_imperial_knights-n1irjnjygs-w8jfnk8kdn.pdf',
-  'pack:world-eaters': 'eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.pdf',
-  'pack:thousand-sons': 'eng_30-09_wh40k_faction_pack_thousand_sons-4lioijwxdj-otjrinzt8c.pdf',
-  'pack:tyranids': 'eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.pdf'
+  uru: 'eng_wh40k_coreandkey_universal_rules_updates-lu3grocned-rphh78bl6k.pdf'
+  // a faction with a GW Faction Pack adds 'pack:<faction>': '<file>.pdf' (Orks have none: Wahapedia is the source)
 };
 const GWLABEL = {
-  core: 'GW Core Rules (11th edition, 01/06/2026)', uru: 'GW Universal Rules Updates v1.1',
-  'pack:imperial-knights': 'GW Faction Pack Imperial Knights v1.2', 'pack:world-eaters': 'GW Faction Pack World Eaters v1.3',
-  'pack:thousand-sons': 'GW Faction Pack Thousand Sons v1.3', 'pack:tyranids': 'GW Faction Pack Tyranids v1.3'
+  core: 'GW Core Rules (11th edition, 01/06/2026)', uru: 'GW Universal Rules Updates v1.1'
 };
 const DOCS = {};
 
@@ -339,7 +334,7 @@ function classify(line) {
 }
 // (Wahapedia's core rules page also carries the rules-appendix passages the app labels "(app)")
 const WAHA_CORE = ['wahahtml:core'];
-const GW_ALL = ['core', 'uru', 'pack:imperial-knights', 'pack:world-eaters', 'pack:thousand-sons', 'pack:tyranids'];
+const GW_ALL = ['core', 'uru'].concat(Object.keys(GWFILES).filter(k => k.startsWith('pack:')));
 
 // check one line's body against docs: the whole line, word for word (after normalisation)
 //  - fallback "label colon": the app writes a heading or a table cell that the source prints on its own as

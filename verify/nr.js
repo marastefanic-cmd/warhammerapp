@@ -22,7 +22,6 @@ const path = require('path');
 const vm = require('vm');
 
 const ROOT = path.resolve(__dirname, '..');
-const ARMIES = ['cooking', 'shooty', 'purge-freeblade', 'hurrdurr', 'oioioi', 'nidzillas'];
 
 const NORMALISATION = [
   'Quotes: ’ ‘ → \' and “ ” → "; non-breaking hyphen (U+2011) → -; × → x (model counts, stat-row counts, base sizes).',
@@ -629,10 +628,15 @@ function compareArmy(D, A, nr, out, srcFile) {
   const used = A.units.reduce((s, u) => s + u.pts * (u.copies || 1), 0);
   cmp('army', null, 'pointsUsed (sum of unit pts × copies)', used, nr.pts, 1);
 
+  // two units New Recruit prints alike, page for page (two Mek + Tankbustas), are one app unit
+  // with copies 2, as "Gretchin (x3)" is
+  const sig = u => JSON.stringify(Object.assign({}, u, { page: null, copies: null })).replace(/\[\d+\]/g, '');   // "Supporting: Tankbustas[1]" / "[2]"
+  const units = [];
+  for (const nu of nr.units) { const twin = units.find(x => sig(x) === sig(nu)); if (twin) twin.copies += nu.copies; else units.push(Object.assign({}, nu)); }
   // match NR units to app units: name (NR prints it in capitals) + points, then the enhancement
   const pool = [...A.units];
   const pairs = [];
-  for (const nu of nr.units) {
+  for (const nu of units) {
     const enh = nu.models.map(m => nrOptions(m.options, enhNames).enhancement).find(Boolean) || null;
     let c = pool.filter(u => nm(u.name).toUpperCase() === nm(nu.header));
     if (c.length > 1 && c.some(u => u.pts === nu.pts)) c = c.filter(u => u.pts === nu.pts);
@@ -653,11 +657,17 @@ function compareArmy(D, A, nr, out, srcFile) {
     const first = nrOptions((nu.models[0] || { options: [] }).options, enhNames);
     const modelSum = ms => ms.reduce((s, m) => s + (+(/^(\d+)/.exec(nm(m)) || [0, 0])[1]), 0);
     if (first.leads) {
-      const bg = roster.find(r => !r.used && lc(r.name) === lc(first.leads) && lc(joinLines(r.options)).includes(lc(nu.header)));
-      const ld = bg && roster.find(r => !r.used && lc(r.name) === lc(nu.header) && r.pts === nu.pts - bg.pts);
+      // one leader line and one bodyguard line per copy
+      let bg = null, ld = null, found = 0;
+      for (let k = 0; k < nu.copies; k++) {
+        const b2 = roster.find(r => !r.used && lc(r.name) === lc(first.leads) && lc(joinLines(r.options)).includes(lc(nu.header)));
+        const l2 = b2 && roster.find(r => !r.used && lc(r.name) === lc(nu.header) && r.pts === nu.pts - b2.pts);
+        if (!b2 || !l2) break;
+        b2.used = l2.used = true; bg = bg || b2; ld = ld || l2; found++;
+      }
       chk('roster');
       if (!bg || !ld) { fail(unit, 'roster (leader + bodyguard lines)', au.ptsNote || null, 'no roster lines for ' + nu.header + ' leading ' + first.leads + ' (' + nu.pts + ' pts together)', 1); continue; }
-      bg.used = ld.used = true;
+      cmp('roster', unit, 'copies (leader + bodyguard roster lines)', au.copies || 1, found, 1);
       cmp('pts', unit, 'ptsNote', au.ptsNote ? nm(au.ptsNote) : null, ld.pts + ' + ' + nm(bg.name) + ' ' + bg.pts, 1);
       cmp('roster', unit, 'name', nm(au.name), nm(ld.name), 1);
       cmp('roster', unit, 'role', au.role, ld.role, 1);
@@ -832,6 +842,9 @@ function compareUnit(nu, au, enhNames, { fail, chk, cmp, armyRuleNames = new Set
   for (const r of appRules) { chk('rules'); if (!nrRules.some(x => lc(x) === lc(r))) fail('rules', r, null); }
 }
 
+// the same readings for verify/import-nr.js, so the importer writes what this file checks
+Object.assign(module.exports, { nrOptions, nrWeapon, nrStatName, nrAbility, nrDetachments, splitItems, nm, lc, q, cellV, appText, textEq, compareArmy });
+
 // ---------------------------------------------------------------- main
 function main(args) {
   const ctx = { window: {} }; vm.createContext(ctx);
@@ -844,15 +857,14 @@ function main(args) {
     return 0;
   }
   const out = { source: 'verify/sources/nr/<armyId>.txt (pdftotext -layout of the owner\'s New Recruit PDFs)', normalisation: NORMALISATION, checked: {}, failures: [], deviations: 0, parseNotes: [] };
-  for (const id of ARMIES) {
-    const A = D.armies.find(x => x.id === id);
-    const file = path.join(args.sources, id + '.txt');
-    if (!A) { out.failures.push({ army: id, unit: null, field: 'army', app: null, source: 'present', where: path.relative(ROOT, file) }); continue; }
+  // every army in data.js, each against its own PDF text (verify/sources/nr/<armyId>.txt)
+  for (const A of D.armies) {
+    const id = A.id, file = path.join(args.sources, id + '.txt');
+    if (!fs.existsSync(file)) { out.failures.push({ army: id, unit: null, field: 'army', app: 'present', source: null, where: 'no New Recruit PDF for this army (' + path.relative(ROOT, file) + ')' }); continue; }
     const nr = parseNR(file, enhOf(A));
     for (const u of nr.units) for (const n of u.notes) out.parseNotes.push(id + ' / ' + u.header + ': ' + n);
     compareArmy(D, A, nr, out, file);
   }
-  for (const A of D.armies) if (!ARMIES.includes(A.id)) out.failures.push({ army: A.id, unit: null, field: 'army', app: 'present', source: null, where: 'no New Recruit PDF for this army' });
 
   // declared deviations: an exact match turns a failure into an accepted deviation; an unused one fails
   let devs = [];
