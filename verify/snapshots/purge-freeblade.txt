@@ -31,18 +31,15 @@ Freeblade Company (3 DP)
 Disposition: Purge the Foe
 POINTS
 2000 / 2000 · Strike Force
-BEFORE DECLARING FORMATIONS
+READ MISSION OBJECTIVES STEP
 RULES
 Code Chivalric · Imperial Knights army rule
 DECLARE BATTLE FORMATIONS
 RESERVES
-Strategic reserves: up to 1000 pts (half the 2000 limit), counting units embarked within a TRANSPORT you place there. Unless a rule says otherwise, they arrive from battle round 2, and any that have not arrived by the end of round 3 are destroyed (not repositioned units, nor units embarked within a TRANSPORT that arrived).
+Strategic reserves: unless otherwise stated, up to 1000 pts (50% of the 2000 limit), counting units embarked within a TRANSPORT you place there. Unless otherwise stated, they can only arrive from the second battle round onwards, and any that have not arrived by the end of round 3 are destroyed (not repositioned units, nor units embarked within a TRANSPORT that arrived).
 ONCE PER BATTLE
 STRATA­GEMS
 1CP Insane Bravery
-AGREE WITH YOUR OPPONENT
-
-Full Tilt Do your Knight Destriers add 9" (the evident intent) or 6" (the letter: their keyword is KNIGHT DESTRIER, the pack says DESTRIER)?
 
 Gathered from this list’s datasheets and rules; each line opens the full text.
 
@@ -92,7 +89,7 @@ Knight Destrier
 Knight Warden
 Warlord
 
-Shoots with all of these.
+Can shoot with one or more of these.
 
 Avenger gatling cannon
 36"
@@ -131,7 +128,7 @@ No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shootin
 Knight Paladin
 ×2 units
 
-Shoots with all of these.
+Can shoot with one or more of these.
 
 Questoris heavy stubber
 36"
@@ -170,7 +167,7 @@ Visible target within 12" with models on ground level (not AIRCRAFT): BS improve
 No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) (1CP Strength from Exile)
 Knight Errant
 
-Shoots with all of these.
+Can shoot with one or more of these.
 
 Thermal cannon
 24"
@@ -202,7 +199,7 @@ No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shootin
 Knight Destrier
 ×2 units
 
-Shoots with all of these.
+Can shoot with one or more of these.
 
 Questoris heavy stubber
 36"
@@ -461,7 +458,7 @@ saved
 Otherwise
 the model loses D wounds
 
-Allocation: a group of models with a wounded model takes attacks first; CHARACTER models come after all others.
+Allocation order (05.03): a non-CHARACTER group containing a model that has lost one or more wounds must be first; no CHARACTER group can be earlier than a non-CHARACTER group; CHARACTER groups containing a model that has lost one or more wounds must be earlier than CHARACTER groups containing no wounded models.
 
 ARMY RULES
 Code Chivalric
@@ -559,8 +556,6 @@ Lethal Hits
 Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
 
 Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
-
-App note, not rules text: the suffix “: non-MONSTER/VEHICLE” reads as applying only against targets that are not MONSTER or VEHICLE units.
 
 IN THIS ARMYKnight Paladin
 
@@ -702,10 +697,6 @@ TARGETOne IMPERIAL KNIGHTS unit from your army.
 EFFECT
 
 Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6" to the Move characteristic of models in your unit, or 9" instead if your unit is an ARMIGER or DESTRIER unit.
-
-GW’s Faction Pack prints DESTRIER as a keyword, but no Imperial Knights datasheet has it: the Knight Destrier’s keyword is KNIGHT DESTRIER (Wahapedia strikes DESTRIER through for this reason). By the letter, your Knight Destriers add 6"; the evident intent is that they add 9". Agree it with your opponent before the game.
-
-Agree with your opponent: Do your Knight Destriers add 9" (the evident intent) or 6" (the letter: their keyword is KNIGHT DESTRIER, the pack says DESTRIER)?
 
 USED BYany unit
 
@@ -983,10 +974,6 @@ EFFECT
 
 Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6" to the Move characteristic of models in your unit, or 9" instead if your unit is an ARMIGER or DESTRIER unit.
 
-GW’s Faction Pack prints DESTRIER as a keyword, but no Imperial Knights datasheet has it: the Knight Destrier’s keyword is KNIGHT DESTRIER (Wahapedia strikes DESTRIER through for this reason). By the letter, your Knight Destriers add 6"; the evident intent is that they add 9". Agree it with your opponent before the game.
-
-Agree with your opponent: Do your Knight Destriers add 9" (the evident intent) or 6" (the letter: their keyword is KNIGHT DESTRIER, the pack says DESTRIER)?
-
 USED BYany unit
 
 1
@@ -1051,7 +1038,7 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-2 abilities
+3 abilities
 Code Chivalric Quality 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls.
 Ram Jets
 Knight Destrier
@@ -1069,6 +1056,13 @@ Models in that unit can move through models (including MONSTER/VEHICLE models, b
 Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked.
 
 Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).
+
+UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+Knights of Legend
+Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
 
 UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
 
@@ -1174,7 +1168,7 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-4 abilities
+5 abilities
 Code Chivalric Quality 1–2 (martial valour): each time a Knight shoots or fights, re-roll one Hit roll and one Wound roll.
 Thin Their Ranks
 Knight Warden
@@ -1203,6 +1197,13 @@ Knight Destrier
 Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
 
 UNITSKnight Destrier
+
+Knights of Legend
+Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
+
+UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
 
 WHEN TARGETED
 
@@ -1313,7 +1314,15 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
+1 ability
 Code Chivalric Quality 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls.
+Knights of Legend
+Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
+
+UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
 NEXT: FIGHT ›
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
@@ -1414,7 +1423,15 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
+1 ability
 Code Chivalric Quality 1–2 (martial valour): each time a Knight shoots or fights, re-roll one Hit roll and one Wound roll.
+Knights of Legend
+Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
+
+UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
 WHEN TARGETED
 
 Every unit: Feel No Pain 6+ · 5+ invulnerable save against ranged attacks only
@@ -1482,10 +1499,6 @@ TARGETOne IMPERIAL KNIGHTS unit from your army.
 EFFECT
 
 Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6" to the Move characteristic of models in your unit, or 9" instead if your unit is an ARMIGER or DESTRIER unit.
-
-GW’s Faction Pack prints DESTRIER as a keyword, but no Imperial Knights datasheet has it: the Knight Destrier’s keyword is KNIGHT DESTRIER (Wahapedia strikes DESTRIER through for this reason). By the letter, your Knight Destriers add 6"; the evident intent is that they add 9". Agree it with your opponent before the game.
-
-Agree with your opponent: Do your Knight Destriers add 9" (the evident intent) or 6" (the letter: their keyword is KNIGHT DESTRIER, the pack says DESTRIER)?
 
 USED BYany unit
 
@@ -1692,10 +1705,6 @@ EFFECT
 
 Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6" to the Move characteristic of models in your unit, or 9" instead if your unit is an ARMIGER or DESTRIER unit.
 
-GW’s Faction Pack prints DESTRIER as a keyword, but no Imperial Knights datasheet has it: the Knight Destrier’s keyword is KNIGHT DESTRIER (Wahapedia strikes DESTRIER through for this reason). By the letter, your Knight Destriers add 6"; the evident intent is that they add 9". Agree it with your opponent before the game.
-
-Agree with your opponent: Do your Knight Destriers add 9" (the evident intent) or 6" (the letter: their keyword is KNIGHT DESTRIER, the pack says DESTRIER)?
-
 USED BYany unit
 
 1
@@ -1742,7 +1751,7 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-2 abilities
+3 abilities
 Code Chivalric Quality 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls.
 Ram Jets
 Knight Destrier
@@ -1760,6 +1769,13 @@ Models in that unit can move through models (including MONSTER/VEHICLE models, b
 Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked.
 
 Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).
+
+UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+Knights of Legend
+Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
 
 UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
 
@@ -1847,7 +1863,7 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-4 abilities
+5 abilities
 Code Chivalric Quality 1–2 (martial valour): each time a Knight shoots or fights, re-roll one Hit roll and one Wound roll.
 Thin Their Ranks
 Knight Warden
@@ -1876,6 +1892,13 @@ Knight Destrier
 Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
 
 UNITSKnight Destrier
+
+Knights of Legend
+Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
+
+UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
 
 NEXT: YOUR CHARGE ›
 
@@ -1953,7 +1976,15 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
+1 ability
 Code Chivalric Quality 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls.
+Knights of Legend
+Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
+
+UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
 NEXT: YOUR FIGHT ›
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
@@ -2038,7 +2069,15 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
+1 ability
 Code Chivalric Quality 1–2 (martial valour): each time a Knight shoots or fights, re-roll one Hit roll and one Wound roll.
+Knights of Legend
+Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
+
+UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
 NEXT: THEIR COMMAND ›
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
@@ -2244,6 +2283,15 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
+ALSO THIS PHASE
+1 ability
+Knights of Legend
+Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
+
+UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
 NEXT: THEIR MOVEMENT ›
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
@@ -2313,6 +2361,15 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
+ALSO THIS PHASE
+1 ability
+Knights of Legend
+Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
+
+UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
 NEXT: THEIR SHOOTING ›
 
 Not shown, no unit here can use it: Fire Overwatch.
@@ -2381,6 +2438,15 @@ EFFECT
 You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
 
 USED BYany unit
+
+ALSO THIS PHASE
+1 ability
+Knights of Legend
+Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
+
+UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
 
 WHEN TARGETED
 
@@ -2469,7 +2535,15 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
+1 ability
 Code Chivalric Quality 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls.
+Knights of Legend
+Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
+
+UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
 NEXT: THEIR FIGHT ›
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
@@ -2570,7 +2644,15 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
+1 ability
 Code Chivalric Quality 1–2 (martial valour): each time a Knight shoots or fights, re-roll one Hit roll and one Wound roll.
+Knights of Legend
+Freeblade Company rule · Knight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
+IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
+
+UNITSKnight Warden, Knight Paladin, Knight Errant, Knight Destrier
+
 WHEN TARGETED
 
 Every unit: Feel No Pain 6+ · 5+ invulnerable save against ranged attacks only
@@ -2618,7 +2700,7 @@ S
 AP
 D
 
-Shoots with all of these.
+Can shoot with one or more of these.
 
 Avenger gatling cannon
 36"
@@ -2724,7 +2806,7 @@ S
 AP
 D
 
-Shoots with all of these.
+Can shoot with one or more of these.
 
 Questoris heavy stubber
 36"
@@ -2831,7 +2913,7 @@ S
 AP
 D
 
-Shoots with all of these.
+Can shoot with one or more of these.
 
 Thermal cannon
 24"
@@ -2930,7 +3012,7 @@ S
 AP
 D
 
-Shoots with all of these.
+Can shoot with one or more of these.
 
 Questoris heavy stubber
 36"
@@ -3401,10 +3483,14 @@ IN THIS ARMYKnight Warden, Knight Paladin, Knight Errant
 CORE RULE
 
 MOBILE
-INFANTRY/BEASTS/SWARM/MOBILE models can move horizontally through dense terrain features.
-Other models can move horizontally through dense terrain features provided that all sections of that terrain feature that the moving model’s base would move through are 2" or less in height.
 
-App note, not rules text: MOBILE has no rule of its own in the core rules; these are the lines of Terrain and Movement (13.06) that name it and that it changes.
+Dense:
+
+INFANTRY/BEASTS/SWARM/MOBILE models can move horizontally through dense terrain features.
+INFANTRY/BEASTS/SWARM models can move vertically through dense terrain features.
+Other models can move horizontally through dense terrain features provided that all sections of that terrain feature that the moving model’s base would move through are 2" or less in height. Otherwise, the moving model must move vertically to ascend or descend such sections. They cannot move through ceilings and floors while doing so, and they cannot end that move on any surface of that terrain feature that is not on ground level (see below).
+
+App note, not rules text: MOBILE has no rule of its own in the core rules. These are the Dense lines of Terrain and Movement (13.06). Super-Heavy Walker (24.35), Designer’s Note: “Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).”
 
 ######## popup rule:Mortal wounds · PURGE FREEBLADE Purge Freeblade
 CORE RULE
@@ -4171,10 +4257,6 @@ TARGETOne IMPERIAL KNIGHTS unit from your army.
 EFFECT
 
 Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6" to the Move characteristic of models in your unit, or 9" instead if your unit is an ARMIGER or DESTRIER unit.
-
-GW’s Faction Pack prints DESTRIER as a keyword, but no Imperial Knights datasheet has it: the Knight Destrier’s keyword is KNIGHT DESTRIER (Wahapedia strikes DESTRIER through for this reason). By the letter, your Knight Destriers add 6"; the evident intent is that they add 9". Agree it with your opponent before the game.
-
-Agree with your opponent: Do your Knight Destriers add 9" (the evident intent) or 6" (the letter: their keyword is KNIGHT DESTRIER, the pack says DESTRIER)?
 
 USED BYany unit
 

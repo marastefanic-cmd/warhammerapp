@@ -105,7 +105,7 @@ const CODE_RULES = {
   proxyLines:'Bases & proxies: bases per models line and what to mark',
   quickRef:'Core Rules 07 (battle round), 07.02 (turn), 08 (Command phase), 05.01 hit roll, 05.02 wound roll table, 05.03-05.04 save roll and allocation order (dice values are pictures in the PDF: page 18)',
   nextPhase:'phase order (07.02): Command, Movement, Shooting, Charge, Fight; then the other player\'s turn',
-  screenPregame:'Before the battle: Warlord, enhancements, attached units, strategic reserves (20.01: at most half the points limit; 20.03: from battle round 2, destroyed at the end of round 3), Deep Strike, transports, Scouts, start of round 1 / every round, once-per-battle items, questions to agree',
+  screenPregame:'Before the battle: Warlord, enhancements, attached units, strategic reserves (20.01: at most half the points limit; 20.03: from battle round 2, destroyed at the end of round 3), Deep Strike, transports, Scouts, start of round 1 / every round, once-per-battle items',
 };
 function appFunctions(html){
   const out = {};

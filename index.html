@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
-<script>window.WH_BUILD = '377683ea48';</script>
+<script>window.WH_BUILD = '721683f7bb';</script>
 </head>
 <body>
 <style>
@@ -102,10 +102,6 @@ summary::-webkit-details-marker{display:none}
 .pgk{font:600 11.5px/1.35 var(--f-head); letter-spacing:.08em; text-transform:uppercase; color:var(--muted); padding-top:3px; hyphens:manual}
 .pgv{font-size:14.5px; line-height:1.55; min-width:0}
 .pgv .from{color:var(--muted)}
-.askl{padding:8px 2px 7px; border-bottom:1px solid var(--line); font-size:14px; line-height:1.5}
-.askl > span:last-child{color:var(--fg2)}
-.ask{margin-top:10px; border-left:2px solid var(--accent); padding:1px 0 1px 8px; font-size:13.5px; line-height:1.45; color:var(--fg2)}
-.ask b{color:var(--fg)}
 
 /* ---------- top bar ---------- */
 .top{position:sticky; top:env(safe-area-inset-top, 0px); z-index:20; background:var(--bg); border-bottom:1px solid var(--line);
@@ -450,8 +446,8 @@ summary::-webkit-details-marker{display:none}
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="verified.js?v=377683ea48"></script>
-<script src="data.js?v=377683ea48"></script>
+<script src="verified.js?v=721683f7bb"></script>
+<script src="data.js?v=721683f7bb"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -678,8 +674,10 @@ const halfBelow = u => Math.ceil((parseInt(u.stats[0].W, 10) || 0) / 2) - 1;
 const singleMod = (m, u) => m.single && modelCount(u) === 1 ? Object.assign({}, m, { when:m.single.when, note:m.single.note.replace('{half}', halfBelow(u)) }) : m;
 function unitMods(u, kind){
   const det = unitDetRules(u).filter(r => r.mod).map(r => Object.assign({ from:r.name, rule:r.name }, singleMod(r.mod, u)));
-  const lance = [...new Set((u.melee || []).filter(w => w.kw.some(k => /^lance/i.test(k))).map(w => w.group || w.name))];
-  if(lance.length) det.push({ kind:'melee', when:'Made a charge move this turn', note:andList(lance) + ' +1 to wound', from:'Lance', rule:'Lance' });
+  for(const [k, list] of [['ranged', u.ranged], ['melee', u.melee]]){
+    const lance = [...new Set((list || []).filter(w => w.kw.some(x => /^lance/i.test(x))).map(w => w.group || w.name))];
+    if(lance.length) det.push({ kind:k, when:'Made a charge move this turn', note:andList(lance) + ' +1 to wound', from:'Lance', rule:'Lance' });
+  }
   if(hasKw(u, 'Towering') && !hasKw(u, 'Aircraft') && D.rules['Plunging Fire']) det.push({ kind:'ranged', when:'Visible target within 12" with models on ground level (not AIRCRAFT)', note:'BS improved by 1', from:'Plunging Fire', rule:'Plunging Fire' });
   const strat = allStratagems().filter(s => s.mod && eligible(s).includes(u)).map(s => Object.assign({ from:s.name, strat:s.id, cp:s.cp }, s.mod));
   return (u.mods || []).concat(det, auraMods(u), strat).filter(m => m.kind === kind || m.kind === 'all');
@@ -691,6 +689,7 @@ const phTurn = (x, p) => (x.turns && x.turns[p]) || x.turn || 'either';
 const timing = text => /^(once per [a-z ]+, )?(at )?(the )?start of/i.test(text || '') ? 0 : /^(once per [a-z ]+, )?(at )?(the )?end of/i.test(text || '') ? 2 : 1;
 // "Movement · Their turn", "Any phase · Either turn", "Your Shooting / Fight (either turn)"
 function whenTag(x){
+  if(x.at) return x.at;
   const ph = phasesOf(x);
   if(!ph.length) return '';
   const t = ph.map(p => phTurn(x, p));
@@ -725,8 +724,8 @@ function ruleFor(label){
   for(const [re, key] of f.aliases || []) if(re.test(clean)){ clean = key; break; }
   const lc = clean.toLowerCase();
   const ar = f.armyRules.find(r => r.name.toLowerCase() === lc);
-  if(ar) return { name:ar.name, key:ar.name, text:ar.text, table:ar.table, missing:ar.missing, note:ar.note, ask:ar.ask, src:f.name + ' army rule' };
-  for(const d of detachments()) if(d.rule && d.rule.name.toLowerCase() === lc) return { name:d.rule.name, key:d.rule.name, text:d.rule.text, table:d.rule.table, needs:d.rule.needs, note:d.rule.note, ask:d.rule.ask, src:d.name + ' detachment rule' };
+  if(ar) return { name:ar.name, key:ar.name, text:ar.text, table:ar.table, missing:ar.missing, note:ar.note, src:f.name + ' army rule' };
+  for(const d of detachments()) if(d.rule && d.rule.name.toLowerCase() === lc) return { name:d.rule.name, key:d.rule.name, text:d.rule.text, table:d.rule.table, needs:d.rule.needs, note:d.rule.note, src:d.name + ' detachment rule' };
   for(const [re, key] of D.ruleAliases) if(re.test(clean)) return { name:clean, key, text:D.rules[key], src:'Core rule' };
   if(D.rules[clean]) return { name:clean, key:clean, text:D.rules[clean], src:'Core rule' };
   return null;
@@ -808,8 +807,7 @@ function showVerified(){
   openSheet('How this app is checked', 'Verified ' + VER.date,
     '<p>Before any change reaches this app, a program compares it with its sources and refuses to publish it if anything differs.</p>' +
     '<p class="qh">Checked</p>' + VER.checks.map(c => '<p class="vchk"><b>' + esc(c.label) + '</b> ' + esc(c.detail) + '</p>').join('') +
-    '<p class="qh">Sources</p>' + VER.sources.map(c => '<p class="vchk"><b>' + esc(c.label) + '</b> ' + esc(c.detail) + '</p>').join('') +
-    (VER.asks ? '<p class="note">' + esc(VER.asks) + '</p>' : ''));
+    '<p class="qh">Sources</p>' + VER.sources.map(c => '<p class="vchk"><b>' + esc(c.label) + '</b> ' + esc(c.detail) + '</p>').join(''));
 }
 
 // keep the phone awake at the table (Screen Wake Lock); asked again whenever the app comes back
@@ -1032,12 +1030,12 @@ function weaponBlock(it, keys, mods, u){
     const hunterMods = mods.filter(m => m.hunter);
     // several guns under one name, every one of them fired (Nazdreg's Kustom Blasta X): not a choice
     const all = it.profiles.every(p => p.fireAll);
-    if(all) return '<div class="wn">' + named(it.group, it.n) + '<small class="uv fa" role="button" tabindex="0" data-rule="Select Weapons">all ' + it.profiles.length + ' fire</small></div>' +
+    if(all) return '<div class="wn">' + named(it.group, it.n) + '<small class="uv fa" role="button" tabindex="0" data-rule="Select Weapons">all ' + it.profiles.length + ' can fire</small></div>' +
       it.profiles.map(p => row('<span class="ar">+</span>' + esc(p.name), plainCells(p), true) + kwl(p)).join('');
-    return '<div class="wn">' + named(it.group, it.n) + '<small class="uv" role="button" tabindex="0" data-rule="Select Weapons">' + (byTarget ? 'pick one by target' : 'pick one profile') + '</small></div>' +
+    return '<div class="wn">' + named(it.group, it.n) + '<small class="uv" role="button" tabindex="0" data-rule="Select Weapons">' + 'pick one profile' + '</small></div>' +
       it.profiles.map(p => {
         if(!byTarget) return row(prof(p.name), plainCells(p), true) + kwl(p);
-        if(!p.hunter) return row(prof(p.name) + '<span class="tq">any target</span>', plainCells(p), true) + kwl(p);
+        if(!p.hunter) return row(prof(p.name), plainCells(p), true) + kwl(p);
         const cells = keys.map(k => { const d = hunterMods.reduce((t, m) => t + (m.hunter[k] || 0), 0); return d ? '<span>' + esc(p[k]) + '<i class="hb">(+' + d + ')</i></span>' : cell(p[k]); });
         return row('<span class="ar">➤</span><span class="link" role="button" tabindex="0" data-rule="Hunter">' + esc(p.name) + '</span><span class="tq">MON/VEH only</span>', cells, true) + kwl(p);
       }).join('');
@@ -1075,11 +1073,14 @@ function useSentence(set, kind, u, who){
   const v = (lead, third) => (who ? '<b class="m">' + esc(who) + '</b> ' : '') + '<b class="uv" role="button" tabindex="0" data-rule="Select Weapons">' + (who ? third : lead) + '</b>';
   if(kind === 'ranged'){
     const cq = set.filter(isCQ), rest = set.filter(it => !isCQ(it)), big = hasKw(u, 'Monster') ? 'MONSTER' : hasKw(u, 'Vehicle') ? 'VEHICLE' : '';
+    // 24.07: one or more [CLOSE-QUARTERS] weapons, or one or more of the others (not MONSTER/VEHICLE models)
+    const some = l => l.length > 1 ? 'one or more of ' + andList(nm(l)) : nm(l)[0];
+    const cqLink = linkTo('rule', 'Close-quarters', 'Close-quarters');
     if(cq.length && rest.length && !big)
-      return v('Pick one to shoot:', 'picks one to shoot:') + ' ' + orList(nm(cq)) + ' <b>or</b> ' + (rest.length > 1 ? 'all of ' : '') + andList(nm(rest)) + '.';
-    const guns = modelCount(u) === 1 ? set.reduce((t, it) => t + (+it.n || 1), 0) : set.length;   // a Forgefiend's 2 Hades + 1 cannon: all of these
-    const w = guns === 2 ? 'both' : 'all of these';
-    return v('Shoots with ' + w, 'shoots with ' + w) + (cq.length && rest.length ? ' (a ' + big + ' fires its pistol too)' : '') + '.';
+      return v('Can shoot with', 'can shoot with') + ' ' + some(cq) + ' <b>or</b> ' + some(rest) + ', not both (' + cqLink + '); in close-quarters shooting, ' + andList(nm(cq)) + ' only.';
+    const guns = modelCount(u) === 1 ? set.reduce((t, it) => t + (+it.n || 1), 0) : set.length;   // a Forgefiend's 2 Hades + 1 cannon
+    const w = guns === 2 ? 'one or both' : 'one or more of these';
+    return v('Can shoot with ' + w, 'can shoot with ' + w) + (cq.length && rest.length ? ' (' + cqLink + ' does not limit ' + big + ' models)' : '') + '.';
   }
   const ea = set.filter(isEA), other = set.filter(it => !isEA(it));
   const extra = ea.length ? ', <b>plus</b> ' + andList(nm(ea)) + ' on top (extra attacks)' : '';
@@ -1106,8 +1107,8 @@ function useLine(items, kind, u, part){
   if(kinds.length === 1 && multi.length === lines.length) return '<p class="use">' + useSentence(kinds[0].set, kind, u) + '</p>';
   const said = kinds.map(l => useSentence(l.set, kind, u));
   const others = multi.length < lines.length;
-  if(kind === 'ranged' && said.every(x => /data-rule="Select Weapons">Shoots with/.test(x)))
-    return '<p class="use"><b class="uv" role="button" tabindex="0" data-rule="Select Weapons">Every model shoots with all its guns</b>' + (others ? ' (see ×)' : '') + '.</p>';
+  if(kind === 'ranged' && said.every(x => /data-rule="Select Weapons">Can shoot with one or (both|more of these)/.test(x)))
+    return '<p class="use"><b class="uv" role="button" tabindex="0" data-rule="Select Weapons">Every model can shoot with one or more of its guns</b>' + (others ? ' (see ×)' : '') + '.</p>';
   return kinds.map(l => '<p class="use">' + useSentence(l.set, kind, u, l.who.replace(/ w\/.*$/, '')) + '</p>').join('') +
     (others ? '<p class="use"><b class="m">The others:</b> one each (×N = how many models have it).</p>' : '');
 }
@@ -1219,9 +1220,7 @@ function defenceItems(u, ph){
   for(const r of unitDetRules(u)) if(r.def && !out.some(x => x.t === r.def)) out.push({ t:r.def, a:'rule', v:r.name });   // e.g. Knights of Legend: FNP 6+
   for(const ab of u.abilities) if(ab.def && !naReason(ab) && !(ph && ab.defPh && !ab.defPh.includes(ph))) out.push({ t:ab.def, a:'ability', v:abilityKey(ab) });
   for(const s of allStratagems()) if(s.def && eligible(s).includes(u) && !(ph && !s.phases.includes(ph))) out.push({ t:s.cp + 'CP ' + s.name + ': ' + s.def, a:'strat', v:s.id });
-  const weak = u.stats.filter(s => !/^[2-5]\+$/.test(s.InSv));
-  if(weak.length && u.rules.includes('Waaagh!'))
-    out.push({ t:'Riled up: 5+ INV' + (weak.length < u.stats.length ? ' (' + weak.map(s => s.name.replace(/ ×\d+$/, '')).join(', ') + ')' : ''), a:'rule', v:'Waaagh!' });
+  if(u.rules.includes('Waaagh!')) out.push({ t:'Riled up: 5+ INV', a:'rule', v:'Waaagh!' });
   return out;
 }
 const defences = (u, ph) => defenceItems(u, ph).map(x => x.t);
@@ -1230,9 +1229,7 @@ const linkTo = (attr, val, label) => '<span class="link" role="button" tabindex=
 // only repeat it where it matters. The one exception: a Damaged profile is its band under the stats.
 const shownElsewhere = ab => !!ab.damaged;
 // core stratagems any unit can use are listed only where they suit the unit
-const suits = (s, u) => keywordGated(s) || u.abilities.some(ab => (ab.text || '').toLowerCase().includes(s.name.toLowerCase() + ' stratagem')) ||
-  (s.id === 'fire-overwatch' && (u.ranged || []).length > 0) ||
-  (s.id === 'rapid-ingress' && (unitRules(u).some(r => ruleKey(r) === 'Deep Strike') || u.abilities.some(ab => /strategic reserves/i.test(ab.text))));
+const suits = (s, u) => keywordGated(s) || u.abilities.some(ab => (ab.text || '').toLowerCase().includes(s.name.toLowerCase() + ' stratagem'));
 const modelsText = u => u.models.map(esc).join(' · ') + (u.ptsNote ? ' · ' + esc(u.ptsNote) + ' pts' : '');
 function screenUnit(){
   const u = unitById(cur.unit);
@@ -1289,13 +1286,12 @@ const screenAbilities = () => '<div class="slice">' + army().units.filter(u => u
 const stratWhenLine = s => [whenTag(s), s.limit, s.cpNote].filter(Boolean).join(' · ');
 const stratHead = s => '<span class="cp' + (s.cp >= 2 ? ' hot' : '') + '">' + esc(s.cp) + '<small>CP</small></span><span class="sh"><b>' + esc(s.name) + '</b><span>' + esc(stratWhenLine(s)) + '</span></span>';
 // a rule whose wording allows two readings: settle it with the opponent before the game
-const askNote = x => x && x.ask ? '<p class="ask"><b>Agree with your opponent:</b> ' + esc(x.ask) + '</p>' : '';
 function stratBody(s){
   const el = eligible(s).filter(u => !(s.id === 'fire-overwatch' && !(u.ranged || []).length));   // a unit with no gun can be picked but cannot shoot (04.01.01)
   return '<div><span class="il">When</span>' + rt(s.when) + '</div><p><span class="il">Target</span>' + inline(s.target) + '</p>' +
     '<div><span class="il">Effect</span>' + rt(s.effect) + '</div>' +
     (s.restrictions ? '<p><span class="il">Restrictions</span>' + inline(s.restrictions) + '</p>' : '') +
-    (s.note ? '<p class="note it">' + esc(s.note) + '</p>' : '') + askNote(s) +
+    (s.note ? '<p class="note it">' + esc(s.note) + '</p>' : '') +
     '<p class="usedby"><span class="il">Used by</span>' + (el.length === army().units.length ? 'any unit' : el.map(unitLink).join(', ')) + '</p>';
 }
 const stratItem = s => '<details class="strat" data-strat-id="' + esc(s.id) + '"' + (openStrats.has(s.id) ? ' open' : '') + '><summary>' + stratHead(s) + chev + '</summary><div class="sb">' + stratBody(s) + '</div></details>';
@@ -1309,7 +1305,7 @@ function fits(x){
 // in a phase view: start-of-phase first, end-of-phase last, any-phase stratagems after the rest
 const phaseOrder = (x, text) => (phasesOf(x).length === PHASES.length ? 10 : 0) + timing(text);
 // core rules a unit has that do something in a phase
-const CORE_PHASED = { 'Deep Strike':{ ph:['movement'], turn:'either' }, 'Harpooned':{ ph:['charge'], turn:'your' }, 'Super-Heavy Walker':{ ph:['movement'], turn:'your' }, 'Firing Deck':{ ph:['shooting'], turn:'your' } };
+const CORE_PHASED = { 'Deep Strike':{ ph:['movement'], turn:'either' }, 'Harpooned':{ ph:['charge'], turn:'either' }, 'Super-Heavy Walker':{ ph:['movement'], turn:'your' }, 'Firing Deck':{ ph:['shooting'], turn:'your' } };
 function phaseItems(){
   const out = [], f = faction(), units = army().units;
   for(const r of f.armyRules) if(r.ph && !inertRule(r.name)) out.push({ name:r.name, text:r.text, note:r.note, table:r.table, tag:r.tag, ph:r.ph, turn:r.turn, turns:r.turns, sub:f.name + ' army rule', units:[] });
@@ -1477,21 +1473,21 @@ function screenPregame(){
     row('Detach&shy;ments', esc(detachments().map(d => d.name + (d.dp ? ' (' + d.dp + ' DP)' : '')).join(', ')) + (a.disposition ? '<br><span class="from">Disposition:</span> ' + esc(a.disposition) : '')) +
     row('Points', esc(a.pointsUsed + ' / ' + a.points + ' · ' + a.battleSize)));
 
-  h += sec('Before declaring formations', row('Rules', early.map(ruleLine).join('<br>')));
+  h += sec('Read Mission Objectives step', row('Rules', early.map(ruleLine).join('<br>')));
 
   // declare battle formations: reserves and transports
   const ds = units.filter(u => everyModel(u, r => ruleKey(r) === 'Deep Strike'));
   const dsPts = ds.reduce((t, u) => t + (u.pts || 0) * (u.copies || 1), 0), half = Math.floor(a.points / 2);
   const transports = units.filter(u => hasKw(u, 'Transport')).map(u => { const ab = u.abilities.find(x => /transport capacity/i.test(x.text)); return unitLink(u) + (ab ? ': <span class="from">' + rt(ab.text).replace(/^<p>|<\/p>$/g, '') + '</span>' : ''); });
   h += sec('Declare battle formations',
-    row('Reserves', linkTo('rule', 'Strategic Reserves', 'Strategic reserves') + ': up to ' + half + ' pts (half the ' + a.points + ' limit), counting units embarked within a TRANSPORT you place there. Unless a rule says otherwise, they arrive from battle round 2, and any that have not arrived by the end of round 3 are destroyed (not repositioned units, nor units embarked within a TRANSPORT that arrived).' +
+    row('Reserves', linkTo('rule', 'Strategic Reserves', 'Strategic reserves') + ': unless otherwise stated, up to ' + half + ' pts (50% of the ' + a.points + ' limit), counting units embarked within a TRANSPORT you place there. Unless otherwise stated, they can only arrive from the second battle round onwards, and any that have not arrived by the end of round 3 are destroyed (not repositioned units, nor units embarked within a TRANSPORT that arrived).' +
       (ds.length ? '<br><span class="from">Can ' + linkTo('rule', 'Deep Strike', 'Deep Strike') + ':</span> ' + ds.map(u => unitLink(u) + ' <span class="from">' + u.pts + ' pts' + (u.copies > 1 ? ' each' : '') + '</span>').join(', ') + (ds.length > 1 ? ' <span class="from">(all: ' + dsPts + ' pts)</span>' : '') : '')) +
     row('Transports', transports.join('<br>')));
 
   // deployment and pre-battle abilities
   const scouts = units.filter(u => everyModel(u, r => /^scouts|^infiltrators/i.test(r)));
   const pre = group(allAbs.filter(([u, ab]) => PREGAME_RE.test(ab.text) && !/start of the first battle round/i.test(ab.text)));
-  h += sec('Deploying',
+  h += sec('Deployment and pre-battle abilities',
     row('Scouts', scouts.map(u => unitLink(u) + ' <span class="from">' + esc(unitRules(u).filter(r => /^scouts|^infiltrators/i.test(r)).join(', ')) + '</span>').join('<br>')) +
     row('Abilities', pre.map(abLine).join('<br>')) +
     row('Rules', rulesOf.filter(x => PREGAME_RE.test(x.r.text) && !early.includes(x)).map(ruleLine).join('<br>')));
@@ -1500,7 +1496,7 @@ function screenPregame(){
   const first = group(allAbs.filter(([u, ab]) => /start of the first battle round/i.test(ab.text)));
   const round = rulesOf.filter(x => /start of (the|each|every) battle round/i.test(x.r.text)).map(ruleLine)
     .concat(group(allAbs.filter(([u, ab]) => /start of (the|each|every) battle round/i.test(ab.text) && !/first battle round/i.test(ab.text))).map(abLine));
-  h += sec('Start of the battle', row('Round 1', first.map(abLine).join('<br>')) + row('Every round', round.join('<br>')));
+  h += sec('Start of the battle round', row('First round', first.map(abLine).join('<br>')) + row('Every round', round.join('<br>')));
 
   // once per battle: the resources you spend once
   const onceB = x => /once per battle(?! round)/i.test(x);
@@ -1512,11 +1508,6 @@ function screenPregame(){
     row('Rules', onceRules.map(x => ruleLine(x) + (/\beach of these [a-z ]+ once per battle/i.test(x.r.text) ? ' <span class="from">(each of its options once)</span>' : '')).join('<br>')) +
     row('Abilities', onceAbs.map(g => abLine(g) + (/per army/i.test(onceTag(g.ab)) ? ' <span class="tg once">per army</span>' : '')).join('<br>')) +
     row('Strata&shy;gems', onceStrats.map(s => linkTo('strat', s.id, s.cp + 'CP ' + s.name)).join('<br>')));
-  // rules this list uses whose wording allows two readings
-  const asks = rulesOf.filter(x => x.r.ask).map(x => [linkTo('rule', x.r.name, x.r.name), x.r.ask])
-    .concat(group(allAbs.filter(([u, ab]) => ab.ask)).map(g => [linkTo('ability', abilityKey(g.ab), g.ab.name), g.ab.ask]))
-    .concat(allStratagems().filter(s => s.ask && eligible(s).length).map(s => [linkTo('strat', s.id, s.name), s.ask]));
-  h += asks.length ? '<div class="sec-h"><h2>Agree with your opponent</h2></div><div class="pg">' + asks.map(([l, q]) => '<p class="askl">' + l + ' <span>' + esc(q) + '</span></p>').join('') + '</div>' : '';
   return h + '<p class="note">Gathered from this list’s datasheets and rules; each line opens the full text.</p>';
 }
 
@@ -1536,7 +1527,7 @@ function quickRef(){
     '<p class="qh">Hit roll (05.01)</p>' + tr([['Unmodified 1', 'fails'], ['Unmodified 6', 'critical hit'], ['≥ BS / WS', 'hit']]) +
     '<p class="qh">Wound roll (05.02)</p>' + tr([['Unmodified 1', 'fails'], ['Unmodified 6', 'critical wound'], ['S ≥ 2× T', '2+'], ['S > T', '3+'], ['S = T', '4+'], ['S < T', '5+'], ['S ≤ ½ T', '6+']]) +
     '<p class="qh">Save roll (05.03, 05.04)</p>' + tr([['Unmodified 1', 'damage'], ['≥ InSv', 'saved (AP does not apply)'], ['≥ Sv after AP', 'saved'], ['Otherwise', 'the model loses D wounds']]) +
-    '<p class="note">Allocation: a group of models with a wounded model takes attacks first; CHARACTER models come after all others.</p>', false);
+    '<p class="note">Allocation order (05.03): a non-CHARACTER group containing a model that has lost one or more wounds must be first; no CHARACTER group can be earlier than a non-CHARACTER group; CHARACTER groups containing a model that has lost one or more wounds must be earlier than CHARACTER groups containing no wounded models.</p>', false);
 }
 function screenRules(){
   const f = faction(), a = army();
@@ -1667,7 +1658,7 @@ function showRule(label){
   const body = rt(text) + (r.table ? ttable(r.table) : '');
   sheetRule = null;
   const gap = (r.missing || []).length ? '<p class="note">Not in the app yet: the ' + esc(r.missing.join(' and ')) + '.</p>' : '';
-  openSheet(esc(r.src), CONCEPT.has(r.key) ? r.key : r.name, body + (r.note ? '<p class="note it">' + esc(r.note) + '</p>' : '') + askNote(r) + gap + usedBy('In this army', users));
+  openSheet(esc(r.src), CONCEPT.has(r.key) ? r.key : r.name, body + (r.note ? '<p class="note it">' + esc(r.note) + '</p>' : '') + gap + usedBy('In this army', users));
 }
 function showStrat(id){
   const s = allStratagems().find(x => x.id === id);
@@ -1676,7 +1667,7 @@ function showStrat(id){
 function showAbility(key){
   searchIndex();
   const e = abilityIndex.get(key);
-  if(e) openSheet(esc(['Ability', e.ab.tag, e.ab.ph ? whenTag(e.ab) : ''].filter(Boolean).join(' · ')), e.ab.name, rt(e.ab.text) + askNote(e.ab) + usedBy('Unit', e.units));
+  if(e) openSheet(esc(['Ability', e.ab.tag, e.ab.ph ? whenTag(e.ab) : ''].filter(Boolean).join(' · ')), e.ab.name, rt(e.ab.text) + usedBy('Unit', e.units));
 }
 function showEnhancement(key){
   const [did, name] = key.split('|');

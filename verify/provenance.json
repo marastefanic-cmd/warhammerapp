@@ -602,7 +602,23 @@
   {
    "item": "core / rule:Mobile / text",
    "field": "text",
+   "text": "**Dense:**",
+   "doc": "core",
+   "where": "PDF p48",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Mobile / text",
+   "field": "text",
    "text": "- **INFANTRY/BEASTS/SWARM/MOBILE** models can move horizontally through **dense ",
+   "doc": "core",
+   "where": "PDF p48",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Mobile / text",
+   "field": "text",
+   "text": "- **INFANTRY/BEASTS/SWARM** models can move vertically through **dense terrain f",
    "doc": "core",
    "where": "PDF p48",
    "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"

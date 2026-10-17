@@ -1,6 +1,12 @@
 [
- { "check":"strat-needs", "where":"hurrdurr · Apoplectic Frenzy", "reason":"TARGET is a KHORNE BERZERKERS unit; New Recruit gives that datasheet the keyword 'Berzerkers', which needs uses (every WORLD EATERS unit is KHORNE, so KHORNE alone would select all)." },
- { "check":"strat-needs", "where":"hurrdurr · Berzerker’s Wrath", "reason":"As Apoplectic Frenzy: KHORNE BERZERKERS is the datasheet, keyword 'Berzerkers' in New Recruit." },
- { "check":"strat-needs", "where":"oioioi · Arcane Focus", "reason":"Only a model with Cabal of Sorcerers takes a Psychic test (Thousand Sons army rule). In oioioi exactly the PSYKER units have it (Magnus, Daemon Prince, both Sorcerers), so needs Psyker selects the same units." },
- { "check":"number-cited", "where":"nidzillas · The Swarmlord · Domination of the Hive Mind", "reason":"The aura puts units within Synapse Range; the +1 S is what Synapse Range gives (Synapse army rule: '+1 to the Strength characteristic' of melee attacks)." }
+ {
+  "check": "strat-needs",
+  "where": "hurrdurr · Apoplectic Frenzy",
+  "reason": "TARGET is a KHORNE BERZERKERS unit; New Recruit gives that datasheet the keyword 'Berzerkers', which needs uses (every WORLD EATERS unit is KHORNE, so KHORNE alone would select all)."
+ },
+ {
+  "check": "strat-needs",
+  "where": "hurrdurr · Berzerker’s Wrath",
+  "reason": "As Apoplectic Frenzy: KHORNE BERZERKERS is the datasheet, keyword 'Berzerkers' in New Recruit."
+ }
 ]

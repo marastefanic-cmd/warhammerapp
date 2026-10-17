@@ -91,11 +91,7 @@ function writeVerified(ok){
     { label:'Games Workshop:', detail:gw.join('; ') + '.' },
     { label:'Wahapedia:', detail:'faction pages for Orks (no GW Faction Pack yet) and the errata and FAQs it lists.' }
   ];
-  const asks = [];
-  for(const f of Object.values(D.factions)){ for(const r of f.armyRules) if(r.ask) asks.push(r.name); for(const d of Object.values(f.detachments)){ if(d.rule && d.rule.ask) asks.push(d.rule.name); for(const x of d.stratagems || []) if(x.ask) asks.push(x.name); } }
-  for(const a of D.armies) for(const u of a.units) for(const ab of u.abilities) if(ab.ask && !asks.includes(ab.name)) asks.push(ab.name);
-  const v = { ok, build:hash.slice(0, 10), data:D.version, date:new Date().toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' }), checks, sources,
-    asks:asks.length ? asks.length + ' rules in these armies allow two readings (' + asks.join(', ') + '): each army’s Before the battle screen lists the ones it uses, under Agree with your opponent.' : '' };
+  const v = { ok, build:hash.slice(0, 10), data:D.version, date:new Date().toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' }), checks, sources };
   fs.writeFileSync(path.join(ROOT, 'verified.js'), '// written by verify/run.js: the last verification of this app.html + data.js\nwindow.WH_VERIFIED = ' + JSON.stringify(v, null, 1) + ';\n');
 }
 console.log(ok ? '\nVERIFIED: every check passes for this app.html + data.js' : '\nNOT VERIFIED: build.js will refuse to build');

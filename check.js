@@ -34,6 +34,15 @@ function check(file){
     for(const [p, t] of Object.entries(x.turns || {})) if(!PHASES.includes(p) || !TURNS.includes(t)) P(where, 'bad turns entry', p + ':' + t);
   };
 
+  // the owner's rule: the app quotes rules, it never decides how one reads. No "ask" fields, and none of
+  // the wording that marks an interpretation of the app's own (a quoted FAQ or errata line is fine)
+  const READING = /\bthe app (assumes|reads|takes|treats)\b|\bevident intent\b|\bby the letter\b|\breads as\b|\bagree (it )?with your opponent\b/i;
+  (function walk(x, where){
+    if(Array.isArray(x)) return x.forEach((v, i) => walk(v, where + '[' + i + ']'));
+    if(x && typeof x === 'object') return Object.entries(x).forEach(([k, v]) => { if(k === 'ask') P(where + '.ask', 'an interpretation field (the app quotes rules, it does not read them)'); walk(v, where + '.' + k); });
+    if(typeof x === 'string') for(const line of x.split('\n'))   // official FAQ, errata and designer's notes are quotes
+      if(READING.test(line) && !/^\*?(Wahapedia (FAQ|errata)|Designer’s Note)/.test(line)) P(where, 'reads like an interpretation:', line.match(READING)[0]);
+  })(D, 'data');
   for(const [re, key] of D.ruleAliases) if(!(key in D.rules)) P('rule alias', re, 'points at missing rule', key);
   const stratIds = new Map();
   const strat = (s, where) => {

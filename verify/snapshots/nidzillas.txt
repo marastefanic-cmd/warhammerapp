@@ -38,9 +38,9 @@ POINTS
 2000 / 2000 · Strike Force
 DECLARE BATTLE FORMATIONS
 RESERVES
-Strategic reserves: up to 1000 pts (half the 2000 limit), counting units embarked within a TRANSPORT you place there. Unless a rule says otherwise, they arrive from battle round 2, and any that have not arrived by the end of round 3 are destroyed (not repositioned units, nor units embarked within a TRANSPORT that arrived).
-START OF THE BATTLE
-ROUND 1
+Strategic reserves: unless otherwise stated, up to 1000 pts (50% of the 2000 limit), counting units embarked within a TRANSPORT you place there. Unless otherwise stated, they can only arrive from the second battle round onwards, and any that have not arrived by the end of round 3 are destroyed (not repositioned units, nor units embarked within a TRANSPORT that arrived).
+START OF THE BATTLE ROUND
+FIRST ROUND
 Singular Purpose · Assimilator (280), Assimilator (300), Norn Emissary ×2
 ONCE PER BATTLE
 RULES
@@ -51,9 +51,6 @@ Protean Purpose · Assimilator (280), Assimilator (300), Norn Emissary ×2
 Resilient Organism · Tyrannofex
 STRATA­GEMS
 1CP Insane Bravery
-AGREE WITH YOUR OPPONENT
-
-Synapse Is a SYNAPSE unit within its own Synapse Range? The rule says “within 6" of one or more friendly SYNAPSE models” and not “other”, so the letter suggests yes; the app still shows the +1 S and the 3D6 Battle-shock tests as conditional.
 
 Gathered from this list’s datasheets and rules; each line opens the full text.
 
@@ -154,8 +151,9 @@ D6+3
 2
 PSYCHIC, TORRENT
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 4 or fewer wounds left (Enraged Behemoths)
+Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
-Your Shooting phase: [IGNORES COVER] and ignore BS and hit roll modifiers (1CP Swarm-guided Salvoes)
+Your Shooting phase: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll (1CP Swarm-guided Salvoes)
 Norn Assimilator
 Synaptoprescience
 Toxinjecter Harpoon
@@ -169,8 +167,9 @@ HARPOONED
 Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
 If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
+Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
-Your Shooting phase: [IGNORES COVER] and ignore BS and hit roll modifiers (1CP Swarm-guided Salvoes)
+Your Shooting phase: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll (1CP Swarm-guided Salvoes)
 Norn Assimilator
 Synaptoprescience
 Toxinjecter Harpoon
@@ -184,8 +183,9 @@ HARPOONED
 Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
 If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
+Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
-Your Shooting phase: [IGNORES COVER] and ignore BS and hit roll modifiers (1CP Swarm-guided Salvoes)
+Your Shooting phase: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll (1CP Swarm-guided Salvoes)
 Norn Emissary
 Destabilising Predation
 Psychic tendrilPICK ONE PROFILE
@@ -216,8 +216,9 @@ BLAST, PSYCHIC, ANTI-CHARACTER 2+
 Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
 If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
+Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
-Your Shooting phase: [IGNORES COVER] and ignore BS and hit roll modifiers (1CP Swarm-guided Salvoes)
+Your Shooting phase: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll (1CP Swarm-guided Salvoes)
 Norn Emissary
 Psychic tendrilPICK ONE PROFILE
 ➤neuroparasite
@@ -247,12 +248,13 @@ BLAST, PSYCHIC
 Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
 If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
+Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
-Your Shooting phase: [IGNORES COVER] and ignore BS and hit roll modifiers (1CP Swarm-guided Salvoes)
+Your Shooting phase: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll (1CP Swarm-guided Salvoes)
 Tyrannofex
 ×2 units
 
-Shoots with both.
+Can shoot with one or both.
 
 Stinger salvoes
 24"
@@ -271,8 +273,9 @@ D6+6
 TORRENT
 Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
+Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
-Your Shooting phase: [IGNORES COVER] and ignore BS and hit roll modifiers (1CP Swarm-guided Salvoes)
+Your Shooting phase: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll (1CP Swarm-guided Salvoes)
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 The Swarmlord
@@ -285,6 +288,7 @@ Bone Sabres
 TWIN-LINKED
 Within Synapse Range: +1 S
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 4 or fewer wounds left (Enraged Behemoths)
+Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 Fight phase: re-roll hit rolls (1CP Rampaging Monstrosities)
 Hive Tyrant
 Warlord
@@ -309,7 +313,7 @@ EXTRA ATTACKS
 Within Synapse Range: +1 S
 vs MONSTER/VEHICLE: +1 to wound rolls (Monstrous Nemesis)
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 4 or fewer wounds left (Enraged Behemoths)
-Within 9" of the Swarmlord: within Synapse Range, so +1 S (Domination of the Hive Mind)
+Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 Fight phase: re-roll hit rolls (1CP Rampaging Monstrosities)
 Neurogaunts
 ×2 units
@@ -320,7 +324,7 @@ Chitinous claws and teeth×11
 0
 1
 Within Synapse Range: +1 S
-Within 9" of the Swarmlord: within Synapse Range, so +1 S (Domination of the Hive Mind)
+Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 Norn Assimilator
 Synaptoprescience
 
@@ -343,7 +347,7 @@ Within Synapse Range: +1 S
 Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
 If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
-Within 9" of the Swarmlord: within Synapse Range, so +1 S (Domination of the Hive Mind)
+Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 Fight phase: re-roll hit rolls (1CP Rampaging Monstrosities)
 When selected to fight: +2 S (1CP Lesser Prey)
 Norn Assimilator
@@ -368,7 +372,7 @@ Within Synapse Range: +1 S
 Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
 If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
-Within 9" of the Swarmlord: within Synapse Range, so +1 S (Domination of the Hive Mind)
+Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 Fight phase: re-roll hit rolls (1CP Rampaging Monstrosities)
 When selected to fight: +2 S (1CP Lesser Prey)
 Norn Emissary
@@ -393,7 +397,7 @@ Within Synapse Range: +1 S
 Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
 If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
-Within 9" of the Swarmlord: within Synapse Range, so +1 S (Domination of the Hive Mind)
+Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 Fight phase: re-roll hit rolls (1CP Rampaging Monstrosities)
 When selected to fight: +2 S (1CP Lesser Prey)
 Norn Emissary
@@ -417,7 +421,7 @@ Within Synapse Range: +1 S
 Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
 If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
-Within 9" of the Swarmlord: within Synapse Range, so +1 S (Domination of the Hive Mind)
+Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 Fight phase: re-roll hit rolls (1CP Rampaging Monstrosities)
 When selected to fight: +2 S (1CP Lesser Prey)
 Tyrannofex
@@ -431,7 +435,7 @@ Powerful limbs
 Within Synapse Range: +1 S
 Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
-Within 9" of the Swarmlord: within Synapse Range, so +1 S (Domination of the Hive Mind)
+Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 Fight phase: re-roll hit rolls (1CP Rampaging Monstrosities)
 
 ######## abilities · MELEE Abilities
@@ -504,9 +508,9 @@ Damaged: 1-5 Wounds Remaining
 While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
 
 Singular Purpose
-Command
+Any phase
 
-Start of battle round 1 · Command · Either turn
+Start of battle round 1 · Any phase · Either turn
 
 At the start of the first battle round, select one of the following:
 
@@ -542,9 +546,9 @@ Damaged: 1-5 Wounds Remaining
 While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
 
 Singular Purpose
-Command
+Any phase
 
-Start of battle round 1 · Command · Either turn
+Start of battle round 1 · Any phase · Either turn
 
 At the start of the first battle round, select one of the following:
 
@@ -568,9 +572,9 @@ NORN ASSIMILATOR unit only. This unit has 4+ InSv.
 Norn Emissary
 Destabilising Predation
 Singular Purpose
-Command
+Any phase
 
-Start of battle round 1 · Command · Either turn
+Start of battle round 1 · Any phase · Either turn
 
 At the start of the first battle round, select one of the following:
 
@@ -601,9 +605,9 @@ This model has the Feel No Pain 4+ ability against Mortal Wounds.
 
 Norn Emissary
 Singular Purpose
-Command
+Any phase
 
-Start of battle round 1 · Command · Either turn
+Start of battle round 1 · Any phase · Either turn
 
 At the start of the first battle round, select one of the following:
 
@@ -695,7 +699,7 @@ saved
 Otherwise
 the model loses D wounds
 
-Allocation: a group of models with a wounded model takes attacks first; CHARACTER models come after all others.
+Allocation order (05.03): a non-CHARACTER group containing a model that has lost one or more wounds must be first; no CHARACTER group can be earlier than a non-CHARACTER group; CHARACTER groups containing a model that has lost one or more wounds must be earlier than CHARACTER groups containing no wounded models.
 
 ARMY RULES
 Synapse
@@ -708,7 +712,7 @@ Shadow in the Warp
 Command · Either turn
 Once per battle
 
-Wahapedia FAQ: units targeted by Shadow in the Warp cannot use the Insane Bravery stratagem (“Insane Bravery can only be used in your Command phase”).
+Wahapedia FAQ: “Can units targeted by the Shadow in the Warp army rule use the Insane Bravery Stratagem?” “No. Insane Bravery can only be used in your Command phase.”
 
 If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6" of one or more SYNAPSE units from your army, subtract 1 from that test.
 
@@ -798,8 +802,6 @@ Lethal Hits
 Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
 
 Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
-
-App note, not rules text: the suffix “: non-MONSTER/VEHICLE” reads as applying only against targets that are not MONSTER or VEHICLE units.
 
 IN THIS ARMYHive Tyrant · Monstrous Nemesis
 
@@ -1303,7 +1305,7 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-6 abilities
+7 abilities
 Synapse Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.
 Hive Commander
 The Swarmlord
@@ -1311,6 +1313,22 @@ The Swarmlord
 At the start of your Command phase, if this model is on the battlefield, you gain 1CP
 
 UNITSThe Swarmlord
+
+Shadow in the Warp
+Tyranids army rule
+Once per battle
+
+Wahapedia FAQ: “Can units targeted by the Shadow in the Warp army rule use the Insane Bravery Stratagem?” “No. Insane Bravery can only be used in your Command phase.”
+
+If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6" of one or more SYNAPSE units from your army, subtract 1 from that test.
+
+Protean Purpose
+Assimilator (280), Assimilator (300), Norn Emissary ×2
+Once per battle, per unit
+
+(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).
+
+UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
 
 Singular Purpose
 Assimilator (280), Assimilator (300), Norn Emissary ×2
@@ -1323,21 +1341,12 @@ Select one objective marker. Until the end of the battle, while this model is wi
 
 UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
 
-Shadow in the Warp
-Tyranids army rule
-Once per battle
+Enraged Behemoths
+Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
 
-Wahapedia FAQ: units targeted by Shadow in the Warp cannot use the Insane Bravery stratagem (“Insane Bravery can only be used in your Command phase”).
+Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
 
-If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6" of one or more SYNAPSE units from your army, subtract 1 from that test.
-
-Protean Purpose
-Assimilator (280), Assimilator (300), Norn Emissary ×2
-Once per battle, per unit
-
-(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).
-
-UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
+UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
 
 Malign Presence
 The Swarmlord
@@ -1461,14 +1470,8 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-5 abilities
-Enraged Behemoths
-Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
-
-Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
-
-UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
+6 abilities
+Synapse Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.
 Onslaught
 Hive Tyrant
 Aura, Psychic
@@ -1483,6 +1486,24 @@ Assimilator (280), Assimilator (300)
 Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.
 
 UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
+
+Singular Purpose
+Assimilator (280), Assimilator (300), Norn Emissary ×2
+Start of battle round 1
+
+At the start of the first battle round, select one of the following:
+
+Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
+Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
+
+UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
+
+Enraged Behemoths
+Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
+
+Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
+
+UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
 
 Malign Presence
 The Swarmlord
@@ -1603,14 +1624,8 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-4 abilities
-Enraged Behemoths
-Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
-
-Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
-
-UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
+5 abilities
+Synapse Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.
 Onslaught
 Hive Tyrant
 Aura, Psychic
@@ -1618,6 +1633,24 @@ Aura, Psychic
 While a friendly TYRANIDS unit is within 6" of this model, ranged weapons equipped by models in that unit have the [ASSAULT] and [LETHAL HITS] abilities.
 
 UNITSHive Tyrant · Monstrous Nemesis
+
+Singular Purpose
+Assimilator (280), Assimilator (300), Norn Emissary ×2
+Start of battle round 1
+
+At the start of the first battle round, select one of the following:
+
+Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
+Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
+
+UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
+
+Enraged Behemoths
+Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
+
+Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
+
+UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
 
 Malign Presence
 The Swarmlord
@@ -1771,7 +1804,8 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-3 abilities
+5 abilities
+Synapse Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.
 Harpooned
 Core rule · Assimilator (280), Assimilator (300)
 
@@ -1781,6 +1815,24 @@ This unit has +2 to charge rolls until the end of the phase.
 This unit must end that charge move engaged with that MONSTER/VEHICLE unit.
 
 UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
+
+Singular Purpose
+Assimilator (280), Assimilator (300), Norn Emissary ×2
+Start of battle round 1
+
+At the start of the first battle round, select one of the following:
+
+Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
+Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
+
+UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
+
+Enraged Behemoths
+Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
+
+Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
+
+UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
 
 Malign Presence
 The Swarmlord
@@ -1947,15 +1999,9 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-4 abilities
+5 abilities
+Synapse Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.
 Synapse Within Synapse Range: melee attacks have +1 S.
-Enraged Behemoths
-Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
-
-Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
-
-UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
 Monstrous Nemesis
 Hive Tyrant
 Enhancement
@@ -1963,6 +2009,24 @@ Enhancement
 TYRANIDS MONSTER model only. Each time the bearer makes a melee attack that targets a MONSTER or VEHICLE unit, add 1 to the Wound roll.
 
 UNITSHive Tyrant · Monstrous Nemesis
+
+Singular Purpose
+Assimilator (280), Assimilator (300), Norn Emissary ×2
+Start of battle round 1
+
+At the start of the first battle round, select one of the following:
+
+Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
+Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
+
+UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
+
+Enraged Behemoths
+Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
+
+Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
+
+UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
 
 Malign Presence
 The Swarmlord
@@ -2317,7 +2381,7 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-6 abilities
+7 abilities
 Synapse Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.
 Hive Commander
 The Swarmlord
@@ -2325,6 +2389,22 @@ The Swarmlord
 At the start of your Command phase, if this model is on the battlefield, you gain 1CP
 
 UNITSThe Swarmlord
+
+Shadow in the Warp
+Tyranids army rule
+Once per battle
+
+Wahapedia FAQ: “Can units targeted by the Shadow in the Warp army rule use the Insane Bravery Stratagem?” “No. Insane Bravery can only be used in your Command phase.”
+
+If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6" of one or more SYNAPSE units from your army, subtract 1 from that test.
+
+Protean Purpose
+Assimilator (280), Assimilator (300), Norn Emissary ×2
+Once per battle, per unit
+
+(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).
+
+UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
 
 Singular Purpose
 Assimilator (280), Assimilator (300), Norn Emissary ×2
@@ -2337,21 +2417,12 @@ Select one objective marker. Until the end of the battle, while this model is wi
 
 UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
 
-Shadow in the Warp
-Tyranids army rule
-Once per battle
+Enraged Behemoths
+Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
 
-Wahapedia FAQ: units targeted by Shadow in the Warp cannot use the Insane Bravery stratagem (“Insane Bravery can only be used in your Command phase”).
+Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
 
-If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6" of one or more SYNAPSE units from your army, subtract 1 from that test.
-
-Protean Purpose
-Assimilator (280), Assimilator (300), Norn Emissary ×2
-Once per battle, per unit
-
-(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).
-
-UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
+UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
 
 Malign Presence
 The Swarmlord
@@ -2441,7 +2512,8 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-3 abilities
+5 abilities
+Synapse Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.
 Onslaught
 Hive Tyrant
 Aura, Psychic
@@ -2449,6 +2521,24 @@ Aura, Psychic
 While a friendly TYRANIDS unit is within 6" of this model, ranged weapons equipped by models in that unit have the [ASSAULT] and [LETHAL HITS] abilities.
 
 UNITSHive Tyrant · Monstrous Nemesis
+
+Singular Purpose
+Assimilator (280), Assimilator (300), Norn Emissary ×2
+Start of battle round 1
+
+At the start of the first battle round, select one of the following:
+
+Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
+Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
+
+UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
+
+Enraged Behemoths
+Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
+
+Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
+
+UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
 
 Malign Presence
 The Swarmlord
@@ -2553,14 +2643,8 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-4 abilities
-Enraged Behemoths
-Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
-
-Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
-
-UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
+5 abilities
+Synapse Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.
 Onslaught
 Hive Tyrant
 Aura, Psychic
@@ -2568,6 +2652,24 @@ Aura, Psychic
 While a friendly TYRANIDS unit is within 6" of this model, ranged weapons equipped by models in that unit have the [ASSAULT] and [LETHAL HITS] abilities.
 
 UNITSHive Tyrant · Monstrous Nemesis
+
+Singular Purpose
+Assimilator (280), Assimilator (300), Norn Emissary ×2
+Start of battle round 1
+
+At the start of the first battle round, select one of the following:
+
+Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
+Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
+
+UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
+
+Enraged Behemoths
+Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
+
+Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
+
+UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
 
 Malign Presence
 The Swarmlord
@@ -2678,7 +2780,8 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-3 abilities
+5 abilities
+Synapse Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.
 Harpooned
 Core rule · Assimilator (280), Assimilator (300)
 
@@ -2688,6 +2791,24 @@ This unit has +2 to charge rolls until the end of the phase.
 This unit must end that charge move engaged with that MONSTER/VEHICLE unit.
 
 UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
+
+Singular Purpose
+Assimilator (280), Assimilator (300), Norn Emissary ×2
+Start of battle round 1
+
+At the start of the first battle round, select one of the following:
+
+Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
+Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
+
+UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
+
+Enraged Behemoths
+Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
+
+Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
+
+UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
 
 Malign Presence
 The Swarmlord
@@ -2838,15 +2959,9 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-4 abilities
+5 abilities
+Synapse Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.
 Synapse Within Synapse Range: melee attacks have +1 S.
-Enraged Behemoths
-Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
-
-Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
-
-UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
 Monstrous Nemesis
 Hive Tyrant
 Enhancement
@@ -2854,6 +2969,24 @@ Enhancement
 TYRANIDS MONSTER model only. Each time the bearer makes a melee attack that targets a MONSTER or VEHICLE unit, add 1 to the Wound roll.
 
 UNITSHive Tyrant · Monstrous Nemesis
+
+Singular Purpose
+Assimilator (280), Assimilator (300), Norn Emissary ×2
+Start of battle round 1
+
+At the start of the first battle round, select one of the following:
+
+Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
+Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
+
+UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
+
+Enraged Behemoths
+Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
+
+Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
+
+UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
 
 Malign Presence
 The Swarmlord
@@ -3126,8 +3259,16 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-4 abilities
+5 abilities
 Synapse Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.
+Shadow in the Warp
+Tyranids army rule
+Once per battle
+
+Wahapedia FAQ: “Can units targeted by the Shadow in the Warp army rule use the Insane Bravery Stratagem?” “No. Insane Bravery can only be used in your Command phase.”
+
+If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6" of one or more SYNAPSE units from your army, subtract 1 from that test.
+
 Singular Purpose
 Assimilator (280), Assimilator (300), Norn Emissary ×2
 Start of battle round 1
@@ -3139,13 +3280,12 @@ Select one objective marker. Until the end of the battle, while this model is wi
 
 UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
 
-Shadow in the Warp
-Tyranids army rule
-Once per battle
+Enraged Behemoths
+Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
 
-Wahapedia FAQ: units targeted by Shadow in the Warp cannot use the Insane Bravery stratagem (“Insane Bravery can only be used in your Command phase”).
+Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
 
-If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6" of one or more SYNAPSE units from your army, subtract 1 from that test.
+UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
 
 Malign Presence
 The Swarmlord
@@ -3248,14 +3388,8 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-5 abilities
-Enraged Behemoths
-Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
-
-Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
-
-UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
+6 abilities
+Synapse Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.
 Onslaught
 Hive Tyrant
 Aura, Psychic
@@ -3270,6 +3404,24 @@ Assimilator (280), Assimilator (300)
 Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.
 
 UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
+
+Singular Purpose
+Assimilator (280), Assimilator (300), Norn Emissary ×2
+Start of battle round 1
+
+At the start of the first battle round, select one of the following:
+
+Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
+Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
+
+UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
+
+Enraged Behemoths
+Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
+
+Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
+
+UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
 
 Malign Presence
 The Swarmlord
@@ -3356,7 +3508,26 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-2 abilities
+4 abilities
+Synapse Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.
+Singular Purpose
+Assimilator (280), Assimilator (300), Norn Emissary ×2
+Start of battle round 1
+
+At the start of the first battle round, select one of the following:
+
+Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
+Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
+
+UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
+
+Enraged Behemoths
+Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
+
+Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
+
+UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
+
 Malign Presence
 The Swarmlord
 Aura
@@ -3469,7 +3640,36 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-2 abilities
+5 abilities
+Synapse Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.
+Harpooned
+Core rule · Assimilator (280), Assimilator (300)
+
+When this unit declares a charge, if an enemy MONSTER/VEHICLE unit is within 12" of this unit and was hit by an attack made by this weapon this turn, you can use this ability. If you do:
+
+This unit has +2 to charge rolls until the end of the phase.
+This unit must end that charge move engaged with that MONSTER/VEHICLE unit.
+
+UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience
+
+Singular Purpose
+Assimilator (280), Assimilator (300), Norn Emissary ×2
+Start of battle round 1
+
+At the start of the first battle round, select one of the following:
+
+Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
+Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
+
+UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
+
+Enraged Behemoths
+Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
+
+Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
+
+UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
+
 Malign Presence
 The Swarmlord
 Aura
@@ -3635,15 +3835,9 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-4 abilities
+5 abilities
+Synapse Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.
 Synapse Within Synapse Range: melee attacks have +1 S.
-Enraged Behemoths
-Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
-
-Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
-
-UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
-
 Monstrous Nemesis
 Hive Tyrant
 Enhancement
@@ -3651,6 +3845,24 @@ Enhancement
 TYRANIDS MONSTER model only. Each time the bearer makes a melee attack that targets a MONSTER or VEHICLE unit, add 1 to the Wound roll.
 
 UNITSHive Tyrant · Monstrous Nemesis
+
+Singular Purpose
+Assimilator (280), Assimilator (300), Norn Emissary ×2
+Start of battle round 1
+
+At the start of the first battle round, select one of the following:
+
+Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
+Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
+
+UNITSAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
+
+Enraged Behemoths
+Crusher Stampede rule · The Swarmlord, Hive Tyrant, Assimilator (280), Assimilator (300), Norn Emissary ×2, Tyrannofex
+
+Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
+
+UNITSThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
 
 Malign Presence
 The Swarmlord
@@ -3714,6 +3926,7 @@ OC 5 while it has lost no wounds, unless Battle-shocked (Enraged Behemoths)
 
 ALL ATTACKS
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 4 or fewer wounds left (Enraged Behemoths)
+Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 RANGED
 RNG
 A
@@ -3730,7 +3943,7 @@ D6+3
 2
 PSYCHIC, TORRENT
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
-Your Shooting phase: [IGNORES COVER] and ignore BS and hit roll modifiers (1CP Swarm-guided Salvoes)
+Your Shooting phase: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll (1CP Swarm-guided Salvoes)
 MELEE
 A
 WS
@@ -3770,7 +3983,7 @@ While a friendly TYRANIDS unit is within 9" of this model, that unit is within y
 
 RULESDeadly Demise D3, Shadow in the Warp, Synapse, Leader, Enraged Behemoths · Keywords
 
-STRATAGEMSCorrosive Viscera, Rampaging Monstrosities, Savage Roar, Untrammelled Ferocity, Swarm-guided Salvoes, Massive Impact, Epic Challenge, Crushing Impact, Fire Overwatch
+STRATAGEMSCorrosive Viscera, Rampaging Monstrosities, Savage Roar, Untrammelled Ferocity, Swarm-guided Salvoes, Massive Impact, Epic Challenge, Crushing Impact
 
 ######## unit hive-tyrant · THE SWARMLORD Hive Tyrant
 Character · 220 pts
@@ -3819,7 +4032,7 @@ EXTRA ATTACKS
 Within Synapse Range: +1 S
 vs MONSTER/VEHICLE: +1 to wound rolls (Monstrous Nemesis)
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 4 or fewer wounds left (Enraged Behemoths)
-Within 9" of the Swarmlord: within Synapse Range, so +1 S (Domination of the Hive Mind)
+Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 Fight phase: re-roll hit rolls (1CP Rampaging Monstrosities)
 ABILITIES
 Onslaught
@@ -3891,7 +4104,7 @@ Chitinous claws and teeth×11
 0
 1
 Within Synapse Range: +1 S
-Within 9" of the Swarmlord: within Synapse Range, so +1 S (Domination of the Hive Mind)
+Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 ABILITIES
 Neurocytes
 
@@ -3926,6 +4139,7 @@ DAMAGED 1-5 W-1 to hit rolls
 ALL ATTACKS
 If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
+Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 RANGED
 RNG
 A
@@ -3942,7 +4156,7 @@ Toxinjecter Harpoon
 D6+1
 HARPOONED
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
-Your Shooting phase: [IGNORES COVER] and ignore BS and hit roll modifiers (1CP Swarm-guided Salvoes)
+Your Shooting phase: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll (1CP Swarm-guided Salvoes)
 MELEE
 A
 WS
@@ -3966,7 +4180,6 @@ Toxinjecter Harpoon
 D6+1
 EXTRA ATTACKS
 Within Synapse Range: +1 S
-Within 9" of the Swarmlord: within Synapse Range, so +1 S (Domination of the Hive Mind)
 Fight phase: re-roll hit rolls (1CP Rampaging Monstrosities)
 When selected to fight: +2 S (1CP Lesser Prey)
 ABILITIES
@@ -3979,9 +4192,9 @@ Movement · Their turn
 Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.
 
 Singular Purpose
-Command
+Any phase
 
-Start of battle round 1 · Command · Either turn
+Start of battle round 1 · Any phase · Either turn
 
 At the start of the first battle round, select one of the following:
 
@@ -4004,7 +4217,7 @@ NORN ASSIMILATOR unit only. This unit has 4+ InSv.
 
 RULESDeadly Demise D6, Shadow in the Warp, Synapse, Enraged Behemoths, Higher Imperatives · Keywords
 
-STRATAGEMSCorrosive Viscera, Rampaging Monstrosities, Savage Roar, Untrammelled Ferocity, Swarm-guided Salvoes, Massive Impact, Catalytic Biofortification, Lesser Prey, Tanglestrike Rounds, Crushing Impact, Fire Overwatch
+STRATAGEMSCorrosive Viscera, Rampaging Monstrosities, Savage Roar, Untrammelled Ferocity, Swarm-guided Salvoes, Massive Impact, Catalytic Biofortification, Lesser Prey, Tanglestrike Rounds, Crushing Impact
 
 ######## unit norn-assimilator-300 · NORN ASSIMILATOR Norn Assimilator
 Monster · 300 pts
@@ -4033,6 +4246,7 @@ DAMAGED 1-5 W-1 to hit rolls
 ALL ATTACKS
 If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
+Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 RANGED
 RNG
 A
@@ -4049,7 +4263,7 @@ Toxinjecter Harpoon
 D6+1
 HARPOONED
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
-Your Shooting phase: [IGNORES COVER] and ignore BS and hit roll modifiers (1CP Swarm-guided Salvoes)
+Your Shooting phase: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll (1CP Swarm-guided Salvoes)
 MELEE
 A
 WS
@@ -4073,7 +4287,6 @@ Toxinjecter Harpoon
 D6+1
 EXTRA ATTACKS
 Within Synapse Range: +1 S
-Within 9" of the Swarmlord: within Synapse Range, so +1 S (Domination of the Hive Mind)
 Fight phase: re-roll hit rolls (1CP Rampaging Monstrosities)
 When selected to fight: +2 S (1CP Lesser Prey)
 ABILITIES
@@ -4086,9 +4299,9 @@ Movement · Their turn
 Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.
 
 Singular Purpose
-Command
+Any phase
 
-Start of battle round 1 · Command · Either turn
+Start of battle round 1 · Any phase · Either turn
 
 At the start of the first battle round, select one of the following:
 
@@ -4111,7 +4324,7 @@ NORN ASSIMILATOR unit only. This unit has 4+ InSv.
 
 RULESDeadly Demise D6, Shadow in the Warp, Synapse, Enraged Behemoths, Higher Imperatives · Keywords
 
-STRATAGEMSCorrosive Viscera, Rampaging Monstrosities, Savage Roar, Untrammelled Ferocity, Swarm-guided Salvoes, Massive Impact, Catalytic Biofortification, Lesser Prey, Tanglestrike Rounds, Crushing Impact, Fire Overwatch
+STRATAGEMSCorrosive Viscera, Rampaging Monstrosities, Savage Roar, Untrammelled Ferocity, Swarm-guided Salvoes, Massive Impact, Catalytic Biofortification, Lesser Prey, Tanglestrike Rounds, Crushing Impact
 
 ######## unit norn-emissary-dp · NORN ASSIMILATOR Norn Emissary
 Monster · 270 pts
@@ -4140,6 +4353,7 @@ DAMAGED 1-5 W-1 to hit rolls ([PSYCHIC] weapons can ignore it)
 ALL ATTACKS
 If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
+Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 RANGED
 RNG
 A
@@ -4173,7 +4387,7 @@ MELTA 2, PSYCHIC, ANTI-CHARACTER 2+
 1
 BLAST, PSYCHIC, ANTI-CHARACTER 2+
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
-Your Shooting phase: [IGNORES COVER] and ignore BS and hit roll modifiers (1CP Swarm-guided Salvoes)
+Your Shooting phase: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll (1CP Swarm-guided Salvoes)
 MELEE
 A
 WS
@@ -4197,14 +4411,13 @@ Monstrous rending claws
 2
 EXTRA ATTACKS
 Within Synapse Range: +1 S
-Within 9" of the Swarmlord: within Synapse Range, so +1 S (Domination of the Hive Mind)
 Fight phase: re-roll hit rolls (1CP Rampaging Monstrosities)
 When selected to fight: +2 S (1CP Lesser Prey)
 ABILITIES
 Singular Purpose
-Command
+Any phase
 
-Start of battle round 1 · Command · Either turn
+Start of battle round 1 · Any phase · Either turn
 
 At the start of the first battle round, select one of the following:
 
@@ -4231,7 +4444,7 @@ This model has the Feel No Pain 4+ ability against Mortal Wounds.
 
 RULESDeadly Demise D6, Shadow in the Warp, Synapse, Feel No Pain, Enraged Behemoths, Higher Imperatives · Keywords
 
-STRATAGEMSCorrosive Viscera, Rampaging Monstrosities, Savage Roar, Untrammelled Ferocity, Swarm-guided Salvoes, Massive Impact, Lesser Prey, Crushing Impact, Fire Overwatch
+STRATAGEMSCorrosive Viscera, Rampaging Monstrosities, Savage Roar, Untrammelled Ferocity, Swarm-guided Salvoes, Massive Impact, Lesser Prey, Crushing Impact
 
 ######## unit norn-emissary · NORN EMISSARY Norn Emissary
 Monster · 270 pts
@@ -4257,6 +4470,7 @@ DAMAGED 1-5 W-1 to hit rolls ([PSYCHIC] weapons can ignore it)
 ALL ATTACKS
 If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wound rolls
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
+Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 RANGED
 RNG
 A
@@ -4290,7 +4504,7 @@ MELTA 2, PSYCHIC
 1
 BLAST, PSYCHIC
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
-Your Shooting phase: [IGNORES COVER] and ignore BS and hit roll modifiers (1CP Swarm-guided Salvoes)
+Your Shooting phase: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll (1CP Swarm-guided Salvoes)
 MELEE
 A
 WS
@@ -4314,14 +4528,13 @@ Monstrous rending claws
 2
 EXTRA ATTACKS
 Within Synapse Range: +1 S
-Within 9" of the Swarmlord: within Synapse Range, so +1 S (Domination of the Hive Mind)
 Fight phase: re-roll hit rolls (1CP Rampaging Monstrosities)
 When selected to fight: +2 S (1CP Lesser Prey)
 ABILITIES
 Singular Purpose
-Command
+Any phase
 
-Start of battle round 1 · Command · Either turn
+Start of battle round 1 · Any phase · Either turn
 
 At the start of the first battle round, select one of the following:
 
@@ -4341,7 +4554,7 @@ This model has the Feel No Pain 4+ ability against Mortal Wounds.
 
 RULESDeadly Demise D6, Shadow in the Warp, Synapse, Feel No Pain, Enraged Behemoths, Higher Imperatives · Keywords
 
-STRATAGEMSCorrosive Viscera, Rampaging Monstrosities, Savage Roar, Untrammelled Ferocity, Swarm-guided Salvoes, Massive Impact, Lesser Prey, Crushing Impact, Fire Overwatch
+STRATAGEMSCorrosive Viscera, Rampaging Monstrosities, Savage Roar, Untrammelled Ferocity, Swarm-guided Salvoes, Massive Impact, Lesser Prey, Crushing Impact
 
 ######## unit tyrannofex · NORN EMISSARY Tyrannofex
 Monster · 180 pts each · ×2 in list
@@ -4366,6 +4579,7 @@ WHEN TARGETEDOnce per battle: change the Damage of an attack allocated to it to 
 DAMAGED 1-5 W-1 to hit rolls
 ALL ATTACKS
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
+Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 RANGED
 RNG
 A
@@ -4374,7 +4588,7 @@ S
 AP
 D
 
-Shoots with both.
+Can shoot with one or both.
 
 Stinger salvoes
 24"
@@ -4392,7 +4606,7 @@ D6+6
 2
 TORRENT
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
-Your Shooting phase: [IGNORES COVER] and ignore BS and hit roll modifiers (1CP Swarm-guided Salvoes)
+Your Shooting phase: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll (1CP Swarm-guided Salvoes)
 MELEE
 A
 WS
@@ -4406,7 +4620,6 @@ Powerful limbs
 0
 2
 Within Synapse Range: +1 S
-Within 9" of the Swarmlord: within Synapse Range, so +1 S (Domination of the Hive Mind)
 Fight phase: re-roll hit rolls (1CP Rampaging Monstrosities)
 ABILITIES
 Resilient Organism
@@ -4418,7 +4631,7 @@ Once per battle, when an attack is allocated to this model, you can change the D
 
 RULESDeadly Demise D6, Synapse, Enraged Behemoths · Keywords
 
-STRATAGEMSCorrosive Viscera, Rampaging Monstrosities, Savage Roar, Untrammelled Ferocity, Swarm-guided Salvoes, Massive Impact, Crushing Impact, Fire Overwatch
+STRATAGEMSCorrosive Viscera, Rampaging Monstrosities, Savage Roar, Untrammelled Ferocity, Swarm-guided Salvoes, Massive Impact, Crushing Impact
 
 ######## popup ability:nidzillas|Damaged: 1-5 Wounds Remaining|While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. · TYRANNOFEX Nidzillas
 ABILITY
@@ -4428,6 +4641,15 @@ Damaged: 1-5 Wounds Remaining
 While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
 
 UNITAssimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
+
+######## popup ability:nidzillas|Domination of the Hive Mind|While a friendly **TYRANIDS** unit is within 9" of this model, that unit is within your army’s **Synapse Range**. · NIDZILLAS Nidzillas
+ABILITY · AURA
+
+Domination of the Hive Mind
+
+While a friendly TYRANIDS unit is within 9" of this model, that unit is within your army’s Synapse Range.
+
+UNITThe Swarmlord
 
 ######## popup ability:nidzillas|Monstrous Nemesis|**TYRANIDS MONSTER** model only. Each time the bearer makes a melee attack that targets a **MONSTER** or **VEHICLE** unit, add 1 to the **Wound roll**. · NIDZILLAS Nidzillas
 ABILITY · ENHANCEMENT · FIGHT · EITHER TURN
@@ -4459,7 +4681,7 @@ UNITTyrannofex
 ######## popup ability:nidzillas|Singular Purpose|At the start of the first battle round, select one of the following:
 - Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
 - Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15. · NIDZILLAS Nidzillas
-ABILITY · START OF BATTLE ROUND 1 · COMMAND · EITHER TURN
+ABILITY · START OF BATTLE ROUND 1 · ANY PHASE · EITHER TURN
 
 Singular Purpose
 
@@ -5111,8 +5333,6 @@ If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within
 Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.
 Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.
 
-Agree with your opponent: Is a SYNAPSE unit within its own Synapse Range? The rule says “within 6" of one or more friendly SYNAPSE models” and not “other”, so the letter suggests yes; the app still shows the +1 S and the 3D6 Battle-shock tests as conditional.
-
 ######## popup rule:Select Weapons · NIDZILLAS Nidzillas
 CORE RULE
 
@@ -5137,7 +5357,7 @@ Shadow in the Warp
 
 If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6" of one or more SYNAPSE units from your army, subtract 1 from that test.
 
-Wahapedia FAQ: units targeted by Shadow in the Warp cannot use the Insane Bravery stratagem (“Insane Bravery can only be used in your Command phase”).
+Wahapedia FAQ: “Can units targeted by the Shadow in the Warp army rule use the Insane Bravery Stratagem?” “No. Insane Bravery can only be used in your Command phase.”
 
 ######## popup rule:Starting Strength · NIDZILLAS Nidzillas
 CORE RULE
@@ -5198,8 +5418,6 @@ If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within
 Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.
 Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.
 
-Agree with your opponent: Is a SYNAPSE unit within its own Synapse Range? The rule says “within 6" of one or more friendly SYNAPSE models” and not “other”, so the letter suggests yes; the app still shows the +1 S and the 3D6 Battle-shock tests as conditional.
-
 ######## popup rule:Synapse Range · NIDZILLAS Nidzillas
 TYRANIDS ARMY RULE
 
@@ -5209,8 +5427,6 @@ If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within
 
 Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.
 Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.
-
-Agree with your opponent: Is a SYNAPSE unit within its own Synapse Range? The rule says “within 6" of one or more friendly SYNAPSE models” and not “other”, so the letter suggests yes; the app still shows the +1 S and the 3D6 Battle-shock tests as conditional.
 
 ######## popup rule:TORRENT · NIDZILLAS Nidzillas
 CORE RULE
@@ -5307,6 +5523,13 @@ All of that model’s [EXTRA ATTACKS] weapons.
 One of that model’s other melee weapons, if possible.
 
 IN THIS ARMYHive Tyrant · Monstrous Nemesis, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary
+
+######## popup rule:[HAZARDOUS] · NIDZILLAS Nidzillas
+CORE RULE
+
+HAZARDOUS
+
+Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.
 
 ######## popup rule:[IGNORES COVER] · NIDZILLAS Nidzillas
 CORE RULE
@@ -5831,22 +6054,6 @@ EFFECT
 Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
 
 USED BYThe Swarmlord, Hive Tyrant · Monstrous Nemesis
-
-######## popup strat:fire-overwatch · NIDZILLAS Nidzillas
-1CP · MOVEMENT · THEIR TURN
-
-Fire Overwatch
-WHEN
-
-End of your opponent’s Movement phase.
-
-TARGETOne friendly unengaged unit (excluding TITANIC units).
-
-EFFECT
-
-Your unit shoots using snap shooting.
-
-USED BYThe Swarmlord, Assimilator (280) · Synaptoprescience, Assimilator (300) · Synaptoprescience, Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
 
 ######## popup strat:insane-bravery · NIDZILLAS Nidzillas
 1CP · COMMAND · YOUR TURN · ONCE PER BATTLE

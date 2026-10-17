@@ -1,8 +1,8 @@
 // written by verify/run.js: the last verification of this app.html + data.js
 window.WH_VERIFIED = {
  "ok": true,
- "build": "377683ea48",
- "data": "2026-10-16.15",
+ "build": "721683f7bb",
+ "data": "2026-10-17.1",
  "date": "17 Oct 2026",
  "checks": [
   {
@@ -15,7 +15,7 @@ window.WH_VERIFIED = {
   },
   {
    "label": "Games Workshop’s rules text:",
-   "detail": "every rule, enhancement and stratagem is the wording of GW’s newest official document, or Wahapedia where GW has none (1182 texts)."
+   "detail": "every rule, enhancement and stratagem is the wording of GW’s newest official document, or Wahapedia where GW has none (1183 texts)."
   },
   {
    "label": "Rules logic:",
@@ -23,11 +23,11 @@ window.WH_VERIFIED = {
   },
   {
    "label": "The app’s own notes:",
-   "detail": "566 footnotes, reminders, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
+   "detail": "559 footnotes, reminders, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
   },
   {
    "label": "Every screen:",
-   "detail": "760 screens and popups render in both layouts, on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
+   "detail": "757 screens and popups render in both layouts, on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
   }
  ],
  "sources": [
@@ -47,6 +47,5 @@ window.WH_VERIFIED = {
    "label": "Wahapedia:",
    "detail": "faction pages for Orks (no GW Faction Pack yet) and the errata and FAQs it lists."
   }
- ],
- "asks": "5 rules in these armies allow two readings (’Ard as Nails, Try Dat Button!, Full Tilt, Synapse, Dreadherder): each army’s Before the battle screen lists the ones it uses, under Agree with your opponent."
+ ]
 };

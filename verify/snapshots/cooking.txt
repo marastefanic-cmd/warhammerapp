@@ -76,9 +76,9 @@ POINTS
 2000 / 2000 · Strike Force
 DECLARE BATTLE FORMATIONS
 RESERVES
-Strategic reserves: up to 1000 pts (half the 2000 limit), counting units embarked within a TRANSPORT you place there. Unless a rule says otherwise, they arrive from battle round 2, and any that have not arrived by the end of round 3 are destroyed (not repositioned units, nor units embarked within a TRANSPORT that arrived).
+Strategic reserves: unless otherwise stated, up to 1000 pts (50% of the 2000 limit), counting units embarked within a TRANSPORT you place there. Unless otherwise stated, they can only arrive from the second battle round onwards, and any that have not arrived by the end of round 3 are destroyed (not repositioned units, nor units embarked within a TRANSPORT that arrived).
 Can Deep Strike: Nazdreg 355 pts, Deffkoptas 85 pts (all: 440 pts)
-START OF THE BATTLE
+START OF THE BATTLE ROUND
 EVERY ROUND
 Da Boss · Orks army rule
 ONCE PER BATTLE
@@ -88,13 +88,6 @@ ABILITIES
 Makari, Hoist Dat Banner! · Ghazghkull Thraka per army
 STRATA­GEMS
 1CP Insane Bravery
-AGREE WITH YOUR OPPONENT
-
-’Ard as Nails Does it work outside the Fight phase? By the letter a WARBOSS destroyed in any phase before its unit has fought stays on a 3+ until the end of that phase; the app lists it in the Fight phase.
-
-Try Dat Button! With two D6, is a repeated number re-rolled, or a repeated effect (1 and 2 are both +1 A)? The app assumes you always get two different effects.
-
-Dreadherder Can the Dakkarig pick its own unit for the re-roll of 1s? The rule says “one friendly ORKS WALKER unit within 3" of this model”; the app assumes another unit.
 
 Gathered from this list’s datasheets and rules; each line opens the full text.
 
@@ -248,7 +241,7 @@ vs MONSTER/VEHICLE: +1 AP (Da Hunt is On)
 Nazdreg
 + Meganobz
 NAZDREG
-Kustom Blasta XALL 3 FIRE
+Kustom Blasta XALL 3 CAN FIRE
 +Skorcha
 12"
 3
@@ -313,7 +306,7 @@ vs MONSTER/VEHICLE: +1 AP (Da Hunt is On)
 Beastboss on Squigosaur
 Da Gobshot Thunderbuss
 
-Shoots with both (a MONSTER fires its pistol too).
+Can shoot with one or both (Close-quarters does not limit MONSTER models).
 
 Da Gobshot Thunderbuss
 24"
@@ -335,7 +328,7 @@ vs MONSTER/VEHICLE: +1 AP (Da Hunt is On)
 Big Mek Dakkarig
 Cybork Boosta
 
-Shoots with both.
+Can shoot with one or both.
 
 Blitzkannon
 24"
@@ -355,12 +348,12 @@ Multi-busta Launcha
 3
 IGNORES COVER, LETHAL HITS
 Riled up: [SUSTAINED HITS 1] (Even More Dakka)
-Optional D6: 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (2 D6: two effects, then a hazard roll) (Try Dat Button!)
+Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6): 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked) (Try Dat Button!)
 Picked by the Dreadherder: re-roll hit rolls of 1 this turn
 Big Mek Dakkarig
 Dreadherder
 
-Shoots with both.
+Can shoot with one or both.
 
 Blitzkannon
 24"
@@ -380,7 +373,8 @@ Multi-busta Launcha
 3
 IGNORES COVER, LETHAL HITS
 Riled up: [SUSTAINED HITS 1] (Even More Dakka)
-Optional D6: 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (2 D6: two effects, then a hazard roll) (Try Dat Button!)
+Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6): 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked) (Try Dat Button!)
+Picked by the Dreadherder: re-roll hit rolls of 1 this turn
 Gretchin
 ×3 units
 Grot Blasta×10
@@ -393,7 +387,7 @@ Grot Blasta×10
 CLOSE-QUARTERS
 Deffkoptas
 
-Pick one to shoot: Slugga or Rokkit Launcha.
+Can shoot with Slugga or Rokkit Launcha, not both (Close-quarters); in close-quarters shooting, Slugga only.
 
 Rokkit Launcha×3PICK ONE PROFILE
 ➤Busta
@@ -420,7 +414,7 @@ Slugga×3
 0
 1
 CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
-After an ingress move this turn: +1 to hit rolls (Deff from Above)
+Your Shooting phase, after an ingress move this turn: +1 to hit rolls (Deff from Above)
 Killa Kans
 Kan Blasta×6PICK ONE PROFILE
 ➤Kill Shot
@@ -447,7 +441,7 @@ BLAST 2, TORRENT
 1
 BLAST 1, IGNORES COVER, SUSTAINED HITS 1
 vs units with no T 7+ models: +1 to hit rolls (Spiteful Power Trip)
-Optional D6: 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (2 D6: two effects, then a hazard roll) (Try Dat Button!)
+Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6): 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked) (Try Dat Button!)
 Picked by the Dreadherder: re-roll hit rolls of 1 this turn
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
@@ -475,7 +469,7 @@ Mozrog Skragbad
 
 Fights with both: Gutrippa, plus Big Chompa’s Jaws on top (extra attacks).
 
-GutrippaPICK ONE BY TARGET
+GutrippaPICK ONE PROFILE
 ➤HunterMON/VEH ONLY
 6
 2+
@@ -484,7 +478,7 @@ GutrippaPICK ONE BY TARGET
 (+1)
 D6+1
 LETHAL HITS
-➤StandardANY TARGET
+➤Standard
 6
 2+
 9
@@ -541,7 +535,7 @@ Brutal But Kunnin’
 
 Fights with both: Beastchoppa, plus Squigosaur’s jaws on top (extra attacks).
 
-BeastchoppaPICK ONE BY TARGET
+BeastchoppaPICK ONE PROFILE
 ➤HunterMON/VEH ONLY
 6
 2+
@@ -549,7 +543,7 @@ BeastchoppaPICK ONE BY TARGET
 -2
 (+1)
 D6+1
-➤StandardANY TARGET
+➤Standard
 6
 2+
 6
@@ -570,7 +564,7 @@ Da Gobshot Thunderbuss
 
 Fights with both: Beastchoppa, plus Squigosaur’s jaws on top (extra attacks).
 
-BeastchoppaPICK ONE BY TARGET
+BeastchoppaPICK ONE PROFILE
 ➤HunterMON/VEH ONLY
 6
 2+
@@ -578,7 +572,7 @@ BeastchoppaPICK ONE BY TARGET
 -2
 (+1)
 D6
-➤StandardANY TARGET
+➤Standard
 6
 2+
 6
@@ -602,7 +596,7 @@ Stompy Feet
 6
 -1
 1
-Optional D6: 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (2 D6: two effects, then a hazard roll) (Try Dat Button!)
+Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6): 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked) (Try Dat Button!)
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
 Picked by the Dreadherder: re-roll hit rolls of 1 this turn
 Big Mek Dakkarig
@@ -613,8 +607,9 @@ Stompy Feet
 6
 -1
 1
-Optional D6: 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (2 D6: two effects, then a hazard roll) (Try Dat Button!)
+Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6): 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked) (Try Dat Button!)
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
+Picked by the Dreadherder: re-roll hit rolls of 1 this turn
 Gretchin
 ×3 units
 Scavenged Shivs×10
@@ -650,7 +645,7 @@ Kan Klaw×6
 -2
 3
 vs units with no T 7+ models: +1 to hit rolls (Spiteful Power Trip)
-Optional D6: 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (2 D6: two effects, then a hazard roll) (Try Dat Button!)
+Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6): 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked) (Try Dat Button!)
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
 Picked by the Dreadherder: re-roll hit rolls of 1 this turn
 
@@ -845,9 +840,9 @@ In your Shooting phase, if this unit’s Blitzkannon weapon targets a unit (excl
 
 Dreadherder
 Enhancement
-Your Shooting
+Your Shooting · Your Fight
 
-Enhancement · Shooting · Your turn
+Enhancement · Shooting / Fight · Your turn
 
 BIG MEK model only. While this model is within 3" of a friendly ORKS WALKER unit (excluding BIG MEK units):
 
@@ -883,9 +878,9 @@ In your Shooting phase, if this unit made an ingress move this turn, this unit�
 
 Killa Kans
 Spiteful Power Trip
-Your Shooting · Fight
+Their Movement · Your Shooting · Fight
 
-Your Shooting / Fight (either turn)
+Their Movement / Your Shooting / Fight (either turn)
 
 This unit’s attacks that target a unit that has no models with a T of 7+ have +1 to hit rolls.
 
@@ -946,7 +941,7 @@ saved
 Otherwise
 the model loses D wounds
 
-Allocation: a group of models with a wounded model takes attacks first; CHARACTER models come after all others.
+Allocation order (05.03): a non-CHARACTER group containing a model that has lost one or more wounds must be first; no CHARACTER group can be earlier than a non-CHARACTER group; CHARACTER groups containing a model that has lost one or more wounds must be earlier than CHARACTER groups containing no wounded models.
 
 ARMY RULES
 Waaagh!
@@ -968,7 +963,7 @@ Once per battle, per army
 At the start of the Command phase, you can use this ability. If you do, friendly ORKS units with the Waaagh! ability are riled up until the end of the next turn.
 
 Da Boss
-Command · Either turn
+Start of the battle round
 
 At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.
 
@@ -1192,7 +1187,7 @@ Some of these profiles are known as Hunter profiles. Hunter profiles can only ta
 
 Note that if a unit is equipped with more than one such weapon, a different profile can be selected for each model within that unit.
 
-App note, not rules text: New Recruit prints these weapons as two profiles, one marked “Hunter: MONSTER/VEHICLE”. That profile can only target MONSTER or VEHICLE units; the Standard profile can target any unit. The Hunter rule is in the rules appendix of the Warhammer 40,000 app (Wahapedia 04.01.03), not in the printed Core Rules.
+App note, not rules text: New Recruit prints these weapons as two profiles, one marked “Hunter: MONSTER/VEHICLE”. That profile can only target MONSTER or VEHICLE units. The Hunter rule is in the rules appendix of the Warhammer 40,000 app (Wahapedia 04.01.03), not in the printed Core Rules.
 
 IN THIS ARMYMozrog Skragbad, Beastboss · Brutal But Kunnin’, Beastboss · Da Gobshot Thunderbuss
 
@@ -1208,8 +1203,6 @@ LETHAL HITS: non-MONSTER/VEHICLE
 Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
 
 Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
-
-App note, not rules text: the suffix “: non-MONSTER/VEHICLE” reads as applying only against targets that are not MONSTER or VEHICLE units.
 
 IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Brutal But Kunnin’, Beastboss · Da Gobshot Thunderbuss, Big Mek · Cybork Boosta, Big Mek · Dreadherder, Deffkoptas
 
@@ -1370,7 +1363,7 @@ When a model in your unit is destroyed, if your unit has not been selected to fi
 
 On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.
 
-No unit in this list is a DEFF DREAD, so the roll is a plain 4+. (Wahapedia strikes DEFF DREAD through as a keyword no Orks datasheet has, but the Deff Dread datasheet does have the DEFF DREAD keyword in BSData, which New Recruit uses, so Deff Dreads get the +3.) Wahapedia FAQ: Fight on Death rules resolve before Deadly Demise, so Deadly Demise resolves once the models are removed.
+Wahapedia FAQ: “If my unit has the Deadly Demise ability and has an ability that allows it to Fight on Death, how do I resolve this?” “Fight on Death rules are resolved before Deadly Demise abilities, meaning that your unit’s Deadly Demise will resolve after your unit has fought/at the end of the phase and the relevant models have been removed from the battlefield.”
 
 USED BYBig Mek · Cybork Boosta, Big Mek · Dreadherder, Killa Kans
 
@@ -1640,7 +1633,7 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-2 abilities
+3 abilities
 War Cry
 Orks army rule
 Once per battle, per army
@@ -1653,6 +1646,15 @@ Orks army rule
 At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.
 
 Wahapedia core rules errata (07.01, CP Generated by a Warlord; not in GW’s printed Core Rules): you do not gain the 1CP while your WARLORD is destroyed.
+
+’Ard as Nails
+Brute Bosses rule · Ghazghkull Thraka, Nazdreg, Beastboss ×2
+
+When a friendly WARBOSS model is destroyed, if this unit has not been selected to fight this phase, roll one D6, with +1 to the roll if your unit is riled up:
+
+On a 3+, do not remove this WARBOSS model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this WARBOSS model is removed from the battlefield.
+
+UNITSGhazghkull Thraka, Nazdreg, Beastboss · Brutal But Kunnin’, Beastboss · Da Gobshot Thunderbuss
 
 NEXT: MOVEMENT ›
 
@@ -1776,7 +1778,7 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-8 abilities
+10 abilities
 Waaagh! Re-roll advance rolls. Riled up: advancing still lets a unit declare a charge.
 Da Hunt is On
 Da Big Hunt rule · Mozrog Skragbad, Beastboss ×2
@@ -1835,6 +1837,13 @@ If this unit is riled up, this unit’s ranged attacks have [SUSTAINED HITS 1].
 
 UNITSBig Mek · Cybork Boosta, Big Mek · Dreadherder
 
+Spiteful Power Trip
+Killa Kans
+
+This unit’s attacks that target a unit that has no models with a T of 7+ have +1 to hit rolls.
+
+UNITSKilla Kans
+
 Deep Strike
 Core rule · Nazdreg, Deffkoptas
 
@@ -1850,6 +1859,15 @@ Gretchin
 At the end of your Movement phase, if this unit is controlling an objective, that objective is secured.
 
 UNITSGretchin
+
+’Ard as Nails
+Brute Bosses rule · Ghazghkull Thraka, Nazdreg, Beastboss ×2
+
+When a friendly WARBOSS model is destroyed, if this unit has not been selected to fight this phase, roll one D6, with +1 to the roll if your unit is riled up:
+
+On a 3+, do not remove this WARBOSS model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this WARBOSS model is removed from the battlefield.
+
+UNITSGhazghkull Thraka, Nazdreg, Beastboss · Brutal But Kunnin’, Beastboss · Da Gobshot Thunderbuss
 
 NEXT: SHOOTING ›
 
@@ -1927,7 +1945,7 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-7 abilities
+8 abilities
 Waaagh! Riled up: ranged attacks have [ASSAULT].
 Da Hunt is On
 Da Big Hunt rule · Mozrog Skragbad, Beastboss ×2
@@ -1991,22 +2009,34 @@ This unit’s attacks that target a unit that has no models with a T of 7+ have 
 
 UNITSKilla Kans
 
+’Ard as Nails
+Brute Bosses rule · Ghazghkull Thraka, Nazdreg, Beastboss ×2
+
+When a friendly WARBOSS model is destroyed, if this unit has not been selected to fight this phase, roll one D6, with +1 to the roll if your unit is riled up:
+
+On a 3+, do not remove this WARBOSS model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this WARBOSS model is removed from the battlefield.
+
+UNITSGhazghkull Thraka, Nazdreg, Beastboss · Brutal But Kunnin’, Beastboss · Da Gobshot Thunderbuss
+
 WHEN TARGETED
+
+Every unit: Riled up: 5+ INV
+
 Ghazghkull Thraka
 T10 SV2+ INV4+ W16
-WARBOSS destroyed before its unit has fought this phase: on a 3+ (+1 riled up) it stays until the unit has fought or the phase ends · Lone Operative while within 3" of another friendly ORKS INFANTRY unit
+Friendly WARBOSS model destroyed while this unit has not been selected to fight this phase: on a 3+ (+1 if your unit is riled up) it is not removed until this unit has fought or the end of the phase · Lone Operative while within 3" of another friendly ORKS INFANTRY unit
 Mozrog Skragbad
 T9 SV3+ INV4+ W10
 Feel No Pain 5+
 Nazdreg
 Nazdreg T7 SV2+ INV5+ W8 / Meganob T6 SV2+ W3
-WARBOSS destroyed before its unit has fought this phase: on a 3+ (+1 riled up) it stays until the unit has fought or the phase ends · Attacks that target this unit have -1 AP · Riled up: 5+ INV (Meganob)
+Friendly WARBOSS model destroyed while this unit has not been selected to fight this phase: on a 3+ (+1 if your unit is riled up) it is not removed until this unit has fought or the end of the phase · Attacks that target this unit have -1 AP
 Beastboss · Brutal But Kunnin’
 T9 SV3+ INV5+ W10
-Feel No Pain 5+ · WARBOSS destroyed before its unit has fought this phase: on a 3+ (+1 riled up) it stays until the unit has fought or the phase ends
+Feel No Pain 5+ · Friendly WARBOSS model destroyed while this unit has not been selected to fight this phase: on a 3+ (+1 if your unit is riled up) it is not removed until this unit has fought or the end of the phase
 Beastboss · Da Gobshot Thunderbuss
 T9 SV3+ INV5+ W10
-Feel No Pain 5+ · WARBOSS destroyed before its unit has fought this phase: on a 3+ (+1 riled up) it stays until the unit has fought or the phase ends
+Feel No Pain 5+ · Friendly WARBOSS model destroyed while this unit has not been selected to fight this phase: on a 3+ (+1 if your unit is riled up) it is not removed until this unit has fought or the end of the phase
 Big Mek · Cybork Boosta
 T8 SV3+ INV5+ W11
 Big Mek · Dreadherder
@@ -2014,13 +2044,10 @@ T8 SV3+ INV5+ W11
 Lone Operative while within 3" of a friendly ORKS WALKER unit (not BIG MEK)
 Gretchin
 T2 SV6+ W1
-Riled up: 5+ INV
 Deffkoptas
 T6 SV4+ INV6+ W4
-Riled up: 5+ INV
 Killa Kans
 T7 SV3+ INV6+ W5
-Riled up: 5+ INV
 NEXT: CHARGE ›
 
 Brute Bosses has no stratagems (a rule and enhancements only).
@@ -2120,7 +2147,7 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-1 ability
+2 abilities
 Waaagh! A unit that was riled up when it advanced can still declare a charge.
 Thundering Stampede
 Beastboss ×2
@@ -2129,6 +2156,15 @@ Aura
 Friendly BEAST SNAGGA units within 6" of this unit have +1 to charge rolls.
 
 UNITSBeastboss · Brutal But Kunnin’, Beastboss · Da Gobshot Thunderbuss
+
+’Ard as Nails
+Brute Bosses rule · Ghazghkull Thraka, Nazdreg, Beastboss ×2
+
+When a friendly WARBOSS model is destroyed, if this unit has not been selected to fight this phase, roll one D6, with +1 to the roll if your unit is riled up:
+
+On a 3+, do not remove this WARBOSS model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this WARBOSS model is removed from the battlefield.
+
+UNITSGhazghkull Thraka, Nazdreg, Beastboss · Brutal But Kunnin’, Beastboss · Da Gobshot Thunderbuss
 
 NEXT: FIGHT ›
 
@@ -2174,7 +2210,7 @@ When a model in your unit is destroyed, if your unit has not been selected to fi
 
 On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.
 
-No unit in this list is a DEFF DREAD, so the roll is a plain 4+. (Wahapedia strikes DEFF DREAD through as a keyword no Orks datasheet has, but the Deff Dread datasheet does have the DEFF DREAD keyword in BSData, which New Recruit uses, so Deff Dreads get the +3.) Wahapedia FAQ: Fight on Death rules resolve before Deadly Demise, so Deadly Demise resolves once the models are removed.
+Wahapedia FAQ: “If my unit has the Deadly Demise ability and has an ability that allows it to Fight on Death, how do I resolve this?” “Fight on Death rules are resolved before Deadly Demise abilities, meaning that your unit’s Deadly Demise will resolve after your unit has fought/at the end of the phase and the relevant models have been removed from the battlefield.”
 
 USED BYBig Mek · Cybork Boosta, Big Mek · Dreadherder, Killa Kans
 
@@ -2238,16 +2274,7 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-9 abilities
-’Ard as Nails
-Brute Bosses rule · Ghazghkull Thraka, Nazdreg, Beastboss ×2
-
-When a friendly WARBOSS model is destroyed, if this unit has not been selected to fight this phase, roll one D6, with +1 to the roll if your unit is riled up:
-
-On a 3+, do not remove this WARBOSS model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this WARBOSS model is removed from the battlefield.
-
-UNITSGhazghkull Thraka, Nazdreg, Beastboss · Brutal But Kunnin’, Beastboss · Da Gobshot Thunderbuss
-
+10 abilities
 Da Hunt is On
 Da Big Hunt rule · Mozrog Skragbad, Beastboss ×2
 
@@ -2305,6 +2332,17 @@ In the Fight phase, if this unit is riled up, this unit has +1 to hit rolls.
 
 UNITSNazdreg
 
+Dreadherder
+Big Mek
+Enhancement
+
+BIG MEK model only. While this model is within 3" of a friendly ORKS WALKER unit (excluding BIG MEK units):
+
+This model has Lone Operative.
+In your Shooting phase, you can select one friendly ORKS WALKER unit within 3" of this model. That unit’s attacks can re-roll hit rolls of 1 until the end of the turn.
+
+UNITSBig Mek · Dreadherder
+
 Spiteful Power Trip
 Killa Kans
 
@@ -2319,37 +2357,47 @@ At the end of your opponent’s Fight phase, if this unit is unengaged, you can 
 
 UNITSDeffkoptas
 
+’Ard as Nails
+Brute Bosses rule · Ghazghkull Thraka, Nazdreg, Beastboss ×2
+
+When a friendly WARBOSS model is destroyed, if this unit has not been selected to fight this phase, roll one D6, with +1 to the roll if your unit is riled up:
+
+On a 3+, do not remove this WARBOSS model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this WARBOSS model is removed from the battlefield.
+
+UNITSGhazghkull Thraka, Nazdreg, Beastboss · Brutal But Kunnin’, Beastboss · Da Gobshot Thunderbuss
+
 WHEN TARGETED
+
+Every unit: Riled up: 5+ INV
+
 Ghazghkull Thraka
 T10 SV2+ INV4+ W16
-WARBOSS destroyed before its unit has fought this phase: on a 3+ (+1 riled up) it stays until the unit has fought or the phase ends · Lone Operative while within 3" of another friendly ORKS INFANTRY unit
+Friendly WARBOSS model destroyed while this unit has not been selected to fight this phase: on a 3+ (+1 if your unit is riled up) it is not removed until this unit has fought or the end of the phase · Lone Operative while within 3" of another friendly ORKS INFANTRY unit
 Mozrog Skragbad
 T9 SV3+ INV4+ W10
 Feel No Pain 5+ · Destroyed in the Fight phase before fighting: on a 2+ it stays until it has fought or the phase ends
 Nazdreg
 Nazdreg T7 SV2+ INV5+ W8 / Meganob T6 SV2+ W3
-WARBOSS destroyed before its unit has fought this phase: on a 3+ (+1 riled up) it stays until the unit has fought or the phase ends · Attacks that target this unit have -1 AP · Riled up: 5+ INV (Meganob)
+Friendly WARBOSS model destroyed while this unit has not been selected to fight this phase: on a 3+ (+1 if your unit is riled up) it is not removed until this unit has fought or the end of the phase · Attacks that target this unit have -1 AP
 Beastboss · Brutal But Kunnin’
 T9 SV3+ INV5+ W10
-Feel No Pain 5+ · WARBOSS destroyed before its unit has fought this phase: on a 3+ (+1 riled up) it stays until the unit has fought or the phase ends
+Feel No Pain 5+ · Friendly WARBOSS model destroyed while this unit has not been selected to fight this phase: on a 3+ (+1 if your unit is riled up) it is not removed until this unit has fought or the end of the phase
 Beastboss · Da Gobshot Thunderbuss
 T9 SV3+ INV5+ W10
-Feel No Pain 5+ · WARBOSS destroyed before its unit has fought this phase: on a 3+ (+1 riled up) it stays until the unit has fought or the phase ends
+Feel No Pain 5+ · Friendly WARBOSS model destroyed while this unit has not been selected to fight this phase: on a 3+ (+1 if your unit is riled up) it is not removed until this unit has fought or the end of the phase
 Big Mek · Cybork Boosta
 T8 SV3+ INV5+ W11
-1CP Crazed Rampage: Fight phase: a model destroyed before the unit has fought stays to fight on a 4+ (removed once the unit has fought or at the end of the phase)
+1CP Crazed Rampage: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (removed once your unit has fought or at the end of the phase)
 Big Mek · Dreadherder
 T8 SV3+ INV5+ W11
-Lone Operative while within 3" of a friendly ORKS WALKER unit (not BIG MEK) · 1CP Crazed Rampage: Fight phase: a model destroyed before the unit has fought stays to fight on a 4+ (removed once the unit has fought or at the end of the phase)
+Lone Operative while within 3" of a friendly ORKS WALKER unit (not BIG MEK) · 1CP Crazed Rampage: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (removed once your unit has fought or at the end of the phase)
 Gretchin
 T2 SV6+ W1
-Riled up: 5+ INV
 Deffkoptas
 T6 SV4+ INV6+ W4
-Riled up: 5+ INV
 Killa Kans
 T7 SV3+ INV6+ W5
-1CP Crazed Rampage: Fight phase: a model destroyed before the unit has fought stays to fight on a 4+ (removed once the unit has fought or at the end of the phase) · Riled up: 5+ INV
+1CP Crazed Rampage: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (removed once your unit has fought or at the end of the phase)
 NEXT: COMMAND ›
 
 Brute Bosses has no stratagems (a rule and enhancements only).
@@ -2376,7 +2424,7 @@ When a model in your unit is destroyed, if your unit has not been selected to fi
 
 On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.
 
-No unit in this list is a DEFF DREAD, so the roll is a plain 4+. (Wahapedia strikes DEFF DREAD through as a keyword no Orks datasheet has, but the Deff Dread datasheet does have the DEFF DREAD keyword in BSData, which New Recruit uses, so Deff Dreads get the +3.) Wahapedia FAQ: Fight on Death rules resolve before Deadly Demise, so Deadly Demise resolves once the models are removed.
+Wahapedia FAQ: “If my unit has the Deadly Demise ability and has an ability that allows it to Fight on Death, how do I resolve this?” “Fight on Death rules are resolved before Deadly Demise abilities, meaning that your unit’s Deadly Demise will resolve after your unit has fought/at the end of the phase and the relevant models have been removed from the battlefield.”
 
 USED BYBig Mek · Cybork Boosta, Big Mek · Dreadherder, Killa Kans
 
@@ -2573,7 +2621,7 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-2 abilities
+3 abilities
 War Cry
 Orks army rule
 Once per battle, per army
@@ -2586,6 +2634,15 @@ Orks army rule
 At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.
 
 Wahapedia core rules errata (07.01, CP Generated by a Warlord; not in GW’s printed Core Rules): you do not gain the 1CP while your WARLORD is destroyed.
+
+’Ard as Nails
+Brute Bosses rule · Ghazghkull Thraka, Nazdreg, Beastboss ×2
+
+When a friendly WARBOSS model is destroyed, if this unit has not been selected to fight this phase, roll one D6, with +1 to the roll if your unit is riled up:
+
+On a 3+, do not remove this WARBOSS model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this WARBOSS model is removed from the battlefield.
+
+UNITSGhazghkull Thraka, Nazdreg, Beastboss · Brutal But Kunnin’, Beastboss · Da Gobshot Thunderbuss
 
 NEXT: YOUR MOVEMENT ›
 
@@ -2657,7 +2714,7 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-5 abilities
+6 abilities
 Waaagh! Re-roll advance rolls. Riled up: advancing still lets a unit declare a charge.
 Makari, Hoist Dat Banner!
 Ghazghkull Thraka
@@ -2706,6 +2763,15 @@ Gretchin
 At the end of your Movement phase, if this unit is controlling an objective, that objective is secured.
 
 UNITSGretchin
+
+’Ard as Nails
+Brute Bosses rule · Ghazghkull Thraka, Nazdreg, Beastboss ×2
+
+When a friendly WARBOSS model is destroyed, if this unit has not been selected to fight this phase, roll one D6, with +1 to the roll if your unit is riled up:
+
+On a 3+, do not remove this WARBOSS model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this WARBOSS model is removed from the battlefield.
+
+UNITSGhazghkull Thraka, Nazdreg, Beastboss · Brutal But Kunnin’, Beastboss · Da Gobshot Thunderbuss
 
 NEXT: YOUR SHOOTING ›
 
@@ -2765,7 +2831,7 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-7 abilities
+8 abilities
 Waaagh! Riled up: ranged attacks have [ASSAULT].
 Da Hunt is On
 Da Big Hunt rule · Mozrog Skragbad, Beastboss ×2
@@ -2828,6 +2894,15 @@ Killa Kans
 This unit’s attacks that target a unit that has no models with a T of 7+ have +1 to hit rolls.
 
 UNITSKilla Kans
+
+’Ard as Nails
+Brute Bosses rule · Ghazghkull Thraka, Nazdreg, Beastboss ×2
+
+When a friendly WARBOSS model is destroyed, if this unit has not been selected to fight this phase, roll one D6, with +1 to the roll if your unit is riled up:
+
+On a 3+, do not remove this WARBOSS model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this WARBOSS model is removed from the battlefield.
+
+UNITSGhazghkull Thraka, Nazdreg, Beastboss · Brutal But Kunnin’, Beastboss · Da Gobshot Thunderbuss
 
 NEXT: YOUR CHARGE ›
 
@@ -2905,7 +2980,7 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-1 ability
+2 abilities
 Waaagh! A unit that was riled up when it advanced can still declare a charge.
 Thundering Stampede
 Beastboss ×2
@@ -2914,6 +2989,15 @@ Aura
 Friendly BEAST SNAGGA units within 6" of this unit have +1 to charge rolls.
 
 UNITSBeastboss · Brutal But Kunnin’, Beastboss · Da Gobshot Thunderbuss
+
+’Ard as Nails
+Brute Bosses rule · Ghazghkull Thraka, Nazdreg, Beastboss ×2
+
+When a friendly WARBOSS model is destroyed, if this unit has not been selected to fight this phase, roll one D6, with +1 to the roll if your unit is riled up:
+
+On a 3+, do not remove this WARBOSS model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this WARBOSS model is removed from the battlefield.
+
+UNITSGhazghkull Thraka, Nazdreg, Beastboss · Brutal But Kunnin’, Beastboss · Da Gobshot Thunderbuss
 
 NEXT: YOUR FIGHT ›
 
@@ -2941,7 +3025,7 @@ When a model in your unit is destroyed, if your unit has not been selected to fi
 
 On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.
 
-No unit in this list is a DEFF DREAD, so the roll is a plain 4+. (Wahapedia strikes DEFF DREAD through as a keyword no Orks datasheet has, but the Deff Dread datasheet does have the DEFF DREAD keyword in BSData, which New Recruit uses, so Deff Dreads get the +3.) Wahapedia FAQ: Fight on Death rules resolve before Deadly Demise, so Deadly Demise resolves once the models are removed.
+Wahapedia FAQ: “If my unit has the Deadly Demise ability and has an ability that allows it to Fight on Death, how do I resolve this?” “Fight on Death rules are resolved before Deadly Demise abilities, meaning that your unit’s Deadly Demise will resolve after your unit has fought/at the end of the phase and the relevant models have been removed from the battlefield.”
 
 USED BYBig Mek · Cybork Boosta, Big Mek · Dreadherder, Killa Kans
 
@@ -2989,16 +3073,7 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-8 abilities
-’Ard as Nails
-Brute Bosses rule · Ghazghkull Thraka, Nazdreg, Beastboss ×2
-
-When a friendly WARBOSS model is destroyed, if this unit has not been selected to fight this phase, roll one D6, with +1 to the roll if your unit is riled up:
-
-On a 3+, do not remove this WARBOSS model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this WARBOSS model is removed from the battlefield.
-
-UNITSGhazghkull Thraka, Nazdreg, Beastboss · Brutal But Kunnin’, Beastboss · Da Gobshot Thunderbuss
-
+9 abilities
 Da Hunt is On
 Da Big Hunt rule · Mozrog Skragbad, Beastboss ×2
 
@@ -3056,12 +3131,32 @@ In the Fight phase, if this unit is riled up, this unit has +1 to hit rolls.
 
 UNITSNazdreg
 
+Dreadherder
+Big Mek
+Enhancement
+
+BIG MEK model only. While this model is within 3" of a friendly ORKS WALKER unit (excluding BIG MEK units):
+
+This model has Lone Operative.
+In your Shooting phase, you can select one friendly ORKS WALKER unit within 3" of this model. That unit’s attacks can re-roll hit rolls of 1 until the end of the turn.
+
+UNITSBig Mek · Dreadherder
+
 Spiteful Power Trip
 Killa Kans
 
 This unit’s attacks that target a unit that has no models with a T of 7+ have +1 to hit rolls.
 
 UNITSKilla Kans
+
+’Ard as Nails
+Brute Bosses rule · Ghazghkull Thraka, Nazdreg, Beastboss ×2
+
+When a friendly WARBOSS model is destroyed, if this unit has not been selected to fight this phase, roll one D6, with +1 to the roll if your unit is riled up:
+
+On a 3+, do not remove this WARBOSS model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this WARBOSS model is removed from the battlefield.
+
+UNITSGhazghkull Thraka, Nazdreg, Beastboss · Brutal But Kunnin’, Beastboss · Da Gobshot Thunderbuss
 
 NEXT: THEIR COMMAND ›
 
@@ -3139,7 +3234,7 @@ When a model in your unit is destroyed, if your unit has not been selected to fi
 
 On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.
 
-No unit in this list is a DEFF DREAD, so the roll is a plain 4+. (Wahapedia strikes DEFF DREAD through as a keyword no Orks datasheet has, but the Deff Dread datasheet does have the DEFF DREAD keyword in BSData, which New Recruit uses, so Deff Dreads get the +3.) Wahapedia FAQ: Fight on Death rules resolve before Deadly Demise, so Deadly Demise resolves once the models are removed.
+Wahapedia FAQ: “If my unit has the Deadly Demise ability and has an ability that allows it to Fight on Death, how do I resolve this?” “Fight on Death rules are resolved before Deadly Demise abilities, meaning that your unit’s Deadly Demise will resolve after your unit has fought/at the end of the phase and the relevant models have been removed from the battlefield.”
 
 USED BYBig Mek · Cybork Boosta, Big Mek · Dreadherder, Killa Kans
 
@@ -3293,7 +3388,7 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-2 abilities
+3 abilities
 War Cry
 Orks army rule
 Once per battle, per army
@@ -3306,6 +3401,15 @@ Orks army rule
 At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.
 
 Wahapedia core rules errata (07.01, CP Generated by a Warlord; not in GW’s printed Core Rules): you do not gain the 1CP while your WARLORD is destroyed.
+
+’Ard as Nails
+Brute Bosses rule · Ghazghkull Thraka, Nazdreg, Beastboss ×2
+
+When a friendly WARBOSS model is destroyed, if this unit has not been selected to fight this phase, roll one D6, with +1 to the roll if your unit is riled up:
+
+On a 3+, do not remove this WARBOSS model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this WARBOSS model is removed from the battlefield.
+
+UNITSGhazghkull Thraka, Nazdreg, Beastboss · Brutal But Kunnin’, Beastboss · Da Gobshot Thunderbuss
 
 NEXT: THEIR MOVEMENT ›
 
@@ -3395,7 +3499,7 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-4 abilities
+6 abilities
 Da Hunt is On
 Da Big Hunt rule · Mozrog Skragbad, Beastboss ×2
 
@@ -3421,6 +3525,13 @@ If this unit is riled up, this unit’s ranged attacks have [SUSTAINED HITS 1].
 
 UNITSBig Mek · Cybork Boosta, Big Mek · Dreadherder
 
+Spiteful Power Trip
+Killa Kans
+
+This unit’s attacks that target a unit that has no models with a T of 7+ have +1 to hit rolls.
+
+UNITSKilla Kans
+
 Deep Strike
 Core rule · Nazdreg, Deffkoptas
 
@@ -3429,6 +3540,15 @@ Each time this unit makes an ingress move (20.04), if every model in this unit h
 App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
 
 UNITSNazdreg, Deffkoptas
+
+’Ard as Nails
+Brute Bosses rule · Ghazghkull Thraka, Nazdreg, Beastboss ×2
+
+When a friendly WARBOSS model is destroyed, if this unit has not been selected to fight this phase, roll one D6, with +1 to the roll if your unit is riled up:
+
+On a 3+, do not remove this WARBOSS model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this WARBOSS model is removed from the battlefield.
+
+UNITSGhazghkull Thraka, Nazdreg, Beastboss · Brutal But Kunnin’, Beastboss · Da Gobshot Thunderbuss
 
 NEXT: THEIR SHOOTING ›
 
@@ -3483,22 +3603,36 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
+ALSO THIS PHASE
+1 ability
+’Ard as Nails
+Brute Bosses rule · Ghazghkull Thraka, Nazdreg, Beastboss ×2
+
+When a friendly WARBOSS model is destroyed, if this unit has not been selected to fight this phase, roll one D6, with +1 to the roll if your unit is riled up:
+
+On a 3+, do not remove this WARBOSS model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this WARBOSS model is removed from the battlefield.
+
+UNITSGhazghkull Thraka, Nazdreg, Beastboss · Brutal But Kunnin’, Beastboss · Da Gobshot Thunderbuss
+
 WHEN TARGETED
+
+Every unit: Riled up: 5+ INV
+
 Ghazghkull Thraka
 T10 SV2+ INV4+ W16
-WARBOSS destroyed before its unit has fought this phase: on a 3+ (+1 riled up) it stays until the unit has fought or the phase ends · Lone Operative while within 3" of another friendly ORKS INFANTRY unit
+Friendly WARBOSS model destroyed while this unit has not been selected to fight this phase: on a 3+ (+1 if your unit is riled up) it is not removed until this unit has fought or the end of the phase · Lone Operative while within 3" of another friendly ORKS INFANTRY unit
 Mozrog Skragbad
 T9 SV3+ INV4+ W10
 Feel No Pain 5+
 Nazdreg
 Nazdreg T7 SV2+ INV5+ W8 / Meganob T6 SV2+ W3
-WARBOSS destroyed before its unit has fought this phase: on a 3+ (+1 riled up) it stays until the unit has fought or the phase ends · Attacks that target this unit have -1 AP · Riled up: 5+ INV (Meganob)
+Friendly WARBOSS model destroyed while this unit has not been selected to fight this phase: on a 3+ (+1 if your unit is riled up) it is not removed until this unit has fought or the end of the phase · Attacks that target this unit have -1 AP
 Beastboss · Brutal But Kunnin’
 T9 SV3+ INV5+ W10
-Feel No Pain 5+ · WARBOSS destroyed before its unit has fought this phase: on a 3+ (+1 riled up) it stays until the unit has fought or the phase ends
+Feel No Pain 5+ · Friendly WARBOSS model destroyed while this unit has not been selected to fight this phase: on a 3+ (+1 if your unit is riled up) it is not removed until this unit has fought or the end of the phase
 Beastboss · Da Gobshot Thunderbuss
 T9 SV3+ INV5+ W10
-Feel No Pain 5+ · WARBOSS destroyed before its unit has fought this phase: on a 3+ (+1 riled up) it stays until the unit has fought or the phase ends
+Feel No Pain 5+ · Friendly WARBOSS model destroyed while this unit has not been selected to fight this phase: on a 3+ (+1 if your unit is riled up) it is not removed until this unit has fought or the end of the phase
 Big Mek · Cybork Boosta
 T8 SV3+ INV5+ W11
 Big Mek · Dreadherder
@@ -3506,13 +3640,10 @@ T8 SV3+ INV5+ W11
 Lone Operative while within 3" of a friendly ORKS WALKER unit (not BIG MEK)
 Gretchin
 T2 SV6+ W1
-Riled up: 5+ INV
 Deffkoptas
 T6 SV4+ INV6+ W4
-Riled up: 5+ INV
 Killa Kans
 T7 SV3+ INV6+ W5
-Riled up: 5+ INV
 NEXT: THEIR CHARGE ›
 
 Brute Bosses has no stratagems (a rule and enhancements only).
@@ -3572,7 +3703,7 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 USED BYany unit
 
 ALSO THIS PHASE
-1 ability
+2 abilities
 Thundering Stampede
 Beastboss ×2
 Aura
@@ -3580,6 +3711,15 @@ Aura
 Friendly BEAST SNAGGA units within 6" of this unit have +1 to charge rolls.
 
 UNITSBeastboss · Brutal But Kunnin’, Beastboss · Da Gobshot Thunderbuss
+
+’Ard as Nails
+Brute Bosses rule · Ghazghkull Thraka, Nazdreg, Beastboss ×2
+
+When a friendly WARBOSS model is destroyed, if this unit has not been selected to fight this phase, roll one D6, with +1 to the roll if your unit is riled up:
+
+On a 3+, do not remove this WARBOSS model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this WARBOSS model is removed from the battlefield.
+
+UNITSGhazghkull Thraka, Nazdreg, Beastboss · Brutal But Kunnin’, Beastboss · Da Gobshot Thunderbuss
 
 NEXT: THEIR FIGHT ›
 
@@ -3625,7 +3765,7 @@ When a model in your unit is destroyed, if your unit has not been selected to fi
 
 On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.
 
-No unit in this list is a DEFF DREAD, so the roll is a plain 4+. (Wahapedia strikes DEFF DREAD through as a keyword no Orks datasheet has, but the Deff Dread datasheet does have the DEFF DREAD keyword in BSData, which New Recruit uses, so Deff Dreads get the +3.) Wahapedia FAQ: Fight on Death rules resolve before Deadly Demise, so Deadly Demise resolves once the models are removed.
+Wahapedia FAQ: “If my unit has the Deadly Demise ability and has an ability that allows it to Fight on Death, how do I resolve this?” “Fight on Death rules are resolved before Deadly Demise abilities, meaning that your unit’s Deadly Demise will resolve after your unit has fought/at the end of the phase and the relevant models have been removed from the battlefield.”
 
 USED BYBig Mek · Cybork Boosta, Big Mek · Dreadherder, Killa Kans
 
@@ -3690,15 +3830,6 @@ USED BYany unit
 
 ALSO THIS PHASE
 9 abilities
-’Ard as Nails
-Brute Bosses rule · Ghazghkull Thraka, Nazdreg, Beastboss ×2
-
-When a friendly WARBOSS model is destroyed, if this unit has not been selected to fight this phase, roll one D6, with +1 to the roll if your unit is riled up:
-
-On a 3+, do not remove this WARBOSS model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this WARBOSS model is removed from the battlefield.
-
-UNITSGhazghkull Thraka, Nazdreg, Beastboss · Brutal But Kunnin’, Beastboss · Da Gobshot Thunderbuss
-
 Da Hunt is On
 Da Big Hunt rule · Mozrog Skragbad, Beastboss ×2
 
@@ -3770,37 +3901,47 @@ At the end of your opponent’s Fight phase, if this unit is unengaged, you can 
 
 UNITSDeffkoptas
 
+’Ard as Nails
+Brute Bosses rule · Ghazghkull Thraka, Nazdreg, Beastboss ×2
+
+When a friendly WARBOSS model is destroyed, if this unit has not been selected to fight this phase, roll one D6, with +1 to the roll if your unit is riled up:
+
+On a 3+, do not remove this WARBOSS model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this WARBOSS model is removed from the battlefield.
+
+UNITSGhazghkull Thraka, Nazdreg, Beastboss · Brutal But Kunnin’, Beastboss · Da Gobshot Thunderbuss
+
 WHEN TARGETED
+
+Every unit: Riled up: 5+ INV
+
 Ghazghkull Thraka
 T10 SV2+ INV4+ W16
-WARBOSS destroyed before its unit has fought this phase: on a 3+ (+1 riled up) it stays until the unit has fought or the phase ends · Lone Operative while within 3" of another friendly ORKS INFANTRY unit
+Friendly WARBOSS model destroyed while this unit has not been selected to fight this phase: on a 3+ (+1 if your unit is riled up) it is not removed until this unit has fought or the end of the phase · Lone Operative while within 3" of another friendly ORKS INFANTRY unit
 Mozrog Skragbad
 T9 SV3+ INV4+ W10
 Feel No Pain 5+ · Destroyed in the Fight phase before fighting: on a 2+ it stays until it has fought or the phase ends
 Nazdreg
 Nazdreg T7 SV2+ INV5+ W8 / Meganob T6 SV2+ W3
-WARBOSS destroyed before its unit has fought this phase: on a 3+ (+1 riled up) it stays until the unit has fought or the phase ends · Attacks that target this unit have -1 AP · Riled up: 5+ INV (Meganob)
+Friendly WARBOSS model destroyed while this unit has not been selected to fight this phase: on a 3+ (+1 if your unit is riled up) it is not removed until this unit has fought or the end of the phase · Attacks that target this unit have -1 AP
 Beastboss · Brutal But Kunnin’
 T9 SV3+ INV5+ W10
-Feel No Pain 5+ · WARBOSS destroyed before its unit has fought this phase: on a 3+ (+1 riled up) it stays until the unit has fought or the phase ends
+Feel No Pain 5+ · Friendly WARBOSS model destroyed while this unit has not been selected to fight this phase: on a 3+ (+1 if your unit is riled up) it is not removed until this unit has fought or the end of the phase
 Beastboss · Da Gobshot Thunderbuss
 T9 SV3+ INV5+ W10
-Feel No Pain 5+ · WARBOSS destroyed before its unit has fought this phase: on a 3+ (+1 riled up) it stays until the unit has fought or the phase ends
+Feel No Pain 5+ · Friendly WARBOSS model destroyed while this unit has not been selected to fight this phase: on a 3+ (+1 if your unit is riled up) it is not removed until this unit has fought or the end of the phase
 Big Mek · Cybork Boosta
 T8 SV3+ INV5+ W11
-1CP Crazed Rampage: Fight phase: a model destroyed before the unit has fought stays to fight on a 4+ (removed once the unit has fought or at the end of the phase)
+1CP Crazed Rampage: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (removed once your unit has fought or at the end of the phase)
 Big Mek · Dreadherder
 T8 SV3+ INV5+ W11
-Lone Operative while within 3" of a friendly ORKS WALKER unit (not BIG MEK) · 1CP Crazed Rampage: Fight phase: a model destroyed before the unit has fought stays to fight on a 4+ (removed once the unit has fought or at the end of the phase)
+Lone Operative while within 3" of a friendly ORKS WALKER unit (not BIG MEK) · 1CP Crazed Rampage: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (removed once your unit has fought or at the end of the phase)
 Gretchin
 T2 SV6+ W1
-Riled up: 5+ INV
 Deffkoptas
 T6 SV4+ INV6+ W4
-Riled up: 5+ INV
 Killa Kans
 T7 SV3+ INV6+ W5
-1CP Crazed Rampage: Fight phase: a model destroyed before the unit has fought stays to fight on a 4+ (removed once the unit has fought or at the end of the phase) · Riled up: 5+ INV
+1CP Crazed Rampage: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (removed once your unit has fought or at the end of the phase)
 NEXT: YOUR COMMAND ›
 
 Brute Bosses has no stratagems (a rule and enhancements only).
@@ -3824,7 +3965,7 @@ INV
 6+
 4
 4+
-WHEN TARGETEDWARBOSS destroyed before its unit has fought this phase: on a 3+ (+1 riled up) it stays until the unit has fought or the phase ends · Lone Operative while within 3" of another friendly ORKS INFANTRY unit
+WHEN TARGETEDFriendly WARBOSS model destroyed while this unit has not been selected to fight this phase: on a 3+ (+1 if your unit is riled up) it is not removed until this unit has fought or the end of the phase · Lone Operative while within 3" of another friendly ORKS INFANTRY unit · Riled up: 5+ INV
 RANGED
 RNG
 A
@@ -3904,7 +4045,7 @@ While a friendly ORKS unit is within 6" of this unit, that unit’s melee attack
 
 RULESWaaagh!, Da Boss, ’Ard as Nails · Keywords
 
-STRATAGEMSEpic Challenge, Explosives, Fire Overwatch
+STRATAGEMSEpic Challenge, Explosives
 
 ######## unit mozrog · GHAZGHKULL THRAKA Mozrog Skragbad
 Epic Hero · 170 pts
@@ -3922,7 +4063,7 @@ INV
 6+
 3
 4+
-WHEN TARGETEDFeel No Pain 5+ · Destroyed in the Fight phase before fighting: on a 2+ it stays until it has fought or the phase ends
+WHEN TARGETEDFeel No Pain 5+ · Destroyed in the Fight phase before fighting: on a 2+ it stays until it has fought or the phase ends · Riled up: 5+ INV
 ALL ATTACKS
 vs MONSTER/VEHICLE: +1 AP (the (+1) on the Hunter rows; add it to the other weapons too) (Da Hunt is On) · MELEEre-roll wound rolls (Da Bigger Dey Iz…)
 RANGED
@@ -3949,7 +4090,7 @@ D
 
 Fights with both: Gutrippa, plus Big Chompa’s Jaws on top (extra attacks).
 
-GutrippaPICK ONE BY TARGET
+GutrippaPICK ONE PROFILE
 ➤HunterMON/VEH ONLY
 6
 2+
@@ -3958,7 +4099,7 @@ GutrippaPICK ONE BY TARGET
 (+1)
 D6+1
 LETHAL HITS
-➤StandardANY TARGET
+➤Standard
 6
 2+
 9
@@ -3998,7 +4139,7 @@ This unit’s melee attacks that target a MONSTER/VEHICLE unit can re-roll wound
 
 RULESFeel No Pain 5+, Waaagh!, Da Hunt is On · Keywords
 
-STRATAGEMSWhere D’ya Fink You’re Going?, Goaded Into Action, Instinctive Hunters, Epic Challenge, Crushing Impact, Fire Overwatch
+STRATAGEMSWhere D’ya Fink You’re Going?, Goaded Into Action, Instinctive Hunters, Epic Challenge, Crushing Impact
 
 ######## unit nazdreg · MOZROG SKRAGBAD Nazdreg
 Epic Hero · 355 pts · leading Meganobz
@@ -4026,7 +4167,7 @@ Meganob
 7+
 1
 –
-WHEN TARGETEDWARBOSS destroyed before its unit has fought this phase: on a 3+ (+1 riled up) it stays until the unit has fought or the phase ends · Attacks that target this unit have -1 AP · Riled up: 5+ INV (Meganob)
+WHEN TARGETEDFriendly WARBOSS model destroyed while this unit has not been selected to fight this phase: on a 3+ (+1 if your unit is riled up) it is not removed until this unit has fought or the end of the phase · Attacks that target this unit have -1 AP · Riled up: 5+ INV
 RANGED
 RNG
 A
@@ -4035,7 +4176,7 @@ S
 AP
 D
 NAZDREG
-Kustom Blasta XALL 3 FIRE
+Kustom Blasta XALL 3 CAN FIRE
 +Skorcha
 12"
 3
@@ -4166,7 +4307,7 @@ Attacks that target this unit have -1 AP.
 
 RULESWaaagh!, Leader, Da Boss, Deep Strike, ’Ard as Nails · Models & keywords
 
-STRATAGEMSEpic Challenge, Explosives, Rapid Ingress, Fire Overwatch
+STRATAGEMSEpic Challenge, Explosives
 
 ######## unit beastboss-bbk · NAZDREG Beastboss on Squigosaur
 Character · 170 pts
@@ -4188,7 +4329,7 @@ INV
 
 Melee D already includes +1 from Brutal But Kunnin’.
 
-WHEN TARGETEDFeel No Pain 5+ · WARBOSS destroyed before its unit has fought this phase: on a 3+ (+1 riled up) it stays until the unit has fought or the phase ends
+WHEN TARGETEDFeel No Pain 5+ · Friendly WARBOSS model destroyed while this unit has not been selected to fight this phase: on a 3+ (+1 if your unit is riled up) it is not removed until this unit has fought or the end of the phase · Riled up: 5+ INV
 ALL ATTACKS
 vs MONSTER/VEHICLE: +1 AP (the (+1) on the Hunter rows; add it to the other weapons too) (Da Hunt is On)
 RANGED
@@ -4215,7 +4356,7 @@ D
 
 Fights with both: Beastchoppa, plus Squigosaur’s jaws on top (extra attacks).
 
-BeastchoppaPICK ONE BY TARGET
+BeastchoppaPICK ONE PROFILE
 ➤HunterMON/VEH ONLY
 6
 2+
@@ -4223,7 +4364,7 @@ BeastchoppaPICK ONE BY TARGET
 -2
 (+1)
 D6+1
-➤StandardANY TARGET
+➤Standard
 6
 2+
 6
@@ -4272,7 +4413,7 @@ WARBOSS model only. This model’s melee attacks have +1 D.
 
 RULESDa Boss, Waaagh!, Feel No Pain 5+, ’Ard as Nails, Da Hunt is On · Keywords
 
-STRATAGEMSWhere D’ya Fink You’re Going?, Goaded Into Action, Instinctive Hunters, Epic Challenge, Crushing Impact, Fire Overwatch
+STRATAGEMSWhere D’ya Fink You’re Going?, Goaded Into Action, Instinctive Hunters, Epic Challenge, Crushing Impact
 
 ######## unit beastboss-gobshot · BEASTBOSS ON SQUIGOSAUR Beastboss on Squigosaur
 Character · 160 pts
@@ -4291,7 +4432,7 @@ INV
 6+
 3
 5+
-WHEN TARGETEDFeel No Pain 5+ · WARBOSS destroyed before its unit has fought this phase: on a 3+ (+1 riled up) it stays until the unit has fought or the phase ends
+WHEN TARGETEDFeel No Pain 5+ · Friendly WARBOSS model destroyed while this unit has not been selected to fight this phase: on a 3+ (+1 if your unit is riled up) it is not removed until this unit has fought or the end of the phase · Riled up: 5+ INV
 ALL ATTACKS
 vs MONSTER/VEHICLE: +1 AP (the (+1) on the Hunter rows; add it to the other weapons too) (Da Hunt is On)
 RANGED
@@ -4302,7 +4443,7 @@ S
 AP
 D
 
-Shoots with both (a MONSTER fires its pistol too).
+Can shoot with one or both (Close-quarters does not limit MONSTER models).
 
 Da Gobshot Thunderbuss
 24"
@@ -4329,7 +4470,7 @@ D
 
 Fights with both: Beastchoppa, plus Squigosaur’s jaws on top (extra attacks).
 
-BeastchoppaPICK ONE BY TARGET
+BeastchoppaPICK ONE PROFILE
 ➤HunterMON/VEH ONLY
 6
 2+
@@ -4337,7 +4478,7 @@ BeastchoppaPICK ONE BY TARGET
 -2
 (+1)
 D6
-➤StandardANY TARGET
+➤Standard
 6
 2+
 6
@@ -4380,7 +4521,7 @@ Is riled up until the start of your next turn.
 
 RULESDa Boss, Waaagh!, Feel No Pain 5+, ’Ard as Nails, Da Hunt is On · Keywords
 
-STRATAGEMSWhere D’ya Fink You’re Going?, Goaded Into Action, Instinctive Hunters, Epic Challenge, Crushing Impact, Fire Overwatch
+STRATAGEMSWhere D’ya Fink You’re Going?, Goaded Into Action, Instinctive Hunters, Epic Challenge, Crushing Impact
 
 ######## unit dakkarig-boosta · BEASTBOSS ON SQUIGOSAUR Big Mek Dakkarig
 Character · 170 pts
@@ -4402,9 +4543,9 @@ INV
 
 M already includes +2" from Cybork Boosta.
 
-WHEN TARGETED1CP Crazed Rampage: Fight phase: a model destroyed before the unit has fought stays to fight on a 4+ (removed once the unit has fought or at the end of the phase)
+WHEN TARGETED1CP Crazed Rampage: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (removed once your unit has fought or at the end of the phase) · Riled up: 5+ INV
 ALL ATTACKS
-Optional D6: 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (2 D6: two effects, then a hazard roll) (Try Dat Button!)
+Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6): 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked) (Try Dat Button!)
 Picked by the Dreadherder: re-roll hit rolls of 1 this turn
 RANGED
 RNG
@@ -4414,7 +4555,7 @@ S
 AP
 D
 
-Shoots with both.
+Can shoot with one or both.
 
 Blitzkannon
 24"
@@ -4471,7 +4612,7 @@ BIG MEK/MEK model only. This model has +2" M.
 
 RULESDeadly Demise 1, Waaagh!, Try Dat Button! · Keywords
 
-STRATAGEMSCrazed Rampage, Dread Power, Stomping Juggernaut, Epic Challenge, Crushing Impact, Fire Overwatch
+STRATAGEMSCrazed Rampage, Dread Power, Stomping Juggernaut, Epic Challenge, Crushing Impact
 
 ######## unit dakkarig-herder · BIG MEK DAKKARIG Big Mek Dakkarig
 Character · 190 pts
@@ -4490,9 +4631,10 @@ INV
 7+
 3
 5+
-WHEN TARGETEDLone Operative while within 3" of a friendly ORKS WALKER unit (not BIG MEK) · 1CP Crazed Rampage: Fight phase: a model destroyed before the unit has fought stays to fight on a 4+ (removed once the unit has fought or at the end of the phase)
+WHEN TARGETEDLone Operative while within 3" of a friendly ORKS WALKER unit (not BIG MEK) · 1CP Crazed Rampage: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (removed once your unit has fought or at the end of the phase) · Riled up: 5+ INV
 ALL ATTACKS
-Optional D6: 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (2 D6: two effects, then a hazard roll) (Try Dat Button!)
+Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6): 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked) (Try Dat Button!)
+Picked by the Dreadherder: re-roll hit rolls of 1 this turn
 RANGED
 RNG
 A
@@ -4501,7 +4643,7 @@ S
 AP
 D
 
-Shoots with both.
+Can shoot with one or both.
 
 Blitzkannon
 24"
@@ -4551,9 +4693,9 @@ In your Shooting phase, if this unit’s Blitzkannon weapon targets a unit (excl
 
 Dreadherder
 Enhancement
-Your Shooting
+Your Shooting · Your Fight
 
-Enhancement · Shooting · Your turn
+Enhancement · Shooting / Fight · Your turn
 
 BIG MEK model only. While this model is within 3" of a friendly ORKS WALKER unit (excluding BIG MEK units):
 
@@ -4562,7 +4704,7 @@ In your Shooting phase, you can select one friendly ORKS WALKER unit within 3" o
 
 RULESDeadly Demise 1, Waaagh!, Try Dat Button! · Keywords
 
-STRATAGEMSCrazed Rampage, Dread Power, Stomping Juggernaut, Epic Challenge, Crushing Impact, Fire Overwatch
+STRATAGEMSCrazed Rampage, Dread Power, Stomping Juggernaut, Epic Challenge, Crushing Impact
 
 ######## unit gretchin · BIG MEK DAKKARIG Gretchin
 Infantry · 45 pts each · ×3 in list
@@ -4626,8 +4768,6 @@ At the end of your Movement phase, if this unit is controlling an objective, tha
 
 RULESWaaagh! · Keywords
 
-STRATAGEMSFire Overwatch
-
 ######## unit deffkoptas · GRETCHIN Deffkoptas
 Mounted · 85 pts
 M
@@ -4656,7 +4796,7 @@ S
 AP
 D
 
-Pick one to shoot: Slugga or Rokkit Launcha.
+Can shoot with Slugga or Rokkit Launcha, not both (Close-quarters); in close-quarters shooting, Slugga only.
 
 Rokkit Launcha×3PICK ONE PROFILE
 ➤Busta
@@ -4683,7 +4823,7 @@ Slugga×3
 0
 1
 CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
-After an ingress move this turn: +1 to hit rolls (Deff from Above)
+Your Shooting phase, after an ingress move this turn: +1 to hit rolls (Deff from Above)
 MELEE
 A
 WS
@@ -4724,7 +4864,7 @@ In your Shooting phase, if this unit made an ingress move this turn, this unit�
 
 RULESDeep Strike, Waaagh! · Keywords
 
-STRATAGEMSExplosives, Rapid Ingress, Fire Overwatch
+STRATAGEMSExplosives
 
 ######## unit killa-kans · DEFFKOPTAS Killa Kans
 Vehicle · 275 pts
@@ -4745,10 +4885,10 @@ INV
 
 6× Killa Kan
 
-WHEN TARGETED1CP Crazed Rampage: Fight phase: a model destroyed before the unit has fought stays to fight on a 4+ (removed once the unit has fought or at the end of the phase) · Riled up: 5+ INV
+WHEN TARGETED1CP Crazed Rampage: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (removed once your unit has fought or at the end of the phase) · Riled up: 5+ INV
 ALL ATTACKS
 vs units with no T 7+ models: +1 to hit rolls (Spiteful Power Trip)
-Optional D6: 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (2 D6: two effects, then a hazard roll) (Try Dat Button!)
+Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6): 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked) (Try Dat Button!)
 Picked by the Dreadherder: re-roll hit rolls of 1 this turn
 RANGED
 RNG
@@ -4796,15 +4936,15 @@ Kan Klaw×6
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
 ABILITIES
 Spiteful Power Trip
-Your Shooting · Fight
+Their Movement · Your Shooting · Fight
 
-Your Shooting / Fight (either turn)
+Their Movement / Your Shooting / Fight (either turn)
 
 This unit’s attacks that target a unit that has no models with a T of 7+ have +1 to hit rolls.
 
 RULESDeadly Demise 1, Waaagh!, Try Dat Button! · Keywords
 
-STRATAGEMSCrazed Rampage, Dread Power, Stomping Juggernaut, Crushing Impact, Fire Overwatch
+STRATAGEMSCrazed Rampage, Dread Power, Stomping Juggernaut, Crushing Impact
 
 ######## popup ability:cooking|Arrogant Invulnerability|Attacks that target this unit have -1 **AP**. · KILLA KANS Cooking
 ABILITY
@@ -4854,7 +4994,7 @@ UNITDeffkoptas
 ######## popup ability:cooking|Dreadherder|**BIG MEK** model only. While this model is within 3" of a friendly **ORKS WALKER** unit (excluding **BIG MEK** units):
 - This model has **Lone Operative**.
 - In your Shooting phase, you can select one friendly **ORKS WALKER** unit within 3" of this model. That unit’s attacks can re-roll **hit rolls** of 1 until the end of the turn. · COOKING Cooking
-ABILITY · ENHANCEMENT · SHOOTING · YOUR TURN
+ABILITY · ENHANCEMENT · SHOOTING / FIGHT · YOUR TURN
 
 Dreadherder
 
@@ -4862,8 +5002,6 @@ BIG MEK model only. While this model is within 3" of a friendly ORKS WALKER unit
 
 This model has Lone Operative.
 In your Shooting phase, you can select one friendly ORKS WALKER unit within 3" of this model. That unit’s attacks can re-roll hit rolls of 1 until the end of the turn.
-
-Agree with your opponent: Can the Dakkarig pick its own unit for the re-roll of 1s? The rule says “one friendly ORKS WALKER unit within 3" of this model”; the app assumes another unit.
 
 UNITBig Mek · Dreadherder
 
@@ -4924,7 +5062,7 @@ While a friendly ORKS unit is within 6" of this unit, that unit’s melee attack
 UNITGhazghkull Thraka
 
 ######## popup ability:cooking|Spiteful Power Trip|This unit’s attacks that target a unit that has no models with a **T** of 7+ have +1 to **hit rolls**. · COOKING Cooking
-ABILITY · YOUR SHOOTING / FIGHT (EITHER TURN)
+ABILITY · THEIR MOVEMENT / YOUR SHOOTING / FIGHT (EITHER TURN)
 
 Spiteful Power Trip
 
@@ -5273,6 +5411,20 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
+######## popup rule:Close-quarters · COOKING Cooking
+CORE RULE
+
+Close-quarters
+
+Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with:
+
+One or more of its [CLOSE-QUARTERS] weapons.
+One or more of its other ranged weapons.
+
+[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
+
+IN THIS ARMYGhazghkull Thraka, Beastboss · Brutal But Kunnin’, Beastboss · Da Gobshot Thunderbuss, Gretchin, Deffkoptas
+
 ######## popup rule:DEVASTATING WOUNDS · COOKING Cooking
 CORE RULE
 
@@ -5403,7 +5555,7 @@ Some of these profiles are known as Hunter profiles. Hunter profiles can only ta
 
 Note that if a unit is equipped with more than one such weapon, a different profile can be selected for each model within that unit.
 
-App note, not rules text: New Recruit prints these weapons as two profiles, one marked “Hunter: MONSTER/VEHICLE”. That profile can only target MONSTER or VEHICLE units; the Standard profile can target any unit. The Hunter rule is in the rules appendix of the Warhammer 40,000 app (Wahapedia 04.01.03), not in the printed Core Rules.
+App note, not rules text: New Recruit prints these weapons as two profiles, one marked “Hunter: MONSTER/VEHICLE”. That profile can only target MONSTER or VEHICLE units. The Hunter rule is in the rules appendix of the Warhammer 40,000 app (Wahapedia 04.01.03), not in the printed Core Rules.
 
 IN THIS ARMYMozrog Skragbad, Beastboss · Brutal But Kunnin’, Beastboss · Da Gobshot Thunderbuss
 
@@ -5425,8 +5577,6 @@ Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, 
 
 Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
 
-App note, not rules text: the suffix “: non-MONSTER/VEHICLE” reads as applying only against targets that are not MONSTER or VEHICLE units.
-
 IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Brutal But Kunnin’, Beastboss · Da Gobshot Thunderbuss, Big Mek · Cybork Boosta, Big Mek · Dreadherder, Deffkoptas
 
 ######## popup rule:LETHAL HITS: non-MONSTER/VEHICLE · COOKING Cooking
@@ -5437,8 +5587,6 @@ LETHAL HITS: non-MONSTER/VEHICLE
 Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
 
 Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
-
-App note, not rules text: the suffix “: non-MONSTER/VEHICLE” reads as applying only against targets that are not MONSTER or VEHICLE units.
 
 IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Brutal But Kunnin’, Beastboss · Da Gobshot Thunderbuss, Big Mek · Cybork Boosta, Big Mek · Dreadherder, Deffkoptas
 
@@ -5491,10 +5639,14 @@ IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Beastboss · Brutal But Kunnin�
 CORE RULE
 
 MOBILE
-INFANTRY/BEASTS/SWARM/MOBILE models can move horizontally through dense terrain features.
-Other models can move horizontally through dense terrain features provided that all sections of that terrain feature that the moving model’s base would move through are 2" or less in height.
 
-App note, not rules text: MOBILE has no rule of its own in the core rules; these are the lines of Terrain and Movement (13.06) that name it and that it changes.
+Dense:
+
+INFANTRY/BEASTS/SWARM/MOBILE models can move horizontally through dense terrain features.
+INFANTRY/BEASTS/SWARM models can move vertically through dense terrain features.
+Other models can move horizontally through dense terrain features provided that all sections of that terrain feature that the moving model’s base would move through are 2" or less in height. Otherwise, the moving model must move vertically to ascend or descend such sections. They cannot move through ceilings and floors while doing so, and they cannot end that move on any surface of that terrain feature that is not on ground level (see below).
+
+App note, not rules text: MOBILE has no rule of its own in the core rules. These are the Dense lines of Terrain and Movement (13.06). Super-Heavy Walker (24.35), Designer’s Note: “Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).”
 
 ######## popup rule:Mortal Wounds · COOKING Cooking
 CORE RULE
@@ -5707,8 +5859,6 @@ If you rolled two D6, when this unit has attacked, this unit makes one hazard ro
 5–6
 +1 AP
 
-Agree with your opponent: With two D6, is a repeated number re-rolled, or a repeated effect (1 and 2 are both +1 A)? The app assumes you always get two different effects.
-
 IN THIS ARMYBig Mek · Cybork Boosta, Big Mek · Dreadherder, Killa Kans
 
 ######## popup rule:Waaagh! · COOKING Cooking
@@ -5863,8 +6013,6 @@ LETHAL HITS
 Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
 
 Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
-
-App note, not rules text: the suffix “: non-MONSTER/VEHICLE” reads as applying only against targets that are not MONSTER or VEHICLE units.
 
 IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Brutal But Kunnin’, Beastboss · Da Gobshot Thunderbuss, Big Mek · Cybork Boosta, Big Mek · Dreadherder, Deffkoptas
 
@@ -6591,8 +6739,6 @@ When a friendly WARBOSS model is destroyed, if this unit has not been selected t
 
 On a 3+, do not remove this WARBOSS model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this WARBOSS model is removed from the battlefield.
 
-Agree with your opponent: Does it work outside the Fight phase? By the letter a WARBOSS destroyed in any phase before its unit has fought stays on a 3+ until the end of that phase; the app lists it in the Fight phase.
-
 IN THIS ARMYGhazghkull Thraka, Nazdreg, Beastboss · Brutal But Kunnin’, Beastboss · Da Gobshot Thunderbuss
 
 ######## popup strat:crazed-rampage · COOKING Cooking
@@ -6611,7 +6757,7 @@ When a model in your unit is destroyed, if your unit has not been selected to fi
 
 On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.
 
-No unit in this list is a DEFF DREAD, so the roll is a plain 4+. (Wahapedia strikes DEFF DREAD through as a keyword no Orks datasheet has, but the Deff Dread datasheet does have the DEFF DREAD keyword in BSData, which New Recruit uses, so Deff Dreads get the +3.) Wahapedia FAQ: Fight on Death rules resolve before Deadly Demise, so Deadly Demise resolves once the models are removed.
+Wahapedia FAQ: “If my unit has the Deadly Demise ability and has an ability that allows it to Fight on Death, how do I resolve this?” “Fight on Death rules are resolved before Deadly Demise abilities, meaning that your unit’s Deadly Demise will resolve after your unit has fought/at the end of the phase and the relevant models have been removed from the battlefield.”
 
 USED BYBig Mek · Cybork Boosta, Big Mek · Dreadherder, Killa Kans
 
@@ -6691,22 +6837,6 @@ Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
 
 USED BYGhazghkull Thraka, Nazdreg, Deffkoptas
 
-######## popup strat:fire-overwatch · COOKING Cooking
-1CP · MOVEMENT · THEIR TURN
-
-Fire Overwatch
-WHEN
-
-End of your opponent’s Movement phase.
-
-TARGETOne friendly unengaged unit (excluding TITANIC units).
-
-EFFECT
-
-Your unit shoots using snap shooting.
-
-USED BYany unit
-
 ######## popup strat:goaded-into-action · COOKING Cooking
 1CP · SHOOTING · THEIR TURN
 
@@ -6758,24 +6888,6 @@ EFFECT
 Place your unit in strategic reserves.
 
 USED BYMozrog Skragbad, Beastboss · Brutal But Kunnin’, Beastboss · Da Gobshot Thunderbuss
-
-######## popup strat:rapid-ingress · COOKING Cooking
-1CP · MOVEMENT · THEIR TURN
-
-Rapid Ingress
-WHEN
-
-End of your opponent’s Movement phase.
-
-TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
-
-EFFECT
-
-Your unit makes an ingress move (20.04).
-
-RESTRICTIONSYou cannot use this stratagem during the first battle round.
-
-USED BYany unit
 
 ######## popup strat:stomping-juggernaut · COOKING Cooking
 1CP · MOVEMENT / CHARGE · YOUR TURN

@@ -15,7 +15,7 @@
                role against the primary category of the (leader's) datasheet
      rules     each rule must be a BSData rule of the unit, a keyword of its weapons, or named
                in an ability it uses itself (not one marked na, not one the app only gives to
-               other units through `aura` notSelf, e.g. a Knight's Bondsman ability); and every
+               other units through an `aura` whose keywords leave the unit out, e.g. a Knight's Bondsman ability); and every
                BSData rule of the unit must be listed
      points    pts per copy (leader + bodyguard + wargear + enhancement), with the escalation
                for the k-th unit of a datasheet; ptsNote "leader + Bodyguard N"
@@ -862,7 +862,10 @@ function compareUnit(army, u, F, fail) {
     const fromMods = (u.mods || []).some((m) => nn(m.from) === nn(a.name));
     const aur = (u.aura || []).filter((m) => nn(m.from) === nn(a.name));
     if (fromMods) return true;
-    if (aur.length && aur.every((m) => m.notSelf)) return false;
+    // an aura whose keywords leave out the unit itself (a Knight's Bondsman ability, for ARMIGER models only)
+    const hasK = (k) => (u.kw || []).some((x) => nn(x).toLowerCase() === nn(k).toLowerCase());
+    const fits = (n) => !n || ((!n.all || n.all.every(hasK)) && (!n.any || n.any.some(hasK)) && (!n.none || !n.none.some(hasK)));
+    if (aur.length && aur.every((m) => m.notSelf || !fits(m.needs))) return false;
     return true;
   };
   const appAbilityByName = (name) => (u.abilities || []).find((a) => nn(a.name) === splitAbilityName(name).base || nn(a.name) === nn(name));

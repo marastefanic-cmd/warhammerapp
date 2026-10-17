@@ -1,0 +1,781 @@
+[
+ {
+  "army": "cooking",
+  "kind": "ability-timing",
+  "where": "cooking · Big Mek Dakkarig · Dreadherder",
+  "judgement": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Dreadherder",
+   "text": "**BIG MEK** model only. While this model is within 3\" of a friendly **ORKS WALKER** unit (excluding **BIG MEK** units):\n- This model has **Lone Operative**.\n- In your Shooting phase, you can select one friendly **ORKS WALKER** unit within 3\" of this model. That unit’s attacks can re-roll **hit rolls** of 1 until the end of the turn."
+  },
+  "key": "0bbb296f134a5f8e"
+ },
+ {
+  "army": "cooking",
+  "kind": "unit-aura",
+  "where": "cooking · Big Mek Dakkarig",
+  "judgement": {
+   "kind": "all",
+   "needs": {
+    "all": [
+     "Walker"
+    ]
+   },
+   "when": "Picked by the Dreadherder",
+   "note": "re-roll hit rolls of 1 this turn",
+   "from": "Dreadherder"
+  },
+  "source": {
+   "ability": "Dreadherder",
+   "text": "**BIG MEK** model only. While this model is within 3\" of a friendly **ORKS WALKER** unit (excluding **BIG MEK** units):\n- This model has **Lone Operative**.\n- In your Shooting phase, you can select one friendly **ORKS WALKER** unit within 3\" of this model. That unit’s attacks can re-roll **hit rolls** of 1 until the end of the turn."
+  },
+  "key": "65b792d8e2feb3ed"
+ },
+ {
+  "army": "cooking",
+  "kind": "unit-footnote",
+  "where": "cooking · Deffkoptas",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Your Shooting phase, after an ingress move this turn",
+   "note": "+1 to hit rolls",
+   "from": "Deff from Above"
+  },
+  "source": {
+   "ability": "Deff from Above",
+   "text": "In your Shooting phase, if this unit made an **ingress move** this turn, this unit’s ranged attacks have +1 to **hit rolls**."
+  },
+  "key": "8bdb8f3b66a68e4e"
+ },
+ {
+  "army": "cooking",
+  "kind": "ability-timing",
+  "where": "cooking · Killa Kans · Spiteful Power Trip",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Spiteful Power Trip",
+   "text": "This unit’s attacks that target a unit that has no models with a **T** of 7+ have +1 to **hit rolls**."
+  },
+  "key": "dcecd59be71a8d21"
+ },
+ {
+  "army": "cooking",
+  "kind": "rule-ph",
+  "where": "Brute Bosses rule · ’Ard as Nails",
+  "judgement": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ]
+  },
+  "source": {
+   "rule": "’Ard as Nails",
+   "text": "When a friendly **WARBOSS** model is **destroyed**, if this unit has not been **selected to fight** this phase, roll one D6, with +1 to the roll if your unit is **riled up**:\n- On a 3+, do not remove this **WARBOSS** model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this **WARBOSS** model is removed from the battlefield."
+  },
+  "key": "0e6335620c9117ba"
+ },
+ {
+  "army": "cooking",
+  "kind": "rule-def",
+  "where": "Brute Bosses rule · ’Ard as Nails",
+  "judgement": {
+   "def": "Friendly WARBOSS model destroyed while this unit has not been selected to fight this phase: on a 3+ (+1 if your unit is riled up) it is not removed until this unit has fought or the end of the phase"
+  },
+  "source": {
+   "rule": "’Ard as Nails",
+   "text": "When a friendly **WARBOSS** model is **destroyed**, if this unit has not been **selected to fight** this phase, roll one D6, with +1 to the roll if your unit is **riled up**:\n- On a 3+, do not remove this **WARBOSS** model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this **WARBOSS** model is removed from the battlefield."
+  },
+  "key": "2d1f1d5d7d29a93a"
+ },
+ {
+  "army": "cooking",
+  "kind": "rule-mod",
+  "where": "Dread Mob rule · Try Dat Button!",
+  "judgement": {
+   "mod": {
+    "kind": "all",
+    "when": "Optional D6",
+    "note": "1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked)"
+   }
+  },
+  "source": {
+   "rule": "Try Dat Button!",
+   "text": "In your Shooting phase or the Fight phase, when a friendly **ORKS WALKER** unit (excluding **TITANIC** units) is **selected to attack**, you can use this ability. If you do, roll either one D6 or two D6 (keep re-rolling duplicate results). This unit’s attacks have the relevant rule(s):\nIf you rolled two D6, when this unit has attacked, this unit makes one **hazard roll**.\n1–2: +1 **A**\n3–4: +2 **S**\n5–6: +1 **AP**"
+  },
+  "key": "c9b9241465e3f54d"
+ },
+ {
+  "army": "cooking",
+  "kind": "strat-def",
+  "where": "Dread Mob · Crazed Rampage",
+  "judgement": {
+   "def": "Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (removed once your unit has fought or at the end of the phase)"
+  },
+  "source": {
+   "stratagem": "Crazed Rampage",
+   "text": "WHEN: Fight phase, when an enemy unit targets a friendly **ORKS WALKER** unit (excluding **TITANIC** units).\nTARGET: That **ORKS WALKER** unit.\nEFFECT: When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +3 to the result if your unit has ~~**DEFF DREAD**~~:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
+  },
+  "key": "8004c33d3ee7c24b"
+ },
+ {
+  "army": "cooking",
+  "kind": "strat-note",
+  "where": "Dread Mob · Crazed Rampage",
+  "judgement": {
+   "note": "Wahapedia FAQ: “If my unit has the Deadly Demise ability and has an ability that allows it to Fight on Death, how do I resolve this?” “Fight on Death rules are resolved before Deadly Demise abilities, meaning that your unit’s Deadly Demise will resolve after your unit has fought/at the end of the phase and the relevant models have been removed from the battlefield.”"
+  },
+  "source": {
+   "stratagem": "Crazed Rampage",
+   "text": "WHEN: Fight phase, when an enemy unit targets a friendly **ORKS WALKER** unit (excluding **TITANIC** units).\nTARGET: That **ORKS WALKER** unit.\nEFFECT: When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +3 to the result if your unit has ~~**DEFF DREAD**~~:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
+  },
+  "key": "281b84719f041718"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "unit-aura",
+  "where": "purge-freeblade · Knight Warden",
+  "judgement": {
+   "kind": "all",
+   "needs": {
+    "all": [
+     "Armiger"
+    ]
+   },
+   "when": "Affected by Warden’s Duty (Bondsman)",
+   "note": "weapons have [SUSTAINED HITS 1]",
+   "from": "Warden’s Duty"
+  },
+  "source": {
+   "ability": "Warden’s Duty",
+   "text": "While a model is affected by this ability, weapons equipped by that model have the **[SUSTAINED HITS 1]** ability, and ranged weapons equipped by that model have the **[IGNORES COVER]** ability."
+  },
+  "key": "dcf47f6fd3c3c6cb"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "unit-aura",
+  "where": "purge-freeblade · Knight Warden",
+  "judgement": {
+   "kind": "ranged",
+   "needs": {
+    "all": [
+     "Armiger"
+    ]
+   },
+   "when": "Affected by Warden’s Duty (Bondsman)",
+   "note": "ranged weapons have [IGNORES COVER]",
+   "from": "Warden’s Duty"
+  },
+  "source": {
+   "ability": "Warden’s Duty",
+   "text": "While a model is affected by this ability, weapons equipped by that model have the **[SUSTAINED HITS 1]** ability, and ranged weapons equipped by that model have the **[IGNORES COVER]** ability."
+  },
+  "key": "312089044e90c9c7"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "unit-aura",
+  "where": "purge-freeblade · Knight Paladin",
+  "judgement": {
+   "kind": "all",
+   "needs": {
+    "all": [
+     "Armiger"
+    ]
+   },
+   "when": "Affected by Paladin’s Duty (Bondsman)",
+   "note": "weapons have [LETHAL HITS]",
+   "from": "Paladin’s Duty"
+  },
+  "source": {
+   "ability": "Paladin’s Duty",
+   "text": "While a model is affected by this ability, weapons equipped by that model have the **[LETHAL HITS]** ability, and melee weapons equipped by that model have the **[LANCE]** ability."
+  },
+  "key": "056ab8f404c87412"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "unit-aura",
+  "where": "purge-freeblade · Knight Paladin",
+  "judgement": {
+   "kind": "melee",
+   "needs": {
+    "all": [
+     "Armiger"
+    ]
+   },
+   "when": "Affected by Paladin’s Duty (Bondsman)",
+   "note": "melee weapons have [LANCE]",
+   "from": "Paladin’s Duty"
+  },
+  "source": {
+   "ability": "Paladin’s Duty",
+   "text": "While a model is affected by this ability, weapons equipped by that model have the **[LETHAL HITS]** ability, and melee weapons equipped by that model have the **[LANCE]** ability."
+  },
+  "key": "5605b234336611ac"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "unit-aura",
+  "where": "purge-freeblade · Knight Errant",
+  "judgement": {
+   "kind": "ranged",
+   "needs": {
+    "all": [
+     "Armiger"
+    ]
+   },
+   "when": "Affected by Errant’s Duty (Bondsman)",
+   "note": "ranged weapons have [ASSAULT]",
+   "from": "Errant’s Duty"
+  },
+  "source": {
+   "ability": "Errant’s Duty",
+   "text": "While a model is affected by this ability, you can re-roll Advance rolls made for that model and ranged weapons equipped by that model have the **[ASSAULT]** ability."
+  },
+  "key": "f64da36b2747df91"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "rule-ph",
+  "where": "Freeblade Company rule · Knights of Legend",
+  "judgement": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ]
+  },
+  "source": {
+   "rule": "Knights of Legend",
+   "text": "**IMPERIAL KNIGHTS** models from your army have the **Feel No Pain 6+** ability. In addition, at the start of your Command phase, each **IMPERIAL KNIGHTS** model from your army regains 1 lost wound."
+  },
+  "key": "1f60647795b8073c"
+ },
+ {
+  "army": "purge-freeblade",
+  "kind": "rule-turn",
+  "where": "Freeblade Company rule · Knights of Legend",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "rule": "Knights of Legend",
+   "text": "**IMPERIAL KNIGHTS** models from your army have the **Feel No Pain 6+** ability. In addition, at the start of your Command phase, each **IMPERIAL KNIGHTS** model from your army regains 1 lost wound."
+  },
+  "key": "bc54ee424e61683a"
+ },
+ {
+  "army": "hurrdurr",
+  "kind": "ability-timing",
+  "where": "hurrdurr · Lord on Juggernaut · Icon of Khorne",
+  "judgement": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Icon of Khorne",
+   "text": "If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost."
+  },
+  "key": "52c3668253df7eb6"
+ },
+ {
+  "army": "hurrdurr",
+  "kind": "ability-timing",
+  "where": "hurrdurr · Forgefiend · Furious Onslaught",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Furious Onslaught",
+   "text": "Each time this model makes a ranged attack that targets the closest eligible target within 18\", you can re-roll the Hit roll."
+  },
+  "key": "d152026503d38f74"
+ },
+ {
+  "army": "hurrdurr",
+  "kind": "rule-ph",
+  "where": "world-eaters army rule · Blessings of Khorne",
+  "judgement": {
+   "ph": [
+    "command",
+    "charge",
+    "fight"
+   ]
+  },
+  "source": {
+   "rule": "Blessings of Khorne",
+   "text": "If your Army Faction is **WORLD EATERS**, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.\n*Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.*\n*First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.*\n*They then use the two 2s to activate Unbridled Bloodlust.*\n*Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.*\nUnbridled Bloodlust · double 1+: This unit has +1 to **charge rolls**.\nRage-fuelled Invigoration · double 2+: Each time a model in this unit makes a Pile-in or **Consolidation move**, it can move up to 6\" instead of up to 3\".\nTotal Carnage · double 3+: Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.\nMartial Excellence · double 4+ or triple 1+: Melee weapons equipped by models in this unit have the **[SUSTAINED HITS 1]** ability.\nWarp Blades · double 5+ or triple 2+: Melee weapons equipped by models in this unit have the **[LETHAL HITS]** ability.\nDecapitating Strikes · double 6 or triple 3+: Each time a model in this unit makes a melee attack that targets an **INFANTRY** unit, that attack has the **[DEVASTATING WOUNDS]** ability."
+  },
+  "key": "23be1ed5124fe6d1"
+ },
+ {
+  "army": "hurrdurr",
+  "kind": "rule-remind",
+  "where": "world-eaters army rule · Blessings of Khorne",
+  "judgement": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "either",
+   "text": "Unbridled Bloodlust active? +1 to charge rolls. Battle-lust: while Unbridled Bloodlust is active for your army, add 1 to Charge rolls made for the Slaughterbound’s unit. Archslaughterer used: every Blessing of Khorne is active for the Lord’s unit until the start of your next turn."
+  },
+  "source": {
+   "rule": "Blessings of Khorne",
+   "text": "If your Army Faction is **WORLD EATERS**, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.\n*Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.*\n*First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.*\n*They then use the two 2s to activate Unbridled Bloodlust.*\n*Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.*\nUnbridled Bloodlust · double 1+: This unit has +1 to **charge rolls**.\nRage-fuelled Invigoration · double 2+: Each time a model in this unit makes a Pile-in or **Consolidation move**, it can move up to 6\" instead of up to 3\".\nTotal Carnage · double 3+: Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.\nMartial Excellence · double 4+ or triple 1+: Melee weapons equipped by models in this unit have the **[SUSTAINED HITS 1]** ability.\nWarp Blades · double 5+ or triple 2+: Melee weapons equipped by models in this unit have the **[LETHAL HITS]** ability.\nDecapitating Strikes · double 6 or triple 3+: Each time a model in this unit makes a melee attack that targets an **INFANTRY** unit, that attack has the **[DEVASTATING WOUNDS]** ability."
+  },
+  "key": "a6d1c263c039fc28"
+ },
+ {
+  "army": "hurrdurr",
+  "kind": "rule-remind",
+  "where": "world-eaters army rule · Blessings of Khorne",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either",
+   "text": "Active Blessings: Martial Excellence [SUSTAINED HITS 1] · Warp Blades [LETHAL HITS] · Decapitating Strikes [DEVASTATING WOUNDS] vs INFANTRY · Rage-fuelled Invigoration: 6\" pile-in and consolidation · Total Carnage: each time a model is destroyed by a melee attack, if it has not fought this phase, on a 4+ it is not removed; it can fight after the attacking unit has finished making its attacks, then is removed. Archslaughterer used: all six for the Lord’s unit."
+  },
+  "source": {
+   "rule": "Blessings of Khorne",
+   "text": "If your Army Faction is **WORLD EATERS**, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.\n*Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.*\n*First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.*\n*They then use the two 2s to activate Unbridled Bloodlust.*\n*Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.*\nUnbridled Bloodlust · double 1+: This unit has +1 to **charge rolls**.\nRage-fuelled Invigoration · double 2+: Each time a model in this unit makes a Pile-in or **Consolidation move**, it can move up to 6\" instead of up to 3\".\nTotal Carnage · double 3+: Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.\nMartial Excellence · double 4+ or triple 1+: Melee weapons equipped by models in this unit have the **[SUSTAINED HITS 1]** ability.\nWarp Blades · double 5+ or triple 2+: Melee weapons equipped by models in this unit have the **[LETHAL HITS]** ability.\nDecapitating Strikes · double 6 or triple 3+: Each time a model in this unit makes a melee attack that targets an **INFANTRY** unit, that attack has the **[DEVASTATING WOUNDS]** ability."
+  },
+  "key": "d379d3c86d8d0c75"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-timing",
+  "where": "oioioi · Daemon Prince of Tzeentch with wings · Aetherstride",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "charge"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Aetherstride",
+   "text": "In your Movement phase, when this model is set up on the battlefield using the **Deep Strike** ability, it can perform an aetherstride. If it does:\n- It can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units.\n- Until the end of the turn, its Dark Blessing has the **[SUSTAINED HITS D3]** ability.\n- Until the end of the turn, it is not eligible to declare a charge."
+  },
+  "key": "d14affbf83deef63"
+ },
+ {
+  "army": "oioioi",
+  "kind": "ability-timing",
+  "where": "oioioi · Sorcerer in Terminator Armour · Umbralefic Crystal",
+  "judgement": {
+   "ph": [
+    "command",
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Umbralefic Crystal",
+   "text": "**THOUSAND SONS** model only. (Once per battle, per army) In your Command phase, if this unit is **unengaged**, you can use this ability. If you do:\n- Place this unit in **strategic reserves**.\n- This unit has **Deep Strike** until the start of your next Shooting phase.\n- This unit must make an **ingress move** in your next Movement phase (including in your first turn)."
+  },
+  "key": "2d26004c35b212d8"
+ },
+ {
+  "army": "oioioi",
+  "kind": "rule-ph",
+  "where": "thousand-sons army rule · Cabal of Sorcerers",
+  "judgement": {
+   "ph": [
+    "shooting",
+    "charge"
+   ]
+  },
+  "source": {
+   "rule": "Cabal of Sorcerers",
+   "text": "If your Army Faction is **THOUSAND SONS**, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.\n**Psychic Test Sequence**\n- **Roll 2D6**\n- **Channel the Warp** (Optional)\n- Then, if one or more doubles or triples were rolled during this test, that model’s unit suffers D3 mortal wounds.\n- If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects.\n*FAQ (Faction Pack 1.3): Do I need to sequence all of my Cabal of Sorcerers Rituals at the start of my Shooting phase? No, you just pick a model with the Cabal of Sorcerers rule, pick a Ritual to manifest, and attempt it, then repeat the process until you have run out of models or Rituals or both.*\n*FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, do I have to choose whether to Channel the Warp before rolling any dice? No.*\n*FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, if I roll one or more doubles or triples, does my model only suffer D3 mortal wounds if I chose to Channel the Warp? Yes.*\n*App note, not rules text: Channel the Warp means rolling one more D6 for the test (the printed card shows it as a die).*\nDestiny’s Ruin (Psychic) · Warp Charge 5: Select one enemy unit within 24\" of and **visible** to the manifesting model. Until the end of the phase, each time a **THOUSAND SONS** or **SCINTILLATING LEGIONS** model from your army makes an attack that targets that unit, re-roll a **Hit roll** of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.\nTemporal Surge (Psychic) · Warp Charge 6: Select one friendly **THOUSAND SONS** or **SCINTILLATING LEGIONS** unit that is not within **Engagement Range** of one or more enemy units and is within 24\" of and **visible** to the manifesting model. That unit can make a **Normal move** of up to D6\". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6\" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.\nDoombolt (Psychic) · Warp Charge 7: Select one enemy unit within 24\" of and **visible** to the manifesting model (excluding units with the **Lone Operative** ability that are not part of an Attached unit and are not within 12\" of the manifesting model); that unit suffers D3 **mortal wounds**. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.\nTwist of Fate (Psychic) · Warp Charge 9: Select one enemy unit within 24\" of and **visible** to the manifesting model. Until the end of the phase, each time a **THOUSAND SONS** or **SCINTILLATING LEGIONS** model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead."
+  },
+  "key": "c33708b801df52fd"
+ },
+ {
+  "army": "oioioi",
+  "kind": "rule-ph",
+  "where": "Grand Coven rule · Kindred Sorcery",
+  "judgement": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "fight"
+   ]
+  },
+  "source": {
+   "rule": "Kindred Sorcery",
+   "text": "In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.\nImbued Manifestation: Add 6\" to the Range characteristic of ranged Psychic weapons equipped by **THOUSAND SONS** models from your army.\nPsychic Maelstrom: Each time a **THOUSAND SONS** model from your army makes an attack with a Psychic weapon, add 1 to the **Wound roll**.\nWrath of the Immaterium: Psychic weapons equipped by **THOUSAND SONS** models from your army have the **[DEVASTATING WOUNDS]** ability."
+  },
+  "key": "5eeb00ce6a6bd4f7"
+ },
+ {
+  "army": "oioioi",
+  "kind": "rule-turn",
+  "where": "Grand Coven rule · Kindred Sorcery",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "rule": "Kindred Sorcery",
+   "text": "In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.\nImbued Manifestation: Add 6\" to the Range characteristic of ranged Psychic weapons equipped by **THOUSAND SONS** models from your army.\nPsychic Maelstrom: Each time a **THOUSAND SONS** model from your army makes an attack with a Psychic weapon, add 1 to the **Wound roll**.\nWrath of the Immaterium: Psychic weapons equipped by **THOUSAND SONS** models from your army have the **[DEVASTATING WOUNDS]** ability."
+  },
+  "key": "619726c92c431496"
+ },
+ {
+  "army": "oioioi",
+  "kind": "rule-needs",
+  "where": "Grand Coven rule · Kindred Sorcery",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Thousand Sons"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Kindred Sorcery",
+   "text": "In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.\nImbued Manifestation: Add 6\" to the Range characteristic of ranged Psychic weapons equipped by **THOUSAND SONS** models from your army.\nPsychic Maelstrom: Each time a **THOUSAND SONS** model from your army makes an attack with a Psychic weapon, add 1 to the **Wound roll**.\nWrath of the Immaterium: Psychic weapons equipped by **THOUSAND SONS** models from your army have the **[DEVASTATING WOUNDS]** ability."
+  },
+  "key": "c751fbe84d0e36e9"
+ },
+ {
+  "army": "oioioi",
+  "kind": "strat-needs",
+  "where": "Grand Coven · Arcane Focus",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Thousand Sons"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Arcane Focus",
+   "text": "WHEN: Your Shooting phase, just after you take a Psychic test for a **THOUSAND SONS** model from your army that Channelled the Warp (before resolving that **Ritual**).\nTARGET: That **THOUSAND SONS** model.\nEFFECT: Re-roll all of the D6 rolled for that Psychic test (including the additional D6 for Channelling the Warp)."
+  },
+  "key": "0abe777c2a1af106"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "unit-aura",
+  "where": "nidzillas · The Swarmlord",
+  "judgement": {
+   "kind": "all",
+   "needs": {
+    "all": [
+     "Faction: Tyranids"
+    ]
+   },
+   "when": "Within 9\" of the Swarmlord",
+   "note": "within your army’s Synapse Range",
+   "from": "Domination of the Hive Mind"
+  },
+  "source": {
+   "ability": "Domination of the Hive Mind",
+   "text": "While a friendly **TYRANIDS** unit is within 9\" of this model, that unit is within your army’s **Synapse Range**."
+  },
+  "key": "8811cf92804280e3"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "unit-aura",
+  "where": "nidzillas · Hive Tyrant",
+  "judgement": {
+   "kind": "ranged",
+   "needs": {
+    "all": [
+     "Faction: Tyranids"
+    ]
+   },
+   "when": "Within 6\" of the Hive Tyrant",
+   "note": "ranged weapons have [ASSAULT] and [LETHAL HITS]",
+   "from": "Onslaught"
+  },
+  "source": {
+   "ability": "Onslaught",
+   "text": "While a friendly **TYRANIDS** unit is within 6\" of this model, ranged weapons equipped by models in that unit have the **[ASSAULT]** and **[LETHAL HITS]** abilities."
+  },
+  "key": "95f9e7cbd229f319"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-timing",
+  "where": "nidzillas · Norn Emissary · Singular Purpose",
+  "judgement": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Singular Purpose",
+   "text": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15."
+  },
+  "key": "bde59aa38a35bbe0"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "rule-remind",
+  "where": "tyranids army rule · Synapse",
+  "judgement": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either",
+   "text": "Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6."
+  },
+  "source": {
+   "rule": "Synapse",
+   "text": "If your Army Faction is **TYRANIDS**, while a **TYRANIDS** unit from your army is within 6\" of one or more friendly **SYNAPSE** models, that **TYRANIDS** unit is said to be within Synapse Range of that model and of your army. While a **TYRANIDS** unit from your army is within Synapse Range of your army:\n- Each time that unit takes a **Battle-shock test**, take that test on 3D6 instead of 2D6.\n- Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack."
+  },
+  "key": "ba0016ac8eba3944"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "rule-note",
+  "where": "tyranids army rule · Shadow in the Warp",
+  "judgement": {
+   "note": "Wahapedia FAQ: “Can units targeted by the Shadow in the Warp army rule use the Insane Bravery Stratagem?” “No. Insane Bravery can only be used in your Command phase.”"
+  },
+  "source": {
+   "rule": "Shadow in the Warp",
+   "text": "If your Army Faction is **TYRANIDS**, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a **Battle-shock test**. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more **SYNAPSE** units from your army, subtract 1 from that test."
+  },
+  "key": "f4b38a30a286dbd1"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "rule-ph",
+  "where": "Crusher Stampede rule · Enraged Behemoths",
+  "judgement": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ]
+  },
+  "source": {
+   "rule": "Enraged Behemoths",
+   "text": "Each time a **TYRANIDS MONSTER** model from your army makes an attack, add 1 to the **Hit roll** if that model’s unit is below its Starting Strength, and add 1 to the **Wound roll** as well if that model’s unit is **Below Half-strength**. In addition, while a **TYRANIDS MONSTER** unit from your army (excluding **Battle-shocked** units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit."
+  },
+  "key": "5f32bf2f5e27f672"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-mod",
+  "where": "Crusher Stampede · Swarm-guided Salvoes",
+  "judgement": {
+   "mod": {
+    "kind": "ranged",
+    "when": "Your Shooting phase",
+    "note": "[IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll"
+   }
+  },
+  "source": {
+   "stratagem": "Swarm-guided Salvoes",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One **TYRANIDS MONSTER** unit from your army that has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, ranged weapons equipped by models in your unit have the **[IGNORES COVER]** ability, and until the end of the phase each time a model in your unit makes an attack, you can ignore any or all modifiers to that model’s Ballistic Skill characteristic and any or all modifiers to the **Hit roll**."
+  },
+  "key": "19001be81418c53f"
+ },
+ {
+  "army": "core",
+  "kind": "rule-appnote",
+  "where": "Hunter",
+  "judgement": {
+   "note": "*App note, not rules text: New Recruit prints these weapons as two profiles, one marked “Hunter: MONSTER/VEHICLE”. That profile can only target MONSTER or VEHICLE units. The Hunter rule is in the rules appendix of the Warhammer 40,000 app (Wahapedia 04.01.03), not in the printed Core Rules.*"
+  },
+  "source": {
+   "rule": "Hunter",
+   "text": "**04.01.03 Multiple Weapon Profiles (app):** In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).\nSome of these profiles are known as **Hunter** profiles. **Hunter** profiles can only target units with the specified keywords.\nNote that if a unit is equipped with more than one such weapon, a different profile can be selected for each model within that unit."
+  },
+  "key": "24dbbd6e2aea369b"
+ },
+ {
+  "army": "core",
+  "kind": "rule-appnote",
+  "where": "Mobile",
+  "judgement": {
+   "note": "*App note, not rules text: MOBILE has no rule of its own in the core rules. These are the Dense lines of Terrain and Movement (13.06). Super-Heavy Walker (24.35), Designer’s Note: “Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).”*"
+  },
+  "source": {
+   "rule": "Mobile",
+   "text": "**Dense:**\n- **INFANTRY/BEASTS/SWARM/MOBILE** models can move horizontally through **dense terrain features**.\n- **INFANTRY/BEASTS/SWARM** models can move vertically through **dense terrain features**.\n- Other models can move horizontally through **dense terrain features** provided that all sections of that **terrain feature** that the moving model’s base would move through are 2\" or less in height. Otherwise, the moving model must move vertically to ascend or descend such sections. They cannot move through ceilings and floors while doing so, and they cannot end that move on any surface of that **terrain feature** that is not on ground level (see below)."
+  },
+  "key": "0d2b3aa46edcb194"
+ },
+ {
+  "army": "core",
+  "kind": "rule-appnote",
+  "where": "Consolidation Move",
+  "judgement": {
+   "note": "*App note, not rules text: the lines above the errata are the printed Core Rules (01/06/2026). GW’s Warhammer 40,000 app, as Wahapedia prints it, changes two After Moving lines: the errata replaces the Ongoing Consolidation line, and the Objective Consolidation line reads “Your unit must be unengaged and within range of the selected objective”. No GW PDF has either change yet (16 Oct 2026).*"
+  },
+  "source": {
+   "rule": "Consolidation Move",
+   "text": "**MAXIMUM DISTANCE:** 3\"\n**ELIGIBLE IF:** It is the Fight phase and your unit was **eligible to fight** this phase.\n**EFFECT:** Your unit moves as described in Moving (03).\n**BEFORE MOVING:** Select **consolidation mode**:\n- Ongoing Consolidation: If your unit is **engaged**, you must select this mode and select every enemy unit it is **engaged** with.\n- Engaging Consolidation: Otherwise, if your unit is within 3\" of one or more enemy units, you must select this mode and select one or more of those enemy units.\n- Objective Consolidation: Otherwise, if your unit is within 3\" of one or more **objectives**, you must select this mode and select one of those **objectives**.\n**WHILE MOVING:**\n- Ongoing Consolidation: Models in base-contact with one or more enemy models cannot be moved. Each model that is moved must end its move closer to the closest selected enemy unit, and **engaged** with it if possible.\n- Engaging Consolidation: Each model that is moved must end its move closer to the closest selected enemy unit, and **engaged** with it if possible.\n- Objective Consolidation: Each model that is moved must end its move within range of the selected **objective** if possible, or closer to it if not.\n**AFTER MOVING:**\n- Ongoing Consolidation: Each model that started this move **engaged** with an enemy unit must still be **engaged** with that enemy unit.\n- Engaging Consolidation: Your unit must be **engaged** with all of the selected enemy units. If one or more enemy units **engaged** with your unit have not been **selected to fight** this phase, your opponent must select each of those units, one at a time; when each is selected, it becomes **eligible to fight** and is **selected to fight** (12.04).\n- Objective Consolidation: Your unit must be within range of the selected **objective**.\n*Wahapedia core rules errata (12.08 Consolidation Move, After Moving, Ongoing Consolidation): Each model that started this move engaged with an enemy unit must still be engaged with that enemy unit. If one or more enemy units engaged with your unit have not been selected to fight this phase, your opponent must select each of those units, one at a time; when each is selected, it becomes eligible to fight and is selected to fight*"
+  },
+  "key": "65090dc2a1ea5e06"
+ },
+ {
+  "army": "core",
+  "kind": "rule-alias",
+  "where": "/^mobile/i",
+  "judgement": {
+   "opens": "Mobile"
+  },
+  "source": {
+   "rule": "Mobile",
+   "text": "**Dense:**\n- **INFANTRY/BEASTS/SWARM/MOBILE** models can move horizontally through **dense terrain features**.\n- **INFANTRY/BEASTS/SWARM** models can move vertically through **dense terrain features**.\n- Other models can move horizontally through **dense terrain features** provided that all sections"
+  },
+  "key": "85dc2daea85b5825"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "useSentence",
+  "judgement": {
+   "code": "function useSentence(set, kind, u, who){\n  const nm = list => list.map(it => esc(itemName(it)));\n  const v = (lead, third) => (who ? '<b class=\"m\">' + esc(who) + '</b> ' : '') + '<b class=\"uv\" role=\"button\" tabindex=\"0\" data-rule=\"Select Weapons\">' + (who ? third : lead) + '</b>';\n  if(kind === 'ranged'){\n    const cq = set.filter(isCQ), rest = set.filter(it => !isCQ(it)), big = hasKw(u, 'Monster') ? 'MONSTER' : hasKw(u, 'Vehicle') ? 'VEHICLE' : '';\n    // 24.07: one or more [CLOSE-QUARTERS] weapons, or one or more of the others (not MONSTER/VEHICLE models)\n    const some = l => l.length > 1 ? 'one or more of ' + andList(nm(l)) : nm(l)[0];\n    const cqLink = linkTo('rule', 'Close-quarters', 'Close-quarters');\n    if(cq.length && rest.length && !big)\n      return v('Can shoot with', 'can shoot with') + ' ' + some(cq) + ' <b>or</b> ' + some(rest) + ', not both (' + cqLink + ').';\n    const guns = modelCount(u) === 1 ? set.reduce((t, it) => t + (+it.n || 1), 0) : set.length;   // a Forgefiend's 2 Hades + 1 cannon\n    const w = guns === 2 ? 'one or both' : 'one or more of these';\n    return v('Can shoot with ' + w, 'can shoot with ' + w) + (cq.length && rest.length ? ' (' + cqLink + ' does not limit ' + big + ' models)' : '') + '.';\n  }\n  const ea = set.filter(isEA), other = set.filter(it => !isEA(it));\n  const extra = ea.length ? ', <b>plus</b> ' + andList(nm(ea)) + ' on top (extra attacks)' : '';\n  if(other.length > 1) return v('Pick one to fight with:', 'picks one to fight with:') + ' ' + orList(nm(other)) + extra + '.';\n  if(other.length === 1){ const w = ea.length === 1 ? 'both' : 'all of these'; return v('Fights with ' + w + ':', 'fights with ' + w + ':') + ' ' + nm(other)[0] + extra + '.'; }\n  return v('Fights with all of these', 'fights with all of these') + ' (extra attacks).';\n}"
+  },
+  "source": {
+   "implements": "04.01 Select Weapons; Close-quarters (non-MONSTER/VEHICLE: pistols or other ranged weapons); Extra Attacks (24.11); a multi-profile weapon uses one profile (04.01.03)"
+  },
+  "key": "7197939b6b12670c"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "useLine",
+  "judgement": {
+   "code": "function useLine(items, kind, u, part){\n  if(items.length < 2 || !u.gear) return '';\n  // in an attached unit, the first models line is the leader and the rest the bodyguard\n  const own = i => part == null || (part === 0 ? i === 0 : i > 0);\n  const lines = u.gear.map((g, i) => ({ i, who:u.models[i].replace(/^\\d+× /, ''), set:items.filter(it => g.includes(itemName(it))) })).filter(l => l.set.length && own(l.i));\n  const multi = lines.filter(l => l.set.length > 1);\n  // a weapon only one model has, in a squad of mixed loadouts: name that model (the champion's pistol)\n  if(lines.length > 1) for(const it of items){ const ls = lines.filter(l => l.set.includes(it)); if(!it.n && !it.carrier && ls.length === 1 && /^1× /.test(u.models[ls[0].i])) it.carrier = ls[0].who.replace(/ w\\/.*$/, ''); }\n  if(!multi.length){\n    if(lines.length < 2) return '';\n    for(const l of lines) for(const it of l.set) if(!it.n) it.carrier = l.who.replace(/ w\\/.*$/, '');   // name the one model that has it\n    return '<p class=\"use\"><b class=\"m\">One of these per model</b> · ×N = how many models have it.</p>';\n  }\n  const key = l => l.set.map(itemName).join('|');\n  const kinds = [...new Map(multi.map(l => [key(l), l])).values()];\n  if(kinds.length === 1 && multi.length === lines.length) return '<p class=\"use\">' + useSentence(kinds[0].set, kind, u) + '</p>';\n  const said = kinds.map(l => useSentence(l.set, kind, u));\n  const others = multi.length < lines.length;\n  if(kind === 'ranged' && said.every(x => /data-rule=\"Select Weapons\">Can shoot with one or (both|more of these)/.test(x)))\n    return '<p class=\"use\"><b class=\"uv\" role=\"button\" tabindex=\"0\" data-rule=\"Select Weapons\">Every model can shoot with one or more of its guns</b>' + (others ? ' (see ×)' : '') + '.</p>';\n  return kinds.map(l => '<p class=\"use\">' + useSentence(l.set, kind, u, l.who.replace(/ w\\/.*$/, '')) + '</p>').join('') +\n    (others ? '<p class=\"use\"><b class=\"m\">The others:</b> one each (×N = how many models have it).</p>' : '');\n}"
+  },
+  "source": {
+   "implements": "which models carry which weapons (gear per models line); attached units (19.04)"
+  },
+  "key": "e349e22660a1f958"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "unitMods",
+  "judgement": {
+   "code": "function unitMods(u, kind){\n  const det = unitDetRules(u).filter(r => r.mod).map(r => Object.assign({ from:r.name, rule:r.name }, singleMod(r.mod, u)));\n  for(const [k, list] of [['ranged', u.ranged], ['melee', u.melee]]){\n    const lance = [...new Set((list || []).filter(w => w.kw.some(x => /^lance/i.test(x))).map(w => w.group || w.name))];\n    if(lance.length) det.push({ kind:k, when:'Made a charge move this turn', note:andList(lance) + ' +1 to wound', from:'Lance', rule:'Lance' });\n  }\n  if(hasKw(u, 'Towering') && !hasKw(u, 'Aircraft') && D.rules['Plunging Fire']) det.push({ kind:'ranged', when:'Visible target within 12\" with models on ground level (not AIRCRAFT)', note:'BS improved by 1', from:'Plunging Fire', rule:'Plunging Fire' });\n  const strat = allStratagems().filter(s => s.mod && eligible(s).includes(u)).map(s => Object.assign({ from:s.name, strat:s.id, cp:s.cp }, s.mod));\n  return (u.mods || []).concat(det, auraMods(u), strat).filter(m => m.kind === kind || m.kind === 'all');\n}"
+  },
+  "source": {
+   "implements": "which footnotes a unit gets: its own, detachment rules matching its keywords, auras, stratagems it is eligible for; Lance (+1 to wound after a charge); Plunging Fire for TOWERING (22.05)"
+  },
+  "key": "81c9ba88f89288e3"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "defenceItems",
+  "judgement": {
+   "code": "function defenceItems(u, ph){\n  const out = [];\n  for(const r of u.rules){ const m = /^feel no pain (\\d\\+)/i.exec(r); if(m) out.push({ t:'Feel No Pain ' + m[1], a:'rule', v:r }); }\n  for(const r of unitDetRules(u)) if(r.def && !out.some(x => x.t === r.def)) out.push({ t:r.def, a:'rule', v:r.name });   // e.g. Knights of Legend: FNP 6+\n  for(const ab of u.abilities) if(ab.def && !naReason(ab) && !(ph && ab.defPh && !ab.defPh.includes(ph))) out.push({ t:ab.def, a:'ability', v:abilityKey(ab) });\n  for(const s of allStratagems()) if(s.def && eligible(s).includes(u) && !(ph && !s.phases.includes(ph))) out.push({ t:s.cp + 'CP ' + s.name + ': ' + s.def, a:'strat', v:s.id });\n  if(u.rules.includes('Waaagh!')) out.push({ t:'Riled up: 5+ INV', a:'rule', v:'Waaagh!' });\n  return out;\n}"
+  },
+  "source": {
+   "implements": "what protects a unit when targeted: Feel No Pain, defensive abilities, detachment rules, stratagems usable in that phase, the Orks riled-up 5+ invulnerable save"
+  },
+  "key": "65358cf27ed741b6"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "CORE_PHASED",
+  "judgement": {
+   "code": "const CORE_PHASED = { 'Deep Strike':{ ph:['movement'], turn:'either' }, 'Harpooned':{ ph:['charge'], turn:'either' }, 'Super-Heavy Walker':{ ph:['movement'], turn:'your' }, 'Firing Deck':{ ph:['shooting'], turn:'your' } };"
+  },
+  "source": {
+   "implements": "core rules listed in a phase: Deep Strike, Harpooned, Super-Heavy Walker, Firing Deck"
+  },
+  "key": "cfcd5be12efdff9c"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "suits",
+  "judgement": {
+   "code": "const suits = (s, u) => keywordGated(s) || u.abilities.some(ab => (ab.text || '').toLowerCase().includes(s.name.toLowerCase() + ' stratagem'));"
+  },
+  "source": {
+   "implements": "which core stratagems a datasheet lists"
+  },
+  "key": "b3b6ce7379f94e8b"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "quickRef",
+  "judgement": {
+   "code": "function quickRef(){\n  const tr = rows => '<div class=\"qtab\">' + rows.map(([k, v]) => '<span>' + k + '</span><span>' + v + '</span>').join('') + '</div>';\n  return xp('Quick reference', 'Turn order · Command phase · hit, wound and save rolls', '',\n    '<p class=\"qh\">Battle round (07)</p><p>Start of battle round → both players take a turn (the mission says who goes first) → end of battle round.</p>' +\n    '<p class=\"qh\">Each turn (07.02)</p><p>Start of turn → Command → Movement → Shooting → Charge → Fight → end of turn.</p>' +\n    '<p class=\"qh\">Command phase (08)</p><ol class=\"qol\"><li>Start-of-phase rules.</li><li>Gain Core CP: both players gain 1CP.</li>' +\n      '<li>' + linkTo('rule', 'Battle-shock', 'Battle-shock') + ': a roll for each of your units that is battle-shocked or at or below ' + linkTo('rule', 'Starting Strength', 'half-strength') + '.</li>' +\n      '<li>Command abilities.</li><li>End-of-phase rules.</li></ol>' +\n    '<p class=\"qh\">Hit roll (05.01)</p>' + tr([['Unmodified 1', 'fails'], ['Unmodified 6', 'critical hit'], ['≥ BS / WS', 'hit']]) +\n    '<p class=\"qh\">Wound roll (05.02)</p>' + tr([['Unmodified 1', 'fails'], ['Unmodified 6', 'critical wound'], ['S ≥ 2× T', '2+'], ['S > T', '3+'], ['S = T', '4+'], ['S < T', '5+'], ['S ≤ ½ T', '6+']]) +\n    '<p class=\"qh\">Save roll (05.03, 05.04)</p>' + tr([['Unmodified 1', 'damage'], ['≥ InSv', 'saved (AP does not apply)'], ['≥ Sv after AP', 'saved'], ['Otherwise', 'the model loses D wounds']]) +\n    '<p class=\"note\">Allocation order (05.03): a non-CHARACTER group containing a model that has lost one or more wounds must be first; no CHARACTER group can be earlier than a non-CHARACTER group; CHARACTER groups containing a model that has lost one or more wounds must be earlier than CHARACTER groups containing no wounded models.</p>', false);\n}"
+  },
+  "source": {
+   "implements": "Core Rules 07 (battle round), 07.02 (turn), 08 (Command phase), 05.01 hit roll, 05.02 wound roll table, 05.03-05.04 save roll and allocation order (dice values are pictures in the PDF: page 18)"
+  },
+  "key": "391d1ffcd14a443d"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "screenPregame",
+  "judgement": {
+   "code": "function screenPregame(){\n  const a = army(), f = faction(), units = a.units;\n  const row = (k, v) => v ? '<div class=\"pgr\"><span class=\"pgk\">' + k + '</span><span class=\"pgv\">' + v + '</span></div>' : '';\n  const sec = (title, body) => body ? '<div class=\"sec-h\"><h2>' + title + '</h2></div><div class=\"pg\">' + body + '</div>' : '';\n  // the same ability on several units is one line: \"Singular Purpose · Assimilator (280), Norn Emissary ×2\"\n  const group = list => { const m = new Map(); for(const [u, ab] of list){ const k = ab.name + '|' + ab.text; if(!m.has(k)) m.set(k, { ab, units:[] }); m.get(k).units.push(u); } return [...m.values()]; };\n  const abLine = g => linkTo('ability', abilityKey(g.ab), g.ab.name) + ' <span class=\"from\">· ' + esc(unitNames(g.units)) + '</span>';\n  const rulesOf = units.length ? f.armyRules.filter(r => !inertRule(r.name)).map(r => ({ r, src:f.name + ' army rule' }))\n    .concat(detachments().filter(d => d.rule).map(d => ({ r:d.rule, src:d.name }))) : [];\n  const ruleLine = x => linkTo('rule', x.r.name, x.r.name) + ' <span class=\"from\">· ' + esc(x.src) + '</span>';\n  const nameLink = u => linkTo('unit', u.id, u.short || u.name);   // without its enhancement: the line says it\n  const allAbs = units.flatMap(u => u.abilities.filter(ab => !naReason(ab)).map(ab => [u, ab]));\n  // Deep Strike (24.09) and Scouts (24.31) work only if every model in the unit has them; u.partialRules names\n  // the rules only some models of an attached unit have (Slaughterbound's Scouts 6\": its Exalted Eightbound have none)\n  const everyModel = (u, test) => unitRules(u).some(test) && !(u.partialRules || []).some(test);\n  // rules resolved before Declare Battle Formations (Code Chivalric: end of the Read Mission Objectives step)\n  const early = rulesOf.filter(x => /read mission objectives/i.test(x.r.text));\n\n  // your list\n  const warlord = units.filter(u => u.warlord);\n  const enh = units.filter(u => u.enhancement).map(u => { const d = detachments().find(x => x.enhancements.some(e => e.name === u.enhancement)), e = d && d.enhancements.find(x => x.name === u.enhancement);\n    return (d ? linkTo('enh', d.id + '|' + u.enhancement, u.enhancement) : esc(u.enhancement)) + (e && e.pts ? ' <span class=\"from\">' + e.pts + ' pts</span>' : '') + ' on ' + nameLink(u); });\n  const led = units.filter(u => u.leads).map(u => nameLink(u) + ' leads ' + esc(u.leads));\n  let h = sec('Your list',\n    row('Warlord', warlord.map(unitLink).join(', ')) +\n    row('Enhance&shy;ments', enh.join('<br>')) +\n    row('Attached', led.join('<br>')) +\n    row('Detach&shy;ments', esc(detachments().map(d => d.name + (d.dp ? ' (' + d.dp + ' DP)' : '')).join(', ')) + (a.disposition ? '<br><span class=\"from\">Disposition:</span> ' + esc(a.disposition) : '')) +\n    row('Points', esc(a.pointsUsed + ' / ' + a.points + ' · ' + a.battleSize)));\n\n  h += sec('Read Mission Objectives step', row('Rules', early.map(ruleLine).join('<br>')));\n\n  // declare battle formations: reserves and transports\n  const ds = units.filter(u => everyModel(u, r => ruleKey(r) === 'Deep Strike'));\n  const dsPts = ds.reduce((t, u) => t + (u.pts || 0) * (u.copies || 1), 0), half = Math.floor(a.points / 2);\n  const transports = units.filter(u => hasKw(u, 'Transport')).map(u => { const ab = u.abilities.find(x => /transport capacity/i.test(x.text)); return unitLink(u) + (ab ? ': <span class=\"from\">' + rt(ab.text).replace(/^<p>|<\\/p>$/g, '') + '</span>' : ''); });\n  h += sec('Declare battle formations',\n    row('Reserves', linkTo('rule', 'Strategic Reserves', 'Strategic reserves') + ': unless otherwise stated, up to ' + half + ' pts (50% of the ' + a.points + ' limit), counting units embarked within a TRANSPORT you place there. Unless otherwise stated, they can only arrive from the second battle round onwards, and any that have not arrived by the end of round 3 are destroyed (not repositioned units, nor units embarked within a TRANSPORT that arrived).' +\n      (ds.length ? '<br><span class=\"from\">Can ' + linkTo('rule', 'Deep Strike', 'Deep Strike') + ':</span> ' + ds.map(u => unitLink(u) + ' <span class=\"from\">' + u.pts + ' pts' + (u.copies > 1 ? ' each' : '') + '</span>').join(', ') + (ds.length > 1 ? ' <span class=\"from\">(all: ' + dsPts + ' pts)</span>' : '') : '')) +\n    row('Transports', transports.join('<br>')));\n\n  // deployment and pre-battle abilities\n  const scouts = units.filter(u => everyModel(u, r => /^scouts|^infiltrators/i.test(r)));\n  const pre = group(allAbs.filter(([u, ab]) => PREGAME_RE.test(ab.text) && !/start of the first battle round/i.test(ab.text)));\n  h += sec('Deployment and pre-battle abilities',\n    row('Scouts', scouts.map(u => unitLink(u) + ' <span class=\"from\">' + esc(unitRules(u).filter(r => /^scouts|^infiltrators/i.test(r)).join(', ')) + '</span>').join('<br>')) +\n    row('Abilities', pre.map(abLine).join('<br>')) +\n    row('Rules', rulesOf.filter(x => PREGAME_RE.test(x.r.text) && !early.includes(x)).map(ruleLine).join('<br>')));\n\n  // decided at the start of the battle or of every battle round\n  const first = group(allAbs.filter(([u, ab]) => /start of the first battle round/i.test(ab.text)));\n  const round = rulesOf.filter(x => /start of (the|each|every) battle round/i.test(x.r.text)).map(ruleLine)\n    .concat(group(allAbs.filter(([u, ab]) => /start of (the|each|every) battle round/i.test(ab.text) && !/first battle round/i.test(ab.text))).map(abLine));\n  h += sec('Start of the battle round', row('First round', first.map(abLine).join('<br>')) + row('Every round', round.join('<br>')));\n\n  // once per battle: the resources you spend once\n  const onceB = x => /once per battle(?! round)/i.test(x);\n  const onceRules = f.armyRules.filter(r => !inertRule(r.name) && onceB((r.tag || '') + ' ' + r.text)).map(r => ({ r, src:f.name + ' army rule' }))\n    .concat(detachments().filter(d => d.rule && onceB(d.rule.text)).map(d => ({ r:d.rule, src:d.name })));\n  const onceAbs = group(allAbs.filter(([u, ab]) => onceB((ab.tag || '') + ' ' + ab.text)));\n  const onceStrats = allStratagems().filter(s => eligible(s).length && onceB([s.limit, s.restrictions, s.effect].join(' ')));\n  h += sec('Once per battle',\n    row('Rules', onceRules.map(x => ruleLine(x) + (/\\beach of these [a-z ]+ once per battle/i.test(x.r.text) ? ' <span class=\"from\">(each of its options once)</span>' : '')).join('<br>')) +\n    row('Abilities', onceAbs.map(g => abLine(g) + (/per army/i.test(onceTag(g.ab)) ? ' <span class=\"tg once\">per army</span>' : '')).join('<br>')) +\n    row('Strata&shy;gems', onceStrats.map(s => linkTo('strat', s.id, s.cp + 'CP ' + s.name)).join('<br>')));\n  return h + '<p class=\"note\">Gathered from this list’s datasheets and rules; each line opens the full text.</p>';\n}"
+  },
+  "source": {
+   "implements": "Before the battle: Warlord, enhancements, attached units, strategic reserves (20.01: at most half the points limit; 20.03: from battle round 2, destroyed at the end of round 3), Deep Strike, transports, Scouts, start of round 1 / every round, once-per-battle items"
+  },
+  "key": "256db933b495f602"
+ }
+]
