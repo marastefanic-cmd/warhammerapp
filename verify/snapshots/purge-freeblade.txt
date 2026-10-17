@@ -125,6 +125,7 @@ MELTA 2
 vs non-MONSTER/VEHICLE targets: ranged attacks have [DEVASTATING WOUNDS] (Thin Their Ranks)
 Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+STRATAGEMS · FREEBLADE COMPANY
 No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) (1CP Strength from Exile)
 Knight Paladin
 ×2 units
@@ -165,6 +166,7 @@ MELTA 2
 Target is the closest eligible target: improve AP by 1 (Seasoned Noble)
 Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+STRATAGEMS · FREEBLADE COMPANY
 No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) (1CP Strength from Exile)
 Knight Errant
 
@@ -196,6 +198,7 @@ MELTA 2
 Target is the closest eligible target: +1 to hit rolls (Aggressive Assault)
 Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+STRATAGEMS · FREEBLADE COMPANY
 No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) (1CP Strength from Exile)
 Knight Destrier
 ×2 units
@@ -229,6 +232,7 @@ ASSAULT, BLAST, RAPID FIRE D6+3
 Target within range of an objective marker: ranged attacks have [IGNORES COVER] (Saturation Fire)
 Damaged (1-6 wounds left): -1 to hit rolls (and -4 OC) (Damaged: 1-6 Wounds Remaining)
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+STRATAGEMS · FREEBLADE COMPANY
 No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) (1CP Strength from Exile)
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
@@ -248,6 +252,7 @@ Reaper chainswordPICK ONE PROFILE
 -3
 2
 Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
+STRATAGEMS · FREEBLADE COMPANY
 No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) (1CP Strength from Exile)
 Knight Paladin
 ×2 units
@@ -265,6 +270,7 @@ Reaper chainswordPICK ONE PROFILE
 -3
 2
 Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
+STRATAGEMS · FREEBLADE COMPANY
 No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) (1CP Strength from Exile)
 Knight Errant
 Reaper chainswordPICK ONE PROFILE
@@ -281,6 +287,7 @@ Reaper chainswordPICK ONE PROFILE
 -3
 2
 Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
+STRATAGEMS · FREEBLADE COMPANY
 No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) (1CP Strength from Exile)
 Knight Destrier
 ×2 units
@@ -291,6 +298,7 @@ Titanic feet
 -1
 2
 Damaged (1-6 wounds left): -1 to hit rolls (and -4 OC) (Damaged: 1-6 Wounds Remaining)
+STRATAGEMS · FREEBLADE COMPANY
 No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) (1CP Strength from Exile)
 
 ######## abilities · MELEE Abilities
@@ -2707,6 +2715,7 @@ INV
 WHEN TARGETEDFeel No Pain 6+ · 5+ invulnerable save against ranged attacks only · 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
 DAMAGED 1-9 W-1 to hit rolls (and -5 OC)
 ALL ATTACKS
+STRATAGEMS · FREEBLADE COMPANY
 No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) (1CP Strength from Exile)
 RANGED
 RNG
@@ -2815,6 +2824,7 @@ INV
 WHEN TARGETEDFeel No Pain 6+ · 5+ invulnerable save against ranged attacks only · 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
 DAMAGED 1-9 W-1 to hit rolls (and -5 OC)
 ALL ATTACKS
+STRATAGEMS · FREEBLADE COMPANY
 No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) (1CP Strength from Exile)
 RANGED
 RNG
@@ -2925,6 +2935,7 @@ INV
 WHEN TARGETEDFeel No Pain 6+ · 5+ invulnerable save against ranged attacks only · 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
 DAMAGED 1-9 W-1 to hit rolls (and -5 OC)
 ALL ATTACKS
+STRATAGEMS · FREEBLADE COMPANY
 No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) (1CP Strength from Exile)
 RANGED
 RNG
@@ -3027,6 +3038,7 @@ INV
 WHEN TARGETEDFeel No Pain 6+ · 5+ invulnerable save against ranged attacks only · 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
 DAMAGED 1-6 W-1 to hit rolls (and -4 OC)
 ALL ATTACKS
+STRATAGEMS · FREEBLADE COMPANY
 No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) (1CP Strength from Exile)
 RANGED
 RNG

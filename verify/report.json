@@ -1,6 +1,6 @@
 {
- "hash": "bd2c9471c88ad1f8a3cf7abd752de1b95fe533bc2d700e30d367e155524564bb",
- "at": "2026-10-17T19:48:57.250Z",
+ "hash": "9a4cf0b430f2e2f45580dbc445d2d1988425341f87913c9206b8e00b5bf28fcd",
+ "at": "2026-10-17T19:57:17.397Z",
  "ok": true,
  "steps": {
   "data": {
@@ -29,11 +29,11 @@
   },
   "screens": {
    "ok": true,
-   "summary": "render at 390px: 992 screens and popups, 735 helper texts, 0 failures"
+   "summary": "render at 390px: 992 screens and popups, 736 helper texts, 0 failures"
   },
   "small phone": {
    "ok": true,
-   "summary": "render at 320px: 992 screens and popups, 735 helper texts, 0 failures"
+   "summary": "render at 320px: 992 screens and popups, 736 helper texts, 0 failures"
   },
   "snapshots": {
    "ok": true,

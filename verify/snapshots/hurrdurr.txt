@@ -383,8 +383,10 @@ Khornate eviscerator×2
 -2
 2
 While Khârn leads this unit: re-roll hit rolls of 1 and wound rolls of 1 (Legendary Killer)
-Made a charge move this turn: +1 S (Murderous Charge) · +1 AP in the Fight phase (1CP Hack and Slash)
+Made a charge move this turn: +1 S (Murderous Charge)
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+Made a charge move this turn: +1 AP in the Fight phase (1CP Hack and Slash)
 Daemon Prince of Khorne
 Warlord
 Helm of Brazen Ire
@@ -401,9 +403,13 @@ Hellforged weaponsPICK ONE PROFILE
 6
 -1
 1
-Made a charge move this turn: Hellforged weapons have [DEVASTATING WOUNDS] until the end of the turn (Devastating Assault) · +1 AP in the Fight phase (1CP Hack and Slash)
-When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne) · CHARACTER models +1 A, +2 S (1CP Aspire to Infamy)
+Made a charge move this turn: Hellforged weapons have [DEVASTATING WOUNDS] until the end of the turn (Devastating Assault)
+When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+Made a charge move this turn: +1 AP in the Fight phase (1CP Hack and Slash)
+STRATAGEMS · VESSELS OF WRATH
+When selected to fight: CHARACTER models +1 A, +2 S (1CP Aspire to Infamy)
 Daemon Prince of Khorne
 Berzerker Glaive
 Hellforged weaponsPICK ONE PROFILE
@@ -419,9 +425,13 @@ Hellforged weaponsPICK ONE PROFILE
 6
 -1
 2
-Made a charge move this turn: Hellforged weapons have [DEVASTATING WOUNDS] until the end of the turn (Devastating Assault) · +1 AP in the Fight phase (1CP Hack and Slash)
-When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne) · CHARACTER models +1 A, +2 S (1CP Aspire to Infamy)
+Made a charge move this turn: Hellforged weapons have [DEVASTATING WOUNDS] until the end of the turn (Devastating Assault)
+When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+Made a charge move this turn: +1 AP in the Fight phase (1CP Hack and Slash)
+STRATAGEMS · VESSELS OF WRATH
+When selected to fight: CHARACTER models +1 A, +2 S (1CP Aspire to Infamy)
 Lord on Juggernaut
 Archslaughterer
 + Khorne Berzerkers
@@ -456,9 +466,13 @@ Khornate eviscerator×4
 8
 -2
 2
-Made a charge move this turn: +1 S (Murderous Charge) · Bladed horn +1 to wound (Lance) · +1 AP in the Fight phase (1CP Hack and Slash)
-When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne) · CHARACTER models +1 A, +2 S (1CP Aspire to Infamy)
+Made a charge move this turn: +1 S (Murderous Charge) · Bladed horn +1 to wound (Lance)
+When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+Made a charge move this turn: +1 AP in the Fight phase (1CP Hack and Slash)
+STRATAGEMS · VESSELS OF WRATH
+When selected to fight: CHARACTER models +1 A, +2 S (1CP Aspire to Infamy)
 Slaughterbound
 Battle-lust
 + Exalted Eightbound
@@ -479,9 +493,12 @@ Chainblades×3
 2
 ANTI-MONSTER 3+, ANTI-VEHICLE 3+
 vs MONSTER/VEHICLE: +1 D (Rend and Tear)
-When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne) · CHARACTER models +1 A, +2 S (1CP Aspire to Infamy)
+When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
 Made a charge move this turn: +1 AP in the Fight phase (1CP Hack and Slash)
+STRATAGEMS · VESSELS OF WRATH
+When selected to fight: CHARACTER models +1 A, +2 S (1CP Aspire to Infamy)
 Eightbound
 Chainblades×3
 6
@@ -490,6 +507,7 @@ Chainblades×3
 -2
 2
 Own aura, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
 Made a charge move this turn: +1 AP in the Fight phase (1CP Hack and Slash)
 Jakhals
 
@@ -508,6 +526,7 @@ Paired manglersDISHONOURED
 0
 1
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
 Made a charge move this turn: +1 AP in the Fight phase (1CP Hack and Slash)
 Forgefiend
 ×2 units
@@ -519,6 +538,7 @@ Forgefiend claws
 1
 Damaged (1-4 wounds left): -1 to hit rolls (Damaged: 1-4 wounds remaining)
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
 Made a charge move this turn: +1 AP in the Fight phase (1CP Hack and Slash)
 Chaos Rhino
 Armoured tracks
@@ -528,6 +548,7 @@ Armoured tracks
 0
 1
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
 Made a charge move this turn: +1 AP in the Fight phase (1CP Hack and Slash)
 
 ######## abilities · MELEE Abilities
@@ -4915,8 +4936,10 @@ Khornate eviscerator×2
 2
 WHOLE UNIT
 While Khârn leads this unit: re-roll hit rolls of 1 and wound rolls of 1 (Legendary Killer)
-Made a charge move this turn: +1 S (Murderous Charge) · +1 AP in the Fight phase (1CP Hack and Slash)
+Made a charge move this turn: +1 S (Murderous Charge)
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+Made a charge move this turn: +1 AP in the Fight phase (1CP Hack and Slash)
 ABILITIES“this unit” = the whole attached unit
 KHÂRN THE BETRAYER
 Legendary Killer
@@ -5019,9 +5042,13 @@ Hellforged weaponsPICK ONE PROFILE
 6
 -1
 1
-Made a charge move this turn: Hellforged weapons have [DEVASTATING WOUNDS] until the end of the turn (Devastating Assault) · +1 AP in the Fight phase (1CP Hack and Slash)
-When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne) · CHARACTER models +1 A, +2 S (1CP Aspire to Infamy)
+Made a charge move this turn: Hellforged weapons have [DEVASTATING WOUNDS] until the end of the turn (Devastating Assault)
+When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+Made a charge move this turn: +1 AP in the Fight phase (1CP Hack and Slash)
+STRATAGEMS · VESSELS OF WRATH
+When selected to fight: CHARACTER models +1 A, +2 S (1CP Aspire to Infamy)
 ABILITIES
 Lord of Murder
 
@@ -5108,9 +5135,13 @@ Hellforged weaponsPICK ONE PROFILE
 6
 -1
 2
-Made a charge move this turn: Hellforged weapons have [DEVASTATING WOUNDS] until the end of the turn (Devastating Assault) · +1 AP in the Fight phase (1CP Hack and Slash)
-When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne) · CHARACTER models +1 A, +2 S (1CP Aspire to Infamy)
+Made a charge move this turn: Hellforged weapons have [DEVASTATING WOUNDS] until the end of the turn (Devastating Assault)
+When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+Made a charge move this turn: +1 AP in the Fight phase (1CP Hack and Slash)
+STRATAGEMS · VESSELS OF WRATH
+When selected to fight: CHARACTER models +1 A, +2 S (1CP Aspire to Infamy)
 ABILITIES
 Lord of Murder
 
@@ -5265,9 +5296,13 @@ Khornate eviscerator×4
 -2
 2
 WHOLE UNIT
-Made a charge move this turn: +1 S (Murderous Charge) · Bladed horn +1 to wound (Lance) · +1 AP in the Fight phase (1CP Hack and Slash)
-When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne) · CHARACTER models +1 A, +2 S (1CP Aspire to Infamy)
+Made a charge move this turn: +1 S (Murderous Charge) · Bladed horn +1 to wound (Lance)
+When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+Made a charge move this turn: +1 AP in the Fight phase (1CP Hack and Slash)
+STRATAGEMS · VESSELS OF WRATH
+When selected to fight: CHARACTER models +1 A, +2 S (1CP Aspire to Infamy)
 ABILITIES“this unit” = the whole attached unit
 LORD ON JUGGERNAUT
 Aggressive Advance
@@ -5374,9 +5409,12 @@ Chainblades×3
 ANTI-MONSTER 3+, ANTI-VEHICLE 3+
 WHOLE UNIT
 vs MONSTER/VEHICLE: +1 D (Rend and Tear)
-When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne) · CHARACTER models +1 A, +2 S (1CP Aspire to Infamy)
+When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
 Made a charge move this turn: +1 AP in the Fight phase (1CP Hack and Slash)
+STRATAGEMS · VESSELS OF WRATH
+When selected to fight: CHARACTER models +1 A, +2 S (1CP Aspire to Infamy)
 ABILITIES“this unit” = the whole attached unit
 SLAUGHTERBOUND
 Rage Eternal
@@ -5454,6 +5492,7 @@ Chainblades×3
 -2
 2
 Own aura, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
 Made a charge move this turn: +1 AP in the Fight phase (1CP Hack and Slash)
 ABILITIES
 Beacons of Rage
@@ -5537,6 +5576,7 @@ Paired manglersDISHONOURED
 0
 1
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
 Made a charge move this turn: +1 AP in the Fight phase (1CP Hack and Slash)
 ABILITIES
 Objective Ravaged
@@ -5611,6 +5651,7 @@ Forgefiend claws
 0
 1
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
 Made a charge move this turn: +1 AP in the Fight phase (1CP Hack and Slash)
 ABILITIES
 Furious Onslaught
@@ -5672,6 +5713,7 @@ Armoured tracks
 0
 1
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
 Made a charge move this turn: +1 AP in the Fight phase (1CP Hack and Slash)
 ABILITIES
 Meet Any Challenge

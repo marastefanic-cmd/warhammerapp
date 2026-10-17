@@ -16,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
-<script>window.WH_BUILD = 'bd2c9471c8';</script>
+<script>window.WH_BUILD = '9a4cf0b430';</script>
 </head>
 <body>
 <style>
@@ -273,6 +273,8 @@ summary::-webkit-details-marker{display:none}
 .kwl .gk{white-space:nowrap; padding:1px 0 13px}
 .gv{font:inherit}
 .kwl .gk::after, .gv::after{content:'+'; font:700 9px/1 var(--f-head); vertical-align:super; margin-left:1px; text-decoration:none; display:inline-block}
+.msep{display:flex; align-items:center; gap:6px; margin:7px 0 3px; font:600 10.5px/1.2 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--muted)}
+.msep::after{content:''; flex:1; border-top:1px solid var(--line)}
 .gsrc{margin:6px 0 10px; padding:8px 10px; border-left:3px solid var(--accent); background:var(--surface); border-radius:0 8px 8px 0}
 .gh{margin:0 0 4px} .gh .tg{margin-left:4px} .gk2{margin-top:14px}
 .wr i.hi{font-style:normal; display:inline-block; min-width:26px; padding:1px 4px; border-radius:5px; background:var(--accent); color:var(--accent-ink)}
@@ -454,8 +456,8 @@ summary::-webkit-details-marker{display:none}
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="verified.js?v=bd2c9471c8"></script>
-<script src="data.js?v=bd2c9471c8"></script>
+<script src="verified.js?v=9a4cf0b430"></script>
+<script src="data.js?v=9a4cf0b430"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -1071,7 +1073,17 @@ function weaponBlock(it, keys, mods, u){
 }
 // footnotes: rules with the same condition share one line; a footnote that changes only
 // ranged or only melee attacks on a sheet with both says which
+// rules and abilities first; stratagems after a thin line per detachment ("Stratagems · Shoota Boyz")
 function modLines(mods, u, hasHunter){
+  const dets = detachments();
+  const detOf = id => { const d = dets.find(x => (x.stratagems || []).some(s => s.id === id)); return d ? d.name : 'Core'; };
+  const parts = [[null, mods.filter(m => !m.strat)]];
+  for(const m of mods.filter(m => m.strat)){ const k = detOf(m.strat); let p = parts.find(x => x[0] === k); if(!p) parts.push(p = [k, []]); p[1].push(m); }
+  const at = k => k === 'Core' ? dets.length : dets.findIndex(d => d.name === k);
+  parts.sort((x, y) => (x[0] == null ? -1 : at(x[0])) - (y[0] == null ? -1 : at(y[0])));
+  return parts.map(([det, list]) => list.length ? (det ? '<div class="msep">Stratagems · ' + esc(det) + '</div>' : '') + modGroupLines(list, u, hasHunter) : '').join('');
+}
+function modGroupLines(mods, u, hasHunter){
   const groups = new Map();
   for(const m of mods){ const k = norm(m.when); if(!groups.has(k)) groups.set(k, { when:m.when, items:[] }); groups.get(k).items.push(m); }
   return [...groups.values()].map(g => {

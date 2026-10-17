@@ -321,6 +321,7 @@ Tellyport Blasta
 3
 BLAST 1, IGNORES COVER, ASSAULT, ANTI-INFANTRY 4+, DEVASTATING WOUNDS, SUPA-HAZARDOUS
 Riled up: [SUSTAINED HITS 1] (More Dakka) · +3" range (Dakka! Dakka! Dakka!)
+STRATAGEMS · SHOOTA BOYZ
 Your Shooting phase, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (1CP Kustom Dakka)
 Your Shooting phase, target within 9": +1 AP (1CP Glowin’ Dakka)
 Your Shooting phase: [SUSTAINED HITS 1] (1CP Never Enough Dakka)
@@ -336,6 +337,7 @@ Kustom Shoota
 LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 2, ASSAULT
 Boss’ Ammo Runt used (your Shooting phase, when selected to shoot): +1 to hit rolls
 Riled up: +3" range (Dakka! Dakka! Dakka!)
+STRATAGEMS · SHOOTA BOYZ
 Your Shooting phase, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (1CP Kustom Dakka)
 Your Shooting phase, target within 9": +1 AP (1CP Glowin’ Dakka)
 Your Shooting phase: [SUSTAINED HITS 1] (1CP Never Enough Dakka)
@@ -381,6 +383,7 @@ ASSAULT, IGNORES COVER
 ASSAULT, IGNORES COVER
 Riled up: +3" range (Dakka! Dakka! Dakka!)
 Your Shooting phase, this unit or the target within range of an objective: can re-roll hit rolls of 1 (Wreckin’ and Lootin’)
+STRATAGEMS · SHOOTA BOYZ
 Your Shooting phase, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (1CP Kustom Dakka)
 Your Shooting phase, target within 9": +1 AP (1CP Glowin’ Dakka)
 Your Shooting phase: [SUSTAINED HITS 1] (1CP Never Enough Dakka)
@@ -426,6 +429,7 @@ ASSAULT, IGNORES COVER
 ASSAULT, IGNORES COVER
 Riled up: +3" range (Dakka! Dakka! Dakka!)
 Your Shooting phase, this unit or the target within range of an objective: can re-roll hit rolls of 1 (Wreckin’ and Lootin’)
+STRATAGEMS · SHOOTA BOYZ
 Your Shooting phase, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (1CP Kustom Dakka)
 Your Shooting phase, target within 9": +1 AP (1CP Glowin’ Dakka)
 Your Shooting phase: [SUSTAINED HITS 1] (1CP Never Enough Dakka)
@@ -469,6 +473,7 @@ LETHAL HITS: NON-MONSTER/VEHICLE, SUSTAINED HITS 1, ASSAULT, RAPID FIRE 1, IGNOR
 HAZARDOUS, ASSAULT, RAPID FIRE 1, IGNORES COVER
 Your Shooting phase, this unit or the target within range of an objective: +1 AP (Finderz Keeperz) · can re-roll hit rolls of 1 (Wreckin’ and Lootin’)
 Riled up: +3" range (Dakka! Dakka! Dakka!)
+STRATAGEMS · SHOOTA BOYZ
 Your Shooting phase, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (1CP Kustom Dakka)
 Your Shooting phase, target within 9": +1 AP (1CP Glowin’ Dakka)
 Your Shooting phase: [SUSTAINED HITS 1] (1CP Never Enough Dakka)
@@ -483,6 +488,7 @@ Grot Blasta×10
 1
 CLOSE-QUARTERS, ASSAULT
 Riled up: +3" range (Dakka! Dakka! Dakka!)
+STRATAGEMS · SHOOTA BOYZ
 Your Shooting phase, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (1CP Kustom Dakka)
 Your Shooting phase, target within 9": +1 AP (1CP Glowin’ Dakka)
 Your Shooting phase: [SUSTAINED HITS 1] (1CP Never Enough Dakka)
@@ -4605,6 +4611,7 @@ Tellyport Blasta
 3
 BLAST 1, IGNORES COVER, ASSAULT, ANTI-INFANTRY 4+, DEVASTATING WOUNDS, SUPA-HAZARDOUS
 Riled up: [SUSTAINED HITS 1] (More Dakka) · +3" range (Dakka! Dakka! Dakka!)
+STRATAGEMS · SHOOTA BOYZ
 Your Shooting phase, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (1CP Kustom Dakka)
 Your Shooting phase, target within 9": +1 AP (1CP Glowin’ Dakka)
 Your Shooting phase: [SUSTAINED HITS 1] (1CP Never Enough Dakka)
@@ -4690,6 +4697,7 @@ Kustom Shoota
 LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 2, ASSAULT
 Boss’ Ammo Runt used (your Shooting phase, when selected to shoot): +1 to hit rolls
 Riled up: +3" range (Dakka! Dakka! Dakka!)
+STRATAGEMS · SHOOTA BOYZ
 Your Shooting phase, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (1CP Kustom Dakka)
 Your Shooting phase, target within 9": +1 AP (1CP Glowin’ Dakka)
 Your Shooting phase: [SUSTAINED HITS 1] (1CP Never Enough Dakka)
@@ -4828,6 +4836,7 @@ ASSAULT, IGNORES COVER
 WHOLE UNIT
 Riled up: +3" range (Dakka! Dakka! Dakka!)
 Your Shooting phase, this unit or the target within range of an objective: can re-roll hit rolls of 1 (Wreckin’ and Lootin’)
+STRATAGEMS · SHOOTA BOYZ
 Your Shooting phase, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (1CP Kustom Dakka)
 Your Shooting phase, target within 9": +1 AP (1CP Glowin’ Dakka)
 Your Shooting phase: [SUSTAINED HITS 1] (1CP Never Enough Dakka)
@@ -5000,6 +5009,7 @@ ASSAULT, IGNORES COVER
 WHOLE UNIT
 Riled up: +3" range (Dakka! Dakka! Dakka!)
 Your Shooting phase, this unit or the target within range of an objective: can re-roll hit rolls of 1 (Wreckin’ and Lootin’)
+STRATAGEMS · SHOOTA BOYZ
 Your Shooting phase, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (1CP Kustom Dakka)
 Your Shooting phase, target within 9": +1 AP (1CP Glowin’ Dakka)
 Your Shooting phase: [SUSTAINED HITS 1] (1CP Never Enough Dakka)
@@ -5164,6 +5174,7 @@ HAZARDOUS, ASSAULT, RAPID FIRE 1, IGNORES COVER
 WHOLE UNIT
 Your Shooting phase, this unit or the target within range of an objective: +1 AP (Finderz Keeperz) · can re-roll hit rolls of 1 (Wreckin’ and Lootin’)
 Riled up: +3" range (Dakka! Dakka! Dakka!)
+STRATAGEMS · SHOOTA BOYZ
 Your Shooting phase, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (1CP Kustom Dakka)
 Your Shooting phase, target within 9": +1 AP (1CP Glowin’ Dakka)
 Your Shooting phase: [SUSTAINED HITS 1] (1CP Never Enough Dakka)
@@ -5261,6 +5272,7 @@ Grot Blasta×10
 1
 CLOSE-QUARTERS, ASSAULT
 Riled up: +3" range (Dakka! Dakka! Dakka!)
+STRATAGEMS · SHOOTA BOYZ
 Your Shooting phase, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (1CP Kustom Dakka)
 Your Shooting phase, target within 9": +1 AP (1CP Glowin’ Dakka)
 Your Shooting phase: [SUSTAINED HITS 1] (1CP Never Enough Dakka)

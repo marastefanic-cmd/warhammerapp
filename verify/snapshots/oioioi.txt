@@ -210,6 +210,7 @@ D6+3
 BLAST, IGNORES COVER, PSYCHIC
 Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 wounds remaining)
 Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+STRATAGEMS · GRAND COVEN
 Psychic weapons, your Shooting phase: +9" range, re-roll hit and wound rolls (2CP Devastating Sorcery)
 Daemon Prince of Tzeentch with wings
 Eldritch Vortex of E’taph
@@ -234,6 +235,7 @@ Infernal cannon
 vs CHARACTER units: re-roll hit rolls of 1 and wound rolls of 1 (vs PSYKER CHARACTER units: re-roll the hit roll and the wound roll) (Hunter of Souls)
 After an aetherstride this turn: Dark Blessing has [SUSTAINED HITS D3] (Aetherstride)
 Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+STRATAGEMS · GRAND COVEN
 Psychic weapons, your Shooting phase: +9" range, re-roll hit and wound rolls (2CP Devastating Sorcery)
 Sorcerer
 + Rubric Marines
@@ -297,6 +299,7 @@ IGNORES COVER, TORRENT, LETHAL HITS
 Twisted Sorceries used this phase (your Shooting phase or the Fight phase, once per battle): Sorcerer Psychic weapons +3 S and +3 A
 Every ranged attack: re-roll wound rolls of 1 (vs a unit within range of an objective marker you do not control: re-roll the wound roll) (Bringers of Change)
 Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+STRATAGEMS · GRAND COVEN
 Psychic weapons, your Shooting phase: +9" range, re-roll hit and wound rolls (2CP Devastating Sorcery)
 Sorcerer in Terminator Armour
 Umbralefic Crystal
@@ -357,6 +360,7 @@ Hellfyre missile rack×2
 LETHAL HITS
 vs the enemy unit picked at the start of your Shooting phase: +1 to hit rolls (Marked by Fate)
 Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+STRATAGEMS · GRAND COVEN
 Psychic weapons, your Shooting phase: +9" range, re-roll hit and wound rolls (2CP Devastating Sorcery)
 Tzaangor Enlightened with Fatecaster greatbows
 Fatecaster greatbow×3
@@ -4125,6 +4129,7 @@ D6+3
 -1
 2
 BLAST, IGNORES COVER, PSYCHIC
+STRATAGEMS · GRAND COVEN
 Psychic weapons, your Shooting phase: +9" range, re-roll hit and wound rolls (2CP Devastating Sorcery)
 MELEE
 A
@@ -4236,6 +4241,7 @@ Infernal cannon
 -2
 2
 After an aetherstride this turn: Dark Blessing has [SUSTAINED HITS D3] (Aetherstride)
+STRATAGEMS · GRAND COVEN
 Psychic weapons, your Shooting phase: +9" range, re-roll hit and wound rolls (2CP Devastating Sorcery)
 MELEE
 A
@@ -4394,6 +4400,7 @@ D6
 IGNORES COVER, TORRENT, LETHAL HITS
 WHOLE UNIT
 Every ranged attack: re-roll wound rolls of 1 (vs a unit within range of an objective marker you do not control: re-roll the wound roll) (Bringers of Change)
+STRATAGEMS · GRAND COVEN
 Psychic weapons, your Shooting phase: +9" range, re-roll hit and wound rolls (2CP Devastating Sorcery)
 MELEE
 A
@@ -4571,6 +4578,7 @@ Hellfyre missile rack×2
 LETHAL HITS
 WHOLE UNIT
 vs the enemy unit picked at the start of your Shooting phase: +1 to hit rolls (Marked by Fate)
+STRATAGEMS · GRAND COVEN
 Psychic weapons, your Shooting phase: +9" range, re-roll hit and wound rolls (2CP Devastating Sorcery)
 MELEE
 A
