@@ -1316,8 +1316,8 @@ IN THIS ARMYKilla Kans
 BASES TO PRINT
 
 30× 25mm
-13× 32mm
-13× 40mm
+15× 32mm
+11× 40mm
 1× 50mm
 6× 60mm
 3× 75×42mm
@@ -1346,7 +1346,7 @@ Mek
 2 units: mark them apart (1, 2)
 1× 32mm
 Mek
-1× 40mm
+1× 32mm
 Nob · Choppa + Rokkit pistol + Smash Hammer
 1× 32mm
 2× Busta Rokkit Launcha
@@ -3468,7 +3468,7 @@ Mek
 
 1× Mek · 1× Nob · 1× Tankbusta w/ Two Busta Rokkit Launchas · 4× Tankbusta w/ Busta Rokkit Launcha · 55 + Tankbustas 160 pts
 
-Base 32mm / 40mm
+Base 32mm
 
 KEYWORDS
 

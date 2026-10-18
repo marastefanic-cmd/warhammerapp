@@ -70,6 +70,8 @@ foreground), so it never needs reinstalling.
 
 - Units, weapons, abilities, points: the New Recruit PDF, checked against BSData (wh40k-11e),
   the community data New Recruit is built from.
+- Base sizes: as the New Recruit PDF prints them (the owner's rule, 18 Oct 2026), also where GW's
+  base size guide lists another size for a model.
 - Rules wording: Games Workshop's newest official documents (Core Rules, Universal Rules
   Updates, Event Companion), or Wahapedia where GW has published none yet (the Orks pages).
 - The app's own aids (gists, footnotes, phase tags, which units a stratagem fits) are each read

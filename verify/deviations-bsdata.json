@@ -10,15 +10,6 @@
  },
  {
   "army": "shooty",
-  "unit": "mek-tankbustas",
-  "field": "stats.base",
-  "app": "Nob: 40mm",
-  "source": "Nob: 32mm",
-  "reason": "GW's base size guide is newer than the community data New Recruit uses; tournaments use GW's guide.",
-  "evidence": "GW Warhammer Event Companion v1.3 (14 Oct 2026, newer than New Recruit and BSData), Base Size Guide, Orks: \"Tankbustas: Boss Nob 40mm\" (verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3532); BSData calls the Tankbustas' Boss Nob \"Nob\"."
- },
- {
-  "army": "shooty",
   "unit": "mek-flashgitz",
   "field": "stats.count",
   "app": "Flash Gitz",
@@ -43,14 +34,5 @@
   "source": "- This unit has **Deep Strike**\n- This unit's ranged attacks have **[IGNORES COVER]**.",
   "reason": "BSData (and New Recruit) drops the full stop after \"Deep Strike\"; the app keeps it.",
   "evidence": "Wahapedia datasheet wahapedia.ru/wh40k11ed/factions/orks/Nazdreg: \"Nazdreg’s Know-wotz: This unit has Deep Strike. This unit’s ranged attacks have [Ignores Cover].\" New Recruit: verify/sources/nr/melee.txt line 60."
- },
- {
-  "army": "melee",
-  "unit": "bigboss-warboss-breaka-boyz",
-  "field": "stats.base",
-  "app": "Nob: 40mm",
-  "source": "Nob: 32mm",
-  "reason": "GW's base size guide is newer than the community data New Recruit uses; tournaments use GW's guide.",
-  "evidence": "GW Warhammer Event Companion v1.3 (14 Oct 2026, newer than New Recruit and BSData), Base Size Guide, Orks: \"Breaka Boyz: Boss Nob 40mm\" (verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3492); New Recruit calls the Breaka Boyz' Boss Nob \"Nob\"."
  }
 ]

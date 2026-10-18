@@ -1262,8 +1262,8 @@ IN THIS ARMYNazdreg, Warboss in Mega Armour · Follow Me Ladz
 BASES TO PRINT
 
 20× 25mm
-5× 32mm
-14× 40mm
+6× 32mm
+13× 40mm
 2× 50mm
 1× 60mm
 3× 75×42mm
@@ -1295,7 +1295,7 @@ Bigboss
 Bigboss
 1× 50mm
 Warboss · Kunnin’ But Brutal
-1× 40mm
+1× 32mm
 Nob · Choppa + Rokkit pistol
 3× 32mm
 standard Smash Hammer

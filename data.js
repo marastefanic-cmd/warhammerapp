@@ -14,7 +14,7 @@
 ===================================================================== */
 window.WH_DATA = (function(){
 
-const VERSION = '2026-10-18.1';
+const VERSION = '2026-10-18.2';
 
 /* ---------------- core rules (11th edition) ---------------- */
 // Weapon keyword and core ability text: the official Core Rules PDF (11th edition), BSData and the
@@ -508,7 +508,7 @@ const ARMIES = [
       gear:[['Kustom Mega-slugga','Mek’s Toolz'],['Choppa','Rokkit pistol','Smash Hammer'],['Busta Rokkit Launcha','Busta Rokkit Launcha','Gitstikka'],['Busta Rokkit Launcha','Gitstikka']],
       stats:[
         { name:'Mek', M:'6"', T:'5', Sv:'5+', W:'4', Ld:'7+', OC:'1', InSv:'–', base:'32mm' },
-        { name:'Nob', M:'6"', T:'5', Sv:'4+', W:'3', Ld:'7+', OC:'1', InSv:'–', base:'40mm' },
+        { name:'Nob', M:'6"', T:'5', Sv:'4+', W:'3', Ld:'7+', OC:'1', InSv:'–', base:'32mm' },
         { name:'Tankbusta ×5', M:'6"', T:'5', Sv:'4+', W:'2', Ld:'7+', OC:'1', InSv:'–', base:'32mm' }
       ],
       ranged:[
@@ -802,7 +802,7 @@ const ARMIES = [
       stats:[
         { name:'Bigboss', M:'6"', T:'5', Sv:'4+', W:'5', Ld:'7+', OC:'1', InSv:'–', base:'40mm' },
         { name:'Warboss', M:'6"', T:'6', Sv:'4+', W:'6', Ld:'6+', OC:'1', InSv:'5+', base:'50mm' },
-        { name:'Nob', M:'6"', T:'5', Sv:'4+', W:'3', Ld:'7+', OC:'1', InSv:'–', base:'40mm' },
+        { name:'Nob', M:'6"', T:'5', Sv:'4+', W:'3', Ld:'7+', OC:'1', InSv:'–', base:'32mm' },
         { name:'Breaka Boy ×5', M:'6"', T:'5', Sv:'4+', W:'2', Ld:'7+', OC:'1', InSv:'–', base:'32mm' }
       ],
       ranged:[
