@@ -2679,343 +2679,539 @@
    "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
   },
   {
-   "item": "shooty / detachment:dread-mob",
+   "item": "shooty,melee / detachment:dread-mob",
    "field": "name",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:dread-mob/rule",
+   "item": "shooty,melee / detachment:dread-mob/rule",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:dread-mob/enhancement:Cybork Boosta",
+   "item": "shooty,melee / detachment:dread-mob/enhancement:Cybork Boosta",
    "field": "pts",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:dread-mob/enhancement:Cybork Boosta",
+   "item": "shooty,melee / detachment:dread-mob/enhancement:Cybork Boosta",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:dread-mob/enhancement:Dreadherder",
+   "item": "shooty,melee / detachment:dread-mob/enhancement:Dreadherder",
    "field": "pts",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:dread-mob/enhancement:Dreadherder",
+   "item": "shooty,melee / detachment:dread-mob/enhancement:Dreadherder",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:dread-mob/stratagem:crazed-rampage",
+   "item": "shooty,melee / detachment:dread-mob/stratagem:crazed-rampage",
    "field": "when",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP (CRAZED RAMPAGE)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:dread-mob/stratagem:crazed-rampage",
+   "item": "shooty,melee / detachment:dread-mob/stratagem:crazed-rampage",
    "field": "target",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP (CRAZED RAMPAGE)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:dread-mob/stratagem:crazed-rampage",
+   "item": "shooty,melee / detachment:dread-mob/stratagem:crazed-rampage",
    "field": "effect",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP (CRAZED RAMPAGE)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:dread-mob/stratagem:dread-power",
+   "item": "shooty,melee / detachment:dread-mob/stratagem:dread-power",
    "field": "when",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP (DREAD POWER)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:dread-mob/stratagem:dread-power",
+   "item": "shooty,melee / detachment:dread-mob/stratagem:dread-power",
    "field": "target",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP (DREAD POWER)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:dread-mob/stratagem:dread-power",
+   "item": "shooty,melee / detachment:dread-mob/stratagem:dread-power",
    "field": "effect",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP (DREAD POWER)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:dread-mob/stratagem:stomping-juggernaut",
+   "item": "shooty,melee / detachment:dread-mob/stratagem:stomping-juggernaut",
    "field": "when",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP (STOMPING JUGGERNAUT)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:dread-mob/stratagem:stomping-juggernaut",
+   "item": "shooty,melee / detachment:dread-mob/stratagem:stomping-juggernaut",
    "field": "target",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP (STOMPING JUGGERNAUT)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:dread-mob/stratagem:stomping-juggernaut",
+   "item": "shooty,melee / detachment:dread-mob/stratagem:stomping-juggernaut",
    "field": "effect",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP (STOMPING JUGGERNAUT)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:shoota-boyz",
+   "item": "shooty,melee / detachment:shoota-boyz",
    "field": "name",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Shoota Boyz 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:shoota-boyz/rule",
+   "item": "shooty,melee / detachment:shoota-boyz/rule",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Shoota Boyz 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:shoota-boyz/enhancement:Supa-glowy Fing",
+   "item": "shooty,melee / detachment:shoota-boyz/enhancement:Supa-glowy Fing",
    "field": "pts",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Shoota Boyz 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:shoota-boyz/enhancement:Supa-glowy Fing",
+   "item": "shooty,melee / detachment:shoota-boyz/enhancement:Supa-glowy Fing",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Shoota Boyz 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:shoota-boyz/enhancement:Targetin’ Squigs",
+   "item": "shooty,melee / detachment:shoota-boyz/enhancement:Targetin’ Squigs",
    "field": "pts",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Shoota Boyz 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:shoota-boyz/enhancement:Targetin’ Squigs",
+   "item": "shooty,melee / detachment:shoota-boyz/enhancement:Targetin’ Squigs",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Shoota Boyz 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:shoota-boyz/stratagem:kustom-dakka",
+   "item": "shooty,melee / detachment:shoota-boyz/stratagem:kustom-dakka",
    "field": "when",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Shoota Boyz 1DP (KUSTOM DAKKA)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:shoota-boyz/stratagem:kustom-dakka",
+   "item": "shooty,melee / detachment:shoota-boyz/stratagem:kustom-dakka",
    "field": "target",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Shoota Boyz 1DP (KUSTOM DAKKA)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:shoota-boyz/stratagem:kustom-dakka",
+   "item": "shooty,melee / detachment:shoota-boyz/stratagem:kustom-dakka",
    "field": "effect",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Shoota Boyz 1DP (KUSTOM DAKKA)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:shoota-boyz/stratagem:glowin-dakka",
+   "item": "shooty,melee / detachment:shoota-boyz/stratagem:glowin-dakka",
    "field": "when",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Shoota Boyz 1DP (GLOWIN' DAKKA)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:shoota-boyz/stratagem:glowin-dakka",
+   "item": "shooty,melee / detachment:shoota-boyz/stratagem:glowin-dakka",
    "field": "target",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Shoota Boyz 1DP (GLOWIN' DAKKA)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:shoota-boyz/stratagem:glowin-dakka",
+   "item": "shooty,melee / detachment:shoota-boyz/stratagem:glowin-dakka",
    "field": "effect",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Shoota Boyz 1DP (GLOWIN' DAKKA)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:shoota-boyz/stratagem:never-enough-dakka",
+   "item": "shooty,melee / detachment:shoota-boyz/stratagem:never-enough-dakka",
    "field": "when",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Shoota Boyz 1DP (NEVER ENOUGH DAKKA)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:shoota-boyz/stratagem:never-enough-dakka",
+   "item": "shooty,melee / detachment:shoota-boyz/stratagem:never-enough-dakka",
    "field": "target",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Shoota Boyz 1DP (NEVER ENOUGH DAKKA)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:shoota-boyz/stratagem:never-enough-dakka",
+   "item": "shooty,melee / detachment:shoota-boyz/stratagem:never-enough-dakka",
    "field": "effect",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Shoota Boyz 1DP (NEVER ENOUGH DAKKA)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:wreckas",
+   "item": "shooty,melee / detachment:wreckas",
    "field": "name",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Wreckas 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:wreckas/rule",
+   "item": "shooty,melee / detachment:wreckas/rule",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Wreckas 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:wreckas/enhancement:Kaptin’s Hat",
+   "item": "shooty,melee / detachment:wreckas/enhancement:Kaptin’s Hat",
    "field": "pts",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Wreckas 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:wreckas/enhancement:Kaptin’s Hat",
+   "item": "shooty,melee / detachment:wreckas/enhancement:Kaptin’s Hat",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Wreckas 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:wreckas/enhancement:Supa-snazz Dakka",
+   "item": "shooty,melee / detachment:wreckas/enhancement:Supa-snazz Dakka",
    "field": "pts",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Wreckas 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:wreckas/enhancement:Supa-snazz Dakka",
+   "item": "shooty,melee / detachment:wreckas/enhancement:Supa-snazz Dakka",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Wreckas 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:wreckas/stratagem:drive-by-bustin",
+   "item": "shooty,melee / detachment:wreckas/stratagem:drive-by-bustin",
    "field": "when",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Wreckas 1DP (DRIVE-BY BUSTIN')",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:wreckas/stratagem:drive-by-bustin",
+   "item": "shooty,melee / detachment:wreckas/stratagem:drive-by-bustin",
    "field": "target",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Wreckas 1DP (DRIVE-BY BUSTIN')",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:wreckas/stratagem:drive-by-bustin",
+   "item": "shooty,melee / detachment:wreckas/stratagem:drive-by-bustin",
    "field": "effect",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Wreckas 1DP (DRIVE-BY BUSTIN')",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:wreckas/stratagem:grab-it",
+   "item": "shooty,melee / detachment:wreckas/stratagem:grab-it",
    "field": "when",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Wreckas 1DP (GRAB IT)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:wreckas/stratagem:grab-it",
+   "item": "shooty,melee / detachment:wreckas/stratagem:grab-it",
    "field": "target",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Wreckas 1DP (GRAB IT)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:wreckas/stratagem:grab-it",
+   "item": "shooty,melee / detachment:wreckas/stratagem:grab-it",
    "field": "effect",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Wreckas 1DP (GRAB IT)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:wreckas/stratagem:gun-crazy-show-offs",
+   "item": "shooty,melee / detachment:wreckas/stratagem:gun-crazy-show-offs",
    "field": "when",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Wreckas 1DP (GUN-CRAZY SHOW-OFFS)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:wreckas/stratagem:gun-crazy-show-offs",
+   "item": "shooty,melee / detachment:wreckas/stratagem:gun-crazy-show-offs",
    "field": "target",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Wreckas 1DP (GUN-CRAZY SHOW-OFFS)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / detachment:wreckas/stratagem:gun-crazy-show-offs",
+   "item": "shooty,melee / detachment:wreckas/stratagem:gun-crazy-show-offs",
    "field": "effect",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Wreckas 1DP (GUN-CRAZY SHOW-OFFS)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / armyRule:Waaagh!",
+   "item": "shooty,melee / detachment:war-horde",
+   "field": "name",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § War Horde 3DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "shooty,melee / detachment:war-horde/rule",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § War Horde 3DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "shooty,melee / detachment:war-horde/enhancement:Headwoppa’s Killchoppa",
+   "field": "pts",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § War Horde 3DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "shooty,melee / detachment:war-horde/enhancement:Headwoppa’s Killchoppa",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § War Horde 3DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "shooty,melee / detachment:war-horde/enhancement:Da Boss is Watchin’",
+   "field": "pts",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § War Horde 3DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "shooty,melee / detachment:war-horde/enhancement:Da Boss is Watchin’",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § War Horde 3DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "shooty,melee / detachment:war-horde/enhancement:Kunnin’ But Brutal",
+   "field": "pts",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § War Horde 3DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "shooty,melee / detachment:war-horde/enhancement:Kunnin’ But Brutal",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § War Horde 3DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "shooty,melee / detachment:war-horde/enhancement:Follow Me Ladz",
+   "field": "pts",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § War Horde 3DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "shooty,melee / detachment:war-horde/enhancement:Follow Me Ladz",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § War Horde 3DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "shooty,melee / detachment:war-horde/stratagem:breakin-heads",
+   "field": "when",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § War Horde 3DP (BREAKIN' HEADS)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "shooty,melee / detachment:war-horde/stratagem:breakin-heads",
+   "field": "target",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § War Horde 3DP (BREAKIN' HEADS)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "shooty,melee / detachment:war-horde/stratagem:breakin-heads",
+   "field": "effect",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § War Horde 3DP (BREAKIN' HEADS)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "shooty,melee / detachment:war-horde/stratagem:hit-em-harder",
+   "field": "when",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § War Horde 3DP (HIT 'EM HARDER)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "shooty,melee / detachment:war-horde/stratagem:hit-em-harder",
+   "field": "target",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § War Horde 3DP (HIT 'EM HARDER)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "shooty,melee / detachment:war-horde/stratagem:hit-em-harder",
+   "field": "effect",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § War Horde 3DP (HIT 'EM HARDER)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "shooty,melee / detachment:war-horde/stratagem:orks-is-never-beaten",
+   "field": "when",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § War Horde 3DP (ORKS IS NEVER BEATEN)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "shooty,melee / detachment:war-horde/stratagem:orks-is-never-beaten",
+   "field": "target",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § War Horde 3DP (ORKS IS NEVER BEATEN)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "shooty,melee / detachment:war-horde/stratagem:orks-is-never-beaten",
+   "field": "effect",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § War Horde 3DP (ORKS IS NEVER BEATEN)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "shooty,melee / detachment:war-horde/stratagem:mow-em-down",
+   "field": "when",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § War Horde 3DP (MOW 'EM DOWN)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "shooty,melee / detachment:war-horde/stratagem:mow-em-down",
+   "field": "target",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § War Horde 3DP (MOW 'EM DOWN)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "shooty,melee / detachment:war-horde/stratagem:mow-em-down",
+   "field": "effect",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § War Horde 3DP (MOW 'EM DOWN)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "shooty,melee / detachment:war-horde/stratagem:fungus-fuel-injection",
+   "field": "when",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § War Horde 3DP (FUNGUS-FUEL INJECTION)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "shooty,melee / detachment:war-horde/stratagem:fungus-fuel-injection",
+   "field": "target",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § War Horde 3DP (FUNGUS-FUEL INJECTION)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "shooty,melee / detachment:war-horde/stratagem:fungus-fuel-injection",
+   "field": "effect",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § War Horde 3DP (FUNGUS-FUEL INJECTION)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "shooty,melee / detachment:war-horde/stratagem:close-range-dakka",
+   "field": "when",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § War Horde 3DP (CLOSE-RANGE DAKKA)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "shooty,melee / detachment:war-horde/stratagem:close-range-dakka",
+   "field": "target",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § War Horde 3DP (CLOSE-RANGE DAKKA)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "shooty,melee / detachment:war-horde/stratagem:close-range-dakka",
+   "field": "effect",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § War Horde 3DP (CLOSE-RANGE DAKKA)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "shooty,melee / armyRule:Waaagh!",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Army Rules (Waaagh!)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / armyRule:War Cry",
+   "item": "shooty,melee / armyRule:War Cry",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Army Rules (War Cry)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / armyRule:Da Boss",
+   "item": "shooty,melee / armyRule:Da Boss",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Army Rules (Da Boss)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty / armyRule:Da Boss / text (marked lines)",
+   "item": "shooty,melee / armyRule:Da Boss / text (marked lines)",
    "field": "text (marked lines)",
    "text": "*Wahapedia core rules errata (07.01, CP Generated by a Warlord; not in GW’s prin",
    "doc": "wahahtml:core",
@@ -3048,6 +3244,27 @@
    "field": "text",
    "doc": "data.js",
    "where": "same text as the enhancement Supa-snazz Dakka (Wreckas) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "melee / beastboss-on-squigosaur-headwoppas-killchoppa / ability:Headwoppa’s Killchoppa",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Headwoppa’s Killchoppa (War Horde) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "melee / bigboss-warboss-breaka-boyz / ability:Kunnin’ But Brutal",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Kunnin’ But Brutal (War Horde) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "melee / warboss-in-mega-armour-meganobz / ability:Follow Me Ladz",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Follow Me Ladz (War Horde) (whose source is recorded under that item)",
    "sha256": null
   }
  ]

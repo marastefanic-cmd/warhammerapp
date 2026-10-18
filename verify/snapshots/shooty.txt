@@ -1,140 +1,22 @@
-######## home · Units M T SV W LD OC INV
-EPIC HEROES
-Wazdakka Gutsmek
-200
-14"
-8
-3+
-10
-6+
-3
-4+
-CHARACTERS
-Big Mek Dakkarig
-Dreadherder
-190
-8"
-8
-3+
-11
-7+
-3
-5+
-Big Mek Dakkarig
-Cybork Boosta
-170
-10"
-8
-3+
-11
-7+
-3
-5+
-Big Mek in Mega Armour
-Supa-glowy Fing
-115
-5"
-6
-2+
-5
-7+
-1
-–
-Warboss
-Warlord
-100
-6"
-6
-4+
-6
-6+
-1
-5+
-Mek
-×2 units
-+ Tankbustas
-215 ea
-MEK
-6"
-5
-5+
-4
-7+
-1
-–
-NOB
-6"
-5
-4+
-3
-7+
-1
-–
-TANKBUSTA
-×5
-6"
-5
-4+
-2
-7+
-1
-–
-Mek
-Supa-snazz Dakka
-+ Flash Gitz
-300
-MEK
-6"
-5
-5+
-4
-7+
-1
-–
-FLASH GITZ
-6"
-5
-4+
-3
-7+
-1
-–
-INFANTRY
-Gretchin
-×10
-×3 units
-45 ea
-6"
-2
-6+
-1
-8+
-1
-–
-MOUNTED
-Deffkoptas
-×3
-85
-12"
-6
-4+
-4
-7+
-2
-6+
-VEHICLES
-Killa Kans
-×6
-275
-8"
-7
-3+
-5
-8+
-2
-6+
+######## home · Waaagh Codex
+YOUR ARMIES
+Me shooty yer’ booty
+2000 pts
+ORKS
+DREAD MOB
+SHOOTA BOYZ
+WRECKAS
+PURGE THE FOE
+Melee
+2000 pts
+ORKS
+WAR HORDE
+PURGE THE FOE
+Checked (date of the check) against your New Recruit lists, BSData and GW’s rules
 
-######## army · Me shooty yer’ booty
+Put it on your home screen: Safari → Share → Add to Home Screen.
+
+######## army · ARMIES Me shooty yer’ booty
 Orks · 2000 / 2000 pts · Strike Force
 
 Dread Mob · Shoota Boyz · Wreckas · Disposition: Purge the Foe
@@ -158,11 +40,7 @@ Off
 
 New Recruit, exported 17 Oct 2026
 
-Checked (date of the check) against your New Recruit lists, BSData and GW’s rules
-
-Put it on your home screen: Safari → Share → Add to Home Screen.
-
-######## pregame · Pre-game
+######## pregame · ME SHOOTY YER’ BOOTY Pre-game
 YOUR LIST
 WARLORD
 Warboss
@@ -181,7 +59,7 @@ POINTS
 2000 / 2000 · Strike Force
 DECLARE BATTLE FORMATIONS
 RESERVES
-Strategic reserves: unless otherwise stated, up to 1000 pts (50% of the 2000 limit), counting units embarked within a TRANSPORT you place there. Unless otherwise stated, they can only arrive from the second battle round onwards, and any that have not arrived by the end of round 3 are destroyed (not repositioned units, nor units embarked within a TRANSPORT that arrived).
+Strategic reserves (not FORTIFICATIONS): unless otherwise stated, up to 1000 pts (50% of the 2000 limit), counting units embarked within a TRANSPORT you place there. Unless otherwise stated, they can only arrive from the second battle round onwards, and any that have not arrived by the end of round 3 are destroyed (not repositioned units, nor units embarked within a TRANSPORT that arrived).
 Can Deep Strike: Wazdakka Gutsmek 200 pts, Deffkoptas 85 pts (all: 285 pts)
 START OF THE BATTLE ROUND
 EVERY ROUND
@@ -200,7 +78,7 @@ STRATA­GEMS
 
 Gathered from this list’s datasheets and rules; each line opens the full text.
 
-######## units · Units M T SV W LD OC INV
+######## units · PRE-GAME Units M T SV W LD OC INV
 EPIC HEROES
 Wazdakka Gutsmek
 200
@@ -1032,7 +910,7 @@ Their Movement / Your Shooting / Fight (either turn)
 
 This unit’s attacks that target a unit that has no models with a T of 7+ have +1 to hit rolls.
 
-######## rules · Rules
+######## rules · ABILITIES Rules
 Orks · Purge the Foe
 ARMY RULES
 Waaagh!
@@ -1495,7 +1373,7 @@ standard Kan Blasta, Kan Klaw
 
 From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
 
-######## strats {"folded":true} · Stratagems
+######## strats {"folded":true} · BASES Stratagems
 EXPAND ALL
 DREAD MOB
 3
@@ -1512,7 +1390,7 @@ Your Movement · Your Charge Big Mek Dakkarig ×2, Killa Kans
 1
 CP
 Crazed Rampage
-Your model destroyed before your unit is selected to fight: on a 4+ it stays until your unit has fought or the phase ends…
+Model in your unit destroyed, unit not selected to fight this phase: roll one D6; on a 4+ it stays until your unit has fought or the phase ends…
 Fight Big Mek Dakkarig ×2, Killa Kans
 SHOOTA BOYZ
 3
@@ -1603,7 +1481,7 @@ Any phase Any unit
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## strats {"open":true} · Stratagems
+######## strats {"open":true} · STRATAGEMS Stratagems
 COLLAPSE ALL
 DREAD MOB
 3
@@ -3085,7 +2963,7 @@ None from Shoota Boyz or Wreckas.
 
 ‹ Deffkoptas
 
-######## popup ability:shooty|Blitz Dem Gitz!|In your Shooting phase, if this unit’s Blitzkannon weapon targets a unit (excluding **MONSTER/VEHICLE** units), that weapon has +6 **A**. · Me shooty yer’ booty
+######## popup ability:shooty|Blitz Dem Gitz!|In your Shooting phase, if this unit’s Blitzkannon weapon targets a unit (excluding **MONSTER/VEHICLE** units), that weapon has +6 **A**. · KILLA KANS Me shooty yer’ booty
 ABILITY · SHOOTING · YOUR TURN
 
 Blitz Dem Gitz!
@@ -3096,7 +2974,7 @@ UNITBig Mek · Dreadherder, Big Mek · Cybork Boosta
 
 ######## popup ability:shooty|Bomb Squig|In your Movement phase, when this unit ends a **normal move**, you can select one **visible** enemy unit within 12" of this unit and roll one D6:
 - On a 3+, that enemy unit suffers D3 **mortal wounds**.
-*Place two Bomb Squig tokens next to the unit, removing one each time this ability is used.* · Me shooty yer’ booty
+*Place two Bomb Squig tokens next to the unit, removing one each time this ability is used.* · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 ABILITY · ONCE PER TURN, TWICE PER BATTLE, PER UNIT · MOVEMENT · YOUR TURN
 
 Bomb Squig
@@ -3110,7 +2988,7 @@ Place two Bomb Squig tokens next to the unit, removing one each time this abilit
 UNITMek + Tankbustas
 
 ######## popup ability:shooty|Boss’ Ammo Runt|In your Shooting phase, when this unit is **selected to shoot**, you can use this ability. If you do, this model’s ranged attacks have +1 to **hit rolls**.
-Place a Boss’ Ammo Runt token next to the unit, removing it when this ability is used. · Me shooty yer’ booty
+Place a Boss’ Ammo Runt token next to the unit, removing it when this ability is used. · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 ABILITY · ONCE PER BATTLE, PER UNIT · SHOOTING · YOUR TURN
 
 Boss’ Ammo Runt
@@ -3121,7 +2999,7 @@ Place a Boss’ Ammo Runt token next to the unit, removing it when this ability 
 
 UNITWarboss
 
-######## popup ability:shooty|Deff from Above|In your Shooting phase, if this unit made an **ingress move** this turn, this unit’s ranged attacks have +1 to **hit rolls**. · Me shooty yer’ booty
+######## popup ability:shooty|Deff from Above|In your Shooting phase, if this unit made an **ingress move** this turn, this unit’s ranged attacks have +1 to **hit rolls**. · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 ABILITY · SHOOTING · YOUR TURN
 
 Deff from Above
@@ -3132,7 +3010,7 @@ UNITDeffkoptas
 
 ######## popup ability:shooty|Dreadherder|**BIG MEK** model only. While this model is within 3" of a friendly **ORKS WALKER** unit (excluding **BIG MEK** units):
 - This model has **Lone Operative**.
-- In your Shooting phase, you can select one friendly **ORKS WALKER** unit within 3" of this model. That unit’s attacks can re-roll **hit rolls** of 1 until the end of the turn. · Me shooty yer’ booty
+- In your Shooting phase, you can select one friendly **ORKS WALKER** unit within 3" of this model. That unit’s attacks can re-roll **hit rolls** of 1 until the end of the turn. · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 ABILITY · ENHANCEMENT · SHOOTING / FIGHT · YOUR TURN
 
 Dreadherder
@@ -3144,7 +3022,7 @@ In your Shooting phase, you can select one friendly ORKS WALKER unit within 3" o
 
 UNITBig Mek · Dreadherder
 
-######## popup ability:shooty|Even More Dakka|If this unit is **riled up**, this unit’s ranged attacks have **[SUSTAINED HITS 1]**. · Me shooty yer’ booty
+######## popup ability:shooty|Even More Dakka|If this unit is **riled up**, this unit’s ranged attacks have **[SUSTAINED HITS 1]**. · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 ABILITY · THEIR MOVEMENT / YOUR SHOOTING
 
 Even More Dakka
@@ -3155,7 +3033,7 @@ UNITBig Mek · Dreadherder, Big Mek · Cybork Boosta
 
 ######## popup ability:shooty|Finderz Keeperz|In your Shooting phase, if any of the following apply, this unit’s ranged attacks have +1 **AP**.
 - This unit is within range of an **objective**.
-- The target of that attack is within range of an **objective**. · Me shooty yer’ booty
+- The target of that attack is within range of an **objective**. · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 ABILITY · SHOOTING · YOUR TURN
 
 Finderz Keeperz
@@ -3168,7 +3046,7 @@ The target of that attack is within range of an objective.
 UNITMek + Flash Gitz
 
 ######## popup ability:shooty|Fix Dat Armour Up|In your Command phase, this unit **heals** 3 wounds.
-Place a Grot Oiler token next to the unit, removing it when this ability is used. · Me shooty yer’ booty
+Place a Grot Oiler token next to the unit, removing it when this ability is used. · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 ABILITY · ONCE PER BATTLE, PER UNIT · COMMAND · YOUR TURN
 
 Fix Dat Armour Up
@@ -3181,7 +3059,7 @@ UNITBig Mek · Supa-glowy Fing
 
 ######## popup ability:shooty|Might is Right|If this unit made a **charge move** this turn, this model’s melee attacks have:
 - +3 **A**.
-- +2 **S**. · Me shooty yer’ booty
+- +2 **S**. · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 ABILITY · FIGHT · EITHER TURN
 
 Might is Right
@@ -3195,7 +3073,7 @@ UNITWarboss
 
 ######## popup ability:shooty|More Dakka|This unit’s ranged attacks have:
 - **[IGNORES COVER]**.
-- If this unit is **riled up**, **[SUSTAINED HITS 1]**. · Me shooty yer’ booty
+- If this unit is **riled up**, **[SUSTAINED HITS 1]**. · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 ABILITY
 
 More Dakka
@@ -3207,7 +3085,7 @@ If this unit is riled up, [SUSTAINED HITS 1].
 
 UNITBig Mek · Supa-glowy Fing
 
-######## popup ability:shooty|Spiteful Power Trip|This unit’s attacks that target a unit that has no models with a **T** of 7+ have +1 to **hit rolls**. · Me shooty yer’ booty
+######## popup ability:shooty|Spiteful Power Trip|This unit’s attacks that target a unit that has no models with a **T** of 7+ have +1 to **hit rolls**. · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 ABILITY · THEIR MOVEMENT / YOUR SHOOTING / FIGHT (EITHER TURN)
 
 Spiteful Power Trip
@@ -3216,7 +3094,7 @@ This unit’s attacks that target a unit that has no models with a T of 7+ have 
 
 UNITKilla Kans
 
-######## popup enh:dread-mob|Cybork Boosta · Me shooty yer’ booty
+######## popup enh:dread-mob|Cybork Boosta · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 ENHANCEMENT · DREAD MOB · 10 PTS
 
 Cybork Boosta
@@ -3225,7 +3103,7 @@ BIG MEK/MEK model only. This model has +2" M.
 
 ONBig Mek Dakkarig
 
-######## popup enh:dread-mob|Dreadherder · Me shooty yer’ booty
+######## popup enh:dread-mob|Dreadherder · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 ENHANCEMENT · DREAD MOB · 30 PTS
 
 Dreadherder
@@ -3237,7 +3115,7 @@ In your Shooting phase, you can select one friendly ORKS WALKER unit within 3" o
 
 ONBig Mek Dakkarig
 
-######## popup enh:shoota-boyz|Supa-glowy Fing · Me shooty yer’ booty
+######## popup enh:shoota-boyz|Supa-glowy Fing · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 ENHANCEMENT · SHOOTA BOYZ · 25 PTS
 
 Supa-glowy Fing
@@ -3252,7 +3130,7 @@ ORKS INFANTRY model only (excluding WEIRDBOY models). This model’s ranged atta
 
 ONBig Mek in Mega Armour
 
-######## popup enh:wreckas|Supa-snazz Dakka · Me shooty yer’ booty
+######## popup enh:wreckas|Supa-snazz Dakka · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 UPGRADE · WRECKAS · 25 PTS
 
 Supa-snazz Dakka
@@ -3261,7 +3139,7 @@ FLASH GITZ unit only. This unit’s Snazzgun weapons have [RAPID FIRE 1].
 
 ONFlash Gitz (Mek + Flash Gitz)
 
-######## popup grant:["Cybork Boosta","dakkarig-boosta","M 10\"",null] · Me shooty yer’ booty
+######## popup grant:["Cybork Boosta","dakkarig-boosta","M 10\"",null] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 M 10" · GRANTED BY
 
 Cybork Boosta
@@ -3272,7 +3150,7 @@ BIG MEK/MEK model only. This model has +2" M.
 
 Already in the value shown (as New Recruit and BSData list it).
 
-######## popup grant:["Dakka! Dakka! Dakka!","bigmek-mega","ASSAULT","ASSAULT"] · Me shooty yer’ booty
+######## popup grant:["Dakka! Dakka! Dakka!","bigmek-mega","ASSAULT","ASSAULT"] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 ASSAULT · GRANTED BY
 
 Dakka! Dakka! Dakka!
@@ -3290,7 +3168,7 @@ ASSAULT Core rule
 
 Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
 
-######## popup grant:["Dakka! Dakka! Dakka!","gretchin","ASSAULT","ASSAULT"] · Me shooty yer’ booty
+######## popup grant:["Dakka! Dakka! Dakka!","gretchin","ASSAULT","ASSAULT"] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 ASSAULT · GRANTED BY
 
 Dakka! Dakka! Dakka!
@@ -3308,7 +3186,7 @@ ASSAULT Core rule
 
 Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
 
-######## popup grant:["Dakka! Dakka! Dakka!","mek-flashgitz","ASSAULT","ASSAULT"] · Me shooty yer’ booty
+######## popup grant:["Dakka! Dakka! Dakka!","mek-flashgitz","ASSAULT","ASSAULT"] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 ASSAULT · GRANTED BY
 
 Dakka! Dakka! Dakka!
@@ -3326,7 +3204,7 @@ ASSAULT Core rule
 
 Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
 
-######## popup grant:["Dakka! Dakka! Dakka!","mek-tankbustas","ASSAULT","ASSAULT"] · Me shooty yer’ booty
+######## popup grant:["Dakka! Dakka! Dakka!","mek-tankbustas","ASSAULT","ASSAULT"] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 ASSAULT · GRANTED BY
 
 Dakka! Dakka! Dakka!
@@ -3344,7 +3222,7 @@ ASSAULT Core rule
 
 Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
 
-######## popup grant:["Dakka! Dakka! Dakka!","warboss","ASSAULT","ASSAULT"] · Me shooty yer’ booty
+######## popup grant:["Dakka! Dakka! Dakka!","warboss","ASSAULT","ASSAULT"] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 ASSAULT · GRANTED BY
 
 Dakka! Dakka! Dakka!
@@ -3362,7 +3240,7 @@ ASSAULT Core rule
 
 Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
 
-######## popup grant:["Kustom Dakka","mek-flashgitz","IGNORES COVER","IGNORES COVER"] · Me shooty yer’ booty
+######## popup grant:["Kustom Dakka","mek-flashgitz","IGNORES COVER","IGNORES COVER"] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 IGNORES COVER · GRANTED BY
 
 Kustom Dakka
@@ -3379,7 +3257,7 @@ IGNORES COVER Core rule
 
 Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
 
-######## popup grant:["Kustom Dakka","mek-tankbustas","IGNORES COVER","IGNORES COVER"] · Me shooty yer’ booty
+######## popup grant:["Kustom Dakka","mek-tankbustas","IGNORES COVER","IGNORES COVER"] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 IGNORES COVER · GRANTED BY
 
 Kustom Dakka
@@ -3396,7 +3274,7 @@ IGNORES COVER Core rule
 
 Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
 
-######## popup grant:["More Dakka","bigmek-mega","IGNORES COVER","IGNORES COVER"] · Me shooty yer’ booty
+######## popup grant:["More Dakka","bigmek-mega","IGNORES COVER","IGNORES COVER"] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 IGNORES COVER · GRANTED BY
 
 More Dakka
@@ -3414,7 +3292,7 @@ IGNORES COVER Core rule
 
 Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
 
-######## popup grant:["Supa-glowy Fing","bigmek-mega","ANTI-INFANTRY 4+","ANTI-INFANTRY 4+"] · Me shooty yer’ booty
+######## popup grant:["Supa-glowy Fing","bigmek-mega","ANTI-INFANTRY 4+","ANTI-INFANTRY 4+"] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 ANTI-INFANTRY 4+ · GRANTED BY
 
 Supa-glowy Fing
@@ -3435,7 +3313,7 @@ This ability always takes the form [ANTI-X Y+]. Each time an attack is made with
 
 Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
 
-######## popup grant:["Supa-glowy Fing","bigmek-mega","DEVASTATING WOUNDS","DEVASTATING WOUNDS"] · Me shooty yer’ booty
+######## popup grant:["Supa-glowy Fing","bigmek-mega","DEVASTATING WOUNDS","DEVASTATING WOUNDS"] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 DEVASTATING WOUNDS · GRANTED BY
 
 Supa-glowy Fing
@@ -3456,7 +3334,7 @@ Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critica
 
 Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
 
-######## popup grant:["Supa-glowy Fing","bigmek-mega","SUPA-HAZARDOUS","SUPA-HAZARDOUS"] · Me shooty yer’ booty
+######## popup grant:["Supa-glowy Fing","bigmek-mega","SUPA-HAZARDOUS","SUPA-HAZARDOUS"] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 SUPA-HAZARDOUS · GRANTED BY
 
 Supa-glowy Fing
@@ -3475,7 +3353,7 @@ SUPA-HAZARDOUS Shoota Boyz enhancement Supa-glowy Fing
 
 Each time a unit is selected to shoot, after that unit has resolved all of its attacks, make two hazard rolls for that unit for each [SUPA-HAZARDOUS] weapon you selected in the Select Weapons step.
 
-######## popup grant:["Supa-snazz Dakka","mek-flashgitz","RAPID FIRE 1","RAPID FIRE 1"] · Me shooty yer’ booty
+######## popup grant:["Supa-snazz Dakka","mek-flashgitz","RAPID FIRE 1","RAPID FIRE 1"] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 RAPID FIRE 1 · GRANTED BY
 
 Supa-snazz Dakka
@@ -3490,7 +3368,7 @@ RAPID FIRE 1 Core rule
 
 This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
 
-######## popup kw:bigmek-mega · Me shooty yer’ booty
+######## popup kw:bigmek-mega · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CHARACTER · 115 PTS
 
 Big Mek in Mega Armour
@@ -3503,7 +3381,7 @@ KEYWORDS
 
 Big Mek, Big Mek in Mega Armour, Character, Explosives, Faction: Orks, Infantry, Mega Armour
 
-######## popup kw:dakkarig-boosta · Me shooty yer’ booty
+######## popup kw:dakkarig-boosta · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CHARACTER · 170 PTS
 
 Big Mek Dakkarig
@@ -3516,7 +3394,7 @@ KEYWORDS
 
 Big Mek, Big Mek Dakkarig, Character, Faction: Orks, Vehicle, Walker
 
-######## popup kw:dakkarig-herder · Me shooty yer’ booty
+######## popup kw:dakkarig-herder · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CHARACTER · 190 PTS
 
 Big Mek Dakkarig
@@ -3529,7 +3407,7 @@ KEYWORDS
 
 Big Mek, Big Mek Dakkarig, Character, Faction: Orks, Vehicle, Walker
 
-######## popup kw:deffkoptas · Me shooty yer’ booty
+######## popup kw:deffkoptas · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 MOUNTED · 85 PTS
 
 Deffkoptas
@@ -3542,7 +3420,7 @@ KEYWORDS
 
 Deffkoptas, Explosives, Faction: Orks, Fly, Mounted, Speed Freeks
 
-######## popup kw:gretchin · Me shooty yer’ booty
+######## popup kw:gretchin · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 INFANTRY · 45 PTS
 
 Gretchin
@@ -3555,7 +3433,7 @@ KEYWORDS
 
 Faction: Orks, Gretchin, Grots, Infantry
 
-######## popup kw:killa-kans · Me shooty yer’ booty
+######## popup kw:killa-kans · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 VEHICLE · 275 PTS
 
 Killa Kans
@@ -3568,7 +3446,7 @@ KEYWORDS
 
 Faction: Orks, Grots, Killa Kans, Vehicle, Walker
 
-######## popup kw:mek-flashgitz · Me shooty yer’ booty
+######## popup kw:mek-flashgitz · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CHARACTER · 300 PTS
 
 Mek
@@ -3583,7 +3461,7 @@ Character, Explosives, Faction: Orks, Infantry, Mek, Flash Gitz
 
 Flash Gitz comes from the supported Flash Gitz.
 
-######## popup kw:mek-tankbustas · Me shooty yer’ booty
+######## popup kw:mek-tankbustas · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CHARACTER · 215 PTS
 
 Mek
@@ -3598,7 +3476,7 @@ Character, Explosives, Faction: Orks, Infantry, Mek, Tankbustas
 
 Tankbustas comes from the supported Tankbustas.
 
-######## popup kw:warboss · Me shooty yer’ booty
+######## popup kw:warboss · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CHARACTER · 100 PTS
 
 Warboss
@@ -3611,7 +3489,7 @@ KEYWORDS
 
 Character, Faction: Orks, Grenades, Infantry, Warboss, Warlord
 
-######## popup kw:wazdakka · Me shooty yer’ booty
+######## popup kw:wazdakka · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 EPIC HERO · 200 PTS
 
 Wazdakka Gutsmek
@@ -3624,7 +3502,7 @@ KEYWORDS
 
 Character, Epic Hero, Faction: Orks, Mounted, Smoke, Speed Freeks, Vehicle, Wazdakka Gutsmek
 
-######## popup rule:ASSAULT · Me shooty yer’ booty
+######## popup rule:ASSAULT · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 ASSAULT
@@ -3633,7 +3511,7 @@ Units containing one or more models with an [ASSAULT] weapon can shoot using ass
 
 IN THIS ARMYWazdakka Gutsmek, Big Mek · Supa-glowy Fing, Warboss, Mek + Tankbustas, Mek + Flash Gitz, Gretchin
 
-######## popup rule:Advance roll · Me shooty yer’ booty
+######## popup rule:Advance roll · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Advance Move
@@ -3651,7 +3529,7 @@ AFTER MOVING:
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
 
-######## popup rule:Attached Units · Me shooty yer’ booty
+######## popup rule:Attached Units · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Attached Units
@@ -3674,7 +3552,7 @@ In all of the above cases, if that last model was destroyed as the result of an 
 
 Wahapedia FAQ: When does a model’s or unit’s ability in an attached unit apply to all models in that unit? A rule that applies to ‘this/that unit’ or ‘models in this/that unit’ applies to all models in an attached unit. Rules that just apply to one model in an attached unit (for example, a rule that grants a model Feel No Pain or Lone Operative) only apply to that model, not to all models in the attached unit.
 
-######## popup rule:BLAST 1 · Me shooty yer’ booty
+######## popup rule:BLAST 1 · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 BLAST 1
@@ -3687,7 +3565,7 @@ Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit cont
 
 IN THIS ARMYBig Mek · Supa-glowy Fing, Deffkoptas, Killa Kans
 
-######## popup rule:BLAST 2 · Me shooty yer’ booty
+######## popup rule:BLAST 2 · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 BLAST 2
@@ -3700,7 +3578,7 @@ Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit cont
 
 IN THIS ARMYBig Mek · Supa-glowy Fing, Deffkoptas, Killa Kans
 
-######## popup rule:Battle-shock · Me shooty yer’ booty
+######## popup rule:Battle-shock · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Battle-shock
@@ -3727,7 +3605,7 @@ That unit is at, or below, half-strength.
 
 If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
 
-######## popup rule:CLEAVE 1 · Me shooty yer’ booty
+######## popup rule:CLEAVE 1 · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 CLEAVE 1
@@ -3738,7 +3616,7 @@ Example: If a [CLEAVE 1] weapon with an A characteristic of 3 targets one unit c
 
 IN THIS ARMYWazdakka Gutsmek, Warboss, Deffkoptas
 
-######## popup rule:CLEAVE 2 · Me shooty yer’ booty
+######## popup rule:CLEAVE 2 · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 CLEAVE 2
@@ -3749,7 +3627,7 @@ Example: If a [CLEAVE 1] weapon with an A characteristic of 3 targets one unit c
 
 IN THIS ARMYWazdakka Gutsmek, Warboss, Deffkoptas
 
-######## popup rule:CLOSE-QUARTERS · Me shooty yer’ booty
+######## popup rule:CLOSE-QUARTERS · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 CLOSE-QUARTERS
@@ -3763,7 +3641,7 @@ One or more of its other ranged weapons.
 
 IN THIS ARMYMek + Tankbustas, Mek + Flash Gitz, Gretchin, Deffkoptas
 
-######## popup rule:Charge roll · Me shooty yer’ booty
+######## popup rule:Charge roll · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Charge
@@ -3779,7 +3657,7 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
-######## popup rule:Close-quarters · Me shooty yer’ booty
+######## popup rule:Close-quarters · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Close-quarters
@@ -3793,7 +3671,7 @@ One or more of its other ranged weapons.
 
 IN THIS ARMYMek + Tankbustas, Mek + Flash Gitz, Gretchin, Deffkoptas
 
-######## popup rule:Da Boss · Me shooty yer’ booty
+######## popup rule:Da Boss · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 ORKS ARMY RULE
 
 Da Boss
@@ -3802,7 +3680,7 @@ At the start of the battle round, if a model with this ability is your WARLORD, 
 
 Wahapedia core rules errata (07.01, CP Generated by a Warlord; not in GW’s printed Core Rules): you do not gain the 1CP while your WARLORD is destroyed.
 
-######## popup rule:Dakka! Dakka! Dakka! · Me shooty yer’ booty
+######## popup rule:Dakka! Dakka! Dakka! · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 SHOOTA BOYZ DETACHMENT RULE
 
 Dakka! Dakka! Dakka!
@@ -3814,7 +3692,7 @@ While this unit is riled up, +3" R.
 
 IN THIS ARMYBig Mek · Supa-glowy Fing, Warboss, Mek + Tankbustas, Mek + Flash Gitz, Gretchin
 
-######## popup rule:Deadly Demise 1 · Me shooty yer’ booty
+######## popup rule:Deadly Demise 1 · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Deadly Demise 1
@@ -3823,7 +3701,7 @@ This ability always takes the form Deadly Demise X. Each time a model in this un
 
 IN THIS ARMYWazdakka Gutsmek, Big Mek · Dreadherder, Big Mek · Cybork Boosta, Killa Kans
 
-######## popup rule:Deadly Demise D3 · Me shooty yer’ booty
+######## popup rule:Deadly Demise D3 · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Deadly Demise D3
@@ -3832,7 +3710,7 @@ This ability always takes the form Deadly Demise X. Each time a model in this un
 
 IN THIS ARMYWazdakka Gutsmek, Big Mek · Dreadherder, Big Mek · Cybork Boosta, Killa Kans
 
-######## popup rule:Deadly Demise X · Me shooty yer’ booty
+######## popup rule:Deadly Demise X · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Deadly Demise X
@@ -3841,7 +3719,7 @@ This ability always takes the form Deadly Demise X. Each time a model in this un
 
 IN THIS ARMYWazdakka Gutsmek, Big Mek · Dreadherder, Big Mek · Cybork Boosta, Killa Kans
 
-######## popup rule:Deep Strike · Me shooty yer’ booty
+######## popup rule:Deep Strike · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Deep Strike
@@ -3852,7 +3730,7 @@ App note, not rules text: unless a rule says otherwise, units in strategic reser
 
 IN THIS ARMYWazdakka Gutsmek, Deffkoptas
 
-######## popup rule:EXTRA ATTACKS · Me shooty yer’ booty
+######## popup rule:EXTRA ATTACKS · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 EXTRA ATTACKS
@@ -3864,7 +3742,7 @@ One of that model’s other melee weapons, if possible.
 
 IN THIS ARMYWazdakka Gutsmek
 
-######## popup rule:Fights First · Me shooty yer’ booty
+######## popup rule:Fights First · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Fights First
@@ -3873,7 +3751,7 @@ While every model in a unit has this ability, that unit is a Fights First unit.
 
 See the Resolve Fights First Combats step in the Fight phase (12.04).
 
-######## popup rule:Firing Deck · Me shooty yer’ booty
+######## popup rule:Firing Deck · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Firing Deck
@@ -3885,7 +3763,7 @@ This ability always takes the form Firing Deck X. In your Shooting phase, each t
 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons.
 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.
 
-######## popup rule:HAZARDOUS · Me shooty yer’ booty
+######## popup rule:HAZARDOUS · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 HAZARDOUS
@@ -3894,7 +3772,7 @@ Each time a unit is selected to shoot or selected to fight, after that unit has 
 
 IN THIS ARMYBig Mek · Supa-glowy Fing, Mek + Tankbustas, Mek + Flash Gitz, Deffkoptas
 
-######## popup rule:Hazard roll · Me shooty yer’ booty
+######## popup rule:Hazard roll · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Hazard Roll
@@ -3907,7 +3785,7 @@ Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model i
 
 Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
 
-######## popup rule:Hunter · Me shooty yer’ booty
+######## popup rule:Hunter · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Hunter
@@ -3922,7 +3800,7 @@ App note, not rules text: New Recruit prints these weapons as two profiles, one 
 
 IN THIS ARMYMek + Tankbustas
 
-######## popup rule:IGNORES COVER · Me shooty yer’ booty
+######## popup rule:IGNORES COVER · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 IGNORES COVER
@@ -3931,7 +3809,7 @@ Each time an attack is made with an [IGNORES COVER] weapon, the target cannot ha
 
 IN THIS ARMYBig Mek · Dreadherder, Big Mek · Cybork Boosta, Big Mek · Supa-glowy Fing, Mek + Tankbustas, Mek + Flash Gitz, Killa Kans
 
-######## popup rule:LANCE · Me shooty yer’ booty
+######## popup rule:LANCE · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 LANCE
@@ -3940,7 +3818,7 @@ Each time an attack is made with a [LANCE] weapon, if the attacking model’s un
 
 IN THIS ARMYWazdakka Gutsmek
 
-######## popup rule:LEADER: FLASH GITZ · Me shooty yer’ booty
+######## popup rule:LEADER: FLASH GITZ · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 LEADER: FLASH GITZ
@@ -3951,7 +3829,7 @@ Unless otherwise stated, each bodyguard unit can only have one leader unit and o
 
 IN THIS ARMYBig Mek · Supa-glowy Fing, Warboss
 
-######## popup rule:LETHAL HITS · Me shooty yer’ booty
+######## popup rule:LETHAL HITS · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 LETHAL HITS
@@ -3962,7 +3840,7 @@ Designer’s Note: Choosing to automatically wound the target means that no woun
 
 IN THIS ARMYWazdakka Gutsmek, Big Mek · Dreadherder, Big Mek · Cybork Boosta, Warboss, Mek + Flash Gitz, Deffkoptas
 
-######## popup rule:LETHAL HITS: non-MONSTER/VEHICLE · Me shooty yer’ booty
+######## popup rule:LETHAL HITS: non-MONSTER/VEHICLE · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 LETHAL HITS: non-MONSTER/VEHICLE
@@ -3973,7 +3851,7 @@ Designer’s Note: Choosing to automatically wound the target means that no woun
 
 IN THIS ARMYWazdakka Gutsmek, Big Mek · Dreadherder, Big Mek · Cybork Boosta, Warboss, Mek + Flash Gitz, Deffkoptas
 
-######## popup rule:Lance · Me shooty yer’ booty
+######## popup rule:Lance · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Lance
@@ -3982,7 +3860,7 @@ Each time an attack is made with a [LANCE] weapon, if the attacking model’s un
 
 IN THIS ARMYWazdakka Gutsmek
 
-######## popup rule:Leader · Me shooty yer’ booty
+######## popup rule:Leader · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Leader
@@ -3993,7 +3871,7 @@ Unless otherwise stated, each bodyguard unit can only have one leader unit and o
 
 IN THIS ARMYBig Mek · Supa-glowy Fing, Warboss
 
-######## popup rule:Lone Operative · Me shooty yer’ booty
+######## popup rule:Lone Operative · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Lone Operative
@@ -4010,7 +3888,7 @@ If an attached unit below starting strength only contains models with Lone Opera
 
 IN THIS ARMYWazdakka Gutsmek, Big Mek · Dreadherder (in Dreadherder)
 
-######## popup rule:Lone Operative X" · Me shooty yer’ booty
+######## popup rule:Lone Operative X" · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Lone Operative X"
@@ -4027,7 +3905,7 @@ If an attached unit below starting strength only contains models with Lone Opera
 
 IN THIS ARMYWazdakka Gutsmek, Big Mek · Dreadherder (in Dreadherder)
 
-######## popup rule:MELTA 2 · Me shooty yer’ booty
+######## popup rule:MELTA 2 · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 MELTA 2
@@ -4038,7 +3916,7 @@ Example: A model targets a unit that is within half range of a [MELTA 2] weapon 
 
 IN THIS ARMYMek + Flash Gitz
 
-######## popup rule:MOBILE · Me shooty yer’ booty
+######## popup rule:MOBILE · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 MOBILE
@@ -4051,7 +3929,7 @@ Other models can move horizontally through dense terrain features provided that 
 
 App note, not rules text: MOBILE has no rule of its own in the core rules. These are the Dense lines of Terrain and Movement (13.06). Super-Heavy Walker (24.35), Designer’s Note: “Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).”
 
-######## popup rule:Mortal Wounds · Me shooty yer’ booty
+######## popup rule:Mortal Wounds · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Mortal Wounds
@@ -4067,7 +3945,7 @@ Resolve Damage: The selected model loses 1 wound. If this reduces that model’s
 
 When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
 
-######## popup rule:Mortal wounds · Me shooty yer’ booty
+######## popup rule:Mortal wounds · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Mortal Wounds
@@ -4083,7 +3961,7 @@ Resolve Damage: The selected model loses 1 wound. If this reduces that model’s
 
 When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
 
-######## popup rule:PRECISION · Me shooty yer’ booty
+######## popup rule:PRECISION · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 PRECISION
@@ -4094,7 +3972,7 @@ While resolving attacks made with one or more [PRECISION] weapons, at the start 
 
 IN THIS ARMYWazdakka Gutsmek
 
-######## popup rule:RAPID FIRE 2 · Me shooty yer’ booty
+######## popup rule:RAPID FIRE 2 · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 RAPID FIRE 2
@@ -4103,7 +3981,7 @@ This ability always takes the form [RAPID FIRE X]. Each time you gather attack d
 
 IN THIS ARMYWarboss, Mek + Flash Gitz
 
-######## popup rule:Resolve a charge · Me shooty yer’ booty
+######## popup rule:Resolve a charge · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Charge
@@ -4119,7 +3997,7 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
-######## popup rule:SUSTAINED HITS 1 · Me shooty yer’ booty
+######## popup rule:SUSTAINED HITS 1 · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 SUSTAINED HITS 1
@@ -4128,7 +4006,7 @@ This ability always takes the form [SUSTAINED HITS X]. Each time an attack made 
 
 IN THIS ARMYWazdakka Gutsmek, Big Mek · Dreadherder (in Even More Dakka), Big Mek · Cybork Boosta (in Even More Dakka), Big Mek · Supa-glowy Fing (in More Dakka), Mek + Flash Gitz, Killa Kans
 
-######## popup rule:Select Weapons · Me shooty yer’ booty
+######## popup rule:Select Weapons · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Select Weapons
@@ -4145,7 +4023,7 @@ Sidearms: Some models are equipped with [CLOSE-QUARTERS] weapons in addition to 
 
 04.01.03 Multiple Weapon Profiles (app): In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).
 
-######## popup rule:Starting Strength · Me shooty yer’ booty
+######## popup rule:Starting Strength · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Starting Strength
@@ -4170,14 +4048,14 @@ Some units cannot be at half-strength: If a model’s W characteristic or a unit
 
 Example: A Captain (1 model) is attached to a unit of Intercessors (5 models). This attached unit has a starting strength of 6. If three Intercessors were destroyed, the unit would be at half-strength. If four Intercessors were destroyed, the unit would be below half-strength. If all of the Intercessors were destroyed, the remaining Captain would be below half-strength, despite having his full wounds remaining.
 
-######## popup rule:Stealth · Me shooty yer’ booty
+######## popup rule:Stealth · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Stealth
 
 If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).
 
-######## popup rule:Strategic Reserves · Me shooty yer’ booty
+######## popup rule:Strategic Reserves · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Strategic Reserves
@@ -4201,7 +4079,7 @@ At the end of the third battle round, unless otherwise stated, all strategic res
 Units embarked within TRANSPORTS that have made an ingress move during the battle.
 Repositioned units (see opposite).
 
-######## popup rule:Support · Me shooty yer’ booty
+######## popup rule:Support · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Support
@@ -4212,7 +4090,7 @@ Unless otherwise stated, each bodyguard unit can only have one leader unit and o
 
 IN THIS ARMYMek + Tankbustas, Mek + Flash Gitz
 
-######## popup rule:TORRENT · Me shooty yer’ booty
+######## popup rule:TORRENT · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 TORRENT
@@ -4221,7 +4099,7 @@ Each time an attack is made with a [TORRENT] weapon, that attack automatically h
 
 IN THIS ARMYKilla Kans
 
-######## popup rule:Try Dat Button! · Me shooty yer’ booty
+######## popup rule:Try Dat Button! · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 DREAD MOB DETACHMENT RULE
 
 Try Dat Button!
@@ -4239,7 +4117,7 @@ If you rolled two D6, when this unit has attacked, this unit makes one hazard ro
 
 IN THIS ARMYBig Mek · Dreadherder, Big Mek · Cybork Boosta, Killa Kans
 
-######## popup rule:Waaagh! · Me shooty yer’ booty
+######## popup rule:Waaagh! · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 ORKS ARMY RULE
 
 Waaagh!
@@ -4255,14 +4133,14 @@ That unit has 5+ InSv.
 That unit’s ranged attacks have [ASSAULT].
 When that unit is selected to make an advance move, that advance move does not prevent that unit from being eligible to declare a charge.
 
-######## popup rule:War Cry · Me shooty yer’ booty
+######## popup rule:War Cry · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 ORKS ARMY RULE
 
 War Cry
 
 At the start of the Command phase, you can use this ability. If you do, friendly ORKS units with the Waaagh! ability are riled up until the end of the next turn.
 
-######## popup rule:Wreckin’ and Lootin’ · Me shooty yer’ booty
+######## popup rule:Wreckin’ and Lootin’ · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 WRECKAS DETACHMENT RULE
 
 Wreckin’ and Lootin’
@@ -4274,7 +4152,7 @@ The target of that attack is within range of an objective.
 
 IN THIS ARMYMek + Tankbustas, Mek + Flash Gitz
 
-######## popup rule:[ANTI-INFANTRY 4+] · Me shooty yer’ booty
+######## popup rule:[ANTI-INFANTRY 4+] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 ANTI-INFANTRY 4+
@@ -4285,7 +4163,7 @@ Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit 
 
 IN THIS ARMYBig Mek · Supa-glowy Fing
 
-######## popup rule:[ANTI-X Y+] · Me shooty yer’ booty
+######## popup rule:[ANTI-X Y+] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 ANTI-X Y+
@@ -4296,7 +4174,7 @@ Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit 
 
 IN THIS ARMYBig Mek · Supa-glowy Fing
 
-######## popup rule:[ASSAULT] · Me shooty yer’ booty
+######## popup rule:[ASSAULT] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 ASSAULT
@@ -4305,7 +4183,7 @@ Units containing one or more models with an [ASSAULT] weapon can shoot using ass
 
 IN THIS ARMYWazdakka Gutsmek, Big Mek · Supa-glowy Fing, Warboss, Mek + Tankbustas, Mek + Flash Gitz, Gretchin
 
-######## popup rule:[BLAST X] · Me shooty yer’ booty
+######## popup rule:[BLAST X] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 BLAST X
@@ -4318,7 +4196,7 @@ Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit cont
 
 IN THIS ARMYBig Mek · Supa-glowy Fing, Deffkoptas, Killa Kans
 
-######## popup rule:[BLAST] · Me shooty yer’ booty
+######## popup rule:[BLAST] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 BLAST
@@ -4331,7 +4209,7 @@ Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit cont
 
 IN THIS ARMYBig Mek · Supa-glowy Fing, Deffkoptas, Killa Kans
 
-######## popup rule:[CLEAVE X] · Me shooty yer’ booty
+######## popup rule:[CLEAVE X] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 CLEAVE X
@@ -4342,7 +4220,7 @@ Example: If a [CLEAVE 1] weapon with an A characteristic of 3 targets one unit c
 
 IN THIS ARMYWazdakka Gutsmek, Warboss, Deffkoptas
 
-######## popup rule:[CLEAVE] · Me shooty yer’ booty
+######## popup rule:[CLEAVE] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 CLEAVE
@@ -4353,7 +4231,7 @@ Example: If a [CLEAVE 1] weapon with an A characteristic of 3 targets one unit c
 
 IN THIS ARMYWazdakka Gutsmek, Warboss, Deffkoptas
 
-######## popup rule:[CLOSE-QUARTERS] · Me shooty yer’ booty
+######## popup rule:[CLOSE-QUARTERS] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 CLOSE-QUARTERS
@@ -4367,7 +4245,7 @@ One or more of its other ranged weapons.
 
 IN THIS ARMYMek + Tankbustas, Mek + Flash Gitz, Gretchin, Deffkoptas
 
-######## popup rule:[DEVASTATING WOUNDS] · Me shooty yer’ booty
+######## popup rule:[DEVASTATING WOUNDS] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 DEVASTATING WOUNDS
@@ -4378,7 +4256,7 @@ Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of 
 
 IN THIS ARMYBig Mek · Supa-glowy Fing
 
-######## popup rule:[EXTRA ATTACKS] · Me shooty yer’ booty
+######## popup rule:[EXTRA ATTACKS] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 EXTRA ATTACKS
@@ -4390,7 +4268,7 @@ One of that model’s other melee weapons, if possible.
 
 IN THIS ARMYWazdakka Gutsmek
 
-######## popup rule:[HAZARDOUS] · Me shooty yer’ booty
+######## popup rule:[HAZARDOUS] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 HAZARDOUS
@@ -4399,7 +4277,7 @@ Each time a unit is selected to shoot or selected to fight, after that unit has 
 
 IN THIS ARMYBig Mek · Supa-glowy Fing, Mek + Tankbustas, Mek + Flash Gitz, Deffkoptas
 
-######## popup rule:[IGNORES COVER] · Me shooty yer’ booty
+######## popup rule:[IGNORES COVER] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 IGNORES COVER
@@ -4408,7 +4286,7 @@ Each time an attack is made with an [IGNORES COVER] weapon, the target cannot ha
 
 IN THIS ARMYBig Mek · Dreadherder, Big Mek · Cybork Boosta, Big Mek · Supa-glowy Fing, Mek + Tankbustas, Mek + Flash Gitz, Killa Kans
 
-######## popup rule:[LANCE] · Me shooty yer’ booty
+######## popup rule:[LANCE] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 LANCE
@@ -4417,7 +4295,7 @@ Each time an attack is made with a [LANCE] weapon, if the attacking model’s un
 
 IN THIS ARMYWazdakka Gutsmek
 
-######## popup rule:[LETHAL HITS] · Me shooty yer’ booty
+######## popup rule:[LETHAL HITS] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 LETHAL HITS
@@ -4428,7 +4306,7 @@ Designer’s Note: Choosing to automatically wound the target means that no woun
 
 IN THIS ARMYWazdakka Gutsmek, Big Mek · Dreadherder, Big Mek · Cybork Boosta, Warboss, Mek + Flash Gitz, Deffkoptas
 
-######## popup rule:[MELTA X] · Me shooty yer’ booty
+######## popup rule:[MELTA X] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 MELTA X
@@ -4439,7 +4317,7 @@ Example: A model targets a unit that is within half range of a [MELTA 2] weapon 
 
 IN THIS ARMYMek + Flash Gitz
 
-######## popup rule:[MELTA] · Me shooty yer’ booty
+######## popup rule:[MELTA] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 MELTA
@@ -4450,7 +4328,7 @@ Example: A model targets a unit that is within half range of a [MELTA 2] weapon 
 
 IN THIS ARMYMek + Flash Gitz
 
-######## popup rule:[PRECISION] · Me shooty yer’ booty
+######## popup rule:[PRECISION] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 PRECISION
@@ -4461,7 +4339,7 @@ While resolving attacks made with one or more [PRECISION] weapons, at the start 
 
 IN THIS ARMYWazdakka Gutsmek
 
-######## popup rule:[RAPID FIRE 1] · Me shooty yer’ booty
+######## popup rule:[RAPID FIRE 1] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 RAPID FIRE 1
@@ -4470,7 +4348,7 @@ This ability always takes the form [RAPID FIRE X]. Each time you gather attack d
 
 IN THIS ARMYWarboss, Mek + Flash Gitz
 
-######## popup rule:[RAPID FIRE X] · Me shooty yer’ booty
+######## popup rule:[RAPID FIRE X] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 RAPID FIRE X
@@ -4479,7 +4357,7 @@ This ability always takes the form [RAPID FIRE X]. Each time you gather attack d
 
 IN THIS ARMYWarboss, Mek + Flash Gitz
 
-######## popup rule:[RAPID FIRE] · Me shooty yer’ booty
+######## popup rule:[RAPID FIRE] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 RAPID FIRE
@@ -4488,21 +4366,21 @@ This ability always takes the form [RAPID FIRE X]. Each time you gather attack d
 
 IN THIS ARMYWarboss, Mek + Flash Gitz
 
-######## popup rule:[SUPA-HAZARDOUS] · Me shooty yer’ booty
+######## popup rule:[SUPA-HAZARDOUS] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 SHOOTA BOYZ ENHANCEMENT SUPA-GLOWY FING
 
 SUPA-HAZARDOUS
 
 Each time a unit is selected to shoot, after that unit has resolved all of its attacks, make two hazard rolls for that unit for each [SUPA-HAZARDOUS] weapon you selected in the Select Weapons step.
 
-######## popup rule:[SUPA-HAZARDOUS]: · Me shooty yer’ booty
+######## popup rule:[SUPA-HAZARDOUS]: · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 SHOOTA BOYZ ENHANCEMENT SUPA-GLOWY FING
 
 SUPA-HAZARDOUS]:
 
 Each time a unit is selected to shoot, after that unit has resolved all of its attacks, make two hazard rolls for that unit for each [SUPA-HAZARDOUS] weapon you selected in the Select Weapons step.
 
-######## popup rule:[SUSTAINED HITS 1] · Me shooty yer’ booty
+######## popup rule:[SUSTAINED HITS 1] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 SUSTAINED HITS 1
@@ -4511,7 +4389,7 @@ This ability always takes the form [SUSTAINED HITS X]. Each time an attack made 
 
 IN THIS ARMYWazdakka Gutsmek, Big Mek · Dreadherder (in Even More Dakka), Big Mek · Cybork Boosta (in Even More Dakka), Big Mek · Supa-glowy Fing (in More Dakka), Mek + Flash Gitz, Killa Kans
 
-######## popup rule:[SUSTAINED HITS X] · Me shooty yer’ booty
+######## popup rule:[SUSTAINED HITS X] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 SUSTAINED HITS X
@@ -4520,7 +4398,7 @@ This ability always takes the form [SUSTAINED HITS X]. Each time an attack made 
 
 IN THIS ARMYWazdakka Gutsmek, Big Mek · Dreadherder (in Even More Dakka), Big Mek · Cybork Boosta (in Even More Dakka), Big Mek · Supa-glowy Fing (in More Dakka), Mek + Flash Gitz, Killa Kans
 
-######## popup rule:[SUSTAINED HITS] · Me shooty yer’ booty
+######## popup rule:[SUSTAINED HITS] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 SUSTAINED HITS
@@ -4529,7 +4407,7 @@ This ability always takes the form [SUSTAINED HITS X]. Each time an attack made 
 
 IN THIS ARMYWazdakka Gutsmek, Big Mek · Dreadherder (in Even More Dakka), Big Mek · Cybork Boosta (in Even More Dakka), Big Mek · Supa-glowy Fing (in More Dakka), Mek + Flash Gitz, Killa Kans
 
-######## popup rule:[TORRENT] · Me shooty yer’ booty
+######## popup rule:[TORRENT] · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 TORRENT
@@ -4538,7 +4416,7 @@ Each time an attack is made with a [TORRENT] weapon, that attack automatically h
 
 IN THIS ARMYKilla Kans
 
-######## popup rule:advance · Me shooty yer’ booty
+######## popup rule:advance · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Advance Move
@@ -4556,7 +4434,7 @@ AFTER MOVING:
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
 
-######## popup rule:advance move · Me shooty yer’ booty
+######## popup rule:advance move · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Advance Move
@@ -4574,7 +4452,7 @@ AFTER MOVING:
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
 
-######## popup rule:advance rolls · Me shooty yer’ booty
+######## popup rule:advance rolls · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Advance Move
@@ -4592,7 +4470,7 @@ AFTER MOVING:
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
 
-######## popup rule:assault shooting · Me shooty yer’ booty
+######## popup rule:assault shooting · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 assault shooting
@@ -4601,7 +4479,7 @@ Units containing one or more models with an [ASSAULT] weapon can shoot using ass
 
 IN THIS ARMYWazdakka Gutsmek, Big Mek · Supa-glowy Fing, Warboss, Mek + Tankbustas, Mek + Flash Gitz, Gretchin
 
-######## popup rule:attached · Me shooty yer’ booty
+######## popup rule:attached · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 attached
@@ -4624,7 +4502,7 @@ In all of the above cases, if that last model was destroyed as the result of an 
 
 Wahapedia FAQ: When does a model’s or unit’s ability in an attached unit apply to all models in that unit? A rule that applies to ‘this/that unit’ or ‘models in this/that unit’ applies to all models in an attached unit. Rules that just apply to one model in an attached unit (for example, a rule that grants a model Feel No Pain or Lone Operative) only apply to that model, not to all models in the attached unit.
 
-######## popup rule:battle-shock roll · Me shooty yer’ booty
+######## popup rule:battle-shock roll · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Battle-shock
@@ -4651,7 +4529,7 @@ That unit is at, or below, half-strength.
 
 If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
 
-######## popup rule:battle-shocked · Me shooty yer’ booty
+######## popup rule:battle-shocked · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Battle-shock
@@ -4678,7 +4556,7 @@ That unit is at, or below, half-strength.
 
 If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
 
-######## popup rule:below starting strength · Me shooty yer’ booty
+######## popup rule:below starting strength · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Starting Strength
@@ -4703,7 +4581,7 @@ Some units cannot be at half-strength: If a model’s W characteristic or a unit
 
 Example: A Captain (1 model) is attached to a unit of Intercessors (5 models). This attached unit has a starting strength of 6. If three Intercessors were destroyed, the unit would be at half-strength. If four Intercessors were destroyed, the unit would be below half-strength. If all of the Intercessors were destroyed, the remaining Captain would be below half-strength, despite having his full wounds remaining.
 
-######## popup rule:benefit of cover · Me shooty yer’ booty
+######## popup rule:benefit of cover · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Benefit of Cover
@@ -4715,7 +4593,7 @@ That model is not fully visible to the attacking model due to one or more interv
 
 Each time a ranged attack targets a unit that has the benefit of cover against it, worsen the BS characteristic of that attack by 1.
 
-######## popup rule:bodyguard · Me shooty yer’ booty
+######## popup rule:bodyguard · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 bodyguard
@@ -4738,7 +4616,7 @@ In all of the above cases, if that last model was destroyed as the result of an 
 
 Wahapedia FAQ: When does a model’s or unit’s ability in an attached unit apply to all models in that unit? A rule that applies to ‘this/that unit’ or ‘models in this/that unit’ applies to all models in an attached unit. Rules that just apply to one model in an attached unit (for example, a rule that grants a model Feel No Pain or Lone Operative) only apply to that model, not to all models in the attached unit.
 
-######## popup rule:charge move · Me shooty yer’ booty
+######## popup rule:charge move · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Charge Move
@@ -4763,7 +4641,7 @@ Your unit must be engaged with all of the charge targets.
 Your unit cannot be engaged with one or more enemy units that are not charge targets.
 Until the end of the turn, each model in your unit has the Fights First ability (24.13).
 
-######## popup rule:charge roll · Me shooty yer’ booty
+######## popup rule:charge roll · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Charge
@@ -4779,7 +4657,7 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
-######## popup rule:charge rolls · Me shooty yer’ booty
+######## popup rule:charge rolls · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Charge
@@ -4795,7 +4673,7 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
-######## popup rule:charge targets · Me shooty yer’ booty
+######## popup rule:charge targets · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Charge Move
@@ -4820,7 +4698,7 @@ Your unit must be engaged with all of the charge targets.
 Your unit cannot be engaged with one or more enemy units that are not charge targets.
 Until the end of the turn, each model in your unit has the Fights First ability (24.13).
 
-######## popup rule:close-quarters shooting · Me shooty yer’ booty
+######## popup rule:close-quarters shooting · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 close-quarters shooting
@@ -4834,7 +4712,7 @@ One or more of its other ranged weapons.
 
 IN THIS ARMYMek + Tankbustas, Mek + Flash Gitz, Gretchin, Deffkoptas
 
-######## popup rule:deadly demise · Me shooty yer’ booty
+######## popup rule:deadly demise · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 deadly demise
@@ -4843,7 +4721,7 @@ This ability always takes the form Deadly Demise X. Each time a model in this un
 
 IN THIS ARMYWazdakka Gutsmek, Big Mek · Dreadherder, Big Mek · Cybork Boosta, Killa Kans
 
-######## popup rule:declares a charge · Me shooty yer’ booty
+######## popup rule:declares a charge · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Charge
@@ -4859,7 +4737,7 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
-######## popup rule:destroyed · Me shooty yer’ booty
+######## popup rule:destroyed · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Destroyed
@@ -4872,7 +4750,7 @@ When a model is destroyed, first resolve any rules that are triggered when it is
 
 Those models will stay on the battlefield until their unit is selected to attack and has attacked, or until the end of the phase (whichever comes first). Any rules triggered by those models being destroyed are resolved, and then those destroyed models are removed.
 
-######## popup rule:eligible to declare a charge · Me shooty yer’ booty
+######## popup rule:eligible to declare a charge · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Charge
@@ -4888,7 +4766,7 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
-######## popup rule:engaged · Me shooty yer’ booty
+######## popup rule:engaged · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Engagement
@@ -4900,7 +4778,7 @@ While a unit contains no engaged models, that unit is unengaged.
 
 Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
 
-######## popup rule:fall-back move · Me shooty yer’ booty
+######## popup rule:fall-back move · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Fall-back Move
@@ -4936,7 +4814,7 @@ Must use the desperate escape mode when it is selected to make a fall-back move.
 Must make one hazard roll for each model in that unit.
 Must make a battle-shock roll.
 
-######## popup rule:hazard roll · Me shooty yer’ booty
+######## popup rule:hazard roll · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Hazard Roll
@@ -4949,7 +4827,7 @@ Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model i
 
 Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
 
-######## popup rule:hazard rolls · Me shooty yer’ booty
+######## popup rule:hazard rolls · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Hazard Roll
@@ -4962,7 +4840,7 @@ Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model i
 
 Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
 
-######## popup rule:ingress move · Me shooty yer’ booty
+######## popup rule:ingress move · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Ingress Move
@@ -4981,7 +4859,7 @@ AFTER MOVING: Unless otherwise stated, until the start of the next Charge phase,
 
 20.03.01 Set Up As Reinforcements (app): If a rule mentions a unit being set up on the battlefield as Reinforcements, it means a unit that made an ingress move.
 
-######## popup rule:lead · Me shooty yer’ booty
+######## popup rule:lead · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 lead
@@ -4992,7 +4870,7 @@ Unless otherwise stated, each bodyguard unit can only have one leader unit and o
 
 IN THIS ARMYBig Mek · Supa-glowy Fing, Warboss
 
-######## popup rule:leader · Me shooty yer’ booty
+######## popup rule:leader · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 leader
@@ -5003,7 +4881,7 @@ Unless otherwise stated, each bodyguard unit can only have one leader unit and o
 
 IN THIS ARMYBig Mek · Supa-glowy Fing, Warboss
 
-######## popup rule:mortal wound · Me shooty yer’ booty
+######## popup rule:mortal wound · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Mortal Wounds
@@ -5019,7 +4897,7 @@ Resolve Damage: The selected model loses 1 wound. If this reduces that model’s
 
 When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
 
-######## popup rule:mortal wounds · Me shooty yer’ booty
+######## popup rule:mortal wounds · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Mortal Wounds
@@ -5035,7 +4913,7 @@ Resolve Damage: The selected model loses 1 wound. If this reduces that model’s
 
 When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
 
-######## popup rule:normal move · Me shooty yer’ booty
+######## popup rule:normal move · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Normal Move
@@ -5050,7 +4928,7 @@ AFTER MOVING: Your unit must be unengaged.
 
 09.05.01 More Than One Normal Move in a Phase (app): A unit cannot make more than one Normal Move in a phase.
 
-######## popup rule:pulse jet move · Me shooty yer’ booty
+######## popup rule:pulse jet move · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 ORKS ARMY RULE (SPECIAL MOVE TYPE)
 
 pulse jet move
@@ -5077,7 +4955,7 @@ Your unit must be unengaged.
 Until the end of the turn, your unit is not eligible to declare a charge or start an action.
 Until the start of your next turn, attacks that target your unit have -1 to hit rolls.
 
-######## popup rule:riled up · Me shooty yer’ booty
+######## popup rule:riled up · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 ORKS ARMY RULE
 
 Waaagh!
@@ -5093,7 +4971,7 @@ That unit has 5+ InSv.
 That unit’s ranged attacks have [ASSAULT].
 When that unit is selected to make an advance move, that advance move does not prevent that unit from being eligible to declare a charge.
 
-######## popup rule:selected to attack · Me shooty yer’ booty
+######## popup rule:selected to attack · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Selected to Attack
@@ -5102,7 +4980,7 @@ Selected to Attack
 
 App note, not rules text: from the rules appendix in the Warhammer 40,000 app, as Wahapedia prints it (04.01.05); the printed Core Rules do not include it.
 
-######## popup rule:snap shooting · Me shooty yer’ booty
+######## popup rule:snap shooting · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 snap shooting
@@ -5119,7 +4997,7 @@ You cannot re-roll hit rolls.
 
 AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.
 
-######## popup rule:strategic reserves · Me shooty yer’ booty
+######## popup rule:strategic reserves · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Strategic Reserves
@@ -5143,7 +5021,7 @@ At the end of the third battle round, unless otherwise stated, all strategic res
 Units embarked within TRANSPORTS that have made an ingress move during the battle.
 Repositioned units (see opposite).
 
-######## popup rule:support · Me shooty yer’ booty
+######## popup rule:support · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 support
@@ -5154,7 +5032,7 @@ Unless otherwise stated, each bodyguard unit can only have one leader unit and o
 
 IN THIS ARMYMek + Tankbustas, Mek + Flash Gitz
 
-######## popup rule:unengaged · Me shooty yer’ booty
+######## popup rule:unengaged · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 CORE RULE
 
 Engagement
@@ -5166,7 +5044,7 @@ While a unit contains no engaged models, that unit is unengaged.
 
 Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
 
-######## popup strat:command-re-roll · Me shooty yer’ booty
+######## popup strat:command-re-roll · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 1CP · ANY PHASE · EITHER TURN
 
 Command Re-roll
@@ -5191,7 +5069,7 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
-######## popup strat:counteroffensive · Me shooty yer’ booty
+######## popup strat:counteroffensive · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 2CP · FIGHT · THEIR TURN
 
 Counteroffensive
@@ -5207,7 +5085,7 @@ Until the end of the phase, your unit has the Fights First ability and it must b
 
 USED BYany unit
 
-######## popup strat:crazed-rampage · Me shooty yer’ booty
+######## popup strat:crazed-rampage · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 1CP · FIGHT · EITHER TURN
 
 Crazed Rampage
@@ -5227,7 +5105,7 @@ Wahapedia FAQ: “If my unit has the Deadly Demise ability and has an ability th
 
 USED BYBig Mek · Dreadherder, Big Mek · Cybork Boosta, Killa Kans
 
-######## popup strat:crushing-impact · Me shooty yer’ booty
+######## popup strat:crushing-impact · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 1CP · CHARGE · YOUR TURN
 
 Crushing Impact
@@ -5249,7 +5127,7 @@ Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact st
 
 USED BYWazdakka Gutsmek, Big Mek · Dreadherder, Big Mek · Cybork Boosta, Killa Kans
 
-######## popup strat:dread-power · Me shooty yer’ booty
+######## popup strat:dread-power · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 1CP · MOVEMENT · YOUR TURN
 
 Dread Power
@@ -5265,7 +5143,7 @@ Your unit is riled up until the start of your next turn.
 
 USED BYBig Mek · Dreadherder, Big Mek · Cybork Boosta, Killa Kans
 
-######## popup strat:drive-by-bustin · Me shooty yer’ booty
+######## popup strat:drive-by-bustin · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 1CP · SHOOTING · YOUR TURN
 
 Drive-by Bustin’
@@ -5281,7 +5159,7 @@ Your unit’s ranged attacks with weapons selected for the Firing Deck ability h
 
 USED BYno unit in this list (needs TRANSPORT)
 
-######## popup strat:epic-challenge · Me shooty yer’ booty
+######## popup strat:epic-challenge · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 1CP · FIGHT · EITHER TURN
 
 Epic Challenge
@@ -5297,7 +5175,7 @@ Select one CHARACTER model in your unit. Until the end of the phase, that model�
 
 USED BYWazdakka Gutsmek, Big Mek · Dreadherder, Big Mek · Cybork Boosta, Big Mek · Supa-glowy Fing, Warboss, Mek + Tankbustas, Mek + Flash Gitz
 
-######## popup strat:explosives · Me shooty yer’ booty
+######## popup strat:explosives · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 1CP · SHOOTING · YOUR TURN
 
 Explosives
@@ -5319,7 +5197,7 @@ Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
 
 USED BYBig Mek · Supa-glowy Fing, Warboss, Mek + Tankbustas, Mek + Flash Gitz, Deffkoptas
 
-######## popup strat:fire-overwatch · Me shooty yer’ booty
+######## popup strat:fire-overwatch · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 1CP · MOVEMENT · THEIR TURN
 
 Fire Overwatch
@@ -5335,7 +5213,7 @@ Your unit shoots using snap shooting.
 
 USED BYany unit
 
-######## popup strat:glowin-dakka · Me shooty yer’ booty
+######## popup strat:glowin-dakka · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 1CP · SHOOTING · YOUR TURN
 
 Glowin’ Dakka
@@ -5351,7 +5229,7 @@ Your unit’s ranged attacks that target a unit within 9" have +1 AP.
 
 USED BYBig Mek · Supa-glowy Fing, Warboss, Mek + Tankbustas, Mek + Flash Gitz, Gretchin
 
-######## popup strat:grab-it · Me shooty yer’ booty
+######## popup strat:grab-it · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 1CP · SHOOTING · YOUR TURN
 
 Grab It
@@ -5367,7 +5245,7 @@ Your unit is not eligible to declare a charge until the end of the turn.
 
 USED BYMek + Tankbustas, Mek + Flash Gitz
 
-######## popup strat:gun-crazy-show-offs · Me shooty yer’ booty
+######## popup strat:gun-crazy-show-offs · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 1CP · SHOOTING · THEIR TURN
 
 Gun-crazy Show-offs
@@ -5383,7 +5261,7 @@ Your unit shoots using normal shooting, but while doing so your unit can only ta
 
 USED BYMek + Tankbustas, Mek + Flash Gitz
 
-######## popup strat:heroic-intervention · Me shooty yer’ booty
+######## popup strat:heroic-intervention · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 1CP · CHARGE · THEIR TURN · INTO THE FRAY +1CP
 
 Heroic Intervention
@@ -5404,7 +5282,7 @@ Wahapedia FAQ: If a stratagem contains a section that carries an additional CP c
 
 USED BYany unit
 
-######## popup strat:insane-bravery · Me shooty yer’ booty
+######## popup strat:insane-bravery · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 1CP · COMMAND · YOUR TURN · ONCE PER BATTLE
 
 Insane Bravery
@@ -5424,7 +5302,7 @@ Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? 
 
 USED BYany unit
 
-######## popup strat:kustom-dakka · Me shooty yer’ booty
+######## popup strat:kustom-dakka · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 1CP · SHOOTING · YOUR TURN
 
 Kustom Dakka
@@ -5440,7 +5318,7 @@ Your unit’s ranged attacks that target a unit (excluding MONSTER/VEHICLE units
 
 USED BYBig Mek · Supa-glowy Fing, Warboss, Mek + Tankbustas, Mek + Flash Gitz, Gretchin
 
-######## popup strat:never-enough-dakka · Me shooty yer’ booty
+######## popup strat:never-enough-dakka · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 1CP · SHOOTING · YOUR TURN
 
 Never Enough Dakka
@@ -5456,7 +5334,7 @@ Your unit’s ranged attacks have [SUSTAINED HITS 1].
 
 USED BYBig Mek · Supa-glowy Fing, Warboss, Mek + Tankbustas, Mek + Flash Gitz, Gretchin
 
-######## popup strat:rapid-ingress · Me shooty yer’ booty
+######## popup strat:rapid-ingress · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 1CP · MOVEMENT · THEIR TURN
 
 Rapid Ingress
@@ -5474,7 +5352,7 @@ RESTRICTIONSYou cannot use this stratagem during the first battle round.
 
 USED BYany unit
 
-######## popup strat:smokescreen · Me shooty yer’ booty
+######## popup strat:smokescreen · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 1CP · SHOOTING · THEIR TURN
 
 Smokescreen
@@ -5490,7 +5368,7 @@ Until the end of the phase, each time an attack targets either your SMOKE unit, 
 
 USED BYWazdakka Gutsmek
 
-######## popup strat:stomping-juggernaut · Me shooty yer’ booty
+######## popup strat:stomping-juggernaut · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
 1CP · MOVEMENT / CHARGE · YOUR TURN
 
 Stomping Juggernaut

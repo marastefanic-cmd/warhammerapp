@@ -1,0 +1,16 @@
+[
+ {
+  "key": "2a58d1080dd87dcc",
+  "where": "proxyLines",
+  "verdict": "ok",
+  "why": "Re-run in the harness against the live app.html. Real units are unchanged: 'Warboss · Kunnin’ But Brutal' on the Warboss, plain Bigboss, 'Warboss in Mega Armour · Follow Me Ladz'. Made-up cases: (1) warlordOn 'Warboss' with the enhancement on the Warboss gives 'Warboss · Warlord · Kunnin’ But Brutal' and a plain Bigboss; (2) the same with short 'Boss' on the first character: the Warboss base now reads 'Warboss', so the short-name bug is fixed; (3) Warlord on the first character with no warlordOn and enhOn 'Warboss' gives 'Bigboss · Warlord' and 'Warboss · Kunnin’ But Brutal'; (4) warlordOn 'Warboss' with the enhancement on the first character gives 'Bigboss · Kunnin’ But Brutal' and 'Warboss · Warlord'; (5) one character with a short name and the same models-line name keeps the full name. on() marks exactly the character named by warlordOn/enhOn, else line 0. This now rests on a list fact: New Recruit's Warlord option on that character's models line, checked by nr.js. Nothing goes beyond the rules. Cosmetic: the old comment line '// what to write on a character's base: Warlord (the first character), and the enhancement where it is (enhOn)' is still above the new one and no longer matches the code.",
+  "fix": "Delete the stale comment line '// what to write on a character's base: Warlord (the first character), and the enhancement where it is (enhOn)'."
+ },
+ {
+  "key": "b47179ca6c56eba7",
+  "where": "screenPregame",
+  "verdict": "ok",
+  "why": "The Warlord row with warlordOn set reads 'Warboss (Bigboss + Warboss + Breaka Boyz)' (made-up), which is right. The Reserves line now says '(not FORTIFICATIONS)', matching 20.01 '(excluding FORTIFICATIONS)'. 'supports' is now a source attribution: New Recruit prints '• Supporting: Breaka Boyz'. The Attached and Enhancements rows are unchanged and right; with short 'Boss' on the first character they give 'Boss supports Breaka Boyz', 'Warboss leads Breaka Boyz', and 'Kunnin’ But Brutal 20 pts on Warboss'. The rest is as in my last review. bug, still there in one case: when there is no warlordOn (the Warlord is the first character) the row falls back to unitLink, and unitLink's label comes from shortName = (u.short || u.name) + ' · ' + u.enhancement. A two-character Warlord unit with enhOn then reads 'Bigboss · Kunnin’ But Brutal', putting the enhancement next to the character enhOn says doesn't have it. That's latent here (the Melee Warlord is Ghazghkull), and the same thing can happen in the Deep Strike, Scouts and Transports rows. The root is shortName, which is outside this item, and it is live elsewhere: unitLink on the real Bigboss + Warboss + Breaka Boyz renders 'Bigboss · Kunnin’ But Brutal', e.g. in Breakin' Heads' 'Used by'.",
+  "fix": "In shortName (app.html line ~701), append the enhancement only when it is on the first character: `const shortName = u => (u.short || u.name) + (u.enhancement && !u.enhOn ? ' · ' + u.enhancement : '') + twinLabel(u);`. Or, local to this row: `warlord.map(u => u.warlordOn ? … : u.enhOn ? linkTo('unit', u.id, u.short || u.name) : unitLink(u))`."
+ }
+]

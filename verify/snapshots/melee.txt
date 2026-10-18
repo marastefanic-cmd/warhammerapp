@@ -1,0 +1,5012 @@
+######## army · ME SHOOTY YER’ BOOTY Melee
+Orks · 2000 / 2000 pts · Strike Force
+
+War Horde · Disposition: Purge the Foe
+
+Pre-game
+Units
+10
+Stratagems
+16
+Ranged weapons
+15
+Melee weapons
+22
+Abilities
+35
+Rules
+Bases & proxies
+49
+Keep screen on
+Off
+
+New Recruit, exported 18 Oct 2026
+
+######## pregame · MELEE Pre-game
+YOUR LIST
+WARLORD
+Ghazghkull Thraka
+ENHANCE­MENTS
+Headwoppa’s Killchoppa 15 pts on Beastboss
+Kunnin’ But Brutal 20 pts on Warboss
+Follow Me Ladz 20 pts on Warboss in Mega Armour
+ATTACHED
+Nazdreg leads Meganobz
+Bigboss supports Breaka Boyz
+Warboss leads Breaka Boyz
+Warboss in Mega Armour leads Meganobz
+DETACH­MENTS
+War Horde (3 DP)
+Disposition: Purge the Foe
+POINTS
+2000 / 2000 · Strike Force
+DECLARE BATTLE FORMATIONS
+RESERVES
+Strategic reserves (not FORTIFICATIONS): unless otherwise stated, up to 1000 pts (50% of the 2000 limit), counting units embarked within a TRANSPORT you place there. Unless otherwise stated, they can only arrive from the second battle round onwards, and any that have not arrived by the end of round 3 are destroyed (not repositioned units, nor units embarked within a TRANSPORT that arrived).
+Can Deep Strike: Nazdreg 405 pts, Deffkoptas 85 pts (all: 490 pts)
+START OF THE BATTLE ROUND
+EVERY ROUND
+Da Boss · Orks army rule
+USES PER BATTLE
+NEW GAME
+RULES
+War Cry · Orks army rule
+ABILITIES
+Makari, Hoist Dat Banner! · Ghazghkull Thraka per army
+Boss’ Ammo Runt · Bigboss + Warboss + Breaka Boyz
+Bomb Squig · Bigboss + Warboss + Breaka Boyz
+STRATA­GEMS
+1CP Insane Bravery
+
+Gathered from this list’s datasheets and rules; each line opens the full text.
+
+######## units · PRE-GAME Units M T SV W LD OC INV
+EPIC HEROES
+Ghazghkull Thraka
+Warlord
+290
+8"
+10
+2+
+16
+6+
+4
+4+
+Mozrog Skragbad
+170
+10"
+9
+3+
+10
+6+
+3
+4+
+Nazdreg
++ Meganobz
+405
+NAZDREG
+5"
+7
+2+
+8
+6+
+1
+5+
+MEGANOB
+×6
+5"
+6
+2+
+3
+7+
+1
+–
+CHARACTERS
+Beastboss on Squigosaur
+Headwoppa’s Killchoppa
+155
+10"
+9
+3+
+10
+6+
+3
+5+
+Beastboss on Squigosaur
+140
+10"
+9
+3+
+10
+6+
+3
+5+
+Bigboss
+Kunnin’ But Brutal (Warboss)
++ Warboss + Breaka Boyz
+290
+BIGBOSS
+6"
+5
+4+
+5
+7+
+1
+–
+WARBOSS
+6"
+6
+4+
+6
+6+
+1
+5+
+NOB
+6"
+5
+4+
+3
+7+
+1
+–
+BREAKA BOY
+×5
+6"
+5
+4+
+2
+7+
+1
+–
+Warboss in Mega Armour
+Follow Me Ladz
++ Meganobz
+375
+WARBOSS IN MEGA ARMOUR
+7"
+7
+2+
+7
+6+
+1
+5+
+MEGANOB
+×6
+7"
+6
+2+
+3
+7+
+1
+–
+INFANTRY
+Gretchin
+×10
+×2 units
+45 ea
+6"
+2
+6+
+1
+8+
+1
+–
+MOUNTED
+Deffkoptas
+85
+2× Deffkopta, 1× Deffkopta w/ Kustom mega-blasta
+12"
+6
+4+
+4
+7+
+2
+6+
+
+######## ranged · UNITS Ranged weapons WEAPON RNG A BS S AP D
+Ghazghkull Thraka
+Warlord
+Mork’s RoarPICK ONE PROFILE
+➤Point Blank
+9"
+2D6+2
+–
+6
+-1
+1
+CLOSE-QUARTERS, TORRENT
+➤Aimed
+36"
+12
+5+
+6
+-1
+1
+LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 4
+Mozrog Skragbad
+Thump Gun
+18"
+3
+5+
+6
+0
+2
+ANTI-MONSTER/VEHICLE 4+
+Nazdreg
++ Meganobz
+Kustom Blasta XALL 3 CAN FIRE
++Skorcha
+12"
+3
+–
+5
+-1
+1
+BLAST 1, TORRENT, IGNORES COVER
++Gatler
+24"
+6
+4+
+9
+-2
+3
+HAZARDOUS, IGNORES COVER
++Shoota
+18"
+4
+4+
+5
+-1
+1
+LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 2, IGNORES COVER
+Beastboss on Squigosaur
+Headwoppa’s Killchoppa
+
+Can shoot with one or both (Close-quarters does not limit MONSTER models).
+
+Slugga
+12"
+1
+5+
+4
+0
+1
+CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
+Thump Gun
+18"
+3
+5+
+6
+0
+2
+ANTI-MONSTER/VEHICLE 4+
+Beastboss on Squigosaur
+
+Can shoot with one or both (Close-quarters does not limit MONSTER models).
+
+Slugga
+12"
+1
+5+
+4
+0
+1
+CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
+Thump Gun
+18"
+3
+5+
+6
+0
+2
+ANTI-MONSTER/VEHICLE 4+
+Bigboss
+Kunnin’ But Brutal (Warboss)
++ Warboss + Breaka Boyz
+BIGBOSS
+Slugga
+12"
+1
+5+
+4
+0
+1
+CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
+WARBOSS
+Kombi-skorchaPICK ONE PROFILE
+➤Skorcha
+12"
+3
+–
+5
+0
+1
+BLAST 1, TORRENT
+➤Shoota
+18"
+2
+5+
+4
+0
+1
+LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 1
+BREAKA BOYZ
+Rokkit pistol
+12"
+1
+5+
+10
+-2
+3
+CLOSE-QUARTERS
+Boss’ Ammo Runt used (your Shooting phase, when selected to shoot): Warboss +1 to hit rolls
+Warboss in Mega Armour
+Follow Me Ladz
++ Meganobz
+Big Shoota
+36"
+3
+4+
+5
+0
+1
+LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 2
+Gretchin
+×2 units
+Grot Blasta×10
+12"
+1
+4+
+3
+0
+1
+CLOSE-QUARTERS
+Deffkoptas
+
+Deffkopta can shoot with Slugga or Rokkit Launcha, not both (Close-quarters); in close-quarters shooting, Slugga only.
+
+Deffkopta w/ Kustom mega-blasta can shoot with Slugga or Kustom Mega-blasta, not both (Close-quarters); in close-quarters shooting, Slugga only.
+
+Rokkit Launcha×2PICK ONE PROFILE
+➤Busta
+24"
+2
+5+
+10
+-2
+3
+LETHAL HITS
+➤Blasta
+24"
+2
+5+
+4
+0
+1
+BLAST 2
+Slugga×3
+12"
+1
+5+
+4
+0
+1
+CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
+Kustom Mega-blastaDEFFKOPTA
+24"
+3
+5+
+9
+-2
+3
+HAZARDOUS, LETHAL HITS
+Your Shooting phase, after an ingress move this turn: +1 to hit rolls (Deff from Above)
+
+######## melee · RANGED Melee weapons WEAPON A WS S AP D
+Ghazghkull Thraka
+Warlord
+
+Fights with both: Gork’s Klaw, plus Adamantine ’Eadbutt on top (extra attacks).
+
+Gork’s Klaw
+7
+2+
+14
+-3
+4
+CLEAVE 2, DEVASTATING WOUNDS, SUSTAINED HITS 1
+Adamantine ’Eadbutt
+1
+2+
+14
+-2
+D3+3
+DEVASTATING WOUNDS, EXTRA ATTACKS, PRECISION, SUSTAINED HITS 1
+Own aura: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
+STRATAGEMS · WAR HORDE
+Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+Mozrog Skragbad
+
+Fights with both: Gutrippa, plus Big Chompa’s Jaws on top (extra attacks).
+
+GutrippaPICK ONE PROFILE
+➤HunterMON/VEH ONLY
+6
+2+
+12
+-2
+D6+1
+LETHAL HITS, SUSTAINED HITS 1
+➤Standard
+6
+2+
+9
+-2
+2
+CLEAVE 1, SUSTAINED HITS 1
+Big Chompa’s Jaws
+3
+3+
+7
+-2
+4
+ANTI-MONSTER/VEHICLE 3+, EXTRA ATTACKS, SUSTAINED HITS 1
+vs MONSTER/VEHICLE: can re-roll wound rolls (Da Bigger Dey Iz…)
+Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
+STRATAGEMS · WAR HORDE
+Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+Nazdreg
++ Meganobz
+
+NAZDREGFights with both: Moonchewa, plus Kustom Blasta X on top (extra attacks).
+
+Moonchewa
+5
+2+
+12
+-2
+3
+CLEAVE 1, TWIN-LINKED, SUSTAINED HITS 1
+Kustom Blasta X
+6
+2+
+5
+-1
+1
+CLEAVE 1, EXTRA ATTACKS, SUSTAINED HITS 1
+MEGANOBZ
+Twin Killsaw×6
+3
+4+
+10
+-2
+3
+TWIN-LINKED, SUSTAINED HITS 1
+Riled up, Fight phase: +1 to hit rolls (Krumpin’ Time)
+Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
+STRATAGEMS · WAR HORDE
+Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+Beastboss on Squigosaur
+Headwoppa’s Killchoppa
+
+Fights with both: Beastchoppa, plus Squigosaur’s jaws on top (extra attacks).
+
+BeastchoppaPICK ONE PROFILE
+➤HunterMON/VEH ONLY
+6
+2+
+12
+-2
+D6
+SUSTAINED HITS 1
+➤Standard
+6
+2+
+6
+-2
+2
+CLEAVE 1, SUSTAINED HITS 1
+Squigosaur’s jaws
+3
+3+
+7
+-2
+3
+ANTI-MONSTER/VEHICLE 3+, EXTRA ATTACKS, SUSTAINED HITS 1
+Made a charge move this turn: +1 AP (Headwoppa’s Killchoppa)
+Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
+STRATAGEMS · WAR HORDE
+Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+Beastboss on Squigosaur
+
+Fights with both: Beastchoppa, plus Squigosaur’s jaws on top (extra attacks).
+
+BeastchoppaPICK ONE PROFILE
+➤HunterMON/VEH ONLY
+6
+2+
+12
+-2
+D6
+SUSTAINED HITS 1
+➤Standard
+6
+2+
+6
+-2
+2
+CLEAVE 1, SUSTAINED HITS 1
+Squigosaur’s jaws
+3
+3+
+7
+-2
+3
+ANTI-MONSTER/VEHICLE 3+, EXTRA ATTACKS, SUSTAINED HITS 1
+Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
+STRATAGEMS · WAR HORDE
+Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+Bigboss
+Kunnin’ But Brutal (Warboss)
++ Warboss + Breaka Boyz
+BIGBOSS
+Big Choppa
+5
+3+
+7
+-2
+2
+PRECISION, SUSTAINED HITS 1
+WARBOSS
+Power Klaw
+6
+2+
+12
+-2
+2
+SUSTAINED HITS 1
+BREAKA BOYZ
+
+Nob picks one to fight with: Choppa or Smash Hammer.
+
+The others: one each (×N = how many the unit has).
+
+ChoppaNOB
+4
+3+
+5
+-1
+1
+SUSTAINED HITS 1
+Smash Hammer×4PICK ONE PROFILE
+➤HunterMON/VEH ONLY
+3
+3+
+12
+-2
+3
+SUSTAINED HITS 1
+➤Standard
+3
+3+
+7
+-2
+2
+SUSTAINED HITS 1
+KnucklebustasBREAKA BOY
+4
+3+
+5
+-2
+2
+ANTI-MONSTER/VEHICLE 4+, SUSTAINED HITS 1
+TankhammerBREAKA BOY
+3
+4+
+12
+-2
+3
+DEVASTATING WOUNDS, HAZARDOUS, SUSTAINED HITS 1
+Always: +1 to hit rolls (Sumfin’ to Prove)
+Made a charge move this turn: Warboss +3 A, +2 S (Might is Right)
+Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
+STRATAGEMS · WAR HORDE
+Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+Warboss in Mega Armour
+Follow Me Ladz
++ Meganobz
+WARBOSS IN MEGA ARMOUR
+’Uge Choppa
+5
+2+
+12
+-2
+3
+CLEAVE 2, SUSTAINED HITS 1
+MEGANOBZ
+Twin Killsaw×6
+3
+4+
+10
+-2
+3
+TWIN-LINKED, SUSTAINED HITS 1
+Riled up, Fight phase: +1 to hit rolls (Krumpin’ Time)
+Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
+STRATAGEMS · WAR HORDE
+Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+Gretchin
+×2 units
+Scavenged Shivs×10
+1
+5+
+2
+0
+1
+SUSTAINED HITS 1
+Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
+STRATAGEMS · WAR HORDE
+Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+Deffkoptas
+
+Pick one to fight with: Choppa or Spinnin’ Blades.
+
+Choppa×3
+3
+4+
+5
+-1
+1
+SUSTAINED HITS 1
+Spinnin’ Blades×3
+4
+3+
+5
+-1
+1
+CLEAVE 1, HAZARDOUS, SUSTAINED HITS 1
+Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
+STRATAGEMS · WAR HORDE
+Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+
+######## abilities · MELEE Abilities
+Ghazghkull Thraka
+Warlord
+Supreme Commander
+
+If this model is in your army, it must be your WARLORD.
+
+Makari, Hoist Dat Banner!
+Once per battle, per army
+Your Movement
+
+Once per battle, per army · Movement · Your turn
+
+In your Movement phase, you can select a number of friendly ORKS units equal to or less than the current battle round number. Those units are riled up until the start of your next turn.
+
+Place one Makari token next to the unit, removing it after this ability is used.
+
+Da Grand Warlord’s Ladz
+
+While this unit is within 3" of another friendly ORKS INFANTRY unit, this unit has Lone Operative.
+
+Prophet of Da Great Waaagh!
+Fight
+
+Aura · Fight · Either turn
+
+While a friendly ORKS unit is within 6" of this unit, that unit’s melee attacks have:
+
++1 to hit rolls.
++1 to wound rolls.
+Mozrog Skragbad
+Beast Snagga Following
+Every BEAST SNAGGA unit in this list is a MONSTER CHARACTER
+
+Every BEAST SNAGGA unit in this list is a MONSTER CHARACTER
+
+While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units), this unit has Lone Operative.
+
+One Last Kill
+Fight
+
+Fight · Either turn
+
+In the Fight phase, when this model is destroyed, if this unit has not been selected to fight this phase, roll one D6:
+
+On a 2+, do not remove this model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield.
+Da Bigger Dey Iz…
+Fight
+
+Fight · Either turn
+
+This unit’s melee attacks that target a MONSTER/VEHICLE unit can re-roll wound rolls.
+
+Nazdreg
++ Meganobz
+NAZDREG
+Nazdreg’s Know-wotz
+This unit has Deep Strike.
+This unit’s ranged attacks have [IGNORES COVER].
+Supreme Kunnin’
+Once per phase, per army
+Their Movement
+
+Once per phase, per army · Movement · Their turn
+
+In your opponent’s Movement phase, when an enemy unit ends a move within 8" of this unit, if this unit is unengaged, this unit can:
+
+Make a normal move of up to D6".
+Or: If this unit is riled up, make a normal move of up to 5".
+Intimidating Motivation
+Once per battle round, per army
+Your Movement
+
+Once per battle round, per army · Movement · Your turn
+
+In your Movement phase, at the start or end of this unit’s move, you can select one friendly ORKS unit within 6" of this unit. That unit:
+
+Is no longer battle-shocked.
+Is riled up until the start of your next turn.
+MEGANOBZ
+Krumpin’ Time
+Fight
+
+Fight · Either turn
+
+In the Fight phase, if this unit is riled up, this unit has +1 to hit rolls.
+
+Arrogant Invulnerability
+
+Attacks that target this unit have -1 AP.
+
+Beastboss on Squigosaur
+Headwoppa’s Killchoppa
+Thundering Stampede
+Charge
+
+Aura · Charge · Either turn
+
+Friendly BEAST SNAGGA units within 6" of this unit have +1 to charge rolls.
+
+Boss of da Hunt
+Every BEAST SNAGGA unit in this list is a MONSTER CHARACTER
+
+Every BEAST SNAGGA unit in this list is a MONSTER CHARACTER
+
+While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units), this unit has Lone Operative.
+
+Keep Huntin’!
+Once per battle round, per army
+Your Movement
+
+Once per battle round, per army · Movement · Your turn
+
+In your Movement phase, at the start or end of this unit’s move, you can select one friendly BEAST SNAGGA unit within 6" of this unit. That unit:
+
+Is no longer battle-shocked.
+Is riled up until the start of your next turn.
+Headwoppa’s Killchoppa
+Enhancement
+Fight
+
+Enhancement · Fight · Either turn
+
+ORKS model only. If this unit made a charge move this turn, this model’s melee attacks have +1 AP.
+
+Beastboss on Squigosaur
+Thundering Stampede
+Charge
+
+Aura · Charge · Either turn
+
+Friendly BEAST SNAGGA units within 6" of this unit have +1 to charge rolls.
+
+Boss of da Hunt
+Every BEAST SNAGGA unit in this list is a MONSTER CHARACTER
+
+Every BEAST SNAGGA unit in this list is a MONSTER CHARACTER
+
+While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units), this unit has Lone Operative.
+
+Keep Huntin’!
+Once per battle round, per army
+Your Movement
+
+Once per battle round, per army · Movement · Your turn
+
+In your Movement phase, at the start or end of this unit’s move, you can select one friendly BEAST SNAGGA unit within 6" of this unit. That unit:
+
+Is no longer battle-shocked.
+Is riled up until the start of your next turn.
+Bigboss
+Kunnin’ But Brutal (Warboss)
++ Warboss + Breaka Boyz
+BIGBOSS
+Sumfin’ to Prove
+Fight
+
+Fight · Either turn
+
+This unit’s melee attacks have +1 to hit rolls.
+
+WARBOSS
+Might is Right
+Fight
+
+Fight · Either turn
+
+If this unit made a charge move this turn, this model’s melee attacks have:
+
++3 A.
++2 S.
+Boss’ Ammo Runt
+Once per battle, per unit
+Your Shooting
+
+Once per battle, per unit · Shooting · Your turn
+
+In your Shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this model’s ranged attacks have +1 to hit rolls.
+
+Place a Boss’ Ammo Runt token next to the unit, removing it when this ability is used.
+
+Intimidating Motivation
+Once per battle round, per army
+Your Movement
+
+Once per battle round, per army · Movement · Your turn
+
+In your Movement phase, at the start or end of this unit’s move, you can select one friendly ORKS unit within 6" of this unit. That unit:
+
+Is no longer battle-shocked.
+Is riled up until the start of your next turn.
+Kunnin’ But Brutal
+Enhancement
+Your Movement · Your Shooting · Your Charge
+
+Enhancement · Movement / Shooting / Charge · Your turn
+
+ORKS model only. When this unit is selected to make a fall-back move, that fall-back move does not prevent this unit from being eligible to shoot/declare a charge.
+
+BREAKA BOYZ
+Trophy Hunters
+Charge
+
+Charge · Either turn
+
+This unit has +1 to charge rolls.
+
+Bomb Squig
+Once per turn, twice per battle, per unit
+Your Movement
+
+Once per turn, twice per battle, per unit · Movement · Your turn
+
+In your Movement phase, when this unit ends a normal move, you can select one visible enemy unit within 12" of this unit and roll one D6:
+
+On a 3+, that enemy unit suffers D3 mortal wounds.
+
+Place two Bomb Squig tokens next to the unit, removing one each time this ability is used.
+
+Warboss in Mega Armour
+Follow Me Ladz
++ Meganobz
+WARBOSS IN MEGA ARMOUR
+Krushin’ Impetus
+Charge
+
+Charge · Either turn
+
+When this unit ends a charge move, you can select one enemy unit engaged with this unit. If you do, roll one D6 for each model in this unit engaged with that enemy unit:
+
+For each 3+, that enemy unit suffers 1 mortal wound.
+Intimidating Motivation
+Once per battle round, per army
+Your Movement
+
+Once per battle round, per army · Movement · Your turn
+
+In your Movement phase, at the start or end of this unit’s move, you can select one friendly ORKS unit within 6" of this unit. That unit:
+
+Is no longer battle-shocked.
+Is riled up until the start of your next turn.
+Follow Me Ladz
+Enhancement
+
+Enhancement
+
+ORKS model only. This unit has +2" M.
+
+MEGANOBZ
+Krumpin’ Time
+Fight
+
+Fight · Either turn
+
+In the Fight phase, if this unit is riled up, this unit has +1 to hit rolls.
+
+Arrogant Invulnerability
+
+Attacks that target this unit have -1 AP.
+
+Gretchin
+×2 units
+Downtrodden
+
+For the purposes of transport capacity, each 2 Gretchin models (rounding up) take up the space of 1 model.
+
+Thievin’ Scavengers
+Your Movement
+
+Movement · Your turn
+
+At the end of your Movement phase, if this unit is controlling an objective, that objective is secured.
+
+Deffkoptas
+Aerial Manoover
+Their Fight
+
+Fight · Their turn
+
+At the end of your opponent’s Fight phase, if this unit is unengaged, you can place this unit in strategic reserves.
+
+Deff from Above
+Your Shooting
+
+Shooting · Your turn
+
+In your Shooting phase, if this unit made an ingress move this turn, this unit’s ranged attacks have +1 to hit rolls.
+
+######## rules · ABILITIES Rules
+Orks · Purge the Foe
+ARMY RULES
+Waaagh!
+
+Friendly ORKS units with this ability can:
+
+Re-roll advance rolls.
+Become riled up, as stated in other rules.
+
+While a unit is riled up:
+
+That unit has 5+ InSv.
+That unit’s ranged attacks have [ASSAULT].
+When that unit is selected to make an advance move, that advance move does not prevent that unit from being eligible to declare a charge.
+War Cry
+Once per battle, per army · Command
+
+At the start of the Command phase, you can use this ability. If you do, friendly ORKS units with the Waaagh! ability are riled up until the end of the next turn.
+
+Da Boss
+Command
+
+At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.
+
+Wahapedia core rules errata (07.01, CP Generated by a Warlord; not in GW’s printed Core Rules): you do not gain the 1CP while your WARLORD is destroyed.
+
+DETACHMENTS
+WAR HORDE
+Get Stuck In
+Detachment rule · Fight
+
+Friendly ORKS units’ melee attacks have [SUSTAINED HITS 1].
+
+APPLIES TOGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Beastboss, Bigboss, Warboss in Mega Armour · Follow Me Ladz, Gretchin, Deffkoptas
+
+Headwoppa’s Killchoppa
+Enhancement · 15 pts · on Beastboss on Squigosaur
+
+ORKS model only. If this unit made a charge move this turn, this model’s melee attacks have +1 AP.
+
+ONBeastboss on Squigosaur
+
+Kunnin’ But Brutal
+Enhancement · 20 pts · on Warboss (Bigboss + Warboss + Breaka Boyz)
+
+ORKS model only. When this unit is selected to make a fall-back move, that fall-back move does not prevent this unit from being eligible to shoot/declare a charge.
+
+ONWarboss (Bigboss + Warboss + Breaka Boyz)
+
+Follow Me Ladz
+Enhancement · 20 pts · on Warboss in Mega Armour + Meganobz
+
+ORKS model only. This unit has +2" M.
+
+ONWarboss in Mega Armour + Meganobz
+
+Other enhancements
+1 not in this list
+Da Boss is Watchin’ 25 pts
+
+ORKS model only. (Once per battle, per army) In your Movement phase, you can use this ability. If you do, this unit is riled up until the start of your next turn.
+
+STRATAGEMSFungus-fuel Injection, Close-range Dakka, Hit ’Em Harder, Orks Is Never Beaten, Breakin’ Heads, Mow ’Em Down (no unit in this list)
+
+CORE RULES
+Quick reference
+Turn order · Command phase · hit, wound and save rolls
+
+BATTLE ROUND (07)
+
+Start of battle round → both players take a turn (the mission says who goes first) → end of battle round.
+
+EACH TURN (07.02)
+
+Start of turn → Command → Movement → Shooting → Charge → Fight → end of turn.
+
+COMMAND PHASE (08)
+
+Start-of-phase rules.
+Gain Core CP: both players gain 1CP.
+Battle-shock: a roll for each of your units that is battle-shocked or at or below half-strength.
+Command abilities.
+End-of-phase rules.
+
+HIT ROLL (05.01)
+
+Unmodified 1
+fails
+Unmodified 6
+critical hit
+≥ BS / WS
+hit
+
+WOUND ROLL (05.02)
+
+Unmodified 1
+fails
+Unmodified 6
+critical wound
+S ≥ 2× T
+2+
+S > T
+3+
+S = T
+4+
+S < T
+5+
+S ≤ ½ T
+6+
+
+SAVE ROLL (05.03, 05.04)
+
+Unmodified 1
+damage
+≥ InSv
+saved (AP does not apply)
+≥ Sv after AP
+saved
+Otherwise
+the model loses D wounds
+
+Allocation order (05.03): a non-CHARACTER group containing a model that has lost one or more wounds must be first; no CHARACTER group can be earlier than a non-CHARACTER group; CHARACTER groups containing a model that has lost one or more wounds must be earlier than CHARACTER groups containing no wounded models.
+
+Unit rules
+5 used by this list
+Deep Strike
+Nazdreg, Deffkoptas
+
+Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
+
+App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
+
+IN THIS ARMYNazdreg, Deffkoptas
+
+Feel No Pain
+Mozrog Skragbad, Beastboss ×2
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYMozrog Skragbad, Beastboss · Headwoppa’s Killchoppa, Beastboss
+
+Leader
+Nazdreg, Bigboss, Warboss in Mega Armour
+
+Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.
+
+Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.
+
+IN THIS ARMYNazdreg, Bigboss, Warboss in Mega Armour · Follow Me Ladz
+
+Lone Operative
+Ghazghkull Thraka, Mozrog Skragbad, Beastboss ×2
+
+Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12" of this unit.
+
+If this ability takes the form Lone Operative X", unless part of an attached unit, this unit is not visible to enemy models unless they are within X" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X" of this unit.
+
+24.24.01 Attached units and Lone Operative (app): If all models in an attached unit have Lone Operative, that unit will benefit from Lone Operative.
+
+If a unit has Lone Operative, but models in that unit have different range values for Lone Operative, the highest value amongst that unit’s models on the battlefield is applied to the whole unit.
+
+If an attached unit below starting strength only contains models with Lone Operative, Lone Operative becomes active again.
+
+IN THIS ARMYGhazghkull Thraka (in Da Grand Warlord’s Ladz), Mozrog Skragbad (in Beast Snagga Following), Beastboss · Headwoppa’s Killchoppa (in Boss of da Hunt), Beastboss (in Boss of da Hunt)
+
+Support
+Bigboss
+
+Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.
+
+Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.
+
+IN THIS ARMYBigboss
+
+Weapon keywords
+15 used by this list
+Anti
+ANTI-MONSTER/VEHICLE 3+, ANTI-MONSTER/VEHICLE 4+
+
+This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.
+
+Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
+
+IN THIS ARMYMozrog Skragbad, Beastboss · Headwoppa’s Killchoppa, Beastboss, Bigboss
+
+Blast
+BLAST 1, BLAST 2
+
+Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead.
+
+Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+IN THIS ARMYNazdreg, Bigboss, Deffkoptas
+
+Cleave
+CLEAVE 1, CLEAVE 2
+
+This ability always takes the form [CLEAVE X]. Each time you gather attack dice for a [CLEAVE] weapon, if you only selected one target for all of that weapon’s attacks, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+Example: If a [CLEAVE 1] weapon with an A characteristic of 3 targets one unit containing 16 models, you would gather three additional attack dice for that weapon (for a total of six for that weapon).
+
+IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Beastboss, Warboss in Mega Armour · Follow Me Ladz, Deffkoptas
+
+Close-quarters
+
+Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with:
+
+One or more of its [CLOSE-QUARTERS] weapons.
+One or more of its other ranged weapons.
+
+[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
+
+IN THIS ARMYGhazghkull Thraka, Beastboss · Headwoppa’s Killchoppa, Beastboss, Bigboss, Gretchin, Deffkoptas
+
+Devastating Wounds
+
+Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+
+Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+
+IN THIS ARMYGhazghkull Thraka, Bigboss
+
+Extra Attacks
+
+Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step (04.01), for each of those models, you must select:
+
+All of that model’s [EXTRA ATTACKS] weapons.
+One of that model’s other melee weapons, if possible.
+
+IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Beastboss
+
+Hazardous
+
+Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.
+
+IN THIS ARMYNazdreg, Bigboss, Deffkoptas
+
+Hunter
+
+04.01.03 Multiple Weapon Profiles (app): In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).
+
+Some of these profiles are known as Hunter profiles. Hunter profiles can only target units with the specified keywords.
+
+Note that if a unit is equipped with more than one such weapon, a different profile can be selected for each model within that unit.
+
+App note, not rules text: New Recruit prints these weapons as two profiles, one marked “Hunter: MONSTER/VEHICLE”. That profile can only target MONSTER or VEHICLE units. The Hunter rule is in the rules appendix of the Warhammer 40,000 app (Wahapedia 04.01.03), not in the printed Core Rules.
+
+IN THIS ARMYMozrog Skragbad, Beastboss · Headwoppa’s Killchoppa, Beastboss, Bigboss
+
+Ignores Cover
+
+Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+IN THIS ARMYNazdreg
+
+Lethal Hits
+LETHAL HITS: non-MONSTER/VEHICLE
+
+Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
+
+Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
+
+IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Beastboss, Bigboss, Warboss in Mega Armour · Follow Me Ladz, Deffkoptas
+
+Precision
+
+While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.
+
+24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
+
+IN THIS ARMYGhazghkull Thraka, Bigboss
+
+Rapid Fire
+RAPID FIRE 1, RAPID FIRE 2, RAPID FIRE 4
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYGhazghkull Thraka, Nazdreg, Bigboss, Warboss in Mega Armour · Follow Me Ladz
+
+Sustained Hits
+SUSTAINED HITS 1
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Beastboss, Bigboss, Warboss in Mega Armour · Follow Me Ladz, Gretchin, Deffkoptas
+
+Torrent
+
+Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.
+
+IN THIS ARMYGhazghkull Thraka, Nazdreg, Bigboss
+
+Twin-linked
+
+Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll.
+
+IN THIS ARMYNazdreg, Warboss in Mega Armour · Follow Me Ladz
+
+######## bases · RULES Bases & proxies
+BASES TO PRINT
+
+20× 25mm
+5× 32mm
+14× 40mm
+2× 50mm
+1× 60mm
+3× 75×42mm
+4× 80mm
+
+WHAT TO WRITE ON EACH BASE
+
+Ghazghkull Thraka
+1× 80mm
+Ghazghkull Thraka · Warlord
+Mozrog Skragbad
+1× 80mm
+Mozrog Skragbad
+Nazdreg
++ Meganobz
+1× 60mm
+Nazdreg
+6× 40mm
+standard Twin Killsaw
+Beastboss on Squigosaur · Headwoppa’s Killchoppa
+1× 80mm
+Beastboss on Squigosaur · Headwoppa’s Killchoppa
+Beastboss on Squigosaur
+1× 80mm
+Beastboss on Squigosaur
+Bigboss
++ Warboss + Breaka Boyz
+1× 40mm
+Bigboss
+1× 50mm
+Warboss · Kunnin’ But Brutal
+1× 40mm
+Nob · Choppa + Rokkit pistol
+3× 32mm
+standard Smash Hammer
+1× 32mm
+Knucklebustas · no Smash Hammer
+1× 32mm
+Tankhammer · no Smash Hammer
+Warboss in Mega Armour · Follow Me Ladz
++ Meganobz
+1× 50mm
+Warboss in Mega Armour · Follow Me Ladz
+6× 40mm
+standard Twin Killsaw
+Gretchin
+2 units: mark them apart (1, 2)
+10× 25mm
+standard Grot Blasta, Scavenged Shivs
+Deffkoptas
+2× 75×42mm
+standard Choppa, Rokkit Launcha, Slugga, Spinnin’ Blades
+1× 75×42mm
+Kustom Mega-blasta · no Rokkit Launcha
+
+From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
+
+######## strats {"folded":true} · BASES Stratagems
+EXPAND ALL
+WAR HORDE
+6
+1
+CP
+Fungus-fuel Injection
+Your unit has +2" M.
+Your Movement Deffkoptas
+1
+CP
+Close-range Dakka
+Your unit’s ranged attacks have [RAPID FIRE 1], or +1 to the value of a [RAPID FIRE] they already have.
+Your Shooting Any unit
+1
+CP
+Hit ’Em Harder
+Your unit’s melee attacks have [LETHAL HITS].
+Fight Any unit
+1
+CP
+Orks Is Never Beaten
+Model in your unit destroyed, unit not selected to fight this phase: D6 (+1 if riled up); on a 4+ it stays until your unit has fought or the phase ends.
+Fight Any unit
+1
+CP
+Breakin’ Heads
+Roll one D3: your unit suffers that many mortal wounds and is no longer battle-shocked.
+Any phase Nazdreg + Meganobz, Bigboss + Warboss + Breaka Boyz, Warboss in Mega Armour + Meganobz
+1
+CP
+Mow ’Em Down
+Your unit’s melee attacks have [CLEAVE 1], or +1 to the value of a [CLEAVE] they already have.
+Fight No unit in this list can use it (needs VEHICLE)
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+The battle-shock roll you are about to make for your unit is automatically successful.
+Your Command · Once per battle Any unit
+1
+CP
+Rapid Ingress
+Your unit in strategic reserves makes an ingress move (not in the first battle round).
+End of their Movement Any unit
+1
+CP
+Fire Overwatch
+Your unit shoots using snap shooting.
+End of their Movement Any unit
+1
+CP
+Explosives
+One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
+Your Shooting Ghazghkull Thraka, Nazdreg + Meganobz, Bigboss + Warboss + Breaka Boyz, Warboss in Mega Armour + Meganobz, Deffkoptas
+1
+CP
+Crushing Impact
+After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+Your Charge Mozrog Skragbad, Beastboss on Squigosaur ×2
+1
+CP
+Heroic Intervention
+Your unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+End of their Charge · Into the Fray +1CP Any unit
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+Fight All but Gretchin ×2, Deffkoptas
+2
+CP
+Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+Their Fight Any unit
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
+Any phase Any unit
+1
+CP
+Smokescreen
+Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+Start of their Shooting No unit in this list can use it (needs SMOKE)
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## strats {"open":true} · STRATAGEMS Stratagems
+COLLAPSE ALL
+WAR HORDE
+6
+1
+CP
+Fungus-fuel Injection
+Your Movement Deffkoptas
+WHEN
+
+Your Movement phase, when a friendly ORKS MOUNTED/VEHICLE unit is selected to move.
+
+TARGETThat ORKS MOUNTED/VEHICLE unit.
+
+EFFECT
+
+Your unit has +2" M.
+
+USED BYDeffkoptas
+
+1
+CP
+Close-range Dakka
+Your Shooting Any unit
+WHEN
+
+Your Shooting phase, when a friendly ORKS unit is selected to shoot.
+
+TARGETThat ORKS unit.
+
+EFFECT
+
+Your unit’s ranged attacks have:
+
+[RAPID FIRE 1].
+Or: If that attack already has [RAPID FIRE], +1 to the value of that [RAPID FIRE] (e.g. [RAPID FIRE 1] becomes [RAPID FIRE 2]).
+
+USED BYany unit
+
+1
+CP
+Hit ’Em Harder
+Fight Any unit
+WHEN
+
+Fight phase, when a friendly ORKS unit is selected to fight.
+
+TARGETThat ORKS unit.
+
+EFFECT
+
+Your unit’s melee attacks have [LETHAL HITS].
+
+USED BYany unit
+
+1
+CP
+Orks Is Never Beaten
+Fight Any unit
+WHEN
+
+Fight phase, when an enemy unit targets a friendly ORKS unit (excluding TITANIC units).
+
+TARGETThat ORKS unit.
+
+EFFECT
+
+When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one D6, with +1 to that roll if your unit is riled up:
+
+On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.
+
+USED BYany unit
+
+1
+CP
+Breakin’ Heads
+Any phase Nazdreg + Meganobz, Bigboss + Warboss + Breaka Boyz, Warboss in Mega Armour + Meganobz
+WHEN
+
+Any phase, when a friendly attached ORKS INFANTRY unit becomes battle-shocked.
+
+TARGETThat ORKS INFANTRY unit. You can target that unit with this stratagem even though it is battle-shocked.
+
+EFFECT
+
+Roll one D3:
+
+Your unit suffers a number of mortal wounds equal to the result.
+Your unit is no longer battle-shocked.
+
+USED BYNazdreg, Bigboss, Warboss in Mega Armour · Follow Me Ladz
+
+1
+CP
+Mow ’Em Down
+Fight No unit in this list can use it (needs VEHICLE)
+WHEN
+
+Fight phase, when a friendly ORKS VEHICLE unit (excluding WALKER units) that made a charge move this turn is selected to fight.
+
+TARGETThat ORKS VEHICLE unit.
+
+EFFECT
+
+Your unit’s melee attacks have:
+
+[CLEAVE 1].
+Or: If that attack already has [CLEAVE], +1 to the value of that [CLEAVE] (e.g. [CLEAVE 1] becomes [CLEAVE 2]).
+
+USED BYno unit in this list (needs VEHICLE)
+
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+Your Command · Once per battle Any unit
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+1
+CP
+Rapid Ingress
+End of their Movement Any unit
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+1
+CP
+Fire Overwatch
+End of their Movement Any unit
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYany unit
+
+1
+CP
+Explosives
+Your Shooting Ghazghkull Thraka, Nazdreg + Meganobz, Bigboss + Warboss + Breaka Boyz, Warboss in Mega Armour + Meganobz, Deffkoptas
+WHEN
+
+Your Shooting phase.
+
+TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one EXPLOSIVES/GRENADES model in your unit.
+2. Select one unengaged enemy unit within 8" of and visible to that model.
+3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
+
+Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+
+USED BYGhazghkull Thraka, Nazdreg, Bigboss, Warboss in Mega Armour · Follow Me Ladz, Deffkoptas
+
+1
+CP
+Crushing Impact
+Your Charge Mozrog Skragbad, Beastboss on Squigosaur ×2
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYMozrog Skragbad, Beastboss · Headwoppa’s Killchoppa, Beastboss
+
+1
+CP
+Heroic Intervention
+End of their Charge · Into the Fray +1CP Any unit
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYany unit
+
+1
+CP
+Epic Challenge
+Fight All but Gretchin ×2, Deffkoptas
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Beastboss, Bigboss, Warboss in Mega Armour · Follow Me Ladz
+
+2
+CP
+Counteroffensive
+Their Fight Any unit
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+1
+CP
+Command Re-roll
+Any phase Any unit
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+1
+CP
+Smokescreen
+Start of their Shooting No unit in this list can use it (needs SMOKE)
+WHEN
+
+Start of your opponent’s Shooting phase.
+
+TARGETOne friendly SMOKE unit.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
+
+USED BYno unit in this list (needs SMOKE)
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## unit ghazghkull-thraka · STRATAGEMS Ghazghkull Thraka
+Epic Hero · 290 pts
+Warlord
+M
+T
+SV
+W
+LD
+OC
+INV
+8"
+10
+2+
+16
+6+
+4
+4+
+
+value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
+
+WHEN TARGETEDLone Operative while within 3" of another friendly ORKS INFANTRY unit · Riled up: 5+ INV
+RANGED
+RNG
+A
+BS
+S
+AP
+D
+Mork’s RoarPICK ONE PROFILE
+➤Point Blank
+9"
+2D6+2
+–
+6
+-1
+1
+CLOSE-QUARTERS, TORRENT
+➤Aimed
+36"
+12
+5+
+6
+-1
+1
+LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 4
+MELEE
+A
+WS
+S
+AP
+D
+
+Fights with both: Gork’s Klaw, plus Adamantine ’Eadbutt on top (extra attacks).
+
+Gork’s Klaw
+7
+2+
+14
+-3
+4
+CLEAVE 2, DEVASTATING WOUNDS, SUSTAINED HITS 1
+Adamantine ’Eadbutt
+1
+2+
+14
+-2
+D3+3
+DEVASTATING WOUNDS, EXTRA ATTACKS, PRECISION, SUSTAINED HITS 1
+Own aura: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
+STRATAGEMS · WAR HORDE
+Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+ABILITIES
+Supreme Commander
+
+If this model is in your army, it must be your WARLORD.
+
+Makari, Hoist Dat Banner!
+Once per battle, per army
+Your Movement
+
+Once per battle, per army · Movement · Your turn
+
+In your Movement phase, you can select a number of friendly ORKS units equal to or less than the current battle round number. Those units are riled up until the start of your next turn.
+
+Place one Makari token next to the unit, removing it after this ability is used.
+
+Da Grand Warlord’s Ladz
+
+While this unit is within 3" of another friendly ORKS INFANTRY unit, this unit has Lone Operative.
+
+Prophet of Da Great Waaagh!
+Fight
+
+Aura · Fight · Either turn
+
+While a friendly ORKS unit is within 6" of this unit, that unit’s melee attacks have:
+
++1 to hit rolls.
++1 to wound rolls.
+
+RULESWaaagh!, Da Boss, Get Stuck In · Keywords
+
+STRATAGEMS
+
+WAR HORDE Close-range Dakka, Hit ’Em Harder, Orks Is Never Beaten
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Mozrog Skragbad ›
+
+######## unit mozrog-skragbad · GHAZGHKULL THRAKA Mozrog Skragbad
+Epic Hero · 170 pts
+M
+T
+SV
+W
+LD
+OC
+INV
+10"
+9
+3+
+10
+6+
+3
+4+
+
+value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
+
+WHEN TARGETEDFeel No Pain 5+ · Destroyed in the Fight phase before being selected to fight: on a 2+ it stays until it has fought or the phase ends · Riled up: 5+ INV
+RANGED
+RNG
+A
+BS
+S
+AP
+D
+Thump Gun
+18"
+3
+5+
+6
+0
+2
+ANTI-MONSTER/VEHICLE 4+
+MELEE
+A
+WS
+S
+AP
+D
+
+Fights with both: Gutrippa, plus Big Chompa’s Jaws on top (extra attacks).
+
+GutrippaPICK ONE PROFILE
+➤HunterMON/VEH ONLY
+6
+2+
+12
+-2
+D6+1
+LETHAL HITS, SUSTAINED HITS 1
+➤Standard
+6
+2+
+9
+-2
+2
+CLEAVE 1, SUSTAINED HITS 1
+Big Chompa’s Jaws
+3
+3+
+7
+-2
+4
+ANTI-MONSTER/VEHICLE 3+, EXTRA ATTACKS, SUSTAINED HITS 1
+vs MONSTER/VEHICLE: can re-roll wound rolls (Da Bigger Dey Iz…)
+Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
+STRATAGEMS · WAR HORDE
+Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+ABILITIES
+Beast Snagga Following
+Every BEAST SNAGGA unit in this list is a MONSTER CHARACTER
+
+Every BEAST SNAGGA unit in this list is a MONSTER CHARACTER
+
+While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units), this unit has Lone Operative.
+
+One Last Kill
+Fight
+
+Fight · Either turn
+
+In the Fight phase, when this model is destroyed, if this unit has not been selected to fight this phase, roll one D6:
+
+On a 2+, do not remove this model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield.
+Da Bigger Dey Iz…
+Fight
+
+Fight · Either turn
+
+This unit’s melee attacks that target a MONSTER/VEHICLE unit can re-roll wound rolls.
+
+RULESFeel No Pain 5+, Waaagh!, Get Stuck In · Keywords
+
+STRATAGEMS
+
+WAR HORDE Close-range Dakka, Hit ’Em Harder, Orks Is Never Beaten
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+‹ Ghazghkull Thraka
+Nazdreg ›
+
+######## unit nazdreg-meganobz · MOZROG SKRAGBAD Nazdreg
+Epic Hero · 405 pts · leading Meganobz
+M
+T
+SV
+W
+LD
+OC
+INV
+Nazdreg
+5"
+7
+2+
+8
+6+
+1
+5+
+Meganob
+×6
+5"
+6
+2+
+3
+7+
+1
+–
+
+1× Nazdreg · 6× Meganob w/ Twin Killsaw · 165 + Meganobz 240 pts
+
+value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
+
+WHEN TARGETEDAttacks that target this unit have -1 AP · Riled up: 5+ INV
+RANGED
+RNG
+A
+BS
+S
+AP
+D
+Kustom Blasta XALL 3 CAN FIRE
++Skorcha
+12"
+3
+–
+5
+-1
+1
+BLAST 1, TORRENT, IGNORES COVER
++Gatler
+24"
+6
+4+
+9
+-2
+3
+HAZARDOUS, IGNORES COVER
++Shoota
+18"
+4
+4+
+5
+-1
+1
+LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 2, IGNORES COVER
+MELEE
+A
+WS
+S
+AP
+D
+
+NAZDREGFights with both: Moonchewa, plus Kustom Blasta X on top (extra attacks).
+
+Moonchewa
+5
+2+
+12
+-2
+3
+CLEAVE 1, TWIN-LINKED, SUSTAINED HITS 1
+Kustom Blasta X
+6
+2+
+5
+-1
+1
+CLEAVE 1, EXTRA ATTACKS, SUSTAINED HITS 1
+MEGANOBZ
+Twin Killsaw×6
+3
+4+
+10
+-2
+3
+TWIN-LINKED, SUSTAINED HITS 1
+WHOLE UNIT
+Riled up, Fight phase: +1 to hit rolls (Krumpin’ Time)
+Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
+STRATAGEMS · WAR HORDE
+Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+ABILITIES“this unit” = the whole attached unit
+NAZDREG
+Nazdreg’s Know-wotz
+This unit has Deep Strike.
+This unit’s ranged attacks have [IGNORES COVER].
+Supreme Kunnin’
+Once per phase, per army
+Their Movement
+
+Once per phase, per army · Movement · Their turn
+
+In your opponent’s Movement phase, when an enemy unit ends a move within 8" of this unit, if this unit is unengaged, this unit can:
+
+Make a normal move of up to D6".
+Or: If this unit is riled up, make a normal move of up to 5".
+Intimidating Motivation
+Once per battle round, per army
+Your Movement
+
+Once per battle round, per army · Movement · Your turn
+
+In your Movement phase, at the start or end of this unit’s move, you can select one friendly ORKS unit within 6" of this unit. That unit:
+
+Is no longer battle-shocked.
+Is riled up until the start of your next turn.
+MEGANOBZ
+Krumpin’ Time
+Fight
+
+Fight · Either turn
+
+In the Fight phase, if this unit is riled up, this unit has +1 to hit rolls.
+
+Arrogant Invulnerability
+
+Attacks that target this unit have -1 AP.
+
+RULESWaaagh!, Leader, Da Boss, Deep Strike, Get Stuck In · Keywords
+
+STRATAGEMS
+
+WAR HORDE Close-range Dakka, Hit ’Em Harder, Orks Is Never Beaten, Breakin’ Heads
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+‹ Mozrog Skragbad
+Beastboss · Headwoppa’s Killchoppa ›
+
+######## unit beastboss-on-squigosaur-headwoppas-killchoppa · NAZDREG Beastboss on Squigosaur
+Character · 155 pts
+Headwoppa’s Killchoppa
+M
+T
+SV
+W
+LD
+OC
+INV
+10"
+9
+3+
+10
+6+
+3
+5+
+
+value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
+
+WHEN TARGETEDFeel No Pain 5+ · Riled up: 5+ INV
+RANGED
+RNG
+A
+BS
+S
+AP
+D
+
+Can shoot with one or both (Close-quarters does not limit MONSTER models).
+
+Slugga
+12"
+1
+5+
+4
+0
+1
+CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
+Thump Gun
+18"
+3
+5+
+6
+0
+2
+ANTI-MONSTER/VEHICLE 4+
+MELEE
+A
+WS
+S
+AP
+D
+
+Fights with both: Beastchoppa, plus Squigosaur’s jaws on top (extra attacks).
+
+BeastchoppaPICK ONE PROFILE
+➤HunterMON/VEH ONLY
+6
+2+
+12
+-2
+D6
+SUSTAINED HITS 1
+➤Standard
+6
+2+
+6
+-2
+2
+CLEAVE 1, SUSTAINED HITS 1
+Squigosaur’s jaws
+3
+3+
+7
+-2
+3
+ANTI-MONSTER/VEHICLE 3+, EXTRA ATTACKS, SUSTAINED HITS 1
+Made a charge move this turn: +1 AP (Headwoppa’s Killchoppa)
+Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
+STRATAGEMS · WAR HORDE
+Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+ABILITIES
+Thundering Stampede
+Charge
+
+Aura · Charge · Either turn
+
+Friendly BEAST SNAGGA units within 6" of this unit have +1 to charge rolls.
+
+Boss of da Hunt
+Every BEAST SNAGGA unit in this list is a MONSTER CHARACTER
+
+Every BEAST SNAGGA unit in this list is a MONSTER CHARACTER
+
+While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units), this unit has Lone Operative.
+
+Keep Huntin’!
+Once per battle round, per army
+Your Movement
+
+Once per battle round, per army · Movement · Your turn
+
+In your Movement phase, at the start or end of this unit’s move, you can select one friendly BEAST SNAGGA unit within 6" of this unit. That unit:
+
+Is no longer battle-shocked.
+Is riled up until the start of your next turn.
+Headwoppa’s Killchoppa
+Enhancement
+Fight
+
+Enhancement · Fight · Either turn
+
+ORKS model only. If this unit made a charge move this turn, this model’s melee attacks have +1 AP.
+
+RULESDa Boss, Waaagh!, Feel No Pain 5+, Get Stuck In · Keywords
+
+STRATAGEMS
+
+WAR HORDE Close-range Dakka, Hit ’Em Harder, Orks Is Never Beaten
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+‹ Nazdreg
+Beastboss ›
+
+######## unit beastboss-on-squigosaur · BEASTBOSS ON SQUIGOSAUR Beastboss on Squigosaur
+Character · 140 pts
+M
+T
+SV
+W
+LD
+OC
+INV
+10"
+9
+3+
+10
+6+
+3
+5+
+
+value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
+
+WHEN TARGETEDFeel No Pain 5+ · Riled up: 5+ INV
+RANGED
+RNG
+A
+BS
+S
+AP
+D
+
+Can shoot with one or both (Close-quarters does not limit MONSTER models).
+
+Slugga
+12"
+1
+5+
+4
+0
+1
+CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
+Thump Gun
+18"
+3
+5+
+6
+0
+2
+ANTI-MONSTER/VEHICLE 4+
+MELEE
+A
+WS
+S
+AP
+D
+
+Fights with both: Beastchoppa, plus Squigosaur’s jaws on top (extra attacks).
+
+BeastchoppaPICK ONE PROFILE
+➤HunterMON/VEH ONLY
+6
+2+
+12
+-2
+D6
+SUSTAINED HITS 1
+➤Standard
+6
+2+
+6
+-2
+2
+CLEAVE 1, SUSTAINED HITS 1
+Squigosaur’s jaws
+3
+3+
+7
+-2
+3
+ANTI-MONSTER/VEHICLE 3+, EXTRA ATTACKS, SUSTAINED HITS 1
+Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
+STRATAGEMS · WAR HORDE
+Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+ABILITIES
+Thundering Stampede
+Charge
+
+Aura · Charge · Either turn
+
+Friendly BEAST SNAGGA units within 6" of this unit have +1 to charge rolls.
+
+Boss of da Hunt
+Every BEAST SNAGGA unit in this list is a MONSTER CHARACTER
+
+Every BEAST SNAGGA unit in this list is a MONSTER CHARACTER
+
+While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units), this unit has Lone Operative.
+
+Keep Huntin’!
+Once per battle round, per army
+Your Movement
+
+Once per battle round, per army · Movement · Your turn
+
+In your Movement phase, at the start or end of this unit’s move, you can select one friendly BEAST SNAGGA unit within 6" of this unit. That unit:
+
+Is no longer battle-shocked.
+Is riled up until the start of your next turn.
+
+RULESDa Boss, Waaagh!, Feel No Pain 5+, Get Stuck In · Keywords
+
+STRATAGEMS
+
+WAR HORDE Close-range Dakka, Hit ’Em Harder, Orks Is Never Beaten
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+‹ Beastboss · Headwoppa’s Killchoppa
+Bigboss ›
+
+######## unit bigboss-warboss-breaka-boyz · BEASTBOSS ON SQUIGOSAUR Bigboss
+Character · 290 pts · Bigboss supporting, Warboss leading Breaka Boyz
+Kunnin’ But Brutal (Warboss)
+M
+T
+SV
+W
+LD
+OC
+INV
+Bigboss
+6"
+5
+4+
+5
+7+
+1
+–
+Warboss
+6"
+6
+4+
+6
+6+
+1
+5+
+Nob
+6"
+5
+4+
+3
+7+
+1
+–
+Breaka Boy
+×5
+6"
+5
+4+
+2
+7+
+1
+–
+
+value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
+
+WHEN TARGETEDRiled up: 5+ INV
+RANGED
+RNG
+A
+BS
+S
+AP
+D
+BIGBOSS
+Slugga
+12"
+1
+5+
+4
+0
+1
+CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
+WARBOSS
+Kombi-skorchaPICK ONE PROFILE
+➤Skorcha
+12"
+3
+–
+5
+0
+1
+BLAST 1, TORRENT
+➤Shoota
+18"
+2
+5+
+4
+0
+1
+LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 1
+BREAKA BOYZ
+Rokkit pistol
+12"
+1
+5+
+10
+-2
+3
+CLOSE-QUARTERS
+WHOLE UNIT
+Boss’ Ammo Runt used (your Shooting phase, when selected to shoot): Warboss +1 to hit rolls
+MELEE
+A
+WS
+S
+AP
+D
+BIGBOSS
+Big Choppa
+5
+3+
+7
+-2
+2
+PRECISION, SUSTAINED HITS 1
+WARBOSS
+Power Klaw
+6
+2+
+12
+-2
+2
+SUSTAINED HITS 1
+BREAKA BOYZ
+
+Nob picks one to fight with: Choppa or Smash Hammer.
+
+The others: one each (×N = how many the unit has).
+
+ChoppaNOB
+4
+3+
+5
+-1
+1
+SUSTAINED HITS 1
+Smash Hammer×4PICK ONE PROFILE
+➤HunterMON/VEH ONLY
+3
+3+
+12
+-2
+3
+SUSTAINED HITS 1
+➤Standard
+3
+3+
+7
+-2
+2
+SUSTAINED HITS 1
+KnucklebustasBREAKA BOY
+4
+3+
+5
+-2
+2
+ANTI-MONSTER/VEHICLE 4+, SUSTAINED HITS 1
+TankhammerBREAKA BOY
+3
+4+
+12
+-2
+3
+DEVASTATING WOUNDS, HAZARDOUS, SUSTAINED HITS 1
+WHOLE UNIT
+Always: +1 to hit rolls (Sumfin’ to Prove)
+Made a charge move this turn: Warboss +3 A, +2 S (Might is Right)
+Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
+STRATAGEMS · WAR HORDE
+Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+ABILITIES“this unit” = the whole attached unit
+BIGBOSS
+Sumfin’ to Prove
+Fight
+
+Fight · Either turn
+
+This unit’s melee attacks have +1 to hit rolls.
+
+WARBOSS
+Might is Right
+Fight
+
+Fight · Either turn
+
+If this unit made a charge move this turn, this model’s melee attacks have:
+
++3 A.
++2 S.
+Boss’ Ammo Runt
+Once per battle, per unit
+Your Shooting
+
+Once per battle, per unit · Shooting · Your turn
+
+In your Shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this model’s ranged attacks have +1 to hit rolls.
+
+Place a Boss’ Ammo Runt token next to the unit, removing it when this ability is used.
+
+Intimidating Motivation
+Once per battle round, per army
+Your Movement
+
+Once per battle round, per army · Movement · Your turn
+
+In your Movement phase, at the start or end of this unit’s move, you can select one friendly ORKS unit within 6" of this unit. That unit:
+
+Is no longer battle-shocked.
+Is riled up until the start of your next turn.
+Kunnin’ But Brutal
+Enhancement
+Your Movement · Your Shooting · Your Charge
+
+Enhancement · Movement / Shooting / Charge · Your turn
+
+ORKS model only. When this unit is selected to make a fall-back move, that fall-back move does not prevent this unit from being eligible to shoot/declare a charge.
+
+BREAKA BOYZ
+Trophy Hunters
+Charge
+
+Charge · Either turn
+
+This unit has +1 to charge rolls.
+
+Bomb Squig
+Once per turn, twice per battle, per unit
+Your Movement
+
+Once per turn, twice per battle, per unit · Movement · Your turn
+
+In your Movement phase, when this unit ends a normal move, you can select one visible enemy unit within 12" of this unit and roll one D6:
+
+On a 3+, that enemy unit suffers D3 mortal wounds.
+
+Place two Bomb Squig tokens next to the unit, removing one each time this ability is used.
+
+RULESWaaagh!, Support, Da Boss, Leader, Get Stuck In · Models & keywords
+
+STRATAGEMS
+
+WAR HORDE Close-range Dakka, Hit ’Em Harder, Orks Is Never Beaten, Breakin’ Heads
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+‹ Beastboss
+Warboss in Mega Armour · Follow Me Ladz ›
+
+######## unit warboss-in-mega-armour-meganobz · BIGBOSS Warboss in Mega Armour
+Character · 375 pts · leading Meganobz
+Follow Me Ladz
+M
+T
+SV
+W
+LD
+OC
+INV
+Warboss in Mega Armour
+7"
+7
+2+
+7
+6+
+1
+5+
+Meganob
+×6
+7"
+6
+2+
+3
+7+
+1
+–
+
+value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
+
+WHEN TARGETEDAttacks that target this unit have -1 AP · Riled up: 5+ INV
+RANGED
+RNG
+A
+BS
+S
+AP
+D
+Big Shoota
+36"
+3
+4+
+5
+0
+1
+LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 2
+MELEE
+A
+WS
+S
+AP
+D
+WARBOSS IN MEGA ARMOUR
+’Uge Choppa
+5
+2+
+12
+-2
+3
+CLEAVE 2, SUSTAINED HITS 1
+MEGANOBZ
+Twin Killsaw×6
+3
+4+
+10
+-2
+3
+TWIN-LINKED, SUSTAINED HITS 1
+WHOLE UNIT
+Riled up, Fight phase: +1 to hit rolls (Krumpin’ Time)
+Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
+STRATAGEMS · WAR HORDE
+Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+ABILITIES“this unit” = the whole attached unit
+WARBOSS IN MEGA ARMOUR
+Krushin’ Impetus
+Charge
+
+Charge · Either turn
+
+When this unit ends a charge move, you can select one enemy unit engaged with this unit. If you do, roll one D6 for each model in this unit engaged with that enemy unit:
+
+For each 3+, that enemy unit suffers 1 mortal wound.
+Intimidating Motivation
+Once per battle round, per army
+Your Movement
+
+Once per battle round, per army · Movement · Your turn
+
+In your Movement phase, at the start or end of this unit’s move, you can select one friendly ORKS unit within 6" of this unit. That unit:
+
+Is no longer battle-shocked.
+Is riled up until the start of your next turn.
+Follow Me Ladz
+Enhancement
+
+Enhancement
+
+ORKS model only. This unit has +2" M.
+
+MEGANOBZ
+Krumpin’ Time
+Fight
+
+Fight · Either turn
+
+In the Fight phase, if this unit is riled up, this unit has +1 to hit rolls.
+
+Arrogant Invulnerability
+
+Attacks that target this unit have -1 AP.
+
+RULESDa Boss, Leader, Waaagh!, Get Stuck In · Models & keywords
+
+STRATAGEMS
+
+WAR HORDE Close-range Dakka, Hit ’Em Harder, Orks Is Never Beaten, Breakin’ Heads
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+‹ Bigboss
+Gretchin ›
+
+######## unit gretchin · WARBOSS IN MEGA ARMOUR Gretchin
+Infantry · 45 pts each · ×2 in list
+M
+T
+SV
+W
+LD
+OC
+INV
+6"
+2
+6+
+1
+8+
+1
+–
+
+10× Gretchin
+
+value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
+
+WHEN TARGETEDRiled up: 5+ INV
+RANGED
+RNG
+A
+BS
+S
+AP
+D
+Grot Blasta×10
+12"
+1
+4+
+3
+0
+1
+CLOSE-QUARTERS
+MELEE
+A
+WS
+S
+AP
+D
+Scavenged Shivs×10
+1
+5+
+2
+0
+1
+SUSTAINED HITS 1
+Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
+STRATAGEMS · WAR HORDE
+Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+ABILITIES
+Downtrodden
+
+For the purposes of transport capacity, each 2 Gretchin models (rounding up) take up the space of 1 model.
+
+Thievin’ Scavengers
+Your Movement
+
+Movement · Your turn
+
+At the end of your Movement phase, if this unit is controlling an objective, that objective is secured.
+
+RULESWaaagh!, Get Stuck In · Keywords
+
+STRATAGEMS
+
+WAR HORDE Close-range Dakka, Hit ’Em Harder, Orks Is Never Beaten
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
+
+‹ Warboss in Mega Armour · Follow Me Ladz
+Deffkoptas ›
+
+######## unit deffkoptas · GRETCHIN Deffkoptas
+Mounted · 85 pts
+M
+T
+SV
+W
+LD
+OC
+INV
+12"
+6
+4+
+4
+7+
+2
+6+
+
+2× Deffkopta · 1× Deffkopta w/ Kustom mega-blasta
+
+value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
+
+WHEN TARGETEDRiled up: 5+ INV
+RANGED
+RNG
+A
+BS
+S
+AP
+D
+
+Deffkopta can shoot with Slugga or Rokkit Launcha, not both (Close-quarters); in close-quarters shooting, Slugga only.
+
+Deffkopta w/ Kustom mega-blasta can shoot with Slugga or Kustom Mega-blasta, not both (Close-quarters); in close-quarters shooting, Slugga only.
+
+Rokkit Launcha×2PICK ONE PROFILE
+➤Busta
+24"
+2
+5+
+10
+-2
+3
+LETHAL HITS
+➤Blasta
+24"
+2
+5+
+4
+0
+1
+BLAST 2
+Slugga×3
+12"
+1
+5+
+4
+0
+1
+CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
+Kustom Mega-blastaDEFFKOPTA
+24"
+3
+5+
+9
+-2
+3
+HAZARDOUS, LETHAL HITS
+Your Shooting phase, after an ingress move this turn: +1 to hit rolls (Deff from Above)
+MELEE
+A
+WS
+S
+AP
+D
+
+Pick one to fight with: Choppa or Spinnin’ Blades.
+
+Choppa×3
+3
+4+
+5
+-1
+1
+SUSTAINED HITS 1
+Spinnin’ Blades×3
+4
+3+
+5
+-1
+1
+CLEAVE 1, HAZARDOUS, SUSTAINED HITS 1
+Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
+STRATAGEMS · WAR HORDE
+Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+ABILITIES
+Aerial Manoover
+Their Fight
+
+Fight · Their turn
+
+At the end of your opponent’s Fight phase, if this unit is unengaged, you can place this unit in strategic reserves.
+
+Deff from Above
+Your Shooting
+
+Shooting · Your turn
+
+In your Shooting phase, if this unit made an ingress move this turn, this unit’s ranged attacks have +1 to hit rolls.
+
+RULESDeep Strike, Waaagh!, Get Stuck In · Keywords
+
+STRATAGEMS
+
+WAR HORDE Fungus-fuel Injection, Close-range Dakka, Hit ’Em Harder, Orks Is Never Beaten
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Counteroffensive, Command Re-roll
+
+‹ Gretchin
+
+######## popup ability:melee|Arrogant Invulnerability|Attacks that target this unit have -1 **AP**. · DEFFKOPTAS Melee
+ABILITY
+
+Arrogant Invulnerability
+
+Attacks that target this unit have -1 AP.
+
+UNITNazdreg, Warboss in Mega Armour · Follow Me Ladz
+
+######## popup ability:melee|Bomb Squig|In your Movement phase, when this unit ends a **normal move**, you can select one **visible** enemy unit within 12" of this unit and roll one D6:
+- On a 3+, that enemy unit suffers D3 **mortal wounds**.
+*Place two Bomb Squig tokens next to the unit, removing one each time this ability is used.* · MELEE Melee
+ABILITY · ONCE PER TURN, TWICE PER BATTLE, PER UNIT · MOVEMENT · YOUR TURN
+
+Bomb Squig
+
+In your Movement phase, when this unit ends a normal move, you can select one visible enemy unit within 12" of this unit and roll one D6:
+
+On a 3+, that enemy unit suffers D3 mortal wounds.
+
+Place two Bomb Squig tokens next to the unit, removing one each time this ability is used.
+
+UNITBigboss
+
+######## popup ability:melee|Boss’ Ammo Runt|In your Shooting phase, when this unit is **selected to shoot**, you can use this ability. If you do, this model’s ranged attacks have +1 to **hit rolls**.
+*Place a Boss’ Ammo Runt token next to the unit, removing it when this ability is used.* · MELEE Melee
+ABILITY · ONCE PER BATTLE, PER UNIT · SHOOTING · YOUR TURN
+
+Boss’ Ammo Runt
+
+In your Shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this model’s ranged attacks have +1 to hit rolls.
+
+Place a Boss’ Ammo Runt token next to the unit, removing it when this ability is used.
+
+UNITBigboss
+
+######## popup ability:melee|Da Bigger Dey Iz…|This unit’s melee attacks that target a **MONSTER/VEHICLE** unit can re-roll **wound rolls**. · MELEE Melee
+ABILITY · FIGHT · EITHER TURN
+
+Da Bigger Dey Iz…
+
+This unit’s melee attacks that target a MONSTER/VEHICLE unit can re-roll wound rolls.
+
+UNITMozrog Skragbad
+
+######## popup ability:melee|Da Grand Warlord’s Ladz|While this unit is within 3" of another friendly **ORKS INFANTRY** unit, this unit has **Lone Operative**. · MELEE Melee
+ABILITY
+
+Da Grand Warlord’s Ladz
+
+While this unit is within 3" of another friendly ORKS INFANTRY unit, this unit has Lone Operative.
+
+UNITGhazghkull Thraka
+
+######## popup ability:melee|Deff from Above|In your Shooting phase, if this unit made an **ingress move** this turn, this unit’s ranged attacks have +1 to **hit rolls**. · MELEE Melee
+ABILITY · SHOOTING · YOUR TURN
+
+Deff from Above
+
+In your Shooting phase, if this unit made an ingress move this turn, this unit’s ranged attacks have +1 to hit rolls.
+
+UNITDeffkoptas
+
+######## popup ability:melee|Headwoppa’s Killchoppa|**ORKS** model only. If this unit made a **charge move** this turn, this model’s melee attacks have +1 AP. · MELEE Melee
+ABILITY · ENHANCEMENT · FIGHT · EITHER TURN
+
+Headwoppa’s Killchoppa
+
+ORKS model only. If this unit made a charge move this turn, this model’s melee attacks have +1 AP.
+
+UNITBeastboss · Headwoppa’s Killchoppa
+
+######## popup ability:melee|Krumpin’ Time|In the Fight phase, if this unit is **riled up**, this unit has +1 to **hit rolls**. · MELEE Melee
+ABILITY · FIGHT · EITHER TURN
+
+Krumpin’ Time
+
+In the Fight phase, if this unit is riled up, this unit has +1 to hit rolls.
+
+UNITNazdreg, Warboss in Mega Armour · Follow Me Ladz
+
+######## popup ability:melee|Makari, Hoist Dat Banner!|In your Movement phase, you can select a number of friendly **ORKS** units equal to or less than the current battle round number. Those units are **riled up** until the start of your next turn.
+*Place one Makari token next to the unit, removing it after this ability is used.* · MELEE Melee
+ABILITY · ONCE PER BATTLE, PER ARMY · MOVEMENT · YOUR TURN
+
+Makari, Hoist Dat Banner!
+
+In your Movement phase, you can select a number of friendly ORKS units equal to or less than the current battle round number. Those units are riled up until the start of your next turn.
+
+Place one Makari token next to the unit, removing it after this ability is used.
+
+UNITGhazghkull Thraka
+
+######## popup ability:melee|Might is Right|If this unit made a **charge move** this turn, this model’s melee attacks have:
+- +3 **A**.
+- +2 **S**. · MELEE Melee
+ABILITY · FIGHT · EITHER TURN
+
+Might is Right
+
+If this unit made a charge move this turn, this model’s melee attacks have:
+
++3 A.
++2 S.
+
+UNITBigboss
+
+######## popup ability:melee|One Last Kill|In the Fight phase, when this model is **destroyed**, if this unit has not been **selected to fight** this phase, roll one D6:
+- On a 2+, do not remove this model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield. · MELEE Melee
+ABILITY · FIGHT · EITHER TURN
+
+One Last Kill
+
+In the Fight phase, when this model is destroyed, if this unit has not been selected to fight this phase, roll one D6:
+
+On a 2+, do not remove this model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield.
+
+UNITMozrog Skragbad
+
+######## popup ability:melee|Prophet of Da Great Waaagh!|While a friendly **ORKS** unit is within 6" of this unit, that unit’s melee attacks have:
+- +1 to **hit rolls**.
+- +1 to **wound rolls**. · MELEE Melee
+ABILITY · AURA · FIGHT · EITHER TURN
+
+Prophet of Da Great Waaagh!
+
+While a friendly ORKS unit is within 6" of this unit, that unit’s melee attacks have:
+
++1 to hit rolls.
++1 to wound rolls.
+
+UNITGhazghkull Thraka
+
+######## popup ability:melee|Sumfin’ to Prove|This unit’s melee attacks have +1 to **hit rolls**. · MELEE Melee
+ABILITY · FIGHT · EITHER TURN
+
+Sumfin’ to Prove
+
+This unit’s melee attacks have +1 to hit rolls.
+
+UNITBigboss
+
+######## popup enh:war-horde|Follow Me Ladz · MELEE Melee
+ENHANCEMENT · WAR HORDE · 20 PTS
+
+Follow Me Ladz
+
+ORKS model only. This unit has +2" M.
+
+ONWarboss in Mega Armour + Meganobz
+
+######## popup enh:war-horde|Headwoppa’s Killchoppa · MELEE Melee
+ENHANCEMENT · WAR HORDE · 15 PTS
+
+Headwoppa’s Killchoppa
+
+ORKS model only. If this unit made a charge move this turn, this model’s melee attacks have +1 AP.
+
+ONBeastboss on Squigosaur
+
+######## popup enh:war-horde|Kunnin’ But Brutal · MELEE Melee
+ENHANCEMENT · WAR HORDE · 20 PTS
+
+Kunnin’ But Brutal
+
+ORKS model only. When this unit is selected to make a fall-back move, that fall-back move does not prevent this unit from being eligible to shoot/declare a charge.
+
+ONWarboss (Bigboss + Warboss + Breaka Boyz)
+
+######## popup grant:["Follow Me Ladz","warboss-in-mega-armour-meganobz","M 7\"",null] · MELEE Melee
+M 7" · GRANTED BY
+
+Follow Me Ladz
+
+Warboss in Mega Armour · Enhancement
+
+ORKS model only. This unit has +2" M.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Get Stuck In","beastboss-on-squigosaur","SUSTAINED HITS 1","SUSTAINED HITS 1"] · MELEE Melee
+SUSTAINED HITS 1 · GRANTED BY
+
+Get Stuck In
+
+War Horde detachment rule
+
+Friendly ORKS units’ melee attacks have [SUSTAINED HITS 1].
+
+Already in the keywords shown (as New Recruit and BSData list them).
+
+SUSTAINED HITS 1 Core rule
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+######## popup grant:["Get Stuck In","beastboss-on-squigosaur-headwoppas-killchoppa","SUSTAINED HITS 1","SUSTAINED HITS 1"] · MELEE Melee
+SUSTAINED HITS 1 · GRANTED BY
+
+Get Stuck In
+
+War Horde detachment rule
+
+Friendly ORKS units’ melee attacks have [SUSTAINED HITS 1].
+
+Already in the keywords shown (as New Recruit and BSData list them).
+
+SUSTAINED HITS 1 Core rule
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+######## popup grant:["Get Stuck In","bigboss-warboss-breaka-boyz","SUSTAINED HITS 1","SUSTAINED HITS 1"] · MELEE Melee
+SUSTAINED HITS 1 · GRANTED BY
+
+Get Stuck In
+
+War Horde detachment rule
+
+Friendly ORKS units’ melee attacks have [SUSTAINED HITS 1].
+
+Already in the keywords shown (as New Recruit and BSData list them).
+
+SUSTAINED HITS 1 Core rule
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+######## popup grant:["Get Stuck In","deffkoptas","SUSTAINED HITS 1","SUSTAINED HITS 1"] · MELEE Melee
+SUSTAINED HITS 1 · GRANTED BY
+
+Get Stuck In
+
+War Horde detachment rule
+
+Friendly ORKS units’ melee attacks have [SUSTAINED HITS 1].
+
+Already in the keywords shown (as New Recruit and BSData list them).
+
+SUSTAINED HITS 1 Core rule
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+######## popup grant:["Get Stuck In","ghazghkull-thraka","SUSTAINED HITS 1","SUSTAINED HITS 1"] · MELEE Melee
+SUSTAINED HITS 1 · GRANTED BY
+
+Get Stuck In
+
+War Horde detachment rule
+
+Friendly ORKS units’ melee attacks have [SUSTAINED HITS 1].
+
+Already in the keywords shown (as New Recruit and BSData list them).
+
+SUSTAINED HITS 1 Core rule
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+######## popup grant:["Get Stuck In","gretchin","SUSTAINED HITS 1","SUSTAINED HITS 1"] · MELEE Melee
+SUSTAINED HITS 1 · GRANTED BY
+
+Get Stuck In
+
+War Horde detachment rule
+
+Friendly ORKS units’ melee attacks have [SUSTAINED HITS 1].
+
+Already in the keywords shown (as New Recruit and BSData list them).
+
+SUSTAINED HITS 1 Core rule
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+######## popup grant:["Get Stuck In","mozrog-skragbad","SUSTAINED HITS 1","SUSTAINED HITS 1"] · MELEE Melee
+SUSTAINED HITS 1 · GRANTED BY
+
+Get Stuck In
+
+War Horde detachment rule
+
+Friendly ORKS units’ melee attacks have [SUSTAINED HITS 1].
+
+Already in the keywords shown (as New Recruit and BSData list them).
+
+SUSTAINED HITS 1 Core rule
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+######## popup grant:["Get Stuck In","nazdreg-meganobz","SUSTAINED HITS 1","SUSTAINED HITS 1"] · MELEE Melee
+SUSTAINED HITS 1 · GRANTED BY
+
+Get Stuck In
+
+War Horde detachment rule
+
+Friendly ORKS units’ melee attacks have [SUSTAINED HITS 1].
+
+Already in the keywords shown (as New Recruit and BSData list them).
+
+SUSTAINED HITS 1 Core rule
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+######## popup grant:["Get Stuck In","warboss-in-mega-armour-meganobz","SUSTAINED HITS 1","SUSTAINED HITS 1"] · MELEE Melee
+SUSTAINED HITS 1 · GRANTED BY
+
+Get Stuck In
+
+War Horde detachment rule
+
+Friendly ORKS units’ melee attacks have [SUSTAINED HITS 1].
+
+Already in the keywords shown (as New Recruit and BSData list them).
+
+SUSTAINED HITS 1 Core rule
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+######## popup grant:["Nazdreg’s Know-wotz","nazdreg-meganobz","IGNORES COVER","IGNORES COVER"] · MELEE Melee
+IGNORES COVER · GRANTED BY
+
+Nazdreg’s Know-wotz
+
+Nazdreg · datasheet ability
+
+This unit has Deep Strike.
+This unit’s ranged attacks have [IGNORES COVER].
+
+Already in the keywords shown (as New Recruit and BSData list them).
+
+IGNORES COVER Core rule
+
+Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+######## popup kw:beastboss-on-squigosaur · MELEE Melee
+CHARACTER · 140 PTS
+
+Beastboss on Squigosaur
+
+1× Beastboss on Squigosaur
+
+Base 80mm
+
+KEYWORDS
+
+Beast Snagga, Beastboss on Squigosaur, Character, Faction: Orks, Monster, Warboss
+
+######## popup kw:beastboss-on-squigosaur-headwoppas-killchoppa · MELEE Melee
+CHARACTER · 155 PTS
+
+Beastboss on Squigosaur
+
+1× Beastboss on Squigosaur
+
+Base 80mm
+
+KEYWORDS
+
+Beast Snagga, Beastboss on Squigosaur, Character, Faction: Orks, Monster, Warboss
+
+######## popup kw:bigboss-warboss-breaka-boyz · MELEE Melee
+CHARACTER · 290 PTS
+
+Bigboss
+
+1× Bigboss · 1× Warboss · 1× Nob · 3× Breaka Boy · 1× Breaka Boy w/ Knucklebustas · 1× Breaka Boy w/ Tankhammer · 50 + Warboss 120 + Breaka Boyz 120 pts
+
+Base 40mm / 50mm / 32mm
+
+KEYWORDS
+
+Bigboss, Character, Faction: Orks, Infantry, Grenades, Warboss, Breaka Boyz, Explosives
+
+Grenades, Warboss, Breaka Boyz, Explosives come from the combined unit.
+
+######## popup kw:deffkoptas · MELEE Melee
+MOUNTED · 85 PTS
+
+Deffkoptas
+
+2× Deffkopta · 1× Deffkopta w/ Kustom mega-blasta
+
+Base 75×42mm
+
+KEYWORDS
+
+Deffkoptas, Explosives, Faction: Orks, Fly, Mounted, Speed Freeks
+
+######## popup kw:ghazghkull-thraka · MELEE Melee
+EPIC HERO · 290 PTS
+
+Ghazghkull Thraka
+
+1× Ghazghkull Thraka
+
+Base 80mm
+
+KEYWORDS
+
+Character, Epic Hero, Explosives, Faction: Orks, Ghazghkull Thraka, Infantry, Warboss, Warlord
+
+######## popup kw:gretchin · MELEE Melee
+INFANTRY · 45 PTS
+
+Gretchin
+
+10× Gretchin
+
+Base 25mm
+
+KEYWORDS
+
+Faction: Orks, Gretchin, Grots, Infantry
+
+######## popup kw:mozrog-skragbad · MELEE Melee
+EPIC HERO · 170 PTS
+
+Mozrog Skragbad
+
+1× Mozrog Skragbad
+
+Base 80mm
+
+KEYWORDS
+
+Beast Snagga, Character, Epic Hero, Faction: Orks, Monster, Mozrog Skragbad
+
+######## popup kw:nazdreg-meganobz · MELEE Melee
+EPIC HERO · 405 PTS
+
+Nazdreg
+
+1× Nazdreg · 6× Meganob w/ Twin Killsaw · 165 + Meganobz 240 pts
+
+Base 60mm / 40mm
+
+KEYWORDS
+
+Character, Epic Hero, Faction: Orks, Infantry, Mega Armour, Nazdreg, Warboss, Explosives, Meganobz
+
+Explosives, Meganobz come from the led Meganobz.
+
+######## popup kw:warboss-in-mega-armour-meganobz · MELEE Melee
+CHARACTER · 375 PTS
+
+Warboss in Mega Armour
+
+1× Warboss in Mega Armour · 6× Meganob w/ Twin Killsaw · 135 + Meganobz 240 pts
+
+Base 50mm / 40mm
+
+KEYWORDS
+
+Character, Faction: Orks, Infantry, Mega Armour, Warboss, Warboss in Mega Armour, Explosives, Meganobz
+
+Explosives, Meganobz come from the led Meganobz.
+
+######## popup rule:ANTI-MONSTER/VEHICLE 3+ · MELEE Melee
+CORE RULE
+
+ANTI-MONSTER/VEHICLE 3+
+
+This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.
+
+Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
+
+IN THIS ARMYMozrog Skragbad, Beastboss · Headwoppa’s Killchoppa, Beastboss, Bigboss
+
+######## popup rule:ANTI-MONSTER/VEHICLE 4+ · MELEE Melee
+CORE RULE
+
+ANTI-MONSTER/VEHICLE 4+
+
+This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.
+
+Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
+
+IN THIS ARMYMozrog Skragbad, Beastboss · Headwoppa’s Killchoppa, Beastboss, Bigboss
+
+######## popup rule:Advance roll · MELEE Melee
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+
+######## popup rule:Attached Units · MELEE Melee
+CORE RULE
+
+Attached Units
+
+Some units have the Leader or Support ability listed on their datasheet (see below). Such units are known as leader units and support units respectively. Both of these abilities allow such units to lead other friendly units (known as bodyguard units) to form attached units. An attached unit is a single unit for all rules purposes. Leader and support units can only lead specific bodyguard units, as listed in the Warhammer 40,000 app.
+
+19.04 Abilities in Attached Units: Abilities/rules that affect a single specified model (e.g. from an enhancement or an item of wargear) only ever apply to that model, even while part of an attached unit.
+
+Otherwise, abilities/rules that affect a unit (or models in it) apply to every model in an attached unit, until the source of that ability/rule is destroyed, as shown below.
+
+SOURCE OF ABILITY/RULE: APPLIES TO THE ATTACHED UNIT UNTIL
+
+Leader/support unit: The last model in that leader/support unit is destroyed.*
+Bodyguard unit (e.g. from a datasheet ability): The last model in that bodyguard unit is destroyed.
+A specific model (e.g. the bearer of an enhancement or an item of wargear): That model is destroyed.
+
+* This means leader/support units continue to benefit from their own ‘while this model is leading a unit’ abilities even after their bodyguard unit is destroyed, provided they started the battle in an attached unit.
+
+In all of the above cases, if that last model was destroyed as the result of an attack, the ability it was conferring upon the attached unit applies until the attacking unit has resolved all of its attacks.
+
+Wahapedia FAQ: When does a model’s or unit’s ability in an attached unit apply to all models in that unit? A rule that applies to ‘this/that unit’ or ‘models in this/that unit’ applies to all models in an attached unit. Rules that just apply to one model in an attached unit (for example, a rule that grants a model Feel No Pain or Lone Operative) only apply to that model, not to all models in the attached unit.
+
+######## popup rule:BLAST 1 · MELEE Melee
+CORE RULE
+
+BLAST 1
+
+Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead.
+
+Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+IN THIS ARMYNazdreg, Bigboss, Deffkoptas
+
+######## popup rule:BLAST 2 · MELEE Melee
+CORE RULE
+
+BLAST 2
+
+Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead.
+
+Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+IN THIS ARMYNazdreg, Bigboss, Deffkoptas
+
+######## popup rule:Battle-shock · MELEE Melee
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+######## popup rule:CLEAVE 1 · MELEE Melee
+CORE RULE
+
+CLEAVE 1
+
+This ability always takes the form [CLEAVE X]. Each time you gather attack dice for a [CLEAVE] weapon, if you only selected one target for all of that weapon’s attacks, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+Example: If a [CLEAVE 1] weapon with an A characteristic of 3 targets one unit containing 16 models, you would gather three additional attack dice for that weapon (for a total of six for that weapon).
+
+IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Beastboss, Warboss in Mega Armour · Follow Me Ladz, Deffkoptas
+
+######## popup rule:CLEAVE 2 · MELEE Melee
+CORE RULE
+
+CLEAVE 2
+
+This ability always takes the form [CLEAVE X]. Each time you gather attack dice for a [CLEAVE] weapon, if you only selected one target for all of that weapon’s attacks, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+Example: If a [CLEAVE 1] weapon with an A characteristic of 3 targets one unit containing 16 models, you would gather three additional attack dice for that weapon (for a total of six for that weapon).
+
+IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Beastboss, Warboss in Mega Armour · Follow Me Ladz, Deffkoptas
+
+######## popup rule:CLOSE-QUARTERS · MELEE Melee
+CORE RULE
+
+CLOSE-QUARTERS
+
+Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with:
+
+One or more of its [CLOSE-QUARTERS] weapons.
+One or more of its other ranged weapons.
+
+[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
+
+IN THIS ARMYGhazghkull Thraka, Beastboss · Headwoppa’s Killchoppa, Beastboss, Bigboss, Gretchin, Deffkoptas
+
+######## popup rule:Charge roll · MELEE Melee
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:Close-quarters · MELEE Melee
+CORE RULE
+
+Close-quarters
+
+Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with:
+
+One or more of its [CLOSE-QUARTERS] weapons.
+One or more of its other ranged weapons.
+
+[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
+
+IN THIS ARMYGhazghkull Thraka, Beastboss · Headwoppa’s Killchoppa, Beastboss, Bigboss, Gretchin, Deffkoptas
+
+######## popup rule:DEVASTATING WOUNDS · MELEE Melee
+CORE RULE
+
+DEVASTATING WOUNDS
+
+Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+
+Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+
+IN THIS ARMYGhazghkull Thraka, Bigboss
+
+######## popup rule:Da Boss · MELEE Melee
+ORKS ARMY RULE
+
+Da Boss
+
+At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.
+
+Wahapedia core rules errata (07.01, CP Generated by a Warlord; not in GW’s printed Core Rules): you do not gain the 1CP while your WARLORD is destroyed.
+
+######## popup rule:Deep Strike · MELEE Melee
+CORE RULE
+
+Deep Strike
+
+Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
+
+App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
+
+IN THIS ARMYNazdreg, Deffkoptas
+
+######## popup rule:EXTRA ATTACKS · MELEE Melee
+CORE RULE
+
+EXTRA ATTACKS
+
+Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step (04.01), for each of those models, you must select:
+
+All of that model’s [EXTRA ATTACKS] weapons.
+One of that model’s other melee weapons, if possible.
+
+IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Beastboss
+
+######## popup rule:Feel No Pain 5+ · MELEE Melee
+CORE RULE
+
+Feel No Pain 5+
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYMozrog Skragbad, Beastboss · Headwoppa’s Killchoppa, Beastboss
+
+######## popup rule:Feel No Pain X+ · MELEE Melee
+CORE RULE
+
+Feel No Pain X+
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYMozrog Skragbad, Beastboss · Headwoppa’s Killchoppa, Beastboss
+
+######## popup rule:Fights First · MELEE Melee
+CORE RULE
+
+Fights First
+
+While every model in a unit has this ability, that unit is a Fights First unit.
+
+See the Resolve Fights First Combats step in the Fight phase (12.04).
+
+######## popup rule:Get Stuck In · MELEE Melee
+WAR HORDE DETACHMENT RULE
+
+Get Stuck In
+
+Friendly ORKS units’ melee attacks have [SUSTAINED HITS 1].
+
+IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Beastboss, Bigboss, Warboss in Mega Armour · Follow Me Ladz, Gretchin, Deffkoptas
+
+######## popup rule:HAZARDOUS · MELEE Melee
+CORE RULE
+
+HAZARDOUS
+
+Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.
+
+IN THIS ARMYNazdreg, Bigboss, Deffkoptas
+
+######## popup rule:Hazard roll · MELEE Melee
+CORE RULE
+
+Hazard Roll
+
+To make a hazard roll for a unit, roll one D6: on a 1-2, that roll fails and that unit suffers 1 mortal wound (see above), or 3 mortal wounds instead if each model in that unit is a MONSTER/VEHICLE model. If more than one hazard roll is required for a unit, make all of those rolls simultaneously.
+
+06.03.01 Hazardous Test (app): The term ‘Hazardous test’ is the same as hazard roll.
+
+Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model in the unit make a hazard roll? No, the unit would make 1 single hazard roll.
+
+Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
+
+######## popup rule:Hunter · MELEE Melee
+CORE RULE
+
+Hunter
+
+04.01.03 Multiple Weapon Profiles (app): In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).
+
+Some of these profiles are known as Hunter profiles. Hunter profiles can only target units with the specified keywords.
+
+Note that if a unit is equipped with more than one such weapon, a different profile can be selected for each model within that unit.
+
+App note, not rules text: New Recruit prints these weapons as two profiles, one marked “Hunter: MONSTER/VEHICLE”. That profile can only target MONSTER or VEHICLE units. The Hunter rule is in the rules appendix of the Warhammer 40,000 app (Wahapedia 04.01.03), not in the printed Core Rules.
+
+IN THIS ARMYMozrog Skragbad, Beastboss · Headwoppa’s Killchoppa, Beastboss, Bigboss
+
+######## popup rule:LETHAL HITS · MELEE Melee
+CORE RULE
+
+LETHAL HITS
+
+Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
+
+Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
+
+IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Beastboss, Bigboss, Warboss in Mega Armour · Follow Me Ladz, Deffkoptas
+
+######## popup rule:LETHAL HITS: non-MONSTER/VEHICLE · MELEE Melee
+CORE RULE
+
+LETHAL HITS: non-MONSTER/VEHICLE
+
+Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
+
+Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
+
+IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Beastboss, Bigboss, Warboss in Mega Armour · Follow Me Ladz, Deffkoptas
+
+######## popup rule:Leader · MELEE Melee
+CORE RULE
+
+Leader
+
+Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.
+
+Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.
+
+IN THIS ARMYNazdreg, Bigboss, Warboss in Mega Armour · Follow Me Ladz
+
+######## popup rule:Lone Operative · MELEE Melee
+CORE RULE
+
+Lone Operative
+
+Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12" of this unit.
+
+If this ability takes the form Lone Operative X", unless part of an attached unit, this unit is not visible to enemy models unless they are within X" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X" of this unit.
+
+24.24.01 Attached units and Lone Operative (app): If all models in an attached unit have Lone Operative, that unit will benefit from Lone Operative.
+
+If a unit has Lone Operative, but models in that unit have different range values for Lone Operative, the highest value amongst that unit’s models on the battlefield is applied to the whole unit.
+
+If an attached unit below starting strength only contains models with Lone Operative, Lone Operative becomes active again.
+
+IN THIS ARMYGhazghkull Thraka (in Da Grand Warlord’s Ladz), Mozrog Skragbad (in Beast Snagga Following), Beastboss · Headwoppa’s Killchoppa (in Boss of da Hunt), Beastboss (in Boss of da Hunt)
+
+######## popup rule:Lone Operative X" · MELEE Melee
+CORE RULE
+
+Lone Operative X"
+
+Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12" of this unit.
+
+If this ability takes the form Lone Operative X", unless part of an attached unit, this unit is not visible to enemy models unless they are within X" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X" of this unit.
+
+24.24.01 Attached units and Lone Operative (app): If all models in an attached unit have Lone Operative, that unit will benefit from Lone Operative.
+
+If a unit has Lone Operative, but models in that unit have different range values for Lone Operative, the highest value amongst that unit’s models on the battlefield is applied to the whole unit.
+
+If an attached unit below starting strength only contains models with Lone Operative, Lone Operative becomes active again.
+
+IN THIS ARMYGhazghkull Thraka (in Da Grand Warlord’s Ladz), Mozrog Skragbad (in Beast Snagga Following), Beastboss · Headwoppa’s Killchoppa (in Boss of da Hunt), Beastboss (in Boss of da Hunt)
+
+######## popup rule:MOBILE · MELEE Melee
+CORE RULE
+
+MOBILE
+
+Dense:
+
+INFANTRY/BEASTS/SWARM/MOBILE models can move horizontally through dense terrain features.
+INFANTRY/BEASTS/SWARM models can move vertically through dense terrain features.
+Other models can move horizontally through dense terrain features provided that all sections of that terrain feature that the moving model’s base would move through are 2" or less in height. Otherwise, the moving model must move vertically to ascend or descend such sections. They cannot move through ceilings and floors while doing so, and they cannot end that move on any surface of that terrain feature that is not on ground level (see below).
+
+App note, not rules text: MOBILE has no rule of its own in the core rules. These are the Dense lines of Terrain and Movement (13.06). Super-Heavy Walker (24.35), Designer’s Note: “Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).”
+
+######## popup rule:Mortal Wounds · MELEE Melee
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+######## popup rule:Mortal wounds · MELEE Melee
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+######## popup rule:PRECISION · MELEE Melee
+CORE RULE
+
+PRECISION
+
+While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.
+
+24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
+
+IN THIS ARMYGhazghkull Thraka, Bigboss
+
+######## popup rule:RAPID FIRE 1 · MELEE Melee
+CORE RULE
+
+RAPID FIRE 1
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYGhazghkull Thraka, Nazdreg, Bigboss, Warboss in Mega Armour · Follow Me Ladz
+
+######## popup rule:RAPID FIRE 2 · MELEE Melee
+CORE RULE
+
+RAPID FIRE 2
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYGhazghkull Thraka, Nazdreg, Bigboss, Warboss in Mega Armour · Follow Me Ladz
+
+######## popup rule:RAPID FIRE 4 · MELEE Melee
+CORE RULE
+
+RAPID FIRE 4
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYGhazghkull Thraka, Nazdreg, Bigboss, Warboss in Mega Armour · Follow Me Ladz
+
+######## popup rule:Resolve a charge · MELEE Melee
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:Select Weapons · MELEE Melee
+CORE RULE
+
+Select Weapons
+
+For each model in the attacking unit, select which weapons that model will make attacks with. Models make ranged attacks with ranged weapons, and make melee attacks with melee weapons.
+
+While shooting: You can select one or more ranged weapons that model has.
+
+While fighting: You must select one melee weapon that model has.
+
+Sidearms: Some models are equipped with [CLOSE-QUARTERS] weapons in addition to other firearms. Such models can be an exception to the rules in this section, as you may not be able to select all of their weapons to make attacks with.
+
+24.11 [EXTRA ATTACKS]: Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others.
+
+04.01.03 Multiple Weapon Profiles (app): In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).
+
+######## popup rule:Starting Strength · MELEE Melee
+CORE RULE
+
+Starting Strength
+
+The number of models a unit contains at the start of the first battle round is its starting strength. The starting strength of an attached unit is the number of models that unit contains at the start of the first battle round.
+
+Some rules refer to units being below starting strength, or at – or below – half-strength. The meaning of these terms varies depending on a unit’s starting strength, as shown below.
+
+Starting strength of 1:
+
+Below starting strength: model’s remaining wounds are less than its W characteristic.
+At half-strength: model’s remaining wounds are half of its W characteristic.
+Below half-strength: model’s remaining wounds are less than half of its W characteristic.
+
+Starting strength of 2 or more:
+
+Below starting strength: number of remaining models in the unit is less than its starting strength.
+At half-strength: number of remaining models in the unit is half of its starting strength.
+Below half-strength: number of remaining models in the unit is less than half of its starting strength.
+
+Some units cannot be at half-strength: If a model’s W characteristic or a unit’s starting strength cannot be evenly divided in half, that model or unit cannot be at half-strength (but can be below half-strength as described above).
+
+Example: A Captain (1 model) is attached to a unit of Intercessors (5 models). This attached unit has a starting strength of 6. If three Intercessors were destroyed, the unit would be at half-strength. If four Intercessors were destroyed, the unit would be below half-strength. If all of the Intercessors were destroyed, the remaining Captain would be below half-strength, despite having his full wounds remaining.
+
+######## popup rule:Stealth · MELEE Melee
+CORE RULE
+
+Stealth
+
+If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).
+
+######## popup rule:Strategic Reserves · MELEE Melee
+CORE RULE
+
+Strategic Reserves
+
+Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding FORTIFICATIONS) to place in strategic reserves. Instead of setting up these units on the battlefield during deployment, place them to one side; they are strategic reserves units, and will arrive later in the battle.
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+20.01.01 Reserves (app): The term ‘Reserves’ is the same as strategic reserves.
+
+20.02 Repositioned Units: Some rules allow units to be removed from the battlefield and placed in strategic reserves during the battle. Units that use such rules are known as repositioned units. In addition to any other rules that apply to such units (such as where they can or cannot arrive), all of the following rules apply to them:
+
+If used in the Movement phase, such rules can be used on units that have already moved that phase.
+A repositioned unit that is set up in the same turn in which it made an advance, fall-back or disembark move has still made an advance, fall-back or disembark move that turn.
+When they are removed from the battlefield, any rules that are affecting such units for a specified duration or under specified circumstances continue to affect them while that duration and/or those circumstances apply.
+
+20.03 Arriving from Strategic Reserves: To arrive on the battlefield, each strategic reserves unit must make an ingress move (see below). Unless otherwise stated, they can only do so from the second battle round onwards.
+
+At the end of the third battle round, unless otherwise stated, all strategic reserves units that have not made one or more ingress moves are destroyed, with the following exceptions:
+
+Units embarked within TRANSPORTS that have made an ingress move during the battle.
+Repositioned units (see opposite).
+
+######## popup rule:Support · MELEE Melee
+CORE RULE
+
+Support
+
+Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.
+
+Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.
+
+IN THIS ARMYBigboss
+
+######## popup rule:TORRENT · MELEE Melee
+CORE RULE
+
+TORRENT
+
+Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.
+
+IN THIS ARMYGhazghkull Thraka, Nazdreg, Bigboss
+
+######## popup rule:TWIN-LINKED · MELEE Melee
+CORE RULE
+
+TWIN-LINKED
+
+Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll.
+
+IN THIS ARMYNazdreg, Warboss in Mega Armour · Follow Me Ladz
+
+######## popup rule:Waaagh! · MELEE Melee
+ORKS ARMY RULE
+
+Waaagh!
+
+Friendly ORKS units with this ability can:
+
+Re-roll advance rolls.
+Become riled up, as stated in other rules.
+
+While a unit is riled up:
+
+That unit has 5+ InSv.
+That unit’s ranged attacks have [ASSAULT].
+When that unit is selected to make an advance move, that advance move does not prevent that unit from being eligible to declare a charge.
+
+######## popup rule:War Cry · MELEE Melee
+ORKS ARMY RULE
+
+War Cry
+
+At the start of the Command phase, you can use this ability. If you do, friendly ORKS units with the Waaagh! ability are riled up until the end of the next turn.
+
+######## popup rule:[ANTI-X Y+] · MELEE Melee
+CORE RULE
+
+ANTI-X Y+
+
+This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.
+
+Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
+
+IN THIS ARMYMozrog Skragbad, Beastboss · Headwoppa’s Killchoppa, Beastboss, Bigboss
+
+######## popup rule:[ASSAULT] · MELEE Melee
+CORE RULE
+
+ASSAULT
+
+Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
+
+######## popup rule:[BLAST X] · MELEE Melee
+CORE RULE
+
+BLAST X
+
+Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead.
+
+Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+IN THIS ARMYNazdreg, Bigboss, Deffkoptas
+
+######## popup rule:[BLAST] · MELEE Melee
+CORE RULE
+
+BLAST
+
+Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead.
+
+Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+IN THIS ARMYNazdreg, Bigboss, Deffkoptas
+
+######## popup rule:[CLEAVE 1] · MELEE Melee
+CORE RULE
+
+CLEAVE 1
+
+This ability always takes the form [CLEAVE X]. Each time you gather attack dice for a [CLEAVE] weapon, if you only selected one target for all of that weapon’s attacks, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+Example: If a [CLEAVE 1] weapon with an A characteristic of 3 targets one unit containing 16 models, you would gather three additional attack dice for that weapon (for a total of six for that weapon).
+
+IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Beastboss, Warboss in Mega Armour · Follow Me Ladz, Deffkoptas
+
+######## popup rule:[CLEAVE 2] · MELEE Melee
+CORE RULE
+
+CLEAVE 2
+
+This ability always takes the form [CLEAVE X]. Each time you gather attack dice for a [CLEAVE] weapon, if you only selected one target for all of that weapon’s attacks, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+Example: If a [CLEAVE 1] weapon with an A characteristic of 3 targets one unit containing 16 models, you would gather three additional attack dice for that weapon (for a total of six for that weapon).
+
+IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Beastboss, Warboss in Mega Armour · Follow Me Ladz, Deffkoptas
+
+######## popup rule:[CLEAVE X] · MELEE Melee
+CORE RULE
+
+CLEAVE X
+
+This ability always takes the form [CLEAVE X]. Each time you gather attack dice for a [CLEAVE] weapon, if you only selected one target for all of that weapon’s attacks, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+Example: If a [CLEAVE 1] weapon with an A characteristic of 3 targets one unit containing 16 models, you would gather three additional attack dice for that weapon (for a total of six for that weapon).
+
+IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Beastboss, Warboss in Mega Armour · Follow Me Ladz, Deffkoptas
+
+######## popup rule:[CLEAVE] · MELEE Melee
+CORE RULE
+
+CLEAVE
+
+This ability always takes the form [CLEAVE X]. Each time you gather attack dice for a [CLEAVE] weapon, if you only selected one target for all of that weapon’s attacks, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+Example: If a [CLEAVE 1] weapon with an A characteristic of 3 targets one unit containing 16 models, you would gather three additional attack dice for that weapon (for a total of six for that weapon).
+
+IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Beastboss, Warboss in Mega Armour · Follow Me Ladz, Deffkoptas
+
+######## popup rule:[CLOSE-QUARTERS] · MELEE Melee
+CORE RULE
+
+CLOSE-QUARTERS
+
+Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with:
+
+One or more of its [CLOSE-QUARTERS] weapons.
+One or more of its other ranged weapons.
+
+[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
+
+IN THIS ARMYGhazghkull Thraka, Beastboss · Headwoppa’s Killchoppa, Beastboss, Bigboss, Gretchin, Deffkoptas
+
+######## popup rule:[DEVASTATING WOUNDS] · MELEE Melee
+CORE RULE
+
+DEVASTATING WOUNDS
+
+Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+
+Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+
+IN THIS ARMYGhazghkull Thraka, Bigboss
+
+######## popup rule:[EXTRA ATTACKS] · MELEE Melee
+CORE RULE
+
+EXTRA ATTACKS
+
+Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step (04.01), for each of those models, you must select:
+
+All of that model’s [EXTRA ATTACKS] weapons.
+One of that model’s other melee weapons, if possible.
+
+IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Beastboss
+
+######## popup rule:[HAZARDOUS] · MELEE Melee
+CORE RULE
+
+HAZARDOUS
+
+Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.
+
+IN THIS ARMYNazdreg, Bigboss, Deffkoptas
+
+######## popup rule:[IGNORES COVER] · MELEE Melee
+CORE RULE
+
+IGNORES COVER
+
+Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+IN THIS ARMYNazdreg
+
+######## popup rule:[LETHAL HITS] · MELEE Melee
+CORE RULE
+
+LETHAL HITS
+
+Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
+
+Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
+
+IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Beastboss, Bigboss, Warboss in Mega Armour · Follow Me Ladz, Deffkoptas
+
+######## popup rule:[PRECISION] · MELEE Melee
+CORE RULE
+
+PRECISION
+
+While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.
+
+24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
+
+IN THIS ARMYGhazghkull Thraka, Bigboss
+
+######## popup rule:[RAPID FIRE 1] · MELEE Melee
+CORE RULE
+
+RAPID FIRE 1
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYGhazghkull Thraka, Nazdreg, Bigboss, Warboss in Mega Armour · Follow Me Ladz
+
+######## popup rule:[RAPID FIRE 2] · MELEE Melee
+CORE RULE
+
+RAPID FIRE 2
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYGhazghkull Thraka, Nazdreg, Bigboss, Warboss in Mega Armour · Follow Me Ladz
+
+######## popup rule:[RAPID FIRE X] · MELEE Melee
+CORE RULE
+
+RAPID FIRE X
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYGhazghkull Thraka, Nazdreg, Bigboss, Warboss in Mega Armour · Follow Me Ladz
+
+######## popup rule:[RAPID FIRE] · MELEE Melee
+CORE RULE
+
+RAPID FIRE
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYGhazghkull Thraka, Nazdreg, Bigboss, Warboss in Mega Armour · Follow Me Ladz
+
+######## popup rule:[SUSTAINED HITS 1] · MELEE Melee
+CORE RULE
+
+SUSTAINED HITS 1
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Beastboss, Bigboss, Warboss in Mega Armour · Follow Me Ladz, Gretchin, Deffkoptas
+
+######## popup rule:[SUSTAINED HITS X] · MELEE Melee
+CORE RULE
+
+SUSTAINED HITS X
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Beastboss, Bigboss, Warboss in Mega Armour · Follow Me Ladz, Gretchin, Deffkoptas
+
+######## popup rule:[SUSTAINED HITS] · MELEE Melee
+CORE RULE
+
+SUSTAINED HITS
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Beastboss, Bigboss, Warboss in Mega Armour · Follow Me Ladz, Gretchin, Deffkoptas
+
+######## popup rule:[TORRENT] · MELEE Melee
+CORE RULE
+
+TORRENT
+
+Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.
+
+IN THIS ARMYGhazghkull Thraka, Nazdreg, Bigboss
+
+######## popup rule:[TWIN-LINKED] · MELEE Melee
+CORE RULE
+
+TWIN-LINKED
+
+Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll.
+
+IN THIS ARMYNazdreg, Warboss in Mega Armour · Follow Me Ladz
+
+######## popup rule:advance move · MELEE Melee
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+
+######## popup rule:advance rolls · MELEE Melee
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+
+######## popup rule:attached · MELEE Melee
+CORE RULE
+
+attached
+
+Some units have the Leader or Support ability listed on their datasheet (see below). Such units are known as leader units and support units respectively. Both of these abilities allow such units to lead other friendly units (known as bodyguard units) to form attached units. An attached unit is a single unit for all rules purposes. Leader and support units can only lead specific bodyguard units, as listed in the Warhammer 40,000 app.
+
+19.04 Abilities in Attached Units: Abilities/rules that affect a single specified model (e.g. from an enhancement or an item of wargear) only ever apply to that model, even while part of an attached unit.
+
+Otherwise, abilities/rules that affect a unit (or models in it) apply to every model in an attached unit, until the source of that ability/rule is destroyed, as shown below.
+
+SOURCE OF ABILITY/RULE: APPLIES TO THE ATTACHED UNIT UNTIL
+
+Leader/support unit: The last model in that leader/support unit is destroyed.*
+Bodyguard unit (e.g. from a datasheet ability): The last model in that bodyguard unit is destroyed.
+A specific model (e.g. the bearer of an enhancement or an item of wargear): That model is destroyed.
+
+* This means leader/support units continue to benefit from their own ‘while this model is leading a unit’ abilities even after their bodyguard unit is destroyed, provided they started the battle in an attached unit.
+
+In all of the above cases, if that last model was destroyed as the result of an attack, the ability it was conferring upon the attached unit applies until the attacking unit has resolved all of its attacks.
+
+Wahapedia FAQ: When does a model’s or unit’s ability in an attached unit apply to all models in that unit? A rule that applies to ‘this/that unit’ or ‘models in this/that unit’ applies to all models in an attached unit. Rules that just apply to one model in an attached unit (for example, a rule that grants a model Feel No Pain or Lone Operative) only apply to that model, not to all models in the attached unit.
+
+######## popup rule:battle-shock roll · MELEE Melee
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+######## popup rule:battle-shocked · MELEE Melee
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+######## popup rule:below starting strength · MELEE Melee
+CORE RULE
+
+Starting Strength
+
+The number of models a unit contains at the start of the first battle round is its starting strength. The starting strength of an attached unit is the number of models that unit contains at the start of the first battle round.
+
+Some rules refer to units being below starting strength, or at – or below – half-strength. The meaning of these terms varies depending on a unit’s starting strength, as shown below.
+
+Starting strength of 1:
+
+Below starting strength: model’s remaining wounds are less than its W characteristic.
+At half-strength: model’s remaining wounds are half of its W characteristic.
+Below half-strength: model’s remaining wounds are less than half of its W characteristic.
+
+Starting strength of 2 or more:
+
+Below starting strength: number of remaining models in the unit is less than its starting strength.
+At half-strength: number of remaining models in the unit is half of its starting strength.
+Below half-strength: number of remaining models in the unit is less than half of its starting strength.
+
+Some units cannot be at half-strength: If a model’s W characteristic or a unit’s starting strength cannot be evenly divided in half, that model or unit cannot be at half-strength (but can be below half-strength as described above).
+
+Example: A Captain (1 model) is attached to a unit of Intercessors (5 models). This attached unit has a starting strength of 6. If three Intercessors were destroyed, the unit would be at half-strength. If four Intercessors were destroyed, the unit would be below half-strength. If all of the Intercessors were destroyed, the remaining Captain would be below half-strength, despite having his full wounds remaining.
+
+######## popup rule:benefit of cover · MELEE Melee
+CORE RULE
+
+Benefit of Cover
+
+Each time a ranged attack targets a unit, if every model in that unit meets one or more of the following conditions, that unit has the benefit of cover against that attack:
+
+That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area.
+That model is not fully visible to the attacking model due to one or more intervening terrain features and/or one or more intervening obscuring terrain areas (see below).
+
+Each time a ranged attack targets a unit that has the benefit of cover against it, worsen the BS characteristic of that attack by 1.
+
+######## popup rule:bodyguard · MELEE Melee
+CORE RULE
+
+bodyguard
+
+Some units have the Leader or Support ability listed on their datasheet (see below). Such units are known as leader units and support units respectively. Both of these abilities allow such units to lead other friendly units (known as bodyguard units) to form attached units. An attached unit is a single unit for all rules purposes. Leader and support units can only lead specific bodyguard units, as listed in the Warhammer 40,000 app.
+
+19.04 Abilities in Attached Units: Abilities/rules that affect a single specified model (e.g. from an enhancement or an item of wargear) only ever apply to that model, even while part of an attached unit.
+
+Otherwise, abilities/rules that affect a unit (or models in it) apply to every model in an attached unit, until the source of that ability/rule is destroyed, as shown below.
+
+SOURCE OF ABILITY/RULE: APPLIES TO THE ATTACHED UNIT UNTIL
+
+Leader/support unit: The last model in that leader/support unit is destroyed.*
+Bodyguard unit (e.g. from a datasheet ability): The last model in that bodyguard unit is destroyed.
+A specific model (e.g. the bearer of an enhancement or an item of wargear): That model is destroyed.
+
+* This means leader/support units continue to benefit from their own ‘while this model is leading a unit’ abilities even after their bodyguard unit is destroyed, provided they started the battle in an attached unit.
+
+In all of the above cases, if that last model was destroyed as the result of an attack, the ability it was conferring upon the attached unit applies until the attacking unit has resolved all of its attacks.
+
+Wahapedia FAQ: When does a model’s or unit’s ability in an attached unit apply to all models in that unit? A rule that applies to ‘this/that unit’ or ‘models in this/that unit’ applies to all models in an attached unit. Rules that just apply to one model in an attached unit (for example, a rule that grants a model Feel No Pain or Lone Operative) only apply to that model, not to all models in the attached unit.
+
+######## popup rule:charge move · MELEE Melee
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+
+######## popup rule:charge roll · MELEE Melee
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:charge rolls · MELEE Melee
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:charge targets · MELEE Melee
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+
+######## popup rule:close-quarters shooting · MELEE Melee
+CORE RULE
+
+close-quarters shooting
+
+Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with:
+
+One or more of its [CLOSE-QUARTERS] weapons.
+One or more of its other ranged weapons.
+
+[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
+
+IN THIS ARMYGhazghkull Thraka, Beastboss · Headwoppa’s Killchoppa, Beastboss, Bigboss, Gretchin, Deffkoptas
+
+######## popup rule:declare a charge · MELEE Melee
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:declares a charge · MELEE Melee
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:destroyed · MELEE Melee
+CORE RULE
+
+Destroyed
+
+Throughout a battle, models will suffer damage, lose wounds and be destroyed. When every model in a unit has been destroyed, that unit is destroyed.
+
+When a model is destroyed, first resolve any rules that are triggered when it is destroyed, then it is removed from the battlefield. If any such rules apply, and if the model was destroyed as the result of an attack, unless otherwise stated, those rules are only resolved and that model is only removed after the attacking unit’s attacks have been resolved. Unless otherwise stated, destroyed models and units cannot use abilities or be selected or targeted by rules.
+
+05.04.05 Fight On Death (app): Some rules enable models to attack after they have been destroyed. When a model under such an effect is destroyed, do not remove it from play.
+
+Those models will stay on the battlefield until their unit is selected to attack and has attacked, or until the end of the phase (whichever comes first). Any rules triggered by those models being destroyed are resolved, and then those destroyed models are removed.
+
+######## popup rule:eligible to declare a charge · MELEE Melee
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:engaged · MELEE Melee
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+######## popup rule:fall-back move · MELEE Melee
+CORE RULE
+
+Fall-back Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is engaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select fall-back mode:
+
+Ordered Retreat: If your unit is not battle-shocked, you can select this mode.
+Desperate Escape: Otherwise, you must select this mode. Make a hazard roll for each model in your unit (06.03).
+
+WHILE MOVING:
+
+Desperate Escape: Each model that is moved can be moved through enemy models.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to shoot, declare a charge or start an action.
+Desperate Escape: If your unit is not battle-shocked, you must make a battle-shock roll for your unit (01.07).
+
+Desperate Escape Test (app): Some rules may reference the term ‘Desperate Escape test’. In all instances this means the hazard rolls made for the desperate escape mode of a fall-back move.
+
+Abilities that subtract from a unit’s Desperate Escape test instead subtract from those hazard rolls.
+
+If a stratagem or ability instructs a unit to make a Desperate Escape test, that unit:
+
+Must use the desperate escape mode when it is selected to make a fall-back move.
+Must make one hazard roll for each model in that unit.
+Must make a battle-shock roll.
+
+######## popup rule:hazard rolls · MELEE Melee
+CORE RULE
+
+Hazard Roll
+
+To make a hazard roll for a unit, roll one D6: on a 1-2, that roll fails and that unit suffers 1 mortal wound (see above), or 3 mortal wounds instead if each model in that unit is a MONSTER/VEHICLE model. If more than one hazard roll is required for a unit, make all of those rolls simultaneously.
+
+06.03.01 Hazardous Test (app): The term ‘Hazardous test’ is the same as hazard roll.
+
+Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model in the unit make a hazard roll? No, the unit would make 1 single hazard roll.
+
+Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
+
+######## popup rule:ingress move · MELEE Melee
+CORE RULE
+
+Ingress Move
+
+SET-UP DISTANCE: 6"
+
+ELIGIBLE IF: Your unit is in strategic reserves (excluding units that are embarked within TRANSPORTS that are themselves in strategic reserves).
+
+EFFECT: Your unit is set up as described in Set Up (03.02).
+
+WHILE MOVING: Set up your unit wholly within the set-up distance of one or more battlefield edges and more than 8" horizontally from all enemy units.
+
+Before the Third Battle Round: While doing so, no models can be set up within your opponent’s deployment zone.
+
+AFTER MOVING: Unless otherwise stated, until the start of the next Charge phase, your unit is not eligible to make any other type of move.
+
+20.03.01 Set Up As Reinforcements (app): If a rule mentions a unit being set up on the battlefield as Reinforcements, it means a unit that made an ingress move.
+
+######## popup rule:lead · MELEE Melee
+CORE RULE
+
+lead
+
+Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.
+
+Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.
+
+IN THIS ARMYNazdreg, Bigboss, Warboss in Mega Armour · Follow Me Ladz
+
+######## popup rule:leader · MELEE Melee
+CORE RULE
+
+leader
+
+Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.
+
+Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.
+
+IN THIS ARMYNazdreg, Bigboss, Warboss in Mega Armour · Follow Me Ladz
+
+######## popup rule:mortal wound · MELEE Melee
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+######## popup rule:mortal wounds · MELEE Melee
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+######## popup rule:normal move · MELEE Melee
+CORE RULE
+
+Normal Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+AFTER MOVING: Your unit must be unengaged.
+
+09.05.01 More Than One Normal Move in a Phase (app): A unit cannot make more than one Normal Move in a phase.
+
+######## popup rule:riled up · MELEE Melee
+ORKS ARMY RULE
+
+Waaagh!
+
+Friendly ORKS units with this ability can:
+
+Re-roll advance rolls.
+Become riled up, as stated in other rules.
+
+While a unit is riled up:
+
+That unit has 5+ InSv.
+That unit’s ranged attacks have [ASSAULT].
+When that unit is selected to make an advance move, that advance move does not prevent that unit from being eligible to declare a charge.
+
+######## popup rule:snap shooting · MELEE Melee
+CORE RULE
+
+snap shooting
+
+ELIGIBLE IF: As stated in the rule allowing this shooting type.
+
+EFFECT: Your unit shoots as described in Making Attacks (04).
+
+WHILE SHOOTING:
+
+You can only target one visible enemy unit within 24" of your unit (and only if it is an eligible target).
+Each attack only hits on an unmodified hit roll of 6 (irrespective of the attacking weapon’s BS characteristic or any modifiers).
+You cannot re-roll hit rolls.
+
+AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.
+
+######## popup rule:strategic reserves · MELEE Melee
+CORE RULE
+
+Strategic Reserves
+
+Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding FORTIFICATIONS) to place in strategic reserves. Instead of setting up these units on the battlefield during deployment, place them to one side; they are strategic reserves units, and will arrive later in the battle.
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+20.01.01 Reserves (app): The term ‘Reserves’ is the same as strategic reserves.
+
+20.02 Repositioned Units: Some rules allow units to be removed from the battlefield and placed in strategic reserves during the battle. Units that use such rules are known as repositioned units. In addition to any other rules that apply to such units (such as where they can or cannot arrive), all of the following rules apply to them:
+
+If used in the Movement phase, such rules can be used on units that have already moved that phase.
+A repositioned unit that is set up in the same turn in which it made an advance, fall-back or disembark move has still made an advance, fall-back or disembark move that turn.
+When they are removed from the battlefield, any rules that are affecting such units for a specified duration or under specified circumstances continue to affect them while that duration and/or those circumstances apply.
+
+20.03 Arriving from Strategic Reserves: To arrive on the battlefield, each strategic reserves unit must make an ingress move (see below). Unless otherwise stated, they can only do so from the second battle round onwards.
+
+At the end of the third battle round, unless otherwise stated, all strategic reserves units that have not made one or more ingress moves are destroyed, with the following exceptions:
+
+Units embarked within TRANSPORTS that have made an ingress move during the battle.
+Repositioned units (see opposite).
+
+######## popup rule:support · MELEE Melee
+CORE RULE
+
+support
+
+Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.
+
+Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.
+
+IN THIS ARMYBigboss
+
+######## popup rule:unengaged · MELEE Melee
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+######## popup strat:breakin-heads · MELEE Melee
+1CP · ANY PHASE · EITHER TURN
+
+Breakin’ Heads
+WHEN
+
+Any phase, when a friendly attached ORKS INFANTRY unit becomes battle-shocked.
+
+TARGETThat ORKS INFANTRY unit. You can target that unit with this stratagem even though it is battle-shocked.
+
+EFFECT
+
+Roll one D3:
+
+Your unit suffers a number of mortal wounds equal to the result.
+Your unit is no longer battle-shocked.
+
+USED BYNazdreg, Bigboss, Warboss in Mega Armour · Follow Me Ladz
+
+######## popup strat:close-range-dakka · MELEE Melee
+1CP · SHOOTING · YOUR TURN
+
+Close-range Dakka
+WHEN
+
+Your Shooting phase, when a friendly ORKS unit is selected to shoot.
+
+TARGETThat ORKS unit.
+
+EFFECT
+
+Your unit’s ranged attacks have:
+
+[RAPID FIRE 1].
+Or: If that attack already has [RAPID FIRE], +1 to the value of that [RAPID FIRE] (e.g. [RAPID FIRE 1] becomes [RAPID FIRE 2]).
+
+USED BYany unit
+
+######## popup strat:command-re-roll · MELEE Melee
+1CP · ANY PHASE · EITHER TURN
+
+Command Re-roll
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+######## popup strat:counteroffensive · MELEE Melee
+2CP · FIGHT · THEIR TURN
+
+Counteroffensive
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+######## popup strat:crushing-impact · MELEE Melee
+1CP · CHARGE · YOUR TURN
+
+Crushing Impact
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYMozrog Skragbad, Beastboss · Headwoppa’s Killchoppa, Beastboss
+
+######## popup strat:epic-challenge · MELEE Melee
+1CP · FIGHT · EITHER TURN
+
+Epic Challenge
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Beastboss, Bigboss, Warboss in Mega Armour · Follow Me Ladz
+
+######## popup strat:explosives · MELEE Melee
+1CP · SHOOTING · YOUR TURN
+
+Explosives
+WHEN
+
+Your Shooting phase.
+
+TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one EXPLOSIVES/GRENADES model in your unit.
+2. Select one unengaged enemy unit within 8" of and visible to that model.
+3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
+
+Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+
+USED BYGhazghkull Thraka, Nazdreg, Bigboss, Warboss in Mega Armour · Follow Me Ladz, Deffkoptas
+
+######## popup strat:fire-overwatch · MELEE Melee
+1CP · MOVEMENT · THEIR TURN
+
+Fire Overwatch
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYany unit
+
+######## popup strat:fungus-fuel-injection · MELEE Melee
+1CP · MOVEMENT · YOUR TURN
+
+Fungus-fuel Injection
+WHEN
+
+Your Movement phase, when a friendly ORKS MOUNTED/VEHICLE unit is selected to move.
+
+TARGETThat ORKS MOUNTED/VEHICLE unit.
+
+EFFECT
+
+Your unit has +2" M.
+
+USED BYDeffkoptas
+
+######## popup strat:heroic-intervention · MELEE Melee
+1CP · CHARGE · THEIR TURN · INTO THE FRAY +1CP
+
+Heroic Intervention
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYany unit
+
+######## popup strat:hit-em-harder · MELEE Melee
+1CP · FIGHT · EITHER TURN
+
+Hit ’Em Harder
+WHEN
+
+Fight phase, when a friendly ORKS unit is selected to fight.
+
+TARGETThat ORKS unit.
+
+EFFECT
+
+Your unit’s melee attacks have [LETHAL HITS].
+
+USED BYany unit
+
+######## popup strat:insane-bravery · MELEE Melee
+1CP · COMMAND · YOUR TURN · ONCE PER BATTLE
+
+Insane Bravery
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+######## popup strat:mow-em-down · MELEE Melee
+1CP · FIGHT · EITHER TURN
+
+Mow ’Em Down
+WHEN
+
+Fight phase, when a friendly ORKS VEHICLE unit (excluding WALKER units) that made a charge move this turn is selected to fight.
+
+TARGETThat ORKS VEHICLE unit.
+
+EFFECT
+
+Your unit’s melee attacks have:
+
+[CLEAVE 1].
+Or: If that attack already has [CLEAVE], +1 to the value of that [CLEAVE] (e.g. [CLEAVE 1] becomes [CLEAVE 2]).
+
+USED BYno unit in this list (needs VEHICLE)
+
+######## popup strat:orks-is-never-beaten · MELEE Melee
+1CP · FIGHT · EITHER TURN
+
+Orks Is Never Beaten
+WHEN
+
+Fight phase, when an enemy unit targets a friendly ORKS unit (excluding TITANIC units).
+
+TARGETThat ORKS unit.
+
+EFFECT
+
+When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one D6, with +1 to that roll if your unit is riled up:
+
+On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.
+
+USED BYany unit
+
+######## popup strat:rapid-ingress · MELEE Melee
+1CP · MOVEMENT · THEIR TURN
+
+Rapid Ingress
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit

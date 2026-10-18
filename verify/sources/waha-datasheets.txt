@@ -8,3 +8,11 @@ orks Mek
 orks Tankbustas
 orks Warboss
 orks Wazdakka-Gutsmek
+orks Bigboss
+orks Breaka-Boyz
+orks Warboss-In-Mega-Armour
+orks Nazdreg
+orks Meganobz
+orks Ghazghkull-Thraka
+orks Mozrog-Skragbad
+orks Beastboss-on-Squigosaur

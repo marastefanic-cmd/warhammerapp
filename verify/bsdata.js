@@ -629,7 +629,8 @@ function buildUnit(army, u, um, cat, force, issues) {
   const lines = (u.models || []).map(parseLine);
   const gear = u.gear || [];
   const roots = [];
-  const names = [um.entry || u.name]; if (u.leads) names.push(um.leadsEntry || u.leads);
+  // the characters (the unit's own name, then `also`: a Warboss leading the Breaka Boyz a Bigboss supports), then the bodyguard
+  const names = [um.entry || u.name].concat((u.also || []).map((c) => ((um.alsoEntry || {})[c.name]) || c.name)); if (u.leads) names.push(um.leadsEntry || u.leads);
   for (const nm of names) {
     const hits = rootNode(cat, nm);
     if (hits.length !== 1) { fail('entry', nm, hits.map((h) => h.n.name).join(' | '), `${cat.fname}: ${hits.length} root entries named "${nm}"`); continue; }
@@ -675,15 +676,17 @@ function buildUnit(army, u, um, cat, force, issues) {
       addChain(it.parent, picks[j], it.cnt);
     });
   });
-  // enhancement and warlord, on the leader (first root)
+  // enhancement and warlord, on the leader (first root), or the character named in `enhOn`
   const lead = roots[0];
   if (u.enhancement) {
-    const p = searchBelow(lead.node, (k) => k.type === 'upgrade' && nn(k.name) === nn(u.enhancement))[0];
-    if (!p) fail('enhancement', u.enhancement, '', `no enhancement "${u.enhancement}" for ${lead.node.name}`);
+    const host = (u.enhOn && roots.find((r) => nn(r.node.name) === nn(u.enhOn))) || lead;
+    if (u.enhOn && host === lead && nn(lead.node.name) !== nn(u.enhOn)) fail('enhOn', u.enhOn, roots.map((r) => r.node.name).join(' / '), 'no part of the unit is named as enhOn');
+    const p = searchBelow(host.node, (k) => k.type === 'upgrade' && nn(k.name) === nn(u.enhancement))[0];
+    if (!p) fail('enhancement', u.enhancement, '', `no enhancement "${u.enhancement}" for ${host.node.name}`);
     else {
       const last = p[p.length - 1];
-      const already = lead.desc(false).find((d) => d.node.id === last.id);
-      (already || addChain(lead, p, 1)).isEnhancement = true;
+      const already = host.desc(false).find((d) => d.node.id === last.id);
+      (already || addChain(host, p, 1)).isEnhancement = true;
     }
   }
   // an UPGRADE enhancement goes on the unit it upgrades: the bodyguard (last root)
@@ -698,8 +701,9 @@ function buildUnit(army, u, um, cat, force, issues) {
     }
   }
   if (u.warlord) {
-    const k = kids(lead.node).find((x) => x.type === 'upgrade' && x.name === 'Warlord');
-    if (!k) fail('warlord', true, '', `no Warlord entry for ${lead.node.name}`); else new Sel(k, 1, lead).isWarlord = true;
+    const wh = (u.warlordOn && roots.find((r) => nn(r.node.name) === nn(u.warlordOn))) || lead;   // the character named in `warlordOn`, else the first
+    const k = kids(wh.node).find((x) => x.type === 'upgrade' && x.name === 'Warlord');
+    if (!k) fail('warlord', true, '', `no Warlord entry for ${wh.node.name}`); else new Sel(k, 1, wh).isWarlord = true;
   }
   return { roots };
 }
@@ -945,7 +949,8 @@ function compareUnit(army, u, F, fail) {
     checked('abilities');
     if ((b.name === 'Leader' || b.name === 'Support') && b.typeName === 'Abilities') {
       if (!(u.rules || []).map(nn).includes(b.name)) fail('rules', '', b.name, `${b.where}: the ${b.name} ability, app rule "${b.name}" missing`);
-      if (u.leads && b.root === F.roots[0] && !nt(b.text).includes(nt(u.leads))) fail('leads', u.leads, b.text, b.where);
+      // each character's Leader/Support ability names the bodyguard
+      if (u.leads && F.roots.indexOf(b.root) >= 0 && F.roots.indexOf(b.root) < F.roots.length - 1 && !nt(b.text).includes(nt(u.leads))) fail('leads', u.leads, b.text, b.where);
       continue;
     }
     fail('ability', '', b.name, `${b.where}: missing in the app`);
@@ -1035,12 +1040,11 @@ function comparePoints(army, built, failArmy) {
     const parts = part.map((p) => `${p.r.node.name} ${p.v}${p.k ? ` (as unit ${p.k + 1} of the datasheet)` : ''}`).join(' + ');
     checked('points');
     if (!a.ok) failArmy(u.id, 'pts', `${u.pts}${(u.copies || 1) > 1 ? ` (copy ${a.s.i + 1} of ${u.copies})` : ''}`, String(a.v), parts);
-    // ptsNote "165 + Meganobz 190": the leader (with its enhancement) and the unit it leads
+    // ptsNote "165 + Meganobz 190": the leader (with its enhancement), any other character, and the unit it leads
     if (u.ptsNote && a.s.i === 0) {
       checked('points');
-      const m = nn(u.ptsNote).match(/^(\d+) \+ (.+) (\d+)$/);
-      const want = part.length === 2 ? `${part[0].v} + ${nn(part[1].r.node.name)} ${part[1].v}` : null;
-      if (!m || !want || nn(u.ptsNote) !== want) failArmy(u.id, 'ptsNote', u.ptsNote, want || `${part.map((p) => p.v).join(' + ')}`, parts);
+      const want = part.length >= 2 ? `${part[0].v}` + part.slice(1).map((p) => ` + ${nn(p.r.node.name)} ${p.v}`).join('') : null;
+      if (!want || nn(u.ptsNote) !== want) failArmy(u.id, 'ptsNote', u.ptsNote, want || `${part.map((p) => p.v).join(' + ')}`, parts);
     }
   }
 }

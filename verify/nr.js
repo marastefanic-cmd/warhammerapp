@@ -268,8 +268,9 @@ const RE = {
   unit: /^\s*(\d+) PTS\s{2,}(\S.*?)(?:\s{2,}x(\d+))?$/,
   models: /^\s*Models\s+Options$/,
   stats: /^\s*Unit\s+M\s+T\s+Sv\s+W\s+LD\s+OC\s+InSv(\s+Base)?$/,
-  ranged: /^\s*Ranged Weapons\s+Range\s+A\s+BS\s+S\s+AP\s+D\s+Keywords$/,
-  melee: /^\s*Melee Weapons\s+Range\s+A\s+WS\s+S\s+AP\s+D\s+Keywords$/,
+  // "Keywords" can wrap onto a line of its own (Ghazghkull's melee table): see sectionsOf
+  ranged: /^\s*Ranged Weapons\s+Range\s+A\s+BS\s+S\s+AP\s+D(\s+Keywords)?$/,
+  melee: /^\s*Melee Weapons\s+Range\s+A\s+WS\s+S\s+AP\s+D(\s+Keywords)?$/,
   table: /^\s{1,6}(\S(?:.*?\S)?)\s+(Description|Effect|Capacity)$/,   // "Throttlerokkit Shokka Engine Description": one space
   rules: /^\s{1,6}Rules\s+(\S.*)$/,
   cats: /^\s{1,6}Categories\s+(\S.*)$/,
@@ -284,7 +285,12 @@ function splitUnits(pages) {
     const { t, page } = all[k];
     if (RE.glossary.test(t)) { glossary = all.slice(k + 1); break; }
     const m = RE.unit.exec(t);
-    if (m) { cur = { pts: +m[1], header: m[2], copies: m[3] ? +m[3] : 1, page, lines: [] }; units.push(cur); continue; }
+    // a unit that goes on over a page break prints its header again at the top of the next page;
+    // what follows is not a "Models" box then (two units printed alike each start with one)
+    const next = all.slice(k + 1).find(x => x.t.trim());
+    if (m && cur && page !== cur.lastPage && +m[1] === cur.pts && m[2] === cur.header && !(next && RE.models.test(next.t))) { cur.lastPage = page; continue; }
+    if (m) { cur = { pts: +m[1], header: m[2], copies: m[3] ? +m[3] : 1, page, lastPage: page, lines: [] }; units.push(cur); continue; }
+    if (cur) cur.lastPage = page;
     if (!cur) { if (t.trim()) throw new Error('text before the first unit: ' + t.trim()); continue; }
     cur.lines.push(t);
   }
@@ -304,6 +310,7 @@ function sectionsOf(u) {
     if ((m = RE.cats.exec(t))) return start('cats', { first: m[1] });
     if ((m = RE.table.exec(t)) && !/^\s*(Models|Unit)\b/.test(t)) return start('table', { name: m[1], col2: m[2] });
     if (!cur) { if (t.trim()) throw new Error(u.header + ': line before the first section: ' + t.trim()); return; }
+    if ((cur.kind === 'ranged' || cur.kind === 'melee') && !/Keywords$/.test(cur.header) && !cur.lines.some(x => x.t.trim()) && t.trim() === 'Keywords') return;   // the header's wrapped last word
     cur.lines.push({ i, t });
   });
   return secs;
@@ -654,26 +661,37 @@ function compareArmy(D, A, nr, out, srcFile) {
   const roster = nr.roster.map(r => Object.assign({ used: false }, r));
   for (const [nu, au] of pairs) {
     const unit = au.id;
-    const first = nrOptions((nu.models[0] || { options: [] }).options, enhNames);
     const modelSum = ms => ms.reduce((s, m) => s + (+(/^(\d+)/.exec(nm(m)) || [0, 0])[1]), 0);
-    if (first.leads) {
-      // one leader line and one bodyguard line per copy
-      let bg = null, ld = null, found = 0;
+    // the characters of an attached unit: every models line "• Leading: X" / "• Supporting: X" (a Warboss
+    // leading and a Bigboss supporting the same Breaka Boyz are one unit)
+    const chars = nu.models.map(m => ({ name: nm(m.line).replace(/^\d+x\s+/, ''), o: nrOptions(m.options, enhNames) })).filter(c => c.o.leads);
+    if (chars.length) {
+      const bgName = chars[0].o.leads;
+      // per copy: the bodyguard's roster line (its OPTIONS name the characters) and one line per character,
+      // whose points add up to the unit's
+      let bg = null, cl = null, found = 0;
       for (let k = 0; k < nu.copies; k++) {
-        const b2 = roster.find(r => !r.used && lc(r.name) === lc(first.leads) && lc(joinLines(r.options)).includes(lc(nu.header)));
-        const l2 = b2 && roster.find(r => !r.used && lc(r.name) === lc(nu.header) && r.pts === nu.pts - b2.pts);
-        if (!b2 || !l2) break;
-        b2.used = l2.used = true; bg = bg || b2; ld = ld || l2; found++;
+        const b2 = roster.find(r => !r.used && lc(r.name) === lc(bgName) && chars.every(c => lc(joinLines(r.options)).includes(lc(c.name))));
+        if (!b2) break;
+        const pick = (j, left, taken) => {
+          if (j === chars.length) return left === 0 ? [] : null;
+          for (const r of roster) if (!r.used && !taken.includes(r) && lc(r.name) === lc(chars[j].name) && r.pts <= left) { const rest = pick(j + 1, left - r.pts, taken.concat(r)); if (rest) return [r].concat(rest); }
+          return null;
+        };
+        const c2 = pick(0, nu.pts - b2.pts, []);
+        if (!c2) break;
+        b2.used = true; c2.forEach(r => { r.used = true; });
+        bg = bg || b2; cl = cl || c2; found++;
       }
       chk('roster');
-      if (!bg || !ld) { fail(unit, 'roster (leader + bodyguard lines)', au.ptsNote || null, 'no roster lines for ' + nu.header + ' leading ' + first.leads + ' (' + nu.pts + ' pts together)', 1); continue; }
-      cmp('roster', unit, 'copies (leader + bodyguard roster lines)', au.copies || 1, found, 1);
-      cmp('pts', unit, 'ptsNote', au.ptsNote ? nm(au.ptsNote) : null, ld.pts + ' + ' + nm(bg.name) + ' ' + bg.pts, 1);
-      cmp('roster', unit, 'name', nm(au.name), nm(ld.name), 1);
-      cmp('roster', unit, 'role', au.role, ld.role, 1);
+      if (!bg || !cl) { fail(unit, 'roster (character + bodyguard lines)', au.ptsNote || null, 'no roster lines for ' + chars.map(c => c.name).join(' + ') + ' with ' + bgName + ' (' + nu.pts + ' pts together)', 1); continue; }
+      cmp('roster', unit, 'copies (character + bodyguard roster lines)', au.copies || 1, found, 1);
+      cmp('pts', unit, 'ptsNote', au.ptsNote ? nm(au.ptsNote) : null, cl[0].pts + cl.slice(1).map(r => ' + ' + nm(r.name) + ' ' + r.pts).join('') + ' + ' + nm(bg.name) + ' ' + bg.pts, 1);
+      cmp('roster', unit, 'name', nm(au.name), nm(cl[0].name), 1);
+      cmp('roster', unit, 'role', au.role, cl[0].role, 1);
       // the roster's OPTIONS column prints "Warlord" for some warlords only (not for Ghazghkull or Magnus): one way
-      if (ld.options.includes('Warlord')) cmp('roster', unit, 'warlord (roster)', !!au.warlord, true, 1);
-      cmp('roster', unit, 'models (bodyguard count)', modelSum(au.models.slice(1)), bg.count, 1);
+      if (cl.some(r => r.options.includes('Warlord'))) cmp('roster', unit, 'warlord (roster)', !!au.warlord, true, 1);
+      cmp('roster', unit, 'models (bodyguard count)', modelSum(au.models.slice(chars.length)), bg.count, 1);
     } else {
       const rs = roster.filter(r => !r.used && lc(r.name) === lc(nu.header) && r.pts === nu.pts).slice(0, nu.copies);
       rs.forEach(r => { r.used = true; });
@@ -690,7 +708,9 @@ function compareArmy(D, A, nr, out, srcFile) {
 
   // rules that act on the whole army, which New Recruit names in a weapon's "(…)" when it applied them
   const armyRuleNames = new Set(A.detachments.map(id => F.detachments[id]).filter(Boolean).map(d => d.rule && d.rule.name).concat(F.armyRules.map(r => r.name)).filter(Boolean).map(x => lc(nm(x))));
-  for (const [nu, au] of pairs) compareUnit(nu, au, enhNames, { armyRuleNames, fail: (f, a, s) => fail(au.id, f, a, s, nu.page), chk, cmp: (c, f, a, s) => cmp(c, au.id, f, a, s, nu.page) });
+  // New Recruit names a detachment rule's effect by the rule ("(Dakka! Dakka! Dakka!)") or by the detachment ("(War Horde)")
+  const detRules = new Map(A.detachments.map(id => F.detachments[id]).filter(d => d && d.rule).map(d => [lc(nm(d.name)), lc(nm(d.rule.name))]));
+  for (const [nu, au] of pairs) compareUnit(nu, au, enhNames, { armyRuleNames, detRules, fail: (f, a, s) => fail(au.id, f, a, s, nu.page), chk, cmp: (c, f, a, s) => cmp(c, au.id, f, a, s, nu.page) });
 
   // glossary: every rule New Recruit prints at the end opens something in the app
   for (const g of nr.glossary) { chk('glossary'); if (!ruleKnown(D, A, g)) fail(null, 'glossary rule', null, g, nr.pageCount); }
@@ -709,7 +729,7 @@ function ruleKnown(D, A, label) {
 }
 
 // ---------------------------------------------------------------- per unit
-function compareUnit(nu, au, enhNames, { fail, chk, cmp, armyRuleNames = new Set() }) {
+function compareUnit(nu, au, enhNames, { fail, chk, cmp, armyRuleNames = new Set(), detRules = new Map() }) {
   cmp('pts', 'pts', au.pts, nu.pts);
   cmp('copies', 'copies', au.copies || 1, nu.copies);
 
@@ -729,8 +749,20 @@ function compareUnit(nu, au, enhNames, { fail, chk, cmp, armyRuleNames = new Set
   const nrEnh = opts.map(o => o.enhancement).filter(Boolean);
   cmp('enhancement', 'enhancement', au.enhancement ? nm(au.enhancement) : null, nrEnh.length ? nrEnh.join(', ') : null);
   cmp('warlord', 'warlord', !!au.warlord, opts.some(o => o.warlord));
-  const nrLeads = opts.map(o => o.leads).filter(Boolean);
-  cmp('leads', 'leads', au.leads ? nm(au.leads) : null, nrLeads.length ? nm(nrLeads.join(', ')) : null);
+  const nrLeads = uniq(opts.map(o => o.leads).filter(Boolean).map(nm));
+  cmp('leads', 'leads', au.leads ? nm(au.leads) : null, nrLeads.length ? nrLeads.join(', ') : null);
+  // the characters: the first is the unit's own name; the others (a Warboss leading the Breaka Boyz a
+  // Bigboss supports) are `also`, in models order; "Supporting" is `support`
+  const nrChars = nu.models.map((m, k) => ({ name: nm(m.line).replace(/^\d+x\s+/, ''), o: opts[k] })).filter(c => c.o.leads);
+  cmp('leads', 'support', !!au.support, nrChars.length ? nrChars[0].o.support : false);
+  cmp('leads', 'also', (au.also || []).map(c => ({ name: nm(c.name), support: !!c.support })), nrChars.slice(1).map(c => ({ name: c.name, support: c.o.support })));
+  // which character holds the enhancement: `enhOn` when it is not the first
+  const holder = opts.findIndex(o => o.enhancement);
+  const holderName = holder > 0 && nrChars.length > 1 ? nm(nu.models[holder].line).replace(/^\d+x\s+/, '') : null;
+  cmp('enhancement', 'enhOn', au.enhOn ? nm(au.enhOn) : null, holderName);
+  // and the Warlord: `warlordOn` when it is not the first character
+  const wl = opts.findIndex(o => o.warlord);
+  cmp('warlord', 'warlordOn', au.warlordOn ? nm(au.warlordOn) : null, wl > 0 && nrChars.length > 1 ? nm(nu.models[wl].line).replace(/^\d+x\s+/, '') : null);
   const appModels = (au.models || []).map(nm);
   opts.forEach((o, k) => {
     const line = o.line;
@@ -756,7 +788,7 @@ function compareUnit(nu, au, enhNames, { fail, chk, cmp, armyRuleNames = new Set
   const fromNames = o => new Set(Object.values((o && o.from) || {}).flat().map(x => lc(nm(x))));
   const annotated = (label, parens, obj) => {
     for (const p of uniq(parens.flatMap(b => b.split(/,\s*/)))) { chk('from'); boosts.push(p);
-      if (!fromNames(obj).has(lc(p))) fail('from[' + label + ']', obj && obj.from ? JSON.stringify(obj.from) : null, 'New Recruit marks "(' + p + ')" as applied'); }
+      if (!fromNames(obj).has(lc(p)) && !(detRules.has(lc(p)) && fromNames(obj).has(detRules.get(lc(p))))) fail('from[' + label + ']', obj && obj.from ? JSON.stringify(obj.from) : null, 'New Recruit marks "(' + p + ')" as applied'); }
   };
   for (const ns of nrStats) {
     const as = appStats.find(x => x.name === ns.name) ;
@@ -794,7 +826,7 @@ function compareUnit(nu, au, enhNames, { fail, chk, cmp, armyRuleNames = new Set
   }
   // and each such name is one of the unit's abilities (enhancements included) or a detachment/army rule of the list
   const abilNames = new Set(nu.tables.flatMap(t => t.rows.map(r => lc(nrAbility(r.name, nu.who).base))));
-  for (const p of uniq(boosts)) { chk('from'); if (!abilNames.has(lc(p)) && !armyRuleNames.has(lc(p)) && !(enhLc && lc(p) === enhLc)) fail('weapon/stat name', null, '(' + p + ')'); }
+  for (const p of uniq(boosts)) { chk('from'); if (!abilNames.has(lc(p)) && !armyRuleNames.has(lc(p)) && !detRules.has(lc(p)) && !(enhLc && lc(p) === enhLc)) fail('weapon/stat name', null, '(' + p + ')'); }
 
   // abilities
   const appA = (au.abilities || []).map(x => ({ name: nm(x.name), who: x.who ? nm(x.who) : null, tag: x.tag ? nm(x.tag) : null, x }));

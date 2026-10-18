@@ -18,11 +18,10 @@
    When the army is already in data.js the import keeps those hand-written parts for every unit
    and ability that is unchanged (same unit, same ability words), and its unit ids.
 
-   Then the gate checks everything as for a hand-made list:
-     node verify/bsdata.js; node verify/write-grants.js   (the "+" marks from BSData's modifiers)
-     node verify/run.js                                    (NR, BSData, GW texts, screens, sign-off)
+   With --write it then writes the "+" marks (verify/bsdata.js, verify/write-grants.js), and the gate checks
+   everything as for a hand-made list: node verify/run.js (NR, BSData, GW texts, screens, sign-off)
 
-   Usage: node verify/import-nr.js <nr.txt> <armyId> [--fresh] [--write] [--data data.js] [--out file]
+   Usage: node verify/import-nr.js <nr.txt> <armyId> [--fresh] [--write] [--data data.js] [--out file] [--reuse old-data.js]
      --fresh   ignore the army's current data.js entry (keeps nothing; used to prove the importer)
      --write   put the army into data.js (replacing the army with this id); else print to --out
                                                                      (default verify/out/import-<armyId>.js) */
@@ -36,7 +35,7 @@ const ROOT = path.resolve(__dirname, '..');
 const argv = process.argv.slice(2);
 const flag = f => argv.includes(f);
 const opt = (f, d) => { const i = argv.indexOf(f); return i >= 0 ? argv[i + 1] : d; };
-const pos = argv.filter((a, i) => !a.startsWith('--') && !['--data', '--out'].includes(argv[i - 1]));
+const pos = argv.filter((a, i) => !a.startsWith('--') && !['--data', '--out', '--reuse'].includes(argv[i - 1]));
 if (pos.length < 2) { console.error('usage: node verify/import-nr.js <nr.txt> <armyId> [--fresh] [--write] [--data data.js] [--out file]'); process.exit(2); }
 const [srcFile, armyId] = pos;
 const dataFile = path.resolve(opt('--data', path.join(ROOT, 'data.js')));
@@ -44,13 +43,13 @@ global.window = {}; require(dataFile); const D = window.WH_DATA;
 const old = flag('--fresh') ? null : D.armies.find(a => a.id === armyId) || null;
 
 // ---------------------------------------------------------------- small helpers
-const typo = s => String(s).replace(/(\w)'(\w)/g, '$1’$2').replace(/(^|[\s(])'/g, '$1‘').replace(/'/g, '’');   // the app's apostrophes
+const typo = s => String(s).replace(/'/g, '’');   // the app's apostrophes (’Uge, ’Eadbutt, Mek’s: New Recruit uses no single quote marks)
 const slug = s => nm(s).toLowerCase().replace(/[’']/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const times = s => String(s).replace(/(\d)x(\b|\d)/g, '$1×$2');    // "1x Mek" -> "1× Mek", "120x92mm" -> "120×92mm"
 const uniq = a => [...new Set(a)];
 const todo = [];           // what a person (or Claude) still writes; each is then signed off by the gate
 const note = (unit, what) => todo.push({ unit, what });
-const label = u => u.name + (u.leads ? ' + ' + u.leads : '');
+const label = u => [u.name].concat((u.also || []).map(c => c.name), u.leads ? [u.leads] : []).join(' + ');
 const wantPages = new Set();   // "<faction> <Wahapedia-Name>" lines for verify/sources/waha-datasheets.txt
 
 // ---------------------------------------------------------------- faction and detachments
@@ -187,24 +186,42 @@ const roster = nr.roster.map(r => Object.assign({ used: false }, r));
 const deviations = JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/deviations-nr.json'), 'utf8')).filter(d => d.army === armyId);
 const ROLES = ['Epic Hero', 'Character', 'Battleline', 'Dedicated Transport', 'Infantry', 'Mounted', 'Beast', 'Swarm', 'Vehicle', 'Monster', 'Fortification'];
 const oldPool = old ? [...old.units] : [];
+// donors for a unit that is new to this army: the same datasheet in another army of data.js, or in an
+// older data.js (--reuse file[,file]: e.g. git show <commit>:data.js), whose hand-written parts were signed off
+const donorArmies = flag('--fresh') ? [] : D.armies.filter(a => a.id !== armyId);   // --fresh: nothing kept, nothing borrowed
+for (const f of (flag('--fresh') ? '' : opt('--reuse', '') || '').split(',').filter(Boolean)) { global.window = {}; delete require.cache[path.resolve(f)]; require(path.resolve(f)); donorArmies.push(...window.WH_DATA.armies.filter(a => a.id !== armyId)); }
+const donorUnits = donorArmies.flatMap(a => a.units.map(u => Object.assign({ _army: a.id }, u)));
+const reused = [];
 const units = [];
 
 for (const nu of nrUnits) {
   const opts = nu.models.map(m => nrOptions(m.options, enhs.map(e => e.name)));
-  const lead = opts.map(o => o.leads).find(Boolean) || null;
-  const support = opts.some(o => o.leads && o.support);
-  // the roster lines: leader + bodyguard, or the unit's own
-  let name, role, ptsNote = null, bodyguard = null;
+  // the characters: every models line "• Leading: X" / "• Supporting: X" (a Warboss leading and a Bigboss
+  // supporting the same Breaka Boyz are one unit); the first names the unit, the others are `also`
+  const chars = nu.models.map((m, k) => ({ name: nm(m.line).replace(/^\d+x\s+/, ''), o: opts[k] })).filter(c => c.o.leads);
+  const lead = chars.length ? chars[0].o.leads : null;
+  const support = chars.length ? chars[0].o.support : false;
+  // the roster lines: the bodyguard's (its OPTIONS name the characters) and one per character, whose points add up
+  let name, role, ptsNote = null, bodyguard = null, also = [];
   if (lead) {
-    const bg = roster.find(r => !r.used && lc(r.name) === lc(lead) && lc(r.options.join(' ')).includes(lc(nu.header)));
-    const ld = bg && roster.find(r => !r.used && lc(r.name) === lc(nu.header) && r.pts === nu.pts - bg.pts);
+    let bg = null, cl = null;
     for (let k = 0; k < nu.copies; k++) {
-      const b2 = roster.find(r => !r.used && lc(r.name) === lc(lead) && lc(r.options.join(' ')).includes(lc(nu.header)));
-      const l2 = b2 && roster.find(r => !r.used && lc(r.name) === lc(nu.header) && r.pts === nu.pts - b2.pts);
-      if (b2 && l2) b2.used = l2.used = true;
+      const b2 = roster.find(r => !r.used && lc(r.name) === lc(lead) && chars.every(c => lc(r.options.join(' ')).includes(lc(c.name))));
+      if (!b2) break;
+      const pick = (j, left, taken) => {
+        if (j === chars.length) return left === 0 ? [] : null;
+        for (const r of roster) if (!r.used && !taken.includes(r) && lc(r.name) === lc(chars[j].name) && r.pts <= left) { const rest = pick(j + 1, left - r.pts, taken.concat(r)); if (rest) return [r].concat(rest); }
+        return null;
+      };
+      const c2 = pick(0, nu.pts - b2.pts, []);
+      if (!c2) break;
+      b2.used = true; c2.forEach(r => { r.used = true; });
+      bg = bg || b2; cl = cl || c2;
     }
-    if (!ld) { note(nu.header, 'no roster lines for this leader + bodyguard'); continue; }
-    name = ld.name; role = ld.role; ptsNote = ld.pts + ' + ' + typo(bg.name) + ' ' + bg.pts; bodyguard = bg.name;
+    if (!cl) { note(nu.header, 'no roster lines for ' + chars.map(c => c.name).join(' + ') + ' with ' + lead); continue; }
+    name = cl[0].name; role = cl[0].role; bodyguard = bg.name;
+    ptsNote = cl[0].pts + cl.slice(1).map(r => ' + ' + typo(r.name) + ' ' + r.pts).join('') + ' + ' + typo(bg.name) + ' ' + bg.pts;
+    also = chars.slice(1).map(c => Object.assign({ name: typo(c.name) }, c.o.support ? { support: true } : {}));
   } else {
     const rs = roster.filter(r => !r.used && lc(r.name) === lc(nu.header) && r.pts === nu.pts).slice(0, nu.copies);
     rs.forEach(r => { r.used = true; });
@@ -212,7 +229,7 @@ for (const nu of nrUnits) {
     name = rs[0].name; role = rs[0].role;
   }
   name = typo(name);
-  const tag0 = name + (lead ? ' + ' + typo(lead) : '');   // how the notes name it
+  const tag0 = [name].concat(also.map(c => c.name), lead ? [typo(lead)] : []).join(' + ');   // how the notes name it
 
   // weapons first: their names (and letter case) are what the gear lines refer to
   const kinds = {};
@@ -220,12 +237,16 @@ for (const nu of nrUnits) {
     const w = nrWeapon(r, nu.who), o = {};
     // in data.js's order: group, who, n, name, hunter for a profile; name, who, n for a weapon
     if (w.group) o.group = typo(w.group); else o.name = typo(w.name);
+    // New Recruit marks the profiles you pick one of with "➤"; a group without it fires every profile (Kustom Blasta X)
+    if (w.group && !/^\s*➤/.test(r.name)) o.fireAll = true;
     if (w.who) o.who = typo(w.who);
     if (w.n && w.n > 1) o.n = w.n;
     if (w.group) o.name = typo(w.name);
     if (w.hunter) o.hunter = true;
     o.range = cellV(r.range); o.A = cellV(r.A); o[kind === 'ranged' ? 'BS' : 'WS'] = cellV(r.BS); o.S = cellV(r.S); o.AP = cellV(r.AP); o.D = cellV(r.D);
-    o.kw = splitItems(r.kw || '').map(nm).filter(Boolean);
+    // keywords in capitals, as the datasheet prints them (New Recruit writes a rule-given one as "Sustained Hits 1");
+    // after a colon it stays as printed ("LETHAL HITS: non-MONSTER/VEHICLE")
+    o.kw = splitItems(r.kw || '').map(nm).filter(Boolean).map(k => k.replace(/^[^:]+/, x => x.toUpperCase()));
     return o;
   });
   const weaponName = new Map();
@@ -258,9 +279,9 @@ for (const nu of nrUnits) {
   });
 
   // abilities: New Recruit's tables, worded as the datasheet (or the enhancement) words them
-  const pages = uniq([name].concat(nu.who.length ? nu.who : [], bodyguard ? [bodyguard] : [])).map(wahaPage);
-  // a datasheet page not downloaded yet: listed for verify/fetch.sh (Wahapedia's address is the name, words capitalised)
-  uniq([name].concat(nu.who.length ? nu.who : [], bodyguard ? [bodyguard] : [])).forEach((n, k) => { if (!pages[k]) wantPages.add(factionId + ' ' + nm(n).replace(/['’]/g, '').split(/\s+/).map(w => w[0].toUpperCase() + w.slice(1)).join('-')); });
+  const pages = uniq([name].concat(also.map(c => c.name), nu.who.length ? nu.who : [], bodyguard ? [bodyguard] : [])).map(wahaPage);
+  // every datasheet page the unit's wording comes from, for verify/fetch.sh (Wahapedia's address is the name, words capitalised)
+  uniq([name].concat(also.map(c => c.name), nu.who.length ? nu.who : [], bodyguard ? [bodyguard] : [])).forEach((n, k) => { wantPages.add(factionId + ' ' + nm(n).replace(/['’]/g, '').split(/\s+/).map(w => w[0].toUpperCase() + w.slice(1)).join('-')); });
   if (!pages.some(Boolean)) note(tag0, 'no cached Wahapedia datasheet: its ability texts are New Recruit’s plain words (run sh verify/fetch.sh and import again)');
   let upgrade = null;
   const abilities = [];
@@ -294,9 +315,15 @@ for (const nu of nrUnits) {
   if (enhancement) u.enhancement = enhancement;
   if (upgrade) u.upgrade = upgrade;
   if (warlord) u.warlord = true;
-  if (lead) { u.leads = typo(lead); if (support) u.support = true; }
+  // the enhancement on a character other than the first: which one
+  const holder = opts.findIndex(o => o.enhancement);
+  if (enhancement && holder > 0 && chars.length > 1) u.enhOn = typo(nm(nu.models[holder].line).replace(/^\d+x\s+/, ''));
+  // and the Warlord, when it is not the first character
+  const wl = opts.findIndex(o => o.warlord);
+  if (warlord && wl > 0 && chars.length > 1) u.warlordOn = typo(nm(nu.models[wl].line).replace(/^\d+x\s+/, ''));
+  if (lead) { u.leads = typo(lead); if (support) u.support = true; if (also.length) u.also = also; }
   Object.assign(u, { models, gear, stats, ranged: kinds.ranged, melee: kinds.melee, abilities, rules: uniq(nu.rules.map(nm)), kw: uniq(cats.map(c => nm(c.replace(/\*$/, '')))) });
-  if (starred.length) u.kwNote = starred.join(', ') + (starred.length > 1 ? ' come' : ' comes') + ' from the ' + (support ? 'supported ' : 'led ') + typo(lead) + '.';
+  if (starred.length) u.kwNote = starred.join(', ') + (starred.length > 1 ? ' come' : ' comes') + ' from the ' + (also.length ? 'combined unit' : (support ? 'supported ' : 'led ') + typo(lead)) + '.';
   u._page = nu.page;
   // what New Recruit already applied to a weapon or stat row ("(Kustom Dakka)"): shown as a "+" mark, no footnote needed
   u._applied = new Set([...nu.ranged, ...nu.melee].flatMap(r => nrWeapon(r, nu.who).parens).concat(nu.stats.flatMap(r => nrStatName(r.name, nu.who).parens)).flatMap(p => p.split(/,\s*/)).map(lc));
@@ -315,7 +342,9 @@ for (const nu of nrUnits) {
       const pa = (prev.abilities || []).find(x => x.name === ab.name && ((x.who || null) === (ab.who || null) || (ab.who && (x.who || '').startsWith(ab.who + ':'))));
       if (!pa) continue;
       if (pa.who) ab.who = pa.who;
-      if (appText(pa.text).s === appText(ab.text).s) { ab.text = pa.text; delete ab._plain; }   // the same words: its markup as written
+      // the same words: its markup as written; or the official wording where New Recruit has a typo (deviations-nr.json)
+      const typoDev = deviations.some(d => d.unit === prev.id && /^abilities\[/.test(d.field) && d.field.slice(10).startsWith(nm(ab.name)) && appText(d.source).s === appText(ab.text).s);
+      if (appText(pa.text).s === appText(ab.text).s || typoDev) { ab.text = pa.text; delete ab._plain; }
       else { note(tag0, 'ability ' + ab.name + ' has new words: its phase tags and footnotes were not kept'); continue; }
       for (const k of ['ph', 'turn', 'turns', 'def', 'na']) if (pa[k] !== undefined) ab[k] = pa[k];
     }
@@ -326,6 +355,33 @@ for (const nu of nrUnits) {
       if (keep.length) u[k] = keep;
     }
   }
+  // a unit new to this army: what another list's copy of the datasheet has, where it is the same
+  const armyNames = new Set((F ? F.armyRules.map(r => r.name) : []).concat(detIds.map(id => ((F && F.detachments[id] || {}).rule || {}).name).filter(Boolean)));
+  if (!prev) {
+    // the whole unit's footnotes and auras: only from a unit of the same shape (same characters and bodyguard)
+    const shape = x => [x.name].concat((x.also || []).map(c => c.name), x.leads ? [x.leads] : []).map(nm).join('+');
+    const d = donorUnits.find(x => shape(x) === shape(u));
+    if (d) {
+      if (d.short) u.short = d.short;
+      const names = new Set(u.abilities.map(a => a.name)), weapons = new Set([...u.ranged, ...u.melee].map(w => w.group || w.name));
+      const sameWords = n => { const a1 = u.abilities.find(a => a.name === n), a2 = (d.abilities || []).find(a => a.name === n); return a1 && a2 && appText(a1.text).s === appText(a2.text).s; };
+      for (const k of ['mods', 'aura']) {
+        const keep = (d[k] || []).filter(m => (!m.weapon || weapons.has(m.weapon)) && (!m.from || (names.has(m.from) && sameWords(m.from)) || armyNames.has(m.from)));
+        if (keep.length) { u[k] = JSON.parse(JSON.stringify(keep)); reused.push(tag0 + ': ' + k + ' from ' + d._army + '/' + d.id); }
+      }
+    }
+  }
+  // each ability's phase tags and "When targeted" line: from any copy of it with the same name and words
+  for (const ab of u.abilities) {
+    if (ab.ph !== undefined) continue;
+    const da = donorUnits.flatMap(x => (x.abilities || []).map(a => [x, a])).find(([x, a]) => a.name === ab.name && appText(a.text).s === appText(ab.text).s);
+    if (!da) continue;
+    for (const k of ['ph', 'turn', 'turns', 'def']) if (da[1][k] !== undefined) ab[k] = JSON.parse(JSON.stringify(da[1][k]));
+    // "not usable here" (na) is about that list's units: not copied, only pointed out
+    if (da[1].na) note(tag0, 'ability ' + ab.name + ': another list marks it "' + da[1].na + '"; check whether that holds for this list before writing na');
+    if (ab._plain) { ab.text = da[1].text; delete ab._plain; }   // its markup as written there
+    reused.push(tag0 + ': ' + ab.name + ' from ' + da[0]._army + '/' + da[0].id);
+  }
   for (const ab of u.abilities.filter(x => x._plain)) { delete ab._plain; note(tag0, 'ability ' + ab.name + ': no marked-up wording found; it has New Recruit’s plain words (add bold keywords and bullets by hand, or fetch the datasheet)'); }
   units.push(u);
 }
@@ -333,7 +389,7 @@ for (const r of roster.filter(r => !r.used)) note(null, 'roster line not matched
 
 // ids for new units: the name, then what tells two apart
 for (const u of units.filter(u => !u.id)) {
-  let id = slug(u.name) + (u.leads ? '-' + slug(u.leads) : '');
+  let id = [u.name].concat((u.also || []).map(c => c.name), u.leads ? [u.leads] : []).map(slug).join('-');
   if (units.some(x => x !== u && slug(x.name) === slug(u.name) && (x.leads || null) === (u.leads || null))) id += u.enhancement ? '-' + slug(u.enhancement) : '';
   let k = 2, base = id; while (units.some(x => x.id === id)) id = base + '-' + k++;
   u.id = id;
@@ -383,9 +439,9 @@ const lit = v => {
 };
 const block = (key, rows) => rows && rows.length ? '      ' + key + ':[\n' + rows.map(r => '        ' + lit(r)).join(',\n') + '\n      ],\n' : '';
 function unitSrc(u) {
-  const head = ['id', 'name', 'short', 'role', 'pts', 'copies', 'ptsNote', 'enhancement', 'upgrade', 'warlord'].filter(k => u[k] !== undefined).map(k => k + ':' + lit(u[k])).join(', ');
+  const head = ['id', 'name', 'short', 'role', 'pts', 'copies', 'ptsNote', 'enhancement', 'enhOn', 'upgrade', 'warlord', 'warlordOn'].filter(k => u[k] !== undefined).map(k => k + ':' + lit(u[k])).join(', ');
   let s = '    {\n      ' + head + ',\n';
-  if (u.leads) s += '      leads:' + lit(u.leads) + (u.support ? ', support:true' : '') + ',\n';
+  if (u.leads) s += '      leads:' + lit(u.leads) + (u.support ? ', support:true' : '') + (u.also ? ', also:' + lit(u.also) : '') + ',\n';
   s += '      models:' + lit(u.models) + ',\n      gear:' + lit(u.gear) + ',\n';
   const AB = ['name', 'who', 'tag', 'ph', 'turn', 'turns', 'def', 'na', 'text'];   // an ability's fields in data.js's order
   const abs = u.abilities.map(a => Object.fromEntries(Object.keys(a).sort((x, y) => (AB.indexOf(x) + 1 || 99) - (AB.indexOf(y) + 1 || 99)).map(k => [k, a[k]])));
@@ -410,16 +466,24 @@ const report = ['# Import of ' + army.name + ' (' + armyId + ')', '', 'From ' + 
   units.length + ' units (' + units.reduce((t, u) => t + (u.copies || 1), 0) + ' with copies), ' + units.reduce((t, u) => t + u.pts * (u.copies || 1), 0) + ' pts.', '',
   '## Still to write (' + todo.length + ')', '', 'Each is then checked by the gate (verify/run.js): phase tags, footnotes and gists are signed off in verify/helpers.js.', '',
   ...todo.map(t => '- ' + (t.unit ? '**' + t.unit + '**: ' : '') + t.what), '',
-  '## Then', '', '1. `node verify/bsdata.js` (it lists the "+" marks BSData gives), `node verify/write-grants.js`', '2. `node verify/run.js` until it passes', ''].join('\n');
+  ...(reused.length ? ['## Reused from other lists (' + reused.length + ')', '', 'Same datasheet, same words: their signed-off phase tags, footnotes and auras.', '', ...reused.map(r => '- ' + r), ''] : []),
+  '## Then', '', '`node verify/run.js` until it passes (with --write the "+" marks from BSData are already written).', ''].join('\n');
 fs.mkdirSync(path.join(ROOT, 'verify/out'), { recursive: true });
 fs.writeFileSync(path.join(ROOT, 'verify/out/import-' + armyId + '.md'), report);
 if (flag('--write')) {
   let d = fs.readFileSync(dataFile, 'utf8');
   const start = d.indexOf("{\n  id:'" + armyId + "',");
   if (start >= 0) { const end = d.indexOf('\n},\n', start); if (end < 0) throw new Error('no end of army ' + armyId); d = d.slice(0, start) + src + d.slice(end + 4); }
-  else { const at = d.indexOf('const ARMIES = [\n'); if (at < 0) throw new Error('no ARMIES in data.js'); d = d.slice(0, at + 17) + src + d.slice(at + 17); }
+  else { const at = d.indexOf('const ARMIES = [\n'), end = at < 0 ? -1 : d.indexOf('\n];', at); if (end < 0) throw new Error('no ARMIES in data.js'); d = d.slice(0, end + 1) + src + d.slice(end + 1); }   // a new army goes last
   fs.writeFileSync(dataFile, d);
   console.log('wrote ' + armyId + ' into ' + path.relative(process.cwd(), dataFile) + ': ' + units.length + ' units; ' + todo.length + ' things to write (verify/out/import-' + armyId + '.md)');
+  // the "+" marks: BSData's modifiers on the new rows (bsdata.js lists them, write-grants.js writes them)
+  if (path.resolve(dataFile) === path.join(ROOT, 'data.js')) {
+    const { spawnSync } = require('child_process');
+    spawnSync(process.execPath, [path.join(ROOT, 'verify/bsdata.js')], { cwd: ROOT, encoding: 'utf8' });
+    const g = spawnSync(process.execPath, [path.join(ROOT, 'verify/write-grants.js')], { cwd: ROOT, encoding: 'utf8' });
+    console.log((g.stdout || g.stderr).trim());
+  }
 } else {
   const out = path.resolve(opt('--out', path.join(ROOT, 'verify/out/import-' + armyId + '.js')));
   fs.writeFileSync(out, src);

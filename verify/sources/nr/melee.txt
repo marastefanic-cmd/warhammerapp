@@ -1,0 +1,476 @@
+10/18/26, 10:05 PM                                                         Melee - New Recruit
+
+                                                            Melee [2000pts]
+  Army Roster [3 Detachment Points, 2000 pts] (Xenos - Orks)
+  • Battle Size: Strike Force (2000 Point limit)
+  • Detachment: War Horde [3Detachment Points]
+  • Force Disposition: Purge the Foe
+  • Show/Hide Options
+  NAME                         ROLE      PTS OPTIONS
+   Ghazghkull Thraka                    Epic Hero 290
+   Mozrog Skragbad                      Epic Hero 170
+   Nazdreg                              Epic Hero 165
+   Beastboss on Squigosaur Character 155
+   Beastboss on Squigosaur Character 140
+   Bigboss                              Character 50
+   Warboss                              Character 120
+   Warboss in Mega Armour Character 135
+   (6) Breaka Boyz                      Infantry       120 Bigboss, Warboss
+   (10) Gretchin                        Infantry       45
+   (10) Gretchin                        Infantry       45
+   (6) Meganobz                         Infantry       240 Nazdreg
+   (6) Meganobz                         Infantry       240 Warboss in Mega Armour
+   (3) Deffkoptas                       Mounted        85
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ace61c5595912a60554b524?view=frt4r2                         1/12
+10/18/26, 10:05 PM                                                         Melee - New Recruit
+     405 PTS                                                     NAZDREG
+   Models                                                            Options
+                                                                        Kustom Blasta X, Moonchewa
+   1x Nazdreg
+                                                                        • Leading: Meganobz[1]
+   6x Meganob w/ Twin Killsaw                                           Twin Killsaw
+   Unit                                                    M        T      Sv       W       LD     OC      InSv     Base
+   Nazdreg - Nazdreg                                       5"       7      2+       8       6+     1       5+       60mm
+   Meganob (x6) - Meganobz                                 5"       6      2+       3       7+     1                40mm
+   Ranged Weapons                                Range A BS S AP D Keywords
+   Kustom Blasta X - Skorcha (Nazdreg's
+                                                 12"       3 -      5 -1 1 BLAST 1, TORRENT, IGNORES COVER
+   Know-wotz) - Nazdreg
+   Kustom Blasta X - Gatler (Nazdreg's
+                                                 24"       6 4+ 9 -2 3 HAZARDOUS, IGNORES COVER
+   Know-wotz) - Nazdreg
+   Kustom Blasta X - Shoota (Nazdreg's                                           LETHAL HITS: non-MONSTER/VEHICLE, RAPID
+                                                 18"       4 4+ 5 -1 1
+   Know-wotz) - Nazdreg                                                          FIRE 2, IGNORES COVER
+   Melee Weapons                                    Range A WS S             AP D Keywords
+                                                                                        CLEAVE 1, EXTRA ATTACKS, Sustained Hits
+   Kustom Blasta X (War Horde) - Nazdreg            Melee 6 2+ 5             -1 1
+                                                                                        1
+   Moonchewa (War Horde) - Nazdreg                  Melee 5 2+ 12 -2 3 CLEAVE 1, TWIN-LINKED, Sustained Hits 1
+   Twin Killsaw (War Horde) (x6) -
+   Meganobz
+                                                    Melee 3 4+ 10 -2 3 TWIN-LINKED, Sustained Hits 1
+
+   Abilities                                       Description
+                                                     This unit has Deep Strike
+   Nazdreg's Know-wotz - Nazdreg
+                                                     This unit's ranged attacks have [IGNORES COVER].
+                                                   In your opponent's Movement phase, when an enemy unit ends a move
+   Supreme Kunnin' (Once per phase, per            within 8" of this unit, if this unit is unengaged, this unit can:
+   army) - Nazdreg                                   Make a normal move of up to D6".
+                                                     Or: If this unit is riled up, make a normal move of up to 5".
+                                                   In your Movement phase, at the start or end of this unit's move, you
+   Intimidating Motivation (Once per               can select one friendly ORKS unit within 6" of this unit. That unit:
+   battle round, per army) - Nazdreg                 Is no longer battle-shocked.
+                                                     Is riled up until the start of your next turn.
+   Krumpin’ Time - Meganobz                        In the Fight phase, if this unit is riled up, this unit has +1 to hit rolls.
+   Arrogant Invulnerability - Meganobz             Attacks that target this unit have -1 AP.
+    Rules Waaagh!, Leader, Da Boss, Deep Strike, Waaagh!, Deep Strike
+
+    Categories Character, Epic Hero, Faction: Orks, Infantry, Mega Armour, Nazdreg, Warboss, Explosives*, Meganobz*,
+               *from combined unit
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ace61c5595912a60554b524?view=frt4r2                                                          2/12
+10/18/26, 10:05 PM                                                             Melee - New Recruit
+     290 PTS                                                     BIGBOSS
+   Models                                                    Options
+                                                             Big Choppa, Slugga
+   1x Bigboss
+                                                             • Supporting: Breaka Boyz
+                                                             Kunnin’ But Brutal, Power Klaw, Kombi-skorcha
+   1x Warboss
+                                                             • Leading: Breaka Boyz
+   1x Nob                                                    Choppa, Rokkit Pistol, Smash Hammer
+   3x Breaka Boy                                             Smash Hammer
+   1x Breaka Boy w/ Knucklebustas                            Knucklebustas
+   1x Breaka Boy w/ Tankhammer                               Tankhammer
+   Unit                                                         M          T      Sv       W         LD    OC     InSv     Base
+   Bigboss - Bigboss                                            6"         5      4+       5         7+    1               40mm
+   Warboss - Warboss                                            6"         6      4+       6         6+     1     5+       50mm
+   Nob - Breaka Boyz                                            6"         5      4+       3         7+     1              32mm
+   Breaka Boy (x5) - Breaka Boyz                                6"         5      4+       2         7+     1              32mm
+   Ranged Weapons                           Range A BS S             AP D Keywords
+                                                                          CLOSE-QUARTERS, LETHAL HITS: non-
+   Slugga - Bigboss                         12"       1 5+ 4         0 1
+                                                                          MONSTER/VEHICLE
+   ➤ Kombi-skorcha - Skorcha -
+                                            12"       3 -      5     0     1 BLAST 1, TORRENT
+   Warboss
+   ➤ Kombi-skorcha - Shoota -                                                    LETHAL HITS: non-MONSTER/VEHICLE, RAPID
+                                            18"       2 5+ 4         0     1
+   Warboss                                                                       FIRE 1
+   Rokkit pistol - Breaka Boyz              12"       1 5+ 10 -2 3 CLOSE-QUARTERS
+   Melee Weapons                                             Range A WS S                AP D Keywords
+   Big Choppa (War Horde) - Bigboss                          Melee 5 3+ 7                -2 2 PRECISION, Sustained Hits 1
+   Power Klaw (War Horde) - Warboss                          Melee 6 2+ 12 -2 2 Sustained Hits 1
+   Choppa (War Horde) - Breaka Boyz                          Melee 4 3+ 5                -1 1 Sustained Hits 1
+   ➤ Smash Hammer - Hunter (Hunter:
+   MONSTER/VEHICLE) (War Horde) (x4) - Breaka                Melee 3 3+ 12 -2 3 Sustained Hits 1
+   Boyz
+   ➤ Smash Hammer - Standard (War Horde) (x4)
+                                                             Melee 3 3+ 7                -2 2 Sustained Hits 1
+   - Breaka Boyz
+                                                                                                     ANTI-MONSTER/VEHICLE
+   Knucklebustas (War Horde) - Breaka Boyz                   Melee 4 3+ 5                -2 2
+                                                                                                     4+, Sustained Hits 1
+                                                                                                     DEVASTATING WOUNDS,
+   Tankhammer (War Horde) - Breaka Boyz                      Melee 3 4+ 12 -2 3
+                                                                                                     HAZARDOUS, Sustained Hits 1
+   Abilities                                 Description
+   Sumfin’ to Prove - Bigboss                This unit's melee attacks have +1 to hit rolls.
+                                             If this unit made a charge move this turn, this model's melee attacks have:
+   Might is Right - Warboss                    +3 A.
+                                               +2 S.
+                                             In your Shooting phase, when this unit is selected to shoot, you can use
+   Boss' Ammo Runt (Once per                 this ability. If you do, this model's ranged attacks have +1 to hit rolls.
+   battle, per unit) - Warboss               Place a Boss' Ammo Runt token next to the unit, removing it when this ability
+                                             is used.
+                                     In your Movement phase, at the start or end of this unit's move, you can
+   Intimidating Motivation (Once per select one friendly ORKS unit within 6" of this unit. That unit:
+   battle round, per army) - Warboss   Is no longer battle-shocked.
+                                       Is riled up until the start of your next turn.
+                                             ORKS model only. When this unit is selected to make a fall-back move,
+   Kunnin’ But Brutal - Warboss              that fall-back move does not prevent this unit from being eligible to
+                                             shoot/declare a charge.
+
+https://www.newrecruit.eu/app/Lists/6ace61c5595912a60554b524?view=frt4r2                                                           3/12
+10/18/26, 10:05 PM                                                         Melee - New Recruit
+      290 PTS                                                    BIGBOSS
+   Abilities                                 Description
+   Trophy Hunters - Breaka Boyz              This unit has +1 to charge rolls.
+                                       In your Movement phase, when this unit ends a normal move, you can
+                                       select one visible enemy unit within 12" of this unit and roll one D6:
+   Bomb Squig (Once per turn, twice
+                                         On a 3+, that enemy unit suffers D3 mortal wounds.
+   per battle, per unit) - Breaka Boyz
+                                          Place two Bomb Squig tokens next to the unit, removing one each time
+                                          this ability is used.
+    Rules Waaagh!, Support, Da Boss, Leader, Waaagh!, Waaagh!
+
+    Categories Bigboss, Character, Faction: Orks, Infantry, Grenades*, Warboss*, Breaka Boyz*, Explosives*,
+               *from combined unit
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ace61c5595912a60554b524?view=frt4r2                                         4/12
+10/18/26, 10:05 PM                                                         Melee - New Recruit
+     375 PTS                                         WARBOSS IN MEGA ARMOUR
+   Models                                                Options
+                                                            Follow Me Ladz, ’Uge Choppa, Big Shoota
+   1x Warboss in Mega Armour
+                                                            • Leading: Meganobz[2]
+   6x Meganob w/ Twin Killsaw                               Twin Killsaw
+   Unit                                                                                    M T Sv W LD OC InSv Base
+   Warboss in Mega Armour (Follow Me Ladz) - Warboss in Mega Armour                        7" 7 2+ 7 6+ 1 5+   50mm
+   Meganob (Follow Me Ladz) (x6) - Meganobz                                                7" 6 2+ 3   7+ 1             40mm
+   Ranged Weapons                             Range A BS S AP D Keywords
+   Big Shoota - Warboss in Mega                                 LETHAL HITS: non-MONSTER/VEHICLE, RAPID
+   Armour
+                                              36"   3 4+ 5 0 1
+                                                                FIRE 2
+   Melee Weapons                                    Range A WS S AP D Keywords
+   ’Uge Choppa (War Horde) - Warboss in Mega Armour Melee 5 2+ 12 -2 3 CLEAVE 2, Sustained Hits 1
+   Twin Killsaw (War Horde) (x6) - Meganobz                       Melee 3 4+ 10 -2 3 TWIN-LINKED, Sustained Hits 1
+   Abilities                                       Description
+                                                   When this unit ends a charge move, you can select one enemy unit
+   Krushin' Impetus - Warboss in Mega              engaged with this unit. If you do, roll one D6 for each model in this
+   Armour                                          unit engaged with that enemy unit:
+                                                    For each 3+, that enemy unit suffers 1 mortal wound.
+                                                   In your Movement phase, at the start or end of this unit's move, you
+   Intimidating Motivation (Once per battle        can select one friendly ORKS unit within 6" of this unit. That unit:
+   round, per army) - Warboss in Mega
+                                                     Is no longer battle-shocked.
+   Armour
+                                                     Is riled up until the start of your next turn.
+   Follow Me Ladz - Warboss in Mega
+   Armour
+                                                   ORKS model only. This unit has +2" M.
+
+   Krumpin’ Time - Meganobz                        In the Fight phase, if this unit is riled up, this unit has +1 to hit rolls.
+   Arrogant Invulnerability - Meganobz             Attacks that target this unit have -1 AP.
+    Rules Da Boss, Leader, Waaagh!, Waaagh!
+
+    Categories Character, Faction: Orks, Infantry, Mega Armour, Warboss, Warboss in Mega Armour, Explosives*,
+               Meganobz*, *from combined unit
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ace61c5595912a60554b524?view=frt4r2                                                          5/12
+10/18/26, 10:05 PM                                                         Melee - New Recruit
+     290 PTS                                             GHAZGHKULL THRAKA
+   Models                                   Options
+   1x Ghazghkull Thraka                     Warlord, Adamantine 'Eadbutt, Gork’s Klaw, Mork’s Roar
+   Unit                                         M        T         Sv         W        LD        OC   InSv    Base
+   Ghazghkull Thraka                            8"       10        2+         16       6+        4    4+      80mm
+   Ranged Weapons                    Range A             BS S AP D Keywords
+   ➤ Mork’s Roar - Point
+                                     9"       2D6+2 -          6 -1 1 CLOSE-QUARTERS, TORRENT
+   Blank
+                                                                           LETHAL HITS: non-MONSTER/VEHICLE, RAPID
+   ➤ Mork’s Roar - Aimed             36"      12         5+ 6 -1 1
+                                                                           FIRE 4
+   Melee Weapons                    Range A WS S              AP D
+                                                          Keywords
+   Adamantine 'Eadbutt (War                               DEVASTATING WOUNDS, EXTRA ATTACKS,
+                                    Melee 1 2+ 14 -2 D3+3
+   Horde)                                                 PRECISION, Sustained Hits 1
+                                                                           CLEAVE 2, DEVASTATING WOUNDS, Sustained Hits
+   Gork’s Klaw (War Horde)          Melee 7 2+ 14 -3 4
+                                                                           1
+   Abilities                           Description
+   Supreme Commander                   If this model is in your army, it must be your WARLORD.
+                                       In your Movement phase, you can select a number of friendly ORKS units equal
+   Makari, Hoist Dat Banner!           to or less than the current battle round number. Those units are riled up until the
+   (Once per battle, per army)         start of your next turn.
+                                       Place one Makari token next to the unit, removing it after this ability is used.
+                                       While this unit is within 3" of another friendly ORKS INFANTRY unit, this unit
+   Da Grand Warlord's Ladz
+                                       has Lone Operative.
+                                       While a friendly ORKS unit is within 6" of this unit, that unit's melee attacks have:
+   Prophet of Da Great
+                                        +1 to hit rolls.
+   Waaagh! (Aura)
+                                        +1 to wound rolls.
+    Rules Waaagh!, Da Boss
+
+    Categories Character, Epic Hero, Explosives, Faction: Orks, Ghazghkull Thraka, Infantry, Warboss, Warlord
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ace61c5595912a60554b524?view=frt4r2                                                   6/12
+10/18/26, 10:05 PM                                                         Melee - New Recruit
+     170 PTS                                            MOZROG SKRAGBAD
+   Models                                         Options
+   1x Mozrog Skragbad                             Big Chompa’s Jaws, Gutrippa, Thump Gun
+   Unit                                       M           T      Sv         W         LD         OC     InSv        Base
+   Mozrog Skragbad                            10"         9      3+         10        6+         3       4+         80mm
+   Ranged Weapons                   Range         A     BS      S     AP      D     Keywords
+   Thump Gun                        18"           3     5+      6     0       2     ANTI-MONSTER/VEHICLE 4+
+   Melee Weapons                                    Range A WS S            AP D           Keywords
+                                                                                           ANTI-MONSTER/VEHICLE 3+, EXTRA
+   Big Chompa’s Jaws (War Horde)                    Melee 3 3+ 7            -2 4
+                                                                                           ATTACKS, Sustained Hits 1
+   ➤ Gutrippa - Hunter (Hunter:
+                                                    Melee 6 2+ 12 -2 D6+1 LETHAL HITS, Sustained Hits 1
+   MONSTER/VEHICLE) (War Horde)
+   ➤ Gutrippa - Standard (War Horde)                Melee 6 2+ 9            -2 2           CLEAVE 1, Sustained Hits 1
+   Abilities            Description
+   Beast Snagga         While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding MONSTER
+   Following            CHARACTER units), this unit has Lone Operative.
+                        In the Fight phase, when this model is destroyed, if this unit has not been selected to
+                        fight this phase, roll one D6:
+   One Last Kill
+                          On a 2+, do not remove this model from the battlefield. When this unit has fought, or at the
+                           end of the phase (whichever comes first), this model is removed from the battlefield.
+   Da Bigger Dey
+   Iz…
+                        This unit's melee attacks that target a MONSTER/VEHICLE unit can re-roll wounds rolls.
+
+    Rules Feel No Pain 5+, Waaagh!
+
+    Categories Beast Snagga, Character, Epic Hero, Faction: Orks, Monster, Mozrog Skragbad
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ace61c5595912a60554b524?view=frt4r2                                                    7/12
+10/18/26, 10:05 PM                                                         Melee - New Recruit
+     155 PTS                                        BEASTBOSS ON SQUIGOSAUR
+   Models                                Options
+   1x Beastboss on Squigosaur            Headwoppa’s Killchoppa, Beastchoppa, Slugga, Squigosaur’s jaws, Thump Gun
+   Unit                                                 M          T       Sv      W        LD      OC     InSv        Base
+   Beastboss on Squigosaur                              10"        9       3+      10       6+      3      5+          80mm
+   Ranged Weapons         Range      A BS      S AP D Keywords
+   Slugga                  12"       1 5+ 4 0           1 CLOSE-QUARTERS, LETHAL HITS: non-MONSTER/VEHICLE
+   Thump Gun               18"       3 5+ 6 0           2 ANTI-MONSTER/VEHICLE 4+
+   Melee Weapons                                       Range A WS S             AP D     Keywords
+   ➤ Beastchoppa - Hunter (Hunter:
+                                                       Melee 6 2+ 12 -2 D6 Sustained Hits 1
+   MONSTER/VEHICLE) (War Horde)
+   ➤ Beastchoppa - Standard (War Horde)                Melee 6 2+ 6             -2 2      CLEAVE 1, Sustained Hits 1
+                                                                                          ANTI-MONSTER/VEHICLE 3+, EXTRA
+   Squigosaur’s jaws (War Horde)                       Melee 3 3+ 7             -2 3
+                                                                                          ATTACKS, Sustained Hits 1
+   Abilities                             Description
+   Thundering Stampede (Aura)            Friendly BEAST SNAGGA units within 6" of this unit have +1 to charge rolls.
+                                         While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding
+   Boss of da Hunt
+                                         MONSTER CHARACTER units), this unit has Lone Operative.
+                                         In your Movement phase, at the start or end of this unit's move, you can select
+   Keep Huntin'! (Once per battle        one friendly BEAST SNAGGA unit within 6" of this unit. That unit:
+   round, per army)                        Is no longer battle-shocked.
+                                           Is riled up until the start of your next turn.
+                                         ORKS model only. If this unit made a charge move this turn, this model's
+   Headwoppa’s Killchoppa
+                                         melee attacks have +1 AP.
+    Rules Da Boss, Waaagh!, Feel No Pain 5+
+
+    Categories Beast Snagga, Beastboss on Squigosaur, Character, Faction: Orks, Monster, Warboss
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ace61c5595912a60554b524?view=frt4r2                                                      8/12
+10/18/26, 10:05 PM                                                         Melee - New Recruit
+     140 PTS                                        BEASTBOSS ON SQUIGOSAUR
+   Models                                           Options
+   1x Beastboss on Squigosaur                       Beastchoppa, Slugga, Squigosaur’s jaws, Thump Gun
+   Unit                                                 M          T       Sv      W        LD      OC     InSv        Base
+   Beastboss on Squigosaur                              10"        9       3+      10       6+      3      5+          80mm
+   Ranged Weapons         Range      A BS S AP D Keywords
+   Slugga                 12"        1 5+ 4 0 1 CLOSE-QUARTERS, LETHAL HITS: non-MONSTER/VEHICLE
+   Thump Gun               18"       3 5+ 6 0           2 ANTI-MONSTER/VEHICLE 4+
+   Melee Weapons                                      Range A WS S              AP D     Keywords
+   ➤ Beastchoppa - Hunter (Hunter:
+                                                      Melee 6 2+ 12 -2 D6 Sustained Hits 1
+   MONSTER/VEHICLE) (War Horde)
+   ➤ Beastchoppa - Standard (War Horde)               Melee 6 2+ 6              -2 2      CLEAVE 1, Sustained Hits 1
+                                                                                          ANTI-MONSTER/VEHICLE 3+, EXTRA
+   Squigosaur’s jaws (War Horde)                      Melee 3 3+ 7              -2 3
+                                                                                          ATTACKS, Sustained Hits 1
+   Abilities                            Description
+   Thundering Stampede (Aura)           Friendly BEAST SNAGGA units within 6" of this unit have +1 to charge rolls.
+                                        While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding
+   Boss of da Hunt
+                                        MONSTER CHARACTER units), this unit has Lone Operative.
+                                        In your Movement phase, at the start or end of this unit's move, you can select
+   Keep Huntin'! (Once per              one friendly BEAST SNAGGA unit within 6" of this unit. That unit:
+   battle round, per army)                Is no longer battle-shocked.
+                                          Is riled up until the start of your next turn.
+    Rules Da Boss, Waaagh!, Feel No Pain 5+
+
+    Categories Beast Snagga, Beastboss on Squigosaur, Character, Faction: Orks, Monster, Warboss
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ace61c5595912a60554b524?view=frt4r2                                                      9/12
+10/18/26, 10:05 PM                                                          Melee - New Recruit
+     45 PTS                                                         GRETCHIN                                                            x2
+   Models                                        Options
+   10x Gretchin                                  Grot Blasta, Scavenged Shivs
+   Unit                                    M         T         Sv           W           LD           OC        InSv          Base
+   Gretchin (x10)                          6"        2         6+           1           8+           1                       25mm
+   Ranged Weapons                         Range            A        BS          S       AP       D        Keywords
+   Grot Blasta (x10)                      12"              1        4+          3       0        1        CLOSE-QUARTERS
+   Melee Weapons                                                    Range           A       WS   S        AP   D     Keywords
+   Scavenged Shivs (War Horde) (x10)                                Melee           1       5+   2        0    1     Sustained Hits 1
+   Abilities               Description
+                           For the purposes of transport capacity, each 2 Gretchin models (rounding up) take up
+   Downtrodden
+                           the space of 1 model.
+   Thievin’                At the end of your Movement phase, if this unit is controlling an objective, that objective
+   Scavengers              is secured.
+    Rules Waaagh!
+
+    Categories Faction: Orks, Gretchin, Grots, Infantry
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ace61c5595912a60554b524?view=frt4r2                                                                     10/12
+10/18/26, 10:05 PM                                                           Melee - New Recruit
+     85 PTS                                                  DEFFKOPTAS
+   Models                                                   Options
+   2x Deffkopta                                             Choppa, Rokkit Launcha, Slugga, Spinnin’ Blades
+   1x Deffkopta w/ Kustom mega-blasta                       Choppa, Kustom Mega-blasta, Slugga, Spinnin’ Blades
+   Unit                                  M           T      Sv           W       LD         OC     InSv   Base
+   Deffkoptas (x3)                        12"        6      4+           4       7+         2      6+     75x42mm
+   Ranged Weapons                      Range A BS S              AP D Keywords
+   ➤ Rokkit Launcha- Busta
+                                       24"       2 5+ 10 -2 3 LETHAL HITS
+   (x2)
+   ➤ Rokkit Launcha - Blasta
+                                       24"       2 5+ 4          0   1 BLAST 2
+   (x2)
+                                                                           CLOSE-QUARTERS, LETHAL HITS: non-
+   Slugga (x3)                         12"       1 5+ 4          0   1
+                                                                           MONSTER/VEHICLE
+   Kustom Mega-blasta                  24"       3 5+ 9          -2 3 HAZARDOUS, LETHAL HITS
+   Melee Weapons                                Range     A WS S AP D Keywords
+   Choppa (War Horde) (x3)                      Melee     3 4+ 5 -1 1 Sustained Hits 1
+   Spinnin’ Blades (War Horde) (x3)             Melee     4 3+       5 -1        1 CLEAVE 1, HAZARDOUS, Sustained Hits 1
+   Abilities           Description
+   Aerial              At the end of your opponent's Fight phase, if this unit is unengaged, you can place this unit
+   Manoover            in strategic reserves.
+   Deff from           In your Shooting phase, if this unit made an ingress move this turn, this unit's ranged attacks
+   Above               have +1 to hit rolls.
+    Rules Deep Strike, Waaagh!
+
+    Categories Deffkoptas, Explosives, Faction: Orks, Fly, Mounted, Speed Freeks
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ace61c5595912a60554b524?view=frt4r2                                                   11/12
+10/18/26, 10:05 PM                                                         Melee - New Recruit
+
+
+  Rules
+  Army Roster (Xenos - Orks)
+    Waaagh!
+    Friendly ORKS with this ability can:
+     Re-roll advance rolls.
+     Become riled up, as stated in other rules.
+       While a unit is riled up:
+          - That unit has 5+ InSv.
+          - That unit's ranged attacks have [ASSAULT].
+          - When that unit is selected to make an advance move, that advance move does not prevent that unit
+       from being eligible to declare a charge.
+    War Cry (Once per battle, per army)
+    At the start of the Command phase, you can use this ability. If you do, friendly ORKS units with the Waaagh!
+    ability are riled up until the end of the next turn.
+
+  Da Boss:
+  At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.
+
+  Deep Strike:
+  Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up
+  anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your
+  opponent’s deployment zone.
+
+  Feel No Pain 5+:
+  This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll
+  one D6: on an X+, that wound is not lost.
+
+  Get Stuck In:
+  Friendly ORKS units' melee attacks have [SUSTAINED HITS 1].
+
+  Leader:
+  Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one
+  friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an
+  attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one
+  support unit attached to it.
+
+  Support:
+  Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one
+  friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form
+  an attached unit with it.
+  Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to
+  it.
+
+  Waaagh!:
+  Friendly ORKS with this ability can:
+   Re-roll advance rolls.
+   Become riled up, as stated in other rules.
+     While a unit is riled up:
+        - That unit has 5+ InSv.
+        - That unit's ranged attacks have [ASSAULT].
+        - When that unit is selected to make an advance move, that advance move does not prevent that unit
+     from being eligible to declare a charge.
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ace61c5595912a60554b524?view=frt4r2                                              12/12
+

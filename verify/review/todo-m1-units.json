@@ -1,0 +1,989 @@
+[
+ {
+  "army": "melee",
+  "kind": "ability-na",
+  "where": "melee · Mozrog Skragbad · Beast Snagga Following",
+  "judgement": {
+   "na": "Every BEAST SNAGGA unit in this list is a MONSTER CHARACTER",
+   "armyUnits": [
+    "Ghazghkull Thraka [Character, Epic Hero, Explosives, Faction: Orks, Ghazghkull Thraka, Infantry, Warboss, Warlord]",
+    "Mozrog Skragbad [Beast Snagga, Character, Epic Hero, Faction: Orks, Monster, Mozrog Skragbad]",
+    "Nazdreg [Character, Epic Hero, Faction: Orks, Infantry, Mega Armour, Nazdreg, Warboss, Explosives, Meganobz]",
+    "Beastboss on Squigosaur [Beast Snagga, Beastboss on Squigosaur, Character, Faction: Orks, Monster, Warboss]",
+    "Beastboss on Squigosaur [Beast Snagga, Beastboss on Squigosaur, Character, Faction: Orks, Monster, Warboss]",
+    "Bigboss [Bigboss, Character, Faction: Orks, Infantry, Grenades, Warboss, Breaka Boyz, Explosives]",
+    "Warboss in Mega Armour [Character, Faction: Orks, Infantry, Mega Armour, Warboss, Warboss in Mega Armour, Explosives, Meganobz]",
+    "Gretchin [Faction: Orks, Gretchin, Grots, Infantry]",
+    "Deffkoptas [Deffkoptas, Explosives, Faction: Orks, Fly, Mounted, Speed Freeks]"
+   ]
+  },
+  "source": {
+   "ability": "Beast Snagga Following",
+   "text": "While this unit is within 3\" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**."
+  },
+  "key": "75b68a139e8680b6"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-def",
+  "where": "melee · Mozrog Skragbad · One Last Kill",
+  "judgement": {
+   "def": "Destroyed in the Fight phase before fighting: on a 2+ it stays until it has fought or the phase ends"
+  },
+  "source": {
+   "ability": "One Last Kill",
+   "text": "In the Fight phase, when this model is **destroyed**, if this unit has not been **selected to fight** this phase, roll one D6:\n- On a 2+, do not remove this model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield."
+  },
+  "key": "dc05ed43641da22e"
+ },
+ {
+  "army": "melee",
+  "kind": "unit-footnote",
+  "where": "melee · Mozrog Skragbad",
+  "judgement": {
+   "kind": "melee",
+   "when": "vs MONSTER/VEHICLE",
+   "note": "can re-roll wound rolls",
+   "from": "Da Bigger Dey Iz…"
+  },
+  "source": {
+   "ability": "Da Bigger Dey Iz…",
+   "text": "This unit’s melee attacks that target a **MONSTER/VEHICLE** unit can re-roll **wound rolls**."
+  },
+  "key": "1cc0e33244741662"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Nazdreg · Nazdreg’s Know-wotz",
+  "judgement": {
+   "who": "Nazdreg",
+   "models": [
+    "1× Nazdreg",
+    "6× Meganob w/ Twin Killsaw"
+   ]
+  },
+  "source": {
+   "ability": "Nazdreg’s Know-wotz",
+   "text": "- This unit has **Deep Strike**.\n- This unit’s ranged attacks have **[IGNORES COVER]**."
+  },
+  "key": "84c2b790dff5a08a"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Nazdreg · Supreme Kunnin’",
+  "judgement": {
+   "who": "Nazdreg",
+   "models": [
+    "1× Nazdreg",
+    "6× Meganob w/ Twin Killsaw"
+   ]
+  },
+  "source": {
+   "ability": "Supreme Kunnin’",
+   "text": "In your opponent’s Movement phase, when an enemy unit ends a move within 8\" of this unit, if this unit is **unengaged**, this unit can:\n- Make a **normal move** of up to D6\".\n- Or: If this unit is **riled up**, make a **normal move** of up to 5\"."
+  },
+  "key": "8b13abc1b7966226"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Nazdreg · Intimidating Motivation",
+  "judgement": {
+   "who": "Nazdreg",
+   "models": [
+    "1× Nazdreg",
+    "6× Meganob w/ Twin Killsaw"
+   ]
+  },
+  "source": {
+   "ability": "Intimidating Motivation",
+   "text": "In your Movement phase, at the start or end of this unit’s move, you can select one friendly **ORKS** unit within 6\" of this unit. That unit:\n- Is no longer **battle-shocked**.\n- Is **riled up** until the start of your next turn."
+  },
+  "key": "8221f957b63acdba"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Nazdreg · Krumpin’ Time",
+  "judgement": {
+   "who": "Meganobz",
+   "models": [
+    "1× Nazdreg",
+    "6× Meganob w/ Twin Killsaw"
+   ]
+  },
+  "source": {
+   "ability": "Krumpin’ Time",
+   "text": "In the Fight phase, if this unit is **riled up**, this unit has +1 to **hit rolls**."
+  },
+  "key": "de146951b4e98614"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Nazdreg · Arrogant Invulnerability",
+  "judgement": {
+   "who": "Meganobz",
+   "models": [
+    "1× Nazdreg",
+    "6× Meganob w/ Twin Killsaw"
+   ]
+  },
+  "source": {
+   "ability": "Arrogant Invulnerability",
+   "text": "Attacks that target this unit have -1 **AP**."
+  },
+  "key": "3699726882cecd24"
+ },
+ {
+  "army": "melee",
+  "kind": "unit-kwNote",
+  "where": "melee · Nazdreg",
+  "judgement": {
+   "kwNote": "Explosives, Meganobz come from the led Meganobz."
+  },
+  "source": {
+   "models": [
+    "1× Nazdreg",
+    "6× Meganob w/ Twin Killsaw"
+   ],
+   "stats": [
+    "Nazdreg W8 OC1",
+    "Meganob ×6 W3 OC1"
+   ],
+   "weapons": [
+    "Kustom Blasta X Skorcha 3 -1 1 BLAST 1, TORRENT, IGNORES COVER",
+    "Kustom Blasta X Gatler 6 -2 3 HAZARDOUS, IGNORES COVER",
+    "Kustom Blasta X Shoota 4 -1 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 2, IGNORES COVER",
+    "Kustom Blasta X 6 -1 1 CLEAVE 1, EXTRA ATTACKS, SUSTAINED HITS 1",
+    "Moonchewa 5 -2 3 CLEAVE 1, TWIN-LINKED, SUSTAINED HITS 1",
+    "Twin Killsaw 3 -2 3 TWIN-LINKED, SUSTAINED HITS 1"
+   ]
+  },
+  "key": "a5c4efea68eba1b9"
+ },
+ {
+  "army": "melee",
+  "kind": "unit-ptsNote",
+  "where": "melee · Nazdreg",
+  "judgement": {
+   "ptsNote": "165 + Meganobz 240"
+  },
+  "source": {
+   "models": [
+    "1× Nazdreg",
+    "6× Meganob w/ Twin Killsaw"
+   ],
+   "stats": [
+    "Nazdreg W8 OC1",
+    "Meganob ×6 W3 OC1"
+   ],
+   "weapons": [
+    "Kustom Blasta X Skorcha 3 -1 1 BLAST 1, TORRENT, IGNORES COVER",
+    "Kustom Blasta X Gatler 6 -2 3 HAZARDOUS, IGNORES COVER",
+    "Kustom Blasta X Shoota 4 -1 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 2, IGNORES COVER",
+    "Kustom Blasta X 6 -1 1 CLEAVE 1, EXTRA ATTACKS, SUSTAINED HITS 1",
+    "Moonchewa 5 -2 3 CLEAVE 1, TWIN-LINKED, SUSTAINED HITS 1",
+    "Twin Killsaw 3 -2 3 TWIN-LINKED, SUSTAINED HITS 1"
+   ]
+  },
+  "key": "6d7ce0766e263191"
+ },
+ {
+  "army": "melee",
+  "kind": "unit-weapons",
+  "where": "melee · Nazdreg",
+  "judgement": {
+   "gear": [
+    [
+     "Kustom Blasta X",
+     "Moonchewa"
+    ],
+    [
+     "Twin Killsaw"
+    ]
+   ],
+   "weapons": [
+    "Nazdreg · Kustom Blasta X · Skorcha",
+    "Nazdreg · Kustom Blasta X · Gatler",
+    "Nazdreg · Kustom Blasta X · Shoota",
+    "Nazdreg · Kustom Blasta X",
+    "Nazdreg · Moonchewa",
+    "Meganobz · ×6 · Twin Killsaw"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Nazdreg",
+    "6× Meganob w/ Twin Killsaw"
+   ],
+   "leads": "Meganobz"
+  },
+  "key": "5749bd8e6b58b55f"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-na",
+  "where": "melee · Beastboss on Squigosaur · Boss of da Hunt",
+  "judgement": {
+   "na": "Every BEAST SNAGGA unit in this list is a MONSTER CHARACTER",
+   "armyUnits": [
+    "Ghazghkull Thraka [Character, Epic Hero, Explosives, Faction: Orks, Ghazghkull Thraka, Infantry, Warboss, Warlord]",
+    "Mozrog Skragbad [Beast Snagga, Character, Epic Hero, Faction: Orks, Monster, Mozrog Skragbad]",
+    "Nazdreg [Character, Epic Hero, Faction: Orks, Infantry, Mega Armour, Nazdreg, Warboss, Explosives, Meganobz]",
+    "Beastboss on Squigosaur [Beast Snagga, Beastboss on Squigosaur, Character, Faction: Orks, Monster, Warboss]",
+    "Beastboss on Squigosaur [Beast Snagga, Beastboss on Squigosaur, Character, Faction: Orks, Monster, Warboss]",
+    "Bigboss [Bigboss, Character, Faction: Orks, Infantry, Grenades, Warboss, Breaka Boyz, Explosives]",
+    "Warboss in Mega Armour [Character, Faction: Orks, Infantry, Mega Armour, Warboss, Warboss in Mega Armour, Explosives, Meganobz]",
+    "Gretchin [Faction: Orks, Gretchin, Grots, Infantry]",
+    "Deffkoptas [Deffkoptas, Explosives, Faction: Orks, Fly, Mounted, Speed Freeks]"
+   ]
+  },
+  "source": {
+   "ability": "Boss of da Hunt",
+   "text": "While this unit is within 3\" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**."
+  },
+  "key": "f99b8f7d8f7cc61c"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-timing",
+  "where": "melee · Beastboss on Squigosaur · Headwoppa’s Killchoppa",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Headwoppa’s Killchoppa",
+   "text": "**ORKS** model only. If this unit made a **charge move** this turn, this model’s melee attacks have +1 AP."
+  },
+  "key": "6cb96d4c4cccf18b"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-tag",
+  "where": "melee · Beastboss on Squigosaur · Headwoppa’s Killchoppa",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Headwoppa’s Killchoppa",
+   "text": "**ORKS** model only. If this unit made a **charge move** this turn, this model’s melee attacks have +1 AP."
+  },
+  "key": "92cf10e6d8886849"
+ },
+ {
+  "army": "melee",
+  "kind": "unit-footnote",
+  "where": "melee · Beastboss on Squigosaur",
+  "judgement": {
+   "kind": "melee",
+   "when": "Made a charge move this turn",
+   "note": "+1 AP",
+   "from": "Headwoppa’s Killchoppa"
+  },
+  "source": {
+   "ability": "Headwoppa’s Killchoppa",
+   "text": "**ORKS** model only. If this unit made a **charge move** this turn, this model’s melee attacks have +1 AP."
+  },
+  "key": "c32874b78951a6cd"
+ },
+ {
+  "army": "melee",
+  "kind": "unit-weapons",
+  "where": "melee · Beastboss on Squigosaur",
+  "judgement": {
+   "gear": [
+    [
+     "Beastchoppa",
+     "Slugga",
+     "Squigosaur’s jaws",
+     "Thump Gun"
+    ]
+   ],
+   "weapons": [
+    "Slugga",
+    "Thump Gun",
+    "Beastchoppa · Hunter",
+    "Beastchoppa · Standard",
+    "Squigosaur’s jaws"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Beastboss on Squigosaur"
+   ],
+   "leads": null
+  },
+  "key": "8453530fa9aad83e"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-timing",
+  "where": "melee · Bigboss · Sumfin’ to Prove",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Sumfin’ to Prove",
+   "text": "This unit’s melee attacks have +1 to **hit rolls**."
+  },
+  "key": "0b6eb7ea392cc4f0"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Bigboss · Sumfin’ to Prove",
+  "judgement": {
+   "who": "Bigboss",
+   "models": [
+    "1× Bigboss",
+    "1× Warboss",
+    "1× Nob",
+    "3× Breaka Boy",
+    "1× Breaka Boy w/ Knucklebustas",
+    "1× Breaka Boy w/ Tankhammer"
+   ]
+  },
+  "source": {
+   "ability": "Sumfin’ to Prove",
+   "text": "This unit’s melee attacks have +1 to **hit rolls**."
+  },
+  "key": "5209d0ab574392b2"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Bigboss · Might is Right",
+  "judgement": {
+   "who": "Warboss",
+   "models": [
+    "1× Bigboss",
+    "1× Warboss",
+    "1× Nob",
+    "3× Breaka Boy",
+    "1× Breaka Boy w/ Knucklebustas",
+    "1× Breaka Boy w/ Tankhammer"
+   ]
+  },
+  "source": {
+   "ability": "Might is Right",
+   "text": "If this unit made a **charge move** this turn, this model’s melee attacks have:\n- +3 **A**.\n- +2 **S**."
+  },
+  "key": "97f3be8195cd80e2"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-timing",
+  "where": "melee · Bigboss · Boss’ Ammo Runt",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Boss’ Ammo Runt",
+   "text": "In your Shooting phase, when this unit is **selected to shoot**, you can use this ability. If you do, this model’s ranged attacks have +1 to **hit rolls**.\n*Place a Boss’ Ammo Runt token next to the unit, removing it when this ability is used.*"
+  },
+  "key": "609842b449889dae"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-tag",
+  "where": "melee · Bigboss · Boss’ Ammo Runt",
+  "judgement": {
+   "tag": "Once per battle, per unit"
+  },
+  "source": {
+   "ability": "Boss’ Ammo Runt",
+   "text": "In your Shooting phase, when this unit is **selected to shoot**, you can use this ability. If you do, this model’s ranged attacks have +1 to **hit rolls**.\n*Place a Boss’ Ammo Runt token next to the unit, removing it when this ability is used.*"
+  },
+  "key": "2169e7ad4eb59c84"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Bigboss · Boss’ Ammo Runt",
+  "judgement": {
+   "who": "Warboss",
+   "models": [
+    "1× Bigboss",
+    "1× Warboss",
+    "1× Nob",
+    "3× Breaka Boy",
+    "1× Breaka Boy w/ Knucklebustas",
+    "1× Breaka Boy w/ Tankhammer"
+   ]
+  },
+  "source": {
+   "ability": "Boss’ Ammo Runt",
+   "text": "In your Shooting phase, when this unit is **selected to shoot**, you can use this ability. If you do, this model’s ranged attacks have +1 to **hit rolls**.\n*Place a Boss’ Ammo Runt token next to the unit, removing it when this ability is used.*"
+  },
+  "key": "5d16a79082d21fc6"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Bigboss · Intimidating Motivation",
+  "judgement": {
+   "who": "Warboss",
+   "models": [
+    "1× Bigboss",
+    "1× Warboss",
+    "1× Nob",
+    "3× Breaka Boy",
+    "1× Breaka Boy w/ Knucklebustas",
+    "1× Breaka Boy w/ Tankhammer"
+   ]
+  },
+  "source": {
+   "ability": "Intimidating Motivation",
+   "text": "In your Movement phase, at the start or end of this unit’s move, you can select one friendly **ORKS** unit within 6\" of this unit. That unit:\n- Is no longer **battle-shocked**.\n- Is **riled up** until the start of your next turn."
+  },
+  "key": "51f42749f899d71e"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-timing",
+  "where": "melee · Bigboss · Kunnin’ But Brutal",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "charge"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Kunnin’ But Brutal",
+   "text": "**ORKS** model only. When this unit is selected to make a **fall-back move**, that fall-back move does not prevent this unit from being **eligible to shoot**/**declare a charge**."
+  },
+  "key": "6905526cfad6e2fa"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-tag",
+  "where": "melee · Bigboss · Kunnin’ But Brutal",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Kunnin’ But Brutal",
+   "text": "**ORKS** model only. When this unit is selected to make a **fall-back move**, that fall-back move does not prevent this unit from being **eligible to shoot**/**declare a charge**."
+  },
+  "key": "722b66e9ed933534"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Bigboss · Kunnin’ But Brutal",
+  "judgement": {
+   "who": "Warboss",
+   "models": [
+    "1× Bigboss",
+    "1× Warboss",
+    "1× Nob",
+    "3× Breaka Boy",
+    "1× Breaka Boy w/ Knucklebustas",
+    "1× Breaka Boy w/ Tankhammer"
+   ]
+  },
+  "source": {
+   "ability": "Kunnin’ But Brutal",
+   "text": "**ORKS** model only. When this unit is selected to make a **fall-back move**, that fall-back move does not prevent this unit from being **eligible to shoot**/**declare a charge**."
+  },
+  "key": "50a73e0388762c3b"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-timing",
+  "where": "melee · Bigboss · Trophy Hunters",
+  "judgement": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Trophy Hunters",
+   "text": "This unit has +1 to **charge rolls**."
+  },
+  "key": "965f2a16dd141fb2"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Bigboss · Trophy Hunters",
+  "judgement": {
+   "who": "Breaka Boyz",
+   "models": [
+    "1× Bigboss",
+    "1× Warboss",
+    "1× Nob",
+    "3× Breaka Boy",
+    "1× Breaka Boy w/ Knucklebustas",
+    "1× Breaka Boy w/ Tankhammer"
+   ]
+  },
+  "source": {
+   "ability": "Trophy Hunters",
+   "text": "This unit has +1 to **charge rolls**."
+  },
+  "key": "8d1e246243ca943b"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Bigboss · Bomb Squig",
+  "judgement": {
+   "who": "Breaka Boyz",
+   "models": [
+    "1× Bigboss",
+    "1× Warboss",
+    "1× Nob",
+    "3× Breaka Boy",
+    "1× Breaka Boy w/ Knucklebustas",
+    "1× Breaka Boy w/ Tankhammer"
+   ]
+  },
+  "source": {
+   "ability": "Bomb Squig",
+   "text": "In your Movement phase, when this unit ends a **normal move**, you can select one **visible** enemy unit within 12\" of this unit and roll one D6:\n- On a 3+, that enemy unit suffers D3 **mortal wounds**.\n*Place two Bomb Squig tokens next to the unit, removing one each time this ability is used.*"
+  },
+  "key": "249bd743752e70db"
+ },
+ {
+  "army": "melee",
+  "kind": "unit-footnote",
+  "where": "melee · Bigboss",
+  "judgement": {
+   "kind": "melee",
+   "when": "Always",
+   "note": "+1 to hit rolls",
+   "from": "Sumfin’ to Prove"
+  },
+  "source": {
+   "ability": "Sumfin’ to Prove",
+   "text": "This unit’s melee attacks have +1 to **hit rolls**."
+  },
+  "key": "2967c138537993c8"
+ },
+ {
+  "army": "melee",
+  "kind": "unit-footnote",
+  "where": "melee · Bigboss",
+  "judgement": {
+   "kind": "melee",
+   "who": "Warboss",
+   "when": "Made a charge move this turn",
+   "note": "+3 A, +2 S",
+   "from": "Might is Right"
+  },
+  "source": {
+   "ability": "Might is Right",
+   "text": "If this unit made a **charge move** this turn, this model’s melee attacks have:\n- +3 **A**.\n- +2 **S**."
+  },
+  "key": "796623d20817a80d"
+ },
+ {
+  "army": "melee",
+  "kind": "unit-footnote",
+  "where": "melee · Bigboss",
+  "judgement": {
+   "kind": "ranged",
+   "who": "Warboss",
+   "when": "Boss’ Ammo Runt used (your Shooting phase, when selected to shoot)",
+   "note": "+1 to hit rolls",
+   "from": "Boss’ Ammo Runt"
+  },
+  "source": {
+   "ability": "Boss’ Ammo Runt",
+   "text": "In your Shooting phase, when this unit is **selected to shoot**, you can use this ability. If you do, this model’s ranged attacks have +1 to **hit rolls**.\n*Place a Boss’ Ammo Runt token next to the unit, removing it when this ability is used.*"
+  },
+  "key": "0c835c231d8008bb"
+ },
+ {
+  "army": "melee",
+  "kind": "unit-kwNote",
+  "where": "melee · Bigboss",
+  "judgement": {
+   "kwNote": "Grenades, Warboss, Breaka Boyz, Explosives come from the combined unit."
+  },
+  "source": {
+   "models": [
+    "1× Bigboss",
+    "1× Warboss",
+    "1× Nob",
+    "3× Breaka Boy",
+    "1× Breaka Boy w/ Knucklebustas",
+    "1× Breaka Boy w/ Tankhammer"
+   ],
+   "stats": [
+    "Bigboss W5 OC1",
+    "Warboss W6 OC1",
+    "Nob W3 OC1",
+    "Breaka Boy ×5 W2 OC1"
+   ],
+   "weapons": [
+    "Slugga 1 0 1 CLOSE-QUARTERS, LETHAL HITS: non-MONSTER/VEHICLE",
+    "Kombi-skorcha Skorcha 3 0 1 BLAST 1, TORRENT",
+    "Kombi-skorcha Shoota 2 0 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 1",
+    "Rokkit pistol 1 -2 3 CLOSE-QUARTERS",
+    "Big Choppa 5 -2 2 PRECISION, SUSTAINED HITS 1",
+    "Power Klaw 6 -2 2 SUSTAINED HITS 1",
+    "Choppa 4 -1 1 SUSTAINED HITS 1",
+    "Smash Hammer Hunter 3 -2 3 SUSTAINED HITS 1",
+    "Smash Hammer Standard 3 -2 2 SUSTAINED HITS 1",
+    "Knucklebustas 4 -2 2 ANTI-MONSTER/VEHICLE 4+, SUSTAINED HITS 1",
+    "Tankhammer 3 -2 3 DEVASTATING WOUNDS, HAZARDOUS, SUSTAINED HITS 1"
+   ]
+  },
+  "key": "2e87e9b133db238b"
+ },
+ {
+  "army": "melee",
+  "kind": "unit-ptsNote",
+  "where": "melee · Bigboss",
+  "judgement": {
+   "ptsNote": "50 + Warboss 120 + Breaka Boyz 120"
+  },
+  "source": {
+   "models": [
+    "1× Bigboss",
+    "1× Warboss",
+    "1× Nob",
+    "3× Breaka Boy",
+    "1× Breaka Boy w/ Knucklebustas",
+    "1× Breaka Boy w/ Tankhammer"
+   ],
+   "stats": [
+    "Bigboss W5 OC1",
+    "Warboss W6 OC1",
+    "Nob W3 OC1",
+    "Breaka Boy ×5 W2 OC1"
+   ],
+   "weapons": [
+    "Slugga 1 0 1 CLOSE-QUARTERS, LETHAL HITS: non-MONSTER/VEHICLE",
+    "Kombi-skorcha Skorcha 3 0 1 BLAST 1, TORRENT",
+    "Kombi-skorcha Shoota 2 0 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 1",
+    "Rokkit pistol 1 -2 3 CLOSE-QUARTERS",
+    "Big Choppa 5 -2 2 PRECISION, SUSTAINED HITS 1",
+    "Power Klaw 6 -2 2 SUSTAINED HITS 1",
+    "Choppa 4 -1 1 SUSTAINED HITS 1",
+    "Smash Hammer Hunter 3 -2 3 SUSTAINED HITS 1",
+    "Smash Hammer Standard 3 -2 2 SUSTAINED HITS 1",
+    "Knucklebustas 4 -2 2 ANTI-MONSTER/VEHICLE 4+, SUSTAINED HITS 1",
+    "Tankhammer 3 -2 3 DEVASTATING WOUNDS, HAZARDOUS, SUSTAINED HITS 1"
+   ]
+  },
+  "key": "1fbb4c0ced424196"
+ },
+ {
+  "army": "melee",
+  "kind": "unit-weapons",
+  "where": "melee · Bigboss",
+  "judgement": {
+   "gear": [
+    [
+     "Big Choppa",
+     "Slugga"
+    ],
+    [
+     "Power Klaw",
+     "Kombi-skorcha"
+    ],
+    [
+     "Choppa",
+     "Rokkit pistol",
+     "Smash Hammer"
+    ],
+    [
+     "Smash Hammer"
+    ],
+    [
+     "Knucklebustas"
+    ],
+    [
+     "Tankhammer"
+    ]
+   ],
+   "weapons": [
+    "Bigboss · Slugga",
+    "Warboss · Kombi-skorcha · Skorcha",
+    "Warboss · Kombi-skorcha · Shoota",
+    "Breaka Boyz · Rokkit pistol",
+    "Bigboss · Big Choppa",
+    "Warboss · Power Klaw",
+    "Breaka Boyz · Choppa",
+    "Breaka Boyz · ×4 · Smash Hammer · Hunter",
+    "Breaka Boyz · ×4 · Smash Hammer · Standard",
+    "Breaka Boyz · Knucklebustas",
+    "Breaka Boyz · Tankhammer"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Bigboss",
+    "1× Warboss",
+    "1× Nob",
+    "3× Breaka Boy",
+    "1× Breaka Boy w/ Knucklebustas",
+    "1× Breaka Boy w/ Tankhammer"
+   ],
+   "leads": "Breaka Boyz"
+  },
+  "key": "a9fb1b0c51d51820"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-timing",
+  "where": "melee · Warboss in Mega Armour · Krushin’ Impetus",
+  "judgement": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Krushin’ Impetus",
+   "text": "When this unit ends a **charge move**, you can select one enemy unit **engaged** with this unit. If you do, roll one D6 for each model in this unit **engaged** with that enemy unit:\n- For each 3+, that enemy unit suffers 1 **mortal wound**."
+  },
+  "key": "378576006c62377e"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Warboss in Mega Armour · Krushin’ Impetus",
+  "judgement": {
+   "who": "Warboss in Mega Armour",
+   "models": [
+    "1× Warboss in Mega Armour",
+    "6× Meganob w/ Twin Killsaw"
+   ]
+  },
+  "source": {
+   "ability": "Krushin’ Impetus",
+   "text": "When this unit ends a **charge move**, you can select one enemy unit **engaged** with this unit. If you do, roll one D6 for each model in this unit **engaged** with that enemy unit:\n- For each 3+, that enemy unit suffers 1 **mortal wound**."
+  },
+  "key": "6c7c574a796b879b"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Warboss in Mega Armour · Intimidating Motivation",
+  "judgement": {
+   "who": "Warboss in Mega Armour",
+   "models": [
+    "1× Warboss in Mega Armour",
+    "6× Meganob w/ Twin Killsaw"
+   ]
+  },
+  "source": {
+   "ability": "Intimidating Motivation",
+   "text": "In your Movement phase, at the start or end of this unit’s move, you can select one friendly **ORKS** unit within 6\" of this unit. That unit:\n- Is no longer **battle-shocked**.\n- Is **riled up** until the start of your next turn."
+  },
+  "key": "769304b1ab610471"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-tag",
+  "where": "melee · Warboss in Mega Armour · Follow Me Ladz",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Follow Me Ladz",
+   "text": "**ORKS** model only. This unit has +2\" **M**."
+  },
+  "key": "4c6a06d49810e04f"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Warboss in Mega Armour · Follow Me Ladz",
+  "judgement": {
+   "who": "Warboss in Mega Armour",
+   "models": [
+    "1× Warboss in Mega Armour",
+    "6× Meganob w/ Twin Killsaw"
+   ]
+  },
+  "source": {
+   "ability": "Follow Me Ladz",
+   "text": "**ORKS** model only. This unit has +2\" **M**."
+  },
+  "key": "1377c6b47424e86e"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Warboss in Mega Armour · Krumpin’ Time",
+  "judgement": {
+   "who": "Meganobz",
+   "models": [
+    "1× Warboss in Mega Armour",
+    "6× Meganob w/ Twin Killsaw"
+   ]
+  },
+  "source": {
+   "ability": "Krumpin’ Time",
+   "text": "In the Fight phase, if this unit is **riled up**, this unit has +1 to **hit rolls**."
+  },
+  "key": "df273dd1df765a77"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Warboss in Mega Armour · Arrogant Invulnerability",
+  "judgement": {
+   "who": "Meganobz",
+   "models": [
+    "1× Warboss in Mega Armour",
+    "6× Meganob w/ Twin Killsaw"
+   ]
+  },
+  "source": {
+   "ability": "Arrogant Invulnerability",
+   "text": "Attacks that target this unit have -1 **AP**."
+  },
+  "key": "6b14d6f4886af7ee"
+ },
+ {
+  "army": "melee",
+  "kind": "unit-kwNote",
+  "where": "melee · Warboss in Mega Armour",
+  "judgement": {
+   "kwNote": "Explosives, Meganobz come from the led Meganobz."
+  },
+  "source": {
+   "models": [
+    "1× Warboss in Mega Armour",
+    "6× Meganob w/ Twin Killsaw"
+   ],
+   "stats": [
+    "Warboss in Mega Armour W7 OC1",
+    "Meganob ×6 W3 OC1"
+   ],
+   "weapons": [
+    "Big Shoota 3 0 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 2",
+    "’Uge Choppa 5 -2 3 CLEAVE 2, SUSTAINED HITS 1",
+    "Twin Killsaw 3 -2 3 TWIN-LINKED, SUSTAINED HITS 1"
+   ]
+  },
+  "key": "f5639a03c593371a"
+ },
+ {
+  "army": "melee",
+  "kind": "unit-ptsNote",
+  "where": "melee · Warboss in Mega Armour",
+  "judgement": {
+   "ptsNote": "135 + Meganobz 240"
+  },
+  "source": {
+   "models": [
+    "1× Warboss in Mega Armour",
+    "6× Meganob w/ Twin Killsaw"
+   ],
+   "stats": [
+    "Warboss in Mega Armour W7 OC1",
+    "Meganob ×6 W3 OC1"
+   ],
+   "weapons": [
+    "Big Shoota 3 0 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 2",
+    "’Uge Choppa 5 -2 3 CLEAVE 2, SUSTAINED HITS 1",
+    "Twin Killsaw 3 -2 3 TWIN-LINKED, SUSTAINED HITS 1"
+   ]
+  },
+  "key": "a1a3e06b0fb8584d"
+ },
+ {
+  "army": "melee",
+  "kind": "unit-weapons",
+  "where": "melee · Warboss in Mega Armour",
+  "judgement": {
+   "gear": [
+    [
+     "’Uge Choppa",
+     "Big Shoota"
+    ],
+    [
+     "Twin Killsaw"
+    ]
+   ],
+   "weapons": [
+    "Warboss in Mega Armour · Big Shoota",
+    "Warboss in Mega Armour · ’Uge Choppa",
+    "Meganobz · ×6 · Twin Killsaw"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Warboss in Mega Armour",
+    "6× Meganob w/ Twin Killsaw"
+   ],
+   "leads": "Meganobz"
+  },
+  "key": "806a5537730aed7b"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-timing",
+  "where": "melee · Gretchin · Thievin’ Scavengers",
+  "judgement": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Thievin’ Scavengers",
+   "text": "At the end of your Movement phase, if this unit is controlling an **objective**, that objective is **secured**."
+  },
+  "key": "54071d68dfae3f21"
+ },
+ {
+  "army": "melee",
+  "kind": "unit-weapons",
+  "where": "melee · Deffkoptas",
+  "judgement": {
+   "gear": [
+    [
+     "Choppa",
+     "Rokkit Launcha",
+     "Slugga",
+     "Spinnin’ Blades"
+    ],
+    [
+     "Choppa",
+     "Kustom Mega-blasta",
+     "Slugga",
+     "Spinnin’ Blades"
+    ]
+   ],
+   "weapons": [
+    "×2 · Rokkit Launcha · Busta",
+    "×2 · Rokkit Launcha · Blasta",
+    "×3 · Slugga",
+    "Kustom Mega-blasta",
+    "×3 · Choppa",
+    "×3 · Spinnin’ Blades"
+   ]
+  },
+  "source": {
+   "models": [
+    "2× Deffkopta",
+    "1× Deffkopta w/ Kustom mega-blasta"
+   ],
+   "leads": null
+  },
+  "key": "c7cb12f2d240e1cc"
+ }
+]

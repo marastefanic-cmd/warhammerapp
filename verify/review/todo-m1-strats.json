@@ -1,0 +1,429 @@
+[
+ {
+  "army": "melee",
+  "kind": "rule-ph",
+  "where": "War Horde rule · Get Stuck In",
+  "judgement": {
+   "ph": [
+    "fight"
+   ]
+  },
+  "source": {
+   "rule": "Get Stuck In",
+   "text": "Friendly **ORKS** units’ melee attacks have **[SUSTAINED HITS 1]**."
+  },
+  "key": "4bb96c26d1afc78a"
+ },
+ {
+  "army": "melee",
+  "kind": "rule-turn",
+  "where": "War Horde rule · Get Stuck In",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "rule": "Get Stuck In",
+   "text": "Friendly **ORKS** units’ melee attacks have **[SUSTAINED HITS 1]**."
+  },
+  "key": "c54cf31f7c1da0d5"
+ },
+ {
+  "army": "melee",
+  "kind": "rule-needs",
+  "where": "War Horde rule · Get Stuck In",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Orks"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Get Stuck In",
+   "text": "Friendly **ORKS** units’ melee attacks have **[SUSTAINED HITS 1]**."
+  },
+  "key": "80cc7b715ba1adee"
+ },
+ {
+  "army": "melee",
+  "kind": "strat-phases",
+  "where": "War Horde · Breakin’ Heads",
+  "judgement": {
+   "phases": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Breakin’ Heads",
+   "text": "WHEN: Any phase, when a friendly **attached ORKS INFANTRY** unit becomes **battle-shocked**.\nTARGET: That **ORKS INFANTRY** unit. You can target that unit with this **stratagem** even though it is **battle-shocked**.\nEFFECT: Roll one D3:\n- Your unit suffers a number of **mortal wounds** equal to the result.\n- Your unit is no longer **battle-shocked**."
+  },
+  "key": "4328ed892bfbcc61"
+ },
+ {
+  "army": "melee",
+  "kind": "strat-turn",
+  "where": "War Horde · Breakin’ Heads",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Breakin’ Heads",
+   "text": "WHEN: Any phase, when a friendly **attached ORKS INFANTRY** unit becomes **battle-shocked**.\nTARGET: That **ORKS INFANTRY** unit. You can target that unit with this **stratagem** even though it is **battle-shocked**.\nEFFECT: Roll one D3:\n- Your unit suffers a number of **mortal wounds** equal to the result.\n- Your unit is no longer **battle-shocked**."
+  },
+  "key": "e577aca646c11203"
+ },
+ {
+  "army": "melee",
+  "kind": "strat-needs",
+  "where": "War Horde · Breakin’ Heads",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Orks",
+     "Infantry"
+    ],
+    "attached": true
+   }
+  },
+  "source": {
+   "stratagem": "Breakin’ Heads",
+   "text": "WHEN: Any phase, when a friendly **attached ORKS INFANTRY** unit becomes **battle-shocked**.\nTARGET: That **ORKS INFANTRY** unit. You can target that unit with this **stratagem** even though it is **battle-shocked**.\nEFFECT: Roll one D3:\n- Your unit suffers a number of **mortal wounds** equal to the result.\n- Your unit is no longer **battle-shocked**."
+  },
+  "key": "4efde77a998f7403"
+ },
+ {
+  "army": "melee",
+  "kind": "strat-gist",
+  "where": "War Horde · Breakin’ Heads",
+  "judgement": {
+   "gist": "Roll one D3: your unit suffers that many mortal wounds and is no longer battle-shocked."
+  },
+  "source": {
+   "stratagem": "Breakin’ Heads",
+   "text": "WHEN: Any phase, when a friendly **attached ORKS INFANTRY** unit becomes **battle-shocked**.\nTARGET: That **ORKS INFANTRY** unit. You can target that unit with this **stratagem** even though it is **battle-shocked**.\nEFFECT: Roll one D3:\n- Your unit suffers a number of **mortal wounds** equal to the result.\n- Your unit is no longer **battle-shocked**."
+  },
+  "key": "a446a2addbbb1f1c"
+ },
+ {
+  "army": "melee",
+  "kind": "strat-phases",
+  "where": "War Horde · Hit ’Em Harder",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Hit ’Em Harder",
+   "text": "WHEN: Fight phase, when a friendly **ORKS** unit is **selected to fight**.\nTARGET: That **ORKS** unit.\nEFFECT: Your unit’s melee attacks have **[LETHAL HITS]**."
+  },
+  "key": "a3c5154f53f6b0dd"
+ },
+ {
+  "army": "melee",
+  "kind": "strat-turn",
+  "where": "War Horde · Hit ’Em Harder",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Hit ’Em Harder",
+   "text": "WHEN: Fight phase, when a friendly **ORKS** unit is **selected to fight**.\nTARGET: That **ORKS** unit.\nEFFECT: Your unit’s melee attacks have **[LETHAL HITS]**."
+  },
+  "key": "79711f1bdceed49a"
+ },
+ {
+  "army": "melee",
+  "kind": "strat-needs",
+  "where": "War Horde · Hit ’Em Harder",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Orks"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Hit ’Em Harder",
+   "text": "WHEN: Fight phase, when a friendly **ORKS** unit is **selected to fight**.\nTARGET: That **ORKS** unit.\nEFFECT: Your unit’s melee attacks have **[LETHAL HITS]**."
+  },
+  "key": "f882c699340dfe8b"
+ },
+ {
+  "army": "melee",
+  "kind": "strat-mod",
+  "where": "War Horde · Hit ’Em Harder",
+  "judgement": {
+   "mod": {
+    "kind": "melee",
+    "when": "Fight phase",
+    "note": "[LETHAL HITS]"
+   }
+  },
+  "source": {
+   "stratagem": "Hit ’Em Harder",
+   "text": "WHEN: Fight phase, when a friendly **ORKS** unit is **selected to fight**.\nTARGET: That **ORKS** unit.\nEFFECT: Your unit’s melee attacks have **[LETHAL HITS]**."
+  },
+  "key": "2c6ea5ee61af837b"
+ },
+ {
+  "army": "melee",
+  "kind": "strat-gist",
+  "where": "War Horde · Hit ’Em Harder",
+  "judgement": {
+   "gist": "Your unit’s melee attacks have [LETHAL HITS]."
+  },
+  "source": {
+   "stratagem": "Hit ’Em Harder",
+   "text": "WHEN: Fight phase, when a friendly **ORKS** unit is **selected to fight**.\nTARGET: That **ORKS** unit.\nEFFECT: Your unit’s melee attacks have **[LETHAL HITS]**."
+  },
+  "key": "85d1155813ea2230"
+ },
+ {
+  "army": "melee",
+  "kind": "strat-phases",
+  "where": "War Horde · Orks Is Never Beaten",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Orks Is Never Beaten",
+   "text": "WHEN: Fight phase, when an enemy unit targets a friendly **ORKS** unit (excluding **TITANIC** units).\nTARGET: That **ORKS** unit.\nEFFECT: When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +1 to that roll if your unit is **riled up**:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
+  },
+  "key": "c767941a5c904c74"
+ },
+ {
+  "army": "melee",
+  "kind": "strat-turn",
+  "where": "War Horde · Orks Is Never Beaten",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Orks Is Never Beaten",
+   "text": "WHEN: Fight phase, when an enemy unit targets a friendly **ORKS** unit (excluding **TITANIC** units).\nTARGET: That **ORKS** unit.\nEFFECT: When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +1 to that roll if your unit is **riled up**:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
+  },
+  "key": "c07d8c78545d1de3"
+ },
+ {
+  "army": "melee",
+  "kind": "strat-needs",
+  "where": "War Horde · Orks Is Never Beaten",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Orks"
+    ],
+    "none": [
+     "Titanic"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Orks Is Never Beaten",
+   "text": "WHEN: Fight phase, when an enemy unit targets a friendly **ORKS** unit (excluding **TITANIC** units).\nTARGET: That **ORKS** unit.\nEFFECT: When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +1 to that roll if your unit is **riled up**:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
+  },
+  "key": "19a181845257195f"
+ },
+ {
+  "army": "melee",
+  "kind": "strat-gist",
+  "where": "War Horde · Orks Is Never Beaten",
+  "judgement": {
+   "gist": "Your model destroyed before your unit is selected to fight: on a 4+ (+1 if riled up) it stays until your unit has fought or the phase ends."
+  },
+  "source": {
+   "stratagem": "Orks Is Never Beaten",
+   "text": "WHEN: Fight phase, when an enemy unit targets a friendly **ORKS** unit (excluding **TITANIC** units).\nTARGET: That **ORKS** unit.\nEFFECT: When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +1 to that roll if your unit is **riled up**:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
+  },
+  "key": "509360cbd2076075"
+ },
+ {
+  "army": "melee",
+  "kind": "strat-phases",
+  "where": "War Horde · Mow ’Em Down",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Mow ’Em Down",
+   "text": "WHEN: Fight phase, when a friendly **ORKS VEHICLE** unit (excluding **WALKER** units) that made a **charge move** this turn is **selected to fight**.\nTARGET: That **ORKS VEHICLE** unit.\nEFFECT: Your unit’s melee attacks have:\n- **[CLEAVE 1]**.\n- Or: If that attack already has **[CLEAVE]**, +1 to the value of that **[CLEAVE]** (e.g. **[CLEAVE 1]** becomes **[CLEAVE 2]**)."
+  },
+  "key": "278ccf961ee233b8"
+ },
+ {
+  "army": "melee",
+  "kind": "strat-turn",
+  "where": "War Horde · Mow ’Em Down",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Mow ’Em Down",
+   "text": "WHEN: Fight phase, when a friendly **ORKS VEHICLE** unit (excluding **WALKER** units) that made a **charge move** this turn is **selected to fight**.\nTARGET: That **ORKS VEHICLE** unit.\nEFFECT: Your unit’s melee attacks have:\n- **[CLEAVE 1]**.\n- Or: If that attack already has **[CLEAVE]**, +1 to the value of that **[CLEAVE]** (e.g. **[CLEAVE 1]** becomes **[CLEAVE 2]**)."
+  },
+  "key": "6aeb0680cf62d2a1"
+ },
+ {
+  "army": "melee",
+  "kind": "strat-needs",
+  "where": "War Horde · Mow ’Em Down",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Orks",
+     "Vehicle"
+    ],
+    "none": [
+     "Walker"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Mow ’Em Down",
+   "text": "WHEN: Fight phase, when a friendly **ORKS VEHICLE** unit (excluding **WALKER** units) that made a **charge move** this turn is **selected to fight**.\nTARGET: That **ORKS VEHICLE** unit.\nEFFECT: Your unit’s melee attacks have:\n- **[CLEAVE 1]**.\n- Or: If that attack already has **[CLEAVE]**, +1 to the value of that **[CLEAVE]** (e.g. **[CLEAVE 1]** becomes **[CLEAVE 2]**)."
+  },
+  "key": "abd758a2fd63c0f4"
+ },
+ {
+  "army": "melee",
+  "kind": "strat-gist",
+  "where": "War Horde · Mow ’Em Down",
+  "judgement": {
+   "gist": "Your unit’s melee attacks have [CLEAVE 1], or +1 to the value of a [CLEAVE] they already have."
+  },
+  "source": {
+   "stratagem": "Mow ’Em Down",
+   "text": "WHEN: Fight phase, when a friendly **ORKS VEHICLE** unit (excluding **WALKER** units) that made a **charge move** this turn is **selected to fight**.\nTARGET: That **ORKS VEHICLE** unit.\nEFFECT: Your unit’s melee attacks have:\n- **[CLEAVE 1]**.\n- Or: If that attack already has **[CLEAVE]**, +1 to the value of that **[CLEAVE]** (e.g. **[CLEAVE 1]** becomes **[CLEAVE 2]**)."
+  },
+  "key": "8679c02d89b35a54"
+ },
+ {
+  "army": "melee",
+  "kind": "strat-phases",
+  "where": "War Horde · Fungus-fuel Injection",
+  "judgement": {
+   "phases": [
+    "movement"
+   ]
+  },
+  "source": {
+   "stratagem": "Fungus-fuel Injection",
+   "text": "WHEN: Your Movement phase, when a friendly **ORKS MOUNTED**/**VEHICLE** unit is **selected to move**.\nTARGET: That **ORKS MOUNTED**/**VEHICLE** unit.\nEFFECT: Your unit has +2\" **M**."
+  },
+  "key": "3380d8a0b71b1fef"
+ },
+ {
+  "army": "melee",
+  "kind": "strat-turn",
+  "where": "War Horde · Fungus-fuel Injection",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Fungus-fuel Injection",
+   "text": "WHEN: Your Movement phase, when a friendly **ORKS MOUNTED**/**VEHICLE** unit is **selected to move**.\nTARGET: That **ORKS MOUNTED**/**VEHICLE** unit.\nEFFECT: Your unit has +2\" **M**."
+  },
+  "key": "6000c888c6a680fb"
+ },
+ {
+  "army": "melee",
+  "kind": "strat-needs",
+  "where": "War Horde · Fungus-fuel Injection",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Orks"
+    ],
+    "any": [
+     "Mounted",
+     "Vehicle"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Fungus-fuel Injection",
+   "text": "WHEN: Your Movement phase, when a friendly **ORKS MOUNTED**/**VEHICLE** unit is **selected to move**.\nTARGET: That **ORKS MOUNTED**/**VEHICLE** unit.\nEFFECT: Your unit has +2\" **M**."
+  },
+  "key": "bb1434ec04449371"
+ },
+ {
+  "army": "melee",
+  "kind": "strat-gist",
+  "where": "War Horde · Fungus-fuel Injection",
+  "judgement": {
+   "gist": "Your unit has +2\" M."
+  },
+  "source": {
+   "stratagem": "Fungus-fuel Injection",
+   "text": "WHEN: Your Movement phase, when a friendly **ORKS MOUNTED**/**VEHICLE** unit is **selected to move**.\nTARGET: That **ORKS MOUNTED**/**VEHICLE** unit.\nEFFECT: Your unit has +2\" **M**."
+  },
+  "key": "6c05052014c75eaf"
+ },
+ {
+  "army": "melee",
+  "kind": "strat-phases",
+  "where": "War Horde · Close-range Dakka",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Close-range Dakka",
+   "text": "WHEN: Your Shooting phase, when a friendly **ORKS** unit is **selected to shoot**.\nTARGET: That **ORKS** unit.\nEFFECT: Your unit’s ranged attacks have:\n- **[RAPID FIRE 1]**.\n- Or: If that attack already has **[RAPID FIRE]**, +1 to the value of that **[RAPID FIRE]** (e.g. **[RAPID FIRE 1]** becomes **[RAPID FIRE 2]**)."
+  },
+  "key": "8a61d95f4d875976"
+ },
+ {
+  "army": "melee",
+  "kind": "strat-turn",
+  "where": "War Horde · Close-range Dakka",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Close-range Dakka",
+   "text": "WHEN: Your Shooting phase, when a friendly **ORKS** unit is **selected to shoot**.\nTARGET: That **ORKS** unit.\nEFFECT: Your unit’s ranged attacks have:\n- **[RAPID FIRE 1]**.\n- Or: If that attack already has **[RAPID FIRE]**, +1 to the value of that **[RAPID FIRE]** (e.g. **[RAPID FIRE 1]** becomes **[RAPID FIRE 2]**)."
+  },
+  "key": "b0c1dfbf69a2339f"
+ },
+ {
+  "army": "melee",
+  "kind": "strat-needs",
+  "where": "War Horde · Close-range Dakka",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Orks"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Close-range Dakka",
+   "text": "WHEN: Your Shooting phase, when a friendly **ORKS** unit is **selected to shoot**.\nTARGET: That **ORKS** unit.\nEFFECT: Your unit’s ranged attacks have:\n- **[RAPID FIRE 1]**.\n- Or: If that attack already has **[RAPID FIRE]**, +1 to the value of that **[RAPID FIRE]** (e.g. **[RAPID FIRE 1]** becomes **[RAPID FIRE 2]**)."
+  },
+  "key": "e8dd005a87f8053e"
+ },
+ {
+  "army": "melee",
+  "kind": "strat-gist",
+  "where": "War Horde · Close-range Dakka",
+  "judgement": {
+   "gist": "Your unit’s ranged attacks have [RAPID FIRE 1], or +1 to the value of a [RAPID FIRE] they already have."
+  },
+  "source": {
+   "stratagem": "Close-range Dakka",
+   "text": "WHEN: Your Shooting phase, when a friendly **ORKS** unit is **selected to shoot**.\nTARGET: That **ORKS** unit.\nEFFECT: Your unit’s ranged attacks have:\n- **[RAPID FIRE 1]**.\n- Or: If that attack already has **[RAPID FIRE]**, +1 to the value of that **[RAPID FIRE]** (e.g. **[RAPID FIRE 1]** becomes **[RAPID FIRE 2]**)."
+  },
+  "key": "2f9f8be4bddd5ba5"
+ }
+]

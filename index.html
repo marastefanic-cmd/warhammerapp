@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" href="icon-192.png">
 <style>:root{padding-top:env(safe-area-inset-top,0px)}img{max-width:100%}</style>
 <title>Waaagh Codex</title>
-<script>window.WH_BUILD = '734cc8ea99';</script>
+<script>window.WH_BUILD = '0940eef6c6';</script>
 </head>
 <body>
 <style>
@@ -234,7 +234,7 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .ab > summary b.kh{font:600 11px/1.2 var(--f-head); letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
 .ab > summary small{font:600 11px var(--f-head); letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
 .ab > summary .aw{font-size:12.5px; color:var(--muted); text-align:right; flex:0 1 auto; max-width:42%}
-.ab .tg.once{white-space:normal}
+.ab .tg.once, .ab.na .an .tg.m{white-space:normal}   /* a long "not usable here" reason wraps on a small phone */
 .ab[open] > summary b{color:var(--accent)}
 .ab.na > summary b{color:var(--muted)}
 .ab .tg.once{color:var(--fg2); font-weight:500}
@@ -496,8 +496,8 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="verified.js?v=734cc8ea99"></script>
-<script src="data.js?v=734cc8ea99"></script>
+<script src="verified.js?v=0940eef6c6"></script>
+<script src="data.js?v=0940eef6c6"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -633,7 +633,8 @@ function go(next, mode){
   render(); scrollTo(0, 0);
 }
 let tabTo = null;   // the tab tapped on a screen below another tab; set while history steps back to that tab
-const tabMemo = {};  // the last screen of each tab (Units → the datasheet you were on), with its scroll spot
+const tabMemo = {};  // the last screen of each tab of each army (Units → the datasheet you were on), with its scroll spot
+const memoKey = (armyId, tab) => (armyId || '') + '|' + tab;
 // a tab's first screen, then the screen you were on in it (pushed, so Back returns to the first screen)
 function openTab(t){
   const then = t.then; delete t.then;
@@ -688,6 +689,7 @@ function matches(n, u){
   if(n.any && !n.any.some(k => hasKw(u, k))) return false;
   if(n.none && n.none.some(k => hasKw(u, k))) return false;
   if(n.unless && matches(n.unless, u)) return false;
+  if(n.attached && !u.leads) return false;   // "a friendly attached … unit": one with a leader or support character
   return true;
 }
 const eligible = (s, a) => (a || army()).units.filter(u => matches(s.needs, u));
@@ -711,7 +713,7 @@ function twinOf(u){
   return { lead:u.leads || '', i:twins.indexOf(u) + 1, n:twins.length };
 }
 const twinLabel = u => { const t = twinOf(u); return !t ? '' : (t.lead ? ' + ' + t.lead : '') + (t.n > 1 ? ' (' + t.i + ' of ' + t.n + ')' : ''); };
-const shortName = u => (u.short || u.name) + (u.enhancement ? ' · ' + u.enhancement : '') + twinLabel(u);
+const shortName = u => (u.short || u.name) + (u.enhancement && !u.enhOn ? ' · ' + u.enhancement : '') + twinLabel(u);   // an enhancement on another character (enhOn) is not this name's
 const unitCount = a => a.units.reduce((t, u) => t + (u.copies || 1), 0);
 // "Big Mek ×2, Killa Kans": unit names for a one-line summary
 function unitNames(units){
@@ -782,9 +784,9 @@ function weaponItems(list){
 const weaponCount = (a, kind) => a.units.reduce((t, u) => t + weaponItems(u[kind]).length, 0);
 function nameTags(u, opts){
   const t = [];
-  if(u.warlord) t.push('<span class="tg">Warlord</span>');
-  if(u.enhancement) t.push('<span class="tg">' + esc(u.enhancement) + '</span>');
-  if(u.leads && !(opts && opts.noLeads)) t.push('<span class="tg m">+ ' + esc(u.leads) + '</span>');
+  if(u.warlord) t.push('<span class="tg">Warlord' + (u.warlordOn ? ' (' + esc(u.warlordOn) + ')' : '') + '</span>');
+  if(u.enhancement) t.push('<span class="tg">' + esc(u.enhancement + (u.enhOn ? ' (' + u.enhOn + ')' : '')) + '</span>');
+  if(u.leads && !(opts && opts.noLeads)) t.push('<span class="tg m">+ ' + esc(partsAfter(u).join(' + ')) + '</span>');
   if(u.upgrade) t.push('<span class="tg">' + esc(u.upgrade) + '</span>');
   const tw = twinOf(u); if(tw && tw.n > 1) t.push('<span class="tg m">' + tw.i + ' of ' + tw.n + '</span>');
   if(u.copies > 1 && !(opts && opts.noCopies)) t.push('<span class="tg m">×' + esc(u.copies) + ' units</span>');
@@ -793,7 +795,7 @@ function nameTags(u, opts){
 const abilityKey = ab => army().id + '|' + ab.name + '|' + ab.text;
 // the units that took an enhancement; an UPGRADE (Supa-snazz Dakka) is on the unit it upgrades, the bodyguard
 const holders = (a, name) => a.units.filter(u => u.enhancement === name || u.upgrade === name);
-const holderName = (u, name) => u.upgrade === name && u.leads ? u.leads + ' (' + unitLabel(u) + ')' : unitLabel(u);
+const holderName = (u, name) => u.upgrade === name && u.leads ? u.leads + ' (' + unitLabel(u) + ')' : u.enhOn && name === u.enhancement ? u.enhOn + ' (' + unitLabel(u) + ')' : unitLabel(u);
 
 /* ---------- rules and rich text ---------- */
 function ruleFor(label){
@@ -952,7 +954,7 @@ function searchIndex(){
   for(const u of a.units){
     const st = u.stats.map(s => ['t' + s.T, 'w' + s.W, 'm' + s.M, 'sv' + s.Sv, 'base ' + s.base].join(' ')).join(' ');
     add({ kind:'Units', title:u.name, s1:u.stats.map(statLineText).join(' / '),
-      sub:[u.role, u.pts + ' pts', u.warlord ? 'Warlord' : '', u.enhancement, u.leads ? (u.support ? 'supporting ' : 'leading ') + u.leads : ''].filter(Boolean).join(' · '),
+      sub:[u.role, u.pts + ' pts', u.warlord ? 'Warlord' : '', u.enhancement, u.leads ? attachText(u) : ''].filter(Boolean).join(' · '),
       hay:hay(u.name, u.short, u.role, u.kw.join(' '), u.models.join(' '), u.enhancement, u.warlord ? 'warlord' : '', unitRules(u).join(' '),
         u.abilities.map(ab => ab.def).join(' '), st, 'stats save toughness wounds move leadership', u.stats.some(s => s.InSv !== '–') ? 'invulnerable' : ''),
       act:{ unit:u.id } });
@@ -1076,7 +1078,7 @@ function screenUnits(){
     // one model type: its count goes after the name ("Gretchin ×10"), like a weapon count
     const one = u.models.length === 1 && u.models[0].match(/^(\d+)× /);
     const n = one && one[1] !== '1' ? '<span class="x">×' + one[1] + '</span>' : '';
-    const lead = u.leads ? '<span class="lead">+ ' + esc(u.leads) + '</span>' : '';   // an attached unit names its bodyguard as loud as its leader
+    const lead = u.leads ? '<span class="lead">+ ' + esc(partsAfter(u).join(' + ')) + '</span>' : '';   // an attached unit names its other parts as loud as its leader
     return '<button class="urow' + (u.leads ? ' att' : '') + '" data-unit="' + esc(u.id) + '"><span class="un"><b>' + esc(u.name) + '</b>' + n + nameTags(u, { noLeads:true }) + lead + '</span>' +
       '<span class="pts">' + esc(u.pts) + (u.copies > 1 ? ' ea' : '') + '</span>' +
       (!one && !u.leads ? '<span class="meta">' + esc(u.models.join(', ')) + '</span>' : '') + statLine(u) + '</button>';
@@ -1192,10 +1194,10 @@ function useSentence(set, kind, u, who){
   return v('Fights with all of these', 'fights with all of these') + ' (extra attacks).';
 }
 // the line under a weapons heading that says which of them a model uses
-function useLine(items, kind, u, part){
+function useLine(items, kind, u, who){
   if(items.length < 2 || !u.gear) return '';
-  // in an attached unit, the first models line is the leader and the rest the bodyguard
-  const own = i => part == null || (part === 0 ? i === 0 : i > 0);
+  // in an attached unit, only the models lines of the part that carries these (a character, or the bodyguard)
+  const own = i => who == null || whoOfLine(u, i) === who;
   const mine = u.gear.map((g, i) => i).filter(own);   // every models line of this part, with these weapons or not
   // a line's name without " w/…", unless another line shares it (Tankbusta w/ Two Busta Rokkit Launchas)
   const short = i => u.models[i].replace(/^\d+× /, '').replace(/ w\/.*$/, '');
@@ -1228,7 +1230,7 @@ function weaponRows(list, keys, mods, u, kind){
   for(const who of whos){
     const mine = items.filter(it => (it.who || '') === who);
     if(kind === 'melee') mine.sort((x, y) => (isEA(x) ? 1 : 0) - (isEA(y) ? 1 : 0));   // the main weapon first, as the sentence says
-    const ul = useLine(mine, kind, u, u.leads && whos.length > 1 ? (who === whos[0] ? 0 : 1) : null);
+    const ul = useLine(mine, kind, u, u.leads && whos.length > 1 ? who : null);
     if(whos.length > 1 && ul.startsWith('<p class="use">') && ul.indexOf('<p', 2) < 0) h += ul.replace('<p class="use">', '<p class="use gw"><span class="who">' + esc(who) + '</span>');
     else h += (whos.length > 1 ? '<div class="who">' + esc(who) + '</div>' : '') + ul;
     for(const it of mine) h += '<div class="wb' + (it.group && !it.profiles.every(p => p.fireAll) ? ' g' : '') + '">' + weaponBlock(it, keys, mods, u) + '</div>';   // shaded = pick one
@@ -1349,7 +1351,7 @@ function screenUnit(){
   const longModels = !solo && modelsText(u).length > 70;   // then they go in the Models & keywords popup
   const meta = [esc(u.role), esc(u.pts) + ' pts' + (u.copies > 1 ? ' each' : '')];
   if(u.copies > 1) meta.push('×' + esc(u.copies) + ' in list');
-  if(u.leads) meta.push((u.support ? 'supporting ' : 'leading ') + esc(u.leads));
+  if(u.leads) meta.push(esc(attachText(u)));
   const abil = u.abilities.filter(ab => !shownElsewhere(ab, u));
   const weaponKeys = new Set([...(u.ranged || []), ...(u.melee || [])].flatMap(w => w.kw.map(ruleKey)));
   const statCols = multi ? (innerWidth < 360 ? 'minmax(60px,1fr) repeat(7, minmax(22px,27px))' : 'minmax(64px,1fr) repeat(7, minmax(24px,31px))') : 'repeat(7, minmax(0,1fr))';
@@ -1410,9 +1412,17 @@ const stratUsers = s => eligible(s).filter(u => !(s.id === 'fire-overwatch' && !
 const lacks = s => { const n = s.needs || {}, us = army().units, lack = (n.all || []).filter(k => !us.some(u => hasKw(u, k)));
   if(lack.length) return lack.join(', ').toUpperCase();
   if(n.any && !us.some(u => n.any.some(k => hasKw(u, k)))) return n.any.join(' or ').toUpperCase();
+  if(n.attached && !us.some(u => matches(n, u))) return 'an attached unit';
   const ex = (n.none || []).filter(k => us.length && us.every(u => hasKw(u, k)));
   return ex.length ? 'not ' + ex.join('/').toUpperCase() + ': every unit here is' : ''; };
-const unitLabel = u => u.name + (u.leads ? ' + ' + u.leads : '');
+// an attached unit's characters: its own name first, then `also` (a Warboss leading the Breaka Boyz a Bigboss supports)
+const charsOf = u => u.leads ? [{ name:u.name, support:!!u.support }].concat((u.also || []).map(c => ({ name:c.name, support:!!c.support }))) : [];
+const partsAfter = u => (u.also || []).map(c => c.name).concat(u.leads ? [u.leads] : []);   // what "+ …" names after the unit's name
+const unitLabel = u => [u.name].concat(partsAfter(u)).join(' + ');
+// "supporting Tankbustas"; with two characters "Bigboss supporting, Warboss leading Breaka Boyz"
+const attachText = u => { const cs = charsOf(u); return cs.length > 1 ? cs.map(c => c.name + (c.support ? ' supporting' : ' leading')).join(', ') + ' ' + u.leads : (u.support ? 'supporting ' : 'leading ') + u.leads; };
+// which character or part a models line belongs to (null outside attached units)
+const whoOfLine = (u, i) => { const cs = charsOf(u); return !cs.length ? null : i < cs.length ? cs[i].name : u.leads; };
 const labelList = units => { const n = new Map(); for(const u of units){ const k = unitLabel(u); n.set(k, (n.get(k) || 0) + (u.copies || 1)); }
   return [...n].map(([k, c]) => k + (c > 1 ? '\u00a0×' + c : '')).join(', '); };
 function usersLine(s){
@@ -1472,19 +1482,24 @@ function baseOf(u, name, line){
   if(u.stats.length === 1) return u.stats[0].base;
   let rows = u.stats.map(s => ({ s, n:norm(s.name.replace(/ ×\d+$/, '')) }));
   const nm = norm(baseName(name));
-  // in an attached unit the first models line is the leader; the others are bodyguard models
-  if(u.leads && line > 0 && !rows.some(r => r.n === nm)) rows = rows.filter(r => r.n !== norm(baseName(lineParts(u.models[0]).name)));
+  // in an attached unit the first models lines are the characters; the others are bodyguard models
+  const nc = charsOf(u).length;
+  if(u.leads && line >= nc && !rows.some(r => r.n === nm)) rows = rows.filter(r => !u.models.slice(0, nc).some(m => r.n === norm(baseName(lineParts(m).name))));
   const pre = (a, b) => { let i = 0; while(i < a.length && a[i] === b[i]) i++; return i; };
   const hit = rows.find(r => r.n === nm) || rows.find(r => nm.startsWith(r.n) || r.n.startsWith(nm)) || rows.slice().sort((x, y) => pre(y.n, nm) - pre(x.n, nm))[0];
   return hit.s.base;
 }
 function proxyLines(u){
   const lines = u.models.map((m, i) => Object.assign(lineParts(m), { gear:(u.gear || [])[i] || [], base:baseOf(u, lineParts(m).name, i) }));
-  const tag = [u.warlord ? 'Warlord' : '', u.enhancement].filter(Boolean);
-  const own = (l, words) => [l.name === u.name || !u.short ? baseName(l.name) : u.short].concat(words).join(' · ');
-  if(lines.length === 1 && lines[0].n === 1) return [Object.assign(lines[0], { mark:own(lines[0], tag), lead:true })];
-  const body = u.leads ? lines.slice(1) : lines;
-  if(u.leads) Object.assign(lines[0], { mark:own(lines[0], tag), lead:true });
+  // the Warlord and the enhancement on the character that has them (warlordOn / enhOn), else the first
+  const on = (field, i) => u[field] ? whoOfLine(u, i) === u[field] : i === 0;
+  const tagOf = i => [u.warlord && on('warlordOn', i) ? 'Warlord' : '', u.enhancement && on('enhOn', i) ? u.enhancement : ''].filter(Boolean);
+  // the unit's short name is the first character's only
+  const own = (l, words, i) => [i === 0 && l.name !== u.name && u.short ? u.short : baseName(l.name)].concat(words).join(' · ');
+  if(lines.length === 1 && lines[0].n === 1) return [Object.assign(lines[0], { mark:own(lines[0], tagOf(0), 0), lead:true })];
+  const nc = u.leads ? charsOf(u).length : 0;
+  const body = lines.slice(nc);
+  lines.slice(0, nc).forEach((l, i) => Object.assign(l, { mark:own(l, tagOf(i), i), lead:true }));
   const std = body.slice().sort((x, y) => y.n - x.n)[0];
   for(const l of body){
     if(l === std){ l.mark = 'standard'; l.std = true; continue; }
@@ -1504,7 +1519,7 @@ function screenBases(){
   const cards = units.map(u => {
     const lines = proxyLines(u), c = u.copies || 1;
     for(const l of lines) if(/\d/.test(l.base)) total.set(l.base, (total.get(l.base) || 0) + l.n * c);   // "Hull": no base
-    return '<div class="px"><div class="pxh">' + linkTo('unit', u.id, u.name + (u.enhancement ? ' · ' + u.enhancement : '')) + (u.leads ? '<span class="tg m">+ ' + esc(u.leads) + '</span>' : '') +
+    return '<div class="px"><div class="pxh">' + linkTo('unit', u.id, u.name + (u.enhancement && !u.enhOn ? ' · ' + u.enhancement : '')) + (u.leads ? '<span class="tg m">+ ' + esc(partsAfter(u).join(' + ')) + '</span>' : '') +
       (c > 1 ? '<span class="tg m">' + c + ' units: mark them apart (' + Array.from({ length:c }, (_, i) => i + 1).join(', ') + ')</span>' : '') + '</div>' +
       lines.map(l => '<div class="pxl"><span class="pxn">' + l.n + '× <b>' + esc(/\d/.test(l.base) ? l.base : 'no base') + '</b></span><span class="pxm' + (l.std ? ' std' : '') + '">' + esc(l.mark) +
         (l.std && l.gear.length ? ' <i>' + esc(l.gear.join(', ')) + '</i>' : '') + '</span></div>').join('') + '</div>';
@@ -1541,10 +1556,10 @@ function screenPregame(){
   // your list
   const warlord = units.filter(u => u.warlord);
   const enh = units.flatMap(u => [u.enhancement, u.upgrade].filter(Boolean).map(n => { const d = detachments().find(x => (x.enhancements || []).some(e => e.name === n)), e = d && d.enhancements.find(x => x.name === n);
-    return (d ? linkTo('enh', d.id + '|' + n, n) : esc(n)) + (n === u.upgrade ? ' <span class="from">(upgrade)</span>' : '') + (e && e.pts ? ' <span class="from">' + e.pts + ' pts</span>' : '') + ' on ' + (n === u.upgrade && u.leads ? linkTo('unit', u.id, u.leads) : nameLink(u)); }));
-  const led = units.filter(u => u.leads).map(u => nameLink(u) + (u.support ? ' supports ' : ' leads ') + esc(u.leads) + (u.copies > 1 ? ' <span class="from">×' + u.copies + ' units</span>' : ''));
+    return (d ? linkTo('enh', d.id + '|' + n, n) : esc(n)) + (n === u.upgrade ? ' <span class="from">(upgrade)</span>' : '') + (e && e.pts ? ' <span class="from">' + e.pts + ' pts</span>' : '') + ' on ' + (n === u.enhancement && u.enhOn ? linkTo('unit', u.id, u.enhOn) : n === u.upgrade && u.leads ? linkTo('unit', u.id, u.leads) : nameLink(u)); }));
+  const led = units.filter(u => u.leads).flatMap(u => charsOf(u).map((c, i) => (i ? linkTo('unit', u.id, c.name) : nameLink(u)) + (c.support ? ' supports ' : ' leads ') + esc(u.leads) + (u.copies > 1 ? ' <span class="from">×' + u.copies + ' units</span>' : '')));
   let h = sec('Your list',
-    row('Warlord', warlord.map(unitLink).join(', ')) +
+    row('Warlord', warlord.map(u => u.warlordOn ? linkTo('unit', u.id, u.warlordOn) + ' <span class="from">(' + esc(unitLabel(u)) + ')</span>' : unitLink(u)).join(', ')) +
     row('Enhance&shy;ments', enh.join('<br>')) +
     row('Attached', led.join('<br>')) +
     row('Detach&shy;ments', esc(detachments().map(d => d.name + (d.dp ? ' (' + d.dp + ' DP)' : '')).join(', ')) + (a.disposition ? '<br><span class="from">Disposition:</span> ' + esc(a.disposition) : '')) +
@@ -1558,7 +1573,7 @@ function screenPregame(){
   const dsPts = ds.reduce((t, u) => t + (u.pts || 0) * (u.copies || 1), 0), half = Math.floor(a.points / 2);
   const transports = units.filter(u => hasKw(u, 'Transport')).map(u => { const ab = u.abilities.find(x => /transport capacity/i.test(x.text)); return unitLink(u) + (ab ? ': <span class="from">' + inline(ab.text.replace(/(^|\n)\*([^*\n][^\n]*[^*\n])\*(?=\n|$)/g, '$1$2').replace(/\n(- )?/g, ' ')) + '</span>' : ''); });
   h += sec('Declare battle formations',
-    row('Reserves', linkTo('rule', 'Strategic Reserves', 'Strategic reserves') + ': unless otherwise stated, up to ' + half + ' pts (50% of the ' + a.points + ' limit), counting units embarked within a TRANSPORT you place there. Unless otherwise stated, they can only arrive from the second battle round onwards, and any that have not arrived by the end of round 3 are destroyed (not repositioned units, nor units embarked within a TRANSPORT that arrived).' +
+    row('Reserves', linkTo('rule', 'Strategic Reserves', 'Strategic reserves') + ' (not FORTIFICATIONS): unless otherwise stated, up to ' + half + ' pts (50% of the ' + a.points + ' limit), counting units embarked within a TRANSPORT you place there. Unless otherwise stated, they can only arrive from the second battle round onwards, and any that have not arrived by the end of round 3 are destroyed (not repositioned units, nor units embarked within a TRANSPORT that arrived).' +
       (ds.length ? '<br><span class="from">Can ' + linkTo('rule', 'Deep Strike', 'Deep Strike') + ':</span> ' + ds.map(u => unitLink(u) + ' <span class="from">' + u.pts + ' pts' + (u.copies > 1 ? ' each' : '') + '</span>').join(', ') + (ds.length > 1 ? ' <span class="from">(all: ' + dsPts + ' pts)</span>' : '') : '')) +
     row('Transports', transports.join('<br>')));
 
@@ -1693,7 +1708,7 @@ function screenRules(){
 /* ---------- render ---------- */
 function render(){
   if(cur.s === 'home' && ONLY) cur = Object.assign(plain(cur), { s:'units', army:ONLY.id });
-  tabMemo[tabOf(cur.s)] = plain(cur);
+  tabMemo[memoKey(cur.army, tabOf(cur.s))] = plain(cur);
   renderTop();
   const v = $('#view'), s = cur.s;
   let sub = '', bot = '';
@@ -1857,7 +1872,7 @@ document.addEventListener('click', e => {
   if(el.hasAttribute('data-close')){ closeSheet(); return; }
   if(el.hasAttribute('data-back')){ back(); return; }
   if(el.hasAttribute('data-find')){ focusSearch = true; go({ s:'army', army:army().id }); return; }
-  if(ds.army){ go({ s:'army', army:ds.army }); return; }
+  if(ds.army){ go({ s:'units', army:ds.army }); return; }   // an army opens on its Units: what matters at the table
   if(ds.go){ go({ s:ds.go, army:army().id }); return; }
   if(ds.unit){
     const next = { s:'unit', army:army().id, unit:ds.unit };
@@ -1878,9 +1893,9 @@ document.addEventListener('click', e => {
   if(ds.tab){
     if(ds.tab === cur.s){ scrollTo(0, 0); return; }
     // another tab: back to the screen you left it on; the tab you are in: its first screen
-    const memo = tabOf(cur.s) !== ds.tab && tabMemo[ds.tab] && tabMemo[ds.tab].s !== ds.tab ? tabMemo[ds.tab] : null;
+    const mk = memoKey(army().id, ds.tab), memo = tabOf(cur.s) !== ds.tab && tabMemo[mk] && tabMemo[mk].s !== ds.tab ? tabMemo[mk] : null;
     const next = { s:ds.tab, army:army().id, then:memo }, up = (cur.d || 0) - (cur.root == null ? cur.d || 0 : cur.root);
-    if(!isTab(cur.s)) tabMemo[tabOf(cur.s)] = Object.assign(plain(cur), spot());
+    if(!isTab(cur.s)) tabMemo[memoKey(cur.army, tabOf(cur.s))] = Object.assign(plain(cur), spot());
     if(up > 0 && !EMBEDDED && history.state && history.state.d === cur.d){ tabTo = next; history.go(-up); return; }   // drop the screens under the old tab
     openTab(next); return;
   }

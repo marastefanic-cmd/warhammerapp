@@ -1,0 +1,286 @@
+[
+ {
+  "key": "75b68a139e8680b6",
+  "verdict": "ok",
+  "why": "Unit keywords as New Recruit prints them (melee.txt Categories): the only BEAST SNAGGA units are Mozrog Skragbad (\"Beast Snagga, Character, Epic Hero, Faction: Orks, Monster, Mozrog Skragbad\") and both Beastbosses on Squigosaur (\"Beast Snagga, Beastboss on Squigosaur, Character, Faction: Orks, Monster, Warboss\"); all three are MONSTER and CHARACTER. No other unit, attached units included (Bigboss unit: \"Grenades*, Warboss*, Breaka Boyz*, Explosives*\"; Meganobz units: \"Explosives*, Meganobz*\"), has BEAST SNAGGA. So the condition \"within 3\\\" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units)\" can't be met by any unit in this list. The armyUnits keywords match NR (the second Gretchin unit is left out, but it has the same keywords and no BEAST SNAGGA). A checkable list fact; nothing added.",
+  "fix": null
+ },
+ {
+  "key": "dc05ed43641da22e",
+  "verdict": "fix",
+  "why": "Source: \"In the Fight phase, when this model is destroyed, if this unit has not been selected to fight this phase, roll one D6: On a 2+, do not remove this model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield.\" The 2+ roll, \"stays\" (= \"do not remove\") and the removal \"until it has fought or the phase ends\" are exact. But the condition is the game term \"has not been selected to fight\", and the def says \"before fighting\". That differs in the gap after this unit is selected to fight but before it attacks (e.g. it is destroyed by a rule that triggers when it is selected to fight). The source gives no roll there; \"before fighting\" leaves the reader to decide. The fix uses the source's term.",
+  "fix": {
+   "def": "Destroyed in the Fight phase before being selected to fight: on a 2+ it stays until it has fought or the phase ends"
+  }
+ },
+ {
+  "key": "1cc0e33244741662",
+  "verdict": "ok",
+  "why": "Source: \"This unit’s melee attacks that target a MONSTER/VEHICLE unit can re-roll wound rolls.\" kind melee, when \"vs MONSTER/VEHICLE\", note \"can re-roll wound rolls\". Exact, with the optional \"can\" kept. Mozrog is a one-model unit, so no who is needed.",
+  "fix": null
+ },
+ {
+  "key": "84c2b790dff5a08a",
+  "verdict": "ok",
+  "why": "NR melee.txt l.59-61: \"Nazdreg's Know-wotz - Nazdreg\". who Nazdreg is as printed. The models match \"1x Nazdreg\" and \"6x Meganob w/ Twin Killsaw\" (l.33-35).",
+  "fix": null
+ },
+ {
+  "key": "8b13abc1b7966226",
+  "verdict": "ok",
+  "why": "NR l.63-64: \"Supreme Kunnin' (Once per phase, per army) - Nazdreg\". who Nazdreg is as printed, and the models match NR.",
+  "fix": null
+ },
+ {
+  "key": "8221f957b63acdba",
+  "verdict": "ok",
+  "why": "NR l.67-68: \"Intimidating Motivation (Once per battle round, per army) - Nazdreg\". who Nazdreg is as printed, and the models match NR.",
+  "fix": null
+ },
+ {
+  "key": "de146951b4e98614",
+  "verdict": "ok",
+  "why": "NR l.70: \"Krumpin’ Time - Meganobz\". who Meganobz is as printed, and the models match NR.",
+  "fix": null
+ },
+ {
+  "key": "3699726882cecd24",
+  "verdict": "ok",
+  "why": "NR l.71: \"Arrogant Invulnerability - Meganobz\". who Meganobz is as printed, and the models match NR.",
+  "fix": null
+ },
+ {
+  "key": "a5c4efea68eba1b9",
+  "verdict": "ok",
+  "why": "NR l.74-75: \"Categories Character, Epic Hero, Faction: Orks, Infantry, Mega Armour, Nazdreg, Warboss, Explosives*, Meganobz*, *from combined unit\". Nazdreg is \"Leading: Meganobz[1]\" (l.34), and the Meganobz are the only other part of the combined unit, so \"from the led Meganobz\" is a checkable list fact. Both starred keywords are listed.",
+  "fix": null
+ },
+ {
+  "key": "6d7ce0766e263191",
+  "verdict": "ok",
+  "why": "NR roster: \"Nazdreg … 165\" and \"(6) Meganobz … 240 Nazdreg\"; the unit header reads \"405 PTS\". 165 + 240 = 405, as printed.",
+  "fix": null
+ },
+ {
+  "key": "5749bd8e6b58b55f",
+  "verdict": "ok",
+  "why": "NR l.32-35: Nazdreg \"Kustom Blasta X, Moonchewa\" and 6x Meganob \"Twin Killsaw\". Profiles: \"Kustom Blasta X - Skorcha/Gatler/Shoota … - Nazdreg\", melee \"Kustom Blasta X (War Horde) - Nazdreg\", \"Moonchewa (War Horde) - Nazdreg\" and \"Twin Killsaw (War Horde) (x6) - Meganobz\". The gear and the weapons, with ×6, match exactly.",
+  "fix": null
+ },
+ {
+  "key": "f99b8f7d8f7cc61c",
+  "verdict": "ok",
+  "why": "Unit keywords as New Recruit prints them (melee.txt Categories): the only BEAST SNAGGA units are Mozrog Skragbad (\"Beast Snagga, Character, Epic Hero, Faction: Orks, Monster, Mozrog Skragbad\") and both Beastbosses on Squigosaur (\"Beast Snagga, Beastboss on Squigosaur, Character, Faction: Orks, Monster, Warboss\"); all three are MONSTER and CHARACTER. No other unit, attached units included (Bigboss unit: \"Grenades*, Warboss*, Breaka Boyz*, Explosives*\"; Meganobz units: \"Explosives*, Meganobz*\"), has BEAST SNAGGA. So the condition \"within 3\\\" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units)\" can't be met by any unit in this list. The armyUnits keywords match NR (the second Gretchin unit is left out, but it has the same keywords and no BEAST SNAGGA). A checkable list fact; nothing added.",
+  "fix": null
+ },
+ {
+  "key": "6cb96d4c4cccf18b",
+  "verdict": "ok",
+  "why": "Source: \"If this unit made a charge move this turn, this model’s melee attacks have +1 AP.\" Melee attacks are made in the Fight phase. A charge move can be made in either turn (your Charge phase, or Heroic Intervention's \"Resolve a charge with your unit\" at the end of the opponent's Charge phase). So Fight in either turn, the same as the signed-off Might is Right.",
+  "fix": null
+ },
+ {
+  "key": "92cf10e6d8886849",
+  "verdict": "ok",
+  "why": "Orks War Horde Enhancements: \"Headwoppa's Killchoppa 15 pts / ORKS model only. If this unit made a charge move this turn…\". NR lists it in the 155-pt Beastboss's options (l.290); the other Beastboss is 140 pts. A checkable fact.",
+  "fix": null
+ },
+ {
+  "key": "c32874b78951a6cd",
+  "verdict": "ok",
+  "why": "Source: \"If this unit made a charge move this turn, this model’s melee attacks have +1 AP.\" kind melee, when \"Made a charge move this turn\", note \"+1 AP\". Exact. The Beastboss is a one-model unit (\"1x Beastboss on Squigosaur\"), so \"this model\" needs no who. (It belongs only to the 155-pt Beastboss that took it, NR l.290.)",
+  "fix": null
+ },
+ {
+  "key": "8453530fa9aad83e",
+  "verdict": "ok",
+  "why": "NR (both Beastbosses, l.290 and l.327): \"Beastchoppa, Slugga, Squigosaur’s jaws, Thump Gun\". Profiles: Slugga, Thump Gun, \"Beastchoppa - Hunter\", \"Beastchoppa - Standard\" and \"Squigosaur’s jaws\". An exact match; the enhancement Headwoppa's Killchoppa is not a weapon.",
+  "fix": null
+ },
+ {
+  "key": "0b6eb7ea392cc4f0",
+  "verdict": "ok",
+  "why": "Source: \"This unit’s melee attacks have +1 to hit rolls.\" There is no phase or turn condition, and melee attacks are made in the Fight phase of either turn. Fight in either turn is right.",
+  "fix": null
+ },
+ {
+  "key": "5209d0ab574392b2",
+  "verdict": "ok",
+  "why": "NR l.127: \"Sumfin’ to Prove - Bigboss\". who Bigboss is as printed. The models match NR l.85-93: 1x Bigboss, 1x Warboss, 1x Nob, 3x Breaka Boy, 1x … w/ Knucklebustas, 1x … w/ Tankhammer.",
+  "fix": null
+ },
+ {
+  "key": "97f3be8195cd80e2",
+  "verdict": "ok",
+  "why": "NR l.128-130: \"Might is Right - Warboss\". who Warboss is as printed, and the models match NR.",
+  "fix": null
+ },
+ {
+  "key": "609842b449889dae",
+  "verdict": "ok",
+  "why": "Source: \"In your Shooting phase, when this unit is selected to shoot, you can use this ability.\" The text names your Shooting phase.",
+  "fix": null
+ },
+ {
+  "key": "2169e7ad4eb59c84",
+  "verdict": "ok",
+  "why": "NR l.132-133: \"Boss' Ammo Runt (Once per battle, per unit) - Warboss\". The tag is copied; the single token in the text agrees.",
+  "fix": null
+ },
+ {
+  "key": "5d16a79082d21fc6",
+  "verdict": "ok",
+  "why": "NR l.132-133: \"Boss' Ammo Runt (…) - Warboss\". who Warboss is as printed, and \"this model’s ranged attacks\" is the Warboss's.",
+  "fix": null
+ },
+ {
+  "key": "51f42749f899d71e",
+  "verdict": "ok",
+  "why": "NR l.136-137: \"Intimidating Motivation (Once per battle round, per army) - Warboss\". who Warboss is as printed.",
+  "fix": null
+ },
+ {
+  "key": "6905526cfad6e2fa",
+  "verdict": "ok",
+  "why": "Source: \"When this unit is selected to make a fall-back move, that fall-back move does not prevent this unit from being eligible to shoot/declare a charge.\" Core 09.02: the active player makes fall-back moves in their Movement phase. Core 09.07: \"Until the end of the turn … your unit is not eligible to shoot, declare a charge\". The effect therefore acts in your Movement phase (the move), your Shooting phase and your Charge phase. The restriction ends with your turn, so nothing in the opponent's turn is affected. This matches the signed-off Turbo Engine (movement + charge, your).",
+  "fix": null
+ },
+ {
+  "key": "722b66e9ed933534",
+  "verdict": "ok",
+  "why": "Orks War Horde Enhancements: \"Kunnin' But Brutal 20 pts / ORKS model only…\". NR Warboss options (l.87): \"Kunnin’ But Brutal, Power Klaw, Kombi-skorcha\". A checkable fact.",
+  "fix": null
+ },
+ {
+  "key": "50a73e0388762c3b",
+  "verdict": "ok",
+  "why": "NR l.139-140: \"Kunnin’ But Brutal - Warboss\". who Warboss is as printed (the bearer), and the models match NR.",
+  "fix": null
+ },
+ {
+  "key": "965f2a16dd141fb2",
+  "verdict": "ok",
+  "why": "Source: \"This unit has +1 to charge rolls.\" Charge rolls are made in your Charge phase, and in the opponent's (Heroic Intervention: \"before making the charge roll\"). Charge in either turn, as signed off for Thundering Stampede.",
+  "fix": null
+ },
+ {
+  "key": "8d1e246243ca943b",
+  "verdict": "ok",
+  "why": "NR l.147: \"Trophy Hunters - Breaka Boyz\". who Breaka Boyz is as printed.",
+  "fix": null
+ },
+ {
+  "key": "249bd743752e70db",
+  "verdict": "ok",
+  "why": "NR l.150-152: \"Bomb Squig (Once per turn, twice per battle, per unit) - Breaka Boyz\". who Breaka Boyz is as printed.",
+  "fix": null
+ },
+ {
+  "key": "2967c138537993c8",
+  "verdict": "ok",
+  "why": "Source: \"This unit’s melee attacks have +1 to hit rolls.\" There is no condition, so the when is \"Always\". It applies to the whole attached unit (\"This unit’s\"), so no who is set. kind melee, note \"+1 to hit rolls\". Exact.",
+  "fix": null
+ },
+ {
+  "key": "796623d20817a80d",
+  "verdict": "ok",
+  "why": "Source: \"If this unit made a charge move this turn, this model’s melee attacks have: +3 A. +2 S.\" who Warboss (NR \"Might is Right - Warboss\"; \"this model\"), when \"Made a charge move this turn\" (charge by \"this unit\"), note \"+3 A, +2 S\". Exact.",
+  "fix": null
+ },
+ {
+  "key": "0c835c231d8008bb",
+  "verdict": "ok",
+  "why": "Source: \"In your Shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this model’s ranged attacks have +1 to hit rolls.\" kind ranged, who Warboss (\"this model\"; NR \"- Warboss\"), and the when keeps the use condition and the timing. note \"+1 to hit rolls\". Nothing added.",
+  "fix": null
+ },
+ {
+  "key": "2e87e9b133db238b",
+  "verdict": "ok",
+  "why": "NR l.157-158: \"Categories Bigboss, Character, Faction: Orks, Infantry, Grenades*, Warboss*, Breaka Boyz*, Explosives*, *from combined unit\". The same four keywords, in the same wording.",
+  "fix": null
+ },
+ {
+  "key": "1fbb4c0ced424196",
+  "verdict": "ok",
+  "why": "NR roster: \"Bigboss … 50\", \"Warboss … 120\" and \"(6) Breaka Boyz … 120 Bigboss, Warboss\"; the header reads \"290 PTS\". 50 + 120 + 120 = 290, as printed.",
+  "fix": null
+ },
+ {
+  "key": "a9fb1b0c51d51820",
+  "verdict": "ok",
+  "why": "NR l.84-93 gear: Bigboss \"Big Choppa, Slugga\"; Warboss \"Kunnin’ But Brutal, Power Klaw, Kombi-skorcha\" (the enhancement is not a weapon); Nob \"Choppa, Rokkit Pistol, Smash Hammer\"; 3x Breaka Boy \"Smash Hammer\"; Knucklebustas; Tankhammer. Profiles: \"Slugga - Bigboss\", \"Kombi-skorcha - Skorcha/Shoota - Warboss\", \"Rokkit pistol - Breaka Boyz\", \"Big Choppa - Bigboss\", \"Power Klaw - Warboss\", \"Choppa - Breaka Boyz\", \"Smash Hammer - Hunter/Standard (x4) - Breaka Boyz\" (1 Nob + 3 = 4), \"Knucklebustas - Breaka Boyz\", \"Tankhammer - Breaka Boyz\". An exact match.",
+  "fix": null
+ },
+ {
+  "key": "378576006c62377e",
+  "verdict": "ok",
+  "why": "Source: \"When this unit ends a charge move, you can select one enemy unit engaged with this unit…\" Charge moves are made in the Charge phase of either turn (your Charge phase, or Heroic Intervention at the end of the opponent's Charge phase). Charge in either turn.",
+  "fix": null
+ },
+ {
+  "key": "6c7c574a796b879b",
+  "verdict": "ok",
+  "why": "NR l.184-185: \"Krushin' Impetus - Warboss in Mega Armour\". who is as printed, and the models match NR l.168-170.",
+  "fix": null
+ },
+ {
+  "key": "769304b1ab610471",
+  "verdict": "ok",
+  "why": "NR l.188-191: \"Intimidating Motivation (Once per battle round, per army) - Warboss in Mega Armour\". who is as printed.",
+  "fix": null
+ },
+ {
+  "key": "4c6a06d49810e04f",
+  "verdict": "ok",
+  "why": "Orks War Horde Enhancements: \"Follow Me Ladz 20 pts / ORKS model only. This unit has +2\\\" M.\" NR WIMA options (l.167): \"Follow Me Ladz, ’Uge Choppa, Big Shoota\". A checkable fact.",
+  "fix": null
+ },
+ {
+  "key": "1377c6b47424e86e",
+  "verdict": "ok",
+  "why": "NR l.193-194: \"Follow Me Ladz - Warboss in Mega Armour\". who is the bearer, as printed. The effect is on \"This unit\" (NR shows both the WIMA and the Meganobz at 7\").",
+  "fix": null
+ },
+ {
+  "key": "df273dd1df765a77",
+  "verdict": "ok",
+  "why": "NR l.197: \"Krumpin’ Time - Meganobz\". who Meganobz is as printed.",
+  "fix": null
+ },
+ {
+  "key": "6b14d6f4886af7ee",
+  "verdict": "ok",
+  "why": "NR l.198: \"Arrogant Invulnerability - Meganobz\". who Meganobz is as printed.",
+  "fix": null
+ },
+ {
+  "key": "f5639a03c593371a",
+  "verdict": "ok",
+  "why": "NR l.201-202: \"Categories Character, Faction: Orks, Infantry, Mega Armour, Warboss, Warboss in Mega Armour, Explosives*, Meganobz*, *from combined unit\". The WIMA is \"Leading: Meganobz[2]\" (l.169), the only other part, so \"from the led Meganobz\" is a list fact.",
+  "fix": null
+ },
+ {
+  "key": "a1a3e06b0fb8584d",
+  "verdict": "ok",
+  "why": "NR roster: \"Warboss in Mega Armour … 135\" and \"(6) Meganobz … 240 Warboss in Mega Armour\"; the header reads \"375 PTS\". 135 + 240 = 375, as printed.",
+  "fix": null
+ },
+ {
+  "key": "806a5537730aed7b",
+  "verdict": "ok",
+  "why": "NR l.167-170: WIMA \"Follow Me Ladz, ’Uge Choppa, Big Shoota\" (the enhancement is not a weapon) and 6x Meganob \"Twin Killsaw\". Profiles: \"Big Shoota - Warboss in Mega Armour\", \"’Uge Choppa (War Horde) - Warboss in Mega Armour\" and \"Twin Killsaw (War Horde) (x6) - Meganobz\". An exact match.",
+  "fix": null
+ },
+ {
+  "key": "54071d68dfae3f21",
+  "verdict": "ok",
+  "why": "Source: \"At the end of your Movement phase, if this unit is controlling an objective, that objective is secured.\" The text names your Movement phase.",
+  "fix": null
+ },
+ {
+  "key": "c7cb12f2d240e1cc",
+  "verdict": "ok",
+  "why": "NR l.385-402: 2x Deffkopta \"Choppa, Rokkit Launcha, Slugga, Spinnin’ Blades\" and 1x Deffkopta w/ Kustom mega-blasta \"Choppa, Kustom Mega-blasta, Slugga, Spinnin’ Blades\". Profiles: \"Rokkit Launcha- Busta (x2)\", \"Rokkit Launcha - Blasta (x2)\", \"Slugga (x3)\", \"Kustom Mega-blasta\" (×1), \"Choppa (War Horde) (x3)\" and \"Spinnin’ Blades (War Horde) (x3)\". An exact match.",
+  "fix": null
+ }
+]

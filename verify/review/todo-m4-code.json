@@ -1,0 +1,14 @@
+[
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "proxyLines",
+  "judgement": {
+   "code": "function proxyLines(u){\n  const lines = u.models.map((m, i) => Object.assign(lineParts(m), { gear:(u.gear || [])[i] || [], base:baseOf(u, lineParts(m).name, i) }));\n  // the Warlord and the enhancement on the character that has them (warlordOn / enhOn), else the first\n  const on = (field, i) => u[field] ? whoOfLine(u, i) === u[field] : i === 0;\n  const tagOf = i => [u.warlord && on('warlordOn', i) ? 'Warlord' : '', u.enhancement && on('enhOn', i) ? u.enhancement : ''].filter(Boolean);\n  // the unit's short name is the first character's only\n  const own = (l, words, i) => [i === 0 && l.name !== u.name && u.short ? u.short : baseName(l.name)].concat(words).join(' · ');\n  if(lines.length === 1 && lines[0].n === 1) return [Object.assign(lines[0], { mark:own(lines[0], tagOf(0), 0), lead:true })];\n  const nc = u.leads ? charsOf(u).length : 0;\n  const body = lines.slice(nc);\n  lines.slice(0, nc).forEach((l, i) => Object.assign(l, { mark:own(l, tagOf(i), i), lead:true }));\n  const std = body.slice().sort((x, y) => y.n - x.n)[0];\n  for(const l of body){\n    if(l === std){ l.mark = 'standard'; l.std = true; continue; }\n    const sb = baseName(std.name), lb = baseName(l.name);\n    const named = lb === sb ? '' : lb.startsWith(sb + ' ') ? lb.slice(sb.length + 1) : lb;\n    const cnt = (list, g) => list.filter(x => x === g).length;\n    const more = [...new Set(l.gear)].filter(g => cnt(l.gear, g) > cnt(std.gear, g)).map(g => cnt(l.gear, g) > 1 ? cnt(l.gear, g) + '× ' + g : g);\n    // a line named as the standard one: also what it has less of (a Boy with only a Slugga is not \"standard\")\n    const less = named ? [] : [...new Set(std.gear)].filter(g => cnt(l.gear, g) < cnt(std.gear, g)).map(g => cnt(l.gear, g) ? cnt(l.gear, g) + '× ' + g : 'no ' + g);\n    l.mark = [named, more.join(' + '), less.join(', '), l.extra].filter(Boolean).join(' · ') || 'standard';\n  }\n  return lines;\n}"
+  },
+  "source": {
+   "implements": "Bases & proxies: bases per models line and what to mark"
+  },
+  "key": "005e560f0cdda686"
+ }
+]

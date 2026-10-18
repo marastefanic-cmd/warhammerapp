@@ -25,7 +25,8 @@ done
 # Wahapedia datasheet pages of the units in the lists (verify/choice.js reads their pick-one markers)
 mkdir -p .cache/waha/ds
 while read -r fac unit; do
-  [ -f ".cache/waha/ds/${fac}_${unit}.html" ] || curl -sSf -A "Mozilla/5.0" "https://wahapedia.ru/wh40k11ed/factions/$fac/$unit" -o ".cache/waha/ds/${fac}_${unit}.html"
+  # a page that cannot be fetched (a misspelt name: Wahapedia's addresses are case-sensitive) is reported, not fatal
+  [ -f ".cache/waha/ds/${fac}_${unit}.html" ] || curl -sSf -A "Mozilla/5.0" "https://wahapedia.ru/wh40k11ed/factions/$fac/$unit" -o ".cache/waha/ds/${fac}_${unit}.html" || echo "could not fetch the Wahapedia datasheet $fac/$unit: check its name in sources/waha-datasheets.txt" >&2
 done < sources/waha-datasheets.txt
 # Wahapedia text extraction the rules-text check reads
 for p in orks core; do

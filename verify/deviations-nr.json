@@ -16,5 +16,32 @@
   "source": "ORKS INFANTRY model only (excluding WEIRDBOY models). This model's ranged attacks have: [ANTI-INFANTRY 4+} [DEVASTATING WOUNDS]. [SUPA-HAZARDOUS].",
   "reason": "New Recruit's text has a typo (a brace and no full stop after [ANTI-INFANTRY 4+]); the app has the enhancement's wording as the rules publish it.",
   "evidence": "Wahapedia, Orks, Shoota Boyz detachment, enhancement Supa-glowy Fing: \"This model’s ranged attacks have: - [Anti-Infantry 4+]. - [Devastating Wounds]. - [SUPA-HAZARDOUS].\" (verify/.cache/waha/orks.html); verify/texts.js checks the app's text against it."
+ },
+ {
+  "army": "melee",
+  "unit": "nazdreg-meganobz",
+  "field": "abilities[Nazdreg's Know-wotz | Nazdreg].text",
+  "app": "This unit has Deep Strike. This unit's ranged attacks have [IGNORES COVER].",
+  "source": "This unit has Deep Strike This unit's ranged attacks have [IGNORES COVER].",
+  "reason": "Typo in New Recruit and BSData (no full stop after \"Deep Strike\") that GW's wording does not have; the app follows the official wording.",
+  "evidence": "Wahapedia datasheet wahapedia.ru/wh40k11ed/factions/orks/Nazdreg: \"Nazdreg’s Know-wotz: This unit has Deep Strike. This unit’s ranged attacks have [Ignores Cover].\" New Recruit: verify/sources/nr/melee.txt line 60."
+ },
+ {
+  "army": "melee",
+  "unit": "mozrog-skragbad",
+  "field": "abilities[Da Bigger Dey Iz…].text",
+  "app": "This unit's melee attacks that target a MONSTER/VEHICLE unit can re-roll wound rolls.",
+  "source": "This unit's melee attacks that target a MONSTER/VEHICLE unit can re-roll wounds rolls.",
+  "reason": "Typo in New Recruit and BSData (\"wounds rolls\") that GW's wording does not have; the app follows the official wording.",
+  "evidence": "Wahapedia datasheet wahapedia.ru/wh40k11ed/factions/orks/Mozrog-Skragbad: \"This unit’s melee attacks that target a MONSTER/VEHICLE unit can re-roll wound rolls.\" New Recruit: verify/sources/nr/melee.txt line 277."
+ },
+ {
+  "army": "melee",
+  "unit": "bigboss-warboss-breaka-boyz",
+  "field": "stats[Nob].base",
+  "app": "40mm",
+  "source": "32mm",
+  "reason": "GW's base size guide is newer than the community data New Recruit uses; tournaments use GW's guide.",
+  "evidence": "GW Warhammer Event Companion v1.3 (14 Oct 2026, newer than New Recruit and BSData), Base Size Guide, Orks: \"Breaka Boyz: Boss Nob 40mm\" (verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt line 3492); New Recruit calls the Breaka Boyz' Boss Nob \"Nob\"."
  }
 ]

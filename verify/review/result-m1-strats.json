@@ -1,0 +1,172 @@
+[
+ {
+  "key": "4bb96c26d1afc78a",
+  "verdict": "ok",
+  "why": "“Friendly ORKS units’ melee attacks have [SUSTAINED HITS 1].” The rule only covers melee attacks. Core 07.02 says “FIGHT PHASE: Both players’ units make attacks with their melee weapons” and the Shooting phase uses “ranged weapons”, so Fight is the only phase. text: same words as Wahapedia; only the case differs (Wahapedia “[Sustained Hits 1]”, app “[SUSTAINED HITS 1]”).",
+  "fix": null
+ },
+ {
+  "key": "c54cf31f7c1da0d5",
+  "verdict": "ok",
+  "why": "The rule says “melee attacks”, and in the Fight phase “Both players’ units make attacks with their melee weapons”, so it applies in either turn. text: case only, “[Sustained Hits 1]” vs “[SUSTAINED HITS 1]”.",
+  "fix": null
+ },
+ {
+  "key": "80cc7b715ba1adee",
+  "verdict": "ok",
+  "why": "“Friendly ORKS units”: ORKS is the faction keyword, which New Recruit prints as “Faction: Orks”. The text names no other keyword. text: case only, “[Sustained Hits 1]” vs “[SUSTAINED HITS 1]”.",
+  "fix": null
+ },
+ {
+  "key": "4328ed892bfbcc61",
+  "verdict": "ok",
+  "why": "WHEN: “Any phase”. Core 07.02 says “a series of five phases” (Command, Movement, Shooting, Charge, Fight), and the judgement lists all five. The Start of Turn and End of Turn steps are not phases. text: same as Wahapedia word for word.",
+  "fix": null
+ },
+ {
+  "key": "e577aca646c11203",
+  "verdict": "ok",
+  "why": "The WHEN says “Any phase”, not “your”, so either turn. text: same as Wahapedia word for word.",
+  "fix": null
+ },
+ {
+  "key": "4efde77a998f7403",
+  "verdict": "ok",
+  "why": "WHEN: “a friendly attached ORKS INFANTRY unit”. TARGET: “That ORKS INFANTRY unit”. Orks + Infantry + attached are copied from these. The trigger “becomes battle-shocked” is not a keyword filter. text: same as Wahapedia word for word.",
+  "fix": null
+ },
+ {
+  "key": "a446a2addbbb1f1c",
+  "verdict": "ok",
+  "why": "EFFECT: “Roll one D3: - Your unit suffers a number of mortal wounds equal to the result. - Your unit is no longer battle-shocked.” Both bullets apply: neither says “Or”, unlike Mow ’Em Down. So “and” adds nothing, and “that many” = “equal to the result”. The TARGET line “You can target that unit … even though it is battle-shocked” is about targeting, not the effect. 87 chars. text: same as Wahapedia word for word.",
+  "fix": null
+ },
+ {
+  "key": "a3c5154f53f6b0dd",
+  "verdict": "ok",
+  "why": "WHEN: “Fight phase, when a friendly ORKS unit is selected to fight”. text: case only, Wahapedia “[Lethal Hits]”, app “[LETHAL HITS]”.",
+  "fix": null
+ },
+ {
+  "key": "79711f1bdceed49a",
+  "verdict": "ok",
+  "why": "The WHEN says “Fight phase”, not “Your Fight phase”, so either turn. text: case only, “[Lethal Hits]” vs “[LETHAL HITS]”.",
+  "fix": null
+ },
+ {
+  "key": "f882c699340dfe8b",
+  "verdict": "ok",
+  "why": "WHEN: “a friendly ORKS unit”. TARGET: “That ORKS unit”. No other keyword is named. text: case only, “[Lethal Hits]” vs “[LETHAL HITS]”.",
+  "fix": null
+ },
+ {
+  "key": "2c6ea5ee61af837b",
+  "verdict": "ok",
+  "why": "EFFECT: “Your unit’s melee attacks have [LETHAL HITS]”. WHEN: “Fight phase”. The footnote has the same kind (melee), the same timing and the same ability. text: case only, “[Lethal Hits]” vs “[LETHAL HITS]”.",
+  "fix": null
+ },
+ {
+  "key": "85d1155813ea2230",
+  "verdict": "ok",
+  "why": "Matches the EFFECT word for word: “Your unit’s melee attacks have [LETHAL HITS].” text: case only, Wahapedia “[Lethal Hits]”.",
+  "fix": null
+ },
+ {
+  "key": "c767941a5c904c74",
+  "verdict": "ok",
+  "why": "WHEN: “Fight phase”. The effect ends “When your unit has fought, or at the end of the phase (whichever comes first)”, so it stays in the Fight phase. text: same as Wahapedia word for word.",
+  "fix": null
+ },
+ {
+  "key": "c07d8c78545d1de3",
+  "verdict": "ok",
+  "why": "WHEN: “Fight phase, when an enemy unit targets a friendly ORKS unit”. It does not say “your”, and in the Fight phase “Both players’ units make attacks with their melee weapons”, so either turn. text: same as Wahapedia word for word.",
+  "fix": null
+ },
+ {
+  "key": "19a181845257195f",
+  "verdict": "ok",
+  "why": "WHEN: “a friendly ORKS unit (excluding TITANIC units)”. TARGET: “That ORKS unit”. That gives Orks, and none Titanic. text: same as Wahapedia word for word.",
+  "fix": null
+ },
+ {
+  "key": "509360cbd2076075",
+  "verdict": "fix",
+  "why": "EFFECT: “When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one D6, with +1 to that roll if your unit is riled up: On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.” Three things change. (1) “Your model”: the source says “a model in your unit” (the TARGET), but “your model” could mean any of your models. (2) “before your unit is selected to fight”: the source checks a state, “has not been selected to fight this phase”. The gist drops “this phase”, and it reads as if the unit must be selected later, but the source also covers a unit that is never selected. (3) “roll one D6” is dropped, so the “4+” has no roll. The part “stays until your unit has fought or the phase ends” is fine: it is the source’s removal timing, since “until A or B” means whichever comes first. The gist is also 139 chars. The fix is 152 chars. A version of 110 or fewer would have to stop at “on a 4+ it stays…” and drop the removal timing. text: same as Wahapedia word for word.",
+  "fix": {
+   "gist": "Model in your unit destroyed, unit not selected to fight this phase: D6 (+1 if riled up); on a 4+ it stays until your unit has fought or the phase ends."
+  }
+ },
+ {
+  "key": "278ccf961ee233b8",
+  "verdict": "ok",
+  "why": "WHEN: “Fight phase, when a friendly ORKS VEHICLE unit … is selected to fight”. text: case only, Wahapedia “[Cleave 1]”, app “[CLEAVE 1]”. Wahapedia already prints “[CLEAVE]” in the second bullet.",
+  "fix": null
+ },
+ {
+  "key": "6aeb0680cf62d2a1",
+  "verdict": "ok",
+  "why": "WHEN: “Fight phase” (not “your”) … “that made a charge move this turn”. Heroic Intervention (“End of your opponent’s Charge phase … Resolve a charge with your unit”) can make a charge in the opponent’s turn, so the tag is either. Note for the owner: Heroic Intervention’s TARGET allows a VEHICLE only “if it is a CHARACTER/WALKER unit”, and this stratagem excludes WALKER. So in the opponent’s turn it needs a non-WALKER CHARACTER Orks VEHICLE, or some other rule. Narrowing the tag would mean combining rules, so either is correct. text: case only, “[Cleave 1]” vs “[CLEAVE 1]”.",
+  "fix": null
+ },
+ {
+  "key": "abd758a2fd63c0f4",
+  "verdict": "ok",
+  "why": "WHEN: “a friendly ORKS VEHICLE unit (excluding WALKER units)”. TARGET: “That ORKS VEHICLE unit”. That gives Orks + Vehicle, and none Walker. “made a charge move this turn” is a condition, not a keyword. text: case only, “[Cleave 1]” vs “[CLEAVE 1]”.",
+  "fix": null
+ },
+ {
+  "key": "8679c02d89b35a54",
+  "verdict": "ok",
+  "why": "EFFECT: “Your unit’s melee attacks have: - [CLEAVE 1]. - Or: If that attack already has [CLEAVE], +1 to the value of that [CLEAVE]”. The gist has the same two options joined by “or”, and it does not say who chooses. 94 chars. text: case only, Wahapedia “[Cleave 1]” in the first bullet.",
+  "fix": null
+ },
+ {
+  "key": "3380d8a0b71b1fef",
+  "verdict": "ok",
+  "why": "WHEN: “Your Movement phase, when a friendly ORKS MOUNTED/VEHICLE unit is selected to move”. text: same as Wahapedia word for word.",
+  "fix": null
+ },
+ {
+  "key": "6000c888c6a680fb",
+  "verdict": "ok",
+  "why": "The WHEN says “Your Movement phase”, so your turn. text: same as Wahapedia word for word.",
+  "fix": null
+ },
+ {
+  "key": "bb1434ec04449371",
+  "verdict": "ok",
+  "why": "WHEN and TARGET: “ORKS MOUNTED/VEHICLE unit”. That gives Orks, plus any of Mounted or Vehicle. text: same as Wahapedia word for word.",
+  "fix": null
+ },
+ {
+  "key": "6c05052014c75eaf",
+  "verdict": "ok",
+  "why": "Matches the EFFECT word for word: “Your unit has +2\" M.” text: same as Wahapedia word for word.",
+  "fix": null
+ },
+ {
+  "key": "8a61d95f4d875976",
+  "verdict": "ok",
+  "why": "WHEN: “Your Shooting phase, when a friendly ORKS unit is selected to shoot”. text: case only, Wahapedia “[Rapid Fire 1]”, app “[RAPID FIRE 1]”. Wahapedia already prints “[RAPID FIRE]” in the second bullet.",
+  "fix": null
+ },
+ {
+  "key": "b0c1dfbf69a2339f",
+  "verdict": "ok",
+  "why": "The WHEN says “Your Shooting phase”, so your turn. text: case only, “[Rapid Fire 1]” vs “[RAPID FIRE 1]”.",
+  "fix": null
+ },
+ {
+  "key": "e8dd005a87f8053e",
+  "verdict": "ok",
+  "why": "WHEN: “a friendly ORKS unit”. TARGET: “That ORKS unit”. text: case only, “[Rapid Fire 1]” vs “[RAPID FIRE 1]”.",
+  "fix": null
+ },
+ {
+  "key": "2f9f8be4bddd5ba5",
+  "verdict": "ok",
+  "why": "EFFECT: “Your unit’s ranged attacks have: - [RAPID FIRE 1]. - Or: If that attack already has [RAPID FIRE], +1 to the value of that [RAPID FIRE]”. The gist has the same two options joined by “or”. 103 chars. text: case only, Wahapedia “[Rapid Fire 1]” in the first bullet.",
+  "fix": null
+ }
+]

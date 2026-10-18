@@ -1,8 +1,10 @@
 # Waaagh Codex
 
-A phone-first Warhammer 40,000 (11th edition, matched play) reference for one army list:
-**Me shooty yer’ booty** (Orks, 2000 pts). It shows the list's datasheets, stratagems and rules in
-their official wording, made searchable, and adds no rule interpretations of its own.
+A phone-first Warhammer 40,000 (11th edition, matched play) reference for the owner's army lists:
+**Me shooty yer’ booty** (Orks: Dread Mob, Shoota Boyz, Wreckas) and **Melee** (Orks: War Horde),
+2000 pts each. It shows each list's datasheets, stratagems and rules in their official wording, made
+searchable, and adds no rule interpretations of its own. The app opens on a picker of the lists; each
+list opens on its Units, and each tab remembers where it was, per list.
 
 Tabs: **Pre-game** (warlord, enhancements, reserves, uses per battle; Bases & proxies) ·
 **Units** (one datasheet per unit) · **Stratagems** (every stratagem of the list's detachments and
@@ -10,11 +12,12 @@ the core ones, each with a one-line gist, its timing and which of your units can
 **Rules** (army and detachment rules; core rules folded at the bottom) · **Find** (search, plus the
 Ranged, Melee and Abilities overviews).
 
-The other lists the app used to carry left it on 17 Oct 2026; they are in the git history.
+Older lists (Cooking, Hurrdurr, oioioi, Nidzillas, Purge Freeblade) left the app on 17 Oct 2026; they
+are in the git history, and `import-nr.js --reuse` can take their signed-off notes for the same datasheets.
 
 | File | What it is |
 |---|---|
-| `data.js` | the army, plus the faction and core rules it uses |
+| `data.js` | the armies, plus the faction and core rules they use |
 | `app.html` | the app (published as the Claude artifact as-is, with `data.js`, `verified.js`, `fonts/`) |
 | `build.js` | builds `index.html`, `version.json` and the `sw.js` stamp; refuses unless the gate passed |
 | `verify/` | the gate: every fact checked against its source before a build (see below) |
@@ -35,19 +38,25 @@ The facts come from New Recruit, never typed by hand:
    from the PDF, with the rules wording (bold keywords, bullets) taken from Wahapedia's datasheet
    and matched word for word to New Recruit's. Updating a list that is already in `data.js` keeps
    the unit ids and every hand-written part (phase tags, weapon footnotes) of what hasn't changed.
-   It lists what it cannot know in `verify/out/import-<id>.md`.
+   A datasheet that another list (or an older data.js, `--reuse <file>`) already has lends its signed-off
+   phase tags and footnotes where the words are the same. Units with two characters attached (a
+   Warboss leading and a Bigboss supporting the same Breaka Boyz) are one unit. With `--write` it also
+   writes the "+" marks from BSData. It lists what it cannot know in `verify/out/import-<id>.md`.
 4. Write those parts: phase tags, weapon footnotes (`mods`) and auras, a missing detachment or
    rule (from Wahapedia/GW), stratagem gists. That is the only part that needs judgement.
-5. `node verify/bsdata.js` then `node verify/write-grants.js`: the orange "+" marks, from BSData.
-6. `node verify/run.js` until it passes. It checks the list against the PDF, BSData and GW's texts;
+5. `node verify/run.js` until it passes. It checks the list against the PDF, BSData and GW's texts;
    renders every screen at 390 and 320px; shows any screen change (accept with `--accept` after
    reading the diff); and lists every judgement the app adds that has no sign-off yet. Those are
    reviewed (`verify/review/`, then `node verify/approve.js verify/review/result-<name>.json`).
-7. Bump `VERSION` in `data.js`, `node build.js`, commit and push; republish the artifact.
+6. Bump `VERSION` in `data.js`, `node build.js`, commit and push; republish the artifact.
+
+The New Recruit PDF (not the copy-paste text export) is the input on purpose: it names every models line
+with its wargear, and it is New Recruit's own calculation from BSData, which the gate compares with its
+own (verify/bsdata.js), so a mistake in either shows.
 
 `node verify/import-nr.js <txt> <id> --fresh` followed by `node verify/import-diff.js
-verify/out/import-<id>.js <id>` shows what a clean import and `data.js` disagree on (for this list:
-nothing but bold/italic placement).
+verify/out/import-<id>.js <id>` shows what a clean import and `data.js` disagree on (for both lists:
+nothing but bold/italic placement and two New Recruit typos recorded in verify/deviations-nr.json).
 
 ## Home-screen install
 

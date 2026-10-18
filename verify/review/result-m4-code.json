@@ -1,0 +1,9 @@
+[
+ {
+  "key": "005e560f0cdda686",
+  "where": "proxyLines",
+  "verdict": "ok",
+  "why": "Confirmed: the only difference from the m3 item I passed as ok (2a58d1080dd87dcc) is the deleted stale comment line, and the item matches the live app.html. Re-run in the harness, all six made-up cases give the same marks as before: Warlord on the 2nd character (warlordOn) gives 'Warboss · Warlord · Kunnin’ But Brutal'; with short 'Boss' on the 1st, the 2nd base still reads 'Warboss'; Warlord on the 1st with enhOn on the 2nd gives 'Bigboss · Warlord' and 'Warboss · Kunnin’ But Brutal'; warlordOn on the 2nd with the enhancement on the 1st gives 'Bigboss · Kunnin’ But Brutal' and 'Warboss · Warlord'. Nothing goes beyond the rules.",
+  "fix": null
+ }
+]

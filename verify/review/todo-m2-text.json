@@ -1,0 +1,15 @@
+[
+ {
+  "army": "shooty",
+  "kind": "strat-gist",
+  "where": "Dread Mob · Crazed Rampage",
+  "judgement": {
+   "gist": "Model in your unit destroyed, unit not selected to fight this phase: roll one D6; on a 4+ it stays until your unit has fought or the phase ends…"
+  },
+  "source": {
+   "stratagem": "Crazed Rampage",
+   "text": "WHEN: Fight phase, when an enemy unit targets a friendly **ORKS WALKER** unit (excluding **TITANIC** units).\nTARGET: That **ORKS WALKER** unit.\nEFFECT: When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +3 to the result if your unit has ~~**DEFF DREAD**~~:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
+  },
+  "key": "3b7bfaaa040fe191"
+ }
+]

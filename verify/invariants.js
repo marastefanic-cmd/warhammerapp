@@ -58,6 +58,8 @@ function run(D){
     }
     const named2 = [...kws].filter(k => new RegExp('(^|[^A-Z])' + k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '([^A-Z]|$)').test(boldTarget));
     for(const k of named2) if(!needKws(n).some(x => x.toUpperCase() === k)) F('strat-needs', where, 'TARGET names ' + k + ' but needs does not use it');
+    // "a friendly attached … unit" (Breakin' Heads): only units with a character attached
+    if(/\battached\b/.test(plain(s.when + ' ' + s.target)) !== !!n.attached) F('strat-needs', where, n.attached ? 'needs attached but WHEN/TARGET does not say attached' : 'WHEN/TARGET says attached but needs does not');
   }
 
   // ---- rules and abilities: a phase named in the text is a phase it is listed in ----
@@ -113,19 +115,21 @@ function run(D){
     const lines = u.models.map((m, i) => ({ n:count(m), name:m.replace(/^\d+× /, ''), gear:(u.gear || [])[i] || [] }));
     const total = lines.reduce((t, l) => t + l.n, 0);
     const seen = new Set();
-    // in an attached unit, the first models line is the leader's (who: the leader), the rest the bodyguard's
-    const leaderWho = w => u.leads && w.who && w.who !== u.leads && lines.slice(1).every(l => l.name.replace(/ w\/.*$/, '') !== w.who);
+    // in an attached unit, the first models lines are the characters' (the unit's own name, then `also`), the rest the bodyguard's
+    const chars = u.leads ? [u.name].concat((u.also || []).map(c => c.name)) : [];
+    const body = lines.slice(Math.max(chars.length, 1));
+    const charLine = w => u.leads && w.who && w.who !== u.leads && body.every(l => l.name.replace(/ w\/.*$/, '') !== w.who) ? Math.max(chars.indexOf(w.who), 0) : -1;
     for(const w of [...(u.ranged || []), ...(u.melee || [])]){
       const g = w.group || w.name; if(seen.has(g + '|' + w.who)) continue; seen.add(g + '|' + w.who);
-      const mine = !u.leads ? lines : leaderWho(w) ? lines.slice(0, 1) : lines.slice(1);
+      const mine = !u.leads ? lines : charLine(w) >= 0 ? [lines[charLine(w)]] : body;
       // a gear line that names a weapon twice (the Two-Busta Tankbusta) is two of it per model
       const carriers = mine.reduce((t, l) => t + l.n * l.gear.filter(x => x === g).length, 0);
       if(total > 1 && carriers > 1 && +w.n !== carriers) F('weapon-count', a.id + ' · ' + u.name + ' · ' + g, carriers + ' carried by its models, the app says ×' + (w.n || 1));
       if(total > 1 && carriers === 1 && w.n && +w.n !== 1) F('weapon-count', a.id + ' · ' + u.name + ' · ' + g, 'one model carries it, the app says ×' + w.n);
     }
     if(u.leads){
-      const ok = new Set([u.name, u.short, u.leads, ...lines.map(l => l.name.replace(/ w\/.*$/, ''))].filter(Boolean));
-      for(const w of [...(u.ranged || []), ...(u.melee || [])]) if(!w.who || !ok.has(w.who)) F('weapon-owner', a.id + ' · ' + u.name + ' · ' + (w.group || w.name), 'belongs to "' + (w.who || '?') + '", not the leader or the bodyguard');
+      const ok = new Set([...chars, u.short, u.leads, ...lines.map(l => l.name.replace(/ w\/.*$/, ''))].filter(Boolean));
+      for(const w of [...(u.ranged || []), ...(u.melee || [])]) if(!w.who || !ok.has(w.who)) F('weapon-owner', a.id + ' · ' + u.name + ' · ' + (w.group || w.name), 'belongs to "' + (w.who || '?') + '", not a character or the bodyguard');
     }
   }
   return fails;
