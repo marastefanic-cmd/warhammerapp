@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" href="icon-192.png">
 <style>:root{padding-top:env(safe-area-inset-top,0px)}img{max-width:100%}</style>
 <title>Waaagh Codex</title>
-<script>window.WH_BUILD = 'edf8cdfdf5';</script>
+<script>window.WH_BUILD = 'a793be25d6';</script>
 </head>
 <body>
 <style>
@@ -379,19 +379,21 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 /* ---------- the datasheet as New Recruit draws it: one framed sheet of table sections ----------
    a slate band (points, name), grey header rows that carry the column labels, hairline rows,
    whose a row is after its name in grey ("- Mek"), and the keywords at the bottom as pills */
-:root{ --ds-band:#506276; --ds-band-fg:#f4f6f8; --ds-h2:#3a4656; --ds-h2-fg:#eef1f5; --ds-head:#272b30; --ds-head-fg:#c9ced6 }
+:root{ --ds-band:#506276; --ds-band-fg:#f4f6f8; --ds-h2:#283240; --ds-h2-fg:#eef1f5; --ds-head:#272b30; --ds-head-fg:#c9ced6 }
 /* heading levels: the unit (slate band) > a section box (Ranged Weapons, Melee Weapons, Abilities: its own box, a gap
    above, an angled darker band) > a table header (Models, Unit: grey row) > a part of the unit (Mek, Tankbustas, Whole unit) */
 .ds{margin-top:8px}
-.dbx{border:1px solid var(--line); border-top:0; border-radius:0 0 3px 3px}
+.dbx{--ch:7px; border:1px solid var(--line); border-top:0; border-radius:0 0 3px 3px;
+  clip-path:polygon(var(--ch) 0, calc(100% - var(--ch)) 0, 100% var(--ch), 100% 100%, 0 100%, 0 var(--ch))}   /* the side lines start where the angled corner meets them */
+.ds > .dbx:first-child{--ch:9px}
+.dbx.dft{clip-path:none}
 .ds .dbx + .dbx{margin-top:14px}
 .dbx.dft{border-top:1px solid var(--line); border-radius:3px}
-.dh2, .ds .dbx > .wh.both, .ds .dbx > .ab.pf > summary{margin:0 -1px; background:var(--ds-h2); clip-path:polygon(7px 0, calc(100% - 7px) 0, 100% 7px, 100% 100%, 0 100%, 0 7px)}
+.dh2, .ds .dbx > .wh.both, .ds .dbx > .ab.pf > summary{margin:0 -1px; background:var(--ds-h2); box-shadow:inset 0 2px 0 #6d8299; clip-path:polygon(7px 0, calc(100% - 7px) 0, 100% 7px, 100% 100%, 0 100%, 0 7px)}
 .dh2{display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:2px 8px; padding:8px 11px 6px}
 .ds .dbx > .wh.both{padding:8px 11px 6px}
 .dh2 > span:first-child, .ds .dbx > .wh.both .n, .ds .dbx > .ab.pf > summary b.kh{font:700 14.5px/1.15 var(--f-head); letter-spacing:.07em; text-transform:uppercase; color:var(--ds-h2-fg)}
 .ds .dbx > .wh.both > span:not(.n){color:#d5dbe3}
-.dh2 .lbn .link{color:#d5dbe3}
 .dh2 + .mods, .dh2 + .abl{border-top:0}
 .ds .dbx > .ab.pf{border-top:0}
 .dsh{display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:2px 12px; margin:0 -1px; padding:7px 12px 6px;
@@ -625,8 +627,8 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="verified.js?v=edf8cdfdf5"></script>
-<script src="data.js?v=edf8cdfdf5"></script>
+<script src="verified.js?v=a793be25d6"></script>
+<script src="data.js?v=a793be25d6"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -1568,8 +1570,7 @@ function screenUnit(){
       const psy = m && /hit/i.test(m.note) && [...(u.ranged || []), ...(u.melee || [])].some(w => w.kw.some(k => /^psychic/i.test(k)));
       return '<div class="def dmg"><span class="il">Damaged ' + esc(ab.damaged) + ' W</span>' + linkTo('ability', abilityKey(ab), m ? m.note : 'see the rule') +
         (psy ? ' <span class="from">(' + linkTo('rule', 'Psychic', '[PSYCHIC]') + ' weapons can ignore it)</span>' : '') + '</div>'; }).join('') + '</div></section>';
-  const attached = u.leads ? '<span class="lbn">' + (D.rules['Attached Units'] ? linkTo('rule', 'Attached Units', '“this unit” = the whole attached unit') : '“this unit” = the whole attached unit') + '</span>' : '';
-  const abilities = abil.length ? '<section class="dbx" id="sec-abilities"><div class="dh2"><span>Abilities</span>' + attached + '</div>' + abilityRows(abil, u, { suffix:true }) + '</section>' : '';
+  const abilities = abil.length ? '<section class="dbx" id="sec-abilities"><div class="dh2"><span>Abilities</span></div>' + abilityRows(abil, u, { suffix:true }) + '</section>' : '';
   const rules = allUnitRules(u).filter(r => !weaponKeys.has(ruleKey(r)));
   const ks = kwStars(u);
   const foot = '<section class="dbx dft">' +

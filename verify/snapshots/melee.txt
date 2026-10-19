@@ -1877,7 +1877,6 @@ Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
 STRATAGEMS · WAR HORDE
 Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
 ABILITIES
-“this unit” = the whole attached unit
 Nazdreg’s Know-wotz
 - Nazdreg
 This unit has Deep Strike.
@@ -2385,7 +2384,6 @@ Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
 STRATAGEMS · WAR HORDE
 Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
 ABILITIES
-“this unit” = the whole attached unit
 Sumfin’ to Prove
 - Bigboss
 Fight
@@ -2562,7 +2560,6 @@ Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
 STRATAGEMS · WAR HORDE
 Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
 ABILITIES
-“this unit” = the whole attached unit
 Krushin’ Impetus
 - Warboss in Mega Armour
 Charge
@@ -3231,29 +3228,6 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
-
-######## popup rule:Attached Units · MELEE Melee
-CORE RULE
-
-Attached Units
-
-Some units have the Leader or Support ability listed on their datasheet (see below). Such units are known as leader units and support units respectively. Both of these abilities allow such units to lead other friendly units (known as bodyguard units) to form attached units. An attached unit is a single unit for all rules purposes. Leader and support units can only lead specific bodyguard units, as listed in the Warhammer 40,000 app.
-
-19.04 Abilities in Attached Units: Abilities/rules that affect a single specified model (e.g. from an enhancement or an item of wargear) only ever apply to that model, even while part of an attached unit.
-
-Otherwise, abilities/rules that affect a unit (or models in it) apply to every model in an attached unit, until the source of that ability/rule is destroyed, as shown below.
-
-SOURCE OF ABILITY/RULE: APPLIES TO THE ATTACHED UNIT UNTIL
-
-Leader/support unit: The last model in that leader/support unit is destroyed.*
-Bodyguard unit (e.g. from a datasheet ability): The last model in that bodyguard unit is destroyed.
-A specific model (e.g. the bearer of an enhancement or an item of wargear): That model is destroyed.
-
-* This means leader/support units continue to benefit from their own ‘while this model is leading a unit’ abilities even after their bodyguard unit is destroyed, provided they started the battle in an attached unit.
-
-In all of the above cases, if that last model was destroyed as the result of an attack, the ability it was conferring upon the attached unit applies until the attacking unit has resolved all of its attacks.
-
-Wahapedia FAQ: When does a model’s or unit’s ability in an attached unit apply to all models in that unit? A rule that applies to ‘this/that unit’ or ‘models in this/that unit’ applies to all models in an attached unit. Rules that just apply to one model in an attached unit (for example, a rule that grants a model Feel No Pain or Lone Operative) only apply to that model, not to all models in the attached unit.
 
 ######## popup rule:BLAST 1 · MELEE Melee
 CORE RULE
