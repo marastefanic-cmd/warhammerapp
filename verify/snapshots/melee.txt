@@ -208,7 +208,6 @@ INFANTRY
 2
 Gretchin
 ×10
-×2 units
 6"
 2
 6+
@@ -216,7 +215,7 @@ Gretchin
 8+
 1
 –
-45 ea
+2×45
 MOUNTED
 1
 Deffkoptas

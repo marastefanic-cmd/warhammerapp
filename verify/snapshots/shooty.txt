@@ -160,8 +160,7 @@ Warlord
 100
 Mek
 + Tankbustas
-×2 units
-215 ea
+2×215
 Mek
 6"
 5
@@ -210,7 +209,6 @@ INFANTRY
 3
 Gretchin
 ×10
-×3 units
 6"
 2
 6+
@@ -218,7 +216,7 @@ Gretchin
 8+
 1
 –
-45 ea
+3×45
 MOUNTED
 1
 Deffkoptas

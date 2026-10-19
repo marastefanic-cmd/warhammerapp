@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" href="icon-192.png">
 <style>:root{padding-top:env(safe-area-inset-top,0px)}img{max-width:100%}</style>
 <title>Waaagh Codex</title>
-<script>window.WH_BUILD = '9f15ef79ab';</script>
+<script>window.WH_BUILD = '08fa02cba0';</script>
 </head>
 <body>
 <style>
@@ -186,8 +186,8 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 
 /* ---------- unit list: a roster, as New Recruit's: a band per role, one row per unit with its
    stats on the name's line (an attached unit: one line per model type, under its name), points last ---------- */
-:root{ --uc:minmax(0,1fr) repeat(7, 26px) 40px }
-@media (max-width:359px){ :root{ --uc:minmax(0,1fr) repeat(7, 23px) 34px } }
+:root{ --uc:minmax(0,1fr) repeat(7, 26px) 44px }
+@media (max-width:359px){ :root{ --uc:minmax(0,1fr) repeat(7, 23px) 38px } }
 .uh, .urow{display:grid; grid-template-columns:var(--uc); align-items:baseline}
 .uh{padding:2px 2px 0; font:500 11.5px/1.2 var(--f-body); color:var(--muted); text-align:center}
 .uh .n{text-align:left}
@@ -202,13 +202,12 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .urow.att .un{grid-column:1 / 9}
 .urow .un b{font:700 16.5px/1.2 var(--f-head); letter-spacing:.02em}
 .urow .un .x{margin-left:0; padding:1px 5px 0; font-size:13px}
-.urow .un .lead{margin:0; font:700 16.5px/1.2 var(--f-head); letter-spacing:.02em; color:var(--fg2)}
+.urow .un .lead{margin:0; font:700 16.5px/1.2 var(--f-head); letter-spacing:.02em; color:var(--fg)}
 .urow .utg{flex-basis:100%; display:flex; flex-wrap:wrap; gap:0 8px}
 .urow .utg .tg{white-space:normal; font-size:12.5px}
 .urow .meta{flex-basis:100%; font-size:12.5px; color:var(--muted); line-height:1.3}
 .urow .sc{font:700 15.5px/1.2 var(--f-head); text-align:center; font-variant-numeric:tabular-nums; min-width:0}
 .urow .pts{grid-column:9; font:600 14.5px/1.2 var(--f-head); color:var(--muted); font-variant-numeric:tabular-nums; white-space:nowrap}
-.urow .pts small{font-size:11px}
 .urow .sn{grid-column:1; display:block; padding-left:12px; font:600 14px/1.25 var(--f-head); letter-spacing:.01em; color:var(--fg2); min-width:0}
 .urow .sn .x{margin-left:5px; padding:0 4px; font-size:12px; color:var(--fg2)}
 .urow.att .sc{color:var(--fg2)}
@@ -611,8 +610,8 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="verified.js?v=9f15ef79ab"></script>
-<script src="data.js?v=9f15ef79ab"></script>
+<script src="verified.js?v=08fa02cba0"></script>
+<script src="data.js?v=08fa02cba0"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -1191,10 +1190,10 @@ function screenUnits(){
     const n = one && one[1] !== '1' ? '<span class="x">×' + one[1] + '</span>' : '';
     const lead = u.leads ? '<span class="lead">+ ' + esc(partsAfter(u).join(' + ')) + '</span>' : '';   // an attached unit names its other parts as loud as its leader
     const subs = u.leads && u.stats.length > 1;   // an attached unit: one line per model type, under its name
-    const tags = nameTags(u, { noLeads:true });
+    const tags = nameTags(u, { noLeads:true, noCopies:true });   // how many of it: on the points ("2×215")
     return '<button class="urow' + (subs ? ' att' : '') + '" data-unit="' + esc(u.id) + '"><span class="un"><b>' + esc(u.name) + '</b>' + n + lead +
       (tags ? '<span class="utg">' + tags + '</span>' : '') + (!one && !u.leads ? '<span class="meta">' + esc(u.models.join(', ')) + '</span>' : '') + '</span>' +
-      (subs ? '' : statCells(u.stats[0])) + '<span class="pts">' + esc(u.pts) + (u.copies > 1 ? '<small> ea</small>' : '') + '</span>' +
+      (subs ? '' : statCells(u.stats[0])) + '<span class="pts">' + (u.copies > 1 ? esc(u.copies) + '×' : '') + esc(u.pts) + '</span>' +
       (subs ? u.stats.map(s => '<span class="sn">' + esc(s.name).replace(/ ×(\d+)$/, '<span class="x">×$1</span>') + '</span>' + statCells(s)).join('') : '') + '</button>';
   }).join('') + '</div>').join('');
 }
