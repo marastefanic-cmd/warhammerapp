@@ -14,7 +14,7 @@
 ===================================================================== */
 window.WH_DATA = (function(){
 
-const VERSION = '2026-10-19.12';
+const VERSION = '2026-10-19.13';
 
 /* ---------------- core rules (11th edition) ---------------- */
 // Weapon keyword and core ability text: the official Core Rules PDF (11th edition), BSData and the
@@ -245,7 +245,7 @@ const FACTIONS = {
             target:'That **ORKS INFANTRY** unit.',
             effect:'Your unit’s ranged attacks that target a unit (excluding **MONSTER**/**VEHICLE** units) have +1 to **wound rolls**.' },
           { id:'glowin-dakka', gist:'Your unit’s ranged attacks against a unit within 9" have +1 AP.', name:'Glowin’ Dakka', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Faction: Orks','Infantry'] },
-            mod:{ kind:'ranged', when:'Your Shooting phase, target within 9"', note:'+1 AP' },
+            mod:{ kind:'ranged', when:'Your Shooting phase, vs targets within 9"', note:'+1 AP' },
             when:'Your Shooting phase, when a friendly **ORKS INFANTRY** unit is **selected to shoot**.',
             target:'That **ORKS INFANTRY** unit.',
             effect:'Your unit’s ranged attacks that target a unit within 9" have +1 **AP**.' },

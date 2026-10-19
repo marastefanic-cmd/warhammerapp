@@ -1,0 +1,19 @@
+[
+ {
+  "army": "shooty",
+  "kind": "strat-mod",
+  "where": "Shoota Boyz · Glowin’ Dakka",
+  "judgement": {
+   "mod": {
+    "kind": "ranged",
+    "when": "Your Shooting phase, vs targets within 9\"",
+    "note": "+1 AP"
+   }
+  },
+  "source": {
+   "stratagem": "Glowin’ Dakka",
+   "text": "WHEN: Your Shooting phase, when a friendly **ORKS INFANTRY** unit is **selected to shoot**.\nTARGET: That **ORKS INFANTRY** unit.\nEFFECT: Your unit’s ranged attacks that target a unit within 9\" have +1 **AP**."
+  },
+  "key": "314bb809dea94367"
+ }
+]

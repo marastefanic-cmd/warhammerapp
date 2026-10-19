@@ -350,7 +350,7 @@ BLAST 1, IGNORES COVER, ASSAULT, ANTI-INFANTRY 4+, DEVASTATING WOUNDS, SUPA-HAZA
 Riled up: [SUSTAINED HITS 1] (More Dakka) · +3" range (Dakka! Dakka! Dakka!)
 STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
 1CP +1 to wound rolls vs non-MONSTER/VEHICLE targets (Kustom Dakka)
-1CP +1 AP, target within 9" (Glowin’ Dakka)
+1CP +1 AP vs targets within 9" (Glowin’ Dakka)
 1CP [SUSTAINED HITS 1] (Never Enough Dakka)
 Warboss
 Warlord
@@ -366,7 +366,7 @@ Boss’ Ammo Runt used (your Shooting phase, when selected to shoot): +1 to hit 
 Riled up: +3" range (Dakka! Dakka! Dakka!)
 STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
 1CP +1 to wound rolls vs non-MONSTER/VEHICLE targets (Kustom Dakka)
-1CP +1 AP, target within 9" (Glowin’ Dakka)
+1CP +1 AP vs targets within 9" (Glowin’ Dakka)
 1CP [SUSTAINED HITS 1] (Never Enough Dakka)
 Mek
 + Tankbustas
@@ -410,7 +410,7 @@ Riled up: +3" range (Dakka! Dakka! Dakka!)
 Your Shooting phase, this unit or the target within range of an objective: can re-roll hit rolls of 1 (Wreckin’ and Lootin’)
 STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
 1CP +1 to wound rolls vs non-MONSTER/VEHICLE targets (Kustom Dakka)
-1CP +1 AP, target within 9" (Glowin’ Dakka)
+1CP +1 AP vs targets within 9" (Glowin’ Dakka)
 1CP [SUSTAINED HITS 1] (Never Enough Dakka)
 Mek
 + Flash Gitz
@@ -454,7 +454,7 @@ Your Shooting phase, this unit or the target within range of an objective: +1 AP
 Riled up: +3" range (Dakka! Dakka! Dakka!)
 STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
 1CP +1 to wound rolls vs non-MONSTER/VEHICLE targets (Kustom Dakka)
-1CP +1 AP, target within 9" (Glowin’ Dakka)
+1CP +1 AP vs targets within 9" (Glowin’ Dakka)
 1CP [SUSTAINED HITS 1] (Never Enough Dakka)
 Gretchin
 ×3 units
@@ -469,7 +469,7 @@ CLOSE-QUARTERS, ASSAULT
 Riled up: +3" range (Dakka! Dakka! Dakka!)
 STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
 1CP +1 to wound rolls vs non-MONSTER/VEHICLE targets (Kustom Dakka)
-1CP +1 AP, target within 9" (Glowin’ Dakka)
+1CP +1 AP vs targets within 9" (Glowin’ Dakka)
 1CP [SUSTAINED HITS 1] (Never Enough Dakka)
 Deffkoptas
 Rokkit Launcha×3
@@ -2051,7 +2051,7 @@ BLAST 1, IGNORES COVER, ASSAULT, ANTI-INFANTRY 4+, DEVASTATING WOUNDS, SUPA-HAZA
 Riled up: [SUSTAINED HITS 1] (More Dakka) · +3" range (Dakka! Dakka! Dakka!)
 STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
 1CP +1 to wound rolls vs non-MONSTER/VEHICLE targets (Kustom Dakka)
-1CP +1 AP, target within 9" (Glowin’ Dakka)
+1CP +1 AP vs targets within 9" (Glowin’ Dakka)
 1CP [SUSTAINED HITS 1] (Never Enough Dakka)
 MELEE WEAPONS
 A
@@ -2159,7 +2159,7 @@ Boss’ Ammo Runt used (your Shooting phase, when selected to shoot): +1 to hit 
 Riled up: +3" range (Dakka! Dakka! Dakka!)
 STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
 1CP +1 to wound rolls vs non-MONSTER/VEHICLE targets (Kustom Dakka)
-1CP +1 AP, target within 9" (Glowin’ Dakka)
+1CP +1 AP vs targets within 9" (Glowin’ Dakka)
 1CP [SUSTAINED HITS 1] (Never Enough Dakka)
 MELEE WEAPONS
 A
@@ -2323,7 +2323,7 @@ Riled up: +3" range (Dakka! Dakka! Dakka!)
 Your Shooting phase, this unit or the target within range of an objective: can re-roll hit rolls of 1 (Wreckin’ and Lootin’)
 STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
 1CP +1 to wound rolls vs non-MONSTER/VEHICLE targets (Kustom Dakka)
-1CP +1 AP, target within 9" (Glowin’ Dakka)
+1CP +1 AP vs targets within 9" (Glowin’ Dakka)
 1CP [SUSTAINED HITS 1] (Never Enough Dakka)
 MELEE WEAPONS
 A
@@ -2515,7 +2515,7 @@ Your Shooting phase, this unit or the target within range of an objective: +1 AP
 Riled up: +3" range (Dakka! Dakka! Dakka!)
 STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
 1CP +1 to wound rolls vs non-MONSTER/VEHICLE targets (Kustom Dakka)
-1CP +1 AP, target within 9" (Glowin’ Dakka)
+1CP +1 AP vs targets within 9" (Glowin’ Dakka)
 1CP [SUSTAINED HITS 1] (Never Enough Dakka)
 MELEE WEAPONS
 A
@@ -2637,7 +2637,7 @@ CLOSE-QUARTERS, ASSAULT
 Riled up: +3" range (Dakka! Dakka! Dakka!)
 STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
 1CP +1 to wound rolls vs non-MONSTER/VEHICLE targets (Kustom Dakka)
-1CP +1 AP, target within 9" (Glowin’ Dakka)
+1CP +1 AP vs targets within 9" (Glowin’ Dakka)
 1CP [SUSTAINED HITS 1] (Never Enough Dakka)
 MELEE WEAPONS
 A
