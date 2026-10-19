@@ -43,9 +43,9 @@
   --pill-line:#3e3e3e;   /* the ring of a keyword pill */
   --ok:#5fc27a;          /* the "Checked" tick */
   /* datasheet headings: the unit's band (also the role bands of the Units list), a section's band
-     with its top line and column labels, a table's header row */
+     with its column labels, a table's header row */
   --ds-band:#4c5056; --ds-band-fg:#f3f3f3;
-  --ds-h2:#2c2e32; --ds-h2-fg:#f1f1f1; --ds-h2-line:var(--accent); --ds-h2-col:#cfcfcf;
+  --ds-h2:#2c2e32; --ds-h2-fg:#f1f1f1; --ds-h2-col:#cfcfcf;
   --ds-head:#262626; --ds-head-fg:#c4c4c4;
   /* other colour schemes (picked on the home screen) override these: THEMES in the script */
   --shadow:0 10px 30px rgba(0,0,0,.5);
@@ -378,7 +378,7 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 /* ---------- the datasheet as New Recruit draws it: one framed sheet of table sections ----------
    a slate band (points, name), grey header rows that carry the column labels, hairline rows,
    whose a row is after its name in grey ("- Mek"), and the keywords at the bottom as pills */
-/* heading levels: the unit (slate band) > a section box (Ranged Weapons, Melee Weapons, Abilities: its own box, a gap
+/* heading levels: the unit (its band) > a section box (Ranged Weapons, Melee Weapons, Abilities: its own box, a gap
    above, an angled darker band) > a table header (Models, Unit: grey row) > a part of the unit (Mek, Tankbustas, Whole unit) */
 .ds{margin-top:8px}
 .dbx{--ch:7px; border:1px solid var(--line); border-top:0; border-radius:0 0 3px 3px;
@@ -387,7 +387,7 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .dbx.dft{clip-path:none}
 .ds .dbx + .dbx{margin-top:14px}
 .dbx.dft{border-top:1px solid var(--line); border-radius:3px}
-.dh2, .ds .dbx > .wh.both, .ds .dbx > .ab.pf > summary{margin:0 -1px; background:var(--ds-h2); box-shadow:inset 0 2px 0 var(--ds-h2-line); clip-path:polygon(7px 0, calc(100% - 7px) 0, 100% 7px, 100% 100%, 0 100%, 0 7px)}
+.dh2, .ds .dbx > .wh.both, .ds .dbx > .ab.pf > summary{margin:0 -1px; background:var(--ds-h2); clip-path:polygon(7px 0, calc(100% - 7px) 0, 100% 7px, 100% 100%, 0 100%, 0 7px)}
 .dh2{display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:2px 8px; padding:8px 11px 6px}
 .ds .dbx > .wh.both{padding:8px 11px 6px}
 .dh2 > span:first-child, .ds .dbx > .wh.both .n, .ds .dbx > .ab.pf > summary b.kh{font:700 14.5px/1.15 var(--f-head); letter-spacing:.07em; text-transform:uppercase; color:var(--ds-h2-fg)}
@@ -665,26 +665,26 @@ try { localStorage.removeItem('wh-layout'); } catch(e){}   // left by an earlier
    Gunmetal is the stylesheet's own look; the others replace some of its colours. The first group keeps the
    dark + orange app and changes the heading bands; the second changes the whole app. Saved on this phone. */
 const THEME_VAR = { bg:'--bg', surface:'--surface', surface2:'--surface2', linec:'--line', fg:'--fg', fg2:'--fg2', muted:'--muted', accent:'--accent', accentink:'--accent-ink',
-  xline:'--count-line', pline:'--pill-line', band:'--ds-band', bandfg:'--ds-band-fg', h2:'--ds-h2', h2fg:'--ds-h2-fg', line:'--ds-h2-line', col:'--ds-h2-col', head:'--ds-head', headfg:'--ds-head-fg' };
+  xline:'--count-line', pline:'--pill-line', band:'--ds-band', bandfg:'--ds-band-fg', h2:'--ds-h2', h2fg:'--ds-h2-fg', col:'--ds-h2-col', head:'--ds-head', headfg:'--ds-head-fg' };
 const THEME_DEF = { bg:'#161616', accent:'#ff8a2a', band:'#4c5056', h2:'#2c2e32' };   // Gunmetal, for the swatches
 const THEMES = [
   { id:'gunmetal', name:'Gunmetal', v:{} },
-  { id:'slate', name:'Slate & navy', v:{ band:'#506276', bandfg:'#f4f6f8', h2:'#283240', h2fg:'#eef1f5', line:'#6d8299', col:'#d5dbe3', head:'#272b30', headfg:'#c9ced6' } },
-  { id:'rust', name:'Rust & iron', v:{ band:'#8a3f1d', bandfg:'#fbeee3', h2:'#3b2a21', h2fg:'#f3e6dc', line:'#c0612e', col:'#d9c6b8', head:'#2a2522', headfg:'#cbbfb6' } },
-  { id:'copper', name:'Copper', v:{ band:'#8c4a25', bandfg:'#fff1e6', h2:'#2e1c12', h2fg:'#f7e6d8', line:'#e07a33', col:'#dcc0aa', head:'#272220', headfg:'#c9bdb3' } },
-  { id:'burnt', name:'Burnt orange', v:{ band:'#bf571b', bandfg:'#fff3ea', h2:'#3d1f0e', h2fg:'#ffe9d8', line:'#ff8a2a', col:'#e6c2a6', head:'#2a2420', headfg:'#cdbfb3' } },
-  { id:'bold', name:'Bold orange', v:{ band:'#ff8a2a', bandfg:'#1c0d00', h2:'#4a230c', h2fg:'#ffe8d4', line:'#ff8a2a', col:'#f0c9a8', head:'#2a2420', headfg:'#cdbfb3' } },
-  { id:'bone', name:'Bone', v:{ band:'#ddd3c2', bandfg:'#1d1a16', h2:'#3a352e', h2fg:'#efe8dc', line:'#ddd3c2', col:'#d3cabd', head:'#282624', headfg:'#c9c2b8' } },
-  { id:'green', name:'Ork green', v:{ band:'#4a6430', bandfg:'#f1f5ea', h2:'#26321c', h2fg:'#e9f0df', line:'#86a856', col:'#c9d4bb', head:'#25281f', headfg:'#c4cab9' } },
-  { id:'charcoal', name:'Charcoal', v:{ band:'#323232', bandfg:'#ff9a45', h2:'#232323', h2fg:'#f0f0f0', line:'#ff8a2a', col:'#c9c9c9', head:'#2a2a2a', headfg:'#c4c4c4' } },
+  { id:'slate', name:'Slate & navy', v:{ band:'#506276', bandfg:'#f4f6f8', h2:'#283240', h2fg:'#eef1f5', col:'#d5dbe3', head:'#272b30', headfg:'#c9ced6' } },
+  { id:'rust', name:'Rust & iron', v:{ band:'#8a3f1d', bandfg:'#fbeee3', h2:'#3b2a21', h2fg:'#f3e6dc', col:'#d9c6b8', head:'#2a2522', headfg:'#cbbfb6' } },
+  { id:'copper', name:'Copper', v:{ band:'#8c4a25', bandfg:'#fff1e6', h2:'#2e1c12', h2fg:'#f7e6d8', col:'#dcc0aa', head:'#272220', headfg:'#c9bdb3' } },
+  { id:'burnt', name:'Burnt orange', v:{ band:'#bf571b', bandfg:'#fff3ea', h2:'#3d1f0e', h2fg:'#ffe9d8', col:'#e6c2a6', head:'#2a2420', headfg:'#cdbfb3' } },
+  { id:'bold', name:'Bold orange', v:{ band:'#ff8a2a', bandfg:'#1c0d00', h2:'#4a230c', h2fg:'#ffe8d4', col:'#f0c9a8', head:'#2a2420', headfg:'#cdbfb3' } },
+  { id:'bone', name:'Bone', v:{ band:'#ddd3c2', bandfg:'#1d1a16', h2:'#3a352e', h2fg:'#efe8dc', col:'#d3cabd', head:'#282624', headfg:'#c9c2b8' } },
+  { id:'green', name:'Ork green', v:{ band:'#4a6430', bandfg:'#f1f5ea', h2:'#26321c', h2fg:'#e9f0df', col:'#c9d4bb', head:'#25281f', headfg:'#c4cab9' } },
+  { id:'charcoal', name:'Charcoal', v:{ band:'#323232', bandfg:'#ff9a45', h2:'#232323', h2fg:'#f0f0f0', col:'#c9c9c9', head:'#2a2a2a', headfg:'#c4c4c4' } },
   { id:'paper', name:'New Recruit paper', whole:true, light:true, v:{ bg:'#f2f2ef', surface:'#ffffff', surface2:'#e6e6e2', linec:'#d2d2cd', fg:'#1b1b1b', fg2:'#3b3b3b', muted:'#6c6c6c', accent:'#2a67b0', accentink:'#ffffff', xline:'#9a9a9a', pline:'#c9c9c4',
-    band:'#6b7c90', bandfg:'#ffffff', h2:'#3c4857', h2fg:'#ffffff', line:'#8da0b5', col:'#dfe5ec', head:'#e2e2df', headfg:'#333333' } },
+    band:'#6b7c90', bandfg:'#ffffff', h2:'#3c4857', h2fg:'#ffffff', col:'#dfe5ec', head:'#e2e2df', headfg:'#333333' } },
   { id:'waaagh', name:'Waaagh! green', whole:true, v:{ bg:'#121410', surface:'#1a1d16', surface2:'#252a20', linec:'#343a2d', fg:'#ecf0e4', fg2:'#c5ccb9', muted:'#909a85', accent:'#a8d43c', accentink:'#142000', xline:'#5a6350', pline:'#3c4434',
-    band:'#4d6a2c', bandfg:'#f3f7ec', h2:'#263219', h2fg:'#eef3e5', line:'#a8d43c', col:'#ccd6bd', head:'#22261d', headfg:'#c5ccb9' } },
+    band:'#4d6a2c', bandfg:'#f3f7ec', h2:'#263219', h2fg:'#eef3e5', col:'#ccd6bd', head:'#22261d', headfg:'#c5ccb9' } },
   { id:'brass', name:'Brass & bone', whole:true, v:{ bg:'#15120e', surface:'#1f1b15', surface2:'#2a241c', linec:'#3b3329', fg:'#f2eadd', fg2:'#d0c4b2', muted:'#9b8f7d', accent:'#e2ab3f', accentink:'#1f1400', xline:'#6b5f4e', pline:'#463c30',
-    band:'#6e522c', bandfg:'#fbf2e2', h2:'#33271a', h2fg:'#f5ead8', line:'#e2ab3f', col:'#dccdb6', head:'#272119', headfg:'#cdbfab' } },
+    band:'#6e522c', bandfg:'#fbf2e2', h2:'#33271a', h2fg:'#f5ead8', col:'#dccdb6', head:'#272119', headfg:'#cdbfab' } },
   { id:'blood', name:'Blood & steel', whole:true, v:{ bg:'#131315', surface:'#1c1c1f', surface2:'#27272b', linec:'#37373c', fg:'#eeeef0', fg2:'#c7c7cc', muted:'#9797a1', accent:'#ec4b3c', accentink:'#ffffff', xline:'#5c5c64', pline:'#3f3f45',
-    band:'#8e2b22', bandfg:'#fff4f2', h2:'#2f1d1d', h2fg:'#f6eaea', line:'#ec4b3c', col:'#d6c8c8', head:'#242428', headfg:'#c7c7cc' } },
+    band:'#8e2b22', bandfg:'#fff4f2', h2:'#2f1d1d', h2fg:'#f6eaea', col:'#d6c8c8', head:'#242428', headfg:'#c7c7cc' } },
 ];
 const themeNow = () => THEMES.find(t => t.id === store.get('wh-theme')) || THEMES[0];
 function applyTheme(){
@@ -696,12 +696,12 @@ function applyTheme(){
   if(m) m.setAttribute('content', t.v.bg || THEME_DEF.bg);   // the phone's status bar
 }
 applyTheme();
-// the picker: a swatch per scheme (background, unit band, section band with its line, the accent)
+// the picker: a swatch per scheme (background, unit band, section band, the accent)
 function themePicker(){
   const now = themeNow();
-  const sw = t => { const c = k => t.v[k] || THEME_DEF[k], line = t.v.line || c('accent');
+  const sw = t => { const c = k => t.v[k] || THEME_DEF[k];
     return '<button class="thm' + (t === now ? ' on' : '') + '" data-theme-pick="' + t.id + '" aria-pressed="' + (t === now) + '"><span class="sw" style="background:' + c('bg') + '">' +
-      '<i style="background:' + c('band') + '"></i><i style="background:' + c('h2') + '; box-shadow:inset 0 2px 0 ' + line + '"></i><em style="background:' + c('accent') + '"></em></span>' +
+      '<i style="background:' + c('band') + '"></i><i style="background:' + c('h2') + '"></i><em style="background:' + c('accent') + '"></em></span>' +
       '<span class="tn">' + esc(t.name) + '</span></button>'; };
   return '<div class="sec-h"><h2>Colours</h2></div>' +
     '<p class="thg">Headings · the app stays dark + orange</p><div class="thms">' + THEMES.filter(t => !t.whole).map(sw).join('') + '</div>' +
