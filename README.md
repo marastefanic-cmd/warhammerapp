@@ -6,11 +6,13 @@ A phone-first Warhammer 40,000 (11th edition, matched play) reference for the ow
 searchable, and adds no rule interpretations of its own. The app opens on a picker of the lists; each
 list opens on its Units, and each tab remembers where it was, per list.
 
-Tabs: **Pre-game** (warlord, enhancements, reserves, uses per battle; Bases & proxies) ·
-**Units** (one datasheet per unit) · **Stratagems** (every stratagem of the list's detachments and
-the core ones, each with a one-line gist, its timing and which of your units can use it) ·
-**Rules** (army and detachment rules; core rules folded at the bottom) · **Find** (search, plus the
-Ranged, Melee and Abilities overviews).
+Tabs: **Overview** (warlord, enhancements, detachments, the army rules, units that can Deep Strike,
+uses per battle; Bases & proxies) · **Units** (the roster, stats on each unit's line; one datasheet per
+unit, laid out like New Recruit's: models, stats with bases, weapons, abilities, rules, stratagems,
+keywords) · **Stratagems** (every stratagem of the list's detachments and the core ones, each with a
+one-line gist, its timing and which of your units can use it) · **Rules** (army and detachment rules,
+and which unit has which core rule, such as Lone Operative, quoting the ability when it is conditional;
+general rules are left out) · **Find** (search, plus the Ranged, Melee and Abilities overviews).
 
 Older lists (Cooking, Hurrdurr, oioioi, Nidzillas, Purge Freeblade) left the app on 17 Oct 2026; they
 are in the git history, and `import-nr.js --reuse` can take their signed-off notes for the same datasheets.

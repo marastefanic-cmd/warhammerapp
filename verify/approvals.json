@@ -455,12 +455,6 @@
   "at": "2026-10-17",
   "why": "New Recruit prints “Fix Dat Armour Up (Once per battle, per unit)”; the text’s single Grot Oiler token agrees."
  },
- "391d1ffcd14a443d": {
-  "verdict": "ok",
-  "by": "review:literal",
-  "at": "2026-10-17",
-  "why": "07: “START OF BATTLE ROUND / PLAYER TURNS / END OF BATTLE ROUND … the mission you are playing will tell you which player this is.” 07.02: Start of Turn step, five phases, End of Turn step. 08: “Both players gain 1 Command Point (CP)”, and “one battle-shock roll … for each unit in their army that … is currently battle-shocked … is at, or below, half-strength”. 05.01/05.02 (dice checked on PDF p18: 1, 6, 2+ to 6+). 05.04: the InSv row has no AP, and only the ‘Save and AP’ row says “After modifying the result by the attacking weapon’s AP”. The allocation note now copies all three 05.03 bullets, including “non-CHARACTER” and the wounded-CHARACTER-group order."
- },
  "3969cfd0e77f8719": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -736,6 +730,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "Dread Mob enhancement taken by this model (NR options \"Cybork Boosta\")."
+ },
+ "5cc536812372bb3b": {
+  "verdict": "ok",
+  "by": "review:o1-code",
+  "at": "2026-10-19",
+  "why": "Checked the live function (identical to the todo code), its helpers (everyModel/unitRules/allUnitRules/inertRule, ruleKey/ruleFor, unitLabel/charsOf/unitLink/shortName, armyRuleRows/ruleRow/shortWhen, showRule) and the git diff against HEAD, and rendered both lists with Playwright. (1) Deep Strike row. The test is every model: unitRules(u) has a label whose ruleKey is 'Deep Strike' and u.partialRules does not name it. That matches D.rules['Deep Strike']: 'if every model in this unit has this ability'. Rendered shooty: 'Wazdakka Gutsmek 200 pts / Deffkoptas 85 pts / All of them: 285 pts'. Rendered melee: 'Nazdreg + Meganobz 405 pts / Deffkoptas 85 pts / All of them: 490 pts'. Nazdreg's u.rules carry 'Deep Strike' from Nazdreg’s Know-wotz ('This unit has Deep Strike'), so it covers the whole attached unit. u.pts is the whole unit, enhancements included (165 + Meganobz 240). No other unit in either list has it. Wazdakka's Shokk Attack Engine and the Deffkoptas' Aerial Manoover are in-battle reserves rules, not Deep Strike, and are rightly not counted. Attached units are labelled with unitLabel ('Nazdreg + Meganobz'; a two-character unit gives 'Bigboss + Warboss + Breaka Boyz'), each linked to its own datasheet. Injected cases. Deffkoptas ×2 gives '85 pts each, ×2' and a total of 370 (200 + 2×85). Mek + Tankbustas ×2 with Deep Strike gives '215 pts each, ×2', counted twice in the total. partialRules:['Deep Strike'] on Nazdreg drops that unit. An enhanced Big Mek shows 'Big Mek · Dreadherder 190 pts'. No unit is listed twice. (2) Detachment links. Each name carries data-rule = d.rule.name. ruleFor matches detachment rule names (faction aliases first: only /^riled up/; then army rules; then detachments), and showRule opens it. Clicked in the page: Dread Mob → 'Dread Mob detachment rule · Try Dat Button!' with its table. Shoota Boyz → Dakka! Dakka! Dakka!. Wreckas → Wreckin’ and Lootin’ (the curly apostrophe resolves). War Horde → Get Stuck In. The DP and Disposition are unchanged, and a detachment with no rule stays as plain text. Army rules section. armyRuleRows has the same logic as the old Rules-tab code it was taken from. It shows Waaagh!, War Cry ('Once per battle, per army · Command') and Da Boss, each folding open to its full data text and errata note. None of them is inert, and there are no ticks there, so the War Cry ticks under Uses per battle are not duplicated. Da Boss's folded label reads 'Command' (shortWhen ignores r.at), while its text and the screen's 'Every round' line say start of the battle round. Earlier reviews record filing 'start of the battle round' under Command as the app's settled convention, so I did not count it. (3) The removed Reserves text lost nothing list-specific. Its content (excluding FORTIFICATIONS, the 50% cap including embarked units, arrival from round 2, destroyed at the end of round 3 with the TRANSPORT and repositioned exceptions) is all general core rule (Strategic Reserves 20.01/20.03). The round 2–3 timing is still in the Deep Strike rule's app note, one tap away from each unit's Rules line. No unit, enhancement or detachment rule in either list changes the reserves limits (Kaptin’s Hat would, but it is not taken). Neither list has TRANSPORTs or Scouts, so those rows are rightly empty. (4) The other rows still match the data. Warlord: Warboss / Ghazghkull Thraka; an injected warlordOn gives 'Warboss (Bigboss + Warboss + Breaka Boyz)'. Enhancements: enhOn gives 'Kunnin’ But Brutal 20 pts on Warboss', and the upgrade gives 'Supa-snazz Dakka (upgrade) 25 pts on Flash Gitz'. Attached: 'Mek supports Tankbustas ×2 units', 'Bigboss supports / Warboss leads Breaka Boyz'. Every round: Da Boss. Uses per battle: War Cry, Fix Dat Armour Up, Boss’ Ammo Runt, Bomb Squig Unit 1/Unit 2 (melee: Makari per army, Boss’ Ammo Runt, Bomb Squig), 1CP Insane Bravery. Points are 2000/2000. Optional, not defects, and not reachable with either list. 'All of them' shows only when there is more than one entry, so a single Deep Strike entry with copies > 1 has no total (each figure shown is still right). Two identical attached units would get identical labels, because unitLabel has no '(1 of 2)'. The row title 'Deep Strike' is no longer a link to the rule."
  },
  "5d16a79082d21fc6": {
   "verdict": "ok",
@@ -1522,12 +1522,6 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "“WHEN: Your Shooting phase, when a friendly ORKS INFANTRY unit is selected to shoot.” Shooting."
- },
- "b47179ca6c56eba7": {
-  "verdict": "ok",
-  "by": "review:m3-code",
-  "at": "2026-10-18",
-  "why": "The Warlord row with warlordOn set reads 'Warboss (Bigboss + Warboss + Breaka Boyz)' (made-up), which is right. The Reserves line now says '(not FORTIFICATIONS)', matching 20.01 '(excluding FORTIFICATIONS)'. 'supports' is now a source attribution: New Recruit prints '• Supporting: Breaka Boyz'. The Attached and Enhancements rows are unchanged and right; with short 'Boss' on the first character they give 'Boss supports Breaka Boyz', 'Warboss leads Breaka Boyz', and 'Kunnin’ But Brutal 20 pts on Warboss'. The rest is as in my last review. bug, still there in one case: when there is no warlordOn (the Warlord is the first character) the row falls back to unitLink, and unitLink's label comes from shortName = (u.short || u.name) + ' · ' + u.enhancement. A two-character Warlord unit with enhOn then reads 'Bigboss · Kunnin’ But Brutal', putting the enhancement next to the character enhOn says doesn't have it. That's latent here (the Melee Warlord is Ghazghkull), and the same thing can happen in the Deep Strike, Scouts and Transports rows. The root is shortName, which is outside this item, and it is live elsewhere: unitLink on the real Bigboss + Warboss + Breaka Boyz renders 'Bigboss · Kunnin’ But Brutal', e.g. in Breakin' Heads' 'Used by'."
  },
  "b4f27a3cfb9ea2b6": {
   "verdict": "ok",

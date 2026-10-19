@@ -4,7 +4,7 @@
 // too slow (a weak signal at the table). Fonts never change, so they come from the cache.
 // VERSION is stamped by build.js: a new stamp makes the browser install this worker
 // again and drop the old cache.
-const VERSION = 'ef90c0ad60';
+const VERSION = '9f15ef79ab';
 const CACHE = 'waaagh-codex-' + VERSION;
 const FONTS = ['fonts/barlow-400-ext.woff2', 'fonts/barlow-400.woff2', 'fonts/barlow-400i-ext.woff2', 'fonts/barlow-400i.woff2', 'fonts/barlow-500-ext.woff2', 'fonts/barlow-500.woff2', 'fonts/barlow-600-ext.woff2', 'fonts/barlow-600.woff2', 'fonts/barlow-700-ext.woff2', 'fonts/barlow-700.woff2', 'fonts/barlow-condensed-500-ext.woff2', 'fonts/barlow-condensed-500.woff2', 'fonts/barlow-condensed-600-ext.woff2', 'fonts/barlow-condensed-600.woff2', 'fonts/barlow-condensed-700-ext.woff2', 'fonts/barlow-condensed-700.woff2'];   // shipped with the app (fonts/OFL.txt)
 const CORE = ['./', 'index.html', 'data.js', 'verified.js', 'manifest.webmanifest', 'icon-192.png', 'icon-180.png', 'icon-512.png', 'icon-maskable.png'].concat(FONTS);

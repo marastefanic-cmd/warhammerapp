@@ -23,7 +23,7 @@
 </style>
 <style>
 /* Waaagh Codex: a drill-down reference sheet for one army list.
-   Tabs: Pre-game | Units | Stratagems | Rules | Find (search + menu: Ranged, Melee, Abilities,
+   Tabs: Overview | Units | Stratagems | Rules | Find (search + menu: Ranged, Melee, Abilities,
    Bases); Units -> unit datasheet, which fits one screen with the long text folded away. A sticky
    top bar (back, centred title, search) can carry column labels; each tab remembers its screen. One dark graphite look; orange marks what you can tap
    and what matters. */
@@ -169,21 +169,36 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .res mark{background:none; color:var(--accent)}
 .more{width:100%; min-height:40px; text-align:left; padding:0 2px; font:700 13px var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--accent)}
 
-/* ---------- unit list: a roster table, column labels once in the top bar ---------- */
-.urow{display:grid; grid-template-columns:minmax(0,1fr) auto; gap:0 10px; align-items:baseline; width:100%; text-align:left; padding:6px 2px 5px; border-bottom:1px solid var(--line)}
-.urow .un{display:flex; flex-wrap:wrap; align-items:baseline; gap:2px 8px; min-width:0}
-.urow .un b{font:700 16.5px/1.15 var(--f-head); letter-spacing:.02em}
-.urow .un .x{margin-left:0}
+/* ---------- unit list: a roster, as New Recruit's: a band per role, one row per unit with its
+   stats on the name's line (an attached unit: one line per model type, under its name), points last ---------- */
+:root{ --uc:minmax(0,1fr) repeat(7, 26px) 40px }
+@media (max-width:359px){ :root{ --uc:minmax(0,1fr) repeat(7, 23px) 34px } }
+.uh, .urow{display:grid; grid-template-columns:var(--uc); align-items:baseline}
+.uh{padding:2px 2px 0; font:500 11.5px/1.2 var(--f-body); color:var(--muted); text-align:center}
+.uh .n{text-align:left}
+.uh .p, .urow .pts{text-align:right}
+.rgh{display:flex; justify-content:space-between; align-items:baseline; margin:16px 0 0; padding:6px 10px 5px; background:var(--ds-band); color:var(--ds-band-fg);
+  font:700 14px/1.1 var(--f-head); letter-spacing:.1em; text-transform:uppercase; clip-path:polygon(7px 0, calc(100% - 7px) 0, 100% 7px, 100% 100%, 0 100%, 0 7px)}
+.rgh:first-child{margin-top:10px}
+.rgh .c{font:600 13px/1 var(--f-head); letter-spacing:.04em; opacity:.8}
+.list.ul{border-top:0}
+.urow{width:100%; text-align:left; padding:7px 2px 6px; border-bottom:1px solid var(--line); row-gap:1px}
+.urow .un{display:flex; flex-wrap:wrap; align-items:baseline; gap:0 6px; min-width:0; padding-right:6px}
+.urow.att .un{grid-column:1 / 9}
+.urow .un b{font:700 16.5px/1.2 var(--f-head); letter-spacing:.02em}
+.urow .un .x{margin-left:0; padding:1px 5px 0; font-size:13px}
+.urow .un .lead{margin:0; font:700 16.5px/1.2 var(--f-head); letter-spacing:.02em; color:var(--fg2)}
+.urow .utg{flex-basis:100%; display:flex; flex-wrap:wrap; gap:0 8px}
+.urow .utg .tg{white-space:normal; font-size:12.5px}
+.urow .meta{flex-basis:100%; font-size:12.5px; color:var(--muted); line-height:1.3}
+.urow .sc{font:700 15.5px/1.2 var(--f-head); text-align:center; font-variant-numeric:tabular-nums; min-width:0}
+.urow .pts{grid-column:9; font:600 14.5px/1.2 var(--f-head); color:var(--muted); font-variant-numeric:tabular-nums; white-space:nowrap}
+.urow .pts small{font-size:11px}
+.urow .sn{grid-column:1; display:block; padding-left:12px; font:600 14px/1.25 var(--f-head); letter-spacing:.01em; color:var(--fg2); min-width:0}
+.urow .sn .x{margin-left:5px; padding:0 4px; font-size:12px; color:var(--fg2)}
+.urow.att .sc{color:var(--fg2)}
 .nw{white-space:nowrap}
-.urow .pts{font:600 15px var(--f-head); color:var(--muted); font-variant-numeric:tabular-nums}
-.urow .meta{grid-column:1 / -1; font-size:12.5px; color:var(--muted); line-height:1.3}
-.sline, .uh{display:grid; grid-template-columns:repeat(7, minmax(0, 44px))}
-.sline{grid-column:1 / -1; font:700 15px/1.25 var(--f-head); font-variant-numeric:tabular-nums}
-.slab{grid-column:1 / -1; display:flex; align-items:center; margin-top:7px; font:700 13px/1.2 var(--f-head); letter-spacing:.07em; text-transform:uppercase; color:var(--fg)}
-.slab .x{margin-left:7px; padding:1px 5px 0; font-size:13px}
-.urow .un .lead{font:700 16.5px/1.15 var(--f-head); letter-spacing:.02em; color:var(--fg2)}
-.urow.att .sline{padding-left:0}
-.uh{padding:0 2px; font:600 11px/1 var(--f-head); letter-spacing:.1em; color:var(--muted); text-transform:uppercase}
+@media (max-width:359px){ .urow .sc{font-size:14.5px} .urow .un b, .urow .un .lead{font-size:15.5px} .urow .sn{padding-left:8px; font-size:13px} }
 
 /* ---------- datasheet ---------- */
 .ds-meta{display:flex; flex-wrap:wrap; gap:2px 10px; align-items:baseline; padding:8px 0 6px; font-size:13px; color:var(--muted)}
@@ -313,6 +328,13 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .gvl{font-style:normal; position:relative} .gvl::after{content:'+'; position:absolute; top:-3px; right:-7px; font:700 9px/1 var(--f-head); color:var(--accent)}
 .dline.sl p{margin:3px 0 0} .dline.sl .sln{font:600 11.5px/1.2 var(--f-head); letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-right:4px}
 .abl .xp{border-bottom:1px solid var(--line)}
+.urs{border-top:1px solid var(--line)}
+.urr{padding:6px 2px 7px; border-bottom:1px solid var(--line)}
+.urn .link{font:700 16px/1.2 var(--f-head); letter-spacing:.02em}
+.uru{margin:2px 0 0 12px; font-size:14px; line-height:1.45}
+.urq{display:block; margin-top:1px; font-size:13px; line-height:1.4; color:var(--muted)}
+.urq .link{color:var(--fg2)}
+.uru .from{color:var(--muted)}
 .gsrc{margin:6px 0 10px; padding:8px 10px; border-left:3px solid var(--accent); background:var(--surface); border-radius:0 8px 8px 0}
 .gh{margin:0 0 4px} .gh .tg{margin-left:4px}
 .gw2{margin:0 0 4px; font-size:12.5px; color:var(--muted)}
@@ -339,6 +361,82 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
   .wr > span.n, .st > span.n{overflow-wrap:anywhere}
   .st > span.n{font-size:13px; padding-left:6px}
   .x{margin-left:6px; padding:1px 4px 0; font-size:13px}
+}
+/* ---------- the datasheet as New Recruit draws it: one framed sheet of table sections ----------
+   a slate band (points, name), grey header rows that carry the column labels, hairline rows,
+   whose a row is after its name in grey ("- Mek"), and the keywords at the bottom as pills */
+:root{ --ds-band:#506276; --ds-band-fg:#f4f6f8; --ds-head:#272b30; --ds-head-fg:#c9ced6 }
+.ds{margin-top:8px; border:1px solid var(--line); border-top:0; border-radius:0 0 3px 3px}
+.dsh{display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:2px 12px; margin:0 -1px; padding:7px 12px 6px;
+  background:var(--ds-band); color:var(--ds-band-fg); clip-path:polygon(9px 0, calc(100% - 9px) 0, 100% 9px, 100% 100%, 0 100%, 0 9px)}
+.dpts{font:700 15px/1.15 var(--f-head); letter-spacing:.06em; text-transform:uppercase; white-space:nowrap}
+.dsn{flex:1 1 auto; min-width:0; text-align:right; font:700 15px/1.15 var(--f-head); letter-spacing:.08em; text-transform:uppercase}
+.dsm{display:flex; flex-wrap:wrap; align-items:baseline; gap:2px 10px; padding:5px 10px; font-size:12.5px; line-height:1.35; color:var(--muted)}
+.dhd, .ds .st > span.h, .ds .wh.both > span, .ds .wh.both .n, .dk{font:500 12.5px/1.2 var(--f-body); letter-spacing:0; text-transform:none; color:var(--ds-head-fg)}
+.dhd{display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:2px 8px; padding:5px 10px 4px; background:var(--ds-head)}
+.dhd .lbn{margin:0; font:inherit; font-size:12px}
+.ds .mdl .dhd, .ds .ml{display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,1fr); gap:0 10px}
+.ds .ml{padding:5px 10px; border-top:1px solid var(--line); font-size:13.5px; line-height:1.3}
+.ds .dhd + .ml{border-top:0}
+.ds .mn{font-weight:600}
+.ds .mg{display:block; font-size:13px; color:var(--fg2)}
+.ds .mlt{display:block; margin:1px 0 0; font-size:13px}
+.ds .mlt::before{content:'• '; color:var(--muted)}
+.ds .st{border-radius:0; background:none}
+.ds .st > span{display:flex; align-items:center; justify-content:center; padding:5px 0; font:700 17px/1 var(--f-head); border-top:1px solid var(--line)}
+.ds .st > span.h{padding:5px 0 4px; border-top:0; background:var(--ds-head)}
+.ds .st > span.h.n{justify-content:flex-start; padding-left:10px}
+.ds .st > span.n{flex-direction:column; align-items:flex-start; gap:1px; padding:4px 4px 4px 10px}
+.ds .st > span.n b{font:600 14.5px/1.15 var(--f-head); letter-spacing:.01em}
+.ds .st > span.n .x{margin-left:6px; font-size:13px; padding:1px 5px 0}
+.ds .st > span.n small{font:500 11.5px/1.1 var(--f-body); color:var(--muted)}
+.dnt{padding:0 10px 7px; border-top:1px solid var(--line)}
+.dnt:empty{display:none}
+.dnt > :first-child{margin-top:6px}
+.ds .wt.both{margin-top:0}
+.ds .wh.both{padding:5px 10px 4px; background:var(--ds-head); box-shadow:none}
+.ds .wh.both .n{white-space:nowrap}
+.ds .wb, .ds .wb:has(> .wr .x){padding:5px 10px 4px}
+.ds .who{display:block; justify-self:stretch; margin:0; padding:5px 10px 3px; border:0; border-top:1px solid var(--line); border-radius:0; background:var(--surface); font:600 12.5px/1.2 var(--f-head); letter-spacing:.08em; color:var(--fg2)}
+.ds .who + .wb{border-top:0}
+.ds .wj{margin:1px 10px}
+.ds .use{padding:4px 10px 3px}
+.ds .mods{margin:0; padding:7px 10px 8px; border-top:1px solid var(--line)}
+.ds .mods.all{margin:0}
+.ds .msep{margin:4px 0 1px}
+.ds .mod{font-size:12.5px} .ds .mod b{font-weight:600}
+.ds .ab.pf{border-bottom:0; border-top:1px solid var(--line)}
+.ds .ab.pf > summary{padding:4px 10px; background:var(--ds-head)}
+.ds .ab.pf > summary b.kh{font:500 12.5px/1.2 var(--f-body); letter-spacing:0; text-transform:none; color:var(--ds-head-fg)}
+.ds .ab.pf .wh.both{background:none; padding-top:4px}
+.ds .abl{border-top:0}
+.ds .ab > summary{padding:4px 10px; min-height:38px}
+.ds .ab > .body{padding:0 10px 10px}
+.ds .abl .ab:last-child{border-bottom:0}
+.awho{font-size:13px; color:var(--muted)}
+.ds .an .awho{margin-left:-3px}
+.dft{border-top:1px solid var(--line)}
+.dkv{display:grid; grid-template-columns:86px minmax(0,1fr)}
+.dkv + .dkv{border-top:1px solid var(--line)}
+.dk{padding:7px 6px 6px 10px; background:var(--ds-head)}
+.dv{min-width:0; padding:5px 10px 6px; font-size:14px; line-height:1.5}
+.dv p{margin:0} .dv p + p{margin-top:2px}
+.dv .sln{font:600 11.5px/1.2 var(--f-head); letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-right:4px}
+.dv .link{white-space:nowrap}
+.pills{display:flex; flex-wrap:wrap; gap:5px; padding:2px 0}
+.pill{display:inline-block; padding:4px 9px 3px; border-radius:999px; background:var(--surface2); box-shadow:inset 0 0 0 1px #3e3e3e; font:600 12px/1.2 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--fg2); white-space:nowrap}
+.kwn{display:block; margin-top:4px; font-size:12px; line-height:1.35; color:var(--muted)}
+@media (max-width:359px){
+  .ds .st > span{font-size:16px}
+  .ds .st > span.h{font-size:11px}
+  .ds .st > span.n{padding-left:8px}
+  .dhd, .ds .wh.both, .ds .wb, .ds .wb:has(> .wr .x), .ds .ml, .ds .ab > summary, .ds .ab > .body, .dsm, .ds .mods, .ds .who, .dnt, .dv{padding-left:8px; padding-right:8px}
+  .ds .wh.both > span{font-size:11px}
+  .dkv{grid-template-columns:74px minmax(0,1fr)}
+  .ds .ml{grid-template-columns:minmax(0,1fr)}
+  .ds .mdl .dhd{display:flex}
+  .ds .wh.both .n{font-size:12px}
+  .dk{padding-left:8px}
 }
 /* slice screens: one band per unit, pinned until the next unit's band pushes it off */
 .us{padding-bottom:4px}
@@ -378,7 +476,11 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .lead{margin:12px 0 10px; font-size:14.5px; line-height:1.45; color:var(--fg2)}
 /* the bar in five equal fifths, edge to edge (the bar's side padding taken back), each icon in the middle of its fifth */
 .tabs{display:grid; grid-template-columns:repeat(5, minmax(0, 1fr)); margin:0 calc(-1 * max(16px, env(safe-area-inset-right, 0px))) 0 calc(-1 * max(16px, env(safe-area-inset-left, 0px)))}
-.tabs button{display:grid; justify-items:center; gap:2px; min-height:50px; padding:5px 0 3px; border-radius:8px; font:700 11px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--muted); min-width:0}
+.tabs button{position:relative; display:grid; justify-items:center; gap:2px; min-height:50px; padding:5px 0 3px; border-radius:8px; font:700 11px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--muted); min-width:0}
+/* the five cells drawn: a hairline between neighbours, the open tab's cell tinted, so the eye measures cells, not the gaps between words of different lengths */
+.tabs button + button::before{content:''; position:absolute; left:0; top:12px; bottom:12px; border-left:1px solid var(--line)}
+.tabs button.on{background:var(--surface)}
+.tabs button.on::before, .tabs button.on + button::before{display:none}
 .tabs button span{max-width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
 @media (max-width:340px){ .tabs button{letter-spacing:.02em; font-size:10.5px} }
 .tabs button .ic{width:22px; height:22px}
@@ -517,8 +619,8 @@ const TURN_NAME = { your:'Your turn', opp:'Their turn', either:'Either turn' };
 const ROLE_ORDER = ['Epic Hero','Character','Battleline','Infantry','Mounted','Beast','Swarm','Monster','Vehicle','Dedicated Transport','Fortification','Other'];
 const ROLE_LABEL = { 'Epic Hero':'Epic Heroes', 'Character':'Characters', 'Battleline':'Battleline', 'Infantry':'Infantry', 'Mounted':'Mounted', 'Beast':'Beasts', 'Swarm':'Swarms',
   'Monster':'Monsters', 'Vehicle':'Vehicles', 'Dedicated Transport':'Dedicated Transports', 'Fortification':'Fortifications', 'Other':'Other' };
-const SCREEN_TITLE = { pregame:'Pre-game', units:'Units', strats:'Stratagems', ranged:'Ranged weapons', melee:'Melee weapons', abilities:'Abilities', rules:'Rules', bases:'Bases & proxies' };
-const BACK_TITLE = { pregame:'Pre-game', ranged:'Ranged', melee:'Melee', rules:'Rules', bases:'Bases' };
+const SCREEN_TITLE = { pregame:'Overview', units:'Units', strats:'Stratagems', ranged:'Ranged weapons', melee:'Melee weapons', abilities:'Abilities', rules:'Rules', bases:'Bases & proxies' };
+const BACK_TITLE = { pregame:'Overview', ranged:'Ranged', melee:'Melee', rules:'Rules', bases:'Bases' };
 const HUNTER_KW = 'HUNTER: MONSTER/VEHICLE';
 const KEY_LABEL = { range:'RNG', A:'A', BS:'BS', WS:'WS', S:'S', AP:'AP', D:'D' };
 // a value or keyword that a rule of the list changes (w.from / s.from, derived from BSData and checked
@@ -542,10 +644,10 @@ const moreShown = new Set();                 // search groups you expanded
 let focusSearch = false;
 
 /* ---------- tabs ----------
-   Tabs at the bottom of every army screen (Pre-game · Units · Turn · Rules · Find), ‹ › between
+   Tabs at the bottom of every army screen (Overview · Units · Turn · Rules · Find), ‹ › between
    datasheets, and tick boxes for the uses a rule allows per battle, kept until New game. */
 // the tabs, and which one the current screen belongs to
-const TABS = [['pregame', 'i-flag', 'Pre-game'], ['units', 'i-units', 'Units'], ['strats', 'i-cards', 'Stratagems'], ['rules', 'i-book', 'Rules'], ['army', 'i-search', 'Find']];
+const TABS = [['pregame', 'i-flag', 'Overview'], ['units', 'i-units', 'Units'], ['strats', 'i-cards', 'Stratagems'], ['rules', 'i-book', 'Rules'], ['army', 'i-search', 'Find']];
 const isTab = s => TABS.some(([k]) => k === s);
 const tabOf = s => ({ unit:'units', bases:'pregame', ranged:'army', melee:'army', abilities:'army' })[s] || s;
 const tabBar = () => '<div class="tabs">' + TABS.map(([s, ic, label]) => '<button data-tab="' + s + '"' + (tabOf(cur.s) === s ? ' class="on" aria-current="page"' : '') + '><svg class="ic" aria-hidden="true"><use href="#' + ic + '"/></svg><span>' + label + '</span></button>').join('') + '</div>';
@@ -918,7 +1020,7 @@ function screenArmy(){
     '<label class="search"><svg aria-hidden="true"><use href="#i-search"/></svg><input id="armyQ" type="search" placeholder="Find a unit, weapon, keyword, rule…" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" aria-label="Search this army"></label>' +
     '<div id="qres"></div>' +
     '<div id="armyMenu"><div class="list">' +
-      row('pregame', 'i-flag', 'Pre-game', '') +
+      row('pregame', 'i-flag', 'Overview', '') +
       row('units', 'i-units', 'Units', unitCount(a)) +
       row('strats', 'i-cards', 'Stratagems', allStratagems(a).length) +
       row('ranged', 'i-gun', 'Ranged weapons', weaponCount(a, 'ranged')) +
@@ -1061,25 +1163,24 @@ function renderFinder(){
 }
 
 /* ---------- screen: unit list ---------- */
-const UNIT_COLS = ['M','T','SV','W','LD','OC','INV'];
-const unitsSubbar = () => '<div class="uh">' + UNIT_COLS.map(c => '<span>' + c + '</span>').join('') + '</div>';
-// an attached unit: one line per model profile, each named, with how many models have it
-function statLine(u){
-  const line = s => '<span class="sline">' + ['M','T','Sv','W','Ld','OC','InSv'].map(k => '<span>' + (s.from && s.from[k] ? '<i class="gvl">' + esc(s[k]) + '</i>' : esc(s[k])) + '</span>').join('') + '</span>';
-  if(!u.leads || u.stats.length < 2) return line(u.stats[0]);
-  return u.stats.map(s => '<span class="slab">' + esc(s.name).replace(/ ×(\d+)$/, '<span class="x">×$1</span>') + '</span>' + line(s)).join('');
-}
+const UNIT_COLS = ['M','T','Sv','W','LD','OC','InSv'];
+const unitsSubbar = () => '<div class="uh"><span class="n">Unit</span>' + UNIT_COLS.map(c => '<span>' + c + '</span>').join('') + '<span class="p">Pts</span></div>';
+// the stats of one profile, one cell per column (a value a rule of the list changed is marked)
+const statCells = s => ['M','T','Sv','W','Ld','OC','InSv'].map(k => '<span class="sc">' + (s.from && s.from[k] ? '<i class="gvl">' + esc(s[k]) + '</i>' : esc(s[k])) + '</span>').join('');
 function screenUnits(){
   const a = army(), groups = {};
   for(const u of a.units){ const r = ROLE_ORDER.includes(u.role) ? u.role : 'Other'; (groups[r] = groups[r] || []).push(u); }
-  return ROLE_ORDER.filter(r => groups[r]).map(r => '<div class="lbl grp-h">' + ROLE_LABEL[r] + '</div><div class="list">' + groups[r].map(u => {
+  return ROLE_ORDER.filter(r => groups[r]).map(r => '<h2 class="rgh"><span>' + ROLE_LABEL[r] + '</span><span class="c">' + groups[r].reduce((t, u) => t + (u.copies || 1), 0) + '</span></h2><div class="list ul">' + groups[r].map(u => {
     // one model type: its count goes after the name ("Gretchin ×10"), like a weapon count
     const one = u.models.length === 1 && u.models[0].match(/^(\d+)× /);
     const n = one && one[1] !== '1' ? '<span class="x">×' + one[1] + '</span>' : '';
     const lead = u.leads ? '<span class="lead">+ ' + esc(partsAfter(u).join(' + ')) + '</span>' : '';   // an attached unit names its other parts as loud as its leader
-    return '<button class="urow' + (u.leads ? ' att' : '') + '" data-unit="' + esc(u.id) + '"><span class="un"><b>' + esc(u.name) + '</b>' + n + nameTags(u, { noLeads:true }) + lead + '</span>' +
-      '<span class="pts">' + esc(u.pts) + (u.copies > 1 ? ' ea' : '') + '</span>' +
-      (!one && !u.leads ? '<span class="meta">' + esc(u.models.join(', ')) + '</span>' : '') + statLine(u) + '</button>';
+    const subs = u.leads && u.stats.length > 1;   // an attached unit: one line per model type, under its name
+    const tags = nameTags(u, { noLeads:true });
+    return '<button class="urow' + (subs ? ' att' : '') + '" data-unit="' + esc(u.id) + '"><span class="un"><b>' + esc(u.name) + '</b>' + n + lead +
+      (tags ? '<span class="utg">' + tags + '</span>' : '') + (!one && !u.leads ? '<span class="meta">' + esc(u.models.join(', ')) + '</span>' : '') + '</span>' +
+      (subs ? '' : statCells(u.stats[0])) + '<span class="pts">' + esc(u.pts) + (u.copies > 1 ? '<small> ea</small>' : '') + '</span>' +
+      (subs ? u.stats.map(s => '<span class="sn">' + esc(s.name).replace(/ ×(\d+)$/, '<span class="x">×$1</span>') + '</span>' + statCells(s)).join('') : '') + '</button>';
   }).join('') + '</div>').join('');
 }
 
@@ -1306,12 +1407,12 @@ function unitWeapons(u){
   if(pistols){
     const n = new Map();
     for(const it of rItems) n.set(itemName(it), (n.get(itemName(it)) || 0) + (it.n || 1));
-    h += '<div class="anc" id="sec-ranged"></div><details class="ab pf"><summary><span class="an"><b class="kh">Ranged</b><span class="pfl">' +
+    h += '<div class="anc" id="sec-ranged"></div><details class="ab pf"><summary><span class="an"><b class="kh">Ranged Weapons</b><span class="pfl">' +
       esc([...n].map(([k, c]) => k + (c > 1 ? ' ×' + c : '')).join(', ')) + ' · all pistols</span></span>' + chev + '</summary>' +
-      '<div class="wh both"><span class="n"></span>' + ['RNG','A','BS','S','AP','D'].map(c => '<span>' + c + '</span>').join('') + '</div>' + weaponRows(r, RANGED_KEYS, mr, u, 'ranged') + '</details>';
-  } else if(r.length) h += head('ranged', 'Ranged', ['RNG','A','BS','S','AP','D']) + weaponRows(r, RANGED_KEYS, mr, u, 'ranged');
+      '<div class="wh both"><span class="n"></span>' + ['Range','A','BS','S','AP','D'].map(c => '<span>' + c + '</span>').join('') + '</div>' + weaponRows(r, RANGED_KEYS, mr, u, 'ranged') + '</details>';
+  } else if(r.length) h += head('ranged', 'Ranged Weapons', ['Range','A','BS','S','AP','D']) + weaponRows(r, RANGED_KEYS, mr, u, 'ranged');
   if(r.length) h += '<!--R-->';
-  if(m.length) h += head('melee', 'Melee', ['A','WS','S','AP','D'], true) + weaponRows(m, ['none'].concat(MELEE_KEYS), mm, u, 'melee') + '<!--M-->';
+  if(m.length) h += head('melee', 'Melee Weapons', ['A','WS','S','AP','D'], true) + weaponRows(m, ['none'].concat(MELEE_KEYS), mm, u, 'melee') + '<!--M-->';
   const key = x => [x.from, x.when, x.note].join('|');
   const inR = new Set(mr.map(key)), inM = new Set(mm.map(key)), seen = new Set(), notes = [];
   const damaged = new Set(u.abilities.filter(ab => ab.damaged).map(ab => ab.name));
@@ -1359,15 +1460,17 @@ const onceTag = ab => {
 };
 // abilities of one model (the leader, the champion) or one choice ("Crimson King: pick one") sit
 // under its chip, like the weapons; the unit's own come first
-function abilityRows(abs, u){
+// (on the datasheet: { suffix:true }, each row names its model after the name, as New Recruit prints it)
+function abilityRows(abs, u, opts){
   const whos = [...new Set(abs.map(ab => ab.who || ''))].sort((x, y) => (x ? 1 : 0) - (y ? 1 : 0));
+  if(opts && opts.suffix) return abilityList(whos.flatMap(w => abs.filter(ab => (ab.who || '') === w)), u, true);
   if(whos.length > 1 || whos[0]) return whos.map(w => (w ? '<div class="who">' + esc(w) + '</div>' : '') + abilityList(abs.filter(ab => (ab.who || '') === w), u)).join('');
   return abilityList(abs, u);
 }
-function abilityList(abs, u){
+function abilityList(abs, u, suffix){
   return '<div class="abl">' + abs.map(ab => {
     const meta = [ab.tag, ab.ph ? whenTag(ab) : ''].filter(Boolean), na = naReason(ab), once = onceTag(ab);
-    return '<details class="ab' + (na ? ' na' : '') + '"><summary><span class="an"><b>' + esc(ab.name) + '</b>' +
+    return '<details class="ab' + (na ? ' na' : '') + '"><summary><span class="an"><b>' + esc(ab.name) + '</b>' + (suffix && ab.who ? '<span class="awho">- ' + esc(ab.who) + '</span>' : '') +
       (ab.tag === 'Enhancement' ? '<span class="tg">Enhancement</span>' : '') + (once ? '<span class="tg once">' + esc(once) + '</span>' : '') + (na ? '<span class="tg m">' + esc(na) + '</span>' : '') + abilityTicks(ab, u) + '</span>' +
       (ab.ph && !na ? '<span class="aw">' + esc(shortWhen(ab)) + '</span>' : '') + chev + '</summary><div class="body">' +
       (na ? '<p class="abt"><i>' + esc(na) + '</i></p>' : '') + (meta.length ? '<p class="abt">' + meta.map(esc).join(' · ') + '</p>' : '') + rt(ab.text) + '</div></details>';
@@ -1390,32 +1493,42 @@ const linkTo = (attr, val, label) => '<span class="link" role="button" tabindex=
 // every ability of the datasheet is listed, as on the paper datasheet; footnotes and "When targeted"
 // only repeat it where it matters. The one exception: a Damaged profile is its band under the stats.
 const shownElsewhere = ab => !!ab.damaged;
-const modelsText = u => u.models.map(esc).join(' · ') + (u.ptsNote ? ' · ' + esc(u.ptsNote) + ' pts' : '');
+// the keywords that come from the other part of an attached unit, from the importer's note
+// ("Explosives, Meganobz come from the led Meganobz."): starred, as New Recruit stars them
+function kwStars(u){
+  const m = /^(.+?) comes? (from .+?)\.?$/.exec(u.kwNote || '');
+  if(!m) return { starred:new Set(), note:u.kwNote || '' };
+  const starred = new Set(m[1].split(', '));
+  return [...starred].every(k => u.kw.includes(k)) ? { starred, note:'*' + m[2] } : { starred:new Set(), note:u.kwNote };
+}
+/* The datasheet, in New Recruit's order and look, shaped for a phone: a band with the points and
+   the name; Models and their wargear; the stats (with the base); Ranged and Melee weapons; the
+   abilities (one row each, the text one tap away); Rules, Stratagems and Keywords at the bottom. */
 function screenUnit(){
   const u = unitById(cur.unit);
   if(!u) return '<div class="empty">This unit is no longer in the list.</div>';
   const strats = allStratagems().filter(s => eligible(s).includes(u));   // every one it can be the target of
-  const multi = u.stats.length > 1, def = defenceItems(u);
-  const meta = [esc(u.role), esc(u.pts) + ' pts' + (u.copies > 1 ? ' each' : '') + (u.ptsNote ? ' (' + esc(u.ptsNote) + ')' : '')];
-  if(u.copies > 1) meta.push('×' + esc(u.copies) + ' in list');
+  const def = defenceItems(u);
+  const meta = [esc(u.role)].concat(u.ptsNote ? [esc(u.ptsNote)] : [], u.copies > 1 ? ['×' + esc(u.copies) + ' in list'] : []);
+  const band = '<div class="dsh"><span class="dpts num">' + esc(u.pts) + ' pts' + (u.copies > 1 ? ' each' : '') + '</span><span class="dsn">' + esc(unitLabel(u)) + '</span></div>' +
+    '<div class="dsm"><span>' + meta.join(' · ') + '</span>' + nameTags(u, { noLeads:true, noCopies:true }) + '</div>';
   // the models as New Recruit lists them: how many, with what wargear, and which character leads or supports
   const cs = charsOf(u);
   const gearText = g => { const c = new Map(); for(const x of g) c.set(x, (c.get(x) || 0) + 1); return [...c].map(([x, n]) => (n > 1 ? n + '× ' : '') + x).join(', '); };
-  const modelsBox = '<div class="mdl" id="sec-models">' + u.models.map((m, i) => {
+  const models = '<section class="dsx mdl" id="sec-models"><div class="dhd"><span>Models</span><span>Options</span></div>' + u.models.map((m, i) => {
     const c = i < cs.length ? cs[i] : null;
     const role = c ? '<span class="mlt">' + linkTo('rule', c.support ? 'Support' : 'Leader', (c.support ? 'Supporting ' : 'Leading ') + u.leads) + '</span>' : '';
     const g = (u.gear || [])[i] || [];
-    return '<div class="ml"><span class="mn">' + esc(m) + '</span>' + role + (g.length ? '<span class="mg">' + esc(gearText(g)) + '</span>' : '') + '</div>';
-  }).join('') + '</div>';
+    return '<div class="ml"><span class="mn">' + esc(m) + '</span><span class="mg">' + (g.length ? esc(gearText(g)) : '') + role + '</span></div>';
+  }).join('') + '</section>';
   const abil = u.abilities.filter(ab => !shownElsewhere(ab, u));
   const weaponKeys = new Set([...(u.ranged || []), ...(u.melee || [])].flatMap(w => w.kw.map(ruleKey)));
-  const statCols = multi ? (innerWidth < 360 ? 'minmax(60px,1fr) repeat(7, minmax(22px,27px))' : 'minmax(64px,1fr) repeat(7, minmax(24px,31px))') : 'repeat(7, minmax(0,1fr))';
-  const attached = u.leads ? '<span class="lbn">' + (D.rules['Attached Units'] ? linkTo('rule', 'Attached Units', '“this unit” = the whole attached unit') : '“this unit” = the whole attached unit') + '</span>' : '';
-  return '<div class="ds-meta"><span>' + meta.join(' · ') + '</span>' + nameTags(u, { noLeads:true, noCopies:true }) + '</div>' + modelsBox +
-    '<div class="statwrap" id="sec-stats"><div class="st num" style="grid-template-columns:' + statCols + '">' +
-      (multi ? '<span class="h"></span>' : '') + ['M','T','SV','W','LD','OC','INV'].map(k => '<span class="h">' + k + '</span>').join('') +
-      u.stats.map(s => (multi ? '<span class="n">' + esc(s.name).replace(/ ×(\d+)$/, '<span class="x">×$1</span>') + '</span>' : '') +
+  const statCols = innerWidth < 360 ? 'minmax(0,1fr) repeat(7, 26px)' : 'minmax(0,1fr) repeat(7, 31px)';
+  const stats = '<section class="dsx statwrap" id="sec-stats"><div class="st num" style="grid-template-columns:' + statCols + '">' +
+      '<span class="h n">Unit</span>' + ['M','T','Sv','W','LD','OC','InSv'].map(k => '<span class="h">' + k + '</span>').join('') +
+      u.stats.map(s => '<span class="n"><b>' + esc(s.name).replace(/ ×(\d+)$/, '<span class="x">×$1</span>') + '</b><small>' + esc(s.base) + '</small></span>' +
         ['M','T','Sv','W','Ld','OC','InSv'].map((k, i) => '<span>' + granted(s, k, u, esc(s[k]), ['M','T','SV','W','LD','OC','INV'][i] + ' ' + s[k]) + '</span>').join('')).join('') + '</div>' +
+    '<div class="dnt">' +
     unitDetRules(u).filter(r => r.statNote).map(r => { const n = modelCount(u) === 1 && r.statNote.single ? r.statNote.single : r.statNote.text;
       return '<p class="dsl">' + esc(n.replace(/\{OC\+(\d)\}/, (x, d) => String((parseInt(u.stats[0].OC, 10) || 0) + +d))) + ' (' + linkTo('rule', r.name, r.name) + ')</p>'; }).join('') +
     (hasGrants(u) ? '<p class="dsl glg"><b class="gv sample">value</b> already changed by a rule of your list (orange: this unit’s own); tap it to see which.</p>' : '') +
@@ -1423,12 +1536,17 @@ function screenUnit(){
     u.abilities.filter(ab => ab.damaged).map(ab => { const m = (u.mods || []).find(x => x.from === ab.name);
       const psy = m && /hit/i.test(m.note) && [...(u.ranged || []), ...(u.melee || [])].some(w => w.kw.some(k => /^psychic/i.test(k)));
       return '<div class="def dmg"><span class="il">Damaged ' + esc(ab.damaged) + ' W</span>' + linkTo('ability', abilityKey(ab), m ? m.note : 'see the rule') +
-        (psy ? ' <span class="from">(' + linkTo('rule', 'Psychic', '[PSYCHIC]') + ' weapons can ignore it)</span>' : '') + '</div>'; }).join('') + '</div>' +
-    unitWeapons(u) +
-    (abil.length ? '<div class="dsec" id="sec-abilities"><div class="lbl">Abilities' + attached + '</div>' + abilityRows(abil, u) + '</div>' : '') +
-    '<div class="dsec" id="sec-rules"><p class="dline"><span class="il">Rules</span>' + allUnitRules(u).filter(r => !weaponKeys.has(ruleKey(r))).map(r => linkTo('rule', r, r) + (inertRule(r) ? ' <span class="from">(no unit in this list it applies to)</span>' : '')).join(', ') +
-      ' <span class="sep">·</span> ' + linkTo('kw', u.id, 'Keywords') + '</p>' +
-      stratLines(u, strats) + '</div>';
+        (psy ? ' <span class="from">(' + linkTo('rule', 'Psychic', '[PSYCHIC]') + ' weapons can ignore it)</span>' : '') + '</div>'; }).join('') + '</div></section>';
+  const attached = u.leads ? '<span class="lbn">' + (D.rules['Attached Units'] ? linkTo('rule', 'Attached Units', '“this unit” = the whole attached unit') : '“this unit” = the whole attached unit') + '</span>' : '';
+  const abilities = abil.length ? '<section class="dsx" id="sec-abilities"><div class="dhd"><span>Abilities</span>' + attached + '</div>' + abilityRows(abil, u, { suffix:true }) + '</section>' : '';
+  const rules = allUnitRules(u).filter(r => !weaponKeys.has(ruleKey(r)));
+  const ks = kwStars(u);
+  const foot = '<section class="dsx dft">' +
+    (rules.length ? '<div class="dkv" id="sec-rules"><span class="dk">Rules</span><span class="dv">' + rules.map(r => linkTo('rule', r, r) + (inertRule(r) ? ' <span class="from">(no unit in this list it applies to)</span>' : '')).join(', ') + '</span></div>' : '') +
+    stratLines(u, strats) +
+    '<div class="dkv" id="sec-kw"><span class="dk">Keywords</span><span class="dv"><span class="pills">' + u.kw.map(k => '<span class="pill">' + esc(k) + (ks.starred.has(k) ? '*' : '') + '</span>').join('') + '</span>' +
+      (ks.note ? '<span class="kwn">' + esc(ks.note) + '</span>' : '') + '</span></div></section>';
+  return '<div class="ds">' + band + models + stats + unitWeapons(u) + abilities + foot + '</div>';
 }
 // every stratagem the unit can use: one line per detachment, then core, each in phase order;
 // a detachment with none for this unit is named, not left out
@@ -1437,16 +1555,9 @@ function stratLines(u, strats){
   const ord = list => list.map((x, i) => [x, i]).sort((a, b) => first(a[0]) - first(b[0]) || a[1] - b[1]).map(x => x[0]);
   const groups = detachments().map(d => [d.name, strats.filter(st => st.src === d.name)]).concat([['Core', strats.filter(st => st.src === 'Core')]]);
   const none = groups.filter(([n, l]) => !l.length && n !== 'Core').map(([n]) => n);
-  return '<div class="dline sl" id="sec-strats"><span class="il">Stratagems</span>' + groups.filter(([, l]) => l.length).map(([n, l]) =>
+  return '<div class="dkv sl" id="sec-strats"><span class="dk">Stratagems</span><span class="dv">' + groups.filter(([, l]) => l.length).map(([n, l]) =>
     '<p><b class="sln">' + esc(n) + '</b> ' + ord(l).map(st => linkTo('strat', st.id, st.name)).join(', ') + '</p>').join('') +
-    (none.length ? '<p class="from">None from ' + esc(orList(none)) + '.</p>' : '') + '</div>';
-}
-// the list-building facts, one tap away
-function showKeywords(id){
-  const u = unitById(id);
-  if(!u) return;
-  openSheet(esc(u.role + ' · ' + u.pts + ' pts'), u.name, '<p class="kwline">' + modelsText(u) + '</p><p class="kwline">Base ' + esc([...new Set(u.stats.map(s => s.base))].join(' / ')) + '</p>' +
-    '<p class="lbl" style="margin-top:12px">Keywords</p><p class="kwline">' + esc(u.kw.join(', ')) + '</p>' + (u.kwNote ? '<p class="note">' + esc(u.kwNote) + '</p>' : ''));
+    (none.length ? '<p class="from">None from ' + esc(orList(none)) + '.</p>' : '') + '</span></div>';
 }
 
 /* ---------- screens: weapons and abilities by unit ---------- */
@@ -1616,19 +1727,20 @@ function screenPregame(){
     row('Warlord', warlord.map(u => u.warlordOn ? linkTo('unit', u.id, u.warlordOn) + ' <span class="from">(' + esc(unitLabel(u)) + ')</span>' : unitLink(u)).join(', ')) +
     row('Enhance&shy;ments', enh.join('<br>')) +
     row('Attached', led.join('<br>')) +
-    row('Detach&shy;ments', esc(detachments().map(d => d.name + (d.dp ? ' (' + d.dp + ' DP)' : '')).join(', ')) + (a.disposition ? '<br><span class="from">Disposition:</span> ' + esc(a.disposition) : '')) +
+    row('Detach&shy;ments', detachments().map(d => (d.rule ? linkTo('rule', d.rule.name, d.name) : esc(d.name)) + (d.dp ? ' <span class="from">(' + d.dp + ' DP)</span>' : '')).join(', ') + (a.disposition ? '<br><span class="from">Disposition:</span> ' + esc(a.disposition) : '')) +
     row('Points', esc(a.pointsUsed + ' / ' + a.points + ' · ' + a.battleSize)));
+  // the army rules, folded: each opens to its text
+  h += f.armyRules.length ? '<div class="sec-h"><h2>Army rules</h2></div><div class="abl">' + armyRuleRows(f) + '</div>' : '';
 
   const earlyAbs = group(allAbs.filter(([u, ab]) => /read mission objectives/i.test(ab.text)));
   h += sec('Read Mission Objectives step', row('Rules', early.map(ruleLine).join('<br>')) + row('Abilities', earlyAbs.map(abLine).join('<br>')));
 
   // declare battle formations: reserves and transports
   const ds = units.filter(u => everyModel(u, r => ruleKey(r) === 'Deep Strike'));
-  const dsPts = ds.reduce((t, u) => t + (u.pts || 0) * (u.copies || 1), 0), half = Math.floor(a.points / 2);
+  const dsPts = ds.reduce((t, u) => t + (u.pts || 0) * (u.copies || 1), 0);
   const transports = units.filter(u => hasKw(u, 'Transport')).map(u => { const ab = u.abilities.find(x => /transport capacity/i.test(x.text)); return unitLink(u) + (ab ? ': <span class="from">' + inline(ab.text.replace(/(^|\n)\*([^*\n][^\n]*[^*\n])\*(?=\n|$)/g, '$1$2').replace(/\n(- )?/g, ' ')) + '</span>' : ''); });
   h += sec('Declare battle formations',
-    row('Reserves', linkTo('rule', 'Strategic Reserves', 'Strategic reserves') + ' (not FORTIFICATIONS): unless otherwise stated, up to ' + half + ' pts (50% of the ' + a.points + ' limit), counting units embarked within a TRANSPORT you place there. Unless otherwise stated, they can only arrive from the second battle round onwards, and any that have not arrived by the end of round 3 are destroyed (not repositioned units, nor units embarked within a TRANSPORT that arrived).' +
-      (ds.length ? '<br><span class="from">Can ' + linkTo('rule', 'Deep Strike', 'Deep Strike') + ':</span> ' + ds.map(u => unitLink(u) + ' <span class="from">' + u.pts + ' pts' + (u.copies > 1 ? ' each' : '') + '</span>').join(', ') + (ds.length > 1 ? ' <span class="from">(all: ' + dsPts + ' pts)</span>' : '') : '')) +
+    row('Deep Strike', ds.map(u => (u.leads ? linkTo('unit', u.id, unitLabel(u)) : unitLink(u)) + ' <span class="from">' + u.pts + ' pts' + (u.copies > 1 ? ' each, ×' + u.copies : '') + '</span>').join('<br>') + (ds.length > 1 ? '<br><span class="from">All of them: ' + dsPts + ' pts</span>' : '')) +
     row('Transports', transports.join('<br>')));
 
   // deployment and pre-battle abilities
@@ -1674,19 +1786,6 @@ const xp = (name, sub, tags, body, open) => '<details class="xp"' + (open ? ' op
   (tags || '') + chev + '</summary><div class="body">' + body + '</div></details>';
 // the core rules a player looks up every game, from the Core Rules (07 The Battle Round, 08 Command
 // Phase, 05 Attack Sequence; the dice in its tables are pictures, read from the printed page)
-function quickRef(){
-  const tr = rows => '<div class="qtab">' + rows.map(([k, v]) => '<span>' + k + '</span><span>' + v + '</span>').join('') + '</div>';
-  return xp('Quick reference', 'Turn order · Command phase · hit, wound and save rolls', '',
-    '<p class="qh">Battle round (07)</p><p>Start of battle round → both players take a turn (the mission says who goes first) → end of battle round.</p>' +
-    '<p class="qh">Each turn (07.02)</p><p>Start of turn → Command → Movement → Shooting → Charge → Fight → end of turn.</p>' +
-    '<p class="qh">Command phase (08)</p><ol class="qol"><li>Start-of-phase rules.</li><li>Gain Core CP: both players gain 1CP.</li>' +
-      '<li>' + linkTo('rule', 'Battle-shock', 'Battle-shock') + ': a roll for each of your units that is battle-shocked or at or below ' + linkTo('rule', 'Starting Strength', 'half-strength') + '.</li>' +
-      '<li>Command abilities.</li><li>End-of-phase rules.</li></ol>' +
-    '<p class="qh">Hit roll (05.01)</p>' + tr([['Unmodified 1', 'fails'], ['Unmodified 6', 'critical hit'], ['≥ BS / WS', 'hit']]) +
-    '<p class="qh">Wound roll (05.02)</p>' + tr([['Unmodified 1', 'fails'], ['Unmodified 6', 'critical wound'], ['S ≥ 2× T', '2+'], ['S > T', '3+'], ['S = T', '4+'], ['S < T', '5+'], ['S ≤ ½ T', '6+']]) +
-    '<p class="qh">Save roll (05.03, 05.04)</p>' + tr([['Unmodified 1', 'damage'], ['≥ InSv', 'saved (AP does not apply)'], ['≥ Sv after AP', 'saved'], ['Otherwise', 'the model loses D wounds']]) +
-    '<p class="note">Allocation order (05.03): a non-CHARACTER group containing a model that has lost one or more wounds must be first; no CHARACTER group can be earlier than a non-CHARACTER group; CHARACTER groups containing a model that has lost one or more wounds must be earlier than CHARACTER groups containing no wounded models.</p>', false);
-}
 /* ---------- screen: rules ----------
    The rules of this list, laid out like a datasheet: a heading per section, a chip per
    detachment, one row per rule (its timing on the right, its text one tap away). The core
@@ -1704,6 +1803,14 @@ function textWithTable(r){
   const lines = String(r.text || '').split('\n'), at = r.tableAt == null ? lines.length : r.tableAt;
   return rt(lines.slice(0, at).join('\n')) + ttable(r.table) + (at < lines.length ? rt(lines.slice(at).join('\n')) : '');
 }
+// the army rules, each folded to its name, when it applies and whether any unit of this list has it
+function armyRuleRows(f){
+  return f.armyRules.map(r => {
+    const once = r.tag && /^(once|twice) per /i.test(r.tag) ? r.tag : '';
+    return ruleRow(r.name, metaLine(once ? '<span class="tg once">' + esc(once) + '</span>' : r.tag ? esc(r.tag) : '', r.ph ? esc(shortWhen(r)) : '', inertRule(r.name) ? 'no unit in this list it applies to' : ''),
+      (r.note ? '<p class="note it">' + esc(r.note) + '</p>' : '') + textWithTable(r) + ((r.missing || []).length ? '<p class="note">Not in the app yet: the ' + esc(r.missing.join(' and ')) + ' (they need that Wahapedia page).</p>' : ''), inertRule(r.name) ? 'na' : '');
+  }).join('');
+}
 function screenRules(){
   const f = faction(), a = army(), dets = detachments();
   const note = r => r.note ? '<p class="note it">' + esc(r.note) + '</p>' : '';
@@ -1712,11 +1819,7 @@ function screenRules(){
   let h = '<div class="rules"><div class="ds-meta"><span>' + esc(f.name + ' · ' + a.disposition) + '</span></div>';
   // army rules, and the faction's own terms this list uses (Pulse Jet Move)
   const terms = Object.keys(D.ruleSrc || {}).filter(k => /army rule/i.test(D.ruleSrc[k]) && ruleUsers(k).length);
-  h += '<div class="dsec"><h2 class="lbl">Army rules</h2><div class="abl">' + f.armyRules.map(r => {
-    const once = r.tag && /^(once|twice) per /i.test(r.tag) ? r.tag : '';
-    return ruleRow(r.name, metaLine(once ? '<span class="tg once">' + esc(once) + '</span>' : r.tag ? esc(r.tag) : '', when(r), inertRule(r.name) ? 'no unit in this list it applies to' : ''),
-      note(r) + textWithTable(r) + ((r.missing || []).length ? '<p class="note">Not in the app yet: the ' + esc(r.missing.join(' and ')) + ' (they need that Wahapedia page).</p>' : ''), inertRule(r.name) ? 'na' : '');
-  }).join('') + terms.map(k => ruleRow(k, metaLine(esc(D.ruleSrc[k].replace(/^.*?\((.*)\)$/, '$1'))), rt(D.rules[k]) + usedBy('Used by', ruleUsers(k)))).join('') + '</div></div>';
+  h += '<div class="dsec"><h2 class="lbl">Army rules</h2><div class="abl">' + armyRuleRows(f) + terms.map(k => ruleRow(k, metaLine(esc(D.ruleSrc[k].replace(/^.*?\((.*)\)$/, '$1'))), rt(D.rules[k]) + usedBy('Used by', ruleUsers(k)))).join('') + '</div></div>';
   // detachments: the rule, the enhancements this list takes (and who has them), the others, its stratagems
   h += '<div class="dsec"><h2 class="lbl">Detachments</h2>';
   for(const d of dets){
@@ -1734,28 +1837,33 @@ function screenRules(){
       '</div><p class="dline rs"><span class="il">Stratagems</span>' + (strats.length ? strats.map(st => eligible(st).length ? linkTo('strat', st.id, st.name) : '<span class="none">' + linkTo('strat', st.id, st.name) + ' <span class="from">(no unit in this list)</span></span>').join(', ') : 'none (a rule and enhancements only)') + '</p>' + gap;
   }
   h += '</div>';
-  // the core rules and weapon keywords this army uses, each listed once (folded: players know them)
+  // which unit has which core rule (Lone Operative, Deep Strike, Leader…): from its datasheet, or from one of its
+  // abilities, quoted, since the ability says when. The rule's own text is one tap away, not written out here;
+  // weapon keywords are on the weapons
   const used = new Map();
-  const add = (label, kind) => {
-    const r = ruleFor(label);
-    if(!r || r.src !== 'Core rule') return;
-    const e = used.get(r.key) || { r, kind, labels:new Set() };
-    if(kind === 'weapon') e.kind = 'weapon';
-    if(label.toLowerCase() !== r.key.toLowerCase()) e.labels.add(label);
-    used.set(r.key, e);
-  };
+  const add = label => { const r = ruleFor(label); if(r && r.src === 'Core rule' && !used.has(r.key)) used.set(r.key, r); };
   for(const u of a.units){
-    for(const r of unitRules(u)) add(r, 'ability');
-    for(const w of [...(u.ranged || []), ...(u.melee || [])]){ for(const k of w.kw) add(k, 'weapon'); if(w.hunter) add('Hunter', 'weapon'); }
-    for(const ab of u.abilities) for(const key of Object.keys(D.rules)) if(!CONCEPT.has(key) && mentions(ab.text, key)) add(key, 'ability');
+    for(const r of unitRules(u)) add(r);
+    for(const ab of u.abilities) for(const key of Object.keys(D.rules)) if(!CONCEPT.has(key) && mentions(ab.text, key)) add(key);
   }
-  const gloss = kind => [...used.values()].filter(e => e.kind === kind).sort((x, y) => x.r.key.localeCompare(y.r.key));
-  const glossRows = list => list.map(e => xp(e.r.key, e.kind === 'ability' ? unitNames(ruleUsers(e.r.key)) : (e.labels.size ? [...e.labels].sort().join(', ') : ''), '', rt(e.r.text) + usersVia('In this army', e.r.key), false)).join('');
-  const ur = gloss('ability'), wk = gloss('weapon');
-  h += '<div class="dsec"><h2 class="lbl">Core rules</h2><div class="abl">' +
-    quickRef() +
-    (ur.length ? ruleRow('Unit rules', metaLine(ur.length + ' used by this list'), '<div class="list">' + glossRows(ur) + '</div>') : '') +
-    (wk.length ? ruleRow('Weapon keywords', metaLine(wk.length + ' used by this list'), '<div class="list">' + glossRows(wk) + '</div>') : '') + '</div></div>';
+  const weaponKw = new Set(a.units.flatMap(u => [...(u.ranged || []), ...(u.melee || [])].flatMap(w => w.kw.map(ruleKey).concat(w.hunter ? ['Hunter'] : []))));
+  const oneLine = t => t.replace(/(^|\n)\*([^*\n][^\n]*[^*\n])\*(?=\n|$)/g, '$1$2').replace(/\n(- )?/g, ' ');
+  // an attached unit is named whole; Leader and Support name the character who has it ("Warboss leads Breaka Boyz")
+  const who = (u, key) => { if(!u.leads) return unitLink(u);
+    const cs = key === 'Leader' || key === 'Support' ? charsOf(u).filter(c => c.support === (key === 'Support')) : [];
+    return cs.length ? linkTo('unit', u.id, cs.map(c => c.name).join(' and ')) + ' ' + (key === 'Support' ? 'supports ' : 'leads ') + esc(u.leads) : linkTo('unit', u.id, unitLabel(u)); };
+  const holdersOf = key => a.units.flatMap(u => {
+    const own = unitRules(u).filter(r => ruleKey(r) === key);
+    // "Deadly Demise D3", "Feel No Pain 5+": the value after the unit
+    if(own.length) return [who(u, key) + own.filter(r => r.toLowerCase() !== key.toLowerCase()).map(r => ' <span class="from">' + esc(r.toLowerCase().startsWith(key.toLowerCase()) ? r.slice(key.length).trim() : r) + '</span>').join('')];
+    // from an ability: the unit, then the ability and its words (they say when)
+    const abs = u.abilities.filter(ab => mentions(ab.text, key));
+    return abs.length ? [who(u, key) + abs.map(ab => { const na = naReason(ab);
+      return '<span class="urq">' + linkTo('ability', abilityKey(ab), ab.name) + (na ? ' <i>(' + esc(na) + ')</i>' : '') + ': ' + inline(oneLine(ab.text)) + '</span>'; }).join('')] : [];
+  });
+  const ur = [...used.values()].filter(r => !weaponKw.has(r.key)).sort((x, y) => x.key.localeCompare(y.key));
+  if(ur.length) h += '<div class="dsec"><h2 class="lbl">Unit rules</h2><div class="urs">' + ur.map(r => '<div class="urr"><span class="urn">' + linkTo('rule', r.key, r.key) + '</span>' +
+    holdersOf(r.key).map(l => '<p class="uru">' + l + '</p>').join('') + '</div>').join('') + '</div></div>';
   return h + '</div>';
 }
 
@@ -1940,7 +2048,6 @@ document.addEventListener('click', e => {
   if(ds.strat){ e.preventDefault(); showStrat(ds.strat); return; }
   if(ds.ability){ showAbility(ds.ability); return; }
   if(ds.enh){ showEnhancement(ds.enh); return; }
-  if(ds.kw){ showKeywords(ds.kw); return; }
   if(ds.more){ moreShown.add(ds.more); renderFinder(); return; }
   if(el.hasAttribute('data-sback') && sheetStack.length){ const [l, t, h] = sheetStack.pop(); openSheet(l, t, h, true); return; }
   if(el.hasAttribute('data-verified')){ showVerified(); return; }
