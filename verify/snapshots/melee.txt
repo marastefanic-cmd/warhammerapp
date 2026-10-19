@@ -1526,8 +1526,8 @@ USED BYno unit in this list (needs SMOKE)
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## unit ghazghkull-thraka · STRATAGEMS Ghazghkull Thraka
-290 PTS
 GHAZGHKULL THRAKA
+290 PTS
 Epic Hero
 Warlord
 Models
@@ -1555,7 +1555,7 @@ Ghazghkull Thraka
 value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
 
 WHEN TARGETEDLone Operative while within 3" of another friendly ORKS INFANTRY unit · Riled up: 5+ INV
-Ranged Weapons
+RANGED WEAPONS
 Range
 A
 BS
@@ -1579,7 +1579,7 @@ CLOSE-QUARTERS, TORRENT
 -1
 1
 LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 4
-Melee Weapons
+MELEE WEAPONS
 A
 WS
 S
@@ -1603,7 +1603,7 @@ DEVASTATING WOUNDS, EXTRA ATTACKS, PRECISION, SUSTAINED HITS 1
 Own aura: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
 STRATAGEMS · WAR HORDE
 Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
-Abilities
+ABILITIES
 Supreme Commander
 
 If this model is in your army, it must be your WARLORD.
@@ -1651,8 +1651,8 @@ WARLORD
 Mozrog Skragbad ›
 
 ######## unit mozrog-skragbad · GHAZGHKULL THRAKA Mozrog Skragbad
-170 PTS
 MOZROG SKRAGBAD
+170 PTS
 Epic Hero
 Models
 Options
@@ -1679,7 +1679,7 @@ Mozrog Skragbad
 value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
 
 WHEN TARGETEDFeel No Pain 5+ · Destroyed in the Fight phase before being selected to fight: on a 2+ it stays until it has fought or the phase ends · Riled up: 5+ INV
-Ranged Weapons
+RANGED WEAPONS
 Range
 A
 BS
@@ -1694,7 +1694,7 @@ Thump Gun
 0
 2
 ANTI-MONSTER/VEHICLE 4+
-Melee Weapons
+MELEE WEAPONS
 A
 WS
 S
@@ -1727,7 +1727,7 @@ vs MONSTER/VEHICLE: can re-roll wound rolls (Da Bigger Dey Iz…)
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
 STRATAGEMS · WAR HORDE
 Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
-Abilities
+ABILITIES
 Beast Snagga Following
 Every BEAST SNAGGA unit in this list is a MONSTER CHARACTER
 
@@ -1769,8 +1769,8 @@ MOZROG SKRAGBAD
 Nazdreg ›
 
 ######## unit nazdreg-meganobz · MOZROG SKRAGBAD Nazdreg
-405 PTS
 NAZDREG + MEGANOBZ
+405 PTS
 Epic Hero · 165 + Meganobz 240
 Models
 Options
@@ -1809,7 +1809,7 @@ Meganob×6
 value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
 
 WHEN TARGETEDAttacks that target this unit have -1 AP · Riled up: 5+ INV
-Ranged Weapons
+RANGED WEAPONS
 Range
 A
 BS
@@ -1841,7 +1841,7 @@ HAZARDOUS, IGNORES COVER
 -1
 1
 LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 2, IGNORES COVER
-Melee Weapons
+MELEE WEAPONS
 A
 WS
 S
@@ -1876,7 +1876,7 @@ Riled up, Fight phase: +1 to hit rolls (Krumpin’ Time)
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
 STRATAGEMS · WAR HORDE
 Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
-Abilities
+ABILITIES
 “this unit” = the whole attached unit
 Nazdreg’s Know-wotz
 - Nazdreg
@@ -1940,8 +1940,8 @@ MEGANOBZ*
 Beastboss · Headwoppa’s Killchoppa ›
 
 ######## unit beastboss-on-squigosaur-headwoppas-killchoppa · NAZDREG Beastboss on Squigosaur
-155 PTS
 BEASTBOSS ON SQUIGOSAUR
+155 PTS
 Character
 Headwoppa’s Killchoppa
 Models
@@ -1969,7 +1969,7 @@ Beastboss on Squigosaur
 value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
 
 WHEN TARGETEDFeel No Pain 5+ · Riled up: 5+ INV
-Ranged Weapons
+RANGED WEAPONS
 Range
 A
 BS
@@ -1992,7 +1992,7 @@ Slugga
 0
 1
 CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
-Melee Weapons
+MELEE WEAPONS
 A
 WS
 S
@@ -2025,7 +2025,7 @@ Made a charge move this turn: +1 AP (Headwoppa’s Killchoppa)
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
 STRATAGEMS · WAR HORDE
 Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
-Abilities
+ABILITIES
 Thundering Stampede
 Charge
 
@@ -2077,8 +2077,8 @@ WARBOSS
 Beastboss ›
 
 ######## unit beastboss-on-squigosaur · BEASTBOSS ON SQUIGOSAUR Beastboss on Squigosaur
-140 PTS
 BEASTBOSS ON SQUIGOSAUR
+140 PTS
 Character
 Models
 Options
@@ -2105,7 +2105,7 @@ Beastboss on Squigosaur
 value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
 
 WHEN TARGETEDFeel No Pain 5+ · Riled up: 5+ INV
-Ranged Weapons
+RANGED WEAPONS
 Range
 A
 BS
@@ -2128,7 +2128,7 @@ Slugga
 0
 1
 CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
-Melee Weapons
+MELEE WEAPONS
 A
 WS
 S
@@ -2160,7 +2160,7 @@ ANTI-MONSTER/VEHICLE 3+, EXTRA ATTACKS, SUSTAINED HITS 1
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
 STRATAGEMS · WAR HORDE
 Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
-Abilities
+ABILITIES
 Thundering Stampede
 Charge
 
@@ -2204,8 +2204,8 @@ WARBOSS
 Bigboss ›
 
 ######## unit bigboss-warboss-breaka-boyz · BEASTBOSS ON SQUIGOSAUR Bigboss
-290 PTS
 BIGBOSS + WARBOSS + BREAKA BOYZ
+290 PTS
 Character · 50 + Warboss 120 + Breaka Boyz 120
 Kunnin’ But Brutal (Warboss)
 Models
@@ -2272,7 +2272,7 @@ Breaka Boy×5
 value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
 
 WHEN TARGETEDRiled up: 5+ INV
-Ranged Weapons
+RANGED WEAPONS
 Range
 A
 BS
@@ -2317,7 +2317,7 @@ Rokkit pistol
 CLOSE-QUARTERS
 WHOLE UNIT
 Boss’ Ammo Runt used (your Shooting phase, when selected to shoot): Warboss +1 to hit rolls
-Melee Weapons
+MELEE WEAPONS
 A
 WS
 S
@@ -2384,7 +2384,7 @@ Made a charge move this turn: Warboss +3 A, +2 S (Might is Right)
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
 STRATAGEMS · WAR HORDE
 Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
-Abilities
+ABILITIES
 “this unit” = the whole attached unit
 Sumfin’ to Prove
 - Bigboss
@@ -2478,8 +2478,8 @@ EXPLOSIVES*
 Warboss in Mega Armour · Follow Me Ladz ›
 
 ######## unit warboss-in-mega-armour-meganobz · BIGBOSS Warboss in Mega Armour
-375 PTS
 WARBOSS IN MEGA ARMOUR + MEGANOBZ
+375 PTS
 Character · 135 + Meganobz 240
 Follow Me Ladz
 Models
@@ -2519,7 +2519,7 @@ Meganob×6
 value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
 
 WHEN TARGETEDAttacks that target this unit have -1 AP · Riled up: 5+ INV
-Ranged Weapons
+RANGED WEAPONS
 Range
 A
 BS
@@ -2534,7 +2534,7 @@ Big Shoota
 0
 1
 LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 2
-Melee Weapons
+MELEE WEAPONS
 A
 WS
 S
@@ -2561,7 +2561,7 @@ Riled up, Fight phase: +1 to hit rolls (Krumpin’ Time)
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
 STRATAGEMS · WAR HORDE
 Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
-Abilities
+ABILITIES
 “this unit” = the whole attached unit
 Krushin’ Impetus
 - Warboss in Mega Armour
@@ -2626,8 +2626,8 @@ MEGANOBZ*
 Gretchin ›
 
 ######## unit gretchin · WARBOSS IN MEGA ARMOUR Gretchin
-45 PTS EACH
 GRETCHIN
+45 PTS EACH
 Infantry · ×2 in list
 Models
 Options
@@ -2654,7 +2654,7 @@ Gretchin×10
 value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
 
 WHEN TARGETEDRiled up: 5+ INV
-Ranged Weapons
+RANGED WEAPONS
 Range
 A
 BS
@@ -2669,7 +2669,7 @@ Grot Blasta×10
 0
 1
 CLOSE-QUARTERS
-Melee Weapons
+MELEE WEAPONS
 A
 WS
 S
@@ -2685,7 +2685,7 @@ SUSTAINED HITS 1
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
 STRATAGEMS · WAR HORDE
 Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
-Abilities
+ABILITIES
 Downtrodden
 
 For the purposes of transport capacity, each 2 Gretchin models (rounding up) take up the space of 1 model.
@@ -2714,8 +2714,8 @@ INFANTRY
 Deffkoptas ›
 
 ######## unit deffkoptas · GRETCHIN Deffkoptas
-85 PTS
 DEFFKOPTAS
+85 PTS
 Mounted
 Models
 Options
@@ -2744,7 +2744,7 @@ Deffkoptas×3
 value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
 
 WHEN TARGETEDRiled up: 5+ INV
-Ranged Weapons
+RANGED WEAPONS
 Range
 A
 BS
@@ -2787,7 +2787,7 @@ Slugga×3
 1
 CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
 Your Shooting phase, after an ingress move this turn: +1 to hit rolls (Deff from Above)
-Melee Weapons
+MELEE WEAPONS
 A
 WS
 S
@@ -2811,7 +2811,7 @@ CLEAVE 1, HAZARDOUS, SUSTAINED HITS 1
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
 STRATAGEMS · WAR HORDE
 Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
-Abilities
+ABILITIES
 Aerial Manoover
 Their Fight
 

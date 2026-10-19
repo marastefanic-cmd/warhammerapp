@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" href="icon-192.png">
 <style>:root{padding-top:env(safe-area-inset-top,0px)}img{max-width:100%}</style>
 <title>Waaagh Codex</title>
-<script>window.WH_BUILD = '08fa02cba0';</script>
+<script>window.WH_BUILD = 'edf8cdfdf5';</script>
 </head>
 <body>
 <style>
@@ -379,12 +379,26 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 /* ---------- the datasheet as New Recruit draws it: one framed sheet of table sections ----------
    a slate band (points, name), grey header rows that carry the column labels, hairline rows,
    whose a row is after its name in grey ("- Mek"), and the keywords at the bottom as pills */
-:root{ --ds-band:#506276; --ds-band-fg:#f4f6f8; --ds-head:#272b30; --ds-head-fg:#c9ced6 }
-.ds{margin-top:8px; border:1px solid var(--line); border-top:0; border-radius:0 0 3px 3px}
+:root{ --ds-band:#506276; --ds-band-fg:#f4f6f8; --ds-h2:#3a4656; --ds-h2-fg:#eef1f5; --ds-head:#272b30; --ds-head-fg:#c9ced6 }
+/* heading levels: the unit (slate band) > a section box (Ranged Weapons, Melee Weapons, Abilities: its own box, a gap
+   above, an angled darker band) > a table header (Models, Unit: grey row) > a part of the unit (Mek, Tankbustas, Whole unit) */
+.ds{margin-top:8px}
+.dbx{border:1px solid var(--line); border-top:0; border-radius:0 0 3px 3px}
+.ds .dbx + .dbx{margin-top:14px}
+.dbx.dft{border-top:1px solid var(--line); border-radius:3px}
+.dh2, .ds .dbx > .wh.both, .ds .dbx > .ab.pf > summary{margin:0 -1px; background:var(--ds-h2); clip-path:polygon(7px 0, calc(100% - 7px) 0, 100% 7px, 100% 100%, 0 100%, 0 7px)}
+.dh2{display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:2px 8px; padding:8px 11px 6px}
+.ds .dbx > .wh.both{padding:8px 11px 6px}
+.dh2 > span:first-child, .ds .dbx > .wh.both .n, .ds .dbx > .ab.pf > summary b.kh{font:700 14.5px/1.15 var(--f-head); letter-spacing:.07em; text-transform:uppercase; color:var(--ds-h2-fg)}
+.ds .dbx > .wh.both > span:not(.n){color:#d5dbe3}
+.dh2 .lbn .link{color:#d5dbe3}
+.dh2 + .mods, .dh2 + .abl{border-top:0}
+.ds .dbx > .ab.pf{border-top:0}
 .dsh{display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:2px 12px; margin:0 -1px; padding:7px 12px 6px;
   background:var(--ds-band); color:var(--ds-band-fg); clip-path:polygon(9px 0, calc(100% - 9px) 0, 100% 9px, 100% 100%, 0 100%, 0 9px)}
 .dpts{font:700 15px/1.15 var(--f-head); letter-spacing:.06em; text-transform:uppercase; white-space:nowrap}
-.dsn{flex:1 1 auto; min-width:0; text-align:right; font:700 15px/1.15 var(--f-head); letter-spacing:.08em; text-transform:uppercase}
+.dsn{flex:1 1 auto; min-width:0; text-align:left; font:700 15px/1.15 var(--f-head); letter-spacing:.08em; text-transform:uppercase}
+.dpts{margin-left:auto}
 .dsm{display:flex; flex-wrap:wrap; align-items:baseline; gap:2px 10px; padding:5px 10px; font-size:12.5px; line-height:1.35; color:var(--muted)}
 .dhd, .ds .st > span.h, .ds .wh.both > span, .ds .wh.both .n, .dk{font:500 12.5px/1.2 var(--f-body); letter-spacing:0; text-transform:none; color:var(--ds-head-fg)}
 .dhd{display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:2px 8px; padding:5px 10px 4px; background:var(--ds-head)}
@@ -407,7 +421,6 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .dnt{padding:0 10px 7px; border-top:1px solid var(--line)}
 .dnt:empty{display:none}
 .dnt > :first-child{margin-top:6px}
-.ds .wt.both{margin-top:0}
 .ds .wh.both{padding:5px 10px 4px; background:var(--ds-head); box-shadow:none}
 .ds .wh.both .n{white-space:nowrap}
 .ds .wb, .ds .wb:has(> .wr .x){padding:5px 10px 4px}
@@ -450,6 +463,8 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
   .ds .ml{grid-template-columns:minmax(0,1fr)}
   .ds .mdl .dhd{display:flex}
   .ds .wh.both .n{font-size:12px}
+  .ds .dbx > .wh.both .n{font-size:13px; white-space:normal}
+  .ds .dbx > .wh.both, .dh2{padding-left:9px; padding-right:9px}
   .dk{padding-left:8px}
 }
 /* slice screens: one band per unit, pinned until the next unit's band pushes it off */
@@ -610,8 +625,8 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="verified.js?v=08fa02cba0"></script>
-<script src="data.js?v=08fa02cba0"></script>
+<script src="verified.js?v=edf8cdfdf5"></script>
+<script src="data.js?v=edf8cdfdf5"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -1415,7 +1430,7 @@ function unitWeapons(u){
   if(!r.length && !m.length) return '';
   const mr = r.length ? unitMods(u, 'ranged') : [], mm = m.length ? unitMods(u, 'melee') : [];
   const head = (id, label, cols, wide) => '<div class="anc" id="sec-' + id + '"></div><div class="wh both"><span class="n' + (wide ? ' n2' : '') + '">' + label + '</span>' + cols.map(c => '<span>' + c + '</span>').join('') + '</div>';
-  let h = '<div class="wt both"><!--A-->';
+  let h = '<!--A-->' + (r.length ? '<section class="dbx wt both">' : '');
   const rItems = weaponItems(r);
   const pistols = m.length && rItems.length > 1 && rItems.every(isCQ);
   if(pistols){
@@ -1425,8 +1440,8 @@ function unitWeapons(u){
       esc([...n].map(([k, c]) => k + (c > 1 ? ' ×' + c : '')).join(', ')) + ' · all pistols</span></span>' + chev + '</summary>' +
       '<div class="wh both"><span class="n"></span>' + ['Range','A','BS','S','AP','D'].map(c => '<span>' + c + '</span>').join('') + '</div>' + weaponRows(r, RANGED_KEYS, mr, u, 'ranged') + '</details>';
   } else if(r.length) h += head('ranged', 'Ranged Weapons', ['Range','A','BS','S','AP','D']) + weaponRows(r, RANGED_KEYS, mr, u, 'ranged');
-  if(r.length) h += '<!--R-->';
-  if(m.length) h += head('melee', 'Melee Weapons', ['A','WS','S','AP','D'], true) + weaponRows(m, ['none'].concat(MELEE_KEYS), mm, u, 'melee') + '<!--M-->';
+  if(r.length) h += '<!--R--></section>';
+  if(m.length) h += '<section class="dbx wt both">' + head('melee', 'Melee Weapons', ['A','WS','S','AP','D'], true) + weaponRows(m, ['none'].concat(MELEE_KEYS), mm, u, 'melee') + '<!--M--></section>';
   const key = x => [x.from, x.when, x.note].join('|');
   const inR = new Set(mr.map(key)), inM = new Set(mm.map(key)), seen = new Set(), notes = [];
   const damaged = new Set(u.abilities.filter(ab => ab.damaged).map(ab => ab.name));
@@ -1446,7 +1461,9 @@ function unitWeapons(u){
   const rest = [...byWhen.values()].filter(g => !g.every(x => x.scope && x.scope === g[0].scope)).flat();
   // footnotes for ranged and melee attacks alike go first, so neither phase's reader skips them
   const both = r.length && m.length;
-  return h.replace('<!--A-->', both ? block(rest, u.leads ? 'All attacks · whole unit' : 'All attacks') : '').replace('<!--R-->', block(only('Ranged'))).replace('<!--M-->', block(only('Melee'))) + (both ? '' : block(rest)) + '</div>';
+  const allBox = list => list.length ? '<section class="dbx"><div class="dh2"><span>' + (u.leads ? 'All attacks · whole unit' : 'All attacks') + '</span></div><div class="mods all">' + modLines(list, u, hasHunter) + '</div></section>' : '';
+  // one kind of weapon only: its footnotes all go in its box
+  return h.replace('<!--A-->', both ? allBox(rest) : '').replace('<!--R-->', block(only('Ranged')) + (!both && r.length ? block(rest) : '')).replace('<!--M-->', block(only('Melee')) + (!both && m.length ? block(rest) : ''));
 }
 
 /* ---------- screen: datasheet ----------
@@ -1524,7 +1541,7 @@ function screenUnit(){
   const strats = allStratagems().filter(s => eligible(s).includes(u));   // every one it can be the target of
   const def = defenceItems(u);
   const meta = [esc(u.role)].concat(u.ptsNote ? [esc(u.ptsNote)] : [], u.copies > 1 ? ['×' + esc(u.copies) + ' in list'] : []);
-  const band = '<div class="dsh"><span class="dpts num">' + esc(u.pts) + ' pts' + (u.copies > 1 ? ' each' : '') + '</span><span class="dsn">' + esc(unitLabel(u)) + '</span></div>' +
+  const band = '<div class="dsh"><span class="dsn">' + esc(unitLabel(u)) + '</span><span class="dpts num">' + esc(u.pts) + ' pts' + (u.copies > 1 ? ' each' : '') + '</span></div>' +
     '<div class="dsm"><span>' + meta.join(' · ') + '</span>' + nameTags(u, { noLeads:true, noCopies:true }) + '</div>';
   // the models as New Recruit lists them: how many, with what wargear, and which character leads or supports
   const cs = charsOf(u);
@@ -1552,15 +1569,15 @@ function screenUnit(){
       return '<div class="def dmg"><span class="il">Damaged ' + esc(ab.damaged) + ' W</span>' + linkTo('ability', abilityKey(ab), m ? m.note : 'see the rule') +
         (psy ? ' <span class="from">(' + linkTo('rule', 'Psychic', '[PSYCHIC]') + ' weapons can ignore it)</span>' : '') + '</div>'; }).join('') + '</div></section>';
   const attached = u.leads ? '<span class="lbn">' + (D.rules['Attached Units'] ? linkTo('rule', 'Attached Units', '“this unit” = the whole attached unit') : '“this unit” = the whole attached unit') + '</span>' : '';
-  const abilities = abil.length ? '<section class="dsx" id="sec-abilities"><div class="dhd"><span>Abilities</span>' + attached + '</div>' + abilityRows(abil, u, { suffix:true }) + '</section>' : '';
+  const abilities = abil.length ? '<section class="dbx" id="sec-abilities"><div class="dh2"><span>Abilities</span>' + attached + '</div>' + abilityRows(abil, u, { suffix:true }) + '</section>' : '';
   const rules = allUnitRules(u).filter(r => !weaponKeys.has(ruleKey(r)));
   const ks = kwStars(u);
-  const foot = '<section class="dsx dft">' +
+  const foot = '<section class="dbx dft">' +
     (rules.length ? '<div class="dkv" id="sec-rules"><span class="dk">Rules</span><span class="dv">' + rules.map(r => linkTo('rule', r, r) + (inertRule(r) ? ' <span class="from">(no unit in this list it applies to)</span>' : '')).join(', ') + '</span></div>' : '') +
     stratLines(u, strats) +
     '<div class="dkv" id="sec-kw"><span class="dk">Keywords</span><span class="dv"><span class="pills">' + u.kw.map(k => '<span class="pill">' + esc(k) + (ks.starred.has(k) ? '*' : '') + '</span>').join('') + '</span>' +
       (ks.note ? '<span class="kwn">' + esc(ks.note) + '</span>' : '') + '</span></div></section>';
-  return '<div class="ds">' + band + models + stats + unitWeapons(u) + abilities + foot + '</div>';
+  return '<div class="ds"><section class="dbx">' + band + models + stats + '</section>' + unitWeapons(u) + abilities + foot + '</div>';
 }
 // every stratagem the unit can use: one line per detachment, then core, each in phase order;
 // a detachment with none for this unit is named, not left out

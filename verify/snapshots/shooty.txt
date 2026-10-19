@@ -1622,8 +1622,8 @@ USED BYany unit
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
 ######## unit wazdakka · STRATAGEMS Wazdakka Gutsmek
-200 PTS
 WAZDAKKA GUTSMEK
+200 PTS
 Epic Hero
 Models
 Options
@@ -1649,7 +1649,7 @@ Wazdakka Gutsmek
 WHEN TARGETEDRiled up: 5+ INV
 ALL ATTACKS
 Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase
-Ranged Weapons
+RANGED WEAPONS
 Range
 A
 BS
@@ -1672,7 +1672,7 @@ Psyko-gatler
 -2
 2
 ASSAULT, LETHAL HITS: NON-MONSTER/VEHICLE, SUSTAINED HITS 1
-Melee Weapons
+MELEE WEAPONS
 A
 WS
 S
@@ -1702,7 +1702,7 @@ Speeding Bulk and Flaming Exhaust
 1
 CLEAVE 1, EXTRA ATTACKS
 Made a charge move this turn: Grabba Dragga +1 to wound (Lance)
-Abilities
+ABILITIES
 Full Throttle
 Your Command · Your Movement · Your Charge
 
@@ -1754,8 +1754,8 @@ WAZDAKKA GUTSMEK
 Big Mek · Dreadherder ›
 
 ######## unit dakkarig-herder · WAZDAKKA GUTSMEK Big Mek Dakkarig
-190 PTS
 BIG MEK DAKKARIG
+190 PTS
 Character
 Dreadherder
 Models
@@ -1784,7 +1784,7 @@ ALL ATTACKS
 Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6): 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked) (Try Dat Button!)
 Picked by the Dreadherder: re-roll hit rolls of 1 this turn
 Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase
-Ranged Weapons
+RANGED WEAPONS
 Range
 A
 BS
@@ -1810,7 +1810,7 @@ Multi-busta Launcha
 3
 IGNORES COVER, LETHAL HITS
 Riled up: [SUSTAINED HITS 1] (Even More Dakka)
-Melee Weapons
+MELEE WEAPONS
 A
 WS
 S
@@ -1822,7 +1822,7 @@ Stompy Feet
 6
 -1
 1
-Abilities
+ABILITIES
 Even More Dakka
 Their Movement · Your Shooting
 
@@ -1868,8 +1868,8 @@ WALKER
 Big Mek · Cybork Boosta ›
 
 ######## unit dakkarig-boosta · BIG MEK DAKKARIG Big Mek Dakkarig
-170 PTS
 BIG MEK DAKKARIG
+170 PTS
 Character
 Cybork Boosta
 Models
@@ -1901,7 +1901,7 @@ ALL ATTACKS
 Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6): 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked) (Try Dat Button!)
 Picked by the Dreadherder: re-roll hit rolls of 1 this turn
 Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase
-Ranged Weapons
+RANGED WEAPONS
 Range
 A
 BS
@@ -1927,7 +1927,7 @@ Multi-busta Launcha
 3
 IGNORES COVER, LETHAL HITS
 Riled up: [SUSTAINED HITS 1] (Even More Dakka)
-Melee Weapons
+MELEE WEAPONS
 A
 WS
 S
@@ -1939,7 +1939,7 @@ Stompy Feet
 6
 -1
 1
-Abilities
+ABILITIES
 Even More Dakka
 Their Movement · Your Shooting
 
@@ -1982,8 +1982,8 @@ WALKER
 Big Mek · Supa-glowy Fing ›
 
 ######## unit bigmek-mega · BIG MEK DAKKARIG Big Mek in Mega Armour
-115 PTS
 BIG MEK IN MEGA ARMOUR
+115 PTS
 Character
 Supa-glowy Fing
 Models
@@ -2011,7 +2011,7 @@ Big Mek in Mega Armour
 value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
 
 WHEN TARGETEDRiled up: 5+ INV
-Ranged Weapons
+RANGED WEAPONS
 Range
 A
 BS
@@ -2039,7 +2039,7 @@ STRATAGEMS · SHOOTA BOYZ
 Your Shooting phase, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (1CP Kustom Dakka)
 Your Shooting phase, target within 9": +1 AP (1CP Glowin’ Dakka)
 Your Shooting phase: [SUSTAINED HITS 1] (1CP Never Enough Dakka)
-Melee Weapons
+MELEE WEAPONS
 A
 WS
 S
@@ -2051,7 +2051,7 @@ Power Klaw
 10
 -2
 2
-Abilities
+ABILITIES
 Fix Dat Armour Up
 Once per battle, per unit
 Your Command
@@ -2100,8 +2100,8 @@ MEGA ARMOUR
 Warboss ›
 
 ######## unit warboss · BIG MEK IN MEGA ARMOUR Warboss
-100 PTS
 WARBOSS
+100 PTS
 Character
 Warlord
 Models
@@ -2129,7 +2129,7 @@ Warboss
 value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
 
 WHEN TARGETEDRiled up: 5+ INV
-Ranged Weapons
+RANGED WEAPONS
 Range
 A
 BS
@@ -2150,7 +2150,7 @@ STRATAGEMS · SHOOTA BOYZ
 Your Shooting phase, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (1CP Kustom Dakka)
 Your Shooting phase, target within 9": +1 AP (1CP Glowin’ Dakka)
 Your Shooting phase: [SUSTAINED HITS 1] (1CP Never Enough Dakka)
-Melee Weapons
+MELEE WEAPONS
 A
 WS
 S
@@ -2164,7 +2164,7 @@ Kustom Choppa
 2
 CLEAVE 2
 Made a charge move this turn: +3 A, +2 S (Might is Right)
-Abilities
+ABILITIES
 Might is Right
 Fight
 
@@ -2215,8 +2215,8 @@ WARLORD
 Mek + Tankbustas ›
 
 ######## unit mek-tankbustas · WARBOSS Mek
-215 PTS EACH
 MEK + TANKBUSTAS
+215 PTS EACH
 Character · 55 + Tankbustas 160 · ×2 in list
 Models
 Options
@@ -2268,7 +2268,7 @@ Tankbusta×5
 value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
 
 WHEN TARGETEDRiled up: 5+ INV
-Ranged Weapons
+RANGED WEAPONS
 Range
 A
 BS
@@ -2317,7 +2317,7 @@ STRATAGEMS · SHOOTA BOYZ
 Your Shooting phase, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (1CP Kustom Dakka)
 Your Shooting phase, target within 9": +1 AP (1CP Glowin’ Dakka)
 Your Shooting phase: [SUSTAINED HITS 1] (1CP Never Enough Dakka)
-Melee Weapons
+MELEE WEAPONS
 A
 WS
 S
@@ -2357,7 +2357,7 @@ Gitstikka×5
 5
 0
 1
-Abilities
+ABILITIES
 “this unit” = the whole attached unit
 Clever Know-wotz
 - Mek
@@ -2421,8 +2421,8 @@ TANKBUSTAS*
 Mek + Flash Gitz ›
 
 ######## unit mek-flashgitz · MEK Mek
-300 PTS
 MEK + FLASH GITZ
+300 PTS
 Character · 55 + Flash Gitz 245
 Supa-snazz Dakka
 Models
@@ -2464,7 +2464,7 @@ Flash Gitz
 value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
 
 WHEN TARGETEDRiled up: 5+ INV
-Ranged Weapons
+RANGED WEAPONS
 Range
 A
 BS
@@ -2513,7 +2513,7 @@ STRATAGEMS · SHOOTA BOYZ
 Your Shooting phase, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (1CP Kustom Dakka)
 Your Shooting phase, target within 9": +1 AP (1CP Glowin’ Dakka)
 Your Shooting phase: [SUSTAINED HITS 1] (1CP Never Enough Dakka)
-Melee Weapons
+MELEE WEAPONS
 A
 WS
 S
@@ -2533,7 +2533,7 @@ Choppa×10
 5
 -1
 1
-Abilities
+ABILITIES
 “this unit” = the whole attached unit
 Clever Know-wotz
 - Mek
@@ -2591,8 +2591,8 @@ FLASH GITZ*
 Gretchin ›
 
 ######## unit gretchin · MEK Gretchin
-45 PTS EACH
 GRETCHIN
+45 PTS EACH
 Infantry · ×3 in list
 Models
 Options
@@ -2619,7 +2619,7 @@ Gretchin×10
 value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
 
 WHEN TARGETEDRiled up: 5+ INV
-Ranged Weapons
+RANGED WEAPONS
 Range
 A
 BS
@@ -2639,7 +2639,7 @@ STRATAGEMS · SHOOTA BOYZ
 Your Shooting phase, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (1CP Kustom Dakka)
 Your Shooting phase, target within 9": +1 AP (1CP Glowin’ Dakka)
 Your Shooting phase: [SUSTAINED HITS 1] (1CP Never Enough Dakka)
-Melee Weapons
+MELEE WEAPONS
 A
 WS
 S
@@ -2651,7 +2651,7 @@ Scavenged Shivs×10
 2
 0
 1
-Abilities
+ABILITIES
 Downtrodden
 
 For the purposes of transport capacity, each 2 Gretchin models (rounding up) take up the space of 1 model.
@@ -2682,8 +2682,8 @@ INFANTRY
 Deffkoptas ›
 
 ######## unit deffkoptas · GRETCHIN Deffkoptas
-85 PTS
 DEFFKOPTAS
+85 PTS
 Mounted
 Models
 Options
@@ -2707,7 +2707,7 @@ Deffkoptas×3
 2
 6+
 WHEN TARGETEDRiled up: 5+ INV
-Ranged Weapons
+RANGED WEAPONS
 Range
 A
 BS
@@ -2742,7 +2742,7 @@ Slugga×3
 1
 CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
 Your Shooting phase, after an ingress move this turn: +1 to hit rolls (Deff from Above)
-Melee Weapons
+MELEE WEAPONS
 A
 WS
 S
@@ -2762,7 +2762,7 @@ Spinnin’ Blades×3
 -1
 1
 CLEAVE 1, HAZARDOUS
-Abilities
+ABILITIES
 Aerial Manoover
 Their Fight
 
@@ -2796,8 +2796,8 @@ SPEED FREEKS
 Killa Kans ›
 
 ######## unit killa-kans · DEFFKOPTAS Killa Kans
-275 PTS
 KILLA KANS
+275 PTS
 Vehicle
 Models
 Options
@@ -2826,7 +2826,7 @@ vs units with no T 7+ models: +1 to hit rolls (Spiteful Power Trip)
 Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6): 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked) (Try Dat Button!)
 Picked by the Dreadherder: re-roll hit rolls of 1 this turn
 Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase
-Ranged Weapons
+RANGED WEAPONS
 Range
 A
 BS
@@ -2857,7 +2857,7 @@ BLAST 2, TORRENT
 -1
 1
 BLAST 1, IGNORES COVER, SUSTAINED HITS 1
-Melee Weapons
+MELEE WEAPONS
 A
 WS
 S
@@ -2869,7 +2869,7 @@ Kan Klaw×6
 8
 -2
 3
-Abilities
+ABILITIES
 Spiteful Power Trip
 Their Movement · Your Shooting · Fight
 
