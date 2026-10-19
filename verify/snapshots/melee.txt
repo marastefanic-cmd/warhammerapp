@@ -206,7 +206,7 @@ Deffkoptas
 ######## ranged · UNITS Ranged weapons WEAPON RNG A BS S AP D
 Ghazghkull Thraka
 Warlord
-Mork’s RoarPICK ONE PROFILE
+Mork’s Roar
 ➤Point Blank
 9"
 2D6+2
@@ -234,7 +234,7 @@ Thump Gun
 ANTI-MONSTER/VEHICLE 4+
 Nazdreg
 + Meganobz
-Kustom Blasta XALL 3 CAN FIRE
+Kustom Blasta X
 +Skorcha
 12"
 3
@@ -261,17 +261,6 @@ HAZARDOUS, IGNORES COVER
 LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 2, IGNORES COVER
 Beastboss on Squigosaur
 Headwoppa’s Killchoppa
-
-Can shoot with one or both (Close-quarters does not limit MONSTER models).
-
-Slugga
-12"
-1
-5+
-4
-0
-1
-CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
 Thump Gun
 18"
 3
@@ -280,18 +269,15 @@ Thump Gun
 0
 2
 ANTI-MONSTER/VEHICLE 4+
+Slugga
+12"
+1
+5+
+4
+0
+1
+CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
 Beastboss on Squigosaur
-
-Can shoot with one or both (Close-quarters does not limit MONSTER models).
-
-Slugga
-12"
-1
-5+
-4
-0
-1
-CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
 Thump Gun
 18"
 3
@@ -300,6 +286,14 @@ Thump Gun
 0
 2
 ANTI-MONSTER/VEHICLE 4+
+Slugga
+12"
+1
+5+
+4
+0
+1
+CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
 Bigboss
 Kunnin’ But Brutal (Warboss)
 + Warboss + Breaka Boyz
@@ -313,7 +307,7 @@ Slugga
 1
 CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
 WARBOSS
-Kombi-skorchaPICK ONE PROFILE
+Kombi-skorcha
 ➤Skorcha
 12"
 3
@@ -362,12 +356,7 @@ Grot Blasta×10
 1
 CLOSE-QUARTERS
 Deffkoptas
-
-Deffkopta can shoot with Slugga or Rokkit Launcha, not both (Close-quarters); in close-quarters shooting, Slugga only.
-
-Deffkopta w/ Kustom mega-blasta can shoot with Slugga or Kustom Mega-blasta, not both (Close-quarters); in close-quarters shooting, Slugga only.
-
-Rokkit Launcha×2PICK ONE PROFILE
+Rokkit Launcha×2
 ➤Busta
 24"
 2
@@ -384,14 +373,6 @@ LETHAL HITS
 0
 1
 BLAST 2
-Slugga×3
-12"
-1
-5+
-4
-0
-1
-CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
 Kustom Mega-blastaDEFFKOPTA
 24"
 3
@@ -400,14 +381,21 @@ Kustom Mega-blastaDEFFKOPTA
 -2
 3
 HAZARDOUS, LETHAL HITS
+OR
+WHEN USING ANOTHER SHOOTING TYPE
+Slugga×3
+12"
+1
+5+
+4
+0
+1
+CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
 Your Shooting phase, after an ingress move this turn: +1 to hit rolls (Deff from Above)
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Ghazghkull Thraka
 Warlord
-
-Fights with both: Gork’s Klaw, plus Adamantine ’Eadbutt on top (extra attacks).
-
 Gork’s Klaw
 7
 2+
@@ -415,6 +403,7 @@ Gork’s Klaw
 -3
 4
 CLEAVE 2, DEVASTATING WOUNDS, SUSTAINED HITS 1
++
 Adamantine ’Eadbutt
 1
 2+
@@ -426,10 +415,7 @@ Own aura: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
 STRATAGEMS · WAR HORDE
 Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
 Mozrog Skragbad
-
-Fights with both: Gutrippa, plus Big Chompa’s Jaws on top (extra attacks).
-
-GutrippaPICK ONE PROFILE
+Gutrippa
 ➤HunterMON/VEH ONLY
 6
 2+
@@ -444,6 +430,7 @@ LETHAL HITS, SUSTAINED HITS 1
 -2
 2
 CLEAVE 1, SUSTAINED HITS 1
++
 Big Chompa’s Jaws
 3
 3+
@@ -457,9 +444,7 @@ STRATAGEMS · WAR HORDE
 Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
 Nazdreg
 + Meganobz
-
-NAZDREGFights with both: Moonchewa, plus Kustom Blasta X on top (extra attacks).
-
+NAZDREG
 Moonchewa
 5
 2+
@@ -467,6 +452,7 @@ Moonchewa
 -2
 3
 CLEAVE 1, TWIN-LINKED, SUSTAINED HITS 1
++
 Kustom Blasta X
 6
 2+
@@ -488,10 +474,7 @@ STRATAGEMS · WAR HORDE
 Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
 Beastboss on Squigosaur
 Headwoppa’s Killchoppa
-
-Fights with both: Beastchoppa, plus Squigosaur’s jaws on top (extra attacks).
-
-BeastchoppaPICK ONE PROFILE
+Beastchoppa
 ➤HunterMON/VEH ONLY
 6
 2+
@@ -506,6 +489,7 @@ SUSTAINED HITS 1
 -2
 2
 CLEAVE 1, SUSTAINED HITS 1
++
 Squigosaur’s jaws
 3
 3+
@@ -518,10 +502,7 @@ Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
 STRATAGEMS · WAR HORDE
 Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
 Beastboss on Squigosaur
-
-Fights with both: Beastchoppa, plus Squigosaur’s jaws on top (extra attacks).
-
-BeastchoppaPICK ONE PROFILE
+Beastchoppa
 ➤HunterMON/VEH ONLY
 6
 2+
@@ -536,6 +517,7 @@ SUSTAINED HITS 1
 -2
 2
 CLEAVE 1, SUSTAINED HITS 1
++
 Squigosaur’s jaws
 3
 3+
@@ -566,11 +548,6 @@ Power Klaw
 2
 SUSTAINED HITS 1
 BREAKA BOYZ
-
-Nob picks one to fight with: Choppa or Smash Hammer.
-
-The others: one each (×N = how many the unit has).
-
 ChoppaNOB
 4
 3+
@@ -578,7 +555,9 @@ ChoppaNOB
 -1
 1
 SUSTAINED HITS 1
-Smash Hammer×4PICK ONE PROFILE
+OR
+NOB
+Smash Hammer×4
 ➤HunterMON/VEH ONLY
 3
 3+
@@ -648,9 +627,6 @@ Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
 STRATAGEMS · WAR HORDE
 Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
 Deffkoptas
-
-Pick one to fight with: Choppa or Spinnin’ Blades.
-
 Choppa×3
 3
 4+
@@ -658,6 +634,7 @@ Choppa×3
 -1
 1
 SUSTAINED HITS 1
+OR
 Spinnin’ Blades×3
 4
 3+
@@ -1720,6 +1697,8 @@ Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wa
 ######## unit ghazghkull-thraka · STRATAGEMS Ghazghkull Thraka
 Epic Hero · 290 pts
 Warlord
+1× Ghazghkull Thraka
+Adamantine ’Eadbutt, Gork’s Klaw, Mork’s Roar
 M
 T
 SV
@@ -1745,7 +1724,7 @@ BS
 S
 AP
 D
-Mork’s RoarPICK ONE PROFILE
+Mork’s Roar
 ➤Point Blank
 9"
 2D6+2
@@ -1768,9 +1747,6 @@ WS
 S
 AP
 D
-
-Fights with both: Gork’s Klaw, plus Adamantine ’Eadbutt on top (extra attacks).
-
 Gork’s Klaw
 7
 2+
@@ -1778,6 +1754,7 @@ Gork’s Klaw
 -3
 4
 CLEAVE 2, DEVASTATING WOUNDS, SUSTAINED HITS 1
++
 Adamantine ’Eadbutt
 1
 2+
@@ -1829,6 +1806,8 @@ Mozrog Skragbad ›
 
 ######## unit mozrog-skragbad · GHAZGHKULL THRAKA Mozrog Skragbad
 Epic Hero · 170 pts
+1× Mozrog Skragbad
+Big Chompa’s Jaws, Gutrippa, Thump Gun
 M
 T
 SV
@@ -1868,10 +1847,7 @@ WS
 S
 AP
 D
-
-Fights with both: Gutrippa, plus Big Chompa’s Jaws on top (extra attacks).
-
-GutrippaPICK ONE PROFILE
+Gutrippa
 ➤HunterMON/VEH ONLY
 6
 2+
@@ -1886,6 +1862,7 @@ LETHAL HITS, SUSTAINED HITS 1
 -2
 2
 CLEAVE 1, SUSTAINED HITS 1
++
 Big Chompa’s Jaws
 3
 3+
@@ -1932,7 +1909,11 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 Nazdreg ›
 
 ######## unit nazdreg-meganobz · MOZROG SKRAGBAD Nazdreg
-Epic Hero · 405 pts · leading Meganobz
+Epic Hero · 405 pts (165 + Meganobz 240)
+1× NazdregLeading Meganobz
+Kustom Blasta X, Moonchewa
+6× Meganob w/ Twin Killsaw
+Twin Killsaw
 M
 T
 SV
@@ -1958,8 +1939,6 @@ Meganob
 1
 –
 
-1× Nazdreg · 6× Meganob w/ Twin Killsaw · 165 + Meganobz 240 pts
-
 value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
 
 WHEN TARGETEDAttacks that target this unit have -1 AP · Riled up: 5+ INV
@@ -1970,7 +1949,7 @@ BS
 S
 AP
 D
-Kustom Blasta XALL 3 CAN FIRE
+Kustom Blasta X
 +Skorcha
 12"
 3
@@ -2001,9 +1980,7 @@ WS
 S
 AP
 D
-
-NAZDREGFights with both: Moonchewa, plus Kustom Blasta X on top (extra attacks).
-
+NAZDREG
 Moonchewa
 5
 2+
@@ -2011,6 +1988,7 @@ Moonchewa
 -2
 3
 CLEAVE 1, TWIN-LINKED, SUSTAINED HITS 1
++
 Kustom Blasta X
 6
 2+
@@ -2082,6 +2060,8 @@ Beastboss · Headwoppa’s Killchoppa ›
 ######## unit beastboss-on-squigosaur-headwoppas-killchoppa · NAZDREG Beastboss on Squigosaur
 Character · 155 pts
 Headwoppa’s Killchoppa
+1× Beastboss on Squigosaur
+Beastchoppa, Slugga, Squigosaur’s jaws, Thump Gun
 M
 T
 SV
@@ -2107,17 +2087,6 @@ BS
 S
 AP
 D
-
-Can shoot with one or both (Close-quarters does not limit MONSTER models).
-
-Slugga
-12"
-1
-5+
-4
-0
-1
-CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
 Thump Gun
 18"
 3
@@ -2126,16 +2095,21 @@ Thump Gun
 0
 2
 ANTI-MONSTER/VEHICLE 4+
+Slugga
+12"
+1
+5+
+4
+0
+1
+CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
 MELEE
 A
 WS
 S
 AP
 D
-
-Fights with both: Beastchoppa, plus Squigosaur’s jaws on top (extra attacks).
-
-BeastchoppaPICK ONE PROFILE
+Beastchoppa
 ➤HunterMON/VEH ONLY
 6
 2+
@@ -2150,6 +2124,7 @@ SUSTAINED HITS 1
 -2
 2
 CLEAVE 1, SUSTAINED HITS 1
++
 Squigosaur’s jaws
 3
 3+
@@ -2207,6 +2182,8 @@ Beastboss ›
 
 ######## unit beastboss-on-squigosaur · BEASTBOSS ON SQUIGOSAUR Beastboss on Squigosaur
 Character · 140 pts
+1× Beastboss on Squigosaur
+Beastchoppa, Slugga, Squigosaur’s jaws, Thump Gun
 M
 T
 SV
@@ -2232,17 +2209,6 @@ BS
 S
 AP
 D
-
-Can shoot with one or both (Close-quarters does not limit MONSTER models).
-
-Slugga
-12"
-1
-5+
-4
-0
-1
-CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
 Thump Gun
 18"
 3
@@ -2251,16 +2217,21 @@ Thump Gun
 0
 2
 ANTI-MONSTER/VEHICLE 4+
+Slugga
+12"
+1
+5+
+4
+0
+1
+CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
 MELEE
 A
 WS
 S
 AP
 D
-
-Fights with both: Beastchoppa, plus Squigosaur’s jaws on top (extra attacks).
-
-BeastchoppaPICK ONE PROFILE
+Beastchoppa
 ➤HunterMON/VEH ONLY
 6
 2+
@@ -2275,6 +2246,7 @@ SUSTAINED HITS 1
 -2
 2
 CLEAVE 1, SUSTAINED HITS 1
++
 Squigosaur’s jaws
 3
 3+
@@ -2323,8 +2295,20 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Inte
 Bigboss ›
 
 ######## unit bigboss-warboss-breaka-boyz · BEASTBOSS ON SQUIGOSAUR Bigboss
-Character · 290 pts · Bigboss supporting, Warboss leading Breaka Boyz
+Character · 290 pts (50 + Warboss 120 + Breaka Boyz 120)
 Kunnin’ But Brutal (Warboss)
+1× BigbossSupporting Breaka Boyz
+Big Choppa, Slugga
+1× WarbossLeading Breaka Boyz
+Power Klaw, Kombi-skorcha
+1× Nob
+Choppa, Rokkit pistol, Smash Hammer
+3× Breaka Boy
+Smash Hammer
+1× Breaka Boy w/ Knucklebustas
+Knucklebustas
+1× Breaka Boy w/ Tankhammer
+Tankhammer
 M
 T
 SV
@@ -2386,7 +2370,7 @@ Slugga
 1
 CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
 WARBOSS
-Kombi-skorchaPICK ONE PROFILE
+Kombi-skorcha
 ➤Skorcha
 12"
 3
@@ -2437,11 +2421,6 @@ Power Klaw
 2
 SUSTAINED HITS 1
 BREAKA BOYZ
-
-Nob picks one to fight with: Choppa or Smash Hammer.
-
-The others: one each (×N = how many the unit has).
-
 ChoppaNOB
 4
 3+
@@ -2449,7 +2428,9 @@ ChoppaNOB
 -1
 1
 SUSTAINED HITS 1
-Smash Hammer×4PICK ONE PROFILE
+OR
+NOB
+Smash Hammer×4
 ➤HunterMON/VEH ONLY
 3
 3+
@@ -2551,7 +2532,7 @@ On a 3+, that enemy unit suffers D3 mortal wounds.
 
 Place two Bomb Squig tokens next to the unit, removing one each time this ability is used.
 
-RULESWaaagh!, Support, Da Boss, Leader, Get Stuck In · Models & keywords
+RULESWaaagh!, Support, Da Boss, Leader, Get Stuck In · Keywords
 
 STRATAGEMS
 
@@ -2563,8 +2544,12 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervent
 Warboss in Mega Armour · Follow Me Ladz ›
 
 ######## unit warboss-in-mega-armour-meganobz · BIGBOSS Warboss in Mega Armour
-Character · 375 pts · leading Meganobz
+Character · 375 pts (135 + Meganobz 240)
 Follow Me Ladz
+1× Warboss in Mega ArmourLeading Meganobz
+’Uge Choppa, Big Shoota
+6× Meganob w/ Twin Killsaw
+Twin Killsaw
 M
 T
 SV
@@ -2674,7 +2659,7 @@ Arrogant Invulnerability
 
 Attacks that target this unit have -1 AP.
 
-RULESDa Boss, Leader, Waaagh!, Get Stuck In · Models & keywords
+RULESDa Boss, Leader, Waaagh!, Get Stuck In · Keywords
 
 STRATAGEMS
 
@@ -2687,6 +2672,8 @@ Gretchin ›
 
 ######## unit gretchin · WARBOSS IN MEGA ARMOUR Gretchin
 Infantry · 45 pts each · ×2 in list
+10× Gretchin
+Grot Blasta, Scavenged Shivs
 M
 T
 SV
@@ -2701,8 +2688,6 @@ INV
 8+
 1
 –
-
-10× Gretchin
 
 value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
 
@@ -2763,6 +2748,10 @@ Deffkoptas ›
 
 ######## unit deffkoptas · GRETCHIN Deffkoptas
 Mounted · 85 pts
+2× Deffkopta
+Choppa, Rokkit Launcha, Slugga, Spinnin’ Blades
+1× Deffkopta w/ Kustom mega-blasta
+Choppa, Kustom Mega-blasta, Slugga, Spinnin’ Blades
 M
 T
 SV
@@ -2778,8 +2767,6 @@ INV
 2
 6+
 
-2× Deffkopta · 1× Deffkopta w/ Kustom mega-blasta
-
 value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
 
 WHEN TARGETEDRiled up: 5+ INV
@@ -2790,12 +2777,7 @@ BS
 S
 AP
 D
-
-Deffkopta can shoot with Slugga or Rokkit Launcha, not both (Close-quarters); in close-quarters shooting, Slugga only.
-
-Deffkopta w/ Kustom mega-blasta can shoot with Slugga or Kustom Mega-blasta, not both (Close-quarters); in close-quarters shooting, Slugga only.
-
-Rokkit Launcha×2PICK ONE PROFILE
+Rokkit Launcha×2
 ➤Busta
 24"
 2
@@ -2812,14 +2794,6 @@ LETHAL HITS
 0
 1
 BLAST 2
-Slugga×3
-12"
-1
-5+
-4
-0
-1
-CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
 Kustom Mega-blastaDEFFKOPTA
 24"
 3
@@ -2828,6 +2802,16 @@ Kustom Mega-blastaDEFFKOPTA
 -2
 3
 HAZARDOUS, LETHAL HITS
+OR
+WHEN USING ANOTHER SHOOTING TYPE
+Slugga×3
+12"
+1
+5+
+4
+0
+1
+CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
 Your Shooting phase, after an ingress move this turn: +1 to hit rolls (Deff from Above)
 MELEE
 A
@@ -2835,9 +2819,6 @@ WS
 S
 AP
 D
-
-Pick one to fight with: Choppa or Spinnin’ Blades.
-
 Choppa×3
 3
 4+
@@ -2845,6 +2826,7 @@ Choppa×3
 -1
 1
 SUSTAINED HITS 1
+OR
 Spinnin’ Blades×3
 4
 3+

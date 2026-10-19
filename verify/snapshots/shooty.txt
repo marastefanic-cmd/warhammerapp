@@ -216,9 +216,6 @@ Killa Kans
 
 ######## ranged · UNITS Ranged weapons WEAPON RNG A BS S AP D
 Wazdakka Gutsmek
-
-Can shoot with one or both.
-
 Grabba Dragga
 12"
 1
@@ -238,9 +235,6 @@ ASSAULT, LETHAL HITS: NON-MONSTER/VEHICLE, SUSTAINED HITS 1
 Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase
 Big Mek Dakkarig
 Dreadherder
-
-Can shoot with one or both.
-
 Blitzkannon
 24"
 8
@@ -265,9 +259,6 @@ Picked by the Dreadherder: re-roll hit rolls of 1 this turn
 Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase
 Big Mek Dakkarig
 Cybork Boosta
-
-Can shoot with one or both.
-
 Blitzkannon
 24"
 8
@@ -292,9 +283,6 @@ Picked by the Dreadherder: re-roll hit rolls of 1 this turn
 Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase
 Big Mek in Mega Armour
 Supa-glowy Fing
-
-Can shoot with one or both.
-
 Kustom Mega-blasta
 24"
 3
@@ -345,20 +333,7 @@ Kustom Mega-slugga
 3
 CLOSE-QUARTERS, HAZARDOUS, IGNORES COVER, ASSAULT
 TANKBUSTAS
-
-Tankbusta w/ Two Busta Rokkit Launchas can shoot with one or both.
-
-The others: one each (×N = how many the unit has).
-
-Rokkit pistolNOB
-12"
-1
-4+
-10
--2
-3
-CLOSE-QUARTERS, ASSAULT, IGNORES COVER
-Busta Rokkit Launcha×6PICK ONE PROFILE
+Busta Rokkit Launcha×6
 ➤HunterMON/VEH ONLY
 24"
 3
@@ -375,6 +350,14 @@ ASSAULT, IGNORES COVER
 -2
 3
 ASSAULT, IGNORES COVER
+Rokkit pistolNOB
+12"
+1
+4+
+10
+-2
+3
+CLOSE-QUARTERS, ASSAULT, IGNORES COVER
 Riled up: +3" range (Dakka! Dakka! Dakka!)
 Your Shooting phase, this unit or the target within range of an objective: can re-roll hit rolls of 1 (Wreckin’ and Lootin’)
 STRATAGEMS · SHOOTA BOYZ
@@ -394,7 +377,7 @@ Kustom Mega-slugga
 3
 CLOSE-QUARTERS, HAZARDOUS, IGNORES COVER, ASSAULT
 FLASH GITZ
-Snazzgun×10PICK ONE PROFILE
+Snazzgun×10
 ➤Cutta
 12"
 1
@@ -441,10 +424,7 @@ Your Shooting phase, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (1CP Kust
 Your Shooting phase, target within 9": +1 AP (1CP Glowin’ Dakka)
 Your Shooting phase: [SUSTAINED HITS 1] (1CP Never Enough Dakka)
 Deffkoptas
-
-Can shoot with Slugga or Rokkit Launcha, not both (Close-quarters); in close-quarters shooting, Slugga only.
-
-Rokkit Launcha×3PICK ONE PROFILE
+Rokkit Launcha×3
 ➤Busta
 24"
 2
@@ -461,6 +441,8 @@ LETHAL HITS
 0
 1
 BLAST 2
+OR
+WHEN USING ANOTHER SHOOTING TYPE
 Slugga×3
 12"
 1
@@ -471,7 +453,7 @@ Slugga×3
 CLOSE-QUARTERS, LETHAL HITS: NON-MONSTER/VEHICLE
 Your Shooting phase, after an ingress move this turn: +1 to hit rolls (Deff from Above)
 Killa Kans
-Kan Blasta×6PICK ONE PROFILE
+Kan Blasta×6
 ➤Kill Shot
 24"
 2
@@ -502,9 +484,6 @@ Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to 
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Wazdakka Gutsmek
-
-Fights with all of these: Grabba Dragga, plus Fixit’s Wrench and Speeding Bulk and Flaming Exhaust on top (extra attacks).
-
 Grabba Dragga
 6
 2+
@@ -512,6 +491,7 @@ Grabba Dragga
 -2
 3
 CLEAVE 2, LANCE
++
 Fixit’s Wrench
 1
 4+
@@ -519,6 +499,7 @@ Fixit’s Wrench
 0
 1
 EXTRA ATTACKS
++
 Speeding Bulk and Flaming Exhaust
 3
 2+
@@ -579,18 +560,14 @@ Mek’s Toolz
 0
 1
 TANKBUSTAS
-
-Nob picks one to fight with: Choppa or Smash Hammer.
-
-The others: one each (×N = how many the unit has).
-
 ChoppaNOB
 4
 3+
 5
 -1
 1
-Smash HammerNOBPICK ONE PROFILE
+OR
+Smash HammerNOB
 ➤HunterMON/VEH ONLY
 3
 3+
@@ -635,15 +612,13 @@ Scavenged Shivs×10
 0
 1
 Deffkoptas
-
-Pick one to fight with: Choppa or Spinnin’ Blades.
-
 Choppa×3
 3
 4+
 5
 -1
 1
+OR
 Spinnin’ Blades×3
 4
 3+
@@ -1835,6 +1810,8 @@ Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wa
 
 ######## unit wazdakka · STRATAGEMS Wazdakka Gutsmek
 Epic Hero · 200 pts
+1× Wazdakka Gutsmek
+Fixit’s Wrench, Grabba Dragga, Psyko-gatler, Speeding Bulk and Flaming Exhaust
 M
 T
 SV
@@ -1859,9 +1836,6 @@ BS
 S
 AP
 D
-
-Can shoot with one or both.
-
 Grabba Dragga
 12"
 1
@@ -1884,9 +1858,6 @@ WS
 S
 AP
 D
-
-Fights with all of these: Grabba Dragga, plus Fixit’s Wrench and Speeding Bulk and Flaming Exhaust on top (extra attacks).
-
 Grabba Dragga
 6
 2+
@@ -1894,6 +1865,7 @@ Grabba Dragga
 -2
 3
 CLEAVE 2, LANCE
++
 Fixit’s Wrench
 1
 4+
@@ -1901,6 +1873,7 @@ Fixit’s Wrench
 0
 1
 EXTRA ATTACKS
++
 Speeding Bulk and Flaming Exhaust
 3
 2+
@@ -1952,6 +1925,8 @@ Big Mek · Dreadherder ›
 ######## unit dakkarig-herder · WAZDAKKA GUTSMEK Big Mek Dakkarig
 Character · 190 pts
 Dreadherder
+1× Big Mek Dakkarig
+Blitzkannon, Multi-busta Launcha, Stompy Feet
 M
 T
 SV
@@ -1978,9 +1953,6 @@ BS
 S
 AP
 D
-
-Can shoot with one or both.
-
 Blitzkannon
 24"
 8
@@ -2054,6 +2026,8 @@ Big Mek · Cybork Boosta ›
 ######## unit dakkarig-boosta · BIG MEK DAKKARIG Big Mek Dakkarig
 Character · 170 pts
 Cybork Boosta
+1× Big Mek Dakkarig
+Blitzkannon, Multi-busta Launcha, Stompy Feet
 M
 T
 SV
@@ -2083,9 +2057,6 @@ BS
 S
 AP
 D
-
-Can shoot with one or both.
-
 Blitzkannon
 24"
 8
@@ -2155,6 +2126,8 @@ Big Mek · Supa-glowy Fing ›
 ######## unit bigmek-mega · BIG MEK DAKKARIG Big Mek in Mega Armour
 Character · 115 pts
 Supa-glowy Fing
+1× Big Mek in Mega Armour
+Kustom Mega-blasta, Power Klaw, Tellyport Blasta
 M
 T
 SV
@@ -2180,9 +2153,6 @@ BS
 S
 AP
 D
-
-Can shoot with one or both.
-
 Kustom Mega-blasta
 24"
 3
@@ -2260,6 +2230,8 @@ Warboss ›
 ######## unit warboss · BIG MEK IN MEGA ARMOUR Warboss
 Character · 100 pts
 Warlord
+1× Warboss
+Kustom Choppa, Kustom Shoota
 M
 T
 SV
@@ -2358,7 +2330,15 @@ None from Dread Mob or Wreckas.
 Mek + Tankbustas ›
 
 ######## unit mek-tankbustas · WARBOSS Mek
-Character · 215 pts each · ×2 in list · supporting Tankbustas
+Character · 215 pts each (55 + Tankbustas 160) · ×2 in list
+1× MekSupporting Tankbustas
+Kustom Mega-slugga, Mek’s Toolz
+1× Nob
+Choppa, Rokkit pistol, Smash Hammer
+1× Tankbusta w/ Two Busta Rokkit Launchas
+2× Busta Rokkit Launcha, Gitstikka
+4× Tankbusta w/ Busta Rokkit Launcha
+Busta Rokkit Launcha, Gitstikka
 M
 T
 SV
@@ -2412,20 +2392,7 @@ Kustom Mega-slugga
 3
 CLOSE-QUARTERS, HAZARDOUS, IGNORES COVER, ASSAULT
 TANKBUSTAS
-
-Tankbusta w/ Two Busta Rokkit Launchas can shoot with one or both.
-
-The others: one each (×N = how many the unit has).
-
-Rokkit pistolNOB
-12"
-1
-4+
-10
--2
-3
-CLOSE-QUARTERS, ASSAULT, IGNORES COVER
-Busta Rokkit Launcha×6PICK ONE PROFILE
+Busta Rokkit Launcha×6
 ➤HunterMON/VEH ONLY
 24"
 3
@@ -2442,6 +2409,14 @@ ASSAULT, IGNORES COVER
 -2
 3
 ASSAULT, IGNORES COVER
+Rokkit pistolNOB
+12"
+1
+4+
+10
+-2
+3
+CLOSE-QUARTERS, ASSAULT, IGNORES COVER
 WHOLE UNIT
 Riled up: +3" range (Dakka! Dakka! Dakka!)
 Your Shooting phase, this unit or the target within range of an objective: can re-roll hit rolls of 1 (Wreckin’ and Lootin’)
@@ -2463,18 +2438,14 @@ Mek’s Toolz
 0
 1
 TANKBUSTAS
-
-Nob picks one to fight with: Choppa or Smash Hammer.
-
-The others: one each (×N = how many the unit has).
-
 ChoppaNOB
 4
 3+
 5
 -1
 1
-Smash HammerNOBPICK ONE PROFILE
+OR
+Smash HammerNOB
 ➤HunterMON/VEH ONLY
 3
 3+
@@ -2530,7 +2501,7 @@ On a 3+, that enemy unit suffers D3 mortal wounds.
 
 Place two Bomb Squig tokens next to the unit, removing one each time this ability is used.
 
-RULESWaaagh!, Support, Dakka! Dakka! Dakka!, Wreckin’ and Lootin’ · Models & keywords
+RULESWaaagh!, Support, Dakka! Dakka! Dakka!, Wreckin’ and Lootin’ · Keywords
 
 STRATAGEMS
 
@@ -2546,8 +2517,14 @@ None from Dread Mob.
 Mek + Flash Gitz ›
 
 ######## unit mek-flashgitz · MEK Mek
-Character · 300 pts · supporting Flash Gitz
+Character · 300 pts (55 + Flash Gitz 245)
 Supa-snazz Dakka
+1× MekSupporting Flash Gitz
+Kustom Mega-slugga, Mek’s Toolz
+1× Kaptin
+Choppa, Snazzgun
+9× Flash Gitz
+Choppa, Snazzgun
 M
 T
 SV
@@ -2572,8 +2549,6 @@ Flash Gitz
 1
 –
 
-1× Mek · 1× Kaptin · 9× Flash Gitz · 55 + Flash Gitz 245 pts
-
 value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
 
 WHEN TARGETEDRiled up: 5+ INV
@@ -2594,7 +2569,7 @@ Kustom Mega-slugga
 3
 CLOSE-QUARTERS, HAZARDOUS, IGNORES COVER, ASSAULT
 FLASH GITZ
-Snazzgun×10PICK ONE PROFILE
+Snazzgun×10
 ➤Cutta
 12"
 1
@@ -2694,6 +2669,8 @@ Gretchin ›
 
 ######## unit gretchin · MEK Gretchin
 Infantry · 45 pts each · ×3 in list
+10× Gretchin
+Grot Blasta, Scavenged Shivs
 M
 T
 SV
@@ -2708,8 +2685,6 @@ INV
 8+
 1
 –
-
-10× Gretchin
 
 value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
 
@@ -2773,6 +2748,8 @@ Deffkoptas ›
 
 ######## unit deffkoptas · GRETCHIN Deffkoptas
 Mounted · 85 pts
+3× Deffkopta
+Choppa, Rokkit Launcha, Slugga, Spinnin’ Blades
 M
 T
 SV
@@ -2787,9 +2764,6 @@ INV
 7+
 2
 6+
-
-3× Deffkopta
-
 WHEN TARGETEDRiled up: 5+ INV
 RANGED
 RNG
@@ -2798,10 +2772,7 @@ BS
 S
 AP
 D
-
-Can shoot with Slugga or Rokkit Launcha, not both (Close-quarters); in close-quarters shooting, Slugga only.
-
-Rokkit Launcha×3PICK ONE PROFILE
+Rokkit Launcha×3
 ➤Busta
 24"
 2
@@ -2818,6 +2789,8 @@ LETHAL HITS
 0
 1
 BLAST 2
+OR
+WHEN USING ANOTHER SHOOTING TYPE
 Slugga×3
 12"
 1
@@ -2833,15 +2806,13 @@ WS
 S
 AP
 D
-
-Pick one to fight with: Choppa or Spinnin’ Blades.
-
 Choppa×3
 3
 4+
 5
 -1
 1
+OR
 Spinnin’ Blades×3
 4
 3+
@@ -2877,6 +2848,8 @@ Killa Kans ›
 
 ######## unit killa-kans · DEFFKOPTAS Killa Kans
 Vehicle · 275 pts
+6× Killa Kan
+Kan Blasta, Kan Klaw
 M
 T
 SV
@@ -2891,9 +2864,6 @@ INV
 8+
 2
 6+
-
-6× Killa Kan
-
 WHEN TARGETED1CP Crazed Rampage: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (removed once your unit has fought or at the end of the phase) · Riled up: 5+ INV
 ALL ATTACKS
 vs units with no T 7+ models: +1 to hit rolls (Spiteful Power Trip)
@@ -2907,7 +2877,7 @@ BS
 S
 AP
 D
-Kan Blasta×6PICK ONE PROFILE
+Kan Blasta×6
 ➤Kill Shot
 24"
 2

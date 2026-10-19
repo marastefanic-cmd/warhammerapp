@@ -1,9 +1,9 @@
 // written by verify/run.js: the last verification of this app.html + data.js
 window.WH_VERIFIED = {
  "ok": true,
- "build": "ba5340e0d1",
- "data": "2026-10-18.2",
- "date": "18 Oct 2026",
+ "build": "ef90c0ad60",
+ "data": "2026-10-19.1",
+ "date": "19 Oct 2026",
  "checks": [
   {
    "label": "Your New Recruit lists:",
@@ -27,7 +27,7 @@ window.WH_VERIFIED = {
   },
   {
    "label": "The app’s own notes:",
-   "detail": "342 footnotes, reminders, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
+   "detail": "343 footnotes, reminders, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
   },
   {
    "label": "Every screen:",

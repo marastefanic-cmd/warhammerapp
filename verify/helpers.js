@@ -92,6 +92,7 @@ function items(D, appSource){
 const CODE_RULES = {
   useSentence:'04.01 Select Weapons; Close-quarters (non-MONSTER/VEHICLE: pistols or other ranged weapons); Extra Attacks (24.11); a multi-profile weapon uses one profile (04.01.03)',
   useLine:'which models carry which weapons (gear per models line); attached units (19.04)',
+  weaponJoins:'the dividers between weapon rows: 04.01 Select Weapons (ranged: every weapon the model has; melee: one, [EXTRA ATTACKS] on top); Close-quarters (a non-MONSTER/VEHICLE model: its [CLOSE-QUARTERS] weapons or the others); per models line (gear); attached units by part',
   unitMods:'which footnotes a unit gets: its own, detachment rules matching its keywords, auras, stratagems it is eligible for; Lance (+1 to wound after a charge); Plunging Fire for TOWERING (22.05)',
   singleMod:'Starting Strength for a one-model unit (Core Rules p86)',
   halfBelow:'Below half-strength for a one-model unit: remaining wounds less than half its W',
