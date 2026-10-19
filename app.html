@@ -47,6 +47,8 @@
   --ds-band:#4c5056; --ds-band-fg:#f3f3f3;
   --ds-h2:#2c2e32; --ds-h2-fg:#f1f1f1; --ds-h2-col:#cfcfcf;
   --ds-head:#262626; --ds-head-fg:#c4c4c4;
+  --ds-edge:linear-gradient(to bottom, color-mix(in srgb, var(--accent) 100%, transparent) 0, color-mix(in srgb, var(--accent) 62%, transparent) 6%,
+    color-mix(in srgb, var(--accent) 34%, transparent) 12%, color-mix(in srgb, var(--accent) 16%, transparent) 22%, color-mix(in srgb, var(--accent) 6%, transparent) 34%, transparent 50%);
   /* other colour schemes (picked on the home screen) override these: THEMES in the script */
   --shadow:0 10px 30px rgba(0,0,0,.5);
   --f-head:'Barlow Condensed', 'Arial Narrow', system-ui, sans-serif;
@@ -467,6 +469,8 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
   .ds .dbx > .wh.both, .dh2{padding-left:9px; padding-right:9px}
   .dk{padding-left:8px}
 }
+/* every band (the unit's, a section's, a role's on the Units list) is lit from its top edge in the accent */
+.ds .dsh, .dh2, .ds .dbx > .wh.both, .ds .dbx > .ab.pf > summary, .rgh{background-image:var(--ds-edge)}
 /* slice screens: one band per unit, pinned until the next unit's band pushes it off */
 .us{padding-bottom:4px}
 .band{position:sticky; top:var(--top); z-index:4; display:flex; align-items:baseline; gap:8px; width:100%; min-height:40px; margin-top:12px; padding:9px 10px 8px;
