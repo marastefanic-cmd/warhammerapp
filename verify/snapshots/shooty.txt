@@ -13,6 +13,26 @@ ORKS
 WAR HORDE
 PURGE THE FOE
 Checked (date of the check) against your New Recruit lists, BSData and GW’s rules
+COLOURS
+
+Headings · the app stays dark + orange
+
+Gunmetal
+Slate & navy
+Rust & iron
+Copper
+Burnt orange
+Bold orange
+Bone
+Ork green
+Charcoal
+
+Whole app
+
+New Recruit paper
+Waaagh! green
+Brass & bone
+Blood & steel
 
 Put it on your home screen: Safari → Share → Add to Home Screen.
 

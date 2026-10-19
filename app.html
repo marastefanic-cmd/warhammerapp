@@ -43,9 +43,10 @@
   --ok:#5fc27a;          /* the "Checked" tick */
   /* datasheet headings: the unit's band (also the role bands of the Units list), a section's band
      with its top line and column labels, a table's header row */
-  --ds-band:#506276; --ds-band-fg:#f4f6f8;
-  --ds-h2:#283240; --ds-h2-fg:#eef1f5; --ds-h2-line:#6d8299; --ds-h2-col:#d5dbe3;
-  --ds-head:#272b30; --ds-head-fg:#c9ced6;
+  --ds-band:#4c5056; --ds-band-fg:#f3f3f3;
+  --ds-h2:#2c2e32; --ds-h2-fg:#f1f1f1; --ds-h2-line:var(--accent); --ds-h2-col:#cfcfcf;
+  --ds-head:#262626; --ds-head-fg:#c4c4c4;
+  /* other colour schemes (picked on the home screen) override these: THEMES in the script */
   --shadow:0 10px 30px rgba(0,0,0,.5);
   --f-head:'Barlow Condensed', 'Arial Narrow', system-ui, sans-serif;
   --f-body:'Barlow', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -495,6 +496,17 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .verif > span{flex:1; min-width:0; white-space:normal}
 .vchk{margin:3px 0; font-size:14px; line-height:1.45}
 .vchk b{font-weight:600}
+/* colour picker */
+.thg{margin:10px 0 6px; font-size:12.5px; color:var(--muted)}
+.thms{display:grid; grid-template-columns:repeat(auto-fill, minmax(92px, 1fr)); gap:8px}
+.thm{display:grid; gap:4px; padding:5px; border-radius:8px; box-shadow:inset 0 0 0 1px var(--line); text-align:left}
+.thm.on{box-shadow:inset 0 0 0 2px var(--accent)}
+.thm:active{background:var(--surface)}
+.thm .sw{position:relative; display:grid; gap:3px; padding:5px; border-radius:5px; box-shadow:inset 0 0 0 1px rgba(127,127,127,.25)}
+.thm .sw i{height:11px; clip-path:polygon(4px 0, calc(100% - 4px) 0, 100% 4px, 100% 100%, 0 100%, 0 4px)}
+.thm .sw em{position:absolute; right:8px; bottom:7px; width:9px; height:9px; border-radius:50%}
+.thm .tn{font:600 12.5px/1.15 var(--f-head); letter-spacing:.02em; color:var(--fg2)}
+.thm.on .tn{color:var(--fg)}
 .lead{margin:12px 0 10px; font-size:14.5px; line-height:1.45; color:var(--fg2)}
 /* the bar in five equal fifths, edge to edge (the bar's side padding taken back), each icon in the middle of its fifth */
 .tabs{display:grid; grid-template-columns:repeat(5, minmax(0, 1fr)); margin:0 calc(-1 * max(16px, env(safe-area-inset-right, 0px))) 0 calc(-1 * max(16px, env(safe-area-inset-left, 0px)))}
@@ -634,6 +646,54 @@ const keep = area => ({
 });
 const store = keep('localStorage'), session = keep('sessionStorage');
 try { localStorage.removeItem('wh-layout'); } catch(e){}   // left by an earlier version
+
+/* ---------- colour schemes ----------
+   Gunmetal is the stylesheet's own look; the others replace some of its colours. The first group keeps the
+   dark + orange app and changes the heading bands; the second changes the whole app. Saved on this phone. */
+const THEME_VAR = { bg:'--bg', surface:'--surface', surface2:'--surface2', linec:'--line', fg:'--fg', fg2:'--fg2', muted:'--muted', accent:'--accent', accentink:'--accent-ink',
+  xline:'--count-line', pline:'--pill-line', band:'--ds-band', bandfg:'--ds-band-fg', h2:'--ds-h2', h2fg:'--ds-h2-fg', line:'--ds-h2-line', col:'--ds-h2-col', head:'--ds-head', headfg:'--ds-head-fg' };
+const THEME_DEF = { bg:'#161616', accent:'#ff8a2a', band:'#4c5056', h2:'#2c2e32' };   // Gunmetal, for the swatches
+const THEMES = [
+  { id:'gunmetal', name:'Gunmetal', v:{} },
+  { id:'slate', name:'Slate & navy', v:{ band:'#506276', bandfg:'#f4f6f8', h2:'#283240', h2fg:'#eef1f5', line:'#6d8299', col:'#d5dbe3', head:'#272b30', headfg:'#c9ced6' } },
+  { id:'rust', name:'Rust & iron', v:{ band:'#8a3f1d', bandfg:'#fbeee3', h2:'#3b2a21', h2fg:'#f3e6dc', line:'#c0612e', col:'#d9c6b8', head:'#2a2522', headfg:'#cbbfb6' } },
+  { id:'copper', name:'Copper', v:{ band:'#8c4a25', bandfg:'#fff1e6', h2:'#2e1c12', h2fg:'#f7e6d8', line:'#e07a33', col:'#dcc0aa', head:'#272220', headfg:'#c9bdb3' } },
+  { id:'burnt', name:'Burnt orange', v:{ band:'#bf571b', bandfg:'#fff3ea', h2:'#3d1f0e', h2fg:'#ffe9d8', line:'#ff8a2a', col:'#e6c2a6', head:'#2a2420', headfg:'#cdbfb3' } },
+  { id:'bold', name:'Bold orange', v:{ band:'#ff8a2a', bandfg:'#1c0d00', h2:'#4a230c', h2fg:'#ffe8d4', line:'#ff8a2a', col:'#f0c9a8', head:'#2a2420', headfg:'#cdbfb3' } },
+  { id:'bone', name:'Bone', v:{ band:'#ddd3c2', bandfg:'#1d1a16', h2:'#3a352e', h2fg:'#efe8dc', line:'#ddd3c2', col:'#d3cabd', head:'#282624', headfg:'#c9c2b8' } },
+  { id:'green', name:'Ork green', v:{ band:'#4a6430', bandfg:'#f1f5ea', h2:'#26321c', h2fg:'#e9f0df', line:'#86a856', col:'#c9d4bb', head:'#25281f', headfg:'#c4cab9' } },
+  { id:'charcoal', name:'Charcoal', v:{ band:'#323232', bandfg:'#ff9a45', h2:'#232323', h2fg:'#f0f0f0', line:'#ff8a2a', col:'#c9c9c9', head:'#2a2a2a', headfg:'#c4c4c4' } },
+  { id:'paper', name:'New Recruit paper', whole:true, light:true, accentName:'blue', v:{ bg:'#f2f2ef', surface:'#ffffff', surface2:'#e6e6e2', linec:'#d2d2cd', fg:'#1b1b1b', fg2:'#3b3b3b', muted:'#6c6c6c', accent:'#2a67b0', accentink:'#ffffff', xline:'#9a9a9a', pline:'#c9c9c4',
+    band:'#6b7c90', bandfg:'#ffffff', h2:'#3c4857', h2fg:'#ffffff', line:'#8da0b5', col:'#dfe5ec', head:'#e2e2df', headfg:'#333333' } },
+  { id:'waaagh', name:'Waaagh! green', whole:true, accentName:'green', v:{ bg:'#121410', surface:'#1a1d16', surface2:'#252a20', linec:'#343a2d', fg:'#ecf0e4', fg2:'#c5ccb9', muted:'#909a85', accent:'#a8d43c', accentink:'#142000', xline:'#5a6350', pline:'#3c4434',
+    band:'#4d6a2c', bandfg:'#f3f7ec', h2:'#263219', h2fg:'#eef3e5', line:'#a8d43c', col:'#ccd6bd', head:'#22261d', headfg:'#c5ccb9' } },
+  { id:'brass', name:'Brass & bone', whole:true, accentName:'gold', v:{ bg:'#15120e', surface:'#1f1b15', surface2:'#2a241c', linec:'#3b3329', fg:'#f2eadd', fg2:'#d0c4b2', muted:'#9b8f7d', accent:'#e2ab3f', accentink:'#1f1400', xline:'#6b5f4e', pline:'#463c30',
+    band:'#6e522c', bandfg:'#fbf2e2', h2:'#33271a', h2fg:'#f5ead8', line:'#e2ab3f', col:'#dccdb6', head:'#272119', headfg:'#cdbfab' } },
+  { id:'blood', name:'Blood & steel', whole:true, accentName:'red', v:{ bg:'#131315', surface:'#1c1c1f', surface2:'#27272b', linec:'#37373c', fg:'#eeeef0', fg2:'#c7c7cc', muted:'#9797a1', accent:'#ec4b3c', accentink:'#ffffff', xline:'#5c5c64', pline:'#3f3f45',
+    band:'#8e2b22', bandfg:'#fff4f2', h2:'#2f1d1d', h2fg:'#f6eaea', line:'#ec4b3c', col:'#d6c8c8', head:'#242428', headfg:'#c7c7cc' } },
+];
+const themeNow = () => THEMES.find(t => t.id === store.get('wh-theme')) || THEMES[0];
+const accentName = () => themeNow().accentName || 'orange';
+function applyTheme(){
+  const t = themeNow(), r = document.documentElement.style;
+  for(const k of Object.values(THEME_VAR)) r.removeProperty(k);
+  for(const [k, v] of Object.entries(t.v)) r.setProperty(THEME_VAR[k], v);
+  r.colorScheme = t.light ? 'light' : '';
+  const m = document.querySelector('meta[name="theme-color"]');
+  if(m) m.setAttribute('content', t.v.bg || THEME_DEF.bg);   // the phone's status bar
+}
+applyTheme();
+// the picker: a swatch per scheme (background, unit band, section band with its line, the accent)
+function themePicker(){
+  const now = themeNow();
+  const sw = t => { const c = k => t.v[k] || THEME_DEF[k], line = t.v.line || c('accent');
+    return '<button class="thm' + (t === now ? ' on' : '') + '" data-theme-pick="' + t.id + '" aria-pressed="' + (t === now) + '"><span class="sw" style="background:' + c('bg') + '">' +
+      '<i style="background:' + c('band') + '"></i><i style="background:' + c('h2') + '; box-shadow:inset 0 2px 0 ' + line + '"></i><em style="background:' + c('accent') + '"></em></span>' +
+      '<span class="tn">' + esc(t.name) + '</span></button>'; };
+  return '<div class="sec-h"><h2>Colours</h2></div>' +
+    '<p class="thg">Headings · the app stays dark + orange</p><div class="thms">' + THEMES.filter(t => !t.whole).map(sw).join('') + '</div>' +
+    '<p class="thg">Whole app</p><div class="thms">' + THEMES.filter(t => t.whole).map(sw).join('') + '</div>';
+}
 
 const PHASES = [['command','Command','Cmd'], ['movement','Movement','Move'], ['shooting','Shooting','Shoot'], ['charge','Charge','Charge'], ['fight','Fight','Fight']];
 const PHASE_NAME = Object.fromEntries(PHASES.map(([k, l]) => [k, l]));
@@ -1004,7 +1064,7 @@ function screenHome(){
     '<button class="row arow" data-army="' + esc(a.id) + '"><span class="rb"><b>' + esc(a.name) + '<span class="apts">' + esc(a.pointsUsed) + ' pts</span></b>' +
     '<span class="tags"><span class="t f">' + esc(factionOf(a).name) + '</span>' + detachmentsOf(a).map(d => '<span class="t">' + esc(d.name) + '</span>').join('') +
     '<span class="t d">' + esc(a.disposition) + '</span></span></span>' + arrow + '</button>').join('') + '</div>' +
-    verifiedLine() +
+    verifiedLine() + themePicker() +
     '<p class="note">' + installText() + '</p>';
 }
 
@@ -1555,7 +1615,7 @@ function screenUnit(){
     '<div class="dnt">' +
     unitDetRules(u).filter(r => r.statNote).map(r => { const n = modelCount(u) === 1 && r.statNote.single ? r.statNote.single : r.statNote.text;
       return '<p class="dsl">' + esc(n.replace(/\{OC\+(\d)\}/, (x, d) => String((parseInt(u.stats[0].OC, 10) || 0) + +d))) + ' (' + linkTo('rule', r.name, r.name) + ')</p>'; }).join('') +
-    (hasGrants(u) ? '<p class="dsl glg"><b class="gv sample">value</b> already changed by a rule of your list (orange: this unit’s own); tap it to see which.</p>' : '') +
+    (hasGrants(u) ? '<p class="dsl glg"><b class="gv sample">value</b> already changed by a rule of your list (' + accentName() + ': this unit’s own); tap it to see which.</p>' : '') +
     (def.length ? '<div class="def"><span class="il">When targeted</span>' + def.map(x => { const i = x.t.indexOf(': '); return i > 0 ? linkTo(x.a, x.v, x.t.slice(0, i)) + esc(x.t.slice(i)) : linkTo(x.a, x.v, x.t); }).join(' · ') + '</div>' : '') +
     u.abilities.filter(ab => ab.damaged).map(ab => { const m = (u.mods || []).find(x => x.from === ab.name);
       const psy = m && /hit/i.test(m.note) && [...(u.ranged || []), ...(u.melee || [])].some(w => w.kw.some(k => /^psychic/i.test(k)));
@@ -2074,6 +2134,7 @@ document.addEventListener('click', e => {
   if(ds.more){ moreShown.add(ds.more); renderFinder(); return; }
   if(el.hasAttribute('data-sback') && sheetStack.length){ const [l, t, h] = sheetStack.pop(); openSheet(l, t, h, true); return; }
   if(el.hasAttribute('data-verified')){ showVerified(); return; }
+  if(ds.themePick){ store.set('wh-theme', ds.themePick); applyTheme(); rerender(); return; }
   if(ds.tab){
     if(ds.tab === cur.s){ scrollTo(0, 0); return; }
     // another tab: back to the screen you left it on; the tab you are in: its first screen
