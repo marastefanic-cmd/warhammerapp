@@ -438,8 +438,8 @@ Adamantine ’Eadbutt
 D3+3
 DEVASTATING WOUNDS, EXTRA ATTACKS, PRECISION, SUSTAINED HITS 1
 Own aura: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
-STRATAGEMS · WAR HORDE
-Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+STRATAGEMS · WAR HORDE · FIGHT PHASE
+1CP [LETHAL HITS] (Hit ’Em Harder)
 Mozrog Skragbad
 Gutrippa
 ➤HunterMON/VEH ONLY
@@ -466,8 +466,8 @@ Big Chompa’s Jaws
 ANTI-MONSTER/VEHICLE 3+, EXTRA ATTACKS, SUSTAINED HITS 1
 vs MONSTER/VEHICLE: can re-roll wound rolls (Da Bigger Dey Iz…)
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
-STRATAGEMS · WAR HORDE
-Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+STRATAGEMS · WAR HORDE · FIGHT PHASE
+1CP [LETHAL HITS] (Hit ’Em Harder)
 Nazdreg
 + Meganobz
 NAZDREG
@@ -496,8 +496,8 @@ Twin Killsaw×6
 TWIN-LINKED, SUSTAINED HITS 1
 Riled up, Fight phase: +1 to hit rolls (Krumpin’ Time)
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
-STRATAGEMS · WAR HORDE
-Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+STRATAGEMS · WAR HORDE · FIGHT PHASE
+1CP [LETHAL HITS] (Hit ’Em Harder)
 Beastboss on Squigosaur
 Headwoppa’s Killchoppa
 Beastchoppa
@@ -525,8 +525,8 @@ Squigosaur’s jaws
 ANTI-MONSTER/VEHICLE 3+, EXTRA ATTACKS, SUSTAINED HITS 1
 Made a charge move this turn: +1 AP (Headwoppa’s Killchoppa)
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
-STRATAGEMS · WAR HORDE
-Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+STRATAGEMS · WAR HORDE · FIGHT PHASE
+1CP [LETHAL HITS] (Hit ’Em Harder)
 Beastboss on Squigosaur
 Beastchoppa
 ➤HunterMON/VEH ONLY
@@ -552,8 +552,8 @@ Squigosaur’s jaws
 3
 ANTI-MONSTER/VEHICLE 3+, EXTRA ATTACKS, SUSTAINED HITS 1
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
-STRATAGEMS · WAR HORDE
-Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+STRATAGEMS · WAR HORDE · FIGHT PHASE
+1CP [LETHAL HITS] (Hit ’Em Harder)
 Bigboss
 Kunnin’ But Brutal (Warboss)
 + Warboss + Breaka Boyz
@@ -615,8 +615,8 @@ DEVASTATING WOUNDS, HAZARDOUS, SUSTAINED HITS 1
 Always: +1 to hit rolls (Sumfin’ to Prove)
 Made a charge move this turn: Warboss +3 A, +2 S (Might is Right)
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
-STRATAGEMS · WAR HORDE
-Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+STRATAGEMS · WAR HORDE · FIGHT PHASE
+1CP [LETHAL HITS] (Hit ’Em Harder)
 Warboss in Mega Armour
 Follow Me Ladz
 + Meganobz
@@ -638,8 +638,8 @@ Twin Killsaw×6
 TWIN-LINKED, SUSTAINED HITS 1
 Riled up, Fight phase: +1 to hit rolls (Krumpin’ Time)
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
-STRATAGEMS · WAR HORDE
-Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+STRATAGEMS · WAR HORDE · FIGHT PHASE
+1CP [LETHAL HITS] (Hit ’Em Harder)
 Gretchin
 ×2 units
 Scavenged Shivs×10
@@ -650,8 +650,8 @@ Scavenged Shivs×10
 1
 SUSTAINED HITS 1
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
-STRATAGEMS · WAR HORDE
-Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+STRATAGEMS · WAR HORDE · FIGHT PHASE
+1CP [LETHAL HITS] (Hit ’Em Harder)
 Deffkoptas
 Choppa×3
 3
@@ -669,8 +669,8 @@ Spinnin’ Blades×3
 1
 CLEAVE 1, HAZARDOUS, SUSTAINED HITS 1
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
-STRATAGEMS · WAR HORDE
-Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+STRATAGEMS · WAR HORDE · FIGHT PHASE
+1CP [LETHAL HITS] (Hit ’Em Harder)
 
 ######## abilities · MELEE Abilities
 Ghazghkull Thraka
@@ -865,7 +865,7 @@ Is no longer battle-shocked.
 Is riled up until the start of your next turn.
 Kunnin’ But Brutal
 Enhancement
-Your Movement · Your Shooting · Your Charge
+Your Move/Shoot/Charge
 
 Enhancement · Movement / Shooting / Charge · Your turn
 
@@ -1525,7 +1525,7 @@ USED BYno unit in this list (needs SMOKE)
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## unit ghazghkull-thraka · STRATAGEMS Ghazghkull Thraka
+######## unit ghazghkull-thraka · STRATAGEMS Melee
 GHAZGHKULL THRAKA
 290 PTS
 Epic Hero
@@ -1551,9 +1551,6 @@ Ghazghkull Thraka
 6+
 4
 4+
-
-value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
-
 WHEN TARGETEDLone Operative while within 3" of another friendly ORKS INFANTRY unit · Riled up: 5+ INV
 RANGED WEAPONS
 Range
@@ -1601,8 +1598,8 @@ Adamantine ’Eadbutt
 D3+3
 DEVASTATING WOUNDS, EXTRA ATTACKS, PRECISION, SUSTAINED HITS 1
 Own aura: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
-STRATAGEMS · WAR HORDE
-Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+STRATAGEMS · WAR HORDE · FIGHT PHASE
+1CP [LETHAL HITS] (Hit ’Em Harder)
 ABILITIES
 Supreme Commander
 
@@ -1650,7 +1647,7 @@ WARBOSS
 WARLORD
 Mozrog Skragbad ›
 
-######## unit mozrog-skragbad · GHAZGHKULL THRAKA Mozrog Skragbad
+######## unit mozrog-skragbad · GHAZGHKULL THRAKA Melee
 MOZROG SKRAGBAD
 170 PTS
 Epic Hero
@@ -1675,9 +1672,6 @@ Mozrog Skragbad
 6+
 3
 4+
-
-value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
-
 WHEN TARGETEDFeel No Pain 5+ · Destroyed in the Fight phase before being selected to fight: on a 2+ it stays until it has fought or the phase ends · Riled up: 5+ INV
 RANGED WEAPONS
 Range
@@ -1725,8 +1719,8 @@ Big Chompa’s Jaws
 ANTI-MONSTER/VEHICLE 3+, EXTRA ATTACKS, SUSTAINED HITS 1
 vs MONSTER/VEHICLE: can re-roll wound rolls (Da Bigger Dey Iz…)
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
-STRATAGEMS · WAR HORDE
-Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+STRATAGEMS · WAR HORDE · FIGHT PHASE
+1CP [LETHAL HITS] (Hit ’Em Harder)
 ABILITIES
 Beast Snagga Following
 Every BEAST SNAGGA unit in this list is a MONSTER CHARACTER
@@ -1768,7 +1762,7 @@ MOZROG SKRAGBAD
 ‹ Ghazghkull Thraka
 Nazdreg ›
 
-######## unit nazdreg-meganobz · MOZROG SKRAGBAD Nazdreg
+######## unit nazdreg-meganobz · MOZROG SKRAGBAD Melee
 NAZDREG + MEGANOBZ
 405 PTS
 Epic Hero · 165 + Meganobz 240
@@ -1805,9 +1799,6 @@ Meganob×6
 7+
 1
 –
-
-value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
-
 WHEN TARGETEDAttacks that target this unit have -1 AP · Riled up: 5+ INV
 RANGED WEAPONS
 Range
@@ -1874,8 +1865,8 @@ TWIN-LINKED, SUSTAINED HITS 1
 WHOLE UNIT
 Riled up, Fight phase: +1 to hit rolls (Krumpin’ Time)
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
-STRATAGEMS · WAR HORDE
-Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+STRATAGEMS · WAR HORDE · FIGHT PHASE
+1CP [LETHAL HITS] (Hit ’Em Harder)
 ABILITIES
 Nazdreg’s Know-wotz
 - Nazdreg
@@ -1938,7 +1929,7 @@ MEGANOBZ*
 ‹ Mozrog Skragbad
 Beastboss · Headwoppa’s Killchoppa ›
 
-######## unit beastboss-on-squigosaur-headwoppas-killchoppa · NAZDREG Beastboss on Squigosaur
+######## unit beastboss-on-squigosaur-headwoppas-killchoppa · NAZDREG Melee
 BEASTBOSS ON SQUIGOSAUR
 155 PTS
 Character
@@ -1964,9 +1955,6 @@ Beastboss on Squigosaur
 6+
 3
 5+
-
-value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
-
 WHEN TARGETEDFeel No Pain 5+ · Riled up: 5+ INV
 RANGED WEAPONS
 Range
@@ -2022,8 +2010,8 @@ Squigosaur’s jaws
 ANTI-MONSTER/VEHICLE 3+, EXTRA ATTACKS, SUSTAINED HITS 1
 Made a charge move this turn: +1 AP (Headwoppa’s Killchoppa)
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
-STRATAGEMS · WAR HORDE
-Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+STRATAGEMS · WAR HORDE · FIGHT PHASE
+1CP [LETHAL HITS] (Hit ’Em Harder)
 ABILITIES
 Thundering Stampede
 Charge
@@ -2075,7 +2063,7 @@ WARBOSS
 ‹ Nazdreg
 Beastboss ›
 
-######## unit beastboss-on-squigosaur · BEASTBOSS ON SQUIGOSAUR Beastboss on Squigosaur
+######## unit beastboss-on-squigosaur · BEASTBOSS ON SQUIGOSAUR Melee
 BEASTBOSS ON SQUIGOSAUR
 140 PTS
 Character
@@ -2100,9 +2088,6 @@ Beastboss on Squigosaur
 6+
 3
 5+
-
-value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
-
 WHEN TARGETEDFeel No Pain 5+ · Riled up: 5+ INV
 RANGED WEAPONS
 Range
@@ -2157,8 +2142,8 @@ Squigosaur’s jaws
 3
 ANTI-MONSTER/VEHICLE 3+, EXTRA ATTACKS, SUSTAINED HITS 1
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
-STRATAGEMS · WAR HORDE
-Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+STRATAGEMS · WAR HORDE · FIGHT PHASE
+1CP [LETHAL HITS] (Hit ’Em Harder)
 ABILITIES
 Thundering Stampede
 Charge
@@ -2202,7 +2187,7 @@ WARBOSS
 ‹ Beastboss · Headwoppa’s Killchoppa
 Bigboss ›
 
-######## unit bigboss-warboss-breaka-boyz · BEASTBOSS ON SQUIGOSAUR Bigboss
+######## unit bigboss-warboss-breaka-boyz · BEASTBOSS ON SQUIGOSAUR Melee
 BIGBOSS + WARBOSS + BREAKA BOYZ
 290 PTS
 Character · 50 + Warboss 120 + Breaka Boyz 120
@@ -2267,9 +2252,6 @@ Breaka Boy×5
 7+
 1
 –
-
-value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
-
 WHEN TARGETEDRiled up: 5+ INV
 RANGED WEAPONS
 Range
@@ -2381,8 +2363,8 @@ WHOLE UNIT
 Always: +1 to hit rolls (Sumfin’ to Prove)
 Made a charge move this turn: Warboss +3 A, +2 S (Might is Right)
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
-STRATAGEMS · WAR HORDE
-Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+STRATAGEMS · WAR HORDE · FIGHT PHASE
+1CP [LETHAL HITS] (Hit ’Em Harder)
 ABILITIES
 Sumfin’ to Prove
 - Bigboss
@@ -2427,7 +2409,7 @@ Is riled up until the start of your next turn.
 Kunnin’ But Brutal
 - Warboss
 Enhancement
-Your Movement · Your Shooting · Your Charge
+Your Move/Shoot/Charge
 
 Enhancement · Movement / Shooting / Charge · Your turn
 
@@ -2475,7 +2457,7 @@ EXPLOSIVES*
 ‹ Beastboss
 Warboss in Mega Armour · Follow Me Ladz ›
 
-######## unit warboss-in-mega-armour-meganobz · BIGBOSS Warboss in Mega Armour
+######## unit warboss-in-mega-armour-meganobz · BIGBOSS Melee
 WARBOSS IN MEGA ARMOUR + MEGANOBZ
 375 PTS
 Character · 135 + Meganobz 240
@@ -2513,9 +2495,6 @@ Meganob×6
 7+
 1
 –
-
-value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
-
 WHEN TARGETEDAttacks that target this unit have -1 AP · Riled up: 5+ INV
 RANGED WEAPONS
 Range
@@ -2557,8 +2536,8 @@ TWIN-LINKED, SUSTAINED HITS 1
 WHOLE UNIT
 Riled up, Fight phase: +1 to hit rolls (Krumpin’ Time)
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
-STRATAGEMS · WAR HORDE
-Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+STRATAGEMS · WAR HORDE · FIGHT PHASE
+1CP [LETHAL HITS] (Hit ’Em Harder)
 ABILITIES
 Krushin’ Impetus
 - Warboss in Mega Armour
@@ -2622,7 +2601,7 @@ MEGANOBZ*
 ‹ Bigboss
 Gretchin ›
 
-######## unit gretchin · WARBOSS IN MEGA ARMOUR Gretchin
+######## unit gretchin · WARBOSS IN MEGA ARMOUR Melee
 GRETCHIN
 45 PTS EACH
 Infantry · ×2 in list
@@ -2647,9 +2626,6 @@ Gretchin×10
 8+
 1
 –
-
-value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
-
 WHEN TARGETEDRiled up: 5+ INV
 RANGED WEAPONS
 Range
@@ -2680,8 +2656,8 @@ Scavenged Shivs×10
 1
 SUSTAINED HITS 1
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
-STRATAGEMS · WAR HORDE
-Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+STRATAGEMS · WAR HORDE · FIGHT PHASE
+1CP [LETHAL HITS] (Hit ’Em Harder)
 ABILITIES
 Downtrodden
 
@@ -2710,7 +2686,7 @@ INFANTRY
 ‹ Warboss in Mega Armour · Follow Me Ladz
 Deffkoptas ›
 
-######## unit deffkoptas · GRETCHIN Deffkoptas
+######## unit deffkoptas · GRETCHIN Melee
 DEFFKOPTAS
 85 PTS
 Mounted
@@ -2737,9 +2713,6 @@ Deffkoptas×3
 7+
 2
 6+
-
-value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
-
 WHEN TARGETEDRiled up: 5+ INV
 RANGED WEAPONS
 Range
@@ -2806,8 +2779,8 @@ Spinnin’ Blades×3
 1
 CLEAVE 1, HAZARDOUS, SUSTAINED HITS 1
 Within 6" of Ghazghkull: +1 to hit, +1 to wound (Prophet of Da Great Waaagh!)
-STRATAGEMS · WAR HORDE
-Fight phase: [LETHAL HITS] (1CP Hit ’Em Harder)
+STRATAGEMS · WAR HORDE · FIGHT PHASE
+1CP [LETHAL HITS] (Hit ’Em Harder)
 ABILITIES
 Aerial Manoover
 Their Fight

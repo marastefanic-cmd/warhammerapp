@@ -348,10 +348,10 @@ Tellyport Blasta
 3
 BLAST 1, IGNORES COVER, ASSAULT, ANTI-INFANTRY 4+, DEVASTATING WOUNDS, SUPA-HAZARDOUS
 Riled up: [SUSTAINED HITS 1] (More Dakka) · +3" range (Dakka! Dakka! Dakka!)
-STRATAGEMS · SHOOTA BOYZ
-Your Shooting phase, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (1CP Kustom Dakka)
-Your Shooting phase, target within 9": +1 AP (1CP Glowin’ Dakka)
-Your Shooting phase: [SUSTAINED HITS 1] (1CP Never Enough Dakka)
+STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
+1CP +1 to wound rolls vs non-MONSTER/VEHICLE targets (Kustom Dakka)
+1CP +1 AP, target within 9" (Glowin’ Dakka)
+1CP [SUSTAINED HITS 1] (Never Enough Dakka)
 Warboss
 Warlord
 Kustom Shoota
@@ -364,10 +364,10 @@ Kustom Shoota
 LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 2, ASSAULT
 Boss’ Ammo Runt used (your Shooting phase, when selected to shoot): +1 to hit rolls
 Riled up: +3" range (Dakka! Dakka! Dakka!)
-STRATAGEMS · SHOOTA BOYZ
-Your Shooting phase, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (1CP Kustom Dakka)
-Your Shooting phase, target within 9": +1 AP (1CP Glowin’ Dakka)
-Your Shooting phase: [SUSTAINED HITS 1] (1CP Never Enough Dakka)
+STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
+1CP +1 to wound rolls vs non-MONSTER/VEHICLE targets (Kustom Dakka)
+1CP +1 AP, target within 9" (Glowin’ Dakka)
+1CP [SUSTAINED HITS 1] (Never Enough Dakka)
 Mek
 + Tankbustas
 ×2 units
@@ -408,10 +408,10 @@ Rokkit pistolNOB
 CLOSE-QUARTERS, ASSAULT, IGNORES COVER
 Riled up: +3" range (Dakka! Dakka! Dakka!)
 Your Shooting phase, this unit or the target within range of an objective: can re-roll hit rolls of 1 (Wreckin’ and Lootin’)
-STRATAGEMS · SHOOTA BOYZ
-Your Shooting phase, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (1CP Kustom Dakka)
-Your Shooting phase, target within 9": +1 AP (1CP Glowin’ Dakka)
-Your Shooting phase: [SUSTAINED HITS 1] (1CP Never Enough Dakka)
+STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
+1CP +1 to wound rolls vs non-MONSTER/VEHICLE targets (Kustom Dakka)
+1CP +1 AP, target within 9" (Glowin’ Dakka)
+1CP [SUSTAINED HITS 1] (Never Enough Dakka)
 Mek
 + Flash Gitz
 Supa-snazz Dakka
@@ -452,10 +452,10 @@ LETHAL HITS: NON-MONSTER/VEHICLE, SUSTAINED HITS 1, ASSAULT, RAPID FIRE 1, IGNOR
 HAZARDOUS, ASSAULT, RAPID FIRE 1, IGNORES COVER
 Your Shooting phase, this unit or the target within range of an objective: +1 AP (Finderz Keeperz) · can re-roll hit rolls of 1 (Wreckin’ and Lootin’)
 Riled up: +3" range (Dakka! Dakka! Dakka!)
-STRATAGEMS · SHOOTA BOYZ
-Your Shooting phase, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (1CP Kustom Dakka)
-Your Shooting phase, target within 9": +1 AP (1CP Glowin’ Dakka)
-Your Shooting phase: [SUSTAINED HITS 1] (1CP Never Enough Dakka)
+STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
+1CP +1 to wound rolls vs non-MONSTER/VEHICLE targets (Kustom Dakka)
+1CP +1 AP, target within 9" (Glowin’ Dakka)
+1CP [SUSTAINED HITS 1] (Never Enough Dakka)
 Gretchin
 ×3 units
 Grot Blasta×10
@@ -467,10 +467,10 @@ Grot Blasta×10
 1
 CLOSE-QUARTERS, ASSAULT
 Riled up: +3" range (Dakka! Dakka! Dakka!)
-STRATAGEMS · SHOOTA BOYZ
-Your Shooting phase, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (1CP Kustom Dakka)
-Your Shooting phase, target within 9": +1 AP (1CP Glowin’ Dakka)
-Your Shooting phase: [SUSTAINED HITS 1] (1CP Never Enough Dakka)
+STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
+1CP +1 to wound rolls vs non-MONSTER/VEHICLE targets (Kustom Dakka)
+1CP +1 AP, target within 9" (Glowin’ Dakka)
+1CP [SUSTAINED HITS 1] (Never Enough Dakka)
 Deffkoptas
 Rokkit Launcha×3
 ➤Busta
@@ -689,7 +689,7 @@ Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to 
 ######## abilities · MELEE Abilities
 Wazdakka Gutsmek
 Full Throttle
-Your Command · Your Movement · Your Charge
+Your Command/Move/Charge
 
 Command / Movement / Charge · Your turn
 
@@ -697,7 +697,7 @@ In your Command phase, select one Throttlerokkit Shokka Engine ability. This uni
 
 THROTTLEROKKIT SHOKKA ENGINE
 Turbo Engine
-Your Movement · Your Charge
+Your Move/Charge
 
 Movement / Charge · Your turn
 
@@ -720,7 +720,7 @@ In your Command phase, if this unit is unengaged, you can place this unit in str
 Big Mek Dakkarig
 Dreadherder
 Even More Dakka
-Their Movement · Your Shooting
+Their Move · Your Shoot
 
 Their Movement / Your Shooting
 
@@ -735,7 +735,7 @@ In your Shooting phase, if this unit’s Blitzkannon weapon targets a unit (excl
 
 Dreadherder
 Enhancement
-Your Shooting · Your Fight
+Your Shoot/Fight
 
 Enhancement · Shooting / Fight · Your turn
 
@@ -746,7 +746,7 @@ In your Shooting phase, you can select one friendly ORKS WALKER unit within 3" o
 Big Mek Dakkarig
 Cybork Boosta
 Even More Dakka
-Their Movement · Your Shooting
+Their Move · Your Shoot
 
 Their Movement / Your Shooting
 
@@ -830,7 +830,7 @@ Mek
 ×2 units
 MEK
 Clever Know-wotz
-Your Movement · Your Shooting · Fight
+Your Move/Shoot · Fight
 
 Your Movement / Your Shooting / Fight (either turn)
 
@@ -869,7 +869,7 @@ Mek
 Supa-snazz Dakka
 MEK
 Clever Know-wotz
-Your Movement · Your Shooting · Fight
+Your Move/Shoot · Fight
 
 Your Movement / Your Shooting / Fight (either turn)
 
@@ -927,7 +927,7 @@ In your Shooting phase, if this unit made an ingress move this turn, this unit�
 
 Killa Kans
 Spiteful Power Trip
-Their Movement · Your Shooting · Fight
+Their Move · Your Shoot · Fight
 
 Their Movement / Your Shooting / Fight (either turn)
 
@@ -990,7 +990,7 @@ USED BYWazdakka Gutsmek
 DETACHMENTS
 DREAD MOB
 Try Dat Button!
-Detachment rule · Your Shooting · Fight
+Detachment rule · Your Shoot · Fight
 
 In your Shooting phase or the Fight phase, when a friendly ORKS WALKER unit (excluding TITANIC units) is selected to attack, you can use this ability. If you do, roll either one D6 or two D6 (keep re-rolling duplicate results). This unit’s attacks have the relevant rule(s):
 
@@ -1026,7 +1026,7 @@ STRATAGEMSDread Power, Stomping Juggernaut, Crazed Rampage
 
 SHOOTA BOYZ
 Dakka! Dakka! Dakka!
-Detachment rule · Their Movement · Shooting
+Detachment rule · Their Move · Shoot
 
 Friendly ORKS INFANTRY units’ ranged attacks have:
 
@@ -1194,7 +1194,7 @@ Your Movement Big Mek Dakkarig ×2, Killa Kans
 CP
 Stomping Juggernaut
 Your unit has MOBILE.
-Your Movement · Your Charge Big Mek Dakkarig ×2, Killa Kans
+Your Move/Charge Big Mek Dakkarig ×2, Killa Kans
 1
 CP
 Crazed Rampage
@@ -1312,7 +1312,7 @@ USED BYBig Mek · Dreadherder, Big Mek · Cybork Boosta, Killa Kans
 1
 CP
 Stomping Juggernaut
-Your Movement · Your Charge Big Mek Dakkarig ×2, Killa Kans
+Your Move/Charge Big Mek Dakkarig ×2, Killa Kans
 WHEN
 
 Your Movement/Charge phase, when a friendly ORKS WALKER unit is selected to move or declares a charge.
@@ -1641,7 +1641,7 @@ USED BYany unit
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
 
-######## unit wazdakka · STRATAGEMS Wazdakka Gutsmek
+######## unit wazdakka · STRATAGEMS Me shooty yer’ booty
 WAZDAKKA GUTSMEK
 200 PTS
 Epic Hero
@@ -1724,7 +1724,7 @@ CLEAVE 1, EXTRA ATTACKS
 Made a charge move this turn: Grabba Dragga +1 to wound (Lance)
 ABILITIES
 Full Throttle
-Your Command · Your Movement · Your Charge
+Your Command/Move/Charge
 
 Command / Movement / Charge · Your turn
 
@@ -1732,7 +1732,7 @@ In your Command phase, select one Throttlerokkit Shokka Engine ability. This uni
 
 Turbo Engine
 - Throttlerokkit Shokka Engine
-Your Movement · Your Charge
+Your Move/Charge
 
 Movement / Charge · Your turn
 
@@ -1773,7 +1773,7 @@ VEHICLE
 WAZDAKKA GUTSMEK
 Big Mek · Dreadherder ›
 
-######## unit dakkarig-herder · WAZDAKKA GUTSMEK Big Mek Dakkarig
+######## unit dakkarig-herder · WAZDAKKA GUTSMEK Me shooty yer’ booty
 BIG MEK DAKKARIG
 190 PTS
 Character
@@ -1844,7 +1844,7 @@ Stompy Feet
 1
 ABILITIES
 Even More Dakka
-Their Movement · Your Shooting
+Their Move · Your Shoot
 
 Their Movement / Your Shooting
 
@@ -1859,7 +1859,7 @@ In your Shooting phase, if this unit’s Blitzkannon weapon targets a unit (excl
 
 Dreadherder
 Enhancement
-Your Shooting · Your Fight
+Your Shoot/Fight
 
 Enhancement · Shooting / Fight · Your turn
 
@@ -1887,7 +1887,7 @@ WALKER
 ‹ Wazdakka Gutsmek
 Big Mek · Cybork Boosta ›
 
-######## unit dakkarig-boosta · BIG MEK DAKKARIG Big Mek Dakkarig
+######## unit dakkarig-boosta · BIG MEK DAKKARIG Me shooty yer’ booty
 BIG MEK DAKKARIG
 170 PTS
 Character
@@ -1913,9 +1913,6 @@ Big Mek Dakkarig
 7+
 3
 5+
-
-value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
-
 WHEN TARGETED1CP Crazed Rampage: Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (removed once your unit has fought or at the end of the phase) · Riled up: 5+ INV
 ALL ATTACKS
 Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6): 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked) (Try Dat Button!)
@@ -1961,7 +1958,7 @@ Stompy Feet
 1
 ABILITIES
 Even More Dakka
-Their Movement · Your Shooting
+Their Move · Your Shoot
 
 Their Movement / Your Shooting
 
@@ -2001,7 +1998,7 @@ WALKER
 ‹ Big Mek · Dreadherder
 Big Mek · Supa-glowy Fing ›
 
-######## unit bigmek-mega · BIG MEK DAKKARIG Big Mek in Mega Armour
+######## unit bigmek-mega · BIG MEK DAKKARIG Me shooty yer’ booty
 BIG MEK IN MEGA ARMOUR
 115 PTS
 Character
@@ -2027,9 +2024,6 @@ Big Mek in Mega Armour
 7+
 1
 –
-
-value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
-
 WHEN TARGETEDRiled up: 5+ INV
 RANGED WEAPONS
 Range
@@ -2055,10 +2049,10 @@ Tellyport Blasta
 3
 BLAST 1, IGNORES COVER, ASSAULT, ANTI-INFANTRY 4+, DEVASTATING WOUNDS, SUPA-HAZARDOUS
 Riled up: [SUSTAINED HITS 1] (More Dakka) · +3" range (Dakka! Dakka! Dakka!)
-STRATAGEMS · SHOOTA BOYZ
-Your Shooting phase, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (1CP Kustom Dakka)
-Your Shooting phase, target within 9": +1 AP (1CP Glowin’ Dakka)
-Your Shooting phase: [SUSTAINED HITS 1] (1CP Never Enough Dakka)
+STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
+1CP +1 to wound rolls vs non-MONSTER/VEHICLE targets (Kustom Dakka)
+1CP +1 AP, target within 9" (Glowin’ Dakka)
+1CP [SUSTAINED HITS 1] (Never Enough Dakka)
 MELEE WEAPONS
 A
 WS
@@ -2119,7 +2113,7 @@ MEGA ARMOUR
 ‹ Big Mek · Cybork Boosta
 Warboss ›
 
-######## unit warboss · BIG MEK IN MEGA ARMOUR Warboss
+######## unit warboss · BIG MEK IN MEGA ARMOUR Me shooty yer’ booty
 WARBOSS
 100 PTS
 Character
@@ -2145,9 +2139,6 @@ Warboss
 6+
 1
 5+
-
-value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
-
 WHEN TARGETEDRiled up: 5+ INV
 RANGED WEAPONS
 Range
@@ -2166,10 +2157,10 @@ Kustom Shoota
 LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 2, ASSAULT
 Boss’ Ammo Runt used (your Shooting phase, when selected to shoot): +1 to hit rolls
 Riled up: +3" range (Dakka! Dakka! Dakka!)
-STRATAGEMS · SHOOTA BOYZ
-Your Shooting phase, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (1CP Kustom Dakka)
-Your Shooting phase, target within 9": +1 AP (1CP Glowin’ Dakka)
-Your Shooting phase: [SUSTAINED HITS 1] (1CP Never Enough Dakka)
+STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
+1CP +1 to wound rolls vs non-MONSTER/VEHICLE targets (Kustom Dakka)
+1CP +1 AP, target within 9" (Glowin’ Dakka)
+1CP [SUSTAINED HITS 1] (Never Enough Dakka)
 MELEE WEAPONS
 A
 WS
@@ -2234,7 +2225,7 @@ WARLORD
 ‹ Big Mek · Supa-glowy Fing
 Mek + Tankbustas ›
 
-######## unit mek-tankbustas · WARBOSS Mek
+######## unit mek-tankbustas · WARBOSS Me shooty yer’ booty
 MEK + TANKBUSTAS
 215 PTS EACH
 Character · 55 + Tankbustas 160 · ×2 in list
@@ -2284,9 +2275,6 @@ Tankbusta×5
 7+
 1
 –
-
-value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
-
 WHEN TARGETEDRiled up: 5+ INV
 RANGED WEAPONS
 Range
@@ -2333,10 +2321,10 @@ CLOSE-QUARTERS, ASSAULT, IGNORES COVER
 WHOLE UNIT
 Riled up: +3" range (Dakka! Dakka! Dakka!)
 Your Shooting phase, this unit or the target within range of an objective: can re-roll hit rolls of 1 (Wreckin’ and Lootin’)
-STRATAGEMS · SHOOTA BOYZ
-Your Shooting phase, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (1CP Kustom Dakka)
-Your Shooting phase, target within 9": +1 AP (1CP Glowin’ Dakka)
-Your Shooting phase: [SUSTAINED HITS 1] (1CP Never Enough Dakka)
+STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
+1CP +1 to wound rolls vs non-MONSTER/VEHICLE targets (Kustom Dakka)
+1CP +1 AP, target within 9" (Glowin’ Dakka)
+1CP [SUSTAINED HITS 1] (Never Enough Dakka)
 MELEE WEAPONS
 A
 WS
@@ -2380,7 +2368,7 @@ Gitstikka×5
 ABILITIES
 Clever Know-wotz
 - Mek
-Your Movement · Your Shooting · Fight
+Your Move/Shoot · Fight
 
 Your Movement / Your Shooting / Fight (either turn)
 
@@ -2439,7 +2427,7 @@ TANKBUSTAS*
 ‹ Warboss
 Mek + Flash Gitz ›
 
-######## unit mek-flashgitz · MEK Mek
+######## unit mek-flashgitz · MEK Me shooty yer’ booty
 MEK + FLASH GITZ
 300 PTS
 Character · 55 + Flash Gitz 245
@@ -2479,9 +2467,6 @@ Flash Gitz
 7+
 1
 –
-
-value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
-
 WHEN TARGETEDRiled up: 5+ INV
 RANGED WEAPONS
 Range
@@ -2528,10 +2513,10 @@ HAZARDOUS, ASSAULT, RAPID FIRE 1, IGNORES COVER
 WHOLE UNIT
 Your Shooting phase, this unit or the target within range of an objective: +1 AP (Finderz Keeperz) · can re-roll hit rolls of 1 (Wreckin’ and Lootin’)
 Riled up: +3" range (Dakka! Dakka! Dakka!)
-STRATAGEMS · SHOOTA BOYZ
-Your Shooting phase, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (1CP Kustom Dakka)
-Your Shooting phase, target within 9": +1 AP (1CP Glowin’ Dakka)
-Your Shooting phase: [SUSTAINED HITS 1] (1CP Never Enough Dakka)
+STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
+1CP +1 to wound rolls vs non-MONSTER/VEHICLE targets (Kustom Dakka)
+1CP +1 AP, target within 9" (Glowin’ Dakka)
+1CP [SUSTAINED HITS 1] (Never Enough Dakka)
 MELEE WEAPONS
 A
 WS
@@ -2555,7 +2540,7 @@ Choppa×10
 ABILITIES
 Clever Know-wotz
 - Mek
-Your Movement · Your Shooting · Fight
+Your Move/Shoot · Fight
 
 Your Movement / Your Shooting / Fight (either turn)
 
@@ -2608,7 +2593,7 @@ FLASH GITZ*
 ‹ Mek + Tankbustas
 Gretchin ›
 
-######## unit gretchin · MEK Gretchin
+######## unit gretchin · MEK Me shooty yer’ booty
 GRETCHIN
 45 PTS EACH
 Infantry · ×3 in list
@@ -2633,9 +2618,6 @@ Gretchin×10
 8+
 1
 –
-
-value already changed by a rule of your list (orange: this unit’s own); tap it to see which.
-
 WHEN TARGETEDRiled up: 5+ INV
 RANGED WEAPONS
 Range
@@ -2653,10 +2635,10 @@ Grot Blasta×10
 1
 CLOSE-QUARTERS, ASSAULT
 Riled up: +3" range (Dakka! Dakka! Dakka!)
-STRATAGEMS · SHOOTA BOYZ
-Your Shooting phase, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (1CP Kustom Dakka)
-Your Shooting phase, target within 9": +1 AP (1CP Glowin’ Dakka)
-Your Shooting phase: [SUSTAINED HITS 1] (1CP Never Enough Dakka)
+STRATAGEMS · SHOOTA BOYZ · YOUR SHOOTING PHASE
+1CP +1 to wound rolls vs non-MONSTER/VEHICLE targets (Kustom Dakka)
+1CP +1 AP, target within 9" (Glowin’ Dakka)
+1CP [SUSTAINED HITS 1] (Never Enough Dakka)
 MELEE WEAPONS
 A
 WS
@@ -2699,7 +2681,7 @@ INFANTRY
 ‹ Mek + Flash Gitz
 Deffkoptas ›
 
-######## unit deffkoptas · GRETCHIN Deffkoptas
+######## unit deffkoptas · GRETCHIN Me shooty yer’ booty
 DEFFKOPTAS
 85 PTS
 Mounted
@@ -2813,7 +2795,7 @@ SPEED FREEKS
 ‹ Gretchin
 Killa Kans ›
 
-######## unit killa-kans · DEFFKOPTAS Killa Kans
+######## unit killa-kans · DEFFKOPTAS Me shooty yer’ booty
 KILLA KANS
 275 PTS
 Vehicle
@@ -2889,7 +2871,7 @@ Kan Klaw×6
 3
 ABILITIES
 Spiteful Power Trip
-Their Movement · Your Shooting · Fight
+Their Move · Your Shoot · Fight
 
 Their Movement / Your Shooting / Fight (either turn)
 

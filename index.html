@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" href="icon-192.png">
 <style>:root{padding-top:env(safe-area-inset-top,0px)}img{max-width:100%}</style>
 <title>Waaagh Codex</title>
-<script>window.WH_BUILD = 'f7e5a926a8';</script>
+<script>window.WH_BUILD = 'd3f1fb83bd';</script>
 </head>
 <body>
 <style>
@@ -211,7 +211,7 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .urow .un{display:flex; flex-wrap:wrap; align-items:baseline; gap:0 6px; min-width:0; padding-right:6px}
 .urow.att .un{grid-column:1 / 9}
 .urow .un b{font:700 16.5px/1.2 var(--f-head); letter-spacing:.02em}
-.urow .un .x{margin-left:0; padding:1px 5px 0; font-size:13px}
+.urow .un .x{margin-left:0; font-size:13px}
 .urow .un .lead{margin:0; font:700 16.5px/1.2 var(--f-head); letter-spacing:.02em; color:var(--fg)}
 .urow .utg{flex-basis:100%; display:flex; flex-wrap:wrap; gap:0 8px}
 .urow .utg .tg{white-space:normal; font-size:12.5px}
@@ -219,7 +219,7 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .urow .sc{font:700 15.5px/1.2 var(--f-head); text-align:center; font-variant-numeric:tabular-nums; min-width:0}
 .urow .pts{grid-column:9; font:600 14.5px/1.2 var(--f-head); color:var(--muted); font-variant-numeric:tabular-nums; white-space:nowrap}
 .urow .sn{grid-column:1; display:block; padding-left:12px; font:600 14px/1.25 var(--f-head); letter-spacing:.01em; color:var(--fg); min-width:0}
-.urow .sn .x{margin-left:5px; padding:0 4px; font-size:12px; color:var(--fg)}
+.urow .sn .x{margin-left:5px; font-size:12px}
 .nw{white-space:nowrap}
 @media (max-width:359px){ .urow .sc{font-size:14.5px} .urow .un b, .urow .un .lead{font-size:15.5px} .urow .sn{padding-left:8px; font-size:13px} }
 
@@ -252,11 +252,11 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .ab{border-bottom:1px solid var(--line)}
 .ab > summary{display:flex; align-items:center; gap:8px; min-height:34px; padding:3px 2px}
 .ab > summary:active{background:var(--surface)}
-.ab > summary .an{flex:1 1 55%; min-width:0; display:flex; flex-wrap:wrap; align-items:baseline; gap:0 8px}
+.ab > summary .an{flex:1 1 0; min-width:0; display:flex; flex-wrap:wrap; align-items:baseline; gap:0 8px}
 .ab > summary b{font:700 15px/1.2 var(--f-head); letter-spacing:.02em}
 .ab > summary b.kh{font:600 11px/1.2 var(--f-head); letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
 .ab > summary small{font:600 11px var(--f-head); letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
-.ab > summary .aw{font-size:12.5px; color:var(--muted); text-align:right; flex:0 1 auto; max-width:42%}
+.ab > summary .aw{font-size:12.5px; color:var(--muted); text-align:right; flex:0 0 auto; max-width:52%}   /* breaks only between a phase's runs */
 .ab .tg.once, .ab.na .an .tg.m{white-space:normal}   /* a long "not usable here" reason wraps on a small phone */
 .ab[open] > summary b{color:var(--accent)}
 .ab.na > summary b{color:var(--muted)}
@@ -311,8 +311,13 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .wr.p > span.n{padding-left:8px}
 .wr.p + .wr.p, .kwl + .wr.p{margin-top:4px}
 .ar{color:var(--muted); margin-right:3px; font-size:12px}
-/* a count ("×5"): its own small pill, clear of the name */
-.x{display:inline-block; margin-left:8px; padding:2px 6px 1px; border-radius:5px; box-shadow:inset 0 0 0 1.5px var(--count-line); color:var(--fg); font:700 14px/1.1 var(--f-head); letter-spacing:.04em; white-space:nowrap; font-variant-numeric:tabular-nums}
+/* a count ("×5"): its own small pill, the figures centred in it both ways. text-box trims the line to
+   the figures' own height (cap height to baseline), so the space around them is the padding alone;
+   the right padding gives back the letter spacing after the last figure. Sizes are in em, so a
+   smaller pill (a stats row, a model line) stays centred too. */
+.x{display:inline-block; margin-left:8px; padding:.32em calc(.42em - .04em) .32em .42em; border-radius:5px; box-shadow:inset 0 0 0 1.5px var(--count-line); color:var(--fg);
+  font:700 14px/1 var(--f-head); letter-spacing:.04em; white-space:nowrap; font-variant-numeric:tabular-nums; text-box:trim-both cap alphabetic}
+@supports not (text-box:trim-both cap alphabetic){ .x{padding-top:.17em; padding-bottom:.17em} }   /* untrimmed, the figures sit centred in the 1em line */
 .tq{font:600 10.5px/1 var(--f-head); letter-spacing:.07em; text-transform:uppercase; color:var(--muted); margin-left:6px; white-space:nowrap; display:inline-block}
 .wn{font:600 15px/1.2 var(--f-head); letter-spacing:.01em; margin-bottom:2px}
 .wn small.fa{color:var(--accent)}
@@ -327,6 +332,7 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .gv::after{position:absolute; top:-3px; right:-7px}
 .kwl .gk.w, .gv.w{color:inherit}
 .kwl .gk::after, .gv::after{content:'+'; font:700 9px/1 var(--f-head); vertical-align:super; margin-left:1px; text-decoration:none; display:inline-block}
+.mod .cpb{display:inline-block; margin-right:3px; padding:0 5px; border-radius:4px; background:var(--surface2); font:700 12.5px/1.45 var(--f-head); letter-spacing:.03em; color:var(--fg)}
 .msep{display:flex; align-items:center; gap:6px; margin:8px 0 3px; font:600 11.5px/1.2 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--muted)}
 .msep::after{content:''; flex:1; border-top:1px solid var(--line)}
 .strat.none .sh b{color:var(--muted)}
@@ -347,7 +353,6 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .rules .who{margin-top:14px}
 .rules .dline.rs{font-size:13.5px}
 .rules .dline.rs > .il{font:600 11px/1.2 var(--f-head); letter-spacing:.1em; color:var(--muted); margin-right:6px}
-.glg .gv.sample{cursor:default; text-decoration:none; margin-right:9px}
 .gvl{font-style:normal; position:relative} .gvl::after{content:'+'; position:absolute; top:-3px; right:-7px; font:700 9px/1 var(--f-head); color:var(--accent)}
 .dline.sl p{margin:3px 0 0} .dline.sl .sln{font:600 11.5px/1.2 var(--f-head); letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-right:4px}
 .abl .xp{border-bottom:1px solid var(--line)}
@@ -383,7 +388,7 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
   .ar{margin-right:1px; font-size:10px}
   .wr > span.n, .st > span.n{overflow-wrap:anywhere}
   .st > span.n{font-size:13px; padding-left:6px}
-  .x{margin-left:6px; padding:1px 4px 0; font-size:13px}
+  .x{margin-left:6px; font-size:13px}
 }
 /* ---------- the datasheet as New Recruit draws it: one framed sheet of table sections ----------
    a slate band (points, name), grey header rows that carry the column labels, hairline rows,
@@ -426,7 +431,7 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .ds .st > span.h.n{justify-content:flex-start; padding-left:10px}
 .ds .st > span.n{flex-direction:column; align-items:flex-start; gap:1px; padding:4px 4px 4px 10px}
 .ds .st > span.n b{font:600 14.5px/1.15 var(--f-head); letter-spacing:.01em}
-.ds .st > span.n .x{margin-left:6px; font-size:13px; padding:1px 5px 0}
+.ds .st > span.n .x{margin-left:6px; font-size:13px}
 .ds .st > span.n small{font:500 11.5px/1.1 var(--f-body); color:var(--muted)}
 .dnt{padding:0 10px 7px; border-top:1px solid var(--line)}
 .dnt:empty{display:none}
@@ -654,8 +659,8 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="verified.js?v=f7e5a926a8"></script>
-<script src="data.js?v=f7e5a926a8"></script>
+<script src="verified.js?v=d3f1fb83bd"></script>
+<script src="data.js?v=d3f1fb83bd"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -687,17 +692,16 @@ const THEMES = [
   { id:'bone', name:'Bone', v:{ band:'#ddd3c2', bandfg:'#1d1a16', h2:'#3a352e', h2fg:'#efe8dc', line:'#ddd3c2', col:'#d3cabd', head:'#282624', headfg:'#c9c2b8' } },
   { id:'green', name:'Ork green', v:{ band:'#4a6430', bandfg:'#f1f5ea', h2:'#26321c', h2fg:'#e9f0df', line:'#86a856', col:'#c9d4bb', head:'#25281f', headfg:'#c4cab9' } },
   { id:'charcoal', name:'Charcoal', v:{ band:'#323232', bandfg:'#ff9a45', h2:'#232323', h2fg:'#f0f0f0', line:'#ff8a2a', col:'#c9c9c9', head:'#2a2a2a', headfg:'#c4c4c4' } },
-  { id:'paper', name:'New Recruit paper', whole:true, light:true, accentName:'blue', v:{ bg:'#f2f2ef', surface:'#ffffff', surface2:'#e6e6e2', linec:'#d2d2cd', fg:'#1b1b1b', fg2:'#3b3b3b', muted:'#6c6c6c', accent:'#2a67b0', accentink:'#ffffff', xline:'#9a9a9a', pline:'#c9c9c4',
+  { id:'paper', name:'New Recruit paper', whole:true, light:true, v:{ bg:'#f2f2ef', surface:'#ffffff', surface2:'#e6e6e2', linec:'#d2d2cd', fg:'#1b1b1b', fg2:'#3b3b3b', muted:'#6c6c6c', accent:'#2a67b0', accentink:'#ffffff', xline:'#9a9a9a', pline:'#c9c9c4',
     band:'#6b7c90', bandfg:'#ffffff', h2:'#3c4857', h2fg:'#ffffff', line:'#8da0b5', col:'#dfe5ec', head:'#e2e2df', headfg:'#333333' } },
-  { id:'waaagh', name:'Waaagh! green', whole:true, accentName:'green', v:{ bg:'#121410', surface:'#1a1d16', surface2:'#252a20', linec:'#343a2d', fg:'#ecf0e4', fg2:'#c5ccb9', muted:'#909a85', accent:'#a8d43c', accentink:'#142000', xline:'#5a6350', pline:'#3c4434',
+  { id:'waaagh', name:'Waaagh! green', whole:true, v:{ bg:'#121410', surface:'#1a1d16', surface2:'#252a20', linec:'#343a2d', fg:'#ecf0e4', fg2:'#c5ccb9', muted:'#909a85', accent:'#a8d43c', accentink:'#142000', xline:'#5a6350', pline:'#3c4434',
     band:'#4d6a2c', bandfg:'#f3f7ec', h2:'#263219', h2fg:'#eef3e5', line:'#a8d43c', col:'#ccd6bd', head:'#22261d', headfg:'#c5ccb9' } },
-  { id:'brass', name:'Brass & bone', whole:true, accentName:'gold', v:{ bg:'#15120e', surface:'#1f1b15', surface2:'#2a241c', linec:'#3b3329', fg:'#f2eadd', fg2:'#d0c4b2', muted:'#9b8f7d', accent:'#e2ab3f', accentink:'#1f1400', xline:'#6b5f4e', pline:'#463c30',
+  { id:'brass', name:'Brass & bone', whole:true, v:{ bg:'#15120e', surface:'#1f1b15', surface2:'#2a241c', linec:'#3b3329', fg:'#f2eadd', fg2:'#d0c4b2', muted:'#9b8f7d', accent:'#e2ab3f', accentink:'#1f1400', xline:'#6b5f4e', pline:'#463c30',
     band:'#6e522c', bandfg:'#fbf2e2', h2:'#33271a', h2fg:'#f5ead8', line:'#e2ab3f', col:'#dccdb6', head:'#272119', headfg:'#cdbfab' } },
-  { id:'blood', name:'Blood & steel', whole:true, accentName:'red', v:{ bg:'#131315', surface:'#1c1c1f', surface2:'#27272b', linec:'#37373c', fg:'#eeeef0', fg2:'#c7c7cc', muted:'#9797a1', accent:'#ec4b3c', accentink:'#ffffff', xline:'#5c5c64', pline:'#3f3f45',
+  { id:'blood', name:'Blood & steel', whole:true, v:{ bg:'#131315', surface:'#1c1c1f', surface2:'#27272b', linec:'#37373c', fg:'#eeeef0', fg2:'#c7c7cc', muted:'#9797a1', accent:'#ec4b3c', accentink:'#ffffff', xline:'#5c5c64', pline:'#3f3f45',
     band:'#8e2b22', bandfg:'#fff4f2', h2:'#2f1d1d', h2fg:'#f6eaea', line:'#ec4b3c', col:'#d6c8c8', head:'#242428', headfg:'#c7c7cc' } },
 ];
 const themeNow = () => THEMES.find(t => t.id === store.get('wh-theme')) || THEMES[0];
-const accentName = () => themeNow().accentName || 'orange';
 function applyTheme(){
   const t = themeNow(), r = document.documentElement.style;
   for(const k of Object.values(THEME_VAR)) r.removeProperty(k);
@@ -1068,7 +1072,7 @@ function renderTop(){
     if(up) left = '<button class="back" data-back><svg aria-hidden="true"><use href="#i-back"/></svg><span>' + esc(cur.from || backTitle(up)) + '</span></button>';
     if(cur.s !== 'army' && cur.s !== 'home') right = '<button class="icon-btn" data-find aria-label="Search this army"><svg aria-hidden="true"><use href="#i-search"/></svg></button>';
   }
-  $('#topIn').innerHTML = left + '<h1 class="ttl">' + esc(cur.s === 'home' ? 'Waaagh Codex' : titleOf(cur)) + '</h1>' + right;
+  $('#topIn').innerHTML = left + '<h1 class="ttl">' + esc(cur.s === 'home' ? 'Waaagh Codex' : cur.s === 'unit' && army() ? army().name : titleOf(cur)) + '</h1>' + right;
 }
 function setBar(id, html){
   const el = $('#' + id);
@@ -1352,7 +1356,20 @@ function modLines(mods, u, hasHunter){
   for(const m of mods.filter(m => m.strat)){ const k = detOf(m.strat); let p = parts.find(x => x[0] === k); if(!p) parts.push(p = [k, []]); p[1].push(m); }
   const at = k => k === 'Core' ? dets.length : dets.findIndex(d => d.name === k);
   parts.sort((x, y) => (x[0] == null ? -1 : at(x[0])) - (y[0] == null ? -1 : at(y[0])));
-  return parts.map(([det, list]) => list.length ? (det ? '<div class="msep">Stratagems · ' + esc(det) + '</div>' : '') + modGroupLines(list, u, hasHunter) : '').join('');
+  return parts.map(([det, list]) => !list.length ? '' : det == null ? modGroupLines(list, u, hasHunter) : stratModLines(det, list, u, hasHunter)).join('');
+}
+// a stratagem's footnote: its cost first, then what it does, then when ("1CP +1 to wound rolls vs non-MONSTER/VEHICLE
+// targets (Kustom Dakka)"); a phase they all share is said once, on the detachment's label
+const PHASE_LEAD = /^((?:your |your opponent’s |the )?(?:command|movement|shooting|charge|fight) phase)(?:, |$)/i;
+function stratModLines(det, list, u, hasHunter){
+  const lead = m => (PHASE_LEAD.exec(m.when) || [])[1] || '';
+  const shared = list.every(m => lead(m) && lead(m) === lead(list[0])) ? lead(list[0]) : '';
+  return '<div class="msep">Stratagems · ' + esc(det) + (shared ? ' · ' + esc(shared) : '') + '</div>' + list.map(m => {
+    const cond = shared ? m.when.slice(shared.length).replace(/^, /, '') : m.when;
+    return '<div class="mod sm"><b class="cpb">' + esc(m.cp) + 'CP</b> ' + (m.scope ? '<i class="sc">' + m.scope + '</i>' : '') + (m.who ? esc(m.who) + ' ' : '') + '<b>' + esc(m.note) + '</b>' +
+      (cond ? (/^vs\b/i.test(cond) ? ' ' : ', ') + esc(cond) : '') + (m.hunter && hasHunter ? ' (the (+' + Object.values(m.hunter)[0] + ') on the Hunter rows; add it to the other weapons too)' : '') +
+      ' <span class="from">(' + linkTo('strat', m.strat, m.from) + ')</span></div>';
+  }).join('');
 }
 function modGroupLines(mods, u, hasHunter){
   const groups = new Map();
@@ -1548,11 +1565,16 @@ function unitWeapons(u){
    every weapon and the rules that change its attacks, then one line per ability, the
    unit's rules and stratagems. The full text of anything is one tap away. */
 // "Their Movement", "Your Shooting · Fight", "Any phase"
+// several phases: short names, the turn said once for a run of phases with the same turn ("Your Move/Shoot · Fight")
+const PHASE_SHORT = { command:'Command', movement:'Move', shooting:'Shoot', charge:'Charge', fight:'Fight' };
 function shortWhen(x){
-  const ph = phasesOf(x);
+  const ph = phasesOf(x), T = { your:'Your ', opp:'Their ' };
   if(!ph.length) return '';
   if(ph.length === PHASES.length) return 'Any phase';
-  return ph.map(p => ({ your:'Your ', opp:'Their ' }[phTurn(x, p)] || '') + PHASE_NAME[p]).join(' · ');
+  if(ph.length === 1) return (T[phTurn(x, ph[0])] || '') + PHASE_NAME[ph[0]];
+  const runs = [];
+  for(const p of ph){ const t = phTurn(x, p), r = runs[runs.length - 1]; if(r && r.t === t) r.p.push(p); else runs.push({ t, p:[p] }); }
+  return runs.map(r => (T[r.t] || '') + r.p.map(p => PHASE_SHORT[p]).join('/')).join(' · ');
 }
 // one line per ability: its name and when it triggers; tap to read it
 // "Once per battle", "Once per battle round, per army": a limited use is part of the row, not hidden in it
@@ -1580,7 +1602,7 @@ function abilityList(abs, u, suffix){
     const meta = [ab.tag, ab.ph ? whenTag(ab) : ''].filter(Boolean), na = naReason(ab), once = onceTag(ab);
     return '<details class="ab' + (na ? ' na' : '') + '"><summary><span class="an"><b>' + esc(ab.name) + '</b>' + (suffix && ab.who ? '<span class="awho">- ' + esc(ab.who) + '</span>' : '') +
       (ab.tag === 'Enhancement' ? '<span class="tg">Enhancement</span>' : '') + (once ? '<span class="tg once">' + esc(once) + '</span>' : '') + (na ? '<span class="tg m">' + esc(na) + '</span>' : '') + abilityTicks(ab, u) + '</span>' +
-      (ab.ph && !na ? '<span class="aw">' + esc(shortWhen(ab)) + '</span>' : '') + chev + '</summary><div class="body">' +
+      (ab.ph && !na ? '<span class="aw">' + shortWhen(ab).split(' · ').map(x => '<span class="nw">' + esc(x) + '</span>').join(' · ') + '</span>' : '') + chev + '</summary><div class="body">' +
       (na ? '<p class="abt"><i>' + esc(na) + '</i></p>' : '') + (meta.length ? '<p class="abt">' + meta.map(esc).join(' · ') + '</p>' : '') + rt(ab.text) + '</div></details>';
   }).join('') + '</div>';
 }
@@ -1639,7 +1661,6 @@ function screenUnit(){
     '<div class="dnt">' +
     unitDetRules(u).filter(r => r.statNote).map(r => { const n = modelCount(u) === 1 && r.statNote.single ? r.statNote.single : r.statNote.text;
       return '<p class="dsl">' + esc(n.replace(/\{OC\+(\d)\}/, (x, d) => String((parseInt(u.stats[0].OC, 10) || 0) + +d))) + ' (' + linkTo('rule', r.name, r.name) + ')</p>'; }).join('') +
-    (hasGrants(u) ? '<p class="dsl glg"><b class="gv sample">value</b> already changed by a rule of your list (' + accentName() + ': this unit’s own); tap it to see which.</p>' : '') +
     (def.length ? '<div class="def"><span class="il">When targeted</span>' + def.map(x => { const i = x.t.indexOf(': '); return i > 0 ? linkTo(x.a, x.v, x.t.slice(0, i)) + esc(x.t.slice(i)) : linkTo(x.a, x.v, x.t); }).join(' · ') + '</div>' : '') +
     u.abilities.filter(ab => ab.damaged).map(ab => { const m = (u.mods || []).find(x => x.from === ab.name);
       const psy = m && /hit/i.test(m.note) && [...(u.ranged || []), ...(u.melee || [])].some(w => w.kw.some(k => /^psychic/i.test(k)));
