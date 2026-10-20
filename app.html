@@ -541,6 +541,44 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .btn{min-height:48px; padding:0 14px; text-align:center; border-radius:8px; background:var(--accent); color:var(--accent-ink); font:700 16px/1.1 var(--f-head); letter-spacing:.04em}
 .btn2{min-height:44px; padding:0 14px; text-align:center; border-radius:8px; box-shadow:inset 0 0 0 1px var(--line); color:var(--fg); font:700 15px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase}
 .btn:active, .btn2:active{opacity:.75}
+/* damage calculator */
+.dmp .rb{gap:2px}
+.dmp .rb .lbl{font-size:11px}
+.seg{display:grid; grid-auto-flow:column; grid-auto-columns:1fr; gap:0; margin:10px 0 0; border-radius:8px; box-shadow:inset 0 0 0 1px var(--line); overflow:hidden}
+.seg button{min-height:40px; font:700 14px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--fg2); text-align:center}
+.seg button + button{box-shadow:inset 1px 0 0 var(--line)}
+.seg button.on{background:var(--accent); color:var(--accent-ink)}
+.dml{display:grid}
+.dmw{display:flex; align-items:flex-start; gap:10px; padding:8px 2px; border-bottom:1px solid var(--line); cursor:pointer}
+.dmw input{flex:none; width:20px; height:20px; margin:1px 0 0; accent-color:var(--accent)}
+.dmw > span{display:grid; gap:2px; min-width:0}
+.dmw b{font:700 15.5px/1.2 var(--f-head); letter-spacing:.02em}
+.dmw small{font-size:12.5px; line-height:1.35; color:var(--muted)}
+.dmw.nc{cursor:default}
+.dmw.nc b{color:var(--muted)}
+.dmw.auto{display:grid; gap:2px; padding-left:32px}
+.dmpf{display:flex; flex-wrap:wrap; gap:6px; padding:6px 2px 8px 32px; border-bottom:1px solid var(--line)}
+.dmpf button, .dmstep button{min-height:32px; padding:0 10px; border-radius:6px; box-shadow:inset 0 0 0 1px var(--line); font:700 13px/1 var(--f-head); letter-spacing:.04em; color:var(--fg2)}
+.dmpf button.on, .dmstep button.rr.on{background:var(--accent); color:var(--accent-ink); box-shadow:none}
+.dmman{display:grid; gap:6px; padding:6px 0}
+.dmstep{display:flex; align-items:center; gap:6px}
+.dmstep > span{flex:1; font:600 15px/1.2 var(--f-head); letter-spacing:.02em}
+.dmstep > b{min-width:30px; text-align:center; font:700 16px var(--f-head)}
+.dmstep button{min-width:36px}
+.dmres{position:sticky; top:var(--hdr); z-index:5; margin:10px -2px 0; padding:10px 10px 8px; border-radius:8px; background:var(--surface); box-shadow:0 1px 0 var(--line), 0 6px 14px rgba(0,0,0,.25)}
+.dmn{display:grid; grid-template-columns:repeat(3, 1fr); gap:8px}
+.dmn > div{display:grid; gap:1px}
+.dmn b{font:700 26px/1 var(--f-head); color:var(--accent)}
+.dmn span{font-size:12px; line-height:1.25; color:var(--muted)}
+.dmb{display:flex; align-items:flex-end; gap:2px; height:44px; margin-top:10px}
+.dmb span{flex:1; height:100%; display:grid; grid-template-rows:1fr auto; min-width:0}
+.dmb i{align-self:end; background:var(--accent); opacity:.85; border-radius:2px 2px 0 0}
+.dmb em{font:600 10px/1.2 var(--f-head); font-style:normal; color:var(--muted); text-align:center}
+.dmbl{margin:2px 0 0; font-size:11.5px; color:var(--muted)}
+.dmg{display:grid; grid-template-columns:minmax(0,1fr) repeat(3, auto); gap:2px 12px; margin-top:8px; font:600 13px/1.3 var(--f-head); color:var(--fg2); font-variant-numeric:tabular-nums}
+.dmg span:nth-child(4n+1){color:var(--fg); overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.dmg span:nth-child(4n+2), .dmg span:nth-child(4n+3), .dmg span:nth-child(4n){text-align:right}
+.dmg span:nth-child(-n+4){font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
 /* colour picker */
 .thg{margin:10px 0 6px; font-size:12.5px; color:var(--muted)}
 .thms{display:grid; grid-template-columns:repeat(auto-fill, minmax(92px, 1fr)); gap:8px}
@@ -654,7 +692,7 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
     <symbol id="i-back" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></symbol>
     <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></symbol>
     <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
-    <!-- The five tab icons (clipboard-list, users, zap, scroll, telescope), the settings gear and the dice are from Lucide, https://lucide.dev
+    <!-- The icons clipboard-list, users, zap, scroll, telescope, swords, the settings gear and the dice are from Lucide, https://lucide.dev
      ISC License. Copyright (c) 2026 Lucide Icons and Contributors. Permission to use, copy, modify, and/or distribute this software for any
      purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
      THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
@@ -662,6 +700,7 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
      WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
      OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. -->
     <symbol id="i-telescope" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.065 12.493-6.18 1.318a.934.934 0 0 1-1.108-.702l-.537-2.15a1.07 1.07 0 0 1 .691-1.265l13.504-4.44" /> <path d="m13.56 11.747 4.332-.924" /> <path d="m16 21-3.105-6.21" /> <path d="M16.485 5.94a2 2 0 0 1 1.455-2.425l1.09-.272a1 1 0 0 1 1.212.727l1.515 6.06a1 1 0 0 1-.727 1.213l-1.09.272a2 2 0 0 1-2.425-1.455z" /> <path d="m6.158 8.633 1.114 4.456" /> <path d="m8 21 3.105-6.21" /> <circle cx="12" cy="13" r="2" /></g></symbol>
+    <symbol id="i-swords" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m13 19 6-6" /> <path d="M14.5 17.5 3.586 6.586A2 2 0 013 5.172V3h2.172a2 2 0 011.414.586L17.5 14.5" /> <path d="m14.828 6.172 2.586-2.586A2 2 0 0118.828 3H21v2.172a2 2 0 01-.586 1.414l-2.586 2.586" /> <path d="m16 16 4 4" /> <path d="m19 21 2-2" /> <path d="m5 14 4 4" /> <path d="m5 21-2-2" /> <path d="M7.5 16.5 4 20" /></g></symbol>
     <symbol id="i-gear" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915" /> <circle cx="12" cy="12" r="3" /></g></symbol>
     <symbol id="i-dice" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="12" height="12" x="2" y="10" rx="2" ry="2" /> <path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6" /> <path d="M6 18h.01" /> <path d="M10 14h.01" /> <path d="M15 6h.01" /> <path d="M18 9h.01" /></g></symbol>
   </defs>
@@ -687,6 +726,7 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 
 <script src="verified.js"></script>
 <script src="data.js"></script>
+<script src="calc.js"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -762,7 +802,7 @@ const TURN_NAME = { your:'Your turn', opp:'Their turn', either:'Either turn' };
 const ROLE_ORDER = ['Epic Hero','Character','Battleline','Infantry','Mounted','Beast','Swarm','Monster','Vehicle','Dedicated Transport','Fortification','Other'];
 const ROLE_LABEL = { 'Epic Hero':'Epic Heroes', 'Character':'Characters', 'Battleline':'Battleline', 'Infantry':'Infantry', 'Mounted':'Mounted', 'Beast':'Beasts', 'Swarm':'Swarms',
   'Monster':'Monsters', 'Vehicle':'Vehicles', 'Dedicated Transport':'Dedicated Transports', 'Fortification':'Fortifications', 'Other':'Other' };
-const SCREEN_TITLE = { pregame:'Overview', units:'Units', strats:'Stratagems', ranged:'Ranged weapons', melee:'Melee weapons', abilities:'Abilities', rules:'Rules', bases:'Bases & proxies' };
+const SCREEN_TITLE = { pregame:'Overview', damage:'Damage', units:'Units', strats:'Stratagems', ranged:'Ranged weapons', melee:'Melee weapons', abilities:'Abilities', rules:'Rules', bases:'Bases & proxies' };
 const BACK_TITLE = { pregame:'Overview', ranged:'Ranged', melee:'Melee', rules:'Rules', bases:'Bases' };
 const HUNTER_KW = 'HUNTER: MONSTER/VEHICLE';
 const KEY_LABEL = { range:'RNG', A:'A', BS:'BS', WS:'WS', S:'S', AP:'AP', D:'D' };
@@ -782,17 +822,17 @@ const hasOwn = (o, k) => Object.prototype.hasOwnProperty.call(o, k);
 const sess = isObj(session.get('wh-session')) ? session.get('wh-session') : {};
 const openStrats = new Set(Array.isArray(sess.open) ? sess.open : []);
 const query = Object.assign({}, isObj(sess.query) ? sess.query : {});
-const saveSession = () => session.set('wh-session', { open:[...openStrats], query });
+const saveSession = () => session.set('wh-session', { open:[...openStrats], query, dmg:sess.dmg });
 const moreShown = new Set();                 // search groups you expanded
 let focusSearch = false;
 
 /* ---------- tabs ----------
-   Tabs at the bottom of every army screen (Overview · Units · Turn · Rules · Find), ‹ › between
+   Tabs at the bottom of every army screen (Find · Units · Stratagems · Rules · Damage), ‹ › between
    datasheets, and tick boxes for the uses a rule allows per battle, kept until New game. */
 // the tabs, and which one the current screen belongs to
-const TABS = [['pregame', 'i-flag', 'Overview'], ['units', 'i-units', 'Units'], ['strats', 'i-cards', 'Stratagems'], ['rules', 'i-book', 'Rules'], ['army', 'i-telescope', 'Find']];
+const TABS = [['army', 'i-telescope', 'Find'], ['units', 'i-units', 'Units'], ['strats', 'i-cards', 'Stratagems'], ['rules', 'i-book', 'Rules'], ['damage', 'i-swords', 'Damage']];
 const isTab = s => TABS.some(([k]) => k === s);
-const tabOf = s => ({ unit:'units', bases:'pregame', ranged:'army', melee:'army', abilities:'army' })[s] || s;
+const tabOf = s => ({ unit:'units', pregame:'army', bases:'army', ranged:'army', melee:'army', abilities:'army' })[s] || s;
 const tabBar = () => '<div class="tabs">' + TABS.map(([s, ic, label]) => '<button data-tab="' + s + '"' + (tabOf(cur.s) === s ? ' class="on" aria-current="page"' : '') + '><svg class="ic" aria-hidden="true"><use href="#' + ic + '"/></svg><span>' + label + '</span></button>').join('') + '</div>';
 // uses per battle ticked off in this game (Bomb Squig: twice per battle, per unit), per army, until New game
 const usedKey = () => 'wh-used-' + (cur.army || '');
@@ -898,7 +938,7 @@ addEventListener('popstate', e => {
   hideSheet();
   navAt = performance.now();
   if(tabTo){ const t = tabTo; tabTo = null; if(valid(st)) cur = plain(st); openTab(t); return; }
-  if(!valid(st)){ cur = ONLY ? { s:'units', army:ONLY.id, d:0 } : { s:'home', d:0 }; render(); return; }
+  if(!valid(st)){ cur = ONLY ? { s:'army', army:ONLY.id, d:0 } : { s:'home', d:0 }; render(); return; }
   if(sameScreen(st, cur)){ cur.d = st.d || 0; cur.from = st.from; renderTop(); return; }   // only a popup closed
   cur = plain(st);
   if(updateReady && calm(cur)){ reloadNow(); return; }
@@ -1227,6 +1267,7 @@ function screenArmy(){
     '<div id="qres"></div>' +
     '<div id="armyMenu"><div class="list">' +
       row('pregame', 'i-flag', 'Overview', '') +
+      row('damage', 'i-swords', 'Damage calculator', '') +
       row('units', 'i-units', 'Units', unitCount(a)) +
       row('strats', 'i-cards', 'Stratagems', allStratagems(a).length) +
       row('ranged', 'i-gun', 'Ranged weapons', weaponCount(a, 'ranged')) +
@@ -1236,6 +1277,199 @@ function screenArmy(){
       row('bases', 'i-base', 'Bases & proxies', a.units.reduce((t, u) => t + modelCount(u) * (u.copies || 1), 0)) +
       awakeRow() + (ONLY ? row('settings', 'i-gear', 'Settings', '') : '') +
     '</div><p class="note">' + esc(a.source) + '</p></div>' + (ONLY ? verifiedLine() : '');
+}
+
+/* ---------- screen: damage ----------
+   One of your units against one of your opponent's (or theirs against yours): the weapons that attack,
+   the situation, and the rules of both lists that change the numbers, each a tick box. A rule counts only
+   when every word of its footnote is understood (dmEffects); the others are listed as not counted.
+   calc.js plays the attacks out; the numbers are averages over many games. */
+const DM_SITU = [['cover', 'Target has the benefit of cover', 'ranged'], ['halfRange', 'Within half range', 'ranged'], ['stationary', 'Remained stationary', 'ranged'], ['charged', 'Made a charge move this turn', 'melee']];
+const oppOf = a => armyById(store.get('wh-opp-' + a.id));
+function dmState(){
+  sess.dmg = isObj(sess.dmg) ? sess.dmg : {};
+  const s = sess.dmg[cur.army] = Object.assign({ dir:'me', ph:'shooting', atk:'', tgt:'', off:{}, pick:{}, on:{}, man:{} }, isObj(sess.dmg[cur.army]) ? sess.dmg[cur.army] : {});
+  for(const k of ['off', 'pick', 'on', 'man']) if(!isObj(s[k])) s[k] = {};
+  return s;
+}
+// run fn as if list a were the open one (unitMods, auraMods, allStratagems and defenceItems read army())
+function inArmy(a, fn){ const was = cur.army; cur.army = a.id; try { return fn(); } finally { cur.army = was; } }
+// a footnote's words → numbers, only when every word is understood; otherwise null (listed, not counted)
+function dmEffects(note){
+  let t = ' ' + String(note || '').toLowerCase().replace(/[’']/g, '').replace(/–/g, '-') + ' ';
+  const e = {};
+  const take = (re, f) => { t = t.replace(re, (...m) => { f(m); return ' '; }); };
+  take(/re-?roll (?:the )?hit (?:rolls )?and (?:the )?wound rolls of 1/g, () => { e.rrHit = '1s'; e.rrWound = '1s'; });
+  take(/re-?roll hit rolls of 1 and wound rolls of 1/g, () => { e.rrHit = '1s'; e.rrWound = '1s'; });
+  take(/re-?roll (?:the )?hit rolls? and (?:the )?wound rolls?/g, () => { e.rrHit = 'all'; e.rrWound = 'all'; });
+  take(/re-?roll (?:the )?hit rolls? of 1/g, () => { e.rrHit = '1s'; });
+  take(/re-?roll (?:the )?wound rolls? of 1/g, () => { e.rrWound = '1s'; });
+  take(/re-?roll (?:the )?hit rolls?/g, () => { e.rrHit = 'all'; });
+  take(/re-?roll (?:the )?wound rolls?/g, () => { e.rrWound = 'all'; });
+  take(/([+-]\d) to hit(?: rolls?)?/g, m => { e.hit = (e.hit || 0) + +m[1]; });
+  take(/([+-]\d) to wound(?: rolls?)?/g, m => { e.wound = (e.wound || 0) + +m[1]; });
+  take(/\+(\d) a\b/g, m => { e.a = (e.a || 0) + +m[1]; });
+  take(/\+(\d) s\b/g, m => { e.s = (e.s || 0) + +m[1]; });
+  take(/\+(\d) ap\b|improve ap by (\d)/g, m => { e.ap = (e.ap || 0) + +(m[1] || m[2]); });
+  take(/\+(\d) d\b/g, m => { e.d = (e.d || 0) + +m[1]; });
+  take(/\[lethal hits\]/g, () => { e.lethal = true; });
+  take(/\[sustained hits (\w+)\]/g, m => { e.sus = m[1].toUpperCase(); });
+  take(/\[devastating wounds\]/g, () => { e.dev = true; });
+  take(/\[ignores cover\]/g, () => { e.ignoresCover = true; });
+  take(/\[twin-linked\]/g, () => { e.twin = true; });
+  take(/\[lance\]/g, () => { e.lance = true; });
+  take(/\[(?:assault|pistol|hazardous)\]/g, () => {});   // these change nothing in the numbers
+  // what is left must be joining words only
+  t = t.replace(/\b(?:and|also|can|have|has|this unit s|ranged|melee|weapons|attacks|rolls)\b|[,;.·]/g, ' ').trim();
+  return t || !Object.keys(e).length ? null : e;
+}
+// a "When targeted" line → numbers for the target, the same way
+function dmDefence(text, kind, single){
+  const t = String(text || '').replace(/^\d+CP [^:]+: /, '').trim().toLowerCase().replace(/[’']/g, '');
+  let m;
+  if((m = /^feel no pain (\d)\+$/.exec(t))) return { fnp:+m[1] };
+  if((m = /^feel no pain (\d)\+ against mortal wounds$/.exec(t))) return { fnpMortal:+m[1] };
+  if((m = /^(\d)\+ (?:insv|invulnerable save) against ranged attacks(?: only)?$/.exec(t))) return kind === 'ranged' ? { insv:+m[1] } : {};
+  if((m = /^riled up: (\d)\+ inv$/.exec(t))) return { insv:+m[1] };
+  if(/^attacks that target this unit have -1 ap$/.test(t)) return { apWorse:1 };
+  if(/^fight phase: -1 damage to each attack allocated to it$/.test(t)) return kind === 'melee' ? { dMinus:1 } : {};
+  if(single && /^-1 d to each attack allocated to this (?:model|unit)$/.test(t)) return { dMinus:1 };
+  return null;
+}
+// the target's models for calc.js, in allocation order: each stats row, how many models have it, characters last
+function dmModels(u){
+  const chars = new Set(charsOf(u).map(c => c.name));
+  const lone = !u.leads && hasKw(u, 'Character');
+  const fnp = Math.min(7, ...u.rules.map(r => (/^feel no pain (\d)\+$/i.exec(r) || [, 7])[1]).map(Number));
+  const rows = u.stats.map(s => { const m = / ×(\d+)$/.exec(s.name);
+    return { name:s.name.replace(/ ×\d+$/, ''), count:m ? +m[1] : 0, fixed:!!m, W:parseInt(s.W, 10) || 1, T:parseInt(s.T, 10) || 1, Sv:parseInt(s.Sv, 10) || 7, InSv:parseInt(s.InSv, 10) || 7, fnp, char:lone || chars.has(s.name.replace(/ ×\d+$/, '')) }; });
+  // a models line counts for the row its name starts with ("Jakhal Pack Leader" → Jakhal), else for the bodyguard's row
+  const stem = x => x.toLowerCase().replace(/ w\/.*$/, '').replace(/s$/, '');
+  for(const line of u.models){
+    const n = parseInt(line, 10) || 1, name = line.replace(/^\d+× /, '').replace(/ \(.*\)$/, '');
+    const hit = rows.filter(r => !r.fixed && (stem(name).startsWith(stem(r.name)) || stem(r.name).startsWith(stem(name)))).sort((a, b) => b.name.length - a.name.length)[0]
+      || rows.filter(r => !r.fixed && !r.char).slice(-1)[0];
+    if(hit) hit.count += n;
+  }
+  return rows.filter(r => r.count > 0);
+}
+const dmUnits = (a, kind) => a.units.filter(u => (kind === 'ranged' ? u.ranged : u.melee || []).length);
+// the pickers: the opponent's list, the attacking unit, the target
+function dmPicker(k){
+  const me = army(), st = dmState();
+  if(k === 'opp'){
+    const now = oppOf(me);
+    openSheet('Damage', 'Your opponent’s list', '<div class="list">' + D.armies.map(a => '<button class="row" data-dmopp="' + esc(a.id) + '"><span class="rb"><b>' + esc(a.name) + (a === me ? ' <span class="apts">(this list)</span>' : '') + '</b><span>' + esc(factionOf(a).name + ' · ' + detachmentsOf(a).map(d => d.name).join(', ')) + '</span></span>' +
+      (a === now ? '<svg class="ic ok" aria-hidden="true"><use href="#i-check"/></svg>' : '') + '</button>').join('') + (now ? '<button class="row" data-dmopp=""><span class="rb"><b>No opponent</b></span></button>' : '') + '</div>');
+    return;
+  }
+  const opp = oppOf(me), kind = st.ph === 'fight' ? 'melee' : 'ranged';
+  const A = st.dir === 'me' ? me : opp, B = st.dir === 'me' ? opp : me;
+  const list = k === 'atk' ? dmUnits(A, kind) : B.units;
+  openSheet(k === 'atk' ? 'Attacker' : 'Target', (k === 'atk' ? A : B).name, '<div class="list">' + list.map(u => '<button class="row" data-dmunit="' + k + '|' + esc(u.id) + '"><span class="rb"><b>' + esc(unitLabel(u)) + '</b><span>' + esc(u.role + ' · ' + modelCount(u) + (modelCount(u) > 1 ? ' models' : ' model')) + '</span></span>' +
+    (u.id === st[k] ? '<svg class="ic ok" aria-hidden="true"><use href="#i-check"/></svg>' : '') + '</button>').join('') + '</div>');
+}
+function screenDamage(){
+  const me = army(), opp = oppOf(me), st = dmState();
+  const pick = (k, label, value, sub) => '<button class="row dmp" data-dmpick="' + k + '"><span class="rb"><span class="lbl">' + label + '</span><b>' + esc(value) + '</b>' + (sub ? '<span>' + esc(sub) + '</span>' : '') + '</span>' + chev + '</button>';
+  let h = '<div class="list">' + pick('opp', 'Opponent', opp ? opp.name : 'Pick their list', opp ? factionOf(opp).name : '') + '</div>';
+  if(!opp) return h + '<p class="note">The calculator compares one of your units with one of theirs. Pick the list your opponent plays (any list in the app).</p>';
+  const seg = (k, opts) => '<div class="seg">' + opts.map(([v, l]) => '<button data-dmset="' + k + '|' + v + '" aria-pressed="' + (st[k] === v) + '"' + (st[k] === v ? ' class="on"' : '') + '>' + l + '</button>').join('') + '</div>';
+  const kind = st.ph === 'fight' ? 'melee' : 'ranged';
+  const A = st.dir === 'me' ? me : opp, B = st.dir === 'me' ? opp : me;
+  const atks = dmUnits(A, kind), tgts = B.units;
+  const au = atks.find(u => u.id === st.atk) || atks[0], tu = tgts.find(u => u.id === st.tgt) || tgts[0];
+  h += seg('dir', [['me', 'You attack'], ['them', 'They attack']]) + seg('ph', [['shooting', 'Shooting'], ['fight', 'Fight']]);
+  if(!au || !tu) return h + '<p class="note">' + esc(A.name) + ' has no unit with ' + kind + ' weapons.</p>';
+  h += '<div class="list">' + pick('atk', 'Attacker · ' + (st.dir === 'me' ? 'yours' : 'theirs'), unitLabel(au), '') + pick('tgt', 'Target · ' + (st.dir === 'me' ? 'theirs' : 'yours'), unitLabel(tu), '') + '</div>';
+  const calc = dmCalc(st, A, B, au, tu, kind);
+  return h + '<div id="dmRes">' + dmResult(calc) + '</div>' + calc.html;
+}
+// everything the calculator needs, and the tick boxes that set it
+function dmCalc(st, A, B, au, tu, kind){
+  const big = hasKw(tu, 'Monster') || hasKw(tu, 'Vehicle');
+  const items = weaponItems(kind === 'ranged' ? au.ranged : au.melee);
+  const key = it => kind + ':' + itemName(it) + '|' + (it.who || '');
+  // a models line with two or more weapons of this kind to pick from: the second and later start unticked,
+  // as do pistols beside other guns (a model shoots with one or the other)
+  const firstOff = new Set();
+  (au.gear || []).forEach(g => { const mine = items.filter(it => g.includes(itemName(it)) && !isEA(it)); if(kind === 'melee') mine.slice(1).forEach(it => firstOff.add(key(it))); });
+  if(kind === 'ranged' && items.some(it => !isCQ(it))) items.filter(isCQ).forEach(it => firstOff.add(key(it)));
+  const on = it => st.off[key(it)] == null ? !firstOff.has(key(it)) : !st.off[key(it)];
+  let html = '<div class="sec-h"><h2>Weapons</h2></div><div class="dml">';
+  const groups = [];
+  for(const it of items){
+    const k = key(it), ps = it.profiles;
+    // a weapon with several profiles: one is picked (the Hunter profile against MONSTER/VEHICLE)
+    const pi = st.pick[k] != null ? Math.min(+st.pick[k], ps.length - 1) : Math.max(0, ps.findIndex(w => !!w.hunter === big));
+    const w = ps[pi], n = +it.n || 1;
+    html += '<label class="dmw"><input type="checkbox" data-dmw="' + esc(k) + '"' + (on(it) ? ' checked' : '') + '><span><b>' + esc(itemName(it)) + (n > 1 ? ' <span class="x">×' + n + '</span>' : '') + '</b>' +
+      '<small>' + esc([w.range, 'A' + w.A, (w.BS || w.WS), 'S' + w.S, 'AP' + w.AP, 'D' + w.D].filter(Boolean).join(' · ')) + (w.kw.length ? ' · ' + esc(w.kw.join(', ')) : '') + '</small></span></label>';
+    if(ps.length > 1) html += '<div class="dmpf">' + ps.map((p, i) => '<button data-dmprof="' + esc(k) + '|' + i + '"' + (i === pi ? ' class="on" aria-pressed="true"' : ' aria-pressed="false"') + '>' + esc(p.name) + '</button>').join('') + '</div>';
+    if(on(it)) groups.push({ name:itemName(it), n, A:w.A, skill:w.BS || w.WS, S:w.S, AP:w.AP, D:w.D, kw:w.kw });
+  }
+  html += '</div>';
+  // the situation
+  const kws = new Set(groups.flatMap(g => g.kw.map(x => x.toUpperCase().replace(/ .*$/, ''))));
+  const situ = DM_SITU.filter(([k, , kd]) => kd === kind && (k !== 'halfRange' || kws.has('MELTA') || kws.has('RAPID')) && (k !== 'stationary' || kws.has('HEAVY')));
+  if(kind === 'ranged' && !situ.some(([k]) => k === 'cover')) situ.unshift(DM_SITU[0]);
+  if(kws.has('LANCE') && !situ.some(([k]) => k === 'charged')) situ.push(DM_SITU[3]);
+  const ctx = { ranged:kind === 'ranged' };
+  html += '<div class="sec-h"><h2>Situation</h2></div><div class="dml">' + situ.map(([k, l]) => { ctx[k] = !!st.on['c:' + k];
+    return '<label class="dmw"><input type="checkbox" data-dmon="c:' + k + '"' + (ctx[k] ? ' checked' : '') + '><span><b>' + l + '</b></span></label>'; }).join('') + '</div>';
+  // the attacker's rules: footnotes, detachment rules, auras, stratagems (each a tick box when its words are understood)
+  const mod = {};
+  const add = (e, x) => { for(const [k, v] of Object.entries(e)){
+    if(['hit', 'wound', 'a', 's', 'ap', 'd'].includes(k)) mod[k] = (mod[k] || 0) + v;
+    else if(k === 'rrHit' || k === 'rrWound') mod[k] = mod[k] === 'all' || v === 'all' ? 'all' : v;
+    else mod[k] = v; } };
+  const rule = (k, label, sub, e) => '<label class="dmw' + (e ? '' : ' nc') + '"><input type="checkbox" data-dmon="' + esc(k) + '"' + (e ? '' : ' disabled') + (e && st.on[k] ? ' checked' : '') + '><span><b>' + label + '</b><small>' + esc(sub) + (e ? '' : ' · not in these numbers') + '</small></span></label>';
+  const mods = inArmy(A, () => unitMods(au, kind));
+  const seen = new Set();
+  let rh = '';
+  for(const m of mods){
+    if(m.rule === 'Lance') continue;   // the weapon's [LANCE]: counted from its keyword and "Made a charge move"
+    const k = 'm:' + [m.from, m.when, m.note].join('|');
+    if(seen.has(k)) continue; seen.add(k);
+    const e = m.weapon && m.set ? null : dmEffects(m.note);
+    if(e && st.on[k]) add(e);
+    rh += rule(k, (m.cp ? '<b class="cpb">' + m.cp + 'CP</b> ' : '') + esc(m.from || ''), (m.when ? m.when + ': ' : '') + m.note, e);
+  }
+  html += '<div class="sec-h"><h2>' + esc(shortName(au)) + '’s rules</h2></div><div class="dml">' + (rh || '<p class="note">No footnotes on its weapons.</p>') + '</div>';
+  // the target's protection
+  const tmod = {};
+  const single = modelCount(tu) === 1;
+  let th = '';
+  for(const d of inArmy(B, () => defenceItems(tu, st.ph))){
+    const k = 't:' + d.t, e = dmDefence(d.t, kind, single);
+    if(/^feel no pain \d\+$/i.test(d.t) && d.a === 'rule'){ th += '<p class="dmw auto"><b>' + esc(d.t) + '</b><small>counted: the unit always has it</small></p>'; continue; }
+    if(e && st.on[k]) Object.assign(tmod, e, e.dMinus ? { dMinus:(tmod.dMinus || 0) + e.dMinus } : {});
+    th += rule(k, esc(d.t.replace(/^(\d+CP) /, '')), d.a === 'strat' ? 'stratagem' : d.a === 'ability' ? 'ability' : 'rule', e);
+  }
+  html += '<div class="sec-h"><h2>' + esc(shortName(tu)) + ' when targeted</h2></div><div class="dml">' + (th || '<p class="note">Nothing that changes these numbers.</p>') + '</div>';
+  // anything else, set by hand
+  const man = st.man;
+  const step = (k, label) => '<div class="dmstep"><span>' + label + '</span><button data-dmman="' + k + '|-1" aria-label="' + label + ' minus">−</button><b class="num">' + ((+man[k] || 0) > 0 ? '+' : '') + (+man[k] || 0) + '</b><button data-dmman="' + k + '|1" aria-label="' + label + ' plus">+</button></div>';
+  const rr = (k, label) => '<div class="dmstep"><span>' + label + '</span>' + [['', 'none'], ['1s', '1s'], ['all', 'all']].map(([v, l]) => '<button class="rr' + ((man[k] || '') === v ? ' on' : '') + '" data-dmrr="' + k + '|' + v + '">' + l + '</button>').join('') + '</div>';
+  html += '<div class="sec-h"><h2>Other modifiers</h2></div><div class="dmman">' + step('hit', 'Hit roll') + step('wound', 'Wound roll') + step('ap', 'AP better') + step('d', 'Damage') + step('a', 'Attacks') + rr('rrHit', 'Re-roll hits') + rr('rrWound', 'Re-roll wounds') + '</div>' +
+    '<p class="note">Averages over 10,000 games played out with the dice; one unit’s attacks against the other, nothing used up. Rules marked “not counted” are not in these numbers.</p>';
+  for(const k of ['hit', 'wound', 'ap', 'd', 'a']) if(+man[k]) mod[k] = (mod[k] || 0) + +man[k];
+  for(const k of ['rrHit', 'rrWound']) if(man[k]) mod[k] = mod[k] === 'all' || man[k] === 'all' ? 'all' : man[k];
+  const models = dmModels(tu);
+  const T = (models.find(m => !m.char) || models[0] || { T:1 }).T;
+  const input = { groups:groups.map(g => Object.assign(g, { mod })), target:{ T, kw:tu.kw, models, mod:tmod }, ctx, sims:10000, seed:7 };
+  return { html, input, au, tu };
+}
+function dmResult(c){
+  if(!c.input.groups.length) return '<div class="dmres"><p class="note">Tick a weapon.</p></div>';
+  const r = WH_CALC.run(c.input), f = x => x >= 10 ? x.toFixed(0) : x.toFixed(1);
+  const pct = x => x >= 0.995 ? '>99%' : x < 0.005 ? '<1%' : Math.round(x * 100) + '%';
+  const atLeast = k => r.dist.slice(k).reduce((t, p) => t + p, 0);
+  const bars = r.dist.map((p, k) => k ? '<span title="' + k + '"><i style="height:' + Math.max(2, Math.round(atLeast(k) * 100)) + '%"></i><em>' + k + '</em></span>' : '').join('');
+  return '<div class="dmres"><div class="dmn"><div><b class="num">' + f(r.killed) + '</b><span>of ' + r.models + (r.models > 1 ? ' models' : ' model') + ' destroyed</span></div><div><b class="num">' + f(r.dmg) + '</b><span>wounds lost</span></div><div><b class="num">' + pct(r.wipe) + '</b><span>unit destroyed</span></div></div>' +
+    (r.models > 1 ? '<div class="dmb" aria-label="Chance to destroy at least N models">' + bars + '</div><p class="dmbl">chance to destroy at least N models</p>' : '') +
+    '<div class="dmg"><span></span><span>Hits</span><span>Wounds</span><span>Through</span>' + c.input.groups.map((g, i) => { const x = r.groups[i];
+      return '<span>' + esc(g.name) + '</span><span class="num">' + f(x.hits) + '</span><span class="num">' + f(x.wounds) + '</span><span class="num">' + f(x.unsaved + x.mortals) + '</span>'; }).join('') + '</div></div>';
 }
 
 /* ---------- search over everything in one army ---------- */
@@ -2096,7 +2330,7 @@ function screenRules(){
 
 /* ---------- render ---------- */
 function render(){
-  if(cur.s === 'home' && ONLY) cur = Object.assign(plain(cur), { s:'units', army:ONLY.id });
+  if(cur.s === 'home' && ONLY) cur = Object.assign(plain(cur), { s:'army', army:ONLY.id });
   tabMemo[memoKey(cur.army, tabOf(cur.s))] = plain(cur);
   renderTop();
   const v = $('#view'), s = cur.s;
@@ -2112,6 +2346,7 @@ function render(){
   else if(s === 'bases') v.innerHTML = screenBases();
   else if(s === 'pregame') v.innerHTML = screenPregame();
   else if(s === 'settings') v.innerHTML = screenSettings();
+  else if(s === 'damage') v.innerHTML = screenDamage();
   if(cur.army) bot = tabBar();
   setBar('subbar', sub);
   setBar('bbar', bot);
@@ -2262,7 +2497,7 @@ document.addEventListener('click', e => {
   if(el.hasAttribute('data-close')){ closeSheet(); return; }
   if(el.hasAttribute('data-back')){ back(); return; }
   if(el.hasAttribute('data-find')){ focusSearch = true; go({ s:'army', army:army().id }); return; }
-  if(ds.army){ const next = { s:'units', army:ds.army }; if(inSheet){ hideSheet(); go(next, 'sheet'); } else go(next); return; }   // an army opens on its Units: what matters at the table
+  if(ds.army){ const next = { s:'army', army:ds.army }; if(inSheet){ hideSheet(); go(next, 'sheet'); } else go(next); return; }   // an army opens on Find: search, Overview and every list
   if(el.hasAttribute('data-settings')){ go({ s:'settings' }); return; }
   if(ds.hfopen){ showHomeFilter(ds.hfopen); return; }
   if(ds.hf){ const i = ds.hf.indexOf('|'), k = ds.hf.slice(0, i), v = ds.hf.slice(i + 1), f = homeFilter();
@@ -2270,6 +2505,17 @@ document.addEventListener('click', e => {
     store.set('wh-home-filter', f); closeSheet(); rerender(); return; }
   if(el.hasAttribute('data-hfclear')){ store.set('wh-home-filter', {}); rerender(); return; }
   if(el.hasAttribute('data-roll')){ rollArmy(); return; }
+  if(ds.dmpick){ dmPicker(ds.dmpick); return; }
+  if(ds.dmopp != null){ const a = army(); if(ds.dmopp) store.set('wh-opp-' + a.id, ds.dmopp); else store.set('wh-opp-' + a.id, null); closeSheet(); rerender(); return; }
+  if(ds.dmunit){ const [k, id] = ds.dmunit.split('|'), st = dmState(); st[k] = id; saveSession(); closeSheet(); rerender(); return; }
+  if(ds.dmset || ds.dmprof || ds.dmman || ds.dmrr){
+    const st = dmState();
+    if(ds.dmset){ const [k, v] = ds.dmset.split('|'); st[k] = v; }
+    if(ds.dmprof){ const i = ds.dmprof.lastIndexOf('|'); st.pick[ds.dmprof.slice(0, i)] = +ds.dmprof.slice(i + 1); }
+    if(ds.dmman){ const [k, v] = ds.dmman.split('|'); st.man[k] = Math.max(-3, Math.min(6, (+st.man[k] || 0) + +v)); }
+    if(ds.dmrr){ const [k, v] = ds.dmrr.split('|'); st.man[k] = v; }
+    saveSession(); rerender(); return;
+  }
   if(ds.go){ go({ s:ds.go, army:army().id }); return; }
   if(ds.unit){
     const next = { s:'unit', army:army().id, unit:ds.unit };
@@ -2314,6 +2560,15 @@ document.addEventListener('click', e => {
     cards.forEach(d => d.open = openAll);
     el.textContent = openAll ? 'Collapse all' : 'Expand all';
   }
+});
+// the damage calculator's tick boxes
+document.addEventListener('change', e => {
+  const t = e.target;
+  if(!t.matches || !t.matches('[data-dmw], [data-dmon]')) return;
+  const st = dmState();
+  if(t.dataset.dmw) st.off[t.dataset.dmw] = !t.checked;
+  else if(t.checked) st.on[t.dataset.dmon] = true; else delete st.on[t.dataset.dmon];
+  saveSession(); rerender();
 });
 // remember expanded stratagem cards
 document.addEventListener('toggle', e => {
@@ -2409,7 +2664,7 @@ function start(snap){
     render(); toSpot(st);
   }
   else if(snap && valid(snap.cur)){ restore(snap.cur); toSpot(snap); }
-  else { const last = store.get('wh-last'); restore(valid(last) ? last : ONLY ? { s:'units', army:ONLY.id } : { s:'home' }); if(valid(last)) toSpot(last); }
+  else { const last = store.get('wh-last'); restore(valid(last) ? last : ONLY ? { s:'army', army:ONLY.id } : { s:'home' }); if(valid(last)) toSpot(last); }
   checkForUpdate(true);
   keepAwake();
 }

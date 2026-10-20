@@ -26,7 +26,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
   await page.route(/^https?:\/\/(?!127\.0\.0\.1)/, r => r.abort());   // the app ships its own fonts
   // verified.js is the result of the last gate run (this one writes it when it ends): a fixed stand-in, as if
   // this build passed, so the screens and their snapshots do not depend on how the previous run went
-  const build = sha(fs.readFileSync(path.join(ROOT, 'app.html'), 'utf8') + fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8')).slice(0, 10);
+  const build = sha(['app.html', 'data.js', 'calc.js'].map(f => fs.readFileSync(path.join(ROOT, f), 'utf8')).join('')).slice(0, 10);
   const stub = { ok:true, build, data:loadData().version, date:'(date of the check)', checks:[{ label:'(checks)', detail:'(as listed by verify/run.js)' }], sources:[{ label:'(sources)', detail:'(as listed by verify/run.js)' }] };
   await page.route(/\/verified\.js(\?|$)/, r => r.fulfill({ contentType:'application/javascript', body:'window.WH_VERIFIED = ' + JSON.stringify(stub) + ';' }));
   await page.goto(site.url + 'index.html');
@@ -81,6 +81,10 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     };
     if(a === armies[0]){ await take('settings', `() => { hideSheet(); go({ s:'settings' }); }`); await take('home', `() => { hideSheet(); go({ s:'home' }); }`); }
     for(const s of ['army','pregame','units','ranged','melee','abilities','rules','bases']) await screen(s);
+    // the damage calculator, against the next list (the first unit of each side, shooting and fighting)
+    const vs = armies[(armies.indexOf(a) + 1) % armies.length].id;
+    for(const ph of ['shooting', 'fight'])
+      await take('damage ' + ph, `() => { hideSheet(); store.set('wh-opp-${a.id}', '${vs}'); sess.dmg = {}; sess.dmg['${a.id}'] = { ph:'${ph}' }; go({ s:'damage', army:'${a.id}' }); }`);
     await screen('strats', { folded:true });   // every stratagem folded: its one-line gist, timing and users
     await screen('strats', { open:true });     // every stratagem, unfolded
     for(const u of a.units){

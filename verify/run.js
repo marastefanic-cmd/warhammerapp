@@ -43,7 +43,8 @@ const step = (name, args, env) => {
   console.log((r.status === 0 ? 'PASS ' : 'FAIL ') + name + '  ' + out.split('\n')[0]);
 };
 
-const hash = sha(fs.readFileSync(path.join(ROOT, 'app.html'), 'utf8') + fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8'));
+// the verified files: the app, its data and the calculator's engine
+const hash = sha(['app.html', 'data.js', 'calc.js'].map(f => fs.readFileSync(path.join(ROOT, f), 'utf8')).join(''));
 step('data', ['check.js']);
 step('invariants', ['verify/invariants.js']);
 step('choice', ['verify/choice.js']);
