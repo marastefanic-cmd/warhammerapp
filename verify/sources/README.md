@@ -6,7 +6,7 @@ Everything the app states as a fact is checked against these, mechanically, befo
 | file | from | sha256 of the original PDF |
 |---|---|---|
 | nr/shooty.txt | Me shooty yer booty - New Recruit.pdf | 4c0e5befd172eeb489137b8e7efa4e4d3f5041a0111eacec7e7a5e0ed10e4781 |
-| nr/melee.txt | Melee - New Recruit.pdf | fe02ff236da7fddf69c2a1d971fd4df3c0ecd055cfc5fd527a0791532185484c |
+| nr/melee.txt | Melee - New Recruit.pdf (exported 20 Oct 2026) | 689e9cdeb600f2dfa65c3d7bc2384868023ff433a76bc80fddb09bec2b322e2b |
 | packet/core-stratagems.txt | Core_stratagemy.pdf | d62979edcfd0323c1d3382a6d238f0f87b312fb07f103125ecbccdb6bd96e5a8 |
 
 Text made with `pdftotext -layout <pdf> <txt>` (poppler).

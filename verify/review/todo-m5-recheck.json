@@ -1,0 +1,689 @@
+[
+ {
+  "army": "melee",
+  "kind": "ability-na",
+  "where": "melee · Mozrog Skragbad · Beast Snagga Following",
+  "judgement": {
+   "na": "Every BEAST SNAGGA unit in this list is a MONSTER CHARACTER",
+   "armyUnits": [
+    "Ghazghkull Thraka [Character, Epic Hero, Explosives, Faction: Orks, Ghazghkull Thraka, Infantry, Warboss, Warlord]",
+    "Mozrog Skragbad [Beast Snagga, Character, Epic Hero, Faction: Orks, Monster, Mozrog Skragbad]",
+    "Nazdreg [Character, Epic Hero, Faction: Orks, Infantry, Mega Armour, Nazdreg, Warboss, Explosives, Meganobz]",
+    "Beastboss on Squigosaur [Beast Snagga, Beastboss on Squigosaur, Character, Faction: Orks, Monster, Warboss]",
+    "Big Mek [Big Mek, Character, Explosives, Faction: Orks, Infantry, Painboy, Nobz]",
+    "Big Mek in Mega Armour [Big Mek, Big Mek in Mega Armour, Character, Explosives, Faction: Orks, Infantry, Mega Armour, Meganobz]",
+    "Gretchin [Faction: Orks, Gretchin, Grots, Infantry]",
+    "Deffkoptas [Deffkoptas, Explosives, Faction: Orks, Fly, Mounted, Speed Freeks]",
+    "Squighog Boyz [Beast Snagga, Explosives, Faction: Orks, Mobile, Mounted, Squighog Boyz]"
+   ]
+  },
+  "source": {
+   "ability": "Beast Snagga Following",
+   "text": "While this unit is within 3\" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**."
+  },
+  "key": "adde875cd4181cd0"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Nazdreg · Nazdreg’s Know-wotz",
+  "judgement": {
+   "who": "Nazdreg",
+   "models": [
+    "1× Nazdreg",
+    "5× Meganob w/ Twin Killsaw"
+   ]
+  },
+  "source": {
+   "ability": "Nazdreg’s Know-wotz",
+   "text": "- This unit has **Deep Strike**.\n- This unit’s ranged attacks have **[IGNORES COVER]**."
+  },
+  "key": "9d06a83163dcb3a2"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Nazdreg · Supreme Kunnin’",
+  "judgement": {
+   "who": "Nazdreg",
+   "models": [
+    "1× Nazdreg",
+    "5× Meganob w/ Twin Killsaw"
+   ]
+  },
+  "source": {
+   "ability": "Supreme Kunnin’",
+   "text": "In your opponent’s Movement phase, when an enemy unit ends a move within 8\" of this unit, if this unit is **unengaged**, this unit can:\n- Make a **normal move** of up to D6\".\n- Or: If this unit is **riled up**, make a **normal move** of up to 5\"."
+  },
+  "key": "5e8bdfc785d66320"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Nazdreg · Intimidating Motivation",
+  "judgement": {
+   "who": "Nazdreg",
+   "models": [
+    "1× Nazdreg",
+    "5× Meganob w/ Twin Killsaw"
+   ]
+  },
+  "source": {
+   "ability": "Intimidating Motivation",
+   "text": "In your Movement phase, at the start or end of this unit’s move, you can select one friendly **ORKS** unit within 6\" of this unit. That unit:\n- Is no longer **battle-shocked**.\n- Is **riled up** until the start of your next turn."
+  },
+  "key": "832442c0a6f09d1d"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Nazdreg · Krumpin’ Time",
+  "judgement": {
+   "who": "Meganobz",
+   "models": [
+    "1× Nazdreg",
+    "5× Meganob w/ Twin Killsaw"
+   ]
+  },
+  "source": {
+   "ability": "Krumpin’ Time",
+   "text": "In the Fight phase, if this unit is **riled up**, this unit has +1 to **hit rolls**."
+  },
+  "key": "329af067dc5867be"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Nazdreg · Arrogant Invulnerability",
+  "judgement": {
+   "who": "Meganobz",
+   "models": [
+    "1× Nazdreg",
+    "5× Meganob w/ Twin Killsaw"
+   ]
+  },
+  "source": {
+   "ability": "Arrogant Invulnerability",
+   "text": "Attacks that target this unit have -1 **AP**."
+  },
+  "key": "36181620840c71e3"
+ },
+ {
+  "army": "melee",
+  "kind": "unit-kwNote",
+  "where": "melee · Nazdreg",
+  "judgement": {
+   "kwNote": "Explosives, Meganobz come from the led Meganobz."
+  },
+  "source": {
+   "models": [
+    "1× Nazdreg",
+    "5× Meganob w/ Twin Killsaw"
+   ],
+   "stats": [
+    "Nazdreg W8 OC1",
+    "Meganob ×5 W3 OC1"
+   ],
+   "weapons": [
+    "Kustom Blasta X Skorcha 3 -1 1 BLAST 1, TORRENT, IGNORES COVER",
+    "Kustom Blasta X Gatler 6 -2 3 HAZARDOUS, IGNORES COVER",
+    "Kustom Blasta X Shoota 4 -1 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 2, IGNORES COVER",
+    "Kustom Blasta X 6 -1 1 CLEAVE 1, EXTRA ATTACKS, SUSTAINED HITS 1",
+    "Moonchewa 5 -2 3 CLEAVE 1, TWIN-LINKED, SUSTAINED HITS 1",
+    "Twin Killsaw 3 -2 3 TWIN-LINKED, SUSTAINED HITS 1"
+   ]
+  },
+  "key": "9edbb4aefea58a8b"
+ },
+ {
+  "army": "melee",
+  "kind": "unit-ptsNote",
+  "where": "melee · Nazdreg",
+  "judgement": {
+   "ptsNote": "165 + Meganobz 200"
+  },
+  "source": {
+   "models": [
+    "1× Nazdreg",
+    "5× Meganob w/ Twin Killsaw"
+   ],
+   "stats": [
+    "Nazdreg W8 OC1",
+    "Meganob ×5 W3 OC1"
+   ],
+   "weapons": [
+    "Kustom Blasta X Skorcha 3 -1 1 BLAST 1, TORRENT, IGNORES COVER",
+    "Kustom Blasta X Gatler 6 -2 3 HAZARDOUS, IGNORES COVER",
+    "Kustom Blasta X Shoota 4 -1 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 2, IGNORES COVER",
+    "Kustom Blasta X 6 -1 1 CLEAVE 1, EXTRA ATTACKS, SUSTAINED HITS 1",
+    "Moonchewa 5 -2 3 CLEAVE 1, TWIN-LINKED, SUSTAINED HITS 1",
+    "Twin Killsaw 3 -2 3 TWIN-LINKED, SUSTAINED HITS 1"
+   ]
+  },
+  "key": "7cb3e911df27ef6c"
+ },
+ {
+  "army": "melee",
+  "kind": "unit-weapons",
+  "where": "melee · Nazdreg",
+  "judgement": {
+   "gear": [
+    [
+     "Kustom Blasta X",
+     "Moonchewa"
+    ],
+    [
+     "Twin Killsaw"
+    ]
+   ],
+   "weapons": [
+    "Nazdreg · Kustom Blasta X · Skorcha",
+    "Nazdreg · Kustom Blasta X · Gatler",
+    "Nazdreg · Kustom Blasta X · Shoota",
+    "Nazdreg · Kustom Blasta X",
+    "Nazdreg · Moonchewa",
+    "Meganobz · ×5 · Twin Killsaw"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Nazdreg",
+    "5× Meganob w/ Twin Killsaw"
+   ],
+   "leads": "Meganobz"
+  },
+  "key": "59af378acf565a64"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-na",
+  "where": "melee · Beastboss on Squigosaur · Boss of da Hunt",
+  "judgement": {
+   "na": "Every BEAST SNAGGA unit in this list is a MONSTER CHARACTER",
+   "armyUnits": [
+    "Ghazghkull Thraka [Character, Epic Hero, Explosives, Faction: Orks, Ghazghkull Thraka, Infantry, Warboss, Warlord]",
+    "Mozrog Skragbad [Beast Snagga, Character, Epic Hero, Faction: Orks, Monster, Mozrog Skragbad]",
+    "Nazdreg [Character, Epic Hero, Faction: Orks, Infantry, Mega Armour, Nazdreg, Warboss, Explosives, Meganobz]",
+    "Beastboss on Squigosaur [Beast Snagga, Beastboss on Squigosaur, Character, Faction: Orks, Monster, Warboss]",
+    "Big Mek [Big Mek, Character, Explosives, Faction: Orks, Infantry, Painboy, Nobz]",
+    "Big Mek in Mega Armour [Big Mek, Big Mek in Mega Armour, Character, Explosives, Faction: Orks, Infantry, Mega Armour, Meganobz]",
+    "Gretchin [Faction: Orks, Gretchin, Grots, Infantry]",
+    "Deffkoptas [Deffkoptas, Explosives, Faction: Orks, Fly, Mounted, Speed Freeks]",
+    "Squighog Boyz [Beast Snagga, Explosives, Faction: Orks, Mobile, Mounted, Squighog Boyz]"
+   ]
+  },
+  "source": {
+   "ability": "Boss of da Hunt",
+   "text": "While this unit is within 3\" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**."
+  },
+  "key": "f1f7e0dca0b19946"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Big Mek · Shokk-boosta",
+  "judgement": {
+   "who": "Big Mek",
+   "models": [
+    "1× Big Mek",
+    "1× Painboy",
+    "8× Nob w/ Kustom Shoota and Kustom Krumpa",
+    "2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)"
+   ]
+  },
+  "source": {
+   "ability": "Shokk-boosta",
+   "text": "In your Movement phase, when this unit is selected to make an **advance move**, you can use this ability. If you do:\n- This unit can change that **advance roll** to a 6.\n- This unit can move through all types of model.\n- When this unit ends that **advance move**, make a **hazard roll** for each model in this unit."
+  },
+  "key": "41d8328d44bae9dd"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Big Mek · More Dakka",
+  "judgement": {
+   "who": "Big Mek",
+   "models": [
+    "1× Big Mek",
+    "1× Painboy",
+    "8× Nob w/ Kustom Shoota and Kustom Krumpa",
+    "2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)"
+   ]
+  },
+  "source": {
+   "ability": "More Dakka",
+   "text": "This unit’s ranged attacks have:\n- **[IGNORES COVER]**.\n- If this unit is **riled up**, **[SUSTAINED HITS 1]**."
+  },
+  "key": "c4f48c4ac55f62f3"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Big Mek · Kunnin’ But Brutal",
+  "judgement": {
+   "who": "Big Mek",
+   "models": [
+    "1× Big Mek",
+    "1× Painboy",
+    "8× Nob w/ Kustom Shoota and Kustom Krumpa",
+    "2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)"
+   ]
+  },
+  "source": {
+   "ability": "Kunnin’ But Brutal",
+   "text": "**ORKS** model only. When this unit is selected to make a **fall-back move**, that fall-back move does not prevent this unit from being **eligible to shoot**/**declare a charge**."
+  },
+  "key": "4b2fe703cd0a821d"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Big Mek · Crude Surgery",
+  "judgement": {
+   "who": "Painboy",
+   "models": [
+    "1× Big Mek",
+    "1× Painboy",
+    "8× Nob w/ Kustom Shoota and Kustom Krumpa",
+    "2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)"
+   ]
+  },
+  "source": {
+   "ability": "Crude Surgery",
+   "text": "In your Command phase, this unit **heals** 3 wounds."
+  },
+  "key": "dcea0c4de8648e46"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Big Mek · Catch Dat Red Bit",
+  "judgement": {
+   "who": "Painboy",
+   "models": [
+    "1× Big Mek",
+    "1× Painboy",
+    "8× Nob w/ Kustom Shoota and Kustom Krumpa",
+    "2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)"
+   ]
+  },
+  "source": {
+   "ability": "Catch Dat Red Bit",
+   "text": "When this model uses its **Crude Surgery** ability, you can add D3 to the number of wounds **healed**.\n*Place a Grot Orderly token next to the unit, removing it when this ability is used.*"
+  },
+  "key": "82dc561c89cda84e"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Big Mek · Ammo Runts",
+  "judgement": {
+   "who": "Nobz",
+   "models": [
+    "1× Big Mek",
+    "1× Painboy",
+    "8× Nob w/ Kustom Shoota and Kustom Krumpa",
+    "2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)"
+   ]
+  },
+  "source": {
+   "ability": "Ammo Runts",
+   "text": "In your Shooting phase, when this unit is **selected to shoot**, you can use this ability. If you do, this unit’s ranged attacks have +1 to **hit rolls**.\n*Place any number of Ammo Runt tokens next to the unit, removing them when this ability is used.*"
+  },
+  "key": "027442776549cd66"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Big Mek · Get Out da Way!",
+  "judgement": {
+   "who": "Nobz",
+   "models": [
+    "1× Big Mek",
+    "1× Painboy",
+    "8× Nob w/ Kustom Shoota and Kustom Krumpa",
+    "2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)"
+   ]
+  },
+  "source": {
+   "ability": "Get Out da Way!",
+   "text": "While making a **charge move**, this unit can move through models (excluding **MONSTER/VEHICLE** models)."
+  },
+  "key": "ebb48d4a64faf7d1"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Big Mek · Paired Krumpas",
+  "judgement": {
+   "who": "Nobz",
+   "models": [
+    "1× Big Mek",
+    "1× Painboy",
+    "8× Nob w/ Kustom Shoota and Kustom Krumpa",
+    "2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)"
+   ]
+  },
+  "source": {
+   "ability": "Paired Krumpas",
+   "text": "Attacks made with this model’s Kustom Krumpa weapon can re-roll **hit rolls** and **wound rolls**."
+  },
+  "key": "5288f1d167475b30"
+ },
+ {
+  "army": "melee",
+  "kind": "unit-kwNote",
+  "where": "melee · Big Mek",
+  "judgement": {
+   "kwNote": "Painboy, Nobz come from the combined unit."
+  },
+  "source": {
+   "models": [
+    "1× Big Mek",
+    "1× Painboy",
+    "8× Nob w/ Kustom Shoota and Kustom Krumpa",
+    "2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)"
+   ],
+   "stats": [
+    "Big Mek W6 OC1",
+    "Painboy W3 OC1",
+    "Nob ×10 W3 OC1"
+   ],
+   "weapons": [
+    "Kustom mega-blasta 3 -2 3 HAZARDOUS, IGNORES COVER",
+    "Kustom Shoota 4 0 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 2, IGNORES COVER",
+    "Drilla 3 -3 3 SUSTAINED HITS 1",
+    "’Urty syringe 1 0 D6 ANTI-INFANTRY 4+, DEVASTATING WOUNDS: INFANTRY, EXTRA ATTACKS, SUSTAINED HITS 1",
+    "Dok’s Toolz 3 -2 2 SUSTAINED HITS 1",
+    "Kustom Krumpa 3 -2 2 SUSTAINED HITS 1"
+   ]
+  },
+  "key": "7233cc02345a3e03"
+ },
+ {
+  "army": "melee",
+  "kind": "unit-ptsNote",
+  "where": "melee · Big Mek",
+  "judgement": {
+   "ptsNote": "120 + Painboy 45 + Nobz 240"
+  },
+  "source": {
+   "models": [
+    "1× Big Mek",
+    "1× Painboy",
+    "8× Nob w/ Kustom Shoota and Kustom Krumpa",
+    "2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)"
+   ],
+   "stats": [
+    "Big Mek W6 OC1",
+    "Painboy W3 OC1",
+    "Nob ×10 W3 OC1"
+   ],
+   "weapons": [
+    "Kustom mega-blasta 3 -2 3 HAZARDOUS, IGNORES COVER",
+    "Kustom Shoota 4 0 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 2, IGNORES COVER",
+    "Drilla 3 -3 3 SUSTAINED HITS 1",
+    "’Urty syringe 1 0 D6 ANTI-INFANTRY 4+, DEVASTATING WOUNDS: INFANTRY, EXTRA ATTACKS, SUSTAINED HITS 1",
+    "Dok’s Toolz 3 -2 2 SUSTAINED HITS 1",
+    "Kustom Krumpa 3 -2 2 SUSTAINED HITS 1"
+   ]
+  },
+  "key": "bdb0fd625eea7402"
+ },
+ {
+  "army": "melee",
+  "kind": "unit-weapons",
+  "where": "melee · Big Mek",
+  "judgement": {
+   "gear": [
+    [
+     "Kustom mega-blasta",
+     "Drilla"
+    ],
+    [
+     "’Urty syringe",
+     "Dok’s Toolz"
+    ],
+    [
+     "Kustom Krumpa",
+     "Kustom Shoota"
+    ],
+    [
+     "Kustom Krumpa"
+    ]
+   ],
+   "weapons": [
+    "Big Mek · Kustom mega-blasta",
+    "Nobz · ×8 · Kustom Shoota",
+    "Big Mek · Drilla",
+    "Painboy · ’Urty syringe",
+    "Painboy · Dok’s Toolz",
+    "Nobz · ×10 · Kustom Krumpa"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Big Mek",
+    "1× Painboy",
+    "8× Nob w/ Kustom Shoota and Kustom Krumpa",
+    "2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)"
+   ],
+   "leads": "Nobz"
+  },
+  "key": "cc9862c915f856ee"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Big Mek in Mega Armour · Fix Dat Armour Up",
+  "judgement": {
+   "who": "Big Mek in Mega Armour",
+   "models": [
+    "1× Big Mek in Mega Armour (Kustom Force Field)",
+    "5× Meganob w/ Twin Killsaw"
+   ]
+  },
+  "source": {
+   "ability": "Fix Dat Armour Up",
+   "text": "In your Command phase, this unit **heals** 3 wounds.\n*Place a Grot Oiler token next to the unit, removing it when this ability is used.*"
+  },
+  "key": "fc25783f670088a6"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Big Mek in Mega Armour · More Dakka",
+  "judgement": {
+   "who": "Big Mek in Mega Armour",
+   "models": [
+    "1× Big Mek in Mega Armour (Kustom Force Field)",
+    "5× Meganob w/ Twin Killsaw"
+   ]
+  },
+  "source": {
+   "ability": "More Dakka",
+   "text": "This unit’s ranged attacks have:\n- **[IGNORES COVER]**.\n- If this unit is **riled up**, **[SUSTAINED HITS 1]**."
+  },
+  "key": "a6f4ad7a456ba31b"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Big Mek in Mega Armour · Follow Me Ladz",
+  "judgement": {
+   "who": "Big Mek in Mega Armour",
+   "models": [
+    "1× Big Mek in Mega Armour (Kustom Force Field)",
+    "5× Meganob w/ Twin Killsaw"
+   ]
+  },
+  "source": {
+   "ability": "Follow Me Ladz",
+   "text": "**ORKS** model only. This unit has +2\" **M**."
+  },
+  "key": "ef4d33be6b83b98c"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Big Mek in Mega Armour · Kustom Force Field",
+  "judgement": {
+   "who": "Big Mek in Mega Armour",
+   "models": [
+    "1× Big Mek in Mega Armour (Kustom Force Field)",
+    "5× Meganob w/ Twin Killsaw"
+   ]
+  },
+  "source": {
+   "ability": "Kustom Force Field",
+   "text": "This unit has 4+ **InSv** against ranged attacks."
+  },
+  "key": "a34ded60a975424e"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Big Mek in Mega Armour · Krumpin’ Time",
+  "judgement": {
+   "who": "Meganobz",
+   "models": [
+    "1× Big Mek in Mega Armour (Kustom Force Field)",
+    "5× Meganob w/ Twin Killsaw"
+   ]
+  },
+  "source": {
+   "ability": "Krumpin’ Time",
+   "text": "In the Fight phase, if this unit is **riled up**, this unit has +1 to **hit rolls**."
+  },
+  "key": "2cafe615347b2701"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-who",
+  "where": "melee · Big Mek in Mega Armour · Arrogant Invulnerability",
+  "judgement": {
+   "who": "Meganobz",
+   "models": [
+    "1× Big Mek in Mega Armour (Kustom Force Field)",
+    "5× Meganob w/ Twin Killsaw"
+   ]
+  },
+  "source": {
+   "ability": "Arrogant Invulnerability",
+   "text": "Attacks that target this unit have -1 **AP**."
+  },
+  "key": "0136d9f91fceaafb"
+ },
+ {
+  "army": "melee",
+  "kind": "unit-kwNote",
+  "where": "melee · Big Mek in Mega Armour",
+  "judgement": {
+   "kwNote": "Meganobz comes from the led Meganobz."
+  },
+  "source": {
+   "models": [
+    "1× Big Mek in Mega Armour (Kustom Force Field)",
+    "5× Meganob w/ Twin Killsaw"
+   ],
+   "stats": [
+    "Big Mek in Mega Armour W5 OC1",
+    "Meganob ×5 W3 OC1"
+   ],
+   "weapons": [
+    "Kustom Mega-blasta 3 -2 3 HAZARDOUS, IGNORES COVER",
+    "Power Klaw 3 -2 2 SUSTAINED HITS 1",
+    "Twin Killsaw 3 -2 3 TWIN-LINKED, SUSTAINED HITS 1"
+   ]
+  },
+  "key": "852109e6717f0bdf"
+ },
+ {
+  "army": "melee",
+  "kind": "unit-ptsNote",
+  "where": "melee · Big Mek in Mega Armour",
+  "judgement": {
+   "ptsNote": "110 + Meganobz 200"
+  },
+  "source": {
+   "models": [
+    "1× Big Mek in Mega Armour (Kustom Force Field)",
+    "5× Meganob w/ Twin Killsaw"
+   ],
+   "stats": [
+    "Big Mek in Mega Armour W5 OC1",
+    "Meganob ×5 W3 OC1"
+   ],
+   "weapons": [
+    "Kustom Mega-blasta 3 -2 3 HAZARDOUS, IGNORES COVER",
+    "Power Klaw 3 -2 2 SUSTAINED HITS 1",
+    "Twin Killsaw 3 -2 3 TWIN-LINKED, SUSTAINED HITS 1"
+   ]
+  },
+  "key": "986b552780eebf8b"
+ },
+ {
+  "army": "melee",
+  "kind": "unit-weapons",
+  "where": "melee · Big Mek in Mega Armour",
+  "judgement": {
+   "gear": [
+    [
+     "Kustom Mega-blasta",
+     "Power Klaw"
+    ],
+    [
+     "Twin Killsaw"
+    ]
+   ],
+   "weapons": [
+    "Big Mek in Mega Armour · Kustom Mega-blasta",
+    "Big Mek in Mega Armour · Power Klaw",
+    "Meganobz · ×5 · Twin Killsaw"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Big Mek in Mega Armour (Kustom Force Field)",
+    "5× Meganob w/ Twin Killsaw"
+   ],
+   "leads": "Meganobz"
+  },
+  "key": "8131e6595348ef02"
+ },
+ {
+  "army": "melee",
+  "kind": "unit-weapons",
+  "where": "melee · Squighog Boyz",
+  "judgement": {
+   "gear": [
+    [
+     "Big Choppa",
+     "Slugga",
+     "Squig Jaws"
+    ],
+    [
+     "Saddlegit’s Shiv",
+     "Squig Jaws",
+     "Stikka"
+    ]
+   ],
+   "weapons": [
+    "Slugga",
+    "×3 · Saddlegit’s Shiv",
+    "×3 · Stikka",
+    "Big Choppa",
+    "×4 · Squig Jaws",
+    "×3 · Stikka"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Nob on Smasha Squig",
+    "3× Squighog Boy"
+   ],
+   "leads": null
+  },
+  "key": "b2efed9c4623614a"
+ }
+]

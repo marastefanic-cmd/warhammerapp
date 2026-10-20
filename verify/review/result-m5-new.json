@@ -1,0 +1,98 @@
+[
+ {
+  "key": "4179b815f1a91792",
+  "where": "melee · Big Mek · Shokk-boosta",
+  "verdict": "ok",
+  "why": "Source: \"In your Movement phase, when this unit is selected to make an advance move, you can use this ability.\" The text names your Movement phase, so {ph:['movement'], turn:'your'}. NR melee.txt l.120-127 and BSData have the same words. (BSData's \"Big Mek loses Shokk-boosta\" is a Boarding Actions adaptation, so it does not apply to this Strike Force list.)"
+ },
+ {
+  "key": "77b4378e2c4371f7",
+  "where": "melee · Big Mek · Crude Surgery",
+  "verdict": "ok",
+  "why": "Source: \"In your Command phase, this unit heals 3 wounds.\" The text names your Command phase, so {ph:['command'], turn:'your'}. NR l.136 has the same words."
+ },
+ {
+  "key": "81b76fd92830cdcc",
+  "where": "melee · Big Mek · Catch Dat Red Bit",
+  "verdict": "ok",
+  "why": "Source: \"When this model uses its Crude Surgery ability, you can add D3 to the number of wounds healed.\" It has no phase words of its own. It works only at the moment Crude Surgery is used, and Crude Surgery's text is \"In your Command phase, this unit heals 3 wounds.\" Nothing else in the list uses Crude Surgery, so {ph:['command'], turn:'your'} is the only moment the text can apply."
+ },
+ {
+  "key": "fd6306bbd10419f0",
+  "where": "melee · Big Mek · Catch Dat Red Bit",
+  "verdict": "ok",
+  "why": "The NR name line (l.137-139) is \"Catch Dat Red Bit (Once per battle, per unit) - Painboy\", and the BSData profile is named \"Catch Dat Red Bit (Once per battle, per unit)\". The tag copies it. The text's single Grot Orderly token, \"removing it when this ability is used\", agrees."
+ },
+ {
+  "key": "15647cceeef35d29",
+  "where": "melee · Big Mek · Ammo Runts",
+  "verdict": "ok",
+  "why": "Source: \"In your Shooting phase, when this unit is selected to shoot, you can use this ability.\" The text names your Shooting phase, so Fire Overwatch in their turn is outside it. {ph:['shooting'], turn:'your'}."
+ },
+ {
+  "key": "4ae11775e8f6fca0",
+  "where": "melee · Big Mek · Ammo Runts",
+  "verdict": "ok",
+  "why": "The NR name line (l.141-142) is \"Ammo Runts (Once per battle, per unit) - Nobz\", and BSData's profile is named \"Ammo Runts (Once per battle, per unit)\". The tag copies it. The token line \"Place any number of Ammo Runt tokens … removing them when this ability is used\" removes all the tokens on that one use, so it does not contradict the tag."
+ },
+ {
+  "key": "ef335b8753a11075",
+  "where": "melee · Big Mek · Get Out da Way!",
+  "verdict": "ok",
+  "why": "Source: \"While making a charge move, this unit can move through models (excluding MONSTER/VEHICLE models).\" The moment it works is a charge move, which is made in the Charge phase. That can be your Charge phase (Charge 11.02) or theirs: Heroic Intervention, \"End of your opponent’s Charge phase … Resolve a charge with your unit\", targets any unengaged non-VEHICLE unit, so the Big Mek + Nobz qualify. Nothing in this list allows a charge in another phase. {ph:['charge'], turn:'either'} matches the approved Thundering Stampede (charge, either)."
+ },
+ {
+  "key": "2b75c943db2a25a6",
+  "where": "melee · Big Mek",
+  "verdict": "ok",
+  "why": "Source: \"In your Shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this unit’s ranged attacks have +1 to hit rolls.\" Ammo Runts is the Nobz' (bodyguard) ability and says \"this unit\", so under 19.04 / the FAQ it covers every model in the attached unit. That includes the Big Mek's Kustom mega-blasta as well as the Kustom Shootas (the Painboy has no ranged weapon). The footnote has no who, sits under the ranged table and renders under \"WHOLE UNIT\", which is right. Its condition (used, your Shooting phase, when selected to shoot) and its effect (+1 to hit rolls) are the text's, worded as the approved Boss’ Ammo Runt footnote."
+ },
+ {
+  "key": "10ce0dc8b3ba816d",
+  "where": "melee · Big Mek",
+  "verdict": "ok",
+  "why": "Source: \"Attacks made with this model’s Kustom Krumpa weapon can re-roll hit rolls and wound rolls.\" 'This model' is the bearer of the Paired Krumpas wargear. NR l.91 lists \"2x Nob w/ Kustom Krumpa and Paired Krumpas — Kustom Krumpa, Paired Krumpas\", and BSData has Paired Krumpas as an upgrade on that model. Under 19.04, wargear abilities only apply to that model. The footnote says who (\"a Nob w/ Paired Krumpas\", a shortening of the model name that still picks out the two bearers and no one else), what (that model's Kustom Krumpa, one of the ten in the Kustom Krumpa ×10 row) and the effect, word for word (\"can re-roll hit rolls and wound rolls\"). There is no condition, and it is melee only, as the Kustom Krumpa is a melee weapon. Because the when contains the from-name, the renderer links \"Paired Krumpas\" inside the when instead of adding \"(Paired Krumpas)\". Note on how it shows, not on this judgement: in the rendered sheet (verify/out/snapshots/melee.txt l.2134-2136) the line sits under the \"WHOLE UNIT\" label that unitWeapons' block() puts above every footnote of a leads unit. This footnote limits itself to two models, so the label and the line disagree, although the line's own words are clear. A who on the footnote would not change that label (block() does not read it), so it is a matter for the code, not a fix to this item."
+ },
+ {
+  "key": "9a5a06b18f171c8c",
+  "where": "melee · Big Mek in Mega Armour · Fix Dat Armour Up",
+  "verdict": "ok",
+  "why": "Source: \"In your Command phase, this unit heals 3 wounds.\" The text names your Command phase, so {ph:['command'], turn:'your'}. This is the same judgement as the approved shooty item 3ebc0bbf37c6d408; only the italics on the token line differ."
+ },
+ {
+  "key": "b6b94f6394e726c5",
+  "where": "melee · Big Mek in Mega Armour · Fix Dat Armour Up",
+  "verdict": "ok",
+  "why": "The NR name line (l.174-176) is \"Fix Dat Armour Up (Once per battle, per unit) - Big Mek in Mega Armour\". The tag copies it, and the single Grot Oiler token agrees. This is the same as the approved shooty item 38fe81af906fb4ee."
+ },
+ {
+  "key": "cab4d5e961bad9ea",
+  "where": "melee · Big Mek in Mega Armour · Kustom Force Field",
+  "verdict": "ok",
+  "why": "Source: \"This unit has 4+ InSv against ranged attacks.\" The def is the same words, less \"This unit has\". It keeps the limit to ranged attacks and adds nothing. It is the leader's ability and says 'this unit', so under 19.04 it covers the Meganobz too, and the def is shown for the whole unit. NR prints InSv 4+* on both rows (l.163-164) and l.182 has the same text."
+ },
+ {
+  "key": "17c493ac935599c7",
+  "where": "melee · Squighog Boyz · Brutal Impact",
+  "verdict": "ok",
+  "why": "Source: \"If this unit made a charge move this turn, this unit’s attacks have +1 D.\" There are no phase words; it works on attacks made after a charge move in the same turn. A charge move is made in your Charge phase, or in theirs through Heroic Intervention (\"End of your opponent’s Charge phase … Resolve a charge\"; Squighog Boyz are MOUNTED, not VEHICLE, so they qualify). In either turn the only phase left after the Charge phase is the Fight phase. Fire Overwatch is at the \"End of your opponent’s Movement phase\", before any charge that turn, and nothing in this list (War Horde stratagems or any unit's abilities) lets a unit shoot after the Charge phase or charge in another phase. So {ph:['fight'], turn:'either'}, the same reasoning as the approved Headwoppa’s Killchoppa and Might is Right."
+ },
+ {
+  "key": "e50d1f83fa825bee",
+  "where": "melee · Squighog Boyz · Bomb Squig",
+  "verdict": "ok",
+  "why": "Source: \"In your Movement phase, when this unit ends a normal move …\". The text names your Movement phase, so {ph:['movement'], turn:'your'}, the same as the approved shooty Mek Bomb Squig timing."
+ },
+ {
+  "key": "adc7b6ce8ce3bbae",
+  "where": "melee · Squighog Boyz · Bomb Squig",
+  "verdict": "ok",
+  "why": "The NR name line (l.393-394) is \"Bomb Squig (Once per battle, per unit)\", and the Squighog Boyz' BSData infoLink is named \"Bomb Squig (Once per battle, per unit)\" (the Mek/Kommandos one is the twice-per-battle version). The tag copies it, and the text's single token (\"Place one Bomb Squig token … removing it after this ability is used\") agrees."
+ },
+ {
+  "key": "aaf03c8381e37487",
+  "where": "melee · Squighog Boyz",
+  "verdict": "ok",
+  "why": "Source: \"If this unit made a charge move this turn, this unit’s attacks have +1 D.\" The condition and effect are the text's: when \"Made a charge move this turn\", note \"+1 D\", in the same words as the approved Headwoppa’s Killchoppa footnote. The text says 'attacks', not 'melee attacks'. But as shown for the timing item, no ranged attack can follow a charge move in the same turn: Shooting comes before Charge in your turn, Fire Overwatch is at the end of their Movement phase, before Heroic Intervention's charge at the end of their Charge phase, and nothing in this list allows shooting later or charging earlier. So every attack the condition can apply to is a melee attack, and a melee footnote covers all of them (as Wreckin’ and Lootin’'s \"attacks\" when selected to shoot was approved as a ranged footnote). If that changed, for example a rule that lets a unit shoot after charging, this would need kind 'all'."
+ }
+]

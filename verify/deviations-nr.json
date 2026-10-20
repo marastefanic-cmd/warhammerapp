@@ -25,5 +25,14 @@
   "source": "This unit's melee attacks that target a MONSTER/VEHICLE unit can re-roll wounds rolls.",
   "reason": "Typo in New Recruit and BSData (\"wounds rolls\") that GW's wording does not have; the app follows the official wording.",
   "evidence": "Wahapedia datasheet wahapedia.ru/wh40k11ed/factions/orks/Mozrog-Skragbad: \"This unit’s melee attacks that target a MONSTER/VEHICLE unit can re-roll wound rolls.\" New Recruit: verify/sources/nr/melee.txt line 277."
+ },
+ {
+  "army": "melee",
+  "unit": "big-mek-in-mega-armour-meganobz",
+  "field": "from[ranged Kustom Mega-blasta | Big Mek in Mega Armour]",
+  "app": "{\"IGNORES COVER\":\"More Dakka\"}",
+  "source": "New Recruit marks \"(Kustom Force Field)\" as applied",
+  "reason": "New Recruit shows BSData's annotation: Kustom Force Field appends the label \"Kustom Force Field\" to every ranged weapon profile of the unit and changes none of its values (the force field protects the unit; it does not change its weapons). The app marks only values a rule changes.",
+  "evidence": "BSData Orks.json, Kustom Force Field (6b9e-c6ae-2626-45c9): modifier { affects: self.entries.group.recursive.profiles.Ranged Weapons, field: annotation, type: append, value: \"Kustom Force Field\" }. The profile is the same with and without it: melee.txt line 166-168 (24\" 3 4+ 9 -2 3, HAZARDOUS, IGNORES COVER) and shooty.txt lines 318-320 (the shooty Big Mek in Mega Armour, no force field)."
  }
 ]

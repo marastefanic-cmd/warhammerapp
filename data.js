@@ -14,7 +14,7 @@
 ===================================================================== */
 window.WH_DATA = (function(){
 
-const VERSION = '2026-10-20.1';
+const VERSION = '2026-10-20.2';
 
 /* ---------------- core rules (11th edition) ---------------- */
 // Weapon keyword and core ability text: the official Core Rules PDF (11th edition), BSData and the
@@ -651,7 +651,7 @@ const ARMIES = [
   id:'melee', name:'Melee', faction:'orks', points:2000, pointsUsed:2000,
   battleSize:'Strike Force', disposition:'Purge the Foe',
   detachments:['war-horde'],
-  source:'New Recruit, exported 18 Oct 2026',
+  source:'New Recruit, exported 20 Oct 2026',
   units:[
     {
       id:'ghazghkull-thraka', name:'Ghazghkull Thraka', role:'Epic Hero', pts:290, warlord:true,
@@ -696,7 +696,7 @@ const ARMIES = [
         { group:'Gutrippa', name:'Standard', range:'Melee', A:'6', WS:'2+', S:'9', AP:'-2', D:'2', kw:['CLEAVE 1','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } }
       ],
       abilities:[
-        { name:'Beast Snagga Following', def:'Lone Operative while within 3" of a friendly BEAST SNAGGA unit (not MONSTER CHARACTER)', na:'Every BEAST SNAGGA unit in this list is a MONSTER CHARACTER', text:'While this unit is within 3" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**.' },
+        { name:'Beast Snagga Following', def:'Lone Operative while within 3" of a friendly BEAST SNAGGA unit (not MONSTER CHARACTER)', text:'While this unit is within 3" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**.' },
         { name:'One Last Kill', ph:['fight'], turn:'either', def:'Destroyed in the Fight phase before being selected to fight: on a 2+ it stays until it has fought or the phase ends', text:'In the Fight phase, when this model is **destroyed**, if this unit has not been **selected to fight** this phase, roll one D6:\n- On a 2+, do not remove this model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield.' },
         { name:'Da Bigger Dey Iz…', ph:['fight'], turn:'either', text:'This unit’s melee attacks that target a **MONSTER/VEHICLE** unit can re-roll **wound rolls**.' }
       ],
@@ -708,13 +708,13 @@ const ARMIES = [
       kw:['Beast Snagga','Character','Epic Hero','Faction: Orks','Monster','Mozrog Skragbad']
     },
     {
-      id:'nazdreg-meganobz', name:'Nazdreg', role:'Epic Hero', pts:405, ptsNote:'165 + Meganobz 240',
+      id:'nazdreg-meganobz', name:'Nazdreg', role:'Epic Hero', pts:365, ptsNote:'165 + Meganobz 200',
       leads:'Meganobz',
-      models:['1× Nazdreg','6× Meganob w/ Twin Killsaw'],
+      models:['1× Nazdreg','5× Meganob w/ Twin Killsaw'],
       gear:[['Kustom Blasta X','Moonchewa'],['Twin Killsaw']],
       stats:[
         { name:'Nazdreg', M:'5"', T:'7', Sv:'2+', W:'8', Ld:'6+', OC:'1', InSv:'5+', base:'60mm' },
-        { name:'Meganob ×6', M:'5"', T:'6', Sv:'2+', W:'3', Ld:'7+', OC:'1', InSv:'–', base:'40mm' }
+        { name:'Meganob ×5', M:'5"', T:'6', Sv:'2+', W:'3', Ld:'7+', OC:'1', InSv:'–', base:'40mm' }
       ],
       ranged:[
         { group:'Kustom Blasta X', fireAll:true, who:'Nazdreg', name:'Skorcha', range:'12"', A:'3', BS:'–', S:'5', AP:'-1', D:'1', kw:['BLAST 1','TORRENT','IGNORES COVER'], from:{ 'IGNORES COVER':'Nazdreg’s Know-wotz' } },
@@ -724,7 +724,7 @@ const ARMIES = [
       melee:[
         { name:'Kustom Blasta X', who:'Nazdreg', range:'Melee', A:'6', WS:'2+', S:'5', AP:'-1', D:'1', kw:['CLEAVE 1','EXTRA ATTACKS','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
         { name:'Moonchewa', who:'Nazdreg', range:'Melee', A:'5', WS:'2+', S:'12', AP:'-2', D:'3', kw:['CLEAVE 1','TWIN-LINKED','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
-        { name:'Twin Killsaw', who:'Meganobz', n:6, range:'Melee', A:'3', WS:'4+', S:'10', AP:'-2', D:'3', kw:['TWIN-LINKED','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } }
+        { name:'Twin Killsaw', who:'Meganobz', n:5, range:'Melee', A:'3', WS:'4+', S:'10', AP:'-2', D:'3', kw:['TWIN-LINKED','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } }
       ],
       abilities:[
         { name:'Nazdreg’s Know-wotz', who:'Nazdreg', text:'- This unit has **Deep Strike**.\n- This unit’s ranged attacks have **[IGNORES COVER]**.' },
@@ -759,7 +759,7 @@ const ARMIES = [
       ],
       abilities:[
         { name:'Thundering Stampede', tag:'Aura', ph:['charge'], turn:'either', text:'Friendly **BEAST SNAGGA** units within 6" of this unit have +1 to **charge rolls**.' },
-        { name:'Boss of da Hunt', def:'Lone Operative while within 3" of a friendly BEAST SNAGGA unit (not MONSTER CHARACTER)', na:'Every BEAST SNAGGA unit in this list is a MONSTER CHARACTER', text:'While this unit is within 3" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**.' },
+        { name:'Boss of da Hunt', def:'Lone Operative while within 3" of a friendly BEAST SNAGGA unit (not MONSTER CHARACTER)', text:'While this unit is within 3" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**.' },
         { name:'Keep Huntin’!', tag:'Once per battle round, per army', ph:['movement'], turn:'your', text:'In your Movement phase, at the start or end of this unit’s move, you can select one friendly **BEAST SNAGGA** unit within 6" of this unit. That unit:\n- Is no longer **battle-shocked**.\n- Is **riled up** until the start of your next turn.' },
         { name:'Headwoppa’s Killchoppa', tag:'Enhancement', ph:['fight'], turn:'either', text:'**ORKS** model only. If this unit made a **charge move** this turn, this model’s melee attacks have +1 AP.' }
       ],
@@ -771,94 +771,65 @@ const ARMIES = [
       kw:['Beast Snagga','Beastboss on Squigosaur','Character','Faction: Orks','Monster','Warboss']
     },
     {
-      id:'beastboss-on-squigosaur', name:'Beastboss on Squigosaur', short:'Beastboss', role:'Character', pts:140,
-      models:['1× Beastboss on Squigosaur'],
-      gear:[['Beastchoppa','Slugga','Squigosaur’s jaws','Thump Gun']],
+      id:'big-mek-painboy-nobz', name:'Big Mek', role:'Character', pts:405, ptsNote:'120 + Painboy 45 + Nobz 240', enhancement:'Kunnin’ But Brutal',
+      leads:'Nobz', also:[{ name:'Painboy', support:true }],
+      models:['1× Big Mek','1× Painboy','8× Nob w/ Kustom Shoota and Kustom Krumpa','2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)'],
+      gear:[['Kustom mega-blasta','Drilla'],['’Urty syringe','Dok’s Toolz'],['Kustom Krumpa','Kustom Shoota'],['Kustom Krumpa']],
       stats:[
-        { name:'Beastboss on Squigosaur', M:'10"', T:'9', Sv:'3+', W:'10', Ld:'6+', OC:'3', InSv:'5+', base:'80mm' }
+        { name:'Big Mek', M:'6"', T:'5', Sv:'3+', W:'6', Ld:'7+', OC:'1', InSv:'–', base:'50mm' },
+        { name:'Painboy', M:'6"', T:'5', Sv:'5+', W:'3', Ld:'7+', OC:'1', InSv:'–', base:'32mm' },
+        { name:'Nob ×10', M:'6"', T:'5', Sv:'4+', W:'3', Ld:'7+', OC:'1', InSv:'–', base:'32mm' }
       ],
       ranged:[
-        { name:'Slugga', range:'12"', A:'1', BS:'5+', S:'4', AP:'0', D:'1', kw:['CLOSE-QUARTERS','LETHAL HITS: non-MONSTER/VEHICLE'] },
-        { name:'Thump Gun', range:'18"', A:'3', BS:'5+', S:'6', AP:'0', D:'2', kw:['ANTI-MONSTER/VEHICLE 4+'] }
+        { name:'Kustom mega-blasta', who:'Big Mek', range:'24"', A:'3', BS:'4+', S:'9', AP:'-2', D:'3', kw:['HAZARDOUS','IGNORES COVER'], from:{ 'IGNORES COVER':'More Dakka' } },
+        { name:'Kustom Shoota', who:'Nobz', n:8, range:'18"', A:'4', BS:'5+', S:'4', AP:'0', D:'1', kw:['LETHAL HITS: non-MONSTER/VEHICLE','RAPID FIRE 2','IGNORES COVER'], from:{ 'IGNORES COVER':'More Dakka' } }
       ],
       melee:[
-        { group:'Beastchoppa', name:'Hunter', hunter:true, range:'Melee', A:'6', WS:'2+', S:'12', AP:'-2', D:'D6', kw:['SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
-        { group:'Beastchoppa', name:'Standard', range:'Melee', A:'6', WS:'2+', S:'6', AP:'-2', D:'2', kw:['CLEAVE 1','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
-        { name:'Squigosaur’s jaws', range:'Melee', A:'3', WS:'3+', S:'7', AP:'-2', D:'3', kw:['ANTI-MONSTER/VEHICLE 3+','EXTRA ATTACKS','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } }
+        { name:'Drilla', who:'Big Mek', range:'Melee', A:'3', WS:'3+', S:'12', AP:'-3', D:'3', kw:['SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
+        { name:'’Urty syringe', who:'Painboy', range:'Melee', A:'1', WS:'3+', S:'2', AP:'0', D:'D6', kw:['ANTI-INFANTRY 4+','DEVASTATING WOUNDS: INFANTRY','EXTRA ATTACKS','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
+        { name:'Dok’s Toolz', who:'Painboy', range:'Melee', A:'3', WS:'3+', S:'10', AP:'-2', D:'2', kw:['SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
+        { name:'Kustom Krumpa', who:'Nobz', n:10, range:'Melee', A:'3', WS:'3+', S:'10', AP:'-2', D:'2', kw:['SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } }
       ],
       abilities:[
-        { name:'Thundering Stampede', tag:'Aura', ph:['charge'], turn:'either', text:'Friendly **BEAST SNAGGA** units within 6" of this unit have +1 to **charge rolls**.' },
-        { name:'Boss of da Hunt', def:'Lone Operative while within 3" of a friendly BEAST SNAGGA unit (not MONSTER CHARACTER)', na:'Every BEAST SNAGGA unit in this list is a MONSTER CHARACTER', text:'While this unit is within 3" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**.' },
-        { name:'Keep Huntin’!', tag:'Once per battle round, per army', ph:['movement'], turn:'your', text:'In your Movement phase, at the start or end of this unit’s move, you can select one friendly **BEAST SNAGGA** unit within 6" of this unit. That unit:\n- Is no longer **battle-shocked**.\n- Is **riled up** until the start of your next turn.' }
-      ],
-      rules:['Da Boss','Waaagh!','Feel No Pain 5+'],
-      kw:['Beast Snagga','Beastboss on Squigosaur','Character','Faction: Orks','Monster','Warboss']
-    },
-    {
-      id:'bigboss-warboss-breaka-boyz', name:'Bigboss', role:'Character', pts:290, ptsNote:'50 + Warboss 120 + Breaka Boyz 120', enhancement:'Kunnin’ But Brutal', enhOn:'Warboss',
-      leads:'Breaka Boyz', support:true, also:[{ name:'Warboss' }],
-      models:['1× Bigboss','1× Warboss','1× Nob','3× Breaka Boy','1× Breaka Boy w/ Knucklebustas','1× Breaka Boy w/ Tankhammer'],
-      gear:[['Big Choppa','Slugga'],['Power Klaw','Kombi-skorcha'],['Choppa','Rokkit pistol','Smash Hammer'],['Smash Hammer'],['Knucklebustas'],['Tankhammer']],
-      stats:[
-        { name:'Bigboss', M:'6"', T:'5', Sv:'4+', W:'5', Ld:'7+', OC:'1', InSv:'–', base:'40mm' },
-        { name:'Warboss', M:'6"', T:'6', Sv:'4+', W:'6', Ld:'6+', OC:'1', InSv:'5+', base:'50mm' },
-        { name:'Nob', M:'6"', T:'5', Sv:'4+', W:'3', Ld:'7+', OC:'1', InSv:'–', base:'32mm' },
-        { name:'Breaka Boy ×5', M:'6"', T:'5', Sv:'4+', W:'2', Ld:'7+', OC:'1', InSv:'–', base:'32mm' }
-      ],
-      ranged:[
-        { name:'Slugga', who:'Bigboss', range:'12"', A:'1', BS:'5+', S:'4', AP:'0', D:'1', kw:['CLOSE-QUARTERS','LETHAL HITS: non-MONSTER/VEHICLE'] },
-        { group:'Kombi-skorcha', who:'Warboss', name:'Skorcha', range:'12"', A:'3', BS:'–', S:'5', AP:'0', D:'1', kw:['BLAST 1','TORRENT'] },
-        { group:'Kombi-skorcha', who:'Warboss', name:'Shoota', range:'18"', A:'2', BS:'5+', S:'4', AP:'0', D:'1', kw:['LETHAL HITS: non-MONSTER/VEHICLE','RAPID FIRE 1'] },
-        { name:'Rokkit pistol', who:'Breaka Boyz', range:'12"', A:'1', BS:'5+', S:'10', AP:'-2', D:'3', kw:['CLOSE-QUARTERS'] }
-      ],
-      melee:[
-        { name:'Big Choppa', who:'Bigboss', range:'Melee', A:'5', WS:'3+', S:'7', AP:'-2', D:'2', kw:['PRECISION','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
-        { name:'Power Klaw', who:'Warboss', range:'Melee', A:'6', WS:'2+', S:'12', AP:'-2', D:'2', kw:['SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
-        { name:'Choppa', who:'Breaka Boyz', range:'Melee', A:'4', WS:'3+', S:'5', AP:'-1', D:'1', kw:['SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
-        { group:'Smash Hammer', who:'Breaka Boyz', n:4, name:'Hunter', hunter:true, range:'Melee', A:'3', WS:'3+', S:'12', AP:'-2', D:'3', kw:['SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
-        { group:'Smash Hammer', who:'Breaka Boyz', n:4, name:'Standard', range:'Melee', A:'3', WS:'3+', S:'7', AP:'-2', D:'2', kw:['SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
-        { name:'Knucklebustas', who:'Breaka Boyz', range:'Melee', A:'4', WS:'3+', S:'5', AP:'-2', D:'2', kw:['ANTI-MONSTER/VEHICLE 4+','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
-        { name:'Tankhammer', who:'Breaka Boyz', range:'Melee', A:'3', WS:'4+', S:'12', AP:'-2', D:'3', kw:['DEVASTATING WOUNDS','HAZARDOUS','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } }
-      ],
-      abilities:[
-        { name:'Sumfin’ to Prove', who:'Bigboss', ph:['fight'], turn:'either', text:'This unit’s melee attacks have +1 to **hit rolls**.' },
-        { name:'Might is Right', who:'Warboss', ph:['fight'], turn:'either', text:'If this unit made a **charge move** this turn, this model’s melee attacks have:\n- +3 **A**.\n- +2 **S**.' },
-        { name:'Boss’ Ammo Runt', who:'Warboss', tag:'Once per battle, per unit', ph:['shooting'], turn:'your', text:'In your Shooting phase, when this unit is **selected to shoot**, you can use this ability. If you do, this model’s ranged attacks have +1 to **hit rolls**.\n*Place a Boss’ Ammo Runt token next to the unit, removing it when this ability is used.*' },
-        { name:'Intimidating Motivation', who:'Warboss', tag:'Once per battle round, per army', ph:['movement'], turn:'your', text:'In your Movement phase, at the start or end of this unit’s move, you can select one friendly **ORKS** unit within 6" of this unit. That unit:\n- Is no longer **battle-shocked**.\n- Is **riled up** until the start of your next turn.' },
-        { name:'Kunnin’ But Brutal', who:'Warboss', tag:'Enhancement', ph:['movement','shooting','charge'], turn:'your', text:'**ORKS** model only. When this unit is selected to make a **fall-back move**, that fall-back move does not prevent this unit from being **eligible to shoot**/**declare a charge**.' },
-        { name:'Trophy Hunters', who:'Breaka Boyz', ph:['charge'], turn:'either', text:'This unit has +1 to **charge rolls**.' },
-        { name:'Bomb Squig', who:'Breaka Boyz', tag:'Once per turn, twice per battle, per unit', ph:['movement'], turn:'your', text:'In your Movement phase, when this unit ends a **normal move**, you can select one **visible** enemy unit within 12" of this unit and roll one D6:\n- On a 3+, that enemy unit suffers D3 **mortal wounds**.\n*Place two Bomb Squig tokens next to the unit, removing one each time this ability is used.*' }
+        { name:'Shokk-boosta', who:'Big Mek', ph:['movement'], turn:'your', text:'In your Movement phase, when this unit is selected to make an **advance move**, you can use this ability. If you do:\n- This unit can change that **advance roll** to a 6.\n- This unit can move through all types of model.\n- When this unit ends that **advance move**, make a **hazard roll** for each model in this unit.' },
+        { name:'More Dakka', who:'Big Mek', text:'This unit’s ranged attacks have:\n- **[IGNORES COVER]**.\n- If this unit is **riled up**, **[SUSTAINED HITS 1]**.' },
+        { name:'Kunnin’ But Brutal', who:'Big Mek', tag:'Enhancement', ph:['movement','shooting','charge'], turn:'your', text:'**ORKS** model only. When this unit is selected to make a **fall-back move**, that fall-back move does not prevent this unit from being **eligible to shoot**/**declare a charge**.' },
+        { name:'Crude Surgery', who:'Painboy', ph:['command'], turn:'your', text:'In your Command phase, this unit **heals** 3 wounds.' },
+        { name:'Catch Dat Red Bit', who:'Painboy', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'When this model uses its **Crude Surgery** ability, you can add D3 to the number of wounds **healed**.\n*Place a Grot Orderly token next to the unit, removing it when this ability is used.*' },
+        { name:'Ammo Runts', who:'Nobz', tag:'Once per battle, per unit', ph:['shooting'], turn:'your', text:'In your Shooting phase, when this unit is **selected to shoot**, you can use this ability. If you do, this unit’s ranged attacks have +1 to **hit rolls**.\n*Place any number of Ammo Runt tokens next to the unit, removing them when this ability is used.*' },
+        { name:'Get Out da Way!', who:'Nobz', ph:['charge'], turn:'either', text:'While making a **charge move**, this unit can move through models (excluding **MONSTER/VEHICLE** models).' },
+        { name:'Paired Krumpas', who:'Nobz', text:'Attacks made with this model’s Kustom Krumpa weapon can re-roll **hit rolls** and **wound rolls**.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
-        { kind:'melee', when:'Always', note:'+1 to hit rolls', from:'Sumfin’ to Prove' },
-        { kind:'melee', who:'Warboss', when:'Made a charge move this turn', note:'+3 A, +2 S', from:'Might is Right' },
-        { kind:'ranged', who:'Warboss', when:'Boss’ Ammo Runt used (your Shooting phase, when selected to shoot)', note:'+1 to hit rolls', from:'Boss’ Ammo Runt' }
+        { kind:'ranged', when:'Ammo Runts used (your Shooting phase, when selected to shoot)', note:'+1 to hit rolls', from:'Ammo Runts' },
+        { kind:'melee', weapon:'Kustom Krumpa', when:'Kustom Krumpa of a Nob w/ Paired Krumpas', note:'can re-roll hit rolls and wound rolls', from:'Paired Krumpas' }
       ],
-      rules:['Waaagh!','Support','Da Boss','Leader'],
-      kw:['Bigboss','Character','Faction: Orks','Infantry','Grenades','Warboss','Breaka Boyz','Explosives'],
-      kwNote:'Grenades, Warboss, Breaka Boyz, Explosives come from the combined unit.'
+      rules:['Waaagh!','Leader','Support'],
+      kw:['Big Mek','Character','Explosives','Faction: Orks','Infantry','Painboy','Nobz'],
+      kwNote:'Painboy, Nobz come from the combined unit.'
     },
     {
-      id:'warboss-in-mega-armour-meganobz', name:'Warboss in Mega Armour', role:'Character', pts:375, ptsNote:'135 + Meganobz 240', enhancement:'Follow Me Ladz',
+      id:'big-mek-in-mega-armour-meganobz', name:'Big Mek in Mega Armour', role:'Character', pts:310, ptsNote:'110 + Meganobz 200', enhancement:'Follow Me Ladz',
       leads:'Meganobz',
-      models:['1× Warboss in Mega Armour','6× Meganob w/ Twin Killsaw'],
-      gear:[['’Uge Choppa','Big Shoota'],['Twin Killsaw']],
+      models:['1× Big Mek in Mega Armour (Kustom Force Field)','5× Meganob w/ Twin Killsaw'],
+      gear:[['Kustom Mega-blasta','Power Klaw'],['Twin Killsaw']],
       stats:[
-        { name:'Warboss in Mega Armour', M:'7"', T:'7', Sv:'2+', W:'7', Ld:'6+', OC:'1', InSv:'5+', base:'50mm', from:{ M:'Follow Me Ladz' } },
-        { name:'Meganob ×6', M:'7"', T:'6', Sv:'2+', W:'3', Ld:'7+', OC:'1', InSv:'–', base:'40mm', from:{ M:'Follow Me Ladz' } }
+        { name:'Big Mek in Mega Armour', M:'7"', T:'6', Sv:'2+', W:'5', Ld:'7+', OC:'1', InSv:'4+*', base:'40mm', from:{ M:'Follow Me Ladz' } },
+        { name:'Meganob ×5', M:'7"', T:'6', Sv:'2+', W:'3', Ld:'7+', OC:'1', InSv:'4+*', base:'40mm', from:{ M:'Follow Me Ladz' } }
       ],
       ranged:[
-        { name:'Big Shoota', who:'Warboss in Mega Armour', range:'36"', A:'3', BS:'4+', S:'5', AP:'0', D:'1', kw:['LETHAL HITS: non-MONSTER/VEHICLE','RAPID FIRE 2'] }
+        { name:'Kustom Mega-blasta', who:'Big Mek in Mega Armour', range:'24"', A:'3', BS:'4+', S:'9', AP:'-2', D:'3', kw:['HAZARDOUS','IGNORES COVER'], from:{ 'IGNORES COVER':'More Dakka' } }
       ],
       melee:[
-        { name:'’Uge Choppa', who:'Warboss in Mega Armour', range:'Melee', A:'5', WS:'2+', S:'12', AP:'-2', D:'3', kw:['CLEAVE 2','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
-        { name:'Twin Killsaw', who:'Meganobz', n:6, range:'Melee', A:'3', WS:'4+', S:'10', AP:'-2', D:'3', kw:['TWIN-LINKED','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } }
+        { name:'Power Klaw', who:'Big Mek in Mega Armour', range:'Melee', A:'3', WS:'3+', S:'10', AP:'-2', D:'2', kw:['SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
+        { name:'Twin Killsaw', who:'Meganobz', n:5, range:'Melee', A:'3', WS:'4+', S:'10', AP:'-2', D:'3', kw:['TWIN-LINKED','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } }
       ],
       abilities:[
-        { name:'Krushin’ Impetus', who:'Warboss in Mega Armour', ph:['charge'], turn:'either', text:'When this unit ends a **charge move**, you can select one enemy unit **engaged** with this unit. If you do, roll one D6 for each model in this unit **engaged** with that enemy unit:\n- For each 3+, that enemy unit suffers 1 **mortal wound**.' },
-        { name:'Intimidating Motivation', who:'Warboss in Mega Armour', tag:'Once per battle round, per army', ph:['movement'], turn:'your', text:'In your Movement phase, at the start or end of this unit’s move, you can select one friendly **ORKS** unit within 6" of this unit. That unit:\n- Is no longer **battle-shocked**.\n- Is **riled up** until the start of your next turn.' },
-        { name:'Follow Me Ladz', who:'Warboss in Mega Armour', tag:'Enhancement', text:'**ORKS** model only. This unit has +2" **M**.' },
+        { name:'Fix Dat Armour Up', who:'Big Mek in Mega Armour', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'In your Command phase, this unit **heals** 3 wounds.\n*Place a Grot Oiler token next to the unit, removing it when this ability is used.*' },
+        { name:'More Dakka', who:'Big Mek in Mega Armour', text:'This unit’s ranged attacks have:\n- **[IGNORES COVER]**.\n- If this unit is **riled up**, **[SUSTAINED HITS 1]**.' },
+        { name:'Follow Me Ladz', who:'Big Mek in Mega Armour', tag:'Enhancement', text:'**ORKS** model only. This unit has +2" **M**.' },
+        { name:'Kustom Force Field', who:'Big Mek in Mega Armour', def:'4+ InSv against ranged attacks', text:'This unit has 4+ **InSv** against ranged attacks.' },
         { name:'Krumpin’ Time', who:'Meganobz', ph:['fight'], turn:'either', text:'In the Fight phase, if this unit is **riled up**, this unit has +1 to **hit rolls**.' },
         { name:'Arrogant Invulnerability', who:'Meganobz', def:'Attacks that target this unit have -1 AP', text:'Attacks that target this unit have -1 **AP**.' }
       ],
@@ -866,9 +837,9 @@ const ARMIES = [
       mods:[
         { kind:'melee', when:'Riled up, Fight phase', note:'+1 to hit rolls', from:'Krumpin’ Time' }
       ],
-      rules:['Da Boss','Leader','Waaagh!'],
-      kw:['Character','Faction: Orks','Infantry','Mega Armour','Warboss','Warboss in Mega Armour','Explosives','Meganobz'],
-      kwNote:'Explosives, Meganobz come from the led Meganobz.'
+      rules:['Waaagh!','Leader'],
+      kw:['Big Mek','Big Mek in Mega Armour','Character','Explosives','Faction: Orks','Infantry','Mega Armour','Meganobz'],
+      kwNote:'Meganobz comes from the led Meganobz.'
     },
     {
       id:'gretchin', name:'Gretchin', role:'Infantry', pts:45, copies:2,
@@ -917,6 +888,35 @@ const ARMIES = [
       ],
       rules:['Deep Strike','Waaagh!'],
       kw:['Deffkoptas','Explosives','Faction: Orks','Fly','Mounted','Speed Freeks']
+    },
+    {
+      id:'squighog-boyz', name:'Squighog Boyz', role:'Mounted', pts:130,
+      models:['1× Nob on Smasha Squig','3× Squighog Boy'],
+      gear:[['Big Choppa','Slugga','Squig Jaws'],['Saddlegit’s Shiv','Squig Jaws','Stikka']],
+      stats:[
+        { name:'Nob on Smasha Squig', M:'10"', T:'6', Sv:'4+', W:'4', Ld:'7+', OC:'2', InSv:'6+', base:'90×52.5mm' },
+        { name:'Squighog Boyz ×3', M:'10"', T:'6', Sv:'4+', W:'3', Ld:'7+', OC:'2', InSv:'6+', base:'75×42mm' }
+      ],
+      ranged:[
+        { name:'Slugga', range:'12"', A:'1', BS:'5+', S:'4', AP:'0', D:'1', kw:['CLOSE-QUARTERS','LETHAL HITS: non-MONSTER/VEHICLE'] },
+        { name:'Saddlegit’s Shiv', n:3, range:'9"', A:'1', BS:'4+', S:'3', AP:'0', D:'1', kw:['ASSAULT'] },
+        { name:'Stikka', n:3, range:'9"', A:'1', BS:'5+', S:'5', AP:'-1', D:'2', kw:['ANTI-MONSTER/VEHICLE 4+','ASSAULT'] }
+      ],
+      melee:[
+        { name:'Big Choppa', range:'Melee', A:'4', WS:'3+', S:'7', AP:'-1', D:'2', kw:['ANTI-MONSTER/VEHICLE 4+','CLEAVE 2','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
+        { name:'Squig Jaws', n:4, range:'Melee', A:'3', WS:'4+', S:'6', AP:'-1', D:'2', kw:['EXTRA ATTACKS','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } },
+        { name:'Stikka', n:3, range:'Melee', A:'3', WS:'3+', S:'5', AP:'-1', D:'2', kw:['ANTI-MONSTER/VEHICLE 4+','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } }
+      ],
+      abilities:[
+        { name:'Brutal Impact', ph:['fight'], turn:'either', text:'If this unit made a **charge move** this turn, this unit’s attacks have +1 **D**.' },
+        { name:'Bomb Squig', tag:'Once per battle, per unit', ph:['movement'], turn:'your', text:'In your Movement phase, when this unit ends a **normal move**, you can select one **visible** enemy unit within 12" of this unit and roll one D6:\n- On a 3+, that enemy unit suffers D3 **mortal wounds**.\n*Place one Bomb Squig token next to the unit, removing it after this ability is used.*' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'melee', when:'Made a charge move this turn', note:'+1 D', from:'Brutal Impact' }
+      ],
+      rules:['Waaagh!'],
+      kw:['Beast Snagga','Explosives','Faction: Orks','Mobile','Mounted','Squighog Boyz']
     }
   ]
 },

@@ -563,6 +563,7 @@ function nrWeapon(row, who) {
     const inner = m[1];
     if (/^x\d+$/.test(inner)) n = +inner.slice(1);
     else if (/^Hunter: /.test(inner)) hunter = true;
+    else if (/^(ranged|melee)$/i.test(inner)) {}   // one weapon with a ranged and a melee profile ("Stikka (ranged)")
     else parens.unshift(inner);
     t = t.slice(0, m.index);
   }

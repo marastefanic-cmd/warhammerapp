@@ -3254,14 +3254,14 @@
    "sha256": null
   },
   {
-   "item": "melee / bigboss-warboss-breaka-boyz / ability:Kunnin’ But Brutal",
+   "item": "melee / big-mek-painboy-nobz / ability:Kunnin’ But Brutal",
    "field": "text",
    "doc": "data.js",
    "where": "same text as the enhancement Kunnin’ But Brutal (War Horde) (whose source is recorded under that item)",
    "sha256": null
   },
   {
-   "item": "melee / warboss-in-mega-armour-meganobz / ability:Follow Me Ladz",
+   "item": "melee / big-mek-in-mega-armour-meganobz / ability:Follow Me Ladz",
    "field": "text",
    "doc": "data.js",
    "where": "same text as the enhancement Follow Me Ladz (War Horde) (whose source is recorded under that item)",

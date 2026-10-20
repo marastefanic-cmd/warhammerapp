@@ -1,0 +1,19 @@
+[
+ {
+  "army": "melee",
+  "kind": "unit-footnote",
+  "where": "melee · Big Mek",
+  "judgement": {
+   "kind": "melee",
+   "weapon": "Kustom Krumpa",
+   "when": "Kustom Krumpa of a Nob w/ Paired Krumpas",
+   "note": "can re-roll hit rolls and wound rolls",
+   "from": "Paired Krumpas"
+  },
+  "source": {
+   "ability": "Paired Krumpas",
+   "text": "Attacks made with this model’s Kustom Krumpa weapon can re-roll **hit rolls** and **wound rolls**."
+  },
+  "key": "ac6912071d75c877"
+ }
+]

@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" href="icon-192.png">
 <style>:root{padding-top:env(safe-area-inset-top,0px)}img{max-width:100%}</style>
 <title>Kunnin’ Kodex</title>
-<script>window.WH_BUILD = '0b834a9378';</script>
+<script>window.WH_BUILD = '190a5ec821';</script>
 </head>
 <body>
 <style>
@@ -523,6 +523,39 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .verif > span{flex:1; min-width:0; white-space:normal}
 .vchk{margin:3px 0; font-size:14px; line-height:1.45}
 .vchk b{font-weight:600}
+/* home: filters, random army */
+.hfs{display:flex; flex-wrap:wrap; gap:6px; margin:12px 0 2px}
+.hfc{display:inline-flex; align-items:center; gap:3px; min-height:36px; max-width:100%; padding:0 6px 0 11px; border-radius:18px; box-shadow:inset 0 0 0 1px var(--line); background:var(--surface);
+  font:700 13.5px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--fg2)}
+.hfc span{white-space:nowrap; overflow:hidden; text-overflow:ellipsis; min-width:0}
+.hfc.on{background:var(--accent); color:var(--accent-ink); box-shadow:none}
+.hfc.on .chev{color:inherit}
+.hfc:active{opacity:.75}
+.hfx{min-height:36px; padding:0 8px; font:700 13.5px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--accent)}
+.hlh{display:flex; align-items:center; justify-content:space-between; gap:10px; margin:12px 0 4px}
+.hlh .grp-h{margin:0}
+.hfn{margin-left:6px; color:var(--muted); letter-spacing:.06em}
+.rnd{display:inline-flex; align-items:center; gap:6px; min-height:36px; margin:0 -4px 0 0; padding:0 6px; font:700 13.5px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--accent)}
+.rnd .ic{width:18px; height:18px}
+.rnd:active{opacity:.6}
+.hfl .row{padding-right:4px}
+.hfl .row[disabled]{opacity:.4}
+.hfl .row .ic{width:20px; height:20px}
+.hfl .row .ok{color:var(--accent)}
+.hfl .row.on b{color:var(--accent)}
+.reel{position:relative; height:192px; margin:14px 0 4px; overflow:hidden; border-radius:8px; background:var(--surface);
+  -webkit-mask-image:linear-gradient(transparent, #000 30%, #000 70%, transparent); mask-image:linear-gradient(transparent, #000 30%, #000 70%, transparent)}
+.reel::after{content:""; position:absolute; left:0; right:0; top:64px; height:64px; box-shadow:inset 0 1px 0 var(--accent), inset 0 -1px 0 var(--accent); pointer-events:none; transition:background .3s}
+.reel.hit::after{background:color-mix(in srgb, var(--accent) 14%, transparent)}
+.rs{will-change:transform}
+.ri{height:64px; display:grid; align-content:center; justify-items:center; gap:3px; padding:0 12px; text-align:center}
+.ri b{font:700 21px/1.1 var(--f-head); letter-spacing:.02em; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:100%}
+.ri span{font:600 12px/1 var(--f-head); letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+.rres{min-height:1px; position:absolute; width:1px; overflow:hidden; clip:rect(0 0 0 0)}
+.racts{display:grid; gap:8px; margin-top:14px}
+.btn{min-height:48px; padding:0 14px; text-align:center; border-radius:8px; background:var(--accent); color:var(--accent-ink); font:700 16px/1.1 var(--f-head); letter-spacing:.04em}
+.btn2{min-height:44px; padding:0 14px; text-align:center; border-radius:8px; box-shadow:inset 0 0 0 1px var(--line); color:var(--fg); font:700 15px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase}
+.btn:active, .btn2:active{opacity:.75}
 /* colour picker */
 .thg{margin:10px 0 6px; font-size:12.5px; color:var(--muted)}
 .thms{display:grid; grid-template-columns:repeat(auto-fill, minmax(92px, 1fr)); gap:8px}
@@ -636,7 +669,7 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
     <symbol id="i-back" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></symbol>
     <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></symbol>
     <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
-    <!-- The five tab icons (clipboard-list, users, zap, scroll, telescope) are from Lucide, https://lucide.dev
+    <!-- The five tab icons (clipboard-list, users, zap, scroll, telescope), the settings gear and the dice are from Lucide, https://lucide.dev
      ISC License. Copyright (c) 2026 Lucide Icons and Contributors. Permission to use, copy, modify, and/or distribute this software for any
      purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
      THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
@@ -644,6 +677,8 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
      WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
      OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. -->
     <symbol id="i-telescope" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.065 12.493-6.18 1.318a.934.934 0 0 1-1.108-.702l-.537-2.15a1.07 1.07 0 0 1 .691-1.265l13.504-4.44" /> <path d="m13.56 11.747 4.332-.924" /> <path d="m16 21-3.105-6.21" /> <path d="M16.485 5.94a2 2 0 0 1 1.455-2.425l1.09-.272a1 1 0 0 1 1.212.727l1.515 6.06a1 1 0 0 1-.727 1.213l-1.09.272a2 2 0 0 1-2.425-1.455z" /> <path d="m6.158 8.633 1.114 4.456" /> <path d="m8 21 3.105-6.21" /> <circle cx="12" cy="13" r="2" /></g></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915" /> <circle cx="12" cy="12" r="3" /></g></symbol>
+    <symbol id="i-dice" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="12" height="12" x="2" y="10" rx="2" ry="2" /> <path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6" /> <path d="M6 18h.01" /> <path d="M10 14h.01" /> <path d="M15 6h.01" /> <path d="M18 9h.01" /></g></symbol>
   </defs>
 </svg>
 
@@ -665,8 +700,8 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="verified.js?v=0b834a9378"></script>
-<script src="data.js?v=0b834a9378"></script>
+<script src="verified.js?v=190a5ec821"></script>
+<script src="data.js?v=190a5ec821"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -812,7 +847,7 @@ function unitFlip(u){
 let cur = { s:'home', d:0 };
 const plain = c => ({ s:c.s, army:c.army, unit:c.unit, d:c.d || 0, from:c.from, root:c.root });
 const sameScreen = (a, b) => a && b && a.s === b.s && a.army === b.army && a.unit === b.unit;
-const calm = c => c.s === 'home' || c.s === 'army';   // screens where an update reload loses nothing
+const calm = c => c.s === 'home' || c.s === 'army' || c.s === 'settings';   // screens where an update reload loses nothing
 // the open folds of the screen, by position (a screen renders the same each time), and putting them back
 const openFolds = () => [...document.querySelectorAll('#view details')].map((d, i) => d.open ? i : -1).filter(i => i >= 0);
 const reopen = list => { const all = document.querySelectorAll('#view details'); for(const i of list || []) if(all[i]) all[i].open = true; };
@@ -821,12 +856,14 @@ const toSpot = st => { reopen(st && st.open); scrollTo(0, (st && st.y) || 0); };
 function parentOf(c){
   if(c.s === 'unit') return { s:'units', army:c.army };
   if(c.s === 'home') return null;
+  if(c.s === 'settings') return c.army ? { s:'army', army:c.army } : { s:'home' };
   if(isTab(c.s)) return ONLY ? null : { s:'home' };
   if(c.s === 'bases') return { s:'pregame', army:c.army };
   return { s:'army', army:c.army };
 }
 function titleOf(c){
   if(c.s === 'home') return 'Armies';
+  if(c.s === 'settings') return 'Settings';
   if(c.s === 'strats') return 'Stratagems';
   if(c.s === 'army') return (armyById(c.army) || {}).name || '';
   if(c.s === 'unit') return ((armyById(c.army) || { units:[] }).units.find(u => u.id === c.unit) || {}).name || '';
@@ -836,6 +873,7 @@ const backTitle = c => c ? BACK_TITLE[c.s] || titleOf(c) : '';
 function valid(c){
   if(!c || !c.s) return false;
   if(c.s === 'home') return true;
+  if(c.s === 'settings') return !c.army || !!armyById(c.army);
   const a = armyById(c.army);
   if(!a) return false;
   if(c.s === 'unit') return a.units.some(u => u.id === c.unit);
@@ -1083,8 +1121,9 @@ function renderTop(){
   const up = cur.s !== 'home' && parentOf(cur);   // a tab's first screen has none when the app holds one list
   if(cur.s !== 'home'){
     if(up) left = '<button class="back" data-back><svg aria-hidden="true"><use href="#i-back"/></svg><span>' + esc(cur.from || backTitle(up)) + '</span></button>';
-    if(cur.s !== 'army' && cur.s !== 'home') right = '<button class="icon-btn" data-find aria-label="Search this army"><svg aria-hidden="true"><use href="#i-search"/></svg></button>';
+    if(cur.army && cur.s !== 'army' && cur.s !== 'settings') right = '<button class="icon-btn" data-find aria-label="Search this army"><svg aria-hidden="true"><use href="#i-search"/></svg></button>';
   }
+  else right = '<button class="icon-btn" data-settings aria-label="Settings"><svg aria-hidden="true"><use href="#i-gear"/></svg></button>';
   $('#topIn').innerHTML = left + '<h1 class="ttl">' + (cur.s === 'home' ? '<span class="brand">' + LOGO + 'Kunnin’ Kodex</span>' : esc(cur.s === 'unit' && army() ? army().name : titleOf(cur))) + '</h1>' + right;
 }
 function setBar(id, html){
@@ -1100,13 +1139,72 @@ function measure(){
 
 /* ---------- screen: armies ---------- */
 // each army: its own (silly) name, then tags saying what it is
+const armyRow = a => '<button class="row arow" data-army="' + esc(a.id) + '"><span class="rb"><b>' + esc(a.name) + '<span class="apts">' + esc(a.pointsUsed) + ' pts</span></b>' +
+  '<span class="tags"><span class="t f">' + esc(factionOf(a).name) + '</span>' + detachmentsOf(a).map(d => '<span class="t">' + esc(d.name) + '</span>').join('') +
+  '<span class="t d">' + esc(a.disposition) + '</span></span></span>' + arrow + '</button>';
 function screenHome(){
-  return '<div class="lbl grp-h">Your armies</div><div class="list">' + D.armies.map(a =>
-    '<button class="row arow" data-army="' + esc(a.id) + '"><span class="rb"><b>' + esc(a.name) + '<span class="apts">' + esc(a.pointsUsed) + ' pts</span></b>' +
-    '<span class="tags"><span class="t f">' + esc(factionOf(a).name) + '</span>' + detachmentsOf(a).map(d => '<span class="t">' + esc(d.name) + '</span>').join('') +
-    '<span class="t d">' + esc(a.disposition) + '</span></span></span>' + arrow + '</button>').join('') + '</div>' +
-    verifiedLine() + themePicker() +
-    '<p class="note">' + installText() + '</p>';
+  const all = D.armies, f = homeFilter(), shown = all.filter(a => hfMatch(a, f));
+  return (all.length > 2 ? homeFilters(f) : '') +
+    '<div class="hlh"><div class="lbl grp-h">Your armies' + (shown.length < all.length ? ' <span class="hfn">' + shown.length + ' of ' + all.length + '</span>' : '') + '</div>' +
+    (shown.length > 1 ? '<button class="rnd" data-roll><svg class="ic" aria-hidden="true"><use href="#i-dice"/></svg>Random</button>' : '') + '</div>' +
+    (shown.length ? '<div class="list">' + shown.map(armyRow).join('') + '</div>'
+      : '<p class="note">No army has all of these. <button class="link" data-hfclear>Clear the filters</button></p>') +
+    verifiedLine() + (INSTALLED ? '' : '<p class="note">' + installText() + '</p>');
+}
+
+// home filters: one faction, one detachment, one disposition at a time, kept on this phone
+// (shown once there are more than two lists)
+const HF_KEYS = ['faction', 'det', 'disp'];
+const HF_LABEL = { faction:'Faction', det:'Detachment', disp:'Disposition' };
+const hfOf = (a, k) => k === 'faction' ? [factionOf(a).name] : k === 'det' ? detachmentsOf(a).map(d => d.name) : a.disposition ? [a.disposition] : [];
+function homeFilter(){
+  if(D.armies.length <= 2) return {};
+  const f = store.get('wh-home-filter'), out = {};
+  // a value no list has any more (a list was removed) is dropped
+  if(isObj(f)) for(const k of HF_KEYS) if(typeof f[k] === 'string' && D.armies.some(a => hfOf(a, k).includes(f[k]))) out[k] = f[k];
+  return out;
+}
+const hfMatch = (a, f, skip) => HF_KEYS.every(k => k === skip || !f[k] || hfOf(a, k).includes(f[k]));
+const homeFilters = f => '<div class="hfs">' + HF_KEYS.map(k => '<button class="hfc' + (f[k] ? ' on' : '') + '" data-hfopen="' + k + '" aria-label="' + HF_LABEL[k] + ': ' + esc(f[k] || 'all') + '">' +
+    '<span>' + esc(f[k] || HF_LABEL[k]) + '</span>' + chev + '</button>').join('') +
+  (Object.keys(f).length ? '<button class="hfx" data-hfclear>Clear</button>' : '') + '</div>';
+// the choices: every value some list has, with how many lists it leaves given the other filters
+function showHomeFilter(k){
+  const f = homeFilter(), fac = new Map();
+  for(const a of D.armies) for(const v of hfOf(a, k)) if(!fac.has(v)) fac.set(v, factionOf(a).name);
+  const vals = [...fac.keys()].sort((x, y) => (k === 'det' ? fac.get(x).localeCompare(fac.get(y)) : 0) || x.localeCompare(y));
+  const opt = (v, label, sub) => { const n = D.armies.filter(a => hfMatch(a, f, k) && (!v || hfOf(a, k).includes(v))).length, on = (f[k] || '') === v;
+    return '<button class="row hfo' + (on ? ' on' : '') + '" data-hf="' + esc(k + '|' + v) + '" aria-pressed="' + on + '"' + (n || on ? '' : ' disabled') + '><span class="rb"><b>' + esc(label) + '</b>' +
+      (sub ? '<span>' + esc(sub) + '</span>' : '') + '</span><span class="c">' + n + '</span>' + (on ? '<svg class="ic ok" aria-hidden="true"><use href="#i-check"/></svg>' : '<span class="ic"></span>') + '</button>'; };
+  openSheet('Show armies by', HF_LABEL[k], '<div class="list hfl">' + opt('', 'Any ' + HF_LABEL[k].toLowerCase(), '') +
+    vals.map(v => opt(v, v, k === 'det' ? fac.get(v) : '')).join('') + '</div>');
+}
+
+// random army: a reel of names that slows down and stops on one of the lists the filters show
+function rollArmy(){
+  const pool = D.armies.filter(a => hfMatch(a, homeFilter()));
+  if(pool.length < 2) return;
+  const pick = pool[Math.floor(Math.random() * pool.length)], H = 64;
+  const reel = Array.from({ length:26 }, (_, i) => pool[(Math.floor(Math.random() * pool.length) + i) % pool.length]);
+  reel.push(pick, pool[(pool.indexOf(pick) + 1) % pool.length]);   // the pick, with a name under it
+  const item = a => '<div class="ri"><b>' + esc(a.name) + '</b><span>' + esc(factionOf(a).name) + '</span></div>';
+  openSheet('', 'Random army', '<div class="reel" aria-hidden="true"><div class="rs">' + item(pool[pool.length - 1]) + reel.map(item).join('') + '</div></div>' +
+    '<p class="rres" aria-live="polite"></p><div class="racts" hidden><button class="btn" data-army="' + esc(pick.id) + '">Open ' + esc(pick.name) + '</button><button class="btn2" data-roll>Roll again</button></div>');
+  const strip = $('#sheetIn .rs'), stopAt = -(reel.length - 2) * H;   // the pick sits in the middle row
+  const done = () => { $('#sheetIn .reel').classList.add('hit'); $('#sheetIn .rres').textContent = pick.name + ' · ' + factionOf(pick).name; $('#sheetIn .racts').hidden = false; };
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){ strip.style.transform = 'translateY(' + stopAt + 'px)'; done(); return; }
+  strip.getBoundingClientRect();
+  strip.style.transition = 'transform 2.4s cubic-bezier(.12,.62,.16,1)';
+  strip.style.transform = 'translateY(' + stopAt + 'px)';
+  strip.addEventListener('transitionend', done, { once:true });
+}
+
+/* ---------- screen: settings ---------- */
+const awakeRow = () => 'wakeLock' in navigator ? '<button class="row" data-awake aria-pressed="' + awake.on + '"><svg class="ic" aria-hidden="true"><use href="#i-sun"/></svg><span class="rb"><b>Keep screen on</b></span><span class="c' + (awake.on ? ' on' : '') + '">' + (awake.on ? 'On' : 'Off') + '</span></button>' : '';
+function screenSettings(){
+  return themePicker() +
+    (awakeRow() ? '<div class="sec-h"><h2>At the table</h2></div><div class="list">' + awakeRow() + '</div>' : '') +
+    '<div class="sec-h"><h2>This app</h2></div><p class="note">' + installText() + '</p><p class="note">Data ' + esc(D.version) + '</p>';
 }
 
 // the last verification of this exact app and data (verify/run.js writes verified.js)
@@ -1151,8 +1249,8 @@ function screenArmy(){
       row('abilities', 'i-spark', 'Abilities', a.units.reduce((t, u) => t + u.abilities.length, 0)) +
       row('rules', 'i-book', 'Rules', '') +
       row('bases', 'i-base', 'Bases & proxies', a.units.reduce((t, u) => t + modelCount(u) * (u.copies || 1), 0)) +
-      ('wakeLock' in navigator ? '<button class="row" data-awake aria-pressed="' + awake.on + '"><svg class="ic" aria-hidden="true"><use href="#i-sun"/></svg><span class="rb"><b>Keep screen on</b></span><span class="c' + (awake.on ? ' on' : '') + '">' + (awake.on ? 'On' : 'Off') + '</span></button>' : '') +
-    '</div><p class="note">' + esc(a.source) + '</p></div>' + (ONLY ? verifiedLine() + '<p class="note">' + installText() + '</p>' : '');
+      awakeRow() + (ONLY ? row('settings', 'i-gear', 'Settings', '') : '') +
+    '</div><p class="note">' + esc(a.source) + '</p></div>' + (ONLY ? verifiedLine() : '');
 }
 
 /* ---------- search over everything in one army ---------- */
@@ -1559,9 +1657,12 @@ function unitWeapons(u){
     notes.push(Object.assign({}, x, { scope: !r.length || !m.length || (inR.has(k) && inM.has(k)) ? '' : inR.has(k) ? 'Ranged' : 'Melee' }));
   }
   const hasHunter = m.some(w => w.hunter) && mm.some(x => x.hunter);
-  // in an attached unit a footnote counts for every model (19.04): say so, or it reads as the last chip's
-  const block = (list, label) => !list.length ? '' : (u.leads && !label ? '<div class="who">Whole unit</div>' : '') +
-    '<div class="mods' + (label ? ' all' : '') + '">' + (label ? '<span class="il">' + label + '</span>' : '') + modLines(list, u, hasHunter) + '</div>';
+  // in an attached unit a footnote counts for every model (19.04): say so, or it reads as the last chip's;
+  // one weapon's footnote (x.weapon: its when names the models) goes after, outside "Whole unit"
+  const block = (list, label) => { const wide = list.filter(x => !x.weapon), own = list.filter(x => x.weapon);
+    return (wide.length ? (u.leads && !label ? '<div class="who">Whole unit</div>' : '') +
+      '<div class="mods' + (label ? ' all' : '') + '">' + (label ? '<span class="il">' + label + '</span>' : '') + modLines(wide, u, hasHunter) + '</div>' : '') +
+      (own.length ? '<div class="mods">' + modLines(own, u, hasHunter) + '</div>' : ''); };
   const byWhen = new Map();
   for(const x of notes){ const k = norm(x.when); byWhen.set(k, (byWhen.get(k) || []).concat(x)); }
   const only = sc => [...byWhen.values()].filter(g => g.every(x => x.scope === sc)).flat().map(x => Object.assign({}, x, { scope:'' }));
@@ -2025,6 +2126,7 @@ function render(){
   else if(s === 'rules') v.innerHTML = screenRules();
   else if(s === 'bases') v.innerHTML = screenBases();
   else if(s === 'pregame') v.innerHTML = screenPregame();
+  else if(s === 'settings') v.innerHTML = screenSettings();
   if(cur.army) bot = tabBar();
   setBar('subbar', sub);
   setBar('bbar', bot);
@@ -2175,7 +2277,14 @@ document.addEventListener('click', e => {
   if(el.hasAttribute('data-close')){ closeSheet(); return; }
   if(el.hasAttribute('data-back')){ back(); return; }
   if(el.hasAttribute('data-find')){ focusSearch = true; go({ s:'army', army:army().id }); return; }
-  if(ds.army){ go({ s:'units', army:ds.army }); return; }   // an army opens on its Units: what matters at the table
+  if(ds.army){ const next = { s:'units', army:ds.army }; if(inSheet){ hideSheet(); go(next, 'sheet'); } else go(next); return; }   // an army opens on its Units: what matters at the table
+  if(el.hasAttribute('data-settings')){ go({ s:'settings' }); return; }
+  if(ds.hfopen){ showHomeFilter(ds.hfopen); return; }
+  if(ds.hf){ const i = ds.hf.indexOf('|'), k = ds.hf.slice(0, i), v = ds.hf.slice(i + 1), f = homeFilter();
+    if(v) f[k] = v; else delete f[k];
+    store.set('wh-home-filter', f); closeSheet(); rerender(); return; }
+  if(el.hasAttribute('data-hfclear')){ store.set('wh-home-filter', {}); rerender(); return; }
+  if(el.hasAttribute('data-roll')){ rollArmy(); return; }
   if(ds.go){ go({ s:ds.go, army:army().id }); return; }
   if(ds.unit){
     const next = { s:'unit', army:army().id, unit:ds.unit };

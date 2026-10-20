@@ -1,0 +1,188 @@
+[
+ {
+  "key": "adde875cd4181cd0",
+  "where": "melee · Mozrog Skragbad · Beast Snagga Following",
+  "verdict": "needs-change",
+  "why": "The reason is false in the rebuilt list. Squighog Boyz are in it (roster line '(4) Squighog Boyz 130'; NR Categories line 398 'Beast Snagga, Explosives, Faction: Orks, Mobile, Mounted, Squighog Boyz'; data.js kw and BSData categories agree): a BEAST SNAGGA unit that is neither MONSTER nor CHARACTER. So Mozrog does get Lone Operative while within 3\" of the Squighog Boyz. Fix: remove the `na` from Beast Snagga Following on mozrog-skragbad (data.js line 699); the `def` can stay."
+ },
+ {
+  "key": "9d06a83163dcb3a2",
+  "where": "melee · Nazdreg · Nazdreg’s Know-wotz",
+  "verdict": "ok",
+  "why": "NR prints 'Nazdreg's Know-wotz - Nazdreg' (melee.txt l.60); BSData profile is on the Nazdreg model. Models match NR: 1x Nazdreg, 5x Meganob w/ Twin Killsaw (roster (5) Meganobz led by Nazdreg)."
+ },
+ {
+  "key": "5e8bdfc785d66320",
+  "where": "melee · Nazdreg · Supreme Kunnin’",
+  "verdict": "ok",
+  "why": "NR prints 'Supreme Kunnin' (Once per phase, per army) - Nazdreg' (l.63-64); BSData profile is on the Nazdreg model. Models match NR."
+ },
+ {
+  "key": "832442c0a6f09d1d",
+  "where": "melee · Nazdreg · Intimidating Motivation",
+  "verdict": "ok",
+  "why": "NR prints 'Intimidating Motivation (Once per battle round, per army) - Nazdreg' (l.67-68); BSData links it to the Nazdreg model (shared profile also on Warboss). Models match NR."
+ },
+ {
+  "key": "329af067dc5867be",
+  "where": "melee · Nazdreg · Krumpin’ Time",
+  "verdict": "ok",
+  "why": "NR prints 'Krumpin' Time - Meganobz' (l.70); BSData profile is on the Meganobz unit, i.e. the bodyguard. Models match NR."
+ },
+ {
+  "key": "36181620840c71e3",
+  "where": "melee · Nazdreg · Arrogant Invulnerability",
+  "verdict": "ok",
+  "why": "NR prints 'Arrogant Invulnerability - Meganobz' (l.71); BSData profile is on the Meganobz unit. Models match NR."
+ },
+ {
+  "key": "9edbb4aefea58a8b",
+  "where": "melee · Nazdreg",
+  "verdict": "ok",
+  "why": "NR Categories (l.74): 'Character, Epic Hero, Faction: Orks, Infantry, Mega Armour, Nazdreg, Warboss, Explosives*, Meganobz*'. The starred keywords are exactly Explosives and Meganobz, and Nazdreg is 'Leading: Meganobz', so 'come from the led Meganobz' is right. data.js kw matches."
+ },
+ {
+  "key": "7cb3e911df27ef6c",
+  "where": "melee · Nazdreg",
+  "verdict": "ok",
+  "why": "Roster: Nazdreg 165 and '(5) Meganobz 200 Nazdreg'. Unit header '365 PTS'. 165 + 200 = 365 = data.js pts."
+ },
+ {
+  "key": "59af378acf565a64",
+  "where": "melee · Nazdreg",
+  "verdict": "ok",
+  "why": "NR Options: 1x Nazdreg 'Kustom Blasta X, Moonchewa'; 5x Meganob 'Twin Killsaw', so the gear lines match. NR weapon rows: Kustom Blasta X Skorcha/Gatler/Shoota and Kustom Blasta X (melee) and Moonchewa '- Nazdreg'; Twin Killsaw '(x5) - Meganobz'. The weapons list matches."
+ },
+ {
+  "key": "f1f7e0dca0b19946",
+  "where": "melee · Beastboss on Squigosaur · Boss of da Hunt",
+  "verdict": "needs-change",
+  "why": "The reason is false in the rebuilt list. Squighog Boyz (roster '(4) Squighog Boyz 130'; NR Categories l.398 'Beast Snagga, Explosives, Faction: Orks, Mobile, Mounted, Squighog Boyz'; data.js kw and BSData categories agree) are a BEAST SNAGGA unit that is not a MONSTER CHARACTER, so the Beastboss on Squigosaur does get Lone Operative while within 3\" of them. Fix: remove the `na` from Boss of da Hunt on beastboss-on-squigosaur-headwoppas-killchoppa (data.js line 762); the `def` can stay."
+ },
+ {
+  "key": "41d8328d44bae9dd",
+  "where": "melee · Big Mek · Shokk-boosta",
+  "verdict": "ok",
+  "why": "NR prints 'Shokk-boosta - Big Mek' (l.124); BSData profile is on the Big Mek model. Models match NR: 1x Big Mek (Leading: Nobz), 1x Painboy (Supporting: Nobz), 8x Nob w/ Kustom Shoota and Kustom Krumpa, 2x Nob w/ Kustom Krumpa and Paired Krumpas. The '(Paired Krumpas)' suffix follows nr.js's convention for non-weapon wargear."
+ },
+ {
+  "key": "c4f48c4ac55f62f3",
+  "where": "melee · Big Mek · More Dakka",
+  "verdict": "ok",
+  "why": "NR prints 'More Dakka - Big Mek' (l.129); BSData links the shared More Dakka profile to the Big Mek model. Models match NR."
+ },
+ {
+  "key": "4b2fe703cd0a821d",
+  "where": "melee · Big Mek · Kunnin’ But Brutal",
+  "verdict": "ok",
+  "why": "NR prints 'Kunnin' But Brutal - Big Mek' (l.132-134); it is a War Horde enhancement (BSData upgrade), taken on the Big Mek (NR Options 'Kunnin' But Brutal, ...'). Models match NR."
+ },
+ {
+  "key": "dcea0c4de8648e46",
+  "where": "melee · Big Mek · Crude Surgery",
+  "verdict": "ok",
+  "why": "NR prints 'Crude Surgery - Painboy' (l.136); BSData profile is on the Painboy model, which supports the Nobz. Models match NR."
+ },
+ {
+  "key": "82dc561c89cda84e",
+  "where": "melee · Big Mek · Catch Dat Red Bit",
+  "verdict": "ok",
+  "why": "NR prints 'Catch Dat Red Bit (Once per battle, per unit) - Painboy' (l.137-139); BSData profile is on the Painboy model. Models match NR."
+ },
+ {
+  "key": "027442776549cd66",
+  "where": "melee · Big Mek · Ammo Runts",
+  "verdict": "ok",
+  "why": "NR prints 'Ammo Runts (Once per battle, per unit) - Nobz' (l.141-142); BSData profile is on the Nobz unit. Models match NR."
+ },
+ {
+  "key": "ebb48d4a64faf7d1",
+  "where": "melee · Big Mek · Get Out da Way!",
+  "verdict": "ok",
+  "why": "NR prints 'Get Out da Way! - Nobz' (l.145); BSData profile is on the Nobz unit. Models match NR."
+ },
+ {
+  "key": "5288f1d167475b30",
+  "where": "melee · Big Mek · Paired Krumpas",
+  "verdict": "ok",
+  "why": "NR prints 'Paired Krumpas - Nobz' (l.148); BSData puts it on the 'Nob w/ Kustom Krumpa and Paired Krumpas' model inside Nobz, i.e. the bodyguard part. Models match NR."
+ },
+ {
+  "key": "7233cc02345a3e03",
+  "where": "melee · Big Mek",
+  "verdict": "ok",
+  "why": "NR Categories (l.152): 'Big Mek, Character, Explosives, Faction: Orks, Infantry, Painboy*, Nobz*, *from combined unit'. The starred keywords are exactly Painboy and Nobz. Explosives is the Big Mek's own keyword (not starred), so leaving it out of the note is right. data.js kw matches."
+ },
+ {
+  "key": "bdb0fd625eea7402",
+  "where": "melee · Big Mek",
+  "verdict": "ok",
+  "why": "Roster: Big Mek 120, Painboy 45, '(10) Nobz 240 Big Mek, Painboy'. Unit header '405 PTS'. 120 + 45 + 240 = 405 = data.js pts."
+ },
+ {
+  "key": "cc9862c915f856ee",
+  "where": "melee · Big Mek",
+  "verdict": "ok",
+  "why": "NR Options per line: Big Mek 'Kunnin' But Brutal (enhancement), Kustom mega-blasta, Drilla'; Painboy ''Urty syringe, Dok's Toolz'; 8x Nob 'Kustom Krumpa, Kustom Shoota'; 2x Nob 'Kustom Krumpa, Paired Krumpas (ability)'. The gear lines match. Weapon rows: Kustom mega-blasta and Drilla '- Big Mek'; Kustom Shoota '(x8) - Nobz'; 'Urty syringe and Dok's Toolz '- Painboy'; Kustom Krumpa '(x10) - Nobz'. The weapons list matches (8 shootas = the 8-model line, 10 krumpas = both Nob lines)."
+ },
+ {
+  "key": "fc25783f670088a6",
+  "where": "melee · Big Mek in Mega Armour · Fix Dat Armour Up",
+  "verdict": "ok",
+  "why": "NR prints 'Fix Dat Armour Up (Once per battle, per unit) - Big Mek in Mega Armour' (l.174-176); BSData profile is on the BMiMA model. Models match NR: 1x Big Mek in Mega Armour (Leading: Meganobz), 5x Meganob w/ Twin Killsaw. The '(Kustom Force Field)' suffix is the non-weapon wargear option, per the nr.js convention."
+ },
+ {
+  "key": "a6f4ad7a456ba31b",
+  "where": "melee · Big Mek in Mega Armour · More Dakka",
+  "verdict": "ok",
+  "why": "NR prints 'More Dakka - Big Mek in Mega Armour' (l.179); BSData links the shared More Dakka profile to the BMiMA model. Models match NR."
+ },
+ {
+  "key": "ef4d33be6b83b98c",
+  "where": "melee · Big Mek in Mega Armour · Follow Me Ladz",
+  "verdict": "ok",
+  "why": "NR prints 'Follow Me Ladz - Big Mek in Mega Armour' (l.181); it is a War Horde enhancement taken on the BMiMA (NR Options 'Follow Me Ladz, ...'). Models match NR."
+ },
+ {
+  "key": "a34ded60a975424e",
+  "where": "melee · Big Mek in Mega Armour · Kustom Force Field",
+  "verdict": "ok",
+  "why": "NR prints 'Kustom Force Field - Big Mek in Mega Armour' (l.182); BSData has it as an Additional Options upgrade of the BMiMA model, and NR Options lists it on the BMiMA line. Models match NR."
+ },
+ {
+  "key": "2cafe615347b2701",
+  "where": "melee · Big Mek in Mega Armour · Krumpin’ Time",
+  "verdict": "ok",
+  "why": "NR prints 'Krumpin' Time - Meganobz' (l.184); BSData profile is on the Meganobz unit (the bodyguard). Models match NR."
+ },
+ {
+  "key": "0136d9f91fceaafb",
+  "where": "melee · Big Mek in Mega Armour · Arrogant Invulnerability",
+  "verdict": "ok",
+  "why": "NR prints 'Arrogant Invulnerability - Meganobz' (l.186); BSData profile is on the Meganobz unit. Models match NR."
+ },
+ {
+  "key": "852109e6717f0bdf",
+  "where": "melee · Big Mek in Mega Armour",
+  "verdict": "ok",
+  "why": "NR Categories (l.189-190): 'Big Mek, Big Mek in Mega Armour, Character, Explosives, Faction: Orks, Infantry, Mega Armour, Meganobz*, *from combined unit'. The only starred keyword is Meganobz, and the BMiMA is 'Leading: Meganobz[2]', so 'Meganobz comes from the led Meganobz' is right. data.js kw matches."
+ },
+ {
+  "key": "986b552780eebf8b",
+  "where": "melee · Big Mek in Mega Armour",
+  "verdict": "ok",
+  "why": "Roster: Big Mek in Mega Armour 110 and '(5) Meganobz 200 Big Mek in Mega Armour'. Unit header '310 PTS'. 110 + 200 = 310 = data.js pts."
+ },
+ {
+  "key": "8131e6595348ef02",
+  "where": "melee · Big Mek in Mega Armour",
+  "verdict": "ok",
+  "why": "NR Options: BMiMA 'Follow Me Ladz (enhancement), Kustom Mega-blasta, Power Klaw, Kustom Force Field (wargear)'; 5x Meganob 'Twin Killsaw'. The gear lines match. Weapon rows: Kustom Mega-blasta and Power Klaw '- Big Mek in Mega Armour'; Twin Killsaw '(x5) - Meganobz'. The weapons list matches."
+ },
+ {
+  "key": "b2efed9c4623614a",
+  "where": "melee · Squighog Boyz",
+  "verdict": "ok",
+  "why": "NR Options: 1x Nob on Smasha Squig 'Big Choppa, Slugga, Squig Jaws'; 3x Squighog Boy 'Saddlegit's Shiv, Squig Jaws, Stikka'. The gear lines match, and BSData model wargear agrees (Nob: Big Choppa/Squig Jaws/Slugga; Boy: Stikka/Saddlegit's Shiv/Squig Jaws). Weapon rows: Slugga (1), Saddlegit's Shiv (x3), Stikka ranged (x3), Big Choppa (1), Squig Jaws (x4 = 1+3), Stikka melee (x3). The weapons list matches. The unit is not attached (leads null), so no who labels."
+ }
+]

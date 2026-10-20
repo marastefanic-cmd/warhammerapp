@@ -1,0 +1,8 @@
+[
+ {
+  "key": "ac6912071d75c877",
+  "where": "melee · Big Mek",
+  "verdict": "ok",
+  "why": "Source: \"Attacks made with this model’s Kustom Krumpa weapon can re-roll hit rolls and wound rolls.\" (NR melee.txt l.147-148). It works only for that weapon on the models that have it: NR l.91 \"2x Nob w/ Kustom Krumpa and Paired Krumpas — Kustom Krumpa, Paired Krumpas\", and BSData has the Paired Krumpas upgrade only on that model. weapon:'Kustom Krumpa' matches the data.js melee row and NR \"Kustom Krumpa (War Horde) (x10) - Nobz\" (l.116) exactly, and the when names those Nobs, so keeping it out of \"Whole unit\" is right. The rendered datasheet keeps the Kustom Krumpa ×10 row unchanged (there is no set) and prints this line in its own box after the Whole unit and Hit ’Em Harder notes."
+ }
+]

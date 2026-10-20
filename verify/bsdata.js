@@ -211,6 +211,7 @@ function profilesOf(n) {              // own + linked profiles (static), for nam
 function parseWeaponName(raw, upgradeName) {
   let s = nn(raw); let hunter = null;
   const h = s.match(/\s*\((Hunter:[^)]*)\)$/); if (h) { hunter = h[1]; s = s.slice(0, h.index).trim(); }
+  s = s.replace(/\s*\((ranged|melee)\)$/i, '');   // one weapon with a ranged and a melee profile ("Stikka (ranged)"): its type says which
   const arrow = s.startsWith('➤'); s = s.replace(/^➤\s*/, '');
   const up = nn(upgradeName); const d = arrow && s.startsWith(up) && s.slice(up.length).match(/^\s*-\s*(.+)$/);
   if (d) return { group: up, pname: d[1], hunter, full: `${up} - ${d[1]}` };   // "➤ Rokkit Launcha- Busta"
@@ -644,6 +645,7 @@ function buildUnit(army, u, um, cat, force, issues) {
     const want = (um.models || {})[ln.name] || ln.name;
     let unitRoot = null; let msel = roots.find((r) => r.node.type === 'model' && nn(r.node.name) === nn(want)) || null;
     let extra = null;
+    if (!msel && ln.base && !(um.models || {})[ln.name]) { msel = roots.find((r) => r.node.type === 'model' && nn(r.node.name) === nn(ln.base)) || null; if (msel) extra = ln.extra; }
     if (msel) { if (ln.count !== 1) fail('models', u.models[i], `1× ${msel.node.name}`, 'a single-model datasheet'); }
     else {
       for (const r of roots) {

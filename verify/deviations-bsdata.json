@@ -34,5 +34,23 @@
   "source": "- This unit has **Deep Strike**\n- This unit's ranged attacks have **[IGNORES COVER]**.",
   "reason": "BSData (and New Recruit) drops the full stop after \"Deep Strike\"; the app keeps it.",
   "evidence": "Wahapedia datasheet wahapedia.ru/wh40k11ed/factions/orks/Nazdreg: \"Nazdreg’s Know-wotz: This unit has Deep Strike. This unit’s ranged attacks have [Ignores Cover].\" New Recruit: verify/sources/nr/melee.txt line 60."
+ },
+ {
+  "army": "melee",
+  "unit": "big-mek-in-mega-armour-meganobz",
+  "field": "stats.InSv",
+  "app": "Big Mek in Mega Armour: 4+*",
+  "source": "Big Mek in Mega Armour: ",
+  "reason": "Kustom Force Field gives the attached unit 4+ InSv against ranged attacks; BSData writes it as a replace modifier setting InSv to \"4+*\", which New Recruit applies and this check does not. The app shows New Recruit's 4+*, and the unit's \"When targeted\" line says what the * means (Kustom Force Field: 4+ InSv against ranged attacks).",
+  "evidence": "BSData Orks.json, Big Mek in Mega Armour › Kustom Force Field (id 6b9e-c6ae-2626-45c9): modifier group \"Kustom Force Field attached unit modifiers\" replaces the InSv characteristic (55a7-5b54-c60d-11dc) of the root entry's Unit profiles with \"4+*\", one modifier without an arg and one with arg \"-\"; this check applies a replace only where its arg occurs. New Recruit prints the result: verify/sources/nr/melee.txt lines 163-164 (\"… 1 4+* 40mm\")."
+ },
+ {
+  "army": "melee",
+  "unit": "big-mek-in-mega-armour-meganobz",
+  "field": "stats.InSv",
+  "app": "Meganob ×5: 4+*",
+  "source": "Meganob: ",
+  "reason": "Kustom Force Field gives the attached unit 4+ InSv against ranged attacks; BSData writes it as a replace modifier setting InSv to \"4+*\", which New Recruit applies and this check does not. The app shows New Recruit's 4+*, and the unit's \"When targeted\" line says what the * means (Kustom Force Field: 4+ InSv against ranged attacks).",
+  "evidence": "BSData Orks.json, Big Mek in Mega Armour › Kustom Force Field (id 6b9e-c6ae-2626-45c9): modifier group \"Kustom Force Field attached unit modifiers\" replaces the InSv characteristic (55a7-5b54-c60d-11dc) of the root entry's Unit profiles with \"4+*\", one modifier without an arg and one with arg \"-\"; this check applies a replace only where its arg occurs. New Recruit prints the result: verify/sources/nr/melee.txt lines 163-164 (\"… 1 4+* 40mm\")."
  }
 ]

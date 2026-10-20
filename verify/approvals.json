@@ -11,6 +11,12 @@
   "at": "2026-10-16",
   "why": "24.27: \"[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes. See [CLOSE-QUARTERS].\" The Close-quarters text carries that sentence."
  },
+ "0136d9f91fceaafb": {
+  "verdict": "ok",
+  "by": "review:m5-recheck",
+  "at": "2026-10-20",
+  "why": "NR prints 'Arrogant Invulnerability - Meganobz' (l.186); BSData profile is on the Meganobz unit. Models match NR."
+ },
  "0168fdf9ecf7c37f": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -28,6 +34,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "\"At the start of the Command phase\"."
+ },
+ "027442776549cd66": {
+  "verdict": "ok",
+  "by": "review:m5-recheck",
+  "at": "2026-10-20",
+  "why": "NR prints 'Ammo Runts (Once per battle, per unit) - Nobz' (l.141-142); BSData profile is on the Nobz unit. Models match NR."
  },
  "0366d0340905c7e3": {
   "verdict": "ok",
@@ -95,12 +107,6 @@
   "at": "2026-10-16",
   "why": "\"While a friendly ORKS unit is within 6\" of this unit, that unit's melee attacks have +1 to hit rolls, +1 to wound rolls\". Every unit is Faction: Orks. Core 22.01: \"it is always within range of its own aura ability\", so Own aura is right. [restored: the same judgement on the same text, signed off for an earlier list]"
  },
- "0b6eb7ea392cc4f0": {
-  "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "Source: \"This unit’s melee attacks have +1 to hit rolls.\" There is no phase or turn condition, and melee attacks are made in the Fight phase of either turn. Fight in either turn is right."
- },
  "0b8a49825e1a49d4": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -124,12 +130,6 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "Matches Wahapedia 15.06 errata: \"The Tank Shock Stratagem is the same as the Crushing Impact stratagem.\""
- },
- "0c835c231d8008bb": {
-  "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "Source: \"In your Shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this model’s ranged attacks have +1 to hit rolls.\" kind ranged, who Warboss (\"this model\"; NR \"- Warboss\"), and the when keeps the use condition and the timing. note \"+1 to hit rolls\". Nothing added."
  },
  "0d2b3aa46edcb194": {
   "verdict": "ok",
@@ -167,23 +167,29 @@
   "at": "2026-10-17",
   "why": "Wahapedia’s Wreckas page lists “Supa-snazz Dakka UPGRADE 25 pts”."
  },
- "1377c6b47424e86e": {
-  "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "NR l.193-194: \"Follow Me Ladz - Warboss in Mega Armour\". who is the bearer, as printed. The effect is on \"This unit\" (NR shows both the WIMA and the Meganobz at 7\")."
- },
  "14bb1393497f9d8d": {
   "verdict": "ok",
   "by": "review:r7-text",
   "at": "2026-10-17",
   "why": "Source (New Recruit, shooty.txt line 234): the table heading reads \"Throttlerokkit Shokka Engine Description\" above Turbo Engine, Pulse Jet and Shokk Attack Engine. Full Throttle (line 232) calls them \"one Throttlerokkit Shokka Engine ability\". \"Throttlerokkit Shokka Engine\" is that heading, copied with nothing added; dropping \"pick one\" removed the app's own summary. models \"1× Wazdakka Gutsmek\" matches \"1x Wazdakka Gutsmek\" (line 219)."
  },
+ "15647cceeef35d29": {
+  "verdict": "ok",
+  "by": "review:m5-new",
+  "at": "2026-10-20",
+  "why": "Source: \"In your Shooting phase, when this unit is selected to shoot, you can use this ability.\" The text names your Shooting phase, so Fire Overwatch in their turn is outside it. {ph:['shooting'], turn:'your'}."
+ },
  "1595909d7b5705d9": {
   "verdict": "ok",
   "by": "review:r5-text (its fix)",
   "at": "2026-10-17",
   "why": "EFFECT: \"Select one enemy unit engaged with your unit. Select one model in your unit engaged with that enemy unit. Roll a number of D6 equal to the T characteristic of that model\". The gist's \"an engaged model’s T\" doesn't say whose model, so it could be read as an enemy model's T. That widens the source's \"one model in your unit\" rather than just leaving out detail. \"the engaged enemy unit\" also implies there is only one, where the source says \"select one\". The \"…\" covers the cap (\"to a maximum of 6 mortal wounds per unit\")."
+ },
+ "17c493ac935599c7": {
+  "verdict": "ok",
+  "by": "review:m5-new",
+  "at": "2026-10-20",
+  "why": "Source: \"If this unit made a charge move this turn, this unit’s attacks have +1 D.\" There are no phase words; it works on attacks made after a charge move in the same turn. A charge move is made in your Charge phase, or in theirs through Heroic Intervention (\"End of your opponent’s Charge phase … Resolve a charge\"; Squighog Boyz are MOUNTED, not VEHICLE, so they qualify). In either turn the only phase left after the Charge phase is the Fight phase. Fire Overwatch is at the \"End of your opponent’s Movement phase\", before any charge that turn, and nothing in this list (War Horde stratagems or any unit's abilities) lets a unit shoot after the Charge phase or charge in another phase. So {ph:['fight'], turn:'either'}, the same reasoning as the approved Headwoppa’s Killchoppa and Might is Right."
  },
  "185956b0a477f4da": {
   "verdict": "ok",
@@ -239,12 +245,6 @@
   "at": "2026-10-16",
   "why": "\"At the start of the battle round\" goes in the Command phase (brief convention)."
  },
- "1fbb4c0ced424196": {
-  "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "NR roster: \"Bigboss … 50\", \"Warboss … 120\" and \"(6) Breaka Boyz … 120 Bigboss, Warboss\"; the header reads \"290 PTS\". 50 + 120 + 120 = 290, as printed."
- },
  "2048454965bf9873": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -269,12 +269,6 @@
   "at": "2026-10-16",
   "why": "\"In your Movement phase, at the start or end of this unit's move…\""
  },
- "2169e7ad4eb59c84": {
-  "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "NR l.132-133: \"Boss' Ammo Runt (Once per battle, per unit) - Warboss\". The tag is copied; the single token in the text agrees."
- },
  "21e9935f6273d7e5": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -286,12 +280,6 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "New Recruit PDF: \"Thundering Stampede (Aura)\". [restored: the same judgement on the same text, signed off for an earlier list]"
- },
- "249bd743752e70db": {
-  "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "NR l.150-152: \"Bomb Squig (Once per turn, twice per battle, per unit) - Breaka Boyz\". who Breaka Boyz is as printed."
  },
  "24dbbd6e2aea369b": {
   "verdict": "ok",
@@ -335,11 +323,11 @@
   "at": "2026-10-16",
   "why": "\"action/actions\" (16); exact-anchored."
  },
- "2967c138537993c8": {
+ "2b75c943db2a25a6": {
   "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "Source: \"This unit’s melee attacks have +1 to hit rolls.\" There is no condition, so the when is \"Always\". It applies to the whole attached unit (\"This unit’s\"), so no who is set. kind melee, note \"+1 to hit rolls\". Exact."
+  "by": "review:m5-new",
+  "at": "2026-10-20",
+  "why": "Source: \"In your Shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this unit’s ranged attacks have +1 to hit rolls.\" Ammo Runts is the Nobz' (bodyguard) ability and says \"this unit\", so under 19.04 / the FAQ it covers every model in the attached unit. That includes the Big Mek's Kustom mega-blasta as well as the Kustom Shootas (the Painboy has no ranged weapon). The footnote has no who, sits under the ranged table and renders under \"WHOLE UNIT\", which is right. Its condition (used, your Shooting phase, when selected to shoot) and its effect (+1 to hit rolls) are the text's, worded as the approved Boss’ Ammo Runt footnote."
  },
  "2c6ea5ee61af837b": {
   "verdict": "ok",
@@ -347,11 +335,11 @@
   "at": "2026-10-18",
   "why": "EFFECT: “Your unit’s melee attacks have [LETHAL HITS]”. WHEN: “Fight phase”. The footnote has the same kind (melee), the same timing and the same ability. text: case only, “[Lethal Hits]” vs “[LETHAL HITS]”."
  },
- "2e87e9b133db238b": {
+ "2cafe615347b2701": {
   "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "NR l.157-158: \"Categories Bigboss, Character, Faction: Orks, Infantry, Grenades*, Warboss*, Breaka Boyz*, Explosives*, *from combined unit\". The same four keywords, in the same wording."
+  "by": "review:m5-recheck",
+  "at": "2026-10-20",
+  "why": "NR prints 'Krumpin' Time - Meganobz' (l.184); BSData profile is on the Meganobz unit (the bodyguard). Models match NR."
  },
  "2f1f0d5527dd9aef": {
   "verdict": "ok",
@@ -407,17 +395,23 @@
   "at": "2026-10-16",
   "why": "\"In your Shooting phase or the Fight phase\"."
  },
+ "329af067dc5867be": {
+  "verdict": "ok",
+  "by": "review:m5-recheck",
+  "at": "2026-10-20",
+  "why": "NR prints 'Krumpin' Time - Meganobz' (l.70); BSData profile is on the Meganobz unit, i.e. the bodyguard. Models match NR."
+ },
  "3380d8a0b71b1fef": {
   "verdict": "ok",
   "by": "review:m1-strats",
   "at": "2026-10-18",
   "why": "WHEN: “Your Movement phase, when a friendly ORKS MOUNTED/VEHICLE unit is selected to move”. text: same as Wahapedia word for word."
  },
- "3699726882cecd24": {
+ "36181620840c71e3": {
   "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "NR l.71: \"Arrogant Invulnerability - Meganobz\". who Meganobz is as printed, and the models match NR."
+  "by": "review:m5-recheck",
+  "at": "2026-10-20",
+  "why": "NR prints 'Arrogant Invulnerability - Meganobz' (l.71); BSData profile is on the Meganobz unit. Models match NR."
  },
  "3716e2563860f761": {
   "verdict": "ok",
@@ -436,12 +430,6 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "Only the Knights' unit rule; 24.35."
- },
- "378576006c62377e": {
-  "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "Source: \"When this unit ends a charge move, you can select one enemy unit engaged with this unit…\" Charge moves are made in the Charge phase of either turn (your Charge phase, or Heroic Intervention at the end of the opponent's Charge phase). Charge in either turn."
  },
  "3888f74cfb047c1b": {
   "verdict": "ok",
@@ -521,11 +509,23 @@
   "at": "2026-10-17",
   "why": "“In your Command phase, this unit heals 3 wounds.” The text names your Command phase."
  },
+ "4179b815f1a91792": {
+  "verdict": "ok",
+  "by": "review:m5-new",
+  "at": "2026-10-20",
+  "why": "Source: \"In your Movement phase, when this unit is selected to make an advance move, you can use this ability.\" The text names your Movement phase, so {ph:['movement'], turn:'your'}. NR melee.txt l.120-127 and BSData have the same words. (BSData's \"Big Mek loses Shokk-boosta\" is a Boarding Actions adaptation, so it does not apply to this Strike Force list.)"
+ },
  "41c11f0ca452acee": {
   "verdict": "ok",
   "by": "review:round2",
   "at": "2026-10-16",
   "why": "\"You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit\" (15.11): matches() drops a unit only when it is VEHICLE and neither CHARACTER nor WALKER. In these armies that excludes only the Chaos Rhino; Killa Kans, Forgefiends, Defiler, Dakkarigs and Knights (WALKER) and non-vehicles (e.g. Deffkoptas, MOUNTED) stay eligible. No TITANIC exclusion in this stratagem, correctly."
+ },
+ "41d8328d44bae9dd": {
+  "verdict": "ok",
+  "by": "review:m5-recheck",
+  "at": "2026-10-20",
+  "why": "NR prints 'Shokk-boosta - Big Mek' (l.124); BSData profile is on the Big Mek model. Models match NR: 1x Big Mek (Leading: Nobz), 1x Painboy (Supporting: Nobz), 8x Nob w/ Kustom Shoota and Kustom Krumpa, 2x Nob w/ Kustom Krumpa and Paired Krumpas. The '(Paired Krumpas)' suffix follows nr.js's convention for non-weapon wargear."
  },
  "4328ed892bfbcc61": {
   "verdict": "ok",
@@ -587,6 +587,18 @@
   "at": "2026-10-17",
   "why": "Word for word the EFFECT: “Your unit has MOBILE.”"
  },
+ "4ae11775e8f6fca0": {
+  "verdict": "ok",
+  "by": "review:m5-new",
+  "at": "2026-10-20",
+  "why": "The NR name line (l.141-142) is \"Ammo Runts (Once per battle, per unit) - Nobz\", and BSData's profile is named \"Ammo Runts (Once per battle, per unit)\". The tag copies it. The token line \"Place any number of Ammo Runt tokens … removing them when this ability is used\" removes all the tokens on that one use, so it does not contradict the tag."
+ },
+ "4b2fe703cd0a821d": {
+  "verdict": "ok",
+  "by": "review:m5-recheck",
+  "at": "2026-10-20",
+  "why": "NR prints 'Kunnin' But Brutal - Big Mek' (l.132-134); it is a War Horde enhancement (BSData upgrade), taken on the Big Mek (NR Options 'Kunnin' But Brutal, ...'). Models match NR."
+ },
  "4bb96c26d1afc78a": {
   "verdict": "ok",
   "by": "review:m1-strats",
@@ -641,29 +653,17 @@
   "at": "2026-10-17",
   "why": "“TARGET: One friendly FLASH GITZ/TANKBUSTAS unit hit by those attacks.”: either keyword, copied."
  },
- "50a73e0388762c3b": {
-  "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "NR l.139-140: \"Kunnin’ But Brutal - Warboss\". who Warboss is as printed (the bearer), and the models match NR."
- },
  "511f75f68d8576ea": {
   "verdict": "ok",
   "by": "review:cooking (its fix)",
   "at": "2026-10-16",
   "why": "As in item 7: the rule says \"a friendly BEAST SNAGGA unit\"; \"friendly\" is dropped. [restored: the same judgement on the same text, signed off for an earlier list]"
  },
- "51f42749f899d71e": {
+ "5288f1d167475b30": {
   "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "NR l.136-137: \"Intimidating Motivation (Once per battle round, per army) - Warboss\". who Warboss is as printed."
- },
- "5209d0ab574392b2": {
-  "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "NR l.127: \"Sumfin’ to Prove - Bigboss\". who Bigboss is as printed. The models match NR l.85-93: 1x Bigboss, 1x Warboss, 1x Nob, 3x Breaka Boy, 1x … w/ Knucklebustas, 1x … w/ Tankhammer."
+  "by": "review:m5-recheck",
+  "at": "2026-10-20",
+  "why": "NR prints 'Paired Krumpas - Nobz' (l.148); BSData puts it on the 'Nob w/ Kustom Krumpa and Paired Krumpas' model inside Nobz, i.e. the bodyguard part. Models match NR."
  },
  "54071d68dfae3f21": {
   "verdict": "ok",
@@ -688,12 +688,6 @@
   "by": "review:code2",
   "at": "2026-10-17",
   "why": "I ran onceTag over every ability in all 6 lists. Branch 1 copies a BSData tag that starts \"Once/Twice per\" and drops the \" · …\" suffix, e.g. Bomb Squig \"Once per turn, twice per battle, per unit\", Supreme Kunnin’ \"Once per phase, per army\", Twisted Sorceries \"Once per battle · Psychic\" → \"Once per battle\". Branch 2 copies the text’s own words: a leading \"Once per turn\" (Harpoon Barbs, Malign Presence) or a parenthesised \"(Once per battle, per army)\" (Archslaughterer, Umbralefic Crystal). It adds \", per army\" only when the text says \"one model from your army with this ability\" (Will of the Hive Mind → \"Once per battle round, per army\"; BSData tags the same wording on Direct the Slaughter \"Once per battle round, per army\"). No limit is invented. Latent gaps, and they leave text out rather than add to it, so this stays ok: an unparenthesised \"Once per battle\" after a \"… model only.\" sentence gets no tag (enhancements Incandaeum and Null Nodules, neither in any list), and a tag-less text \"Once per turn, twice per battle, …\" would be cut to \"Once per turn\". Bomb Squig has its tag, so it is not affected."
- },
- "5749bd8e6b58b55f": {
-  "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "NR l.32-35: Nazdreg \"Kustom Blasta X, Moonchewa\" and 6x Meganob \"Twin Killsaw\". Profiles: \"Kustom Blasta X - Skorcha/Gatler/Shoota … - Nazdreg\", melee \"Kustom Blasta X (War Horde) - Nazdreg\", \"Moonchewa (War Horde) - Nazdreg\" and \"Twin Killsaw (War Horde) (x6) - Meganobz\". The gear and the weapons, with ×6, match exactly."
  },
  "5893021178d0cfc9": {
   "verdict": "ok",
@@ -725,6 +719,12 @@
   "at": "2026-10-16",
   "why": "Labels: Firing Deck 2 (Chaos Rhino), Firing Deck X; 24.14."
  },
+ "59af378acf565a64": {
+  "verdict": "ok",
+  "by": "review:m5-recheck",
+  "at": "2026-10-20",
+  "why": "NR Options: 1x Nazdreg 'Kustom Blasta X, Moonchewa'; 5x Meganob 'Twin Killsaw', so the gear lines match. NR weapon rows: Kustom Blasta X Skorcha/Gatler/Shoota and Kustom Blasta X (melee) and Moonchewa '- Nazdreg'; Twin Killsaw '(x5) - Meganobz'. The weapons list matches."
+ },
  "5b039d3f3619db1d": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -737,11 +737,11 @@
   "at": "2026-10-19",
   "why": "Checked the live function (identical to the todo code), its helpers (everyModel/unitRules/allUnitRules/inertRule, ruleKey/ruleFor, unitLabel/charsOf/unitLink/shortName, armyRuleRows/ruleRow/shortWhen, showRule) and the git diff against HEAD, and rendered both lists with Playwright. (1) Deep Strike row. The test is every model: unitRules(u) has a label whose ruleKey is 'Deep Strike' and u.partialRules does not name it. That matches D.rules['Deep Strike']: 'if every model in this unit has this ability'. Rendered shooty: 'Wazdakka Gutsmek 200 pts / Deffkoptas 85 pts / All of them: 285 pts'. Rendered melee: 'Nazdreg + Meganobz 405 pts / Deffkoptas 85 pts / All of them: 490 pts'. Nazdreg's u.rules carry 'Deep Strike' from Nazdreg’s Know-wotz ('This unit has Deep Strike'), so it covers the whole attached unit. u.pts is the whole unit, enhancements included (165 + Meganobz 240). No other unit in either list has it. Wazdakka's Shokk Attack Engine and the Deffkoptas' Aerial Manoover are in-battle reserves rules, not Deep Strike, and are rightly not counted. Attached units are labelled with unitLabel ('Nazdreg + Meganobz'; a two-character unit gives 'Bigboss + Warboss + Breaka Boyz'), each linked to its own datasheet. Injected cases. Deffkoptas ×2 gives '85 pts each, ×2' and a total of 370 (200 + 2×85). Mek + Tankbustas ×2 with Deep Strike gives '215 pts each, ×2', counted twice in the total. partialRules:['Deep Strike'] on Nazdreg drops that unit. An enhanced Big Mek shows 'Big Mek · Dreadherder 190 pts'. No unit is listed twice. (2) Detachment links. Each name carries data-rule = d.rule.name. ruleFor matches detachment rule names (faction aliases first: only /^riled up/; then army rules; then detachments), and showRule opens it. Clicked in the page: Dread Mob → 'Dread Mob detachment rule · Try Dat Button!' with its table. Shoota Boyz → Dakka! Dakka! Dakka!. Wreckas → Wreckin’ and Lootin’ (the curly apostrophe resolves). War Horde → Get Stuck In. The DP and Disposition are unchanged, and a detachment with no rule stays as plain text. Army rules section. armyRuleRows has the same logic as the old Rules-tab code it was taken from. It shows Waaagh!, War Cry ('Once per battle, per army · Command') and Da Boss, each folding open to its full data text and errata note. None of them is inert, and there are no ticks there, so the War Cry ticks under Uses per battle are not duplicated. Da Boss's folded label reads 'Command' (shortWhen ignores r.at), while its text and the screen's 'Every round' line say start of the battle round. Earlier reviews record filing 'start of the battle round' under Command as the app's settled convention, so I did not count it. (3) The removed Reserves text lost nothing list-specific. Its content (excluding FORTIFICATIONS, the 50% cap including embarked units, arrival from round 2, destroyed at the end of round 3 with the TRANSPORT and repositioned exceptions) is all general core rule (Strategic Reserves 20.01/20.03). The round 2–3 timing is still in the Deep Strike rule's app note, one tap away from each unit's Rules line. No unit, enhancement or detachment rule in either list changes the reserves limits (Kaptin’s Hat would, but it is not taken). Neither list has TRANSPORTs or Scouts, so those rows are rightly empty. (4) The other rows still match the data. Warlord: Warboss / Ghazghkull Thraka; an injected warlordOn gives 'Warboss (Bigboss + Warboss + Breaka Boyz)'. Enhancements: enhOn gives 'Kunnin’ But Brutal 20 pts on Warboss', and the upgrade gives 'Supa-snazz Dakka (upgrade) 25 pts on Flash Gitz'. Attached: 'Mek supports Tankbustas ×2 units', 'Bigboss supports / Warboss leads Breaka Boyz'. Every round: Da Boss. Uses per battle: War Cry, Fix Dat Armour Up, Boss’ Ammo Runt, Bomb Squig Unit 1/Unit 2 (melee: Makari per army, Boss’ Ammo Runt, Bomb Squig), 1CP Insane Bravery. Points are 2000/2000. Optional, not defects, and not reachable with either list. 'All of them' shows only when there is more than one entry, so a single Deep Strike entry with copies > 1 has no total (each figure shown is still right). Two identical attached units would get identical labels, because unitLabel has no '(1 of 2)'. The row title 'Deep Strike' is no longer a link to the rule."
  },
- "5d16a79082d21fc6": {
+ "5e8bdfc785d66320": {
   "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "NR l.132-133: \"Boss' Ammo Runt (…) - Warboss\". who Warboss is as printed, and \"this model’s ranged attacks\" is the Warboss's."
+  "by": "review:m5-recheck",
+  "at": "2026-10-20",
+  "why": "NR prints 'Supreme Kunnin' (Once per phase, per army) - Nazdreg' (l.63-64); BSData profile is on the Nazdreg model. Models match NR."
  },
  "5ed6689ef3c39cad": {
   "verdict": "ok",
@@ -760,12 +760,6 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "\"In your Shooting phase, if this unit made an ingress move this turn…\""
- },
- "609842b449889dae": {
-  "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "Source: \"In your Shooting phase, when this unit is selected to shoot, you can use this ability.\" The text names your Shooting phase."
  },
  "60b781d097bb21bc": {
   "verdict": "ok",
@@ -857,23 +851,11 @@
   "at": "2026-10-18",
   "why": "WHEN: “Fight phase” (not “your”) … “that made a charge move this turn”. Heroic Intervention (“End of your opponent’s Charge phase … Resolve a charge with your unit”) can make a charge in the opponent’s turn, so the tag is either. Note for the owner: Heroic Intervention’s TARGET allows a VEHICLE only “if it is a CHARACTER/WALKER unit”, and this stratagem excludes WALKER. So in the opponent’s turn it needs a non-WALKER CHARACTER Orks VEHICLE, or some other rule. Narrowing the tag would mean combining rules, so either is correct. text: case only, “[Cleave 1]” vs “[CLEAVE 1]”."
  },
- "6b14d6f4886af7ee": {
-  "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "NR l.198: \"Arrogant Invulnerability - Meganobz\". who Meganobz is as printed."
- },
  "6c05052014c75eaf": {
   "verdict": "ok",
   "by": "review:m1-strats",
   "at": "2026-10-18",
   "why": "Matches the EFFECT word for word: “Your unit has +2\" M.” text: same as Wahapedia word for word."
- },
- "6c7c574a796b879b": {
-  "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "NR l.184-185: \"Krushin' Impetus - Warboss in Mega Armour\". who is as printed, and the models match NR l.168-170."
  },
  "6cb96d4c4cccf18b": {
   "verdict": "ok",
@@ -886,12 +868,6 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "“WHEN: Your Shooting phase”: your turn."
- },
- "6d7ce0766e263191": {
-  "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "NR roster: \"Nazdreg … 165\" and \"(6) Meganobz … 240 Nazdreg\"; the unit header reads \"405 PTS\". 165 + 240 = 405, as printed."
  },
  "6e625fc7be865aa6": {
   "verdict": "ok",
@@ -923,6 +899,12 @@
   "at": "2026-10-18",
   "why": "Orks War Horde Enhancements: \"Kunnin' But Brutal 20 pts / ORKS model only…\". NR Warboss options (l.87): \"Kunnin’ But Brutal, Power Klaw, Kombi-skorcha\". A checkable fact."
  },
+ "7233cc02345a3e03": {
+  "verdict": "ok",
+  "by": "review:m5-recheck",
+  "at": "2026-10-20",
+  "why": "NR Categories (l.152): 'Big Mek, Character, Explosives, Faction: Orks, Infantry, Painboy*, Nobz*, *from combined unit'. The starred keywords are exactly Painboy and Nobz. Explosives is the Big Mek's own keyword (not starred), so leaving it out of the note is right. data.js kw matches."
+ },
  "73f50943dc167694": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -941,23 +923,11 @@
   "at": "2026-10-16",
   "why": "Labels: RAPID FIRE 1/2/3/4/6/D6+3, [RAPID FIRE X]; weapon name \"Rapid-fire battle cannon\" has a hyphen and is never passed to ruleFor."
  },
- "75b68a139e8680b6": {
+ "77b4378e2c4371f7": {
   "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "Unit keywords as New Recruit prints them (melee.txt Categories): the only BEAST SNAGGA units are Mozrog Skragbad (\"Beast Snagga, Character, Epic Hero, Faction: Orks, Monster, Mozrog Skragbad\") and both Beastbosses on Squigosaur (\"Beast Snagga, Beastboss on Squigosaur, Character, Faction: Orks, Monster, Warboss\"); all three are MONSTER and CHARACTER. No other unit, attached units included (Bigboss unit: \"Grenades*, Warboss*, Breaka Boyz*, Explosives*\"; Meganobz units: \"Explosives*, Meganobz*\"), has BEAST SNAGGA. So the condition \"within 3\\\" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units)\" can't be met by any unit in this list. The armyUnits keywords match NR (the second Gretchin unit is left out, but it has the same keywords and no BEAST SNAGGA). A checkable list fact; nothing added."
- },
- "769304b1ab610471": {
-  "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "NR l.188-191: \"Intimidating Motivation (Once per battle round, per army) - Warboss in Mega Armour\". who is as printed."
- },
- "796623d20817a80d": {
-  "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "Source: \"If this unit made a charge move this turn, this model’s melee attacks have: +3 A. +2 S.\" who Warboss (NR \"Might is Right - Warboss\"; \"this model\"), when \"Made a charge move this turn\" (charge by \"this unit\"), note \"+3 A, +2 S\". Exact."
+  "by": "review:m5-new",
+  "at": "2026-10-20",
+  "why": "Source: \"In your Command phase, this unit heals 3 wounds.\" The text names your Command phase, so {ph:['command'], turn:'your'}. NR l.136 has the same words."
  },
  "79711f1bdceed49a": {
   "verdict": "ok",
@@ -977,6 +947,12 @@
   "at": "2026-10-17",
   "why": "Text: “In your Shooting phase or the Fight phase, when a friendly ORKS WALKER unit (excluding TITANIC units) is selected to attack, you can use this ability. If you do, roll either one D6 or two D6 (keep re-rolling duplicate results).” The footnote’s when, “Optional D6”, drops the timing. Mod footnotes show on the weapon tables, which are not limited to a phase, so the bonus would also seem to apply to e.g. Fire Overwatch at the end of the opponent’s Movement phase. The Deff from Above footnote was fixed for the same reason. The note itself is literal."
  },
+ "7cb3e911df27ef6c": {
+  "verdict": "ok",
+  "by": "review:m5-recheck",
+  "at": "2026-10-20",
+  "why": "Roster: Nazdreg 165 and '(5) Meganobz 200 Nazdreg'. Unit header '365 PTS'. 165 + 200 = 365 = data.js pts."
+ },
  "7df397384f7d9395": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -995,17 +971,23 @@
   "at": "2026-10-17",
   "why": "WHEN “Fight phase”. EFFECT: “When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one D6 … On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.” The def leaves out the clause “+3 to the result if your unit has ~~DEFF DREAD~~”. That keyword is struck through in the source (Wahapedia prints it that way), and no unit in the Cooking list has DEFF DREAD (a list fact), so the clause changes nothing for the WALKER units this line is shown on."
  },
- "806a5537730aed7b": {
-  "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "NR l.167-170: WIMA \"Follow Me Ladz, ’Uge Choppa, Big Shoota\" (the enhancement is not a weapon) and 6x Meganob \"Twin Killsaw\". Profiles: \"Big Shoota - Warboss in Mega Armour\", \"’Uge Choppa (War Horde) - Warboss in Mega Armour\" and \"Twin Killsaw (War Horde) (x6) - Meganobz\". An exact match."
- },
  "80cc7b715ba1adee": {
   "verdict": "ok",
   "by": "review:m1-strats",
   "at": "2026-10-18",
   "why": "“Friendly ORKS units”: ORKS is the faction keyword, which New Recruit prints as “Faction: Orks”. The text names no other keyword. text: case only, “[Sustained Hits 1]” vs “[SUSTAINED HITS 1]”."
+ },
+ "8131e6595348ef02": {
+  "verdict": "ok",
+  "by": "review:m5-recheck",
+  "at": "2026-10-20",
+  "why": "NR Options: BMiMA 'Follow Me Ladz (enhancement), Kustom Mega-blasta, Power Klaw, Kustom Force Field (wargear)'; 5x Meganob 'Twin Killsaw'. The gear lines match. Weapon rows: Kustom Mega-blasta and Power Klaw '- Big Mek in Mega Armour'; Twin Killsaw '(x5) - Meganobz'. The weapons list matches."
+ },
+ "81b76fd92830cdcc": {
+  "verdict": "ok",
+  "by": "review:m5-new",
+  "at": "2026-10-20",
+  "why": "Source: \"When this model uses its Crude Surgery ability, you can add D3 to the number of wounds healed.\" It has no phase words of its own. It works only at the moment Crude Surgery is used, and Crude Surgery's text is \"In your Command phase, this unit heals 3 wounds.\" Nothing else in the list uses Crude Surgery, so {ph:['command'], turn:'your'} is the only moment the text can apply."
  },
  "81c9ba88f89288e3": {
   "verdict": "ok",
@@ -1019,17 +1001,23 @@
   "at": "2026-10-16",
   "why": "\"In your Movement phase, at the start or end of this unit's move…\" [restored: the same judgement on the same text, signed off for an earlier list]"
  },
- "8221f957b63acdba": {
-  "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "NR l.67-68: \"Intimidating Motivation (Once per battle round, per army) - Nazdreg\". who Nazdreg is as printed, and the models match NR."
- },
  "826876bb17200d2c": {
   "verdict": "ok",
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "Labels: MELTA 2/6, [MELTA X], unit rule; \"Meltagun\" is a weapon name, never passed to ruleFor."
+ },
+ "82dc561c89cda84e": {
+  "verdict": "ok",
+  "by": "review:m5-recheck",
+  "at": "2026-10-20",
+  "why": "NR prints 'Catch Dat Red Bit (Once per battle, per unit) - Painboy' (l.137-139); BSData profile is on the Painboy model. Models match NR."
+ },
+ "832442c0a6f09d1d": {
+  "verdict": "ok",
+  "by": "review:m5-recheck",
+  "at": "2026-10-20",
+  "why": "NR prints 'Intimidating Motivation (Once per battle round, per army) - Nazdreg' (l.67-68); BSData links it to the Nazdreg model (shared profile also on Warboss). Models match NR."
  },
  "836312dea8f3763f": {
   "verdict": "ok",
@@ -1049,11 +1037,11 @@
   "at": "2026-10-18",
   "why": "NR (both Beastbosses, l.290 and l.327): \"Beastchoppa, Slugga, Squigosaur’s jaws, Thump Gun\". Profiles: Slugga, Thump Gun, \"Beastchoppa - Hunter\", \"Beastchoppa - Standard\" and \"Squigosaur’s jaws\". An exact match; the enhancement Headwoppa's Killchoppa is not a weapon."
  },
- "84c2b790dff5a08a": {
+ "852109e6717f0bdf": {
   "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "NR melee.txt l.59-61: \"Nazdreg's Know-wotz - Nazdreg\". who Nazdreg is as printed. The models match \"1x Nazdreg\" and \"6x Meganob w/ Twin Killsaw\" (l.33-35)."
+  "by": "review:m5-recheck",
+  "at": "2026-10-20",
+  "why": "NR Categories (l.189-190): 'Big Mek, Big Mek in Mega Armour, Character, Explosives, Faction: Orks, Infantry, Mega Armour, Meganobz*, *from combined unit'. The only starred keyword is Meganobz, and the BMiMA is 'Leading: Meganobz[2]', so 'Meganobz comes from the led Meganobz' is right. data.js kw matches."
  },
  "859bd86abf8fc642": {
   "verdict": "ok",
@@ -1115,12 +1103,6 @@
   "at": "2026-10-16",
   "why": "Labels: PRECISION, [PRECISION] (incl. Epic Challenge); all 24.28."
  },
- "8b13abc1b7966226": {
-  "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "NR l.63-64: \"Supreme Kunnin' (Once per phase, per army) - Nazdreg\". who Nazdreg is as printed, and the models match NR."
- },
  "8b140a87298b587d": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -1156,12 +1138,6 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "Pulse Jet says “this unit can make a pulse jet move”. That opens the Pulse Jet Move entry, the special move type on Wahapedia’s Orks army-rules page (“PULSE JET MOVE / MAXIMUM DISTANCE: Pulse roll + 18\"”)."
- },
- "8d1e246243ca943b": {
-  "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "NR l.147: \"Trophy Hunters - Breaka Boyz\". who Breaka Boyz is as printed."
  },
  "8d3f1d2a65937b68": {
   "verdict": "ok",
@@ -1283,17 +1259,11 @@
   "at": "2026-10-16",
   "why": "\"destroyed\" and \"fight on death\" (05.04.05 is included in that text)."
  },
- "965f2a16dd141fb2": {
+ "986b552780eebf8b": {
   "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "Source: \"This unit has +1 to charge rolls.\" Charge rolls are made in your Charge phase, and in the opponent's (Heroic Intervention: \"before making the charge roll\"). Charge in either turn, as signed off for Thundering Stampede."
- },
- "97f3be8195cd80e2": {
-  "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "NR l.128-130: \"Might is Right - Warboss\". who Warboss is as printed, and the models match NR."
+  "by": "review:m5-recheck",
+  "at": "2026-10-20",
+  "why": "Roster: Big Mek in Mega Armour 110 and '(5) Meganobz 200 Big Mek in Mega Armour'. Unit header '310 PTS'. 110 + 200 = 310 = data.js pts."
  },
  "988890d0abd7b673": {
   "verdict": "ok",
@@ -1306,6 +1276,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "\"+1 to charge rolls\": charge rolls are made in your Charge phase and in theirs (Heroic Intervention, 15.11: \"before making the charge roll\"). [restored: the same judgement on the same text, signed off for an earlier list]"
+ },
+ "9a5a06b18f171c8c": {
+  "verdict": "ok",
+  "by": "review:m5-new",
+  "at": "2026-10-20",
+  "why": "Source: \"In your Command phase, this unit heals 3 wounds.\" The text names your Command phase, so {ph:['command'], turn:'your'}. This is the same judgement as the approved shooty item 3ebc0bbf37c6d408; only the italics on the token line differ."
  },
  "9afba01052e3c1e4": {
   "verdict": "ok",
@@ -1331,6 +1307,12 @@
   "at": "2026-10-16",
   "why": "Every spelling means 06.03 (incl. 06.03.01 \"Hazardous test\"). Current labels \"hazard roll(s)\"/\"Hazard roll\" reach it; the \"hazardous roll/test\" branch is shadowed by /^hazardous/i (see that item's fix)."
  },
+ "9d06a83163dcb3a2": {
+  "verdict": "ok",
+  "by": "review:m5-recheck",
+  "at": "2026-10-20",
+  "why": "NR prints 'Nazdreg's Know-wotz - Nazdreg' (melee.txt l.60); BSData profile is on the Nazdreg model. Models match NR: 1x Nazdreg, 5x Meganob w/ Twin Killsaw (roster (5) Meganobz led by Nazdreg)."
+ },
  "9de67b108f809d1e": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -1342,6 +1324,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "“In your Shooting phase, when a friendly BREAKA BOYZ/FLASH GITZ/TANKBUSTAS unit is selected to shoot …” Shooting."
+ },
+ "9edbb4aefea58a8b": {
+  "verdict": "ok",
+  "by": "review:m5-recheck",
+  "at": "2026-10-20",
+  "why": "NR Categories (l.74): 'Character, Epic Hero, Faction: Orks, Infantry, Mega Armour, Nazdreg, Warboss, Explosives*, Meganobz*'. The starred keywords are exactly Explosives and Meganobz, and Nazdreg is 'Leading: Meganobz', so 'come from the led Meganobz' is right. data.js kw matches."
  },
  "9f45e056bd5bb548": {
   "verdict": "ok",
@@ -1367,17 +1355,17 @@
   "at": "2026-10-16",
   "why": "TARGET \"One friendly unengaged unit (excluding TITANIC units)\": none:[Titanic] is exact; all four Knights correctly excluded. (Units with no ranged weapon — Hive Tyrant, Neurogaunts, Tzaangors, Enlightened, Eightbound, Slaughterbound — are legal targets but cannot attack, 04.01.01; suits() already keeps it off their datasheets, the strat card still says \"any unit\".)"
  },
- "a1a3e06b0fb8584d": {
-  "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "NR roster: \"Warboss in Mega Armour … 135\" and \"(6) Meganobz … 240 Warboss in Mega Armour\"; the header reads \"375 PTS\". 135 + 240 = 375, as printed."
- },
  "a1c499e7334d1bb1": {
   "verdict": "ok",
   "by": "review:gists",
   "at": "2026-10-17",
   "why": "Word for word the EFFECT: “Your unit’s ranged attacks have [SUSTAINED HITS 1].”"
+ },
+ "a34ded60a975424e": {
+  "verdict": "ok",
+  "by": "review:m5-recheck",
+  "at": "2026-10-20",
+  "why": "NR prints 'Kustom Force Field - Big Mek in Mega Armour' (l.182); BSData has it as an Additional Options upgrade of the BMiMA model, and NR Options lists it on the BMiMA line. Models match NR."
  },
  "a36604c23d012b6e": {
   "verdict": "ok",
@@ -1415,12 +1403,6 @@
   "at": "2026-10-17",
   "why": "“When this unit is selected to make an advance/fall-back move, that move does not prevent this unit from being eligible to declare a charge.” Advance and fall-back moves are move types of the Movement phase (core 09.02, active player), and the eligibility matters when declaring a charge (11.02, “It made an advance or fall-back move this turn”). Your Movement and Charge phases are exactly where it acts."
  },
- "a5c4efea68eba1b9": {
-  "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "NR l.74-75: \"Categories Character, Epic Hero, Faction: Orks, Infantry, Mega Armour, Nazdreg, Warboss, Explosives*, Meganobz*, *from combined unit\". Nazdreg is \"Leading: Meganobz[1]\" (l.34), and the Meganobz are the only other part of the combined unit, so \"from the led Meganobz\" is a checkable list fact. Both starred keywords are listed."
- },
  "a63f2322eb83abb4": {
   "verdict": "ok",
   "by": "review:r5-text",
@@ -1433,11 +1415,17 @@
   "at": "2026-10-16",
   "why": "TARGET: \"ORKS WALKER unit (excluding TITANIC units)\": both Dakkarigs and the Killa Kans."
  },
- "a9fb1b0c51d51820": {
+ "a6f4ad7a456ba31b": {
   "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "NR l.84-93 gear: Bigboss \"Big Choppa, Slugga\"; Warboss \"Kunnin’ But Brutal, Power Klaw, Kombi-skorcha\" (the enhancement is not a weapon); Nob \"Choppa, Rokkit Pistol, Smash Hammer\"; 3x Breaka Boy \"Smash Hammer\"; Knucklebustas; Tankhammer. Profiles: \"Slugga - Bigboss\", \"Kombi-skorcha - Skorcha/Shoota - Warboss\", \"Rokkit pistol - Breaka Boyz\", \"Big Choppa - Bigboss\", \"Power Klaw - Warboss\", \"Choppa - Breaka Boyz\", \"Smash Hammer - Hunter/Standard (x4) - Breaka Boyz\" (1 Nob + 3 = 4), \"Knucklebustas - Breaka Boyz\", \"Tankhammer - Breaka Boyz\". An exact match."
+  "by": "review:m5-recheck",
+  "at": "2026-10-20",
+  "why": "NR prints 'More Dakka - Big Mek in Mega Armour' (l.179); BSData links the shared More Dakka profile to the BMiMA model. Models match NR."
+ },
+ "aaf03c8381e37487": {
+  "verdict": "ok",
+  "by": "review:m5-new",
+  "at": "2026-10-20",
+  "why": "Source: \"If this unit made a charge move this turn, this unit’s attacks have +1 D.\" The condition and effect are the text's: when \"Made a charge move this turn\", note \"+1 D\", in the same words as the approved Headwoppa’s Killchoppa footnote. The text says 'attacks', not 'melee attacks'. But as shown for the timing item, no ranged attack can follow a charge move in the same turn: Shooting comes before Charge in your turn, Fire Overwatch is at the end of their Movement phase, before Heroic Intervention's charge at the end of their Charge phase, and nothing in this list allows shooting later or charging earlier. So every attack the condition can apply to is a melee attack, and a melee footnote covers all of them (as Wreckin’ and Lootin’'s \"attacks\" when selected to shoot was approved as a ranged footnote). If that changed, for example a rule that lets a unit shoot after charging, this would need kind 'all'."
  },
  "abd758a2fd63c0f4": {
   "verdict": "ok",
@@ -1451,11 +1439,23 @@
   "at": "2026-10-16",
   "why": "Labels: DEVASTATING WOUNDS, [Devastating Wounds], unit rule. Names \"Devastating Assault\"/\"Devastating Sorcery\" exist but are never bolded or passed to ruleFor."
  },
+ "ac6912071d75c877": {
+  "verdict": "ok",
+  "by": "review:m6-krumpas",
+  "at": "2026-10-20",
+  "why": "Source: \"Attacks made with this model’s Kustom Krumpa weapon can re-roll hit rolls and wound rolls.\" (NR melee.txt l.147-148). It works only for that weapon on the models that have it: NR l.91 \"2x Nob w/ Kustom Krumpa and Paired Krumpas — Kustom Krumpa, Paired Krumpas\", and BSData has the Paired Krumpas upgrade only on that model. weapon:'Kustom Krumpa' matches the data.js melee row and NR \"Kustom Krumpa (War Horde) (x10) - Nobz\" (l.116) exactly, and the when names those Nobs, so keeping it out of \"Whole unit\" is right. The rendered datasheet keeps the Kustom Krumpa ×10 row unchanged (there is no set) and prints this line in its own box after the Whole unit and Hit ’Em Harder notes."
+ },
  "ad6e9f43bfab3707": {
   "verdict": "ok",
   "by": "review:literal (its fix, applied as written)",
   "at": "2026-10-17",
   "why": "24.07 (RULES['Close-quarters']): “When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with: One or more of its [CLOSE-QUARTERS] weapons. One or more of its other ranged weapons.” 10.06 Close-quarters shooting: “Non-MONSTER/Non-VEHICLE Models: You can only select [CLOSE-QUARTERS] weapons to make attacks with”. The sentence ‘Can shoot with A or B, not both (Close-quarters)’ drops 24.07’s condition “When using another shooting type”, so it still offers B in close-quarters shooting, where B can’t be selected. This was point (3) of the earlier audit. The rewrite fixed the ‘all’ wording but not this. Everything else matches: “You can select one or more ranged weapons that model has” (‘can shoot with one or both / one or more of these’), the MONSTER/VEHICLE exclusion, “You must select one melee weapon”, and 24.11 “All of that model’s [EXTRA ATTACKS] weapons. One of that model’s other melee weapons, if possible.” Latent, no change needed today: `big` tests the unit’s keywords, but 24.07 says “each model … (excluding MONSTER/VEHICLE models)” and 19.03 says “models in an attached unit do not gain the keywords of other models”. No attached unit in the five lists mixes MONSTER/VEHICLE and other models, and the data has no per-model keywords."
+ },
+ "adc7b6ce8ce3bbae": {
+  "verdict": "ok",
+  "by": "review:m5-new",
+  "at": "2026-10-20",
+  "why": "The NR name line (l.393-394) is \"Bomb Squig (Once per battle, per unit)\", and the Squighog Boyz' BSData infoLink is named \"Bomb Squig (Once per battle, per unit)\" (the Mek/Kommandos one is the twice-per-battle version). The tag copies it, and the text's single token (\"Place one Bomb Squig token … removing it after this ability is used\") agrees."
  },
  "adfb8b0ae937df52": {
   "verdict": "ok",
@@ -1517,6 +1517,12 @@
   "at": "2026-10-17",
   "why": "Source (New Recruit, shooty.txt line 234): the table heading reads \"Throttlerokkit Shokka Engine Description\" above Turbo Engine, Pulse Jet and Shokk Attack Engine. Full Throttle (line 232) calls them \"one Throttlerokkit Shokka Engine ability\". \"Throttlerokkit Shokka Engine\" is that heading, copied with nothing added; dropping \"pick one\" removed the app's own summary. models \"1× Wazdakka Gutsmek\" matches \"1x Wazdakka Gutsmek\" (line 219)."
  },
+ "b2efed9c4623614a": {
+  "verdict": "ok",
+  "by": "review:m5-recheck",
+  "at": "2026-10-20",
+  "why": "NR Options: 1x Nob on Smasha Squig 'Big Choppa, Slugga, Squig Jaws'; 3x Squighog Boy 'Saddlegit's Shiv, Squig Jaws, Stikka'. The gear lines match, and BSData model wargear agrees (Nob: Big Choppa/Squig Jaws/Slugga; Boy: Stikka/Saddlegit's Shiv/Squig Jaws). Weapon rows: Slugga (1), Saddlegit's Shiv (x3), Stikka ranged (x3), Big Choppa (1), Squig Jaws (x4 = 1+3), Stikka melee (x3). The weapons list matches. The unit is not attached (leads null), so no who labels."
+ },
  "b394a0e0731a1d24": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -1558,6 +1564,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "New Recruit prints “Bomb Squig … - Tankbustas”; model lines as NR."
+ },
+ "b6b94f6394e726c5": {
+  "verdict": "ok",
+  "by": "review:m5-new",
+  "at": "2026-10-20",
+  "why": "The NR name line (l.174-176) is \"Fix Dat Armour Up (Once per battle, per unit) - Big Mek in Mega Armour\". The tag copies it, and the single Grot Oiler token agrees. This is the same as the approved shooty item 38fe81af906fb4ee."
  },
  "b8de0f5f89f76da3": {
   "verdict": "ok",
@@ -1643,6 +1655,12 @@
   "at": "2026-10-17",
   "why": "New Recruit roster: Mek 55 and “(10) Flash Gitz … 245 Mek”; the sheet header is 300."
  },
+ "bdb0fd625eea7402": {
+  "verdict": "ok",
+  "by": "review:m5-recheck",
+  "at": "2026-10-20",
+  "why": "Roster: Big Mek 120, Painboy 45, '(10) Nobz 240 Big Mek, Painboy'. Unit header '405 PTS'. 120 + 45 + 240 = 405 = data.js pts."
+ },
  "be8c973c18c5fe88": {
   "verdict": "ok",
   "by": "review:code2",
@@ -1697,6 +1715,12 @@
   "at": "2026-10-16",
   "why": "Anchored exact match; used by Try Dat Button! and Daemon-vehicle texts in the term’s 04.01.05 sense."
  },
+ "c4f48c4ac55f62f3": {
+  "verdict": "ok",
+  "by": "review:m5-recheck",
+  "at": "2026-10-20",
+  "why": "NR prints 'More Dakka - Big Mek' (l.129); BSData links the shared More Dakka profile to the Big Mek model. Models match NR."
+ },
  "c54cf31f7c1da0d5": {
   "verdict": "ok",
   "by": "review:m1-strats",
@@ -1721,6 +1745,12 @@
   "at": "2026-10-16",
   "why": "\"ingress move(s)\"; 20.04."
  },
+ "cab4d5e961bad9ea": {
+  "verdict": "ok",
+  "by": "review:m5-new",
+  "at": "2026-10-20",
+  "why": "Source: \"This unit has 4+ InSv against ranged attacks.\" The def is the same words, less \"This unit has\". It keeps the limit to ranged attacks and adds nothing. It is the leader's ability and says 'this unit', so under 19.04 it covers the Meganobz too, and the def is shown for the whole unit. NR prints InSv 4+* on both rows (l.163-164) and l.182 has the same text."
+ },
  "cbcfb662e87e20d7": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -1732,6 +1762,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "\"Below half-strength: model's remaining wounds are less than half of its W\": ceil(W/2)-1 is the largest whole number below W/2 for even and odd W (W10→4, W16→7, W9→4)."
+ },
+ "cc9862c915f856ee": {
+  "verdict": "ok",
+  "by": "review:m5-recheck",
+  "at": "2026-10-20",
+  "why": "NR Options per line: Big Mek 'Kunnin' But Brutal (enhancement), Kustom mega-blasta, Drilla'; Painboy ''Urty syringe, Dok's Toolz'; 8x Nob 'Kustom Krumpa, Kustom Shoota'; 2x Nob 'Kustom Krumpa, Paired Krumpas (ability)'. The gear lines match. Weapon rows: Kustom mega-blasta and Drilla '- Big Mek'; Kustom Shoota '(x8) - Nobz'; 'Urty syringe and Dok's Toolz '- Painboy'; Kustom Krumpa '(x10) - Nobz'. The weapons list matches (8 shootas = the 8-model line, 10 krumpas = both Nob lines)."
  },
  "ccc80907a262c832": {
   "verdict": "ok",
@@ -1811,23 +1847,17 @@
   "at": "2026-10-16",
   "why": "Drops 20.03's \"Unless otherwise stated\" and the exceptions to destruction (\"Repositioned units\", units embarked in a TRANSPORT that made an ingress move). Wrong in these lists: Umbralefic Crystal (Sorcerer in TA, Deep Strike) \"must make an ingress move in your next Movement phase (including in your first turn)\"; Deffkoptas (Deep Strike) re-enter reserves via Aerial Manoover and are repositioned, so are not destroyed at the end of round 3."
  },
+ "dcea0c4de8648e46": {
+  "verdict": "ok",
+  "by": "review:m5-recheck",
+  "at": "2026-10-20",
+  "why": "NR prints 'Crude Surgery - Painboy' (l.136); BSData profile is on the Painboy model, which supports the Nobz. Models match NR."
+ },
  "dcecd59be71a8d21": {
   "verdict": "ok",
   "by": "review:literal",
   "at": "2026-10-17",
   "why": "“This unit’s attacks that target a unit that has no models with a T of 7+ have +1 to hit rolls” has no phase limit. The unit attacks in your Shooting phase, in the Fight phase of either turn, and in Fire Overwatch (“End of your opponent’s Movement phase … Your unit shoots using snap shooting”, which excludes only TITANIC; Killa Kans are VEHICLE WALKER). For the owner: snap shooting hits only on “an unmodified hit roll of 6 (irrespective of … any modifiers)” (15.09). The tag only indexes where the ability’s own words apply, which is all of the unit’s attacks."
- },
- "de146951b4e98614": {
-  "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "NR l.70: \"Krumpin’ Time - Meganobz\". who Meganobz is as printed, and the models match NR."
- },
- "df273dd1df765a77": {
-  "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "NR l.197: \"Krumpin’ Time - Meganobz\". who Meganobz is as printed."
  },
  "df8dc89f38cbe1a4": {
   "verdict": "ok",
@@ -1852,6 +1882,12 @@
   "by": "review:m1-code",
   "at": "2026-10-18",
   "why": "The new `who` filter keeps only the models lines whoOfLine gives to that part (a character's name for lines 0..n-1, else u.leads). So a part's 'per model' / 'every model' / 'none of these' claims cover just that part, and its sentences follow Select Weapons ('You can select one or more ranged weapons that model has'; 'You must select one melee weapon that model has'). Run in a harness against the live app.html. One character (Mek + Tankbustas): the Mek line is left out, giving 'Tankbusta w/ Two Busta Rokkit Launchas can shoot with one or both' and 'Nob picks one to fight with: Choppa or Smash Hammer. The others: one each'. Two characters (Bigboss + Warboss + Breaka Boyz): Bigboss and Warboss are each judged alone, and the bodyguard line is 'Nob picks one…' without the Warboss's Power Klaw. Made-up case, both characters with two melee weapons: each gets its own 'Pick one to fight with'. An enhancement on the 2nd character doesn't reach this function. When only one part has weapons of a kind, weaponRows passes who=null, and the other parts' lines are listed as 'none of these', which is true. Nothing goes beyond the rules. Latent, with no such unit in either list: (a) whoOfLine gives each character exactly one models line, but 19.04 speaks of 'The last model in that leader/support unit', so the 2nd line of a multi-model leader unit would be judged as bodyguard; (b) the part's sentence still gets the whole unit `u`, whose kw is the union, so useSentence's test for Close-quarters 'for each model in that unit (excluding MONSTER/VEHICLE models)' would give a MONSTER character's keyword to non-MONSTER bodyguard models; (c) a weapon `who` that isn't exactly u.name, also[].name or u.leads leaves `mine` empty, and the line silently disappears (check.js doesn't test this)."
+ },
+ "e50d1f83fa825bee": {
+  "verdict": "ok",
+  "by": "review:m5-new",
+  "at": "2026-10-20",
+  "why": "Source: \"In your Movement phase, when this unit ends a normal move …\". The text names your Movement phase, so {ph:['movement'], turn:'your'}, the same as the approved shooty Mek Bomb Squig timing."
  },
  "e577aca646c11203": {
   "verdict": "ok",
@@ -1901,6 +1937,12 @@
   "at": "2026-10-16",
   "why": "WHEN: \"Fight phase\"."
  },
+ "ebb48d4a64faf7d1": {
+  "verdict": "ok",
+  "by": "review:m5-recheck",
+  "at": "2026-10-20",
+  "why": "NR prints 'Get Out da Way! - Nobz' (l.145); BSData profile is on the Nobz unit. Models match NR."
+ },
  "ebc03cdbc2bf4c18": {
   "verdict": "ok",
   "by": "review:cooking (its fix)",
@@ -1912,6 +1954,18 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "\"your opponent's Fight phase\"; red \"Opponent's turn\" card (2CP, as data has)."
+ },
+ "ef335b8753a11075": {
+  "verdict": "ok",
+  "by": "review:m5-new",
+  "at": "2026-10-20",
+  "why": "Source: \"While making a charge move, this unit can move through models (excluding MONSTER/VEHICLE models).\" The moment it works is a charge move, which is made in the Charge phase. That can be your Charge phase (Charge 11.02) or theirs: Heroic Intervention, \"End of your opponent’s Charge phase … Resolve a charge with your unit\", targets any unengaged non-VEHICLE unit, so the Big Mek + Nobz qualify. Nothing in this list allows a charge in another phase. {ph:['charge'], turn:'either'} matches the approved Thundering Stampede (charge, either)."
+ },
+ "ef4d33be6b83b98c": {
+  "verdict": "ok",
+  "by": "review:m5-recheck",
+  "at": "2026-10-20",
+  "why": "NR prints 'Follow Me Ladz - Big Mek in Mega Armour' (l.181); it is a War Horde enhancement taken on the BMiMA (NR Options 'Follow Me Ladz, ...'). Models match NR."
  },
  "ef8da100f97135b7": {
   "verdict": "ok",
@@ -1961,12 +2015,6 @@
   "at": "2026-10-16",
   "why": "Single wording only when the unit has 1 model (starting strength 1: \"Below starting strength: model's remaining wounds are less than its W\"); attached units count all models so never take it. Used for Enraged Behemoths on the Tyranid monsters."
  },
- "f5639a03c593371a": {
-  "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "NR l.201-202: \"Categories Character, Faction: Orks, Infantry, Mega Armour, Warboss, Warboss in Mega Armour, Explosives*, Meganobz*, *from combined unit\". The WIMA is \"Leading: Meganobz[2]\" (l.169), the only other part, so \"from the led Meganobz\" is a list fact."
- },
  "f5803142822f4aa5": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -1997,12 +2045,6 @@
   "at": "2026-10-16",
   "why": "Labels: ASSAULT, [ASSAULT], unit rule, and \"assault shooting\" (bold only inside the Assault text itself, where it is not linked); the [ASSAULT] rule is the one that grants assault shooting (10.05)."
  },
- "f99b8f7d8f7cc61c": {
-  "verdict": "ok",
-  "by": "review:m1-units",
-  "at": "2026-10-18",
-  "why": "Unit keywords as New Recruit prints them (melee.txt Categories): the only BEAST SNAGGA units are Mozrog Skragbad (\"Beast Snagga, Character, Epic Hero, Faction: Orks, Monster, Mozrog Skragbad\") and both Beastbosses on Squigosaur (\"Beast Snagga, Beastboss on Squigosaur, Character, Faction: Orks, Monster, Warboss\"); all three are MONSTER and CHARACTER. No other unit, attached units included (Bigboss unit: \"Grenades*, Warboss*, Breaka Boyz*, Explosives*\"; Meganobz units: \"Explosives*, Meganobz*\"), has BEAST SNAGGA. So the condition \"within 3\\\" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units)\" can't be met by any unit in this list. The armyUnits keywords match NR (the second Gretchin unit is left out, but it has the same keywords and no BEAST SNAGGA). A checkable list fact; nothing added."
- },
  "f9eab25031ce4bb7": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -2015,6 +2057,12 @@
   "at": "2026-10-16",
   "why": "Matches the NR options and profiles."
  },
+ "fc25783f670088a6": {
+  "verdict": "ok",
+  "by": "review:m5-recheck",
+  "at": "2026-10-20",
+  "why": "NR prints 'Fix Dat Armour Up (Once per battle, per unit) - Big Mek in Mega Armour' (l.174-176); BSData profile is on the BMiMA model. Models match NR: 1x Big Mek in Mega Armour (Leading: Meganobz), 5x Meganob w/ Twin Killsaw. The '(Kustom Force Field)' suffix is the non-weapon wargear option, per the nr.js convention."
+ },
  "fcc098e5fb2c4ac7": {
   "verdict": "ok",
   "by": "review:r5-text",
@@ -2026,6 +2074,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "“In your Shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this model’s ranged attacks have +1 to hit rolls.” The footnote keeps the condition (used, your Shooting phase, when selected to shoot) and adds no duration or scope of its own."
+ },
+ "fd6306bbd10419f0": {
+  "verdict": "ok",
+  "by": "review:m5-new",
+  "at": "2026-10-20",
+  "why": "The NR name line (l.137-139) is \"Catch Dat Red Bit (Once per battle, per unit) - Painboy\", and the BSData profile is named \"Catch Dat Red Bit (Once per battle, per unit)\". The tag copies it. The text's single Grot Orderly token, \"removing it when this ability is used\", agrees."
  },
  "fe6f0a3e272493d8": {
   "verdict": "ok",

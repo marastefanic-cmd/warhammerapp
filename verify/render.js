@@ -61,8 +61,9 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       }, [String(fn), HELPER_SEL, !!folded]);
       if(r.overflow > 0) fail('no-sideways-scroll', a.id, label, 'the page is ' + r.overflow + 'px wider than the phone');
       if(r.bigIcons.length) fail('icon-size', a.id, label, 'icons drawn over 40px (no size set): ' + r.bigIcons.join(', '));
-      if(label !== 'home' && !r.tabs) fail('tabs', a.id, label, 'no tab bar');
-      snap.push('######## ' + label + ' · ' + r.title + '\n' + r.text.replace(/[ \t]+\n/g, '\n').replace(/\n{3,}/g, '\n\n').trim());
+      if(label !== 'home' && label !== 'settings' && !r.tabs) fail('tabs', a.id, label, 'no tab bar');
+      // the data version changes with every release: the snapshot keeps a placeholder
+      snap.push('######## ' + label + ' · ' + r.title + '\n' + r.text.replace(/[ \t]+\n/g, '\n').replace(/\n{3,}/g, '\n\n').trim().replace(/^Data \d{4}-\d\d-\d\d\.\d+$/m, 'Data (version)'));
       for(const h of r.hs){
         const t = normText(h.text);
         if(!t) continue;
@@ -78,7 +79,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       const r = await take(s + (extra ? ' ' + JSON.stringify(extra) : ''), `() => { hideSheet(); openStrats.clear(); ${extra && extra.open ? `allStratagems().forEach(x => openStrats.add(x.id));` : ''} go({ s:'${s}', army:'${a.id}' }); }`, extra && extra.folded);
       r.links.forEach(l => links.add(l));
     };
-    if(a === armies[0]) await take('home', `() => { hideSheet(); go({ s:'home' }); }`);
+    if(a === armies[0]){ await take('settings', `() => { hideSheet(); go({ s:'settings' }); }`); await take('home', `() => { hideSheet(); go({ s:'home' }); }`); }
     for(const s of ['army','pregame','units','ranged','melee','abilities','rules','bases']) await screen(s);
     await screen('strats', { folded:true });   // every stratagem folded: its one-line gist, timing and users
     await screen('strats', { open:true });     // every stratagem, unfolded

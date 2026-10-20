@@ -1,18 +1,4 @@
-######## home · KK Kunnin’ Kodex
-YOUR ARMIES
-Me shooty yer’ booty
-2000 pts
-ORKS
-DREAD MOB
-SHOOTA BOYZ
-WRECKAS
-PURGE THE FOE
-Melee
-2000 pts
-ORKS
-WAR HORDE
-PURGE THE FOE
-Checked (date of the check) against your New Recruit lists, BSData and GW’s rules
+######## settings · ARMIES Settings
 COLOURS
 
 Headings · the app stays dark + orange
@@ -33,6 +19,31 @@ New Recruit paper
 Waaagh! green
 Brass & bone
 Blood & steel
+AT THE TABLE
+Keep screen on
+Off
+THIS APP
+
+Put it on your home screen: Safari → Share → Add to Home Screen.
+
+Data (version)
+
+######## home · KK Kunnin’ Kodex
+YOUR ARMIES
+RANDOM
+Me shooty yer’ booty
+2000 pts
+ORKS
+DREAD MOB
+SHOOTA BOYZ
+WRECKAS
+PURGE THE FOE
+Melee
+2000 pts
+ORKS
+WAR HORDE
+PURGE THE FOE
+Checked (date of the check) against your New Recruit lists, BSData and GW’s rules
 
 Put it on your home screen: Safari → Share → Add to Home Screen.
 
