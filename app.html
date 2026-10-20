@@ -559,6 +559,7 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .dmw.auto{display:grid; gap:2px; padding-left:32px}
 .dmpf{display:flex; flex-wrap:wrap; gap:6px; padding:6px 2px 8px 32px; border-bottom:1px solid var(--line)}
 .dmpf button, .dmstep button{min-height:32px; padding:0 10px; border-radius:6px; box-shadow:inset 0 0 0 1px var(--line); font:700 13px/1 var(--f-head); letter-spacing:.04em; color:var(--fg2)}
+.dmpf button[disabled]{opacity:.4}
 .dmpf button.on, .dmstep button.rr.on{background:var(--accent); color:var(--accent-ink); box-shadow:none}
 .dmman{display:grid; gap:6px; padding:6px 0}
 .dmstep{display:flex; align-items:center; gap:6px}
@@ -1284,7 +1285,7 @@ function screenArmy(){
    the situation, and the rules of both lists that change the numbers, each a tick box. A rule counts only
    when every word of its footnote is understood (dmEffects); the others are listed as not counted.
    calc.js plays the attacks out; the numbers are averages over many games. */
-const DM_SITU = [['cover', 'Target has the benefit of cover', 'ranged'], ['halfRange', 'Within half range', 'ranged'], ['stationary', 'Remained stationary', 'ranged'], ['charged', 'Made a charge move this turn', 'melee']];
+const DM_SITU = [['cover', 'Target has the benefit of cover', 'ranged'], ['halfRange', 'Within half range', 'ranged'], ['charged', 'Made a charge move this turn', 'melee']];
 const oppOf = a => armyById(store.get('wh-opp-' + a.id));
 function dmState(){
   sess.dmg = isObj(sess.dmg) ? sess.dmg : {};
@@ -1401,21 +1402,27 @@ function dmCalc(st, A, B, au, tu, kind){
   for(const it of items){
     const k = key(it), ps = it.profiles;
     // a weapon with several profiles: one is picked (the Hunter profile against MONSTER/VEHICLE)
-    const pi = st.pick[k] != null ? Math.min(+st.pick[k], ps.length - 1) : Math.max(0, ps.findIndex(w => !!w.hunter === big));
+    // a Hunter profile can only target units with its keywords (04.01.03)
+    const can = w => !w.hunter || big;
+    let pi = st.pick[k] != null ? Math.min(+st.pick[k], ps.length - 1) : Math.max(0, ps.findIndex(w => !!w.hunter === big));
+    if(!can(ps[pi])) pi = Math.max(0, ps.findIndex(can));
     const w = ps[pi], n = +it.n || 1;
     html += '<label class="dmw"><input type="checkbox" data-dmw="' + esc(k) + '"' + (on(it) ? ' checked' : '') + '><span><b>' + esc(itemName(it)) + (n > 1 ? ' <span class="x">×' + n + '</span>' : '') + '</b>' +
       '<small>' + esc([w.range, 'A' + w.A, (w.BS || w.WS), 'S' + w.S, 'AP' + w.AP, 'D' + w.D].filter(Boolean).join(' · ')) + (w.kw.length ? ' · ' + esc(w.kw.join(', ')) : '') + '</small></span></label>';
-    if(ps.length > 1) html += '<div class="dmpf">' + ps.map((p, i) => '<button data-dmprof="' + esc(k) + '|' + i + '"' + (i === pi ? ' class="on" aria-pressed="true"' : ' aria-pressed="false"') + '>' + esc(p.name) + '</button>').join('') + '</div>';
+    if(ps.length > 1) html += '<div class="dmpf">' + ps.map((p, i) => '<button data-dmprof="' + esc(k) + '|' + i + '"' + (i === pi ? ' class="on" aria-pressed="true"' : ' aria-pressed="false"') + (can(p) ? '' : ' disabled title="Hunter: MONSTER/VEHICLE targets only"') + '>' + esc(p.name) + '</button>').join('') + '</div>';
     if(on(it)) groups.push({ name:itemName(it), n, A:w.A, skill:w.BS || w.WS, S:w.S, AP:w.AP, D:w.D, kw:w.kw });
   }
   html += '</div>';
   // the situation
   const kws = new Set(groups.flatMap(g => g.kw.map(x => x.toUpperCase().replace(/ .*$/, ''))));
-  const situ = DM_SITU.filter(([k, , kd]) => kd === kind && (k !== 'halfRange' || kws.has('MELTA') || kws.has('RAPID')) && (k !== 'stationary' || kws.has('HEAVY')));
-  if(kind === 'ranged' && !situ.some(([k]) => k === 'cover')) situ.unshift(DM_SITU[0]);
-  if(kws.has('LANCE') && !situ.some(([k]) => k === 'charged')) situ.push(DM_SITU[3]);
+  const situ = DM_SITU.filter(([k, , kd]) => kd === kind && (k !== 'halfRange' || kws.has('MELTA') || kws.has('RAPID')));
+  if(kws.has('LANCE') && !situ.some(([k]) => k === 'charged')) situ.push(DM_SITU[2]);
   const ctx = { ranged:kind === 'ranged' };
-  html += '<div class="sec-h"><h2>Situation</h2></div><div class="dml">' + situ.map(([k, l]) => { ctx[k] = !!st.on['c:' + k];
+  // Stealth (every model): the target always has the benefit of cover against ranged attacks
+  const stealth = kind === 'ranged' && tu.rules.some(r => /^stealth$/i.test(r));
+  html += '<div class="sec-h"><h2>Situation</h2></div><div class="dml">' + situ.map(([k, l]) => {
+    if(k === 'cover' && stealth){ ctx.cover = true; return '<p class="dmw auto"><b>' + l + '</b><small>counted: the target has Stealth</small></p>'; }
+    ctx[k] = !!st.on['c:' + k];
     return '<label class="dmw"><input type="checkbox" data-dmon="c:' + k + '"' + (ctx[k] ? ' checked' : '') + '><span><b>' + l + '</b></span></label>'; }).join('') + '</div>';
   // the attacker's rules: footnotes, detachment rules, auras, stratagems (each a tick box when its words are understood)
   const mod = {};

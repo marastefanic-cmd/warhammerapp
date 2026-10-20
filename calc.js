@@ -14,7 +14,7 @@
                             sus, lethal, dev, ignoresCover, lance, twin } }]   one group per identical attacks
      input.target  { T, kw:[keywords], models:[{ name, count, W, Sv, InSv, fnp, fnpMortal, char }],
                      mod:{ dMinus, dHalf, apWorse, hitMinus, woundMinus, fnp, insv } }
-     input.ctx     { ranged, cover, halfRange, stationary, charged }
+     input.ctx     { ranged, cover, halfRange, charged }
      input.sims (default 10000), input.seed (default 1)
    result: { sims, dmg (mean wounds lost), killed (mean models destroyed), models, wipe (P all destroyed),
              dist [P(exactly k destroyed)], groups:[{ attacks, hits, wounds, unsaved, mortals, dmg }] (means) } */
@@ -70,8 +70,9 @@ function keywords(kw, tkw){
     else if(x === 'DEVASTATING WOUNDS') k.dev = true;
     else if(x === 'TWIN-LINKED') k.twin = true;
     else if(x === 'TORRENT') k.torrent = true;
-    else if(x === 'BLAST') k.blast = true;
-    else if(x === 'HEAVY') k.heavy = true;
+    // [BLAST] / [BLAST X] and [CLEAVE X]: X more attack dice per five models in the target unit (one target here)
+    else if((m = /^BLAST(?: (\d+))?$/.exec(x))) k.blast = (k.blast || 0) + +(m[1] || 1);
+    else if((m = /^CLEAVE (\d+)$/.exec(x))) k.blast = (k.blast || 0) + +m[1];
     else if(x === 'LANCE') k.lance = true;
     else if(x === 'IGNORES COVER') k.ignoresCover = true;
     else if(x === 'PRECISION') k.precision = true;
@@ -98,14 +99,16 @@ function run(input){
       torrent:!!k.torrent, sus:m.sus ? dice(m.sus) : k.sus || null, lethal:!!(k.lethal || m.lethal), dev:!!(k.dev || m.dev),
       rrHit:m.rrHit || '', rrWound:(k.twin || m.twin) ? 'all' : (m.rrWound || ''),
       critHit:m.critHit || RULE.critHit, critWound:Math.min(m.critWound || RULE.critWound, anti),
-      // hit roll modifiers: the rules' total, capped (01.05.03)
-      hitMod:clamp((m.hit || 0) - (tm.hitMinus || 0) + (k.heavy && ctx.stationary ? 1 : 0), RULE.hitCap),
+      // hit roll modifiers: the rules' total, capped (01.05.03); a [PSYCHIC] attack can ignore modifiers to its BS/WS
+      // and to the hit roll (24.27): it ignores the ones that would make it worse
+      hitMod:clamp((m.hit || 0) - (tm.hitMinus || 0), RULE.hitCap),
       // the benefit of cover worsens the attack's BS by 1 (13.08), unless [IGNORES COVER]
       bs:skillOf(g.skill) + (ctx.ranged && ctx.cover && !(k.ignoresCover || m.ignoresCover) ? 1 : 0),
       woundMod:clamp((m.wound || 0) - (tm.woundMinus || 0) + (k.lance && ctx.charged ? 1 : 0), RULE.woundCap),
-      melta:k.melta && ctx.halfRange ? k.melta : null, rapid:k.rapid && ctx.halfRange ? k.rapid : null, blast:!!k.blast
+      melta:k.melta && ctx.halfRange ? k.melta : null, rapid:k.rapid && ctx.halfRange ? k.rapid : null, blast:k.blast || 0
     };
   });
+  for(const g of G) if(g.k.psychic){ g.hitMod = Math.max(0, g.hitMod); g.bs = Math.min(g.bs, g.skill); }
   const T = parseInt(tg.T, 10) || 1;
   const sum = G.map(() => ({ attacks:0, hits:0, wounds:0, unsaved:0, mortals:0, dmg:0 }));
   const dist = new Array(total + 1).fill(0);
@@ -136,7 +139,7 @@ function run(input){
       // attack dice (04.03): A per weapon, + Rapid Fire at half range, + Blast per five models in the target
       let attacks = 0;
       const alive = models.length - cur;
-      for(let i = 0; i < g.n; i++) attacks += roll(g.A, R) + g.aPlus + (g.rapid ? roll(g.rapid, R) : 0) + (g.blast ? Math.floor(alive / 5) : 0);
+      for(let i = 0; i < g.n; i++) attacks += roll(g.A, R) + g.aPlus + (g.rapid ? roll(g.rapid, R) : 0) + g.blast * Math.floor(alive / 5);
       S.attacks += attacks;
       // hit rolls (05.01)
       let hits = 0, autoWounds = 0;
