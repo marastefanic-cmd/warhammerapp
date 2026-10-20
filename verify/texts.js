@@ -95,11 +95,13 @@ function must(f, hint) {
 const GWFILES = {
   core: 'eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.pdf',
   uru: 'eng_wh40k_coreandkey_universal_rules_updates-lu3grocned-rphh78bl6k.pdf'
-  // a faction with a GW Faction Pack adds 'pack:<faction>': '<file>.pdf' (Orks have none: Wahapedia is the source)
 };
 const GWLABEL = {
   core: 'GW Core Rules (11th edition, 01/06/2026)', uru: 'GW Universal Rules Updates v1.1'
 };
+// each faction's GW Faction Pack, from sources/factions.json (Orks have none: Wahapedia is the source)
+for (const [k, v] of Object.entries(JSON.parse(fs.readFileSync(path.join(VERIFY, 'sources', 'factions.json'), 'utf8'))))
+  if (k[0] !== '_' && v.pack) { GWFILES['pack:' + k] = v.pack.file; GWLABEL['pack:' + k] = v.pack.label; }
 const DOCS = {};
 
 // Joining two normalised source lines: no space after a word-hyphen ("battle-" + "shock"), after "/", "(" or "[",
@@ -258,6 +260,7 @@ global.window = {};
 require(DATA);
 const D = window.WH_DATA;
 const FACTIONS = Object.keys(D.factions);
+for (const id of Object.keys(GWFILES)) if (id.startsWith('pack:') && !D.factions[id.slice(5)]) { delete GWFILES[id]; delete GWLABEL[id]; }   // only the packs of factions in data.js
 
 for (const id of Object.keys(GWFILES)) loadPdf(id);
 for (const f of FACTIONS) loadWahaTxt(f);
@@ -332,6 +335,9 @@ function classify(line) {
   if ((m = /^\*\*(\d\d\.\d\d(?:\.\d\d)?) ([^*]+?):\*\*\s*(.*)$/.exec(t))) return { kind: 'sec', num: m[1], title: m[2], body: m[3] };
   return { kind: 'text', body: t };
 }
+// the documents a text was looked for in, named so that adding a faction (and its pack) leaves the message as it was
+const docsLabel = docs => { const named = docs.filter(d => !d.startsWith('pack:')), packs = docs.length - named.length;
+  return named.concat(packs ? ['the Faction Packs'] : []).join(', '); };
 // (Wahapedia's core rules page also carries the rules-appendix passages the app labels "(app)")
 const WAHA_CORE = ['wahahtml:core'];
 const GW_ALL = ['core', 'uru'].concat(Object.keys(GWFILES).filter(k => k.startsWith('pack:')));
@@ -392,8 +398,8 @@ function checkLines(cat, army, unit, field, text, gwDocs, wahaDocs, opts = {}) {
       if (!h) {
         const hl = c.kind === 'sec' ? (locate(hd[0], wahaDocs) || locate(hd[1], wahaDocs)) : null;
         fail(cat, army, unit, field + ' (heading)', c.num + ' ' + c.title,
-          hl ? 'heading only in the less authoritative ' + hl.d.label + '; ' + hdocs.join(', ') + ' has no "' + c.title + ' ' + c.num + '"'
-             : 'no heading "' + c.title + ' ' + c.num + '" in ' + hdocs.join(', '), hl ? where(hl.d, hl.off) : '');
+          hl ? 'heading only in the less authoritative ' + hl.d.label + '; ' + docsLabel(hdocs) + ' has no "' + c.title + ' ' + c.num + '"'
+             : 'no heading "' + c.title + ' ' + c.num + '" in ' + docsLabel(hdocs), hl ? where(hl.d, hl.off) : '');
       }
     }
     for (const part of parts) {
@@ -404,7 +410,7 @@ function checkLines(cat, army, unit, field, text, gwDocs, wahaDocs, opts = {}) {
         continue;
       }
       if (r.less) {
-        fail(cat, army, unit, field, raw.trim(), 'only in the less authoritative ' + r.less.d.label + ' (not in ' + docs.join(', ') + ')', where(r.less.d, r.less.off));
+        fail(cat, army, unit, field, raw.trim(), 'only in the less authoritative ' + r.less.d.label + ' (not in ' + docsLabel(docs) + ')', where(r.less.d, r.less.off));
         provRow(item, field, r.less.d, r.less.off, { text: raw.trim().slice(0, 80), lessAuthoritative: true });
         continue;
       }
@@ -721,7 +727,7 @@ if (process.argv.includes('--debug-dets')) {
 
 /* ------------------------------------------------------------------ factions: helpers */
 const armiesOf = fk => D.armies.filter(a => a.faction === fk);
-const armyIdsOf = fk => armiesOf(fk).map(a => a.id).join(',') || fk;
+const armyIdsOf = fk => fk;   // faction rules are reported under the faction, so adding a list of it changes no report line
 const usedDetachments = fk => [...new Set(armiesOf(fk).flatMap(a => a.detachments))];
 const UPD = {}; for (const fk of FACTIONS) UPD[fk] = packUpdates(fk);
 const usedUpdates = new Set();

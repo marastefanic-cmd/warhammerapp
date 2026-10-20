@@ -1,7 +1,7 @@
 // written by verify/run.js: the last verification of this app.html + data.js
 window.WH_VERIFIED = {
  "ok": true,
- "build": "190a5ec821",
+ "build": "7739ecd0be",
  "data": "2026-10-20.2",
  "date": "20 Oct 2026",
  "checks": [
@@ -19,7 +19,7 @@ window.WH_VERIFIED = {
   },
   {
    "label": "Games Workshop’s rules text:",
-   "detail": "every rule, enhancement and stratagem is the wording of GW’s newest official document, or Wahapedia where GW has none (734 texts)."
+   "detail": "every rule, enhancement and stratagem is the wording of GW’s newest official document, or Wahapedia where GW has none (792 texts)."
   },
   {
    "label": "Rules logic:",
@@ -27,7 +27,7 @@ window.WH_VERIFIED = {
   },
   {
    "label": "The app’s own notes:",
-   "detail": "351 footnotes, reminders, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
+   "detail": "355 footnotes, reminders, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
   },
   {
    "label": "Every screen:",
@@ -49,7 +49,7 @@ window.WH_VERIFIED = {
   },
   {
    "label": "Wahapedia:",
-   "detail": "faction pages for Orks (no GW Faction Pack yet) and the errata and FAQs it lists."
+   "detail": "faction pages for Orks, Imperial Knights, World Eaters, Thousand Sons, Tyranids and the errata and FAQs they list (the only source for Orks: no GW Faction Pack yet)."
   }
  ]
 };

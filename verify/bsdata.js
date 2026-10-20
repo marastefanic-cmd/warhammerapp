@@ -1058,6 +1058,8 @@ let DATA = null;
 function main() {
   global.window = {}; require(P.data); DATA = global.window.WH_DATA;
   const MAP = JSON.parse(fs.readFileSync(P.map, 'utf8'));
+  // the catalogue of each faction: sources/factions.json (map-bsdata.json may still name one)
+  for (const [k, v] of Object.entries(JSON.parse(fs.readFileSync(path.join(HERE, 'sources', 'factions.json'), 'utf8')))) if (k[0] !== '_' && v.bsdata) MAP.catalogues[k] = MAP.catalogues[k] || v.bsdata;
   const catalogueNames = [...new Set(DATA.armies.map((a) => MAP.catalogues[a.faction]))];
   const haveClone = fs.existsSync(path.join(P.bsdata, 'Warhammer 40,000.json'));
   const useExtract = flag('--extract') || !haveClone;

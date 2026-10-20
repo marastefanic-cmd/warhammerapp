@@ -81,12 +81,16 @@ function writeVerified(ok){
     { label:'The app’s own notes:', detail:(help.approved || 0) + ' footnotes, reminders, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off.' },
     { label:'Every screen:', detail:screens + ' screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search.' }
   ];
-  const gw = fs.existsSync(path.join(ROOT, 'verify/.cache/gw')) ? fs.readdirSync(path.join(ROOT, 'verify/.cache/gw')).filter(f => f.endsWith('.pdf')).map(f => f.replace(/^eng_(\d\d-\d\d_)?|-[a-z0-9]{10}-[a-z0-9]{10}\.pdf$/g, '').replace(/_/g, ' ')) : [];
+  const FJ = JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/sources/factions.json'), 'utf8'));
+  const noPack = Object.keys(D.factions).filter(k => !(FJ[k] && FJ[k].pack)).map(k => D.factions[k].name);
+  const packs = new Set(Object.keys(D.factions).map(k => FJ[k] && FJ[k].pack && FJ[k].pack.file).filter(Boolean));
+  const gw = fs.existsSync(path.join(ROOT, 'verify/.cache/gw')) ? fs.readdirSync(path.join(ROOT, 'verify/.cache/gw')).filter(f => f.endsWith('.pdf') && (!/faction_pack/.test(f) || packs.has(f))).map(f => f.replace(/^eng_(\d\d-\d\d_)?|-[a-z0-9]{10}-[a-z0-9]{10}\.pdf$/g, '').replace(/_/g, ' ')) : [];
   const sources = [
     { label:'New Recruit:', detail:D.armies.map(a => a.name).join(', ') + ' (your PDF' + (D.armies.length > 1 ? 's' : '') + ').' },
     { label:'BSData:', detail:'wh40k-11e, commit ' + (fs.readFileSync(path.join(ROOT, 'verify/fetch.sh'), 'utf8').match(/BSDATA_COMMIT=([0-9a-f]+)/) || [, '?'])[1] + '.' },
     { label:'Games Workshop:', detail:gw.join('; ') + '.' },
-    { label:'Wahapedia:', detail:'faction pages for Orks (no GW Faction Pack yet) and the errata and FAQs it lists.' }
+    { label:'Wahapedia:', detail:'faction pages for ' + Object.values(D.factions).map(f => f.name).join(', ') + ' and the errata and FAQs they list' +
+      (noPack.length ? ' (the only source for ' + noPack.join(', ') + ': no GW Faction Pack yet)' : '') + '.' }
   ];
   const v = { ok, build:hash.slice(0, 10), data:D.version, date:new Date().toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' }), checks, sources };
   fs.writeFileSync(path.join(ROOT, 'verified.js'), '// written by verify/run.js: the last verification of this app.html + data.js\nwindow.WH_VERIFIED = ' + JSON.stringify(v, null, 1) + ';\n');

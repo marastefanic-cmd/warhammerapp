@@ -1,6 +1,6 @@
 {
- "hash": "190a5ec821c11aa7cdc4ad25b8d8ae1d150325c33e227593e4d1420fda38f3cb",
- "at": "2026-10-20T21:54:32.975Z",
+ "hash": "7739ecd0be64abb9ce107c5b694b0ac25a41bbfb92f220842a3c18c338ed1133",
+ "at": "2026-10-20T22:00:16.120Z",
  "ok": true,
  "steps": {
   "data": {
@@ -25,7 +25,7 @@
   },
   "texts": {
    "ok": true,
-   "summary": "0 failure(s) in 734 checked facts, 3 deviation(s) used; verify/out/texts.json, verify/provenance.json"
+   "summary": "0 failure(s) in 792 checked facts, 5 deviation(s) used; verify/out/texts.json, verify/provenance.json"
   },
   "screens": {
    "ok": true,
@@ -41,7 +41,7 @@
   },
   "helpers": {
    "ok": true,
-   "summary": "helpers: 351 judgements, 351 approved, 0 to check"
+   "summary": "helpers: 355 judgements, 355 approved, 0 to check, 447 stale approvals"
   }
  }
 }

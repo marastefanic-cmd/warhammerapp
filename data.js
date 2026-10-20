@@ -320,6 +320,346 @@ const FACTIONS = {
       }
     }
   },
+  'imperial-knights': {
+    name: 'Imperial Knights',
+    // words players use for a rule that has another name
+    aliases: [[/^oath/i, 'Code Chivalric'], [/^honoured/i, 'Code Chivalric']],
+    armyRules: [
+      // Wahapedia wording; the table is the Deed and Quality tables (D6 roll, the oath line as the name).
+      // The 'We pledge to reap a great tally' Deed is Wahapedia's errata wording (the page text already has it),
+      // identical to the Rules Updates in GW's Faction Pack v1.2 (legal from 26 Aug 2026), PDF p27.
+      { name:'Code Chivalric',
+        // short reminders shown in the stratagem phase views (app wording, not rules text)
+        remind:[
+          { ph:['movement','charge'], turn:'either', turns:{ movement:'your' }, text:'Quality 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls.' },
+          { ph:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, text:'Quality 1–2 (martial valour): each time a Knight shoots or fights, re-roll one Hit roll and one Wound roll.' }
+        ],
+        text:'If your Army Faction is **IMPERIAL KNIGHTS**, at the end of the Read Mission Objectives step, you must determine your army’s Oath for the coming battle. An Oath consists of two parts - one Deed and one Quality. There are three options for each part, shown below.\nTo determine your army’s Deed, you can either select one Deed or you can randomly select one Deed by rolling a D6 and consulting the relevant table below. The selected Deed will describe what needs to be achieved in order to complete that Deed.\nTo determine your army’s Quality, you can either select one Quality or you can randomly select one Quality by rolling a D6 and consulting the relevant table below. Until the end of the battle, the ability described in the Quality selected applies to all models in your army with this ability.\nThe first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).',
+        table:[
+          ['Deed 1–2 · We vow to lay low the tyrant…', 'At the start of the battle, select one **CHARACTER** model in your opponent’s army. This Deed is completed at the end of a turn if that **CHARACTER** is destroyed.'],
+          ['Deed 3–4 · We swear to reclaim the realm…', 'This deed is completed at the end of your opponent’s turn if you control more objective markers than your opponent.'],
+          ['Deed 5–6 · We pledge to reap a great tally…', 'This deed is completed at the end of the battle round if the number of enemy units destroyed this battle round is greater than the battle round number even if those units are subsequently returned to the battlefield (for example, two destroyed enemy units in the first battle round).'],
+          ['Quality 1–2 · …with our martial valour risen over all', 'Each time this model is selected to shoot or fight, you can re-roll one **Hit roll** and you can re-roll one **Wound roll**.'],
+          ['Quality 3–4 · …and we are eager for the challenge', 'Add 2" to this model’s Move characteristic and add 1 to **Advance** and **Charge rolls** made for this model.'],
+          ['Quality 5–6 · …yet shall our legacy be unsullied', 'Improve this model’s Objective Control characteristic by 2 and its Leadership characteristic by 1.']
+        ] },
+      // needs: a Bondsman ability only ever affects an ARMIGER model, so without one in the army it does nothing
+      { name:'Bondsman', ph:['command'], turn:'your', needs:{ any:['Armiger'] },
+        text:'Some **IMPERIAL KNIGHTS** models have a Bondsman ability, tagged with the word ‘Bondsman’. In your Command phase, one or more models from your army with a Bondsman ability can use that ability. For each one that does, select one friendly **ARMIGER** model within 12" of that model (you cannot select an **ARMIGER** model that is already being affected by a Bondsman ability). Until the start of your next Command phase, that **ARMIGER** model is affected by that Bondsman ability.' }
+    ],
+    detachments: {
+      'freeblade-company': {
+        name:'Freeblade Company', dp:3,
+        // rule, enhancements and stratagems: Wahapedia wording (Freeblade Company, App. Imperial Knights 11th edition v1.2),
+        // checked word for word against GW's Faction Pack v1.2 (legal from 26 Aug 2026), pp5-6, which prints this detachment in full.
+        rule:{ name:'Knights of Legend', ph:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Faction: Imperial Knights'] },
+          // proposed: the app adds this to the "When targeted" line of every unit the rule applies to
+          def:'Feel No Pain 6+',
+          text:'**IMPERIAL KNIGHTS** models from your army have the **Feel No Pain 6+** ability. In addition, at the start of your Command phase, each **IMPERIAL KNIGHTS** model from your army regains 1 lost wound.' },
+        enhancements:[
+          { name:'Bringer of Justice', pts:30, text:'**IMPERIAL KNIGHTS** model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the **Hit roll**.' },
+          { name:'Hunter’s Eye', pts:25, text:'**IMPERIAL KNIGHTS** model only. Ranged weapons equipped by the bearer have the **[IGNORES COVER]** ability.' },
+          { name:'Mysterious Guardian', pts:35, text:'**IMPERIAL KNIGHTS** model only. (Once per battle, per army) At the end of your opponent’s turn, if this unit is **unengaged**, you can use this ability. If you do:\n- Place this unit in **strategic reserves**.\n- This unit has **Deep Strike** until the start of your next Shooting phase.\n- This unit must make an **ingress move** in your next Movement phase (including in your first turn).' },
+          { name:'Sanctuary', pts:20, text:'**IMPERIAL KNIGHTS** model only. The bearer has a 5+ invulnerable save.' }
+        ],
+        stratagems:[
+          { id:'noble-sacrifice', gist:'Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.', name:'Noble Sacrifice', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Faction: Imperial Knights'] },
+            when:'Any phase.',
+            target:'One **IMPERIAL KNIGHTS** unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.',
+            effect:'Your unit’s **Deadly Demise** ability inflicts **mortal wounds** on a D6 roll of 4+, adding 1 to the result if it is an **ARMIGER** unit, instead of only a 6.' },
+          { id:'strength-from-exile', gist:'Until the end of the phase, if no other friendly units are within 9", your unit’s attacks re-roll a hit roll of 1 and a wound roll of 1.', mod:{ kind:'all', when:'No other friendly unit within 9"', note:'re-roll hit and wound rolls of 1 (your Shooting or the Fight phase)' }, name:'Strength from Exile', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, needs:{ all:['Faction: Imperial Knights'] },
+            when:'Your Shooting phase or the Fight phase.',
+            target:'One **IMPERIAL KNIGHTS** unit from your army that has not been selected to shoot or fight this phase.',
+            effect:'Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9" of your unit, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1.' },
+          // The Faction Pack (p6) prints DESTRIER as a keyword, not struck through: Wahapedia's strike-through is its
+          // "Keyword does not appear in that faction" marker, not errata, so the effect uses the pack's wording.
+          // The pack's Rules Updates entry "Full Tilt Stratagem, Target Section" (PDF p27) is under VALOURSTRIKE LANCE: it is that
+          // detachment's 2CP Full Tilt, a different stratagem, so this one's target stays as printed.
+          { id:'full-tilt', gist:'Until the end of the phase, if your unit Advances, no Advance roll: +6" Move instead (+9" for an ARMIGER or DESTRIER unit).', name:'Full Tilt', cp:1, phases:['movement'], turn:'your', needs:{ all:['Faction: Imperial Knights'] },
+            when:'Your Movement phase.',
+            target:'One **IMPERIAL KNIGHTS** unit from your army.',
+            effect:'Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6" to the Move characteristic of models in your unit, or 9" instead if your unit is an **ARMIGER** or **DESTRIER** unit.' },
+          { id:'point-blank-barrage', gist:'Until the end of the phase, your unit’s Blast weapons can target enemy units within Engagement Range of it (if no other friendly unit is within Engagement Range of that enemy unit) and it has no hit roll penalty for being within Engagement Range; each unmodified hit roll of 1 with a Blast weapon against a unit within Engagement Range of it is 1 mortal wound to your unit, after all its attacks are resolved.', name:'Point-Blank Barrage', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Faction: Imperial Knights'] },
+            when:'Your Shooting phase.',
+            target:'One **IMPERIAL KNIGHTS** unit from your army that has not been selected to shoot this phase.',
+            effect:'Until the end of the phase, when making ranged attacks with Blast weapons, models in your unit can target enemy units within **Engagement Range** of your unit (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, until the end of the phase, your unit does not suffer the penalty to its **Hit rolls** for being within Engagement Range of one or more enemy units, but each time a model in your unit makes an attack with a Blast weapon that targets a unit within Engagement Range of your unit, on an unmodified Hit roll of 1, your unit suffers 1 **mortal wound** after all of its attacks have been resolved.' },
+          { id:'survivor-of-strife', gist:'Until the end of the phase, attacks against your unit whose S is greater than its T have -1 to the wound roll.', def:'their Shooting phase: -1 to wound when the attack’s S is greater than its T', name:'Survivor of Strife', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Faction: Imperial Knights'] },
+            when:'Your opponent’s Shooting phase, just after an enemy unit has selected its targets.',
+            target:'One **IMPERIAL KNIGHTS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.',
+            effect:'Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the **Wound roll**.' },
+          { id:'flanking-manoeuvres', gist:'Remove your unit from the battlefield and place it into Strategic Reserves.', name:'Flanking Manoeuvres', cp:1, phases:['fight'], turn:'opp', needs:{ all:['Armiger'] },
+            when:'End of your opponent’s Fight phase.',
+            target:'One **ARMIGER** unit from your army that is within 9" of one or more battlefield edges and not within **Engagement Range** of one or more enemy units.',
+            effect:'Remove your unit from the battlefield and place it into **Strategic Reserves**.' }
+        ]
+      }
+    }
+  },
+  'world-eaters': {
+    name: 'World Eaters',
+    // "Blessing of Khorne" (singular) in ability text opens the army rule
+    aliases: [[/^blessings? of khorne/i, 'Blessings of Khorne']],
+    // Wahapedia also lists Pact of Blood (a mustering restriction on BLOOD LEGIONS); it does nothing in play, so it is left out.
+    armyRules: [
+      { name:'Blessings of Khorne', at:'Start of the battle round', ph:['command','charge','fight'], turn:'either',
+        // short reminder shown in the stratagem phase views (app wording, not rules text)
+        remind:[
+          { ph:['command'], turn:'either', text:'Start of the battle round: roll 8 D6, activate up to two Blessings.' },
+          { ph:['charge'], turn:'either', text:'Unbridled Bloodlust active? +1 to charge rolls. Battle-lust: while Unbridled Bloodlust is active for your army, add 1 to Charge rolls made for the Slaughterbound’s unit. Archslaughterer used: every Blessing of Khorne is active for the Lord’s unit until the start of your next turn.' },
+          { ph:['fight'], turn:'either', text:'Active Blessings: Martial Excellence [SUSTAINED HITS 1] · Warp Blades [LETHAL HITS] · Decapitating Strikes [DEVASTATING WOUNDS] vs INFANTRY · Rage-fuelled Invigoration: 6" pile-in and consolidation · Total Carnage: each time a model is destroyed by a melee attack, if it has not fought this phase, on a 4+ it is not removed; it can fight after the attacking unit has finished making its attacks, then is removed. Archslaughterer used: all six for the Lord’s unit.' }
+        ],
+        // Wahapedia wording; the example's "1,2, 2" typo is written "1, 2, 2"
+        text:'If your Army Faction is **WORLD EATERS**, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.\n*Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.*\n*First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.*\n*They then use the two 2s to activate Unbridled Bloodlust.*\n*Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.*',
+        // the six Blessings (Wahapedia), label = name and the dice it requires (drawn as dice icons on the page);
+        // Unbridled Bloodlust uses its errata wording (adds the full stop)
+        table:[
+          ['Unbridled Bloodlust · double 1+', 'This unit has +1 to **charge rolls**.'],
+          ['Rage-fuelled Invigoration · double 2+', 'Each time a model in this unit makes a Pile-in or **Consolidation move**, it can move up to 6" instead of up to 3".'],
+          ['Total Carnage · double 3+', 'Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.'],
+          ['Martial Excellence · double 4+ or triple 1+', 'Melee weapons equipped by models in this unit have the **[SUSTAINED HITS 1]** ability.'],
+          ['Warp Blades · double 5+ or triple 2+', 'Melee weapons equipped by models in this unit have the **[LETHAL HITS]** ability.'],
+          ['Decapitating Strikes · double 6 or triple 3+', 'Each time a model in this unit makes a melee attack that targets an **INFANTRY** unit, that attack has the **[DEVASTATING WOUNDS]** ability.']
+        ] }
+    ],
+    detachments: {
+      'berzerker-warband': {
+        name:'Berzerker Warband', dp:2,
+        // Wahapedia wording (the errata "Change to" text is the same as the main text)
+        rule:{ name:'Relentless Rage', ph:['fight'], turn:'either', needs:{ all:['Faction: World Eaters'] },
+          tag:'Already in A', note:'Already counted: every melee A value in this app includes this +1 A. Do not add it again.',
+          text:'Friendly **WORLD EATERS** units’ melee attacks have +1 **A**.' },
+        enhancements:[
+          { name:'Berzerker Glaive', pts:35, text:'**WORLD EATERS** model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.' },
+          { name:'Helm of Brazen Ire', pts:30, text:'**WORLD EATERS** model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack.' },
+          { name:'Favoured of Khorne', pts:20, text:'**WORLD EATERS** model only. Each time you make a **Blessings of Khorne roll**, if the bearer is on the battlefield, you can re-roll up to two of the D6 rolled.' },
+          { name:'Battle-lust', pts:20, text:'**WORLD EATERS** model only. You can re-roll **Charge rolls** made for the bearer’s unit. In addition, while the Unbridled Bloodlust Blessing of Khorne is active for your army, add 1 to Charge rolls made for the bearer’s unit.' }
+        ],
+        stratagems:[
+          { id:'blood-offering', gist:'One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.', name:'Blood Offering', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Faction: World Eaters'] },
+            when:'Any phase.',
+            target:'One **WORLD EATERS** unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.',
+            effect:'Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.' },
+          { id:'hack-and-slash', gist:'Until the end of the phase, your unit’s melee weapons have +1 AP.', mod:{ kind:'melee', when:'Made a charge move this turn', note:'+1 AP in the Fight phase' }, name:'Hack and Slash', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: World Eaters'] },
+            when:'Fight phase.',
+            target:'One **WORLD EATERS** unit from your army that has not been selected to fight this phase and that made a **charge move** this turn.',
+            effect:'Until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1.' },
+          { id:'frenzied-resilience', gist:'Until the end of the phase, -1 Damage to each attack allocated to a model in your unit.', def:'Fight phase: -1 Damage to each attack allocated to it', name:'Frenzied Resilience', cp:2, phases:['fight'], turn:'either', needs:{ all:['Faction: World Eaters'] },
+            when:'Fight phase, just after an enemy unit has selected its targets.',
+            target:'One **WORLD EATERS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.',
+            effect:'Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack.' },
+          { id:'skulls-for-the-skull-throne', gist:'Make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.', name:'Skulls for the Skull Throne!', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: World Eaters'] },
+            when:'Fight phase, just after a **WORLD EATERS** unit from your army destroys a **CHARACTER** or **MONSTER** model.',
+            target:'That **WORLD EATERS** unit.',
+            effect:'Make a **Blessings of Khorne roll** and use the results to activate one Blessing of Khorne. Until the end of the battle round, that Blessing of Khorne is active in addition to any other Blessings of Khorne that are currently active.' },
+          // New Recruit gives the Khorne Berzerkers the keyword "Berzerkers"
+          // (Wahapedia's phase icon for this one is the Charge phase; the WHEN is the Movement phase, so it is listed there)
+          { id:'apoplectic-frenzy', gist:'Until the end of the turn, your unit is eligible to declare a charge even though it Advanced.', name:'Apoplectic Frenzy', cp:1, phases:['movement'], turn:'your', needs:{ all:['Berzerkers'] },
+            when:'Your Movement phase, just after a **KHORNE BERZERKERS** unit from your army is selected to **Advance**.',
+            target:'That **KHORNE BERZERKERS** unit.',
+            effect:'Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced.' },
+          // target and effect: Wahapedia errata wording (bolds "surge move")
+          { id:'berzerkers-wrath', gist:'Your unit’s surge move is up to 8" instead of a D6 roll.', name:'Berzerker’s Wrath', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Berzerkers'] },
+            note:'Wahapedia FAQ: “After being the target of a ranged attack, can a Leader unit make a Blood Surge move if it was previously attached to a unit of Khorne Berzerkers and if the last model in the attached unit was destroyed by that ranged attack?” No.',
+            when:'Your opponent’s Shooting phase, just after an enemy unit has shot.',
+            target:'One **KHORNE BERZERKERS** unit from your army that can make a **surge move** as a result of those attacks.',
+            effect:'Do not roll a D6 to determine how far models in your unit can move when they make a **surge move**. Instead, when making a **surge move**, those models can move up to 8".' }
+        ]
+      },
+      'vessels-of-wrath': {
+        name:'Vessels of Wrath', dp:1,
+        rule:{ name:'Wrath of Khorne', ph:['fight'], turn:'either', needs:{ all:['Faction: World Eaters','Character'], none:['Epic Hero'] },
+          mod:{ kind:'melee', when:'When selected to fight', note:'CHARACTER models: [CLEAVE 1] or +1 AP' },
+          text:'When a friendly **WORLD EATERS CHARACTER** unit (excluding **EPIC HERO** units) is **selected to fight**, that unit’s **CHARACTER** models’ melee attacks can have:\n- **[CLEAVE 1]**.\n- Or: +1 **AP**.' },
+        enhancements:[
+          { name:'Archslaughterer', pts:30, text:'**WORLD EATERS** model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, every **Blessing of Khorne** is active for this unit until the start of your next turn.' },
+          { name:'Gateways to Glory', pts:10, text:'**WORLD EATERS DAEMON PRINCE** model only. This model has:\n- **MOBILE**.\n- +1 to **charge rolls**.' }
+        ],
+        stratagems:[
+          { id:'scorn-the-witch', gist:'Your unit has Feel No Pain 4+ against mortal wounds.', def:'Feel No Pain 4+ against mortal wounds', name:'Scorn the Witch', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Faction: World Eaters','Character'], none:['Epic Hero'] },
+            when:'Any phase, when a friendly **WORLD EATERS CHARACTER** unit (excluding **EPIC HERO** units) suffers a **mortal wound**.',
+            target:'That **WORLD EATERS CHARACTER** unit.',
+            effect:'Your unit has **Feel No Pain 4+** against **mortal wounds**.' },
+          { id:'aspire-to-infamy', gist:'Your unit’s CHARACTER models’ melee attacks have +1 A and +2 S.', mod:{ kind:'melee', when:'When selected to fight', note:'CHARACTER models +1 A, +2 S' }, name:'Aspire to Infamy', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: World Eaters','Character'], none:['Epic Hero'] },
+            when:'Fight phase, when a friendly **WORLD EATERS CHARACTER** unit (excluding **EPIC HERO** units) is **selected to fight**.',
+            target:'That **WORLD EATERS CHARACTER** unit.',
+            effect:'Your unit’s **CHARACTER** models’ melee attacks have:\n- +1 **A**.\n- +2 **S**.' },
+          { id:'punish-the-craven', gist:'That enemy unit must use desperate escape (-1 to those hazard rolls if it is battle-shocked).', name:'Punish the Craven', cp:1, phases:['movement'], turn:'opp', needs:{ all:['Faction: World Eaters','Character'] },
+            when:'Your opponent’s Movement phase, when a unit is selected to make a **fall-back move**, if that unit is **engaged** with a friendly **WORLD EATERS CHARACTER** unit.',
+            target:'That **WORLD EATERS CHARACTER** unit.',
+            effect:'When an enemy unit **engaged** with your unit is selected to make a **fall-back move**, that enemy unit must use the **desperate escape** mode. If that enemy unit is **battle-shocked**, -1 from those **hazard rolls**.' }
+        ]
+      }
+    }
+  },
+  'thousand-sons': {
+    name: 'Thousand Sons',
+    // words players use for a rule that has another name ("Psychic test" in Magnus’ ability text)
+    aliases: [[/^rituals?$/i, 'Cabal of Sorcerers'], [/^psychic tests?$/i, 'Cabal of Sorcerers']],
+    // army rules: Wahapedia, Thousand Sons, Army Rules
+    armyRules: [
+      { name:'Cabal of Sorcerers', ph:['shooting','charge'], turn:'your',
+        // The Psychic test sequence is a diagram on Wahapedia: its dice pictures (2D6, then + one D6)
+        // are written out as "roll one additional D6" (Arcane Focus calls it "the additional D6").
+        // The army rules have no rendered note field, so the official FAQ (Faction Pack 1.3, also on Wahapedia) goes in the text as italic lines.
+        text:'If your Army Faction is **THOUSAND SONS**, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.\n**Psychic Test Sequence**\n- **Roll 2D6**\n- **Channel the Warp** (Optional)\n- Then, if one or more doubles or triples were rolled during this test, that model’s unit suffers D3 mortal wounds.\n- If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects.\n*FAQ (Faction Pack 1.3): Do I need to sequence all of my Cabal of Sorcerers Rituals at the start of my Shooting phase? No, you just pick a model with the Cabal of Sorcerers rule, pick a Ritual to manifest, and attempt it, then repeat the process until you have run out of models or Rituals or both.*\n*FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, do I have to choose whether to Channel the Warp before rolling any dice? No.*\n*FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, if I roll one or more doubles or triples, does my model only suffer D3 mortal wounds if I chose to Channel the Warp? Yes.*\n*App note, not rules text: Channel the Warp means rolling one more D6 for the test (the printed card shows it as a die).*',
+        // the Rituals, label = name and Warp Charge value
+        table:[
+          ['Destiny’s Ruin (Psychic) · Warp Charge 5', 'Select one enemy unit within 24" of and **visible** to the manifesting model. Until the end of the phase, each time a **THOUSAND SONS** or **SCINTILLATING LEGIONS** model from your army makes an attack that targets that unit, re-roll a **Hit roll** of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.'],
+          ['Temporal Surge (Psychic) · Warp Charge 6', 'Select one friendly **THOUSAND SONS** or **SCINTILLATING LEGIONS** unit that is not within **Engagement Range** of one or more enemy units and is within 24" of and **visible** to the manifesting model. That unit can make a **Normal move** of up to D6". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.'],
+          ['Doombolt (Psychic) · Warp Charge 7', 'Select one enemy unit within 24" of and **visible** to the manifesting model (excluding units with the **Lone Operative** ability that are not part of an Attached unit and are not within 12" of the manifesting model); that unit suffers D3 **mortal wounds**. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.'],
+          ['Twist of Fate (Psychic) · Warp Charge 9', 'Select one enemy unit within 24" of and **visible** to the manifesting model. Until the end of the phase, each time a **THOUSAND SONS** or **SCINTILLATING LEGIONS** model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead.']
+        ] },
+      { name:'Pact of Sorcery',
+        text:'When mustering your army, unless specifically stated otherwise, you cannot select **SCINTILLATING LEGIONS** as your Army Faction.' }
+    ],
+    detachments: {
+      'grand-coven': {
+        name:'Grand Coven', dp:3,
+        // rule, enhancements and stratagems: Wahapedia, Thousand Sons, Grand Coven
+        // needs: the units with Psychic weapons (every one of them is a PSYKER unit)
+        rule:{ name:'Kindred Sorcery', ph:['command','movement','shooting','fight'], turn:'either', turns:{ command:'your', movement:'opp', shooting:'your' }, needs:{ all:['Faction: Thousand Sons'] },
+          mod:{ kind:'all', when:'Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle)', note:'Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]' },
+          text:'In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.',
+          table:[
+            ['Imbued Manifestation', 'Add 6" to the Range characteristic of ranged Psychic weapons equipped by **THOUSAND SONS** models from your army.'],
+            ['Psychic Maelstrom', 'Each time a **THOUSAND SONS** model from your army makes an attack with a Psychic weapon, add 1 to the **Wound roll**.'],
+            ['Wrath of the Immaterium', 'Psychic weapons equipped by **THOUSAND SONS** models from your army have the **[DEVASTATING WOUNDS]** ability.']
+          ] },
+        // pts match the New Recruit roster: Sorcerer in Terminator Armour 110 + 30 = 140, Daemon Prince 170 + 35 = 205
+        enhancements:[
+          { name:'Lord of Forbidden Lore', pts:20, text:'**THOUSAND SONS** model only. Each time the bearer manifests a **Ritual**, while resolving that Ritual, add 6" to its range.' },
+          { name:'Incandaeum', pts:15, text:'**EXALTED SORCERER** model only. Once per battle, when selecting a **Ritual** for the bearer to attempt, you can select Doombolt, even if a model from your army have already attempted to manifest that Ritual this phase.' },
+          { name:'Umbralefic Crystal', pts:30, text:'**THOUSAND SONS** model only. (Once per battle, per army) In your Command phase, if this unit is **unengaged**, you can use this ability. If you do:\n- Place this unit in **strategic reserves**.\n- This unit has **Deep Strike** until the start of your next Shooting phase.\n- This unit must make an **ingress move** in your next Movement phase (including in your first turn).' },
+          { name:'Eldritch Vortex of E’taph', pts:35, text:'**THOUSAND SONS** model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.' }
+        ],
+        // phases and turn from Wahapedia's stratagem icons (Any/Either, Command/Your, Shooting/Your)
+        stratagems:[
+          // mod/def candidate, not active: def:'FNP 4+ against psychic attacks; the attacking unit’s Psychic weapons get [HAZARDOUS]'
+          { id:'psychic-dominion', gist:'Until the end of the phase, the attacking unit’s Psychic weapons have [HAZARDOUS], and your unit has Feel No Pain 4+ against Psychic Attacks.', def:'Feel No Pain 4+ against psychic attacks; their Psychic weapons get [HAZARDOUS]', name:'Psychic Dominion', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Faction: Thousand Sons'] },
+            when:'Any phase, just after an enemy unit has selected its targets.',
+            target:'One **THOUSAND SONS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.',
+            effect:'Until the end of the phase, Psychic weapons equipped by models in the attacking unit have the **[HAZARDOUS]** ability, and models in your unit have the **Feel No Pain 4+** ability against **Psychic Attacks**.' },
+          // mod/def candidate, not active: def:'After a failed save for a PSYKER model: that attack’s Damage becomes 0'
+          { id:'destined-by-fate', gist:'Change the Damage of that attack to 0.', def:'after a failed save for a PSYKER model, that attack’s Damage becomes 0', name:'Destined by Fate', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Faction: Thousand Sons','Psyker'] },
+            when:'Any phase, just after a saving throw is failed for a **THOUSAND SONS PSYKER** model from your army. If you are using fast dice rolling, this Stratagem can still be used after rolling multiple saving throws at once.',
+            target:'That **PSYKER** model.',
+            effect:'Change the Damage characteristic of that attack to 0. If you are using fast dice rolling, select one of those attacks you failed a saving throw for.' },
+          // mod/def candidate, not active: mod:{ kind:'all', when:'Egotistical Power on this unit', note:'Psychic weapons: the Kindred Sorcery ability you pick, even one already used' }
+          { id:'egotistical-power', gist:'Until the start of your next Command phase, your unit has Imbued Manifestation, Psychic Maelstrom or Wrath of the Immaterium instead of any other Kindred Sorcery ability, even one already selected this battle.', name:'Egotistical Power', cp:1, phases:['command'], turn:'your', needs:{ all:['Faction: Thousand Sons','Psyker'] },
+            when:'Your Command phase.',
+            target:'One **THOUSAND SONS PSYKER** unit from your army.',
+            effect:'Select the Imbued Manifestation, Psychic Maelstrom or Wrath of the Immaterium ability. Until the start of your next Command phase, that ability applies to your unit instead of any other Kindred Sorcery ability, even if you have already selected that ability this battle.' },
+          { id:'desecration-of-worlds', gist:'That objective marker stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.', name:'Desecration of Worlds', cp:1, phases:['command'], turn:'your', needs:{ all:['Faction: Thousand Sons','Psyker'] },
+            when:'Your Command phase.',
+            target:'One **THOUSAND SONS PSYKER** unit from your army within range of an objective marker you control.',
+            effect:'That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.' },
+          // needs: only models with Cabal of Sorcerers take Psychic tests; in this list every one of them is a PSYKER
+          { id:'arcane-focus', gist:'Re-roll all the D6 of that Psychic test (the Channelling the Warp D6 included).', name:'Arcane Focus', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Faction: Thousand Sons'] },
+            when:'Your Shooting phase, just after you take a Psychic test for a **THOUSAND SONS** model from your army that Channelled the Warp (before resolving that **Ritual**).',
+            target:'That **THOUSAND SONS** model.',
+            effect:'Re-roll all of the D6 rolled for that Psychic test (including the additional D6 for Channelling the Warp).' },
+          // mod/def candidate, not active: mod:{ kind:'ranged', when:'Devastating Sorcery used this phase', note:'Psychic weapons +9" range; re-roll hit rolls and wound rolls with Psychic weapons' }
+          { id:'devastating-sorcery', gist:'Until the end of the phase, your unit’s Psychic weapons have +9" range and can re-roll the hit roll and the wound roll.', mod:{ kind:'ranged', when:'Psychic weapons, your Shooting phase', note:'+9" range, re-roll hit and wound rolls' }, name:'Devastating Sorcery', cp:2, phases:['shooting'], turn:'your', needs:{ all:['Faction: Thousand Sons','Psyker'] },
+            when:'Your Shooting phase.',
+            target:'One **THOUSAND SONS PSYKER** unit from your army that has not been selected to shoot this phase.',
+            effect:'Until the end of the phase, add 9" to the Range characteristic of Psychic weapons equipped by models in your unit, and each time a model in your unit makes an attack with a Psychic weapon, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.' }
+        ]
+      }
+    }
+  },
+  'tyranids': {
+    name: 'Tyranids',
+    // words players use for a rule that has another name
+    aliases: [[/^synapse range$/i, 'Synapse']],
+    armyRules: [
+      // Wahapedia wording (the errata "Change to" text has the same words, without the bold)
+      { name:'Synapse',
+        // short reminders shown in the stratagem phase views (app wording, not rules text)
+        remind:[
+          { ph:['command','movement','shooting','charge','fight'], turn:'either', text:'Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.' },
+          { ph:['fight'], turn:'either', text:'Within Synapse Range: melee attacks have +1 S.' }
+        ],
+        text:'If your Army Faction is **TYRANIDS**, while a **TYRANIDS** unit from your army is within 6" of one or more friendly **SYNAPSE** models, that **TYRANIDS** unit is said to be within Synapse Range of that model and of your army. While a **TYRANIDS** unit from your army is within Synapse Range of your army:\n- Each time that unit takes a **Battle-shock test**, take that test on 3D6 instead of 2D6.\n- Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.' },
+      // Wahapedia wording (the errata "Change to" text has the same words, without the bold)
+      { name:'Shadow in the Warp', tag:'Once per battle', ph:['command'], turn:'either',
+        note:'Wahapedia FAQ: “Can units targeted by the Shadow in the Warp army rule use the Insane Bravery Stratagem?” “No. Insane Bravery can only be used in your Command phase.”',
+        text:'If your Army Faction is **TYRANIDS**, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a **Battle-shock test**. Each time an enemy unit takes such a Battle-shock test, if it is within 6" of one or more **SYNAPSE** units from your army, subtract 1 from that test.' }
+    ],
+    detachments: {
+      // Wahapedia still prints this detachment in its codex wording (Battle-shock test, Engagement Range,
+      // Normal/Advance/Fall Back move), not in the 11th-edition terms of the Talons below.
+      'crusher-stampede': {
+        name:'Crusher Stampede', dp:2,
+        // Wahapedia wording (the errata "Change to" text has the same words, without the bold)
+        rule:{ name:'Enraged Behemoths', ph:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Faction: Tyranids','Monster'] },
+          mod:{ kind:'all', when:'Below Starting Strength', note:'+1 to hit rolls; also +1 to wound rolls if Below Half-strength',
+            single:{ when:'Lost any wounds (below Starting Strength)', note:'+1 to hit rolls; also +1 to wound rolls at {half} or fewer wounds left' } },
+          statNote:{ text:'OC {OC+2} while at Starting Strength, unless Battle-shocked', single:'OC {OC+2} while it has lost no wounds, unless Battle-shocked' },
+          text:'Each time a **TYRANIDS MONSTER** model from your army makes an attack, add 1 to the **Hit roll** if that model’s unit is below its Starting Strength, and add 1 to the **Wound roll** as well if that model’s unit is **Below Half-strength**. In addition, while a **TYRANIDS MONSTER** unit from your army (excluding **Battle-shocked** units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.' },
+        // pts from Wahapedia; Monstrous Nemesis 25 matches BSData (Hive Tyrant 195 + 25 = the 220 New Recruit prints)
+        enhancements:[
+          { name:'Ominous Presence', pts:15, text:'**TYRANIDS MONSTER** model only. Add 3 to the bearer’s Objective Control characteristic.' },
+          { name:'Enraged Reserves', pts:20, text:'**TYRANIDS MONSTER** model only. If the bearer is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 3+, do not remove it from play. It can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.' },
+          { name:'Null Nodules', pts:10, text:'**TYRANIDS MONSTER** model only. Once per battle, when a **Psychic Attack** is allocated to the bearer, it can use this ability. If it does, until the end of the phase, the bearer has the **Feel No Pain 5+** ability against Psychic Attacks.' },
+          { name:'Monstrous Nemesis', pts:25, text:'**TYRANIDS MONSTER** model only. Each time the bearer makes a melee attack that targets a **MONSTER** or **VEHICLE** unit, add 1 to the **Wound roll**.' }
+        ],
+        stratagems:[
+          { id:'corrosive-viscera', gist:'Its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).', name:'Corrosive Viscera', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'opp' }, needs:{ all:['Faction: Tyranids','Monster'], none:['Fly'] },
+            when:'Your opponent’s Shooting phase or the Fight phase, just after a **TYRANIDS MONSTER** model from your army with the **Deadly Demise** ability that cannot **FLY** is destroyed.',
+            target:'That **TYRANIDS MONSTER** model. You can use this Stratagem on that model even though it was just destroyed.',
+            effect:'Do not roll one D6 to determine whether **mortal wounds** are inflicted by your model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted.' },
+          { id:'rampaging-monstrosities', gist:'Until the end of the phase, your unit’s attacks can re-roll the hit roll.', mod:{ kind:'melee', when:'Fight phase', note:'re-roll hit rolls' }, name:'Rampaging Monstrosities', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Tyranids','Monster'] },
+            when:'Fight phase.',
+            target:'One **TYRANIDS MONSTER** unit from your army that has not been selected to fight this phase.',
+            effect:'Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the **Hit roll**.' },
+          { id:'savage-roar', gist:'That enemy unit takes a Battle-shock test and has -1 to hit your unit until the end of the phase; also -1 to wound if it failed the test.', name:'Savage Roar', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Tyranids','Monster'] },
+            when:'Fight phase, just after an enemy unit has selected its targets.',
+            target:'One **TYRANIDS MONSTER** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.',
+            effect:'That enemy unit must take a **Battle-shock test** and, until the end of the phase, each time a model in that enemy unit makes an attack that targets your unit, subtract 1 from the **Hit roll**. If that Battle-shock test was failed, subtract 1 from the **Wound roll** as well.' },
+          // Wahapedia wording (the errata "Change to" text has the same words, without the bold)
+          { id:'untrammelled-ferocity', gist:'Until the end of the phase, your unit’s Normal, Advance and Fall Back moves can pass through models (excluding TITANIC) and terrain up to 4" tall, and through Engagement Range without ending there; taller terrain too, but then, after your unit has moved, roll one D6: on a 1, your unit is Battle-shocked.', name:'Untrammelled Ferocity', cp:1, phases:['movement'], turn:'your', needs:{ all:['Faction: Tyranids','Monster'] },
+            when:'Your Movement phase.',
+            target:'One **TYRANIDS MONSTER** unit from your army that has not been selected to move this phase.',
+            effect:'Until the end of the phase, each time a model in your unit makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and sections of **terrain features** that are 4" or less in height. When doing so:\n- It can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them.\n- It can also move through sections of terrain features that are more than 4" in height, but if it does, after its unit has moved, roll one D6: on a 1, your unit is **Battle-shocked**.' },
+          { id:'swarm-guided-salvoes', gist:'Until the end of the phase, your unit’s ranged weapons have [IGNORES COVER], and its attacks can ignore any or all modifiers to BS and to the hit roll.', mod:{ kind:'ranged', when:'Your Shooting phase', note:'[IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll' }, name:'Swarm-guided Salvoes', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Faction: Tyranids','Monster'] },
+            when:'Your Shooting phase.',
+            target:'One **TYRANIDS MONSTER** unit from your army that has not been selected to shoot this phase.',
+            effect:'Until the end of the phase, ranged weapons equipped by models in your unit have the **[IGNORES COVER]** ability, and until the end of the phase each time a model in your unit makes an attack, you can ignore any or all modifiers to that model’s Ballistic Skill characteristic and any or all modifiers to the **Hit roll**.' },
+          { id:'massive-impact', gist:'Select one enemy unit within Engagement Range of your model and roll six D6: 1 mortal wound for each 4+.', name:'Massive Impact', cp:1, phases:['charge'], turn:'your', needs:{ all:['Faction: Tyranids','Monster'] },
+            when:'Your Charge phase, just after a **TYRANIDS MONSTER** model from your army ends a **Charge move**.',
+            target:'That **TYRANIDS MONSTER** model.',
+            effect:'Select one enemy unit within **Engagement Range** of your model and roll six D6: for each 4+, that enemy unit suffers 1 **mortal wound**.' }
+        ]
+      },
+      'talons-of-the-norn-queen': {
+        name:'Talons of the Norn Queen', dp:1,
+        // Protean Purpose is also on the Norn units' cards (with ph), so the rule itself has no ph
+        rule:{ name:'Higher Imperatives', needs:{ any:['Norn Emissary','Norn Assimilator'] },
+          text:'Friendly **NORN EMISSARY/NORN ASSIMILATOR** units have the following ability:\n**Protean Purpose:** (Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
+        // pts from Wahapedia, matching BSData (Norn Emissary 250 + 20 = 270; Norn Assimilator 250 + 30 = 280).
+        // Wahapedia tags both as Upgrades: they can go on non-CHARACTER units and an army can include up to
+        // three of the same one (core rules), so both Assimilators can take Synaptoprescience.
+        enhancements:[
+          { name:'Destabilising Predation', pts:20, text:'**NORN EMISSARY** unit only. This unit’s ranged attacks have **[ANTI-CHARACTER 2+]**.' },
+          { name:'Synaptoprescience', pts:30, text:'**NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**.' }
+        ],
+        stratagems:[
+          { id:'catalytic-biofortification', gist:'Your unit has Feel No Pain 4+ against mortal wounds.', def:'Feel No Pain 4+ against mortal wounds', name:'Catalytic Biofortification', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Norn Assimilator'] },
+            when:'Any phase, when a friendly **NORN ASSIMILATOR** unit suffers a **mortal wound**.',
+            target:'That **NORN ASSIMILATOR** unit.',
+            effect:'Your unit has **Feel No Pain 4+** against **mortal wounds**.' },
+          { id:'lesser-prey', gist:'Your unit’s melee attacks have +2 S.', mod:{ kind:'melee', when:'When selected to fight', note:'+2 S' }, name:'Lesser Prey', cp:1, phases:['fight'], turn:'either', needs:{ any:['Norn Assimilator','Norn Emissary'] },
+            when:'Fight phase, when a friendly **NORN ASSIMILATOR/NORN EMISSARY** unit is **selected to fight**.',
+            target:'That **NORN ASSIMILATOR/NORN EMISSARY** unit.',
+            effect:'Your unit’s melee attacks have +2 **S**.' },
+          { id:'tanglestrike-rounds', gist:'One enemy unit hit by those attacks is tethered (-2" M) until the start of your next Command phase.', name:'Tanglestrike Rounds', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Norn Assimilator'] },
+            when:'Your Shooting phase, when a friendly **NORN ASSIMILATOR** unit has shot.',
+            target:'That **NORN ASSIMILATOR** unit.',
+            effect:'Select one enemy unit hit by those attacks. That enemy unit is **tethered** until the start of your next Command phase:\n- While a unit is **tethered**, that unit has -2" **M**.' }
+        ]
+      }
+    }
+  },
 };
 
 /* ---------------- armies ----------------

@@ -14,16 +14,88 @@
    "sha256": "e9368c75bf4c9040fa978e7f792080e71d140997def77182dd41e71959185a72"
   },
   {
+   "id": "pack:world-eaters",
+   "label": "GW Faction Pack World Eaters",
+   "file": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.pdf",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "id": "pack:thousand-sons",
+   "label": "GW Faction Pack Thousand Sons",
+   "file": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_thousand_sons-4lioijwxdj-otjrinzt8c.pdf",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "id": "pack:tyranids",
+   "label": "GW Faction Pack Tyranids",
+   "file": "verify/.cache/gw/eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.pdf",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "id": "pack:imperial-knights",
+   "label": "GW Faction Pack Imperial Knights",
+   "file": "verify/.cache/gw/eng_wh40k_faction_pack_imperial_knights-n1irjnjygs-w8jfnk8kdn.pdf",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
    "id": "waha:orks",
    "label": "Wahapedia orks (text)",
    "file": "verify/.cache/waha/orks.txt",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
+   "id": "waha:imperial-knights",
+   "label": "Wahapedia imperial-knights (text)",
+   "file": "verify/.cache/waha/imperial-knights.txt",
+   "sha256": "583c0fcdf91ee4bb8f5f3a07a2edfa1fdbeca8429dc9c247906752e247146199"
+  },
+  {
+   "id": "waha:world-eaters",
+   "label": "Wahapedia world-eaters (text)",
+   "file": "verify/.cache/waha/world-eaters.txt",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "id": "waha:thousand-sons",
+   "label": "Wahapedia thousand-sons (text)",
+   "file": "verify/.cache/waha/thousand-sons.txt",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "id": "waha:tyranids",
+   "label": "Wahapedia tyranids (text)",
+   "file": "verify/.cache/waha/tyranids.txt",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
    "id": "wahahtml:orks",
    "label": "Wahapedia orks",
    "file": "verify/.cache/waha/orks.html",
    "sha256": "3d97dfd14d0a29449ea6e9fd43820a3d94e9e25c3b8224347b70081f20350016"
+  },
+  {
+   "id": "wahahtml:imperial-knights",
+   "label": "Wahapedia imperial-knights",
+   "file": "verify/.cache/waha/imperial-knights.html",
+   "sha256": "cd6b75588341f28c2705a5ec7c2208e4319c6d0bf07a21a3886db0d6b595caa9"
+  },
+  {
+   "id": "wahahtml:world-eaters",
+   "label": "Wahapedia world-eaters",
+   "file": "verify/.cache/waha/world-eaters.html",
+   "sha256": "7609b464b76e1f11635f1ad45d560c796142a13567e11504e5a18c090ddae8a1"
+  },
+  {
+   "id": "wahahtml:thousand-sons",
+   "label": "Wahapedia thousand-sons",
+   "file": "verify/.cache/waha/thousand-sons.html",
+   "sha256": "97b1480448fd9cf67fb816a54cfb8aa7ccd8d45c8838867a1cba939a4ca7666b"
+  },
+  {
+   "id": "wahahtml:tyranids",
+   "label": "Wahapedia tyranids",
+   "file": "verify/.cache/waha/tyranids.html",
+   "sha256": "d200e7bceb8b757e48a637008a989b1b690e3918596faf318f67264644244cf7"
   },
   {
    "id": "wahahtml:core",
@@ -2679,544 +2751,774 @@
    "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
   },
   {
-   "item": "shooty,melee / detachment:dread-mob",
+   "item": "orks / detachment:dread-mob",
    "field": "name",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:dread-mob/rule",
+   "item": "orks / detachment:dread-mob/rule",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:dread-mob/enhancement:Cybork Boosta",
+   "item": "orks / detachment:dread-mob/enhancement:Cybork Boosta",
    "field": "pts",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:dread-mob/enhancement:Cybork Boosta",
+   "item": "orks / detachment:dread-mob/enhancement:Cybork Boosta",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:dread-mob/enhancement:Dreadherder",
+   "item": "orks / detachment:dread-mob/enhancement:Dreadherder",
    "field": "pts",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:dread-mob/enhancement:Dreadherder",
+   "item": "orks / detachment:dread-mob/enhancement:Dreadherder",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:dread-mob/stratagem:crazed-rampage",
+   "item": "orks / detachment:dread-mob/stratagem:crazed-rampage",
    "field": "when",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP (CRAZED RAMPAGE)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:dread-mob/stratagem:crazed-rampage",
+   "item": "orks / detachment:dread-mob/stratagem:crazed-rampage",
    "field": "target",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP (CRAZED RAMPAGE)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:dread-mob/stratagem:crazed-rampage",
+   "item": "orks / detachment:dread-mob/stratagem:crazed-rampage",
    "field": "effect",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP (CRAZED RAMPAGE)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:dread-mob/stratagem:dread-power",
+   "item": "orks / detachment:dread-mob/stratagem:dread-power",
    "field": "when",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP (DREAD POWER)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:dread-mob/stratagem:dread-power",
+   "item": "orks / detachment:dread-mob/stratagem:dread-power",
    "field": "target",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP (DREAD POWER)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:dread-mob/stratagem:dread-power",
+   "item": "orks / detachment:dread-mob/stratagem:dread-power",
    "field": "effect",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP (DREAD POWER)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:dread-mob/stratagem:stomping-juggernaut",
+   "item": "orks / detachment:dread-mob/stratagem:stomping-juggernaut",
    "field": "when",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP (STOMPING JUGGERNAUT)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:dread-mob/stratagem:stomping-juggernaut",
+   "item": "orks / detachment:dread-mob/stratagem:stomping-juggernaut",
    "field": "target",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP (STOMPING JUGGERNAUT)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:dread-mob/stratagem:stomping-juggernaut",
+   "item": "orks / detachment:dread-mob/stratagem:stomping-juggernaut",
    "field": "effect",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Dread Mob 1DP (STOMPING JUGGERNAUT)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:shoota-boyz",
+   "item": "orks / detachment:shoota-boyz",
    "field": "name",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Shoota Boyz 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:shoota-boyz/rule",
+   "item": "orks / detachment:shoota-boyz/rule",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Shoota Boyz 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:shoota-boyz/enhancement:Supa-glowy Fing",
+   "item": "orks / detachment:shoota-boyz/enhancement:Supa-glowy Fing",
    "field": "pts",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Shoota Boyz 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:shoota-boyz/enhancement:Supa-glowy Fing",
+   "item": "orks / detachment:shoota-boyz/enhancement:Supa-glowy Fing",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Shoota Boyz 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:shoota-boyz/enhancement:Targetin’ Squigs",
+   "item": "orks / detachment:shoota-boyz/enhancement:Targetin’ Squigs",
    "field": "pts",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Shoota Boyz 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:shoota-boyz/enhancement:Targetin’ Squigs",
+   "item": "orks / detachment:shoota-boyz/enhancement:Targetin’ Squigs",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Shoota Boyz 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:shoota-boyz/stratagem:kustom-dakka",
+   "item": "orks / detachment:shoota-boyz/stratagem:kustom-dakka",
    "field": "when",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Shoota Boyz 1DP (KUSTOM DAKKA)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:shoota-boyz/stratagem:kustom-dakka",
+   "item": "orks / detachment:shoota-boyz/stratagem:kustom-dakka",
    "field": "target",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Shoota Boyz 1DP (KUSTOM DAKKA)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:shoota-boyz/stratagem:kustom-dakka",
+   "item": "orks / detachment:shoota-boyz/stratagem:kustom-dakka",
    "field": "effect",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Shoota Boyz 1DP (KUSTOM DAKKA)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:shoota-boyz/stratagem:glowin-dakka",
+   "item": "orks / detachment:shoota-boyz/stratagem:glowin-dakka",
    "field": "when",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Shoota Boyz 1DP (GLOWIN' DAKKA)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:shoota-boyz/stratagem:glowin-dakka",
+   "item": "orks / detachment:shoota-boyz/stratagem:glowin-dakka",
    "field": "target",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Shoota Boyz 1DP (GLOWIN' DAKKA)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:shoota-boyz/stratagem:glowin-dakka",
+   "item": "orks / detachment:shoota-boyz/stratagem:glowin-dakka",
    "field": "effect",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Shoota Boyz 1DP (GLOWIN' DAKKA)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:shoota-boyz/stratagem:never-enough-dakka",
+   "item": "orks / detachment:shoota-boyz/stratagem:never-enough-dakka",
    "field": "when",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Shoota Boyz 1DP (NEVER ENOUGH DAKKA)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:shoota-boyz/stratagem:never-enough-dakka",
+   "item": "orks / detachment:shoota-boyz/stratagem:never-enough-dakka",
    "field": "target",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Shoota Boyz 1DP (NEVER ENOUGH DAKKA)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:shoota-boyz/stratagem:never-enough-dakka",
+   "item": "orks / detachment:shoota-boyz/stratagem:never-enough-dakka",
    "field": "effect",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Shoota Boyz 1DP (NEVER ENOUGH DAKKA)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:wreckas",
+   "item": "orks / detachment:wreckas",
    "field": "name",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Wreckas 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:wreckas/rule",
+   "item": "orks / detachment:wreckas/rule",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Wreckas 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:wreckas/enhancement:Kaptin’s Hat",
+   "item": "orks / detachment:wreckas/enhancement:Kaptin’s Hat",
    "field": "pts",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Wreckas 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:wreckas/enhancement:Kaptin’s Hat",
+   "item": "orks / detachment:wreckas/enhancement:Kaptin’s Hat",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Wreckas 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:wreckas/enhancement:Supa-snazz Dakka",
+   "item": "orks / detachment:wreckas/enhancement:Supa-snazz Dakka",
    "field": "pts",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Wreckas 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:wreckas/enhancement:Supa-snazz Dakka",
+   "item": "orks / detachment:wreckas/enhancement:Supa-snazz Dakka",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Wreckas 1DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:wreckas/stratagem:drive-by-bustin",
+   "item": "orks / detachment:wreckas/stratagem:drive-by-bustin",
    "field": "when",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Wreckas 1DP (DRIVE-BY BUSTIN')",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:wreckas/stratagem:drive-by-bustin",
+   "item": "orks / detachment:wreckas/stratagem:drive-by-bustin",
    "field": "target",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Wreckas 1DP (DRIVE-BY BUSTIN')",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:wreckas/stratagem:drive-by-bustin",
+   "item": "orks / detachment:wreckas/stratagem:drive-by-bustin",
    "field": "effect",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Wreckas 1DP (DRIVE-BY BUSTIN')",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:wreckas/stratagem:grab-it",
+   "item": "orks / detachment:wreckas/stratagem:grab-it",
    "field": "when",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Wreckas 1DP (GRAB IT)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:wreckas/stratagem:grab-it",
+   "item": "orks / detachment:wreckas/stratagem:grab-it",
    "field": "target",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Wreckas 1DP (GRAB IT)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:wreckas/stratagem:grab-it",
+   "item": "orks / detachment:wreckas/stratagem:grab-it",
    "field": "effect",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Wreckas 1DP (GRAB IT)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:wreckas/stratagem:gun-crazy-show-offs",
+   "item": "orks / detachment:wreckas/stratagem:gun-crazy-show-offs",
    "field": "when",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Wreckas 1DP (GUN-CRAZY SHOW-OFFS)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:wreckas/stratagem:gun-crazy-show-offs",
+   "item": "orks / detachment:wreckas/stratagem:gun-crazy-show-offs",
    "field": "target",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Wreckas 1DP (GUN-CRAZY SHOW-OFFS)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:wreckas/stratagem:gun-crazy-show-offs",
+   "item": "orks / detachment:wreckas/stratagem:gun-crazy-show-offs",
    "field": "effect",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Wreckas 1DP (GUN-CRAZY SHOW-OFFS)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:war-horde",
+   "item": "orks / detachment:war-horde",
    "field": "name",
    "doc": "waha:orks",
    "where": "Wahapedia orks § War Horde 3DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:war-horde/rule",
+   "item": "orks / detachment:war-horde/rule",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § War Horde 3DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:war-horde/enhancement:Headwoppa’s Killchoppa",
+   "item": "orks / detachment:war-horde/enhancement:Headwoppa’s Killchoppa",
    "field": "pts",
    "doc": "waha:orks",
    "where": "Wahapedia orks § War Horde 3DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:war-horde/enhancement:Headwoppa’s Killchoppa",
+   "item": "orks / detachment:war-horde/enhancement:Headwoppa’s Killchoppa",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § War Horde 3DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:war-horde/enhancement:Da Boss is Watchin’",
+   "item": "orks / detachment:war-horde/enhancement:Da Boss is Watchin’",
    "field": "pts",
    "doc": "waha:orks",
    "where": "Wahapedia orks § War Horde 3DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:war-horde/enhancement:Da Boss is Watchin’",
+   "item": "orks / detachment:war-horde/enhancement:Da Boss is Watchin’",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § War Horde 3DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:war-horde/enhancement:Kunnin’ But Brutal",
+   "item": "orks / detachment:war-horde/enhancement:Kunnin’ But Brutal",
    "field": "pts",
    "doc": "waha:orks",
    "where": "Wahapedia orks § War Horde 3DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:war-horde/enhancement:Kunnin’ But Brutal",
+   "item": "orks / detachment:war-horde/enhancement:Kunnin’ But Brutal",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § War Horde 3DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:war-horde/enhancement:Follow Me Ladz",
+   "item": "orks / detachment:war-horde/enhancement:Follow Me Ladz",
    "field": "pts",
    "doc": "waha:orks",
    "where": "Wahapedia orks § War Horde 3DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:war-horde/enhancement:Follow Me Ladz",
+   "item": "orks / detachment:war-horde/enhancement:Follow Me Ladz",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § War Horde 3DP",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:war-horde/stratagem:breakin-heads",
+   "item": "orks / detachment:war-horde/stratagem:breakin-heads",
    "field": "when",
    "doc": "waha:orks",
    "where": "Wahapedia orks § War Horde 3DP (BREAKIN' HEADS)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:war-horde/stratagem:breakin-heads",
+   "item": "orks / detachment:war-horde/stratagem:breakin-heads",
    "field": "target",
    "doc": "waha:orks",
    "where": "Wahapedia orks § War Horde 3DP (BREAKIN' HEADS)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:war-horde/stratagem:breakin-heads",
+   "item": "orks / detachment:war-horde/stratagem:breakin-heads",
    "field": "effect",
    "doc": "waha:orks",
    "where": "Wahapedia orks § War Horde 3DP (BREAKIN' HEADS)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:war-horde/stratagem:hit-em-harder",
+   "item": "orks / detachment:war-horde/stratagem:hit-em-harder",
    "field": "when",
    "doc": "waha:orks",
    "where": "Wahapedia orks § War Horde 3DP (HIT 'EM HARDER)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:war-horde/stratagem:hit-em-harder",
+   "item": "orks / detachment:war-horde/stratagem:hit-em-harder",
    "field": "target",
    "doc": "waha:orks",
    "where": "Wahapedia orks § War Horde 3DP (HIT 'EM HARDER)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:war-horde/stratagem:hit-em-harder",
+   "item": "orks / detachment:war-horde/stratagem:hit-em-harder",
    "field": "effect",
    "doc": "waha:orks",
    "where": "Wahapedia orks § War Horde 3DP (HIT 'EM HARDER)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:war-horde/stratagem:orks-is-never-beaten",
+   "item": "orks / detachment:war-horde/stratagem:orks-is-never-beaten",
    "field": "when",
    "doc": "waha:orks",
    "where": "Wahapedia orks § War Horde 3DP (ORKS IS NEVER BEATEN)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:war-horde/stratagem:orks-is-never-beaten",
+   "item": "orks / detachment:war-horde/stratagem:orks-is-never-beaten",
    "field": "target",
    "doc": "waha:orks",
    "where": "Wahapedia orks § War Horde 3DP (ORKS IS NEVER BEATEN)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:war-horde/stratagem:orks-is-never-beaten",
+   "item": "orks / detachment:war-horde/stratagem:orks-is-never-beaten",
    "field": "effect",
    "doc": "waha:orks",
    "where": "Wahapedia orks § War Horde 3DP (ORKS IS NEVER BEATEN)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:war-horde/stratagem:mow-em-down",
+   "item": "orks / detachment:war-horde/stratagem:mow-em-down",
    "field": "when",
    "doc": "waha:orks",
    "where": "Wahapedia orks § War Horde 3DP (MOW 'EM DOWN)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:war-horde/stratagem:mow-em-down",
+   "item": "orks / detachment:war-horde/stratagem:mow-em-down",
    "field": "target",
    "doc": "waha:orks",
    "where": "Wahapedia orks § War Horde 3DP (MOW 'EM DOWN)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:war-horde/stratagem:mow-em-down",
+   "item": "orks / detachment:war-horde/stratagem:mow-em-down",
    "field": "effect",
    "doc": "waha:orks",
    "where": "Wahapedia orks § War Horde 3DP (MOW 'EM DOWN)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:war-horde/stratagem:fungus-fuel-injection",
+   "item": "orks / detachment:war-horde/stratagem:fungus-fuel-injection",
    "field": "when",
    "doc": "waha:orks",
    "where": "Wahapedia orks § War Horde 3DP (FUNGUS-FUEL INJECTION)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:war-horde/stratagem:fungus-fuel-injection",
+   "item": "orks / detachment:war-horde/stratagem:fungus-fuel-injection",
    "field": "target",
    "doc": "waha:orks",
    "where": "Wahapedia orks § War Horde 3DP (FUNGUS-FUEL INJECTION)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:war-horde/stratagem:fungus-fuel-injection",
+   "item": "orks / detachment:war-horde/stratagem:fungus-fuel-injection",
    "field": "effect",
    "doc": "waha:orks",
    "where": "Wahapedia orks § War Horde 3DP (FUNGUS-FUEL INJECTION)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:war-horde/stratagem:close-range-dakka",
+   "item": "orks / detachment:war-horde/stratagem:close-range-dakka",
    "field": "when",
    "doc": "waha:orks",
    "where": "Wahapedia orks § War Horde 3DP (CLOSE-RANGE DAKKA)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:war-horde/stratagem:close-range-dakka",
+   "item": "orks / detachment:war-horde/stratagem:close-range-dakka",
    "field": "target",
    "doc": "waha:orks",
    "where": "Wahapedia orks § War Horde 3DP (CLOSE-RANGE DAKKA)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / detachment:war-horde/stratagem:close-range-dakka",
+   "item": "orks / detachment:war-horde/stratagem:close-range-dakka",
    "field": "effect",
    "doc": "waha:orks",
    "where": "Wahapedia orks § War Horde 3DP (CLOSE-RANGE DAKKA)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / armyRule:Waaagh!",
+   "item": "orks / armyRule:Waaagh!",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Army Rules (Waaagh!)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / armyRule:War Cry",
+   "item": "orks / armyRule:War Cry",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Army Rules (War Cry)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / armyRule:Da Boss",
+   "item": "orks / armyRule:Da Boss",
    "field": "text",
    "doc": "waha:orks",
    "where": "Wahapedia orks § Army Rules (Da Boss)",
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
-   "item": "shooty,melee / armyRule:Da Boss / text (marked lines)",
+   "item": "orks / armyRule:Da Boss / text (marked lines)",
    "field": "text (marked lines)",
    "text": "*Wahapedia core rules errata (07.01, CP Generated by a Warlord; not in GW’s prin",
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § 1. Start of Battle Round 07.01",
    "sha256": "79932f4e24b03a2f7f8c972bb81fc1d8d2b1bc96666275665efdc5376df0cfe9"
+  },
+  {
+   "item": "imperial-knights / armyRule:Code Chivalric",
+   "field": "text",
+   "doc": "waha:imperial-knights",
+   "where": "Wahapedia imperial-knights § Army Rules (Code Chivalric)",
+   "sha256": "583c0fcdf91ee4bb8f5f3a07a2edfa1fdbeca8429dc9c247906752e247146199"
+  },
+  {
+   "item": "imperial-knights / armyRule:Code Chivalric/row:Deed 1–2",
+   "field": "text",
+   "doc": "waha:imperial-knights",
+   "where": "Wahapedia imperial-knights § Army Rules (Code Chivalric)",
+   "sha256": "583c0fcdf91ee4bb8f5f3a07a2edfa1fdbeca8429dc9c247906752e247146199"
+  },
+  {
+   "item": "imperial-knights / armyRule:Code Chivalric/row:Deed 3–4",
+   "field": "text",
+   "doc": "waha:imperial-knights",
+   "where": "Wahapedia imperial-knights § Army Rules (Code Chivalric)",
+   "sha256": "583c0fcdf91ee4bb8f5f3a07a2edfa1fdbeca8429dc9c247906752e247146199"
+  },
+  {
+   "item": "imperial-knights / armyRule:Code Chivalric/row:Deed 5–6 / text",
+   "field": "text",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p27, Rules Updates: ARMY RULES / Code Chivalric, ‘We pledge to reap a great tally’ Deed",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "imperial-knights / armyRule:Code Chivalric/row:Quality 1–2",
+   "field": "text",
+   "doc": "waha:imperial-knights",
+   "where": "Wahapedia imperial-knights § Army Rules (Code Chivalric)",
+   "sha256": "583c0fcdf91ee4bb8f5f3a07a2edfa1fdbeca8429dc9c247906752e247146199"
+  },
+  {
+   "item": "imperial-knights / armyRule:Code Chivalric/row:Quality 3–4",
+   "field": "text",
+   "doc": "waha:imperial-knights",
+   "where": "Wahapedia imperial-knights § Army Rules (Code Chivalric)",
+   "sha256": "583c0fcdf91ee4bb8f5f3a07a2edfa1fdbeca8429dc9c247906752e247146199"
+  },
+  {
+   "item": "imperial-knights / armyRule:Code Chivalric/row:Quality 5–6",
+   "field": "text",
+   "doc": "waha:imperial-knights",
+   "where": "Wahapedia imperial-knights § Army Rules (Code Chivalric)",
+   "sha256": "583c0fcdf91ee4bb8f5f3a07a2edfa1fdbeca8429dc9c247906752e247146199"
+  },
+  {
+   "item": "imperial-knights / armyRule:Bondsman",
+   "field": "text",
+   "doc": "waha:imperial-knights",
+   "where": "Wahapedia imperial-knights § Army Rules (Bondsman)",
+   "sha256": "583c0fcdf91ee4bb8f5f3a07a2edfa1fdbeca8429dc9c247906752e247146199"
+  },
+  {
+   "item": "world-eaters / armyRule:Blessings of Khorne",
+   "field": "text",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Army Rules (Blessings of Khorne)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / armyRule:Blessings of Khorne/row:Unbridled Bloodlust / text",
+   "field": "text",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p7, Rules Updates: ARMY RULES / Blessings of Khorne, Unbridled Bloodlust",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / armyRule:Blessings of Khorne/row:Rage-fuelled Invigoration",
+   "field": "text",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Army Rules (Blessings of Khorne)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / armyRule:Blessings of Khorne/row:Total Carnage",
+   "field": "text",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Army Rules (Blessings of Khorne)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / armyRule:Blessings of Khorne/row:Martial Excellence",
+   "field": "text",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Army Rules (Blessings of Khorne)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / armyRule:Blessings of Khorne/row:Warp Blades",
+   "field": "text",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Army Rules (Blessings of Khorne)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / armyRule:Blessings of Khorne/row:Decapitating Strikes",
+   "field": "text",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Army Rules (Blessings of Khorne)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "thousand-sons / armyRule:Cabal of Sorcerers",
+   "field": "text",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Army Rules (Cabal of Sorcerers)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / armyRule:Cabal of Sorcerers / text (marked lines)",
+   "field": "text (marked lines)",
+   "text": "*FAQ (Faction Pack 1.3): Do I need to sequence all of my Cabal of Sorcerers Ritu",
+   "doc": "pack:thousand-sons",
+   "where": "PDF p11",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "thousand-sons / armyRule:Cabal of Sorcerers / text (marked lines)",
+   "field": "text (marked lines)",
+   "text": "*FAQ (Faction Pack 1.3): Do I need to sequence all of my Cabal of Sorcerers Ritu",
+   "doc": "pack:thousand-sons",
+   "where": "PDF p11",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "thousand-sons / armyRule:Cabal of Sorcerers / text (marked lines)",
+   "field": "text (marked lines)",
+   "text": "*FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, do I have ",
+   "doc": "pack:thousand-sons",
+   "where": "PDF p11",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "thousand-sons / armyRule:Cabal of Sorcerers / text (marked lines)",
+   "field": "text (marked lines)",
+   "text": "*FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, do I have ",
+   "doc": "pack:thousand-sons",
+   "where": "PDF p11",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "thousand-sons / armyRule:Cabal of Sorcerers / text (marked lines)",
+   "field": "text (marked lines)",
+   "text": "*FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, if I roll ",
+   "doc": "pack:thousand-sons",
+   "where": "PDF p11",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "thousand-sons / armyRule:Cabal of Sorcerers / text (marked lines)",
+   "field": "text (marked lines)",
+   "text": "*FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, if I roll ",
+   "doc": "pack:thousand-sons",
+   "where": "PDF p11",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "thousand-sons / armyRule:Cabal of Sorcerers/row:Destiny’s Ruin (Psychic) / text",
+   "field": "text",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p9, Rules Updates: ARMY RULES / Destiny’s Ruin (Psychic)",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "thousand-sons / armyRule:Cabal of Sorcerers/row:Temporal Surge (Psychic) / text",
+   "field": "text",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p9, Rules Updates: ARMY RULES / Temporal Surge (Psychic)",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "thousand-sons / armyRule:Cabal of Sorcerers/row:Doombolt (Psychic)",
+   "field": "text",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Army Rules (Cabal of Sorcerers)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / armyRule:Cabal of Sorcerers/row:Twist of Fate (Psychic) / text",
+   "field": "text",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p9, Rules Updates: ARMY RULES / Twist of Fate (Psychic)",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "thousand-sons / armyRule:Cabal of Sorcerers / text (first paragraph)",
+   "field": "text (first paragraph)",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p9, Rules Updates: ARMY RULES / Cabal of Sorcerers",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "thousand-sons / armyRule:Pact of Sorcery",
+   "field": "text",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Army Rules (Pact of Sorcery)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "tyranids / armyRule:Synapse",
+   "field": "text",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Army Rules (Synapse)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / armyRule:Synapse / text",
+   "field": "text",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p19, Rules Updates: ARMY RULES / Synapse",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "tyranids / armyRule:Shadow in the Warp",
+   "field": "text",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Army Rules (Shadow in the Warp)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / armyRule:Shadow in the Warp / text",
+   "field": "text",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p19, Rules Updates: ARMY RULES / Shadow in the Warp",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
   },
   {
    "item": "shooty / dakkarig-herder / ability:Dreadherder",
