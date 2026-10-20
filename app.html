@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>Waaagh Codex</title>
+<title>Kunnin’ Kodex</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <style>
 /* Atkinson Hyperlegible Next for text (fonts/OFL-atkinson.txt) and Barlow Condensed for headings and
@@ -23,7 +23,7 @@
 @font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/barlow-condensed-700.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 </style>
 <style>
-/* Waaagh Codex: a drill-down reference sheet for one army list.
+/* Kunnin’ Kodex: a drill-down reference sheet for one army list.
    Tabs: Overview | Units | Stratagems | Rules | Find (search + menu: Ranged, Melee, Abilities,
    Bases); Units -> unit datasheet, which fits one screen with the long text folded away. A sticky
    top bar (back, centred title, search) can carry column labels; each tab remembers its screen. One dark graphite look; orange marks what you can tap
@@ -127,6 +127,8 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .back svg{width:20px; height:20px; flex:none; margin-left:-4px}
 .back span{white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
 .ttl{min-width:0; max-width:58vw; text-align:center; font:700 clamp(15px, 4.6vw, 18px)/1.05 var(--f-head); letter-spacing:.03em; overflow:hidden; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2}
+.ttl .brand{display:inline-flex; align-items:center; gap:9px; vertical-align:middle}
+.ttl .lg{width:28px; height:28px; flex:none}
 .icon-btn{justify-self:end; width:44px; height:44px; display:grid; place-items:center; color:var(--fg); margin-right:-10px}
 .icon-btn:active{color:var(--accent)}
 .icon-btn svg{width:20px; height:20px}
@@ -700,6 +702,13 @@ function applyTheme(){
   if(m) m.setAttribute('content', t.v.bg || THEME_DEF.bg);   // the phone's status bar
 }
 applyTheme();
+// the logo: a riveted plate like the app's heading bands, lit from the top, stamped KK (Kunnin' Kodex)
+const LOGO = '<svg class="lg" viewBox="60 70 392 372" aria-hidden="true"><defs><linearGradient id="lgEdge" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--accent)"/>' +
+  '<stop offset=".06" style="stop-color:var(--accent);stop-opacity:.62"/><stop offset=".12" style="stop-color:var(--accent);stop-opacity:.34"/><stop offset=".22" style="stop-color:var(--accent);stop-opacity:.16"/>' +
+  '<stop offset=".34" style="stop-color:var(--accent);stop-opacity:.06"/><stop offset=".5" style="stop-color:var(--accent);stop-opacity:0"/></linearGradient></defs>' +
+  '<path d="M110 80h292l40 40v272l-40 40H110l-40-40V120z" style="fill:var(--ds-band)"/><path d="M110 80h292l40 40v272l-40 40H110l-40-40V120z" fill="url(#lgEdge)"/>' +
+  '<g fill="rgba(0,0,0,.35)"><circle cx="112" cy="128" r="11"/><circle cx="400" cy="128" r="11"/><circle cx="112" cy="384" r="11"/><circle cx="400" cy="384" r="11"/></g>' +
+  '<text x="256" y="338" text-anchor="middle" style="font:700 230px var(--f-head);fill:var(--ds-band-fg)" letter-spacing="-4">KK</text></svg>';
 // the picker: a swatch per scheme (background, unit band, section band, the accent)
 function themePicker(){
   const now = themeNow();
@@ -1061,7 +1070,7 @@ function renderTop(){
     if(up) left = '<button class="back" data-back><svg aria-hidden="true"><use href="#i-back"/></svg><span>' + esc(cur.from || backTitle(up)) + '</span></button>';
     if(cur.s !== 'army' && cur.s !== 'home') right = '<button class="icon-btn" data-find aria-label="Search this army"><svg aria-hidden="true"><use href="#i-search"/></svg></button>';
   }
-  $('#topIn').innerHTML = left + '<h1 class="ttl">' + esc(cur.s === 'home' ? 'Waaagh Codex' : cur.s === 'unit' && army() ? army().name : titleOf(cur)) + '</h1>' + right;
+  $('#topIn').innerHTML = left + '<h1 class="ttl">' + (cur.s === 'home' ? '<span class="brand">' + LOGO + 'Kunnin’ Kodex</span>' : esc(cur.s === 'unit' && army() ? army().name : titleOf(cur))) + '</h1>' + right;
 }
 function setBar(id, html){
   const el = $('#' + id);
