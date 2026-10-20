@@ -1382,7 +1382,10 @@ function screenDamage(){
   const au = atks.find(u => u.id === st.atk) || atks[0], tu = tgts.find(u => u.id === st.tgt) || tgts[0];
   h += seg('dir', [['me', 'You attack'], ['them', 'They attack']]) + seg('ph', [['shooting', 'Shooting'], ['fight', 'Fight']]);
   if(!au || !tu) return h + '<p class="note">' + esc(A.name) + ' has no unit with ' + kind + ' weapons.</p>';
-  h += '<div class="list">' + pick('atk', 'Attacker · ' + (st.dir === 'me' ? 'yours' : 'theirs'), unitLabel(au), '') + pick('tgt', 'Target · ' + (st.dir === 'me' ? 'theirs' : 'yours'), unitLabel(tu), '') + '</div>';
+  // under the target: what the attacks meet (each stats row: T, Sv, InSv, W, how many)
+  const tsub = dmModels(tu).map(m => (m.count > 1 ? m.count + '× ' : '') + 'T' + m.T + ' · Sv ' + m.Sv + '+' + (m.InSv < 7 ? ' · ' + m.InSv + '+ InSv' : '') + ' · W' + m.W).join(' · ');
+  h += '<div class="list">' + pick('atk', 'Attacker · ' + (st.dir === 'me' ? 'yours' : 'theirs'), unitLabel(au), modelCount(au) + (modelCount(au) > 1 ? ' models' : ' model')) +
+    pick('tgt', 'Target · ' + (st.dir === 'me' ? 'theirs' : 'yours'), unitLabel(tu), tsub) + '</div>';
   const calc = dmCalc(st, A, B, au, tu, kind);
   return h + '<div id="dmRes">' + dmResult(calc) + '</div>' + calc.html;
 }
