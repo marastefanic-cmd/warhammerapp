@@ -9,15 +9,6 @@
   "evidence": "Wahapedia, Orks, Shoota Boyz detachment, enhancement Supa-glowy Fing: \"This model’s ranged attacks have: - [Anti-Infantry 4+]. - [Devastating Wounds]. - [SUPA-HAZARDOUS].\" (verify/.cache/waha/orks.html); verify/texts.js checks the app's text against it. NR prints the typo (verify/sources/nr/shooty.txt)."
  },
  {
-  "army": "shooty",
-  "unit": "mek-flashgitz",
-  "field": "stats.count",
-  "app": "Flash Gitz",
-  "source": "Flash Gitz ×10",
-  "reason": "New Recruit prints this stat row without a model count (\"Flash Gitz - Flash Gitz\": the Kaptin and the 9 Flash Gitz share it); the app shows the row as New Recruit prints it, and its models lines give 1× Kaptin and 9× Flash Gitz.",
-  "evidence": "verify/sources/nr/shooty.txt line 161: \"Flash Gitz - Flash Gitz  6\"  5  4+  3  7+  1  40mm\"; lines 157-158: \"1x Kaptin\", \"9x Flash Gitz\"."
- },
- {
   "army": "melee",
   "unit": "mozrog-skragbad",
   "field": "ability.text",

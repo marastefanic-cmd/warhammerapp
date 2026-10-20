@@ -887,7 +887,10 @@ function compareUnit(army, u, F, fail) {
       checked('stats');
       if (nv(row[k], k === 'base') !== nv(best.ch[keyChar(k)], k === 'base')) fail(`stats.${k}`, `${row.name}: ${row[k]}`, `${best.name}: ${best.ch[keyChar(k)]}`, best.where);
     }
-    checked('stats'); if (n !== best.count) fail('stats.count', row.name, `${best.name} ×${best.count}`, best.where);
+    // a row's "×N" (New Recruit's "(xN)") must be BSData's number of models with the profile. New Recruit leaves the
+    // count off some rows ("Jakhal", "Rubric Marine", "Flash Gitz") but not others alike ("Khorne Berzerker (x10)");
+    // a row without one states no count, and the models lines (checked against New Recruit) give the numbers
+    checked('stats'); if (m[2] !== undefined && n !== best.count) fail('stats.count', row.name, `${best.name} ×${best.count}`, best.where);
     compareGrants(army, u, 'stats', row.name, row, best, null, fail, best.where);
   }
   for (const s of F.stats) if (!usedStats.has(s)) { checked('stats'); fail('stats', '', `${s.name} (${['M', 'T', 'Sv', 'W', 'LD', 'OC', 'InSv'].map((k) => s.ch[k]).join(' ')})`, `${s.where}: Unit profile missing in the app`); }
