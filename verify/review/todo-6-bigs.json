@@ -1,0 +1,116 @@
+[
+  {
+    "army": "6-bigs",
+    "kind": "ability-timing",
+    "where": "6-bigs · Knight Destrier · Ram Jets",
+    "judgement": {
+      "ph": [
+        "movement"
+      ],
+      "turn": "your"
+    },
+    "source": {
+      "ability": "Ram Jets",
+      "text": "Each time this unit is selected to make a **Normal** or **Advance move**, until the end of the phase, add D3\" to the Move characteristic of this model."
+    },
+    "key": "09187654343d9487"
+  },
+  {
+    "army": "6-bigs",
+    "kind": "unit-footnote",
+    "where": "6-bigs · Knight Destrier",
+    "judgement": {
+      "kind": "all",
+      "when": "Damaged (1-6 wounds left)",
+      "note": "-1 to hit rolls (and -4 OC)",
+      "from": "Damaged: 1-6 Wounds Remaining"
+    },
+    "source": {
+      "ability": "Damaged: 1-6 Wounds Remaining",
+      "text": "While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**."
+    },
+    "key": "553078c211266651"
+  },
+  {
+    "army": "6-bigs",
+    "kind": "ability-timing",
+    "where": "6-bigs · Knight Errant · Aggressive Assault",
+    "judgement": {
+      "ph": [
+        "shooting"
+      ],
+      "turn": "your"
+    },
+    "source": {
+      "ability": "Aggressive Assault",
+      "text": "Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the **Hit roll**."
+    },
+    "key": "22049e22285d487e"
+  },
+  {
+    "army": "6-bigs",
+    "kind": "ability-tag",
+    "where": "6-bigs · Knight Errant · Errant’s Duty",
+    "judgement": {
+      "tag": "Bondsman"
+    },
+    "source": {
+      "ability": "Errant’s Duty",
+      "text": "While a model is affected by this ability, you can re-roll **Advance rolls** made for that model and ranged weapons equipped by that model have the **[ASSAULT]** ability."
+    },
+    "key": "203203e2c13a6697"
+  },
+  {
+    "army": "6-bigs",
+    "kind": "unit-footnote",
+    "where": "6-bigs · Knight Errant",
+    "judgement": {
+      "kind": "ranged",
+      "when": "Target is the closest eligible target",
+      "note": "+1 to hit rolls",
+      "from": "Aggressive Assault"
+    },
+    "source": {
+      "ability": "Aggressive Assault",
+      "text": "Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the **Hit roll**."
+    },
+    "key": "d01de612f43a9388"
+  },
+  {
+    "army": "6-bigs",
+    "kind": "unit-footnote",
+    "where": "6-bigs · Knight Warden",
+    "judgement": {
+      "kind": "all",
+      "when": "Damaged (1-9 wounds left)",
+      "note": "-1 to hit rolls (and -5 OC)",
+      "from": "Damaged: 1-9 Wounds Remaining"
+    },
+    "source": {
+      "ability": "Damaged: 1-9 Wounds Remaining",
+      "text": "While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**."
+    },
+    "key": "1a26079f75de4fea"
+  },
+  {
+    "army": "6-bigs",
+    "kind": "unit-aura",
+    "where": "6-bigs · Knight Errant",
+    "judgement": {
+      "kind": "ranged",
+      "needs": {
+        "all": [
+          "Armiger"
+        ]
+      },
+      "when": "Affected by Errant’s Duty (Bondsman)",
+      "note": "ranged weapons have [ASSAULT]",
+      "from": "Errant’s Duty"
+    },
+    "source": {
+      "ability": "Errant’s Duty",
+      "text": "While a model is affected by this ability, you can re-roll **Advance rolls** made for that model and ranged weapons equipped by that model have the **[ASSAULT]** ability."
+    },
+    "key": "6f0f37a9d252f3f2"
+  }
+]

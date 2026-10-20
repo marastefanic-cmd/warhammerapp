@@ -1,0 +1,41 @@
+[
+  {
+    "army": "nidzillas",
+    "kind": "ability-tag",
+    "where": "nidzillas · The Swarmlord · Malign Presence",
+    "judgement": {
+      "tag": "Aura"
+    },
+    "source": {
+      "ability": "Malign Presence",
+      "text": "Once per turn, when your opponent targets a unit from their army within 12\" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP."
+    },
+    "key": "b952c6d09f197f29"
+  },
+  {
+    "army": "nidzillas",
+    "kind": "ability-tag",
+    "where": "nidzillas · The Swarmlord · Domination of the Hive Mind",
+    "judgement": {
+      "tag": "Aura"
+    },
+    "source": {
+      "ability": "Domination of the Hive Mind",
+      "text": "While a friendly **TYRANIDS** unit is within 9\" of this model, that unit is within your army’s Synapse Range."
+    },
+    "key": "aacdbe54e4866c26"
+  },
+  {
+    "army": "nidzillas",
+    "kind": "ability-tag",
+    "where": "nidzillas · Hive Tyrant · Monstrous Nemesis",
+    "judgement": {
+      "tag": "Enhancement"
+    },
+    "source": {
+      "ability": "Monstrous Nemesis",
+      "text": "Tyranids Monster only. Each time the bearer makes a melee attack that targets a Monster or Vehicle unit, add 1 to the Wound roll."
+    },
+    "key": "c7b0d438e3e9576d"
+  }
+]

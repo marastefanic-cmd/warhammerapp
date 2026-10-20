@@ -1,0 +1,3 @@
+# git revisions whose data.js verify/add-army.js searches for the signed-off hand-written parts of a
+# datasheet (phase tags, footnotes, auras) when a new list uses it: lists that have left the app
+3f64990^   # Cooking, Hurrdurr, oioioi, Nidzillas, Purge Freeblade (left on 17 Oct 2026)

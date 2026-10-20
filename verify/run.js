@@ -21,6 +21,17 @@ const fs = require('fs'), path = require('path');
 const { ROOT, sha, writeJSON } = require('./lib');
 
 const accept = process.argv.includes('--accept');
+// one run at a time in this folder: two would overwrite each other's verify/out (use a separate worktree instead)
+const LOCK = path.join(ROOT, 'verify/out/.run.lock');
+fs.mkdirSync(path.dirname(LOCK), { recursive:true });
+try { fs.writeFileSync(LOCK, String(process.pid), { flag:'wx' }); }
+catch(e){
+  const pid = +fs.readFileSync(LOCK, 'utf8');
+  let alive = false; try { process.kill(pid, 0); alive = true; } catch(_){}
+  if(alive){ console.error('another verify/run.js (pid ' + pid + ') is running in ' + ROOT + '; wait for it, or run in a separate git worktree'); process.exit(2); }
+  fs.writeFileSync(LOCK, String(process.pid));   // left over from a run that was killed
+}
+process.on('exit', () => { try { if(fs.readFileSync(LOCK, 'utf8') === String(process.pid)) fs.unlinkSync(LOCK); } catch(e){} });
 const node = (args, env) => spawnSync(process.execPath, args, { cwd:ROOT, encoding:'utf8', env:Object.assign({}, process.env, env || {}) });
 const steps = {};
 const step = (name, args, env) => {

@@ -51,14 +51,28 @@ const todo = [];           // what a person (or Claude) still writes; each is th
 const note = (unit, what) => todo.push({ unit, what });
 const label = u => [u.name].concat((u.also || []).map(c => c.name), u.leads ? [u.leads] : []).join(' + ');
 const wantPages = new Set();   // "<faction> <Wahapedia-Name>" lines for verify/sources/waha-datasheets.txt
+// a datasheet's Wahapedia address, as the faction page links it ("Kh-rn-The-Betrayer", "Lord-on-Juggernaut": no one rule
+// makes them); a name the page does not link gets each word capitalised
+let wahaLinks = null;
+function wahaAddress(n) {
+  if (!wahaLinks) {
+    const f = path.join(ROOT, 'verify/.cache/waha', factionId + '.html');
+    const html = fs.existsSync(f) ? fs.readFileSync(f, 'utf8') : '';
+    wahaLinks = [...new Set([...html.matchAll(/href="\/wh40k11ed\/factions\/[^/"]+\/([^"#/?]+)"/g)].map(m => m[1]))];
+  }
+  const keys = s => { const t = String(s).replace(/['’]/g, '').toLowerCase();
+    return [t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]/g, ''), t.replace(/[^a-z0-9]/g, '')]; };   // "Khârn": kharn, khrn
+  const want = keys(n), hit = wahaLinks.find(l => keys(l).some(k => want.includes(k)));
+  return hit || nm(n).replace(/['’]/g, '').split(/\s+/).map(w => w[0].toUpperCase() + w.slice(1)).join('-');
+}
 
 // ---------------------------------------------------------------- faction and detachments
 const nr0 = NR.parseNR(path.resolve(srcFile), []);
-const catalogues = (JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/map-bsdata.json'), 'utf8')).catalogues) || {};
+const catalogues = Object.fromEntries(Object.entries(JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/sources/factions.json'), 'utf8'))).filter(([k, v]) => k[0] !== '_' && v.bsdata).map(([k, v]) => [k, v.bsdata]));
 const factionId = Object.keys(catalogues).find(k => nm(catalogues[k]) === nm(nr0.faction)) ||
   Object.keys(D.factions).find(k => nm(D.factions[k].name) === nm(nr0.faction.replace(/^.* - /, ''))) || slug(nr0.faction.replace(/^.* - /, ''));
 const F = D.factions[factionId];
-if (!F) note(null, 'faction ' + nr0.faction + ' is not in data.js: transcribe its army rules, detachments, enhancements and stratagems from Wahapedia/GW, and add it to verify/map-bsdata.json "catalogues"');
+if (!F) note(null, 'faction ' + nr0.faction + ' is not in data.js: transcribe its army rules, detachments, enhancements and stratagems from Wahapedia/GW, and add it to verify/sources/factions.json (verify/add-army.js does)');
 const enhs = F ? Object.values(F.detachments).flatMap(d => d.enhancements || []) : [];
 const nr = NR.parseNR(path.resolve(srcFile), enhs.map(e => e.name));   // again, now knowing which options are enhancements
 const detIds = nrDetachments(nr.bullets['Detachment']).map(n => {
@@ -138,7 +152,7 @@ function markup(tokens, P, a, b) {
 const wahaCache = new Map();
 function wahaPage(unitName) {
   const dir = path.join(ROOT, 'verify/.cache/waha/ds');
-  const want = (factionId + '_' + nm(unitName).replace(/['’]/g, '').replace(/\s+/g, '-')).toLowerCase();
+  const want = (factionId + '_' + wahaAddress(unitName)).toLowerCase();
   if (wahaCache.has(want)) return wahaCache.get(want);
   const f = fs.existsSync(dir) && fs.readdirSync(dir).find(x => x.toLowerCase() === want + '.html');
   let r = null;
@@ -281,7 +295,7 @@ for (const nu of nrUnits) {
   // abilities: New Recruit's tables, worded as the datasheet (or the enhancement) words them
   const pages = uniq([name].concat(also.map(c => c.name), nu.who.length ? nu.who : [], bodyguard ? [bodyguard] : [])).map(wahaPage);
   // every datasheet page the unit's wording comes from, for verify/fetch.sh (Wahapedia's address is the name, words capitalised)
-  uniq([name].concat(also.map(c => c.name), nu.who.length ? nu.who : [], bodyguard ? [bodyguard] : [])).forEach((n, k) => { wantPages.add(factionId + ' ' + nm(n).replace(/['’]/g, '').split(/\s+/).map(w => w[0].toUpperCase() + w.slice(1)).join('-')); });
+  uniq([name].concat(also.map(c => c.name), nu.who.length ? nu.who : [], bodyguard ? [bodyguard] : [])).forEach((n, k) => { wantPages.add(factionId + ' ' + wahaAddress(n)); });
   if (!pages.some(Boolean)) note(tag0, 'no cached Wahapedia datasheet: its ability texts are New Recruit’s plain words (run sh verify/fetch.sh and import again)');
   let upgrade = null;
   const abilities = [];

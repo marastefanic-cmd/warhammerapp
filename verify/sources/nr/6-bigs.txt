@@ -1,0 +1,329 @@
+10/20/26, 11:37 PM                                                   6 bigs - New Recruit
+
+                                                           6 bigs [2000pts]
+  Army Roster [3 Detachment Points, 2000 pts] (Imperium - Imperial Knights)
+  • Battle Size: Strike Force (2000 Point limit)
+  • Code Chivalric: Deed, Quality
+  • Detachment: Freeblade Company [3Detachment Points]
+  • Force Disposition: Purge the Foe
+  • Show/Hide Options: Crucible Characters are visible, Imperial Agents are visible, Titans are visible,
+  Unaligned Forces are visible, Unaligned Fortifications are visible
+  NAME              ROLE        PTS OPTIONS
+   Knight Destrier Character 265
+   Knight Destrier Character 265
+   Knight Errant          Character 355
+   Knight Paladin         Character 375
+   Knight Paladin         Character 375
+   Knight Warden Character 365 Warlord
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6abc2099b0640c9391dac3d5                                               1/8
+10/20/26, 11:37 PM                                                        6 bigs - New Recruit
+     265 PTS                                                KNIGHT DESTRIER                                                 x2
+   Models                      Options
+   1x Knight Destrier          Questoris heavy stubber, Titanic feet, Chastiser gatling cannon, Frag bombard
+   Unit                               M           T         Sv       W        LD         OC         InSv     Base
+   Knight Destrier                    12"         10        3+       18       6+         8          5+*      150x95mm
+   Ranged Weapons                         Range        A         BS       S   AP    D     Keywords
+   Questoris heavy stubber                36"          6         3+       4   -1    1     Assault, Rapid Fire 3
+   Chastiser gatling cannon               24"          12        3+       6   -1     2    Assault
+   Frag bombard                           24"          D6+3      3+       7   -1     2    Assault, Blast, Rapid Fire D6+3
+   Melee Weapons                            Range                A    WS             S        AP       D    Keywords
+   Titanic feet                             Melee                4    4+             7        -1       2
+   Abilities                    Description
+                                While this model has 1-6 wounds remaining, subtract 4 from this model's Objective
+   Damaged: 1-6 Wounds
+                                Control characteristic and each time this model makes an attack, subtract 1 from the
+   Remaining
+                                Hit roll.
+                                If this model is equipped with a thundershock spear and a bellatus reaper chainsword,
+   Thundercharge
+                                add 2 to the Attacks characteristic of melee weapons equipped by this model.
+                                Each time this unit is selected to make a Normal or Advance move, until the end of the
+   Ram Jets
+                                phase, add D3" to the Move characteristic of this model.
+                                Each time this model makes a ranged attack that targets a unit within range of one or
+   Saturation Fire
+                                more objective markers, that attack has the [IGNORES COVER] ability.
+   Invulnerable Save
+   (5+*)
+                                This model has a 5+ invulnerable save against ranged attacks.
+
+    Rules Deadly Demise D6, Super-Heavy Walker, Code Chivalric, Assault, Rapid Fire, Blast
+
+    Categories Bellatus, Character, Faction: Imperial Knights, Imperium, Knight Destrier, Titanic, Towering, Vehicle, Walker
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6abc2099b0640c9391dac3d5                                                                     2/8
+10/20/26, 11:37 PM                                                        6 bigs - New Recruit
+     355 PTS                                                   KNIGHT ERRANT
+   Models                      Options
+   1x Knight Errant            Thermal cannon, Stormspear rocket pod, Meltagun, Reaper chainsword
+   Unit                            M          T         Sv           W     LD         OC              InSv         Base
+   Knight Errant                   10"        11        3+           26    6+         10              5+*          170x109mm
+   Ranged Weapons                                Range           A         BS        S           AP          D     Keywords
+   Thermal cannon                                24"             2D3       3+        12          -4          D6    Blast, Melta 6
+   Stormspear rocket pod                         48"             3         3+        8           -2          D6
+   Meltagun                                      12"             1         3+        9           -4          D6    Melta 2
+   Melee Weapons                                                Range         A        WS             S       AP    D     Keywords
+   ➤ Reaper chainsword - strike                                 Melee         4        3+             14      -4    6
+   ➤ Reaper chainsword - sweep                                  Melee         12         3+           9       -3    2
+   Abilities                   Description
+                               Each time this model makes a ranged attack that targets the closest eligible target, add
+   Aggressive Assault
+                               1 to the Hit roll.
+   Invulnerable Save
+                               This model has a 5+ invulnerable save against ranged attacks.
+   (5+*)
+                               While this model has 1-9 wounds remaining, subtract 5 from this model's Objective
+   Damaged: 1-9
+                               Control characteristic and each time this model makes an attack, subtract 1 from the Hit
+   Wounds Remaining
+                               roll.
+   Abilities                Description
+   Errant's Duty            While a model is affected by this ability, you can re-roll Advance rolls made for that model
+   (Bondsman)               and ranged weapons equipped by that model have the [ASSAULT] ability.
+    Rules Deadly Demise D6, Super-Heavy Walker, Code Chivalric, Assault, Bondsman, Melta, Blast
+
+    Categories Character, Faction: Imperial Knights, Imperium, Knight Errant, Questoris, Titanic, Towering, Vehicle,
+               Walker
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6abc2099b0640c9391dac3d5                                                                         3/8
+10/20/26, 11:37 PM                                                           6 bigs - New Recruit
+     375 PTS                                                   KNIGHT PALADIN                                                       x2
+   Models                Options
+   1x                    Questoris heavy stubber, Rapid-fire battle cannon, Stormspear rocket pod, Meltagun, Reaper
+   Knight Paladin        chainsword
+   Unit                              M          T        Sv        W           LD         OC         InSv           Base
+   Knight Paladin                    10"        11       3+        26          6+         10         5+*            170x109mm
+   Ranged Weapons                           Range        A              BS       S      AP      D         Keywords
+   Questoris heavy stubber                  36"          3              3+       4      -1      1         Rapid Fire 3
+   Rapid-fire battle cannon                 72"          D6+3           3+       10     -1      3         Blast, Rapid Fire D6+3
+   Stormspear rocket pod                    48"          3              3+       8      -2      D6
+   Meltagun                                 12"          1              3+       9      -4      D6        Melta 2
+   Melee Weapons                                                Range            A        WS         S       AP      D   Keywords
+   ➤ Reaper chainsword - strike                                 Melee            4        3+         14      -4      6
+   ➤ Reaper chainsword - sweep                                  Melee            12       3+         9       -3      2
+   Abilities                   Description
+                               Each time this model makes a ranged attack that targets the closest eligible target,
+   Seasoned Noble
+                               improve the Armour Penetration characteristic of that attack by 1.
+   Invulnerable Save
+                               This model has a 5+ invulnerable save against ranged attacks.
+   (5+*)
+                               While this model has 1-9 wounds remaining, subtract 5 from this model's Objective
+   Damaged: 1-9
+                               Control characteristic and each time this model makes an attack, subtract 1 from the Hit
+   Wounds Remaining
+                               roll.
+   Abilities               Description
+                           While a model is affected by this ability, weapons equipped by that model have the
+   Paladin’s Duty
+                           [LETHAL HITS] ability, and melee weapons equipped by that model have the [LANCE]
+   (Bondsman)
+                           ability.
+    Rules Deadly Demise D6, Super-Heavy Walker, Code Chivalric, Lethal Hits, Lance, Bondsman, Rapid Fire, Blast, Melta
+
+    Categories Character, Faction: Imperial Knights, Imperium, Knight Paladin, Questoris, Titanic, Towering, Vehicle,
+               Walker
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6abc2099b0640c9391dac3d5                                                                             4/8
+10/20/26, 11:37 PM                                                       6 bigs - New Recruit
+     365 PTS                                                   KNIGHT WARDEN
+   Models                 Options
+   1x                     Warlord, Avenger gatling cannon, Heavy flamer, Stormspear rocket pod, Meltagun, Reaper
+   Knight Warden          chainsword
+   Unit                               M         T        Sv        W        LD         OC        InSv           Base
+   Knight Warden                      10"       11       3+        26       6+         10        5+*            170x109mm
+   Ranged Weapons                             Range        A       BS       S     AP        D        Keywords
+   Avenger gatling cannon                     36"          18      3+       6     -2        2
+   Heavy flamer                               12"          D6      N/A      5     -1        1        Ignores Cover, Torrent
+   Stormspear rocket pod                      48"          3       3+       8     -2        D6
+   Meltagun                                   12"          1       3+       9     -4        D6       Melta 2
+   Melee Weapons                                                Range        A         WS        S       AP      D   Keywords
+   ➤ Reaper chainsword - strike                                 Melee        4         3+        14      -4      6
+   ➤ Reaper chainsword - sweep                                  Melee        12        3+        9        -3     2
+   Abilities                   Description
+                               Each time this model makes a ranged attack that targets an enemy unit (excluding
+   Thin Their Ranks
+                               Monsters and Vehicles), that attack has the [DEVASTATING WOUNDS] ability.
+   Invulnerable Save
+                               This model has a 5+ invulnerable save against ranged attacks.
+   (5+*)
+                               While this model has 1-9 wounds remaining, subtract 5 from this model's Objective
+   Damaged: 1-9
+                               Control characteristic and each time this model makes an attack, subtract 1 from the Hit
+   Wounds Remaining
+                               roll.
+   Abilities               Description
+                           While a model is affected by this ability, weapons equipped by that model have the
+   Warden's Duty
+                           [SUSTAINED HITS 1] ability, and ranged weapons equipped by that model have the
+   (Bondsman)
+                           [IGNORES COVER] ability.
+    Rules Deadly Demise D6, Super-Heavy Walker, Code Chivalric, Devastating Wounds, Bondsman, Ignores Cover,
+          Sustained Hits, Torrent, Melta
+    Categories Character, Faction: Imperial Knights, Imperium, Knight Warden, Questoris, Titanic, Towering, Vehicle,
+               Walker, Warlord
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6abc2099b0640c9391dac3d5                                                                    5/8
+10/20/26, 11:37 PM                                             6 bigs - New Recruit
+
+
+  Rules
+  Army Roster (Imperium - Imperial Knights)
+    Code Chivalric
+    If your Army Faction is Imperial Knights, at the end of the Read Mission Objectives step, you must determine
+    your army's Oath for the coming battle. An Oath consists of two parts - one Deed and one Quality. There are
+    three options for each part.
+    To determine your army's Deed, you can either select one Deed or you can randomly select one Deed by rolling
+    a D6 and consulting the relevant table. The selected Deed will describe what needs to be achieved in order to
+    complete that Deed.
+    To determine your army's Quality, you can either select one Quality or you can randomly select one Quality by
+    rolling a D6 and consulting the relevant table. Until the end of the battle, the ability described in the Quality
+    selected applies to all models in your army with this ability.
+    The first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army
+    becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in
+    this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle
+    round to 1).
+
+  Assault:
+  Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
+
+  Blast:
+  Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models
+  that were in the target unit in the Select Targets step (rounding down). If this ability takes the form [BLAST X],
+  each time you gather attack dice for such a weapon, add X additional attack dice for every five models that
+  were in the target unit in the Select Targets step (rounding down) instead.
+  Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would
+  gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+  Bondsman:
+  Some Imperial Knights models have a Bondsman ability, tagged with the word ‘Bondsman’. In your Command
+  phase, one or more models from your army with a Bondsman ability can use that ability. For each one that does,
+  select one friendly Armiger model within 12" of that model (you cannot select an Armiger model that is already
+  being affected by a Bondsman ability). Until the start of your next Command phase, that Armiger model is
+  affected by that Bondsman ability.
+
+  Code Chivalric:
+  If your Army Faction is Imperial Knights, at the end of the Read Mission Objectives step, you must determine
+  your army's Oath for the coming battle. An Oath consists of two parts - one Deed and one Quality. There are
+  three options for each part.
+  To determine your army's Deed, you can either select one Deed or you can randomly select one Deed by rolling a
+  D6 and consulting the relevant table. The selected Deed will describe what needs to be achieved in order to
+  complete that Deed.
+  To determine your army's Quality, you can either select one Quality or you can randomly select one Quality by
+  rolling a D6 and consulting the relevant table. Until the end of the battle, the ability described in the Quality
+  selected applies to all models in your army with this ability.
+  The first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army
+  becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in
+  this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round
+  to 1).
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6abc2099b0640c9391dac3d5                                                            6/8
+10/20/26, 11:37 PM                                             6 bigs - New Recruit
+
+  Deadly Demise D6:
+  This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the
+  units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that
+  model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds
+  denoted by X (if this is a random number, roll separately for each unit within 6").
+  Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any
+  unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency
+  disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved.
+  Finally, the Impulsor is removed from the battlefield.
+
+  Devastating Wounds:
+  Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack
+  sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D
+  characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+  Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for
+  each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+  Example: An attack made with a [DEVASTATING WOUNDS] weapon with a D characteristic of 3 results in a
+  critical wound against an Intercessor Squad, so inflicts 3 mortal wounds. The first 2 mortal wounds are
+  sufficient to destroy 1 Intercessor model, so the remaining mortal wound is lost.
+
+  Feel No Pain 6+:
+  This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll
+  one D6: on an X+, that wound is not lost.
+
+  Ignores Cover:
+  Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover
+  against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+  Knights of Legend:
+  Imperial Knights models from your army have the Feel No Pain 6+ ability. In addition, at the start of your
+  Command phase, each Imperial Knights model from your army regains 1 lost wound.
+
+  Lance:
+  Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this
+  turn, add 1 to the wound roll.
+
+  Lethal Hits:
+  Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that
+  attack to automatically wound the target.
+  Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that
+  attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot
+  trigger other abilities such as [DEVASTATING WOUNDS].
+
+  Melta:
+  This ability always takes the form [MELTA X]. Each time a model makes an attack with a [MELTA] weapon, if
+  the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks
+  have been resolved, add X to that weapon’s D characteristic.
+  Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6.
+  While resolving those attacks, that weapon has a D characteristic of D6+2.
+
+  Rapid Fire:
+  This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE]
+  weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select
+  Targets step.
+  Example: If a [RAPID FIRE 1] weapon with an A characteristic of 1 targets a unit that is within half range,
+  you would gather one additional attack dice for that weapon (for a total of two for that weapon).
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6abc2099b0640c9391dac3d5                                                         7/8
+10/20/26, 11:37 PM                                             6 bigs - New Recruit
+
+  Super-Heavy Walker:
+  Each time a unit with this ability makes a normal, advance or fall-back move:
+   Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding
+    TITANIC models) and can move horizontally through sections of terrain features that are 4" or less in
+    height.
+   Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move
+    ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked.
+    Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to
+    move horizontally through dense terrain features (13.06).
+
+  Sustained Hits:
+  This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED
+  HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as
+  denoted by X.
+  Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore
+  hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability).
+
+  Torrent:
+  Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6abc2099b0640c9391dac3d5                                                      8/8
+

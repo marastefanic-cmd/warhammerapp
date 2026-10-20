@@ -1,0 +1,620 @@
+[
+  {
+    "army": "princes",
+    "kind": "ability-timing",
+    "where": "princes · Lord on Juggernaut · Blood Surge",
+    "judgement": {
+      "ph": [
+        "shooting"
+      ],
+      "turn": "opp"
+    },
+    "source": {
+      "ability": "Blood Surge",
+      "text": "In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was **destroyed** as a result of those attacks, this unit can make a **surge move** of up to D6+2\"."
+    },
+    "key": "0bcff83e83b9f9f6"
+  },
+  {
+    "army": "princes",
+    "kind": "ability-who",
+    "where": "princes · Khârn the Betrayer · Blood Surge",
+    "judgement": {
+      "who": "Khorne Berzerkers",
+      "models": [
+        "1× Khârn the Betrayer",
+        "1× Khorne Berzerker Champion",
+        "7× Khorne Berzerker",
+        "2× Khorne Berzerker w/ eviscerator and plasma pistol"
+      ]
+    },
+    "source": {
+      "ability": "Blood Surge",
+      "text": "In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was **destroyed** as a result of those attacks, this unit can make a **surge move** of up to D6+2\"."
+    },
+    "key": "3ae6ad2c0b3746b6"
+  },
+  {
+    "army": "princes",
+    "kind": "ability-timing",
+    "where": "princes · Lord on Juggernaut · Murderous Charge",
+    "judgement": {
+      "ph": [
+        "fight"
+      ],
+      "turn": "either"
+    },
+    "source": {
+      "ability": "Murderous Charge",
+      "text": "If this unit made a **charge move** this turn, this unit’s melee attacks have +1 **S**."
+    },
+    "key": "5e7faa7e920ddea5"
+  },
+  {
+    "army": "princes",
+    "kind": "ability-who",
+    "where": "princes · Khârn the Betrayer · Murderous Charge",
+    "judgement": {
+      "who": "Khorne Berzerkers",
+      "models": [
+        "1× Khârn the Betrayer",
+        "1× Khorne Berzerker Champion",
+        "7× Khorne Berzerker",
+        "2× Khorne Berzerker w/ eviscerator and plasma pistol"
+      ]
+    },
+    "source": {
+      "ability": "Murderous Charge",
+      "text": "If this unit made a **charge move** this turn, this unit’s melee attacks have +1 **S**."
+    },
+    "key": "171e3a9a849bb417"
+  },
+  {
+    "army": "princes",
+    "kind": "ability-who",
+    "where": "princes · Khârn the Betrayer · Icon of Khorne",
+    "judgement": {
+      "who": "Khorne Berzerkers",
+      "models": [
+        "1× Khârn the Betrayer",
+        "1× Khorne Berzerker Champion",
+        "7× Khorne Berzerker",
+        "2× Khorne Berzerker w/ eviscerator and plasma pistol"
+      ]
+    },
+    "source": {
+      "ability": "Icon of Khorne",
+      "text": "If the bearer’s unit contains 1 or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain one Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost."
+    },
+    "key": "79e09659b49bf6e1"
+  },
+  {
+    "army": "princes",
+    "kind": "unit-footnote",
+    "where": "princes · Lord on Juggernaut",
+    "judgement": {
+      "kind": "melee",
+      "when": "Made a charge move this turn",
+      "note": "+1 S",
+      "from": "Murderous Charge"
+    },
+    "source": {
+      "ability": "Murderous Charge",
+      "text": "If this unit made a **charge move** this turn, this unit’s melee attacks have +1 **S**."
+    },
+    "key": "76fc934001fab42f"
+  },
+  {
+    "army": "princes",
+    "kind": "unit-kwNote",
+    "where": "princes · Khârn the Betrayer",
+    "judgement": {
+      "kwNote": "Battleline, Berzerkers come from the led Khorne Berzerkers."
+    },
+    "source": {
+      "models": [
+        "1× Khârn the Betrayer",
+        "1× Khorne Berzerker Champion",
+        "7× Khorne Berzerker",
+        "2× Khorne Berzerker w/ eviscerator and plasma pistol"
+      ],
+      "stats": [
+        "Khârn the Betrayer W5 OC1",
+        "Khorne Berzerker ×10 W2 OC2"
+      ],
+      "weapons": [
+        "Plasma pistol standard 1 -2 1 PISTOL",
+        "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
+        "Plasma pistol standard 1 -2 1 PISTOL",
+        "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
+        "Bolt pistol 1 -1 1 PISTOL",
+        "Gorechild 9 -2 3",
+        "Chainblade 5 -1 1",
+        "Khornate eviscerator 4 -2 2"
+      ]
+    },
+    "key": "9a703450fd9425d4"
+  },
+  {
+    "army": "princes",
+    "kind": "ability-tag",
+    "where": "princes · Daemon Prince of Khorne · Helm of Brazen Ire",
+    "judgement": {
+      "tag": "Enhancement"
+    },
+    "source": {
+      "ability": "Helm of Brazen Ire",
+      "text": "Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack."
+    },
+    "key": "359be3753613295e"
+  },
+  {
+    "army": "princes",
+    "kind": "ability-tag",
+    "where": "princes · Daemon Prince of Khorne · Berzerker Glaive",
+    "judgement": {
+      "tag": "Enhancement"
+    },
+    "source": {
+      "ability": "Berzerker Glaive",
+      "text": "Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer."
+    },
+    "key": "54394fe17894779f"
+  },
+  {
+    "army": "princes",
+    "kind": "ability-who",
+    "where": "princes · Lord on Juggernaut · Aggressive Advance",
+    "judgement": {
+      "who": "Lord on Juggernaut",
+      "models": [
+        "1× Lord on Juggernaut",
+        "1× Khorne Berzerker Champion",
+        "15× Khorne Berzerker",
+        "3× Khorne Berzerker w/ eviscerator and plasma pistol",
+        "1× Khorne Berzerker w/ eviscerator and plasma pistol (Icon of Khorne)"
+      ]
+    },
+    "source": {
+      "ability": "Aggressive Advance",
+      "text": "While this model is leading a unit, models in that unit have a Move characteristic of 10\" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally though terrain features."
+    },
+    "key": "f042e517bddefff9"
+  },
+  {
+    "army": "princes",
+    "kind": "ability-timing",
+    "where": "princes · Lord on Juggernaut · Crush All Who Stand Before Us",
+    "judgement": {
+      "ph": [
+        "fight"
+      ],
+      "turn": "either"
+    },
+    "source": {
+      "ability": "Crush All Who Stand Before Us",
+      "text": "Each time this model’s unit is selected to fight, you can use this ability. When determining which models in this unit are eligible to fight, any models in it that are within 3\" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3\" of them and within **Engagement Range** of their unit."
+    },
+    "key": "86e3a5ca19126b2d"
+  },
+  {
+    "army": "princes",
+    "kind": "ability-who",
+    "where": "princes · Lord on Juggernaut · Crush All Who Stand Before Us",
+    "judgement": {
+      "who": "Lord on Juggernaut",
+      "models": [
+        "1× Lord on Juggernaut",
+        "1× Khorne Berzerker Champion",
+        "15× Khorne Berzerker",
+        "3× Khorne Berzerker w/ eviscerator and plasma pistol",
+        "1× Khorne Berzerker w/ eviscerator and plasma pistol (Icon of Khorne)"
+      ]
+    },
+    "source": {
+      "ability": "Crush All Who Stand Before Us",
+      "text": "Each time this model’s unit is selected to fight, you can use this ability. When determining which models in this unit are eligible to fight, any models in it that are within 3\" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3\" of them and within **Engagement Range** of their unit."
+    },
+    "key": "3e9d24c2fffce861"
+  },
+  {
+    "army": "princes",
+    "kind": "ability-tag",
+    "where": "princes · Lord on Juggernaut · Archslaughterer",
+    "judgement": {
+      "tag": "Enhancement"
+    },
+    "source": {
+      "ability": "Archslaughterer",
+      "text": "(Once per battle, per army) In your Command phase, you can use this ability. If you do, every **Blessing of Khorne** is active for this unit until the start of your next turn."
+    },
+    "key": "5f9ffa75dc94e5fa"
+  },
+  {
+    "army": "princes",
+    "kind": "ability-who",
+    "where": "princes · Lord on Juggernaut · Archslaughterer",
+    "judgement": {
+      "who": "Lord on Juggernaut",
+      "models": [
+        "1× Lord on Juggernaut",
+        "1× Khorne Berzerker Champion",
+        "15× Khorne Berzerker",
+        "3× Khorne Berzerker w/ eviscerator and plasma pistol",
+        "1× Khorne Berzerker w/ eviscerator and plasma pistol (Icon of Khorne)"
+      ]
+    },
+    "source": {
+      "ability": "Archslaughterer",
+      "text": "(Once per battle, per army) In your Command phase, you can use this ability. If you do, every **Blessing of Khorne** is active for this unit until the start of your next turn."
+    },
+    "key": "73ce88d52f1d0a90"
+  },
+  {
+    "army": "princes",
+    "kind": "ability-who",
+    "where": "princes · Lord on Juggernaut · Blood Surge",
+    "judgement": {
+      "who": "Khorne Berzerkers",
+      "models": [
+        "1× Lord on Juggernaut",
+        "1× Khorne Berzerker Champion",
+        "15× Khorne Berzerker",
+        "3× Khorne Berzerker w/ eviscerator and plasma pistol",
+        "1× Khorne Berzerker w/ eviscerator and plasma pistol (Icon of Khorne)"
+      ]
+    },
+    "source": {
+      "ability": "Blood Surge",
+      "text": "In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was **destroyed** as a result of those attacks, this unit can make a **surge move** of up to D6+2\"."
+    },
+    "key": "d02fa8e3f385b916"
+  },
+  {
+    "army": "princes",
+    "kind": "ability-who",
+    "where": "princes · Lord on Juggernaut · Murderous Charge",
+    "judgement": {
+      "who": "Khorne Berzerkers",
+      "models": [
+        "1× Lord on Juggernaut",
+        "1× Khorne Berzerker Champion",
+        "15× Khorne Berzerker",
+        "3× Khorne Berzerker w/ eviscerator and plasma pistol",
+        "1× Khorne Berzerker w/ eviscerator and plasma pistol (Icon of Khorne)"
+      ]
+    },
+    "source": {
+      "ability": "Murderous Charge",
+      "text": "If this unit made a **charge move** this turn, this unit’s melee attacks have +1 **S**."
+    },
+    "key": "1bd0213fd7839299"
+  },
+  {
+    "army": "princes",
+    "kind": "ability-who",
+    "where": "princes · Lord on Juggernaut · Icon of Khorne",
+    "judgement": {
+      "who": "Khorne Berzerkers",
+      "models": [
+        "1× Lord on Juggernaut",
+        "1× Khorne Berzerker Champion",
+        "15× Khorne Berzerker",
+        "3× Khorne Berzerker w/ eviscerator and plasma pistol",
+        "1× Khorne Berzerker w/ eviscerator and plasma pistol (Icon of Khorne)"
+      ]
+    },
+    "source": {
+      "ability": "Icon of Khorne",
+      "text": "If the bearer’s unit contains 1 or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain one Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost."
+    },
+    "key": "453bc6f7bd2b2c29"
+  },
+  {
+    "army": "princes",
+    "kind": "unit-kwNote",
+    "where": "princes · Lord on Juggernaut",
+    "judgement": {
+      "kwNote": "Battleline, Berzerkers, Grenades, Infantry come from the led Khorne Berzerkers."
+    },
+    "source": {
+      "models": [
+        "1× Lord on Juggernaut",
+        "1× Khorne Berzerker Champion",
+        "15× Khorne Berzerker",
+        "3× Khorne Berzerker w/ eviscerator and plasma pistol",
+        "1× Khorne Berzerker w/ eviscerator and plasma pistol (Icon of Khorne)"
+      ],
+      "stats": [
+        "Lord on Juggernaut W7 OC2",
+        "Khorne Berzerker ×20 W2 OC2"
+      ],
+      "weapons": [
+        "Plasma pistol standard 1 -2 1 PISTOL",
+        "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
+        "Plasma pistol standard 1 -2 1 PISTOL",
+        "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
+        "Bolt pistol 1 -1 1 PISTOL",
+        "Bladed horn 5 -1 2 EXTRA ATTACKS, LANCE",
+        "Exalted chainblade 8 -1 2",
+        "Chainblade 5 -1 1",
+        "Khornate eviscerator 4 -2 2"
+      ]
+    },
+    "key": "a852b235d09609e6"
+  },
+  {
+    "army": "princes",
+    "kind": "ability-timing",
+    "where": "princes · Slaughterbound · Rage Eternal",
+    "judgement": {
+      "ph": [
+        "command"
+      ],
+      "turn": "your"
+    },
+    "source": {
+      "ability": "Rage Eternal",
+      "text": "While this model is leading a unit, in your Command phase, you can return one destroyed **Bodyguard** model to that unit."
+    },
+    "key": "b021ae45ca3acbf6"
+  },
+  {
+    "army": "princes",
+    "kind": "ability-who",
+    "where": "princes · Slaughterbound · Rage Eternal",
+    "judgement": {
+      "who": "Slaughterbound",
+      "models": [
+        "1× Slaughterbound",
+        "1× Exalted Eightbound Champion",
+        "2× Exalted Eightbound"
+      ]
+    },
+    "source": {
+      "ability": "Rage Eternal",
+      "text": "While this model is leading a unit, in your Command phase, you can return one destroyed **Bodyguard** model to that unit."
+    },
+    "key": "ba8a8849412f948a"
+  },
+  {
+    "army": "princes",
+    "kind": "ability-who",
+    "where": "princes · Slaughterbound · Possessed Lord",
+    "judgement": {
+      "who": "Slaughterbound",
+      "models": [
+        "1× Slaughterbound",
+        "1× Exalted Eightbound Champion",
+        "2× Exalted Eightbound"
+      ]
+    },
+    "source": {
+      "ability": "Possessed Lord",
+      "text": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the **[DEVASTATING WOUNDS]** ability."
+    },
+    "key": "f9d6b156530265be"
+  },
+  {
+    "army": "princes",
+    "kind": "ability-who",
+    "where": "princes · Slaughterbound · Lord of the Eightbound",
+    "judgement": {
+      "who": "Slaughterbound",
+      "models": [
+        "1× Slaughterbound",
+        "1× Exalted Eightbound Champion",
+        "2× Exalted Eightbound"
+      ]
+    },
+    "source": {
+      "ability": "Lord of the Eightbound",
+      "text": "If this model is attached to a World Eaters Possessed unit during the Declare Battle Formations step, this model has the Deep Strike and Scouts 6\" abilities."
+    },
+    "key": "5be4cc82f24ea08c"
+  },
+  {
+    "army": "princes",
+    "kind": "ability-tag",
+    "where": "princes · Slaughterbound · Battle-lust",
+    "judgement": {
+      "tag": "Enhancement"
+    },
+    "source": {
+      "ability": "Battle-lust",
+      "text": "You can re-roll **Charge rolls** made for the bearer’s unit. In addition, while the Unbridled Bloodlust Blessing of Khorne is active for your army, add 1 to Charge rolls made for the bearer’s unit."
+    },
+    "key": "0347b8fc5af8c9e7"
+  },
+  {
+    "army": "princes",
+    "kind": "ability-who",
+    "where": "princes · Slaughterbound · Battle-lust",
+    "judgement": {
+      "who": "Slaughterbound",
+      "models": [
+        "1× Slaughterbound",
+        "1× Exalted Eightbound Champion",
+        "2× Exalted Eightbound"
+      ]
+    },
+    "source": {
+      "ability": "Battle-lust",
+      "text": "You can re-roll **Charge rolls** made for the bearer’s unit. In addition, while the Unbridled Bloodlust Blessing of Khorne is active for your army, add 1 to Charge rolls made for the bearer’s unit."
+    },
+    "key": "6ee0082ed921e1c6"
+  },
+  {
+    "army": "princes",
+    "kind": "unit-kwNote",
+    "where": "princes · Slaughterbound",
+    "judgement": {
+      "kwNote": "Exalted Eightbound comes from the led Exalted Eightbound."
+    },
+    "source": {
+      "models": [
+        "1× Slaughterbound",
+        "1× Exalted Eightbound Champion",
+        "2× Exalted Eightbound"
+      ],
+      "stats": [
+        "Slaughterbound W6 OC1",
+        "Exalted Eightbound W3 OC1"
+      ],
+      "weapons": [
+        "Lacerator and daemonic claw 7 -2 2",
+        "Chainblades 5 -3 2 ANTI-MONSTER 3+, ANTI-VEHICLE 3+"
+      ]
+    },
+    "key": "cd32b3d2ea1ecc87"
+  },
+  {
+    "army": "princes",
+    "kind": "unit-ptsNote",
+    "where": "princes · Slaughterbound",
+    "judgement": {
+      "ptsNote": "110 + Exalted Eightbound 130"
+    },
+    "source": {
+      "models": [
+        "1× Slaughterbound",
+        "1× Exalted Eightbound Champion",
+        "2× Exalted Eightbound"
+      ],
+      "stats": [
+        "Slaughterbound W6 OC1",
+        "Exalted Eightbound W3 OC1"
+      ],
+      "weapons": [
+        "Lacerator and daemonic claw 7 -2 2",
+        "Chainblades 5 -3 2 ANTI-MONSTER 3+, ANTI-VEHICLE 3+"
+      ]
+    },
+    "key": "ccc8053e9c01d5a3"
+  },
+  {
+    "army": "princes",
+    "kind": "ability-timing",
+    "where": "princes · Chaos Rhino · Meet Any Challenge",
+    "judgement": {
+      "ph": [
+        "movement"
+      ],
+      "turn": "opp"
+    },
+    "source": {
+      "ability": "Meet Any Challenge",
+      "text": "In your opponent’s Movement phase, each time an enemy unit is set up or ends a **Normal**, **Advance** or **Fall Back move** within 8\" of this model, any units embarked within it can disembark."
+    },
+    "key": "b32d27ddcb6efce8"
+  },
+  {
+    "army": "princes",
+    "kind": "ability-who",
+    "where": "princes · Chaos Rhino · Chaos Rhino",
+    "judgement": {
+      "who": "Transport",
+      "models": [
+        "1× Chaos Rhino"
+      ]
+    },
+    "source": {
+      "ability": "Chaos Rhino",
+      "text": "This model has a **transport capacity** of 12 **WORLD EATERS INFANTRY** models. It cannot transport **POSSESSED** or **TERMINATOR** models."
+    },
+    "key": "6cd53d6e4e83e99b"
+  },
+  {
+    "army": "princes",
+    "kind": "ability-tag",
+    "where": "princes · Eightbound · Beacons of Rage",
+    "judgement": {
+      "tag": "Aura"
+    },
+    "source": {
+      "ability": "Beacons of Rage",
+      "text": "While a friendly World Eaters unit is within 6\" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding Monsters and Vehicles), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well."
+    },
+    "key": "135505f0858b69d8"
+  },
+  {
+    "army": "princes",
+    "kind": "ability-timing",
+    "where": "princes · Forgefiend · Furious Onslaught",
+    "judgement": {
+      "ph": [
+        "movement",
+        "shooting"
+      ],
+      "turn": "either",
+      "turns": {
+        "movement": "opp",
+        "shooting": "your"
+      }
+    },
+    "source": {
+      "ability": "Furious Onslaught",
+      "text": "Each time this model makes a ranged attack that targets the closest eligible target within 18\", you can re-roll the **Hit roll**."
+    },
+    "key": "5ae39c5719e87d62"
+  },
+  {
+    "army": "princes",
+    "kind": "unit-footnote",
+    "where": "princes · Forgefiend",
+    "judgement": {
+      "kind": "ranged",
+      "when": "Target is the closest eligible target within 18\"",
+      "note": "re-roll the hit roll",
+      "from": "Furious Onslaught"
+    },
+    "source": {
+      "ability": "Furious Onslaught",
+      "text": "Each time this model makes a ranged attack that targets the closest eligible target within 18\", you can re-roll the **Hit roll**."
+    },
+    "key": "8a3945e9e37549d5"
+  },
+  {
+    "army": "princes",
+    "kind": "unit-footnote",
+    "where": "princes · Forgefiend",
+    "judgement": {
+      "kind": "all",
+      "when": "Damaged (1-4 wounds left)",
+      "note": "-1 to hit rolls",
+      "from": "Damaged: 1-4 wounds remaining"
+    },
+    "source": {
+      "ability": "Damaged: 1-4 wounds remaining",
+      "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**."
+    },
+    "key": "1de9e2289afddf58"
+  },
+  {
+    "army": "princes",
+    "kind": "unit-weapons",
+    "where": "princes · Forgefiend",
+    "judgement": {
+      "gear": [
+        [
+          "Hades autocannon",
+          "Hades autocannon",
+          "Ectoplasma cannon",
+          "Forgefiend claws"
+        ]
+      ],
+      "weapons": [
+        "×2 · Hades autocannon",
+        "Ectoplasma cannon",
+        "Forgefiend claws"
+      ]
+    },
+    "source": {
+      "models": [
+        "1× Forgefiend"
+      ],
+      "leads": null
+    },
+    "key": "d2c1573c6630c1c1"
+  }
+]

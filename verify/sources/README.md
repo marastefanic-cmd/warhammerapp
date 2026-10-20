@@ -7,6 +7,12 @@ Everything the app states as a fact is checked against these, mechanically, befo
 |---|---|---|
 | nr/shooty.txt | Me shooty yer booty - New Recruit.pdf | 4c0e5befd172eeb489137b8e7efa4e4d3f5041a0111eacec7e7a5e0ed10e4781 |
 | nr/melee.txt | Melee - New Recruit.pdf (exported 20 Oct 2026) | 689e9cdeb600f2dfa65c3d7bc2384868023ff433a76bc80fddb09bec2b322e2b |
+| nr/princes.txt | Princes - New Recruit.pdf (exported 10/20/26) | 4eba3b82e8394b6399aab4f52181adea6f7ee65dd65822760337e09e8a82da01 |
+| nr/standard.txt | Standard - New Recruit.pdf (exported 10/20/26) | 2d8e076d90a5b88ef273f8c3aa2f193558c06e6389c9543d675d68de177db682 |
+| nr/pubstomper.txt | Pubstomper - New Recruit.pdf (exported 10/20/26) | 3de4409a006dcbf661a5ba35a347ca6096653c74dcfd52945bf753afbd0e7bea |
+| nr/nidzillas.txt | Nidzillas - New Recruit.pdf (exported 10/20/26) | ad75f4a9330b068a61ffbf91be435a4dfb147407644d4905a78d662f21096a90 |
+| nr/6-bigs.txt | 6 bigs - New Recruit.pdf (exported 10/20/26) | f96e523666f068900c1f8325e1aabf6e98a4c16c0da338345f997e368566b77b |
+| nr/4-megas-and-a-destrier.txt | 4 megas and a destrier - New Recruit.pdf (exported 10/20/26) | 1a924485e7e0448c6d299eb983a9d6ed0dfbbebdee695a119e374ca57b7a3cf3 |
 | packet/core-stratagems.txt | Core_stratagemy.pdf | d62979edcfd0323c1d3382a6d238f0f87b312fb07f103125ecbccdb6bd96e5a8 |
 
 Text made with `pdftotext -layout <pdf> <txt>` (poppler).
