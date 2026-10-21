@@ -128,6 +128,32 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
             out.push(['all-attacks-block', u.id, m.from + ': ' + m.note]);
         }
       }
+      // the damage calculator, for every unit of this list as the attacker (every rule ticked) and as the target:
+      // - the target has as many models as the unit (dmModels)
+      // - an InSv marked * (against ranged attacks) is not used against melee attacks
+      // - a value New Recruit already includes (a weapon's `from`) is never added again by the same rule
+      // - a rule for one weapon or one model of an attached unit reaches only that weapon or model
+      const foe = A.units[0];
+      for(const u of A.units){
+        for(const kind of ['ranged', 'melee']){
+          const rows = dmModels(u, kind);
+          if(rows.reduce((t, r) => t + r.count, 0) !== modelCount(u)) out.push(['damage-models', u.id, kind + ': ' + rows.reduce((t, r) => t + r.count, 0) + ' models, the unit has ' + modelCount(u)]);
+          if(kind === 'melee' && rows.some(r => r.star && r.InSv < 7)) out.push(['damage-insv', u.id, 'an InSv marked * (ranged attacks) is used against melee attacks']);
+          if(!(u[kind] || []).length) continue;
+          const st = { dir:'me', ph:kind === 'ranged' ? 'shooting' : 'fight', off:{}, pick:{}, on:{}, man:{}, val:{}, dist:null };
+          for(const r of dmCalc(st, A, A, u, foe, kind).rules) st.on[r.k] = true;
+          for(const it of weaponItems(u[kind])) st.off[kind + ':' + itemName(it) + '|' + (it.who || '')] = false;
+          const c = dmCalc(st, A, A, u, foe, kind);
+          c.input.groups.forEach((g, i) => {
+            const w = c.gOf[i].w, it = c.gOf[i].it;
+            if(g.from !== w.from) out.push(['damage-bonus-twice', u.id, g.name + ': the weapon’s pre-applied values are not passed to the calculator']);
+            for(const x of c.R.groups[i].applied) if([].concat((w.from || {})[x.key] || []).includes(x.from)) out.push(['damage-bonus-twice', u.id, g.name + ': ' + x.key + ' from ' + x.from + ' added again']);
+            for(const m of g.mods){ const r = c.rules.find(x => x.on && x.m.from === m.from); if(!r) continue;
+              if(r.m.weapon && r.m.weapon !== itemName(it)) out.push(['damage-mod-scope', u.id, m.from + ' (for ' + r.m.weapon + ') reaches ' + g.name]);
+              if(r.m.who && r.m.who !== (it.who || '')) out.push(['damage-mod-scope', u.id, m.from + ' (for ' + r.m.who + ') reaches ' + g.name]); }
+          });
+        }
+      }
       // Bases: every model of every unit gets a base line
       go({ s:'bases', army:armyId });
       const cards = [...document.querySelectorAll('.px')];
