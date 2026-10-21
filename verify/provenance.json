@@ -71,7 +71,7 @@
    "id": "wahahtml:orks",
    "label": "Wahapedia orks",
    "file": "verify/.cache/waha/orks.html",
-   "sha256": "3d97dfd14d0a29449ea6e9fd43820a3d94e9e25c3b8224347b70081f20350016"
+   "sha256": "0f3329b22152ba4e05488c9dde44efd3d63a15c345f0af581b981c7eaa3301dd"
   },
   {
    "id": "wahahtml:imperial-knights",
@@ -117,7 +117,7 @@
    "text": "**MAXIMUM DISTANCE:** Pulse roll + 18\"",
    "doc": "wahahtml:orks",
    "where": "Wahapedia orks § Special Move Types",
-   "sha256": "3d97dfd14d0a29449ea6e9fd43820a3d94e9e25c3b8224347b70081f20350016"
+   "sha256": "0f3329b22152ba4e05488c9dde44efd3d63a15c345f0af581b981c7eaa3301dd"
   },
   {
    "item": "core / rule:Pulse Jet Move / text",
@@ -125,7 +125,7 @@
    "text": "**ELIGIBLE IF:** As stated in the rule allowing this move type.",
    "doc": "wahahtml:orks",
    "where": "Wahapedia orks § Special Move Types",
-   "sha256": "3d97dfd14d0a29449ea6e9fd43820a3d94e9e25c3b8224347b70081f20350016"
+   "sha256": "0f3329b22152ba4e05488c9dde44efd3d63a15c345f0af581b981c7eaa3301dd"
   },
   {
    "item": "core / rule:Pulse Jet Move / text",
@@ -133,7 +133,7 @@
    "text": "**EFFECT:** Your unit moves as described in Moving (Core Rules, 03).",
    "doc": "wahahtml:orks",
    "where": "Wahapedia orks § Special Move Types",
-   "sha256": "3d97dfd14d0a29449ea6e9fd43820a3d94e9e25c3b8224347b70081f20350016"
+   "sha256": "0f3329b22152ba4e05488c9dde44efd3d63a15c345f0af581b981c7eaa3301dd"
   },
   {
    "item": "core / rule:Pulse Jet Move / text",
@@ -149,7 +149,7 @@
    "text": "- Make a **pulse roll** by rolling one D6.",
    "doc": "wahahtml:orks",
    "where": "Wahapedia orks § Special Move Types",
-   "sha256": "3d97dfd14d0a29449ea6e9fd43820a3d94e9e25c3b8224347b70081f20350016"
+   "sha256": "0f3329b22152ba4e05488c9dde44efd3d63a15c345f0af581b981c7eaa3301dd"
   },
   {
    "item": "core / rule:Pulse Jet Move / text",
@@ -165,7 +165,7 @@
    "text": "- Ignore all vertical distance for the purposes of how far your unit has moved.",
    "doc": "wahahtml:orks",
    "where": "Wahapedia orks § Special Move Types",
-   "sha256": "3d97dfd14d0a29449ea6e9fd43820a3d94e9e25c3b8224347b70081f20350016"
+   "sha256": "0f3329b22152ba4e05488c9dde44efd3d63a15c345f0af581b981c7eaa3301dd"
   },
   {
    "item": "core / rule:Pulse Jet Move / text",
@@ -173,7 +173,7 @@
    "text": "- Your unit can move through all types of model.",
    "doc": "wahahtml:orks",
    "where": "Wahapedia orks § Special Move Types",
-   "sha256": "3d97dfd14d0a29449ea6e9fd43820a3d94e9e25c3b8224347b70081f20350016"
+   "sha256": "0f3329b22152ba4e05488c9dde44efd3d63a15c345f0af581b981c7eaa3301dd"
   },
   {
    "item": "core / rule:Pulse Jet Move / text",
@@ -181,7 +181,7 @@
    "text": "- Your unit can move horizontally and vertically through all categories of terra",
    "doc": "wahahtml:orks",
    "where": "Wahapedia orks § Special Move Types",
-   "sha256": "3d97dfd14d0a29449ea6e9fd43820a3d94e9e25c3b8224347b70081f20350016"
+   "sha256": "0f3329b22152ba4e05488c9dde44efd3d63a15c345f0af581b981c7eaa3301dd"
   },
   {
    "item": "core / rule:Pulse Jet Move / text",
@@ -205,7 +205,7 @@
    "text": "- Until the end of the turn, your unit is not eligible to declare a charge or st",
    "doc": "wahahtml:orks",
    "where": "Wahapedia orks § Special Move Types",
-   "sha256": "3d97dfd14d0a29449ea6e9fd43820a3d94e9e25c3b8224347b70081f20350016"
+   "sha256": "0f3329b22152ba4e05488c9dde44efd3d63a15c345f0af581b981c7eaa3301dd"
   },
   {
    "item": "core / rule:Pulse Jet Move / text",
@@ -213,7 +213,7 @@
    "text": "- Until the start of your next turn, attacks that target your unit have -1 to hi",
    "doc": "wahahtml:orks",
    "where": "Wahapedia orks § Special Move Types",
-   "sha256": "3d97dfd14d0a29449ea6e9fd43820a3d94e9e25c3b8224347b70081f20350016"
+   "sha256": "0f3329b22152ba4e05488c9dde44efd3d63a15c345f0af581b981c7eaa3301dd"
   },
   {
    "item": "core / rule:Supa-hazardous / text",
@@ -221,7 +221,7 @@
    "text": "Each time a unit is **selected to shoot**, after that unit has resolved all of i",
    "doc": "wahahtml:orks",
    "where": "Wahapedia orks § Enhancements",
-   "sha256": "3d97dfd14d0a29449ea6e9fd43820a3d94e9e25c3b8224347b70081f20350016"
+   "sha256": "0f3329b22152ba4e05488c9dde44efd3d63a15c345f0af581b981c7eaa3301dd"
   },
   {
    "item": "core / rule:Assault / text",

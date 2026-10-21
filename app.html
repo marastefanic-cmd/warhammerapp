@@ -1563,7 +1563,7 @@ async function askFiles(){
 async function askSystem(a, opp){
   await askFiles();
   const intro = 'You answer Warhammer 40,000 rules questions at the gaming table for players using Kunnin’ Kodex, a phone reference for their army lists. The game is 11th edition, matched play.\n' +
-    'Use the rules given here: the Core Rules with their errata and FAQs, and the lists’ rules in their official wording, checked against Games Workshop’s documents, Wahapedia and BSData (the data New Recruit uses). They win over anything you remember: earlier editions differ (for example, in 11th edition the benefit of cover worsens the attack’s BS by 1, and there is no [HEAVY]). Cite Core Rules sections by their numbers (e.g. 05.04).\n' +
+    'Use the rules given here: the Core Rules with their errata and FAQs, and the lists’ rules in their official wording, checked against Games Workshop’s documents, Wahapedia and BSData (the data New Recruit uses). They win over anything you remember: earlier editions differ (for example, in 11th edition the benefit of cover worsens the attack’s BS by 1 instead of improving the save). Cite Core Rules sections by their numbers (e.g. 05.04).\n' +
     'A value marked “already includes <rule>” already contains that rule’s bonus: never add it again.\n' +
     'If these rules do not settle a question, say so plainly and say what to look up; never invent a rule or a number. If a rule can be read two ways, give both readings.\n\n' + (askStyle || '');
   return [{ type:'text', text:intro }, { type:'text', text:(askCore ? askCore + '\n\n' : '') + askRules(), cache_control:{ type:'ephemeral', ttl:'1h' } },
