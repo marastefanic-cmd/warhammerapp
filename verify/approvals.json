@@ -329,6 +329,12 @@
   "at": "2026-10-17",
   "why": "“In your Shooting phase, you can select one friendly ORKS WALKER unit within 3\" of this model. That unit’s attacks can re-roll hit rolls of 1 until the end of the turn.” That covers your Shooting phase and, through “until the end of the turn”, your Fight phase. No core rule gives attacks in the Charge phase. The other bullet, “This model has Lone Operative”, is carried by the ability’s own def line (“Lone Operative while within 3\" of a friendly ORKS WALKER unit (not BIG MEK)”), which shows under “When targeted” in their Shooting and Fight phases. The app’s other Lone Operative abilities (Lord of Murder, Da Grand Warlord’s Ladz) also have no phase tag."
  },
+ "0bff2841140fb5a4": {
+  "verdict": "ok",
+  "by": "review:r13-calc-marks",
+  "at": "2026-10-21",
+  "why": "\"(if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead)\": vs all [Psyker, Character] needs both keywords, as the words do, and dmVs now handles all (the Norn Emissary, PSYKER but not CHARACTER, is ruled out). Target keywords only, so always is right; with both boxes on, the calculator keeps the full re-roll over the 1s, which is the \"instead\"."
+ },
  "0c20569e44f49ce2": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -730,6 +736,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "\"Your unit’s melee attacks have +2 S\", when selected to fight."
+ },
+ "1dd70c039f74eaa3": {
+  "verdict": "ok",
+  "by": "review:r13-calc-marks",
+  "at": "2026-10-21",
+  "why": "\"If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well\" (Wahapedia repeats \"(excluding MONSTERS and VEHICLES)\" there): note \"+1 to wound rolls\", calc {wound:1}, vs none Monster/Vehicle. Below Half-strength is the target’s state in the battle, a table condition, so having no always/selfAlways (an unticked box, for other units and its own) is right."
  },
  "1de9e2289afddf58": {
   "verdict": "ok",
@@ -2183,6 +2195,12 @@
   "at": "2026-10-16",
   "why": "KHORNE BERZERKERS: selects Khârn's and the Lord's attached units (an attached unit has all keywords of its component units, Core 19.03); no other unit has it."
  },
+ "53531015294cc21f": {
+  "verdict": "ok",
+  "by": "review:r13-calc-marks",
+  "at": "2026-10-21",
+  "why": "Wahapedia’s Grand Coven rule (pubstomper takes that detachment): \"In your Command phase, you can select one of the abilities listed below … You can only select each of these abilities once per battle.\" A choice, so it is an unticked box with a pick and no always; needs Faction: Thousand Sons (\"THOUSAND SONS models from your army\"). Each pick says what its ability says, limited to [PSYCHIC] weapons: Imbued Manifestation \"Add 6\" to the Range characteristic of ranged Psychic weapons\" = +6\" range (a melee weapon has no range, so it reaches ranged weapons only); Psychic Maelstrom \"add 1 to the Wound roll\" = +1 to wound rolls; Wrath of the Immaterium \"have the [DEVASTATING WOUNDS] ability\"."
+ },
  "5367c60cc057313e": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -2230,6 +2248,12 @@
   "by": "review:r12-calc-marks",
   "at": "2026-10-21",
   "why": "\"This unit’s ranged attacks have: [IGNORES COVER]. If this unit is riled up, [SUSTAINED HITS 1].\" The always mod holds only the unconditional [IGNORES COVER]; the riled-up [SUSTAINED HITS 1] is its own mod (when \"Riled up\", no always), and the leader’s ability covers the Meganobz’ attacks too (19.04)."
+ },
+ "5502238e7af1847a": {
+  "verdict": "ok",
+  "by": "review:r13-calc-marks",
+  "at": "2026-10-21",
+  "why": "\"Aegis Protocol: Add 1 to the Toughness characteristic of KASTELAN ROBOT models in that unit.\" defCalc {t:1, model:'Kastelan Robot'} matches. Without defAlways it is now an unticked box, which fits \"you can select one protocol … it remains in that protocol until it enters a different one\", a choice the player makes."
  },
  "553078c211266651": {
   "verdict": "ok",
@@ -2369,6 +2393,12 @@
   "at": "2026-10-16",
   "why": "Berzerker Glaive is a Berzerker Warband Enhancement."
  },
+ "5a5c48532674282d": {
+  "verdict": "ok",
+  "by": "review:r13-calc-marks",
+  "at": "2026-10-21",
+  "why": "\"each time a model in that unit makes a melee attack that targets a unit (excluding MONSTERS and VEHICLES), add 1 to the Hit roll\": the note is now only \"+1 to hit\" (calc {hit:1}), with vs none Monster/Vehicle. Beacons of Rage is tagged \"(Aura)\", so 22.01 puts the Eightbound within their own aura and selfAlways is right; no table condition is left on this mark."
+ },
  "5ac1fd5e9c594823": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -2398,6 +2428,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "NR: \"Malign Presence (Aura)\"."
+ },
+ "5c66bad42301351a": {
+  "verdict": "ok",
+  "by": "review:r13-calc-marks",
+  "at": "2026-10-21",
+  "why": "\"Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1\": vs any Character and the note match, and the only condition is the target’s keyword, so always is right. An attached unit with a CHARACTER leader is a CHARACTER unit (19.03)."
  },
  "5c8d6fea5fd59583": {
   "verdict": "ok",
@@ -3166,6 +3202,12 @@
   "by": "review:literal (its fix)",
   "at": "2026-10-17",
   "why": "Text: “In your Shooting phase or the Fight phase, when a friendly ORKS WALKER unit (excluding TITANIC units) is selected to attack, you can use this ability. If you do, roll either one D6 or two D6 (keep re-rolling duplicate results).” The footnote’s when, “Optional D6”, drops the timing. Mod footnotes show on the weapon tables, which are not limited to a phase, so the bonus would also seem to apply to e.g. Fire Overwatch at the end of the opponent’s Movement phase. The Deff from Above footnote was fixed for the same reason. The note itself is literal."
+ },
+ "7c2a8777b1cf5335": {
+  "verdict": "ok",
+  "by": "review:r13-calc-marks",
+  "at": "2026-10-21",
+  "why": "\"Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1.\" The note is now only that unconditional part, calc {rrWound:'1s'} says it exactly, and always is right. It is the Rubric Marines’ (bodyguard) ability, so it covers the Sorcerer’s attacks too (19.04)."
  },
  "7cb3e911df27ef6c": {
   "verdict": "ok",
@@ -3977,6 +4019,12 @@
   "at": "2026-10-17",
   "why": "“Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Hit roll.” Same."
  },
+ "982ee89a44f27035": {
+  "verdict": "ok",
+  "by": "review:r13-calc-marks",
+  "at": "2026-10-21",
+  "why": "\"If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead.\" The when and calc {rrWound:'all'} match; it depends on the table (objective markers), so having no always (an unticked box) is right."
+ },
  "986b552780eebf8b": {
   "verdict": "ok",
   "by": "review:m5-recheck",
@@ -4414,6 +4462,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "TARGET: \"ORKS WALKER unit (excluding TITANIC units)\": both Dakkarigs and the Killa Kans."
+ },
+ "a699203cf3fce509": {
+  "verdict": "ok",
+  "by": "review:r13-calc-marks",
+  "at": "2026-10-21",
+  "why": "\"If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.\" vs any Titanic/Towering, note \"+1 to wound rolls\", always (target keywords only). The words also need a MONSTER/VEHICLE target, which vs cannot add here, but all 9 TITANIC/TOWERING units in data.js are MONSTER or VEHICLE, so no target gets it wrongly."
  },
  "a6d1c263c039fc28": {
   "verdict": "ok",
@@ -6142,6 +6196,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "NR: 1x Twistbray + 9x Tzaangor, all Tzaangor blades = x10."
+ },
+ "e7eb2482506d098d": {
+  "verdict": "ok",
+  "by": "review:r13-calc-marks",
+  "at": "2026-10-21",
+  "why": "\"Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll.\" vs any Monster/Vehicle and the note \"+1 to hit rolls\" match, and the only condition is the target’s keywords, so always is right."
  },
  "e7f2ce799c4d764e": {
   "verdict": "ok",

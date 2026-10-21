@@ -1,0 +1,62 @@
+[
+ {
+  "key": "5a5c48532674282d",
+  "where": "super-terminators · Eightbound",
+  "verdict": "ok",
+  "why": "\"each time a model in that unit makes a melee attack that targets a unit (excluding MONSTERS and VEHICLES), add 1 to the Hit roll\": the note is now only \"+1 to hit\" (calc {hit:1}), with vs none Monster/Vehicle. Beacons of Rage is tagged \"(Aura)\", so 22.01 puts the Eightbound within their own aura and selfAlways is right; no table condition is left on this mark."
+ },
+ {
+  "key": "1dd70c039f74eaa3",
+  "where": "super-terminators · Eightbound",
+  "verdict": "ok",
+  "why": "\"If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well\" (Wahapedia repeats \"(excluding MONSTERS and VEHICLES)\" there): note \"+1 to wound rolls\", calc {wound:1}, vs none Monster/Vehicle. Below Half-strength is the target’s state in the battle, a table condition, so having no always/selfAlways (an unticked box, for other units and its own) is right."
+ },
+ {
+  "key": "5c66bad42301351a",
+  "where": "pubstomper · Daemon Prince of Tzeentch with wings",
+  "verdict": "ok",
+  "why": "\"Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1\": vs any Character and the note match, and the only condition is the target’s keyword, so always is right. An attached unit with a CHARACTER leader is a CHARACTER unit (19.03)."
+ },
+ {
+  "key": "0bff2841140fb5a4",
+  "where": "pubstomper · Daemon Prince of Tzeentch with wings",
+  "verdict": "ok",
+  "why": "\"(if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead)\": vs all [Psyker, Character] needs both keywords, as the words do, and dmVs now handles all (the Norn Emissary, PSYKER but not CHARACTER, is ruled out). Target keywords only, so always is right; with both boxes on, the calculator keeps the full re-roll over the 1s, which is the \"instead\"."
+ },
+ {
+  "key": "7c2a8777b1cf5335",
+  "where": "pubstomper · Sorcerer",
+  "verdict": "ok",
+  "why": "\"Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1.\" The note is now only that unconditional part, calc {rrWound:'1s'} says it exactly, and always is right. It is the Rubric Marines’ (bodyguard) ability, so it covers the Sorcerer’s attacks too (19.04)."
+ },
+ {
+  "key": "982ee89a44f27035",
+  "where": "pubstomper · Sorcerer",
+  "verdict": "ok",
+  "why": "\"If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead.\" The when and calc {rrWound:'all'} match; it depends on the table (objective markers), so having no always (an unticked box) is right."
+ },
+ {
+  "key": "53531015294cc21f",
+  "where": "Grand Coven rule · Kindred Sorcery",
+  "verdict": "ok",
+  "why": "Wahapedia’s Grand Coven rule (pubstomper takes that detachment): \"In your Command phase, you can select one of the abilities listed below … You can only select each of these abilities once per battle.\" A choice, so it is an unticked box with a pick and no always; needs Faction: Thousand Sons (\"THOUSAND SONS models from your army\"). Each pick says what its ability says, limited to [PSYCHIC] weapons: Imbued Manifestation \"Add 6\" to the Range characteristic of ranged Psychic weapons\" = +6\" range (a melee weapon has no range, so it reaches ranged weapons only); Psychic Maelstrom \"add 1 to the Wound roll\" = +1 to wound rolls; Wrath of the Immaterium \"have the [DEVASTATING WOUNDS] ability\"."
+ },
+ {
+  "key": "e7eb2482506d098d",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos",
+  "verdict": "ok",
+  "why": "\"Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll.\" vs any Monster/Vehicle and the note \"+1 to hit rolls\" match, and the only condition is the target’s keywords, so always is right."
+ },
+ {
+  "key": "a699203cf3fce509",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos",
+  "verdict": "ok",
+  "why": "\"If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.\" vs any Titanic/Towering, note \"+1 to wound rolls\", always (target keywords only). The words also need a MONSTER/VEHICLE target, which vs cannot add here, but all 9 TITANIC/TOWERING units in data.js are MONSTER or VEHICLE, so no target gets it wrongly."
+ },
+ {
+  "key": "5502238e7af1847a",
+  "where": "purge-goes-the-foe · Cybernetica Datasmith · Battle Protocols",
+  "verdict": "ok",
+  "why": "\"Aegis Protocol: Add 1 to the Toughness characteristic of KASTELAN ROBOT models in that unit.\" defCalc {t:1, model:'Kastelan Robot'} matches. Without defAlways it is now an unticked box, which fits \"you can select one protocol … it remains in that protocol until it enters a different one\", a choice the player makes."
+ }
+]
