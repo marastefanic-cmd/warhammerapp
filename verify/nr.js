@@ -175,9 +175,10 @@ function partitionRows(lines, who) {
     // description column (a bullet, a centred one-line description); one that skips a line at the column is
     // two names (Enginseer: "Omnissiah's / Blessing", then "Vengeance for the / Omnissiah" after a
     // description line that ends without a full stop)
-    const gaps = L.slice(1).map((l, x) => l - L[x]);
-    if (gaps.includes(1) && gaps.includes(2) && lines.slice(a, b).some(x => !x.L && x.atCol && x.i > L[0] && x.i < L[L.length - 1])) c += 1;
+    // (a Damaged band is the exception: its description lines sit around its last two name lines, see below)
     const name = joinLines(lines.slice(a, b).filter(x => x.L).map(x => x.L));
+    const gaps = L.slice(1).map((l, x) => l - L[x]);
+    if (gaps.includes(1) && gaps.includes(2) && !/^Damaged: /.test(name) && lines.slice(a, b).some(x => !x.L && x.atCol && x.i > L[0] && x.i < L[L.length - 1])) c += 1;
     c += cellPenalty(name, { who });
     // a name's "(…)" ("(Bondsman)", "(5+*)") comes after its words and before only another "(…)" or the
     // " - <unit>" suffix: a name neither starts with one nor runs on after it ("(5+*) Damaged: 1-9 …")
