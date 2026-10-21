@@ -1,0 +1,388 @@
+[
+ {
+  "key": "27bed3347b6c58c4",
+  "where": "adeptus-mechanicus army rule · Doctrina Imperatives",
+  "verdict": "ok",
+  "why": "“At the start of the battle round, you can select one of the Doctrina Imperatives” (Faction Pack v1.4 Rules Updates / Wahapedia): the start of the battle round is filed under Command with at:'Start of the battle round' shown, the settled convention (Da Boss, Wrathful Presence, Unearthly Power); the Imperatives' bullets name no phase."
+ },
+ {
+  "key": "70ee0bb2109366ae",
+  "where": "adeptus-mechanicus army rule · Doctrina Imperatives",
+  "verdict": "ok",
+  "why": "The start of the battle round comes before either player's turn (Core Rules 07.01 “before progressing to player turns”), and the Imperative lasts “Until the end of the battle round”, so either turn."
+ },
+ {
+  "key": "8ef568267ffa9b82",
+  "where": "Cohort Cybernetica rule · Cyber-psalm Programming",
+  "verdict": "ok",
+  "why": "“Add 2\" to the Move characteristic of models in LEGIO CYBERNETICA units from your army … add 1 to the Objective Control characteristic of models in that unit” (Faction Pack v1.4 Rules Updates): LEGIO CYBERNETICA picks only the Datasmith + Kastelan Robots unit here."
+ },
+ {
+  "key": "62c6a1f7832cf597",
+  "where": "Cohort Cybernetica rule · Cyber-psalm Programming",
+  "verdict": "ok",
+  "why": "“unless that unit is Battle-shocked, add 1 to the Objective Control characteristic of models in that unit”; New Recruit prints OC 1 (Datasmith) and 2 (Kastelan Robot), the same as Wahapedia's base OC 1 and 2, so the +1 is not in them (its M 8\" does include the +2\")."
+ },
+ {
+  "key": "764904eeaa35bfa0",
+  "where": "Cohort Cybernetica · Motive Imperative",
+  "verdict": "ok",
+  "why": "WHEN: “Your Command phase.”"
+ },
+ {
+  "key": "621809209371aaf2",
+  "where": "Cohort Cybernetica · Motive Imperative",
+  "verdict": "ok",
+  "why": "WHEN: “Your Command phase.”: your turn."
+ },
+ {
+  "key": "3dfd40f372685fd1",
+  "where": "Cohort Cybernetica · Motive Imperative",
+  "verdict": "ok",
+  "why": "TARGET: “One ADEPTUS MECHANICUS VEHICLE unit from your army”: Faction: Adeptus Mechanicus + Vehicle picks the Datasmith + Kastelan Robots (VEHICLE per the pack's Datasmith update), both Ironstrider units, the Onager and the Skorpius, and not Cawl, Thulia (MONSTER), the Enginseer or the Rangers."
+ },
+ {
+  "key": "9a56e921a85dd292",
+  "where": "Cohort Cybernetica · Motive Imperative",
+  "verdict": "ok",
+  "why": "“Until the start of your next Command phase, add 3\" to the Move characteristic of models in your unit and add 1 to Advance and Charge rolls made for it”: the gist says that, with its duration."
+ },
+ {
+  "key": "60770741850ad225",
+  "where": "Cohort Cybernetica · Auto-divinatory Targeting",
+  "verdict": "ok",
+  "why": "WHEN: “Your Command phase.”"
+ },
+ {
+  "key": "7f441a4e6f223e1e",
+  "where": "Cohort Cybernetica · Auto-divinatory Targeting",
+  "verdict": "ok",
+  "why": "WHEN: “Your Command phase.”: your turn."
+ },
+ {
+  "key": "92a921496777e41a",
+  "where": "Cohort Cybernetica · Auto-divinatory Targeting",
+  "verdict": "ok",
+  "why": "TARGET: “One LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE unit”: every LEGIO CYBERNETICA unit is Faction: Adeptus Mechanicus, so all:[Faction: Adeptus Mechanicus], any:[Legio Cybernetica, Vehicle] is the same set (here the Datasmith + Kastelans, Ironstriders ×2, Onager, Skorpius ×2)."
+ },
+ {
+  "key": "1d5f8ebb3ea7bd1d",
+  "where": "Cohort Cybernetica · Auto-divinatory Targeting",
+  "verdict": "fix",
+  "why": "The source says the weapons “can only target units within range of the selected objective marker”, a targeting restriction, but the footnote puts “only at units within range…” in the condition slot, so it reads as if BS 3+/[IGNORES COVER] apply only against those units and the unit can still shoot other units normally. It should be when:'Your Command phase, until the start of your next Command phase', note:'BS 3+, [IGNORES COVER]; can only target units within range of the selected objective marker'.",
+  "fix": {
+   "mod": {
+    "kind": "ranged",
+    "when": "Your Command phase, until the start of your next Command phase",
+    "note": "BS 3+, [IGNORES COVER]; can only target units within range of the selected objective marker"
+   }
+  }
+ },
+ {
+  "key": "70059ed2a01c31f9",
+  "where": "Cohort Cybernetica · Auto-divinatory Targeting",
+  "verdict": "ok",
+  "why": "“ranged weapons … have a Ballistic Skill characteristic of 3+ and the [IGNORES COVER] ability, but they can only target units within range of the selected objective marker”, until the start of your next Command phase: the gist says exactly that."
+ },
+ {
+  "key": "ec23930d6ad56d48",
+  "where": "Cohort Cybernetica · Auto-divinatory Targeting",
+  "verdict": "ok",
+  "why": "Word for word the FAQ in GW's Faction Pack (“FACTION PACK: VERSION 1.4”, Rules Updates, FAQS): “Q: If I target a unit with the Auto-divinatory Targeting Stratagem while the Protector Imperative is active for my army, in what order are the Ballistic Skill modifiers applied? A: The Ballistic Skill characteristic … is first changed to 3+ by the Stratagem, then improved by 1 by the Protector Imperative, for a final result of 2+ (assuming no other modifiers apply).” Wahapedia has the same words."
+ },
+ {
+  "key": "1b57b4b850f70946",
+  "where": "Cohort Cybernetica · Machine Spirit Resurgent",
+  "verdict": "ok",
+  "why": "WHEN: “Your Command phase.”"
+ },
+ {
+  "key": "758c82ad5b1ce2b7",
+  "where": "Cohort Cybernetica · Machine Spirit Resurgent",
+  "verdict": "ok",
+  "why": "WHEN: “Your Command phase.”: your turn."
+ },
+ {
+  "key": "c43aae1b86b33119",
+  "where": "Cohort Cybernetica · Machine Spirit Resurgent",
+  "verdict": "ok",
+  "why": "Keyword part: “One LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE unit”, written as for the other Cohort Cybernetica stratagems. Keywords can't express “that is below its Starting Strength”, and the app doesn't hide it: every footnote under the weapons reads “…, below its Starting Strength; until the start of your next Command phase” and the card's TARGET quotes it. The folded stratagem row (gist + unit list) doesn't mention it."
+ },
+ {
+  "key": "9c62ea766ff9276a",
+  "where": "Cohort Cybernetica · Machine Spirit Resurgent",
+  "verdict": "ok",
+  "why": "“each time a model in your unit makes an attack, you can re-roll the Hit roll. If your unit is Below Half-strength, you can re-roll the Wound roll as well”, targeting a unit “below its Starting Strength”, until the start of your next Command phase: kind all, the condition and the duration are all there."
+ },
+ {
+  "key": "c1566df972fc3159",
+  "where": "Cohort Cybernetica · Machine Spirit Resurgent",
+  "verdict": "ok",
+  "why": "“Until the start of your next Command phase, each time a model in your unit makes an attack, you can re-roll the Hit roll. If your unit is Below Half-strength, you can re-roll the Wound roll as well.”: the gist says exactly that (the Starting Strength limit is TARGET text, not EFFECT text)."
+ },
+ {
+  "key": "8ab4a9997922b3fc",
+  "where": "Cohort Cybernetica · Machine Superiority",
+  "verdict": "ok",
+  "why": "WHEN: “Your Command phase.”"
+ },
+ {
+  "key": "64bb4a3660b3adad",
+  "where": "Cohort Cybernetica · Machine Superiority",
+  "verdict": "ok",
+  "why": "WHEN: “Your Command phase.”: your turn."
+ },
+ {
+  "key": "2e8b6d785d3da182",
+  "where": "Cohort Cybernetica · Machine Superiority",
+  "verdict": "ok",
+  "why": "TARGET: “One LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE unit from your army”: same keyword set as Auto-divinatory Targeting."
+ },
+ {
+  "key": "97348a6ad37c4eee",
+  "where": "Cohort Cybernetica · Machine Superiority",
+  "verdict": "fix",
+  "why": "The source says “ignore any or all modifiers to its characteristics and/or to any roll or test made for it (excluding modifiers to saving throws)”, but the note drops “made for it”, so “to any roll or test” also covers rolls the opponent makes against the unit, which is more than the source allows. It should read note:'can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws)', or “to its rolls and tests”, as the gist puts it.",
+  "fix": {
+   "mod": {
+    "kind": "all",
+    "when": "Your Command phase, until the end of the turn",
+    "note": "can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws)"
+   }
+  }
+ },
+ {
+  "key": "59767b546c15283c",
+  "where": "Cohort Cybernetica · Machine Superiority",
+  "verdict": "ok",
+  "why": "“Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back and you can ignore any or all modifiers to its characteristics and/or to any roll or test made for it (excluding modifiers to saving throws)”: “to its rolls and tests (not saving throws)” keeps “made for it”."
+ },
+ {
+  "key": "d1ca76ee0e8c222f",
+  "where": "Cohort Cybernetica · Transcendent Cogitation",
+  "verdict": "ok",
+  "why": "WHEN: “Your Command phase.”"
+ },
+ {
+  "key": "7dbb727c563cc204",
+  "where": "Cohort Cybernetica · Transcendent Cogitation",
+  "verdict": "ok",
+  "why": "WHEN: “Your Command phase.”: your turn."
+ },
+ {
+  "key": "226aab386f053c88",
+  "where": "Cohort Cybernetica · Transcendent Cogitation",
+  "verdict": "ok",
+  "why": "TARGET: “One LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE unit from your army”: same keyword set as Auto-divinatory Targeting."
+ },
+ {
+  "key": "89eea4364122be6d",
+  "where": "Cohort Cybernetica · Transcendent Cogitation",
+  "verdict": "ok",
+  "why": "“Until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for your unit.”: the gist says the same."
+ },
+ {
+  "key": "674d173afb1f9e49",
+  "where": "Cohort Cybernetica · Benevolence of the Omnissiah",
+  "verdict": "ok",
+  "why": "WHEN: “Your Command phase.”"
+ },
+ {
+  "key": "da2c70ff17427c72",
+  "where": "Cohort Cybernetica · Benevolence of the Omnissiah",
+  "verdict": "ok",
+  "why": "WHEN: “Your Command phase.”: your turn."
+ },
+ {
+  "key": "99fab64f76aa805c",
+  "where": "Cohort Cybernetica · Benevolence of the Omnissiah",
+  "verdict": "ok",
+  "why": "TARGET: “One LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE unit from your army”: same keyword set as Auto-divinatory Targeting."
+ },
+ {
+  "key": "8c75a8a2a996c765",
+  "where": "Cohort Cybernetica · Benevolence of the Omnissiah",
+  "verdict": "ok",
+  "why": "“Until the start of your next Command phase, models in your unit have the Feel No Pain 6+ ability, which is improved to Feel No Pain 5+ against mortal wounds”: the When targeted line keeps both values and the duration."
+ },
+ {
+  "key": "7644dcf1be914a6c",
+  "where": "Cohort Cybernetica · Benevolence of the Omnissiah",
+  "verdict": "ok",
+  "why": "Same EFFECT: “Feel No Pain 6+ … improved to Feel No Pain 5+ against mortal wounds”, until the start of your next Command phase."
+ },
+ {
+  "key": "612af652604e8038",
+  "where": "Eradication Cohort rule · Murderous Imperative",
+  "verdict": "ok",
+  "why": "“Each time a model in a SKITARII unit from your army makes an attack” (Faction Pack v1.4 p5): SKITARII picks the Rangers, the Ironstriders, the Onager, the Skorpius and the Datasmith + Kastelans (SKITARII from Martial Signatum Amplificator: “Models in the bearer's unit have the SKITARII keyword”)."
+ },
+ {
+  "key": "c7ac4e75b8833503",
+  "where": "Eradication Cohort rule · Murderous Imperative",
+  "verdict": "ok",
+  "why": "“If the Protector Imperative is active for that unit, re-roll a Hit roll of 1. If the Conqueror Imperative is active for that unit, re-roll a Wound roll of 1.”: kind all (every attack), both conditions kept, and like the source it is not optional."
+ },
+ {
+  "key": "4827ffb8319f3cdb",
+  "where": "Eradication Cohort · Servo-driven Charge",
+  "verdict": "ok",
+  "why": "WHEN: “Fight phase.”"
+ },
+ {
+  "key": "f9b5ec8830e2c3e2",
+  "where": "Eradication Cohort · Servo-driven Charge",
+  "verdict": "ok",
+  "why": "WHEN: “Fight phase.” names no turn, so either turn."
+ },
+ {
+  "key": "4cc014feef49f6f0",
+  "where": "Eradication Cohort · Servo-driven Charge",
+  "verdict": "ok",
+  "why": "TARGET: “One ADEPTUS MECHANICUS unit from your army that has not been selected to fight this phase”: Faction: Adeptus Mechanicus, every unit here."
+ },
+ {
+  "key": "3d883272fd3164b7",
+  "where": "Eradication Cohort · Servo-driven Charge",
+  "verdict": "ok",
+  "why": "“Until the end of the phase, melee weapons equipped by models in your unit have the [LANCE] ability”: melee, Fight phase (which is its duration), [LANCE]."
+ },
+ {
+  "key": "d9bd58207bdd22bd",
+  "where": "Eradication Cohort · Servo-driven Charge",
+  "verdict": "ok",
+  "why": "Same EFFECT, word for word in short: “Until the end of the phase, melee weapons … have the [LANCE] ability.”"
+ },
+ {
+  "key": "05490abc0c4a7e5d",
+  "where": "Eradication Cohort · Unrelenting Aggression",
+  "verdict": "ok",
+  "why": "WHEN: “Your Movement phase, just after an ADEPTUS MECHANICUS unit from your army Falls Back.”"
+ },
+ {
+  "key": "dffee49c5074cf96",
+  "where": "Eradication Cohort · Unrelenting Aggression",
+  "verdict": "ok",
+  "why": "WHEN: “Your Movement phase”: your turn."
+ },
+ {
+  "key": "d886fcb08b64b5e2",
+  "where": "Eradication Cohort · Unrelenting Aggression",
+  "verdict": "ok",
+  "why": "TARGET: “That ADEPTUS MECHANICUS unit” (one that just Fell Back): Faction: Adeptus Mechanicus, every unit here."
+ },
+ {
+  "key": "70df0ecc9690d001",
+  "where": "Eradication Cohort · Unrelenting Aggression",
+  "verdict": "ok",
+  "why": "“Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back. If your unit has the SKITARII keyword, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back instead.”: the gist says both."
+ },
+ {
+  "key": "f72be3bef6871c99",
+  "where": "Eradication Cohort · Unshackled Wrath",
+  "verdict": "ok",
+  "why": "WHEN: “Your Shooting phase.”"
+ },
+ {
+  "key": "be191e2787fe9310",
+  "where": "Eradication Cohort · Unshackled Wrath",
+  "verdict": "ok",
+  "why": "WHEN: “Your Shooting phase.”: your turn."
+ },
+ {
+  "key": "c008409bb914f191",
+  "where": "Eradication Cohort · Unshackled Wrath",
+  "verdict": "ok",
+  "why": "TARGET: “One SKITARII unit from your army that has not been selected to shoot this phase”: SKITARII (Rangers, Ironstriders, Onager, Skorpius, Datasmith + Kastelans via Martial Signatum Amplificator)."
+ },
+ {
+  "key": "7a4ebc6b2108284b",
+  "where": "Eradication Cohort · Unshackled Wrath",
+  "verdict": "ok",
+  "why": "“Select the [SUSTAINED HITS 1] or [LETHAL HITS] ability … You can instead select the [SUSTAINED HITS 1], [LETHAL HITS] and [HAZARDOUS] abilities”, until the end of the phase: “or both and [HAZARDOUS]” says that, on ranged weapons."
+ },
+ {
+  "key": "b092a07be6b70721",
+  "where": "Eradication Cohort · Unshackled Wrath",
+  "verdict": "ok",
+  "why": "Same EFFECT: the selected one of [SUSTAINED HITS 1]/[LETHAL HITS], or all three with [HAZARDOUS], on ranged weapons until the end of the phase."
+ },
+ {
+  "key": "0f40e847dc09e472",
+  "where": "Eradication Cohort · Threat-cogitation Targeters",
+  "verdict": "ok",
+  "why": "WHEN: “Your Shooting phase.”"
+ },
+ {
+  "key": "4e8f7e283c8d16bc",
+  "where": "Eradication Cohort · Threat-cogitation Targeters",
+  "verdict": "ok",
+  "why": "WHEN: “Your Shooting phase.”: your turn."
+ },
+ {
+  "key": "3f2801f3a3afc50d",
+  "where": "Eradication Cohort · Threat-cogitation Targeters",
+  "verdict": "ok",
+  "why": "TARGET: “One SKITARII VEHICLE unit from your army”: Skitarii + Vehicle picks the Ironstriders, the Onager, the Skorpius and the Datasmith + Kastelans, and not the Rangers."
+ },
+ {
+  "key": "3abe319e9a0b494e",
+  "where": "Eradication Cohort · Threat-cogitation Targeters",
+  "verdict": "ok",
+  "why": "“each time a ranged attack made by a model in your unit is allocated to a MONSTER or VEHICLE model, you can re-roll the Damage roll”, until the end of the phase: ranged, the condition and the effect are kept."
+ },
+ {
+  "key": "41adeec21def90b4",
+  "where": "Eradication Cohort · Threat-cogitation Targeters",
+  "verdict": "ok",
+  "why": "Same EFFECT and duration (“Until the end of the phase”)."
+ },
+ {
+  "key": "35ae05852210a8fd",
+  "where": "Eradication Cohort · Precision Onslaught",
+  "verdict": "ok",
+  "why": "WHEN: “Your Charge phase, just after a SICARIAN unit from your army declares a charge.”"
+ },
+ {
+  "key": "5cdf68dd00103e0b",
+  "where": "Eradication Cohort · Precision Onslaught",
+  "verdict": "ok",
+  "why": "WHEN: “Your Charge phase”: your turn."
+ },
+ {
+  "key": "15d7046004273726",
+  "where": "Eradication Cohort · Precision Onslaught",
+  "verdict": "ok",
+  "why": "TARGET: “That SICARIAN unit”: Sicarian, which no unit here has (the app shows “needs SICARIAN”)."
+ },
+ {
+  "key": "7fa7abac9436c47b",
+  "where": "Eradication Cohort · Precision Onslaught",
+  "verdict": "ok",
+  "why": "“when your unit ends a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in your unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound”: the gist says that, and “Until the end of the phase” is this Charge phase, the only one it can apply in."
+ },
+ {
+  "key": "3daa4b0242b2507e",
+  "where": "Eradication Cohort · Analytic Reprisals",
+  "verdict": "ok",
+  "why": "WHEN: “Your opponent’s Shooting phase, just after an enemy unit has shot.”"
+ },
+ {
+  "key": "df8babca8f429648",
+  "where": "Eradication Cohort · Analytic Reprisals",
+  "verdict": "ok",
+  "why": "WHEN: “Your opponent’s Shooting phase”: their turn."
+ },
+ {
+  "key": "8c7224c6d842347f",
+  "where": "Eradication Cohort · Analytic Reprisals",
+  "verdict": "ok",
+  "why": "TARGET: “One SKITARII INFANTRY unit from your army that lost one or more models…”: Skitarii + Infantry picks the two Skitarii Rangers units only. The models-lost condition is game state that keywords can't hold, and the card's TARGET quotes it."
+ },
+ {
+  "key": "24ebfa24841570e3",
+  "where": "Eradication Cohort · Analytic Reprisals",
+  "verdict": "ok",
+  "why": "“Your unit can shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target.”: the gist says that."
+ }
+]
