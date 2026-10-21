@@ -2145,7 +2145,7 @@ const ARMIES = [
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
-        { kind:'ranged', when:'vs the enemy unit picked at the start of your Shooting phase', note:'+1 to hit rolls', from:'Marked by Fate' }
+        { kind:'ranged', when:'Your Shooting phase, vs the enemy unit picked at its start', note:'+1 to hit rolls', from:'Marked by Fate' }
       ],
       rules:['Leader','Deep Strike','Cabal of Sorcerers','Psychic','Anti','Devastating Wounds','Rapid Fire'],
       kw:['Chaos','Character','Faction: Thousand Sons','Infantry','Psyker','Sorcerer','Terminator','Tzeentch','Rubricae','Scarab Occult'],

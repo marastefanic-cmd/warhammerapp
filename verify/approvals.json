@@ -293,6 +293,12 @@
   "at": "2026-10-16",
   "why": "Either turn."
  },
+ "0d9aec4f1154d295": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "NR prints \"Marked by Fate (Psychic)\"."
+ },
  "0da5a6fc316d3991": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -437,6 +443,12 @@
   "at": "2026-10-16",
   "why": "Pack Leader + 8 Jakhals with autopistol and chainblades = 9; Dishonoured has paired manglers."
  },
+ "16a78c2c3f13f359": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "NR \"Marked by Fate (Psychic) - Sorcerer in Terminator Armour\"; \"this PSYKER model\" = that Sorcerer. Model lines match NR."
+ },
  "17c493ac935599c7": {
   "verdict": "ok",
   "by": "review:m5-new",
@@ -515,6 +527,12 @@
   "at": "2026-10-16",
   "why": "The rule says \"a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units)\". \"friendly\" is dropped. The line is hidden here (n/a), but its wording should still be exact. [restored: the same judgement on the same text, signed off for an earlier list]"
  },
+ "1b7519333c1fcc2d": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "NR Categories: \"Battleline*, Rubric*, Rubric Marines*, Rubricae*, *from combined unit\"."
+ },
  "1bd5f94b32f3218c": {
   "verdict": "ok",
   "by": "review:r9-we-nids",
@@ -562,6 +580,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "\"At the start of the battle round\" goes in the Command phase (brief convention)."
+ },
+ "1f043a08fb269eb0": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "Listed in NR's \"Crimson King\" sub-table of Magnus (one model)."
  },
  "1f60647795b8073c": {
   "verdict": "ok",
@@ -797,6 +821,12 @@
   "at": "2026-10-16",
   "why": "Fight phase, either turn."
  },
+ "2b2d7d1576c3e4bf": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "\"While this unit contains one or more PSYKER models, each time an attack targets this unit, subtract 1 from the Wound roll\": said shorter, nothing added."
+ },
  "2b75c943db2a25a6": {
   "verdict": "ok",
   "by": "review:m5-new",
@@ -862,6 +892,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "WHEN: \"Your opponent's Shooting phase\"."
+ },
+ "2e90d802b79541b8": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "NR \"Twisted Sorceries (Psychic) - Sorcerer\"; \"this model\" is the Sorcerer. Model lines match NR (1 Sorcerer, 1 Aspiring Sorcerer, 1 w/ soulreaper cannon, 3 w/ warpflamer)."
  },
  "2efe1107d6ebd5a7": {
   "verdict": "ok",
@@ -995,6 +1031,12 @@
   "at": "2026-10-16",
   "why": "\"either player’s Command phase\"."
  },
+ "346475051be17cf3": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "NR Options: \"Ectoplasma destructor, 2x Heavy reaper autocannon, Shearing claws, Two excruciator cannons (2x Excruciator cannon)\"; weapons table Excruciator cannon (x2), Heavy reaper autocannon (x2), Shearing claws strike/sweep."
+ },
  "36181620840c71e3": {
   "verdict": "ok",
   "by": "review:m5-recheck",
@@ -1127,6 +1169,12 @@
   "at": "2026-10-18",
   "why": "EFFECT: “When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one D6, with +3 to the result if your unit has ~~DEFF DREAD~~: On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.” The gist has the same condition (“a model in your unit”, “not selected to fight this phase”), the same roll (“roll one D6”, “on a 4+”) and the same removal timing (“until A or B” means whichever comes first), so nothing is added or changed. It leaves out only “with +3 to the result if your unit has ~~DEFF DREAD~~”, which is allowed because the gist ends with “…”. Leaving it out also avoids deciding what the strikethrough means; the gist does not resolve it. The gist is 144 chars, over the ~110 aim, but every shorter cut would drop a condition or the removal timing. text: same words as Wahapedia; the only difference is markup, the app has ~~**DEFF DREAD**~~ where Wahapedia has ~~DEFF DREAD~~ (bold inside the strikethrough)."
  },
+ "3bca809001bd76a5": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "\"In your opponent's Movement phase, if an enemy unit ends a move within 8\"\"."
+ },
  "3c014e402e4451e1": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -1181,6 +1229,12 @@
   "at": "2026-10-16",
   "why": "\"improve the Armour Penetration characteristic of melee weapons ... by 1\" until end of phase, unit \"made a charge move this turn\"."
  },
+ "3e2fa51f1861fa0a": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "WHEN: \"Any phase, just after an enemy unit has selected its targets\" (Wahapedia): all five phases."
+ },
  "3eb2673c5f83a752": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -1198,6 +1252,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "Fight phase, either turn."
+ },
+ "3fbe206fda6a4e3f": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "NR roster: Sorcerer 100, (5) Rubric Marines 115; card 215 PTS."
  },
  "402ab9cd746aa6e1": {
   "verdict": "ok",
@@ -1222,6 +1282,12 @@
   "by": "review:m5-new",
   "at": "2026-10-20",
   "why": "Source: \"In your Movement phase, when this unit is selected to make an advance move, you can use this ability.\" The text names your Movement phase, so {ph:['movement'], turn:'your'}. NR melee.txt l.120-127 and BSData have the same words. (BSData's \"Big Mek loses Shokk-boosta\" is a Boarding Actions adaptation, so it does not apply to this Strike Force list.)"
+ },
+ "41a47401425e5ff7": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "Gear matches NR's four Options lines word for word; counts match (Warpflamer (x3), Close combat weapon (x4)). \"Icon of Flame - Rubric Marines\" is printed only in the Abilities table, on no models line, so unplaced is right; the app says \"New Recruit lists it for the Rubric Marines, not which model carries it\" and no line or model name assigns it."
  },
  "41c11f0ca452acee": {
   "verdict": "ok",
@@ -1306,6 +1372,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "Matches NR: 10× Grot Blasta, 10× Scavenged Shivs."
+ },
+ "44a7f43462c4dee6": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "NR prints \"Twisted Sorceries (Psychic) - Sorcerer\"."
  },
  "44c5c04a73da019c": {
   "verdict": "ok",
@@ -1835,6 +1907,12 @@
   "at": "2026-10-17",
   "why": "“to take effect until the start of your next Command phase”: the window covers the opponent’s turn, so “either” is right for Fight (Psychic melee weapons, “Each time a THOUSAND SONS model from your army makes an attack with a Psychic weapon”) and for their Movement phase (Fire Overwatch). Selection happens only “In your Command phase”, and the three effects only act when Psychic weapons attack. With no per-phase turns, the rule is also listed in their Command phase, your Movement phase and their Shooting phase, where none of your units attacks. This is the brief’s ‘includes one where it can’t’. The fix needs the same per-phase turns key the app’s other attack rules use (Try Dat Button! turns:{shooting:'your'}, Da Hunt is On turns:{movement:'opp', shooting:'your'}). The turn value itself stays “either”."
  },
+ "61dd684b8d85949e": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "NR \"Empyric Guidance (Psychic) - Sorcerer in Terminator Armour\"; the leader's ability."
+ },
  "61f1f97a294ad695": {
   "verdict": "ok",
   "by": "review:r9-we-nids",
@@ -1877,6 +1955,12 @@
   "at": "2026-10-17",
   "why": "Checked. The printed 01/06/2026 PDF (12.08) has Ongoing Consolidation “Each model that started this move engaged with an enemy unit must still be engaged with that enemy unit.” and Objective Consolidation “Your unit must be within range of the selected objective.” Wahapedia prints “Errata 12.08 - Consolidation Move, After Moving Section, Ongoing Consolidation · Change to: …” and “Your unit must be unengaged and within range of the selected objective.” No other GW PDF in the cache mentions consolidation. The note does not say which text takes precedence."
  },
+ "652535488e26ccb9": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "NR roster: Sorcerer in Terminator Armour 140, (10) Scarab Occult Terminators 425; card 565 PTS."
+ },
  "65358cf27ed741b6": {
   "verdict": "ok",
   "by": "review:literal",
@@ -1888,6 +1972,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "Your Movement phase."
+ },
+ "65a7b6f3fe5be4f1": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper (its fix)",
+  "at": "2026-10-21",
+  "why": "The rule lasts only \"Until the end of the phase\" (your Shooting phase); the when \"vs the enemy unit picked at the start of your Shooting phase\" names no end, so it also reads as covering later attacks on that unit (e.g. Fire Overwatch in the next turn). Should be when:'Your Shooting phase, vs the enemy unit picked at its start' (kind ranged and note '+1 to hit rolls' are right)."
  },
  "65b792d8e2feb3ed": {
   "verdict": "ok",
@@ -2087,6 +2177,12 @@
   "at": "2026-10-17",
   "why": "New Recruit prints “Kustom Dakka - Mek”; model lines as NR."
  },
+ "7216fa448a775e9a": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "\"Any phase\": enemy units select targets in their turn (Shooting, Fight) and in yours (Fight, Fire Overwatch)."
+ },
  "722b66e9ed933534": {
   "verdict": "ok",
   "by": "review:m1-units",
@@ -2195,6 +2291,12 @@
   "at": "2026-10-18",
   "why": "The WHEN says “Fight phase”, not “Your Fight phase”, so either turn. text: case only, “[Lethal Hits]” vs “[LETHAL HITS]”."
  },
+ "797cef29425c3f71": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "Defiler W 18 (NR stats row); \"1-6 wounds remaining\"."
+ },
  "7a3d58fbc20f30b6": {
   "verdict": "ok",
   "by": "review:r9-we-nids",
@@ -2273,6 +2375,18 @@
   "at": "2026-10-16",
   "why": "11th-ed 15.08 \"WHEN: End of your opponent's Movement phase.\" only (no Charge-phase use any more)."
  },
+ "7e7edefe8b57bac7": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "NR prints \"Treason of Tzeentch (Psychic)\"."
+ },
+ "7eda1e9889eeee96": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "Listed in NR's \"Crimson King\" sub-table of Magnus (one model)."
+ },
  "7f16564ce98e8a8c": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -2332,6 +2446,12 @@
   "by": "review:m5-recheck",
   "at": "2026-10-20",
   "why": "NR Options: BMiMA 'Follow Me Ladz (enhancement), Kustom Mega-blasta, Power Klaw, Kustom Force Field (wargear)'; 5x Meganob 'Twin Killsaw'. The gear lines match. Weapon rows: Kustom Mega-blasta and Power Klaw '- Big Mek in Mega Armour'; Twin Killsaw '(x5) - Meganobz'. The weapons list matches."
+ },
+ "814ac116a15175da": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "NR \"Empyric Guidance (Psychic) - Sorcerer\"; \"While this model is leading a unit\" = the Sorcerer."
  },
  "8190a61db4a912a7": {
   "verdict": "ok",
@@ -2471,6 +2591,12 @@
   "at": "2026-10-17",
   "why": "Only the MOBILE keyword starts with ‘mobile’ (Gateways to Glory, Stomping Juggernaut, 13.06, 24.35), and the alias opens the Mobile entry. It is just a link."
  },
+ "860ee9ee4ea6dc83": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "NR prints \"Time Flux (Aura, Psychic)\"."
+ },
  "86527755ef593c5b": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -2506,6 +2632,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "“Friendly ORKS INFANTRY units’ ranged attacks have …” has no phase limit; ranged attacks are made in the Shooting phase and in Fire Overwatch (“End of your opponent’s Movement phase … shoots using snap shooting”). Movement and Shooting are the right phases; the turn per phase is item 7a652c3ac27f3762."
+ },
+ "87c8aa2640b1c554": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "NR prints it under the \"Crimson King | Effect\" sub-table of Magnus, the only model; Unearthly Power: \"select one of the abilities in the Crimson King section\"."
  },
  "8811cf92804280e3": {
   "verdict": "ok",
@@ -2681,6 +2813,12 @@
   "at": "2026-10-17",
   "why": "EFFECT: \"Resolve a charge with your unit. While doing so, before making the charge roll, you must select one of the following modes: Leap to Defend ... Into the Fray (+1CP)\". The gist names the action and both modes, including the +1CP. The mode details are left out, and it ends with \"…\"."
  },
+ "8f432292434d71c6": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "Magnus W 16 (NR stats row); \"While this model has 1-6 wounds remaining\" = band 1-6."
+ },
  "90121398a09da076": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -2698,6 +2836,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "\"Your Charge phase\"; blue \"Your turn\" card."
+ },
+ "9053f0bb5f55da49": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "NR prints \"Impossible Form (Psychic)\" in the Crimson King table."
  },
  "909e57bc7683322b": {
   "verdict": "ok",
@@ -2764,6 +2908,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "Your turn."
+ },
+ "929513203531579f": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "\"While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll\": every attack (kind all), -1 to hit; adds no bonus already in NR's values."
  },
  "92cf10e6d8886849": {
   "verdict": "ok",
@@ -3377,6 +3527,12 @@
   "at": "2026-10-17",
   "why": "“Your unit’s ranged attacks that target a unit within 9\" have +1 AP.” Same."
  },
+ "ae079e36c5bafef8": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "\"Each time this unit makes a Normal, Advance or Fall Back move\": your Movement phase, plus Temporal Surge's \"Normal move of up to D6\"\" for a THOUSAND SONS unit at the start of your Shooting phase; no rule in this list gives the Defiler such a move in the opponent's turn."
+ },
  "ae0f5b5338188fb8": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -3520,6 +3676,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "\"WHEN: Fight phase.\""
+ },
+ "b3cad82a2811fb9c": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "NR: every one of the four models lines has \"Tzaangor blades\" (Brayhorn and Herd banner are printed on their lines, kept in the line names); Tzaangor blades (x10) = 1+7+1+1."
  },
  "b47db1720f346a2f": {
   "verdict": "ok",
@@ -3899,6 +4061,12 @@
   "at": "2026-10-16",
   "why": "Fight phase in either turn."
  },
+ "c7ba9f3b8558aa24": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "\"re-roll Advance and Charge rolls\": Advance rolls are made in your Movement phase; Charge rolls in your Charge phase and in theirs via Heroic Intervention (\"Resolve a charge ... before making the charge roll\"), which Tzaangors can use."
+ },
  "c7c004470af3aa0a": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -3970,6 +4138,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "New Recruit prints “Bomb Squig (Once per turn, twice per battle, per unit)”; the text’s “Place two Bomb Squig tokens … removing one each time” agrees."
+ },
+ "cc0cf910f1aae9b1": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "\"At the start of your Shooting phase ... Until the end of the phase\": your Shooting phase."
  },
  "cc498c58327e5660": {
   "verdict": "ok",
@@ -4211,6 +4385,12 @@
   "at": "2026-10-16",
   "why": "Wahapedia prints it as tooltip 04.01.05 linking to its rules appendix; the printed Core Rules do not contain \"selected to attack\" (grep), and their appendix says \"CONTINUED IN THE APP … The Warhammer 40,000 app contains an expanded range of definitions … The following pages present a selection\"."
  },
+ "d81d42f2cc054d3b": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "NR Categories: \"Rubricae*, Scarab Occult*, *from combined unit\"."
+ },
  "d8a7ee4028c33646": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -4271,6 +4451,12 @@
   "at": "2026-10-17",
   "why": "“to take effect until the start of your next Command phase”: the window covers the opponent’s turn, so “either” is right for Fight (Psychic melee weapons, “Each time a THOUSAND SONS model from your army makes an attack with a Psychic weapon”) and for their Movement phase (Fire Overwatch). Selection happens only “In your Command phase”, and the three effects only act when Psychic weapons attack. With no per-phase turns, the rule is also listed in their Command phase, your Movement phase and their Shooting phase, where none of your units attacks. This is the brief’s ‘includes one where it can’t’. The fix needs the same per-phase turns key the app’s other attack rules use (Try Dat Button! turns:{shooting:'your'}, Da Hunt is On turns:{movement:'opp', shooting:'your'}). The turn value itself stays “either”."
  },
+ "dc8fe389dd57c66a": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "Same as Wahapedia's current EFFECT (\"Until the end of the phase, all attacks made against your unit with Psychic weapons have the [hazardous] ability and all models in your unit have the Feel No Pain 4+ ability against Psychic Attacks\") with only \"all\" dropped."
+ },
  "dcea0c4de8648e46": {
   "verdict": "ok",
   "by": "review:m5-recheck",
@@ -4306,6 +4492,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "WHEN: \"End of your opponent's Fight phase\"."
+ },
+ "dd939754c42c93ca": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "\"Each time an attack is made against this PSYKER (excluding Psychic Attacks), subtract 1 from the Damage characteristic\"; \"if picked this round\" is Unearthly Power's \"At the start of the battle round, select one ... Until the start of the next battle round\"."
  },
  "ddadfff6cf84fb13": {
   "verdict": "ok",
@@ -4349,6 +4541,12 @@
   "at": "2026-10-17",
   "why": "“TARGET: That BREAKA BOYZ/FLASH GITZ/TANKBUSTAS unit.”: any of the three, copied. “unengaged” is a state, not a keyword."
  },
+ "e008bb4d922418c8": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "NR \"Rites of Coalescence - Scarab Occult Terminators\": the bodyguard's datasheet ability."
+ },
  "e0869998b53fc89e": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -4373,6 +4571,12 @@
   "at": "2026-10-16",
   "why": "15.03 \"WHEN: Fight phase, just after a friendly CHARACTER unit is selected to fight.\""
  },
+ "e1f1e4dd0e935ceb": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "NR \"Bringers of Change - Rubric Marines\": the Rubric Marines' datasheet ability."
+ },
  "e2618ad40504b5b0": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -4396,6 +4600,12 @@
   "by": "review:literal",
   "at": "2026-10-17",
   "why": "The new summary, “Every model can shoot with one or more of its guns”, is 04.01 (“You can select one or more ranged weapons that model has”). It is used only when every per-model sentence is the plain ‘Can shoot with one or both / one or more of these’ form. The rest is list facts: which models line carries which weapons, the one-model carrier names, ×N counts, and leader vs bodyguard lines (19.04). The one rule problem sits in useSentence (see that item)."
+ },
+ "e452822fb991fb7b": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "Matches Wahapedia's current EFFECT: \"all attacks made against your unit with Psychic weapons have the [HAZARDOUS] ability and all models in your unit have the Feel No Pain 4+ ability against Psychic Attacks\"; shown when targeted, as the WHEN (\"just after an enemy unit has selected its targets\") is."
  },
  "e4c004b9b108f7b0": {
   "verdict": "ok",
@@ -4583,6 +4793,12 @@
   "at": "2026-10-16",
   "why": "WHEN: \"Fight phase\"."
  },
+ "ebb2fe680a92425d": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "NR \"Icon of Flame - Rubric Marines\": who names the unit, not a model; the datasheet's \"1 Rubric Marine can be equipped with 1 icon of flame\" and NR say no more about the bearer, and the model lines no longer name one."
+ },
  "ebb48d4a64faf7d1": {
   "verdict": "ok",
   "by": "review:m5-recheck",
@@ -4714,6 +4930,12 @@
   "by": "review:r5-text",
   "at": "2026-10-17",
   "why": "EFFECT: \"Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack.\" The gist keeps the duration, both kinds of unit and the benefit of cover. It leaves out \"to the attacking model\" and the per-attack wording, but ends with \"…\". Nothing added."
+ },
+ "f2d79da589c98126": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "Gear matches NR's four Options lines (Umbralefic Crystal is the enhancement, not gear); counts match (combi-bolter (x8) = Scarab Sorcerer + 7, soulreaper (x2), khopesh (x9)). \"Hellfyre missile rack (x2) - Scarab Occult Terminators\" is printed only in the weapons table, on no models line, so unplaced is right; the datasheet's \"1 Scarab Occult Terminator can be equipped\" per 5 models leaves the bearers open and the app says so instead of guessing."
  },
  "f31034917f796a3e": {
   "verdict": "ok",
@@ -4877,6 +5099,12 @@
   "at": "2026-10-16",
   "why": "\"Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic\"."
  },
+ "fc1ced1ffef5c105": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "TARGET: \"One THOUSAND SONS unit from your army\"; every unit of the list has Faction: Thousand Sons."
+ },
  "fc25783f670088a6": {
   "verdict": "ok",
   "by": "review:m5-recheck",
@@ -4930,6 +5158,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "Wahapedia and NR: \"War Cry (Once per battle, per army)\"."
+ },
+ "fed3be5b69c29121": {
+  "verdict": "ok",
+  "by": "review:r9-pubstomper",
+  "at": "2026-10-21",
+  "why": "NR Options of \"1x Sorcerer in Terminator Armour\": \"Umbralefic Crystal, ...\"; abilities row \"Umbralefic Crystal - Sorcerer in Terminator Armour\"."
  },
  "ff6f78dd40c2fb4d": {
   "verdict": "ok",

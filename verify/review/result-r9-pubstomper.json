@@ -1,0 +1,242 @@
+[
+ {
+  "key": "8f432292434d71c6",
+  "where": "pubstomper · Magnus the Red · Damaged: 1-6 wounds remaining",
+  "verdict": "ok",
+  "why": "Magnus W 16 (NR stats row); \"While this model has 1-6 wounds remaining\" = band 1-6."
+ },
+ {
+  "key": "9053f0bb5f55da49",
+  "where": "pubstomper · Magnus the Red · Impossible Form",
+  "verdict": "ok",
+  "why": "NR prints \"Impossible Form (Psychic)\" in the Crimson King table."
+ },
+ {
+  "key": "87c8aa2640b1c554",
+  "where": "pubstomper · Magnus the Red · Impossible Form",
+  "verdict": "ok",
+  "why": "NR prints it under the \"Crimson King | Effect\" sub-table of Magnus, the only model; Unearthly Power: \"select one of the abilities in the Crimson King section\"."
+ },
+ {
+  "key": "dd939754c42c93ca",
+  "where": "pubstomper · Magnus the Red · Impossible Form",
+  "verdict": "ok",
+  "why": "\"Each time an attack is made against this PSYKER (excluding Psychic Attacks), subtract 1 from the Damage characteristic\"; \"if picked this round\" is Unearthly Power's \"At the start of the battle round, select one ... Until the start of the next battle round\"."
+ },
+ {
+  "key": "7e7edefe8b57bac7",
+  "where": "pubstomper · Magnus the Red · Treason of Tzeentch",
+  "verdict": "ok",
+  "why": "NR prints \"Treason of Tzeentch (Psychic)\"."
+ },
+ {
+  "key": "7eda1e9889eeee96",
+  "where": "pubstomper · Magnus the Red · Treason of Tzeentch",
+  "verdict": "ok",
+  "why": "Listed in NR's \"Crimson King\" sub-table of Magnus (one model)."
+ },
+ {
+  "key": "860ee9ee4ea6dc83",
+  "where": "pubstomper · Magnus the Red · Time Flux",
+  "verdict": "ok",
+  "why": "NR prints \"Time Flux (Aura, Psychic)\"."
+ },
+ {
+  "key": "1f043a08fb269eb0",
+  "where": "pubstomper · Magnus the Red · Time Flux",
+  "verdict": "ok",
+  "why": "Listed in NR's \"Crimson King\" sub-table of Magnus (one model)."
+ },
+ {
+  "key": "929513203531579f",
+  "where": "pubstomper · Defiler",
+  "verdict": "ok",
+  "why": "\"While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll\": every attack (kind all), -1 to hit; adds no bonus already in NR's values."
+ },
+ {
+  "key": "44a7f43462c4dee6",
+  "where": "pubstomper · Sorcerer · Twisted Sorceries",
+  "verdict": "ok",
+  "why": "NR prints \"Twisted Sorceries (Psychic) - Sorcerer\"."
+ },
+ {
+  "key": "2e90d802b79541b8",
+  "where": "pubstomper · Sorcerer · Twisted Sorceries",
+  "verdict": "ok",
+  "why": "NR \"Twisted Sorceries (Psychic) - Sorcerer\"; \"this model\" is the Sorcerer. Model lines match NR (1 Sorcerer, 1 Aspiring Sorcerer, 1 w/ soulreaper cannon, 3 w/ warpflamer)."
+ },
+ {
+  "key": "814ac116a15175da",
+  "where": "pubstomper · Sorcerer · Empyric Guidance",
+  "verdict": "ok",
+  "why": "NR \"Empyric Guidance (Psychic) - Sorcerer\"; \"While this model is leading a unit\" = the Sorcerer."
+ },
+ {
+  "key": "e1f1e4dd0e935ceb",
+  "where": "pubstomper · Sorcerer · Bringers of Change",
+  "verdict": "ok",
+  "why": "NR \"Bringers of Change - Rubric Marines\": the Rubric Marines' datasheet ability."
+ },
+ {
+  "key": "ebb2fe680a92425d",
+  "where": "pubstomper · Sorcerer · Icon of Flame",
+  "verdict": "ok",
+  "why": "NR \"Icon of Flame - Rubric Marines\": who names the unit, not a model; the datasheet's \"1 Rubric Marine can be equipped with 1 icon of flame\" and NR say no more about the bearer, and the model lines no longer name one."
+ },
+ {
+  "key": "1b7519333c1fcc2d",
+  "where": "pubstomper · Sorcerer",
+  "verdict": "ok",
+  "why": "NR Categories: \"Battleline*, Rubric*, Rubric Marines*, Rubricae*, *from combined unit\"."
+ },
+ {
+  "key": "3fbe206fda6a4e3f",
+  "where": "pubstomper · Sorcerer",
+  "verdict": "ok",
+  "why": "NR roster: Sorcerer 100, (5) Rubric Marines 115; card 215 PTS."
+ },
+ {
+  "key": "41a47401425e5ff7",
+  "where": "pubstomper · Sorcerer",
+  "verdict": "ok",
+  "why": "Gear matches NR's four Options lines word for word; counts match (Warpflamer (x3), Close combat weapon (x4)). \"Icon of Flame - Rubric Marines\" is printed only in the Abilities table, on no models line, so unplaced is right; the app says \"New Recruit lists it for the Rubric Marines, not which model carries it\" and no line or model name assigns it."
+ },
+ {
+  "key": "cc0cf910f1aae9b1",
+  "where": "pubstomper · Sorcerer in Terminator Armour · Marked by Fate",
+  "verdict": "ok",
+  "why": "\"At the start of your Shooting phase ... Until the end of the phase\": your Shooting phase."
+ },
+ {
+  "key": "0d9aec4f1154d295",
+  "where": "pubstomper · Sorcerer in Terminator Armour · Marked by Fate",
+  "verdict": "ok",
+  "why": "NR prints \"Marked by Fate (Psychic)\"."
+ },
+ {
+  "key": "16a78c2c3f13f359",
+  "where": "pubstomper · Sorcerer in Terminator Armour · Marked by Fate",
+  "verdict": "ok",
+  "why": "NR \"Marked by Fate (Psychic) - Sorcerer in Terminator Armour\"; \"this PSYKER model\" = that Sorcerer. Model lines match NR."
+ },
+ {
+  "key": "61dd684b8d85949e",
+  "where": "pubstomper · Sorcerer in Terminator Armour · Empyric Guidance",
+  "verdict": "ok",
+  "why": "NR \"Empyric Guidance (Psychic) - Sorcerer in Terminator Armour\"; the leader's ability."
+ },
+ {
+  "key": "fed3be5b69c29121",
+  "where": "pubstomper · Sorcerer in Terminator Armour · Umbralefic Crystal",
+  "verdict": "ok",
+  "why": "NR Options of \"1x Sorcerer in Terminator Armour\": \"Umbralefic Crystal, ...\"; abilities row \"Umbralefic Crystal - Sorcerer in Terminator Armour\"."
+ },
+ {
+  "key": "e008bb4d922418c8",
+  "where": "pubstomper · Sorcerer in Terminator Armour · Rites of Coalescence",
+  "verdict": "ok",
+  "why": "NR \"Rites of Coalescence - Scarab Occult Terminators\": the bodyguard's datasheet ability."
+ },
+ {
+  "key": "2b2d7d1576c3e4bf",
+  "where": "pubstomper · Sorcerer in Terminator Armour · Rites of Coalescence",
+  "verdict": "ok",
+  "why": "\"While this unit contains one or more PSYKER models, each time an attack targets this unit, subtract 1 from the Wound roll\": said shorter, nothing added."
+ },
+ {
+  "key": "8c11b7b20f217e1e",
+  "where": "pubstomper · Sorcerer in Terminator Armour",
+  "verdict": "fix",
+  "why": "The rule lasts only \"Until the end of the phase\" (your Shooting phase); the when \"vs the enemy unit picked at the start of your Shooting phase\" names no end, so it also reads as covering later attacks on that unit (e.g. Fire Overwatch in the next turn). Should be when:'Your Shooting phase, vs the enemy unit picked at its start' (kind ranged and note '+1 to hit rolls' are right).",
+  "fix": {
+   "kind": "ranged",
+   "when": "Your Shooting phase, vs the enemy unit picked at its start",
+   "note": "+1 to hit rolls",
+   "from": "Marked by Fate"
+  }
+ },
+ {
+  "key": "d81d42f2cc054d3b",
+  "where": "pubstomper · Sorcerer in Terminator Armour",
+  "verdict": "ok",
+  "why": "NR Categories: \"Rubricae*, Scarab Occult*, *from combined unit\"."
+ },
+ {
+  "key": "652535488e26ccb9",
+  "where": "pubstomper · Sorcerer in Terminator Armour",
+  "verdict": "ok",
+  "why": "NR roster: Sorcerer in Terminator Armour 140, (10) Scarab Occult Terminators 425; card 565 PTS."
+ },
+ {
+  "key": "f2d79da589c98126",
+  "where": "pubstomper · Sorcerer in Terminator Armour",
+  "verdict": "ok",
+  "why": "Gear matches NR's four Options lines (Umbralefic Crystal is the enhancement, not gear); counts match (combi-bolter (x8) = Scarab Sorcerer + 7, soulreaper (x2), khopesh (x9)). \"Hellfyre missile rack (x2) - Scarab Occult Terminators\" is printed only in the weapons table, on no models line, so unplaced is right; the datasheet's \"1 Scarab Occult Terminator can be equipped\" per 5 models leaves the bearers open and the app says so instead of guessing."
+ },
+ {
+  "key": "c7ba9f3b8558aa24",
+  "where": "pubstomper · Tzaangors · Brayhorn",
+  "verdict": "ok",
+  "why": "\"re-roll Advance and Charge rolls\": Advance rolls are made in your Movement phase; Charge rolls in your Charge phase and in theirs via Heroic Intervention (\"Resolve a charge ... before making the charge roll\"), which Tzaangors can use."
+ },
+ {
+  "key": "b3cad82a2811fb9c",
+  "where": "pubstomper · Tzaangors",
+  "verdict": "ok",
+  "why": "NR: every one of the four models lines has \"Tzaangor blades\" (Brayhorn and Herd banner are printed on their lines, kept in the line names); Tzaangor blades (x10) = 1+7+1+1."
+ },
+ {
+  "key": "3bca809001bd76a5",
+  "where": "pubstomper · Tzaangor Enlightened with Fatecaster greatbows · Malign Trickery",
+  "verdict": "ok",
+  "why": "\"In your opponent's Movement phase, if an enemy unit ends a move within 8\"\"."
+ },
+ {
+  "key": "ae079e36c5bafef8",
+  "where": "pubstomper · Defiler · Scuttling Walker",
+  "verdict": "ok",
+  "why": "\"Each time this unit makes a Normal, Advance or Fall Back move\": your Movement phase, plus Temporal Surge's \"Normal move of up to D6\"\" for a THOUSAND SONS unit at the start of your Shooting phase; no rule in this list gives the Defiler such a move in the opponent's turn."
+ },
+ {
+  "key": "797cef29425c3f71",
+  "where": "pubstomper · Defiler · Damaged: 1-6 wounds remaining",
+  "verdict": "ok",
+  "why": "Defiler W 18 (NR stats row); \"1-6 wounds remaining\"."
+ },
+ {
+  "key": "346475051be17cf3",
+  "where": "pubstomper · Defiler",
+  "verdict": "ok",
+  "why": "NR Options: \"Ectoplasma destructor, 2x Heavy reaper autocannon, Shearing claws, Two excruciator cannons (2x Excruciator cannon)\"; weapons table Excruciator cannon (x2), Heavy reaper autocannon (x2), Shearing claws strike/sweep."
+ },
+ {
+  "key": "3e2fa51f1861fa0a",
+  "where": "Grand Coven · Psychic Dominion",
+  "verdict": "ok",
+  "why": "WHEN: \"Any phase, just after an enemy unit has selected its targets\" (Wahapedia): all five phases."
+ },
+ {
+  "key": "7216fa448a775e9a",
+  "where": "Grand Coven · Psychic Dominion",
+  "verdict": "ok",
+  "why": "\"Any phase\": enemy units select targets in their turn (Shooting, Fight) and in yours (Fight, Fire Overwatch)."
+ },
+ {
+  "key": "fc1ced1ffef5c105",
+  "where": "Grand Coven · Psychic Dominion",
+  "verdict": "ok",
+  "why": "TARGET: \"One THOUSAND SONS unit from your army\"; every unit of the list has Faction: Thousand Sons."
+ },
+ {
+  "key": "e452822fb991fb7b",
+  "where": "Grand Coven · Psychic Dominion",
+  "verdict": "ok",
+  "why": "Matches Wahapedia's current EFFECT: \"all attacks made against your unit with Psychic weapons have the [HAZARDOUS] ability and all models in your unit have the Feel No Pain 4+ ability against Psychic Attacks\"; shown when targeted, as the WHEN (\"just after an enemy unit has selected its targets\") is."
+ },
+ {
+  "key": "dc8fe389dd57c66a",
+  "where": "Grand Coven · Psychic Dominion",
+  "verdict": "ok",
+  "why": "Same as Wahapedia's current EFFECT (\"Until the end of the phase, all attacks made against your unit with Psychic weapons have the [hazardous] ability and all models in your unit have the Feel No Pain 4+ ability against Psychic Attacks\") with only \"all\" dropped."
+ }
+]
