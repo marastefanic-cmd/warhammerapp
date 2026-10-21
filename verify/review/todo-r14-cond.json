@@ -1,0 +1,331 @@
+[
+ {
+  "army": "shooty",
+  "kind": "unit-footnote",
+  "where": "shooty · Big Mek Dakkarig",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Riled up",
+   "cond": "riled",
+   "note": "[SUSTAINED HITS 1]",
+   "from": "Even More Dakka"
+  },
+  "source": {
+   "ability": "Even More Dakka",
+   "text": "If this unit is **riled up**, this unit’s ranged attacks have **[SUSTAINED HITS 1]**."
+  },
+  "key": "7a94c964a5582ba2"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "unit-footnote",
+  "where": "ooga-booga · Big Mek in Mega Armour",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Riled up",
+   "cond": "riled",
+   "note": "[SUSTAINED HITS 1]",
+   "from": "More Dakka"
+  },
+  "source": {
+   "ability": "More Dakka",
+   "text": "This unit’s ranged attacks have:\n- **[IGNORES COVER]**.\n- If this unit is **riled up**, **[SUSTAINED HITS 1]**."
+  },
+  "key": "ff976d61f7607f40"
+ },
+ {
+  "army": "shooty",
+  "kind": "unit-footnote",
+  "where": "shooty · Warboss",
+  "judgement": {
+   "kind": "melee",
+   "when": "Made a charge move this turn",
+   "cond": "charged",
+   "note": "+3 A, +2 S",
+   "from": "Might is Right"
+  },
+  "source": {
+   "ability": "Might is Right",
+   "text": "If this unit made a **charge move** this turn, this model’s melee attacks have:\n- +3 **A**.\n- +2 **S**."
+  },
+  "key": "329af2485182a556"
+ },
+ {
+  "army": "shooty",
+  "kind": "unit-footnote",
+  "where": "shooty · Mek",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Your Shooting phase, this unit or the target within range of an objective",
+   "cond": "objective",
+   "note": "+1 AP",
+   "from": "Finderz Keeperz"
+  },
+  "source": {
+   "ability": "Finderz Keeperz",
+   "text": "In your Shooting phase, if any of the following apply, this unit’s ranged attacks have +1 **AP**.\n- This unit is within range of an **objective**.\n- The target of that attack is within range of an **objective**."
+  },
+  "key": "1d68fa71eab6355a"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "rule-mod",
+  "where": "Shoota Boyz rule · Dakka! Dakka! Dakka!",
+  "judgement": {
+   "mod": {
+    "kind": "ranged",
+    "when": "Riled up",
+    "cond": "riled",
+    "note": "+3\" range"
+   }
+  },
+  "source": {
+   "rule": "Dakka! Dakka! Dakka!",
+   "text": "Friendly **ORKS INFANTRY** units’ ranged attacks have:\n- **[ASSAULT]**.\n- While this unit is **riled up**, +3\" **R**."
+  },
+  "key": "47ba1fece642e216"
+ },
+ {
+  "army": "shooty",
+  "kind": "rule-mod",
+  "where": "Wreckas rule · Wreckin’ and Lootin’",
+  "judgement": {
+   "mod": {
+    "kind": "ranged",
+    "when": "Your Shooting phase, this unit or the target within range of an objective",
+    "cond": "objective",
+    "note": "can re-roll hit rolls of 1"
+   }
+  },
+  "source": {
+   "rule": "Wreckin’ and Lootin’",
+   "text": "In your Shooting phase, when a friendly **BREAKA BOYZ**/**FLASH GITZ**/**TANKBUSTAS** unit is **selected to shoot**, if any of the following apply, that unit’s attacks can re-roll **hit rolls** of 1:\n- That unit is within range of an **objective**.\n- The target of that attack is within range of an **objective**."
+  },
+  "key": "fc7796a060198b9c"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "unit-footnote",
+  "where": "ooga-booga · Big Mek in Mega Armour",
+  "judgement": {
+   "kind": "melee",
+   "when": "Riled up, Fight phase",
+   "cond": "riled",
+   "note": "+1 to hit rolls",
+   "from": "Krumpin’ Time"
+  },
+  "source": {
+   "ability": "Krumpin’ Time",
+   "text": "In the Fight phase, if this unit is **riled up**, this unit has +1 to **hit rolls**."
+  },
+  "key": "21292393d1a6daab"
+ },
+ {
+  "army": "melee",
+  "kind": "unit-footnote",
+  "where": "melee · Beastboss on Squigosaur",
+  "judgement": {
+   "kind": "melee",
+   "when": "Made a charge move this turn",
+   "cond": "charged",
+   "note": "+1 AP",
+   "from": "Headwoppa’s Killchoppa"
+  },
+  "source": {
+   "ability": "Headwoppa’s Killchoppa",
+   "text": "**ORKS** model only. If this unit made a **charge move** this turn, this model’s melee attacks have +1 AP."
+  },
+  "key": "52826eb80288538e"
+ },
+ {
+  "army": "melee",
+  "kind": "unit-footnote",
+  "where": "melee · Squighog Boyz",
+  "judgement": {
+   "kind": "melee",
+   "when": "Made a charge move this turn",
+   "cond": "charged",
+   "note": "+1 D",
+   "from": "Brutal Impact"
+  },
+  "source": {
+   "ability": "Brutal Impact",
+   "text": "If this unit made a **charge move** this turn, this unit’s attacks have +1 **D**."
+  },
+  "key": "4041ac8f82888c91"
+ },
+ {
+  "army": "standard",
+  "kind": "unit-footnote",
+  "where": "standard · Khârn the Betrayer",
+  "judgement": {
+   "kind": "melee",
+   "when": "Made a charge move this turn",
+   "cond": "charged",
+   "note": "+1 S",
+   "from": "Murderous Charge"
+  },
+  "source": {
+   "ability": "Murderous Charge",
+   "text": "If this unit made a charge move this turn, this unit’s melee attacks have +1 S."
+  },
+  "key": "27aa9969039b1408"
+ },
+ {
+  "army": "princes",
+  "kind": "unit-footnote",
+  "where": "princes · Daemon Prince of Khorne",
+  "judgement": {
+   "kind": "melee",
+   "when": "Made a charge move this turn",
+   "cond": "charged",
+   "note": "Hellforged weapons have [DEVASTATING WOUNDS] until the end of the turn",
+   "from": "Devastating Assault"
+  },
+  "source": {
+   "ability": "Devastating Assault",
+   "text": "Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the **[DEVASTATING WOUNDS]** ability."
+  },
+  "key": "4bb7620ec0bba258"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "unit-footnote",
+  "where": "super-terminators · Forgefiend",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Target is the closest eligible target within 18\"",
+   "cond": "closest18",
+   "note": "re-roll the hit roll",
+   "from": "Furious Onslaught"
+  },
+  "source": {
+   "ability": "Furious Onslaught",
+   "text": "Each time this model makes a ranged attack that targets the closest eligible target within 18\", you can re-roll the Hit roll."
+  },
+  "key": "26e838f5fe24a4de"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "strat-mod",
+  "where": "Berzerker Warband · Hack and Slash",
+  "judgement": {
+   "mod": {
+    "kind": "melee",
+    "when": "Made a charge move this turn",
+    "cond": "charged",
+    "note": "+1 AP in the Fight phase"
+   }
+  },
+  "source": {
+   "stratagem": "Hack and Slash",
+   "text": "WHEN: Fight phase.\nTARGET: One **WORLD EATERS** unit from your army that has not been selected to fight this phase and that made a **charge move** this turn.\nEFFECT: Until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1."
+  },
+  "key": "8526839c952579da"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "unit-footnote",
+  "where": "pubstomper · Sorcerer",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Target within range of an objective marker you do not control",
+   "cond": "targetObjectiveNotYours",
+   "note": "re-roll the wound roll",
+   "from": "Bringers of Change",
+   "calc": {
+    "rrWound": "all"
+   }
+  },
+  "source": {
+   "ability": "Bringers of Change",
+   "text": "Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead."
+  },
+  "key": "125b2502c668bb4d"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "unit-footnote",
+  "where": "4-megas-and-a-destrier · Knight Destrier",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Target within range of an objective marker",
+   "cond": "targetObjective",
+   "note": "ranged attacks have [IGNORES COVER]",
+   "from": "Saturation Fire"
+  },
+  "source": {
+   "ability": "Saturation Fire",
+   "text": "Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the **[IGNORES COVER]** ability."
+  },
+  "key": "ae6008ec9323de25"
+ },
+ {
+  "army": "6-bigs",
+  "kind": "unit-footnote",
+  "where": "6-bigs · Knight Errant",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Target is the closest eligible target",
+   "cond": "closest",
+   "note": "+1 to hit rolls",
+   "from": "Aggressive Assault"
+  },
+  "source": {
+   "ability": "Aggressive Assault",
+   "text": "Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the **Hit roll**."
+  },
+  "key": "48b448a08e7f6bc3"
+ },
+ {
+  "army": "6-bigs",
+  "kind": "unit-footnote",
+  "where": "6-bigs · Knight Paladin",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Target is the closest eligible target",
+   "cond": "closest",
+   "note": "improve AP by 1",
+   "from": "Seasoned Noble"
+  },
+  "source": {
+   "ability": "Seasoned Noble",
+   "text": "Each time this model makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1."
+  },
+  "key": "99c1a1e146fab39f"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "unit-footnote",
+  "where": "4-megas-and-a-destrier · Knight Crusader",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Remained Stationary in your Movement phase",
+   "cond": "stationary",
+   "note": "ranged weapons have [SUSTAINED HITS 1] until the end of the turn",
+   "from": "Punishing Salvoes"
+  },
+  "source": {
+   "ability": "Punishing Salvoes",
+   "text": "In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability."
+  },
+  "key": "d6a0dfab18ca54d5"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "unit-footnote",
+  "where": "super-terminators · Chaos Terminators",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Target is the closest eligible target",
+   "cond": "closest",
+   "note": "re-roll hit rolls",
+   "from": "Bloody Fury"
+  },
+  "source": {
+   "ability": "Bloody Fury",
+   "text": "This unit’s ranged attacks that target the closest eligible target can re-roll **hit rolls**.\nWhen this unit **declares a charge**, you can use this part of this ability. If you do:\n- This unit can re-roll that **charge roll**.\n- This unit must end that **charge move** **engaged** with the closest **charge target**."
+  },
+  "key": "125a1771467ea031"
+ }
+]

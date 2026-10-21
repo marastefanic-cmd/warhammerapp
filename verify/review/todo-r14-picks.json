@@ -1,0 +1,301 @@
+[
+ {
+  "army": "shooty",
+  "kind": "rule-mod",
+  "where": "Dread Mob rule · Try Dat Button!",
+  "judgement": {
+   "mod": {
+    "kind": "all",
+    "when": "Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6)",
+    "note": "1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked)",
+    "pick": [
+     {
+      "name": "1–2",
+      "note": "+1 A"
+     },
+     {
+      "name": "3–4",
+      "note": "+2 S"
+     },
+     {
+      "name": "5–6",
+      "note": "+1 AP"
+     },
+     {
+      "name": "1–2 and 3–4",
+      "note": "+1 A, +2 S"
+     },
+     {
+      "name": "1–2 and 5–6",
+      "note": "+1 A, +1 AP"
+     },
+     {
+      "name": "3–4 and 5–6",
+      "note": "+2 S, +1 AP"
+     }
+    ]
+   }
+  },
+  "source": {
+   "rule": "Try Dat Button!",
+   "text": "In your Shooting phase or the Fight phase, when a friendly **ORKS WALKER** unit (excluding **TITANIC** units) is **selected to attack**, you can use this ability. If you do, roll either one D6 or two D6 (keep re-rolling duplicate results). This unit’s attacks have the relevant rule(s):\nIf you rolled two D6, when this unit has attacked, this unit makes one **hazard roll**.\n1–2: +1 **A**\n3–4: +2 **S**\n5–6: +1 **AP**"
+  },
+  "key": "b4ec840cb29ee8e6"
+ },
+ {
+  "army": "standard",
+  "kind": "rule-mod",
+  "where": "Vessels of Wrath rule · Wrath of Khorne",
+  "judgement": {
+   "mod": {
+    "kind": "melee",
+    "when": "When selected to fight",
+    "note": "CHARACTER models: [CLEAVE 1] or +1 AP",
+    "pick": [
+     {
+      "name": "[CLEAVE 1]",
+      "note": "CHARACTER models: [CLEAVE 1]"
+     },
+     {
+      "name": "+1 AP",
+      "note": "CHARACTER models: +1 AP"
+     }
+    ]
+   }
+  },
+  "source": {
+   "rule": "Wrath of Khorne",
+   "text": "When a friendly **WORLD EATERS CHARACTER** unit (excluding **EPIC HERO** units) is **selected to fight**, that unit’s **CHARACTER** models’ melee attacks can have:\n- **[CLEAVE 1]**.\n- Or: +1 **AP**."
+  },
+  "key": "87c63a07505281b9"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "rule-mod",
+  "where": "Crusher Stampede rule · Enraged Behemoths",
+  "judgement": {
+   "mod": {
+    "kind": "all",
+    "when": "Below Starting Strength",
+    "note": "+1 to hit rolls; also +1 to wound rolls if Below Half-strength",
+    "pick": [
+     {
+      "name": "Below Starting Strength",
+      "note": "+1 to hit rolls"
+     },
+     {
+      "name": "Below Half-strength",
+      "note": "+1 to hit rolls, +1 to wound rolls"
+     }
+    ],
+    "single": {
+     "when": "Lost any wounds (below Starting Strength)",
+     "note": "+1 to hit rolls; also +1 to wound rolls at {half} or fewer wounds left"
+    }
+   }
+  },
+  "source": {
+   "rule": "Enraged Behemoths",
+   "text": "Each time a **TYRANIDS MONSTER** model from your army makes an attack, add 1 to the **Hit roll** if that model’s unit is below its Starting Strength, and add 1 to the **Wound roll** as well if that model’s unit is **Below Half-strength**. In addition, while a **TYRANIDS MONSTER** unit from your army (excluding **Battle-shocked** units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit."
+  },
+  "key": "9605f91bba7405aa"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-defPick",
+  "where": "Crusher Stampede · Savage Roar",
+  "judgement": {
+   "defPick": [
+    {
+     "name": "Test passed",
+     "calc": {
+      "hitMinus": 1
+     }
+    },
+    {
+     "name": "Test failed",
+     "calc": {
+      "hitMinus": 1,
+      "woundMinus": 1
+     }
+    }
+   ]
+  },
+  "source": {
+   "stratagem": "Savage Roar",
+   "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **TYRANIDS MONSTER** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: That enemy unit must take a **Battle-shock test** and, until the end of the phase, each time a model in that enemy unit makes an attack that targets your unit, subtract 1 from the **Hit roll**. If that Battle-shock test was failed, subtract 1 from the **Wound roll** as well."
+  },
+  "key": "30b2893f3c65de18"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "unit-footnote",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos",
+  "judgement": {
+   "kind": "all",
+   "when": "vs TITANIC/TOWERING",
+   "note": "+1 to wound rolls",
+   "from": "Macro-extinction Protocols",
+   "always": true,
+   "vs": {
+    "any": [
+     "Titanic",
+     "Towering"
+    ],
+    "also": {
+     "any": [
+      "Monster",
+      "Vehicle"
+     ]
+    }
+   }
+  },
+  "source": {
+   "ability": "Macro-extinction Protocols",
+   "text": "Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well."
+  },
+  "key": "5774666c9dddd1d1"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-mod",
+  "where": "Bully Boyz · Armed to da Teef",
+  "judgement": {
+   "mod": {
+    "kind": "all",
+    "when": "Your Shooting phase or the Fight phase",
+    "note": "can re-roll hit rolls of 1 (riled up: can re-roll hit rolls)",
+    "pick": [
+     {
+      "name": "Hit rolls of 1",
+      "note": "re-roll hit rolls of 1"
+     },
+     {
+      "name": "Riled up: every hit roll",
+      "note": "re-roll hit rolls"
+     }
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Armed to da Teef",
+   "text": "WHEN: Your Shooting phase or the Fight phase, when a friendly **MEGANOBZ**/**NOBZ** unit is **selected to attack**.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: Your unit’s attacks can:\n- Re-roll **hit rolls** of 1.\n- If your unit is **riled up**, re-roll **hit rolls**."
+  },
+  "key": "2b89aa894df8b6d2"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-defPick",
+  "where": "Bully Boyz · Hulking Brutes",
+  "judgement": {
+   "defPick": [
+    {
+     "name": "S greater than T",
+     "calc": {
+      "woundMinusSgt": 1
+     }
+    },
+    {
+     "name": "+1CP: every ranged attack",
+     "calc": {
+      "woundMinus": 1
+     }
+    }
+   ]
+  },
+  "source": {
+   "stratagem": "Hulking Brutes",
+   "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **MEGANOBZ**/**NOBZ** unit.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: Ranged attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**.\n**+1CP** Or: Ranged attacks that target your unit have -1 to **wound rolls**."
+  },
+  "key": "2fb562b37e49d20f"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-mod",
+  "where": "Cohort Cybernetica · Machine Spirit Resurgent",
+  "judgement": {
+   "mod": {
+    "kind": "all",
+    "when": "Your Command phase, below its Starting Strength; until the start of your next Command phase",
+    "note": "can re-roll hit rolls (and wound rolls if Below Half-strength)",
+    "pick": [
+     {
+      "name": "Below Starting Strength",
+      "note": "re-roll hit rolls"
+     },
+     {
+      "name": "Below Half-strength",
+      "note": "re-roll hit rolls and wound rolls"
+     }
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Machine Spirit Resurgent",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army that is below its Starting Strength.\nEFFECT: Until the start of your next Command phase, each time a model in your unit makes an attack, you can re-roll the **Hit roll**. If your unit is **Below Half-strength**, you can re-roll the **Wound roll** as well."
+  },
+  "key": "17cec1a670775dfb"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "rule-mod",
+  "where": "Eradication Cohort rule · Murderous Imperative",
+  "judgement": {
+   "mod": {
+    "kind": "all",
+    "when": "Protector or Conqueror Imperative active for this unit",
+    "note": "Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1",
+    "pick": [
+     {
+      "name": "Protector",
+      "note": "re-roll hit rolls of 1"
+     },
+     {
+      "name": "Conqueror",
+      "note": "re-roll wound rolls of 1"
+     },
+     {
+      "name": "Both (Omnicogitator)",
+      "note": "re-roll hit rolls of 1 and wound rolls of 1"
+     }
+    ]
+   }
+  },
+  "source": {
+   "rule": "Murderous Imperative",
+   "text": "Each time a model in a **SKITARII** unit from your army makes an attack:\n- If the Protector Imperative is active for that unit, re-roll a **Hit roll** of 1.\n- If the Conqueror Imperative is active for that unit, re-roll a **Wound roll** of 1."
+  },
+  "key": "9cecfe42cffe0557"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-mod",
+  "where": "Eradication Cohort · Unshackled Wrath",
+  "judgement": {
+   "mod": {
+    "kind": "ranged",
+    "when": "Your Shooting phase",
+    "note": "[SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS]",
+    "pick": [
+     {
+      "name": "Sustained Hits",
+      "note": "[SUSTAINED HITS 1]"
+     },
+     {
+      "name": "Lethal Hits",
+      "note": "[LETHAL HITS]"
+     },
+     {
+      "name": "All three",
+      "note": "[SUSTAINED HITS 1], [LETHAL HITS] and [HAZARDOUS]"
+     }
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Unshackled Wrath",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One **SKITARII** unit from your army that has not been selected to shoot this phase.\nEFFECT: Select the **[SUSTAINED HITS 1]** or **[LETHAL HITS]** ability. Until the end of the phase, ranged weapons equipped by models in your unit have the selected ability. You can instead select the **[SUSTAINED HITS 1]**, **[LETHAL HITS]** and **[HAZARDOUS]** abilities to apply to those weapons until the end of the phase."
+  },
+  "key": "7dbeca7548af2876"
+ }
+]
