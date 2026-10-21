@@ -1,0 +1,516 @@
+[
+ {
+  "army": "melee",
+  "kind": "ability-note",
+  "where": "melee · Ghazghkull Thraka · Supreme Commander",
+  "judgement": {
+   "note": "Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”"
+  },
+  "source": {
+   "ability": "Supreme Commander",
+   "text": "If this model is in your army, it must be your **WARLORD**.",
+   "others": [
+    "Makari, Hoist Dat Banner!: In your Movement phase, you can select a number of friendly **ORKS** units equal to or less than the current battle round number. Those units are **riled up** until the start of your next turn.\n*Place one Makari token next to the unit, removing it after this ability is used.*",
+    "Da Grand Warlord’s Ladz: While this unit is within 3\" of another friendly **ORKS INFANTRY** unit, this unit has **Lone Operative**.",
+    "Prophet of Da Great Waaagh!: While a friendly **ORKS** unit is within 6\" of this unit, that unit’s melee attacks have:\n- +1 to **hit rolls**.\n- +1 to **wound rolls**."
+   ],
+   "listRules": [
+    "Waaagh!",
+    "War Cry",
+    "Da Boss",
+    "Get Stuck In"
+   ]
+  },
+  "key": "8f35934d70da634a"
+ },
+ {
+  "army": "princes",
+  "kind": "unit-kwNote",
+  "where": "princes · Slaughterbound",
+  "judgement": {
+   "kwNote": "Exalted Eightbound comes from the led Exalted Eightbound."
+  },
+  "source": {
+   "models": [
+    "1× Slaughterbound",
+    "1× Exalted Eightbound Champion",
+    "2× Exalted Eightbound"
+   ],
+   "stats": [
+    "Slaughterbound W6 OC1",
+    "Exalted Eightbound ×3 W3 OC1"
+   ],
+   "weapons": [
+    "Lacerator and daemonic claw 7 -2 2",
+    "Chainblades 5 -3 2 ANTI-MONSTER 3+, ANTI-VEHICLE 3+"
+   ]
+  },
+  "key": "891c18dc6cb1bbc3"
+ },
+ {
+  "army": "princes",
+  "kind": "unit-partialRules",
+  "where": "princes · Slaughterbound",
+  "judgement": {
+   "partialRules": {
+    "Scouts 6\"": "Slaughterbound"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Slaughterbound",
+    "1× Exalted Eightbound Champion",
+    "2× Exalted Eightbound"
+   ],
+   "rules": [
+    "Leader",
+    "Deadly Demise D3",
+    "Blessings of Khorne",
+    "Deep Strike",
+    "Scouts 6\"",
+    "Anti"
+   ],
+   "abilities": [
+    "Slaughterbound · Rage Eternal: While this model is leading a unit, in your Command phase, you can return one destroyed Bodyguard model to that unit.",
+    "Slaughterbound · Possessed Lord: Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the **[Devastating Wounds]** ability.",
+    "Slaughterbound · Lord of the Eightbound: If this model is attached to a **WORLD EATERS POSSESSED** unit during the Declare Battle Formations step, this model has the **Deep Strike** and **Scouts 6\"** abilities.",
+    "Slaughterbound · Battle-lust: **WORLD EATERS** model only. You can re-roll **Charge rolls** made for the bearer’s unit. In addition, while the Unbridled Bloodlust Blessing of Khorne is active for your army, add 1 to Charge rolls made for the bearer’s unit.",
+    "Exalted Eightbound · Rend and Tear: Each time a model in this unit makes a melee attack that targets a **MONSTER** or **VEHICLE** unit, until the end of the phase, improve the Damage characteristic of that attack by 1."
+   ]
+  },
+  "key": "7e38ba43759ec810"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "ability-timing",
+  "where": "super-terminators · Forgefiend · Furious Onslaught",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Furious Onslaught",
+   "text": "Each time this model makes a ranged attack that targets the closest eligible target within 18\", you can re-roll the Hit roll."
+  },
+  "key": "416a5f9b81853e1a"
+ },
+ {
+  "army": "standard",
+  "kind": "unit-kwNote",
+  "where": "standard · Slaughterbound",
+  "judgement": {
+   "kwNote": "Exalted Eightbound comes from the led Exalted Eightbound."
+  },
+  "source": {
+   "models": [
+    "1× Slaughterbound",
+    "1× Exalted Eightbound Champion",
+    "2× Exalted Eightbound"
+   ],
+   "stats": [
+    "Slaughterbound W6 OC1",
+    "Exalted Eightbound ×3 W3 OC1"
+   ],
+   "weapons": [
+    "Lacerator and daemonic claw 8 -2 3",
+    "Chainblades 5 -3 2 ANTI-MONSTER 3+, ANTI-VEHICLE 3+"
+   ]
+  },
+  "key": "5591b92f968de557"
+ },
+ {
+  "army": "standard",
+  "kind": "unit-ptsNote",
+  "where": "standard · Slaughterbound",
+  "judgement": {
+   "ptsNote": "125 + Exalted Eightbound 130"
+  },
+  "source": {
+   "models": [
+    "1× Slaughterbound",
+    "1× Exalted Eightbound Champion",
+    "2× Exalted Eightbound"
+   ],
+   "stats": [
+    "Slaughterbound W6 OC1",
+    "Exalted Eightbound ×3 W3 OC1"
+   ],
+   "weapons": [
+    "Lacerator and daemonic claw 8 -2 3",
+    "Chainblades 5 -3 2 ANTI-MONSTER 3+, ANTI-VEHICLE 3+"
+   ]
+  },
+  "key": "3d098f7e7305160c"
+ },
+ {
+  "army": "standard",
+  "kind": "unit-partialRules",
+  "where": "standard · Slaughterbound",
+  "judgement": {
+   "partialRules": {
+    "Scouts 6\"": "Slaughterbound"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Slaughterbound",
+    "1× Exalted Eightbound Champion",
+    "2× Exalted Eightbound"
+   ],
+   "rules": [
+    "Leader",
+    "Deadly Demise D3",
+    "Blessings of Khorne",
+    "Deep Strike",
+    "Scouts 6\"",
+    "Anti"
+   ],
+   "abilities": [
+    "Slaughterbound · Rage Eternal: While this model is leading a unit, in your Command phase, you can return one destroyed Bodyguard model to that unit.",
+    "Slaughterbound · Possessed Lord: Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the **[Devastating Wounds]** ability.",
+    "Slaughterbound · Lord of the Eightbound: If this model is attached to a **WORLD EATERS POSSESSED** unit during the Declare Battle Formations step, this model has the **Deep Strike** and **Scouts 6\"** abilities.",
+    "Slaughterbound · Berzerker Glaive: **WORLD EATERS** model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.",
+    "Exalted Eightbound · Rend and Tear: Each time a model in this unit makes a melee attack that targets a **MONSTER** or **VEHICLE** unit, until the end of the phase, improve the Damage characteristic of that attack by 1."
+   ]
+  },
+  "key": "9d9bcb9766e506d9"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-note",
+  "where": "nidzillas · Norn Assimilator · Singular Purpose",
+  "judgement": {
+   "note": "With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers."
+  },
+  "source": {
+   "ability": "Singular Purpose",
+   "text": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.",
+   "others": [
+    "Harpoon Barbs: Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.",
+    "Damaged: 1-5 Wounds Remaining: While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+    "Protean Purpose: (Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).",
+    "Synaptoprescience: **NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**."
+   ],
+   "listRules": [
+    "Synapse",
+    "Shadow in the Warp",
+    "Enraged Behemoths",
+    "Higher Imperatives"
+   ]
+  },
+  "key": "c638e54714706332"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-note",
+  "where": "nidzillas · Norn Emissary · Singular Purpose",
+  "judgement": {
+   "note": "With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers."
+  },
+  "source": {
+   "ability": "Singular Purpose",
+   "text": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.",
+   "others": [
+    "Damaged: 1-5 Wounds Remaining: While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+    "Protean Purpose: (Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).",
+    "Destabilising Predation: **NORN EMISSARY** unit only. This unit’s ranged attacks have **[ANTI-CHARACTER 2+]**.",
+    "Unnatural Resistance: This model has the **Feel No Pain 4+** ability against Mortal Wounds."
+   ],
+   "listRules": [
+    "Synapse",
+    "Shadow in the Warp",
+    "Enraged Behemoths",
+    "Higher Imperatives"
+   ]
+  },
+  "key": "96e04b459d738c9e"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-note",
+  "where": "nidzillas · Norn Emissary · Singular Purpose",
+  "judgement": {
+   "note": "With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers."
+  },
+  "source": {
+   "ability": "Singular Purpose",
+   "text": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.",
+   "others": [
+    "Damaged: 1-5 Wounds Remaining: While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+    "Protean Purpose: (Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).",
+    "Unnatural Resistance: This model has the **Feel No Pain 4+** ability against Mortal Wounds."
+   ],
+   "listRules": [
+    "Synapse",
+    "Shadow in the Warp",
+    "Enraged Behemoths",
+    "Higher Imperatives"
+   ]
+  },
+  "key": "ebef5b1486218daa"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "rule-note",
+  "where": "imperial-knights army rule · Super-heavy Walker",
+  "judgement": {
+   "note": "IMPERIAL KNIGHTS datasheets list Super-heavy Walker as a FACTION ability (Faction Pack 1.2), whose Codex text differs from Core Rules 24.35; the sources don’t say which applies."
+  },
+  "source": {
+   "rule": "Super-heavy Walker",
+   "text": "Each time a model with this ability makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and sections of **terrain features** that are 4\" or less in height. When doing so:\n- It can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them.\n- It can also move through sections of terrain features that are more than 4\" in height, but if it does, after it has moved, roll one D6: on a 1, that model is **Battle-shocked**."
+  },
+  "key": "fffea01d7b0e2b2e"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "rule-coreTwin",
+  "where": "imperial-knights army rule · Super-heavy Walker",
+  "judgement": {
+   "coreTwin": "Super-Heavy Walker"
+  },
+  "source": {
+   "rule": "Super-heavy Walker",
+   "text": "Each time a model with this ability makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and sections of **terrain features** that are 4\" or less in height. When doing so:\n- It can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them.\n- It can also move through sections of terrain features that are more than 4\" in height, but if it does, after it has moved, roll one D6: on a 1, that model is **Battle-shocked**.",
+   "core": "Each time a unit with this ability makes a **normal**, **advance** or **fall-back move**:\n- Models in that unit can move through models (including **MONSTER/VEHICLE** models, but excluding **TITANIC** models) and can move horizontally through sections of **terrain features** that are 4\" or less in height.\n- Before moving that unit, you can select for all models in that unit to have the **MOBILE** keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked.\n*Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).*"
+  },
+  "key": "8d42c2a44321ffa9"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "strat-note",
+  "where": "Freeblade Company · Full Tilt",
+  "judgement": {
+   "note": "No datasheet has the DESTRIER keyword; the Knight Destrier has KNIGHT DESTRIER. Wahapedia FAQ (02.05 Keywords): “Do rules that affect a keyword include multi-word keywords that contain that keyword? For example, would rules that affect COMMISSAR units affect a unit that has the COMMISSAR GRAVES keyword?” “No.”"
+  },
+  "source": {
+   "stratagem": "Full Tilt",
+   "text": "WHEN: Your Movement phase.\nTARGET: One **IMPERIAL KNIGHTS** unit from your army.\nEFFECT: Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in your unit, or 9\" instead if your unit is an **ARMIGER** or **DESTRIER** unit."
+  },
+  "key": "fdc92651c97a8d49"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "unit-partialRules",
+  "where": "4-megas-and-a-destrier · Canis Rex",
+  "judgement": {
+   "partialRules": {
+    "Lone Operative": "Sir Hekhtur"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Canis Rex",
+    "1× Sir Hekhtur"
+   ],
+   "rules": [
+    "Deadly Demise D6",
+    "Sustained Hits",
+    "Super-Heavy Walker",
+    "Blast",
+    "Code Chivalric",
+    "Lone Operative"
+   ],
+   "abilities": [
+    "Chainbreaker: Once per battle, at the start of any phase, you can select one friendly **IMPERIUM** unit that is **Battle-shocked** and within 12\" of this model. That unit is no longer Battle-shocked.",
+    "Legendary Freeblade: Once per turn, when you target this model with a stratagem, you may reduce the CP cost of that use of that stratagem by 1CP.",
+    "Invulnerable Save (5+*): This model has a 5+ invulnerable save against ranged attacks.",
+    "Damaged: 1-9 Wounds Remaining: While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.",
+    "Using Sir Hekhtur: If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. Your Canis Rex unit is not considered to be destroyed until Sir Hekhtur is also destroyed."
+   ]
+  },
+  "key": "e1ddb3de9c725e13"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "ability-note",
+  "where": "ooga-booga · Ghazghkull Thraka · Supreme Commander",
+  "judgement": {
+   "note": "Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”"
+  },
+  "source": {
+   "ability": "Supreme Commander",
+   "text": "If this model is in your army, it must be your **WARLORD**.",
+   "others": [
+    "Makari, Hoist Dat Banner!: In your Movement phase, you can select a number of friendly **ORKS** units equal to or less than the current battle round number. Those units are **riled up** until the start of your next turn.\n*Place one Makari token next to the unit, removing it after this ability is used.*",
+    "Da Grand Warlord’s Ladz: While this unit is within 3\" of another friendly **ORKS INFANTRY** unit, this unit has **Lone Operative**.",
+    "Prophet of Da Great Waaagh!: While a friendly **ORKS** unit is within 6\" of this unit, that unit’s melee attacks have:\n- +1 to **hit rolls**.\n- +1 to **wound rolls**."
+   ],
+   "listRules": [
+    "Waaagh!",
+    "War Cry",
+    "Da Boss",
+    "Displays of Savagery",
+    "Sneaky Little Gitz",
+    "Dakka! Dakka! Dakka!"
+   ]
+  },
+  "key": "9fb2d76a556c5f62"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "ability-timing",
+  "where": "super-terminators · Chaos Terminators · Bloody Fury",
+  "judgement": {
+   "ph": [
+    "shooting",
+    "charge"
+   ],
+   "turn": "your",
+   "turns": {
+    "charge": "either"
+   }
+  },
+  "source": {
+   "ability": "Bloody Fury",
+   "text": "This unit’s ranged attacks that target the closest eligible target can re-roll **hit rolls**.\nWhen this unit **declares a charge**, you can use this part of this ability. If you do:\n- This unit can re-roll that **charge roll**.\n- This unit must end that **charge move** **engaged** with the closest **charge target**."
+  },
+  "key": "3c0adf668a4ca4bc"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "ability-note",
+  "where": "purge-goes-the-foe · Belisarius Cawl · Supreme Commander",
+  "judgement": {
+   "note": "Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”"
+  },
+  "source": {
+   "ability": "Supreme Commander",
+   "text": "If this model is in your army, it must be your Warlord.",
+   "others": [
+    "Canticles of the Omnissiah: At the start of your Command phase, select one of the abilities in the Canticles of the Omnissiah section. Until the start of your next Command phase, this model has that ability.\n**Invocation of Machine Vengeance:** At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Machine Vengeance target. Each time a model in a friendly **ADEPTUS MECHANICUS** unit makes an attack that targets your Machine Vengeance target, you can re-roll the **Hit roll**.\n**Mantra of Discipline:** This model has the **BATTLELINE** keyword and has the following ability:\n- **Binharic Courage (Aura):** While a friendly **ADEPTUS MECHANICUS** unit is within 6\" of this model, add 1 to the Objective Control characteristic of models in that unit and each time you take a Battle-shock or **Leadership test** for that unit, add 1 to that test.\n**Shroudpsalm (Aura):** While a friendly **ADEPTUS MECHANICUS** unit is within 6\" of this model, that unit has the **Stealth** ability.",
+    "Mechanicus Bodyguard: While this model is within 3\" of one or more other friendly **ADEPTUS MECHANICUS** units, this model has the **Lone Operative** ability.",
+    "Self-repair Mechanisms: At the start of your Command phase, this model regains up to D3 lost wounds."
+   ],
+   "listRules": [
+    "Doctrina Imperatives",
+    "Cyber-psalm Programming",
+    "Murderous Imperative"
+   ]
+  },
+  "key": "b09636eda8cca99c"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "ability-note",
+  "where": "purge-goes-the-foe · Thulia Ghuld · Icon of War",
+  "judgement": {
+   "note": "FAQ (Faction Pack 1.4): “When I select one of Thulia Ghuld’s Icon of War abilities, when do I select the unit that ability affects?” “When you have selected the Icon of War ability you want to use.”"
+  },
+  "source": {
+   "ability": "Icon of War",
+   "text": "**Fanatical Devotion:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6\" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Advanced.\n**Adaptive Tactics:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6\" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Fell Back.\n**The Fires of Mars:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6\" of this model; until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for that unit.",
+   "others": [
+    "Mechanicus Bodyguard: While this model is within 3\" of one or more other friendly **ADEPTUS MECHANICUS** units, this model has the **Lone Operative** ability.",
+    "Secutor of Olympus: At the start of your Shooting phase, select one enemy **VEHICLE** unit within 12\" of this model and roll one D6: on a 2+, that enemy unit suffers D3+1 **mortal wounds**.",
+    "Supreme Commander: If this model is in your army, it must be your Warlord.",
+    "Rod of the War Forge: In your Command phase, select one of the abilities in the Icon of War section. Until the start of your next Command phase, this model has that ability."
+   ],
+   "listRules": [
+    "Doctrina Imperatives",
+    "Cyber-psalm Programming",
+    "Murderous Imperative"
+   ]
+  },
+  "key": "cfba43eca667f53a"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "ability-note",
+  "where": "purge-goes-the-foe · Thulia Ghuld · Supreme Commander",
+  "judgement": {
+   "note": "Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”"
+  },
+  "source": {
+   "ability": "Supreme Commander",
+   "text": "If this model is in your army, it must be your Warlord.",
+   "others": [
+    "Icon of War: **Fanatical Devotion:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6\" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Advanced.\n**Adaptive Tactics:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6\" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Fell Back.\n**The Fires of Mars:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6\" of this model; until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for that unit.",
+    "Mechanicus Bodyguard: While this model is within 3\" of one or more other friendly **ADEPTUS MECHANICUS** units, this model has the **Lone Operative** ability.",
+    "Secutor of Olympus: At the start of your Shooting phase, select one enemy **VEHICLE** unit within 12\" of this model and roll one D6: on a 2+, that enemy unit suffers D3+1 **mortal wounds**.",
+    "Rod of the War Forge: In your Command phase, select one of the abilities in the Icon of War section. Until the start of your next Command phase, this model has that ability."
+   ],
+   "listRules": [
+    "Doctrina Imperatives",
+    "Cyber-psalm Programming",
+    "Murderous Imperative"
+   ]
+  },
+  "key": "f7b68c48be03c803"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-gist",
+  "where": "Cohort Cybernetica · Machine Spirit Resurgent",
+  "judgement": {
+   "gist": "Your unit, if below its Starting Strength: until the start of your next Command phase, its attacks can re-roll the hit roll, and the wound roll as well if it is Below Half-strength."
+  },
+  "source": {
+   "stratagem": "Machine Spirit Resurgent",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army that is below its Starting Strength.\nEFFECT: Until the start of your next Command phase, each time a model in your unit makes an attack, you can re-roll the **Hit roll**. If your unit is **Below Half-strength**, you can re-roll the **Wound roll** as well."
+  },
+  "key": "b17d6ccbebec1bbb"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "showGrant",
+  "judgement": {
+   "code": "function showGrant(names, unitId, what, kw){\n  // the rule that grants it is the headline; the keyword's own rule follows, smaller\n  const u = army().units.find(x => x.id === unitId);\n  const gs = names.map(n => grantSource(n, u));\n  const src = gs.map(g => { const st = allStratagems().find(x => x.name === g.name);\n    return '<div class=\"gsrc\">' + (gs.length > 1 ? '<p class=\"gh\"><b>' + esc(g.name) + '</b></p>' : '') + (g.what ? '<p class=\"gw2\">' + esc(g.what) + '</p>' : '') +\n    textWithTable(g) + (st ? '<p class=\"note\">Not the ' + esc(st.cp) + 'CP ' + esc(st.name) + ' stratagem, which has the same name.</p>' : '') + '</div>'; }).join('');\n  const r = kw ? ruleFor(kw) : null;\n  const own = r ? '<div class=\"gown\"><p class=\"gh\"><b>' + esc(r.name) + '</b> <span class=\"tg m\">' + esc(r.src) + '</span></p>' + rt(r.text) + (r.table ? ttable(r.table) : '') + '</div>' : '';\n  // a stat New Recruit prints without the rule applied (data.js printed: the Knight Destrier's 5+* InSv, before Sanctuary)\n  const sk = { M:'M', T:'T', SV:'Sv', W:'W', LD:'Ld', OC:'OC', INV:'InSv' }[String(what).split(' ')[0]], pr = !kw && u && sk ? (u.stats.find(x => x.printed && x.printed[sk] && [].concat((x.from || {})[sk] || []).some(n => names.includes(n))) || {}).printed : null;\n  openSheet(esc(what) + ' · granted by', gs.map(g => g.name).join(' + '), src + '<p class=\"note\">' + (pr ? 'Already in the value shown; New Recruit and BSData print ' + esc(pr[sk]) + ' here.' : (kw ? 'Already in the keywords shown' : 'Already in the value shown') + ' (as New Recruit and BSData list ' + (kw ? 'them' : 'it') + ').') + '</p>' + own);\n}"
+  },
+  "source": {
+   "implements": "\"Granted by\": a value or keyword that a rule of the list already changed (from BSData's modifiers, checked against New Recruit's \"(…)\" marks): the rule's text, and that the value shown includes it"
+  },
+  "key": "91de69be4518423f"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "screenPregame",
+  "judgement": {
+   "code": "function screenPregame(){\n  const a = army(), f = faction(), units = a.units;\n  const row = (k, v) => v ? '<div class=\"pgr\"><span class=\"pgk\">' + k + '</span><span class=\"pgv\">' + v + '</span></div>' : '';\n  const sec = (title, body) => body ? '<div class=\"sec-h\"><h2>' + title + '</h2></div><div class=\"pg\">' + body + '</div>' : '';\n  // the same ability on several units is one line: \"Singular Purpose · Assimilator (280), Norn Emissary ×2\"\n  const group = list => { const m = new Map(); for(const [u, ab] of list){ const k = ab.name + '|' + ab.text; if(!m.has(k)) m.set(k, { ab, units:[] }); m.get(k).units.push(u); } return [...m.values()]; };\n  const abLine = g => linkTo('ability', abilityKey(g.ab), g.ab.name) + ' <span class=\"from\">· ' + esc(unitNames(g.units)) + '</span>';\n  const rulesOf = units.length ? f.armyRules.filter(r => !inertRule(r.name)).map(r => ({ r, src:f.name + ' army rule' }))\n    .concat(detachments().filter(d => d.rule).map(d => ({ r:d.rule, src:d.name }))) : [];\n  const ruleLine = x => linkTo('rule', x.r.name, x.r.name) + ' <span class=\"from\">· ' + esc(x.src) + '</span>';\n  const nameLink = u => linkTo('unit', u.id, u.short || u.name);   // without its enhancement: the line says it\n  const allAbs = units.flatMap(u => u.abilities.filter(ab => !naReason(ab)).map(ab => [u, ab]));\n  // Deep Strike (24.09) and Scouts (24.31) work only if every model in the unit has them; u.partialRules names\n  // the rules only some models of an attached unit have (Slaughterbound's Scouts 6\": its Exalted Eightbound have none)\n  const everyModel = (u, test) => unitRules(u).some(test) && !Object.keys(u.partialRules || {}).some(test);\n  // rules resolved before Declare Battle Formations (Code Chivalric: end of the Read Mission Objectives step)\n  const early = rulesOf.filter(x => /read mission objectives/i.test(x.r.text));\n\n  // your list\n  const warlord = units.filter(u => u.warlord);\n  const enh = units.flatMap(u => [u.enhancement, u.upgrade].filter(Boolean).map(n => { const d = detachments().find(x => (x.enhancements || []).some(e => e.name === n)), e = d && d.enhancements.find(x => x.name === n);\n    return (d ? linkTo('enh', d.id + '|' + n, n) : esc(n)) + (n === u.upgrade ? ' <span class=\"from\">(upgrade)</span>' : '') + (e && e.pts ? ' <span class=\"from\">' + e.pts + ' pts</span>' : '') + ' on ' + (n === u.enhancement && u.enhOn ? linkTo('unit', u.id, u.enhOn) : n === u.upgrade && u.leads ? linkTo('unit', u.id, u.leads) : linkTo('unit', u.id, (u.short || u.name) + unitNo(u))); }));\n  const led = units.filter(u => u.leads).flatMap(u => charsOf(u).map((c, i) => (i ? linkTo('unit', u.id, c.name) : nameLink(u)) + (c.support ? ' supports ' : ' leads ') + esc(u.leads) + (u.copies > 1 ? ' <span class=\"from\">×' + u.copies + ' units</span>' : '')));\n  // the opponent's list, opened from yours (Find's Opponent's list row): theirs, not yours\n  let h = sec(peeking(a) ? 'Their list' : 'Your list',\n    row('Warlord', warlord.map(u => u.warlordOn ? linkTo('unit', u.id, u.warlordOn) + ' <span class=\"from\">(' + esc(unitLabel(u)) + ')</span>' : unitLink(u)).join(', ')) +\n    row('Enhance&shy;ments', enh.join('<br>')) +\n    row('Attached', led.join('<br>')) +\n    row('Detach&shy;ments', detachments().map(d => (d.rule ? linkTo('rule', d.rule.name, d.name) : esc(d.name)) + (d.dp ? ' <span class=\"from\">(' + d.dp + ' DP)</span>' : '')).join(', ') + (a.disposition ? '<br><span class=\"from\">Disposition:</span> ' + esc(a.disposition) : '')) +\n    // the other selections New Recruit prints under the army name, as printed; one that only names the parts of an army\n    // rule (\"Code Chivalric: Deed, Quality\", each part's table rows) is no pick: that rule is under Army rules\n    Object.entries(a.config || {}).filter(([k, v]) => !ruleParts(f, k, v)).map(([k, v]) => row(esc(k), esc(v))).join('') +\n    row('Points', esc(a.pointsUsed + ' / ' + a.points + ' · ' + a.battleSize)));\n  // the army rules, folded: each opens to its text\n  h += f.armyRules.length ? '<div class=\"sec-h\"><h2>Army rules</h2></div><div class=\"abl\">' + armyRuleRows(f) + '</div>' : '';\n\n  const earlyAbs = group(allAbs.filter(([u, ab]) => /read mission objectives/i.test(ab.text)));\n  h += sec('Read Mission Objectives step', row('Rules', early.map(ruleLine).join('<br>')) + row('Abilities', earlyAbs.map(abLine).join('<br>')));\n\n  // declare battle formations: reserves and transports\n  const ds = units.filter(u => everyModel(u, r => ruleKey(r) === 'Deep Strike'));\n  const dsPts = ds.reduce((t, u) => t + (u.pts || 0) * (u.copies || 1), 0);\n  const transports = units.filter(u => hasKw(u, 'Transport')).map(u => { const ab = u.abilities.find(x => /transport capacity/i.test(x.text)); return unitLink(u) + (ab ? ': <span class=\"from\">' + inline(ab.text.replace(/(^|\\n)\\*([^*\\n][^\\n]*[^*\\n])\\*(?=\\n|$)/g, '$1$2').replace(/\\n(- )?/g, ' ')) + '</span>' : ''); });\n  h += sec('Declare battle formations',\n    row(linkTo('rule', 'Deep Strike', 'Deep Strike'), ds.map(u => (u.leads ? linkTo('unit', u.id, unitLabel(u)) : unitLink(u)) + ' <span class=\"from\">' + u.pts + ' pts' + (u.copies > 1 ? ' each, ×' + u.copies : '') + '</span>').join('<br>') + (ds.length > 1 ? '<br><span class=\"from\">All of them: ' + dsPts + ' pts</span>' : '')) +\n    row('Transports', transports.join('<br>')));\n\n  // deployment and pre-battle abilities\n  const scouts = units.filter(u => everyModel(u, r => /^scouts|^infiltrators/i.test(r)));\n  const scoutRules = u => unitRules(u).filter(r => /^scouts|^infiltrators/i.test(r));\n  const scoutKeys = [...new Set(scouts.flatMap(u => scoutRules(u).map(ruleKey)))].sort((x, y) => (x === 'Scouts' ? 0 : 1) - (y === 'Scouts' ? 0 : 1));\n  const pre = group(allAbs.filter(([u, ab]) => PREGAME_RE.test(ab.text) && !/start of the first battle round|read mission objectives/i.test(ab.text)));\n  h += sec('Deployment and pre-battle abilities',\n    row(scoutKeys.map(k => linkTo('rule', k, k)).join(' and '), scouts.map(u => unitLink(u) + ' <span class=\"from\">' + scoutRules(u).map(r => linkTo('rule', r, r)).join(', ') + '</span>').join('<br>')) +\n    row('Abilities', pre.map(abLine).join('<br>')) +\n    row('Rules', rulesOf.filter(x => PREGAME_RE.test(x.r.text) && !early.includes(x)).map(ruleLine).join('<br>')));\n\n  // decided at the start of the battle (before the first battle round: Aegis Protocol, Code Chivalric's Deed 1–2, a row of its\n  // table), of the first battle round or of every battle round\n  const START = /\\bstart of the battle\\b(?! round)/i;\n  const atStart = rulesOf.flatMap(x => { const rows = START.test(x.r.text) ? [] : (x.r.table || []).filter(([, t]) => START.test(t)).map(([l]) => String(l).split(' · ')[0]);\n    return START.test(x.r.text) || rows.length ? [linkTo('rule', x.r.name, x.r.name) + ' <span class=\"from\">' + (rows.length ? '(' + esc(rows.join(', ')) + ') ' : '') + '· ' + esc(x.src) + '</span>'] : []; })\n    .concat(group(allAbs.filter(([u, ab]) => START.test(ab.text))).map(abLine));\n  const first = group(allAbs.filter(([u, ab]) => /start of the first battle round/i.test(ab.text)));\n  const round = rulesOf.filter(x => /start of (the|each|every) battle round/i.test(x.r.text)).map(ruleLine)\n    .concat(group(allAbs.filter(([u, ab]) => /start of (the|each|every) battle round/i.test(ab.text) && !/start of the first battle round/i.test(ab.text))).map(abLine));\n  const firstRules = rulesOf.filter(x => /start of the first battle round/i.test(x.r.text)).map(ruleLine);\n  h += sec('Start of the battle round', row('Start of the battle', atStart.join('<br>')) + row('First round', firstRules.concat(first.map(abLine)).join('<br>')) + row('Every round', round.join('<br>')));\n\n  // uses per battle: the resources you spend, ticked off until New game\n  // a rule that gives units a \"(Once per battle, per unit)\" ability (Higher Imperatives) is ticked on those units, not here\n  const ruleOnce = r => perBattle(r) && !/per battle\\b(?! round)[^.)]*\\bper unit\\b/i.test(r.text || '');\n  const onceRules = f.armyRules.filter(r => !inertRule(r.name) && ruleOnce(r)).map(r => ({ r, src:f.name + ' army rule' }))\n    .concat(detachments().filter(d => d.rule && ruleOnce(d.rule)).map(d => ({ r:d.rule, src:d.name })));\n  const tl = (boxes, text) => '<div class=\"tl\">' + boxes + '<span>' + text + '</span></div>';\n  const ruleTicks = x => { const r = x.r, pb = perBattle(r, true);\n    // \"You can only select each of these abilities once per battle\" (Kindred Sorcery): a box per option\n    if(/\\beach of these [a-z ]+ once per battle/i.test(r.text) && r.table) return '<div class=\"tl\"><span>' + ruleLine(x) + ':</span></div>' + r.table.map(o => tl(ticks('r:' + r.name + ':' + o[0], 1, '', o[0]), esc(o[0]))).join('');\n    return tl(ticks('r:' + r.name, pb.n, '', r.name), ruleLine(x)); };\n  const onceAbs = group(allAbs.filter(([u, ab]) => perBattle(ab)));\n  const abTicks = g => perBattle(g.ab).army ? tl(abilityTicks(g.ab, g.units[0]), abLine(g) + ' <span class=\"tg once\">per army</span>')\n    : g.units.flatMap(u => Array.from({ length:u.copies || 1 }, (_, i) => tl(ticks(copyKey(g.ab, u, i), perBattle(g.ab).n, '', g.ab.name + (u.copies > 1 ? ', Unit ' + (i + 1) : '')),\n        linkTo('ability', abilityKey(g.ab), g.ab.name) + ' · ' + linkTo('unit', u.id, unitLabel(u)) + (u.copies > 1 ? ' <span class=\"from\">· Unit ' + (i + 1) + '</span>' : '')))).join('');\n  const onceStrats = allStratagems().filter(s => eligible(s).length && perBattle(s));\n  h += sec('Uses per battle',\n    row('Rules', onceRules.map(ruleTicks).join('')) +\n    row('Abilities', onceAbs.map(abTicks).join('')) +\n    row('Strata&shy;gems', onceStrats.map(s => tl(ticks('s:' + s.id, perBattle(s, true).n, '', s.name), linkTo('strat', s.id, s.cp + 'CP ' + s.name))).join('')));\n  if(onceRules.length || onceAbs.length || onceStrats.length) h = h.replace(/(<div class=\"sec-h\"><h2>Uses per battle<\\/h2>)/, '$1<button class=\"textbtn\" data-newgame>New game</button>');\n  return h + '<p class=\"note\">Gathered from this list’s datasheets and rules; each line opens the full text.</p>';\n}"
+  },
+  "source": {
+   "implements": "Overview (before the battle): Warlord, enhancements, attached units, detachments (each opens its detachment rule), the army rules (folded), units with Deep Strike (24.09: every model must have it), transports, Scouts and Infiltrators (24.31, 24.20: every model must have it), start of the battle / round 1 / every round, once-per-battle items"
+  },
+  "key": "6c0c352b01998cb3"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "shortWhen",
+  "judgement": {
+   "code": "function shortWhen(x){\n  if(x.at) return x.at;\n  const ph = phasesOf(x), T = { your:'Your ', opp:'Their ' };\n  if(!ph.length) return '';\n  if(ph.length === PHASES.length && ph.every(p => phTurn(x, p) === phTurn(x, ph[0]))) return 'Any phase';\n  if(ph.length === 1) return (T[phTurn(x, ph[0])] || '') + PHASE_NAME[ph[0]];\n  const runs = [];\n  for(const p of ph){ const t = phTurn(x, p), r = runs[runs.length - 1]; if(r && r.t === t) r.p.push(p); else runs.push({ t, p:[p] }); }\n  return runs.map(r => (T[r.t] || '') + r.p.map(p => PHASE_SHORT[p]).join('/')).join(' · ');\n}"
+  },
+  "source": {
+   "implements": "the timing tag on an ability or rule row: a moment before any phase (at: \"Start of the battle round\", 07.01), the phases and whose turn (07.02.02), \"Any phase\" only when every phase has the same turn"
+  },
+  "key": "27e31c34a78901f0"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "ruleParts",
+  "judgement": {
+   "code": "const ruleParts = (f, k, v) => { const r = f.armyRules.find(x => x.name === k); if(!r || !r.table) return false;\n  const parts = new Set(r.table.map(([l]) => String(l).split(/\\s/)[0].toLowerCase())); return String(v).split(/,\\s*/).every(p => parts.has(p.trim().toLowerCase())); };"
+  },
+  "source": {
+   "implements": "a New Recruit selection under the army name that only names an army rule's parts (\"Code Chivalric: Deed, Quality\": BSData's Deed and Quality are fixed sub-entries holding every option), not a pick: left out of the Overview's list"
+  },
+  "key": "107f167cff2eb9f0"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "pickOptions",
+  "judgement": {
+   "code": "function pickOptions(ab, u){\n  const m = /\\bselect one of the abilities in the (.+?) section\\b/i.exec(ab.text) || /\\bselect one ([^.,;]+?) ability\\b/i.exec(ab.text);\n  if(!m || !u) return { section:'', list:[] };\n  const sec = norm(m[1]), under = u.abilities.filter(x => x !== ab && x.who && norm(x.who.replace(/: pick one$/i, '')) === sec);\n  return { section:m[1], list:under.length ? under : u.abilities.filter(x => x !== ab && norm(x.name) === sec) };\n}"
+  },
+  "source": {
+   "implements": "the options a \"select one of the abilities in the X section\" / \"select one X ability\" asks for: the unit's abilities printed under that section, or the ability named X that lists them"
+  },
+  "key": "abdb65a1b1bd8834"
+ }
+]

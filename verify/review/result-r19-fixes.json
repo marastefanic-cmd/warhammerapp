@@ -1,0 +1,152 @@
+[
+ {
+  "key": "8f35934d70da634a",
+  "where": "melee · Ghazghkull Thraka · Supreme Commander",
+  "verdict": "ok",
+  "why": "Wahapedia core rules, 25.04 Fill Your Army Roster (Select Units) prints exactly: \"Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.\" The note is that quote and adds nothing (the GW Core Rules PDF has no section 25, so naming Wahapedia is right)."
+ },
+ {
+  "key": "891c18dc6cb1bbc3",
+  "where": "princes · Slaughterbound",
+  "verdict": "ok",
+  "why": "NR princes p4 Categories: \"... Slaughterbound, Exalted Eightbound*, *from combined unit\", and the unit leads Exalted Eightbound (\"• Leading: Exalted Eightbound\"). Renaming the stats row \"Exalted Eightbound ×3\" (1 Champion + 2 Exalted Eightbound) changes nothing the note rests on."
+ },
+ {
+  "key": "7e38ba43759ec810",
+  "where": "princes · Slaughterbound",
+  "verdict": "ok",
+  "why": "BSData (World Eaters) links \"Scouts\" (name append 6\") only on the Slaughterbound model entry. The Exalted Eightbound unit links only Deep Strike and Blessings of Khorne. NR says the same: \"Lord of the Eightbound - Slaughterbound: ... this model has the Deep Strike and Scouts 6\" abilities.\" So the label belongs to the Slaughterbound alone."
+ },
+ {
+  "key": "416a5f9b81853e1a",
+  "where": "super-terminators · Forgefiend · Furious Onslaught",
+  "verdict": "ok",
+  "why": "The rule names only \"makes a ranged attack\". Outside your Shooting phase, these lists can shoot only by Fire Overwatch (15.08, \"End of your opponent's Movement phase ... shoots using snap shooting\"), and 15.09 says \"You cannot re-roll hit rolls\". No World Eaters rule here gives other out-of-phase shooting, so \"Your Shooting\" is right."
+ },
+ {
+  "key": "5591b92f968de557",
+  "where": "standard · Slaughterbound",
+  "verdict": "ok",
+  "why": "NR standard p3 Categories: \"... Slaughterbound, Exalted Eightbound*, *from combined unit\", with \"• Leading: Exalted Eightbound[1]\". Only the stats row name changed (\"Exalted Eightbound ×3\"), and the note still holds."
+ },
+ {
+  "key": "3d098f7e7305160c",
+  "where": "standard · Slaughterbound",
+  "verdict": "ok",
+  "why": "NR standard: \"255 PTS SLAUGHTERBOUND\" (Berzerker Glaive), roster lines \"Slaughterbound Character 125\" and \"(3) Exalted Eightbound Infantry 130\". So the split 125 + 130 = 255 still holds after the stats rename."
+ },
+ {
+  "key": "9d9bcb9766e506d9",
+  "where": "standard · Slaughterbound",
+  "verdict": "ok",
+  "why": "Same BSData entries as princes: Scouts 6\" is on the Slaughterbound model only, and the Exalted Eightbound unit links Deep Strike but not Scouts. NR standard: \"Lord of the Eightbound - Slaughterbound ... this model has the Deep Strike and Scouts 6\" abilities.\""
+ },
+ {
+  "key": "c638e54714706332",
+  "where": "nidzillas · Norn Assimilator · Singular Purpose",
+  "verdict": "ok",
+  "why": "Both quotes are in their sources: Enraged Behemoths (Wahapedia, Crusher Stampede) \"add 2 to the Objective Control characteristic of models in that unit\", and Singular Purpose \"an Objective Control characteristic of 15\". Core 02.02.01 Modifiers appears only as a cross-reference in rules/core-rules.md, the GW PDF and Wahapedia core, so the note names both results (15 or 17) and picks neither. The one ordering FAQ in the sources (AdMech Faction Pack 1.4, Auto-divinatory Targeting with the Protector Imperative: \"first changed to 3+ ... then improved by 1\") covers only those two rules."
+ },
+ {
+  "key": "96e04b459d738c9e",
+  "where": "nidzillas · Norn Emissary · Singular Purpose",
+  "verdict": "ok",
+  "why": "Both quotes are in their sources: Enraged Behemoths (Wahapedia, Crusher Stampede) \"add 2 to the Objective Control characteristic of models in that unit\", and Singular Purpose \"an Objective Control characteristic of 15\". Core 02.02.01 Modifiers appears only as a cross-reference in rules/core-rules.md, the GW PDF and Wahapedia core, so the note names both results (15 or 17) and picks neither. The one ordering FAQ in the sources (AdMech Faction Pack 1.4, Auto-divinatory Targeting with the Protector Imperative: \"first changed to 3+ ... then improved by 1\") covers only those two rules."
+ },
+ {
+  "key": "ebef5b1486218daa",
+  "where": "nidzillas · Norn Emissary · Singular Purpose",
+  "verdict": "ok",
+  "why": "Both quotes are in their sources: Enraged Behemoths (Wahapedia, Crusher Stampede) \"add 2 to the Objective Control characteristic of models in that unit\", and Singular Purpose \"an Objective Control characteristic of 15\". Core 02.02.01 Modifiers appears only as a cross-reference in rules/core-rules.md, the GW PDF and Wahapedia core, so the note names both results (15 or 17) and picks neither. The one ordering FAQ in the sources (AdMech Faction Pack 1.4, Auto-divinatory Targeting with the Protector Imperative: \"first changed to 3+ ... then improved by 1\") covers only those two rules."
+ },
+ {
+  "key": "fffea01d7b0e2b2e",
+  "where": "imperial-knights army rule · Super-heavy Walker",
+  "verdict": "ok",
+  "why": "GW IK Faction Pack \"VERSION 1.2\" prints \"FACTION: Code Chivalric, Super-heavy Walker\" on its datasheets. The Codex text (Wahapedia, Codex: Imperial Knights army rules) differs from 24.35 (\"excluding TITANIC models\" vs \"including MONSTER/VEHICLE ... MOBILE keyword\"). Neither 22.02 (\"faction abilities (also known as army rules)\") nor the Universal Rules Updates 1.1 settles which applies, so \"the sources don't say which applies\" is a both-readings note that picks neither."
+ },
+ {
+  "key": "8d42c2a44321ffa9",
+  "where": "imperial-knights army rule · Super-heavy Walker",
+  "verdict": "ok",
+  "why": "Same name, same ability: the IK datasheets' \"Super-heavy Walker\" FACTION ability beside Core Rules \"SUPER-HEAVY WALKER 24.35\" (the GW PDF text matches RULES). The faction text matches Wahapedia's Codex: Imperial Knights army rule word for word (\"Each time a model with this ability makes a Normal, Advance or Fall Back move ... on a 1, that model is Battle-shocked.\"). ruleFor sends the label to the core rule (alias /^super-heavy walker/i), and showRule then shows the twin."
+ },
+ {
+  "key": "fdc92651c97a8d49",
+  "where": "Freeblade Company · Full Tilt",
+  "verdict": "needs-change",
+  "why": "The quotes are right: Wahapedia core 02.05 Keywords FAQ word for word, and the facts hold (pack Knight Destrier \"KEYWORDS: ... Imperium, Knight Destrier\"; BSData has only a \"Knight Destrier\" category; Wahapedia strikes DESTRIER, \"Keyword does not appear in that faction.\"). But it is an open question, and the note sets the FAQ's \"No.\" right after \"the Knight Destrier has KNIGHT DESTRIER\" without naming the other reading, so it implies +6\". Append: \"So a Knight Destrier adds either 6\" or 9\": the sources don't say whether this stratagem's DESTRIER means KNIGHT DESTRIER.\""
+ },
+ {
+  "key": "e1ddb3de9c725e13",
+  "where": "4-megas-and-a-destrier · Canis Rex",
+  "verdict": "ok",
+  "why": "BSData (IK Library, Canis Rex unit 55fb-9c91-1a4f-3037) links \"Lone Operative\" only on the Sir Hekhtur model entry. The Canis Rex model has Deadly Demise, Sustained Hits, Super-Heavy Walker, Blast and Code Chivalric. NR prints it only on the unit's Rules line (\"..., Code Chivalric, Lone Operative\"), naming no model, so \"Sir Hekhtur\" matches the sources."
+ },
+ {
+  "key": "9fb2d76a556c5f62",
+  "where": "ooga-booga · Ghazghkull Thraka · Supreme Commander",
+  "verdict": "ok",
+  "why": "Wahapedia core rules, 25.04 Fill Your Army Roster (Select Units) prints exactly: \"Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.\" The note is that quote and adds nothing (the GW Core Rules PDF has no section 25, so naming Wahapedia is right)."
+ },
+ {
+  "key": "3c0adf668a4ca4bc",
+  "where": "super-terminators · Chaos Terminators · Bloody Fury",
+  "verdict": "ok",
+  "why": "Ranged part: \"ranged attacks ... can re-roll hit rolls\", which does nothing in Fire Overwatch (15.09 \"You cannot re-roll hit rolls\"), so Your Shooting only. Charge part: \"When this unit declares a charge\" can come in either turn, because Heroic Intervention (15.11, \"End of your opponent's Charge phase\") says \"Resolve a charge with your unit (11.02)\" and 11.02 starts with \"Declare Charge\"."
+ },
+ {
+  "key": "b09636eda8cca99c",
+  "where": "purge-goes-the-foe · Belisarius Cawl · Supreme Commander",
+  "verdict": "ok",
+  "why": "Wahapedia core rules, 25.04 Fill Your Army Roster (Select Units) prints exactly: \"Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.\" The note is that quote and adds nothing (the GW Core Rules PDF has no section 25, so naming Wahapedia is right)."
+ },
+ {
+  "key": "cfba43eca667f53a",
+  "where": "purge-goes-the-foe · Thulia Ghuld · Icon of War",
+  "verdict": "ok",
+  "why": "AdMech \"FACTION PACK: VERSION 1.4\", FAQS: \"Q: When I select one of Thulia Ghuld's Icon of War abilities, when do I select the unit that ability affects? A: When you have selected the Icon of War ability you want to use.\" Both quotes match word for word, and nothing is added."
+ },
+ {
+  "key": "f7b68c48be03c803",
+  "where": "purge-goes-the-foe · Thulia Ghuld · Supreme Commander",
+  "verdict": "ok",
+  "why": "Wahapedia core rules, 25.04 Fill Your Army Roster (Select Units) prints exactly: \"Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.\" The note is that quote and adds nothing (the GW Core Rules PDF has no section 25, so naming Wahapedia is right)."
+ },
+ {
+  "key": "b17d6ccbebec1bbb",
+  "where": "Cohort Cybernetica · Machine Spirit Resurgent",
+  "verdict": "ok",
+  "why": "TARGET \"... unit from your army that is below its Starting Strength\", EFFECT \"Until the start of your next Command phase, each time a model in your unit makes an attack, you can re-roll the Hit roll. If your unit is Below Half-strength, you can re-roll the Wound roll as well.\" The gist says the same, shorter. It adds the TARGET condition the digest asked for, and needs carries the keywords."
+ },
+ {
+  "key": "91de69be4518423f",
+  "where": "showGrant",
+  "verdict": "ok",
+  "why": "It shows the granting rule's text and the note that the value includes it. With printed (only the Knight Destrier: from {InSv:'Sanctuary'}, printed {InSv:'5+*'}), and with what=\"INV 5+\" mapped to InSv, it says \"New Recruit and BSData print 5+* here\", which is true (BSData Unit profile \"InSv 5+*\", NR \"8 5+* 150x95mm\"). Sanctuary reads \"The bearer has a 5+ invulnerable save.\""
+ },
+ {
+  "key": "6c0c352b01998cb3",
+  "where": "screenPregame",
+  "verdict": "ok",
+  "why": "It does what the line says. Deep Strike, Scouts and Infiltrators use everyModel, which drops partialRules keys, matching 24.09/24.20/24.31 \"if every model in a unit has this ability\" (Slaughterbound left out; Eightbound and Goremongers listed as \"Scouts and Infiltrators\"). Code Chivalric \"Deed, Quality\" is dropped via ruleParts. START (/start of the battle\\b(?! round)/) catches only Code Chivalric Deed 1–2 (\"At the start of the battle, select one CHARACTER\") and Battle Protocols (\"At the start of the battle, ... enters Aegis Protocols\"), under a \"Start of the battle\" row as the digest asked."
+ },
+ {
+  "key": "27e31c34a78901f0",
+  "where": "shortWhen",
+  "verdict": "ok",
+  "why": "x.at is returned as whenTag does, and each at repeats the rule's opening words (\"At the start of the battle round\", \"At the end of your opponent's turn\"). \"Any phase\" now needs one turn for all five phases, so Icon of War shows \"Your Command · Their Move · Shoot · Your Charge · Fight\" (its turns; either turn unprefixed, per 07.02.02). Latent: a five-phase rule with one fixed turn (your/opp) would show a bare \"Any phase\" and drop the turn, but no list has one (all are turn:'either')."
+ },
+ {
+  "key": "107f167cff2eb9f0",
+  "where": "ruleParts",
+  "verdict": "ok",
+  "why": "It is true only when every comma-separated part of the value is the first word of one of the rule's table labels (\"Deed 1–2 · ...\", \"Quality 1–2 · ...\"). So \"Deed, Quality\" is left out and a real pick (\"Deed 1–2\") would stay. BSData (IK Library, Code Chivalric) has \"Deed\" and \"Quality\" as min-1/max-1 entries, each holding all three oath profiles, and NR prints \"• Code Chivalric: Deed, Quality\"."
+ },
+ {
+  "key": "abdb65a1b1bd8834",
+  "where": "pickOptions",
+  "verdict": "ok",
+  "why": "Run over all data texts, the two patterns find Full Throttle (\"select one Throttlerokkit Shokka Engine ability\" -> who Throttlerokkit Shokka Engine), Wrathful Presence (who \"Wrathful Presence: pick one\"), Unearthly Power (who Crimson King), Rod of the War Forge (falls back to the ability named Icon of War) and Canticles of the Omnissiah (itself, so no options). The only other hits are army rules (Bondsman, Cabal of Sorcerers), which showAbility never passes and which match no ability."
+ }
+]

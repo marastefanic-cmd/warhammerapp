@@ -1,0 +1,8 @@
+[
+ {
+  "key": "d87f99cf42f9b664",
+  "where": "Freeblade Company · Full Tilt",
+  "verdict": "ok",
+  "why": "The quotes are unchanged and match Wahapedia core 02.05 Keywords FAQ word for word. The facts hold: the Faction Pack 1.2 Knight Destrier has \"KEYWORDS: ... Imperium, Knight Destrier\", BSData has only a \"Knight Destrier\" category, and Wahapedia strikes DESTRIER (\"Keyword does not appear in that faction.\"). The added sentence names both readings of the stratagem's \"or 9\" instead if your unit is an ARMIGER or DESTRIER unit\" (6\" or 9\") and picks neither, which is what the r19 needs-change asked for."
+ }
+]

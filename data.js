@@ -450,7 +450,7 @@ const FACTIONS = {
           // The pack's Rules Updates entry "Full Tilt Stratagem, Target Section" (PDF p27) is under VALOURSTRIKE LANCE: it is that
           // detachment's 2CP Full Tilt, a different stratagem, so this one's target stays as printed.
           { id:'full-tilt', gist:'Until the end of the phase, if your unit Advances, no Advance roll: +6" Move instead (+9" for an ARMIGER or DESTRIER unit).',
-            note:'No datasheet has the DESTRIER keyword; the Knight Destrier has KNIGHT DESTRIER. Wahapedia FAQ (02.05 Keywords): “Do rules that affect a keyword include multi-word keywords that contain that keyword? For example, would rules that affect COMMISSAR units affect a unit that has the COMMISSAR GRAVES keyword?” “No.”',
+            note:'No datasheet has the DESTRIER keyword; the Knight Destrier has KNIGHT DESTRIER. Wahapedia FAQ (02.05 Keywords): “Do rules that affect a keyword include multi-word keywords that contain that keyword? For example, would rules that affect COMMISSAR units affect a unit that has the COMMISSAR GRAVES keyword?” “No.” So a Knight Destrier adds either 6" or 9": the sources don’t say whether this stratagem’s DESTRIER means KNIGHT DESTRIER.',
             name:'Full Tilt', cp:1, phases:['movement'], turn:'your', needs:{ all:['Faction: Imperial Knights'] },
             when:'Your Movement phase.',
             target:'One **IMPERIAL KNIGHTS** unit from your army.',
