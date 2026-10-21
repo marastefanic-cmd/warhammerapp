@@ -1,0 +1,247 @@
+[
+ {
+  "army": "super-terminators",
+  "kind": "unit-aura",
+  "where": "super-terminators · Eightbound",
+  "judgement": {
+   "kind": "melee",
+   "needs": {
+    "all": [
+     "Faction: World Eaters"
+    ]
+   },
+   "when": "Within 6\" of Eightbound, vs non-MONSTER/VEHICLE targets",
+   "selfWhen": "Own aura, vs non-MONSTER/VEHICLE targets",
+   "note": "+1 to hit",
+   "from": "Beacons of Rage",
+   "selfAlways": true,
+   "vs": {
+    "none": [
+     "Monster",
+     "Vehicle"
+    ]
+   },
+   "calc": {
+    "hit": 1
+   }
+  },
+  "source": {
+   "ability": "Beacons of Rage",
+   "text": "While a friendly **WORLD EATERS** unit is within 6\" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding **MONSTERS** and **VEHICLES**), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well."
+  },
+  "key": "5a5c48532674282d"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "unit-aura",
+  "where": "super-terminators · Eightbound",
+  "judgement": {
+   "kind": "melee",
+   "needs": {
+    "all": [
+     "Faction: World Eaters"
+    ]
+   },
+   "when": "Within 6\" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets",
+   "selfWhen": "Own aura, target Below Half-strength, vs non-MONSTER/VEHICLE targets",
+   "note": "+1 to wound rolls",
+   "from": "Beacons of Rage",
+   "vs": {
+    "none": [
+     "Monster",
+     "Vehicle"
+    ]
+   },
+   "calc": {
+    "wound": 1
+   }
+  },
+  "source": {
+   "ability": "Beacons of Rage",
+   "text": "While a friendly **WORLD EATERS** unit is within 6\" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding **MONSTERS** and **VEHICLES**), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well."
+  },
+  "key": "1dd70c039f74eaa3"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "unit-footnote",
+  "where": "pubstomper · Daemon Prince of Tzeentch with wings",
+  "judgement": {
+   "kind": "all",
+   "when": "vs CHARACTER units",
+   "note": "re-roll hit rolls of 1 and wound rolls of 1",
+   "from": "Hunter of Souls",
+   "always": true,
+   "vs": {
+    "any": [
+     "Character"
+    ]
+   }
+  },
+  "source": {
+   "ability": "Hunter of Souls",
+   "text": "Each time this model makes an attack that targets a **CHARACTER** unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a **PSYKER CHARACTER** unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a **CHARACTER** unit, this model regains up to D3 lost wounds (if that **CHARACTER** unit was a **PSYKER**, this model regains up to 3 lost wounds instead)."
+  },
+  "key": "5c66bad42301351a"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "unit-footnote",
+  "where": "pubstomper · Daemon Prince of Tzeentch with wings",
+  "judgement": {
+   "kind": "all",
+   "when": "vs PSYKER CHARACTER units",
+   "note": "re-roll the hit roll and the wound roll",
+   "from": "Hunter of Souls",
+   "always": true,
+   "vs": {
+    "all": [
+     "Psyker",
+     "Character"
+    ]
+   }
+  },
+  "source": {
+   "ability": "Hunter of Souls",
+   "text": "Each time this model makes an attack that targets a **CHARACTER** unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a **PSYKER CHARACTER** unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a **CHARACTER** unit, this model regains up to D3 lost wounds (if that **CHARACTER** unit was a **PSYKER**, this model regains up to 3 lost wounds instead)."
+  },
+  "key": "0bff2841140fb5a4"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "unit-footnote",
+  "where": "pubstomper · Sorcerer",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Every ranged attack",
+   "note": "re-roll wound rolls of 1",
+   "from": "Bringers of Change",
+   "always": true,
+   "calc": {
+    "rrWound": "1s"
+   }
+  },
+  "source": {
+   "ability": "Bringers of Change",
+   "text": "Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead."
+  },
+  "key": "7c2a8777b1cf5335"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "unit-footnote",
+  "where": "pubstomper · Sorcerer",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Target within range of an objective marker you do not control",
+   "note": "re-roll the wound roll",
+   "from": "Bringers of Change",
+   "calc": {
+    "rrWound": "all"
+   }
+  },
+  "source": {
+   "ability": "Bringers of Change",
+   "text": "Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead."
+  },
+  "key": "982ee89a44f27035"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "rule-mod",
+  "where": "Grand Coven rule · Kindred Sorcery",
+  "judgement": {
+   "mod": {
+    "kind": "all",
+    "when": "Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle)",
+    "note": "Psychic weapons only: Imbued Manifestation +6\" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]",
+    "pick": [
+     {
+      "name": "Imbued Manifestation",
+      "note": "Psychic weapons only: +6\" range"
+     },
+     {
+      "name": "Psychic Maelstrom",
+      "note": "Psychic weapons only: +1 to wound rolls"
+     },
+     {
+      "name": "Wrath of the Immaterium",
+      "note": "Psychic weapons only: [DEVASTATING WOUNDS]"
+     }
+    ]
+   }
+  },
+  "source": {
+   "rule": "Kindred Sorcery",
+   "text": "In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.\nImbued Manifestation: Add 6\" to the Range characteristic of ranged Psychic weapons equipped by **THOUSAND SONS** models from your army.\nPsychic Maelstrom: Each time a **THOUSAND SONS** model from your army makes an attack with a Psychic weapon, add 1 to the **Wound roll**.\nWrath of the Immaterium: Psychic weapons equipped by **THOUSAND SONS** models from your army have the **[DEVASTATING WOUNDS]** ability."
+  },
+  "key": "53531015294cc21f"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "unit-footnote",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos",
+  "judgement": {
+   "kind": "all",
+   "when": "vs MONSTER/VEHICLE",
+   "note": "+1 to hit rolls",
+   "from": "Macro-extinction Protocols",
+   "always": true,
+   "vs": {
+    "any": [
+     "Monster",
+     "Vehicle"
+    ]
+   }
+  },
+  "source": {
+   "ability": "Macro-extinction Protocols",
+   "text": "Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well."
+  },
+  "key": "e7eb2482506d098d"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "unit-footnote",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos",
+  "judgement": {
+   "kind": "all",
+   "when": "vs TITANIC/TOWERING",
+   "note": "+1 to wound rolls",
+   "from": "Macro-extinction Protocols",
+   "always": true,
+   "vs": {
+    "any": [
+     "Titanic",
+     "Towering"
+    ]
+   }
+  },
+  "source": {
+   "ability": "Macro-extinction Protocols",
+   "text": "Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well."
+  },
+  "key": "a699203cf3fce509"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "ability-calc",
+  "where": "purge-goes-the-foe · Cybernetica Datasmith · Battle Protocols",
+  "judgement": {
+   "def": "Aegis Protocol: KASTELAN ROBOT models +1 Toughness (from the start of the battle until another protocol is selected)",
+   "defCalc": {
+    "t": 1,
+    "model": "Kastelan Robot"
+   },
+   "models": [
+    "1× Cybernetica Datasmith",
+    "4× Kastelan Robot"
+   ]
+  },
+  "source": {
+   "ability": "Battle Protocols",
+   "text": "At the start of the battle, if this model is leading a **KASTELAN ROBOTS** unit, that unit enters Aegis Protocols (see below). In your Command phase, if this model is leading a **KASTELAN ROBOTS** unit, you can select one protocol from those listed below for that unit to enter. Once a unit enters a protocol, it remains in that protocol until it enters a different one.\n- **Protector Protocol:** Add 2 to the Attacks characteristic of ranged weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Conqueror Protocol:** Add 2 to the Attacks characteristic of melee weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Aegis Protocol:** Add 1 to the Toughness characteristic of **KASTELAN ROBOT** models in that unit."
+  },
+  "key": "5502238e7af1847a"
+ }
+]
