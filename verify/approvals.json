@@ -1109,6 +1109,12 @@
   "at": "2026-10-17",
   "why": "“In your Shooting phase, you can select one friendly ORKS WALKER unit within 3\" of this model. That unit’s attacks can re-roll hit rolls of 1 until the end of the turn.” The needs filter is now copied from the text (Faction: Orks + Walker). It adds no BIG MEK or own-unit exclusion: the “(excluding BIG MEK units)” is in the lead-in condition for the Big Mek, not in the pick. “this turn” = “until the end of the turn”, and kind all = “attacks”. Dropping the text’s “can” is a shorter way of saying the same thing; a re-roll in a footnote is still optional."
  },
+ "30f10384bb5f6a68": {
+  "verdict": "ok",
+  "by": "review:r11-misc",
+  "at": "2026-10-21",
+  "why": "WHEN \"Fight phase\". EFFECT: \"When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one D6, with +1 to that roll if your unit is riled up: On a 4+, do not remove that model … When your unit has fought, or at the end of the phase (whichever comes first), that model is removed\". The line is the signed-off Crazed Rampage line plus \"D6, +1 if riled up\", which is in the text (Wahapedia gives the same words). It adds nothing."
+ },
  "312089044e90c9c7": {
   "verdict": "ok",
   "by": "review:literal",
@@ -1931,6 +1937,12 @@
   "at": "2026-10-18",
   "why": "Source: \"At the end of your Movement phase, if this unit is controlling an objective, that objective is secured.\" The text names your Movement phase."
  },
+ "542067421d05393b": {
+  "verdict": "ok",
+  "by": "review:r11-misc",
+  "at": "2026-10-21",
+  "why": "I ran it on every unit ability in data.js and compared with the same code without the restriction strip. The only change is Necromechanic (\"**TECH-PRIEST** model only. Once per battle round, when a saving throw … is failed\"), now tagged \"Once per battle round\", which is correct. Every other enhancement that starts \"model only.\" still gets no tag. The strip removes only the leading restriction, and a tag still needs \"Once per\" at the start of the next sentence."
+ },
  "54631371c46e761a": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -2416,6 +2428,12 @@
   "by": "review:m1-strats",
   "at": "2026-10-18",
   "why": "Matches the EFFECT word for word: “Your unit has +2\" M.” text: same as Wahapedia word for word."
+ },
+ "6c93107162208ccd": {
+  "verdict": "ok",
+  "by": "review:r11-misc",
+  "at": "2026-10-21",
+  "why": "New Recruit's super-terminators lists \"(10) Chaos Terminators 370 / 370 / 380\", and the 370 entry is printed \"x2\". twinOf numbers the copies:2 entry \"1–2 of 3\" and the 380 entry \"3 of 3\" (snapshot: \"Gore-stained Veterans (upgrade) 20 pts on Chaos Terminators (1–2 of 3)\" / \"(3 of 3)\"). That is the numbering the datasheets and the Deep Strike row use. Before, this line was nameLink(u). Now unitNo is empty for every holder in every list except super-terminators and nidzillas. Nidzillas has two Norn Assimilators that both take Synaptoprescience; New Recruit lists them 280 then 300, and they now read \"(1 of 2)\" (280) and \"(2 of 2)\" (300), where before there were two identical lines. That matches the list and the app's other labels."
  },
  "6c9456ef9f0390b7": {
   "verdict": "ok",
@@ -4955,6 +4973,12 @@
   "at": "2026-10-16",
   "why": "\"WHEN: Any phase.\""
  },
+ "d5374988fc787f33": {
+  "verdict": "ok",
+  "by": "review:r11-misc",
+  "at": "2026-10-21",
+  "why": "Robotic Bodyguard (Kastelan Robots): \"While a CYBERNETICA DATASMITH model is leading this unit, that model has the Feel No Pain 4+ ability\". The Datasmith's own Wahapedia datasheet gives it no FNP, so New Recruit's unit-wide \"Feel No Pain 4+\" comes only from that ability. Every unit in data.js whose rules list a Feel No Pain was checked: Mozrog Skragbad 5+, Beastboss on Squigosaur 5+, Norn Emissary (bare \"Feel No Pain\", which the regex never matched) and Cybernetica Datasmith 4+. The new test hides only the Datasmith's FNP 4+, because no other unit has an ability def that names its FNP value."
+ },
  "d5687d178d117fad": {
   "verdict": "ok",
   "by": "review:hurrdurr (its fix)",
@@ -5566,6 +5590,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "\"In your opponent’s Movement phase, if an enemy unit ends a move within 8\"\"."
+ },
+ "eefc9dcfb3d027e2": {
+  "verdict": "ok",
+  "by": "review:r11-misc",
+  "at": "2026-10-21",
+  "why": "New Recruit's glossary (purge-goes-the-foe) prints \"Cyber Psalm-Programming: Add 2\" to the Move characteristic of models in Legio Cybernetica units from your army. In addition, unless that unit is Battle-shocked, add 1 to the Objective Control…\". GW's Faction Pack prints the same words under \"Cyber-psalm Programming Detachment Rule\" (BSData's name is \"Cyber Psalm-Programming\"). It is the Cohort Cybernetica rule, a detachment this list takes."
  },
  "ef335b8753a11075": {
   "verdict": "ok",

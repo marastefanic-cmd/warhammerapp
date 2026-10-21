@@ -1,0 +1,32 @@
+[
+ {
+  "key": "30f10384bb5f6a68",
+  "where": "Bully Boyz · Too Arrogant to Die",
+  "verdict": "ok",
+  "why": "WHEN \"Fight phase\". EFFECT: \"When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one D6, with +1 to that roll if your unit is riled up: On a 4+, do not remove that model … When your unit has fought, or at the end of the phase (whichever comes first), that model is removed\". The line is the signed-off Crazed Rampage line plus \"D6, +1 if riled up\", which is in the text (Wahapedia gives the same words). It adds nothing."
+ },
+ {
+  "key": "eefc9dcfb3d027e2",
+  "where": "/^cyber psalm-programming$/i",
+  "verdict": "ok",
+  "why": "New Recruit's glossary (purge-goes-the-foe) prints \"Cyber Psalm-Programming: Add 2\" to the Move characteristic of models in Legio Cybernetica units from your army. In addition, unless that unit is Battle-shocked, add 1 to the Objective Control…\". GW's Faction Pack prints the same words under \"Cyber-psalm Programming Detachment Rule\" (BSData's name is \"Cyber Psalm-Programming\"). It is the Cohort Cybernetica rule, a detachment this list takes."
+ },
+ {
+  "key": "d5374988fc787f33",
+  "where": "defenceItems",
+  "verdict": "ok",
+  "why": "Robotic Bodyguard (Kastelan Robots): \"While a CYBERNETICA DATASMITH model is leading this unit, that model has the Feel No Pain 4+ ability\". The Datasmith's own Wahapedia datasheet gives it no FNP, so New Recruit's unit-wide \"Feel No Pain 4+\" comes only from that ability. Every unit in data.js whose rules list a Feel No Pain was checked: Mozrog Skragbad 5+, Beastboss on Squigosaur 5+, Norn Emissary (bare \"Feel No Pain\", which the regex never matched) and Cybernetica Datasmith 4+. The new test hides only the Datasmith's FNP 4+, because no other unit has an ability def that names its FNP value."
+ },
+ {
+  "key": "542067421d05393b",
+  "where": "onceTag",
+  "verdict": "ok",
+  "why": "I ran it on every unit ability in data.js and compared with the same code without the restriction strip. The only change is Necromechanic (\"**TECH-PRIEST** model only. Once per battle round, when a saving throw … is failed\"), now tagged \"Once per battle round\", which is correct. Every other enhancement that starts \"model only.\" still gets no tag. The strip removes only the leading restriction, and a tag still needs \"Once per\" at the start of the next sentence."
+ },
+ {
+  "key": "6c93107162208ccd",
+  "where": "screenPregame",
+  "verdict": "ok",
+  "why": "New Recruit's super-terminators lists \"(10) Chaos Terminators 370 / 370 / 380\", and the 370 entry is printed \"x2\". twinOf numbers the copies:2 entry \"1–2 of 3\" and the 380 entry \"3 of 3\" (snapshot: \"Gore-stained Veterans (upgrade) 20 pts on Chaos Terminators (1–2 of 3)\" / \"(3 of 3)\"). That is the numbering the datasheets and the Deep Strike row use. Before, this line was nameLink(u). Now unitNo is empty for every holder in every list except super-terminators and nidzillas. Nidzillas has two Norn Assimilators that both take Synaptoprescience; New Recruit lists them 280 then 300, and they now read \"(1 of 2)\" (280) and \"(2 of 2)\" (300), where before there were two identical lines. That matches the list and the app's other labels."
+ }
+]
