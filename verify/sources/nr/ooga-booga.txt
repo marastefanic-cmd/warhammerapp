@@ -1,0 +1,495 @@
+10/20/26, 11:35 PM                                                  Ooga booga - New Recruit
+
+                                                       Ooga booga [2000pts]
+  Army Roster [3 Detachment Points, 2000 pts] (Xenos - Orks)
+  • Battle Size: Strike Force (2000 Point limit)
+  • Detachment: Bully Boyz [1Detachment Points], Runt Swarm [1Detachment Points], Shoota Boyz
+  [1Detachment Points]
+  • Force Disposition: Purge the Foe
+  • Show/Hide Options
+  NAME                        ROLE       PTS OPTIONS
+   Ghazghkull Thraka                   Epic Hero 290
+   Nazdreg                             Epic Hero 165
+   Zodgrod Wortsnagga                  Epic Hero 50
+   Big Mek                             Character 100
+   Big Mek                             Character 100
+   Big Mek in Mega Armour Character 115
+   Painboy                             Character 45
+   Painboy                             Character 45
+   Runtherd                            Character 10
+   (10) Gretchin                       Battleline 45
+   (10) Gretchin                       Battleline 45
+   (10) Gretchin                       Battleline 45
+   (20) Gretchin                       Battleline 90           Zodgrod Wortsnagga, Runtherd
+   (5) Meganobz                        Infantry        200 Nazdreg
+   (5) Meganobz                        Infantry        175 Big Mek in Mega Armour
+   (10) Nobz                           Infantry        240 Big Mek, Painboy
+   (10) Nobz                           Infantry        240 Big Mek, Painboy
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad67fb159473e5cca40e708                                    1/12
+10/20/26, 11:35 PM                                                       Ooga booga - New Recruit
+     365 PTS                                                     NAZDREG
+   Models                                                            Options
+                                                                         Kustom Blasta X, Moonchewa
+   1x Nazdreg
+                                                                         • Leading: Meganobz[1]
+   5x Meganob w/ Twin Killsaw                                            Twin Killsaw
+   Unit                                                    M         T     Sv        W      LD      OC   InSv     Base
+   Nazdreg - Nazdreg                                       5"        7     2+        8      6+      1    5+       60mm
+   Meganob (x5) - Meganobz                                 5"        6     2+        3      7+      1              40mm
+   Ranged Weapons                                   Range A BS S AP D Keywords
+   Kustom Blasta X - Skorcha (Nazdreg's
+                                                                                     BLAST 1, TORRENT, IGNORES
+   Know-wotz, Dakka! Dakka! Dakka!) -               12"        3 -       5 -1 1
+                                                                                     COVER, ASSAULT
+   Nazdreg
+   Kustom Blasta X - Gatler (Nazdreg's
+   Know-wotz, Dakka! Dakka! Dakka!) -               24"        6 4+ 9 -2 3 HAZARDOUS, IGNORES COVER, ASSAULT
+   Nazdreg
+   Kustom Blasta X - Shoota (Nazdreg's
+                                                                                     LETHAL HITS: non-MONSTER/VEHICLE,
+   Know-wotz, Dakka! Dakka! Dakka!) -               18"        4 4+ 5 -1 1
+                                                                                     RAPID FIRE 2, IGNORES COVER, ASSAULT
+   Nazdreg
+   Melee Weapons                                       Range A WS S             AP D Keywords
+   Kustom Blasta X (Displays of Savagery) -                                          CLEAVE 1, EXTRA ATTACKS, SUSTAINED
+   Nazdreg
+                                                       Melee 6 2+ 5             -1 1
+                                                                                     HITS 1
+   Moonchewa (Displays of Savagery) -                                                    CLEAVE 1, TWIN-LINKED, SUSTAINED
+   Nazdreg
+                                                       Melee 5 2+ 12 -2 3
+                                                                                         HITS 1
+   Twin Killsaw (Displays of Savagery) (x5) -
+   Meganobz
+                                                       Melee 3 4+ 10 -2 3 TWIN-LINKED, SUSTAINED HITS 1
+
+   Abilities                                       Description
+                                                     This unit has Deep Strike
+   Nazdreg's Know-wotz - Nazdreg
+                                                     This unit's ranged attacks have [IGNORES COVER].
+                                                   In your opponent's Movement phase, when an enemy unit ends a move
+   Supreme Kunnin' (Once per phase, per            within 8" of this unit, if this unit is unengaged, this unit can:
+   army) - Nazdreg                                   Make a normal move of up to D6".
+                                                     Or: If this unit is riled up, make a normal move of up to 5".
+                                                   In your Movement phase, at the start or end of this unit's move, you
+   Intimidating Motivation (Once per               can select one friendly ORKS unit within 6" of this unit. That unit:
+   battle round, per army) - Nazdreg                 Is no longer battle-shocked.
+                                                     Is riled up until the start of your next turn.
+   Krumpin’ Time - Meganobz                        In the Fight phase, if this unit is riled up, this unit has +1 to hit rolls.
+   Arrogant Invulnerability - Meganobz             Attacks that target this unit have -1 AP.
+    Rules Waaagh!, Leader, Da Boss, Deep Strike, Waaagh!, Deep Strike
+
+    Categories Character, Epic Hero, Faction: Orks, Infantry, Mega Armour, Nazdreg, Warboss, Explosives*, Meganobz*,
+               *from combined unit
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad67fb159473e5cca40e708                                                                      2/12
+10/20/26, 11:35 PM                                                     Ooga booga - New Recruit
+     150 PTS                                           ZODGROD WORTSNAGGA
+   Models                                                    Options
+                                                                  Da Grabzappa, Squigstoppa
+   1x Zodgrod Wortsnagga
+                                                                  • Leading: Gretchin[4]
+                                                                  Runtherd's Toolz, Slugga
+   1x Runtherd
+                                                                  • Supporting: Gretchin[4]
+   20x Gretchin                                                   Grot Blasta, Scavenged Shivs
+   Unit                                                                    M     T      Sv       W        LD       OC   InSv      Base
+   Zodgrod Wortsnagga - Zodgrod Wortsnagga                                 6"    5      5+       5        7+       1    6+        50mm
+   Runtherd - Runtherd                                                     6"    5      5+       3        7+       1              32mm
+   Gretchin (x20) - Gretchin                                               6"    2      6+       1        8+       1              25mm
+   Ranged Weapons                       Range A BS S AP D Keywords
+   Squigstoppa (Dakka! Dakka!                             ANTI-MONSTER/VEHICLE 4+, CLOSE-QUARTERS,
+   Dakka!) - Zodgrod                    12"   1 5+ 4 -1 1 DEVASTATING WOUNDS:
+   Wortsnagga                                             MONSTER/VEHICLE, ASSAULT
+   Slugga (Dakka! Dakka!                                               CLOSE-QUARTERS, LETHAL HITS: non-
+   Dakka!) - Runtherd
+                                         12"      1 5+ 4 0         1
+                                                                       MONSTER/VEHICLE, ASSAULT
+   Grot Blasta (Dakka! Dakka!
+                                         12"      1 4+ 3 0         1 CLOSE-QUARTERS, ASSAULT
+   Dakka!) (x20) - Gretchin
+   Melee Weapons                                                                Range        A       WS        S   AP   D      Keywords
+   Da Grabzappa - Zodgrod Wortsnagga                                            Melee        5       2+        7   -2   2
+   Runtherd's Toolz - Runtherd                                                  Melee        3       3+        5   0    1
+   Scavenged Shivs (Super Runts) (x20) - Gretchin                               Melee        2       4+        3   0    1
+   Abilities                                        Description
+                                                      This unit is riled up.
+   Super Runts - Zodgrod Wortsnagga
+                                                      This unit's Scavenged Shivs weapons have +1 A, WS and S.
+                                                    When this unit becomes battle-shocked, if this unit contains 4+
+   That'll Learn Ya (Once per battle round,         Gretchin models, you can roll one D3:
+   per unit) - Runtherd                              That number of Gretchin models in this unit are destroyed.
+                                                     That unit is no longer battle-shocked.
+                                                    For the purposes of transport capacity, each 2 Gretchin models
+   Downtrodden - Gretchin
+                                                    (rounding up) take up the space of 1 model.
+                                                    At the end of your Movement phase, if this unit is controlling an
+   Thievin’ Scavengers - Gretchin
+                                                    objective, that objective is secured.
+   Extra Sneaky - Gretchin                          GRETCHIN unit only. This unit has -3" detection range.
+    Rules Waaagh!, Leader, Waaagh!, Support, Waaagh!
+
+    Categories Character, Epic Hero, Faction: Orks, Infantry, Runtherd, Zodgrod Wortsnagga, Battleline*, Gretchin*,
+               Grots*, *from combined unit
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad67fb159473e5cca40e708                                                                              3/12
+10/20/26, 11:35 PM                                                      Ooga booga - New Recruit
+     385 PTS                                                      BIG MEK
+   Models                                                                               Options
+                                                                                        Kustom mega-blasta, Drilla
+   1x Big Mek
+                                                                                        • Leading: Nobz[1]
+                                                                                        ’Urty syringe, Dok's Toolz
+   1x Painboy
+                                                                                        • Supporting: Nobz[1]
+   8x Nob w/ Kombi-rokkit and Kustom Krumpa                                             Kombi-rokkit, Kustom Krumpa
+   2x Nob w/ Kustom Krumpa and Paired Krumpas                                           Kustom Krumpa, Paired Krumpas
+   Unit                                          M        T       Sv            W       LD         OC       InSv      Base
+   Big Mek - Big Mek                             6"       5       3+            6       7+         1                  50mm
+   Painboy - Painboy                             6"       5       5+            3       7+         1                    32mm
+   Nob (x10) - Nobz                              6"       5       4+            3       7+         1                    32mm
+   Ranged Weapons                                  Range A BS S             AP D Keywords
+   Kustom mega-blasta (More
+   Dakka, Dakka! Dakka! Dakka!) - Big              24"         3 4+ 9       -2 3 HAZARDOUS, IGNORES COVER, ASSAULT
+   Mek
+   ➤ Kombi-rokkit - Busta Rokkit (More
+   Dakka, Dakka! Dakka! Dakka!) (x8) -             24"         1 5+ 10 -2 3 IGNORES COVER, ASSAULT
+   Nobz
+   ➤ Kombi-rokkit - Shoota (More
+                                                                                        LETHAL HITS: non-MONSTER/VEHICLE,
+   Dakka, Dakka! Dakka! Dakka!) (x8) -             18"         2 5+ 4       0       1
+                                                                                        RAPID FIRE 1, IGNORES COVER, ASSAULT
+   Nobz
+   Melee Weapons                        Range A WS S             AP D       Keywords
+   Drilla (Displays of Savagery)
+                                        Melee 3 3+ 12 -3 3                  SUSTAINED HITS 1
+   - Big Mek
+   ’Urty syringe (Displays of                                               ANTI-INFANTRY 4+, DEVASTATING WOUNDS:
+                                        Melee 1 3+ 2             0     D6
+   Savagery) - Painboy                                                      INFANTRY, EXTRA ATTACKS, SUSTAINED HITS 1
+   Dok's Toolz (Displays of
+                                        Melee 3 3+ 10 -2 2                  SUSTAINED HITS 1
+   Savagery) - Painboy
+   Kustom Krumpa (Displays of
+                                        Melee 3 3+ 10 -2 2                  SUSTAINED HITS 1
+   Savagery) (x10) - Nobz
+   Abilities                             Description
+                                         In your Movement phase, when this unit is selected to make an advance
+                                         move, you can use this ability. If you do:
+                                           This unit can change that advance roll to a 6.
+   Shokk-boosta - Big Mek
+                                           This unit can move through all types of model.
+                                           When this unit ends that advance move, make a hazard roll for each model
+                                            in this unit.
+                                         This unit's ranged attacks have:
+   More Dakka - Big Mek                   [IGNORES COVER].
+                                          If this unit is riled up, [SUSTAINED HITS 1].
+   Crude Surgery - Painboy               In your Command phase, this unit heals 3 wounds.
+                                         When this model uses its Crude Surgery ability, you can add D3 to the number
+   Catch Dat Red Bit (Once per
+                                         of wounds healed.
+   battle, per unit) - Painboy
+                                         Place a Grot Orderly token next to the unit, removing it when this ability is used.
+                                         In your Shooting phase, when this unit is selected to shoot, you can use this
+   Ammo Runts (Once per battle,          ability. If you do, this unit's ranged attacks have +1 to hit rolls.
+   per unit) - Nobz                      Place any number of Ammo Runt tokens next to the unit, removing them when
+                                         this ability is used.
+                                         While making a charge move, this unit can move through models (excluding
+   Get Out da Way! - Nobz
+                                         MONSTER/VEHICLE models).
+                                         Attacks made with this model's Kustom Krumpa weapon can re-roll hit rolls and
+   Paired Krumpas - Nobz
+                                         wound rolls.
+    Rules Waaagh!, Leader, Waaagh!, Support, Waaagh!
+https://www.newrecruit.eu/app/Lists/6ad67fb159473e5cca40e708                                                                   4/12
+10/20/26, 11:35 PM                                                Ooga booga - New Recruit
+      385 PTS                                                  BIG MEK
+    Categories Big Mek, Character, Explosives, Faction: Orks, Infantry, Painboy*, Nobz*, *from combined unit
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad67fb159473e5cca40e708                                                   5/12
+10/20/26, 11:35 PM                                                      Ooga booga - New Recruit
+     385 PTS                                                      BIG MEK
+   Models                                                                               Options
+                                                                                        Kustom mega-blasta, Drilla
+   1x Big Mek
+                                                                                        • Leading: Nobz[2]
+                                                                                        ’Urty syringe, Dok's Toolz
+   1x Painboy
+                                                                                        • Supporting: Nobz[2]
+   8x Nob w/ Kombi-rokkit and Kustom Krumpa                                             Kombi-rokkit, Kustom Krumpa
+   2x Nob w/ Kustom Krumpa and Paired Krumpas                                           Kustom Krumpa, Paired Krumpas
+   Unit                                          M        T       Sv            W       LD         OC       InSv      Base
+   Big Mek - Big Mek                             6"       5       3+            6       7+         1                  50mm
+   Painboy - Painboy                             6"       5       5+            3       7+         1                    32mm
+   Nob (x10) - Nobz                              6"       5       4+            3       7+         1                    32mm
+   Ranged Weapons                                  Range A BS S             AP D Keywords
+   Kustom mega-blasta (More
+   Dakka, Dakka! Dakka! Dakka!) - Big              24"         3 4+ 9       -2 3 HAZARDOUS, IGNORES COVER, ASSAULT
+   Mek
+   ➤ Kombi-rokkit - Busta Rokkit (More
+   Dakka, Dakka! Dakka! Dakka!) (x8) -             24"         1 5+ 10 -2 3 IGNORES COVER, ASSAULT
+   Nobz
+   ➤ Kombi-rokkit - Shoota (More
+                                                                                        LETHAL HITS: non-MONSTER/VEHICLE,
+   Dakka, Dakka! Dakka! Dakka!) (x8) -             18"         2 5+ 4       0       1
+                                                                                        RAPID FIRE 1, IGNORES COVER, ASSAULT
+   Nobz
+   Melee Weapons                        Range A WS S             AP D       Keywords
+   Drilla (Displays of Savagery)
+                                        Melee 3 3+ 12 -3 3                  SUSTAINED HITS 1
+   - Big Mek
+   ’Urty syringe (Displays of                                               ANTI-INFANTRY 4+, DEVASTATING WOUNDS:
+                                        Melee 1 3+ 2             0     D6
+   Savagery) - Painboy                                                      INFANTRY, EXTRA ATTACKS, SUSTAINED HITS 1
+   Dok's Toolz (Displays of
+                                        Melee 3 3+ 10 -2 2                  SUSTAINED HITS 1
+   Savagery) - Painboy
+   Kustom Krumpa (Displays of
+                                        Melee 3 3+ 10 -2 2                  SUSTAINED HITS 1
+   Savagery) (x10) - Nobz
+   Abilities                             Description
+                                         In your Movement phase, when this unit is selected to make an advance
+                                         move, you can use this ability. If you do:
+                                           This unit can change that advance roll to a 6.
+   Shokk-boosta - Big Mek
+                                           This unit can move through all types of model.
+                                           When this unit ends that advance move, make a hazard roll for each model
+                                            in this unit.
+                                         This unit's ranged attacks have:
+   More Dakka - Big Mek                   [IGNORES COVER].
+                                          If this unit is riled up, [SUSTAINED HITS 1].
+   Crude Surgery - Painboy               In your Command phase, this unit heals 3 wounds.
+                                         When this model uses its Crude Surgery ability, you can add D3 to the number
+   Catch Dat Red Bit (Once per
+                                         of wounds healed.
+   battle, per unit) - Painboy
+                                         Place a Grot Orderly token next to the unit, removing it when this ability is used.
+                                         In your Shooting phase, when this unit is selected to shoot, you can use this
+   Ammo Runts (Once per battle,          ability. If you do, this unit's ranged attacks have +1 to hit rolls.
+   per unit) - Nobz                      Place any number of Ammo Runt tokens next to the unit, removing them when
+                                         this ability is used.
+                                         While making a charge move, this unit can move through models (excluding
+   Get Out da Way! - Nobz
+                                         MONSTER/VEHICLE models).
+                                         Attacks made with this model's Kustom Krumpa weapon can re-roll hit rolls and
+   Paired Krumpas - Nobz
+                                         wound rolls.
+    Rules Waaagh!, Leader, Waaagh!, Support, Waaagh!
+https://www.newrecruit.eu/app/Lists/6ad67fb159473e5cca40e708                                                                   6/12
+10/20/26, 11:35 PM                                                Ooga booga - New Recruit
+      385 PTS                                                  BIG MEK
+    Categories Big Mek, Character, Explosives, Faction: Orks, Infantry, Painboy*, Nobz*, *from combined unit
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad67fb159473e5cca40e708                                                   7/12
+10/20/26, 11:35 PM                                                       Ooga booga - New Recruit
+     290 PTS                                          BIG MEK IN MEGA ARMOUR
+   Models                                                  Options
+                                                               Supa-glowy Fing, Kustom Mega-blasta, Power Klaw, Tellyport Blasta
+   1x Big Mek in Mega Armour
+                                                               • Leading: Meganobz[2]
+   5x Meganob w/ Kombi-weapon and Power Klaw                   Kombi-weapon, Power Klaw
+   Unit                                                                             M     T    Sv    W   LD    OC   InSv   Base
+   Big Mek in Mega Armour - Big Mek in Mega Armour                                  5"    6    2+    5   7+    1           40mm
+   Meganob (x5) - Meganobz                                                          5"    6    2+    3   7+    1           40mm
+   Ranged Weapons                                 Range A BS S             AP D Keywords
+   Kustom Mega-blasta (Supa-glowy                                               HAZARDOUS, ANTI-INFANTRY
+   Fing, More Dakka, Dakka! Dakka!                24"      3 4+ 9          -2 3 4+, DEVASTATING WOUNDS, SUPA-
+   Dakka!) - Big Mek in Mega Armour                                             HAZARDOUS, IGNORES COVER, ASSAULT
+   Tellyport Blasta (Supa-glowy                                                 BLAST 1, ANTI-INFANTRY 4+, DEVASTATING
+   Fing, More Dakka, Dakka! Dakka!                12"      6 4+ 9          -2 3 WOUNDS, SUPA-HAZARDOUS, IGNORES
+   Dakka!) - Big Mek in Mega Armour                                             COVER, ASSAULT
+   ➤ Kombi-weapon - Point Blank (More
+   Dakka, Dakka! Dakka! Dakka!) (x5) -            12"      3 -       5     0    1 BLAST 1, TORRENT, ASSAULT
+   Meganobz
+   ➤ Kombi-weapon - Kill Shot (More
+   Dakka, Dakka! Dakka! Dakka!) (x5) -            24"      1 5+ 10 -2 3 ASSAULT
+   Meganobz
+   ➤ Kombi-weapon - Shoota (More
+                                                                                        LETHAL HITS: non-MONSTER/VEHICLE,
+   Dakka, Dakka! Dakka! Dakka!) (x5) -            18"      2 5+ 4          0    1
+                                                                                        RAPID FIRE 1, ASSAULT
+   Meganobz
+   Melee Weapons                                                                Range A WS S             AP D Keywords
+   Power Klaw (Displays of Savagery) - Big Mek in Mega Armour                   Melee         3 3+   10 -2    2 SUSTAINED HITS 1
+   Power Klaw (Displays of Savagery) (x5) - Meganobz                            Melee         3 3+   10 -2    2 SUSTAINED HITS 1
+   Abilities                                               Description
+                                                           In your Command phase, this unit heals 3 wounds.
+   Fix Dat Armour Up (Once per battle, per unit)
+                                                           Place a Grot Oiler token next to the unit, removing it when this
+   - Big Mek in Mega Armour
+                                                           ability is used.
+                                                           This unit's ranged attacks have:
+   More Dakka - Big Mek in Mega Armour                      [IGNORES COVER].
+                                                            If this unit is riled up, [SUSTAINED HITS 1].
+                                                           ORKS INFANTRY model only (excluding WEIRDBOY models).
+                                                           This model’s ranged attacks have:
+   Supa-glowy Fing - Big Mek in Mega Armour                 [ANTI-INFANTRY 4+}
+                                                            [DEVASTATING WOUNDS].
+                                                            [SUPA-HAZARDOUS].
+                                                           In the Fight phase, if this unit is riled up, this unit has +1 to hit
+   Krumpin’ Time - Meganobz
+                                                           rolls.
+   Arrogant Invulnerability - Meganobz                     Attacks that target this unit have -1 AP.
+    Rules Waaagh!, Leader, Supa-hazardous, Waaagh!
+
+    Categories Big Mek, Big Mek in Mega Armour, Character, Explosives, Faction: Orks, Infantry, Mega Armour,
+               Meganobz*, *from combined unit
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad67fb159473e5cca40e708                                                                       8/12
+10/20/26, 11:35 PM                                                      Ooga booga - New Recruit
+     290 PTS                                             GHAZGHKULL THRAKA
+   Models                                   Options
+   1x Ghazghkull Thraka                     Warlord, Adamantine 'Eadbutt, Gork’s Klaw, Mork’s Roar
+   Unit                                         M        T         Sv        W         LD          OC   InSv   Base
+   Ghazghkull Thraka                            8"       10        2+        16        6+          4    4+     80mm
+   Ranged Weapons                             Range A              BS S AP D Keywords
+   ➤ Mork’s Roar - Point Blank
+                                               9"       2D6+2 -          6 -1 1 CLOSE-QUARTERS, TORRENT, ASSAULT
+   (Dakka! Dakka! Dakka!)
+   ➤ Mork’s Roar - Aimed (Dakka!                                                     LETHAL HITS: non-MONSTER/VEHICLE,
+                                               36"      12         5+ 6 -1 1
+   Dakka! Dakka!)                                                                    RAPID FIRE 4, ASSAULT
+   Melee Weapons              Range A WS S AP D     Keywords
+   Adamantine 'Eadbutt        Melee 1 2+ 14 -2 D3+3 DEVASTATING WOUNDS, EXTRA ATTACKS, PRECISION
+   Gork’s Klaw                Melee     7 2+ 14 -3             4        CLEAVE 2, DEVASTATING WOUNDS
+   Abilities                           Description
+   Supreme Commander                   If this model is in your army, it must be your WARLORD.
+                                       In your Movement phase, you can select a number of friendly ORKS units equal
+   Makari, Hoist Dat Banner!           to or less than the current battle round number. Those units are riled up until the
+   (Once per battle, per army)         start of your next turn.
+                                       Place one Makari token next to the unit, removing it after this ability is used.
+                                       While this unit is within 3" of another friendly ORKS INFANTRY unit, this unit
+   Da Grand Warlord's Ladz
+                                       has Lone Operative.
+                                       While a friendly ORKS unit is within 6" of this unit, that unit's melee attacks have:
+   Prophet of Da Great
+                                        +1 to hit rolls.
+   Waaagh! (Aura)
+                                        +1 to wound rolls.
+    Rules Waaagh!, Da Boss
+
+    Categories Character, Epic Hero, Explosives, Faction: Orks, Ghazghkull Thraka, Infantry, Warboss, Warlord
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad67fb159473e5cca40e708                                                               9/12
+10/20/26, 11:35 PM                                                      Ooga booga - New Recruit
+     45 PTS                                                         GRETCHIN                                                 x3
+   Models                                       Options
+   10x Gretchin                                  Grot Blasta, Scavenged Shivs
+   Unit                                    M         T         Sv       W            LD       OC        InSv      Base
+   Gretchin (x10)                          6"        2         6+       1            8+       1                   25mm
+   Ranged Weapons                                              Range    A BS          S AP    D Keywords
+   Grot Blasta (Dakka! Dakka! Dakka!) (x10)                    12"      1       4+    3   0   1    CLOSE-QUARTERS, ASSAULT
+   Melee Weapons                                         Range              A        WS       S    AP     D    Keywords
+   Scavenged Shivs (x10)                                 Melee              1        5+       2    0      1
+   Abilities               Description
+                           For the purposes of transport capacity, each 2 Gretchin models (rounding up) take up
+   Downtrodden
+                           the space of 1 model.
+   Thievin’                At the end of your Movement phase, if this unit is controlling an objective, that objective
+   Scavengers              is secured.
+    Rules Waaagh!
+
+    Categories Battleline, Faction: Orks, Gretchin, Grots, Infantry
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad67fb159473e5cca40e708                                                                      10/12
+10/20/26, 11:35 PM                                             Ooga booga - New Recruit
+
+
+  Rules
+  Army Roster (Xenos - Orks)
+    Waaagh!
+    Friendly ORKS with this ability can:
+     Re-roll advance rolls.
+     Become riled up, as stated in other rules.
+       While a unit is riled up:
+          - That unit has 5+ InSv.
+          - That unit's ranged attacks have [ASSAULT].
+          - When that unit is selected to make an advance move, that advance move does not prevent that unit
+       from being eligible to declare a charge.
+    War Cry (Once per battle, per army)
+    At the start of the Command phase, you can use this ability. If you do, friendly ORKS units with the Waaagh!
+    ability are riled up until the end of the next turn.
+
+  Da Boss:
+  At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.
+
+  Dakka! Dakka! Dakka!:
+  Friendly ORKS INFANTRY units’ ranged attacks have [ASSAULT].
+   While this unit is riled up, +3" R.
+
+  Deep Strike:
+  Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up
+  anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your
+  opponent’s deployment zone.
+
+  Displays of Savagery:
+  Friendly MEGANOBZ/NOBZ units' melee attacks have [SUSTAINED HITS 1].
+
+  Leader:
+  Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one
+  friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an
+  attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one
+  support unit attached to it.
+
+  Sneaky Little Gitz:
+    Friendly GRETCHIN units have BATTLELINE.
+    When a friendly GRETCHIN unit is selected to make an advance/fall-back move, that move does not
+     prevent this unit from being eligible to start an action.
+
+  Supa-hazardous:
+  Each time a unit is selected to shoot, after that unit has resolved all of its attacks, make two hazard rolls for
+  that unit for each [SUPA-HAZARDOUS] weapon you selected in the Select Weapons step.
+
+  Support:
+  Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one
+  friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form
+  an attached unit with it.
+  Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to
+  it.
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad67fb159473e5cca40e708                                                          11/12
+10/20/26, 11:35 PM                                             Ooga booga - New Recruit
+
+  Waaagh!:
+  Friendly ORKS with this ability can:
+   Re-roll advance rolls.
+   Become riled up, as stated in other rules.
+     While a unit is riled up:
+        - That unit has 5+ InSv.
+        - That unit's ranged attacks have [ASSAULT].
+        - When that unit is selected to make an advance move, that advance move does not prevent that unit
+     from being eligible to declare a charge.
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad67fb159473e5cca40e708                                                 12/12
+

@@ -56,3 +56,15 @@ imperial-knights Canis-Rex
 imperial-knights Cerastus-Knight-Atrapos
 imperial-knights Cerastus-Knight-Lancer
 imperial-knights Knight-Crusader
+orks Zodgrod-Wortsnagga
+orks Runtherd
+world-eaters Chaos-Terminators
+adeptus-mechanicus Cybernetica-Datasmith
+adeptus-mechanicus Kastelan-Robots
+adeptus-mechanicus Belisarius-Cawl
+adeptus-mechanicus Thulia-Ghuld
+adeptus-mechanicus Tech-priest-Enginseer
+adeptus-mechanicus Skitarii-Rangers
+adeptus-mechanicus Ironstrider-Ballistarii
+adeptus-mechanicus Onager-Dunecrawler
+adeptus-mechanicus Skorpius-Disintegrator

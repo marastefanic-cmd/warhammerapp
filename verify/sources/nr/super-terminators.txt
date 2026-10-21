@@ -1,0 +1,360 @@
+10/20/26, 11:36 PM                                             Super Terminators - New Recruit
+
+                                                   Super Terminators [2000pts]
+  Army Roster [3 Detachment Points, 2000 pts] (Chaos - World Eaters)
+  • Battle Size: Strike Force (2000 Point limit)
+  • Blessings of Khorne Reference
+  • Detachment: Berzerker Warband [2Detachment Points], Butchers of Khorne [1Detachment
+  Points]
+  • Force Disposition: Take and Hold
+  • Show/Hide Options: Unaligned Forces are visible, Unaligned Fortifications are visible
+  NAME                       ROLE      PTS OPTIONS
+   Angron                             Epic Hero 330
+   (10) Chaos Terminators Infantry                    370
+   (10) Chaos Terminators Infantry                    370
+   (10) Chaos Terminators Infantry                    380
+   (3) Eightbound                     Infantry        125 2x Eightbound
+   (8) Goremongers                    Infantry        70
+   (10) Jakhals                       Infantry        65
+   Forgefiend                         Vehicle         145
+   Forgefiend                         Vehicle         145
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad7326eef9b63c3796f11b2                                     1/10
+10/20/26, 11:36 PM                                                     Super Terminators - New Recruit
+     330 PTS                                                     ANGRON
+   Models                            Options
+   1x Angron                         Samni’arius and Spinegrinder, Warlord
+   Unit                    M             T          Sv           W              LD          OC            InSv        Base
+   Angron                  14"           11         2+           16             5+          6             4+          100mm
+   Melee Weapons                                               Range      A      WS     S        AP   D          Keywords
+   ➤ Samni’arius and Spinegrinder - strike                     Melee      9      2+     14       -3   D6+2       Devastating Wounds
+   ➤ Samni’arius and Spinegrinder - sweep                      Melee       17    2+     7        -2   2          Devastating Wounds
+   Abilities           Description
+                       At the start of the battle round, when you make a Blessings of Khorne roll, if this model is
+                       destroyed, you can use a triple 6 from that roll to use this ability instead of activating any
+   Reborn in
+                       Blessings of Khorne at the start of that battle round. If you do, this model is no longer
+   Blood
+                       destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere
+                       on the battlefield using its Deep Strike ability, with 8 wounds remaining.
+   Wrathful            At the start of the battle round, select one Wrathful Presence ability. Until the start of the next
+   Presence            battle round, this model has that ability.
+   Damaged: 1-6
+                       While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1
+   wounds
+   remaining
+                       from the Hit roll.
+
+   Wrathful Presence             Effect
+   The Blood God's               Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you
+   Favour                        can re-roll up to 6 of the D6 rolled.
+                                 While a friendly WORLD EATERS unit is within 6" of this unit, that unit’s melee attacks
+   Driven by Ultimate            can:
+   Rage (Aura)                    Re-roll hit rolls of 1.
+                                  Re-roll wound rolls of 1.
+                                 Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must
+   Overwhelming Wrath
+                                 take a Leadership test. If that test is failed, that unit must Remain Stationary this
+   (Aura)
+                                 phase instead.
+    Rules Deadly Demise D6, Deep Strike, Blessings of Khorne, Devastating Wounds
+
+    Categories Angron, Chaos, Character, Daemon, Epic Hero, Faction: World Eaters, Fly, Khorne, Monster, Primarch,
+               Warlord
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad7326eef9b63c3796f11b2                                                                          2/10
+10/20/26, 11:36 PM                                                  Super Terminators - New Recruit
+     370 PTS                                             CHAOS TERMINATORS                                                      x2
+   Models                                                        Options
+   1x Terminator Champion                                               Paired accursed weapons
+   2x Combi-bolter, chainfist                                           Chainfist, Combi-bolter
+   4x Combi-bolter, power fist                                          Combi-bolter, Power fist
+   1x Paired accursed weapons                                           Paired accursed weapons
+   2x Heavy weapon                                                      Reaper autocannon, Power fist
+   Unit                                           M        T       Sv         W      LD           OC       InSv          Base
+   Chaos Terminators                              7"       6       2+         3      6+           1        4+            40mm
+   Ranged Weapons                   Range      A BS S AP D Keywords
+   Combi-bolter (x6)                24"        2 4+ 5 -1 1 Rapid Fire 4
+   Reaper autocannon (x2)            36"       4 4+ 7 -1           1 Devastating Wounds, Rapid Fire 2, Sustained Hits 1
+   Melee Weapons                                           Range          A    WS      S    AP         D   Keywords
+   Paired accursed weapons (x2)                            Melee          6    2+      5    -2         1   Twin-linked
+   Chainfist (x2)                                          Melee          4    3+      8    -3         2   Anti-VEHICLE 3+
+   Power fist (x6)                                         Melee          4    2+      8    -2         2
+   Abilities                    Description
+                                  This unit’s ranged attacks that target the closest eligible target can re-roll hit rolls.
+                                  When this unit declares a charge, you can use this part of this ability.
+   Bloody Fury                     If you do:
+                                   -- This unit can re-roll that charge roll.
+                                   -- This unit must end that charge move engaged with the closest charge target.
+   Gore-stained Veterans        This unit’s melee attacks have +1 WS.
+    Rules Deep Strike, Blessings of Khorne, Twin-linked, Anti, Rapid Fire, Sustained Hits, Devastating Wounds
+
+    Categories Chaos, Faction: World Eaters, Infantry, Khorne, Terminator, Terminator Squad
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad7326eef9b63c3796f11b2                                                                         3/10
+10/20/26, 11:36 PM                                                  Super Terminators - New Recruit
+     380 PTS                                             CHAOS TERMINATORS
+   Models                                                        Options
+   1x Terminator Champion                                               Paired accursed weapons
+   2x Combi-bolter, chainfist                                           Chainfist, Combi-bolter
+   4x Combi-bolter, power fist                                          Combi-bolter, Power fist
+   1x Paired accursed weapons                                           Paired accursed weapons
+   2x Heavy weapon                                                      Reaper autocannon, Power fist
+   Unit                                           M        T       Sv         W      LD           OC       InSv          Base
+   Chaos Terminators                              7"       6       2+         3      6+           1        4+            40mm
+   Ranged Weapons                   Range      A BS S AP D Keywords
+   Combi-bolter (x6)                24"        2 4+ 5 -1 1 Rapid Fire 4
+   Reaper autocannon (x2)            36"       4 4+ 7 -1           1 Devastating Wounds, Rapid Fire 2, Sustained Hits 1
+   Melee Weapons                                           Range          A    WS      S    AP         D   Keywords
+   Paired accursed weapons (x2)                            Melee          6    2+      5    -2         1   Twin-linked
+   Chainfist (x2)                                          Melee          4    3+      8    -3         2   Anti-VEHICLE 3+
+   Power fist (x6)                                         Melee          4    2+      8    -2         2
+   Abilities                    Description
+                                  This unit’s ranged attacks that target the closest eligible target can re-roll hit rolls.
+                                  When this unit declares a charge, you can use this part of this ability.
+   Bloody Fury                     If you do:
+                                   -- This unit can re-roll that charge roll.
+                                   -- This unit must end that charge move engaged with the closest charge target.
+   Gore-stained Veterans        This unit’s melee attacks have +1 WS.
+    Rules Deep Strike, Blessings of Khorne, Twin-linked, Anti, Rapid Fire, Sustained Hits, Devastating Wounds
+
+    Categories Chaos, Faction: World Eaters, Infantry, Khorne, Terminator, Terminator Squad
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad7326eef9b63c3796f11b2                                                                    4/10
+10/20/26, 11:36 PM                                                 Super Terminators - New Recruit
+     125 PTS                                                    EIGHTBOUND
+   Models                                                                                    Options
+   1x Eightbound Champion                                                                    Chainblades
+   2x Eightbound                                                                             Chainblades
+   Unit                              M             T       Sv         W        LD         OC           InSv       Base
+   Eightbound                        10"           6       3+         3        6+         1            5+         40mm
+   Melee Weapons                                Range             A       WS         S       AP        D      Keywords
+   Chainblades (x3)                             Melee             6       3+         8       -2        2
+   Abilities         Description
+                     While a friendly World Eaters unit is within 6" of this unit, each time a model in that unit makes
+   Beacons of
+                     a melee attack that targets a unit (excluding Monsters and Vehicles), add 1 to the Hit roll. If
+   Rage (Aura)
+                     that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well.
+    Rules Scouts 6", Blessings of Khorne
+
+    Categories Chaos, Daemon, Eightbound, Faction: World Eaters, Infantry, Khorne, Possessed
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad7326eef9b63c3796f11b2                                                             5/10
+10/20/26, 11:36 PM                                                      Super Terminators - New Recruit
+     70 PTS                                                     GOREMONGERS
+   Models                                                      Options
+   1x Blood Herald                                             Autopistol, Chainblade, Close combat weapon
+   7x Goremonger w/ chainblade                                 Autopistol, Chainblade, Close combat weapon
+   Unit                                   M         T          Sv         W          LD         OC             InSv            Base
+   Goremongers                            9"        4          6+         1          7+         1                              32mm
+   Ranged Weapons                               Range                A        BS           S      AP           D          Keywords
+   Autopistol (x8)                              12"                  1        4+           3      0            1          Pistol
+   Melee Weapons                                                Range            A        WS      S       AP          D     Keywords
+   Chainblade (x8)                                              Melee            4        4+      3       0           1     Lance
+   Close combat weapon (x8)                                     Melee            3        4+      3       0           1
+   Abilities     Description
+                 In your opponent's Movement phase, if an enemy unit ends a move within 8" of this unit, if this unit
+   Loping
+                 is not within Engagement Range of one or more enemy units, this unit can make a Normal move of
+   Speed
+                 up to D6".
+    Rules Infiltrators, Blessings of Khorne, Pistol, Lance
+
+    Categories Chaos, Faction: World Eaters, Goremongers, Grenades, Infantry, Khorne
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad7326eef9b63c3796f11b2                                                                           6/10
+10/20/26, 11:36 PM                                                  Super Terminators - New Recruit
+     65 PTS                                                    JAKHALS
+   Models                                                                            Options
+   1x Jakhal Pack Leader                                                             Autopistol, Chainblades
+   1x Dishonoured w/ paired manglers                                                 Paired manglers
+   8x Jakhal                                                                         Autopistol, Chainblades
+   Unit                                                        M        T    Sv       W      LD       OC      InSv   Base
+   Jakhal                                                      7"       4    6+       1      7+       1              28.5mm
+   Dishonoured w/ paired manglers                              7"       4    6+       1      7+       1              40mm
+   Ranged Weapons                               Range               A       BS        S       AP          D    Keywords
+   Autopistol (x9)                              12"                 1       4+        3       0           1    Pistol
+   Melee Weapons                                Range               A       WS        S       AP          D    Keywords
+   Chainblades (x9)                             Melee               4       4+         3       0          1
+   Paired manglers                              Melee               5       4+         4       0          1
+   Abilities         Description
+                     At the end of your Command phase, if this unit is within range of an objective marker you
+   Objective
+                     control, that objective marker remains under your control until your opponent's Level of Control
+   Ravaged
+                     over that objective marker is greater than yours at the end of a phase.
+    Rules Blessings of Khorne, Pistol
+
+    Categories Chaos, Faction: World Eaters, Grenades, Infantry, Jakhals, Khorne
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad7326eef9b63c3796f11b2                                                                  7/10
+10/20/26, 11:36 PM                                                   Super Terminators - New Recruit
+     145 PTS                                                   FORGEFIEND                                                     x2
+   Models            Options
+   1x                2 Hades autocannons (2x Hades autocannon), Ectoplasma cannon and claws (Ectoplasma cannon,
+   Forgefiend        Forgefiend claws)
+   Unit                         M           T           Sv      W          LD         OC         InSv         Base
+   Forgefiend                   10"         10          3+      12         6+         3          5+           120x92mm
+   Ranged Weapons                                 Range        A        BS       S         AP     D     Keywords
+   Hades autocannon (x2)                          36"          6        4+       8         -1     2     Rapid Fire 4
+   Ectoplasma cannon                              36"          D3       4+       10        -3     3     Blast, Rapid Fire 1
+   Melee Weapons                                 Range              A      WS          S        AP       D      Keywords
+   Forgefiend claws                              Melee              7      3+          6        0        1
+   Abilities                        Description
+                                    Each time this model makes a ranged attack that targets the closest eligible target
+   Furious Onslaught
+                                    within 18", you can re-roll the Hit roll.
+   Damaged: 1-4 wounds              While this model has 1-4 wounds remaining, each time this model makes an attack,
+   remaining                        subtract 1 from the Hit roll.
+    Rules Deadly Demise D3, Blessings of Khorne, Rapid Fire, Blast
+
+    Categories Chaos, Daemon, Faction: World Eaters, Forgefiend, Khorne, Vehicle, Walker
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad7326eef9b63c3796f11b2                                                                       8/10
+10/20/26, 11:36 PM                                             Super Terminators - New Recruit
+
+
+  Rules
+  Adamantine Avalanche:
+  At the start of the Fight phase, if a friendly TERMINATOR SQUAD unit is engaged, make a Blessings of
+  Khorne roll and use the results to activate one Blessing of Khorne. Until the end of the phase, that Blessing
+  of Khorne is active for friendly TERMINATOR SQUAD units in addition to any other Blessings of Khorne
+  that are currently active.
+
+  Anti:
+  This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the
+  target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.
+  Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical
+  wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon
+  against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.
+
+  Blast:
+  Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models
+  that were in the target unit in the Select Targets step (rounding down). If this ability takes the form [BLAST X],
+  each time you gather attack dice for such a weapon, add X additional attack dice for every five models that
+  were in the target unit in the Select Targets step (rounding down) instead.
+  Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would
+  gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+  Blessings of Khorne:
+  If your Army Faction is World Eaters, at the start of the battle round, you can make a Blessings of Khorne roll.
+  To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne. Each Blessing of
+  Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or
+  higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from
+  the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from
+  your army with this ability until the end of the battle round.
+  Example: Ash makes their Blessings of Khorne roll and gets the following dice: 1, 2, 2, 2, 3, 4, 6, 6.
+  First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the
+  following dice: 1, 2, 2, 2, 3, 4.
+  They then use the two 2s to activate Wrathful Devotion (which requires any double), leaving the
+  following dice: 1, 2, 3, 4.
+  However, now that they have activated two Blessings of Khorne, they cannot activate any more
+  and the remaining dice are discarded.
+
+  Deadly Demise D3 / Deadly Demise D6:
+  This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the
+  units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that
+  model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds
+  denoted by X (if this is a random number, roll separately for each unit within 6").
+  Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any
+  unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency
+  disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved.
+  Finally, the Impulsor is removed from the battlefield.
+
+  Deep Strike:
+  Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up
+  anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your
+  opponent’s deployment zone.
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad7326eef9b63c3796f11b2                                                           9/10
+10/20/26, 11:36 PM                                             Super Terminators - New Recruit
+
+  Devastating Wounds:
+  Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack
+  sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D
+  characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+  Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for
+  each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+  Example: An attack made with a [DEVASTATING WOUNDS] weapon with a D characteristic of 3 results in a
+  critical wound against an Intercessor Squad, so inflicts 3 mortal wounds. The first 2 mortal wounds are
+  sufficient to destroy 1 Intercessor model, so the remaining mortal wound is lost.
+
+  Infiltrators:
+  During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is
+  more than 8" horizontally from your opponent’s deployment zone and all enemy units.
+
+  Lance:
+  Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this
+  turn, add 1 to the wound roll.
+
+  Pistol:
+  [PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
+  Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters
+  shooting (10.06). When using another shooting type, for each model in that unit (excluding
+  MONSTER/VEHICLE models), you can only select one of the following to make attacks with:
+   One or more of its [CLOSE-QUARTERS] weapons.
+   One or more of its other ranged weapons.
+
+  Rapid Fire:
+  This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE]
+  weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select
+  Targets step.
+  Example: If a [RAPID FIRE 1] weapon with an A characteristic of 1 targets a unit that is within half range,
+  you would gather one additional attack dice for that weapon (for a total of two for that weapon).
+
+  Relentless Rage:
+  Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+  Scouts 6":
+  This ability always takes the form Scouts X". In the Resolve Pre-battle Abilities step, if every model in a unit has
+  this ability, you can do one of the following:
+    If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment
+     zone.
+    If that unit is wholly within your deployment zone, it can make a scout move.
+    If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if
+     every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED
+     TRANSPORT can make a scout move.
+
+  Sustained Hits:
+  This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED
+  HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as
+  denoted by X.
+  Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore
+  hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability).
+
+  Twin-linked:
+  Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll.
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad7326eef9b63c3796f11b2                                                           10/10
+

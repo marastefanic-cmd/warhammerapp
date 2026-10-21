@@ -13,6 +13,9 @@ Everything the app states as a fact is checked against these, mechanically, befo
 | nr/nidzillas.txt | Nidzillas - New Recruit.pdf (exported 10/20/26) | ad75f4a9330b068a61ffbf91be435a4dfb147407644d4905a78d662f21096a90 |
 | nr/6-bigs.txt | 6 bigs - New Recruit.pdf (exported 10/20/26) | f96e523666f068900c1f8325e1aabf6e98a4c16c0da338345f997e368566b77b |
 | nr/4-megas-and-a-destrier.txt | 4 megas and a destrier - New Recruit.pdf (exported 10/20/26) | 1a924485e7e0448c6d299eb983a9d6ed0dfbbebdee695a119e374ca57b7a3cf3 |
+| nr/ooga-booga.txt | Ooga booga - New Recruit.pdf (exported 10/20/26) | a2b11ffbb14e2e0aaaea7b4ea69dcae654486992c0f34240dcc1893b4d698c4d |
+| nr/super-terminators.txt | Super Terminators - New Recruit.pdf (exported 10/20/26) | 00f2317c6bef15df77ae952c90414ce0da1294a42efb347c89e6fff733666069 |
+| nr/purge-goes-the-foe.txt | Purge goes the Foe - New Recruit.pdf (exported 10/20/26) | cdcdfe52576d558f460e7d9b6afe4076e0aa4f12e6dd6d84b53646217ff5f392 |
 | packet/core-stratagems.txt | Core_stratagemy.pdf | d62979edcfd0323c1d3382a6d238f0f87b312fb07f103125ecbccdb6bd96e5a8 |
 
 Text made with `pdftotext -layout <pdf> <txt>` (poppler).

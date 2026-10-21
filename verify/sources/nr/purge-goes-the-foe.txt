@@ -1,0 +1,509 @@
+10/20/26, 11:36 PM                                                 Purge goes the Foe - New Recruit
+
+                                                  Purge goes the Foe [2000pts]
+  Army Roster [3 Detachment Points, 2000 pts] (Imperium - Adeptus Mechanicus)
+  • Battle Size: Strike Force (2000 Point limit)
+  • Detachment: Cohort Cybernetica [1Detachment Points], Eradication Cohort [2Detachment Points]
+  • Force Disposition: Purge the Foe
+  • Show/Hide Options
+  NAME                       ROLE       PTS OPTIONS
+   Belisarius Cawl                    Epic Hero 220 Warlord
+   Thulia Ghuld                       Epic Hero 180
+   Cybernetica Datasmith              Character 35
+   Tech-Priest Enginseer              Character 75
+   (10) Skitarii Rangers              Battleline 85
+   (10) Skitarii Rangers              Battleline 85
+   (3) Ironstrider Ballistarii Vehicle               280
+   (3) Ironstrider Ballistarii Vehicle               250
+                                                               Cybernetica Datasmith
+   (4) Kastelan Robots                Vehicle        300
+                                                               4x Kastelan Robot
+   Onager Dunecrawler                 Vehicle        150
+   Skorpius Disintegrator             Vehicle        170
+   Skorpius Disintegrator             Vehicle        170
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad4b6d1629869a24a1a292a                                          1/13
+10/20/26, 11:36 PM                                                   Purge goes the Foe - New Recruit
+     335 PTS                                        CYBERNETICA DATASMITH
+   Models                                     Options
+                                              Martial Signatum Amplificator, Mechanicus pistol, Power fist
+   1x Cybernetica Datasmith
+                                              • Supporting: Kastelan Robots
+   4x Kastelan Robot                          Twin Kastelan fist, Incendine combustor
+   Unit                                                                        M      T    Sv     W        LD     OC      InSv   Base
+   Cybernetica Datasmith - Cybernetica Datasmith                               8"     4    2+     3        7+     1       5+     32mm
+   Kastelan Robot (x4) - Kastelan Robots                                       8"     9    2+     7        7+     2       5+     60mm
+   Ranged Weapons                                              Range      A     BS        S AP D Keywords
+   Mechanicus pistol - Cybernetica Datasmith                   12"        1     3+        6 -1 1 Devastating Wounds, Pistol
+   Incendine combustor (x4) - Kastelan Robots                  12"        D6    N/A       6 -1    1       Ignores Cover, Torrent
+   Melee Weapons                                                        Range         A     WS        S      AP       D   Keywords
+   Power fist - Cybernetica Datasmith                                   Melee         2     3+        8      -2       2
+   Twin Kastelan fist (x4) - Kastelan Robots                            Melee         4     4+        12     -2       3   Twin-linked
+   Abilities                 Description
+                             At the start of the battle, if this model is leading a Kastelan Robots unit, that unit enters
+                             Aegis Protocols (see below). In your Command phase, if this model is leading a Kastelan
+                             Robots unit, you can select one protocol from those listed below for that unit to enter.
+                             Once a unit enters a protocol, it remains in that protocol until it enters a different one.
+   Battle Protocols -
+                              Protector Protocol: Add 2 to the Attacks characteristic of ranged weapons equipped by
+   Cybernetica
+                                Kastelan Robot models in that unit.
+   Datasmith
+                              Conqueror Protocol: Add 2 to the Attacks characteristic of melee weapons equipped by
+                                Kastelan Robot models in that unit.
+                              Aegis Protocol: Add 1 to the Toughness characteristic of Kastelan Robot models in that
+                                unit.
+   Data-severed -             If there are no KASTELAN ROBOT models in this unit:
+   Cybernetica                  This unit loses VEHICLE.
+   Datasmith                    This unit has INFANTRY.
+   Martial Signatum
+   Amplificator -
+   Cybernetica
+                              Tech‑Priest model only. Models in the bearer’s unit have the Skitarii keyword.
+   Datasmith
+   Robotic Bodyguard -        While a Cybernetica Datasmith model is leading this unit, that model has the Feel No
+   Kastelan Robots            Pain 4+ ability.
+                              When an enemy unit targets this unit with ranged attacks, until that enemy unit has shot,
+   Repulsor Grid -            when this unit makes a save roll:
+   Kastelan Robots             On an unmodified 6, that enemy unit suffers 1 mortal wound after that enemy unit has
+                                shot.
+    Rules Support, Doctrina Imperatives, Feel No Pain 4+, Devastating Wounds, Pistol, Deadly Demise 1,
+          Doctrina Imperatives, Twin-linked, Ignores Cover, Torrent
+    Categories Character, Cybernetica Datasmith, Faction: Adeptus Mechanicus, Imperium, Legio Cybernetica, Skitarii,
+               Tech-Priest, Vehicle, Kastelan Robots*, Walker*, *from combined unit
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad4b6d1629869a24a1a292a                                                                            2/13
+10/20/26, 11:36 PM                                                   Purge goes the Foe - New Recruit
+     220 PTS                                              BELISARIUS CAWL
+   Models                     Options
+   1x Belisarius Cawl         Arc scourge, Cawl's Omnissian axe, Mechadendrite hive, Solar atomiser, Warlord
+   Unit                                 M          T     Sv         W         LD        OC         InSv        Base
+   Belisarius Cawl                      8"         8     2+         10        6+        3          4+          105x70mm
+   Ranged Weapons                                Range          A        BS        S          AP          D     Keywords
+   Solar atomiser                                18"            3        2+        14         -4          D6    Melta 3
+   Melee Weapons                Range        A      WS S AP D Keywords
+   Arc Scourge                  Melee        4      2+ 5 -1 1 Anti-Vehicle 4+, Devastating Wounds, Extra Attacks
+   Cawl's Omnissian axe         Melee        4      2+   8 -2       2
+   Mechadendrite hive           Melee        2D6    3+   4 0        1 Extra Attacks
+   Abilities           Description
+                       At the start of your Command phase, select one of the abilities in the Canticles of the
+                       Omnissiah section. Until the start of your next Command phase, this model has that ability.
+                       Invocation of Machine Vengeance (Aura): At the start of your Command phase, select one unit
+                       from your opponent’s army. Until the start of your next Command phase, that enemy unit is
+                       your Machine Vengeance target. Each time a model in a friendly Adeptus Mechanicus unit
+   Canticles of        makes an attack that targets your Machine Vengeance target, you can re‑roll the Hit roll.
+   the Omnissiah       Mantra of Discipline: This model has the Battleline keyword and has the following ability:
+                       Binharic Courage (Aura): While a friendly Adeptus Mechanicus unit is within 6" of this
+                       model, add 1 to the Objective Control characteristic of models in that unit and each time you
+                       take a Battle-shock or Leadership test for that unit, add 1 to that test.’
+                       Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6" of this model, that
+                       unit has the Stealth ability.
+   Mechanicus          While this model is within 3" of one or more other friendly Adeptus Mechanicus units, this
+   Bodyguard           model has the Lone Operative ability.
+   Self-repair
+                       At the start of your Command phase, this model regains up to D3 lost wounds.
+   Mechanisms
+   Supreme
+   Commander
+                       If this model is in your army, it must be your Warlord.
+
+    Rules Doctrina Imperatives, Anti, Devastating Wounds, Extra Attacks, Blast, Melta
+
+    Categories Belisarius Cawl, Character, Cult Mechanicus, Epic Hero, Faction: Adeptus Mechanicus, Imperium, Mobile,
+               Monster, Tech-Priest, Warlord
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad4b6d1629869a24a1a292a                                                               3/13
+10/20/26, 11:36 PM                                                 Purge goes the Foe - New Recruit
+     180 PTS                                                   THULIA GHULD
+   Models                          Options
+   1x Thulia Ghuld                 Jericho-class conversion resonator, Rod of the War Forge
+   Unit                                M         T      Sv          W          LD           OC          InSv          Base
+   Thulia Ghuld                        8"        8      2+          10         6+           3           4+            80mm
+   Ranged Weapons                                                 Range A    BS S                AP D          Keywords
+   ➤ Jericho-class conversion resonator - shockwave               24"   D6+2 2+ 6                -2 1          Blast, Sustained Hits 1
+   ➤ Jericho-class conversion resonator - titanic impact          24"      2        2+ 12 -3 D6+2 Devastating Wounds
+   Melee Weapons                                                 Range         A       WS        S       AP      D    Keywords
+   ➤ Rod of the War Forge - strike                               Melee         6       2+        10      -2      3
+   ➤ Rod of the War Forge - sweep                                Melee         12      2+        6       -1      1
+   Abilities            Description
+                        Fanatical Devotion: You can select one friendly Skitarii or Thulia Ghuld unit within 6" of
+                        this model; until the start of your next Command phase, that unit is eligible to shoot and
+                        declare a charge in a turn in which it Advanced.
+                        Adaptive Tactics: You can select one friendly Skitarii or Thulia Ghuld unit within 6" of this
+   Icon of War          model; until the start of your next Command phase, that unit is eligible to shoot and declare a
+                        charge in a turn in which it Fell Back.
+                        The Fires of Mars: You can select one friendly Skitarii or Thulia Ghuld unit within 6" of
+                        this model; until the start of your next Command phase, the Conqueror Imperative and
+                        Protector Imperative are both active for that unit.
+   Mechanicus           While this model is within 3" of one or more other friendly Adeptus Mechanicus units, this
+   Bodyguard            model has the Lone Operative ability.
+   Secutor of           At the start of your Shooting phase, select one enemy Vehicle unit within 12" of this
+   Olympus              model and roll one D6: on a 2+, that enemy unit suffers D3+1 mortal wounds.
+   Supreme
+                        If this model is in your army, it must be your Warlord.
+   Commander
+   Rod of the War       In your Command phase, select one of the abilities in the Icon of War section. Until the start
+   Forge                of your next Command phase, this model has that ability.
+    Rules Doctrina Imperatives, Blast, Sustained Hits, Devastating Wounds
+
+    Categories Character, Cult Mechanicus, Epic Hero, Faction: Adeptus Mechanicus, Imperium, Mobile, Monster,
+               Tech-Priest, Thulia Ghuld
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad4b6d1629869a24a1a292a                                                                             4/13
+10/20/26, 11:36 PM                                                  Purge goes the Foe - New Recruit
+     75 PTS                                             TECH-PRIEST ENGINSEER
+   Models                                   Options
+   1x Tech-Priest Enginseer                 Necromechanic, Mechanicus pistol, Omnissian axe, Servo arm
+   Unit                                               M         T       Sv        W     LD        OC      InSv         Base
+   Tech-Priest Enginseer                              6"        4       3+        3     7+        1       5+           32mm
+   Ranged Weapons                     Range         A      BS       S        AP   D   Keywords
+   Mechanicus pistol                  12"           1      3+       6        -1   1   Devastating Wounds, Pistol
+   Melee Weapons                         Range                 A    WS            S    AP        D     Keywords
+   Omnissian axe                         Melee                 3    4+            6    -2        2
+   Servo arm                             Melee                 1    4+            6    -2        2     Extra Attacks
+   Abilities               Description
+                           While this model is within 3" of one or more friendly Adeptus Mechanicus Vehicle units,
+   Enginseer
+                           unless it is leading a unit, this model has the Lone Operative ability.
+                           In your Command phase, select one friendly Adeptus Mechanicus model within 3" of this
+   Omnissiah's             model. That model regains up to D3 lost wounds and, if it is a Vehicle model, until the start
+   Blessing                of your next Command phase, that model has the Feel No Pain 5+ ability. Each model can
+                           only be selected for this ability once per Command phase
+   Vengeance for the       If a friendly Adeptus Mechanicus Vehicle model is destroyed within 12" of this model, until
+   Omnissiah               the end of the battle, this model’s Omnissian axe has an Attacks characteristic of 6.
+                           Once per battle round, when a saving throw made for a friendly Legio Cybernetica or
+   Necromechanic           Adeptus Mechanicus Vehicle model within 12" of the bearer is failed, the bearer can use
+                           this Enhancement. If they do, change the Damage characteristic of that attack to 0.
+    Rules Leader, Doctrina Imperatives, Devastating Wounds, Pistol, Extra Attacks
+
+    Categories Character, Cult Mechanicus, Enginseer, Faction: Adeptus Mechanicus, Imperium, Infantry, Tech-Priest
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad4b6d1629869a24a1a292a                                                                  5/13
+10/20/26, 11:36 PM                                                  Purge goes the Foe - New Recruit
+     85 PTS                                               SKITARII RANGERS                                                      x2
+   Models                                                  Options
+   1x Skitarii Ranger Alpha                                    Alpha combat weapon, Close combat weapon, Galvanic rifle
+   1x Skitarii Ranger w/ arc rifle                             Arc rifle, Close combat weapon
+   1x Skitarii Ranger w/ plasma caliver                        Close combat weapon, Plasma caliver
+   1x Skitarii Ranger w/ transuranic arquebus                  Close combat weapon, Transuranic arquebus
+   1x Skitarii Ranger w/ omnispex                              Close combat weapon, Galvanic rifle, Omnispex
+   5x Skitarii Ranger w/ galvanic rifle                        Close combat weapon, Galvanic rifle
+   Unit                                            M           T    Sv        W        LD           OC        InSv      Base
+   Skitarii Rangers (x2)                           6"          3    4+        1        7+           2         5+        25mm
+   Ranged Weapons                     Range A BS S AP D                  Keywords
+   Galvanic rifle (x7)                30"   2 4+ 4 0 1                   Ignores Cover
+                                                                         Anti-Vehicle 4+, Devastating Wounds, Rapid Fire
+   Arc rifle                          30"      1 4+ 8 -1 D3
+                                                                         1, Ignores Cover
+   ➤ Plasma caliver -
+                                      30"      2 4+ 8 -3 2               Hazardous, Ignores Cover
+   supercharge
+   ➤ Plasma caliver - standard        30"      2 4+ 7 -2 1               Ignores Cover
+   Transuranic arquebus               36"      1 4+ 7 -2 D3 Heavy, Precision, Ignores Cover
+   Melee Weapons                                               Range           A     WS        S         AP    D     Keywords
+   Alpha combat weapon                                         Melee           2     4+         5        -1    1
+   Close combat weapon (x10)                                   Melee           1     4+         3        0     1
+   Abilities         Description
+                     At the end of your Command phase, if this unit is within range of an objective marker you
+   Objective
+                     control, that objective marker remains under your control, even if you have no models within
+   Scouted
+                     range of it, until your opponent controls it at the start or end of any turn.
+   Omnispex          Ranged weapons equipped by models in the bearer’s unit have the IGNORES COVER ability.
+    Rules Scouts 6", Doctrina Imperatives, Rapid Fire, Anti, Devastating Wounds, Hazardous, Heavy, Precision
+
+    Categories Battleline, Faction: Adeptus Mechanicus, Imperium, Infantry, Rangers, Skitarii
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad4b6d1629869a24a1a292a                                                                         6/13
+10/20/26, 11:36 PM                                                  Purge goes the Foe - New Recruit
+     280 PTS                                         IRONSTRIDER BALLISTARII
+   Models                                                              Options
+   3x Ironstrider Ballistarius (Twin cognis lascannon)                            Ironstrider feet, Twin cognis lascannon
+   Unit                                              M         T     Sv       W       LD       OC       InSv     Base
+   Ironstrider Ballistarii (x3)                      10"       7     3+       7       7+       2        5+       105x70mm
+   Ranged Weapons                            Range         A   BS    S      AP     D           Keywords
+   Twin cognis lascannon (x3)                48"           2   4+    12     -3     D6+1        Sustained Hits 1, Twin-linked
+   Melee Weapons                                    Range              A      WS           S       AP     D     Keywords
+   Ironstrider feet (x3)                            Melee              3      4+           5       0      1
+   Abilities                 Description
+                             This unit is eligible to shoot in a turn in which it Fell Back or Advanced, and you can re-
+   Elevated Strider
+                             roll Desperate Escape tests taken for models in this unit.
+   Broad Spectrum            Each time you select this unit as the target of a Stratagem, roll one D6: on a 5+, you gain
+   Data-tether               1CP.
+    Rules Deadly Demise 1, Doctrina Imperatives, Sustained Hits
+
+    Categories Faction: Adeptus Mechanicus, Imperium, Ironstrider Ballistarii, Skitarii, Smoke, Vehicle, Walker
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad4b6d1629869a24a1a292a                                                                   7/13
+10/20/26, 11:36 PM                                                 Purge goes the Foe - New Recruit
+     250 PTS                                           IRONSTRIDER BALLISTARII
+   Models                                                               Options
+   3x Ironstrider Ballistarius (Twin cognis autocannon)                          Ironstrider feet, Twin cognis autocannon
+   Unit                                             M          T    Sv          W    LD         OC       InSv    Base
+   Ironstrider Ballistarii (x3)                     10"        7    3+          7    7+         2        5+      105x70mm
+   Ranged Weapons                                Range         A   BS       S   AP    D       Keywords
+   Twin cognis autocannon (x3)                   48"           4   4+       9   -1    3       Sustained Hits 1, Twin-linked
+   Melee Weapons                                    Range               A       WS        S       AP       D    Keywords
+   Ironstrider feet (x3)                            Melee               3       4+        5       0        1
+   Abilities                 Description
+                             This unit is eligible to shoot in a turn in which it Fell Back or Advanced, and you can re-
+   Elevated Strider
+                             roll Desperate Escape tests taken for models in this unit.
+   Broad Spectrum            Each time you select this unit as the target of a Stratagem, roll one D6: on a 5+, you gain
+   Data-tether               1CP.
+    Rules Deadly Demise 1, Doctrina Imperatives, Sustained Hits
+
+    Categories Faction: Adeptus Mechanicus, Imperium, Ironstrider Ballistarii, Skitarii, Smoke, Vehicle, Walker
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad4b6d1629869a24a1a292a                                                                  8/13
+10/20/26, 11:36 PM                                              Purge goes the Foe - New Recruit
+     150 PTS                                          ONAGER DUNECRAWLER
+   Models                       Options
+   1x                           Broad spectrum data-tether, Cognis heavy stubber, Dunecrawler legs, Twin Onager heavy
+   Onager Dunecrawler           phosphor blaster
+   Unit                                          M       T      Sv        W        LD              OC       InSv        Base
+   Onager Dunecrawler                            8"       10    2+        11       7+              3        4+          130mm
+   Ranged Weapons                                       Range   A    BS       S   AP       D Keywords
+   Cognis heavy stubber                                 36"     3    4+       4   0        1 Rapid Fire 3, Sustained Hits 1
+   Twin Onager heavy phosphor blaster                   36"     12   4+       6   -1       2   Ignores Cover, Twin-linked
+   Melee Weapons                                Range           A      WS              S       AP       D          Keywords
+   Dunecrawler legs                             Melee           3      4+              6       0        1
+   Abilities                 Description
+   Emanatus Forcefield       While a friendly Adeptus Mechanicus Battleline model is wholly within 6" of this model,
+   (Aura)                    that Battleline model has a 4+ invulnerable save against ranged attacks.
+   Damaged: 1-4              While this mdel has 1-4 wounds remaining, each time this model makes an attack,
+   wounds remaining          subtract 1 from the Hit roll.
+                             Each time this model makes a Normal, Advance or Fall Back move, it can move through
+   Scuttling Walker          friendly Monster and Vehicle models and sections of terrain features that are 4" or less in
+                             height.
+   Broad spectrum            The bearer loses the SMOKE keyword, but each time you target the bearer with
+   data-tether               a Stratagem, roll one D6: on a 5+, you gain 1CP.
+    Rules Deadly Demise D3, Doctrina Imperatives, Rapid Fire, Sustained Hits, Ignores Cover, Twin-linked
+
+    Categories Faction: Adeptus Mechanicus, Imperium, Onager Dunecrawler, Skitarii, Vehicle, Walker
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad4b6d1629869a24a1a292a                                                                    9/13
+10/20/26, 11:36 PM                                                       Purge goes the Foe - New Recruit
+     170 PTS                                         SKORPIUS DISINTEGRATOR                                                          x2
+   Models                           Options
+   1x Skorpius Disintegrator        Armoured hull, 3x Cognis heavy stubber, Disruptor missile launcher, Ferrumite cannon
+   Unit                                             M               T         Sv          W       LD        OC     InSv       Base
+   Skorpius Disintegrator                           10"             10        2+          12      7+        3                 Hull
+   Ranged Weapons                           Range       A      BS        S     AP     D           Keywords
+   Cognis heavy stubber (x3)                36"         3      4+        4     0      1           Rapid Fire 3, Sustained Hits 1
+   Disruptor missile launcher               36"         3      4+        9     -2     D6          Twin-linked
+   Ferrumite cannon                         48"         3      4+        12    -3     D6+1
+   Melee Weapons                            Range                   A         WS           S      AP        D     Keywords
+   Armoured hull                            Melee                   3         4+           6      0         1
+   Abilities              Description
+   Broad spectrum         Each time you select the bearer as the target of a Stratagem, roll one D6: on a 5+, you
+   data-tether            gain 1CP.
+                          Each time this model makes an attack with a belleros energy cannon that targets an
+   Blistering Salvoes     Infantry unit, add 1 to the Hit roll. Each time this model makes an attack with a ferrumite
+                          cannon that targets a Monster or Vehicle unit, add 1 to the Hit roll.
+   Damaged: 1-4           While this model has 1-4 wounds remaining, each time this model makes an attack,
+   wounds remaining       subtract 1 from the Hit roll.
+    Rules Deadly Demise D3, Doctrina Imperatives, Rapid Fire, Sustained Hits, Twin-linked
+
+    Categories Faction: Adeptus Mechanicus, Frame, Imperium, Skitarii, Skorpius Disintegrator, Smoke, Vehicle
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad4b6d1629869a24a1a292a                                                                              10/13
+10/20/26, 11:36 PM                                             Purge goes the Foe - New Recruit
+
+
+  Rules
+  Anti:
+  This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the
+  target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.
+  Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical
+  wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon
+  against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.
+
+  Blast:
+  Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models
+  that were in the target unit in the Select Targets step (rounding down). If this ability takes the form [BLAST X],
+  each time you gather attack dice for such a weapon, add X additional attack dice for every five models that
+  were in the target unit in the Select Targets step (rounding down) instead.
+  Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would
+  gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+  Cyber Psalm-Programming:
+  Add 2" to the Move characteristic of models in Legio Cybernetica units from your army. In addition, unless that
+  unit is Battle‑shocked, add 1 to the Objective Control characteristic of models in that unit.
+
+  Deadly Demise 1 / Deadly Demise D3:
+  This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the
+  units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that
+  model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds
+  denoted by X (if this is a random number, roll separately for each unit within 6").
+  Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any
+  unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency
+  disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved.
+  Finally, the Impulsor is removed from the battlefield.
+
+  Devastating Wounds:
+  Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack
+  sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D
+  characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+  Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for
+  each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+  Example: An attack made with a [DEVASTATING WOUNDS] weapon with a D characteristic of 3 results in a
+  critical wound against an Intercessor Squad, so inflicts 3 mortal wounds. The first 2 mortal wounds are
+  sufficient to destroy 1 Intercessor model, so the remaining mortal wound is lost.
+
+  Doctrina Imperatives:
+  At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle
+  round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina
+  Imperatives ability gain the relevant abilities shown below.
+  PROTECTOR IMPERATIVE
+  ■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.
+  ■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.
+  ■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6" of one
+  or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.
+  CONQUEROR IMPERATIVE
+  ■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.
+  ■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.
+  ■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6" of
+  one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that
+  attack by 1.
+
+
+https://www.newrecruit.eu/app/Lists/6ad4b6d1629869a24a1a292a                                                        11/13
+10/20/26, 11:36 PM                                             Purge goes the Foe - New Recruit
+
+  Extra Attacks:
+  Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will
+  make attacks with those weapons in addition to any others. In the Select Weapons step (04.01), for each of
+  those models, you must select:
+    All of that model’s [EXTRA ATTACKS] weapons.
+    One of that model’s other melee weapons, if possible.
+
+  Feel No Pain 4+:
+  This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll
+  one D6: on an X+, that wound is not lost.
+
+  Hazardous:
+  Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make
+  a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in
+  the Select Weapons step.
+
+  Heavy:
+  In your Shooting phase, each time an attack is made with a [HEAVY] weapon, add 1 to the hit roll if all of the
+  following apply to the attacking unit:
+    That unit is unengaged.
+    That unit was not set up on the battlefield this turn.
+    No model in that unit has moved more than 3" this turn.
+
+  Ignores Cover:
+  Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover
+  against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+  Leader:
+  Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one
+  friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an
+  attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one
+  support unit attached to it.
+
+  Melta:
+  This ability always takes the form [MELTA X]. Each time a model makes an attack with a [MELTA] weapon, if
+  the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks
+  have been resolved, add X to that weapon’s D characteristic.
+  Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6.
+  While resolving those attacks, that weapon has a D characteristic of D6+2.
+
+  Murderous Imperative:
+  Each time a model in a Skitarii unit from your army makes an attack:
+   If the Protector Imperative is active for that unit, re‑roll a Hit roll of 1.
+   If the Conqueror Imperative is active for that unit, re‑roll a Wound roll of 1.
+
+  Pistol:
+  [PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
+  Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters
+  shooting (10.06). When using another shooting type, for each model in that unit (excluding
+  MONSTER/VEHICLE models), you can only select one of the following to make attacks with:
+   One or more of its [CLOSE-QUARTERS] weapons.
+   One or more of its other ranged weapons.
+
+  Precision:
+  While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step
+  (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking
+  models, the active player can select one allocation group that contains one of those visible CHARACTER
+  models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever
+  happens first), that CHARACTER group is the current allocation group.
+
+https://www.newrecruit.eu/app/Lists/6ad4b6d1629869a24a1a292a                                                       12/13
+10/20/26, 11:36 PM                                             Purge goes the Foe - New Recruit
+
+  Rapid Fire:
+  This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE]
+  weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select
+  Targets step.
+  Example: If a [RAPID FIRE 1] weapon with an A characteristic of 1 targets a unit that is within half range,
+  you would gather one additional attack dice for that weapon (for a total of two for that weapon).
+
+  Scouts 6":
+  This ability always takes the form Scouts X". In the Resolve Pre-battle Abilities step, if every model in a unit has
+  this ability, you can do one of the following:
+    If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment
+     zone.
+    If that unit is wholly within your deployment zone, it can make a scout move.
+    If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if
+     every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED
+     TRANSPORT can make a scout move.
+
+  Support:
+  Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one
+  friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form
+  an attached unit with it.
+  Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to
+  it.
+
+  Sustained Hits:
+  This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED
+  HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as
+  denoted by X.
+  Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore
+  hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability).
+
+  Torrent:
+  Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.
+
+  Twin-linked:
+  Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll.
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ad4b6d1629869a24a1a292a                                                        13/13
+
