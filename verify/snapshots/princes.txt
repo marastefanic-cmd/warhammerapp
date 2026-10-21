@@ -1893,6 +1893,7 @@ KHÂRN THE BETRAYER
 BATTLELINE*
 BERZERKERS*
 *from the led Khorne Berzerkers
+Ask about this unit
 Daemon Prince · Helm of Brazen Ire ›
 
 ######## unit daemon-prince-of-khorne-helm-of-brazen-ire · KHÂRN THE BETRAYER Princes
@@ -2010,6 +2011,7 @@ FACTION: WORLD EATERS
 KHORNE
 MONSTER
 WARLORD
+Ask about this unit
 ‹ Khârn the Betrayer
 Daemon Prince · Berzerker Glaive ›
 
@@ -2126,6 +2128,7 @@ DAEMON PRINCE
 FACTION: WORLD EATERS
 KHORNE
 MONSTER
+Ask about this unit
 ‹ Daemon Prince · Helm of Brazen Ire
 Lord on Juggernaut · Archslaughterer ›
 
@@ -2341,6 +2344,7 @@ BERZERKERS*
 GRENADES*
 INFANTRY*
 *from the led Khorne Berzerkers
+Ask about this unit
 ‹ Daemon Prince · Berzerker Glaive
 Slaughterbound · Battle-lust ›
 
@@ -2476,6 +2480,7 @@ POSSESSED
 SLAUGHTERBOUND
 EXALTED EIGHTBOUND*
 *from the led Exalted Eightbound
+Ask about this unit
 ‹ Lord on Juggernaut · Archslaughterer
 Eightbound ›
 
@@ -2569,6 +2574,7 @@ RHINO
 SMOKE
 TRANSPORT
 VEHICLE
+Ask about this unit
 ‹ Forgefiend
 
 ######## unit eightbound · CHAOS RHINO Princes
@@ -2640,6 +2646,7 @@ FACTION: WORLD EATERS
 INFANTRY
 KHORNE
 POSSESSED
+Ask about this unit
 ‹ Slaughterbound · Battle-lust
 Jakhals ›
 
@@ -2743,6 +2750,7 @@ GRENADES
 INFANTRY
 JAKHALS
 KHORNE
+Ask about this unit
 ‹ Eightbound
 Forgefiend ›
 
@@ -2839,6 +2847,7 @@ FORGEFIEND
 KHORNE
 VEHICLE
 WALKER
+Ask about this unit
 ‹ Jakhals
 Chaos Rhino ›
 
@@ -2851,6 +2860,8 @@ WORLD EATERS model only. (Once per battle, per army) In your Command phase, you 
 
 UNITLord on Juggernaut · Archslaughterer
 
+Ask about this ability
+
 ######## popup ability:princes|Beacons of Rage|While a friendly **WORLD EATERS** unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding **MONSTERS** and **VEHICLES**), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well. · PRINCES Princes
 ABILITY · AURA · FIGHT · EITHER TURN
 
@@ -2859,6 +2870,8 @@ Beacons of Rage
 While a friendly WORLD EATERS unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding MONSTERS and VEHICLES), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well.
 
 UNITEightbound
+
+Ask about this ability
 
 ######## popup ability:princes|Berserker Frenzy|The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining. · PRINCES Princes
 ABILITY
@@ -2869,6 +2882,8 @@ The first time this model is destroyed, at the end of the phase, roll one D6: on
 
 UNITKhârn the Betrayer
 
+Ask about this ability
+
 ######## popup ability:princes|Damaged: 1-4 wounds remaining|While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. · PRINCES Princes
 ABILITY
 
@@ -2877,6 +2892,8 @@ Damaged: 1-4 wounds remaining
 While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
 
 UNITForgefiend
+
+Ask about this ability
 
 ######## popup ability:princes|Devastating Assault|Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the **[DEVASTATING WOUNDS]** ability. · PRINCES Princes
 ABILITY · CHARGE / FIGHT · EITHER TURN
@@ -2887,6 +2904,8 @@ Each time this model makes a Charge move, until the end of the turn, its hellfor
 
 UNITDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
 
+Ask about this ability
+
 ######## popup ability:princes|Furious Onslaught|Each time this model makes a ranged attack that targets the closest eligible target within 18", you can re-roll the Hit roll. · PRINCES Princes
 ABILITY · THEIR MOVEMENT / YOUR SHOOTING
 
@@ -2895,6 +2914,8 @@ Furious Onslaught
 Each time this model makes a ranged attack that targets the closest eligible target within 18", you can re-roll the Hit roll.
 
 UNITForgefiend
+
+Ask about this ability
 
 ######## popup ability:princes|Helm of Brazen Ire|**WORLD EATERS** model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack. · PRINCES Princes
 ABILITY · ENHANCEMENT
@@ -2905,6 +2926,8 @@ WORLD EATERS model only. Each time an attack is allocated to the bearer, subtrac
 
 UNITDaemon Prince · Helm of Brazen Ire
 
+Ask about this ability
+
 ######## popup ability:princes|Legendary Killer|While this model is leading a unit, each time a model in that unit makes a melee attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1. · PRINCES Princes
 ABILITY · FIGHT · EITHER TURN
 
@@ -2913,6 +2936,8 @@ Legendary Killer
 While this model is leading a unit, each time a model in that unit makes a melee attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.
 
 UNITKhârn the Betrayer
+
+Ask about this ability
 
 ######## popup ability:princes|Lord of Murder|While this model is within 3" of one or more friendly **WORLD EATERS INFANTRY** units, this model has the **Lone Operative** ability. · PRINCES Princes
 ABILITY
@@ -2923,6 +2948,8 @@ While this model is within 3" of one or more friendly WORLD EATERS INFANTRY unit
 
 UNITDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive
 
+Ask about this ability
+
 ######## popup ability:princes|Lord of the Eightbound|If this model is attached to a **WORLD EATERS POSSESSED** unit during the Declare Battle Formations step, this model has the **Deep Strike** and **Scouts 6"** abilities. · PRINCES Princes
 ABILITY
 
@@ -2931,6 +2958,8 @@ Lord of the Eightbound
 If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step, this model has the Deep Strike and Scouts 6" abilities.
 
 UNITSlaughterbound · Battle-lust
+
+Ask about this ability
 
 ######## popup ability:princes|Murderous Charge|If this unit made a charge move this turn, this unit’s melee attacks have +1 S. · PRINCES Princes
 ABILITY · FIGHT · EITHER TURN
@@ -2941,6 +2970,8 @@ If this unit made a charge move this turn, this unit’s melee attacks have +1 S
 
 UNITKhârn the Betrayer, Lord on Juggernaut · Archslaughterer
 
+Ask about this ability
+
 ######## popup ability:princes|Possessed Lord|Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the **[Devastating Wounds]** ability. · PRINCES Princes
 ABILITY · FIGHT · EITHER TURN
 
@@ -2949,6 +2980,8 @@ Possessed Lord
 Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [Devastating Wounds] ability.
 
 UNITSlaughterbound · Battle-lust
+
+Ask about this ability
 
 ######## popup ability:princes|Rend and Tear|Each time a model in this unit makes a melee attack that targets a **MONSTER** or **VEHICLE** unit, until the end of the phase, improve the Damage characteristic of that attack by 1. · PRINCES Princes
 ABILITY · FIGHT · EITHER TURN
@@ -2959,6 +2992,8 @@ Each time a model in this unit makes a melee attack that targets a MONSTER or VE
 
 UNITSlaughterbound · Battle-lust
 
+Ask about this ability
+
 ######## popup enh:berzerker-warband|Battle-lust · PRINCES Princes
 ENHANCEMENT · BERZERKER WARBAND · 20 PTS
 
@@ -2967,6 +3002,8 @@ Battle-lust
 WORLD EATERS model only. You can re-roll Charge rolls made for the bearer’s unit. In addition, while the Unbridled Bloodlust Blessing of Khorne is active for your army, add 1 to Charge rolls made for the bearer’s unit.
 
 ONSlaughterbound + Exalted Eightbound
+
+Ask about this enhancement
 
 ######## popup enh:berzerker-warband|Berzerker Glaive · PRINCES Princes
 ENHANCEMENT · BERZERKER WARBAND · 35 PTS
@@ -2977,6 +3014,8 @@ WORLD EATERS model only. Add 1 to the Attacks and Damage characteristics of mele
 
 ONDaemon Prince of Khorne
 
+Ask about this enhancement
+
 ######## popup enh:berzerker-warband|Helm of Brazen Ire · PRINCES Princes
 ENHANCEMENT · BERZERKER WARBAND · 30 PTS
 
@@ -2986,6 +3025,8 @@ WORLD EATERS model only. Each time an attack is allocated to the bearer, subtrac
 
 ONDaemon Prince of Khorne
 
+Ask about this enhancement
+
 ######## popup enh:vessels-of-wrath|Archslaughterer · PRINCES Princes
 ENHANCEMENT · VESSELS OF WRATH · 30 PTS
 
@@ -2994,6 +3035,8 @@ Archslaughterer
 WORLD EATERS model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, every Blessing of Khorne is active for this unit until the start of your next turn.
 
 ONLord on Juggernaut + Khorne Berzerkers
+
+Ask about this enhancement
 
 ######## popup grant:["Aggressive Advance","lord-on-juggernaut-khorne-berzerkers","M 10\"",null] · PRINCES Princes
 M 10" · GRANTED BY
@@ -3242,6 +3285,8 @@ Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit 
 
 IN THIS ARMYSlaughterbound · Battle-lust
 
+Ask about this rule
+
 ######## popup rule:ANTI-VEHICLE 3+ · PRINCES Princes
 CORE RULE
 
@@ -3252,6 +3297,8 @@ This ability always takes the form [ANTI-X Y+]. Each time an attack is made with
 Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
 
 IN THIS ARMYSlaughterbound · Battle-lust
+
+Ask about this rule
 
 ######## popup rule:Advance · PRINCES Princes
 CORE RULE
@@ -3270,6 +3317,7 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
 
 ######## popup rule:Advance roll · PRINCES Princes
 CORE RULE
@@ -3288,6 +3336,7 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
 
 ######## popup rule:BLAST · PRINCES Princes
 CORE RULE
@@ -3301,6 +3350,8 @@ If this ability takes the form [BLAST X], each time you gather attack dice for s
 Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
 
 IN THIS ARMYForgefiend
+
+Ask about this rule
 
 ######## popup rule:Blessing of Khorne · PRINCES Princes
 WORLD EATERS ARMY RULE
@@ -3341,6 +3392,8 @@ Decapitating Strikes · double 6 or triple 3+
 
 Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
 
+Ask about this rule
+
 ######## popup rule:Blessings of Khorne · PRINCES Princes
 WORLD EATERS ARMY RULE
 
@@ -3379,6 +3432,8 @@ Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.
 Decapitating Strikes · double 6 or triple 3+
 
 Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
+
+Ask about this rule
 
 ######## popup rule:Blessings of Khorne roll · PRINCES Princes
 WORLD EATERS ARMY RULE
@@ -3419,6 +3474,8 @@ Decapitating Strikes · double 6 or triple 3+
 
 Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
 
+Ask about this rule
+
 ######## popup rule:Charge roll · PRINCES Princes
 CORE RULE
 
@@ -3435,6 +3492,8 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
+Ask about this rule
+
 ######## popup rule:Charge rolls · PRINCES Princes
 CORE RULE
 
@@ -3450,6 +3509,8 @@ It made an advance or fall-back move this turn.
 3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
 
 ######## popup rule:Consolidation move · PRINCES Princes
 CORE RULE
@@ -3484,6 +3545,8 @@ Wahapedia core rules errata (12.08 Consolidation Move, After Moving, Ongoing Con
 
 App note, not rules text: the lines above the errata are the printed Core Rules (01/06/2026). GW’s Warhammer 40,000 app, as Wahapedia prints it, changes two After Moving lines: the errata replaces the Ongoing Consolidation line, and the Objective Consolidation line reads “Your unit must be unengaged and within range of the selected objective”. No GW PDF has either change yet (16 Oct 2026).
 
+Ask about this rule
+
 ######## popup rule:Deadly Demise · PRINCES Princes
 CORE RULE
 
@@ -3493,6 +3556,8 @@ This ability always takes the form Deadly Demise X. Each time a model in this un
 
 IN THIS ARMYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Slaughterbound · Battle-lust, Chaos Rhino, Forgefiend
 
+Ask about this rule
+
 ######## popup rule:Deadly Demise D3 · PRINCES Princes
 CORE RULE
 
@@ -3501,6 +3566,8 @@ Deadly Demise D3
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
 IN THIS ARMYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Slaughterbound · Battle-lust, Chaos Rhino, Forgefiend
+
+Ask about this rule
 
 ######## popup rule:Deep Strike · PRINCES Princes
 CORE RULE
@@ -3513,6 +3580,8 @@ App note, not rules text: unless a rule says otherwise, units in strategic reser
 
 IN THIS ARMYSlaughterbound · Battle-lust
 
+Ask about this rule
+
 ######## popup rule:Devastating Wounds · PRINCES Princes
 CORE RULE
 
@@ -3523,6 +3592,8 @@ Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critica
 Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
 
 IN THIS ARMYDaemon Prince · Helm of Brazen Ire (in Devastating Assault), Daemon Prince · Berzerker Glaive (in Devastating Assault), Slaughterbound · Battle-lust (in Possessed Lord)
+
+Ask about this rule
 
 ######## popup rule:EXTRA ATTACKS · PRINCES Princes
 CORE RULE
@@ -3536,12 +3607,16 @@ One of that model’s other melee weapons, if possible.
 
 IN THIS ARMYDaemon Prince · Berzerker Glaive (in Berzerker Glaive), Lord on Juggernaut · Archslaughterer
 
+Ask about this rule
+
 ######## popup rule:Feel No Pain 4+ · PRINCES Princes
 CORE RULE
 
 Feel No Pain 4+
 
 This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+Ask about this rule
 
 ######## popup rule:Fights First · PRINCES Princes
 CORE RULE
@@ -3551,6 +3626,8 @@ Fights First
 While every model in a unit has this ability, that unit is a Fights First unit.
 
 See the Resolve Fights First Combats step in the Fight phase (12.04).
+
+Ask about this rule
 
 ######## popup rule:Firing Deck · PRINCES Princes
 CORE RULE
@@ -3566,6 +3643,8 @@ This ability always takes the form Firing Deck X. In your Shooting phase, each t
 
 IN THIS ARMYChaos Rhino
 
+Ask about this rule
+
 ######## popup rule:Firing Deck 2 · PRINCES Princes
 CORE RULE
 
@@ -3580,6 +3659,8 @@ This ability always takes the form Firing Deck X. In your Shooting phase, each t
 
 IN THIS ARMYChaos Rhino
 
+Ask about this rule
+
 ######## popup rule:HAZARDOUS · PRINCES Princes
 CORE RULE
 
@@ -3588,6 +3669,8 @@ HAZARDOUS
 Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.
 
 IN THIS ARMYKhârn the Betrayer, Lord on Juggernaut · Archslaughterer
+
+Ask about this rule
 
 ######## popup rule:Hazard roll · PRINCES Princes
 CORE RULE
@@ -3602,6 +3685,8 @@ Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model i
 
 Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
 
+Ask about this rule
+
 ######## popup rule:LANCE · PRINCES Princes
 CORE RULE
 
@@ -3611,6 +3696,8 @@ Each time an attack is made with a [LANCE] weapon, if the attacking model’s un
 
 IN THIS ARMYLord on Juggernaut · Archslaughterer
 
+Ask about this rule
+
 ######## popup rule:Lance · PRINCES Princes
 CORE RULE
 
@@ -3619,6 +3706,8 @@ Lance
 Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
 
 IN THIS ARMYLord on Juggernaut · Archslaughterer
+
+Ask about this rule
 
 ######## popup rule:Leader · PRINCES Princes
 CORE RULE
@@ -3630,6 +3719,8 @@ Before the battle, in the Muster Armies step, for each leader and support unit i
 Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.
 
 IN THIS ARMYKhârn the Betrayer, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
+
+Ask about this rule
 
 ######## popup rule:Lone Operative · PRINCES Princes
 CORE RULE
@@ -3648,6 +3739,8 @@ If an attached unit below starting strength only contains models with Lone Opera
 
 IN THIS ARMYDaemon Prince · Helm of Brazen Ire (in Lord of Murder), Daemon Prince · Berzerker Glaive (in Lord of Murder)
 
+Ask about this rule
+
 ######## popup rule:MOBILE · PRINCES Princes
 CORE RULE
 
@@ -3660,6 +3753,8 @@ INFANTRY/BEASTS/SWARM models can move vertically through dense terrain features.
 Other models can move horizontally through dense terrain features provided that all sections of that terrain feature that the moving model’s base would move through are 2" or less in height. Otherwise, the moving model must move vertically to ascend or descend such sections. They cannot move through ceilings and floors while doing so, and they cannot end that move on any surface of that terrain feature that is not on ground level (see below).
 
 App note, not rules text: MOBILE has no rule of its own in the core rules. These are the Dense lines of Terrain and Movement (13.06). Super-Heavy Walker (24.35), Designer’s Note: “Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).”
+
+Ask about this rule
 
 ######## popup rule:PISTOL · PRINCES Princes
 CORE RULE
@@ -3675,6 +3770,8 @@ One or more of its other ranged weapons.
 
 IN THIS ARMYKhârn the Betrayer, Lord on Juggernaut · Archslaughterer, Jakhals
 
+Ask about this rule
+
 ######## popup rule:RAPID FIRE 1 · PRINCES Princes
 CORE RULE
 
@@ -3684,6 +3781,8 @@ This ability always takes the form [RAPID FIRE X]. Each time you gather attack d
 
 IN THIS ARMYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Chaos Rhino, Forgefiend
 
+Ask about this rule
+
 ######## popup rule:RAPID FIRE 4 · PRINCES Princes
 CORE RULE
 
@@ -3692,6 +3791,8 @@ RAPID FIRE 4
 This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
 
 IN THIS ARMYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Chaos Rhino, Forgefiend
+
+Ask about this rule
 
 ######## popup rule:Relentless Rage · PRINCES Princes
 BERZERKER WARBAND DETACHMENT RULE
@@ -3703,6 +3804,8 @@ Friendly WORLD EATERS units’ melee attacks have +1 A.
 Already counted: every melee A value in this app includes this +1 A. Do not add it again.
 
 IN THIS ARMYKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust, Chaos Rhino, Eightbound, Jakhals, Forgefiend
+
+Ask about this rule
 
 ######## popup rule:Resolve a charge · PRINCES Princes
 CORE RULE
@@ -3720,6 +3823,8 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
+Ask about this rule
+
 ######## popup rule:Scouts · PRINCES Princes
 CORE RULE
 
@@ -3732,6 +3837,8 @@ If that unit is wholly within your deployment zone, it can make a scout move (se
 If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.
 
 IN THIS ARMYSlaughterbound · Battle-lust, Eightbound
+
+Ask about this rule
 
 ######## popup rule:Scouts 6" · PRINCES Princes
 CORE RULE
@@ -3746,6 +3853,8 @@ If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your
 
 IN THIS ARMYSlaughterbound · Battle-lust, Eightbound
 
+Ask about this rule
+
 ######## popup rule:Wrath of Khorne · PRINCES Princes
 VESSELS OF WRATH DETACHMENT RULE
 
@@ -3758,6 +3867,8 @@ Or: +1 AP.
 
 IN THIS ARMYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
 
+Ask about this rule
+
 ######## popup rule:[CLEAVE 1] · PRINCES Princes
 CORE RULE
 
@@ -3766,6 +3877,8 @@ CLEAVE 1
 This ability always takes the form [CLEAVE X]. Each time you gather attack dice for a [CLEAVE] weapon, if you only selected one target for all of that weapon’s attacks, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
 
 Example: If a [CLEAVE 1] weapon with an A characteristic of 3 targets one unit containing 16 models, you would gather three additional attack dice for that weapon (for a total of six for that weapon).
+
+Ask about this rule
 
 ######## popup rule:[DEVASTATING WOUNDS] · PRINCES Princes
 CORE RULE
@@ -3778,6 +3891,8 @@ Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of 
 
 IN THIS ARMYDaemon Prince · Helm of Brazen Ire (in Devastating Assault), Daemon Prince · Berzerker Glaive (in Devastating Assault), Slaughterbound · Battle-lust (in Possessed Lord)
 
+Ask about this rule
+
 ######## popup rule:[Devastating Wounds] · PRINCES Princes
 CORE RULE
 
@@ -3789,6 +3904,8 @@ Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of 
 
 IN THIS ARMYDaemon Prince · Helm of Brazen Ire (in Devastating Assault), Daemon Prince · Berzerker Glaive (in Devastating Assault), Slaughterbound · Battle-lust (in Possessed Lord)
 
+Ask about this rule
+
 ######## popup rule:[LETHAL HITS] · PRINCES Princes
 CORE RULE
 
@@ -3797,6 +3914,8 @@ LETHAL HITS
 Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
 
 Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
+
+Ask about this rule
 
 ######## popup rule:[PRECISION] · PRINCES Princes
 CORE RULE
@@ -3807,12 +3926,16 @@ While resolving attacks made with one or more [PRECISION] weapons, at the start 
 
 24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
 
+Ask about this rule
+
 ######## popup rule:[SUSTAINED HITS 1] · PRINCES Princes
 CORE RULE
 
 SUSTAINED HITS 1
 
 This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+Ask about this rule
 
 ######## popup rule:advance move · PRINCES Princes
 CORE RULE
@@ -3831,6 +3954,7 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
 
 ######## popup rule:battle-shock roll · PRINCES Princes
 CORE RULE
@@ -3859,6 +3983,8 @@ That unit is at, or below, half-strength.
 
 If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
 
+Ask about this rule
+
 ######## popup rule:battle-shocked · PRINCES Princes
 CORE RULE
 
@@ -3886,6 +4012,8 @@ That unit is at, or below, half-strength.
 
 If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
 
+Ask about this rule
+
 ######## popup rule:benefit of cover · PRINCES Princes
 CORE RULE
 
@@ -3897,6 +4025,8 @@ That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area.
 That model is not fully visible to the attacking model due to one or more intervening terrain features and/or one or more intervening obscuring terrain areas (see below).
 
 Each time a ranged attack targets a unit that has the benefit of cover against it, worsen the BS characteristic of that attack by 1.
+
+Ask about this rule
 
 ######## popup rule:bodyguard · PRINCES Princes
 CORE RULE
@@ -3920,6 +4050,8 @@ A specific model (e.g. the bearer of an enhancement or an item of wargear): That
 In all of the above cases, if that last model was destroyed as the result of an attack, the ability it was conferring upon the attached unit applies until the attacking unit has resolved all of its attacks.
 
 Wahapedia FAQ: When does a model’s or unit’s ability in an attached unit apply to all models in that unit? A rule that applies to ‘this/that unit’ or ‘models in this/that unit’ applies to all models in an attached unit. Rules that just apply to one model in an attached unit (for example, a rule that grants a model Feel No Pain or Lone Operative) only apply to that model, not to all models in the attached unit.
+
+Ask about this rule
 
 ######## popup rule:charge move · PRINCES Princes
 CORE RULE
@@ -3945,6 +4077,7 @@ AFTER MOVING:
 Your unit must be engaged with all of the charge targets.
 Your unit cannot be engaged with one or more enemy units that are not charge targets.
 Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
 
 ######## popup rule:charge roll · PRINCES Princes
 CORE RULE
@@ -3962,6 +4095,8 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
+Ask about this rule
+
 ######## popup rule:charge rolls · PRINCES Princes
 CORE RULE
 
@@ -3977,6 +4112,8 @@ It made an advance or fall-back move this turn.
 3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
 
 ######## popup rule:charge targets · PRINCES Princes
 CORE RULE
@@ -4002,6 +4139,7 @@ AFTER MOVING:
 Your unit must be engaged with all of the charge targets.
 Your unit cannot be engaged with one or more enemy units that are not charge targets.
 Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
 
 ######## popup rule:desperate escape · PRINCES Princes
 CORE RULE
@@ -4038,6 +4176,7 @@ If a stratagem or ability instructs a unit to make a Desperate Escape test, that
 Must use the desperate escape mode when it is selected to make a fall-back move.
 Must make one hazard roll for each model in that unit.
 Must make a battle-shock roll.
+Ask about this rule
 
 ######## popup rule:destroyed · PRINCES Princes
 CORE RULE
@@ -4052,6 +4191,8 @@ When a model is destroyed, first resolve any rules that are triggered when it is
 
 Those models will stay on the battlefield until their unit is selected to attack and has attacked, or until the end of the phase (whichever comes first). Any rules triggered by those models being destroyed are resolved, and then those destroyed models are removed.
 
+Ask about this rule
+
 ######## popup rule:engaged · PRINCES Princes
 CORE RULE
 
@@ -4063,6 +4204,8 @@ While a friendly model is within engagement range of one or more enemy models, t
 While a unit contains no engaged models, that unit is unengaged.
 
 Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
 
 ######## popup rule:fall-back move · PRINCES Princes
 CORE RULE
@@ -4099,6 +4242,7 @@ If a stratagem or ability instructs a unit to make a Desperate Escape test, that
 Must use the desperate escape mode when it is selected to make a fall-back move.
 Must make one hazard roll for each model in that unit.
 Must make a battle-shock roll.
+Ask about this rule
 
 ######## popup rule:hazard rolls · PRINCES Princes
 CORE RULE
@@ -4112,6 +4256,8 @@ To make a hazard roll for a unit, roll one D6: on a 1-2, that roll fails and tha
 Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model in the unit make a hazard roll? No, the unit would make 1 single hazard roll.
 
 Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
+
+Ask about this rule
 
 ######## popup rule:ingress move · PRINCES Princes
 CORE RULE
@@ -4131,6 +4277,8 @@ Before the Third Battle Round: While doing so, no models can be set up within yo
 AFTER MOVING: Unless otherwise stated, until the start of the next Charge phase, your unit is not eligible to make any other type of move.
 
 20.03.01 Set Up As Reinforcements (app): If a rule mentions a unit being set up on the battlefield as Reinforcements, it means a unit that made an ingress move.
+
+Ask about this rule
 
 ######## popup rule:leadership roll · PRINCES Princes
 CORE RULE
@@ -4159,6 +4307,8 @@ That unit is at, or below, half-strength.
 
 If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
 
+Ask about this rule
+
 ######## popup rule:mortal wound · PRINCES Princes
 CORE RULE
 
@@ -4174,6 +4324,8 @@ Otherwise, you must select one CHARACTER model in that unit.
 Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
 
 When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+Ask about this rule
 
 ######## popup rule:mortal wounds · PRINCES Princes
 CORE RULE
@@ -4191,6 +4343,8 @@ Resolve Damage: The selected model loses 1 wound. If this reduces that model’s
 
 When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
 
+Ask about this rule
+
 ######## popup rule:snap shooting · PRINCES Princes
 CORE RULE
 
@@ -4207,6 +4361,8 @@ Each attack only hits on an unmodified hit roll of 6 (irrespective of the attack
 You cannot re-roll hit rolls.
 
 AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.
+
+Ask about this rule
 
 ######## popup rule:strategic reserves · PRINCES Princes
 CORE RULE
@@ -4231,6 +4387,7 @@ At the end of the third battle round, unless otherwise stated, all strategic res
 
 Units embarked within TRANSPORTS that have made an ingress move during the battle.
 Repositioned units (see opposite).
+Ask about this rule
 
 ######## popup rule:surge move · PRINCES Princes
 CORE RULE
@@ -4261,6 +4418,7 @@ AFTER MOVING:
 
 Your unit cannot be engaged with one or more enemy units that were not the surge target.
 Your unit cannot move again this phase.
+Ask about this rule
 
 ######## popup rule:unengaged · PRINCES Princes
 CORE RULE
@@ -4273,6 +4431,8 @@ While a friendly model is within engagement range of one or more enemy models, t
 While a unit contains no engaged models, that unit is unengaged.
 
 Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
 
 ######## popup strat:apoplectic-frenzy · PRINCES Princes
 1CP · MOVEMENT · YOUR TURN
@@ -4289,6 +4449,8 @@ EFFECT
 Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced.
 
 USED BYKhârn the Betrayer, Lord on Juggernaut · Archslaughterer
+
+Ask about this stratagem
 
 ######## popup strat:aspire-to-infamy · PRINCES Princes
 1CP · FIGHT · EITHER TURN
@@ -4309,6 +4471,8 @@ Your unit’s CHARACTER models’ melee attacks have:
 
 USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
 
+Ask about this stratagem
+
 ######## popup strat:berzerkers-wrath · PRINCES Princes
 1CP · SHOOTING · THEIR TURN
 
@@ -4327,6 +4491,8 @@ Wahapedia FAQ: “After being the target of a ranged attack, can a Leader unit m
 
 USED BYKhârn the Betrayer, Lord on Juggernaut · Archslaughterer
 
+Ask about this stratagem
+
 ######## popup strat:blood-offering · PRINCES Princes
 1CP · ANY PHASE · EITHER TURN
 
@@ -4342,6 +4508,8 @@ EFFECT
 Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
 
 USED BYany unit
+
+Ask about this stratagem
 
 ######## popup strat:command-re-roll · PRINCES Princes
 1CP · ANY PHASE · EITHER TURN
@@ -4368,6 +4536,8 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:counteroffensive · PRINCES Princes
 2CP · FIGHT · THEIR TURN
 
@@ -4383,6 +4553,8 @@ EFFECT
 Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
 
 USED BYany unit
+
+Ask about this stratagem
 
 ######## popup strat:crushing-impact · PRINCES Princes
 1CP · CHARGE · YOUR TURN
@@ -4406,6 +4578,8 @@ Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact st
 
 USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Chaos Rhino, Forgefiend
 
+Ask about this stratagem
+
 ######## popup strat:epic-challenge · PRINCES Princes
 1CP · FIGHT · EITHER TURN
 
@@ -4421,6 +4595,8 @@ EFFECT
 Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
 
 USED BYKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
+
+Ask about this stratagem
 
 ######## popup strat:explosives · PRINCES Princes
 1CP · SHOOTING · YOUR TURN
@@ -4444,6 +4620,8 @@ Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
 
 USED BYKhârn the Betrayer, Lord on Juggernaut · Archslaughterer, Jakhals
 
+Ask about this stratagem
+
 ######## popup strat:fire-overwatch · PRINCES Princes
 1CP · MOVEMENT · THEIR TURN
 
@@ -4459,6 +4637,8 @@ EFFECT
 Your unit shoots using snap shooting.
 
 USED BYKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Chaos Rhino, Jakhals, Forgefiend
+
+Ask about this stratagem
 
 ######## popup strat:frenzied-resilience · PRINCES Princes
 2CP · FIGHT · EITHER TURN
@@ -4476,6 +4656,8 @@ Until the end of the phase, each time an attack is allocated to a model in your 
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:hack-and-slash · PRINCES Princes
 1CP · FIGHT · EITHER TURN
 
@@ -4491,6 +4673,8 @@ EFFECT
 Until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1.
 
 USED BYany unit
+
+Ask about this stratagem
 
 ######## popup strat:heroic-intervention · PRINCES Princes
 1CP · CHARGE · THEIR TURN · INTO THE FRAY +1CP
@@ -4513,6 +4697,8 @@ Wahapedia FAQ: If a stratagem contains a section that carries an additional CP c
 
 USED BYKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust, Eightbound, Jakhals, Forgefiend
 
+Ask about this stratagem
+
 ######## popup strat:insane-bravery · PRINCES Princes
 1CP · COMMAND · YOUR TURN · ONCE PER BATTLE
 
@@ -4533,6 +4719,8 @@ Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? 
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:punish-the-craven · PRINCES Princes
 1CP · MOVEMENT · THEIR TURN
 
@@ -4548,6 +4736,8 @@ EFFECT
 When an enemy unit engaged with your unit is selected to make a fall-back move, that enemy unit must use the desperate escape mode. If that enemy unit is battle-shocked, -1 from those hazard rolls.
 
 USED BYKhârn the Betrayer, Daemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
+
+Ask about this stratagem
 
 ######## popup strat:rapid-ingress · PRINCES Princes
 1CP · MOVEMENT · THEIR TURN
@@ -4567,6 +4757,8 @@ RESTRICTIONSYou cannot use this stratagem during the first battle round.
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:scorn-the-witch · PRINCES Princes
 1CP · ANY PHASE · EITHER TURN
 
@@ -4582,6 +4774,8 @@ EFFECT
 Your unit has Feel No Pain 4+ against mortal wounds.
 
 USED BYDaemon Prince · Helm of Brazen Ire, Daemon Prince · Berzerker Glaive, Lord on Juggernaut · Archslaughterer, Slaughterbound · Battle-lust
+
+Ask about this stratagem
 
 ######## popup strat:skulls-for-the-skull-throne · PRINCES Princes
 1CP · FIGHT · EITHER TURN
@@ -4599,6 +4793,8 @@ Make a Blessings of Khorne roll and use the results to activate one Blessing of 
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:smokescreen · PRINCES Princes
 1CP · SHOOTING · THEIR TURN
 
@@ -4614,3 +4810,5 @@ EFFECT
 Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
 
 USED BYChaos Rhino
+
+Ask about this stratagem

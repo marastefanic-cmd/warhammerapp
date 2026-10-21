@@ -1432,6 +1432,7 @@ TITANIC
 TOWERING
 VEHICLE
 WALKER
+Ask about this unit
 Cerastus Knight Atrapos · Bringer of Justice ›
 
 ######## unit cerastus-knight-atrapos · CANIS REX 4 megas and a destrier
@@ -1570,6 +1571,7 @@ TITANIC
 TOWERING
 VEHICLE
 WALKER
+Ask about this unit
 ‹ Canis Rex
 Cerastus Knight Lancer ›
 
@@ -1673,6 +1675,7 @@ TITANIC
 TOWERING
 VEHICLE
 WALKER
+Ask about this unit
 ‹ Cerastus Knight Atrapos · Bringer of Justice
 Knight Crusader · Hunter’s Eye ›
 
@@ -1823,6 +1826,7 @@ TITANIC
 TOWERING
 VEHICLE
 WALKER
+Ask about this unit
 ‹ Cerastus Knight Lancer
 Knight Destrier · Sanctuary ›
 
@@ -1954,6 +1958,7 @@ TITANIC
 TOWERING
 VEHICLE
 WALKER
+Ask about this unit
 ‹ Knight Crusader · Hunter’s Eye
 
 ######## popup ability:4-megas-and-a-destrier|Bringer of Justice|**IMPERIAL KNIGHTS** model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the **Hit roll**. · KNIGHT DESTRIER 4 megas and a destrier
@@ -1965,6 +1970,8 @@ IMPERIAL KNIGHTS model only. Improve the Attacks characteristic of melee weapons
 
 UNITCerastus Knight Atrapos · Bringer of Justice
 
+Ask about this ability
+
 ######## popup ability:4-megas-and-a-destrier|Chainbreaker|Once per battle, at the start of any phase, you can select one friendly **IMPERIUM** unit that is **Battle-shocked** and within 12" of this model. That unit is no longer Battle-shocked. · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 ABILITY · ANY PHASE · EITHER TURN
 
@@ -1973,6 +1980,8 @@ Chainbreaker
 Once per battle, at the start of any phase, you can select one friendly IMPERIUM unit that is Battle-shocked and within 12" of this model. That unit is no longer Battle-shocked.
 
 UNITCanis Rex
+
+Ask about this ability
 
 ######## popup ability:4-megas-and-a-destrier|Damaged: 1-10 Wounds Remaining|While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 ABILITY
@@ -1983,6 +1992,8 @@ While this model has 1-10 wounds remaining, subtract 5 from this model’s Objec
 
 UNITCerastus Knight Atrapos · Bringer of Justice, Cerastus Knight Lancer
 
+Ask about this ability
+
 ######## popup ability:4-megas-and-a-destrier|Damaged: 1-6 Wounds Remaining|While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**. · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 ABILITY
 
@@ -1991,6 +2002,8 @@ Damaged: 1-6 Wounds Remaining
 While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
 
 UNITKnight Destrier · Sanctuary
+
+Ask about this ability
 
 ######## popup ability:4-megas-and-a-destrier|Damaged: 1-9 Wounds Remaining|While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**. · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 ABILITY
@@ -2001,6 +2014,8 @@ While this model has 1‑9 wounds remaining, subtract 5 from this model’s Obje
 
 UNITCanis Rex, Knight Crusader · Hunter’s Eye
 
+Ask about this ability
+
 ######## popup ability:4-megas-and-a-destrier|Invulnerable Save (5+*)|This model has a 5+ invulnerable save against ranged attacks. · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 ABILITY
 
@@ -2009,6 +2024,8 @@ Invulnerable Save (5+*)
 This model has a 5+ invulnerable save against ranged attacks.
 
 UNITCanis Rex, Knight Crusader · Hunter’s Eye, Knight Destrier · Sanctuary
+
+Ask about this ability
 
 ######## popup ability:4-megas-and-a-destrier|Macro-extinction Protocols|Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well. · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 ABILITY
@@ -2019,6 +2036,8 @@ Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add
 
 UNITCerastus Knight Atrapos · Bringer of Justice
 
+Ask about this ability
+
 ######## popup ability:4-megas-and-a-destrier|Punishing Salvoes|In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability. · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 ABILITY · MOVEMENT / SHOOTING · YOUR TURN
 
@@ -2027,6 +2046,8 @@ Punishing Salvoes
 In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability.
 
 UNITKnight Crusader · Hunter’s Eye
+
+Ask about this ability
 
 ######## popup ability:4-megas-and-a-destrier|Sanctuary|**IMPERIAL KNIGHTS** model only. The bearer has a 5+ invulnerable save. · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 ABILITY · ENHANCEMENT
@@ -2037,6 +2058,8 @@ IMPERIAL KNIGHTS model only. The bearer has a 5+ invulnerable save.
 
 UNITKnight Destrier · Sanctuary
 
+Ask about this ability
+
 ######## popup ability:4-megas-and-a-destrier|Saturation Fire|Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the **[IGNORES COVER]** ability. · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 ABILITY · SHOOTING · YOUR TURN
 
@@ -2045,6 +2068,8 @@ Saturation Fire
 Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
 
 UNITKnight Destrier · Sanctuary
+
+Ask about this ability
 
 ######## popup enh:freeblade-company|Bringer of Justice · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 ENHANCEMENT · FREEBLADE COMPANY · 30 PTS
@@ -2055,6 +2080,8 @@ IMPERIAL KNIGHTS model only. Improve the Attacks characteristic of melee weapons
 
 ONCerastus Knight Atrapos
 
+Ask about this enhancement
+
 ######## popup enh:freeblade-company|Hunter’s Eye · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 ENHANCEMENT · FREEBLADE COMPANY · 25 PTS
 
@@ -2064,6 +2091,8 @@ IMPERIAL KNIGHTS model only. Ranged weapons equipped by the bearer have the [IGN
 
 ONKnight Crusader
 
+Ask about this enhancement
+
 ######## popup enh:freeblade-company|Sanctuary · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 ENHANCEMENT · FREEBLADE COMPANY · 20 PTS
 
@@ -2072,6 +2101,8 @@ Sanctuary
 IMPERIAL KNIGHTS model only. The bearer has a 5+ invulnerable save.
 
 ONKnight Destrier
+
+Ask about this enhancement
 
 ######## popup grant:["Bringer of Justice","cerastus-knight-atrapos","A 14",null] · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 A 14 · GRANTED BY
@@ -2119,6 +2150,8 @@ Units containing one or more models with an [ASSAULT] weapon can shoot using ass
 
 IN THIS ARMYCerastus Knight Lancer, Knight Destrier · Sanctuary
 
+Ask about this rule
+
 ######## popup rule:Advance · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
 
@@ -2136,6 +2169,7 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
 
 ######## popup rule:Advance move · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
@@ -2154,6 +2188,7 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
 
 ######## popup rule:Advance roll · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
@@ -2172,6 +2207,7 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
 
 ######## popup rule:BLAST · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
@@ -2185,6 +2221,8 @@ If this ability takes the form [BLAST X], each time you gather attack dice for s
 Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
 
 IN THIS ARMYCanis Rex, Cerastus Knight Atrapos · Bringer of Justice, Knight Crusader · Hunter’s Eye, Knight Destrier · Sanctuary
+
+Ask about this rule
 
 ######## popup rule:Battle-shocked · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
@@ -2213,12 +2251,16 @@ That unit is at, or below, half-strength.
 
 If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
 
+Ask about this rule
+
 ######## popup rule:Bondsman · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 IMPERIAL KNIGHTS ARMY RULE
 
 Bondsman
 
 Some IMPERIAL KNIGHTS models have a Bondsman ability, tagged with the word ‘Bondsman’. In your Command phase, one or more models from your army with a Bondsman ability can use that ability. For each one that does, select one friendly ARMIGER model within 12" of that model (you cannot select an ARMIGER model that is already being affected by a Bondsman ability). Until the start of your next Command phase, that ARMIGER model is affected by that Bondsman ability.
+
+Ask about this rule
 
 ######## popup rule:Charge roll · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
@@ -2236,6 +2278,8 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
+Ask about this rule
+
 ######## popup rule:Charge rolls · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
 
@@ -2251,6 +2295,8 @@ It made an advance or fall-back move this turn.
 3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
 
 ######## popup rule:Code Chivalric · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 IMPERIAL KNIGHTS ARMY RULE
@@ -2289,6 +2335,8 @@ Quality 5–6 · …yet shall our legacy be unsullied
 
 Improve this model’s Objective Control characteristic by 2 and its Leadership characteristic by 1.
 
+Ask about this rule
+
 ######## popup rule:DEVASTATING WOUNDS · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
 
@@ -2300,6 +2348,8 @@ Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of 
 
 IN THIS ARMYCerastus Knight Atrapos · Bringer of Justice
 
+Ask about this rule
+
 ######## popup rule:Deadly Demise · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
 
@@ -2308,6 +2358,8 @@ Deadly Demise
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
 IN THIS ARMYCanis Rex, Cerastus Knight Atrapos · Bringer of Justice, Cerastus Knight Lancer, Knight Crusader · Hunter’s Eye, Knight Destrier · Sanctuary
+
+Ask about this rule
 
 ######## popup rule:Deadly Demise D6 · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
@@ -2318,6 +2370,8 @@ This ability always takes the form Deadly Demise X. Each time a model in this un
 
 IN THIS ARMYCanis Rex, Cerastus Knight Atrapos · Bringer of Justice, Cerastus Knight Lancer, Knight Crusader · Hunter’s Eye, Knight Destrier · Sanctuary
 
+Ask about this rule
+
 ######## popup rule:Deadly Demise D6+2 · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
 
@@ -2327,6 +2381,8 @@ This ability always takes the form Deadly Demise X. Each time a model in this un
 
 IN THIS ARMYCanis Rex, Cerastus Knight Atrapos · Bringer of Justice, Cerastus Knight Lancer, Knight Crusader · Hunter’s Eye, Knight Destrier · Sanctuary
 
+Ask about this rule
+
 ######## popup rule:Deep Strike · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
 
@@ -2335,6 +2391,8 @@ Deep Strike
 Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
 
 App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
+
+Ask about this rule
 
 ######## popup rule:Engagement Range · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
@@ -2348,12 +2406,16 @@ While a unit contains no engaged models, that unit is unengaged.
 
 Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
 
+Ask about this rule
+
 ######## popup rule:Feel No Pain 6+ · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
 
 Feel No Pain 6+
 
 This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+Ask about this rule
 
 ######## popup rule:Fights First · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
@@ -2364,6 +2426,8 @@ While every model in a unit has this ability, that unit is a Fights First unit.
 
 See the Resolve Fights First Combats step in the Fight phase (12.04).
 
+Ask about this rule
+
 ######## popup rule:HAZARDOUS · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
 
@@ -2372,6 +2436,8 @@ HAZARDOUS
 Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.
 
 IN THIS ARMYCerastus Knight Atrapos · Bringer of Justice
+
+Ask about this rule
 
 ######## popup rule:Hazard roll · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
@@ -2386,6 +2452,8 @@ Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model i
 
 Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
 
+Ask about this rule
+
 ######## popup rule:IGNORES COVER · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
 
@@ -2394,6 +2462,8 @@ IGNORES COVER
 Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
 
 IN THIS ARMYKnight Crusader · Hunter’s Eye, Knight Destrier · Sanctuary (in Saturation Fire)
+
+Ask about this rule
 
 ######## popup rule:Knights of Legend · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 FREEBLADE COMPANY DETACHMENT RULE
@@ -2404,6 +2474,8 @@ IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addi
 
 IN THIS ARMYCanis Rex, Cerastus Knight Atrapos · Bringer of Justice, Cerastus Knight Lancer, Knight Crusader · Hunter’s Eye, Knight Destrier · Sanctuary
 
+Ask about this rule
+
 ######## popup rule:LANCE · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
 
@@ -2413,6 +2485,8 @@ Each time an attack is made with a [LANCE] weapon, if the attacking model’s un
 
 IN THIS ARMYCerastus Knight Lancer
 
+Ask about this rule
+
 ######## popup rule:Lance · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
 
@@ -2421,6 +2495,8 @@ Lance
 Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
 
 IN THIS ARMYCerastus Knight Lancer
+
+Ask about this rule
 
 ######## popup rule:Lone Operative · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
@@ -2439,6 +2515,8 @@ If an attached unit below starting strength only contains models with Lone Opera
 
 IN THIS ARMYCanis Rex
 
+Ask about this rule
+
 ######## popup rule:MELTA 2 · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
 
@@ -2449,6 +2527,8 @@ This ability always takes the form [MELTA X]. Each time a model makes an attack 
 Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6. While resolving those attacks, that weapon has a D characteristic of D6+2.
 
 IN THIS ARMYKnight Crusader · Hunter’s Eye
+
+Ask about this rule
 
 ######## popup rule:Normal · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
@@ -2465,6 +2545,8 @@ AFTER MOVING: Your unit must be unengaged.
 
 09.05.01 More Than One Normal Move in a Phase (app): A unit cannot make more than one Normal Move in a phase.
 
+Ask about this rule
+
 ######## popup rule:PISTOL · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
 
@@ -2479,6 +2561,8 @@ One or more of its other ranged weapons.
 
 IN THIS ARMYCanis Rex
 
+Ask about this rule
+
 ######## popup rule:Plunging Fire · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
 
@@ -2491,6 +2575,8 @@ The attacking model has the TOWERING keyword and the target unit is within 12".
 
 23.03 Shooting: The Plunging Fire rule (22.05) has no effect on attacks made by, or targeting, AIRCRAFT units.
 
+Ask about this rule
+
 ######## popup rule:RAPID FIRE 3 · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
 
@@ -2500,6 +2586,8 @@ This ability always takes the form [RAPID FIRE X]. Each time you gather attack d
 
 IN THIS ARMYKnight Crusader · Hunter’s Eye, Knight Destrier · Sanctuary
 
+Ask about this rule
+
 ######## popup rule:RAPID FIRE D6+3 · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
 
@@ -2508,6 +2596,8 @@ RAPID FIRE D6+3
 This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
 
 IN THIS ARMYKnight Crusader · Hunter’s Eye, Knight Destrier · Sanctuary
+
+Ask about this rule
 
 ######## popup rule:Resolve a charge · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
@@ -2525,6 +2615,8 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
+Ask about this rule
+
 ######## popup rule:SUSTAINED HITS 1 · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
 
@@ -2534,6 +2626,8 @@ This ability always takes the form [SUSTAINED HITS X]. Each time an attack made 
 
 IN THIS ARMYCanis Rex, Cerastus Knight Atrapos · Bringer of Justice, Cerastus Knight Lancer, Knight Crusader · Hunter’s Eye
 
+Ask about this rule
+
 ######## popup rule:SUSTAINED HITS 2 · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
 
@@ -2542,6 +2636,8 @@ SUSTAINED HITS 2
 This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
 
 IN THIS ARMYCanis Rex, Cerastus Knight Atrapos · Bringer of Justice, Cerastus Knight Lancer, Knight Crusader · Hunter’s Eye
+
+Ask about this rule
 
 ######## popup rule:Strategic Reserves · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
@@ -2566,6 +2662,7 @@ At the end of the third battle round, unless otherwise stated, all strategic res
 
 Units embarked within TRANSPORTS that have made an ingress move during the battle.
 Repositioned units (see opposite).
+Ask about this rule
 
 ######## popup rule:Super-Heavy Walker · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
@@ -2581,6 +2678,8 @@ Designer’s Note: Gaining the MOBILE keyword for the duration of a move will en
 
 IN THIS ARMYCanis Rex, Cerastus Knight Atrapos · Bringer of Justice, Cerastus Knight Lancer, Knight Crusader · Hunter’s Eye, Knight Destrier · Sanctuary
 
+Ask about this rule
+
 ######## popup rule:Sustained Hits · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
 
@@ -2589,6 +2688,8 @@ Sustained Hits
 This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
 
 IN THIS ARMYCanis Rex, Cerastus Knight Atrapos · Bringer of Justice, Cerastus Knight Lancer, Knight Crusader · Hunter’s Eye
+
+Ask about this rule
 
 ######## popup rule:TORRENT · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
@@ -2599,6 +2700,8 @@ Each time an attack is made with a [TORRENT] weapon, that attack automatically h
 
 IN THIS ARMYKnight Crusader · Hunter’s Eye
 
+Ask about this rule
+
 ######## popup rule:[IGNORES COVER] · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
 
@@ -2608,6 +2711,8 @@ Each time an attack is made with an [IGNORES COVER] weapon, the target cannot ha
 
 IN THIS ARMYKnight Crusader · Hunter’s Eye, Knight Destrier · Sanctuary (in Saturation Fire)
 
+Ask about this rule
+
 ######## popup rule:[PRECISION] · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
 
@@ -2616,6 +2721,8 @@ PRECISION
 While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.
 
 24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
+
+Ask about this rule
 
 ######## popup rule:advance move · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
@@ -2634,6 +2741,7 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
 
 ######## popup rule:battle-shock roll · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
@@ -2662,6 +2770,8 @@ That unit is at, or below, half-strength.
 
 If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
 
+Ask about this rule
+
 ######## popup rule:benefit of cover · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
 
@@ -2673,6 +2783,8 @@ That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area.
 That model is not fully visible to the attacking model due to one or more intervening terrain features and/or one or more intervening obscuring terrain areas (see below).
 
 Each time a ranged attack targets a unit that has the benefit of cover against it, worsen the BS characteristic of that attack by 1.
+
+Ask about this rule
 
 ######## popup rule:charge move · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
@@ -2698,6 +2810,7 @@ AFTER MOVING:
 Your unit must be engaged with all of the charge targets.
 Your unit cannot be engaged with one or more enemy units that are not charge targets.
 Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
 
 ######## popup rule:charge roll · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
@@ -2715,6 +2828,8 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
+Ask about this rule
+
 ######## popup rule:charge rolls · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
 
@@ -2730,6 +2845,8 @@ It made an advance or fall-back move this turn.
 3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
 
 ######## popup rule:charge targets · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
@@ -2755,6 +2872,7 @@ AFTER MOVING:
 Your unit must be engaged with all of the charge targets.
 Your unit cannot be engaged with one or more enemy units that are not charge targets.
 Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
 
 ######## popup rule:engaged · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
@@ -2767,6 +2885,8 @@ While a friendly model is within engagement range of one or more enemy models, t
 While a unit contains no engaged models, that unit is unengaged.
 
 Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
 
 ######## popup rule:ingress move · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
@@ -2787,6 +2907,8 @@ AFTER MOVING: Unless otherwise stated, until the start of the next Charge phase,
 
 20.03.01 Set Up As Reinforcements (app): If a rule mentions a unit being set up on the battlefield as Reinforcements, it means a unit that made an ingress move.
 
+Ask about this rule
+
 ######## popup rule:mortal wound · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
 
@@ -2802,6 +2924,8 @@ Otherwise, you must select one CHARACTER model in that unit.
 Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
 
 When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+Ask about this rule
 
 ######## popup rule:mortal wounds · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
@@ -2819,6 +2943,8 @@ Resolve Damage: The selected model loses 1 wound. If this reduces that model’s
 
 When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
 
+Ask about this rule
+
 ######## popup rule:snap shooting · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
 
@@ -2835,6 +2961,8 @@ Each attack only hits on an unmodified hit roll of 6 (irrespective of the attack
 You cannot re-roll hit rolls.
 
 AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.
+
+Ask about this rule
 
 ######## popup rule:strategic reserves · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
@@ -2859,6 +2987,7 @@ At the end of the third battle round, unless otherwise stated, all strategic res
 
 Units embarked within TRANSPORTS that have made an ingress move during the battle.
 Repositioned units (see opposite).
+Ask about this rule
 
 ######## popup rule:unengaged · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 CORE RULE
@@ -2871,6 +3000,8 @@ While a friendly model is within engagement range of one or more enemy models, t
 While a unit contains no engaged models, that unit is unengaged.
 
 Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
 
 ######## popup strat:command-re-roll · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 1CP · ANY PHASE · EITHER TURN
@@ -2897,6 +3028,8 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:counteroffensive · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 2CP · FIGHT · THEIR TURN
 
@@ -2912,6 +3045,8 @@ EFFECT
 Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
 
 USED BYany unit
+
+Ask about this stratagem
 
 ######## popup strat:crushing-impact · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 1CP · CHARGE · YOUR TURN
@@ -2935,6 +3070,8 @@ Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact st
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:epic-challenge · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 1CP · FIGHT · EITHER TURN
 
@@ -2950,6 +3087,8 @@ EFFECT
 Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
 
 USED BYany unit
+
+Ask about this stratagem
 
 ######## popup strat:flanking-manoeuvres · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 1CP · FIGHT · THEIR TURN
@@ -2967,6 +3106,8 @@ Remove your unit from the battlefield and place it into Strategic Reserves.
 
 USED BYno unit in this list (needs ARMIGER)
 
+Ask about this stratagem
+
 ######## popup strat:full-tilt · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 1CP · MOVEMENT · YOUR TURN
 
@@ -2982,6 +3123,8 @@ EFFECT
 Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6" to the Move characteristic of models in your unit, or 9" instead if your unit is an ARMIGER or DESTRIER unit.
 
 USED BYany unit
+
+Ask about this stratagem
 
 ######## popup strat:heroic-intervention · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 1CP · CHARGE · THEIR TURN · INTO THE FRAY +1CP
@@ -3004,6 +3147,8 @@ Wahapedia FAQ: If a stratagem contains a section that carries an additional CP c
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:insane-bravery · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 1CP · COMMAND · YOUR TURN · ONCE PER BATTLE
 
@@ -3024,6 +3169,8 @@ Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? 
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:noble-sacrifice · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 1CP · ANY PHASE · EITHER TURN
 
@@ -3040,6 +3187,8 @@ Your unit’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, a
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:point-blank-barrage · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 1CP · SHOOTING · YOUR TURN
 
@@ -3055,6 +3204,8 @@ EFFECT
 Until the end of the phase, when making ranged attacks with Blast weapons, models in your unit can target enemy units within Engagement Range of your unit (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, until the end of the phase, your unit does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units, but each time a model in your unit makes an attack with a Blast weapon that targets a unit within Engagement Range of your unit, on an unmodified Hit roll of 1, your unit suffers 1 mortal wound after all of its attacks have been resolved.
 
 USED BYany unit
+
+Ask about this stratagem
 
 ######## popup strat:rapid-ingress · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 1CP · MOVEMENT · THEIR TURN
@@ -3074,6 +3225,8 @@ RESTRICTIONSYou cannot use this stratagem during the first battle round.
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:strength-from-exile · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 1CP · YOUR SHOOTING / FIGHT (EITHER TURN)
 
@@ -3090,6 +3243,8 @@ Until the end of the phase, each time a model in your unit makes an attack, if t
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:survivor-of-strife · 4 MEGAS AND A DESTRIER 4 megas and a destrier
 1CP · SHOOTING · THEIR TURN
 
@@ -3105,3 +3260,5 @@ EFFECT
 Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the Wound roll.
 
 USED BYany unit
+
+Ask about this stratagem

@@ -1670,6 +1670,7 @@ PRIMARCH
 PSYKER
 TZEENTCH
 WARLORD
+Ask about this unit
 Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph ›
 
 ######## unit daemon-prince-of-tzeentch-with-wings · MAGNUS THE RED Pubstomper
@@ -1791,6 +1792,7 @@ FLY
 MONSTER
 PSYKER
 TZEENTCH
+Ask about this unit
 ‹ Magnus the Red
 Sorcerer ›
 
@@ -2007,6 +2009,7 @@ RUBRIC*
 RUBRIC MARINES*
 RUBRICAE*
 *from the led Rubric Marines
+Ask about this unit
 ‹ Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph
 Sorcerer in Terminator Armour · Umbralefic Crystal ›
 
@@ -2210,6 +2213,7 @@ TZEENTCH
 RUBRICAE*
 SCARAB OCCULT*
 *from the led Scarab Occult Terminators
+Ask about this unit
 ‹ Sorcerer
 Tzaangors ›
 
@@ -2292,6 +2296,7 @@ INFANTRY
 MUTANT
 TZAANGORS
 TZEENTCH
+Ask about this unit
 ‹ Sorcerer in Terminator Armour · Umbralefic Crystal
 Tzaangor Enlightened ›
 
@@ -2362,6 +2367,7 @@ MOUNTED
 MUTANT
 TZAANGOR ENLIGHTENED
 TZEENTCH
+Ask about this unit
 ‹ Tzaangors
 Tzaangor Enlightened with Fatecaster greatbows ›
 
@@ -2447,6 +2453,7 @@ MUTANT
 TZAANGOR ENLIGHTENED
 TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS
 TZEENTCH
+Ask about this unit
 ‹ Tzaangor Enlightened
 Defiler ›
 
@@ -2563,6 +2570,7 @@ FACTION: THOUSAND SONS
 TZEENTCH
 VEHICLE
 WALKER
+Ask about this unit
 ‹ Tzaangor Enlightened with Fatecaster greatbows
 
 ######## popup ability:pubstomper|Aetherstride|In your Movement phase, when this model is set up on the battlefield using the **Deep Strike** ability, it can perform an aetherstride. If it does:
@@ -2581,6 +2589,8 @@ Until the end of the turn, it is not eligible to declare a charge.
 
 UNITDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph
 
+Ask about this ability
+
 ######## popup ability:pubstomper|Bringers of Change|Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead. · PUBSTOMPER Pubstomper
 ABILITY · THEIR MOVEMENT / YOUR SHOOTING
 
@@ -2589,6 +2599,8 @@ Bringers of Change
 Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead.
 
 UNITSorcerer
+
+Ask about this ability
 
 ######## popup ability:pubstomper|Damaged: 1-6 wounds remaining|While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**. · PUBSTOMPER Pubstomper
 ABILITY
@@ -2599,6 +2611,8 @@ While this model has 1-6 wounds remaining, each time this model makes an attack,
 
 UNITMagnus the Red, Defiler
 
+Ask about this ability
+
 ######## popup ability:pubstomper|Hunter of Souls|Each time this model makes an attack that targets a **CHARACTER** unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a **PSYKER CHARACTER** unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a **CHARACTER** unit, this model regains up to D3 lost wounds (if that **CHARACTER** unit was a **PSYKER**, this model regains up to 3 lost wounds instead). · PUBSTOMPER Pubstomper
 ABILITY · THEIR MOVEMENT / YOUR SHOOTING / FIGHT (EITHER TURN)
 
@@ -2607,6 +2621,8 @@ Hunter of Souls
 Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a CHARACTER unit, this model regains up to D3 lost wounds (if that CHARACTER unit was a PSYKER, this model regains up to 3 lost wounds instead).
 
 UNITDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph
+
+Ask about this ability
 
 ######## popup ability:pubstomper|Impossible Form|Each time an attack is made against this **PSYKER** (excluding **Psychic Attacks**), subtract 1 from the Damage characteristic of that attack. · PUBSTOMPER Pubstomper
 ABILITY · PSYCHIC
@@ -2617,6 +2633,8 @@ Each time an attack is made against this PSYKER (excluding Psychic Attacks), sub
 
 UNITMagnus the Red
 
+Ask about this ability
+
 ######## popup ability:pubstomper|Marked by Fate|At the start of your Shooting phase, select one enemy unit that is **visible** to this **PSYKER** model. Until the end of the phase, each time a model in this unit makes an attack that targets that enemy unit, add 1 to the **Hit roll**. · PUBSTOMPER Pubstomper
 ABILITY · PSYCHIC · SHOOTING · YOUR TURN
 
@@ -2625,6 +2643,8 @@ Marked by Fate
 At the start of your Shooting phase, select one enemy unit that is visible to this PSYKER model. Until the end of the phase, each time a model in this unit makes an attack that targets that enemy unit, add 1 to the Hit roll.
 
 UNITSorcerer in Terminator Armour · Umbralefic Crystal
+
+Ask about this ability
 
 ######## popup ability:pubstomper|Rites of Coalescence|While this unit contains one or more **PSYKER** models, each time an attack targets this unit, subtract 1 from the **Wound roll**. · PUBSTOMPER Pubstomper
 ABILITY
@@ -2635,6 +2655,8 @@ While this unit contains one or more PSYKER models, each time an attack targets 
 
 UNITSorcerer in Terminator Armour · Umbralefic Crystal
 
+Ask about this ability
+
 ######## popup ability:pubstomper|Treason of Tzeentch|At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this **PSYKER**. Until the end of the phase, ranged weapons equipped by models in that unit have the **[HAZARDOUS]** ability. · PUBSTOMPER Pubstomper
 ABILITY · PSYCHIC · SHOOTING · THEIR TURN
 
@@ -2644,6 +2666,8 @@ At the start of your opponent’s Shooting phase, select one enemy unit within 2
 
 UNITMagnus the Red
 
+Ask about this ability
+
 ######## popup ability:pubstomper|Twisted Sorceries|Once per battle, in your Shooting phase or the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristic of Psychic weapons equipped by this model by 3. · PUBSTOMPER Pubstomper
 ABILITY · PSYCHIC · YOUR SHOOTING / FIGHT (EITHER TURN)
 
@@ -2652,6 +2676,8 @@ Twisted Sorceries
 Once per battle, in your Shooting phase or the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristic of Psychic weapons equipped by this model by 3.
 
 UNITSorcerer
+
+Ask about this ability
 
 ######## popup ability:pubstomper|Umbralefic Crystal|**THOUSAND SONS** model only. (Once per battle, per army) In your Command phase, if this unit is **unengaged**, you can use this ability. If you do:
 - Place this unit in **strategic reserves**.
@@ -2669,6 +2695,8 @@ This unit must make an ingress move in your next Movement phase (including in yo
 
 UNITSorcerer in Terminator Armour · Umbralefic Crystal
 
+Ask about this ability
+
 ######## popup ability:pubstomper|Unearthly Power|At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability. · PUBSTOMPER Pubstomper
 ABILITY · START OF THE BATTLE ROUND
 
@@ -2678,6 +2706,8 @@ At the start of the battle round, select one of the abilities in the Crimson Kin
 
 UNITMagnus the Red
 
+Ask about this ability
+
 ######## popup enh:grand-coven|Eldritch Vortex of E’taph · PUBSTOMPER Pubstomper
 ENHANCEMENT · GRAND COVEN · 35 PTS
 
@@ -2686,6 +2716,8 @@ Eldritch Vortex of E’taph
 THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.
 
 ONDaemon Prince of Tzeentch with wings
+
+Ask about this enhancement
 
 ######## popup enh:grand-coven|Umbralefic Crystal · PUBSTOMPER Pubstomper
 ENHANCEMENT · GRAND COVEN · 30 PTS
@@ -2699,6 +2731,8 @@ This unit has Deep Strike until the start of your next Shooting phase.
 This unit must make an ingress move in your next Movement phase (including in your first turn).
 
 ONSorcerer in Terminator Armour + Scarab Occult Terminators
+
+Ask about this enhancement
 
 ######## popup grant:["Eldritch Vortex of E’taph","daemon-prince-of-tzeentch-with-wings","D 2",null] · PUBSTOMPER Pubstomper
 D 2 · GRANTED BY
@@ -2815,6 +2849,8 @@ Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit 
 
 IN THIS ARMYSorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
 
+Ask about this rule
+
 ######## popup rule:ANTI-MONSTER 4+ · PUBSTOMPER Pubstomper
 CORE RULE
 
@@ -2826,6 +2862,8 @@ Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit 
 
 IN THIS ARMYSorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
 
+Ask about this rule
+
 ######## popup rule:ANTI-VEHICLE 4+ · PUBSTOMPER Pubstomper
 CORE RULE
 
@@ -2836,6 +2874,8 @@ This ability always takes the form [ANTI-X Y+]. Each time an attack is made with
 Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
 
 IN THIS ARMYSorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+
+Ask about this rule
 
 ######## popup rule:Advance · PUBSTOMPER Pubstomper
 CORE RULE
@@ -2854,6 +2894,7 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
 
 ######## popup rule:Advance roll · PUBSTOMPER Pubstomper
 CORE RULE
@@ -2872,6 +2913,7 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
 
 ######## popup rule:BLAST · PUBSTOMPER Pubstomper
 CORE RULE
@@ -2885,6 +2927,8 @@ If this ability takes the form [BLAST X], each time you gather attack dice for s
 Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
 
 IN THIS ARMYMagnus the Red, Defiler
+
+Ask about this rule
 
 ######## popup rule:Cabal of Sorcerers · PUBSTOMPER Pubstomper
 THOUSAND SONS ARMY RULE
@@ -2924,6 +2968,8 @@ Twist of Fate (Psychic) · Warp Charge 9
 
 Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead.
 
+Ask about this rule
+
 ######## popup rule:Charge roll · PUBSTOMPER Pubstomper
 CORE RULE
 
@@ -2939,6 +2985,8 @@ It made an advance or fall-back move this turn.
 3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
 
 ######## popup rule:Charge rolls · PUBSTOMPER Pubstomper
 CORE RULE
@@ -2956,6 +3004,8 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
+Ask about this rule
+
 ######## popup rule:Close-quarters · PUBSTOMPER Pubstomper
 CORE RULE
 
@@ -2970,6 +3020,8 @@ One or more of its other ranged weapons.
 
 IN THIS ARMYSorcerer
 
+Ask about this rule
+
 ######## popup rule:DEVASTATING WOUNDS · PUBSTOMPER Pubstomper
 CORE RULE
 
@@ -2981,6 +3033,8 @@ Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of 
 
 IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal, Defiler
 
+Ask about this rule
+
 ######## popup rule:Deadly Demise · PUBSTOMPER Pubstomper
 CORE RULE
 
@@ -2989,6 +3043,8 @@ Deadly Demise
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
 IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Defiler
+
+Ask about this rule
 
 ######## popup rule:Deadly Demise D3 · PUBSTOMPER Pubstomper
 CORE RULE
@@ -2999,6 +3055,8 @@ This ability always takes the form Deadly Demise X. Each time a model in this un
 
 IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Defiler
 
+Ask about this rule
+
 ######## popup rule:Deadly Demise D6 · PUBSTOMPER Pubstomper
 CORE RULE
 
@@ -3007,6 +3065,8 @@ Deadly Demise D6
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
 IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Defiler
+
+Ask about this rule
 
 ######## popup rule:Deep Strike · PUBSTOMPER Pubstomper
 CORE RULE
@@ -3019,6 +3079,8 @@ App note, not rules text: unless a rule says otherwise, units in strategic reser
 
 IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer in Terminator Armour · Umbralefic Crystal
 
+Ask about this rule
+
 ######## popup rule:Engagement Range · PUBSTOMPER Pubstomper
 CORE RULE
 
@@ -3030,6 +3092,8 @@ While a friendly model is within engagement range of one or more enemy models, t
 While a unit contains no engaged models, that unit is unengaged.
 
 Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
 
 ######## popup rule:Fall Back move · PUBSTOMPER Pubstomper
 CORE RULE
@@ -3066,6 +3130,7 @@ If a stratagem or ability instructs a unit to make a Desperate Escape test, that
 Must use the desperate escape mode when it is selected to make a fall-back move.
 Must make one hazard roll for each model in that unit.
 Must make a battle-shock roll.
+Ask about this rule
 
 ######## popup rule:Feel No Pain 4+ · PUBSTOMPER Pubstomper
 CORE RULE
@@ -3073,6 +3138,8 @@ CORE RULE
 Feel No Pain 4+
 
 This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+Ask about this rule
 
 ######## popup rule:Fights First · PUBSTOMPER Pubstomper
 CORE RULE
@@ -3082,6 +3149,8 @@ Fights First
 While every model in a unit has this ability, that unit is a Fights First unit.
 
 See the Resolve Fights First Combats step in the Fight phase (12.04).
+
+Ask about this rule
 
 ######## popup rule:Hazard roll · PUBSTOMPER Pubstomper
 CORE RULE
@@ -3096,6 +3165,8 @@ Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model i
 
 Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
 
+Ask about this rule
+
 ######## popup rule:Hazardous · PUBSTOMPER Pubstomper
 CORE RULE
 
@@ -3105,6 +3176,8 @@ Each time a unit is selected to shoot or selected to fight, after that unit has 
 
 IN THIS ARMYMagnus the Red (in Treason of Tzeentch)
 
+Ask about this rule
+
 ######## popup rule:IGNORES COVER · PUBSTOMPER Pubstomper
 CORE RULE
 
@@ -3113,6 +3186,8 @@ IGNORES COVER
 Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
 
 IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Tzaangor Enlightened with Fatecaster greatbows
+
+Ask about this rule
 
 ######## popup rule:Kindred Sorcery · PUBSTOMPER Pubstomper
 GRAND COVEN DETACHMENT RULE
@@ -3135,6 +3210,8 @@ Psychic weapons equipped by THOUSAND SONS models from your army have the [DEVAST
 
 IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal, Tzaangors, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows, Defiler
 
+Ask about this rule
+
 ######## popup rule:LANCE · PUBSTOMPER Pubstomper
 CORE RULE
 
@@ -3143,6 +3220,8 @@ LANCE
 Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
 
 IN THIS ARMYTzaangor Enlightened
+
+Ask about this rule
 
 ######## popup rule:LETHAL HITS · PUBSTOMPER Pubstomper
 CORE RULE
@@ -3155,6 +3234,8 @@ Designer’s Note: Choosing to automatically wound the target means that no woun
 
 IN THIS ARMYSorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal, Tzaangor Enlightened with Fatecaster greatbows
 
+Ask about this rule
+
 ######## popup rule:Lance · PUBSTOMPER Pubstomper
 CORE RULE
 
@@ -3163,6 +3244,8 @@ Lance
 Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
 
 IN THIS ARMYTzaangor Enlightened
+
+Ask about this rule
 
 ######## popup rule:Leader · PUBSTOMPER Pubstomper
 CORE RULE
@@ -3174,6 +3257,8 @@ Before the battle, in the Muster Armies step, for each leader and support unit i
 Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.
 
 IN THIS ARMYSorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+
+Ask about this rule
 
 ######## popup rule:Lone Operative · PUBSTOMPER Pubstomper
 CORE RULE
@@ -3190,6 +3275,8 @@ If a unit has Lone Operative, but models in that unit have different range value
 
 If an attached unit below starting strength only contains models with Lone Operative, Lone Operative becomes active again.
 
+Ask about this rule
+
 ######## popup rule:Normal · PUBSTOMPER Pubstomper
 CORE RULE
 
@@ -3204,6 +3291,8 @@ EFFECT: Your unit moves as described in Moving (03).
 AFTER MOVING: Your unit must be unengaged.
 
 09.05.01 More Than One Normal Move in a Phase (app): A unit cannot make more than one Normal Move in a phase.
+
+Ask about this rule
 
 ######## popup rule:Normal move · PUBSTOMPER Pubstomper
 CORE RULE
@@ -3220,6 +3309,8 @@ AFTER MOVING: Your unit must be unengaged.
 
 09.05.01 More Than One Normal Move in a Phase (app): A unit cannot make more than one Normal Move in a phase.
 
+Ask about this rule
+
 ######## popup rule:PISTOL · PUBSTOMPER Pubstomper
 CORE RULE
 
@@ -3234,6 +3325,8 @@ One or more of its other ranged weapons.
 
 IN THIS ARMYSorcerer
 
+Ask about this rule
+
 ######## popup rule:PRECISION · PUBSTOMPER Pubstomper
 CORE RULE
 
@@ -3245,6 +3338,8 @@ While resolving attacks made with one or more [PRECISION] weapons, at the start 
 
 IN THIS ARMYTzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows
 
+Ask about this rule
+
 ######## popup rule:PSYCHIC · PUBSTOMPER Pubstomper
 CORE RULE
 
@@ -3254,6 +3349,8 @@ Each time an attack is made with a [PSYCHIC] weapon, you can ignore any or all m
 
 IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
 
+Ask about this rule
+
 ######## popup rule:Psychic · PUBSTOMPER Pubstomper
 CORE RULE
 
@@ -3262,6 +3359,8 @@ Psychic
 Each time an attack is made with a [PSYCHIC] weapon, you can ignore any or all modifiers to that attack’s BS or WS characteristic and any or all modifiers to the hit roll. Attacks made with [PSYCHIC] weapons are known as psychic attacks (this can be important for the triggering of other rules).
 
 IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+
+Ask about this rule
 
 ######## popup rule:Psychic test · PUBSTOMPER Pubstomper
 THOUSAND SONS ARMY RULE
@@ -3301,6 +3400,8 @@ Twist of Fate (Psychic) · Warp Charge 9
 
 Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead.
 
+Ask about this rule
+
 ######## popup rule:RAPID FIRE 2 · PUBSTOMPER Pubstomper
 CORE RULE
 
@@ -3309,6 +3410,8 @@ RAPID FIRE 2
 This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
 
 IN THIS ARMYSorcerer in Terminator Armour · Umbralefic Crystal
+
+Ask about this rule
 
 ######## popup rule:Resolve a charge · PUBSTOMPER Pubstomper
 CORE RULE
@@ -3325,6 +3428,8 @@ It made an advance or fall-back move this turn.
 3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
 
 ######## popup rule:Ritual · PUBSTOMPER Pubstomper
 THOUSAND SONS ARMY RULE
@@ -3364,6 +3469,8 @@ Twist of Fate (Psychic) · Warp Charge 9
 
 Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead.
 
+Ask about this rule
+
 ######## popup rule:Rituals · PUBSTOMPER Pubstomper
 THOUSAND SONS ARMY RULE
 
@@ -3402,6 +3509,8 @@ Twist of Fate (Psychic) · Warp Charge 9
 
 Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead.
 
+Ask about this rule
+
 ######## popup rule:SUSTAINED HITS 1 · PUBSTOMPER Pubstomper
 CORE RULE
 
@@ -3411,6 +3520,8 @@ This ability always takes the form [SUSTAINED HITS X]. Each time an attack made 
 
 IN THIS ARMYDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Defiler
 
+Ask about this rule
+
 ######## popup rule:SUSTAINED HITS 3 · PUBSTOMPER Pubstomper
 CORE RULE
 
@@ -3419,6 +3530,8 @@ SUSTAINED HITS 3
 This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
 
 IN THIS ARMYDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Defiler
+
+Ask about this rule
 
 ######## popup rule:Scouts · PUBSTOMPER Pubstomper
 CORE RULE
@@ -3433,6 +3546,8 @@ If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your
 
 IN THIS ARMYTzaangors
 
+Ask about this rule
+
 ######## popup rule:Scouts 6" · PUBSTOMPER Pubstomper
 CORE RULE
 
@@ -3445,6 +3560,8 @@ If that unit is wholly within your deployment zone, it can make a scout move (se
 If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.
 
 IN THIS ARMYTzaangors
+
+Ask about this rule
 
 ######## popup rule:Select Weapons · PUBSTOMPER Pubstomper
 CORE RULE
@@ -3462,6 +3579,8 @@ Sidearms: Some models are equipped with [CLOSE-QUARTERS] weapons in addition to 
 24.11 [EXTRA ATTACKS]: Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others.
 
 04.01.03 Multiple Weapon Profiles (app): In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).
+
+Ask about this rule
 
 ######## popup rule:Strategic Reserves · PUBSTOMPER Pubstomper
 CORE RULE
@@ -3486,6 +3605,7 @@ At the end of the third battle round, unless otherwise stated, all strategic res
 
 Units embarked within TRANSPORTS that have made an ingress move during the battle.
 Repositioned units (see opposite).
+Ask about this rule
 
 ######## popup rule:TORRENT · PUBSTOMPER Pubstomper
 CORE RULE
@@ -3495,6 +3615,8 @@ TORRENT
 Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.
 
 IN THIS ARMYSorcerer
+
+Ask about this rule
 
 ######## popup rule:[DEVASTATING WOUNDS] · PUBSTOMPER Pubstomper
 CORE RULE
@@ -3507,6 +3629,8 @@ Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of 
 
 IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal, Defiler
 
+Ask about this rule
+
 ######## popup rule:[HAZARDOUS] · PUBSTOMPER Pubstomper
 CORE RULE
 
@@ -3516,6 +3640,8 @@ Each time a unit is selected to shoot or selected to fight, after that unit has 
 
 IN THIS ARMYMagnus the Red (in Treason of Tzeentch)
 
+Ask about this rule
+
 ######## popup rule:[IGNORES COVER] · PUBSTOMPER Pubstomper
 CORE RULE
 
@@ -3524,6 +3650,8 @@ IGNORES COVER
 Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
 
 IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Tzaangor Enlightened with Fatecaster greatbows
+
+Ask about this rule
 
 ######## popup rule:[LETHAL HITS] · PUBSTOMPER Pubstomper
 CORE RULE
@@ -3536,6 +3664,8 @@ Designer’s Note: Choosing to automatically wound the target means that no woun
 
 IN THIS ARMYSorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal, Tzaangor Enlightened with Fatecaster greatbows
 
+Ask about this rule
+
 ######## popup rule:[PRECISION] · PUBSTOMPER Pubstomper
 CORE RULE
 
@@ -3547,6 +3677,8 @@ While resolving attacks made with one or more [PRECISION] weapons, at the start 
 
 IN THIS ARMYTzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows
 
+Ask about this rule
+
 ######## popup rule:[SUSTAINED HITS D3] · PUBSTOMPER Pubstomper
 CORE RULE
 
@@ -3555,6 +3687,8 @@ SUSTAINED HITS D3
 This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
 
 IN THIS ARMYDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Defiler
+
+Ask about this rule
 
 ######## popup rule:advance move · PUBSTOMPER Pubstomper
 CORE RULE
@@ -3573,6 +3707,7 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
 
 ######## popup rule:battle-shock roll · PUBSTOMPER Pubstomper
 CORE RULE
@@ -3601,6 +3736,8 @@ That unit is at, or below, half-strength.
 
 If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
 
+Ask about this rule
+
 ######## popup rule:benefit of cover · PUBSTOMPER Pubstomper
 CORE RULE
 
@@ -3612,6 +3749,8 @@ That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area.
 That model is not fully visible to the attacking model due to one or more intervening terrain features and/or one or more intervening obscuring terrain areas (see below).
 
 Each time a ranged attack targets a unit that has the benefit of cover against it, worsen the BS characteristic of that attack by 1.
+
+Ask about this rule
 
 ######## popup rule:charge move · PUBSTOMPER Pubstomper
 CORE RULE
@@ -3637,6 +3776,7 @@ AFTER MOVING:
 Your unit must be engaged with all of the charge targets.
 Your unit cannot be engaged with one or more enemy units that are not charge targets.
 Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
 
 ######## popup rule:charge roll · PUBSTOMPER Pubstomper
 CORE RULE
@@ -3654,6 +3794,8 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
+Ask about this rule
+
 ######## popup rule:charge rolls · PUBSTOMPER Pubstomper
 CORE RULE
 
@@ -3669,6 +3811,8 @@ It made an advance or fall-back move this turn.
 3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
 
 ######## popup rule:charge targets · PUBSTOMPER Pubstomper
 CORE RULE
@@ -3694,6 +3838,7 @@ AFTER MOVING:
 Your unit must be engaged with all of the charge targets.
 Your unit cannot be engaged with one or more enemy units that are not charge targets.
 Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
 
 ######## popup rule:engaged · PUBSTOMPER Pubstomper
 CORE RULE
@@ -3706,6 +3851,8 @@ While a friendly model is within engagement range of one or more enemy models, t
 While a unit contains no engaged models, that unit is unengaged.
 
 Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
 
 ######## popup rule:ingress move · PUBSTOMPER Pubstomper
 CORE RULE
@@ -3726,6 +3873,8 @@ AFTER MOVING: Unless otherwise stated, until the start of the next Charge phase,
 
 20.03.01 Set Up As Reinforcements (app): If a rule mentions a unit being set up on the battlefield as Reinforcements, it means a unit that made an ingress move.
 
+Ask about this rule
+
 ######## popup rule:mortal wound · PUBSTOMPER Pubstomper
 CORE RULE
 
@@ -3741,6 +3890,8 @@ Otherwise, you must select one CHARACTER model in that unit.
 Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
 
 When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+Ask about this rule
 
 ######## popup rule:mortal wounds · PUBSTOMPER Pubstomper
 CORE RULE
@@ -3758,6 +3909,8 @@ Resolve Damage: The selected model loses 1 wound. If this reduces that model’s
 
 When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
 
+Ask about this rule
+
 ######## popup rule:snap shooting · PUBSTOMPER Pubstomper
 CORE RULE
 
@@ -3774,6 +3927,8 @@ Each attack only hits on an unmodified hit roll of 6 (irrespective of the attack
 You cannot re-roll hit rolls.
 
 AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.
+
+Ask about this rule
 
 ######## popup rule:strategic reserves · PUBSTOMPER Pubstomper
 CORE RULE
@@ -3798,6 +3953,7 @@ At the end of the third battle round, unless otherwise stated, all strategic res
 
 Units embarked within TRANSPORTS that have made an ingress move during the battle.
 Repositioned units (see opposite).
+Ask about this rule
 
 ######## popup rule:unengaged · PUBSTOMPER Pubstomper
 CORE RULE
@@ -3810,6 +3966,8 @@ While a friendly model is within engagement range of one or more enemy models, t
 While a unit contains no engaged models, that unit is unengaged.
 
 Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
 
 ######## popup strat:arcane-focus · PUBSTOMPER Pubstomper
 1CP · SHOOTING · YOUR TURN
@@ -3826,6 +3984,8 @@ EFFECT
 Re-roll all of the D6 rolled for that Psychic test (including the additional D6 for Channelling the Warp).
 
 USED BYany unit
+
+Ask about this stratagem
 
 ######## popup strat:command-re-roll · PUBSTOMPER Pubstomper
 1CP · ANY PHASE · EITHER TURN
@@ -3852,6 +4012,8 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:counteroffensive · PUBSTOMPER Pubstomper
 2CP · FIGHT · THEIR TURN
 
@@ -3867,6 +4029,8 @@ EFFECT
 Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
 
 USED BYany unit
+
+Ask about this stratagem
 
 ######## popup strat:crushing-impact · PUBSTOMPER Pubstomper
 1CP · CHARGE · YOUR TURN
@@ -3890,6 +4054,8 @@ Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact st
 
 USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Defiler
 
+Ask about this stratagem
+
 ######## popup strat:desecration-of-worlds · PUBSTOMPER Pubstomper
 1CP · COMMAND · YOUR TURN
 
@@ -3905,6 +4071,8 @@ EFFECT
 That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
 
 USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+
+Ask about this stratagem
 
 ######## popup strat:destined-by-fate · PUBSTOMPER Pubstomper
 1CP · ANY PHASE · EITHER TURN
@@ -3922,6 +4090,8 @@ Change the Damage characteristic of that attack to 0. If you are using fast dice
 
 USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
 
+Ask about this stratagem
+
 ######## popup strat:devastating-sorcery · PUBSTOMPER Pubstomper
 2CP · SHOOTING · YOUR TURN
 
@@ -3937,6 +4107,8 @@ EFFECT
 Until the end of the phase, add 9" to the Range characteristic of Psychic weapons equipped by models in your unit, and each time a model in your unit makes an attack with a Psychic weapon, you can re-roll the Hit roll and you can re-roll the Wound roll.
 
 USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+
+Ask about this stratagem
 
 ######## popup strat:egotistical-power · PUBSTOMPER Pubstomper
 1CP · COMMAND · YOUR TURN
@@ -3954,6 +4126,8 @@ Select the Imbued Manifestation, Psychic Maelstrom or Wrath of the Immaterium ab
 
 USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
 
+Ask about this stratagem
+
 ######## popup strat:epic-challenge · PUBSTOMPER Pubstomper
 1CP · FIGHT · EITHER TURN
 
@@ -3969,6 +4143,8 @@ EFFECT
 Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
 
 USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+
+Ask about this stratagem
 
 ######## popup strat:explosives · PUBSTOMPER Pubstomper
 1CP · SHOOTING · YOUR TURN
@@ -3992,6 +4168,8 @@ Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
 
 USED BYSorcerer
 
+Ask about this stratagem
+
 ######## popup strat:fire-overwatch · PUBSTOMPER Pubstomper
 1CP · MOVEMENT · THEIR TURN
 
@@ -4007,6 +4185,8 @@ EFFECT
 Your unit shoots using snap shooting.
 
 USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal, Tzaangor Enlightened with Fatecaster greatbows, Defiler
+
+Ask about this stratagem
 
 ######## popup strat:heroic-intervention · PUBSTOMPER Pubstomper
 1CP · CHARGE · THEIR TURN · INTO THE FRAY +1CP
@@ -4029,6 +4209,8 @@ Wahapedia FAQ: If a stratagem contains a section that carries an additional CP c
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:insane-bravery · PUBSTOMPER Pubstomper
 1CP · COMMAND · YOUR TURN · ONCE PER BATTLE
 
@@ -4049,6 +4231,8 @@ Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? 
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:psychic-dominion · PUBSTOMPER Pubstomper
 1CP · ANY PHASE · EITHER TURN
 
@@ -4064,6 +4248,8 @@ EFFECT
 Until the end of the phase, all attacks made against your unit with Psychic weapons have the [HAZARDOUS] ability and all models in your unit have the Feel No Pain 4+ ability against Psychic Attacks.
 
 USED BYany unit
+
+Ask about this stratagem
 
 ######## popup strat:rapid-ingress · PUBSTOMPER Pubstomper
 1CP · MOVEMENT · THEIR TURN
@@ -4082,3 +4268,5 @@ Your unit makes an ingress move (20.04).
 RESTRICTIONSYou cannot use this stratagem during the first battle round.
 
 USED BYany unit
+
+Ask about this stratagem

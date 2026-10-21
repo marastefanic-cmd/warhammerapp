@@ -1298,6 +1298,7 @@ TITANIC
 TOWERING
 VEHICLE
 WALKER
+Ask about this unit
 Knight Errant ›
 
 ######## unit knight-errant · KNIGHT DESTRIER 6 bigs
@@ -1421,6 +1422,7 @@ TITANIC
 TOWERING
 VEHICLE
 WALKER
+Ask about this unit
 ‹ Knight Destrier
 Knight Paladin ›
 
@@ -1553,6 +1555,7 @@ TITANIC
 TOWERING
 VEHICLE
 WALKER
+Ask about this unit
 ‹ Knight Errant
 Knight Warden ›
 
@@ -1686,6 +1689,7 @@ TOWERING
 VEHICLE
 WALKER
 WARLORD
+Ask about this unit
 ‹ Knight Paladin
 
 ######## popup ability:6-bigs|Aggressive Assault|Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the **Hit roll**. · KNIGHT WARDEN 6 bigs
@@ -1697,6 +1701,8 @@ Each time this model makes a ranged attack that targets the closest eligible tar
 
 UNITKnight Errant
 
+Ask about this ability
+
 ######## popup ability:6-bigs|Damaged: 1-6 Wounds Remaining|While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**. · 6 BIGS 6 bigs
 ABILITY
 
@@ -1705,6 +1711,8 @@ Damaged: 1-6 Wounds Remaining
 While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
 
 UNITKnight Destrier
+
+Ask about this ability
 
 ######## popup ability:6-bigs|Damaged: 1-9 Wounds Remaining|While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**. · 6 BIGS 6 bigs
 ABILITY
@@ -1715,6 +1723,8 @@ While this model has 1‑9 wounds remaining, subtract 5 from this model’s Obje
 
 UNITKnight Errant, Knight Paladin, Knight Warden
 
+Ask about this ability
+
 ######## popup ability:6-bigs|Invulnerable Save (5+*)|This model has a 5+ invulnerable save against ranged attacks. · 6 BIGS 6 bigs
 ABILITY
 
@@ -1723,6 +1733,8 @@ Invulnerable Save (5+*)
 This model has a 5+ invulnerable save against ranged attacks.
 
 UNITKnight Destrier, Knight Errant, Knight Paladin, Knight Warden
+
+Ask about this ability
 
 ######## popup ability:6-bigs|Paladin’s Duty|While a model is affected by this ability, weapons equipped by that model have the **[LETHAL HITS]** ability, and melee weapons equipped by that model have the **[LANCE]** ability. · 6 BIGS 6 bigs
 ABILITY · BONDSMAN
@@ -1733,6 +1745,8 @@ While a model is affected by this ability, weapons equipped by that model have t
 
 UNITKnight Paladin
 
+Ask about this ability
+
 ######## popup ability:6-bigs|Saturation Fire|Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the **[IGNORES COVER]** ability. · 6 BIGS 6 bigs
 ABILITY · SHOOTING · YOUR TURN
 
@@ -1741,6 +1755,8 @@ Saturation Fire
 Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
 
 UNITKnight Destrier
+
+Ask about this ability
 
 ######## popup ability:6-bigs|Seasoned Noble|Each time this model makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1. · 6 BIGS 6 bigs
 ABILITY · SHOOTING · YOUR TURN
@@ -1751,6 +1767,8 @@ Each time this model makes a ranged attack that targets the closest eligible tar
 
 UNITKnight Paladin
 
+Ask about this ability
+
 ######## popup ability:6-bigs|Thin Their Ranks|Each time this model makes a ranged attack that targets an enemy unit (excluding **MONSTERS** and **VEHICLES**), that attack has the **[DEVASTATING WOUNDS]** ability. · 6 BIGS 6 bigs
 ABILITY · SHOOTING · YOUR TURN
 
@@ -1759,6 +1777,8 @@ Thin Their Ranks
 Each time this model makes a ranged attack that targets an enemy unit (excluding MONSTERS and VEHICLES), that attack has the [DEVASTATING WOUNDS] ability.
 
 UNITKnight Warden
+
+Ask about this ability
 
 ######## popup ability:6-bigs|Warden’s Duty|While a model is affected by this ability, weapons equipped by that model have the **[SUSTAINED HITS 1]** ability, and ranged weapons equipped by that model have the **[IGNORES COVER]** ability. · 6 BIGS 6 bigs
 ABILITY · BONDSMAN
@@ -1769,6 +1789,8 @@ While a model is affected by this ability, weapons equipped by that model have t
 
 UNITKnight Warden
 
+Ask about this ability
+
 ######## popup rule:ASSAULT · 6 BIGS 6 bigs
 CORE RULE
 
@@ -1777,6 +1799,8 @@ ASSAULT
 Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
 
 IN THIS ARMYKnight Destrier, Knight Errant (in Errant’s Duty)
+
+Ask about this rule
 
 ######## popup rule:Advance · 6 BIGS 6 bigs
 CORE RULE
@@ -1795,6 +1819,7 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
 
 ######## popup rule:Advance move · 6 BIGS 6 bigs
 CORE RULE
@@ -1813,6 +1838,7 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
 
 ######## popup rule:Advance roll · 6 BIGS 6 bigs
 CORE RULE
@@ -1831,6 +1857,7 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
 
 ######## popup rule:Advance rolls · 6 BIGS 6 bigs
 CORE RULE
@@ -1849,6 +1876,7 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
 
 ######## popup rule:BLAST · 6 BIGS 6 bigs
 CORE RULE
@@ -1863,12 +1891,16 @@ Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit cont
 
 IN THIS ARMYKnight Destrier, Knight Errant, Knight Paladin
 
+Ask about this rule
+
 ######## popup rule:Bondsman · 6 BIGS 6 bigs
 IMPERIAL KNIGHTS ARMY RULE
 
 Bondsman
 
 Some IMPERIAL KNIGHTS models have a Bondsman ability, tagged with the word ‘Bondsman’. In your Command phase, one or more models from your army with a Bondsman ability can use that ability. For each one that does, select one friendly ARMIGER model within 12" of that model (you cannot select an ARMIGER model that is already being affected by a Bondsman ability). Until the start of your next Command phase, that ARMIGER model is affected by that Bondsman ability.
+
+Ask about this rule
 
 ######## popup rule:Charge roll · 6 BIGS 6 bigs
 CORE RULE
@@ -1886,6 +1918,8 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
+Ask about this rule
+
 ######## popup rule:Charge rolls · 6 BIGS 6 bigs
 CORE RULE
 
@@ -1901,6 +1935,8 @@ It made an advance or fall-back move this turn.
 3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
 
 ######## popup rule:Code Chivalric · 6 BIGS 6 bigs
 IMPERIAL KNIGHTS ARMY RULE
@@ -1939,6 +1975,8 @@ Quality 5–6 · …yet shall our legacy be unsullied
 
 Improve this model’s Objective Control characteristic by 2 and its Leadership characteristic by 1.
 
+Ask about this rule
+
 ######## popup rule:Deadly Demise · 6 BIGS 6 bigs
 CORE RULE
 
@@ -1947,6 +1985,8 @@ Deadly Demise
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
 IN THIS ARMYKnight Destrier, Knight Errant, Knight Paladin, Knight Warden
+
+Ask about this rule
 
 ######## popup rule:Deadly Demise D6 · 6 BIGS 6 bigs
 CORE RULE
@@ -1957,6 +1997,8 @@ This ability always takes the form Deadly Demise X. Each time a model in this un
 
 IN THIS ARMYKnight Destrier, Knight Errant, Knight Paladin, Knight Warden
 
+Ask about this rule
+
 ######## popup rule:Deep Strike · 6 BIGS 6 bigs
 CORE RULE
 
@@ -1965,6 +2007,8 @@ Deep Strike
 Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
 
 App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
+
+Ask about this rule
 
 ######## popup rule:Devastating Wounds · 6 BIGS 6 bigs
 CORE RULE
@@ -1976,6 +2020,8 @@ Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critica
 Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
 
 IN THIS ARMYKnight Warden
+
+Ask about this rule
 
 ######## popup rule:Engagement Range · 6 BIGS 6 bigs
 CORE RULE
@@ -1989,12 +2035,16 @@ While a unit contains no engaged models, that unit is unengaged.
 
 Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
 
+Ask about this rule
+
 ######## popup rule:Feel No Pain 6+ · 6 BIGS 6 bigs
 CORE RULE
 
 Feel No Pain 6+
 
 This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+Ask about this rule
 
 ######## popup rule:Fights First · 6 BIGS 6 bigs
 CORE RULE
@@ -2004,6 +2054,8 @@ Fights First
 While every model in a unit has this ability, that unit is a Fights First unit.
 
 See the Resolve Fights First Combats step in the Fight phase (12.04).
+
+Ask about this rule
 
 ######## popup rule:Hazard roll · 6 BIGS 6 bigs
 CORE RULE
@@ -2018,6 +2070,8 @@ Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model i
 
 Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
 
+Ask about this rule
+
 ######## popup rule:IGNORES COVER · 6 BIGS 6 bigs
 CORE RULE
 
@@ -2026,6 +2080,8 @@ IGNORES COVER
 Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
 
 IN THIS ARMYKnight Destrier (in Saturation Fire), Knight Warden
+
+Ask about this rule
 
 ######## popup rule:Knights of Legend · 6 BIGS 6 bigs
 FREEBLADE COMPANY DETACHMENT RULE
@@ -2036,6 +2092,8 @@ IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addi
 
 IN THIS ARMYKnight Destrier, Knight Errant, Knight Paladin, Knight Warden
 
+Ask about this rule
+
 ######## popup rule:Lance · 6 BIGS 6 bigs
 CORE RULE
 
@@ -2044,6 +2102,8 @@ Lance
 Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
 
 IN THIS ARMYKnight Paladin (in Paladin’s Duty)
+
+Ask about this rule
 
 ######## popup rule:Lethal Hits · 6 BIGS 6 bigs
 CORE RULE
@@ -2056,6 +2116,8 @@ Designer’s Note: Choosing to automatically wound the target means that no woun
 
 IN THIS ARMYKnight Paladin (in Paladin’s Duty)
 
+Ask about this rule
+
 ######## popup rule:MELTA 2 · 6 BIGS 6 bigs
 CORE RULE
 
@@ -2067,6 +2129,8 @@ Example: A model targets a unit that is within half range of a [MELTA 2] weapon 
 
 IN THIS ARMYKnight Errant, Knight Paladin, Knight Warden
 
+Ask about this rule
+
 ######## popup rule:MELTA 6 · 6 BIGS 6 bigs
 CORE RULE
 
@@ -2077,6 +2141,8 @@ This ability always takes the form [MELTA X]. Each time a model makes an attack 
 Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6. While resolving those attacks, that weapon has a D characteristic of D6+2.
 
 IN THIS ARMYKnight Errant, Knight Paladin, Knight Warden
+
+Ask about this rule
 
 ######## popup rule:Normal · 6 BIGS 6 bigs
 CORE RULE
@@ -2093,6 +2159,8 @@ AFTER MOVING: Your unit must be unengaged.
 
 09.05.01 More Than One Normal Move in a Phase (app): A unit cannot make more than one Normal Move in a phase.
 
+Ask about this rule
+
 ######## popup rule:Plunging Fire · 6 BIGS 6 bigs
 CORE RULE
 
@@ -2105,6 +2173,8 @@ The attacking model has the TOWERING keyword and the target unit is within 12".
 
 23.03 Shooting: The Plunging Fire rule (22.05) has no effect on attacks made by, or targeting, AIRCRAFT units.
 
+Ask about this rule
+
 ######## popup rule:RAPID FIRE 3 · 6 BIGS 6 bigs
 CORE RULE
 
@@ -2114,6 +2184,8 @@ This ability always takes the form [RAPID FIRE X]. Each time you gather attack d
 
 IN THIS ARMYKnight Destrier, Knight Paladin
 
+Ask about this rule
+
 ######## popup rule:RAPID FIRE D6+3 · 6 BIGS 6 bigs
 CORE RULE
 
@@ -2122,6 +2194,8 @@ RAPID FIRE D6+3
 This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
 
 IN THIS ARMYKnight Destrier, Knight Paladin
+
+Ask about this rule
 
 ######## popup rule:Resolve a charge · 6 BIGS 6 bigs
 CORE RULE
@@ -2138,6 +2212,8 @@ It made an advance or fall-back move this turn.
 3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
 
 ######## popup rule:Strategic Reserves · 6 BIGS 6 bigs
 CORE RULE
@@ -2162,6 +2238,7 @@ At the end of the third battle round, unless otherwise stated, all strategic res
 
 Units embarked within TRANSPORTS that have made an ingress move during the battle.
 Repositioned units (see opposite).
+Ask about this rule
 
 ######## popup rule:Super-Heavy Walker · 6 BIGS 6 bigs
 CORE RULE
@@ -2177,6 +2254,8 @@ Designer’s Note: Gaining the MOBILE keyword for the duration of a move will en
 
 IN THIS ARMYKnight Destrier, Knight Errant, Knight Paladin, Knight Warden
 
+Ask about this rule
+
 ######## popup rule:Sustained Hits · 6 BIGS 6 bigs
 CORE RULE
 
@@ -2185,6 +2264,8 @@ Sustained Hits
 This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
 
 IN THIS ARMYKnight Warden (in Warden’s Duty)
+
+Ask about this rule
 
 ######## popup rule:TORRENT · 6 BIGS 6 bigs
 CORE RULE
@@ -2195,6 +2276,8 @@ Each time an attack is made with a [TORRENT] weapon, that attack automatically h
 
 IN THIS ARMYKnight Warden
 
+Ask about this rule
+
 ######## popup rule:[ASSAULT] · 6 BIGS 6 bigs
 CORE RULE
 
@@ -2203,6 +2286,8 @@ ASSAULT
 Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
 
 IN THIS ARMYKnight Destrier, Knight Errant (in Errant’s Duty)
+
+Ask about this rule
 
 ######## popup rule:[DEVASTATING WOUNDS] · 6 BIGS 6 bigs
 CORE RULE
@@ -2215,6 +2300,8 @@ Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of 
 
 IN THIS ARMYKnight Warden
 
+Ask about this rule
+
 ######## popup rule:[IGNORES COVER] · 6 BIGS 6 bigs
 CORE RULE
 
@@ -2224,6 +2311,8 @@ Each time an attack is made with an [IGNORES COVER] weapon, the target cannot ha
 
 IN THIS ARMYKnight Destrier (in Saturation Fire), Knight Warden
 
+Ask about this rule
+
 ######## popup rule:[LANCE] · 6 BIGS 6 bigs
 CORE RULE
 
@@ -2232,6 +2321,8 @@ LANCE
 Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
 
 IN THIS ARMYKnight Paladin (in Paladin’s Duty)
+
+Ask about this rule
 
 ######## popup rule:[LETHAL HITS] · 6 BIGS 6 bigs
 CORE RULE
@@ -2244,6 +2335,8 @@ Designer’s Note: Choosing to automatically wound the target means that no woun
 
 IN THIS ARMYKnight Paladin (in Paladin’s Duty)
 
+Ask about this rule
+
 ######## popup rule:[PRECISION] · 6 BIGS 6 bigs
 CORE RULE
 
@@ -2253,6 +2346,8 @@ While resolving attacks made with one or more [PRECISION] weapons, at the start 
 
 24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
 
+Ask about this rule
+
 ######## popup rule:[SUSTAINED HITS 1] · 6 BIGS 6 bigs
 CORE RULE
 
@@ -2261,6 +2356,8 @@ SUSTAINED HITS 1
 This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
 
 IN THIS ARMYKnight Warden (in Warden’s Duty)
+
+Ask about this rule
 
 ######## popup rule:advance move · 6 BIGS 6 bigs
 CORE RULE
@@ -2279,6 +2376,7 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
 
 ######## popup rule:battle-shock roll · 6 BIGS 6 bigs
 CORE RULE
@@ -2307,6 +2405,8 @@ That unit is at, or below, half-strength.
 
 If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
 
+Ask about this rule
+
 ######## popup rule:benefit of cover · 6 BIGS 6 bigs
 CORE RULE
 
@@ -2318,6 +2418,8 @@ That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area.
 That model is not fully visible to the attacking model due to one or more intervening terrain features and/or one or more intervening obscuring terrain areas (see below).
 
 Each time a ranged attack targets a unit that has the benefit of cover against it, worsen the BS characteristic of that attack by 1.
+
+Ask about this rule
 
 ######## popup rule:charge move · 6 BIGS 6 bigs
 CORE RULE
@@ -2343,6 +2445,7 @@ AFTER MOVING:
 Your unit must be engaged with all of the charge targets.
 Your unit cannot be engaged with one or more enemy units that are not charge targets.
 Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
 
 ######## popup rule:charge roll · 6 BIGS 6 bigs
 CORE RULE
@@ -2360,6 +2463,8 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
+Ask about this rule
+
 ######## popup rule:charge rolls · 6 BIGS 6 bigs
 CORE RULE
 
@@ -2375,6 +2480,8 @@ It made an advance or fall-back move this turn.
 3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
 
 ######## popup rule:charge targets · 6 BIGS 6 bigs
 CORE RULE
@@ -2400,6 +2507,7 @@ AFTER MOVING:
 Your unit must be engaged with all of the charge targets.
 Your unit cannot be engaged with one or more enemy units that are not charge targets.
 Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
 
 ######## popup rule:engaged · 6 BIGS 6 bigs
 CORE RULE
@@ -2412,6 +2520,8 @@ While a friendly model is within engagement range of one or more enemy models, t
 While a unit contains no engaged models, that unit is unengaged.
 
 Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
 
 ######## popup rule:ingress move · 6 BIGS 6 bigs
 CORE RULE
@@ -2432,6 +2542,8 @@ AFTER MOVING: Unless otherwise stated, until the start of the next Charge phase,
 
 20.03.01 Set Up As Reinforcements (app): If a rule mentions a unit being set up on the battlefield as Reinforcements, it means a unit that made an ingress move.
 
+Ask about this rule
+
 ######## popup rule:mortal wound · 6 BIGS 6 bigs
 CORE RULE
 
@@ -2447,6 +2559,8 @@ Otherwise, you must select one CHARACTER model in that unit.
 Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
 
 When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+Ask about this rule
 
 ######## popup rule:mortal wounds · 6 BIGS 6 bigs
 CORE RULE
@@ -2464,6 +2578,8 @@ Resolve Damage: The selected model loses 1 wound. If this reduces that model’s
 
 When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
 
+Ask about this rule
+
 ######## popup rule:snap shooting · 6 BIGS 6 bigs
 CORE RULE
 
@@ -2480,6 +2596,8 @@ Each attack only hits on an unmodified hit roll of 6 (irrespective of the attack
 You cannot re-roll hit rolls.
 
 AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.
+
+Ask about this rule
 
 ######## popup rule:strategic reserves · 6 BIGS 6 bigs
 CORE RULE
@@ -2504,6 +2622,7 @@ At the end of the third battle round, unless otherwise stated, all strategic res
 
 Units embarked within TRANSPORTS that have made an ingress move during the battle.
 Repositioned units (see opposite).
+Ask about this rule
 
 ######## popup rule:unengaged · 6 BIGS 6 bigs
 CORE RULE
@@ -2516,6 +2635,8 @@ While a friendly model is within engagement range of one or more enemy models, t
 While a unit contains no engaged models, that unit is unengaged.
 
 Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
 
 ######## popup strat:command-re-roll · 6 BIGS 6 bigs
 1CP · ANY PHASE · EITHER TURN
@@ -2542,6 +2663,8 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:counteroffensive · 6 BIGS 6 bigs
 2CP · FIGHT · THEIR TURN
 
@@ -2557,6 +2680,8 @@ EFFECT
 Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
 
 USED BYany unit
+
+Ask about this stratagem
 
 ######## popup strat:crushing-impact · 6 BIGS 6 bigs
 1CP · CHARGE · YOUR TURN
@@ -2580,6 +2705,8 @@ Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact st
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:epic-challenge · 6 BIGS 6 bigs
 1CP · FIGHT · EITHER TURN
 
@@ -2595,6 +2722,8 @@ EFFECT
 Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
 
 USED BYany unit
+
+Ask about this stratagem
 
 ######## popup strat:flanking-manoeuvres · 6 BIGS 6 bigs
 1CP · FIGHT · THEIR TURN
@@ -2612,6 +2741,8 @@ Remove your unit from the battlefield and place it into Strategic Reserves.
 
 USED BYno unit in this list (needs ARMIGER)
 
+Ask about this stratagem
+
 ######## popup strat:full-tilt · 6 BIGS 6 bigs
 1CP · MOVEMENT · YOUR TURN
 
@@ -2627,6 +2758,8 @@ EFFECT
 Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6" to the Move characteristic of models in your unit, or 9" instead if your unit is an ARMIGER or DESTRIER unit.
 
 USED BYany unit
+
+Ask about this stratagem
 
 ######## popup strat:heroic-intervention · 6 BIGS 6 bigs
 1CP · CHARGE · THEIR TURN · INTO THE FRAY +1CP
@@ -2649,6 +2782,8 @@ Wahapedia FAQ: If a stratagem contains a section that carries an additional CP c
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:insane-bravery · 6 BIGS 6 bigs
 1CP · COMMAND · YOUR TURN · ONCE PER BATTLE
 
@@ -2669,6 +2804,8 @@ Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? 
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:noble-sacrifice · 6 BIGS 6 bigs
 1CP · ANY PHASE · EITHER TURN
 
@@ -2685,6 +2822,8 @@ Your unit’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, a
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:point-blank-barrage · 6 BIGS 6 bigs
 1CP · SHOOTING · YOUR TURN
 
@@ -2700,6 +2839,8 @@ EFFECT
 Until the end of the phase, when making ranged attacks with Blast weapons, models in your unit can target enemy units within Engagement Range of your unit (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, until the end of the phase, your unit does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units, but each time a model in your unit makes an attack with a Blast weapon that targets a unit within Engagement Range of your unit, on an unmodified Hit roll of 1, your unit suffers 1 mortal wound after all of its attacks have been resolved.
 
 USED BYany unit
+
+Ask about this stratagem
 
 ######## popup strat:rapid-ingress · 6 BIGS 6 bigs
 1CP · MOVEMENT · THEIR TURN
@@ -2719,6 +2860,8 @@ RESTRICTIONSYou cannot use this stratagem during the first battle round.
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:strength-from-exile · 6 BIGS 6 bigs
 1CP · YOUR SHOOTING / FIGHT (EITHER TURN)
 
@@ -2735,6 +2878,8 @@ Until the end of the phase, each time a model in your unit makes an attack, if t
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:survivor-of-strife · 6 BIGS 6 bigs
 1CP · SHOOTING · THEIR TURN
 
@@ -2750,3 +2895,5 @@ EFFECT
 Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the Wound roll.
 
 USED BYany unit
+
+Ask about this stratagem

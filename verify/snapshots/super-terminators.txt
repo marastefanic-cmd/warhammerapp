@@ -1450,6 +1450,7 @@ KHORNE
 MONSTER
 PRIMARCH
 WARLORD
+Ask about this unit
 Chaos Terminators (1–2 of 3) ›
 
 ######## unit chaos-terminators · ANGRON Super Terminators
@@ -1580,6 +1581,7 @@ INFANTRY
 KHORNE
 TERMINATOR
 TERMINATOR SQUAD
+Ask about this unit
 ‹ Angron
 Chaos Terminators (3 of 3) ›
 
@@ -1711,6 +1713,7 @@ INFANTRY
 KHORNE
 TERMINATOR
 TERMINATOR SQUAD
+Ask about this unit
 ‹ Chaos Terminators (1–2 of 3)
 Eightbound ›
 
@@ -1784,6 +1787,7 @@ FACTION: WORLD EATERS
 INFANTRY
 KHORNE
 POSSESSED
+Ask about this unit
 ‹ Chaos Terminators (3 of 3)
 Goremongers ›
 
@@ -1880,6 +1884,7 @@ GOREMONGERS
 GRENADES
 INFANTRY
 KHORNE
+Ask about this unit
 ‹ Eightbound
 Jakhals ›
 
@@ -1984,6 +1989,7 @@ GRENADES
 INFANTRY
 JAKHALS
 KHORNE
+Ask about this unit
 ‹ Goremongers
 Forgefiend ›
 
@@ -2081,6 +2087,7 @@ FORGEFIEND
 KHORNE
 VEHICLE
 WALKER
+Ask about this unit
 ‹ Jakhals
 
 ######## popup ability:super-terminators|Beacons of Rage|While a friendly **WORLD EATERS** unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding **MONSTERS** and **VEHICLES**), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well. · FORGEFIEND Super Terminators
@@ -2091,6 +2098,8 @@ Beacons of Rage
 While a friendly WORLD EATERS unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding MONSTERS and VEHICLES), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well.
 
 UNITEightbound
+
+Ask about this ability
 
 ######## popup ability:super-terminators|Bloody Fury|This unit’s ranged attacks that target the closest eligible target can re-roll **hit rolls**.
 When this unit **declares a charge**, you can use this part of this ability. If you do:
@@ -2109,6 +2118,8 @@ This unit must end that charge move engaged with the closest charge target.
 
 UNITChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
 
+Ask about this ability
+
 ######## popup ability:super-terminators|Damaged: 1-4 wounds remaining|While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. · SUPER TERMINATORS Super Terminators
 ABILITY
 
@@ -2118,6 +2129,8 @@ While this model has 1-4 wounds remaining, each time this model makes an attack,
 
 UNITForgefiend
 
+Ask about this ability
+
 ######## popup ability:super-terminators|Damaged: 1-6 wounds remaining|While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. · SUPER TERMINATORS Super Terminators
 ABILITY
 
@@ -2126,6 +2139,8 @@ Damaged: 1-6 wounds remaining
 While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
 
 UNITAngron
+
+Ask about this ability
 
 ######## popup ability:super-terminators|Driven by Ultimate Rage|While a friendly **WORLD EATERS** unit is within 6" of this unit, that unit’s melee attacks can:
 - Re-roll hit rolls of 1.
@@ -2141,6 +2156,8 @@ Re-roll wound rolls of 1.
 
 UNITAngron
 
+Ask about this ability
+
 ######## popup ability:super-terminators|Furious Onslaught|Each time this model makes a ranged attack that targets the closest eligible target within 18", you can re-roll the Hit roll. · SUPER TERMINATORS Super Terminators
 ABILITY · THEIR MOVEMENT / YOUR SHOOTING
 
@@ -2149,6 +2166,8 @@ Furious Onslaught
 Each time this model makes a ranged attack that targets the closest eligible target within 18", you can re-roll the Hit roll.
 
 UNITForgefiend
+
+Ask about this ability
 
 ######## popup ability:super-terminators|Reborn in Blood|At the start of the battle round, when you make a **Blessings of Khorne** roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its **Deep Strike** ability, with 8 wounds remaining. · SUPER TERMINATORS Super Terminators
 ABILITY · COMMAND (EITHER TURN) / YOUR MOVEMENT
@@ -2159,6 +2178,8 @@ At the start of the battle round, when you make a Blessings of Khorne roll, if t
 
 UNITAngron
 
+Ask about this ability
+
 ######## popup ability:super-terminators|Wrathful Presence|At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability. · SUPER TERMINATORS Super Terminators
 ABILITY · START OF THE BATTLE ROUND
 
@@ -2168,6 +2189,8 @@ At the start of the battle round, select one Wrathful Presence ability. Until th
 
 UNITAngron
 
+Ask about this ability
+
 ######## popup enh:butchers-of-khorne|Gore-stained Veterans · SUPER TERMINATORS Super Terminators
 UPGRADE · BUTCHERS OF KHORNE · 20 PTS
 
@@ -2176,6 +2199,8 @@ Gore-stained Veterans
 TERMINATOR SQUAD unit only. This unit’s melee attacks have +1 WS.
 
 ONChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
+
+Ask about this upgrade
 
 ######## popup grant:["Gore-stained Veterans","chaos-terminators","WS 2+",null] · SUPER TERMINATORS Super Terminators
 WS 2+ · GRANTED BY
@@ -2364,6 +2389,8 @@ Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit 
 
 IN THIS ARMYChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
 
+Ask about this rule
+
 ######## popup rule:Adamantine Avalanche · SUPER TERMINATORS Super Terminators
 BUTCHERS OF KHORNE DETACHMENT RULE
 
@@ -2372,6 +2399,8 @@ Adamantine Avalanche
 At the start of the Fight phase, if a friendly TERMINATOR SQUAD unit is engaged, make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne. Until the end of the phase, that Blessing of Khorne is active for friendly TERMINATOR SQUAD units in addition to any other Blessings of Khorne that are currently active.
 
 IN THIS ARMYChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
+
+Ask about this rule
 
 ######## popup rule:Advance · SUPER TERMINATORS Super Terminators
 CORE RULE
@@ -2390,6 +2419,7 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
 
 ######## popup rule:Advance roll · SUPER TERMINATORS Super Terminators
 CORE RULE
@@ -2408,6 +2438,7 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
 
 ######## popup rule:BLAST · SUPER TERMINATORS Super Terminators
 CORE RULE
@@ -2421,6 +2452,8 @@ If this ability takes the form [BLAST X], each time you gather attack dice for s
 Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
 
 IN THIS ARMYForgefiend
+
+Ask about this rule
 
 ######## popup rule:Blessing of Khorne · SUPER TERMINATORS Super Terminators
 WORLD EATERS ARMY RULE
@@ -2461,6 +2494,8 @@ Decapitating Strikes · double 6 or triple 3+
 
 Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
 
+Ask about this rule
+
 ######## popup rule:Blessings of Khorne · SUPER TERMINATORS Super Terminators
 WORLD EATERS ARMY RULE
 
@@ -2499,6 +2534,8 @@ Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.
 Decapitating Strikes · double 6 or triple 3+
 
 Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
+
+Ask about this rule
 
 ######## popup rule:Blessings of Khorne roll · SUPER TERMINATORS Super Terminators
 WORLD EATERS ARMY RULE
@@ -2539,6 +2576,8 @@ Decapitating Strikes · double 6 or triple 3+
 
 Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
 
+Ask about this rule
+
 ######## popup rule:Charge roll · SUPER TERMINATORS Super Terminators
 CORE RULE
 
@@ -2555,6 +2594,8 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
+Ask about this rule
+
 ######## popup rule:Charge rolls · SUPER TERMINATORS Super Terminators
 CORE RULE
 
@@ -2570,6 +2611,8 @@ It made an advance or fall-back move this turn.
 3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
 
 ######## popup rule:Consolidation move · SUPER TERMINATORS Super Terminators
 CORE RULE
@@ -2604,6 +2647,8 @@ Wahapedia core rules errata (12.08 Consolidation Move, After Moving, Ongoing Con
 
 App note, not rules text: the lines above the errata are the printed Core Rules (01/06/2026). GW’s Warhammer 40,000 app, as Wahapedia prints it, changes two After Moving lines: the errata replaces the Ongoing Consolidation line, and the Objective Consolidation line reads “Your unit must be unengaged and within range of the selected objective”. No GW PDF has either change yet (16 Oct 2026).
 
+Ask about this rule
+
 ######## popup rule:DEVASTATING WOUNDS · SUPER TERMINATORS Super Terminators
 CORE RULE
 
@@ -2615,6 +2660,8 @@ Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of 
 
 IN THIS ARMYAngron, Chaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
 
+Ask about this rule
+
 ######## popup rule:Deadly Demise · SUPER TERMINATORS Super Terminators
 CORE RULE
 
@@ -2623,6 +2670,8 @@ Deadly Demise
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
 IN THIS ARMYAngron, Forgefiend
+
+Ask about this rule
 
 ######## popup rule:Deadly Demise D3 · SUPER TERMINATORS Super Terminators
 CORE RULE
@@ -2633,6 +2682,8 @@ This ability always takes the form Deadly Demise X. Each time a model in this un
 
 IN THIS ARMYAngron, Forgefiend
 
+Ask about this rule
+
 ######## popup rule:Deadly Demise D6 · SUPER TERMINATORS Super Terminators
 CORE RULE
 
@@ -2641,6 +2692,8 @@ Deadly Demise D6
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
 IN THIS ARMYAngron, Forgefiend
+
+Ask about this rule
 
 ######## popup rule:Deep Strike · SUPER TERMINATORS Super Terminators
 CORE RULE
@@ -2653,6 +2706,8 @@ App note, not rules text: unless a rule says otherwise, units in strategic reser
 
 IN THIS ARMYAngron, Chaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
 
+Ask about this rule
+
 ######## popup rule:Fights First · SUPER TERMINATORS Super Terminators
 CORE RULE
 
@@ -2661,6 +2716,8 @@ Fights First
 While every model in a unit has this ability, that unit is a Fights First unit.
 
 See the Resolve Fights First Combats step in the Fight phase (12.04).
+
+Ask about this rule
 
 ######## popup rule:Hazard roll · SUPER TERMINATORS Super Terminators
 CORE RULE
@@ -2675,6 +2732,8 @@ Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model i
 
 Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
 
+Ask about this rule
+
 ######## popup rule:Infiltrators · SUPER TERMINATORS Super Terminators
 CORE RULE
 
@@ -2683,6 +2742,8 @@ Infiltrators
 During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from your opponent’s deployment zone and all enemy units.
 
 IN THIS ARMYGoremongers
+
+Ask about this rule
 
 ######## popup rule:LANCE · SUPER TERMINATORS Super Terminators
 CORE RULE
@@ -2693,6 +2754,8 @@ Each time an attack is made with a [LANCE] weapon, if the attacking model’s un
 
 IN THIS ARMYGoremongers
 
+Ask about this rule
+
 ######## popup rule:Lance · SUPER TERMINATORS Super Terminators
 CORE RULE
 
@@ -2701,6 +2764,8 @@ Lance
 Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
 
 IN THIS ARMYGoremongers
+
+Ask about this rule
 
 ######## popup rule:PISTOL · SUPER TERMINATORS Super Terminators
 CORE RULE
@@ -2716,6 +2781,8 @@ One or more of its other ranged weapons.
 
 IN THIS ARMYGoremongers, Jakhals
 
+Ask about this rule
+
 ######## popup rule:RAPID FIRE 1 · SUPER TERMINATORS Super Terminators
 CORE RULE
 
@@ -2724,6 +2791,8 @@ RAPID FIRE 1
 This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
 
 IN THIS ARMYChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3), Forgefiend
+
+Ask about this rule
 
 ######## popup rule:RAPID FIRE 2 · SUPER TERMINATORS Super Terminators
 CORE RULE
@@ -2734,6 +2803,8 @@ This ability always takes the form [RAPID FIRE X]. Each time you gather attack d
 
 IN THIS ARMYChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3), Forgefiend
 
+Ask about this rule
+
 ######## popup rule:RAPID FIRE 4 · SUPER TERMINATORS Super Terminators
 CORE RULE
 
@@ -2742,6 +2813,8 @@ RAPID FIRE 4
 This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
 
 IN THIS ARMYChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3), Forgefiend
+
+Ask about this rule
 
 ######## popup rule:Relentless Rage · SUPER TERMINATORS Super Terminators
 BERZERKER WARBAND DETACHMENT RULE
@@ -2753,6 +2826,8 @@ Friendly WORLD EATERS units’ melee attacks have +1 A.
 Already counted: every melee A value in this app includes this +1 A. Do not add it again.
 
 IN THIS ARMYAngron, Chaos Terminators (1–2 of 3), Chaos Terminators (3 of 3), Eightbound, Goremongers, Jakhals, Forgefiend
+
+Ask about this rule
 
 ######## popup rule:Resolve a charge · SUPER TERMINATORS Super Terminators
 CORE RULE
@@ -2770,6 +2845,8 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
+Ask about this rule
+
 ######## popup rule:SUSTAINED HITS 1 · SUPER TERMINATORS Super Terminators
 CORE RULE
 
@@ -2778,6 +2855,8 @@ SUSTAINED HITS 1
 This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
 
 IN THIS ARMYChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
+
+Ask about this rule
 
 ######## popup rule:Scouts · SUPER TERMINATORS Super Terminators
 CORE RULE
@@ -2792,6 +2871,8 @@ If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your
 
 IN THIS ARMYEightbound
 
+Ask about this rule
+
 ######## popup rule:Scouts 6" · SUPER TERMINATORS Super Terminators
 CORE RULE
 
@@ -2804,6 +2885,8 @@ If that unit is wholly within your deployment zone, it can make a scout move (se
 If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.
 
 IN THIS ARMYEightbound
+
+Ask about this rule
 
 ######## popup rule:Select Weapons · SUPER TERMINATORS Super Terminators
 CORE RULE
@@ -2822,6 +2905,8 @@ Sidearms: Some models are equipped with [CLOSE-QUARTERS] weapons in addition to 
 
 04.01.03 Multiple Weapon Profiles (app): In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).
 
+Ask about this rule
+
 ######## popup rule:TWIN-LINKED · SUPER TERMINATORS Super Terminators
 CORE RULE
 
@@ -2830,6 +2915,8 @@ TWIN-LINKED
 Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll.
 
 IN THIS ARMYChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
+
+Ask about this rule
 
 ######## popup rule:[DEVASTATING WOUNDS] · SUPER TERMINATORS Super Terminators
 CORE RULE
@@ -2842,6 +2929,8 @@ Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of 
 
 IN THIS ARMYAngron, Chaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
 
+Ask about this rule
+
 ######## popup rule:[LETHAL HITS] · SUPER TERMINATORS Super Terminators
 CORE RULE
 
@@ -2850,6 +2939,8 @@ LETHAL HITS
 Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
 
 Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
+
+Ask about this rule
 
 ######## popup rule:[PRECISION] · SUPER TERMINATORS Super Terminators
 CORE RULE
@@ -2860,6 +2951,8 @@ While resolving attacks made with one or more [PRECISION] weapons, at the start 
 
 24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
 
+Ask about this rule
+
 ######## popup rule:[SUSTAINED HITS 1] · SUPER TERMINATORS Super Terminators
 CORE RULE
 
@@ -2868,6 +2961,8 @@ SUSTAINED HITS 1
 This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
 
 IN THIS ARMYChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
+
+Ask about this rule
 
 ######## popup rule:advance move · SUPER TERMINATORS Super Terminators
 CORE RULE
@@ -2886,6 +2981,7 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
 
 ######## popup rule:battle-shock roll · SUPER TERMINATORS Super Terminators
 CORE RULE
@@ -2914,6 +3010,8 @@ That unit is at, or below, half-strength.
 
 If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
 
+Ask about this rule
+
 ######## popup rule:benefit of cover · SUPER TERMINATORS Super Terminators
 CORE RULE
 
@@ -2925,6 +3023,8 @@ That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area.
 That model is not fully visible to the attacking model due to one or more intervening terrain features and/or one or more intervening obscuring terrain areas (see below).
 
 Each time a ranged attack targets a unit that has the benefit of cover against it, worsen the BS characteristic of that attack by 1.
+
+Ask about this rule
 
 ######## popup rule:charge move · SUPER TERMINATORS Super Terminators
 CORE RULE
@@ -2950,6 +3050,7 @@ AFTER MOVING:
 Your unit must be engaged with all of the charge targets.
 Your unit cannot be engaged with one or more enemy units that are not charge targets.
 Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
 
 ######## popup rule:charge roll · SUPER TERMINATORS Super Terminators
 CORE RULE
@@ -2967,6 +3068,8 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
+Ask about this rule
+
 ######## popup rule:charge rolls · SUPER TERMINATORS Super Terminators
 CORE RULE
 
@@ -2982,6 +3085,8 @@ It made an advance or fall-back move this turn.
 3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
 
 ######## popup rule:charge target · SUPER TERMINATORS Super Terminators
 CORE RULE
@@ -3007,6 +3112,7 @@ AFTER MOVING:
 Your unit must be engaged with all of the charge targets.
 Your unit cannot be engaged with one or more enemy units that are not charge targets.
 Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
 
 ######## popup rule:charge targets · SUPER TERMINATORS Super Terminators
 CORE RULE
@@ -3032,6 +3138,7 @@ AFTER MOVING:
 Your unit must be engaged with all of the charge targets.
 Your unit cannot be engaged with one or more enemy units that are not charge targets.
 Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
 
 ######## popup rule:declares a charge · SUPER TERMINATORS Super Terminators
 CORE RULE
@@ -3049,6 +3156,8 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
+Ask about this rule
+
 ######## popup rule:engaged · SUPER TERMINATORS Super Terminators
 CORE RULE
 
@@ -3060,6 +3169,8 @@ While a friendly model is within engagement range of one or more enemy models, t
 While a unit contains no engaged models, that unit is unengaged.
 
 Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
 
 ######## popup rule:ingress move · SUPER TERMINATORS Super Terminators
 CORE RULE
@@ -3080,6 +3191,8 @@ AFTER MOVING: Unless otherwise stated, until the start of the next Charge phase,
 
 20.03.01 Set Up As Reinforcements (app): If a rule mentions a unit being set up on the battlefield as Reinforcements, it means a unit that made an ingress move.
 
+Ask about this rule
+
 ######## popup rule:mortal wound · SUPER TERMINATORS Super Terminators
 CORE RULE
 
@@ -3095,6 +3208,8 @@ Otherwise, you must select one CHARACTER model in that unit.
 Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
 
 When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+Ask about this rule
 
 ######## popup rule:mortal wounds · SUPER TERMINATORS Super Terminators
 CORE RULE
@@ -3112,6 +3227,8 @@ Resolve Damage: The selected model loses 1 wound. If this reduces that model’s
 
 When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
 
+Ask about this rule
+
 ######## popup rule:snap shooting · SUPER TERMINATORS Super Terminators
 CORE RULE
 
@@ -3128,6 +3245,8 @@ Each attack only hits on an unmodified hit roll of 6 (irrespective of the attack
 You cannot re-roll hit rolls.
 
 AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.
+
+Ask about this rule
 
 ######## popup rule:strategic reserves · SUPER TERMINATORS Super Terminators
 CORE RULE
@@ -3152,6 +3271,7 @@ At the end of the third battle round, unless otherwise stated, all strategic res
 
 Units embarked within TRANSPORTS that have made an ingress move during the battle.
 Repositioned units (see opposite).
+Ask about this rule
 
 ######## popup rule:surge move · SUPER TERMINATORS Super Terminators
 CORE RULE
@@ -3182,6 +3302,7 @@ AFTER MOVING:
 
 Your unit cannot be engaged with one or more enemy units that were not the surge target.
 Your unit cannot move again this phase.
+Ask about this rule
 
 ######## popup rule:unengaged · SUPER TERMINATORS Super Terminators
 CORE RULE
@@ -3194,6 +3315,8 @@ While a friendly model is within engagement range of one or more enemy models, t
 While a unit contains no engaged models, that unit is unengaged.
 
 Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
 
 ######## popup strat:a-trophy-for-the-throne · SUPER TERMINATORS Super Terminators
 1CP · FIGHT · EITHER TURN
@@ -3211,6 +3334,8 @@ Your unit’s attacks that target a MONSTER/VEHICLE unit have +1 to wound rolls.
 
 USED BYChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
 
+Ask about this stratagem
+
 ######## popup strat:apoplectic-frenzy · SUPER TERMINATORS Super Terminators
 1CP · MOVEMENT · YOUR TURN
 
@@ -3226,6 +3351,8 @@ EFFECT
 Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced.
 
 USED BYno unit in this list (needs BERZERKERS)
+
+Ask about this stratagem
 
 ######## popup strat:berzerkers-wrath · SUPER TERMINATORS Super Terminators
 1CP · SHOOTING · THEIR TURN
@@ -3245,6 +3372,8 @@ Wahapedia FAQ: “After being the target of a ranged attack, can a Leader unit m
 
 USED BYno unit in this list (needs BERZERKERS)
 
+Ask about this stratagem
+
 ######## popup strat:blood-offering · SUPER TERMINATORS Super Terminators
 1CP · ANY PHASE · EITHER TURN
 
@@ -3260,6 +3389,8 @@ EFFECT
 Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
 
 USED BYany unit
+
+Ask about this stratagem
 
 ######## popup strat:command-re-roll · SUPER TERMINATORS Super Terminators
 1CP · ANY PHASE · EITHER TURN
@@ -3286,6 +3417,8 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:counteroffensive · SUPER TERMINATORS Super Terminators
 2CP · FIGHT · THEIR TURN
 
@@ -3301,6 +3434,8 @@ EFFECT
 Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
 
 USED BYany unit
+
+Ask about this stratagem
 
 ######## popup strat:crushing-impact · SUPER TERMINATORS Super Terminators
 1CP · CHARGE · YOUR TURN
@@ -3324,6 +3459,8 @@ Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact st
 
 USED BYAngron, Forgefiend
 
+Ask about this stratagem
+
 ######## popup strat:epic-challenge · SUPER TERMINATORS Super Terminators
 1CP · FIGHT · EITHER TURN
 
@@ -3339,6 +3476,8 @@ EFFECT
 Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
 
 USED BYAngron
+
+Ask about this stratagem
 
 ######## popup strat:explosives · SUPER TERMINATORS Super Terminators
 1CP · SHOOTING · YOUR TURN
@@ -3362,6 +3501,8 @@ Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
 
 USED BYGoremongers, Jakhals
 
+Ask about this stratagem
+
 ######## popup strat:fire-overwatch · SUPER TERMINATORS Super Terminators
 1CP · MOVEMENT · THEIR TURN
 
@@ -3377,6 +3518,8 @@ EFFECT
 Your unit shoots using snap shooting.
 
 USED BYChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3), Goremongers, Jakhals, Forgefiend
+
+Ask about this stratagem
 
 ######## popup strat:focused-ferocity · SUPER TERMINATORS Super Terminators
 1CP · FIGHT · EITHER TURN
@@ -3394,6 +3537,8 @@ Your unit’s melee attacks have +1 A.
 
 USED BYChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
 
+Ask about this stratagem
+
 ######## popup strat:frenzied-resilience · SUPER TERMINATORS Super Terminators
 2CP · FIGHT · EITHER TURN
 
@@ -3410,6 +3555,8 @@ Until the end of the phase, each time an attack is allocated to a model in your 
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:hack-and-slash · SUPER TERMINATORS Super Terminators
 1CP · FIGHT · EITHER TURN
 
@@ -3425,6 +3572,8 @@ EFFECT
 Until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1.
 
 USED BYany unit
+
+Ask about this stratagem
 
 ######## popup strat:heroic-intervention · SUPER TERMINATORS Super Terminators
 1CP · CHARGE · THEIR TURN · INTO THE FRAY +1CP
@@ -3447,6 +3596,8 @@ Wahapedia FAQ: If a stratagem contains a section that carries an additional CP c
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:insane-bravery · SUPER TERMINATORS Super Terminators
 1CP · COMMAND · YOUR TURN · ONCE PER BATTLE
 
@@ -3467,6 +3618,8 @@ Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? 
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:rapid-ingress · SUPER TERMINATORS Super Terminators
 1CP · MOVEMENT · THEIR TURN
 
@@ -3485,6 +3638,8 @@ RESTRICTIONSYou cannot use this stratagem during the first battle round.
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:skulls-for-the-skull-throne · SUPER TERMINATORS Super Terminators
 1CP · FIGHT · EITHER TURN
 
@@ -3501,6 +3656,8 @@ Make a Blessings of Khorne roll and use the results to activate one Blessing of 
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:wrath-beyond-reason · SUPER TERMINATORS Super Terminators
 2CP · SHOOTING · THEIR TURN
 
@@ -3516,3 +3673,5 @@ EFFECT
 Ranged attacks that target your unit have -1 D until that enemy unit has attacked.
 
 USED BYChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
+
+Ask about this stratagem

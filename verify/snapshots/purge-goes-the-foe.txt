@@ -1788,6 +1788,7 @@ MOBILE
 MONSTER
 TECH-PRIEST
 WARLORD
+Ask about this unit
 Thulia Ghuld ›
 
 ######## unit thulia-ghuld · BELISARIUS CAWL Purge goes the Foe
@@ -1917,6 +1918,7 @@ MOBILE
 MONSTER
 TECH-PRIEST
 THULIA GHULD
+Ask about this unit
 ‹ Belisarius Cawl
 Tech-Priest Enginseer · Necromechanic ›
 
@@ -2029,6 +2031,7 @@ FACTION: ADEPTUS MECHANICUS
 IMPERIUM
 INFANTRY
 TECH-PRIEST
+Ask about this unit
 ‹ Thulia Ghuld
 Cybernetica Datasmith · Martial Signatum Amplificator ›
 
@@ -2199,6 +2202,7 @@ VEHICLE
 KASTELAN ROBOTS*
 WALKER*
 *from the supported Kastelan Robots; Skitarii from the Martial Signatum Amplificator
+Ask about this unit
 ‹ Tech-Priest Enginseer · Necromechanic
 Skitarii Rangers ›
 
@@ -2341,6 +2345,7 @@ IMPERIUM
 INFANTRY
 RANGERS
 SKITARII
+Ask about this unit
 ‹ Cybernetica Datasmith · Martial Signatum Amplificator
 Ironstrider Ballistarii (1 of 2) ›
 
@@ -2441,6 +2446,7 @@ SKITARII
 SMOKE
 VEHICLE
 WALKER
+Ask about this unit
 ‹ Skitarii Rangers
 Ironstrider Ballistarii (2 of 2) ›
 
@@ -2541,6 +2547,7 @@ SKITARII
 SMOKE
 VEHICLE
 WALKER
+Ask about this unit
 ‹ Ironstrider Ballistarii (1 of 2)
 Onager Dunecrawler ›
 
@@ -2655,6 +2662,7 @@ ONAGER DUNECRAWLER
 SKITARII
 VEHICLE
 WALKER
+Ask about this unit
 ‹ Ironstrider Ballistarii (2 of 2)
 Skorpius Disintegrator ›
 
@@ -2769,6 +2777,7 @@ SKITARII
 SKORPIUS DISINTEGRATOR
 SMOKE
 VEHICLE
+Ask about this unit
 ‹ Onager Dunecrawler
 
 ######## popup ability:purge-goes-the-foe|Battle Protocols|At the start of the battle, if this model is leading a **KASTELAN ROBOTS** unit, that unit enters Aegis Protocols (see below). In your Command phase, if this model is leading a **KASTELAN ROBOTS** unit, you can select one protocol from those listed below for that unit to enter. Once a unit enters a protocol, it remains in that protocol until it enters a different one.
@@ -2787,6 +2796,8 @@ Aegis Protocol: Add 1 to the Toughness characteristic of KASTELAN ROBOT models i
 
 UNITCybernetica Datasmith · Martial Signatum Amplificator
 
+Ask about this ability
+
 ######## popup ability:purge-goes-the-foe|Blistering Salvoes|Each time this model makes an attack with a belleros energy cannon that targets an **INFANTRY** unit, add 1 to the **Hit roll**. Each time this model makes an attack with a ferrumite cannon that targets a **MONSTER** or **VEHICLE** unit, add 1 to the Hit roll. · PURGE GOES THE FOE Purge goes the Foe
 ABILITY
 
@@ -2795,6 +2806,8 @@ Blistering Salvoes
 Each time this model makes an attack with a belleros energy cannon that targets an INFANTRY unit, add 1 to the Hit roll. Each time this model makes an attack with a ferrumite cannon that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll.
 
 UNITSkorpius Disintegrator
+
+Ask about this ability
 
 ######## popup ability:purge-goes-the-foe|Canticles of the Omnissiah|At the start of your Command phase, select one of the abilities in the Canticles of the Omnissiah section. Until the start of your next Command phase, this model has that ability.
 **Invocation of Machine Vengeance:** At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Machine Vengeance target. Each time a model in a friendly **ADEPTUS MECHANICUS** unit makes an attack that targets your Machine Vengeance target, you can re-roll the **Hit roll**.
@@ -2817,6 +2830,8 @@ Shroudpsalm (Aura): While a friendly ADEPTUS MECHANICUS unit is within 6" of thi
 
 UNITBelisarius Cawl
 
+Ask about this ability
+
 ######## popup ability:purge-goes-the-foe|Damaged: 1-4 wounds remaining|While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**. · PURGE GOES THE FOE Purge goes the Foe
 ABILITY
 
@@ -2825,6 +2840,8 @@ Damaged: 1-4 wounds remaining
 While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
 
 UNITOnager Dunecrawler, Skorpius Disintegrator
+
+Ask about this ability
 
 ######## popup ability:purge-goes-the-foe|Enginseer|While this model is within 3" of one or more friendly **ADEPTUS MECHANICUS VEHICLE** units, unless it is leading a unit, this model has the **Lone Operative** ability. · PURGE GOES THE FOE Purge goes the Foe
 ABILITY
@@ -2835,6 +2852,8 @@ While this model is within 3" of one or more friendly ADEPTUS MECHANICUS VEHICLE
 
 UNITTech-Priest Enginseer · Necromechanic
 
+Ask about this ability
+
 ######## popup ability:purge-goes-the-foe|Mechanicus Bodyguard|While this model is within 3" of one or more other friendly **ADEPTUS MECHANICUS** units, this model has the **Lone Operative** ability. · PURGE GOES THE FOE Purge goes the Foe
 ABILITY
 
@@ -2844,6 +2863,8 @@ While this model is within 3" of one or more other friendly ADEPTUS MECHANICUS u
 
 UNITBelisarius Cawl, Thulia Ghuld
 
+Ask about this ability
+
 ######## popup ability:purge-goes-the-foe|Omnissiah’s Blessing|In your Command phase, select one friendly **ADEPTUS MECHANICUS** model within 3" of this model. That model regains up to D3 lost wounds and, if it is a **VEHICLE** model, until the start of your next Command phase, that model has the **Feel No Pain 5+** ability. Each model can only be selected for this ability once per Command phase. · PURGE GOES THE FOE Purge goes the Foe
 ABILITY · COMMAND · YOUR TURN
 
@@ -2852,6 +2873,8 @@ Omnissiah’s Blessing
 In your Command phase, select one friendly ADEPTUS MECHANICUS model within 3" of this model. That model regains up to D3 lost wounds and, if it is a VEHICLE model, until the start of your next Command phase, that model has the Feel No Pain 5+ ability. Each model can only be selected for this ability once per Command phase.
 
 UNITTech-Priest Enginseer · Necromechanic
+
+Ask about this ability
 
 ######## popup ability:purge-goes-the-foe|Repulsor Grid|When an enemy unit targets this unit with ranged attacks, until that enemy unit has shot, when this unit makes a **save roll**:
 - On an unmodified 6, that enemy unit suffers 1 **mortal wound** after that enemy unit has shot. · PURGE GOES THE FOE Purge goes the Foe
@@ -2865,6 +2888,8 @@ On an unmodified 6, that enemy unit suffers 1 mortal wound after that enemy unit
 
 UNITCybernetica Datasmith · Martial Signatum Amplificator
 
+Ask about this ability
+
 ######## popup ability:purge-goes-the-foe|Robotic Bodyguard|While a **CYBERNETICA DATASMITH** model is leading this unit, that model has the **Feel No Pain** 4+ ability. · PURGE GOES THE FOE Purge goes the Foe
 ABILITY
 
@@ -2873,6 +2898,8 @@ Robotic Bodyguard
 While a CYBERNETICA DATASMITH model is leading this unit, that model has the Feel No Pain 4+ ability.
 
 UNITCybernetica Datasmith · Martial Signatum Amplificator
+
+Ask about this ability
 
 ######## popup ability:purge-goes-the-foe|Vengeance for the Omnissiah|If a friendly **ADEPTUS MECHANICUS VEHICLE** model is destroyed within 12" of this model, until the end of the battle, this model’s Omnissian axe has an Attacks characteristic of 6. · PURGE GOES THE FOE Purge goes the Foe
 ABILITY
@@ -2883,6 +2910,8 @@ If a friendly ADEPTUS MECHANICUS VEHICLE model is destroyed within 12" of this m
 
 UNITTech-Priest Enginseer · Necromechanic
 
+Ask about this ability
+
 ######## popup enh:cohort-cybernetica|Necromechanic · PURGE GOES THE FOE Purge goes the Foe
 ENHANCEMENT · COHORT CYBERNETICA · 20 PTS
 
@@ -2892,6 +2921,8 @@ TECH-PRIEST model only. Once per battle round, when a saving throw made for a fr
 
 ONTech-Priest Enginseer
 
+Ask about this enhancement
+
 ######## popup enh:eradication-cohort|Martial Signatum Amplificator · PURGE GOES THE FOE Purge goes the Foe
 ENHANCEMENT · ERADICATION COHORT · 15 PTS
 
@@ -2900,6 +2931,8 @@ Martial Signatum Amplificator
 TECH-PRIEST model only. Models in the bearer’s unit have the SKITARII keyword.
 
 ONCybernetica Datasmith + Kastelan Robots
+
+Ask about this enhancement
 
 ######## popup grant:["Cyber-psalm Programming","cybernetica-datasmith-kastelan-robots","M 8\"",null] · PURGE GOES THE FOE Purge goes the Foe
 M 8" · GRANTED BY
@@ -2938,6 +2971,8 @@ Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit 
 
 IN THIS ARMYBelisarius Cawl, Skitarii Rangers
 
+Ask about this rule
+
 ######## popup rule:Advance · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
@@ -2955,6 +2990,7 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
 
 ######## popup rule:Advance roll · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -2973,6 +3009,7 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
 
 ######## popup rule:BLAST · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -2986,6 +3023,8 @@ If this ability takes the form [BLAST X], each time you gather attack dice for s
 Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
 
 IN THIS ARMYBelisarius Cawl, Thulia Ghuld
+
+Ask about this rule
 
 ######## popup rule:Battle-shocked · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3014,6 +3053,8 @@ That unit is at, or below, half-strength.
 
 If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
 
+Ask about this rule
+
 ######## popup rule:Below Half-strength · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
@@ -3039,6 +3080,8 @@ Some units cannot be at half-strength: If a model’s W characteristic or a unit
 
 Example: A Captain (1 model) is attached to a unit of Intercessors (5 models). This attached unit has a starting strength of 6. If three Intercessors were destroyed, the unit would be at half-strength. If four Intercessors were destroyed, the unit would be below half-strength. If all of the Intercessors were destroyed, the remaining Captain would be below half-strength, despite having his full wounds remaining.
 
+Ask about this rule
+
 ######## popup rule:Blast · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
@@ -3051,6 +3094,8 @@ If this ability takes the form [BLAST X], each time you gather attack dice for s
 Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
 
 IN THIS ARMYBelisarius Cawl, Thulia Ghuld
+
+Ask about this rule
 
 ######## popup rule:Charge move · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3076,6 +3121,7 @@ AFTER MOVING:
 Your unit must be engaged with all of the charge targets.
 Your unit cannot be engaged with one or more enemy units that are not charge targets.
 Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
 
 ######## popup rule:Charge roll · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3093,6 +3139,8 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
+Ask about this rule
+
 ######## popup rule:Charge rolls · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
@@ -3109,6 +3157,8 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
+Ask about this rule
+
 ######## popup rule:Cyber-psalm Programming · PURGE GOES THE FOE Purge goes the Foe
 COHORT CYBERNETICA DETACHMENT RULE
 
@@ -3117,6 +3167,8 @@ Cyber-psalm Programming
 Add 2" to the Move characteristic of models in LEGIO CYBERNETICA units from your army. In addition, unless that unit is Battle-shocked, add 1 to the Objective Control characteristic of models in that unit.
 
 IN THIS ARMYCybernetica Datasmith · Martial Signatum Amplificator
+
+Ask about this rule
 
 ######## popup rule:DEVASTATING WOUNDS · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3129,6 +3181,8 @@ Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of 
 
 IN THIS ARMYBelisarius Cawl, Thulia Ghuld, Tech-Priest Enginseer · Necromechanic, Cybernetica Datasmith · Martial Signatum Amplificator, Skitarii Rangers
 
+Ask about this rule
+
 ######## popup rule:Deadly Demise · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
@@ -3137,6 +3191,8 @@ Deadly Demise
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
 IN THIS ARMYCybernetica Datasmith · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+
+Ask about this rule
 
 ######## popup rule:Deadly Demise 1 · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3147,6 +3203,8 @@ This ability always takes the form Deadly Demise X. Each time a model in this un
 
 IN THIS ARMYCybernetica Datasmith · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
 
+Ask about this rule
+
 ######## popup rule:Deadly Demise D3 · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
@@ -3155,6 +3213,8 @@ Deadly Demise D3
 This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
 
 IN THIS ARMYCybernetica Datasmith · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+
+Ask about this rule
 
 ######## popup rule:Doctrina Imperatives · PURGE GOES THE FOE Purge goes the Foe
 ADEPTUS MECHANICUS ARMY RULE
@@ -3171,6 +3231,7 @@ Conqueror Imperative
 Ranged weapons equipped by models in this unit have the [ASSAULT] ability.
 Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.
 Each time a model in this unit makes an attack, if this unit has the BATTLELINE keyword and/or it is within 6" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units, improve the Armour Penetration characteristic of that attack by 1.
+Ask about this rule
 
 ######## popup rule:EXTRA ATTACKS · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3184,6 +3245,8 @@ One of that model’s other melee weapons, if possible.
 
 IN THIS ARMYBelisarius Cawl, Tech-Priest Enginseer · Necromechanic
 
+Ask about this rule
+
 ######## popup rule:Engagement Range · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
@@ -3195,6 +3258,8 @@ While a friendly model is within engagement range of one or more enemy models, t
 While a unit contains no engaged models, that unit is unengaged.
 
 Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
 
 ######## popup rule:Fall Back move · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3231,6 +3296,7 @@ If a stratagem or ability instructs a unit to make a Desperate Escape test, that
 Must use the desperate escape mode when it is selected to make a fall-back move.
 Must make one hazard roll for each model in that unit.
 Must make a battle-shock roll.
+Ask about this rule
 
 ######## popup rule:Feel No Pain · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3241,6 +3307,8 @@ This ability always takes the form Feel No Pain X+. Each time a model with this 
 
 IN THIS ARMYTech-Priest Enginseer · Necromechanic (in Omnissiah’s Blessing), Cybernetica Datasmith · Martial Signatum Amplificator
 
+Ask about this rule
+
 ######## popup rule:Feel No Pain 4+ · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
@@ -3249,6 +3317,8 @@ Feel No Pain 4+
 This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
 
 IN THIS ARMYTech-Priest Enginseer · Necromechanic (in Omnissiah’s Blessing), Cybernetica Datasmith · Martial Signatum Amplificator
+
+Ask about this rule
 
 ######## popup rule:Feel No Pain 5+ · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3259,6 +3329,8 @@ This ability always takes the form Feel No Pain X+. Each time a model with this 
 
 IN THIS ARMYTech-Priest Enginseer · Necromechanic (in Omnissiah’s Blessing), Cybernetica Datasmith · Martial Signatum Amplificator
 
+Ask about this rule
+
 ######## popup rule:Feel No Pain 6+ · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
@@ -3267,6 +3339,8 @@ Feel No Pain 6+
 This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
 
 IN THIS ARMYTech-Priest Enginseer · Necromechanic (in Omnissiah’s Blessing), Cybernetica Datasmith · Martial Signatum Amplificator
+
+Ask about this rule
 
 ######## popup rule:Fights First · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3277,6 +3351,8 @@ While every model in a unit has this ability, that unit is a Fights First unit.
 
 See the Resolve Fights First Combats step in the Fight phase (12.04).
 
+Ask about this rule
+
 ######## popup rule:HAZARDOUS · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
@@ -3285,6 +3361,8 @@ HAZARDOUS
 Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.
 
 IN THIS ARMYSkitarii Rangers
+
+Ask about this rule
 
 ######## popup rule:HEAVY · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3299,6 +3377,8 @@ No model in that unit has moved more than 3" this turn.
 
 IN THIS ARMYSkitarii Rangers
 
+Ask about this rule
+
 ######## popup rule:Hazard roll · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
@@ -3312,6 +3392,8 @@ Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model i
 
 Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
 
+Ask about this rule
+
 ######## popup rule:IGNORES COVER · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
@@ -3320,6 +3402,8 @@ IGNORES COVER
 Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
 
 IN THIS ARMYCybernetica Datasmith · Martial Signatum Amplificator, Skitarii Rangers, Onager Dunecrawler
+
+Ask about this rule
 
 ######## popup rule:Leader · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3331,6 +3415,8 @@ Before the battle, in the Muster Armies step, for each leader and support unit i
 Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.
 
 IN THIS ARMYTech-Priest Enginseer · Necromechanic
+
+Ask about this rule
 
 ######## popup rule:Leadership test · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3359,6 +3445,8 @@ That unit is at, or below, half-strength.
 
 If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
 
+Ask about this rule
+
 ######## popup rule:Lone Operative · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
@@ -3376,6 +3464,8 @@ If an attached unit below starting strength only contains models with Lone Opera
 
 IN THIS ARMYBelisarius Cawl (in Mechanicus Bodyguard), Thulia Ghuld (in Mechanicus Bodyguard), Tech-Priest Enginseer · Necromechanic (in Enginseer)
 
+Ask about this rule
+
 ######## popup rule:MELTA 3 · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
@@ -3386,6 +3476,8 @@ This ability always takes the form [MELTA X]. Each time a model makes an attack 
 Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6. While resolving those attacks, that weapon has a D characteristic of D6+2.
 
 IN THIS ARMYBelisarius Cawl
+
+Ask about this rule
 
 ######## popup rule:Murderous Imperative · PURGE GOES THE FOE Purge goes the Foe
 ERADICATION COHORT DETACHMENT RULE
@@ -3398,6 +3490,8 @@ If the Protector Imperative is active for that unit, re-roll a Hit roll of 1.
 If the Conqueror Imperative is active for that unit, re-roll a Wound roll of 1.
 
 IN THIS ARMYCybernetica Datasmith · Martial Signatum Amplificator, Skitarii Rangers, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+
+Ask about this rule
 
 ######## popup rule:Normal · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3414,6 +3508,8 @@ AFTER MOVING: Your unit must be unengaged.
 
 09.05.01 More Than One Normal Move in a Phase (app): A unit cannot make more than one Normal Move in a phase.
 
+Ask about this rule
+
 ######## popup rule:PISTOL · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
@@ -3428,6 +3524,8 @@ One or more of its other ranged weapons.
 
 IN THIS ARMYTech-Priest Enginseer · Necromechanic, Cybernetica Datasmith · Martial Signatum Amplificator
 
+Ask about this rule
+
 ######## popup rule:PRECISION · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
@@ -3439,6 +3537,8 @@ While resolving attacks made with one or more [PRECISION] weapons, at the start 
 
 IN THIS ARMYSkitarii Rangers
 
+Ask about this rule
+
 ######## popup rule:RAPID FIRE 1 · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
@@ -3448,6 +3548,8 @@ This ability always takes the form [RAPID FIRE X]. Each time you gather attack d
 
 IN THIS ARMYSkitarii Rangers, Onager Dunecrawler, Skorpius Disintegrator
 
+Ask about this rule
+
 ######## popup rule:RAPID FIRE 3 · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
@@ -3456,6 +3558,8 @@ RAPID FIRE 3
 This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
 
 IN THIS ARMYSkitarii Rangers, Onager Dunecrawler, Skorpius Disintegrator
+
+Ask about this rule
 
 ######## popup rule:Resolve a charge · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3473,6 +3577,8 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
+Ask about this rule
+
 ######## popup rule:SUSTAINED HITS 1 · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
@@ -3481,6 +3587,8 @@ SUSTAINED HITS 1
 This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
 
 IN THIS ARMYThulia Ghuld, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+
+Ask about this rule
 
 ######## popup rule:Scouts · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3495,6 +3603,8 @@ If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your
 
 IN THIS ARMYSkitarii Rangers
 
+Ask about this rule
+
 ######## popup rule:Scouts 6" · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
@@ -3507,6 +3617,8 @@ If that unit is wholly within your deployment zone, it can make a scout move (se
 If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.
 
 IN THIS ARMYSkitarii Rangers
+
+Ask about this rule
 
 ######## popup rule:Select Weapons · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3525,6 +3637,8 @@ Sidearms: Some models are equipped with [CLOSE-QUARTERS] weapons in addition to 
 
 04.01.03 Multiple Weapon Profiles (app): In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).
 
+Ask about this rule
+
 ######## popup rule:Stealth · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
@@ -3533,6 +3647,8 @@ Stealth
 If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).
 
 IN THIS ARMYBelisarius Cawl (in Canticles of the Omnissiah)
+
+Ask about this rule
 
 ######## popup rule:Support · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3545,6 +3661,8 @@ Unless otherwise stated, each bodyguard unit can only have one leader unit and o
 
 IN THIS ARMYCybernetica Datasmith · Martial Signatum Amplificator
 
+Ask about this rule
+
 ######## popup rule:TORRENT · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
@@ -3554,6 +3672,8 @@ Each time an attack is made with a [TORRENT] weapon, that attack automatically h
 
 IN THIS ARMYCybernetica Datasmith · Martial Signatum Amplificator
 
+Ask about this rule
+
 ######## popup rule:TWIN-LINKED · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
@@ -3562,6 +3682,8 @@ TWIN-LINKED
 Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll.
 
 IN THIS ARMYCybernetica Datasmith · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+
+Ask about this rule
 
 ######## popup rule:[ANTI-VEHICLE 4+] · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3574,12 +3696,16 @@ Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit 
 
 IN THIS ARMYBelisarius Cawl, Skitarii Rangers
 
+Ask about this rule
+
 ######## popup rule:[ASSAULT] · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
 ASSAULT
 
 Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
+
+Ask about this rule
 
 ######## popup rule:[HAZARDOUS] · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3589,6 +3715,8 @@ HAZARDOUS
 Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.
 
 IN THIS ARMYSkitarii Rangers
+
+Ask about this rule
 
 ######## popup rule:[HEAVY] · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3603,6 +3731,8 @@ No model in that unit has moved more than 3" this turn.
 
 IN THIS ARMYSkitarii Rangers
 
+Ask about this rule
+
 ######## popup rule:[IGNORES COVER] · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
@@ -3612,12 +3742,16 @@ Each time an attack is made with an [IGNORES COVER] weapon, the target cannot ha
 
 IN THIS ARMYCybernetica Datasmith · Martial Signatum Amplificator, Skitarii Rangers, Onager Dunecrawler
 
+Ask about this rule
+
 ######## popup rule:[LANCE] · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
 LANCE
 
 Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
+
+Ask about this rule
 
 ######## popup rule:[LETHAL HITS] · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3627,6 +3761,8 @@ LETHAL HITS
 Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
 
 Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
+
+Ask about this rule
 
 ######## popup rule:[PRECISION] · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3639,6 +3775,8 @@ While resolving attacks made with one or more [PRECISION] weapons, at the start 
 
 IN THIS ARMYSkitarii Rangers
 
+Ask about this rule
+
 ######## popup rule:[SUSTAINED HITS 1] · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
@@ -3647,6 +3785,8 @@ SUSTAINED HITS 1
 This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
 
 IN THIS ARMYThulia Ghuld, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+
+Ask about this rule
 
 ######## popup rule:advance move · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3665,6 +3805,7 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
 
 ######## popup rule:battle-shock roll · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3693,6 +3834,8 @@ That unit is at, or below, half-strength.
 
 If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
 
+Ask about this rule
+
 ######## popup rule:benefit of cover · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
@@ -3704,6 +3847,8 @@ That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area.
 That model is not fully visible to the attacking model due to one or more intervening terrain features and/or one or more intervening obscuring terrain areas (see below).
 
 Each time a ranged attack targets a unit that has the benefit of cover against it, worsen the BS characteristic of that attack by 1.
+
+Ask about this rule
 
 ######## popup rule:charge move · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3729,6 +3874,7 @@ AFTER MOVING:
 Your unit must be engaged with all of the charge targets.
 Your unit cannot be engaged with one or more enemy units that are not charge targets.
 Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
 
 ######## popup rule:charge roll · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3746,6 +3892,8 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
+Ask about this rule
+
 ######## popup rule:charge rolls · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
@@ -3761,6 +3909,8 @@ It made an advance or fall-back move this turn.
 3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
 
 ######## popup rule:charge targets · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3786,6 +3936,7 @@ AFTER MOVING:
 Your unit must be engaged with all of the charge targets.
 Your unit cannot be engaged with one or more enemy units that are not charge targets.
 Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
 
 ######## popup rule:declares a charge · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3803,6 +3954,8 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
+Ask about this rule
+
 ######## popup rule:engaged · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
@@ -3814,6 +3967,8 @@ While a friendly model is within engagement range of one or more enemy models, t
 While a unit contains no engaged models, that unit is unengaged.
 
 Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
 
 ######## popup rule:ingress move · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3834,6 +3989,8 @@ AFTER MOVING: Unless otherwise stated, until the start of the next Charge phase,
 
 20.03.01 Set Up As Reinforcements (app): If a rule mentions a unit being set up on the battlefield as Reinforcements, it means a unit that made an ingress move.
 
+Ask about this rule
+
 ######## popup rule:mortal wound · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
@@ -3849,6 +4006,8 @@ Otherwise, you must select one CHARACTER model in that unit.
 Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
 
 When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+Ask about this rule
 
 ######## popup rule:mortal wounds · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3866,6 +4025,8 @@ Resolve Damage: The selected model loses 1 wound. If this reduces that model’s
 
 When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
 
+Ask about this rule
+
 ######## popup rule:snap shooting · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
 
@@ -3882,6 +4043,8 @@ Each attack only hits on an unmodified hit roll of 6 (irrespective of the attack
 You cannot re-roll hit rolls.
 
 AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.
+
+Ask about this rule
 
 ######## popup rule:strategic reserves · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3906,6 +4069,7 @@ At the end of the third battle round, unless otherwise stated, all strategic res
 
 Units embarked within TRANSPORTS that have made an ingress move during the battle.
 Repositioned units (see opposite).
+Ask about this rule
 
 ######## popup rule:unengaged · PURGE GOES THE FOE Purge goes the Foe
 CORE RULE
@@ -3918,6 +4082,8 @@ While a friendly model is within engagement range of one or more enemy models, t
 While a unit contains no engaged models, that unit is unengaged.
 
 Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
 
 ######## popup strat:analytic-reprisals · PURGE GOES THE FOE Purge goes the Foe
 1CP · SHOOTING · THEIR TURN
@@ -3934,6 +4100,8 @@ EFFECT
 Your unit can shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target.
 
 USED BYSkitarii Rangers
+
+Ask about this stratagem
 
 ######## popup strat:auto-divinatory-targeting · PURGE GOES THE FOE Purge goes the Foe
 1CP · COMMAND · YOUR TURN
@@ -3953,6 +4121,8 @@ FAQ (Faction Pack 1.4): “If I target a unit with the Auto-divinatory Targeting
 
 USED BYCybernetica Datasmith · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
 
+Ask about this stratagem
+
 ######## popup strat:benevolence-of-the-omnissiah · PURGE GOES THE FOE Purge goes the Foe
 1CP · COMMAND · YOUR TURN
 
@@ -3968,6 +4138,8 @@ EFFECT
 Until the start of your next Command phase, models in your unit have the Feel No Pain 6+ ability, which is improved to Feel No Pain 5+ against mortal wounds.
 
 USED BYCybernetica Datasmith · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+
+Ask about this stratagem
 
 ######## popup strat:command-re-roll · PURGE GOES THE FOE Purge goes the Foe
 1CP · ANY PHASE · EITHER TURN
@@ -3994,6 +4166,8 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:counteroffensive · PURGE GOES THE FOE Purge goes the Foe
 2CP · FIGHT · THEIR TURN
 
@@ -4009,6 +4183,8 @@ EFFECT
 Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
 
 USED BYany unit
+
+Ask about this stratagem
 
 ######## popup strat:crushing-impact · PURGE GOES THE FOE Purge goes the Foe
 1CP · CHARGE · YOUR TURN
@@ -4032,6 +4208,8 @@ Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact st
 
 USED BYBelisarius Cawl, Thulia Ghuld, Cybernetica Datasmith · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
 
+Ask about this stratagem
+
 ######## popup strat:epic-challenge · PURGE GOES THE FOE Purge goes the Foe
 1CP · FIGHT · EITHER TURN
 
@@ -4048,6 +4226,8 @@ Select one CHARACTER model in your unit. Until the end of the phase, that model�
 
 USED BYBelisarius Cawl, Thulia Ghuld, Tech-Priest Enginseer · Necromechanic, Cybernetica Datasmith · Martial Signatum Amplificator
 
+Ask about this stratagem
+
 ######## popup strat:fire-overwatch · PURGE GOES THE FOE Purge goes the Foe
 1CP · MOVEMENT · THEIR TURN
 
@@ -4063,6 +4243,8 @@ EFFECT
 Your unit shoots using snap shooting.
 
 USED BYany unit
+
+Ask about this stratagem
 
 ######## popup strat:heroic-intervention · PURGE GOES THE FOE Purge goes the Foe
 1CP · CHARGE · THEIR TURN · INTO THE FRAY +1CP
@@ -4085,6 +4267,8 @@ Wahapedia FAQ: If a stratagem contains a section that carries an additional CP c
 
 USED BYBelisarius Cawl, Thulia Ghuld, Tech-Priest Enginseer · Necromechanic, Cybernetica Datasmith · Martial Signatum Amplificator, Skitarii Rangers, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler
 
+Ask about this stratagem
+
 ######## popup strat:insane-bravery · PURGE GOES THE FOE Purge goes the Foe
 1CP · COMMAND · YOUR TURN · ONCE PER BATTLE
 
@@ -4105,6 +4289,8 @@ Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? 
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:machine-spirit-resurgent · PURGE GOES THE FOE Purge goes the Foe
 1CP · COMMAND · YOUR TURN
 
@@ -4120,6 +4306,8 @@ EFFECT
 Until the start of your next Command phase, each time a model in your unit makes an attack, you can re-roll the Hit roll. If your unit is Below Half-strength, you can re-roll the Wound roll as well.
 
 USED BYCybernetica Datasmith · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+
+Ask about this stratagem
 
 ######## popup strat:machine-superiority · PURGE GOES THE FOE Purge goes the Foe
 1CP · COMMAND · YOUR TURN
@@ -4137,6 +4325,8 @@ Until the end of the turn, your unit is eligible to shoot in a turn in which it 
 
 USED BYCybernetica Datasmith · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
 
+Ask about this stratagem
+
 ######## popup strat:motive-imperative · PURGE GOES THE FOE Purge goes the Foe
 1CP · COMMAND · YOUR TURN
 
@@ -4153,6 +4343,8 @@ Until the start of your next Command phase, add 3" to the Move characteristic of
 
 USED BYCybernetica Datasmith · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
 
+Ask about this stratagem
+
 ######## popup strat:precision-onslaught · PURGE GOES THE FOE Purge goes the Foe
 1CP · CHARGE · YOUR TURN
 
@@ -4168,6 +4360,8 @@ EFFECT
 Until the end of the phase, when your unit ends a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in your unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound.
 
 USED BYno unit in this list (needs SICARIAN)
+
+Ask about this stratagem
 
 ######## popup strat:rapid-ingress · PURGE GOES THE FOE Purge goes the Foe
 1CP · MOVEMENT · THEIR TURN
@@ -4187,6 +4381,8 @@ RESTRICTIONSYou cannot use this stratagem during the first battle round.
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:servo-driven-charge · PURGE GOES THE FOE Purge goes the Foe
 1CP · FIGHT · EITHER TURN
 
@@ -4202,6 +4398,8 @@ EFFECT
 Until the end of the phase, melee weapons equipped by models in your unit have the [LANCE] ability.
 
 USED BYany unit
+
+Ask about this stratagem
 
 ######## popup strat:smokescreen · PURGE GOES THE FOE Purge goes the Foe
 1CP · SHOOTING · THEIR TURN
@@ -4219,6 +4417,8 @@ Until the end of the phase, each time an attack targets either your SMOKE unit, 
 
 USED BYIronstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Skorpius Disintegrator
 
+Ask about this stratagem
+
 ######## popup strat:threat-cogitation-targeters · PURGE GOES THE FOE Purge goes the Foe
 1CP · SHOOTING · YOUR TURN
 
@@ -4234,6 +4434,8 @@ EFFECT
 Until the end of the phase, each time a ranged attack made by a model in your unit is allocated to a MONSTER or VEHICLE model, you can re-roll the Damage roll.
 
 USED BYCybernetica Datasmith · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+
+Ask about this stratagem
 
 ######## popup strat:transcendent-cogitation · PURGE GOES THE FOE Purge goes the Foe
 1CP · COMMAND · YOUR TURN
@@ -4251,6 +4453,8 @@ Until the start of your next Command phase, the Conqueror Imperative and Protect
 
 USED BYCybernetica Datasmith · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
 
+Ask about this stratagem
+
 ######## popup strat:unrelenting-aggression · PURGE GOES THE FOE Purge goes the Foe
 1CP · MOVEMENT · YOUR TURN
 
@@ -4267,6 +4471,8 @@ Until the end of the turn, your unit is eligible to shoot in a turn in which it 
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:unshackled-wrath · PURGE GOES THE FOE Purge goes the Foe
 1CP · SHOOTING · YOUR TURN
 
@@ -4282,3 +4488,5 @@ EFFECT
 Select the [SUSTAINED HITS 1] or [LETHAL HITS] ability. Until the end of the phase, ranged weapons equipped by models in your unit have the selected ability. You can instead select the [SUSTAINED HITS 1], [LETHAL HITS] and [HAZARDOUS] abilities to apply to those weapons until the end of the phase.
 
 USED BYCybernetica Datasmith · Martial Signatum Amplificator, Skitarii Rangers, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+
+Ask about this stratagem
