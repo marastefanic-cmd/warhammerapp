@@ -1749,7 +1749,13 @@ function dmHow(c, st){
    opened on and the question. The key stays in this browser (store 'wh-ask'); ask.js does the calls. */
 const ASK_MODELS = [['claude-opus-5-5', 'Opus 5.5', 'best answers'], ['claude-sonnet-5-5', 'Sonnet 5.5', 'cheaper'], ['claude-haiku-5-5', 'Haiku 5.5', 'cheapest, quickest']];
 const askCfg = () => Object.assign({ key:'', model:ASK_MODELS[0][0] }, isObj(store.get('wh-ask')) ? store.get('wh-ask') : {});
-const askOn = () => !!askCfg().key;
+// Opened inside Claude (this app as a claude.ai artifact, in the browser or the Claude app), questions can run on the
+// viewer's own Claude account: no key, their plan's usage. Elsewhere (the home-screen app) the API key is the way.
+let askAcct = null;
+try { if(window.claude && typeof window.claude.use === 'function') window.claude.use('sample').then(f => { askAcct = f || null; if(askAcct && cur.s === 'settings') rerender(); }, () => {}); } catch(e){}
+const askVia = () => askAcct ? 'account' : askCfg().key ? 'key' : null;
+const askOn = () => !!askVia();
+const ASK_TIER = { 'claude-opus-5-5':'complex', 'claude-sonnet-5-5':'default', 'claude-haiku-5-5':'quick' };
 let askConv = null, askBusy = null;
 const askMod = () => import('./ask.js' + (BUILD ? '?v=' + BUILD : ''));
 // a datasheet as text: what it has, with values that already include a rule marked so
@@ -1796,6 +1802,63 @@ async function askSystem(a, opp){
   return [{ type:'text', text:intro }, { type:'text', text:(askCore ? askCore + '\n\n' : '') + askRules(), cache_control:{ type:'ephemeral', ttl:'1h' } },
     { type:'text', text:armyText(a, 'The player’s list') + (opp && opp !== a ? '\n\n' + armyText(opp, 'The opponent’s list') : opp === a ? '\n\n(The opponent plays the same list.)' : '\n\n(No opponent list chosen.)'), cache_control:{ type:'ephemeral', ttl:'1h' } }];
 }
+// On the account a question can carry at most 256 KiB of text and the Core Rules alone are about that size, so
+// Claude gets their index and looks sections up (two page functions); everything else goes in the question.
+let askSecs = null;
+function askSections(){
+  if(askSecs) return askSecs;
+  const out = []; let at = null;
+  for(const l of (askCore || '').split('\n')){
+    const h = /^#{1,6}\s+(.*)$/.exec(l), t = h ? h[1].trim() : l.trim();
+    // a heading, or a rule's own line as the page prints it ("[HEAVY]24.16", "NORMAL MOVE09.05")
+    if(h || /^\[?[A-Z][A-Za-z ,'’\-]*\]?\s?\d{2}\.\d{2}(\.\d{2})?$/.test(t)){ at = { title:t, num:(/(\d{2}(?:\.\d{2})+)\s*$/.exec(t) || [])[1] || '', lines:[] }; out.push(at); }
+    else if(at) at.lines.push(l);
+  }
+  return askSecs = out.filter(x => x.title).map(x => ({ title:x.title, num:x.num, text:(x.title + '\n' + x.lines.join('\n')).trim() }));
+}
+const askIndex = () => askSections().map(x => '- ' + x.title).join('\n');
+const ASK_TOOLS = [
+  { name:'core_rules_section', description:'Returns the full text (with its errata and FAQs) of one Core Rules section and its subsections, by section number ("05.04", "24.16") or by its title as the index shows it. Use it to read any rule before you rely on it or quote it.',
+    inputSchema:{ type:'object', properties:{ section:{ type:'string', description:'A section number like "05.04" or a title from the index' } }, required:['section'] },
+    execute(input){
+      const q = String(input.section || '').trim(), secs = askSections(), n = (/\d{2}(?:\.\d{2})+/.exec(q) || [])[0];
+      const hit = n ? secs.filter(x => x.num === n || x.num.startsWith(n + '.')) : secs.filter(x => x.title.toLowerCase() === q.toLowerCase());
+      if(!hit.length) throw new Error('No Core Rules section "' + q + '". Use a number or title from the index, or core_rules_search.');
+      askStatus('Reading Core Rules ' + (n || hit[0].title));
+      const t = hit.map(x => x.text).join('\n\n');
+      return t.length > 30000 ? t.slice(0, 30000) + '\n[… cut here: ask for a subsection]' : t;
+    } },
+  { name:'core_rules_search', description:'Searches the Core Rules (with errata and FAQs) for words and returns the best-matching sections with their numbers and the lines that match. Use it when you do not know which section holds a rule.',
+    inputSchema:{ type:'object', properties:{ query:{ type:'string', description:'Words to look for, e.g. "fall back desperate escape"' } }, required:['query'] },
+    execute(input){
+      const words = String(input.query || '').toLowerCase().split(/[^a-z0-9\-]+/).filter(w => w.length > 2);
+      if(!words.length) throw new Error('Give a few words to search for.');
+      askStatus('Searching the Core Rules: ' + words.join(' '));
+      const scored = askSections().map(x => { const tl = x.title.toLowerCase(), tx = x.text.toLowerCase(); let sc = 0; for(const w of words){ if(tl.includes(w)) sc += 5; sc += Math.min(10, tx.split(w).length - 1); } return [sc, x]; })
+        .filter(([sc]) => sc > 0).sort((p, q) => q[0] - p[0]).slice(0, 6);
+      if(!scored.length) return 'Nothing in the Core Rules matches ' + JSON.stringify(input.query) + '.';
+      return scored.map(([, x]) => { const lines = x.text.split('\n').filter(l => words.some(w => l.toLowerCase().includes(w))).slice(0, 8).join('\n');
+        return '## ' + x.title + '\n' + (lines.length > 1800 ? lines.slice(0, 1800) + ' …' : lines); }).join('\n\n');
+    } }
+];
+// the standing first turn of an account question: the instructions, the rules this app holds, the lists, the index
+async function askAcctBase(a, opp, tools){
+  await askFiles();
+  const sys = a ? await askSystem(a, opp) : [{ text:'You answer Warhammer 40,000 (11th edition) rules questions. Use these rules; say so when they do not settle it. Cite Core Rules sections by their numbers.\n\n' + (askStyle || '') }, { text:askRules() }, { text:'' }];
+  const intro = sys[0].text, lists = sys[2].text;
+  // the rules part without the Core Rules' full text (sys[1] = Core Rules + this app's quotes of them)
+  const quoted = askRules();
+  let core;
+  if(tools) core = '# Core Rules (11th edition, with errata and FAQs): index\nThe full text is too long to include. Read every section you rely on with core_rules_section (or find it with core_rules_search) before you answer, and quote only text you have read.\n' + askIndex();
+  else {   // no page functions in this view: as much of the Core Rules as fits, in order, and say what is left out
+    const room = 240000 - new Blob([intro + quoted + lists]).size; let used = 0; const keep = [], left = [];
+    for(const x of askSections()){ const sz = new Blob([x.text]).size + 2; if(used + sz < room){ keep.push(x.text); used += sz; } else left.push(x.title); }
+    core = '# Core Rules (11th edition, with errata and FAQs)\n' + keep.join('\n\n') + (left.length ? '\n\n(Not included here, too long: ' + left.join('; ') + '. If an answer depends on them, say so.)' : '');
+  }
+  return intro + '\n\n' + core + '\n\n' + quoted + (lists ? '\n\n' + lists : '');
+}
+// what Claude is doing while it looks things up, shown in place of the answer
+function askStatus(t){ const x = askConv && askConv.shown[askConv.shown.length - 1]; if(x && !x.a){ x.status = t; const log = $('#askLog'); if(log) log.innerHTML = askLog(); } }
 // what the player was looking at when they asked
 function askWhere(){
   const a = cur.army && army();
@@ -1825,18 +1888,18 @@ function askMd(text){
 }
 function askLog(){
   if(!askConv || !askConv.shown.length) return '<p class="note">Ask anything about the rules of these lists: what a stratagem does to this unit, whether two rules stack, what happens in which order. The app sends Claude its rules, both lists and the screen you are on.</p>';
-  return askConv.shown.map(x => '<div class="askm q">' + esc(x.q) + '</div><div class="askm a">' + (x.err ? '<p class="askerr">' + esc(x.err) + '</p>' : askMd(x.a) || '<p class="note">…</p>') + '</div>').join('');
+  return askConv.shown.map(x => '<div class="askm q">' + esc(x.q) + '</div><div class="askm a">' + (x.err ? (x.a ? askMd(x.a) : '') + '<p class="askerr">' + esc(x.err) + '</p>' : askMd(x.a) || '<p class="note">' + esc(x.status || 'Thinking…') + '</p>') + '</div>').join('');
 }
 function openAsk(){
   if(!askOn()){ go({ s:'settings' }); toast('Add your Anthropic API key first'); const k = $('#askKey'); if(k) k.scrollIntoView({ block:'center' }); return; }
   const a = cur.army && army(), opp = a && oppOf(a), ctx = (a ? a.id : '') + '|' + (opp ? opp.id : '');
   if(!askConv || askConv.ctx !== ctx) askConv = { ctx, messages:[], shown:[] };
-  const cfg = askCfg(), m = ASK_MODELS.find(x => x[0] === cfg.model) || ASK_MODELS[0];
-  openSheet('Rules question · ' + esc(m[1]), a ? a.name + (opp ? ' vs ' + opp.name : '') : 'Rules question',
+  const cfg = askCfg(), m = ASK_MODELS.find(x => x[0] === cfg.model) || ASK_MODELS[0], acct = askVia() === 'account';
+  openSheet('Rules question · ' + esc(m[1]) + (acct ? ' · your Claude account' : ''), a ? a.name + (opp ? ' vs ' + opp.name : '') : 'Rules question',
     '<p class="askctx">On: ' + esc(askWhere()) + '</p><div id="askLog">' + askLog() + '</div>' +
     '<div class="askin"><textarea id="askQ" rows="3" placeholder="Ask a rules question…" enterkeyhint="send"></textarea><button class="btn" data-asksend>Ask</button></div>' +
     (askConv.shown.length ? '<button class="textbtn" data-asknew>New conversation</button>' : '') +
-    '<p class="note">Claude can be wrong: check what matters with the rule itself (tap a bold rule name). Your key and questions go only from this phone to Anthropic.</p>');
+    '<p class="note">Claude can be wrong: check what matters with the rule itself (tap a bold rule name). ' + (acct ? 'Questions use your Claude account (your plan’s usage); the first one asks you to allow it.' : 'Your key and questions go only from this phone to Anthropic.') + '</p>');
   askConv.where = askWhere();
   setTimeout(() => { const q = $('#askQ'); if(q) q.focus(); }, 50);
 }
@@ -1851,6 +1914,7 @@ async function askSend(){
   const draw = () => { const log = $('#askLog'); if(log){ log.innerHTML = askLog(); const s = $('#sheetIn'); if(s) s.scrollTop = s.scrollHeight; } };
   q.value = ''; draw();
   const ctrl = new AbortController(); askBusy = ctrl;
+  if(askVia() === 'account') return askSendAcct(text, turn, a, opp, cfg, ctrl, draw);
   try {
     const { ask } = await askMod();
     if(!a) await askFiles();
@@ -1867,9 +1931,41 @@ async function askSend(){
       s ? 'Anthropic’s API answered ' + s + ': ' + (e.message || '') : 'Could not reach Anthropic’s API (' + ((e && e.message) || 'no connection') + ').';
   } finally { askBusy = null; draw(); }
 }
+// the account way: the conversation is kept here as text turns (Claude keeps nothing between calls)
+async function askSendAcct(text, turn, a, opp, cfg, ctrl, draw){
+  const sample = askAcct;
+  try {
+    const lim = await sample.limits().catch(() => null), tools = !!(lim && lim.tools);
+    const base = await askAcctBase(a, opp, tools);
+    const q = { role:'user', content:'(I am looking at ' + (askConv.where || askWhere()) + '.)\n\n' + text };
+    askConv.acct = askConv.acct || [];
+    // the oldest turns go first when the conversation outgrows what one question can carry (never the instructions)
+    let past = askConv.acct.slice();
+    const size = () => new Blob([base, ...past.map(x => x.content), q.content]).size;
+    while(past.length && size() > 250000) past = past.slice(2);
+    let last = 0;
+    const opts = { signal:ctrl.signal, modelTier:ASK_TIER[cfg.model] || 'complex', model:cfg.model,
+      onText:({ text:t }) => { turn.a = t; const now = performance.now(); if(now - last > 120){ last = now; draw(); } } };
+    if(tools) opts.tools = ASK_TOOLS; else opts.cache = false;
+    const r = await sample([{ role:'user', content:base }, ...past, q], opts);
+    turn.a = r.text + (r.truncated ? '\n\n*(cut off: the answer was too long)*' : '');
+    askConv.acct.push(q, { role:'assistant', content:r.text });
+  } catch(e){
+    const c = e && e.code;
+    if(e && e.text) turn.a = e.text;
+    turn.err = c === 'cancelled' ? 'Stopped.' : c === 'not_granted' ? 'Claude is not allowed for this page. Allow it in the artifact’s menu (Permissions), or add an API key in Settings.' :
+      c === 'rate_limited' ? 'Your Claude usage limit, or too many questions at once: try again later.' : c === 'session_expired' ? 'Sign in to Claude again, then ask again.' :
+      c === 'sampling_disabled' ? 'Claude is not available for this account here. An API key in Settings works instead.' : c === 'refused' ? 'Claude declined to answer this one.' :
+      c === 'prompt_too_large' ? 'The question with both lists is too long for one go: start a new conversation.' : 'Could not reach Claude (' + ((e && e.message) || c || 'no connection') + '). Try again.';
+    if(c === 'refused') turn.a = '';
+  } finally { askBusy = null; draw(); }
+}
 // Settings: the key, the model, GW's Core Rules PDF
 function askSettings(){
   const c = askCfg();
+  const models = () => ASK_MODELS.map(([id, name, sub]) => '<button class="row" data-askmodel="' + id + '" aria-pressed="' + (c.model === id) + '"><span class="rb"><b>' + name + '</b><span>' + sub + '</span></span>' + (c.model === id ? '<svg class="ic ok" aria-hidden="true"><use href="#i-check"/></svg>' : '') + '</button>').join('');
+  if(askAcct) return '<div class="sec-h"><h2>Rules questions</h2></div><p class="note">Opened in Claude, rules questions (the ? in the top bar) use your Claude account: no API key needed, and they count towards your plan’s usage. The first question asks you to allow it. In the app on your home screen an API key is still the way.</p>' +
+    '<div class="list">' + models() + '</div><p class="note">Each question sends both lists, the rules this app holds and the Core Rules’ index; Claude reads the Core Rules sections it needs.</p>';
   if(!c.key) return '<div class="sec-h"><h2>Rules questions</h2></div><p class="note">Ask Claude rules questions about your lists from any screen (the ? in the top bar). It uses your own Anthropic API key (console.anthropic.com → API keys), kept only in this browser on this phone and sent only to Anthropic.</p>' +
     '<div class="askkey"><input id="askKey" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="sk-ant-…" aria-label="Anthropic API key"><button class="btn" data-askkey>Save</button></div>';
   return '<div class="sec-h"><h2>Rules questions</h2></div><div class="list">' +
