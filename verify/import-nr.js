@@ -203,7 +203,8 @@ const oldPool = old ? [...old.units] : [];
 // donors for a unit that is new to this army: the same datasheet in another army of data.js, or in an
 // older data.js (--reuse file[,file]: e.g. git show <commit>:data.js), whose hand-written parts were signed off
 const donorArmies = flag('--fresh') ? [] : D.armies.filter(a => a.id !== armyId);   // --fresh: nothing kept, nothing borrowed
-for (const f of (flag('--fresh') ? '' : opt('--reuse', '') || '').split(',').filter(Boolean)) { global.window = {}; delete require.cache[path.resolve(f)]; require(path.resolve(f)); donorArmies.push(...window.WH_DATA.armies.filter(a => a.id !== armyId)); }
+// an earlier version of this same list (same id) in --reuse is a donor too when data.js no longer has the list
+for (const f of (flag('--fresh') ? '' : opt('--reuse', '') || '').split(',').filter(Boolean)) { global.window = {}; delete require.cache[path.resolve(f)]; require(path.resolve(f)); donorArmies.push(...window.WH_DATA.armies.filter(a => a.id !== armyId || !old)); }
 const donorUnits = donorArmies.flatMap(a => a.units.map(u => Object.assign({ _army: a.id }, u)));
 const reused = [];
 const units = [];
