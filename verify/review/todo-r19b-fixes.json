@@ -1,0 +1,15 @@
+[
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "strat-note",
+  "where": "Freeblade Company · Full Tilt",
+  "judgement": {
+   "note": "No datasheet has the DESTRIER keyword; the Knight Destrier has KNIGHT DESTRIER. Wahapedia FAQ (02.05 Keywords): “Do rules that affect a keyword include multi-word keywords that contain that keyword? For example, would rules that affect COMMISSAR units affect a unit that has the COMMISSAR GRAVES keyword?” “No.” So a Knight Destrier adds either 6\" or 9\": the sources don’t say whether this stratagem’s DESTRIER means KNIGHT DESTRIER."
+  },
+  "source": {
+   "stratagem": "Full Tilt",
+   "text": "WHEN: Your Movement phase.\nTARGET: One **IMPERIAL KNIGHTS** unit from your army.\nEFFECT: Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in your unit, or 9\" instead if your unit is an **ARMIGER** or **DESTRIER** unit."
+  },
+  "key": "d87f99cf42f9b664"
+ }
+]

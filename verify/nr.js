@@ -816,8 +816,11 @@ function compareUnit(nu, au, enhNames, { fail, chk, cmp, armyRuleNames = new Set
     annotated('stats ' + ns.name, ns.parens, as && as.s);
     if (!as) continue;
     const S = as.s, R = ns.r;
-    for (const [ak, nk] of [['M', 'M'], ['T', 'T'], ['Sv', 'Sv'], ['W', 'W'], ['Ld', 'LD'], ['OC', 'OC'], ['InSv', 'InSv'], ['base', 'Base']])
+    for (const [ak, nk] of [['M', 'M'], ['T', 'T'], ['Sv', 'Sv'], ['W', 'W'], ['Ld', 'LD'], ['OC', 'OC'], ['InSv', 'InSv'], ['base', 'Base']]) {
       cmp('stats', 'stats[' + ns.name + '].' + ak, cellV(S[ak]), cellV(R[nk]));
+      // a value the app shows with a rule applied that New Recruit does not apply: the app's record of what New Recruit prints
+      if (S.printed && S.printed[ak] != null) cmp('stats', 'stats[' + ns.name + '].' + ak + ' (printed)', cellV(S.printed[ak]), cellV(R[nk]));
+    }
   }
 
   // weapons

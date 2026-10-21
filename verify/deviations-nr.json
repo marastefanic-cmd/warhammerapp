@@ -372,5 +372,53 @@
   "where": "verify/sources/nr/purge-goes-the-foe.txt p9",
   "reason": "Typo in New Recruit and BSData (\"this mdel\") that Wahapedia's datasheet does not have; the app has \"model\".",
   "evidence": "verify/.cache/waha/ds/adeptus-mechanicus_Onager-Dunecrawler.html line 1532: \"While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.\"; verify/sources/nr/purge-goes-the-foe.txt line 299: \"While this mdel has 1-4 wounds remaining, …\"."
+ },
+ {
+  "army": "princes",
+  "unit": "slaughterbound-exalted-eightbound",
+  "field": "stats (rows)",
+  "app": [
+   "Slaughterbound",
+   "Exalted Eightbound x3"
+  ],
+  "source": [
+   "Slaughterbound",
+   "Exalted Eightbound"
+  ],
+  "reason": "New Recruit prints the attached unit's Exalted Eightbound row without its model count (\"(x3)\"), where it prints one for other bodyguard rows (\"Khorne Berzerker (x10)\"); the unit has three Exalted Eightbound models, so the row says \"×3\" (play-test finding C7b).",
+  "evidence": "verify/sources/nr/princes.txt line 20 (\"(3) Exalted Eightbound … 130\"), lines 149-150 (\"1x Exalted Eightbound Champion\", \"2x Exalted Eightbound\"), line 153 (\"Exalted Eightbound - Exalted Eightbound 10\" 6 3+ 3 6+ 1 5+ 40mm\", no count). The row's values are still compared (stats rows are matched by name without the count)."
+ },
+ {
+  "army": "standard",
+  "unit": "slaughterbound-exalted-eightbound",
+  "field": "stats (rows)",
+  "app": [
+   "Slaughterbound",
+   "Exalted Eightbound x3"
+  ],
+  "source": [
+   "Slaughterbound",
+   "Exalted Eightbound"
+  ],
+  "reason": "New Recruit prints the attached unit's Exalted Eightbound row without its model count (\"(x3)\"), where it prints one for other bodyguard rows; the unit has three Exalted Eightbound models, so the row says \"×3\" (play-test finding C7b).",
+  "evidence": "verify/sources/nr/standard.txt lines 20-22 (\"(3) Exalted Eightbound … 130\"), lines 94-95 (\"1x Exalted Eightbound Champion\", \"2x Exalted Eightbound\"), line 98 (\"Exalted Eightbound - Exalted Eightbound 10\" 6 3+ 3 6+ 1 5+ 40mm\", no count). The row's values are still compared (stats rows are matched by name without the count)."
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "unit": "knight-destrier",
+  "field": "stats[Knight Destrier].InSv",
+  "app": "5+",
+  "source": "5+*",
+  "reason": "This Knight Destrier has the Sanctuary enhancement (\"The bearer has a 5+ invulnerable save.\", all attacks); New Recruit prints the datasheet's 5+* (ranged attacks only), as BSData's Sanctuary changes no InSv. The app shows 5+ marked as from Sanctuary (from: { InSv:'Sanctuary' }), as it does for the Norn Assimilator's Synaptoprescience (play-test finding B4).",
+  "evidence": "verify/sources/nr/4-megas-and-a-destrier.txt line 195 (\"1x Knight Destrier Sanctuary, …\") and line 197 (\"… 8 5+* 150x95mm\"); data.js Freeblade Company enhancements, Sanctuary (\"**IMPERIAL KNIGHTS** model only. The bearer has a 5+ invulnerable save.\", checked by verify/texts.js against GW's Faction Pack); verify/.cache/bsdata/Imperium - Imperial Knights - Library.json line 13905 (Sanctuary, cb31-e496-08de-77d4: no InSv modifier)."
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "unit": "belisarius-cawl",
+  "field": "rules",
+  "app": null,
+  "source": "Blast",
+  "reason": "None of Belisarius Cawl's weapons has [BLAST]: the Solar atomiser is [MELTA 3] in BSData, New Recruit and Wahapedia. BSData still links a Blast rule to the Solar atomiser entry and New Recruit prints it on the Rules line; the app leaves it off (play-test finding B10).",
+  "evidence": "verify/sources/nr/purge-goes-the-foe.txt line 89 (\"Solar atomiser 18\" 3 2+ 14 -4 D6 Melta 3\") and line 116 (\"Rules Doctrina Imperatives, Anti, Devastating Wounds, Extra Attacks, Blast, Melta\"); his other weapons (Arc Scourge, Cawl's Omnissian axe, Mechadendrite hive) have no [BLAST] either."
  }
 ]

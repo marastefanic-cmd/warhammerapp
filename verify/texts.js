@@ -14,6 +14,8 @@
      packUpdate     the Faction Packs' Rules Updates ("Change to …") for every army rule, detachment item and unit ability
                     in the lists; an update that concerns the lists but matches no app text is a failure
      packDatasheet  abilities of units whose datasheet a Faction Pack prints (Knight Destrier, Defiler)
+     noteQuote      every quotation (“…”) inside an app note (army/detachment rule, stratagem, ability), word for word in a
+                    source or in the verified text of the item the note is on (the note's own words are judgements: helpers.js)
    Lines the app marks as its own ("*App note, not rules text: …*") are not checked; they are listed in out/texts.json
    (appNotes). Any other line of a verbatim field that is in no source is a failure (also listed: notInAnySource).
 
@@ -94,10 +96,11 @@ function must(f, hint) {
 }
 const GWFILES = {
   core: 'eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.pdf',
-  uru: 'eng_wh40k_coreandkey_universal_rules_updates-lu3grocned-rphh78bl6k.pdf'
+  uru: 'eng_wh40k_coreandkey_universal_rules_updates-lu3grocned-rphh78bl6k.pdf',
+  ec: 'eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.pdf'   // only for the Game tab's quotes (D.game)
 };
 const GWLABEL = {
-  core: 'GW Core Rules (11th edition, 01/06/2026)', uru: 'GW Universal Rules Updates v1.1'
+  core: 'GW Core Rules (11th edition, 01/06/2026)', uru: 'GW Universal Rules Updates v1.1', ec: 'GW Warhammer Event Companion 1.3'
 };
 // each faction's GW Faction Pack, from sources/factions.json (Orks have none: Wahapedia is the source)
 for (const [k, v] of Object.entries(JSON.parse(fs.readFileSync(path.join(VERIFY, 'sources', 'factions.json'), 'utf8'))))
@@ -457,6 +460,34 @@ function ssSpecial() {
 }
 for (const [key, text] of Object.entries(D.rules))   // a faction term (D.ruleSrc) comes from its faction's pages, as detachment texts do
   checkLines('rules', 'core', 'rule:' + key, 'text', text, (D.ruleSrc || {})[key] ? GW_ALL.concat(FACTIONS.map(f => 'wahahtml:' + f)) : GW_ALL, WAHA_CORE, key === 'Starting Strength' ? { special: ssSpecial() } : {});
+
+/* ------------------------------------------------------------------ D.game: the Game tab's own quotes */
+// Each quote word for word in the one document it names (core: the Core Rules; ec: the Event Companion), under the heading it
+// names: a Core Rules section "Title NN.NN" (the PDF prints some step headings without spaces: "STARTOFMOVEMENTPHASE 09.01"),
+// an Event Companion heading, or a numbered step of the Event Companion's mission sequence ("8 DEPLOY ARMIES").
+if (D.game) {
+  const docOf = id => ({ core: 'core', ec: 'ec' })[id];
+  const heading = (cat, item, docId, num, title) => {
+    count(cat);
+    const d = DOCS[docOf(docId)];
+    const tries = num ? [title + ' ' + num, title.replace(/ /g, '') + ' ' + num, num + ' ' + title] : [title];
+    const hit = d && tries.map(t => locate(norm(t), [d.id])).find(Boolean);
+    if (hit) provRow(item, 'heading', hit.d, hit.off, { text: (num ? num + ' ' : '') + title });
+    else fail(cat, 'core', item, 'heading', (num ? num + ' ' : '') + title, d ? 'no heading "' + tries[0] + '" in ' + d.label : 'unknown document ' + docId, '');
+  };
+  for (const q of D.game.cp || []) {
+    const item = 'game:cp ' + (q.num ? q.num + ' ' : '') + q.title;
+    if (!docOf(q.doc)) { fail('game', 'core', item, 'doc', q.doc, 'unknown document (core or ec)', ''); continue; }
+    heading('game', item, q.doc, q.num, q.title);
+    checkLines('game', 'core', item, 'text', q.text, [docOf(q.doc)], []);
+  }
+  for (const [ph, steps] of Object.entries(D.game.steps || {})) for (const [num, title] of steps) heading('game', 'game:step ' + ph + ' ' + num, 'core', num, title);
+  for (const [n, title, text] of D.game.sequence || []) {
+    const item = 'game:sequence ' + n;
+    heading('game', item, 'ec', '', n + ' ' + title);
+    checkLines('game', 'core', item, 'text', text, ['ec'], []);
+  }
+}
 
 
 /* ------------------------------------------------------------------ source parsers: stratagems */
@@ -1287,6 +1318,42 @@ function nearLine(n, src) {
   for (const x of src) { let i = 0; while (i < n.length && n[i] === x.n[i]) i++; if (i > bl) { bl = i; best = x; } }
   return best && bl > 10 ? '; closest source line differs at "…' + n.slice(Math.max(0, bl - 25), bl) + '[' + n.slice(bl, bl + 30) + '…]" vs "[' + best.n.slice(bl, bl + 30) + '…]"' : '';
 }
+/* ------------------------------------------------------------------ quotes in the app's notes */
+// A note (on an army or detachment rule, a stratagem or an ability) is the app's own sentence, a judgement signed off in
+// verify/helpers.js; the words it puts in quotation marks (“…”) are rules text. Each quote is found word for word in GW's
+// documents or Wahapedia, a piece at a time where it leaves words out ("…"), or in the text of the item the note is on
+// (its rule or stratagem, the unit's abilities), which the other checks verify.
+const ALL_DOCS = GW_ALL.concat(WAHA_CORE, Object.keys(DOCS).filter(k => !GW_ALL.includes(k) && !WAHA_CORE.includes(k)));   // GW's first
+function checkQuotes(army, unit, note, own) {
+  for (const m of String(note || '').matchAll(/“([^”]+)”/g)) {
+    for (const piece of m[1].split(/…|\.\.\./)) {
+      const n = norm(stripMarkup(piece)).replace(/^[\s.,;:]+|[\s,;:]+$/g, '');
+      if (!/[a-z0-9]/.test(n)) continue;
+      count('noteQuote');
+      const r = locate(n, ALL_DOCS);
+      if (r) { provRow(army + ' / ' + unit, 'note', r.d, r.off, { text: piece.trim().slice(0, 80) }); continue; }
+      if (own.some(t => normField(t).includes(n))) { prov.push({ item: army + ' / ' + unit, field: 'note', doc: 'data.js', file: 'data.js', sha256: null, where: 'the text of the item the note is on', text: piece.trim().slice(0, 80) }); continue; }
+      fail('noteQuote', army, unit, 'note', m[0], 'quoted words not in any source, nor in the text the note is on: "' + piece.trim() + '"' + (nearest(n, ALL_DOCS).text ? ' | ' + nearest(n, ALL_DOCS).text : ''), '');
+    }
+  }
+}
+const stratOwn = s => [s.when, s.target, s.effect, s.restrictions].filter(Boolean);
+for (const s of D.coreStratagems) if (s.note) checkQuotes('core', 'coreStratagem:' + s.id, s.note, stratOwn(s));
+for (const fk of FACTIONS) {
+  const F = D.factions[fk];
+  for (const r of F.armyRules) if (r.note) checkQuotes(fk, 'armyRule:' + r.name, r.note, [r.text].concat((r.table || []).map(t => t[1])));
+  for (const [dk, d] of Object.entries(F.detachments || {})) {
+    if (d.rule && d.rule.note) checkQuotes(fk, 'detachment:' + dk + '/rule', d.rule.note, [d.rule.text]);
+    for (const s of d.stratagems || []) if (s.note) checkQuotes(fk, 'detachment:' + dk + '/stratagem:' + s.id, s.note, stratOwn(s));
+  }
+}
+for (const a of D.armies) for (const u of a.units) for (const ab of u.abilities || []) if (ab.note) {
+  const f = D.factions[a.faction], dets = a.detachments.map(x => f.detachments[x]).filter(Boolean);
+  // the unit's abilities, and the rules of its list (Enraged Behemoths' words in a note on Singular Purpose)
+  const own = (u.abilities || []).map(x => x.text).concat(f.armyRules.map(r => r.text), dets.filter(d => d.rule).map(d => d.rule.text));
+  checkQuotes(a.id, u.id + ' / ability:' + ab.name, ab.note, own);
+}
+
 /* ------------------------------------------------------------------ deviations, output, provenance */
 let devs = [];
 if (fs.existsSync(DEVS)) devs = JSON.parse(fs.readFileSync(DEVS, 'utf8'));

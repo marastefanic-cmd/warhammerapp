@@ -23,6 +23,12 @@
   "at": "2026-10-21",
   "why": "NR prints \"Ammo Runts (Once per battle, per unit) - Nobz\"."
  },
+ "0110c9dc6e44cb7a": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "Deep Strike 24.09 (“if every model in this unit has this ability”), Scouts 24.31 (“if every model in a unit has this ability”), Infiltrators 24.20 (“During deployment, if every model in a unit has this ability”). partialRules removes Slaughterbound + Exalted Eightbound’s Scouts, so the Rules tab’s B5 slip doesn’t carry over here."
+ },
  "011215d87f5b35f8": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -155,6 +161,12 @@
   "at": "2026-10-16",
   "why": "HARPOONED / Harpooned on the Norn Assimilators' Toxinjecter Harpoon."
  },
+ "05e40ef5ca314352": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "For a rule with no ph tags, the phase and turn come from its first words: “At the start of your turn” → your Command phase, “At the end of your opponent’s turn” → their Fight phase (the end of that turn)."
+ },
  "061c00da8250764b": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -184,6 +196,12 @@
   "by": "review:r11-purge-units",
   "at": "2026-10-21",
   "why": "NR roster: “Cybernetica Datasmith … 35” and “(4) Kastelan Robots … 300”, and the unit box reads “335 PTS”. Wahapedia: Datasmith 20 (plus 15 for the enhancement), 4 Kastelan Robots 300."
+ },
+ "06cea5346db81252": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "On Canticles of the Omnissiah it finds Invocation of Machine Vengeance, Mantra of Discipline (with its “- **Binharic Courage (Aura):** …” line) and Shroudpsalm (Aura). On Icon of War it finds Fanatical Devotion, Adaptive Tactics and The Fires of Mars. These are the sections’ own bold-named parts, and the lead sentence isn’t taken as an option."
  },
  "07b9e209f273014f": {
   "verdict": "ok",
@@ -274,6 +292,12 @@
   "by": "review:r11-purge-units",
   "at": "2026-10-21",
   "why": "“When an enemy unit targets this unit with ranged attacks … when this unit makes a save roll: On an unmodified 6, that enemy unit suffers 1 mortal wound after that enemy unit has shot.” This is Faction Pack v1.4’s Rules Update wording, and the line says the same, shorter."
+ },
+ "0a96a2f600152412": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "It reads the step from a rule’s first words: “Start of your opponent’s Shooting phase” (Smokescreen) → start, “End of your opponent’s Movement phase” (Fire Overwatch) → end, “At the end of your Command phase” → end, “At the start of the first battle round” → first. Optional “(Once per battle…)” and “If your Army Faction is …,” prefixes are handled. Note: “at the start of any phase” (Chainbreaker) doesn’t match, so gStep’s “any phase” branch is unreachable, but Chainbreaker’s five tags put it under Any phase anyway."
  },
  "0abe777c2a1af106": {
   "verdict": "ok",
@@ -418,6 +442,12 @@
   "by": "review:r11-purge-faction (its fix)",
   "at": "2026-10-21",
   "why": "The source says the weapons “can only target units within range of the selected objective marker”, a targeting restriction, but the footnote puts “only at units within range…” in the condition slot, so it reads as if BS 3+/[IGNORES COVER] apply only against those units and the unit can still shoot other units normally. It should be when:'Your Command phase, until the start of your next Command phase', note:'BS 3+, [IGNORES COVER]; can only target units within range of the selected objective marker'."
+ },
+ "107f167cff2eb9f0": {
+  "verdict": "ok",
+  "by": "review:r19-fixes",
+  "at": "2026-10-21",
+  "why": "It is true only when every comma-separated part of the value is the first word of one of the rule's table labels (\"Deed 1–2 · ...\", \"Quality 1–2 · ...\"). So \"Deed, Quality\" is left out and a real pick (\"Deed 1–2\") would stay. BSData (IK Library, Code Chivalric) has \"Deed\" and \"Quality\" as min-1/max-1 entries, each holding all three oath profiles, and NR prints \"• Code Chivalric: Deed, Quality\"."
  },
  "10ad5f37ce8a00cd": {
   "verdict": "ok",
@@ -712,6 +742,12 @@
   "by": "review:r9-pubstomper",
   "at": "2026-10-21",
   "why": "NR Categories: \"Battleline*, Rubric*, Rubric Marines*, Rubricae*, *from combined unit\"."
+ },
+ "1bc62fc3d84ec4ea": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "Quotes are in the right steps. Step 7 has 20.01 (“…cannot exceed 50% of your points limit for your battle size”) with each list’s 50% as an app note and its Deep Strike units. Step 8 has the TITANIC sentence and Infiltrators (24.20 “During deployment”). Step 10 has the first-turn pick (“Roll off: the winner takes the first turn.”). Step 11 has Scouts (24.31 “In the Resolve Pre-battle Abilities step”). The header names the Event Companion 1.3, which is the cached version."
  },
  "1bd5f94b32f3218c": {
   "verdict": "ok",
@@ -1019,6 +1055,12 @@
   "at": "2026-10-17",
   "why": "Reserves line: 20.01 “Unless otherwise stated, the combined points value … (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit” and 20.03 “Unless otherwise stated, they can only do so from the second battle round onwards … destroyed, with the following exceptions: Units embarked within TRANSPORTS that have made an ingress move … Repositioned units”. Both “unless otherwise stated” are kept. The Deep Strike and Scouts lists follow “if every model in this unit has this ability” (24.09, 24.31). The headings now use the texts’ own words (“Read Mission Objectives step”, “Declare battle formations”, “Start of the battle round”). Warlord, enhancements, points, transports and once-per-battle are list facts. One leftover, display only: the Read Mission Objectives section sits above Declare battle formations. None of the given sources defines that step (the Event Companion sequence has no such step), so that order is unsourced, but no text on the screen states it."
  },
+ "258046ad94ca1dc1": {
+  "verdict": "ok",
+  "by": "review:r18b-game",
+  "at": "2026-10-21",
+  "why": "A rule that lets each of its abilities be selected once per battle (Kindred Sorcery: “You can only select each of these abilities once per battle”) now gets one box per ability, keyed 'r:<rule>:<ability>#0'. Those are the Overview’s ruleTicks keys and the ones gamePick ticks. A rule that is once per battle per unit gets no box, as on the Overview (ruleOnce). Other rows are unchanged."
+ },
  "258365c1bbdfbff0": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -1114,6 +1156,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "\"Your Command phase\"."
+ },
+ "27e31c34a78901f0": {
+  "verdict": "ok",
+  "by": "review:r19-fixes",
+  "at": "2026-10-21",
+  "why": "x.at is returned as whenTag does, and each at repeats the rule's opening words (\"At the start of the battle round\", \"At the end of your opponent's turn\"). \"Any phase\" now needs one turn for all five phases, so Icon of War shows \"Your Command · Their Move · Shoot · Your Charge · Fight\" (its turns; either turn unprefixed, per 07.02.02). Latent: a five-phase rule with one fixed turn (your/opp) would show a bare \"Any phase\" and drop the turn, but no list has one (all are turn:'either')."
  },
  "27eef46c006c0cf2": {
   "verdict": "ok",
@@ -1276,6 +1324,12 @@
   "by": "review:r11-purge-units",
   "at": "2026-10-21",
   "why": "NR, Wahapedia and BSData: W 12, and “While this model has 1-4 wounds remaining…”."
+ },
+ "2dd0132de1ecd4da": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "Code Chivalric’s rows “Deed 1–2 · …” / “Quality 1–2 · …” become two groups (Deed, Quality) by D6 result, as the rule has “one Deed and one Quality … by rolling a D6 and consulting the relevant table”. Doctrina’s and Blessings’ rows are one option each (“Unbridled Bloodlust · double 1+”)."
  },
  "2de8d5d794d854fd": {
   "verdict": "ok",
@@ -1679,6 +1733,12 @@
   "at": "2026-10-17",
   "why": "With no turn limit in the text and attacks in both players’ turns, “either” is the right default; the per-phase override is corrected in 7a652c3ac27f3762."
  },
+ "3c0adf668a4ca4bc": {
+  "verdict": "ok",
+  "by": "review:r19-fixes",
+  "at": "2026-10-21",
+  "why": "Ranged part: \"ranged attacks ... can re-roll hit rolls\", which does nothing in Fire Overwatch (15.09 \"You cannot re-roll hit rolls\"), so Your Shooting only. Charge part: \"When this unit declares a charge\" can come in either turn, because Heroic Intervention (15.11, \"End of your opponent's Charge phase\") says \"Resolve a charge with your unit (11.02)\" and 11.02 starts with \"Declare Charge\"."
+ },
  "3c153f138d7e1693": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -1720,6 +1780,12 @@
   "by": "review:m1-code",
   "at": "2026-10-18",
   "why": "`n.attached && !u.leads` keeps only units with a leader or support character attached. The Leader/Support text in data.js: 'for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it'. So a unit with only a support character (Mek + Tankbustas) is an attached unit, as the code comment says. Attaching happens only 'Before the battle, in the Muster Armies step', so the list's `leads` covers every unit that can be attached. Breakin' Heads needs {all:[Faction: Orks, Infantry], attached:true}, which is the WHEN 'a friendly attached ORKS INFANTRY unit' with nothing added. Harness result: offered to Nazdreg + Meganobz, Bigboss + Warboss + Breaka Boyz, and Warboss in Mega Armour + Meganobz; Ghazghkull and the Beastboss (not attached) are left out. Two characters need no special case. Not judged here: whether a mixed attached unit counts as INFANTRY. That rests on the union `kw` in data.js, not on this function, and the core text on unit keywords isn't in the item."
+ },
+ "3d098f7e7305160c": {
+  "verdict": "ok",
+  "by": "review:r19-fixes",
+  "at": "2026-10-21",
+  "why": "NR standard: \"255 PTS SLAUGHTERBOUND\" (Berzerker Glaive), roster lines \"Slaughterbound Character 125\" and \"(3) Exalted Eightbound Infantry 130\". So the split 125 + 130 = 255 still holds after the stats rename."
  },
  "3d58512771b1037d": {
   "verdict": "ok",
@@ -1840,6 +1906,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "WHEN: \"Your opponent’s Movement phase\"."
+ },
+ "416a5f9b81853e1a": {
+  "verdict": "ok",
+  "by": "review:r19-fixes",
+  "at": "2026-10-21",
+  "why": "The rule names only \"makes a ranged attack\". Outside your Shooting phase, these lists can shoot only by Fire Overwatch (15.08, \"End of your opponent's Movement phase ... shoots using snap shooting\"), and 15.09 says \"You cannot re-roll hit rolls\". No World Eaters rule here gives other out-of-phase shooting, so \"Your Shooting\" is right."
  },
  "4179b815f1a91792": {
   "verdict": "ok",
@@ -1966,6 +2038,12 @@
   "by": "review:r10-superterm",
   "at": "2026-10-21",
   "why": "WHEN: \"Your opponent’s Shooting Phase, when an enemy unit targets a friendly TERMINATOR SQUAD unit.\""
+ },
+ "4598357d894fb025": {
+  "verdict": "ok",
+  "by": "review:r18b-game",
+  "at": "2026-10-21",
+  "why": "Command picks are labelled “Until the start of your next Command phase” (Kindred Sorcery, Canticles, Rod of the War Forge, Full Throttle). An earlier round’s pick reads “(picked in battle round N)”. Battle Protocols’ Aegis reads “Until another is picked (from the start of the battle)”. Earlier rounds’ picks leave out the round being shown."
  },
  "45f310dcc63f9331": {
   "verdict": "ok",
@@ -2345,6 +2423,12 @@
   "at": "2026-10-16",
   "why": "A Charge move can also be made in the opponent's Charge phase (core Heroic Intervention: \"Resolve a charge with your unit\"), and \"each time a model in that unit makes a ... Charge move, it can move horizontally through terrain features\" applies then too (the app already treats charges as either-turn for Battle-lust and Devastating Assault)."
  },
+ "536dfbf51f3091b0": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "It matches the words that ask for a pick: “select one” (Doctrina, Code Chivalric’s “select one Deed”, Kindred Sorcery, Singular Purpose, Wrathful Presence, Unearthly Power, Full Throttle, Canticles, Rod of the War Forge, Battle Protocols) and Blessings of Khorne’s “activate up to two”. Unit-only picks it also matches (Omnissiah’s Blessing, Dreadherder, …) are dropped later by gcLasts/gcOptions."
+ },
  "53c6814a6f373472": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -2411,6 +2495,12 @@
   "at": "2026-10-16",
   "why": "The rule is \"When that unit is selected to make an advance move, that advance move does not prevent…\": the unit must be riled up when it advances. A unit riled up after advancing (Makari, Dread Power or Intimidating Motivation later in the phase) still cannot charge, but the reminder would let it."
  },
+ "5591b92f968de557": {
+  "verdict": "ok",
+  "by": "review:r19-fixes",
+  "at": "2026-10-21",
+  "why": "NR standard p3 Categories: \"... Slaughterbound, Exalted Eightbound*, *from combined unit\", with \"• Leading: Exalted Eightbound[1]\". Only the stats row name changed (\"Exalted Eightbound ×3\"), and the note still holds."
+ },
  "5595cec8abfba7cb": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -2470,6 +2560,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "The aura affects \"melee attacks\", which are only made in the Fight phase, in either player's turn. [restored: the same judgement on the same text, signed off for an earlier list]"
+ },
+ "58b1109936057de9": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "For every choice in the 11 lists the options are where the words point. Table for “below” (Doctrina “below”, Blessings “(see below)”, Kindred Sorcery “listed below”, Code Chivalric “…the relevant table below”). Abilities whose who is the named section (“the Crimson King section”, “one Wrathful Presence ability”, “one Throttlerokkit Shokka Engine ability”). Bold parts of the named ability (Canticles, Icon of War). Bullets for “of the following” / “from those listed below” (Singular Purpose, Battle Protocols). Icon of War itself (a friendly unit pick) and Omnissiah’s Blessing get no options, so neither becomes a choice."
  },
  "58b9d5bc5c887b79": {
   "verdict": "ok",
@@ -2837,6 +2933,12 @@
   "at": "2026-10-17",
   "why": "“you can select one friendly ORKS WALKER unit within 3\" of this model. That unit’s attacks can re-roll hit rolls of 1 until the end of the turn.” No exclusion is added: there is no notSelf, so the Big Mek’s own WALKER unit can be picked, as the text allows. The needs filter leaves out ORKS, but every unit in the Cooking list has Faction: Orks (a list fact), and Try Dat Button! and Crazed Rampage use the same filter. “this turn” = “until the end of the turn”."
  },
+ "65e531d47160c21a": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "Battle Protocols gives Protector / Conqueror / Aegis Protocol from “- **…:**”. Singular Purpose gives “Select one enemy unit” / “Select one objective marker”, i.e. its own bullets named by their first words."
+ },
  "66b0e6394d2e86b2": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -2974,6 +3076,12 @@
   "by": "review:m1-strats",
   "at": "2026-10-18",
   "why": "Matches the EFFECT word for word: “Your unit has +2\" M.” text: same as Wahapedia word for word."
+ },
+ "6c0c352b01998cb3": {
+  "verdict": "ok",
+  "by": "review:r19-fixes",
+  "at": "2026-10-21",
+  "why": "It does what the line says. Deep Strike, Scouts and Infiltrators use everyModel, which drops partialRules keys, matching 24.09/24.20/24.31 \"if every model in a unit has this ability\" (Slaughterbound left out; Eightbound and Goremongers listed as \"Scouts and Infiltrators\"). Code Chivalric \"Deed, Quality\" is dropped via ruleParts. START (/start of the battle\\b(?! round)/) catches only Code Chivalric Deed 1–2 (\"At the start of the battle, select one CHARACTER\") and Battle Protocols (\"At the start of the battle, ... enters Aegis Protocols\"), under a \"Start of the battle\" row as the digest asked."
  },
  "6c93107162208ccd": {
   "verdict": "ok",
@@ -3119,6 +3227,12 @@
   "at": "2026-10-21",
   "why": "The start of the battle round comes before either player's turn (Core Rules 07.01 “before progressing to player turns”), and the Imperative lasts “Until the end of the battle round”, so either turn."
  },
+ "714c0fca8fe26bbb": {
+  "verdict": "ok",
+  "by": "review:r18b-game",
+  "at": "2026-10-21",
+  "why": "Tested with gcRound in node. A side that goes second sees its round-N command pick in round N+1’s first turn, marked as picked in round N, and from its own turn of N+1 the new round’s slot. A side that goes first always sees the current round. This matches “until the start of your next Command phase”. Battle Protocols with no pick shows Aegis Protocol (from the start of the battle), per “At the start of the battle, … that unit enters Aegis Protocols”, and after a pick the last one made."
+ },
  "7173745124f5cf5b": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -3245,6 +3359,12 @@
   "at": "2026-10-21",
   "why": "NR prints \"Lacerator and daemonic claw (Berzerker Glaive) ... 8\" (Wahapedia base A 6, +1 Relentless Rage, +1 Glaive, already marked in `from`); \"add 3 to the Attacks characteristic ... and those weapons have the [Devastating Wounds] ability\" \"until the end of the phase\", \"Once per battle, at the start of the Fight phase\" gives 8+3 = 11 and adds neither bonus again."
  },
+ "764190ca8a1f44ad": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "Round clamped 1–5 matches Event Companion 13 (“The battle ends after five battle rounds have been completed”). half 0/1 plus first matches 07.02 (“Both players now take one turn each. The same player always takes the first turn in each battle round”). first is set by step 10 (“Roll off: the winner takes the first turn.”). Each stored value out of range falls back to the new-game value for that field."
+ },
  "7644dcf1be914a6c": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
@@ -3304,6 +3424,12 @@
   "by": "review:r9-pubstomper",
   "at": "2026-10-21",
   "why": "Defiler W 18 (NR stats row); \"1-6 wounds remaining\"."
+ },
+ "79fdce8af16ef045": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "07.01 (“players resolve rules that are triggered at the start of the battle round, before progressing to player turns”) is shown in the round’s first Command phase for both lists. In round 1 that includes “At the start of the first battle round” (Singular Purpose) and “At the start of the battle” (Battle Protocols’ Aegis). Turn tags filter the rest (Icon of War not in their Command phase). Inert and Damaged rows are left out, and five-phase rules are Any phase."
  },
  "7a3d58fbc20f30b6": {
   "verdict": "ok",
@@ -3442,6 +3568,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "11th-ed 15.08 \"WHEN: End of your opponent's Movement phase.\" only (no Charge-phase use any more)."
+ },
+ "7e38ba43759ec810": {
+  "verdict": "ok",
+  "by": "review:r19-fixes",
+  "at": "2026-10-21",
+  "why": "BSData (World Eaters) links \"Scouts\" (name append 6\") only on the Slaughterbound model entry. The Exalted Eightbound unit links only Deep Strike and Blessings of Khorne. NR says the same: \"Lord of the Eightbound - Slaughterbound: ... this model has the Deep Strike and Scouts 6\" abilities.\" So the label belongs to the Slaughterbound alone."
  },
  "7e7edefe8b57bac7": {
   "verdict": "ok",
@@ -3803,11 +3935,23 @@
   "at": "2026-10-17",
   "why": "New Recruit: “Categories … Flash Gitz*, *from combined unit”, and the Mek is “Supporting: Flash Gitz”."
  },
+ "88b2c21db407d33e": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "It matches the CP sentences of the lists’ rules and nothing else: Da Boss (“…gain 1CP.”), Code Chivalric (“…you gain 2CP, or 3CP … (CP gained in this way are an exemption …)”), Hive Commander (“…you gain 1CP”), Broad Spectrum Data-tether (“…on a 5+, you gain 1CP.”)."
+ },
  "88f067e90f8b408d": {
   "verdict": "ok",
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "Exact \"benefit of cover\"; 13.08."
+ },
+ "891c18dc6cb1bbc3": {
+  "verdict": "ok",
+  "by": "review:r19-fixes",
+  "at": "2026-10-21",
+  "why": "NR princes p4 Categories: \"... Slaughterbound, Exalted Eightbound*, *from combined unit\", and the unit leads Exalted Eightbound (\"• Leading: Exalted Eightbound\"). Renaming the stats row \"Exalted Eightbound ×3\" (1 Champion + 2 Exalted Eightbound) changes nothing the note rests on."
  },
  "892b7f06aeaa2155": {
   "verdict": "ok",
@@ -3971,6 +4115,12 @@
   "at": "2026-10-16",
   "why": "Matches NR: Kan Blasta (Kill Shot / Point Blank / Dakka) ×6 and Kan Klaw ×6."
  },
+ "8d42c2a44321ffa9": {
+  "verdict": "ok",
+  "by": "review:r19-fixes",
+  "at": "2026-10-21",
+  "why": "Same name, same ability: the IK datasheets' \"Super-heavy Walker\" FACTION ability beside Core Rules \"SUPER-HEAVY WALKER 24.35\" (the GW PDF text matches RULES). The faction text matches Wahapedia's Codex: Imperial Knights army rule word for word (\"Each time a model with this ability makes a Normal, Advance or Fall Back move ... on a 1, that model is Battle-shocked.\"). ruleFor sends the label to the core rule (alias /^super-heavy walker/i), and showRule then shows the twin."
+ },
  "8de4eb361882a921": {
   "verdict": "ok",
   "by": "review:r12-calc-marks",
@@ -4024,6 +4174,12 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "“Add 2\" to the Move characteristic of models in LEGIO CYBERNETICA units from your army … add 1 to the Objective Control characteristic of models in that unit” (Faction Pack v1.4 Rules Updates): LEGIO CYBERNETICA picks only the Datasmith + Kastelan Robots unit here."
+ },
+ "8f35934d70da634a": {
+  "verdict": "ok",
+  "by": "review:r19-fixes",
+  "at": "2026-10-21",
+  "why": "Wahapedia core rules, 25.04 Fill Your Army Roster (Select Units) prints exactly: \"Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.\" The note is that quote and adds nothing (the GW Core Rules PDF has no section 25, so naming Wahapedia is right)."
  },
  "8f432292434d71c6": {
   "verdict": "ok",
@@ -4108,6 +4264,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "\"in your Command phase, you can return one destroyed Bodyguard model\"."
+ },
+ "91de69be4518423f": {
+  "verdict": "ok",
+  "by": "review:r19-fixes",
+  "at": "2026-10-21",
+  "why": "It shows the granting rule's text and the note that the value includes it. With printed (only the Knight Destrier: from {InSv:'Sanctuary'}, printed {InSv:'5+*'}), and with what=\"INV 5+\" mapped to InSv, it says \"New Recruit and BSData print 5+* here\", which is true (BSData Unit profile \"InSv 5+*\", NR \"8 5+* 150x95mm\"). Sanctuary reads \"The bearer has a 5+ invulnerable save.\""
  },
  "91f5119feb4e480b": {
   "verdict": "ok",
@@ -4222,6 +4384,12 @@
   "by": "review:r14-picks",
   "at": "2026-10-21",
   "why": "\"add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength.\" Picks Below Starting Strength (+1 to hit) and Below Half-strength (+1 to hit, +1 to wound) match; the single wording is 01.02.01’s for a one-model unit (\"remaining wounds are less than its W\" / \"less than half of its W\"; {half} = ceil(W/2)−1 is the most wounds still below half). Unit state is a table condition, so unticked."
+ },
+ "96e04b459d738c9e": {
+  "verdict": "ok",
+  "by": "review:r19-fixes",
+  "at": "2026-10-21",
+  "why": "Both quotes are in their sources: Enraged Behemoths (Wahapedia, Crusher Stampede) \"add 2 to the Objective Control characteristic of models in that unit\", and Singular Purpose \"an Objective Control characteristic of 15\". Core 02.02.01 Modifiers appears only as a cross-reference in rules/core-rules.md, the GW PDF and Wahapedia core, so the note names both results (15 or 17) and picks neither. The one ordering FAQ in the sources (AdMech Faction Pack 1.4, Auto-divinatory Targeting with the Protector Imperative: \"first changed to 3+ ... then improved by 1\") covers only those two rules."
  },
  "97554ed70c9ee4a2": {
   "verdict": "ok",
@@ -4433,6 +4601,18 @@
   "at": "2026-10-21",
   "why": "\"Each time an enemy unit ... is selected to Fall Back ... must Remain Stationary this phase instead\": fall-back and remain-stationary are move types the active player selects in the Move Units step of the Movement phase (09.02, 09.04, 09.07), so the enemy's (your opponent's) Movement phase, as signed off for Harpoon Barbs."
  },
+ "9d9bcb9766e506d9": {
+  "verdict": "ok",
+  "by": "review:r19-fixes",
+  "at": "2026-10-21",
+  "why": "Same BSData entries as princes: Scouts 6\" is on the Slaughterbound model only, and the Exalted Eightbound unit links Deep Strike but not Scouts. NR standard: \"Lord of the Eightbound - Slaughterbound ... this model has the Deep Strike and Scouts 6\" abilities.\""
+ },
+ "9da6bf8ff8d712f2": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "It finds exactly the rules that ask for a pick and say how long it lasts: Code Chivalric; Doctrina Imperatives; Blessings of Khorne (up to two); Kindred Sorcery (each once per battle); Singular Purpose (one per Norn unit copy); Wrathful Presence; Unearthly Power; Full Throttle; Canticles; Rod of the War Forge; Battle Protocols. Rolled only for Code Chivalric (“randomly select”), Honoured from “your army becomes Honoured”. The options themselves (Wrathful Presence’s abilities) are not choices."
+ },
  "9dbd9fcc381fd424": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -4498,6 +4678,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "Ranged-attack modifier; TITANIC, so your Shooting phase only."
+ },
+ "9fb2d76a556c5f62": {
+  "verdict": "ok",
+  "by": "review:r19-fixes",
+  "at": "2026-10-21",
+  "why": "Wahapedia core rules, 25.04 Fill Your Army Roster (Select Units) prints exactly: \"Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.\" The note is that quote and adds nothing (the GW Core Rules PDF has no section 25, so naming Wahapedia is right)."
  },
  "9ff8605c6ff55b02": {
   "verdict": "ok",
@@ -4576,6 +4762,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "Your Shooting phase."
+ },
+ "a2b31e149a65539e": {
+  "verdict": "ok",
+  "by": "review:r18b-game",
+  "at": "2026-10-21",
+  "why": "The sentence is now found on the **-free text it searches. Every list’s when still reads as its rule does: “At the end of the Read Mission Objectives step”, “At the start of the first battle round”, “At the start of the battle round”, “In your Command phase”, “At the start of your Command phase”."
  },
  "a329d040325f33fd": {
   "verdict": "ok",
@@ -4817,6 +5009,12 @@
   "at": "2026-10-18",
   "why": "WHEN: “a friendly ORKS VEHICLE unit (excluding WALKER units)”. TARGET: “That ORKS VEHICLE unit”. That gives Orks + Vehicle, and none Walker. “made a charge move this turn” is a condition, not a keyword. text: case only, “[Cleave 1]” vs “[CLEAVE 1]”."
  },
+ "abdb65a1b1bd8834": {
+  "verdict": "ok",
+  "by": "review:r19-fixes",
+  "at": "2026-10-21",
+  "why": "Run over all data texts, the two patterns find Full Throttle (\"select one Throttlerokkit Shokka Engine ability\" -> who Throttlerokkit Shokka Engine), Wrathful Presence (who \"Wrathful Presence: pick one\"), Unearthly Power (who Crimson King), Rod of the War Forge (falls back to the ability named Icon of War) and Canticles of the Omnissiah (itself, so no options). The only other hits are army rules (Bondsman, Cabal of Sorcerers), which showAbility never passes and which match no ability."
+ },
  "abee97793899579b": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -4985,6 +5183,12 @@
   "at": "2026-10-21",
   "why": "Same EFFECT: the selected one of [SUSTAINED HITS 1]/[LETHAL HITS], or all three with [HAZARDOUS], on ranged weapons until the end of the phase."
  },
+ "b09636eda8cca99c": {
+  "verdict": "ok",
+  "by": "review:r19-fixes",
+  "at": "2026-10-21",
+  "why": "Wahapedia core rules, 25.04 Fill Your Army Roster (Select Units) prints exactly: \"Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.\" The note is that quote and adds nothing (the GW Core Rules PDF has no section 25, so naming Wahapedia is right)."
+ },
  "b0ac654265d54dc9": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -5026,6 +5230,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "\"WHEN: Your Command phase\"."
+ },
+ "b17d6ccbebec1bbb": {
+  "verdict": "ok",
+  "by": "review:r19-fixes",
+  "at": "2026-10-21",
+  "why": "TARGET \"... unit from your army that is below its Starting Strength\", EFFECT \"Until the start of your next Command phase, each time a model in your unit makes an attack, you can re-roll the Hit roll. If your unit is Below Half-strength, you can re-roll the Wound roll as well.\" The gist says the same, shorter. It adds the TARGET condition the digest asked for, and needs carries the keywords."
  },
  "b1bb7ccc40ddcf56": {
   "verdict": "ok",
@@ -5579,6 +5789,12 @@
   "at": "2026-10-17",
   "why": "EFFECT: “You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).” The gist keeps both. The roll list it repeats is the WHEN’s, complete."
  },
+ "c638e54714706332": {
+  "verdict": "ok",
+  "by": "review:r19-fixes",
+  "at": "2026-10-21",
+  "why": "Both quotes are in their sources: Enraged Behemoths (Wahapedia, Crusher Stampede) \"add 2 to the Objective Control characteristic of models in that unit\", and Singular Purpose \"an Objective Control characteristic of 15\". Core 02.02.01 Modifiers appears only as a cross-reference in rules/core-rules.md, the GW PDF and Wahapedia core, so the note names both results (15 or 17) and picks neither. The one ordering FAQ in the sources (AdMech Faction Pack 1.4, Auto-divinatory Targeting with the Protector Imperative: \"first changed to 3+ ... then improved by 1\") covers only those two rules."
+ },
  "c6414cafe42dd01e": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -5681,6 +5897,12 @@
   "at": "2026-10-16",
   "why": "\"ingress move(s)\"; 20.04."
  },
+ "ca3acd8adf4b6be2": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "Their units are offered only where an option says to select one from the opponent’s army. Code Chivalric Deed 1–2 (“select one CHARACTER model in your opponent’s army”: their units with CHARACTER, e.g. “Mek + Tankbustas”, the unit holding that model). Invocation of Machine Vengeance (“select one unit from your opponent’s army”). Singular Purpose (“Select one enemy unit”). Nothing is offered before their list is picked."
+ },
  "cab4d5e961bad9ea": {
   "verdict": "ok",
   "by": "review:m5-new",
@@ -5771,6 +5993,12 @@
   "at": "2026-10-16",
   "why": "Matches NR, Thunderbuss included (the enhancement weapon)."
  },
+ "cd078543e132b9c9": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "at “Start of the battle round” → 07.01. “At the end of your opponent’s turn” (Ambushing Hunters) → End of the turn. Start/end of a named phase → that step only in that phase, during elsewhere. Start of the battle → the battle. These match what each rule’s words name."
+ },
  "cd0d55bc845278c9": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -5806,6 +6034,12 @@
   "by": "review:knights-nids (its fix)",
   "at": "2026-10-16",
   "why": "Onslaught gives \"[ASSAULT] and [LETHAL HITS]\" to ranged weapons with no turn limit. Every unit here with a ranged weapon is non-TITANIC, so it can Fire Overwatch (\"End of your opponent’s Movement phase\"). Snap shooting \"only hits on an unmodified hit roll of 6\", so every hit is critical and LETHAL HITS auto-wounds. Add the opponent’s Movement phase; shooting stays your turn."
+ },
+ "cfba43eca667f53a": {
+  "verdict": "ok",
+  "by": "review:r19-fixes",
+  "at": "2026-10-21",
+  "why": "AdMech \"FACTION PACK: VERSION 1.4\", FAQS: \"Q: When I select one of Thulia Ghuld's Icon of War abilities, when do I select the unit that ability affects? A: When you have selected the Icon of War ability you want to use.\" Both quotes match word for word, and nothing is added."
  },
  "cfcd5be12efdff9c": {
   "verdict": "ok",
@@ -6071,6 +6305,12 @@
   "at": "2026-10-21",
   "why": "New Recruit: \"1x Angron: Samni’arius and Spinegrinder, Warlord\", with the two profiles \"Samni’arius and Spinegrinder - strike\" and \"- sweep\". Both rows belong to the one weapon. Their A values 9/17 are Wahapedia’s 8/16 plus Relentless Rage, and the from:{A} marks say so."
  },
+ "d87f99cf42f9b664": {
+  "verdict": "ok",
+  "by": "review:r19b-fixes",
+  "at": "2026-10-21",
+  "why": "The quotes are unchanged and match Wahapedia core 02.05 Keywords FAQ word for word. The facts hold: the Faction Pack 1.2 Knight Destrier has \"KEYWORDS: ... Imperium, Knight Destrier\", BSData has only a \"Knight Destrier\" category, and Wahapedia strikes DESTRIER (\"Keyword does not appear in that faction.\"). The added sentence names both readings of the stratagem's \"or 9\" instead if your unit is an ARMIGER or DESTRIER unit\" (6\" or 9\") and picks neither, which is what the r19 needs-change asked for."
+ },
  "d886fcb08b64b5e2": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
@@ -6227,6 +6467,12 @@
   "at": "2026-10-16",
   "why": "\"While this model has 1-6 wounds remaining, subtract 4 from ... OC and ... subtract 1 from the Hit roll.\""
  },
+ "de3c1d43e0d675f2": {
+  "verdict": "ok",
+  "by": "review:r18b-game",
+  "at": "2026-10-21",
+  "why": "“until the start of your next Command phase” now has its own value, command, separate from the battle round (“until the end of the battle round”, “until the start of the next battle round”). Kindred Sorcery, Full Throttle, Canticles of the Omnissiah and Rod of the War Forge get it. Doctrina, Blessings, Wrathful Presence and Unearthly Power stay round, Code Chivalric and Singular Purpose battle, Battle Protocols kept."
+ },
  "de73571038d7b631": {
   "verdict": "ok",
   "by": "review:r12-calc-marks",
@@ -6305,6 +6551,12 @@
   "at": "2026-10-21",
   "why": "\"Friendly GRETCHIN units have BATTLELINE\" / \"a friendly GRETCHIN unit\": GRETCHIN only. Zodgrod's attached unit qualifies by 19.03."
  },
+ "e0225d9b7f27a3d1": {
+  "verdict": "ok",
+  "by": "review:r18b-game",
+  "at": "2026-10-21",
+  "why": "Insane Bravery (WHEN “Battle-shock step of your Command phase…”) is now under its own step, “Battle-shock 08.03” (GW Core Rules PDF heading “3. BATTLE-SHOCK 08.03”). “Command Abilities 08.04” keeps the rest, as its words say (“excluding those … triggered … by battle-shock rolls”). The Fight middle reads “Pile In 12.02 · Fight 12.04 · Consolidate 12.07”, which are the PDF’s headings. Other steps are unchanged."
+ },
  "e03e0d4c817053e9": {
   "verdict": "ok",
   "by": "review:r14-calc",
@@ -6346,6 +6598,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "15.03 \"WHEN: Fight phase, just after a friendly CHARACTER unit is selected to fight.\""
+ },
+ "e1ddb3de9c725e13": {
+  "verdict": "ok",
+  "by": "review:r19-fixes",
+  "at": "2026-10-21",
+  "why": "BSData (IK Library, Canis Rex unit 55fb-9c91-1a4f-3037) links \"Lone Operative\" only on the Sir Hekhtur model entry. The Canis Rex model has Deadly Demise, Sustained Hits, Super-Heavy Walker, Blast and Code Chivalric. NR prints it only on the unit's Rules line (\"..., Code Chivalric, Lone Operative\"), naming no model, so \"Sir Hekhtur\" matches the sources."
  },
  "e1f1e4dd0e935ceb": {
   "verdict": "ok",
@@ -6442,6 +6700,12 @@
   "by": "review:m5-new",
   "at": "2026-10-20",
   "why": "Source: \"In your Movement phase, when this unit ends a normal move …\". The text names your Movement phase, so {ph:['movement'], turn:'your'}, the same as the approved shooty Mek Bomb Squig timing."
+ },
+ "e52c38c6c9f25b0f": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "It quotes the CP sentence of each army rule, detachment rule and usable ability once, with its units, and skips the italic FAQ/errata lines (Da Boss’s errata). Placed under Command points next to 08.02 (“Both players gain 1 Command Point (CP).”) and the Event Companion cap (“Excluding Core CP, each player can gain a maximum of 1CP per battle round …”), which is their place."
  },
  "e577aca646c11203": {
   "verdict": "ok",
@@ -6676,6 +6940,12 @@
   "by": "review:cooking (its fix)",
   "at": "2026-10-16",
   "why": "The rule says \"another friendly ORKS INFANTRY unit\". The app drops \"friendly\", so in an Ork mirror an enemy Infantry unit could wrongly be counted. [restored: the same judgement on the same text, signed off for an earlier list]"
+ },
+ "ebef5b1486218daa": {
+  "verdict": "ok",
+  "by": "review:r19-fixes",
+  "at": "2026-10-21",
+  "why": "Both quotes are in their sources: Enraged Behemoths (Wahapedia, Crusher Stampede) \"add 2 to the Objective Control characteristic of models in that unit\", and Singular Purpose \"an Objective Control characteristic of 15\". Core 02.02.01 Modifiers appears only as a cross-reference in rules/core-rules.md, the GW PDF and Wahapedia core, so the note names both results (15 or 17) and picks neither. The one ordering FAQ in the sources (AdMech Faction Pack 1.4, Auto-divinatory Targeting with the Protector Imperative: \"first changed to 3+ ... then improved by 1\") covers only those two rules."
  },
  "ec06f99eb0858c2b": {
   "verdict": "ok",
@@ -6935,6 +7205,18 @@
   "at": "2026-10-21",
   "why": "“That VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase”: that outlasts the start of your next Command phase, so 'round' never says longer than the words and still covers every later step of this turn and the opponent's. “select one friendly ORKS VEHICLE model … That VEHICLE model’s attacks” is one model, so oneModel:true is right; the note repeats the duration word for word."
  },
+ "f78aa33334249bd2": {
+  "verdict": "ok",
+  "by": "review:r18b-game",
+  "at": "2026-10-21",
+  "why": "Only the Game tracker’s data-gnew calls it now, and its toast names what it clears: “New game: round, CP, VP, choices and both lists’ uses per battle cleared”. The Overview’s data-newgame handler matches 5bfdfca line for line: this list’s uses per battle only, toast “New game: uses per battle cleared”."
+ },
+ "f7b68c48be03c803": {
+  "verdict": "ok",
+  "by": "review:r19-fixes",
+  "at": "2026-10-21",
+  "why": "Wahapedia core rules, 25.04 Fill Your Army Roster (Select Units) prints exactly: \"Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.\" The note is that quote and adds nothing (the GW Core Rules PDF has no section 25, so naming Wahapedia is right)."
+ },
  "f7bf31d0c7d7834e": {
   "verdict": "ok",
   "by": "review:r14-calc",
@@ -7157,6 +7439,12 @@
   "at": "2026-10-16",
   "why": "Wahapedia and NR: \"War Cry (Once per battle, per army)\"."
  },
+ "feca44625d46ab7f": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "One option, tapped again for none. For Blessings, up to two with a third replacing the first, and the same Blessing can’t be picked twice (“You can only activate each Blessing of Khorne once per battle round”). Rolled/state/their unit toggle, and a new option clears its unit. A Kindred Sorcery pick ticks the Overview’s box for that ability (same key as its Uses per battle) and unticks it only if no other round picked it."
+ },
  "fed3be5b69c29121": {
   "verdict": "ok",
   "by": "review:r9-pubstomper",
@@ -7192,5 +7480,11 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "New Recruit prints “Kustom Dakka - Mek”; model lines as NR."
+ },
+ "fffea01d7b0e2b2e": {
+  "verdict": "ok",
+  "by": "review:r19-fixes",
+  "at": "2026-10-21",
+  "why": "GW IK Faction Pack \"VERSION 1.2\" prints \"FACTION: Code Chivalric, Super-heavy Walker\" on its datasheets. The Codex text (Wahapedia, Codex: Imperial Knights army rules) differs from 24.35 (\"excluding TITANIC models\" vs \"including MONSTER/VEHICLE ... MOBILE keyword\"). Neither 22.02 (\"faction abilities (also known as army rules)\") nor the Universal Rules Updates 1.1 settles which applies, so \"the sources don't say which applies\" is a both-readings note that picks neither."
  }
 }
