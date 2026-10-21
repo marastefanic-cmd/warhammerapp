@@ -114,7 +114,7 @@ function check(file){
         for(const n of u.unplaced || []){
           if(u.gear.some(g => g.includes(n))) P(where, 'unplaced is also on a models line:', n);
           const things = new Set([...weapons.filter(w => (w.group || w.name) === n).map(w => w.group ? 'group' : 'weapon:' + w.name), ...(u.abilities || []).filter(ab => ab.name === n).map(() => 'ability')]);
-          if(things.size > 1) P(where, 'unplaced name is both a weapon and an ability:', n);
+          if(things.size > 1) P(where, 'unplaced name matches more than one weapon or ability:', n);
           if((u.unplaced || []).filter(x => x === n).length > 1) P(where, 'unplaced lists a name twice:', n);
         }
         const carried = new Set([...u.gear.flat(), ...(u.unplaced || [])]);
