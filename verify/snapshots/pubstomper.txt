@@ -1,0 +1,4082 @@
+######## army · STANDARD Pubstomper
+Thousand Sons · 2000 / 2000 pts · Strike Force
+
+Grand Coven · Disposition: Priority Assets
+
+Overview
+Damage calculator
+Units
+9
+Stratagems
+16
+Ranged weapons
+20
+Melee weapons
+13
+Abilities
+25
+Rules
+Bases & proxies
+39
+Keep screen on
+Off
+
+New Recruit, exported 20 Oct 2026
+
+######## pregame · PUBSTOMPER Overview
+YOUR LIST
+WARLORD
+Magnus the Red
+ENHANCE­MENTS
+Eldritch Vortex of E’taph 35 pts on Daemon Prince of Tzeentch with wings
+Umbralefic Crystal 30 pts on Sorcerer in Terminator Armour
+ATTACHED
+Sorcerer leads Rubric Marines
+Sorcerer in Terminator Armour leads Scarab Occult Terminators
+DETACH­MENTS
+Grand Coven (3 DP)
+Disposition: Priority Assets
+POINTS
+2000 / 2000 · Strike Force
+ARMY RULES
+Cabal of Sorcerers
+Your Shoot/Charge
+
+If your Army Faction is THOUSAND SONS, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.
+
+Psychic Test Sequence
+
+Roll 2D6
+Channel the Warp (Optional)
+Then, if one or more doubles or triples were rolled during this test, that model’s unit suffers D3 mortal wounds.
+If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects.
+
+FAQ (Faction Pack 1.3): Do I need to sequence all of my Cabal of Sorcerers Rituals at the start of my Shooting phase? No, you just pick a model with the Cabal of Sorcerers rule, pick a Ritual to manifest, and attempt it, then repeat the process until you have run out of models or Rituals or both.
+
+FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, do I have to choose whether to Channel the Warp before rolling any dice? No.
+
+FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, if I roll one or more doubles or triples, does my model only suffer D3 mortal wounds if I chose to Channel the Warp? Yes.
+
+App note, not rules text: Channel the Warp means rolling one more D6 for the test (the printed card shows it as a die).
+
+Destiny’s Ruin (Psychic) · Warp Charge 5
+
+Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, re-roll a Hit roll of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.
+
+Temporal Surge (Psychic) · Warp Charge 6
+
+Select one friendly THOUSAND SONS or SCINTILLATING LEGIONS unit that is not within Engagement Range of one or more enemy units and is within 24" of and visible to the manifesting model. That unit can make a Normal move of up to D6". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.
+
+Doombolt (Psychic) · Warp Charge 7
+
+Select one enemy unit within 24" of and visible to the manifesting model (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12" of the manifesting model); that unit suffers D3 mortal wounds. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.
+
+Twist of Fate (Psychic) · Warp Charge 9
+
+Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead.
+
+Pact of Sorcery
+
+When mustering your army, unless specifically stated otherwise, you cannot select SCINTILLATING LEGIONS as your Army Faction.
+
+DECLARE BATTLE FORMATIONS
+DEEP STRIKE
+Magnus the Red 455 pts
+Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph 205 pts
+Sorcerer in Terminator Armour + Scarab Occult Terminators 565 pts
+All of them: 1225 pts
+DEPLOYMENT AND PRE-BATTLE ABILITIES
+SCOUTS
+Tzaangors Scouts 6"
+START OF THE BATTLE ROUND
+EVERY ROUND
+Unearthly Power · Magnus the Red
+USES PER BATTLE
+NEW GAME
+RULES
+Kindred Sorcery · Grand Coven:
+Imbued Manifestation
+Psychic Maelstrom
+Wrath of the Immaterium
+ABILITIES
+Twisted Sorceries · Sorcerer + Rubric Marines
+Umbralefic Crystal · Sorcerer in Terminator Armour per army
+STRATA­GEMS
+1CP Insane Bravery
+
+Gathered from this list’s datasheets and rules; each line opens the full text.
+
+######## units · OVERVIEW Units Unit M T Sv W LD OC InSv Pts
+EPIC HEROES
+1
+Magnus the Red
+Warlord
+14"
+11
+2+
+16
+5+
+6
+4+
+455
+CHARACTERS
+3
+Daemon Prince of Tzeentch with wings
+Eldritch Vortex of E’taph
+13"
+9
+2+
+10
+6+
+3
+4+
+205
+Sorcerer
++ Rubric Marines
+215
+Sorcerer
+6"
+5
+3+
+4
+6+
+1
+5+
+Rubric Marine
+6"
+5
+3+
+2
+7+
+2
+5+
+Aspiring Sorcerer
+6"
+5
+3+
+3
+6+
+2
+5+
+Sorcerer in Terminator Armour
++ Scarab Occult Terminators
+Umbralefic Crystal
+565
+Sorcerer in Terminator Armour
+5"
+6
+2+
+5
+6+
+1
+4+
+Scarab Occult Sorcerer
+5"
+6
+2+
+4
+6+
+1
+4+
+Scarab Occult Terminator×9
+5"
+6
+2+
+3
+7+
+1
+4+
+INFANTRY
+1
+Tzaangors
+1× Twistbray, 7× Tzaangor w/ Tzaangor blades, 1× Tzaangor w/ Tzaangor blades (Brayhorn), 1× Tzaangor w/ Tzaangor blades (Herd banner)
+6"
+4
+6+
+1
+7+
+1
+6+
+75
+MOUNTED
+3
+Tzaangor Enlightened
+1× Aviarch, 2× Divining spear Enlightened
+10"
+4
+5+
+2
+7+
+2
+5+
+2×50
+Tzaangor Enlightened with Fatecaster greatbows
+1× Aviarch, 2× Enlightened
+10"
+4
+5+
+2
+7+
+2
+5+
+55
+VEHICLES
+1
+Defiler
+12"
+11
+3+
+18
+6+
+5
+5+
+330
+
+######## ranged · UNITS Ranged weapons WEAPON RNG A BS S AP D
+Magnus the Red
+Warlord
+Gaze of Magnus
+24"
+3D3
+2+
+11
+-2
+3
+DEVASTATING WOUNDS, PSYCHIC
+Tzeentch’s Firestorm
+24"
+D6+3
+2+
+6
+-1
+2
+BLAST, IGNORES COVER, PSYCHIC
+Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 wounds remaining)
+Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+STRATAGEMS · GRAND COVEN
+2CP +9" range, re-roll hit and wound rolls, Psychic weapons, your Shooting phase (Devastating Sorcery)
+Daemon Prince of Tzeentch with wings
+Eldritch Vortex of E’taph
+Dark Blessing
+24"
+9
+2+
+5
+-1
+2
+IGNORES COVER, PSYCHIC, SUSTAINED HITS 1
+Infernal cannon
+24"
+3
+2+
+5
+-2
+2
+vs CHARACTER units: re-roll hit rolls of 1 and wound rolls of 1 (vs PSYKER CHARACTER units: re-roll the hit roll and the wound roll) (Hunter of Souls)
+After an aetherstride this turn: Dark Blessing has [SUSTAINED HITS D3] (Aetherstride)
+Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+STRATAGEMS · GRAND COVEN
+2CP +9" range, re-roll hit and wound rolls, Psychic weapons, your Shooting phase (Devastating Sorcery)
+Sorcerer
++ Rubric Marines
+SORCERER
+Pandaemonic Delusion
+24"
+6
+3+
+5
+-1
+1
+PSYCHIC, SUSTAINED HITS 3, LETHAL HITS
+OR
+WHEN USING ANOTHER SHOOTING TYPE
+Inferno bolt pistol
+12"
+1
+3+
+5
+-2
+1
+PISTOL, LETHAL HITS
+RUBRIC MARINES
+
+Aspiring Sorcerer can shoot with Warpflame pistol or Malefic Curse, not both (Close-quarters); in close-quarters shooting, Warpflame pistol only.
+
+The others: one each (×N = how many the unit has).
+
+Malefic CurseASPIRING SORCERER
+24"
+3
+3+
+4
+-3
+1
+ANTI-INFANTRY 4+, DEVASTATING WOUNDS, IGNORES COVER, PSYCHIC, LETHAL HITS
+Warpflame pistolASPIRING SORCERER
+12"
+D6
+–
+3
+-1
+1
+IGNORES COVER, PISTOL, TORRENT, LETHAL HITS
+Soulreaper cannonRUBRIC MARINE
+24"
+6
+3+
+6
+-2
+1
+DEVASTATING WOUNDS, IGNORES COVER, LETHAL HITS
+Warpflamer×3
+12"
+D6
+–
+4
+-1
+1
+IGNORES COVER, TORRENT, LETHAL HITS
+Twisted Sorceries used this phase (your Shooting phase or the Fight phase, once per battle): Sorcerer Psychic weapons +3 S and +3 A
+Every ranged attack: re-roll wound rolls of 1 (vs a unit within range of an objective marker you do not control: re-roll the wound roll) (Bringers of Change)
+Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+STRATAGEMS · GRAND COVEN
+2CP +9" range, re-roll hit and wound rolls, Psychic weapons, your Shooting phase (Devastating Sorcery)
+Sorcerer in Terminator Armour
+Umbralefic Crystal
++ Scarab Occult Terminators
+SORCERER IN TERMINATOR ARMOUR
+Gaze of Hate
+18"
+3
+3+
+4
+-3
+2
+ANTI-MONSTER 4+, ANTI-VEHICLE 4+, DEVASTATING WOUNDS, PSYCHIC, LETHAL HITS
+Inferno combi-bolter
+24"
+2
+3+
+5
+-2
+1
+RAPID FIRE 2, LETHAL HITS
+SCARAB OCCULT TERMINATORS
+Malefic CurseSCARAB OCCULT SORCERER
+24"
+3
+3+
+4
+-3
+1
+ANTI-INFANTRY 4+, DEVASTATING WOUNDS, PSYCHIC, LETHAL HITS
+Inferno combi-bolter×8
+24"
+2
+3+
+5
+-2
+1
+RAPID FIRE 2, LETHAL HITS
+Soulreaper cannon×2
+24"
+6
+3+
+6
+-2
+1
+DEVASTATING WOUNDS, LETHAL HITS
+Hellfyre missile rack×2WHICH MODELS: NOT SAID
+36"
+2
+3+
+10
+-2
+3
+LETHAL HITS
+Your Shooting phase, vs the enemy unit picked at its start: +1 to hit rolls (Marked by Fate)
+Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+STRATAGEMS · GRAND COVEN
+2CP +9" range, re-roll hit and wound rolls, Psychic weapons, your Shooting phase (Devastating Sorcery)
+Tzaangor Enlightened with Fatecaster greatbows
+Fatecaster greatbow×3
+30"
+2
+4+
+5
+-2
+2
+IGNORES COVER, LETHAL HITS, PRECISION
+Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+Defiler
+Ectoplasma destructor
+36"
+D6
+3+
+12
+-3
+3
+BLAST
+Excruciator cannon×2
+36"
+6
+3+
+6
+-2
+2
+Heavy reaper autocannon×2
+48"
+4
+3+
+9
+-2
+3
+DEVASTATING WOUNDS, SUSTAINED HITS 1
+Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 wounds remaining)
+Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+
+######## melee · RANGED Melee weapons WEAPON A WS S AP D
+Magnus the Red
+Warlord
+Blade of Magnus
+➤strike
+7
+2+
+16
+-3
+3
+DEVASTATING WOUNDS, PSYCHIC
+➤sweep
+14
+2+
+8
+-1
+2
+PSYCHIC
+Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 wounds remaining)
+Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+Daemon Prince of Tzeentch with wings
+Eldritch Vortex of E’taph
+Hellforged weapons
+➤strike
+6
+2+
+9
+-2
+4
+DEVASTATING WOUNDS, PSYCHIC
+➤sweep
+12
+2+
+7
+-1
+2
+DEVASTATING WOUNDS, PSYCHIC
+vs CHARACTER units: re-roll hit rolls of 1 and wound rolls of 1 (vs PSYKER CHARACTER units: re-roll the hit roll and the wound roll) (Hunter of Souls)
+Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+Sorcerer
++ Rubric Marines
+SORCERER
+Force weapon
+4
+3+
+6
+-1
+D3
+PSYCHIC, LETHAL HITS
+OR
+Prosperine khopesh
+3
+3+
+5
+-2
+2
+LETHAL HITS
+RUBRIC MARINES
+Force weaponASPIRING SORCERER
+3
+3+
+6
+-1
+D3
+PSYCHIC, LETHAL HITS
+Close combat weapon×4
+2
+3+
+5
+0
+1
+LETHAL HITS
+Twisted Sorceries used this phase (your Shooting phase or the Fight phase, once per battle): Sorcerer Psychic weapons +3 S and +3 A
+Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+Sorcerer in Terminator Armour
+Umbralefic Crystal
++ Scarab Occult Terminators
+SORCERER IN TERMINATOR ARMOUR
+Force weapon
+5
+3+
+6
+-1
+D3
+PSYCHIC, LETHAL HITS
+SCARAB OCCULT TERMINATORS
+Force weaponSCARAB OCCULT SORCERER
+4
+3+
+6
+-1
+D3
+PSYCHIC, LETHAL HITS
+Prosperine khopesh×9
+3
+3+
+5
+-2
+2
+LETHAL HITS
+Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+Tzaangors
+Tzaangor blades×10
+2
+4+
+5
+0
+1
+Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+Tzaangor Enlightened
+×2 units
+Divining spear×3
+3
+4+
+5
+-1
+2
+LANCE, PRECISION
+Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+Made a charge move this turn: Divining spear +1 to wound (Lance)
+Tzaangor Enlightened with Fatecaster greatbows
+Close combat weapon×3
+2
+4+
+4
+0
+1
+Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+Defiler
+Shearing claws
+➤strike
+5
+3+
+16
+-3
+D6+1
+➤sweep
+10
+3+
+6
+-2
+1
+Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 wounds remaining)
+Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+
+######## abilities · MELEE Abilities
+Magnus the Red
+Warlord
+Damaged: 1-6 wounds remaining
+
+While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+Unearthly Power
+Command
+
+Start of the battle round
+
+At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.
+
+Lord of the Planet of the Sorcerers
+Your Shooting
+
+Psychic · Shooting · Your turn
+
+This model can attempt up to 2 Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.
+
+CRIMSON KING
+Impossible Form
+
+Psychic
+
+Each time an attack is made against this PSYKER (excluding Psychic Attacks), subtract 1 from the Damage characteristic of that attack.
+
+Treason of Tzeentch
+Their Shooting
+
+Psychic · Shooting · Their turn
+
+At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this PSYKER. Until the end of the phase, ranged weapons equipped by models in that unit have the [HAZARDOUS] ability.
+
+Time Flux
+Your Movement
+
+Aura, Psychic · Movement · Your turn
+
+While a friendly THOUSAND SONS unit is within 6" of this PSYKER, add 2" to the Move characteristic of models in that unit.
+
+Daemon Prince of Tzeentch with wings
+Eldritch Vortex of E’taph
+Aetherstride
+Your Move/Shoot/Charge
+
+Psychic · Movement / Shooting / Charge · Your turn
+
+In your Movement phase, when this model is set up on the battlefield using the Deep Strike ability, it can perform an aetherstride. If it does:
+
+It can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units.
+Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability.
+Until the end of the turn, it is not eligible to declare a charge.
+Hunter of Souls
+Their Move · Your Shoot · Fight
+
+Their Movement / Your Shooting / Fight (either turn)
+
+Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a CHARACTER unit, this model regains up to D3 lost wounds (if that CHARACTER unit was a PSYKER, this model regains up to 3 lost wounds instead).
+
+Eldritch Vortex of E’taph
+Enhancement
+
+Enhancement
+
+THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.
+
+Sorcerer
++ Rubric Marines
+SORCERER
+Twisted Sorceries
+Once per battle
+Your Shoot · Fight
+
+Psychic · Your Shooting / Fight (either turn)
+
+Once per battle, in your Shooting phase or the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristic of Psychic weapons equipped by this model by 3.
+
+Empyric Guidance
+
+Psychic
+
+While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.
+
+RUBRIC MARINES
+Bringers of Change
+Their Move · Your Shoot
+
+Their Movement / Your Shooting
+
+Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead.
+
+Icon of Flame
+
+Ranged weapons equipped by models in the bearer’s unit (excluding CHARACTERS) have the [IGNORES COVER] ability.
+
+Sorcerer in Terminator Armour
+Umbralefic Crystal
++ Scarab Occult Terminators
+SORCERER IN TERMINATOR ARMOUR
+Marked by Fate
+Your Shooting
+
+Psychic · Shooting · Your turn
+
+At the start of your Shooting phase, select one enemy unit that is visible to this PSYKER model. Until the end of the phase, each time a model in this unit makes an attack that targets that enemy unit, add 1 to the Hit roll.
+
+Empyric Guidance
+
+Psychic
+
+While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.
+
+Umbralefic Crystal
+Enhancement
+Once per battle, per army
+Your Command/Move
+
+Enhancement · Command / Movement · Your turn
+
+THOUSAND SONS model only. (Once per battle, per army) In your Command phase, if this unit is unengaged, you can use this ability. If you do:
+
+Place this unit in strategic reserves.
+This unit has Deep Strike until the start of your next Shooting phase.
+This unit must make an ingress move in your next Movement phase (including in your first turn).
+SCARAB OCCULT TERMINATORS
+Rites of Coalescence
+
+While this unit contains one or more PSYKER models, each time an attack targets this unit, subtract 1 from the Wound roll.
+
+Tzaangors
+Ambushing Hunters
+Their Fight
+
+End of your opponent’s turn
+
+At the end of your opponent’s turn, if this unit is more than 6" horizontally away from all enemy units, you can remove this unit from the battlefield and place it into Strategic Reserves.
+
+Brayhorn
+Your Move · Charge
+
+Your Movement / Charge (either turn)
+
+You can re-roll Advance and Charge rolls made for the bearer’s unit.
+
+Herd banner
+
+While the bearer’s unit is within range of one or more objective markers you control, improve the Leadership characteristic of models in the bearer’s unit by 1.
+
+Tzaangor Enlightened
+×2 units
+Prophesied Doom
+Charge
+
+Charge · Either turn
+
+Each time this unit makes a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound.
+
+Tzaangor Enlightened with Fatecaster greatbows
+Malign Trickery
+Their Movement
+
+Movement · Their turn
+
+In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6”.
+
+Defiler
+Scuttling Walker
+Your Move/Shoot
+
+Movement / Shooting · Your turn
+
+Each time this unit makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and terrain features. When doing so, it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.
+
+Destroyer of Futures
+Once per phase, per unit
+Their Fight
+
+Once per phase, per unit · Fight · Their turn
+
+You can target this unit with the Counteroffensive stratagem, regardless of any other uses of that stratagem this phase. If you do:
+
+That use is -1 CP.
+That use does not prevent any uses of that stratagem on other units this phase.
+Damaged: 1-6 wounds remaining
+
+While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+######## rules · ABILITIES Rules
+Thousand Sons · Priority Assets
+ARMY RULES
+Cabal of Sorcerers
+Your Shoot/Charge
+
+If your Army Faction is THOUSAND SONS, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.
+
+Psychic Test Sequence
+
+Roll 2D6
+Channel the Warp (Optional)
+Then, if one or more doubles or triples were rolled during this test, that model’s unit suffers D3 mortal wounds.
+If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects.
+
+FAQ (Faction Pack 1.3): Do I need to sequence all of my Cabal of Sorcerers Rituals at the start of my Shooting phase? No, you just pick a model with the Cabal of Sorcerers rule, pick a Ritual to manifest, and attempt it, then repeat the process until you have run out of models or Rituals or both.
+
+FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, do I have to choose whether to Channel the Warp before rolling any dice? No.
+
+FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, if I roll one or more doubles or triples, does my model only suffer D3 mortal wounds if I chose to Channel the Warp? Yes.
+
+App note, not rules text: Channel the Warp means rolling one more D6 for the test (the printed card shows it as a die).
+
+Destiny’s Ruin (Psychic) · Warp Charge 5
+
+Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, re-roll a Hit roll of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.
+
+Temporal Surge (Psychic) · Warp Charge 6
+
+Select one friendly THOUSAND SONS or SCINTILLATING LEGIONS unit that is not within Engagement Range of one or more enemy units and is within 24" of and visible to the manifesting model. That unit can make a Normal move of up to D6". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.
+
+Doombolt (Psychic) · Warp Charge 7
+
+Select one enemy unit within 24" of and visible to the manifesting model (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12" of the manifesting model); that unit suffers D3 mortal wounds. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.
+
+Twist of Fate (Psychic) · Warp Charge 9
+
+Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead.
+
+Pact of Sorcery
+
+When mustering your army, unless specifically stated otherwise, you cannot select SCINTILLATING LEGIONS as your Army Faction.
+
+DETACHMENTS
+GRAND COVEN
+Kindred Sorcery
+Detachment rule · Your Command · Their Move · Your Shoot · Fight
+
+In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.
+
+Imbued Manifestation
+
+Add 6" to the Range characteristic of ranged Psychic weapons equipped by THOUSAND SONS models from your army.
+
+Psychic Maelstrom
+
+Each time a THOUSAND SONS model from your army makes an attack with a Psychic weapon, add 1 to the Wound roll.
+
+Wrath of the Immaterium
+
+Psychic weapons equipped by THOUSAND SONS models from your army have the [DEVASTATING WOUNDS] ability.
+
+APPLIES TOMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal, Tzaangors, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows, Defiler
+
+Umbralefic Crystal
+Enhancement · 30 pts · on Sorcerer in Terminator Armour + Scarab Occult Terminators
+
+THOUSAND SONS model only. (Once per battle, per army) In your Command phase, if this unit is unengaged, you can use this ability. If you do:
+
+Place this unit in strategic reserves.
+This unit has Deep Strike until the start of your next Shooting phase.
+This unit must make an ingress move in your next Movement phase (including in your first turn).
+
+ONSorcerer in Terminator Armour + Scarab Occult Terminators
+
+Eldritch Vortex of E’taph
+Enhancement · 35 pts · on Daemon Prince of Tzeentch with wings
+
+THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.
+
+ONDaemon Prince of Tzeentch with wings
+
+Other enhancements
+2 not in this list
+Lord of Forbidden Lore 20 pts
+
+THOUSAND SONS model only. Each time the bearer manifests a Ritual, while resolving that Ritual, add 6" to its range.
+
+Incandaeum 15 pts
+
+EXALTED SORCERER model only. Once per battle, when selecting a Ritual for the bearer to attempt, you can select Doombolt, even if a model from your army have already attempted to manifest that Ritual this phase.
+
+STRATAGEMSEgotistical Power, Desecration of Worlds, Arcane Focus, Devastating Sorcery, Psychic Dominion, Destined by Fate
+
+UNIT RULES
+Deadly Demise
+
+Magnus the Red D6
+
+Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph D3
+
+Defiler D6
+
+Deep Strike
+
+Magnus the Red
+
+Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph
+
+Sorcerer in Terminator Armour + Scarab Occult Terminators
+
+Hazardous
+
+Magnus the Red
+Treason of Tzeentch: At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this PSYKER. Until the end of the phase, ranged weapons equipped by models in that unit have the [HAZARDOUS] ability.
+
+Leader
+
+Sorcerer leads Rubric Marines
+
+Sorcerer in Terminator Armour leads Scarab Occult Terminators
+
+Scouts
+
+Tzaangors 6"
+
+######## bases · RULES Bases & proxies
+BASES TO PRINT
+
+15× 32mm
+21× 40mm
+1× 60mm
+1× 100mm
+1× 160mm
+
+WHAT TO WRITE ON EACH BASE
+
+Magnus the Red
+1× 100mm
+Magnus the Red · Warlord
+Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph
+1× 60mm
+Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph
+Sorcerer
++ Rubric Marines
+1× 40mm
+Sorcerer
+1× 32mm
+Aspiring Sorcerer · Force weapon + Malefic Curse + Warpflame pistol
+1× 32mm
+Soulreaper cannon · no Warpflamer
+3× 32mm
+standard Close combat weapon, Warpflamer
+1× Icon of Flame: New Recruit lists it for the Rubric Marines, not which model carries it
+Sorcerer in Terminator Armour · Umbralefic Crystal
++ Scarab Occult Terminators
+1× 40mm
+Sorcerer in Terminator Armour · Umbralefic Crystal
+1× 40mm
+Scarab Occult Sorcerer · Force weapon + Malefic Curse
+7× 40mm
+standard Inferno combi-bolter, Prosperine khopesh
+2× 40mm
+Soulreaper cannon · no Inferno combi-bolter
+2× Hellfyre missile rack: New Recruit lists them for the Scarab Occult Terminators, not which models carry them
+Tzaangors
+1× 32mm
+Twistbray
+7× 32mm
+standard Tzaangor blades
+1× 32mm
+Brayhorn
+1× 32mm
+Herd banner
+Tzaangor Enlightened
+2 units: mark them apart (1, 2)
+1× 40mm
+Aviarch
+2× 40mm
+standard Divining spear
+Tzaangor Enlightened with Fatecaster greatbows
+1× 40mm
+Aviarch
+2× 40mm
+standard Close combat weapon, Fatecaster greatbow
+Defiler
+1× 160mm
+Defiler
+
+From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
+
+######## damage shooting · BASES Damage
+OPPONENT
+Nidzillas
+Tyranids
+YOU ATTACK
+THEY ATTACK
+SHOOTING
+FIGHT
+ATTACKER · YOURS
+Magnus the Red
+1 model
+TARGET · THEIRS
+The Swarmlord
+T10 · Sv 2+ · 4+ InSv · W10
+0.3
+of 1 model destroyed
+6.7
+wounds lost
+26%
+unit destroyed
+HITS
+WOUNDS
+THROUGH
+Gaze of Magnus
+5.0
+3.3
+2.0
+Tzeentch’s Firestorm
+4.7
+1.6
+0.5
+WEAPONS
+Gaze of Magnus
+24" · A3D3 · 2+ · S11 · AP-2 · D3 · DEVASTATING WOUNDS, PSYCHIC
+Tzeentch’s Firestorm
+24" · AD6+3 · 2+ · S6 · AP-1 · D2 · BLAST, IGNORES COVER, PSYCHIC
+SITUATION
+Distance to the target
+inches; blank: not set
+Target has the benefit of cover
+Plunging Fire
+on terrain 3" or higher, or TOWERING with the target within 12": BS improved by 1
+Close-quarters shooting at a unit it is engaged with
+-1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
+Target is engaged
+-1 to hit; no [BLAST]
+Fire Overwatch (snap shooting)
+hits only on an unmodified 6, never critical; no hit re-rolls
+Damaged (1-6 wounds left)
+-1 to hit rolls
+MAGNUS THE RED’S RULES
+Kindred Sorcery
+Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS] · not in these numbers
+2CP Devastating Sorcery
+Psychic weapons, your Shooting phase: +9" range, re-roll hit and wound rolls
+THE SWARMLORD WHEN TARGETED
+
+Nothing that changes these numbers.
+
+OTHER MODIFIERS
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP better
+−
+0
++
+Damage
+−
+0
++
+Attacks
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+Averages over 10,000 games played out with the dice; one unit’s attacks against the other, nothing used up. Rules marked “not counted” are not in these numbers.
+
+How this is worked out
+what the rules say, and what the calculator does where they leave a choice
+
+Weapons (04.03): the rules let the attacker pick which weapon’s attacks are resolved next; the calculator takes them in the order listed, and rolls identical attacks together.
+
+Saves and damage (05.03, 05.04): save rolls are rolled together and used from the lowest; an attack that gets through damages the one model it was allocated to, so damage beyond that model’s wounds is lost; Feel No Pain is rolled for each wound (24.12).
+
+[PSYCHIC] (24.29): an attack that can ignore any or all modifiers to BS and to the hit roll: the calculator ignores the ones that make it worse and keeps the others.
+
+[BLAST] and [CLEAVE] (24.05, 24.06): one more attack dice (X with [BLAST X] or [CLEAVE X]) for every five models the target had before these attacks.
+
+######## damage fight · DAMAGE Damage
+OPPONENT
+Nidzillas
+Tyranids
+YOU ATTACK
+THEY ATTACK
+SHOOTING
+FIGHT
+ATTACKER · YOURS
+Magnus the Red
+1 model
+TARGET · THEIRS
+The Swarmlord
+T10 · Sv 2+ · 4+ InSv · W10
+0.2
+of 1 model destroyed
+6.6
+wounds lost
+19%
+unit destroyed
+HITS
+WOUNDS
+THROUGH
+Blade of Magnus
+5.8
+3.8
+2.3
+WEAPONS
+Blade of Magnus
+Melee · A7 · 2+ · S16 · AP-3 · D3 · DEVASTATING WOUNDS, PSYCHIC
+strike
+sweep
+SITUATION
+Made a charge move this turn
+Damaged (1-6 wounds left)
+-1 to hit rolls
+MAGNUS THE RED’S RULES
+Kindred Sorcery
+Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS] · not in these numbers
+THE SWARMLORD WHEN TARGETED
+
+Nothing that changes these numbers.
+
+OTHER MODIFIERS
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP better
+−
+0
++
+Damage
+−
+0
++
+Attacks
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+Averages over 10,000 games played out with the dice; one unit’s attacks against the other, nothing used up. Rules marked “not counted” are not in these numbers.
+
+How this is worked out
+what the rules say, and what the calculator does where they leave a choice
+
+Weapons (04.03): the rules let the attacker pick which weapon’s attacks are resolved next; the calculator takes them in the order listed, and rolls identical attacks together.
+
+Saves and damage (05.03, 05.04): save rolls are rolled together and used from the lowest; an attack that gets through damages the one model it was allocated to, so damage beyond that model’s wounds is lost; Feel No Pain is rolled for each wound (24.12).
+
+[PSYCHIC] (24.29): an attack that can ignore any or all modifiers to BS and to the hit roll: the calculator ignores the ones that make it worse and keeps the others.
+
+######## strats {"folded":true} · DAMAGE Stratagems
+EXPAND ALL
+GRAND COVEN
+6
+1
+CP
+Egotistical Power
+Until the start of your next Command phase, your unit has Imbued Manifestation, Psychic Maelstrom or Wrath of the Immaterium instead of any other Kindred Sorcery ability, even one already selected this battle.
+Your Command Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
+1
+CP
+Desecration of Worlds
+That objective marker stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+Your Command Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
+1
+CP
+Arcane Focus
+Re-roll all the D6 of that Psychic test (the Channelling the Warp D6 included).
+Your Shooting Any unit
+2
+CP
+Devastating Sorcery
+Until the end of the phase, your unit’s Psychic weapons have +9" range and can re-roll the hit roll and the wound roll.
+Your Shooting Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
+1
+CP
+Psychic Dominion
+Until the end of the phase, attacks made against your unit with Psychic weapons have [HAZARDOUS], and models in your unit have Feel No Pain 4+ against Psychic Attacks.
+Any phase Any unit
+1
+CP
+Destined by Fate
+Change the Damage of that attack to 0.
+Any phase Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+The battle-shock roll you are about to make for your unit is automatically successful.
+Your Command · Once per battle Any unit
+1
+CP
+Rapid Ingress
+Your unit in strategic reserves makes an ingress move (not in the first battle round).
+End of their Movement Any unit
+1
+CP
+Fire Overwatch
+Your unit shoots using snap shooting.
+End of their Movement All but Tzaangors, Tzaangor Enlightened ×2
+1
+CP
+Explosives
+One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
+Your Shooting Sorcerer + Rubric Marines
+1
+CP
+Crushing Impact
+After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+Your Charge Magnus the Red, Daemon Prince of Tzeentch with wings, Defiler
+1
+CP
+Heroic Intervention
+Your unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+End of their Charge · Into the Fray +1CP Any unit
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+Fight Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
+2
+CP
+Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+Their Fight Any unit
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
+Any phase Any unit
+1
+CP
+Smokescreen
+Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+Start of their Shooting No unit in this list can use it (needs SMOKE)
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## strats {"open":true} · STRATAGEMS Stratagems
+COLLAPSE ALL
+GRAND COVEN
+6
+1
+CP
+Egotistical Power
+Your Command Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
+WHEN
+
+Your Command phase.
+
+TARGETOne THOUSAND SONS PSYKER unit from your army.
+
+EFFECT
+
+Select the Imbued Manifestation, Psychic Maelstrom or Wrath of the Immaterium ability. Until the start of your next Command phase, that ability applies to your unit instead of any other Kindred Sorcery ability, even if you have already selected that ability this battle.
+
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+
+1
+CP
+Desecration of Worlds
+Your Command Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
+WHEN
+
+Your Command phase.
+
+TARGETOne THOUSAND SONS PSYKER unit from your army within range of an objective marker you control.
+
+EFFECT
+
+That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
+
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+
+1
+CP
+Arcane Focus
+Your Shooting Any unit
+WHEN
+
+Your Shooting phase, just after you take a Psychic test for a THOUSAND SONS model from your army that Channelled the Warp (before resolving that Ritual).
+
+TARGETThat THOUSAND SONS model.
+
+EFFECT
+
+Re-roll all of the D6 rolled for that Psychic test (including the additional D6 for Channelling the Warp).
+
+USED BYany unit
+
+2
+CP
+Devastating Sorcery
+Your Shooting Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
+WHEN
+
+Your Shooting phase.
+
+TARGETOne THOUSAND SONS PSYKER unit from your army that has not been selected to shoot this phase.
+
+EFFECT
+
+Until the end of the phase, add 9" to the Range characteristic of Psychic weapons equipped by models in your unit, and each time a model in your unit makes an attack with a Psychic weapon, you can re-roll the Hit roll and you can re-roll the Wound roll.
+
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+
+1
+CP
+Psychic Dominion
+Any phase Any unit
+WHEN
+
+Any phase, just after an enemy unit has selected its targets.
+
+TARGETOne THOUSAND SONS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, all attacks made against your unit with Psychic weapons have the [HAZARDOUS] ability and all models in your unit have the Feel No Pain 4+ ability against Psychic Attacks.
+
+USED BYany unit
+
+1
+CP
+Destined by Fate
+Any phase Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
+WHEN
+
+Any phase, just after a saving throw is failed for a THOUSAND SONS PSYKER model from your army. If you are using fast dice rolling, this Stratagem can still be used after rolling multiple saving throws at once.
+
+TARGETThat PSYKER model.
+
+EFFECT
+
+Change the Damage characteristic of that attack to 0. If you are using fast dice rolling, select one of those attacks you failed a saving throw for.
+
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+Your Command · Once per battle Any unit
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+1
+CP
+Rapid Ingress
+End of their Movement Any unit
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+1
+CP
+Fire Overwatch
+End of their Movement All but Tzaangors, Tzaangor Enlightened ×2
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal, Tzaangor Enlightened with Fatecaster greatbows, Defiler
+
+1
+CP
+Explosives
+Your Shooting Sorcerer + Rubric Marines
+WHEN
+
+Your Shooting phase.
+
+TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one EXPLOSIVES/GRENADES model in your unit.
+2. Select one unengaged enemy unit within 8" of and visible to that model.
+3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
+
+Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+
+USED BYSorcerer
+
+1
+CP
+Crushing Impact
+Your Charge Magnus the Red, Daemon Prince of Tzeentch with wings, Defiler
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Defiler
+
+1
+CP
+Heroic Intervention
+End of their Charge · Into the Fray +1CP Any unit
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYany unit
+
+1
+CP
+Epic Challenge
+Fight Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+
+2
+CP
+Counteroffensive
+Their Fight Any unit
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+1
+CP
+Command Re-roll
+Any phase Any unit
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+1
+CP
+Smokescreen
+Start of their Shooting No unit in this list can use it (needs SMOKE)
+WHEN
+
+Start of your opponent’s Shooting phase.
+
+TARGETOne friendly SMOKE unit.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
+
+USED BYno unit in this list (needs SMOKE)
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## unit magnus-the-red · STRATAGEMS Pubstomper
+MAGNUS THE RED
+455 PTS
+Epic Hero
+Warlord
+Models
+Options
+1× Magnus the Red
+Blade of Magnus, Gaze of Magnus, Tzeentch’s Firestorm
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Magnus the Red
+100mm
+14"
+11
+2+
+16
+5+
+6
+4+
+WHEN TARGETEDImpossible Form (if picked this round): -1 Damage to attacks against Magnus, excluding psychic attacks · 1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS] · 1CP Destined by Fate: after a failed save for a PSYKER model, that attack’s Damage becomes 0
+DAMAGED 1-6 W
+-1 TO HIT ROLLS
+([PSYCHIC] WEAPONS CAN IGNORE IT)
+ALL ATTACKS
+Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Gaze of Magnus
+24"
+3D3
+2+
+11
+-2
+3
+DEVASTATING WOUNDS, PSYCHIC
+Tzeentch’s Firestorm
+24"
+D6+3
+2+
+6
+-1
+2
+BLAST, IGNORES COVER, PSYCHIC
+STRATAGEMS · GRAND COVEN
+2CP +9" range, re-roll hit and wound rolls, Psychic weapons, your Shooting phase (Devastating Sorcery)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Blade of Magnus
+➤strike
+7
+2+
+16
+-3
+3
+DEVASTATING WOUNDS, PSYCHIC
+➤sweep
+14
+2+
+8
+-1
+2
+PSYCHIC
+ABILITIES
+Unearthly Power
+Command
+
+Start of the battle round
+
+At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.
+
+Lord of the Planet of the Sorcerers
+Your Shooting
+
+Psychic · Shooting · Your turn
+
+This model can attempt up to 2 Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.
+
+Impossible Form
+- Crimson King
+
+Psychic
+
+Each time an attack is made against this PSYKER (excluding Psychic Attacks), subtract 1 from the Damage characteristic of that attack.
+
+Treason of Tzeentch
+- Crimson King
+Their Shooting
+
+Psychic · Shooting · Their turn
+
+At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this PSYKER. Until the end of the phase, ranged weapons equipped by models in that unit have the [HAZARDOUS] ability.
+
+Time Flux
+- Crimson King
+Your Movement
+
+Aura, Psychic · Movement · Your turn
+
+While a friendly THOUSAND SONS unit is within 6" of this PSYKER, add 2" to the Move characteristic of models in that unit.
+
+Rules
+Deep Strike, Deadly Demise D6, Cabal of Sorcerers, Kindred Sorcery
+Stratagems
+
+GRAND COVEN Egotistical Power, Desecration of Worlds, Arcane Focus, Devastating Sorcery, Psychic Dominion, Destined by Fate
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+CHAOS
+CHARACTER
+DAEMON
+EPIC HERO
+FACTION: THOUSAND SONS
+FLY
+MAGNUS THE RED
+MONSTER
+PRIMARCH
+PSYKER
+TZEENTCH
+WARLORD
+Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph ›
+
+######## unit daemon-prince-of-tzeentch-with-wings · MAGNUS THE RED Pubstomper
+DAEMON PRINCE OF TZEENTCH WITH WINGS
+205 PTS
+Character
+Eldritch Vortex of E’taph
+Models
+Options
+1× Daemon Prince of Tzeentch with wings
+Dark Blessing, Hellforged weapons, Infernal cannon
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Daemon Prince of Tzeentch with wings
+60mm
+13"
+9
+2+
+10
+6+
+3
+4+
+WHEN TARGETED1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS] · 1CP Destined by Fate: after a failed save for a PSYKER model, that attack’s Damage becomes 0
+ALL ATTACKS
+vs CHARACTER units: re-roll hit rolls of 1 and wound rolls of 1 (vs PSYKER CHARACTER units: re-roll the hit roll and the wound roll) (Hunter of Souls)
+Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Dark Blessing
+24"
+9
+2+
+5
+-1
+2
+IGNORES COVER, PSYCHIC, SUSTAINED HITS 1
+Infernal cannon
+24"
+3
+2+
+5
+-2
+2
+After an aetherstride this turn: Dark Blessing has [SUSTAINED HITS D3] (Aetherstride)
+STRATAGEMS · GRAND COVEN
+2CP +9" range, re-roll hit and wound rolls, Psychic weapons, your Shooting phase (Devastating Sorcery)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Hellforged weapons
+➤strike
+6
+2+
+9
+-2
+4
+DEVASTATING WOUNDS, PSYCHIC
+➤sweep
+12
+2+
+7
+-1
+2
+DEVASTATING WOUNDS, PSYCHIC
+ABILITIES
+Aetherstride
+Your Move/Shoot/Charge
+
+Psychic · Movement / Shooting / Charge · Your turn
+
+In your Movement phase, when this model is set up on the battlefield using the Deep Strike ability, it can perform an aetherstride. If it does:
+
+It can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units.
+Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability.
+Until the end of the turn, it is not eligible to declare a charge.
+Hunter of Souls
+Their Move · Your Shoot · Fight
+
+Their Movement / Your Shooting / Fight (either turn)
+
+Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a CHARACTER unit, this model regains up to D3 lost wounds (if that CHARACTER unit was a PSYKER, this model regains up to 3 lost wounds instead).
+
+Eldritch Vortex of E’taph
+Enhancement
+
+Enhancement
+
+THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.
+
+Rules
+Deadly Demise D3, Cabal of Sorcerers, Deep Strike, Kindred Sorcery
+Stratagems
+
+GRAND COVEN Egotistical Power, Desecration of Worlds, Arcane Focus, Devastating Sorcery, Psychic Dominion, Destined by Fate
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+CHAOS
+CHARACTER
+DAEMON
+DAEMON PRINCE
+FACTION: THOUSAND SONS
+FLY
+MONSTER
+PSYKER
+TZEENTCH
+‹ Magnus the Red
+Sorcerer ›
+
+######## unit sorcerer-rubric-marines · DAEMON PRINCE OF TZEENTCH WITH WINGS Pubstomper
+SORCERER + RUBRIC MARINES
+215 PTS
+Character · 100 + Rubric Marines 115
+Models
+Options
+1× Sorcerer
+Force weapon, Inferno bolt pistol, Pandaemonic Delusion, Prosperine khopesh
+Leading Rubric Marines
+1× Aspiring Sorcerer
+Force weapon, Malefic Curse, Warpflame pistol
+1× Rubric Marine w/ soulreaper cannon
+Close combat weapon, Soulreaper cannon
+3× Rubric Marine w/ warpflamer
+Close combat weapon, Warpflamer
+1× Icon of Flame
+New Recruit lists it for the Rubric Marines, not which model carries it
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Sorcerer
+40mm
+6"
+5
+3+
+4
+6+
+1
+5+
+Rubric Marine
+32mm
+6"
+5
+3+
+2
+7+
+2
+5+
+Aspiring Sorcerer
+32mm
+6"
+5
+3+
+3
+6+
+2
+5+
+WHEN TARGETED1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS] · 1CP Destined by Fate: after a failed save for a PSYKER model, that attack’s Damage becomes 0
+ALL ATTACKS · WHOLE UNIT
+Twisted Sorceries used this phase (your Shooting phase or the Fight phase, once per battle): Sorcerer Psychic weapons +3 S and +3 A
+Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+SORCERER
+Pandaemonic Delusion
+24"
+6
+3+
+5
+-1
+1
+PSYCHIC, SUSTAINED HITS 3, LETHAL HITS
+OR
+WHEN USING ANOTHER SHOOTING TYPE
+Inferno bolt pistol
+12"
+1
+3+
+5
+-2
+1
+PISTOL, LETHAL HITS
+RUBRIC MARINES
+
+Aspiring Sorcerer can shoot with Warpflame pistol or Malefic Curse, not both (Close-quarters); in close-quarters shooting, Warpflame pistol only.
+
+The others: one each (×N = how many the unit has).
+
+Malefic CurseASPIRING SORCERER
+24"
+3
+3+
+4
+-3
+1
+ANTI-INFANTRY 4+, DEVASTATING WOUNDS, IGNORES COVER, PSYCHIC, LETHAL HITS
+Warpflame pistolASPIRING SORCERER
+12"
+D6
+–
+3
+-1
+1
+IGNORES COVER, PISTOL, TORRENT, LETHAL HITS
+Soulreaper cannonRUBRIC MARINE
+24"
+6
+3+
+6
+-2
+1
+DEVASTATING WOUNDS, IGNORES COVER, LETHAL HITS
+Warpflamer×3
+12"
+D6
+–
+4
+-1
+1
+IGNORES COVER, TORRENT, LETHAL HITS
+WHOLE UNIT
+Every ranged attack: re-roll wound rolls of 1 (vs a unit within range of an objective marker you do not control: re-roll the wound roll) (Bringers of Change)
+STRATAGEMS · GRAND COVEN
+2CP +9" range, re-roll hit and wound rolls, Psychic weapons, your Shooting phase (Devastating Sorcery)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+SORCERER
+Force weapon
+4
+3+
+6
+-1
+D3
+PSYCHIC, LETHAL HITS
+OR
+Prosperine khopesh
+3
+3+
+5
+-2
+2
+LETHAL HITS
+RUBRIC MARINES
+Force weaponASPIRING SORCERER
+3
+3+
+6
+-1
+D3
+PSYCHIC, LETHAL HITS
+Close combat weapon×4
+2
+3+
+5
+0
+1
+LETHAL HITS
+ABILITIES
+Twisted Sorceries
+- Sorcerer
+Once per battle
+Your Shoot · Fight
+
+Psychic · Your Shooting / Fight (either turn)
+
+Once per battle, in your Shooting phase or the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristic of Psychic weapons equipped by this model by 3.
+
+Empyric Guidance
+- Sorcerer
+
+Psychic
+
+While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.
+
+Bringers of Change
+- Rubric Marines
+Their Move · Your Shoot
+
+Their Movement / Your Shooting
+
+Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead.
+
+Icon of Flame
+- Rubric Marines
+
+Ranged weapons equipped by models in the bearer’s unit (excluding CHARACTERS) have the [IGNORES COVER] ability.
+
+Rules
+Leader, Cabal of Sorcerers, Kindred Sorcery
+Stratagems
+
+GRAND COVEN Egotistical Power, Desecration of Worlds, Arcane Focus, Devastating Sorcery, Psychic Dominion, Destined by Fate
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+CHAOS
+CHARACTER
+FACTION: THOUSAND SONS
+GRENADES
+INFANTRY
+PSYKER
+SORCERER
+TZEENTCH
+BATTLELINE*
+RUBRIC*
+RUBRIC MARINES*
+RUBRICAE*
+*from the led Rubric Marines
+‹ Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph
+Sorcerer in Terminator Armour · Umbralefic Crystal ›
+
+######## unit sorcerer-in-terminator-armour-scarab-occult-terminators · SORCERER Pubstomper
+SORCERER IN TERMINATOR ARMOUR + SCARAB OCCULT TERMINATORS
+565 PTS
+Character · 140 + Scarab Occult Terminators 425
+Umbralefic Crystal
+Models
+Options
+1× Sorcerer in Terminator Armour
+Force weapon, Gaze of Hate, Inferno combi-bolter
+Leading Scarab Occult Terminators
+1× Scarab Occult Sorcerer
+Force weapon, Malefic Curse, Inferno combi-bolter
+7× Scarab Occult Terminator
+Inferno combi-bolter, Prosperine khopesh
+2× Scarab Occult Terminator w/ soulreaper cannon
+Prosperine khopesh, Soulreaper cannon
+2× Hellfyre missile rack
+New Recruit lists them for the Scarab Occult Terminators, not which models carry them
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Sorcerer in Terminator Armour
+40mm
+5"
+6
+2+
+5
+6+
+1
+4+
+Scarab Occult Sorcerer
+40mm
+5"
+6
+2+
+4
+6+
+1
+4+
+Scarab Occult Terminator×9
+40mm
+5"
+6
+2+
+3
+7+
+1
+4+
+WHEN TARGETED-1 to wound rolls against this unit while it contains a PSYKER model · 1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS] · 1CP Destined by Fate: after a failed save for a PSYKER model, that attack’s Damage becomes 0
+ALL ATTACKS · WHOLE UNIT
+Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+SORCERER IN TERMINATOR ARMOUR
+Gaze of Hate
+18"
+3
+3+
+4
+-3
+2
+ANTI-MONSTER 4+, ANTI-VEHICLE 4+, DEVASTATING WOUNDS, PSYCHIC, LETHAL HITS
+Inferno combi-bolter
+24"
+2
+3+
+5
+-2
+1
+RAPID FIRE 2, LETHAL HITS
+SCARAB OCCULT TERMINATORS
+Malefic CurseSCARAB OCCULT SORCERER
+24"
+3
+3+
+4
+-3
+1
+ANTI-INFANTRY 4+, DEVASTATING WOUNDS, PSYCHIC, LETHAL HITS
+Inferno combi-bolter×8
+24"
+2
+3+
+5
+-2
+1
+RAPID FIRE 2, LETHAL HITS
+Soulreaper cannon×2
+24"
+6
+3+
+6
+-2
+1
+DEVASTATING WOUNDS, LETHAL HITS
+Hellfyre missile rack×2WHICH MODELS: NOT SAID
+36"
+2
+3+
+10
+-2
+3
+LETHAL HITS
+WHOLE UNIT
+Your Shooting phase, vs the enemy unit picked at its start: +1 to hit rolls (Marked by Fate)
+STRATAGEMS · GRAND COVEN
+2CP +9" range, re-roll hit and wound rolls, Psychic weapons, your Shooting phase (Devastating Sorcery)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+SORCERER IN TERMINATOR ARMOUR
+Force weapon
+5
+3+
+6
+-1
+D3
+PSYCHIC, LETHAL HITS
+SCARAB OCCULT TERMINATORS
+Force weaponSCARAB OCCULT SORCERER
+4
+3+
+6
+-1
+D3
+PSYCHIC, LETHAL HITS
+Prosperine khopesh×9
+3
+3+
+5
+-2
+2
+LETHAL HITS
+ABILITIES
+Marked by Fate
+- Sorcerer in Terminator Armour
+Your Shooting
+
+Psychic · Shooting · Your turn
+
+At the start of your Shooting phase, select one enemy unit that is visible to this PSYKER model. Until the end of the phase, each time a model in this unit makes an attack that targets that enemy unit, add 1 to the Hit roll.
+
+Empyric Guidance
+- Sorcerer in Terminator Armour
+
+Psychic
+
+While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.
+
+Umbralefic Crystal
+- Sorcerer in Terminator Armour
+Enhancement
+Once per battle, per army
+Your Command/Move
+
+Enhancement · Command / Movement · Your turn
+
+THOUSAND SONS model only. (Once per battle, per army) In your Command phase, if this unit is unengaged, you can use this ability. If you do:
+
+Place this unit in strategic reserves.
+This unit has Deep Strike until the start of your next Shooting phase.
+This unit must make an ingress move in your next Movement phase (including in your first turn).
+Rites of Coalescence
+- Scarab Occult Terminators
+
+While this unit contains one or more PSYKER models, each time an attack targets this unit, subtract 1 from the Wound roll.
+
+Rules
+Leader, Deep Strike, Cabal of Sorcerers, Kindred Sorcery
+Stratagems
+
+GRAND COVEN Egotistical Power, Desecration of Worlds, Arcane Focus, Devastating Sorcery, Psychic Dominion, Destined by Fate
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+CHAOS
+CHARACTER
+FACTION: THOUSAND SONS
+INFANTRY
+PSYKER
+SORCERER
+TERMINATOR
+TZEENTCH
+RUBRICAE*
+SCARAB OCCULT*
+*from the led Scarab Occult Terminators
+‹ Sorcerer
+Tzaangors ›
+
+######## unit tzaangors · SORCERER IN TERMINATOR ARMOUR Pubstomper
+TZAANGORS
+75 PTS
+Infantry
+Models
+Options
+1× Twistbray
+Tzaangor blades
+7× Tzaangor w/ Tzaangor blades
+Tzaangor blades
+1× Tzaangor w/ Tzaangor blades (Brayhorn)
+Tzaangor blades
+1× Tzaangor w/ Tzaangor blades (Herd banner)
+Tzaangor blades
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Tzaangors
+32mm
+6"
+4
+6+
+1
+7+
+1
+6+
+WHEN TARGETED1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Tzaangor blades×10
+2
+4+
+5
+0
+1
+Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+ABILITIES
+Ambushing Hunters
+Their Fight
+
+End of your opponent’s turn
+
+At the end of your opponent’s turn, if this unit is more than 6" horizontally away from all enemy units, you can remove this unit from the battlefield and place it into Strategic Reserves.
+
+Brayhorn
+Your Move · Charge
+
+Your Movement / Charge (either turn)
+
+You can re-roll Advance and Charge rolls made for the bearer’s unit.
+
+Herd banner
+
+While the bearer’s unit is within range of one or more objective markers you control, improve the Leadership characteristic of models in the bearer’s unit by 1.
+
+Rules
+Scouts 6", Kindred Sorcery
+Stratagems
+
+GRAND COVEN Arcane Focus, Psychic Dominion
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
+
+Keywords
+CHAOS
+FACTION: THOUSAND SONS
+INFANTRY
+MUTANT
+TZAANGORS
+TZEENTCH
+‹ Sorcerer in Terminator Armour · Umbralefic Crystal
+Tzaangor Enlightened ›
+
+######## unit tzaangor-enlightened · TZAANGORS Pubstomper
+TZAANGOR ENLIGHTENED
+50 PTS EACH
+Mounted · ×2 in list
+Models
+Options
+1× Aviarch
+Divining spear
+2× Divining spear Enlightened
+Divining spear
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Tzaangor Enlightened
+40mm
+10"
+4
+5+
+2
+7+
+2
+5+
+WHEN TARGETED1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Divining spear×3
+3
+4+
+5
+-1
+2
+LANCE, PRECISION
+Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+Made a charge move this turn: Divining spear +1 to wound (Lance)
+ABILITIES
+Prophesied Doom
+Charge
+
+Charge · Either turn
+
+Each time this unit makes a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound.
+
+Rules
+Kindred Sorcery
+Stratagems
+
+GRAND COVEN Arcane Focus, Psychic Dominion
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
+
+Keywords
+CHAOS
+FACTION: THOUSAND SONS
+FLY
+MOUNTED
+MUTANT
+TZAANGOR ENLIGHTENED
+TZEENTCH
+‹ Tzaangors
+Tzaangor Enlightened with Fatecaster greatbows ›
+
+######## unit tzaangor-enlightened-with-fatecaster-greatbows · TZAANGOR ENLIGHTENED Pubstomper
+TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS
+55 PTS
+Mounted
+Models
+Options
+1× Aviarch
+Close combat weapon, Fatecaster greatbow
+2× Enlightened
+Close combat weapon, Fatecaster greatbow
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Tzaangor Enlightened with Fatecaster greatbows
+40mm
+10"
+4
+5+
+2
+7+
+2
+5+
+WHEN TARGETED1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
+ALL ATTACKS
+Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Fatecaster greatbow×3
+30"
+2
+4+
+5
+-2
+2
+IGNORES COVER, LETHAL HITS, PRECISION
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Close combat weapon×3
+2
+4+
+4
+0
+1
+ABILITIES
+Malign Trickery
+Their Movement
+
+Movement · Their turn
+
+In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6”.
+
+Rules
+Kindred Sorcery
+Stratagems
+
+GRAND COVEN Arcane Focus, Psychic Dominion
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
+
+Keywords
+CHAOS
+FACTION: THOUSAND SONS
+FLY
+MOUNTED
+MUTANT
+TZAANGOR ENLIGHTENED
+TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS
+TZEENTCH
+‹ Tzaangor Enlightened
+Defiler ›
+
+######## unit defiler · TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS Pubstomper
+DEFILER
+330 PTS
+Vehicle
+Models
+Options
+1× Defiler
+Ectoplasma destructor, 2× Heavy reaper autocannon, Shearing claws, 2× Excruciator cannon
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Defiler
+160mm
+12"
+11
+3+
+18
+6+
+5
+5+
+WHEN TARGETED1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
+DAMAGED 1-6 W
+-1 TO HIT ROLLS
+ALL ATTACKS
+Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Ectoplasma destructor
+36"
+D6
+3+
+12
+-3
+3
+BLAST
+Excruciator cannon×2
+36"
+6
+3+
+6
+-2
+2
+Heavy reaper autocannon×2
+48"
+4
+3+
+9
+-2
+3
+DEVASTATING WOUNDS, SUSTAINED HITS 1
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Shearing claws
+➤strike
+5
+3+
+16
+-3
+D6+1
+➤sweep
+10
+3+
+6
+-2
+1
+ABILITIES
+Scuttling Walker
+Your Move/Shoot
+
+Movement / Shooting · Your turn
+
+Each time this unit makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and terrain features. When doing so, it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.
+
+Destroyer of Futures
+Once per phase, per unit
+Their Fight
+
+Once per phase, per unit · Fight · Their turn
+
+You can target this unit with the Counteroffensive stratagem, regardless of any other uses of that stratagem this phase. If you do:
+
+That use is -1 CP.
+That use does not prevent any uses of that stratagem on other units this phase.
+Rules
+Deadly Demise D6, Kindred Sorcery
+Stratagems
+
+GRAND COVEN Arcane Focus, Psychic Dominion
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
+
+Keywords
+CHAOS
+DAEMON
+DEFILER
+FACTION: THOUSAND SONS
+TZEENTCH
+VEHICLE
+WALKER
+‹ Tzaangor Enlightened with Fatecaster greatbows
+
+######## popup ability:pubstomper|Aetherstride|In your Movement phase, when this model is set up on the battlefield using the **Deep Strike** ability, it can perform an aetherstride. If it does:
+- It can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units.
+- Until the end of the turn, its Dark Blessing has the **[SUSTAINED HITS D3]** ability.
+- Until the end of the turn, it is not eligible to declare a charge. · DEFILER Pubstomper
+ABILITY · PSYCHIC · MOVEMENT / SHOOTING / CHARGE · YOUR TURN
+
+Aetherstride
+
+In your Movement phase, when this model is set up on the battlefield using the Deep Strike ability, it can perform an aetherstride. If it does:
+
+It can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units.
+Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability.
+Until the end of the turn, it is not eligible to declare a charge.
+
+UNITDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph
+
+######## popup ability:pubstomper|Bringers of Change|Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead. · PUBSTOMPER Pubstomper
+ABILITY · THEIR MOVEMENT / YOUR SHOOTING
+
+Bringers of Change
+
+Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead.
+
+UNITSorcerer
+
+######## popup ability:pubstomper|Damaged: 1-6 wounds remaining|While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**. · PUBSTOMPER Pubstomper
+ABILITY
+
+Damaged: 1-6 wounds remaining
+
+While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+UNITMagnus the Red, Defiler
+
+######## popup ability:pubstomper|Hunter of Souls|Each time this model makes an attack that targets a **CHARACTER** unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a **PSYKER CHARACTER** unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a **CHARACTER** unit, this model regains up to D3 lost wounds (if that **CHARACTER** unit was a **PSYKER**, this model regains up to 3 lost wounds instead). · PUBSTOMPER Pubstomper
+ABILITY · THEIR MOVEMENT / YOUR SHOOTING / FIGHT (EITHER TURN)
+
+Hunter of Souls
+
+Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a CHARACTER unit, this model regains up to D3 lost wounds (if that CHARACTER unit was a PSYKER, this model regains up to 3 lost wounds instead).
+
+UNITDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph
+
+######## popup ability:pubstomper|Impossible Form|Each time an attack is made against this **PSYKER** (excluding **Psychic Attacks**), subtract 1 from the Damage characteristic of that attack. · PUBSTOMPER Pubstomper
+ABILITY · PSYCHIC
+
+Impossible Form
+
+Each time an attack is made against this PSYKER (excluding Psychic Attacks), subtract 1 from the Damage characteristic of that attack.
+
+UNITMagnus the Red
+
+######## popup ability:pubstomper|Marked by Fate|At the start of your Shooting phase, select one enemy unit that is **visible** to this **PSYKER** model. Until the end of the phase, each time a model in this unit makes an attack that targets that enemy unit, add 1 to the **Hit roll**. · PUBSTOMPER Pubstomper
+ABILITY · PSYCHIC · SHOOTING · YOUR TURN
+
+Marked by Fate
+
+At the start of your Shooting phase, select one enemy unit that is visible to this PSYKER model. Until the end of the phase, each time a model in this unit makes an attack that targets that enemy unit, add 1 to the Hit roll.
+
+UNITSorcerer in Terminator Armour · Umbralefic Crystal
+
+######## popup ability:pubstomper|Rites of Coalescence|While this unit contains one or more **PSYKER** models, each time an attack targets this unit, subtract 1 from the **Wound roll**. · PUBSTOMPER Pubstomper
+ABILITY
+
+Rites of Coalescence
+
+While this unit contains one or more PSYKER models, each time an attack targets this unit, subtract 1 from the Wound roll.
+
+UNITSorcerer in Terminator Armour · Umbralefic Crystal
+
+######## popup ability:pubstomper|Treason of Tzeentch|At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this **PSYKER**. Until the end of the phase, ranged weapons equipped by models in that unit have the **[HAZARDOUS]** ability. · PUBSTOMPER Pubstomper
+ABILITY · PSYCHIC · SHOOTING · THEIR TURN
+
+Treason of Tzeentch
+
+At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this PSYKER. Until the end of the phase, ranged weapons equipped by models in that unit have the [HAZARDOUS] ability.
+
+UNITMagnus the Red
+
+######## popup ability:pubstomper|Twisted Sorceries|Once per battle, in your Shooting phase or the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristic of Psychic weapons equipped by this model by 3. · PUBSTOMPER Pubstomper
+ABILITY · PSYCHIC · YOUR SHOOTING / FIGHT (EITHER TURN)
+
+Twisted Sorceries
+
+Once per battle, in your Shooting phase or the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristic of Psychic weapons equipped by this model by 3.
+
+UNITSorcerer
+
+######## popup ability:pubstomper|Umbralefic Crystal|**THOUSAND SONS** model only. (Once per battle, per army) In your Command phase, if this unit is **unengaged**, you can use this ability. If you do:
+- Place this unit in **strategic reserves**.
+- This unit has **Deep Strike** until the start of your next Shooting phase.
+- This unit must make an **ingress move** in your next Movement phase (including in your first turn). · PUBSTOMPER Pubstomper
+ABILITY · ENHANCEMENT · COMMAND / MOVEMENT · YOUR TURN
+
+Umbralefic Crystal
+
+THOUSAND SONS model only. (Once per battle, per army) In your Command phase, if this unit is unengaged, you can use this ability. If you do:
+
+Place this unit in strategic reserves.
+This unit has Deep Strike until the start of your next Shooting phase.
+This unit must make an ingress move in your next Movement phase (including in your first turn).
+
+UNITSorcerer in Terminator Armour · Umbralefic Crystal
+
+######## popup ability:pubstomper|Unearthly Power|At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability. · PUBSTOMPER Pubstomper
+ABILITY · START OF THE BATTLE ROUND
+
+Unearthly Power
+
+At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.
+
+UNITMagnus the Red
+
+######## popup enh:grand-coven|Eldritch Vortex of E’taph · PUBSTOMPER Pubstomper
+ENHANCEMENT · GRAND COVEN · 35 PTS
+
+Eldritch Vortex of E’taph
+
+THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.
+
+ONDaemon Prince of Tzeentch with wings
+
+######## popup enh:grand-coven|Umbralefic Crystal · PUBSTOMPER Pubstomper
+ENHANCEMENT · GRAND COVEN · 30 PTS
+
+Umbralefic Crystal
+
+THOUSAND SONS model only. (Once per battle, per army) In your Command phase, if this unit is unengaged, you can use this ability. If you do:
+
+Place this unit in strategic reserves.
+This unit has Deep Strike until the start of your next Shooting phase.
+This unit must make an ingress move in your next Movement phase (including in your first turn).
+
+ONSorcerer in Terminator Armour + Scarab Occult Terminators
+
+######## popup grant:["Eldritch Vortex of E’taph","daemon-prince-of-tzeentch-with-wings","D 2",null] · PUBSTOMPER Pubstomper
+D 2 · GRANTED BY
+
+Eldritch Vortex of E’taph
+
+Enhancement
+
+THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Eldritch Vortex of E’taph","daemon-prince-of-tzeentch-with-wings","D 4",null] · PUBSTOMPER Pubstomper
+D 4 · GRANTED BY
+
+Eldritch Vortex of E’taph
+
+Enhancement
+
+THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Eldritch Vortex of E’taph","daemon-prince-of-tzeentch-with-wings","S 5",null] · PUBSTOMPER Pubstomper
+S 5 · GRANTED BY
+
+Eldritch Vortex of E’taph
+
+Enhancement
+
+THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Eldritch Vortex of E’taph","daemon-prince-of-tzeentch-with-wings","S 7",null] · PUBSTOMPER Pubstomper
+S 7 · GRANTED BY
+
+Eldritch Vortex of E’taph
+
+Enhancement
+
+THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Eldritch Vortex of E’taph","daemon-prince-of-tzeentch-with-wings","S 9",null] · PUBSTOMPER Pubstomper
+S 9 · GRANTED BY
+
+Eldritch Vortex of E’taph
+
+Enhancement
+
+THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Empyric Guidance","sorcerer-in-terminator-armour-scarab-occult-terminators","LETHAL HITS","LETHAL HITS"] · PUBSTOMPER Pubstomper
+LETHAL HITS · GRANTED BY
+
+Empyric Guidance
+
+Sorcerer in Terminator Armour · Psychic
+
+While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.
+
+Already in the keywords shown (as New Recruit and BSData list them).
+
+LETHAL HITS Core rule
+
+Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
+
+Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
+
+######## popup grant:["Empyric Guidance","sorcerer-rubric-marines","LETHAL HITS","LETHAL HITS"] · PUBSTOMPER Pubstomper
+LETHAL HITS · GRANTED BY
+
+Empyric Guidance
+
+Sorcerer · Psychic
+
+While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.
+
+Already in the keywords shown (as New Recruit and BSData list them).
+
+LETHAL HITS Core rule
+
+Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
+
+Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
+
+######## popup grant:["Icon of Flame","sorcerer-rubric-marines","IGNORES COVER","IGNORES COVER"] · PUBSTOMPER Pubstomper
+IGNORES COVER · GRANTED BY
+
+Icon of Flame
+
+Rubric Marines · datasheet ability
+
+Ranged weapons equipped by models in the bearer’s unit (excluding CHARACTERS) have the [IGNORES COVER] ability.
+
+Already in the keywords shown (as New Recruit and BSData list them).
+
+IGNORES COVER Core rule
+
+Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+######## popup rule:ANTI-INFANTRY 4+ · PUBSTOMPER Pubstomper
+CORE RULE
+
+ANTI-INFANTRY 4+
+
+This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.
+
+Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
+
+IN THIS ARMYSorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+
+######## popup rule:ANTI-MONSTER 4+ · PUBSTOMPER Pubstomper
+CORE RULE
+
+ANTI-MONSTER 4+
+
+This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.
+
+Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
+
+IN THIS ARMYSorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+
+######## popup rule:ANTI-VEHICLE 4+ · PUBSTOMPER Pubstomper
+CORE RULE
+
+ANTI-VEHICLE 4+
+
+This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.
+
+Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
+
+IN THIS ARMYSorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+
+######## popup rule:Advance · PUBSTOMPER Pubstomper
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+
+######## popup rule:Advance roll · PUBSTOMPER Pubstomper
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+
+######## popup rule:BLAST · PUBSTOMPER Pubstomper
+CORE RULE
+
+BLAST
+
+Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead.
+
+Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+IN THIS ARMYMagnus the Red, Defiler
+
+######## popup rule:Cabal of Sorcerers · PUBSTOMPER Pubstomper
+THOUSAND SONS ARMY RULE
+
+Cabal of Sorcerers
+
+If your Army Faction is THOUSAND SONS, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.
+
+Psychic Test Sequence
+
+Roll 2D6
+Channel the Warp (Optional)
+Then, if one or more doubles or triples were rolled during this test, that model’s unit suffers D3 mortal wounds.
+If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects.
+
+FAQ (Faction Pack 1.3): Do I need to sequence all of my Cabal of Sorcerers Rituals at the start of my Shooting phase? No, you just pick a model with the Cabal of Sorcerers rule, pick a Ritual to manifest, and attempt it, then repeat the process until you have run out of models or Rituals or both.
+
+FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, do I have to choose whether to Channel the Warp before rolling any dice? No.
+
+FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, if I roll one or more doubles or triples, does my model only suffer D3 mortal wounds if I chose to Channel the Warp? Yes.
+
+App note, not rules text: Channel the Warp means rolling one more D6 for the test (the printed card shows it as a die).
+
+Destiny’s Ruin (Psychic) · Warp Charge 5
+
+Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, re-roll a Hit roll of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.
+
+Temporal Surge (Psychic) · Warp Charge 6
+
+Select one friendly THOUSAND SONS or SCINTILLATING LEGIONS unit that is not within Engagement Range of one or more enemy units and is within 24" of and visible to the manifesting model. That unit can make a Normal move of up to D6". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.
+
+Doombolt (Psychic) · Warp Charge 7
+
+Select one enemy unit within 24" of and visible to the manifesting model (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12" of the manifesting model); that unit suffers D3 mortal wounds. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.
+
+Twist of Fate (Psychic) · Warp Charge 9
+
+Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead.
+
+######## popup rule:Charge roll · PUBSTOMPER Pubstomper
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:Charge rolls · PUBSTOMPER Pubstomper
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:Close-quarters · PUBSTOMPER Pubstomper
+CORE RULE
+
+Close-quarters
+
+Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with:
+
+One or more of its [CLOSE-QUARTERS] weapons.
+One or more of its other ranged weapons.
+
+[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
+
+IN THIS ARMYSorcerer
+
+######## popup rule:DEVASTATING WOUNDS · PUBSTOMPER Pubstomper
+CORE RULE
+
+DEVASTATING WOUNDS
+
+Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+
+Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+
+IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal, Defiler
+
+######## popup rule:Deadly Demise · PUBSTOMPER Pubstomper
+CORE RULE
+
+Deadly Demise
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Defiler
+
+######## popup rule:Deadly Demise D3 · PUBSTOMPER Pubstomper
+CORE RULE
+
+Deadly Demise D3
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Defiler
+
+######## popup rule:Deadly Demise D6 · PUBSTOMPER Pubstomper
+CORE RULE
+
+Deadly Demise D6
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Defiler
+
+######## popup rule:Deep Strike · PUBSTOMPER Pubstomper
+CORE RULE
+
+Deep Strike
+
+Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
+
+App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
+
+IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer in Terminator Armour · Umbralefic Crystal
+
+######## popup rule:Engagement Range · PUBSTOMPER Pubstomper
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+######## popup rule:Fall Back move · PUBSTOMPER Pubstomper
+CORE RULE
+
+Fall-back Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is engaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select fall-back mode:
+
+Ordered Retreat: If your unit is not battle-shocked, you can select this mode.
+Desperate Escape: Otherwise, you must select this mode. Make a hazard roll for each model in your unit (06.03).
+
+WHILE MOVING:
+
+Desperate Escape: Each model that is moved can be moved through enemy models.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to shoot, declare a charge or start an action.
+Desperate Escape: If your unit is not battle-shocked, you must make a battle-shock roll for your unit (01.07).
+
+Desperate Escape Test (app): Some rules may reference the term ‘Desperate Escape test’. In all instances this means the hazard rolls made for the desperate escape mode of a fall-back move.
+
+Abilities that subtract from a unit’s Desperate Escape test instead subtract from those hazard rolls.
+
+If a stratagem or ability instructs a unit to make a Desperate Escape test, that unit:
+
+Must use the desperate escape mode when it is selected to make a fall-back move.
+Must make one hazard roll for each model in that unit.
+Must make a battle-shock roll.
+
+######## popup rule:Feel No Pain 4+ · PUBSTOMPER Pubstomper
+CORE RULE
+
+Feel No Pain 4+
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+######## popup rule:Fights First · PUBSTOMPER Pubstomper
+CORE RULE
+
+Fights First
+
+While every model in a unit has this ability, that unit is a Fights First unit.
+
+See the Resolve Fights First Combats step in the Fight phase (12.04).
+
+######## popup rule:Hazard roll · PUBSTOMPER Pubstomper
+CORE RULE
+
+Hazard Roll
+
+To make a hazard roll for a unit, roll one D6: on a 1-2, that roll fails and that unit suffers 1 mortal wound (see above), or 3 mortal wounds instead if each model in that unit is a MONSTER/VEHICLE model. If more than one hazard roll is required for a unit, make all of those rolls simultaneously.
+
+06.03.01 Hazardous Test (app): The term ‘Hazardous test’ is the same as hazard roll.
+
+Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model in the unit make a hazard roll? No, the unit would make 1 single hazard roll.
+
+Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
+
+######## popup rule:Hazardous · PUBSTOMPER Pubstomper
+CORE RULE
+
+Hazardous
+
+Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.
+
+IN THIS ARMYMagnus the Red (in Treason of Tzeentch)
+
+######## popup rule:IGNORES COVER · PUBSTOMPER Pubstomper
+CORE RULE
+
+IGNORES COVER
+
+Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Tzaangor Enlightened with Fatecaster greatbows
+
+######## popup rule:Kindred Sorcery · PUBSTOMPER Pubstomper
+GRAND COVEN DETACHMENT RULE
+
+Kindred Sorcery
+
+In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.
+
+Imbued Manifestation
+
+Add 6" to the Range characteristic of ranged Psychic weapons equipped by THOUSAND SONS models from your army.
+
+Psychic Maelstrom
+
+Each time a THOUSAND SONS model from your army makes an attack with a Psychic weapon, add 1 to the Wound roll.
+
+Wrath of the Immaterium
+
+Psychic weapons equipped by THOUSAND SONS models from your army have the [DEVASTATING WOUNDS] ability.
+
+IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal, Tzaangors, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows, Defiler
+
+######## popup rule:LANCE · PUBSTOMPER Pubstomper
+CORE RULE
+
+LANCE
+
+Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
+
+IN THIS ARMYTzaangor Enlightened
+
+######## popup rule:LETHAL HITS · PUBSTOMPER Pubstomper
+CORE RULE
+
+LETHAL HITS
+
+Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
+
+Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
+
+IN THIS ARMYSorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal, Tzaangor Enlightened with Fatecaster greatbows
+
+######## popup rule:Lance · PUBSTOMPER Pubstomper
+CORE RULE
+
+Lance
+
+Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
+
+IN THIS ARMYTzaangor Enlightened
+
+######## popup rule:Leader · PUBSTOMPER Pubstomper
+CORE RULE
+
+Leader
+
+Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.
+
+Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.
+
+IN THIS ARMYSorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+
+######## popup rule:Lone Operative · PUBSTOMPER Pubstomper
+CORE RULE
+
+Lone Operative
+
+Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12" of this unit.
+
+If this ability takes the form Lone Operative X", unless part of an attached unit, this unit is not visible to enemy models unless they are within X" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X" of this unit.
+
+24.24.01 Attached units and Lone Operative (app): If all models in an attached unit have Lone Operative, that unit will benefit from Lone Operative.
+
+If a unit has Lone Operative, but models in that unit have different range values for Lone Operative, the highest value amongst that unit’s models on the battlefield is applied to the whole unit.
+
+If an attached unit below starting strength only contains models with Lone Operative, Lone Operative becomes active again.
+
+######## popup rule:Normal · PUBSTOMPER Pubstomper
+CORE RULE
+
+Normal Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+AFTER MOVING: Your unit must be unengaged.
+
+09.05.01 More Than One Normal Move in a Phase (app): A unit cannot make more than one Normal Move in a phase.
+
+######## popup rule:Normal move · PUBSTOMPER Pubstomper
+CORE RULE
+
+Normal Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+AFTER MOVING: Your unit must be unengaged.
+
+09.05.01 More Than One Normal Move in a Phase (app): A unit cannot make more than one Normal Move in a phase.
+
+######## popup rule:PISTOL · PUBSTOMPER Pubstomper
+CORE RULE
+
+PISTOL
+
+Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with:
+
+One or more of its [CLOSE-QUARTERS] weapons.
+One or more of its other ranged weapons.
+
+[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
+
+IN THIS ARMYSorcerer
+
+######## popup rule:PRECISION · PUBSTOMPER Pubstomper
+CORE RULE
+
+PRECISION
+
+While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.
+
+24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
+
+IN THIS ARMYTzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows
+
+######## popup rule:PSYCHIC · PUBSTOMPER Pubstomper
+CORE RULE
+
+PSYCHIC
+
+Each time an attack is made with a [PSYCHIC] weapon, you can ignore any or all modifiers to that attack’s BS or WS characteristic and any or all modifiers to the hit roll. Attacks made with [PSYCHIC] weapons are known as psychic attacks (this can be important for the triggering of other rules).
+
+IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+
+######## popup rule:Psychic · PUBSTOMPER Pubstomper
+CORE RULE
+
+Psychic
+
+Each time an attack is made with a [PSYCHIC] weapon, you can ignore any or all modifiers to that attack’s BS or WS characteristic and any or all modifiers to the hit roll. Attacks made with [PSYCHIC] weapons are known as psychic attacks (this can be important for the triggering of other rules).
+
+IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+
+######## popup rule:Psychic test · PUBSTOMPER Pubstomper
+THOUSAND SONS ARMY RULE
+
+Cabal of Sorcerers
+
+If your Army Faction is THOUSAND SONS, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.
+
+Psychic Test Sequence
+
+Roll 2D6
+Channel the Warp (Optional)
+Then, if one or more doubles or triples were rolled during this test, that model’s unit suffers D3 mortal wounds.
+If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects.
+
+FAQ (Faction Pack 1.3): Do I need to sequence all of my Cabal of Sorcerers Rituals at the start of my Shooting phase? No, you just pick a model with the Cabal of Sorcerers rule, pick a Ritual to manifest, and attempt it, then repeat the process until you have run out of models or Rituals or both.
+
+FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, do I have to choose whether to Channel the Warp before rolling any dice? No.
+
+FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, if I roll one or more doubles or triples, does my model only suffer D3 mortal wounds if I chose to Channel the Warp? Yes.
+
+App note, not rules text: Channel the Warp means rolling one more D6 for the test (the printed card shows it as a die).
+
+Destiny’s Ruin (Psychic) · Warp Charge 5
+
+Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, re-roll a Hit roll of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.
+
+Temporal Surge (Psychic) · Warp Charge 6
+
+Select one friendly THOUSAND SONS or SCINTILLATING LEGIONS unit that is not within Engagement Range of one or more enemy units and is within 24" of and visible to the manifesting model. That unit can make a Normal move of up to D6". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.
+
+Doombolt (Psychic) · Warp Charge 7
+
+Select one enemy unit within 24" of and visible to the manifesting model (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12" of the manifesting model); that unit suffers D3 mortal wounds. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.
+
+Twist of Fate (Psychic) · Warp Charge 9
+
+Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead.
+
+######## popup rule:RAPID FIRE 2 · PUBSTOMPER Pubstomper
+CORE RULE
+
+RAPID FIRE 2
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYSorcerer in Terminator Armour · Umbralefic Crystal
+
+######## popup rule:Resolve a charge · PUBSTOMPER Pubstomper
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:Ritual · PUBSTOMPER Pubstomper
+THOUSAND SONS ARMY RULE
+
+Cabal of Sorcerers
+
+If your Army Faction is THOUSAND SONS, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.
+
+Psychic Test Sequence
+
+Roll 2D6
+Channel the Warp (Optional)
+Then, if one or more doubles or triples were rolled during this test, that model’s unit suffers D3 mortal wounds.
+If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects.
+
+FAQ (Faction Pack 1.3): Do I need to sequence all of my Cabal of Sorcerers Rituals at the start of my Shooting phase? No, you just pick a model with the Cabal of Sorcerers rule, pick a Ritual to manifest, and attempt it, then repeat the process until you have run out of models or Rituals or both.
+
+FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, do I have to choose whether to Channel the Warp before rolling any dice? No.
+
+FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, if I roll one or more doubles or triples, does my model only suffer D3 mortal wounds if I chose to Channel the Warp? Yes.
+
+App note, not rules text: Channel the Warp means rolling one more D6 for the test (the printed card shows it as a die).
+
+Destiny’s Ruin (Psychic) · Warp Charge 5
+
+Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, re-roll a Hit roll of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.
+
+Temporal Surge (Psychic) · Warp Charge 6
+
+Select one friendly THOUSAND SONS or SCINTILLATING LEGIONS unit that is not within Engagement Range of one or more enemy units and is within 24" of and visible to the manifesting model. That unit can make a Normal move of up to D6". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.
+
+Doombolt (Psychic) · Warp Charge 7
+
+Select one enemy unit within 24" of and visible to the manifesting model (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12" of the manifesting model); that unit suffers D3 mortal wounds. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.
+
+Twist of Fate (Psychic) · Warp Charge 9
+
+Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead.
+
+######## popup rule:Rituals · PUBSTOMPER Pubstomper
+THOUSAND SONS ARMY RULE
+
+Cabal of Sorcerers
+
+If your Army Faction is THOUSAND SONS, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.
+
+Psychic Test Sequence
+
+Roll 2D6
+Channel the Warp (Optional)
+Then, if one or more doubles or triples were rolled during this test, that model’s unit suffers D3 mortal wounds.
+If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects.
+
+FAQ (Faction Pack 1.3): Do I need to sequence all of my Cabal of Sorcerers Rituals at the start of my Shooting phase? No, you just pick a model with the Cabal of Sorcerers rule, pick a Ritual to manifest, and attempt it, then repeat the process until you have run out of models or Rituals or both.
+
+FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, do I have to choose whether to Channel the Warp before rolling any dice? No.
+
+FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, if I roll one or more doubles or triples, does my model only suffer D3 mortal wounds if I chose to Channel the Warp? Yes.
+
+App note, not rules text: Channel the Warp means rolling one more D6 for the test (the printed card shows it as a die).
+
+Destiny’s Ruin (Psychic) · Warp Charge 5
+
+Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, re-roll a Hit roll of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.
+
+Temporal Surge (Psychic) · Warp Charge 6
+
+Select one friendly THOUSAND SONS or SCINTILLATING LEGIONS unit that is not within Engagement Range of one or more enemy units and is within 24" of and visible to the manifesting model. That unit can make a Normal move of up to D6". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.
+
+Doombolt (Psychic) · Warp Charge 7
+
+Select one enemy unit within 24" of and visible to the manifesting model (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12" of the manifesting model); that unit suffers D3 mortal wounds. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.
+
+Twist of Fate (Psychic) · Warp Charge 9
+
+Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead.
+
+######## popup rule:SUSTAINED HITS 1 · PUBSTOMPER Pubstomper
+CORE RULE
+
+SUSTAINED HITS 1
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Defiler
+
+######## popup rule:SUSTAINED HITS 3 · PUBSTOMPER Pubstomper
+CORE RULE
+
+SUSTAINED HITS 3
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Defiler
+
+######## popup rule:Scouts · PUBSTOMPER Pubstomper
+CORE RULE
+
+Scouts
+
+This ability always takes the form Scouts X". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following:
+
+If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone.
+If that unit is wholly within your deployment zone, it can make a scout move (see below).
+If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.
+
+IN THIS ARMYTzaangors
+
+######## popup rule:Scouts 6" · PUBSTOMPER Pubstomper
+CORE RULE
+
+Scouts 6"
+
+This ability always takes the form Scouts X". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following:
+
+If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone.
+If that unit is wholly within your deployment zone, it can make a scout move (see below).
+If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.
+
+IN THIS ARMYTzaangors
+
+######## popup rule:Select Weapons · PUBSTOMPER Pubstomper
+CORE RULE
+
+Select Weapons
+
+For each model in the attacking unit, select which weapons that model will make attacks with. Models make ranged attacks with ranged weapons, and make melee attacks with melee weapons.
+
+While shooting: You can select one or more ranged weapons that model has.
+
+While fighting: You must select one melee weapon that model has.
+
+Sidearms: Some models are equipped with [CLOSE-QUARTERS] weapons in addition to other firearms. Such models can be an exception to the rules in this section, as you may not be able to select all of their weapons to make attacks with.
+
+24.11 [EXTRA ATTACKS]: Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others.
+
+04.01.03 Multiple Weapon Profiles (app): In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).
+
+######## popup rule:Strategic Reserves · PUBSTOMPER Pubstomper
+CORE RULE
+
+Strategic Reserves
+
+Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding FORTIFICATIONS) to place in strategic reserves. Instead of setting up these units on the battlefield during deployment, place them to one side; they are strategic reserves units, and will arrive later in the battle.
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+20.01.01 Reserves (app): The term ‘Reserves’ is the same as strategic reserves.
+
+20.02 Repositioned Units: Some rules allow units to be removed from the battlefield and placed in strategic reserves during the battle. Units that use such rules are known as repositioned units. In addition to any other rules that apply to such units (such as where they can or cannot arrive), all of the following rules apply to them:
+
+If used in the Movement phase, such rules can be used on units that have already moved that phase.
+A repositioned unit that is set up in the same turn in which it made an advance, fall-back or disembark move has still made an advance, fall-back or disembark move that turn.
+When they are removed from the battlefield, any rules that are affecting such units for a specified duration or under specified circumstances continue to affect them while that duration and/or those circumstances apply.
+
+20.03 Arriving from Strategic Reserves: To arrive on the battlefield, each strategic reserves unit must make an ingress move (see below). Unless otherwise stated, they can only do so from the second battle round onwards.
+
+At the end of the third battle round, unless otherwise stated, all strategic reserves units that have not made one or more ingress moves are destroyed, with the following exceptions:
+
+Units embarked within TRANSPORTS that have made an ingress move during the battle.
+Repositioned units (see opposite).
+
+######## popup rule:TORRENT · PUBSTOMPER Pubstomper
+CORE RULE
+
+TORRENT
+
+Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.
+
+IN THIS ARMYSorcerer
+
+######## popup rule:[DEVASTATING WOUNDS] · PUBSTOMPER Pubstomper
+CORE RULE
+
+DEVASTATING WOUNDS
+
+Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+
+Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+
+IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal, Defiler
+
+######## popup rule:[HAZARDOUS] · PUBSTOMPER Pubstomper
+CORE RULE
+
+HAZARDOUS
+
+Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.
+
+IN THIS ARMYMagnus the Red (in Treason of Tzeentch)
+
+######## popup rule:[IGNORES COVER] · PUBSTOMPER Pubstomper
+CORE RULE
+
+IGNORES COVER
+
+Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Tzaangor Enlightened with Fatecaster greatbows
+
+######## popup rule:[LETHAL HITS] · PUBSTOMPER Pubstomper
+CORE RULE
+
+LETHAL HITS
+
+Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
+
+Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
+
+IN THIS ARMYSorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal, Tzaangor Enlightened with Fatecaster greatbows
+
+######## popup rule:[PRECISION] · PUBSTOMPER Pubstomper
+CORE RULE
+
+PRECISION
+
+While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.
+
+24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
+
+IN THIS ARMYTzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows
+
+######## popup rule:[SUSTAINED HITS D3] · PUBSTOMPER Pubstomper
+CORE RULE
+
+SUSTAINED HITS D3
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Defiler
+
+######## popup rule:advance move · PUBSTOMPER Pubstomper
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+
+######## popup rule:battle-shock roll · PUBSTOMPER Pubstomper
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+######## popup rule:benefit of cover · PUBSTOMPER Pubstomper
+CORE RULE
+
+Benefit of Cover
+
+Each time a ranged attack targets a unit, if every model in that unit meets one or more of the following conditions, that unit has the benefit of cover against that attack:
+
+That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area.
+That model is not fully visible to the attacking model due to one or more intervening terrain features and/or one or more intervening obscuring terrain areas (see below).
+
+Each time a ranged attack targets a unit that has the benefit of cover against it, worsen the BS characteristic of that attack by 1.
+
+######## popup rule:charge move · PUBSTOMPER Pubstomper
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+
+######## popup rule:charge roll · PUBSTOMPER Pubstomper
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:charge rolls · PUBSTOMPER Pubstomper
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:charge targets · PUBSTOMPER Pubstomper
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+
+######## popup rule:engaged · PUBSTOMPER Pubstomper
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+######## popup rule:ingress move · PUBSTOMPER Pubstomper
+CORE RULE
+
+Ingress Move
+
+SET-UP DISTANCE: 6"
+
+ELIGIBLE IF: Your unit is in strategic reserves (excluding units that are embarked within TRANSPORTS that are themselves in strategic reserves).
+
+EFFECT: Your unit is set up as described in Set Up (03.02).
+
+WHILE MOVING: Set up your unit wholly within the set-up distance of one or more battlefield edges and more than 8" horizontally from all enemy units.
+
+Before the Third Battle Round: While doing so, no models can be set up within your opponent’s deployment zone.
+
+AFTER MOVING: Unless otherwise stated, until the start of the next Charge phase, your unit is not eligible to make any other type of move.
+
+20.03.01 Set Up As Reinforcements (app): If a rule mentions a unit being set up on the battlefield as Reinforcements, it means a unit that made an ingress move.
+
+######## popup rule:mortal wound · PUBSTOMPER Pubstomper
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+######## popup rule:mortal wounds · PUBSTOMPER Pubstomper
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+######## popup rule:snap shooting · PUBSTOMPER Pubstomper
+CORE RULE
+
+snap shooting
+
+ELIGIBLE IF: As stated in the rule allowing this shooting type.
+
+EFFECT: Your unit shoots as described in Making Attacks (04).
+
+WHILE SHOOTING:
+
+You can only target one visible enemy unit within 24" of your unit (and only if it is an eligible target).
+Each attack only hits on an unmodified hit roll of 6 (irrespective of the attacking weapon’s BS characteristic or any modifiers).
+You cannot re-roll hit rolls.
+
+AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.
+
+######## popup rule:strategic reserves · PUBSTOMPER Pubstomper
+CORE RULE
+
+Strategic Reserves
+
+Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding FORTIFICATIONS) to place in strategic reserves. Instead of setting up these units on the battlefield during deployment, place them to one side; they are strategic reserves units, and will arrive later in the battle.
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+20.01.01 Reserves (app): The term ‘Reserves’ is the same as strategic reserves.
+
+20.02 Repositioned Units: Some rules allow units to be removed from the battlefield and placed in strategic reserves during the battle. Units that use such rules are known as repositioned units. In addition to any other rules that apply to such units (such as where they can or cannot arrive), all of the following rules apply to them:
+
+If used in the Movement phase, such rules can be used on units that have already moved that phase.
+A repositioned unit that is set up in the same turn in which it made an advance, fall-back or disembark move has still made an advance, fall-back or disembark move that turn.
+When they are removed from the battlefield, any rules that are affecting such units for a specified duration or under specified circumstances continue to affect them while that duration and/or those circumstances apply.
+
+20.03 Arriving from Strategic Reserves: To arrive on the battlefield, each strategic reserves unit must make an ingress move (see below). Unless otherwise stated, they can only do so from the second battle round onwards.
+
+At the end of the third battle round, unless otherwise stated, all strategic reserves units that have not made one or more ingress moves are destroyed, with the following exceptions:
+
+Units embarked within TRANSPORTS that have made an ingress move during the battle.
+Repositioned units (see opposite).
+
+######## popup rule:unengaged · PUBSTOMPER Pubstomper
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+######## popup strat:arcane-focus · PUBSTOMPER Pubstomper
+1CP · SHOOTING · YOUR TURN
+
+Arcane Focus
+WHEN
+
+Your Shooting phase, just after you take a Psychic test for a THOUSAND SONS model from your army that Channelled the Warp (before resolving that Ritual).
+
+TARGETThat THOUSAND SONS model.
+
+EFFECT
+
+Re-roll all of the D6 rolled for that Psychic test (including the additional D6 for Channelling the Warp).
+
+USED BYany unit
+
+######## popup strat:command-re-roll · PUBSTOMPER Pubstomper
+1CP · ANY PHASE · EITHER TURN
+
+Command Re-roll
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+######## popup strat:counteroffensive · PUBSTOMPER Pubstomper
+2CP · FIGHT · THEIR TURN
+
+Counteroffensive
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+######## popup strat:crushing-impact · PUBSTOMPER Pubstomper
+1CP · CHARGE · YOUR TURN
+
+Crushing Impact
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Defiler
+
+######## popup strat:desecration-of-worlds · PUBSTOMPER Pubstomper
+1CP · COMMAND · YOUR TURN
+
+Desecration of Worlds
+WHEN
+
+Your Command phase.
+
+TARGETOne THOUSAND SONS PSYKER unit from your army within range of an objective marker you control.
+
+EFFECT
+
+That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
+
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+
+######## popup strat:destined-by-fate · PUBSTOMPER Pubstomper
+1CP · ANY PHASE · EITHER TURN
+
+Destined by Fate
+WHEN
+
+Any phase, just after a saving throw is failed for a THOUSAND SONS PSYKER model from your army. If you are using fast dice rolling, this Stratagem can still be used after rolling multiple saving throws at once.
+
+TARGETThat PSYKER model.
+
+EFFECT
+
+Change the Damage characteristic of that attack to 0. If you are using fast dice rolling, select one of those attacks you failed a saving throw for.
+
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+
+######## popup strat:devastating-sorcery · PUBSTOMPER Pubstomper
+2CP · SHOOTING · YOUR TURN
+
+Devastating Sorcery
+WHEN
+
+Your Shooting phase.
+
+TARGETOne THOUSAND SONS PSYKER unit from your army that has not been selected to shoot this phase.
+
+EFFECT
+
+Until the end of the phase, add 9" to the Range characteristic of Psychic weapons equipped by models in your unit, and each time a model in your unit makes an attack with a Psychic weapon, you can re-roll the Hit roll and you can re-roll the Wound roll.
+
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+
+######## popup strat:egotistical-power · PUBSTOMPER Pubstomper
+1CP · COMMAND · YOUR TURN
+
+Egotistical Power
+WHEN
+
+Your Command phase.
+
+TARGETOne THOUSAND SONS PSYKER unit from your army.
+
+EFFECT
+
+Select the Imbued Manifestation, Psychic Maelstrom or Wrath of the Immaterium ability. Until the start of your next Command phase, that ability applies to your unit instead of any other Kindred Sorcery ability, even if you have already selected that ability this battle.
+
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+
+######## popup strat:epic-challenge · PUBSTOMPER Pubstomper
+1CP · FIGHT · EITHER TURN
+
+Epic Challenge
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+
+######## popup strat:explosives · PUBSTOMPER Pubstomper
+1CP · SHOOTING · YOUR TURN
+
+Explosives
+WHEN
+
+Your Shooting phase.
+
+TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one EXPLOSIVES/GRENADES model in your unit.
+2. Select one unengaged enemy unit within 8" of and visible to that model.
+3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
+
+Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+
+USED BYSorcerer
+
+######## popup strat:fire-overwatch · PUBSTOMPER Pubstomper
+1CP · MOVEMENT · THEIR TURN
+
+Fire Overwatch
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal, Tzaangor Enlightened with Fatecaster greatbows, Defiler
+
+######## popup strat:heroic-intervention · PUBSTOMPER Pubstomper
+1CP · CHARGE · THEIR TURN · INTO THE FRAY +1CP
+
+Heroic Intervention
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYany unit
+
+######## popup strat:insane-bravery · PUBSTOMPER Pubstomper
+1CP · COMMAND · YOUR TURN · ONCE PER BATTLE
+
+Insane Bravery
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+######## popup strat:psychic-dominion · PUBSTOMPER Pubstomper
+1CP · ANY PHASE · EITHER TURN
+
+Psychic Dominion
+WHEN
+
+Any phase, just after an enemy unit has selected its targets.
+
+TARGETOne THOUSAND SONS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, all attacks made against your unit with Psychic weapons have the [HAZARDOUS] ability and all models in your unit have the Feel No Pain 4+ ability against Psychic Attacks.
+
+USED BYany unit
+
+######## popup strat:rapid-ingress · PUBSTOMPER Pubstomper
+1CP · MOVEMENT · THEIR TURN
+
+Rapid Ingress
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit

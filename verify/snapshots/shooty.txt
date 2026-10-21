@@ -34,6 +34,9 @@ Put it on your home screen: Safari → Share → Add to Home Screen.
 Data (version)
 
 ######## home · KK Kunnin’ Kodex
+FACTION
+DETACHMENT
+DISPOSITION
 YOUR ARMIES
 RANDOM
 Me shooty yer’ booty
@@ -47,6 +50,58 @@ Melee
 2000 pts
 ORKS
 WAR HORDE
+PURGE THE FOE
+Princes
+2000 pts
+WORLD EATERS
+BERZERKER WARBAND
+VESSELS OF WRATH
+PURGE THE FOE
+Standard
+2000 pts
+WORLD EATERS
+BERZERKER WARBAND
+VESSELS OF WRATH
+PURGE THE FOE
+Pubstomper
+2000 pts
+THOUSAND SONS
+GRAND COVEN
+PRIORITY ASSETS
+Nidzillas
+2000 pts
+TYRANIDS
+CRUSHER STAMPEDE
+TALONS OF THE NORN QUEEN
+PURGE THE FOE
+6 bigs
+2000 pts
+IMPERIAL KNIGHTS
+FREEBLADE COMPANY
+PURGE THE FOE
+4 megas and a destrier
+2000 pts
+IMPERIAL KNIGHTS
+FREEBLADE COMPANY
+PURGE THE FOE
+Ooga booga
+2000 pts
+ORKS
+BULLY BOYZ
+RUNT SWARM
+SHOOTA BOYZ
+PURGE THE FOE
+Super Terminators
+2000 pts
+WORLD EATERS
+BERZERKER WARBAND
+BUTCHERS OF KHORNE
+TAKE AND HOLD
+Purge goes the Foe
+2000 pts
+ADEPTUS MECHANICUS
+COHORT CYBERNETICA
+ERADICATION COHORT
 PURGE THE FOE
 Checked (date of the check) against your New Recruit lists, BSData and GW’s rules
 
@@ -1214,7 +1269,7 @@ Ghazghkull Thraka
 T10 · Sv 2+ · 4+ InSv · W16
 0.0
 of 1 model destroyed
-4.6
+4.7
 wounds lost
 <1%
 unit destroyed
@@ -1235,7 +1290,15 @@ Grabba Dragga
 Psyko-gatler
 24" · A12 · 4+ · S6 · AP-2 · D2 · ASSAULT, LETHAL HITS: non-MONSTER/VEHICLE, SUSTAINED HITS 1
 SITUATION
+Distance to the target
+inches; blank: not set
 Target has the benefit of cover
+Plunging Fire
+on terrain 3" or higher, or TOWERING with the target within 12": BS improved by 1
+Close-quarters shooting at a unit it is engaged with
+-1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
+Fire Overwatch (snap shooting)
+hits only on an unmodified 6, never critical; no hit re-rolls
 WAZDAKKA GUTSMEK’S RULES
 Clever Know-wotz
 Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase · not in these numbers
@@ -1276,6 +1339,15 @@ all
 
 Averages over 10,000 games played out with the dice; one unit’s attacks against the other, nothing used up. Rules marked “not counted” are not in these numbers.
 
+How this is worked out
+what the rules say, and what the calculator does where they leave a choice
+
+Weapons (04.03): the rules let the attacker pick which weapon’s attacks are resolved next; the calculator takes them in the order listed, and rolls identical attacks together.
+
+Saves and damage (05.03, 05.04): save rolls are rolled together and used from the lowest; an attack that gets through damages the one model it was allocated to, so damage beyond that model’s wounds is lost; Feel No Pain is rolled for each wound (24.12).
+
+Re-rolls and [LETHAL HITS] (01.05.02, 24.23): the rules leave these to the attacker; the calculator re-rolls every failed roll it may, re-rolls a successful roll only to look for a critical result when that is worth more on average, and takes [LETHAL HITS] unless rolling to wound is worth more (a critical wound with [DEVASTATING WOUNDS]).
+
 ######## damage fight · DAMAGE Damage
 OPPONENT
 Melee
@@ -1306,7 +1378,7 @@ Fixit’s Wrench
 Grabba Dragga
 5.0
 2.5
-1.3
+1.2
 Speeding Bulk and Flaming Exhaust
 2.5
 0.4
@@ -1359,6 +1431,15 @@ none
 all
 
 Averages over 10,000 games played out with the dice; one unit’s attacks against the other, nothing used up. Rules marked “not counted” are not in these numbers.
+
+How this is worked out
+what the rules say, and what the calculator does where they leave a choice
+
+Weapons (04.03): the rules let the attacker pick which weapon’s attacks are resolved next; the calculator takes them in the order listed, and rolls identical attacks together.
+
+Saves and damage (05.03, 05.04): save rolls are rolled together and used from the lowest; an attack that gets through damages the one model it was allocated to, so damage beyond that model’s wounds is lost; Feel No Pain is rolled for each wound (24.12).
+
+[BLAST] and [CLEAVE] (24.05, 24.06): one more attack dice (X with [BLAST X] or [CLEAVE X]) for every five models the target had before these attacks.
 
 ######## strats {"folded":true} · DAMAGE Stratagems
 EXPAND ALL

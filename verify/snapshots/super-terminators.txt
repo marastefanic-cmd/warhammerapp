@@ -1,0 +1,3516 @@
+######## army · OOGA BOOGA Super Terminators
+World Eaters · 2000 / 2000 pts · Strike Force
+
+Berzerker Warband · Butchers of Khorne · Disposition: Take and Hold
+
+Overview
+Damage calculator
+Units
+9
+Stratagems
+19
+Ranged weapons
+8
+Melee weapons
+13
+Abilities
+15
+Rules
+Bases & proxies
+54
+Keep screen on
+Off
+
+New Recruit, exported 20 Oct 2026
+
+######## pregame · SUPER TERMINATORS Overview
+YOUR LIST
+WARLORD
+Angron
+ENHANCE­MENTS
+Gore-stained Veterans (upgrade) 20 pts on Chaos Terminators (1–2 of 3)
+Gore-stained Veterans (upgrade) 20 pts on Chaos Terminators (3 of 3)
+DETACH­MENTS
+Berzerker Warband (2 DP), Butchers of Khorne (1 DP)
+Disposition: Take and Hold
+POINTS
+2000 / 2000 · Strike Force
+ARMY RULES
+Blessings of Khorne
+Command/Charge/Fight
+
+If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.
+
+Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.
+
+First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.
+
+They then use the two 2s to activate Unbridled Bloodlust.
+
+Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.
+
+Unbridled Bloodlust · double 1+
+
+This unit has +1 to charge rolls.
+
+Rage-fuelled Invigoration · double 2+
+
+Each time a model in this unit makes a Pile-in or Consolidation move, it can move up to 6" instead of up to 3".
+
+Total Carnage · double 3+
+
+Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.
+
+Martial Excellence · double 4+ or triple 1+
+
+Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.
+
+Warp Blades · double 5+ or triple 2+
+
+Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.
+
+Decapitating Strikes · double 6 or triple 3+
+
+Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
+
+DECLARE BATTLE FORMATIONS
+DEEP STRIKE
+Angron 330 pts
+Chaos Terminators (1–2 of 3) 370 pts each, ×2
+Chaos Terminators (3 of 3) 380 pts
+All of them: 1450 pts
+DEPLOYMENT AND PRE-BATTLE ABILITIES
+SCOUTS
+Eightbound Scouts 6"
+Goremongers Infiltrators
+START OF THE BATTLE ROUND
+EVERY ROUND
+Blessings of Khorne · World Eaters army rule
+Reborn in Blood · Angron
+Wrathful Presence · Angron
+USES PER BATTLE
+NEW GAME
+STRATA­GEMS
+1CP Insane Bravery
+
+Gathered from this list’s datasheets and rules; each line opens the full text.
+
+######## units · OVERVIEW Units Unit M T Sv W LD OC InSv Pts
+EPIC HEROES
+1
+Angron
+Warlord
+14"
+11
+2+
+16
+5+
+6
+4+
+330
+INFANTRY
+6
+Chaos Terminators
+Gore-stained Veterans
+1–2 of 3
+1× Terminator Champion, 2× Combi-bolter, chainfist, 4× Combi-bolter, power fist, 1× Paired accursed weapons, 2× Heavy weapon
+7"
+6
+2+
+3
+6+
+1
+4+
+2×370
+Chaos Terminators
+Gore-stained Veterans
+3 of 3
+1× Terminator Champion, 2× Combi-bolter, chainfist, 4× Combi-bolter, power fist, 1× Paired accursed weapons, 2× Heavy weapon
+7"
+6
+2+
+3
+6+
+1
+4+
+380
+Eightbound
+1× Eightbound Champion, 2× Eightbound
+10"
+6
+3+
+3
+6+
+1
+5+
+125
+Goremongers
+1× Blood Herald, 7× Goremonger w/ chainblade
+9"
+4
+6+
+1
+7+
+1
+–
+70
+Jakhals
+1× Jakhal Pack Leader, 1× Dishonoured w/ paired manglers, 8× Jakhal
+7"
+4
+6+
+1
+7+
+1
+–
+65
+VEHICLES
+2
+Forgefiend
+10"
+10
+3+
+12
+6+
+3
+5+
+2×145
+
+######## ranged · UNITS Ranged weapons WEAPON RNG A BS S AP D
+Chaos Terminators
+Gore-stained Veterans
+1–2 of 3
+×2 units
+Combi-bolter×6
+24"
+2
+4+
+5
+-1
+1
+RAPID FIRE 4
+Reaper autocannon×2
+36"
+4
+4+
+7
+-1
+1
+DEVASTATING WOUNDS, RAPID FIRE 2, SUSTAINED HITS 1
+Target is the closest eligible target: re-roll hit rolls (Bloody Fury)
+Chaos Terminators
+Gore-stained Veterans
+3 of 3
+Combi-bolter×6
+24"
+2
+4+
+5
+-1
+1
+RAPID FIRE 4
+Reaper autocannon×2
+36"
+4
+4+
+7
+-1
+1
+DEVASTATING WOUNDS, RAPID FIRE 2, SUSTAINED HITS 1
+Target is the closest eligible target: re-roll hit rolls (Bloody Fury)
+Goremongers
+Autopistol×8
+12"
+1
+4+
+3
+0
+1
+PISTOL
+Jakhals
+Autopistol×9
+12"
+1
+4+
+3
+0
+1
+PISTOL
+Forgefiend
+×2 units
+Hades autocannon×2
+36"
+6
+4+
+8
+-1
+2
+RAPID FIRE 4
+Ectoplasma cannon
+36"
+D3
+4+
+10
+-3
+3
+BLAST, RAPID FIRE 1
+Target is the closest eligible target within 18": re-roll the hit roll (Furious Onslaught)
+Damaged (1-4 wounds left): -1 to hit rolls (Damaged: 1-4 wounds remaining)
+
+######## melee · RANGED Melee weapons WEAPON A WS S AP D
+Angron
+Warlord
+Samni’arius and Spinegrinder
+➤strike
+9
+2+
+14
+-3
+D6+2
+DEVASTATING WOUNDS
+➤sweep
+17
+2+
+7
+-2
+2
+DEVASTATING WOUNDS
+Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 wounds remaining)
+Own aura, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+Chaos Terminators
+Gore-stained Veterans
+1–2 of 3
+×2 units
+Paired accursed weapons×2
+6
+2+
+5
+-2
+1
+TWIN-LINKED
+Chainfist×2
+4
+3+
+8
+-3
+2
+ANTI-VEHICLE 3+
+Power fist×6
+4
+2+
+8
+-2
+2
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+STRATAGEMS · BUTCHERS OF KHORNE
+1CP +1 A, When selected to fight (Focused Ferocity)
+1CP +1 to wound rolls, When selected to fight, vs MONSTER/VEHICLE targets (A Trophy for the Throne)
+Chaos Terminators
+Gore-stained Veterans
+3 of 3
+Paired accursed weapons×2
+6
+2+
+5
+-2
+1
+TWIN-LINKED
+Chainfist×2
+4
+3+
+8
+-3
+2
+ANTI-VEHICLE 3+
+Power fist×6
+4
+2+
+8
+-2
+2
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+STRATAGEMS · BUTCHERS OF KHORNE
+1CP +1 A, When selected to fight (Focused Ferocity)
+1CP +1 to wound rolls, When selected to fight, vs MONSTER/VEHICLE targets (A Trophy for the Throne)
+Eightbound
+Chainblades×3
+6
+3+
+8
+-2
+2
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Own aura, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+Goremongers
+Chainblade×8
+4
+4+
+3
+0
+1
+LANCE
+OR
+Close combat weapon×8
+3
+4+
+3
+0
+1
+Made a charge move this turn: Chainblade +1 to wound (Lance)
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+Jakhals
+Chainblades×9
+4
+4+
+3
+0
+1
+Paired manglersDISHONOURED
+5
+4+
+4
+0
+1
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+Forgefiend
+×2 units
+Forgefiend claws
+7
+3+
+6
+0
+1
+Damaged (1-4 wounds left): -1 to hit rolls (Damaged: 1-4 wounds remaining)
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+
+######## abilities · MELEE Abilities
+Angron
+Warlord
+Reborn in Blood
+Command · Your Move
+
+Command (either turn) / Your Movement
+
+At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its Deep Strike ability, with 8 wounds remaining.
+
+Wrathful Presence
+Command
+
+Start of the battle round
+
+At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability.
+
+Damaged: 1-6 wounds remaining
+
+While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+WRATHFUL PRESENCE: PICK ONE
+The Blood God’s Favour
+
+Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
+
+Driven by Ultimate Rage
+Fight
+
+Aura · Fight · Either turn
+
+While a friendly WORLD EATERS unit is within 6" of this unit, that unit’s melee attacks can:
+
+Re-roll hit rolls of 1.
+Re-roll wound rolls of 1.
+Overwhelming Wrath
+Their Movement
+
+Aura · Movement · Their turn
+
+Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.
+
+Chaos Terminators
+Gore-stained Veterans
+1–2 of 3
+×2 units
+Bloody Fury
+Their Move · Your Shoot · Charge
+
+Their Movement / Your Shooting / Charge (either turn)
+
+This unit’s ranged attacks that target the closest eligible target can re-roll hit rolls.
+
+When this unit declares a charge, you can use this part of this ability. If you do:
+
+This unit can re-roll that charge roll.
+This unit must end that charge move engaged with the closest charge target.
+Gore-stained Veterans
+
+Upgrade
+
+TERMINATOR SQUAD unit only. This unit’s melee attacks have +1 WS.
+
+Chaos Terminators
+Gore-stained Veterans
+3 of 3
+Bloody Fury
+Their Move · Your Shoot · Charge
+
+Their Movement / Your Shooting / Charge (either turn)
+
+This unit’s ranged attacks that target the closest eligible target can re-roll hit rolls.
+
+When this unit declares a charge, you can use this part of this ability. If you do:
+
+This unit can re-roll that charge roll.
+This unit must end that charge move engaged with the closest charge target.
+Gore-stained Veterans
+
+Upgrade
+
+TERMINATOR SQUAD unit only. This unit’s melee attacks have +1 WS.
+
+Eightbound
+Beacons of Rage
+Fight
+
+Aura · Fight · Either turn
+
+While a friendly WORLD EATERS unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding MONSTERS and VEHICLES), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well.
+
+Goremongers
+Loping Speed
+Their Movement
+
+Movement · Their turn
+
+In your opponent’s Movement phase, if an enemy unit ends a move within 8" of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6".
+
+Jakhals
+Objective Ravaged
+Your Command
+
+Command · Your turn
+
+At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
+
+Forgefiend
+×2 units
+Furious Onslaught
+Their Move · Your Shoot
+
+Their Movement / Your Shooting
+
+Each time this model makes a ranged attack that targets the closest eligible target within 18", you can re-roll the Hit roll.
+
+Damaged: 1-4 wounds remaining
+
+While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+######## rules · ABILITIES Rules
+World Eaters · Take and Hold
+ARMY RULES
+Blessings of Khorne
+Command/Charge/Fight
+
+If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.
+
+Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.
+
+First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.
+
+They then use the two 2s to activate Unbridled Bloodlust.
+
+Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.
+
+Unbridled Bloodlust · double 1+
+
+This unit has +1 to charge rolls.
+
+Rage-fuelled Invigoration · double 2+
+
+Each time a model in this unit makes a Pile-in or Consolidation move, it can move up to 6" instead of up to 3".
+
+Total Carnage · double 3+
+
+Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.
+
+Martial Excellence · double 4+ or triple 1+
+
+Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.
+
+Warp Blades · double 5+ or triple 2+
+
+Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.
+
+Decapitating Strikes · double 6 or triple 3+
+
+Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
+
+DETACHMENTS
+BERZERKER WARBAND
+Relentless Rage
+Detachment rule · Fight
+
+Already counted: every melee A value in this app includes this +1 A. Do not add it again.
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+APPLIES TOAngron, Chaos Terminators (1–2 of 3), Chaos Terminators (3 of 3), Eightbound, Goremongers, Jakhals, Forgefiend
+
+Other enhancements
+4 not in this list
+Berzerker Glaive 35 pts
+
+WORLD EATERS model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.
+
+Helm of Brazen Ire 30 pts
+
+WORLD EATERS model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack.
+
+Favoured of Khorne 20 pts
+
+WORLD EATERS model only. Each time you make a Blessings of Khorne roll, if the bearer is on the battlefield, you can re-roll up to two of the D6 rolled.
+
+Battle-lust 20 pts
+
+WORLD EATERS model only. You can re-roll Charge rolls made for the bearer’s unit. In addition, while the Unbridled Bloodlust Blessing of Khorne is active for your army, add 1 to Charge rolls made for the bearer’s unit.
+
+STRATAGEMSHack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Blood Offering, Apoplectic Frenzy (no unit in this list), Berzerker’s Wrath (no unit in this list)
+
+BUTCHERS OF KHORNE
+Adamantine Avalanche
+Detachment rule · Fight
+
+At the start of the Fight phase, if a friendly TERMINATOR SQUAD unit is engaged, make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne. Until the end of the phase, that Blessing of Khorne is active for friendly TERMINATOR SQUAD units in addition to any other Blessings of Khorne that are currently active.
+
+APPLIES TOChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
+
+Gore-stained Veterans
+Upgrade · 20 pts · on Chaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
+
+TERMINATOR SQUAD unit only. This unit’s melee attacks have +1 WS.
+
+ONChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
+
+Other enhancements
+1 not in this list
+Sanctified in Slaughter 15 pts
+
+TERMINATOR SQUAD unit only. This unit has +1 OC.
+
+STRATAGEMSWrath Beyond Reason, Focused Ferocity, A Trophy for the Throne
+
+UNIT RULES
+Deadly Demise
+
+Angron D6
+
+Forgefiend D3
+
+Deep Strike
+
+Angron
+
+Chaos Terminators (1–2 of 3)
+
+Chaos Terminators (3 of 3)
+
+Infiltrators
+
+Goremongers
+
+Scouts
+
+Eightbound 6"
+
+######## bases · RULES Bases & proxies
+BASES TO PRINT
+
+9× 28.5mm
+8× 32mm
+34× 40mm
+1× 100mm
+2× 120×92mm
+
+WHAT TO WRITE ON EACH BASE
+
+Angron
+1× 100mm
+Angron · Warlord
+Chaos Terminators
+2 units: mark them apart (1, 2)
+1× 40mm
+Terminator Champion · Paired accursed weapons
+2× 40mm
+Combi-bolter, chainfist · Chainfist
+4× 40mm
+standard Combi-bolter, Power fist
+1× 40mm
+Paired accursed weapons · Paired accursed weapons
+2× 40mm
+Heavy weapon · Reaper autocannon
+Chaos Terminators
+3 of 3
+1× 40mm
+Terminator Champion · Paired accursed weapons
+2× 40mm
+Combi-bolter, chainfist · Chainfist
+4× 40mm
+standard Combi-bolter, Power fist
+1× 40mm
+Paired accursed weapons · Paired accursed weapons
+2× 40mm
+Heavy weapon · Reaper autocannon
+Eightbound
+1× 40mm
+Champion
+2× 40mm
+standard Chainblades
+Goremongers
+1× 32mm
+Blood Herald
+7× 32mm
+standard Autopistol, Chainblade, Close combat weapon
+Jakhals
+1× 28.5mm
+Pack Leader
+1× 40mm
+Dishonoured · Paired manglers
+8× 28.5mm
+standard Autopistol, Chainblades
+Forgefiend
+2 units: mark them apart (1, 2)
+1× 120×92mm
+Forgefiend
+
+From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
+
+######## damage shooting · BASES Damage
+OPPONENT
+Purge goes the Foe
+Adeptus Mechanicus
+YOU ATTACK
+THEY ATTACK
+SHOOTING
+FIGHT
+ATTACKER · YOURS
+Chaos Terminators
+10 models
+TARGET · THEIRS
+Belisarius Cawl
+T8 · Sv 2+ · 4+ InSv · W10
+0.0
+of 1 model destroyed
+1.9
+wounds lost
+<1%
+unit destroyed
+HITS
+WOUNDS
+THROUGH
+Combi-bolter
+6.0
+2.0
+0.7
+Reaper autocannon
+5.4
+1.8
+1.2
+WEAPONS
+Combi-bolter ×6
+24" · A2 · 4+ · S5 · AP-1 · D1 · RAPID FIRE 4
+Reaper autocannon ×2
+36" · A4 · 4+ · S7 · AP-1 · D1 · DEVASTATING WOUNDS, RAPID FIRE 2, SUSTAINED HITS 1
+SITUATION
+Distance to the target
+inches; blank: not set
+Within half range
+every [MELTA] and [RAPID FIRE] weapon; or type the distance
+Target has the benefit of cover
+Plunging Fire
+on terrain 3" or higher, or TOWERING with the target within 12": BS improved by 1
+Target is engaged
+-1 to hit; no [BLAST]
+Fire Overwatch (snap shooting)
+hits only on an unmodified 6, never critical; no hit re-rolls
+CHAOS TERMINATORS (1–2 OF 3)’S RULES
+Bloody Fury
+Target is the closest eligible target: re-roll hit rolls
+BELISARIUS CAWL WHEN TARGETED
+Lone Operative while within 3" of another friendly ADEPTUS MECHANICUS unit
+ability · not in these numbers
+OTHER MODIFIERS
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP better
+−
+0
++
+Damage
+−
+0
++
+Attacks
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+Averages over 10,000 games played out with the dice; one unit’s attacks against the other, nothing used up. Rules marked “not counted” are not in these numbers.
+
+How this is worked out
+what the rules say, and what the calculator does where they leave a choice
+
+Weapons (04.03): the rules let the attacker pick which weapon’s attacks are resolved next; the calculator takes them in the order listed, and rolls identical attacks together.
+
+Saves and damage (05.03, 05.04): save rolls are rolled together and used from the lowest; an attack that gets through damages the one model it was allocated to, so damage beyond that model’s wounds is lost; Feel No Pain is rolled for each wound (24.12).
+
+######## damage fight · DAMAGE Damage
+OPPONENT
+Purge goes the Foe
+Adeptus Mechanicus
+YOU ATTACK
+THEY ATTACK
+SHOOTING
+FIGHT
+ATTACKER · YOURS
+Angron
+1 model
+TARGET · THEIRS
+Belisarius Cawl
+T8 · Sv 2+ · 4+ InSv · W10
+0.8
+of 1 model destroyed
+9.2
+wounds lost
+81%
+unit destroyed
+HITS
+WOUNDS
+THROUGH
+Samni’arius and Spinegrinder
+7.5
+5.0
+2.0
+WEAPONS
+Samni’arius and Spinegrinder
+Melee · A9 · 2+ · S14 · AP-3 · DD6+2 · DEVASTATING WOUNDS
+strike
+sweep
+SITUATION
+Made a charge move this turn
+Damaged (1-6 wounds left)
+-1 to hit rolls
+ANGRON’S RULES
+Driven by Ultimate Rage
+Own aura, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Beacons of Rage
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength · not in these numbers
+1CP Hack and Slash
+Made a charge move this turn: +1 AP in the Fight phase
+BELISARIUS CAWL WHEN TARGETED
+Lone Operative while within 3" of another friendly ADEPTUS MECHANICUS unit
+ability · not in these numbers
+OTHER MODIFIERS
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP better
+−
+0
++
+Damage
+−
+0
++
+Attacks
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+Averages over 10,000 games played out with the dice; one unit’s attacks against the other, nothing used up. Rules marked “not counted” are not in these numbers.
+
+How this is worked out
+what the rules say, and what the calculator does where they leave a choice
+
+Weapons (04.03): the rules let the attacker pick which weapon’s attacks are resolved next; the calculator takes them in the order listed, and rolls identical attacks together.
+
+Saves and damage (05.03, 05.04): save rolls are rolled together and used from the lowest; an attack that gets through damages the one model it was allocated to, so damage beyond that model’s wounds is lost; Feel No Pain is rolled for each wound (24.12).
+
+######## strats {"folded":true} · DAMAGE Stratagems
+EXPAND ALL
+BERZERKER WARBAND
+6
+1
+CP
+Hack and Slash
+Until the end of the phase, your unit’s melee weapons have +1 AP.
+Fight Any unit
+2
+CP
+Frenzied Resilience
+Until the end of the phase, -1 Damage to each attack allocated to a model in your unit.
+Fight Any unit
+1
+CP
+Skulls for the Skull Throne!
+Make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
+Fight Any unit
+1
+CP
+Blood Offering
+One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+Any phase Any unit
+1
+CP
+Apoplectic Frenzy
+Until the end of the turn, your unit is eligible to declare a charge even though it Advanced.
+Your Movement No unit in this list can use it (needs BERZERKERS)
+1
+CP
+Berzerker’s Wrath
+Your unit’s surge move is up to 8" instead of a D6 roll.
+Their Shooting No unit in this list can use it (needs BERZERKERS)
+BUTCHERS OF KHORNE
+3
+2
+CP
+Wrath Beyond Reason
+Ranged attacks that target your unit have -1 D until that enemy unit has attacked.
+Their Shooting Chaos Terminators ×3
+1
+CP
+Focused Ferocity
+Your unit’s melee attacks have +1 A.
+Fight Chaos Terminators ×3
+1
+CP
+A Trophy for the Throne
+Your unit’s attacks against a MONSTER/VEHICLE unit have +1 to wound rolls.
+Fight Chaos Terminators ×3
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+The battle-shock roll you are about to make for your unit is automatically successful.
+Your Command · Once per battle Any unit
+1
+CP
+Rapid Ingress
+Your unit in strategic reserves makes an ingress move (not in the first battle round).
+End of their Movement Any unit
+1
+CP
+Fire Overwatch
+Your unit shoots using snap shooting.
+End of their Movement All but Angron, Eightbound
+1
+CP
+Explosives
+One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
+Your Shooting Goremongers, Jakhals
+1
+CP
+Crushing Impact
+After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+Your Charge Angron, Forgefiend ×2
+1
+CP
+Heroic Intervention
+Your unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+End of their Charge · Into the Fray +1CP Any unit
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+Fight Angron
+2
+CP
+Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+Their Fight Any unit
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
+Any phase Any unit
+1
+CP
+Smokescreen
+Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+Start of their Shooting No unit in this list can use it (needs SMOKE)
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## strats {"open":true} · STRATAGEMS Stratagems
+COLLAPSE ALL
+BERZERKER WARBAND
+6
+1
+CP
+Hack and Slash
+Fight Any unit
+WHEN
+
+Fight phase.
+
+TARGETOne WORLD EATERS unit from your army that has not been selected to fight this phase and that made a charge move this turn.
+
+EFFECT
+
+Until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1.
+
+USED BYany unit
+
+2
+CP
+Frenzied Resilience
+Fight Any unit
+WHEN
+
+Fight phase, just after an enemy unit has selected its targets.
+
+TARGETOne WORLD EATERS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack.
+
+USED BYany unit
+
+1
+CP
+Skulls for the Skull Throne!
+Fight Any unit
+WHEN
+
+Fight phase, just after a WORLD EATERS unit from your army destroys a CHARACTER or MONSTER model.
+
+TARGETThat WORLD EATERS unit.
+
+EFFECT
+
+Make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne. Until the end of the battle round, that Blessing of Khorne is active in addition to any other Blessings of Khorne that are currently active.
+
+USED BYany unit
+
+1
+CP
+Blood Offering
+Any phase Any unit
+WHEN
+
+Any phase.
+
+TARGETOne WORLD EATERS unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.
+
+EFFECT
+
+Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
+
+USED BYany unit
+
+1
+CP
+Apoplectic Frenzy
+Your Movement No unit in this list can use it (needs BERZERKERS)
+WHEN
+
+Your Movement phase, just after a KHORNE BERZERKERS unit from your army is selected to Advance.
+
+TARGETThat KHORNE BERZERKERS unit.
+
+EFFECT
+
+Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced.
+
+USED BYno unit in this list (needs BERZERKERS)
+
+1
+CP
+Berzerker’s Wrath
+Their Shooting No unit in this list can use it (needs BERZERKERS)
+WHEN
+
+Your opponent’s Shooting phase, just after an enemy unit has shot.
+
+TARGETOne KHORNE BERZERKERS unit from your army that can make a surge move as a result of those attacks.
+
+EFFECT
+
+Do not roll a D6 to determine how far models in your unit can move when they make a surge move. Instead, when making a surge move, those models can move up to 8".
+
+Wahapedia FAQ: “After being the target of a ranged attack, can a Leader unit make a Blood Surge move if it was previously attached to a unit of Khorne Berzerkers and if the last model in the attached unit was destroyed by that ranged attack?” No.
+
+USED BYno unit in this list (needs BERZERKERS)
+
+BUTCHERS OF KHORNE
+3
+2
+CP
+Wrath Beyond Reason
+Their Shooting Chaos Terminators ×3
+WHEN
+
+Your opponent’s Shooting Phase, when an enemy unit targets a friendly TERMINATOR SQUAD unit.
+
+TARGETThat TERMINATOR SQUAD unit.
+
+EFFECT
+
+Ranged attacks that target your unit have -1 D until that enemy unit has attacked.
+
+USED BYChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
+
+1
+CP
+Focused Ferocity
+Fight Chaos Terminators ×3
+WHEN
+
+Fight phase, when a friendly TERMINATOR SQUAD unit is selected to fight.
+
+TARGETThat TERMINATOR SQUAD unit.
+
+EFFECT
+
+Your unit’s melee attacks have +1 A.
+
+USED BYChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
+
+1
+CP
+A Trophy for the Throne
+Fight Chaos Terminators ×3
+WHEN
+
+Fight phase, when a friendly TERMINATOR SQUAD unit is selected to fight.
+
+TARGETThat TERMINATOR SQUAD unit.
+
+EFFECT
+
+Your unit’s attacks that target a MONSTER/VEHICLE unit have +1 to wound rolls.
+
+USED BYChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
+
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+Your Command · Once per battle Any unit
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+1
+CP
+Rapid Ingress
+End of their Movement Any unit
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+1
+CP
+Fire Overwatch
+End of their Movement All but Angron, Eightbound
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3), Goremongers, Jakhals, Forgefiend
+
+1
+CP
+Explosives
+Your Shooting Goremongers, Jakhals
+WHEN
+
+Your Shooting phase.
+
+TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one EXPLOSIVES/GRENADES model in your unit.
+2. Select one unengaged enemy unit within 8" of and visible to that model.
+3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
+
+Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+
+USED BYGoremongers, Jakhals
+
+1
+CP
+Crushing Impact
+Your Charge Angron, Forgefiend ×2
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYAngron, Forgefiend
+
+1
+CP
+Heroic Intervention
+End of their Charge · Into the Fray +1CP Any unit
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYany unit
+
+1
+CP
+Epic Challenge
+Fight Angron
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYAngron
+
+2
+CP
+Counteroffensive
+Their Fight Any unit
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+1
+CP
+Command Re-roll
+Any phase Any unit
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+1
+CP
+Smokescreen
+Start of their Shooting No unit in this list can use it (needs SMOKE)
+WHEN
+
+Start of your opponent’s Shooting phase.
+
+TARGETOne friendly SMOKE unit.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
+
+USED BYno unit in this list (needs SMOKE)
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## unit angron · STRATAGEMS Super Terminators
+ANGRON
+330 PTS
+Epic Hero
+Warlord
+Models
+Options
+1× Angron
+Samni’arius and Spinegrinder
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Angron
+100mm
+14"
+11
+2+
+16
+5+
+6
+4+
+WHEN TARGETED2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+DAMAGED 1-6 W
+-1 TO HIT ROLLS
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Samni’arius and Spinegrinder
+➤strike
+9
+2+
+14
+-3
+D6+2
+DEVASTATING WOUNDS
+➤sweep
+17
+2+
+7
+-2
+2
+DEVASTATING WOUNDS
+Own aura, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+ABILITIES
+Reborn in Blood
+Command · Your Move
+
+Command (either turn) / Your Movement
+
+At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its Deep Strike ability, with 8 wounds remaining.
+
+Wrathful Presence
+Command
+
+Start of the battle round
+
+At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability.
+
+The Blood God’s Favour
+- Wrathful Presence: pick one
+
+Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
+
+Driven by Ultimate Rage
+- Wrathful Presence: pick one
+Fight
+
+Aura · Fight · Either turn
+
+While a friendly WORLD EATERS unit is within 6" of this unit, that unit’s melee attacks can:
+
+Re-roll hit rolls of 1.
+Re-roll wound rolls of 1.
+Overwhelming Wrath
+- Wrathful Presence: pick one
+Their Movement
+
+Aura · Movement · Their turn
+
+Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.
+
+Rules
+Deadly Demise D6, Deep Strike, Blessings of Khorne, Relentless Rage
+Stratagems
+
+BERZERKER WARBAND Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Blood Offering
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+None from Butchers of Khorne.
+
+Keywords
+ANGRON
+CHAOS
+CHARACTER
+DAEMON
+EPIC HERO
+FACTION: WORLD EATERS
+FLY
+KHORNE
+MONSTER
+PRIMARCH
+WARLORD
+Chaos Terminators (1–2 of 3) ›
+
+######## unit chaos-terminators · ANGRON Super Terminators
+CHAOS TERMINATORS
+370 PTS EACH
+Infantry · ×2 in list
+Gore-stained Veterans
+1–2 of 3
+Models
+Options
+1× Terminator Champion
+Paired accursed weapons
+2× Combi-bolter, chainfist
+Chainfist, Combi-bolter
+4× Combi-bolter, power fist
+Combi-bolter, Power fist
+1× Paired accursed weapons
+Paired accursed weapons
+2× Heavy weapon
+Reaper autocannon, Power fist
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Chaos Terminators
+40mm
+7"
+6
+2+
+3
+6+
+1
+4+
+WHEN TARGETED2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it · 2CP Wrath Beyond Reason: their Shooting phase: -1 D to ranged attacks that target it (until that enemy unit has attacked)
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Combi-bolter×6
+24"
+2
+4+
+5
+-1
+1
+RAPID FIRE 4
+Reaper autocannon×2
+36"
+4
+4+
+7
+-1
+1
+DEVASTATING WOUNDS, RAPID FIRE 2, SUSTAINED HITS 1
+Target is the closest eligible target: re-roll hit rolls (Bloody Fury)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Paired accursed weapons×2
+6
+2+
+5
+-2
+1
+TWIN-LINKED
+Chainfist×2
+4
+3+
+8
+-3
+2
+ANTI-VEHICLE 3+
+Power fist×6
+4
+2+
+8
+-2
+2
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+STRATAGEMS · BUTCHERS OF KHORNE
+1CP +1 A, When selected to fight (Focused Ferocity)
+1CP +1 to wound rolls, When selected to fight, vs MONSTER/VEHICLE targets (A Trophy for the Throne)
+ABILITIES
+Bloody Fury
+Their Move · Your Shoot · Charge
+
+Their Movement / Your Shooting / Charge (either turn)
+
+This unit’s ranged attacks that target the closest eligible target can re-roll hit rolls.
+
+When this unit declares a charge, you can use this part of this ability. If you do:
+
+This unit can re-roll that charge roll.
+This unit must end that charge move engaged with the closest charge target.
+Gore-stained Veterans
+
+Upgrade
+
+TERMINATOR SQUAD unit only. This unit’s melee attacks have +1 WS.
+
+Rules
+Deep Strike, Blessings of Khorne, Relentless Rage, Adamantine Avalanche
+Stratagems
+
+BERZERKER WARBAND Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Blood Offering
+
+BUTCHERS OF KHORNE Wrath Beyond Reason, Focused Ferocity, A Trophy for the Throne
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
+
+Keywords
+CHAOS
+FACTION: WORLD EATERS
+INFANTRY
+KHORNE
+TERMINATOR
+TERMINATOR SQUAD
+‹ Angron
+Chaos Terminators (3 of 3) ›
+
+######## unit chaos-terminators-2 · CHAOS TERMINATORS Super Terminators
+CHAOS TERMINATORS
+380 PTS
+Infantry
+Gore-stained Veterans
+3 of 3
+Models
+Options
+1× Terminator Champion
+Paired accursed weapons
+2× Combi-bolter, chainfist
+Chainfist, Combi-bolter
+4× Combi-bolter, power fist
+Combi-bolter, Power fist
+1× Paired accursed weapons
+Paired accursed weapons
+2× Heavy weapon
+Reaper autocannon, Power fist
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Chaos Terminators
+40mm
+7"
+6
+2+
+3
+6+
+1
+4+
+WHEN TARGETED2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it · 2CP Wrath Beyond Reason: their Shooting phase: -1 D to ranged attacks that target it (until that enemy unit has attacked)
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Combi-bolter×6
+24"
+2
+4+
+5
+-1
+1
+RAPID FIRE 4
+Reaper autocannon×2
+36"
+4
+4+
+7
+-1
+1
+DEVASTATING WOUNDS, RAPID FIRE 2, SUSTAINED HITS 1
+Target is the closest eligible target: re-roll hit rolls (Bloody Fury)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Paired accursed weapons×2
+6
+2+
+5
+-2
+1
+TWIN-LINKED
+Chainfist×2
+4
+3+
+8
+-3
+2
+ANTI-VEHICLE 3+
+Power fist×6
+4
+2+
+8
+-2
+2
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+STRATAGEMS · BUTCHERS OF KHORNE
+1CP +1 A, When selected to fight (Focused Ferocity)
+1CP +1 to wound rolls, When selected to fight, vs MONSTER/VEHICLE targets (A Trophy for the Throne)
+ABILITIES
+Bloody Fury
+Their Move · Your Shoot · Charge
+
+Their Movement / Your Shooting / Charge (either turn)
+
+This unit’s ranged attacks that target the closest eligible target can re-roll hit rolls.
+
+When this unit declares a charge, you can use this part of this ability. If you do:
+
+This unit can re-roll that charge roll.
+This unit must end that charge move engaged with the closest charge target.
+Gore-stained Veterans
+
+Upgrade
+
+TERMINATOR SQUAD unit only. This unit’s melee attacks have +1 WS.
+
+Rules
+Deep Strike, Blessings of Khorne, Relentless Rage, Adamantine Avalanche
+Stratagems
+
+BERZERKER WARBAND Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Blood Offering
+
+BUTCHERS OF KHORNE Wrath Beyond Reason, Focused Ferocity, A Trophy for the Throne
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
+
+Keywords
+CHAOS
+FACTION: WORLD EATERS
+INFANTRY
+KHORNE
+TERMINATOR
+TERMINATOR SQUAD
+‹ Chaos Terminators (1–2 of 3)
+Eightbound ›
+
+######## unit eightbound · CHAOS TERMINATORS Super Terminators
+EIGHTBOUND
+125 PTS
+Infantry
+Models
+Options
+1× Eightbound Champion
+Chainblades
+2× Eightbound
+Chainblades
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Eightbound
+40mm
+10"
+6
+3+
+3
+6+
+1
+5+
+WHEN TARGETED2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Chainblades×3
+6
+3+
+8
+-2
+2
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Own aura, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+ABILITIES
+Beacons of Rage
+Fight
+
+Aura · Fight · Either turn
+
+While a friendly WORLD EATERS unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding MONSTERS and VEHICLES), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well.
+
+Rules
+Scouts 6", Blessings of Khorne, Relentless Rage
+Stratagems
+
+BERZERKER WARBAND Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Blood Offering
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Butchers of Khorne.
+
+Keywords
+CHAOS
+DAEMON
+EIGHTBOUND
+FACTION: WORLD EATERS
+INFANTRY
+KHORNE
+POSSESSED
+‹ Chaos Terminators (3 of 3)
+Goremongers ›
+
+######## unit goremongers · EIGHTBOUND Super Terminators
+GOREMONGERS
+70 PTS
+Infantry
+Models
+Options
+1× Blood Herald
+Autopistol, Chainblade, Close combat weapon
+7× Goremonger w/ chainblade
+Autopistol, Chainblade, Close combat weapon
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Goremongers
+32mm
+9"
+4
+6+
+1
+7+
+1
+–
+WHEN TARGETED2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Autopistol×8
+12"
+1
+4+
+3
+0
+1
+PISTOL
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Chainblade×8
+4
+4+
+3
+0
+1
+LANCE
+OR
+Close combat weapon×8
+3
+4+
+3
+0
+1
+Made a charge move this turn: Chainblade +1 to wound (Lance)
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+ABILITIES
+Loping Speed
+Their Movement
+
+Movement · Their turn
+
+In your opponent’s Movement phase, if an enemy unit ends a move within 8" of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6".
+
+Rules
+Infiltrators, Blessings of Khorne, Relentless Rage
+Stratagems
+
+BERZERKER WARBAND Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Blood Offering
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Butchers of Khorne.
+
+Keywords
+CHAOS
+FACTION: WORLD EATERS
+GOREMONGERS
+GRENADES
+INFANTRY
+KHORNE
+‹ Eightbound
+Jakhals ›
+
+######## unit jakhals · GOREMONGERS Super Terminators
+JAKHALS
+65 PTS
+Infantry
+Models
+Options
+1× Jakhal Pack Leader
+Autopistol, Chainblades
+1× Dishonoured w/ paired manglers
+Paired manglers
+8× Jakhal
+Autopistol, Chainblades
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Jakhal
+28.5mm
+7"
+4
+6+
+1
+7+
+1
+–
+Dishonoured w/ paired manglers
+40mm
+7"
+4
+6+
+1
+7+
+1
+–
+WHEN TARGETED2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Autopistol×9
+12"
+1
+4+
+3
+0
+1
+PISTOL
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Chainblades×9
+4
+4+
+3
+0
+1
+Paired manglersDISHONOURED
+5
+4+
+4
+0
+1
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+ABILITIES
+Objective Ravaged
+Your Command
+
+Command · Your turn
+
+At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
+
+Rules
+Blessings of Khorne, Relentless Rage
+Stratagems
+
+BERZERKER WARBAND Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Blood Offering
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Butchers of Khorne.
+
+Keywords
+CHAOS
+FACTION: WORLD EATERS
+GRENADES
+INFANTRY
+JAKHALS
+KHORNE
+‹ Goremongers
+Forgefiend ›
+
+######## unit forgefiend · JAKHALS Super Terminators
+FORGEFIEND
+145 PTS EACH
+Vehicle · ×2 in list
+Models
+Options
+1× Forgefiend
+2× Hades autocannon, Ectoplasma cannon, Forgefiend claws
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Forgefiend
+120×92mm
+10"
+10
+3+
+12
+6+
+3
+5+
+WHEN TARGETED2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+DAMAGED 1-4 W
+-1 TO HIT ROLLS
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Hades autocannon×2
+36"
+6
+4+
+8
+-1
+2
+RAPID FIRE 4
+Ectoplasma cannon
+36"
+D3
+4+
+10
+-3
+3
+BLAST, RAPID FIRE 1
+Target is the closest eligible target within 18": re-roll the hit roll (Furious Onslaught)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Forgefiend claws
+7
+3+
+6
+0
+1
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+ABILITIES
+Furious Onslaught
+Their Move · Your Shoot
+
+Their Movement / Your Shooting
+
+Each time this model makes a ranged attack that targets the closest eligible target within 18", you can re-roll the Hit roll.
+
+Rules
+Deadly Demise D3, Blessings of Khorne, Relentless Rage
+Stratagems
+
+BERZERKER WARBAND Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Blood Offering
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Butchers of Khorne.
+
+Keywords
+CHAOS
+DAEMON
+FACTION: WORLD EATERS
+FORGEFIEND
+KHORNE
+VEHICLE
+WALKER
+‹ Jakhals
+
+######## popup ability:super-terminators|Beacons of Rage|While a friendly **WORLD EATERS** unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding **MONSTERS** and **VEHICLES**), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well. · FORGEFIEND Super Terminators
+ABILITY · AURA · FIGHT · EITHER TURN
+
+Beacons of Rage
+
+While a friendly WORLD EATERS unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding MONSTERS and VEHICLES), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well.
+
+UNITEightbound
+
+######## popup ability:super-terminators|Bloody Fury|This unit’s ranged attacks that target the closest eligible target can re-roll **hit rolls**.
+When this unit **declares a charge**, you can use this part of this ability. If you do:
+- This unit can re-roll that **charge roll**.
+- This unit must end that **charge move** **engaged** with the closest **charge target**. · SUPER TERMINATORS Super Terminators
+ABILITY · THEIR MOVEMENT / YOUR SHOOTING / CHARGE (EITHER TURN)
+
+Bloody Fury
+
+This unit’s ranged attacks that target the closest eligible target can re-roll hit rolls.
+
+When this unit declares a charge, you can use this part of this ability. If you do:
+
+This unit can re-roll that charge roll.
+This unit must end that charge move engaged with the closest charge target.
+
+UNITChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
+
+######## popup ability:super-terminators|Damaged: 1-4 wounds remaining|While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. · SUPER TERMINATORS Super Terminators
+ABILITY
+
+Damaged: 1-4 wounds remaining
+
+While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+UNITForgefiend
+
+######## popup ability:super-terminators|Damaged: 1-6 wounds remaining|While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. · SUPER TERMINATORS Super Terminators
+ABILITY
+
+Damaged: 1-6 wounds remaining
+
+While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+UNITAngron
+
+######## popup ability:super-terminators|Driven by Ultimate Rage|While a friendly **WORLD EATERS** unit is within 6" of this unit, that unit’s melee attacks can:
+- Re-roll hit rolls of 1.
+- Re-roll wound rolls of 1. · SUPER TERMINATORS Super Terminators
+ABILITY · AURA · FIGHT · EITHER TURN
+
+Driven by Ultimate Rage
+
+While a friendly WORLD EATERS unit is within 6" of this unit, that unit’s melee attacks can:
+
+Re-roll hit rolls of 1.
+Re-roll wound rolls of 1.
+
+UNITAngron
+
+######## popup ability:super-terminators|Furious Onslaught|Each time this model makes a ranged attack that targets the closest eligible target within 18", you can re-roll the Hit roll. · SUPER TERMINATORS Super Terminators
+ABILITY · THEIR MOVEMENT / YOUR SHOOTING
+
+Furious Onslaught
+
+Each time this model makes a ranged attack that targets the closest eligible target within 18", you can re-roll the Hit roll.
+
+UNITForgefiend
+
+######## popup ability:super-terminators|Reborn in Blood|At the start of the battle round, when you make a **Blessings of Khorne** roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its **Deep Strike** ability, with 8 wounds remaining. · SUPER TERMINATORS Super Terminators
+ABILITY · COMMAND (EITHER TURN) / YOUR MOVEMENT
+
+Reborn in Blood
+
+At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its Deep Strike ability, with 8 wounds remaining.
+
+UNITAngron
+
+######## popup ability:super-terminators|Wrathful Presence|At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability. · SUPER TERMINATORS Super Terminators
+ABILITY · START OF THE BATTLE ROUND
+
+Wrathful Presence
+
+At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability.
+
+UNITAngron
+
+######## popup enh:butchers-of-khorne|Gore-stained Veterans · SUPER TERMINATORS Super Terminators
+UPGRADE · BUTCHERS OF KHORNE · 20 PTS
+
+Gore-stained Veterans
+
+TERMINATOR SQUAD unit only. This unit’s melee attacks have +1 WS.
+
+ONChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
+
+######## popup grant:["Gore-stained Veterans","chaos-terminators","WS 2+",null] · SUPER TERMINATORS Super Terminators
+WS 2+ · GRANTED BY
+
+Gore-stained Veterans
+
+Upgrade
+
+TERMINATOR SQUAD unit only. This unit’s melee attacks have +1 WS.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Gore-stained Veterans","chaos-terminators","WS 3+",null] · SUPER TERMINATORS Super Terminators
+WS 3+ · GRANTED BY
+
+Gore-stained Veterans
+
+Upgrade
+
+TERMINATOR SQUAD unit only. This unit’s melee attacks have +1 WS.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Gore-stained Veterans","chaos-terminators-2","WS 2+",null] · SUPER TERMINATORS Super Terminators
+WS 2+ · GRANTED BY
+
+Gore-stained Veterans
+
+Upgrade
+
+TERMINATOR SQUAD unit only. This unit’s melee attacks have +1 WS.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Gore-stained Veterans","chaos-terminators-2","WS 3+",null] · SUPER TERMINATORS Super Terminators
+WS 3+ · GRANTED BY
+
+Gore-stained Veterans
+
+Upgrade
+
+TERMINATOR SQUAD unit only. This unit’s melee attacks have +1 WS.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","angron","A 17",null] · SUPER TERMINATORS Super Terminators
+A 17 · GRANTED BY
+
+Relentless Rage
+
+Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","angron","A 9",null] · SUPER TERMINATORS Super Terminators
+A 9 · GRANTED BY
+
+Relentless Rage
+
+Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","chaos-terminators","A 4",null] · SUPER TERMINATORS Super Terminators
+A 4 · GRANTED BY
+
+Relentless Rage
+
+Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","chaos-terminators","A 6",null] · SUPER TERMINATORS Super Terminators
+A 6 · GRANTED BY
+
+Relentless Rage
+
+Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","chaos-terminators-2","A 4",null] · SUPER TERMINATORS Super Terminators
+A 4 · GRANTED BY
+
+Relentless Rage
+
+Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","chaos-terminators-2","A 6",null] · SUPER TERMINATORS Super Terminators
+A 6 · GRANTED BY
+
+Relentless Rage
+
+Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","eightbound","A 6",null] · SUPER TERMINATORS Super Terminators
+A 6 · GRANTED BY
+
+Relentless Rage
+
+Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","forgefiend","A 7",null] · SUPER TERMINATORS Super Terminators
+A 7 · GRANTED BY
+
+Relentless Rage
+
+Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","goremongers","A 3",null] · SUPER TERMINATORS Super Terminators
+A 3 · GRANTED BY
+
+Relentless Rage
+
+Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","goremongers","A 4",null] · SUPER TERMINATORS Super Terminators
+A 4 · GRANTED BY
+
+Relentless Rage
+
+Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","jakhals","A 4",null] · SUPER TERMINATORS Super Terminators
+A 4 · GRANTED BY
+
+Relentless Rage
+
+Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","jakhals","A 5",null] · SUPER TERMINATORS Super Terminators
+A 5 · GRANTED BY
+
+Relentless Rage
+
+Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup rule:ANTI-VEHICLE 3+ · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+ANTI-VEHICLE 3+
+
+This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.
+
+Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
+
+IN THIS ARMYChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
+
+######## popup rule:Adamantine Avalanche · SUPER TERMINATORS Super Terminators
+BUTCHERS OF KHORNE DETACHMENT RULE
+
+Adamantine Avalanche
+
+At the start of the Fight phase, if a friendly TERMINATOR SQUAD unit is engaged, make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne. Until the end of the phase, that Blessing of Khorne is active for friendly TERMINATOR SQUAD units in addition to any other Blessings of Khorne that are currently active.
+
+IN THIS ARMYChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
+
+######## popup rule:Advance · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+
+######## popup rule:Advance roll · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+
+######## popup rule:BLAST · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+BLAST
+
+Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead.
+
+Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+IN THIS ARMYForgefiend
+
+######## popup rule:Blessing of Khorne · SUPER TERMINATORS Super Terminators
+WORLD EATERS ARMY RULE
+
+Blessings of Khorne
+
+If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.
+
+Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.
+
+First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.
+
+They then use the two 2s to activate Unbridled Bloodlust.
+
+Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.
+
+Unbridled Bloodlust · double 1+
+
+This unit has +1 to charge rolls.
+
+Rage-fuelled Invigoration · double 2+
+
+Each time a model in this unit makes a Pile-in or Consolidation move, it can move up to 6" instead of up to 3".
+
+Total Carnage · double 3+
+
+Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.
+
+Martial Excellence · double 4+ or triple 1+
+
+Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.
+
+Warp Blades · double 5+ or triple 2+
+
+Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.
+
+Decapitating Strikes · double 6 or triple 3+
+
+Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
+
+######## popup rule:Blessings of Khorne · SUPER TERMINATORS Super Terminators
+WORLD EATERS ARMY RULE
+
+Blessings of Khorne
+
+If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.
+
+Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.
+
+First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.
+
+They then use the two 2s to activate Unbridled Bloodlust.
+
+Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.
+
+Unbridled Bloodlust · double 1+
+
+This unit has +1 to charge rolls.
+
+Rage-fuelled Invigoration · double 2+
+
+Each time a model in this unit makes a Pile-in or Consolidation move, it can move up to 6" instead of up to 3".
+
+Total Carnage · double 3+
+
+Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.
+
+Martial Excellence · double 4+ or triple 1+
+
+Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.
+
+Warp Blades · double 5+ or triple 2+
+
+Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.
+
+Decapitating Strikes · double 6 or triple 3+
+
+Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
+
+######## popup rule:Blessings of Khorne roll · SUPER TERMINATORS Super Terminators
+WORLD EATERS ARMY RULE
+
+Blessings of Khorne
+
+If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.
+
+Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.
+
+First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.
+
+They then use the two 2s to activate Unbridled Bloodlust.
+
+Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.
+
+Unbridled Bloodlust · double 1+
+
+This unit has +1 to charge rolls.
+
+Rage-fuelled Invigoration · double 2+
+
+Each time a model in this unit makes a Pile-in or Consolidation move, it can move up to 6" instead of up to 3".
+
+Total Carnage · double 3+
+
+Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.
+
+Martial Excellence · double 4+ or triple 1+
+
+Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.
+
+Warp Blades · double 5+ or triple 2+
+
+Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.
+
+Decapitating Strikes · double 6 or triple 3+
+
+Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
+
+######## popup rule:Charge roll · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:Charge rolls · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:Consolidation move · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Consolidation Move
+
+MAXIMUM DISTANCE: 3"
+
+ELIGIBLE IF: It is the Fight phase and your unit was eligible to fight this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select consolidation mode:
+
+Ongoing Consolidation: If your unit is engaged, you must select this mode and select every enemy unit it is engaged with.
+Engaging Consolidation: Otherwise, if your unit is within 3" of one or more enemy units, you must select this mode and select one or more of those enemy units.
+Objective Consolidation: Otherwise, if your unit is within 3" of one or more objectives, you must select this mode and select one of those objectives.
+
+WHILE MOVING:
+
+Ongoing Consolidation: Models in base-contact with one or more enemy models cannot be moved. Each model that is moved must end its move closer to the closest selected enemy unit, and engaged with it if possible.
+Engaging Consolidation: Each model that is moved must end its move closer to the closest selected enemy unit, and engaged with it if possible.
+Objective Consolidation: Each model that is moved must end its move within range of the selected objective if possible, or closer to it if not.
+
+AFTER MOVING:
+
+Ongoing Consolidation: Each model that started this move engaged with an enemy unit must still be engaged with that enemy unit.
+Engaging Consolidation: Your unit must be engaged with all of the selected enemy units. If one or more enemy units engaged with your unit have not been selected to fight this phase, your opponent must select each of those units, one at a time; when each is selected, it becomes eligible to fight and is selected to fight (12.04).
+Objective Consolidation: Your unit must be within range of the selected objective.
+
+Wahapedia core rules errata (12.08 Consolidation Move, After Moving, Ongoing Consolidation): Each model that started this move engaged with an enemy unit must still be engaged with that enemy unit. If one or more enemy units engaged with your unit have not been selected to fight this phase, your opponent must select each of those units, one at a time; when each is selected, it becomes eligible to fight and is selected to fight
+
+App note, not rules text: the lines above the errata are the printed Core Rules (01/06/2026). GW’s Warhammer 40,000 app, as Wahapedia prints it, changes two After Moving lines: the errata replaces the Ongoing Consolidation line, and the Objective Consolidation line reads “Your unit must be unengaged and within range of the selected objective”. No GW PDF has either change yet (16 Oct 2026).
+
+######## popup rule:DEVASTATING WOUNDS · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+DEVASTATING WOUNDS
+
+Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+
+Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+
+IN THIS ARMYAngron, Chaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
+
+######## popup rule:Deadly Demise · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Deadly Demise
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYAngron, Forgefiend
+
+######## popup rule:Deadly Demise D3 · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Deadly Demise D3
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYAngron, Forgefiend
+
+######## popup rule:Deadly Demise D6 · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Deadly Demise D6
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYAngron, Forgefiend
+
+######## popup rule:Deep Strike · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Deep Strike
+
+Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
+
+App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
+
+IN THIS ARMYAngron, Chaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
+
+######## popup rule:Fights First · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Fights First
+
+While every model in a unit has this ability, that unit is a Fights First unit.
+
+See the Resolve Fights First Combats step in the Fight phase (12.04).
+
+######## popup rule:Hazard roll · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Hazard Roll
+
+To make a hazard roll for a unit, roll one D6: on a 1-2, that roll fails and that unit suffers 1 mortal wound (see above), or 3 mortal wounds instead if each model in that unit is a MONSTER/VEHICLE model. If more than one hazard roll is required for a unit, make all of those rolls simultaneously.
+
+06.03.01 Hazardous Test (app): The term ‘Hazardous test’ is the same as hazard roll.
+
+Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model in the unit make a hazard roll? No, the unit would make 1 single hazard roll.
+
+Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
+
+######## popup rule:Infiltrators · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Infiltrators
+
+During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from your opponent’s deployment zone and all enemy units.
+
+IN THIS ARMYGoremongers
+
+######## popup rule:LANCE · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+LANCE
+
+Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
+
+IN THIS ARMYGoremongers
+
+######## popup rule:Lance · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Lance
+
+Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
+
+IN THIS ARMYGoremongers
+
+######## popup rule:PISTOL · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+PISTOL
+
+Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with:
+
+One or more of its [CLOSE-QUARTERS] weapons.
+One or more of its other ranged weapons.
+
+[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
+
+IN THIS ARMYGoremongers, Jakhals
+
+######## popup rule:RAPID FIRE 1 · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+RAPID FIRE 1
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3), Forgefiend
+
+######## popup rule:RAPID FIRE 2 · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+RAPID FIRE 2
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3), Forgefiend
+
+######## popup rule:RAPID FIRE 4 · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+RAPID FIRE 4
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3), Forgefiend
+
+######## popup rule:Relentless Rage · SUPER TERMINATORS Super Terminators
+BERZERKER WARBAND DETACHMENT RULE
+
+Relentless Rage
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already counted: every melee A value in this app includes this +1 A. Do not add it again.
+
+IN THIS ARMYAngron, Chaos Terminators (1–2 of 3), Chaos Terminators (3 of 3), Eightbound, Goremongers, Jakhals, Forgefiend
+
+######## popup rule:Resolve a charge · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:SUSTAINED HITS 1 · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+SUSTAINED HITS 1
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
+
+######## popup rule:Scouts · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Scouts
+
+This ability always takes the form Scouts X". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following:
+
+If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone.
+If that unit is wholly within your deployment zone, it can make a scout move (see below).
+If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.
+
+IN THIS ARMYEightbound
+
+######## popup rule:Scouts 6" · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Scouts 6"
+
+This ability always takes the form Scouts X". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following:
+
+If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone.
+If that unit is wholly within your deployment zone, it can make a scout move (see below).
+If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.
+
+IN THIS ARMYEightbound
+
+######## popup rule:Select Weapons · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Select Weapons
+
+For each model in the attacking unit, select which weapons that model will make attacks with. Models make ranged attacks with ranged weapons, and make melee attacks with melee weapons.
+
+While shooting: You can select one or more ranged weapons that model has.
+
+While fighting: You must select one melee weapon that model has.
+
+Sidearms: Some models are equipped with [CLOSE-QUARTERS] weapons in addition to other firearms. Such models can be an exception to the rules in this section, as you may not be able to select all of their weapons to make attacks with.
+
+24.11 [EXTRA ATTACKS]: Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others.
+
+04.01.03 Multiple Weapon Profiles (app): In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).
+
+######## popup rule:TWIN-LINKED · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+TWIN-LINKED
+
+Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll.
+
+IN THIS ARMYChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
+
+######## popup rule:[DEVASTATING WOUNDS] · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+DEVASTATING WOUNDS
+
+Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+
+Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+
+IN THIS ARMYAngron, Chaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
+
+######## popup rule:[LETHAL HITS] · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+LETHAL HITS
+
+Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
+
+Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
+
+######## popup rule:[PRECISION] · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+PRECISION
+
+While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.
+
+24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
+
+######## popup rule:[SUSTAINED HITS 1] · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+SUSTAINED HITS 1
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
+
+######## popup rule:advance move · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+
+######## popup rule:battle-shock roll · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+######## popup rule:benefit of cover · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Benefit of Cover
+
+Each time a ranged attack targets a unit, if every model in that unit meets one or more of the following conditions, that unit has the benefit of cover against that attack:
+
+That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area.
+That model is not fully visible to the attacking model due to one or more intervening terrain features and/or one or more intervening obscuring terrain areas (see below).
+
+Each time a ranged attack targets a unit that has the benefit of cover against it, worsen the BS characteristic of that attack by 1.
+
+######## popup rule:charge move · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+
+######## popup rule:charge roll · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:charge rolls · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:charge target · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+
+######## popup rule:charge targets · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+
+######## popup rule:declares a charge · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:engaged · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+######## popup rule:ingress move · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Ingress Move
+
+SET-UP DISTANCE: 6"
+
+ELIGIBLE IF: Your unit is in strategic reserves (excluding units that are embarked within TRANSPORTS that are themselves in strategic reserves).
+
+EFFECT: Your unit is set up as described in Set Up (03.02).
+
+WHILE MOVING: Set up your unit wholly within the set-up distance of one or more battlefield edges and more than 8" horizontally from all enemy units.
+
+Before the Third Battle Round: While doing so, no models can be set up within your opponent’s deployment zone.
+
+AFTER MOVING: Unless otherwise stated, until the start of the next Charge phase, your unit is not eligible to make any other type of move.
+
+20.03.01 Set Up As Reinforcements (app): If a rule mentions a unit being set up on the battlefield as Reinforcements, it means a unit that made an ingress move.
+
+######## popup rule:mortal wound · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+######## popup rule:mortal wounds · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+######## popup rule:snap shooting · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+snap shooting
+
+ELIGIBLE IF: As stated in the rule allowing this shooting type.
+
+EFFECT: Your unit shoots as described in Making Attacks (04).
+
+WHILE SHOOTING:
+
+You can only target one visible enemy unit within 24" of your unit (and only if it is an eligible target).
+Each attack only hits on an unmodified hit roll of 6 (irrespective of the attacking weapon’s BS characteristic or any modifiers).
+You cannot re-roll hit rolls.
+
+AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.
+
+######## popup rule:strategic reserves · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Strategic Reserves
+
+Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding FORTIFICATIONS) to place in strategic reserves. Instead of setting up these units on the battlefield during deployment, place them to one side; they are strategic reserves units, and will arrive later in the battle.
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+20.01.01 Reserves (app): The term ‘Reserves’ is the same as strategic reserves.
+
+20.02 Repositioned Units: Some rules allow units to be removed from the battlefield and placed in strategic reserves during the battle. Units that use such rules are known as repositioned units. In addition to any other rules that apply to such units (such as where they can or cannot arrive), all of the following rules apply to them:
+
+If used in the Movement phase, such rules can be used on units that have already moved that phase.
+A repositioned unit that is set up in the same turn in which it made an advance, fall-back or disembark move has still made an advance, fall-back or disembark move that turn.
+When they are removed from the battlefield, any rules that are affecting such units for a specified duration or under specified circumstances continue to affect them while that duration and/or those circumstances apply.
+
+20.03 Arriving from Strategic Reserves: To arrive on the battlefield, each strategic reserves unit must make an ingress move (see below). Unless otherwise stated, they can only do so from the second battle round onwards.
+
+At the end of the third battle round, unless otherwise stated, all strategic reserves units that have not made one or more ingress moves are destroyed, with the following exceptions:
+
+Units embarked within TRANSPORTS that have made an ingress move during the battle.
+Repositioned units (see opposite).
+
+######## popup rule:surge move · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Surge Move
+
+Some rules allow a unit to make a surge move, as described below.
+
+MAXIMUM DISTANCE: As stated in the rule allowing this move type.
+
+ELIGIBLE IF: All of the following apply:
+
+The rule allowing this move type has been triggered.
+Your unit is not battle-shocked.
+Your unit is unengaged.
+Your unit has not moved this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select the closest enemy unit to be the surge target.
+
+WHILE MOVING:
+
+Each model must end its move engaged with the surge target if possible.
+Each model that cannot end its move engaged with the surge target must end its move as close as possible to the surge target.
+
+AFTER MOVING:
+
+Your unit cannot be engaged with one or more enemy units that were not the surge target.
+Your unit cannot move again this phase.
+
+######## popup rule:unengaged · SUPER TERMINATORS Super Terminators
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+######## popup strat:a-trophy-for-the-throne · SUPER TERMINATORS Super Terminators
+1CP · FIGHT · EITHER TURN
+
+A Trophy for the Throne
+WHEN
+
+Fight phase, when a friendly TERMINATOR SQUAD unit is selected to fight.
+
+TARGETThat TERMINATOR SQUAD unit.
+
+EFFECT
+
+Your unit’s attacks that target a MONSTER/VEHICLE unit have +1 to wound rolls.
+
+USED BYChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
+
+######## popup strat:apoplectic-frenzy · SUPER TERMINATORS Super Terminators
+1CP · MOVEMENT · YOUR TURN
+
+Apoplectic Frenzy
+WHEN
+
+Your Movement phase, just after a KHORNE BERZERKERS unit from your army is selected to Advance.
+
+TARGETThat KHORNE BERZERKERS unit.
+
+EFFECT
+
+Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced.
+
+USED BYno unit in this list (needs BERZERKERS)
+
+######## popup strat:berzerkers-wrath · SUPER TERMINATORS Super Terminators
+1CP · SHOOTING · THEIR TURN
+
+Berzerker’s Wrath
+WHEN
+
+Your opponent’s Shooting phase, just after an enemy unit has shot.
+
+TARGETOne KHORNE BERZERKERS unit from your army that can make a surge move as a result of those attacks.
+
+EFFECT
+
+Do not roll a D6 to determine how far models in your unit can move when they make a surge move. Instead, when making a surge move, those models can move up to 8".
+
+Wahapedia FAQ: “After being the target of a ranged attack, can a Leader unit make a Blood Surge move if it was previously attached to a unit of Khorne Berzerkers and if the last model in the attached unit was destroyed by that ranged attack?” No.
+
+USED BYno unit in this list (needs BERZERKERS)
+
+######## popup strat:blood-offering · SUPER TERMINATORS Super Terminators
+1CP · ANY PHASE · EITHER TURN
+
+Blood Offering
+WHEN
+
+Any phase.
+
+TARGETOne WORLD EATERS unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.
+
+EFFECT
+
+Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
+
+USED BYany unit
+
+######## popup strat:command-re-roll · SUPER TERMINATORS Super Terminators
+1CP · ANY PHASE · EITHER TURN
+
+Command Re-roll
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+######## popup strat:counteroffensive · SUPER TERMINATORS Super Terminators
+2CP · FIGHT · THEIR TURN
+
+Counteroffensive
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+######## popup strat:crushing-impact · SUPER TERMINATORS Super Terminators
+1CP · CHARGE · YOUR TURN
+
+Crushing Impact
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYAngron, Forgefiend
+
+######## popup strat:epic-challenge · SUPER TERMINATORS Super Terminators
+1CP · FIGHT · EITHER TURN
+
+Epic Challenge
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYAngron
+
+######## popup strat:explosives · SUPER TERMINATORS Super Terminators
+1CP · SHOOTING · YOUR TURN
+
+Explosives
+WHEN
+
+Your Shooting phase.
+
+TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one EXPLOSIVES/GRENADES model in your unit.
+2. Select one unengaged enemy unit within 8" of and visible to that model.
+3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
+
+Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+
+USED BYGoremongers, Jakhals
+
+######## popup strat:fire-overwatch · SUPER TERMINATORS Super Terminators
+1CP · MOVEMENT · THEIR TURN
+
+Fire Overwatch
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3), Goremongers, Jakhals, Forgefiend
+
+######## popup strat:focused-ferocity · SUPER TERMINATORS Super Terminators
+1CP · FIGHT · EITHER TURN
+
+Focused Ferocity
+WHEN
+
+Fight phase, when a friendly TERMINATOR SQUAD unit is selected to fight.
+
+TARGETThat TERMINATOR SQUAD unit.
+
+EFFECT
+
+Your unit’s melee attacks have +1 A.
+
+USED BYChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
+
+######## popup strat:frenzied-resilience · SUPER TERMINATORS Super Terminators
+2CP · FIGHT · EITHER TURN
+
+Frenzied Resilience
+WHEN
+
+Fight phase, just after an enemy unit has selected its targets.
+
+TARGETOne WORLD EATERS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack.
+
+USED BYany unit
+
+######## popup strat:hack-and-slash · SUPER TERMINATORS Super Terminators
+1CP · FIGHT · EITHER TURN
+
+Hack and Slash
+WHEN
+
+Fight phase.
+
+TARGETOne WORLD EATERS unit from your army that has not been selected to fight this phase and that made a charge move this turn.
+
+EFFECT
+
+Until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1.
+
+USED BYany unit
+
+######## popup strat:heroic-intervention · SUPER TERMINATORS Super Terminators
+1CP · CHARGE · THEIR TURN · INTO THE FRAY +1CP
+
+Heroic Intervention
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYany unit
+
+######## popup strat:insane-bravery · SUPER TERMINATORS Super Terminators
+1CP · COMMAND · YOUR TURN · ONCE PER BATTLE
+
+Insane Bravery
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+######## popup strat:rapid-ingress · SUPER TERMINATORS Super Terminators
+1CP · MOVEMENT · THEIR TURN
+
+Rapid Ingress
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+######## popup strat:skulls-for-the-skull-throne · SUPER TERMINATORS Super Terminators
+1CP · FIGHT · EITHER TURN
+
+Skulls for the Skull Throne!
+WHEN
+
+Fight phase, just after a WORLD EATERS unit from your army destroys a CHARACTER or MONSTER model.
+
+TARGETThat WORLD EATERS unit.
+
+EFFECT
+
+Make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne. Until the end of the battle round, that Blessing of Khorne is active in addition to any other Blessings of Khorne that are currently active.
+
+USED BYany unit
+
+######## popup strat:wrath-beyond-reason · SUPER TERMINATORS Super Terminators
+2CP · SHOOTING · THEIR TURN
+
+Wrath Beyond Reason
+WHEN
+
+Your opponent’s Shooting Phase, when an enemy unit targets a friendly TERMINATOR SQUAD unit.
+
+TARGETThat TERMINATOR SQUAD unit.
+
+EFFECT
+
+Ranged attacks that target your unit have -1 D until that enemy unit has attacked.
+
+USED BYChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)

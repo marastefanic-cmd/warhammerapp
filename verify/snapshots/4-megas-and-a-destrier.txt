@@ -1,0 +1,3105 @@
+######## army · 6 BIGS 4 megas and a destrier
+Imperial Knights · 2000 / 2000 pts · Strike Force
+
+Freeblade Company · Disposition: Purge the Foe
+
+Overview
+Damage calculator
+Units
+5
+Stratagems
+16
+Ranged weapons
+15
+Melee weapons
+6
+Abilities
+23
+Rules
+Bases & proxies
+6
+Keep screen on
+Off
+
+New Recruit, exported 20 Oct 2026
+
+######## pregame · 4 MEGAS AND A DESTRIER Overview
+YOUR LIST
+ENHANCE­MENTS
+Bringer of Justice 30 pts on Cerastus Knight Atrapos
+Hunter’s Eye 25 pts on Knight Crusader
+Sanctuary 20 pts on Knight Destrier
+DETACH­MENTS
+Freeblade Company (3 DP)
+Disposition: Purge the Foe
+CODE CHIVALRIC
+Deed, Quality
+POINTS
+2000 / 2000 · Strike Force
+ARMY RULES
+Code Chivalric
+
+If your Army Faction is IMPERIAL KNIGHTS, at the end of the Read Mission Objectives step, you must determine your army’s Oath for the coming battle. An Oath consists of two parts - one Deed and one Quality. There are three options for each part, shown below.
+
+To determine your army’s Deed, you can either select one Deed or you can randomly select one Deed by rolling a D6 and consulting the relevant table below. The selected Deed will describe what needs to be achieved in order to complete that Deed.
+
+To determine your army’s Quality, you can either select one Quality or you can randomly select one Quality by rolling a D6 and consulting the relevant table below. Until the end of the battle, the ability described in the Quality selected applies to all models in your army with this ability.
+
+The first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).
+
+Deed 1–2 · We vow to lay low the tyrant…
+
+At the start of the battle, select one CHARACTER model in your opponent’s army. This Deed is completed at the end of a turn if that CHARACTER is destroyed.
+
+Deed 3–4 · We swear to reclaim the realm…
+
+This deed is completed at the end of your opponent’s turn if you control more objective markers than your opponent.
+
+Deed 5–6 · We pledge to reap a great tally…
+
+This deed is completed at the end of the battle round if the number of enemy units destroyed this battle round is greater than the battle round number even if those units are subsequently returned to the battlefield (for example, two destroyed enemy units in the first battle round).
+
+Quality 1–2 · …with our martial valour risen over all
+
+Each time this model is selected to shoot or fight, you can re-roll one Hit roll and you can re-roll one Wound roll.
+
+Quality 3–4 · …and we are eager for the challenge
+
+Add 2" to this model’s Move characteristic and add 1 to Advance and Charge rolls made for this model.
+
+Quality 5–6 · …yet shall our legacy be unsullied
+
+Improve this model’s Objective Control characteristic by 2 and its Leadership characteristic by 1.
+
+Bondsman
+Your Command · no unit in this list it applies to
+
+Some IMPERIAL KNIGHTS models have a Bondsman ability, tagged with the word ‘Bondsman’. In your Command phase, one or more models from your army with a Bondsman ability can use that ability. For each one that does, select one friendly ARMIGER model within 12" of that model (you cannot select an ARMIGER model that is already being affected by a Bondsman ability). Until the start of your next Command phase, that ARMIGER model is affected by that Bondsman ability.
+
+READ MISSION OBJECTIVES STEP
+RULES
+Code Chivalric · Imperial Knights army rule
+USES PER BATTLE
+NEW GAME
+ABILITIES
+Chainbreaker · Canis Rex
+STRATA­GEMS
+1CP Insane Bravery
+
+Gathered from this list’s datasheets and rules; each line opens the full text.
+
+######## units · OVERVIEW Units Unit M T Sv W LD OC InSv Pts
+EPIC HEROES
+1
+Canis Rex
+1× Canis Rex, 1× Sir Hekhtur
+10"
+11
+3+
+26
+6+
+10
+5+*
+415
+CHARACTERS
+4
+Cerastus Knight Atrapos
+Bringer of Justice
+12"
+11
+3+
+28
+6+
+10
+5+
+450
+Cerastus Knight Lancer
+14"
+11
+3+
+28
+6+
+10
+4+
+415
+Knight Crusader
+Hunter’s Eye
+10"
+11
+3+
+26
+6+
+10
+5+*
+435
+Knight Destrier
+Sanctuary
+12"
+10
+3+
+18
+6+
+8
+5+*
+285
+
+######## ranged · UNITS Ranged weapons WEAPON RNG A BS S AP D
+Canis Rex
+Las-impulsorCANIS REX
+➤high intensity
+24"
+D6
+2+
+14
+-3
+4
+BLAST, SUSTAINED HITS 1
+➤low intensity
+36"
+2D6
+2+
+7
+-1
+2
+BLAST, SUSTAINED HITS 1
+Questoris multi-laserCANIS REX
+36"
+4
+2+
+6
+0
+1
+SUSTAINED HITS 1
+Hekhtur’s pistolSIR HEKHTUR
+12"
+1
+2+
+5
+-1
+2
+PISTOL
+Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+STRATAGEMS · FREEBLADE COMPANY
+1CP re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9" (Strength from Exile)
+Cerastus Knight Atrapos
+Bringer of Justice
+Atrapos lascutter
+➤high intensity
+24"
+D6
+3+
+14
+-3
+4
+SUSTAINED HITS 1
+➤low intensity
+36"
+2D6
+3+
+7
+-1
+2
+SUSTAINED HITS 1
+Graviton singularity cannon
+➤singularity
+24"
+D3
+3+
+16
+-4
+D6+1
+BLAST, DEVASTATING WOUNDS, HAZARDOUS
+➤contained
+24"
+D3
+3+
+16
+-4
+D6+1
+BLAST
+vs MONSTER/VEHICLE: +1 to hit rolls; also +1 to wound rolls if the target is TITANIC or TOWERING (Macro-extinction Protocols)
+Damaged (1-10 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-10 Wounds Remaining)
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+STRATAGEMS · FREEBLADE COMPANY
+1CP re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9" (Strength from Exile)
+Cerastus Knight Lancer
+Cerastus shock lance
+12"
+6
+3+
+6
+0
+2
+ASSAULT, SUSTAINED HITS 2
+Damaged (1-10 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-10 Wounds Remaining)
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+STRATAGEMS · FREEBLADE COMPANY
+1CP re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9" (Strength from Exile)
+Knight Crusader
+Hunter’s Eye
+Avenger gatling cannon
+36"
+18
+3+
+6
+-2
+2
+IGNORES COVER
+Heavy flamer
+12"
+D6
+–
+5
+-1
+1
+IGNORES COVER, TORRENT, IGNORES COVER
+Stormspear rocket pod
+48"
+3
+3+
+8
+-2
+D6
+IGNORES COVER
+Meltagun
+12"
+1
+3+
+9
+-4
+D6
+MELTA 2, IGNORES COVER
+Questoris heavy stubber
+36"
+3
+3+
+4
+-1
+1
+RAPID FIRE 3, IGNORES COVER
+Rapid-fire battle cannon
+72"
+D6+3
+3+
+10
+-1
+3
+BLAST, RAPID FIRE D6+3, IGNORES COVER
+Remained Stationary in your Movement phase: ranged weapons have [SUSTAINED HITS 1] until the end of the turn (Punishing Salvoes)
+Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+STRATAGEMS · FREEBLADE COMPANY
+1CP re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9" (Strength from Exile)
+Knight Destrier
+Sanctuary
+Questoris heavy stubber
+36"
+6
+3+
+4
+-1
+1
+ASSAULT, RAPID FIRE 3
+Chastiser gatling cannon
+24"
+12
+3+
+6
+-1
+2
+ASSAULT
+Frag bombard
+24"
+D6+3
+3+
+7
+-1
+2
+ASSAULT, BLAST, RAPID FIRE D6+3
+Target within range of an objective marker: ranged attacks have [IGNORES COVER] (Saturation Fire)
+Damaged (1-6 wounds left): -1 to hit rolls (and -4 OC) (Damaged: 1-6 Wounds Remaining)
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+STRATAGEMS · FREEBLADE COMPANY
+1CP re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9" (Strength from Exile)
+
+######## melee · RANGED Melee weapons WEAPON A WS S AP D
+Canis Rex
+Freedom’s HandCANIS REX
+➤strike
+5
+2+
+20
+-3
+9
+SUSTAINED HITS 1
+➤sweep
+10
+2+
+10
+-2
+3
+SUSTAINED HITS 1
+Close combat weaponSIR HEKHTUR
+2
+2+
+3
+0
+1
+Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
+STRATAGEMS · FREEBLADE COMPANY
+1CP re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9" (Strength from Exile)
+Cerastus Knight Atrapos
+Bringer of Justice
+Atrapos lascutter
+➤high intensity
+8
+3+
+14
+-3
+4
+SUSTAINED HITS 1
+➤low intensity
+14
+3+
+7
+-1
+2
+SUSTAINED HITS 1
+vs MONSTER/VEHICLE: +1 to hit rolls; also +1 to wound rolls if the target is TITANIC or TOWERING (Macro-extinction Protocols)
+Every melee attack: +1 to hit rolls (Bringer of Justice)
+Damaged (1-10 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-10 Wounds Remaining)
+STRATAGEMS · FREEBLADE COMPANY
+1CP re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9" (Strength from Exile)
+Cerastus Knight Lancer
+Cerastus shock lance
+➤strike
+5
+2+
+20
+-3
+8
+LANCE
+➤sweep
+10
+2+
+10
+-2
+3
+Damaged (1-10 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-10 Wounds Remaining)
+Made a charge move this turn: Cerastus shock lance +1 to wound (Lance)
+STRATAGEMS · FREEBLADE COMPANY
+1CP re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9" (Strength from Exile)
+Knight Crusader
+Hunter’s Eye
+Titanic feet
+4
+4+
+8
+-1
+2
+Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
+STRATAGEMS · FREEBLADE COMPANY
+1CP re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9" (Strength from Exile)
+Knight Destrier
+Sanctuary
+Titanic feet
+4
+4+
+7
+-1
+2
+Damaged (1-6 wounds left): -1 to hit rolls (and -4 OC) (Damaged: 1-6 Wounds Remaining)
+STRATAGEMS · FREEBLADE COMPANY
+1CP re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9" (Strength from Exile)
+
+######## abilities · MELEE Abilities
+Canis Rex
+Chainbreaker
+Once per battle
+Any phase
+
+Any phase · Either turn
+
+Once per battle, at the start of any phase, you can select one friendly IMPERIUM unit that is Battle-shocked and within 12" of this model. That unit is no longer Battle-shocked.
+
+Legendary Freeblade
+Once per turn
+Any phase
+
+Any phase · Either turn
+
+Once per turn, when you target this model with a stratagem, you may reduce the CP cost of that use of that stratagem by 1CP.
+
+Invulnerable Save (5+*)
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Damaged: 1-9 Wounds Remaining
+
+While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+Using Sir Hekhtur
+
+If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. Your Canis Rex unit is not considered to be destroyed until Sir Hekhtur is also destroyed.
+
+Cerastus Knight Atrapos
+Bringer of Justice
+Macro-extinction Protocols
+
+Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.
+
+Damaged: 1-10 Wounds Remaining
+
+While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+Bringer of Justice
+Enhancement
+
+Enhancement
+
+IMPERIAL KNIGHTS model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the Hit roll.
+
+Atrapos’ Duty
+No ARMIGER models in this list
+
+No ARMIGER models in this list
+
+Bondsman
+
+While a model is affected by this ability, each time that model makes an attack that targets a TITANIC or TOWERING model, you can re-roll the Hit roll and you can re-roll the Wound roll.
+
+Cerastus Knight Lancer
+Shock Charge
+
+You can target this model with the Tank Shock Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.
+
+Damaged: 1-10 Wounds Remaining
+
+While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+Lancer’s Duty
+No ARMIGER models in this list
+
+No ARMIGER models in this list
+
+Bondsman
+
+While a model is affected by this ability, it is eligible to declare a charge in a turn in which it Advanced.
+
+Knight Crusader
+Hunter’s Eye
+Punishing Salvoes
+Your Move/Shoot
+
+Movement / Shooting · Your turn
+
+In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability.
+
+Invulnerable Save (5+*)
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Damaged: 1-9 Wounds Remaining
+
+While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+Hunter’s Eye
+Enhancement
+
+Enhancement
+
+IMPERIAL KNIGHTS model only. Ranged weapons equipped by the bearer have the [IGNORES COVER] ability.
+
+Crusader’s Duty
+No ARMIGER models in this list
+
+No ARMIGER models in this list
+
+Bondsman
+
+While a model is affected by this ability, each time that model makes a ranged attack, add 1 to the Hit roll.
+
+Knight Destrier
+Sanctuary
+Damaged: 1-6 Wounds Remaining
+
+While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+Thundercharge
+Needs a thundershock spear and bellatus reaper chainsword: not this loadout
+
+Needs a thundershock spear and bellatus reaper chainsword: not this loadout
+
+If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model.
+
+Ram Jets
+Your Movement
+
+Movement · Your turn
+
+Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.
+
+Saturation Fire
+Your Shooting
+
+Shooting · Your turn
+
+Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
+
+Invulnerable Save (5+*)
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Sanctuary
+Enhancement
+
+Enhancement
+
+IMPERIAL KNIGHTS model only. The bearer has a 5+ invulnerable save.
+
+######## rules · ABILITIES Rules
+Imperial Knights · Purge the Foe
+ARMY RULES
+Code Chivalric
+
+If your Army Faction is IMPERIAL KNIGHTS, at the end of the Read Mission Objectives step, you must determine your army’s Oath for the coming battle. An Oath consists of two parts - one Deed and one Quality. There are three options for each part, shown below.
+
+To determine your army’s Deed, you can either select one Deed or you can randomly select one Deed by rolling a D6 and consulting the relevant table below. The selected Deed will describe what needs to be achieved in order to complete that Deed.
+
+To determine your army’s Quality, you can either select one Quality or you can randomly select one Quality by rolling a D6 and consulting the relevant table below. Until the end of the battle, the ability described in the Quality selected applies to all models in your army with this ability.
+
+The first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).
+
+Deed 1–2 · We vow to lay low the tyrant…
+
+At the start of the battle, select one CHARACTER model in your opponent’s army. This Deed is completed at the end of a turn if that CHARACTER is destroyed.
+
+Deed 3–4 · We swear to reclaim the realm…
+
+This deed is completed at the end of your opponent’s turn if you control more objective markers than your opponent.
+
+Deed 5–6 · We pledge to reap a great tally…
+
+This deed is completed at the end of the battle round if the number of enemy units destroyed this battle round is greater than the battle round number even if those units are subsequently returned to the battlefield (for example, two destroyed enemy units in the first battle round).
+
+Quality 1–2 · …with our martial valour risen over all
+
+Each time this model is selected to shoot or fight, you can re-roll one Hit roll and you can re-roll one Wound roll.
+
+Quality 3–4 · …and we are eager for the challenge
+
+Add 2" to this model’s Move characteristic and add 1 to Advance and Charge rolls made for this model.
+
+Quality 5–6 · …yet shall our legacy be unsullied
+
+Improve this model’s Objective Control characteristic by 2 and its Leadership characteristic by 1.
+
+Bondsman
+Your Command · no unit in this list it applies to
+
+Some IMPERIAL KNIGHTS models have a Bondsman ability, tagged with the word ‘Bondsman’. In your Command phase, one or more models from your army with a Bondsman ability can use that ability. For each one that does, select one friendly ARMIGER model within 12" of that model (you cannot select an ARMIGER model that is already being affected by a Bondsman ability). Until the start of your next Command phase, that ARMIGER model is affected by that Bondsman ability.
+
+DETACHMENTS
+FREEBLADE COMPANY
+Knights of Legend
+Detachment rule · Any phase
+
+IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
+
+APPLIES TOCanis Rex, Cerastus Knight Atrapos · Bringer of Justice, Cerastus Knight Lancer, Knight Crusader · Hunter’s Eye, Knight Destrier · Sanctuary
+
+Bringer of Justice
+Enhancement · 30 pts · on Cerastus Knight Atrapos
+
+IMPERIAL KNIGHTS model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the Hit roll.
+
+ONCerastus Knight Atrapos
+
+Hunter’s Eye
+Enhancement · 25 pts · on Knight Crusader
+
+IMPERIAL KNIGHTS model only. Ranged weapons equipped by the bearer have the [IGNORES COVER] ability.
+
+ONKnight Crusader
+
+Sanctuary
+Enhancement · 20 pts · on Knight Destrier
+
+IMPERIAL KNIGHTS model only. The bearer has a 5+ invulnerable save.
+
+ONKnight Destrier
+
+Other enhancements
+1 not in this list
+Mysterious Guardian 35 pts
+
+IMPERIAL KNIGHTS model only. (Once per battle, per army) At the end of your opponent’s turn, if this unit is unengaged, you can use this ability. If you do:
+
+Place this unit in strategic reserves.
+This unit has Deep Strike until the start of your next Shooting phase.
+This unit must make an ingress move in your next Movement phase (including in your first turn).
+
+STRATAGEMSFull Tilt, Strength from Exile, Point-Blank Barrage, Survivor of Strife, Noble Sacrifice, Flanking Manoeuvres (no unit in this list)
+
+UNIT RULES
+Deadly Demise
+
+Canis Rex D6
+
+Cerastus Knight Atrapos · Bringer of Justice D6+2
+
+Cerastus Knight Lancer D6+2
+
+Knight Crusader · Hunter’s Eye D6
+
+Knight Destrier · Sanctuary D6
+
+Lone Operative
+
+Canis Rex
+
+Super-Heavy Walker
+
+Canis Rex
+
+Cerastus Knight Atrapos · Bringer of Justice
+
+Cerastus Knight Lancer
+
+Knight Crusader · Hunter’s Eye
+
+Knight Destrier · Sanctuary
+
+######## bases · RULES Bases & proxies
+BASES TO PRINT
+
+1× 150×95mm
+5× 170×109mm
+
+WHAT TO WRITE ON EACH BASE
+
+Canis Rex
+1× 170×109mm
+standard Freedom’s Hand, Las-impulsor, Questoris multi-laser
+1× 170×109mm
+Sir Hekhtur · Close combat weapon + Hekhtur’s pistol
+Cerastus Knight Atrapos · Bringer of Justice
+1× 170×109mm
+Cerastus Knight Atrapos · Bringer of Justice
+Cerastus Knight Lancer
+1× 170×109mm
+Cerastus Knight Lancer
+Knight Crusader · Hunter’s Eye
+1× 170×109mm
+Knight Crusader · Hunter’s Eye
+Knight Destrier · Sanctuary
+1× 150×95mm
+Knight Destrier · Sanctuary
+
+From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
+
+######## damage shooting · BASES Damage
+OPPONENT
+Ooga booga
+Orks
+YOU ATTACK
+THEY ATTACK
+SHOOTING
+FIGHT
+ATTACKER · YOURS
+Canis Rex
+2 models
+TARGET · THEIRS
+Ghazghkull Thraka
+T10 · Sv 2+ · 4+ InSv · W16
+0.0
+of 1 model destroyed
+4.8
+wounds lost
+3%
+unit destroyed
+HITS
+WOUNDS
+THROUGH
+Las-impulsor
+3.5
+2.3
+1.1
+Questoris multi-laser
+3.9
+1.3
+0.2
+WEAPONS
+Las-impulsor
+24" · AD6 · 2+ · S14 · AP-3 · D4 · BLAST, SUSTAINED HITS 1
+high intensity
+low intensity
+Questoris multi-laser
+36" · A4 · 2+ · S6 · AP0 · D1 · SUSTAINED HITS 1
+Hekhtur’s pistol
+12" · A1 · 2+ · S5 · AP-1 · D2 · PISTOL
+SITUATION
+Distance to the target
+inches; blank: not set
+Target has the benefit of cover
+Plunging Fire
+on terrain 3" or higher, or TOWERING with the target within 12": BS improved by 1
+Close-quarters shooting at a unit it is engaged with
+-1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
+Fire Overwatch (snap shooting)
+hits only on an unmodified 6, never critical; no hit re-rolls
+Damaged (1-9 wounds left)
+-1 to hit rolls (and -5 OC)
+CANIS REX’S RULES
+1CP Strength from Exile
+No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) · not in these numbers
+GHAZGHKULL THRAKA WHEN TARGETED
+Lone Operative while within 3" of another friendly ORKS INFANTRY unit
+ability · not in these numbers
+Riled up: 5+ INV
+rule
+OTHER MODIFIERS
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP better
+−
+0
++
+Damage
+−
+0
++
+Attacks
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+Averages over 10,000 games played out with the dice; one unit’s attacks against the other, nothing used up. Rules marked “not counted” are not in these numbers.
+
+How this is worked out
+what the rules say, and what the calculator does where they leave a choice
+
+Weapons (04.03): the rules let the attacker pick which weapon’s attacks are resolved next; the calculator takes them in the order listed, and rolls identical attacks together.
+
+Saves and damage (05.03, 05.04): save rolls are rolled together and used from the lowest; an attack that gets through damages the one model it was allocated to, so damage beyond that model’s wounds is lost; Feel No Pain is rolled for each wound (24.12).
+
+[BLAST] and [CLEAVE] (24.05, 24.06): one more attack dice (X with [BLAST X] or [CLEAVE X]) for every five models the target had before these attacks.
+
+######## damage fight · DAMAGE Damage
+OPPONENT
+Ooga booga
+Orks
+YOU ATTACK
+THEY ATTACK
+SHOOTING
+FIGHT
+ATTACKER · YOURS
+Canis Rex
+2 models
+TARGET · THEIRS
+Ghazghkull Thraka
+T10 · Sv 2+ · 4+ InSv · W16
+0.7
+of 1 model destroyed
+13
+wounds lost
+66%
+unit destroyed
+HITS
+WOUNDS
+THROUGH
+Freedom’s Hand
+5.0
+4.1
+1.6
+Close combat weapon
+0.6
+0.1
+0.0
+WEAPONS
+Freedom’s Hand
+Melee · A5 · 2+ · S20 · AP-3 · D9 · SUSTAINED HITS 1
+strike
+sweep
+Close combat weapon
+Melee · A2 · 2+ · S3 · AP0 · D1
+SITUATION
+Made a charge move this turn
+Damaged (1-9 wounds left)
+-1 to hit rolls (and -5 OC)
+CANIS REX’S RULES
+1CP Strength from Exile
+No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) · not in these numbers
+GHAZGHKULL THRAKA WHEN TARGETED
+Lone Operative while within 3" of another friendly ORKS INFANTRY unit
+ability · not in these numbers
+Riled up: 5+ INV
+rule
+OTHER MODIFIERS
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP better
+−
+0
++
+Damage
+−
+0
++
+Attacks
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+Averages over 10,000 games played out with the dice; one unit’s attacks against the other, nothing used up. Rules marked “not counted” are not in these numbers.
+
+How this is worked out
+what the rules say, and what the calculator does where they leave a choice
+
+Weapons (04.03): the rules let the attacker pick which weapon’s attacks are resolved next; the calculator takes them in the order listed, and rolls identical attacks together.
+
+Saves and damage (05.03, 05.04): save rolls are rolled together and used from the lowest; an attack that gets through damages the one model it was allocated to, so damage beyond that model’s wounds is lost; Feel No Pain is rolled for each wound (24.12).
+
+######## strats {"folded":true} · DAMAGE Stratagems
+EXPAND ALL
+FREEBLADE COMPANY
+6
+1
+CP
+Full Tilt
+Until the end of the phase, if your unit Advances, no Advance roll: +6" Move instead (+9" for an ARMIGER or DESTRIER unit).
+Your Movement Any unit
+1
+CP
+Strength from Exile
+Until the end of the phase, if no other friendly units are within 9", your unit’s attacks re-roll a hit roll of 1 and a wound roll of 1.
+Your Shoot · Fight Any unit
+1
+CP
+Point-Blank Barrage
+Until the end of the phase, your unit’s Blast weapons can target enemy units within Engagement Range of it (if no other friendly unit is within Engagement Range of that enemy unit) and it has no hit roll penalty for being within Engagement Range; each unmodified hit roll of 1 with a Blast weapon against a unit within Engagement Range of it is 1 mortal wound to your unit, after all its attacks are resolved.
+Your Shooting Any unit
+1
+CP
+Survivor of Strife
+Until the end of the phase, attacks against your unit whose S is greater than its T have -1 to the wound roll.
+Their Shooting Any unit
+1
+CP
+Noble Sacrifice
+Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
+Any phase Any unit
+1
+CP
+Flanking Manoeuvres
+Remove your unit from the battlefield and place it into Strategic Reserves.
+End of their Fight No unit in this list can use it (needs ARMIGER)
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+The battle-shock roll you are about to make for your unit is automatically successful.
+Your Command · Once per battle Any unit
+1
+CP
+Rapid Ingress
+Your unit in strategic reserves makes an ingress move (not in the first battle round).
+End of their Movement Any unit
+1
+CP
+Crushing Impact
+After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+Your Charge Any unit
+1
+CP
+Heroic Intervention
+Your unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+End of their Charge · Into the Fray +1CP Any unit
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+Fight Any unit
+2
+CP
+Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+Their Fight Any unit
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
+Any phase Any unit
+1
+CP
+Fire Overwatch
+Your unit shoots using snap shooting.
+End of their Movement No unit in this list can use it (not TITANIC: every unit here is)
+1
+CP
+Explosives
+One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
+Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
+1
+CP
+Smokescreen
+Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+Start of their Shooting No unit in this list can use it (needs SMOKE)
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## strats {"open":true} · STRATAGEMS Stratagems
+COLLAPSE ALL
+FREEBLADE COMPANY
+6
+1
+CP
+Full Tilt
+Your Movement Any unit
+WHEN
+
+Your Movement phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army.
+
+EFFECT
+
+Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6" to the Move characteristic of models in your unit, or 9" instead if your unit is an ARMIGER or DESTRIER unit.
+
+USED BYany unit
+
+1
+CP
+Strength from Exile
+Your Shoot · Fight Any unit
+WHEN
+
+Your Shooting phase or the Fight phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that has not been selected to shoot or fight this phase.
+
+EFFECT
+
+Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.
+
+USED BYany unit
+
+1
+CP
+Point-Blank Barrage
+Your Shooting Any unit
+WHEN
+
+Your Shooting phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that has not been selected to shoot this phase.
+
+EFFECT
+
+Until the end of the phase, when making ranged attacks with Blast weapons, models in your unit can target enemy units within Engagement Range of your unit (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, until the end of the phase, your unit does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units, but each time a model in your unit makes an attack with a Blast weapon that targets a unit within Engagement Range of your unit, on an unmodified Hit roll of 1, your unit suffers 1 mortal wound after all of its attacks have been resolved.
+
+USED BYany unit
+
+1
+CP
+Survivor of Strife
+Their Shooting Any unit
+WHEN
+
+Your opponent’s Shooting phase, just after an enemy unit has selected its targets.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the Wound roll.
+
+USED BYany unit
+
+1
+CP
+Noble Sacrifice
+Any phase Any unit
+WHEN
+
+Any phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.
+
+EFFECT
+
+Your unit’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.
+
+USED BYany unit
+
+1
+CP
+Flanking Manoeuvres
+End of their Fight No unit in this list can use it (needs ARMIGER)
+WHEN
+
+End of your opponent’s Fight phase.
+
+TARGETOne ARMIGER unit from your army that is within 9" of one or more battlefield edges and not within Engagement Range of one or more enemy units.
+
+EFFECT
+
+Remove your unit from the battlefield and place it into Strategic Reserves.
+
+USED BYno unit in this list (needs ARMIGER)
+
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+Your Command · Once per battle Any unit
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+1
+CP
+Rapid Ingress
+End of their Movement Any unit
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+1
+CP
+Crushing Impact
+Your Charge Any unit
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYany unit
+
+1
+CP
+Heroic Intervention
+End of their Charge · Into the Fray +1CP Any unit
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYany unit
+
+1
+CP
+Epic Challenge
+Fight Any unit
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYany unit
+
+2
+CP
+Counteroffensive
+Their Fight Any unit
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+1
+CP
+Command Re-roll
+Any phase Any unit
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+1
+CP
+Fire Overwatch
+End of their Movement No unit in this list can use it (not TITANIC: every unit here is)
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYno unit in this list (needs not TITANIC: every unit here is)
+
+1
+CP
+Explosives
+Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
+WHEN
+
+Your Shooting phase.
+
+TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one EXPLOSIVES/GRENADES model in your unit.
+2. Select one unengaged enemy unit within 8" of and visible to that model.
+3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
+
+Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+
+USED BYno unit in this list (needs EXPLOSIVES OR GRENADES)
+
+1
+CP
+Smokescreen
+Start of their Shooting No unit in this list can use it (needs SMOKE)
+WHEN
+
+Start of your opponent’s Shooting phase.
+
+TARGETOne friendly SMOKE unit.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
+
+USED BYno unit in this list (needs SMOKE)
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## unit canis-rex · STRATAGEMS 4 megas and a destrier
+CANIS REX
+415 PTS
+Epic Hero
+Models
+Options
+1× Canis Rex
+Freedom’s Hand, Las-impulsor, Questoris multi-laser
+1× Sir Hekhtur
+Close combat weapon, Hekhtur’s pistol
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Canis Rex
+170×109mm
+10"
+11
+3+
+26
+6+
+10
+5+*
+Sir Hekhtur
+170×109mm
+6"
+3
+4+
+3
+5+
+1
+–
+WHEN TARGETEDFeel No Pain 6+ · 5+ invulnerable save against ranged attacks only · 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+DAMAGED 1-9 W
+-1 TO HIT ROLLS (AND -5 OC)
+ALL ATTACKS
+STRATAGEMS · FREEBLADE COMPANY
+1CP re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9" (Strength from Exile)
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Las-impulsorCANIS REX
+➤high intensity
+24"
+D6
+2+
+14
+-3
+4
+BLAST, SUSTAINED HITS 1
+➤low intensity
+36"
+2D6
+2+
+7
+-1
+2
+BLAST, SUSTAINED HITS 1
+Questoris multi-laserCANIS REX
+36"
+4
+2+
+6
+0
+1
+SUSTAINED HITS 1
+Hekhtur’s pistolSIR HEKHTUR
+12"
+1
+2+
+5
+-1
+2
+PISTOL
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Freedom’s HandCANIS REX
+➤strike
+5
+2+
+20
+-3
+9
+SUSTAINED HITS 1
+➤sweep
+10
+2+
+10
+-2
+3
+SUSTAINED HITS 1
+Close combat weaponSIR HEKHTUR
+2
+2+
+3
+0
+1
+ABILITIES
+Chainbreaker
+Once per battle
+Any phase
+
+Any phase · Either turn
+
+Once per battle, at the start of any phase, you can select one friendly IMPERIUM unit that is Battle-shocked and within 12" of this model. That unit is no longer Battle-shocked.
+
+Legendary Freeblade
+Once per turn
+Any phase
+
+Any phase · Either turn
+
+Once per turn, when you target this model with a stratagem, you may reduce the CP cost of that use of that stratagem by 1CP.
+
+Invulnerable Save (5+*)
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Using Sir Hekhtur
+
+If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. Your Canis Rex unit is not considered to be destroyed until Sir Hekhtur is also destroyed.
+
+Rules
+Deadly Demise D6, Super-Heavy Walker, Code Chivalric, Lone Operative, Knights of Legend
+Stratagems
+
+FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor of Strife, Noble Sacrifice
+
+CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+CANIS REX
+CHARACTER
+EPIC HERO
+FACTION: IMPERIAL KNIGHTS
+IMPERIUM
+INFANTRY
+QUESTORIS
+SIR HEKHTUR
+TITANIC
+TOWERING
+VEHICLE
+WALKER
+Cerastus Knight Atrapos · Bringer of Justice ›
+
+######## unit cerastus-knight-atrapos · CANIS REX 4 megas and a destrier
+CERASTUS KNIGHT ATRAPOS
+450 PTS
+Character
+Bringer of Justice
+Models
+Options
+1× Cerastus Knight Atrapos
+Atrapos lascutter, Graviton singularity cannon
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Cerastus Knight Atrapos
+170×109mm
+12"
+11
+3+
+28
+6+
+10
+5+
+WHEN TARGETEDFeel No Pain 6+ · 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+DAMAGED 1-10 W
+-1 TO HIT ROLLS (AND -5 OC)
+ALL ATTACKS
+vs MONSTER/VEHICLE: +1 to hit rolls; also +1 to wound rolls if the target is TITANIC or TOWERING (Macro-extinction Protocols)
+STRATAGEMS · FREEBLADE COMPANY
+1CP re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9" (Strength from Exile)
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Atrapos lascutter
+➤high intensity
+24"
+D6
+3+
+14
+-3
+4
+SUSTAINED HITS 1
+➤low intensity
+36"
+2D6
+3+
+7
+-1
+2
+SUSTAINED HITS 1
+Graviton singularity cannon
+➤singularity
+24"
+D3
+3+
+16
+-4
+D6+1
+BLAST, DEVASTATING WOUNDS, HAZARDOUS
+➤contained
+24"
+D3
+3+
+16
+-4
+D6+1
+BLAST
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Atrapos lascutter
+➤high intensity
+8
+3+
+14
+-3
+4
+SUSTAINED HITS 1
+➤low intensity
+14
+3+
+7
+-1
+2
+SUSTAINED HITS 1
+Every melee attack: +1 to hit rolls (Bringer of Justice)
+ABILITIES
+Macro-extinction Protocols
+
+Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.
+
+Bringer of Justice
+Enhancement
+
+Enhancement
+
+IMPERIAL KNIGHTS model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the Hit roll.
+
+Atrapos’ Duty
+No ARMIGER models in this list
+
+No ARMIGER models in this list
+
+Bondsman
+
+While a model is affected by this ability, each time that model makes an attack that targets a TITANIC or TOWERING model, you can re-roll the Hit roll and you can re-roll the Wound roll.
+
+Rules
+Code Chivalric, Deadly Demise D6+2, Super-Heavy Walker, Bondsman (no unit in this list it applies to), Knights of Legend
+Stratagems
+
+FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor of Strife, Noble Sacrifice
+
+CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+CERASTUS
+CHARACTER
+FACTION: IMPERIAL KNIGHTS
+IMPERIUM
+KNIGHT ATRAPOS
+TITANIC
+TOWERING
+VEHICLE
+WALKER
+‹ Canis Rex
+Cerastus Knight Lancer ›
+
+######## unit cerastus-knight-lancer · CERASTUS KNIGHT ATRAPOS 4 megas and a destrier
+CERASTUS KNIGHT LANCER
+415 PTS
+Character
+Models
+Options
+1× Cerastus Knight Lancer
+Cerastus shock lance
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Cerastus Knight Lancer
+170×109mm
+14"
+11
+3+
+28
+6+
+10
+4+
+WHEN TARGETEDFeel No Pain 6+ · 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+DAMAGED 1-10 W
+-1 TO HIT ROLLS (AND -5 OC)
+ALL ATTACKS
+STRATAGEMS · FREEBLADE COMPANY
+1CP re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9" (Strength from Exile)
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Cerastus shock lance
+12"
+6
+3+
+6
+0
+2
+ASSAULT, SUSTAINED HITS 2
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Cerastus shock lance
+➤strike
+5
+2+
+20
+-3
+8
+LANCE
+➤sweep
+10
+2+
+10
+-2
+3
+Made a charge move this turn: Cerastus shock lance +1 to wound (Lance)
+ABILITIES
+Shock Charge
+
+You can target this model with the Tank Shock Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.
+
+Lancer’s Duty
+No ARMIGER models in this list
+
+No ARMIGER models in this list
+
+Bondsman
+
+While a model is affected by this ability, it is eligible to declare a charge in a turn in which it Advanced.
+
+Rules
+Deadly Demise D6+2, Code Chivalric, Super-Heavy Walker, Bondsman (no unit in this list it applies to), Knights of Legend
+Stratagems
+
+FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor of Strife, Noble Sacrifice
+
+CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+CERASTUS
+CHARACTER
+FACTION: IMPERIAL KNIGHTS
+IMPERIUM
+KNIGHT LANCER
+TITANIC
+TOWERING
+VEHICLE
+WALKER
+‹ Cerastus Knight Atrapos · Bringer of Justice
+Knight Crusader · Hunter’s Eye ›
+
+######## unit knight-crusader · CERASTUS KNIGHT LANCER 4 megas and a destrier
+KNIGHT CRUSADER
+435 PTS
+Character
+Hunter’s Eye
+Models
+Options
+1× Knight Crusader
+Avenger gatling cannon, Heavy flamer, Titanic feet, Stormspear rocket pod, Meltagun, Questoris heavy stubber, Rapid-fire battle cannon
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Knight Crusader
+170×109mm
+10"
+11
+3+
+26
+6+
+10
+5+*
+WHEN TARGETEDFeel No Pain 6+ · 5+ invulnerable save against ranged attacks only · 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+DAMAGED 1-9 W
+-1 TO HIT ROLLS (AND -5 OC)
+ALL ATTACKS
+STRATAGEMS · FREEBLADE COMPANY
+1CP re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9" (Strength from Exile)
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Avenger gatling cannon
+36"
+18
+3+
+6
+-2
+2
+IGNORES COVER
+Heavy flamer
+12"
+D6
+–
+5
+-1
+1
+IGNORES COVER, TORRENT, IGNORES COVER
+Stormspear rocket pod
+48"
+3
+3+
+8
+-2
+D6
+IGNORES COVER
+Meltagun
+12"
+1
+3+
+9
+-4
+D6
+MELTA 2, IGNORES COVER
+Questoris heavy stubber
+36"
+3
+3+
+4
+-1
+1
+RAPID FIRE 3, IGNORES COVER
+Rapid-fire battle cannon
+72"
+D6+3
+3+
+10
+-1
+3
+BLAST, RAPID FIRE D6+3, IGNORES COVER
+Remained Stationary in your Movement phase: ranged weapons have [SUSTAINED HITS 1] until the end of the turn (Punishing Salvoes)
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Titanic feet
+4
+4+
+8
+-1
+2
+ABILITIES
+Punishing Salvoes
+Your Move/Shoot
+
+Movement / Shooting · Your turn
+
+In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability.
+
+Invulnerable Save (5+*)
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Hunter’s Eye
+Enhancement
+
+Enhancement
+
+IMPERIAL KNIGHTS model only. Ranged weapons equipped by the bearer have the [IGNORES COVER] ability.
+
+Crusader’s Duty
+No ARMIGER models in this list
+
+No ARMIGER models in this list
+
+Bondsman
+
+While a model is affected by this ability, each time that model makes a ranged attack, add 1 to the Hit roll.
+
+Rules
+Deadly Demise D6, Super-Heavy Walker, Code Chivalric, Sustained Hits, Bondsman (no unit in this list it applies to), Knights of Legend
+Stratagems
+
+FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor of Strife, Noble Sacrifice
+
+CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+CHARACTER
+FACTION: IMPERIAL KNIGHTS
+IMPERIUM
+KNIGHT CRUSADER
+QUESTORIS
+TITANIC
+TOWERING
+VEHICLE
+WALKER
+‹ Cerastus Knight Lancer
+Knight Destrier · Sanctuary ›
+
+######## unit knight-destrier · KNIGHT CRUSADER 4 megas and a destrier
+KNIGHT DESTRIER
+285 PTS
+Character
+Sanctuary
+Models
+Options
+1× Knight Destrier
+Questoris heavy stubber, Titanic feet, Chastiser gatling cannon, Frag bombard
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Knight Destrier
+150×95mm
+12"
+10
+3+
+18
+6+
+8
+5+*
+WHEN TARGETEDFeel No Pain 6+ · 5+ invulnerable save against ranged attacks only · Sanctuary: 5+ invulnerable save · 1CP Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
+DAMAGED 1-6 W
+-1 TO HIT ROLLS (AND -4 OC)
+ALL ATTACKS
+STRATAGEMS · FREEBLADE COMPANY
+1CP re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9" (Strength from Exile)
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Questoris heavy stubber
+36"
+6
+3+
+4
+-1
+1
+ASSAULT, RAPID FIRE 3
+Chastiser gatling cannon
+24"
+12
+3+
+6
+-1
+2
+ASSAULT
+Frag bombard
+24"
+D6+3
+3+
+7
+-1
+2
+ASSAULT, BLAST, RAPID FIRE D6+3
+Target within range of an objective marker: ranged attacks have [IGNORES COVER] (Saturation Fire)
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Titanic feet
+4
+4+
+7
+-1
+2
+ABILITIES
+Thundercharge
+Needs a thundershock spear and bellatus reaper chainsword: not this loadout
+
+Needs a thundershock spear and bellatus reaper chainsword: not this loadout
+
+If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model.
+
+Ram Jets
+Your Movement
+
+Movement · Your turn
+
+Each time this unit is selected to make a Normal or Advance move, until the end of the phase, add D3" to the Move characteristic of this model.
+
+Saturation Fire
+Your Shooting
+
+Shooting · Your turn
+
+Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
+
+Invulnerable Save (5+*)
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Sanctuary
+Enhancement
+
+Enhancement
+
+IMPERIAL KNIGHTS model only. The bearer has a 5+ invulnerable save.
+
+Rules
+Deadly Demise D6, Super-Heavy Walker, Code Chivalric, Knights of Legend
+Stratagems
+
+FREEBLADE COMPANY Full Tilt, Strength from Exile, Point-Blank Barrage, Survivor of Strife, Noble Sacrifice
+
+CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+BELLATUS
+CHARACTER
+FACTION: IMPERIAL KNIGHTS
+IMPERIUM
+KNIGHT DESTRIER
+TITANIC
+TOWERING
+VEHICLE
+WALKER
+‹ Knight Crusader · Hunter’s Eye
+
+######## popup ability:4-megas-and-a-destrier|Bringer of Justice|**IMPERIAL KNIGHTS** model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the **Hit roll**. · KNIGHT DESTRIER 4 megas and a destrier
+ABILITY · ENHANCEMENT
+
+Bringer of Justice
+
+IMPERIAL KNIGHTS model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the Hit roll.
+
+UNITCerastus Knight Atrapos · Bringer of Justice
+
+######## popup ability:4-megas-and-a-destrier|Chainbreaker|Once per battle, at the start of any phase, you can select one friendly **IMPERIUM** unit that is **Battle-shocked** and within 12" of this model. That unit is no longer Battle-shocked. · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+ABILITY · ANY PHASE · EITHER TURN
+
+Chainbreaker
+
+Once per battle, at the start of any phase, you can select one friendly IMPERIUM unit that is Battle-shocked and within 12" of this model. That unit is no longer Battle-shocked.
+
+UNITCanis Rex
+
+######## popup ability:4-megas-and-a-destrier|Damaged: 1-10 Wounds Remaining|While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll. · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+ABILITY
+
+Damaged: 1-10 Wounds Remaining
+
+While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+UNITCerastus Knight Atrapos · Bringer of Justice, Cerastus Knight Lancer
+
+######## popup ability:4-megas-and-a-destrier|Damaged: 1-6 Wounds Remaining|While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**. · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+ABILITY
+
+Damaged: 1-6 Wounds Remaining
+
+While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+UNITKnight Destrier · Sanctuary
+
+######## popup ability:4-megas-and-a-destrier|Damaged: 1-9 Wounds Remaining|While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**. · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+ABILITY
+
+Damaged: 1-9 Wounds Remaining
+
+While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+UNITCanis Rex, Knight Crusader · Hunter’s Eye
+
+######## popup ability:4-megas-and-a-destrier|Invulnerable Save (5+*)|This model has a 5+ invulnerable save against ranged attacks. · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+ABILITY
+
+Invulnerable Save (5+*)
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+UNITCanis Rex, Knight Crusader · Hunter’s Eye, Knight Destrier · Sanctuary
+
+######## popup ability:4-megas-and-a-destrier|Macro-extinction Protocols|Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well. · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+ABILITY
+
+Macro-extinction Protocols
+
+Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.
+
+UNITCerastus Knight Atrapos · Bringer of Justice
+
+######## popup ability:4-megas-and-a-destrier|Punishing Salvoes|In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability. · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+ABILITY · MOVEMENT / SHOOTING · YOUR TURN
+
+Punishing Salvoes
+
+In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability.
+
+UNITKnight Crusader · Hunter’s Eye
+
+######## popup ability:4-megas-and-a-destrier|Sanctuary|**IMPERIAL KNIGHTS** model only. The bearer has a 5+ invulnerable save. · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+ABILITY · ENHANCEMENT
+
+Sanctuary
+
+IMPERIAL KNIGHTS model only. The bearer has a 5+ invulnerable save.
+
+UNITKnight Destrier · Sanctuary
+
+######## popup ability:4-megas-and-a-destrier|Saturation Fire|Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the **[IGNORES COVER]** ability. · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+ABILITY · SHOOTING · YOUR TURN
+
+Saturation Fire
+
+Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.
+
+UNITKnight Destrier · Sanctuary
+
+######## popup enh:freeblade-company|Bringer of Justice · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+ENHANCEMENT · FREEBLADE COMPANY · 30 PTS
+
+Bringer of Justice
+
+IMPERIAL KNIGHTS model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the Hit roll.
+
+ONCerastus Knight Atrapos
+
+######## popup enh:freeblade-company|Hunter’s Eye · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+ENHANCEMENT · FREEBLADE COMPANY · 25 PTS
+
+Hunter’s Eye
+
+IMPERIAL KNIGHTS model only. Ranged weapons equipped by the bearer have the [IGNORES COVER] ability.
+
+ONKnight Crusader
+
+######## popup enh:freeblade-company|Sanctuary · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+ENHANCEMENT · FREEBLADE COMPANY · 20 PTS
+
+Sanctuary
+
+IMPERIAL KNIGHTS model only. The bearer has a 5+ invulnerable save.
+
+ONKnight Destrier
+
+######## popup grant:["Bringer of Justice","cerastus-knight-atrapos","A 14",null] · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+A 14 · GRANTED BY
+
+Bringer of Justice
+
+Enhancement
+
+IMPERIAL KNIGHTS model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the Hit roll.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Bringer of Justice","cerastus-knight-atrapos","A 8",null] · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+A 8 · GRANTED BY
+
+Bringer of Justice
+
+Enhancement
+
+IMPERIAL KNIGHTS model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the Hit roll.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Hunter’s Eye","knight-crusader","IGNORES COVER","IGNORES COVER"] · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+IGNORES COVER · GRANTED BY
+
+Hunter’s Eye
+
+Enhancement
+
+IMPERIAL KNIGHTS model only. Ranged weapons equipped by the bearer have the [IGNORES COVER] ability.
+
+Already in the keywords shown (as New Recruit and BSData list them).
+
+IGNORES COVER Core rule
+
+Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+######## popup rule:ASSAULT · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+ASSAULT
+
+Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
+
+IN THIS ARMYCerastus Knight Lancer, Knight Destrier · Sanctuary
+
+######## popup rule:Advance · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+
+######## popup rule:Advance move · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+
+######## popup rule:Advance roll · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+
+######## popup rule:BLAST · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+BLAST
+
+Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead.
+
+Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+IN THIS ARMYCanis Rex, Cerastus Knight Atrapos · Bringer of Justice, Knight Crusader · Hunter’s Eye, Knight Destrier · Sanctuary
+
+######## popup rule:Battle-shocked · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+######## popup rule:Bondsman · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+IMPERIAL KNIGHTS ARMY RULE
+
+Bondsman
+
+Some IMPERIAL KNIGHTS models have a Bondsman ability, tagged with the word ‘Bondsman’. In your Command phase, one or more models from your army with a Bondsman ability can use that ability. For each one that does, select one friendly ARMIGER model within 12" of that model (you cannot select an ARMIGER model that is already being affected by a Bondsman ability). Until the start of your next Command phase, that ARMIGER model is affected by that Bondsman ability.
+
+######## popup rule:Charge roll · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:Charge rolls · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:Code Chivalric · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+IMPERIAL KNIGHTS ARMY RULE
+
+Code Chivalric
+
+If your Army Faction is IMPERIAL KNIGHTS, at the end of the Read Mission Objectives step, you must determine your army’s Oath for the coming battle. An Oath consists of two parts - one Deed and one Quality. There are three options for each part, shown below.
+
+To determine your army’s Deed, you can either select one Deed or you can randomly select one Deed by rolling a D6 and consulting the relevant table below. The selected Deed will describe what needs to be achieved in order to complete that Deed.
+
+To determine your army’s Quality, you can either select one Quality or you can randomly select one Quality by rolling a D6 and consulting the relevant table below. Until the end of the battle, the ability described in the Quality selected applies to all models in your army with this ability.
+
+The first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).
+
+Deed 1–2 · We vow to lay low the tyrant…
+
+At the start of the battle, select one CHARACTER model in your opponent’s army. This Deed is completed at the end of a turn if that CHARACTER is destroyed.
+
+Deed 3–4 · We swear to reclaim the realm…
+
+This deed is completed at the end of your opponent’s turn if you control more objective markers than your opponent.
+
+Deed 5–6 · We pledge to reap a great tally…
+
+This deed is completed at the end of the battle round if the number of enemy units destroyed this battle round is greater than the battle round number even if those units are subsequently returned to the battlefield (for example, two destroyed enemy units in the first battle round).
+
+Quality 1–2 · …with our martial valour risen over all
+
+Each time this model is selected to shoot or fight, you can re-roll one Hit roll and you can re-roll one Wound roll.
+
+Quality 3–4 · …and we are eager for the challenge
+
+Add 2" to this model’s Move characteristic and add 1 to Advance and Charge rolls made for this model.
+
+Quality 5–6 · …yet shall our legacy be unsullied
+
+Improve this model’s Objective Control characteristic by 2 and its Leadership characteristic by 1.
+
+######## popup rule:DEVASTATING WOUNDS · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+DEVASTATING WOUNDS
+
+Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+
+Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+
+IN THIS ARMYCerastus Knight Atrapos · Bringer of Justice
+
+######## popup rule:Deadly Demise · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Deadly Demise
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYCanis Rex, Cerastus Knight Atrapos · Bringer of Justice, Cerastus Knight Lancer, Knight Crusader · Hunter’s Eye, Knight Destrier · Sanctuary
+
+######## popup rule:Deadly Demise D6 · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Deadly Demise D6
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYCanis Rex, Cerastus Knight Atrapos · Bringer of Justice, Cerastus Knight Lancer, Knight Crusader · Hunter’s Eye, Knight Destrier · Sanctuary
+
+######## popup rule:Deadly Demise D6+2 · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Deadly Demise D6+2
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYCanis Rex, Cerastus Knight Atrapos · Bringer of Justice, Cerastus Knight Lancer, Knight Crusader · Hunter’s Eye, Knight Destrier · Sanctuary
+
+######## popup rule:Deep Strike · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Deep Strike
+
+Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
+
+App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
+
+######## popup rule:Engagement Range · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+######## popup rule:Feel No Pain 6+ · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Feel No Pain 6+
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+######## popup rule:Fights First · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Fights First
+
+While every model in a unit has this ability, that unit is a Fights First unit.
+
+See the Resolve Fights First Combats step in the Fight phase (12.04).
+
+######## popup rule:HAZARDOUS · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+HAZARDOUS
+
+Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.
+
+IN THIS ARMYCerastus Knight Atrapos · Bringer of Justice
+
+######## popup rule:Hazard roll · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Hazard Roll
+
+To make a hazard roll for a unit, roll one D6: on a 1-2, that roll fails and that unit suffers 1 mortal wound (see above), or 3 mortal wounds instead if each model in that unit is a MONSTER/VEHICLE model. If more than one hazard roll is required for a unit, make all of those rolls simultaneously.
+
+06.03.01 Hazardous Test (app): The term ‘Hazardous test’ is the same as hazard roll.
+
+Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model in the unit make a hazard roll? No, the unit would make 1 single hazard roll.
+
+Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
+
+######## popup rule:IGNORES COVER · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+IGNORES COVER
+
+Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+IN THIS ARMYKnight Crusader · Hunter’s Eye, Knight Destrier · Sanctuary (in Saturation Fire)
+
+######## popup rule:Knights of Legend · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+FREEBLADE COMPANY DETACHMENT RULE
+
+Knights of Legend
+
+IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
+
+IN THIS ARMYCanis Rex, Cerastus Knight Atrapos · Bringer of Justice, Cerastus Knight Lancer, Knight Crusader · Hunter’s Eye, Knight Destrier · Sanctuary
+
+######## popup rule:LANCE · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+LANCE
+
+Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
+
+IN THIS ARMYCerastus Knight Lancer
+
+######## popup rule:Lance · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Lance
+
+Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
+
+IN THIS ARMYCerastus Knight Lancer
+
+######## popup rule:Lone Operative · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Lone Operative
+
+Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12" of this unit.
+
+If this ability takes the form Lone Operative X", unless part of an attached unit, this unit is not visible to enemy models unless they are within X" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X" of this unit.
+
+24.24.01 Attached units and Lone Operative (app): If all models in an attached unit have Lone Operative, that unit will benefit from Lone Operative.
+
+If a unit has Lone Operative, but models in that unit have different range values for Lone Operative, the highest value amongst that unit’s models on the battlefield is applied to the whole unit.
+
+If an attached unit below starting strength only contains models with Lone Operative, Lone Operative becomes active again.
+
+IN THIS ARMYCanis Rex
+
+######## popup rule:MELTA 2 · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+MELTA 2
+
+This ability always takes the form [MELTA X]. Each time a model makes an attack with a [MELTA] weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add X to that weapon’s D characteristic.
+
+Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6. While resolving those attacks, that weapon has a D characteristic of D6+2.
+
+IN THIS ARMYKnight Crusader · Hunter’s Eye
+
+######## popup rule:Normal · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Normal Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+AFTER MOVING: Your unit must be unengaged.
+
+09.05.01 More Than One Normal Move in a Phase (app): A unit cannot make more than one Normal Move in a phase.
+
+######## popup rule:PISTOL · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+PISTOL
+
+Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with:
+
+One or more of its [CLOSE-QUARTERS] weapons.
+One or more of its other ranged weapons.
+
+[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
+
+IN THIS ARMYCanis Rex
+
+######## popup rule:Plunging Fire · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Plunging Fire
+
+Each time a model makes a ranged attack that targets a visible unit containing one or more models on ground level, if one or more of the following conditions apply, improve the BS characteristic of that attack by 1:
+
+The attacking model is on a section of a terrain feature that is 3" or more in height.
+The attacking model has the TOWERING keyword and the target unit is within 12".
+
+23.03 Shooting: The Plunging Fire rule (22.05) has no effect on attacks made by, or targeting, AIRCRAFT units.
+
+######## popup rule:RAPID FIRE 3 · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+RAPID FIRE 3
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYKnight Crusader · Hunter’s Eye, Knight Destrier · Sanctuary
+
+######## popup rule:RAPID FIRE D6+3 · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+RAPID FIRE D6+3
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYKnight Crusader · Hunter’s Eye, Knight Destrier · Sanctuary
+
+######## popup rule:Resolve a charge · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:SUSTAINED HITS 1 · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+SUSTAINED HITS 1
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYCanis Rex, Cerastus Knight Atrapos · Bringer of Justice, Cerastus Knight Lancer, Knight Crusader · Hunter’s Eye
+
+######## popup rule:SUSTAINED HITS 2 · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+SUSTAINED HITS 2
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYCanis Rex, Cerastus Knight Atrapos · Bringer of Justice, Cerastus Knight Lancer, Knight Crusader · Hunter’s Eye
+
+######## popup rule:Strategic Reserves · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Strategic Reserves
+
+Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding FORTIFICATIONS) to place in strategic reserves. Instead of setting up these units on the battlefield during deployment, place them to one side; they are strategic reserves units, and will arrive later in the battle.
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+20.01.01 Reserves (app): The term ‘Reserves’ is the same as strategic reserves.
+
+20.02 Repositioned Units: Some rules allow units to be removed from the battlefield and placed in strategic reserves during the battle. Units that use such rules are known as repositioned units. In addition to any other rules that apply to such units (such as where they can or cannot arrive), all of the following rules apply to them:
+
+If used in the Movement phase, such rules can be used on units that have already moved that phase.
+A repositioned unit that is set up in the same turn in which it made an advance, fall-back or disembark move has still made an advance, fall-back or disembark move that turn.
+When they are removed from the battlefield, any rules that are affecting such units for a specified duration or under specified circumstances continue to affect them while that duration and/or those circumstances apply.
+
+20.03 Arriving from Strategic Reserves: To arrive on the battlefield, each strategic reserves unit must make an ingress move (see below). Unless otherwise stated, they can only do so from the second battle round onwards.
+
+At the end of the third battle round, unless otherwise stated, all strategic reserves units that have not made one or more ingress moves are destroyed, with the following exceptions:
+
+Units embarked within TRANSPORTS that have made an ingress move during the battle.
+Repositioned units (see opposite).
+
+######## popup rule:Super-Heavy Walker · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Super-Heavy Walker
+
+Each time a unit with this ability makes a normal, advance or fall-back move:
+
+Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding TITANIC models) and can move horizontally through sections of terrain features that are 4" or less in height.
+Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked.
+
+Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).
+
+IN THIS ARMYCanis Rex, Cerastus Knight Atrapos · Bringer of Justice, Cerastus Knight Lancer, Knight Crusader · Hunter’s Eye, Knight Destrier · Sanctuary
+
+######## popup rule:Sustained Hits · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Sustained Hits
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYCanis Rex, Cerastus Knight Atrapos · Bringer of Justice, Cerastus Knight Lancer, Knight Crusader · Hunter’s Eye
+
+######## popup rule:TORRENT · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+TORRENT
+
+Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.
+
+IN THIS ARMYKnight Crusader · Hunter’s Eye
+
+######## popup rule:[IGNORES COVER] · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+IGNORES COVER
+
+Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+IN THIS ARMYKnight Crusader · Hunter’s Eye, Knight Destrier · Sanctuary (in Saturation Fire)
+
+######## popup rule:[PRECISION] · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+PRECISION
+
+While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.
+
+24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
+
+######## popup rule:advance move · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+
+######## popup rule:battle-shock roll · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+######## popup rule:benefit of cover · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Benefit of Cover
+
+Each time a ranged attack targets a unit, if every model in that unit meets one or more of the following conditions, that unit has the benefit of cover against that attack:
+
+That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area.
+That model is not fully visible to the attacking model due to one or more intervening terrain features and/or one or more intervening obscuring terrain areas (see below).
+
+Each time a ranged attack targets a unit that has the benefit of cover against it, worsen the BS characteristic of that attack by 1.
+
+######## popup rule:charge move · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+
+######## popup rule:charge roll · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:charge rolls · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:charge targets · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+
+######## popup rule:engaged · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+######## popup rule:ingress move · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Ingress Move
+
+SET-UP DISTANCE: 6"
+
+ELIGIBLE IF: Your unit is in strategic reserves (excluding units that are embarked within TRANSPORTS that are themselves in strategic reserves).
+
+EFFECT: Your unit is set up as described in Set Up (03.02).
+
+WHILE MOVING: Set up your unit wholly within the set-up distance of one or more battlefield edges and more than 8" horizontally from all enemy units.
+
+Before the Third Battle Round: While doing so, no models can be set up within your opponent’s deployment zone.
+
+AFTER MOVING: Unless otherwise stated, until the start of the next Charge phase, your unit is not eligible to make any other type of move.
+
+20.03.01 Set Up As Reinforcements (app): If a rule mentions a unit being set up on the battlefield as Reinforcements, it means a unit that made an ingress move.
+
+######## popup rule:mortal wound · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+######## popup rule:mortal wounds · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+######## popup rule:snap shooting · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+snap shooting
+
+ELIGIBLE IF: As stated in the rule allowing this shooting type.
+
+EFFECT: Your unit shoots as described in Making Attacks (04).
+
+WHILE SHOOTING:
+
+You can only target one visible enemy unit within 24" of your unit (and only if it is an eligible target).
+Each attack only hits on an unmodified hit roll of 6 (irrespective of the attacking weapon’s BS characteristic or any modifiers).
+You cannot re-roll hit rolls.
+
+AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.
+
+######## popup rule:strategic reserves · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Strategic Reserves
+
+Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding FORTIFICATIONS) to place in strategic reserves. Instead of setting up these units on the battlefield during deployment, place them to one side; they are strategic reserves units, and will arrive later in the battle.
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+20.01.01 Reserves (app): The term ‘Reserves’ is the same as strategic reserves.
+
+20.02 Repositioned Units: Some rules allow units to be removed from the battlefield and placed in strategic reserves during the battle. Units that use such rules are known as repositioned units. In addition to any other rules that apply to such units (such as where they can or cannot arrive), all of the following rules apply to them:
+
+If used in the Movement phase, such rules can be used on units that have already moved that phase.
+A repositioned unit that is set up in the same turn in which it made an advance, fall-back or disembark move has still made an advance, fall-back or disembark move that turn.
+When they are removed from the battlefield, any rules that are affecting such units for a specified duration or under specified circumstances continue to affect them while that duration and/or those circumstances apply.
+
+20.03 Arriving from Strategic Reserves: To arrive on the battlefield, each strategic reserves unit must make an ingress move (see below). Unless otherwise stated, they can only do so from the second battle round onwards.
+
+At the end of the third battle round, unless otherwise stated, all strategic reserves units that have not made one or more ingress moves are destroyed, with the following exceptions:
+
+Units embarked within TRANSPORTS that have made an ingress move during the battle.
+Repositioned units (see opposite).
+
+######## popup rule:unengaged · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+######## popup strat:command-re-roll · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+1CP · ANY PHASE · EITHER TURN
+
+Command Re-roll
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+######## popup strat:counteroffensive · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+2CP · FIGHT · THEIR TURN
+
+Counteroffensive
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+######## popup strat:crushing-impact · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+1CP · CHARGE · YOUR TURN
+
+Crushing Impact
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYany unit
+
+######## popup strat:epic-challenge · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+1CP · FIGHT · EITHER TURN
+
+Epic Challenge
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYany unit
+
+######## popup strat:flanking-manoeuvres · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+1CP · FIGHT · THEIR TURN
+
+Flanking Manoeuvres
+WHEN
+
+End of your opponent’s Fight phase.
+
+TARGETOne ARMIGER unit from your army that is within 9" of one or more battlefield edges and not within Engagement Range of one or more enemy units.
+
+EFFECT
+
+Remove your unit from the battlefield and place it into Strategic Reserves.
+
+USED BYno unit in this list (needs ARMIGER)
+
+######## popup strat:full-tilt · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+1CP · MOVEMENT · YOUR TURN
+
+Full Tilt
+WHEN
+
+Your Movement phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army.
+
+EFFECT
+
+Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6" to the Move characteristic of models in your unit, or 9" instead if your unit is an ARMIGER or DESTRIER unit.
+
+USED BYany unit
+
+######## popup strat:heroic-intervention · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+1CP · CHARGE · THEIR TURN · INTO THE FRAY +1CP
+
+Heroic Intervention
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYany unit
+
+######## popup strat:insane-bravery · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+1CP · COMMAND · YOUR TURN · ONCE PER BATTLE
+
+Insane Bravery
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+######## popup strat:noble-sacrifice · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+1CP · ANY PHASE · EITHER TURN
+
+Noble Sacrifice
+WHEN
+
+Any phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.
+
+EFFECT
+
+Your unit’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6.
+
+USED BYany unit
+
+######## popup strat:point-blank-barrage · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+1CP · SHOOTING · YOUR TURN
+
+Point-Blank Barrage
+WHEN
+
+Your Shooting phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that has not been selected to shoot this phase.
+
+EFFECT
+
+Until the end of the phase, when making ranged attacks with Blast weapons, models in your unit can target enemy units within Engagement Range of your unit (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, until the end of the phase, your unit does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units, but each time a model in your unit makes an attack with a Blast weapon that targets a unit within Engagement Range of your unit, on an unmodified Hit roll of 1, your unit suffers 1 mortal wound after all of its attacks have been resolved.
+
+USED BYany unit
+
+######## popup strat:rapid-ingress · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+1CP · MOVEMENT · THEIR TURN
+
+Rapid Ingress
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+######## popup strat:strength-from-exile · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+1CP · YOUR SHOOTING / FIGHT (EITHER TURN)
+
+Strength from Exile
+WHEN
+
+Your Shooting phase or the Fight phase.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that has not been selected to shoot or fight this phase.
+
+EFFECT
+
+Until the end of the phase, each time a model in your unit makes an attack, if there are no other friendly units within 9" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.
+
+USED BYany unit
+
+######## popup strat:survivor-of-strife · 4 MEGAS AND A DESTRIER 4 megas and a destrier
+1CP · SHOOTING · THEIR TURN
+
+Survivor of Strife
+WHEN
+
+Your opponent’s Shooting phase, just after an enemy unit has selected its targets.
+
+TARGETOne IMPERIAL KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the Wound roll.
+
+USED BYany unit

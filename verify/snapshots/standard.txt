@@ -1,0 +1,4598 @@
+######## army · PRINCES Standard
+World Eaters · 2000 / 2000 pts · Strike Force
+
+Berzerker Warband · Vessels of Wrath · Disposition: Purge the Foe
+
+Overview
+Damage calculator
+Units
+14
+Stratagems
+19
+Ranged weapons
+9
+Melee weapons
+17
+Abilities
+30
+Rules
+Bases & proxies
+58
+Keep screen on
+Off
+
+New Recruit, exported 20 Oct 2026
+
+######## pregame · STANDARD Overview
+YOUR LIST
+WARLORD
+Angron
+ENHANCE­MENTS
+Berzerker Glaive 35 pts on Slaughterbound
+ATTACHED
+Khârn the Betrayer leads Khorne Berzerkers
+Slaughterbound leads Exalted Eightbound
+DETACH­MENTS
+Berzerker Warband (2 DP), Vessels of Wrath (1 DP)
+Disposition: Purge the Foe
+POINTS
+2000 / 2000 · Strike Force
+ARMY RULES
+Blessings of Khorne
+Command/Charge/Fight
+
+If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.
+
+Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.
+
+First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.
+
+They then use the two 2s to activate Unbridled Bloodlust.
+
+Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.
+
+Unbridled Bloodlust · double 1+
+
+This unit has +1 to charge rolls.
+
+Rage-fuelled Invigoration · double 2+
+
+Each time a model in this unit makes a Pile-in or Consolidation move, it can move up to 6" instead of up to 3".
+
+Total Carnage · double 3+
+
+Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.
+
+Martial Excellence · double 4+ or triple 1+
+
+Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.
+
+Warp Blades · double 5+ or triple 2+
+
+Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.
+
+Decapitating Strikes · double 6 or triple 3+
+
+Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
+
+DECLARE BATTLE FORMATIONS
+DEEP STRIKE
+Angron 330 pts
+Slaughterbound + Exalted Eightbound 255 pts
+Exalted Eightbound 130 pts
+All of them: 715 pts
+TRANSPORTS
+Chaos Rhino: This model has a transport capacity of 12 WORLD EATERS INFANTRY models. It cannot transport POSSESSED or TERMINATOR models.
+DEPLOYMENT AND PRE-BATTLE ABILITIES
+SCOUTS
+Eightbound Scouts 6"
+Goremongers Infiltrators
+ABILITIES
+Lord of the Eightbound · Slaughterbound ×2
+START OF THE BATTLE ROUND
+EVERY ROUND
+Blessings of Khorne · World Eaters army rule
+Reborn in Blood · Angron
+Wrathful Presence · Angron
+USES PER BATTLE
+NEW GAME
+ABILITIES
+Possessed Lord · Slaughterbound
+Possessed Lord · Slaughterbound + Exalted Eightbound
+STRATA­GEMS
+1CP Insane Bravery
+
+Gathered from this list’s datasheets and rules; each line opens the full text.
+
+######## units · OVERVIEW Units Unit M T Sv W LD OC InSv Pts
+EPIC HEROES
+2
+Angron
+Warlord
+14"
+11
+2+
+16
+5+
+6
+4+
+330
+Khârn the Betrayer
++ Khorne Berzerkers
+285
+Khârn the Betrayer
+8"
+5
+3+
+5
+6+
+1
+4+
+Khorne Berzerker×10
+8"
+5
+3+
+2
+6+
+2
+–
+CHARACTERS
+3
+Lord on Juggernaut
+10"
+6
+3+
+7
+6+
+2
+4+
+95
+Slaughterbound
+10"
+6
+3+
+6
+6+
+1
+5+
+90
+Slaughterbound
++ Exalted Eightbound
+Berzerker Glaive
+255
+Slaughterbound
+10"
+6
+3+
+6
+6+
+1
+5+
+Exalted Eightbound
+10"
+6
+3+
+3
+6+
+1
+5+
+INFANTRY
+6
+Eightbound
+1× Eightbound Champion, 2× Eightbound
+10"
+6
+3+
+3
+6+
+1
+5+
+2×125
+Exalted Eightbound
+1× Exalted Eightbound Champion, 2× Exalted Eightbound
+10"
+6
+3+
+3
+6+
+1
+5+
+130
+Goremongers
+1× Blood Herald, 7× Goremonger w/ chainblade
+9"
+4
+6+
+1
+7+
+1
+–
+70
+Jakhals
+1× Jakhal Pack Leader, 1× Dishonoured w/ paired manglers, 8× Jakhal
+7"
+4
+6+
+1
+7+
+1
+–
+2×65
+VEHICLES
+2
+Forgefiend
+10"
+10
+3+
+12
+6+
+3
+5+
+2×145
+DEDICATED TRANSPORTS
+1
+Chaos Rhino
+12"
+9
+3+
+10
+6+
+2
+–
+75
+
+######## ranged · UNITS Ranged weapons WEAPON RNG A BS S AP D
+Khârn the Betrayer
++ Khorne Berzerkers
+KHÂRN THE BETRAYER
+Plasma pistol
+➤standard
+12"
+1
+3+
+7
+-2
+1
+PISTOL
+➤supercharge
+12"
+1
+3+
+8
+-3
+2
+HAZARDOUS, PISTOL
+KHORNE BERZERKERS
+Plasma pistol×3
+➤standard
+12"
+1
+4+
+7
+-2
+1
+PISTOL
+➤supercharge
+12"
+1
+4+
+8
+-3
+2
+HAZARDOUS, PISTOL
+Bolt pistol×7
+12"
+1
+4+
+5
+-1
+1
+PISTOL
+Lord on Juggernaut
+Plasma pistol
+➤standard
+12"
+1
+3+
+7
+-2
+1
+PISTOL
+➤supercharge
+12"
+1
+3+
+8
+-3
+2
+HAZARDOUS, PISTOL
+Chaos Rhino
+Combi-bolter
+24"
+2
+4+
+5
+-1
+1
+RAPID FIRE 4
+Goremongers
+Autopistol×8
+12"
+1
+4+
+3
+0
+1
+PISTOL
+Jakhals
+×2 units
+Autopistol×9
+12"
+1
+4+
+3
+0
+1
+PISTOL
+Forgefiend
+×2 units
+Hades autocannon×2
+36"
+6
+4+
+8
+-1
+2
+RAPID FIRE 4
+Ectoplasma cannon
+36"
+D3
+4+
+10
+-3
+3
+BLAST, RAPID FIRE 1
+Target is the closest eligible target within 18": re-roll the hit roll (Furious Onslaught)
+Damaged (1-4 wounds left): -1 to hit rolls (Damaged: 1-4 wounds remaining)
+
+######## melee · RANGED Melee weapons WEAPON A WS S AP D
+Angron
+Warlord
+Samni’arius and Spinegrinder
+➤strike
+9
+2+
+14
+-3
+D6+2
+DEVASTATING WOUNDS
+➤sweep
+17
+2+
+7
+-2
+2
+DEVASTATING WOUNDS
+Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 wounds remaining)
+Own aura, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+Khârn the Betrayer
++ Khorne Berzerkers
+KHÂRN THE BETRAYER
+Gorechild
+9
+2+
+7
+-2
+3
+KHORNE BERZERKERS
+Chainblade×8
+5
+3+
+5
+-1
+1
+Khornate eviscerator×2
+4
+3+
+8
+-2
+2
+While Khârn leads this unit: re-roll hit rolls of 1 and wound rolls of 1 (Legendary Killer)
+Made a charge move this turn: +1 S (Murderous Charge)
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+Lord on Juggernaut
+Exalted chainblade
+8
+2+
+6
+-1
+2
++
+Bladed horn
+5
+3+
+6
+-1
+2
+EXTRA ATTACKS, LANCE
+When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
+Made a charge move this turn: Bladed horn +1 to wound (Lance)
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+STRATAGEMS · VESSELS OF WRATH
+1CP CHARACTER models +1 A, +2 S, When selected to fight (Aspire to Infamy)
+Slaughterbound
+Lacerator and daemonic claw
+7/10
+2+
+10
+-2
+2
+A 10 Possessed Lord (once per battle, start of the Fight phase), and [DEVASTATING WOUNDS] until the end of the phase (Possessed Lord)
+When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+STRATAGEMS · VESSELS OF WRATH
+1CP CHARACTER models +1 A, +2 S, When selected to fight (Aspire to Infamy)
+Slaughterbound
+Berzerker Glaive
++ Exalted Eightbound
+SLAUGHTERBOUND
+Lacerator and daemonic claw
+8/11
+2+
+10
+-2
+3
+A 11 Possessed Lord (once per battle, start of the Fight phase), and [DEVASTATING WOUNDS] until the end of the phase (Possessed Lord)
+EXALTED EIGHTBOUND
+Chainblades×3
+5
+3+
+8
+-3
+2
+ANTI-MONSTER 3+, ANTI-VEHICLE 3+
+vs MONSTER/VEHICLE: +1 D (Rend and Tear)
+When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+STRATAGEMS · VESSELS OF WRATH
+1CP CHARACTER models +1 A, +2 S, When selected to fight (Aspire to Infamy)
+Chaos Rhino
+Armoured tracks
+7
+3+
+6
+0
+1
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+Eightbound
+×2 units
+Chainblades×3
+6
+3+
+8
+-2
+2
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Own aura, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+Exalted Eightbound
+Chainblades×3
+5
+3+
+8
+-3
+2
+ANTI-MONSTER 3+, ANTI-VEHICLE 3+
+vs MONSTER/VEHICLE: +1 D (Rend and Tear)
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+Goremongers
+Chainblade×8
+4
+4+
+3
+0
+1
+LANCE
+OR
+Close combat weapon×8
+3
+4+
+3
+0
+1
+Made a charge move this turn: Chainblade +1 to wound (Lance)
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+Jakhals
+×2 units
+Chainblades×9
+4
+4+
+3
+0
+1
+Paired manglersDISHONOURED
+5
+4+
+4
+0
+1
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+Forgefiend
+×2 units
+Forgefiend claws
+7
+3+
+6
+0
+1
+Damaged (1-4 wounds left): -1 to hit rolls (Damaged: 1-4 wounds remaining)
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+
+######## abilities · MELEE Abilities
+Angron
+Warlord
+Reborn in Blood
+Command · Your Move
+
+Command (either turn) / Your Movement
+
+At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its Deep Strike ability, with 8 wounds remaining.
+
+Wrathful Presence
+Command
+
+Start of the battle round
+
+At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability.
+
+Damaged: 1-6 wounds remaining
+
+While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+WRATHFUL PRESENCE: PICK ONE
+The Blood God’s Favour
+
+Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
+
+Driven by Ultimate Rage
+Fight
+
+Aura · Fight · Either turn
+
+While a friendly WORLD EATERS unit is within 6" of this unit, that unit’s melee attacks can:
+
+Re-roll hit rolls of 1.
+Re-roll wound rolls of 1.
+Overwhelming Wrath
+Their Movement
+
+Aura · Movement · Their turn
+
+Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.
+
+Khârn the Betrayer
++ Khorne Berzerkers
+KHÂRN THE BETRAYER
+Legendary Killer
+Fight
+
+Fight · Either turn
+
+While this model is leading a unit, each time a model in that unit makes a melee attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.
+
+The Betrayer
+Your Charge
+
+Charge · Your turn
+
+At the end of your Charge phase, if this unit is on the battlefield, is unengaged, and contains a bodyguard model, this unit makes a leadership roll:
+
+If that leadership roll is failed, one bodyguard model in this unit is destroyed.
+Berserker Frenzy
+
+The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.
+
+KHORNE BERZERKERS
+Blood Surge
+Their Shooting
+
+Shooting · Their turn
+
+In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6+2".
+
+Murderous Charge
+Fight
+
+Fight · Either turn
+
+If this unit made a charge move this turn, this unit’s melee attacks have +1 S.
+
+Icon of Khorne
+No Icon of Khorne in this unit
+
+No Icon of Khorne in this unit
+
+If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.
+
+Lord on Juggernaut
+Aggressive Advance
+Your Move · Charge
+
+Your Movement / Charge (either turn)
+
+While this model is leading a unit, models in that unit have a Move characteristic of 10" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features.
+
+Crush All Who Stand Before Us
+Fight
+
+Fight · Either turn
+
+Each time this model’s unit is selected to fight, you can use this ability. When determining which models in this unit are eligible to fight, any models in it that are within 3" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3" of them and within Engagement Range of their unit.
+
+Slaughterbound
+Rage Eternal
+Your Command
+
+Command · Your turn
+
+While this model is leading a unit, in your Command phase, you can return one destroyed Bodyguard model to that unit.
+
+Possessed Lord
+Once per battle
+Fight
+
+Fight · Either turn
+
+Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [Devastating Wounds] ability.
+
+Lord of the Eightbound
+
+If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step, this model has the Deep Strike and Scouts 6" abilities.
+
+Slaughterbound
+Berzerker Glaive
++ Exalted Eightbound
+SLAUGHTERBOUND
+Rage Eternal
+Your Command
+
+Command · Your turn
+
+While this model is leading a unit, in your Command phase, you can return one destroyed Bodyguard model to that unit.
+
+Possessed Lord
+Once per battle
+Fight
+
+Fight · Either turn
+
+Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [Devastating Wounds] ability.
+
+Lord of the Eightbound
+
+If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step, this model has the Deep Strike and Scouts 6" abilities.
+
+Berzerker Glaive
+Enhancement
+
+Enhancement
+
+WORLD EATERS model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.
+
+EXALTED EIGHTBOUND
+Rend and Tear
+Fight
+
+Fight · Either turn
+
+Each time a model in this unit makes a melee attack that targets a MONSTER or VEHICLE unit, until the end of the phase, improve the Damage characteristic of that attack by 1.
+
+Chaos Rhino
+Meet Any Challenge
+Their Movement
+
+Movement · Their turn
+
+In your opponent’s Movement phase, each time an enemy unit is set up or ends a Normal, Advance or Fall Back move within 8" of this model, any units embarked within it can disembark.
+
+Transport
+
+Capacity
+
+This model has a transport capacity of 12 WORLD EATERS INFANTRY models. It cannot transport POSSESSED or TERMINATOR models.
+
+Eightbound
+×2 units
+Beacons of Rage
+Fight
+
+Aura · Fight · Either turn
+
+While a friendly WORLD EATERS unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding MONSTERS and VEHICLES), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well.
+
+Exalted Eightbound
+Rend and Tear
+Fight
+
+Fight · Either turn
+
+Each time a model in this unit makes a melee attack that targets a MONSTER or VEHICLE unit, until the end of the phase, improve the Damage characteristic of that attack by 1.
+
+Goremongers
+Loping Speed
+Their Movement
+
+Movement · Their turn
+
+In your opponent’s Movement phase, if an enemy unit ends a move within 8" of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6".
+
+Jakhals
+×2 units
+Objective Ravaged
+Your Command
+
+Command · Your turn
+
+At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
+
+Forgefiend
+×2 units
+Furious Onslaught
+Their Move · Your Shoot
+
+Their Movement / Your Shooting
+
+Each time this model makes a ranged attack that targets the closest eligible target within 18", you can re-roll the Hit roll.
+
+Damaged: 1-4 wounds remaining
+
+While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+######## rules · ABILITIES Rules
+World Eaters · Purge the Foe
+ARMY RULES
+Blessings of Khorne
+Command/Charge/Fight
+
+If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.
+
+Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.
+
+First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.
+
+They then use the two 2s to activate Unbridled Bloodlust.
+
+Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.
+
+Unbridled Bloodlust · double 1+
+
+This unit has +1 to charge rolls.
+
+Rage-fuelled Invigoration · double 2+
+
+Each time a model in this unit makes a Pile-in or Consolidation move, it can move up to 6" instead of up to 3".
+
+Total Carnage · double 3+
+
+Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.
+
+Martial Excellence · double 4+ or triple 1+
+
+Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.
+
+Warp Blades · double 5+ or triple 2+
+
+Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.
+
+Decapitating Strikes · double 6 or triple 3+
+
+Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
+
+DETACHMENTS
+BERZERKER WARBAND
+Relentless Rage
+Detachment rule · Fight
+
+Already counted: every melee A value in this app includes this +1 A. Do not add it again.
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+APPLIES TOAngron, Khârn the Betrayer, Lord on Juggernaut, Slaughterbound, Slaughterbound · Berzerker Glaive, Chaos Rhino, Eightbound, Exalted Eightbound, Goremongers, Jakhals, Forgefiend
+
+Berzerker Glaive
+Enhancement · 35 pts · on Slaughterbound + Exalted Eightbound
+
+WORLD EATERS model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.
+
+ONSlaughterbound + Exalted Eightbound
+
+Other enhancements
+3 not in this list
+Helm of Brazen Ire 30 pts
+
+WORLD EATERS model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack.
+
+Favoured of Khorne 20 pts
+
+WORLD EATERS model only. Each time you make a Blessings of Khorne roll, if the bearer is on the battlefield, you can re-roll up to two of the D6 rolled.
+
+Battle-lust 20 pts
+
+WORLD EATERS model only. You can re-roll Charge rolls made for the bearer’s unit. In addition, while the Unbridled Bloodlust Blessing of Khorne is active for your army, add 1 to Charge rolls made for the bearer’s unit.
+
+STRATAGEMSApoplectic Frenzy, Berzerker’s Wrath, Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Blood Offering
+
+VESSELS OF WRATH
+Wrath of Khorne
+Detachment rule · Fight
+
+When a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) is selected to fight, that unit’s CHARACTER models’ melee attacks can have:
+
+[CLEAVE 1].
+Or: +1 AP.
+
+APPLIES TOLord on Juggernaut, Slaughterbound, Slaughterbound · Berzerker Glaive
+
+Other enhancements
+2 not in this list
+Archslaughterer 30 pts
+
+WORLD EATERS model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, every Blessing of Khorne is active for this unit until the start of your next turn.
+
+Gateways to Glory 10 pts
+
+WORLD EATERS DAEMON PRINCE model only. This model has:
+
+MOBILE.
++1 to charge rolls.
+
+STRATAGEMSPunish the Craven, Aspire to Infamy, Scorn the Witch
+
+UNIT RULES
+Deadly Demise
+
+Angron D6
+
+Slaughterbound D3
+
+Slaughterbound + Exalted Eightbound D3
+
+Chaos Rhino D3
+
+Forgefiend D3
+
+Deep Strike
+
+Angron
+
+Slaughterbound
+Lord of the Eightbound: If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step, this model has the Deep Strike and Scouts 6" abilities.
+
+Slaughterbound + Exalted Eightbound
+
+Exalted Eightbound
+
+Firing Deck
+
+Chaos Rhino 2
+
+Infiltrators
+
+Goremongers
+
+Leader
+
+Khârn the Betrayer leads Khorne Berzerkers
+
+Lord on Juggernaut
+
+Slaughterbound
+
+Slaughterbound leads Exalted Eightbound
+
+Scouts
+
+Slaughterbound
+Lord of the Eightbound: If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step, this model has the Deep Strike and Scouts 6" abilities.
+
+Slaughterbound + Exalted Eightbound 6"
+
+Eightbound 6"
+
+######## bases · RULES Bases & proxies
+BASES TO PRINT
+
+18× 28.5mm
+18× 32mm
+15× 40mm
+2× 50mm
+1× 90×52.5mm
+1× 100mm
+2× 120×92mm
+
+WHAT TO WRITE ON EACH BASE
+
+Angron
+1× 100mm
+Angron · Warlord
+Khârn the Betrayer
++ Khorne Berzerkers
+1× 40mm
+Khârn the Betrayer
+1× 32mm
+Champion · Plasma pistol
+7× 32mm
+standard Bolt pistol, Chainblade
+2× 32mm
+Khornate eviscerator + Plasma pistol · no Bolt pistol, no Chainblade
+Lord on Juggernaut
+1× 90×52.5mm
+Lord on Juggernaut
+Slaughterbound
+1× 50mm
+Slaughterbound
+Slaughterbound · Berzerker Glaive
++ Exalted Eightbound
+1× 50mm
+Slaughterbound · Berzerker Glaive
+1× 40mm
+Champion
+2× 40mm
+standard Chainblades
+Eightbound
+2 units: mark them apart (1, 2)
+1× 40mm
+Champion
+2× 40mm
+standard Chainblades
+Exalted Eightbound
+1× 40mm
+Champion
+2× 40mm
+standard Chainblades
+Goremongers
+1× 32mm
+Blood Herald
+7× 32mm
+standard Autopistol, Chainblade, Close combat weapon
+Jakhals
+2 units: mark them apart (1, 2)
+1× 28.5mm
+Pack Leader
+1× 40mm
+Dishonoured · Paired manglers
+8× 28.5mm
+standard Autopistol, Chainblades
+Forgefiend
+2 units: mark them apart (1, 2)
+1× 120×92mm
+Forgefiend
+Chaos Rhino
+1× no base
+Chaos Rhino
+
+From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
+
+######## damage shooting · BASES Damage
+OPPONENT
+Pubstomper
+Thousand Sons
+YOU ATTACK
+THEY ATTACK
+SHOOTING
+FIGHT
+ATTACKER · YOURS
+Khârn the Betrayer + Khorne Berzerkers
+11 models
+TARGET · THEIRS
+Magnus the Red
+T11 · Sv 2+ · 4+ InSv · W16
+0.0
+of 1 model destroyed
+0.6
+wounds lost
+<1%
+unit destroyed
+HITS
+WOUNDS
+THROUGH
+Plasma pistol
+0.7
+0.2
+0.1
+Plasma pistol
+1.5
+0.5
+0.2
+Bolt pistol
+3.5
+0.6
+0.2
+WEAPONS
+Plasma pistol
+12" · A1 · 3+ · S7 · AP-2 · D1 · PISTOL
+standard
+supercharge
+Plasma pistol ×3
+12" · A1 · 4+ · S7 · AP-2 · D1 · PISTOL
+standard
+supercharge
+Bolt pistol ×7
+12" · A1 · 4+ · S5 · AP-1 · D1 · PISTOL
+SITUATION
+Distance to the target
+inches; blank: not set
+Target has the benefit of cover
+Plunging Fire
+on terrain 3" or higher, or TOWERING with the target within 12": BS improved by 1
+Close-quarters shooting at a unit it is engaged with
+only [CLOSE-QUARTERS] weapons
+Target is engaged
+-1 to hit; no [BLAST]
+Fire Overwatch (snap shooting)
+hits only on an unmodified 6, never critical; no hit re-rolls
+KHÂRN THE BETRAYER’S RULES
+
+No footnotes on its weapons.
+
+MAGNUS THE RED WHEN TARGETED
+Impossible Form (if picked this round): -1 Damage to attacks against Magnus, excluding psychic attacks
+ability · not in these numbers
+Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
+stratagem · not in these numbers
+Destined by Fate: after a failed save for a PSYKER model, that attack’s Damage becomes 0
+stratagem · not in these numbers
+OTHER MODIFIERS
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP better
+−
+0
++
+Damage
+−
+0
++
+Attacks
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+Averages over 10,000 games played out with the dice; one unit’s attacks against the other, nothing used up. Rules marked “not counted” are not in these numbers.
+
+How this is worked out
+what the rules say, and what the calculator does where they leave a choice
+
+Weapons (04.03): the rules let the attacker pick which weapon’s attacks are resolved next; the calculator takes them in the order listed, and rolls identical attacks together.
+
+Saves and damage (05.03, 05.04): save rolls are rolled together and used from the lowest; an attack that gets through damages the one model it was allocated to, so damage beyond that model’s wounds is lost; Feel No Pain is rolled for each wound (24.12).
+
+######## damage fight · DAMAGE Damage
+OPPONENT
+Pubstomper
+Thousand Sons
+YOU ATTACK
+THEY ATTACK
+SHOOTING
+FIGHT
+ATTACKER · YOURS
+Angron
+1 model
+TARGET · THEIRS
+Magnus the Red
+T11 · Sv 2+ · 4+ InSv · W16
+0.5
+of 1 model destroyed
+13
+wounds lost
+54%
+unit destroyed
+HITS
+WOUNDS
+THROUGH
+Samni’arius and Spinegrinder
+7.5
+5.0
+2.6
+WEAPONS
+Samni’arius and Spinegrinder
+Melee · A9 · 2+ · S14 · AP-3 · DD6+2 · DEVASTATING WOUNDS
+strike
+sweep
+SITUATION
+Made a charge move this turn
+Damaged (1-6 wounds left)
+-1 to hit rolls
+ANGRON’S RULES
+Driven by Ultimate Rage
+Own aura, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Beacons of Rage
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength · not in these numbers
+1CP Hack and Slash
+Made a charge move this turn: +1 AP in the Fight phase
+MAGNUS THE RED WHEN TARGETED
+Impossible Form (if picked this round): -1 Damage to attacks against Magnus, excluding psychic attacks
+ability · not in these numbers
+Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
+stratagem · not in these numbers
+Destined by Fate: after a failed save for a PSYKER model, that attack’s Damage becomes 0
+stratagem · not in these numbers
+OTHER MODIFIERS
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP better
+−
+0
++
+Damage
+−
+0
++
+Attacks
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+Averages over 10,000 games played out with the dice; one unit’s attacks against the other, nothing used up. Rules marked “not counted” are not in these numbers.
+
+How this is worked out
+what the rules say, and what the calculator does where they leave a choice
+
+Weapons (04.03): the rules let the attacker pick which weapon’s attacks are resolved next; the calculator takes them in the order listed, and rolls identical attacks together.
+
+Saves and damage (05.03, 05.04): save rolls are rolled together and used from the lowest; an attack that gets through damages the one model it was allocated to, so damage beyond that model’s wounds is lost; Feel No Pain is rolled for each wound (24.12).
+
+######## strats {"folded":true} · DAMAGE Stratagems
+EXPAND ALL
+BERZERKER WARBAND
+6
+1
+CP
+Apoplectic Frenzy
+Until the end of the turn, your unit is eligible to declare a charge even though it Advanced.
+Your Movement Khârn the Betrayer + Khorne Berzerkers
+1
+CP
+Berzerker’s Wrath
+Your unit’s surge move is up to 8" instead of a D6 roll.
+Their Shooting Khârn the Betrayer + Khorne Berzerkers
+1
+CP
+Hack and Slash
+Until the end of the phase, your unit’s melee weapons have +1 AP.
+Fight Any unit
+2
+CP
+Frenzied Resilience
+Until the end of the phase, -1 Damage to each attack allocated to a model in your unit.
+Fight Any unit
+1
+CP
+Skulls for the Skull Throne!
+Make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
+Fight Any unit
+1
+CP
+Blood Offering
+One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+Any phase Any unit
+VESSELS OF WRATH
+3
+1
+CP
+Punish the Craven
+That enemy unit must use desperate escape (-1 to those hazard rolls if it is battle-shocked).
+Their Movement Angron, Khârn the Betrayer + Khorne Berzerkers, Lord on Juggernaut, Slaughterbound, Slaughterbound + Exalted Eightbound
+1
+CP
+Aspire to Infamy
+Your unit’s CHARACTER models’ melee attacks have +1 A and +2 S.
+Fight Lord on Juggernaut, Slaughterbound, Slaughterbound + Exalted Eightbound
+1
+CP
+Scorn the Witch
+Your unit has Feel No Pain 4+ against mortal wounds.
+Any phase Lord on Juggernaut, Slaughterbound, Slaughterbound + Exalted Eightbound
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+The battle-shock roll you are about to make for your unit is automatically successful.
+Your Command · Once per battle Any unit
+1
+CP
+Rapid Ingress
+Your unit in strategic reserves makes an ingress move (not in the first battle round).
+End of their Movement Any unit
+1
+CP
+Fire Overwatch
+Your unit shoots using snap shooting.
+End of their Movement Khârn the Betrayer + Khorne Berzerkers, Lord on Juggernaut, Chaos Rhino, Goremongers, Jakhals ×2, Forgefiend ×2
+1
+CP
+Explosives
+One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
+Your Shooting Khârn the Betrayer + Khorne Berzerkers, Goremongers, Jakhals ×2
+1
+CP
+Smokescreen
+Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+Start of their Shooting Chaos Rhino
+1
+CP
+Crushing Impact
+After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+Your Charge Angron, Chaos Rhino, Forgefiend ×2
+1
+CP
+Heroic Intervention
+Your unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+End of their Charge · Into the Fray +1CP All but Chaos Rhino
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+Fight Angron, Khârn the Betrayer + Khorne Berzerkers, Lord on Juggernaut, Slaughterbound, Slaughterbound + Exalted Eightbound
+2
+CP
+Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+Their Fight Any unit
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
+Any phase Any unit
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## strats {"open":true} · STRATAGEMS Stratagems
+COLLAPSE ALL
+BERZERKER WARBAND
+6
+1
+CP
+Apoplectic Frenzy
+Your Movement Khârn the Betrayer + Khorne Berzerkers
+WHEN
+
+Your Movement phase, just after a KHORNE BERZERKERS unit from your army is selected to Advance.
+
+TARGETThat KHORNE BERZERKERS unit.
+
+EFFECT
+
+Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced.
+
+USED BYKhârn the Betrayer
+
+1
+CP
+Berzerker’s Wrath
+Their Shooting Khârn the Betrayer + Khorne Berzerkers
+WHEN
+
+Your opponent’s Shooting phase, just after an enemy unit has shot.
+
+TARGETOne KHORNE BERZERKERS unit from your army that can make a surge move as a result of those attacks.
+
+EFFECT
+
+Do not roll a D6 to determine how far models in your unit can move when they make a surge move. Instead, when making a surge move, those models can move up to 8".
+
+Wahapedia FAQ: “After being the target of a ranged attack, can a Leader unit make a Blood Surge move if it was previously attached to a unit of Khorne Berzerkers and if the last model in the attached unit was destroyed by that ranged attack?” No.
+
+USED BYKhârn the Betrayer
+
+1
+CP
+Hack and Slash
+Fight Any unit
+WHEN
+
+Fight phase.
+
+TARGETOne WORLD EATERS unit from your army that has not been selected to fight this phase and that made a charge move this turn.
+
+EFFECT
+
+Until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1.
+
+USED BYany unit
+
+2
+CP
+Frenzied Resilience
+Fight Any unit
+WHEN
+
+Fight phase, just after an enemy unit has selected its targets.
+
+TARGETOne WORLD EATERS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack.
+
+USED BYany unit
+
+1
+CP
+Skulls for the Skull Throne!
+Fight Any unit
+WHEN
+
+Fight phase, just after a WORLD EATERS unit from your army destroys a CHARACTER or MONSTER model.
+
+TARGETThat WORLD EATERS unit.
+
+EFFECT
+
+Make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne. Until the end of the battle round, that Blessing of Khorne is active in addition to any other Blessings of Khorne that are currently active.
+
+USED BYany unit
+
+1
+CP
+Blood Offering
+Any phase Any unit
+WHEN
+
+Any phase.
+
+TARGETOne WORLD EATERS unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.
+
+EFFECT
+
+Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
+
+USED BYany unit
+
+VESSELS OF WRATH
+3
+1
+CP
+Punish the Craven
+Their Movement Angron, Khârn the Betrayer + Khorne Berzerkers, Lord on Juggernaut, Slaughterbound, Slaughterbound + Exalted Eightbound
+WHEN
+
+Your opponent’s Movement phase, when a unit is selected to make a fall-back move, if that unit is engaged with a friendly WORLD EATERS CHARACTER unit.
+
+TARGETThat WORLD EATERS CHARACTER unit.
+
+EFFECT
+
+When an enemy unit engaged with your unit is selected to make a fall-back move, that enemy unit must use the desperate escape mode. If that enemy unit is battle-shocked, -1 from those hazard rolls.
+
+USED BYAngron, Khârn the Betrayer, Lord on Juggernaut, Slaughterbound, Slaughterbound · Berzerker Glaive
+
+1
+CP
+Aspire to Infamy
+Fight Lord on Juggernaut, Slaughterbound, Slaughterbound + Exalted Eightbound
+WHEN
+
+Fight phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) is selected to fight.
+
+TARGETThat WORLD EATERS CHARACTER unit.
+
+EFFECT
+
+Your unit’s CHARACTER models’ melee attacks have:
+
++1 A.
++2 S.
+
+USED BYLord on Juggernaut, Slaughterbound, Slaughterbound · Berzerker Glaive
+
+1
+CP
+Scorn the Witch
+Any phase Lord on Juggernaut, Slaughterbound, Slaughterbound + Exalted Eightbound
+WHEN
+
+Any phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) suffers a mortal wound.
+
+TARGETThat WORLD EATERS CHARACTER unit.
+
+EFFECT
+
+Your unit has Feel No Pain 4+ against mortal wounds.
+
+USED BYLord on Juggernaut, Slaughterbound, Slaughterbound · Berzerker Glaive
+
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+Your Command · Once per battle Any unit
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+1
+CP
+Rapid Ingress
+End of their Movement Any unit
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+1
+CP
+Fire Overwatch
+End of their Movement Khârn the Betrayer + Khorne Berzerkers, Lord on Juggernaut, Chaos Rhino, Goremongers, Jakhals ×2, Forgefiend ×2
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYKhârn the Betrayer, Lord on Juggernaut, Chaos Rhino, Goremongers, Jakhals, Forgefiend
+
+1
+CP
+Explosives
+Your Shooting Khârn the Betrayer + Khorne Berzerkers, Goremongers, Jakhals ×2
+WHEN
+
+Your Shooting phase.
+
+TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one EXPLOSIVES/GRENADES model in your unit.
+2. Select one unengaged enemy unit within 8" of and visible to that model.
+3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
+
+Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+
+USED BYKhârn the Betrayer, Goremongers, Jakhals
+
+1
+CP
+Smokescreen
+Start of their Shooting Chaos Rhino
+WHEN
+
+Start of your opponent’s Shooting phase.
+
+TARGETOne friendly SMOKE unit.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
+
+USED BYChaos Rhino
+
+1
+CP
+Crushing Impact
+Your Charge Angron, Chaos Rhino, Forgefiend ×2
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYAngron, Chaos Rhino, Forgefiend
+
+1
+CP
+Heroic Intervention
+End of their Charge · Into the Fray +1CP All but Chaos Rhino
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYAngron, Khârn the Betrayer, Lord on Juggernaut, Slaughterbound, Slaughterbound · Berzerker Glaive, Eightbound, Exalted Eightbound, Goremongers, Jakhals, Forgefiend
+
+1
+CP
+Epic Challenge
+Fight Angron, Khârn the Betrayer + Khorne Berzerkers, Lord on Juggernaut, Slaughterbound, Slaughterbound + Exalted Eightbound
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYAngron, Khârn the Betrayer, Lord on Juggernaut, Slaughterbound, Slaughterbound · Berzerker Glaive
+
+2
+CP
+Counteroffensive
+Their Fight Any unit
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+1
+CP
+Command Re-roll
+Any phase Any unit
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## unit angron · STRATAGEMS Standard
+ANGRON
+330 PTS
+Epic Hero
+Warlord
+Models
+Options
+1× Angron
+Samni’arius and Spinegrinder
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Angron
+100mm
+14"
+11
+2+
+16
+5+
+6
+4+
+WHEN TARGETED2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+DAMAGED 1-6 W
+-1 TO HIT ROLLS
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Samni’arius and Spinegrinder
+➤strike
+9
+2+
+14
+-3
+D6+2
+DEVASTATING WOUNDS
+➤sweep
+17
+2+
+7
+-2
+2
+DEVASTATING WOUNDS
+Own aura, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+ABILITIES
+Reborn in Blood
+Command · Your Move
+
+Command (either turn) / Your Movement
+
+At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its Deep Strike ability, with 8 wounds remaining.
+
+Wrathful Presence
+Command
+
+Start of the battle round
+
+At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability.
+
+The Blood God’s Favour
+- Wrathful Presence: pick one
+
+Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.
+
+Driven by Ultimate Rage
+- Wrathful Presence: pick one
+Fight
+
+Aura · Fight · Either turn
+
+While a friendly WORLD EATERS unit is within 6" of this unit, that unit’s melee attacks can:
+
+Re-roll hit rolls of 1.
+Re-roll wound rolls of 1.
+Overwhelming Wrath
+- Wrathful Presence: pick one
+Their Movement
+
+Aura · Movement · Their turn
+
+Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.
+
+Rules
+Deadly Demise D6, Deep Strike, Blessings of Khorne, Relentless Rage
+Stratagems
+
+BERZERKER WARBAND Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Blood Offering
+
+VESSELS OF WRATH Punish the Craven
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+ANGRON
+CHAOS
+CHARACTER
+DAEMON
+EPIC HERO
+FACTION: WORLD EATERS
+FLY
+KHORNE
+MONSTER
+PRIMARCH
+WARLORD
+Khârn the Betrayer ›
+
+######## unit kh-rn-the-betrayer-khorne-berzerkers · ANGRON Standard
+KHÂRN THE BETRAYER + KHORNE BERZERKERS
+285 PTS
+Epic Hero · 115 + Khorne Berzerkers 170
+Models
+Options
+1× Khârn the Betrayer
+Gorechild, Plasma pistol
+Leading Khorne Berzerkers
+1× Khorne Berzerker Champion
+Chainblade, Plasma pistol
+7× Khorne Berzerker
+Bolt pistol, Chainblade
+2× Khorne Berzerker w/ eviscerator and plasma pistol
+Khornate eviscerator, Plasma pistol
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Khârn the Betrayer
+40mm
+8"
+5
+3+
+5
+6+
+1
+4+
+Khorne Berzerker×10
+32mm
+8"
+5
+3+
+2
+6+
+2
+–
+WHEN TARGETEDKhârn: the first time he is destroyed, at the end of the phase on a 2+ he is set back up with 3 wounds, as close as possible to where he was destroyed and not within Engagement Range of enemy units · 2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+RANGED WEAPONS
+Plasma pistol ×4, Bolt pistol ×7 · all pistols
+Range
+A
+BS
+S
+AP
+D
+KHÂRN THE BETRAYER
+Plasma pistol
+➤standard
+12"
+1
+3+
+7
+-2
+1
+PISTOL
+➤supercharge
+12"
+1
+3+
+8
+-3
+2
+HAZARDOUS, PISTOL
+KHORNE BERZERKERS
+Plasma pistol×3
+➤standard
+12"
+1
+4+
+7
+-2
+1
+PISTOL
+➤supercharge
+12"
+1
+4+
+8
+-3
+2
+HAZARDOUS, PISTOL
+Bolt pistol×7
+12"
+1
+4+
+5
+-1
+1
+PISTOL
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+KHÂRN THE BETRAYER
+Gorechild
+9
+2+
+7
+-2
+3
+KHORNE BERZERKERS
+Chainblade×8
+5
+3+
+5
+-1
+1
+Khornate eviscerator×2
+4
+3+
+8
+-2
+2
+WHOLE UNIT
+While Khârn leads this unit: re-roll hit rolls of 1 and wound rolls of 1 (Legendary Killer)
+Made a charge move this turn: +1 S (Murderous Charge)
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+ABILITIES
+Legendary Killer
+- Khârn the Betrayer
+Fight
+
+Fight · Either turn
+
+While this model is leading a unit, each time a model in that unit makes a melee attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.
+
+The Betrayer
+- Khârn the Betrayer
+Your Charge
+
+Charge · Your turn
+
+At the end of your Charge phase, if this unit is on the battlefield, is unengaged, and contains a bodyguard model, this unit makes a leadership roll:
+
+If that leadership roll is failed, one bodyguard model in this unit is destroyed.
+Berserker Frenzy
+- Khârn the Betrayer
+
+The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.
+
+Blood Surge
+- Khorne Berzerkers
+Their Shooting
+
+Shooting · Their turn
+
+In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6+2".
+
+Murderous Charge
+- Khorne Berzerkers
+Fight
+
+Fight · Either turn
+
+If this unit made a charge move this turn, this unit’s melee attacks have +1 S.
+
+Icon of Khorne
+- Khorne Berzerkers
+No Icon of Khorne in this unit
+
+No Icon of Khorne in this unit
+
+If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.
+
+Rules
+Leader, Blessings of Khorne, Relentless Rage
+Stratagems
+
+BERZERKER WARBAND Apoplectic Frenzy, Berzerker’s Wrath, Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Blood Offering
+
+VESSELS OF WRATH Punish the Craven
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+CHAOS
+CHARACTER
+EPIC HERO
+FACTION: WORLD EATERS
+GRENADES
+INFANTRY
+KHORNE
+KHÂRN THE BETRAYER
+BATTLELINE*
+BERZERKERS*
+*from the led Khorne Berzerkers
+‹ Angron
+Lord on Juggernaut ›
+
+######## unit lord-on-juggernaut · KHÂRN THE BETRAYER Standard
+LORD ON JUGGERNAUT
+95 PTS
+Character
+Models
+Options
+1× Lord on Juggernaut
+Bladed horn, Exalted chainblade, Plasma pistol
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Lord on Juggernaut
+90×52.5mm
+10"
+6
+3+
+7
+6+
+2
+4+
+WHEN TARGETED2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it · 1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Plasma pistol
+➤standard
+12"
+1
+3+
+7
+-2
+1
+PISTOL
+➤supercharge
+12"
+1
+3+
+8
+-3
+2
+HAZARDOUS, PISTOL
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Exalted chainblade
+8
+2+
+6
+-1
+2
++
+Bladed horn
+5
+3+
+6
+-1
+2
+EXTRA ATTACKS, LANCE
+When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
+Made a charge move this turn: Bladed horn +1 to wound (Lance)
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+STRATAGEMS · VESSELS OF WRATH
+1CP CHARACTER models +1 A, +2 S, When selected to fight (Aspire to Infamy)
+ABILITIES
+Aggressive Advance
+Your Move · Charge
+
+Your Movement / Charge (either turn)
+
+While this model is leading a unit, models in that unit have a Move characteristic of 10" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features.
+
+Crush All Who Stand Before Us
+Fight
+
+Fight · Either turn
+
+Each time this model’s unit is selected to fight, you can use this ability. When determining which models in this unit are eligible to fight, any models in it that are within 3" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3" of them and within Engagement Range of their unit.
+
+Rules
+Leader, Blessings of Khorne, Relentless Rage, Wrath of Khorne
+Stratagems
+
+BERZERKER WARBAND Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Blood Offering
+
+VESSELS OF WRATH Punish the Craven, Aspire to Infamy, Scorn the Witch
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+CHAOS
+CHARACTER
+FACTION: WORLD EATERS
+KHORNE
+LORD ON JUGGERNAUT
+MOUNTED
+‹ Khârn the Betrayer
+Slaughterbound ›
+
+######## unit slaughterbound · LORD ON JUGGERNAUT Standard
+SLAUGHTERBOUND
+90 PTS
+Character
+Models
+Options
+1× Slaughterbound
+Lacerator and daemonic claw
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Slaughterbound
+50mm
+10"
+6
+3+
+6
+6+
+1
+5+
+WHEN TARGETED2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it · 1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Lacerator and daemonic claw
+7/10
+2+
+10
+-2
+2
+A 10 Possessed Lord (once per battle, start of the Fight phase), and [DEVASTATING WOUNDS] until the end of the phase (Possessed Lord)
+When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+STRATAGEMS · VESSELS OF WRATH
+1CP CHARACTER models +1 A, +2 S, When selected to fight (Aspire to Infamy)
+ABILITIES
+Rage Eternal
+Your Command
+
+Command · Your turn
+
+While this model is leading a unit, in your Command phase, you can return one destroyed Bodyguard model to that unit.
+
+Possessed Lord
+Once per battle
+Fight
+
+Fight · Either turn
+
+Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [Devastating Wounds] ability.
+
+Lord of the Eightbound
+
+If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step, this model has the Deep Strike and Scouts 6" abilities.
+
+Rules
+Leader, Deadly Demise D3, Blessings of Khorne, Relentless Rage, Wrath of Khorne
+Stratagems
+
+BERZERKER WARBAND Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Blood Offering
+
+VESSELS OF WRATH Punish the Craven, Aspire to Infamy, Scorn the Witch
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+CHAOS
+CHARACTER
+DAEMON
+FACTION: WORLD EATERS
+INFANTRY
+KHORNE
+POSSESSED
+SLAUGHTERBOUND
+‹ Lord on Juggernaut
+Slaughterbound · Berzerker Glaive ›
+
+######## unit slaughterbound-exalted-eightbound · SLAUGHTERBOUND Standard
+SLAUGHTERBOUND + EXALTED EIGHTBOUND
+255 PTS
+Character · 125 + Exalted Eightbound 130
+Berzerker Glaive
+Models
+Options
+1× Slaughterbound
+Lacerator and daemonic claw
+Leading Exalted Eightbound
+1× Exalted Eightbound Champion
+Chainblades
+2× Exalted Eightbound
+Chainblades
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Slaughterbound
+50mm
+10"
+6
+3+
+6
+6+
+1
+5+
+Exalted Eightbound
+40mm
+10"
+6
+3+
+3
+6+
+1
+5+
+WHEN TARGETED2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it · 1CP Scorn the Witch: Feel No Pain 4+ against mortal wounds
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+SLAUGHTERBOUND
+Lacerator and daemonic claw
+8/11
+2+
+10
+-2
+3
+A 11 Possessed Lord (once per battle, start of the Fight phase), and [DEVASTATING WOUNDS] until the end of the phase (Possessed Lord)
+EXALTED EIGHTBOUND
+Chainblades×3
+5
+3+
+8
+-3
+2
+ANTI-MONSTER 3+, ANTI-VEHICLE 3+
+WHOLE UNIT
+vs MONSTER/VEHICLE: +1 D (Rend and Tear)
+When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+STRATAGEMS · VESSELS OF WRATH
+1CP CHARACTER models +1 A, +2 S, When selected to fight (Aspire to Infamy)
+ABILITIES
+Rage Eternal
+- Slaughterbound
+Your Command
+
+Command · Your turn
+
+While this model is leading a unit, in your Command phase, you can return one destroyed Bodyguard model to that unit.
+
+Possessed Lord
+- Slaughterbound
+Once per battle
+Fight
+
+Fight · Either turn
+
+Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [Devastating Wounds] ability.
+
+Lord of the Eightbound
+- Slaughterbound
+
+If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step, this model has the Deep Strike and Scouts 6" abilities.
+
+Berzerker Glaive
+- Slaughterbound
+Enhancement
+
+Enhancement
+
+WORLD EATERS model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.
+
+Rend and Tear
+- Exalted Eightbound
+Fight
+
+Fight · Either turn
+
+Each time a model in this unit makes a melee attack that targets a MONSTER or VEHICLE unit, until the end of the phase, improve the Damage characteristic of that attack by 1.
+
+Rules
+Leader, Deadly Demise D3, Blessings of Khorne, Deep Strike, Scouts 6", Relentless Rage, Wrath of Khorne
+Stratagems
+
+BERZERKER WARBAND Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Blood Offering
+
+VESSELS OF WRATH Punish the Craven, Aspire to Infamy, Scorn the Witch
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+CHAOS
+CHARACTER
+DAEMON
+FACTION: WORLD EATERS
+INFANTRY
+KHORNE
+POSSESSED
+SLAUGHTERBOUND
+EXALTED EIGHTBOUND*
+*from the led Exalted Eightbound
+‹ Slaughterbound
+Eightbound ›
+
+######## unit chaos-rhino · SLAUGHTERBOUND Standard
+CHAOS RHINO
+75 PTS
+Dedicated Transport
+Models
+Options
+1× Chaos Rhino
+Armoured tracks, Combi-bolter
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Chaos Rhino
+Hull
+12"
+9
+3+
+10
+6+
+2
+–
+WHEN TARGETED2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Combi-bolter
+24"
+2
+4+
+5
+-1
+1
+RAPID FIRE 4
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Armoured tracks
+7
+3+
+6
+0
+1
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+ABILITIES
+Meet Any Challenge
+Their Movement
+
+Movement · Their turn
+
+In your opponent’s Movement phase, each time an enemy unit is set up or ends a Normal, Advance or Fall Back move within 8" of this model, any units embarked within it can disembark.
+
+Transport
+
+Capacity
+
+This model has a transport capacity of 12 WORLD EATERS INFANTRY models. It cannot transport POSSESSED or TERMINATOR models.
+
+Rules
+Deadly Demise D3, Blessings of Khorne, Firing Deck 2, Relentless Rage
+Stratagems
+
+BERZERKER WARBAND Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Blood Offering
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Smokescreen, Crushing Impact, Counteroffensive, Command Re-roll
+
+None from Vessels of Wrath.
+
+Keywords
+CHAOS
+DEDICATED TRANSPORT
+FACTION: WORLD EATERS
+FRAME
+KHORNE
+RHINO
+SMOKE
+TRANSPORT
+VEHICLE
+‹ Forgefiend
+
+######## unit eightbound · CHAOS RHINO Standard
+EIGHTBOUND
+125 PTS EACH
+Infantry · ×2 in list
+Models
+Options
+1× Eightbound Champion
+Chainblades
+2× Eightbound
+Chainblades
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Eightbound
+40mm
+10"
+6
+3+
+3
+6+
+1
+5+
+WHEN TARGETED2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Chainblades×3
+6
+3+
+8
+-2
+2
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Own aura, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+ABILITIES
+Beacons of Rage
+Fight
+
+Aura · Fight · Either turn
+
+While a friendly WORLD EATERS unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding MONSTERS and VEHICLES), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well.
+
+Rules
+Scouts 6", Blessings of Khorne, Relentless Rage
+Stratagems
+
+BERZERKER WARBAND Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Blood Offering
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Vessels of Wrath.
+
+Keywords
+CHAOS
+DAEMON
+EIGHTBOUND
+FACTION: WORLD EATERS
+INFANTRY
+KHORNE
+POSSESSED
+‹ Slaughterbound · Berzerker Glaive
+Exalted Eightbound ›
+
+######## unit exalted-eightbound · EIGHTBOUND Standard
+EXALTED EIGHTBOUND
+130 PTS
+Infantry
+Models
+Options
+1× Exalted Eightbound Champion
+Chainblades
+2× Exalted Eightbound
+Chainblades
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Exalted Eightbound
+40mm
+10"
+6
+3+
+3
+6+
+1
+5+
+WHEN TARGETED2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Chainblades×3
+5
+3+
+8
+-3
+2
+ANTI-MONSTER 3+, ANTI-VEHICLE 3+
+vs MONSTER/VEHICLE: +1 D (Rend and Tear)
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+ABILITIES
+Rend and Tear
+Fight
+
+Fight · Either turn
+
+Each time a model in this unit makes a melee attack that targets a MONSTER or VEHICLE unit, until the end of the phase, improve the Damage characteristic of that attack by 1.
+
+Rules
+Deep Strike, Blessings of Khorne, Relentless Rage
+Stratagems
+
+BERZERKER WARBAND Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Blood Offering
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Vessels of Wrath.
+
+Keywords
+CHAOS
+DAEMON
+EXALTED EIGHTBOUND
+FACTION: WORLD EATERS
+INFANTRY
+KHORNE
+POSSESSED
+‹ Eightbound
+Goremongers ›
+
+######## unit goremongers · EXALTED EIGHTBOUND Standard
+GOREMONGERS
+70 PTS
+Infantry
+Models
+Options
+1× Blood Herald
+Autopistol, Chainblade, Close combat weapon
+7× Goremonger w/ chainblade
+Autopistol, Chainblade, Close combat weapon
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Goremongers
+32mm
+9"
+4
+6+
+1
+7+
+1
+–
+WHEN TARGETED2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Autopistol×8
+12"
+1
+4+
+3
+0
+1
+PISTOL
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Chainblade×8
+4
+4+
+3
+0
+1
+LANCE
+OR
+Close combat weapon×8
+3
+4+
+3
+0
+1
+Made a charge move this turn: Chainblade +1 to wound (Lance)
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+ABILITIES
+Loping Speed
+Their Movement
+
+Movement · Their turn
+
+In your opponent’s Movement phase, if an enemy unit ends a move within 8" of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6".
+
+Rules
+Infiltrators, Blessings of Khorne, Relentless Rage
+Stratagems
+
+BERZERKER WARBAND Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Blood Offering
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Vessels of Wrath.
+
+Keywords
+CHAOS
+FACTION: WORLD EATERS
+GOREMONGERS
+GRENADES
+INFANTRY
+KHORNE
+‹ Exalted Eightbound
+Jakhals ›
+
+######## unit jakhals · GOREMONGERS Standard
+JAKHALS
+65 PTS EACH
+Infantry · ×2 in list
+Models
+Options
+1× Jakhal Pack Leader
+Autopistol, Chainblades
+1× Dishonoured w/ paired manglers
+Paired manglers
+8× Jakhal
+Autopistol, Chainblades
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Jakhal
+28.5mm
+7"
+4
+6+
+1
+7+
+1
+–
+Dishonoured w/ paired manglers
+40mm
+7"
+4
+6+
+1
+7+
+1
+–
+WHEN TARGETED2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Autopistol×9
+12"
+1
+4+
+3
+0
+1
+PISTOL
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Chainblades×9
+4
+4+
+3
+0
+1
+Paired manglersDISHONOURED
+5
+4+
+4
+0
+1
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+ABILITIES
+Objective Ravaged
+Your Command
+
+Command · Your turn
+
+At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
+
+Rules
+Blessings of Khorne, Relentless Rage
+Stratagems
+
+BERZERKER WARBAND Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Blood Offering
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Vessels of Wrath.
+
+Keywords
+CHAOS
+FACTION: WORLD EATERS
+GRENADES
+INFANTRY
+JAKHALS
+KHORNE
+‹ Goremongers
+Forgefiend ›
+
+######## unit forgefiend · JAKHALS Standard
+FORGEFIEND
+145 PTS EACH
+Vehicle · ×2 in list
+Models
+Options
+1× Forgefiend
+2× Hades autocannon, Ectoplasma cannon, Forgefiend claws
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Forgefiend
+120×92mm
+10"
+10
+3+
+12
+6+
+3
+5+
+WHEN TARGETED2CP Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+DAMAGED 1-4 W
+-1 TO HIT ROLLS
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Hades autocannon×2
+36"
+6
+4+
+8
+-1
+2
+RAPID FIRE 4
+Ectoplasma cannon
+36"
+D3
+4+
+10
+-3
+3
+BLAST, RAPID FIRE 1
+Target is the closest eligible target within 18": re-roll the hit roll (Furious Onslaught)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Forgefiend claws
+7
+3+
+6
+0
+1
+Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+STRATAGEMS · BERZERKER WARBAND
+1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+ABILITIES
+Furious Onslaught
+Their Move · Your Shoot
+
+Their Movement / Your Shooting
+
+Each time this model makes a ranged attack that targets the closest eligible target within 18", you can re-roll the Hit roll.
+
+Rules
+Deadly Demise D3, Blessings of Khorne, Relentless Rage
+Stratagems
+
+BERZERKER WARBAND Hack and Slash, Frenzied Resilience, Skulls for the Skull Throne!, Blood Offering
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Vessels of Wrath.
+
+Keywords
+CHAOS
+DAEMON
+FACTION: WORLD EATERS
+FORGEFIEND
+KHORNE
+VEHICLE
+WALKER
+‹ Jakhals
+Chaos Rhino ›
+
+######## popup ability:standard|Beacons of Rage|While a friendly **WORLD EATERS** unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding **MONSTERS** and **VEHICLES**), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well. · FORGEFIEND Standard
+ABILITY · AURA · FIGHT · EITHER TURN
+
+Beacons of Rage
+
+While a friendly WORLD EATERS unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding MONSTERS and VEHICLES), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well.
+
+UNITEightbound
+
+######## popup ability:standard|Berserker Frenzy|The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining. · STANDARD Standard
+ABILITY
+
+Berserker Frenzy
+
+The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.
+
+UNITKhârn the Betrayer
+
+######## popup ability:standard|Damaged: 1-4 wounds remaining|While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. · STANDARD Standard
+ABILITY
+
+Damaged: 1-4 wounds remaining
+
+While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+UNITForgefiend
+
+######## popup ability:standard|Damaged: 1-6 wounds remaining|While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll. · STANDARD Standard
+ABILITY
+
+Damaged: 1-6 wounds remaining
+
+While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+UNITAngron
+
+######## popup ability:standard|Driven by Ultimate Rage|While a friendly **WORLD EATERS** unit is within 6" of this unit, that unit’s melee attacks can:
+- Re-roll hit rolls of 1.
+- Re-roll wound rolls of 1. · STANDARD Standard
+ABILITY · AURA · FIGHT · EITHER TURN
+
+Driven by Ultimate Rage
+
+While a friendly WORLD EATERS unit is within 6" of this unit, that unit’s melee attacks can:
+
+Re-roll hit rolls of 1.
+Re-roll wound rolls of 1.
+
+UNITAngron
+
+######## popup ability:standard|Furious Onslaught|Each time this model makes a ranged attack that targets the closest eligible target within 18", you can re-roll the Hit roll. · STANDARD Standard
+ABILITY · THEIR MOVEMENT / YOUR SHOOTING
+
+Furious Onslaught
+
+Each time this model makes a ranged attack that targets the closest eligible target within 18", you can re-roll the Hit roll.
+
+UNITForgefiend
+
+######## popup ability:standard|Legendary Killer|While this model is leading a unit, each time a model in that unit makes a melee attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1. · STANDARD Standard
+ABILITY · FIGHT · EITHER TURN
+
+Legendary Killer
+
+While this model is leading a unit, each time a model in that unit makes a melee attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.
+
+UNITKhârn the Betrayer
+
+######## popup ability:standard|Lord of the Eightbound|If this model is attached to a **WORLD EATERS POSSESSED** unit during the Declare Battle Formations step, this model has the **Deep Strike** and **Scouts 6"** abilities. · STANDARD Standard
+ABILITY
+
+Lord of the Eightbound
+
+If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step, this model has the Deep Strike and Scouts 6" abilities.
+
+UNITSlaughterbound, Slaughterbound · Berzerker Glaive
+
+######## popup ability:standard|Murderous Charge|If this unit made a charge move this turn, this unit’s melee attacks have +1 S. · STANDARD Standard
+ABILITY · FIGHT · EITHER TURN
+
+Murderous Charge
+
+If this unit made a charge move this turn, this unit’s melee attacks have +1 S.
+
+UNITKhârn the Betrayer
+
+######## popup ability:standard|Possessed Lord|Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the **[Devastating Wounds]** ability. · STANDARD Standard
+ABILITY · FIGHT · EITHER TURN
+
+Possessed Lord
+
+Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [Devastating Wounds] ability.
+
+UNITSlaughterbound, Slaughterbound · Berzerker Glaive
+
+######## popup ability:standard|Reborn in Blood|At the start of the battle round, when you make a **Blessings of Khorne** roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its **Deep Strike** ability, with 8 wounds remaining. · STANDARD Standard
+ABILITY · COMMAND (EITHER TURN) / YOUR MOVEMENT
+
+Reborn in Blood
+
+At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its Deep Strike ability, with 8 wounds remaining.
+
+UNITAngron
+
+######## popup ability:standard|Rend and Tear|Each time a model in this unit makes a melee attack that targets a **MONSTER** or **VEHICLE** unit, until the end of the phase, improve the Damage characteristic of that attack by 1. · STANDARD Standard
+ABILITY · FIGHT · EITHER TURN
+
+Rend and Tear
+
+Each time a model in this unit makes a melee attack that targets a MONSTER or VEHICLE unit, until the end of the phase, improve the Damage characteristic of that attack by 1.
+
+UNITSlaughterbound · Berzerker Glaive, Exalted Eightbound
+
+######## popup ability:standard|Wrathful Presence|At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability. · STANDARD Standard
+ABILITY · START OF THE BATTLE ROUND
+
+Wrathful Presence
+
+At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability.
+
+UNITAngron
+
+######## popup enh:berzerker-warband|Berzerker Glaive · STANDARD Standard
+ENHANCEMENT · BERZERKER WARBAND · 35 PTS
+
+Berzerker Glaive
+
+WORLD EATERS model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.
+
+ONSlaughterbound + Exalted Eightbound
+
+######## popup grant:["Berzerker Glaive","slaughterbound-exalted-eightbound","D 3",null] · STANDARD Standard
+D 3 · GRANTED BY
+
+Berzerker Glaive
+
+Slaughterbound · Enhancement
+
+WORLD EATERS model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Berzerker Glaive|Relentless Rage","slaughterbound-exalted-eightbound","A 8",null] · STANDARD Standard
+A 8 · GRANTED BY
+
+Berzerker Glaive + Relentless Rage
+
+Berzerker Glaive
+
+Slaughterbound · Enhancement
+
+WORLD EATERS model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.
+
+Relentless Rage
+
+Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","angron","A 17",null] · STANDARD Standard
+A 17 · GRANTED BY
+
+Relentless Rage
+
+Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","angron","A 9",null] · STANDARD Standard
+A 9 · GRANTED BY
+
+Relentless Rage
+
+Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","chaos-rhino","A 7",null] · STANDARD Standard
+A 7 · GRANTED BY
+
+Relentless Rage
+
+Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","eightbound","A 6",null] · STANDARD Standard
+A 6 · GRANTED BY
+
+Relentless Rage
+
+Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","exalted-eightbound","A 5",null] · STANDARD Standard
+A 5 · GRANTED BY
+
+Relentless Rage
+
+Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","forgefiend","A 7",null] · STANDARD Standard
+A 7 · GRANTED BY
+
+Relentless Rage
+
+Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","goremongers","A 3",null] · STANDARD Standard
+A 3 · GRANTED BY
+
+Relentless Rage
+
+Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","goremongers","A 4",null] · STANDARD Standard
+A 4 · GRANTED BY
+
+Relentless Rage
+
+Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","jakhals","A 4",null] · STANDARD Standard
+A 4 · GRANTED BY
+
+Relentless Rage
+
+Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","jakhals","A 5",null] · STANDARD Standard
+A 5 · GRANTED BY
+
+Relentless Rage
+
+Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","kh-rn-the-betrayer-khorne-berzerkers","A 4",null] · STANDARD Standard
+A 4 · GRANTED BY
+
+Relentless Rage
+
+Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","kh-rn-the-betrayer-khorne-berzerkers","A 5",null] · STANDARD Standard
+A 5 · GRANTED BY
+
+Relentless Rage
+
+Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","kh-rn-the-betrayer-khorne-berzerkers","A 9",null] · STANDARD Standard
+A 9 · GRANTED BY
+
+Relentless Rage
+
+Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","lord-on-juggernaut","A 5",null] · STANDARD Standard
+A 5 · GRANTED BY
+
+Relentless Rage
+
+Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","lord-on-juggernaut","A 8",null] · STANDARD Standard
+A 8 · GRANTED BY
+
+Relentless Rage
+
+Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","slaughterbound","A 7",null] · STANDARD Standard
+A 7 · GRANTED BY
+
+Relentless Rage
+
+Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Relentless Rage","slaughterbound-exalted-eightbound","A 5",null] · STANDARD Standard
+A 5 · GRANTED BY
+
+Relentless Rage
+
+Berzerker Warband detachment rule
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup rule:ANTI-MONSTER 3+ · STANDARD Standard
+CORE RULE
+
+ANTI-MONSTER 3+
+
+This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.
+
+Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
+
+IN THIS ARMYSlaughterbound · Berzerker Glaive, Exalted Eightbound
+
+######## popup rule:ANTI-VEHICLE 3+ · STANDARD Standard
+CORE RULE
+
+ANTI-VEHICLE 3+
+
+This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.
+
+Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
+
+IN THIS ARMYSlaughterbound · Berzerker Glaive, Exalted Eightbound
+
+######## popup rule:Advance · STANDARD Standard
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+
+######## popup rule:Advance roll · STANDARD Standard
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+
+######## popup rule:BLAST · STANDARD Standard
+CORE RULE
+
+BLAST
+
+Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead.
+
+Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+IN THIS ARMYForgefiend
+
+######## popup rule:Blessing of Khorne · STANDARD Standard
+WORLD EATERS ARMY RULE
+
+Blessings of Khorne
+
+If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.
+
+Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.
+
+First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.
+
+They then use the two 2s to activate Unbridled Bloodlust.
+
+Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.
+
+Unbridled Bloodlust · double 1+
+
+This unit has +1 to charge rolls.
+
+Rage-fuelled Invigoration · double 2+
+
+Each time a model in this unit makes a Pile-in or Consolidation move, it can move up to 6" instead of up to 3".
+
+Total Carnage · double 3+
+
+Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.
+
+Martial Excellence · double 4+ or triple 1+
+
+Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.
+
+Warp Blades · double 5+ or triple 2+
+
+Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.
+
+Decapitating Strikes · double 6 or triple 3+
+
+Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
+
+######## popup rule:Blessings of Khorne · STANDARD Standard
+WORLD EATERS ARMY RULE
+
+Blessings of Khorne
+
+If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.
+
+Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.
+
+First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.
+
+They then use the two 2s to activate Unbridled Bloodlust.
+
+Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.
+
+Unbridled Bloodlust · double 1+
+
+This unit has +1 to charge rolls.
+
+Rage-fuelled Invigoration · double 2+
+
+Each time a model in this unit makes a Pile-in or Consolidation move, it can move up to 6" instead of up to 3".
+
+Total Carnage · double 3+
+
+Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.
+
+Martial Excellence · double 4+ or triple 1+
+
+Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.
+
+Warp Blades · double 5+ or triple 2+
+
+Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.
+
+Decapitating Strikes · double 6 or triple 3+
+
+Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
+
+######## popup rule:Blessings of Khorne roll · STANDARD Standard
+WORLD EATERS ARMY RULE
+
+Blessings of Khorne
+
+If your Army Faction is WORLD EATERS, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.
+
+Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.
+
+First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.
+
+They then use the two 2s to activate Unbridled Bloodlust.
+
+Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.
+
+Unbridled Bloodlust · double 1+
+
+This unit has +1 to charge rolls.
+
+Rage-fuelled Invigoration · double 2+
+
+Each time a model in this unit makes a Pile-in or Consolidation move, it can move up to 6" instead of up to 3".
+
+Total Carnage · double 3+
+
+Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.
+
+Martial Excellence · double 4+ or triple 1+
+
+Melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.
+
+Warp Blades · double 5+ or triple 2+
+
+Melee weapons equipped by models in this unit have the [LETHAL HITS] ability.
+
+Decapitating Strikes · double 6 or triple 3+
+
+Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
+
+######## popup rule:Charge roll · STANDARD Standard
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:Charge rolls · STANDARD Standard
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:Consolidation move · STANDARD Standard
+CORE RULE
+
+Consolidation Move
+
+MAXIMUM DISTANCE: 3"
+
+ELIGIBLE IF: It is the Fight phase and your unit was eligible to fight this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select consolidation mode:
+
+Ongoing Consolidation: If your unit is engaged, you must select this mode and select every enemy unit it is engaged with.
+Engaging Consolidation: Otherwise, if your unit is within 3" of one or more enemy units, you must select this mode and select one or more of those enemy units.
+Objective Consolidation: Otherwise, if your unit is within 3" of one or more objectives, you must select this mode and select one of those objectives.
+
+WHILE MOVING:
+
+Ongoing Consolidation: Models in base-contact with one or more enemy models cannot be moved. Each model that is moved must end its move closer to the closest selected enemy unit, and engaged with it if possible.
+Engaging Consolidation: Each model that is moved must end its move closer to the closest selected enemy unit, and engaged with it if possible.
+Objective Consolidation: Each model that is moved must end its move within range of the selected objective if possible, or closer to it if not.
+
+AFTER MOVING:
+
+Ongoing Consolidation: Each model that started this move engaged with an enemy unit must still be engaged with that enemy unit.
+Engaging Consolidation: Your unit must be engaged with all of the selected enemy units. If one or more enemy units engaged with your unit have not been selected to fight this phase, your opponent must select each of those units, one at a time; when each is selected, it becomes eligible to fight and is selected to fight (12.04).
+Objective Consolidation: Your unit must be within range of the selected objective.
+
+Wahapedia core rules errata (12.08 Consolidation Move, After Moving, Ongoing Consolidation): Each model that started this move engaged with an enemy unit must still be engaged with that enemy unit. If one or more enemy units engaged with your unit have not been selected to fight this phase, your opponent must select each of those units, one at a time; when each is selected, it becomes eligible to fight and is selected to fight
+
+App note, not rules text: the lines above the errata are the printed Core Rules (01/06/2026). GW’s Warhammer 40,000 app, as Wahapedia prints it, changes two After Moving lines: the errata replaces the Ongoing Consolidation line, and the Objective Consolidation line reads “Your unit must be unengaged and within range of the selected objective”. No GW PDF has either change yet (16 Oct 2026).
+
+######## popup rule:DEVASTATING WOUNDS · STANDARD Standard
+CORE RULE
+
+DEVASTATING WOUNDS
+
+Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+
+Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+
+IN THIS ARMYAngron, Slaughterbound (in Possessed Lord), Slaughterbound · Berzerker Glaive (in Possessed Lord)
+
+######## popup rule:Deadly Demise · STANDARD Standard
+CORE RULE
+
+Deadly Demise
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYAngron, Slaughterbound, Slaughterbound · Berzerker Glaive, Chaos Rhino, Forgefiend
+
+######## popup rule:Deadly Demise D3 · STANDARD Standard
+CORE RULE
+
+Deadly Demise D3
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYAngron, Slaughterbound, Slaughterbound · Berzerker Glaive, Chaos Rhino, Forgefiend
+
+######## popup rule:Deadly Demise D6 · STANDARD Standard
+CORE RULE
+
+Deadly Demise D6
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYAngron, Slaughterbound, Slaughterbound · Berzerker Glaive, Chaos Rhino, Forgefiend
+
+######## popup rule:Deep Strike · STANDARD Standard
+CORE RULE
+
+Deep Strike
+
+Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
+
+App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
+
+IN THIS ARMYAngron, Slaughterbound (in Lord of the Eightbound), Slaughterbound · Berzerker Glaive, Exalted Eightbound
+
+######## popup rule:EXTRA ATTACKS · STANDARD Standard
+CORE RULE
+
+EXTRA ATTACKS
+
+Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step (04.01), for each of those models, you must select:
+
+All of that model’s [EXTRA ATTACKS] weapons.
+One of that model’s other melee weapons, if possible.
+
+IN THIS ARMYLord on Juggernaut, Slaughterbound · Berzerker Glaive (in Berzerker Glaive)
+
+######## popup rule:Feel No Pain 4+ · STANDARD Standard
+CORE RULE
+
+Feel No Pain 4+
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+######## popup rule:Fights First · STANDARD Standard
+CORE RULE
+
+Fights First
+
+While every model in a unit has this ability, that unit is a Fights First unit.
+
+See the Resolve Fights First Combats step in the Fight phase (12.04).
+
+######## popup rule:Firing Deck · STANDARD Standard
+CORE RULE
+
+Firing Deck
+
+This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence:
+
+1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase).
+2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons).
+3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons.
+4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.
+
+IN THIS ARMYChaos Rhino
+
+######## popup rule:Firing Deck 2 · STANDARD Standard
+CORE RULE
+
+Firing Deck 2
+
+This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence:
+
+1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase).
+2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons).
+3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons.
+4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.
+
+IN THIS ARMYChaos Rhino
+
+######## popup rule:HAZARDOUS · STANDARD Standard
+CORE RULE
+
+HAZARDOUS
+
+Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.
+
+IN THIS ARMYKhârn the Betrayer, Lord on Juggernaut
+
+######## popup rule:Hazard roll · STANDARD Standard
+CORE RULE
+
+Hazard Roll
+
+To make a hazard roll for a unit, roll one D6: on a 1-2, that roll fails and that unit suffers 1 mortal wound (see above), or 3 mortal wounds instead if each model in that unit is a MONSTER/VEHICLE model. If more than one hazard roll is required for a unit, make all of those rolls simultaneously.
+
+06.03.01 Hazardous Test (app): The term ‘Hazardous test’ is the same as hazard roll.
+
+Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model in the unit make a hazard roll? No, the unit would make 1 single hazard roll.
+
+Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
+
+######## popup rule:Infiltrators · STANDARD Standard
+CORE RULE
+
+Infiltrators
+
+During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from your opponent’s deployment zone and all enemy units.
+
+IN THIS ARMYGoremongers
+
+######## popup rule:LANCE · STANDARD Standard
+CORE RULE
+
+LANCE
+
+Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
+
+IN THIS ARMYLord on Juggernaut, Goremongers
+
+######## popup rule:Lance · STANDARD Standard
+CORE RULE
+
+Lance
+
+Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
+
+IN THIS ARMYLord on Juggernaut, Goremongers
+
+######## popup rule:Leader · STANDARD Standard
+CORE RULE
+
+Leader
+
+Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.
+
+Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.
+
+IN THIS ARMYKhârn the Betrayer, Lord on Juggernaut, Slaughterbound, Slaughterbound · Berzerker Glaive
+
+######## popup rule:MOBILE · STANDARD Standard
+CORE RULE
+
+MOBILE
+
+Dense:
+
+INFANTRY/BEASTS/SWARM/MOBILE models can move horizontally through dense terrain features.
+INFANTRY/BEASTS/SWARM models can move vertically through dense terrain features.
+Other models can move horizontally through dense terrain features provided that all sections of that terrain feature that the moving model’s base would move through are 2" or less in height. Otherwise, the moving model must move vertically to ascend or descend such sections. They cannot move through ceilings and floors while doing so, and they cannot end that move on any surface of that terrain feature that is not on ground level (see below).
+
+App note, not rules text: MOBILE has no rule of its own in the core rules. These are the Dense lines of Terrain and Movement (13.06). Super-Heavy Walker (24.35), Designer’s Note: “Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).”
+
+######## popup rule:PISTOL · STANDARD Standard
+CORE RULE
+
+PISTOL
+
+Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with:
+
+One or more of its [CLOSE-QUARTERS] weapons.
+One or more of its other ranged weapons.
+
+[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
+
+IN THIS ARMYKhârn the Betrayer, Lord on Juggernaut, Goremongers, Jakhals
+
+######## popup rule:RAPID FIRE 1 · STANDARD Standard
+CORE RULE
+
+RAPID FIRE 1
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYChaos Rhino, Forgefiend
+
+######## popup rule:RAPID FIRE 4 · STANDARD Standard
+CORE RULE
+
+RAPID FIRE 4
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYChaos Rhino, Forgefiend
+
+######## popup rule:Relentless Rage · STANDARD Standard
+BERZERKER WARBAND DETACHMENT RULE
+
+Relentless Rage
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+Already counted: every melee A value in this app includes this +1 A. Do not add it again.
+
+IN THIS ARMYAngron, Khârn the Betrayer, Lord on Juggernaut, Slaughterbound, Slaughterbound · Berzerker Glaive, Chaos Rhino, Eightbound, Exalted Eightbound, Goremongers, Jakhals, Forgefiend
+
+######## popup rule:Resolve a charge · STANDARD Standard
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:Scouts · STANDARD Standard
+CORE RULE
+
+Scouts
+
+This ability always takes the form Scouts X". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following:
+
+If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone.
+If that unit is wholly within your deployment zone, it can make a scout move (see below).
+If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.
+
+IN THIS ARMYSlaughterbound (in Lord of the Eightbound), Slaughterbound · Berzerker Glaive, Eightbound
+
+######## popup rule:Scouts 6" · STANDARD Standard
+CORE RULE
+
+Scouts 6"
+
+This ability always takes the form Scouts X". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following:
+
+If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone.
+If that unit is wholly within your deployment zone, it can make a scout move (see below).
+If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.
+
+IN THIS ARMYSlaughterbound (in Lord of the Eightbound), Slaughterbound · Berzerker Glaive, Eightbound
+
+######## popup rule:Select Weapons · STANDARD Standard
+CORE RULE
+
+Select Weapons
+
+For each model in the attacking unit, select which weapons that model will make attacks with. Models make ranged attacks with ranged weapons, and make melee attacks with melee weapons.
+
+While shooting: You can select one or more ranged weapons that model has.
+
+While fighting: You must select one melee weapon that model has.
+
+Sidearms: Some models are equipped with [CLOSE-QUARTERS] weapons in addition to other firearms. Such models can be an exception to the rules in this section, as you may not be able to select all of their weapons to make attacks with.
+
+24.11 [EXTRA ATTACKS]: Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others.
+
+04.01.03 Multiple Weapon Profiles (app): In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).
+
+######## popup rule:Wrath of Khorne · STANDARD Standard
+VESSELS OF WRATH DETACHMENT RULE
+
+Wrath of Khorne
+
+When a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) is selected to fight, that unit’s CHARACTER models’ melee attacks can have:
+
+[CLEAVE 1].
+Or: +1 AP.
+
+IN THIS ARMYLord on Juggernaut, Slaughterbound, Slaughterbound · Berzerker Glaive
+
+######## popup rule:[CLEAVE 1] · STANDARD Standard
+CORE RULE
+
+CLEAVE 1
+
+This ability always takes the form [CLEAVE X]. Each time you gather attack dice for a [CLEAVE] weapon, if you only selected one target for all of that weapon’s attacks, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+Example: If a [CLEAVE 1] weapon with an A characteristic of 3 targets one unit containing 16 models, you would gather three additional attack dice for that weapon (for a total of six for that weapon).
+
+######## popup rule:[DEVASTATING WOUNDS] · STANDARD Standard
+CORE RULE
+
+DEVASTATING WOUNDS
+
+Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+
+Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+
+IN THIS ARMYAngron, Slaughterbound (in Possessed Lord), Slaughterbound · Berzerker Glaive (in Possessed Lord)
+
+######## popup rule:[Devastating Wounds] · STANDARD Standard
+CORE RULE
+
+Devastating Wounds
+
+Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+
+Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+
+IN THIS ARMYAngron, Slaughterbound (in Possessed Lord), Slaughterbound · Berzerker Glaive (in Possessed Lord)
+
+######## popup rule:[LETHAL HITS] · STANDARD Standard
+CORE RULE
+
+LETHAL HITS
+
+Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
+
+Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
+
+######## popup rule:[PRECISION] · STANDARD Standard
+CORE RULE
+
+PRECISION
+
+While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.
+
+24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
+
+######## popup rule:[SUSTAINED HITS 1] · STANDARD Standard
+CORE RULE
+
+SUSTAINED HITS 1
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+######## popup rule:advance move · STANDARD Standard
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+
+######## popup rule:battle-shock roll · STANDARD Standard
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+######## popup rule:battle-shocked · STANDARD Standard
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+######## popup rule:benefit of cover · STANDARD Standard
+CORE RULE
+
+Benefit of Cover
+
+Each time a ranged attack targets a unit, if every model in that unit meets one or more of the following conditions, that unit has the benefit of cover against that attack:
+
+That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area.
+That model is not fully visible to the attacking model due to one or more intervening terrain features and/or one or more intervening obscuring terrain areas (see below).
+
+Each time a ranged attack targets a unit that has the benefit of cover against it, worsen the BS characteristic of that attack by 1.
+
+######## popup rule:bodyguard · STANDARD Standard
+CORE RULE
+
+bodyguard
+
+Some units have the Leader or Support ability listed on their datasheet (see below). Such units are known as leader units and support units respectively. Both of these abilities allow such units to lead other friendly units (known as bodyguard units) to form attached units. An attached unit is a single unit for all rules purposes. Leader and support units can only lead specific bodyguard units, as listed in the Warhammer 40,000 app.
+
+19.04 Abilities in Attached Units: Abilities/rules that affect a single specified model (e.g. from an enhancement or an item of wargear) only ever apply to that model, even while part of an attached unit.
+
+Otherwise, abilities/rules that affect a unit (or models in it) apply to every model in an attached unit, until the source of that ability/rule is destroyed, as shown below.
+
+SOURCE OF ABILITY/RULE: APPLIES TO THE ATTACHED UNIT UNTIL
+
+Leader/support unit: The last model in that leader/support unit is destroyed.*
+Bodyguard unit (e.g. from a datasheet ability): The last model in that bodyguard unit is destroyed.
+A specific model (e.g. the bearer of an enhancement or an item of wargear): That model is destroyed.
+
+* This means leader/support units continue to benefit from their own ‘while this model is leading a unit’ abilities even after their bodyguard unit is destroyed, provided they started the battle in an attached unit.
+
+In all of the above cases, if that last model was destroyed as the result of an attack, the ability it was conferring upon the attached unit applies until the attacking unit has resolved all of its attacks.
+
+Wahapedia FAQ: When does a model’s or unit’s ability in an attached unit apply to all models in that unit? A rule that applies to ‘this/that unit’ or ‘models in this/that unit’ applies to all models in an attached unit. Rules that just apply to one model in an attached unit (for example, a rule that grants a model Feel No Pain or Lone Operative) only apply to that model, not to all models in the attached unit.
+
+######## popup rule:charge move · STANDARD Standard
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+
+######## popup rule:charge roll · STANDARD Standard
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:charge rolls · STANDARD Standard
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+######## popup rule:charge targets · STANDARD Standard
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+
+######## popup rule:desperate escape · STANDARD Standard
+CORE RULE
+
+Fall-back Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is engaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select fall-back mode:
+
+Ordered Retreat: If your unit is not battle-shocked, you can select this mode.
+Desperate Escape: Otherwise, you must select this mode. Make a hazard roll for each model in your unit (06.03).
+
+WHILE MOVING:
+
+Desperate Escape: Each model that is moved can be moved through enemy models.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to shoot, declare a charge or start an action.
+Desperate Escape: If your unit is not battle-shocked, you must make a battle-shock roll for your unit (01.07).
+
+Desperate Escape Test (app): Some rules may reference the term ‘Desperate Escape test’. In all instances this means the hazard rolls made for the desperate escape mode of a fall-back move.
+
+Abilities that subtract from a unit’s Desperate Escape test instead subtract from those hazard rolls.
+
+If a stratagem or ability instructs a unit to make a Desperate Escape test, that unit:
+
+Must use the desperate escape mode when it is selected to make a fall-back move.
+Must make one hazard roll for each model in that unit.
+Must make a battle-shock roll.
+
+######## popup rule:destroyed · STANDARD Standard
+CORE RULE
+
+Destroyed
+
+Throughout a battle, models will suffer damage, lose wounds and be destroyed. When every model in a unit has been destroyed, that unit is destroyed.
+
+When a model is destroyed, first resolve any rules that are triggered when it is destroyed, then it is removed from the battlefield. If any such rules apply, and if the model was destroyed as the result of an attack, unless otherwise stated, those rules are only resolved and that model is only removed after the attacking unit’s attacks have been resolved. Unless otherwise stated, destroyed models and units cannot use abilities or be selected or targeted by rules.
+
+05.04.05 Fight On Death (app): Some rules enable models to attack after they have been destroyed. When a model under such an effect is destroyed, do not remove it from play.
+
+Those models will stay on the battlefield until their unit is selected to attack and has attacked, or until the end of the phase (whichever comes first). Any rules triggered by those models being destroyed are resolved, and then those destroyed models are removed.
+
+######## popup rule:engaged · STANDARD Standard
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+######## popup rule:fall-back move · STANDARD Standard
+CORE RULE
+
+Fall-back Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is engaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select fall-back mode:
+
+Ordered Retreat: If your unit is not battle-shocked, you can select this mode.
+Desperate Escape: Otherwise, you must select this mode. Make a hazard roll for each model in your unit (06.03).
+
+WHILE MOVING:
+
+Desperate Escape: Each model that is moved can be moved through enemy models.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to shoot, declare a charge or start an action.
+Desperate Escape: If your unit is not battle-shocked, you must make a battle-shock roll for your unit (01.07).
+
+Desperate Escape Test (app): Some rules may reference the term ‘Desperate Escape test’. In all instances this means the hazard rolls made for the desperate escape mode of a fall-back move.
+
+Abilities that subtract from a unit’s Desperate Escape test instead subtract from those hazard rolls.
+
+If a stratagem or ability instructs a unit to make a Desperate Escape test, that unit:
+
+Must use the desperate escape mode when it is selected to make a fall-back move.
+Must make one hazard roll for each model in that unit.
+Must make a battle-shock roll.
+
+######## popup rule:hazard rolls · STANDARD Standard
+CORE RULE
+
+Hazard Roll
+
+To make a hazard roll for a unit, roll one D6: on a 1-2, that roll fails and that unit suffers 1 mortal wound (see above), or 3 mortal wounds instead if each model in that unit is a MONSTER/VEHICLE model. If more than one hazard roll is required for a unit, make all of those rolls simultaneously.
+
+06.03.01 Hazardous Test (app): The term ‘Hazardous test’ is the same as hazard roll.
+
+Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model in the unit make a hazard roll? No, the unit would make 1 single hazard roll.
+
+Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
+
+######## popup rule:ingress move · STANDARD Standard
+CORE RULE
+
+Ingress Move
+
+SET-UP DISTANCE: 6"
+
+ELIGIBLE IF: Your unit is in strategic reserves (excluding units that are embarked within TRANSPORTS that are themselves in strategic reserves).
+
+EFFECT: Your unit is set up as described in Set Up (03.02).
+
+WHILE MOVING: Set up your unit wholly within the set-up distance of one or more battlefield edges and more than 8" horizontally from all enemy units.
+
+Before the Third Battle Round: While doing so, no models can be set up within your opponent’s deployment zone.
+
+AFTER MOVING: Unless otherwise stated, until the start of the next Charge phase, your unit is not eligible to make any other type of move.
+
+20.03.01 Set Up As Reinforcements (app): If a rule mentions a unit being set up on the battlefield as Reinforcements, it means a unit that made an ingress move.
+
+######## popup rule:leadership roll · STANDARD Standard
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+######## popup rule:mortal wound · STANDARD Standard
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+######## popup rule:mortal wounds · STANDARD Standard
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+######## popup rule:snap shooting · STANDARD Standard
+CORE RULE
+
+snap shooting
+
+ELIGIBLE IF: As stated in the rule allowing this shooting type.
+
+EFFECT: Your unit shoots as described in Making Attacks (04).
+
+WHILE SHOOTING:
+
+You can only target one visible enemy unit within 24" of your unit (and only if it is an eligible target).
+Each attack only hits on an unmodified hit roll of 6 (irrespective of the attacking weapon’s BS characteristic or any modifiers).
+You cannot re-roll hit rolls.
+
+AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.
+
+######## popup rule:strategic reserves · STANDARD Standard
+CORE RULE
+
+Strategic Reserves
+
+Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding FORTIFICATIONS) to place in strategic reserves. Instead of setting up these units on the battlefield during deployment, place them to one side; they are strategic reserves units, and will arrive later in the battle.
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+20.01.01 Reserves (app): The term ‘Reserves’ is the same as strategic reserves.
+
+20.02 Repositioned Units: Some rules allow units to be removed from the battlefield and placed in strategic reserves during the battle. Units that use such rules are known as repositioned units. In addition to any other rules that apply to such units (such as where they can or cannot arrive), all of the following rules apply to them:
+
+If used in the Movement phase, such rules can be used on units that have already moved that phase.
+A repositioned unit that is set up in the same turn in which it made an advance, fall-back or disembark move has still made an advance, fall-back or disembark move that turn.
+When they are removed from the battlefield, any rules that are affecting such units for a specified duration or under specified circumstances continue to affect them while that duration and/or those circumstances apply.
+
+20.03 Arriving from Strategic Reserves: To arrive on the battlefield, each strategic reserves unit must make an ingress move (see below). Unless otherwise stated, they can only do so from the second battle round onwards.
+
+At the end of the third battle round, unless otherwise stated, all strategic reserves units that have not made one or more ingress moves are destroyed, with the following exceptions:
+
+Units embarked within TRANSPORTS that have made an ingress move during the battle.
+Repositioned units (see opposite).
+
+######## popup rule:surge move · STANDARD Standard
+CORE RULE
+
+Surge Move
+
+Some rules allow a unit to make a surge move, as described below.
+
+MAXIMUM DISTANCE: As stated in the rule allowing this move type.
+
+ELIGIBLE IF: All of the following apply:
+
+The rule allowing this move type has been triggered.
+Your unit is not battle-shocked.
+Your unit is unengaged.
+Your unit has not moved this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select the closest enemy unit to be the surge target.
+
+WHILE MOVING:
+
+Each model must end its move engaged with the surge target if possible.
+Each model that cannot end its move engaged with the surge target must end its move as close as possible to the surge target.
+
+AFTER MOVING:
+
+Your unit cannot be engaged with one or more enemy units that were not the surge target.
+Your unit cannot move again this phase.
+
+######## popup rule:unengaged · STANDARD Standard
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+######## popup strat:apoplectic-frenzy · STANDARD Standard
+1CP · MOVEMENT · YOUR TURN
+
+Apoplectic Frenzy
+WHEN
+
+Your Movement phase, just after a KHORNE BERZERKERS unit from your army is selected to Advance.
+
+TARGETThat KHORNE BERZERKERS unit.
+
+EFFECT
+
+Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced.
+
+USED BYKhârn the Betrayer
+
+######## popup strat:aspire-to-infamy · STANDARD Standard
+1CP · FIGHT · EITHER TURN
+
+Aspire to Infamy
+WHEN
+
+Fight phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) is selected to fight.
+
+TARGETThat WORLD EATERS CHARACTER unit.
+
+EFFECT
+
+Your unit’s CHARACTER models’ melee attacks have:
+
++1 A.
++2 S.
+
+USED BYLord on Juggernaut, Slaughterbound, Slaughterbound · Berzerker Glaive
+
+######## popup strat:berzerkers-wrath · STANDARD Standard
+1CP · SHOOTING · THEIR TURN
+
+Berzerker’s Wrath
+WHEN
+
+Your opponent’s Shooting phase, just after an enemy unit has shot.
+
+TARGETOne KHORNE BERZERKERS unit from your army that can make a surge move as a result of those attacks.
+
+EFFECT
+
+Do not roll a D6 to determine how far models in your unit can move when they make a surge move. Instead, when making a surge move, those models can move up to 8".
+
+Wahapedia FAQ: “After being the target of a ranged attack, can a Leader unit make a Blood Surge move if it was previously attached to a unit of Khorne Berzerkers and if the last model in the attached unit was destroyed by that ranged attack?” No.
+
+USED BYKhârn the Betrayer
+
+######## popup strat:blood-offering · STANDARD Standard
+1CP · ANY PHASE · EITHER TURN
+
+Blood Offering
+WHEN
+
+Any phase.
+
+TARGETOne WORLD EATERS unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.
+
+EFFECT
+
+Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
+
+USED BYany unit
+
+######## popup strat:command-re-roll · STANDARD Standard
+1CP · ANY PHASE · EITHER TURN
+
+Command Re-roll
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+######## popup strat:counteroffensive · STANDARD Standard
+2CP · FIGHT · THEIR TURN
+
+Counteroffensive
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+######## popup strat:crushing-impact · STANDARD Standard
+1CP · CHARGE · YOUR TURN
+
+Crushing Impact
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYAngron, Chaos Rhino, Forgefiend
+
+######## popup strat:epic-challenge · STANDARD Standard
+1CP · FIGHT · EITHER TURN
+
+Epic Challenge
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYAngron, Khârn the Betrayer, Lord on Juggernaut, Slaughterbound, Slaughterbound · Berzerker Glaive
+
+######## popup strat:explosives · STANDARD Standard
+1CP · SHOOTING · YOUR TURN
+
+Explosives
+WHEN
+
+Your Shooting phase.
+
+TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one EXPLOSIVES/GRENADES model in your unit.
+2. Select one unengaged enemy unit within 8" of and visible to that model.
+3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
+
+Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+
+USED BYKhârn the Betrayer, Goremongers, Jakhals
+
+######## popup strat:fire-overwatch · STANDARD Standard
+1CP · MOVEMENT · THEIR TURN
+
+Fire Overwatch
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYKhârn the Betrayer, Lord on Juggernaut, Chaos Rhino, Goremongers, Jakhals, Forgefiend
+
+######## popup strat:frenzied-resilience · STANDARD Standard
+2CP · FIGHT · EITHER TURN
+
+Frenzied Resilience
+WHEN
+
+Fight phase, just after an enemy unit has selected its targets.
+
+TARGETOne WORLD EATERS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack.
+
+USED BYany unit
+
+######## popup strat:hack-and-slash · STANDARD Standard
+1CP · FIGHT · EITHER TURN
+
+Hack and Slash
+WHEN
+
+Fight phase.
+
+TARGETOne WORLD EATERS unit from your army that has not been selected to fight this phase and that made a charge move this turn.
+
+EFFECT
+
+Until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1.
+
+USED BYany unit
+
+######## popup strat:heroic-intervention · STANDARD Standard
+1CP · CHARGE · THEIR TURN · INTO THE FRAY +1CP
+
+Heroic Intervention
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYAngron, Khârn the Betrayer, Lord on Juggernaut, Slaughterbound, Slaughterbound · Berzerker Glaive, Eightbound, Exalted Eightbound, Goremongers, Jakhals, Forgefiend
+
+######## popup strat:insane-bravery · STANDARD Standard
+1CP · COMMAND · YOUR TURN · ONCE PER BATTLE
+
+Insane Bravery
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+######## popup strat:punish-the-craven · STANDARD Standard
+1CP · MOVEMENT · THEIR TURN
+
+Punish the Craven
+WHEN
+
+Your opponent’s Movement phase, when a unit is selected to make a fall-back move, if that unit is engaged with a friendly WORLD EATERS CHARACTER unit.
+
+TARGETThat WORLD EATERS CHARACTER unit.
+
+EFFECT
+
+When an enemy unit engaged with your unit is selected to make a fall-back move, that enemy unit must use the desperate escape mode. If that enemy unit is battle-shocked, -1 from those hazard rolls.
+
+USED BYAngron, Khârn the Betrayer, Lord on Juggernaut, Slaughterbound, Slaughterbound · Berzerker Glaive
+
+######## popup strat:rapid-ingress · STANDARD Standard
+1CP · MOVEMENT · THEIR TURN
+
+Rapid Ingress
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+######## popup strat:scorn-the-witch · STANDARD Standard
+1CP · ANY PHASE · EITHER TURN
+
+Scorn the Witch
+WHEN
+
+Any phase, when a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) suffers a mortal wound.
+
+TARGETThat WORLD EATERS CHARACTER unit.
+
+EFFECT
+
+Your unit has Feel No Pain 4+ against mortal wounds.
+
+USED BYLord on Juggernaut, Slaughterbound, Slaughterbound · Berzerker Glaive
+
+######## popup strat:skulls-for-the-skull-throne · STANDARD Standard
+1CP · FIGHT · EITHER TURN
+
+Skulls for the Skull Throne!
+WHEN
+
+Fight phase, just after a WORLD EATERS unit from your army destroys a CHARACTER or MONSTER model.
+
+TARGETThat WORLD EATERS unit.
+
+EFFECT
+
+Make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne. Until the end of the battle round, that Blessing of Khorne is active in addition to any other Blessings of Khorne that are currently active.
+
+USED BYany unit
+
+######## popup strat:smokescreen · STANDARD Standard
+1CP · SHOOTING · THEIR TURN
+
+Smokescreen
+WHEN
+
+Start of your opponent’s Shooting phase.
+
+TARGETOne friendly SMOKE unit.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
+
+USED BYChaos Rhino

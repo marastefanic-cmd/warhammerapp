@@ -320,6 +320,7 @@ Kustom Shoota×8
 0
 1
 LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 2, IGNORES COVER
+Riled up: [SUSTAINED HITS 1] (More Dakka)
 Ammo Runts used (your Shooting phase, when selected to shoot): +1 to hit rolls
 Big Mek in Mega Armour
 Follow Me Ladz
@@ -332,6 +333,7 @@ Kustom Mega-blasta
 -2
 3
 HAZARDOUS, IGNORES COVER
+Riled up: [SUSTAINED HITS 1] (More Dakka)
 Gretchin
 ×2 units
 Grot Blasta×10
@@ -1077,8 +1079,8 @@ From the New Recruit list: model counts and loadouts per model, base sizes from 
 
 ######## damage shooting · BASES Damage
 OPPONENT
-Me shooty yer’ booty
-Orks
+Princes
+World Eaters
 YOU ATTACK
 THEY ATTACK
 SHOOTING
@@ -1087,35 +1089,55 @@ ATTACKER · YOURS
 Ghazghkull Thraka
 1 model
 TARGET · THEIRS
-Wazdakka Gutsmek
-T8 · Sv 3+ · 4+ InSv · W10
-0.0
-of 1 model destroyed
-1.5
+Khârn the Betrayer + Khorne Berzerkers
+T5 · Sv 3+ · 4+ InSv · W5 · 10× T5 · Sv 3+ · W2
+1.2
+of 11 models destroyed
+3.0
 wounds lost
 <1%
 unit destroyed
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+
+chance to destroy at least N models
+
 HITS
 WOUNDS
 THROUGH
 Mork’s Roar
 9.0
+6.0
 3.0
-1.5
 WEAPONS
 Mork’s Roar
 9" · A2D6+2 · – · S6 · AP-1 · D1 · CLOSE-QUARTERS, TORRENT
 Point Blank
 Aimed
 SITUATION
+Distance to the target
+inches; blank: not set
 Target has the benefit of cover
+Close-quarters shooting at a unit it is engaged with
+only [CLOSE-QUARTERS] weapons
+Fire Overwatch (snap shooting)
+hits only on an unmodified 6, never critical; no hit re-rolls
 GHAZGHKULL THRAKA’S RULES
 
 No footnotes on its weapons.
 
-WAZDAKKA GUTSMEK WHEN TARGETED
-Riled up: 5+ INV
-rule
+KHÂRN THE BETRAYER WHEN TARGETED
+Khârn: the first time he is destroyed, at the end of the phase on a 2+ he is set back up with 3 wounds, as close as possible to where he was destroyed and not within Engagement Range of enemy units
+ability · not in these numbers
 OTHER MODIFIERS
 Hit roll
 −
@@ -1148,10 +1170,21 @@ all
 
 Averages over 10,000 games played out with the dice; one unit’s attacks against the other, nothing used up. Rules marked “not counted” are not in these numbers.
 
+How this is worked out
+what the rules say, and what the calculator does where they leave a choice
+
+Weapons (04.03): the rules let the attacker pick which weapon’s attacks are resolved next; the calculator takes them in the order listed, and rolls identical attacks together.
+
+Saves and damage (05.03, 05.04): save rolls are rolled together and used from the lowest; an attack that gets through damages the one model it was allocated to, so damage beyond that model’s wounds is lost; Feel No Pain is rolled for each wound (24.12).
+
+Allocation order (05.03): one group for the models with the same W, Sv and InSv, one for each CHARACTER model, CHARACTER groups last. Order: Khorne Berzerker, Khârn the Betrayer.
+
+Toughness (19.02): the highest T among the bodyguard models still in the unit; once they are all destroyed, the highest T of the others.
+
 ######## damage fight · DAMAGE Damage
 OPPONENT
-Me shooty yer’ booty
-Orks
+Princes
+World Eaters
 YOU ATTACK
 THEY ATTACK
 SHOOTING
@@ -1160,25 +1193,39 @@ ATTACKER · YOURS
 Ghazghkull Thraka
 1 model
 TARGET · THEIRS
-Wazdakka Gutsmek
-T8 · Sv 3+ · 4+ InSv · W10
-0.7
-of 1 model destroyed
-8.9
+Khârn the Betrayer + Khorne Berzerkers
+T5 · Sv 3+ · 4+ InSv · W5 · 10× T5 · Sv 3+ · W2
+8.3
+of 11 models destroyed
+17
 wounds lost
-71%
+7%
 unit destroyed
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+
+chance to destroy at least N models
+
 HITS
 WOUNDS
 THROUGH
 Adamantine ’Eadbutt
 1.0
-0.7
-0.4
+0.8
+0.6
 Gork’s Klaw
-6.9
-4.6
-2.0
+11
+9.1
+7.8
 WEAPONS
 Adamantine ’Eadbutt
 Melee · A1 · 2+ · S14 · AP-2 · DD3+3 · DEVASTATING WOUNDS, EXTRA ATTACKS, PRECISION, SUSTAINED HITS 1
@@ -1186,14 +1233,20 @@ Gork’s Klaw
 Melee · A7 · 2+ · S14 · AP-3 · D4 · CLEAVE 2, DEVASTATING WOUNDS, SUSTAINED HITS 1
 SITUATION
 Made a charge move this turn
+Allocate [PRECISION] attacks to Khârn the Betrayer
+when visible to an attacking model; until it is destroyed
 GHAZGHKULL THRAKA’S RULES
 Prophet of Da Great Waaagh!
 Own aura: +1 to hit, +1 to wound
 1CP Hit ’Em Harder
 Fight phase: [LETHAL HITS]
-WAZDAKKA GUTSMEK WHEN TARGETED
-Riled up: 5+ INV
-rule
+1CP Epic Challenge
+Fight phase: This model’s melee weapons have [PRECISION]
+KHÂRN THE BETRAYER WHEN TARGETED
+Khârn: the first time he is destroyed, at the end of the phase on a 2+ he is set back up with 3 wounds, as close as possible to where he was destroyed and not within Engagement Range of enemy units
+ability · not in these numbers
+Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
+stratagem
 OTHER MODIFIERS
 Hit roll
 −
@@ -1225,6 +1278,19 @@ none
 all
 
 Averages over 10,000 games played out with the dice; one unit’s attacks against the other, nothing used up. Rules marked “not counted” are not in these numbers.
+
+How this is worked out
+what the rules say, and what the calculator does where they leave a choice
+
+Weapons (04.03): the rules let the attacker pick which weapon’s attacks are resolved next; the calculator takes them in the order listed, and rolls identical attacks together.
+
+Saves and damage (05.03, 05.04): save rolls are rolled together and used from the lowest; an attack that gets through damages the one model it was allocated to, so damage beyond that model’s wounds is lost; Feel No Pain is rolled for each wound (24.12).
+
+Allocation order (05.03): one group for the models with the same W, Sv and InSv, one for each CHARACTER model, CHARACTER groups last. Order: Khorne Berzerker, Khârn the Betrayer.
+
+Toughness (19.02): the highest T among the bodyguard models still in the unit; once they are all destroyed, the highest T of the others.
+
+[BLAST] and [CLEAVE] (24.05, 24.06): one more attack dice (X with [BLAST X] or [CLEAVE X]) for every five models the target had before these attacks.
 
 ######## strats {"folded":true} · DAMAGE Stratagems
 EXPAND ALL
@@ -2233,6 +2299,7 @@ Kustom Shoota×8
 1
 LETHAL HITS: NON-MONSTER/VEHICLE, RAPID FIRE 2, IGNORES COVER
 WHOLE UNIT
+Riled up: [SUSTAINED HITS 1] (More Dakka)
 Ammo Runts used (your Shooting phase, when selected to shoot): +1 to hit rolls
 MELEE WEAPONS
 A
@@ -2422,6 +2489,8 @@ Kustom Mega-blasta
 -2
 3
 HAZARDOUS, IGNORES COVER
+WHOLE UNIT
+Riled up: [SUSTAINED HITS 1] (More Dakka)
 MELEE WEAPONS
 A
 WS
@@ -3018,6 +3087,20 @@ Place one Makari token next to the unit, removing it after this ability is used.
 
 UNITGhazghkull Thraka
 
+######## popup ability:melee|More Dakka|This unit’s ranged attacks have:
+- **[IGNORES COVER]**.
+- If this unit is **riled up**, **[SUSTAINED HITS 1]**. · MELEE Melee
+ABILITY
+
+More Dakka
+
+This unit’s ranged attacks have:
+
+[IGNORES COVER].
+If this unit is riled up, [SUSTAINED HITS 1].
+
+UNITBig Mek · Kunnin’ But Brutal, Big Mek in Mega Armour · Follow Me Ladz
+
 ######## popup ability:melee|One Last Kill|In the Fight phase, when this model is **destroyed**, if this unit has not been **selected to fight** this phase, roll one D6:
 - On a 2+, do not remove this model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield. · MELEE Melee
 ABILITY · FIGHT · EITHER TURN
@@ -3607,19 +3690,6 @@ If an attached unit below starting strength only contains models with Lone Opera
 
 IN THIS ARMYGhazghkull Thraka (in Da Grand Warlord’s Ladz), Mozrog Skragbad (in Beast Snagga Following), Beastboss · Headwoppa’s Killchoppa (in Boss of da Hunt)
 
-######## popup rule:MOBILE · MELEE Melee
-CORE RULE
-
-MOBILE
-
-Dense:
-
-INFANTRY/BEASTS/SWARM/MOBILE models can move horizontally through dense terrain features.
-INFANTRY/BEASTS/SWARM models can move vertically through dense terrain features.
-Other models can move horizontally through dense terrain features provided that all sections of that terrain feature that the moving model’s base would move through are 2" or less in height. Otherwise, the moving model must move vertically to ascend or descend such sections. They cannot move through ceilings and floors while doing so, and they cannot end that move on any surface of that terrain feature that is not on ground level (see below).
-
-App note, not rules text: MOBILE has no rule of its own in the core rules. These are the Dense lines of Terrain and Movement (13.06). Super-Heavy Walker (24.35), Designer’s Note: “Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).”
-
 ######## popup rule:PRECISION · MELEE Melee
 CORE RULE
 
@@ -4046,22 +4116,6 @@ Your unit cannot be engaged with one or more enemy units that are not charge tar
 Until the end of the turn, each model in your unit has the Fights First ability (24.13).
 
 ######## popup rule:declare a charge · MELEE Melee
-CORE RULE
-
-Charge
-1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
-
-A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
-
-It is not within 12" of one or more enemy units.
-It is engaged.
-It made an advance or fall-back move this turn.
-2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
-3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
-
-Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
-
-######## popup rule:declares a charge · MELEE Melee
 CORE RULE
 
 Charge

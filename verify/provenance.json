@@ -38,6 +38,12 @@
    "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
   },
   {
+   "id": "pack:adeptus-mechanicus",
+   "label": "GW Faction Pack Adeptus Mechanicus",
+   "file": "verify/.cache/gw/eng_14-10_wh40k_-faction_pack_adeptus-mechanicus-g0jwiuyz3x-f5itnst9j9.pdf",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
    "id": "waha:orks",
    "label": "Wahapedia orks (text)",
    "file": "verify/.cache/waha/orks.txt",
@@ -68,6 +74,12 @@
    "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
   },
   {
+   "id": "waha:adeptus-mechanicus",
+   "label": "Wahapedia adeptus-mechanicus (text)",
+   "file": "verify/.cache/waha/adeptus-mechanicus.txt",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
    "id": "wahahtml:orks",
    "label": "Wahapedia orks",
    "file": "verify/.cache/waha/orks.html",
@@ -96,6 +108,12 @@
    "label": "Wahapedia tyranids",
    "file": "verify/.cache/waha/tyranids.html",
    "sha256": "d200e7bceb8b757e48a637008a989b1b690e3918596faf318f67264644244cf7"
+  },
+  {
+   "id": "wahahtml:adeptus-mechanicus",
+   "label": "Wahapedia adeptus-mechanicus",
+   "file": "verify/.cache/waha/adeptus-mechanicus.html",
+   "sha256": "72a35cd059776363def7febc4444afcd2e93bbce7c1e91ac4d8f06660123fd60"
   },
   {
    "id": "wahahtml:core",
@@ -373,6 +391,38 @@
    "text": "Each time a unit is **selected to shoot** or **selected to fight**, after that u",
    "doc": "core",
    "where": "PDF p81",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Heavy / text",
+   "field": "text",
+   "text": "In your Shooting phase, each time an attack is made with a **[HEAVY]** weapon, a",
+   "doc": "core",
+   "where": "PDF p82",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Heavy / text",
+   "field": "text",
+   "text": "- That unit is **unengaged**.",
+   "doc": "core",
+   "where": "PDF p82",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Heavy / text",
+   "field": "text",
+   "text": "- That unit was not set up on the battlefield this turn.",
+   "doc": "core",
+   "where": "PDF p82",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Heavy / text",
+   "field": "text",
+   "text": "- No model in that unit has moved more than 3\" this turn.",
+   "doc": "core",
+   "where": "PDF p82",
    "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
   },
   {
@@ -3294,6 +3344,1707 @@
    "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
   },
   {
+   "item": "orks / detachment:bully-boyz",
+   "field": "name",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Bully Boyz 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "orks / detachment:bully-boyz/rule",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Bully Boyz 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "orks / detachment:bully-boyz/enhancement:Wimp-kickaz",
+   "field": "pts",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Bully Boyz 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "orks / detachment:bully-boyz/enhancement:Wimp-kickaz",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Bully Boyz 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "orks / detachment:bully-boyz/enhancement:Tellyporta Boss",
+   "field": "pts",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Bully Boyz 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "orks / detachment:bully-boyz/enhancement:Tellyporta Boss",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Bully Boyz 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "orks / detachment:bully-boyz/stratagem:too-arrogant-to-die",
+   "field": "when",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Bully Boyz 1DP (TOO ARROGANT TO DIE)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "orks / detachment:bully-boyz/stratagem:too-arrogant-to-die",
+   "field": "target",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Bully Boyz 1DP (TOO ARROGANT TO DIE)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "orks / detachment:bully-boyz/stratagem:too-arrogant-to-die",
+   "field": "effect",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Bully Boyz 1DP (TOO ARROGANT TO DIE)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "orks / detachment:bully-boyz/stratagem:armed-to-da-teef",
+   "field": "when",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Bully Boyz 1DP (ARMED TO DA TEEF)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "orks / detachment:bully-boyz/stratagem:armed-to-da-teef",
+   "field": "target",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Bully Boyz 1DP (ARMED TO DA TEEF)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "orks / detachment:bully-boyz/stratagem:armed-to-da-teef",
+   "field": "effect",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Bully Boyz 1DP (ARMED TO DA TEEF)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "orks / detachment:bully-boyz/stratagem:hulking-brutes",
+   "field": "when",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Bully Boyz 1DP (HULKING BRUTES)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "orks / detachment:bully-boyz/stratagem:hulking-brutes",
+   "field": "target",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Bully Boyz 1DP (HULKING BRUTES)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "orks / detachment:bully-boyz/stratagem:hulking-brutes",
+   "field": "effect",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Bully Boyz 1DP (HULKING BRUTES)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "orks / detachment:runt-swarm",
+   "field": "name",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Runt Swarm 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "orks / detachment:runt-swarm/rule",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Runt Swarm 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "orks / detachment:runt-swarm/enhancement:Extra Sneaky",
+   "field": "pts",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Runt Swarm 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "orks / detachment:runt-swarm/enhancement:Extra Sneaky",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Runt Swarm 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "orks / detachment:runt-swarm/enhancement:Minefield Detail",
+   "field": "pts",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Runt Swarm 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "orks / detachment:runt-swarm/enhancement:Minefield Detail",
+   "field": "text",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Runt Swarm 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "orks / detachment:runt-swarm/stratagem:infested-war-zone",
+   "field": "when",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Runt Swarm 1DP (INFESTED WAR ZONE)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "orks / detachment:runt-swarm/stratagem:infested-war-zone",
+   "field": "target",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Runt Swarm 1DP (INFESTED WAR ZONE)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "orks / detachment:runt-swarm/stratagem:infested-war-zone",
+   "field": "effect",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Runt Swarm 1DP (INFESTED WAR ZONE)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "orks / detachment:runt-swarm/stratagem:scarper",
+   "field": "when",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Runt Swarm 1DP (SCARPER!)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "orks / detachment:runt-swarm/stratagem:scarper",
+   "field": "target",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Runt Swarm 1DP (SCARPER!)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "orks / detachment:runt-swarm/stratagem:scarper",
+   "field": "effect",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Runt Swarm 1DP (SCARPER!)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "orks / detachment:runt-swarm/stratagem:grot-shields",
+   "field": "when",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Runt Swarm 1DP (GROT SHIELDS)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "orks / detachment:runt-swarm/stratagem:grot-shields",
+   "field": "target",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Runt Swarm 1DP (GROT SHIELDS)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "orks / detachment:runt-swarm/stratagem:grot-shields",
+   "field": "effect",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Runt Swarm 1DP (GROT SHIELDS)",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "imperial-knights / detachment:freeblade-company",
+   "field": "name",
+   "doc": "waha:imperial-knights",
+   "where": "Wahapedia imperial-knights § Freeblade Company 3DP",
+   "sha256": "583c0fcdf91ee4bb8f5f3a07a2edfa1fdbeca8429dc9c247906752e247146199"
+  },
+  {
+   "item": "imperial-knights / detachment:freeblade-company/rule",
+   "field": "text",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p5-6",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "imperial-knights / detachment:freeblade-company/enhancement:Bringer of Justice",
+   "field": "pts",
+   "doc": "waha:imperial-knights",
+   "where": "Wahapedia imperial-knights § Freeblade Company 3DP",
+   "sha256": "583c0fcdf91ee4bb8f5f3a07a2edfa1fdbeca8429dc9c247906752e247146199"
+  },
+  {
+   "item": "imperial-knights / detachment:freeblade-company/enhancement:Bringer of Justice",
+   "field": "text",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p5-6",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "imperial-knights / detachment:freeblade-company/enhancement:Hunter’s Eye",
+   "field": "pts",
+   "doc": "waha:imperial-knights",
+   "where": "Wahapedia imperial-knights § Freeblade Company 3DP",
+   "sha256": "583c0fcdf91ee4bb8f5f3a07a2edfa1fdbeca8429dc9c247906752e247146199"
+  },
+  {
+   "item": "imperial-knights / detachment:freeblade-company/enhancement:Hunter’s Eye",
+   "field": "text",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p5-6",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "imperial-knights / detachment:freeblade-company/enhancement:Mysterious Guardian",
+   "field": "pts",
+   "doc": "waha:imperial-knights",
+   "where": "Wahapedia imperial-knights § Freeblade Company 3DP",
+   "sha256": "583c0fcdf91ee4bb8f5f3a07a2edfa1fdbeca8429dc9c247906752e247146199"
+  },
+  {
+   "item": "imperial-knights / detachment:freeblade-company/enhancement:Mysterious Guardian",
+   "field": "text",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p5-6",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "imperial-knights / detachment:freeblade-company/enhancement:Sanctuary",
+   "field": "pts",
+   "doc": "waha:imperial-knights",
+   "where": "Wahapedia imperial-knights § Freeblade Company 3DP",
+   "sha256": "583c0fcdf91ee4bb8f5f3a07a2edfa1fdbeca8429dc9c247906752e247146199"
+  },
+  {
+   "item": "imperial-knights / detachment:freeblade-company/enhancement:Sanctuary",
+   "field": "text",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p5-6",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "imperial-knights / detachment:freeblade-company/stratagem:noble-sacrifice",
+   "field": "when",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p6 (NOBLE SACRIFICE)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "imperial-knights / detachment:freeblade-company/stratagem:noble-sacrifice",
+   "field": "target",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p6 (NOBLE SACRIFICE)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "imperial-knights / detachment:freeblade-company/stratagem:noble-sacrifice",
+   "field": "effect",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p6 (NOBLE SACRIFICE)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "imperial-knights / detachment:freeblade-company/stratagem:strength-from-exile",
+   "field": "when",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p6 (STRENGTH FROM EXILE)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "imperial-knights / detachment:freeblade-company/stratagem:strength-from-exile",
+   "field": "target",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p6 (STRENGTH FROM EXILE)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "imperial-knights / detachment:freeblade-company/stratagem:strength-from-exile",
+   "field": "effect",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p6 (STRENGTH FROM EXILE)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "imperial-knights / detachment:freeblade-company/stratagem:full-tilt",
+   "field": "when",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p6 (FULL TILT)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "imperial-knights / detachment:freeblade-company/stratagem:full-tilt",
+   "field": "target",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p6 (FULL TILT)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "imperial-knights / detachment:freeblade-company/stratagem:full-tilt",
+   "field": "effect",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p6 (FULL TILT)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "imperial-knights / detachment:freeblade-company/stratagem:point-blank-barrage",
+   "field": "when",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p6 (POINT‑BLANK BARRAGE)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "imperial-knights / detachment:freeblade-company/stratagem:point-blank-barrage",
+   "field": "target",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p6 (POINT‑BLANK BARRAGE)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "imperial-knights / detachment:freeblade-company/stratagem:point-blank-barrage",
+   "field": "effect",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p6 (POINT‑BLANK BARRAGE)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "imperial-knights / detachment:freeblade-company/stratagem:survivor-of-strife",
+   "field": "when",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p6 (SURVIVOR OF STRIFE)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "imperial-knights / detachment:freeblade-company/stratagem:survivor-of-strife",
+   "field": "target",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p6 (SURVIVOR OF STRIFE)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "imperial-knights / detachment:freeblade-company/stratagem:survivor-of-strife",
+   "field": "effect",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p6 (SURVIVOR OF STRIFE)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "imperial-knights / detachment:freeblade-company/stratagem:flanking-manoeuvres",
+   "field": "when",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p6 (FLANKING MANOEUVRES)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "imperial-knights / detachment:freeblade-company/stratagem:flanking-manoeuvres",
+   "field": "target",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p6 (FLANKING MANOEUVRES)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "imperial-knights / detachment:freeblade-company/stratagem:flanking-manoeuvres",
+   "field": "effect",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p6 (FLANKING MANOEUVRES)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "world-eaters / detachment:berzerker-warband",
+   "field": "name",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / detachment:berzerker-warband/rule / text (Rules Updates)",
+   "field": "text (Rules Updates)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p7, Rules Updates: BERZERKER WARBAND DETACHMENT / Relentless Rage Detachment Rule",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / detachment:berzerker-warband/enhancement:Berzerker Glaive",
+   "field": "pts",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / detachment:berzerker-warband/enhancement:Berzerker Glaive",
+   "field": "text",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / detachment:berzerker-warband/enhancement:Helm of Brazen Ire",
+   "field": "pts",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / detachment:berzerker-warband/enhancement:Helm of Brazen Ire",
+   "field": "text",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / detachment:berzerker-warband/enhancement:Favoured of Khorne",
+   "field": "pts",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / detachment:berzerker-warband/enhancement:Favoured of Khorne",
+   "field": "text",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / detachment:berzerker-warband/enhancement:Battle-lust",
+   "field": "pts",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / detachment:berzerker-warband/enhancement:Battle-lust",
+   "field": "text",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / detachment:berzerker-warband/stratagem:blood-offering",
+   "field": "when",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (BLOOD OFFERING)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / detachment:berzerker-warband/stratagem:blood-offering",
+   "field": "target",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (BLOOD OFFERING)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / detachment:berzerker-warband/stratagem:blood-offering",
+   "field": "effect",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (BLOOD OFFERING)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / detachment:berzerker-warband/stratagem:hack-and-slash",
+   "field": "when",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (HACK AND SLASH)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / detachment:berzerker-warband/stratagem:hack-and-slash",
+   "field": "target",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (HACK AND SLASH)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / detachment:berzerker-warband/stratagem:hack-and-slash",
+   "field": "effect",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (HACK AND SLASH)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / detachment:berzerker-warband/stratagem:frenzied-resilience",
+   "field": "when",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (FRENZIED RESILIENCE)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / detachment:berzerker-warband/stratagem:frenzied-resilience",
+   "field": "target",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (FRENZIED RESILIENCE)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / detachment:berzerker-warband/stratagem:frenzied-resilience",
+   "field": "effect",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (FRENZIED RESILIENCE)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / detachment:berzerker-warband/stratagem:skulls-for-the-skull-throne",
+   "field": "when",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (SKULLS FOR THE SKULL THRONE!)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / detachment:berzerker-warband/stratagem:skulls-for-the-skull-throne",
+   "field": "target",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (SKULLS FOR THE SKULL THRONE!)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / detachment:berzerker-warband/stratagem:skulls-for-the-skull-throne",
+   "field": "effect",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (SKULLS FOR THE SKULL THRONE!)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / detachment:berzerker-warband/stratagem:apoplectic-frenzy",
+   "field": "when",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (APOPLECTIC FRENZY)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / detachment:berzerker-warband/stratagem:apoplectic-frenzy",
+   "field": "target",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (APOPLECTIC FRENZY)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / detachment:berzerker-warband/stratagem:apoplectic-frenzy",
+   "field": "effect",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (APOPLECTIC FRENZY)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / detachment:berzerker-warband/stratagem:berzerkers-wrath",
+   "field": "when",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Berzerker Warband 2DP (BERZERKER’S WRATH)",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / detachment:berzerker-warband/stratagem:berzerkers-wrath / target (Rules Updates)",
+   "field": "target (Rules Updates)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p7, Rules Updates: BERZERKER WARBAND DETACHMENT / Berzerker's Wrath Stratagem, Target and Effect Sections",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / detachment:berzerker-warband/stratagem:berzerkers-wrath / effect (Rules Updates)",
+   "field": "effect (Rules Updates)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p7, Rules Updates: BERZERKER WARBAND DETACHMENT / Berzerker's Wrath Stratagem, Target and Effect Sections",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / detachment:vessels-of-wrath",
+   "field": "name",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Vessels of Wrath 1DP",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / detachment:vessels-of-wrath/rule",
+   "field": "text",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p4",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / detachment:vessels-of-wrath/enhancement:Archslaughterer",
+   "field": "pts",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Vessels of Wrath 1DP",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / detachment:vessels-of-wrath/enhancement:Archslaughterer",
+   "field": "text",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p4",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / detachment:vessels-of-wrath/enhancement:Gateways to Glory",
+   "field": "pts",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Vessels of Wrath 1DP",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / detachment:vessels-of-wrath/enhancement:Gateways to Glory",
+   "field": "text",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p4",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / detachment:vessels-of-wrath/stratagem:scorn-the-witch",
+   "field": "when",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p4 (SCORN THE WITCH)",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / detachment:vessels-of-wrath/stratagem:scorn-the-witch",
+   "field": "target",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p4 (SCORN THE WITCH)",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / detachment:vessels-of-wrath/stratagem:scorn-the-witch",
+   "field": "effect",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p4 (SCORN THE WITCH)",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / detachment:vessels-of-wrath/stratagem:aspire-to-infamy",
+   "field": "when",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p4 (ASPIRE TO INFAMY)",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / detachment:vessels-of-wrath/stratagem:aspire-to-infamy",
+   "field": "target",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p4 (ASPIRE TO INFAMY)",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / detachment:vessels-of-wrath/stratagem:aspire-to-infamy",
+   "field": "effect",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p4 (ASPIRE TO INFAMY)",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / detachment:vessels-of-wrath/stratagem:punish-the-craven",
+   "field": "when",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p4 (PUNISH THE CRAVEN)",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / detachment:vessels-of-wrath/stratagem:punish-the-craven",
+   "field": "target",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p4 (PUNISH THE CRAVEN)",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / detachment:vessels-of-wrath/stratagem:punish-the-craven",
+   "field": "effect",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p4 (PUNISH THE CRAVEN)",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / detachment:butchers-of-khorne",
+   "field": "name",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Butchers of Khorne 1DP",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / detachment:butchers-of-khorne/rule",
+   "field": "text",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p3",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / detachment:butchers-of-khorne/enhancement:Sanctified in Slaughter",
+   "field": "pts",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Butchers of Khorne 1DP",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / detachment:butchers-of-khorne/enhancement:Sanctified in Slaughter",
+   "field": "text",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p3",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / detachment:butchers-of-khorne/enhancement:Gore-stained Veterans",
+   "field": "pts",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Butchers of Khorne 1DP",
+   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+  },
+  {
+   "item": "world-eaters / detachment:butchers-of-khorne/enhancement:Gore-stained Veterans",
+   "field": "text",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p3",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / detachment:butchers-of-khorne/stratagem:focused-ferocity",
+   "field": "when",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p3 (FOCUSED FEROCITY)",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / detachment:butchers-of-khorne/stratagem:focused-ferocity",
+   "field": "target",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p3 (FOCUSED FEROCITY)",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / detachment:butchers-of-khorne/stratagem:focused-ferocity",
+   "field": "effect",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p3 (FOCUSED FEROCITY)",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / detachment:butchers-of-khorne/stratagem:a-trophy-for-the-throne",
+   "field": "when",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p3 (A TROPHY FOR THE THRONE)",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / detachment:butchers-of-khorne/stratagem:a-trophy-for-the-throne",
+   "field": "target",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p3 (A TROPHY FOR THE THRONE)",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / detachment:butchers-of-khorne/stratagem:a-trophy-for-the-throne",
+   "field": "effect",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p3 (A TROPHY FOR THE THRONE)",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / detachment:butchers-of-khorne/stratagem:wrath-beyond-reason",
+   "field": "when",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p3 (WRATH BEYOND REASON)",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / detachment:butchers-of-khorne/stratagem:wrath-beyond-reason",
+   "field": "target",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p3 (WRATH BEYOND REASON)",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / detachment:butchers-of-khorne/stratagem:wrath-beyond-reason",
+   "field": "effect",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p3 (WRATH BEYOND REASON)",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "thousand-sons / detachment:grand-coven",
+   "field": "name",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:grand-coven/rule",
+   "field": "text",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:grand-coven/enhancement:Lord of Forbidden Lore",
+   "field": "pts",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:grand-coven/enhancement:Lord of Forbidden Lore",
+   "field": "text",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:grand-coven/enhancement:Incandaeum",
+   "field": "pts",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:grand-coven/enhancement:Incandaeum / text (Rules Updates)",
+   "field": "text (Rules Updates)",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p9, Rules Updates: GRAND COVEN DETACHMENT / Incandaeum Enhancement",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "thousand-sons / detachment:grand-coven/enhancement:Umbralefic Crystal",
+   "field": "pts",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:grand-coven/enhancement:Umbralefic Crystal / text (Rules Updates)",
+   "field": "text (Rules Updates)",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p9, Rules Updates: GRAND COVEN DETACHMENT / Umbralefic Crystal Enhancement",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "thousand-sons / detachment:grand-coven/enhancement:Eldritch Vortex of E’taph",
+   "field": "pts",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:grand-coven/enhancement:Eldritch Vortex of E’taph",
+   "field": "text",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:grand-coven/stratagem:psychic-dominion",
+   "field": "when",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (PSYCHIC DOMINION)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:grand-coven/stratagem:psychic-dominion",
+   "field": "target",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (PSYCHIC DOMINION)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:grand-coven/stratagem:psychic-dominion",
+   "field": "effect",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (PSYCHIC DOMINION)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:grand-coven/stratagem:destined-by-fate",
+   "field": "when",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (DESTINED BY FATE)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:grand-coven/stratagem:destined-by-fate",
+   "field": "target",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (DESTINED BY FATE)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:grand-coven/stratagem:destined-by-fate",
+   "field": "effect",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (DESTINED BY FATE)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:grand-coven/stratagem:egotistical-power",
+   "field": "when",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (EGOTISTICAL POWER)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:grand-coven/stratagem:egotistical-power",
+   "field": "target",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (EGOTISTICAL POWER)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:grand-coven/stratagem:egotistical-power",
+   "field": "effect",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (EGOTISTICAL POWER)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:grand-coven/stratagem:desecration-of-worlds",
+   "field": "when",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (DESECRATION OF WORLDS)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:grand-coven/stratagem:desecration-of-worlds",
+   "field": "target",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (DESECRATION OF WORLDS)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:grand-coven/stratagem:desecration-of-worlds",
+   "field": "effect",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (DESECRATION OF WORLDS)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:grand-coven/stratagem:arcane-focus",
+   "field": "when",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (ARCANE FOCUS)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:grand-coven/stratagem:arcane-focus",
+   "field": "target",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (ARCANE FOCUS)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:grand-coven/stratagem:arcane-focus",
+   "field": "effect",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (ARCANE FOCUS)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:grand-coven/stratagem:devastating-sorcery",
+   "field": "when",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (DEVASTATING SORCERY)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:grand-coven/stratagem:devastating-sorcery",
+   "field": "target",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (DEVASTATING SORCERY)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "thousand-sons / detachment:grand-coven/stratagem:devastating-sorcery",
+   "field": "effect",
+   "doc": "waha:thousand-sons",
+   "where": "Wahapedia thousand-sons § Grand Coven 3DP (DEVASTATING SORCERY)",
+   "sha256": "f23b2e9a386eb46e980ba396f104b677a698819bf476a65651d99993bd0472a0"
+  },
+  {
+   "item": "tyranids / detachment:crusher-stampede",
+   "field": "name",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:crusher-stampede/rule / text (Rules Updates)",
+   "field": "text (Rules Updates)",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p19, Rules Updates: CRUSHER STAMPEDE DETACHMENT / Enraged Behemoths Detachment Rule",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "tyranids / detachment:crusher-stampede/enhancement:Ominous Presence",
+   "field": "pts",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:crusher-stampede/enhancement:Ominous Presence",
+   "field": "text",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:crusher-stampede/enhancement:Enraged Reserves",
+   "field": "pts",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:crusher-stampede/enhancement:Enraged Reserves",
+   "field": "text",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:crusher-stampede/enhancement:Null Nodules",
+   "field": "pts",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:crusher-stampede/enhancement:Null Nodules",
+   "field": "text",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:crusher-stampede/enhancement:Monstrous Nemesis",
+   "field": "pts",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:crusher-stampede/enhancement:Monstrous Nemesis",
+   "field": "text",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:crusher-stampede/stratagem:corrosive-viscera",
+   "field": "when",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (CORROSIVE VISCERA)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:crusher-stampede/stratagem:corrosive-viscera",
+   "field": "target",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (CORROSIVE VISCERA)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:crusher-stampede/stratagem:corrosive-viscera",
+   "field": "effect",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (CORROSIVE VISCERA)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:crusher-stampede/stratagem:rampaging-monstrosities",
+   "field": "when",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (RAMPAGING MONSTROSITIES)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:crusher-stampede/stratagem:rampaging-monstrosities",
+   "field": "target",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (RAMPAGING MONSTROSITIES)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:crusher-stampede/stratagem:rampaging-monstrosities",
+   "field": "effect",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (RAMPAGING MONSTROSITIES)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:crusher-stampede/stratagem:savage-roar",
+   "field": "when",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (SAVAGE ROAR)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:crusher-stampede/stratagem:savage-roar",
+   "field": "target",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (SAVAGE ROAR)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:crusher-stampede/stratagem:savage-roar",
+   "field": "effect",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (SAVAGE ROAR)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:crusher-stampede/stratagem:untrammelled-ferocity",
+   "field": "when",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (UNTRAMMELLED FEROCITY)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:crusher-stampede/stratagem:untrammelled-ferocity",
+   "field": "target",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (UNTRAMMELLED FEROCITY)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:crusher-stampede/stratagem:untrammelled-ferocity / effect (Rules Updates)",
+   "field": "effect (Rules Updates)",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p19, Rules Updates: CRUSHER STAMPEDE DETACHMENT / Untrammelled Ferocity Stratagem, Effect Section",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "tyranids / detachment:crusher-stampede/stratagem:swarm-guided-salvoes",
+   "field": "when",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (SWARM-GUIDED SALVOES)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:crusher-stampede/stratagem:swarm-guided-salvoes",
+   "field": "target",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (SWARM-GUIDED SALVOES)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:crusher-stampede/stratagem:swarm-guided-salvoes",
+   "field": "effect",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (SWARM-GUIDED SALVOES)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:crusher-stampede/stratagem:massive-impact",
+   "field": "when",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (MASSIVE IMPACT)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:crusher-stampede/stratagem:massive-impact",
+   "field": "target",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (MASSIVE IMPACT)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:crusher-stampede/stratagem:massive-impact",
+   "field": "effect",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Crusher Stampede 2DP (MASSIVE IMPACT)",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:talons-of-the-norn-queen",
+   "field": "name",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Talons of the Norn Queen 1DP",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:talons-of-the-norn-queen/rule",
+   "field": "text",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p3",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "tyranids / detachment:talons-of-the-norn-queen/enhancement:Destabilising Predation",
+   "field": "pts",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Talons of the Norn Queen 1DP",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:talons-of-the-norn-queen/enhancement:Destabilising Predation",
+   "field": "text",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p3",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "tyranids / detachment:talons-of-the-norn-queen/enhancement:Synaptoprescience",
+   "field": "pts",
+   "doc": "waha:tyranids",
+   "where": "Wahapedia tyranids § Talons of the Norn Queen 1DP",
+   "sha256": "69fd4251b6860e349e9e833e9aeb61a8a2c8a5de1da2f36cba244e91fbc40ee5"
+  },
+  {
+   "item": "tyranids / detachment:talons-of-the-norn-queen/enhancement:Synaptoprescience",
+   "field": "text",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p3",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "tyranids / detachment:talons-of-the-norn-queen/stratagem:catalytic-biofortification",
+   "field": "when",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p3 (CATALYTIC BIOFORTIFICATION)",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "tyranids / detachment:talons-of-the-norn-queen/stratagem:catalytic-biofortification",
+   "field": "target",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p3 (CATALYTIC BIOFORTIFICATION)",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "tyranids / detachment:talons-of-the-norn-queen/stratagem:catalytic-biofortification",
+   "field": "effect",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p3 (CATALYTIC BIOFORTIFICATION)",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "tyranids / detachment:talons-of-the-norn-queen/stratagem:lesser-prey",
+   "field": "when",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p3 (LESSER PREY)",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "tyranids / detachment:talons-of-the-norn-queen/stratagem:lesser-prey",
+   "field": "target",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p3 (LESSER PREY)",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "tyranids / detachment:talons-of-the-norn-queen/stratagem:lesser-prey",
+   "field": "effect",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p3 (LESSER PREY)",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "tyranids / detachment:talons-of-the-norn-queen/stratagem:tanglestrike-rounds",
+   "field": "when",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p3 (TANGLESTRIKE ROUNDS)",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "tyranids / detachment:talons-of-the-norn-queen/stratagem:tanglestrike-rounds",
+   "field": "target",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p3 (TANGLESTRIKE ROUNDS)",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "tyranids / detachment:talons-of-the-norn-queen/stratagem:tanglestrike-rounds",
+   "field": "effect",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p3 (TANGLESTRIKE ROUNDS)",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:cohort-cybernetica",
+   "field": "name",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:cohort-cybernetica/rule / text (Rules Updates)",
+   "field": "text (Rules Updates)",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p17, Rules Updates: COHORT CYBERNETICA DETACHMENT / Cyber-psalm Programming Detachment Rule",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:cohort-cybernetica/enhancement:Necromechanic",
+   "field": "pts",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:cohort-cybernetica/enhancement:Necromechanic",
+   "field": "text",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:cohort-cybernetica/enhancement:Lord of Machines",
+   "field": "pts",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:cohort-cybernetica/enhancement:Lord of Machines",
+   "field": "text",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:cohort-cybernetica/enhancement:Emotionless Clarity",
+   "field": "pts",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:cohort-cybernetica/enhancement:Emotionless Clarity",
+   "field": "text",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:cohort-cybernetica/enhancement:Arch-negator",
+   "field": "pts",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:cohort-cybernetica/enhancement:Arch-negator",
+   "field": "text",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:motive-imperative",
+   "field": "when",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (MOTIVE IMPERATIVE)",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:motive-imperative",
+   "field": "target",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (MOTIVE IMPERATIVE)",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:motive-imperative",
+   "field": "effect",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (MOTIVE IMPERATIVE)",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:auto-divinatory-targeting",
+   "field": "when",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (AUTO-DIVINATORY TARGETING)",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:auto-divinatory-targeting",
+   "field": "target",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (AUTO-DIVINATORY TARGETING)",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:auto-divinatory-targeting",
+   "field": "effect",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (AUTO-DIVINATORY TARGETING)",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:machine-spirit-resurgent",
+   "field": "when",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (MACHINE SPIRIT RESURGENT)",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:machine-spirit-resurgent",
+   "field": "target",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (MACHINE SPIRIT RESURGENT)",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:machine-spirit-resurgent",
+   "field": "effect",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (MACHINE SPIRIT RESURGENT)",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:machine-superiority",
+   "field": "when",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (MACHINE SUPERIORITY)",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:machine-superiority",
+   "field": "target",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (MACHINE SUPERIORITY)",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:machine-superiority",
+   "field": "effect",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (MACHINE SUPERIORITY)",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:transcendent-cogitation",
+   "field": "when",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (TRANSCENDENT COGITATION)",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:transcendent-cogitation",
+   "field": "target",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (TRANSCENDENT COGITATION)",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:transcendent-cogitation",
+   "field": "effect",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (TRANSCENDENT COGITATION)",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:benevolence-of-the-omnissiah",
+   "field": "when",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (BENEVOLENCE OF THE OMNISSIAH)",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:benevolence-of-the-omnissiah",
+   "field": "target",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (BENEVOLENCE OF THE OMNISSIAH)",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:benevolence-of-the-omnissiah",
+   "field": "effect",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Cohort Cybernetica 1DP (BENEVOLENCE OF THE OMNISSIAH)",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:eradication-cohort",
+   "field": "name",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Eradication Cohort 2DP",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:eradication-cohort/rule",
+   "field": "text",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p5-6",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:eradication-cohort/enhancement:Omnicogitator",
+   "field": "pts",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Eradication Cohort 2DP",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:eradication-cohort/enhancement:Omnicogitator",
+   "field": "text",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p5-6",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:eradication-cohort/enhancement:Martial Signatum Amplificator",
+   "field": "pts",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Eradication Cohort 2DP",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:eradication-cohort/enhancement:Martial Signatum Amplificator",
+   "field": "text",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p5-6",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:eradication-cohort/enhancement:Belicosa-class Capacitor Vanes",
+   "field": "pts",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Eradication Cohort 2DP",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:eradication-cohort/enhancement:Belicosa-class Capacitor Vanes",
+   "field": "text",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p5-6",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:eradication-cohort/enhancement:Omnissiah’s Fury",
+   "field": "pts",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Eradication Cohort 2DP",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:eradication-cohort/enhancement:Omnissiah’s Fury",
+   "field": "text",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p5-6",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:eradication-cohort/stratagem:servo-driven-charge",
+   "field": "when",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p6 (SERVO‑DRIVEN CHARGE)",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:eradication-cohort/stratagem:servo-driven-charge",
+   "field": "target",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p6 (SERVO‑DRIVEN CHARGE)",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:eradication-cohort/stratagem:servo-driven-charge",
+   "field": "effect",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p6 (SERVO‑DRIVEN CHARGE)",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:eradication-cohort/stratagem:unrelenting-aggression",
+   "field": "when",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p6 (UNRELENTING AGGRESSION)",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:eradication-cohort/stratagem:unrelenting-aggression",
+   "field": "target",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p6 (UNRELENTING AGGRESSION)",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:eradication-cohort/stratagem:unrelenting-aggression",
+   "field": "effect",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p6 (UNRELENTING AGGRESSION)",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:eradication-cohort/stratagem:unshackled-wrath",
+   "field": "when",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p6 (UNSHACKLED WRATH)",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:eradication-cohort/stratagem:unshackled-wrath",
+   "field": "target",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p6 (UNSHACKLED WRATH)",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:eradication-cohort/stratagem:unshackled-wrath",
+   "field": "effect",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p6 (UNSHACKLED WRATH)",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:eradication-cohort/stratagem:threat-cogitation-targeters",
+   "field": "when",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p6 (THREAT‑COGITATION TARGETERS)",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:eradication-cohort/stratagem:threat-cogitation-targeters",
+   "field": "target",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p6 (THREAT‑COGITATION TARGETERS)",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:eradication-cohort/stratagem:threat-cogitation-targeters",
+   "field": "effect",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p6 (THREAT‑COGITATION TARGETERS)",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:eradication-cohort/stratagem:precision-onslaught",
+   "field": "when",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p6 (PRECISION ONSLAUGHT)",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:eradication-cohort/stratagem:precision-onslaught",
+   "field": "target",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p6 (PRECISION ONSLAUGHT)",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:eradication-cohort/stratagem:precision-onslaught",
+   "field": "effect",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p6 (PRECISION ONSLAUGHT)",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:eradication-cohort/stratagem:analytic-reprisals",
+   "field": "when",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p6 (ANALYTIC REPRISALS)",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:eradication-cohort/stratagem:analytic-reprisals",
+   "field": "target",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p6 (ANALYTIC REPRISALS)",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:eradication-cohort/stratagem:analytic-reprisals",
+   "field": "effect",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p6 (ANALYTIC REPRISALS)",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
    "item": "orks / armyRule:Waaagh!",
    "field": "text",
    "doc": "waha:orks",
@@ -3553,6 +5304,27 @@
    "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
   },
   {
+   "item": "adeptus-mechanicus / armyRule:Doctrina Imperatives",
+   "field": "text",
+   "doc": "waha:adeptus-mechanicus",
+   "where": "Wahapedia adeptus-mechanicus § Army Rules (Doctrina Imperatives)",
+   "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
+  },
+  {
+   "item": "adeptus-mechanicus / armyRule:Doctrina Imperatives/row:Protector Imperative / text",
+   "field": "text",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p17, Rules Updates: ARMY RULES / Doctrina Imperatives",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "adeptus-mechanicus / armyRule:Doctrina Imperatives/row:Conqueror Imperative / text",
+   "field": "text",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p17, Rules Updates: ARMY RULES / Doctrina Imperatives",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
    "item": "shooty / dakkarig-herder / ability:Dreadherder",
    "field": "text",
    "doc": "data.js",
@@ -3602,11 +5374,557 @@
    "sha256": null
   },
   {
+   "item": "princes / daemon-prince-of-khorne-helm-of-brazen-ire / ability:Helm of Brazen Ire",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Helm of Brazen Ire (Berzerker Warband) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "princes / daemon-prince-of-khorne-berzerker-glaive / ability:Berzerker Glaive",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Berzerker Glaive (Berzerker Warband) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "princes / lord-on-juggernaut-khorne-berzerkers / ability:Archslaughterer",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Archslaughterer (Vessels of Wrath) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "princes / slaughterbound-exalted-eightbound / ability:Battle-lust",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Battle-lust (Berzerker Warband) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "standard / slaughterbound-exalted-eightbound / ability:Berzerker Glaive",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Berzerker Glaive (Berzerker Warband) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "pubstomper / daemon-prince-of-tzeentch-with-wings / ability:Eldritch Vortex of E’taph",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Eldritch Vortex of E’taph (Grand Coven) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "pubstomper / sorcerer-in-terminator-armour-scarab-occult-terminators / ability:Umbralefic Crystal",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Umbralefic Crystal (Grand Coven) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "nidzillas / hive-tyrant / ability:Monstrous Nemesis",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Monstrous Nemesis (Crusher Stampede) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "nidzillas / norn-assimilator-synaptoprescience / ability:Protean Purpose",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the detachment rule ability Protean Purpose (Talons of the Norn Queen) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "nidzillas / norn-assimilator-synaptoprescience / ability:Synaptoprescience",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Synaptoprescience (Talons of the Norn Queen) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "nidzillas / norn-assimilator-synaptoprescience-2 / ability:Protean Purpose",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the detachment rule ability Protean Purpose (Talons of the Norn Queen) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "nidzillas / norn-assimilator-synaptoprescience-2 / ability:Synaptoprescience",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Synaptoprescience (Talons of the Norn Queen) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "nidzillas / norn-emissary-destabilising-predation / ability:Protean Purpose",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the detachment rule ability Protean Purpose (Talons of the Norn Queen) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "nidzillas / norn-emissary-destabilising-predation / ability:Destabilising Predation",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Destabilising Predation (Talons of the Norn Queen) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "nidzillas / norn-emissary / ability:Protean Purpose",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the detachment rule ability Protean Purpose (Talons of the Norn Queen) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "4-megas-and-a-destrier / cerastus-knight-atrapos / ability:Bringer of Justice",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Bringer of Justice (Freeblade Company) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "4-megas-and-a-destrier / knight-crusader / ability:Hunter’s Eye",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Hunter’s Eye (Freeblade Company) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "4-megas-and-a-destrier / knight-destrier / ability:Sanctuary",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Sanctuary (Freeblade Company) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "ooga-booga / zodgrod-wortsnagga-runtherd-gretchin / ability:Extra Sneaky",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Extra Sneaky (Runt Swarm) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "ooga-booga / big-mek-in-mega-armour-meganobz / ability:Supa-glowy Fing",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Supa-glowy Fing (Shoota Boyz) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "super-terminators / chaos-terminators / ability:Gore-stained Veterans",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Gore-stained Veterans (Butchers of Khorne) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "super-terminators / chaos-terminators-2 / ability:Gore-stained Veterans",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Gore-stained Veterans (Butchers of Khorne) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "purge-goes-the-foe / tech-priest-enginseer / ability:Necromechanic",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Necromechanic (Cohort Cybernetica) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "purge-goes-the-foe / cybernetica-datasmith-kastelan-robots / ability:Martial Signatum Amplificator",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Martial Signatum Amplificator (Eradication Cohort) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "princes / kh-rn-the-betrayer-khorne-berzerkers / ability:The Betrayer (Khârn the Betrayer)",
+   "field": "ability:The Betrayer (Khârn the Betrayer)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p8, Rules Updates: DATASHEETS / Khârn the Betrayer, The Betrayer Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "princes / kh-rn-the-betrayer-khorne-berzerkers / ability:Blood Surge (Khorne Berzerkers)",
+   "field": "ability:Blood Surge (Khorne Berzerkers)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p8, Rules Updates: DATASHEETS / Khorne Berzerkers, Blood Surge Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "princes / kh-rn-the-betrayer-khorne-berzerkers / ability:Murderous Charge (Khorne Berzerkers)",
+   "field": "ability:Murderous Charge (Khorne Berzerkers)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p8, Rules Updates: DATASHEETS / Khorne Berzerkers, Abilities Section",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "princes / kh-rn-the-betrayer-khorne-berzerkers / ability:Icon of Khorne (Khorne Berzerkers)",
+   "field": "ability:Icon of Khorne (Khorne Berzerkers)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p8, Rules Updates: DATASHEETS / Khorne Berzerkers, Jakhals – Icon of Khorne Wargear Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "princes / lord-on-juggernaut-khorne-berzerkers / ability:Blood Surge (Khorne Berzerkers)",
+   "field": "ability:Blood Surge (Khorne Berzerkers)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p8, Rules Updates: DATASHEETS / Khorne Berzerkers, Blood Surge Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "princes / lord-on-juggernaut-khorne-berzerkers / ability:Murderous Charge (Khorne Berzerkers)",
+   "field": "ability:Murderous Charge (Khorne Berzerkers)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p8, Rules Updates: DATASHEETS / Khorne Berzerkers, Abilities Section",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "princes / lord-on-juggernaut-khorne-berzerkers / ability:Icon of Khorne (Khorne Berzerkers)",
+   "field": "ability:Icon of Khorne (Khorne Berzerkers)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p8, Rules Updates: DATASHEETS / Khorne Berzerkers, Jakhals – Icon of Khorne Wargear Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "princes / slaughterbound-exalted-eightbound / ability:Rend and Tear (Exalted Eightbound)",
+   "field": "ability:Rend and Tear (Exalted Eightbound)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p8, Rules Updates: DATASHEETS / Exalted Eightbound, Rend and Tear Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "princes / chaos-rhino / ability:Meet Any Challenge",
+   "field": "ability:Meet Any Challenge",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p7, Rules Updates: DATASHEETS / Chaos Rhino, Meet Any Challenge Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "standard / angron / ability:Driven by Ultimate Rage (Wrathful Presence: pick one)",
+   "field": "ability:Driven by Ultimate Rage (Wrathful Presence: pick one)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p7, Rules Updates: DATASHEETS / Angron, Driven by Ultimate Rage Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "standard / kh-rn-the-betrayer-khorne-berzerkers / ability:The Betrayer (Khârn the Betrayer)",
+   "field": "ability:The Betrayer (Khârn the Betrayer)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p8, Rules Updates: DATASHEETS / Khârn the Betrayer, The Betrayer Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "standard / kh-rn-the-betrayer-khorne-berzerkers / ability:Blood Surge (Khorne Berzerkers)",
+   "field": "ability:Blood Surge (Khorne Berzerkers)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p8, Rules Updates: DATASHEETS / Khorne Berzerkers, Blood Surge Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "standard / kh-rn-the-betrayer-khorne-berzerkers / ability:Murderous Charge (Khorne Berzerkers)",
+   "field": "ability:Murderous Charge (Khorne Berzerkers)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p8, Rules Updates: DATASHEETS / Khorne Berzerkers, Abilities Section",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "standard / kh-rn-the-betrayer-khorne-berzerkers / ability:Icon of Khorne (Khorne Berzerkers)",
+   "field": "ability:Icon of Khorne (Khorne Berzerkers)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p8, Rules Updates: DATASHEETS / Khorne Berzerkers, Jakhals – Icon of Khorne Wargear Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "standard / slaughterbound-exalted-eightbound / ability:Rend and Tear (Exalted Eightbound)",
+   "field": "ability:Rend and Tear (Exalted Eightbound)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p8, Rules Updates: DATASHEETS / Exalted Eightbound, Rend and Tear Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "standard / chaos-rhino / ability:Meet Any Challenge",
+   "field": "ability:Meet Any Challenge",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p7, Rules Updates: DATASHEETS / Chaos Rhino, Meet Any Challenge Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "standard / exalted-eightbound / ability:Rend and Tear",
+   "field": "ability:Rend and Tear",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p8, Rules Updates: DATASHEETS / Exalted Eightbound, Rend and Tear Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "standard / goremongers / ability:Loping Speed",
+   "field": "ability:Loping Speed",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p8, Rules Updates: DATASHEETS / Goremongers, Loping Speed Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "pubstomper / daemon-prince-of-tzeentch-with-wings / ability:Aetherstride",
+   "field": "ability:Aetherstride",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p10, Rules Updates: DATASHEETS / Daemon Prince of Tzeentch with Wings, Aetherstride Ability",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "pubstomper / sorcerer-in-terminator-armour-scarab-occult-terminators / ability:Marked by Fate (Sorcerer in Terminator Armour)",
+   "field": "ability:Marked by Fate (Sorcerer in Terminator Armour)",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p11, Rules Updates: DATASHEETS / Sorcerer in Terminator Armour, Marked by Fate Ability",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "pubstomper / tzaangor-enlightened-with-fatecaster-greatbows / ability:Malign Trickery",
+   "field": "ability:Malign Trickery",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p11, Rules Updates: DATASHEETS / Tzaangor Enlightened with Fatecaster Greatbows, Malign Trickery Ability",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "nidzillas / the-swarmlord / ability:Malign Presence",
+   "field": "ability:Malign Presence",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p20, Rules Updates: DATASHEETS / The Swarmlord, Malign Presence Ability",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "nidzillas / hive-tyrant / ability:Onslaught",
+   "field": "ability:Onslaught",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p20, Rules Updates: DATASHEETS / Hive Tyrant, Onslaught Ability",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "nidzillas / hive-tyrant / ability:Will of the Hive Mind",
+   "field": "ability:Will of the Hive Mind",
+   "doc": "pack:tyranids",
+   "where": "GW Faction Pack Tyranids PDF p20, Rules Updates: DATASHEETS / Hive Tyrant, Winged Hive Tyrant – Will of the Hive Mind Ability",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "6-bigs / knight-errant / ability:Damaged: 1-9 Wounds Remaining",
+   "field": "ability:Damaged: 1-9 Wounds Remaining",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p27, Rules Updates: DATASHEETS / Canis Rex, Knight Crusader, Knight Defender, Knight Errant, Knight Gallant, Knight Paladin, Knight Preceptor, Knight Warden – Damaged Section",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "6-bigs / knight-paladin / ability:Damaged: 1-9 Wounds Remaining",
+   "field": "ability:Damaged: 1-9 Wounds Remaining",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p27, Rules Updates: DATASHEETS / Canis Rex, Knight Crusader, Knight Defender, Knight Errant, Knight Gallant, Knight Paladin, Knight Preceptor, Knight Warden – Damaged Section",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "6-bigs / knight-warden / ability:Damaged: 1-9 Wounds Remaining",
+   "field": "ability:Damaged: 1-9 Wounds Remaining",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p27, Rules Updates: DATASHEETS / Canis Rex, Knight Crusader, Knight Defender, Knight Errant, Knight Gallant, Knight Paladin, Knight Preceptor, Knight Warden – Damaged Section",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "4-megas-and-a-destrier / canis-rex / ability:Damaged: 1-9 Wounds Remaining",
+   "field": "ability:Damaged: 1-9 Wounds Remaining",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p27, Rules Updates: DATASHEETS / Canis Rex, Knight Crusader, Knight Defender, Knight Errant, Knight Gallant, Knight Paladin, Knight Preceptor, Knight Warden – Damaged Section",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "4-megas-and-a-destrier / knight-crusader / ability:Damaged: 1-9 Wounds Remaining",
+   "field": "ability:Damaged: 1-9 Wounds Remaining",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p27, Rules Updates: DATASHEETS / Canis Rex, Knight Crusader, Knight Defender, Knight Errant, Knight Gallant, Knight Paladin, Knight Preceptor, Knight Warden – Damaged Section",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "super-terminators / angron / ability:Driven by Ultimate Rage (Wrathful Presence: pick one)",
+   "field": "ability:Driven by Ultimate Rage (Wrathful Presence: pick one)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p7, Rules Updates: DATASHEETS / Angron, Driven by Ultimate Rage Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "super-terminators / chaos-terminators / ability:Bloody Fury",
+   "field": "ability:Bloody Fury",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p8, Rules Updates: DATASHEETS / Chaos Terminators, Blood Fury Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "super-terminators / chaos-terminators-2 / ability:Bloody Fury",
+   "field": "ability:Bloody Fury",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p8, Rules Updates: DATASHEETS / Chaos Terminators, Blood Fury Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "super-terminators / goremongers / ability:Loping Speed",
+   "field": "ability:Loping Speed",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p8, Rules Updates: DATASHEETS / Goremongers, Loping Speed Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "purge-goes-the-foe / cybernetica-datasmith-kastelan-robots / ability:Repulsor Grid (Kastelan Robots)",
+   "field": "ability:Repulsor Grid (Kastelan Robots)",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p18, Rules Updates: DATASHEETS / Ironstrider Ballistarii, Ranged Weapons Twin Cognis Autocannon [SUSTAINED HITS 1,TWIN-LINKED] RANGE A BS S AP D 48\" 4 4+ 9 -1 3 Twin Cognis Lascannon [SUSTAINED HITS 1,TWIN-LINKED] RANGE A BS S AP D 48\" 2 4+ 12 -3 D6+1 Kastelan Robots, Repulsor Grid ability",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "purge-goes-the-foe / belisarius-cawl / rules",
+   "field": "rules",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p17, Rules Updates: DATASHEETS / Belisarius Cawl, Corpuscarii Electro-Priests, Cybernetica Datasmith, Fulgurite Electro-Priests, Kastelan Robots, Tech-Priest Dominus, Tech-Priest Enginseer, Tech-Priest Manipulus, Technoarcheologist – Faction Abilities section",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "purge-goes-the-foe / tech-priest-enginseer / rules",
+   "field": "rules",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p17, Rules Updates: DATASHEETS / Belisarius Cawl, Corpuscarii Electro-Priests, Cybernetica Datasmith, Fulgurite Electro-Priests, Kastelan Robots, Tech-Priest Dominus, Tech-Priest Enginseer, Tech-Priest Manipulus, Technoarcheologist – Faction Abilities section",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "purge-goes-the-foe / cybernetica-datasmith-kastelan-robots / rules",
+   "field": "rules",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p17, Rules Updates: DATASHEETS / Belisarius Cawl, Corpuscarii Electro-Priests, Cybernetica Datasmith, Fulgurite Electro-Priests, Kastelan Robots, Tech-Priest Dominus, Tech-Priest Enginseer, Tech-Priest Manipulus, Technoarcheologist – Faction Abilities section",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "purge-goes-the-foe / cybernetica-datasmith-kastelan-robots / rules",
+   "field": "rules",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p17, Rules Updates: DATASHEETS / Belisarius Cawl, Corpuscarii Electro-Priests, Cybernetica Datasmith, Fulgurite Electro-Priests, Kastelan Robots, Tech-Priest Dominus, Tech-Priest Enginseer, Tech-Priest Manipulus, Technoarcheologist – Faction Abilities section",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
    "item": "core / rule:Harpooned / text",
    "field": "text",
    "doc": "pack:tyranids",
    "where": "GW Faction Pack Tyranids PDF p20, Rules Updates: DATASHEETS / Norn Assimilator, [HARPOONED] Weapon Ability",
    "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "pubstomper / defiler / ability:Scuttling Walker",
+   "field": "text",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p7-8 (Defiler datasheet)",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "pubstomper / defiler / ability:Destroyer of Futures",
+   "field": "text",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p7-8 (Defiler datasheet)",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "pubstomper / defiler / ability:Damaged: 1-6 wounds remaining",
+   "field": "text",
+   "doc": "pack:thousand-sons",
+   "where": "GW Faction Pack Thousand Sons PDF p7-8 (Defiler datasheet)",
+   "sha256": "5fdaea586b13dcfdc3254cd763de5a7af1d0851490b035322fc257a33a58049a"
+  },
+  {
+   "item": "6-bigs / knight-destrier / ability:Damaged: 1-6 Wounds Remaining",
+   "field": "text",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p7-8 (Knight Destrier datasheet)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "6-bigs / knight-destrier / ability:Thundercharge",
+   "field": "text",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p7-8 (Knight Destrier datasheet)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "6-bigs / knight-destrier / ability:Ram Jets",
+   "field": "text",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p7-8 (Knight Destrier datasheet)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "6-bigs / knight-destrier / ability:Saturation Fire",
+   "field": "text",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p7-8 (Knight Destrier datasheet)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "4-megas-and-a-destrier / knight-destrier / ability:Damaged: 1-6 Wounds Remaining",
+   "field": "text",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p7-8 (Knight Destrier datasheet)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "4-megas-and-a-destrier / knight-destrier / ability:Thundercharge",
+   "field": "text",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p7-8 (Knight Destrier datasheet)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "4-megas-and-a-destrier / knight-destrier / ability:Ram Jets",
+   "field": "text",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p7-8 (Knight Destrier datasheet)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "4-megas-and-a-destrier / knight-destrier / ability:Saturation Fire",
+   "field": "text",
+   "doc": "pack:imperial-knights",
+   "where": "GW Faction Pack Imperial Knights PDF p7-8 (Knight Destrier datasheet)",
+   "sha256": "7c8c814350363760acda3c53ba4a01d8c5c5703f8e5e16a7b5911d06d612fa81"
+  },
+  {
+   "item": "purge-goes-the-foe / thulia-ghuld / ability:Icon of War",
+   "field": "text",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p9-10 (Thulia Ghuld datasheet)",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "purge-goes-the-foe / thulia-ghuld / ability:Mechanicus Bodyguard",
+   "field": "text",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p9-10 (Thulia Ghuld datasheet)",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "purge-goes-the-foe / thulia-ghuld / ability:Secutor of Olympus",
+   "field": "text",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p9-10 (Thulia Ghuld datasheet)",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "purge-goes-the-foe / thulia-ghuld / ability:Supreme Commander",
+   "field": "text",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p9-10 (Thulia Ghuld datasheet)",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "purge-goes-the-foe / thulia-ghuld / ability:Rod of the War Forge",
+   "field": "text",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "GW Faction Pack Adeptus Mechanicus PDF p9-10 (Thulia Ghuld datasheet)",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
   }
  ]
 }
