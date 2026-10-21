@@ -1,0 +1,14 @@
+[
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "gEvery",
+  "judgement": {
+   "code": "const gEvery = (L, test) => inArmy(L, () => L.units.filter(u => unitRules(u).some(test) && !Object.keys(u.partialRules || {}).some(test)));   // (partialRules: label → the model that has it)"
+  },
+  "source": {
+   "implements": "units with Deep Strike, Scouts or Infiltrators: only when every model of the unit has it (24.09, 24.31; Infiltrators: \"if every model in a unit has this ability\"), as the Overview counts them"
+  },
+  "key": "78331b66e2bbe941"
+ }
+]

@@ -1,0 +1,8 @@
+[
+ {
+  "key": "78331b66e2bbe941",
+  "where": "gEvery",
+  "verdict": "ok",
+  "why": "Still counts a unit only “if every model in this unit has this ability” (24.09 Deep Strike, 24.31 Scouts, 24.20 Infiltrators). partialRules is now a map in all three places in data.js (label → model: Slaughterbound ×2 'Scouts 6\"', Canis Rex 'Lone Operative'), and none is left as an array, so Object.keys gives the labels the tests match. The old (…|| []).some would throw on a map. Run over data.js in node: Slaughterbound + Exalted Eightbound (princes, standard) keep Deep Strike (every model has it) and drop Scouts 6\" (Slaughterbound only). Canis Rex has no Deep Strike/Scouts/Infiltrators, so it is never listed, and its Lone Operative entry doesn’t touch these tests. The 20 other units with these rules have no partialRules and are counted. The logic is the same as the Overview’s everyModel (app.html ~4927)."
+ }
+]
