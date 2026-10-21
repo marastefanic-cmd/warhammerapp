@@ -34,5 +34,14 @@
   "source": "New Recruit marks \"(Kustom Force Field)\" as applied",
   "reason": "New Recruit shows BSData's annotation: Kustom Force Field appends the label \"Kustom Force Field\" to every ranged weapon profile of the unit and changes none of its values (the force field protects the unit; it does not change its weapons). The app marks only values a rule changes.",
   "evidence": "BSData Orks.json, Kustom Force Field (6b9e-c6ae-2626-45c9): modifier { affects: self.entries.group.recursive.profiles.Ranged Weapons, field: annotation, type: append, value: \"Kustom Force Field\" }. The profile is the same with and without it: melee.txt line 166-168 (24\" 3 4+ 9 -2 3, HAZARDOUS, IGNORES COVER) and shooty.txt lines 318-320 (the shooty Big Mek in Mega Armour, no force field)."
+ },
+ {
+  "army": "nidzillas",
+  "unit": "hive-tyrant",
+  "field": "abilities[Monstrous Nemesis].text",
+  "app": "TYRANIDS MONSTER model only. Each time the bearer makes a melee attack that targets a MONSTER or VEHICLE unit, add 1 to the Wound roll.",
+  "source": "Tyranids Monster only. Each time the bearer makes a melee attack that targets a Monster or Vehicle unit, add 1 to the Wound roll.",
+  "reason": "The enhancement's published text reads \"TYRANIDS MONSTER model only.\"; New Recruit (from BSData) prints \"Tyranids Monster only.\" (no \"model\"). The app has the enhancement as the rules publish it, the same text as the Crusher Stampede enhancement in data.js, which verify/texts.js checks.",
+  "evidence": "verify/.cache/waha/tyranids.txt lines 122-123 (Crusher Stampede enhancements): \"- Monstrous Nemesis 25 pts / **TYRANIDS MONSTER** model only. Each time the bearer makes a melee attack that targets a **MONSTER** or **VEHICLE** unit, add 1 to the **Wound roll**.\"; New Recruit: verify/sources/nr/nidzillas.txt p3 (\"Monstrous Nemesis Tyranids Monster only. …\")."
  }
 ]

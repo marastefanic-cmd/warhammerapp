@@ -43,5 +43,14 @@
   "source": "Meganob: ",
   "reason": "Kustom Force Field gives the attached unit 4+ InSv against ranged attacks; BSData writes it as a replace modifier setting InSv to \"4+*\", which New Recruit applies and this check does not. The app shows New Recruit's 4+*, and the unit's \"When targeted\" line says what the * means (Kustom Force Field: 4+ InSv against ranged attacks).",
   "evidence": "BSData Orks.json, Big Mek in Mega Armour › Kustom Force Field (id 6b9e-c6ae-2626-45c9): modifier group \"Kustom Force Field attached unit modifiers\" replaces the InSv characteristic (55a7-5b54-c60d-11dc) of the root entry's Unit profiles with \"4+*\", one modifier without an arg and one with arg \"-\"; this check applies a replace only where its arg occurs. New Recruit prints the result: verify/sources/nr/melee.txt lines 163-164 (\"… 1 4+* 40mm\")."
+ },
+ {
+  "army": "nidzillas",
+  "unit": "hive-tyrant",
+  "field": "ability.text",
+  "app": "Monstrous Nemesis: **TYRANIDS MONSTER** model only. Each time the bearer makes a melee attack that targets a **MONSTER** or **VEHICLE** unit, add 1 to the **Wound roll**.",
+  "source": "**^^Tyranids Monster^^** only. Each time the bearer makes a melee attack that targets a **^^Monster^^** or **^^Vehicle^^** unit, add 1 to the Wound roll.",
+  "reason": "BSData (and so New Recruit) has \"Tyranids Monster only.\" (no \"model\"); the app has the enhancement's wording as the rules publish it (\"TYRANIDS MONSTER model only.\").",
+  "evidence": "verify/.cache/waha/tyranids.txt lines 122-123: \"- Monstrous Nemesis 25 pts / **TYRANIDS MONSTER** model only. Each time the bearer makes a melee attack that targets a **MONSTER** or **VEHICLE** unit, add 1 to the **Wound roll**.\"; BSData verify/.cache/bsdata/Library - Tyranids.json line 9222; verify/texts.js checks the app's text against the Wahapedia detachment page."
  }
 ]

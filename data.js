@@ -2005,9 +2005,16 @@ const ARMIES = [
         { name:'Bone Sabres', range:'Melee', A:'8', WS:'2+', S:'9', AP:'-2', D:'3', kw:['TWIN-LINKED'] }
       ],
       abilities:[
-        { name:'Hive Commander', text:'At the start of your Command phase, if this model is on the battlefield, you gain 1CP' },
-        { name:'Malign Presence', tag:'Aura', text:'Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.' },
-        { name:'Domination of the Hive Mind', tag:'Aura', text:'While a friendly **TYRANIDS** unit is within 9" of this model, that unit is within your army’s Synapse Range.' }
+        { name:'Hive Commander', ph:['command'], turn:'your', text:'At the start of your Command phase, if this model is on the battlefield, you gain 1CP' },
+        { name:'Malign Presence', tag:'Aura', ph:['command','movement','shooting','charge','fight'], turn:'either', text:'Once per turn, when your opponent targets a unit from their army within 12" of this model with a **stratagem**, you can use this ability. If you do increase the CP cost of that use of that **stratagem** by 1CP.' },
+        { name:'Domination of the Hive Mind', tag:'Aura', text:'While a friendly **TYRANIDS** unit is within 9" of this model, that unit is within your army’s **Synapse Range**.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'melee', when:'Within Synapse Range', note:'+1 S', from:'Synapse', rule:'Synapse' }
+      ],
+      aura:[
+        { kind:'all', needs:{ all:['Faction: Tyranids'] }, when:'Within 9" of the Swarmlord', note:'within your army’s Synapse Range', from:'Domination of the Hive Mind' }
       ],
       rules:['Deadly Demise D3','Shadow in the Warp','Synapse','Leader','Twin-linked','Torrent'],
       kw:['Character','Epic Hero','Faction: Tyranids','Great Devourer','Hive Tyrant','Monster','Psyker','Synapse','The Swarmlord']
@@ -2024,9 +2031,17 @@ const ARMIES = [
         { name:'Monstrous scything talons', range:'Melee', A:'4', WS:'2+', S:'7', AP:'-2', D:'2', kw:['EXTRA ATTACKS'] }
       ],
       abilities:[
-        { name:'Onslaught', tag:'Aura, Psychic', text:'While a friendly **TYRANIDS** unit is within 6" of this model, ranged weapons equipped by models in that unit have the **[ASSAULT]** and **[LETHAL HITS]** abilities.' },
-        { name:'Will of the Hive Mind', text:'Once per battle round, one model from your army with this ability can use it when a friendly **TYRANIDS** unit within 12" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.' },
-        { name:'Monstrous Nemesis', tag:'Enhancement', text:'Tyranids Monster only. Each time the bearer makes a melee attack that targets a Monster or Vehicle unit, add 1 to the Wound roll.' }
+        { name:'Onslaught', tag:'Aura, Psychic', ph:['movement','shooting'], turn:'either', turns:{ shooting:'your' }, text:'While a friendly **TYRANIDS** unit is within 6" of this model, ranged weapons equipped by models in that unit have the **[ASSAULT]** and **[LETHAL HITS]** abilities.' },
+        { name:'Will of the Hive Mind', ph:['command','movement','shooting','charge','fight'], turn:'either', text:'Once per battle round, one model from your army with this ability can use it when a friendly **TYRANIDS** unit within 12" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.' },
+        { name:'Monstrous Nemesis', tag:'Enhancement', ph:['fight'], turn:'either', text:'**TYRANIDS MONSTER** model only. Each time the bearer makes a melee attack that targets a **MONSTER** or **VEHICLE** unit, add 1 to the **Wound roll**.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'melee', when:'Within Synapse Range', note:'+1 S', from:'Synapse', rule:'Synapse' },
+        { kind:'melee', when:'vs MONSTER/VEHICLE', note:'+1 to wound rolls', from:'Monstrous Nemesis' }
+      ],
+      aura:[
+        { kind:'ranged', needs:{ all:['Faction: Tyranids'] }, when:'Within 6" of the Hive Tyrant', note:'ranged weapons have [ASSAULT] and [LETHAL HITS]', from:'Onslaught' }
       ],
       rules:['Deadly Demise D3','Shadow in the Warp','Synapse','Leader','Twin-linked','Extra Attacks'],
       kw:['Character','Faction: Tyranids','Great Devourer','Hive Tyrant','Monster','Psyker','Synapse','Warlord']
@@ -2043,7 +2058,11 @@ const ARMIES = [
         { name:'Chitinous claws and teeth', n:11, range:'Melee', A:'1', WS:'4+', S:'3', AP:'0', D:'1', kw:[] }
       ],
       abilities:[
-        { name:'Neurocytes', text:'While this unit is within Synapse Range of your friendly Tyranids unit (excluding Neurogaunt units), it has the Synapse keyword.' }
+        { name:'Neurocytes', text:'While this unit is within **Synapse Range** of your friendly **TYRANIDS** unit (excluding **NEUROGAUNT** units), it has the **SYNAPSE** keyword.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'melee', when:'Within Synapse Range', note:'+1 S', from:'Synapse', rule:'Synapse' }
       ],
       rules:['Synapse'],
       kw:['Endless Multitude','Faction: Tyranids','Great Devourer','Infantry','Neurogaunts']
@@ -2063,11 +2082,18 @@ const ARMIES = [
         { name:'Toxinjecter Harpoon', range:'Melee', A:'4', WS:'2+', S:'12', AP:'-3', D:'D6+1', kw:['EXTRA ATTACKS'] }
       ],
       abilities:[
-        { name:'Harpoon Barbs', text:'Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.' },
-        { name:'Damaged: 1-5 Wounds Remaining', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' },
-        { name:'Singular Purpose', text:'At the start of the first battle round, select one of the following: Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.' },
-        { name:'Protean Purpose', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
+        { name:'Harpoon Barbs', ph:['movement'], turn:'opp', text:'Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.' },
+        { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.' },
+        { name:'Singular Purpose', tag:'Start of the first battle round', ph:['command','movement','shooting','charge','fight'], turn:'either', def:'If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it',
+          text:'At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.' },
+        { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
         { name:'Synaptoprescience', tag:'Enhancement', text:'**NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'melee', when:'Within Synapse Range', note:'+1 S', from:'Synapse', rule:'Synapse' },
+        { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-5 Wounds Remaining' },
+        { kind:'all', when:'If its Singular Purpose is an enemy unit, vs that unit', note:'re-roll hit rolls and wound rolls', from:'Singular Purpose' }
       ],
       rules:['Deadly Demise D6','Shadow in the Warp','Synapse','Harpooned','Extra Attacks'],
       kw:['Faction: Tyranids','Great Devourer','Harvester','Monster','Norn Assimilator','Synapse']
@@ -2087,11 +2113,18 @@ const ARMIES = [
         { name:'Toxinjecter Harpoon', range:'Melee', A:'4', WS:'2+', S:'12', AP:'-3', D:'D6+1', kw:['EXTRA ATTACKS'] }
       ],
       abilities:[
-        { name:'Harpoon Barbs', text:'Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.' },
-        { name:'Damaged: 1-5 Wounds Remaining', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' },
-        { name:'Singular Purpose', text:'At the start of the first battle round, select one of the following: Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.' },
-        { name:'Protean Purpose', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
+        { name:'Harpoon Barbs', ph:['movement'], turn:'opp', text:'Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.' },
+        { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.' },
+        { name:'Singular Purpose', tag:'Start of the first battle round', ph:['command','movement','shooting','charge','fight'], turn:'either', def:'If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it',
+          text:'At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.' },
+        { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
         { name:'Synaptoprescience', tag:'Enhancement', text:'**NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'melee', when:'Within Synapse Range', note:'+1 S', from:'Synapse', rule:'Synapse' },
+        { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-5 Wounds Remaining' },
+        { kind:'all', when:'If its Singular Purpose is an enemy unit, vs that unit', note:'re-roll hit rolls and wound rolls', from:'Singular Purpose' }
       ],
       rules:['Deadly Demise D6','Shadow in the Warp','Synapse','Harpooned','Extra Attacks'],
       kw:['Faction: Tyranids','Great Devourer','Harvester','Monster','Norn Assimilator','Synapse']
@@ -2113,11 +2146,18 @@ const ARMIES = [
         { name:'Monstrous scything talons', range:'Melee', A:'6', WS:'2+', S:'9', AP:'-2', D:'3', kw:[] }
       ],
       abilities:[
-        { name:'Singular Purpose', text:'At the start of the first battle round, select one of the following: Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.' },
-        { name:'Damaged: 1-5 Wounds Remaining', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' },
-        { name:'Protean Purpose', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
+        { name:'Singular Purpose', tag:'Start of the first battle round', ph:['command','movement','shooting','charge','fight'], turn:'either', def:'If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it',
+          text:'At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.' },
+        { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.' },
+        { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
         { name:'Destabilising Predation', tag:'Enhancement', text:'**NORN EMISSARY** unit only. This unit’s ranged attacks have **[ANTI-CHARACTER 2+]**.' },
-        { name:'Unnatural Resistance', text:'This model has the **Feel No Pain 4+** ability against **mortal wounds**.' }
+        { name:'Unnatural Resistance', def:'Feel No Pain 4+ against mortal wounds', text:'This model has the **Feel No Pain 4+** ability against Mortal Wounds.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'melee', when:'Within Synapse Range', note:'+1 S', from:'Synapse', rule:'Synapse' },
+        { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-5 Wounds Remaining' },
+        { kind:'all', when:'If its Singular Purpose is an enemy unit, vs that unit', note:'re-roll hit rolls and wound rolls', from:'Singular Purpose' }
       ],
       rules:['Deadly Demise D6','Shadow in the Warp','Synapse','Feel No Pain','Anti','Extra Attacks','Melta','Blast','Psychic'],
       kw:['Faction: Tyranids','Great Devourer','Monster','Norn Emissary','Psyker','Synapse']
@@ -2139,10 +2179,17 @@ const ARMIES = [
         { name:'Monstrous scything talons', range:'Melee', A:'6', WS:'2+', S:'9', AP:'-2', D:'3', kw:[] }
       ],
       abilities:[
-        { name:'Singular Purpose', text:'At the start of the first battle round, select one of the following: Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.' },
-        { name:'Damaged: 1-5 Wounds Remaining', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' },
-        { name:'Protean Purpose', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
-        { name:'Unnatural Resistance', text:'This model has the **Feel No Pain 4+** ability against **mortal wounds**.' }
+        { name:'Singular Purpose', tag:'Start of the first battle round', ph:['command','movement','shooting','charge','fight'], turn:'either', def:'If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it',
+          text:'At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.' },
+        { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.' },
+        { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
+        { name:'Unnatural Resistance', def:'Feel No Pain 4+ against mortal wounds', text:'This model has the **Feel No Pain 4+** ability against Mortal Wounds.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'melee', when:'Within Synapse Range', note:'+1 S', from:'Synapse', rule:'Synapse' },
+        { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-5 Wounds Remaining' },
+        { kind:'all', when:'If its Singular Purpose is an enemy unit, vs that unit', note:'re-roll hit rolls and wound rolls', from:'Singular Purpose' }
       ],
       rules:['Deadly Demise D6','Shadow in the Warp','Synapse','Feel No Pain','Extra Attacks','Melta','Blast','Psychic'],
       kw:['Faction: Tyranids','Great Devourer','Monster','Norn Emissary','Psyker','Synapse']
@@ -2162,8 +2209,13 @@ const ARMIES = [
         { name:'Powerful limbs', range:'Melee', A:'4', WS:'3+', S:'8', AP:'0', D:'2', kw:[] }
       ],
       abilities:[
-        { name:'Resilient Organism', text:'Once per battle, when an attack is allocated to this model, you can change the Damage characteristic of that attack to 0.' },
-        { name:'Damaged: 1-5 Wounds Remaining', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' }
+        { name:'Resilient Organism', tag:'Once per battle', def:'Once per battle: change the Damage of an attack allocated to it to 0', text:'Once per battle, when an attack is allocated to this model, you can change the Damage characteristic of that attack to 0.' },
+        { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'melee', when:'Within Synapse Range', note:'+1 S', from:'Synapse', rule:'Synapse' },
+        { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-5 Wounds Remaining' }
       ],
       rules:['Deadly Demise D6','Synapse','Torrent'],
       kw:['Faction: Tyranids','Great Devourer','Monster','Tyrannofex']

@@ -43,5 +43,14 @@
   "source": "matches the less authoritative Wahapedia main text, not the Faction Pack: Rules Updates \"Change first paragraph to:\": if your army faction is thousand sons, at the start of your shooting phase, one or more models from your army with this ability can attempt rituals from those listed on the right. to do so, select one model from your army with this ability that has not yet attempted a ritual this turn and select one ritual no model from your army has attempted to manifest this turn, then take a psychic test for that model by following the sequence below. | differs at \"…mpt rituals from those listed [below. to do so, select one model from y…]\" vs source \"…mpt rituals from those listed [on the right. to do so, select one model…]\"",
   "reason": "Layout cross-reference. The Faction Pack's Rules Update rewrites the first paragraph with \"from those listed on the right\" (the codex prints the Rituals beside it); the app prints the Rituals below the text and keeps Wahapedia's \"listed below\". The rest of the paragraph is the pack's text word for word. PROPOSED: the coordinator decides whether the app prints \"on the right\".",
   "evidence": "GW Faction Pack Thousand Sons v1.3 PDF p9, Rules Updates, Army Rules, Cabal of Sorcerers, \"Change first paragraph to\": \"…attempt Rituals from those listed on the right.…\"; Wahapedia thousand-sons Army Rules: \"…listed below.…\" (its errata spoiler repeats the pack's \"on the right\")."
+ },
+ {
+  "army": "nidzillas",
+  "unit": "hive-tyrant",
+  "field": "ability:Onslaught",
+  "app": "While a friendly **TYRANIDS** unit is within 6\" of this model, ranged weapons equipped by models in that unit have the **[ASSAULT]** and **[LETHAL HITS]** abilities.",
+  "source": "Rules Updates \"Change to:\": while a friendly tyranidsunit is within 6\" of this model, ranged weapons equipped by models in that unit have the [assault] and [lethal hits] abilities. | differs at \"…while a friendly tyranids[ unit is within 6\" of this model, ranged…]\" vs source \"…while a friendly tyranids[unit is within 6\" of this model, ranged …]\"",
+  "reason": "Typo in the Faction Pack: \"TYRANIDSunit\" has no space; the app writes \"TYRANIDS unit\". Every other word is the pack's.",
+  "evidence": "GW Faction Pack Tyranids v1.3 PDF p20, Rules Updates, Hive Tyrant, Onslaught Ability (verify/.cache/gw/eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.txt line 665: \"‘While a friendly TYRANIDSunit is within 6\" of this model, ranged\"): pdftotext -bbox gives one word box \"TYRANIDSunit\" (x 101.2-147.9), where \"TYRANIDS\" alone is 33.2pt wide on the same page (x 119.4-152.6). New Recruit prints \"friendly TYRANIDS unit\" (verify/sources/nr/nidzillas.txt p3)."
  }
 ]
