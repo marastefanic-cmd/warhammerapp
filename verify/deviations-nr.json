@@ -405,15 +405,6 @@
  },
  {
   "army": "4-megas-and-a-destrier",
-  "unit": "canis-rex",
-  "field": "stats[Sir Hekhtur].base",
-  "app": "25mm",
-  "source": "170x109mm",
-  "reason": "GW's Base Size Guide gives Sir Hekhtur a 25mm base; BSData gives his model profile Canis Rex's 170x109mm and New Recruit prints it (play-test finding B2, confirmed by the independent check). Bases & proxies counts his base from this value.",
-  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2508-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 3347-3348 (\"Canis Rex 170x109mm Oval Base\", \"Sir Hekhtur 25mm\"); verify/.cache/bsdata/Imperium - Imperial Knights - Library.json line 470 (Sir Hekhtur profile, Base 170x109mm); verify/sources/nr/4-megas-and-a-destrier.txt line 29."
- },
- {
-  "army": "4-megas-and-a-destrier",
   "unit": "knight-destrier",
   "field": "stats[Knight Destrier].InSv",
   "app": "5+",

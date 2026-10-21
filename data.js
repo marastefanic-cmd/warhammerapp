@@ -2686,14 +2686,13 @@ const ARMIES = [
     {
       id:'canis-rex', name:'Canis Rex', role:'Epic Hero', pts:415,
       // BSData has Lone Operative on the Sir Hekhtur model only, not on Canis Rex (24.24.01: an attached unit benefits only if
-      // all its models have it). Sir Hekhtur's base: GW's Base Size Guide (Event Companion, Oct 2026) "Sir Hekhtur 25mm";
-      // BSData, and so New Recruit, give him Canis Rex's 170×109mm (deviations-nr.json, deviations-bsdata.json)
+      // all its models have it)
       partialRules:{ 'Lone Operative':'Sir Hekhtur' },
       models:['1× Canis Rex','1× Sir Hekhtur'],
       gear:[['Freedom’s Hand','Las-impulsor','Questoris multi-laser'],['Close combat weapon','Hekhtur’s pistol']],
       stats:[
         { name:'Canis Rex', M:'10"', T:'11', Sv:'3+', W:'26', Ld:'6+', OC:'10', InSv:'5+*', base:'170×109mm' },
-        { name:'Sir Hekhtur', M:'6"', T:'3', Sv:'4+', W:'3', Ld:'5+', OC:'1', InSv:'–', base:'25mm' }
+        { name:'Sir Hekhtur', M:'6"', T:'3', Sv:'4+', W:'3', Ld:'5+', OC:'1', InSv:'–', base:'170×109mm' }
       ],
       ranged:[
         { group:'Las-impulsor', name:'high intensity', range:'24"', A:'D6', BS:'2+', S:'14', AP:'-3', D:'4', kw:['BLAST','SUSTAINED HITS 1'] },
