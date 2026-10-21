@@ -1,0 +1,468 @@
+[
+ {
+  "army": "shooty",
+  "kind": "ability-calc",
+  "where": "shooty · Wazdakka Gutsmek · Pulse Jet",
+  "judgement": {
+   "calcDef": "After a pulse jet move: attacks that target it have -1 to hit rolls, until the start of your next turn",
+   "defCalc": {
+    "hitMinus": 1
+   },
+   "lasts": "round",
+   "models": [
+    "1× Wazdakka Gutsmek"
+   ]
+  },
+  "source": {
+   "ability": "Pulse Jet",
+   "text": "In your Movement phase, when this unit is **selected to move**, if this unit is **unengaged**, this unit can make a **pulse jet move**."
+  },
+  "key": "981dcf4a4659f727"
+ },
+ {
+  "army": "shooty",
+  "kind": "strat-react",
+  "where": "Wreckas · Gun-crazy Show-offs",
+  "judgement": {
+   "react": "hit"
+  },
+  "source": {
+   "stratagem": "Gun-crazy Show-offs",
+   "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit has shot.\nTARGET: One friendly **FLASH GITZ**/**TANKBUSTAS** unit hit by those attacks.\nEFFECT: Your unit shoots using **normal shooting**, but while doing so your unit can only target that enemy unit."
+  },
+  "key": "e7efe362b8110bc5"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "rule-calcMods",
+  "where": "world-eaters army rule · Blessings of Khorne",
+  "judgement": {
+   "calcMods": [
+    {
+     "kind": "melee",
+     "from": "Martial Excellence",
+     "limit": "blessing",
+     "lasts": "round",
+     "when": "Blessing of Khorne active this battle round",
+     "note": "[SUSTAINED HITS 1]"
+    },
+    {
+     "kind": "melee",
+     "from": "Warp Blades",
+     "limit": "blessing",
+     "lasts": "round",
+     "when": "Blessing of Khorne active this battle round",
+     "note": "[LETHAL HITS]"
+    },
+    {
+     "kind": "melee",
+     "from": "Decapitating Strikes",
+     "limit": "blessing",
+     "lasts": "round",
+     "when": "Blessing of Khorne active this battle round, melee attacks that target an INFANTRY unit",
+     "note": "[DEVASTATING WOUNDS]",
+     "vs": {
+      "any": [
+       "Infantry"
+      ]
+     }
+    },
+    {
+     "kind": "melee",
+     "from": "Total Carnage",
+     "limit": "blessing",
+     "lasts": "round",
+     "when": "Blessing of Khorne active this battle round",
+     "note": "fighting back: its models destroyed by melee attacks before it fought fight on a 4+, then are removed",
+     "onDeath": {
+      "roll": 4
+     },
+     "calc": {}
+    }
+   ]
+  },
+  "source": {
+   "rule": "Blessings of Khorne",
+   "text": "If your Army Faction is **WORLD EATERS**, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.\n*Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.*\n*First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.*\n*They then use the two 2s to activate Unbridled Bloodlust.*\n*Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.*\nUnbridled Bloodlust · double 1+: This unit has +1 to **charge rolls**.\nRage-fuelled Invigoration · double 2+: Each time a model in this unit makes a Pile-in or **Consolidation move**, it can move up to 6\" instead of up to 3\".\nTotal Carnage · double 3+: Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.\nMartial Excellence · double 4+ or triple 1+: Melee weapons equipped by models in this unit have the **[SUSTAINED HITS 1]** ability.\nWarp Blades · double 5+ or triple 2+: Melee weapons equipped by models in this unit have the **[LETHAL HITS]** ability.\nDecapitating Strikes · double 6 or triple 3+: Each time a model in this unit makes a melee attack that targets an **INFANTRY** unit, that attack has the **[DEVASTATING WOUNDS]** ability."
+  },
+  "key": "21be80a6648299f4"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "rule-limit",
+  "where": "world-eaters army rule · Blessings of Khorne",
+  "judgement": {
+   "limit": {
+    "blessing": {
+     "n": 2,
+     "what": "Blessings of Khorne",
+     "more": [
+      {
+       "strat": "skulls-for-the-skull-throne",
+       "n": 1
+      },
+      {
+       "rule": "Adamantine Avalanche",
+       "n": 1
+      },
+      {
+       "enhancement": "Archslaughterer",
+       "all": true
+      }
+     ]
+    }
+   }
+  },
+  "source": {
+   "rule": "Blessings of Khorne",
+   "text": "If your Army Faction is **WORLD EATERS**, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.\n*Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.*\n*First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.*\n*They then use the two 2s to activate Unbridled Bloodlust.*\n*Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.*\nUnbridled Bloodlust · double 1+: This unit has +1 to **charge rolls**.\nRage-fuelled Invigoration · double 2+: Each time a model in this unit makes a Pile-in or **Consolidation move**, it can move up to 6\" instead of up to 3\".\nTotal Carnage · double 3+: Each time a model in this unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.\nMartial Excellence · double 4+ or triple 1+: Melee weapons equipped by models in this unit have the **[SUSTAINED HITS 1]** ability.\nWarp Blades · double 5+ or triple 2+: Melee weapons equipped by models in this unit have the **[LETHAL HITS]** ability.\nDecapitating Strikes · double 6 or triple 3+: Each time a model in this unit makes a melee attack that targets an **INFANTRY** unit, that attack has the **[DEVASTATING WOUNDS]** ability."
+  },
+  "key": "4ed5ba4e60443c26"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "rule-calcMods",
+  "where": "thousand-sons army rule · Cabal of Sorcerers",
+  "judgement": {
+   "calcMods": [
+    {
+     "kind": "ranged",
+     "from": "Destiny’s Ruin",
+     "help": true,
+     "needs": {
+      "any": [
+       "Faction: Thousand Sons",
+       "Scintillating Legions"
+      ]
+     },
+     "when": "Your Shooting phase, manifested against this target (Warp Charge 5)",
+     "note": "re-roll hit rolls of 1 (10+: re-roll hit rolls)",
+     "pick": [
+      {
+       "name": "Result 5-9",
+       "note": "re-roll hit rolls of 1"
+      },
+      {
+       "name": "Result 10+",
+       "note": "re-roll hit rolls"
+      }
+     ]
+    },
+    {
+     "kind": "ranged",
+     "from": "Twist of Fate",
+     "help": true,
+     "needs": {
+      "any": [
+       "Faction: Thousand Sons",
+       "Scintillating Legions"
+      ]
+     },
+     "when": "Your Shooting phase, manifested against this target (Warp Charge 9)",
+     "note": "+1 AP (12+: +2 AP)",
+     "pick": [
+      {
+       "name": "Result 9-11",
+       "note": "+1 AP"
+      },
+      {
+       "name": "Result 12+",
+       "note": "+2 AP"
+      }
+     ]
+    }
+   ]
+  },
+  "source": {
+   "rule": "Cabal of Sorcerers",
+   "text": "If your Army Faction is **THOUSAND SONS**, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.\n**Psychic Test Sequence**\n- **Roll 2D6**\n- **Channel the Warp** (Optional)\n- Then, if one or more doubles or triples were rolled during this test, that model’s unit suffers D3 mortal wounds.\n- If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects.\n*FAQ (Faction Pack 1.3): Do I need to sequence all of my Cabal of Sorcerers Rituals at the start of my Shooting phase? No, you just pick a model with the Cabal of Sorcerers rule, pick a Ritual to manifest, and attempt it, then repeat the process until you have run out of models or Rituals or both.*\n*FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, do I have to choose whether to Channel the Warp before rolling any dice? No.*\n*FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, if I roll one or more doubles or triples, does my model only suffer D3 mortal wounds if I chose to Channel the Warp? Yes.*\n*App note, not rules text: Channel the Warp means rolling one more D6 for the test (the printed card shows it as a die).*\nDestiny’s Ruin (Psychic) · Warp Charge 5: Select one enemy unit within 24\" of and **visible** to the manifesting model. Until the end of the phase, each time a **THOUSAND SONS** or **SCINTILLATING LEGIONS** model from your army makes an attack that targets that unit, re-roll a **Hit roll** of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.\nTemporal Surge (Psychic) · Warp Charge 6: Select one friendly **THOUSAND SONS** or **SCINTILLATING LEGIONS** unit that is not within **Engagement Range** of one or more enemy units and is within 24\" of and **visible** to the manifesting model. That unit can make a **Normal move** of up to D6\". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6\" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.\nDoombolt (Psychic) · Warp Charge 7: Select one enemy unit within 24\" of and **visible** to the manifesting model (excluding units with the **Lone Operative** ability that are not part of an Attached unit and are not within 12\" of the manifesting model); that unit suffers D3 **mortal wounds**. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.\nTwist of Fate (Psychic) · Warp Charge 9: Select one enemy unit within 24\" of and **visible** to the manifesting model. Until the end of the phase, each time a **THOUSAND SONS** or **SCINTILLATING LEGIONS** model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead."
+  },
+  "key": "cf3efc5a4a626bc8"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "rule-calcNc",
+  "where": "imperial-knights army rule · Code Chivalric",
+  "judgement": {
+   "calcNc": [
+    {
+     "kind": "all",
+     "from": "Code Chivalric",
+     "when": "Quality 1–2 (…with our martial valour risen over all)",
+     "note": "each time this model is selected to shoot or fight, you can re-roll one Hit roll and one Wound roll",
+     "why": "one re-roll: the calculator re-rolls no single die"
+    }
+   ]
+  },
+  "source": {
+   "rule": "Code Chivalric",
+   "text": "If your Army Faction is **IMPERIAL KNIGHTS**, at the end of the Read Mission Objectives step, you must determine your army’s Oath for the coming battle. An Oath consists of two parts - one Deed and one Quality. There are three options for each part, shown below.\nTo determine your army’s Deed, you can either select one Deed or you can randomly select one Deed by rolling a D6 and consulting the relevant table below. The selected Deed will describe what needs to be achieved in order to complete that Deed.\nTo determine your army’s Quality, you can either select one Quality or you can randomly select one Quality by rolling a D6 and consulting the relevant table below. Until the end of the battle, the ability described in the Quality selected applies to all models in your army with this ability.\nThe first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).\nDeed 1–2 · We vow to lay low the tyrant…: At the start of the battle, select one **CHARACTER** model in your opponent’s army. This Deed is completed at the end of a turn if that **CHARACTER** is destroyed.\nDeed 3–4 · We swear to reclaim the realm…: This deed is completed at the end of your opponent’s turn if you control more objective markers than your opponent.\nDeed 5–6 · We pledge to reap a great tally…: This deed is completed at the end of the battle round if the number of enemy units destroyed this battle round is greater than the battle round number even if those units are subsequently returned to the battlefield (for example, two destroyed enemy units in the first battle round).\nQuality 1–2 · …with our martial valour risen over all: Each time this model is selected to shoot or fight, you can re-roll one **Hit roll** and you can re-roll one **Wound roll**.\nQuality 3–4 · …and we are eager for the challenge: Add 2\" to this model’s Move characteristic and add 1 to **Advance** and **Charge rolls** made for this model.\nQuality 5–6 · …yet shall our legacy be unsullied: Improve this model’s Objective Control characteristic by 2 and its Leadership characteristic by 1."
+  },
+  "key": "f594320e19035d67"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "ability-calc",
+  "where": "4-megas-and-a-destrier · Canis Rex · Using Sir Hekhtur",
+  "judgement": {
+   "embarked": {
+    "model": "Sir Hekhtur",
+    "until": "Canis Rex"
+   },
+   "models": [
+    "1× Canis Rex",
+    "1× Sir Hekhtur"
+   ]
+  },
+  "source": {
+   "ability": "Using Sir Hekhtur",
+   "text": "If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. Your Canis Rex unit is not considered to be destroyed until Sir Hekhtur is also destroyed."
+  },
+  "key": "084c191a9eb35f6a"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-shield",
+  "where": "Runt Swarm · Grot Shields",
+  "judgement": {
+   "shield": {
+    "protects": {
+     "all": [
+      "Faction: Orks",
+      "Infantry"
+     ],
+     "none": [
+      "Gretchin"
+     ]
+    },
+    "by": {
+     "all": [
+      "Gretchin"
+     ]
+    }
+   }
+  },
+  "source": {
+   "stratagem": "Grot Shields",
+   "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **ORKS INFANTRY** unit (excluding **GRETCHIN** units).\nTARGET: One friendly **GRETCHIN** unit within 3\" of that **ORKS INFANTRY** unit.\nEFFECT: When a **hit roll** for that enemy unit’s ranged attacks that target that **ORKS** unit results in a hit, if a model in your **GRETCHIN** unit is on the battlefield, end the attack sequence for that attack and your **GRETCHIN** unit suffers 1 **mortal wound**."
+  },
+  "key": "f4665a8485524b82"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "rule-calcMods",
+  "where": "adeptus-mechanicus army rule · Doctrina Imperatives",
+  "judgement": {
+   "calcMods": [
+    {
+     "kind": "ranged",
+     "lasts": "round",
+     "when": "The Imperative active for your army this battle round",
+     "note": "Protector: [HEAVY], BS improved by 1 · Conqueror: [ASSAULT] · +1 AP with Conqueror if this unit is BATTLELINE or within 6\" of a friendly ADEPTUS MECHANICUS BATTLELINE unit",
+     "pick": [
+      {
+       "name": "Protector",
+       "note": "[HEAVY], BS improved by 1",
+       "calc": {
+        "heavy": true,
+        "skill": 1
+       }
+      },
+      {
+       "name": "Conqueror",
+       "note": "[ASSAULT] (no change here)",
+       "calc": {}
+      },
+      {
+       "name": "Both",
+       "both": true,
+       "note": "[HEAVY], BS improved by 1, [ASSAULT]",
+       "calc": {
+        "heavy": true,
+        "skill": 1
+       }
+      }
+     ],
+     "part": {
+      "cond": "battleline6",
+      "picks": [
+       "Conqueror",
+       "Both"
+      ],
+      "calc": {
+       "ap": 1
+      },
+      "note": "+1 AP"
+     }
+    },
+    {
+     "kind": "melee",
+     "lasts": "round",
+     "when": "The Imperative active for your army this battle round",
+     "note": "Conqueror: WS improved by 1 · +1 AP with Conqueror if this unit is BATTLELINE or within 6\" of a friendly ADEPTUS MECHANICUS BATTLELINE unit · Protector: nothing for its melee attacks",
+     "pick": [
+      {
+       "name": "Protector",
+       "note": "nothing for its melee attacks",
+       "calc": {}
+      },
+      {
+       "name": "Conqueror",
+       "note": "WS improved by 1",
+       "calc": {
+        "skill": 1
+       }
+      },
+      {
+       "name": "Both",
+       "both": true,
+       "note": "WS improved by 1",
+       "calc": {
+        "skill": 1
+       }
+      }
+     ],
+     "part": {
+      "cond": "battleline6",
+      "picks": [
+       "Conqueror",
+       "Both"
+      ],
+      "calc": {
+       "ap": 1
+      },
+      "note": "+1 AP"
+     }
+    }
+   ]
+  },
+  "source": {
+   "rule": "Doctrina Imperatives",
+   "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\nProtector Imperative: - Ranged weapons equipped by models in this unit have the **[HEAVY]** ability.\n- Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n- Each time a melee attack targets this unit, if this unit has the **BATTLELINE** keyword and/or it is within 6\" of one or more friendly **ADEPTUS MECHANICUS BATTLELINE** units, subtract 1 from the **Hit roll**.\nConqueror Imperative: - Ranged weapons equipped by models in this unit have the **[ASSAULT]** ability.\n- Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n- Each time a model in this unit makes an attack, if this unit has the **BATTLELINE** keyword and/or it is within 6\" of one or more friendly **ADEPTUS MECHANICUS BATTLELINE** units, improve the Armour Penetration characteristic of that attack by 1."
+  },
+  "key": "51a1cd0f752d4cf4"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "rule-calcDefs",
+  "where": "adeptus-mechanicus army rule · Doctrina Imperatives",
+  "judgement": {
+   "calcDefs": [
+    {
+     "kind": "melee",
+     "lasts": "round",
+     "when": "Melee attacks that target this unit",
+     "note": "Protector: -1 to the hit roll if this unit is BATTLELINE or within 6\" of a friendly ADEPTUS MECHANICUS BATTLELINE unit",
+     "pick": [
+      {
+       "name": "Protector",
+       "calc": {}
+      },
+      {
+       "name": "Conqueror",
+       "note": "nothing against melee attacks",
+       "calc": {}
+      },
+      {
+       "name": "Both",
+       "both": true,
+       "calc": {}
+      }
+     ],
+     "part": {
+      "cond": "battleline6",
+      "picks": [
+       "Protector",
+       "Both"
+      ],
+      "calc": {
+       "hitMinus": 1
+      },
+      "note": "-1 to their hit rolls"
+     }
+    }
+   ]
+  },
+  "source": {
+   "rule": "Doctrina Imperatives",
+   "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\nProtector Imperative: - Ranged weapons equipped by models in this unit have the **[HEAVY]** ability.\n- Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n- Each time a melee attack targets this unit, if this unit has the **BATTLELINE** keyword and/or it is within 6\" of one or more friendly **ADEPTUS MECHANICUS BATTLELINE** units, subtract 1 from the **Hit roll**.\nConqueror Imperative: - Ranged weapons equipped by models in this unit have the **[ASSAULT]** ability.\n- Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n- Each time a model in this unit makes an attack, if this unit has the **BATTLELINE** keyword and/or it is within 6\" of one or more friendly **ADEPTUS MECHANICUS BATTLELINE** units, improve the Armour Penetration characteristic of that attack by 1."
+  },
+  "key": "17ce58a4f5590972"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "rule-both",
+  "where": "adeptus-mechanicus army rule · Doctrina Imperatives",
+  "judgement": {
+   "both": [
+    {
+     "enhancement": "Omnicogitator"
+    },
+    {
+     "strat": "transcendent-cogitation"
+    },
+    {
+     "ability": "Icon of War",
+     "part": "The Fires of Mars",
+     "of": "Thulia Ghuld",
+     "needs": {
+      "any": [
+       "Skitarii",
+       "Thulia Ghuld"
+      ]
+     }
+    }
+   ]
+  },
+  "source": {
+   "rule": "Doctrina Imperatives",
+   "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\nProtector Imperative: - Ranged weapons equipped by models in this unit have the **[HEAVY]** ability.\n- Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n- Each time a melee attack targets this unit, if this unit has the **BATTLELINE** keyword and/or it is within 6\" of one or more friendly **ADEPTUS MECHANICUS BATTLELINE** units, subtract 1 from the **Hit roll**.\nConqueror Imperative: - Ranged weapons equipped by models in this unit have the **[ASSAULT]** ability.\n- Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n- Each time a model in this unit makes an attack, if this unit has the **BATTLELINE** keyword and/or it is within 6\" of one or more friendly **ADEPTUS MECHANICUS BATTLELINE** units, improve the Armour Penetration characteristic of that attack by 1."
+  },
+  "key": "a667d6acb47ab155"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "rule-mod",
+  "where": "Eradication Cohort rule · Murderous Imperative",
+  "judgement": {
+   "mod": {
+    "kind": "all",
+    "when": "Protector or Conqueror Imperative active for this unit",
+    "note": "Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1",
+    "follow": "Doctrina Imperatives",
+    "pick": [
+     {
+      "name": "Protector",
+      "note": "re-roll hit rolls of 1"
+     },
+     {
+      "name": "Conqueror",
+      "note": "re-roll wound rolls of 1"
+     },
+     {
+      "name": "Both",
+      "note": "re-roll hit rolls of 1 and wound rolls of 1"
+     }
+    ]
+   }
+  },
+  "source": {
+   "rule": "Murderous Imperative",
+   "text": "Each time a model in a **SKITARII** unit from your army makes an attack:\n- If the Protector Imperative is active for that unit, re-roll a **Hit roll** of 1.\n- If the Conqueror Imperative is active for that unit, re-roll a **Wound roll** of 1."
+  },
+  "key": "1518e797a995a17b"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-react",
+  "where": "Eradication Cohort · Analytic Reprisals",
+  "judgement": {
+   "react": "lost"
+  },
+  "source": {
+   "stratagem": "Analytic Reprisals",
+   "text": "WHEN: Your opponent’s Shooting phase, just after an enemy unit has shot.\nTARGET: One **SKITARII INFANTRY** unit from your army that lost one or more models as a result of the attacking unit’s attacks.\nEFFECT: Your unit can shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target."
+  },
+  "key": "6cce455c0fd4f898"
+ }
+]

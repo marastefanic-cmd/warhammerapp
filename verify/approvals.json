@@ -233,6 +233,12 @@
   "at": "2026-10-17",
   "why": "“WHEN: Your Shooting phase, when a friendly ORKS INFANTRY unit is selected to shoot.” Shooting."
  },
+ "084c191a9eb35f6a": {
+  "verdict": "ok",
+  "by": "review:r20-damage",
+  "at": "2026-10-21",
+  "why": "“If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport” (18.05: “Your unit is set up”), so Sir Hekhtur is not on the battlefield until then. His weapons start unticked with that quote (“yours to count anyway”), and the target is Canis Rex alone (T11 · Sv 3+ · W26), with the working saying the rest of an attack after that is not played. Small follow-up, not this mark: the headline “destroyed in X% of games” for this target is Canis Rex, while the rule says “Your Canis Rex unit is not considered to be destroyed until Sir Hekhtur is also destroyed”. Saying “Canis Rex destroyed” there would be exact."
+ },
  "08a220105e94f750": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -569,6 +575,12 @@
   "at": "2026-10-17",
   "why": "Source (New Recruit, shooty.txt line 234): the table heading reads \"Throttlerokkit Shokka Engine Description\" above Turbo Engine, Pulse Jet and Shokk Attack Engine. Full Throttle (line 232) calls them \"one Throttlerokkit Shokka Engine ability\". \"Throttlerokkit Shokka Engine\" is that heading, copied with nothing added; dropping \"pick one\" removed the app's own summary. models \"1× Wazdakka Gutsmek\" matches \"1x Wazdakka Gutsmek\" (line 219)."
  },
+ "1518e797a995a17b": {
+  "verdict": "ok",
+  "by": "review:r20-damage",
+  "at": "2026-10-21",
+  "why": "“If the Protector Imperative is active for that unit, re-roll a Hit roll of 1. If the Conqueror Imperative is active for that unit, re-roll a Wound roll of 1.” Taking the Imperative from the Doctrina pick (follow) is exactly “active for that unit”, with Both for a unit where both are active. It has no pick of its own, so it can’t disagree with Doctrina. It stays for SKITARII units, and is not optional, as the words say (“re-roll”)."
+ },
  "154a7b544ff9860a": {
   "verdict": "ok",
   "by": "review:r9-knights",
@@ -628,6 +640,12 @@
   "by": "review:m5-new",
   "at": "2026-10-20",
   "why": "Source: \"If this unit made a charge move this turn, this unit’s attacks have +1 D.\" There are no phase words; it works on attacks made after a charge move in the same turn. A charge move is made in your Charge phase, or in theirs through Heroic Intervention (\"End of your opponent’s Charge phase … Resolve a charge\"; Squighog Boyz are MOUNTED, not VEHICLE, so they qualify). In either turn the only phase left after the Charge phase is the Fight phase. Fire Overwatch is at the \"End of your opponent’s Movement phase\", before any charge that turn, and nothing in this list (War Horde stratagems or any unit's abilities) lets a unit shoot after the Charge phase or charge in another phase. So {ph:['fight'], turn:'either'}, the same reasoning as the approved Headwoppa’s Killchoppa and Might is Right."
+ },
+ "17ce58a4f5590972": {
+  "verdict": "ok",
+  "by": "review:r20-damage",
+  "at": "2026-10-21",
+  "why": "“Each time a melee attack targets this unit, if this unit has the BATTLELINE keyword and/or it is within 6\" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units, subtract 1 from the Hit roll” (Protector) = hitMinus 1 on melee attacks under that fact, for Protector and Both. Conqueror has nothing against attacks. lasts 'round' as the rule says."
  },
  "17cec1a670775dfb": {
   "verdict": "ok",
@@ -952,6 +970,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "Matches \"just after a saving throw is failed for a THOUSAND SONS PSYKER model ... Change the Damage characteristic of that attack to 0\"."
+ },
+ "21be80a6648299f4": {
+  "verdict": "ok",
+  "by": "review:r20-damage",
+  "at": "2026-10-21",
+  "why": "Each mark matches its Blessing. Martial Excellence (“Melee weapons … have the [SUSTAINED HITS 1] ability”) and Warp Blades ([LETHAL HITS]) are melee. Decapitating Strikes (“each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability”) is melee vs any Infantry. Total Carnage is onDeath roll 4 (“on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed”). lasts 'round' follows “applies to all units from your army with this ability until the end of the battle round”, and only units with the rule get them (dmArmyOf). Unbridled Bloodlust and Rage-fuelled Invigoration change no attack numbers."
  },
  "21e9935f6273d7e5": {
   "verdict": "ok",
@@ -2321,6 +2345,12 @@
   "at": "2026-10-21",
   "why": "WHEN: “Your Shooting phase.”: your turn."
  },
+ "4ed5ba4e60443c26": {
+  "verdict": "ok",
+  "by": "review:r20-damage",
+  "at": "2026-10-21",
+  "why": "n 2 is “activate up to two Blessings of Khorne”. The three ways to more are each in their own words. Skulls for the Skull Throne! adds one (“activate one Blessing of Khorne … active in addition to any other Blessings of Khorne that are currently active”). Adamantine Avalanche adds one for TERMINATOR SQUAD units (“… active for friendly TERMINATOR SQUAD units in addition…”). Archslaughterer gives all for its unit (“every Blessing of Khorne is active for this unit until the start of your next turn”). Extra ticks beyond these are counted by you."
+ },
  "4efde77a998f7403": {
   "verdict": "ok",
   "by": "review:m1-strats",
@@ -2368,6 +2398,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "\"At the start of your Command phase, if this model is on the battlefield, you gain 1CP\"."
+ },
+ "51a1cd0f752d4cf4": {
+  "verdict": "ok",
+  "by": "review:r20-damage",
+  "at": "2026-10-21",
+  "why": "The Protector ranged pick is “[HEAVY] … Improve the Ballistic Skill characteristic … by 1” = heavy + skill 1. Conqueror ranged is “[ASSAULT]”, no number. Conqueror melee is “Improve the Weapon Skill characteristic of melee weapons … by 1” = skill 1. The Conqueror part “improve the Armour Penetration characteristic of that attack by 1” (any attack, if BATTLELINE and/or within 6\" of a friendly ADEPTUS MECHANICUS BATTLELINE unit) = ap 1 on both kinds, under that fact (a BATTLELINE unit meets it by itself). lasts 'round' is “Until the end of the battle round”, and only units with the ability get it (“units … that have the Doctrina Imperatives ability”)."
  },
  "5228f78f1af4b85b": {
   "verdict": "ok",
@@ -3106,6 +3142,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "Crimson King ability of Magnus, one picked per battle round."
+ },
+ "6cce455c0fd4f898": {
+  "verdict": "ok",
+  "by": "review:r20-damage",
+  "at": "2026-10-21",
+  "why": "WHEN: “Your opponent’s Shooting phase, just after an enemy unit has shot.” TARGET: “One SKITARII INFANTRY unit from your army that lost one or more models as a result of the attacking unit’s attacks.” react 'lost' names it, not counted, to the side shooting that unit (“Once it loses models to these attacks, it can shoot back”). The EFFECT is quoted, including “can only do so if that enemy unit is an eligible target”. It shows only in the Shooting phase and not in Fire Overwatch."
  },
  "6cdf8b09fde67376": {
   "verdict": "ok",
@@ -4415,6 +4457,12 @@
   "at": "2026-10-17",
   "why": "“Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Hit roll.” Same."
  },
+ "981dcf4a4659f727": {
+  "verdict": "ok",
+  "by": "review:r20-damage",
+  "at": "2026-10-21",
+  "why": "The Pulse Jet Move’s AFTER MOVING: “Until the start of your next turn, attacks that target your unit have -1 to hit rolls.” calcDef says that; hitMinus 1 is the number. lasts 'round' (to the start of the player’s next turn) is no longer than the words. It is unticked because it needs both the Pulse Jet pick (Full Throttle: “select one Throttlerokkit Shokka Engine ability”) and a pulse jet move made. It shows on the Damage tab only."
+ },
  "982ee89a44f27035": {
   "verdict": "ok",
   "by": "review:r13-calc-marks",
@@ -4882,6 +4930,12 @@
   "by": "review:r5-text",
   "at": "2026-10-17",
   "why": "WHEN: \"just before you make a battle-shock roll for a friendly unit\"; EFFECT: \"That battle-shock roll is automatically successful.\" The gist matches the EFFECT in full. It leaves out \"RESTRICTIONS: You cannot use this stratagem more than once per battle.\" That line is a RESTRICTION, not part of the EFFECT, so by the stated standard it need not appear (optional: add \"(once per battle)\" to match how Rapid Ingress shows its restriction)."
+ },
+ "a667d6acb47ab155": {
+  "verdict": "ok",
+  "by": "review:r20-damage",
+  "at": "2026-10-21",
+  "why": "Each source makes both Imperatives active, in its own words. Omnicogitator: “The Conqueror Imperative and Protector Imperative are both active for the bearer’s unit.” Transcendent Cogitation: “…both active for your unit.” The Fires of Mars (Thulia Ghuld’s Icon of War): “select one friendly SKITARII or THULIA GHULD unit within 6\" of this model; … both active for that unit” = needs Skitarii or Thulia Ghuld. Without one of these, Both is counted by you."
  },
  "a67a73058e036c3c": {
   "verdict": "ok",
@@ -6035,6 +6089,12 @@
   "at": "2026-10-16",
   "why": "Onslaught gives \"[ASSAULT] and [LETHAL HITS]\" to ranged weapons with no turn limit. Every unit here with a ranged weapon is non-TITANIC, so it can Fire Overwatch (\"End of your opponent’s Movement phase\"). Snap shooting \"only hits on an unmodified hit roll of 6\", so every hit is critical and LETHAL HITS auto-wounds. Add the opponent’s Movement phase; shooting stays your turn."
  },
+ "cf3efc5a4a626bc8": {
+  "verdict": "ok",
+  "by": "review:r20-damage",
+  "at": "2026-10-21",
+  "why": "Destiny’s Ruin: “Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, re-roll a Hit roll of 1. If the Psychic test result … was 10+, you can re-roll the Hit roll instead” = picks 5-9 / 10+. Twist of Fate: “improve the Armour Penetration characteristic of that attack by 1 … 12+ … by 2 instead” = picks 9-11 / 12+. needs is either keyword, and it is your Shooting phase (“at the start of your Shooting phase”), so ranged, with no lasts (“until the end of the phase”). Doombolt’s mortal wounds and Temporal Surge’s move are rightly left out."
+ },
  "cfba43eca667f53a": {
   "verdict": "ok",
   "by": "review:r19-fixes",
@@ -6797,6 +6857,12 @@
   "at": "2026-10-21",
   "why": "\"Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll.\" vs any Monster/Vehicle and the note \"+1 to hit rolls\" match, and the only condition is the target’s keywords, so always is right."
  },
+ "e7efe362b8110bc5": {
+  "verdict": "ok",
+  "by": "review:r20-damage",
+  "at": "2026-10-21",
+  "why": "WHEN: “Your opponent’s Shooting phase, when an enemy unit has shot.” TARGET: “One friendly FLASH GITZ/TANKBUSTAS unit hit by those attacks.” react 'hit' names it, not counted, to the side shooting that unit. It shows only in the Shooting phase and not in Fire Overwatch (“Once these attacks hit it, it can shoot back”, with WHEN/TARGET/EFFECT quoted)."
+ },
  "e7f2ce799c4d764e": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -7157,6 +7223,12 @@
   "at": "2026-10-21",
   "why": "\"Each time a model in this unit makes a melee attack that targets a MONSTER or VEHICLE unit, until the end of the phase, improve the Damage characteristic of that attack by 1.\" vs any Monster/Vehicle matches; no table condition, so always is right."
  },
+ "f4665a8485524b82": {
+  "verdict": "ok",
+  "by": "review:r20-damage",
+  "at": "2026-10-21",
+  "why": "WHEN: “when an enemy unit targets a friendly ORKS INFANTRY unit (excluding GRETCHIN units)” = protects Orks + Infantry, not Gretchin. TARGET: “One friendly GRETCHIN unit within 3\" of that ORKS INFANTRY unit” = by Gretchin (the 3\" is the player’s tick). It is offered against ranged attacks on the protected unit, unticked, and ruled out in Fire Overwatch (“Your opponent’s Shooting phase”). Each hit-roll hit ends that attack and gives the GRETCHIN unit 1 mortal wound while a model of it is on the battlefield. [TORRENT] goes through, per the FAQ."
+ },
  "f4b38a30a286dbd1": {
   "verdict": "ok",
   "by": "review:literal",
@@ -7180,6 +7252,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "Labels: TWIN-LINKED, [TWIN-LINKED], unit rule; 24.38."
+ },
+ "f594320e19035d67": {
+  "verdict": "ok",
+  "by": "review:r20-damage",
+  "at": "2026-10-21",
+  "why": "Quality 1–2: “Each time this model is selected to shoot or fight, you can re-roll one Hit roll and you can re-roll one Wound roll.” It is listed as not counted, and the reason given (“one re-roll: the calculator re-rolls no single die”) is true. The when names the Quality picked for the Oath."
  },
  "f60bc79bbd228e3a": {
   "verdict": "ok",

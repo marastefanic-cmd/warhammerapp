@@ -1,0 +1,80 @@
+[
+ {
+  "key": "981dcf4a4659f727",
+  "where": "shooty · Wazdakka Gutsmek · Pulse Jet",
+  "verdict": "ok",
+  "why": "The Pulse Jet Move’s AFTER MOVING: “Until the start of your next turn, attacks that target your unit have -1 to hit rolls.” calcDef says that; hitMinus 1 is the number. lasts 'round' (to the start of the player’s next turn) is no longer than the words. It is unticked because it needs both the Pulse Jet pick (Full Throttle: “select one Throttlerokkit Shokka Engine ability”) and a pulse jet move made. It shows on the Damage tab only."
+ },
+ {
+  "key": "e7efe362b8110bc5",
+  "where": "Wreckas · Gun-crazy Show-offs",
+  "verdict": "ok",
+  "why": "WHEN: “Your opponent’s Shooting phase, when an enemy unit has shot.” TARGET: “One friendly FLASH GITZ/TANKBUSTAS unit hit by those attacks.” react 'hit' names it, not counted, to the side shooting that unit. It shows only in the Shooting phase and not in Fire Overwatch (“Once these attacks hit it, it can shoot back”, with WHEN/TARGET/EFFECT quoted)."
+ },
+ {
+  "key": "21be80a6648299f4",
+  "where": "world-eaters army rule · Blessings of Khorne",
+  "verdict": "ok",
+  "why": "Each mark matches its Blessing. Martial Excellence (“Melee weapons … have the [SUSTAINED HITS 1] ability”) and Warp Blades ([LETHAL HITS]) are melee. Decapitating Strikes (“each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability”) is melee vs any Infantry. Total Carnage is onDeath roll 4 (“on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed”). lasts 'round' follows “applies to all units from your army with this ability until the end of the battle round”, and only units with the rule get them (dmArmyOf). Unbridled Bloodlust and Rage-fuelled Invigoration change no attack numbers."
+ },
+ {
+  "key": "4ed5ba4e60443c26",
+  "where": "world-eaters army rule · Blessings of Khorne",
+  "verdict": "ok",
+  "why": "n 2 is “activate up to two Blessings of Khorne”. The three ways to more are each in their own words. Skulls for the Skull Throne! adds one (“activate one Blessing of Khorne … active in addition to any other Blessings of Khorne that are currently active”). Adamantine Avalanche adds one for TERMINATOR SQUAD units (“… active for friendly TERMINATOR SQUAD units in addition…”). Archslaughterer gives all for its unit (“every Blessing of Khorne is active for this unit until the start of your next turn”). Extra ticks beyond these are counted by you."
+ },
+ {
+  "key": "cf3efc5a4a626bc8",
+  "where": "thousand-sons army rule · Cabal of Sorcerers",
+  "verdict": "ok",
+  "why": "Destiny’s Ruin: “Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, re-roll a Hit roll of 1. If the Psychic test result … was 10+, you can re-roll the Hit roll instead” = picks 5-9 / 10+. Twist of Fate: “improve the Armour Penetration characteristic of that attack by 1 … 12+ … by 2 instead” = picks 9-11 / 12+. needs is either keyword, and it is your Shooting phase (“at the start of your Shooting phase”), so ranged, with no lasts (“until the end of the phase”). Doombolt’s mortal wounds and Temporal Surge’s move are rightly left out."
+ },
+ {
+  "key": "f594320e19035d67",
+  "where": "imperial-knights army rule · Code Chivalric",
+  "verdict": "ok",
+  "why": "Quality 1–2: “Each time this model is selected to shoot or fight, you can re-roll one Hit roll and you can re-roll one Wound roll.” It is listed as not counted, and the reason given (“one re-roll: the calculator re-rolls no single die”) is true. The when names the Quality picked for the Oath."
+ },
+ {
+  "key": "084c191a9eb35f6a",
+  "where": "4-megas-and-a-destrier · Canis Rex · Using Sir Hekhtur",
+  "verdict": "ok",
+  "why": "“If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport” (18.05: “Your unit is set up”), so Sir Hekhtur is not on the battlefield until then. His weapons start unticked with that quote (“yours to count anyway”), and the target is Canis Rex alone (T11 · Sv 3+ · W26), with the working saying the rest of an attack after that is not played. Small follow-up, not this mark: the headline “destroyed in X% of games” for this target is Canis Rex, while the rule says “Your Canis Rex unit is not considered to be destroyed until Sir Hekhtur is also destroyed”. Saying “Canis Rex destroyed” there would be exact."
+ },
+ {
+  "key": "f4665a8485524b82",
+  "where": "Runt Swarm · Grot Shields",
+  "verdict": "ok",
+  "why": "WHEN: “when an enemy unit targets a friendly ORKS INFANTRY unit (excluding GRETCHIN units)” = protects Orks + Infantry, not Gretchin. TARGET: “One friendly GRETCHIN unit within 3\" of that ORKS INFANTRY unit” = by Gretchin (the 3\" is the player’s tick). It is offered against ranged attacks on the protected unit, unticked, and ruled out in Fire Overwatch (“Your opponent’s Shooting phase”). Each hit-roll hit ends that attack and gives the GRETCHIN unit 1 mortal wound while a model of it is on the battlefield. [TORRENT] goes through, per the FAQ."
+ },
+ {
+  "key": "51a1cd0f752d4cf4",
+  "where": "adeptus-mechanicus army rule · Doctrina Imperatives",
+  "verdict": "ok",
+  "why": "The Protector ranged pick is “[HEAVY] … Improve the Ballistic Skill characteristic … by 1” = heavy + skill 1. Conqueror ranged is “[ASSAULT]”, no number. Conqueror melee is “Improve the Weapon Skill characteristic of melee weapons … by 1” = skill 1. The Conqueror part “improve the Armour Penetration characteristic of that attack by 1” (any attack, if BATTLELINE and/or within 6\" of a friendly ADEPTUS MECHANICUS BATTLELINE unit) = ap 1 on both kinds, under that fact (a BATTLELINE unit meets it by itself). lasts 'round' is “Until the end of the battle round”, and only units with the ability get it (“units … that have the Doctrina Imperatives ability”)."
+ },
+ {
+  "key": "17ce58a4f5590972",
+  "where": "adeptus-mechanicus army rule · Doctrina Imperatives",
+  "verdict": "ok",
+  "why": "“Each time a melee attack targets this unit, if this unit has the BATTLELINE keyword and/or it is within 6\" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units, subtract 1 from the Hit roll” (Protector) = hitMinus 1 on melee attacks under that fact, for Protector and Both. Conqueror has nothing against attacks. lasts 'round' as the rule says."
+ },
+ {
+  "key": "a667d6acb47ab155",
+  "where": "adeptus-mechanicus army rule · Doctrina Imperatives",
+  "verdict": "ok",
+  "why": "Each source makes both Imperatives active, in its own words. Omnicogitator: “The Conqueror Imperative and Protector Imperative are both active for the bearer’s unit.” Transcendent Cogitation: “…both active for your unit.” The Fires of Mars (Thulia Ghuld’s Icon of War): “select one friendly SKITARII or THULIA GHULD unit within 6\" of this model; … both active for that unit” = needs Skitarii or Thulia Ghuld. Without one of these, Both is counted by you."
+ },
+ {
+  "key": "1518e797a995a17b",
+  "where": "Eradication Cohort rule · Murderous Imperative",
+  "verdict": "ok",
+  "why": "“If the Protector Imperative is active for that unit, re-roll a Hit roll of 1. If the Conqueror Imperative is active for that unit, re-roll a Wound roll of 1.” Taking the Imperative from the Doctrina pick (follow) is exactly “active for that unit”, with Both for a unit where both are active. It has no pick of its own, so it can’t disagree with Doctrina. It stays for SKITARII units, and is not optional, as the words say (“re-roll”)."
+ },
+ {
+  "key": "6cce455c0fd4f898",
+  "where": "Eradication Cohort · Analytic Reprisals",
+  "verdict": "ok",
+  "why": "WHEN: “Your opponent’s Shooting phase, just after an enemy unit has shot.” TARGET: “One SKITARII INFANTRY unit from your army that lost one or more models as a result of the attacking unit’s attacks.” react 'lost' names it, not counted, to the side shooting that unit (“Once it loses models to these attacks, it can shoot back”). The EFFECT is quoted, including “can only do so if that enemy unit is an eligible target”. It shows only in the Shooting phase and not in Fire Overwatch."
+ }
+]
