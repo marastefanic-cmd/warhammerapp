@@ -769,6 +769,7 @@ button.dmtv:active, .dmtile.add:active, .dmtb:active{background:var(--surface2)}
 .dmtile.add .s{color:var(--accent); font-weight:700}
 .dmtile.no{display:grid; justify-items:center; align-content:center; gap:2px; min-height:44px; padding:4px 2px; opacity:.55; text-align:center}
 .dmtile.no .s{white-space:normal}
+.dmtile .s.dmtn{white-space:normal; font-size:9.5px; line-height:1.15; text-align:center; font-style:italic; padding:0 2px}
 .dmtb{width:100%; min-height:30px; padding:5px 2px 6px; border-top:1px solid var(--line); border-radius:0 0 8px 8px; font:700 10px/1.1 var(--f-head); letter-spacing:.05em; text-transform:uppercase; color:var(--muted)}
 .dmtb.lk{display:grid; align-content:center; text-align:center; font:500 10px/1.15 var(--f-body); letter-spacing:0; text-transform:none; font-style:italic; color:var(--muted); overflow:hidden}
 .dmsr.va .dmtile.add, .dmsr.va .dmtile.no{min-height:76px}
@@ -2491,12 +2492,16 @@ const dmPlural = (n, one, many) => n + ' ' + (Math.abs(n - 1) < 1e-9 ? one : man
 
 /* ---- the turn: its steps (Shoot, Charge, Fight, Fight back), each step's own choices, the facts of the table ---- */
 const DM_STEPS = { shoot:{ kind:'ranged', ph:'shooting', label:'Shoot' }, fight:{ kind:'melee', ph:'fight', label:'Fight' }, back:{ kind:'melee', ph:'fight', label:'Fight back' } };
-// the charge a fight needs after shooting: a unit that shot with normal, assault or indirect shooting was unengaged (10.04-10.07), and an
-// unengaged unit fights this turn only after a charge move (12.03): with Shoot and Fight in the turn the Charge is in it too, unless
-// it shot with close-quarters shooting (10.06: it was engaged already, ticked in its Shoot step)
+// the charge added for a fight after shooting: a unit that shot with normal, assault or indirect shooting was unengaged (10.04-10.07), and
+// an unengaged unit fights after a charge move (12.03) unless an enemy unit engaged it (a Heroic Intervention). With Shoot and Fight in
+// the turn the Charge is in it by itself, unless it shot with close-quarters shooting (10.06: engaged already, ticked in its Shoot step)
+// or the player took it out (noCharge: the fight counted with no charge move)
 const dmCqShot = st => { const c = st.ch[st.dir + ':shoot']; return !!(c && isObj(c.on) && c.on['c:cq'] === true); };
-const dmChargeNeeded = (st, tr) => !!(tr && tr.shoot && tr.fight) && !dmCqShot(st);
-const dmCharged = (st, tr) => !!(tr && tr.fight && (tr.charge || dmChargeNeeded(st, tr)));
+const dmChargeShot = (st, tr) => !!(tr && tr.shoot && tr.fight) && !dmCqShot(st);
+const dmChargeAdded = (st, tr) => dmChargeShot(st, tr) && !tr.charge && !tr.noCharge;
+const dmCharged = (st, tr) => !!(tr && tr.fight && (tr.charge || dmChargeAdded(st, tr)));
+// the turn's charge made or taken out (the strip's Add and Take out, the Fight step's "Charged this turn")
+const dmSetCharge = (st, tr, on) => { if(on){ tr.charge = true; tr.fight = true; delete tr.noCharge; } else { tr.charge = false; if(dmChargeShot(st, tr)) tr.noCharge = true; } delete tr.auto; };
 // the steps in this direction's turn: it starts with one step, Shoot for a unit with ranged weapons, else Fight (dmStart)
 function dmTurn(st, P){
   const d = st.dir;
@@ -2794,7 +2799,6 @@ function dmLevers(st, plan){
     if(facts.includes(lid) || (k === 'objective' && M.conds.a.includes('targetObjective'))) continue;
     facts.push(lid);
     const turnCharge = k === 'charged' && id0 !== 'back';
-    if(turnCharge && dmChargeNeeded(st, plan.turn)) continue;   // the charge the fight needs after shooting: in the turn, not a choice here
     const F = dmFx(st, b.atk, b.tgt, id0 === 'fight' ? dmCharged(st, plan.turn) : id0 === 'back' && !!dmFactsOf(st, b.atk.who).charged), onNow = turnCharge ? dmCharged(st, plan.turn) : !!F.fx[fxk];
     const here = ruled(b, unitWho, store), reach = here.filter(r => !(r.m && r.m.strat)).map(r => r.m ? r.m.from : r.src).concat(k === 'stationary' && M.sit.some(x => x.k === 'c:heavy') ? ['[HEAVY] +1 to hit'] : [],
       parts(b, unitWho, store).map(r => (r.m ? r.m.from : r.ar.from) + ' (' + (r.m ? r.m.part : r.ar.part).note + (r.partIn ? '' : ', with ' + andList((r.m ? r.m.part : r.ar.part).picks).replace(/ and /, ' or ')) + ')')), cond = here.filter(r => r.m && r.m.strat).map(r => r.m.cp + 'CP ' + r.m.from);
@@ -2808,9 +2812,9 @@ function dmLevers(st, plan){
     // a unit always riled up by its own rule (Super Runts): quiet like any rule always counted; ticked again, back to "always"
     const fu = unitWho === b.atk.who ? b.atk.u : unitWho === b.tgt.who ? b.tgt.u : null, alw = store === 'riled' && fu && !fu.typed && fu.abilities.find(ab => ab.riled);
     const said = dmFactsOf(st, unitWho)[store];
-    add(lid, { sec:'rule', side:unitWho === b.atk.who || unitWho === 'pair' ? 'a' : 't', fact:k, store, unitWho, on:onNow, why:onNow && F.why[fxk] ? F.why[fxk] : '', reach, cond, also, label,
+    add(lid, { sec:'rule', side:unitWho === b.atk.who || unitWho === 'pair' ? 'a' : 't', fact:k, store, unitWho, on:onNow, why:turnCharge && onNow && dmChargeAdded(st, plan.turn) ? 'added: a unit that shot was unengaged (10.04)' : onNow && F.why[fxk] ? F.why[fxk] : '', reach, cond, also, label,
       always:alw ? 'always riled up (' + alw.name + ')' : '', quiet:!!alw && onNow && said == null, left:!!alw && !onNow && said === false,
-      apply:s => { if(turnCharge){ const t = s.turn[s.dir]; t.charge = !onNow; delete t.auto; if(t.charge) t.fight = true; }
+      apply:s => { if(turnCharge) dmSetCharge(s, s.turn[s.dir], !onNow);
         else if(alw && !onNow) delete dmFactsOf(s, unitWho)[store];
         else { dmFactsOf(s, unitWho)[store] = !onNow; }
         // a fact said reaches every rule with that condition, in every step: the boxes ticked by hand for it follow it again
@@ -3157,7 +3161,10 @@ function dmCard(C){
   const big = A.one ? f(A.lost) : f(A.killed), of = A.one ? 'of ' + tw + ' wounds lost' : 'of ' + n + ' destroyed' + (A.before > 0.005 ? ' this step' : '');
   // "wiped by now": by the end of this step; with a comeback (Berserker Frenzy) also what is left once the phase is over
   const rvT = !!b.M.revive && Object.keys(b.M.revive).length > 0, byNow = A.before > 0.005 || plan.k > 0 || rvT;
-  const sub = A.one ? 'destroyed in ' + dmPct(A.wipe) + ' of games' : (f(A.lost) === '1' ? '1 wound' : f(A.lost) + ' wounds') + ' lost · wiped' + (byNow ? ' by now' : '') + ' in ' + dmPct(A.wipe) + ' of games' +
+  // (a unit with a model not on the battlefield yet is not destroyed with its one model: "Your Canis Rex unit is not considered to be
+  // destroyed until Sir Hekhtur is also destroyed": the model is named)
+  const embT = dmEmbarked(b.tgt.u);
+  const sub = A.one ? (embT ? embT.until + ' ' : '') + 'destroyed in ' + dmPct(A.wipe) + ' of games' : (f(A.lost) === '1' ? '1 wound' : f(A.lost) + ' wounds') + ' lost · wiped' + (byNow ? ' by now' : '') + ' in ' + dmPct(A.wipe) + ' of games' +
     (rvT && A.rb.wipeDown != null ? ' · after the phase in ' + dmPct(A.rb.wipeDown) : '') + (A.before > 0.005 ? ' · ' + f(A.before) + ' destroyed before' : '');
   // a CHARACTER's fate; with a comeback (Berserker Frenzy) what is left of it after the phase; the rules not counted that change it
   const back = b.M.nc.filter(x => x.side === 't' && /set (?:this model |him |it )?back up|not removed|do not remove|stays until|it stays|he is set back/i.test(x.text)).map(x => x.name);
@@ -3198,7 +3205,8 @@ function dmChips(C){
   if(M.bands && M.bands.v) chip('b:0', dmBandName(M.bands.opts.find(o => o.v === M.bands.v)));
   for(const c of M.weapons){ if(c.ps.length > 1 && c.on) info(itemName(c.it) + ': ' + c.w.name + (c.over ? ' (by you)' : '')); if(c.on !== c.dflt) chip('w:' + c.k, (c.on ? '+ ' : 'no ') + itemName(c.it) + (c.on && c.emb ? ' (by you)' : ''), c.on && c.emb ? 'over' : ''); }
   for(const lv of C.levers) if(lv.fact && lv.on) chip(lv.id, (lv.side === 'a' ? att : tg) + lv.label, lv.why ? 'auto' : '');
-  if(b.id === 'fight' && dmChargeNeeded(C.st, plan.turn)) info(att + 'Charged this turn (needed after Shoot)');   // the turn's own, its tile says so
+  // a fight after shooting with the charge taken out: counted with no charge move, said
+  if(b.id === 'fight' && plan.turn.shoot && !dmCharged(C.st, plan.turn)) info(att + 'no charge move' + (dmCqShot(C.st) ? ' (it shot engaged)' : ' (engaged by other means)'));
   for(const x of M.sit) if(x.on && !x.fixed) chip('s:' + x.k, (x.k === 'c:cover' ? '' : att) + x.label + (x.ruled ? ' (by you)' : x.torrent === 'six' ? ' ([TORRENT]: 15.09)' : ''), x.ruled ? 'over' : x.why ? 'auto' : '');
   // what the rules require, left out: the player's own call, said as one (tap: counted again)
   for(const y of C.levers) if(y.left){ const nm = y.fact ? y.label : y.x && y.x.label ? y.x.label : y.r ? y.r.m.from : y.x ? dmCap(y.x.src) : '';
@@ -3273,7 +3281,8 @@ function dmListHtml(C){
   let h = '<h2 class="dmhd dmtop">What changes this<small>' + esc(b.label) + (score ? ' · biggest first' : '') + '</small></h2>' +
     '<p class="dmmeas">' + (plan.beats.length > 1 ? 'Effects are over the whole turn: ' + (b.tgt.who === 'mine' ? 'your' : 'their') + ' models destroyed by its end, and ' + (b.atk.who === 'mine' ? 'your' : 'their') + ' own losses.'
       : 'Effects are on this step' + (C.M.hazard ? ', with ' + (b.atk.who === 'mine' ? 'your' : 'their') + ' losses to the hazard rolls' : '') + '.') + '</p>' +
-    (plan.beats.length > 1 || dmCharged(st, plan.turn) ? '<p class="dmturnl"><span>' + esc(plan.beats.map(x => x.label).join(' → ')) + (dmCharged(st, plan.turn) && plan.beats.some(x => x.id === 'fight') ? ' · the charge is taken to succeed (no charge roll)' + (dmChargeNeeded(st, plan.turn) ? ': a unit that shot fights only after one' : '') : '') + '</span></p>' : '') +
+    (plan.beats.length > 1 || dmCharged(st, plan.turn) ? '<p class="dmturnl"><span>' + esc(plan.beats.map(x => x.label).join(' → ')) + (dmCharged(st, plan.turn) && plan.beats.some(x => x.id === 'fight') ? ' · the charge is taken to succeed (no charge roll)' + (dmChargeAdded(st, plan.turn) ? '; added by itself: a unit that shot was unengaged (10.04)' : '')
+      : plan.turn.shoot && plan.beats.some(x => x.id === 'fight') ? ' · the fight is counted with no charge move: ' + (dmCqShot(st) ? 'it shot engaged (close-quarters shooting)' : 'the target engaged it by other means, e.g. an enemy Heroic Intervention') : '') + '</span></p>' : '') +
     (C.A && dmSatWhy(C) ? '<p class="note dmsat">Nothing here changes this step: ' + esc(dmWhose(C, dmSatWhy(C))) + '.</p>' : '');
   if(M.bands){
     h += '<section class="dmsec"><h3 class="dmh3">Half range <small>[RAPID FIRE], [MELTA]</small></h3>' + M.bands.opts.map(o => {
@@ -3492,7 +3501,7 @@ function dmCleanTicks(st, keep, o){
   if(!ids.length) return out;
   // the pair with every one of those steps in its turn (the charge as it is)
   const s2 = JSON.parse(JSON.stringify(st)), tr = isObj(st.turn[d]) ? st.turn[d] : {};
-  s2.turn[d] = { shoot:ids.includes('shoot'), charge:!!tr.charge, fight:ids.includes('fight') || ids.includes('back'), back:ids.includes('back') };
+  s2.turn[d] = { shoot:ids.includes('shoot'), charge:!!tr.charge, noCharge:!!tr.noCharge, fight:ids.includes('fight') || ids.includes('back'), back:ids.includes('back') };
   const plan = dmPlan(s2);
   if(!plan.P.ready) return out;
   const sig = dmPairSig(st), side = (u, L) => dmName(u, L);
@@ -3597,9 +3606,10 @@ function dmGoStep(id, verb){
   if(!P.ready){ if(verb && (id === 'shoot' || id === 'fight')){ st.turn[st.dir] = { [id]:true, auto:true, chosen:true }; st.step[st.dir] = id; saveSession(); rerender(); } return; }
   const tr = dmTurn(st, P), att = dmName(P.au, P.A), before = dmBefore(st);
   if(id === 'charge'){
-    if(!tr.charge && !dmArmed(P.au, 'melee')){ dmToast(att + ' has no melee weapons to charge with'); return; }
-    tr.charge = !tr.charge; delete tr.auto;
-    if(tr.charge){ tr.fight = true; st.step[st.dir] = 'fight'; }
+    const on = dmCharged(st, tr);
+    if(!on && !dmArmed(P.au, 'melee')){ dmToast(att + ' has no melee weapons to charge with'); return; }
+    dmSetCharge(st, tr, !on);
+    if(!on) st.step[st.dir] = 'fight';
     saveSession(); rerender(); dmTurnSaid(before); return; }
   const why = id === 'shoot' ? (dmArmed(P.au, 'ranged') ? '' : att + ' has no ranged weapons')
     : id === 'fight' ? (dmArmed(P.au, 'melee') ? '' : att + ' has no melee weapons')
@@ -3646,10 +3656,11 @@ function dmStripSteps(plan, st, r){
     let lock = '', why = '';
     if(on && id === 'shoot' && !inT('fight')){ lock = 'only step'; why = 'it is the only step: a turn has one at least'; }
     if(on && id === 'fight' && !inT('shoot')){ if(inT('back')){ lock = 'Fight back needs it'; why = 'Fight back needs it: take that out first'; } else { lock = 'only step'; why = 'it is the only step: a turn has one at least'; } }
-    if(on && id === 'charge' && dmChargeNeeded(st, tr)){ lock = 'needed after Shoot'; why = 'a unit that shot was unengaged, so it fights only after a charge move (10.04, 12.03); with close-quarters shooting it was engaged already'; }
+    // (the charge added for a fight after shooting stays removable: an enemy unit can engage it, a Heroic Intervention; its tile says why it is in)
+    const note = on && id === 'charge' && dmChargeAdded(st, tr) ? 'added: it shot unengaged (10.04)' : '';
     const a = b && r ? dmBeatAns(plan, i, r) : null;
     const val = !b ? '' : !a ? '–' : a.one ? WH_CALC.fmt(a.lost) : WH_CALC.fmt(a.killed), sub = !a ? '' : a.one ? 'wounds' : b.side === 0 ? 'of ' + (b.tgt.who === 'mine' ? 'yours' : 'theirs') : 'of ' + a.models;
-    return { id, label:id === 'charge' ? 'Charge' : DM_STEPS[id].label, on, view:i >= 0 && i === plan.k, lock, why, can:can[id], no:can[id] ? '' : no[id], val, sub, yours:!!b && b.tgt.who === 'mine', i };
+    return { id, label:id === 'charge' ? 'Charge' : DM_STEPS[id].label, on, view:i >= 0 && i === plan.k, lock, why, note, can:can[id], no:can[id] ? '' : no[id], val, sub, yours:!!b && b.tgt.who === 'mine', i };
   });
 }
 // the steps in the strip, one tile each: a step in the turn is a filled tile (tap: show it; the one shown has the accent outline) with
@@ -3657,7 +3668,7 @@ function dmStripSteps(plan, st, r){
 // play is plain text with the reason. The Charge has no number of its own: its tile says assumed or needed, and is not a button
 function dmStripRow(plan, st, r){
   const lab = x => x.id === 'back' ? '<span class="lf">Fight back</span><span class="ls">Back</span>' : esc(x.label);
-  const num = x => x.id === 'charge' ? '<b>✓</b><span class="s">assumed</span>' : '<b class="num">' + esc(x.val) + '</b><span class="s">' + esc(x.sub) + '</span>';
+  const num = x => x.id === 'charge' ? '<b>✓</b>' + (x.note ? '<span class="s dmtn">' + esc(x.note) + '</span>' : '<span class="s">assumed</span>') : '<b class="num">' + esc(x.val) + '</b><span class="s">' + esc(x.sub) + '</span>';
   const tile = x => {
     if(!x.on && !x.can) return '<div class="dmtile no"><span class="l">' + lab(x) + '</span><span class="s">' + esc(x.no) + '</span></div>';
     if(!x.on) return '<button class="dmtile add" data-dmadd="' + x.id + '" aria-label="Add ' + esc(x.label) + ' to the turn"><span class="l">' + lab(x) + '</span><b>+</b><span class="s">Add</span></button>';
@@ -5179,7 +5190,7 @@ document.addEventListener('click', e => {
     const x = DM_CTX && dmStripSteps(DM_CTX.plan, st).find(y => y.id === ds.dmdrop);
     if(x && x.lock){ dmToast(x.label + ' stays: ' + x.why); return; }   // (no ✕ is shown for it: a stale tap)
     // (Shoot taken out: a charge it needed stays, so the fight is played as it was; take the Charge out for a fight without one)
-    if(tr){ if(ds.dmdrop === 'charge') tr.charge = false; else { if(ds.dmdrop === 'shoot' && dmChargeNeeded(st, tr)) tr.charge = true; tr[ds.dmdrop] = false; if(ds.dmdrop === 'fight'){ tr.charge = false; tr.back = false; } } delete tr.auto; delete tr.chosen; }
+    if(tr){ if(ds.dmdrop === 'charge') dmSetCharge(st, tr, false); else { if(ds.dmdrop === 'shoot' && dmChargeAdded(st, tr)) tr.charge = true; tr[ds.dmdrop] = false; if(ds.dmdrop === 'fight'){ tr.charge = false; tr.back = false; delete tr.noCharge; } } delete tr.auto; delete tr.chosen; }
     if(!tr || !tr[st.step[st.dir]] || st.step[st.dir] === ds.dmdrop) st.step[st.dir] = '';
     saveSession(); rerender(); dmTurnSaid(before); return; }
   // a choice in the list or a chip: changed in place, the answer redrawn where it is

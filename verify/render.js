@@ -271,6 +271,17 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       await new Promise(f => setTimeout(f, 300)); const x = document.querySelector('#dmStrip .dmtile.on'); const r = x ? [x.querySelectorAll('[data-dmdrop]').length, (x.querySelector('.lk') || {}).textContent || ''] : null;
       st.turn[st.dir] = { shoot:true, charge:true, fight:true, back:true }; saveSession(); rerender(); await new Promise(f => setTimeout(f, 300)); return r; });
     if(!only || only[0] !== 0 || !/only step/.test(only[1])) fail('damage-strip', A, 'a turn of one step', 'its tile: ' + JSON.stringify(only));
+    // Shoot and Fight: the Charge is in the turn by itself, says why, and can be taken out (toast, Undo); taken out, the Fight says it
+    // is counted with no charge move
+    const chg = await page.evaluate(async () => { const st = dmState(); if(!dmArmed(dmPair(st).au, 'ranged') || !dmArmed(dmPair(st).au, 'melee')) return 'skip';
+      st.turn[st.dir] = { shoot:true, fight:true }; st.step[st.dir] = 'fight'; saveSession(); rerender(); await new Promise(f => setTimeout(f, 300));
+      const t = [...document.querySelectorAll('#dmStrip .dmtile')].find(x => /Charge/i.test((x.querySelector('.l') || {}).textContent || ''));
+      const r = { note:t && t.querySelector('.dmtn') ? t.querySelector('.dmtn').textContent : '', drop:!!(t && t.querySelector('[data-dmdrop="charge"]')) };
+      if(r.drop){ t.querySelector('[data-dmdrop="charge"]').click(); await new Promise(f => setTimeout(f, 300)); r.said = $('#toast').innerText; r.off = !dmCharged(dmState(), dmState().turn[dmState().dir]);
+        r.plain = /no charge move/.test($('#dmList .dmturnl') ? $('#dmList .dmturnl').innerText : '') && /no charge move/.test($('#dmChips') ? $('#dmChips').innerText : '');
+        const u = document.querySelector('#toast [data-undo]'); if(u) u.click(); await new Promise(f => setTimeout(f, 300)); r.back = dmCharged(dmState(), dmState().turn[dmState().dir]); }
+      st.turn[st.dir] = { shoot:true, charge:true, fight:true, back:true }; st.step[st.dir] = 'shoot'; saveSession(); rerender(); await new Promise(f => setTimeout(f, 300)); return r; });
+    if(chg !== 'skip' && !(chg && /added/.test(chg.note) && chg.drop && /Charge taken out/.test(chg.said || '') && chg.off && chg.plain && chg.back)) fail('damage-strip', A, 'the Charge added after Shoot', JSON.stringify(chg));
     await page.waitForFunction(() => !dmBusy(), null, { timeout:120000, polling:50 });
     const undo = await page.evaluate(async () => { const st = dmState(), t0 = JSON.stringify(st.turn[st.dir]);
       const x = document.querySelector('#dmStrip [data-dmdrop="back"]'); if(x) x.click(); await new Promise(f => setTimeout(f, 300)); const t1 = JSON.stringify(dmState().turn[dmState().dir]), said = $('#toast').innerText;

@@ -870,7 +870,13 @@ cases.push(['Destiny’s Ruin: help for a THOUSAND SONS unit, 10+ re-rolls every
 // close-quarters shooting it is not; the only step stays
 const KT = turn => dm.plan({ army:'princes', opp:'melee', atk:'kh-rn-the-betrayer-khorne-berzerkers', tArmy:'melee', tgt:'nazdreg-meganobz', turn:{ me:turn } });
 cases.push(['the turn: Shoot and Fight, the fight charged (Murderous Charge ticked for you)', () => +KT({ shoot:true, fight:true }).beats[1].M.rules.find(r => r.m.from === 'Murderous Charge').on, 1]);
-cases.push(['the turn: Shoot and Fight, the Charge stays (needed after Shoot)', () => (s => +(s.find(x => x.id === 'charge').on && /needed after Shoot/.test(s.find(x => x.id === 'charge').lock)))(dm.app.dmStripSteps(KT({ shoot:true, fight:true }), dm.app.dmState())), 1]);
+cases.push(['the turn: Shoot and Fight, the Charge added by itself, said, and removable', () => (s => +(s.find(x => x.id === 'charge').on && /added: it shot unengaged \(10\.04\)/.test(s.find(x => x.id === 'charge').note) && !s.find(x => x.id === 'charge').lock))(dm.app.dmStripSteps(KT({ shoot:true, fight:true }), dm.app.dmState())), 1]);
+// taken out: the fight counted with no charge move (an enemy Heroic Intervention), said in the Fight step; added again: charged
+cases.push(['the turn: the added Charge taken out, the fight with no charge move', () => { const p0 = KT({ shoot:true, fight:true }), st = dm.app.dmState(), tr = st.turn.me; dm.app.dmSetCharge(st, tr, false);
+  const p1 = dm.app.dmPlan(st), off = !p1.beats[1].M.rules.find(r => r.m.from === 'Murderous Charge').on && !dm.app.dmCharged(st, tr) && tr.noCharge === true;
+  const L = dm.app.dmLevers(st, Object.assign(p1, { k:1 })).find(l => l.id.endsWith(':charged'));
+  dm.app.dmSetCharge(st, tr, true); const on = dm.app.dmPlan(st).beats[1].M.rules.find(r => r.m.from === 'Murderous Charge').on && !tr.noCharge;
+  return +(off && on && !!L && !L.on && p0.beats.length === 2); }, 1]);
 cases.push(['the turn: close-quarters shooting, then the fight: no charge needed', () => { const p = dm.plan({ army:'princes', opp:'melee', atk:'kh-rn-the-betrayer-khorne-berzerkers', tArmy:'melee', tgt:'nazdreg-meganobz', turn:{ me:{ shoot:true, fight:true } }, ch:{ 'me:shoot':{ on:{ 'c:cq':true } } } });
   return +!p.beats[1].M.rules.find(r => r.m.from === 'Murderous Charge').on; }, 1]);
 cases.push(['the turn: the only step stays, said', () => (s => +(/only step/.test(s.find(x => x.id === 'fight').lock) && !s.find(x => x.id === 'shoot').on))(dm.app.dmStripSteps(KT({ fight:true }), dm.app.dmState())), 1]);
