@@ -1,0 +1,8 @@
+[
+ {
+  "key": "bdb55766aba37b06",
+  "where": "shooty · Big Mek Dakkarig",
+  "verdict": "ok",
+  "why": "“In your Shooting phase, you can select one friendly ORKS WALKER unit within 3\" of this model” has no ‘other’ (01.02.05), and “units are within range of their own abilities” (01.02.04). So the Dakkarig can pick its own unit, and “Picked by the Dreadherder for its own unit” says that and nothing more, as a footnote should. It stays unticked (no selfAlways), which fits “you can select”; needs, when, note and lasts 'turn' are unchanged."
+ }
+]

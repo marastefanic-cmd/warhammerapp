@@ -5357,6 +5357,12 @@
   "at": "2026-10-17",
   "why": "EFFECT: “before making the charge roll, you must select one of the following modes”. Leap to Defend: “enemy units that made a charge move this phase and are within the maximum distance”. Into the Fray: “if the result is greater than 6 (after modifiers), change it to 6 … any enemy units that are within 6\" of your unit and within the maximum distance”. The gist drops when the mode is chosen, both “within the maximum distance” conditions, “(after modifiers)”, and “of your unit”."
  },
+ "bdb55766aba37b06": {
+  "verdict": "ok",
+  "by": "review:r17d-v2",
+  "at": "2026-10-21",
+  "why": "“In your Shooting phase, you can select one friendly ORKS WALKER unit within 3\" of this model” has no ‘other’ (01.02.05), and “units are within range of their own abilities” (01.02.04). So the Dakkarig can pick its own unit, and “Picked by the Dreadherder for its own unit” says that and nothing more, as a footnote should. It stays unticked (no selfAlways), which fits “you can select”; needs, when, note and lasts 'turn' are unchanged."
+ },
  "bdd8fab4c3dc1ba5": {
   "verdict": "ok",
   "by": "review:r9-knights",
