@@ -1,0 +1,714 @@
+[
+ {
+  "army": "shooty",
+  "kind": "unit-footnote",
+  "where": "shooty · Big Mek Dakkarig",
+  "judgement": {
+   "kind": "ranged",
+   "weapon": "Blitzkannon",
+   "set": {
+    "A": "+6"
+   },
+   "when": "vs non-MONSTER/VEHICLE targets",
+   "note": "in your Shooting phase",
+   "from": "Blitz Dem Gitz!",
+   "always": true,
+   "vs": {
+    "none": [
+     "Monster",
+     "Vehicle"
+    ]
+   }
+  },
+  "source": {
+   "ability": "Blitz Dem Gitz!",
+   "text": "In your Shooting phase, if this unit’s Blitzkannon weapon targets a unit (excluding **MONSTER/VEHICLE** units), that weapon has +6 **A**."
+  },
+  "key": "40c8700c8c258af0"
+ },
+ {
+  "army": "shooty",
+  "kind": "unit-footnote",
+  "where": "shooty · Killa Kans",
+  "judgement": {
+   "kind": "all",
+   "when": "vs units with no T 7+ models",
+   "note": "+1 to hit rolls",
+   "from": "Spiteful Power Trip",
+   "always": true,
+   "vs": {
+    "maxT": 6
+   }
+  },
+  "source": {
+   "ability": "Spiteful Power Trip",
+   "text": "This unit’s attacks that target a unit that has no models with a **T** of 7+ have +1 to **hit rolls**."
+  },
+  "key": "a010a2da186d0c10"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-mod",
+  "where": "Shoota Boyz · Kustom Dakka",
+  "judgement": {
+   "mod": {
+    "kind": "ranged",
+    "when": "Your Shooting phase, vs non-MONSTER/VEHICLE targets",
+    "note": "+1 to wound rolls",
+    "vs": {
+     "none": [
+      "Monster",
+      "Vehicle"
+     ]
+    }
+   }
+  },
+  "source": {
+   "stratagem": "Kustom Dakka",
+   "text": "WHEN: Your Shooting phase, when a friendly **ORKS INFANTRY** unit is **selected to shoot**.\nTARGET: That **ORKS INFANTRY** unit.\nEFFECT: Your unit’s ranged attacks that target a unit (excluding **MONSTER**/**VEHICLE** units) have +1 to **wound rolls**."
+  },
+  "key": "8de4eb361882a921"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "unit-aura",
+  "where": "ooga-booga · Ghazghkull Thraka",
+  "judgement": {
+   "kind": "melee",
+   "needs": {
+    "all": [
+     "Faction: Orks"
+    ]
+   },
+   "when": "Within 6\" of Ghazghkull",
+   "selfWhen": "Own aura",
+   "note": "+1 to hit, +1 to wound",
+   "from": "Prophet of Da Great Waaagh!",
+   "selfAlways": true
+  },
+  "source": {
+   "ability": "Prophet of Da Great Waaagh!",
+   "text": "While a friendly **ORKS** unit is within 6\" of this unit, that unit’s melee attacks have:\n- +1 to **hit rolls**.\n- +1 to **wound rolls**."
+  },
+  "key": "4dd1066670031b82"
+ },
+ {
+  "army": "melee",
+  "kind": "unit-footnote",
+  "where": "melee · Mozrog Skragbad",
+  "judgement": {
+   "kind": "melee",
+   "when": "vs MONSTER/VEHICLE",
+   "note": "can re-roll wound rolls",
+   "from": "Da Bigger Dey Iz…",
+   "always": true,
+   "vs": {
+    "any": [
+     "Monster",
+     "Vehicle"
+    ]
+   }
+  },
+  "source": {
+   "ability": "Da Bigger Dey Iz…",
+   "text": "This unit’s melee attacks that target a **MONSTER/VEHICLE** unit can re-roll **wound rolls**."
+  },
+  "key": "2cd7024961fb6a08"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "ability-calc",
+  "where": "ooga-booga · Nazdreg · Arrogant Invulnerability",
+  "judgement": {
+   "def": "Attacks that target this unit have -1 AP",
+   "defAlways": true,
+   "models": [
+    "1× Nazdreg",
+    "5× Meganob w/ Twin Killsaw"
+   ]
+  },
+  "source": {
+   "ability": "Arrogant Invulnerability",
+   "text": "Attacks that target this unit have -1 **AP**."
+  },
+  "key": "adbc1343c5ec5af2"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "unit-footnote",
+  "where": "ooga-booga · Big Mek",
+  "judgement": {
+   "kind": "melee",
+   "weapon": "Kustom Krumpa",
+   "when": "Kustom Krumpa of a Nob w/ Paired Krumpas",
+   "note": "can re-roll hit rolls and wound rolls",
+   "from": "Paired Krumpas",
+   "always": true
+  },
+  "source": {
+   "ability": "Paired Krumpas",
+   "text": "Attacks made with this model’s Kustom Krumpa weapon can re-roll **hit rolls** and **wound rolls**."
+  },
+  "key": "b897e1eb0d0cd6aa"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-calc",
+  "where": "melee · Big Mek in Mega Armour · Arrogant Invulnerability",
+  "judgement": {
+   "def": "Attacks that target this unit have -1 AP",
+   "defAlways": true,
+   "models": [
+    "1× Big Mek in Mega Armour (Kustom Force Field)",
+    "5× Meganob w/ Twin Killsaw"
+   ]
+  },
+  "source": {
+   "ability": "Arrogant Invulnerability",
+   "text": "Attacks that target this unit have -1 **AP**."
+  },
+  "key": "60a1b77306300d68"
+ },
+ {
+  "army": "standard",
+  "kind": "unit-footnote",
+  "where": "standard · Khârn the Betrayer",
+  "judgement": {
+   "kind": "melee",
+   "when": "While Khârn leads this unit",
+   "note": "re-roll hit rolls of 1 and wound rolls of 1",
+   "from": "Legendary Killer",
+   "always": true
+  },
+  "source": {
+   "ability": "Legendary Killer",
+   "text": "While this model is leading a unit, each time a model in that unit makes a melee attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1."
+  },
+  "key": "4d6fc15075b6a163"
+ },
+ {
+  "army": "princes",
+  "kind": "ability-calc",
+  "where": "princes · Daemon Prince of Khorne · Helm of Brazen Ire",
+  "judgement": {
+   "def": "-1 D to each attack allocated to this model",
+   "defAlways": true,
+   "models": [
+    "1× Daemon Prince of Khorne"
+   ]
+  },
+  "source": {
+   "ability": "Helm of Brazen Ire",
+   "text": "**WORLD EATERS** model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack."
+  },
+  "key": "43f05ce8b48a8a66"
+ },
+ {
+  "army": "standard",
+  "kind": "unit-footnote",
+  "where": "standard · Exalted Eightbound",
+  "judgement": {
+   "kind": "melee",
+   "when": "vs MONSTER/VEHICLE",
+   "note": "+1 D",
+   "from": "Rend and Tear",
+   "always": true,
+   "vs": {
+    "any": [
+     "Monster",
+     "Vehicle"
+    ]
+   }
+  },
+  "source": {
+   "ability": "Rend and Tear",
+   "text": "Each time a model in this unit makes a melee attack that targets a **MONSTER** or **VEHICLE** unit, until the end of the phase, improve the Damage characteristic of that attack by 1."
+  },
+  "key": "f45eb2bc6b70eec2"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "unit-aura",
+  "where": "super-terminators · Eightbound",
+  "judgement": {
+   "kind": "melee",
+   "needs": {
+    "all": [
+     "Faction: World Eaters"
+    ]
+   },
+   "when": "Within 6\" of Eightbound, vs non-MONSTER/VEHICLE targets",
+   "selfWhen": "Own aura, vs non-MONSTER/VEHICLE targets",
+   "note": "+1 to hit; also +1 to wound if the target is Below Half-strength",
+   "from": "Beacons of Rage",
+   "selfAlways": true,
+   "vs": {
+    "none": [
+     "Monster",
+     "Vehicle"
+    ]
+   },
+   "calc": {
+    "hit": 1
+   }
+  },
+  "source": {
+   "ability": "Beacons of Rage",
+   "text": "While a friendly **WORLD EATERS** unit is within 6\" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding **MONSTERS** and **VEHICLES**), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well."
+  },
+  "key": "400c30ead98baaab"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "unit-footnote",
+  "where": "pubstomper · Daemon Prince of Tzeentch with wings",
+  "judgement": {
+   "kind": "all",
+   "when": "vs CHARACTER units",
+   "note": "re-roll hit rolls of 1 and wound rolls of 1 (vs PSYKER CHARACTER units: re-roll the hit roll and the wound roll)",
+   "from": "Hunter of Souls",
+   "vs": {
+    "any": [
+     "Character"
+    ]
+   }
+  },
+  "source": {
+   "ability": "Hunter of Souls",
+   "text": "Each time this model makes an attack that targets a **CHARACTER** unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a **PSYKER CHARACTER** unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a **CHARACTER** unit, this model regains up to D3 lost wounds (if that **CHARACTER** unit was a **PSYKER**, this model regains up to 3 lost wounds instead)."
+  },
+  "key": "d2447b6b80d0fcff"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "unit-footnote",
+  "where": "pubstomper · Sorcerer",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Every ranged attack",
+   "note": "re-roll wound rolls of 1 (vs a unit within range of an objective marker you do not control: re-roll the wound roll)",
+   "from": "Bringers of Change",
+   "always": true,
+   "calc": {
+    "rrWound": "1s"
+   }
+  },
+  "source": {
+   "ability": "Bringers of Change",
+   "text": "Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead."
+  },
+  "key": "9ed10b6874791e9a"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "unit-footnote",
+  "where": "nidzillas · Hive Tyrant",
+  "judgement": {
+   "kind": "melee",
+   "when": "vs MONSTER/VEHICLE",
+   "note": "+1 to wound rolls",
+   "from": "Monstrous Nemesis",
+   "always": true,
+   "vs": {
+    "any": [
+     "Monster",
+     "Vehicle"
+    ]
+   }
+  },
+  "source": {
+   "ability": "Monstrous Nemesis",
+   "text": "**TYRANIDS MONSTER** model only. Each time the bearer makes a melee attack that targets a **MONSTER** or **VEHICLE** unit, add 1 to the **Wound roll**."
+  },
+  "key": "e96341584e050020"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "unit-aura",
+  "where": "nidzillas · Hive Tyrant",
+  "judgement": {
+   "kind": "ranged",
+   "needs": {
+    "all": [
+     "Faction: Tyranids"
+    ]
+   },
+   "when": "Within 6\" of the Hive Tyrant",
+   "note": "ranged weapons have [ASSAULT] and [LETHAL HITS]",
+   "from": "Onslaught",
+   "selfAlways": true
+  },
+  "source": {
+   "ability": "Onslaught",
+   "text": "While a friendly **TYRANIDS** unit is within 6\" of this model, ranged weapons equipped by models in that unit have the **[ASSAULT]** and **[LETHAL HITS]** abilities."
+  },
+  "key": "df2cf5e4debd42ac"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "ability-calc",
+  "where": "nidzillas · Norn Emissary · Unnatural Resistance",
+  "judgement": {
+   "def": "Feel No Pain 4+ against mortal wounds",
+   "defAlways": true,
+   "models": [
+    "1× Norn Emissary"
+   ]
+  },
+  "source": {
+   "ability": "Unnatural Resistance",
+   "text": "This model has the **Feel No Pain 4+** ability against Mortal Wounds."
+  },
+  "key": "65804ac187a805ae"
+ },
+ {
+  "army": "6-bigs",
+  "kind": "unit-footnote",
+  "where": "6-bigs · Knight Warden",
+  "judgement": {
+   "kind": "ranged",
+   "when": "vs non-MONSTER/VEHICLE targets",
+   "note": "ranged attacks have [DEVASTATING WOUNDS]",
+   "from": "Thin Their Ranks",
+   "always": true,
+   "vs": {
+    "none": [
+     "Monster",
+     "Vehicle"
+    ]
+   }
+  },
+  "source": {
+   "ability": "Thin Their Ranks",
+   "text": "Each time this model makes a ranged attack that targets an enemy unit (excluding **MONSTERS** and **VEHICLES**), that attack has the **[DEVASTATING WOUNDS]** ability."
+  },
+  "key": "f1b5ca6f42dd5db6"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "unit-footnote",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos",
+  "judgement": {
+   "kind": "all",
+   "when": "vs MONSTER/VEHICLE",
+   "note": "+1 to hit rolls; also +1 to wound rolls if the target is TITANIC or TOWERING",
+   "from": "Macro-extinction Protocols",
+   "vs": {
+    "any": [
+     "Monster",
+     "Vehicle"
+    ]
+   }
+  },
+  "source": {
+   "ability": "Macro-extinction Protocols",
+   "text": "Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well."
+  },
+  "key": "c15825b817c1abe5"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "unit-footnote",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos",
+  "judgement": {
+   "kind": "melee",
+   "when": "Every melee attack",
+   "note": "+1 to hit rolls",
+   "from": "Bringer of Justice",
+   "always": true
+  },
+  "source": {
+   "ability": "Bringer of Justice",
+   "text": "**IMPERIAL KNIGHTS** model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the **Hit roll**."
+  },
+  "key": "bf581f6f827895a7"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "unit-aura",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos",
+  "judgement": {
+   "kind": "all",
+   "needs": {
+    "all": [
+     "Armiger"
+    ]
+   },
+   "when": "Affected by Atrapos’ Duty (Bondsman), vs a TITANIC or TOWERING model",
+   "note": "re-roll the hit roll and the wound roll",
+   "from": "Atrapos’ Duty",
+   "vs": {
+    "any": [
+     "Titanic",
+     "Towering"
+    ]
+   }
+  },
+  "source": {
+   "ability": "Atrapos’ Duty",
+   "text": "While a model is affected by this ability, each time that model makes an attack that targets a TITANIC or TOWERING model, you can re-roll the Hit roll and you can re-roll the Wound roll."
+  },
+  "key": "de73571038d7b631"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "ability-calc",
+  "where": "4-megas-and-a-destrier · Knight Destrier · Sanctuary",
+  "judgement": {
+   "def": "Sanctuary: 5+ invulnerable save",
+   "defAlways": true,
+   "defCalc": {
+    "insv": 5
+   },
+   "models": [
+    "1× Knight Destrier"
+   ]
+  },
+  "source": {
+   "ability": "Sanctuary",
+   "text": "**IMPERIAL KNIGHTS** model only. The bearer has a 5+ invulnerable save."
+  },
+  "key": "e67f92940ac8a31c"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "ability-calc",
+  "where": "ooga-booga · Zodgrod Wortsnagga · Super Runts",
+  "judgement": {
+   "riled": true,
+   "models": [
+    "1× Zodgrod Wortsnagga",
+    "1× Runtherd",
+    "20× Gretchin"
+   ]
+  },
+  "source": {
+   "ability": "Super Runts",
+   "text": "- This unit is **riled up**.\n- This unit’s Scavenged Shivs weapons have +1 **A**, **WS** and **S**."
+  },
+  "key": "5856dfe907ed2957"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "ability-calc",
+  "where": "ooga-booga · Big Mek in Mega Armour · Arrogant Invulnerability",
+  "judgement": {
+   "def": "Attacks that target this unit have -1 AP",
+   "defAlways": true,
+   "models": [
+    "1× Big Mek in Mega Armour",
+    "5× Meganob w/ Kombi-weapon and Power Klaw"
+   ]
+  },
+  "source": {
+   "ability": "Arrogant Invulnerability",
+   "text": "Attacks that target this unit have -1 **AP**."
+  },
+  "key": "1ce00103ce563531"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "unit-footnote",
+  "where": "ooga-booga · Big Mek in Mega Armour",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Every ranged attack",
+   "note": "[IGNORES COVER]",
+   "from": "More Dakka",
+   "always": true
+  },
+  "source": {
+   "ability": "More Dakka",
+   "text": "This unit’s ranged attacks have:\n- **[IGNORES COVER]**.\n- If this unit is **riled up**, **[SUSTAINED HITS 1]**."
+  },
+  "key": "5481fd3392f7fb32"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "strat-mod",
+  "where": "Butchers of Khorne · A Trophy for the Throne",
+  "judgement": {
+   "mod": {
+    "kind": "melee",
+    "when": "When selected to fight, vs MONSTER/VEHICLE targets",
+    "note": "+1 to wound rolls",
+    "vs": {
+     "any": [
+      "Monster",
+      "Vehicle"
+     ]
+    }
+   }
+  },
+  "source": {
+   "stratagem": "A Trophy for the Throne",
+   "text": "WHEN: Fight phase, when a friendly **TERMINATOR SQUAD** unit is **selected to fight**.\nTARGET: That **TERMINATOR SQUAD** unit.\nEFFECT: Your unit’s attacks that target a **MONSTER/VEHICLE** unit have +1 to **wound rolls**."
+  },
+  "key": "3805cc77f15d7051"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "unit-guard",
+  "where": "purge-goes-the-foe · Belisarius Cawl",
+  "judgement": {
+   "from": "Shroudpsalm",
+   "needs": {
+    "all": [
+     "Faction: Adeptus Mechanicus"
+    ]
+   },
+   "kind": "ranged",
+   "when": "Within 6\" of Cawl, if he has Shroudpsalm",
+   "note": "Stealth: the benefit of cover against ranged attacks",
+   "calc": {
+    "stealth": true
+   }
+  },
+  "source": {
+   "missing": "nothing in the data is named Shroudpsalm"
+  },
+  "key": "e0c43ab5c43ff12f"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "unit-guard",
+  "where": "purge-goes-the-foe · Tech-Priest Enginseer",
+  "judgement": {
+   "from": "Omnissiah’s Blessing",
+   "needs": {
+    "all": [
+     "Faction: Adeptus Mechanicus",
+     "Vehicle"
+    ]
+   },
+   "kind": "all",
+   "one": true,
+   "when": "Picked by the Enginseer in your Command phase (within 3\")",
+   "note": "Feel No Pain 5+ for that VEHICLE model",
+   "calc": {
+    "fnp": 5
+   }
+  },
+  "source": {
+   "ability": "Omnissiah’s Blessing",
+   "text": "In your Command phase, select one friendly **ADEPTUS MECHANICUS** model within 3\" of this model. That model regains up to D3 lost wounds and, if it is a **VEHICLE** model, until the start of your next Command phase, that model has the **Feel No Pain 5+** ability. Each model can only be selected for this ability once per Command phase."
+  },
+  "key": "e9c226b214f31434"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "ability-calc",
+  "where": "purge-goes-the-foe · Cybernetica Datasmith · Battle Protocols",
+  "judgement": {
+   "def": "Aegis Protocol: KASTELAN ROBOT models +1 Toughness (from the start of the battle until another protocol is selected)",
+   "defAlways": true,
+   "defCalc": {
+    "t": 1,
+    "model": "Kastelan Robot"
+   },
+   "models": [
+    "1× Cybernetica Datasmith",
+    "4× Kastelan Robot"
+   ]
+  },
+  "source": {
+   "ability": "Battle Protocols",
+   "text": "At the start of the battle, if this model is leading a **KASTELAN ROBOTS** unit, that unit enters Aegis Protocols (see below). In your Command phase, if this model is leading a **KASTELAN ROBOTS** unit, you can select one protocol from those listed below for that unit to enter. Once a unit enters a protocol, it remains in that protocol until it enters a different one.\n- **Protector Protocol:** Add 2 to the Attacks characteristic of ranged weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Conqueror Protocol:** Add 2 to the Attacks characteristic of melee weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Aegis Protocol:** Add 1 to the Toughness characteristic of **KASTELAN ROBOT** models in that unit."
+  },
+  "key": "449dc3dd34a52139"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "ability-calc",
+  "where": "purge-goes-the-foe · Cybernetica Datasmith · Robotic Bodyguard",
+  "judgement": {
+   "def": "Cybernetica Datasmith only: Feel No Pain 4+ while leading this unit",
+   "defAlways": true,
+   "defCalc": {
+    "fnp": 4,
+    "model": "Cybernetica Datasmith"
+   },
+   "models": [
+    "1× Cybernetica Datasmith",
+    "4× Kastelan Robot"
+   ]
+  },
+  "source": {
+   "ability": "Robotic Bodyguard",
+   "text": "While a **CYBERNETICA DATASMITH** model is leading this unit, that model has the **Feel No Pain** 4+ ability."
+  },
+  "key": "db4cd31706545eb9"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "unit-guard",
+  "where": "purge-goes-the-foe · Onager Dunecrawler",
+  "judgement": {
+   "from": "Emanatus Forcefield",
+   "needs": {
+    "all": [
+     "Faction: Adeptus Mechanicus",
+     "Battleline"
+    ]
+   },
+   "kind": "ranged",
+   "when": "Wholly within 6\" of the Onager Dunecrawler",
+   "note": "4+ InSv against ranged attacks",
+   "calc": {
+    "insv": 4
+   }
+  },
+  "source": {
+   "ability": "Emanatus Forcefield",
+   "text": "While a friendly **ADEPTUS MECHANICUS BATTLELINE** model is wholly within 6\" of this model, that **BATTLELINE** model has a 4+ invulnerable save against ranged attacks."
+  },
+  "key": "e96a48e526939f65"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "unit-footnote",
+  "where": "purge-goes-the-foe · Skorpius Disintegrator",
+  "judgement": {
+   "kind": "ranged",
+   "weapon": "Ferrumite cannon",
+   "when": "Ferrumite cannon vs MONSTER or VEHICLE targets",
+   "note": "+1 to hit rolls",
+   "from": "Blistering Salvoes",
+   "always": true,
+   "vs": {
+    "any": [
+     "Monster",
+     "Vehicle"
+    ]
+   }
+  },
+  "source": {
+   "ability": "Blistering Salvoes",
+   "text": "Each time this model makes an attack with a belleros energy cannon that targets an **INFANTRY** unit, add 1 to the **Hit roll**. Each time this model makes an attack with a ferrumite cannon that targets a **MONSTER** or **VEHICLE** unit, add 1 to the Hit roll."
+  },
+  "key": "f2603203e43d1fbe"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-mod",
+  "where": "Eradication Cohort · Threat-cogitation Targeters",
+  "judgement": {
+   "mod": {
+    "kind": "ranged",
+    "when": "Your Shooting phase, attacks allocated to a MONSTER or VEHICLE model",
+    "note": "can re-roll the Damage roll",
+    "vs": {
+     "any": [
+      "Monster",
+      "Vehicle"
+     ]
+    }
+   }
+  },
+  "source": {
+   "stratagem": "Threat-cogitation Targeters",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One **SKITARII VEHICLE** unit from your army that has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, each time a ranged attack made by a model in your unit is allocated to a **MONSTER** or **VEHICLE** model, you can re-roll the Damage roll."
+  },
+  "key": "6b84d706a2c56c55"
+ }
+]
