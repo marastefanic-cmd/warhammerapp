@@ -602,8 +602,8 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .dmab:active{background:var(--line)}
 .dmacts{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
 .dmacts .btn, .dmacts .btn2{flex:1 1 140px}
-.dmh{display:flex; align-items:baseline; justify-content:space-between; gap:8px; margin:20px 0 2px; font:700 15.5px/1.1 var(--f-head); letter-spacing:.1em; text-transform:uppercase; color:var(--fg)}
-.dmh small{font:600 11px/1 var(--f-head); letter-spacing:.08em; color:var(--muted)}
+.dmhd{display:flex; align-items:baseline; justify-content:space-between; gap:8px; margin:20px 0 2px; font:700 15.5px/1.1 var(--f-head); letter-spacing:.1em; text-transform:uppercase; color:var(--fg)}
+.dmhd small{font:600 11px/1 var(--f-head); letter-spacing:.08em; color:var(--muted)}
 .dmh3{display:flex; align-items:baseline; gap:8px; margin:16px 0 0; padding-bottom:5px; border-bottom:1px solid var(--line); font:700 12.5px/1.2 var(--f-head); letter-spacing:.1em; text-transform:uppercase; color:var(--fg2)}
 .dmh3 small{font:500 12px/1.2 var(--f-body); letter-spacing:0; text-transform:none; color:var(--muted)}
 .dmsec .dmh3{margin-top:14px}
@@ -704,6 +704,8 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .dmopp span{flex:1; min-width:0}
 .dmq{margin:4px 0 10px}
 .dmgrp .grp-h{margin-top:12px; padding-bottom:4px}
+.dmquick{margin-top:2px; max-height:none}
+.dmans.static .dmgl{margin-top:14px}
 @media (max-width:359px){
   .dml1{grid-template-columns:38px minmax(0,1fr)}
   .dmvb{grid-template-columns:38px auto 1fr}
@@ -1965,7 +1967,7 @@ function dmCalc(st, A, B, au, tu, kind){
     } };
   more(A, au, 'a'); more(B, tu, 't');
   for(const r of rules) if(r.state === 'nc') nc.push({ side:'a', name:(r.m.cp ? r.m.cp + 'CP ' : '') + r.m.from, text:(r.m.when ? r.m.when + ': ' : '') + r.m.note, why:r.why, strat:!!r.m.strat });
-  for(const x of defs) if(x.state === 'nc') nc.push({ side:'t', name:x.g ? x.g.from : x.d.a === 'strat' ? (/^(\d+)CP /.exec(x.d.t) || [, ''])[1] + 'CP ' + x.src : x.d.t.replace(/:.*$/, ''), text:x.g ? x.g.note : x.d.a === 'strat' ? x.d.t.replace(/^\d+CP [^:]+: /, '') : x.d.t, why:x.why, strat:!!(x.d && x.d.a === 'strat') });
+  for(const x of defs) if(x.state === 'nc') nc.push({ side:'t', name:x.g ? x.g.from : x.d.a === 'strat' ? (/^(\d+)CP /.exec(x.d.t) || [, ''])[1] + 'CP ' + x.src : x.ab ? x.ab.name : x.d.t.replace(/:.*$/, ''), text:x.g ? x.g.note : x.d.a === 'strat' ? x.d.t.replace(/^\d+CP [^:]+: /, '') : x.d.t, why:x.why, strat:!!(x.d && x.d.a === 'strat') });
 
   // notes for the working: the same ability twice (24.02), a value the printed weapon already includes, modifiers past ±1
   const kwText = x => '[' + (typeof x === 'string' ? x : x.t) + ']' + (x.src ? ' (' + x.src + ')' : '');
@@ -2053,7 +2055,7 @@ function dmTypedEd(st, au, M){
   const t = dmTypedVals(st);
   const sv = v => v ? v + '+' : 'none';
   const f = (k, label, txt) => '<div class="dmst"><span>' + label + '</span><button data-dmty="' + k + '|-1" aria-label="' + label + ' down">−</button><b class="num">' + txt + '</b><button data-dmty="' + k + '|1" aria-label="' + label + ' up">+</button></div>';
-  return '<section class="dmsec" id="dmTyped"><h2 class="dmh">The target (typed)</h2><div class="dmtyg">' +
+  return '<section class="dmsec" id="dmTyped"><h2 class="dmhd">The target (typed)</h2><div class="dmtyg">' +
     f('n', 'Models', t.n) + f('T', 'T', t.T) + f('W', 'W', t.W) + f('Sv', 'Save', sv(t.Sv)) + f('InSv', 'InSv', sv(t.InSv)) + f('fnp', 'Feel No Pain', sv(t.fnp)) + '</div>' +
     '<div class="dmpf dmtkw">' + dmTypedKw(au, M ? M.rules : []).map(k => '<button data-dmtkw="' + esc(k) + '" aria-pressed="' + !!t.kw[k] + '"' + (t.kw[k] ? ' class="on"' : '') + '>' + esc(k) + '</button>').join('') + '</div></section>';
 }
@@ -2145,9 +2147,10 @@ function dmLevers(st, M){
 }
 // a lever's what-if: the state with that one change, built and remembered (key: the matchup's input)
 function dmIf(C, lv){
-  if(lv.M2 || lv.out) return lv;
-  const s = JSON.parse(JSON.stringify(C.st)); lv.apply(s);
-  lv.M2 = dmCalc(s, C.P.A, C.P.B, C.P.au, C.P.tu, C.P.kind); lv.key = dmKey(lv.M2.input);
+  if(lv.M2 || lv.out || lv.err) return lv;
+  try { const s = JSON.parse(JSON.stringify(C.st)); lv.apply(s);
+    lv.M2 = dmCalc(s, C.P.A, C.P.B, C.P.au, C.P.tu, C.P.kind); lv.key = dmKey(lv.M2.input); }
+  catch(e){ lv.err = true; lv.M2 = null; const el = document.querySelector('[data-fx="' + CSS.escape(lv.id) + '"]'); if(el) el.innerHTML = '<span class="fxv z">–</span>'; }
   return lv;
 }
 // the effect shown beside a lever: what the answer becomes with it changed, minus what it is now (a box: with it minus without)
@@ -2155,12 +2158,14 @@ function dmEff(C, lv, quick){
   if(lv.out || !lv.M2) return null;
   const memo = quick ? C.quick : dmMemo, k2 = lv.key, k0 = C.key;
   if(k2 === k0) return { t:'0', u:'no change', v:0, zero:true, same:true };
-  const r2 = memo.get(k2) || (quick ? dmMemo.get(k2) : null), r0 = quick ? memo.get(k0) || dmMemo.get(k0) : C.A && C.A.r;
-  if(!r2 || !r0 || !C.A) return null;
-  const A2 = lv.M2.input.groups.length && !lv.M2.R.groups.every(g => g.out) ? dmAns(lv.M2, r2, WH_CALC.explain(lv.M2.input, r2.orderIdx)) : null;
-  const A0 = quick ? dmAns(C.M, r0, C.A.x) : C.A;
-  const a = dmNums(A0), b = A2 ? dmNums(A2) : Object.assign({}, a, { prim:0, raw:0, lost:0, wipe:0, chars:a.chars.map(() => 0) });
-  return lv.radio ? dmDelta(a, b, C.A) : lv.on ? dmDelta(b, a, C.A) : dmDelta(a, b, C.A);
+  const has = M => M.input.groups.length && !M.R.groups.every(g => g.out);
+  const r2 = has(lv.M2) ? memo.get(k2) || (quick ? dmMemo.get(k2) : null) : null, r0 = !C.A ? null : quick ? memo.get(k0) || dmMemo.get(k0) : C.A.r;
+  if((has(lv.M2) && !r2) || (C.A && !r0) || (!C.A && !r2)) return null;
+  const A2 = r2 ? dmAns(lv.M2, r2, WH_CALC.explain(lv.M2.input, r2.orderIdx)) : null;
+  const A0 = !C.A ? null : quick ? dmAns(C.M, r0, C.A.x) : C.A;
+  const none = A => Object.assign({}, dmNums(A), { prim:0, raw:0, lost:0, wipe:0, chars:dmNums(A).chars.map(() => 0) });
+  const a = A0 ? dmNums(A0) : none(A2), b = A2 ? dmNums(A2) : none(A0);
+  return lv.radio ? dmDelta(a, b, A0 || A2) : lv.on ? dmDelta(b, a, A0 || A2) : dmDelta(a, b, A0 || A2);
 }
 function dmFxHtml(C, lv){
   if(lv.out) return '';
@@ -2322,8 +2327,16 @@ function screenDamage(){
 // nothing to attack yet: the other side is picked here, or typed
 function dmAsk(st, P){
   const me1 = st.dir === 'me';
-  return '<div class="dmans static"><p class="dmmsg">' + (me1 ? 'Whom do they attack? Any unit of any list, or type one.' : 'Which of their units attacks?') + '</p>' +
-    '<div class="dmacts"><button class="btn" data-dmpick="theirs">' + (me1 ? 'Pick their unit' : 'Pick the attacker') + '</button>' + (me1 ? '<button class="btn2" data-dmunit="theirs|typed|">Type a target</button>' : '') + '</div></div>';
+  // the opponent's units right here, one tap each (their list set on Find or in the picker)
+  const quick = P.opp ? '<p class="dmgl">' + esc(P.opp.name) + '</p><div class="list dmquick">' + P.opp.units.map(u => '<button class="row" data-dmunit="theirs|' + esc(P.opp.id) + '|' + esc(u.id) + '"><span class="rb"><b>' + esc(dmName(u, P.opp)) + '</b><span>' + esc(dmUnitSub(u, P.opp, P.kind)) + '</span></span></button>').join('') + '</div>' : '';
+  return '<div class="dmans static"><p class="dmmsg">' + (me1 ? 'Pick the target: any unit of any list, or type one.' : 'Pick which of their units attacks.') + '</p>' +
+    '<div class="dmacts"><button class="btn" data-dmpick="theirs">' + (me1 ? 'Pick their unit' : 'Pick the attacker') + '</button>' + (me1 ? '<button class="btn2" data-dmunit="theirs|typed|">Type a target</button>' : '') + '</div>' + quick + '</div>';
+}
+// a unit's line in a picker: its role and models, and, when another unit of the list has its name, what it is armed with
+function dmUnitSub(u, a, kind){
+  const m = modelCount(u), twin = a.units.some(x => x !== u && unitLabel(x) === unitLabel(u));
+  const gear = twin ? weaponItems((u.ranged || []).concat(u.melee || [])).filter((it, i, l) => l.findIndex(x => itemName(x) === itemName(it)) === i).map(it => itemName(it) + ((+it.n || 1) > 1 ? ' ×' + it.n : '')).slice(0, 4).join(', ') : '';
+  return [u.role, m + (m > 1 ? ' models' : ' model'), u.enhancement, gear].filter(Boolean).join(' · ');
 }
 // the answer, pinned: the number, what it is of, the chance to wipe, a CHARACTER's fate; what is counted (chips); the working, and back
 function dmCard(C){
@@ -2352,7 +2365,7 @@ function dmChips(C){
   for(const c of M.weapons){ if(c.ps.length > 1 && c.on) info(itemName(c.it) + ': ' + c.w.name); if(c.on !== c.dflt) chip('w:' + c.k, (c.on ? '+ ' : 'no ') + itemName(c.it)); }
   for(const x of M.sit) if(x.on && !x.fixed && !x.implied) chip('s:' + x.k, x.label, !!x.why);
   if(M.prec && M.prec.on) chip('q:', '[PRECISION] → ' + M.prec.who, !!M.prec.why);
-  for(const r of M.rules) if(r.on) chip('r:' + r.k, (r.m.cp ? r.m.cp + 'CP ' : '') + (r.pills ? r.pills.find(p => p[1])[0] : r.m.from), r.state === 'on' && C.st.on[r.k] == null);
+  for(const r of M.rules) if(r.on) chip('r:' + r.k, (r.m.cp ? r.m.cp + 'CP ' : '') + r.m.from + (r.pills ? ': ' + r.pills.find(p => p[1])[0] : ''), r.state === 'on' && C.st.on[r.k] == null);
   for(const x of M.defs) if(x.on) chip('d:' + x.k, (x.d && x.d.a === 'strat' ? (/^(\d+)CP /.exec(x.d.t) || [, ''])[1] + 'CP ' : DM_SIDE(C, 't') + ': ') + x.src, x.state === 'on' && C.st.on[x.k] == null);
   const nMan = ['hit', 'wound', 'ap', 'd', 'a', 'rrHit', 'rrWound', 'tInsv', 'tFnp', 'lethal', 'sus', 'dev'].filter(k => C.st.man[k] && C.st.man[k] !== '0').length;
   if(nMan) out.push('<button class="dmchip" data-dmmanclear>' + nMan + ' set by hand<i aria-hidden="true">×</i></button>');
@@ -2373,11 +2386,11 @@ const DM_SIDE = (C, side) => (side === 'a') === (C.st.dir === 'me') ? 'yours' : 
 function dmWhyHtml(C, lv, extra){
   const side = lv.side ? '<span class="sd">' + DM_SIDE(C, lv.side) + '</span>' : '';
   let st = '';
-  const was = why => C.st.on[lv.r ? lv.r.k : lv.x.k] == null ? 'ticked for you: ' + why : lv.on ? 'ticked by you' : 'unticked by you (it was ticked for you: ' + why + ')';
-  if(lv.r) st = lv.r.state === 'on' ? was(lv.r.why) : lv.on ? 'ticked by you' : lv.r.m.strat ? 'if used' : 'if it applies';
-  else if(lv.x && (lv.x.d || lv.x.g)) st = lv.x.state === 'on' ? was(lv.x.why) : lv.on ? 'ticked by you' : lv.x.d && lv.x.d.a === 'strat' ? 'if used' : lv.x.why || 'if it applies';
-  else if(lv.x) st = lv.x.why ? 'ticked for you: ' + lv.x.why : lv.on ? 'ticked by you' : 'if it applies';
-  else if(lv.prec) st = lv.prec.why || (lv.on ? 'ticked by you' : 'the attacker may pick it (24.28)');
+  const was = why => C.st.on[lv.r ? lv.r.k : lv.x.k] == null ? 'ticked for you: ' + why : lv.on ? 'ticked' : 'unticked (it was ticked for you: ' + why + ')';
+  if(lv.r) st = lv.r.state === 'on' ? was(lv.r.why) : lv.on ? 'ticked' : lv.r.m.strat ? 'if used' : 'if it applies';
+  else if(lv.x && (lv.x.d || lv.x.g)) st = lv.x.state === 'on' ? was(lv.x.why) : lv.on ? 'ticked' : lv.x.d && lv.x.d.a === 'strat' ? 'if used' : lv.x.why || 'if it applies';
+  else if(lv.x) st = lv.x.why ? 'ticked for you: ' + lv.x.why : lv.on ? 'ticked' : 'if it applies';
+  else if(lv.prec) st = lv.prec.why || (lv.on ? 'ticked' : 'the attacker may pick it (24.28)');
   return side + (st ? '<span>' + esc(st) + '</span>' : '') + (extra ? '<span class="nw2">' + esc(extra) + '</span>' : '');
 }
 // the list: half range, weapons, the situation and rules (ranked), the stratagems (ranked), what is not counted, by hand
@@ -2386,7 +2399,7 @@ function dmListHtml(C){
   const score = dmRank[dmPairKey(st)] || null;
   const ranked = list => !score ? list : list.map((x, i) => [x, i]).sort((a, b) => (score[b[0].id] || 0) - (score[a[0].id] || 0) || a[1] - b[1]).map(x => x[0]);
   const sideName = side => side === 'a' ? dmName(P.au, P.A) : dmName(P.tu, P.B);
-  let h = '<h2 class="dmh dmtop">What changes this' + (score ? '<small>biggest first</small>' : '') + '</h2>';
+  let h = '<h2 class="dmhd dmtop">What changes this' + (score ? '<small>biggest first</small>' : '') + '</h2>';
   // half range
   if(M.bands){
     const via = M.bands.rules.length ? ' (with ' + M.bands.rules.join(', ') + ')' : '';
@@ -2523,16 +2536,16 @@ function dmBackSheet(){
   const counted = dmCountedOf(B.full);
   openSheet('And back?', who + ' ' + verb + ' back', line(m, 'with what is left') + line(full, 'at full strength') +
     '<p class="note">Left after ' + (me1 ? 'your' : 'their') + ' attack: ' + f(leftAvg) + ' of ' + total + ' models on average; none in ' + dmPct(none) + ' of the games' + (chars.length ? '; ' + chars.join('; ') : '') + '. Each of the 10,000 games carries on: what is left of the unit then ' + verb + 's back.</p>' +
-    '<p class="note">Counted for them: ' + esc(counted.length ? counted.join(', ') : 'nothing ticked (the datasheet as printed)') + '. Which models are left is the defender’s pick (05.03): the calculator keeps their rarer weapons to the last.</p>' +
-    '<div class="dmacts"><button class="btn" data-dmswap>Open their attack</button></div>');
+    '<p class="note">Counted for ' + (me1 ? 'them' : 'you') + ': ' + esc(counted.length ? counted.join(', ') : 'nothing ticked (the datasheet as printed)') + '. Which models are left is the defender’s pick (05.03): the calculator keeps the rarer weapons to the last.</p>' +
+    '<div class="dmacts"><button class="btn" data-dmswap>' + (me1 ? 'Open their attack' : 'Open your attack') + '</button></div>');
 }
 const dmCountedOf = M => M.rules.filter(r => r.on).map(r => (r.m.cp ? r.m.cp + 'CP ' : '') + r.m.from).concat(M.sit.filter(x => x.on && !x.fixed).map(x => x.label), M.defs.filter(x => x.on).map(x => x.src));
 // the pickers: your unit (this list), theirs (any list's, grouped, the opponent's first; searchable), or a typed target
 function dmPicker(k){
   const st = dmState(), P = dmPair(st), me1 = st.dir === 'me', kind = P.kind;
   const now = k === 'mine' ? P.mine : P.theirs;
-  const row = (a, u) => { const m = modelCount(u), armed = ((kind === 'ranged' ? u.ranged : u.melee) || []).length;
-    const sub = [u.role, m + (m > 1 ? ' models' : ' model'), u.enhancement, !armed && (k === 'mine') === me1 ? 'no ' + kind + ' weapons' : ''].filter(Boolean).join(' · ');
+  const row = (a, u) => { const armed = ((kind === 'ranged' ? u.ranged : u.melee) || []).length;
+    const sub = dmUnitSub(u, a, kind) + (!armed && (k === 'mine') === me1 ? ' · no ' + kind + ' weapons' : '');
     return '<button class="row" data-dmunit="' + k + '|' + esc(a.id) + '|' + esc(u.id) + '" data-q="' + esc((dmName(u, a) + ' ' + a.name + ' ' + u.kw.join(' ')).toLowerCase()) + '"><span class="rb"><b>' + esc(dmName(u, a)) + '</b><span>' + esc(sub) + '</span></span>' +
       (u === now ? '<svg class="ic ok" aria-hidden="true"><use href="#i-check"/></svg>' : '') + '</button>'; };
   if(k === 'mine'){ openSheet(P.me.name, 'Your unit', '<div class="list">' + P.me.units.map(u => row(P.me, u)).join('') + '</div>'); return; }
@@ -2573,7 +2586,10 @@ function dmHow(c, st, r0){
   if(gi.some(i => (+g[i].AP || 0) === 0 && g[i].mods.some(m => +m.ap > 0)) && c.tmod.apWorse) L.push(['AP (When Modifying Characteristics)', 'improved and worsened at once: the calculator adds the changes up first, then holds AP at 0 at worst (“after all modifiers”); worsening first, step by step, can read differently.']);
   if(c.ctx.snap && gi.some(i => g[i].kw.some(k => /^torrent/i.test(k)))) L.push(['[TORRENT] in snap shooting', 'the rules don’t say whether these attacks still hit automatically; the calculator lets them.']);
   if(c.ctx.precision) L.push(['[PRECISION] (24.28)', 'attacks with it go to ' + c.ctx.precision + ' while it is in the unit, the others as usual; their [DEVASTATING WOUNDS] mortal wounds go to it first (24.28.01).']);
-  L.push(['Range (04.02)', 'every weapon is taken to be in range of the target; a rule that changes range counts only through half range.' + (c.ctx.halves && c.ctx.halves.length ? ' Half range ([RAPID FIRE] 24.30, [MELTA] 24.25) is the band picked above, worked out from the ranges after the ticked rules that change them: a weapon gets its bonus when its half range reaches it.' : '')]);
+  L.push(['Range (04.02)', 'every weapon is taken to be in range of the target; a rule that changes range counts only through half range.' + (c.ctx.halves && c.ctx.halves.length ? ' Half range ([RAPID FIRE] 24.30, [MELTA] 24.25) is the band picked: the bands come from the half ranges of the weapons as picked, with and without each rule here that changes range, so a band keeps its meaning when such a rule is ticked; a weapon gets its bonus when its half range, after the ticked rules, reaches the band.' : '')]);
+  L.push(['The number beside each choice', 'the same matchup played again with that one choice changed, with the same 10,000 games: it is what the answer becomes when the choice is tapped (models destroyed; wounds lost for a one-model unit; when that does not move, a CHARACTER’s chance to be destroyed or the chance to wipe the unit). The list is ordered once for each pair, by what each choice gains whose choice it is, and then stays put.']);
+  L.push(['A situation', 'ticking one (a charge, riled up, an objective) ticks every rule here whose whole condition it is; each can still be unticked by itself. A stratagem is never ticked for you.']);
+  if(c.au && !c.tu.typed) L.push(['And back?', 'in each of the 10,000 games the attack carries on: what is left of the target then attacks back, with the choices of that direction (nothing carried over). Which models are left is the defender’s pick (05.03): the calculator keeps the rarer weapons to the last. A model left with lost wounds attacks as usual (a Damaged profile is not applied).']);
   if(kw(/^blast\b/i)) L.push(['[BLAST] (24.05)', 'one more attack dice (X with [BLAST X]) for every five models the target had before these attacks.']);
   if(kw(/^cleave\b/i)) L.push(['[CLEAVE] (24.06)', 'X more attack dice for every five models the target had before these attacks, when all of that weapon’s attacks target this one unit: the calculator takes it that they do.']);
   return '<details class="xp dmhow" data-dmfold="how"' + (st.fold.how ? ' open' : '') + '><summary><span class="xh"><b>How this is worked out</b><span>what the rules say, and what the calculator does where they leave a choice</span></span>' + chev + '</summary><div class="body">' +
