@@ -143,7 +143,7 @@ function prep(g, X){
   // adds it again
   const credited = (field, m) => !!m.from && !m.strat && [].concat(from[field] || []).some(r => up(r) === up(m.from));
   const applied = [], skipped = [];
-  const why = { a:[], s:[], ap:[], d:[], hit:[], wound:[], bs:[], set:{} };
+  const why = { a:[], s:[], ap:[], d:[], hit:[], wound:[], bs:[], range:[], set:{} };
   const inst = (g.kw || []).map(t => ({ t:up(t), src:'' }));
   for(const m of mods){
     for(const [key, f] of Object.entries(MOD_KW)) if(m[key]){
@@ -153,6 +153,8 @@ function prep(g, X){
     }
   }
   const k = keywords(inst, X.tkw);
+  // where a keyword comes from: the rule that gives it here, or the rule the printed weapon already has it from (from)
+  k.from = key => k.src[key] || [].concat(from[k.text[key]] || []).join(' and ');
   const sum = (key, field) => { let t = 0; for(const m of mods){ if(!m[key]) continue;
     if(credited(field, m)){ skipped.push({ from:m.from, key:field }); continue; }
     t += +m[key]; applied.push({ from:m.from || '', key:field }); why[key].push({ v:+m[key], src:srcName(m) }); } return t; };
@@ -167,8 +169,9 @@ function prep(g, X){
   const notes = k.dup.map(d => ({ dup:d.key, used:d.used, not:d.not }));
 
   // every weapon is taken to be in range. Half range ([RAPID FIRE], [MELTA]): ctx.halfWithin = the target is within that
-  // many inches, so each weapon whose half range reaches it gets its bonus; else ctx.halfRange (true: every weapon)
-  const r0 = num(g.range), rangeIn = r0 == null || /melee/i.test(g.range || '') ? null : r0;
+  // many inches, so each weapon whose half range reaches it gets its bonus; else ctx.halfRange (true: every weapon).
+  // A rule that changes range (mod.range, inches) changes half range with it (24.25, 24.30)
+  const r0 = num(g.range), rPlus = sum('range', 'Range'), rangeIn = r0 == null || /melee/i.test(g.range || '') ? null : r0 + rPlus;
   const half = ctx.halfWithin != null ? rangeIn != null && rangeIn / 2 >= ctx.halfWithin : !!ctx.halfRange;
   let out = '';
   if(ranged){
@@ -190,15 +193,15 @@ function prep(g, X){
   if(ignore) for(const x of why.hit) if(x.v < 0) x.ignored = true;
   const skill0 = sBS.base != null ? skillOf(sBS.base) : skillOf(g.skill);
   if(ranged && (ctx.cover || indirect) && !k.ignoresCover) why.bs.push({ v:1, src:indirect && !ctx.cover ? 'indirect shooting: the benefit of cover (10.07, 13.08)' : ctx.coverSrc || 'the benefit of cover (13.08)', ignored:ignore });
-  else if(ranged && (ctx.cover || indirect)) why.bs.push({ v:0, src:'the benefit of cover (13.08): not against [IGNORES COVER] (24.18)' + (k.src.ignoresCover ? ', from ' + k.src.ignoresCover : '') });
+  else if(ranged && (ctx.cover || indirect)) why.bs.push({ v:0, src:'the benefit of cover (13.08): not against [IGNORES COVER] (24.18)' + (k.from('ignoresCover') ? ', from ' + k.from('ignoresCover') : '') });
   if(ranged && ctx.plunging) why.bs.push({ v:-1, src:'Plunging Fire (22.05)' });
   const worse = why.bs.filter(x => x.v > 0 && !x.ignored).length, better = why.bs.filter(x => x.v < 0).length;
   const bs = skill0 >= 7 ? 7 : Math.max(RULE.bestSkill, Math.min(RULE.worstSkill, skill0 + worse - better - sBS.plus));
-  let rrHit = best('rrHit'), rrWound = k.twin ? { v:'all', src:k.src.twin ? k.src.twin : '[TWIN-LINKED] (24.38)' } : best('rrWound');
+  let rrHit = best('rrHit'), rrWound = k.twin ? { v:'all', src:k.src.twin ? k.src.twin : '[TWIN-LINKED] (24.38' + (k.from('twin') ? ', from ' + k.from('twin') : '') + ')' } : best('rrWound');
   const noRr = indirect ? 'indirect shooting (10.07)' : ranged && ctx.snap ? 'snap shooting (15.09)' : '';
   if(noRr) rrHit = { v:'', src:'' };                                          // you cannot re-roll hit rolls (10.07, 15.09)
 
-  if(k.lance && ctx.charged) why.wound.push({ v:1, src:'[LANCE] after a charge move (24.21)' + (k.src.lance ? ', from ' + k.src.lance : '') });
+  if(k.lance && ctx.charged) why.wound.push({ v:1, src:'[LANCE] after a charge move (24.21)' + (k.from('lance') ? ', from ' + k.from('lance') : '') });
   for(const m of mods) if(+m.wound) why.wound.push({ v:+m.wound, src:srcName(m) });
   if(tm.woundMinus) why.wound.push({ v:-tm.woundMinus, src:tsrc.woundMinus || 'the target' });
   if(tm.apWorse) why.ap.push({ v:-tm.apWorse, src:tsrc.apWorse || 'the target' });
@@ -209,7 +212,7 @@ function prep(g, X){
   const D = dice(sD.base != null ? sD.base : g.D);
   const cH = low('critHit', RULE.critHit), cW = low('critWound', RULE.critWound);
   const G = {
-    name:g.name, n:Math.max(0, +g.n || (g.n === 0 ? 0 : 1)), out, notes, applied, skipped, k, why, half, rangeIn, indirect, noRr, ignoreSrc,
+    name:g.name, n:Math.max(0, +g.n || (g.n === 0 ? 0 : 1)), out, notes, applied, skipped, k, why, half, rangeIn, r0, from, indirect, noRr, ignoreSrc,
     A0:sA.base != null ? sA.base : g.A, skill0, S0:s0, AP0:ap0 || 0, D0:sD.base != null ? sD.base : g.D, blastN:X.total,
     A:dice(sA.base != null ? sA.base : g.A), aPlus,
     rapid:k.rapid && half ? k.rapid : null, melta:k.melta && half ? k.melta : null,
@@ -219,7 +222,7 @@ function prep(g, X){
     bs, hitMod:pos + (ignore ? 0 : neg), critHit:Math.min(RULE.critHit, cH.v), critHitSrc:cH.src, rrHit:rrHit.v, rrHitSrc:rrHit.src,
     S:s0 == null ? RULE.minS : Math.max(RULE.minS, s0 + sPlus),   // no S: S 1 for this (02.04.01), and '-' is never modified
     woundMod:why.wound.reduce((t, x) => t + x.v, 0),
-    critWound:Math.min(cW.v, k.antiV || 7), critWoundSrc:k.antiV && k.antiV <= cW.v ? '[' + k.text.anti + '] (24.03)' + (k.src.anti ? ', from ' + k.src.anti : '') : cW.src, rrWound:rrWound.v, rrWoundSrc:rrWound.src,
+    critWound:Math.min(cW.v, k.antiV || 7), critWoundSrc:k.antiV && k.antiV <= cW.v ? '[' + k.text.anti + '] (24.03)' + (k.from('anti') ? ', from ' + k.from('anti') : '') : cW.src, rrWound:rrWound.v, rrWoundSrc:rrWound.src,
     AP:Math.min(0, (ap0 || 0) - apImp + (tm.apWorse || 0)),   // improvements and worsenings added up, then not worse than 0
     D, dPlus, sus:k.sus || null, lethal:!!k.lethal, dev:!!k.dev, precision:!!k.precision, psychic:ignore
   };
@@ -477,7 +480,12 @@ function oneRoll(cls, rr, fish){
 // the one number format of the Damage screen and its working: whole numbers as they are; others rounded to one decimal
 // first, and the decimal dropped when that is 10 or more (9.96 → "10", 9.94 → "9.9", 10 → "10", 5.333 → "5.3")
 const fmt = x => { if(Math.abs(x - Math.round(x)) < 1e-9) return String(Math.round(x)); const r = Math.round(x * 10) / 10; return Math.abs(r) >= 10 ? String(Math.round(x)) : r.toFixed(1); };
-const fx = fmt;
+// the working's steps: enough digits that the numbers shown multiply out as shown: two decimals (one from 100, three
+// significant digits below 1), rounded first; whole numbers as they are (10.5, 4.08, 0.833, 0.0133, 136.1, 12)
+const fmtStep = x => { if(Math.abs(x - Math.round(x)) < 1e-9) return String(Math.round(x));
+  const a = Math.abs(x), d = a >= 100 ? 1 : a >= 1 ? 2 : Math.min(6, 2 - Math.floor(Math.log10(a)));
+  const r = +x.toFixed(d); return Math.abs(r - Math.round(r)) < 1e-12 ? String(Math.round(r)) : String(r); };
+const fx = fmtStep;
 const sgn = v => (v > 0 ? '+' : '-') + Math.abs(v);
 // the chance in words: "4/6", or with a re-roll "(4/6 + 2/6 × 4/6 = 32/36)"
 const frac = (r, ok) => { const succ = ok === 2 ? r.keep[2] : r.keep[1] + r.keep[2], f1 = ok === 2 ? r.first[2] : r.first[1] + r.first[2], n = ok === 2 ? r.n36[2] : r.n36[1] + r.n36[2];
@@ -496,13 +504,18 @@ function explain(input, orderIdx){
     if(G.out || !G.n) return { attacks:0, hits:0, wounds:0, unsaved:0, mortals:0, dmg:0, out:G.out, steps:[] };
     const row = G.precision && precRow ? precRow : firstRow, M = { row, w:row.W };
     const T = T0, pl = plan(G, T, M, tm), st = [], k = G.k, why = G.why;
+    // a value the printed weapon already includes from a rule (its from mark): named, so the datasheet's number is explained
+    const inc = f => { if(why.set[f]) return ''; const r = [].concat((G.from || {})[f] || []); return r.length ? ' (includes ' + r.join(' and ') + ')' : ''; };
+    const kf = key => k.from(key) ? ', from ' + k.from(key) : '';
+    // half range, from the range after the rules that change it
+    const halfTxt = G.rangeIn == null ? '' : G.rangeIn / 2 + '"' + (why.range.length ? ' (range ' + G.r0 + '"' + why.range.map(x => ' ' + sgn(x.v) + '" ' + x.src).join('') + ' = ' + G.rangeIn + '")' : '');
     // attacks (04.03): A per weapon (at least 1), + [RAPID FIRE] within half range, + [BLAST]/[CLEAVE]
     const pa = pmf(G.A), aEach = ex(pa, v => Math.max(RULE.minA, v + G.aPlus)), rapid = G.rapid ? diceMean(G.rapid) : 0;
     const attacks = G.n * (aEach + rapid + G.extra);
-    let t = 'A' + G.A0 + (why.set.A ? ' (' + why.set.A + ')' : '') + why.a.map(x => ' ' + sgn(x.v) + ' (' + x.src + ')').join('');
+    let t = 'A' + G.A0 + (why.set.A ? ' (' + why.set.A + ')' : inc('A')) + why.a.map(x => ' ' + sgn(x.v) + ' (' + x.src + ')').join('');
     if(G.A.n || why.a.length) t += ' = ' + fx(aEach) + (G.A.n ? ' on average' : '') + (G.aPlus < 0 ? ' (at least 1)' : '');
     t += ' × ' + G.n + ' = ' + fx(G.n * aEach);
-    if(rapid) t += '; [' + k.text.rapid + '] within half range (' + G.rangeIn / 2 + '", 24.30): +' + fx(rapid) + ' × ' + G.n + ' → ' + fx(G.n * (aEach + rapid));
+    if(rapid) t += '; [' + k.text.rapid + '] within half range (' + halfTxt + ', 24.30' + kf('rapid') + '): +' + fx(rapid) + ' × ' + G.n + ' → ' + fx(G.n * (aEach + rapid));
     if(G.extra){ const kw = [k.blast ? '[' + k.text.blast + '] (24.05)' : '', k.cleave ? '[' + k.text.cleave + '] (24.06, all its attacks at this one unit)' : ''].filter(Boolean).join(' and ');
       t += '; ' + kw + ': ' + G.blastN + ' models in the target → +' + G.extra + ' × ' + G.n + ' → ' + fx(attacks); }
     st.push({ k:'attacks', t:'Attacks: ' + t });
@@ -512,7 +525,7 @@ function explain(input, orderIdx){
     else {
       const cls = u => G.snap ? (u === RULE.snapHit ? 1 : 0) : (u === 1 || u < G.fail) ? 0 : u >= G.critHit ? 2 : u + G.hitMod >= G.bs ? 1 : 0;
       hr = oneRoll(cls, G.rrHit, pl.fishH); pN = hr.p[1]; pC = hr.p[2];
-      const parts = [skillKey + ' ' + (G.skill0 >= 7 ? '–' : G.skill0 + '+') + (why.set[skillKey] ? ' (' + why.set[skillKey] + ')' : '')];
+      const parts = [skillKey + ' ' + (G.skill0 >= 7 ? '–' : G.skill0 + '+') + (why.set[skillKey] ? ' (' + why.set[skillKey] + ')' : inc(skillKey))];
       for(const x of why.bs) parts.push(x.src + (x.v > 0 ? ': worse by 1' + (x.ignored ? ', ignored (' + G.ignoreSrc + ')' : '') : x.v < 0 ? ': better by 1' : ''));
       if(why.bs.some(x => x.v && !x.ignored) && G.skill0 < 7) parts.push('→ ' + G.bs + '+' + (G.bs === RULE.bestSkill || G.bs === RULE.worstSkill ? ' (BS/WS stay between 2+ and 6+)' : ''));
       for(const x of why.hit) parts.push(sgn(x.v) + ' to hit (' + x.src + ')' + (x.ignored ? ': ignored (' + G.ignoreSrc + ')' : ''));
@@ -528,8 +541,8 @@ function explain(input, orderIdx){
       if(G.noRr) parts.push('no hit re-rolls (' + G.noRr + ')');
       let h = 'Hit roll: ' + parts.join('; ') + ' · ' + fx(attacks) + ' × ' + frac(hr, 1) + ' = ' + fx(attacks * (pN + pC)) + ' hits';
       if(pC && (G.lethal || G.sus)) h += '; critical: ' + fx(attacks) + ' × ' + frac(hr, 2) + ' = ' + fx(attacks * pC);
-      if(pC && G.lethal) h += pl.lethal ? '; [LETHAL HITS] (24.23' + (k.src.lethal ? ', ' + k.src.lethal : '') + '): these wound automatically' : '; [LETHAL HITS]' + (k.src.lethal ? ' (' + k.src.lethal + ')' : '') + ' not taken: rolling to wound is worth more here (a critical wound with [DEVASTATING WOUNDS])';
-      if(pC && G.sus){ const sm = diceMean(G.sus); h += '; [' + k.text.sus + '] (24.36' + (k.src.sus ? ', ' + k.src.sus : '') + '): each critical hit adds ' + fx(sm) + (G.sus.n ? ' on average' : '') + ' → +' + fx(attacks * pC * sm) + ' → ' + fx(attacks * (pN + pC + pC * sm)); }
+      if(pC && G.lethal) h += pl.lethal ? '; [LETHAL HITS] (24.23' + (k.from('lethal') ? ', from ' + k.from('lethal') : '') + '): these wound automatically' : '; [LETHAL HITS]' + (k.from('lethal') ? ' (from ' + k.from('lethal') + ')' : '') + ' not taken: rolling to wound is worth more here (a critical wound with [DEVASTATING WOUNDS])';
+      if(pC && G.sus){ const sm = diceMean(G.sus); h += '; [' + k.text.sus + '] (24.36' + (k.from('sus') ? ', from ' + k.from('sus') : '') + '): each critical hit adds ' + fx(sm) + (G.sus.n ? ' on average' : '') + ' → +' + fx(attacks * pC * sm) + ' → ' + fx(attacks * (pN + pC + pC * sm)); }
       st.push({ k:'hits', t:h });
     }
     const crit = attacks * pC, auto = pl.lethal ? crit : 0, toWound = attacks * pN + (pl.lethal ? 0 : crit) + crit * (G.sus ? diceMean(G.sus) : 0);
@@ -539,7 +552,7 @@ function explain(input, orderIdx){
     const devC = G.dev ? toWound * wr.p[2] : 0, normal = toWound * (wr.p[1] + (G.dev ? 0 : wr.p[2])) + auto;
     {
       const parts = [], sMods = why.s.map(x => ' ' + sgn(x.v) + ' (' + x.src + ')').join('');
-      parts.push(G.S0 == null ? 'no S: S1 (02.04.01)' : 'S' + G.S0 + (why.set.S ? ' (' + why.set.S + ')' : '') + sMods + (sMods ? ' = ' + G.S : '') + (G.S0 + why.s.reduce((t, x) => t + x.v, 0) < 1 ? ' (at least 1)' : ''));
+      parts.push(G.S0 == null ? 'no S: S1 (02.04.01)' : 'S' + G.S0 + (why.set.S ? ' (' + why.set.S + ')' : inc('S')) + sMods + (sMods ? ' = ' + G.S : '') + (G.S0 + why.s.reduce((t, x) => t + x.v, 0) < 1 ? ' (at least 1)' : ''));
       const tNote = attached ? (S.rows.some(r => r.bodyguard && r.T) ? ' (the bodyguard models’ highest, 19.02)' : '') : S.rows.length > 1 && new Set(S.rows.map(r => r.T)).size > 1 ? ' (the highest in the unit, 05.02.01)' : '';
       const tRow = S.rows.find(r => (!attached || r.bodyguard) && r.T === T);
       parts[0] += ' vs T' + T + (tRow && tRow.tSrc ? ' (' + tRow.tSrc + ')' : '') + tNote + ' → ' + need + '+ (' + WOUND_WHY[need] + ')';
@@ -551,7 +564,7 @@ function explain(input, orderIdx){
       let w = 'Wound roll: ' + parts.join('; ') + ' · ' + fx(toWound) + (auto ? ' rolled' : '') + ' × ' + frac(wr, 1) + ' = ' + fx(toWound * (wr.p[1] + wr.p[2]));
       if(auto) w += ' + ' + fx(auto) + ' automatic = ' + fx(normal + devC);
       w += ' wounds';
-      if(G.dev) w += '; [DEVASTATING WOUNDS] (24.10' + (k.src.dev ? ', ' + k.src.dev : '') + '): the critical ones, ' + fx(toWound) + ' × ' + frac(wr, 2) + ' = ' + fx(devC) + ', become mortal wounds (no save)';
+      if(G.dev) w += '; [DEVASTATING WOUNDS] (24.10' + (k.from('dev') ? ', from ' + k.from('dev') : '') + '): the critical ones, ' + fx(toWound) + ' × ' + frac(wr, 2) + ' = ' + fx(devC) + ', become mortal wounds (no save)';
       st.push({ k:'wounds', t:w });
     }
     // save roll (05.03, 05.04): the InSv when it is better, else Sv with AP; an unmodified 1 always fails
@@ -564,7 +577,7 @@ function explain(input, orderIdx){
       const many = S.groups.length > 1;
       parts.push((G.precision && precRow ? row.name + ' ([PRECISION], 24.28)' : row.name + (many ? ' (the group the attacks meet first; when it is destroyed, the next group’s save is used)' : '')) + ': Sv ' + sv + '+');
       const apMods = why.ap.length ? why.ap.map(x => (x.v > 0 ? 'improved by ' + x.v : 'worsened by ' + -x.v) + ' (' + x.src + ')').join(', ') : '';
-      parts.push('AP' + G.AP0 + (apMods ? ' ' + apMods + ' → AP' + G.AP : '') + ' → ' + (armour > 6 ? 'no armour save' : 'saves on ' + armour + '+'));
+      parts.push('AP' + G.AP0 + (why.set.AP ? ' (' + why.set.AP + ')' : inc('AP')) + (apMods ? ' ' + apMods + ' → AP' + G.AP : '') + ' → ' + (armour > 6 ? 'no armour save' : 'saves on ' + armour + '+'));
       if(insv <= 6) parts.push('InSv ' + insv + '+' + (tm.insv && tm.insv <= (row.InSv || 7) ? ' (' + (tsrc.insv || 'the target') + ')' : '') + (insv < armour ? ' is better, so it is used' : ' is not better, so not used'));
       let sv2 = 'Save: ' + parts.join('; ') + ' · ' + fx(normal) + ' × ' + (save > 6 ? '6/6' : (save - 1) + '/6') + ' fail (an unmodified 1 always fails) = ' + fx(unsaved) + ' get through';
       if(devC) sv2 += '; with the ' + fx(devC) + ' mortal wounds: ' + fx(unsaved + devC);
@@ -577,15 +590,15 @@ function explain(input, orderIdx){
     const keep = x => x <= 6 ? (x - 1) / 6 : 1;
     const dmgN = unsaved * dN * keep(fnp), dmgM = devC * dM * keep(fnpM);
     {
-      const parts = ['D' + G.D0 + (why.set.D ? ' (' + why.set.D + ')' : '') + why.d.filter(x => !x.target).map(x => ' ' + sgn(x.v) + ' (' + x.src + ')').join('') + (G.melta ? ' + ' + G.melta.k + (G.melta.n ? 'D' + G.melta.f : '') + ' ([' + k.text.melta + '] within half range, ' + G.rangeIn / 2 + '", 24.25)' : '')];
+      const parts = ['D' + G.D0 + (why.set.D ? ' (' + why.set.D + ')' : inc('D')) + why.d.filter(x => !x.target).map(x => ' ' + sgn(x.v) + ' (' + x.src + ')').join('') + (G.melta ? ' + ' + G.melta.k + (G.melta.n ? 'D' + G.melta.f : '') + ' ([' + k.text.melta + '] within half range, ' + halfTxt + ', 24.25' + kf('melta') + ')' : '')];
       for(const x of why.d.filter(x => x.target)) parts.push(sgn(x.v) + ' Damage (' + x.src + ')');
       if(pd.size > 1 || G.dPlus || tm.dMinus) parts.push((pd.size > 1 ? fx(dN) + ' on average' : 'D' + fx(dN)) + (ex(pd, v => v + G.dPlus - (tm.dMinus || 0)) < dN - 1e-9 ? ' (D at least 1)' : ''));
       const fsrc = fnp < 7 ? (row.fnp === fnp && row.fnpSrc ? row.fnpSrc : tsrc.fnp || 'the target') : '';
       if(fnp < 7) parts.push('Feel No Pain ' + fnp + '+ (' + fsrc + ', 24.12): ' + (7 - fnp) + '/6 of the wounds ignored');
       let d = 'Damage: ' + parts.join('; ') + ' · ' + fx(unsaved) + ' × ' + fx(dN) + (fnp < 7 ? ' × ' + (fnp - 1) + '/6' : '') + ' = ' + fx(dmgN);
       if(devC){ const msrc = fnpM < fnp ? (row.fnpMortal === fnpM && row.fnpMortalSrc ? row.fnpMortalSrc : tsrc.fnpMortal || 'the target') : '';
-        d += '; mortal wounds: ' + fx(devC) + ' × ' + fx(dM) + (dM !== dN ? ' (D' + (tm.dMinus ? ', the target’s -1 Damage not applied (24.10, 04.02.02)' : '') + ')' : '') + (fnpM < 7 ? ' × ' + (fnpM - 1) + '/6' + (msrc ? ' (Feel No Pain ' + fnpM + '+ against mortal wounds, ' + msrc + ')' : '') : '') + ' = ' + fx(dmgM) + ' (each critical wound damages one model at most, 24.10)'; }
-      d += (devC ? ' → ' + fx(dmgN + dmgM) : '') + ' damage before allocation';
+        d += '; mortal wounds: ' + fx(devC) + ' × ' + fx(dM) + (dM !== dN ? ' (D' + (tm.dMinus ? ', the target’s -1 Damage not applied (24.10, 04.02.02)' : '') + ')' : '') + (fnpM < 7 ? ' × ' + (fnpM - 1) + '/6' + (msrc ? ' (Feel No Pain ' + fnpM + '+ against mortal wounds, ' + msrc + ')' : '') : '') + ' = ' + fx(dmgM); }
+      d += (devC ? ' → ' + fx(dmgN + dmgM) : '') + ' damage before allocation' + (devC ? ' (played out, each critical wound’s mortal wounds damage one model at most, and the rest is lost: 24.10)' : '');
       st.push({ k:'dmg', t:d });
     }
     return { attacks, hits:toWound + auto, wounds:normal + devC, unsaved, mortals:devC, dmg:dmgN + dmgM, out:'', steps:st };
@@ -595,7 +608,7 @@ function explain(input, orderIdx){
     target:{ models:S.total, wounds:S.rows.reduce((t, r) => t + r.count * r.W, 0) }, T:T0, meets:firstRow.name };
 }
 
-const API = { run, resolve, explain, fmt, dice, diceMean, pmf, keywords, woundNeed, RULE };
+const API = { run, resolve, explain, fmt, fmtStep, dice, diceMean, pmf, keywords, woundNeed, RULE };
 root.WH_CALC = API;
 if(typeof module !== 'undefined' && module.exports) module.exports = API;
 })(typeof window !== 'undefined' ? window : globalThis);

@@ -605,7 +605,8 @@ const FACTIONS = {
         // rule, enhancements and stratagems: Wahapedia, Thousand Sons, Grand Coven
         // needs: the units with Psychic weapons (every one of them is a PSYKER unit)
         rule:{ name:'Kindred Sorcery', ph:['command','movement','shooting','fight'], turn:'either', turns:{ command:'your', movement:'opp', shooting:'your' }, needs:{ all:['Faction: Thousand Sons'] },
-          mod:{ kind:'all', when:'Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle)', note:'Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]' },
+          mod:{ kind:'all', when:'Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle)', note:'Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]',
+            pick:[{ name:'Imbued Manifestation', note:'Psychic weapons only: +6" range' }, { name:'Psychic Maelstrom', note:'Psychic weapons only: +1 to wound rolls' }, { name:'Wrath of the Immaterium', note:'Psychic weapons only: [DEVASTATING WOUNDS]' }] },
           text:'In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.',
           table:[
             ['Imbued Manifestation', 'Add 6" to the Range characteristic of ranged Psychic weapons equipped by **THOUSAND SONS** models from your army.'],
@@ -904,9 +905,10 @@ const FACTIONS = {
      (stratagems can carry a mod or def too: it shows on every unit that can use them,
       with its CP cost, e.g. "1CP Hack and Slash")
      (mods, auras and stratagem mods, for the Damage tab: always = applies whenever its vs holds, so the box starts
-      ticked; selfAlways = the same for an aura's own unit (22.01); vs = the targets it is for: { any:[keywords] },
-      { none:[keywords] }, { maxT:6 } (no model T 7+); calc = its numbers when the words of
-      its note say more than the calculator counts. On an ability: defAlways = its def always protects the unit,
+      ticked; selfAlways = the same for an aura's own unit (22.01); vs = the targets it is for: { any:[keywords] }
+      (at least one), { all:[keywords] } (every one), { none:[keywords] } (none of them), { maxT:6 } (no model T 7+);
+      calc = its numbers when the words of its note say more than the calculator counts; pick = a choice of one of
+      several effects ([{ name, note }]: one box, the player picks which). On an ability: defAlways = its def always protects the unit,
       defCalc = the def's numbers (model: only that model); riled = this unit is always riled up)
      guard       help this unit gives other units of its list when they are attacked: needs, kind, when, note,
                  calc (insv, fnp, stealth), one = one model only
@@ -1679,7 +1681,8 @@ const ARMIES = [
         { name:'Beacons of Rage', tag:'Aura', ph:['fight'], turn:'either', text:'While a friendly **WORLD EATERS** unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding **MONSTERS** and **VEHICLES**), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well.' }
       ],
       aura:[
-        { kind:'melee', needs:{ all:['Faction: World Eaters'] }, when:'Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets', selfWhen:'Own aura, vs non-MONSTER/VEHICLE targets', note:'+1 to hit; also +1 to wound if the target is Below Half-strength', from:'Beacons of Rage', selfAlways:true, vs:{ none:['Monster','Vehicle'] }, calc:{ hit:1 } }
+        { kind:'melee', needs:{ all:['Faction: World Eaters'] }, when:'Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets', selfWhen:'Own aura, vs non-MONSTER/VEHICLE targets', note:'+1 to hit', from:'Beacons of Rage', selfAlways:true, vs:{ none:['Monster','Vehicle'] }, calc:{ hit:1 } },
+        { kind:'melee', needs:{ all:['Faction: World Eaters'] }, when:'Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets', selfWhen:'Own aura, target Below Half-strength, vs non-MONSTER/VEHICLE targets', note:'+1 to wound rolls', from:'Beacons of Rage', vs:{ none:['Monster','Vehicle'] }, calc:{ wound:1 } }
       ],
       rules:['Scouts 6"','Blessings of Khorne'],
       kw:['Chaos','Daemon','Eightbound','Faction: World Eaters','Infantry','Khorne','Possessed']
@@ -1919,7 +1922,8 @@ const ARMIES = [
         { name:'Beacons of Rage', tag:'Aura', ph:['fight'], turn:'either', text:'While a friendly **WORLD EATERS** unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding **MONSTERS** and **VEHICLES**), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well.' }
       ],
       aura:[
-        { kind:'melee', needs:{ all:['Faction: World Eaters'] }, when:'Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets', selfWhen:'Own aura, vs non-MONSTER/VEHICLE targets', note:'+1 to hit; also +1 to wound if the target is Below Half-strength', from:'Beacons of Rage', selfAlways:true, vs:{ none:['Monster','Vehicle'] }, calc:{ hit:1 } }
+        { kind:'melee', needs:{ all:['Faction: World Eaters'] }, when:'Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets', selfWhen:'Own aura, vs non-MONSTER/VEHICLE targets', note:'+1 to hit', from:'Beacons of Rage', selfAlways:true, vs:{ none:['Monster','Vehicle'] }, calc:{ hit:1 } },
+        { kind:'melee', needs:{ all:['Faction: World Eaters'] }, when:'Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets', selfWhen:'Own aura, target Below Half-strength, vs non-MONSTER/VEHICLE targets', note:'+1 to wound rolls', from:'Beacons of Rage', vs:{ none:['Monster','Vehicle'] }, calc:{ wound:1 } }
       ],
       rules:['Scouts 6"','Blessings of Khorne'],
       kw:['Chaos','Daemon','Eightbound','Faction: World Eaters','Infantry','Khorne','Possessed']
@@ -2074,7 +2078,8 @@ const ARMIES = [
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
-        { kind:'all', when:'vs CHARACTER units', note:'re-roll hit rolls of 1 and wound rolls of 1 (vs PSYKER CHARACTER units: re-roll the hit roll and the wound roll)', from:'Hunter of Souls', vs:{ any:['Character'] } },
+        { kind:'all', when:'vs CHARACTER units', note:'re-roll hit rolls of 1 and wound rolls of 1', from:'Hunter of Souls', always:true, vs:{ any:['Character'] } },
+        { kind:'all', when:'vs PSYKER CHARACTER units', note:'re-roll the hit roll and the wound roll', from:'Hunter of Souls', always:true, vs:{ all:['Psyker','Character'] } },
         { kind:'ranged', when:'After an aetherstride this turn', note:'Dark Blessing has [SUSTAINED HITS D3]', from:'Aetherstride' }
       ],
       rules:['Deadly Demise D3','Cabal of Sorcerers','Deep Strike','Ignores Cover','Sustained Hits','Psychic','Devastating Wounds'],
@@ -2116,7 +2121,8 @@ const ARMIES = [
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
         { kind:'all', who:'Sorcerer', when:'Twisted Sorceries used this phase (your Shooting phase or the Fight phase, once per battle)', note:'Psychic weapons +3 S and +3 A', from:'Twisted Sorceries' },
-        { kind:'ranged', when:'Every ranged attack', note:'re-roll wound rolls of 1 (vs a unit within range of an objective marker you do not control: re-roll the wound roll)', from:'Bringers of Change', always:true, calc:{ rrWound:'1s' } }
+        { kind:'ranged', when:'Every ranged attack', note:'re-roll wound rolls of 1', from:'Bringers of Change', always:true, calc:{ rrWound:'1s' } },
+        { kind:'ranged', when:'Target within range of an objective marker you do not control', note:'re-roll the wound roll', from:'Bringers of Change', calc:{ rrWound:'all' } }
       ],
       rules:['Leader','Cabal of Sorcerers','Psychic','Pistol','Sustained Hits','Anti','Devastating Wounds','Torrent','Ignores Cover'],
       kw:['Chaos','Character','Faction: Thousand Sons','Grenades','Infantry','Psyker','Sorcerer','Tzeentch','Battleline','Rubric','Rubric Marines','Rubricae'],
@@ -2698,7 +2704,8 @@ const ARMIES = [
       // abilities that change this unit's attacks, shown inside its weapon tables
       // (Bringer of Justice's +2 A is already in the melee profiles, as New Recruit prints them: only its +1 to hit is a footnote)
       mods:[
-        { kind:'all', when:'vs MONSTER/VEHICLE', note:'+1 to hit rolls; also +1 to wound rolls if the target is TITANIC or TOWERING', from:'Macro-extinction Protocols', vs:{ any:['Monster','Vehicle'] } },
+        { kind:'all', when:'vs MONSTER/VEHICLE', note:'+1 to hit rolls', from:'Macro-extinction Protocols', always:true, vs:{ any:['Monster','Vehicle'] } },
+        { kind:'all', when:'vs TITANIC/TOWERING', note:'+1 to wound rolls', from:'Macro-extinction Protocols', always:true, vs:{ any:['Titanic','Towering'] } },
         { kind:'melee', when:'Every melee attack', note:'+1 to hit rolls', from:'Bringer of Justice', always:true },
         { kind:'all', when:'Damaged (1-10 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-10 Wounds Remaining' }
       ],
@@ -3116,7 +3123,8 @@ const ARMIES = [
         { name:'Beacons of Rage', tag:'Aura', ph:['fight'], turn:'either', text:'While a friendly **WORLD EATERS** unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding **MONSTERS** and **VEHICLES**), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well.' }
       ],
       aura:[
-        { kind:'melee', needs:{ all:['Faction: World Eaters'] }, when:'Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets', selfWhen:'Own aura, vs non-MONSTER/VEHICLE targets', note:'+1 to hit; also +1 to wound if the target is Below Half-strength', from:'Beacons of Rage', selfAlways:true, vs:{ none:['Monster','Vehicle'] }, calc:{ hit:1 } }
+        { kind:'melee', needs:{ all:['Faction: World Eaters'] }, when:'Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets', selfWhen:'Own aura, vs non-MONSTER/VEHICLE targets', note:'+1 to hit', from:'Beacons of Rage', selfAlways:true, vs:{ none:['Monster','Vehicle'] }, calc:{ hit:1 } },
+        { kind:'melee', needs:{ all:['Faction: World Eaters'] }, when:'Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets', selfWhen:'Own aura, target Below Half-strength, vs non-MONSTER/VEHICLE targets', note:'+1 to wound rolls', from:'Beacons of Rage', vs:{ none:['Monster','Vehicle'] }, calc:{ wound:1 } }
       ],
       rules:['Scouts 6"','Blessings of Khorne'],
       kw:['Chaos','Daemon','Eightbound','Faction: World Eaters','Infantry','Khorne','Possessed']
@@ -3313,7 +3321,7 @@ const ARMIES = [
         { name:'Twin Kastelan fist', who:'Kastelan Robots', n:4, range:'Melee', A:'4', WS:'4+', S:'12', AP:'-2', D:'3', kw:['TWIN-LINKED'] }
       ],
       abilities:[
-        { name:'Battle Protocols', who:'Cybernetica Datasmith', ph:['command'], turn:'your', def:'Aegis Protocol: KASTELAN ROBOT models +1 Toughness (from the start of the battle until another protocol is selected)', defAlways:true, defCalc:{ t:1, model:'Kastelan Robot' }, text:'At the start of the battle, if this model is leading a **KASTELAN ROBOTS** unit, that unit enters Aegis Protocols (see below). In your Command phase, if this model is leading a **KASTELAN ROBOTS** unit, you can select one protocol from those listed below for that unit to enter. Once a unit enters a protocol, it remains in that protocol until it enters a different one.\n- **Protector Protocol:** Add 2 to the Attacks characteristic of ranged weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Conqueror Protocol:** Add 2 to the Attacks characteristic of melee weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Aegis Protocol:** Add 1 to the Toughness characteristic of **KASTELAN ROBOT** models in that unit.' },
+        { name:'Battle Protocols', who:'Cybernetica Datasmith', ph:['command'], turn:'your', def:'Aegis Protocol: KASTELAN ROBOT models +1 Toughness (from the start of the battle until another protocol is selected)', defCalc:{ t:1, model:'Kastelan Robot' }, text:'At the start of the battle, if this model is leading a **KASTELAN ROBOTS** unit, that unit enters Aegis Protocols (see below). In your Command phase, if this model is leading a **KASTELAN ROBOTS** unit, you can select one protocol from those listed below for that unit to enter. Once a unit enters a protocol, it remains in that protocol until it enters a different one.\n- **Protector Protocol:** Add 2 to the Attacks characteristic of ranged weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Conqueror Protocol:** Add 2 to the Attacks characteristic of melee weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Aegis Protocol:** Add 1 to the Toughness characteristic of **KASTELAN ROBOT** models in that unit.' },
         // Wahapedia's markup and bullets (BSData and GW's Faction Pack, PDF p17, print the two bullets too)
         { name:'Data-severed', who:'Cybernetica Datasmith', text:'If there are no **KASTELAN ROBOT** models in this unit:\n- This unit loses **VEHICLE**.\n- This unit has **INFANTRY**.' },
         { name:'Martial Signatum Amplificator', who:'Cybernetica Datasmith', tag:'Enhancement', text:'**TECH-PRIEST** model only. Models in the bearer’s unit have the **SKITARII** keyword.' },
