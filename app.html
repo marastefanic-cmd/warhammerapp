@@ -563,13 +563,40 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .dmw.auto{display:grid; gap:2px; padding-left:32px}
 .dmw.sub{padding-left:32px}
 .dmw small.out{color:var(--fg2)}
-.dmw.dmdist{align-items:center; cursor:default}
-.dmw.dmdist > span{flex:1}
-.dmw.dmdist input{flex:none; width:76px; height:38px; margin:0; padding:0 10px; border-radius:8px; border:1px solid var(--line); background:var(--surface); color:var(--fg); font:700 16px var(--f-head); text-align:right; accent-color:auto}
-.dmw.dmdist input:focus{outline:none; border-color:var(--accent)}
+.dmw small i{font-style:normal; color:var(--fg2)}
+.dmgl{margin:10px 0 0; font:600 11px/1.2 var(--f-head); letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
+.dmside{margin:12px 0 0; padding-bottom:4px; border-bottom:1px solid var(--line); font:700 13.5px/1.2 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--fg)}
+.dmside:first-child{margin-top:4px}
+.dmnone{margin:6px 0 2px}
+.dmhalf{margin-top:6px}
+.dmfold{border-bottom:1px solid var(--line)}
+.dmfold > summary{display:flex; align-items:center; justify-content:space-between; gap:8px; min-height:36px; padding:4px 2px; font:600 12px/1.2 var(--f-head); letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+.dmfold > .dmw:last-child, .dmfold > .dmman{border-bottom:0}
+.dmwn{margin-top:2px}
+.dmwk{display:grid; margin-top:6px; font-variant-numeric:tabular-nums}
+.dmwh, .dmr > summary, .dmr.out{display:grid; grid-template-columns:minmax(0,1fr) repeat(5, 38px); gap:0 4px; align-items:baseline}
+.dmwh span{font:600 10.5px/1.2 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--muted); text-align:right}
+.dmr{border-bottom:1px solid var(--line)}
+.dmr > summary, .dmr.out{padding:7px 2px; font:600 13px/1.3 var(--f-head); color:var(--fg2)}
+.dmr > summary > span:not(.n){text-align:right}
+.dmr .n{color:var(--fg); overflow-wrap:anywhere}
+.dmr .n small{display:block; font:400 11.5px/1.3 var(--f-body); color:var(--muted)}
+.dmr.out .n{grid-column:1 / -1}
+.dmr[open] > summary .n{color:var(--accent)}
+.dmr > .body{padding:0 2px 8px; font-size:13.5px; line-height:1.42}
+.dmr > .body p{margin:0 0 5px}
+.dmr > .body b{font-weight:700; color:var(--fg)}
+.dmr.tot > summary{color:var(--fg); font-weight:700}
 .dmhow{margin-top:14px; border-top:1px solid var(--line)}
 .dmhow .dmh{margin:0 0 7px; font-size:13.5px}
 .dmhow .dmh b{color:var(--fg2)}
+.dmn[role="button"]{cursor:pointer}
+.dmtyped{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:8px 10px; padding:8px 0 4px}
+.dmtf{display:grid; gap:3px}
+.dmtf span{font:600 11px/1.2 var(--f-head); letter-spacing:.08em; text-transform:uppercase; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.dmtf input{min-width:0; height:40px; padding:0 10px; border-radius:8px; border:1px solid var(--line); background:var(--surface); color:var(--fg); font:700 16px var(--f-head)}
+.dmtf input:focus{outline:none; border-color:var(--accent)}
+.dmpf.dmtkw{padding-left:2px}
 .dmpf{display:flex; flex-wrap:wrap; gap:6px; padding:6px 2px 8px 32px; border-bottom:1px solid var(--line)}
 .dmpf button, .dmstep button{min-height:32px; padding:0 10px; border-radius:6px; box-shadow:inset 0 0 0 1px var(--line); font:700 13px/1 var(--f-head); letter-spacing:.04em; color:var(--fg2)}
 .dmpf button[disabled]{opacity:.4}
@@ -1359,16 +1386,20 @@ function screenArmy(){
 
 /* ---------- screen: damage ----------
    One of your units against one of your opponent's (or theirs against yours): the weapons that attack,
-   the situation, and the rules of both lists that change the numbers, each a tick box. A rule counts only
-   when every word of its footnote is understood (dmEffects), and only for the weapons and models it names
-   (dmReach, as the datasheet's footnotes say); the others are listed as not counted.
-   calc.js plays the attacks out; the numbers are averages over many games. Where the rules leave a choice,
-   "How this is worked out" (dmHow) says what the calculator does. */
+   the situation, and the rules of both lists that change the numbers, each a tick box the player controls.
+   A box starts ticked only when the data records that its rule applies here (always, or against this target:
+   always/vs/defAlways), starts greyed when the target rules it out, and is the player's to tick otherwise; a
+   stratagem is never ticked for them. A rule counts only when every word of its footnote is understood
+   (dmEffects, or the numbers the data records for it), and only for the weapons and models it names (dmReach).
+   The working (calc.js explain) gives each weapon's exact averages step by step; models destroyed and the
+   chance to destroy the unit are played out with the dice (run). "How this is worked out" (dmHow) says what
+   the calculator does where the rules leave a choice. */
 const oppOf = a => armyById(store.get('wh-opp-' + a.id));
 function dmState(){
   sess.dmg = isObj(sess.dmg) ? sess.dmg : {};
-  const s = sess.dmg[cur.army] = Object.assign({ dir:'me', ph:'shooting', atk:'', tgt:'', off:{}, pick:{}, on:{}, man:{}, val:{}, dist:null, how:false }, isObj(sess.dmg[cur.army]) ? sess.dmg[cur.army] : {});
-  for(const k of ['off', 'pick', 'on', 'man', 'val']) if(!isObj(s[k])) s[k] = {};
+  // the other side's unit can come from any list (aArmy / tArmy: the list it was picked from) or, as a target, be typed
+  const s = sess.dmg[cur.army] = Object.assign({ dir:'me', ph:'shooting', atk:'', tgt:'', aArmy:'', tArmy:'', off:{}, pick:{}, on:{}, man:{}, val:{}, fold:{}, typed:{} }, isObj(sess.dmg[cur.army]) ? sess.dmg[cur.army] : {});
+  for(const k of ['off', 'pick', 'on', 'man', 'val', 'fold', 'typed']) if(!isObj(s[k])) s[k] = {};
   return s;
 }
 // shooting types are one or the other (10.04-10.07, 15.09): ticking one unticks the others
@@ -1390,7 +1421,7 @@ function dmEffects(note, empty){
   take(/re-?roll (?:the )?wound rolls?/g, () => { e.rrWound = 'all'; });
   take(/([+-]\d) to hit(?: rolls?)?/g, m => { e.hit = (e.hit || 0) + +m[1]; });
   take(/([+-]\d) to wound(?: rolls?)?/g, m => { e.wound = (e.wound || 0) + +m[1]; });
-  take(/\+(\d+)" range/g, m => { e.range = (e.range || 0) + +m[1]; });
+  take(/\+(\d+)" range/g, () => {});   // range: every weapon is taken to be in range, so it changes nothing here
   take(/\+(\d) a\b/g, m => { e.a = (e.a || 0) + +m[1]; });
   take(/\+(\d) s\b/g, m => { e.s = (e.s || 0) + +m[1]; });
   take(/\+(\d) ap\b|improve ap by (\d)/g, m => { e.ap = (e.ap || 0) + +(m[1] || m[2]); });
@@ -1405,7 +1436,7 @@ function dmEffects(note, empty){
   take(/can ignore any or all modifiers to bs and any or all modifiers to the hit roll/g, () => { e.ignoreHitMods = true; });
   take(/\[(?:assault|pistol|hazardous)\]/g, () => {});   // these change nothing in the numbers
   take(/\(and [+-]\d+ oc\)/g, () => {});                 // a Damaged band's OC: not a number here
-  take(/until the end of the (?:turn|phase)|in your shooting phase|in the fight phase/g, () => {});   // when: the tick box says it
+  take(/until the end of the (?:turn|phase)|in your shooting phase|in the fight phase|this turn/g, () => {});   // when: the tick box says it
   // what is left must be joining words only
   t = t.replace(/\b(?:and|also|can|have|has|this unit s|ranged|melee|weapons|attacks|rolls)\b|[,;.·]/g, ' ').trim();
   return t || (!empty && !Object.keys(e).length) ? null : e;
@@ -1460,15 +1491,12 @@ function dmReach(u, it, m, sc){
 function dmModels(u, kind){
   const chars = new Set(charsOf(u).map(c => c.name));
   const lone = !u.leads && hasKw(u, 'Character');
-  // Feel No Pain the unit's rules give: every model of a unit on its own (an attached unit's comes from one of its parts:
-  // not known here, so it is a tick box under "when targeted")
-  const fnp = u.leads ? 7 : Math.min(7, ...u.rules.map(r => (/^feel no pain (\d)\+$/i.exec(r) || [, 7])[1]).map(Number));
-  // an InSv marked * applies only to some attacks: against ranged attacks, when its ability says so
+  // an InSv marked * applies only to some attacks: against ranged attacks, when its ability says so (insvStar; dmCalc
+  // applies it through that ability's line); Feel No Pain comes from the "when targeted" lines too
   const starRanged = u.abilities.some(ab => /\b(?:insv|invulnerable save) against ranged attacks\b/i.test(ab.text.replace(/\*\*/g, '')));
-  const insvOf = s => { const v = parseInt(s.InSv, 10) || 7; return !/\*/.test(s.InSv) ? v : starRanged && kind === 'ranged' ? v : 7; };
-  const rows = u.stats.map(s => { const m = / ×(\d+)$/.exec(s.name), nm = s.name.replace(/ ×\d+$/, '');
-    return { name:nm, count:m ? +m[1] : 0, fixed:!!m, W:parseInt(s.W, 10) || 1, T:parseInt(s.T, 10) || 1, Sv:parseInt(s.Sv, 10) || 7, InSv:insvOf(s), star:/\*/.test(s.InSv),
-      fnp, char:lone || chars.has(nm), bodyguard:!!u.leads && !chars.has(nm), part:chars.has(nm) ? nm : u.leads || u.name }; });
+  const rows = u.stats.map(s => { const m = / ×(\d+)$/.exec(s.name), nm = s.name.replace(/ ×\d+$/, ''), v = parseInt(s.InSv, 10) || 7, star = /\*/.test(s.InSv);
+    return { name:nm, count:m ? +m[1] : 0, fixed:!!m, W:parseInt(s.W, 10) || 1, T:parseInt(s.T, 10) || 1, Sv:parseInt(s.Sv, 10) || 7, InSv:star ? 7 : v, star, insvStar:star && starRanged && kind === 'ranged' ? v : 7,
+      fnp:7, char:lone || chars.has(nm), bodyguard:!!u.leads && !chars.has(nm), part:chars.has(nm) ? nm : u.leads || u.name }; });
   // a models line counts for the row its name starts with ("Jakhal Pack Leader" → Jakhal), else for the bodyguard's row;
   // a row that prints its count ("Tankbusta ×5") already has its models
   // (the same name first, then the longest row name the line starts with: "Neurogaunt" is not "Neurogaunt Nodebeast")
@@ -1484,39 +1512,88 @@ function dmModels(u, kind){
 }
 const dmUnits = (a, kind) => a.units.filter(u => ((kind === 'ranged' ? u.ranged : u.melee) || []).length);
 // the pickers: the opponent's list, the attacking unit, the target
+// the two sides: yours (this list) and theirs (a unit picked from any list, else the opponent's list; as a target, typed
+// when there is neither). The opponent pairing stays as it is: the Damage tab does not need it
+function dmSides(st){
+  const me = army(), opp = oppOf(me), kind = st.ph === 'fight' ? 'melee' : 'ranged';
+  let A, B, au, tu;
+  if(st.dir === 'me'){ A = me; B = st.tArmy === 'typed' ? null : armyById(st.tArmy) || opp || null; }
+  else { B = me; A = armyById(st.aArmy) || opp || D.armies.find(x => x !== me) || me; }
+  const atks = dmUnits(A, kind);
+  au = atks.find(u => u.id === st.atk) || atks[0];
+  if(B) tu = B.units.find(u => u.id === st.tgt) || B.units[0];
+  else { tu = dmTyped(st, au, kind); B = { id:'typed', name:'Typed target', units:[tu], typed:true }; }
+  return { me, opp, A, B, au, tu, kind };
+}
+// a typed target: Models, T, W, Sv, InSv, Feel No Pain and the keywords that change results, as one stats row
+const DM_TYPED = { n:5, T:4, W:2, Sv:3, InSv:0, fnp:0 };
+const dmTypedVals = st => Object.assign({}, DM_TYPED, st.typed, { kw:Object.assign({ INFANTRY:true }, st.typed.kw) });
+function dmTyped(st, au, kind){
+  const t = dmTypedVals(st), kw = Object.keys(t.kw).filter(k => t.kw[k]).map(k => k[0] + k.slice(1).toLowerCase());
+  return { id:'typed', typed:true, name:'Typed target', role:'Typed', models:[t.n + '× Typed target'], gear:[], abilities:[], mods:[], rules:[], kw, fnp:t.fnp,
+    stats:[{ name:'Typed target ×' + t.n, M:'-', T:String(t.T), Sv:t.Sv ? t.Sv + '+' : '-', W:String(t.W), Ld:'-', OC:'-', InSv:t.InSv ? t.InSv + '+' : '–' }] };
+}
+// the keywords offered for a typed target: those that change results, and any the attacker's weapons or its rules'
+// recorded target conditions (vs) name
+function dmTypedKw(au, rules){
+  const out = new Set(['INFANTRY', 'MONSTER', 'VEHICLE', 'CHARACTER']);
+  for(const w of [...((au && au.ranged) || []), ...((au && au.melee) || [])]) for(const k of w.kw){
+    const m = /^ANTI-(?:NON-)?(.+?) \d\+$/i.exec(k) || /:\s*(?:NON-)?(.+)$/i.exec(k);
+    if(m) for(const x of m[1].split('/')) out.add(x.trim().toUpperCase()); }
+  for(const r of rules || []){ const vs = (r.m && r.m.vs) || {}; for(const x of [].concat(vs.any || [], vs.none || [])) out.add(x.toUpperCase()); }
+  return [...out];
+}
+// the pickers: the opponent's list, the attacking unit, the target (the other side: any unit of any list, or typed)
 function dmPicker(k){
-  const me = army(), st = dmState();
-  if(k === 'opp'){
-    const now = oppOf(me);
-    openSheet('Damage', 'Your opponent’s list', '<div class="list">' + D.armies.map(a => '<button class="row" data-dmopp="' + esc(a.id) + '"><span class="rb"><b>' + esc(a.name) + (a === me ? ' <span class="apts">(this list)</span>' : '') + '</b><span>' + esc(factionOf(a).name + ' · ' + detachmentsOf(a).map(d => d.name).join(', ')) + '</span></span>' +
-      (a === now ? '<svg class="ic ok" aria-hidden="true"><use href="#i-check"/></svg>' : '') + '</button>').join('') + (now ? '<button class="row" data-dmopp=""><span class="rb"><b>No opponent</b></span></button>' : '') + '</div>');
-    return;
-  }
-  const opp = oppOf(me), kind = st.ph === 'fight' ? 'melee' : 'ranged';
-  const A = st.dir === 'me' ? me : opp, B = st.dir === 'me' ? opp : me;
-  const list = k === 'atk' ? dmUnits(A, kind) : B.units;
-  openSheet(k === 'atk' ? 'Attacker' : 'Target', (k === 'atk' ? A : B).name, '<div class="list">' + list.map(u => '<button class="row" data-dmunit="' + k + '|' + esc(u.id) + '"><span class="rb"><b>' + esc(unitLabel(u)) + '</b><span>' + esc(u.role + ' · ' + modelCount(u) + (modelCount(u) > 1 ? ' models' : ' model')) + '</span></span>' +
-    (u.id === st[k] ? '<svg class="ic ok" aria-hidden="true"><use href="#i-check"/></svg>' : '') + '</button>').join('') + '</div>');
+  const st = dmState(), sd = dmSides(st);
+  if(k === 'opp'){ oppPicker(); return; }   // the same sheet as on Find
+  const kind = sd.kind, theirs = (k === 'tgt') === (st.dir === 'me'), now = k === 'atk' ? sd.au : sd.tu;
+  const row = (a, u) => '<button class="row" data-dmunit="' + k + '|' + esc(a.id) + '|' + esc(u.id) + '"><span class="rb"><b>' + esc(unitLabel(u)) + '</b><span>' + esc(u.role + ' · ' + modelCount(u) + (modelCount(u) > 1 ? ' models' : ' model')) + '</span></span>' +
+    (u === now ? '<svg class="ic ok" aria-hidden="true"><use href="#i-check"/></svg>' : '') + '</button>';
+  const units = a => k === 'atk' ? dmUnits(a, kind) : a.units;
+  if(!theirs){ const a = sd.me; openSheet(k === 'atk' ? 'Attacker' : 'Target', a.name, '<div class="list">' + units(a).map(u => row(a, u)).join('') + '</div>'); return; }
+  // theirs: typed (a target), then every list: the opponent's first, then the one the unit now shown is from, this list last
+  const from = k === 'atk' ? sd.A : sd.B;
+  const lists = [sd.opp, from && !from.typed ? from : null].concat(D.armies.filter(a => a !== sd.me), [sd.me]).filter((a, i, l) => a && l.indexOf(a) === i && units(a).length);
+  openSheet(k === 'atk' ? 'Attacker' : 'Target', 'Any unit of any list',
+    (k === 'tgt' ? '<div class="list"><button class="row" data-dmunit="tgt|typed|typed"><span class="rb"><b>Type a target</b><span>Models, T, W, Sv, InSv, Feel No Pain and keywords</span></span>' + (sd.tu.typed ? '<svg class="ic ok" aria-hidden="true"><use href="#i-check"/></svg>' : '') + '</button></div>' : '') +
+    lists.map(a => '<p class="lbl grp-h">' + esc(a.name) + (a === sd.opp ? ' <span class="apts">(opponent)</span>' : a === sd.me ? ' <span class="apts">(this list)</span>' : '') + '</p><div class="list">' + units(a).map(u => row(a, u)).join('') + '</div>').join(''));
 }
 function screenDamage(){
   const me = army(), opp = oppOf(me), st = dmState();
+  // a newly set opponent (here or on Find): the other side's unit is picked from their list again
+  const oid = opp ? opp.id : '';
+  if(st.oppWas !== oid){ if(st.oppWas != null && oid){ st.tArmy = ''; st.aArmy = ''; } st.oppWas = oid; saveSession(); }
   const pick = (k, label, value, sub) => '<button class="row dmp" data-dmpick="' + k + '"><span class="rb"><span class="lbl">' + label + '</span><b>' + esc(value) + '</b>' + (sub ? '<span>' + esc(sub) + '</span>' : '') + '</span>' + chev + '</button>';
-  let h = '<div class="list">' + pick('opp', 'Opponent', opp ? opp.name : 'Pick their list', opp ? factionOf(opp).name : '') + '</div>';
-  if(!opp) return h + '<p class="note">The calculator compares one of your units with one of theirs. Pick the list your opponent plays (any list in the app).</p>';
+  let h = '<div class="list">' + pick('opp', 'Opponent', opp ? opp.name : 'Pick their list (optional)', opp ? factionOf(opp).name : 'pairs the two lists; any unit can be picked below') + '</div>';
   const seg = (k, opts) => '<div class="seg">' + opts.map(([v, l]) => '<button data-dmset="' + k + '|' + v + '" aria-pressed="' + (st[k] === v) + '"' + (st[k] === v ? ' class="on"' : '') + '>' + l + '</button>').join('') + '</div>';
-  const kind = st.ph === 'fight' ? 'melee' : 'ranged';
-  const A = st.dir === 'me' ? me : opp, B = st.dir === 'me' ? opp : me;
-  const atks = dmUnits(A, kind), tgts = B.units;
-  const au = atks.find(u => u.id === st.atk) || atks[0], tu = tgts.find(u => u.id === st.tgt) || tgts[0];
+  const { A, B, au, tu, kind } = dmSides(st);
   h += seg('dir', [['me', 'You attack'], ['them', 'They attack']]) + seg('ph', [['shooting', 'Shooting'], ['fight', 'Fight']]);
   if(!au || !tu) return h + '<p class="note">' + esc(A.name) + ' has no unit with ' + kind + ' weapons.</p>';
-  // under the target: what the attacks meet (each stats row: T, Sv, InSv, W, how many)
-  const tsub = dmModels(tu, kind).map(m => (m.count > 1 ? m.count + '× ' : '') + 'T' + m.T + ' · Sv ' + m.Sv + '+' + (m.InSv < 7 ? ' · ' + m.InSv + '+ InSv' : '') + ' · W' + m.W).join(' · ');
-  h += '<div class="list">' + pick('atk', 'Attacker · ' + (st.dir === 'me' ? 'yours' : 'theirs'), unitLabel(au), modelCount(au) + (modelCount(au) > 1 ? ' models' : ' model')) +
-    pick('tgt', 'Target · ' + (st.dir === 'me' ? 'theirs' : 'yours'), unitLabel(tu), tsub) + '</div>';
   const calc = dmCalc(st, A, B, au, tu, kind), res = dmResult(calc);
-  return h + '<div id="dmRes">' + res + '</div>' + calc.html + dmHow(calc, st);
+  // under the target: what the attacks meet, row by row (name, how many, T, Sv, InSv, W)
+  const rows = calc.models, tsub = rows.map(m => (rows.length > 1 ? (m.count > 1 ? m.count + '× ' : '') + m.name + ': ' : '') + 'T' + m.T + ' · Sv ' + m.Sv + '+' +
+    (m.InSv < 7 ? ' · ' + m.InSv + '+ InSv' : '') + ' · W' + m.W).join(' · ');
+  h += '<div class="list">' + pick('atk', 'Attacker · ' + (st.dir === 'me' ? 'yours' : 'theirs · ' + A.name), unitLabel(au), modelCount(au) + (modelCount(au) > 1 ? ' models' : ' model')) +
+    pick('tgt', 'Target · ' + (st.dir === 'me' ? (B.typed ? 'typed' : 'theirs · ' + B.name) : 'yours'), unitLabel(tu), tsub) + '</div>';
+  // a typed target: its numbers and keywords, right under it
+  if(tu.typed){ const t = dmTypedVals(st);
+    const f = (k, label) => '<label class="dmtf"><span>' + label + '</span><input type="number" inputmode="numeric" min="0" step="1" placeholder="–" aria-label="' + label + '" data-dmtyped="' + k + '" value="' + (t[k] ? t[k] : '') + '"></label>';
+    h += '<div class="dmtyped">' + f('n', 'Models') + f('T', 'T') + f('W', 'W') + f('Sv', 'Sv (+)') + f('InSv', 'InSv (+)') + f('fnp', 'Feel No Pain (+)') + '</div>' +
+      '<div class="dmpf dmtkw">' + dmTypedKw(au, calc.rules).map(k => '<button data-dmtkw="' + esc(k) + '" aria-pressed="' + !!t.kw[k] + '"' + (t.kw[k] ? ' class="on"' : '') + '>' + esc(k) + '</button>').join('') + '</div>'; }
+  return h + calc.top + '<div id="dmRes">' + res.box + '</div>' + calc.html + res.work + dmHow(calc, st);
 }
+// a rule's recorded target condition (vs in data.js) against this matchup: ok true or false (with the reason)
+function dmVs(vs, tu, models){
+  if(!vs) return { ok:true, why:'' };
+  const names = l => l.map(x => x.toUpperCase()).join('/');
+  if(vs.any){ const ok = vs.any.some(k => hasKw(tu, k)); return { ok, why:ok ? 'the target is ' + names(vs.any) : 'only against ' + names(vs.any) }; }
+  if(vs.none){ const ok = !vs.none.some(k => hasKw(tu, k)); return { ok, why:ok ? 'the target is not ' + names(vs.none) : 'not against ' + names(vs.none) }; }
+  if(vs.maxT){ const ok = models.every(m => m.T <= vs.maxT); return { ok, why:ok ? 'no target model has T ' + (vs.maxT + 1) + '+' : 'only against a unit with no T ' + (vs.maxT + 1) + '+ model' }; }
+  return { ok:null, why:'' };
+}
+// a box's state: on (starts ticked, says why), choice, out (greyed: the matchup rules it out), nc (not in these numbers)
+const dmOn = (st, x) => x.state === 'out' || x.state === 'nc' ? false : st.on[x.k] != null ? !!st.on[x.k] : x.state === 'on';
 // everything the calculator needs, and the tick boxes that set it
 function dmCalc(st, A, B, au, tu, kind){
   const ranged = kind === 'ranged';
@@ -1524,19 +1601,24 @@ function dmCalc(st, A, B, au, tu, kind){
   const tchars = [...new Set(models.filter(m => m.char).map(m => m.name))];
   const items = weaponItems(ranged ? au.ranged : au.melee);
   const key = it => kind + ':' + itemName(it) + '|' + (it.who || '');
+  const abig = hasKw(au, 'Monster') || hasKw(au, 'Vehicle'), tbig = hasKw(tu, 'Monster') || hasKw(tu, 'Vehicle');
   // the weapons of one models line (in an attached unit, of the part that line belongs to)
   const lineItems = i => { const part = whoOfLine(au, i); return items.filter(it => (au.gear[i] || []).includes(itemName(it)) && (part == null || (it.who || '') === part)); };
-  // a models line with two or more weapons of this kind to pick from: the second and later start unticked,
-  // as do pistols beside other guns (a model shoots with one or the other)
+  const linesOf = it => (au.gear || []).map((g, i) => i).filter(i => lineItems(i).includes(it));
+  // what starts ticked: a model fights with its first melee weapon (04.01); a model (not MONSTER/VEHICLE) with pistols and
+  // other guns shoots the others, one whose only guns are pistols shoots them (24.07)
   const firstOff = new Set();
   (au.gear || []).forEach((g, i) => { if(!ranged) lineItems(i).filter(it => !isEA(it)).slice(1).forEach(it => firstOff.add(key(it))); });
-  if(ranged && items.some(it => !isCQ(it))) items.filter(isCQ).forEach(it => firstOff.add(key(it)));
+  if(ranged && !abig) for(const it of items.filter(isCQ)){
+    const ls = linesOf(it);
+    if(ls.length ? ls.every(i => lineItems(i).some(x => !isCQ(x))) : items.some(x => !isCQ(x))) firstOff.add(key(it));
+  }
   const on = it => st.off[key(it)] == null ? !firstOff.has(key(it)) : !st.off[key(it)];
   // a model fights with one melee weapon (04.01): ticking one unticks the others its models line can pick, when every
   // model with those has this one too
   const others = it => { if(ranged || isEA(it) || !au.gear) return [];
-    const lines = au.gear.map((g, i) => i).filter(i => lineItems(i).includes(it)), out = new Set();
-    for(const i of lines) for(const x of lineItems(i)) if(x !== it && !isEA(x) && au.gear.every((g, j) => !lineItems(j).includes(x) || lineItems(j).includes(it))) out.add(key(x));
+    const out = new Set();
+    for(const i of linesOf(it)) for(const x of lineItems(i)) if(x !== it && !isEA(x) && au.gear.every((g, j) => !lineItems(j).includes(x) || lineItems(j).includes(it))) out.add(key(x));
     return [...out]; };
   // a Hunter profile can only target units with its keywords (04.01.03)
   const hunterKw = w => w.hunter ? (typeof w.hunter === 'string' ? w.hunter : HUNTER_KW.replace(/^HUNTER:\s*/, '')).toUpperCase().split('/').map(x => x.trim()) : null;
@@ -1550,18 +1632,33 @@ function dmCalc(st, A, B, au, tu, kind){
   });
   const ticked = chosen.filter(c => c.on);
   const has = x => ticked.some(c => c.w.kw.some(k => new RegExp('^' + x + '\\b', 'i').test(k)));
+  const snap = ranged && !!st.on['c:snap'];
 
-  // the attacker's rules: footnotes, detachment rules, auras, stratagems (each a tick box when its words are understood);
-  // a Damaged band and Plunging Fire are in the situation, [LANCE] comes from the weapon's keyword
+  // ---- the attacker's rules: footnotes, detachment rules, auras, stratagems ----
+  // a Damaged band and Plunging Fire are in the situation; [LANCE] comes from the weapon's keyword
   const damaged = new Set(au.abilities.filter(ab => ab.damaged).map(ab => ab.name));
+  const riled = au.abilities.find(ab => ab.riled);
   const rules = [], seen = new Set();
+  const decide = r => {
+    const m = r.m;
+    if(!r.e) return Object.assign(r, { state:'nc', why:/\+\d+" range/.test(m.note || '') ? 'every weapon is taken to be in range' : '' });
+    const v = dmVs(m.vs, tu, models);
+    if(v.ok === false) return Object.assign(r, { state:'out', why:v.why });
+    let pre = '';
+    if(!m.strat && v.ok){
+      if(m.always || (m.selfAlways && m.src === au)) pre = m.vs ? v.why : 'always';
+      else if(riled && /^riled up\b/i.test(m.when || '')) pre = 'always riled up (' + riled.name + ')';
+      if(pre && snap && /your shooting phase/i.test((m.when || '') + ' ' + (m.note || ''))) pre = '';   // overwatch is not your Shooting phase
+    }
+    return Object.assign(r, { state:pre ? 'on' : 'choice', why:pre });
+  };
   for(const m of inArmy(A, () => unitMods(au, kind))){
     if(m.rule === 'Lance' || m.rule === 'Plunging Fire' || damaged.has(m.from)) continue;
     const k = 'm:' + [m.from, m.when, m.note].join('|');
     if(seen.has(k)) continue; seen.add(k);
-    const sc = dmScope(m), e0 = dmEffects(sc.note, !!m.set);
+    const sc = dmScope(m), e0 = m.calc ? Object.assign({}, m.calc) : dmEffects(sc.note, !!m.set);
     const e = e0 && m.set ? Object.assign({ set:m.set }, e0) : m.weapon && m.set ? null : e0;
-    rules.push({ k, m, sc, e, on:!!(e && st.on[k]) });
+    rules.push(decide({ k, m, sc, e }));
   }
   // Epic Challenge (15.03): one CHARACTER model's melee weapons have [PRECISION] (when the target has a CHARACTER to allocate to)
   const precCan = tchars.length && (models.some(m => !m.char) || tchars.length > 1);
@@ -1569,30 +1666,36 @@ function dmCalc(st, A, B, au, tu, kind){
   const epic = !ranged && precCan && achars.length && inArmy(A, () => allStratagems().find(s => s.id === 'epic-challenge' && eligible(s).includes(au)));
   if(epic){
     const who = achars.includes(st.val.epic) ? st.val.epic : achars[0];
-    const k = 'm:Epic Challenge';
-    rules.push({ k, m:{ from:'Epic Challenge', strat:epic.id, cp:epic.cp, who:au.leads ? who : undefined, when:'Fight phase', note:(achars.length > 1 ? who : 'This model') + '’s melee weapons have [PRECISION]' },
-      sc:{ f:null }, e:{ precision:true }, on:!!st.on[k], pills:achars.length > 1 ? achars.map(c => [c, c === who]) : null });
+    rules.push(decide({ k:'m:Epic Challenge', m:{ from:'Epic Challenge', strat:epic.id, cp:epic.cp, who:au.leads ? who : undefined, when:'Fight phase', note:(achars.length > 1 ? who : 'This model') + '’s melee weapons have [PRECISION]' },
+      sc:{ f:null }, e:{ precision:true }, pills:achars.length > 1 ? achars.map(c => [c, c === who]) : null }));
   }
+  for(const r of rules) r.on = dmOn(st, r);
 
-  // the situation (only the boxes that can matter for these units and weapons)
-  const tbig = hasKw(tu, 'Monster') || hasKw(tu, 'Vehicle'), abig = hasKw(au, 'Monster') || hasKw(au, 'Vehicle');
+  // ---- the situation (only the boxes that can matter for these units and weapons) ----
   const air = hasKw(au, 'Aircraft') || hasKw(tu, 'Aircraft');
   const lance = has('LANCE') || rules.some(r => r.on && r.e.lance);
   const ctx = { ranged };
-  const box = (k, label, sub, x) => '<label class="dmw' + (x ? ' ' + x : '') + '"><input type="checkbox" data-dmon="c:' + k + '"' + (st.on['c:' + k] ? ' checked' : '') + '><span><b>' + label + '</b>' + (sub ? '<small>' + sub + '</small>' : '') + '</span></label>';
+  const box = (k, label, sub, x, def) => { const v = st.on['c:' + k] != null ? !!st.on['c:' + k] : !!def;
+    return '<label class="dmw' + (x ? ' ' + x : '') + '"><input type="checkbox" data-dmon="c:' + k + '"' + (v ? ' checked' : '') + '><span><b>' + label + '</b>' + (sub ? '<small>' + sub + '</small>' : '') + '</span></label>'; };
   const auto = (label, sub) => '<p class="dmw auto"><b>' + label + '</b><small>' + sub + '</small></p>';
-  const tick = k => !!st.on['c:' + k];
+  const tick = (k, def) => st.on['c:' + k] != null ? !!st.on['c:' + k] : !!def;
+  // half range ([RAPID FIRE] 24.30, [MELTA] 24.25): one pick for the half ranges of this unit's weapons that have either
+  // ("Outside 18"", "Within 18"", "Within 12"": within 18" only the 36" weapon's bonus counts); every weapon is in range
+  const halves = ranged ? [...new Set((au.ranged || []).filter(w => w.kw.some(k => /^(rapid fire|melta) /i.test(k)) && parseInt(w.range, 10)).map(w => parseInt(w.range, 10) / 2))].sort((a, b) => b - a) : [];
+  let top = '';
+  if(halves.length === 1){ ctx.halfWithin = tick('half') ? halves[0] : null;
+    top = '<div class="sec-h"><h2>Half range</h2></div><div class="dml">' + box('half', 'Within half range (' + halves[0] + '")', '[RAPID FIRE] and [MELTA] weapons') + '</div>'; }
+  else if(halves.length > 1){ const v = halves.includes(+st.val.half) ? +st.val.half : 0; ctx.halfWithin = v || null;
+    top = '<div class="sec-h"><h2>Half range</h2></div><p class="dmgl">[RAPID FIRE] and [MELTA]: the target is</p><div class="seg dmhalf">' +
+      [[0, 'Outside ' + halves[0] + '"']].concat(halves.map(h => [h, 'Within ' + h + '"'])).map(([x, l]) => '<button data-dmval="half|' + x + '" aria-pressed="' + (x === v) + '"' + (x === v ? ' class="on"' : '') + '>' + l + '</button>').join('') + '</div>'; }
   let sh = '';
   if(ranged){
-    ctx.dist = st.dist != null && isFinite(st.dist) ? +st.dist : null;
-    sh += '<label class="dmw dmdist"><span><b>Distance to the target</b><small>inches; blank: not set</small></span><input type="number" inputmode="decimal" min="0" step="1" placeholder="—" aria-label="Distance to the target in inches" data-dmdist value="' + (ctx.dist != null ? ctx.dist : '') + '"></label>';
-    if(ctx.dist == null && (has('MELTA') || has('RAPID FIRE'))){ ctx.halfRange = tick('halfRange'); sh += box('halfRange', 'Within half range', 'every [MELTA] and [RAPID FIRE] weapon; or type the distance'); }
     // Stealth: the target has the benefit of cover against ranged attacks when every model has it (24.33)
-    const stealth = tu.rules.some(r => /^stealth$/i.test(r));
-    if(stealth && !tu.leads){ ctx.cover = true; sh += auto('Target has the benefit of cover', 'counted: the target has Stealth'); }
-    else { ctx.cover = tick('cover'); sh += box('cover', 'Target has the benefit of cover', stealth ? 'Stealth gives it only if every model has Stealth' : ''); }
-    if(!air && ticked.some(c => !c.w.kw.some(k => /^torrent/i.test(k)))){ ctx.plunging = tick('plunging'); sh += box('plunging', 'Plunging Fire', 'on terrain 3" or higher, or TOWERING with the target within 12": BS improved by 1'); }
-    if(has('HEAVY') && !tick('cq') && !tick('snap')){ ctx.heavy = tick('heavy'); sh += box('heavy', 'Not moved over 3", not set up this turn', '[HEAVY] weapons +1 to hit (the unit is unengaged)'); }
+    const stealth = tu.rules.some(r => /^stealth$/i.test(r)), stealthAll = stealth && !tu.leads;
+    ctx.cover = tick('cover', stealthAll); if(stealthAll && ctx.cover) ctx.coverSrc = 'Stealth (24.33): the benefit of cover (13.08)';
+    sh += box('cover', 'Target has the benefit of cover', stealthAll ? '<i>ticked: the target has Stealth (24.33)</i>' : stealth ? 'Stealth gives it only if every model has Stealth (24.33)' : '', '', stealthAll);
+    if(!air && ticked.some(c => !c.w.kw.some(k => /^torrent/i.test(k)))){ ctx.plunging = tick('plunging'); sh += box('plunging', 'Plunging Fire', 'the target is visible and has a model on ground level; the attacker is on terrain 3" or higher, or TOWERING with the target within 12": BS improved by 1'); }
+    if(has('HEAVY') && !tick('cq') && !snap){ ctx.heavy = tick('heavy'); sh += box('heavy', 'Not moved over 3", not set up this turn', '[HEAVY] weapons +1 to hit (the unit is unengaged)'); }
     if(has('INDIRECT FIRE')){
       sh += box('indirect', 'Indirect shooting', '[INDIRECT FIRE] weapons: the target has cover, no hit re-rolls, an unmodified 1-5 fails');
       if(tick('indirect')){ ctx.indirect = tick('still') ? '1-3' : '1-5'; sh += box('still', 'Remained stationary, target visible to a friendly unit', 'an unmodified 1-3 fails instead', 'sub'); }
@@ -1602,13 +1705,14 @@ function dmCalc(st, A, B, au, tu, kind){
       if(ctx.cq){ ctx.engaged = true; sh += auto('Target is engaged', 'counted: close-quarters shooting; -1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]'); }
       else { ctx.engaged = tick('engaged'); sh += box('engaged', 'Target is engaged', '-1 to hit; no [BLAST]'); }
     }
-    ctx.snap = tick('snap'); sh += box('snap', 'Fire Overwatch (snap shooting)', 'hits only on an unmodified 6, never critical; no hit re-rolls');
+    ctx.snap = snap; sh += box('snap', 'Fire Overwatch (snap shooting)', 'hits only on an unmodified 6, never critical; no hit re-rolls');
   }
   if(!ranged || lance){ ctx.charged = tick('charged'); sh += box('charged', 'Made a charge move this turn', ''); }
   // a Damaged band (24.39): the datasheet's printed effect
-  const dmgMods = (au.mods || []).filter(m => damaged.has(m.from) && (m.kind === kind || m.kind === 'all'));
   const dmgOn = [];
-  for(const m of dmgMods){ const e = dmEffects(m.note); if(!e){ sh += box('damaged', esc(m.when), esc(m.note) + ' · not in these numbers', 'nc'); continue; }
+  for(const m of (au.mods || []).filter(m => damaged.has(m.from) && (m.kind === kind || m.kind === 'all'))){
+    const e = dmEffects(m.note);
+    if(!e){ sh += '<label class="dmw nc"><input type="checkbox" disabled><span><b>' + esc(m.when) + '</b><small>' + esc(m.note) + ' · not in these numbers</small></span></label>'; continue; }
     sh += box('damaged', esc(m.when), esc(m.note)); if(tick('damaged')) dmgOn.push({ m, e }); }
   // [PRECISION]: the active player can pick a visible CHARACTER's group (24.28)
   const precision = precCan && (has('PRECISION') || rules.some(r => r.on && r.e.precision));
@@ -1619,14 +1723,14 @@ function dmCalc(st, A, B, au, tu, kind){
     if(tick('prec')) ctx.precision = who;
   }
 
-  // the weapons: each ticked one, split by the rules that reach only some of its models
+  // ---- the weapons: each ticked one, split by the rules that reach only some of its models ----
   const man = st.man, manual = {};
   for(const k of ['hit', 'wound', 'ap', 'd', 'a']) if(+man[k]) manual[k] = +man[k];
   for(const k of ['rrHit', 'rrWound']) if(man[k]) manual[k] = man[k];
   const groups = [], gOf = [];
   for(const c of ticked){
     const appl = [];
-    for(const r of rules) if(r.on){ const n = dmReach(au, c.it, r.m, r.sc); if(n > 0) appl.push({ n:Math.min(n, c.n), mod:Object.assign({ from:r.m.from }, r.e), r }); }
+    for(const r of rules) if(r.on){ const n = dmReach(au, c.it, r.m, r.sc); if(n > 0) appl.push({ n:Math.min(n, c.n), mod:Object.assign({ from:r.m.from }, r.m.strat ? { strat:r.m.strat } : {}, r.e), r }); }
     for(const x of dmgOn){ const n = dmReach(au, c.it, x.m, { f:null }); if(n > 0) appl.push({ n:Math.min(n, c.n), mod:Object.assign({ from:x.m.from }, x.e), r:{ m:x.m } }); }
     if(Object.keys(manual).length) appl.push({ n:c.n, mod:Object.assign({ from:'' }, manual), r:{ m:{ from:'' } } });
     const cuts = [...new Set(appl.map(x => x.n).concat(c.n))].sort((a, b) => a - b);
@@ -1639,29 +1743,65 @@ function dmCalc(st, A, B, au, tu, kind){
       lo = hi;
     }
   }
-  // the target's protection: its rules, abilities and stratagems
-  const tmod = {}, single = modelCount(tu) === 1;
-  let th = '';
-  for(const d of inArmy(B, () => defenceItems(tu, st.ph))){
-    const k = 't:' + d.t, e = dmDefence(d.t, kind, single);
-    // always on: its Feel No Pain (a unit on its own, or a detachment rule), an InSv already in its profile
-    if(/^feel no pain \d\+$/i.test(d.t) && d.a === 'rule' && (!tu.leads || !tu.rules.includes(d.t))){
-      tmod.fnp = Math.min(tmod.fnp || 7, e.fnp); th += auto(esc(d.t), 'counted: the unit always has it'); continue; }
-    if(e && e.insv != null && d.a === 'ability' && models.some(m => m.star) && !/^riled/i.test(d.t)){
-      th += auto(esc(d.t), ranged ? 'counted: the InSv in its profile' : 'not against melee attacks'); continue; }
-    if(e && Object.keys(e).length && st.on[k]){
-      // a model's own Feel No Pain in an attached unit protects only that model (19.04)
-      const ab = d.a === 'ability' && tu.leads && inArmy(B, () => tu.abilities.find(x => abilityKey(x) === d.v));
-      if(e.fnp && ab && ab.who && DM_MODEL_RULE.test(ab.text)) for(const m of models){ if(m.part === ab.who) m.fnp = Math.min(m.fnp || 7, e.fnp); }
-      else Object.assign(tmod, e, e.dMinus ? { dMinus:(tmod.dMinus || 0) + e.dMinus } : {}, e.fnp ? { fnp:Math.min(tmod.fnp || 7, e.fnp) } : {});
-    }
-    const sub = (d.a === 'strat' ? 'stratagem' : d.a === 'ability' ? 'ability' : 'rule') + (tu.leads && /^feel no pain/i.test(d.t) && d.a === 'rule' ? ' · counts for every model when ticked' : '');
-    th += '<label class="dmw' + (e ? '' : ' nc') + '"><input type="checkbox" data-dmon="' + esc(k) + '"' + (e ? '' : ' disabled') + (e && st.on[k] ? ' checked' : '') + '><span><b>' + esc(d.t.replace(/^(\d+CP) /, '')) + '</b><small>' + esc(sub) + (e ? '' : ' · not in these numbers') + '</small></span></label>';
+
+  // ---- the target's protection: its rules, abilities and stratagems, help from other units of its list, by hand ----
+  const tmod = { src:{} }, single = modelCount(tu) === 1, tRiled = tu.abilities.find(ab => ab.riled);
+  const defs = [];
+  if(tu.typed && tu.fnp){ tmod.fnp = tu.fnp; tmod.src.fnp = 'typed'; }
+  for(const d of tu.typed ? [] : inArmy(B, () => defenceItems(tu, st.ph))){
+    const ab = d.a === 'ability' ? inArmy(B, () => tu.abilities.find(x => abilityKey(x) === d.v)) : null;
+    const e = ab && ab.defCalc ? Object.assign({}, ab.defCalc) : dmDefence(d.t, kind, single);
+    const src = d.a === 'strat' ? d.t.replace(/^\d+CP ([^:]+):.*$/, '$1') : ab ? ab.name : /^riled/i.test(d.t) ? 'riled up (Waaagh!)' : d.v;
+    const x = { k:'t:' + d.t, d, ab, e, src, state:'choice', why:'' };
+    if(!e) x.state = 'nc';
+    else if(!Object.keys(e).filter(k => k !== 'model').length){ x.state = 'out'; x.why = /against ranged attacks/i.test(d.t) ? 'not against melee attacks' : /^fight phase/i.test(d.t.replace(/^\d+CP [^:]+: /, '')) ? 'Fight phase only' : 'not against these attacks'; }
+    else if(ab && ab.defAlways) x.why = 'always';
+    else if(d.a === 'rule' && e.fnp && !(tu.leads && tu.rules.includes(d.t))) x.why = 'always';
+    else if(d.a === 'ability' && e.insv != null && models.some(m => m.star)){ x.why = 'the InSv in its profile'; x.star = true; }
+    else if(/^riled up/i.test(d.t) && tRiled) x.why = 'always riled up (' + tRiled.name + ')';
+    if(x.why && x.state === 'choice') x.state = 'on';
+    if(tu.leads && d.a === 'rule' && /^feel no pain/i.test(d.t) && x.state === 'choice') x.why = 'counts for every model when ticked';
+    defs.push(x);
   }
+  for(const src of tu.typed ? [] : B.units) for(const g of src.guard || []){
+    if(!(g.kind === kind || g.kind === 'all') || !inArmy(B, () => matches(g.needs, tu))) continue;
+    const one = g.one && modelCount(tu) > 1;
+    defs.push({ k:'g:' + src.id + '|' + g.from, g, gsrc:src, e:one ? null : Object.assign({}, g.calc), src:g.from, state:one ? 'nc' : 'choice', why:one ? 'one model only' : '' });
+  }
+  let starOn = null;
+  for(const x of defs){
+    x.on = dmOn(st, x);
+    if(x.star) starOn = x.on && ranged;
+    if(!x.on) continue;
+    const e = x.e;
+    // one model or part only: Aegis Protocol's +1 T (Kastelan Robots), the Datasmith's own Feel No Pain, a model's own Feel No Pain in an attached unit (19.04)
+    const part = e.model || (e.fnp && x.ab && x.ab.who && tu.leads && DM_MODEL_RULE.test(x.ab.text) ? x.ab.who : null);
+    if(part){ for(const m of models.filter(m => m.name === part || m.part === part)){
+      if(e.fnp && e.fnp < m.fnp){ m.fnp = e.fnp; m.fnpSrc = x.src; }
+      if(e.t){ m.tSrc = 'T' + m.T + ' ' + (e.t > 0 ? '+' : '') + e.t + ' ' + x.src; m.T += e.t; } } continue; }
+    if(x.star){ for(const m of models) if(m.star) m.InSv = Math.min(m.InSv, m.insvStar); continue; }
+    if(e.stealth){ if(ranged && !ctx.cover){ ctx.cover = true; ctx.coverSrc = 'Stealth (' + x.src + ', 24.33): the benefit of cover (13.08)'; } continue; }
+    for(const k of ['insv', 'fnp', 'fnpMortal']) if(e[k] && e[k] < (tmod[k] || 7)){ tmod[k] = e[k]; tmod.src[k] = x.src; }
+    for(const k of ['apWorse', 'dMinus', 'hitMinus', 'woundMinus']) if(e[k]){ tmod[k] = (tmod[k] || 0) + e[k]; tmod.src[k] = (tmod.src[k] ? tmod.src[k] + ', ' : '') + x.src; }
+  }
+  if(starOn == null && ranged) for(const m of models) if(m.star) m.InSv = Math.min(m.InSv, m.insvStar);   // the profile's InSv, against ranged attacks
+  // by hand: an InSv or Feel No Pain from anything not listed here
+  if(+man.tInsv && +man.tInsv < (tmod.insv || 7)){ tmod.insv = +man.tInsv; tmod.src.insv = 'set by hand'; }
+  if(+man.tFnp && +man.tFnp < (tmod.fnp || 7)){ tmod.fnp = +man.tFnp; tmod.src.fnp = 'set by hand'; }
   const input = { groups, target:{ T:Math.max(1, ...models.map(m => m.T)), kw:tu.kw, models, mod:tmod }, ctx, sims:10000, seed:7 };
+  ctx.halves = halves;
   const R = WH_CALC.resolve(input);
 
   // ---- the page ----
+  const lbl = t => '<p class="dmgl">' + t + '</p>';
+  const tickBox = (x, label, sub) => { const off = x.state === 'nc' || x.state === 'out';
+    return '<label class="dmw' + (off ? ' nc' : '') + '"><input type="checkbox" data-dmon="' + esc(x.k) + '"' + (off ? ' disabled' : '') + (x.on ? ' checked' : '') + '><span><b>' + label + '</b><small>' + esc(sub) +
+      (x.state === 'nc' ? ' · not in these numbers' : '') + (x.why ? ' · <i>' + esc(x.why) + '</i>' : '') + '</small></span></label>'; };
+  const fold = (k, title, inner) => '<details class="dmfold" data-dmfold="' + k + '"' + ((st.fold || {})[k] ? ' open' : '') + '><summary>' + title + chev + '</summary>' + inner + '</details>';
+  const grouped = (list, side, html, labels) => {
+    const by = s => list.filter(x => x.state === s);
+    return (by('on').length ? lbl(labels.on) + by('on').map(html).join('') : '') + (by('choice').length ? lbl(labels.choice) + by('choice').map(html).join('') : '') +
+      (by('out').length ? lbl(labels.out) + by('out').map(html).join('') : '') + (by('nc').length ? fold('nc-' + side, 'Not in these numbers (' + by('nc').length + ')', by('nc').map(html).join('')) : ''); };
   let html = '<div class="sec-h"><h2>Weapons</h2></div><div class="dml">';
   for(const c of chosen){
     const w = c.w, outs = [...new Set(groups.map((g, i) => gOf[i] === c ? R.groups[i].out : '').filter(Boolean))];
@@ -1672,48 +1812,98 @@ function dmCalc(st, A, B, au, tu, kind){
     if(c.ps.length > 1) html += '<div class="dmpf">' + c.ps.map((p, i) => '<button data-dmprof="' + esc(c.k) + '|' + i + '"' + (i === c.pi ? ' class="on" aria-pressed="true"' : ' aria-pressed="false"') + (can(p) ? '' : ' disabled title="Hunter: ' + esc(hunterKw(p).join('/')) + ' targets only"') + '>' + esc(p.name) + '</button>').join('') + '</div>';
   }
   html += '</div><div class="sec-h"><h2>Situation</h2></div><div class="dml">' + sh + '</div>';
-  // the rules: each says which weapons it reaches when that is not all of them
-  let rh = '';
-  for(const r of rules){
+  // the attacker's rules: each says which weapons it reaches when that is not all of them
+  const ruleHtml = r => {
     const reach = r.e ? ticked.map(c => [c, dmReach(au, c.it, r.m, r.sc)]) : [];
     const part = reach.length && reach.some(([c, n]) => n < c.n) ? reach.filter(([c, n]) => n > 0).map(([c, n]) => itemName(c.it) + (n < c.n ? ' ×' + n : '')) : null;
+    const counted = r.m.calc ? ' · counted: ' + dmCalcWords(r.e) : '';
     const label = (r.m.cp ? '<b class="cpb">' + r.m.cp + 'CP</b> ' : '') + esc(r.m.from || '');
-    const sub = (r.m.when ? r.m.when + ': ' : '') + r.m.note + (!r.e ? ' · not in these numbers' : part ? ' · ' + (part.length ? 'for ' + part.join(', ') : 'none of the ticked weapons') : '');
-    rh += '<label class="dmw' + (r.e ? '' : ' nc') + '"><input type="checkbox" data-dmon="' + esc(r.k) + '"' + (r.e ? '' : ' disabled') + (r.on ? ' checked' : '') + '><span><b>' + label + '</b><small>' + esc(sub) + '</small></span></label>';
-    if(r.pills) rh += '<div class="dmpf">' + r.pills.map(([c, sel]) => '<button data-dmval="epic|' + esc(c) + '"' + (sel ? ' class="on" aria-pressed="true"' : ' aria-pressed="false"') + '>' + esc(c) + '</button>').join('') + '</div>';
-  }
-  // the same ability twice on one weapon: one applies (24.02), the better one
+    return tickBox(r, label, (r.m.when ? r.m.when + ': ' : '') + r.m.note + counted + (r.e && part ? ' · ' + (part.length ? 'for ' + part.join(', ') : 'none of the ticked weapons') : '')) +
+      (r.pills ? '<div class="dmpf">' + r.pills.map(([c, sel]) => '<button data-dmval="epic|' + esc(c) + '"' + (sel ? ' class="on" aria-pressed="true"' : ' aria-pressed="false"') + '>' + esc(c) + '</button>').join('') + '</div>' : ''); };
+  // the same ability twice on one weapon: one applies (24.02); the calculator uses the better one
   const kwText = x => '[' + (typeof x === 'string' ? x : x.t) + ']' + (x.src ? ' (' + x.src + ')' : '');
   const dups = [...new Set(R.groups.flatMap((g, i) => g.notes.filter(n => n.dup).map(n => gOf[i] ? itemName(gOf[i].it) + ': ' + kwText(n.used) + ' used, not ' + n.not.map(kwText).join(', ') : '')))].filter(Boolean);
   // a rule already in the printed values (New Recruit adds some): not added again
   const twice = [...new Set(R.groups.flatMap((g, i) => g.skipped.map(s => itemName(gOf[i].it) + ': ' + s.key + ' already includes ' + s.from)))];
-  html += '<div class="sec-h"><h2>' + esc(shortName(au)) + '’s rules</h2></div><div class="dml">' + (rh || '<p class="note">No footnotes on its weapons.</p>') + '</div>' +
-    (dups.length ? '<p class="note">The same ability twice does not add up (24.02); the better one is used. ' + esc(dups.join('. ')) + '.</p>' : '') +
+  // Rules (abilities, detachment and army rules, auras) and Stratagems: each by side, yours and theirs
+  const sideA = st.dir === 'me' ? 'Yours' : 'Theirs', sideB = st.dir === 'me' ? 'Theirs' : 'Yours';
+  const sideH = (side, u) => '<p class="dmside">' + side + ' · ' + esc(unitLabel(u)) + '</p>';
+  const none = '<p class="note dmnone">None that change these numbers.</p>';
+  const defHtml = x => x.g ? tickBox(x, esc(x.g.from), x.g.when + ': ' + x.g.note + ' (' + x.gsrc.name + ')') :
+    tickBox(x, x.d.a === 'strat' ? '<b class="cpb">' + esc((/^(\d+)CP /.exec(x.d.t) || [, ''])[1]) + 'CP</b> ' + esc(x.src) : esc(x.d.t),
+      x.d.a === 'strat' ? x.d.t.replace(/^\d+CP [^:]+: /, '') : (x.d.a === 'ability' ? 'ability' : 'rule') + (x.ab && x.ab.defCalc ? ' · counted: ' + dmCalcWords(x.e) : ''));
+  const aRules = rules.filter(r => !r.m.strat), aStrats = rules.filter(r => r.m.strat);
+  const tRules = defs.filter(x => !x.g && x.d.a !== 'strat'), tHelp = defs.filter(x => x.g), tStrats = defs.filter(x => !x.g && x.d.a === 'strat');
+  html += '<div class="sec-h"><h2>Rules</h2></div><div class="dml">' +
+    sideH(sideA, au) + (aRules.length ? grouped(aRules, 'ra', ruleHtml, { on:'Applies here', choice:'Tick if it applies', out:'Not against this target' }) : none) +
+    sideH(sideB, tu) + (tRules.length ? grouped(tRules, 'rt', defHtml, { on:'Applies here', choice:'Tick if it applies', out:'Not against these attacks' }) : tHelp.length ? '' : none) +
+    (tHelp.length ? lbl('Help from other units of the list') + tHelp.map(defHtml).join('') : '') + '</div>' +
+    (dups.length ? '<p class="note">The same ability twice does not add up (24.02): the attacker picks one; the calculator uses the better one. ' + esc(dups.join('. ')) + '.</p>' : '') +
     (twice.length ? '<p class="note">Not added twice: ' + esc(twice.join('. ')) + '.</p>' : '');
-  html += '<div class="sec-h"><h2>' + esc(shortName(tu)) + ' when targeted</h2></div><div class="dml">' + (th || '<p class="note">Nothing that changes these numbers.</p>') + '</div>';
+  html += '<div class="sec-h"><h2>Stratagems</h2></div><div class="dml">' +
+    sideH(sideA, au) + (aStrats.length ? grouped(aStrats, 'sa', ruleHtml, { on:'Applies here', choice:'Tick if used', out:'Not against this target' }) : none) +
+    sideH(sideB, tu) + (tStrats.length ? grouped(tStrats, 'st', defHtml, { on:'Applies here', choice:'Tick if used', out:'Not against these attacks' }) : none) + '</div>';
   // anything else, set by hand
   const step = (k, label) => '<div class="dmstep"><span>' + label + '</span><button data-dmman="' + k + '|-1" aria-label="' + label + ' minus">−</button><b class="num">' + ((+man[k] || 0) > 0 ? '+' : '') + (+man[k] || 0) + '</b><button data-dmman="' + k + '|1" aria-label="' + label + ' plus">+</button></div>';
+  const save = (k, label) => '<div class="dmstep"><span>' + label + '</span><button data-dmman="' + k + '|-1" aria-label="' + label + ' worse">−</button><b class="num">' + (+man[k] ? man[k] + '+' : '–') + '</b><button data-dmman="' + k + '|1" aria-label="' + label + ' better">+</button></div>';
   const rr = (k, label) => '<div class="dmstep"><span>' + label + '</span>' + [['', 'none'], ['1s', '1s'], ['all', 'all']].map(([v, l]) => '<button class="rr' + ((man[k] || '') === v ? ' on' : '') + '" data-dmrr="' + k + '|' + v + '">' + l + '</button>').join('') + '</div>';
   // the Core Rules state no limit on hit and wound roll modifiers: say so when a weapon's total goes past ±1
   const past = [];
   if(R.groups.some((g, i) => !g.out && Math.abs(g.hitMod) > 1 && !groups[i].kw.some(k => /^torrent/i.test(k)))) past.push('Hit roll');
   if(R.groups.some(g => !g.out && Math.abs(g.woundMod) > 1)) past.push('Wound roll');
   if(past.length) html += '<p class="note">' + past.join(' and ') + ' modifiers total more than ±1: the Core Rules in the app state no limit, so these numbers use the full total. Check whether a rule limits it.</p>';
-  html += '<div class="sec-h"><h2>Other modifiers</h2></div><div class="dmman">' + step('hit', 'Hit roll') + step('wound', 'Wound roll') + step('ap', 'AP better') + step('d', 'Damage') + step('a', 'Attacks') + rr('rrHit', 'Re-roll hits') + rr('rrWound', 'Re-roll wounds') + '</div>' +
-    '<p class="note">Averages over 10,000 games played out with the dice; one unit’s attacks against the other, nothing used up. Rules marked “not counted” are not in these numbers.</p>';
-  return { html, input, R, au, tu, models, rules, ticked, ctx, tmod, gOf };
+  const nMan = ['hit', 'wound', 'ap', 'd', 'a', 'rrHit', 'rrWound', 'tInsv', 'tFnp'].filter(k => man[k] && man[k] !== '0').length;
+  html += fold('more', 'Other modifiers' + (nMan ? ' (' + nMan + ' set)' : ''), '<div class="dmman">' + step('hit', 'Hit roll') + step('wound', 'Wound roll') + step('ap', 'AP better') + step('d', 'Damage') + step('a', 'Attacks') +
+    rr('rrHit', 'Re-roll hits') + rr('rrWound', 'Re-roll wounds') + save('tInsv', 'Target InSv') + save('tFnp', 'Target Feel No Pain') + '</div>');
+  html += '<p class="note">Rules marked “not in these numbers” are not counted. Nothing is used up: one unit’s attacks against the other.</p>';
+  return { html, top, input, R, au, tu, models, rules, defs, ticked, ctx, tmod, gOf };
 }
+// a rule's recorded numbers in words (the part of it the calculator counts)
+function dmCalcWords(e){
+  const w = [];
+  if(e.hit) w.push((e.hit > 0 ? '+' : '') + e.hit + ' to hit rolls');
+  if(e.wound) w.push((e.wound > 0 ? '+' : '') + e.wound + ' to wound rolls');
+  if(e.rrHit) w.push(e.rrHit === '1s' ? 're-roll hit rolls of 1' : 're-roll hit rolls');
+  if(e.rrWound) w.push(e.rrWound === '1s' ? 're-roll wound rolls of 1' : 're-roll wound rolls');
+  if(e.insv) w.push(e.insv + '+ InSv');
+  if(e.fnp) w.push('Feel No Pain ' + e.fnp + '+');
+  if(e.t) w.push((e.t > 0 ? '+' : '') + e.t + ' T');
+  if(e.stealth) w.push('the benefit of cover');
+  return w.join(', ') + (e.model ? ' (' + e.model + ' only)' : '');
+}
+// the result: what is played out with the dice (sticky at the top), and the working: each weapon's exact averages, step by step
 function dmResult(c){
-  if(!c.input.groups.length) return '<div class="dmres"><p class="note">Tick a weapon.</p></div>';
-  if(c.R.groups.every(g => g.out)) return '<div class="dmres"><p class="note">None of the ticked weapons can attack here (see Weapons).</p></div>';
-  const r = c.r = WH_CALC.run(c.input), f = x => x >= 10 ? x.toFixed(0) : x.toFixed(1);
-  const pct = x => x >= 0.995 ? '>99%' : x < 0.005 ? '<1%' : Math.round(x * 100) + '%';
+  if(!c.input.groups.length) return { box:'<div class="dmres"><p class="note">Tick a weapon.</p></div>', work:'' };
+  if(c.R.groups.every(g => g.out)) return { box:'<div class="dmres"><p class="note">None of the ticked weapons can attack here (see Weapons).</p></div>', work:'' };
+  const r = c.r = WH_CALC.run(c.input), x = c.x = WH_CALC.explain(c.input, r.orderIdx);
+  const f = WH_CALC.fmt, n = WH_CALC.fmt;   // one number format for the screen and the working
+  // wounds lost can never be more than the damage before allocation; against one stats row (nothing changes between
+  // attacks) that is the working's exact total, so dice noise above it is cut back to it and the two never disagree
+  const lost = c.models.length === 1 ? Math.min(r.dmg, x.total.dmg) : r.dmg;
+  const pct = v => v >= 0.995 ? '>99%' : v < 0.005 ? '<1%' : Math.round(v * 100) + '%';
   const atLeast = k => r.dist.slice(k).reduce((t, p) => t + p, 0);
   const bars = r.dist.map((p, k) => k ? '<span title="' + k + '"><i style="height:' + Math.max(2, Math.round(atLeast(k) * 100)) + '%"></i><em>' + k + '</em></span>' : '').join('');
-  return '<div class="dmres"><div class="dmn"><div><b class="num">' + f(r.killed) + '</b><span>of ' + r.models + (r.models > 1 ? ' models' : ' model') + ' destroyed</span></div><div><b class="num">' + f(r.dmg) + '</b><span>wounds lost</span></div><div><b class="num">' + pct(r.wipe) + '</b><span>unit destroyed</span></div></div>' +
+  const box = '<div class="dmres"><div class="dmn" role="button" tabindex="0" data-dmgo="work"><div><b class="num">' + f(r.killed) + '</b><span>of ' + r.models + (r.models > 1 ? ' models' : ' model') + ' destroyed</span></div><div><b class="num">' + f(lost) + '</b><span>wounds lost</span></div><div><b class="num">' + pct(r.wipe) + '</b><span>unit destroyed</span></div></div>' +
     (r.models > 1 ? '<div class="dmb" aria-label="Chance to destroy at least N models">' + bars + '</div><p class="dmbl">chance to destroy at least N models</p>' : '') +
-    '<div class="dmg"><span></span><span>Hits</span><span>Wounds</span><span>Through</span>' + c.input.groups.map((g, i) => { const x = r.groups[i];
-      return x.out ? '' : '<span>' + esc(g.name) + '</span><span class="num">' + f(x.hits) + '</span><span class="num">' + f(x.wounds) + '</span><span class="num">' + f(x.unsaved + x.mortals) + '</span>'; }).join('') + '</div></div>';
+    '<p class="dmbl">Played out with the dice, 10,000 games: damage beyond a model’s wounds is lost (05.04). Tap for the working.</p></div>';
+  const st = dmState();
+  const cells = v => ['attacks', 'hits', 'wounds', 'through', 'dmg'].map(k => '<span class="num">' + n(k === 'through' ? v.unsaved + v.mortals : v[k]) + '</span>').join('');
+  let work = '<div class="sec-h"><h2>The working</h2></div><p class="note dmwn">Exact averages before allocation, the same every time; tap a row for each step.</p><div class="dmwk"><div class="dmwh"><span></span><span>Att.</span><span>Hits</span><span>Wnds</span><span>Thru</span><span>Dmg</span></div>';
+  c.input.groups.forEach((g, i) => {
+    const e = x.groups[i], s = r.groups[i];
+    if(e.out){ work += '<div class="dmr out"><span class="n">' + esc(g.name) + '<small>left out: ' + esc(e.out) + '</small></span></div>'; return; }
+    const gone = s.gone >= 0.005 ? 'the unit is destroyed before these attacks in ' + pct(s.gone) + ' of the games' : '';
+    work += '<details class="dmr" data-dmfold="w:' + esc(g.name) + '"' + (st.fold['w:' + g.name] ? ' open' : '') + '><summary><span class="n">' + esc(g.name) + (gone ? '<small>' + esc(gone) + '</small>' : '') + '</span>' + cells(e) + '</summary><div class="body">' +
+      e.steps.map(p => '<p>' + esc(p.t).replace(/^([A-Z][a-z]+(?: roll)?):/, '<b>$1:</b>') + '</p>').join('') +
+      (gone ? '<p><b>Played out:</b> ' + esc(gone) + ', and then they are lost (05.04); the dice give this weapon ' + n(s.unsaved + s.mortals) + ' through and ' + n(s.dmg) + ' wounds lost on average.</p>' : '') + '</div></details>';
+  });
+  const T = x.total;
+  const order = r.alloc.length > 1 ? ' The defender’s order of groups: ' + r.order.join(', ') + ' (the one that loses the fewest models on average, 05.03).' : '';
+  work += '<details class="dmr tot" id="dmTot" data-dmfold="tot"' + (st.fold.tot ? ' open' : '') + '><summary><span class="n">Total</span>' + cells({ attacks:T.attacks, hits:T.hits, wounds:T.wounds, unsaved:T.through, mortals:0, dmg:T.dmg }) + '</summary><div class="body">' +
+    '<p><b>Before allocation:</b> ' + n(T.attacks) + ' attacks → ' + n(T.hits) + ' hits → ' + n(T.wounds) + ' wounds → ' + n(T.through) + ' get through → ' + n(T.dmg) + ' damage (the rows added up).</p>' +
+    '<p><b>Played out:</b> the target has ' + x.target.models + (x.target.models > 1 ? ' models' : ' model') + ' with ' + x.target.wounds + ' wounds in all. Damage beyond a model’s wounds is lost, and attacks after the unit is destroyed are lost (05.04), so models destroyed, wounds lost and the chances come from the dice: 10,000 games, the same dice for the same picks. ' +
+    'On average ' + n(r.killed) + ' of ' + r.models + ' destroyed, ' + n(lost) + ' wounds lost; the unit is destroyed in ' + pct(r.wipe) + ' of the games.' + esc(order) + '</p></div></details></div>';
+  return { box, work };
 }
 // "How this is worked out": what the rules say about these numbers, and what the calculator does where they leave a choice
 // or say nothing (each line names its rule, or says that the rules don't say)
@@ -1722,23 +1912,26 @@ function dmHow(c, st){
   if(!r) return '';
   const kw = re => gi.some(i => g[i].kw.some(k => re.test(k)));
   const L = [];
+  L.push(['The working', 'each weapon’s averages are worked out exactly from the dice, step by step, against the models the attacks meet first and as if none of the damage were lost. Models destroyed, wounds lost and the chances are played out with the dice, because damage beyond a model’s wounds and attacks after the unit is destroyed are lost (05.04); the same picks always give the same numbers.']);
+  L.push(['Ticked for you', 'a rule starts ticked only when the data records that it applies here: always, or because of the target’s keywords or T. A rule that depends on the table (an objective, a charge, a distance, a stratagem spent) starts unticked; one the target rules out is greyed with the reason. Every box can be changed, and the working names each rule it counts.']);
   L.push(['Weapons (04.03)', 'the rules let the attacker pick which weapon’s attacks are resolved next; the calculator takes them in the order listed, and rolls identical attacks together.']);
   L.push(['Saves and damage (05.03, 05.04)', 'save rolls are rolled together and used from the lowest; an attack that gets through damages the one model it was allocated to, so damage beyond that model’s wounds is lost; Feel No Pain is rolled for each wound (24.12).']);
   if(r.alloc.length > 1) L.push(['Allocation order (05.03)', 'one group for the models with the same W, Sv and InSv, one for each CHARACTER model, CHARACTER groups last. ' +
-    (r.orders > 1 ? 'The rules let the defender pick the order of the groups; the calculator uses the order that loses the fewest models on average: ' : r.capped ? 'The rules let the defender pick the order; there are too many to compare, so the calculator keeps the datasheet’s: ' : 'Order: ') + r.order.join(', ') + '.']);
+    (r.orders > 1 ? 'The defender declares the order at each Save Rolls step; the calculator uses one order for every weapon: the one that loses the fewest models on average over the same 10,000 games: ' : r.capped ? 'The defender declares the order; there are too many to compare, so the calculator keeps the datasheet’s: ' : 'Order: ') + r.order.join(', ') + '.']);
   if(c.models.some(m => m.bodyguard)) L.push(['Toughness (19.02)', 'the highest T among the bodyguard models still in the unit; once they are all destroyed, the highest T of the others.']);
   if(on.some(x => x.rrHit || x.rrWound || x.lethal))
     L.push(['Re-rolls and [LETHAL HITS] (01.05.02, 24.23)', 'the rules leave these to the attacker; the calculator re-rolls every failed roll it may, re-rolls a successful roll only to look for a critical result when that is worth more on average, and takes [LETHAL HITS] unless rolling to wound is worth more (a critical wound with [DEVASTATING WOUNDS]).']);
-  if(on.some(x => x.dev) && c.tmod.dMinus) L.push(['[DEVASTATING WOUNDS] and -1 Damage', 'the rules don’t say whether the target’s -1 Damage changes these mortal wounds; the calculator does not apply it to them.']);
+  if(on.some(x => x.dev) && c.tmod.dMinus) L.push(['[DEVASTATING WOUNDS] and -1 Damage (24.10, 04.02.02)', 'a critical wound ends that attack’s sequence and inflicts mortal wounds equal to its D; the attack is never allocated (that happens in step 1 of 05.04), so a -1 Damage that works when an attack is allocated does not change them. The calculator does not apply it to these mortal wounds.']);
   if(gi.some(i => g[i].kw.concat(g[i].mods.filter(m => m.sus).map(m => 'SUSTAINED HITS ' + m.sus)).some(k => /^(sustained hits|rapid fire|melta) \d*D\d/i.test(k))))
     L.push(['A dice roll in an ability ([SUSTAINED HITS D3], [RAPID FIRE D6+3])', 'the rules don’t say how often it is rolled; the calculator rolls [SUSTAINED HITS] for each critical hit, [RAPID FIRE] for each weapon and [MELTA] for each attack that inflicts damage.']);
   if(on.some(x => x.psychic)) L.push([on.some(x => x.psychicKw) ? '[PSYCHIC] (24.29)' : 'Ignoring modifiers (02.02.02)', 'an attack that can ignore any or all modifiers to BS and to the hit roll: the calculator ignores the ones that make it worse and keeps the others.']);
   if(gi.some(i => (+g[i].AP || 0) === 0 && g[i].mods.some(m => +m.ap > 0)) && c.tmod.apWorse) L.push(['AP (When Modifying Characteristics)', 'improved and worsened at once: the calculator adds the changes up first, then holds AP at 0 at worst (“after all modifiers”); worsening first, step by step, can read differently.']);
   if(c.ctx.snap && gi.some(i => g[i].kw.some(k => /^torrent/i.test(k)))) L.push(['[TORRENT] in snap shooting', 'the rules don’t say whether these attacks still hit automatically; the calculator lets them.']);
   if(c.ctx.precision) L.push(['[PRECISION] (24.28)', 'attacks with it go to ' + c.ctx.precision + ' while it is in the unit, the others as usual; their [DEVASTATING WOUNDS] mortal wounds go to it first (24.28.01).']);
-  if(c.ctx.dist != null) L.push(['Distance (04.02, 24.25, 24.30)', 'within range and within half range ([MELTA], [RAPID FIRE]) go by each weapon’s range, as printed or changed by a ticked rule.']);
-  if(kw(/^(blast|cleave)\b/i)) L.push(['[BLAST] and [CLEAVE] (24.05, 24.06)', 'one more attack dice (X with [BLAST X] or [CLEAVE X]) for every five models the target had before these attacks.']);
-  return '<details class="xp dmhow" data-dmhow' + (st.how ? ' open' : '') + '><summary><span class="xh"><b>How this is worked out</b><span>what the rules say, and what the calculator does where they leave a choice</span></span>' + chev + '</summary><div class="body">' +
+  L.push(['Range (04.02)', 'every weapon is taken to be in range of the target; rules that only change range are not counted.' + (c.ctx.halves && c.ctx.halves.length ? ' Half range ([RAPID FIRE] 24.30, [MELTA] 24.25) is the band picked above: a weapon gets its bonus when its half range reaches it.' : '')]);
+  if(kw(/^blast\b/i)) L.push(['[BLAST] (24.05)', 'one more attack dice (X with [BLAST X]) for every five models the target had before these attacks.']);
+  if(kw(/^cleave\b/i)) L.push(['[CLEAVE] (24.06)', 'X more attack dice for every five models the target had before these attacks, when all of that weapon’s attacks target this one unit: the calculator takes it that they do.']);
+  return '<details class="xp dmhow" data-dmfold="how"' + (st.fold.how ? ' open' : '') + '><summary><span class="xh"><b>How this is worked out</b><span>what the rules say, and what the calculator does where they leave a choice</span></span>' + chev + '</summary><div class="body">' +
     L.map(([h, t]) => '<p class="note dmh"><b>' + esc(h) + ':</b> ' + esc(t) + '</p>').join('') + '</div></details>';
 }
 
@@ -2942,19 +3135,23 @@ document.addEventListener('click', e => {
   if(el.hasAttribute('data-askforget')){ const c = askCfg(); store.set('wh-ask', { model:c.model }); askConv = null; rerender(); toast('Key removed from this phone'); return; }
   if(ds.askmodel){ store.set('wh-ask', Object.assign(askCfg(), { model:ds.askmodel })); rerender(); return; }
   if(ds.dmpick){ dmPicker(ds.dmpick); return; }
-  if(ds.dmopp != null){ const a = army(), was = oppOf(a);
-    // a game is both ways: their list's opponent becomes this one (unless it has another already)
-    if(was && store.get('wh-opp-' + was.id) === a.id) store.set('wh-opp-' + was.id, null);
-    store.set('wh-opp-' + a.id, ds.dmopp || null);
-    if(ds.dmopp && ds.dmopp !== a.id && !oppOf(armyById(ds.dmopp))) store.set('wh-opp-' + ds.dmopp, a.id);
-    closeSheet(); rerender(); return; }
-  if(ds.dmunit){ const [k, id] = ds.dmunit.split('|'), st = dmState(); st[k] = id; saveSession(); closeSheet(); rerender(); return; }
+  // the big numbers open the working's total
+  if(ds.dmgo){ const st = dmState(); st.fold.tot = true; saveSession(); const d = $('#dmTot'); if(d){ d.open = true; d.scrollIntoView({ block:'start' }); } return; }
+  // the other side's unit, from any list (the opponent's list: it then follows the opponent) or typed; the saved opponent stays
+  if(ds.dmunit){ const [k, a, id] = ds.dmunit.split('|'), st = dmState(), o = oppOf(army());
+    if(a === 'typed') st.tArmy = 'typed';
+    else { if((k === 'tgt') === (st.dir === 'me')) st[k === 'tgt' ? 'tArmy' : 'aArmy'] = o && o.id === a ? '' : a; st[k] = id; }
+    saveSession(); closeSheet(); rerender(); return; }
+  if(ds.dmtkw){ const st = dmState(), t = dmTypedVals(st); st.typed.kw = Object.assign({}, t.kw, { [ds.dmtkw]:!t.kw[ds.dmtkw] }); saveSession(); rerender(); return; }
   if(ds.dmset || ds.dmprof || ds.dmman || ds.dmrr || ds.dmval){
     const st = dmState();
     if(ds.dmset){ const [k, v] = ds.dmset.split('|'); st[k] = v; }
     if(ds.dmval){ const i = ds.dmval.indexOf('|'); st.val[ds.dmval.slice(0, i)] = ds.dmval.slice(i + 1); }
     if(ds.dmprof){ const i = ds.dmprof.lastIndexOf('|'); st.pick[ds.dmprof.slice(0, i)] = +ds.dmprof.slice(i + 1); }
-    if(ds.dmman){ const [k, v] = ds.dmman.split('|'); st.man[k] = Math.max(-3, Math.min(6, (+st.man[k] || 0) + +v)); }
+    // a save or Feel No Pain set by hand: none, 6+ … 2+ (plus is better)
+    if(ds.dmman){ const [k, v] = ds.dmman.split('|');
+      if(k === 'tInsv' || k === 'tFnp'){ const x = +st.man[k] || 7, y = +v > 0 ? x - 1 : x + 1; st.man[k] = y >= 7 ? 0 : Math.max(2, y); }
+      else st.man[k] = Math.max(-3, Math.min(6, (+st.man[k] || 0) + +v)); }
     if(ds.dmrr){ const [k, v] = ds.dmrr.split('|'); st.man[k] = v; }
     saveSession(); rerender(); return;
   }
@@ -3003,27 +3200,33 @@ document.addEventListener('click', e => {
     el.textContent = openAll ? 'Collapse all' : 'Expand all';
   }
 });
-// the damage calculator's tick boxes and distance
+// the damage calculator's tick boxes and a typed target's numbers
 document.addEventListener('change', e => {
   const t = e.target;
-  if(!t.matches) return;
-  if(t.matches('[data-dmdist]')){ const st = dmState(), v = parseFloat(t.value); st.dist = t.value === '' || !(v >= 0) ? null : v; saveSession(); rerender(); return; }
-  if(!t.matches('[data-dmw], [data-dmon]')) return;
+  if(t.matches && t.matches('[data-dmtyped]')){ const st = dmState(), k = t.dataset.dmtyped, v = parseInt(t.value, 10);
+    // Models, T and W at least 1 (at most 100, 30, 99); Sv, InSv and Feel No Pain 2+ to 6+, blank or anything else: none
+    const top = { n:100, T:30, W:99 }[k];
+    st.typed[k] = top ? Math.min(top, Math.max(1, v || DM_TYPED[k])) : !(v >= 2 && v <= 6) ? 0 : v;
+    saveSession();
+    // redrawn once the field is left; a typed field tapped next keeps the focus
+    setTimeout(() => { const a = document.activeElement, next = a && a.dataset ? a.dataset.dmtyped : null; rerender();
+      if(next){ const f = $('[data-dmtyped="' + next + '"]'); if(f) f.focus({ preventScroll:true }); } }, 0);
+    return; }
+  if(!t.matches || !t.matches('[data-dmw], [data-dmon]')) return;
   const st = dmState();
   if(t.dataset.dmw){
     st.off[t.dataset.dmw] = !t.checked;
     // a model fights with one melee weapon: the others its models line could pick are unticked
     if(t.checked && t.dataset.dmx) for(const k of JSON.parse(t.dataset.dmx)) st.off[k] = true;
   }
-  else if(t.checked){ st.on[t.dataset.dmon] = true; for(const k of DM_ONE_OF[t.dataset.dmon] || []) delete st.on[k]; }
-  else delete st.on[t.dataset.dmon];
+  else { st.on[t.dataset.dmon] = t.checked; if(t.checked) for(const k of DM_ONE_OF[t.dataset.dmon] || []) st.on[k] = false; }   // a box ticked for you can be unticked
   saveSession(); rerender();
 });
 // remember expanded stratagem cards
 document.addEventListener('toggle', e => {
   const d = e.target;
   if(!d.dataset) return;
-  if(d.hasAttribute('data-dmhow')){ dmState().how = d.open; saveSession(); return; }
+  if(d.hasAttribute('data-dmfold')){ dmState().fold[d.dataset.dmfold] = d.open; saveSession(); return; }   // the Damage tab's folds stay as left
   if(d.dataset.stratId){
     if(d.open) openStrats.add(d.dataset.stratId); else openStrats.delete(d.dataset.stratId);
     saveSession();

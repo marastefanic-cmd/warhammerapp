@@ -54,9 +54,12 @@ function items(D, appSource){
         if(ab.def) add(a.id, 'ability-def', w + ' · ' + ab.name, { def:ab.def, defPh:ab.defPh }, src);
         if(ab.na) add(a.id, 'ability-na', w + ' · ' + ab.name, { na:ab.na, armyUnits:a.units.map(x => x.name + ' [' + x.kw.join(', ') + ']') }, src);
         if(ab.damaged) add(a.id, 'ability-damaged', w + ' · ' + ab.name, { damaged:ab.damaged, W:u.stats[0].W }, src);
+        // the Damage tab's reading of it: always protects the unit (defAlways), its numbers (defCalc), always riled up (riled)
+        if(ab.defAlways || ab.defCalc || ab.riled) add(a.id, 'ability-calc', w + ' · ' + ab.name, { def:ab.def, defAlways:ab.defAlways, defCalc:ab.defCalc, riled:ab.riled, models:u.models }, src);
       }
       for(const m of u.mods || []) add(a.id, 'unit-footnote', w, m, cited(a.id, u, m));
       for(const m of u.aura || []) add(a.id, 'unit-aura', w, m, cited(a.id, u, m));
+      for(const m of u.guard || []) add(a.id, 'unit-guard', w, m, cited(a.id, u, m));
       for(const k of ['kwNote', 'ptsNote', 'note']) if(u[k]) add(a.id, 'unit-' + k, w, { [k]:u[k] }, unitFacts);
       // weapons: which model has which, how many, and the multi-profile groups
       // unplaced: wargear on no models line (undefined, so left out of the key, for every other unit)

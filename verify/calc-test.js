@@ -139,13 +139,19 @@ const cases = [
   // ... vs a VEHICLE only 6s (10)
   ['anti-non: against a vehicle', () => run([g({ n:60, kw:['TORRENT', 'ANTI-NON-MONSTER/VEHICLE 4+', 'DEVASTATING WOUNDS'] })], { T:8, kw:['Vehicle'], models:[big(1000, 10)] }).groups[0].mortals, 10],
 
-  // ---- half range and range, per weapon, from the distance ----
-  // 10" away: a 12" [MELTA 2] weapon is not within half range (6"): D6 (3.5 per wound): 50 wounds (S8 vs T4) → 175
-  ['distance: melta beyond half range', () => run([g({ n:60, S:8, D:'D6', range:'12"', kw:['TORRENT', 'MELTA 2'] })], { T:4, models:[big(1, 100000)] }, { ranged:true, dist:10 }).dmg, 50 * 3.5],
-  // ... a 24" [RAPID FIRE 1] weapon is (12"): 2 attacks each
-  ['distance: rapid fire within half range', () => run([g({ n:10, range:'24"', kw:['RAPID FIRE 1'] })], { T:4, models:[big(100, 10)] }, { ranged:true, dist:10 }).groups[0].attacks, 20],
-  // ... and a 9" weapon is out of range: no attacks
-  ['distance: out of range', () => run([g({ n:10, range:'9"' })], { T:4, models:[big(100, 10)] }, { ranged:true, dist:10 }).groups[0].attacks, 0],
+  // ---- half range as a band: the target within X inches; a weapon gets its bonus when its half range reaches X ----
+  // within 9": a 12" [MELTA 2] weapon's half range is 6": D6 (3.5 per wound): 50 wounds (S8 vs T4) → 175
+  ['half range band: melta not reached', () => run([g({ n:60, S:8, D:'D6', range:'12"', kw:['TORRENT', 'MELTA 2'] })], { T:4, models:[big(1, 100000)] }, { ranged:true, halfWithin:9 }).dmg, 50 * 3.5],
+  // within 12": a 24" [RAPID FIRE 1] weapon's half range is 12": 2 attacks each
+  ['half range band: rapid fire reached', () => run([g({ n:10, range:'24"', kw:['RAPID FIRE 1'] })], { T:4, models:[big(100, 10)] }, { ranged:true, halfWithin:12 }).groups[0].attacks, 20],
+  // within 18": of two [RAPID FIRE 1] weapons, the 36" one (half range 18") gets +1 (20 dice), the 24" one does not (10)
+  ['half range band: the 36" weapon within 18"', () => run([g({ n:10, range:'36"', kw:['RAPID FIRE 1'] }), g({ n:10, range:'24"', kw:['RAPID FIRE 1'] })], { T:4, models:[big(100, 10)] }, { ranged:true, halfWithin:18 }).groups[0].attacks, 20],
+  ['half range band: the 24" weapon not within 18"', () => run([g({ n:10, range:'36"', kw:['RAPID FIRE 1'] }), g({ n:10, range:'24"', kw:['RAPID FIRE 1'] })], { T:4, models:[big(100, 10)] }, { ranged:true, halfWithin:18 }).groups[1].attacks, 10],
+
+  // ---- the one number format: rounded to one decimal first, the decimal dropped at 10 or more ----
+  ['number format: 9.96 is 10', () => +(C.fmt(9.96) === '10'), 1],
+  ['number format: 9.94 is 9.9', () => +(C.fmt(9.94) === '9.9'), 1],
+  ['number format: 10 is 10', () => +(C.fmt(10) === '10'), 1],
 
   // ---- [LANCE] given by a rule (24.21): +1 to wound after a charge: S4 vs T4 3+: 40 of 60 ----
   ['lance from a rule: wounds', () => run([g({ n:60, kw:['TORRENT'], mods:[{ from:'Servo-driven Charge', lance:true }] })], { T:4, models:[big(100, 10)] }, { charged:true }).groups[0].wounds, 40],
@@ -174,6 +180,115 @@ const cases = [
   // P(critical) = 1/6 + 5/6 × 1/6 = 11/36 of 60 torrent hits = 18.3 (re-rolling only fails: 15)
   ['twin-linked + devastating wounds: re-rolls for a 6', () => run([g({ n:60, kw:['TORRENT', 'TWIN-LINKED', 'DEVASTATING WOUNDS'] })], { T:4, models:[big(1000, 10, 2)] }).groups[0].mortals, 60 * 11 / 36],
 ];
+
+// ---- the screen's own choices, through the app's dmCalc (verify/damage-node.js): what starts ticked, greyed or offered ----
+const dm = require('./damage-node')();
+const LK = 'm:Legendary Killer|While Khârn leads this unit|re-roll hit rolls of 1 and wound rolls of 1';
+const exact = (s, k) => { const c = dm.calc(s); return C.explain(c.input).total[k || 'dmg']; };
+const played = (s, k) => { const c = dm.calc(s); return C.run(Object.assign({}, c.input, { sims:20000, seed:7 }))[k]; };
+const box = (s, from) => { const c = dm.calc(s); return c.rules.concat(c.defs).find(x => (x.m && x.m.from === from) || x.src === from) || {}; };
+const app = [
+  // Arrogant Invulnerability ("Attacks that target this unit have -1 AP") always applies: ticked from the start.
+  // Khârn + Berzerkers fight Nazdreg + Meganobz (Legendary Killer unticked), before allocation, against the Meganobz (Sv 2+):
+  // Gorechild 9 × 5/6 = 7.5 hits × 4/6 (S7 vs T6) = 5 wounds, AP-2 worsened to -1: 2/6 fail = 1.67 × D3 = 5.0;
+  // Chainblades 40 × 4/6 = 26.7 × 2/6 (S5 vs T6) = 8.9, AP-1 to 0: 1/6 = 1.48; eviscerators 8 × 4/6 × 4/6 = 3.56 × 2/6 = 1.19 × D2 = 2.37
+  ['always on: Arrogant Invulnerability (before allocation)', () => exact({ army:'princes', opp:'melee', ph:'fight', atk:'kh-rn-the-betrayer-khorne-berzerkers', tgt:'nazdreg-meganobz', on:{ [LK]:false } }), 5 + 40 * 4 / 6 * 2 / 6 / 6 + 8 * 4 / 6 * 4 / 6 * 2 / 6 * 2],
+  // Super Runts: Zodgrod's unit is always riled up, so the Waaagh! 5+ InSv is ticked. Forgefiend at 20 Gretchin (W1, the first
+  // group): Hades 12 × 3/6 × 5/6 = 5 wounds, Ectoplasma (D3 + [BLAST] 22 models: +4) 6 × 3/6 × 5/6 = 2.5; 5+ InSv: 4/6 fail → 5.0 models
+  ['always riled up: Super Runts, models destroyed', () => played({ army:'princes', opp:'ooga-booga', ph:'shooting', atk:'forgefiend', tgt:'zodgrod-wortsnagga-runtherd-gretchin' }, 'killed'), (5 + 2.5) * 4 / 6],
+  // Helm of Brazen Ire (-1 Damage to attacks allocated to the bearer) always applies: Forgefiend at the Daemon Prince (T10, Sv 2+,
+  // InSv 4+): Hades 12 × 3/6 × 2/6 = 2 wounds × 2/6 (3+ with AP-1) × D(2-1) = 0.67; Ectoplasma 2 × 3/6 × 3/6 = 0.5 × 3/6 (InSv 4+) × D(3-1) = 0.5
+  ['always on: Helm of Brazen Ire', () => exact({ army:'princes', opp:'princes', ph:'shooting', atk:'forgefiend', tgt:'daemon-prince-of-khorne-helm-of-brazen-ire' }), 2 / 3 + 0.5],
+  // Prophet of Da Great Waaagh!: Ghazghkull is always within his own aura (22.01): +1 to hit and wound, ticked; at Mozrog
+  // (W10, Feel No Pain 5+), played out: 8.5 wounds lost (the reviewer's own simulator: 8.5, 59%)
+  ['own aura: Prophet of Da Great Waaagh!, wounds lost', () => played({ army:'melee', opp:'melee', ph:'fight', atk:'ghazghkull-thraka', tgt:'mozrog-skragbad' }, 'dmg'), 8.5],
+  // Bringer of Justice (+1 to the bearer's melee hit rolls) always: Atrapos lascutter 8 × 5/6 = 6.67 hits + 8/6 [SUSTAINED HITS 1] = 8
+  // × 4/6 (S14 vs T11) = 5.33 × 5/6 (AP-3 vs Sv 3+: 6+) = 4.44 × D4 × 5/6 (Knights of Legend, Feel No Pain 6+) = 14.8
+  ['always on: Bringer of Justice', () => exact({ army:'4-megas-and-a-destrier', opp:'6-bigs', ph:'fight', atk:'cerastus-knight-atrapos', tgt:'knight-paladin' }), 8 * 4 / 6 * 5 / 6 * 4 * 5 / 6],
+  // Unnatural Resistance (Feel No Pain 4+ against mortal wounds) always: counted for the Norn Emissary
+  ['always on: Unnatural Resistance', () => dm.calc({ army:'princes', opp:'nidzillas', ph:'shooting', atk:'forgefiend', tgt:'norn-emissary' }).tmod.fnpMortal, 4],
+  // Bringers of Change (always: re-roll wound rolls of 1, its data mark calc): Warpflamers 3 × D6 = 10.5 torrent hits × (2/6 + 1/6 × 2/6)
+  // (S4 vs T5) = 4.08 wounds × 3/6 (AP-1 vs Sv 3+) = 2.04; the four weapons together: 8.0 (the reviewer: 8.0)
+  ['always on: Bringers of Change', () => exact({ army:'pubstomper', opp:'princes', ph:'shooting', atk:'sorcerer-rubric-marines', tgt:'lord-on-juggernaut-khorne-berzerkers' }), 8.0],
+  // Aegis Protocol: the Kastelans are T9 +1 = T10 from the start of the battle: Chaos Terminators: combi-bolters 12 × 3/6 × 1/6 (S5 vs
+  // T10: 6+) × 2/6 = 0.33; reapers 8 × 3/6 + 8/6 sustained = 5.33 hits: critical 5.33/6 = 0.89 mortal, 5s 5.33/6 = 0.89 × 2/6 = 0.30
+  ['always on: Aegis Protocol +1 T', () => exact({ army:'super-terminators', opp:'purge-goes-the-foe', ph:'shooting', atk:'chaos-terminators', tgt:'cybernetica-datasmith-kastelan-robots' }), 1 / 3 + 16 / 3 / 6 + 16 / 3 / 6 * 2 / 6],
+  // the Datasmith's own Feel No Pain 4+ (Robotic Bodyguard): on that model only, not the robots
+  ['one model only: the Datasmith’s Feel No Pain', () => dm.calc({ army:'super-terminators', opp:'purge-goes-the-foe', ph:'shooting', atk:'chaos-terminators', tgt:'cybernetica-datasmith-kastelan-robots' }).models.map(m => m.name + m.fnp).join() === 'Cybernetica Datasmith4,Kastelan Robot7' ? 1 : 0, 1],
+  // pistols per model (24.07): the Mek's Kustom Mega-slugga and the Nob's Rokkit pistol are those models' only guns, so they shoot;
+  // Kustom Dakka (not against MONSTER/VEHICLE) stays out against a Knight even if ticked. At the Knight Paladin (T11, Sv 3+, InSv 5+*,
+  // Feel No Pain 6+): slugga 3 × 3/6 × 2/6 × 4/6 × D3 × 5/6 = 0.83; pistol 1 × … = 0.28; launchas (Hunter) 18 × 3/6 × 4/6 × 4/6 × 3 × 5/6 = 10
+  ['pistols per model, Kustom Dakka greyed vs a Knight', () => { const k = box({ army:'shooty', opp:'6-bigs', ph:'shooting', atk:'mek-tankbustas', tgt:'knight-paladin' }, 'Kustom Dakka').k;
+    return exact({ army:'shooty', opp:'6-bigs', ph:'shooting', atk:'mek-tankbustas', tgt:'knight-paladin', on:{ [k]:true } }); }, 3 * 3 / 6 * 2 / 6 * 4 / 6 * 3 * 5 / 6 + 1 * 3 / 6 * 2 / 6 * 4 / 6 * 3 * 5 / 6 + 10],
+  ['greyed with the reason: Kustom Dakka vs a Knight', () => +(box({ army:'shooty', opp:'6-bigs', ph:'shooting', atk:'mek-tankbustas', tgt:'knight-paladin' }, 'Kustom Dakka').why === 'not against MONSTER/VEHICLE'), 1],
+  // Blitz Dem Gitz! (+6 A to the Blitzkannon against a target that is not MONSTER/VEHICLE): pre-ticked against Gretchin, greyed against a Knight
+  ['pre-ticked from the target: Blitz Dem Gitz! vs Gretchin', () => { const b = box({ army:'shooty', opp:'ooga-booga', ph:'shooting', atk:'dakkarig-herder', tgt:'gretchin' }, 'Blitz Dem Gitz!'); return +(b.state === 'on' && b.on && b.why === 'the target is not MONSTER/VEHICLE'); }, 1],
+  ['greyed from the target: Blitz Dem Gitz! vs a Knight', () => +(box({ army:'shooty', opp:'6-bigs', ph:'shooting', atk:'dakkarig-herder', tgt:'knight-paladin' }, 'Blitz Dem Gitz!').state === 'out'), 1],
+  // a stratagem is never ticked for the player
+  ['a stratagem starts unticked', () => +!box({ army:'shooty', opp:'ooga-booga', ph:'shooting', atk:'mek-tankbustas', tgt:'gretchin' }, 'Kustom Dakka').on, 1],
+  // help from other units of the target's list: Emanatus Forcefield (4+ InSv against ranged attacks, BATTLELINE) is offered for
+  // Skitarii Rangers and counts when ticked
+  ['help from other units: Emanatus Forcefield', () => { const k = box({ army:'shooty', opp:'purge-goes-the-foe', ph:'shooting', atk:'mek-tankbustas', tgt:'skitarii-rangers' }, 'Emanatus Forcefield').k;
+    return dm.calc({ army:'shooty', opp:'purge-goes-the-foe', ph:'shooting', atk:'mek-tankbustas', tgt:'skitarii-rangers', on:{ [k]:true } }).tmod.insv; }, 4],
+  // the defender's allocation order, compared over the same 10,000 games (05.03): Khârn + Berzerkers (Legendary Killer unticked,
+  // Epic Challenge on Gorechild, [PRECISION] on the Sorcerer) fight Sorcerer + Rubric Marines: Rubric Marine first loses fewer
+  // models (5.62, 74% destroyed; the order the 2,000-game trial picked lost 5.67, 81%: the reviewer's 200,000 games)
+  ['allocation order: Rubric Marine first', () => +(dm.calc({ army:'princes', opp:'pubstomper', ph:'fight', atk:'kh-rn-the-betrayer-khorne-berzerkers', tgt:'sorcerer-rubric-marines', on:{ 'm:Epic Challenge':true, 'c:prec':true, [LK]:false }, val:{ prec:'Sorcerer' } }) && (c => C.run(c.input).order[0])(dm.calc({ army:'princes', opp:'pubstomper', ph:'fight', atk:'kh-rn-the-betrayer-khorne-berzerkers', tgt:'sorcerer-rubric-marines', on:{ 'm:Epic Challenge':true, 'c:prec':true, [LK]:false }, val:{ prec:'Sorcerer' } })) === 'Rubric Marine'), 1],
+  ['allocation order: models destroyed', () => (c => C.run(c.input).killed)(dm.calc({ army:'princes', opp:'pubstomper', ph:'fight', atk:'kh-rn-the-betrayer-khorne-berzerkers', tgt:'sorcerer-rubric-marines', on:{ 'm:Epic Challenge':true, 'c:prec':true, [LK]:false }, val:{ prec:'Sorcerer' } })), 5.62],
+  ['allocation order: unit destroyed', () => (c => C.run(c.input).wipe)(dm.calc({ army:'princes', opp:'pubstomper', ph:'fight', atk:'kh-rn-the-betrayer-khorne-berzerkers', tgt:'sorcerer-rubric-marines', on:{ 'm:Epic Challenge':true, 'c:prec':true, [LK]:false }, val:{ prec:'Sorcerer' } })), 0.74],
+  // after the unit is destroyed, a later weapon's attacks are lost: Khârn + Berzerkers fight 10 Gretchin: the eviscerators (last)
+  // find the unit already gone in nearly every game, and their row says so
+  ['the unit gone before a weapon: shown', () => (c => C.run(c.input).groups.slice(-1)[0].gone)(dm.calc({ army:'princes', opp:'shooty', ph:'fight', atk:'kh-rn-the-betrayer-khorne-berzerkers', tgt:'gretchin' })), 1],
+  // half range as a band: the Knight Paladin's rapid-fire battle cannon and its stubbers have different half ranges; within 18"
+  // only the weapons whose half range is 18" or more get [RAPID FIRE]
+  ['half range band from the screen', () => dm.calc({ army:'6-bigs', opp:'shooty', ph:'shooting', atk:'knight-paladin', tgt:'gretchin', val:{ half:18 } }).ctx.halfWithin, 18],
+  // ---- no opponent needed: a typed target, or any unit of any list ----
+  // a typed target with no opponent set: 10 Grot Blastas (A1, BS 4+, S3, AP0, D1) at 10 models T3 W1 Sv 5+, Feel No Pain 6+:
+  // 10 × 3/6 hit × 3/6 wound (S3 vs T3) × 4/6 fail × 5/6 not ignored = 1.39
+  ['typed target, no opponent: Grot Blastas', () => exact({ army:'shooty', ph:'shooting', atk:'gretchin', typed:{ n:10, T:3, W:1, Sv:5, fnp:6 } }), 10 * 3 / 6 * 3 / 6 * 4 / 6 * 5 / 6],
+  // the working shows the typed numbers
+  ['typed target: its numbers in the working', () => { const w = C.explain(dm.calc({ army:'shooty', ph:'shooting', atk:'gretchin', typed:{ n:10, T:3, W:1, Sv:5, fnp:6 } }).input).groups[0].steps.map(x => x.t).join('\n');
+    return +(/vs T3\b/.test(w) && /Sv 5\+/.test(w) && /Feel No Pain 6\+/.test(w)); }, 1],
+  // its keyword toggles drive the boxes: Blitz Dem Gitz! is pre-ticked against a typed INFANTRY target, greyed against a typed VEHICLE
+  ['typed target: keywords pre-tick a rule', () => +(box({ army:'shooty', ph:'shooting', atk:'dakkarig-herder', typed:{} }, 'Blitz Dem Gitz!').state === 'on'), 1],
+  ['typed target: keywords grey a rule', () => +(box({ army:'shooty', ph:'shooting', atk:'dakkarig-herder', typed:{ kw:{ INFANTRY:false, VEHICLE:true } } }, 'Blitz Dem Gitz!').why === 'not against MONSTER/VEHICLE'), 1],
+  // a target picked from a list that is not the opponent's (and with no opponent at all); the opponent's list leads the picker
+  ['any list: a target from another list', () => +(dm.calc({ army:'shooty', opp:'ooga-booga', ph:'shooting', atk:'gretchin', tArmy:'6-bigs', tgt:'knight-paladin' }).tu.id === 'knight-paladin'), 1],
+  ['any list: a target with no opponent', () => +(dm.calc({ army:'shooty', ph:'shooting', atk:'gretchin', tArmy:'6-bigs', tgt:'knight-paladin' }).tu.id === 'knight-paladin'), 1],
+  // they attack: the attacker from any list, no opponent needed
+  ['any list: their attacker with no opponent', () => { const c = dm.calc({ army:'shooty', dir:'them', ph:'shooting', aArmy:'princes', atk:'forgefiend', tgt:'gretchin' }); return +(c.au.id === 'forgefiend' && c.tu.id === 'gretchin'); }, 1],
+];
+for(const x of app) cases.push(x);
+
+// ---- two methods agree: the working's exact averages (explain) and the dice played out (run), over real matchups ----
+// Every list against every other, the first two units each side, shooting and fight, three tick-box states (as the screen
+// starts; every choice ticked; every box unticked), sampled. The target is made one group of models enough for every attack
+// (nothing lost to allocation), so the two must agree within dice noise: 5 standard errors of the games' averages.
+const sweep = { matchups:0, compared:0, bad:[] };
+{
+  const A = dm.D.armies, pick = (l, n) => l.slice(0, n);
+  let i = 0;
+  for(const a of A) for(const b of A) if(a !== b) for(const ph of ['shooting', 'fight']) for(const au of pick(a.units.filter(u => (ph === 'fight' ? u.melee : u.ranged || []).length), 2)) for(const tu of pick(b.units, 2)) for(const state of ['start', 'all', 'none']){
+    if((i++ % 11) !== 0) continue;   // a fixed sample, the same every run
+    const s = { army:a.id, opp:b.id, ph, atk:au.id, tgt:tu.id, on:{} };
+    const c0 = dm.calc(s);
+    if(state !== 'start') for(const x of c0.rules.concat(c0.defs)) if(x.state === 'choice' || x.state === 'on') s.on[x.k] = state === 'all';
+    if(state === 'all') for(const k of ['cover', 'plunging', 'charged', 'heavy', 'prec']) s.on['c:' + k] = true;
+    const c = dm.calc(s);
+    if(!c || !c.input.groups.length) continue;
+    const first = C.explain(c.input), row = c.models.find(m => m.name === first.meets) || c.models[0];
+    const one = Object.assign({}, row, { count:1, W:1e9, char:!!row.char, bodyguard:false, T:first.T });
+    const input = Object.assign({}, c.input, { target:Object.assign({}, c.input.target, { models:[one], kw:row.char ? c.input.target.kw : c.input.target.kw.filter(k => !/^character$/i.test(k)) }), ctx:Object.assign({}, c.input.ctx, { precision:null }), sims:3000, seed:5, moments:true });
+    const x = C.explain(input), r = C.run(input);
+    sweep.matchups++;
+    x.groups.forEach((e, gi) => { if(e.out) return; for(const k of ['attacks', 'hits', 'wounds', 'unsaved', 'mortals', 'dmg']){
+      sweep.compared++;
+      const tol = 5 * r.groups[gi].sd[k] / Math.sqrt(input.sims) + 1e-6 * Math.max(1, Math.abs(e[k]));
+      if(Math.abs(e[k] - r.groups[gi][k]) > tol) sweep.bad.push(a.id + '/' + au.id + ' → ' + b.id + '/' + tu.id + ' ' + ph + ' ' + state + ' · ' + c.input.groups[gi].name + ' ' + k + ': exact ' + e[k].toFixed(3) + ', played ' + r.groups[gi][k].toFixed(3) + ' (±' + tol.toFixed(3) + ')'); } });
+  }
+}
+cases.push(['two methods agree: ' + sweep.matchups + ' matchups, ' + sweep.compared + ' averages', () => sweep.bad.length, 0]);
+for(const t of sweep.bad.slice(0, 20)) console.log('  ' + t);
 
 // Every value New Recruit already includes (a `from` mark in data.js, every list): the same rule, given to the calculator
 // as a tick box, must not add it again. A mark on a field or keyword a rule could add (A, S, AP, D, [LETHAL HITS],
