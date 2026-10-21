@@ -966,219 +966,133 @@ Skorpius Disintegrator
 From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
 
 ######## damage shooting · BASES Damage
-OPPONENT
-Me shooty yer’ booty
-Orks
-YOU ATTACK
-THEY ATTACK
-SHOOTING
-FIGHT
-ATTACKER · YOURS
+YOUR
 Belisarius Cawl
-1 model
-TARGET · THEIRS · ME SHOOTY YER’ BOOTY
+SHOOT
+FIGHT
+THEY ATTACK
+THEIR
 Wazdakka Gutsmek
-T8 · Sv 3+ · 4+ InSv · W10
-HALF RANGE
-Within half range (9")
-[RAPID FIRE] and [MELTA] weapons
-0.0
-of 1 model destroyed
+
+Me shooty yer’ booty · T8 · Sv 3+ · 4+ InSv · W10
+
 2.8
-wounds lost
-4%
-unit destroyed
+of 10 wounds lost
+destroyed in 4% of games
+Nothing ticked: the datasheets as printed
+2 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+SHOOT · BIGGEST FIRST
 
-Played out with the dice, 10,000 games: damage beyond a model’s wounds is lost (05.04). Tap for the working.
+Effects are on this step.
 
-WEAPONS
+HALF RANGE
+[RAPID FIRE], [MELTA]
+No half-range bonus
+the target is farther than 9" (every weapon is taken to be in range)
+NOW
+Within 9"
+bonus for Solar atomiser
++1.8
++13% WIPED
+RANGED WEAPONS
+Belisarius Cawl
 Solar atomiser
-18" · A3 · 2+ · S14 · AP-4 · DD6 · MELTA 3
-SITUATION
+RNG
+18"
+A
+3
+BS
+2+
+S
+14
+AP
+-4
+D
+D6
+MELTA 3
+−2.8
+WOUNDS IF UNTICKED
+−4% WIPED
+SITUATION AND RULES
+both sides
 Target has the benefit of cover
+THEIRS
+if it applies
+−0.5
+WOUNDS
+−1% WIPED
+Canticles of the Omnissiah
+If he has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll
+YOURS
+if it applies
++0.5
+WOUNDS
++2% WIPED
+Riled up
+THEIRS
+if it holds
+no change: their own InSv 4+ is better
+0
+RULES IT SWITCHES ON
+Riled up (Waaagh!)
+0
 Plunging Fire
-the target is visible and has a model on ground level; the attacker is on terrain 3" or higher, or TOWERING with the target within 12": BS improved by 1
-Close-quarters shooting at a unit it is engaged with
--1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
+BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
+YOURS
+if it applies
+no change: already hits on 2+
+0
 Target is engaged
 -1 to hit; no [BLAST]
-Fire Overwatch (snap shooting), target within 24"
-the target is within 24" (15.09); hits only on an unmodified 6, never critical; no hit re-rolls
-RULES
-
-YOURS · BELISARIUS CAWL
-
-TICK IF IT APPLIES
-
-Canticles of the Omnissiah
-If he has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll
-
-THEIRS · WAZDAKKA GUTSMEK
-
-TICK IF IT APPLIES
-
-Riled up: 5+ INV
-rule
+YOURS
+if it applies
+−0.5
+WOUNDS
+−1% WIPED
+Close-quarters shooting at a unit it is engaged with
+-1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
+YOURS
+if it applies
+−1.1
+WOUNDS
+−3% WIPED
+Fire Overwatch (snap shooting)
+the target within 24" (15.09): hits only on an unmodified 6, never critical; no hit re-rolls
+YOURS
+if it applies
+−2.3
+WOUNDS
+−4% WIPED
 STRATAGEMS
-
-YOURS · BELISARIUS CAWL
-
-None that change these numbers.
-
-THEIRS · WAZDAKKA GUTSMEK
-
-None that change these numbers.
-
-OTHER MODIFIERS
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP better
-−
-0
-+
-Damage
-−
-0
-+
-Attacks
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
-Target InSv
-−
-–
-+
-Target Feel No Pain
-−
-–
-+
-
-Rules marked “not in these numbers” are not counted. Nothing is used up: one unit’s attacks against the other.
-
-THE WORKING
-
-Exact averages, the same every time; tap a row for each step. *Dmg is damage before allocation: damage past a model’s wounds is lost (05.04), so the wounds lost above can be less.
-
-ATT.
-HITS
-WNDS
-THRU
-DMG*
-Solar atomiser
-3
-2.5
-1.7
-0.8
-2.9
-
-Attacks: A3 × 1 = 3
-
-Hit roll: BS 2+; hits on an unmodified 2+ (an unmodified 1 always fails) · 3 × 5/6 = 2.5 hits
-
-Wound roll: S14 vs T8 → 3+ (S greater than T) · 2.5 × 4/6 = 1.67 wounds
-
-Save: Wazdakka Gutsmek: Sv 3+; AP-4 → no armour save; InSv 4+ is better, so it is used · 1.67 × 3/6 fail (an unmodified 1 always fails) = 0.833 get through
-
-Damage: DD6; 3.5 on average · 0.833 × 3.5 = 2.92 damage before allocation
-
-Total
-3
-2.5
-1.7
-0.8
-2.9
-
-Before allocation: 3 attacks → 2.5 hits → 1.67 wounds → 0.833 get through → 2.92 damage (the rows added up).
-
-Played out: the target has 1 model with 10 wounds in all. Damage beyond a model’s wounds is lost, and attacks after the unit is destroyed are lost (05.04), so models destroyed, wounds lost and the chances come from the dice: 10,000 games, the same dice for the same picks. On average 0.0 of 1 destroyed, 2.8 wounds lost; the unit is destroyed in 4% of the games.
-
-How this is worked out
-what the rules say, and what the calculator does where they leave a choice
-
-The working: each weapon’s averages are worked out exactly from the dice, step by step, against the models the attacks meet first and as if none of the damage were lost. Models destroyed, wounds lost and the chances are played out with the dice, because damage beyond a model’s wounds and attacks after the unit is destroyed are lost (05.04); the same picks always give the same numbers.
-
-Ticked for you: a rule starts ticked only when the data records that it applies here: always, or because of the target’s keywords or T. A rule that depends on the table (an objective, a charge, a distance, a protocol or ability picked, a stratagem spent) starts unticked; one the target rules out is greyed with the reason. Every box can be changed, and the working names each rule it counts, and each one the printed values already include.
-
-Weapons (04.03): the rules let the attacker pick which weapon’s attacks are resolved next; the calculator takes them in the order listed, and rolls identical attacks together.
-
-Saves and damage (05.03, 05.04): save rolls are rolled together and used from the lowest; an attack that gets through damages the one model it was allocated to, so damage beyond that model’s wounds is lost; Feel No Pain is rolled for each wound (24.12).
-
-Range (04.02): every weapon is taken to be in range of the target; a rule that changes range counts only through half range. Half range ([RAPID FIRE] 24.30, [MELTA] 24.25) is the band picked above, worked out from the ranges after the ticked rules that change them: a weapon gets its bonus when its half range reaches it.
-
-######## damage fight · DAMAGE Damage
-OPPONENT
-Me shooty yer’ booty
-Orks
-YOU ATTACK
-THEY ATTACK
-SHOOTING
-FIGHT
-ATTACKER · YOURS
-Belisarius Cawl
-1 model
-TARGET · THEIRS · ME SHOOTY YER’ BOOTY
-Wazdakka Gutsmek
-T8 · Sv 3+ · 4+ InSv · W10
-0.0
-of 1 model destroyed
-3.6
-wounds lost
-<1%
-unit destroyed
-
-Played out with the dice, 10,000 games: damage beyond a model’s wounds is lost (05.04). Tap for the working.
-
-WEAPONS
-Arc Scourge
-Melee · A4 · 2+ · S5 · AP-1 · D1 · ANTI-VEHICLE 4+, DEVASTATING WOUNDS, EXTRA ATTACKS
-Cawl’s Omnissian axe
-Melee · A4 · 2+ · S8 · AP-2 · D2
-Mechadendrite hive
-Melee · A2D6 · 3+ · S4 · AP0 · D1 · EXTRA ATTACKS
-SITUATION
-Made a charge move this turn
-RULES
-
-YOURS · BELISARIUS CAWL
-
-TICK IF IT APPLIES
-
-Canticles of the Omnissiah
-If he has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll
-
-THEIRS · WAZDAKKA GUTSMEK
-
-TICK IF IT APPLIES
-
-Riled up: 5+ INV
-rule
-STRATAGEMS
-
-YOURS · BELISARIUS CAWL
-
-TICK IF USED
+both sides, with their CP
+1CP Smokescreen
+Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover… · for a unit that is not fully visible to the attacking models because of one or more models in your SMOKE unit, tick “Target has the benefit of cover” instead
+THEIRS
+if used
+−0.5
+WOUNDS
+−1% WIPED
+NOT FOR THIS PAIR, BY THE RULES (5) · YOURS TO COUNT ANYWAY
 
 1CP Servo-driven Charge
-Fight phase: [LANCE]
+YOURS
+Fight phase only
+NO CHANGE
 
-THEIRS · WAZDAKKA GUTSMEK
+Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (yours, Fight phase only) · 1CP Epic Challenge, 2CP Counteroffensive (theirs, Fight phase only)
 
-None that change these numbers.
+NOT COUNTED BY THE CALCULATOR (2)
 
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP Command Re-roll
+YOURS
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
+1CP Command Re-roll
+THEIRS
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
 OTHER MODIFIERS
 Hit roll
 −
@@ -1208,100 +1122,187 @@ Re-roll wounds
 none
 1s
 all
+Every weapon has
+Lethal
+Sustained 1
+Dev. wounds
 Target InSv
 −
-–
+none
 +
 Target Feel No Pain
 −
-–
+none
 +
 
-Rules marked “not in these numbers” are not counted. Nothing is used up: one unit’s attacks against the other.
+######## damage fight · DAMAGE Damage
+YOUR
+Belisarius Cawl
+SHOOT
+FIGHT
+THEY ATTACK
+THEIR
+Wazdakka Gutsmek
 
-THE WORKING
+Me shooty yer’ booty · T8 · Sv 3+ · 4+ InSv · W10
 
-Exact averages, the same every time; tap a row for each step. *Dmg is damage before allocation: damage past a model’s wounds is lost (05.04), so the wounds lost above can be less.
-
-ATT.
-HITS
-WNDS
-THRU
-DMG*
-Arc Scourge
-4
-3.3
-1.7
-1.7
-1.7
-
-Attacks: A4 × 1 = 4
-
-Hit roll: WS 2+; hits on an unmodified 2+ (an unmodified 1 always fails) · 4 × 5/6 = 3.33 hits
-
-Wound roll: S5 vs T8 → 5+ (S less than T); critical wounds on 4+ ([ANTI-VEHICLE 4+] (24.03)) · 3.33 × 3/6 = 1.67 wounds; [DEVASTATING WOUNDS] (24.10): the critical ones, 3.33 × 3/6 = 1.67, become mortal wounds (no save)
-
-Save: Wazdakka Gutsmek: Sv 3+; AP-1 → saves on 4+; InSv 4+ is not better, so not used · 0 × 3/6 fail (an unmodified 1 always fails) = 0 get through; with the 1.67 mortal wounds: 1.67
-
-Damage: D1 · 0 × 1 = 0; mortal wounds: 1.67 × 1 = 1.67 → 1.67 damage before allocation (played out, each critical wound’s mortal wounds damage one model at most, and the rest is lost: 24.10)
-
-Cawl’s Omnissian axe
-4
-3.3
-1.7
-0.8
-1.7
-
-Attacks: A4 × 1 = 4
-
-Hit roll: WS 2+; hits on an unmodified 2+ (an unmodified 1 always fails) · 4 × 5/6 = 3.33 hits
-
-Wound roll: S8 vs T8 → 4+ (S equal to T) · 3.33 × 3/6 = 1.67 wounds
-
-Save: Wazdakka Gutsmek: Sv 3+; AP-2 → saves on 5+; InSv 4+ is better, so it is used · 1.67 × 3/6 fail (an unmodified 1 always fails) = 0.833 get through
-
-Damage: D2 · 0.833 × 2 = 1.67 damage before allocation
-
-Mechadendrite hive
-7
-4.7
-0.8
-0.3
-0.3
-
-Attacks: A2D6 = 7 on average × 1 = 7
-
-Hit roll: WS 3+; hits on an unmodified 3+ (an unmodified 1 always fails) · 7 × 4/6 = 4.67 hits
-
-Wound roll: S4 vs T8 → 6+ (S half of T or less) · 4.67 × 1/6 = 0.778 wounds
-
-Save: Wazdakka Gutsmek: Sv 3+; AP0 → saves on 3+; InSv 4+ is not better, so not used · 0.778 × 2/6 fail (an unmodified 1 always fails) = 0.259 get through
-
-Damage: D1 · 0.259 × 1 = 0.259 damage before allocation
-
-Total
-15
-11
-4.1
-2.8
 3.6
+of 10 wounds lost
+destroyed in <1% of games
+Charged this turn
+×
+6 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+FIGHT · BIGGEST FIRST
 
-Before allocation: 15 attacks → 11.33 hits → 4.11 wounds → 2.76 get through → 3.59 damage (the rows added up).
+Effects are over the whole turn: their models destroyed by its end, and your own losses.
 
-Played out: the target has 1 model with 10 wounds in all. Damage beyond a model’s wounds is lost, and attacks after the unit is destroyed are lost (05.04), so models destroyed, wounds lost and the chances come from the dice: 10,000 games, the same dice for the same picks. On average 0.0 of 1 destroyed, 3.6 wounds lost; the unit is destroyed in <1% of the games.
+Fight → Fight back · the charge is taken to succeed (no charge roll)
+TAKE FIGHT OUT
 
-How this is worked out
-what the rules say, and what the calculator does where they leave a choice
+MELEE WEAPONS
+Belisarius Cawl
+Arc Scourge
+A
+4
+WS
+2+
+S
+5
+AP
+-1
+D
+1
+ANTI-VEHICLE 4+, DEVASTATING WOUNDS, EXTRA ATTACKS
+−1.7
+WOUNDS IF UNTICKED
+Cawl’s Omnissian axe
+A
+4
+WS
+2+
+S
+8
+AP
+-2
+D
+2
+−1.7
+WOUNDS IF UNTICKED
+Mechadendrite hive
+A
+2D6
+WS
+3+
+S
+4
+AP
+0
+D
+1
+EXTRA ATTACKS
+−0.3
+WOUNDS IF UNTICKED
+SITUATION AND RULES
+both sides
+Canticles of the Omnissiah
+If he has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll
+YOURS
+if it applies
++0.7
+WOUNDS
+Charged this turn
+YOURS
+said to hold
+no change: no rule here needs it
+0
+Riled up
+THEIRS
+if it holds
+no change: their own InSv 4+ is better
+0
+RULES IT SWITCHES ON
+Riled up (Waaagh!)
+0
+STRATAGEMS
+both sides, with their CP
+1CP Servo-driven Charge
+Fight phase: [LANCE]
+YOURS
+if used
++0.8
+WOUNDS
+NOT FOR THIS PAIR, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 
-The working: each weapon’s averages are worked out exactly from the dice, step by step, against the models the attacks meet first and as if none of the damage were lost. Models destroyed, wounds lost and the chances are played out with the dice, because damage beyond a model’s wounds and attacks after the unit is destroyed are lost (05.04); the same picks always give the same numbers.
+1CP Smokescreen
+THEIRS
+Shooting phase only
+NO CHANGE
 
-Ticked for you: a rule starts ticked only when the data records that it applies here: always, or because of the target’s keywords or T. A rule that depends on the table (an objective, a charge, a distance, a protocol or ability picked, a stratagem spent) starts unticked; one the target rules out is greyed with the reason. Every box can be changed, and the working names each rule it counts, and each one the printed values already include.
+NOT COUNTED BY THE CALCULATOR (6)
 
-Weapons (04.03): the rules let the attacker pick which weapon’s attacks are resolved next; the calculator takes them in the order listed, and rolls identical attacks together.
+They can matter at the table, but the calculator does not play them: what each one says.
 
-Saves and damage (05.03, 05.04): save rolls are rolled together and used from the lowest; an attack that gets through damages the one model it was allocated to, so damage beyond that model’s wounds is lost; Feel No Pain is rolled for each wound (24.12).
-
-Range (04.02): every weapon is taken to be in range of the target; a rule that changes range counts only through half range.
+1CP Command Re-roll
+YOURS
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
+1CP Epic Challenge
+YOURS
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+YOURS
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+1CP Command Re-roll
+THEIRS
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
+1CP Epic Challenge
+THEIRS
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+THEIRS
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+OTHER MODIFIERS
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP better
+−
+0
++
+Damage
+−
+0
++
+Attacks
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+Every weapon has
+Lethal
+Sustained 1
+Dev. wounds
+Target InSv
+−
+none
++
+Target Feel No Pain
+−
+none
++
 
 ######## strats {"folded":true} · DAMAGE Stratagems
 EXPAND ALL

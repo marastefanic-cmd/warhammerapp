@@ -968,77 +968,129 @@ standard Grot Blasta, Scavenged Shivs
 From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
 
 ######## damage shooting · BASES Damage
-OPPONENT
-Super Terminators
-World Eaters
-YOU ATTACK
-THEY ATTACK
-SHOOTING
-FIGHT
-ATTACKER · YOURS
+YOUR
 Ghazghkull Thraka
-1 model
-TARGET · THEIRS · SUPER TERMINATORS
+SHOOT
+FIGHT
+THEY ATTACK
+THEIR
 Angron
-T11 · Sv 2+ · 4+ InSv · W16
-HALF RANGE
-Within half range (18")
-[RAPID FIRE] and [MELTA] weapons
-0
-of 1 model destroyed
+
+Super Terminators · T11 · Sv 2+ · 4+ InSv · W16
+
 1
-wounds lost
-<1%
-unit destroyed
+of 16 wounds lost
+destroyed in <1% of games
+Mork’s Roar: Point Blank
+4 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+SHOOT · BIGGEST FIRST
 
-Played out with the dice, 10,000 games: damage beyond a model’s wounds is lost (05.04). Tap for the working.
+Effects are on this step.
 
-WEAPONS
+RANGED WEAPONS
+Ghazghkull Thraka
 Mork’s Roar
-9" · A2D6+2 · – · S6 · AP-1 · D1 · CLOSE-QUARTERS, TORRENT, ASSAULT
+RNG
+9"
+A
+2D6+2
+BS
+–
+S
+6
+AP
+-1
+D
+1
+CLOSE-QUARTERS, TORRENT, ASSAULT
+−1
+WOUNDS IF UNTICKED
+PICK ONE PROFILE
 Point Blank
+1
+BEST · MOST WOUNDS
 Aimed
-SITUATION
+0.4
+SITUATION AND RULES
+both sides
+Riled up
+YOURS
+if it holds
+no change: Dakka! Dakka! Dakka! changes range only, which counts through half range: pick a band
+0
+RULES IT SWITCHES ON
+Dakka! Dakka! Dakka!
+0
 Target has the benefit of cover
+THEIRS
+if it applies
+no change: [TORRENT] hits automatically: no hit roll
+0
 Close-quarters shooting at a unit it is engaged with
 only [CLOSE-QUARTERS] weapons
+YOURS
+if it applies
+no change: [TORRENT] hits automatically: no hit roll
+0
 Target is engaged
 -1 to hit; no [BLAST]
-Fire Overwatch (snap shooting), target within 24"
-the target is within 24" (15.09); hits only on an unmodified 6, never critical; no hit re-rolls
-RULES
-
-YOURS · GHAZGHKULL THRAKA
-
-TICK IF IT APPLIES
-
-Dakka! Dakka! Dakka!
-Riled up: +3" range
-
-THEIRS · ANGRON
-
-None that change these numbers.
-
+YOURS
+if it applies
+no change: [TORRENT] hits automatically: no hit roll
+0
+Fire Overwatch (snap shooting)
+the target within 24" (15.09): hits only on an unmodified 6, never critical; no hit re-rolls
+YOURS
+if it applies
+no change: [TORRENT] hits automatically: no hit roll
+0
 STRATAGEMS
-
-YOURS · GHAZGHKULL THRAKA
-
-TICK IF USED
-
+both sides, with their CP
 1CP Glowin’ Dakka
 Your Shooting phase, vs targets within 9": +1 AP
+YOURS
+if used
++0.5
+WOUNDS
+BEST · MOST WOUNDS
 1CP Never Enough Dakka
 Your Shooting phase: [SUSTAINED HITS 1]
-
-NOT AGAINST THIS TARGET
+YOURS
+if used
+no change: [TORRENT] hits automatically: no hit roll
+0
+NOT FOR THIS PAIR, BY THE RULES (7) · YOURS TO COUNT ANYWAY
 
 1CP Kustom Dakka
-Your Shooting phase, vs non-MONSTER/VEHICLE targets: +1 to wound rolls · not against MONSTER/VEHICLE
+YOURS
+not against MONSTER/VEHICLE
++0.5
+WOUNDS IF YOU COUNT IT
+2CP Frenzied Resilience
+THEIRS
+Fight phase only
+NO CHANGE
 
-THEIRS · ANGRON
+Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (yours, Fight phase only) · 1CP Skulls for the Skull Throne!, 1CP Epic Challenge, 2CP Counteroffensive (theirs, Fight phase only)
 
-None that change these numbers.
+NOT COUNTED BY THE CALCULATOR (4)
 
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP Command Re-roll
+YOURS
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
+1CP Explosives
+YOURS
+One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
+1CP Blood Offering
+THEIRS
+One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+1CP Command Re-roll
+THEIRS
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
 OTHER MODIFIERS
 Hit roll
 −
@@ -1068,122 +1120,149 @@ Re-roll wounds
 none
 1s
 all
+Every weapon has
+Lethal
+Sustained 1
+Dev. wounds
 Target InSv
 −
-–
+none
 +
 Target Feel No Pain
 −
-–
+none
 +
-
-Rules marked “not in these numbers” are not counted. Nothing is used up: one unit’s attacks against the other.
-
-THE WORKING
-
-Exact averages, the same every time; tap a row for each step. *Dmg is damage before allocation: damage past a model’s wounds is lost (05.04), so the wounds lost above can be less.
-
-ATT.
-HITS
-WNDS
-THRU
-DMG*
-Mork’s Roar
-9
-9
-3
-1
-1
-
-Attacks: A2D6+2 = 9 on average × 1 = 9
-
-Hit roll: [TORRENT] (24.37): every attack hits automatically, never a critical hit → 9 hits
-
-Wound roll: S6 vs T11 → 5+ (S less than T) · 9 × 2/6 = 3 wounds
-
-Save: Angron: Sv 2+; AP-1 → saves on 3+; InSv 4+ is not better, so not used · 3 × 2/6 fail (an unmodified 1 always fails) = 1 get through
-
-Damage: D1 · 1 × 1 = 1 damage before allocation
-
-Total
-9
-9
-3
-1
-1
-
-Before allocation: 9 attacks → 9 hits → 3 wounds → 1 get through → 1 damage (the rows added up).
-
-Played out: the target has 1 model with 16 wounds in all. Damage beyond a model’s wounds is lost, and attacks after the unit is destroyed are lost (05.04), so models destroyed, wounds lost and the chances come from the dice: 10,000 games, the same dice for the same picks. On average 0 of 1 destroyed, 1 wounds lost; the unit is destroyed in <1% of the games.
-
-How this is worked out
-what the rules say, and what the calculator does where they leave a choice
-
-The working: each weapon’s averages are worked out exactly from the dice, step by step, against the models the attacks meet first and as if none of the damage were lost. Models destroyed, wounds lost and the chances are played out with the dice, because damage beyond a model’s wounds and attacks after the unit is destroyed are lost (05.04); the same picks always give the same numbers.
-
-Ticked for you: a rule starts ticked only when the data records that it applies here: always, or because of the target’s keywords or T. A rule that depends on the table (an objective, a charge, a distance, a protocol or ability picked, a stratagem spent) starts unticked; one the target rules out is greyed with the reason. Every box can be changed, and the working names each rule it counts, and each one the printed values already include.
-
-Weapons (04.03): the rules let the attacker pick which weapon’s attacks are resolved next; the calculator takes them in the order listed, and rolls identical attacks together.
-
-Saves and damage (05.03, 05.04): save rolls are rolled together and used from the lowest; an attack that gets through damages the one model it was allocated to, so damage beyond that model’s wounds is lost; Feel No Pain is rolled for each wound (24.12).
-
-Range (04.02): every weapon is taken to be in range of the target; a rule that changes range counts only through half range. Half range ([RAPID FIRE] 24.30, [MELTA] 24.25) is the band picked above, worked out from the ranges after the ticked rules that change them: a weapon gets its bonus when its half range reaches it.
 
 ######## damage fight · DAMAGE Damage
-OPPONENT
-Super Terminators
-World Eaters
-YOU ATTACK
-THEY ATTACK
-SHOOTING
-FIGHT
-ATTACKER · YOURS
+YOUR
 Ghazghkull Thraka
-1 model
-TARGET · THEIRS · SUPER TERMINATORS
+SHOOT
+FIGHT
+THEY ATTACK
+THEIR
 Angron
-T11 · Sv 2+ · 4+ InSv · W16
-0.4
-of 1 model destroyed
+
+Super Terminators · T11 · Sv 2+ · 4+ InSv · W16
+
 12
-wounds lost
-44%
-unit destroyed
-
-Played out with the dice, 10,000 games: damage beyond a model’s wounds is lost (05.04). Tap for the working.
-
-WEAPONS
-Adamantine ’Eadbutt
-Melee · A1 · 2+ · S14 · AP-2 · DD3+3 · DEVASTATING WOUNDS, EXTRA ATTACKS, PRECISION
-Gork’s Klaw
-Melee · A7 · 2+ · S14 · AP-3 · D4 · CLEAVE 2, DEVASTATING WOUNDS
-SITUATION
-Made a charge move this turn
-RULES
-
-YOURS · GHAZGHKULL THRAKA
-
-APPLIES HERE
-
+of 16 wounds lost
+destroyed in 44% of games
+Charged this turn
+×
 Prophet of Da Great Waaagh!
-Own aura: +1 to hit, +1 to wound · always
+8 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+FIGHT · BIGGEST FIRST
 
-THEIRS · ANGRON
+Effects are over the whole turn: their models destroyed by its end, and your own losses.
 
-None that change these numbers.
+Fight → Fight back · the charge is taken to succeed (no charge roll)
+TAKE FIGHT OUT
 
+MELEE WEAPONS
+Ghazghkull Thraka
+Adamantine ’Eadbutt
+A
+1
+WS
+2+
+S
+14
+AP
+-2
+D
+D3+3
+DEVASTATING WOUNDS, EXTRA ATTACKS, PRECISION
+−1.3
+WOUNDS IF UNTICKED
+1.7 MORE WOUNDS OF YOURS LOST (IN THE FIGHT BACK)
++2 MORE ▾
+Gork’s Klaw
+A
+7
+WS
+2+
+S
+14
+AP
+-3
+D
+4
+CLEAVE 2, DEVASTATING WOUNDS
+−10.3
+WOUNDS IF UNTICKED
+5.9 MORE WOUNDS OF YOURS LOST (IN THE FIGHT BACK)
++2 MORE ▾
+SITUATION AND RULES
+both sides
+Prophet of Da Great Waaagh!
+Own aura: +1 to hit, +1 to wound
+YOURS
+always counted · you can leave it out
+IF LEFT OUT: −1.7 WOUNDS · 2.2 MORE WOUNDS OF YOURS LOST (IN THE FIGHT BACK)
+Charged this turn
+YOURS
+said to hold
+no change: no rule here needs it
+0
 STRATAGEMS
-
-YOURS · GHAZGHKULL THRAKA
-
-None that change these numbers.
-
-THEIRS · ANGRON
-
-TICK IF USED
-
+both sides, with their CP
 2CP Frenzied Resilience
 Fight phase: -1 Damage to each attack allocated to it
+THEIRS
+if used
+−1.4
+WOUNDS
+3.1 MORE WOUNDS OF YOURS LOST (IN THE FIGHT BACK)
++2 MORE ▾
+NOT FOR THIS PAIR, BY THE RULES (4) · YOURS TO COUNT ANYWAY
+
+1CP Kustom Dakka
+YOURS
+Shooting phase only
+NO CHANGE
+1CP Glowin’ Dakka
+YOURS
+Shooting phase only
+NO CHANGE
+1CP Never Enough Dakka
+YOURS
+Shooting phase only
++1.2
+WOUNDS IF YOU COUNT IT
+2.1 FEWER WOUNDS OF YOURS LOST (IN THE FIGHT BACK)
+
+Nothing to count: 1CP Explosives (yours, Shooting phase only)
+
+NOT COUNTED BY THE CALCULATOR (8)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP Command Re-roll
+YOURS
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
+1CP Epic Challenge
+YOURS
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+YOURS
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+1CP Blood Offering
+THEIRS
+One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+1CP Skulls for the Skull Throne!
+THEIRS
+Make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
+1CP Command Re-roll
+THEIRS
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
+1CP Epic Challenge
+THEIRS
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+THEIRS
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 OTHER MODIFIERS
 Hit roll
 −
@@ -1213,85 +1292,18 @@ Re-roll wounds
 none
 1s
 all
+Every weapon has
+Lethal
+Sustained 1
+Dev. wounds
 Target InSv
 −
-–
+none
 +
 Target Feel No Pain
 −
-–
+none
 +
-
-Rules marked “not in these numbers” are not counted. Nothing is used up: one unit’s attacks against the other.
-
-THE WORKING
-
-Exact averages, the same every time; tap a row for each step. *Dmg is damage before allocation: damage past a model’s wounds is lost (05.04), so the wounds lost above can be less.
-
-ATT.
-HITS
-WNDS
-THRU
-DMG*
-Adamantine ’Eadbutt
-1
-0.8
-0.7
-0.4
-2.1
-
-Attacks: A1 × 1 = 1
-
-Hit roll: WS 2+; +1 to hit (Prophet of Da Great Waaagh!); hits on an unmodified 2+ (an unmodified 1 always fails) · 1 × 5/6 = 0.833 hits
-
-Wound roll: S14 vs T11 → 3+ (S greater than T); +1 to wound (Prophet of Da Great Waaagh!); wounds on an unmodified 2+ (an unmodified 1 always fails) · 0.833 × 5/6 = 0.694 wounds; [DEVASTATING WOUNDS] (24.10): the critical ones, 0.833 × 1/6 = 0.139, become mortal wounds (no save)
-
-Save: Angron: Sv 2+; AP-2 → saves on 4+; InSv 4+ is not better, so not used · 0.556 × 3/6 fail (an unmodified 1 always fails) = 0.278 get through; with the 0.139 mortal wounds: 0.417
-
-Damage: DD3+3; 5 on average · 0.278 × 5 = 1.39; mortal wounds: 0.139 × 5 = 0.694 → 2.08 damage before allocation (played out, each critical wound’s mortal wounds damage one model at most, and the rest is lost: 24.10)
-
-Gork’s Klaw
-7
-5.8
-4.9
-2.9
-12
-
-Attacks: A7 × 1 = 7
-
-Hit roll: WS 2+; +1 to hit (Prophet of Da Great Waaagh!); hits on an unmodified 2+ (an unmodified 1 always fails) · 7 × 5/6 = 5.83 hits
-
-Wound roll: S14 vs T11 → 3+ (S greater than T); +1 to wound (Prophet of Da Great Waaagh!); wounds on an unmodified 2+ (an unmodified 1 always fails) · 5.83 × 5/6 = 4.86 wounds; [DEVASTATING WOUNDS] (24.10): the critical ones, 5.83 × 1/6 = 0.972, become mortal wounds (no save)
-
-Save: Angron: Sv 2+; AP-3 → saves on 5+; InSv 4+ is better, so it is used · 3.89 × 3/6 fail (an unmodified 1 always fails) = 1.94 get through; with the 0.972 mortal wounds: 2.92
-
-Damage: D4 · 1.94 × 4 = 7.78; mortal wounds: 0.972 × 4 = 3.89 → 11.67 damage before allocation (played out, each critical wound’s mortal wounds damage one model at most, and the rest is lost: 24.10)
-
-Total
-8
-6.7
-5.6
-3.3
-14
-
-Before allocation: 8 attacks → 6.67 hits → 5.56 wounds → 3.33 get through → 13.75 damage (the rows added up).
-
-Played out: the target has 1 model with 16 wounds in all. Damage beyond a model’s wounds is lost, and attacks after the unit is destroyed are lost (05.04), so models destroyed, wounds lost and the chances come from the dice: 10,000 games, the same dice for the same picks. On average 0.4 of 1 destroyed, 12 wounds lost; the unit is destroyed in 44% of the games.
-
-How this is worked out
-what the rules say, and what the calculator does where they leave a choice
-
-The working: each weapon’s averages are worked out exactly from the dice, step by step, against the models the attacks meet first and as if none of the damage were lost. Models destroyed, wounds lost and the chances are played out with the dice, because damage beyond a model’s wounds and attacks after the unit is destroyed are lost (05.04); the same picks always give the same numbers.
-
-Ticked for you: a rule starts ticked only when the data records that it applies here: always, or because of the target’s keywords or T. A rule that depends on the table (an objective, a charge, a distance, a protocol or ability picked, a stratagem spent) starts unticked; one the target rules out is greyed with the reason. Every box can be changed, and the working names each rule it counts, and each one the printed values already include.
-
-Weapons (04.03): the rules let the attacker pick which weapon’s attacks are resolved next; the calculator takes them in the order listed, and rolls identical attacks together.
-
-Saves and damage (05.03, 05.04): save rolls are rolled together and used from the lowest; an attack that gets through damages the one model it was allocated to, so damage beyond that model’s wounds is lost; Feel No Pain is rolled for each wound (24.12).
-
-Range (04.02): every weapon is taken to be in range of the target; a rule that changes range counts only through half range.
-
-[CLEAVE] (24.06): X more attack dice for every five models the target had before these attacks, when all of that weapon’s attacks target this one unit: the calculator takes it that they do.
 
 ######## strats {"folded":true} · DAMAGE Stratagems
 EXPAND ALL

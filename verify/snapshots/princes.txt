@@ -1051,265 +1051,157 @@ Chaos Rhino
 From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
 
 ######## damage shooting · BASES Damage
-OPPONENT
-Standard
-World Eaters
-YOU ATTACK
-THEY ATTACK
-SHOOTING
-FIGHT
-ATTACKER · YOURS
+YOUR
 Khârn the Betrayer + Khorne Berzerkers
-11 models
-TARGET · THEIRS · STANDARD
+SHOOT
+FIGHT
+THEY ATTACK
+THEIR
 Angron
-T11 · Sv 2+ · 4+ InSv · W16
-0
-of 1 model destroyed
+
+Standard · T11 · Sv 2+ · 4+ InSv · W16
+
 0.6
-wounds lost
-<1%
-unit destroyed
+of 16 wounds lost
+destroyed in <1% of games
+Plasma pistol: standard
+5 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+SHOOT · BIGGEST FIRST
 
-Played out with the dice, 10,000 games: damage beyond a model’s wounds is lost (05.04). Tap for the working.
+Effects are on this step.
 
-WEAPONS
+RANGED WEAPONS
+Khârn the Betrayer + Khorne Berzerkers
 Plasma pistol
-12" · A1 · 3+ · S7 · AP-2 · D1 · PISTOL
+RNG
+12"
+A
+1
+BS
+3+
+S
+7
+AP
+-2
+D
+1
+PISTOL
+−0.1
+WOUNDS IF UNTICKED
+PICK ONE PROFILE
 standard
+0.6
 supercharge
-Plasma pistol ×3
-12" · A1 · 4+ · S7 · AP-2 · D1 · PISTOL
+0.7
+BEST · MOST WOUNDS
+Plasma pistol ×3 KHORNE BERZERKERS
+RNG
+12"
+A
+1
+BS
+4+
+S
+7
+AP
+-2
+D
+1
+PISTOL
+−0.2
+WOUNDS IF UNTICKED
+PICK ONE PROFILE
 standard
+0.6
 supercharge
-Bolt pistol ×7
-12" · A1 · 4+ · S5 · AP-1 · D1 · PISTOL
-SITUATION
+0.8
+Bolt pistol ×7 KHORNE BERZERKERS
+RNG
+12"
+A
+1
+BS
+4+
+S
+5
+AP
+-1
+D
+1
+PISTOL
+−0.2
+WOUNDS IF UNTICKED
+SITUATION AND RULES
+both sides
 Target has the benefit of cover
+THEIRS
+if it applies
+−0.2
+WOUNDS
 Plunging Fire
-the target is visible and has a model on ground level; the attacker is on terrain 3" or higher, or TOWERING with the target within 12": BS improved by 1
+BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
+YOURS
+if it applies
++0.2
+WOUNDS
 Close-quarters shooting at a unit it is engaged with
 only [CLOSE-QUARTERS] weapons
+YOURS
+if it applies
+no change: every weapon ticked is a [CLOSE-QUARTERS] weapon
+0
 Target is engaged
 -1 to hit; no [BLAST]
-Fire Overwatch (snap shooting), target within 24"
-the target is within 24" (15.09); hits only on an unmodified 6, never critical; no hit re-rolls
-RULES
-
-YOURS · KHÂRN THE BETRAYER + KHORNE BERZERKERS
-
-None that change these numbers.
-
-THEIRS · ANGRON
-
-None that change these numbers.
-
+YOURS
+if it applies
+−0.2
+WOUNDS
+Fire Overwatch (snap shooting)
+the target within 24" (15.09): hits only on an unmodified 6, never critical; no hit re-rolls
+YOURS
+if it applies
+−0.4
+WOUNDS
 STRATAGEMS
-
-YOURS · KHÂRN THE BETRAYER + KHORNE BERZERKERS
-
-None that change these numbers.
-
-THEIRS · ANGRON
+both sides, with their CP
 
 None that change these numbers.
 
-OTHER MODIFIERS
-Hit roll
-−
-0
-+
-Wound roll
-−
-0
-+
-AP better
-−
-0
-+
-Damage
-−
-0
-+
-Attacks
-−
-0
-+
-Re-roll hits
-none
-1s
-all
-Re-roll wounds
-none
-1s
-all
-Target InSv
-−
-–
-+
-Target Feel No Pain
-−
-–
-+
-
-Rules marked “not in these numbers” are not counted. Nothing is used up: one unit’s attacks against the other.
-
-THE WORKING
-
-Exact averages, the same every time; tap a row for each step. *Dmg is damage before allocation: damage past a model’s wounds is lost (05.04), so the wounds lost above can be less.
-
-ATT.
-HITS
-WNDS
-THRU
-DMG*
-Plasma pistol
-1
-0.7
-0.2
-0.1
-0.1
-
-Attacks: A1 × 1 = 1
-
-Hit roll: BS 3+; hits on an unmodified 3+ (an unmodified 1 always fails) · 1 × 4/6 = 0.667 hits
-
-Wound roll: S7 vs T11 → 5+ (S less than T) · 0.667 × 2/6 = 0.222 wounds
-
-Save: Angron: Sv 2+; AP-2 → saves on 4+; InSv 4+ is not better, so not used · 0.222 × 3/6 fail (an unmodified 1 always fails) = 0.111 get through
-
-Damage: D1 · 0.111 × 1 = 0.111 damage before allocation
-
-Plasma pistol
-3
-1.5
-0.5
-0.3
-0.3
-
-Attacks: A1 × 3 = 3
-
-Hit roll: BS 4+; hits on an unmodified 4+ (an unmodified 1 always fails) · 3 × 3/6 = 1.5 hits
-
-Wound roll: S7 vs T11 → 5+ (S less than T) · 1.5 × 2/6 = 0.5 wounds
-
-Save: Angron: Sv 2+; AP-2 → saves on 4+; InSv 4+ is not better, so not used · 0.5 × 3/6 fail (an unmodified 1 always fails) = 0.25 get through
-
-Damage: D1 · 0.25 × 1 = 0.25 damage before allocation
-
-Bolt pistol
-7
-3.5
-0.6
-0.2
-0.2
-
-Attacks: A1 × 7 = 7
-
-Hit roll: BS 4+; hits on an unmodified 4+ (an unmodified 1 always fails) · 7 × 3/6 = 3.5 hits
-
-Wound roll: S5 vs T11 → 6+ (S half of T or less) · 3.5 × 1/6 = 0.583 wounds
-
-Save: Angron: Sv 2+; AP-1 → saves on 3+; InSv 4+ is not better, so not used · 0.583 × 2/6 fail (an unmodified 1 always fails) = 0.194 get through
-
-Damage: D1 · 0.194 × 1 = 0.194 damage before allocation
-
-Total
-11
-5.7
-1.3
-0.6
-0.6
-
-Before allocation: 11 attacks → 5.67 hits → 1.31 wounds → 0.556 get through → 0.556 damage (the rows added up).
-
-Played out: the target has 1 model with 16 wounds in all. Damage beyond a model’s wounds is lost, and attacks after the unit is destroyed are lost (05.04), so models destroyed, wounds lost and the chances come from the dice: 10,000 games, the same dice for the same picks. On average 0 of 1 destroyed, 0.6 wounds lost; the unit is destroyed in <1% of the games.
-
-How this is worked out
-what the rules say, and what the calculator does where they leave a choice
-
-The working: each weapon’s averages are worked out exactly from the dice, step by step, against the models the attacks meet first and as if none of the damage were lost. Models destroyed, wounds lost and the chances are played out with the dice, because damage beyond a model’s wounds and attacks after the unit is destroyed are lost (05.04); the same picks always give the same numbers.
-
-Ticked for you: a rule starts ticked only when the data records that it applies here: always, or because of the target’s keywords or T. A rule that depends on the table (an objective, a charge, a distance, a protocol or ability picked, a stratagem spent) starts unticked; one the target rules out is greyed with the reason. Every box can be changed, and the working names each rule it counts, and each one the printed values already include.
-
-Weapons (04.03): the rules let the attacker pick which weapon’s attacks are resolved next; the calculator takes them in the order listed, and rolls identical attacks together.
-
-Saves and damage (05.03, 05.04): save rolls are rolled together and used from the lowest; an attack that gets through damages the one model it was allocated to, so damage beyond that model’s wounds is lost; Feel No Pain is rolled for each wound (24.12).
-
-Range (04.02): every weapon is taken to be in range of the target; a rule that changes range counts only through half range.
-
-######## damage fight · DAMAGE Damage
-OPPONENT
-Standard
-World Eaters
-YOU ATTACK
-THEY ATTACK
-SHOOTING
-FIGHT
-ATTACKER · YOURS
-Khârn the Betrayer + Khorne Berzerkers
-11 models
-TARGET · THEIRS · STANDARD
-Angron
-T11 · Sv 2+ · 4+ InSv · W16
-0.1
-of 1 model destroyed
-9.3
-wounds lost
-9%
-unit destroyed
-
-Played out with the dice, 10,000 games: damage beyond a model’s wounds is lost (05.04). Tap for the working.
-
-WEAPONS
-Gorechild
-Melee · A9 · 2+ · S7 · AP-2 · D3
-Chainblade ×8
-Melee · A5 · 3+ · S5 · AP-1 · D1
-Khornate eviscerator ×2
-Melee · A4 · 3+ · S8 · AP-2 · D2
-SITUATION
-Made a charge move this turn
-RULES
-
-YOURS · KHÂRN THE BETRAYER + KHORNE BERZERKERS
-
-APPLIES HERE
-
-Legendary Killer
-While Khârn leads this unit: re-roll hit rolls of 1 and wound rolls of 1 · always
-
-TICK IF IT APPLIES
-
-Murderous Charge
-Made a charge move this turn: +1 S
-
-NOT AGAINST THIS TARGET
-
-Beacons of Rage
-Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit · counted: +1 to hit rolls · not against MONSTER/VEHICLE
-Beacons of Rage
-Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls · counted: +1 to wound rolls · not against MONSTER/VEHICLE
-
-THEIRS · ANGRON
-
-None that change these numbers.
-
-STRATAGEMS
-
-YOURS · KHÂRN THE BETRAYER + KHORNE BERZERKERS
-
-TICK IF USED
+NOT FOR THIS PAIR, BY THE RULES (9) · YOURS TO COUNT ANYWAY
 
 1CP Hack and Slash
-Made a charge move this turn: +1 AP in the Fight phase
-
-THEIRS · ANGRON
-
-TICK IF USED
-
+YOURS
+Fight phase only
++0.1
+WOUNDS IF YOU COUNT IT
 2CP Frenzied Resilience
-Fight phase: -1 Damage to each attack allocated to it
+THEIRS
+Fight phase only
+NO CHANGE
+
+Nothing to count: 1CP Skulls for the Skull Throne!, 1CP Epic Challenge, 2CP Counteroffensive (yours, Fight phase only) · 1CP Berzerker’s Wrath (yours, in the other player’s turn only) · 1CP Skulls for the Skull Throne!, 1CP Epic Challenge, 2CP Counteroffensive (theirs, Fight phase only)
+
+NOT COUNTED BY THE CALCULATOR (5)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP Blood Offering
+YOURS
+One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+1CP Command Re-roll
+YOURS
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
+1CP Explosives
+YOURS
+One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
+1CP Blood Offering
+THEIRS
+One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+1CP Command Re-roll
+THEIRS
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
 OTHER MODIFIERS
 Hit roll
 −
@@ -1339,105 +1231,223 @@ Re-roll wounds
 none
 1s
 all
+Every weapon has
+Lethal
+Sustained 1
+Dev. wounds
 Target InSv
 −
-–
+none
 +
 Target Feel No Pain
 −
-–
+none
 +
 
-Rules marked “not in these numbers” are not counted. Nothing is used up: one unit’s attacks against the other.
+######## damage fight · DAMAGE Damage
+YOUR
+Khârn the Betrayer + Khorne Berzerkers
+SHOOT
+FIGHT
+THEY ATTACK
+THEIR
+Angron
 
-THE WORKING
+Standard · T11 · Sv 2+ · 4+ InSv · W16
 
-Exact averages, the same every time; tap a row for each step. *Dmg is damage before allocation: damage past a model’s wounds is lost (05.04), so the wounds lost above can be less.
+11
+of 16 wounds lost
+destroyed in 20% of games
+Charged this turn
+×
+Legendary Killer
+10 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+FIGHT · BIGGEST FIRST
 
-ATT.
-HITS
-WNDS
-THRU
-DMG*
+Effects are over the whole turn: their models destroyed by its end, and your own losses.
+
+Fight → Fight back · the charge is taken to succeed (no charge roll)
+TAKE FIGHT OUT
+
+MELEE WEAPONS
+Khârn the Betrayer + Khorne Berzerkers
 Gorechild
+A
 9
-8.8
-3.4
-1.7
-5.1
-
-Attacks: A9 (includes Relentless Rage) × 1 = 9
-
-Hit roll: WS 2+; hits on an unmodified 2+ (an unmodified 1 always fails); re-roll hit rolls of 1 (Legendary Killer) · 9 × (5/6 + 1/6 × 5/6 = 35/36) = 8.75 hits
-
-Wound roll: S7 vs T11 → 5+ (S less than T); re-roll wound rolls of 1 (Legendary Killer) · 8.75 × (2/6 + 1/6 × 2/6 = 14/36) = 3.4 wounds
-
-Save: Angron: Sv 2+; AP-2 → saves on 4+; InSv 4+ is not better, so not used · 3.4 × 3/6 fail (an unmodified 1 always fails) = 1.7 get through
-
-Damage: D3 · 1.7 × 3 = 5.1 damage before allocation
-
-Chainblade
-40
-31
-6.0
-2.0
-2.0
-
-Attacks: A5 (includes Relentless Rage) × 8 = 40
-
-Hit roll: WS 3+; hits on an unmodified 3+ (an unmodified 1 always fails); re-roll hit rolls of 1 (Legendary Killer) · 40 × (4/6 + 1/6 × 4/6 = 28/36) = 31.11 hits
-
-Wound roll: S5 vs T11 → 6+ (S half of T or less); re-roll wound rolls of 1 (Legendary Killer) · 31.11 × (1/6 + 1/6 × 1/6 = 7/36) = 6.05 wounds
-
-Save: Angron: Sv 2+; AP-1 → saves on 3+; InSv 4+ is not better, so not used · 6.05 × 2/6 fail (an unmodified 1 always fails) = 2.02 get through
-
-Damage: D1 · 2.02 × 1 = 2.02 damage before allocation
-
-Khornate eviscerator
-the unit is destroyed before these attacks in 2% of the games
+WS
+2+
+S
+7
+AP
+-2
+D
+3
+−4.7
+WOUNDS IF UNTICKED
+1.1 MORE OF YOURS LOST (IN THE FIGHT BACK)
++1 MORE ▾
+Chainblade ×8 KHORNE BERZERKERS
+A
+5
+WS
+3+
+S
+5
+AP
+-1
+D
+1
+−3.7
+WOUNDS IF UNTICKED
+0.9 MORE OF YOURS LOST (IN THE FIGHT BACK)
++1 MORE ▾
+Khornate eviscerator ×2 KHORNE BERZERKERS
+A
+4
+WS
+3+
+S
 8
-6.2
-2.4
-1.2
-2.4
+AP
+-2
+D
+2
+−2.1
+WOUNDS IF UNTICKED
+0.7 MORE OF YOURS LOST (IN THE FIGHT BACK)
++1 MORE ▾
+SITUATION AND RULES
+both sides
+Legendary Killer
+While Khârn leads this unit: re-roll hit rolls of 1 and wound rolls of 1
+YOURS
+always counted · you can leave it out
+IF LEFT OUT: −2.8 WOUNDS · 0.8 MORE OF YOURS LOST (IN THE FIGHT BACK)
+Charged this turn
+also the condition of 1CP Hack and Slash (tick it under Stratagems)
+YOURS
+said to hold
+−1.8
+WOUNDS IF UNTICKED
+0.6 MORE OF YOURS LOST (IN THE FIGHT BACK)
++1 MORE ▾
+RULES IT SWITCHES ON
+✓Murderous Charge
+−1.8
+wounds if unticked
+0.6 more of yours lost (in the fight back)
+STRATAGEMS
+both sides, with their CP
+2CP Frenzied Resilience
+Fight phase: -1 Damage to each attack allocated to it
+THEIRS
+if used
+−2.5
+WOUNDS
+1 MORE OF YOURS LOST (IN THE FIGHT BACK)
++1 MORE ▾
+1CP Hack and Slash
+Made a charge move this turn: +1 AP in the Fight phase
+YOURS
+if used
++1.5
+WOUNDS
+0.8 FEWER OF YOURS LOST (IN THE FIGHT BACK)
++1 MORE ▾
+NOT FOR THIS PAIR, BY THE RULES (4) · YOURS TO COUNT ANYWAY
 
-Attacks: A4 (includes Relentless Rage) × 2 = 8
+Beacons of Rage
+YOURS
+not against MONSTER/VEHICLE
++1.2
+WOUNDS IF YOU COUNT IT
+0.5 FEWER OF YOURS LOST (IN THE FIGHT BACK)
+Beacons of Rage
+YOURS
+not against MONSTER/VEHICLE
++3.4
+WOUNDS IF YOU COUNT IT
+2.3 FEWER OF YOURS LOST (IN THE FIGHT BACK)
 
-Hit roll: WS 3+; hits on an unmodified 3+ (an unmodified 1 always fails); re-roll hit rolls of 1 (Legendary Killer) · 8 × (4/6 + 1/6 × 4/6 = 28/36) = 6.22 hits
+Nothing to count: 1CP Berzerker’s Wrath, 1CP Explosives (yours, Shooting phase only)
 
-Wound roll: S8 vs T11 → 5+ (S less than T); re-roll wound rolls of 1 (Legendary Killer) · 6.22 × (2/6 + 1/6 × 2/6 = 14/36) = 2.42 wounds
+NOT COUNTED BY THE CALCULATOR (10)
 
-Save: Angron: Sv 2+; AP-2 → saves on 4+; InSv 4+ is not better, so not used · 2.42 × 3/6 fail (an unmodified 1 always fails) = 1.21 get through
+They can matter at the table, but the calculator does not play them: what each one says.
 
-Damage: D2 · 1.21 × 2 = 2.42 damage before allocation
-
-Played out: the unit is destroyed before these attacks in 2% of the games, and then they are lost (05.04); the dice give this weapon 1.1 through and 2.3 wounds lost on average.
-
-Total
-57
-46
-12
-4.9
-9.5
-
-Before allocation: 57 attacks → 46.08 hits → 11.87 wounds → 4.93 get through → 9.54 damage (the rows added up).
-
-Played out: the target has 1 model with 16 wounds in all. Damage beyond a model’s wounds is lost, and attacks after the unit is destroyed are lost (05.04), so models destroyed, wounds lost and the chances come from the dice: 10,000 games, the same dice for the same picks. On average 0.1 of 1 destroyed, 9.3 wounds lost; the unit is destroyed in 9% of the games.
-
-How this is worked out
-what the rules say, and what the calculator does where they leave a choice
-
-The working: each weapon’s averages are worked out exactly from the dice, step by step, against the models the attacks meet first and as if none of the damage were lost. Models destroyed, wounds lost and the chances are played out with the dice, because damage beyond a model’s wounds and attacks after the unit is destroyed are lost (05.04); the same picks always give the same numbers.
-
-Ticked for you: a rule starts ticked only when the data records that it applies here: always, or because of the target’s keywords or T. A rule that depends on the table (an objective, a charge, a distance, a protocol or ability picked, a stratagem spent) starts unticked; one the target rules out is greyed with the reason. Every box can be changed, and the working names each rule it counts, and each one the printed values already include.
-
-Weapons (04.03): the rules let the attacker pick which weapon’s attacks are resolved next; the calculator takes them in the order listed, and rolls identical attacks together.
-
-Saves and damage (05.03, 05.04): save rolls are rolled together and used from the lowest; an attack that gets through damages the one model it was allocated to, so damage beyond that model’s wounds is lost; Feel No Pain is rolled for each wound (24.12).
-
-Re-rolls and [LETHAL HITS] (01.05.02, 24.23): the rules leave these to the attacker; the calculator re-rolls every failed roll it may, re-rolls a successful roll only to look for a critical result when that is worth more on average, and takes [LETHAL HITS] unless rolling to wound is worth more (a critical wound with [DEVASTATING WOUNDS]).
-
-Range (04.02): every weapon is taken to be in range of the target; a rule that changes range counts only through half range.
+1CP Blood Offering
+YOURS
+One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+1CP Skulls for the Skull Throne!
+YOURS
+Make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
+1CP Command Re-roll
+YOURS
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
+1CP Epic Challenge
+YOURS
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+YOURS
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+1CP Blood Offering
+THEIRS
+One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+1CP Skulls for the Skull Throne!
+THEIRS
+Make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
+1CP Command Re-roll
+THEIRS
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
+1CP Epic Challenge
+THEIRS
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+THEIRS
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+OTHER MODIFIERS
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP better
+−
+0
++
+Damage
+−
+0
++
+Attacks
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+Every weapon has
+Lethal
+Sustained 1
+Dev. wounds
+Target InSv
+−
+none
++
+Target Feel No Pain
+−
+none
++
 
 ######## strats {"folded":true} · DAMAGE Stratagems
 EXPAND ALL

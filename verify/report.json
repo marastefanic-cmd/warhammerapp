@@ -1,6 +1,6 @@
 {
- "hash": "cc6679ab639d20b2a8bcddfc0714a72b9012abef5855bde74fb8ebfb9cd46f5c",
- "at": "2026-10-21T09:21:20.064Z",
+ "hash": "03fcd955dc7e016e3282c315c8065881a24cf532d4458d6b6cd1eb164a641835",
+ "at": "2026-10-21T16:57:44.700Z",
  "ok": true,
  "steps": {
   "data": {
@@ -29,15 +29,15 @@
   },
   "calc": {
    "ok": true,
-   "summary": "calc: 123 of 123 hand-worked cases within margin"
+   "summary": "calc: 259 of 259 hand-worked cases within margin"
   },
   "screens": {
    "ok": true,
-   "summary": "render at 390px: 1375 screens and popups, 857 helper texts, 0 failures"
+   "summary": "render at 390px: 1375 screens and popups, 843 helper texts, 0 failures"
   },
   "small phone": {
    "ok": true,
-   "summary": "render at 320px: 1375 screens and popups, 857 helper texts, 0 failures"
+   "summary": "render at 320px: 1375 screens and popups, 843 helper texts, 0 failures"
   },
   "snapshots": {
    "ok": true,
@@ -45,7 +45,7 @@
   },
   "helpers": {
    "ok": true,
-   "summary": "helpers: 978 judgements, 978 approved, 0 to check, 160 stale approvals"
+   "summary": "helpers: 992 judgements, 992 approved, 0 to check, 207 stale approvals"
   }
  }
 }
