@@ -84,10 +84,18 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     await page.evaluate(id => { sess.mine = id; sess.peekD = null; }, a.id);
     if(a === armies[0]){ await take('settings', `() => { hideSheet(); go({ s:'settings' }); }`); await take('home', `() => { hideSheet(); go({ s:'home' }); }`); }
     for(const s of ['army','pregame','units','ranged','melee','abilities','rules','bases']) await screen(s);
-    // the damage calculator, against the next list (the first unit of each side, shooting and fighting)
+    // the damage calculator, against the next list: this list's first unit with ranged weapons shooting its first unit, and its first
+    // unit with melee weapons charging and fighting it, with the fight back; each taken once every effect is worked out (the list's
+    // order and every number settled: the background work is seeded, so the text is the same every run)
     const vs = armies[(armies.indexOf(a) + 1) % armies.length].id;
-    for(const ph of ['shooting', 'fight'])
-      await take('damage ' + ph, `() => { hideSheet(); store.set('wh-opp-${a.id}', '${vs}'); sess.dmg = {}; sess.dmg['${a.id}'] = { ph:'${ph}' }; go({ s:'damage', army:'${a.id}' }); }`);
+    for(const ph of ['shooting', 'fight']){
+      await page.evaluate(([id, vs, ph]) => { hideSheet(); store.set('wh-opp-' + id, vs); sess.dmg = {};
+        const A = armyById(id), B = armyById(vs), kind = ph === 'fight' ? 'melee' : 'ranged', u = A.units.find(x => (x[kind] || []).length) || A.units[0];
+        sess.dmg[id] = Object.assign({ dir:'me', atk:u.id, tArmy:vs, tgt:B.units[0].id }, ph === 'fight' ? { turn:{ me:{ charge:true, fight:true, back:true } }, step:{ me:'fight' } } : {});
+        go({ s:'damage', army:id }); }, [a.id, vs, ph]);
+      await page.waitForFunction(() => !dmBusy() && !document.querySelector('#dmList .fxv.wait, #dmList .fxv.est, #dmAns.prov'), null, { timeout:120000, polling:50 });
+      await take('damage ' + ph, `() => {}`);
+    }
     await screen('strats', { folded:true });   // every stratagem folded: its one-line gist, timing and users
     await screen('strats', { open:true });     // every stratagem, unfolded
     for(const u of a.units){

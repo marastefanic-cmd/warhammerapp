@@ -180,22 +180,73 @@ const cases = [
   // P(critical) = 1/6 + 5/6 × 1/6 = 11/36 of 60 torrent hits = 18.3 (re-rolling only fails: 15)
   ['twin-linked + devastating wounds: re-rolls for a 6', () => run([g({ n:60, kw:['TORRENT', 'TWIN-LINKED', 'DEVASTATING WOUNDS'] })], { T:4, models:[big(1000, 10, 2)] }).groups[0].mortals, 60 * 11 / 36],
 
-  // ---- what is left after each game (run with alive), a CHARACTER's fate (rowsDead), the return blow (mix) ----
+  // ---- what is left after each game (run with track), a CHARACTER's fate (fate), the return blow (play) ----
   // one torrent attack, S8 vs T4 (2+), no save, at 2 W1 models: 1 is left in 5/6 of the games, 2 in 1/6
-  ['what is left: 1 of 2 models in 5/6 of the games', () => (r => r.alive.find(x => x.rows[0] === 1).n / r.sims)(C.run({ groups:[g({ S:8, kw:['TORRENT'] })], target:{ T:4, models:[big(2, 1)] }, ctx:{}, sims:20000, seed:11, alive:true })), 5 / 6],
+  ['what is left: 1 of 2 models in 5/6 of the games', () => (C.run({ groups:[g({ S:8, kw:['TORRENT'] })], target:{ T:4, models:[big(2, 1)] }, ctx:{}, sims:20000, seed:11, track:true }).left.find(x => x.n[0] === 1) || { p:0 }).p, 5 / 6, 0.015],
   // a bodyguard model (W1) and a CHARACTER (W1, its group last): two torrent attacks, S8 vs T4, no save: the CHARACTER is destroyed
   // only when both wound: (5/6)² = 25/36
-  ['a CHARACTER’s fate: destroyed in 25/36', () => C.run({ groups:[g({ n:2, S:8, kw:['TORRENT'] })], target:{ T:4, models:[big(1, 1, 7, { bodyguard:true }), big(1, 1, 7, { name:'Boss', char:true })] }, ctx:{}, sims:20000, seed:11 }).rowsDead[1], 25 / 36],
+  ['a CHARACTER’s fate: destroyed in 25/36', () => C.run({ groups:[g({ n:2, S:8, kw:['TORRENT'] })], target:{ T:4, models:[big(1, 1, 7, { bodyguard:true }), big(1, 1, 7, { name:'Boss', char:true })] }, ctx:{}, sims:20000, seed:11, track:true }).fate[1], 25 / 36, 0.015],
   // the return blow: what is left of those 2 models (each with one torrent attack, S8 vs T4: 5/6) attacks 3 W1 models back:
   // (5/6 × 1 + 1/6 × 2) × 5/6 = 35/36 destroyed
-  ['return blow: what is left strikes back, 35/36', () => { const r = C.run({ groups:[g({ S:8, kw:['TORRENT'] })], target:{ T:4, models:[big(2, 1)] }, ctx:{}, sims:20000, seed:11, alive:true });
-    return C.mix(r.alive.map(x => ({ n:x.n, input:{ groups:[g({ n:x.rows[0], S:8, kw:['TORRENT'] })], target:{ T:4, models:[big(3, 1)] }, ctx:{} } })), { seed:5 }).killed; }, 35 / 36],
+  ['return blow: what is left strikes back, 35/36', () => C.play({ beats:[{ side:1, input:{ groups:[g({ S:8, kw:['TORRENT'] })], target:{ T:4, models:[big(2, 1, 7, { lines:[{ id:0, n:2 }] })] }, ctx:{} } },
+    { side:0, input:{ groups:[g({ name:'back', n:2, S:8, kw:['TORRENT'], carry:[[0, 1]] })], target:{ T:4, models:[big(3, 1)] }, ctx:{} } }], sims:20000, seed:11 }).beats[1].killed, 35 / 36],
   // ... and a unit wiped out strikes back with nothing: one torrent attack S4 vs T4 (4+) at 1 W1 model leaves it in half of the
   // games; it has 2 torrent attacks, S8 vs T4, at 5 W1 models: 1/2 × 2 × 5/6
-  ['return blow: a destroyed unit attacks with nothing', () => { const r = C.run({ groups:[g({ kw:['TORRENT'] })], target:{ T:4, models:[big(1, 1)] }, ctx:{}, sims:20000, seed:11, alive:true });
-    return C.mix(r.alive.map(x => ({ n:x.n, input:x.rows[0] ? { groups:[g({ n:2, S:8, kw:['TORRENT'] })], target:{ T:4, models:[big(5, 1)] }, ctx:{} } : null })), { seed:5 }).killed; }, 1 / 2 * 2 * 5 / 6],
-  ['return blow: the games add up', () => (r => C.mix(r.alive.map(x => ({ n:x.n, input:null }))).sims)(C.run({ groups:[g({ kw:['TORRENT'] })], target:{ T:4, models:[big(1, 1)] }, ctx:{}, sims:20000, seed:11, alive:true })), 20000],
+  ['return blow: a destroyed unit attacks with nothing', () => C.play({ beats:[{ side:1, input:{ groups:[g({ kw:['TORRENT'] })], target:{ T:4, models:[big(1, 1, 7, { lines:[{ id:0, n:1 }] })] }, ctx:{} } },
+    { side:0, input:{ groups:[g({ name:'back', A:'2', S:8, kw:['TORRENT'], carry:[[0, 1]] })], target:{ T:4, models:[big(5, 1)] }, ctx:{} } }], sims:20000, seed:11 }).beats[1].killed, 1 / 2 * 2 * 5 / 6],
+  ['return blow: every game is played (the chances add up to 1)', () => C.play({ beats:[{ side:1, input:{ groups:[g({ kw:['TORRENT'] })], target:{ T:4, models:[big(1, 1, 7, { lines:[{ id:0, n:1 }] })] }, ctx:{} } },
+    { side:0, input:{ groups:[g({ name:'back', A:'2', S:8, kw:['TORRENT'], carry:[[0, 1]] })], target:{ T:4, models:[big(5, 1)] }, ctx:{} } }], sims:2000, seed:11 }).beats[1].dist.reduce((t, p) => t + p, 0), 1, 1e-9],
+  // a CHARACTER's own rules stop when it is destroyed (alt): the bodyguard's weapon (4+ to hit, re-roll hit rolls with the
+  // CHARACTER alive) fights back; the first beat (1 torrent [PRECISION] attack S8, D1, no save, allocated to the CHARACTER) destroys it
+  // in 5/6 of the games: 1/6 × (3/6 + 3/6 × 3/6) + 5/6 × 3/6 = 0.542 hits back
+  ['return blow: a destroyed CHARACTER’s rule stops counting', () => C.play({ beats:[{ side:1, input:{ groups:[g({ S:8, kw:['TORRENT', 'PRECISION'] })], target:{ T:4, models:[big(1, 1, 7, { name:'Boss', char:true, lines:[{ id:0, n:1 }] }), big(1, 9, 7, { name:'guard', lines:[{ id:1, n:1 }] })] }, ctx:{ precision:'Boss' } } },
+    { side:0, input:{ groups:[g({ name:'back', carry:[[1, 1]], mods:[{ from:'Boss’s rule', rrHit:'all' }] })], target:{ T:4, models:[big(100, 10)] }, ctx:{} },
+      alt:{ lines:[0], input:{ groups:[g({ name:'back', carry:[[1, 1]], mods:[] })], target:{ T:4, models:[big(100, 10)] }, ctx:{} } } }], sims:20000, seed:11 }).beats[1].groups[0].hits, 1 / 6 * (3 / 6 + 3 / 6 * 3 / 6) + 5 / 6 * 3 / 6],
 ];
+
+// ---- one beat after another in the same games (play): shoot, then fight, then what is left fights back ----
+// binomial chances, for the cases below
+const choose = (n, k) => { let c = 1; for(let i = 1; i <= k; i++) c = c * (n - k + i) / i; return c; };
+const binom = (n, p, k) => choose(n, k) * p ** k * (1 - p) ** (n - k);
+const E = (n, p, f) => { let t = 0; for(let k = 0; k <= n; k++) t += binom(n, p, k) * f(k); return t; };
+// 6 torrent S8 attacks against T4 wound on 2+ (5/6); no save; W1 models: each wound destroys one
+const shot6 = () => g({ name:'shot', n:6, S:8, kw:['TORRENT'] });
+const tenW1 = (lines) => ({ T:4, models:[Object.assign(big(10, 1), lines ? { lines } : {})] });
+const pl = (beats, sims) => C.play({ beats, sims:sims || 20000, seed:11 });
+// the same target twice: 12 attacks in all, at most 10 destroyed: E[min(K, 10)], K ~ Binomial(12, 5/6) = 9.51 (not 10)
+cases.push(['play: shoot then fight the same unit: destroyed by the end', () => pl([{ side:1, input:{ groups:[shot6()], target:tenW1() } }, { side:1, input:{ groups:[shot6()], target:tenW1() } }]).sides[1].killed, E(12, 5 / 6, k => Math.min(k, 10))]);
+// ... the second beat destroys what the first left over: 9.51 - 5
+cases.push(['play: the second beat counts only its own', () => pl([{ side:1, input:{ groups:[shot6()], target:tenW1() } }, { side:1, input:{ groups:[shot6()], target:tenW1() } }]).beats[1].killed, E(12, 5 / 6, k => Math.min(k, 10)) - 5]);
+// what is left hits back: 10 models with one A1 torrent S8 attack each, after the 6 attacks destroyed K ~ Binomial(6, 5/6) of
+// them: (10 - 5) × 5/6 = 4.17 of side 0's W1 models destroyed (side 0: 100 models, T4, no save)
+cases.push(['play: the return blow from what is left', () => pl([{ side:1, input:{ groups:[shot6()], target:tenW1([{ id:0, n:10 }]) } },
+  { side:0, input:{ groups:[g({ name:'back', n:10, S:8, kw:['TORRENT'], carry:[[0, 1]] })], target:{ T:4, models:[big(100, 1)] } } }]).beats[1].killed, 25 / 6]);
+// ... and only the models left hit back, none once all are destroyed: 6 attacks against 5 models, each 1 attack back:
+// E[max(0, 5 - K)] × 5/6 = 0.28 (at full strength it would be 4.17)
+cases.push(['play: the return blow after most are destroyed', () => pl([{ side:1, input:{ groups:[shot6()], target:{ T:4, models:[big(5, 1, 7, { lines:[{ id:0, n:5 }] })] } } },
+  { side:0, input:{ groups:[g({ name:'back', n:5, S:8, kw:['TORRENT'], carry:[[0, 1]] })], target:{ T:4, models:[big(100, 1)] } } }]).beats[1].killed, E(6, 5 / 6, k => Math.max(0, 5 - k)) * 5 / 6]);
+// the defender removes the first models line first (05.04 Select Model; the app lists the rank and file first): 8 plain models,
+// then 2 with a special weapon. 6 attacks destroy at most 6, so both specials always hit back (2) and 8 - 5 = 3 plain ones
+cases.push(['play: models lines, the first removed first: plain weapons left', () => pl([{ side:1, input:{ groups:[shot6()], target:tenW1([{ id:0, n:8 }, { id:1, n:2 }]) } },
+  { side:0, input:{ groups:[g({ name:'plain', n:8, S:8, kw:['TORRENT'], carry:[[0, 1]] }), g({ name:'special', n:2, S:8, kw:['TORRENT'], carry:[[1, 1]] })], target:{ T:4, models:[big(100, 1)] } } }]).beats[1].groups[0].n, 3]);
+cases.push(['play: models lines, the first removed first: special weapons left', () => pl([{ side:1, input:{ groups:[shot6()], target:tenW1([{ id:0, n:8 }, { id:1, n:2 }]) } },
+  { side:0, input:{ groups:[g({ name:'plain', n:8, S:8, kw:['TORRENT'], carry:[[0, 1]] }), g({ name:'special', n:2, S:8, kw:['TORRENT'], carry:[[1, 1]] })], target:{ T:4, models:[big(100, 1)] } } }]).beats[1].groups[1].n, 2]);
+// a rule that reaches 2 of a weapon's 10 models (slice [0, 2]) keeps them longest: 2 left; the other 8 (slice [2, 10]): 8 - 5 = 3
+cases.push(['play: a weapon split by a rule: the part it reaches', () => pl([{ side:1, input:{ groups:[shot6()], target:tenW1([{ id:0, n:10 }]) } },
+  { side:0, input:{ groups:[g({ name:'with', n:2, S:8, kw:['TORRENT'], carry:[[0, 1]], slice:[0, 2] }), g({ name:'without', n:8, S:8, kw:['TORRENT'], carry:[[0, 1]], slice:[2, 10] })], target:{ T:4, models:[big(100, 1)] } } }]).beats[1].groups[0].n, 2]);
+cases.push(['play: a weapon split by a rule: the rest', () => pl([{ side:1, input:{ groups:[shot6()], target:tenW1([{ id:0, n:10 }]) } },
+  { side:0, input:{ groups:[g({ name:'with', n:2, S:8, kw:['TORRENT'], carry:[[0, 1]], slice:[0, 2] }), g({ name:'without', n:8, S:8, kw:['TORRENT'], carry:[[0, 1]], slice:[2, 10] })], target:{ T:4, models:[big(100, 1)] } } }]).beats[1].groups[1].n, 3]);
+// a CHARACTER's own fate (05.03: its group last): 1 W1 CHARACTER behind 5 W1 bodyguard models is destroyed only when all 6
+// attacks wound: (5/6)^6 = 0.335
+cases.push(['play: the character destroyed', () => pl([{ side:1, input:{ groups:[shot6()], target:{ T:4, models:[big(5, 1, 7, { name:'guard', bodyguard:true }), big(1, 1, 7, { name:'Boss', char:true })] } } }]).sides[1].rows[1].gone, (5 / 6) ** 6]);
+// [BLAST] counts the models left at the start of the second beat (24.05): 1 + 2 dice with 10 left (K = 0), 1 + 1 with 5-9
+// (K 1-5), 1 with 4 (K = 6)
+cases.push(['play: [BLAST] counts the models left', () => pl([{ side:1, input:{ groups:[shot6()], target:tenW1() } }, { side:1, input:{ groups:[g({ name:'blast', kw:['BLAST'] })], target:tenW1() } }]).beats[1].groups[0].attacks,
+  binom(6, 5 / 6, 0) * 3 + (1 - binom(6, 5 / 6, 0) - binom(6, 5 / 6, 6)) * 2 + binom(6, 5 / 6, 6) * 1]);
+// a beat's numbers do not move when a later beat is added (each beat has its own dice)
+cases.push(['play: a later beat leaves the earlier ones as they were', () => (b0 => +(JSON.stringify(pl([b0], 3000).beats[0]) === JSON.stringify(pl([b0, { side:0, input:{ groups:[g({ name:'back', n:10, S:8, kw:['TORRENT'], carry:[[0, 1]] })], target:{ T:4, models:[big(100, 1)] } } }], 3000).beats[0])))({ side:1, input:{ groups:[shot6()], target:tenW1([{ id:0, n:10 }]) } }), 1]);
+// one beat alone is run itself (the same dice)
+cases.push(['play: one beat = run', () => (inp => +(C.play({ beats:[{ side:1, input:inp }], sims:3000, seed:3 }).beats[0].killed === C.run(Object.assign({ sims:3000, seed:3 }, inp)).killed))({ groups:[g({ n:5, A:'D6', S:5, AP:-1, D:'2' })], target:{ T:4, models:[big(10, 2, 4)] } }), 1]);
 
 // ---- the screen's own choices, through the app's dmCalc (verify/damage-node.js): what starts ticked, greyed or offered ----
 const dm = require('./damage-node')();
@@ -203,6 +254,7 @@ const LK = 'm:Legendary Killer|While Khârn leads this unit|re-roll hit rolls of
 const exact = (s, k) => { const c = dm.calc(s); return C.explain(c.input).total[k || 'dmg']; };
 const played = (s, k) => { const c = dm.calc(s); return C.run(Object.assign({}, c.input, { sims:20000, seed:7 }))[k]; };
 const box = (s, from) => { const c = dm.calc(s); return c.rules.concat(c.defs).find(x => (x.m && x.m.from === from) || x.src === from) || {}; };
+const dbox = (s, from) => dm.calc(s).defs.find(x => (x.src || '').startsWith(from)) || {};   // a target's rule with a pick: "Hulking Brutes: S greater than T"
 const boxN = (s, from, note) => dm.calc(s).rules.find(x => x.m.from === from && x.m.note === note) || {};   // one part of a rule split in two
 const DAKKA = 'm:Dakka! Dakka! Dakka!|Riled up|+3" range';
 const app = [
@@ -238,11 +290,14 @@ const app = [
   // the Datasmith's own Feel No Pain 4+ (Robotic Bodyguard): on that model only, not the robots
   ['one model only: the Datasmith’s Feel No Pain', () => dm.calc({ army:'super-terminators', opp:'purge-goes-the-foe', ph:'shooting', atk:'chaos-terminators', tgt:'cybernetica-datasmith-kastelan-robots' }).models.map(m => m.name + m.fnp).join() === 'Cybernetica Datasmith4,Kastelan Robot7' ? 1 : 0, 1],
   // pistols per model (24.07): the Mek's Kustom Mega-slugga and the Nob's Rokkit pistol are those models' only guns, so they shoot;
-  // Kustom Dakka (not against MONSTER/VEHICLE) stays out against a Knight even if ticked. At the Knight Paladin (T11, Sv 3+, InSv 5+*,
-  // Feel No Pain 6+): slugga 3 × 3/6 × 2/6 × 4/6 × D3 × 5/6 = 0.83; pistol 1 × … = 0.28; launchas (Hunter) 18 × 3/6 × 4/6 × 4/6 × 3 × 5/6 = 10
-  ['pistols per model, Kustom Dakka greyed vs a Knight', () => { const k = box({ army:'shooty', opp:'6-bigs', ph:'shooting', atk:'mek-tankbustas', tgt:'knight-paladin' }, 'Kustom Dakka').k;
-    return exact({ army:'shooty', opp:'6-bigs', ph:'shooting', atk:'mek-tankbustas', tgt:'knight-paladin', on:{ [k]:true } }); }, 3 * 3 / 6 * 2 / 6 * 4 / 6 * 3 * 5 / 6 + 1 * 3 / 6 * 2 / 6 * 4 / 6 * 3 * 5 / 6 + 10],
-  ['greyed with the reason: Kustom Dakka vs a Knight', () => +(box({ army:'shooty', opp:'6-bigs', ph:'shooting', atk:'mek-tankbustas', tgt:'knight-paladin' }, 'Kustom Dakka').why === 'not against MONSTER/VEHICLE'), 1],
+  // Kustom Dakka (not against MONSTER/VEHICLE) starts unticked against a Knight. At the Knight Paladin (T11, Sv 3+, InSv 5+*,
+  // Feel No Pain 6+): slugga 3 × 3/6 × 2/6 × 4/6 × D 3 × 5/6 = 0.83; pistol 1 × … = 0.28; launchas (Hunter) 18 × 3/6 × 4/6 × 4/6 × 3 × 5/6 = 10
+  ['pistols per model, Kustom Dakka unticked vs a Knight', () => exact({ army:'shooty', opp:'6-bigs', ph:'shooting', atk:'mek-tankbustas', tgt:'knight-paladin' }), 3 * 3 / 6 * 2 / 6 * 4 / 6 * 3 * 5 / 6 + 1 * 3 / 6 * 2 / 6 * 4 / 6 * 3 * 5 / 6 + 10],
+  // ... and ticked anyway (the owner: nothing is disabled), it counts as the player's own call: +1 to wound, 5+ → 4+ for the slugga
+  // and the pistol, 3+ → 2+ for the launchas: 3 × 3/6 × 3/6 × 4/6 × 3 × 5/6 = 1.25; 1 × … = 0.42; 18 × 3/6 × 5/6 × 4/6 × 3 × 5/6 = 12.5
+  ['pistols per model, Kustom Dakka counted by you vs a Knight', () => { const k = box({ army:'shooty', opp:'6-bigs', ph:'shooting', atk:'mek-tankbustas', tgt:'knight-paladin' }, 'Kustom Dakka').k;
+    return exact({ army:'shooty', opp:'6-bigs', ph:'shooting', atk:'mek-tankbustas', tgt:'knight-paladin', on:{ [k]:true } }); }, 3 * 3 / 6 * 3 / 6 * 4 / 6 * 3 * 5 / 6 + 1 * 3 / 6 * 3 / 6 * 4 / 6 * 3 * 5 / 6 + 18 * 3 / 6 * 5 / 6 * 4 / 6 * 3 * 5 / 6],
+  ['out by the rules, with the reason: Kustom Dakka vs a Knight', () => +(box({ army:'shooty', opp:'6-bigs', ph:'shooting', atk:'mek-tankbustas', tgt:'knight-paladin' }, 'Kustom Dakka').why === 'not against MONSTER/VEHICLE'), 1],
   // Blitz Dem Gitz! (+6 A to the Blitzkannon against a target that is not MONSTER/VEHICLE): pre-ticked against Gretchin, greyed against a Knight
   ['pre-ticked from the target: Blitz Dem Gitz! vs Gretchin', () => { const b = box({ army:'shooty', opp:'ooga-booga', ph:'shooting', atk:'dakkarig-herder', tgt:'gretchin' }, 'Blitz Dem Gitz!'); return +(b.state === 'on' && b.on && b.why === 'the target is not MONSTER/VEHICLE'); }, 1],
   ['greyed from the target: Blitz Dem Gitz! vs a Knight', () => +(box({ army:'shooty', opp:'6-bigs', ph:'shooting', atk:'dakkarig-herder', tgt:'knight-paladin' }, 'Blitz Dem Gitz!').state === 'out'), 1],
@@ -334,17 +389,47 @@ const app = [
   // of 1) at once. Flash Gitz at 10 typed T4 W1 Sv 3+ models, before allocation: Cutta 10 × (3/6 + 1/6 × 3/6) = 5.83 hits × 5/6
   // (S9 vs T4: 2+) = 4.86, AP-3 +1 → -4 vs 3+: no save, × D3+2 (4) = 19.44; Mega-slugga 3 × 21/36 = 1.75 × 5/6 = 1.46, AP-3 vs 3+:
   // 6+ (5/6 fail) = 1.22 × 3 = 3.65
-  ['a situation ticks its rules: objective', () => exact({ army:'shooty', ph:'shooting', atk:'mek-flashgitz', typed:{ n:10, T:4, W:1, Sv:3 }, on:{ 'c:obj':true } }), 10 * 21 / 36 * 5 / 6 * 4 + 3 * 21 / 36 * 5 / 6 * 5 / 6 * 3],
-  ['a situation ticks its rules: both say why', () => +['Finderz Keeperz', 'Wreckin’ and Lootin’'].every(n => (b => b.on && /^ticked with/.test(b.why))(box({ army:'shooty', ph:'shooting', atk:'mek-flashgitz', typed:{ n:10, T:4, W:1, Sv:3 }, on:{ 'c:obj':true } }, n))), 1],
-  // "They attack": the same two units the other way round; a charge ticked for your fight is not in theirs, and is back when you swap back
-  ['they attack: the same two units, the charge not carried', () => { dm.calc({ army:'melee', opp:'princes', ph:'fight', atk:'nazdreg-meganobz', tgt:'kh-rn-the-betrayer-khorne-berzerkers', on:{ 'c:charged':true } });
-    const st = dm.app.dmState(); dm.app.dmSwap(st, dm.app.dmPair(st)); const P = dm.app.dmPair(st);
-    const ok1 = P.au.id === 'kh-rn-the-betrayer-khorne-berzerkers' && P.tu.id === 'nazdreg-meganobz' && st.on['c:charged'] == null;
-    dm.app.dmSwap(st, P); return +(ok1 && st.dir === 'me' && st.on['c:charged'] === true && dm.app.dmPair(st).tu.id === 'kh-rn-the-betrayer-khorne-berzerkers'); }, 1],
+  ['a fact of the table ticks its rules: objective', () => exact({ army:'shooty', ph:'shooting', atk:'mek-flashgitz', typed:{ n:10, T:4, W:1, Sv:3 }, fx:{ objective:true } }), 10 * 21 / 36 * 5 / 6 * 4 + 3 * 21 / 36 * 5 / 6 * 5 / 6 * 3],
+  ['a fact of the table ticks its rules: both say why', () => +['Finderz Keeperz', 'Wreckin’ and Lootin’'].every(n => (b => b.on && /^ticked with/.test(b.why))(box({ army:'shooty', ph:'shooting', atk:'mek-flashgitz', typed:{ n:10, T:4, W:1, Sv:3 }, fx:{ objective:true } }, n))), 1],
+  // the target on an objective marker: "this unit or the target within range of an objective" holds too (DM_IMPLIES), one switch
+  ['a fact implies another: the target on an objective', () => +(p => { const b = p.beats[0]; return ['Finderz Keeperz', 'Wreckin’ and Lootin’'].every(n => b.M.rules.find(r => r.m.from === n).on); })(dm.plan({ army:'shooty', atk:'mek-flashgitz', tArmy:'typed', typed:{ n:10, T:4, W:1, Sv:3 }, facts:{ me:{ theirs:{ objective:true } } } })), 1],
+  // "They attack": the same two units the other way round; the charge of your turn is not in theirs, and is back when you swap back
+  ['they attack: the same two units, the charge not carried', () => { dm.calc({ army:'melee', opp:'princes', atk:'nazdreg-meganobz', tgt:'kh-rn-the-betrayer-khorne-berzerkers', turn:{ me:{ charge:true, fight:true } } });
+    const st = dm.app.dmState(); dm.app.dmSwap(st, dm.app.dmPair(st)); const p = dm.app.dmPlan(st);
+    const ok1 = p.P.au.id === 'kh-rn-the-betrayer-khorne-berzerkers' && p.P.tu.id === 'nazdreg-meganobz' && !p.turn.charge && p.beats.every(b => !b.M.ctx.charged);
+    dm.app.dmSwap(st, p.P); const q = dm.app.dmPlan(st);
+    return +(ok1 && st.dir === 'me' && q.turn.charge === true && q.beats.find(b => b.id === 'fight').M.ctx.charged === true && q.P.tu.id === 'kh-rn-the-betrayer-khorne-berzerkers'); }, 1],
   // ... and its numbers are the review's for Khârn + Berzerkers fighting Nazdreg + Meganobz (3.39 models, independently worked out)
   ['they attack: Khârn + Berzerkers fight Nazdreg + Meganobz', () => { dm.calc({ army:'melee', opp:'princes', ph:'fight', atk:'nazdreg-meganobz', tgt:'kh-rn-the-betrayer-khorne-berzerkers' });
     const st = dm.app.dmState(); dm.app.dmSwap(st, dm.app.dmPair(st)); const P = dm.app.dmPair(st);
-    return C.run(Object.assign({}, dm.app.dmCalc(st, P.A, P.B, P.au, P.tu, P.kind).input, { sims:20000 })).killed; }, 3.39],
+    return C.run(Object.assign({}, dm.app.dmCalc(st, P.A, P.B, P.au, P.tu, 'melee').input, { sims:20000 })).killed; }, 3.39],
+  // the same fight as the turn's one step (play) gives what run gives, and a fight back added after it leaves it as it was
+  ['the turn: one step is run, a step added after it moves nothing', () => { const base = { army:'melee', opp:'princes', atk:'nazdreg-meganobz', tgt:'kh-rn-the-betrayer-khorne-berzerkers' };
+    const p1 = dm.plan(Object.assign({ turn:{ me:{ charge:true, fight:true } } }, base)), r1 = C.play(dm.app.dmIn(p1, 4000)), r0 = C.run(Object.assign({}, p1.beats[0].M.input, { sims:4000, seed:7 }));
+    const p2 = dm.plan(Object.assign({ turn:{ me:{ charge:true, fight:true, back:true } } }, base)), r2 = C.play(dm.app.dmIn(p2, 4000));
+    return +(p2.beats.length === 2 && p2.beats[1].id === 'back' && r1.beats[0].killed === r0.killed && r2.beats[0].killed === r1.beats[0].killed && r2.beats[0].dist.join() === r1.beats[0].dist.join()); }, 1],
+  // what is left fights back: the defender removes the rank and file first (05.03 Select Model), so of Khârn's Berzerkers the 7 go
+  // before the 2 with Khorne eviscerators, and the Champion last; Khârn has his own line
+  ['what is left fights back: the rarer weapons kept to the last', () => { const c = dm.calc({ army:'melee', opp:'princes', ph:'fight', atk:'nazdreg-meganobz', tgt:'kh-rn-the-betrayer-khorne-berzerkers' });
+    return +(c.models.map(m => m.lines.map(l => l.id + ':' + l.n).join(' ')).join(' | ') === '0:1 | 2:7 3:2 1:1'); }, 1],
+  // a CHARACTER's own rules stop counting in a later step where every model of its part is destroyed: Khârn's Legendary Killer
+  // (while he leads the unit) in the fight back, its alternative attacks without it
+  ['the turn: a destroyed CHARACTER’s own rule leaves the fight back', () => { const p = dm.plan({ army:'melee', opp:'princes', atk:'nazdreg-meganobz', tgt:'kh-rn-the-betrayer-khorne-berzerkers', turn:{ me:{ charge:true, fight:true, back:true } }, ch:{ 'me:back':{ on:{ [LK]:true } } } });
+    const M = p.beats[1].M; return +(!!M.alt && M.alt.who === 'Khârn the Betrayer' && M.alt.rules.includes('Legendary Killer') && M.input.groups.some(g => g.mods.some(m => m.from === 'Legendary Killer')) && M.alt.input.groups.every(g => g.mods.every(m => m.from !== 'Legendary Killer')) && M.alt.lines.join() === '0'); }, 1],
+  // nothing is disabled: a rule the matchup rules out is the player's to count. Blitz Dem Gitz! (+6 A for the Blitzkannon, "excluding
+  // MONSTER/VEHICLE units") counted against a Knight Paladin (T11, Sv 3+, 5+* InSv against ranged attacks, Feel No Pain 6+): 8 + 6 =
+  // 14 attacks × 3/6 (BS 4+) × 2/6 (S7 vs T11: 5+) × 4/6 (AP -2: Sv 5+, the same as its InSv) × D 2 × 5/6 = 2.59 (not counted: 8
+  // attacks, 1.48). Its [LETHAL HITS: non-MONSTER/VEHICLE] is printed on the weapon itself: not a choice, so it stays out
+  ['counted by you: Blitz Dem Gitz! against a Knight', () => { const s = { army:'shooty', ph:'shooting', atk:'dakkarig-boosta', tArmy:'6-bigs', tgt:'knight-paladin' }, r = box(s, 'Blitz Dem Gitz!');
+    s.on = { [r.k]:true }; const c = dm.calc(s), x = c.rules.find(y => y.m.from === 'Blitz Dem Gitz!');
+    return +(r.state === 'out' && r.on === false && x.state === 'out' && x.on && x.over && /not against MONSTER\/VEHICLE/.test(x.why)) * C.explain(c.input).groups[0].dmg; }, 14 * 3 / 6 * 2 / 6 * 4 / 6 * 2 * 5 / 6],
+  ['counted by you: named so in the working', () => { const s = { army:'shooty', ph:'shooting', atk:'dakkarig-boosta', tArmy:'6-bigs', tgt:'knight-paladin' }; s.on = { [box(s, 'Blitz Dem Gitz!').k]:true };
+    return +C.explain(dm.calc(s).input).groups[0].steps.some(t => /Blitz Dem Gitz! \(counted by you\)/.test(t.t) && /14/.test(t.t)); }, 1],
+  ['counted by you: not ticked, the rules as they are', () => C.explain(dm.calc({ army:'shooty', ph:'shooting', atk:'dakkarig-boosta', tArmy:'6-bigs', tgt:'knight-paladin' }).input).groups[0].dmg, 8 * 3 / 6 * 2 / 6 * 4 / 6 * 2 * 5 / 6],
+  // Macro-extinction Protocols: its +1 to wound is for a TITANIC or TOWERING target that is a MONSTER or VEHICLE too; a typed target
+  // that is only TOWERING gets the +1 to hit alone (the Atrapos's first ranged weapon at one typed T12 W30 Sv 2+ model)
+  ['Macro-extinction: TOWERING alone, no +1 to wound', () => (c => C.resolve(c.input).groups[0].woundMod)(dm.calc({ army:'4-megas-and-a-destrier', ph:'shooting', atk:'cerastus-knight-atrapos', typed:{ n:1, T:12, W:30, Sv:2, kw:{ INFANTRY:false, TOWERING:true } } })), 0],
+  ['Macro-extinction: TOWERING VEHICLE, +1 to wound', () => (c => C.resolve(c.input).groups[0].woundMod)(dm.calc({ army:'4-megas-and-a-destrier', ph:'shooting', atk:'cerastus-knight-atrapos', typed:{ n:1, T:12, W:30, Sv:2, kw:{ INFANTRY:false, TOWERING:true, VEHICLE:true } } })), 1],
   // Murderous Imperative, a pick of two: Conqueror (re-roll wound rolls of 1). 7 galvanic rifles × 2 at a typed T4 Sv 4+: 14 × 3/6 = 7 hits
   // × (3/6 + 1/6 × 3/6) × 3/6 fail = 2.04
   ['a pick: Murderous Imperative, Conqueror', () => { const s = { army:'purge-goes-the-foe', ph:'shooting', atk:'skitarii-rangers', typed:{ n:10, T:4, W:1, Sv:4 }, val:{ 'pick:Murderous Imperative':'Conqueror' } };
@@ -353,9 +438,37 @@ const app = [
   // Wrath Beyond Reason (-1 D to ranged attacks that target it), counted: Flash Gitz at Chaos Terminators (T6, Sv 2+, InSv 4+): Cutta
   // 10 × 3/6 × 4/6 × 3/6 × (4 - 1) = 5.0; Mega-slugga 3 × 3/6 × 4/6 × 3/6 × (3 - 1) = 1.0 (unticked: 8.17)
   ['Wrath Beyond Reason: -1 D counted', () => { const s = { army:'shooty', opp:'super-terminators', ph:'shooting', atk:'mek-flashgitz', tgt:'chaos-terminators' }; s.on = { [box(s, 'Wrath Beyond Reason').k]:true }; return exact(s); }, 6.0],
-  // the return blow keeps the rarer loadouts to the last: 3 Berzerkers left of Khârn's 10 are the Champion and the two with eviscerators
-  ['what is left strikes back: the rarer weapons kept', () => { const c = dm.calc({ army:'melee', opp:'princes', ph:'fight', atk:'nazdreg-meganobz', tgt:'kh-rn-the-betrayer-khorne-berzerkers' });
-    return +(dm.app.dmAliveLines(c.tu, c.models, [0, 3]).join() === '0,1,0,2' && dm.app.dmAliveLines(c.tu, c.models, c.models.map(m => m.count)).join() === '1,1,7,2'); }, 1],
+  // ---- the not-counted sweep: help from other units of the list, and the marks that make a rule's numbers count ----
+  // a -1 Damage to the D characteristic (Wrath Beyond Reason, dMinusChar) lowers [DEVASTATING WOUNDS] mortal wounds too (24.10: they
+  // equal the attack's D): 6 attacks × 3/6 = 3 hits; S4 vs T4: 3 × 2/6 = 1 normal wound, 3 × 1/6 = 0.5 critical; no save; D2 - 1 = 1:
+  // 1 + 0.5 × 1 = 1.5 (a -1 Damage to allocated attacks only: 1 + 0.5 × 2 = 2)
+  ['-1 to the D characteristic: mortal wounds too', () => run([g({ n:6, D:2, kw:['DEVASTATING WOUNDS'] })], { T:4, models:[big(20, 10)], mod:{ dMinus:1, dMinusChar:1 } }).dmg, 1.5],
+  ['-1 Damage to allocated attacks: not mortal wounds', () => run([g({ n:6, D:2, kw:['DEVASTATING WOUNDS'] })], { T:4, models:[big(20, 10)], mod:{ dMinus:1 } }).dmg, 2],
+  ['-1 to the D characteristic: the working', () => C.explain({ groups:[g({ n:6, D:2, kw:['DEVASTATING WOUNDS'] })], target:{ T:4, models:[big(20, 10)], mod:{ dMinus:1, dMinusChar:1 } }, ctx:{} }).total.dmg, 1.5],
+  // -1 to wound when the attack's S is greater than the target's T (Hulking Brutes, Survivor of Strife): 12 attacks × 3/6 = 6 hits;
+  // S5 vs T4: 3+ → 4+: 6 × 3/6 = 3; S3 vs T4: 5+, no change: 6 × 2/6 = 2
+  ['-1 to wound when S is greater than T: S5 vs T4', () => run([g({ n:12, S:5 })], { T:4, models:[big(20, 10)], mod:{ woundMinusSgt:1 } }).groups[0].wounds, 3],
+  ['-1 to wound when S is greater than T: S3 vs T4 unchanged', () => run([g({ n:12, S:3 })], { T:4, models:[big(20, 10)], mod:{ woundMinusSgt:1 } }).groups[0].wounds, 2],
+  // help from another unit of the list: Clever Know-wotz (the Mek's), offered to the Big Mek Dakkarig unticked, named with its giver;
+  // ticked, +1 to hit: the Blitzkannon at the Knight Paladin 8 × 4/6 (BS 4+ → 3+) × 2/6 × 4/6 × 2 × 5/6 = 1.98
+  ['help from your list: Clever Know-wotz (Mek), unticked', () => +(b => b.state === 'choice' && !b.on && b.help === 'Mek')(box({ army:'shooty', ph:'shooting', atk:'dakkarig-boosta', tArmy:'6-bigs', tgt:'knight-paladin' }, 'Clever Know-wotz')), 1],
+  ['help from your list: Clever Know-wotz counted', () => { const s = { army:'shooty', ph:'shooting', atk:'dakkarig-boosta', tArmy:'6-bigs', tgt:'knight-paladin' }; s.on = { [box(s, 'Clever Know-wotz').k]:true };
+    return C.explain(dm.calc(s).input).groups[0].dmg; }, 8 * 4 / 6 * 2 / 6 * 4 / 6 * 2 * 5 / 6],
+  // Hulking Brutes, a pick of two: S greater than T (-1 to wound for those attacks) or every ranged attack (+1CP). The Knight Paladin
+  // at Nazdreg + Meganobz (T6): Stormspear rocket pod 3 × 4/6 = 2 hits, S8 vs T6 3+ → 4+: 2 × 3/6 = 1; the heavy stubber S4 5+, as it
+  // was: 2 × 2/6 = 0.67; every ranged attack: the stubber 2 × 1/6 = 0.33
+  ['Hulking Brutes: S greater than T', () => { const s = { army:'6-bigs', ph:'shooting', atk:'knight-paladin', tArmy:'ooga-booga', tgt:'nazdreg-meganobz' }; s.on = { [dbox(s, 'Hulking Brutes').k]:true };
+    const c = dm.calc(s), X = C.explain(c.input).groups, i = n => c.input.groups.findIndex(x => x.name.startsWith(n)); return X[i('Stormspear')].wounds * 10 + X[i('Questoris')].wounds; }, 10 + 2 * 2 / 6],
+  ['Hulking Brutes: every ranged attack (+1CP)', () => { const s = { army:'6-bigs', ph:'shooting', atk:'knight-paladin', tArmy:'ooga-booga', tgt:'nazdreg-meganobz', val:{ 'dpick:hulking-brutes':'+1CP: every ranged attack' } };
+    s.on = { [dbox(s, 'Hulking Brutes').k]:true }; const c = dm.calc(s); return C.explain(c.input).groups[c.input.groups.findIndex(x => x.name.startsWith('Questoris'))].wounds; }, 2 / 6],
+  // a stratagem used in your Command phase whose effect lasts (until the start of your next Command phase) counts in the Shooting
+  // phases after it: Benevolence of the Omnissiah (Feel No Pain 6+, 5+ against mortal wounds) when the Onager is shot at
+  ['lasting stratagem: Benevolence of the Omnissiah in their Shooting phase', () => +(b => b.state === 'choice' && b.e.fnp === 6 && b.e.fnpMortal === 5)(box({ army:'shooty', ph:'shooting', atk:'mek-flashgitz', tArmy:'purge-goes-the-foe', tgt:'onager-dunecrawler' }, 'Benevolence of the Omnissiah')), 1],
+  ['lasting stratagem: Auto-divinatory Targeting sets BS 3+', () => { const s = { army:'purge-goes-the-foe', ph:'shooting', atk:'onager-dunecrawler', typed:{ n:10, T:4, W:1, Sv:4 } }, b = box(s, 'Auto-divinatory Targeting'); s.on = { [b.k]:true };
+    return +(b.state === 'choice' && C.explain(dm.calc(s).input).groups.some(x => x.steps.some(t => /BS 3\+ \(1CP Auto-divinatory Targeting|BS 3\+ \(Auto-divinatory Targeting/.test(t.t)))); }, 1],
+  // Savage Roar, a pick: the enemy unit's test passed (-1 to hit) or failed (-1 to hit and -1 to wound)
+  ['Savage Roar: test failed', () => { const s = { army:'melee', ph:'fight', atk:'nazdreg-meganobz', tArmy:'nidzillas', tgt:'norn-emissary', val:{ 'dpick:savage-roar':'Test failed' } }; s.on = { [dbox(s, 'Savage Roar').k]:true };
+    const t = dm.calc(s).tmod; return t.hitMinus * 10 + t.woundMinus; }, 11],
 ];
 for(const x of app) cases.push(x);
 
@@ -440,11 +553,38 @@ for(const a of loadData().armies) for(const u of a.units) for(const [kind, list]
   }
 }
 cases.push(['every pre-applied value, every list: never added twice (' + marks + ' values)', () => twice.length, 0]);
+// ---- what is left, and the return blow (run with track; returnBlow) ----
+// 2 [TORRENT] attacks, S4 vs T4 (4+: 1/2 each), no save, D1, at 2 models of W1: none destroyed 1/4, one 1/2, both 1/4
+const two = () => ({ groups:[g({ n:2, kw:['TORRENT'] })], target:{ T:4, models:[big(2, 1)] }, ctx:{}, sims:20000, seed:11 });
+const leftP = (r, n) => (r.left.find(x => x.n.join() === n.join()) || { p:0 }).p;
+cases.push(['track: the dice are the same with it (models destroyed, difference)', () => Math.abs(C.run(two()).killed - C.run(Object.assign(two(), { track:true })).killed), 0, 0]);
+cases.push(['track: both models left, chance', () => leftP(C.run(Object.assign(two(), { track:true })), [2]), 1 / 4, 0.015]);
+cases.push(['track: one model left, chance', () => leftP(C.run(Object.assign(two(), { track:true })), [1]), 1 / 2, 0.015]);
+cases.push(['track: the row has none left (fate), chance', () => C.run(Object.assign(two(), { track:true })).fate[0], 1 / 4, 0.015]);
+// a CHARACTER is allocated to last (05.03): one bodyguard model and the CHARACTER, W1 each, the same 2 attacks: the CHARACTER
+// is destroyed only when both wound (1/4), the bodyguard model when at least one does (3/4)
+const led = () => ({ groups:[g({ n:2, kw:['TORRENT'] })], target:{ T:4, models:[big(1, 1, 7, { name:'b', bodyguard:true }), big(1, 1, 7, { name:'c', char:true })] }, ctx:{}, sims:20000, seed:11, track:true });
+cases.push(['track: the CHARACTER’s fate', () => C.run(led()).fate[1], 1 / 4, 0.015]);
+cases.push(['track: the bodyguard model’s fate', () => C.run(led()).fate[0], 3 / 4, 0.015]);
+// the return blow (B's cases, through play): each model left of the 2 has one [TORRENT] attack back (1/2 to destroy a W1 model
+// of 3): models left on average 2 × 1/4 + 1 × 1/2 = 1, so 1/2 destroyed; nothing left to attack back 1/4;
+// none destroyed: 1/4 (nothing left) + 1/4 × 1/4 (both left, both fail) + 1/2 × 1/2 (one left, it fails) = 9/16
+const back1 = () => C.play({ beats:[{ side:1, input:{ groups:[g({ n:2, kw:['TORRENT'] })], target:{ T:4, models:[big(2, 1, 7, { lines:[{ id:0, n:2 }] })] }, ctx:{} } },
+  { side:0, input:{ groups:[g({ name:'back', n:2, kw:['TORRENT'], carry:[[0, 1]] })], target:{ T:4, models:[big(3, 1)] }, ctx:{} } }], sims:20000, seed:5 });
+cases.push(['return blow: models destroyed', () => back1().beats[1].killed, 1 / 2, 0.02]);
+cases.push(['return blow: nothing left to attack back, chance', () => back1().beats[0].wipe, 1 / 4, 0.015]);
+cases.push(['return blow: none destroyed, chance', () => back1().beats[1].dist[0], 9 / 16, 0.015]);
+cases.push(['return blow: models left to attack back, on average', () => (r => r.sides[1].models - r.sides[1].killed)(back1()), 1, 0.03]);
+// which models are left decides the weapons: the CHARACTER (2 [TORRENT] attacks, S8 vs T4: 2+, 5/6 each) and the bodyguard
+// model (1 attack, 1/2). Both left 1/4, only the CHARACTER 1/2, none 1/4:
+// 1/4 × (5/3 + 1/2) + 1/2 × 5/3 = 13/24 + 20/24 = 1.375 destroyed of 10 W1 models
+cases.push(['return blow: the weapons of the models left', () => C.play({ beats:[{ side:1, input:{ groups:[g({ n:2, kw:['TORRENT'] })], target:{ T:4, models:[big(1, 1, 7, { name:'b', bodyguard:true, lines:[{ id:0, n:1 }] }), big(1, 1, 7, { name:'c', char:true, lines:[{ id:1, n:1 }] })] }, ctx:{} } },
+  { side:0, input:{ groups:[g({ name:'c', n:1, A:'2', S:8, kw:['TORRENT'], carry:[[1, 1]] }), g({ name:'b', n:1, kw:['TORRENT'], carry:[[0, 1]] })], target:{ T:4, models:[big(10, 1)] }, ctx:{} } }], sims:20000, seed:5 }).beats[1].killed, 33 / 24, 0.03]);
 for(const t of twice) console.log('  ' + t);
 
 let fail = 0;
-for(const [name, fn, want] of cases){
-  const got = fn(), tol = Math.max(0.15, Math.abs(want) * 0.03);
+for(const [name, fn, want, tol0] of cases){
+  const got = fn(), tol = tol0 != null ? tol0 : Math.max(0.15, Math.abs(want) * 0.03);   // a chance: its own, smaller margin
   const ok = Math.abs(got - want) <= tol;
   if(!ok) fail++;
   if(!ok || process.argv.includes('-v')) console.log((ok ? 'ok   ' : 'FAIL ') + name + ': ' + got.toFixed(3) + ' (worked out: ' + (+want).toFixed(3) + ')');

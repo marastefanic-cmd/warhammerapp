@@ -19,7 +19,9 @@
                     (every weapon is taken to be in range)
                     (mod: one more entry of mods, for a rule with no name)
      input.target  { T, kw:[keywords], models:[{ name, count, W, T, Sv, InSv, fnp, fnpMortal, char, bodyguard }],
-                     mod:{ dMinus, apWorse, hitMinus, woundMinus, fnp, fnpMortal, insv, src:{ the same keys: rule names } } }
+                     mod:{ dMinus, apWorse, hitMinus, woundMinus, fnp, fnpMortal, insv, src:{ the same keys: rule names },
+                          woundMinusSgt (-1 to wound when the attack's S is greater than the T it meets), dMinusChar (the part of
+                          dMinus that changes the D characteristic, so [DEVASTATING WOUNDS] mortal wounds too) } }
      input.ctx     { ranged, cover, coverSrc, halfRange (every weapon) or halfWithin (inches: the weapons whose half range
                      reaches it), charged, heavy, indirect ('1-5'|'1-3'),
                      snap, cq (close-quarters shooting at a unit the attacker is engaged with), big (the attacker is
@@ -29,8 +31,13 @@
    result: { sims, dmg (mean wounds lost), killed (mean models destroyed), models, wipe (P all destroyed),
              dist [P(exactly k destroyed)], groups:[{ attacks, hits, wounds, unsaved, mortals, dmg, gone (P destroyed before
              its attacks), out, notes }] (means), alloc:[allocation groups], order:[the order used], orders (how many compared) }
+     input.track: also result.left [{ n:[models left in each row of input.target.models], p }] (most likely first) and
+             result.fate [the chance each row has no model left: a CHARACTER's own fate], from the same games (the dice are
+             the same with or without it)
+   play(input) → several beats one after another in the same games (shoot, fight, what is left fights back: see there).
    resolve(input) → the same groups' out, notes and the rules applied or skipped, without playing any dice.
-   explain(input, order) → the working: each weapon's exact averages before allocation, step by step (see there). */
+   explain(input, order) → the working: each weapon's exact averages before allocation, step by step (see there).
+   As a Web Worker (new Worker('calc.js')): { id, input } → { id, r:run(input) }; { id, play } → { id, r:play(play) }. */
 (function(root){
 'use strict';
 
@@ -61,6 +68,8 @@ function dice(s){
   return { n:0, f:0, k:isNaN(v) ? 0 : v };
 }
 const diceMean = d => d.k + d.n * (d.f + 1) / 2;
+// a dice expression as players write it: "2", "D3", "2D6", "D6+1"
+const diceText = d => !d.n ? String(d.k) : (d.n > 1 ? d.n : '') + 'D' + d.f + (d.k ? (d.k > 0 ? '+' : '') + d.k : '');
 // a seeded generator (mulberry32), so the same inputs always give the same numbers
 function rng(seed){
   let a = seed >>> 0;
@@ -128,7 +137,7 @@ const WOUND_WHY = { 2:'S at least twice T', 3:'S greater than T', 4:'S equal to 
 
 // a rule's keyword (on a mod) as the keyword it gives
 const MOD_KW = { sus:v => 'SUSTAINED HITS ' + up(v), lethal:() => 'LETHAL HITS', dev:() => 'DEVASTATING WOUNDS', ignoresCover:() => 'IGNORES COVER',
-  twin:() => 'TWIN-LINKED', lance:() => 'LANCE', precision:() => 'PRECISION' };
+  twin:() => 'TWIN-LINKED', lance:() => 'LANCE', precision:() => 'PRECISION', cleave:v => 'CLEAVE ' + (+v || 1) };
 const NUM = { a:'A', s:'S', ap:'AP', d:'D' };
 
 // one weapon with the rules that apply to it → the numbers of its attacks against this target, and where each
@@ -141,7 +150,7 @@ function prep(g, X){
   const srcName = m => m.from || 'set by hand';
   // a value the printed weapon already includes from a rule (New Recruit adds some, never a stratagem's): that rule never
   // adds it again
-  const credited = (field, m) => !!m.from && !m.strat && [].concat(from[field] || []).some(r => up(r) === up(m.from));
+  const credited = (field, m) => !!m.from && !m.strat && [].concat(from[field] || []).some(r => up(r) === up(m.from) || up(m.from).startsWith(up(r) + ': '));
   const applied = [], skipped = [];
   const why = { a:[], s:[], ap:[], d:[], hit:[], wound:[], bs:[], range:[], set:{} };
   const inst = (g.kw || []).map(t => ({ t:up(t), src:'' }));
@@ -217,7 +226,7 @@ function prep(g, X){
     A:dice(sA.base != null ? sA.base : g.A), aPlus,
     rapid:k.rapid && half ? k.rapid : null, melta:k.melta && half ? k.melta : null,
     // [BLAST]/[CLEAVE]: the models that were in the target unit at Select Targets, before any of these attacks
-    extra:((k.blast || 0) + (k.cleave || 0)) * Math.floor(X.total / 5),
+    extra:((k.blast || 0) + (k.cleave || 0)) * Math.floor(X.total / 5), extraPer:(k.blast || 0) + (k.cleave || 0),
     torrent:!!k.torrent, snap:ranged && !!ctx.snap, fail:indirect ? (ctx.indirect === '1-3' ? 4 : 6) : 0,
     bs, hitMod:pos + (ignore ? 0 : neg), critHit:Math.min(RULE.critHit, cH.v), critHitSrc:cH.src, rrHit:rrHit.v, rrHitSrc:rrHit.src,
     S:s0 == null ? RULE.minS : Math.max(RULE.minS, s0 + sPlus),   // no S: S 1 for this (02.04.01), and '-' is never modified
@@ -238,9 +247,9 @@ const sigOf = (G, prec) => JSON.stringify([G.bs, G.hitMod, G.critHit, G.rrHit, G
 // for a critical result that is worth more ([SUSTAINED HITS], [LETHAL HITS], [DEVASTATING WOUNDS]); [LETHAL HITS] is
 // taken unless rolling to wound is worth more (a critical wound with [DEVASTATING WOUNDS])
 function plan(G, T, M, tm){
-  const row = M.row, need = woundNeed(G.S, T);
+  const row = M.row, need = woundNeed(G.S, T), sgt = tm.woundMinusSgt && G.S > T ? +tm.woundMinusSgt : 0, wMod = G.woundMod - sgt;
   let pc = 0, pn = 0;
-  for(let u = 2; u <= 6; u++){ if(u >= G.critWound) pc++; else if(u + G.woundMod >= need) pn++; }
+  for(let u = 2; u <= 6; u++){ if(u >= G.critWound) pc++; else if(u + wMod >= need) pn++; }
   pc /= 6; pn /= 6;
   const insv = Math.max(RULE.bestSave, Math.min(row.InSv || 7, tm.insv || 7)), sv = Math.max(RULE.bestSave, row.Sv || 7);
   let sf = 0;
@@ -248,7 +257,7 @@ function plan(G, T, M, tm){
   sf /= 6;
   const fnp = Math.min(row.fnp || 7, tm.fnp || 7), fnpM = Math.min(fnp, row.fnpMortal || 7, tm.fnpMortal || 7);
   const keep = x => x <= 6 ? (x - 1) / 6 : 1;
-  const Dn = Math.max(RULE.minDamage, G.Dmean + G.dPlus + G.meltaMean - (tm.dMinus || 0)), Dm = Math.max(RULE.minDamage, G.Dmean + G.dPlus + G.meltaMean);
+  const Dn = Math.max(RULE.minDamage, G.Dmean + G.dPlus + G.meltaMean - (tm.dMinus || 0)), Dm = Math.max(RULE.minDamage, G.Dmean + G.dPlus + G.meltaMean - (tm.dMinusChar || 0));
   const Vn = sf * Math.min(Dn, M.w) * keep(fnp), Vc = G.dev ? Math.min(Dm, M.w) * keep(fnpM) : Vn;
   const fresh = pc * Vc + pn * Vn;
   const fishW = G.rrWound === 'all' && fresh > Vn + 1e-9;
@@ -260,7 +269,7 @@ function plan(G, T, M, tm){
   hc /= 6; hn /= 6;
   const Vch = (G.lethal ? Math.max(Vn, E) : E) + (G.sus ? diceMean(G.sus) * E : 0);
   const fishH = G.rrHit === 'all' && hc * Vch + hn * E > E + 1e-9;
-  return { need, lethal, fishW, fishH };
+  return { need, sgt, wMod, lethal, fishW, fishH };
 }
 
 // the target: allocation groups (05.03): one for each CHARACTER model, one for all other models with the same W, Sv
@@ -308,135 +317,144 @@ function setup(input){
   return { ctx, tm, tkw, rows, groups, total, G, G2, batches, precOn };
 }
 
-// play the attacks out sims times with one allocation order
-function simulate(S, order, sims, seed){
-  const R = rng(seed), { rows, groups, total, G, G2, batches, tm, ctx, precOn } = S;
-  const attached = rows.some(r => r.bodyguard);
-  const KEYS = ['attacks', 'hits', 'wounds', 'unsaved', 'mortals', 'dmg'];
-  const sum = G.map(() => ({ attacks:0, hits:0, wounds:0, unsaved:0, mortals:0, dmg:0, gone:0, sq:{ attacks:0, hits:0, wounds:0, unsaved:0, mortals:0, dmg:0 } }));
-  const dist = new Array(total + 1).fill(0);
-  let dmgTotal = 0, killedTotal = 0;
-  // the models: wounds left, row, allocation group
-  const models = [], byGroup = groups.map(() => []);
-  groups.forEach((grp, gi) => { for(const ri of grp.rows){ const n = grp.char ? 1 : rows[ri].count; for(let i = 0; i < n; i++){ const M = { row:rows[ri], ri, gi, w:0 }; models.push(M); byGroup[gi].push(M); } } });
+// the target's models for one input: each with its wounds left, row, allocation group, and where it sits in its unit
+// (ri: its stats row, k: which of that row's models; line: the models line it belongs to, when the rows say: the first line's
+// models are the first removed, 05.04 "Select Model")
+function worldOf(S){
+  const { rows, groups } = S, models = [], byGroup = groups.map(() => []), seen = rows.map(() => 0);
+  const lineAt = (r, k) => { if(!r.lines) return -1; let t = 0; for(const l of r.lines){ t += l.n; if(k < t) return l.id; } return -1; };
+  groups.forEach((grp, gi) => { for(const ri of grp.rows){ const n = grp.char ? 1 : rows[ri].count; for(let i = 0; i < n; i++){ const k = seen[ri]++;
+    const M = { row:rows[ri], gi, w:0, ri, k, line:lineAt(rows[ri], k) }; models.push(M); byGroup[gi].push(M); } } });
+  return { models, byGroup, attached:rows.some(r => r.bodyguard) };
+}
+const KEYS = ['attacks', 'hits', 'wounds', 'unsaved', 'mortals', 'dmg'];
+const sumsOf = G => G.map(() => ({ attacks:0, hits:0, wounds:0, unsaved:0, mortals:0, dmg:0, gone:0, n:0, sq:{ attacks:0, hits:0, wounds:0, unsaved:0, mortals:0, dmg:0 } }));
+const bufsOf = () => { const buf = () => ({ a:new Int32Array(64), n:0 }); return { atk:buf(), hits:buf(), auto:buf(), dev:buf(), saveBy:[buf(), buf(), buf(), buf(), buf(), buf()] }; };
+const put = (b, v) => { if(b.n === b.a.length){ const x = new Int32Array(b.a.length * 2); x.set(b.a); b.a = x; } b.a[b.n++] = v; };
+
+// one weapon after another, once: S's attacks against the models of W as they are now (wounds already lost stay lost), in
+// the allocation order given. nOf[i]: the models making weapon i's attacks (default: as given); extraOf[i]: its [BLAST]/[CLEAVE]
+// dice (default: from the models at the start). Returns the models destroyed in the unit by the end (dead) and the wounds
+// these attacks took (lost).
+function attackOnce(S, W, order, R, sum, B, nOf, extraOf){
+  const { rows, groups, total, G, G2, batches, tm, ctx, precOn } = S, { models, byGroup, attached } = W;
   const ncOrder = order.filter(gi => !groups[gi].char), chOrder = order.filter(gi => groups[gi].char);
-  // dice kept between games (no garbage): attack dice, hits, automatic wounds, [DEVASTATING WOUNDS], save rolls by result
-  const buf = () => ({ a:new Int32Array(64), n:0 });
-  const put = (b, v) => { if(b.n === b.a.length){ const x = new Int32Array(b.a.length * 2); x.set(b.a); b.a = x; } b.a[b.n++] = v; };
-  const atk = buf(), hits = buf(), auto = buf(), dev = buf(), saveBy = [buf(), buf(), buf(), buf(), buf(), buf()];
-  // what is left after each game: the models destroyed of each stats row (rowDead, summed) and, when asked (S.alive),
-  // how many games end with each count of models left in each row
-  const rowDead = rows.map(() => 0), deadNow = rows.map(() => 0), alive = S.alive ? new Map() : null;
-  for(let s = 0; s < sims; s++){
-    for(const M of models) M.w = M.row.W;
-    const before = S.moments ? sum.map(x => Object.assign({}, x)) : null;
-    let dead = 0, lost = 0;
-    // a model in a group: one that has lost wounds first (05.04)
-    const pickIn = gi => { let first = null; for(const M of byGroup[gi]){ if(M.w <= 0) continue; if(M.w < M.row.W) return M; if(!first) first = M; } return first; };
-    // the current allocation group: a non-CHARACTER group with a wounded model first, then the declared order;
-    // CHARACTER groups last, wounded ones first (05.03); mortal wounds select models the same way (06.02)
-    const current = () => {
-      for(const list of [ncOrder, chOrder]){
-        let first = null;
-        for(const gi of list){ const M = pickIn(gi); if(!M) continue; if(M.w < M.row.W) return M; if(!first) first = M; }
-        if(first) return first;
-      }
-      return null;
-    };
-    // damage to one model: Feel No Pain for each wound (24.12), excess lost
-    const hurt = (M, dmg, mortal) => {
-      let fnp = Math.min(M.row.fnp || 7, tm.fnp || 7);
-      if(mortal) fnp = Math.min(fnp, M.row.fnpMortal || 7, tm.fnpMortal || 7);
-      let w = 0;
-      for(let i = 0; i < dmg; i++) if(!(fnp <= 6 && d6(R) >= fnp)) w++;
-      const took = Math.min(w, M.w);
-      M.w -= took; lost += took;
-      if(M.w <= 0) dead++;
-      return took;
-    };
-    for(const b of batches){
-      if(dead >= total){ for(const mi of b.members) sum[mi].gone++; continue; }   // destroyed before these attacks: they are lost (05.04)
-      // Toughness: the highest among the bodyguard models still alive, else among the models still alive (05.02.01, 19.02)
-      let T = 0, charAlive = false, bgAlive = false;
-      for(const M of models) if(M.w > 0){ if(M.row.char) charAlive = true; if(M.row.bodyguard) bgAlive = true; }
-      for(const M of models) if(M.w > 0 && (!attached || !bgAlive || M.row.bodyguard)) T = Math.max(T, M.row.T || +S.Tdefault || 1);
-      const P = charAlive ? G : G2, g = P[b.members[0]];
-      // [PRECISION]: the picked CHARACTER's group is the current one until these attacks end or it is destroyed (24.28)
-      const precG = precOn && g.precision ? () => { for(const gi of chOrder) if(groups[gi].name === ctx.precision){ const M = pickIn(gi); if(M) return M; } return null; } : null;
-      const now = () => (precG && precG()) || current();
-      const pl = plan(g, T, now(), tm);
-      // gather the attack dice: A per weapon (at least 1), + [RAPID FIRE] at half range, + [BLAST]/[CLEAVE]
-      atk.n = 0;
-      for(const mi of b.members){ const x = P[mi]; for(let i = 0; i < x.n; i++){ const a = Math.max(RULE.minA, roll(x.A, R) + x.aPlus) + (x.rapid ? roll(x.rapid, R) : 0) + x.extra; for(let j = 0; j < a; j++) put(atk, mi); sum[mi].attacks += a; } }
-      // hit rolls (05.01)
-      const hr = u => g.snap ? (u === RULE.snapHit ? 1 : 0) : (u === 1 || u < g.fail) ? 0 : u >= g.critHit ? 2 : u + g.hitMod >= g.bs ? 1 : 0;
-      hits.n = 0; auto.n = 0;
-      for(let i = 0; i < atk.n; i++){
-        const mi = atk.a[i];
-        if(g.torrent){ put(hits, mi); continue; }   // automatically hits: no hit roll, never a critical hit (01.05.01)
-        let u = d6(R), r = hr(u);
-        if((r === 0 && (g.rrHit === 'all' || (g.rrHit === '1s' && u === 1))) || (r === 1 && pl.fishH)){ u = d6(R); r = hr(u); }
-        if(!r) continue;
-        if(r === 2 && pl.lethal) put(auto, mi); else put(hits, mi);
-        if(r === 2 && g.sus){ const x = roll(g.sus, R); for(let j = 0; j < x; j++) put(hits, mi); }
-      }
-      for(let i = 0; i < hits.n; i++) sum[hits.a[i]].hits++;
-      for(let i = 0; i < auto.n; i++) sum[auto.a[i]].hits++;
-      // wound rolls (05.02); save rolls (05.03): one for each wound, all rolled together, kept by result to be
-      // resolved from the lowest (05.04)
-      const wr = u => u === 1 ? 0 : u >= g.critWound ? 2 : u + g.woundMod >= pl.need ? 1 : 0;
-      dev.n = 0;
-      for(const sb of saveBy) sb.n = 0;
-      for(let i = 0; i < auto.n; i++){ sum[auto.a[i]].wounds++; put(saveBy[d6(R) - 1], auto.a[i]); }
-      for(let i = 0; i < hits.n; i++){
-        const mi = hits.a[i];
-        let u = d6(R), r = wr(u);
-        if((r === 0 && (g.rrWound === 'all' || (g.rrWound === '1s' && u === 1))) || (r === 1 && pl.fishW)){ u = d6(R); r = wr(u); }
-        if(!r) continue;
-        sum[mi].wounds++;
-        if(r === 2 && g.dev) put(dev, mi); else put(saveBy[d6(R) - 1], mi);
-      }
-      for(let r = 1, done = false; r <= 6 && !done; r++){
-        const sb = saveBy[r - 1];
-        for(let i = 0; i < sb.n; i++){
-          const mi = sb.a[i], M = now();
-          if(!M){ done = true; break; }    // every model destroyed: excess attacks are lost
-          const insv = Math.max(RULE.bestSave, Math.min(M.row.InSv || 7, tm.insv || 7)), sv = Math.max(RULE.bestSave, M.row.Sv || 7);
-          if(r !== 1 && ((insv <= 6 && r >= insv) || r + g.AP >= sv)) continue;
-          sum[mi].unsaved++;
-          const dmg = Math.max(RULE.minDamage, roll(g.D, R) + g.dPlus + (g.melta ? roll(g.melta, R) : 0) - (tm.dMinus || 0));   // D cannot be less than 1
-          sum[mi].dmg += hurt(M, dmg, false);
-        }
-      }
-      // [DEVASTATING WOUNDS]: mortal wounds equal to D, after the normal damage, at most one model each (24.10, 24.28.01)
-      for(let i = 0; i < dev.n; i++){
-        const mi = dev.a[i], M = now();
-        if(!M) break;
-        sum[mi].mortals++;
-        sum[mi].dmg += hurt(M, Math.max(RULE.minDamage, roll(g.D, R) + g.dPlus + (g.melta ? roll(g.melta, R) : 0)), true);
+  const { atk, hits, auto, dev, saveBy } = B;
+  let dead = 0, lost = 0;
+  for(const M of models) if(M.w <= 0) dead++;
+  // a model in a group: one that has lost wounds first (05.04)
+  const pickIn = gi => { let first = null; for(const M of byGroup[gi]){ if(M.w <= 0) continue; if(M.w < M.row.W) return M; if(!first) first = M; } return first; };
+  // the current allocation group: a non-CHARACTER group with a wounded model first, then the declared order;
+  // CHARACTER groups last, wounded ones first (05.03); mortal wounds select models the same way (06.02)
+  const current = () => {
+    for(const list of [ncOrder, chOrder]){
+      let first = null;
+      for(const gi of list){ const M = pickIn(gi); if(!M) continue; if(M.w < M.row.W) return M; if(!first) first = M; }
+      if(first) return first;
+    }
+    return null;
+  };
+  // damage to one model: Feel No Pain for each wound (24.12), excess lost
+  const hurt = (M, dmg, mortal) => {
+    let fnp = Math.min(M.row.fnp || 7, tm.fnp || 7);
+    if(mortal) fnp = Math.min(fnp, M.row.fnpMortal || 7, tm.fnpMortal || 7);
+    let w = 0;
+    for(let i = 0; i < dmg; i++) if(!(fnp <= 6 && d6(R) >= fnp)) w++;
+    const took = Math.min(w, M.w);
+    M.w -= took; lost += took;
+    if(M.w <= 0) dead++;
+    return took;
+  };
+  for(const b of batches){
+    for(const mi of b.members) sum[mi].n += nOf ? nOf[mi] : G[mi].n;   // the models making these attacks (what is left of them)
+    if(dead >= total){ for(const mi of b.members) sum[mi].gone++; continue; }   // destroyed before these attacks: they are lost (05.04)
+    // Toughness: the highest among the bodyguard models still alive, else among the models still alive (05.02.01, 19.02)
+    let T = 0, charAlive = false, bgAlive = false;
+    for(const M of models) if(M.w > 0){ if(M.row.char) charAlive = true; if(M.row.bodyguard) bgAlive = true; }
+    for(const M of models) if(M.w > 0 && (!attached || !bgAlive || M.row.bodyguard)) T = Math.max(T, M.row.T || +S.Tdefault || 1);
+    const P = charAlive ? G : G2, g = P[b.members[0]];
+    // [PRECISION]: the picked CHARACTER's group is the current one until these attacks end or it is destroyed (24.28)
+    const precG = precOn && g.precision ? () => { for(const gi of chOrder) if(groups[gi].name === ctx.precision){ const M = pickIn(gi); if(M) return M; } return null; } : null;
+    const now = () => (precG && precG()) || current();
+    const pl = plan(g, T, now(), tm);
+    // gather the attack dice: A per weapon (at least 1), + [RAPID FIRE] at half range, + [BLAST]/[CLEAVE]
+    atk.n = 0;
+    for(const mi of b.members){ const x = P[mi], n = nOf ? nOf[mi] : x.n, extra = extraOf ? extraOf[mi] : x.extra;
+      for(let i = 0; i < n; i++){ const a = Math.max(RULE.minA, roll(x.A, R) + x.aPlus) + (x.rapid ? roll(x.rapid, R) : 0) + extra; for(let j = 0; j < a; j++) put(atk, mi); sum[mi].attacks += a; } }
+    // hit rolls (05.01)
+    const hr = u => g.snap ? (u === RULE.snapHit ? 1 : 0) : (u === 1 || u < g.fail) ? 0 : u >= g.critHit ? 2 : u + g.hitMod >= g.bs ? 1 : 0;
+    hits.n = 0; auto.n = 0;
+    for(let i = 0; i < atk.n; i++){
+      const mi = atk.a[i];
+      if(g.torrent){ put(hits, mi); continue; }   // automatically hits: no hit roll, never a critical hit (01.05.01)
+      let u = d6(R), r = hr(u);
+      if((r === 0 && (g.rrHit === 'all' || (g.rrHit === '1s' && u === 1))) || (r === 1 && pl.fishH)){ u = d6(R); r = hr(u); }
+      if(!r) continue;
+      if(r === 2 && pl.lethal) put(auto, mi); else put(hits, mi);
+      if(r === 2 && g.sus){ const x = roll(g.sus, R); for(let j = 0; j < x; j++) put(hits, mi); }
+    }
+    for(let i = 0; i < hits.n; i++) sum[hits.a[i]].hits++;
+    for(let i = 0; i < auto.n; i++) sum[auto.a[i]].hits++;
+    // wound rolls (05.02); save rolls (05.03): one for each wound, all rolled together, kept by result to be
+    // resolved from the lowest (05.04)
+    const wr = u => u === 1 ? 0 : u >= g.critWound ? 2 : u + pl.wMod >= pl.need ? 1 : 0;
+    dev.n = 0;
+    for(const sb of saveBy) sb.n = 0;
+    for(let i = 0; i < auto.n; i++){ sum[auto.a[i]].wounds++; put(saveBy[d6(R) - 1], auto.a[i]); }
+    for(let i = 0; i < hits.n; i++){
+      const mi = hits.a[i];
+      let u = d6(R), r = wr(u);
+      if((r === 0 && (g.rrWound === 'all' || (g.rrWound === '1s' && u === 1))) || (r === 1 && pl.fishW)){ u = d6(R); r = wr(u); }
+      if(!r) continue;
+      sum[mi].wounds++;
+      if(r === 2 && g.dev) put(dev, mi); else put(saveBy[d6(R) - 1], mi);
+    }
+    for(let r = 1, done = false; r <= 6 && !done; r++){
+      const sb = saveBy[r - 1];
+      for(let i = 0; i < sb.n; i++){
+        const mi = sb.a[i], M = now();
+        if(!M){ done = true; break; }    // every model destroyed: excess attacks are lost
+        const insv = Math.max(RULE.bestSave, Math.min(M.row.InSv || 7, tm.insv || 7)), sv = Math.max(RULE.bestSave, M.row.Sv || 7);
+        if(r !== 1 && ((insv <= 6 && r >= insv) || r + g.AP >= sv)) continue;
+        sum[mi].unsaved++;
+        const dmg = Math.max(RULE.minDamage, roll(g.D, R) + g.dPlus + (g.melta ? roll(g.melta, R) : 0) - (tm.dMinus || 0));   // D cannot be less than 1
+        sum[mi].dmg += hurt(M, dmg, false);
       }
     }
-    if(before) sum.forEach((x, i) => { for(const k of KEYS){ const d = x[k] - before[i][k]; x.sq[k] += d * d; } });
-    dmgTotal += lost; killedTotal += dead; dist[dead]++;
-    deadNow.fill(0);
-    for(const M of models) if(M.w <= 0) deadNow[M.ri]++;
-    for(let i = 0; i < rows.length; i++) rowDead[i] += deadNow[i];
-    if(alive){ const k = rows.map((r, i) => r.count - deadNow[i]).join(','); alive.set(k, (alive.get(k) || 0) + 1); }
+    // [DEVASTATING WOUNDS]: mortal wounds equal to D, after the normal damage, at most one model each (24.10, 24.28.01)
+    for(let i = 0; i < dev.n; i++){
+      const mi = dev.a[i], M = now();
+      if(!M) break;
+      sum[mi].mortals++;
+      sum[mi].dmg += hurt(M, Math.max(RULE.minDamage, roll(g.D, R) + g.dPlus + (g.melta ? roll(g.melta, R) : 0) - (tm.dMinusChar || 0)), true);
+    }
   }
-  return { sum, dist, dmgTotal, killedTotal, rowDead, alive };
+  return { dead, lost };
 }
 
-function run(input){
-  const sims = input.sims || 10000, seed = input.seed || 1;
-  const S = setup(input);
-  S.Tdefault = parseInt(input.target.T, 10) || 1;
-  S.moments = !!input.moments;
-  // the defender declares the allocation order (05.03): the order that loses the fewest models on average, then the
-  // fewest wounds. Every order is played with the same dice and as many games as the result shown (a short trial first
-  // only when there are more than six orders); the result shown is that order's own games
-  S.alive = !!input.alive;
-  // input.order: one allocation order given (the indices run() returned as orderIdx), not compared again
-  const orders = Array.isArray(input.order) && input.order.length === S.groups.length ? [input.order] : ordersOf(S.groups);
+// play the attacks out sims times with one allocation order
+function simulate(S, order, sims, seed){
+  const left = S.track ? new Map() : null, nLeft = S.track ? new Array(S.rows.length) : null;
+  const R = rng(seed), { total, G } = S, W = worldOf(S), B = bufsOf();
+  const sum = sumsOf(G);
+  const dist = new Array(total + 1).fill(0);
+  let dmgTotal = 0, killedTotal = 0;
+  for(let s = 0; s < sims; s++){
+    for(const M of W.models) M.w = M.row.W;
+    const before = S.moments ? sum.map(x => Object.assign({}, x)) : null;
+    const { dead, lost } = attackOnce(S, W, order, R, sum, B);
+    if(before) sum.forEach((x, i) => { for(const k of KEYS){ const d = x[k] - before[i][k]; x.sq[k] += d * d; } });
+    dmgTotal += lost; killedTotal += dead; dist[dead]++;
+    // S.track: the models left in each stats row at the end of the game (counting only: no dice)
+    if(left){ nLeft.fill(0); for(const M of W.models) if(M.w > 0) nLeft[M.ri]++; const k = nLeft.join(','); left.set(k, (left.get(k) || 0) + 1); }
+  }
+  return { sum, dist, dmgTotal, killedTotal, left };
+}
+
+// the defender declares the allocation order (05.03): the order that loses the fewest models on average, then the
+// fewest wounds. Every order is played with the same dice and as many games as the result shown (a short trial first
+// only when there are more than six orders); the result shown is that order's own games
+function pickOrder(S, orders, sims, seed){
   let cands = orders;
   if(orders.length > 6 && S.batches.length){
     const pilot = orders.map(o => ({ o, t:simulate(S, o, Math.min(sims, RULE.pilot), seed) }));
@@ -448,45 +466,113 @@ function run(input){
     const u = simulate(S, o, sims, seed);
     if(u.killedTotal < t.killedTotal - 1e-9 || (Math.abs(u.killedTotal - t.killedTotal) < 1e-9 && u.dmgTotal < t.dmgTotal)){ t = u; order = o; }
   }
+  return { order, t };
+}
+
+function run(input){
+  const sims = input.sims || 10000, seed = input.seed || 1;
+  const S = setup(input);
+  S.Tdefault = parseInt(input.target.T, 10) || 1;
+  S.moments = !!input.moments;
+  S.track = !!input.track;
+  const orders = ordersOf(S.groups);
+  const { order, t } = pickOrder(S, orders, sims, seed);
   const mean = x => x / sims, sd = (s1, s2) => Math.sqrt(Math.max(0, s2 / sims - (s1 / sims) ** 2));
-  const KEYS = ['attacks', 'hits', 'wounds', 'unsaved', 'mortals', 'dmg'];
-  return { sims, models:S.total, dmg:mean(t.dmgTotal), killed:mean(t.killedTotal), wipe:mean(t.dist[S.total]), dist:t.dist.map(mean),
+  // input.track: the models left in each row after these attacks, from the same games: left [{ n, p }] and fate (the chance a row has none left)
+  const track = t.left ? (() => { const left = [...t.left].map(([k, c]) => ({ n:k.split(',').map(Number), p:c / sims })).sort((x, y) => y.p - x.p || (x.n.join() < y.n.join() ? -1 : 1));
+    return { left, fate:S.rows.map((r, i) => left.reduce((s, x) => s + (x.n[i] === 0 ? x.p : 0), 0)) }; })() : {};
+  return Object.assign({ sims, models:S.total, dmg:mean(t.dmgTotal), killed:mean(t.killedTotal), wipe:mean(t.dist[S.total]), dist:t.dist.map(mean),
     groups:t.sum.map((x, i) => Object.assign({ attacks:mean(x.attacks), hits:mean(x.hits), wounds:mean(x.wounds), unsaved:mean(x.unsaved), mortals:mean(x.mortals), dmg:mean(x.dmg),
       gone:mean(x.gone), out:S.G[i].out, notes:S.G[i].notes }, S.moments ? { sd:Object.fromEntries(KEYS.map(k => [k, sd(x[k], x.sq[k])])) } : {})),
-    alloc:S.groups.map(x => ({ name:x.name, n:x.n, char:x.char })), order:order.map(i => S.groups[i].name), orderIdx:order, orders:orders.length, capped:!!orders.capped,
-    // each stats row of the target: its models destroyed on average (a CHARACTER row of one model: the chance it is destroyed)
-    rowsDead:t.rowDead.map(mean),
-    // with input.alive: the models left in each stats row at the end of a game, and in how many of the games
-    alive:t.alive ? [...t.alive].map(([k, n]) => ({ rows:k.split(',').map(Number), n })).sort((a, b) => b.n - a.n || (a.rows.join() < b.rows.join() ? -1 : 1)) : undefined };
+    alloc:S.groups.map(x => ({ name:x.name, n:x.n, char:x.char })), order:order.map(i => S.groups[i].name), orderIdx:order, orders:orders.length, capped:!!orders.capped }, track);
 }
-// several attacks added up as one result, each played its own number of games: parts [{ input, n }], an input of null (or with
-// no weapons) being n games with no attack. The return blow uses it: in each game of an attack, what survives strikes back,
-// so part i is the attack of what is left in the games that ended that way (n of them). opts.order: one allocation order for
-// every part (05.03: the defender declares it; the parts are the same target). opts.seed: part i is played with seed + i
-function mix(parts, opts){
-  opts = opts || {};
-  let N = 0, killed = 0, dmg = 0, wipe = 0, models = 0, rowsDead = null;
-  const dist = [];
-  parts.forEach((p, i) => {
-    if(!(p.n > 0)) return;
-    N += p.n;
-    if(!p.input || !p.input.groups.some(g => +g.n > 0)){ dist[0] = (dist[0] || 0) + p.n; return; }
-    const r = run(Object.assign({}, p.input, { sims:p.n, seed:(opts.seed || 1) + i, alive:false }, opts.order ? { order:opts.order } : {}));
-    models = r.models; killed += r.killed * p.n; dmg += r.dmg * p.n; wipe += r.wipe * p.n;
-    r.dist.forEach((q, k) => { dist[k] = (dist[k] || 0) + q * p.n; });
-    rowsDead = rowsDead || r.rowsDead.map(() => 0); r.rowsDead.forEach((v, k) => { rowsDead[k] += v * p.n; });
+
+/* play(input): a few attacks one after another in the same games, as the turn goes at the table: shoot, then charge and
+   fight, then what is left of the target fights back. Each beat is one unit's attacks against the other: the two units (sides
+   0 and 1) keep, from one beat to the next of a game, the wounds they lost and the models destroyed; a beat's attacks are made
+   by the models of the other side still alive.
+     input.beats  [{ side (the side the attacks target: 0 or 1), input (as run: groups, target, ctx), order (an allocation
+                    order; default: the one run picks for this beat on its own) }]
+                  A side's target.models rows are the same in every beat that targets it (the rules that apply can change:
+                  InSv, Feel No Pain); a row can list its models lines (lines:[{ id, n }], the first removed first).
+                  A beat's weapon can name the models that make its attacks: carry [[line id, weapons per model]] of the side
+                  attacking, and slice [lo, hi] (of those weapons, the ones from lo to hi: a rule that reaches only some of
+                  them reaches the ones kept longest); without carry its models are as given (that side has lost none).
+     input.sims (default 10000), input.seed (default 1)
+   result: { beats:[{ killed (mean destroyed in this beat), dmg (wounds lost in it), wipe (P the side is destroyed by its end),
+             dist [P(exactly k destroyed by its end)], before (mean destroyed before it), rows:[{ name, count, char, gone (P all of
+             the row destroyed by its end) }], groups:[{ n (mean models attacking with it),
+             attacks, hits, wounds, unsaved, mortals, dmg, gone }], order }],
+             sides:[{ models, killed (mean destroyed by the end), wipe, rows:[{ name, count, char, left (mean), gone (P all of
+             the row destroyed) }] }] }
+   One beat played alone gives what run gives (the same dice). */
+function play(input){
+  const sims = input.sims || 10000, seed = input.seed || 1;
+  const B = bufsOf();
+  const beats = input.beats.map(b => {
+    const S = setup(b.input); S.Tdefault = parseInt(b.input.target.T, 10) || 1;
+    const orders = ordersOf(S.groups), order = b.order || (orders.length > 1 ? pickOrder(S, orders, sims, seed).order : orders[0]);
+    // b.alt: { lines (models lines of the attacking side), input }: the attacks when every model on those lines is destroyed (the
+    // same weapons, without that CHARACTER's own rules); its target is the same
+    const alt = b.alt && b.alt.lines && b.alt.lines.length ? (() => { const S2 = setup(b.alt.input); S2.Tdefault = S.Tdefault; return { lines:b.alt.lines, S:S2, W:worldOf(S2) }; })() : null;
+    return { b, S, W:worldOf(S), alt, order, sum:sumsOf(S.G), dist:new Array(S.total + 1).fill(0), killed:0, dmg:0, before:0, rowGone:S.rows.map(() => 0), altN:0 };
   });
-  if(!N) return { sims:0, killed:0, dmg:0, wipe:0, dist:[1], models, rowsDead:[] };
-  const out = [];
-  for(let k = 0; k < Math.max(dist.length, models + 1); k++) out.push((dist[k] || 0) / N);
-  return { sims:N, killed:killed / N, dmg:dmg / N, wipe:wipe / N, dist:out, models, rowsDead:(rowsDead || []).map(v => v / N) };
+  // each side's models, by stats row and place in the row (ri, k), with the line each belongs to
+  const sides = [0, 1].map(si => { const first = beats.find(x => x.b.side === si); if(!first) return null;
+    const rows = first.S.rows, at = []; let t = 0; for(const r of rows){ at.push(t); t += r.count; }
+    const line = new Int32Array(t).fill(-1); for(const M of first.W.models) line[at[M.ri] + M.k] = M.line;
+    return { rows, at, n:t, w:new Float64Array(t), line, killed:0, wipe:0, rowLeft:rows.map(() => 0), rowGone:rows.map(() => 0) }; });
+  // each beat its own dice (beat 0's are run's): a beat's numbers are the same whether or not more beats follow it, and a
+  // change in one beat leaves the dice of the others as they were
+  beats.forEach((x, j) => { x.R = rng(seed + j * 1000003); });
+  for(let s = 0; s < sims; s++){
+    for(const sd of sides) if(sd){ let i = 0; for(const r of sd.rows) for(let k = 0; k < r.count; k++) sd.w[i++] = r.W; }
+    for(const x of beats){ const R = x.R;
+      const tg = sides[x.b.side], by = sides[1 - x.b.side];
+      // the attacking side's models still alive, by models line
+      let nOf = null, extraOf = null;
+      const alive = {};
+      if(by){ for(let i = 0; i < by.n; i++) if(by.w[i] > 0) alive[by.line[i]] = (alive[by.line[i]] || 0) + 1; }
+      const useAlt = !!x.alt && x.alt.lines.every(id => !alive[id]);
+      if(useAlt) x.altN++;
+      const { S, W } = useAlt ? x.alt : x;
+      for(const M of W.models) M.w = tg.w[tg.at[M.ri] + M.k];
+      const groups = x.b.input.groups;
+      if(by && groups.some(g => g.carry)) nOf = S.G.map((G, i) => { const g = groups[i]; if(!g.carry) return G.n;
+        const c = g.carry.reduce((t, [id, per]) => t + (alive[id] || 0) * per, 0);
+        return g.slice ? Math.max(0, Math.min(c - g.slice[0], g.slice[1] - g.slice[0])) : c; });
+      // [BLAST]/[CLEAVE]: the models in the target at the start of these attacks (24.05, 24.06)
+      let left = 0; for(const M of W.models) if(M.w > 0) left++;
+      if(left < S.total) extraOf = S.G.map(G => G.extraPer * Math.floor(left / 5));
+      const d0 = S.total - left;
+      const { dead, lost } = attackOnce(S, W, x.order, R, useAlt ? x.altSum || (x.altSum = sumsOf(S.G)) : x.sum, B, nOf, extraOf);
+      for(const M of W.models) tg.w[tg.at[M.ri] + M.k] = M.w;
+      x.before += d0; x.killed += dead - d0; x.dmg += lost; x.dist[dead]++;
+      // each stats row of the target destroyed by the end of this beat (a CHARACTER's fate)
+      for(let ri = 0; ri < tg.rows.length; ri++){ let a = 0; for(let k = 0; k < tg.rows[ri].count; k++) if(tg.w[tg.at[ri] + k] > 0) a++; if(!a) x.rowGone[ri]++; }
+    }
+    for(const sd of sides) if(sd){ let dead = 0, i = 0;
+      sd.rows.forEach((r, ri) => { let a = 0; for(let k = 0; k < r.count; k++, i++) if(sd.w[i] > 0) a++; sd.rowLeft[ri] += a; if(!a) sd.rowGone[ri]++; dead += r.count - a; });
+      sd.killed += dead; if(dead === sd.n) sd.wipe++; }
+  }
+  const mean = v => v / sims;
+  return {
+    beats:beats.map(x => ({ side:x.b.side, killed:mean(x.killed), dmg:mean(x.dmg), before:mean(x.before), models:x.S.total, wipe:mean(x.dist[x.S.total]), dist:x.dist.map(mean),
+      // a beat with an alternative (alt): its games added up with the alternative's (the same weapons, in the same order)
+      groups:x.sum.map((g0, i) => { const a = x.altSum && x.altSum[i], g = k => g0[k] + (a ? a[k] : 0);
+        return { n:mean(g('n')), attacks:mean(g('attacks')), hits:mean(g('hits')), wounds:mean(g('wounds')), unsaved:mean(g('unsaved')), mortals:mean(g('mortals')), dmg:mean(g('dmg')), gone:mean(g('gone')), out:x.S.G[i].out, notes:x.S.G[i].notes }; }),
+      alt:x.alt ? mean(x.altN) : 0,
+      rows:x.S.rows.map((r, ri) => ({ name:r.name, count:r.count, char:!!r.char, gone:mean(x.rowGone[ri]) })),
+      order:x.order.map(i => x.S.groups[i].name), orderIdx:x.order })),
+    sides:sides.map(sd => sd && { models:sd.n, killed:mean(sd.killed), wipe:mean(sd.wipe), rows:sd.rows.map((r, ri) => ({ name:r.name, count:r.count, char:!!r.char, left:mean(sd.rowLeft[ri]), gone:mean(sd.rowGone[ri]) })) })
+  };
 }
 // what applies to each weapon, without playing the dice (for the app's notes)
 function resolve(input){
   const S = setup(input);
   return { groups:S.G.map(x => ({ out:x.out, notes:x.notes, applied:x.applied, skipped:x.skipped, bs:x.bs, hitMod:x.hitMod, woundMod:x.woundMod, S:x.S, AP:x.AP, rrHit:x.rrHit, rrWound:x.rrWound, psychic:x.psychic, psychicKw:!!x.k.psychic, dev:x.dev, rangeIn:x.rangeIn, lethal:x.lethal, precision:x.precision,
       critHit:x.critHit, critWound:x.critWound, sus:x.sus, torrent:x.torrent, D:x.D, dPlus:x.dPlus, A:x.A, aPlus:x.aPlus, rapid:x.rapid, melta:x.melta, extra:x.extra, half:x.half, n:x.n })),
-    alloc:S.groups.map(x => ({ name:x.name, n:x.n, char:x.char })), orders:ordersOf(S.groups).length, batches:S.batches.map(b => b.members) };
+    alloc:S.groups.map(x => ({ name:x.name, n:x.n, char:x.char })), orders:ordersOf(S.groups).length, capped:!!ordersOf(S.groups).capped, batches:S.batches.map(b => b.members) };
 }
 
 // ---- the working: exact averages, step by step (closed form) ----
@@ -548,12 +634,13 @@ function explain(input, orderIdx){
     // attacks (04.03): A per weapon (at least 1), + [RAPID FIRE] within half range, + [BLAST]/[CLEAVE]
     const pa = pmf(G.A), aEach = ex(pa, v => Math.max(RULE.minA, v + G.aPlus)), rapid = G.rapid ? diceMean(G.rapid) : 0;
     const attacks = G.n * (aEach + rapid + G.extra);
+    // a die reads as a die: "A3" is 3 attacks, "A D6+2" a roll; "Damage: 3" is 3, "Damage: D3+2" a roll (never "DD3")
     let t = String(G.A0) + (why.set.A ? ' (' + why.set.A + ')' : inc('A')) + why.a.map(x => ' ' + sgn(x.v) + ' (' + x.src + ')').join('');
     if(G.A.n || why.a.length) t += ' = ' + fx(aEach) + (G.A.n ? ' on average' : '') + (G.aPlus < 0 ? ' (at least 1)' : '');
-    t += ' × ' + G.n + ' = ' + fx(G.n * aEach);
-    if(rapid) t += '; [' + k.text.rapid + '] within half range (' + halfTxt + ', 24.30' + kf('rapid') + '): +' + fx(rapid) + ' × ' + G.n + ' → ' + fx(G.n * (aEach + rapid));
+    t += ' × ' + fx(G.n) + ' = ' + fx(G.n * aEach);
+    if(rapid) t += '; [' + k.text.rapid + '] within half range (' + halfTxt + ', 24.30' + kf('rapid') + '): +' + fx(rapid) + ' × ' + fx(G.n) + ' → ' + fx(G.n * (aEach + rapid));
     if(G.extra){ const kw = [k.blast ? '[' + k.text.blast + '] (24.05)' : '', k.cleave ? '[' + k.text.cleave + '] (24.06, all its attacks at this one unit)' : ''].filter(Boolean).join(' and ');
-      t += '; ' + kw + ': ' + G.blastN + ' models in the target → +' + G.extra + ' × ' + G.n + ' → ' + fx(attacks); }
+      t += '; ' + kw + ': ' + G.blastN + ' models in the target → +' + G.extra + ' × ' + fx(G.n) + ' → ' + fx(attacks); }
     st.push({ k:'attacks', t:'Attacks: ' + t });
     // hit roll (05.01)
     let pN, pC, hr = null;
@@ -583,7 +670,7 @@ function explain(input, orderIdx){
     }
     const crit = attacks * pC, auto = pl.lethal ? crit : 0, toWound = attacks * pN + (pl.lethal ? 0 : crit) + crit * (G.sus ? diceMean(G.sus) : 0);
     // wound roll (05.02)
-    const need = pl.need, wcls = u => u === 1 ? 0 : u >= G.critWound ? 2 : u + G.woundMod >= need ? 1 : 0;
+    const need = pl.need, wMod = pl.wMod, wcls = u => u === 1 ? 0 : u >= G.critWound ? 2 : u + wMod >= need ? 1 : 0;
     const wr = oneRoll(wcls, G.rrWound, pl.fishW);
     const devC = G.dev ? toWound * wr.p[2] : 0, normal = toWound * (wr.p[1] + (G.dev ? 0 : wr.p[2])) + auto;
     {
@@ -593,13 +680,14 @@ function explain(input, orderIdx){
       const tRow = S.rows.find(r => (!attached || r.bodyguard) && r.T === T);
       parts[0] += ' vs T' + T + (tRow && tRow.tSrc ? ' (' + tRow.tSrc + ')' : '') + tNote + ' → ' + need + '+ (' + WOUND_WHY[need] + ')';
       for(const x of why.wound) parts.push(sgn(x.v) + ' to wound (' + x.src + ')');
-      if(G.woundMod){ const n2 = Math.max(2, need - G.woundMod); parts.push(n2 > 6 ? 'only a critical wound wounds' : 'wounds on an unmodified ' + n2 + '+ (an unmodified 1 always fails)'); }
+      if(pl.sgt) parts.push(sgn(-pl.sgt) + ' to wound (' + (tsrc.woundMinusSgt || 'the target') + ': S' + G.S + ' greater than T' + T + ')');
+      if(wMod){ const n2 = Math.max(2, need - wMod); parts.push(n2 > 6 ? 'only a critical wound wounds' : 'wounds on an unmodified ' + n2 + '+ (an unmodified 1 always fails)'); }
       if(G.critWound < 6) parts.push('critical wounds on ' + G.critWound + '+ (' + G.critWoundSrc + ')');
       if(G.rrWound === 'all') parts.push('re-roll failed wound rolls (' + G.rrWoundSrc + ')' + (pl.fishW ? ', and wounds that are not critical, looking for a critical wound (worth more here)' : ''));
       else if(G.rrWound === '1s') parts.push('re-roll wound rolls of 1 (' + G.rrWoundSrc + ')');
       let w = 'Wound roll: ' + parts.join('; ') + ' · ' + fx(toWound) + (auto ? ' rolled' : '') + ' × ' + frac(wr, 1) + ' = ' + fx(toWound * (wr.p[1] + wr.p[2]));
       if(auto) w += ' + ' + fx(auto) + ' automatic = ' + fx(normal + devC);
-      w += ' wounds';
+      w += Math.abs(normal + devC - 1) < 1e-9 && !auto ? ' wound' : ' wounds';
       if(G.dev) w += '; [DEVASTATING WOUNDS] (24.10' + (k.from('dev') ? ', from ' + k.from('dev') : '') + '): the critical ones, ' + fx(toWound) + ' × ' + frac(wr, 2) + ' = ' + fx(devC) + ', become mortal wounds (no save)';
       st.push({ k:'wounds', t:w });
     }
@@ -621,19 +709,20 @@ function explain(input, orderIdx){
     }
     // damage (05.04): D after its modifiers (at least 1); Feel No Pain for each wound (24.12)
     const pd = conv(pmf(G.D), G.melta ? pmf(G.melta) : new Map([[0, 1]]));
-    const dN = ex(pd, v => Math.max(RULE.minDamage, v + G.dPlus - (tm.dMinus || 0))), dM = ex(pd, v => Math.max(RULE.minDamage, v + G.dPlus));
+    const dN = ex(pd, v => Math.max(RULE.minDamage, v + G.dPlus - (tm.dMinus || 0))), dM = ex(pd, v => Math.max(RULE.minDamage, v + G.dPlus - (tm.dMinusChar || 0)));
     const fnp = Math.min(row.fnp || 7, tm.fnp || 7), fnpM = Math.min(fnp, row.fnpMortal || 7, tm.fnpMortal || 7);
     const keep = x => x <= 6 ? (x - 1) / 6 : 1;
     const dmgN = unsaved * dN * keep(fnp), dmgM = devC * dM * keep(fnpM);
     {
-      const parts = [String(G.D0) + (why.set.D ? ' (' + why.set.D + ')' : inc('D')) + why.d.filter(x => !x.target).map(x => ' ' + sgn(x.v) + ' (' + x.src + ')').join('') + (G.melta ? ', + ' + (G.melta.n ? (G.melta.n > 1 ? G.melta.n : '') + 'D' + G.melta.f + (G.melta.k ? '+' + G.melta.k : '') : G.melta.k) + ' ([' + k.text.melta + '] within half range, ' + halfTxt + ', 24.25' + kf('melta') + ')' : '')];
+      const parts = [String(G.D0) + (why.set.D ? ' (' + why.set.D + ')' : inc('D')) + why.d.filter(x => !x.target).map(x => ' ' + sgn(x.v) + ' (' + x.src + ')').join('') + (G.melta ? ', and +' + diceText(G.melta) + ' with [' + k.text.melta + '] (within half range, ' + halfTxt + ', 24.25' + kf('melta') + ')' : '')];
       for(const x of why.d.filter(x => x.target)) parts.push(sgn(x.v) + ' Damage (' + x.src + ')');
-      if(pd.size > 1 || G.dPlus || tm.dMinus) parts.push((pd.size > 1 ? fx(dN) + ' on average' : '→ ' + fx(dN)) + (ex(pd, v => v + G.dPlus - (tm.dMinus || 0)) < dN - 1e-9 ? ' (Damage at least 1)' : ''));
+      if(pd.size > 1 || G.dPlus || tm.dMinus) parts.push((pd.size > 1 ? fx(dN) + ' on average' : fx(dN) + ' each') + (ex(pd, v => v + G.dPlus - (tm.dMinus || 0)) < dN - 1e-9 ? ' (Damage at least 1)' : ''));
       const fsrc = fnp < 7 ? (row.fnp === fnp && row.fnpSrc ? row.fnpSrc : tsrc.fnp || 'the target') : '';
       if(fnp < 7) parts.push('Feel No Pain ' + fnp + '+ (' + fsrc + ', 24.12): ' + (7 - fnp) + '/6 of the wounds ignored');
       let d = 'Damage: ' + parts.join('; ') + ' · ' + fx(unsaved) + ' × ' + fx(dN) + (fnp < 7 ? ' × ' + (fnp - 1) + '/6' : '') + ' = ' + fx(dmgN);
       if(devC){ const msrc = fnpM < fnp ? (row.fnpMortal === fnpM && row.fnpMortalSrc ? row.fnpMortalSrc : tsrc.fnpMortal || 'the target') : '';
-        d += '; mortal wounds: ' + fx(devC) + ' × ' + fx(dM) + (dM !== dN ? ' (D' + (tm.dMinus ? ', the target’s -1 Damage not applied (24.10, 04.02.02)' : '') + ')' : '') + (fnpM < 7 ? ' × ' + (fnpM - 1) + '/6' + (msrc ? ' (Feel No Pain ' + fnpM + '+ against mortal wounds, ' + msrc + ')' : '') : '') + ' = ' + fx(dmgM); }
+        const dmc = tm.dMinusChar || 0;
+        d += '; mortal wounds: ' + fx(devC) + ' × ' + fx(dM) + (dM !== dN || dmc ? ' (D' + (dmc ? ' ' + sgn(-dmc) + ' (' + (tsrc.dMinusChar || 'the target') + ': its D characteristic)' : '') + ((tm.dMinus || 0) > dmc ? ', the target’s ' + sgn(dmc - tm.dMinus) + ' Damage not applied (24.10, 04.02.02)' : '') + ')' : '') + (fnpM < 7 ? ' × ' + (fnpM - 1) + '/6' + (msrc ? ' (Feel No Pain ' + fnpM + '+ against mortal wounds, ' + msrc + ')' : '') : '') + ' = ' + fx(dmgM); }
       d += (devC ? ' → ' + fx(dmgN + dmgM) : '') + ' damage before allocation' + (devC ? ' (played out, each critical wound’s mortal wounds damage one model at most, and the rest is lost: 24.10)' : '');
       st.push({ k:'dmg', t:d });
     }
@@ -644,7 +733,10 @@ function explain(input, orderIdx){
     target:{ models:S.total, wounds:S.rows.reduce((t, r) => t + r.count * r.W, 0) }, T:T0, meets:firstRow.name };
 }
 
-const API = { run, mix, resolve, explain, fmt, fmtStep, dice, diceMean, pmf, keywords, woundNeed, RULE };
+const API = { run, play, resolve, explain, fmt, fmtStep, dice, diceMean, diceText, pmf, keywords, woundNeed, RULE };
 root.WH_CALC = API;
 if(typeof module !== 'undefined' && module.exports) module.exports = API;
+// as a Web Worker (the app plays the effect of each choice there, off the page): { id, input } → run; { id, play } → play
+else if(typeof window === 'undefined' && typeof importScripts === 'function') root.onmessage = e => { const m = e.data || {};
+  try { root.postMessage({ id:m.id, r:m.ping ? 1 : m.play ? play(m.play) : run(m.input) }); } catch(err){ root.postMessage({ id:m.id, err:String(err) }); } };
 })(typeof window !== 'undefined' ? window : globalThis);
