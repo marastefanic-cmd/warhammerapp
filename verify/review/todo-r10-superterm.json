@@ -1,0 +1,512 @@
+[
+ {
+  "army": "super-terminators",
+  "kind": "unit-weapons",
+  "where": "super-terminators · Forgefiend",
+  "judgement": {
+   "gear": [
+    [
+     "Hades autocannon",
+     "Hades autocannon",
+     "Ectoplasma cannon",
+     "Forgefiend claws"
+    ]
+   ],
+   "weapons": [
+    "×2 · Hades autocannon",
+    "Ectoplasma cannon",
+    "Forgefiend claws"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Forgefiend"
+   ],
+   "leads": null
+  },
+  "key": "d2c1573c6630c1c1"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "ability-timing",
+  "where": "super-terminators · Angron · Wrathful Presence",
+  "judgement": {
+   "ph": [
+    "command"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Wrathful Presence",
+   "text": "At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability."
+  },
+  "key": "87516ef3c85932f6"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "ability-timing",
+  "where": "super-terminators · Angron · Driven by Ultimate Rage",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Driven by Ultimate Rage",
+   "text": "While a friendly **WORLD EATERS** unit is within 6\" of this unit, that unit’s melee attacks can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1."
+  },
+  "key": "096905690d41d3e3"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "ability-tag",
+  "where": "super-terminators · Angron · Driven by Ultimate Rage",
+  "judgement": {
+   "tag": "Aura"
+  },
+  "source": {
+   "ability": "Driven by Ultimate Rage",
+   "text": "While a friendly **WORLD EATERS** unit is within 6\" of this unit, that unit’s melee attacks can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1."
+  },
+  "key": "7c00106c3da079a2"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "unit-aura",
+  "where": "super-terminators · Angron",
+  "judgement": {
+   "kind": "melee",
+   "needs": {
+    "all": [
+     "Faction: World Eaters"
+    ]
+   },
+   "when": "Within 6\" of Angron, if he has Driven by Ultimate Rage this round",
+   "selfWhen": "Own aura, if he has Driven by Ultimate Rage this round",
+   "note": "re-roll hit rolls of 1 and wound rolls of 1",
+   "from": "Driven by Ultimate Rage"
+  },
+  "source": {
+   "ability": "Driven by Ultimate Rage",
+   "text": "While a friendly **WORLD EATERS** unit is within 6\" of this unit, that unit’s melee attacks can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1."
+  },
+  "key": "10e2baf6fe235019"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "unit-weapons",
+  "where": "super-terminators · Angron",
+  "judgement": {
+   "gear": [
+    [
+     "Samni’arius and Spinegrinder"
+    ]
+   ],
+   "weapons": [
+    "Samni’arius and Spinegrinder · strike",
+    "Samni’arius and Spinegrinder · sweep"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Angron"
+   ],
+   "leads": null
+  },
+  "key": "d8572c3256baf0d4"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "unit-weapons",
+  "where": "super-terminators · Goremongers",
+  "judgement": {
+   "gear": [
+    [
+     "Autopistol",
+     "Chainblade",
+     "Close combat weapon"
+    ],
+    [
+     "Autopistol",
+     "Chainblade",
+     "Close combat weapon"
+    ]
+   ],
+   "weapons": [
+    "×8 · Autopistol",
+    "×8 · Chainblade",
+    "×8 · Close combat weapon"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Blood Herald",
+    "7× Goremonger w/ chainblade"
+   ],
+   "leads": null
+  },
+  "key": "69eb9442c2c155d8"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "ability-timing",
+  "where": "super-terminators · Chaos Terminators · Bloody Fury",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "charge"
+   ],
+   "turn": "your",
+   "turns": {
+    "movement": "opp"
+   }
+  },
+  "source": {
+   "ability": "Bloody Fury",
+   "text": "This unit’s ranged attacks that target the closest eligible target can re-roll **hit rolls**.\nWhen this unit **declares a charge**, you can use this part of this ability. If you do:\n- This unit can re-roll that **charge roll**.\n- This unit must end that **charge move** **engaged** with the closest **charge target**."
+  },
+  "key": "18cd4ab83bd3e57d"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "ability-tag",
+  "where": "super-terminators · Chaos Terminators · Gore-stained Veterans",
+  "judgement": {
+   "tag": "Upgrade"
+  },
+  "source": {
+   "ability": "Gore-stained Veterans",
+   "text": "**TERMINATOR SQUAD** unit only. This unit’s melee attacks have +1 **WS**."
+  },
+  "key": "a38e953e2170e4fe"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "unit-footnote",
+  "where": "super-terminators · Chaos Terminators",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Target is the closest eligible target",
+   "note": "re-roll hit rolls",
+   "from": "Bloody Fury"
+  },
+  "source": {
+   "ability": "Bloody Fury",
+   "text": "This unit’s ranged attacks that target the closest eligible target can re-roll **hit rolls**.\nWhen this unit **declares a charge**, you can use this part of this ability. If you do:\n- This unit can re-roll that **charge roll**.\n- This unit must end that **charge move** **engaged** with the closest **charge target**."
+  },
+  "key": "b28077c91ac3877e"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "unit-weapons",
+  "where": "super-terminators · Chaos Terminators",
+  "judgement": {
+   "gear": [
+    [
+     "Paired accursed weapons"
+    ],
+    [
+     "Chainfist",
+     "Combi-bolter"
+    ],
+    [
+     "Combi-bolter",
+     "Power fist"
+    ],
+    [
+     "Paired accursed weapons"
+    ],
+    [
+     "Reaper autocannon",
+     "Power fist"
+    ]
+   ],
+   "weapons": [
+    "×6 · Combi-bolter",
+    "×2 · Reaper autocannon",
+    "×2 · Paired accursed weapons",
+    "×2 · Chainfist",
+    "×6 · Power fist"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Terminator Champion",
+    "2× Combi-bolter, chainfist",
+    "4× Combi-bolter, power fist",
+    "1× Paired accursed weapons",
+    "2× Heavy weapon"
+   ],
+   "leads": null
+  },
+  "key": "5e01097337937bb8"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "rule-ph",
+  "where": "Butchers of Khorne rule · Adamantine Avalanche",
+  "judgement": {
+   "ph": [
+    "fight"
+   ]
+  },
+  "source": {
+   "rule": "Adamantine Avalanche",
+   "text": "At the start of the Fight phase, if a friendly **TERMINATOR SQUAD** unit is **engaged**, make a **Blessings of Khorne roll** and use the results to activate one **Blessing of Khorne**. Until the end of the phase, that **Blessing of Khorne** is active for friendly **TERMINATOR SQUAD** units in addition to any other **Blessings of Khorne** that are currently active."
+  },
+  "key": "7bc707a071beef98"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "rule-turn",
+  "where": "Butchers of Khorne rule · Adamantine Avalanche",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "rule": "Adamantine Avalanche",
+   "text": "At the start of the Fight phase, if a friendly **TERMINATOR SQUAD** unit is **engaged**, make a **Blessings of Khorne roll** and use the results to activate one **Blessing of Khorne**. Until the end of the phase, that **Blessing of Khorne** is active for friendly **TERMINATOR SQUAD** units in addition to any other **Blessings of Khorne** that are currently active."
+  },
+  "key": "aa391c48d5ea17c6"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "rule-needs",
+  "where": "Butchers of Khorne rule · Adamantine Avalanche",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Terminator Squad"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Adamantine Avalanche",
+   "text": "At the start of the Fight phase, if a friendly **TERMINATOR SQUAD** unit is **engaged**, make a **Blessings of Khorne roll** and use the results to activate one **Blessing of Khorne**. Until the end of the phase, that **Blessing of Khorne** is active for friendly **TERMINATOR SQUAD** units in addition to any other **Blessings of Khorne** that are currently active."
+  },
+  "key": "7310496e3520a5bf"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "strat-phases",
+  "where": "Butchers of Khorne · Focused Ferocity",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Focused Ferocity",
+   "text": "WHEN: Fight phase, when a friendly **TERMINATOR SQUAD** unit is **selected to fight**.\nTARGET: That **TERMINATOR SQUAD** unit.\nEFFECT: Your unit’s melee attacks have +1 **A**."
+  },
+  "key": "2b8ff8b8d89c3156"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "strat-turn",
+  "where": "Butchers of Khorne · Focused Ferocity",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Focused Ferocity",
+   "text": "WHEN: Fight phase, when a friendly **TERMINATOR SQUAD** unit is **selected to fight**.\nTARGET: That **TERMINATOR SQUAD** unit.\nEFFECT: Your unit’s melee attacks have +1 **A**."
+  },
+  "key": "af020b3de5d85db9"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "strat-needs",
+  "where": "Butchers of Khorne · Focused Ferocity",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Terminator Squad"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Focused Ferocity",
+   "text": "WHEN: Fight phase, when a friendly **TERMINATOR SQUAD** unit is **selected to fight**.\nTARGET: That **TERMINATOR SQUAD** unit.\nEFFECT: Your unit’s melee attacks have +1 **A**."
+  },
+  "key": "54811b59d57fd6b0"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "strat-mod",
+  "where": "Butchers of Khorne · Focused Ferocity",
+  "judgement": {
+   "mod": {
+    "kind": "melee",
+    "when": "When selected to fight",
+    "note": "+1 A"
+   }
+  },
+  "source": {
+   "stratagem": "Focused Ferocity",
+   "text": "WHEN: Fight phase, when a friendly **TERMINATOR SQUAD** unit is **selected to fight**.\nTARGET: That **TERMINATOR SQUAD** unit.\nEFFECT: Your unit’s melee attacks have +1 **A**."
+  },
+  "key": "213a7eec4a753bbd"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "strat-gist",
+  "where": "Butchers of Khorne · Focused Ferocity",
+  "judgement": {
+   "gist": "Your unit’s melee attacks have +1 A."
+  },
+  "source": {
+   "stratagem": "Focused Ferocity",
+   "text": "WHEN: Fight phase, when a friendly **TERMINATOR SQUAD** unit is **selected to fight**.\nTARGET: That **TERMINATOR SQUAD** unit.\nEFFECT: Your unit’s melee attacks have +1 **A**."
+  },
+  "key": "27eef46c006c0cf2"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "strat-phases",
+  "where": "Butchers of Khorne · A Trophy for the Throne",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "A Trophy for the Throne",
+   "text": "WHEN: Fight phase, when a friendly **TERMINATOR SQUAD** unit is **selected to fight**.\nTARGET: That **TERMINATOR SQUAD** unit.\nEFFECT: Your unit’s attacks that target a **MONSTER/VEHICLE** unit have +1 to **wound rolls**."
+  },
+  "key": "e27658f267cf26ec"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "strat-turn",
+  "where": "Butchers of Khorne · A Trophy for the Throne",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "A Trophy for the Throne",
+   "text": "WHEN: Fight phase, when a friendly **TERMINATOR SQUAD** unit is **selected to fight**.\nTARGET: That **TERMINATOR SQUAD** unit.\nEFFECT: Your unit’s attacks that target a **MONSTER/VEHICLE** unit have +1 to **wound rolls**."
+  },
+  "key": "258abd30893c8d2b"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "strat-needs",
+  "where": "Butchers of Khorne · A Trophy for the Throne",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Terminator Squad"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "A Trophy for the Throne",
+   "text": "WHEN: Fight phase, when a friendly **TERMINATOR SQUAD** unit is **selected to fight**.\nTARGET: That **TERMINATOR SQUAD** unit.\nEFFECT: Your unit’s attacks that target a **MONSTER/VEHICLE** unit have +1 to **wound rolls**."
+  },
+  "key": "37d6a08dab358780"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "strat-mod",
+  "where": "Butchers of Khorne · A Trophy for the Throne",
+  "judgement": {
+   "mod": {
+    "kind": "melee",
+    "when": "When selected to fight, vs MONSTER/VEHICLE targets",
+    "note": "+1 to wound rolls"
+   }
+  },
+  "source": {
+   "stratagem": "A Trophy for the Throne",
+   "text": "WHEN: Fight phase, when a friendly **TERMINATOR SQUAD** unit is **selected to fight**.\nTARGET: That **TERMINATOR SQUAD** unit.\nEFFECT: Your unit’s attacks that target a **MONSTER/VEHICLE** unit have +1 to **wound rolls**."
+  },
+  "key": "342591ad90ae8b0f"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "strat-gist",
+  "where": "Butchers of Khorne · A Trophy for the Throne",
+  "judgement": {
+   "gist": "Your unit’s attacks against a MONSTER/VEHICLE unit have +1 to wound rolls."
+  },
+  "source": {
+   "stratagem": "A Trophy for the Throne",
+   "text": "WHEN: Fight phase, when a friendly **TERMINATOR SQUAD** unit is **selected to fight**.\nTARGET: That **TERMINATOR SQUAD** unit.\nEFFECT: Your unit’s attacks that target a **MONSTER/VEHICLE** unit have +1 to **wound rolls**."
+  },
+  "key": "1fbfb936512e352b"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "strat-phases",
+  "where": "Butchers of Khorne · Wrath Beyond Reason",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Wrath Beyond Reason",
+   "text": "WHEN: Your opponent’s Shooting Phase, when an enemy unit targets a friendly **TERMINATOR SQUAD** unit.\nTARGET: That **TERMINATOR SQUAD** unit.\nEFFECT: Ranged attacks that target your unit have -1 **D** until that enemy unit has attacked."
+  },
+  "key": "45807b12c577c8eb"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "strat-turn",
+  "where": "Butchers of Khorne · Wrath Beyond Reason",
+  "judgement": {
+   "turn": "opp"
+  },
+  "source": {
+   "stratagem": "Wrath Beyond Reason",
+   "text": "WHEN: Your opponent’s Shooting Phase, when an enemy unit targets a friendly **TERMINATOR SQUAD** unit.\nTARGET: That **TERMINATOR SQUAD** unit.\nEFFECT: Ranged attacks that target your unit have -1 **D** until that enemy unit has attacked."
+  },
+  "key": "acaca2a4d2d52cc0"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "strat-needs",
+  "where": "Butchers of Khorne · Wrath Beyond Reason",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Terminator Squad"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Wrath Beyond Reason",
+   "text": "WHEN: Your opponent’s Shooting Phase, when an enemy unit targets a friendly **TERMINATOR SQUAD** unit.\nTARGET: That **TERMINATOR SQUAD** unit.\nEFFECT: Ranged attacks that target your unit have -1 **D** until that enemy unit has attacked."
+  },
+  "key": "233e06b1415c3e15"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "strat-def",
+  "where": "Butchers of Khorne · Wrath Beyond Reason",
+  "judgement": {
+   "def": "their Shooting phase: -1 D to ranged attacks that target it (until that enemy unit has attacked)"
+  },
+  "source": {
+   "stratagem": "Wrath Beyond Reason",
+   "text": "WHEN: Your opponent’s Shooting Phase, when an enemy unit targets a friendly **TERMINATOR SQUAD** unit.\nTARGET: That **TERMINATOR SQUAD** unit.\nEFFECT: Ranged attacks that target your unit have -1 **D** until that enemy unit has attacked."
+  },
+  "key": "a501c61449a4844b"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "strat-gist",
+  "where": "Butchers of Khorne · Wrath Beyond Reason",
+  "judgement": {
+   "gist": "Ranged attacks that target your unit have -1 D until that enemy unit has attacked."
+  },
+  "source": {
+   "stratagem": "Wrath Beyond Reason",
+   "text": "WHEN: Your opponent’s Shooting Phase, when an enemy unit targets a friendly **TERMINATOR SQUAD** unit.\nTARGET: That **TERMINATOR SQUAD** unit.\nEFFECT: Ranged attacks that target your unit have -1 **D** until that enemy unit has attacked."
+  },
+  "key": "d705ebb5f99fbdc7"
+ }
+]

@@ -1013,8 +1013,12 @@ function twinOf(u){
   const same = A.units.filter(x => sameName(x, u));
   if(same.length < 2) return null;
   const twins = same.filter(x => (x.leads || '') === (u.leads || '') && (x.upgrade || '') === (u.upgrade || ''));
-  return { lead:u.leads || '', i:twins.indexOf(u) + 1, n:twins.length };
+  if(twins.length < 2) return { lead:u.leads || '', i:'1', n:1, first:1 };
+  // numbered by units, not list entries: an entry of 2 identical units is "1–2 of 3", the next "3 of 3"
+  const first = twins.slice(0, twins.indexOf(u)).reduce((t, x) => t + (x.copies || 1), 1), c = u.copies || 1;
+  return { lead:u.leads || '', i:c > 1 ? first + '–' + (first + c - 1) : String(first), n:twins.reduce((t, x) => t + (x.copies || 1), 0), first };
 }
+const twinFirst = u => (twinOf(u) || { first:1 }).first;
 const twinLabel = u => { const t = twinOf(u); return !t ? '' : (t.lead ? ' + ' + t.lead : '') + (t.n > 1 ? ' (' + t.i + ' of ' + t.n + ')' : ''); };
 const shortName = u => (u.short || u.name) + (u.enhancement && !u.enhOn ? ' · ' + u.enhancement : '') + twinLabel(u);   // an enhancement on another character (enhOn) is not this name's
 const unitCount = a => a.units.reduce((t, u) => t + (u.copies || 1), 0);
@@ -1101,7 +1105,9 @@ function nameTags(u, opts){
 const abilityKey = ab => army().id + '|' + ab.name + '|' + ab.text;
 // the units that took an enhancement; an UPGRADE (Supa-snazz Dakka) is on the unit it upgrades, the bodyguard
 const holders = (a, name) => a.units.filter(u => u.enhancement === name || u.upgrade === name);
-const holderName = (u, name) => u.upgrade === name && u.leads ? u.leads + ' (' + unitLabel(u) + ')' : u.enhOn && name === u.enhancement ? u.enhOn + ' (' + unitLabel(u) + ')' : unitLabel(u);
+// which of several same-named units ("Chaos Terminators (1–2 of 3)"), or how many an entry is ("×2")
+const unitNo = u => { const t = twinOf(u); return t && t.n > 1 ? ' (' + t.i + ' of ' + t.n + ')' : u.copies > 1 ? ' ×' + u.copies : ''; };
+const holderName = (u, name) => u.upgrade === name && u.leads ? u.leads + ' (' + unitLabel(u) + unitNo(u) + ')' : u.enhOn && name === u.enhancement ? u.enhOn + ' (' + unitLabel(u) + unitNo(u) + ')' : unitLabel(u) + unitNo(u);
 
 /* ---------- rules and rich text ---------- */
 function ruleFor(label){
@@ -2328,7 +2334,8 @@ function screenBases(){
     const lines = proxyLines(u), c = u.copies || 1;
     for(const l of lines) if(/\d/.test(l.base)) total.set(l.base, (total.get(l.base) || 0) + l.n * c);   // "Hull": no base
     return '<div class="px"><div class="pxh">' + linkTo('unit', u.id, u.name + (u.enhancement && !u.enhOn ? ' · ' + u.enhancement : '')) + (u.leads ? '<span class="tg m">+ ' + esc(partsAfter(u).join(' + ')) + '</span>' : '') +
-      (c > 1 ? '<span class="tg m">' + c + ' units: mark them apart (' + Array.from({ length:c }, (_, i) => i + 1).join(', ') + ')</span>' : '') + '</div>' +
+      (c > 1 ? '<span class="tg m">' + c + ' units: mark them apart (' + Array.from({ length:c }, (_, i) => i + twinFirst(u)).join(', ') + ')</span>'
+        : twinOf(u) && twinOf(u).n > 1 ? '<span class="tg m">' + twinOf(u).i + ' of ' + twinOf(u).n + '</span>' : '') + '</div>' +
       lines.map(l => '<div class="pxl"><span class="pxn">' + l.n + '× <b>' + esc(/\d/.test(l.base) ? l.base : 'no base') + '</b></span><span class="pxm' + (l.std ? ' std' : '') + '">' + esc(l.mark) +
         (l.std && l.gear.length ? ' <i>' + esc(l.gear.join(', ')) + '</i>' : '') + '</span></div>').join('') +
       unplacedOf(u).map(x => '<div class="pxl"><span></span><span class="pxm">' + esc(x.n + '× ' + x.name + ': ' + x.note) + '</span></div>').join('') + '</div>';
@@ -2365,7 +2372,7 @@ function screenPregame(){
   // your list
   const warlord = units.filter(u => u.warlord);
   const enh = units.flatMap(u => [u.enhancement, u.upgrade].filter(Boolean).map(n => { const d = detachments().find(x => (x.enhancements || []).some(e => e.name === n)), e = d && d.enhancements.find(x => x.name === n);
-    return (d ? linkTo('enh', d.id + '|' + n, n) : esc(n)) + (n === u.upgrade ? ' <span class="from">(upgrade)</span>' : '') + (e && e.pts ? ' <span class="from">' + e.pts + ' pts</span>' : '') + ' on ' + (n === u.enhancement && u.enhOn ? linkTo('unit', u.id, u.enhOn) : n === u.upgrade && u.leads ? linkTo('unit', u.id, u.leads) : nameLink(u)); }));
+    return (d ? linkTo('enh', d.id + '|' + n, n) : esc(n)) + (n === u.upgrade ? ' <span class="from">(upgrade)</span>' : '') + (e && e.pts ? ' <span class="from">' + e.pts + ' pts</span>' : '') + ' on ' + (n === u.enhancement && u.enhOn ? linkTo('unit', u.id, u.enhOn) : n === u.upgrade && u.leads ? linkTo('unit', u.id, u.leads) : linkTo('unit', u.id, (u.short || u.name) + unitNo(u))); }));
   const led = units.filter(u => u.leads).flatMap(u => charsOf(u).map((c, i) => (i ? linkTo('unit', u.id, c.name) : nameLink(u)) + (c.support ? ' supports ' : ' leads ') + esc(u.leads) + (u.copies > 1 ? ' <span class="from">×' + u.copies + ' units</span>' : '')));
   let h = sec('Your list',
     row('Warlord', warlord.map(u => u.warlordOn ? linkTo('unit', u.id, u.warlordOn) + ' <span class="from">(' + esc(unitLabel(u)) + ')</span>' : unitLink(u)).join(', ')) +
