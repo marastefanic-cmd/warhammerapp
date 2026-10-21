@@ -327,8 +327,11 @@ const FACTIONS = {
           // needs is the TARGET (the GRETCHIN unit); the ORKS INFANTRY unit it names is the one being shot
           // shield: the Damage tab offers it as help to the ORKS INFANTRY unit (not GRETCHIN) of a list with a GRETCHIN unit, when it
           // is shot at in the Shooting phase: each hit roll that results in a hit ends that attack and the GRETCHIN unit suffers 1
-          // mortal wound, while a model of it is on the battlefield ([TORRENT] hits are not hit rolls: the FAQ)
-          { id:'grot-shields', shield:{ protects:{ all:['Faction: Orks','Infantry'], none:['Gretchin'] }, by:{ all:['Gretchin'] } }, gist:'If a model in your GRETCHIN unit is on the battlefield, each hit roll of that enemy unit’s ranged attacks on that ORKS unit that results in a hit ends that attack, and your GRETCHIN unit suffers 1 mortal wound.', name:'Grot Shields', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Gretchin'] },
+          // mortal wound, while a model of it is on the battlefield ([TORRENT] hits are not hit rolls: the FAQ);
+          // shield.def: the "When targeted" line of each unit it protects (their Shooting phase only), with the FAQ quoted
+          { id:'grot-shields', shield:{ protects:{ all:['Faction: Orks','Infantry'], none:['Gretchin'] }, by:{ all:['Gretchin'] },
+              def:'their Shooting phase, with a friendly GRETCHIN unit within 3": each hit roll of the attacking unit’s ranged attacks that results in a hit ends that attack, and that GRETCHIN unit suffers 1 mortal wound, while a model of it is on the battlefield. Wahapedia FAQ: “When using the Grot Shields stratagem, are hits by [TORRENT] weapons considered ’hit rolls that result in a hit’?” “No.”' },
+            gist:'If a model in your GRETCHIN unit is on the battlefield, each hit roll of that enemy unit’s ranged attacks on that ORKS unit that results in a hit ends that attack, and your GRETCHIN unit suffers 1 mortal wound.', name:'Grot Shields', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Gretchin'] },
             note:'Wahapedia FAQ: “When using the Grot Shields stratagem, are hits by [TORRENT] weapons considered ’hit rolls that result in a hit’?” “No.”',
             when:'Your opponent’s Shooting phase, when an enemy unit targets a friendly **ORKS INFANTRY** unit (excluding **GRETCHIN** units).',
             target:'One friendly **GRETCHIN** unit within 3" of that **ORKS INFANTRY** unit.',
@@ -1062,9 +1065,9 @@ const ARMIES = [
       abilities:[
         { name:'Full Throttle', ph:['command','movement','charge'], turn:'your', text:'In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase.' },
         { name:'Turbo Engine', who:'Throttlerokkit Shokka Engine', ph:['movement','charge'], turn:'your', text:'When this unit is selected to make an **advance**/**fall-back move**, that move does not prevent this unit from being **eligible to declare a charge**.' },
-        // calcDef: a "when targeted" line the Damage tab alone shows (the Pulse Jet Move's AFTER MOVING); defCalc its numbers; unticked:
-        // it needs the Pulse Jet picked (Full Throttle) and a pulse jet move made
-        { name:'Pulse Jet', who:'Throttlerokkit Shokka Engine', ph:['movement'], turn:'your', calcDef:'After a pulse jet move: attacks that target it have -1 to hit rolls, until the start of your next turn', defCalc:{ hitMinus:1 }, lasts:'round', text:'In your Movement phase, when this unit is **selected to move**, if this unit is **unengaged**, this unit can make a **pulse jet move**.' },
+        // def: the "When targeted" line (the Pulse Jet Move's AFTER MOVING), on the datasheet and in the Damage tab; defCalc its numbers;
+        // unticked: it needs the Pulse Jet picked (Full Throttle) and a pulse jet move made
+        { name:'Pulse Jet', who:'Throttlerokkit Shokka Engine', ph:['movement'], turn:'your', def:'After a pulse jet move: attacks that target it have -1 to hit rolls, until the start of your next turn', defCalc:{ hitMinus:1 }, lasts:'round', text:'In your Movement phase, when this unit is **selected to move**, if this unit is **unengaged**, this unit can make a **pulse jet move**.' },
         { name:'Shokk Attack Engine', who:'Throttlerokkit Shokka Engine', ph:['command'], turn:'your', text:'In your Command phase, if this unit is **unengaged**, you can place this unit in **strategic reserves**.' }
       ],
       rules:['Deadly Demise D3','Deep Strike','Lone Operative','Waaagh!'],

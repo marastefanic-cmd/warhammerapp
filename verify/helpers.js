@@ -113,7 +113,7 @@ const CODE_RULES = {
   unitMods:'which footnotes a unit gets: its own, detachment rules matching its keywords, auras, stratagems it is eligible for; Lance (+1 to wound after a charge); Plunging Fire for TOWERING (22.05)',
   singleMod:'Starting Strength for a one-model unit (Core Rules p86)',
   halfBelow:'Below half-strength for a one-model unit: remaining wounds less than half its W',
-  defenceItems:'what protects a unit when targeted: Feel No Pain, defensive abilities, detachment rules, stratagems usable in that phase, the Orks riled-up 5+ invulnerable save',
+  defenceItems:'what protects a unit when targeted: Feel No Pain, defensive abilities, detachment rules, stratagems usable in that phase, the Orks riled-up 5+ invulnerable save; on the datasheet (opts.shields) also a stratagem another unit of the list takes the hits with (Grot Shields: a GRETCHIN unit for an ORKS INFANTRY unit, excluding GRETCHIN)',
   onceTag:'"Once per …" limits shown on the ability row',
   matches:'stratagem/rule eligibility by keywords (all / any / none)',
   inertRule:'rules that do nothing in this list (e.g. Bondsman without ARMIGER models)',

@@ -107,9 +107,13 @@ function run(D){
         const text = src(m), say = [m.when, m.note, m.selfWhen].join(' ');
         for(const n of nums(say)) if(!has(text, n) && !has(JSON.stringify(m.set || ''), n)) F('number-cited', a.id + ' · ' + u.name + ' · ' + m.from, '"' + n + '" in "' + say + '" is not in the text it cites');
       }
-      for(const ab of u.abilities) if(ab.def) for(const n of nums(ab.def)) if(!has(ab.text, n)) F('number-cited', a.id + ' · ' + u.name + ' · ' + ab.name, '"' + n + '" in "' + ab.def + '" is not in its text');
+      // (or in a faction's own term its text names in bold, D.ruleSrc: the Pulse Jet's "pulse jet move", whose AFTER MOVING has the -1)
+      const named = t => [...String(t).matchAll(/\*\*([^*]+)\*\*/g)].map(m => { const k = (D.ruleAliases.find(([re]) => re.test(m[1])) || [])[1]; return k && (D.ruleSrc || {})[k] ? D.rules[k] || '' : ''; }).join(' ');
+      for(const ab of u.abilities) if(ab.def) for(const n of nums(ab.def)) if(!has(ab.text, n) && !has(named(ab.text), n)) F('number-cited', a.id + ' · ' + u.name + ' · ' + ab.name, '"' + n + '" in "' + ab.def + '" is not in its text');
     }
     for(const s of strats) for(const k of ['def']) if(s[k]) for(const n of nums(s[k])) if(!has(s.when + s.target + s.effect, n)) F('number-cited', a.id + ' · ' + s.name, '"' + n + '" in "' + s[k] + '" is not in its text');
+    // the line a stratagem gives the units it protects (Grot Shields' shield.def)
+    for(const s of strats) if(s.shield && s.shield.def) for(const n of nums(s.shield.def)) if(!has(s.when + s.target + s.effect, n)) F('number-cited', a.id + ' · ' + s.name + ' (shield)', '"' + n + '" in "' + s.shield.def + '" is not in its text');
     const f = D.factions[a.faction];
     const rules = f.armyRules.concat(a.detachments.map(id => f.detachments[id].rule).filter(Boolean));
     for(const r of rules){

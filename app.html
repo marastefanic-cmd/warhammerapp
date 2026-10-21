@@ -4622,13 +4622,17 @@ function abilityList(abs, u, suffix){
 // what matters when this unit is shot or fought: FNP, Lone Operative, -1 AP, the riled-up save.
 // Each entry knows where it comes from, so the datasheet can link it.
 // ph: only what works in that phase (a Fight-phase stratagem isn't offered against shooting)
-function defenceItems(u, ph){
+// opts.shields: also what another unit of the list takes the hits for (Grot Shields: a GRETCHIN unit within 3" of an ORKS INFANTRY
+// unit), as the datasheet says it; the Damage tab plays that one itself (shield)
+function defenceItems(u, ph, opts){
   const out = [];
   // a Feel No Pain only one model has (Robotic Bodyguard: the Datasmith, not the robots) is said by that ability's own line
   for(const r of u.rules){ const m = /^feel no pain (\d\+)/i.exec(r); if(m && !u.abilities.some(ab => ab.def && ab.def.includes('Feel No Pain ' + m[1]))) out.push({ t:'Feel No Pain ' + m[1], a:'rule', v:r }); }
   for(const r of unitDetRules(u)) if(r.def && !out.some(x => x.t === r.def)) out.push({ t:r.def, a:'rule', v:r.name });   // e.g. Knights of Legend: FNP 6+
   for(const ab of u.abilities) if(ab.def && !naReason(ab) && !(ph && ab.defPh && !ab.defPh.includes(ph))) out.push({ t:ab.def, a:'ability', v:abilityKey(ab) });
   for(const s of allStratagems()) if(s.def && eligible(s).includes(u) && !(ph && !s.phases.includes(ph))) out.push({ t:s.cp + 'CP ' + s.name + ': ' + s.def, a:'strat', v:s.id });
+  if(opts && opts.shields) for(const s of allStratagems()) if(s.shield && s.shield.def && matches(s.shield.protects, u) && army().units.some(x => x !== u && matches(s.shield.by, x)) && !(ph && !s.phases.includes(ph)))
+    out.push({ t:s.cp + 'CP ' + s.name + ': ' + s.shield.def, a:'strat', v:s.id });
   if(u.rules.includes('Waaagh!')) out.push({ t:'Riled up: 5+ INV', a:'rule', v:'Waaagh!' });
   return out;
 }
@@ -4652,7 +4656,7 @@ function screenUnit(){
   const u = unitById(cur.unit);
   if(!u) return '<div class="empty">This unit is no longer in the list.</div>';
   const strats = allStratagems().filter(s => eligible(s).includes(u));   // every one it can be the target of
-  const def = defenceItems(u);
+  const def = defenceItems(u, null, { shields:true });
   const meta = [esc(u.role)].concat(u.ptsNote ? [esc(u.ptsNote)] : [], u.copies > 1 ? ['×' + esc(u.copies) + ' in list'] : []);
   const band = '<div class="dsh"><span class="dsn">' + esc(unitLabel(u)) + '</span><span class="dpts num">' + esc(u.pts) + ' pts' + (u.copies > 1 ? ' each' : '') + '</span></div>' +
     '<div class="dsm"><span>' + meta.join(' · ') + '</span>' + nameTags(u, { noLeads:true, noCopies:true }) + '</div>';

@@ -14,7 +14,7 @@
      packUpdate     the Faction Packs' Rules Updates ("Change to …") for every army rule, detachment item and unit ability
                     in the lists; an update that concerns the lists but matches no app text is a failure
      packDatasheet  abilities of units whose datasheet a Faction Pack prints (Knight Destrier, Defiler)
-     noteQuote      every quotation (“…”) inside an app note (army/detachment rule, stratagem, ability), word for word in a
+     noteQuote      every quotation (“…”) inside an app note (army/detachment rule, stratagem, ability, a stratagem's shield line), word for word in a
                     source or in the verified text of the item the note is on (the note's own words are judgements: helpers.js)
    Lines the app marks as its own ("*App note, not rules text: …*") are not checked; they are listed in out/texts.json
    (appNotes). Any other line of a verbatim field that is in no source is a failure (also listed: notInAnySource).
@@ -1345,6 +1345,8 @@ for (const fk of FACTIONS) {
   for (const [dk, d] of Object.entries(F.detachments || {})) {
     if (d.rule && d.rule.note) checkQuotes(fk, 'detachment:' + dk + '/rule', d.rule.note, [d.rule.text]);
     for (const s of d.stratagems || []) if (s.note) checkQuotes(fk, 'detachment:' + dk + '/stratagem:' + s.id, s.note, stratOwn(s));
+    // the "When targeted" line a stratagem gives the units it protects (Grot Shields), with the FAQ it quotes
+    for (const s of d.stratagems || []) if (s.shield && s.shield.def) checkQuotes(fk, 'detachment:' + dk + '/stratagem:' + s.id + ' (shield)', s.shield.def, stratOwn(s));
   }
 }
 for (const a of D.armies) for (const u of a.units) for (const ab of u.abilities || []) if (ab.note) {
