@@ -626,6 +626,15 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .dmmore{min-height:28px; padding:0 6px; font:700 12px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--accent)}
 .dmchip.over{background:none; color:var(--fg); box-shadow:none; border:1.5px dashed var(--accent); padding:1.5px 7.5px}
 .dmchip.carry{background:var(--surface2); color:var(--fg); box-shadow:inset 0 0 0 1.5px var(--accent)}
+.dmrw{position:relative}
+.dmrw.open > .dmlv{border-bottom:0}
+.dmrw.hasmore > .dmlv .fx > small.alt{padding-right:46px}
+.dmmx{position:absolute; right:0; bottom:3px; min-width:40px; min-height:30px; padding:0 4px; font:700 11px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--accent); text-align:right}
+.dmmxl{margin:0; padding:0 46px 9px 30px; border-bottom:1px solid var(--line); font:600 10.5px/1.35 var(--f-head); letter-spacing:.05em; text-transform:uppercase; color:var(--fg2)}
+.dmlv.quiet .fx > small.alt{color:var(--muted)}
+.dmchip.quiet{background:none; color:var(--fg2); box-shadow:inset 0 0 0 1px var(--line)}
+.dmlv.flash{animation:dmflash2 1.2s ease-out}
+@keyframes dmflash2{0%{background:var(--surface2)} 100%{background:none}}
 .dmchip.ovr{background:none; color:var(--accent); border:1.5px dashed var(--accent); padding:1.5px 7.5px}
 .dmswap.off{color:var(--muted)}
 .dmacts{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
@@ -639,6 +648,8 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .dmlv:active{background:var(--surface)}
 .dmlv .ck{width:20px; height:20px; margin-top:1px; border-radius:5px; box-shadow:inset 0 0 0 1.5px var(--muted); display:grid; place-items:center}
 .dmlv.on .ck{background:var(--accent); box-shadow:none}
+.dmlv.part .ck{background:var(--surface2); box-shadow:inset 0 0 0 1.5px var(--accent)}
+.dmlv.part .ck::after{content:''; width:10px; height:2.5px; border-radius:2px; background:var(--accent)}
 .dmlv.on .ck::after{content:''; width:10px; height:5px; margin-top:-3px; border:solid var(--accent-ink); border-width:0 0 2.5px 2.5px; transform:rotate(-45deg)}
 .dmlv.rad .ck{border-radius:50%}
 .dmlv.rad.on .ck{background:none; box-shadow:inset 0 0 0 2px var(--accent)}
@@ -752,9 +763,10 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .dms + .dms::before{content:''; position:absolute; left:-4px; top:50%; width:4px; border-top:1px solid var(--count-line)}
 .dmsum{display:grid; gap:0; width:calc(100% - 4px); margin:4px 2px 0; text-align:left; font-size:12px; line-height:1.35; color:var(--muted)}
 .dmnote{margin:6px 0 0}
-.dmsum span{display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2; overflow:hidden}
+.dmsum span{display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:1; overflow:hidden}
+.dmsum.all span{-webkit-line-clamp:4}
+.dmsum .pts{font-size:11px; color:var(--muted)}
 .dmsum b{font:700 11px/1 var(--f-head); letter-spacing:.08em; text-transform:uppercase; color:var(--fg2)}
-.dmsum .eot{font:600 10.5px/1.3 var(--f-head); font-style:normal; letter-spacing:.06em; text-transform:uppercase; color:var(--muted)}
 /* the popups */
 .dmbars{display:grid; gap:3px; margin:6px 0 4px}
 .dmbar{display:grid; grid-template-columns:52px minmax(0,1fr) 40px; align-items:center; gap:8px; font:600 13px/1.2 var(--f-head); font-variant-numeric:tabular-nums}
@@ -933,6 +945,7 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
   font:700 15px/1.2 var(--f-head); letter-spacing:.04em; padding:10px 16px; border-radius:10px; opacity:0; pointer-events:none; transition:opacity .2s; max-width:86%; text-align:center}
 .toast.show{opacity:1}
 .toast.act{pointer-events:auto; display:flex; align-items:center; gap:12px}
+.toast.dmt{width:max-content; max-width:min(560px, calc(100vw - 24px)); padding-top:8px; padding-bottom:8px; line-height:1.25}
 .toast .tundo{font:700 13px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--accent); padding:8px 4px}
 @media (prefers-reduced-motion: reduce){ *{transition:none !important; animation:none !important} }
 </style>
@@ -1808,7 +1821,11 @@ function dmRuleOf(m, st){
   let e0 = ch && ch.calc ? Object.assign({}, ch.calc) : !ch && m.calc ? Object.assign({}, m.calc) : dmEffects(sc.note, !!m.set);
   if(e0 && e0.weapon){ mm = Object.assign({}, mm, { weapon:e0.weapon }); delete e0.weapon; }
   const e = e0 && m.set ? Object.assign({ set:m.set }, e0) : m.weapon && m.set ? null : e0;
-  return { m:mm, sc, e, pills:ch ? m.pick.map(p => [p.name, p === ch]) : null, pillKey:pk, note0:ch ? m.note : '', pick:ch ? ch.name : '' };
+  // the dice rolled, when the rule makes it a choice of its own (dice: Try Dat Button!'s one D6 or two D6): a pick of two results is two
+  // D6 by itself; else what the player picked, one D6 to start with
+  const dk = m.dice ? 'dice:' + m.from : '', forced = !!(m.dice && ch && (m.dice.two || []).includes(ch.name));
+  const dice = m.dice ? { key:dk, opts:m.dice.opts, now:forced ? m.dice.opts[1] : m.dice.opts.includes(st.val[dk]) ? st.val[dk] : m.dice.opts[0], forced, note:m.dice.note } : null;
+  return { m:mm, sc, e, pills:ch ? m.pick.map(p => [p.name, p === ch]) : null, pillKey:pk, note0:ch ? m.note : '', pick:ch ? ch.name : '', dice, diceKey:dk };
 }
 // who gives a rule of another unit of the list: the part of an attached unit it is on, else that unit ("Clever Know-wotz (Mek)")
 function dmGiver(m, A){ const u = m.src, ab = u.abilities.find(x => x.name === m.from);
@@ -1993,11 +2010,11 @@ function dmCalc(st, A, B, au, tu, kind){
   let hazard = null, self = null;
   const hzOf = c => { const k = c.w.kw.map(x => String(x).toUpperCase()), r = rules.some(q => q.on && q.e && q.e.hazardous && dmReach(au, c.it, q.m, q.sc) > 0);
     return (k.includes('HAZARDOUS') || r ? 1 : 0) + (ranged && k.includes('SUPA-HAZARDOUS') ? 2 : 0); };
-  const hzRules = rules.filter(r => r.on && r.m.hazard && (!r.m.hazard.picks || r.m.hazard.picks.includes(r.pick)));
+  const hzRules = rules.filter(r => r.on && r.m.hazard && (r.m.hazard.dice ? !!r.dice && r.dice.now === r.m.hazard.dice : !r.m.hazard.picks || r.m.hazard.picks.includes(r.pick)));
   const hzW = ticked.map(c => [c, hzOf(c)]).filter(([, n]) => n);
   if(hzW.length || hzRules.length){
     const per = hzW.map(([c, n]) => itemName(c.it) + ': ' + (n === 3 ? '3 a weapon ([HAZARDOUS] 1 and [SUPA-HAZARDOUS] 2)' : n === 2 ? '2 a weapon ([SUPA-HAZARDOUS])' : '1 a weapon'))
-      .concat(hzRules.map(r => r.m.from + ' (' + r.m.hazard.when + '): ' + dmPlural(r.m.hazard.rolls || 1, 'roll', 'rolls') + ' for the unit'));
+      .concat(hzRules.map(r => r.m.from + ' (' + (r.m.hazard.dice || r.m.hazard.when) + '): ' + dmPlural(r.m.hazard.rolls || 1, 'roll', 'rolls') + ' for the unit'));
     const hv = box('hazard', 'Hazard rolls after this unit attacks', per.join(' · ') + ' · each 1-2: ' + (abig ? '3 mortal wounds' : '1 mortal wound') + ' on this unit, before the next step (06.03, 24.15)', true, 'required by the rules');
     sit[sit.length - 1].req = 'the rules require them';   // left out: the player's own call
     if(hv){
@@ -2010,7 +2027,9 @@ function dmCalc(st, A, B, au, tu, kind){
   const odAb = st.carry && au.abilities.find(ab => ab.fightOnDeath);
   if(odAb){ const part = au.leads && odAb.who ? odAb.who : null, ls = (au.gear || []).map((g, i) => i).filter(i => !part || whoOfLine(au, i) === part);
     const lead = au.leads && (!part || part !== au.name) ? ' · counted for the ' + (part || au.name) + ' models; whether it reaches the attached Leader the rules don’t settle' : '';
-    if(box('olk', odAb.name, 'models destroyed earlier in this Fight phase, before this unit fought, fight on a ' + odAb.fightOnDeath.roll + '+ (rolled for each)' + lead, true, 'counted in each game for its models destroyed earlier in this Fight phase (none in the others)') && ls.length)
+    const ov = box('olk', odAb.name, 'models destroyed earlier in this Fight phase, before this unit fought, fight on a ' + odAb.fightOnDeath.roll + '+ (rolled for each, in each game)' + lead, true, 'required by the rules');
+    sit[sit.length - 1].req = 'the rules require it';
+    if(ov && ls.length)
       onDeath = { lines:ls, need:odAb.fightOnDeath.roll }; }
   // a Damaged band (24.39): the datasheet's printed effect
   const dmgOn = [], nc = [];
@@ -2295,6 +2314,8 @@ const DM_STEPS = { shoot:{ kind:'ranged', ph:'shooting', label:'Shoot' }, fight:
 function dmTurn(st, P){
   const d = st.dir;
   if(!isObj(st.turn[d])) st.turn[d] = dmStart(P, '');
+  // a step chosen before the pair was picked that this unit cannot play: the turn starts as it would have
+  else if(st.turn[d].auto && !['shoot', 'fight'].some(id => st.turn[d][id] && dmArmed(P.au, id === 'shoot' ? 'ranged' : 'melee'))) st.turn[d] = dmStart(P, '');
   return st.turn[d];
 }
 // one step's own choices (this direction's)
@@ -2393,8 +2414,9 @@ function dmShort(n){
 const dmPct = v => v >= 0.995 ? '>99%' : v < 0.005 ? '<1%' : Math.round(v * 100) + '%';
 const dmFirst = n => dmShort(n);
 // the numbers a change is measured in: over the whole turn, the same in every step's list. The step's target: destroyed by the end
-// of the turn (wounds lost, for a one-model unit), wiped, each CHARACTER's fate (after a comeback); the step's attacking unit: its
-// own losses by then (its hazard rolls, the fight back) and its CHARACTERS' fates
+// of the turn (wounds lost, for a one-model unit), wiped, each CHARACTER's fate (destroyed by the last step that attacks it, and
+// still down at the end: a comeback); the step's attacking unit: its own losses by then, step by step (its hazard rolls, the attacks
+// on it), and its CHARACTERS' fates (a one-model unit: its own). sims: the games, for the dice's own margin
 function dmNums(plan, k, r){
   k = Math.min(k, plan.beats.length - 1);
   const b = plan.beats[k];
@@ -2402,41 +2424,63 @@ function dmNums(plan, k, r){
   const T = r.sides[b.side], O = r.sides[1 - b.side], one = b.M.models.reduce((t, m) => t + m.count, 0) === 1;
   if(!T) return null;
   const lost = plan.beats.reduce((t, x, i) => t + (x.side === b.side && r.beats[i] ? r.beats[i].dmg : 0), 0);
-  // the attacking unit's own losses: models; wounds for a one-model unit (its hazard rolls' wounds and the fight back's)
-  const ownOne = !b.atk.u.typed && modelCount(b.atk.u) === 1, hzOf = k => plan.beats.reduce((t, x, i) => t + (x.side === b.side && r.beats[i] && r.beats[i].hazard ? r.beats[i].hazard[k] : 0), 0);
-  const hz = hzOf(ownOne ? 'lost' : 'dead'), ownW = ownOne ? hz + plan.beats.reduce((t, x, i) => t + (x.side !== b.side && r.beats[i] ? r.beats[i].dmg : 0), 0) : 0;
-  const fates = sd => sd && sd.rows.length > 1 ? sd.rows.filter(x => x.char).map(x => ({ name:x.name, p:Math.round(x.gone * 100) })) : [];
-  return { raw:one ? lost : T.killed, lost, wipe:Math.round(T.wipe * 100), many:!one, chars:fates(T), own:O ? (ownOne ? ownW : O.killed) : 0, ownOne, ownHz:hz, ownChars:fates(O) };
+  // the attacking unit's own losses: models; wounds for a one-model unit. By step: the hazard rolls after its attacks, the attacks on it
+  const ownOne = !b.atk.u.typed && modelCount(b.atk.u) === 1, by = {};
+  plan.beats.forEach((x, i) => { const rb = r.beats[i]; if(!rb) return;
+    if(x.side === b.side && rb.hazard) by['hazard rolls after the ' + x.label.toLowerCase()] = ownOne ? rb.hazard.lost : rb.hazard.dead;
+    else if(x.side !== b.side) by['in the ' + x.label.toLowerCase()] = ownOne ? rb.dmg : rb.killed; });
+  const ownW = Object.values(by).reduce((t, v) => t + v, 0);
+  const lastT = plan.beats.map((x, i) => i).filter(i => plan.beats[i].side === b.side).pop();
+  const rv = Object.assign({}, ...plan.beats.filter(x => x.side === b.side).map(x => x.M.revive || {}));
+  const chars = T.rows.length > 1 ? T.rows.filter(x => x.char).map(x => { const at = r.beats[lastT] && r.beats[lastT].rows.find(y => y.name === x.name);
+    return { name:x.name, p:at ? at.gone : x.gone, down:x.gone, rv:!!rv[x.name] }; }) : [];
+  const ownChars = !O ? [] : O.rows.length > 1 ? O.rows.filter(x => x.char).map(x => ({ name:x.name, p:x.gone })) : ownOne ? [{ name:b.atk.u.short || b.atk.u.name, p:O.wipe, one:true }] : [];
+  return { raw:one ? lost : T.killed, lost, wipe:T.wipe, many:!one, chars, own:O ? (ownOne ? ownW : O.killed) : 0, ownOne, ownBy:by, ownChars, sims:r.sims || DM_X,
+    var:(rb => { if(!rb || !rb.dist) return 0; let m = 0, q = 0; rb.dist.forEach((v, j) => { m += j * v; q += j * j * v; }); return Math.max(0, q - m * m); })(r.beats[k]) };
 }
-const dmZero = x => x && Object.assign({}, x, { raw:0, lost:0, wipe:0, chars:x.chars.map(c => Object.assign({}, c, { p:0 })), own:x.own == null ? null : 0, ownHz:0, ownChars:x.ownChars.map(c => Object.assign({}, c, { p:0 })) });
+const dmZero = x => x && Object.assign({}, x, { raw:0, lost:0, wipe:0, chars:x.chars.map(c => Object.assign({}, c, { p:0, down:0 })), own:0, ownBy:{}, ownChars:x.ownChars.map(c => Object.assign({}, c, { p:0 })) });
 // a change b − a (the turn once the choice is tapped, minus now), in one measure: the step's target, models destroyed by the end of
-// the turn (wounds lost for a one-model unit), rounded as the answer is ("≈0" under 0.05, never with a sign the dice could flip);
-// beside it in words: a CHARACTER's fate, the chance to wipe, wounds lost, and what the attacking unit itself loses (its hazard
-// rolls, the fight back) with its CHARACTERS' fates. good: good or bad news for the reader (the list viewed); trade: the choice
-// gains on one side what it costs on the other (more of theirs destroyed, more of yours lost)
+// the turn (wounds lost for a one-model unit), rounded as the answer is ("≈0" under 0.05, never with a sign the dice could flip).
+// Beside it, the largest of the others (the rest in the row's detail): a CHARACTER's fate (destroyed, and stays down after a
+// comeback), what the attacking unit itself loses and in which step, its own CHARACTERS' or its own fate, the chance to wipe,
+// wounds lost. A chance is said only past the dice's own margin over the games. good: good or bad news for the reader (the list
+// viewed); trade: the choice gains on one side what it costs on the other (more of theirs destroyed, more of yours lost)
 function dmDelta(a, b, A0, cx){
   if(!a || !b) return null;
   cx = cx || {};
-  const sg = x => (x > 0 ? '+' : '−') + Math.abs(x), r1 = x => Math.round(x * 10) / 10;
+  const sg = x => (x > 0 ? '+' : '−') + Math.abs(x), r1 = x => Math.round(x * 10) / 10, n = Math.min(a.sims || DM_X, b.sims || DM_X);
   const d = b.raw - a.raw, r = r1(d);
-  const fateOf = (A, B) => { for(const c of A){ const y = B.find(z => z.name === c.name), f = (y ? y.p : 0) - c.p; if(Math.abs(f) >= 5) return { f, name:c.name }; } return null; };
-  const ft = fateOf(a.chars, b.chars), fo = fateOf(a.ownChars, b.ownChars), rv = cx.revive || {};
-  const alt = [];
-  if(ft) alt.push(sg(ft.f) + '% ' + dmShort(ft.name) + (rv[ft.name] ? ' stays down' : ' dies'));
-  if(!ft && Math.abs(b.wipe - a.wipe) >= 5) alt.push(sg(b.wipe - a.wipe) + '% wiped');
-  if(a.many && !r && Math.abs(r1(b.lost - a.lost)) >= 0.1) alt.push(sg(r1(b.lost - a.lost)) + ' wounds');
-  // the attacking unit's own losses, by the end of the turn, and why (its hazard rolls, the fight back)
-  const dOwn = a.own != null && b.own != null ? r1(b.own - a.own) : 0, dHz = r1((b.ownHz || 0) - (a.ownHz || 0));
-  if(dOwn){ const why = [Math.abs(dHz) >= 0.1 ? 'hazard rolls' : '', Math.abs(r1(dOwn - dHz)) >= 0.1 ? 'fight back' : ''].filter(Boolean);
-    alt.push((dOwn < 0 ? Math.abs(dOwn) + ' fewer' : dOwn + ' more') + (a.ownOne ? (Math.abs(dOwn) === 1 ? ' wound' : ' wounds') : '') + ' of ' + (cx.ownMine ? 'yours' : 'theirs') + ' lost' + (why.length ? ' (' + why.join(', ') + ')' : '')); }
-  if(fo) alt.push(sg(fo.f) + '% ' + dmShort(fo.name) + ' dies');
-  if(!r && Math.abs(d) < 0.005 && !alt.length) return { t:'0', u:'no change', v:0, v2:0, vo:0, zero:true, alt:'' };
-  const mainGood = r ? (cx.tgtMine ? r < 0 : r > 0) : ft ? (cx.tgtMine ? ft.f < 0 : ft.f > 0) : null;
-  const ownGood = dOwn ? (cx.ownMine ? dOwn < 0 : dOwn > 0) : fo ? (cx.ownMine ? fo.f < 0 : fo.f > 0) : null;
+  // the dice's margin: of a chance (two standard errors of a difference), of the models destroyed (the step's spread)
+  const mP = (p, q) => Math.max(0.01, 2 * Math.sqrt((p * (1 - p) + q * (1 - q)) / n)), mV = Math.max(0.05, 2 * Math.sqrt(2 * (a.var || 0) / n));
+  const pct = x => Math.round(x * 100);
+  const ms = [];   // the other measures: { t (words), s (size, for which to show first), good (for the reader), k }
+  const ptsT = cx.ptsT || 1, ptsO = cx.ptsO || 1;
+  for(const c of a.chars){ const y = b.chars.find(z => z.name === c.name) || { p:0, down:0 }, f = y.p - c.p, fd = y.down - c.down;
+    const sf = Math.abs(f) > mP(c.p, y.p) && pct(f) !== 0, sd = c.rv && Math.abs(fd) > mP(c.down, y.down) && pct(fd) !== 0;
+    if(!sf && !sd) continue;
+    const t = c.rv ? [sf ? sg(pct(f)) + '% ' + dmShort(c.name) + ' destroyed' : '', sd ? sg(pct(fd)) + '% ' + (sf ? 'stays down' : dmShort(c.name) + ' stays down') : ''].filter(Boolean).join(', ') : sg(pct(f)) + '% ' + dmShort(c.name) + ' dies';
+    ms.push({ k:'fateT', t, s:Math.max(Math.abs(f), Math.abs(fd)) * 3, good:cx.tgtMine ? (sd ? fd : f) < 0 : (sd ? fd : f) > 0, dT:f, dTd:c.rv ? fd : f }); }
+  if(!ms.length && Math.abs(b.wipe - a.wipe) > mP(a.wipe, b.wipe) && pct(b.wipe - a.wipe) !== 0) ms.push({ k:'wipe', t:sg(pct(b.wipe - a.wipe)) + '% wiped', s:Math.abs(b.wipe - a.wipe), good:cx.tgtMine ? b.wipe < a.wipe : b.wipe > a.wipe });
+  if(a.many && !r && Math.abs(r1(b.lost - a.lost)) >= 0.1) ms.push({ k:'wounds', t:sg(r1(b.lost - a.lost)) + ' wounds', s:Math.abs(b.lost - a.lost) * 0.2, good:cx.tgtMine ? b.lost < a.lost : b.lost > a.lost });
+  // the attacking unit's own losses, by the end of the turn, and where (its hazard rolls, the attacks on it in a later step)
+  const dOwn = r1(b.own - a.own);
+  if(dOwn){ const why = [...new Set(Object.keys(a.ownBy).concat(Object.keys(b.ownBy)))].filter(k => Math.abs((b.ownBy[k] || 0) - (a.ownBy[k] || 0)) >= 0.05);
+    ms.push({ k:'own', t:(dOwn < 0 ? Math.abs(dOwn) + ' fewer' : dOwn + ' more') + (a.ownOne ? (Math.abs(dOwn) === 1 ? ' wound' : ' wounds') : '') + ' of ' + (cx.ownMine ? 'yours' : 'theirs') + ' lost' + (why.length ? ' (' + why.join(', ') + ')' : ''),
+      s:Math.abs(dOwn) * (a.ownOne ? 0.3 : 1), good:cx.ownMine ? dOwn < 0 : dOwn > 0 }); }
+  for(const c of a.ownChars){ const y = b.ownChars.find(z => z.name === c.name) || { p:0 }, f = y.p - c.p;
+    if(Math.abs(f) > mP(c.p, y.p) && pct(f) !== 0) ms.push({ k:'fateO', t:sg(pct(f)) + '% ' + dmShort(c.name) + ' dies', s:Math.abs(f) * 3, good:cx.ownMine ? f < 0 : f > 0, dO:f }); }
+  if(!r && Math.abs(d) < 0.005 && !ms.length) return { t:'0', u:'no change', v:0, v2:0, vo:0, zero:true, alt:'', more:[] };
+  ms.sort((x, y) => y.s - x.s);
+  const fT = ms.find(m => m.k === 'fateT'), fO = ms.find(m => m.k === 'fateO'), own = ms.find(m => m.k === 'own');
+  const mainGood = r ? (cx.tgtMine ? r < 0 : r > 0) : fT ? fT.good : null;
+  const ownGood = own ? own.good : fO ? fO.good : null;
   const good = mainGood != null ? mainGood : ownGood;
-  return { t:r ? sg(r) : '≈0', u:(a.many ? 'models' : 'wounds') + (cx.tgtMine ? ' of yours' : ''), v:d, v2:ft ? ft.f / 100 : 0, vo:a.own != null && b.own != null ? b.own - a.own : 0,
-    vo2:fo ? fo.f / 100 : 0, tiny:!r, alt:alt.join(' · '), good, trade:mainGood != null && ownGood != null && mainGood !== ownGood };
+  return { t:r ? sg(r) : '≈0', u:(a.many ? 'models' : 'wounds') + (cx.tgtMine ? ' of yours' : ''), v:d, v2:fT ? fT.dT : 0, vT:fT ? fT.dT : 0, vTd:fT ? fT.dTd : 0, vo:b.own - a.own, vO:fO ? fO.dO : 0,
+    nv:mV, tiny:!r, alt:ms.length ? ms[0].t : '', more:ms.slice(1).map(m => m.t), good, trade:mainGood != null && ownGood != null && mainGood !== ownGood };
 }
+// a reason about the target's own stats, said from the reader's side: "their InSv 5+" when it is theirs, "your InSv 5+" when the
+// target is yours (They attack)
+const dmWhose = (C, t) => C.plan.beats[C.plan.k].tgt.who === 'mine' ? String(t || '').replace(/\btheir\b/g, 'your').replace(/\bthey\b/g, 'you') : String(t || '');
 // why no choice can change this step: nothing left of the target or of the unit attacking, the target destroyed in every game
 const dmSatWhy = C => { const A = C.A; if(!A) return '';
   if(A.before >= A.models - 0.005) return 'nothing is left of the target by this step';
@@ -2445,6 +2489,7 @@ const dmSatWhy = C => { const A = C.A; if(!A) return '';
   return A.lost < 0.005 ? 'these attacks do no damage either way' : ''; };
 // why a choice changes nothing here: from what the calculator does with it and without it (calc.js resolve)
 function dmNoWhy(M, M2, lv){
+  if(lv.part && lv.kidsOn === lv.kids) return 'the rules it switches on are ticked already';
   if(lv.range) return M.ctx.halfWithin ? 'no weapon it reaches gets its bonus in this band' : 'it changes range only, which counts through half range: pick a band';
   if(lv.fact && !(lv.reach || []).length) return 'no rule here needs it';
   // a fact whose rules only change range (Dakka! Dakka! Dakka!: +3" range when riled up)
@@ -2560,15 +2605,29 @@ function dmLevers(st, plan){
   for(const r of M.rules){
     if(r.state === 'nc') continue;
     const lv = add('r:' + r.k, { sec:r.m.strat ? 'strat' : r.help ? 'help' : 'rule', side:'a', on:r.on, r, out:r.state === 'out', range:!!(r.e && r.e.range), apply:flip(r.k, r.on) });
-    if(r.pills) r.pills.forEach(([name, sel]) => add('k:' + r.k + '|' + name, { sec:'pill', side:'a', radio:true, on:r.on && sel, parent:lv.id, name, apply:s => { const x = chOf(s); x.val[r.pillKey] = name; x.on[r.k] = true; } }));
+    if(r.pills) r.pills.forEach(([name, sel]) => add('k:' + r.k + '|' + name, { sec:'pill', side:'a', radio:true, on:r.on && sel, parent:lv.id, name, apply:s => { const x = chOf(s); x.val[r.pillKey] = name; x.on[r.k] = true;
+      if(r.dice && (r.m.dice.two || []).includes(name)) x.val[r.diceKey] = r.m.dice.opts[1]; } }));   // a pick of two results: two D6 by itself
+    // the dice rolled, its own choice (one D6 with a pick of two results: the first of them)
+    if(r.dice) r.dice.opts.forEach(name => add('v:' + r.k + '|' + name, { sec:'pill', side:'a', radio:true, dice:true, on:r.on && r.dice.now === name, parent:lv.id, name, apply:s => { const x = chOf(s); x.val[r.diceKey] = name; x.on[r.k] = true;
+      if(name === r.m.dice.opts[0] && r.dice.forced) x.val[r.pillKey] = r.pick.split(' and ')[0]; } }));
   }
   for(const x of M.defs) if(x.state !== 'nc'){
     const lv = add('d:' + x.k, { sec:x.d && x.d.a === 'strat' ? 'strat' : x.g ? 'help' : 'rule', side:'t', on:x.on, x, out:x.state === 'out', apply:flip(x.k, x.on) });
     if(x.pills) x.pills.forEach(([name, sel]) => add('k:' + x.k + '|' + name, { sec:'pill', side:'t', radio:true, on:x.on && sel, parent:lv.id, name, apply:s => { const c = chOf(s); c.val[x.pillKey] = name; c.on[x.k] = true; } })); }
+  // a rule counted always (its data: always, defAlways, the InSv of its profile) or required by the rules (hazard rolls, One Last Kill,
+  // Berserker Frenzy): removable, but quiet while ticked for you (no ×, its effect in the secondary line)
+  const own = chOf(st).on;
+  for(const lv of L){ const x = lv.r || lv.x; if(!x || lv.sec === 'pill') continue;
+    const k = lv.r ? lv.r.k : lv.x.k;
+    lv.always = lv.x && lv.x.req ? 'required by the rules' : lv.x && lv.x.comeback ? 'required by the rules'
+      : x.state === 'on' && (/^always\b/.test(x.why || '') || x.why === 'the InSv in its profile') ? 'always counted' : '';
+    lv.quiet = !!lv.always && lv.on && own[k] == null; lv.left = !!lv.always && !lv.on && own[k] === false; }
   for(const f of L.filter(x => x.fact)) for(const y of L){
     if(y.underFact || y.fact || y.sec === 'pill') continue;
     const c = y.r ? (!y.r.m.strat && !y.r.help ? y.r.cond : '') : y.x && y.x.d ? y.x.cond : '';
     if((c && storeOf(c) === f.store && condWho(c, b) === f.unitWho) || (f.store === 'stationary' && y.x && y.x.k === 'c:heavy')) y.underFact = f.id; }
+  // a fact not said to hold, with some of the rules it switches on ticked by hand: partly ticked
+  for(const f of L.filter(x => x.fact)){ const kids = L.filter(y => y.underFact === f.id); f.part = !f.on && kids.some(y => y.on); f.kidsOn = kids.filter(y => y.on).length; f.kids = kids.length; }
   return L;
 }
 // a lever's what-if: the whole state with that one change, planned again (key: the engine's input)
@@ -2609,7 +2668,8 @@ function dmFxIn(C, lv){
   if(f.zero && lv.out && !lv.on) return '<span class="fxv z' + (f.q ? ' est' : '') + '">no change</span>';
   // the colour is the reader's: good news for the list viewed in green, bad news in red (never the accent); the words say what tapping does
   const cls = f.zero || f.good == null ? ' z' : f.good ? ' good' : ' bad';
-  const what = lv.radio ? '' : lv.over || (lv.out && !lv.on) ? ' if you count it' : lv.on ? (lv.x && lv.x.req ? ' if left out' : ' if unticked') : lv.x && lv.x.req ? ' if counted' : '';
+  const what = lv.radio ? '' : lv.over || (lv.out && !lv.on) ? ' if you count it' : lv.on ? (lv.always ? ' if left out' : ' if unticked') : lv.always ? ' if counted' : '';
+  if(lv.quiet) return '<span class="fxm"></span><small class="alt">' + esc((f.zero ? 'if left out: no change' : 'if left out: ' + f.t + ' ' + f.u) + (f.alt ? ' · ' + f.alt : '')) + '</small>';
   return '<span class="fxm"><span class="fxv' + cls + (f.q ? ' est' : '') + '">' + esc(f.t) + '</span>' + (lv.radio || f.zero ? '' : '<small>' + esc(f.u + what) + '</small>') + '</span>' + (f.alt ? '<small class="alt">' + esc(f.alt) + '</small>' : '');
 }
 
@@ -2697,15 +2757,26 @@ async function dmFill(C){
     dmBest(C);
   } finally { dmPending--; }
 }
+// a row's detail: the measures past the main one and the largest of the others, shown when "+N" is tapped (kept open while on the tab)
+const DM_MX = new Set();
+function dmMoreShow(lv){
+  const f = lv.fx || lv.est, more = f && !lv.quiet ? f.more || [] : [], b = document.querySelector('[data-dmmore="' + CSS.escape(lv.id) + '"]'), l = document.querySelector('[data-fxmore="' + CSS.escape(lv.id) + '"]');
+  if(!b || !l) return;
+  const open = DM_MX.has(lv.id) && more.length > 0;
+  b.hidden = !more.length; b.textContent = open ? 'less' : '+' + more.length; b.setAttribute('aria-expanded', String(open)); b.setAttribute('aria-label', open ? 'Fewer measures' : more.length + ' more measures');
+  l.hidden = !open; l.textContent = more.join(' · ');
+  b.parentElement.classList.toggle('hasmore', more.length > 0); b.parentElement.classList.toggle('open', open);
+}
 // a lever's effect and its reason, written into the row in place (q: the quick one, until the exact one is in)
 function dmPatch(C, lv, q){
   const f = dmEff(C, lv, !!q);
   if(q) lv.est = f; else lv.fx = f;
   for(const el of document.querySelectorAll('[data-fx="' + CSS.escape(lv.id) + '"]')) el.innerHTML = dmFxHtml(C, lv);
+  dmMoreShow(lv);
   const w = document.querySelector('[data-why="' + CSS.escape(lv.id) + '"]');
   const g = lv.fx || lv.est;
   if(w && g && !lv.radio){ const k = lv.plan ? lv.plan.beats.findIndex(x => x.id === C.plan.beats[C.plan.k].id) : -1;
-    const why = g.zero && !dmSatWhy(C) ? dmNoWhy(C.M, k >= 0 ? lv.plan.beats[k].M : null, lv) : '';   // (a reason for every row at once: said once, above the list)
+    const why = g.zero && !dmSatWhy(C) ? dmWhose(C, dmNoWhy(C.M, k >= 0 ? lv.plan.beats[k].M : null, lv)) : '';   // (a reason for every row at once: said once, above the list)
     w.innerHTML = dmWhyHtml(C, lv, g.zero ? 'no change' + (why ? ': ' + why : '') : ''); }
   dmAnchorKeep();
 }
@@ -2716,32 +2787,39 @@ function dmGain(C, lv, e){
   const sgn = (lv.on && !lv.radio ? -1 : 1) * (lv.side === 't' ? -1 : 1);
   return sgn * (e.v + (Math.abs(e.v) < 0.05 ? (e.v2 || 0) * 0.01 : 0));
 }
-// "best": the profile that destroys most in this step, the pick and each side's stratagem that does the most for it, said by what
-// ("most models", "saves most"). Whose best it is comes from the step: its attacker's choices, its target's. None is crowned where
-// a choice trades: models for a CHARACTER's fate (Epic Challenge: fewer models, but Khârn dies far more often), or more of
-// theirs destroyed for more of your own unit lost (hazard rolls: Unshackled Wrath's "All three", a supercharge)
+// "best": the profile, the pick and each side's stratagem that does the most for whoever chooses it, said by what ("most models",
+// "saves most"). Whose best it is comes from the step: its attacker's choices, its target's. Crowned only when it is the best on
+// every measure (the models, a CHARACTER's fate, the unit's own losses and fates) and better on the models by more than the dice's
+// own margin, than nothing and than the runner-up: never a gain within the noise, never a trade (Epic Challenge: fewer models but
+// Khârn dies far more often; Unshackled Wrath's "All three": more destroyed, more of yours lost)
 function dmBest(C){
   const b = C.plan.beats[C.plan.k], unit = C.A && C.A.one ? 'wounds' : 'models';
   const mark = (lv, t) => { for(const el of document.querySelectorAll('[data-fx="' + CSS.escape(lv.id) + '"]')) if(!el.querySelector('.best')) (el.querySelector('.fxm') || el).insertAdjacentHTML('beforeend', '<em class="best">' + esc(t) + '</em>'); };
-  const fateT = (lv, e) => (lv.on && !lv.radio ? -1 : 1) * (lv.side === 't' ? -1 : 1) * (e.v2 || 0);
-  const trade = list => list.some(lv => lv.fx && (lv.fx.trade || (Math.abs(lv.fx.v2 || 0) >= 0.05 && Math.sign(fateT(lv, lv.fx)) !== Math.sign(dmGain(C, lv, lv.fx) || fateT(lv, lv.fx)))));
+  // what a choice is worth on each measure to whoever makes it (a ticked box: having it, against not)
+  const gains = lv => { const e = lv.fx, s = (lv.on && !lv.radio ? -1 : 1) * (lv.side === 't' ? -1 : 1);
+    return { main:s * e.v, fT:s * (e.vT || 0), fTd:s * (e.vTd || 0), own:-s * (e.vo || 0), fO:-s * (e.vO || 0), nv:e.nv || 0.05 }; };
+  const ZERO = { main:0, fT:0, fTd:0, own:0, fO:0, nv:0.05 }, SLACK = { fT:0.02, fTd:0.02, own:0.1, fO:0.02 };
+  // the top of a list of options (zero: not choosing any is an option too): best on the models by the margin, and no worse on any other
+  const top = (opts, zero) => { const all = opts.map(lv => [lv, lv.on && lv.radio ? ZERO : gains(lv)]).concat(zero ? [[null, ZERO]] : []);
+    const [t, g] = all.reduce((x, y) => y[1].main > x[1].main ? y : x, all[0]);
+    if(!t) return null;
+    for(const [lv, h] of all){ if(lv === t) continue;
+      if(!(g.main - h.main > Math.max(g.nv, h.nv))) return null;
+      for(const k of Object.keys(SLACK)) if(g[k] < h[k] - SLACK[k]) return null; }
+    return t; };
   const groups = new Map();
-  for(const lv of C.levers) if(lv.sec === 'prof' || lv.sec === 'pill'){ const k = lv.sec === 'prof' ? lv.c.k : 'pill:' + lv.parent; if(!groups.has(k)) groups.set(k, []); groups.get(k).push(lv); }
-  const now = C.A ? (C.A.one ? C.A.lost : C.A.killed) : 0;
+  for(const lv of C.levers) if(lv.sec === 'prof' || lv.sec === 'pill'){ const k = lv.sec === 'prof' ? lv.c.k : 'pill:' + lv.parent + (lv.dice ? '#dice' : ''); if(!groups.has(k)) groups.set(k, []); groups.get(k).push(lv); }
   for(const list of groups.values()){
     if(list.length < 2 || list.some(lv => !lv.on && !lv.fx)) continue;
-    if(trade(list.filter(lv => !lv.on))) continue;
-    // a profile: by the number it shows (this step's); a pick: by its effect
-    const val = lv => list[0].sec === 'prof' ? (lv.on ? now : lv.fx.val) - now : lv.on ? 0 : lv.side === 't' ? -lv.fx.v : lv.fx.v;
-    const top = list.reduce((x, lv) => val(lv) > val(x) ? lv : x, list[0]);
-    if(val(top) > 0.05 || (top.on && list.some(lv => val(lv) < -0.05))) mark(top, (top.side === 't' ? 'saves most' : 'best · most ' + unit)); }
+    const t = top(list.filter(lv => lv.on || lv.fx), !list.some(lv => lv.on));   // picks of a rule not ticked: against not ticking it too
+    if(t) mark(t, t.side === 't' ? 'saves most' : 'best · most ' + unit); }
   for(const side of ['a', 't']){
     const list = C.levers.filter(lv => lv.sec === 'strat' && lv.side === side && !lv.out && lv.fx);
-    if(list.length < 2 || trade(list)) continue;
-    const top = list.reduce((x, lv) => dmGain(C, lv, lv.fx) > dmGain(C, x, x.fx) ? lv : x, list[0]);
-    if(!(dmGain(C, top, top.fx) > 0.05)) continue;
+    if(list.length < 2) continue;
+    const t = top(list, true);
+    if(!t) continue;
     const mine = (side === 'a') === (b.atk.who === 'mine');
-    mark(top, (mine ? 'best' : 'their best') + ' · ' + (side === 'a' ? 'most ' + unit : 'saves most'));
+    mark(t, (mine ? 'best' : 'their best') + ' · ' + (side === 'a' ? 'most ' + unit : 'saves most'));
   }
   dmAnchorKeep();
 }
@@ -2770,8 +2848,11 @@ function screenDamage(){
 function dmRedraw(C){
   if(DM_CTX !== C) return;
   C.r = dmGet(C.inX); C.prov = false; C.A = dmBeatAns(C.plan, C.plan.k, C.r);
-  const a = $('#dmAns'); if(a){ a.outerHTML = dmCard(C); dmChipCap(); dmStick(); }
-  const s = $('#dmStrip'); if(s){ s.outerHTML = dmStripHtml(); measure(); }
+  // the card and the strip together, from the same games (the strip pinned small stays small)
+  const a = $('#dmAns'), s = $('#dmStrip'), mini = !!s && s.classList.contains('mini');
+  if(a){ a.outerHTML = dmCard(C); dmChipCap(); }
+  if(s){ s.outerHTML = dmStripHtml(); if(mini) $('#dmStrip').classList.add('mini'); measure(); }
+  dmStick();
   // the profile picked shows the answer itself: now from its own 10,000 games
   for(const lv of C.levers) if(lv.sec === 'prof' && lv.on) for(const el of document.querySelectorAll('[data-fx="' + CSS.escape(lv.id) + '"]')) el.innerHTML = dmFxHtml(C, lv);
   dmAnchorKeep();
@@ -2783,8 +2864,9 @@ function dmSentence(st, P, plan){
   const mineTok = tok('mine', P.mine, P.me, 'Pick your unit');
   const theirsTok = P.typed ? tok('theirs', { typed:true }, null) : tok('theirs', P.theirs, P.TL, me1 ? 'Pick their unit' : 'Pick the attacker');
   const tsub = u => !u ? '' : u.typed ? 'typed: ' + dmTypedLine(st) : (u === P.theirs && P.TL ? esc(P.TL.name) + ' · ' : '') + esc(dmStats(dmModels(u, 'ranged')));
-  const step = plan.beats.length ? plan.beats[plan.k].id : '';
-  const verb = [['shoot', many ? 'shoot' : 'shoots'], ['fight', many ? 'fight' : 'fights']].map(([v, l]) => { const on = step === v || (step === 'back' && v === 'fight');
+  // the buttons read Shoot and Fight, always (before both units are picked: the step the turn will start with)
+  const step = plan.beats.length ? plan.beats[plan.k].id : isObj(st.turn[st.dir]) ? DM_ORDER.find(x => st.turn[st.dir][x] && x !== 'charge') || '' : '';
+  const verb = [['shoot', 'shoot'], ['fight', 'fight']].map(([v, l]) => { const on = step === v || (step === 'back' && v === 'fight');
     return '<button data-dmverb="' + v + '" aria-pressed="' + on + '"' + (on ? ' class="on"' : '') + '>' + l + '</button>'; }).join('');
   const canSwap = !!(P.theirs && P.mine);
   return '<div class="dmsen">' +
@@ -2812,9 +2894,13 @@ function dmTypedStep(st, k, d){
   else { const x = (v || 7) - d; st.typed[k] = x >= 7 ? 0 : Math.max(2, x); }
 }
 // a typed number: Models, T and W at least 1 (at most 100, 30, 99); a save or Feel No Pain 2+ to 6+, anything else none
+// a number typed: models, T and W 1 or more; a save or Feel No Pain 2+ to 6+, or 7 (and 0) for none. An empty or unreadable field keeps
+// the value it had (never 0)
 function dmTypedSet(st, k, raw){
-  const v = parseInt(String(raw).replace(/[^\d]/g, ''), 10), top = { n:100, T:30, W:99 }[k];
-  st.typed[k] = top ? Math.min(top, Math.max(1, v || DM_TYPED[k])) : v >= 2 && v <= 6 ? v : 0;
+  const d = String(raw).replace(/[^\d]/g, ''), v = parseInt(d, 10), top = { n:100, T:30, W:99 }[k];
+  if(!d || !(v >= 0)) return;
+  if(top){ if(v >= 1) st.typed[k] = Math.min(top, v); return; }
+  if(v >= 2 && v <= 6) st.typed[k] = v; else if(v === 0 || v === 7) st.typed[k] = 0;
 }
 // nothing to attack yet: the other side is picked here, or typed
 function dmAsk(st, P){
@@ -2870,7 +2956,9 @@ const dmSet = st => { const d = st.dir; return Object.keys(st.ch).some(k => k.st
 function dmChips(C){
   const { M, plan } = C, b = plan.beats[plan.k], out = [];
   // a chip unticks its box for this step (it can always be ticked again in its row); a rule its fact ticks is in the fact's chip
-  const chip = (lv, label, cls) => out.push('<button class="dmchip' + (cls ? ' ' + cls : '') + '" data-dmlv="' + esc(lv) + '" aria-label="' + esc(label) + ': untick">' + esc(label) + '<i aria-hidden="true">×</i></button>');
+  const chip = (lv, label, cls) => { const y = DM_LV.get(lv);
+    if(y && y.quiet) return out.push('<button class="dmchip quiet' + (cls ? ' ' + cls : '') + '" data-dmto="' + esc(lv) + '" aria-label="' + esc(label) + ': ' + esc(y.always) + ', show its row">' + esc(label) + '</button>');
+    out.push('<button class="dmchip' + (cls ? ' ' + cls : '') + '" data-dmlv="' + esc(lv) + '" aria-label="' + esc(label) + ': untick">' + esc(label) + '<i aria-hidden="true">×</i></button>'); };
   const seen = new Set(), info = label => { if(seen.has(label)) return; seen.add(label); out.push('<span class="dmchip info">' + esc(label) + '</span>'); };
   const byFact = (id, k) => { const y = DM_LV.get(id), f = y && y.underFact && DM_LV.get(y.underFact); return !!(f && f.on && dmCh(C.st, b.id).on[k] == null); };
   const from = x => x.carried ? 'from ' + x.carried.from.toLowerCase() + ': ' : '';
@@ -2880,7 +2968,8 @@ function dmChips(C){
   for(const lv of C.levers) if(lv.fact && lv.on) chip(lv.id, (lv.side === 'a' ? att : tg) + lv.label, lv.why ? 'auto' : '');
   for(const x of M.sit) if(x.on && !x.fixed) chip('s:' + x.k, (x.k === 'c:cover' ? '' : att) + x.label, x.why ? 'auto' : '');
   // what the rules require, left out: the player's own call, said as one (tap: counted again)
-  for(const x of M.sit) if(x.req && !x.on) out.push('<button class="dmchip ovr" data-dmlv="' + esc('s:' + x.k) + '" aria-label="' + esc(x.label) + ': count again">' + esc(att + x.label + ': left out (by you)') + '<i aria-hidden="true">↺</i></button>');
+  for(const y of C.levers) if(y.left){ const nm = y.x && y.x.label ? y.x.label : y.r ? y.r.m.from : y.x ? dmCap(y.x.src) : '';
+    out.push('<button class="dmchip ovr" data-dmlv="' + esc(y.id) + '" aria-label="' + esc(nm) + ': count again">' + esc((y.side === 'a' ? att : tg) + nm + ': left out (by you)') + '<i aria-hidden="true">↺</i></button>'); }
   if(M.prec && M.prec.on) chip('q:', '[PRECISION] → ' + M.prec.who, M.prec.why ? 'auto' : '');
   for(const r of M.rules) if(r.on && !byFact('r:' + r.k, r.k)) chip('r:' + r.k, att + from(r) + (r.m.cp ? r.m.cp + 'CP ' : '') + r.m.from + (r.help ? ' (' + r.help + ')' : '') + (r.pills ? ': ' + r.pills.find(p => p[1])[0] : '') + (r.over ? ' (by you)' : ''), r.over ? 'over' : r.carried ? 'carry' : r.state === 'on' && dmCh(C.st, b.id).on[r.k] == null ? 'auto' : '');
   const cap = t => t.charAt(0).toUpperCase() + t.slice(1);
@@ -2907,10 +2996,12 @@ function dmChipCap(){
 const dmBandName = o => !o || !o.v ? 'No half-range bonus' : 'Within ' + o.v + '"' + (o.lo ? ', not ' + o.lo + '"' : '');
 // one row of the list: the whole row is the tap target; the effect at the right, worked out in the background
 function dmRowHtml(C, lv, title, sub, why){
-  const cls = 'dmlv' + (lv.on ? ' on' : '') + (lv.radio ? ' rad' : '') + (lv.out ? ' out' : '');
-  return '<button class="' + cls + '" data-dmlv="' + esc(lv.id) + '" aria-pressed="' + !!lv.on + '"><span class="ck" aria-hidden="true"></span>' +
+  const cls = 'dmlv' + (lv.on ? ' on' : '') + (lv.part ? ' part' : '') + (lv.radio ? ' rad' : '') + (lv.out ? ' out' : '') + (lv.quiet ? ' quiet' : '');
+  // (the row's detail: the measures past the first two, behind "+N")
+  return '<div class="dmrw"><button class="' + cls + '" data-dmlv="' + esc(lv.id) + '" aria-pressed="' + !!lv.on + '"><span class="ck" aria-hidden="true"></span>' +
     '<span class="lb"><b>' + title + '</b>' + (sub ? '<small>' + sub + '</small>' : '') + '<small class="why" data-why="' + esc(lv.id) + '">' + dmWhyHtml(C, lv, why) + '</small></span>' +
-    '<span class="fx" data-fx="' + esc(lv.id) + '">' + dmFxHtml(C, lv) + '</span></button>';
+    '<span class="fx" data-fx="' + esc(lv.id) + '">' + dmFxHtml(C, lv) + '</span></button>' +
+    '<button class="dmmx" data-dmmore="' + esc(lv.id) + '" aria-expanded="false" hidden></button><p class="dmmxl" data-fxmore="' + esc(lv.id) + '" hidden></p></div>';
 }
 const DM_SIDE = (C, side) => (side === 'a') === (C.plan.beats[C.plan.k].atk.who === 'mine') ? 'yours' : 'theirs';
 function dmWhyHtml(C, lv, extra){
@@ -2919,15 +3010,17 @@ function dmWhyHtml(C, lv, extra){
   let st = '';
   const was = (k, why) => ch.on[k] == null ? 'ticked for you: ' + why : lv.on ? 'ticked' : 'unticked (it was ticked for you: ' + why + ')';
   const x = lv.r || (lv.x && (lv.x.d || lv.x.g) ? lv.x : null);
-  if(x && x.carried && ch.on[x.k] == null) st = 'ticked in ' + x.carried.from + ': it lasts ' + (x.carried.lasts === 'turn' ? 'to the end of the turn' : 'past this turn') + ' · untick it here for this step';
+  if(lv.quiet) st = lv.always + ' · you can leave it out';
+  else if(lv.left) st = 'left out by you · ' + (lv.always === 'always counted' ? 'it is always counted' : 'the rules require it');
+  else if(x && x.carried && ch.on[x.k] == null) st = 'ticked in ' + x.carried.from + ': it lasts ' + (x.carried.lasts === 'turn' ? 'to the end of the turn' : 'past this turn') + ' · untick it here for this step';
   else if(x && x.state === 'out') st = lv.on ? 'counted by you · by the rules: ' + x.why : 'by the rules: ' + x.why + ' · yours to count anyway';
   else if(lv.r) st = lv.r.state === 'on' ? was(lv.r.k, lv.r.why) : lv.on ? 'ticked' : lv.r.m.strat ? 'if used' : 'if it applies';
   else if(x) st = x.state === 'on' ? was(x.k, x.why) : lv.on ? 'ticked' : x.d && x.d.a === 'strat' ? 'if used' : x.why || 'if it applies';
-  else if(lv.fact) st = lv.why ? 'holds: ' + lv.why : lv.on ? 'said to hold' : 'if it holds';
+  else if(lv.fact) st = lv.why ? 'holds: ' + lv.why : lv.on ? 'said to hold' : lv.part ? 'partly: ' + lv.kidsOn + ' of its ' + lv.kids + ' rules ticked by hand' : 'if it holds';
   else if(lv.x && lv.x.req) st = lv.on ? (lv.x.why ? 'ticked for you: ' + lv.x.why : 'ticked') : 'left out by you · ' + lv.x.req;
   else if(lv.x) st = lv.x.why ? 'ticked for you: ' + lv.x.why : lv.on ? 'ticked' : 'if it applies';
   else if(lv.prec) st = lv.prec.why || (lv.on ? 'ticked' : 'the attacker may pick it (24.28)');
-  return side + (st ? '<span' + ((x && x.state === 'out' && lv.on) || (lv.x && lv.x.req && !lv.on) ? ' class="ovr"' : '') + '>' + esc(st) + '</span>' : '') + (extra ? '<span class="nw2">' + esc(extra) + '</span>' : '');
+  return side + (st ? '<span' + ((x && x.state === 'out' && lv.on) || lv.left || (lv.x && lv.x.req && !lv.on) ? ' class="ovr"' : '') + '>' + esc(st) + '</span>' : '') + (extra ? '<span class="nw2">' + esc(extra) + '</span>' : '');
 }
 // the weapon's characteristics in the datasheet's columns (RNG A BS S AP D, or A WS S AP D), its keywords under them
 const dmStatCells = (w, ranged, plus) => '<span class="dmwst">' + (ranged ? [['RNG', plus && parseInt(w.range, 10) ? w.range + '→' + (parseInt(w.range, 10) + plus) + '"' : w.range]] : []).concat([['A', w.A], [ranged ? 'BS' : 'WS', w.BS || w.WS], ['S', w.S], ['AP', w.AP], ['D', w.D]]).map(([k, v]) => '<span><i>' + k + '</i><b>' + esc(v == null ? '–' : v) + '</b></span>').join('') + '</span>' +
@@ -2944,7 +3037,7 @@ function dmListHtml(C){
     '<p class="dmmeas">' + (plan.beats.length > 1 ? 'Effects are over the whole turn: ' + (b.tgt.who === 'mine' ? 'your' : 'their') + ' models destroyed by its end, and ' + (b.atk.who === 'mine' ? 'your' : 'their') + ' own losses.'
       : 'Effects are on this step' + (C.M.hazard ? ', with ' + (b.atk.who === 'mine' ? 'your' : 'their') + ' losses to the hazard rolls' : '') + '.') + '</p>' +
     (plan.beats.length > 1 || plan.turn.charge ? '<p class="dmturnl"><span>' + esc(plan.beats.map(x => x.label).join(' → ')) + (plan.turn.charge && plan.beats.some(x => x.id === 'fight') ? ' · the charge is taken to succeed (no charge roll)' : '') + '</span>' + (plan.beats.length > 1 ? '<button class="textbtn dmdrop" data-dmdrop="' + b.id + '">Take ' + esc(b.label.toLowerCase()) + ' out</button>' : '') + '</p>' : '') +
-    (C.A && dmSatWhy(C) ? '<p class="note dmsat">Nothing here changes this step: ' + esc(dmSatWhy(C)) + '.</p>' : '');
+    (C.A && dmSatWhy(C) ? '<p class="note dmsat">Nothing here changes this step: ' + esc(dmWhose(C, dmSatWhy(C))) + '.</p>' : '');
   if(M.bands){
     h += '<section class="dmsec"><h3 class="dmh3">Half range <small>[RAPID FIRE], [MELTA]</small></h3>' + M.bands.opts.map(o => {
       const x = lv('b:' + o.v), extra = o.all.filter(n => !o.now.includes(n));
@@ -2999,7 +3092,7 @@ function dmLeverRow(C, x){
     return dmRowHtml(C, x, title, sub, '') + dmPills(C, x); }
   if(x.fact){ const kids = C.levers.filter(y => y.underFact === x.id);
     const sub = [kids.length ? '' : x.reach.length ? 'ticks ' + andList(x.reach) : '', x.also, x.cond.length ? 'also the condition of ' + andList(x.cond) + ' (tick it under Stratagems)' : ''].filter(Boolean).join(' · ');
-    return dmRowHtml(C, x, esc(x.label), esc(sub), '') + (kids.length ? '<div class="dmprof sub dmkids"><span class="dmpl">' + (x.on ? 'It ticks' : 'It would tick') + ' · each its own box</span>' + kids.map(y => { const nm = y.r ? y.r.m.from : y.x && y.x.label ? y.x.label : y.x ? y.x.src : '';
+    return dmRowHtml(C, x, esc(x.label), esc(sub), '') + (kids.length ? '<div class="dmprof sub dmkids"><span class="dmpl">Rules it switches on</span>' + kids.map(y => { const nm = y.r ? y.r.m.from : y.x && y.x.label ? y.x.label : y.x ? y.x.src : '';
       return '<button class="dmpp dmkid' + (y.on ? ' on' : '') + '" data-dmlv="' + esc(y.id) + '" aria-pressed="' + y.on + '"><b><span class="kc" aria-hidden="true">' + (y.on ? '✓' : '') + '</span>' + esc(dmCap(nm)) + '</b><em data-fx="' + esc(y.id) + '">' + dmFxHtml(C, y) + '</em></button>'; }).join('') + '</div>' : ''); }
   if(x.x) return dmRowHtml(C, x, esc(x.x.label), esc(x.x.sub), '');
   if(x.prec) return dmRowHtml(C, x, 'Allocate [PRECISION] attacks to ' + esc(x.prec.chars.length > 1 ? 'a CHARACTER' : x.prec.who), 'while it is visible to an attacking model, until it is destroyed (24.28)', '') + dmPills(C, x);
@@ -3039,12 +3132,15 @@ function dmRuleLink(C, lv, name){
 const dmPov = (C, t) => DM_SIDE(C, 'a') === 'yours' ? String(t || '') : String(t || '').replace(/\b(your|their|Your|Their)(?= (?:command|movement|shooting|charge|fight|Command|Movement|Shooting|Charge|Fight) phase\b| turn\b)/g, w => ({ your:'their', their:'your', Your:'Their', Their:'Your' })[w]);
 const dmWhenTargeted = t => t.replace(/^their (shooting|fight) phase: /i, (m, p) => 'when targeted in the ' + p[0].toUpperCase() + p.slice(1) + ' phase: ');
 function dmPills(C, x){
-  const kids = C.levers.filter(y => y.sec === 'pill' && y.parent === x.id);
+  const all = C.levers.filter(y => y.sec === 'pill' && y.parent === x.id), kids = all.filter(y => !y.dice), dice = all.filter(y => y.dice);
   if(!kids.length) return '';
+  const dn = x.r && x.r.dice, hm = x.r && x.r.m.hazard;
+  const diceRow = dice.length ? '<div class="dmprof sub"><span class="dmpl">Dice rolled</span>' + dice.map(y => '<button class="dmpp' + (y.on ? ' on' : '') + '" data-dmlv="' + esc(y.id) + '" aria-pressed="' + y.on + '"><b>' + esc(y.name) + '</b>' +
+    (hm && hm.dice === y.name ? '<small>' + dmPlural(hm.rolls || 1, 'hazard roll', 'hazard rolls') + ' after, counted</small>' : '') + '<em data-fx="' + esc(y.id) + '">' + dmFxHtml(C, y) + '</em></button>').join('') +
+    (dn && !dn.forced && dn.now === dn.opts[1] && dn.note ? '<p class="note dmdn">' + esc(dn.note) + '</p>' : '') + '</div>' : '';
   const pk = x.r && x.r.m.pick ? x.r.m.pick : [];
-  const hm = x.r && x.r.m.hazard;
-  return '<div class="dmprof sub">' + kids.map(y => { const p = pk.find(q => q.name === y.name), hz = p && /\[hazardous\]/i.test(p.note), hr = hm && (!hm.picks || hm.picks.includes(y.name));
-    return '<button class="dmpp' + (y.on ? ' on' : '') + '" data-dmlv="' + esc(y.id) + '" aria-pressed="' + y.on + '"><b>' + esc(y.name) + '</b>' + (hz ? '<small>with [HAZARDOUS]: its hazard rolls are counted</small>' : hr ? '<small>' + esc(hm.when) + ': ' + dmPlural(hm.rolls || 1, 'hazard roll', 'hazard rolls') + ' after, counted</small>' : '') + '<em data-fx="' + esc(y.id) + '">' + dmFxHtml(C, y) + '</em></button>'; }).join('') + '</div>';
+  return '<div class="dmprof sub">' + kids.map(y => { const p = pk.find(q => q.name === y.name), hz = p && /\[hazardous\]/i.test(p.note), hr = hm && !hm.dice && (!hm.picks || hm.picks.includes(y.name));
+    return '<button class="dmpp' + (y.on ? ' on' : '') + '" data-dmlv="' + esc(y.id) + '" aria-pressed="' + y.on + '"><b>' + esc(y.name) + '</b>' + (hz ? '<small>with [HAZARDOUS]: its hazard rolls are counted</small>' : hr ? '<small>' + esc(hm.when) + ': ' + dmPlural(hm.rolls || 1, 'hazard roll', 'hazard rolls') + ' after, counted</small>' : '') + '<em data-fx="' + esc(y.id) + '">' + dmFxHtml(C, y) + '</em></button>'; }).join('') + '</div>' + diceRow;
 }
 // what the rules rule out for this pair, in one line: each a button, the player's to count anyway (its effect with it); the
 // other stratagems of another phase, with nothing to count, named with the reason
@@ -3108,14 +3204,70 @@ const dmStepId = () => DM_CTX ? DM_CTX.plan.beats[DM_CTX.plan.k].id : 'shoot';
 // the step shown and the pair as they were before)
 const DM_ORDER = ['shoot', 'charge', 'fight', 'back'];
 const dmStepLabel = id => id === 'charge' ? 'Charge' : DM_STEPS[id].label;
-const dmSnap = st => JSON.stringify({ dir:st.dir, turn:isObj(st.turn[st.dir]) ? st.turn[st.dir] : null, step:st.step[st.dir] || '', atk:st.atk, tgt:st.tgt, aArmy:st.aArmy, tArmy:st.tArmy });
-function dmRestore(snap){
-  const st = dmState(), o = JSON.parse(snap);
-  Object.assign(st, { dir:o.dir, atk:o.atk, tgt:o.tgt, aArmy:o.aArmy, tArmy:o.tArmy });
+// a change the player can undo: what it changed, as it was before (the turn and the step shown; for a unit change the pair too)
+const dmBefore = (st, unit) => JSON.parse(JSON.stringify(Object.assign({ dir:st.dir, turn:isObj(st.turn[st.dir]) ? st.turn[st.dir] : null, step:st.step[st.dir] || '' },
+  unit ? { atk:st.atk, tgt:st.tgt, aArmy:st.aArmy, tArmy:st.tArmy } : {})));
+// the changes that can be undone, the latest last (at most 10). Each Undo puts back exactly what its change changed (the turn and
+// the step, a unit and the ticks the change dropped), and its toast names it; Undo again goes one further back
+const DM_UNDO = [];
+function dmChange(label, before, dropped){
+  if(!label) return;
+  DM_UNDO.push({ label, before, dropped:dropped || [], army:cur.army }); if(DM_UNDO.length > 10) DM_UNDO.shift();
+  dmToast(label, true);
+}
+function dmUndo(){
+  const i = DM_UNDO.map(x => x.army).lastIndexOf(cur.army); if(i < 0) return null;
+  const x = DM_UNDO.splice(i, 1)[0], st = dmState(), o = x.before;
+  st.dir = o.dir;
   if(o.turn) st.turn[o.dir] = o.turn; else delete st.turn[o.dir];
   st.step[o.dir] = o.step;
+  if('atk' in o) Object.assign(st, { atk:o.atk, tgt:o.tgt, aArmy:o.aArmy, tArmy:o.tArmy });
+  for(const d of x.dropped){ const c = st.ch[d.ck] = isObj(st.ch[d.ck]) ? st.ch[d.ck] : {}; c[d.f] = isObj(c[d.f]) ? c[d.f] : {}; c[d.f][d.k] = d.v; }
+  // ticks made since for the other unit that the rules rule out here are dropped too (and said)
+  const also = 'atk' in o ? dmCleanTicks(st, x.dropped.map(d => d.ck + '|' + d.f + '|' + d.k)) : [];
   saveSession(); rerender();
-  return 'Back as it was';
+  const nx = DM_UNDO.filter(y => y.army === cur.army).pop();
+  // (short: with another change to undo, the toast names that one, as its Undo reverts it)
+  dmToast((also.length ? dmDroppedWords(also) + ' · ' : '') + (nx ? 'Undone · before it: ' + nx.label : 'Undone: ' + x.label), !!nx);
+  return null;
+}
+// a unit changed: a tick stays only where its rule still applies to the new pair. One the rules now rule out (it would become
+// "counted by you") or with no rule on the new pair is dropped, and so is a weapon's or a pick's own choice with nothing left to
+// choose. keep: ticks not to drop (put back by an Undo). Returns what was dropped: { ck, f, k, v, name, why }
+function dmCleanTicks(st, keep){
+  const plan = dmPlan(st), out = [], kept = new Set(keep || []);
+  if(!plan.P.ready) return out;
+  for(const b of plan.beats){ const ck = st.dir + ':' + b.id, c = st.ch[ck]; if(!isObj(c)) continue;
+    const M = b.M, items = new Map();
+    for(const r of M.rules) items.set(r.k, { state:r.state, name:(r.m.cp ? r.m.cp + 'CP ' : '') + r.m.from, why:r.why });
+    for(const x of M.defs) items.set(x.k, { state:x.state, name:x.d && x.d.a === 'strat' ? x.d.t.replace(/^(\d+CP [^:]+):.*$/, '$1') : x.src, why:x.why });
+    for(const x of M.sit) items.set(x.k, { state:'on', name:x.label });
+    if(M.prec) items.set('c:prec', { state:'on', name:'[PRECISION]' });
+    const drop = (f, k, said, why) => { if(kept.has(ck + '|' + f + '|' + k)) return; out.push({ ck, f, k, v:c[f][k], name:said, why, step:b.label }); delete c[f][k]; };
+    if(isObj(c.on)) for(const [k, v] of Object.entries(c.on)){ const it = items.get(k);
+      if(!it) drop('on', k, v === true && !k.startsWith('c:') ? dmTickName(k) : '', 'not for ' + dmName(b.atk.u, b.atk.army));
+      else if(v === true && (it.state === 'out' || it.state === 'nc')) drop('on', k, it.name, it.why || 'not for this pair'); }
+    const wk = new Set(M.weapons.map(w => w.k));
+    for(const f of ['off', 'pick']) if(isObj(c[f])) for(const k of Object.keys(c[f])) if(!wk.has(k)) drop(f, k, '', '');
+    if(isObj(c.val)) for(const k of Object.keys(c.val)) if(/^(pick|dpick|dice):/.test(k) && ![...M.rules, ...M.defs].some(x => x.pillKey === k || x.diceKey === k)) drop('val', k, '', '');
+  }
+  return out;
+}
+// a tick's rule, named from its key ("m:Kustom Dakka|…" → "Kustom Dakka")
+const dmTickName = k => k.replace(/^[mt]:/, '').replace(/^\d+CP /, '').split(/[|:]/)[0];
+// the ticks dropped, in words: "1CP Kustom Dakka unticked (not against MONSTER/VEHICLE targets)"
+const dmDroppedWords = list => { const named = list.filter(d => d.name);
+  return named.length ? andList([...new Set(named.map(d => d.name))]) + ' unticked' + (named.length === 1 && named[0].why ? ' (' + named[0].why + ')' : '') : ''; };
+// a unit picked: the pair changes, the turn keeps its shape (a step the new pair cannot play is dropped) and so do the ticks whose
+// rule still applies (dmCleanTicks). Returns the words for the toast and what was dropped
+function dmSetUnit(st, k, a, id){
+  const me1 = st.dir === 'me';
+  if(k === 'mine'){ if(me1) st.atk = id; else st.tgt = id; }
+  else if(a === 'typed'){ if(me1) st.tArmy = 'typed'; }
+  else if(me1){ st.tArmy = a; st.tgt = id; }
+  else { st.aArmy = a; st.atk = id; }
+  const why = dmKeepTurn(st), dropped = dmCleanTicks(st), w = dmDroppedWords(dropped);
+  return { words:why.concat(w ? [w] : []).join(' · '), dropped };
 }
 // the steps added and taken out between two shapes of the turn, in words: "Fight added after Shoot", "Charge and Fight added after
 // Shoot", "Fight back taken out"
@@ -3127,41 +3279,43 @@ function dmTurnWords(t0, t1){
     w.push(andList(add.map(dmStepLabel)) + ' added' + (before ? ' after ' + dmStepLabel(before) : after ? ' before ' + dmStepLabel(after) : '')); }
   return w.join(' · ');
 }
-// after a control: what changed in the turn, with Undo (extra: what else to say first)
-function dmTurnSaid(snap, extra){
-  const st = dmState(), o = JSON.parse(snap), w = [extra || '', o.dir === st.dir ? dmTurnWords(o.turn, st.turn[st.dir]) : ''].filter(Boolean).join(' · ');
-  if(w) toastUndo(w, () => dmRestore(snap));
+// after a control: what changed in the turn, with Undo
+function dmTurnSaid(before){
+  const st = dmState();
+  if(before.dir === st.dir) dmChange(dmTurnWords(before.turn, st.turn[st.dir]), before);
 }
 // a turn starts with one step: the verb chosen (or the one shown when "They attack" turned it round), else Shoot, else Fight
 function dmStart(P, verb){
   const v = verb === 'fight' || verb === 'back' ? 'fight' : 'shoot', can = id => dmArmed(P.au, id === 'shoot' ? 'ranged' : 'melee');
   return { [can(v) ? v : v === 'shoot' ? 'fight' : 'shoot']:true, auto:true };
 }
-// the one untouched starting step: the top verb replaces it (said: "Shoot taken out"); a turn the player has shaped grows instead
+// the one untouched starting step: the top verb replaces it; a turn the player has shaped grows instead. A starting step the player
+// chose (the verb, tapped) is said when it is replaced ("Shoot taken out"); the one the turn started with by itself is not
 const dmUntouched = tr => !!tr.auto && DM_ORDER.filter(id => tr[id]).length === 1;
 // show a step of the turn (the verb, or the strip), added to the turn when it is not in it. The charge is made or not (made: the
-// fight follows it, and is shown)
+// fight follows it, and is shown). Before both units are picked, the verb sets the step the turn will start with (kept)
 function dmGoStep(id, verb){
   const st = dmState(), P = dmPair(st);
-  if(!P.ready) return;
-  const tr = dmTurn(st, P), att = dmName(P.au, P.A), snap = dmSnap(st);
+  if(!P.ready){ if(verb && (id === 'shoot' || id === 'fight')){ st.turn[st.dir] = { [id]:true, auto:true, chosen:true }; st.step[st.dir] = id; saveSession(); rerender(); } return; }
+  const tr = dmTurn(st, P), att = dmName(P.au, P.A), before = dmBefore(st);
   if(id === 'charge'){
-    if(!tr.charge && !dmArmed(P.au, 'melee')){ toast(att + ' has no melee weapons to charge with'); return; }
+    if(!tr.charge && !dmArmed(P.au, 'melee')){ dmToast(att + ' has no melee weapons to charge with'); return; }
     tr.charge = !tr.charge; delete tr.auto;
     if(tr.charge){ tr.fight = true; st.step[st.dir] = 'fight'; }
-    saveSession(); rerender(); dmTurnSaid(snap); return; }
+    saveSession(); rerender(); dmTurnSaid(before); return; }
   const why = id === 'shoot' ? (dmArmed(P.au, 'ranged') ? '' : att + ' has no ranged weapons')
     : id === 'fight' ? (dmArmed(P.au, 'melee') ? '' : att + ' has no melee weapons')
     : P.tu.typed ? 'A typed target does not fight back' : !dmArmed(P.au, 'melee') ? att + ' has no melee weapons: nothing to fight back against'
     : !dmArmed(P.tu, 'melee') ? dmName(P.tu, P.B) + ' has no melee weapons' : '';
-  if(why){ toast(why); return; }
+  if(why){ dmToast(why); return; }
   if(tr[id]){ st.step[st.dir] = id; saveSession(); rerender(); return; }
   // the top verb on the untouched starting step: that step replaced; otherwise the step added to the turn
-  const was = DM_ORDER.find(k => tr[k]);
-  if(verb && dmUntouched(tr)){ for(const k of DM_ORDER) delete tr[k]; tr[id] = true; st.step[st.dir] = id; saveSession(); rerender(); toastUndo(dmStepLabel(was) + ' taken out', () => dmRestore(snap)); return; }
-  tr[id] = true; if(id === 'back') tr.fight = true; delete tr.auto;
+  const was = DM_ORDER.find(k => tr[k]), chosen = !!tr.chosen;
+  if(verb && dmUntouched(tr)){ for(const k of DM_ORDER) delete tr[k]; delete tr.chosen; tr[id] = true; tr.chosen = true; st.step[st.dir] = id; saveSession(); rerender();
+    if(chosen) dmChange(dmStepLabel(was) + ' taken out', before); return; }
+  tr[id] = true; if(id === 'back') tr.fight = true; delete tr.auto; delete tr.chosen;
   st.step[st.dir] = id;
-  saveSession(); rerender(); dmTurnSaid(snap);
+  saveSession(); rerender(); dmTurnSaid(before);
 }
 
 // a unit changed: the turn keeps its shape; the steps the new pair cannot play are dropped (said: "Fight back dropped: Gretchin have no
@@ -3201,12 +3355,14 @@ function dmStripHtml(){
     const fl = sd.rows.filter(x => x.char && sd.rows.length > 1), fate = fl.length ? fl.map(x => esc(dmFirst(x.name)) + ' ' + dmPct(x.gone)).join(', ') + ' dead' : '';
     const after = rv ? ' (after ' + esc(rv) + ')' : '', wiped = sd.wipe >= 0.005 ? ' · wiped ' + dmPct(sd.wipe) + after : '';
     const p = dmPts(u, sd);
-    return '<span><b>' + lbl + '</b> ' + (one ? dmPct(sd.wipe) + ' destroyed' + after : String(Math.round((sd.models - sd.killed) * 10) / 10) + ' of ' + sd.models + ' left' + (fate ? ' · ' + fate + (wiped ? '' : after) : '') + wiped) + (p == null ? '' : ' · ≈' + Math.round(p) + ' pts lost') + '</span>'; };
-  // the end of the turn (each step's own "by now" is on its card); said when it is not just the one step shown
-  const eot = plan.beats.length > 1 || plan.beats.some(bb => bb.M.revive && Object.keys(bb.M.revive).length) ? '<i class="eot">At the end of the turn</i>' : '';
-  const sum = line(plan.B, sides[1], plan.B.who === 'mine' ? 'Yours' : 'Theirs') + line(plan.A, sides[0], plan.A.who === 'mine' ? 'Yours' : 'Theirs');
+    return '<span><b>' + lbl + '</b> ' + (one ? esc(dmShort(u.short || u.name)) + ' ' + dmPct(sd.wipe) + ' dead' + after : String(Math.round((sd.models - sd.killed) * 10) / 10) + ' of ' + sd.models + ' left' + (fate ? ' · ' + fate + (wiped ? '' : after) : '') + wiped) + (p == null ? '' : ' · ≈' + Math.round(p) + ' pts lost') + '</span>'; };
+  // the end of the turn (each step's own "by now" is on its card), said when it is not just the one step shown; one line a side
+  // (tap: all of each, and how the points are worked out)
+  const eot = plan.beats.length > 1 || plan.beats.some(bb => bb.M.revive && Object.keys(bb.M.revive).length) ? 'End of turn · ' : '';
+  const sum = line(plan.B, sides[1], eot + (plan.B.who === 'mine' ? 'Yours' : 'Theirs')) + line(plan.A, sides[0], plan.A.who === 'mine' ? 'Yours' : 'Theirs') +
+    (st.fold.sum ? '<span class="pts">≈ pts lost: an estimate, each model at its share of New Recruit’s points split</span>' : '');
   return '<div class="dmstrip' + (C.prov ? ' prov' : '') + '" id="dmStrip" role="group" aria-label="The turn"><div class="dmsr">' + stop('shoot', 'Shoot') + stop('charge', 'Charge') + stop('fight', 'Fight') + stop('back', '<span class="lf">Fight back</span><span class="ls">Back</span>') + '</div>' +
-    (sum ? '<button class="dmsum" data-dmpts aria-label="What is left of each side; tap: how the points are worked out">' + eot + sum + '</button>' : '') + '</div>';
+    (sum ? '<button class="dmsum' + (st.fold.sum ? ' all' : '') + '" data-dmpts aria-expanded="' + !!st.fold.sum + '" aria-label="What is left of each side at the end of the turn; tap: all of it">' + sum + '</button>' : '') + '</div>';
 }
 // points destroyed, on average: each model at its share of its part's points (a leader's own points on it: New Recruit's
 // "115 + Khorne Berzerkers 170"), the rest of the unit's points shared by its models. An estimate, said as one (≈)
@@ -4613,10 +4769,21 @@ function showEnhancement(key){
 })();
 
 let tt = null;
-function toast(m){ const t = $('#toast'); t.textContent = m; t.classList.remove('act'); t.classList.add('show'); clearTimeout(tt); tt = setTimeout(() => t.classList.remove('show'), 2200); }
+function toast(m){ const t = $('#toast'); t.textContent = m; t.classList.remove('act', 'dmt'); t.style.bottom = ''; t.classList.add('show'); clearTimeout(tt); tt = setTimeout(() => t.classList.remove('show'), 2200); }
 // a toast with an Undo button (New game), shown long enough to reach it
 let undoFn = null;
-function toastUndo(m, fn){ const t = $('#toast'); undoFn = fn; t.innerHTML = esc(m) + '<button class="tundo" data-undo>Undo</button>'; t.classList.add('show', 'act'); clearTimeout(tt);
+// the Damage tab's toast: short, over the strip's end-of-turn lines (never over the card), about 3.5 s, gone at the next tap;
+// with Undo, the latest change that can be undone (dmUndo)
+function dmToast(m, undo){
+  // over the end-of-turn lines when they show, else just above the strip's steps
+  const t = $('#toast'), sum = $('#dmStrip .dmsum'), s = $('#dmStrip .dmsr'), sr = sum && sum.getClientRects().length ? sum.getBoundingClientRect() : null;
+  undoFn = undo ? dmUndo : null;
+  t.innerHTML = esc(m) + (undo ? '<button class="tundo" data-undo>Undo</button>' : '');
+  t.classList.add('show', 'dmt'); t.classList.toggle('act', !!undo);
+  t.style.bottom = cur.s !== 'damage' ? '' : sr ? Math.round(innerHeight - sr.bottom) + 'px' : s ? Math.round(innerHeight - s.getBoundingClientRect().top + 6) + 'px' : '';
+  clearTimeout(tt); tt = setTimeout(() => { t.classList.remove('show', 'act', 'dmt'); undoFn = null; }, 3500);
+}
+function toastUndo(m, fn){ const t = $('#toast'); undoFn = fn; t.innerHTML = esc(m) + '<button class="tundo" data-undo>Undo</button>'; t.classList.remove('dmt'); t.style.bottom = ''; t.classList.add('show', 'act'); clearTimeout(tt);
   tt = setTimeout(() => { t.classList.remove('show', 'act'); undoFn = null; }, 6000); }
 
 /* ---------- events ---------- */
@@ -4625,6 +4792,8 @@ document.addEventListener('click', e => {
   if(performance.now() - navAt < 350 && !e.target.closest('[data-close]')){ e.preventDefault(); e.stopPropagation(); }
 }, true);
 document.addEventListener('click', e => {
+  // on the Damage tab a toast goes away at the next tap (its own Undo excepted)
+  { const t = $('#toast'); if(t.classList.contains('dmt') && t.classList.contains('show') && !e.target.closest('#toast')){ t.classList.remove('show', 'act', 'dmt'); undoFn = null; } }
   const el = e.target.closest('button, [role="button"]');
   if(!el) return;
   const inSheet = !!el.closest('#sheetHost');
@@ -4667,23 +4836,28 @@ document.addEventListener('click', e => {
   if(el.hasAttribute('data-dmswap')){ const st = dmState(), P = dmPair(st), verb = dmStepId();
     // the other way round its turn starts as a turn does, with one step: the one shown here (never steps the player did not choose)
     if(dmSwap(st, P)){ const P2 = dmPair(st); if(!isObj(st.turn[st.dir]) && P2.ready){ st.turn[st.dir] = dmStart(P2, verb); st.step[st.dir] = ''; }
-      saveSession(); if(!$('#sheetHost').hidden) closeSheet(); render(); scrollTo(0, 0); }
+      // this way round's own ticks, made for other units, stay only where their rule applies to these two
+      const dr = dmCleanTicks(st), w = dmDroppedWords(dr);
+      saveSession(); if(!$('#sheetHost').hidden) closeSheet(); render(); scrollTo(0, 0); if(w) dmToast(w); }
     // nothing of theirs picked yet (or only a typed target, which has no weapons): the picker for the unit that attacks yours
     else if(st.dir === 'me'){ st.pendSwap = true; saveSession(); dmPicker('theirs'); }
     return; }
   // the verb, or a step of the turn: shown (added to the turn when it is not in it); the charge is made or not
   if(ds.dmverb || ds.dmstop){ dmGoStep(ds.dmverb || ds.dmstop, !!ds.dmverb); return; }
-  if(el.hasAttribute('data-dmpts')){ toast('≈ pts lost: an estimate, each model at its share of New Recruit’s points split'); return; }
-  if(ds.dmdrop){ const st = dmState(), tr = st.turn[st.dir], snap = dmSnap(st);
-    if(tr){ tr[ds.dmdrop] = false; delete tr.auto; if(ds.dmdrop === 'fight'){ tr.charge = false; tr.back = false; } }
-    st.step[st.dir] = ''; saveSession(); rerender(); dmTurnSaid(snap); return; }
+  if(el.hasAttribute('data-dmpts')){ const st = dmState(); st.fold.sum = !st.fold.sum; saveSession(); const s = $('#dmStrip'); if(s){ const mini = s.classList.contains('mini'); s.outerHTML = dmStripHtml(); if(mini) $('#dmStrip').classList.add('mini'); measure(); } return; }
+  if(ds.dmdrop){ const st = dmState(), tr = st.turn[st.dir], before = dmBefore(st);
+    if(tr){ tr[ds.dmdrop] = false; delete tr.auto; delete tr.chosen; if(ds.dmdrop === 'fight'){ tr.charge = false; tr.back = false; } }
+    st.step[st.dir] = ''; saveSession(); rerender(); dmTurnSaid(before); return; }
   // a choice in the list or a chip: changed in place, the answer redrawn where it is
+  if(ds.dmmore){ const id = ds.dmmore; if(DM_MX.has(id)) DM_MX.delete(id); else DM_MX.add(id); const lv = DM_LV.get(id); if(lv) dmMoreShow(lv); return; }
+  if(ds.dmto){ const r = document.querySelector('#dmList [data-dmlv="' + CSS.escape(ds.dmto) + '"]'); if(r){ const pin = $('#dmPin'), top = $('#top').getBoundingClientRect().bottom + 96;
+    scrollTo(0, r.getBoundingClientRect().top + scrollY - top - 20); r.classList.add('flash'); setTimeout(() => r.classList.remove('flash'), 1200); } return; }
   if(ds.dmlv != null){ const lv = DM_LV.get(ds.dmlv); if(lv){ const chip = el.classList.contains('dmchip') && !el.classList.contains('info'), name = chip ? el.textContent.replace(/×$/, '').trim() : '';
-    const st = dmState(), snap = dmSnap(st);
+    const st = dmState(), before = dmBefore(st);
     dmAnchorSet(el, ds.dmlv);
     lv.apply(st); saveSession(); rerender(); dmAnchorKeep();
-    if(dmTurnWords(JSON.parse(snap).turn, st.turn[st.dir])) dmTurnSaid(snap);   // a fact that is the turn's Charge: said as a step
-    else if(chip) toast((el.classList.contains('ovr') ? 'Counted again: ' : 'Unticked for this step: ') + name.replace(/↺$/, '').replace(/: left out \(by you\)$/, '')); } return; }
+    if(dmTurnWords(before.turn, st.turn[st.dir])) dmTurnSaid(before);   // a fact that is the turn's Charge: said as a step
+    else if(chip) dmToast((el.classList.contains('ovr') ? 'Counted again: ' : 'Unticked for this step: ') + name.replace(/↺$/, '').replace(/: left out \(by you\)$/, '')); } return; }
   // a rule's name: the same popup the other screens open, from the list it is in
   if(ds.dmrule){ const [t, id, ...rest] = ds.dmrule.split('|'), k = rest.join('|'), L = armyById(id); if(L) dmShowIn(L, () => t === 'strat' ? showStrat(k) : t === 'rule' ? showRule(k) : showAbility(k)); return; }
   // inside a popup of the other list: its rules open from that list too, and nothing moves the app into it
@@ -4695,27 +4869,25 @@ document.addEventListener('click', e => {
     for(const k of Object.keys(st.ch)) if(k.startsWith(d + ':')) delete st.ch[k];
     delete st.facts[d];
     for(const id of Object.keys(DM_STEPS)) delete dmRank[dmPairKey(st, id)];
-    saveSession(); rerender(); toast('Back to the datasheets as printed'); return; }
+    saveSession(); rerender(); dmToast('Back to the datasheets as printed'); return; }
   // a rule the calculator does not play, counted by hand: the matching Other modifier set for the step shown
   if(ds.dmbyhand){ const [k, v] = ds.dmbyhand.split('|'), st = dmState(); dmCh(st, dmStepId()).man[k] = /^-?\d+$/.test(v) && k !== 'lethal' && k !== 'sus' && k !== 'dev' ? +v : v;
-    st.fold.more = true; saveSession(); rerender(); toast('Set by hand, under Other modifiers'); return; }
+    st.fold.more = true; saveSession(); rerender(); dmToast('Set by hand, under Other modifiers'); return; }
   if(el.hasAttribute('data-dmmanclear')){ const st = dmState(); dmCh(st, dmStepId()).man = {}; saveSession(); rerender(); return; }
   if(ds.dmgo === 'nc'){ const d = $('#dmNc'), a = $('#dmAns'); if(d){ d.open = true; dmState().fold.nc = true; saveSession();
     scrollTo(0, d.getBoundingClientRect().top + scrollY - $('#top').getBoundingClientRect().bottom - (a ? a.offsetHeight + 12 : 0)); } return; }
   if(el.hasAttribute('data-dmoppclear')){ setOpp(army(), ''); closeSheet(); rerender(); return; }
   // your unit, or theirs: from any list, or typed (a target only); a new attacker starts its own turn
-  if(ds.dmunit){ const [k, a, id] = ds.dmunit.split('|'), st = dmState(), me1 = st.dir === 'me', snap = dmSnap(st);
-    if(k === 'mine'){ if(me1) st.atk = id; else st.tgt = id; }
-    else if(a === 'typed'){ if(me1) st.tArmy = 'typed'; }
-    else if(me1){ st.tArmy = a; st.tgt = id; }
-    else { st.aArmy = a; st.atk = id; }
-    // picked after "They attack" with nothing of theirs: that unit attacks yours
-    const swap = st.pendSwap && k === 'theirs' && a !== 'typed'; delete st.pendSwap;
-    if(swap) dmSwap(st, dmPair(st));
-    // a new unit keeps the turn's shape; a step the new pair cannot play is dropped, and said, with Undo
-    const why = swap ? [] : dmKeepTurn(st);
-    saveSession(); closeSheet(); rerender(); if(swap) scrollTo(0, 0);
-    if(why.length) toastUndo(why.join(' · '), () => dmRestore(snap)); return; }
+  if(ds.dmunit){ const [k, a, id] = ds.dmunit.split('|'), st = dmState(), before = dmBefore(st, true);
+    // picked after "They attack" with nothing of theirs: that unit attacks yours, and yours is picked next when none was
+    const swap = st.pendSwap && k === 'theirs' && a !== 'typed', pickMine = swap && !st.atk; delete st.pendSwap;
+    if(swap){ if(st.dir === 'me'){ st.tArmy = a; st.tgt = id; } const verb = st.turn.me && DM_ORDER.find(x => st.turn.me[x] && x !== 'charge'); dmSwap(st, dmPair(st));
+      const P2 = dmPair(st); if(!isObj(st.turn[st.dir]) && P2.ready){ st.turn[st.dir] = dmStart(P2, verb); st.step[st.dir] = ''; }
+      saveSession(); closeSheet(); rerender(); scrollTo(0, 0); if(pickMine) setTimeout(() => dmPicker('mine'), 400); return; }
+    // a new unit keeps the turn's shape and the ticks whose rule still applies; what it drops is said, with Undo
+    const r = dmSetUnit(st, k, a, id);
+    saveSession(); closeSheet(); rerender();
+    if(r.words) dmChange(r.words, before, r.dropped); return; }
   if(ds.dmty){ const [k, d] = ds.dmty.split('|'); dmTypedStep(dmState(), k, +d); saveSession(); rerender(); return; }
   if(ds.dmtkw){ const st = dmState(), t = dmTypedVals(st); st.typed.kw = Object.assign({}, t.kw, { [ds.dmtkw]:!t.kw[ds.dmtkw] }); saveSession(); rerender(); return; }
   // set by hand, for the step shown: a save or Feel No Pain none, 6+ … 2+ (plus is better)
@@ -4763,7 +4935,7 @@ document.addEventListener('click', e => {
   }
   if(el.hasAttribute('data-newgame')){ const was = [...usedSet()], key = usedKey(); store.set(key, []); rerender();
     toastUndo('New game: uses per battle cleared', () => { store.set(key, was); rerender(); }); return; }
-  if(el.hasAttribute('data-undo')){ const f = undoFn; undoFn = null; $('#toast').classList.remove('show', 'act'); if(f){ const m = f(); toast(typeof m === 'string' ? m : 'Ticks restored'); } return; }
+  if(el.hasAttribute('data-undo')){ const f = undoFn; undoFn = null; $('#toast').classList.remove('show', 'act'); if(f){ const m = f(); if(m !== null) toast(typeof m === 'string' ? m : 'Ticks restored'); } return; }
   if(el.hasAttribute('data-awake')){ awake.on = !awake.on; store.set('wh-awake', awake.on); if(awake.on) keepAwake(); else if(awake.lock){ awake.lock.release(); awake.lock = null; } rerender(); return; }
   if(el.hasAttribute('data-expand')){
     const cards = $$('#view details.strat');
@@ -4773,11 +4945,21 @@ document.addEventListener('click', e => {
   }
 });
 // a typed target's number box selects its number when tapped, so typing replaces it ("10" over 5 is 10, not 510)
-let dmTyFocus = 0;
+let dmTyFocus = 0, dmTyKeep = false;
 document.addEventListener('focusin', e => { const t = e.target; if(!t.matches || !t.matches('[data-dmtyped]')) return;
+  if(dmTyKeep){ dmTyKeep = false; return; }   // focus put back after a redraw while typing: the caret stays where it was
   dmTyFocus = performance.now(); const sel = () => { try { t.setSelectionRange(0, t.value.length); } catch(err){ t.select(); } }; sel(); setTimeout(sel, 0); });
 for(const ev of ['mouseup', 'pointerup']) document.addEventListener(ev, e => { const t = e.target;
   if(t.matches && t.matches('[data-dmtyped]') && performance.now() - dmTyFocus < 400 && e.cancelable){ e.preventDefault(); try { t.setSelectionRange(0, t.value.length); } catch(err){} } }, { passive:false });
+// a typed target's number counts while it is typed (a phone's keypad has no Enter), a quarter of a second after the last key, as
+// the steppers do; the field keeps the focus and the caret
+let dmTyT = null;
+document.addEventListener('input', e => { const t = e.target; if(!t.matches || !t.matches('[data-dmtyped]')) return;
+  clearTimeout(dmTyT);
+  dmTyT = setTimeout(() => { if(!t.isConnected) return; const st = dmState(), k = t.dataset.dmtyped, was = JSON.stringify(st.typed);
+    dmTypedSet(st, k, t.value); if(JSON.stringify(st.typed) === was) return;
+    saveSession(); const pos = t.selectionStart; rerender();
+    const f = $('[data-dmtyped="' + k + '"]'); if(f){ dmTyKeep = true; f.focus({ preventScroll:true }); try { f.setSelectionRange(pos, pos); } catch(err){} } }, 250); });
 // a typed target's number, typed: kept once the field is left (the next field tapped keeps the focus)
 document.addEventListener('change', e => {
   const t = e.target;

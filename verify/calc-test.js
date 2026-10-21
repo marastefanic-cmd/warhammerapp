@@ -724,6 +724,12 @@ cases.push(['Try Dat Button!, two D6: one hazard roll for the unit, 3 mortal wou
 cases.push(['Try Dat Button!, one D6: no hazard roll', () => +!dak('1–2').p.beats[0].M.hazard, 1]);
 cases.push(['Try Dat Button!, two D6: the Dakkarig destroyed', () => dak('1–2 and 5–6').r.sides[0].wipe, 0.89, 0.01]);
 cases.push(['Try Dat Button!, two D6, the roll left out by you', () => dak('1–2 and 5–6', false).r.sides[0].wipe, 0.85, 0.01]);
+// the dice rolled, its own choice: one result rolled with two D6 still makes the hazard roll (either reading of "keep re-rolling
+// duplicate results" leaves two D6 rolled); a pick of two results is two D6 by itself
+cases.push(['Try Dat Button!, one result with two D6: the hazard roll', () => +!!turnOf({ army:'shooty', opp:'princes', atk:'dakkarig-boosta', tArmy:'princes', tgt:'lord-on-juggernaut-khorne-berzerkers', turn:{ me:{ shoot:true } },
+  ch:{ 'me:shoot':{ on:{ [TDB]:true }, val:{ 'pick:Try Dat Button!':'1–2', 'dice:Try Dat Button!':'two D6' } } } }, 500).p.beats[0].M.hazard, 1]);
+cases.push(['Try Dat Button!, two results: two D6 by itself', () => (p => +(p.beats[0].M.rules.find(r => r.k === TDB).dice.now === 'two D6' && !!p.beats[0].M.hazard))(dm.plan({ army:'shooty', opp:'princes', atk:'dakkarig-boosta', tArmy:'princes', tgt:'lord-on-juggernaut-khorne-berzerkers', turn:{ me:{ shoot:true } },
+  ch:{ 'me:shoot':{ on:{ [TDB]:true }, val:{ 'pick:Try Dat Button!':'3–4 and 5–6', 'dice:Try Dat Button!':'one D6' } } } })), 1]);
 // the Kustom Mega-blasta, [HAZARDOUS] and [SUPA-HAZARDOUS]: 3 rolls; with the Tellyport Blasta (2) the Big Mek makes 5
 cases.push(['hazard: Big Mek in Mega Armour shooting, 3 + 2 rolls', () => turnOf({ army:'shooty', opp:'princes', atk:'bigmek-mega', tArmy:'princes', tgt:'kh-rn-the-betrayer-khorne-berzerkers', turn:{ me:{ shoot:true } } }, 2000).r.beats[0].hazard.rolls, 5, 0]);
 // a choice's effect is measured over the whole turn, with the attacking unit's own losses: unticking the Flash Gitz' hazard rolls (the
@@ -734,15 +740,36 @@ const effOf = (s, id) => { const p0 = dm.plan(s), st = dm.app.dmState(), lv = dm
 const HZ = memo(() => effOf({ army:'shooty', opp:'princes', atk:'mek-flashgitz', tArmy:'princes', tgt:'lord-on-juggernaut-khorne-berzerkers', turn:{ me:{ shoot:true, charge:true, fight:true, back:true } }, step:{ me:'shoot' } }, 's:c:hazard'));
 cases.push(['hazard rolls left out: your losses over the turn, from', () => HZ().a.own, 9.6]);
 cases.push(['hazard rolls left out: ... to', () => HZ().b.own, 8.5]);
-cases.push(['hazard rolls left out: the Mek’s death, from', () => HZ().a.ownChars[0].p / 100, 0.45, 0.015]);
-cases.push(['hazard rolls left out: ... to', () => HZ().b.ownChars[0].p / 100, 0.20, 0.015]);
-cases.push(['hazard rolls left out: said, good news for you', () => +(HZ().d.good === true && /fewer of yours lost \(hazard rolls/.test(HZ().d.alt) && /Mek dies/.test(HZ().d.alt)), 1]);
+cases.push(['hazard rolls left out: the Mek’s death, from', () => HZ().a.ownChars[0].p, 0.45, 0.015]);
+cases.push(['hazard rolls left out: ... to', () => HZ().b.ownChars[0].p, 0.20, 0.015]);
+cases.push(['hazard rolls left out: said, good news for you', () => (t => +(HZ().d.good === true && /fewer of yours lost \(hazard rolls after the shoot/.test(t) && /Mek dies/.test(t)))([HZ().d.alt].concat(HZ().d.more).join(' · ')), 1]);
 // a fact and its one sub-tick measured the same way (over the turn): Riled up and Riled up (Waaagh!) for Zodgrod + Gretchin, which the
 // Chaos Terminators shoot and then fight, the same effect
 const M4 = { army:'ooga-booga', opp:'super-terminators', dir:'them', atk:'chaos-terminators', aArmy:'super-terminators', tgt:'zodgrod-wortsnagga-runtherd-gretchin', turn:{ them:{ shoot:true, fight:true } }, step:{ them:'fight' } };
 cases.push(['a fact and its sub-tick: the same sign and fate', () => (x => (y => +(Math.sign(x.d.v) === Math.sign(y.d.v) && x.d.good === y.d.good && x.d.alt === y.d.alt))(effOf(M4, 'd:t:Riled up: 5+ INV')))(effOf(M4, 'f:mine:riled')), 1]);
 // Unshackled Wrath's "All three": more of theirs destroyed, more of yours lost to the hazard rolls: a trade (no crown)
 cases.push(['Unshackled Wrath, All three: a trade', () => +effOf({ army:'purge-goes-the-foe', atk:'skitarii-rangers', tArmy:'typed', typed:{ n:10, T:4, W:1, Sv:4, InSv:0, fnp:0 } }, 'k:m:Unshackled Wrath|Your Shooting phase|[SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS]|All three').d.trade, 1]);
+// ---- round 3: a tick across a unit change; a fate both destroyed and down; a one-model unit's own fate; typed numbers ----
+// the same final pair reached in different orders gives the same turn: Kustom Dakka ticked against Lord on Juggernaut + Berzerkers, then
+// the target changed to a Knight Errant (Kustom Dakka is not against MONSTER/VEHICLE: the tick is dropped, not counted by you) is the
+// Knight Errant from the start; Kustom Dakka ticked for the Tankbustas, then the attacker changed to Flash Gitz (it applies to them too:
+// kept) is the Flash Gitz with it ticked
+const KD = 'm:Kustom Dakka|Your Shooting phase, vs non-MONSTER/VEHICLE targets|+1 to wound rolls';
+const order = (s0, change, s1) => { dm.plan(s0); const st = dm.app.dmState(), r = dm.app.dmSetUnit(st, ...change); const a = dm.app.dmIn(dm.app.dmPlan(st), 300), b = dm.app.dmIn(dm.plan(s1), 300); return { same:JSON.stringify(a) === JSON.stringify(b), r }; };
+const FGL = { army:'shooty', opp:'princes', atk:'mek-flashgitz', tArmy:'princes', tgt:'lord-on-juggernaut-khorne-berzerkers', turn:{ me:{ shoot:true } }, ch:{ 'me:shoot':{ on:{ [KD]:true } } } };
+const toKnight = memo(() => order(FGL, ['theirs', '6-bigs', 'knight-errant'], { army:'shooty', opp:'princes', atk:'mek-flashgitz', tArmy:'6-bigs', tgt:'knight-errant', turn:{ me:{ shoot:true } } }));
+cases.push(['a unit changed: a tick the rules now rule out is dropped (the same turn as picked so)', () => +toKnight().same, 1]);
+cases.push(['a unit changed: ... and said', () => +/Kustom Dakka unticked \(not against MONSTER\/VEHICLE/.test(toKnight().r.words), 1]);
+cases.push(['a unit changed: a tick whose rule still applies is kept', () => +order(Object.assign({}, FGL, { atk:'mek-tankbustas' }), ['mine', 'shooty', 'mek-flashgitz'], FGL).same, 1]);
+// Epic Challenge on Nazdreg + Meganobz' fight against Khârn + Berzerkers: Khârn destroyed far more often, and down after the phase
+// more often too (Berserker Frenzy); both said
+const EPIC = memo(() => effOf({ army:'melee', opp:'princes', atk:'nazdreg-meganobz', tArmy:'princes', tgt:'kh-rn-the-betrayer-khorne-berzerkers', turn:{ me:{ fight:true } }, step:{ me:'fight' } }, 'r:m:Epic Challenge'));
+cases.push(['a fate with a comeback: destroyed and stays down, both said', () => (t => +(/\+\d+% Khârn destroyed/.test(t) && /stays down/.test(t)))([EPIC().d.alt].concat(EPIC().d.more).join(' · ')), 1]);
+// a one-model attacking unit's own fate past the dice's margin (Dakkarig, Try Dat Button! with two D6: 88.7% → 85.3% with the roll left out)
+cases.push(['a one-model unit’s own fate: said past the dice’s margin', () => (d => +/−\d+% Big Mek Dakkarig dies|−\d+% Big Mek dies|−\d+% Dakkarig dies/.test([d.alt].concat(d.more).join(' · ')))(effOf({ army:'shooty', opp:'princes', atk:'dakkarig-boosta', tArmy:'princes', tgt:'lord-on-juggernaut-khorne-berzerkers', turn:{ me:{ shoot:true, charge:true, fight:true, back:true } }, step:{ me:'shoot' },
+  ch:{ 'me:shoot':{ on:{ [TDB]:true }, val:{ 'pick:Try Dat Button!':'1–2 and 5–6' } } } }, 's:c:hazard').d), 1]);
+// a typed number: an empty or unreadable field keeps the value it had, never 0
+cases.push(['a typed number: empty keeps the value', () => { const st = { typed:{ n:7, Sv:3 } }; dm.app.dmTypedSet(st, 'n', ''); dm.app.dmTypedSet(st, 'Sv', ''); dm.app.dmTypedSet(st, 'Sv', '1'); return st.typed.n * 10 + st.typed.Sv; }, 73, 0]);
 for(const t of twice) console.log('  ' + t);
 
 let fail = 0;

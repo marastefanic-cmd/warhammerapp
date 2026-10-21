@@ -510,7 +510,7 @@ function run(input){
                   attacking, and slice [lo, hi] (of those weapons, the ones from lo to hi: a rule that reaches only some of
                   them reaches the ones kept longest); without carry its models are as given (that side has lost none).
      input.sims (default 10000), input.seed (default 1)
-   result: { beats:[{ killed (mean destroyed in this beat), dmg (wounds lost in it), wipe (P the side is destroyed by its end),
+   result: { sims, beats:[{ killed (mean destroyed in this beat), dmg (wounds lost in it), wipe (P the side is destroyed by its end),
              wipeDown (P it is still destroyed once its phase is over: a comeback counted as above),
              dist [P(exactly k destroyed by its end)], before (mean destroyed before it), rows:[{ name, count, char, gone (P all of
              the row destroyed by its end), down (P still destroyed once its phase is over: a comeback's roll counted as the chance
@@ -626,7 +626,7 @@ function play(input){
       sd.killed += dead; if(all) sd.wipe += fw; }
   }
   const mean = v => v / sims;
-  return {
+  return { sims,
     beats:beats.map(x => ({ side:x.b.side, killed:mean(x.killed), dmg:mean(x.dmg), before:mean(x.before), models:x.S.total, wipe:mean(x.dist[x.S.total]), wipeDown:mean(x.wipeDown), dist:x.dist.map(mean),
       // a beat with an alternative (alt): its games added up with the alternative's (the same weapons, in the same order)
       groups:x.sum.map((g0, i) => { const a = x.altSum && x.altSum[i], g = k => g0[k] + (a ? a[k] : 0);

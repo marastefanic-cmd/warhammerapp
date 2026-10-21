@@ -238,6 +238,18 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       const end = await under();
       if(!mid || mid[0] !== id || !end || end[0] !== id || end[1] !== pt[2]) fail('damage-tap-twice', A, id, 'tapped twice at the same spot: ' + JSON.stringify([mid, end]) + ', was ' + pt[2]);
     }
+    // the card and the strip show the same figure at every moment after a tap (the same games), and Undo reverts what its toast names
+    await open();
+    const sync = await page.evaluate(async () => { const r = [...document.querySelectorAll('#dmList .dmlv[data-dmlv]')].find(e => e.getClientRects().length && !e.classList.contains('rad')); if(!r) return [];
+      r.click(); const seen = [];
+      for(let i = 0; i < 30; i++){ await new Promise(f => setTimeout(f, 80)); const a = $('#dmAns .dmbig b'), b = document.querySelector('#dmStrip .dms.cur b'); seen.push((a ? a.textContent : '') + '/' + (b ? b.textContent : '')); }
+      return [...new Set(seen)].filter(x => { const [a, b] = x.split('/'); return a !== b; }); });
+    if(sync.length) fail('damage-card-strip', A, 'after a tap', 'the card and the strip differ: ' + sync.join(', '));
+    const undo = await page.evaluate(async () => { const st = dmState(), t0 = JSON.stringify(st.turn[st.dir]);
+      dmGoStep('charge'); await new Promise(f => setTimeout(f, 300)); const t1 = JSON.stringify(dmState().turn[dmState().dir]), said = $('#toast').innerText;
+      document.querySelector('#toast [data-undo]').click(); await new Promise(f => setTimeout(f, 300));
+      return { back:JSON.stringify(dmState().turn[dmState().dir]) === t0, changed:t1 !== t0, said }; });
+    if(!undo.changed || !undo.back || !/Charge/.test(undo.said)) fail('damage-undo', A, 'Charge, then Undo', JSON.stringify(undo));
     // no empty band under the pinned card at any scroll position: just below it there is always some of the screen's content
     await open();
     const gaps = await page.evaluate(async () => { const out = [], H = document.documentElement.scrollHeight - innerHeight;
