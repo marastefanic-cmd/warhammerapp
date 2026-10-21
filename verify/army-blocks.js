@@ -2,8 +2,9 @@
 /* verify/army-blocks.js: work on one list in a separate git worktree, then bring it back.
 
    node verify/army-blocks.js list                          the lists in data.js, with their line ranges
-   node verify/army-blocks.js keep <id>[,<id>...]           data.js keeps only these lists (in a worktree:
-                                                            the gate then checks just them)
+   node verify/army-blocks.js keep <id>[,<id>...]           data.js keeps only these lists, and the deviations
+                                                            files only their entries (in a worktree: the gate
+                                                            then checks just them)
    node verify/army-blocks.js merge <worktree> <id>         from <worktree>: that list's block of data.js, and
                                                             its entries in the deviations files, map-bsdata.json
                                                             and waha-datasheets.txt; prints what else differs
@@ -53,6 +54,14 @@ if (cmd === 'list') {
   for (const b of drop.reverse()) L.splice(b.start, b.end - b.start + 1);
   fs.writeFileSync(dataFile(ROOT), L.join('\n'));
   console.log('data.js keeps ' + [...keep].join(', ') + '; dropped ' + drop.map(b => b.id).join(', '));
+  // the dropped lists' declared deviations go too (they would fail as stale here; merge brings back only the kept list's)
+  const gone = new Set(drop.map(b => b.id));
+  for (const f of ['deviations-nr.json', 'deviations-bsdata.json', 'deviations-texts.json']) {
+    const A = path.join(ROOT, 'verify', f);
+    if (!fs.existsSync(A)) continue;
+    const a = JSON.parse(read(A)), k = a.filter(x => !gone.has(x.army));
+    if (k.length !== a.length) { fs.writeFileSync(A, JSON.stringify(k, null, 1) + '\n'); console.log(f + ': dropped ' + (a.length - k.length) + ' entries of the dropped lists'); }
+  }
 } else if (cmd === 'merge') {
   const wt = path.resolve(a1), id = a2;
   if (!wt || !id) { console.error('usage: node verify/army-blocks.js merge <worktree> <armyId>'); process.exit(2); }
