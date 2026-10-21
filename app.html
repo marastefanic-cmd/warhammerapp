@@ -574,7 +574,12 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .dmswap{justify-self:end; display:inline-flex; align-items:center; gap:5px; min-height:38px; padding:0 2px 0 8px; font:700 13px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--accent)}
 .dmswap .ic{width:17px; height:17px}
 .dmts{margin:4px 0 0 50px; font-size:12.5px; line-height:1.35; color:var(--muted)}
-.dmans{position:sticky; top:var(--top); z-index:5; margin:12px -6px 0; padding:9px 12px 10px; border-radius:10px; background:var(--surface); box-shadow:0 1px 0 var(--line), 0 8px 18px rgba(0,0,0,.28)}
+.dmans{position:relative; margin:12px -6px 0; padding:9px 12px 10px; border-radius:10px; background:var(--surface); box-shadow:0 1px 0 var(--line), 0 8px 18px rgba(0,0,0,.28)}
+/* pinned while the list scrolls: a compact copy of the card over the top of the list (the card itself stays in its place, so nothing
+   below it moves and no gap opens when it shrinks) */
+.dmpinw{position:sticky; top:var(--top); height:0; z-index:6}
+.dmpin{position:absolute; top:0; left:-6px; right:-6px}
+.dmpin > .dmans{margin:0}
 .dmans.static{position:static}
 .dmctx{display:none; margin:0 0 2px; font:600 12px/1.2 var(--f-head); letter-spacing:.04em; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
 .dmans.stuck .dmctx, .dmans.bk .dmctx{display:block}
@@ -592,6 +597,8 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .dmstrip.mini .dmsum, .dmstrip.mini .dms .s{display:none}
 .dmstrip.mini .dms{grid-auto-flow:column; align-items:baseline; justify-content:center; gap:6px; min-height:32px; padding:2px 4px}
 .dmstrip.mini .dms > b{font-size:16px}
+.dms .ls, .dmstrip.mini .dms .lf{display:none}
+.dmstrip.mini .dms .ls{display:inline}
 .dmbig{display:flex; align-items:baseline; gap:10px; width:100%; text-align:left}
 .dmbig > b{font:700 46px/.95 var(--f-head); color:var(--accent); font-variant-numeric:tabular-nums}
 .dmbig > b.chg{animation:dmflash .7s ease-out}
@@ -619,6 +626,7 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .dmmore{min-height:28px; padding:0 6px; font:700 12px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--accent)}
 .dmchip.over{background:none; color:var(--fg); box-shadow:none; border:1.5px dashed var(--accent); padding:1.5px 7.5px}
 .dmchip.carry{background:var(--surface2); color:var(--fg); box-shadow:inset 0 0 0 1.5px var(--accent)}
+.dmchip.ovr{background:none; color:var(--accent); border:1.5px dashed var(--accent); padding:1.5px 7.5px}
 .dmswap.off{color:var(--muted)}
 .dmacts{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
 .dmacts .btn, .dmacts .btn2{flex:1 1 140px}
@@ -654,7 +662,14 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .dmlv .lb b .x{font-size:12.5px; margin-left:6px}
 .dmwho{margin-left:6px; font:600 11px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--muted)}
 .sd{display:inline-block; padding:1px 4px 0; border-radius:4px; box-shadow:inset 0 0 0 1px var(--line); font:600 10.5px/1.3 var(--f-head); letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
-.dmlv .fx{display:grid; justify-items:end; align-content:start; min-width:50px; padding-top:1px; text-align:right}
+/* the effect: its number and unit beside the row; what else it changes (a fate, your own losses) on a line of its own under the row,
+   so it never squeezes the row's words */
+.fxm{display:contents}
+.dmlv .fx{display:contents}
+.dmlv > .ck{grid-row:1 / span 2}
+.dmlv > .lb{grid-column:2; grid-row:1 / span 2}
+.dmlv .fx > .fxm{grid-column:3; grid-row:1 / span 2; display:grid; justify-items:end; align-content:start; min-width:50px; padding-top:1px; text-align:right}
+.dmlv .fx > small.alt{grid-column:2 / span 2; grid-row:3; margin-top:4px; white-space:normal; text-align:left}
 .fxv{font:700 19px/1 var(--f-head); font-variant-numeric:tabular-nums; color:var(--fg)}
 .fxv.up{color:var(--accent)}
 .fxv.good{color:var(--dm-good)}
@@ -688,7 +703,10 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .dmop .fxv.z{font:600 11px/1.2 var(--f-head); letter-spacing:.05em; text-transform:uppercase}
 .dmop em small{font:600 10px/1.1 var(--f-head); letter-spacing:.05em; text-transform:uppercase; color:var(--muted)}
 .dmop:active{background:var(--surface)}
+.dmop.on{box-shadow:inset 0 0 0 1.5px var(--accent)}
+.dmop .ovr{font-style:normal; font-weight:600; color:var(--accent)}
 .dmturnl{display:flex; align-items:baseline; gap:8px; margin:3px 2px 0; font-size:12.5px; line-height:1.35; color:var(--muted)}
+.dmmeas{margin:2px 2px 0; font-size:12.5px; line-height:1.35; color:var(--muted)}
 .dmdrop{margin-left:auto; flex:none}
 .dmnone{margin:6px 0 2px}
 .dmfold{border-bottom:1px solid var(--line); margin-top:14px}
@@ -736,6 +754,7 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .dmnote{margin:6px 0 0}
 .dmsum span{display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2; overflow:hidden}
 .dmsum b{font:700 11px/1 var(--f-head); letter-spacing:.08em; text-transform:uppercase; color:var(--fg2)}
+.dmsum .eot{font:600 10.5px/1.3 var(--f-head); font-style:normal; letter-spacing:.06em; text-transform:uppercase; color:var(--muted)}
 /* the popups */
 .dmbars{display:grid; gap:3px; margin:6px 0 4px}
 .dmbar{display:grid; grid-template-columns:52px minmax(0,1fr) 40px; align-items:center; gap:8px; font:600 13px/1.2 var(--f-head); font-variant-numeric:tabular-nums}
@@ -780,7 +799,7 @@ details.dmgrp:not([open]) > summary::after{content:'›'; margin-left:auto; font
   .dmswap span{font-size:12px}
   .dmbig > b{font-size:40px}
   .dmlv{gap:0 8px}
-  .dmlv .fx{min-width:44px}
+  .dmlv .fx > .fxm{min-width:44px}
   .dmtyg{grid-template-columns:repeat(2, minmax(0,1fr))}
   .dms{min-height:46px}
   .dms > b{font-size:17px}
@@ -1966,13 +1985,23 @@ function dmCalc(st, A, B, au, tu, kind){
     ctx.snap = snap; if(st.overwatch !== false || snap) box('snap', 'Fire Overwatch (snap shooting)', 'the target within 24" (15.09): hits only on an unmodified 6, never critical; no hit re-rolls');
   }
   ctx.charged = sitOn('charged') && (!ranged || lance);
-  // hazard rolls (06.03, 24.15): after its attacks, one D6 for each [HAZARDOUS] weapon the unit attacked with (two for
-  // [SUPA-HAZARDOUS]), each 1-2 a mortal wound on it (3 if every model is MONSTER/VEHICLE): played before the next step (calc.js
-  // play); its own models (self) take them, with the Feel No Pain its rules always give it
+  // hazard rolls (06.03): after its attacks, one D6 for each [HAZARDOUS] weapon the unit attacked with (24.15), two for each
+  // [SUPA-HAZARDOUS] one it shot with (its own words; a weapon with both makes all three), and the rolls a rule's own words add
+  // for the unit (its hazard mark: Try Dat Button! with two D6); each 1-2 a mortal wound on it (3 if every model is
+  // MONSTER/VEHICLE): played before the next step (calc.js play); its own models (self) take them, with the Feel No Pain its rules
+  // always give it. The rules require them: ticked, and left out only as the player's own call
   let hazard = null, self = null;
-  if(ticked.some(c => c.w.kw.some(k => /^(supa-)?hazardous$/i.test(k))) || rules.some(r => r.on && r.e && r.e.hazardous)){
-    if(box('hazard', 'Hazard rolls after this unit attacks', 'one D6 for each [HAZARDOUS] weapon it attacked with (two for [SUPA-HAZARDOUS]): on a 1-2, ' + (abig ? '3 mortal wounds' : '1 mortal wound') + ' on this unit, before the next step (06.03, 24.15)', true, 'its weapons are [HAZARDOUS]')){
-      hazard = { mw:abig ? 3 : 1 };
+  const hzOf = c => { const k = c.w.kw.map(x => String(x).toUpperCase()), r = rules.some(q => q.on && q.e && q.e.hazardous && dmReach(au, c.it, q.m, q.sc) > 0);
+    return (k.includes('HAZARDOUS') || r ? 1 : 0) + (ranged && k.includes('SUPA-HAZARDOUS') ? 2 : 0); };
+  const hzRules = rules.filter(r => r.on && r.m.hazard && (!r.m.hazard.picks || r.m.hazard.picks.includes(r.pick)));
+  const hzW = ticked.map(c => [c, hzOf(c)]).filter(([, n]) => n);
+  if(hzW.length || hzRules.length){
+    const per = hzW.map(([c, n]) => itemName(c.it) + ': ' + (n === 3 ? '3 a weapon ([HAZARDOUS] 1 and [SUPA-HAZARDOUS] 2)' : n === 2 ? '2 a weapon ([SUPA-HAZARDOUS])' : '1 a weapon'))
+      .concat(hzRules.map(r => r.m.from + ' (' + r.m.hazard.when + '): ' + dmPlural(r.m.hazard.rolls || 1, 'roll', 'rolls') + ' for the unit'));
+    const hv = box('hazard', 'Hazard rolls after this unit attacks', per.join(' · ') + ' · each 1-2: ' + (abig ? '3 mortal wounds' : '1 mortal wound') + ' on this unit, before the next step (06.03, 24.15)', true, 'required by the rules');
+    sit[sit.length - 1].req = 'the rules require them';   // left out: the player's own call
+    if(hv){
+      hazard = { mw:abig ? 3 : 1, rolls:hzRules.reduce((t, r) => t + (r.m.hazard.rolls || 1), 0) };
       const fnpOf = list => Math.min(7, ...list.map(t => { const m = /^Feel No Pain (\d)\+$/.exec(t); return m ? +m[1] : 7; }));
       self = { T:Math.max(1, ...dmModels(au, kind).map(m => m.T)), kw:au.kw, models:dmModels(au, kind), mod:{ fnp:fnpOf(inArmy(A, () => defenceItems(au, st.ph)).filter(d => d.a === 'rule').map(d => d.t)) } }; } }
   // One Last Kill (fightOnDeath): fighting back, the models of this datasheet destroyed earlier in this Fight phase, before this unit
@@ -2205,7 +2234,7 @@ function dmHow(c, st, r0, plan){
   L.push(['A fact of the table', 'saying one holds (charged, riled up, on an objective, remained stationary, the closest target) ticks every rule of this step whose condition it is, for the unit it is about; each can still be unticked by itself, and a stratagem with that condition is never ticked for you.']);
   L.push(['The turn', 'its steps are played one after another in the same games: the fight meets what the shooting left, and what is left of the target fights back (12.04: the unit that was charged fights after the charger). The charge is said to be made, not rolled; Fights First and which models are in engagement range are not played: every model left takes part (a Heroic Intervention only as a fact to tick in the fight back: that unit made a charge move this turn). Adding a later step never changes the numbers of the ones before it.']);
   if(beats.some(b => b.id === 'back')) L.push(['What is left fights back', 'within an allocation group the rules leave which model goes to the defender (05.03 Allocation Order, 05.04 Select Model): the calculator’s choice for the defender keeps the champions and the special weapons to the last (the rank and file first, then a champion, then the models with other weapons), and what is left attacks with the weapons of the models still alive. A model left with lost wounds attacks as usual (a Damaged profile is not applied).']);
-  if(beats.some(x => x.M.hazard)) L.push(['Hazard rolls (06.03, 24.15)', 'after a unit has resolved its attacks, one D6 for each [HAZARDOUS] weapon it attacked with (two for [SUPA-HAZARDOUS]), all at once: each 1-2 is 1 mortal wound on that unit (3 if every model is MONSTER/VEHICLE), allocated as other mortal wounds (06.02, a model that has lost wounds first, the CHARACTERS last) with its Feel No Pain. They are played in each game before the next step, so the unit fights and is fought with what is left; a step’s own numbers do not include them (its card says what they cost).']);
+  if(beats.some(x => x.M.hazard)) L.push(['Hazard rolls (06.03, 24.15)', 'after a unit has resolved its attacks, one D6 for each [HAZARDOUS] weapon it attacked with (24.15) and two for each [SUPA-HAZARDOUS] one it shot with (its own words), all at once; a weapon with both (the Kustom Mega-blasta) makes all three, as neither keyword replaces the other' + (beats.some(x => x.M.hazard && x.M.hazard.rolls) ? '; a rule’s own words can add rolls for the unit (Try Dat Button! with two D6: one)' : '') + ': each 1-2 is 1 mortal wound on that unit (3 if every model is MONSTER/VEHICLE), allocated as other mortal wounds (06.02, a model that has lost wounds first, the CHARACTERS last) with its Feel No Pain. They are played in each game before the next step, so the unit fights and is fought with what is left; a step’s own numbers do not include them (its card says what they cost).']);
   if(beats.some(x => x.M.revive && Object.keys(x.M.revive).length)) L.push(['Set back up at the end of the phase (Berserker Frenzy)', 'the first time the CHARACTER is destroyed, at the end of that phase, on a 2+ it is set back up with 3 wounds, not within Engagement Range of enemy units: destroyed in the shooting, it is back for the fight; destroyed in the Fight phase, it does not fight back in it. Taken to be the first time it is destroyed this battle.']);
   if(beats.some(x => x.M.onDeath)) L.push(['Destroyed but fighting (One Last Kill)', 'in the Fight phase, a model of that datasheet destroyed before its unit has fought stays on a 2+, rolled for each in each game, fights back, and is then removed.']);
   if(beats.some(x => x.M.rules.concat(x.M.defs).some(r => r.carried))) L.push(['A tick that lasts', 'a rule or stratagem whose words make it last past its step (to the end of the turn, until your next Command or Movement phase) carries from the step where it was ticked into the later steps of the same unit, as a carried chip; each later step can untick it for itself. A rule whose words do not say how long it lasts stays in its step.']);
@@ -2262,10 +2291,10 @@ const dmPlural = (n, one, many) => n + ' ' + (Math.abs(n - 1) < 1e-9 ? one : man
 
 /* ---- the turn: its steps (Shoot, Charge, Fight, Fight back), each step's own choices, the facts of the table ---- */
 const DM_STEPS = { shoot:{ kind:'ranged', ph:'shooting', label:'Shoot' }, fight:{ kind:'melee', ph:'fight', label:'Fight' }, back:{ kind:'melee', ph:'fight', label:'Fight back' } };
-// the steps in this direction's turn: a unit with ranged weapons starts by shooting; one without charges and fights
+// the steps in this direction's turn: it starts with one step, Shoot for a unit with ranged weapons, else Fight (dmStart)
 function dmTurn(st, P){
   const d = st.dir;
-  if(!isObj(st.turn[d])) st.turn[d] = dmArmed(P.au, 'ranged') ? { shoot:true } : { charge:true, fight:true };
+  if(!isObj(st.turn[d])) st.turn[d] = dmStart(P, '');
   return st.turn[d];
 }
 // one step's own choices (this direction's)
@@ -2363,26 +2392,50 @@ function dmShort(n){
 }
 const dmPct = v => v >= 0.995 ? '>99%' : v < 0.005 ? '<1%' : Math.round(v * 100) + '%';
 const dmFirst = n => dmShort(n);
-// the numbers a change is measured in, as the answer shows them; and the last step's (what comes back), when it is later
-const dmNums = (a, back) => !a ? null : { raw:a.one ? a.lost : a.killed, lost:a.lost, wipe:Math.round(a.wipe * 100), chars:a.chars.map(c => Math.round(c.down * 100)), many:!a.one, back };
-// a change in what the step shows, b − a (the answer once the choice is tapped, minus now), in one measure: models destroyed (wounds
-// lost for a one-model unit), rounded as the answer is ("≈0" under 0.05, never with a sign the dice could flip); beside it in
-// words: a CHARACTER's fate, the chance to wipe, wounds lost, what the fight back then does. good: good or bad for the reader (the
-// list viewed): fewer of yours or more of theirs destroyed
+// the numbers a change is measured in: over the whole turn, the same in every step's list. The step's target: destroyed by the end
+// of the turn (wounds lost, for a one-model unit), wiped, each CHARACTER's fate (after a comeback); the step's attacking unit: its
+// own losses by then (its hazard rolls, the fight back) and its CHARACTERS' fates
+function dmNums(plan, k, r){
+  k = Math.min(k, plan.beats.length - 1);
+  const b = plan.beats[k];
+  if(!b || !r || !r.sides) return null;
+  const T = r.sides[b.side], O = r.sides[1 - b.side], one = b.M.models.reduce((t, m) => t + m.count, 0) === 1;
+  if(!T) return null;
+  const lost = plan.beats.reduce((t, x, i) => t + (x.side === b.side && r.beats[i] ? r.beats[i].dmg : 0), 0);
+  // the attacking unit's own losses: models; wounds for a one-model unit (its hazard rolls' wounds and the fight back's)
+  const ownOne = !b.atk.u.typed && modelCount(b.atk.u) === 1, hzOf = k => plan.beats.reduce((t, x, i) => t + (x.side === b.side && r.beats[i] && r.beats[i].hazard ? r.beats[i].hazard[k] : 0), 0);
+  const hz = hzOf(ownOne ? 'lost' : 'dead'), ownW = ownOne ? hz + plan.beats.reduce((t, x, i) => t + (x.side !== b.side && r.beats[i] ? r.beats[i].dmg : 0), 0) : 0;
+  const fates = sd => sd && sd.rows.length > 1 ? sd.rows.filter(x => x.char).map(x => ({ name:x.name, p:Math.round(x.gone * 100) })) : [];
+  return { raw:one ? lost : T.killed, lost, wipe:Math.round(T.wipe * 100), many:!one, chars:fates(T), own:O ? (ownOne ? ownW : O.killed) : 0, ownOne, ownHz:hz, ownChars:fates(O) };
+}
+const dmZero = x => x && Object.assign({}, x, { raw:0, lost:0, wipe:0, chars:x.chars.map(c => Object.assign({}, c, { p:0 })), own:x.own == null ? null : 0, ownHz:0, ownChars:x.ownChars.map(c => Object.assign({}, c, { p:0 })) });
+// a change b − a (the turn once the choice is tapped, minus now), in one measure: the step's target, models destroyed by the end of
+// the turn (wounds lost for a one-model unit), rounded as the answer is ("≈0" under 0.05, never with a sign the dice could flip);
+// beside it in words: a CHARACTER's fate, the chance to wipe, wounds lost, and what the attacking unit itself loses (its hazard
+// rolls, the fight back) with its CHARACTERS' fates. good: good or bad news for the reader (the list viewed); trade: the choice
+// gains on one side what it costs on the other (more of theirs destroyed, more of yours lost)
 function dmDelta(a, b, A0, cx){
   if(!a || !b) return null;
   cx = cx || {};
   const sg = x => (x > 0 ? '+' : '−') + Math.abs(x), r1 = x => Math.round(x * 10) / 10;
   const d = b.raw - a.raw, r = r1(d);
-  const ci = a.chars.findIndex((c, i) => Math.abs(c - b.chars[i]) >= 5), fate = ci >= 0 ? b.chars[ci] - a.chars[ci] : 0;
+  const fateOf = (A, B) => { for(const c of A){ const y = B.find(z => z.name === c.name), f = (y ? y.p : 0) - c.p; if(Math.abs(f) >= 5) return { f, name:c.name }; } return null; };
+  const ft = fateOf(a.chars, b.chars), fo = fateOf(a.ownChars, b.ownChars), rv = cx.revive || {};
   const alt = [];
-  if(ci >= 0) alt.push(sg(fate) + '% ' + dmShort(A0.chars[ci].name) + (A0.chars[ci].revive ? ' stays down' : ' dies'));
-  if(ci < 0 && Math.abs(b.wipe - a.wipe) >= 5) alt.push(sg(b.wipe - a.wipe) + '% wiped');
+  if(ft) alt.push(sg(ft.f) + '% ' + dmShort(ft.name) + (rv[ft.name] ? ' stays down' : ' dies'));
+  if(!ft && Math.abs(b.wipe - a.wipe) >= 5) alt.push(sg(b.wipe - a.wipe) + '% wiped');
   if(a.many && !r && Math.abs(r1(b.lost - a.lost)) >= 0.1) alt.push(sg(r1(b.lost - a.lost)) + ' wounds');
-  if(a.back != null && b.back != null){ const db = r1(b.back - a.back); if(db) alt.push('fight back: ' + Math.abs(db) + (db < 0 ? ' fewer' : ' more') + ' of ' + (cx.backMine ? 'yours' : 'theirs')); }
-  if(!r && Math.abs(d) < 0.005 && !alt.length) return { t:'0', u:'no change', v:0, v2:0, zero:true, alt:'' };
-  const good = r ? (cx.tgtMine ? r < 0 : r > 0) : fate ? (cx.tgtMine ? fate < 0 : fate > 0) : null;
-  return { t:r ? sg(r) : '≈0', u:(a.many ? 'models' : 'wounds') + (cx.tgtMine ? ' of yours' : ''), v:d, v2:fate / 100, tiny:!r, alt:alt.join(' · '), good };
+  // the attacking unit's own losses, by the end of the turn, and why (its hazard rolls, the fight back)
+  const dOwn = a.own != null && b.own != null ? r1(b.own - a.own) : 0, dHz = r1((b.ownHz || 0) - (a.ownHz || 0));
+  if(dOwn){ const why = [Math.abs(dHz) >= 0.1 ? 'hazard rolls' : '', Math.abs(r1(dOwn - dHz)) >= 0.1 ? 'fight back' : ''].filter(Boolean);
+    alt.push((dOwn < 0 ? Math.abs(dOwn) + ' fewer' : dOwn + ' more') + (a.ownOne ? (Math.abs(dOwn) === 1 ? ' wound' : ' wounds') : '') + ' of ' + (cx.ownMine ? 'yours' : 'theirs') + ' lost' + (why.length ? ' (' + why.join(', ') + ')' : '')); }
+  if(fo) alt.push(sg(fo.f) + '% ' + dmShort(fo.name) + ' dies');
+  if(!r && Math.abs(d) < 0.005 && !alt.length) return { t:'0', u:'no change', v:0, v2:0, vo:0, zero:true, alt:'' };
+  const mainGood = r ? (cx.tgtMine ? r < 0 : r > 0) : ft ? (cx.tgtMine ? ft.f < 0 : ft.f > 0) : null;
+  const ownGood = dOwn ? (cx.ownMine ? dOwn < 0 : dOwn > 0) : fo ? (cx.ownMine ? fo.f < 0 : fo.f > 0) : null;
+  const good = mainGood != null ? mainGood : ownGood;
+  return { t:r ? sg(r) : '≈0', u:(a.many ? 'models' : 'wounds') + (cx.tgtMine ? ' of yours' : ''), v:d, v2:ft ? ft.f / 100 : 0, vo:a.own != null && b.own != null ? b.own - a.own : 0,
+    vo2:fo ? fo.f / 100 : 0, tiny:!r, alt:alt.join(' · '), good, trade:mainGood != null && ownGood != null && mainGood !== ownGood };
 }
 // why no choice can change this step: nothing left of the target or of the unit attacking, the target destroyed in every game
 const dmSatWhy = C => { const A = C.A; if(!A) return '';
@@ -2496,7 +2549,7 @@ function dmLevers(st, plan){
       : k === 'targetObjectiveNotYours' ? (mineAtk ? 'The target on an objective marker you do not control' : 'Your unit (the target) on an objective marker they do not control')
       : DM_FACTS[store === 'objective' && side === 't' ? 'targetObjective' : fxk === 'triled' ? 'riled' : fxk] || k;
     add(lid, { sec:'rule', side:unitWho === b.atk.who || unitWho === 'pair' ? 'a' : 't', fact:k, store, unitWho, on:onNow, why:onNow && F.why[fxk] ? F.why[fxk] : '', reach, cond, also, label,
-      apply:s => { if(turnCharge){ const t = s.turn[s.dir]; t.charge = !onNow; if(t.charge) t.fight = true; }
+      apply:s => { if(turnCharge){ const t = s.turn[s.dir]; t.charge = !onNow; delete t.auto; if(t.charge) t.fight = true; }
         else { dmFactsOf(s, unitWho)[store] = !onNow; }
         // a fact said reaches every rule with that condition, in every step: the boxes ticked by hand for it follow it again
         for(const bb of plan.beats){ const c = s.ch[s.dir + ':' + bb.id]; if(c && isObj(c.on)) for(const r of ruled(bb, unitWho, store)) delete c.on[r.k]; } } });
@@ -2525,29 +2578,29 @@ function dmIf(C, lv){
   catch(e){ lv.err = true; }
   return lv;
 }
-// the step's answer, and what comes back after it, from a result of a plan
-const dmMeasure = (plan, k, r) => { const a = dmBeatAns(plan, Math.min(k, plan.beats.length - 1), r), last = plan.beats.length - 1;
-  const back = last > k && plan.beats[last].side !== plan.beats[k].side && r && r.beats[last] ? r.beats[last].killed : null;
-  return a ? dmNums(a, back) : null; };
-// the effect shown beside a lever: what the step's answer becomes with it changed, minus what it is now (a box: with it minus
-// without), from the same games (q: the quick 2,000)
+// the turn's numbers a change is measured in, from a result of a plan (dmNums: over the whole turn)
+const dmMeasure = (plan, k, r) => dmNums(plan, k, r);
+// the effect shown beside a lever: what the turn becomes with it changed, minus what it is now (a box: with it minus without),
+// from the same games (q: the quick 2,000)
 function dmEff(C, lv, q){
   if(lv.err || !lv.plan) return null;
   if(lv.same) return { t:'0', u:'no change', v:0, zero:true, same:true };
-  const sims = q ? DM_Q : DM_X, r0 = dmGet(q ? C.inQ : C.inX), r2 = dmOk(lv.plan) ? dmGet(q ? lv.inQ : lv.inX) : null;
+  const r0 = dmGet(q ? C.inQ : C.inX), r2 = dmOk(lv.plan) ? dmGet(q ? lv.inQ : lv.inX) : null;
   if(!r0 || (dmOk(lv.plan) && !r2)) return null;
   const k = lv.plan.beats.findIndex(x => x.id === C.plan.beats[C.plan.k].id);
   if(k < 0) return null;
   const a = dmMeasure(C.plan, C.plan.k, r0), b = r2 ? dmMeasure(lv.plan, k, r2) : null, A0 = dmBeatAns(C.plan, C.plan.k, r0);
-  const zero = x => x && Object.assign({}, x, { raw:0, lost:0, wipe:0, chars:x.chars.map(() => 0) });
-  const aa = a || zero(b), bb = b || zero(a);
+  const aa = a || dmZero(b), bb = b || dmZero(a);
   if(!aa || !bb) return null;
-  const val = b ? b.raw : 0, bt = C.plan.beats, last = bt[bt.length - 1];
+  const val = A0 && r2 ? (x => x ? (x.one ? x.lost : x.killed) : 0)(dmBeatAns(lv.plan, k, r2)) : 0, bt = C.plan.beats[C.plan.k];
+  const revive = Object.assign({}, ...C.plan.beats.filter(x => x.side === bt.side).map(x => x.M.revive || {}));
   // always what the tap does: for a ticked box, unticking it
-  const d = dmDelta(aa, bb, A0 || {}, { tgtMine:bt[C.plan.k].tgt.who === 'mine', backMine:last.tgt.who === 'mine' });
+  const d = dmDelta(aa, bb, A0 || {}, { tgtMine:bt.tgt.who === 'mine', ownMine:bt.atk.who === 'mine', revive });
   return d && Object.assign(d, { val, q:!!q });
 }
-function dmFxHtml(C, lv){
+// (always in one wrapper, fxm: the number and its unit; a row sets it beside its words, a pill inline)
+function dmFxHtml(C, lv){ const h = dmFxIn(C, lv); return h.startsWith('<span class="fxm">') ? h : '<span class="fxm">' + h + '</span>'; }
+function dmFxIn(C, lv){
   const f = lv.fx || lv.est;
   if(lv.sec === 'prof' || lv.sec === 'pill-val'){ const v = lv.on ? C.A && WH_CALC.fmt(C.A.one ? C.A.lost : C.A.killed) : f && f.val != null ? WH_CALC.fmt(f.val) : null;
     return '<span class="fxv' + (lv.on ? ' now' : '') + (f && f.q ? ' est' : '') + '">' + (v == null ? '…' : esc(v)) + '</span>'; }
@@ -2556,8 +2609,8 @@ function dmFxHtml(C, lv){
   if(f.zero && lv.out && !lv.on) return '<span class="fxv z' + (f.q ? ' est' : '') + '">no change</span>';
   // the colour is the reader's: good news for the list viewed in green, bad news in red (never the accent); the words say what tapping does
   const cls = f.zero || f.good == null ? ' z' : f.good ? ' good' : ' bad';
-  const what = lv.radio ? '' : lv.over || (lv.out && !lv.on) ? ' if you count it' : lv.on ? ' if unticked' : '';
-  return '<span class="fxv' + cls + (f.q ? ' est' : '') + '">' + esc(f.t) + '</span>' + (lv.radio || f.zero ? '' : '<small>' + esc(f.u + what) + '</small>') + (f.alt ? '<small class="alt">' + esc(f.alt) + '</small>' : '');
+  const what = lv.radio ? '' : lv.over || (lv.out && !lv.on) ? ' if you count it' : lv.on ? (lv.x && lv.x.req ? ' if left out' : ' if unticked') : lv.x && lv.x.req ? ' if counted' : '';
+  return '<span class="fxm"><span class="fxv' + cls + (f.q ? ' est' : '') + '">' + esc(f.t) + '</span>' + (lv.radio || f.zero ? '' : '<small>' + esc(f.u + what) + '</small>') + '</span>' + (f.alt ? '<small class="alt">' + esc(f.alt) + '</small>' : '');
 }
 
 /* ---- the engine off the page: a few Web Workers (new Worker('calc.js')), else between frames on the page itself ---- */
@@ -2633,7 +2686,7 @@ async function dmFill(C){
       const score = {};
       for(const lv of todo){ const e = lv.fx || lv.est || dmEff(C, lv, true); score[lv.id] = dmGain(C, lv, e); }
       dmRank[pk] = score;
-      const host = $('#dmList'); if(host){ host.innerHTML = dmListHtml(C); for(const lv of todo) if(lv.fx || lv.est) dmPatch(C, lv, !lv.fx); }
+      const host = $('#dmList'); if(host){ host.innerHTML = dmListHtml(C); for(const lv of todo) if(lv.fx || lv.est) dmPatch(C, lv, !lv.fx); dmAnchorKeep(); }
     }
     if(base){ await base; if(!live()) return; }
     // the exact effects, in list order
@@ -2654,29 +2707,33 @@ function dmPatch(C, lv, q){
   if(w && g && !lv.radio){ const k = lv.plan ? lv.plan.beats.findIndex(x => x.id === C.plan.beats[C.plan.k].id) : -1;
     const why = g.zero && !dmSatWhy(C) ? dmNoWhy(C.M, k >= 0 ? lv.plan.beats[k].M : null, lv) : '';   // (a reason for every row at once: said once, above the list)
     w.innerHTML = dmWhyHtml(C, lv, g.zero ? 'no change' + (why ? ': ' + why : '') : ''); }
+  dmAnchorKeep();
 }
-// what a choice is worth to whoever makes it (the attacking unit's player, or the target's), in the step's one measure, with a
+// what a choice is worth to whoever makes it (the attacking unit's player, or the target's), in the one measure shown, with a
 // CHARACTER's fate to break a tie: having it ticked (a ticked box: what unticking it loses), a pick against the one picked now
 function dmGain(C, lv, e){
   if(!e) return 0;
   const sgn = (lv.on && !lv.radio ? -1 : 1) * (lv.side === 't' ? -1 : 1);
   return sgn * (e.v + (Math.abs(e.v) < 0.05 ? (e.v2 || 0) * 0.01 : 0));
 }
-const dmFateGain = (lv, e) => (lv.on && !lv.radio ? -1 : 1) * (lv.side === 't' ? -1 : 1) * (e.v2 || 0);
-// "best": the profile or pick that destroys most, and each side's stratagem that does the most for it, said by what ("most models",
-// "saves most"). Whose best it is comes from the step: its attacker's choices, its target's. None is crowned where a choice trades
-// models for a CHARACTER's fate (Epic Challenge: fewer models, but Khârn dies far more often)
+// "best": the profile that destroys most in this step, the pick and each side's stratagem that does the most for it, said by what
+// ("most models", "saves most"). Whose best it is comes from the step: its attacker's choices, its target's. None is crowned where
+// a choice trades: models for a CHARACTER's fate (Epic Challenge: fewer models, but Khârn dies far more often), or more of
+// theirs destroyed for more of your own unit lost (hazard rolls: Unshackled Wrath's "All three", a supercharge)
 function dmBest(C){
   const b = C.plan.beats[C.plan.k], unit = C.A && C.A.one ? 'wounds' : 'models';
-  const mark = (lv, t) => { for(const el of document.querySelectorAll('[data-fx="' + CSS.escape(lv.id) + '"]')) if(!el.querySelector('.best')) el.insertAdjacentHTML('beforeend', '<em class="best">' + esc(t) + '</em>'); };
-  const trade = list => list.some(lv => lv.fx && Math.abs(lv.fx.v2 || 0) >= 0.05 && Math.sign(dmFateGain(lv, lv.fx)) !== Math.sign(dmGain(C, lv, lv.fx) || dmFateGain(lv, lv.fx)));
+  const mark = (lv, t) => { for(const el of document.querySelectorAll('[data-fx="' + CSS.escape(lv.id) + '"]')) if(!el.querySelector('.best')) (el.querySelector('.fxm') || el).insertAdjacentHTML('beforeend', '<em class="best">' + esc(t) + '</em>'); };
+  const fateT = (lv, e) => (lv.on && !lv.radio ? -1 : 1) * (lv.side === 't' ? -1 : 1) * (e.v2 || 0);
+  const trade = list => list.some(lv => lv.fx && (lv.fx.trade || (Math.abs(lv.fx.v2 || 0) >= 0.05 && Math.sign(fateT(lv, lv.fx)) !== Math.sign(dmGain(C, lv, lv.fx) || fateT(lv, lv.fx)))));
   const groups = new Map();
   for(const lv of C.levers) if(lv.sec === 'prof' || lv.sec === 'pill'){ const k = lv.sec === 'prof' ? lv.c.k : 'pill:' + lv.parent; if(!groups.has(k)) groups.set(k, []); groups.get(k).push(lv); }
+  const now = C.A ? (C.A.one ? C.A.lost : C.A.killed) : 0;
   for(const list of groups.values()){
     if(list.length < 2 || list.some(lv => !lv.on && !lv.fx)) continue;
-    const val = lv => lv.on ? 0 : lv.side === 't' ? -lv.fx.v : lv.fx.v;
-    const top = list.reduce((x, lv) => val(lv) > val(x) ? lv : x, list[0]);
     if(trade(list.filter(lv => !lv.on))) continue;
+    // a profile: by the number it shows (this step's); a pick: by its effect
+    const val = lv => list[0].sec === 'prof' ? (lv.on ? now : lv.fx.val) - now : lv.on ? 0 : lv.side === 't' ? -lv.fx.v : lv.fx.v;
+    const top = list.reduce((x, lv) => val(lv) > val(x) ? lv : x, list[0]);
     if(val(top) > 0.05 || (top.on && list.some(lv => val(lv) < -0.05))) mark(top, (top.side === 't' ? 'saves most' : 'best · most ' + unit)); }
   for(const side of ['a', 't']){
     const list = C.levers.filter(lv => lv.sec === 'strat' && lv.side === side && !lv.out && lv.fx);
@@ -2686,6 +2743,7 @@ function dmBest(C){
     const mine = (side === 'a') === (b.atk.who === 'mine');
     mark(top, (mine ? 'best' : 'their best') + ' · ' + (side === 'a' ? 'most ' + unit : 'saves most'));
   }
+  dmAnchorKeep();
 }
 
 /* ---- the screen ---- */
@@ -2704,18 +2762,19 @@ function screenDamage(){
   const C = DM_CTX = { st:JSON.parse(JSON.stringify(st)), P, plan, M:plan.beats[plan.k].M, r, prov, inX, inQ };
   C.A = dmBeatAns(plan, plan.k, r);
   C.levers = dmLevers(st, plan); DM_LV = new Map(C.levers.map(lv => [lv.id, lv]));
-  h += dmCard(C) + (P.typed ? dmTypedEd(st, P.au, C.M) : '') + '<div id="dmList">' + dmListHtml(C) + '</div>';
-  setTimeout(() => { dmStick(); dmChipCap(); dmFill(C); }, 0);
+  h += '<div class="dmpinw"><div class="dmpin" id="dmPin" hidden></div></div>' + dmCard(C) + (P.typed ? dmTypedEd(st, P.au, C.M) : '') + '<div id="dmList">' + dmListHtml(C) + '</div>';
+  setTimeout(() => { dmStick(); dmChipCap(); dmAnchorKeep(); dmFill(C); }, 0);
   return h;
 }
 // the answer card and the strip again, when the answer's own 10,000 games come in
 function dmRedraw(C){
   if(DM_CTX !== C) return;
   C.r = dmGet(C.inX); C.prov = false; C.A = dmBeatAns(C.plan, C.plan.k, C.r);
-  const a = $('#dmAns'); if(a){ const was = a.classList.contains('stuck'); a.outerHTML = dmCard(C); if(was) $('#dmAns').classList.add('stuck'); dmChipCap(); }
+  const a = $('#dmAns'); if(a){ a.outerHTML = dmCard(C); dmChipCap(); dmStick(); }
   const s = $('#dmStrip'); if(s){ s.outerHTML = dmStripHtml(); measure(); }
   // the profile picked shows the answer itself: now from its own 10,000 games
   for(const lv of C.levers) if(lv.sec === 'prof' && lv.on) for(const el of document.querySelectorAll('[data-fx="' + CSS.escape(lv.id) + '"]')) el.innerHTML = dmFxHtml(C, lv);
+  dmAnchorKeep();
 }
 // the sentence: Your [unit] [shoot | fight] their [unit], and the swap; the verb is the step shown
 function dmSentence(st, P, plan){
@@ -2772,6 +2831,7 @@ function dmUnitSub(u, a){
 }
 // the answer of the step shown, pinned: the number, what it is of, wiped, a CHARACTER's fate; what is counted (chips: two
 // lines, "+N more"); what is not counted; the working; reset
+let dmCardGen = 0;
 function dmCard(C){
   const { A, plan, st } = C, f = WH_CALC.fmt, b = plan.beats[plan.k];
   // whose attack this step is, in words (the sentence above names the pair; in the fight back the other unit attacks)
@@ -2781,8 +2841,10 @@ function dmCard(C){
   if(!A) return '<div class="dmans" id="dmAns">' + ctxLine + '<p class="dmmsg">' + (b.M.input.groups.length ? 'None of the ticked weapons can attack here (see Weapons).' : 'No weapon ticked: tick one under Weapons.') + '</p>' + dmChips(C) + '</div>';
   const n = A.models, tw = A.x.target.wounds;
   const big = A.one ? f(A.lost) : f(A.killed), of = A.one ? 'of ' + tw + ' wounds lost' : 'of ' + n + ' destroyed' + (A.before > 0.005 ? ' this step' : '');
-  const sub = A.one ? 'destroyed in ' + dmPct(A.wipe) + ' of games' : (f(A.lost) === '1' ? '1 wound' : f(A.lost) + ' wounds') + ' lost · wiped' + (A.before > 0.005 ? ' by now' : '') + ' in ' + dmPct(A.wipe) + ' of games' +
-    (A.before > 0.005 ? ' · ' + f(A.before) + ' destroyed before' : '');
+  // "wiped by now": by the end of this step; with a comeback (Berserker Frenzy) also what is left once the phase is over
+  const rvT = !!b.M.revive && Object.keys(b.M.revive).length > 0, byNow = A.before > 0.005 || plan.k > 0 || rvT;
+  const sub = A.one ? 'destroyed in ' + dmPct(A.wipe) + ' of games' : (f(A.lost) === '1' ? '1 wound' : f(A.lost) + ' wounds') + ' lost · wiped' + (byNow ? ' by now' : '') + ' in ' + dmPct(A.wipe) + ' of games' +
+    (rvT && A.rb.wipeDown != null ? ' · after the phase in ' + dmPct(A.rb.wipeDown) : '') + (A.before > 0.005 ? ' · ' + f(A.before) + ' destroyed before' : '');
   // a CHARACTER's fate; with a comeback (Berserker Frenzy) what is left of it after the phase; the rules not counted that change it
   const back = b.M.nc.filter(x => x.side === 't' && /set (?:this model |him |it )?back up|not removed|do not remove|stays until|it stays|he is set back/i.test(x.text)).map(x => x.name);
   // (pinned while scrolling, a one-line short form: "Khârn destroyed 95%, down after the phase 16%")
@@ -2791,10 +2853,11 @@ function dmCard(C){
     (c.revive ? '<small>' + esc(c.revive.src) + ': set back up on a ' + c.revive.roll + '+ at the end of the phase, taken to be the first time; not within Engagement Range, so not in a fight back this phase</small>' : '')).join(' · ') +
     (back.length ? '<small>Not counted, and it changes this: ' + esc(andList(back)) + '</small>' : '') + '</p>' : '';
   // the attacking unit's own cost: its hazard rolls after these attacks
-  const hz = A.rb.hazard && A.rb.hazard.rolls > 0.005 ? '<p class="dmhz">Then its hazard rolls: ' + f(A.rb.hazard.rolls) + ' rolls, ' + f(A.rb.hazard.mw) + ' mortal wounds on ' + whose(b.atk) + 'unit, ' + f(A.rb.hazard.dead) + ' of its models destroyed on average' + (plan.k < plan.beats.length - 1 ? ', before the next step' : '') + '</p>' : '';
+  const hz = A.rb.hazard && A.rb.hazard.rolls > 0.005 ? '<p class="dmhz">Then its hazard rolls: ' + dmPlural(f(A.rb.hazard.rolls), 'roll', 'rolls') + ', ' + dmPlural(f(A.rb.hazard.mw), 'mortal wound', 'mortal wounds') + ' on ' + whose(b.atk) + 'unit, ' + f(A.rb.hazard.dead) + ' of its models destroyed on average' + (plan.k < plan.beats.length - 1 ? ', before the next step' : '') + '</p>' : '';
   const flash = dmCard.last && dmCard.last.pair === dmPairKey(st, b.id) && dmCard.last.v !== big ? ' chg' : '';
   dmCard.last = { pair:dmPairKey(st, b.id), v:big };
   const nc = b.M.nc.length + b.M.strats.filter(x => x.state === 'nc').length;   // as many as the list's fold
+  dmCardGen++;
   return '<div class="dmans' + (C.prov ? ' prov' : '') + (b.id === 'back' ? ' bk' : '') + '" id="dmAns">' + ctxLine +
     '<button class="dmbig" data-dmwork aria-label="' + esc(big + ' ' + of + '. Open the working') + '"><b class="num' + flash + '">' + big + '</b><span>' + of + '<small>' + sub + '</small></span></button>' + chars + hz +
     dmChips(C) +
@@ -2816,6 +2879,8 @@ function dmChips(C){
   for(const c of M.weapons){ if(c.ps.length > 1 && c.on) info(itemName(c.it) + ': ' + c.w.name + (c.over ? ' (by you)' : '')); if(c.on !== c.dflt) chip('w:' + c.k, (c.on ? '+ ' : 'no ') + itemName(c.it)); }
   for(const lv of C.levers) if(lv.fact && lv.on) chip(lv.id, (lv.side === 'a' ? att : tg) + lv.label, lv.why ? 'auto' : '');
   for(const x of M.sit) if(x.on && !x.fixed) chip('s:' + x.k, (x.k === 'c:cover' ? '' : att) + x.label, x.why ? 'auto' : '');
+  // what the rules require, left out: the player's own call, said as one (tap: counted again)
+  for(const x of M.sit) if(x.req && !x.on) out.push('<button class="dmchip ovr" data-dmlv="' + esc('s:' + x.k) + '" aria-label="' + esc(x.label) + ': count again">' + esc(att + x.label + ': left out (by you)') + '<i aria-hidden="true">↺</i></button>');
   if(M.prec && M.prec.on) chip('q:', '[PRECISION] → ' + M.prec.who, M.prec.why ? 'auto' : '');
   for(const r of M.rules) if(r.on && !byFact('r:' + r.k, r.k)) chip('r:' + r.k, att + from(r) + (r.m.cp ? r.m.cp + 'CP ' : '') + r.m.from + (r.help ? ' (' + r.help + ')' : '') + (r.pills ? ': ' + r.pills.find(p => p[1])[0] : '') + (r.over ? ' (by you)' : ''), r.over ? 'over' : r.carried ? 'carry' : r.state === 'on' && dmCh(C.st, b.id).on[r.k] == null ? 'auto' : '');
   const cap = t => t.charAt(0).toUpperCase() + t.slice(1);
@@ -2859,9 +2924,10 @@ function dmWhyHtml(C, lv, extra){
   else if(lv.r) st = lv.r.state === 'on' ? was(lv.r.k, lv.r.why) : lv.on ? 'ticked' : lv.r.m.strat ? 'if used' : 'if it applies';
   else if(x) st = x.state === 'on' ? was(x.k, x.why) : lv.on ? 'ticked' : x.d && x.d.a === 'strat' ? 'if used' : x.why || 'if it applies';
   else if(lv.fact) st = lv.why ? 'holds: ' + lv.why : lv.on ? 'said to hold' : 'if it holds';
+  else if(lv.x && lv.x.req) st = lv.on ? (lv.x.why ? 'ticked for you: ' + lv.x.why : 'ticked') : 'left out by you · ' + lv.x.req;
   else if(lv.x) st = lv.x.why ? 'ticked for you: ' + lv.x.why : lv.on ? 'ticked' : 'if it applies';
   else if(lv.prec) st = lv.prec.why || (lv.on ? 'ticked' : 'the attacker may pick it (24.28)');
-  return side + (st ? '<span' + (x && x.state === 'out' && lv.on ? ' class="ovr"' : '') + '>' + esc(st) + '</span>' : '') + (extra ? '<span class="nw2">' + esc(extra) + '</span>' : '');
+  return side + (st ? '<span' + ((x && x.state === 'out' && lv.on) || (lv.x && lv.x.req && !lv.on) ? ' class="ovr"' : '') + '>' + esc(st) + '</span>' : '') + (extra ? '<span class="nw2">' + esc(extra) + '</span>' : '');
 }
 // the weapon's characteristics in the datasheet's columns (RNG A BS S AP D, or A WS S AP D), its keywords under them
 const dmStatCells = (w, ranged, plus) => '<span class="dmwst">' + (ranged ? [['RNG', plus && parseInt(w.range, 10) ? w.range + '→' + (parseInt(w.range, 10) + plus) + '"' : w.range]] : []).concat([['A', w.A], [ranged ? 'BS' : 'WS', w.BS || w.WS], ['S', w.S], ['AP', w.AP], ['D', w.D]]).map(([k, v]) => '<span><i>' + k + '</i><b>' + esc(v == null ? '–' : v) + '</b></span>').join('') + '</span>' +
@@ -2872,7 +2938,11 @@ function dmListHtml(C){
   const { M, st, plan } = C, b = plan.beats[plan.k], lv = id => DM_LV.get(id);
   const score = dmRank[dmPairKey(st, b.id)] || null;
   const ranked = list => !score ? list : list.map((x, i) => [x, i]).sort((a, c) => (score[c[0].id] || 0) - (score[a[0].id] || 0) || a[1] - c[1]).map(x => x[0]);
+  // what every effect below measures, said once: over the whole turn (the step's target destroyed by its end, and what the unit
+  // attacking loses by then), which for a turn of one step is the step itself
   let h = '<h2 class="dmhd dmtop">What changes this<small>' + esc(b.label) + (score ? ' · biggest first' : '') + '</small></h2>' +
+    '<p class="dmmeas">' + (plan.beats.length > 1 ? 'Effects are over the whole turn: ' + (b.tgt.who === 'mine' ? 'your' : 'their') + ' models destroyed by its end, and ' + (b.atk.who === 'mine' ? 'your' : 'their') + ' own losses.'
+      : 'Effects are on this step' + (C.M.hazard ? ', with ' + (b.atk.who === 'mine' ? 'your' : 'their') + ' losses to the hazard rolls' : '') + '.') + '</p>' +
     (plan.beats.length > 1 || plan.turn.charge ? '<p class="dmturnl"><span>' + esc(plan.beats.map(x => x.label).join(' → ')) + (plan.turn.charge && plan.beats.some(x => x.id === 'fight') ? ' · the charge is taken to succeed (no charge roll)' : '') + '</span>' + (plan.beats.length > 1 ? '<button class="textbtn dmdrop" data-dmdrop="' + b.id + '">Take ' + esc(b.label.toLowerCase()) + ' out</button>' : '') + '</p>' : '') +
     (C.A && dmSatWhy(C) ? '<p class="note dmsat">Nothing here changes this step: ' + esc(dmSatWhy(C)) + '.</p>' : '');
   if(M.bands){
@@ -2894,14 +2964,15 @@ function dmListHtml(C){
         (c.can[i] ? '' : '<small>by the rules: ' + esc((c.hunter[i] || []).join('/')) + ' only</small>') + '</button>'; }).join('') + '</div>';
   }
   h += '</section>';
-  const rl = C.levers.filter(x => x.sec === 'rule' && !(x.out && !x.on) && !x.underFact);
+  // a rule the rules leave out for this pair stays in the fold below, ticked or not: a tap never moves a row
+  const rl = C.levers.filter(x => x.sec === 'rule' && !x.out && !x.underFact);
   h += '<section class="dmsec"><h3 class="dmh3">Situation and rules <small>both sides</small></h3>' + (rl.length ? ranked(rl).map(x => dmLeverRow(C, x)).join('') : '<p class="note dmnone">None for this pair.</p>') + '</section>';
-  const hl = C.levers.filter(x => x.sec === 'help' && !(x.out && !x.on));
+  const hl = C.levers.filter(x => x.sec === 'help' && !x.out);
   if(hl.length){ const sides = new Set(hl.map(x => DM_SIDE(C, x.side)));
     h += '<section class="dmsec"><h3 class="dmh3">Help from other units <small>' + (sides.size > 1 ? 'of each list' : sides.has('yours') ? 'of your list' : 'of their list') + ' · if the table gives it</small></h3>' + ranked(hl).map(x => dmLeverRow(C, x)).join('') + '</section>'; }
-  const sl = C.levers.filter(x => x.sec === 'strat' && !(x.out && !x.on));
+  const sl = C.levers.filter(x => x.sec === 'strat' && !x.out);
   h += '<section class="dmsec"><h3 class="dmh3">Stratagems <small>both sides, with their CP</small></h3>' + (sl.length ? ranked(sl).map(x => dmLeverRow(C, x)).join('') : '<p class="note dmnone">None that change these numbers.</p>') + '</section>';
-  h += dmOuts(C, C.levers.filter(x => x.out && !x.on && (x.sec === 'rule' || x.sec === 'strat' || x.sec === 'help')), M.strats.filter(s => s.state === 'out'));
+  h += dmOuts(C, C.levers.filter(x => x.out && !x.underFact && (x.sec === 'rule' || x.sec === 'strat' || x.sec === 'help')), M.strats.filter(s => s.state === 'out'));
   const nc = M.nc.concat(M.strats.filter(s => s.state === 'nc').map(s => ({ side:s.side, name:s.s.cp + 'CP ' + s.s.name, text:s.text, strat:true })));
   if(nc.length) h += '<details class="dmfold" id="dmNc" data-dmfold="nc"' + (st.fold.nc ? ' open' : '') + '><summary><span>Not counted by the calculator (' + nc.length + ')</span>' + chev + '</summary>' +
     '<p class="note">They can matter at the table, but the calculator does not play them: what each one says.</p>' +
@@ -2935,6 +3006,19 @@ function dmLeverRow(C, x){
   return '';
 }
 const dmCap = t => String(t || '').charAt(0).toUpperCase() + String(t || '').slice(1);
+// a popup of a rule as another list has it (the other side's stratagem, ability or detachment rule), opened from the Damage tab: its
+// text from that list, while the app stays on this list and this matchup (closing it comes back here). Inside it, a unit's name is
+// not a link (it would open a datasheet of the other list as if it were this one), and nothing asks about it from this list
+let dmSheetArmy = null;
+function dmShowIn(L, fn){
+  const own = L.id === cur.army;
+  sheetCur = own ? null : plain(cur);
+  try { inArmy(L, fn); } finally { sheetCur = null; }
+  dmSheetArmy = own || $('#sheetHost').hidden ? null : L.id;
+  if(dmSheetArmy) for(const x of document.querySelectorAll('#sheetIn [data-unit], #sheetIn [data-askref]')){
+    if(x.hasAttribute('data-askref')){ x.remove(); continue; }
+    const t = document.createElement('span'); t.textContent = x.textContent; x.replaceWith(t); }
+}
 // a rule's name in its row opens the same popup the other screens use: its ability, stratagem or rule, in the list it is from
 function dmRuleLink(C, lv, name){
   const b = C.plan.beats[C.plan.k], L = lv.side === 't' ? b.tgt.army : b.atk.army, u = lv.side === 't' ? b.tgt.u : b.atk.u;
@@ -2958,8 +3042,9 @@ function dmPills(C, x){
   const kids = C.levers.filter(y => y.sec === 'pill' && y.parent === x.id);
   if(!kids.length) return '';
   const pk = x.r && x.r.m.pick ? x.r.m.pick : [];
-  return '<div class="dmprof sub">' + kids.map(y => { const p = pk.find(q => q.name === y.name), hz = p && /\[hazardous\]/i.test(p.note);
-    return '<button class="dmpp' + (y.on ? ' on' : '') + '" data-dmlv="' + esc(y.id) + '" aria-pressed="' + y.on + '"><b>' + esc(y.name) + '</b>' + (hz ? '<small>with [HAZARDOUS]: its hazard rolls are counted</small>' : '') + '<em data-fx="' + esc(y.id) + '">' + dmFxHtml(C, y) + '</em></button>'; }).join('') + '</div>';
+  const hm = x.r && x.r.m.hazard;
+  return '<div class="dmprof sub">' + kids.map(y => { const p = pk.find(q => q.name === y.name), hz = p && /\[hazardous\]/i.test(p.note), hr = hm && (!hm.picks || hm.picks.includes(y.name));
+    return '<button class="dmpp' + (y.on ? ' on' : '') + '" data-dmlv="' + esc(y.id) + '" aria-pressed="' + y.on + '"><b>' + esc(y.name) + '</b>' + (hz ? '<small>with [HAZARDOUS]: its hazard rolls are counted</small>' : hr ? '<small>' + esc(hm.when) + ': ' + dmPlural(hm.rolls || 1, 'hazard roll', 'hazard rolls') + ' after, counted</small>' : '') + '<em data-fx="' + esc(y.id) + '">' + dmFxHtml(C, y) + '</em></button>'; }).join('') + '</div>';
 }
 // what the rules rule out for this pair, in one line: each a button, the player's to count anyway (its effect with it); the
 // other stratagems of another phase, with nothing to count, named with the reason
@@ -2967,12 +3052,13 @@ function dmOuts(C, list, more){
   if(!list.length && !(more || []).length) return '';
   const pill = x => { const r = x.r, d = x.x;
     const name = r ? (r.m.cp ? r.m.cp + 'CP ' : '') + r.m.from : (d.d && d.d.a === 'strat' ? (/^(\d+)CP /.exec(d.d.t) || [, ''])[1] + 'CP ' : '') + d.src;
-    return '<button class="dmop" data-dmlv="' + esc(x.id) + '" aria-pressed="false"><b>' + esc(name) + '</b> <span class="sd">' + DM_SIDE(C, x.side) + '</span> <span>' + esc((r || d).why) + '</span> <em data-fx="' + esc(x.id) + '">' + dmFxHtml(C, x) + '</em></button>'; };
+    return '<button class="dmop' + (x.on ? ' on' : '') + '" data-dmlv="' + esc(x.id) + '" aria-pressed="' + !!x.on + '"><b>' + esc(name) + '</b> <span class="sd">' + DM_SIDE(C, x.side) + '</span> <span>' + (x.on ? '<i class="ovr">counted by you</i> · ' : '') + esc((r || d).why) + '</span> <em data-fx="' + esc(x.id) + '">' + dmFxHtml(C, x) + '</em></button>'; };
   const by = new Map();
   for(const s of more || []){ const k = s.side + '|' + s.why; if(!by.has(k)) by.set(k, []); by.get(k).push(s.s.cp + 'CP ' + s.s.name); }
   const rest = [...by].map(([k, names]) => { const [side, w] = k.split('|'); return '<b>' + esc(names.join(', ')) + '</b> (' + DM_SIDE(C, side) + ', ' + esc(w) + ')'; });
   const n = list.length + (more || []).length;
-  return '<details class="dmfold dmouts" data-dmfold="outs"' + (C.st.fold.outs ? ' open' : '') + '><summary><span>Not for this pair, by the rules (' + n + ')' + (list.length ? ' · yours to count anyway' : '') + '</span>' + chev + '</summary>' +
+  const on = list.filter(x => x.on).length;
+  return '<details class="dmfold dmouts" data-dmfold="outs"' + (C.st.fold.outs ? ' open' : '') + '><summary><span>Not for this pair, by the rules (' + n + ')' + (on ? ' · ' + on + ' counted by you' : list.length ? ' · yours to count anyway' : '') + '</span>' + chev + '</summary>' +
     (list.length ? '<p class="dmoutl">' + list.map(pill).join('') + '</p>' : '') + (rest.length ? '<p class="dmout">Nothing to count: ' + rest.join(' · ') + '</p>' : '') + '</details>';
 }
 // what an Other modifier can count of a rule the calculator does not play ("count it by hand"): for the attacker, a to hit or to wound,
@@ -3018,29 +3104,79 @@ function dmManual(ch, st){
 
 // the step shown (what is set by hand is for it)
 const dmStepId = () => DM_CTX ? DM_CTX.plan.beats[DM_CTX.plan.k].id : 'shoot';
+// the turn's shape, said whenever it changes: every step added or taken out, from any control, is a toast with Undo (the turn,
+// the step shown and the pair as they were before)
+const DM_ORDER = ['shoot', 'charge', 'fight', 'back'];
+const dmStepLabel = id => id === 'charge' ? 'Charge' : DM_STEPS[id].label;
+const dmSnap = st => JSON.stringify({ dir:st.dir, turn:isObj(st.turn[st.dir]) ? st.turn[st.dir] : null, step:st.step[st.dir] || '', atk:st.atk, tgt:st.tgt, aArmy:st.aArmy, tArmy:st.tArmy });
+function dmRestore(snap){
+  const st = dmState(), o = JSON.parse(snap);
+  Object.assign(st, { dir:o.dir, atk:o.atk, tgt:o.tgt, aArmy:o.aArmy, tArmy:o.tArmy });
+  if(o.turn) st.turn[o.dir] = o.turn; else delete st.turn[o.dir];
+  st.step[o.dir] = o.step;
+  saveSession(); rerender();
+  return 'Back as it was';
+}
+// the steps added and taken out between two shapes of the turn, in words: "Fight added after Shoot", "Charge and Fight added after
+// Shoot", "Fight back taken out"
+function dmTurnWords(t0, t1){
+  const on = t => DM_ORDER.filter(id => t && t[id]), a = on(t0), b = on(t1);
+  const add = b.filter(x => !a.includes(x)), rem = a.filter(x => !b.includes(x)), w = [];
+  if(rem.length) w.push(andList(rem.map(dmStepLabel)) + ' taken out');
+  if(add.length){ const i = DM_ORDER.indexOf(add[0]), before = a.filter(y => b.includes(y) && DM_ORDER.indexOf(y) < i).pop(), after = a.filter(y => b.includes(y) && DM_ORDER.indexOf(y) > i)[0];
+    w.push(andList(add.map(dmStepLabel)) + ' added' + (before ? ' after ' + dmStepLabel(before) : after ? ' before ' + dmStepLabel(after) : '')); }
+  return w.join(' · ');
+}
+// after a control: what changed in the turn, with Undo (extra: what else to say first)
+function dmTurnSaid(snap, extra){
+  const st = dmState(), o = JSON.parse(snap), w = [extra || '', o.dir === st.dir ? dmTurnWords(o.turn, st.turn[st.dir]) : ''].filter(Boolean).join(' · ');
+  if(w) toastUndo(w, () => dmRestore(snap));
+}
+// a turn starts with one step: the verb chosen (or the one shown when "They attack" turned it round), else Shoot, else Fight
+function dmStart(P, verb){
+  const v = verb === 'fight' || verb === 'back' ? 'fight' : 'shoot', can = id => dmArmed(P.au, id === 'shoot' ? 'ranged' : 'melee');
+  return { [can(v) ? v : v === 'shoot' ? 'fight' : 'shoot']:true, auto:true };
+}
+// the one untouched starting step: the top verb replaces it (said: "Shoot taken out"); a turn the player has shaped grows instead
+const dmUntouched = tr => !!tr.auto && DM_ORDER.filter(id => tr[id]).length === 1;
 // show a step of the turn (the verb, or the strip), added to the turn when it is not in it. The charge is made or not (made: the
 // fight follows it, and is shown)
 function dmGoStep(id, verb){
   const st = dmState(), P = dmPair(st);
   if(!P.ready) return;
-  const tr = dmTurn(st, P), att = dmName(P.au, P.A);
+  const tr = dmTurn(st, P), att = dmName(P.au, P.A), snap = dmSnap(st);
   if(id === 'charge'){
     if(!tr.charge && !dmArmed(P.au, 'melee')){ toast(att + ' has no melee weapons to charge with'); return; }
-    tr.charge = !tr.charge;
+    tr.charge = !tr.charge; delete tr.auto;
     if(tr.charge){ tr.fight = true; st.step[st.dir] = 'fight'; }
-    saveSession(); rerender(); return; }
+    saveSession(); rerender(); dmTurnSaid(snap); return; }
   const why = id === 'shoot' ? (dmArmed(P.au, 'ranged') ? '' : att + ' has no ranged weapons')
     : id === 'fight' ? (dmArmed(P.au, 'melee') ? '' : att + ' has no melee weapons')
     : P.tu.typed ? 'A typed target does not fight back' : !dmArmed(P.au, 'melee') ? att + ' has no melee weapons: nothing to fight back against'
     : !dmArmed(P.tu, 'melee') ? dmName(P.tu, P.B) + ' has no melee weapons' : '';
   if(why){ toast(why); return; }
-  // one meaning for both controls: show the step, adding it to the turn when it is not in it; nothing is ever taken out by a tap
-  // that does not say so ("Take … out" does)
-  const added = !tr[id];
-  if(added){ tr[id] = true; if(id === 'back') tr.fight = true; }
+  if(tr[id]){ st.step[st.dir] = id; saveSession(); rerender(); return; }
+  // the top verb on the untouched starting step: that step replaced; otherwise the step added to the turn
+  const was = DM_ORDER.find(k => tr[k]);
+  if(verb && dmUntouched(tr)){ for(const k of DM_ORDER) delete tr[k]; tr[id] = true; st.step[st.dir] = id; saveSession(); rerender(); toastUndo(dmStepLabel(was) + ' taken out', () => dmRestore(snap)); return; }
+  tr[id] = true; if(id === 'back') tr.fight = true; delete tr.auto;
   st.step[st.dir] = id;
-  saveSession(); rerender();
-  if(added && verb && dmPlan(st).beats.length > 1) toast(DM_STEPS[id].label + ' added to the turn: “Take … out” removes a step');
+  saveSession(); rerender(); dmTurnSaid(snap);
+}
+
+// a unit changed: the turn keeps its shape; the steps the new pair cannot play are dropped (said: "Fight back dropped: Gretchin have no
+// melee weapons"); with none left, the turn starts again with one step
+function dmKeepTurn(st){
+  const P = dmPair(st), tr = isObj(st.turn[st.dir]) ? st.turn[st.dir] : null, why = [];
+  if(!P.ready || !tr) return why;
+  const nm = (u, L) => dmName(u, L) + (u.models && modelCount(u) > 1 ? ' have' : ' has');
+  const drop = (id, w) => { if(tr[id]){ tr[id] = false; why.push(dmStepLabel(id) + ' dropped: ' + w); } };
+  if(!dmArmed(P.au, 'ranged')) drop('shoot', nm(P.au, P.A) + ' no ranged weapons');
+  if(!dmArmed(P.au, 'melee')){ drop('fight', nm(P.au, P.A) + ' no melee weapons'); tr.charge = false; tr.back = false; }
+  if(tr.back && (P.tu.typed || !dmArmed(P.tu, 'melee'))) drop('back', P.tu.typed ? 'a typed target does not fight back' : nm(P.tu, P.B) + ' no melee weapons');
+  if(!['shoot', 'fight'].some(id => tr[id])){ const t2 = dmStart(P, ''); for(const k of DM_ORDER) delete tr[k]; Object.assign(tr, t2); if(why.length) why.push(dmStepLabel(Object.keys(t2).find(x => x !== 'auto')) + ' instead'); }
+  if(why.length) st.step[st.dir] = '';
+  return why;
 }
 
 /* ---- the turn, pinned above the tabs: each step's number, the steps not in the turn to add; under it, each side ---- */
@@ -3050,7 +3186,7 @@ function dmStripHtml(){
   const { plan, st } = C, r = C.r, tr = plan.turn || {};
   const stop = (id, label) => {
     if(id === 'charge'){ const on = !!tr.charge, can = dmArmed(plan.A.u, 'melee');
-      return '<button class="dms ch' + (on ? ' on' : '') + (can || on ? '' : ' no') + '" data-dmstop="charge" aria-pressed="' + on + '"' + (can ? '' : ' data-no="1"') + '><span class="l">' + label + '</span><b>' + (on ? '✓' : '+') + '</b><span class="s">' + (on ? 'taken as made' : can ? 'add' : 'no melee') + '</span></button>'; }
+      return '<button class="dms ch' + (on ? ' on' : '') + (can || on ? '' : ' no') + '" data-dmstop="charge" aria-pressed="' + on + '"' + (can ? '' : ' data-no="1"') + '><span class="l">' + label + '</span><b>' + (on ? '✓' : '+') + '</b><span class="s">' + (on ? 'assumed' : can ? 'add' : 'no melee') + '</span></button>'; }
     const i = plan.beats.findIndex(b => b.id === id), b = plan.beats[i];
     if(!b){ const can = id === 'shoot' ? dmArmed(plan.A.u, 'ranged') : id === 'fight' ? dmArmed(plan.A.u, 'melee') : !plan.B.typed && dmArmed(plan.B.u, 'melee');
       return '<button class="dms' + (can ? '' : ' no') + '" data-dmstop="' + id + '"><span class="l">' + label + '</span><b>+</b><span class="s">' + (can ? 'add' : plan.B.typed && id === 'back' ? 'typed' : 'no weapons') + '</span></button>'; }
@@ -3062,12 +3198,15 @@ function dmStripHtml(){
   const line = (side, sd, lbl) => { if(!sd) return ''; const u = side.u, one = modelCount(u) === 1, f = WH_CALC.fmt;
     // by the end of the turn: a comeback (Berserker Frenzy) already played
     const rvb = plan.beats.find(bb => bb.tgt === side && bb.M.revive && Object.keys(bb.M.revive).length), rv = rvb ? Object.values(rvb.M.revive)[0].src : '';
-    const fl = sd.rows.filter(x => x.char && sd.rows.length > 1), fate = fl.length ? fl.map(x => esc(dmFirst(x.name)) + ' ' + dmPct(x.gone)).join(', ') + ' dead' + (rv ? ' (after ' + esc(rv) + ')' : '') : '';
+    const fl = sd.rows.filter(x => x.char && sd.rows.length > 1), fate = fl.length ? fl.map(x => esc(dmFirst(x.name)) + ' ' + dmPct(x.gone)).join(', ') + ' dead' : '';
+    const after = rv ? ' (after ' + esc(rv) + ')' : '', wiped = sd.wipe >= 0.005 ? ' · wiped ' + dmPct(sd.wipe) + after : '';
     const p = dmPts(u, sd);
-    return '<span><b>' + lbl + '</b> ' + (one ? dmPct(sd.wipe) + ' destroyed' : String(Math.round((sd.models - sd.killed) * 10) / 10) + ' of ' + sd.models + ' left' + (fate ? ' · ' + fate : '') + (sd.wipe >= 0.005 ? ' · wiped ' + dmPct(sd.wipe) : '')) + (p == null ? '' : ' · ≈' + Math.round(p) + ' pts lost') + '</span>'; };
+    return '<span><b>' + lbl + '</b> ' + (one ? dmPct(sd.wipe) + ' destroyed' + after : String(Math.round((sd.models - sd.killed) * 10) / 10) + ' of ' + sd.models + ' left' + (fate ? ' · ' + fate + (wiped ? '' : after) : '') + wiped) + (p == null ? '' : ' · ≈' + Math.round(p) + ' pts lost') + '</span>'; };
+  // the end of the turn (each step's own "by now" is on its card); said when it is not just the one step shown
+  const eot = plan.beats.length > 1 || plan.beats.some(bb => bb.M.revive && Object.keys(bb.M.revive).length) ? '<i class="eot">At the end of the turn</i>' : '';
   const sum = line(plan.B, sides[1], plan.B.who === 'mine' ? 'Yours' : 'Theirs') + line(plan.A, sides[0], plan.A.who === 'mine' ? 'Yours' : 'Theirs');
-  return '<div class="dmstrip' + (C.prov ? ' prov' : '') + '" id="dmStrip" role="group" aria-label="The turn"><div class="dmsr">' + stop('shoot', 'Shoot') + stop('charge', 'Charge') + stop('fight', 'Fight') + stop('back', 'Fight back') + '</div>' +
-    (sum ? '<button class="dmsum" data-dmpts aria-label="What is left of each side; tap: how the points are worked out">' + sum + '</button>' : '') + '</div>';
+  return '<div class="dmstrip' + (C.prov ? ' prov' : '') + '" id="dmStrip" role="group" aria-label="The turn"><div class="dmsr">' + stop('shoot', 'Shoot') + stop('charge', 'Charge') + stop('fight', 'Fight') + stop('back', '<span class="lf">Fight back</span><span class="ls">Back</span>') + '</div>' +
+    (sum ? '<button class="dmsum" data-dmpts aria-label="What is left of each side; tap: how the points are worked out">' + eot + sum + '</button>' : '') + '</div>';
 }
 // points destroyed, on average: each model at its share of its part's points (a leader's own points on it: New Recruit's
 // "115 + Khorne Berzerkers 170"), the rest of the unit's points shared by its models. An estimate, said as one (≈)
@@ -3139,7 +3278,7 @@ function dmPicker(k){
   const open = a => a === P.opp || a === P.me || a === P.TL || (!P.opp && a === lists[0]);
   openSheet(me1 && !st.pendSwap ? 'Target' : 'Attacker', st.pendSwap ? 'The unit that attacks yours' : 'Their unit', opp + '<label class="search dmq"><svg aria-hidden="true"><use href="#i-search"/></svg><input id="dmQ" type="search" placeholder="Find a unit or list" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Find a unit"></label>' +
     '<p class="note dmnomatch" id="dmNoMatch" hidden></p>' +
-    (me1 ? '<div class="list"><button class="row" data-dmunit="theirs|typed|" data-q="typed type a target"><span class="rb"><b>Type a target</b><span>Models, T, W, Sv, InSv, Feel No Pain and keywords</span></span>' + (P.typed ? '<svg class="ic ok" aria-hidden="true"><use href="#i-check"/></svg>' : '') + '</button></div>' : '') +
+    (me1 && !st.pendSwap ? '<div class="list"><button class="row" data-dmunit="theirs|typed|" data-q="typed type a target"><span class="rb"><b>Type a target</b><span>Models, T, W, Sv, InSv, Feel No Pain and keywords</span></span>' + (P.typed ? '<svg class="ic ok" aria-hidden="true"><use href="#i-check"/></svg>' : '') + '</button></div>' : '') +
     lists.map(a => '<details class="dmgrp"' + (open(a) ? ' open' : '') + '><summary class="lbl grp-h">' + esc(a.name) + (a === P.opp ? ' <span class="apts">(opponent)</span>' : a === P.me ? ' <span class="apts">(this list)</span>' : ' <span class="apts">(' + a.units.length + ' units)</span>') + '</summary><div class="list">' + a.units.map(u => row(a, u)).join('') + '</div></details>').join(''));
   const q = $('#dmQ');
   // the search, accents ignored ("kharn" finds Khârn): a list's name shows all of it, else the units whose name, keywords or
@@ -3152,9 +3291,25 @@ function dmPicker(k){
     const nm = $('#dmNoMatch'); if(nm){ nm.hidden = !t || found; nm.textContent = 'No unit or list matches “' + q.value.trim() + '”.'; } });
 }
 // the answer card says what it is about once it is pinned under the top bar (the sentence has scrolled away)
-const dmStick = () => { if(cur.s !== 'damage') return; const a = $('#dmAns'); if(!a || a.classList.contains('static')) return;
-  const stuck = scrollY > 0 && a.getBoundingClientRect().top <= $('#top').getBoundingClientRect().bottom + 1;
-  if(stuck !== a.classList.contains('stuck')){ const h0 = a.offsetHeight; a.style.marginBottom = ''; a.classList.toggle('stuck', stuck); if(stuck) a.style.marginBottom = Math.max(0, h0 - a.offsetHeight) + 'px'; }
+// a tap never moves the row under the finger: the row tapped is kept where it was on the screen through the redraw, and through
+// everything that comes in after it (the effects, the answer's 10,000 games, the list put in order), until the player scrolls
+let dmAnchor = null;
+function dmAnchorSet(el, id){ dmAnchor = el && el.closest('#dmList') ? { id, top:el.getBoundingClientRect().top, at:performance.now() } : null; }
+function dmAnchorKeep(){
+  dmStick();
+  if(!dmAnchor || cur.s !== 'damage') return;
+  if(performance.now() - dmAnchor.at > 15000){ dmAnchor = null; return; }
+  const e = document.querySelector('#dmList [data-dmlv="' + CSS.escape(dmAnchor.id) + '"]');
+  if(!e || !e.getClientRects().length) return;
+  const d = e.getBoundingClientRect().top - dmAnchor.top;
+  if(Math.abs(d) >= 1) scrollBy(0, d);
+}
+for(const ev of ['touchmove', 'wheel', 'keydown']) addEventListener(ev, () => { dmAnchor = null; }, { passive:true });
+// once the card's top passes under the top bar, its compact copy is pinned there (dmPin: the step, the number, a one-line fate)
+const dmStick = () => { if(cur.s !== 'damage') return; const a = $('#dmAns'), pin = $('#dmPin'); if(!a || !pin || a.classList.contains('static')) return;
+  const stuck = scrollY > 0 && a.getBoundingClientRect().top < $('#top').getBoundingClientRect().bottom - 0.5;
+  if(stuck && pin.dataset.gen !== String(dmCardGen)){ pin.innerHTML = a.outerHTML.replace(/ id="[^"]*"/g, '').replace('class="dmans', 'class="dmans stuck'); pin.dataset.gen = String(dmCardGen); }
+  if(stuck === pin.hidden) pin.hidden = !stuck;
   const s = $('#dmStrip'); if(s && stuck !== s.classList.contains('mini')){ s.classList.toggle('mini', stuck); measure(); } };
 addEventListener('scroll', dmStick, { passive:true });
 
@@ -4357,7 +4512,7 @@ function jumpTo(id, instant){
 }
 
 /* ---------- popup sheet ---------- */
-let sheetReturn = null, sheetRule = null, sheetNow = null;
+let sheetReturn = null, sheetRule = null, sheetNow = null, sheetCur = null;   // sheetCur: the screen under the popup, when cur stands in for another list (dmShowIn)
 const sheetStack = [];   // the popups under this one (a rule opened from a rule): "‹ Deep Strike" goes back
 function openSheet(label, title, html, popped){
   const nested = !$('#sheetHost').hidden;
@@ -4374,13 +4529,13 @@ function openSheet(label, title, html, popped){
   $('#sheetIn').scrollTop = 0;
   $('#sheet').focus();
   try {
-    if(!nested) history.replaceState(Object.assign(plain(cur), spot()), '');
-    const st = Object.assign(plain(cur), { sheet:1 }); nested && history.state && history.state.sheet ? history.replaceState(st, '') : history.pushState(st, '');
+    if(!nested) history.replaceState(Object.assign(plain(sheetCur || cur), spot()), '');
+    const st = Object.assign(plain(sheetCur || cur), { sheet:1 }); nested && history.state && history.state.sheet ? history.replaceState(st, '') : history.pushState(st, '');
   } catch(e){}
 }
 function hideSheet(){
   if($('#sheetHost').hidden) return;
-  sheetStack.length = 0; sheetNow = null;
+  sheetStack.length = 0; sheetNow = null; dmSheetArmy = null;
   $('#sheetHost').hidden = true;
   $('#sheet').style.removeProperty('--drag');
   document.documentElement.classList.remove('lock');
@@ -4509,22 +4664,31 @@ document.addEventListener('click', e => {
   // the answer opens the working of the step shown
   if(el.hasAttribute('data-dmwork')){ dmWorkSheet(); return; }
   // they attack / you attack: the same two units the other way round, each way with its own turn and choices
-  if(el.hasAttribute('data-dmswap')){ const st = dmState(), P = dmPair(st);
-    if(dmSwap(st, P)){ saveSession(); if(!$('#sheetHost').hidden) closeSheet(); render(); scrollTo(0, 0); }
+  if(el.hasAttribute('data-dmswap')){ const st = dmState(), P = dmPair(st), verb = dmStepId();
+    // the other way round its turn starts as a turn does, with one step: the one shown here (never steps the player did not choose)
+    if(dmSwap(st, P)){ const P2 = dmPair(st); if(!isObj(st.turn[st.dir]) && P2.ready){ st.turn[st.dir] = dmStart(P2, verb); st.step[st.dir] = ''; }
+      saveSession(); if(!$('#sheetHost').hidden) closeSheet(); render(); scrollTo(0, 0); }
     // nothing of theirs picked yet (or only a typed target, which has no weapons): the picker for the unit that attacks yours
     else if(st.dir === 'me'){ st.pendSwap = true; saveSession(); dmPicker('theirs'); }
     return; }
   // the verb, or a step of the turn: shown (added to the turn when it is not in it); the charge is made or not
   if(ds.dmverb || ds.dmstop){ dmGoStep(ds.dmverb || ds.dmstop, !!ds.dmverb); return; }
   if(el.hasAttribute('data-dmpts')){ toast('≈ pts lost: an estimate, each model at its share of New Recruit’s points split'); return; }
-  if(ds.dmdrop){ const st = dmState(), tr = st.turn[st.dir];
-    if(tr){ tr[ds.dmdrop] = false; if(ds.dmdrop === 'fight'){ tr.charge = false; tr.back = false; } }
-    st.step[st.dir] = ''; saveSession(); rerender(); return; }
+  if(ds.dmdrop){ const st = dmState(), tr = st.turn[st.dir], snap = dmSnap(st);
+    if(tr){ tr[ds.dmdrop] = false; delete tr.auto; if(ds.dmdrop === 'fight'){ tr.charge = false; tr.back = false; } }
+    st.step[st.dir] = ''; saveSession(); rerender(); dmTurnSaid(snap); return; }
   // a choice in the list or a chip: changed in place, the answer redrawn where it is
   if(ds.dmlv != null){ const lv = DM_LV.get(ds.dmlv); if(lv){ const chip = el.classList.contains('dmchip') && !el.classList.contains('info'), name = chip ? el.textContent.replace(/×$/, '').trim() : '';
-    lv.apply(dmState()); saveSession(); rerender(); if(chip) toast('Unticked for this step: ' + name); } return; }
+    const st = dmState(), snap = dmSnap(st);
+    dmAnchorSet(el, ds.dmlv);
+    lv.apply(st); saveSession(); rerender(); dmAnchorKeep();
+    if(dmTurnWords(JSON.parse(snap).turn, st.turn[st.dir])) dmTurnSaid(snap);   // a fact that is the turn's Charge: said as a step
+    else if(chip) toast((el.classList.contains('ovr') ? 'Counted again: ' : 'Unticked for this step: ') + name.replace(/↺$/, '').replace(/: left out \(by you\)$/, '')); } return; }
   // a rule's name: the same popup the other screens open, from the list it is in
-  if(ds.dmrule){ const [t, id, ...rest] = ds.dmrule.split('|'), k = rest.join('|'), L = armyById(id); if(L) inArmy(L, () => t === 'strat' ? showStrat(k) : t === 'rule' ? showRule(k) : showAbility(k)); return; }
+  if(ds.dmrule){ const [t, id, ...rest] = ds.dmrule.split('|'), k = rest.join('|'), L = armyById(id); if(L) dmShowIn(L, () => t === 'strat' ? showStrat(k) : t === 'rule' ? showRule(k) : showAbility(k)); return; }
+  // inside a popup of the other list: its rules open from that list too, and nothing moves the app into it
+  if(inSheet && dmSheetArmy && (ds.rule || ds.strat || ds.ability || ds.enh || ds.grant)){ e.preventDefault(); const L = armyById(dmSheetArmy);
+    dmShowIn(L, () => ds.grant ? showGrant(ds.grant.split('|'), ds.gu, ds.what, ds.rule || null) : ds.rule ? showRule(ds.rule) : ds.strat ? showStrat(ds.strat) : ds.ability ? showAbility(ds.ability) : showEnhancement(ds.enh)); return; }
   if(el.hasAttribute('data-dmchips')){ const st = dmState(); st.fold.chips = !st.fold.chips; saveSession(); const box = $('#dmChips'); if(box){ box.classList.toggle('all', !!st.fold.chips); dmChipCap(); } return; }
   // reset: this direction's choices and facts, every step (the steps of the turn stay)
   if(el.hasAttribute('data-dmreset')){ const st = dmState(), d = st.dir;
@@ -4540,15 +4704,18 @@ document.addEventListener('click', e => {
     scrollTo(0, d.getBoundingClientRect().top + scrollY - $('#top').getBoundingClientRect().bottom - (a ? a.offsetHeight + 12 : 0)); } return; }
   if(el.hasAttribute('data-dmoppclear')){ setOpp(army(), ''); closeSheet(); rerender(); return; }
   // your unit, or theirs: from any list, or typed (a target only); a new attacker starts its own turn
-  if(ds.dmunit){ const [k, a, id] = ds.dmunit.split('|'), st = dmState(), me1 = st.dir === 'me';
-    if(k === 'mine'){ if(me1){ if(st.atk !== id){ delete st.turn.me; delete st.step.me; } st.atk = id; } else st.tgt = id; }
+  if(ds.dmunit){ const [k, a, id] = ds.dmunit.split('|'), st = dmState(), me1 = st.dir === 'me', snap = dmSnap(st);
+    if(k === 'mine'){ if(me1) st.atk = id; else st.tgt = id; }
     else if(a === 'typed'){ if(me1) st.tArmy = 'typed'; }
     else if(me1){ st.tArmy = a; st.tgt = id; }
-    else { if(st.atk !== id){ delete st.turn.them; delete st.step.them; } st.aArmy = a; st.atk = id; }
+    else { st.aArmy = a; st.atk = id; }
     // picked after "They attack" with nothing of theirs: that unit attacks yours
     const swap = st.pendSwap && k === 'theirs' && a !== 'typed'; delete st.pendSwap;
     if(swap) dmSwap(st, dmPair(st));
-    saveSession(); closeSheet(); rerender(); if(swap) scrollTo(0, 0); return; }
+    // a new unit keeps the turn's shape; a step the new pair cannot play is dropped, and said, with Undo
+    const why = swap ? [] : dmKeepTurn(st);
+    saveSession(); closeSheet(); rerender(); if(swap) scrollTo(0, 0);
+    if(why.length) toastUndo(why.join(' · '), () => dmRestore(snap)); return; }
   if(ds.dmty){ const [k, d] = ds.dmty.split('|'); dmTypedStep(dmState(), k, +d); saveSession(); rerender(); return; }
   if(ds.dmtkw){ const st = dmState(), t = dmTypedVals(st); st.typed.kw = Object.assign({}, t.kw, { [ds.dmtkw]:!t.kw[ds.dmtkw] }); saveSession(); rerender(); return; }
   // set by hand, for the step shown: a save or Feel No Pain none, 6+ … 2+ (plus is better)
@@ -4596,7 +4763,7 @@ document.addEventListener('click', e => {
   }
   if(el.hasAttribute('data-newgame')){ const was = [...usedSet()], key = usedKey(); store.set(key, []); rerender();
     toastUndo('New game: uses per battle cleared', () => { store.set(key, was); rerender(); }); return; }
-  if(el.hasAttribute('data-undo')){ const f = undoFn; undoFn = null; $('#toast').classList.remove('show', 'act'); if(f){ f(); toast('Ticks restored'); } return; }
+  if(el.hasAttribute('data-undo')){ const f = undoFn; undoFn = null; $('#toast').classList.remove('show', 'act'); if(f){ const m = f(); toast(typeof m === 'string' ? m : 'Ticks restored'); } return; }
   if(el.hasAttribute('data-awake')){ awake.on = !awake.on; store.set('wh-awake', awake.on); if(awake.on) keepAwake(); else if(awake.lock){ awake.lock.release(); awake.lock = null; } rerender(); return; }
   if(el.hasAttribute('data-expand')){
     const cards = $$('#view details.strat');
@@ -4605,6 +4772,12 @@ document.addEventListener('click', e => {
     el.textContent = openAll ? 'Collapse all' : 'Expand all';
   }
 });
+// a typed target's number box selects its number when tapped, so typing replaces it ("10" over 5 is 10, not 510)
+let dmTyFocus = 0;
+document.addEventListener('focusin', e => { const t = e.target; if(!t.matches || !t.matches('[data-dmtyped]')) return;
+  dmTyFocus = performance.now(); const sel = () => { try { t.setSelectionRange(0, t.value.length); } catch(err){ t.select(); } }; sel(); setTimeout(sel, 0); });
+for(const ev of ['mouseup', 'pointerup']) document.addEventListener(ev, e => { const t = e.target;
+  if(t.matches && t.matches('[data-dmtyped]') && performance.now() - dmTyFocus < 400 && e.cancelable){ e.preventDefault(); try { t.setSelectionRange(0, t.value.length); } catch(err){} } }, { passive:false });
 // a typed target's number, typed: kept once the field is left (the next field tapped keeps the focus)
 document.addEventListener('change', e => {
   const t = e.target;

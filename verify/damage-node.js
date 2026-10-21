@@ -23,7 +23,7 @@ module.exports = function load(){
   }
   // what the Damage helpers use, followed name by name (the page's state is given here instead)
   const given = new Set(['D', 'cur', 'sess', 'store', 'session', 'BUILD', '$', '$$', 'WH_CALC']);
-  const need = new Set(), todo = ['dmCalc', 'dmShown', 'dmModels', 'dmUnits', 'dmState', 'dmSides', 'dmTypedVals', 'dmTypedKw', 'oppOf', 'unitLabel', 'modelCount', 'DM_ONE_OF', 'dmSwap', 'dmPair', 'dmPlan', 'dmIn', 'dmBeatAns', 'dmFx', 'dmLevers'];
+  const need = new Set(), todo = ['dmCalc', 'dmShown', 'dmModels', 'dmUnits', 'dmState', 'dmSides', 'dmTypedVals', 'dmTypedKw', 'oppOf', 'unitLabel', 'modelCount', 'DM_ONE_OF', 'dmSwap', 'dmPair', 'dmPlan', 'dmIn', 'dmBeatAns', 'dmFx', 'dmLevers', 'dmNums', 'dmZero', 'dmDelta'];
   while(todo.length){
     const n = todo.pop();
     if(need.has(n) || given.has(n) || !decl.has(n)) continue;
@@ -37,7 +37,7 @@ module.exports = function load(){
   const D = loadData(), WH_CALC = require(path.join(ROOT, 'calc.js'));
   const mem = new Map(), store = { get:k => mem.get(k), set:(k, v) => mem.set(k, v) };
   const env = new Function('D', 'WH_CALC', 'store', 'window', 'let cur = { s:"damage", army:null }, sess = {};\n' + src + '\n' +
-    'return { set:(a, st) => { cur.army = a; sess.dmg = { [a]:st }; }, dmState, dmSides, dmTypedVals, dmTypedKw, dmCalc, dmShown, dmModels, dmUnits, oppOf, army, unitLabel, modelCount, dmSwap, dmPair, dmPlan, dmIn, dmBeatAns, dmFx, dmLevers };');
+    'return { set:(a, st) => { cur.army = a; sess.dmg = { [a]:st }; }, dmState, dmSides, dmTypedVals, dmTypedKw, dmCalc, dmShown, dmModels, dmUnits, oppOf, army, unitLabel, modelCount, dmSwap, dmPair, dmPlan, dmIn, dmBeatAns, dmFx, dmLevers, dmNums, dmZero, dmDelta };');
   const app = env(D, WH_CALC, store, { WH_DATA:D });
   // one matchup as the screen builds it: s = { army, opp, dir, ph, atk, tgt, aArmy, tArmy, typed, on, off, pick, man, val }
   // (the sides as the screen picks them: dmSides; opp may be left out, as on the screen)

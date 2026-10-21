@@ -197,6 +197,58 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     if(main) fs.writeFileSync(path.join(ROOT, 'verify/out/snapshots', a.id + '.txt'), snap.join('\n\n') + '\n');
     counts[a.id] = { screens:snap.length, links:links.size };
   }
+  // ---- the Damage tab under a finger (each width): the first list's first unit with ranged weapons shooting the next list's
+  // first unit, its turn shoot → charge → fight → fight back ----
+  {
+    const A = armies[0].id;
+    let B = armies[1].id;
+    const open = async () => { await page.evaluate(([A, B]) => { hideSheet(); store.set('wh-opp-' + A, B); sess.mine = A; sess.dmg = {};
+      const L = armyById(A), u = L.units.find(x => (x.ranged || []).length) || L.units[0];
+      sess.dmg[A] = { dir:'me', atk:u.id, tArmy:B, tgt:armyById(B).units[0].id, turn:{ me:{ shoot:true, charge:true, fight:true, back:true } }, step:{ me:'shoot' } };
+      go({ s:'damage', army:A }); scrollTo(0, 0); }, [A, B]);
+      await page.waitForFunction(() => !dmBusy() && !document.querySelector('#dmList .fxv.wait, #dmList .fxv.est, #dmAns.prov'), null, { timeout:120000, polling:50 }); await page.waitForTimeout(300); };
+    const where = () => page.evaluate(() => JSON.stringify([cur.s, cur.army, sess.dmg[cur.army] && sess.dmg[cur.army].atk, sess.dmg[cur.army] && sess.dmg[cur.army].tgt, sess.dmg[cur.army] && sess.dmg[cur.army].dir]));
+    // a popup of the other list's rule, opened from the Damage tab, closed (its Close, then Escape): the same list and matchup
+    // (against the first list after it whose unit has a rule of its own in the list)
+    const foreign = () => page.evaluate(A => !![...document.querySelectorAll('#dmList [data-dmrule]')].find(x => x.dataset.dmrule.split('|')[1] !== A), A);
+    for(const L of armies.slice(1)){ B = L.id; await open(); if(await foreign()) break; }
+    const home = await where();
+    for(const how of ['close', 'escape']){
+      const ok = await page.evaluate(A => { const l = [...document.querySelectorAll('#dmList [data-dmrule]')].find(x => x.dataset.dmrule.split('|')[1] !== A); if(!l) return false; l.scrollIntoView({ block:'center' }); return true; }, A);
+      if(!ok){ fail('damage-popup-stays', A, 'no rule of the other list in the list', ''); break; }
+      await page.waitForTimeout(200);
+      await page.evaluate(A => [...document.querySelectorAll('#dmList [data-dmrule]')].find(x => x.dataset.dmrule.split('|')[1] !== A).click(), A);
+      await page.waitForTimeout(400);
+      if(how === 'close') await page.evaluate(() => { const c = document.querySelector('#sheetIn [data-close], #sheet [data-close]'); if(c) c.click(); else closeSheet(); });
+      else await page.keyboard.press('Escape');
+      await page.waitForTimeout(500);
+      const now = await where();
+      if(now !== home) fail('damage-popup-stays', A, 'closed with ' + how, 'the app moved from ' + home + ' to ' + now);
+    }
+    // a tap never moves the row under the finger: the same spot tapped twice, quickly, toggles the same row back
+    B = armies[1].id; await open();
+    const rows = await page.evaluate(() => [...document.querySelectorAll('#dmList .dmlv[data-dmlv]')].filter(e => e.getClientRects().length && !e.classList.contains('rad')).map(e => e.dataset.dmlv));
+    for(const id of rows.slice(0, 6)){
+      const pt = await page.evaluate(id => { const e = [...document.querySelectorAll('#dmList .dmlv[data-dmlv]')].find(x => x.dataset.dmlv === id); scrollTo(0, e.getBoundingClientRect().top + scrollY - 420); const r = e.getBoundingClientRect(); return [r.left + 30, r.top + 12, e.getAttribute('aria-pressed')]; }, id);
+      await page.waitForTimeout(300);
+      const under = () => page.evaluate(([x, y]) => { const e = document.elementFromPoint(x, y), r = e && e.closest('[data-dmlv]'); return r ? [r.dataset.dmlv, r.getAttribute('aria-pressed')] : null; }, pt);
+      await page.mouse.click(pt[0], pt[1]); await page.waitForTimeout(120);
+      const mid = await under();
+      await page.mouse.click(pt[0], pt[1]); await page.waitForTimeout(1500);
+      const end = await under();
+      if(!mid || mid[0] !== id || !end || end[0] !== id || end[1] !== pt[2]) fail('damage-tap-twice', A, id, 'tapped twice at the same spot: ' + JSON.stringify([mid, end]) + ', was ' + pt[2]);
+    }
+    // no empty band under the pinned card at any scroll position: just below it there is always some of the screen's content
+    await open();
+    const gaps = await page.evaluate(async () => { const out = [], H = document.documentElement.scrollHeight - innerHeight;
+      for(let y = 0; y <= Math.min(H, 2400); y += 15){ scrollTo(0, y); await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+        const pin = $('#dmPin'); if(!pin || pin.hidden) continue;
+        const b = pin.getBoundingClientRect().bottom, x = innerWidth / 2; let hit = false;
+        for(let dy = 2; dy <= 72 && !hit; dy += 6){ const e = document.elementFromPoint(x, b + dy); hit = !!(e && e.closest('#dmAns, #dmList, .dmty, .dmsent, .dmpin')); }
+        if(!hit) out.push(y); }
+      scrollTo(0, 0); return out; });
+    if(gaps.length) fail('damage-no-gap', A, 'scrollY ' + gaps.slice(0, 8).join(', '), 'an empty band of over 70px under the pinned card');
+  }
   if(pageErrors.length) fail('page-errors', '', '', pageErrors.join(' | '));
 
   if(main) writeJSON(path.join(ROOT, 'verify/out/helpers.json'), [...helpers.values()].map(h => Object.assign(h, { refs:[...h.refs].sort() })).sort((x, y) => x.text.localeCompare(y.text)));

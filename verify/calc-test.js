@@ -285,6 +285,22 @@ cases.push(['comeback: models left at the end, 5/6', () => pl([rvb('fight')]).si
 cases.push(['comeback: the first time only', () => pl([rvb('shooting'), rvb('fight')]).sides[1].rows[0].gone, 1, 0.001]);
 cases.push(['comeback: later in the same phase it is still gone', () => pl([rvb('fight'), rvb('fight')]).beats[1].dmg, 0, 0]);
 cases.push(['comeback: ... and back after it', () => pl([rvb('fight'), rvb('fight')]).beats[1].rows[0].down, 1 / 6, 1e-9]);
+cases.push(['comeback: wiped once the phase is over, 1/6', () => pl([rvb('fight')]).beats[0].wipeDown, 1 / 6, 1e-9]);
+// a side no beat describes loses no models: its alternative (the attacks once its CHARACTER is dead) is never used; with its own
+// models given (self) and nothing that destroys them, the same
+const altB = self => ({ side:1, self, input:{ groups:[g({ name:'with', n:1, A:'2', S:8, kw:['TORRENT'] })], target:tenW1() },
+  alt:{ lines:[0], input:{ groups:[g({ name:'with', n:1, S:8, kw:['TORRENT'] })], target:tenW1() } } });
+cases.push(['play: an attacking side nothing describes keeps its models (no alternative)', () => pl([altB()]).beats[0].alt, 0, 0]);
+cases.push(['play: ... its attacks as given (2 attacks × 5/6)', () => pl([altB()]).beats[0].killed, 2 * 5 / 6]);
+cases.push(['play: ... and with its own models given, the same', () => pl([altB({ T:4, models:[big(1, 3, 7, { name:'Boss', char:true, lines:[{ id:0, n:1 }] })] })]).beats[0].alt, 0, 0]);
+// hazard rolls from a rule's own words (hazard.rolls: Try Dat Button! with two D6, one roll for the unit), with the weapons' own:
+// one roll for the unit, 3 mortal wounds on a 1-2: 1 on average; [SUPA-HAZARDOUS] makes two more for a weapon it shoots with (a
+// weapon with both: three), none in a fight
+const one10 = { T:9, models:[big(1, 10, 7, { lines:[{ id:0, n:1 }] })] };
+cases.push(['hazard: a rule’s own roll for the unit', () => pl([{ side:1, hazard:{ mw:3, rolls:1 }, self:one10, input:{ groups:[g({ name:'gun', n:1, S:8, kw:['TORRENT'] })], target:tenW1() } }]).beats[0].hazard.mw, 1, 0.05]);
+cases.push(['hazard: [HAZARDOUS] and [SUPA-HAZARDOUS] on one weapon: three rolls', () => pl([{ side:1, hazard:{ mw:1 }, self:one10, input:{ groups:[g({ name:'blasta', n:1, S:8, kw:['TORRENT', 'HAZARDOUS', 'SUPA-HAZARDOUS'] })], target:tenW1(), ctx:{ ranged:true } } }]).beats[0].hazard.rolls, 3, 0]);
+cases.push(['hazard: [SUPA-HAZARDOUS] only when it shoots', () => pl([{ side:1, hazard:{ mw:1 }, self:one10, input:{ groups:[g({ name:'blasta', n:1, S:8, kw:['TORRENT', 'HAZARDOUS', 'SUPA-HAZARDOUS'] })], target:tenW1(), ctx:{} } }]).beats[0].hazard.rolls, 1, 0]);
+cases.push(['hazard: no roll when the unit did not attack', () => pl([{ side:1, hazard:{ mw:3, rolls:1 }, self:one10, input:{ groups:[g({ name:'gun', n:1, S:8, kw:['TORRENT'], carry:[[5, 1]] })], target:tenW1() } }]).beats[0].hazard.rolls, 0, 0]);
 
 // ---- the screen's own choices, through the app's dmCalc (verify/damage-node.js): what starts ticked, greyed or offered ----
 const dm = require('./damage-node')();
@@ -662,6 +678,71 @@ cases.push(['Rites of Coalescence: counted always, and said so', () => (x => +(x
 cases.push(['the pair on an objective: one fact for both units', () => { const s = { army:'shooty', atk:'mek-flashgitz', tArmy:'typed', typed:{ n:10, T:4, W:1, Sv:3 }, facts:{ me:{ pair:{ objective:true } } } };
   const p = dm.plan(s), st = dm.app.dmState(), f = dm.app.dmLevers(st, dm.app.dmPlan(st)).filter(l => l.fact === 'objective');
   return +(f.length === 1 && f[0].unitWho === 'pair' && f[0].on && ['Finderz Keeperz', 'Wreckin’ and Lootin’'].every(n => p.beats[0].M.rules.find(r => r.m.from === n).on)); }, 1]);
+// ---- round 2: Khârn's Legendary Killer in a turn with no fight back; later steps never move earlier ones ----
+// Khârn + Berzerkers charge and fight with no step that attacks them: Legendary Killer counts in every game (the review's
+// independent simulation: 13.6 Lord on Juggernaut + Berzerkers; 10.9 Mek + Flash Gitz, wiped 92%; 3.65 Nazdreg + Meganobz, 12.5
+// wounds; 6.0 Sorcerer + Rubrics, wiped 100%)
+const KHF = (tgt, tArmy, turn) => turnOf({ army:'princes', opp:tArmy, atk:'kh-rn-the-betrayer-khorne-berzerkers', tArmy, tgt, turn:{ me:turn || { charge:true, fight:true } } });
+const KF = {};
+const kf = (tgt, tArmy) => KF[tgt] || (KF[tgt] = KHF(tgt, tArmy).r.beats[0]);
+cases.push(['Legendary Killer, no fight back: Lord on Juggernaut + Berzerkers', () => kf('lord-on-juggernaut-khorne-berzerkers', 'princes').killed, 13.6]);
+cases.push(['Legendary Killer, no fight back: Mek + Flash Gitz', () => kf('mek-flashgitz', 'shooty').killed, 10.9]);
+cases.push(['Legendary Killer, no fight back: Mek + Flash Gitz wiped', () => kf('mek-flashgitz', 'shooty').wipe, 0.92, 0.015]);
+cases.push(['Legendary Killer, no fight back: Nazdreg + Meganobz', () => kf('nazdreg-meganobz', 'melee').killed, 3.65]);
+cases.push(['Legendary Killer, no fight back: Nazdreg + Meganobz, wounds', () => kf('nazdreg-meganobz', 'melee').dmg, 12.5]);
+cases.push(['Legendary Killer, no fight back: Sorcerer + Rubrics', () => kf('sorcerer-rubric-marines', 'pubstomper').killed, 6.0]);
+cases.push(['Legendary Killer, no fight back: Sorcerer + Rubrics wiped', () => kf('sorcerer-rubric-marines', 'pubstomper').wipe, 1, 0.015]);
+// ... and a step added after it moves nothing: Charge → Fight is the same with the fight back after it, and so is Shoot → Fight
+// (the fight there meets what the shooting left, so it is not the fight alone; it too stays as it is when the fight back is added)
+const same = (x, y) => +(JSON.stringify(x) === JSON.stringify(y));
+cases.push(['the turn: Khârn’s fight, the fight back added after it', () => same(KHF('nazdreg-meganobz', 'melee').r.beats[0], KHF('nazdreg-meganobz', 'melee', { charge:true, fight:true, back:true }).r.beats[0]), 1]);
+cases.push(['the turn: Khârn’s Shoot → Fight, the fight back added after it', () => same(KHF('nazdreg-meganobz', 'melee', { shoot:true, fight:true }).r.beats.slice(0, 2), KHF('nazdreg-meganobz', 'melee', { shoot:true, fight:true, back:true }).r.beats.slice(0, 2)), 1]);
+cases.push(['the turn: Khârn’s Shoot, the fight added after it', () => same(KHF('nazdreg-meganobz', 'melee', { shoot:true }).r.beats[0], KHF('nazdreg-meganobz', 'melee', { shoot:true, fight:true }).r.beats[0]), 1]);
+// every list pair (each unit against one unit of each other list), two turn shapes: each turn and every turn that only adds
+// later steps to it give the same numbers for the steps they share (node verify/calc-test.js --later-all: every unit of every
+// other list, and the fight alone too)
+const later = (() => { const all = process.argv.includes('--later-all'), r9 = v => typeof v === 'number' ? Math.round(v * 1e9) / 1e9 : v;
+  const sig = b => JSON.stringify({ k:b.killed, d:b.dmg, w:b.wipe, bf:b.before, dist:b.dist, alt:b.alt, rows:b.rows.map(r => r.gone), g:b.groups.map(g => [g.n, g.attacks, g.hits, g.wounds, g.dmg]), hz:b.hazard }, (k, v) => r9(v));
+  const fams = [[{ shoot:true }, { shoot:true, charge:true, fight:true }, { shoot:true, charge:true, fight:true, back:true }], [{ charge:true, fight:true }, { charge:true, fight:true, back:true }]].concat(all ? [[{ fight:true }, { fight:true, back:true }]] : []);
+  const out = { pairs:0, turns:0, compared:0, bad:[] };
+  for(const A of dm.D.armies) for(const [ui, au] of A.units.entries()){ const others = dm.D.armies.filter(B => B !== A);
+    for(const [B, tu] of all ? others.flatMap(B => B.units.map(t => [B, t])) : others.map((B, i) => [B, B.units[(ui + i) % B.units.length]])){ out.pairs++;
+      for(const fam of fams){ let prev = null;
+        for(const tr of fam){ const p = dm.plan({ army:A.id, opp:B.id, dir:'me', atk:au.id, tgt:tu.id, tArmy:B.id, turn:{ me:tr } }); if(!p.beats.length) continue; out.turns++;
+          const r = C.play(dm.app.dmIn(p, 40)), now = p.beats.map((b, i) => ({ id:b.id, i, s:sig(r.beats[i]) }));
+          if(prev) for(const x of prev){ const y = now.find(z => z.id === x.id); out.compared++; if(!y || y.i !== x.i || y.s !== x.s) out.bad.push(A.id + '/' + au.id + ' → ' + tu.id + ' ' + Object.keys(tr).join('+') + ': ' + x.id); }
+          prev = now; } } } }
+  if(all || out.bad.length || process.argv.includes('-v')) console.log('  later steps: ' + out.pairs + ' pairs, ' + out.turns + ' turns, ' + out.compared + ' steps compared, ' + out.bad.length + ' moved' + (out.bad.length ? ': ' + out.bad.slice(0, 5).join(' · ') : ''));
+  return out; })();
+cases.push(['the turn: a later step never moves an earlier one (' + later.pairs + ' pairs, ' + later.compared + ' steps compared; moved)', () => later.bad.length, 0, 0]);
+// Try Dat Button! with two D6 ("one hazard roll when the unit has attacked"): played; with one D6, none. The Dakkarig's turn into
+// Lord on Juggernaut + Berzerkers: the Dakkarig destroyed from 85% (the roll left out) to 89% (the review)
+const TDB = 'm:Try Dat Button!|Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6)|1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked)';
+const dak = (pick, hz) => turnOf({ army:'shooty', opp:'princes', atk:'dakkarig-boosta', tArmy:'princes', tgt:'lord-on-juggernaut-khorne-berzerkers', turn:{ me:{ shoot:true, charge:true, fight:true, back:true } },
+  ch:{ 'me:shoot':{ on:Object.assign({ [TDB]:true }, hz === false ? { 'c:hazard':false } : {}), val:{ 'pick:Try Dat Button!':pick } } } }, 40000);
+cases.push(['Try Dat Button!, two D6: one hazard roll for the unit, 3 mortal wounds on a 1-2', () => (x => +(x.p.beats[0].M.hazard.rolls === 1 && x.p.beats[0].M.hazard.mw === 3) * x.r.beats[0].hazard.mw)(dak('1–2 and 5–6')), 1, 0.05]);
+cases.push(['Try Dat Button!, one D6: no hazard roll', () => +!dak('1–2').p.beats[0].M.hazard, 1]);
+cases.push(['Try Dat Button!, two D6: the Dakkarig destroyed', () => dak('1–2 and 5–6').r.sides[0].wipe, 0.89, 0.01]);
+cases.push(['Try Dat Button!, two D6, the roll left out by you', () => dak('1–2 and 5–6', false).r.sides[0].wipe, 0.85, 0.01]);
+// the Kustom Mega-blasta, [HAZARDOUS] and [SUPA-HAZARDOUS]: 3 rolls; with the Tellyport Blasta (2) the Big Mek makes 5
+cases.push(['hazard: Big Mek in Mega Armour shooting, 3 + 2 rolls', () => turnOf({ army:'shooty', opp:'princes', atk:'bigmek-mega', tArmy:'princes', tgt:'kh-rn-the-betrayer-khorne-berzerkers', turn:{ me:{ shoot:true } } }, 2000).r.beats[0].hazard.rolls, 5, 0]);
+// a choice's effect is measured over the whole turn, with the attacking unit's own losses: unticking the Flash Gitz' hazard rolls (the
+// review's turn) takes their losses from 9.6 to 8.5 of 11 and the Mek's death from 45% to 20%, and destroys 0.3 more of theirs
+const effOf = (s, id) => { const p0 = dm.plan(s), st = dm.app.dmState(), lv = dm.app.dmLevers(st, p0).find(l => l.id === id), s2 = JSON.parse(JSON.stringify(st)); lv.apply(s2);
+  const p2 = dm.app.dmPlan(s2), a = dm.app.dmNums(p0, p0.k, C.play(dm.app.dmIn(p0, 10000))), b = dm.app.dmNums(p2, p2.beats.findIndex(x => x.id === p0.beats[p0.k].id), C.play(dm.app.dmIn(p2, 10000))), bt = p0.beats[p0.k];
+  return { a, b, d:dm.app.dmDelta(a, b, {}, { tgtMine:bt.tgt.who === 'mine', ownMine:bt.atk.who === 'mine' }) }; };
+const HZ = memo(() => effOf({ army:'shooty', opp:'princes', atk:'mek-flashgitz', tArmy:'princes', tgt:'lord-on-juggernaut-khorne-berzerkers', turn:{ me:{ shoot:true, charge:true, fight:true, back:true } }, step:{ me:'shoot' } }, 's:c:hazard'));
+cases.push(['hazard rolls left out: your losses over the turn, from', () => HZ().a.own, 9.6]);
+cases.push(['hazard rolls left out: ... to', () => HZ().b.own, 8.5]);
+cases.push(['hazard rolls left out: the Mek’s death, from', () => HZ().a.ownChars[0].p / 100, 0.45, 0.015]);
+cases.push(['hazard rolls left out: ... to', () => HZ().b.ownChars[0].p / 100, 0.20, 0.015]);
+cases.push(['hazard rolls left out: said, good news for you', () => +(HZ().d.good === true && /fewer of yours lost \(hazard rolls/.test(HZ().d.alt) && /Mek dies/.test(HZ().d.alt)), 1]);
+// a fact and its one sub-tick measured the same way (over the turn): Riled up and Riled up (Waaagh!) for Zodgrod + Gretchin, which the
+// Chaos Terminators shoot and then fight, the same effect
+const M4 = { army:'ooga-booga', opp:'super-terminators', dir:'them', atk:'chaos-terminators', aArmy:'super-terminators', tgt:'zodgrod-wortsnagga-runtherd-gretchin', turn:{ them:{ shoot:true, fight:true } }, step:{ them:'fight' } };
+cases.push(['a fact and its sub-tick: the same sign and fate', () => (x => (y => +(Math.sign(x.d.v) === Math.sign(y.d.v) && x.d.good === y.d.good && x.d.alt === y.d.alt))(effOf(M4, 'd:t:Riled up: 5+ INV')))(effOf(M4, 'f:mine:riled')), 1]);
+// Unshackled Wrath's "All three": more of theirs destroyed, more of yours lost to the hazard rolls: a trade (no crown)
+cases.push(['Unshackled Wrath, All three: a trade', () => +effOf({ army:'purge-goes-the-foe', atk:'skitarii-rangers', tArmy:'typed', typed:{ n:10, T:4, W:1, Sv:4, InSv:0, fnp:0 } }, 'k:m:Unshackled Wrath|Your Shooting phase|[SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS]|All three').d.trade, 1]);
 for(const t of twice) console.log('  ' + t);
 
 let fail = 0;
