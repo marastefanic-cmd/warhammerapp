@@ -203,6 +203,34 @@ const FACTIONS = {
     // Wahapedia also lists Unstable Energies (ORKS PSYKER units) and Special Move Types; Pulse Jet Move,
     // which Wazdakka uses, is in the glossary (RULES, with RULE_SRC); the others are left out.
     detachments: {
+      // Bully Boyz and Runt Swarm: Wahapedia wording (Orks, codex; GW publishes no Orks Faction Pack);
+      // enhancement pts and UPGRADE marks from Wahapedia, matching BSData
+      'bully-boyz': {
+        name:'Bully Boyz', dp:1,
+        rule:{ name:'Displays of Savagery', ph:['fight'], turn:'either', needs:{ any:['Meganobz','Nobz'] },
+          text:'Friendly **MEGANOBZ**/**NOBZ** units’ melee attacks have **[SUSTAINED HITS 1]**.' },
+        enhancements:[
+          { name:'Wimp-kickaz', pts:15, upgrade:true, text:'**NOBZ** unit only. When an enemy unit **engaged** with this unit is selected to make a **fall-back move**:\n- That enemy unit must select the **desperate escape** mode.\n- If this unit is **riled up**, that enemy unit has -1 to the **hazard rolls** made for that **desperate escape**.' },
+          { name:'Tellyporta Boss', pts:20, text:'**MEGA ARMOUR** model only. This unit (excluding **VEHICLE** units) has **Deep Strike**.' }
+        ],
+        stratagems:[
+          { id:'too-arrogant-to-die', gist:'Model in your unit destroyed, unit not selected to fight this phase: D6 (+1 if riled up); on a 4+ it stays until your unit has fought or the phase ends.', name:'Too Arrogant to Die', cp:1, phases:['fight'], turn:'either', needs:{ any:['Meganobz','Nobz'] },
+            when:'Fight phase, when an enemy unit targets a friendly **MEGANOBZ**/**NOBZ** unit.',
+            target:'That **MEGANOBZ**/**NOBZ** unit.',
+            effect:'When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +1 to that roll if your unit is **riled up**:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.' },
+          { id:'armed-to-da-teef', gist:'Your unit’s attacks can re-roll hit rolls of 1, or re-roll hit rolls if your unit is riled up.', name:'Armed to da Teef', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, needs:{ any:['Meganobz','Nobz'] },
+            mod:{ kind:'all', when:'Your Shooting phase or the Fight phase', note:'can re-roll hit rolls of 1 (riled up: can re-roll hit rolls)' },
+            when:'Your Shooting phase or the Fight phase, when a friendly **MEGANOBZ**/**NOBZ** unit is **selected to attack**.',
+            target:'That **MEGANOBZ**/**NOBZ** unit.',
+            effect:'Your unit’s attacks can:\n- Re-roll **hit rolls** of 1.\n- If your unit is **riled up**, re-roll **hit rolls**.' },
+          // Wahapedia prints the +1CP option as a badge above "Or:"; the app writes the badge at the start of that line
+          { id:'hulking-brutes', gist:'Ranged attacks that target your unit with S greater than its T have -1 to wound rolls; for +1CP, all ranged attacks that target it do.', name:'Hulking Brutes', cp:1, cpNote:'Or: +1CP', phases:['shooting'], turn:'opp', needs:{ any:['Meganobz','Nobz'] },
+            def:'their Shooting phase: -1 to wound when the attack’s S is greater than its T (+1CP: every ranged attack)',
+            when:'Your opponent’s Shooting phase, when an enemy unit targets a friendly **MEGANOBZ**/**NOBZ** unit.',
+            target:'That **MEGANOBZ**/**NOBZ** unit.',
+            effect:'Ranged attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**.\n**+1CP** Or: Ranged attacks that target your unit have -1 to **wound rolls**.' }
+        ]
+      },
       'dread-mob': {
         name:'Dread Mob', dp:1,
         // tableAt: Wahapedia prints the table after "…have the relevant rule(s):", before the hazard-roll line
@@ -229,6 +257,32 @@ const FACTIONS = {
             when:'Your Movement/Charge phase, when a friendly **ORKS WALKER** unit is **selected to move** or **declares a charge**.',
             target:'That **ORKS WALKER** unit.',
             effect:'Your unit has **MOBILE**.' }
+        ]
+      },
+      // the rule names no phase (an advance or fall-back move), so it has no ph
+      'runt-swarm': {
+        name:'Runt Swarm', dp:1,
+        rule:{ name:'Sneaky Little Gitz', needs:{ all:['Gretchin'] },
+          text:'- Friendly **GRETCHIN** units have **BATTLELINE**.\n- When a friendly **GRETCHIN** unit is selected to make an **advance**/**fall-back move**, that move does not prevent this unit from being **eligible to start an action**.' },
+        enhancements:[
+          { name:'Extra Sneaky', pts:10, upgrade:true, text:'**GRETCHIN** unit only. This unit has -3" **detection range**.' },
+          { name:'Minefield Detail', pts:10, upgrade:true, text:'**GRETCHIN** unit only. While this unit is not embarked, this unit has **Scouts 6"**.' }
+        ],
+        stratagems:[
+          { id:'infested-war-zone', gist:'Add a new GRETCHIN unit identical to your destroyed unit to your army, in strategic reserves, at its starting strength.', name:'Infested War Zone', cp:2, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Gretchin'] },
+            when:'Any phase, when an enemy unit has attacked.',
+            target:'One friendly **GRETCHIN** unit that was just **destroyed**. You can target that unit with this **stratagem** even though that unit was just **destroyed**.',
+            effect:'Add a new **GRETCHIN** unit to your army identical to your **destroyed** unit, in **strategic reserves**, at its **starting strength**, with its full wounds remaining.' },
+          { id:'scarper', gist:'Your unit can make a normal move of up to D6", or up to 6" if your unit is an attached unit.', name:'Scarper!', cp:1, phases:['movement'], turn:'opp', needs:{ all:['Gretchin'] },
+            when:'Your opponent’s Movement phase, when an enemy unit ends a move within 8" of a friendly **unengaged GRETCHIN** unit.',
+            target:'That **GRETCHIN** unit.',
+            effect:'Your unit can make a **normal move** of:\n- Up to D6".\n- Or: Up to 6" instead if your unit is an **attached** unit.' },
+          // needs is the TARGET (the GRETCHIN unit); the ORKS INFANTRY unit it names is the one being shot
+          { id:'grot-shields', gist:'Each hit roll of that enemy unit’s ranged attacks on that ORKS unit that results in a hit ends that attack, and your GRETCHIN unit suffers 1 mortal wound (if it has a model on the battlefield).', name:'Grot Shields', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Gretchin'] },
+            note:'Wahapedia FAQ: “When using the Grot Shields stratagem, are hits by [TORRENT] weapons considered ’hit rolls that result in a hit’?” “No.”',
+            when:'Your opponent’s Shooting phase, when an enemy unit targets a friendly **ORKS INFANTRY** unit (excluding **GRETCHIN** units).',
+            target:'One friendly **GRETCHIN** unit within 3" of that **ORKS INFANTRY** unit.',
+            effect:'When a **hit roll** for that enemy unit’s ranged attacks that target that **ORKS** unit results in a hit, if a model in your **GRETCHIN** unit is on the battlefield, end the attack sequence for that attack and your **GRETCHIN** unit suffers 1 **mortal wound**.' }
         ]
       },
       // Shoota Boyz and Wreckas: Wahapedia wording (Orks, codex; GW publishes no Orks Faction Pack)
