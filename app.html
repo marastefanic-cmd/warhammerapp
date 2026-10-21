@@ -455,7 +455,7 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .dv .sln{font:600 11.5px/1.2 var(--f-head); letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-right:4px}
 .dv .link{white-space:nowrap}
 .pills{display:flex; flex-wrap:wrap; gap:5px; padding:2px 0}
-.pill{display:inline-block; padding:4px 9px 3px; border-radius:999px; background:var(--surface2); box-shadow:inset 0 0 0 1px var(--pill-line); font:600 12px/1.2 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--fg2); white-space:nowrap}
+.pill{display:inline-block; padding:4px 9px 3px; border-radius:999px; background:var(--surface2); box-shadow:inset 0 0 0 1px var(--pill-line); font:600 12px/1.2 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--fg2)}
 .kwn{display:block; margin-top:4px; font-size:12px; line-height:1.35; color:var(--muted)}
 @media (max-width:359px){
   .ds .st > span{font-size:16px}
@@ -1085,6 +1085,9 @@ function weaponItems(list){
   return items;
 }
 const weaponCount = (a, kind) => a.units.reduce((t, u) => t + weaponItems(u[kind]).length, 0);
+// wargear New Recruit lists for the unit but on no models line (data.js `unplaced`): which models carry it is not said
+const unplacedOf = u => (u.unplaced || []).map(name => { const x = [...(u.ranged || []), ...(u.melee || []), ...(u.abilities || [])].find(y => (y.group || y.name) === name) || {};
+  const n = +x.n || 1; return { name, n, note:'New Recruit lists ' + (n > 1 ? 'them' : 'it') + ' for the ' + (x.who || u.name) + ', not which model' + (n > 1 ? 's carry them' : ' carries it') }; });
 function nameTags(u, opts){
   const t = [];
   if(u.warlord) t.push('<span class="tg">Warlord' + (u.warlordOn ? ' (' + esc(u.warlordOn) + ')' : '') + '</span>');
@@ -2005,6 +2008,7 @@ function weaponJoins(items, kind, u, who){
 const joinRow = j => '<div class="wj"><span class="uv" role="button" tabindex="0" data-rule="' + esc(j.rule) + '">' + (j.t === 'or' ? 'or' : '+') + '</span>' + (j.scope ? '<i>' + esc(j.scope) + '</i>' : '') + '</div>';
 function weaponRows(list, keys, mods, u, kind){
   const items = weaponItems(list);
+  for(const it of items) if((u.unplaced || []).includes(itemName(it))) it.carrier = 'which models: not said';
   const whos = [...new Set(items.map(it => it.who || ''))];
   let h = '';
   for(const who of whos){
@@ -2161,7 +2165,7 @@ function screenUnit(){
     const role = c ? '<span class="mlt">' + linkTo('rule', c.support ? 'Support' : 'Leader', (c.support ? 'Supporting ' : 'Leading ') + u.leads) + '</span>' : '';
     const g = (u.gear || [])[i] || [];
     return '<div class="ml"><span class="mn">' + esc(m) + '</span><span class="mg">' + (g.length ? esc(gearText(g)) : '') + role + '</span></div>';
-  }).join('') + '</section>';
+  }).join('') + unplacedOf(u).map(x => '<div class="ml"><span class="mn">' + x.n + '× ' + esc(x.name) + '</span><span class="mg"><span class="mlt">' + esc(x.note) + '</span></span></div>').join('') + '</section>';
   const abil = u.abilities.filter(ab => !shownElsewhere(ab, u));
   const weaponKeys = new Set([...(u.ranged || []), ...(u.melee || [])].flatMap(w => w.kw.map(ruleKey)));
   const statCols = innerWidth < 360 ? 'minmax(0,1fr) repeat(7, 26px)' : 'minmax(0,1fr) repeat(7, 31px)';
@@ -2326,7 +2330,8 @@ function screenBases(){
     return '<div class="px"><div class="pxh">' + linkTo('unit', u.id, u.name + (u.enhancement && !u.enhOn ? ' · ' + u.enhancement : '')) + (u.leads ? '<span class="tg m">+ ' + esc(partsAfter(u).join(' + ')) + '</span>' : '') +
       (c > 1 ? '<span class="tg m">' + c + ' units: mark them apart (' + Array.from({ length:c }, (_, i) => i + 1).join(', ') + ')</span>' : '') + '</div>' +
       lines.map(l => '<div class="pxl"><span class="pxn">' + l.n + '× <b>' + esc(/\d/.test(l.base) ? l.base : 'no base') + '</b></span><span class="pxm' + (l.std ? ' std' : '') + '">' + esc(l.mark) +
-        (l.std && l.gear.length ? ' <i>' + esc(l.gear.join(', ')) + '</i>' : '') + '</span></div>').join('') + '</div>';
+        (l.std && l.gear.length ? ' <i>' + esc(l.gear.join(', ')) + '</i>' : '') + '</span></div>').join('') +
+      unplacedOf(u).map(x => '<div class="pxl"><span></span><span class="pxm">' + esc(x.n + '× ' + x.name + ': ' + x.note) + '</span></div>').join('') + '</div>';
   });
   const sizes = [...total].sort((x, y) => (parseFloat(x[0]) || 999) - (parseFloat(y[0]) || 999));
   return '<p class="lbl grp-h">Bases to print</p><p class="pxt">' + sizes.map(([b, n]) => '<span><b>' + n + '×</b> ' + esc(b) + '</span>').join('') + '</p>' +

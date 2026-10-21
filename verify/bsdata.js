@@ -678,6 +678,15 @@ function buildUnit(army, u, um, cat, force, issues) {
       addChain(it.parent, picks[j], it.cnt);
     });
   });
+  // `unplaced`: wargear New Recruit lists for the unit but on no models line (a unit-level option of the
+  // part its `who` names, else the last part): as many as the app's weapon count, or one
+  for (const name of u.unplaced || []) {
+    const x = [...(u.ranged || []), ...(u.melee || []), ...(u.abilities || [])].find((y) => (y.group || y.name) === name) || {};
+    const host = (x.who && roots.find((r) => nn(r.node.name) === nn(x.who))) || roots[roots.length - 1];
+    const p = gearCandidates(host.node, ((um.gear || {})[name]) || name)[0];
+    if (!p) { fail('unplaced', name, '', `no BSData wargear "${name}" for ${host.node.name}`); continue; }
+    addChain(host, p, Number(x.n) || 1);
+  }
   // enhancement and warlord, on the leader (first root), or the character named in `enhOn`
   const lead = roots[0];
   if (u.enhancement) {

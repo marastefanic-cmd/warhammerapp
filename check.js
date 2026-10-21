@@ -108,7 +108,9 @@ function check(file){
         if(u.gear.length !== u.models.length) P(where, 'gear has', u.gear.length, 'lines but models has', u.models.length);
         const names = new Set(weapons.map(w => w.group || w.name));
         for(const g of u.gear) for(const n of g) if(!names.has(n)) P(where, 'gear names a weapon it does not have:', n);
-        const carried = new Set(u.gear.flat());
+        // unplaced: wargear New Recruit lists for the unit but on no models line
+        for(const n of u.unplaced || []) if(!names.has(n) && !(u.abilities || []).some(ab => ab.name === n)) P(where, 'unplaced names neither a weapon nor an ability of it:', n);
+        const carried = new Set([...u.gear.flat(), ...(u.unplaced || [])]);
         for(const n of names) if(!carried.has(n)) P(where, 'weapon not in any gear line:', n);
       }
       if(u.enhancement && !detachmentsOf(a).some(d => d.enhancements.some(e => e.name === u.enhancement))) P(where, 'enhancement not in its detachments:', u.enhancement);

@@ -59,7 +59,8 @@ function items(D, appSource){
       for(const m of u.aura || []) add(a.id, 'unit-aura', w, m, cited(a.id, u, m));
       for(const k of ['kwNote', 'ptsNote', 'note']) if(u[k]) add(a.id, 'unit-' + k, w, { [k]:u[k] }, unitFacts);
       // weapons: which model has which, how many, and the multi-profile groups
-      add(a.id, 'unit-weapons', w, { gear:u.gear, weapons:[...(u.ranged || []), ...(u.melee || [])].map(x => [x.who, x.n && '×' + x.n, x.group, x.name].filter(Boolean).join(' · ')) }, { models:u.models, leads:u.leads || null });
+      // unplaced: wargear on no models line (undefined, so left out of the key, for every other unit)
+      add(a.id, 'unit-weapons', w, { gear:u.gear, unplaced:u.unplaced, weapons:[...(u.ranged || []), ...(u.melee || [])].map(x => [x.who, x.n && '×' + x.n, x.group, x.name].filter(Boolean).join(' · ')) }, { models:u.models, leads:u.leads || null });
     }
     // the faction's and detachments' rules and stratagems the army uses
     const f = fr(a.faction);
@@ -102,6 +103,7 @@ const CODE_RULES = {
   inertRule:'rules that do nothing in this list (e.g. Bondsman without ARMIGER models)',
   auraMods:'auras from other units in the list',
   proxyLines:'Bases & proxies: bases per models line and what to mark',
+  unplacedOf:'wargear New Recruit lists for the unit but on no models line (data.js unplaced): shown with its count, and that New Recruit does not say which models carry it (Models, weapon row, Bases & proxies)',
   perBattle:'tick boxes: how many uses a rule allows per battle ("once"/"twice"/"three times per battle") and whether they are counted per army or for each unit',
   abilityTicks:'tick boxes on an ability row: one set per army, or one per unit copy',
   grantSource:'"Granted by": which ability, detachment rule or army rule a marked value names',

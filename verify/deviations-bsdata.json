@@ -142,5 +142,41 @@
   "source": "Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.",
   "reason": "The enhancement’s official text starts with its restriction \"WORLD EATERS model only.\" (the detachment’s enhancement in data.js, which verify/texts.js checks the unit’s text against); BSData’s enhancement text leaves that sentence out.",
   "evidence": "verify/.cache/waha/world-eaters.txt lines 55-56: \"- Berzerker Glaive 35 pts / **WORLD EATERS** model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.\""
+ },
+ {
+  "army": "pubstomper",
+  "unit": "daemon-prince-of-tzeentch-with-wings",
+  "field": "ability.text",
+  "app": "Aetherstride: In your Movement phase, when this model is set up on the battlefield using the **Deep Strike** ability, it can perform an aetherstride. If it does:\n- It can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units.\n- Until the end of the turn, its Dark Blessing has the **[SUSTAINED HITS D3]** ability.\n- Until the end of the turn, it is not eligible to declare a charge.",
+  "source": "In your Movement phase, when this model is set up on the battlefield using the Deep Strike ability, it can perform an aetherstride. If it does:\n- It can be set up anywhere on the battlefield more than 6\" horizontally away from all enemy units.\n- Until the end of the turn, its Dark Blessing has the [Sustained Hits D3] ability.\n- Until the end of the turn, it is not eligible to declare a charge.",
+  "reason": "The app follows GW's Thousand Sons Faction Pack (1.3) Rules Updates for Aetherstride (\"anywhere on the battlefield that is more than 6\\\" horizontally away\"); BSData prints the older wording without \"that is\".",
+  "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_thousand_sons-4lioijwxdj-otjrinzt8c.txt lines 442-451 (Rules Updates, Datasheets): \"Daemon Prince of Tzeentch with Wings, Aetherstride Ability. Change to: '... It can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units. ...'\"; verify/texts.js checks the app's text against it"
+ },
+ {
+  "army": "pubstomper",
+  "unit": "daemon-prince-of-tzeentch-with-wings",
+  "field": "ability.text",
+  "app": "Eldritch Vortex of E’taph: **THOUSAND SONS** model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.",
+  "source": "Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.",
+  "reason": "The enhancement's text starts with its restriction \"THOUSAND SONS model only.\" (Wahapedia, Grand Coven enhancements; verify/texts.js checks the unit's enhancement text against the detachment's); BSData prints it without that sentence.",
+  "evidence": "verify/.cache/waha/thousand-sons.txt lines 106-107: \"- Eldritch Vortex of E’taph 35 pts / **THOUSAND SONS** model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.\""
+ },
+ {
+  "army": "pubstomper",
+  "unit": "sorcerer-in-terminator-armour-scarab-occult-terminators",
+  "field": "ability.text",
+  "app": "Umbralefic Crystal: **THOUSAND SONS** model only. (Once per battle, per army) In your Command phase, if this unit is **unengaged**, you can use this ability. If you do:\n- Place this unit in **strategic reserves**.\n- This unit has **Deep Strike** until the start of your next Shooting phase.\n- This unit must make an **ingress move** in your next Movement phase (including in your first turn).",
+  "source": "(Once per battle, per army) In your Command phase, if this unit is unengaged, you can use this ability. If you do: \n- Place this unit in strategic reserves. \n- This unit has Deep Strike until the start of your next Shooting phase. \n- This unit must make an ingress move in your next Movement phase (including in your first turn).",
+  "reason": "The app follows GW's Thousand Sons Faction Pack (1.3) Rules Updates, which rewrite Umbralefic Crystal starting with \"THOUSAND SONS model only.\"; BSData prints it without the restriction.",
+  "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_thousand_sons-4lioijwxdj-otjrinzt8c.txt lines 403-411 (Rules Updates, Grand Coven Detachment): \"Umbralefic Crystal Enhancement. Change to: 'THOUSAND SONS model only. (Once per battle, per army) In your Command phase, if this unit is unengaged, ...'\"; also verify/.cache/waha/thousand-sons.txt lines 93-104"
+ },
+ {
+  "army": "pubstomper",
+  "unit": "defiler",
+  "field": "ability.text",
+  "app": "Destroyer of Futures: You can target this unit with the Counteroffensive stratagem, regardless of any other uses of that stratagem this phase. If you do:\n- That use is -1 CP.\n- That use does not prevent any uses of that stratagem on other units this phase.",
+  "source": "You can target this unit with the Counteroffensive stratagem, regardless of any other uses of that stratagem this phase. If you do: \n- That use is ‑1 CP. \n- That use does not prevent any uses of that stratagem on other units this phase.'",
+  "reason": "Typo in every source: the text ends with a closing quote mark that opens nowhere (BSData and GW's Faction Pack all print it). The app leaves the stray mark out.",
+  "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_thousand_sons-4lioijwxdj-otjrinzt8c.txt lines 331-338 (Defiler datasheet): \"Destroyer of Futures (Once per phase, per unit): You can target this unit with the Counteroffensive stratagem, ... That use does not prevent any uses of that stratagem on other units this phase.’\" (the same stray mark); verify/sources/nr/pubstomper.txt line 346: \"That use does not prevent any uses of that stratagem on other units this phase.'\""
  }
 ]
