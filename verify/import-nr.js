@@ -360,7 +360,7 @@ for (const nu of nrUnits) {
       const typoDev = deviations.some(d => d.unit === prev.id && /^abilities\[/.test(d.field) && d.field.slice(10).startsWith(nm(ab.name)) && appText(d.source).s === appText(ab.text).s);
       if (appText(pa.text).s === appText(ab.text).s || typoDev) { ab.text = pa.text; delete ab._plain; }
       else { note(tag0, 'ability ' + ab.name + ' has new words: its phase tags and footnotes were not kept'); continue; }
-      for (const k of ['ph', 'turn', 'turns', 'def', 'na']) if (pa[k] !== undefined) ab[k] = pa[k];
+      for (const k of ['damaged', 'ph', 'turn', 'turns', 'def', 'na']) if (pa[k] !== undefined) ab[k] = pa[k];
     }
     const names = new Set(u.abilities.map(a => a.name));
     for (const k of ['mods', 'aura']) {
@@ -443,6 +443,8 @@ const dm = /^(\d+)\/(\d+)\/(\d+)$/.exec(nr.date) || [];
 const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const bs = /^(.*?) \((\d+) Point limit\)$/.exec(nr.bullets['Battle Size'] || '') || [];
 const army = { id: armyId, name: typo(nr.name), faction: factionId, points: +bs[2] || null, pointsUsed: nr.pts, battleSize: bs[1] || null, disposition: nr.bullets['Force Disposition'] || null, detachments: detIds, source: 'New Recruit, exported ' + (+dm[2]) + ' ' + MON[+dm[1] - 1] + ' 20' + dm[3] };
+// the other selections printed under the army name, as printed ("Code Chivalric: Deed, Quality")
+army.config = Object.fromEntries(Object.entries(nr.bullets).filter(([k, v]) => typeof v === 'string' && !['Battle Size', 'Detachment', 'Force Disposition', 'Show/Hide Options'].includes(k)).map(([k, v]) => [typo(k), typo(v)]));
 
 const lit = v => {
   if (Array.isArray(v)) return '[' + v.map(lit).join(',') + ']';
@@ -457,7 +459,7 @@ function unitSrc(u) {
   let s = '    {\n      ' + head + ',\n';
   if (u.leads) s += '      leads:' + lit(u.leads) + (u.support ? ', support:true' : '') + (u.also ? ', also:' + lit(u.also) : '') + ',\n';
   s += '      models:' + lit(u.models) + ',\n      gear:' + lit(u.gear) + ',\n';
-  const AB = ['name', 'who', 'tag', 'ph', 'turn', 'turns', 'def', 'na', 'text'];   // an ability's fields in data.js's order
+  const AB = ['name', 'who', 'tag', 'damaged', 'ph', 'turn', 'turns', 'def', 'na', 'text'];   // an ability's fields in data.js's order
   const abs = u.abilities.map(a => Object.fromEntries(Object.keys(a).sort((x, y) => (AB.indexOf(x) + 1 || 99) - (AB.indexOf(y) + 1 || 99)).map(k => [k, a[k]])));
   s += block('stats', u.stats) + block('ranged', u.ranged) + block('melee', u.melee) + block('abilities', abs);
   if (u.mods) s += "      // abilities that change this unit's attacks, shown inside its weapon tables\n" + block('mods', u.mods);
@@ -467,7 +469,7 @@ function unitSrc(u) {
 }
 const src = '{\n' + ['id', 'name', 'faction', 'points', 'pointsUsed'].map(k => k + ':' + lit(army[k])).join(', ').replace(/^/, '  ') + ',\n' +
   '  battleSize:' + lit(army.battleSize) + ', disposition:' + lit(army.disposition) + ',\n' +
-  '  detachments:' + lit(army.detachments) + ',\n  source:' + lit(army.source) + ',\n  units:[\n' + units.map(u => { delete u._page; delete u._applied; return unitSrc(u); }).join(',\n') + '\n  ]\n},\n';
+  '  detachments:' + lit(army.detachments) + ',\n' + (Object.keys(army.config).length ? '  config:' + lit(army.config) + ',\n' : '') + '  source:' + lit(army.source) + ',\n  units:[\n' + units.map(u => { delete u._page; delete u._applied; return unitSrc(u); }).join(',\n') + '\n  ]\n},\n';
 
 // ---------------------------------------------------------------- write
 // the datasheet pages verify/fetch.sh should download (it reads verify/sources/waha-datasheets.txt)

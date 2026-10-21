@@ -33,6 +33,7 @@ const NORMALISATION = [
   'Models: "Nx Name" is the app\'s "N× Name", compared as an ordered list. Options per model line: "Warlord" is warlord:true, "• Leading: X[n]" is leads X, an item that is one of the faction\'s enhancements is the enhancement; an NR option "Group (a, b)" counts as its weapons a and b and "2x Weapon" as Weapon; the remaining items that are weapons printed in the unit\'s weapon tables are that line\'s gear, compared as a set; an item that is not a printed weapon (wargear, e.g. Icon of Khorne) must be on the app\'s model line as "N× Name (Item)".',
   'Abilities: matched by name and who (" - <unit>" suffix). NR "Name (Tag)" is the app\'s name + tag. The app may add a tag part NR does not print only when it is "Enhancement" on the unit\'s enhancement, the second header of the NR table the ability sits in (e.g. "Capacity"), the first header of a sub-table (e.g. "Crimson King") or words printed in the ability\'s own NR text (e.g. "Once per battle"); the app\'s who may name a sub-table ("Crimson King: pick one").',
   'Categories (kw) compared as a set; NR\'s "*from combined unit" marks must each be named in the app\'s kwNote. Rules line compared as a set (duplicates dropped); an NR rule that is a weapon ability counts as present when one of the unit\'s weapons has that keyword in the app.',
+  'Army: the page-1 bullets Battle Size, Detachment and Force Disposition are the app\'s battleSize and points, detachments and disposition; every other "Label: value" bullet is the app\'s config, label and value as printed (a bullet with no value, e.g. "Blessings of Khorne Reference", is not a selection).',
   'Points: header points are the app\'s pts; for an attached unit the roster lines (leader + bodyguard) must be the app\'s ptsNote "L + Bodyguard B". Copies: the "xN" in the unit header and the number of identical roster lines are the app\'s copies.'
 ];
 
@@ -170,7 +171,11 @@ function partitionRows(lines, who) {
     // gaps inside a name block: lines of a name are adjacent, or alternate with description lines
     for (let x = 1; x < L.length; x++) if (L[x] - L[x - 1] > 2) c += 2;
     for (let x = 1; x < R.length; x++) if (R[x] - R[x - 1] > 2) c += 2;
-    c += cellPenalty(joinLines(lines.slice(a, b).filter(x => x.L).map(x => x.L)), { who });
+    const name = joinLines(lines.slice(a, b).filter(x => x.L).map(x => x.L));
+    c += cellPenalty(name, { who });
+    // a name's "(…)" ("(Bondsman)", "(5+*)") comes after its words and before only another "(…)" or the
+    // " - <unit>" suffix: a name neither starts with one nor runs on after it ("(5+*) Damaged: 1-9 …")
+    if (/^\(|\)\s+[^\s(-]/.test(name)) c += 5;
     return c;
   };
   const D = new Array(N + 1).fill(Infinity), B = new Array(N + 1).fill(-1);
@@ -628,6 +633,10 @@ function compareArmy(D, A, nr, out, srcFile) {
   cmp('army', null, 'battleSize', A.battleSize, bs[1] || null, 1);
   cmp('army', null, 'points', A.points, bs[2] ? +bs[2] : null, 1);
   cmp('army', null, 'disposition', A.disposition, b['Force Disposition'] || null, 1);
+  // every other "Label: value" bullet is a selection the app shows as printed (config); a bullet with no
+  // value ("Blessings of Khorne Reference") is a reference toggle, not a selection
+  const cfgPairs = o => Object.entries(o).map(([k, v]) => [nm(k), nm(v)]).sort();
+  cmp('army', null, 'config', cfgPairs(A.config || {}), cfgPairs(Object.fromEntries(Object.entries(b).filter(([k, v]) => typeof v === 'string' && !['Battle Size', 'Detachment', 'Force Disposition', 'Show/Hide Options'].includes(k)))), 1);
   cmp('army', null, 'detachments', A.detachments.map(id => nm((F.detachments[id] || {}).name || id)).sort(), nrDetachments(b['Detachment']).sort(), 1);
   cmp('army', null, 'faction', nm(F.name), nm(nr.faction.replace(/^.* - /, '')), 1);
   const dm = /^(\d+)\/(\d+)\/(\d+)$/.exec(nr.date);

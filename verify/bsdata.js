@@ -827,7 +827,9 @@ function grantsOf(army, u, prof, appKw) {
   for (const c of prof.changes || []) {
     const isKw = c.char === 'Keywords';
     let keys;
-    if (isKw) { const before = new Set(kwList(c.before)); keys = kwList(c.after).filter((k) => !before.has(k)).map((k) => (appKw || []).find((x) => nk(x) === k) || k); }
+    // the keywords the change adds, counted: a keyword the weapon already has, appended again
+    // (Hunter's Eye's "Ignores Cover" on a heavy flamer that has it), is added too
+    if (isKw) { const left = kwList(c.before); keys = kwList(c.after).filter((k) => { const i = left.indexOf(k); if (i < 0) return true; left.splice(i, 1); return false; }).map((k) => (appKw || []).find((x) => nk(x) === k) || k); }
     else { if (nn(c.after).replace(/\+0$/, '') === nn(c.before)) continue; keys = [CHAR_KEY[c.char] || c.char]; }
     for (const key of keys) {
       const names = new Set();

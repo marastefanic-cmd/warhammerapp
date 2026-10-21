@@ -1,683 +1,482 @@
 [
-  {
-    "army": "standard",
-    "kind": "ability-timing",
-    "where": "standard · Khârn the Betrayer · Blood Surge",
-    "judgement": {
-      "ph": [
-        "shooting"
-      ],
-      "turn": "opp"
-    },
-    "source": {
-      "ability": "Blood Surge",
-      "text": "In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was **destroyed** as a result of those attacks, this unit can make a **surge move** of up to D6+2\"."
-    },
-    "key": "0bcff83e83b9f9f6"
+ {
+  "army": "standard",
+  "kind": "unit-kwNote",
+  "where": "standard · Khârn the Betrayer",
+  "judgement": {
+   "kwNote": "Battleline, Berzerkers come from the led Khorne Berzerkers."
   },
-  {
-    "army": "standard",
-    "kind": "ability-who",
-    "where": "standard · Khârn the Betrayer · Blood Surge",
-    "judgement": {
-      "who": "Khorne Berzerkers",
-      "models": [
-        "1× Khârn the Betrayer",
-        "1× Khorne Berzerker Champion",
-        "7× Khorne Berzerker",
-        "2× Khorne Berzerker w/ eviscerator and plasma pistol"
-      ]
-    },
-    "source": {
-      "ability": "Blood Surge",
-      "text": "In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was **destroyed** as a result of those attacks, this unit can make a **surge move** of up to D6+2\"."
-    },
-    "key": "3ae6ad2c0b3746b6"
+  "source": {
+   "models": [
+    "1× Khârn the Betrayer",
+    "1× Khorne Berzerker Champion",
+    "7× Khorne Berzerker",
+    "2× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ],
+   "stats": [
+    "Khârn the Betrayer W5 OC1",
+    "Khorne Berzerker ×10 W2 OC2"
+   ],
+   "weapons": [
+    "Plasma pistol standard 1 -2 1 PISTOL",
+    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
+    "Plasma pistol standard 1 -2 1 PISTOL",
+    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
+    "Bolt pistol 1 -1 1 PISTOL",
+    "Gorechild 9 -2 3",
+    "Chainblade 5 -1 1",
+    "Khornate eviscerator 4 -2 2"
+   ]
   },
-  {
-    "army": "standard",
-    "kind": "ability-timing",
-    "where": "standard · Khârn the Betrayer · Murderous Charge",
-    "judgement": {
-      "ph": [
-        "fight"
-      ],
-      "turn": "either"
-    },
-    "source": {
-      "ability": "Murderous Charge",
-      "text": "If this unit made a **charge move** this turn, this unit’s melee attacks have +1 **S**."
-    },
-    "key": "5e7faa7e920ddea5"
+  "key": "9a703450fd9425d4"
+ },
+ {
+  "army": "standard",
+  "kind": "unit-weapons",
+  "where": "standard · Forgefiend",
+  "judgement": {
+   "gear": [
+    [
+     "Hades autocannon",
+     "Hades autocannon",
+     "Ectoplasma cannon",
+     "Forgefiend claws"
+    ]
+   ],
+   "weapons": [
+    "×2 · Hades autocannon",
+    "Ectoplasma cannon",
+    "Forgefiend claws"
+   ]
   },
-  {
-    "army": "standard",
-    "kind": "ability-who",
-    "where": "standard · Khârn the Betrayer · Murderous Charge",
-    "judgement": {
-      "who": "Khorne Berzerkers",
-      "models": [
-        "1× Khârn the Betrayer",
-        "1× Khorne Berzerker Champion",
-        "7× Khorne Berzerker",
-        "2× Khorne Berzerker w/ eviscerator and plasma pistol"
-      ]
-    },
-    "source": {
-      "ability": "Murderous Charge",
-      "text": "If this unit made a **charge move** this turn, this unit’s melee attacks have +1 **S**."
-    },
-    "key": "171e3a9a849bb417"
+  "source": {
+   "models": [
+    "1× Forgefiend"
+   ],
+   "leads": null
   },
-  {
-    "army": "standard",
-    "kind": "ability-who",
-    "where": "standard · Khârn the Betrayer · Icon of Khorne",
-    "judgement": {
-      "who": "Khorne Berzerkers",
-      "models": [
-        "1× Khârn the Betrayer",
-        "1× Khorne Berzerker Champion",
-        "7× Khorne Berzerker",
-        "2× Khorne Berzerker w/ eviscerator and plasma pistol"
-      ]
-    },
-    "source": {
-      "ability": "Icon of Khorne",
-      "text": "If the bearer’s unit contains 1 or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain one Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost."
-    },
-    "key": "79e09659b49bf6e1"
+  "key": "d2c1573c6630c1c1"
+ },
+ {
+  "army": "standard",
+  "kind": "ability-timing",
+  "where": "standard · Angron · Reborn in Blood",
+  "judgement": {
+   "ph": [
+    "command",
+    "movement"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "your"
+   }
   },
-  {
-    "army": "standard",
-    "kind": "unit-footnote",
-    "where": "standard · Khârn the Betrayer",
-    "judgement": {
-      "kind": "melee",
-      "when": "Made a charge move this turn",
-      "note": "+1 S",
-      "from": "Murderous Charge"
-    },
-    "source": {
-      "ability": "Murderous Charge",
-      "text": "If this unit made a **charge move** this turn, this unit’s melee attacks have +1 **S**."
-    },
-    "key": "76fc934001fab42f"
+  "source": {
+   "ability": "Reborn in Blood",
+   "text": "At the start of the battle round, when you make a **Blessings of Khorne** roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its **Deep Strike** ability, with 8 wounds remaining."
   },
-  {
-    "army": "standard",
-    "kind": "unit-kwNote",
-    "where": "standard · Khârn the Betrayer",
-    "judgement": {
-      "kwNote": "Battleline, Berzerkers come from the led Khorne Berzerkers."
-    },
-    "source": {
-      "models": [
-        "1× Khârn the Betrayer",
-        "1× Khorne Berzerker Champion",
-        "7× Khorne Berzerker",
-        "2× Khorne Berzerker w/ eviscerator and plasma pistol"
-      ],
-      "stats": [
-        "Khârn the Betrayer W5 OC1",
-        "Khorne Berzerker ×10 W2 OC2"
-      ],
-      "weapons": [
-        "Plasma pistol standard 1 -2 1 PISTOL",
-        "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
-        "Plasma pistol standard 1 -2 1 PISTOL",
-        "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
-        "Bolt pistol 1 -1 1 PISTOL",
-        "Gorechild 9 -2 3",
-        "Chainblade 5 -1 1",
-        "Khornate eviscerator 4 -2 2"
-      ]
-    },
-    "key": "9a703450fd9425d4"
+  "key": "4705df5663cd62fb"
+ },
+ {
+  "army": "standard",
+  "kind": "ability-timing",
+  "where": "standard · Angron · Wrathful Presence",
+  "judgement": {
+   "ph": [
+    "command"
+   ],
+   "turn": "either"
   },
-  {
-    "army": "standard",
-    "kind": "ability-tag",
-    "where": "standard · Slaughterbound · Berzerker Glaive",
-    "judgement": {
-      "tag": "Enhancement"
-    },
-    "source": {
-      "ability": "Berzerker Glaive",
-      "text": "Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer."
-    },
-    "key": "54394fe17894779f"
+  "source": {
+   "ability": "Wrathful Presence",
+   "text": "At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability."
   },
-  {
-    "army": "standard",
-    "kind": "ability-timing",
-    "where": "standard · Lord on Juggernaut · Crush All Who Stand Before Us",
-    "judgement": {
-      "ph": [
-        "fight"
-      ],
-      "turn": "either"
-    },
-    "source": {
-      "ability": "Crush All Who Stand Before Us",
-      "text": "Each time this model’s unit is selected to fight, you can use this ability. When determining which models in this unit are eligible to fight, any models in it that are within 3\" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3\" of them and within **Engagement Range** of their unit."
-    },
-    "key": "86e3a5ca19126b2d"
+  "key": "87516ef3c85932f6"
+ },
+ {
+  "army": "standard",
+  "kind": "ability-who",
+  "where": "standard · Angron · The Blood God’s Favour",
+  "judgement": {
+   "who": "Wrathful Presence: pick one",
+   "models": [
+    "1× Angron"
+   ]
   },
-  {
-    "army": "standard",
-    "kind": "ability-timing",
-    "where": "standard · Slaughterbound · Rage Eternal",
-    "judgement": {
-      "ph": [
-        "command"
-      ],
-      "turn": "your"
-    },
-    "source": {
-      "ability": "Rage Eternal",
-      "text": "While this model is leading a unit, in your Command phase, you can return one destroyed **Bodyguard** model to that unit."
-    },
-    "key": "b021ae45ca3acbf6"
+  "source": {
+   "ability": "The Blood God’s Favour",
+   "text": "Each time you make a **Blessings of Khorne** roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled."
   },
-  {
-    "army": "standard",
-    "kind": "ability-who",
-    "where": "standard · Slaughterbound · Rage Eternal",
-    "judgement": {
-      "who": "Slaughterbound",
-      "models": [
-        "1× Slaughterbound",
-        "1× Exalted Eightbound Champion",
-        "2× Exalted Eightbound"
-      ]
-    },
-    "source": {
-      "ability": "Rage Eternal",
-      "text": "While this model is leading a unit, in your Command phase, you can return one destroyed **Bodyguard** model to that unit."
-    },
-    "key": "ba8a8849412f948a"
+  "key": "98fe49f606c42ffb"
+ },
+ {
+  "army": "standard",
+  "kind": "ability-timing",
+  "where": "standard · Angron · Driven by Ultimate Rage",
+  "judgement": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
   },
-  {
-    "army": "standard",
-    "kind": "ability-who",
-    "where": "standard · Slaughterbound · Possessed Lord",
-    "judgement": {
-      "who": "Slaughterbound",
-      "models": [
-        "1× Slaughterbound",
-        "1× Exalted Eightbound Champion",
-        "2× Exalted Eightbound"
-      ]
-    },
-    "source": {
-      "ability": "Possessed Lord",
-      "text": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the **[DEVASTATING WOUNDS]** ability."
-    },
-    "key": "f9d6b156530265be"
+  "source": {
+   "ability": "Driven by Ultimate Rage",
+   "text": "While a friendly **WORLD EATERS** unit is within 6\" of this unit, that unit’s melee attacks can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1."
   },
-  {
-    "army": "standard",
-    "kind": "ability-who",
-    "where": "standard · Slaughterbound · Lord of the Eightbound",
-    "judgement": {
-      "who": "Slaughterbound",
-      "models": [
-        "1× Slaughterbound",
-        "1× Exalted Eightbound Champion",
-        "2× Exalted Eightbound"
-      ]
-    },
-    "source": {
-      "ability": "Lord of the Eightbound",
-      "text": "If this model is attached to a World Eaters Possessed unit during the Declare Battle Formations step, this model has the Deep Strike and Scouts 6\" abilities."
-    },
-    "key": "5be4cc82f24ea08c"
+  "key": "096905690d41d3e3"
+ },
+ {
+  "army": "standard",
+  "kind": "ability-tag",
+  "where": "standard · Angron · Driven by Ultimate Rage",
+  "judgement": {
+   "tag": "Aura"
   },
-  {
-    "army": "standard",
-    "kind": "ability-timing",
-    "where": "standard · Chaos Rhino · Meet Any Challenge",
-    "judgement": {
-      "ph": [
-        "movement"
-      ],
-      "turn": "opp"
-    },
-    "source": {
-      "ability": "Meet Any Challenge",
-      "text": "In your opponent’s Movement phase, each time an enemy unit is set up or ends a **Normal**, **Advance** or **Fall Back move** within 8\" of this model, any units embarked within it can disembark."
-    },
-    "key": "b32d27ddcb6efce8"
+  "source": {
+   "ability": "Driven by Ultimate Rage",
+   "text": "While a friendly **WORLD EATERS** unit is within 6\" of this unit, that unit’s melee attacks can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1."
   },
-  {
-    "army": "standard",
-    "kind": "ability-who",
-    "where": "standard · Chaos Rhino · Chaos Rhino",
-    "judgement": {
-      "who": "Transport",
-      "models": [
-        "1× Chaos Rhino"
-      ]
-    },
-    "source": {
-      "ability": "Chaos Rhino",
-      "text": "This model has a **transport capacity** of 12 **WORLD EATERS INFANTRY** models. It cannot transport **POSSESSED** or **TERMINATOR** models."
-    },
-    "key": "6cd53d6e4e83e99b"
+  "key": "7c00106c3da079a2"
+ },
+ {
+  "army": "standard",
+  "kind": "ability-who",
+  "where": "standard · Angron · Driven by Ultimate Rage",
+  "judgement": {
+   "who": "Wrathful Presence: pick one",
+   "models": [
+    "1× Angron"
+   ]
   },
-  {
-    "army": "standard",
-    "kind": "ability-tag",
-    "where": "standard · Eightbound · Beacons of Rage",
-    "judgement": {
-      "tag": "Aura"
-    },
-    "source": {
-      "ability": "Beacons of Rage",
-      "text": "While a friendly World Eaters unit is within 6\" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding Monsters and Vehicles), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well."
-    },
-    "key": "135505f0858b69d8"
+  "source": {
+   "ability": "Driven by Ultimate Rage",
+   "text": "While a friendly **WORLD EATERS** unit is within 6\" of this unit, that unit’s melee attacks can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1."
   },
-  {
-    "army": "standard",
-    "kind": "ability-timing",
-    "where": "standard · Forgefiend · Furious Onslaught",
-    "judgement": {
-      "ph": [
-        "movement",
-        "shooting"
-      ],
-      "turn": "either",
-      "turns": {
-        "movement": "opp",
-        "shooting": "your"
-      }
-    },
-    "source": {
-      "ability": "Furious Onslaught",
-      "text": "Each time this model makes a ranged attack that targets the closest eligible target within 18\", you can re-roll the **Hit roll**."
-    },
-    "key": "5ae39c5719e87d62"
+  "key": "047694cfb33ed8ff"
+ },
+ {
+  "army": "standard",
+  "kind": "ability-timing",
+  "where": "standard · Angron · Overwhelming Wrath",
+  "judgement": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
   },
-  {
-    "army": "standard",
-    "kind": "unit-footnote",
-    "where": "standard · Forgefiend",
-    "judgement": {
-      "kind": "ranged",
-      "when": "Target is the closest eligible target within 18\"",
-      "note": "re-roll the hit roll",
-      "from": "Furious Onslaught"
-    },
-    "source": {
-      "ability": "Furious Onslaught",
-      "text": "Each time this model makes a ranged attack that targets the closest eligible target within 18\", you can re-roll the **Hit roll**."
-    },
-    "key": "8a3945e9e37549d5"
+  "source": {
+   "ability": "Overwhelming Wrath",
+   "text": "Each time an enemy unit within 6\" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead."
   },
-  {
-    "army": "standard",
-    "kind": "unit-footnote",
-    "where": "standard · Forgefiend",
-    "judgement": {
-      "kind": "all",
-      "when": "Damaged (1-4 wounds left)",
-      "note": "-1 to hit rolls",
-      "from": "Damaged: 1-4 wounds remaining"
-    },
-    "source": {
-      "ability": "Damaged: 1-4 wounds remaining",
-      "text": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**."
-    },
-    "key": "1de9e2289afddf58"
+  "key": "9d3e763483cd94d7"
+ },
+ {
+  "army": "standard",
+  "kind": "ability-tag",
+  "where": "standard · Angron · Overwhelming Wrath",
+  "judgement": {
+   "tag": "Aura"
   },
-  {
-    "army": "standard",
-    "kind": "unit-weapons",
-    "where": "standard · Forgefiend",
-    "judgement": {
-      "gear": [
-        [
-          "Hades autocannon",
-          "Hades autocannon",
-          "Ectoplasma cannon",
-          "Forgefiend claws"
-        ]
-      ],
-      "weapons": [
-        "×2 · Hades autocannon",
-        "Ectoplasma cannon",
-        "Forgefiend claws"
-      ]
-    },
-    "source": {
-      "models": [
-        "1× Forgefiend"
-      ],
-      "leads": null
-    },
-    "key": "d2c1573c6630c1c1"
+  "source": {
+   "ability": "Overwhelming Wrath",
+   "text": "Each time an enemy unit within 6\" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead."
   },
-  {
-    "army": "standard",
-    "kind": "ability-who",
-    "where": "standard · Angron · The Blood God’s Favour",
-    "judgement": {
-      "who": "Wrathful Presence",
-      "models": [
-        "1× Angron"
-      ]
-    },
-    "source": {
-      "ability": "The Blood God’s Favour",
-      "text": "Each time you make a Blessings of Khorne roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled."
-    },
-    "key": "13dc4c04a3465f2d"
+  "key": "829790204ea12268"
+ },
+ {
+  "army": "standard",
+  "kind": "ability-who",
+  "where": "standard · Angron · Overwhelming Wrath",
+  "judgement": {
+   "who": "Wrathful Presence: pick one",
+   "models": [
+    "1× Angron"
+   ]
   },
-  {
-    "army": "standard",
-    "kind": "ability-tag",
-    "where": "standard · Angron · Driven by Ultimate Rage",
-    "judgement": {
-      "tag": "Aura"
-    },
-    "source": {
-      "ability": "Driven by Ultimate Rage",
-      "text": "While a friendly WORLD EATERS unit is within 6\" of this unit, that unit’s melee attacks can: Re-roll hit rolls of 1. Re-roll wound rolls of 1."
-    },
-    "key": "432180daf9e55099"
+  "source": {
+   "ability": "Overwhelming Wrath",
+   "text": "Each time an enemy unit within 6\" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead."
   },
-  {
-    "army": "standard",
-    "kind": "ability-who",
-    "where": "standard · Angron · Driven by Ultimate Rage",
-    "judgement": {
-      "who": "Wrathful Presence",
-      "models": [
-        "1× Angron"
-      ]
-    },
-    "source": {
-      "ability": "Driven by Ultimate Rage",
-      "text": "While a friendly WORLD EATERS unit is within 6\" of this unit, that unit’s melee attacks can: Re-roll hit rolls of 1. Re-roll wound rolls of 1."
-    },
-    "key": "3b160cb5a94986ff"
+  "key": "a0077ae054433ac9"
+ },
+ {
+  "army": "standard",
+  "kind": "unit-aura",
+  "where": "standard · Angron",
+  "judgement": {
+   "kind": "melee",
+   "needs": {
+    "all": [
+     "Faction: World Eaters"
+    ]
+   },
+   "when": "Within 6\" of Angron, if he has Driven by Ultimate Rage this round",
+   "selfWhen": "Own aura, if he has Driven by Ultimate Rage this round",
+   "note": "re-roll hit rolls of 1 and wound rolls of 1",
+   "from": "Driven by Ultimate Rage"
   },
-  {
-    "army": "standard",
-    "kind": "ability-tag",
-    "where": "standard · Angron · Overwhelming Wrath",
-    "judgement": {
-      "tag": "Aura"
-    },
-    "source": {
-      "ability": "Overwhelming Wrath",
-      "text": "Each time an enemy unit within 6\" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead."
-    },
-    "key": "829790204ea12268"
+  "source": {
+   "ability": "Driven by Ultimate Rage",
+   "text": "While a friendly **WORLD EATERS** unit is within 6\" of this unit, that unit’s melee attacks can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1."
   },
-  {
-    "army": "standard",
-    "kind": "ability-who",
-    "where": "standard · Angron · Overwhelming Wrath",
-    "judgement": {
-      "who": "Wrathful Presence",
-      "models": [
-        "1× Angron"
-      ]
-    },
-    "source": {
-      "ability": "Overwhelming Wrath",
-      "text": "Each time an enemy unit within 6\" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead."
-    },
-    "key": "b23f6da559419efc"
+  "key": "10e2baf6fe235019"
+ },
+ {
+  "army": "standard",
+  "kind": "unit-weapons",
+  "where": "standard · Angron",
+  "judgement": {
+   "gear": [
+    [
+     "Samni’arius and Spinegrinder"
+    ]
+   ],
+   "weapons": [
+    "Samni’arius and Spinegrinder · strike",
+    "Samni’arius and Spinegrinder · sweep"
+   ]
   },
-  {
-    "army": "standard",
-    "kind": "unit-weapons",
-    "where": "standard · Angron",
-    "judgement": {
-      "gear": [
-        [
-          "Samni’arius and Spinegrinder"
-        ]
-      ],
-      "weapons": [
-        "Samni’arius and Spinegrinder · strike",
-        "Samni’arius and Spinegrinder · sweep"
-      ]
-    },
-    "source": {
-      "models": [
-        "1× Angron"
-      ],
-      "leads": null
-    },
-    "key": "d8572c3256baf0d4"
+  "source": {
+   "models": [
+    "1× Angron"
+   ],
+   "leads": null
   },
-  {
-    "army": "standard",
-    "kind": "ability-timing",
-    "where": "standard · Khârn the Betrayer · Legendary Killer",
-    "judgement": {
-      "ph": [
-        "fight"
-      ],
-      "turn": "either"
-    },
-    "source": {
-      "ability": "Legendary Killer",
-      "text": "While this model is leading a unit, each time a model in that unit makes a melee attack, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1."
-    },
-    "key": "577d43cc21b041a4"
+  "key": "d8572c3256baf0d4"
+ },
+ {
+  "army": "standard",
+  "kind": "ability-na",
+  "where": "standard · Khârn the Betrayer · Icon of Khorne",
+  "judgement": {
+   "na": "No Icon of Khorne in this unit",
+   "armyUnits": [
+    "Angron [Angron, Chaos, Character, Daemon, Epic Hero, Faction: World Eaters, Fly, Khorne, Monster, Primarch, Warlord]",
+    "Khârn the Betrayer [Chaos, Character, Epic Hero, Faction: World Eaters, Grenades, Infantry, Khorne, Khârn the Betrayer, Battleline, Berzerkers]",
+    "Lord on Juggernaut [Chaos, Character, Faction: World Eaters, Khorne, Lord on Juggernaut, Mounted]",
+    "Slaughterbound [Chaos, Character, Daemon, Faction: World Eaters, Infantry, Khorne, Possessed, Slaughterbound]",
+    "Slaughterbound [Chaos, Character, Daemon, Faction: World Eaters, Infantry, Khorne, Possessed, Slaughterbound, Exalted Eightbound]",
+    "Chaos Rhino [Chaos, Dedicated Transport, Faction: World Eaters, Frame, Khorne, Rhino, Smoke, Transport, Vehicle]",
+    "Eightbound [Chaos, Daemon, Eightbound, Faction: World Eaters, Infantry, Khorne, Possessed]",
+    "Exalted Eightbound [Chaos, Daemon, Exalted Eightbound, Faction: World Eaters, Infantry, Khorne, Possessed]",
+    "Goremongers [Chaos, Faction: World Eaters, Goremongers, Grenades, Infantry, Khorne]",
+    "Jakhals [Chaos, Faction: World Eaters, Grenades, Infantry, Jakhals, Khorne]",
+    "Forgefiend [Chaos, Daemon, Faction: World Eaters, Forgefiend, Khorne, Vehicle, Walker]"
+   ]
   },
-  {
-    "army": "standard",
-    "kind": "ability-who",
-    "where": "standard · Khârn the Betrayer · Legendary Killer",
-    "judgement": {
-      "who": "Khârn the Betrayer",
-      "models": [
-        "1× Khârn the Betrayer",
-        "1× Khorne Berzerker Champion",
-        "7× Khorne Berzerker",
-        "2× Khorne Berzerker w/ eviscerator and plasma pistol"
-      ]
-    },
-    "source": {
-      "ability": "Legendary Killer",
-      "text": "While this model is leading a unit, each time a model in that unit makes a melee attack, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1."
-    },
-    "key": "a3d85bfc1d2854bc"
+  "source": {
+   "ability": "Icon of Khorne",
+   "text": "If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost."
   },
-  {
-    "army": "standard",
-    "kind": "unit-footnote",
-    "where": "standard · Khârn the Betrayer",
-    "judgement": {
-      "kind": "melee",
-      "when": "While Khârn leads this unit",
-      "note": "re-roll hit rolls of 1 and wound rolls of 1",
-      "from": "Legendary Killer"
-    },
-    "source": {
-      "ability": "Legendary Killer",
-      "text": "While this model is leading a unit, each time a model in that unit makes a melee attack, re-roll a **Hit roll** of 1 and re-roll a **Wound roll** of 1."
-    },
-    "key": "575d7c3b5235fb36"
+  "key": "7a3d58fbc20f30b6"
+ },
+ {
+  "army": "standard",
+  "kind": "unit-weapons",
+  "where": "standard · Lord on Juggernaut",
+  "judgement": {
+   "gear": [
+    [
+     "Bladed horn",
+     "Exalted chainblade",
+     "Plasma pistol"
+    ]
+   ],
+   "weapons": [
+    "Plasma pistol · standard",
+    "Plasma pistol · supercharge",
+    "Bladed horn",
+    "Exalted chainblade"
+   ]
   },
-  {
-    "army": "standard",
-    "kind": "unit-weapons",
-    "where": "standard · Lord on Juggernaut",
-    "judgement": {
-      "gear": [
-        [
-          "Bladed horn",
-          "Exalted chainblade",
-          "Plasma pistol"
-        ]
-      ],
-      "weapons": [
-        "Plasma pistol · standard",
-        "Plasma pistol · supercharge",
-        "Bladed horn",
-        "Exalted chainblade"
-      ]
-    },
-    "source": {
-      "models": [
-        "1× Lord on Juggernaut"
-      ],
-      "leads": null
-    },
-    "key": "1bd5f94b32f3218c"
+  "source": {
+   "models": [
+    "1× Lord on Juggernaut"
+   ],
+   "leads": null
   },
-  {
-    "army": "standard",
-    "kind": "unit-weapons",
-    "where": "standard · Slaughterbound",
-    "judgement": {
-      "gear": [
-        [
-          "Lacerator and daemonic claw"
-        ]
-      ],
-      "weapons": [
-        "Lacerator and daemonic claw"
-      ]
-    },
-    "source": {
-      "models": [
-        "1× Slaughterbound"
-      ],
-      "leads": null
-    },
-    "key": "d185910dbe546c38"
+  "key": "1bd5f94b32f3218c"
+ },
+ {
+  "army": "standard",
+  "kind": "unit-weapons",
+  "where": "standard · Slaughterbound",
+  "judgement": {
+   "gear": [
+    [
+     "Lacerator and daemonic claw"
+    ]
+   ],
+   "weapons": [
+    "Lacerator and daemonic claw"
+   ]
   },
-  {
-    "army": "standard",
-    "kind": "ability-who",
-    "where": "standard · Slaughterbound · Berzerker Glaive",
-    "judgement": {
-      "who": "Slaughterbound",
-      "models": [
-        "1× Slaughterbound",
-        "1× Exalted Eightbound Champion",
-        "2× Exalted Eightbound"
-      ]
-    },
-    "source": {
-      "ability": "Berzerker Glaive",
-      "text": "Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer."
-    },
-    "key": "5ff24f759f9d1daa"
+  "source": {
+   "models": [
+    "1× Slaughterbound"
+   ],
+   "leads": null
   },
-  {
-    "army": "standard",
-    "kind": "unit-kwNote",
-    "where": "standard · Slaughterbound",
-    "judgement": {
-      "kwNote": "Exalted Eightbound comes from the led Exalted Eightbound."
-    },
-    "source": {
-      "models": [
-        "1× Slaughterbound",
-        "1× Exalted Eightbound Champion",
-        "2× Exalted Eightbound"
-      ],
-      "stats": [
-        "Slaughterbound W6 OC1",
-        "Exalted Eightbound W3 OC1"
-      ],
-      "weapons": [
-        "Lacerator and daemonic claw 8 -2 3",
-        "Chainblades 5 -3 2 ANTI-MONSTER 3+, ANTI-VEHICLE 3+"
-      ]
-    },
-    "key": "83724dc82bc1f962"
+  "key": "d185910dbe546c38"
+ },
+ {
+  "army": "standard",
+  "kind": "ability-who",
+  "where": "standard · Slaughterbound · Berzerker Glaive",
+  "judgement": {
+   "who": "Slaughterbound",
+   "models": [
+    "1× Slaughterbound",
+    "1× Exalted Eightbound Champion",
+    "2× Exalted Eightbound"
+   ]
   },
-  {
-    "army": "standard",
-    "kind": "unit-ptsNote",
-    "where": "standard · Slaughterbound",
-    "judgement": {
-      "ptsNote": "125 + Exalted Eightbound 130"
-    },
-    "source": {
-      "models": [
-        "1× Slaughterbound",
-        "1× Exalted Eightbound Champion",
-        "2× Exalted Eightbound"
-      ],
-      "stats": [
-        "Slaughterbound W6 OC1",
-        "Exalted Eightbound W3 OC1"
-      ],
-      "weapons": [
-        "Lacerator and daemonic claw 8 -2 3",
-        "Chainblades 5 -3 2 ANTI-MONSTER 3+, ANTI-VEHICLE 3+"
-      ]
-    },
-    "key": "fd7dc1f1cb4d4bf6"
+  "source": {
+   "ability": "Berzerker Glaive",
+   "text": "**WORLD EATERS** model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer."
   },
-  {
-    "army": "standard",
-    "kind": "unit-weapons",
-    "where": "standard · Exalted Eightbound",
-    "judgement": {
-      "gear": [
-        [
-          "Chainblades"
-        ],
-        [
-          "Chainblades"
-        ]
-      ],
-      "weapons": [
-        "×3 · Chainblades"
-      ]
-    },
-    "source": {
-      "models": [
-        "1× Exalted Eightbound Champion",
-        "2× Exalted Eightbound"
-      ],
-      "leads": null
-    },
-    "key": "794b5642eaf9c0e1"
+  "key": "7a3e60acea66aa9c"
+ },
+ {
+  "army": "standard",
+  "kind": "unit-footnote",
+  "where": "standard · Slaughterbound",
+  "judgement": {
+   "kind": "melee",
+   "weapon": "Lacerator and daemonic claw",
+   "set": {
+    "A": "11"
+   },
+   "when": "Possessed Lord (once per battle, start of the Fight phase)",
+   "note": "and [DEVASTATING WOUNDS] until the end of the phase",
+   "from": "Possessed Lord"
   },
-  {
-    "army": "standard",
-    "kind": "unit-weapons",
-    "where": "standard · Goremongers",
-    "judgement": {
-      "gear": [
-        [
-          "Autopistol",
-          "Chainblade",
-          "Close combat weapon"
-        ],
-        [
-          "Autopistol",
-          "Chainblade",
-          "Close combat weapon"
-        ]
-      ],
-      "weapons": [
-        "×8 · Autopistol",
-        "×8 · Chainblade",
-        "×8 · Close combat weapon"
-      ]
-    },
-    "source": {
-      "models": [
-        "1× Blood Herald",
-        "7× Goremonger w/ chainblade"
-      ],
-      "leads": null
-    },
-    "key": "69eb9442c2c155d8"
-  }
+  "source": {
+   "ability": "Possessed Lord",
+   "text": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the **[Devastating Wounds]** ability."
+  },
+  "key": "76066f03893cf1da"
+ },
+ {
+  "army": "standard",
+  "kind": "unit-kwNote",
+  "where": "standard · Slaughterbound",
+  "judgement": {
+   "kwNote": "Exalted Eightbound comes from the led Exalted Eightbound."
+  },
+  "source": {
+   "models": [
+    "1× Slaughterbound",
+    "1× Exalted Eightbound Champion",
+    "2× Exalted Eightbound"
+   ],
+   "stats": [
+    "Slaughterbound W6 OC1",
+    "Exalted Eightbound W3 OC1"
+   ],
+   "weapons": [
+    "Lacerator and daemonic claw 8 -2 3",
+    "Chainblades 5 -3 2 ANTI-MONSTER 3+, ANTI-VEHICLE 3+"
+   ]
+  },
+  "key": "83724dc82bc1f962"
+ },
+ {
+  "army": "standard",
+  "kind": "unit-ptsNote",
+  "where": "standard · Slaughterbound",
+  "judgement": {
+   "ptsNote": "125 + Exalted Eightbound 130"
+  },
+  "source": {
+   "models": [
+    "1× Slaughterbound",
+    "1× Exalted Eightbound Champion",
+    "2× Exalted Eightbound"
+   ],
+   "stats": [
+    "Slaughterbound W6 OC1",
+    "Exalted Eightbound W3 OC1"
+   ],
+   "weapons": [
+    "Lacerator and daemonic claw 8 -2 3",
+    "Chainblades 5 -3 2 ANTI-MONSTER 3+, ANTI-VEHICLE 3+"
+   ]
+  },
+  "key": "fd7dc1f1cb4d4bf6"
+ },
+ {
+  "army": "standard",
+  "kind": "unit-weapons",
+  "where": "standard · Exalted Eightbound",
+  "judgement": {
+   "gear": [
+    [
+     "Chainblades"
+    ],
+    [
+     "Chainblades"
+    ]
+   ],
+   "weapons": [
+    "×3 · Chainblades"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Exalted Eightbound Champion",
+    "2× Exalted Eightbound"
+   ],
+   "leads": null
+  },
+  "key": "794b5642eaf9c0e1"
+ },
+ {
+  "army": "standard",
+  "kind": "ability-timing",
+  "where": "standard · Goremongers · Loping Speed",
+  "judgement": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
+  },
+  "source": {
+   "ability": "Loping Speed",
+   "text": "In your opponent’s Movement phase, if an enemy unit ends a move within 8\" of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6\"."
+  },
+  "key": "61f1f97a294ad695"
+ },
+ {
+  "army": "standard",
+  "kind": "unit-weapons",
+  "where": "standard · Goremongers",
+  "judgement": {
+   "gear": [
+    [
+     "Autopistol",
+     "Chainblade",
+     "Close combat weapon"
+    ],
+    [
+     "Autopistol",
+     "Chainblade",
+     "Close combat weapon"
+    ]
+   ],
+   "weapons": [
+    "×8 · Autopistol",
+    "×8 · Chainblade",
+    "×8 · Close combat weapon"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Blood Herald",
+    "7× Goremonger w/ chainblade"
+   ],
+   "leads": null
+  },
+  "key": "69eb9442c2c155d8"
+ }
 ]

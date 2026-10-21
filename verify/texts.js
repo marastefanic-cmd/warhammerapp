@@ -1140,7 +1140,8 @@ for (const a of D.armies) {
 
 /* ------------------------------------------------------------------ units: the Faction Packs' datasheet updates and datasheets */
 // The datasheet name an ability belongs to: its "who" (a model of an attached unit) or the unit's name.
-const dsName = (u, ab) => ab.who || u.name;
+// A who that names a choice on the unit's own datasheet ("Wrathful Presence: pick one") is not another datasheet.
+const dsName = (u, ab) => (ab.who && !/: pick one$/.test(ab.who)) ? ab.who : u.name;
 for (const a of D.armies) {
   const fk = a.faction;
   const upd = UPD[fk].filter(e => e.section === 'DATASHEETS');

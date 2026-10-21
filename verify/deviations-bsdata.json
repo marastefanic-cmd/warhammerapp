@@ -52,5 +52,95 @@
   "source": "**^^Tyranids Monster^^** only. Each time the bearer makes a melee attack that targets a **^^Monster^^** or **^^Vehicle^^** unit, add 1 to the Wound roll.",
   "reason": "BSData (and so New Recruit) has \"Tyranids Monster only.\" (no \"model\"); the app has the enhancement's wording as the rules publish it (\"TYRANIDS MONSTER model only.\").",
   "evidence": "verify/.cache/waha/tyranids.txt lines 122-123: \"- Monstrous Nemesis 25 pts / **TYRANIDS MONSTER** model only. Each time the bearer makes a melee attack that targets a **MONSTER** or **VEHICLE** unit, add 1 to the **Wound roll**.\"; BSData verify/.cache/bsdata/Library - Tyranids.json line 9222; verify/texts.js checks the app's text against the Wahapedia detachment page."
+ },
+ {
+  "army": "princes",
+  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
+  "field": "ability.text",
+  "app": "Icon of Khorne: If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.",
+  "source": "If the bearer's unit contains 1 or more Icons of Khorne, each time the bearer's unit destroys an enemy unit, you gain one Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.",
+  "reason": "Official update newer than BSData: GW’s World Eaters Faction Pack Rules Update rewrites the Icon of Khorne wargear ability (\"one or more\", \"1 Bloodshed point\"); BSData (and so New Recruit) still has the older wording (\"1 or more\", \"one Bloodshed point\"). The app follows the pack. No model of this unit carries an Icon: New Recruit prints the ability on the unit anyway, and the app shows it marked \"No Icon of Khorne in this unit\" (BSData has it only on the Icon of Khorne wargear, not taken here).",
+  "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt lines 328-334: \"Khorne Berzerkers, Jakhals – Icon of Khorne Wargear Ability / Change to: ‘If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. …’\"; Wahapedia datasheet verify/.cache/waha/ds/world-eaters_Khorne-Berzerkers.html has the same words. New Recruit prints the older wording: verify/sources/nr/princes.txt line 72."
+ },
+ {
+  "army": "princes",
+  "unit": "daemon-prince-of-khorne-helm-of-brazen-ire",
+  "field": "ability.text",
+  "app": "Helm of Brazen Ire: **WORLD EATERS** model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack.",
+  "source": "Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack.",
+  "reason": "The enhancement’s official text starts with its restriction \"WORLD EATERS model only.\" (the detachment’s enhancement in data.js, which verify/texts.js checks the unit’s text against); BSData’s enhancement text leaves that sentence out.",
+  "evidence": "verify/.cache/waha/world-eaters.txt lines 57-58: \"- Helm of Brazen Ire 30 pts / **WORLD EATERS** model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack.\""
+ },
+ {
+  "army": "princes",
+  "unit": "daemon-prince-of-khorne-berzerker-glaive",
+  "field": "ability.text",
+  "app": "Berzerker Glaive: **WORLD EATERS** model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.",
+  "source": "Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.",
+  "reason": "The enhancement’s official text starts with its restriction \"WORLD EATERS model only.\" (the detachment’s enhancement in data.js, which verify/texts.js checks the unit’s text against); BSData’s enhancement text leaves that sentence out.",
+  "evidence": "verify/.cache/waha/world-eaters.txt lines 55-56: \"- Berzerker Glaive 35 pts / **WORLD EATERS** model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.\""
+ },
+ {
+  "army": "princes",
+  "unit": "lord-on-juggernaut-khorne-berzerkers",
+  "field": "ability.text",
+  "app": "Aggressive Advance: While this model is leading a unit, models in that unit have a Move characteristic of 10\" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features.",
+  "source": "While this model is leading a unit, models in that unit have a Move characteristic of 10\" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally though terrain features.",
+  "reason": "Typo in New Recruit and BSData (\"though terrain features\") that Wahapedia’s datasheet does not have; the app has \"through\".",
+  "evidence": "Wahapedia datasheet verify/.cache/waha/ds/world-eaters_Lord-on-Juggernaut.html (wahapedia.ru/wh40k11ed/factions/world-eaters/Lord-on-Juggernaut), Aggressive Advance: \"… it can move horizontally through terrain features.\" New Recruit prints the typo: verify/sources/nr/princes.txt line 114."
+ },
+ {
+  "army": "princes",
+  "unit": "lord-on-juggernaut-khorne-berzerkers",
+  "field": "ability.text",
+  "app": "Archslaughterer: **WORLD EATERS** model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, every **Blessing of Khorne** is active for this unit until the start of your next turn.",
+  "source": " (Once per battle, per army) In your Command phase, you can use this ability. If you do, every **Blessing of Khorne** is active for this unit until the start of your next turn.",
+  "reason": "The enhancement’s official text starts with its restriction \"WORLD EATERS model only.\" (the detachment’s enhancement in data.js, which verify/texts.js checks the unit’s text against); BSData’s enhancement text leaves that sentence out.",
+  "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt lines 138-145 (Vessels of Wrath enhancement): \"ARCHSLAUGHTERER … WORLD EATERS model only. (Once per battle, per army) In your Command phase, you can use this ability. …\"; verify/.cache/waha/world-eaters.txt lines 420-421."
+ },
+ {
+  "army": "princes",
+  "unit": "lord-on-juggernaut-khorne-berzerkers",
+  "field": "ability.text",
+  "app": "Icon of Khorne: If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.",
+  "source": "If the bearer's unit contains 1 or more Icons of Khorne, each time the bearer's unit destroys an enemy unit, you gain one Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.",
+  "reason": "Official update newer than BSData: GW’s World Eaters Faction Pack Rules Update rewrites the Icon of Khorne wargear ability (\"one or more\", \"1 Bloodshed point\"); BSData (and so New Recruit) still has the older wording (\"1 or more\", \"one Bloodshed point\"). The app follows the pack.",
+  "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt lines 328-334: \"Khorne Berzerkers, Jakhals – Icon of Khorne Wargear Ability / Change to: ‘If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. …’\"; Wahapedia datasheet verify/.cache/waha/ds/world-eaters_Khorne-Berzerkers.html has the same words. New Recruit prints the older wording: verify/sources/nr/princes.txt line 130."
+ },
+ {
+  "army": "princes",
+  "unit": "slaughterbound-exalted-eightbound",
+  "field": "ability.text",
+  "app": "Battle-lust: **WORLD EATERS** model only. You can re-roll **Charge rolls** made for the bearer’s unit. In addition, while the Unbridled Bloodlust Blessing of Khorne is active for your army, add 1 to Charge rolls made for the bearer’s unit.",
+  "source": "You can re-roll Charge rolls made for the bearer's unit. In addition, while the Unbridled Bloodlust Blessing of Khorne is active for your army, add 1 to Charge rolls made for the bearer's unit.",
+  "reason": "The enhancement’s official text starts with its restriction \"WORLD EATERS model only.\" (the detachment’s enhancement in data.js, which verify/texts.js checks the unit’s text against); BSData’s enhancement text leaves that sentence out.",
+  "evidence": "verify/.cache/waha/world-eaters.txt lines 61-62: \"- Battle-lust 20 pts / **WORLD EATERS** model only. You can re-roll **Charge rolls** made for the bearer’s unit. …\""
+ },
+ {
+  "army": "standard",
+  "unit": "kh-rn-the-betrayer-khorne-berzerkers",
+  "field": "ability.text",
+  "app": "Icon of Khorne: If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.",
+  "source": "If the bearer's unit contains 1 or more Icons of Khorne, each time the bearer's unit destroys an enemy unit, you gain one Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.",
+  "reason": "Official update newer than BSData: GW’s World Eaters Faction Pack Rules Update rewrites the Icon of Khorne wargear ability (\"one or more\", \"1 Bloodshed point\"); BSData (and so New Recruit) still has the older wording (\"1 or more\", \"one Bloodshed point\"). The app follows the pack. No model of this unit carries an Icon: New Recruit prints the ability on the unit anyway, and the app shows it marked \"No Icon of Khorne in this unit\" (BSData has it only on the Icon of Khorne wargear, not taken here).",
+  "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt lines 328-334: \"Khorne Berzerkers, Jakhals – Icon of Khorne Wargear Ability / Change to: ‘If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. …’\"; Wahapedia datasheet verify/.cache/waha/ds/world-eaters_Khorne-Berzerkers.html has the same words. New Recruit prints the older wording: verify/sources/nr/standard.txt line 75."
+ },
+ {
+  "army": "standard",
+  "unit": "lord-on-juggernaut",
+  "field": "ability.text",
+  "app": "Aggressive Advance: While this model is leading a unit, models in that unit have a Move characteristic of 10\" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features.",
+  "source": "While this model is leading a unit, models in that unit have a Move characteristic of 10\" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally though terrain features.",
+  "reason": "Typo in New Recruit and BSData (\"though terrain features\") that Wahapedia’s datasheet does not have; the app has \"through\".",
+  "evidence": "Wahapedia datasheet verify/.cache/waha/ds/world-eaters_Lord-on-Juggernaut.html (wahapedia.ru/wh40k11ed/factions/world-eaters/Lord-on-Juggernaut), Aggressive Advance: \"… it can move horizontally through terrain features.\" New Recruit prints the typo: verify/sources/nr/standard.txt line 192."
+ },
+ {
+  "army": "standard",
+  "unit": "slaughterbound-exalted-eightbound",
+  "field": "ability.text",
+  "app": "Berzerker Glaive: **WORLD EATERS** model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.",
+  "source": "Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.",
+  "reason": "The enhancement’s official text starts with its restriction \"WORLD EATERS model only.\" (the detachment’s enhancement in data.js, which verify/texts.js checks the unit’s text against); BSData’s enhancement text leaves that sentence out.",
+  "evidence": "verify/.cache/waha/world-eaters.txt lines 55-56: \"- Berzerker Glaive 35 pts / **WORLD EATERS** model only. Add 1 to the Attacks and Damage characteristics of melee weapons (excluding Extra Attacks weapons) equipped by the bearer.\""
  }
 ]

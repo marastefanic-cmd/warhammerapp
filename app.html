@@ -1819,7 +1819,8 @@ function weaponBlock(it, keys, mods, u){
   const row = (label, cells, p) => '<div class="wr' + (p ? ' p' : '') + '"><span class="n' + (wide ? ' n2' : '') + '">' + label + '</span>' + (wide ? cells.slice(1) : cells).join('') + '</div>';
   const gv = (w, k) => granted(w, k, u, esc(w[k]), (KEY_LABEL[k] || k) + ' ' + w[k]);
   const plainCells = w => keys.map(k => '<span>' + gv(w, k) + '</span>');
-  const kwl = w => (w.kw || []).length ? '<div class="kwl">' + w.kw.map(x => w.from && w.from[x] ? '<span class="gk' + (wideGrant(w.from[x], u) ? ' w' : '') + '" data-rule="' + esc(x) + '"' + grantAttr(w.from[x], u, x) + '>' + esc(x) + '</span>'
+  // a keyword printed twice (Hunter's Eye's [IGNORES COVER] appended to a heavy flamer that has it): the added, last one is marked
+  const kwl = w => (w.kw || []).length ? '<div class="kwl">' + w.kw.map((x, i) => w.from && w.from[x] && w.kw.lastIndexOf(x) === i ? '<span class="gk' + (wideGrant(w.from[x], u) ? ' w' : '') + '" data-rule="' + esc(x) + '"' + grantAttr(w.from[x], u, x) + '>' + esc(x) + '</span>'
     : '<span role="button" tabindex="0" data-rule="' + esc(x) + '">' + esc(x) + '</span>').join(', ') + '</div>' : '';
   // "Khornate eviscerator ×4": the count wraps with the last word, never alone
   const named = (name, n) => { if(!n) return esc(name); const i = name.lastIndexOf(' '); return esc(name.slice(0, i + 1)) + '<span class="nw">' + esc(name.slice(i + 1)) + '<span class="x">×' + esc(n) + '</span></span>'; };
@@ -2366,6 +2367,8 @@ function screenPregame(){
     row('Enhance&shy;ments', enh.join('<br>')) +
     row('Attached', led.join('<br>')) +
     row('Detach&shy;ments', detachments().map(d => (d.rule ? linkTo('rule', d.rule.name, d.name) : esc(d.name)) + (d.dp ? ' <span class="from">(' + d.dp + ' DP)</span>' : '')).join(', ') + (a.disposition ? '<br><span class="from">Disposition:</span> ' + esc(a.disposition) : '')) +
+    // the other selections New Recruit prints under the army name, as printed ("Code Chivalric: Deed, Quality")
+    Object.entries(a.config || {}).map(([k, v]) => row(esc(k), f.armyRules.some(r => r.name === k) ? linkTo('rule', k, v) : esc(v))).join('') +
     row('Points', esc(a.pointsUsed + ' / ' + a.points + ' · ' + a.battleSize)));
   // the army rules, folded: each opens to its text
   h += f.armyRules.length ? '<div class="sec-h"><h2>Army rules</h2></div><div class="abl">' + armyRuleRows(f) + '</div>' : '';

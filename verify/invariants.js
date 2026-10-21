@@ -56,7 +56,17 @@ function run(D){
       const word = k.replace(/^Faction: /, '').toUpperCase();
       if(!bold.includes(word) && !plain(s.target + ' ' + s.when).includes(word.toLowerCase())) F('strat-needs', where, 'needs ' + k + ' but TARGET/WHEN does not name it');
     }
-    const named2 = [...kws].filter(k => new RegExp('(^|[^A-Z])' + k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '([^A-Z]|$)').test(boldTarget));
+    // keywords named in the TARGET, longest first: a keyword inside a longer one that is named ("TERMINATOR" in
+    // TERMINATOR SQUAD) is not named by itself; a keyword every unit of the army has ("KHORNE" in KHORNE
+    // BERZERKERS, in a World Eaters list) selects nothing, so needs does not have to use it
+    const every = new Set([...kws].filter(k => a.units.every(u => u.kw.some(x => x.toUpperCase() === k))));
+    let left = boldTarget;
+    const named2 = [...kws].sort((x, y) => y.length - x.length).filter(k => {
+      const re = new RegExp('(^|[^A-Z])' + k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?=[^A-Z]|$)', 'g');
+      if(!re.test(left)) return false;
+      left = left.replace(re, '$1#');
+      return !every.has(k);
+    });
     for(const k of named2) if(!needKws(n).some(x => x.toUpperCase() === k)) F('strat-needs', where, 'TARGET names ' + k + ' but needs does not use it');
     // "a friendly attached … unit" (Breakin' Heads): only units with a character attached
     if(/\battached\b/.test(plain(s.when + ' ' + s.target)) !== !!n.attached) F('strat-needs', where, n.attached ? 'needs attached but WHEN/TARGET does not say attached' : 'WHEN/TARGET says attached but needs does not');

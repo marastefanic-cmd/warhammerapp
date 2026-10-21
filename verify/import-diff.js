@@ -12,12 +12,12 @@ const di = process.argv.indexOf('--data');
 global.window = {}; require(path.resolve(di > 0 ? process.argv[di + 1] : path.join(__dirname, '../data.js')));
 const A = window.WH_DATA.armies.find(a => a.id === armyId);
 const I = (0, eval)('(' + fs.readFileSync(file, 'utf8').replace(/,\s*$/, '') + ')');
-const HAND = ['id', 'short', 'mods', 'aura'], HANDAB = ['ph', 'turn', 'turns', 'def', 'na'];
+const HAND = ['id', 'short', 'mods', 'aura'], HANDAB = ['damaged', 'ph', 'turn', 'turns', 'def', 'na'];
 // field order is not a fact: objects compare with their keys sorted
 const sorted = v => Array.isArray(v) ? v.map(sorted) : v && typeof v === 'object' ? Object.fromEntries(Object.keys(v).sort().map(k => [k, sorted(v[k])])) : v;
 const strip = (o, drop) => sorted(JSON.parse(JSON.stringify(o, (k, v) => drop.includes(k) ? undefined : v)));
 const diffs = [], markup = [];
-for (const k of ['name', 'faction', 'points', 'pointsUsed', 'battleSize', 'disposition', 'detachments', 'source'])
+for (const k of ['name', 'faction', 'points', 'pointsUsed', 'battleSize', 'disposition', 'detachments', 'config', 'source'])
   if (JSON.stringify(A[k]) !== JSON.stringify(I[k])) diffs.push('army.' + k + ': data ' + JSON.stringify(A[k]) + ' / import ' + JSON.stringify(I[k]));
 const pool = [...A.units];
 for (const u of I.units) {
