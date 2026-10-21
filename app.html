@@ -580,6 +580,22 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .dmg span:nth-child(4n+1){color:var(--fg); overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
 .dmg span:nth-child(4n+2), .dmg span:nth-child(4n+3), .dmg span:nth-child(4n){text-align:right}
 .dmg span:nth-child(-n+4){font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+/* rules questions */
+.tbr{justify-self:end; display:flex; align-items:center; gap:2px}
+.tbr .icon-btn{margin-right:-4px}
+.askctx{font-size:12.5px; color:var(--muted); margin:0 0 8px}
+.askm{margin:8px 0; padding:9px 11px; border-radius:10px; font-size:15px; line-height:1.45}
+.askm.q{margin-left:15%; background:var(--accent); color:var(--accent-ink); font-weight:600}
+.askm.a{margin-right:4%; background:var(--surface2)}
+.askm.a .rt p{margin:0 0 6px}
+.askm.a .qh{margin-top:8px}
+.askm.a ol, .askm.a ul{margin:4px 0 6px; padding-left:20px}
+.askerr{color:var(--bad, #e66); margin:0}
+.askin{display:grid; grid-template-columns:1fr auto; gap:8px; align-items:end; margin-top:10px}
+.askin textarea{width:100%; min-height:64px; resize:vertical; padding:9px 10px; border-radius:8px; border:1px solid var(--line); background:var(--bg); color:var(--fg); font:16px/1.35 var(--f-body)}
+.askkey{display:grid; grid-template-columns:1fr auto; gap:8px; margin-top:8px}
+.askkey input{min-height:44px; padding:0 10px; border-radius:8px; border:1px solid var(--line); background:var(--surface); color:var(--fg); font:16px var(--f-body)}
+.askpdf{cursor:pointer}
 /* colour picker */
 .thg{margin:10px 0 6px; font-size:12.5px; color:var(--muted)}
 .thms{display:grid; grid-template-columns:repeat(auto-fill, minmax(92px, 1fr)); gap:8px}
@@ -693,7 +709,7 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
     <symbol id="i-back" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></symbol>
     <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></symbol>
     <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
-    <!-- The icons clipboard-list, users, zap, scroll, telescope, swords, the settings gear and the dice are from Lucide, https://lucide.dev
+    <!-- The icons clipboard-list, users, zap, scroll, telescope, swords, circle-question-mark, the settings gear and the dice are from Lucide, https://lucide.dev
      ISC License. Copyright (c) 2026 Lucide Icons and Contributors. Permission to use, copy, modify, and/or distribute this software for any
      purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
      THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
@@ -702,6 +718,7 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
      OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. -->
     <symbol id="i-telescope" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.065 12.493-6.18 1.318a.934.934 0 0 1-1.108-.702l-.537-2.15a1.07 1.07 0 0 1 .691-1.265l13.504-4.44" /> <path d="m13.56 11.747 4.332-.924" /> <path d="m16 21-3.105-6.21" /> <path d="M16.485 5.94a2 2 0 0 1 1.455-2.425l1.09-.272a1 1 0 0 1 1.212.727l1.515 6.06a1 1 0 0 1-.727 1.213l-1.09.272a2 2 0 0 1-2.425-1.455z" /> <path d="m6.158 8.633 1.114 4.456" /> <path d="m8 21 3.105-6.21" /> <circle cx="12" cy="13" r="2" /></g></symbol>
     <symbol id="i-swords" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m13 19 6-6" /> <path d="M14.5 17.5 3.586 6.586A2 2 0 013 5.172V3h2.172a2 2 0 011.414.586L17.5 14.5" /> <path d="m14.828 6.172 2.586-2.586A2 2 0 0118.828 3H21v2.172a2 2 0 01-.586 1.414l-2.586 2.586" /> <path d="m16 16 4 4" /> <path d="m19 21 2-2" /> <path d="m5 14 4 4" /> <path d="m5 21-2-2" /> <path d="M7.5 16.5 4 20" /></g></symbol>
+    <symbol id="i-ask" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /> <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /> <path d="M12 17h.01" /></g></symbol>
     <symbol id="i-gear" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915" /> <circle cx="12" cy="12" r="3" /></g></symbol>
     <symbol id="i-dice" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="12" height="12" x="2" y="10" rx="2" ry="2" /> <path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6" /> <path d="M6 18h.01" /> <path d="M10 14h.01" /> <path d="M15 6h.01" /> <path d="M18 9h.01" /></g></symbol>
   </defs>
@@ -1150,6 +1167,8 @@ function renderTop(){
     if(cur.army && cur.s !== 'army' && cur.s !== 'settings') right = '<button class="icon-btn" data-find aria-label="Search this army"><svg aria-hidden="true"><use href="#i-search"/></svg></button>';
   }
   else right = '<button class="icon-btn" data-settings aria-label="Settings"><svg aria-hidden="true"><use href="#i-gear"/></svg></button>';
+  // a rules question to Claude, from any screen, once a key is saved (Settings)
+  if(askOn() && cur.s !== 'settings') right = '<span class="tbr"><button class="icon-btn" data-ask aria-label="Ask a rules question"><svg aria-hidden="true"><use href="#i-ask"/></svg></button>' + (right === '<span></span>' ? '' : right) + '</span>';
   $('#topIn').innerHTML = left + '<h1 class="ttl">' + (cur.s === 'home' ? '<span class="brand">' + LOGO + 'Kunnin’ Kodex</span>' : esc(cur.s === 'unit' && army() ? army().name : titleOf(cur))) + '</h1>' + right;
 }
 function setBar(id, html){
@@ -1230,6 +1249,7 @@ const awakeRow = () => 'wakeLock' in navigator ? '<button class="row" data-awake
 function screenSettings(){
   return themePicker() +
     (awakeRow() ? '<div class="sec-h"><h2>At the table</h2></div><div class="list">' + awakeRow() + '</div>' : '') +
+    askSettings() +
     '<div class="sec-h"><h2>This app</h2></div><p class="note">' + installText() + '</p><p class="note">Data ' + esc(D.version) + '</p>';
 }
 
@@ -1480,6 +1500,156 @@ function dmResult(c){
     (r.models > 1 ? '<div class="dmb" aria-label="Chance to destroy at least N models">' + bars + '</div><p class="dmbl">chance to destroy at least N models</p>' : '') +
     '<div class="dmg"><span></span><span>Hits</span><span>Wounds</span><span>Through</span>' + c.input.groups.map((g, i) => { const x = r.groups[i];
       return '<span>' + esc(g.name) + '</span><span class="num">' + f(x.hits) + '</span><span class="num">' + f(x.wounds) + '</span><span class="num">' + f(x.unsaved + x.mortals) + '</span>'; }).join('') + '</div></div>';
+}
+
+/* ---------- rules questions (Claude) ----------
+   A chat in a popup ("?" in the top bar, once a key is saved in Settings). It sends Anthropic's API, from
+   this phone, the rules this app holds (the core rules glossary, the core stratagems, both lists' army and
+   detachment rules, every datasheet), the screen it was opened on and the question; optionally GW's Core
+   Rules PDF, uploaded once to the owner's account. The key and the PDF's id stay in this browser (store
+   'wh-ask'); ask.js does the calls. */
+const ASK_MODELS = [['claude-opus-5-5', 'Opus 5.5', 'best answers'], ['claude-sonnet-5-5', 'Sonnet 5.5', 'cheaper'], ['claude-haiku-5-5', 'Haiku 5.5', 'cheapest, quickest']];
+const askCfg = () => Object.assign({ key:'', model:ASK_MODELS[0][0], file:null }, isObj(store.get('wh-ask')) ? store.get('wh-ask') : {});
+const askOn = () => !!askCfg().key;
+let askConv = null, askBusy = null;
+const askMod = () => import('./ask.js' + (BUILD ? '?v=' + BUILD : ''));
+// a datasheet as text: what it has, with values that already include a rule marked so
+function unitText(u){
+  const fromNote = x => x.from && Object.keys(x.from).length ? ' [' + Object.entries(x.from).map(([k, v]) => k + ' already includes ' + [].concat(v).join(', ')).join('; ') + ']' : '';
+  const wl = (w, ws) => '- ' + (w.group ? w.group + ' (' + w.name + ')' : w.name) + (w.n > 1 ? ' ×' + w.n : '') + (w.who ? ' · ' + w.who : '') + ': ' +
+    [w.range, 'A ' + w.A, ws + ' ' + (w.BS || w.WS), 'S ' + w.S, 'AP ' + w.AP, 'D ' + w.D].join(', ') + (w.kw.length ? ' [' + w.kw.join(', ') + ']' : '') + fromNote(w);
+  return ['### ' + unitLabel(u) + ' · ' + u.role + ' · ' + u.pts + ' pts' + (u.copies > 1 ? ' each, ×' + u.copies + ' in the list' : ''),
+    [u.warlord ? 'Warlord' : '', u.enhancement ? 'Enhancement: ' + u.enhancement : '', u.upgrade ? 'Upgrade: ' + u.upgrade : '', u.leads ? (u.support ? 'Supports ' : 'Leads ') + u.leads : ''].filter(Boolean).join(' · '),
+    'Models: ' + u.models.join('; '),
+    'Stats: ' + u.stats.map(s => s.name + ' M ' + s.M + ' T ' + s.T + ' Sv ' + s.Sv + ' W ' + s.W + ' Ld ' + s.Ld + ' OC ' + s.OC + (s.InSv ? ' InSv ' + s.InSv : '') + fromNote(s)).join(' | '),
+    (u.ranged || []).length ? 'Ranged weapons:\n' + u.ranged.map(w => wl(w, 'BS')).join('\n') : '',
+    (u.melee || []).length ? 'Melee weapons:\n' + u.melee.map(w => wl(w, 'WS')).join('\n') : '',
+    'Abilities:\n' + u.abilities.map(ab => '- ' + ab.name + (ab.tag ? ' (' + ab.tag + ')' : '') + (ab.who ? ' · ' + ab.who : '') + ': ' + ab.text.replace(/\n/g, ' ')).join('\n'),
+    'Rules: ' + u.rules.join(', '), 'Keywords: ' + u.kw.join(', ')].filter(Boolean).join('\n');
+}
+// a list: its faction's army rules, its detachments (rule, enhancements, stratagems) and every datasheet
+function armyText(a, who){
+  return inArmy(a, () => {
+    const f = factionOf(a);
+    return ['# ' + who + ': ' + a.name + ' (' + f.name + ', ' + a.pointsUsed + ' pts, disposition ' + a.disposition + ')',
+      '## Army rules', ...f.armyRules.map(r => '### ' + r.name + (r.tag ? ' (' + r.tag + ')' : '') + '\n' + r.text + (r.table ? '\n' + r.table.map(x => x.join(': ')).join('\n') : '')),
+      ...detachmentsOf(a).map(d => ['## Detachment: ' + d.name, d.rule ? '### ' + d.rule.name + '\n' + d.rule.text : '',
+        '### Enhancements\n' + (d.enhancements || []).map(e => '- ' + e.name + ' (' + e.pts + ' pts): ' + e.text.replace(/\n/g, ' ')).join('\n'),
+        '### Stratagems\n' + (d.stratagems || []).map(s => '- ' + s.name + ' (' + s.cp + 'CP). WHEN: ' + s.when + ' TARGET: ' + s.target + ' EFFECT: ' + s.effect.replace(/\n/g, ' ')).join('\n')].filter(Boolean).join('\n')),
+      '## Units', ...a.units.map(unitText)].join('\n\n');
+  });
+}
+const askRules = () => '# Core rules (11th edition) as this app quotes them\n' + Object.entries(D.rules).map(([k, v]) => '### ' + k + '\n' + v).join('\n\n') +
+  '\n\n# Core stratagems\n' + D.coreStratagems.map(s => '- ' + s.name + ' (' + s.cp + 'CP). WHEN: ' + s.when + ' TARGET: ' + s.target + ' EFFECT: ' + s.effect.replace(/\n/g, ' ')).join('\n');
+let askStyle = null;
+async function askSystem(a, opp){
+  if(askStyle == null) try { const r = await fetch('ask-style.md', { cache:'no-cache' }); askStyle = r.ok ? await r.text() : ''; } catch(e){ askStyle = ''; }
+  const intro = 'You answer Warhammer 40,000 rules questions at the gaming table for players using Kunnin’ Kodex, a phone reference for their army lists. The game is 11th edition, matched play.\n' +
+    'Use the rules given here: the official wording, checked against Games Workshop’s documents, Wahapedia and BSData (the data New Recruit uses), and GW’s Core Rules PDF when it is attached. They win over anything you remember: earlier editions differ (for example, in 11th edition the benefit of cover worsens the attack’s BS by 1, and there is no [HEAVY]).\n' +
+    'A value marked “already includes <rule>” already contains that rule’s bonus: never add it again.\n' +
+    'If these rules do not settle a question, say so plainly and say what to look up; never invent a rule or a number. If a rule can be read two ways, give both readings.\n\n' + (askStyle || '');
+  return [{ type:'text', text:intro }, { type:'text', text:askRules(), cache_control:{ type:'ephemeral', ttl:'1h' } },
+    { type:'text', text:armyText(a, 'The player’s list') + (opp && opp !== a ? '\n\n' + armyText(opp, 'The opponent’s list') : opp === a ? '\n\n(The opponent plays the same list.)' : '\n\n(No opponent list chosen.)'), cache_control:{ type:'ephemeral', ttl:'1h' } }];
+}
+// what the player was looking at when they asked
+function askWhere(){
+  const a = cur.army && army();
+  if(!a) return 'the list picker';
+  const u = cur.s === 'unit' && unitById(cur.unit);
+  if(u) return 'the datasheet of ' + unitLabel(u) + ' (' + a.name + ')';
+  if(cur.s === 'damage'){ const st = dmState(), opp = oppOf(a); if(opp){ const A = st.dir === 'me' ? a : opp, B = st.dir === 'me' ? opp : a, x = A.units.find(v => v.id === st.atk), y = B.units.find(v => v.id === st.tgt);
+    return 'the damage calculator: ' + (x ? unitLabel(x) : 'a unit') + ' of ' + A.name + ' ' + (st.ph === 'fight' ? 'fighting' : 'shooting at') + ' ' + (y ? unitLabel(y) : 'a unit') + ' of ' + B.name; } }
+  return 'the ' + (titleOf(cur) || cur.s) + ' screen of ' + a.name;
+}
+// Claude's markdown, in the app's own text style (bold rule names open the rule)
+function askMd(text){
+  const out = [], lines = String(text || '').split('\n');
+  let list = null;
+  const close = () => { if(list){ out.push('<' + list.t + '>' + list.items.map(x => '<li>' + inline(x) + '</li>').join('') + '</' + list.t + '>'); list = null; } };
+  for(const raw of lines){
+    const l = raw.trim(); let m;
+    if(!l){ close(); continue; }
+    if((m = /^[-*•] (.*)$/.exec(l)) || (m = /^\d+[.)] (.*)$/.exec(l))){ const t = /^\d/.test(l) ? 'ol' : 'ul'; if(!list || list.t !== t){ close(); list = { t, items:[] }; } list.items.push(m[1].replace(/`([^`]+)`/g, '$1')); continue; }
+    close();
+    if((m = /^#{1,6} (.*)$/.exec(l))) out.push('<p class="qh">' + inline(m[1].replace(/\*\*/g, '')) + '</p>');
+    else if(/^>/.test(l)) out.push('<p class="askq">' + inline(l.replace(/^>\s?/, '')) + '</p>');
+    else out.push('<p>' + inline(l.replace(/`([^`]+)`/g, '$1').replace(/(^|[^*])\*([^*\s][^*]*?)\*(?!\*)/g, '$1$2')) + '</p>');
+  }
+  close();
+  return '<div class="rt">' + out.join('') + '</div>';
+}
+function askLog(){
+  if(!askConv || !askConv.shown.length) return '<p class="note">Ask anything about the rules of these lists: what a stratagem does to this unit, whether two rules stack, what happens in which order. The app sends Claude its rules, both lists and the screen you are on.</p>';
+  return askConv.shown.map(x => '<div class="askm q">' + esc(x.q) + '</div><div class="askm a">' + (x.err ? '<p class="askerr">' + esc(x.err) + '</p>' : askMd(x.a) || '<p class="note">…</p>') + '</div>').join('');
+}
+function openAsk(){
+  if(!askOn()){ go({ s:'settings' }); toast('Add your Anthropic API key first'); return; }
+  const a = cur.army && army(), opp = a && oppOf(a), ctx = (a ? a.id : '') + '|' + (opp ? opp.id : '');
+  if(!askConv || askConv.ctx !== ctx) askConv = { ctx, messages:[], shown:[] };
+  const cfg = askCfg(), m = ASK_MODELS.find(x => x[0] === cfg.model) || ASK_MODELS[0];
+  openSheet('Rules question · ' + esc(m[1]), a ? a.name + (opp ? ' vs ' + opp.name : '') : 'Rules question',
+    '<p class="askctx">On: ' + esc(askWhere()) + (cfg.file ? ' · Core Rules PDF attached' : '') + '</p><div id="askLog">' + askLog() + '</div>' +
+    '<div class="askin"><textarea id="askQ" rows="3" placeholder="Ask a rules question…" enterkeyhint="send"></textarea><button class="btn" data-asksend>Ask</button></div>' +
+    (askConv.shown.length ? '<button class="textbtn" data-asknew>New conversation</button>' : '') +
+    '<p class="note">Claude can be wrong: check what matters with the rule itself (tap a bold rule name). Your key and questions go only from this phone to Anthropic.</p>');
+  askConv.where = askWhere();
+  setTimeout(() => { const q = $('#askQ'); if(q) q.focus(); }, 50);
+}
+async function askSend(){
+  const q = $('#askQ'), text = q && q.value.trim();
+  if(!text || askBusy) return;
+  const cfg = askCfg(), a = cur.army && army(), opp = a && oppOf(a);
+  const turn = { q:text, a:'' };
+  askConv.shown.push(turn);
+  const content = [];
+  // GW's Core Rules PDF goes first in the conversation, cached with the rest
+  if(!askConv.messages.length && cfg.file) content.push({ type:'document', source:{ type:'file', file_id:cfg.file.id }, title:'GW Core Rules (11th edition)', cache_control:{ type:'ephemeral', ttl:'1h' } });
+  content.push({ type:'text', text:'(I am looking at ' + (askConv.where || askWhere()) + '.)\n\n' + text });
+  const user = { role:'user', content };
+  const draw = () => { const log = $('#askLog'); if(log){ log.innerHTML = askLog(); const s = $('#sheetIn'); if(s) s.scrollTop = s.scrollHeight; } };
+  q.value = ''; draw();
+  const ctrl = new AbortController(); askBusy = ctrl;
+  try {
+    const { ask } = await askMod();
+    const system = a ? await askSystem(a, opp) : [{ type:'text', text:'You answer Warhammer 40,000 (11th edition) rules questions. Use these rules; say so when they do not settle it.\n\n' + (askStyle || '') }, { type:'text', text:askRules(), cache_control:{ type:'ephemeral', ttl:'1h' } }];
+    let last = 0;
+    const r = await ask({ key:cfg.key, model:cfg.model, system, messages:askConv.messages.concat(user), signal:ctrl.signal,
+      onText:snap => { turn.a = snap; const now = performance.now(); if(now - last > 120){ last = now; draw(); } } });
+    turn.a = r.message.content.filter(b => b.type === 'text').map(b => b.text).join('\n\n');
+    if(r.refused){ turn.err = 'Claude declined to answer this one.'; }
+    else { askConv.messages.push(user, { role:'assistant', content:r.message.content }); if(r.cut) turn.a += '\n\n*(cut off: the answer was too long)*'; }
+  } catch(e){
+    const s = e && e.status;
+    turn.err = s === 401 ? 'The API key was not accepted. Check it in Settings.' : s === 429 ? 'Too many requests right now (rate limit). Try again in a minute.' :
+      s === 400 && /file/i.test(e.message || '') ? 'The Core Rules PDF could not be used (' + (e.message || '') + '). Remove it in Settings and add it again.' :
+      s ? 'Anthropic’s API answered ' + s + ': ' + (e.message || '') : 'Could not reach Anthropic’s API (' + ((e && e.message) || 'no connection') + ').';
+  } finally { askBusy = null; draw(); }
+}
+// Settings: the key, the model, GW's Core Rules PDF
+function askSettings(){
+  const c = askCfg();
+  if(!c.key) return '<div class="sec-h"><h2>Rules questions</h2></div><p class="note">Ask Claude rules questions about your lists from any screen (the ? in the top bar). It uses your own Anthropic API key (console.anthropic.com → API keys), kept only in this browser on this phone and sent only to Anthropic.</p>' +
+    '<div class="askkey"><input id="askKey" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="sk-ant-…" aria-label="Anthropic API key"><button class="btn" data-askkey>Save</button></div>';
+  return '<div class="sec-h"><h2>Rules questions</h2></div><div class="list">' +
+    '<div class="row"><span class="rb"><b>API key</b><span>Saved on this phone · …' + esc(c.key.slice(-4)) + '</span></span><button class="textbtn" data-askforget>Remove</button></div>' +
+    ASK_MODELS.map(([id, name, sub]) => '<button class="row" data-askmodel="' + id + '" aria-pressed="' + (c.model === id) + '"><span class="rb"><b>' + name + '</b><span>' + sub + '</span></span>' + (c.model === id ? '<svg class="ic ok" aria-hidden="true"><use href="#i-check"/></svg>' : '') + '</button>').join('') +
+    (c.file ? '<div class="row"><span class="rb"><b>Core Rules PDF</b><span>' + esc(c.file.name) + ' · sent with every question (cached for an hour)</span></span><button class="textbtn" data-askpdfdel>Remove</button></div>'
+      : '<label class="row askpdf"><span class="rb"><b>Add GW’s Core Rules PDF</b><span>Optional: lets Claude read every core rule, not only the ones in the app. Download it from Games Workshop, then pick it here; it is stored in your Anthropic account. Each answer costs more with it.</span></span><input type="file" accept="application/pdf" data-askpdf hidden></label>') +
+    '</div>';
+}
+async function askKeySave(){
+  const k = ($('#askKey') || {}).value || '';
+  if(!/^sk-ant-\S{20,}$/.test(k.trim())){ toast('That does not look like an Anthropic API key (sk-ant-…)'); return; }
+  try { const { checkKey } = await askMod(); await checkKey({ key:k.trim() }); }
+  catch(e){ toast(e && e.status === 401 ? 'Anthropic did not accept this key' : 'Could not check the key: ' + ((e && e.message) || 'no connection')); return; }
+  store.set('wh-ask', Object.assign(askCfg(), { key:k.trim() })); rerender(); toast('Key saved on this phone');
+}
+async function askPdf(file){
+  const c = askCfg();
+  if(!file) return;
+  toast('Uploading ' + file.name + '…');
+  try { const { uploadRules } = await askMod(); const f = await uploadRules({ key:c.key, file }); store.set('wh-ask', Object.assign(askCfg(), { file:f })); askConv = null; rerender(); toast('Core Rules PDF added'); }
+  catch(e){ toast('Upload failed: ' + ((e && e.message) || 'no connection')); }
 }
 
 /* ---------- search over everything in one army ---------- */
@@ -2515,6 +2685,13 @@ document.addEventListener('click', e => {
     store.set('wh-home-filter', f); closeSheet(); rerender(); return; }
   if(el.hasAttribute('data-hfclear')){ store.set('wh-home-filter', {}); rerender(); return; }
   if(el.hasAttribute('data-roll')){ rollArmy(); return; }
+  if(el.hasAttribute('data-ask')){ openAsk(); return; }
+  if(el.hasAttribute('data-asksend')){ askSend(); return; }
+  if(el.hasAttribute('data-asknew')){ askConv = null; openAsk(); return; }
+  if(el.hasAttribute('data-askkey')){ askKeySave(); return; }
+  if(el.hasAttribute('data-askforget')){ const c = askCfg(); store.set('wh-ask', { model:c.model }); askConv = null; rerender(); toast('Key removed from this phone' + (c.file ? ' (the Core Rules PDF stays in your Anthropic account)' : '')); return; }
+  if(ds.askmodel){ store.set('wh-ask', Object.assign(askCfg(), { model:ds.askmodel })); rerender(); return; }
+  if(el.hasAttribute('data-askpdfdel')){ const c = askCfg(); askMod().then(({ deleteRules }) => deleteRules({ key:c.key, id:c.file.id })).catch(() => {}); store.set('wh-ask', Object.assign(c, { file:null })); askConv = null; rerender(); toast('Core Rules PDF removed'); return; }
   if(ds.dmpick){ dmPicker(ds.dmpick); return; }
   if(ds.dmopp != null){ const a = army(); if(ds.dmopp) store.set('wh-opp-' + a.id, ds.dmopp); else store.set('wh-opp-' + a.id, null); closeSheet(); rerender(); return; }
   if(ds.dmunit){ const [k, id] = ds.dmunit.split('|'), st = dmState(); st[k] = id; saveSession(); closeSheet(); rerender(); return; }
@@ -2571,9 +2748,10 @@ document.addEventListener('click', e => {
     el.textContent = openAll ? 'Collapse all' : 'Expand all';
   }
 });
-// the damage calculator's tick boxes
+// the damage calculator's tick boxes; the Core Rules PDF picked in Settings
 document.addEventListener('change', e => {
   const t = e.target;
+  if(t.matches && t.matches('[data-askpdf]')){ askPdf(t.files && t.files[0]); return; }
   if(!t.matches || !t.matches('[data-dmw], [data-dmon]')) return;
   const st = dmState();
   if(t.dataset.dmw) st.off[t.dataset.dmw] = !t.checked;
@@ -2594,6 +2772,7 @@ document.addEventListener('toggle', e => {
 $('#sheetBack').addEventListener('click', closeSheet);
 addEventListener('keydown', e => {
   const t = e.target;
+  if(t.id === 'askQ' && e.key === 'Enter' && !e.shiftKey){ e.preventDefault(); askSend(); return; }
   if((e.key === 'Enter' || e.key === ' ') && t.matches && t.matches('[role="button"]')){ e.preventDefault(); t.click(); return; }
   if(e.key !== 'Escape') return;
   if(t.matches && t.matches('input, textarea')){ t.blur(); return; }

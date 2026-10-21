@@ -44,7 +44,7 @@ const step = (name, args, env) => {
 };
 
 // the verified files: the app, its data and the calculator's engine
-const hash = sha(['app.html', 'data.js', 'calc.js'].map(f => fs.readFileSync(path.join(ROOT, f), 'utf8')).join(''));
+const hash = sha(['app.html', 'data.js', 'calc.js', 'ask.js'].map(f => fs.readFileSync(path.join(ROOT, f), 'utf8')).join(''));
 step('data', ['check.js']);
 step('invariants', ['verify/invariants.js']);
 step('choice', ['verify/choice.js']);

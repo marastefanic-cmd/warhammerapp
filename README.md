@@ -19,12 +19,21 @@ your units against one of the opponent's list, picked per list; weapons, the sit
 rules as tick boxes, a rule counting only when every word of its footnote is understood; `calc.js` plays
 the 11th edition attack sequence out 10,000 times with seeded dice).
 
+**Rules questions** (the ? in the top bar, once an Anthropic API key is saved in Settings): a chat with
+Claude that is sent the rules this app holds, both lists (yours and the opponent picked in Damage), the
+screen it was opened on and the question; optionally GW's Core Rules PDF, which the owner picks on the phone
+and which is stored in their Anthropic account. The key stays in that browser on that phone and goes only to
+api.anthropic.com; the page holds no key, so the public site cannot use anyone's. `ask-style.md` says how
+answers should look (edit it to change them). `ask.js` makes the calls with the official SDK, bundled in
+`vendor/` (@anthropic-ai/sdk 0.131.0, MIT), so no third-party script loads at run time.
+
 Older lists (Cooking, Hurrdurr, oioioi, Nidzillas, Purge Freeblade) left the app on 17 Oct 2026; they
 are in the git history, and `import-nr.js --reuse` can take their signed-off notes for the same datasheets.
 
 | File | What it is |
 |---|---|
 | `data.js` | the armies, plus the faction and core rules they use |
+| `ask.js`, `ask-style.md`, `vendor/` | the rules-question chat, how its answers should look, and the Anthropic SDK it uses |
 | `calc.js` | the damage calculator's engine (the attack sequence, section 05 of the Core Rules), checked by the gate like the app |
 | `app.html` | the app (published as the Claude artifact as-is, with `data.js`, `calc.js`, `verified.js`, `fonts/`) |
 | `build.js` | builds `index.html`, `version.json` and the `sw.js` stamp; refuses unless the gate passed |

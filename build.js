@@ -21,7 +21,7 @@ if (problems.length) { problems.forEach(p => console.error(' -', p)); throw new 
 
 const app = read('app.html');
 const data = read('data.js');
-const calc = read('calc.js');   // the damage calculator's engine
+const calc = read('calc.js') + read('ask.js');   // the damage calculator's engine and the rules-question chat
 
 // the gate: only a verified app.html + data.js is built (node verify/run.js writes the report).
 // verify/run.js itself builds with VERIFY_BUILDING=1 to check the screens of the page it is about to verify.
@@ -29,7 +29,7 @@ if (!process.env.VERIFY_BUILDING) {
   let report = null;
   try { report = JSON.parse(read('verify/report.json')); } catch (e) {}
   const hash = crypto.createHash('sha256').update(app + data + calc).digest('hex');
-  if (!report || report.hash !== hash) throw new Error('not verified: app.html, data.js or calc.js changed since the last verification. Run: node verify/run.js');
+  if (!report || report.hash !== hash) throw new Error('not verified: app.html, data.js, calc.js or ask.js changed since the last verification. Run: node verify/run.js');
   if (!report.ok) throw new Error('verification failed (see verify/report.json). Fix it, then run: node verify/run.js');
 }
 const m = data.match(/const VERSION = '([^']+)'/);
