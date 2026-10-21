@@ -951,6 +951,8 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
 .toast.act{pointer-events:auto; display:flex; align-items:center; gap:12px}
 .toast.dmt{display:flex; align-items:center; gap:12px; width:max-content; max-width:min(560px, calc(100vw - 16px)); padding:8px 12px; font-size:14px; line-height:1.25; white-space:nowrap}
 .toast.dmt .tm{overflow:hidden; text-overflow:ellipsis; min-width:0}
+.toast.dmt.act{pointer-events:none}                      /* over the tab bar: a tap on its words reaches the tab below */
+.toast.dmt .tundo{pointer-events:auto}
 .toast.dmt.fit{font-size:12.5px; letter-spacing:.02em}
 .toast.dmt.wrap{white-space:normal}
 .toast .tundo{font:700 13px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--accent); padding:8px 4px}
@@ -5045,7 +5047,9 @@ function dmRedrawAround(el){
 document.addEventListener('change', e => {
   const t = e.target;
   if(!t.matches || !t.matches('[data-dmtyped]')) return;
-  dmTypedSet(dmState(), t.dataset.dmtyped, t.value); saveSession();
+  // an entry the field cannot count is not kept: leaving puts back the value counted, as its hint says (never clamped)
+  if(dmTypedOk(t.dataset.dmtyped, t.value)) dmTypedSet(dmState(), t.dataset.dmtyped, t.value);
+  saveSession();
   setTimeout(() => { const a = document.activeElement, next = a && a.dataset ? a.dataset.dmtyped : null; rerender();
     if(next){ const f = $('[data-dmtyped="' + next + '"]'); if(f){ f.focus({ preventScroll:true }); f.select(); } } }, 0);
 });

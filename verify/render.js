@@ -250,6 +250,9 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       // the toast covers no number: neither the card nor the strip, on one line
       const tr = $('#toast').getBoundingClientRect(), hit = ['#dmAns', '#dmStrip'].filter(q => { const e = $(q); if(!e) return false; const r = e.getBoundingClientRect(); return r.bottom > tr.top + 1 && r.top < tr.bottom - 1 && r.right > tr.left && r.left < tr.right; });
       if(hit.length || tr.height > 48) return { changed:true, back:true, said, over:hit.concat(tr.height > 48 ? ['two lines'] : []) };
+      // a tap on the toast's words reaches the tab bar below it (only its Undo takes the tap)
+      const tm = $('#toast .tm').getBoundingClientRect(), below = document.elementFromPoint(tm.left + 4, tm.top + tm.height / 2);
+      if(!below || !below.closest('#bbar')) return { changed:true, back:true, said, over:['the tab bar\'s taps'] };
       document.querySelector('#toast [data-undo]').click(); await new Promise(f => setTimeout(f, 300));
       return { back:JSON.stringify(dmState().turn[dmState().dir]) === t0, changed:t1 !== t0, said }; });
     if(undo.over) fail('damage-toast', A, 'a step added', 'the toast covers ' + undo.over.join(', '));
@@ -269,6 +272,11 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     await page.keyboard.press('Tab'); await page.waitForTimeout(500);
     const back = await page.evaluate(() => ({ field:document.querySelector('[data-dmtyped="Sv"]').value, hint:$('#dmTyHint').hidden }));
     if(!hint.shown || hint.sv !== 3 || back.field !== '3+' || !back.hint) fail('damage-typed-hint', A, 'Save "9"', JSON.stringify([hint, back]));
+    // too big an entry is put back as the hint says, not clamped (Models "101" leaves 12)
+    await page.click('[data-dmtyped="n"]'); await page.waitForTimeout(150); await page.keyboard.press('Control+A');
+    await page.keyboard.type('101', { delay:120 }); await page.waitForTimeout(500); await page.keyboard.press('Tab'); await page.waitForTimeout(500);
+    const big = await page.evaluate(() => ({ n:dmTypedVals(dmState()).n, field:document.querySelector('[data-dmtyped="n"]').value }));
+    if(big.n !== 12 || big.field !== '12') fail('damage-typed-big', A, 'Models "101", then leaving the field', JSON.stringify(big));
     // no empty band under the pinned card at any scroll position: just below it there is always some of the screen's content
     await open();
     const gaps = await page.evaluate(async () => { const out = [], H = document.documentElement.scrollHeight - innerHeight;
