@@ -1,0 +1,572 @@
+[
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "ability-damaged",
+  "where": "4-megas-and-a-destrier · Knight Destrier · Damaged: 1-6 Wounds Remaining",
+  "judgement": {
+   "damaged": "1-6",
+   "W": "18"
+  },
+  "source": {
+   "ability": "Damaged: 1-6 Wounds Remaining",
+   "text": "While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**."
+  },
+  "key": "ec324aa2728334c2"
+ },
+ {
+  "army": "6-bigs",
+  "kind": "ability-na",
+  "where": "6-bigs · Knight Destrier · Thundercharge",
+  "judgement": {
+   "na": "Needs a thundershock spear and bellatus reaper chainsword: not this loadout",
+   "armyUnits": [
+    "Knight Destrier [Bellatus, Character, Faction: Imperial Knights, Imperium, Knight Destrier, Titanic, Towering, Vehicle, Walker]",
+    "Knight Errant [Character, Faction: Imperial Knights, Imperium, Knight Errant, Questoris, Titanic, Towering, Vehicle, Walker]",
+    "Knight Paladin [Character, Faction: Imperial Knights, Imperium, Knight Paladin, Questoris, Titanic, Towering, Vehicle, Walker]",
+    "Knight Warden [Character, Faction: Imperial Knights, Imperium, Knight Warden, Questoris, Titanic, Towering, Vehicle, Walker, Warlord]"
+   ]
+  },
+  "source": {
+   "ability": "Thundercharge",
+   "text": "If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model."
+  },
+  "key": "39bf8d0ae789149d"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "ability-timing",
+  "where": "4-megas-and-a-destrier · Knight Destrier · Ram Jets",
+  "judgement": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Ram Jets",
+   "text": "Each time this unit is selected to make a **Normal** or **Advance move**, until the end of the phase, add D3\" to the Move characteristic of this model."
+  },
+  "key": "09187654343d9487"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "unit-footnote",
+  "where": "4-megas-and-a-destrier · Knight Destrier",
+  "judgement": {
+   "kind": "all",
+   "when": "Damaged (1-6 wounds left)",
+   "note": "-1 to hit rolls (and -4 OC)",
+   "from": "Damaged: 1-6 Wounds Remaining"
+  },
+  "source": {
+   "ability": "Damaged: 1-6 Wounds Remaining",
+   "text": "While this model has 1-6 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**."
+  },
+  "key": "553078c211266651"
+ },
+ {
+  "army": "6-bigs",
+  "kind": "ability-timing",
+  "where": "6-bigs · Knight Errant · Aggressive Assault",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Aggressive Assault",
+   "text": "Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the **Hit roll**."
+  },
+  "key": "22049e22285d487e"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "ability-damaged",
+  "where": "4-megas-and-a-destrier · Knight Crusader · Damaged: 1-9 Wounds Remaining",
+  "judgement": {
+   "damaged": "1-9",
+   "W": "26"
+  },
+  "source": {
+   "ability": "Damaged: 1-9 Wounds Remaining",
+   "text": "While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**."
+  },
+  "key": "4f8b13c4ff04d0b8"
+ },
+ {
+  "army": "6-bigs",
+  "kind": "ability-tag",
+  "where": "6-bigs · Knight Errant · Errant’s Duty",
+  "judgement": {
+   "tag": "Bondsman"
+  },
+  "source": {
+   "ability": "Errant’s Duty",
+   "text": "While a model is affected by this ability, you can re-roll **Advance rolls** made for that model and ranged weapons equipped by that model have the **[ASSAULT]** ability."
+  },
+  "key": "203203e2c13a6697"
+ },
+ {
+  "army": "6-bigs",
+  "kind": "unit-footnote",
+  "where": "6-bigs · Knight Errant",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Target is the closest eligible target",
+   "note": "+1 to hit rolls",
+   "from": "Aggressive Assault"
+  },
+  "source": {
+   "ability": "Aggressive Assault",
+   "text": "Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the **Hit roll**."
+  },
+  "key": "d01de612f43a9388"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "unit-footnote",
+  "where": "4-megas-and-a-destrier · Knight Crusader",
+  "judgement": {
+   "kind": "all",
+   "when": "Damaged (1-9 wounds left)",
+   "note": "-1 to hit rolls (and -5 OC)",
+   "from": "Damaged: 1-9 Wounds Remaining"
+  },
+  "source": {
+   "ability": "Damaged: 1-9 Wounds Remaining",
+   "text": "While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**."
+  },
+  "key": "1a26079f75de4fea"
+ },
+ {
+  "army": "6-bigs",
+  "kind": "unit-aura",
+  "where": "6-bigs · Knight Errant",
+  "judgement": {
+   "kind": "ranged",
+   "needs": {
+    "all": [
+     "Armiger"
+    ]
+   },
+   "when": "Affected by Errant’s Duty (Bondsman)",
+   "note": "ranged weapons have [ASSAULT]",
+   "from": "Errant’s Duty"
+  },
+  "source": {
+   "ability": "Errant’s Duty",
+   "text": "While a model is affected by this ability, you can re-roll **Advance rolls** made for that model and ranged weapons equipped by that model have the **[ASSAULT]** ability."
+  },
+  "key": "6f0f37a9d252f3f2"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "ability-timing",
+  "where": "4-megas-and-a-destrier · Canis Rex · Chainbreaker",
+  "judgement": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Chainbreaker",
+   "text": "Once per battle, at the start of any phase, you can select one friendly **IMPERIUM** unit that is **Battle-shocked** and within 12\" of this model. That unit is no longer Battle-shocked."
+  },
+  "key": "d5c89db173cbdd7c"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "ability-timing",
+  "where": "4-megas-and-a-destrier · Canis Rex · Legendary Freeblade",
+  "judgement": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Legendary Freeblade",
+   "text": "Once per turn, when you target this model with a stratagem, you may reduce the CP cost of that use of that stratagem by 1CP."
+  },
+  "key": "67ca3c3988b858cf"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "unit-weapons",
+  "where": "4-megas-and-a-destrier · Canis Rex",
+  "judgement": {
+   "gear": [
+    [
+     "Freedom’s Hand",
+     "Las-impulsor",
+     "Questoris multi-laser"
+    ],
+    [
+     "Close combat weapon",
+     "Hekhtur’s pistol"
+    ]
+   ],
+   "weapons": [
+    "Las-impulsor · high intensity",
+    "Las-impulsor · low intensity",
+    "Questoris multi-laser",
+    "Hekhtur’s pistol",
+    "Freedom’s Hand · strike",
+    "Freedom’s Hand · sweep",
+    "Close combat weapon"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Canis Rex",
+    "1× Sir Hekhtur"
+   ],
+   "leads": null
+  },
+  "key": "ef91d5483875f51f"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "ability-damaged",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Lancer · Damaged: 1-10 Wounds Remaining",
+  "judgement": {
+   "damaged": "1-10",
+   "W": "28"
+  },
+  "source": {
+   "ability": "Damaged: 1-10 Wounds Remaining",
+   "text": "While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+  },
+  "key": "5fddcb4a9888632d"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "ability-tag",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos · Bringer of Justice",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Bringer of Justice",
+   "text": "**IMPERIAL KNIGHTS** model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the **Hit roll**."
+  },
+  "key": "2d6cc53bc36df415"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "ability-tag",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos · Atrapos’ Duty",
+  "judgement": {
+   "tag": "Bondsman"
+  },
+  "source": {
+   "ability": "Atrapos’ Duty",
+   "text": "While a model is affected by this ability, each time that model makes an attack that targets a TITANIC or TOWERING model, you can re-roll the Hit roll and you can re-roll the Wound roll."
+  },
+  "key": "d3b9869162736fd5"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "unit-footnote",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos",
+  "judgement": {
+   "kind": "all",
+   "when": "vs MONSTER/VEHICLE",
+   "note": "+1 to hit rolls; also +1 to wound rolls if the target is TITANIC or TOWERING",
+   "from": "Macro-extinction Protocols"
+  },
+  "source": {
+   "ability": "Macro-extinction Protocols",
+   "text": "Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well."
+  },
+  "key": "737ce6747e17b50f"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "unit-footnote",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos",
+  "judgement": {
+   "kind": "melee",
+   "when": "Every melee attack",
+   "note": "+1 to hit rolls",
+   "from": "Bringer of Justice"
+  },
+  "source": {
+   "ability": "Bringer of Justice",
+   "text": "**IMPERIAL KNIGHTS** model only. Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the **Hit roll**."
+  },
+  "key": "bdd8fab4c3dc1ba5"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "unit-footnote",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Lancer",
+  "judgement": {
+   "kind": "all",
+   "when": "Damaged (1-10 wounds left)",
+   "note": "-1 to hit rolls (and -5 OC)",
+   "from": "Damaged: 1-10 Wounds Remaining"
+  },
+  "source": {
+   "ability": "Damaged: 1-10 Wounds Remaining",
+   "text": "While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+  },
+  "key": "3830064c49c192ab"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "unit-aura",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos",
+  "judgement": {
+   "kind": "all",
+   "needs": {
+    "all": [
+     "Armiger"
+    ]
+   },
+   "when": "Affected by Atrapos’ Duty (Bondsman), vs a TITANIC or TOWERING model",
+   "note": "re-roll the hit roll and the wound roll",
+   "from": "Atrapos’ Duty"
+  },
+  "source": {
+   "ability": "Atrapos’ Duty",
+   "text": "While a model is affected by this ability, each time that model makes an attack that targets a TITANIC or TOWERING model, you can re-roll the Hit roll and you can re-roll the Wound roll."
+  },
+  "key": "154a7b544ff9860a"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "unit-weapons",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos",
+  "judgement": {
+   "gear": [
+    [
+     "Atrapos lascutter",
+     "Graviton singularity cannon"
+    ]
+   ],
+   "weapons": [
+    "Atrapos lascutter · high intensity",
+    "Atrapos lascutter · low intensity",
+    "Graviton singularity cannon · singularity",
+    "Graviton singularity cannon · contained",
+    "Atrapos lascutter · high intensity",
+    "Atrapos lascutter · low intensity"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Cerastus Knight Atrapos"
+   ],
+   "leads": null
+  },
+  "key": "78b093d9bd9f8239"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "ability-tag",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Lancer · Lancer’s Duty",
+  "judgement": {
+   "tag": "Bondsman"
+  },
+  "source": {
+   "ability": "Lancer’s Duty",
+   "text": "While a model is affected by this ability, it is eligible to declare a charge in a turn in which it Advanced."
+  },
+  "key": "c00547bcfd3eeaf6"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "unit-weapons",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Lancer",
+  "judgement": {
+   "gear": [
+    [
+     "Cerastus shock lance"
+    ]
+   ],
+   "weapons": [
+    "Cerastus shock lance",
+    "Cerastus shock lance · strike",
+    "Cerastus shock lance · sweep"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Cerastus Knight Lancer"
+   ],
+   "leads": null
+  },
+  "key": "9ca1e425b3759c2c"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "ability-timing",
+  "where": "4-megas-and-a-destrier · Knight Crusader · Punishing Salvoes",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Punishing Salvoes",
+   "text": "In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability."
+  },
+  "key": "205a258b3aec0b66"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "ability-tag",
+  "where": "4-megas-and-a-destrier · Knight Crusader · Hunter’s Eye",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Hunter’s Eye",
+   "text": "**IMPERIAL KNIGHTS** model only. Ranged weapons equipped by the bearer have the **[IGNORES COVER]** ability."
+  },
+  "key": "edc9c7db81dd2899"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "ability-tag",
+  "where": "4-megas-and-a-destrier · Knight Crusader · Crusader’s Duty",
+  "judgement": {
+   "tag": "Bondsman"
+  },
+  "source": {
+   "ability": "Crusader’s Duty",
+   "text": "While a model is affected by this ability, each time that model makes a ranged attack, add 1 to the Hit roll."
+  },
+  "key": "e406e6ca486638e7"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "unit-footnote",
+  "where": "4-megas-and-a-destrier · Knight Crusader",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Remained Stationary in your Movement phase",
+   "note": "ranged weapons have [SUSTAINED HITS 1] until the end of the turn",
+   "from": "Punishing Salvoes"
+  },
+  "source": {
+   "ability": "Punishing Salvoes",
+   "text": "In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability."
+  },
+  "key": "be93871fc0767d47"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "unit-aura",
+  "where": "4-megas-and-a-destrier · Knight Crusader",
+  "judgement": {
+   "kind": "ranged",
+   "needs": {
+    "all": [
+     "Armiger"
+    ]
+   },
+   "when": "Affected by Crusader’s Duty (Bondsman)",
+   "note": "+1 to hit rolls",
+   "from": "Crusader’s Duty"
+  },
+  "source": {
+   "ability": "Crusader’s Duty",
+   "text": "While a model is affected by this ability, each time that model makes a ranged attack, add 1 to the Hit roll."
+  },
+  "key": "d4c030c1ab8b5696"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "unit-weapons",
+  "where": "4-megas-and-a-destrier · Knight Crusader",
+  "judgement": {
+   "gear": [
+    [
+     "Avenger gatling cannon",
+     "Heavy flamer",
+     "Titanic feet",
+     "Stormspear rocket pod",
+     "Meltagun",
+     "Questoris heavy stubber",
+     "Rapid-fire battle cannon"
+    ]
+   ],
+   "weapons": [
+    "Avenger gatling cannon",
+    "Heavy flamer",
+    "Stormspear rocket pod",
+    "Meltagun",
+    "Questoris heavy stubber",
+    "Rapid-fire battle cannon",
+    "Titanic feet"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Knight Crusader"
+   ],
+   "leads": null
+  },
+  "key": "9e5577b93d8cb30e"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "ability-na",
+  "where": "4-megas-and-a-destrier · Knight Destrier · Thundercharge",
+  "judgement": {
+   "na": "Needs a thundershock spear and bellatus reaper chainsword: not this loadout",
+   "armyUnits": [
+    "Canis Rex [Canis Rex, Character, Epic Hero, Faction: Imperial Knights, Imperium, Infantry, Questoris, Sir Hekhtur, Titanic, Towering, Vehicle, Walker]",
+    "Cerastus Knight Atrapos [Cerastus, Character, Faction: Imperial Knights, Imperium, Knight Atrapos, Titanic, Towering, Vehicle, Walker]",
+    "Cerastus Knight Lancer [Cerastus, Character, Faction: Imperial Knights, Imperium, Knight Lancer, Titanic, Towering, Vehicle, Walker]",
+    "Knight Crusader [Character, Faction: Imperial Knights, Imperium, Knight Crusader, Questoris, Titanic, Towering, Vehicle, Walker]",
+    "Knight Destrier [Bellatus, Character, Faction: Imperial Knights, Imperium, Knight Destrier, Titanic, Towering, Vehicle, Walker]"
+   ]
+  },
+  "source": {
+   "ability": "Thundercharge",
+   "text": "If this model is equipped with a thundershock spear and a bellatus reaper chainsword, add 2 to the Attacks characteristic of melee weapons equipped by this model."
+  },
+  "key": "1a4f47d32132aa44"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "ability-tag",
+  "where": "4-megas-and-a-destrier · Knight Destrier · Sanctuary",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Sanctuary",
+   "text": "**IMPERIAL KNIGHTS** model only. The bearer has a 5+ invulnerable save."
+  },
+  "key": "9d37f11a82967acf"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "ability-def",
+  "where": "4-megas-and-a-destrier · Knight Destrier · Sanctuary",
+  "judgement": {
+   "def": "Sanctuary: 5+ invulnerable save"
+  },
+  "source": {
+   "ability": "Sanctuary",
+   "text": "**IMPERIAL KNIGHTS** model only. The bearer has a 5+ invulnerable save."
+  },
+  "key": "a96e8ae613d047c8"
+ }
+]

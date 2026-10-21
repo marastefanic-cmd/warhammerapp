@@ -1,0 +1,800 @@
+[
+ {
+  "army": "pubstomper",
+  "kind": "ability-damaged",
+  "where": "pubstomper · Magnus the Red · Damaged: 1-6 wounds remaining",
+  "judgement": {
+   "damaged": "1-6",
+   "W": "16"
+  },
+  "source": {
+   "ability": "Damaged: 1-6 wounds remaining",
+   "text": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**."
+  },
+  "key": "8f432292434d71c6"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-tag",
+  "where": "pubstomper · Magnus the Red · Impossible Form",
+  "judgement": {
+   "tag": "Psychic"
+  },
+  "source": {
+   "ability": "Impossible Form",
+   "text": "Each time an attack is made against this **PSYKER** (excluding **Psychic Attacks**), subtract 1 from the Damage characteristic of that attack."
+  },
+  "key": "9053f0bb5f55da49"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-who",
+  "where": "pubstomper · Magnus the Red · Impossible Form",
+  "judgement": {
+   "who": "Crimson King",
+   "models": [
+    "1× Magnus the Red"
+   ]
+  },
+  "source": {
+   "ability": "Impossible Form",
+   "text": "Each time an attack is made against this **PSYKER** (excluding **Psychic Attacks**), subtract 1 from the Damage characteristic of that attack."
+  },
+  "key": "87c8aa2640b1c554"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-def",
+  "where": "pubstomper · Magnus the Red · Impossible Form",
+  "judgement": {
+   "def": "Impossible Form (if picked this round): -1 Damage to attacks against Magnus, excluding psychic attacks"
+  },
+  "source": {
+   "ability": "Impossible Form",
+   "text": "Each time an attack is made against this **PSYKER** (excluding **Psychic Attacks**), subtract 1 from the Damage characteristic of that attack."
+  },
+  "key": "dd939754c42c93ca"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-tag",
+  "where": "pubstomper · Magnus the Red · Treason of Tzeentch",
+  "judgement": {
+   "tag": "Psychic"
+  },
+  "source": {
+   "ability": "Treason of Tzeentch",
+   "text": "At the start of your opponent’s Shooting phase, select one enemy unit within 24\" of this **PSYKER**. Until the end of the phase, ranged weapons equipped by models in that unit have the **[HAZARDOUS]** ability."
+  },
+  "key": "7e7edefe8b57bac7"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-who",
+  "where": "pubstomper · Magnus the Red · Treason of Tzeentch",
+  "judgement": {
+   "who": "Crimson King",
+   "models": [
+    "1× Magnus the Red"
+   ]
+  },
+  "source": {
+   "ability": "Treason of Tzeentch",
+   "text": "At the start of your opponent’s Shooting phase, select one enemy unit within 24\" of this **PSYKER**. Until the end of the phase, ranged weapons equipped by models in that unit have the **[HAZARDOUS]** ability."
+  },
+  "key": "7eda1e9889eeee96"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-tag",
+  "where": "pubstomper · Magnus the Red · Time Flux",
+  "judgement": {
+   "tag": "Aura, Psychic"
+  },
+  "source": {
+   "ability": "Time Flux",
+   "text": "While a friendly **THOUSAND SONS** unit is within 6\" of this **PSYKER**, add 2\" to the Move characteristic of models in that unit."
+  },
+  "key": "860ee9ee4ea6dc83"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-who",
+  "where": "pubstomper · Magnus the Red · Time Flux",
+  "judgement": {
+   "who": "Crimson King",
+   "models": [
+    "1× Magnus the Red"
+   ]
+  },
+  "source": {
+   "ability": "Time Flux",
+   "text": "While a friendly **THOUSAND SONS** unit is within 6\" of this **PSYKER**, add 2\" to the Move characteristic of models in that unit."
+  },
+  "key": "1f043a08fb269eb0"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "unit-footnote",
+  "where": "pubstomper · Defiler",
+  "judgement": {
+   "kind": "all",
+   "when": "Damaged (1-6 wounds left)",
+   "note": "-1 to hit rolls",
+   "from": "Damaged: 1-6 wounds remaining"
+  },
+  "source": {
+   "ability": "Damaged: 1-6 wounds remaining",
+   "text": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**."
+  },
+  "key": "929513203531579f"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-tag",
+  "where": "pubstomper · Sorcerer · Twisted Sorceries",
+  "judgement": {
+   "tag": "Psychic"
+  },
+  "source": {
+   "ability": "Twisted Sorceries",
+   "text": "Once per battle, in your Shooting phase or the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristic of Psychic weapons equipped by this model by 3."
+  },
+  "key": "44a7f43462c4dee6"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-who",
+  "where": "pubstomper · Sorcerer · Twisted Sorceries",
+  "judgement": {
+   "who": "Sorcerer",
+   "models": [
+    "1× Sorcerer",
+    "1× Aspiring Sorcerer",
+    "1× Rubric Marine w/ soulreaper cannon",
+    "3× Rubric Marine w/ warpflamer"
+   ]
+  },
+  "source": {
+   "ability": "Twisted Sorceries",
+   "text": "Once per battle, in your Shooting phase or the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristic of Psychic weapons equipped by this model by 3."
+  },
+  "key": "2e90d802b79541b8"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-who",
+  "where": "pubstomper · Sorcerer · Empyric Guidance",
+  "judgement": {
+   "who": "Sorcerer",
+   "models": [
+    "1× Sorcerer",
+    "1× Aspiring Sorcerer",
+    "1× Rubric Marine w/ soulreaper cannon",
+    "3× Rubric Marine w/ warpflamer"
+   ]
+  },
+  "source": {
+   "ability": "Empyric Guidance",
+   "text": "While this model is leading a unit, weapons equipped by models in that unit have the **[LETHAL HITS]** ability."
+  },
+  "key": "814ac116a15175da"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-who",
+  "where": "pubstomper · Sorcerer · Bringers of Change",
+  "judgement": {
+   "who": "Rubric Marines",
+   "models": [
+    "1× Sorcerer",
+    "1× Aspiring Sorcerer",
+    "1× Rubric Marine w/ soulreaper cannon",
+    "3× Rubric Marine w/ warpflamer"
+   ]
+  },
+  "source": {
+   "ability": "Bringers of Change",
+   "text": "Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead."
+  },
+  "key": "e1f1e4dd0e935ceb"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-who",
+  "where": "pubstomper · Sorcerer · Icon of Flame",
+  "judgement": {
+   "who": "Rubric Marines",
+   "models": [
+    "1× Sorcerer",
+    "1× Aspiring Sorcerer",
+    "1× Rubric Marine w/ soulreaper cannon",
+    "3× Rubric Marine w/ warpflamer"
+   ]
+  },
+  "source": {
+   "ability": "Icon of Flame",
+   "text": "Ranged weapons equipped by models in the bearer’s unit (excluding **CHARACTERS**) have the **[IGNORES COVER]** ability."
+  },
+  "key": "ebb2fe680a92425d"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "unit-kwNote",
+  "where": "pubstomper · Sorcerer",
+  "judgement": {
+   "kwNote": "Battleline, Rubric, Rubric Marines, Rubricae come from the led Rubric Marines."
+  },
+  "source": {
+   "models": [
+    "1× Sorcerer",
+    "1× Aspiring Sorcerer",
+    "1× Rubric Marine w/ soulreaper cannon",
+    "3× Rubric Marine w/ warpflamer"
+   ],
+   "stats": [
+    "Sorcerer W4 OC1",
+    "Rubric Marine W2 OC2",
+    "Aspiring Sorcerer W3 OC2"
+   ],
+   "weapons": [
+    "Inferno bolt pistol 1 -2 1 PISTOL, LETHAL HITS",
+    "Pandaemonic Delusion 6 -1 1 PSYCHIC, SUSTAINED HITS 3, LETHAL HITS",
+    "Malefic Curse 3 -3 1 ANTI-INFANTRY 4+, DEVASTATING WOUNDS, IGNORES COVER, PSYCHIC, LETHAL HITS",
+    "Warpflame pistol D6 -1 1 IGNORES COVER, PISTOL, TORRENT, LETHAL HITS",
+    "Soulreaper cannon 6 -2 1 DEVASTATING WOUNDS, IGNORES COVER, LETHAL HITS",
+    "Warpflamer D6 -1 1 IGNORES COVER, TORRENT, LETHAL HITS",
+    "Force weapon 4 -1 D3 PSYCHIC, LETHAL HITS",
+    "Prosperine khopesh 3 -2 2 LETHAL HITS",
+    "Force weapon 3 -1 D3 PSYCHIC, LETHAL HITS",
+    "Close combat weapon 2 0 1 LETHAL HITS"
+   ]
+  },
+  "key": "1b7519333c1fcc2d"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "unit-ptsNote",
+  "where": "pubstomper · Sorcerer",
+  "judgement": {
+   "ptsNote": "100 + Rubric Marines 115"
+  },
+  "source": {
+   "models": [
+    "1× Sorcerer",
+    "1× Aspiring Sorcerer",
+    "1× Rubric Marine w/ soulreaper cannon",
+    "3× Rubric Marine w/ warpflamer"
+   ],
+   "stats": [
+    "Sorcerer W4 OC1",
+    "Rubric Marine W2 OC2",
+    "Aspiring Sorcerer W3 OC2"
+   ],
+   "weapons": [
+    "Inferno bolt pistol 1 -2 1 PISTOL, LETHAL HITS",
+    "Pandaemonic Delusion 6 -1 1 PSYCHIC, SUSTAINED HITS 3, LETHAL HITS",
+    "Malefic Curse 3 -3 1 ANTI-INFANTRY 4+, DEVASTATING WOUNDS, IGNORES COVER, PSYCHIC, LETHAL HITS",
+    "Warpflame pistol D6 -1 1 IGNORES COVER, PISTOL, TORRENT, LETHAL HITS",
+    "Soulreaper cannon 6 -2 1 DEVASTATING WOUNDS, IGNORES COVER, LETHAL HITS",
+    "Warpflamer D6 -1 1 IGNORES COVER, TORRENT, LETHAL HITS",
+    "Force weapon 4 -1 D3 PSYCHIC, LETHAL HITS",
+    "Prosperine khopesh 3 -2 2 LETHAL HITS",
+    "Force weapon 3 -1 D3 PSYCHIC, LETHAL HITS",
+    "Close combat weapon 2 0 1 LETHAL HITS"
+   ]
+  },
+  "key": "3fbe206fda6a4e3f"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "unit-weapons",
+  "where": "pubstomper · Sorcerer",
+  "judgement": {
+   "gear": [
+    [
+     "Force weapon",
+     "Inferno bolt pistol",
+     "Pandaemonic Delusion",
+     "Prosperine khopesh"
+    ],
+    [
+     "Force weapon",
+     "Malefic Curse",
+     "Warpflame pistol"
+    ],
+    [
+     "Close combat weapon",
+     "Soulreaper cannon"
+    ],
+    [
+     "Close combat weapon",
+     "Warpflamer"
+    ]
+   ],
+   "unplaced": [
+    "Icon of Flame"
+   ],
+   "weapons": [
+    "Sorcerer · Inferno bolt pistol",
+    "Sorcerer · Pandaemonic Delusion",
+    "Rubric Marines · Malefic Curse",
+    "Rubric Marines · Warpflame pistol",
+    "Rubric Marines · Soulreaper cannon",
+    "Rubric Marines · ×3 · Warpflamer",
+    "Sorcerer · Force weapon",
+    "Sorcerer · Prosperine khopesh",
+    "Rubric Marines · Force weapon",
+    "Rubric Marines · ×4 · Close combat weapon"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Sorcerer",
+    "1× Aspiring Sorcerer",
+    "1× Rubric Marine w/ soulreaper cannon",
+    "3× Rubric Marine w/ warpflamer"
+   ],
+   "leads": "Rubric Marines"
+  },
+  "key": "41a47401425e5ff7"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-timing",
+  "where": "pubstomper · Sorcerer in Terminator Armour · Marked by Fate",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Marked by Fate",
+   "text": "At the start of your Shooting phase, select one enemy unit that is **visible** to this **PSYKER** model. Until the end of the phase, each time a model in this unit makes an attack that targets that enemy unit, add 1 to the **Hit roll**."
+  },
+  "key": "cc0cf910f1aae9b1"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-tag",
+  "where": "pubstomper · Sorcerer in Terminator Armour · Marked by Fate",
+  "judgement": {
+   "tag": "Psychic"
+  },
+  "source": {
+   "ability": "Marked by Fate",
+   "text": "At the start of your Shooting phase, select one enemy unit that is **visible** to this **PSYKER** model. Until the end of the phase, each time a model in this unit makes an attack that targets that enemy unit, add 1 to the **Hit roll**."
+  },
+  "key": "0d9aec4f1154d295"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-who",
+  "where": "pubstomper · Sorcerer in Terminator Armour · Marked by Fate",
+  "judgement": {
+   "who": "Sorcerer in Terminator Armour",
+   "models": [
+    "1× Sorcerer in Terminator Armour",
+    "1× Scarab Occult Sorcerer",
+    "7× Scarab Occult Terminator",
+    "2× Scarab Occult Terminator w/ soulreaper cannon"
+   ]
+  },
+  "source": {
+   "ability": "Marked by Fate",
+   "text": "At the start of your Shooting phase, select one enemy unit that is **visible** to this **PSYKER** model. Until the end of the phase, each time a model in this unit makes an attack that targets that enemy unit, add 1 to the **Hit roll**."
+  },
+  "key": "16a78c2c3f13f359"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-who",
+  "where": "pubstomper · Sorcerer in Terminator Armour · Empyric Guidance",
+  "judgement": {
+   "who": "Sorcerer in Terminator Armour",
+   "models": [
+    "1× Sorcerer in Terminator Armour",
+    "1× Scarab Occult Sorcerer",
+    "7× Scarab Occult Terminator",
+    "2× Scarab Occult Terminator w/ soulreaper cannon"
+   ]
+  },
+  "source": {
+   "ability": "Empyric Guidance",
+   "text": "While this model is leading a unit, weapons equipped by models in that unit have the **[LETHAL HITS]** ability."
+  },
+  "key": "61dd684b8d85949e"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-who",
+  "where": "pubstomper · Sorcerer in Terminator Armour · Umbralefic Crystal",
+  "judgement": {
+   "who": "Sorcerer in Terminator Armour",
+   "models": [
+    "1× Sorcerer in Terminator Armour",
+    "1× Scarab Occult Sorcerer",
+    "7× Scarab Occult Terminator",
+    "2× Scarab Occult Terminator w/ soulreaper cannon"
+   ]
+  },
+  "source": {
+   "ability": "Umbralefic Crystal",
+   "text": "**THOUSAND SONS** model only. (Once per battle, per army) In your Command phase, if this unit is **unengaged**, you can use this ability. If you do:\n- Place this unit in **strategic reserves**.\n- This unit has **Deep Strike** until the start of your next Shooting phase.\n- This unit must make an **ingress move** in your next Movement phase (including in your first turn)."
+  },
+  "key": "fed3be5b69c29121"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-who",
+  "where": "pubstomper · Sorcerer in Terminator Armour · Rites of Coalescence",
+  "judgement": {
+   "who": "Scarab Occult Terminators",
+   "models": [
+    "1× Sorcerer in Terminator Armour",
+    "1× Scarab Occult Sorcerer",
+    "7× Scarab Occult Terminator",
+    "2× Scarab Occult Terminator w/ soulreaper cannon"
+   ]
+  },
+  "source": {
+   "ability": "Rites of Coalescence",
+   "text": "While this unit contains one or more **PSYKER** models, each time an attack targets this unit, subtract 1 from the **Wound roll**."
+  },
+  "key": "e008bb4d922418c8"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-def",
+  "where": "pubstomper · Sorcerer in Terminator Armour · Rites of Coalescence",
+  "judgement": {
+   "def": "-1 to wound rolls against this unit while it contains a PSYKER model"
+  },
+  "source": {
+   "ability": "Rites of Coalescence",
+   "text": "While this unit contains one or more **PSYKER** models, each time an attack targets this unit, subtract 1 from the **Wound roll**."
+  },
+  "key": "2b2d7d1576c3e4bf"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "unit-footnote",
+  "where": "pubstomper · Sorcerer in Terminator Armour",
+  "judgement": {
+   "kind": "ranged",
+   "when": "vs the enemy unit picked at the start of your Shooting phase",
+   "note": "+1 to hit rolls",
+   "from": "Marked by Fate"
+  },
+  "source": {
+   "ability": "Marked by Fate",
+   "text": "At the start of your Shooting phase, select one enemy unit that is **visible** to this **PSYKER** model. Until the end of the phase, each time a model in this unit makes an attack that targets that enemy unit, add 1 to the **Hit roll**."
+  },
+  "key": "8c11b7b20f217e1e"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "unit-kwNote",
+  "where": "pubstomper · Sorcerer in Terminator Armour",
+  "judgement": {
+   "kwNote": "Rubricae, Scarab Occult come from the led Scarab Occult Terminators."
+  },
+  "source": {
+   "models": [
+    "1× Sorcerer in Terminator Armour",
+    "1× Scarab Occult Sorcerer",
+    "7× Scarab Occult Terminator",
+    "2× Scarab Occult Terminator w/ soulreaper cannon"
+   ],
+   "stats": [
+    "Sorcerer in Terminator Armour W5 OC1",
+    "Scarab Occult Sorcerer W4 OC1",
+    "Scarab Occult Terminator ×9 W3 OC1"
+   ],
+   "weapons": [
+    "Gaze of Hate 3 -3 2 ANTI-MONSTER 4+, ANTI-VEHICLE 4+, DEVASTATING WOUNDS, PSYCHIC, LETHAL HITS",
+    "Inferno combi-bolter 2 -2 1 RAPID FIRE 2, LETHAL HITS",
+    "Malefic Curse 3 -3 1 ANTI-INFANTRY 4+, DEVASTATING WOUNDS, PSYCHIC, LETHAL HITS",
+    "Inferno combi-bolter 2 -2 1 RAPID FIRE 2, LETHAL HITS",
+    "Soulreaper cannon 6 -2 1 DEVASTATING WOUNDS, LETHAL HITS",
+    "Hellfyre missile rack 2 -2 3 LETHAL HITS",
+    "Force weapon 5 -1 D3 PSYCHIC, LETHAL HITS",
+    "Force weapon 4 -1 D3 PSYCHIC, LETHAL HITS",
+    "Prosperine khopesh 3 -2 2 LETHAL HITS"
+   ]
+  },
+  "key": "d81d42f2cc054d3b"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "unit-ptsNote",
+  "where": "pubstomper · Sorcerer in Terminator Armour",
+  "judgement": {
+   "ptsNote": "140 + Scarab Occult Terminators 425"
+  },
+  "source": {
+   "models": [
+    "1× Sorcerer in Terminator Armour",
+    "1× Scarab Occult Sorcerer",
+    "7× Scarab Occult Terminator",
+    "2× Scarab Occult Terminator w/ soulreaper cannon"
+   ],
+   "stats": [
+    "Sorcerer in Terminator Armour W5 OC1",
+    "Scarab Occult Sorcerer W4 OC1",
+    "Scarab Occult Terminator ×9 W3 OC1"
+   ],
+   "weapons": [
+    "Gaze of Hate 3 -3 2 ANTI-MONSTER 4+, ANTI-VEHICLE 4+, DEVASTATING WOUNDS, PSYCHIC, LETHAL HITS",
+    "Inferno combi-bolter 2 -2 1 RAPID FIRE 2, LETHAL HITS",
+    "Malefic Curse 3 -3 1 ANTI-INFANTRY 4+, DEVASTATING WOUNDS, PSYCHIC, LETHAL HITS",
+    "Inferno combi-bolter 2 -2 1 RAPID FIRE 2, LETHAL HITS",
+    "Soulreaper cannon 6 -2 1 DEVASTATING WOUNDS, LETHAL HITS",
+    "Hellfyre missile rack 2 -2 3 LETHAL HITS",
+    "Force weapon 5 -1 D3 PSYCHIC, LETHAL HITS",
+    "Force weapon 4 -1 D3 PSYCHIC, LETHAL HITS",
+    "Prosperine khopesh 3 -2 2 LETHAL HITS"
+   ]
+  },
+  "key": "652535488e26ccb9"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "unit-weapons",
+  "where": "pubstomper · Sorcerer in Terminator Armour",
+  "judgement": {
+   "gear": [
+    [
+     "Force weapon",
+     "Gaze of Hate",
+     "Inferno combi-bolter"
+    ],
+    [
+     "Force weapon",
+     "Malefic Curse",
+     "Inferno combi-bolter"
+    ],
+    [
+     "Inferno combi-bolter",
+     "Prosperine khopesh"
+    ],
+    [
+     "Prosperine khopesh",
+     "Soulreaper cannon"
+    ]
+   ],
+   "unplaced": [
+    "Hellfyre missile rack"
+   ],
+   "weapons": [
+    "Sorcerer in Terminator Armour · Gaze of Hate",
+    "Sorcerer in Terminator Armour · Inferno combi-bolter",
+    "Scarab Occult Terminators · Malefic Curse",
+    "Scarab Occult Terminators · ×8 · Inferno combi-bolter",
+    "Scarab Occult Terminators · ×2 · Soulreaper cannon",
+    "Scarab Occult Terminators · ×2 · Hellfyre missile rack",
+    "Sorcerer in Terminator Armour · Force weapon",
+    "Scarab Occult Terminators · Force weapon",
+    "Scarab Occult Terminators · ×9 · Prosperine khopesh"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Sorcerer in Terminator Armour",
+    "1× Scarab Occult Sorcerer",
+    "7× Scarab Occult Terminator",
+    "2× Scarab Occult Terminator w/ soulreaper cannon"
+   ],
+   "leads": "Scarab Occult Terminators"
+  },
+  "key": "f2d79da589c98126"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-timing",
+  "where": "pubstomper · Tzaangors · Brayhorn",
+  "judgement": {
+   "ph": [
+    "movement",
+    "charge"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "your"
+   }
+  },
+  "source": {
+   "ability": "Brayhorn",
+   "text": "You can re-roll **Advance** and **Charge rolls** made for the bearer’s unit."
+  },
+  "key": "c7ba9f3b8558aa24"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "unit-weapons",
+  "where": "pubstomper · Tzaangors",
+  "judgement": {
+   "gear": [
+    [
+     "Tzaangor blades"
+    ],
+    [
+     "Tzaangor blades"
+    ],
+    [
+     "Tzaangor blades"
+    ],
+    [
+     "Tzaangor blades"
+    ]
+   ],
+   "weapons": [
+    "×10 · Tzaangor blades"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Twistbray",
+    "7× Tzaangor w/ Tzaangor blades",
+    "1× Tzaangor w/ Tzaangor blades (Brayhorn)",
+    "1× Tzaangor w/ Tzaangor blades (Herd banner)"
+   ],
+   "leads": null
+  },
+  "key": "b3cad82a2811fb9c"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-timing",
+  "where": "pubstomper · Tzaangor Enlightened with Fatecaster greatbows · Malign Trickery",
+  "judgement": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
+  },
+  "source": {
+   "ability": "Malign Trickery",
+   "text": "In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within **Engagement Range** of one or more enemy units, this unit can make a **Normal move** of up to D6”."
+  },
+  "key": "3bca809001bd76a5"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-timing",
+  "where": "pubstomper · Defiler · Scuttling Walker",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Scuttling Walker",
+   "text": "Each time this unit makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and **terrain features**. When doing so, it can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed."
+  },
+  "key": "ae079e36c5bafef8"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-damaged",
+  "where": "pubstomper · Defiler · Damaged: 1-6 wounds remaining",
+  "judgement": {
+   "damaged": "1-6",
+   "W": "18"
+  },
+  "source": {
+   "ability": "Damaged: 1-6 wounds remaining",
+   "text": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**."
+  },
+  "key": "797cef29425c3f71"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "unit-weapons",
+  "where": "pubstomper · Defiler",
+  "judgement": {
+   "gear": [
+    [
+     "Ectoplasma destructor",
+     "Heavy reaper autocannon",
+     "Heavy reaper autocannon",
+     "Shearing claws",
+     "Excruciator cannon",
+     "Excruciator cannon"
+    ]
+   ],
+   "weapons": [
+    "Ectoplasma destructor",
+    "×2 · Excruciator cannon",
+    "×2 · Heavy reaper autocannon",
+    "Shearing claws · strike",
+    "Shearing claws · sweep"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Defiler"
+   ],
+   "leads": null
+  },
+  "key": "346475051be17cf3"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "strat-phases",
+  "where": "Grand Coven · Psychic Dominion",
+  "judgement": {
+   "phases": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Psychic Dominion",
+   "text": "WHEN: Any phase, just after an enemy unit has selected its targets.\nTARGET: One **THOUSAND SONS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, all attacks made against your unit with Psychic weapons have the **[HAZARDOUS]** ability and all models in your unit have the **Feel No Pain 4+** ability against **Psychic Attacks**."
+  },
+  "key": "3e2fa51f1861fa0a"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "strat-turn",
+  "where": "Grand Coven · Psychic Dominion",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Psychic Dominion",
+   "text": "WHEN: Any phase, just after an enemy unit has selected its targets.\nTARGET: One **THOUSAND SONS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, all attacks made against your unit with Psychic weapons have the **[HAZARDOUS]** ability and all models in your unit have the **Feel No Pain 4+** ability against **Psychic Attacks**."
+  },
+  "key": "7216fa448a775e9a"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "strat-needs",
+  "where": "Grand Coven · Psychic Dominion",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Thousand Sons"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Psychic Dominion",
+   "text": "WHEN: Any phase, just after an enemy unit has selected its targets.\nTARGET: One **THOUSAND SONS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, all attacks made against your unit with Psychic weapons have the **[HAZARDOUS]** ability and all models in your unit have the **Feel No Pain 4+** ability against **Psychic Attacks**."
+  },
+  "key": "fc1ced1ffef5c105"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "strat-def",
+  "where": "Grand Coven · Psychic Dominion",
+  "judgement": {
+   "def": "Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]"
+  },
+  "source": {
+   "stratagem": "Psychic Dominion",
+   "text": "WHEN: Any phase, just after an enemy unit has selected its targets.\nTARGET: One **THOUSAND SONS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, all attacks made against your unit with Psychic weapons have the **[HAZARDOUS]** ability and all models in your unit have the **Feel No Pain 4+** ability against **Psychic Attacks**."
+  },
+  "key": "e452822fb991fb7b"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "strat-gist",
+  "where": "Grand Coven · Psychic Dominion",
+  "judgement": {
+   "gist": "Until the end of the phase, attacks made against your unit with Psychic weapons have [HAZARDOUS], and models in your unit have Feel No Pain 4+ against Psychic Attacks."
+  },
+  "source": {
+   "stratagem": "Psychic Dominion",
+   "text": "WHEN: Any phase, just after an enemy unit has selected its targets.\nTARGET: One **THOUSAND SONS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, all attacks made against your unit with Psychic weapons have the **[HAZARDOUS]** ability and all models in your unit have the **Feel No Pain 4+** ability against **Psychic Attacks**."
+  },
+  "key": "dc8fe389dd57c66a"
+ }
+]

@@ -1,0 +1,128 @@
+[
+ {
+  "key": "d0ff3d4da31577c7",
+  "where": "princes · Khârn the Betrayer · Icon of Khorne",
+  "verdict": "ok",
+  "why": "NR (princes p2) gives Khârn's unit only \"Chainblade, Plasma pistol\", \"Bolt pistol, Chainblade\" and \"Khornate eviscerator, Plasma pistol\"; no models line has Icon of Khorne (only the Lord on Juggernaut's unit does), so \"If the bearer’s unit contains one or more Icons of Khorne\" cannot apply."
+ },
+ {
+  "key": "9a703450fd9425d4",
+  "where": "standard · Khârn the Betrayer",
+  "verdict": "ok",
+  "why": "NR (standard p2) Categories: \"Battleline*, Berzerkers*, *from combined unit\", and the combined unit is Khârn leading Khorne Berzerkers."
+ },
+ {
+  "key": "a852b235d09609e6",
+  "where": "princes · Lord on Juggernaut",
+  "verdict": "ok",
+  "why": "NR (princes p3) Categories: \"Battleline*, Berzerkers*, Grenades*, Infantry*, *from combined unit\", and the Lord is \"Leading: Khorne Berzerkers\"."
+ },
+ {
+  "key": "cd32b3d2ea1ecc87",
+  "where": "princes · Slaughterbound",
+  "verdict": "ok",
+  "why": "NR (princes p4) Categories: \"Exalted Eightbound*, *from combined unit\", and the Slaughterbound is \"Leading: Exalted Eightbound\"."
+ },
+ {
+  "key": "ccc8053e9c01d5a3",
+  "where": "princes · Slaughterbound",
+  "verdict": "ok",
+  "why": "NR (princes) roster rows \"Slaughterbound Character 110\" (90 + Battle-lust 20 per BSData) and \"(3) Exalted Eightbound Infantry 130\"; the datasheet prints \"240 PTS\" = 110 + 130."
+ },
+ {
+  "key": "4705df5663cd62fb",
+  "where": "standard · Angron · Reborn in Blood",
+  "verdict": "ok",
+  "why": "\"At the start of the battle round\" is listed under Command, either turn (the app's settled convention for that timing), and \"in the Reinforcements step of your next Movement phase\" is the Movement phase of your turn, so turns {movement:'your'}."
+ },
+ {
+  "key": "98fe49f606c42ffb",
+  "where": "standard · Angron · The Blood God’s Favour",
+  "verdict": "ok",
+  "why": "NR (standard p4) prints it in the \"Wrathful Presence | Effect\" table of the one-model Angron unit, and Wrathful Presence says \"select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability\" (\"pick one\" = \"select one\"; same label pattern as \"Crimson King\")."
+ },
+ {
+  "key": "047694cfb33ed8ff",
+  "where": "standard · Angron · Driven by Ultimate Rage",
+  "verdict": "ok",
+  "why": "NR (standard p4) prints \"Driven by Ultimate Rage (Aura)\" in the \"Wrathful Presence | Effect\" table of the one-model Angron unit; Wrathful Presence: \"select one Wrathful Presence ability ... this model has that ability\"."
+ },
+ {
+  "key": "9d3e763483cd94d7",
+  "where": "standard · Angron · Overwhelming Wrath",
+  "verdict": "ok",
+  "why": "\"Each time an enemy unit ... is selected to Fall Back ... must Remain Stationary this phase instead\": fall-back and remain-stationary are move types the active player selects in the Move Units step of the Movement phase (09.02, 09.04, 09.07), so the enemy's (your opponent's) Movement phase, as signed off for Harpoon Barbs."
+ },
+ {
+  "key": "829790204ea12268",
+  "where": "standard · Angron · Overwhelming Wrath",
+  "verdict": "ok",
+  "why": "NR (standard p4) prints \"Overwhelming Wrath (Aura)\", and the rule acts on \"an enemy unit within 6\" of this model\"."
+ },
+ {
+  "key": "a0077ae054433ac9",
+  "where": "standard · Angron · Overwhelming Wrath",
+  "verdict": "ok",
+  "why": "NR (standard p4) prints \"Overwhelming Wrath (Aura)\" in the \"Wrathful Presence | Effect\" table of the one-model Angron unit; Wrathful Presence: \"select one Wrathful Presence ability ... this model has that ability\"."
+ },
+ {
+  "key": "7a3d58fbc20f30b6",
+  "where": "standard · Khârn the Betrayer · Icon of Khorne",
+  "verdict": "ok",
+  "why": "NR (standard p2) gives Khârn's unit only \"Chainblade, Plasma pistol\", \"Bolt pistol, Chainblade\" and \"Khornate eviscerator, Plasma pistol\"; no models line has an Icon of Khorne, so \"If the bearer’s unit contains one or more Icons of Khorne\" cannot apply (no other unit in this list has one either)."
+ },
+ {
+  "key": "1bd5f94b32f3218c",
+  "where": "standard · Lord on Juggernaut",
+  "verdict": "ok",
+  "why": "NR (standard p5): \"1x Lord on Juggernaut | Bladed horn, Exalted chainblade, Plasma pistol\", with weapon rows \"Plasma pistol - standard\", \"Plasma pistol - supercharge\", \"Bladed horn\", \"Exalted chainblade\"."
+ },
+ {
+  "key": "d185910dbe546c38",
+  "where": "standard · Slaughterbound",
+  "verdict": "ok",
+  "why": "NR (standard p6): \"1x Slaughterbound | Lacerator and daemonic claw\", the only weapon row."
+ },
+ {
+  "key": "7a3e60acea66aa9c",
+  "where": "standard · Slaughterbound · Berzerker Glaive",
+  "verdict": "ok",
+  "why": "NR (standard p3) names it \"Berzerker Glaive - Slaughterbound\" and lists it in the Slaughterbound's options line (\"Berzerker Glaive, Lacerator and daemonic claw\")."
+ },
+ {
+  "key": "76066f03893cf1da",
+  "where": "standard · Slaughterbound",
+  "verdict": "ok",
+  "why": "NR prints \"Lacerator and daemonic claw (Berzerker Glaive) ... 8\" (Wahapedia base A 6, +1 Relentless Rage, +1 Glaive, already marked in `from`); \"add 3 to the Attacks characteristic ... and those weapons have the [Devastating Wounds] ability\" \"until the end of the phase\", \"Once per battle, at the start of the Fight phase\" gives 8+3 = 11 and adds neither bonus again."
+ },
+ {
+  "key": "83724dc82bc1f962",
+  "where": "standard · Slaughterbound",
+  "verdict": "ok",
+  "why": "NR (standard p3) Categories: \"Exalted Eightbound*, *from combined unit\", and the Slaughterbound is \"Leading: Exalted Eightbound[1]\"."
+ },
+ {
+  "key": "fd7dc1f1cb4d4bf6",
+  "where": "standard · Slaughterbound",
+  "verdict": "ok",
+  "why": "NR (standard) roster rows \"Slaughterbound Character 125\" (90 + Berzerker Glaive 35 per BSData/Wahapedia) and \"(3) Exalted Eightbound Infantry 130\"; the datasheet prints \"255 PTS\" = 125 + 130."
+ },
+ {
+  "key": "794b5642eaf9c0e1",
+  "where": "standard · Exalted Eightbound",
+  "verdict": "ok",
+  "why": "NR (standard p8): \"1x Exalted Eightbound Champion | Chainblades\", \"2x Exalted Eightbound | Chainblades\", weapon row \"Chainblades (x3)\"."
+ },
+ {
+  "key": "61f1f97a294ad695",
+  "where": "standard · Goremongers · Loping Speed",
+  "verdict": "ok",
+  "why": "\"In your opponent’s Movement phase, if an enemy unit ends a move within 8\" of this unit ...\": Movement phase, opponent's turn."
+ },
+ {
+  "key": "136517423185fba3",
+  "where": "nidzillas · Norn Emissary · Singular Purpose",
+  "verdict": "ok",
+  "why": "The rule's own words: \"At the start of the first battle round, select one of the following\" (NR nidzillas p6 prints the same)."
+ }
+]
