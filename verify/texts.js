@@ -678,10 +678,11 @@ function packUpdates(fk) {
     const t = L[i].text;
     if (mode === 'text') {
       // the text ends at a section header, before a title (a line followed by an instruction), or at its closing quote
-      // (some quoted texts in the packs have no closing quote)
+      // (some quoted texts in the packs have no closing quote, some have no opening one: a line that closes a quote
+      // is the text's last line, not the next entry's title)
       const n1 = L[i + 1] && L[i + 1].text, n2 = L[i + 2] && L[i + 2].text;
       const prevEnds = cur.text.length > 0 && /[.’'"]$/.test(cur.text[cur.text.length - 1]);
-      if (isCapsHeader(t) || isInstr(t) || (n1 && isInstr(n1)) ||
+      if (isCapsHeader(t) || isInstr(t) || (n1 && isInstr(n1) && !/\.['’]$/.test(t)) ||
           (!cur.quoted && prevEnds && n2 && isInstr(n2) && !isInstr(n1 || '') && !/[.’']$/.test(t))) mode = null;   // two-line title
       else {
         if (cur.quoted == null) cur.quoted = /^([▪■]\s*)?['‘]/.test(t);
@@ -692,7 +693,11 @@ function packUpdates(fk) {
     }
     if (isCapsHeader(t)) { section = t; title = []; continue; }
     if (isInstr(t)) {
-      cur = { section, title: title.join(' '), instr: t, text: [], quoted: null, at: L[i], d };
+      // "Change <part> to:" right after another entry, with no title of its own, is under that entry's title
+      // ("Doctrina Imperatives / Change Protector Imperative to: … / Change Conqueror Imperative to: …")
+      const prev = out[out.length - 1];
+      const cont = !title.length && prev && prev.section === section && /^Change .+ to:$/.test(t);
+      cur = { section, title: cont ? prev.title : title.join(' '), instr: t, text: [], quoted: null, at: L[i], d };
       out.push(cur); title = [];
       const m = /:\s*(.*)$/.exec(t);
       if (m) { mode = 'text'; if (m[1]) { cur.quoted = /^['‘]/.test(m[1]); cur.text.push(m[1]); if (cur.quoted && /['’]\.?$/.test(m[1]) && m[1].replace(/[▪■'‘’\s]/g, '').length > 0) mode = null; } }
@@ -934,11 +939,12 @@ for (const fk of FACTIONS) {
 
 /* ------------------------------------------------------------------ factions: army rules */
 // Wahapedia "Army Rules": a rule starts at a short name line ("Waaagh!", "Code Chivalric") that is followed by a long
-// line; its body runs to the next name line, without its "FAQ"/"Errata" spoilers.
+// line; its body runs to the next name line, without its "FAQ"/"Errata" spoilers. A short line followed by bullet
+// points is a heading inside the rule (Doctrina Imperatives: "Protector Imperative", then its bullets), not a new rule.
 function wahaArmyRules(fk) {
   const sec = wahaSection(fk, 'Army Rules'); if (!sec) return null;
   const L = docLines(sec.d, sec.pi, sec.pi);
-  const isName = i => { const t = L[i].text, n = L[i + 1] && L[i + 1].text; return t.length < 50 && /^[A-Z]/.test(t) && /[a-z]/.test(t) && !/[.:,;]/.test(t) && !/ Army Rule$/.test(t) && !/^(Errata|FAQ|Show|FAQ \/ Errata)$/.test(t) && !!n && n.length >= 35; };
+  const isName = i => { const t = L[i].text, n = L[i + 1] && L[i + 1].text; return t.length < 50 && /^[A-Z]/.test(t) && /[a-z]/.test(t) && !/[.:,;]/.test(t) && !/ Army Rule$/.test(t) && !/^(Errata|FAQ|Show|FAQ \/ Errata)$/.test(t) && !!n && n.length >= 35 && !/^- /.test(n); };
   const rules = []; let cur = null, note = false;
   for (let i = 0; i < L.length; i++) {
     if (isName(i)) { cur = { name: L[i].text, at: L[i], body: [] }; rules.push(cur); note = false; continue; }
@@ -1020,15 +1026,22 @@ for (const fk of FACTIONS) {
         if (body[k] && body[k].n === 'warp charge') { extra.push('warp charge ' + (body[k + 1] ? body[k + 1].n : '?')); body[k].used = true; if (body[k + 1]) body[k + 1].used = true; k += 2; }
         kText = k < body.length ? k : -1;
       } else kText = body.findIndex(x => !x.used && x.n === t);
+      // the row's update: titled with the row, or under the rule's title naming the row ("Change Protector Imperative to:")
       const ru = upd.find(e => titleN(e) === nameN(parts[0]) || titleN(e) === nameN(R.name + ', ' + parts[0]) ||
-        (parts[1] && titleN(e).startsWith(nameN(R.name) + ', ') && titleN(e).includes(nameN(parts[1]).replace(/^\.\.\./, ''))));
+        (parts[1] && titleN(e).startsWith(nameN(R.name) + ', ') && titleN(e).includes(nameN(parts[1]).replace(/^\.\.\./, ''))) ||
+        (titleN(e) === nameN(R.name) && nameN((/^Change (.+) to:$/.exec(e.instr) || [])[1] || '') === nameN(parts[0])));
       if (kText < 0) { fail('armyRule', army, rowU, 'text', text, 'no such row in ' + whereR, whereR); continue; }
-      body[kText].used = true;
+      // a row of several lines (an Imperative's bullet points) is that many source lines after its name
+      const nRow = kName >= 0 ? String(text).split('\n').filter(l => l.trim()).length : 1;
+      const rowLines = body.slice(kText, kText + nRow);
+      rowLines.forEach(x => { x.used = true; });
+      const rowSrc = nRow > 1 ? { n: joinNorm(rowLines.map(x => x.text)), text: rowLines.map(x => x.text).join('\n') } : body[kText];
+      const tr = nRow > 1 ? normField(text) : t;
       if (!ru) prov.push({ item: army + ' / ' + rowU, field: 'text', doc: W.sec.d.label, file: W.sec.d.file, sha256: W.sec.d.sha256, where: whereR });
       if (ru) {
         checkUpdate('armyRule', army, rowU, 'text', text, ru);
-        if (body[kText].n !== t) info.push({ army, unit: rowU, note: 'Wahapedia main text differs from the Faction Pack Rules Update the app follows', wahapedia: body[kText].text });
-      } else if (body[kText].n !== t) fail('armyRule', army, rowU, 'text', text, body[kText].text + ' | ' + diffAt(t, body[kText].n), whereR);
+        if (rowSrc.n !== tr) info.push({ army, unit: rowU, note: 'Wahapedia main text differs from the Faction Pack Rules Update the app follows', wahapedia: rowSrc.text });
+      } else if (rowSrc.n !== tr) fail('armyRule', army, rowU, 'text', text, rowSrc.text + ' | ' + diffAt(tr, rowSrc.n), whereR);
       // label: name (+ Warp Charge / dice / table)
       count('armyRule');
       const rest = parts.slice(1).map(p => norm(p));

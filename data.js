@@ -745,6 +745,118 @@ const FACTIONS = {
       }
     }
   },
+  'adeptus-mechanicus': {
+    name: 'Adeptus Mechanicus',
+    // words players use for a rule that has another name: none yet (an alias is a judgement to sign off; New Recruit
+    // prints the Cohort Cybernetica rule as "Cyber Psalm-Programming", for the list import to resolve)
+    aliases: [],
+    // Wahapedia, Adeptus Mechanicus, Army Rules: Doctrina Imperatives is its only army rule (Crusade and Boarding Actions rules left out).
+    // The two Imperatives are the Rules Updates' wording in GW's Faction Pack v1.4 (legal from 14 Oct 2026), PDF p17,
+    // the same words as Wahapedia's main text; the table is the two Imperatives (name, then their bullet points).
+    armyRules: [
+      { name:'Doctrina Imperatives', at:'Start of the battle round', ph:['command'], turn:'either',
+        text:'At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.',
+        table:[
+          ['Protector Imperative', '- Ranged weapons equipped by models in this unit have the **[HEAVY]** ability.\n- Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n- Each time a melee attack targets this unit, if this unit has the **BATTLELINE** keyword and/or it is within 6" of one or more friendly **ADEPTUS MECHANICUS BATTLELINE** units, subtract 1 from the **Hit roll**.'],
+          ['Conqueror Imperative', '- Ranged weapons equipped by models in this unit have the **[ASSAULT]** ability.\n- Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n- Each time a model in this unit makes an attack, if this unit has the **BATTLELINE** keyword and/or it is within 6" of one or more friendly **ADEPTUS MECHANICUS BATTLELINE** units, improve the Armour Penetration characteristic of that attack by 1.']
+        ] }
+    ],
+    detachments: {
+      'cohort-cybernetica': {
+        name:'Cohort Cybernetica', dp:1,
+        // Wahapedia wording (codex detachment; GW's Faction Pack v1.4 does not print it). The rule is the Rules Updates' wording
+        // in the Faction Pack v1.4, PDF p17 ("Cyber-psalm Programming", the pack's spelling), the same words as Wahapedia's main text.
+        // No ph: its words name no phase or moment. New Recruit's Move values already include its +2" (BSData: Kastelan Robot
+        // and Cybernetica Datasmith M 6", New Recruit 8"); its +1 OC is not in them.
+        rule:{ name:'Cyber-psalm Programming', needs:{ all:['Legio Cybernetica'] },
+          text:'Add 2" to the Move characteristic of models in **LEGIO CYBERNETICA** units from your army. In addition, unless that unit is **Battle-shocked**, add 1 to the Objective Control characteristic of models in that unit.' },
+        // pts from Wahapedia, matching BSData
+        enhancements:[
+          { name:'Necromechanic', pts:20, text:'**TECH-PRIEST** model only. Once per battle round, when a saving throw made for a friendly **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** model within 12" of the bearer is failed, the bearer can use this Enhancement. If they do, change the Damage characteristic of that attack to 0.' },
+          { name:'Lord of Machines', pts:15, text:'**TECH-PRIEST** model only. Once per turn, at the start of your opponent’s Shooting phase, select one enemy VEHICLE unit within 12" of and visible to the bearer. That unit must take a **Leadership test**: if that test is passed, until the end of the phase, each time a model in that unit makes an attack, subtract 1 from the **Hit roll**; if that test is failed, that unit is not eligible to shoot this phase.' },
+          { name:'Emotionless Clarity', pts:10, text:'**TECH-PRIEST** model only. Once per turn, when a friendly **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** model with the **Deadly Demise** ability that is within 12" of the bearer is destroyed, the bearer can use this Enhancement. If it does, do not roll to determine whether any **mortal wounds** are inflicted as a result of that model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted.' },
+          { name:'Arch-negator', pts:5, text:'**TECH-PRIEST** model only. Ranged weapons equipped by the bearer have the **[ANTI-VEHICLE 4+]** ability.' }
+        ],
+        // needs: "LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE" is written as an ADEPTUS MECHANICUS unit that is
+        // LEGIO CYBERNETICA or VEHICLE (every LEGIO CYBERNETICA unit is an ADEPTUS MECHANICUS unit)
+        stratagems:[
+          { id:'motive-imperative', gist:'Until the start of your next Command phase, your unit has +3" Move and +1 to Advance and Charge rolls.', name:'Motive Imperative', cp:1, phases:['command'], turn:'your', needs:{ all:['Faction: Adeptus Mechanicus','Vehicle'] },
+            when:'Your Command phase.',
+            target:'One **ADEPTUS MECHANICUS VEHICLE** unit from your army.',
+            effect:'Until the start of your next Command phase, add 3" to the Move characteristic of models in your unit and add 1 to **Advance** and **Charge rolls** made for it.' },
+          { id:'auto-divinatory-targeting', gist:'Until the start of your next Command phase, your unit’s ranged weapons have BS 3+ and [IGNORES COVER], but can only target units within range of the selected objective marker.', name:'Auto-divinatory Targeting', cp:1, phases:['command'], turn:'your', needs:{ all:['Faction: Adeptus Mechanicus'], any:['Legio Cybernetica','Vehicle'] },
+            mod:{ kind:'ranged', when:'Your Command phase, until the start of your next Command phase; only at units within range of the selected objective marker', note:'BS 3+, [IGNORES COVER]' },
+            note:'FAQ (Faction Pack 1.4): “If I target a unit with the Auto-divinatory Targeting Stratagem while the Protector Imperative is active for my army, in what order are the Ballistic Skill modifiers applied?” “The Ballistic Skill characteristic of ranged weapons equipped by models in that unit is first changed to 3+ by the Stratagem, then improved by 1 by the Protector Imperative, for a final result of 2+ (assuming no other modifiers apply).”',
+            when:'Your Command phase.',
+            target:'One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army, and one objective marker.',
+            effect:'Until the start of your next Command phase, ranged weapons equipped by models in your unit have a Ballistic Skill characteristic of 3+ and the **[IGNORES COVER]** ability, but they can only target units within range of the selected objective marker.' },
+          { id:'machine-spirit-resurgent', gist:'Until the start of your next Command phase, your unit’s attacks can re-roll the hit roll, and the wound roll as well if it is Below Half-strength.', name:'Machine Spirit Resurgent', cp:1, phases:['command'], turn:'your', needs:{ all:['Faction: Adeptus Mechanicus'], any:['Legio Cybernetica','Vehicle'] },
+            mod:{ kind:'all', when:'Your Command phase, below its Starting Strength; until the start of your next Command phase', note:'can re-roll hit rolls (and wound rolls if Below Half-strength)' },
+            when:'Your Command phase.',
+            target:'One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army that is below its Starting Strength.',
+            effect:'Until the start of your next Command phase, each time a model in your unit makes an attack, you can re-roll the **Hit roll**. If your unit is **Below Half-strength**, you can re-roll the **Wound roll** as well.' },
+          { id:'machine-superiority', gist:'Until the end of the turn, your unit is eligible to shoot after Falling Back, and you can ignore any or all modifiers to its characteristics and to its rolls and tests (not saving throws).', name:'Machine Superiority', cp:1, phases:['command'], turn:'your', needs:{ all:['Faction: Adeptus Mechanicus'], any:['Legio Cybernetica','Vehicle'] },
+            mod:{ kind:'all', when:'Your Command phase, until the end of the turn', note:'can ignore any or all modifiers to its characteristics and to any roll or test (not saving throws)' },
+            when:'Your Command phase.',
+            target:'One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army.',
+            effect:'Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back and you can ignore any or all modifiers to its characteristics and/or to any roll or test made for it (excluding modifiers to saving throws).' },
+          { id:'transcendent-cogitation', gist:'Until the start of your next Command phase, the Conqueror and Protector Imperatives are both active for your unit.', name:'Transcendent Cogitation', cp:1, phases:['command'], turn:'your', needs:{ all:['Faction: Adeptus Mechanicus'], any:['Legio Cybernetica','Vehicle'] },
+            when:'Your Command phase.',
+            target:'One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army.',
+            effect:'Until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for your unit.' },
+          { id:'benevolence-of-the-omnissiah', gist:'Until the start of your next Command phase, your unit has Feel No Pain 6+ (5+ against mortal wounds).', def:'Feel No Pain 6+ (5+ against mortal wounds), until the start of your next Command phase', name:'Benevolence of the Omnissiah', cp:1, phases:['command'], turn:'your', needs:{ all:['Faction: Adeptus Mechanicus'], any:['Legio Cybernetica','Vehicle'] },
+            when:'Your Command phase.',
+            target:'One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army.',
+            effect:'Until the start of your next Command phase, models in your unit have the **Feel No Pain 6+** ability, which is improved to Feel No Pain 5+ against **mortal wounds**.' }
+        ]
+      },
+      'eradication-cohort': {
+        name:'Eradication Cohort', dp:2,
+        // rule, enhancements and stratagems: GW's Faction Pack v1.4 (legal from 14 Oct 2026), PDF pp5-6, which prints this
+        // detachment in full (the same words as Wahapedia), with Wahapedia's markup; pts from Wahapedia, matching BSData.
+        // Belicosa-class: the pack prints the name in capitals; "-class" as BSData and New Recruit spell it.
+        // No ph on the rule: its words name no phase or moment.
+        rule:{ name:'Murderous Imperative', needs:{ all:['Skitarii'] },
+          mod:{ kind:'all', when:'Protector or Conqueror Imperative active for this unit', note:'Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1' },
+          text:'Each time a model in a **SKITARII** unit from your army makes an attack:\n- If the Protector Imperative is active for that unit, re-roll a **Hit roll** of 1.\n- If the Conqueror Imperative is active for that unit, re-roll a **Wound roll** of 1.' },
+        enhancements:[
+          { name:'Omnicogitator', pts:25, text:'**SKITARII MARSHAL** model only. The Conqueror Imperative and Protector Imperative are both active for the bearer’s unit.' },
+          { name:'Martial Signatum Amplificator', pts:15, text:'**TECH-PRIEST** model only. Models in the bearer’s unit have the **SKITARII** keyword.' },
+          { name:'Belicosa-class Capacitor Vanes', pts:25, text:'**ADEPTUS MECHANICUS** model only. Add 6" to the Range characteristic of ranged weapons equipped by models in the bearer’s unit, and add 1 to the Strength characteristic of those weapons.' },
+          { name:'Omnissiah’s Fury', pts:10, text:'**SKITARII MARSHAL** model only. Add 2 to the Attacks characteristic of melee weapons equipped by the bearer, and improve the Armour Penetration and Damage characteristics of those weapons by 1.' }
+        ],
+        stratagems:[
+          { id:'servo-driven-charge', gist:'Until the end of the phase, your unit’s melee weapons have [LANCE].', name:'Servo-driven Charge', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Adeptus Mechanicus'] },
+            mod:{ kind:'melee', when:'Fight phase', note:'[LANCE]' },
+            when:'Fight phase.',
+            target:'One **ADEPTUS MECHANICUS** unit from your army that has not been selected to fight this phase.',
+            effect:'Until the end of the phase, melee weapons equipped by models in your unit have the **[LANCE]** ability.' },
+          { id:'unrelenting-aggression', gist:'Until the end of the turn, your unit is eligible to shoot after Falling Back (a SKITARII unit: to shoot and declare a charge).', name:'Unrelenting Aggression', cp:1, phases:['movement'], turn:'your', needs:{ all:['Faction: Adeptus Mechanicus'] },
+            when:'Your Movement phase, just after an **ADEPTUS MECHANICUS** unit from your army Falls Back.',
+            target:'That **ADEPTUS MECHANICUS** unit.',
+            effect:'Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back. If your unit has the **SKITARII** keyword, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back instead.' },
+          { id:'unshackled-wrath', gist:'Until the end of the phase, your unit’s ranged weapons have [SUSTAINED HITS 1] or [LETHAL HITS], or all of [SUSTAINED HITS 1], [LETHAL HITS] and [HAZARDOUS].', name:'Unshackled Wrath', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Skitarii'] },
+            mod:{ kind:'ranged', when:'Your Shooting phase', note:'[SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS]' },
+            when:'Your Shooting phase.',
+            target:'One **SKITARII** unit from your army that has not been selected to shoot this phase.',
+            effect:'Select the **[SUSTAINED HITS 1]** or **[LETHAL HITS]** ability. Until the end of the phase, ranged weapons equipped by models in your unit have the selected ability. You can instead select the **[SUSTAINED HITS 1]**, **[LETHAL HITS]** and **[HAZARDOUS]** abilities to apply to those weapons until the end of the phase.' },
+          { id:'threat-cogitation-targeters', gist:'Until the end of the phase, your unit’s ranged attacks allocated to a MONSTER or VEHICLE model can re-roll the Damage roll.', name:'Threat-cogitation Targeters', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Skitarii','Vehicle'] },
+            mod:{ kind:'ranged', when:'Your Shooting phase, attacks allocated to a MONSTER or VEHICLE model', note:'can re-roll the Damage roll' },
+            when:'Your Shooting phase.',
+            target:'One **SKITARII VEHICLE** unit from your army that has not been selected to shoot this phase.',
+            effect:'Until the end of the phase, each time a ranged attack made by a model in your unit is allocated to a **MONSTER** or **VEHICLE** model, you can re-roll the Damage roll.' },
+          { id:'precision-onslaught', gist:'When your unit ends a Charge move: one D6 for each of its models within Engagement Range of one enemy unit; 1 mortal wound to that unit for each 4+.', name:'Precision Onslaught', cp:1, phases:['charge'], turn:'your', needs:{ all:['Sicarian'] },
+            when:'Your Charge phase, just after a **SICARIAN** unit from your army **declares a charge**.',
+            target:'That **SICARIAN** unit.',
+            effect:'Until the end of the phase, when your unit ends a **Charge move**, select one enemy unit within **Engagement Range** of it, then roll one D6 for each model in your unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 **mortal wound**.' },
+          { id:'analytic-reprisals', gist:'Your unit shoots as if it were your Shooting phase, but only at that enemy unit (and only if it is an eligible target).', name:'Analytic Reprisals', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Skitarii','Infantry'] },
+            when:'Your opponent’s Shooting phase, just after an enemy unit has shot.',
+            target:'One **SKITARII INFANTRY** unit from your army that lost one or more models as a result of the attacking unit’s attacks.',
+            effect:'Your unit can shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target.' }
+        ]
+      }
+    }
+  },
 };
 
 /* ---------------- armies ----------------
