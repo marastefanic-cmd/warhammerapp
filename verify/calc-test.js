@@ -179,6 +179,22 @@ const cases = [
   // [TWIN-LINKED] + [DEVASTATING WOUNDS], S4 vs T4 vs a 2+ save: a 4 or 5 (wound, saved 5 times in 6) is re-rolled for a 6:
   // P(critical) = 1/6 + 5/6 × 1/6 = 11/36 of 60 torrent hits = 18.3 (re-rolling only fails: 15)
   ['twin-linked + devastating wounds: re-rolls for a 6', () => run([g({ n:60, kw:['TORRENT', 'TWIN-LINKED', 'DEVASTATING WOUNDS'] })], { T:4, models:[big(1000, 10, 2)] }).groups[0].mortals, 60 * 11 / 36],
+
+  // ---- what is left after each game (run with alive), a CHARACTER's fate (rowsDead), the return blow (mix) ----
+  // one torrent attack, S8 vs T4 (2+), no save, at 2 W1 models: 1 is left in 5/6 of the games, 2 in 1/6
+  ['what is left: 1 of 2 models in 5/6 of the games', () => (r => r.alive.find(x => x.rows[0] === 1).n / r.sims)(C.run({ groups:[g({ S:8, kw:['TORRENT'] })], target:{ T:4, models:[big(2, 1)] }, ctx:{}, sims:20000, seed:11, alive:true })), 5 / 6],
+  // a bodyguard model (W1) and a CHARACTER (W1, its group last): two torrent attacks, S8 vs T4, no save: the CHARACTER is destroyed
+  // only when both wound: (5/6)² = 25/36
+  ['a CHARACTER’s fate: destroyed in 25/36', () => C.run({ groups:[g({ n:2, S:8, kw:['TORRENT'] })], target:{ T:4, models:[big(1, 1, 7, { bodyguard:true }), big(1, 1, 7, { name:'Boss', char:true })] }, ctx:{}, sims:20000, seed:11 }).rowsDead[1], 25 / 36],
+  // the return blow: what is left of those 2 models (each with one torrent attack, S8 vs T4: 5/6) attacks 3 W1 models back:
+  // (5/6 × 1 + 1/6 × 2) × 5/6 = 35/36 destroyed
+  ['return blow: what is left strikes back, 35/36', () => { const r = C.run({ groups:[g({ S:8, kw:['TORRENT'] })], target:{ T:4, models:[big(2, 1)] }, ctx:{}, sims:20000, seed:11, alive:true });
+    return C.mix(r.alive.map(x => ({ n:x.n, input:{ groups:[g({ n:x.rows[0], S:8, kw:['TORRENT'] })], target:{ T:4, models:[big(3, 1)] }, ctx:{} } })), { seed:5 }).killed; }, 35 / 36],
+  // ... and a unit wiped out strikes back with nothing: one torrent attack S4 vs T4 (4+) at 1 W1 model leaves it in half of the
+  // games; it has 2 torrent attacks, S8 vs T4, at 5 W1 models: 1/2 × 2 × 5/6
+  ['return blow: a destroyed unit attacks with nothing', () => { const r = C.run({ groups:[g({ kw:['TORRENT'] })], target:{ T:4, models:[big(1, 1)] }, ctx:{}, sims:20000, seed:11, alive:true });
+    return C.mix(r.alive.map(x => ({ n:x.n, input:x.rows[0] ? { groups:[g({ n:2, S:8, kw:['TORRENT'] })], target:{ T:4, models:[big(5, 1)] }, ctx:{} } : null })), { seed:5 }).killed; }, 1 / 2 * 2 * 5 / 6],
+  ['return blow: the games add up', () => (r => C.mix(r.alive.map(x => ({ n:x.n, input:null }))).sims)(C.run({ groups:[g({ kw:['TORRENT'] })], target:{ T:4, models:[big(1, 1)] }, ctx:{}, sims:20000, seed:11, alive:true })), 20000],
 ];
 
 // ---- the screen's own choices, through the app's dmCalc (verify/damage-node.js): what starts ticked, greyed or offered ----
@@ -296,7 +312,10 @@ const app = [
   // ---- a rule that changes range moves half range (24.25, 24.30) ----
   // Dakka! Dakka! Dakka! (+3" while riled up) ticked: the Flash Gitz' Cutta (12", [MELTA 2], [RAPID FIRE 1]) has half range 7.5", so
   // within 7.5" both apply: 10 × 2 attacks × 3/6 × 5/6 (S9 vs T4: 2+) × 5/6 (Sv 3+ AP-3: 6+) × (D3+2 + 2 = 6) = 41.7
-  ['range rule ticked: the bands move', () => +(dm.calc({ army:'shooty', ph:'shooting', atk:'mek-flashgitz', typed:{ n:10, T:4, W:1, Sv:3 }, on:{ [DAKKA]:true } }).ctx.halves.join() === '19.5,13.5,7.5'), 1],
+  // the bands are the half ranges with and without every range rule here, so ticking one moves no band: "within 7.5", not 6""
+  // keeps its meaning (v1 renamed the bands: same taps, a different answer)
+  ['range rule ticked or not: the same bands', () => +(dm.calc({ army:'shooty', ph:'shooting', atk:'mek-flashgitz', typed:{ n:10, T:4, W:1, Sv:3 }, on:{ [DAKKA]:true } }).ctx.halves.join() === '7.5,6' &&
+    dm.calc({ army:'shooty', ph:'shooting', atk:'mek-flashgitz', typed:{ n:10, T:4, W:1, Sv:3 } }).ctx.halves.join() === '7.5,6'), 1],
   ['range rule ticked: within 7.5", the Cutta gets both', () => (c => C.explain(c.input).groups[1].dmg)(dm.calc({ army:'shooty', ph:'shooting', atk:'mek-flashgitz', typed:{ n:10, T:4, W:1, Sv:3 }, on:{ [DAKKA]:true }, val:{ half:7.5 } })), 10 * 2 * 3 / 6 * 5 / 6 * 5 / 6 * 6],
   // ... and unticked, its half range is 6": "within 7.5"" is the 12" band, and neither applies: 10 × 3/6 × 5/6 × 5/6 × 4
   ['range rule unticked: the Cutta at 7.5" gets neither', () => (c => C.explain(c.input).groups[1].dmg)(dm.calc({ army:'shooty', ph:'shooting', atk:'mek-flashgitz', typed:{ n:10, T:4, W:1, Sv:3 }, val:{ half:7.5 } })), 10 * 3 / 6 * 5 / 6 * 5 / 6 * 4],
@@ -308,8 +327,35 @@ const app = [
   // ---- W1 models: destroyed and wounds lost are the same number (Khârn + Berzerkers shoot 10 Tzaangors: 3.1 and 3.1) ----
   ['W1 target: destroyed = wounds lost', () => (c => { const r = C.run(c.input), x = C.explain(c.input, r.orderIdx), v = dm.app.dmShown(c, r, x); return +(C.fmt(v.killed) === C.fmt(v.lost)); })(dm.calc({ army:'princes', opp:'pubstomper', ph:'shooting', atk:'kh-rn-the-betrayer-khorne-berzerkers', tgt:'tzaangors' })), 1],
   // ---- the working names a bonus the printed value already includes (New Recruit): Gorechild's A includes Relentless Rage ----
-  ['the working names included bonuses', () => +/^Attacks: A\d+ \(includes Relentless Rage\)/.test(C.explain(dm.calc({ army:'princes', opp:'pubstomper', ph:'fight', atk:'kh-rn-the-betrayer-khorne-berzerkers', tgt:'tzaangors' }).input).groups.flatMap(g => g.steps.map(x => x.t)).find(t => /includes Relentless Rage/.test(t)) || ''), 1],
+  ['the working names included bonuses', () => +/^Attacks: \d+ \(includes Relentless Rage\)/.test(C.explain(dm.calc({ army:'princes', opp:'pubstomper', ph:'fight', atk:'kh-rn-the-betrayer-khorne-berzerkers', tgt:'tzaangors' }).input).groups.flatMap(g => g.steps.map(x => x.t)).find(t => /includes Relentless Rage/.test(t)) || ''), 1],
   ['the working names included keywords', () => +C.explain(dm.calc({ army:'pubstomper', ph:'shooting', atk:'sorcerer-rubric-marines', typed:{ n:10, T:4, W:1, Sv:3 } }).input).groups.flatMap(g => g.steps.map(x => x.t)).some(t => t.includes('[LETHAL HITS] (24.23, from Empyric Guidance)')), 1],
+  // ---- v2: the situation reaches every rule with that condition; "they attack" is a real swap; picks; the return blow ----
+  // "This unit or the target within range of an objective" ticks Finderz Keeperz (+1 AP) and Wreckin' and Lootin' (re-roll hit rolls
+  // of 1) at once. Flash Gitz at 10 typed T4 W1 Sv 3+ models, before allocation: Cutta 10 × (3/6 + 1/6 × 3/6) = 5.83 hits × 5/6
+  // (S9 vs T4: 2+) = 4.86, AP-3 +1 → -4 vs 3+: no save, × D3+2 (4) = 19.44; Mega-slugga 3 × 21/36 = 1.75 × 5/6 = 1.46, AP-3 vs 3+:
+  // 6+ (5/6 fail) = 1.22 × 3 = 3.65
+  ['a situation ticks its rules: objective', () => exact({ army:'shooty', ph:'shooting', atk:'mek-flashgitz', typed:{ n:10, T:4, W:1, Sv:3 }, on:{ 'c:obj':true } }), 10 * 21 / 36 * 5 / 6 * 4 + 3 * 21 / 36 * 5 / 6 * 5 / 6 * 3],
+  ['a situation ticks its rules: both say why', () => +['Finderz Keeperz', 'Wreckin’ and Lootin’'].every(n => (b => b.on && /^ticked with/.test(b.why))(box({ army:'shooty', ph:'shooting', atk:'mek-flashgitz', typed:{ n:10, T:4, W:1, Sv:3 }, on:{ 'c:obj':true } }, n))), 1],
+  // "They attack": the same two units the other way round; a charge ticked for your fight is not in theirs, and is back when you swap back
+  ['they attack: the same two units, the charge not carried', () => { dm.calc({ army:'melee', opp:'princes', ph:'fight', atk:'nazdreg-meganobz', tgt:'kh-rn-the-betrayer-khorne-berzerkers', on:{ 'c:charged':true } });
+    const st = dm.app.dmState(); dm.app.dmSwap(st, dm.app.dmPair(st)); const P = dm.app.dmPair(st);
+    const ok1 = P.au.id === 'kh-rn-the-betrayer-khorne-berzerkers' && P.tu.id === 'nazdreg-meganobz' && st.on['c:charged'] == null;
+    dm.app.dmSwap(st, P); return +(ok1 && st.dir === 'me' && st.on['c:charged'] === true && dm.app.dmPair(st).tu.id === 'kh-rn-the-betrayer-khorne-berzerkers'); }, 1],
+  // ... and its numbers are the review's for Khârn + Berzerkers fighting Nazdreg + Meganobz (3.39 models, independently worked out)
+  ['they attack: Khârn + Berzerkers fight Nazdreg + Meganobz', () => { dm.calc({ army:'melee', opp:'princes', ph:'fight', atk:'nazdreg-meganobz', tgt:'kh-rn-the-betrayer-khorne-berzerkers' });
+    const st = dm.app.dmState(); dm.app.dmSwap(st, dm.app.dmPair(st)); const P = dm.app.dmPair(st);
+    return C.run(Object.assign({}, dm.app.dmCalc(st, P.A, P.B, P.au, P.tu, P.kind).input, { sims:20000 })).killed; }, 3.39],
+  // Murderous Imperative, a pick of two: Conqueror (re-roll wound rolls of 1). 7 galvanic rifles × 2 at a typed T4 Sv 4+: 14 × 3/6 = 7 hits
+  // × (3/6 + 1/6 × 3/6) × 3/6 fail = 2.04
+  ['a pick: Murderous Imperative, Conqueror', () => { const s = { army:'purge-goes-the-foe', ph:'shooting', atk:'skitarii-rangers', typed:{ n:10, T:4, W:1, Sv:4 }, val:{ 'pick:Murderous Imperative':'Conqueror' } };
+    s.on = { [box(s, 'Murderous Imperative').k]:true }; return C.explain(dm.calc(s).input).groups[0].dmg; }, 14 * 3 / 6 * 21 / 36 * 3 / 6],
+  ['a pick: Unshackled Wrath is a choice now', () => +(box({ army:'purge-goes-the-foe', ph:'shooting', atk:'skitarii-rangers', typed:{} }, 'Unshackled Wrath').state === 'choice'), 1],
+  // Wrath Beyond Reason (-1 D to ranged attacks that target it), counted: Flash Gitz at Chaos Terminators (T6, Sv 2+, InSv 4+): Cutta
+  // 10 × 3/6 × 4/6 × 3/6 × (4 - 1) = 5.0; Mega-slugga 3 × 3/6 × 4/6 × 3/6 × (3 - 1) = 1.0 (unticked: 8.17)
+  ['Wrath Beyond Reason: -1 D counted', () => { const s = { army:'shooty', opp:'super-terminators', ph:'shooting', atk:'mek-flashgitz', tgt:'chaos-terminators' }; s.on = { [box(s, 'Wrath Beyond Reason').k]:true }; return exact(s); }, 6.0],
+  // the return blow keeps the rarer loadouts to the last: 3 Berzerkers left of Khârn's 10 are the Champion and the two with eviscerators
+  ['what is left strikes back: the rarer weapons kept', () => { const c = dm.calc({ army:'melee', opp:'princes', ph:'fight', atk:'nazdreg-meganobz', tgt:'kh-rn-the-betrayer-khorne-berzerkers' });
+    return +(dm.app.dmAliveLines(c.tu, c.models, [0, 3]).join() === '0,1,0,2' && dm.app.dmAliveLines(c.tu, c.models, c.models.map(m => m.count)).join() === '1,1,7,2'); }, 1],
 ];
 for(const x of app) cases.push(x);
 

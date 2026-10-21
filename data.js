@@ -823,7 +823,8 @@ const FACTIONS = {
         // Belicosa-class: the pack prints the name in capitals; "-class" as BSData and New Recruit spell it.
         // No ph on the rule: its words name no phase or moment.
         rule:{ name:'Murderous Imperative', needs:{ all:['Skitarii'] },
-          mod:{ kind:'all', when:'Protector or Conqueror Imperative active for this unit', note:'Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1' },
+          mod:{ kind:'all', when:'Protector or Conqueror Imperative active for this unit', note:'Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1',
+            pick:[{ name:'Protector', note:'re-roll hit rolls of 1' }, { name:'Conqueror', note:'re-roll wound rolls of 1' }] },
           text:'Each time a model in a **SKITARII** unit from your army makes an attack:\n- If the Protector Imperative is active for that unit, re-roll a **Hit roll** of 1.\n- If the Conqueror Imperative is active for that unit, re-roll a **Wound roll** of 1.' },
         enhancements:[
           { name:'Omnicogitator', pts:25, text:'**SKITARII MARSHAL** model only. The Conqueror Imperative and Protector Imperative are both active for the bearer’s unit.' },
@@ -842,7 +843,8 @@ const FACTIONS = {
             target:'That **ADEPTUS MECHANICUS** unit.',
             effect:'Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back. If your unit has the **SKITARII** keyword, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back instead.' },
           { id:'unshackled-wrath', gist:'Until the end of the phase, your unit’s ranged weapons have [SUSTAINED HITS 1] or [LETHAL HITS], or all of [SUSTAINED HITS 1], [LETHAL HITS] and [HAZARDOUS].', name:'Unshackled Wrath', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Skitarii'] },
-            mod:{ kind:'ranged', when:'Your Shooting phase', note:'[SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS]' },
+            mod:{ kind:'ranged', when:'Your Shooting phase', note:'[SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS]',
+              pick:[{ name:'[SUSTAINED HITS 1]', note:'[SUSTAINED HITS 1]' }, { name:'[LETHAL HITS]', note:'[LETHAL HITS]' }, { name:'All three', note:'[SUSTAINED HITS 1], [LETHAL HITS] and [HAZARDOUS]' }] },
             when:'Your Shooting phase.',
             target:'One **SKITARII** unit from your army that has not been selected to shoot this phase.',
             effect:'Select the **[SUSTAINED HITS 1]** or **[LETHAL HITS]** ability. Until the end of the phase, ranged weapons equipped by models in your unit have the selected ability. You can instead select the **[SUSTAINED HITS 1]**, **[LETHAL HITS]** and **[HAZARDOUS]** abilities to apply to those weapons until the end of the phase.' },

@@ -318,12 +318,15 @@ function simulate(S, order, sims, seed){
   let dmgTotal = 0, killedTotal = 0;
   // the models: wounds left, row, allocation group
   const models = [], byGroup = groups.map(() => []);
-  groups.forEach((grp, gi) => { for(const ri of grp.rows){ const n = grp.char ? 1 : rows[ri].count; for(let i = 0; i < n; i++){ const M = { row:rows[ri], gi, w:0 }; models.push(M); byGroup[gi].push(M); } } });
+  groups.forEach((grp, gi) => { for(const ri of grp.rows){ const n = grp.char ? 1 : rows[ri].count; for(let i = 0; i < n; i++){ const M = { row:rows[ri], ri, gi, w:0 }; models.push(M); byGroup[gi].push(M); } } });
   const ncOrder = order.filter(gi => !groups[gi].char), chOrder = order.filter(gi => groups[gi].char);
   // dice kept between games (no garbage): attack dice, hits, automatic wounds, [DEVASTATING WOUNDS], save rolls by result
   const buf = () => ({ a:new Int32Array(64), n:0 });
   const put = (b, v) => { if(b.n === b.a.length){ const x = new Int32Array(b.a.length * 2); x.set(b.a); b.a = x; } b.a[b.n++] = v; };
   const atk = buf(), hits = buf(), auto = buf(), dev = buf(), saveBy = [buf(), buf(), buf(), buf(), buf(), buf()];
+  // what is left after each game: the models destroyed of each stats row (rowDead, summed) and, when asked (S.alive),
+  // how many games end with each count of models left in each row
+  const rowDead = rows.map(() => 0), deadNow = rows.map(() => 0), alive = S.alive ? new Map() : null;
   for(let s = 0; s < sims; s++){
     for(const M of models) M.w = M.row.W;
     const before = S.moments ? sum.map(x => Object.assign({}, x)) : null;
@@ -415,8 +418,12 @@ function simulate(S, order, sims, seed){
     }
     if(before) sum.forEach((x, i) => { for(const k of KEYS){ const d = x[k] - before[i][k]; x.sq[k] += d * d; } });
     dmgTotal += lost; killedTotal += dead; dist[dead]++;
+    deadNow.fill(0);
+    for(const M of models) if(M.w <= 0) deadNow[M.ri]++;
+    for(let i = 0; i < rows.length; i++) rowDead[i] += deadNow[i];
+    if(alive){ const k = rows.map((r, i) => r.count - deadNow[i]).join(','); alive.set(k, (alive.get(k) || 0) + 1); }
   }
-  return { sum, dist, dmgTotal, killedTotal };
+  return { sum, dist, dmgTotal, killedTotal, rowDead, alive };
 }
 
 function run(input){
@@ -427,7 +434,9 @@ function run(input){
   // the defender declares the allocation order (05.03): the order that loses the fewest models on average, then the
   // fewest wounds. Every order is played with the same dice and as many games as the result shown (a short trial first
   // only when there are more than six orders); the result shown is that order's own games
-  const orders = ordersOf(S.groups);
+  S.alive = !!input.alive;
+  // input.order: one allocation order given (the indices run() returned as orderIdx), not compared again
+  const orders = Array.isArray(input.order) && input.order.length === S.groups.length ? [input.order] : ordersOf(S.groups);
   let cands = orders;
   if(orders.length > 6 && S.batches.length){
     const pilot = orders.map(o => ({ o, t:simulate(S, o, Math.min(sims, RULE.pilot), seed) }));
@@ -444,12 +453,39 @@ function run(input){
   return { sims, models:S.total, dmg:mean(t.dmgTotal), killed:mean(t.killedTotal), wipe:mean(t.dist[S.total]), dist:t.dist.map(mean),
     groups:t.sum.map((x, i) => Object.assign({ attacks:mean(x.attacks), hits:mean(x.hits), wounds:mean(x.wounds), unsaved:mean(x.unsaved), mortals:mean(x.mortals), dmg:mean(x.dmg),
       gone:mean(x.gone), out:S.G[i].out, notes:S.G[i].notes }, S.moments ? { sd:Object.fromEntries(KEYS.map(k => [k, sd(x[k], x.sq[k])])) } : {})),
-    alloc:S.groups.map(x => ({ name:x.name, n:x.n, char:x.char })), order:order.map(i => S.groups[i].name), orderIdx:order, orders:orders.length, capped:!!orders.capped };
+    alloc:S.groups.map(x => ({ name:x.name, n:x.n, char:x.char })), order:order.map(i => S.groups[i].name), orderIdx:order, orders:orders.length, capped:!!orders.capped,
+    // each stats row of the target: its models destroyed on average (a CHARACTER row of one model: the chance it is destroyed)
+    rowsDead:t.rowDead.map(mean),
+    // with input.alive: the models left in each stats row at the end of a game, and in how many of the games
+    alive:t.alive ? [...t.alive].map(([k, n]) => ({ rows:k.split(',').map(Number), n })).sort((a, b) => b.n - a.n || (a.rows.join() < b.rows.join() ? -1 : 1)) : undefined };
+}
+// several attacks added up as one result, each played its own number of games: parts [{ input, n }], an input of null (or with
+// no weapons) being n games with no attack. The return blow uses it: in each game of an attack, what survives strikes back,
+// so part i is the attack of what is left in the games that ended that way (n of them). opts.order: one allocation order for
+// every part (05.03: the defender declares it; the parts are the same target). opts.seed: part i is played with seed + i
+function mix(parts, opts){
+  opts = opts || {};
+  let N = 0, killed = 0, dmg = 0, wipe = 0, models = 0, rowsDead = null;
+  const dist = [];
+  parts.forEach((p, i) => {
+    if(!(p.n > 0)) return;
+    N += p.n;
+    if(!p.input || !p.input.groups.some(g => +g.n > 0)){ dist[0] = (dist[0] || 0) + p.n; return; }
+    const r = run(Object.assign({}, p.input, { sims:p.n, seed:(opts.seed || 1) + i, alive:false }, opts.order ? { order:opts.order } : {}));
+    models = r.models; killed += r.killed * p.n; dmg += r.dmg * p.n; wipe += r.wipe * p.n;
+    r.dist.forEach((q, k) => { dist[k] = (dist[k] || 0) + q * p.n; });
+    rowsDead = rowsDead || r.rowsDead.map(() => 0); r.rowsDead.forEach((v, k) => { rowsDead[k] += v * p.n; });
+  });
+  if(!N) return { sims:0, killed:0, dmg:0, wipe:0, dist:[1], models, rowsDead:[] };
+  const out = [];
+  for(let k = 0; k < Math.max(dist.length, models + 1); k++) out.push((dist[k] || 0) / N);
+  return { sims:N, killed:killed / N, dmg:dmg / N, wipe:wipe / N, dist:out, models, rowsDead:(rowsDead || []).map(v => v / N) };
 }
 // what applies to each weapon, without playing the dice (for the app's notes)
 function resolve(input){
   const S = setup(input);
-  return { groups:S.G.map(x => ({ out:x.out, notes:x.notes, applied:x.applied, skipped:x.skipped, bs:x.bs, hitMod:x.hitMod, woundMod:x.woundMod, S:x.S, AP:x.AP, rrHit:x.rrHit, rrWound:x.rrWound, psychic:x.psychic, psychicKw:!!x.k.psychic, dev:x.dev, rangeIn:x.rangeIn, lethal:x.lethal, precision:x.precision })),
+  return { groups:S.G.map(x => ({ out:x.out, notes:x.notes, applied:x.applied, skipped:x.skipped, bs:x.bs, hitMod:x.hitMod, woundMod:x.woundMod, S:x.S, AP:x.AP, rrHit:x.rrHit, rrWound:x.rrWound, psychic:x.psychic, psychicKw:!!x.k.psychic, dev:x.dev, rangeIn:x.rangeIn, lethal:x.lethal, precision:x.precision,
+      critHit:x.critHit, critWound:x.critWound, sus:x.sus, torrent:x.torrent, D:x.D, dPlus:x.dPlus, A:x.A, aPlus:x.aPlus, rapid:x.rapid, melta:x.melta, extra:x.extra, half:x.half, n:x.n })),
     alloc:S.groups.map(x => ({ name:x.name, n:x.n, char:x.char })), orders:ordersOf(S.groups).length, batches:S.batches.map(b => b.members) };
 }
 
@@ -512,7 +548,7 @@ function explain(input, orderIdx){
     // attacks (04.03): A per weapon (at least 1), + [RAPID FIRE] within half range, + [BLAST]/[CLEAVE]
     const pa = pmf(G.A), aEach = ex(pa, v => Math.max(RULE.minA, v + G.aPlus)), rapid = G.rapid ? diceMean(G.rapid) : 0;
     const attacks = G.n * (aEach + rapid + G.extra);
-    let t = 'A' + G.A0 + (why.set.A ? ' (' + why.set.A + ')' : inc('A')) + why.a.map(x => ' ' + sgn(x.v) + ' (' + x.src + ')').join('');
+    let t = String(G.A0) + (why.set.A ? ' (' + why.set.A + ')' : inc('A')) + why.a.map(x => ' ' + sgn(x.v) + ' (' + x.src + ')').join('');
     if(G.A.n || why.a.length) t += ' = ' + fx(aEach) + (G.A.n ? ' on average' : '') + (G.aPlus < 0 ? ' (at least 1)' : '');
     t += ' × ' + G.n + ' = ' + fx(G.n * aEach);
     if(rapid) t += '; [' + k.text.rapid + '] within half range (' + halfTxt + ', 24.30' + kf('rapid') + '): +' + fx(rapid) + ' × ' + G.n + ' → ' + fx(G.n * (aEach + rapid));
@@ -590,9 +626,9 @@ function explain(input, orderIdx){
     const keep = x => x <= 6 ? (x - 1) / 6 : 1;
     const dmgN = unsaved * dN * keep(fnp), dmgM = devC * dM * keep(fnpM);
     {
-      const parts = ['D' + G.D0 + (why.set.D ? ' (' + why.set.D + ')' : inc('D')) + why.d.filter(x => !x.target).map(x => ' ' + sgn(x.v) + ' (' + x.src + ')').join('') + (G.melta ? ' + ' + G.melta.k + (G.melta.n ? 'D' + G.melta.f : '') + ' ([' + k.text.melta + '] within half range, ' + halfTxt + ', 24.25' + kf('melta') + ')' : '')];
+      const parts = [String(G.D0) + (why.set.D ? ' (' + why.set.D + ')' : inc('D')) + why.d.filter(x => !x.target).map(x => ' ' + sgn(x.v) + ' (' + x.src + ')').join('') + (G.melta ? ', + ' + (G.melta.n ? (G.melta.n > 1 ? G.melta.n : '') + 'D' + G.melta.f + (G.melta.k ? '+' + G.melta.k : '') : G.melta.k) + ' ([' + k.text.melta + '] within half range, ' + halfTxt + ', 24.25' + kf('melta') + ')' : '')];
       for(const x of why.d.filter(x => x.target)) parts.push(sgn(x.v) + ' Damage (' + x.src + ')');
-      if(pd.size > 1 || G.dPlus || tm.dMinus) parts.push((pd.size > 1 ? fx(dN) + ' on average' : 'D' + fx(dN)) + (ex(pd, v => v + G.dPlus - (tm.dMinus || 0)) < dN - 1e-9 ? ' (D at least 1)' : ''));
+      if(pd.size > 1 || G.dPlus || tm.dMinus) parts.push((pd.size > 1 ? fx(dN) + ' on average' : '→ ' + fx(dN)) + (ex(pd, v => v + G.dPlus - (tm.dMinus || 0)) < dN - 1e-9 ? ' (Damage at least 1)' : ''));
       const fsrc = fnp < 7 ? (row.fnp === fnp && row.fnpSrc ? row.fnpSrc : tsrc.fnp || 'the target') : '';
       if(fnp < 7) parts.push('Feel No Pain ' + fnp + '+ (' + fsrc + ', 24.12): ' + (7 - fnp) + '/6 of the wounds ignored');
       let d = 'Damage: ' + parts.join('; ') + ' · ' + fx(unsaved) + ' × ' + fx(dN) + (fnp < 7 ? ' × ' + (fnp - 1) + '/6' : '') + ' = ' + fx(dmgN);
@@ -608,7 +644,7 @@ function explain(input, orderIdx){
     target:{ models:S.total, wounds:S.rows.reduce((t, r) => t + r.count * r.W, 0) }, T:T0, meets:firstRow.name };
 }
 
-const API = { run, resolve, explain, fmt, fmtStep, dice, diceMean, pmf, keywords, woundNeed, RULE };
+const API = { run, mix, resolve, explain, fmt, fmtStep, dice, diceMean, pmf, keywords, woundNeed, RULE };
 root.WH_CALC = API;
 if(typeof module !== 'undefined' && module.exports) module.exports = API;
 })(typeof window !== 'undefined' ? window : globalThis);
