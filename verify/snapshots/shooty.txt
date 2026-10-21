@@ -114,6 +114,8 @@ Dread Mob · Shoota Boyz · Wreckas · Disposition: Purge the Foe
 
 Overview
 Damage calculator
+Opponent
+None yet: pick their list
 Units
 13
 Stratagems

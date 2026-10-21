@@ -5,6 +5,8 @@ War Horde · Disposition: Purge the Foe
 
 Overview
 Damage calculator
+Opponent
+None yet: pick their list
 Units
 10
 Stratagems

@@ -5,6 +5,8 @@ Grand Coven · Disposition: Priority Assets
 
 Overview
 Damage calculator
+Opponent
+None yet: pick their list
 Units
 9
 Stratagems

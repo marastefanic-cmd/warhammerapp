@@ -5,6 +5,8 @@ Berzerker Warband · Butchers of Khorne · Disposition: Take and Hold
 
 Overview
 Damage calculator
+Opponent
+None yet: pick their list
 Units
 9
 Stratagems
