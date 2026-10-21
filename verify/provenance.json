@@ -6468,6 +6468,22 @@
    "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
   },
   {
+   "item": "orks / detachment:runt-swarm/stratagem:grot-shields (shield)",
+   "field": "note",
+   "text": "When using the Grot Shields stratagem, are hits by [TORRENT] weapons considered ",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Runt Swarm 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "orks / detachment:runt-swarm/stratagem:grot-shields (shield)",
+   "field": "note",
+   "text": "No.",
+   "doc": "core",
+   "where": "PDF p88",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
    "item": "imperial-knights / detachment:freeblade-company/stratagem:full-tilt",
    "field": "note",
    "text": "Do rules that affect a keyword include multi-word keywords that contain that key",

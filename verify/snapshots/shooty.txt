@@ -2400,7 +2400,7 @@ Wazdakka Gutsmek
 6+
 3
 4+
-WHEN TARGETEDRiled up: 5+ INV
+WHEN TARGETEDAfter a pulse jet move: attacks that target it have -1 to hit rolls, until the start of your next turn · Riled up: 5+ INV
 ALL ATTACKS
 Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase
 RANGED WEAPONS
@@ -4908,6 +4908,17 @@ This unit’s ranged attacks have:
 If this unit is riled up, [SUSTAINED HITS 1].
 
 UNITBig Mek · Supa-glowy Fing
+
+Ask about this ability
+
+######## popup ability:shooty|Pulse Jet|In your Movement phase, when this unit is **selected to move**, if this unit is **unengaged**, this unit can make a **pulse jet move**. · ME SHOOTY YER’ BOOTY Me shooty yer’ booty
+ABILITY · MOVEMENT · YOUR TURN
+
+Pulse Jet
+
+In your Movement phase, when this unit is selected to move, if this unit is unengaged, this unit can make a pulse jet move.
+
+UNITWazdakka Gutsmek
 
 Ask about this ability
 
