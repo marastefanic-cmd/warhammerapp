@@ -61,7 +61,10 @@
 
 *{box-sizing:border-box}
 html,body{margin:0}
-html{touch-action:manipulation}
+html{touch-action:manipulation; background:var(--bg)}
+/* inside Claude (the artifact) the app is a frame on claude.ai's page: scrolling past either end must not pull
+   claude.ai's page along (its own background, and the tab bar moving with the frame) */
+html.embedded, html.embedded body{overscroll-behavior:none}
 html.lock, html.lock body{overflow:hidden}
 [hidden]{display:none !important}
 body{
@@ -1021,6 +1024,7 @@ addEventListener('popstate', e => {
 });
 // rebuild the history chain for a screen, so Back works after reopening the app
 const EMBEDDED = (() => { try { return window.top !== window.self; } catch(e){ return true; } })();
+if(EMBEDDED) document.documentElement.classList.add('embedded');
 function restore(target){
   if(EMBEDDED){   // inside the Claude app: don't add entries to the host page's history
     cur = Object.assign(plain(target), { d:0, from:target.s === 'home' ? undefined : backTitle(parentOf(target)) });
