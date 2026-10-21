@@ -1,0 +1,8 @@
+[
+ {
+  "key": "2a4a2fbb14b39e71",
+  "where": "Dread Mob rule · Try Dat Button!",
+  "verdict": "ok",
+  "why": "“If you rolled two D6, when this unit has attacked, this unit makes one hazard roll” turns on the dice, not the result. So hazard {rolls:1, dice:'two D6'} is right under both readings: a two-result pick forces two D6 (one D6 cannot give two results), choosing one D6 drops a pair to one result, and one result with two D6 stays selectable. Its note states both readings fairly and in the rule’s words: “the same row of the table (two D6 always give two results) or the same die value (a 1 and a 2 give one result, and the hazard roll is still made)”. It shows only in that one-result, two-D6 case (app.html dmPills), and the app picks neither reading."
+ }
+]

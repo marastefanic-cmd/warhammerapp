@@ -988,7 +988,7 @@ const ARMIES = [
         { kind:'ranged', when:'Riled up', cond:'riled', note:'[SUSTAINED HITS 1]', from:'Even More Dakka' }
       ],
       aura:[
-        { kind:'all', needs:{ all:['Faction: Orks','Walker'] }, when:'Picked by the Dreadherder', note:'re-roll hit rolls of 1 this turn', from:'Dreadherder', lasts:'turn' }
+        { kind:'all', needs:{ all:['Faction: Orks','Walker'] }, when:'Picked by the Dreadherder', selfWhen:'Picked by the Dreadherder for its own unit (no ‘other’ in the rule; units are within range of their own abilities, 01.02.04)', note:'re-roll hit rolls of 1 this turn', from:'Dreadherder', lasts:'turn' }
       ],
       rules:['Deadly Demise 1','Waaagh!'],
       kw:['Big Mek','Big Mek Dakkarig','Character','Faction: Orks','Vehicle','Walker']

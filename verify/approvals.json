@@ -1163,6 +1163,12 @@
   "at": "2026-10-16",
   "why": "\"TYRANIDS MONSTER model ... with the Deadly Demise ability that cannot FLY\": all MONSTERs here have Deadly Demise and none has FLY."
  },
+ "2a4a2fbb14b39e71": {
+  "verdict": "ok",
+  "by": "review:r17-v2",
+  "at": "2026-10-21",
+  "why": "“If you rolled two D6, when this unit has attacked, this unit makes one hazard roll” turns on the dice, not the result. So hazard {rolls:1, dice:'two D6'} is right under both readings: a two-result pick forces two D6 (one D6 cannot give two results), choosing one D6 drops a pair to one result, and one result with two D6 stays selectable. Its note states both readings fairly and in the rule’s words: “the same row of the table (two D6 always give two results) or the same die value (a 1 and a 2 give one result, and the hazard roll is still made)”. It shows only in that one-result, two-D6 case (app.html dmPills), and the app picks neither reading."
+ },
  "2a59ee4f5cc58859": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -3196,6 +3202,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "NR: 2 Hades autocannons, ectoplasma cannon and claws."
+ },
+ "7502ff4d3e4afc81": {
+  "verdict": "ok",
+  "by": "review:r17c-v2",
+  "at": "2026-10-21",
+  "why": "“select one friendly ORKS WALKER unit within 3\" of this model” has no ‘other’ (01.02.05 excludes the rule’s own unit only when a rule says ‘other’), and 01.02.04 says “units are within range of their own abilities”. So “Picked by the Dreadherder for its own unit (no ‘other’ in the rule; units are within range of their own abilities, 01.02.04)” is true and quotes Core Rules exactly. It stays unticked (no selfAlways), which fits “you can select”; needs, when, note and lasts 'turn' are unchanged."
  },
  "756a91e86e363ee4": {
   "verdict": "ok",

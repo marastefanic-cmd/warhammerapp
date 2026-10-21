@@ -1,0 +1,8 @@
+[
+ {
+  "key": "d3a2935e730877cc",
+  "where": "Dread Mob rule · Try Dat Button!",
+  "verdict": "unclear",
+  "why": "rolls:1 and when 'two D6' are the words (“If you rolled two D6, when this unit has attacked, this unit makes one hazard roll”, Wahapedia the same), the calculator places the roll after the attacks, as 06.03/24.15 require, and a one-band pick ('1–2', '3–4', '5–6') is left out of hazard.picks, so a one-D6 roll gets no roll. Whether the three pairs are every two-D6 outcome turns on “keep re-rolling duplicate results”. (1) If it means the same table result (the column headed RESULT), two D6 always give two different rows, and the mark is right as it stands. (2) If it means the same die value (Core Rules call rolled values “dice results”, 01.05.07, and doubles 01.05.06; r14’s sign-off of the picks read a one-band pick as “one D6, or two D6 in the same band”), then e.g. a 1 and a 2 give one band from two D6. That roll still owes the hazard roll, and the mark should give it, e.g. with picks like '1–2 (two D6)' or a one/two D6 choice."
+ }
+]

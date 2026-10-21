@@ -1,0 +1,8 @@
+[
+ {
+  "key": "7502ff4d3e4afc81",
+  "where": "shooty · Big Mek Dakkarig",
+  "verdict": "ok",
+  "why": "“select one friendly ORKS WALKER unit within 3\" of this model” has no ‘other’ (01.02.05 excludes the rule’s own unit only when a rule says ‘other’), and 01.02.04 says “units are within range of their own abilities”. So “Picked by the Dreadherder for its own unit (no ‘other’ in the rule; units are within range of their own abilities, 01.02.04)” is true and quotes Core Rules exactly. It stays unticked (no selfAlways), which fits “you can select”; needs, when, note and lasts 'turn' are unchanged."
+ }
+]

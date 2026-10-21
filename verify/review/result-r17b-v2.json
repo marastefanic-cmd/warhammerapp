@@ -1,0 +1,8 @@
+[
+ {
+  "key": "bbf1819ce2f9bc5b",
+  "where": "shooty · Big Mek Dakkarig",
+  "verdict": "needs-change",
+  "why": "The Dreadherder text itself is silent, but the Core Rules answer the question, so “(the rule does not say whether it can pick its own unit)” calls a settled point open. “select one friendly ORKS WALKER unit within 3\" of this model” has no “other”, and 01.02.05 excludes the rule’s own unit only when a rule says ‘other’. 01.02.04 says “units are within range of their own abilities”, and by 01.04.01 its own unit is within 3\" (0\"). The condition’s “(excluding BIG MEK units)” shows the writers counted it otherwise. selfWhen should be just “Picked by the Dreadherder for its own unit” (optionally “… (no ‘other’ in the rule; units are within range of their own abilities, 01.02.04)”), still unticked because it is “you can select”; the rest is unchanged and right."
+ }
+]
