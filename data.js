@@ -522,6 +522,34 @@ const FACTIONS = {
             effect:'Do not roll a D6 to determine how far models in your unit can move when they make a **surge move**. Instead, when making a **surge move**, those models can move up to 8".' }
         ]
       },
+      // Butchers of Khorne: the Faction Pack (1.3, p3) prints it in full, word for word as Wahapedia; its Rules Updates do not change it
+      'butchers-of-khorne': {
+        name:'Butchers of Khorne', dp:1,
+        rule:{ name:'Adamantine Avalanche', ph:['fight'], turn:'either', needs:{ all:['Terminator Squad'] },
+          text:'At the start of the Fight phase, if a friendly **TERMINATOR SQUAD** unit is **engaged**, make a **Blessings of Khorne roll** and use the results to activate one **Blessing of Khorne**. Until the end of the phase, that **Blessing of Khorne** is active for friendly **TERMINATOR SQUAD** units in addition to any other **Blessings of Khorne** that are currently active.' },
+        // pts from Wahapedia, matching BSData; both are Upgrades (Wahapedia and the pack mark them UPGRADE).
+        // The pack prints the names in capitals; Gore-stained Veterans is spelled as BSData and New Recruit
+        // spell it (Wahapedia: "Gore-Stained"), so the list import finds it.
+        enhancements:[
+          { name:'Sanctified in Slaughter', pts:15, upgrade:true, text:'**TERMINATOR SQUAD** unit only. This unit has +1 **OC**.' },
+          { name:'Gore-stained Veterans', pts:20, upgrade:true, text:'**TERMINATOR SQUAD** unit only. This unit’s melee attacks have +1 **WS**.' }
+        ],
+        stratagems:[
+          { id:'focused-ferocity', gist:'Your unit’s melee attacks have +1 A.', mod:{ kind:'melee', when:'When selected to fight', note:'+1 A' }, name:'Focused Ferocity', cp:1, phases:['fight'], turn:'either', needs:{ all:['Terminator Squad'] },
+            when:'Fight phase, when a friendly **TERMINATOR SQUAD** unit is **selected to fight**.',
+            target:'That **TERMINATOR SQUAD** unit.',
+            effect:'Your unit’s melee attacks have +1 **A**.' },
+          { id:'a-trophy-for-the-throne', gist:'Your unit’s attacks against a MONSTER/VEHICLE unit have +1 to wound rolls.', mod:{ kind:'melee', when:'When selected to fight, vs MONSTER/VEHICLE targets', note:'+1 to wound rolls' }, name:'A Trophy for the Throne', cp:1, phases:['fight'], turn:'either', needs:{ all:['Terminator Squad'] },
+            when:'Fight phase, when a friendly **TERMINATOR SQUAD** unit is **selected to fight**.',
+            target:'That **TERMINATOR SQUAD** unit.',
+            effect:'Your unit’s attacks that target a **MONSTER/VEHICLE** unit have +1 to **wound rolls**.' },
+          // "Shooting Phase" with a capital P, as both the pack and Wahapedia print it
+          { id:'wrath-beyond-reason', gist:'Ranged attacks that target your unit have -1 D until that enemy unit has attacked.', def:'their Shooting phase: -1 D to ranged attacks that target it (until that enemy unit has attacked)', name:'Wrath Beyond Reason', cp:2, phases:['shooting'], turn:'opp', needs:{ all:['Terminator Squad'] },
+            when:'Your opponent’s Shooting Phase, when an enemy unit targets a friendly **TERMINATOR SQUAD** unit.',
+            target:'That **TERMINATOR SQUAD** unit.',
+            effect:'Ranged attacks that target your unit have -1 **D** until that enemy unit has attacked.' }
+        ]
+      },
       'vessels-of-wrath': {
         name:'Vessels of Wrath', dp:1,
         rule:{ name:'Wrath of Khorne', ph:['fight'], turn:'either', needs:{ all:['Faction: World Eaters','Character'], none:['Epic Hero'] },
