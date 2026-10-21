@@ -247,6 +247,44 @@ cases.push(['play: [BLAST] counts the models left', () => pl([{ side:1, input:{ 
 cases.push(['play: a later beat leaves the earlier ones as they were', () => (b0 => +(JSON.stringify(pl([b0], 3000).beats[0]) === JSON.stringify(pl([b0, { side:0, input:{ groups:[g({ name:'back', n:10, S:8, kw:['TORRENT'], carry:[[0, 1]] })], target:{ T:4, models:[big(100, 1)] } } }], 3000).beats[0])))({ side:1, input:{ groups:[shot6()], target:tenW1([{ id:0, n:10 }]) } }), 1]);
 // one beat alone is run itself (the same dice)
 cases.push(['play: one beat = run', () => (inp => +(C.play({ beats:[{ side:1, input:inp }], sims:3000, seed:3 }).beats[0].killed === C.run(Object.assign({ sims:3000, seed:3 }, inp)).killed))({ groups:[g({ n:5, A:'D6', S:5, AP:-1, D:'2' })], target:{ T:4, models:[big(10, 2, 4)] } }), 1]);
+// One Last Kill (onDeath { lines, need }): 60 [TORRENT] S8 attacks (5/6 each) destroy all 10 W1 models of side 1 in a Fight-phase
+// beat (fewer than 10 of 60 wounding: about 1e-27); each destroyed model still fights on a 2+, rolled for each: 10 × 5/6 = 8.33
+// models fight back with one [TORRENT] S8 attack each, 8.33 × 5/6 = 6.94 of side 0's W1 models destroyed; they are then removed
+const olk = (od, fight) => pl([{ side:1, fight, input:{ groups:[g({ name:'kill', n:60, S:8, kw:['TORRENT'] })], target:tenW1([{ id:0, n:10 }]) } },
+  Object.assign({ side:0, fight:true, input:{ groups:[g({ name:'back', n:10, S:8, kw:['TORRENT'], carry:[[0, 1]] })], target:{ T:4, models:[big(100, 1)] } } }, od ? { onDeath:od } : {})]);
+cases.push(['One Last Kill: destroyed models fight on a 2+, rolled for each', () => olk({ lines:[0], need:2 }, true).beats[1].groups[0].n, 10 * 5 / 6]);
+cases.push(['One Last Kill: what they destroy', () => olk({ lines:[0], need:2 }, true).beats[1].killed, 10 * 5 / 6 * 5 / 6]);
+cases.push(['One Last Kill: they are removed all the same', () => olk({ lines:[0], need:2 }, true).sides[1].killed, 10, 0]);
+cases.push(['One Last Kill: without it, none fight back', () => olk(null, true).beats[1].groups[0].n, 0, 0]);
+cases.push(['One Last Kill: destroyed by shooting, none fight back', () => olk({ lines:[0], need:2 }, false).beats[1].groups[0].n, 0, 0]);
+cases.push(['One Last Kill: only the models lines it names', () => olk({ lines:[1], need:2 }, true).beats[1].groups[0].n, 0, 0]);
+// hazard rolls after a beat (24.15, 06.03): 6 [HAZARDOUS] weapons, one roll each, each 1-2 one mortal wound on the attacking unit
+// (self: side 0, 6 models of W2, no save), allocated per 06.02: a model that has lost a wound first, so of K failed rolls
+// (K ~ Binomial(6, 1/3)) floor(K/2) models are destroyed; with Feel No Pain 5+ each mortal wound is ignored on a 5+ (4/6 lost)
+const six = (W, mod) => ({ T:4, models:[big(6, W, 7, { lines:[{ id:0, n:6 }] })], mod:mod || {} });
+const hzIn = { groups:[g({ name:'plasma', n:6, S:8, kw:['TORRENT', 'HAZARDOUS'] })], target:tenW1() };
+const hz = (self, mw, more) => pl([{ side:1, hazard:{ mw:mw || 1 }, self, input:hzIn }].concat(more || []));
+cases.push(['hazard: one roll for each [HAZARDOUS] weapon', () => hz(six(2)).beats[0].hazard.rolls, 6, 0]);
+cases.push(['hazard: mortal wounds, 6 × 2/6', () => hz(six(2)).beats[0].hazard.mw, 2, 0.05]);
+cases.push(['hazard: the model that lost a wound first (06.02): models destroyed', () => hz(six(2)).beats[0].hazard.dead, E(6, 1 / 3, k => Math.floor(k / 2)), 0.03]);
+cases.push(['hazard: Feel No Pain 5+ against them', () => hz(six(2, { fnp:5 })).beats[0].hazard.lost, 2 * 4 / 6, 0.05]);
+cases.push(['hazard: 3 mortal wounds a failed roll (MONSTER/VEHICLE)', () => hz(six(2), 3).beats[0].hazard.mw, 6, 0.15]);
+cases.push(['hazard: the beat’s own damage is run’s (the same dice)', () => +(hz(six(2)).beats[0].killed === C.run(Object.assign({ sims:20000, seed:11 }, hzIn)).killed), 1]);
+// ... and the models it destroys do not attack in a later beat: 6 - E[floor(K/2)] attack again
+cases.push(['hazard: its losses carry into the next beat', () => hz(six(2), 1, [{ side:1, input:{ groups:[g({ name:'again', n:6, S:8, kw:['TORRENT'], carry:[[0, 1]] })], target:tenW1() } }]).beats[1].groups[0].n,
+  6 - E(6, 1 / 3, k => Math.floor(k / 2)), 0.03]);
+// a comeback at the end of the phase it is first destroyed in (target.revive: Berserker Frenzy): a W3 CHARACTER destroyed by 20
+// [TORRENT] S8 attacks (3 of 20 wounding at 5/6: certain) is set back up on a 2+: destroyed by the end of the beat 1, still down
+// after the phase 1/6 (each game adds the chance its roll fails, 1/6, not the die itself: exact); once only: destroyed again in a later phase, it stays down; a beat later in the same phase still finds it gone
+const boss = () => ({ T:4, models:[big(1, 3, 7, { name:'Boss', char:true })], revive:{ Boss:{ roll:2, wounds:3 } } });
+const rvb = ph => ({ side:1, fight:true, ph, input:{ groups:[g({ name:'kill', n:20, S:8, kw:['TORRENT'] })], target:boss() } });
+cases.push(['comeback: destroyed by the end of the beat', () => pl([rvb('fight')]).beats[0].rows[0].gone, 1, 0.001]);
+cases.push(['comeback: still down after the phase, 1/6 (counted as its roll’s chance)', () => pl([rvb('fight')]).beats[0].rows[0].down, 1 / 6, 1e-9]);
+cases.push(['comeback: the side at the end', () => pl([rvb('fight')]).sides[1].rows[0].gone, 1 / 6, 1e-9]);
+cases.push(['comeback: models left at the end, 5/6', () => pl([rvb('fight')]).sides[1].rows[0].left, 5 / 6, 1e-9]);
+cases.push(['comeback: the first time only', () => pl([rvb('shooting'), rvb('fight')]).sides[1].rows[0].gone, 1, 0.001]);
+cases.push(['comeback: later in the same phase it is still gone', () => pl([rvb('fight'), rvb('fight')]).beats[1].dmg, 0, 0]);
+cases.push(['comeback: ... and back after it', () => pl([rvb('fight'), rvb('fight')]).beats[1].rows[0].down, 1 / 6, 1e-9]);
 
 // ---- the screen's own choices, through the app's dmCalc (verify/damage-node.js): what starts ticked, greyed or offered ----
 const dm = require('./damage-node')();
@@ -408,10 +446,11 @@ const app = [
     const p1 = dm.plan(Object.assign({ turn:{ me:{ charge:true, fight:true } } }, base)), r1 = C.play(dm.app.dmIn(p1, 4000)), r0 = C.run(Object.assign({}, p1.beats[0].M.input, { sims:4000, seed:7 }));
     const p2 = dm.plan(Object.assign({ turn:{ me:{ charge:true, fight:true, back:true } } }, base)), r2 = C.play(dm.app.dmIn(p2, 4000));
     return +(p2.beats.length === 2 && p2.beats[1].id === 'back' && r1.beats[0].killed === r0.killed && r2.beats[0].killed === r1.beats[0].killed && r2.beats[0].dist.join() === r1.beats[0].dist.join()); }, 1],
-  // what is left fights back: the defender removes the rank and file first (05.03 Select Model), so of Khârn's Berzerkers the 7 go
-  // before the 2 with Khorne eviscerators, and the Champion last; Khârn has his own line
-  ['what is left fights back: the rarer weapons kept to the last', () => { const c = dm.calc({ army:'melee', opp:'princes', ph:'fight', atk:'nazdreg-meganobz', tgt:'kh-rn-the-betrayer-khorne-berzerkers' });
-    return +(c.models.map(m => m.lines.map(l => l.id + ':' + l.n).join(' ')).join(' | ') === '0:1 | 2:7 3:2 1:1'); }, 1],
+  // what is left fights back: within a group the defender picks the model (05.03 Allocation Order, 05.04 Select Model); the
+  // calculator keeps the champion and the special weapons to the last: of Khârn's Berzerkers the 7 go first, then the Champion, then
+  // the 2 with Khorne eviscerators; Khârn has his own line
+  ['what is left fights back: champion and special weapons kept to the last', () => { const c = dm.calc({ army:'melee', opp:'princes', ph:'fight', atk:'nazdreg-meganobz', tgt:'kh-rn-the-betrayer-khorne-berzerkers' });
+    return +(c.models.map(m => m.lines.map(l => l.id + ':' + l.n).join(' ')).join(' | ') === '0:1 | 2:7 1:1 3:2'); }, 1],
   // a CHARACTER's own rules stop counting in a later step where every model of its part is destroyed: Khârn's Legendary Killer
   // (while he leads the unit) in the fight back, its alternative attacks without it
   ['the turn: a destroyed CHARACTER’s own rule leaves the fight back', () => { const p = dm.plan({ army:'melee', opp:'princes', atk:'nazdreg-meganobz', tgt:'kh-rn-the-betrayer-khorne-berzerkers', turn:{ me:{ charge:true, fight:true, back:true } }, ch:{ 'me:back':{ on:{ [LK]:true } } } });
@@ -580,6 +619,49 @@ cases.push(['return blow: models left to attack back, on average', () => (r => r
 // 1/4 × (5/3 + 1/2) + 1/2 × 5/3 = 13/24 + 20/24 = 1.375 destroyed of 10 W1 models
 cases.push(['return blow: the weapons of the models left', () => C.play({ beats:[{ side:1, input:{ groups:[g({ n:2, kw:['TORRENT'] })], target:{ T:4, models:[big(1, 1, 7, { name:'b', bodyguard:true, lines:[{ id:0, n:1 }] }), big(1, 1, 7, { name:'c', char:true, lines:[{ id:1, n:1 }] })] }, ctx:{} } },
   { side:0, input:{ groups:[g({ name:'c', n:1, A:'2', S:8, kw:['TORRENT'], carry:[[1, 1]] }), g({ name:'b', n:1, kw:['TORRENT'], carry:[[0, 1]] })], target:{ T:4, models:[big(10, 1)] }, ctx:{} } }], sims:20000, seed:5 }).beats[1].killed, 33 / 24, 0.03]);
+// ---- the turn as the screen plans it: hazard rolls, One Last Kill, Berserker Frenzy, a tick that lasts ----
+const turnOf = (s, sims) => { const p = dm.plan(s); return { p, r:C.play(dm.app.dmIn(p, sims || 20000)) }; };
+const memo = f => { let v; return () => v || (v = f()); };
+// the review's turn, from its own independent simulation (200k games): Mek + Flash Gitz shoot, charge and fight a Lord on
+// Juggernaut + Khorne Berzerkers, then the fight back. 11 [HAZARDOUS] weapons (10 Snazzguns, the Kustom Mega-slugga): 3.67 mortal
+// wounds on the Gitz after the shooting; 9.1 of 10 Gitz left to fight; the fight destroys 2.96; the fight back 8.7 of 11; Mek 46% dead
+const FG = memo(() => turnOf({ army:'shooty', opp:'princes', atk:'mek-flashgitz', tArmy:'princes', tgt:'lord-on-juggernaut-khorne-berzerkers', turn:{ me:{ shoot:true, charge:true, fight:true, back:true } } }));
+cases.push(['the review’s turn: hazard rolls after the shooting', () => FG().r.beats[0].hazard.rolls, 11, 0]);
+cases.push(['the review’s turn: their mortal wounds', () => FG().r.beats[0].hazard.mw, 11 / 3, 0.1]);
+cases.push(['the review’s turn: Gitz left to fight', () => FG().r.beats[1].groups.find(x => x.n > 1).n, 9.1]);
+cases.push(['the review’s turn: the fight destroys', () => FG().r.beats[1].killed, 2.96]);
+cases.push(['the review’s turn: the fight back destroys', () => FG().r.beats[2].killed, 8.7]);
+cases.push(['the review’s turn: the Mek dead at the end', () => FG().r.sides[0].rows.find(x => x.name === 'Mek').gone, 0.46, 0.015]);
+// Berserker Frenzy (comeback): Nazdreg + Meganobz charge and fight Khârn + Berzerkers, then the fight back: Khârn is set back up
+// on a 2+ at the end of the phase, so he stays down after it in 1/6 of the games he is destroyed in (taken as his first time);
+// he does not fight back the same phase
+const KH = memo(() => turnOf({ army:'melee', opp:'princes', atk:'nazdreg-meganobz', tgt:'kh-rn-the-betrayer-khorne-berzerkers', turn:{ me:{ charge:true, fight:true, back:true } } }));
+cases.push(['Berserker Frenzy: in the fight’s target', () => +!!(KH().p.beats[0].M.input.target.revive || {})['Khârn the Betrayer'], 1]);
+cases.push(['Berserker Frenzy: down after the phase = destroyed × 1/6', () => (x => x.down / x.gone)(KH().r.beats[0].rows.find(x => x.name === 'Khârn the Betrayer')), 1 / 6, 1e-9]);
+cases.push(['Berserker Frenzy: at the end of the turn', () => (r => r.sides[1].rows.find(x => x.name === 'Khârn the Betrayer').gone / r.beats[0].rows.find(x => x.name === 'Khârn the Betrayer').gone)(KH().r), 1 / 6, 1e-9]);
+// One Last Kill (fightOnDeath, Mozrog Skragbad): Khârn + Berzerkers charge and fight him, then he fights back: destroyed in the fight
+// (p), he still fights on a 2+: 1 - p + p × 5/6 of him fights back
+const MZ = memo(() => turnOf({ army:'melee', opp:'princes', dir:'them', aArmy:'princes', atk:'kh-rn-the-betrayer-khorne-berzerkers', tgt:'mozrog-skragbad', turn:{ them:{ charge:true, fight:true, back:true } } }));
+cases.push(['One Last Kill: ticked in the fight back', () => +!!(MZ().p.beats[1].M.onDeath && MZ().p.beats[1].M.onDeath.need === 2), 1]);
+cases.push(['One Last Kill: Mozrog fights back', () => MZ().r.beats[1].groups[0].n, (p => 1 - p / 6)(MZ().r.beats[0].rows[0].gone), 0.02]);
+// a tick that lasts (lasts: Benevolence of the Omnissiah, "until the start of your next Command phase"): ticked in the Shoot step it
+// is in the fight that follows (carried, Feel No Pain 6+, 5+ against mortal wounds), and can be unticked there for that step alone
+const BEN = 't:1CP Benevolence of the Omnissiah: Feel No Pain 6+ (5+ against mortal wounds), until the start of your next Command phase';
+const benP = more => dm.plan({ army:'shooty', opp:'purge-goes-the-foe', atk:'mek-flashgitz', tArmy:'purge-goes-the-foe', tgt:'cybernetica-datasmith-kastelan-robots', turn:{ me:{ shoot:true, charge:true, fight:true } },
+  ch:Object.assign({ 'me:shoot':{ on:{ [BEN]:true } } }, more || {}) });
+cases.push(['a tick that lasts: carried into the fight', () => +(b => { const x = b.M.defs.find(d => d.k === BEN); return !!x && x.on && x.carried.from === 'Shoot' && b.M.input.target.mod.fnp === 6 && b.M.input.target.mod.fnpMortal === 5; })(benP().beats[1]), 1]);
+cases.push(['a tick that lasts: unticked in the fight alone', () => +(p => !p.beats[1].M.defs.find(d => d.k === BEN).on && !(p.beats[1].M.input.target.mod || {}).fnp && p.beats[0].M.defs.find(d => d.k === BEN).on)(benP({ 'me:fight':{ on:{ [BEN]:false } } })), 1]);
+// Clever Know-wotz (oneModel) on a unit of 6 Killa Kans: +1 to hit for one model's weapons: of 12 Kill Shot attacks the 2 of one Kan
+// hit on a roll one better: + 2 × 1/6 hits
+cases.push(['Clever Know-wotz: one model’s weapons', () => { const s = { army:'shooty', ph:'shooting', atk:'killa-kans', tArmy:'typed', typed:{ n:20, T:4, W:1, Sv:7 } };
+  const h0 = C.explain(dm.calc(s).input).total.hits; s.on = { [box(s, 'Clever Know-wotz').k]:true }; const c = dm.calc(s);
+  return (c.input.groups.filter(x => x.mods.some(m => /Clever Know-wotz/.test(m.from))).reduce((t, x) => t + x.n, 0) === 1) * (C.explain(c.input).total.hits - h0); }, 2 / 6, 1e-9]);
+// Rites of Coalescence (defAlways): -1 to wound, counted for every attack (the calculator keeps a PSYKER model in the unit), said so
+cases.push(['Rites of Coalescence: counted always, and said so', () => (x => +(x.state === 'on' && x.why === 'always' && /PSYKER model stays/.test(x.note)))(dbox({ army:'shooty', ph:'shooting', atk:'mek-flashgitz', tArmy:'pubstomper', tgt:'sorcerer-in-terminator-armour-scarab-occult-terminators' }, 'Rites of Coalescence')), 1]);
+// "this unit or the target within range of an objective": one fact for the pair, said once, ticks the rules of either
+cases.push(['the pair on an objective: one fact for both units', () => { const s = { army:'shooty', atk:'mek-flashgitz', tArmy:'typed', typed:{ n:10, T:4, W:1, Sv:3 }, facts:{ me:{ pair:{ objective:true } } } };
+  const p = dm.plan(s), st = dm.app.dmState(), f = dm.app.dmLevers(st, dm.app.dmPlan(st)).filter(l => l.fact === 'objective');
+  return +(f.length === 1 && f[0].unitWho === 'pair' && f[0].on && ['Finderz Keeperz', 'Wreckin’ and Lootin’'].every(n => p.beats[0].M.rules.find(r => r.m.from === n).on)); }, 1]);
 for(const t of twice) console.log('  ' + t);
 
 let fail = 0;

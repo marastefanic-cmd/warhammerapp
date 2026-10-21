@@ -56,6 +56,8 @@ function items(D, appSource){
         if(ab.damaged) add(a.id, 'ability-damaged', w + ' · ' + ab.name, { damaged:ab.damaged, W:u.stats[0].W }, src);
         // the Damage tab's reading of it: always protects the unit (defAlways), its numbers (defCalc), always riled up (riled)
         if(ab.defAlways || ab.defCalc || ab.riled) add(a.id, 'ability-calc', w + ' · ' + ab.name, { def:ab.def, defAlways:ab.defAlways, defCalc:ab.defCalc, riled:ab.riled, models:u.models }, src);
+        // and what it plays in the turn (fightOnDeath: One Last Kill; comeback: Berserker Frenzy), what is approximate about it (calcNote)
+        if(ab.fightOnDeath || ab.comeback || ab.calcNote) add(a.id, 'ability-turn', w + ' · ' + ab.name, { fightOnDeath:ab.fightOnDeath, comeback:ab.comeback, calcNote:ab.calcNote, who:ab.who, models:u.models }, src);
       }
       for(const m of u.mods || []) add(a.id, 'unit-footnote', w, m, cited(a.id, u, m));
       for(const m of u.aura || []) add(a.id, 'unit-aura', w, m, cited(a.id, u, m));
@@ -76,11 +78,11 @@ function items(D, appSource){
     for(const id of a.detachments){
       const d = f.detachments[id];
       if(d.rule) rulesMeta(d.name + ' rule', d.rule, d.rule.text + (d.rule.table ? '\n' + d.rule.table.map(t => t.join(': ')).join('\n') : ''));
-      for(const s of d.stratagems || []) for(const k of ['phases', 'turn', 'turns', 'needs', 'mod', 'def', 'defCalc', 'defPick', 'gist', 'note', 'cpNote', 'ask'])
+      for(const s of d.stratagems || []) for(const k of ['phases', 'turn', 'turns', 'needs', 'mod', 'def', 'defCalc', 'defPick', 'calcNote', 'lasts', 'gist', 'note', 'cpNote', 'ask'])
         if(s[k] !== undefined) add(a.id, 'strat-' + k, d.name + ' · ' + s.name, { [k]:s[k] }, { stratagem:s.name, text:stratText(s) });
     }
   }
-  for(const s of D.coreStratagems) for(const k of ['phases', 'turn', 'turns', 'needs', 'mod', 'def', 'defCalc', 'defPick', 'gist', 'note'])
+  for(const s of D.coreStratagems) for(const k of ['phases', 'turn', 'turns', 'needs', 'mod', 'def', 'defCalc', 'defPick', 'calcNote', 'lasts', 'gist', 'note'])
     if(s[k] !== undefined) add('core', 'strat-' + k, 'Core · ' + s.name, { [k]:s[k] }, { stratagem:s.name, text:stratText(s) });
   // app notes inside core rules text, and which rule each keyword spelling opens
   for(const [name, text] of Object.entries(D.rules)) for(const line of text.split('\n')) if(/^\*App note/.test(line))

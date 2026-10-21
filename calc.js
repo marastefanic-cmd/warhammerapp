@@ -85,7 +85,7 @@ const up = x => String(x).toUpperCase().trim();
 // one weapon keyword → { k, v } ("RAPID FIRE 2", "SUSTAINED HITS D3", "ANTI-MONSTER/VEHICLE 4+", "MELTA 2"); null when the
 // datasheet limits it to targets this one is not ("LETHAL HITS: non-MONSTER/VEHICLE", "DEVASTATING WOUNDS: INFANTRY", 24.01)
 const FLAG = { 'LETHAL HITS':'lethal', 'DEVASTATING WOUNDS':'dev', 'TWIN-LINKED':'twin', TORRENT:'torrent', LANCE:'lance', 'IGNORES COVER':'ignoresCover',
-  PRECISION:'precision', PSYCHIC:'psychic', HEAVY:'heavy', 'INDIRECT FIRE':'indirect', 'CLOSE-QUARTERS':'cq', PISTOL:'cq' };   // [PISTOL] is [CLOSE-QUARTERS] (24.27)
+  PRECISION:'precision', PSYCHIC:'psychic', HEAVY:'heavy', 'INDIRECT FIRE':'indirect', 'CLOSE-QUARTERS':'cq', PISTOL:'cq', HAZARDOUS:'hazardous', 'SUPA-HAZARDOUS':'supaHaz' };   // [PISTOL] is [CLOSE-QUARTERS] (24.27)
 function kwOne(x0, tkw){
   let x = up(x0), m;
   if((m = /^(.+?):\s*(NON-)?(.+)$/.exec(x))){
@@ -137,7 +137,7 @@ const WOUND_WHY = { 2:'S at least twice T', 3:'S greater than T', 4:'S equal to 
 
 // a rule's keyword (on a mod) as the keyword it gives
 const MOD_KW = { sus:v => 'SUSTAINED HITS ' + up(v), lethal:() => 'LETHAL HITS', dev:() => 'DEVASTATING WOUNDS', ignoresCover:() => 'IGNORES COVER',
-  twin:() => 'TWIN-LINKED', lance:() => 'LANCE', precision:() => 'PRECISION', cleave:v => 'CLEAVE ' + (+v || 1) };
+  twin:() => 'TWIN-LINKED', lance:() => 'LANCE', precision:() => 'PRECISION', cleave:v => 'CLEAVE ' + (+v || 1), hazardous:() => 'HAZARDOUS' };
 const NUM = { a:'A', s:'S', ap:'AP', d:'D' };
 
 // one weapon with the rules that apply to it → the numbers of its attacks against this target, and where each
@@ -233,7 +233,8 @@ function prep(g, X){
     woundMod:why.wound.reduce((t, x) => t + x.v, 0),
     critWound:Math.min(cW.v, k.antiV || 7), critWoundSrc:k.antiV && k.antiV <= cW.v ? '[' + k.text.anti + '] (24.03)' + (k.from('anti') ? ', from ' + k.from('anti') : '') : cW.src, rrWound:rrWound.v, rrWoundSrc:rrWound.src,
     AP:Math.min(0, (ap0 || 0) - apImp + (tm.apWorse || 0)),   // improvements and worsenings added up, then not worse than 0
-    D, dPlus, sus:k.sus || null, lethal:!!k.lethal, dev:!!k.dev, precision:!!k.precision, psychic:ignore
+    D, dPlus, sus:k.sus || null, lethal:!!k.lethal, dev:!!k.dev, precision:!!k.precision, psychic:ignore,
+    hazRolls:(k.hazardous ? 1 : 0) + (k.supaHaz ? 2 : 0)   // hazard rolls after the unit's attacks (24.15; Supa-hazardous: two)
   };
   G.Dmean = diceMean(D); G.meltaMean = G.melta ? diceMean(G.melta) : 0;
   return G;
@@ -492,7 +493,14 @@ function run(input){
    0 and 1) keep, from one beat to the next of a game, the wounds they lost and the models destroyed; a beat's attacks are made
    by the models of the other side still alive.
      input.beats  [{ side (the side the attacks target: 0 or 1), input (as run: groups, target, ctx), order (an allocation
-                    order; default: the one run picks for this beat on its own) }]
+                    order; default: the one run picks for this beat on its own), fight (a Fight-phase beat), onDeath { lines,
+                    need } (the attacking side's models on those lines destroyed in an earlier fight beat still attack on a
+                    need+, rolled for each in each game: One Last Kill), ph (its phase: a comeback is rolled when the phase
+                    ends, after its last beat), hazard { mw } (after its attacks the attacking side makes a hazard roll for
+                    each [HAZARDOUS] weapon, two for [SUPA-HAZARDOUS]: each 1-2 is mw mortal wounds on it, 06.02/06.03/24.15),
+                    self (the attacking side's own target: T, kw, models, mod, for its hazard rolls when no beat targets it) }]
+                  target.revive { row name: { roll, wounds } }: that CHARACTER, the first time it is destroyed, is set back
+                  up at the end of that phase on a roll+ with those wounds (Berserker Frenzy)
                   A side's target.models rows are the same in every beat that targets it (the rules that apply can change:
                   InSv, Feel No Pain); a row can list its models lines (lines:[{ id, n }], the first removed first).
                   A beat's weapon can name the models that make its attacks: carry [[line id, weapons per model]] of the side
@@ -501,11 +509,12 @@ function run(input){
      input.sims (default 10000), input.seed (default 1)
    result: { beats:[{ killed (mean destroyed in this beat), dmg (wounds lost in it), wipe (P the side is destroyed by its end),
              dist [P(exactly k destroyed by its end)], before (mean destroyed before it), rows:[{ name, count, char, gone (P all of
-             the row destroyed by its end) }], groups:[{ n (mean models attacking with it),
-             attacks, hits, wounds, unsaved, mortals, dmg, gone }], order }],
+             the row destroyed by its end), down (P still destroyed once its phase is over: a comeback's roll counted as the chance
+             it fails) }], groups:[{ n (mean models attacking with it), attacks, hits, wounds, unsaved, mortals, dmg, gone }], hazard { rolls, mw, lost, dead } (means,
+             on the attacking side; null without hazard), order }],
              sides:[{ models, killed (mean destroyed by the end), wipe, rows:[{ name, count, char, left (mean), gone (P all of
-             the row destroyed) }] }] }
-   One beat played alone gives what run gives (the same dice). */
+             the row destroyed) }] }] (a comeback rolled at the end of the last phase counted as the chance its roll fails) }
+   One beat played alone gives what run gives (the same dice); its hazard rolls and a comeback have dice of their own. */
 function play(input){
   const sims = input.sims || 10000, seed = input.seed || 1;
   const B = bufsOf();
@@ -515,24 +524,56 @@ function play(input){
     // b.alt: { lines (models lines of the attacking side), input }: the attacks when every model on those lines is destroyed (the
     // same weapons, without that CHARACTER's own rules); its target is the same
     const alt = b.alt && b.alt.lines && b.alt.lines.length ? (() => { const S2 = setup(b.alt.input); S2.Tdefault = S.Tdefault; return { lines:b.alt.lines, S:S2, W:worldOf(S2) }; })() : null;
-    return { b, S, W:worldOf(S), alt, order, sum:sumsOf(S.G), dist:new Array(S.total + 1).fill(0), killed:0, dmg:0, before:0, rowGone:S.rows.map(() => 0), altN:0 };
+    return { b, S, W:worldOf(S), alt, order, sum:sumsOf(S.G), dist:new Array(S.total + 1).fill(0), killed:0, dmg:0, before:0, rowGone:S.rows.map(() => 0), rowDown:S.rows.map(() => 0), altN:0,
+      hz:{ rolls:0, mw:0, lost:0, dead:0 } };
   });
-  // each side's models, by stats row and place in the row (ri, k), with the line each belongs to
-  const sides = [0, 1].map(si => { const first = beats.find(x => x.b.side === si); if(!first) return null;
+  // each side's models, by stats row and place in the row (ri, k), with the line each belongs to: from the first beat that
+  // targets it, else (a side that only attacks) from its own models as a beat gives them (self: its hazard rolls need them)
+  const sides = [0, 1].map(si => {
+    let first = beats.find(x => x.b.side === si);
+    if(!first){ const own = beats.find(x => x.b.side === 1 - si && x.b.self); if(!own) return null;
+      const S = setup({ groups:[], target:own.b.self, ctx:{} }); S.Tdefault = parseInt(own.b.self.T, 10) || 1;
+      first = { S, W:worldOf(S), order:ordersOf(S.groups)[0], b:{ input:{ target:own.b.self } } }; }
     const rows = first.S.rows, at = []; let t = 0; for(const r of rows){ at.push(t); t += r.count; }
     const line = new Int32Array(t).fill(-1); for(const M of first.W.models) line[at[M.ri] + M.k] = M.line;
-    return { rows, at, n:t, w:new Float64Array(t), line, killed:0, wipe:0, rowLeft:rows.map(() => 0), rowGone:rows.map(() => 0) }; });
+    // a CHARACTER set back up at the end of the phase it is first destroyed in (target.revive { row name: { roll, wounds } }:
+    // Berserker Frenzy), from any beat that targets the side
+    const rv = []; for(const x of beats) if(x.b.side === si && x.b.input.target.revive) for(const [name, v] of Object.entries(x.b.input.target.revive)){
+      const ri = rows.findIndex(r => r.name === name); if(ri >= 0) for(let k = 0; k < rows[ri].count; k++) if(!rv.some(q => q.i === at[ri] + k)) rv.push({ i:at[ri] + k, ri, roll:+v.roll || 2, wounds:+v.wounds || 1 }); }
+    return { rows, at, n:t, w:new Float64Array(t), died:new Int32Array(t), used:new Uint8Array(t), el:new Float64Array(t), line, S:first.S, W:first.W, order:first.order, rv,
+      killed:0, wipe:0, rowLeft:rows.map(() => 0), rowGone:rows.map(() => 0) }; });
   // each beat its own dice (beat 0's are run's): a beat's numbers are the same whether or not more beats follow it, and a
-  // change in one beat leaves the dice of the others as they were
-  beats.forEach((x, j) => { x.R = rng(seed + j * 1000003); });
+  // change in one beat leaves the dice of the others as they were. Hazard rolls and a comeback have dice of their own
+  beats.forEach((x, j) => { x.R = rng(seed + j * 1000003); x.RH = rng(seed + j * 1000003 + 7777); x.RV = rng(seed + j * 1000003 + 15551); });
+  // mortal wounds on a side, one at a time, each to the model the allocation picks (06.02: one that has lost wounds first, the
+  // CHARACTER groups last), with Feel No Pain against mortal wounds for each (24.12)
+  const mortalsOn = (sd, n, R, j) => {
+    const { groups, tm } = sd.S, { byGroup } = sd.W;
+    for(const M of sd.W.models) M.w = sd.w[sd.at[M.ri] + M.k];
+    const nc = sd.order.filter(gi => !groups[gi].char), ch = sd.order.filter(gi => groups[gi].char);
+    const pickIn = gi => { let first = null; for(const M of byGroup[gi]){ if(M.w <= 0) continue; if(M.w < M.row.W) return M; if(!first) first = M; } return first; };
+    const current = () => { for(const list of [nc, ch]){ let first = null; for(const gi of list){ const M = pickIn(gi); if(!M) continue; if(M.w < M.row.W) return M; if(!first) first = M; } if(first) return first; } return null; };
+    let lost = 0, dead = 0;
+    for(let i = 0; i < n; i++){ const M = current(); if(!M) break;
+      const fnp = Math.min(M.row.fnp || 7, tm.fnp || 7, M.row.fnpMortal || 7, tm.fnpMortal || 7);
+      if(fnp <= 6 && d6(R) >= fnp) continue;
+      M.w -= 1; lost++; if(M.w <= 0) dead++; }
+    for(const M of sd.W.models){ const i = sd.at[M.ri] + M.k; if(M.w <= 0 && sd.w[i] > 0) sd.died[i] = j; sd.w[i] = M.w; }
+    return { lost, dead };
+  };
   for(let s = 0; s < sims; s++){
-    for(const sd of sides) if(sd){ let i = 0; for(const r of sd.rows) for(let k = 0; k < r.count; k++) sd.w[i++] = r.W; }
-    for(const x of beats){ const R = x.R;
+    for(const sd of sides) if(sd){ let i = 0; for(const r of sd.rows) for(let k = 0; k < r.count; k++) sd.w[i++] = r.W; sd.died.fill(-1); sd.used.fill(0); sd.el.fill(0); }
+    for(let j = 0; j < beats.length; j++){ const x = beats[j], R = x.R;
       const tg = sides[x.b.side], by = sides[1 - x.b.side];
       // the attacking side's models still alive, by models line
       let nOf = null, extraOf = null;
       const alive = {};
-      if(by){ for(let i = 0; i < by.n; i++) if(by.w[i] > 0) alive[by.line[i]] = (alive[by.line[i]] || 0) + 1; }
+      // b.onDeath { lines, need }: models on those lines destroyed in an earlier Fight-phase beat (fight) of this unit's turn of
+      // attacks fight anyway on a need+, rolled for each such model in each game (One Last Kill); they stay destroyed
+      const od = x.b.onDeath;
+      if(by){ for(let i = 0; i < by.n; i++){
+        if(by.w[i] > 0) alive[by.line[i]] = (alive[by.line[i]] || 0) + 1;
+        else if(od && by.died[i] >= 0 && beats[by.died[i]].b.fight && od.lines.includes(by.line[i]) && d6(R) >= od.need) alive[by.line[i]] = (alive[by.line[i]] || 0) + 1; } }
       const useAlt = !!x.alt && x.alt.lines.every(id => !alive[id]);
       if(useAlt) x.altN++;
       const { S, W } = useAlt ? x.alt : x;
@@ -546,14 +587,33 @@ function play(input){
       if(left < S.total) extraOf = S.G.map(G => G.extraPer * Math.floor(left / 5));
       const d0 = S.total - left;
       const { dead, lost } = attackOnce(S, W, x.order, R, useAlt ? x.altSum || (x.altSum = sumsOf(S.G)) : x.sum, B, nOf, extraOf);
-      for(const M of W.models) tg.w[tg.at[M.ri] + M.k] = M.w;
+      for(const M of W.models){ const i = tg.at[M.ri] + M.k; if(M.w <= 0 && tg.w[i] > 0) tg.died[i] = j; tg.w[i] = M.w; }
       x.before += d0; x.killed += dead - d0; x.dmg += lost; x.dist[dead]++;
       // each stats row of the target destroyed by the end of this beat (a CHARACTER's fate)
       for(let ri = 0; ri < tg.rows.length; ri++){ let a = 0; for(let k = 0; k < tg.rows[ri].count; k++) if(tg.w[tg.at[ri] + k] > 0) a++; if(!a) x.rowGone[ri]++; }
+      // b.hazard { mw }: after its attacks, the attacking unit makes one hazard roll for each [HAZARDOUS] weapon it attacked with,
+      // two for each [SUPA-HAZARDOUS] one, all at once: each 1-2 is mw mortal wounds on it (06.03, 24.15)
+      if(x.b.hazard && by && left > 0){ let rolls = 0; S.G.forEach((G, gi) => { if(!G.hazRolls || G.out) return; rolls += G.hazRolls * (nOf ? nOf[gi] : G.n); });
+        let mw = 0; for(let r = 0; r < rolls; r++) if(d6(x.RH) <= 2) mw += x.b.hazard.mw || 1;
+        x.hz.rolls += rolls; x.hz.mw += mw;
+        if(mw){ const h = mortalsOn(by, mw, x.RH, j); x.hz.lost += h.lost; x.hz.dead += h.dead; } }
+      // the end of a phase (the next beat is in another phase, or none follows): a CHARACTER first destroyed in this phase is set back
+      // up on a roll+ (rv: Berserker Frenzy), with its wounds, not within Engagement Range: after the beats of this phase
+      const last = j === beats.length - 1 || (beats[j + 1].b.ph || '') !== (x.b.ph || '');
+      if(last){
+        for(const sd of sides) if(sd && sd.rv.length){ sd.el.fill(0); for(const q of sd.rv){
+          if(sd.w[q.i] > 0 || sd.used[q.i] || sd.died[q.i] < 0 || (beats[sd.died[q.i]].b.ph || '') !== (x.b.ph || '')) continue;
+          sd.used[q.i] = 1; sd.el[q.i] = (q.roll - 1) / 6; if(d6(x.RV) >= q.roll){ sd.w[q.i] = Math.min(q.wounds, sd.rows[q.ri].W); sd.died[q.i] = -1; } } }
+        // each beat of this phase: its target's rows still destroyed once the phase is over; a model that rolled for its comeback
+        // counts with the chance its roll fails (the same mean as its die, without the die's noise: destroyed X, down X × 1/6)
+        for(let jj = j; jj >= 0 && (beats[jj].b.ph || '') === (x.b.ph || ''); jj--){ const y = beats[jj], t2 = sides[y.b.side];
+          for(let ri = 0; ri < t2.rows.length; ri++){ let a = 0, f = 1; for(let k = 0; k < t2.rows[ri].count; k++){ const i = t2.at[ri] + k; if(t2.el[i]) f *= t2.el[i]; else if(t2.w[i] > 0) a++; } if(!a) y.rowDown[ri] += f; } } }
     }
-    for(const sd of sides) if(sd){ let dead = 0, i = 0;
-      sd.rows.forEach((r, ri) => { let a = 0; for(let k = 0; k < r.count; k++, i++) if(sd.w[i] > 0) a++; sd.rowLeft[ri] += a; if(!a) sd.rowGone[ri]++; dead += r.count - a; });
-      sd.killed += dead; if(dead === sd.n) sd.wipe++; }
+    // the end of the turn (the end of its last phase): a comeback rolled then counted as the chance its roll fails, as above
+    for(const sd of sides) if(sd){ let dead = 0, i = 0, fw = 1, all = true;
+      sd.rows.forEach((r, ri) => { let a = 0, f = 1, e = 0; for(let k = 0; k < r.count; k++, i++){ if(sd.el[i]){ f *= sd.el[i]; e += 1 - sd.el[i]; } else if(sd.w[i] > 0) a++; }
+        sd.rowLeft[ri] += a + e; if(!a) sd.rowGone[ri] += f; dead += r.count - a - e; if(a) all = false; else fw *= f; });
+      sd.killed += dead; if(all) sd.wipe += fw; }
   }
   const mean = v => v / sims;
   return {
@@ -562,7 +622,10 @@ function play(input){
       groups:x.sum.map((g0, i) => { const a = x.altSum && x.altSum[i], g = k => g0[k] + (a ? a[k] : 0);
         return { n:mean(g('n')), attacks:mean(g('attacks')), hits:mean(g('hits')), wounds:mean(g('wounds')), unsaved:mean(g('unsaved')), mortals:mean(g('mortals')), dmg:mean(g('dmg')), gone:mean(g('gone')), out:x.S.G[i].out, notes:x.S.G[i].notes }; }),
       alt:x.alt ? mean(x.altN) : 0,
-      rows:x.S.rows.map((r, ri) => ({ name:r.name, count:r.count, char:!!r.char, gone:mean(x.rowGone[ri]) })),
+      // gone: destroyed by the end of this beat; down: still destroyed after the end of its phase (a comeback: rv)
+      rows:x.S.rows.map((r, ri) => ({ name:r.name, count:r.count, char:!!r.char, gone:mean(x.rowGone[ri]), down:mean(x.rowDown[ri]) })),
+      // the attacking unit's hazard rolls after this beat: rolls, mortal wounds, wounds lost and models destroyed (means)
+      hazard:x.b.hazard ? { rolls:mean(x.hz.rolls), mw:mean(x.hz.mw), lost:mean(x.hz.lost), dead:mean(x.hz.dead), played:!!sides[1 - x.b.side] } : null,
       order:x.order.map(i => x.S.groups[i].name), orderIdx:x.order })),
     sides:sides.map(sd => sd && { models:sd.n, killed:mean(sd.killed), wipe:mean(sd.wipe), rows:sd.rows.map((r, ri) => ({ name:r.name, count:r.count, char:!!r.char, left:mean(sd.rowLeft[ri]), gone:mean(sd.rowGone[ri]) })) })
   };
