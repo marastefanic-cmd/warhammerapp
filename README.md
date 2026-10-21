@@ -17,12 +17,12 @@ detachments and the core ones, each with a one-line gist, its timing and which o
 the ability when it is conditional; general rules are left out) · **Damage** (a damage calculator: one of
 your units against one of the opponent's list, picked per list; weapons, the situation and both units'
 rules as tick boxes, a rule counting only when every word of its footnote is understood; `calc.js` plays
-the 11th edition attack sequence out 10,000 times with seeded dice) · **Game** (the game tracker, and the only place
-anything for running a game shows: battle round, whose turn and phase; both players' CP and VP; the choices this list's
-rules ask for, such as the Oath, Blessings or Doctrina, found in the rules' own words and kept for the game; what this list
-and the opponent's can do in the phase shown, by the Core Rules' phase steps; the Event Companion's mission sequence with
-both lists' numbers. Every rules sentence is quoted, the Core Rules' and Event Companion's from `data.js` GAME, checked by
-`verify/texts.js`. It shares the Overview's uses-per-battle ticks and its New game).
+the 11th edition attack sequence out 10,000 times with seeded dice). **Game tracker** (a row on Find, like the Damage
+calculator, and the only place anything for running a game shows): battle round, whose turn and phase; both players' CP
+and VP; the choices this list's rules ask for, such as the Oath, Blessings or Doctrina, found in the rules' own words and
+kept for the game; what this list and the opponent's can do in the phase shown, by the Core Rules' phase steps; the Event
+Companion's mission sequence with both lists' numbers. Every rules sentence is quoted, the Core Rules' and Event
+Companion's from `data.js` GAME, checked by `verify/texts.js`. It shares the Overview's uses-per-battle ticks and its New game.
 
 **Rules questions** (the ? in the top bar, once an Anthropic API key is saved in Settings): a chat with
 Claude that is sent the Core Rules with their errata and FAQs (`rules/core-rules.md`), the rules this app

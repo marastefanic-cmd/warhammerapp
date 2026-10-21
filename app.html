@@ -867,10 +867,10 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
 .thm .tn{font:600 12.5px/1.15 var(--f-head); letter-spacing:.02em; color:var(--fg2)}
 .thm.on .tn{color:var(--fg)}
 .lead{margin:12px 0 10px; font-size:14.5px; line-height:1.45; color:var(--fg2)}
-/* the bar in six equal sixths, edge to edge (the bar's side padding taken back), each icon in the middle of its sixth */
-.tabs{display:grid; grid-template-columns:repeat(6, minmax(0, 1fr)); margin:0 calc(-1 * max(16px, env(safe-area-inset-right, 0px))) 0 calc(-1 * max(16px, env(safe-area-inset-left, 0px)))}
+/* the bar in five equal fifths, edge to edge (the bar's side padding taken back), each icon in the middle of its fifth */
+.tabs{display:grid; grid-template-columns:repeat(5, minmax(0, 1fr)); margin:0 calc(-1 * max(16px, env(safe-area-inset-right, 0px))) 0 calc(-1 * max(16px, env(safe-area-inset-left, 0px)))}
 .tabs button{position:relative; display:grid; justify-items:center; gap:2px; min-height:50px; padding:5px 0 3px; border-radius:8px; font:700 11px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--muted); min-width:0}
-/* the six cells drawn: a hairline between neighbours, the open tab's cell tinted, so the eye measures cells, not the gaps between words of different lengths */
+/* the five cells drawn: a hairline between neighbours, the open tab's cell tinted, so the eye measures cells, not the gaps between words of different lengths */
 .tabs button + button::before{content:''; position:absolute; left:0; top:12px; bottom:12px; border-left:1px solid var(--line)}
 .tabs button.on{background:var(--surface)}
 .tabs button.on::before, .tabs button.on + button::before{display:none}
@@ -916,7 +916,7 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
 .dl i{font-style:normal; font:600 11px var(--f-head); letter-spacing:.08em; color:var(--muted); margin-right:2px}
 .dl .sv{font:700 14.5px var(--f-head); font-variant-numeric:tabular-nums}
 
-/* ---------- the Game tab: the game tracker ----------
+/* ---------- the Game tracker ----------
    both players' CP and VP as big steppers, the choices as chips (the home filters' pills), each phase's steps as the
    datasheet's quiet row labels, and every quote with its source above it, under a hairline, as the Overview's rows */
 .gsc{display:grid; grid-template-columns:28px minmax(0,1fr) minmax(0,1fr); align-items:center; gap:8px 10px; padding:10px 2px 12px; border-top:1px solid var(--line)}
@@ -1165,8 +1165,8 @@ const TURN_NAME = { your:'Your turn', opp:'Their turn', either:'Either turn' };
 const ROLE_ORDER = ['Epic Hero','Character','Battleline','Infantry','Mounted','Beast','Swarm','Monster','Vehicle','Dedicated Transport','Fortification','Other'];
 const ROLE_LABEL = { 'Epic Hero':'Epic Heroes', 'Character':'Characters', 'Battleline':'Battleline', 'Infantry':'Infantry', 'Mounted':'Mounted', 'Beast':'Beasts', 'Swarm':'Swarms',
   'Monster':'Monsters', 'Vehicle':'Vehicles', 'Dedicated Transport':'Dedicated Transports', 'Fortification':'Fortifications', 'Other':'Other' };
-const SCREEN_TITLE = { pregame:'Overview', damage:'Damage', game:'Game', units:'Units', strats:'Stratagems', ranged:'Ranged weapons', melee:'Melee weapons', abilities:'Abilities', rules:'Rules', bases:'Bases & proxies' };
-const BACK_TITLE = { pregame:'Overview', ranged:'Ranged', melee:'Melee', rules:'Rules', bases:'Bases' };
+const SCREEN_TITLE = { pregame:'Overview', damage:'Damage', game:'Game tracker', units:'Units', strats:'Stratagems', ranged:'Ranged weapons', melee:'Melee weapons', abilities:'Abilities', rules:'Rules', bases:'Bases & proxies' };
+const BACK_TITLE = { pregame:'Overview', game:'Game', ranged:'Ranged', melee:'Melee', rules:'Rules', bases:'Bases' };
 const HUNTER_KW = 'HUNTER: MONSTER/VEHICLE';
 const KEY_LABEL = { range:'RNG', A:'A', BS:'BS', WS:'WS', S:'S', AP:'AP', D:'D' };
 // a value or keyword that a rule of the list changes (w.from / s.from, derived from BSData and checked
@@ -1190,12 +1190,12 @@ const moreShown = new Set();                 // search groups you expanded
 let focusSearch = false;
 
 /* ---------- tabs ----------
-   Tabs at the bottom of every army screen (Find · Units · Stratagems · Rules · Damage · Game), ‹ › between
+   Tabs at the bottom of every army screen (Find · Units · Stratagems · Rules · Damage), ‹ › between
    datasheets, and tick boxes for the uses a rule allows per battle, kept until New game. */
 // the tabs, and which one the current screen belongs to
-const TABS = [['army', 'i-telescope', 'Find'], ['units', 'i-units', 'Units'], ['strats', 'i-cards', 'Stratagems'], ['rules', 'i-book', 'Rules'], ['damage', 'i-swords', 'Damage'], ['game', 'i-hourglass', 'Game']];
+const TABS = [['army', 'i-telescope', 'Find'], ['units', 'i-units', 'Units'], ['strats', 'i-cards', 'Stratagems'], ['rules', 'i-book', 'Rules'], ['damage', 'i-swords', 'Damage']];
 const isTab = s => TABS.some(([k]) => k === s);
-const tabOf = s => ({ unit:'units', pregame:'army', bases:'army', ranged:'army', melee:'army', abilities:'army' })[s] || s;
+const tabOf = s => ({ unit:'units', pregame:'army', game:'army', bases:'army', ranged:'army', melee:'army', abilities:'army' })[s] || s;
 const tabBar = () => '<div class="tabs">' + TABS.map(([s, ic, label]) => '<button data-tab="' + s + '"' + (tabOf(cur.s) === s ? ' class="on" aria-current="page"' : '') + '><svg class="ic" aria-hidden="true"><use href="#' + ic + '"/></svg><span>' + label + '</span></button>').join('') + '</div>';
 // uses per battle ticked off in this game (Bomb Squig: twice per battle, per unit), per army, until New game
 const usedKey = () => 'wh-used-' + (cur.army || '');
@@ -1679,6 +1679,7 @@ function screenArmy(){
     '<div id="armyMenu"><div class="list">' +
       row('pregame', 'i-flag', 'Overview', '') +
       row('damage', 'i-swords', 'Damage calculator', '') +
+      row('game', 'i-hourglass', 'Game tracker', '') +
       oppRow(a) +
       row('units', 'i-units', 'Units', unitCount(a)) +
       row('strats', 'i-cards', 'Stratagems', allStratagems(a).length) +
@@ -4674,13 +4675,13 @@ function screenPregame(){
   return h + '<p class="note">Gathered from this list’s datasheets and rules; each line opens the full text.</p>';
 }
 
-/* ---------- screen: the Game tab (the game tracker) ----------
+/* ---------- screen: the Game tracker (a row on Find, like the Damage calculator) ----------
    Everything for running a game, and only here: the battle round, whose turn and the phase; both players' CP and VP; the
    choices this list's rules ask for (the Oath, Blessings, Doctrina Imperatives…), kept for the game; what this list (and,
    folded, the opponent's) can do in the phase shown; the Event Companion's mission sequence with this list's numbers.
-   Every rules sentence is a quote (data.js GAME, or the list's own rules); what the tab works out is marked as an app note.
+   Every rules sentence is a quote (data.js GAME, or the list's own rules); what the screen works out is marked as an app note.
    The game is kept on this phone under the list you opened (yours); your opponent's list, opened from yours, shows the same
-   game from their side. Its uses per battle are the Overview's ticks (the same storage), and its New game is the Overview's.
+   game from their side. Its uses per battle are the Overview's ticks (the same storage), which its New game also clears.
    Nothing here changes a datasheet or any other screen. */
 const gameOwner = a => peeking(a) ? mineList() : a;   // whose game this is: your list's, also when you look at your opponent's
 const gameKey = a => 'wh-game-' + gameOwner(a).id;
@@ -4697,8 +4698,8 @@ const gSide = a => a === gameOwner(a) ? 'mine' : 'opp';            // the side o
 const gOther = s => s === 'mine' ? 'opp' : 'mine';
 const gTurnSide = g => g.half ? gOther(g.first) : g.first;           // whose turn it is
 const gList = (a, s) => s === 'mine' ? gameOwner(a) : oppOf(gameOwner(a)) || null;   // a side's list (none picked yet: null)
-// New game, here and on the Overview: this game's round, turn, CP, VP and choices, and the uses per battle of both its lists;
-// returns the undo
+// the Game tracker's New game: this game's round, turn, CP, VP and choices, and the uses per battle of both its lists (the
+// Overview's tick boxes, the same storage); returns the undo. The Overview's own New game clears its list's uses per battle only
 function newGame(a){
   const o = gameOwner(a), opp = oppOf(o);
   const keys = [gameKey(a), 'wh-used-' + o.id].concat(opp && opp !== o ? ['wh-used-' + opp.id] : []);
@@ -4710,15 +4711,16 @@ function newGame(a){
 // ---- the choices a list's rules ask for ----
 // A rule whose words have the player select (or activate) one, or up to two, of its options and say how long the pick
 // lasts: until the end of the battle (or "for the coming battle"), for the battle round (until its end or the start of the
-// next, or until the start of your next Command phase), or until another is picked ("remains in that protocol until it
-// enters a different one"). Its options, in its own words: its table (Doctrina Imperatives; Code Chivalric's Deeds and
+// next), until the start of this side's next Command phase (which is not the battle round for the player who goes second),
+// or until another is picked ("remains in that protocol until it enters a different one"). Its options, in its own words: its table (Doctrina Imperatives; Code Chivalric's Deeds and
 // Qualities by their D6 results), the abilities of the section it names ("the abilities in the Crimson King section": the
 // abilities listed under that name, or the bold-named parts of the ability of that name), or its own bullets (Battle
 // Protocols, Singular Purpose). A rule that has a unit or a model picked but no options (Omnissiah's Blessing) is not one.
 const GC_SEL = /\b(?:select|activate)\s+(one|up to two|up to three)\b([^.]*)/gi;
 function gcLasts(t){
   if(/\buntil the end of the battle(?! round)|\bfor the coming battle\b/i.test(t)) return 'battle';
-  if(/\buntil the (?:end of the battle round|start of the next battle round|start of your next command phase)\b/i.test(t)) return 'round';
+  if(/\buntil the (?:end of the battle round|start of the next battle round)\b/i.test(t)) return 'round';
+  if(/\buntil the start of your next command phase\b/i.test(t)) return 'command';
   if(/\bremains in that [a-z]+ until it enters a different one\b/i.test(t)) return 'kept';
   return '';
 }
@@ -4764,8 +4766,9 @@ function gcOptions(x, u){
   return null;
 }
 // when the pick is made, in the rule's words: the start of the sentence that has the player select, or the first time the text names
-const gcWhen = (x, at) => {
-  const t = String(x.text || '').replace(/\*\*/g, ''), s0 = t.lastIndexOf('.', at) + 1, sen = t.slice(s0).trim();
+// (the sentence is found in the text without its ** marks, the text it is read from)
+const gcWhen = x => {
+  const t = String(x.text || '').replace(/\*\*/g, ''), at = ([...t.matchAll(GC_SEL)][0] || { index:0 }).index, s0 = t.lastIndexOf('.', at) + 1, sen = t.slice(s0).trim();
   const own = /^(?:if your army faction is [^,]+, )?((?:at the (?:start|end) of|in) [^,]+),/i.exec(sen);
   const any = /\b(at the (?:start|end) of (?:the |your |each |every )?[^,.]+|in your [a-z ]+? phase)/i.exec(t);
   const w = own ? own[1] : any ? any[1] : x.at || '';
@@ -4795,13 +4798,19 @@ function gameChoices(a){
     return out.filter(c => !c.unit || !out.some(o => o !== c && o.unit === c.unit && o.groups.some(gr => gr.opts.some(x => x.ab === c.rule))));
   });
 }
-// the round a pick is kept under: 0 for the battle, else the battle round; a pick kept until changed is the last one made
-const gcRound = (c, g) => c.lasts === 'battle' ? '0' : String(g.round);
+// the round a pick is kept under: 0 for the battle, else the battle round; one until this side's next Command phase, the round of
+// this side's last Command phase (in the first turn of a round, for the player who goes second, the round before); a pick kept
+// until changed is the last one made
+const gcRound = (c, g, side) => c.lasts === 'battle' ? '0' : c.lasts === 'command' ? String(Math.max(1, g.half >= ((side || 'mine') === g.first ? 0 : 1) ? g.round : g.round - 1)) : String(g.round);
 function gcPick(c, g, side){
   const all = ((g.picks[side] || {})[c.key]) || {};
-  if(c.lasts !== 'kept') return { v:all[gcRound(c, g)] || {}, since:null, all };
+  if(c.lasts === 'command'){ const R = gcRound(c, g, side); return { v:all[R] || {}, since:R === String(g.round) ? null : +R, all }; }
+  if(c.lasts !== 'kept') return { v:all[gcRound(c, g, side)] || {}, since:null, all };
   for(let r = g.round; r >= 1; r--) if(isObj(all[r]) && Object.keys(all[r]).length) return { v:all[r], since:r === g.round ? null : r, all };
-  return { v:{}, since:null, all };
+  // none picked yet: the option the rule's words start the battle in ("At the start of the battle, … that unit enters Aegis Protocols")
+  const m = /\b[Aa]t the start of the battle, [^.]*?\benters (?:the )?([A-Z][\w’']*(?: [A-Z][\w’']*)*)/.exec(String(c.rule.text || '').replace(/\*\*/g, ''));
+  const gr = c.groups[0], o = m && gr.opts.find(x => m[1].toLowerCase().startsWith(x.name.toLowerCase()));
+  return o ? { v:{ [gr.name]:o.name }, since:'start', all } : { v:{}, since:null, all };
 }
 const gcNames = v => [].concat(v == null ? [] : v);
 // the units a picked option has the player select from the opponent's army ("select one CHARACTER model in your opponent's
@@ -4921,8 +4930,11 @@ function gRows(L, items, picked, pickOf){
     if(e.kind === 'strat'){ const s = e.s, pb = own && perBattle(s);
       return '<div class="gr gs' + (e.usable ? '' : ' none') + '"><span class="cp' + (s.cp >= 2 ? ' hot' : '') + '">' + esc(s.cp) + '<small>CP</small></span><span class="grb">' + gLink(L, 'strat', s.id, s.name) +
         (s.gist ? '<span class="sg">' + esc(s.gist) + '</span>' : '') + (e.usable ? '' : '<span class="from">' + esc(inArmy(L, () => usersLine(s))) + '</span>') + (pb ? ticks('s:' + s.id, pb.n, '', s.name) : '') + '</span></div>'; }
-    if(e.kind === 'rule'){ const pb = own && perBattle(e.x, true);
-      return '<div class="gr"><span class="grb">' + gLink(L, 'rule', e.name, e.name) + ' <span class="from">· ' + esc(e.src) + '</span>' + now(e) + (pb ? ticks('r:' + e.name, pb.n, '', e.name) : '') + '</span></div>'; }
+    if(e.kind === 'rule'){ const r = e.x, pb = own && perBattle(r, true) && !/per battle\b(?! round)[^.)]*\bper unit\b/i.test(r.text || '');
+      // the Overview's boxes: "You can only select each of these abilities once per battle" (Kindred Sorcery) has one per ability
+      const each = pb && /\beach of these [a-z ]+ once per battle/i.test(r.text) && r.table;
+      const boxes = !pb ? '' : each ? r.table.map(o => ticks('r:' + r.name + ':' + o[0], 1, o[0], o[0])).join('') : ticks('r:' + r.name, pb.n, '', r.name);
+      return '<div class="gr"><span class="grb">' + gLink(L, 'rule', e.name, e.name) + ' <span class="from">· ' + esc(e.src) + '</span>' + now(e) + (boxes ? '<span class="gtk">' + boxes + '</span>' : '') + '</span></div>'; }
     const p = picked ? picked(e.ab, e.units) : null, pb = own && perBattle(e.ab) && !naReason(e.ab);
     const who = e.ab.who && (p !== null || !e.src.includes(e.ab.who.replace(/: pick one$/, ''))) ? e.ab.who.replace(/: pick one$/, '') : '';
     const boxes = !pb ? '' : perBattle(e.ab).army ? abilityTicks(e.ab, e.units[0]) : e.units.flatMap(u => Array.from({ length:u.copies || 1 }, (_, i) =>
@@ -4940,7 +4952,13 @@ function gPhaseHtml(L, g, ph, turn, picked, opts, pickOf){
   if(start) groups.push([gStepName(S.round[0]), items.filter(e => e.step === 'round' || e.step === 'first')]);
   groups.push([gStepName(st[0]), items.filter(e => e.step === 'start' || (e.step === 'turnStart' && ph === 'command'))]);
   if(ph === 'command' && opts.cp) groups.push([gStepName([D.game.cp[0].num, D.game.cp[0].title]), [], rt(D.game.cp[0].text)]);   // 08.02, after 08.01
-  groups.push([st.slice(1, -1).map(gStepName).join(' · ') || 'During the phase', items.filter(e => e.step === 'during' || (e.step === 'turnStart' && ph !== 'command') || (e.step === 'turnEnd' && ph !== 'fight') || (e.step === 'roundEnd' && !(ph === 'fight' && lastTurn)))]);
+  const during = items.filter(e => e.step === 'during' || (e.step === 'turnStart' && ph !== 'command') || (e.step === 'turnEnd' && ph !== 'fight') || (e.step === 'roundEnd' && !(ph === 'fight' && lastTurn)));
+  // 08.03: a rule whose words name the Battle-shock step ("Battle-shock step of your Command phase"); 08.04's own words leave
+  // out the rules "triggered … by battle-shock rolls"
+  const mid = st.slice(1, -1), shock = ph === 'command' ? mid.find(([n]) => n === '08.03') : null;
+  const inShock = e => !!shock && /\bbattle-shock step\b/i.test(e.kind === 'strat' ? e.s.when : String((e.ab || e.x || {}).text || '').replace(/\*\*/g, ''));
+  if(shock) groups.push([gStepName(shock), during.filter(inShock)]);
+  groups.push([mid.filter(x => x !== shock).map(gStepName).join(' · ') || 'During the phase', during.filter(e => !inShock(e))]);
   groups.push([gStepName(st[st.length - 1]), items.filter(e => e.step === 'end')]);
   if(ph === 'fight') groups.push(['End of the turn', items.filter(e => e.step === 'turnEnd')]);
   if(ph === 'fight' && lastTurn) groups.push([gStepName(S.round[1]), items.filter(e => e.step === 'roundEnd')]);
@@ -5013,12 +5031,12 @@ function screenGame(){
 }
 // one choice: its rule, when the pick is made and for how long, the options as chips, then the text of the pick, quoted
 function gChoiceHtml(c, g, side, opp){
-  const P = gcPick(c, g, side), v = P.v, R = gcRound(c, g);
+  const P = gcPick(c, g, side), v = P.v, R = gcRound(c, g, side);
   const pick = (grp, opt) => esc(JSON.stringify([c.key, R, grp, opt || '']));
   const used = c.once && !c.unit ? new Set(c.groups.flatMap(gr => gr.opts.filter(o => usedSet().has('r:' + c.name + ':' + o.row + '#0')).map(o => o.name))) : new Set();
-  const lasts = c.lasts === 'battle' ? 'For the battle' : c.lasts === 'kept' ? 'Until another is picked' : 'Battle round ' + g.round;
+  const lasts = c.lasts === 'battle' ? 'For the battle' : c.lasts === 'kept' ? 'Until another is picked' : c.lasts === 'command' ? 'Until the start of your next Command phase' : 'Battle round ' + g.round;
   let h = '<div class="gc"><div class="gch">' + linkTo(c.link[0], c.link[1], c.name) + ' <span class="from">· ' + esc(c.src) + '</span></div>' +
-    '<p class="gcw">' + esc(c.when) + (c.when ? ' · ' : '') + '<b>' + esc(lasts) + '</b>' + (P.since ? ' <span class="from">(picked in battle round ' + P.since + ')</span>' : '') + '</p>' +
+    '<p class="gcw">' + esc(c.when) + (c.when ? ' · ' : '') + '<b>' + esc(lasts) + '</b>' + (P.since === 'start' ? ' <span class="from">(from the start of the battle)</span>' : P.since ? ' <span class="from">(picked in battle round ' + P.since + ')</span>' : '') + '</p>' +
     // a step the Event Companion's mission sequence (Before the battle) does not have, named as the rule names it
     ((m => m && !D.game.sequence.some(([, t]) => norm(t) === norm(m[1])) ? gNote('the Event Companion’s mission sequence (Before the battle, below) has no step called ' + esc(m[1]) + '.') : '')(/\bthe ([A-Z][a-z]+(?: [A-Z][a-z]+)+) step\b/.exec(c.when)));
   for(const gr of c.groups){
@@ -5498,11 +5516,11 @@ document.addEventListener('click', e => {
     document.querySelectorAll('[data-tick="' + CSS.escape(k) + '"]').forEach(b => { b.classList.toggle('on', on); b.setAttribute('aria-pressed', on); b.textContent = on ? '✓' : ''; });
     return;
   }
-  if(el.hasAttribute('data-newgame')){ const undo = newGame(army()); rerender();
-    toastUndo('New game: uses per battle cleared', () => { undo(); rerender(); }); return; }
-  // the Game tab
+  if(el.hasAttribute('data-newgame')){ const was = [...usedSet()], key = usedKey(); store.set(key, []); rerender();
+    toastUndo('New game: uses per battle cleared', () => { store.set(key, was); rerender(); }); return; }
+  // the Game tracker
   if(el.hasAttribute('data-gnew')){ const undo = newGame(army()); rerender();
-    toastUndo('New game: round, CP, VP, choices and uses per battle cleared', () => { undo(); rerender(); }); return; }
+    toastUndo('New game: round, CP, VP, choices and both lists’ uses per battle cleared', () => { undo(); rerender(); }); return; }
   if(ds.gstep){ const [k, side, d] = ds.gstep.split('|'), a = army(), g = gameOf(a);
     g[k][side] = Math.max(0, Math.min(k === 'cp' ? 99 : 999, g[k][side] + +d)); gameSave(a, g);
     const b = el.parentElement.querySelector('b'); if(b) b.textContent = g[k][side]; return; }
@@ -5577,7 +5595,7 @@ document.addEventListener('toggle', e => {
   const d = e.target;
   if(!d.dataset) return;
   if(d.hasAttribute('data-dmfold')){ dmState().fold[d.dataset.dmfold] = d.open; saveSession(); return; }   // the Damage tab's folds stay as left
-  if(d.hasAttribute('data-gfold')){ sess.gfold = Object.assign(isObj(sess.gfold) ? sess.gfold : {}, { [d.dataset.gfold]:d.open }); saveSession(); return; }   // and the Game tab's
+  if(d.hasAttribute('data-gfold')){ sess.gfold = Object.assign(isObj(sess.gfold) ? sess.gfold : {}, { [d.dataset.gfold]:d.open }); saveSession(); return; }   // and the Game tracker's
   if(d.dataset.stratId){
     if(d.open) openStrats.add(d.dataset.stratId); else openStrats.delete(d.dataset.stratId);
     saveSession();

@@ -195,11 +195,11 @@ const GAME = {
   // the phase, the end. The Game tab files each rule under the step its own words name ("at the start of your Command phase")
   steps:{
     round:[['07.01', 'Start of Battle Round'], ['07.03', 'End of Battle Round']],
-    command:[['08.01', 'Start of Command Phase'], ['08.04', 'Command Abilities'], ['08.05', 'End of Command Phase']],
+    command:[['08.01', 'Start of Command Phase'], ['08.03', 'Battle-shock'], ['08.04', 'Command Abilities'], ['08.05', 'End of Command Phase']],
     movement:[['09.01', 'Start of Movement Phase'], ['09.02', 'Move Units'], ['09.03', 'End of Movement Phase']],
     shooting:[['10.01', 'Start of Shooting Phase'], ['10.02', 'Shoot'], ['10.03', 'End of Shooting Phase']],
     charge:[['11.01', 'Start of Charge Phase'], ['11.02', 'Charge'], ['11.03', 'End of Charge Phase']],
-    fight:[['12.01', 'Start of Fight Phase'], ['12.04', 'Fight'], ['12.09', 'End of Fight Phase']]
+    fight:[['12.01', 'Start of Fight Phase'], ['12.02', 'Pile In'], ['12.04', 'Fight'], ['12.07', 'Consolidate'], ['12.09', 'End of Fight Phase']]
   },
   // the Event Companion's Warhammer Event Mission Sequence: each step's number, title and first paragraph
   sequence:[

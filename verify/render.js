@@ -58,14 +58,14 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
           .map(x => x.dataset.grant ? 'grant:' + JSON.stringify([x.dataset.grant, x.dataset.gu, x.dataset.what, x.dataset.rule || null])
             : Object.entries(x.dataset).filter(([k]) => ['rule','strat','ability','enh','kw'].includes(k)).map(([k, v]) => k + ':' + v)[0]);
         return { title:$('#top').innerText.replace(/\s+/g, ' ').trim(), text:host.innerText, hs, links, overflow:document.documentElement.scrollWidth - innerWidth,
-          bigIcons:[...document.querySelectorAll('#top svg, #view svg, #sheetIn svg, #subbar svg, #bbar svg')].filter(x => x.getBoundingClientRect().width > 40 || x.getBoundingClientRect().height > 40).map(x => (x.getAttribute('class') || '') + ' ' + ((x.querySelector('use') || {}).getAttribute ? x.querySelector('use').getAttribute('href') : '') + ' in .' + x.parentElement.className).slice(0, 3), tabs:document.querySelectorAll('#bbar .tabs button').length === 6,
+          bigIcons:[...document.querySelectorAll('#top svg, #view svg, #sheetIn svg, #subbar svg, #bbar svg')].filter(x => x.getBoundingClientRect().width > 40 || x.getBoundingClientRect().height > 40).map(x => (x.getAttribute('class') || '') + ' ' + ((x.querySelector('use') || {}).getAttribute ? x.querySelector('use').getAttribute('href') : '') + ' in .' + x.parentElement.className).slice(0, 3), tabs:document.querySelectorAll('#bbar .tabs button').length === 5,
           cut:[...document.querySelectorAll('#bbar .tabs button span')].filter(x => x.scrollWidth > x.clientWidth + 0.5).map(x => x.textContent),
           dmrules:[...document.querySelectorAll('#view .game [data-dmrule]')].map(x => x.dataset.dmrule) };
       }, [String(fn), HELPER_SEL, !!folded]);
       if(r.overflow > 0) fail('no-sideways-scroll', a.id, label, 'the page is ' + r.overflow + 'px wider than the phone');
       if(r.bigIcons.length) fail('icon-size', a.id, label, 'icons drawn over 40px (no size set): ' + r.bigIcons.join(', '));
-      if(label !== 'home' && label !== 'settings' && !r.tabs) fail('tabs', a.id, label, 'no tab bar (six tabs)');
-      if(r.cut.length) fail('tabs-fit', a.id, label, 'tab labels cut off: ' + r.cut.join(', '));
+      if(label !== 'home' && label !== 'settings' && !r.tabs) fail('tabs', a.id, label, 'no tab bar');
+      if(r.cut.length) fail('tabs-fit', a.id, label, 'tab labels cut off: ' + r.cut.join(', '));   // each of the five labels whole
       r.dmrules.forEach(l => gameOther.add(l));
       // the data version changes with every release: the snapshot keeps a placeholder
       snap.push('######## ' + label + ' · ' + r.title + '\n' + r.text.replace(/[ \t]+\n/g, '\n').replace(/\n{3,}/g, '\n\n').trim().replace(/^Data \d{4}-\d\d-\d\d\.\d+$/m, 'Data (version)'));
@@ -79,7 +79,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       }
       return r;
     };
-    const links = new Set(), gameLinks = new Set(), gameOther = new Set();   // gameOther: the Game tab's links to the opponent's rules (opened from their list)
+    const links = new Set(), gameLinks = new Set(), gameOther = new Set();   // gameOther: the Game tracker's links to the opponent's rules (opened from their list)
     const screen = async (s, extra) => {
       const r = await take(s + (extra ? ' ' + JSON.stringify(extra) : ''), `() => { hideSheet(); openStrats.clear(); ${extra && extra.open ? `allStratagems().forEach(x => openStrats.add(x.id));` : ''} go({ s:'${s}', army:'${a.id}' }); }`, extra && extra.folded);
       r.links.forEach(l => links.add(l));
@@ -106,7 +106,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       const r = await take('unit ' + u, `() => { hideSheet(); go({ s:'unit', army:'${a.id}', unit:'${u}' }); }`);
       r.links.forEach(l => links.add(l));
     }
-    // the Game tab, against the next list (after the datasheets, so every other screen and popup is taken as before): a new
+    // the Game tracker, against the next list (after the datasheets, so every other screen and popup is taken as before): a new
     // game (every fold open); round 2 with the first option of every choice picked (and the first of their units where it asks
     // for one); then each phase of both turns of the first battle round, the This phase part only (the folds of the phase
     // open), and the last turn's Fight phase of round 2 (the end of the battle round)
@@ -136,7 +136,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       if(!open) fail('link-resolves', a.id, l, 'the link opens nothing');
     }
 
-    // the Game tab's links that no other screen has: each opens its popup (taken by the popups above when another screen has it too)
+    // the Game tracker's links that no other screen has: each opens its popup (taken by the popups above when another screen has it too)
     for(const l of [...gameLinks].filter(x => x && !links.has(x)).sort()){
       const i = l.indexOf(':'), k = l.slice(0, i), v = l.slice(i + 1);
       const ok = await page.evaluate(([id, k, v]) => { hideSheet(); go({ s:'game', army:id }); ({ rule:showRule, strat:showStrat, ability:showAbility, enh:showEnhancement })[k](v);
@@ -328,12 +328,20 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       scrollTo(0, 0); return out; });
     if(gaps.length) fail('damage-no-gap', A, 'scrollY ' + gaps.slice(0, 8).join(', '), 'an empty band of over 70px under the pinned card');
   }
-  // ---- the Game tab under a finger (each width): the steppers, ten Next taps (round 1's two turns), a pick, New game and Undo ----
+  // ---- the Game tracker under a finger (each width): opened from its row on Find and Back to Find; the steppers, ten Next taps
+  // (round 1's two turns), a pick, New game and Undo ----
   {
     const A = armies[0].id, B = armies[1].id;
-    await page.evaluate(([A, B]) => { hideSheet(); store.set('wh-opp-' + A, B); store.set('wh-game-' + A, null); store.set('wh-used-' + A, []); sess.mine = A; go({ s:'game', army:A }); scrollTo(0, 0); }, [A, B]);
-    await page.waitForTimeout(500);
     const tapIt = async sel => { await page.evaluate(sel => { const e = document.querySelector(sel); e.scrollIntoView({ block:'center' }); }, sel); await page.waitForTimeout(120); await page.click(sel); await page.waitForTimeout(150); };
+    await page.evaluate(([A, B]) => { hideSheet(); store.set('wh-opp-' + A, B); store.set('wh-game-' + A, null); store.set('wh-used-' + A, []); sess.mine = A; go({ s:'army', army:A }); scrollTo(0, 0); }, [A, B]);
+    await page.waitForTimeout(500);
+    await tapIt('#armyMenu [data-go="game"]'); await page.waitForTimeout(400);
+    const nav = await page.evaluate(() => [cur.s, $('#top .back') ? $('#top .back').innerText.trim() : '', $('#bbar [data-tab].on') ? $('#bbar [data-tab].on').dataset.tab : '']);
+    if(nav[0] !== 'game' || nav[2] !== 'army') fail('game-row', A, 'Find → Game tracker', JSON.stringify(nav) + ': not the Game tracker under the Find tab');
+    await tapIt('#top [data-back]'); await page.waitForTimeout(400);
+    if(await page.evaluate(() => cur.s) !== 'army') fail('game-row', A, 'Game tracker → Back', 'not back on Find');
+    await page.evaluate(A => { go({ s:'game', army:A }); scrollTo(0, 0); }, A);
+    await page.waitForTimeout(500);
     await tapIt('[data-gstep="cp|mine|1"]'); await tapIt('[data-gstep="cp|mine|1"]'); await tapIt('[data-gstep="vp|opp|1"]'); await tapIt('[data-gstep="cp|mine|-1"]');
     const s1 = await page.evaluate(() => [gameOf(army()).cp.mine, gameOf(army()).vp.opp, document.querySelector('[data-gstep="cp|mine|1"]').parentElement.querySelector('b').textContent]);
     if(s1.join() !== '1,1,1') fail('game-steppers', A, 'CP +, +, −; VP +', JSON.stringify(s1));
