@@ -1289,6 +1289,8 @@ function screenArmy(){
     '<div id="armyMenu"><div class="list">' +
       row('pregame', 'i-flag', 'Overview', '') +
       row('damage', 'i-swords', 'Damage calculator', '') +
+      // the opponent's list (picked in Damage), one tap away: its datasheets, stratagems and rules
+      (oppOf(a) && oppOf(a) !== a ? '<button class="row" data-army="' + esc(oppOf(a).id) + '"><svg class="ic" aria-hidden="true"><use href="#i-units"/></svg><span class="rb"><b>Opponent’s list</b><span>' + esc(oppOf(a).name + ' · ' + factionOf(oppOf(a)).name) + '</span></span>' + arrow + '</button>' : '') +
       row('units', 'i-units', 'Units', unitCount(a)) +
       row('strats', 'i-cards', 'Stratagems', allStratagems(a).length) +
       row('ranged', 'i-gun', 'Ranged weapons', weaponCount(a, 'ranged')) +
@@ -2693,7 +2695,12 @@ document.addEventListener('click', e => {
   if(ds.askmodel){ store.set('wh-ask', Object.assign(askCfg(), { model:ds.askmodel })); rerender(); return; }
   if(el.hasAttribute('data-askpdfdel')){ const c = askCfg(); askMod().then(({ deleteRules }) => deleteRules({ key:c.key, id:c.file.id })).catch(() => {}); store.set('wh-ask', Object.assign(c, { file:null })); askConv = null; rerender(); toast('Core Rules PDF removed'); return; }
   if(ds.dmpick){ dmPicker(ds.dmpick); return; }
-  if(ds.dmopp != null){ const a = army(); if(ds.dmopp) store.set('wh-opp-' + a.id, ds.dmopp); else store.set('wh-opp-' + a.id, null); closeSheet(); rerender(); return; }
+  if(ds.dmopp != null){ const a = army(), was = oppOf(a);
+    // a game is both ways: their list's opponent becomes this one (unless it has another already)
+    if(was && store.get('wh-opp-' + was.id) === a.id) store.set('wh-opp-' + was.id, null);
+    store.set('wh-opp-' + a.id, ds.dmopp || null);
+    if(ds.dmopp && ds.dmopp !== a.id && !oppOf(armyById(ds.dmopp))) store.set('wh-opp-' + ds.dmopp, a.id);
+    closeSheet(); rerender(); return; }
   if(ds.dmunit){ const [k, id] = ds.dmunit.split('|'), st = dmState(); st[k] = id; saveSession(); closeSheet(); rerender(); return; }
   if(ds.dmset || ds.dmprof || ds.dmman || ds.dmrr){
     const st = dmState();
