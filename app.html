@@ -4088,13 +4088,27 @@ function askLog(){
   if(!askConv || !askConv.shown.length) return '<p class="note">Ask anything about the rules of these lists: what a stratagem does to this unit, whether two rules stack, what happens in which order. The app sends Claude its rules, both lists and the screen you are on. “Ask about this” on a datasheet, stratagem, ability or rule adds it to your question.</p>';
   return askConv.shown.map(x => '<div class="askm q">' + (x.refs && x.refs.length ? '<span class="askon">About ' + esc(x.refs.join(', ')) + '</span>' : '') + esc(x.q) + '</div><div class="askm a">' + (x.err ? (x.a ? askMd(x.a) : '') + '<p class="askerr">' + esc(x.err) + '</p>' : (x.a ? askMd(x.a) + (x.done ? '' : askWait('Writing…', true)) : askWait(x.status || 'Thinking…'))) + '</div>').join('');
 }
+// the two lists a question is about: the player's own and their opponent's, also while the opponent's list is open
+function askPair(){
+  const a = cur.army && army();
+  if(!a) return { a:null, opp:null };
+  return peeking(a) ? { a:mineList(), opp:a } : { a, opp:oppOf(a) };
+}
+// the top bar's ?: a question about this screen. "Ask about this" chips from an earlier screen are dropped; on the Damage tab
+// the two units of the matchup are put in, as chips the player can remove
+function askFresh(){
+  askRefs.length = 0;
+  if(cur.s !== 'damage' || !cur.army) return;
+  const P = dmPair(dmState());
+  for(const [u, L] of [[P.au, P.A], [P.tu, P.B]]) if(u && L && !L.typed && !u.typed) askRefs.push({ k:'unit', v:u.id, army:L.id, label:inArmy(L, () => unitLabel(u)) });
+}
 function openAsk(){
   if(!askOn()){ askChoose(); return; }
-  const a = cur.army && army(), opp = a && oppOf(a), ctx = (a ? a.id : '') + '|' + (opp ? opp.id : '');
+  const { a, opp } = askPair(), ctx = (a ? a.id : '') + '|' + (opp ? opp.id : '');
   if(!askConv || askConv.ctx !== ctx) askConv = { ctx, messages:[], shown:[] };
   const cfg = askCfg(), m = ASK_MODELS.find(x => x[0] === cfg.model) || ASK_MODELS[0], acct = askVia() === 'account';
   openSheet('Rules question · ' + esc(m[1]) + (acct ? ' · your Claude account' : ''), a ? a.name + (opp ? ' vs ' + opp.name : '') : 'Rules question',
-    '<p class="askctx">On: ' + esc(askWhere()) + '</p><div id="askLog">' + askLog() + '</div>' +
+    '<p class="askctx">On: ' + esc(askWhere()) + '</p>' + (a ? '<p class="note">Sent with each question: your list (' + esc(a.name) + ')' + (opp ? ' and your opponent’s (' + esc(opp.name) + ')' : ', no opponent’s list (pick one in Find)') + ', the Core Rules and this screen.</p>' : '') + '<div id="askLog">' + askLog() + '</div>' +
     '<div id="askRefs">' + askRefChips() + '</div>' +
     '<div class="askin"><textarea id="askQ" rows="3" placeholder="' + (askRefs.length ? 'Your question about these…' : 'Ask a rules question…') + '" enterkeyhint="send"></textarea>' + askBtn() + '</div>' +
     (askConv.shown.length ? '<button class="textbtn" data-asknew>New conversation</button>' : '') +
@@ -4105,7 +4119,7 @@ function openAsk(){
 async function askSend(){
   const q = $('#askQ'), text = q && q.value.trim();
   if(!text || askBusy) return;
-  const cfg = askCfg(), a = cur.army && army(), opp = a && oppOf(a);
+  const cfg = askCfg(), { a, opp } = askPair();
   const refs = askRefs.splice(0), turn = { q:text, a:'', refs:refs.map(r => r.label) };
   askConv.shown.push(turn);
   const rc = $('#askRefs'); if(rc) rc.innerHTML = '';
@@ -5735,7 +5749,7 @@ document.addEventListener('click', e => {
     store.set('wh-home-filter', f); closeSheet(); rerender(); return; }
   if(el.hasAttribute('data-hfclear')){ store.set('wh-home-filter', {}); rerender(); return; }
   if(el.hasAttribute('data-roll')){ rollArmy(); return; }
-  if(el.hasAttribute('data-ask')){ openAsk(); return; }
+  if(el.hasAttribute('data-ask')){ askFresh(); openAsk(); return; }
   if(el.hasAttribute('data-asksend')){ askSend(); return; }
   if(el.hasAttribute('data-askkeygo')){ hideSheet(); go({ s:'settings' }); const k = $('#askKey'); if(k){ k.scrollIntoView({ block:'center' }); k.focus(); } return; }
   if(el.hasAttribute('data-askstop')){ if(askBusy) askBusy.abort(); return; }
