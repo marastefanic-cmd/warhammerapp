@@ -755,11 +755,18 @@ cases.push(['Unshackled Wrath, All three: a trade', () => +effOf({ army:'purge-g
 // Knight Errant from the start; Kustom Dakka ticked for the Tankbustas, then the attacker changed to Flash Gitz (it applies to them too:
 // kept) is the Flash Gitz with it ticked
 const KD = 'm:Kustom Dakka|Your Shooting phase, vs non-MONSTER/VEHICLE targets|+1 to wound rolls';
-const order = (s0, change, s1) => { dm.plan(s0); const st = dm.app.dmState(), r = dm.app.dmSetUnit(st, ...change); const a = dm.app.dmIn(dm.app.dmPlan(st), 300), b = dm.app.dmIn(dm.plan(s1), 300); return { same:JSON.stringify(a) === JSON.stringify(b), r }; };
+const cp = x => JSON.parse(JSON.stringify(x));   // (the state is the one passed: each case its own copy)
+const order = (s0, change, s1) => { dm.plan(cp(s0)); const st = dm.app.dmState(), r = dm.app.dmSetUnit(st, ...change); const a = dm.app.dmIn(dm.app.dmPlan(st), 300), b = dm.app.dmIn(dm.plan(cp(s1)), 300); return { same:JSON.stringify(a) === JSON.stringify(b), r }; };
 const FGL = { army:'shooty', opp:'princes', atk:'mek-flashgitz', tArmy:'princes', tgt:'lord-on-juggernaut-khorne-berzerkers', turn:{ me:{ shoot:true } }, ch:{ 'me:shoot':{ on:{ [KD]:true } } } };
 const toKnight = memo(() => order(FGL, ['theirs', '6-bigs', 'knight-errant'], { army:'shooty', opp:'princes', atk:'mek-flashgitz', tArmy:'6-bigs', tgt:'knight-errant', turn:{ me:{ shoot:true } } }));
 cases.push(['a unit changed: a tick the rules now rule out is dropped (the same turn as picked so)', () => +toKnight().same, 1]);
-cases.push(['a unit changed: ... and said', () => +/Kustom Dakka unticked \(not against MONSTER\/VEHICLE/.test(toKnight().r.words), 1]);
+cases.push(['a unit changed: ... and said', () => +/^Knight Errant · Kustom Dakka unticked: not vs MONSTER\/VEHICLE$/.test(toKnight().r.words), 1]);
+// ... in a step out of the turn too (the review's stale7b): Kustom Dakka ticked in the Shoot, the charge added, the Shoot taken out, the
+// target changed to a Knight Errant (said), the Shoot added back: by the rules, as if the Knight Errant had been the target all along
+cases.push(['a unit changed: a step out of the turn is cleaned too', () => { dm.plan(cp(FGL)); const st = dm.app.dmState();
+  st.turn.me = { shoot:false, charge:true, fight:true }; const r = dm.app.dmSetUnit(st, 'theirs', '6-bigs', 'knight-errant'); st.turn.me.shoot = true;
+  const a = dm.app.dmIn(dm.app.dmPlan(st), 300).beats[0], b = dm.app.dmIn(dm.plan({ army:'shooty', opp:'princes', atk:'mek-flashgitz', tArmy:'6-bigs', tgt:'knight-errant', turn:{ me:{ shoot:true, charge:true, fight:true } } }), 300).beats[0];
+  return +(JSON.stringify(a) === JSON.stringify(b) && /Kustom Dakka unticked/.test(r.words)); }, 1]);
 cases.push(['a unit changed: a tick whose rule still applies is kept', () => +order(Object.assign({}, FGL, { atk:'mek-tankbustas' }), ['mine', 'shooty', 'mek-flashgitz'], FGL).same, 1]);
 // Epic Challenge on Nazdreg + Meganobz' fight against Khârn + Berzerkers: Khârn destroyed far more often, and down after the phase
 // more often too (Berserker Frenzy); both said
@@ -770,6 +777,9 @@ cases.push(['a one-model unit’s own fate: said past the dice’s margin', () =
   ch:{ 'me:shoot':{ on:{ [TDB]:true }, val:{ 'pick:Try Dat Button!':'1–2 and 5–6' } } } }, 's:c:hazard').d), 1]);
 // a typed number: an empty or unreadable field keeps the value it had, never 0
 cases.push(['a typed number: empty keeps the value', () => { const st = { typed:{ n:7, Sv:3 } }; dm.app.dmTypedSet(st, 'n', ''); dm.app.dmTypedSet(st, 'Sv', ''); dm.app.dmTypedSet(st, 'Sv', '1'); return st.typed.n * 10 + st.typed.Sv; }, 73, 0]);
+// ---- round 4: what a typed field can count; short names that say one unit ----
+cases.push(['a typed number: what can be counted (Models 0, 1, 150; Sv 1, 9, 7, 0, 4; T empty; W 12)', () => +(['n|0', 'n|1', 'n|150', 'Sv|1', 'Sv|9', 'Sv|7', 'Sv|0', 'Sv|4', 'T|', 'W|12'].map(x => +dm.app.dmTypedOk(...x.split('|'))).join('') === '0100011101'), 1]);
+cases.push(['short names: one unit each in the pair’s lists ("Big Mek Dakkarig", not "Big Mek")', () => { dm.app.dmClashes([dm.D.armies.find(a => a.id === 'shooty'), dm.D.armies.find(a => a.id === 'princes')]); return +(dm.app.dmShort('Big Mek Dakkarig') === 'Big Mek Dakkarig' && dm.app.dmShort('Khârn the Betrayer') === 'Khârn'); }, 1]);
 for(const t of twice) console.log('  ' + t);
 
 let fail = 0;

@@ -89,7 +89,8 @@ function run(D){
   }
 
   // ---- numbers in the app's own sentences come from the text they cite ----
-  const nums = s => (String(s || '').replace(/\{[^}]*\}/g, '').match(/\d+/g) || []);
+  // (a Core Rules section cited, "01.02.04", is not a number taken from the rule's own text)
+  const nums = s => (String(s || '').replace(/\{[^}]*\}/g, '').replace(/\b\d{2}\.\d{2}(?:\.\d{2})*\b/g, '').match(/\d+/g) || []);
   const has = (src, n) => new RegExp('(^|[^0-9])' + n + '([^0-9]|$)').test(src);
   const ruleText = (a, name) => {
     const f = D.factions[a.faction];

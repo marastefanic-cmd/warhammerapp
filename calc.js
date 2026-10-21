@@ -510,7 +510,7 @@ function run(input){
                   attacking, and slice [lo, hi] (of those weapons, the ones from lo to hi: a rule that reaches only some of
                   them reaches the ones kept longest); without carry its models are as given (that side has lost none).
      input.sims (default 10000), input.seed (default 1)
-   result: { sims, beats:[{ killed (mean destroyed in this beat), dmg (wounds lost in it), wipe (P the side is destroyed by its end),
+   result: { sims, beats:[{ killed (mean destroyed in this beat), dmg (wounds lost in it; dmgVar: their spread over the games), wipe (P the side is destroyed by its end),
              wipeDown (P it is still destroyed once its phase is over: a comeback counted as above),
              dist [P(exactly k destroyed by its end)], before (mean destroyed before it), rows:[{ name, count, char, gone (P all of
              the row destroyed by its end), down (P still destroyed once its phase is over: a comeback's roll counted as the chance
@@ -530,7 +530,7 @@ function play(input){
     const alt = b.alt && b.alt.lines && b.alt.lines.length ? (() => { const S2 = setup(b.alt.input); S2.Tdefault = S.Tdefault; return { lines:b.alt.lines, S:S2, W:worldOf(S2) }; })() : null;
     // b.self: the attacking side's own models as this beat gives them (its hazard rolls: rows, Feel No Pain)
     const own = b.self ? (() => { const S2 = setup({ groups:[], target:b.self, ctx:{} }); S2.Tdefault = parseInt(b.self.T, 10) || 1; return { S:S2, W:worldOf(S2), order:ordersOf(S2.groups)[0] }; })() : null;
-    return { b, S, W:worldOf(S), alt, own, order, sum:sumsOf(S.G), dist:new Array(S.total + 1).fill(0), killed:0, dmg:0, before:0, rowGone:S.rows.map(() => 0), rowDown:S.rows.map(() => 0), wipeDown:0, altN:0,
+    return { b, S, W:worldOf(S), alt, own, order, sum:sumsOf(S.G), dist:new Array(S.total + 1).fill(0), killed:0, dmg:0, before:0, rowGone:S.rows.map(() => 0), rowDown:S.rows.map(() => 0), wipeDown:0, altN:0, dmg2:0,
       hz:{ rolls:0, mw:0, lost:0, dead:0 } };
   });
   // each side's models, by stats row and place in the row (ri, k), with the line each belongs to: from the first beat that
@@ -594,7 +594,7 @@ function play(input){
       const d0 = S.total - left;
       const { dead, lost } = attackOnce(S, W, x.order, R, useAlt ? x.altSum || (x.altSum = sumsOf(S.G)) : x.sum, B, nOf, extraOf);
       for(const M of W.models){ const i = tg.at[M.ri] + M.k; if(M.w <= 0 && tg.w[i] > 0) tg.died[i] = j; tg.w[i] = M.w; }
-      x.before += d0; x.killed += dead - d0; x.dmg += lost; x.dist[dead]++;
+      x.before += d0; x.killed += dead - d0; x.dmg += lost; x.dmg2 += lost * lost; x.dist[dead]++;
       // each stats row of the target destroyed by the end of this beat (a CHARACTER's fate)
       for(let ri = 0; ri < tg.rows.length; ri++){ let a = 0; for(let k = 0; k < tg.rows[ri].count; k++) if(tg.w[tg.at[ri] + k] > 0) a++; if(!a) x.rowGone[ri]++; }
       // b.hazard { mw }: after its attacks, the attacking unit makes one hazard roll for each [HAZARDOUS] weapon it attacked with,
@@ -627,7 +627,7 @@ function play(input){
   }
   const mean = v => v / sims;
   return { sims,
-    beats:beats.map(x => ({ side:x.b.side, killed:mean(x.killed), dmg:mean(x.dmg), before:mean(x.before), models:x.S.total, wipe:mean(x.dist[x.S.total]), wipeDown:mean(x.wipeDown), dist:x.dist.map(mean),
+    beats:beats.map(x => ({ side:x.b.side, killed:mean(x.killed), dmg:mean(x.dmg), dmgVar:Math.max(0, mean(x.dmg2) - mean(x.dmg) ** 2), before:mean(x.before), models:x.S.total, wipe:mean(x.dist[x.S.total]), wipeDown:mean(x.wipeDown), dist:x.dist.map(mean),
       // a beat with an alternative (alt): its games added up with the alternative's (the same weapons, in the same order)
       groups:x.sum.map((g0, i) => { const a = x.altSum && x.altSum[i], g = k => g0[k] + (a ? a[k] : 0);
         return { n:mean(g('n')), attacks:mean(g('attacks')), hits:mean(g('hits')), wounds:mean(g('wounds')), unsaved:mean(g('unsaved')), mortals:mean(g('mortals')), dmg:mean(g('dmg')), gone:mean(g('gone')), out:x.S.G[i].out, notes:x.S.G[i].notes }; }),

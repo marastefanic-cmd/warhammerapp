@@ -247,9 +247,28 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     if(sync.length) fail('damage-card-strip', A, 'after a tap', 'the card and the strip differ: ' + sync.join(', '));
     const undo = await page.evaluate(async () => { const st = dmState(), t0 = JSON.stringify(st.turn[st.dir]);
       dmGoStep('charge'); await new Promise(f => setTimeout(f, 300)); const t1 = JSON.stringify(dmState().turn[dmState().dir]), said = $('#toast').innerText;
+      // the toast covers no number: neither the card nor the strip, on one line
+      const tr = $('#toast').getBoundingClientRect(), hit = ['#dmAns', '#dmStrip'].filter(q => { const e = $(q); if(!e) return false; const r = e.getBoundingClientRect(); return r.bottom > tr.top + 1 && r.top < tr.bottom - 1 && r.right > tr.left && r.left < tr.right; });
+      if(hit.length || tr.height > 48) return { changed:true, back:true, said, over:hit.concat(tr.height > 48 ? ['two lines'] : []) };
       document.querySelector('#toast [data-undo]').click(); await new Promise(f => setTimeout(f, 300));
       return { back:JSON.stringify(dmState().turn[dmState().dir]) === t0, changed:t1 !== t0, said }; });
-    if(!undo.changed || !undo.back || !/Charge/.test(undo.said)) fail('damage-undo', A, 'Charge, then Undo', JSON.stringify(undo));
+    if(undo.over) fail('damage-toast', A, 'a step added', 'the toast covers ' + undo.over.join(', '));
+    else if(!undo.changed || !undo.back || !/Charge/.test(undo.said)) fail('damage-undo', A, 'Charge, then Undo', JSON.stringify(undo));
+    // a typed number typed slowly (keys 0.4 s apart) keeps every digit; an entry it cannot count is said under the field, and leaving
+    // the field puts the counted value back
+    await page.evaluate(A => { hideSheet(); sess.dmg = {}; const L = armyById(A), u = L.units.find(x => (x.ranged || []).length) || L.units[0];
+      sess.dmg[A] = { dir:'me', atk:u.id, tArmy:'typed', typed:{ n:5, T:4, W:2, Sv:3 } }; go({ s:'damage', army:A }); scrollTo(0, 0); }, A);
+    await page.waitForTimeout(800);
+    await page.click('[data-dmtyped="n"]'); await page.waitForTimeout(150);
+    await page.keyboard.press('1'); await page.waitForTimeout(400); await page.keyboard.press('2'); await page.waitForTimeout(700);
+    const ty = await page.evaluate(() => ({ n:dmTypedVals(dmState()).n, field:document.querySelector('[data-dmtyped="n"]').value, focus:(document.activeElement || {}).dataset ? document.activeElement.dataset.dmtyped : '' }));
+    if(ty.n !== 12 || ty.field !== '12' || ty.focus !== 'n') fail('damage-typed-slow', A, '"1", 0.4 s, "2"', JSON.stringify(ty));
+    await page.keyboard.press('Tab'); await page.waitForTimeout(400);
+    await page.click('[data-dmtyped="Sv"]'); await page.waitForTimeout(150); await page.keyboard.press('9'); await page.waitForTimeout(500);
+    const hint = await page.evaluate(() => ({ shown:!$('#dmTyHint').hidden, sv:dmTypedVals(dmState()).Sv }));
+    await page.keyboard.press('Tab'); await page.waitForTimeout(500);
+    const back = await page.evaluate(() => ({ field:document.querySelector('[data-dmtyped="Sv"]').value, hint:$('#dmTyHint').hidden }));
+    if(!hint.shown || hint.sv !== 3 || back.field !== '3+' || !back.hint) fail('damage-typed-hint', A, 'Save "9"', JSON.stringify([hint, back]));
     // no empty band under the pinned card at any scroll position: just below it there is always some of the screen's content
     await open();
     const gaps = await page.evaluate(async () => { const out = [], H = document.documentElement.scrollHeight - innerHeight;
