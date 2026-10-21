@@ -22,12 +22,15 @@
 'use strict';
 
 // rules constants the attack sequence uses (Core Rules 11th edition; see the comments where they are used)
+// The Core Rules state no limit on hit or wound roll modifiers (unlike 10th edition's +1/-1); they do limit
+// characteristics after modifiers ("When Modifying Characteristics"): BS/WS between 2+ and 6+, AP not worse than 0,
+// D not less than 1. An unmodified 1 always fails a hit or wound roll and an unmodified 6 is critical (05.01, 05.02).
 const RULE = {
-  hitCap: 1,        // a hit roll is modified by at most +1 / -1 in total
-  woundCap: 1,      // likewise a wound roll
   critHit: 6,       // an unmodified 6 is a critical hit
   critWound: 6,     // an unmodified 6 is a critical wound
-  minDamage: 1      // damage reductions cannot take an attack below 1
+  minDamage: 1,     // D cannot be less than 1
+  bestSkill: 2,     // BS/WS cannot be 1+ or better
+  worstSkill: 6     // ... or 7+ or worse
 };
 
 // dice expressions: "3", "D3", "D6+1", "2D6"
@@ -47,7 +50,6 @@ function rng(seed){
 const d6 = R => 1 + Math.floor(R() * 6);
 // D3 is one D6 halved, rounding up: 1, 2 or 3 alike
 const roll = (d, R) => { let t = d.k; for(let i = 0; i < d.n; i++) t += d.f === 3 ? Math.ceil(d6(R) / 2) : 1 + Math.floor(R() * d.f); return t; };
-const clamp = (v, c) => Math.max(-c, Math.min(c, v));
 const skillOf = s => parseInt(String(s).replace(/[^\d]/g, ''), 10) || 7;   // "4+" → 4; "N/A" can't hit
 
 // weapon keywords → numbers ("RAPID FIRE 2", "SUSTAINED HITS D3", "ANTI-MONSTER/VEHICLE 4+", "MELTA 2");
@@ -95,20 +97,20 @@ function run(input){
     const anti = k.anti.filter(a => a.kw.some(x => tkw.has(x))).reduce((v, a) => Math.min(v, a.v), 7);
     return {
       name:g.name, n:g.n || 1, A:dice(g.A), skill:skillOf(g.skill), S:(parseInt(g.S, 10) || 0) + (m.s || 0),
-      AP:(parseInt(g.AP, 10) || 0) - (m.ap || 0) + (tm.apWorse || 0), D:dice(g.D), dPlus:m.d || 0, aPlus:m.a || 0, k, m,
+      AP:Math.min(0, (parseInt(g.AP, 10) || 0) - (m.ap || 0) + (tm.apWorse || 0)), D:dice(g.D), dPlus:m.d || 0, aPlus:m.a || 0, k, m,   // AP cannot be worse than 0
       torrent:!!k.torrent, sus:m.sus ? dice(m.sus) : k.sus || null, lethal:!!(k.lethal || m.lethal), dev:!!(k.dev || m.dev),
       rrHit:m.rrHit || '', rrWound:(k.twin || m.twin) ? 'all' : (m.rrWound || ''),
       critHit:m.critHit || RULE.critHit, critWound:Math.min(m.critWound || RULE.critWound, anti),
-      // hit roll modifiers: the rules' total, capped (01.05.03); a [PSYCHIC] attack can ignore modifiers to its BS/WS
-      // and to the hit roll (24.27): it ignores the ones that would make it worse
-      hitMod:clamp((m.hit || 0) - (tm.hitMinus || 0), RULE.hitCap),
-      // the benefit of cover worsens the attack's BS by 1 (13.08), unless [IGNORES COVER]
-      bs:skillOf(g.skill) + (ctx.ranged && ctx.cover && !(k.ignoresCover || m.ignoresCover) ? 1 : 0),
-      woundMod:clamp((m.wound || 0) - (tm.woundMinus || 0) + (k.lance && ctx.charged ? 1 : 0), RULE.woundCap),
+      // hit roll modifiers: the rules' total; a [PSYCHIC] attack can ignore modifiers to its BS/WS and to the hit roll
+      // (24.27): it ignores the ones that would make it worse
+      hitMod:(m.hit || 0) - (tm.hitMinus || 0),
+      // the benefit of cover worsens the attack's BS by 1 (13.08), unless [IGNORES COVER]; BS stays 2+ to 6+
+      bs:Math.max(RULE.bestSkill, Math.min(RULE.worstSkill, skillOf(g.skill) + (ctx.ranged && ctx.cover && !(k.ignoresCover || m.ignoresCover) ? 1 : 0))),
+      woundMod:(m.wound || 0) - (tm.woundMinus || 0) + (k.lance && ctx.charged ? 1 : 0),
       melta:k.melta && ctx.halfRange ? k.melta : null, rapid:k.rapid && ctx.halfRange ? k.rapid : null, blast:k.blast || 0
     };
   });
-  for(const g of G) if(g.k.psychic){ g.hitMod = Math.max(0, g.hitMod); g.bs = Math.min(g.bs, g.skill); }
+  for(const g of G) if(g.k.psychic){ g.hitMod = Math.max(0, g.hitMod); g.bs = Math.min(g.bs, Math.max(RULE.bestSkill, g.skill)); }
   const T = parseInt(tg.T, 10) || 1;
   const sum = G.map(() => ({ attacks:0, hits:0, wounds:0, unsaved:0, mortals:0, dmg:0 }));
   const dist = new Array(total + 1).fill(0);
@@ -179,7 +181,8 @@ function run(input){
         S.unsaved++;
         let dmg = roll(g.D, R) + g.dPlus + (g.melta ? roll(g.melta, R) : 0);
         if(tm.dHalf) dmg = Math.ceil(dmg / 2);
-        if(tm.dMinus) dmg = Math.max(RULE.minDamage, dmg - tm.dMinus);
+        if(tm.dMinus) dmg = dmg - tm.dMinus;
+        dmg = Math.max(RULE.minDamage, dmg);   // D cannot be less than 1
         S.dmg += hurt(dmg, false);
       }
       // [DEVASTATING WOUNDS]: mortal wounds equal to D after the normal damage, at most one model each

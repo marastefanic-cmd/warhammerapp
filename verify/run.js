@@ -11,6 +11,7 @@
 //   bsdata      verify/bsdata.js: every unit fact equals BSData, the data New Recruit is built from
 //   nr          verify/nr.js: everything the owner's New Recruit PDFs print is in the app, identically
 //   texts       verify/texts.js: every rules text equals GW's official documents (or Wahapedia)
+//   calc        verify/calc-test.js: the damage calculator (calc.js) gives the averages worked out by hand from the Core Rules
 //   screens     verify/render.js: every screen and popup renders; screen-level checks; no sideways scroll
 //   small phone the same at 320px wide
 //   snapshots   the text of every screen equals the accepted snapshot (verify/snapshots/)
@@ -51,6 +52,7 @@ step('choice', ['verify/choice.js']);
 step('bsdata', ['verify/bsdata.js']);
 step('nr', ['verify/nr.js']);
 step('texts', ['verify/texts.js']);
+step('calc', ['verify/calc-test.js']);   // the damage calculator against hand-worked cases
 // the screens need the built page: build it without the gate, check it, and the real build follows
 const b = node(['build.js'], { VERIFY_BUILDING:'1' });
 if(b.status !== 0){ console.log(b.stdout + b.stderr); process.exit(1); }

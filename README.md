@@ -20,9 +20,9 @@ rules as tick boxes, a rule counting only when every word of its footnote is und
 the 11th edition attack sequence out 10,000 times with seeded dice).
 
 **Rules questions** (the ? in the top bar, once an Anthropic API key is saved in Settings): a chat with
-Claude that is sent the rules this app holds, both lists (yours and the opponent picked in Damage), the
-screen it was opened on and the question; optionally GW's Core Rules PDF, which the owner picks on the phone
-and which is stored in their Anthropic account. The key stays in that browser on that phone and goes only to
+Claude that is sent the Core Rules with their errata and FAQs (`rules/core-rules.md`), the rules this app
+holds, both lists (yours and the opponent picked in Damage), the screen it was opened on and the question.
+The rules part is cached for an hour. The key stays in that browser on that phone and goes only to
 api.anthropic.com; the page holds no key, so the public site cannot use anyone's. `ask-style.md` says how
 answers should look (edit it to change them). `ask.js` makes the calls with the official SDK, bundled in
 `vendor/` (@anthropic-ai/sdk 0.131.0, MIT), so no third-party script loads at run time.
@@ -34,6 +34,7 @@ are in the git history, and `import-nr.js --reuse` can take their signed-off not
 |---|---|
 | `data.js` | the armies, plus the faction and core rules they use |
 | `ask.js`, `ask-style.md`, `vendor/` | the rules-question chat, how its answers should look, and the Anthropic SDK it uses |
+| `rules/core-rules.md` | a text copy of the Core Rules with errata and FAQs as Wahapedia publishes them, for the chat (`python3 -I verify/rules-text.py verify/.cache/waha/core.html rules/core-rules.md` refreshes it) |
 | `calc.js` | the damage calculator's engine (the attack sequence, section 05 of the Core Rules), checked by the gate like the app |
 | `app.html` | the app (published as the Claude artifact as-is, with `data.js`, `calc.js`, `verified.js`, `fonts/`) |
 | `build.js` | builds `index.html`, `version.json` and the `sw.js` stamp; refuses unless the gate passed |

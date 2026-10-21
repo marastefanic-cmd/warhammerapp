@@ -25,14 +25,6 @@ export async function ask({ key, model, system, messages, onText, signal }){
   return { message, refused:message.stop_reason === 'refusal', cut:message.stop_reason === 'max_tokens' };
 }
 
-// GW's Core Rules PDF, picked by the owner on this phone: stored once in their Anthropic account
-export async function uploadRules({ key, file }){
-  const meta = await client(key).files.upload({ file });
-  return { id:meta.id, name:meta.filename || file.name, bytes:meta.size_bytes };
-}
-export async function deleteRules({ key, id }){
-  await client(key).files.delete(id);
-}
 // a cheap check that the key works (lists one model)
 export async function checkKey({ key }){
   const page = await client(key).models.list({ limit:1 });
