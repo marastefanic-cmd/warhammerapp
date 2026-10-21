@@ -137,7 +137,7 @@ const WOUND_WHY = { 2:'S at least twice T', 3:'S greater than T', 4:'S equal to 
 
 // a rule's keyword (on a mod) as the keyword it gives
 const MOD_KW = { sus:v => 'SUSTAINED HITS ' + up(v), lethal:() => 'LETHAL HITS', dev:() => 'DEVASTATING WOUNDS', ignoresCover:() => 'IGNORES COVER',
-  twin:() => 'TWIN-LINKED', lance:() => 'LANCE', precision:() => 'PRECISION', cleave:v => 'CLEAVE ' + (+v || 1), hazardous:() => 'HAZARDOUS' };
+  twin:() => 'TWIN-LINKED', lance:() => 'LANCE', precision:() => 'PRECISION', cleave:v => 'CLEAVE ' + (+v || 1), hazardous:() => 'HAZARDOUS', heavy:() => 'HEAVY' };
 const NUM = { a:'A', s:'S', ap:'AP', d:'D' };
 
 // one weapon with the rules that apply to it → the numbers of its attacks against this target, and where each
@@ -204,6 +204,10 @@ function prep(g, X){
   if(ranged && (ctx.cover || indirect) && !k.ignoresCover) why.bs.push({ v:1, src:indirect && !ctx.cover ? 'indirect shooting: the benefit of cover (10.07, 13.08)' : ctx.coverSrc || 'the benefit of cover (13.08)', ignored:ignore });
   else if(ranged && (ctx.cover || indirect)) why.bs.push({ v:0, src:'the benefit of cover (13.08): not against [IGNORES COVER] (24.18)' + (k.from('ignoresCover') ? ', from ' + k.from('ignoresCover') : '') });
   if(ranged && ctx.plunging) why.bs.push({ v:-1, src:'Plunging Fire (22.05)' });
+  // a rule that improves the BS/WS characteristic (mod.skill: by 1 each): after a value a rule sets ("BS 3+" first, then improved:
+  // the Faction Pack's FAQ on Auto-divinatory Targeting and the Protector Imperative)
+  for(const m of mods) if(+m.skill){ if(credited(skillKey, m)){ skipped.push({ from:m.from, key:skillKey }); continue; }
+    applied.push({ from:m.from || '', key:skillKey }); for(let i = 0; i < +m.skill; i++) why.bs.push({ v:-1, src:srcName(m) }); }
   const worse = why.bs.filter(x => x.v > 0 && !x.ignored).length, better = why.bs.filter(x => x.v < 0).length;
   const bs = skill0 >= 7 ? 7 : Math.max(RULE.bestSkill, Math.min(RULE.worstSkill, skill0 + worse - better - sBS.plus));
   let rrHit = best('rrHit'), rrWound = k.twin ? { v:'all', src:k.src.twin ? k.src.twin : '[TWIN-LINKED] (24.38' + (k.from('twin') ? ', from ' + k.from('twin') : '') + ')' } : best('rrWound');
@@ -227,7 +231,9 @@ function prep(g, X){
     rapid:k.rapid && half ? k.rapid : null, melta:k.melta && half ? k.melta : null,
     // [BLAST]/[CLEAVE]: the models that were in the target unit at Select Targets, before any of these attacks
     extra:((k.blast || 0) + (k.cleave || 0)) * Math.floor(X.total / 5), extraPer:(k.blast || 0) + (k.cleave || 0),
-    torrent:!!k.torrent, snap:ranged && !!ctx.snap, fail:indirect ? (ctx.indirect === '1-3' ? 4 : 6) : 0,
+    // [TORRENT] in snap shooting: the rules don't settle it (24.37 "automatically hits", 15.09 "only hits on an unmodified hit roll of 6");
+    // ctx.snapSix: the 15.09 reading (no automatic hits), else 24.37's
+    torrent:!!k.torrent && !(ranged && ctx.snap && ctx.snapSix), torrentSnap:!!k.torrent && ranged && !!ctx.snap, snap:ranged && !!ctx.snap, fail:indirect ? (ctx.indirect === '1-3' ? 4 : 6) : 0,
     bs, hitMod:pos + (ignore ? 0 : neg), critHit:Math.min(RULE.critHit, cH.v), critHitSrc:cH.src, rrHit:rrHit.v, rrHitSrc:rrHit.src,
     S:s0 == null ? RULE.minS : Math.max(RULE.minS, s0 + sPlus),   // no S: S 1 for this (02.04.01), and '-' is never modified
     woundMod:why.wound.reduce((t, x) => t + x.v, 0),
@@ -317,7 +323,12 @@ function setup(input){
   // without the CHARACTER models (once destroyed, their keywords no longer count: 19.03 FAQ)
   const noChar = new Set([...tkw].filter(x => x !== 'CHARACTER'));
   const G2 = tkw.has('CHARACTER') ? input.groups.map(g => prep(g, Object.assign({}, X, { tkw:noChar }))) : G;
-  return { ctx, tm, tkw, rows, groups, total, G, G2, batches, precOn };
+  // target.shield { name, models:[{ name, count, W, fnp, fnpMortal }] } (Grot Shields): while a model of that other unit is on the
+  // battlefield, each hit roll of these attacks that results in a hit ends that attack, and that unit suffers 1 mortal wound (its
+  // Feel No Pain against it); [TORRENT] attacks make no hit roll (the FAQ: not "hit rolls that result in a hit")
+  const shield = tg.shield && (tg.shield.models || []).some(r => +r.count > 0) ? { name:tg.shield.name || '',
+    rows:tg.shield.models.filter(r => +r.count > 0).map(r => ({ count:+r.count, W:Math.max(1, +r.W || 1), fnp:Math.min(+r.fnp || 7, +r.fnpMortal || 7) })) } : null;
+  return { ctx, tm, tkw, rows, groups, total, G, G2, batches, precOn, shield };
 }
 
 // the target's models for one input: each with its wounds left, row, allocation group, and where it sits in its unit
@@ -328,7 +339,11 @@ function worldOf(S){
   const lineAt = (r, k) => { if(!r.lines) return -1; let t = 0; for(const l of r.lines){ t += l.n; if(k < t) return l.id; } return -1; };
   groups.forEach((grp, gi) => { for(const ri of grp.rows){ const n = grp.char ? 1 : rows[ri].count; for(let i = 0; i < n; i++){ const k = seen[ri]++;
     const M = { row:rows[ri], gi, w:0, ri, k, line:lineAt(rows[ri], k) }; models.push(M); byGroup[gi].push(M); } } });
-  return { models, byGroup, attached:rows.some(r => r.bodyguard) };
+  // the shielding unit's models (S.shield), one after another: the one taking mortal wounds is the first left, so a model that has
+  // lost wounds takes the next one (06.02)
+  const sh = S.shield ? (() => { const W0 = [], fnp = []; for(const r of S.shield.rows) for(let i = 0; i < r.count; i++){ W0.push(r.W); fnp.push(r.fnp); }
+    return { n:W0.length, W0:Int32Array.from(W0), w:new Int32Array(W0.length), fnp:Int32Array.from(fnp), p:0 }; })() : null;
+  return { models, byGroup, attached:rows.some(r => r.bodyguard), sh, shS:{ hits:0, lost:0, dead:0, wipe:0 } };
 }
 const KEYS = ['attacks', 'hits', 'wounds', 'unsaved', 'mortals', 'dmg'];
 const sumsOf = G => G.map(() => ({ attacks:0, hits:0, wounds:0, unsaved:0, mortals:0, dmg:0, gone:0, n:0, sq:{ attacks:0, hits:0, wounds:0, unsaved:0, mortals:0, dmg:0 } }));
@@ -344,6 +359,13 @@ function attackOnce(S, W, order, R, sum, B, nOf, extraOf){
   const ncOrder = order.filter(gi => !groups[gi].char), chOrder = order.filter(gi => groups[gi].char);
   const { atk, hits, auto, dev, saveBy } = B;
   let dead = 0, lost = 0;
+  // the shield (Grot Shields) is whole at the start of these attacks; a hit that it stops is 1 mortal wound on it
+  const sh = W.sh, shS = W.shS;
+  if(sh){ sh.w.set(sh.W0); sh.p = 0; }
+  const shHit = () => { shS.hits++; const i = sh.p;
+    if(sh.fnp[i] <= 6 && d6(R) >= sh.fnp[i]) return;
+    sh.w[i]--; shS.lost++;
+    if(sh.w[i] <= 0){ shS.dead++; sh.p++; } };
   for(const M of models) if(M.w <= 0) dead++;
   // a model in a group: one that has lost wounds first (05.04)
   const pickIn = gi => { let first = null; for(const M of byGroup[gi]){ if(M.w <= 0) continue; if(M.w < M.row.W) return M; if(!first) first = M; } return first; };
@@ -393,6 +415,8 @@ function attackOnce(S, W, order, R, sum, B, nOf, extraOf){
       let u = d6(R), r = hr(u);
       if((r === 0 && (g.rrHit === 'all' || (g.rrHit === '1s' && u === 1))) || (r === 1 && pl.fishH)){ u = d6(R); r = hr(u); }
       if(!r) continue;
+      // stopped by the shield while a model of it is on the battlefield: the attack ends (no [LETHAL HITS], no [SUSTAINED HITS] extra hits)
+      if(sh && sh.p < sh.n){ shHit(); continue; }
       if(r === 2 && pl.lethal) put(auto, mi); else put(hits, mi);
       if(r === 2 && g.sus){ const x = roll(g.sus, R); for(let j = 0; j < x; j++) put(hits, mi); }
     }
@@ -432,6 +456,7 @@ function attackOnce(S, W, order, R, sum, B, nOf, extraOf){
       sum[mi].dmg += hurt(M, Math.max(RULE.minDamage, roll(g.D, R) + g.dPlus + (g.melta ? roll(g.melta, R) : 0) - (tm.dMinusChar || 0)), true);
     }
   }
+  if(sh && sh.p >= sh.n) shS.wipe++;
   return { dead, lost };
 }
 
@@ -451,7 +476,7 @@ function simulate(S, order, sims, seed){
     // S.track: the models left in each stats row at the end of the game (counting only: no dice)
     if(left){ nLeft.fill(0); for(const M of W.models) if(M.w > 0) nLeft[M.ri]++; const k = nLeft.join(','); left.set(k, (left.get(k) || 0) + 1); }
   }
-  return { sum, dist, dmgTotal, killedTotal, left };
+  return { sum, dist, dmgTotal, killedTotal, left, shS:W.shS };
 }
 
 // the defender declares the allocation order (05.03): the order that loses the fewest models on average, then the
@@ -487,6 +512,7 @@ function run(input){
   return Object.assign({ sims, models:S.total, dmg:mean(t.dmgTotal), killed:mean(t.killedTotal), wipe:mean(t.dist[S.total]), dist:t.dist.map(mean),
     groups:t.sum.map((x, i) => Object.assign({ attacks:mean(x.attacks), hits:mean(x.hits), wounds:mean(x.wounds), unsaved:mean(x.unsaved), mortals:mean(x.mortals), dmg:mean(x.dmg),
       gone:mean(x.gone), out:S.G[i].out, notes:S.G[i].notes }, S.moments ? { sd:Object.fromEntries(KEYS.map(k => [k, sd(x[k], x.sq[k])])) } : {})),
+    shield:S.shield ? { name:S.shield.name, hits:mean(t.shS.hits), lost:mean(t.shS.lost), dead:mean(t.shS.dead), wipe:mean(t.shS.wipe), models:S.shield.rows.reduce((a, r) => a + r.count, 0) } : null,
     alloc:S.groups.map(x => ({ name:x.name, n:x.n, char:x.char })), order:order.map(i => S.groups[i].name), orderIdx:order, orders:orders.length, capped:!!orders.capped }, track);
 }
 
@@ -634,6 +660,9 @@ function play(input){
       alt:x.alt ? mean(x.altN) : 0,
       // gone: destroyed by the end of this beat; down: still destroyed after the end of its phase (a comeback: rv)
       rows:x.S.rows.map((r, ri) => ({ name:r.name, count:r.count, char:!!r.char, gone:mean(x.rowGone[ri]), down:mean(x.rowDown[ri]) })),
+      // the shield's part (Grot Shields): hits it stopped, wounds and models it lost, the chance it is destroyed (means)
+      shield:x.S.shield ? (() => { const a = x.W.shS, b = x.alt ? x.alt.W.shS : { hits:0, lost:0, dead:0, wipe:0 };
+        return { name:x.S.shield.name, hits:mean(a.hits + b.hits), lost:mean(a.lost + b.lost), dead:mean(a.dead + b.dead), wipe:mean(a.wipe + b.wipe), models:x.S.shield.rows.reduce((t, r) => t + r.count, 0) }; })() : null,
       // the attacking unit's hazard rolls after this beat: rolls, mortal wounds, wounds lost and models destroyed (means)
       hazard:x.b.hazard ? { rolls:mean(x.hz.rolls), mw:mean(x.hz.mw), lost:mean(x.hz.lost), dead:mean(x.hz.dead), played:!!sides[1 - x.b.side] } : null,
       order:x.order.map(i => x.S.groups[i].name), orderIdx:x.order })),
@@ -677,9 +706,10 @@ function oneRoll(cls, rr, fish){
 const fmt = x => { if(Math.abs(x - Math.round(x)) < 1e-9) return String(Math.round(x)); const r = Math.round(x * 10) / 10; return Math.abs(r) >= 10 ? String(Math.round(x)) : r.toFixed(1); };
 // the working's steps: enough digits that the numbers shown multiply out as shown: two decimals (one from 100, three
 // significant digits below 1), rounded first; whole numbers as they are (10.5, 4.08, 0.833, 0.0133, 136.1, 12)
+// (a number that is not whole never reads as one: 3.995 is "3.995", not "4", so a product shown with it still multiplies out)
 const fmtStep = x => { if(Math.abs(x - Math.round(x)) < 1e-9) return String(Math.round(x));
   const a = Math.abs(x), d = a >= 100 ? 1 : a >= 1 ? 2 : Math.min(6, 2 - Math.floor(Math.log10(a)));
-  const r = +x.toFixed(d); return Math.abs(r - Math.round(r)) < 1e-12 ? String(Math.round(r)) : String(r); };
+  const r = +x.toFixed(d); return Math.abs(r - Math.round(r)) < 1e-12 ? String(+x.toFixed(d + 1)) : String(r); };
 const fx = fmtStep;
 const sgn = v => (v > 0 ? '+' : '-') + Math.abs(v);
 // the chance in words: "4/6", or with a re-roll "(4/6 + 2/6 × 4/6 = 32/36)"

@@ -2,6 +2,7 @@
 // calc step can check what the screen builds for real matchups without a browser.
 //   const dm = require('./damage-node')(); dm.calc({ army, opp, dir, ph, atk, tgt, aArmy, tArmy, typed, on, off, fx, ... })
 //   dm.plan({ army, opp, dir, atk, tgt, …, turn:{ me:{ shoot, charge, fight, back } }, ch:{ 'me:fight':{ on, … } }, facts }) → the turn
+//   (mine: the player's own list when army, the list open, is another: the Damage tab's "yours" is always mine)
 // Only top-level declarations are taken from app.html (the ones dmCalc needs, found by name); nothing touches a page.
 const fs = require('fs'), path = require('path');
 const { ROOT, loadData } = require('./lib');
@@ -23,7 +24,7 @@ module.exports = function load(){
   }
   // what the Damage helpers use, followed name by name (the page's state is given here instead)
   const given = new Set(['D', 'cur', 'sess', 'store', 'session', 'BUILD', '$', '$$', 'WH_CALC']);
-  const need = new Set(), todo = ['dmCalc', 'dmShown', 'dmModels', 'dmUnits', 'dmState', 'dmSides', 'dmTypedVals', 'dmTypedKw', 'oppOf', 'unitLabel', 'modelCount', 'DM_ONE_OF', 'dmSwap', 'dmPair', 'dmPlan', 'dmIn', 'dmBeatAns', 'dmFx', 'dmLevers', 'dmNums', 'dmZero', 'dmDelta', 'dmSetUnit', 'dmCleanTicks', 'dmTypedSet', 'dmTypedOk', 'dmShort', 'dmClashes'];
+  const need = new Set(), todo = ['dmCalc', 'dmShown', 'dmModels', 'dmUnits', 'dmState', 'dmSides', 'dmTypedVals', 'dmTypedKw', 'oppOf', 'unitLabel', 'modelCount', 'DM_ONE_OF', 'dmSwap', 'dmPair', 'dmPlan', 'dmIn', 'dmBeatAns', 'dmFx', 'dmLevers', 'dmNums', 'dmZero', 'dmDelta', 'dmSetUnit', 'dmCleanTicks', 'dmTypedSet', 'dmTypedOk', 'dmShort', 'dmClashes', 'dmStripSteps', 'dmResetPair', 'dmCharged', 'dmChargeNeeded', 'dmMe'];
   while(todo.length){
     const n = todo.pop();
     if(need.has(n) || given.has(n) || !decl.has(n)) continue;
@@ -37,20 +38,20 @@ module.exports = function load(){
   const D = loadData(), WH_CALC = require(path.join(ROOT, 'calc.js'));
   const mem = new Map(), store = { get:k => mem.get(k), set:(k, v) => mem.set(k, v) };
   const env = new Function('D', 'WH_CALC', 'store', 'window', 'let cur = { s:"damage", army:null }, sess = {};\n' + src + '\n' +
-    'return { set:(a, st) => { cur.army = a; sess.dmg = { [a]:st }; }, dmState, dmSides, dmTypedVals, dmTypedKw, dmCalc, dmShown, dmModels, dmUnits, oppOf, army, unitLabel, modelCount, dmSwap, dmPair, dmPlan, dmIn, dmBeatAns, dmFx, dmLevers, dmNums, dmZero, dmDelta, dmSetUnit, dmCleanTicks, dmTypedSet, dmTypedOk, dmShort, dmClashes };');
+    'return { set:(a, st, mine) => { cur.army = a; sess.mine = mine || undefined; sess.dmg = { [mine || a]:st }; }, dmState, dmSides, dmTypedVals, dmTypedKw, dmCalc, dmShown, dmModels, dmUnits, oppOf, army, unitLabel, modelCount, dmSwap, dmPair, dmPlan, dmIn, dmBeatAns, dmFx, dmLevers, dmNums, dmZero, dmDelta, dmSetUnit, dmCleanTicks, dmTypedSet, dmTypedOk, dmShort, dmClashes, dmStripSteps, dmResetPair, dmCharged, dmChargeNeeded, dmMe };');
   const app = env(D, WH_CALC, store, { WH_DATA:D });
   // one matchup as the screen builds it: s = { army, opp, dir, ph, atk, tgt, aArmy, tArmy, typed, on, off, pick, man, val }
   // (the sides as the screen picks them: dmSides; opp may be left out, as on the screen)
   const calc = s => {
-    store.set('wh-opp-' + s.army, s.opp);
-    app.set(s.army, Object.assign({ dir:'me', ph:'shooting', aArmy:'', tArmy:'', off:{}, pick:{}, on:{}, man:{}, val:{}, fold:{}, typed:{} }, s));
+    store.set('wh-opp-' + s.army, s.opp); if(s.mine) store.set('wh-opp-' + s.mine, s.army);
+    app.set(s.army, Object.assign({ dir:'me', ph:'shooting', aArmy:'', tArmy:'', off:{}, pick:{}, on:{}, man:{}, val:{}, fold:{}, typed:{} }, s), s.mine);
     const st = app.dmState(), { A, B, au, tu, kind } = app.dmSides(st);
     return au && tu ? app.dmCalc(st, A, B, au, tu, kind) : null;
   };
   // the whole turn as the screen plans it (its steps, each step's calculation): s as for calc, with turn, step, ch, facts
   const plan = s => {
-    store.set('wh-opp-' + s.army, s.opp);
-    app.set(s.army, Object.assign({ dir:'me', aArmy:'', tArmy:'', fold:{}, typed:{}, turn:{}, step:{}, ch:{}, facts:{} }, s));
+    store.set('wh-opp-' + s.army, s.opp); if(s.mine) store.set('wh-opp-' + s.mine, s.army);
+    app.set(s.army, Object.assign({ dir:'me', aArmy:'', tArmy:'', fold:{}, typed:{}, turn:{}, step:{}, ch:{}, facts:{} }, s), s.mine);
     return app.dmPlan(app.dmState());
   };
   return { D, WH_CALC, app, calc, plan, names:[...need] };

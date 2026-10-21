@@ -55,7 +55,8 @@ function items(D, appSource){
         if(ab.na) add(a.id, 'ability-na', w + ' · ' + ab.name, { na:ab.na, armyUnits:a.units.map(x => x.name + ' [' + x.kw.join(', ') + ']') }, src);
         if(ab.damaged) add(a.id, 'ability-damaged', w + ' · ' + ab.name, { damaged:ab.damaged, W:u.stats[0].W }, src);
         // the Damage tab's reading of it: always protects the unit (defAlways), its numbers (defCalc), always riled up (riled)
-        if(ab.defAlways || ab.defCalc || ab.riled) add(a.id, 'ability-calc', w + ' · ' + ab.name, { def:ab.def, defAlways:ab.defAlways, defCalc:ab.defCalc, riled:ab.riled, models:u.models }, src);
+        // (calcDef: a "when targeted" line the Damage tab alone shows, lasts: how long it carries; embarked: a model not on the battlefield yet)
+        if(ab.defAlways || ab.defCalc || ab.riled || ab.calcDef || ab.embarked) add(a.id, 'ability-calc', w + ' · ' + ab.name, { def:ab.def, calcDef:ab.calcDef, defAlways:ab.defAlways, defCalc:ab.defCalc, lasts:ab.lasts, riled:ab.riled, embarked:ab.embarked, models:u.models }, src);
         // and what it plays in the turn (fightOnDeath: One Last Kill; comeback: Berserker Frenzy), what is approximate about it (calcNote)
         if(ab.fightOnDeath || ab.comeback || ab.calcNote) add(a.id, 'ability-turn', w + ' · ' + ab.name, { fightOnDeath:ab.fightOnDeath, comeback:ab.comeback, calcNote:ab.calcNote, who:ab.who, models:u.models }, src);
       }
@@ -71,14 +72,15 @@ function items(D, appSource){
     const f = fr(a.faction);
     const rulesMeta = (where, r, srcText) => {
       const src = { rule:r.name, text:srcText };
-      for(const k of ['ph', 'turn', 'turns', 'needs', 'def', 'mod', 'note', 'tag', 'statNote', 'missing', 'ask']) if(r[k] !== undefined) add(a.id, 'rule-' + k, where + ' · ' + r.name, { [k]:r[k] }, src);
+      // (calcMods, calcDefs, calcNc, both, limit: the Damage tab's own reading of an army rule)
+      for(const k of ['ph', 'turn', 'turns', 'needs', 'def', 'mod', 'note', 'tag', 'statNote', 'missing', 'ask', 'calcMods', 'calcDefs', 'calcNc', 'both', 'limit']) if(r[k] !== undefined) add(a.id, 'rule-' + k, where + ' · ' + r.name, { [k]:r[k] }, src);
       for(const x of r.remind || []) add(a.id, 'rule-remind', where + ' · ' + r.name, x, src);
     };
     for(const r of f.armyRules) rulesMeta(a.faction + ' army rule', r, r.text + (r.table ? '\n' + r.table.map(t => t.join(': ')).join('\n') : ''));
     for(const id of a.detachments){
       const d = f.detachments[id];
       if(d.rule) rulesMeta(d.name + ' rule', d.rule, d.rule.text + (d.rule.table ? '\n' + d.rule.table.map(t => t.join(': ')).join('\n') : ''));
-      for(const s of d.stratagems || []) for(const k of ['phases', 'turn', 'turns', 'needs', 'mod', 'def', 'defCalc', 'defPick', 'calcNote', 'lasts', 'gist', 'note', 'cpNote', 'ask'])
+      for(const s of d.stratagems || []) for(const k of ['phases', 'turn', 'turns', 'needs', 'mod', 'def', 'defCalc', 'defPick', 'calcNote', 'lasts', 'gist', 'note', 'cpNote', 'ask', 'shield', 'react'])
         if(s[k] !== undefined) add(a.id, 'strat-' + k, d.name + ' · ' + s.name, { [k]:s[k] }, { stratagem:s.name, text:stratText(s) });
     }
   }

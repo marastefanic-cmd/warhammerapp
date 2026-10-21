@@ -139,15 +139,15 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
         }
       }
       // the damage calculator, for every unit of this list as the attacker (every rule ticked) and as the target:
-      // - the target has as many models as the unit (dmModels)
+      // - the target has as many models as the unit (dmModels), less a model not on the battlefield yet (embarked: Sir Hekhtur)
       // - an InSv marked * (against ranged attacks) is not used against melee attacks
       // - a value New Recruit already includes (a weapon's `from`) is never added again by the same rule
       // - a rule for one weapon or one model of an attached unit reaches only that weapon or model
       const foe = A.units[0];
       for(const u of A.units){
         for(const kind of ['ranged', 'melee']){
-          const rows = dmModels(u, kind);
-          if(rows.reduce((t, r) => t + r.count, 0) !== modelCount(u)) out.push(['damage-models', u.id, kind + ': ' + rows.reduce((t, r) => t + r.count, 0) + ' models, the unit has ' + modelCount(u)]);
+          const rows = dmModels(u, kind), emb = dmEmbarked(u), away = emb ? u.models.filter(l => emb.names.has(l.replace(/^\d+× /, '').replace(/ \(.*\)$/, ''))).reduce((t, l) => t + (parseInt(l, 10) || 1), 0) : 0;
+          if(rows.reduce((t, r) => t + r.count, 0) !== modelCount(u) - away) out.push(['damage-models', u.id, kind + ': ' + rows.reduce((t, r) => t + r.count, 0) + ' models, the unit has ' + modelCount(u)]);
           if(kind === 'melee' && rows.some(r => r.star && r.InSv < 7)) out.push(['damage-insv', u.id, 'an InSv marked * (ranged attacks) is used against melee attacks']);
           if(!(u[kind] || []).length) continue;
           const st = { dir:'me', ph:kind === 'ranged' ? 'shooting' : 'fight', off:{}, pick:{}, on:{}, man:{}, val:{}, dist:null };
@@ -242,11 +242,38 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     await open();
     const sync = await page.evaluate(async () => { const r = [...document.querySelectorAll('#dmList .dmlv[data-dmlv]')].find(e => e.getClientRects().length && !e.classList.contains('rad')); if(!r) return [];
       r.click(); const seen = [];
-      for(let i = 0; i < 30; i++){ await new Promise(f => setTimeout(f, 80)); const a = $('#dmAns .dmbig b'), b = document.querySelector('#dmStrip .dms.cur b'); seen.push((a ? a.textContent : '') + '/' + (b ? b.textContent : '')); }
+      for(let i = 0; i < 30; i++){ await new Promise(f => setTimeout(f, 80)); const a = $('#dmAns .dmbig b'), b = document.querySelector('#dmStrip .dmtile.cur .dmtv b'); seen.push((a ? a.textContent : '') + '/' + (b ? b.textContent : '')); }
       return [...new Set(seen)].filter(x => { const [a, b] = x.split('/'); return a !== b; }); });
     if(sync.length) fail('damage-card-strip', A, 'after a tap', 'the card and the strip differ: ' + sync.join(', '));
+    // the turn's steps in the strip: each step in the turn has either its own "Take out" or, in its place, why it stays (never both,
+    // never neither); a step not in the turn is one "Add" button; one the pair cannot play is no button at all; the step shown looks
+    // unlike the others; every control is a thumb's size (30px tall at least) and the strip fits the screen
+    await page.evaluate(() => { scrollTo(0, 0); hideSheet(); }); await page.waitForTimeout(400);
+    const strip = await page.evaluate(() => { const bad = [], t = [...document.querySelectorAll('#dmStrip .dmtile')];
+      if($('#dmStrip').classList.contains('mini')) bad.push('the strip is in its pinned form at the top of the page');
+      if(t.length !== 4) bad.push(t.length + ' step tiles');
+      for(const x of t){ const n = (x.querySelector('.l') || {}).textContent || '?';
+        if(x.classList.contains('on')){ const d = x.querySelectorAll('[data-dmdrop]').length, lk = x.querySelectorAll('.lk').length;
+          if(d + lk !== 1) bad.push(n + ': ' + d + ' take-out and ' + lk + ' reasons');
+          if(lk && !x.querySelector('.lk').textContent.trim()) bad.push(n + ': an empty reason');
+          if(lk && x.querySelector('.lk').closest('button')) bad.push(n + ': its reason is tappable'); }
+        else if(x.classList.contains('add')){ if(x.tagName !== 'BUTTON' || !x.dataset.dmadd) bad.push(n + ': Add is not a button'); }
+        else if(x.classList.contains('no')){ if(x.querySelector('button') || x.tagName === 'BUTTON') bad.push(n + ': a step it cannot play is tappable'); }
+        else bad.push(n + ': neither in the turn, nor to add, nor ruled out'); }
+      const cur = document.querySelector('#dmStrip .dmtile.cur'), other = document.querySelector('#dmStrip .dmtile.on:not(.cur)');
+      if(!cur) bad.push('no step shown'); else if(other && getComputedStyle(cur).boxShadow === getComputedStyle(other).boxShadow) bad.push('the step shown looks like the others');
+      for(const b of document.querySelectorAll('#dmStrip .dmtile button, #dmStrip button.dmtile')){ const r = b.getBoundingClientRect(); if(r.height < 29.5 || r.width < 44) bad.push((b.textContent || '').trim().slice(0, 20) + ' is ' + Math.round(r.width) + '×' + Math.round(r.height) + 'px'); }
+      const s = $('#dmStrip').getBoundingClientRect(); if(s.right > innerWidth + 0.5 || document.documentElement.scrollWidth > innerWidth) bad.push('the strip is wider than the screen');
+      return bad; });
+    if(strip.length) fail('damage-strip', A, 'the four-step turn', strip.join('; '));
+    // the only step stays, said in its tile (a turn of one step)
+    const only = await page.evaluate(async () => { const st = dmState(); st.turn[st.dir] = { fight:dmArmed(dmPair(st).au, 'melee'), shoot:!dmArmed(dmPair(st).au, 'melee') }; saveSession(); rerender();
+      await new Promise(f => setTimeout(f, 300)); const x = document.querySelector('#dmStrip .dmtile.on'); const r = x ? [x.querySelectorAll('[data-dmdrop]').length, (x.querySelector('.lk') || {}).textContent || ''] : null;
+      st.turn[st.dir] = { shoot:true, charge:true, fight:true, back:true }; saveSession(); rerender(); await new Promise(f => setTimeout(f, 300)); return r; });
+    if(!only || only[0] !== 0 || !/only step/.test(only[1])) fail('damage-strip', A, 'a turn of one step', 'its tile: ' + JSON.stringify(only));
+    await page.waitForFunction(() => !dmBusy(), null, { timeout:120000, polling:50 });
     const undo = await page.evaluate(async () => { const st = dmState(), t0 = JSON.stringify(st.turn[st.dir]);
-      dmGoStep('charge'); await new Promise(f => setTimeout(f, 300)); const t1 = JSON.stringify(dmState().turn[dmState().dir]), said = $('#toast').innerText;
+      const x = document.querySelector('#dmStrip [data-dmdrop="back"]'); if(x) x.click(); await new Promise(f => setTimeout(f, 300)); const t1 = JSON.stringify(dmState().turn[dmState().dir]), said = $('#toast').innerText;
       // the toast covers no number: neither the card nor the strip, on one line
       const tr = $('#toast').getBoundingClientRect(), hit = ['#dmAns', '#dmStrip'].filter(q => { const e = $(q); if(!e) return false; const r = e.getBoundingClientRect(); return r.bottom > tr.top + 1 && r.top < tr.bottom - 1 && r.right > tr.left && r.left < tr.right; });
       if(hit.length || tr.height > 48) return { changed:true, back:true, said, over:hit.concat(tr.height > 48 ? ['two lines'] : []) };
@@ -256,7 +283,16 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       document.querySelector('#toast [data-undo]').click(); await new Promise(f => setTimeout(f, 300));
       return { back:JSON.stringify(dmState().turn[dmState().dir]) === t0, changed:t1 !== t0, said }; });
     if(undo.over) fail('damage-toast', A, 'a step added', 'the toast covers ' + undo.over.join(', '));
-    else if(!undo.changed || !undo.back || !/Charge/.test(undo.said)) fail('damage-undo', A, 'Charge, then Undo', JSON.stringify(undo));
+    else if(!undo.changed || !undo.back || !/Fight back taken out/.test(undo.said)) fail('damage-undo', A, 'Fight back taken out, then Undo', JSON.stringify(undo));
+    // another target: the facts said about the pair (the closest target, a half-range band) reset, the toast names them, Undo puts them back
+    await open();
+    const rs = await page.evaluate(async B => { const st = dmState(), d = st.dir, P = dmPair(st), u = armyById(B).units.find(x => x.id !== st.tgt); if(!u) return null;
+      st.facts[d] = { theirs:{ closest:true } }; dmCh(st, 'shoot').val.half = 9; saveSession();
+      const before = dmBefore(st, true), r = dmSetUnit(st, 'theirs', B, u.id); saveSession(); rerender(); dmChange(r.words, before, r.dropped);
+      await new Promise(f => setTimeout(f, 300)); const said = $('#toast').innerText, gone = !(dmState().facts[d].theirs || {}).closest;
+      document.querySelector('#toast [data-undo]').click(); await new Promise(f => setTimeout(f, 400));
+      const s2 = dmState(); return { said, gone, back:!!(s2.facts[d].theirs || {}).closest && dmCh(s2, 'shoot').val.half === 9 && s2.tgt === before.tgt }; }, B);
+    if(!rs || !/reset: .*closest target/.test(rs.said) || !rs.gone || !rs.back) fail('damage-reset', A, 'another target', JSON.stringify(rs));
     // a typed number typed slowly (keys 0.4 s apart) keeps every digit; an entry it cannot count is said under the field, and leaving
     // the field puts the counted value back
     await page.evaluate(A => { hideSheet(); sess.dmg = {}; const L = armyById(A), u = L.units.find(x => (x.ranged || []).length) || L.units[0];

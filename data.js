@@ -289,7 +289,10 @@ const FACTIONS = {
             target:'That **GRETCHIN** unit.',
             effect:'Your unit can make a **normal move** of:\n- Up to D6".\n- Or: Up to 6" instead if your unit is an **attached** unit.' },
           // needs is the TARGET (the GRETCHIN unit); the ORKS INFANTRY unit it names is the one being shot
-          { id:'grot-shields', gist:'If a model in your GRETCHIN unit is on the battlefield, each hit roll of that enemy unit’s ranged attacks on that ORKS unit that results in a hit ends that attack, and your GRETCHIN unit suffers 1 mortal wound.', name:'Grot Shields', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Gretchin'] },
+          // shield: the Damage tab offers it as help to the ORKS INFANTRY unit (not GRETCHIN) of a list with a GRETCHIN unit, when it
+          // is shot at in the Shooting phase: each hit roll that results in a hit ends that attack and the GRETCHIN unit suffers 1
+          // mortal wound, while a model of it is on the battlefield ([TORRENT] hits are not hit rolls: the FAQ)
+          { id:'grot-shields', shield:{ protects:{ all:['Faction: Orks','Infantry'], none:['Gretchin'] }, by:{ all:['Gretchin'] } }, gist:'If a model in your GRETCHIN unit is on the battlefield, each hit roll of that enemy unit’s ranged attacks on that ORKS unit that results in a hit ends that attack, and your GRETCHIN unit suffers 1 mortal wound.', name:'Grot Shields', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Gretchin'] },
             note:'Wahapedia FAQ: “When using the Grot Shields stratagem, are hits by [TORRENT] weapons considered ’hit rolls that result in a hit’?” “No.”',
             when:'Your opponent’s Shooting phase, when an enemy unit targets a friendly **ORKS INFANTRY** unit (excluding **GRETCHIN** units).',
             target:'One friendly **GRETCHIN** unit within 3" of that **ORKS INFANTRY** unit.',
@@ -380,7 +383,8 @@ const FACTIONS = {
             when:'Your Shooting phase, when a friendly **unengaged BREAKA BOYZ**/**FLASH GITZ**/**TANKBUSTAS** unit has shot.',
             target:'That **BREAKA BOYZ**/**FLASH GITZ**/**TANKBUSTAS** unit.',
             effect:'- Your unit can make a **normal move** of up to 6", and must end that move within range of an **objective**.\n- Your unit is not **eligible to declare a charge** until the end of the turn.' },
-          { id:'gun-crazy-show-offs', gist:'After an enemy unit has shot and hit yours: your unit shoots using normal shooting, but only at that enemy unit.', name:'Gun-crazy Show-offs', cp:1, phases:['shooting'], turn:'opp', needs:{ any:['Flash Gitz','Tankbustas'] },
+          // react: the Damage tab names it to the side that shoots its unit, as a reaction it can trigger (not counted)
+          { id:'gun-crazy-show-offs', react:'hit', gist:'After an enemy unit has shot and hit yours: your unit shoots using normal shooting, but only at that enemy unit.', name:'Gun-crazy Show-offs', cp:1, phases:['shooting'], turn:'opp', needs:{ any:['Flash Gitz','Tankbustas'] },
             when:'Your opponent’s Shooting phase, when an enemy unit has shot.',
             target:'One friendly **FLASH GITZ**/**TANKBUSTAS** unit hit by those attacks.',
             effect:'Your unit shoots using **normal shooting**, but while doing so your unit can only target that enemy unit.' }
@@ -410,7 +414,10 @@ const FACTIONS = {
           ['Quality 1–2 · …with our martial valour risen over all', 'Each time this model is selected to shoot or fight, you can re-roll one **Hit roll** and you can re-roll one **Wound roll**.'],
           ['Quality 3–4 · …and we are eager for the challenge', 'Add 2" to this model’s Move characteristic and add 1 to **Advance** and **Charge rolls** made for this model.'],
           ['Quality 5–6 · …yet shall our legacy be unsullied', 'Improve this model’s Objective Control characteristic by 2 and its Leadership characteristic by 1.']
-        ] },
+        ],
+        // the Damage tab's reading (read by it alone): the Quality that changes attacks is listed as not counted (one re-roll a selection:
+        // the calculator re-rolls no single die)
+        calcNc:[{ kind:'all', from:'Code Chivalric', when:'Quality 1–2 (…with our martial valour risen over all)', note:'each time this model is selected to shoot or fight, you can re-roll one Hit roll and one Wound roll', why:'one re-roll: the calculator re-rolls no single die' }] },
       // needs: a Bondsman ability only ever affects an ARMIGER model, so without one in the army it does nothing
       { name:'Bondsman', ph:['command'], turn:'your', needs:{ any:['Armiger'] },
         text:'Some **IMPERIAL KNIGHTS** models have a Bondsman ability, tagged with the word ‘Bondsman’. In your Command phase, one or more models from your army with a Bondsman ability can use that ability. For each one that does, select one friendly **ARMIGER** model within 12" of that model (you cannot select an **ARMIGER** model that is already being affected by a Bondsman ability). Until the start of your next Command phase, that **ARMIGER** model is affected by that Bondsman ability.' }
@@ -487,7 +494,19 @@ const FACTIONS = {
           ['Martial Excellence · double 4+ or triple 1+', 'Melee weapons equipped by models in this unit have the **[SUSTAINED HITS 1]** ability.'],
           ['Warp Blades · double 5+ or triple 2+', 'Melee weapons equipped by models in this unit have the **[LETHAL HITS]** ability.'],
           ['Decapitating Strikes · double 6 or triple 3+', 'Each time a model in this unit makes a melee attack that targets an **INFANTRY** unit, that attack has the **[DEVASTATING WOUNDS]** ability.']
-        ] }
+        ],
+        // the Damage tab's reading (read by it alone): the Blessings that change a fight, each its own tick (which are active is the
+        // player's to say); limit: up to two active at once, one more with Skulls for the Skull Throne! or, for a TERMINATOR SQUAD unit,
+        // Adamantine Avalanche, every one for the unit of Archslaughterer's bearer: more ticked are counted by you. Total Carnage plays
+        // in the fight back (onDeath: its models destroyed by the melee attacks before it fought fight on a 4+). Unbridled Bloodlust
+        // (the charge is taken to succeed) and Rage-fuelled Invigoration (moves) change no numbers here
+        calcMods:[
+          { kind:'melee', from:'Martial Excellence', limit:'blessing', lasts:'round', when:'Blessing of Khorne active this battle round', note:'[SUSTAINED HITS 1]' },
+          { kind:'melee', from:'Warp Blades', limit:'blessing', lasts:'round', when:'Blessing of Khorne active this battle round', note:'[LETHAL HITS]' },
+          { kind:'melee', from:'Decapitating Strikes', limit:'blessing', lasts:'round', when:'Blessing of Khorne active this battle round, melee attacks that target an INFANTRY unit', note:'[DEVASTATING WOUNDS]', vs:{ any:['Infantry'] } },
+          { kind:'melee', from:'Total Carnage', limit:'blessing', lasts:'round', when:'Blessing of Khorne active this battle round', note:'fighting back: its models destroyed by melee attacks before it fought fight on a 4+, then are removed', onDeath:{ roll:4 }, calc:{} }
+        ],
+        limit:{ blessing:{ n:2, what:'Blessings of Khorne', more:[{ strat:'skulls-for-the-skull-throne', n:1 }, { rule:'Adamantine Avalanche', n:1 }, { enhancement:'Archslaughterer', all:true }] } } }
     ],
     detachments: {
       'berzerker-warband': {
@@ -605,6 +624,15 @@ const FACTIONS = {
           ['Temporal Surge (Psychic) · Warp Charge 6', 'Select one friendly **THOUSAND SONS** or **SCINTILLATING LEGIONS** unit that is not within **Engagement Range** of one or more enemy units and is within 24" of and **visible** to the manifesting model. That unit can make a **Normal move** of up to D6". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.'],
           ['Doombolt (Psychic) · Warp Charge 7', 'Select one enemy unit within 24" of and **visible** to the manifesting model (excluding units with the **Lone Operative** ability that are not part of an Attached unit and are not within 12" of the manifesting model); that unit suffers D3 **mortal wounds**. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.'],
           ['Twist of Fate (Psychic) · Warp Charge 9', 'Select one enemy unit within 24" of and **visible** to the manifesting model. Until the end of the phase, each time a **THOUSAND SONS** or **SCINTILLATING LEGIONS** model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead.']
+        ],
+        // the Damage tab's reading (read by it alone): the two Rituals that change attacks on the unit they select, for THOUSAND SONS and
+        // SCINTILLATING LEGIONS models of the army until the end of the phase (help: a model with this ability manifests it); the pick is
+        // the Psychic test result. Doombolt's mortal wounds and Temporal Surge's move are not attacks
+        calcMods:[
+          { kind:'ranged', from:'Destiny’s Ruin', help:true, needs:{ any:['Faction: Thousand Sons','Scintillating Legions'] }, when:'Your Shooting phase, manifested against this target (Warp Charge 5)', note:'re-roll hit rolls of 1 (10+: re-roll hit rolls)',
+            pick:[{ name:'Result 5-9', note:'re-roll hit rolls of 1' }, { name:'Result 10+', note:'re-roll hit rolls' }] },
+          { kind:'ranged', from:'Twist of Fate', help:true, needs:{ any:['Faction: Thousand Sons','Scintillating Legions'] }, when:'Your Shooting phase, manifested against this target (Warp Charge 9)', note:'+1 AP (12+: +2 AP)',
+            pick:[{ name:'Result 9-11', note:'+1 AP' }, { name:'Result 12+', note:'+2 AP' }] }
         ] },
       { name:'Pact of Sorcery',
         text:'When mustering your army, unless specifically stated otherwise, you cannot select **SCINTILLATING LEGIONS** as your Army Faction.' }
@@ -774,7 +802,30 @@ const FACTIONS = {
         table:[
           ['Protector Imperative', '- Ranged weapons equipped by models in this unit have the **[HEAVY]** ability.\n- Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n- Each time a melee attack targets this unit, if this unit has the **BATTLELINE** keyword and/or it is within 6" of one or more friendly **ADEPTUS MECHANICUS BATTLELINE** units, subtract 1 from the **Hit roll**.'],
           ['Conqueror Imperative', '- Ranged weapons equipped by models in this unit have the **[ASSAULT]** ability.\n- Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n- Each time a model in this unit makes an attack, if this unit has the **BATTLELINE** keyword and/or it is within 6" of one or more friendly **ADEPTUS MECHANICUS BATTLELINE** units, improve the Armour Penetration characteristic of that attack by 1.']
-        ] }
+        ],
+        // the Damage tab's reading (read by it alone, never shown on the datasheets): calcMods for the attacks of a unit with this ability,
+        // calcDefs for the attacks on it. One pick, the Imperative active (Protector, Conqueror, or Both where a rule of the list makes
+        // both active for that unit: both, else Both is counted by you). The BATTLELINE / within 6" condition is a fact of the table
+        // (part.cond battleline6: said for the unit; a BATTLELINE unit meets it by itself). [ASSAULT] changes no numbers here.
+        // The Faction Pack's FAQ (Auto-divinatory Targeting): its BS 3+ is set first, then the Protector Imperative improves it (skill)
+        calcMods:[
+          { kind:'ranged', lasts:'round', when:'The Imperative active for your army this battle round', note:'Protector: [HEAVY], BS improved by 1 · Conqueror: [ASSAULT] · +1 AP with Conqueror if this unit is BATTLELINE or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit',
+            pick:[{ name:'Protector', note:'[HEAVY], BS improved by 1', calc:{ heavy:true, skill:1 } }, { name:'Conqueror', note:'[ASSAULT] (no change here)', calc:{} },
+              { name:'Both', both:true, note:'[HEAVY], BS improved by 1, [ASSAULT]', calc:{ heavy:true, skill:1 } }],
+            part:{ cond:'battleline6', picks:['Conqueror', 'Both'], calc:{ ap:1 }, note:'+1 AP' } },
+          { kind:'melee', lasts:'round', when:'The Imperative active for your army this battle round', note:'Conqueror: WS improved by 1 · +1 AP with Conqueror if this unit is BATTLELINE or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit · Protector: nothing for its melee attacks',
+            pick:[{ name:'Protector', note:'nothing for its melee attacks', calc:{} }, { name:'Conqueror', note:'WS improved by 1', calc:{ skill:1 } },
+              { name:'Both', both:true, note:'WS improved by 1', calc:{ skill:1 } }],
+            part:{ cond:'battleline6', picks:['Conqueror', 'Both'], calc:{ ap:1 }, note:'+1 AP' } }
+        ],
+        calcDefs:[
+          { kind:'melee', lasts:'round', when:'Melee attacks that target this unit', note:'Protector: -1 to the hit roll if this unit is BATTLELINE or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit',
+            pick:[{ name:'Protector', calc:{} }, { name:'Conqueror', note:'nothing against melee attacks', calc:{} }, { name:'Both', both:true, calc:{} }],
+            part:{ cond:'battleline6', picks:['Protector', 'Both'], calc:{ hitMinus:1 }, note:'-1 to their hit rolls' } }
+        ],
+        // what makes both Imperatives active for a unit: Omnicogitator (the bearer's unit), Transcendent Cogitation (its target), and
+        // Thulia Ghuld's Icon of War, The Fires of Mars (a SKITARII or THULIA GHULD unit within 6" of her)
+        both:[{ enhancement:'Omnicogitator' }, { strat:'transcendent-cogitation' }, { ability:'Icon of War', part:'The Fires of Mars', of:'Thulia Ghuld', needs:{ any:['Skitarii','Thulia Ghuld'] } }] }
     ],
     detachments: {
       'cohort-cybernetica': {
@@ -836,7 +887,9 @@ const FACTIONS = {
         // Belicosa-class: the pack prints the name in capitals; "-class" as BSData and New Recruit spell it.
         // No ph on the rule: its words name no phase or moment.
         rule:{ name:'Murderous Imperative', needs:{ all:['Skitarii'] },
-          mod:{ kind:'all', when:'Protector or Conqueror Imperative active for this unit', note:'Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1',
+          // follow: the Damage tab takes the Imperative from the Doctrina Imperatives pick (no pick of its own, so it is never taken for
+          // the Imperative itself), ticked with it
+          mod:{ kind:'all', when:'Protector or Conqueror Imperative active for this unit', note:'Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1', follow:'Doctrina Imperatives',
             pick:[{ name:'Protector', note:'re-roll hit rolls of 1' }, { name:'Conqueror', note:'re-roll wound rolls of 1' }, { name:'Both', note:'re-roll hit rolls of 1 and wound rolls of 1' }] },
           text:'Each time a model in a **SKITARII** unit from your army makes an attack:\n- If the Protector Imperative is active for that unit, re-roll a **Hit roll** of 1.\n- If the Conqueror Imperative is active for that unit, re-roll a **Wound roll** of 1.' },
         enhancements:[
@@ -870,7 +923,8 @@ const FACTIONS = {
             when:'Your Charge phase, just after a **SICARIAN** unit from your army **declares a charge**.',
             target:'That **SICARIAN** unit.',
             effect:'Until the end of the phase, when your unit ends a **Charge move**, select one enemy unit within **Engagement Range** of it, then roll one D6 for each model in your unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 **mortal wound**.' },
-          { id:'analytic-reprisals', gist:'Your unit shoots as if it were your Shooting phase, but only at that enemy unit (and only if it is an eligible target).', name:'Analytic Reprisals', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Skitarii','Infantry'] },
+          // react: the Damage tab names it to the side that shoots its unit, as a reaction it can trigger (not counted)
+          { id:'analytic-reprisals', react:'lost', gist:'Your unit shoots as if it were your Shooting phase, but only at that enemy unit (and only if it is an eligible target).', name:'Analytic Reprisals', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Skitarii','Infantry'] },
             when:'Your opponent’s Shooting phase, just after an enemy unit has shot.',
             target:'One **SKITARII INFANTRY** unit from your army that lost one or more models as a result of the attacking unit’s attacks.',
             effect:'Your unit can shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target.' }
@@ -957,7 +1011,9 @@ const ARMIES = [
       abilities:[
         { name:'Full Throttle', ph:['command','movement','charge'], turn:'your', text:'In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase.' },
         { name:'Turbo Engine', who:'Throttlerokkit Shokka Engine', ph:['movement','charge'], turn:'your', text:'When this unit is selected to make an **advance**/**fall-back move**, that move does not prevent this unit from being **eligible to declare a charge**.' },
-        { name:'Pulse Jet', who:'Throttlerokkit Shokka Engine', ph:['movement'], turn:'your', text:'In your Movement phase, when this unit is **selected to move**, if this unit is **unengaged**, this unit can make a **pulse jet move**.' },
+        // calcDef: a "when targeted" line the Damage tab alone shows (the Pulse Jet Move's AFTER MOVING); defCalc its numbers; unticked:
+        // it needs the Pulse Jet picked (Full Throttle) and a pulse jet move made
+        { name:'Pulse Jet', who:'Throttlerokkit Shokka Engine', ph:['movement'], turn:'your', calcDef:'After a pulse jet move: attacks that target it have -1 to hit rolls, until the start of your next turn', defCalc:{ hitMinus:1 }, lasts:'round', text:'In your Movement phase, when this unit is **selected to move**, if this unit is **unengaged**, this unit can make a **pulse jet move**.' },
         { name:'Shokk Attack Engine', who:'Throttlerokkit Shokka Engine', ph:['command'], turn:'your', text:'In your Command phase, if this unit is **unengaged**, you can place this unit in **strategic reserves**.' }
       ],
       rules:['Deadly Demise D3','Deep Strike','Lone Operative','Waaagh!'],
@@ -2684,7 +2740,9 @@ const ARMIES = [
         { name:'Legendary Freeblade', ph:['command','movement','shooting','charge','fight'], turn:'either', text:'Once per turn, when you target this model with a stratagem, you may reduce the CP cost of that use of that stratagem by 1CP.' },
         { name:'Invulnerable Save (5+*)', def:'5+ invulnerable save against ranged attacks only', text:'This model has a 5+ invulnerable save against ranged attacks.' },
         { name:'Damaged: 1-9 Wounds Remaining', damaged:'1-9', text:'While this model has 1‑9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.' },
-        { name:'Using Sir Hekhtur', text:'If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. Your Canis Rex unit is not considered to be destroyed until Sir Hekhtur is also destroyed.' }
+        // embarked: the Damage tab reads Sir Hekhtur as not on the battlefield while Canis Rex lives (a model disembarking from a destroyed
+        // Transport: 18.05 sets it up then), so his weapons start unticked (counted by you) and Canis Rex is the target alone
+        { name:'Using Sir Hekhtur', embarked:{ model:'Sir Hekhtur', until:'Canis Rex' }, text:'If your Canis Rex model is destroyed, this model is treated as a model disembarking from a destroyed Transport and must perform an Emergency Disembarkation. Sir Hekhtur cannot be selected as the target of any of your Stratagems other than Core Stratagems. Your Canis Rex unit is not considered to be destroyed until Sir Hekhtur is also destroyed.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
