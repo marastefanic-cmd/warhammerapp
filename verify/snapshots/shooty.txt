@@ -23,8 +23,14 @@ AT THE TABLE
 Keep screen on
 Off
 RULES QUESTIONS
+In Claude, on your Claude subscription
 
-Ask Claude rules questions about your lists from any screen (the ? in the top bar). It uses your own Anthropic API key (console.anthropic.com → API keys), kept only in this browser on this phone and sent only to Anthropic.
+Opens this same app inside the Claude app (or claude.ai), where the ? uses your Claude account. Only you, and people you share it with, can open it.
+
+Open in Claude
+Here, with an Anthropic API key
+
+Ask from any screen (the ? in the top bar). Billed to your Anthropic Console credits (console.anthropic.com → API keys), not your subscription; the key stays in this browser on this phone and goes only to Anthropic.
 
 Save
 THIS APP
