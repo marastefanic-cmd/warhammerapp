@@ -1,0 +1,146 @@
+[
+ {
+  "key": "764190ca8a1f44ad",
+  "where": "gameOf",
+  "verdict": "ok",
+  "why": "Round clamped 1–5 matches Event Companion 13 (“The battle ends after five battle rounds have been completed”). half 0/1 plus first matches 07.02 (“Both players now take one turn each. The same player always takes the first turn in each battle round”). first is set by step 10 (“Roll off: the winner takes the first turn.”). Each stored value out of range falls back to the new-game value for that field."
+ },
+ {
+  "key": "9c056b4ed3db0acd",
+  "where": "newGame",
+  "verdict": "needs-change",
+  "why": "The code does what the line says, but sharing it changes the Overview. Its New game used to clear only this list's ticks; now it also clears the Game tab's round, turn, CP, VP and choices and the opponent list's ticks, while its toast still says “New game: uses per battle cleared” (app.html data-newgame). Either give the Overview's toast the Game tab's wording (“New game: round, CP, VP, choices and uses per battle cleared”) or keep the Overview's New game to this list's uses per battle, as before."
+ },
+ {
+  "key": "536dfbf51f3091b0",
+  "where": "GC_SEL",
+  "verdict": "ok",
+  "why": "It matches the words that ask for a pick: “select one” (Doctrina, Code Chivalric’s “select one Deed”, Kindred Sorcery, Singular Purpose, Wrathful Presence, Unearthly Power, Full Throttle, Canticles, Rod of the War Forge, Battle Protocols) and Blessings of Khorne’s “activate up to two”. Unit-only picks it also matches (Omnissiah’s Blessing, Dreadherder, …) are dropped later by gcLasts/gcOptions."
+ },
+ {
+  "key": "00ea4f87ce8b1ce5",
+  "where": "gcLasts",
+  "verdict": "needs-change",
+  "why": "“until the end of the battle” / “for the coming battle” → battle, “until the end of the battle round” / “until the start of the next battle round” → round, and “remains in that protocol until it enters a different one” → kept all fit their words. But “until the start of your next Command phase” (Kindred Sorcery, Full Throttle, Canticles of the Omnissiah, Rod of the War Forge) is not the battle round for a player who takes the second turn. A pick made in that player’s Command phase of round N still holds through the opponent’s first turn of round N+1, and the tab then shows round N+1 with nothing picked. Give it its own value (e.g. 'command': until this side’s next Command phase), with gcPick and gChoiceHtml following it."
+ },
+ {
+  "key": "06cea5346db81252",
+  "where": "gcParts",
+  "verdict": "ok",
+  "why": "On Canticles of the Omnissiah it finds Invocation of Machine Vengeance, Mantra of Discipline (with its “- **Binharic Courage (Aura):** …” line) and Shroudpsalm (Aura). On Icon of War it finds Fanatical Devotion, Adaptive Tactics and The Fires of Mars. These are the sections’ own bold-named parts, and the lead sentence isn’t taken as an option."
+ },
+ {
+  "key": "65e531d47160c21a",
+  "where": "gcBullets",
+  "verdict": "ok",
+  "why": "Battle Protocols gives Protector / Conqueror / Aegis Protocol from “- **…:**”. Singular Purpose gives “Select one enemy unit” / “Select one objective marker”, i.e. its own bullets named by their first words."
+ },
+ {
+  "key": "2dd0132de1ecd4da",
+  "where": "gcTable",
+  "verdict": "ok",
+  "why": "Code Chivalric’s rows “Deed 1–2 · …” / “Quality 1–2 · …” become two groups (Deed, Quality) by D6 result, as the rule has “one Deed and one Quality … by rolling a D6 and consulting the relevant table”. Doctrina’s and Blessings’ rows are one option each (“Unbridled Bloodlust · double 1+”)."
+ },
+ {
+  "key": "58b1109936057de9",
+  "where": "gcOptions",
+  "verdict": "ok",
+  "why": "For every choice in the 11 lists the options are where the words point. Table for “below” (Doctrina “below”, Blessings “(see below)”, Kindred Sorcery “listed below”, Code Chivalric “…the relevant table below”). Abilities whose who is the named section (“the Crimson King section”, “one Wrathful Presence ability”, “one Throttlerokkit Shokka Engine ability”). Bold parts of the named ability (Canticles, Icon of War). Bullets for “of the following” / “from those listed below” (Singular Purpose, Battle Protocols). Icon of War itself (a friendly unit pick) and Omnissiah’s Blessing get no options, so neither becomes a choice."
+ },
+ {
+  "key": "c4d31957365921d5",
+  "where": "gcWhen",
+  "verdict": "needs-change",
+  "why": "The quoted whens are right in all 11 lists (“At the start of the battle round”, “At the end of the Read Mission Objectives step”, “In your Command phase”, “At the start of the first battle round”). But gameChoices passes m.index from x.text with its ** marks, and gcWhen uses it on the text with ** removed, so “the sentence that has the player select” is looked up up to 2 characters per bold pair too far on. A full stop inside that shift picks the wrong sentence. Match GC_SEL on the same **-free text (or strip before matching in gameChoices)."
+ },
+ {
+  "key": "9da6bf8ff8d712f2",
+  "where": "gameChoices",
+  "verdict": "ok",
+  "why": "It finds exactly the rules that ask for a pick and say how long it lasts: Code Chivalric; Doctrina Imperatives; Blessings of Khorne (up to two); Kindred Sorcery (each once per battle); Singular Purpose (one per Norn unit copy); Wrathful Presence; Unearthly Power; Full Throttle; Canticles; Rod of the War Forge; Battle Protocols. Rolled only for Code Chivalric (“randomly select”), Honoured from “your army becomes Honoured”. The options themselves (Wrathful Presence’s abilities) are not choices."
+ },
+ {
+  "key": "25d01908864f2d82",
+  "where": "gcPick",
+  "verdict": "needs-change",
+  "why": "Battle and round picks are shown as the words say, and a kept pick (Battle Protocols) carries until another is picked. Two gaps. (1) A pick lasting “until the start of your next Command phase” must also be shown in the next round’s turns before this side’s Command phase (the second player’s first turn of round N+1), marked as picked in round N; see gcLasts. (2) With nothing picked, Battle Protocols shows no protocol, but its words put the unit in one: “At the start of the battle … that unit enters Aegis Protocols”. Show Aegis Protocol as the current one until another is picked."
+ },
+ {
+  "key": "ca3acd8adf4b6be2",
+  "where": "gcTargets",
+  "verdict": "ok",
+  "why": "Their units are offered only where an option says to select one from the opponent’s army. Code Chivalric Deed 1–2 (“select one CHARACTER model in your opponent’s army”: their units with CHARACTER, e.g. “Mek + Tankbustas”, the unit holding that model). Invocation of Machine Vengeance (“select one unit from your opponent’s army”). Singular Purpose (“Select one enemy unit”). Nothing is offered before their list is picked."
+ },
+ {
+  "key": "0a96a2f600152412",
+  "where": "G_STEP",
+  "verdict": "ok",
+  "why": "It reads the step from a rule’s first words: “Start of your opponent’s Shooting phase” (Smokescreen) → start, “End of your opponent’s Movement phase” (Fire Overwatch) → end, “At the end of your Command phase” → end, “At the start of the first battle round” → first. Optional “(Once per battle…)” and “If your Army Faction is …,” prefixes are handled. Note: “at the start of any phase” (Chainbreaker) doesn’t match, so gStep’s “any phase” branch is unreachable, but Chainbreaker’s five tags put it under Any phase anyway."
+ },
+ {
+  "key": "cd078543e132b9c9",
+  "where": "gStep",
+  "verdict": "ok",
+  "why": "at “Start of the battle round” → 07.01. “At the end of your opponent’s turn” (Ambushing Hunters) → End of the turn. Start/end of a named phase → that step only in that phase, during elsewhere. Start of the battle → the battle. These match what each rule’s words name."
+ },
+ {
+  "key": "05e40ef5ca314352",
+  "where": "gUntagged",
+  "verdict": "ok",
+  "why": "For a rule with no ph tags, the phase and turn come from its first words: “At the start of your turn” → your Command phase, “At the end of your opponent’s turn” → their Fight phase (the end of that turn)."
+ },
+ {
+  "key": "79fdce8af16ef045",
+  "where": "gamePhase",
+  "verdict": "ok",
+  "why": "07.01 (“players resolve rules that are triggered at the start of the battle round, before progressing to player turns”) is shown in the round’s first Command phase for both lists. In round 1 that includes “At the start of the first battle round” (Singular Purpose) and “At the start of the battle” (Battle Protocols’ Aegis). Turn tags filter the rest (Icon of War not in their Command phase). Inert and Damaged rows are left out, and five-phase rules are Any phase."
+ },
+ {
+  "key": "c60524169033a8b0",
+  "where": "gPhaseHtml",
+  "verdict": "needs-change",
+  "why": "Most steps are right: Start of the battle, 07.01, the phase’s start, Gain Core CP 08.02 after 08.01, End of Command Phase 08.05, End of the turn, 07.03 after the last Fight phase. But every Command-phase rule that is neither start nor end is labelled “Command Abilities 08.04”, Insane Bravery included (WHEN: “Battle-shock step of your Command phase…”). 08.04’s own words exclude it: “Rules that are triggered in the Command phase (excluding those that are triggered at the start or end of this phase, when gaining Core CP, or by battle-shock rolls) are resolved now.” Add “Battle-shock Step 08.03” (GAME.steps.command) and file rules whose words name the Battle-shock step there. The same lumping labels the Fight phase’s middle “Fight 12.04”, which also takes Pile In 12.02 and Consolidate 12.07 rules; none in these lists so far."
+ },
+ {
+  "key": "3ff74a45c57fb954",
+  "where": "gRows",
+  "verdict": "needs-change",
+  "why": "Links, gists, the “no unit can use it” line and picked/not picked are right. But “uses per battle as the Overview’s ticks (the same keys)” fails for Kindred Sorcery. Its row (Command Abilities, pubstomper) gets perBattle(r, true) = one army box keyed 'r:Kindred Sorcery#0'. The Overview (and gamePick) use one box per ability, 'r:Kindred Sorcery:<ability>#0', as its words say (“You can only select each of these abilities once per battle”). So the row’s box never matches the Overview’s. Use the Overview’s per-option boxes for an “each of these … once per battle” rule with a table, or show no box (the choice already marks options used)."
+ },
+ {
+  "key": "88b2c21db407d33e",
+  "where": "G_CP",
+  "verdict": "ok",
+  "why": "It matches the CP sentences of the lists’ rules and nothing else: Da Boss (“…gain 1CP.”), Code Chivalric (“…you gain 2CP, or 3CP … (CP gained in this way are an exemption …)”), Hive Commander (“…you gain 1CP”), Broad Spectrum Data-tether (“…on a 5+, you gain 1CP.”)."
+ },
+ {
+  "key": "e52c38c6c9f25b0f",
+  "where": "gameCpRules",
+  "verdict": "ok",
+  "why": "It quotes the CP sentence of each army rule, detachment rule and usable ability once, with its units, and skips the italic FAQ/errata lines (Da Boss’s errata). Placed under Command points next to 08.02 (“Both players gain 1 Command Point (CP).”) and the Event Companion cap (“Excluding Core CP, each player can gain a maximum of 1CP per battle round …”), which is their place."
+ },
+ {
+  "key": "0110c9dc6e44cb7a",
+  "where": "gEvery",
+  "verdict": "ok",
+  "why": "Deep Strike 24.09 (“if every model in this unit has this ability”), Scouts 24.31 (“if every model in a unit has this ability”), Infiltrators 24.20 (“During deployment, if every model in a unit has this ability”). partialRules removes Slaughterbound + Exalted Eightbound’s Scouts, so the Rules tab’s B5 slip doesn’t carry over here."
+ },
+ {
+  "key": "1bc62fc3d84ec4ea",
+  "where": "gPregameHtml",
+  "verdict": "ok",
+  "why": "Quotes are in the right steps. Step 7 has 20.01 (“…cannot exceed 50% of your points limit for your battle size”) with each list’s 50% as an app note and its Deep Strike units. Step 8 has the TITANIC sentence and Infiltrators (24.20 “During deployment”). Step 10 has the first-turn pick (“Roll off: the winner takes the first turn.”). Step 11 has Scouts (24.31 “In the Resolve Pre-battle Abilities step”). The header names the Event Companion 1.3, which is the cached version."
+ },
+ {
+  "key": "85efd706eae95b17",
+  "where": "gChoiceHtml",
+  "verdict": "needs-change",
+  "why": "Options, Rolled, Honoured, their unit, the quoted pick, earlier rounds and “used” for Kindred Sorcery are right. The app note that the Event Companion’s sequence has no Read Mission Objectives step is true (no cached source has that step). But a pick lasting “until the start of your next Command phase” is labelled “Battle round N”, which the words don’t say. With gcLasts’ new value, label it “Until the start of your next Command phase”."
+ },
+ {
+  "key": "feca44625d46ab7f",
+  "where": "gamePick",
+  "verdict": "ok",
+  "why": "One option, tapped again for none. For Blessings, up to two with a third replacing the first, and the same Blessing can’t be picked twice (“You can only activate each Blessing of Khorne once per battle round”). Rolled/state/their unit toggle, and a new option clears its unit. A Kindred Sorcery pick ticks the Overview’s box for that ability (same key as its Uses per battle) and unticks it only if no other round picked it."
+ }
+]

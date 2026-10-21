@@ -23,6 +23,12 @@
   "at": "2026-10-21",
   "why": "NR prints \"Ammo Runts (Once per battle, per unit) - Nobz\"."
  },
+ "0110c9dc6e44cb7a": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "Deep Strike 24.09 (“if every model in this unit has this ability”), Scouts 24.31 (“if every model in a unit has this ability”), Infiltrators 24.20 (“During deployment, if every model in a unit has this ability”). partialRules removes Slaughterbound + Exalted Eightbound’s Scouts, so the Rules tab’s B5 slip doesn’t carry over here."
+ },
  "011215d87f5b35f8": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -155,6 +161,12 @@
   "at": "2026-10-16",
   "why": "HARPOONED / Harpooned on the Norn Assimilators' Toxinjecter Harpoon."
  },
+ "05e40ef5ca314352": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "For a rule with no ph tags, the phase and turn come from its first words: “At the start of your turn” → your Command phase, “At the end of your opponent’s turn” → their Fight phase (the end of that turn)."
+ },
  "061c00da8250764b": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -184,6 +196,12 @@
   "by": "review:r11-purge-units",
   "at": "2026-10-21",
   "why": "NR roster: “Cybernetica Datasmith … 35” and “(4) Kastelan Robots … 300”, and the unit box reads “335 PTS”. Wahapedia: Datasmith 20 (plus 15 for the enhancement), 4 Kastelan Robots 300."
+ },
+ "06cea5346db81252": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "On Canticles of the Omnissiah it finds Invocation of Machine Vengeance, Mantra of Discipline (with its “- **Binharic Courage (Aura):** …” line) and Shroudpsalm (Aura). On Icon of War it finds Fanatical Devotion, Adaptive Tactics and The Fires of Mars. These are the sections’ own bold-named parts, and the lead sentence isn’t taken as an option."
  },
  "07b9e209f273014f": {
   "verdict": "ok",
@@ -274,6 +292,12 @@
   "by": "review:r11-purge-units",
   "at": "2026-10-21",
   "why": "“When an enemy unit targets this unit with ranged attacks … when this unit makes a save roll: On an unmodified 6, that enemy unit suffers 1 mortal wound after that enemy unit has shot.” This is Faction Pack v1.4’s Rules Update wording, and the line says the same, shorter."
+ },
+ "0a96a2f600152412": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "It reads the step from a rule’s first words: “Start of your opponent’s Shooting phase” (Smokescreen) → start, “End of your opponent’s Movement phase” (Fire Overwatch) → end, “At the end of your Command phase” → end, “At the start of the first battle round” → first. Optional “(Once per battle…)” and “If your Army Faction is …,” prefixes are handled. Note: “at the start of any phase” (Chainbreaker) doesn’t match, so gStep’s “any phase” branch is unreachable, but Chainbreaker’s five tags put it under Any phase anyway."
  },
  "0abe777c2a1af106": {
   "verdict": "ok",
@@ -719,6 +743,12 @@
   "at": "2026-10-21",
   "why": "NR Categories: \"Battleline*, Rubric*, Rubric Marines*, Rubricae*, *from combined unit\"."
  },
+ "1bc62fc3d84ec4ea": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "Quotes are in the right steps. Step 7 has 20.01 (“…cannot exceed 50% of your points limit for your battle size”) with each list’s 50% as an app note and its Deep Strike units. Step 8 has the TITANIC sentence and Infiltrators (24.20 “During deployment”). Step 10 has the first-turn pick (“Roll off: the winner takes the first turn.”). Step 11 has Scouts (24.31 “In the Resolve Pre-battle Abilities step”). The header names the Event Companion 1.3, which is the cached version."
+ },
  "1bd5f94b32f3218c": {
   "verdict": "ok",
   "by": "review:r9-we-nids",
@@ -1025,6 +1055,12 @@
   "at": "2026-10-17",
   "why": "Reserves line: 20.01 “Unless otherwise stated, the combined points value … (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit” and 20.03 “Unless otherwise stated, they can only do so from the second battle round onwards … destroyed, with the following exceptions: Units embarked within TRANSPORTS that have made an ingress move … Repositioned units”. Both “unless otherwise stated” are kept. The Deep Strike and Scouts lists follow “if every model in this unit has this ability” (24.09, 24.31). The headings now use the texts’ own words (“Read Mission Objectives step”, “Declare battle formations”, “Start of the battle round”). Warlord, enhancements, points, transports and once-per-battle are list facts. One leftover, display only: the Read Mission Objectives section sits above Declare battle formations. None of the given sources defines that step (the Event Companion sequence has no such step), so that order is unsourced, but no text on the screen states it."
  },
+ "258046ad94ca1dc1": {
+  "verdict": "ok",
+  "by": "review:r18b-game",
+  "at": "2026-10-21",
+  "why": "A rule that lets each of its abilities be selected once per battle (Kindred Sorcery: “You can only select each of these abilities once per battle”) now gets one box per ability, keyed 'r:<rule>:<ability>#0'. Those are the Overview’s ruleTicks keys and the ones gamePick ticks. A rule that is once per battle per unit gets no box, as on the Overview (ruleOnce). Other rows are unchanged."
+ },
  "258365c1bbdfbff0": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -1288,6 +1324,12 @@
   "by": "review:r11-purge-units",
   "at": "2026-10-21",
   "why": "NR, Wahapedia and BSData: W 12, and “While this model has 1-4 wounds remaining…”."
+ },
+ "2dd0132de1ecd4da": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "Code Chivalric’s rows “Deed 1–2 · …” / “Quality 1–2 · …” become two groups (Deed, Quality) by D6 result, as the rule has “one Deed and one Quality … by rolling a D6 and consulting the relevant table”. Doctrina’s and Blessings’ rows are one option each (“Unbridled Bloodlust · double 1+”)."
  },
  "2de8d5d794d854fd": {
   "verdict": "ok",
@@ -1997,6 +2039,12 @@
   "at": "2026-10-21",
   "why": "WHEN: \"Your opponent’s Shooting Phase, when an enemy unit targets a friendly TERMINATOR SQUAD unit.\""
  },
+ "4598357d894fb025": {
+  "verdict": "ok",
+  "by": "review:r18b-game",
+  "at": "2026-10-21",
+  "why": "Command picks are labelled “Until the start of your next Command phase” (Kindred Sorcery, Canticles, Rod of the War Forge, Full Throttle). An earlier round’s pick reads “(picked in battle round N)”. Battle Protocols’ Aegis reads “Until another is picked (from the start of the battle)”. Earlier rounds’ picks leave out the round being shown."
+ },
  "45f310dcc63f9331": {
   "verdict": "ok",
   "by": "review:code2",
@@ -2375,6 +2423,12 @@
   "at": "2026-10-16",
   "why": "A Charge move can also be made in the opponent's Charge phase (core Heroic Intervention: \"Resolve a charge with your unit\"), and \"each time a model in that unit makes a ... Charge move, it can move horizontally through terrain features\" applies then too (the app already treats charges as either-turn for Battle-lust and Devastating Assault)."
  },
+ "536dfbf51f3091b0": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "It matches the words that ask for a pick: “select one” (Doctrina, Code Chivalric’s “select one Deed”, Kindred Sorcery, Singular Purpose, Wrathful Presence, Unearthly Power, Full Throttle, Canticles, Rod of the War Forge, Battle Protocols) and Blessings of Khorne’s “activate up to two”. Unit-only picks it also matches (Omnissiah’s Blessing, Dreadherder, …) are dropped later by gcLasts/gcOptions."
+ },
  "53c6814a6f373472": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -2506,6 +2560,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "The aura affects \"melee attacks\", which are only made in the Fight phase, in either player's turn. [restored: the same judgement on the same text, signed off for an earlier list]"
+ },
+ "58b1109936057de9": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "For every choice in the 11 lists the options are where the words point. Table for “below” (Doctrina “below”, Blessings “(see below)”, Kindred Sorcery “listed below”, Code Chivalric “…the relevant table below”). Abilities whose who is the named section (“the Crimson King section”, “one Wrathful Presence ability”, “one Throttlerokkit Shokka Engine ability”). Bold parts of the named ability (Canticles, Icon of War). Bullets for “of the following” / “from those listed below” (Singular Purpose, Battle Protocols). Icon of War itself (a friendly unit pick) and Omnissiah’s Blessing get no options, so neither becomes a choice."
  },
  "58b9d5bc5c887b79": {
   "verdict": "ok",
@@ -2873,6 +2933,12 @@
   "at": "2026-10-17",
   "why": "“you can select one friendly ORKS WALKER unit within 3\" of this model. That unit’s attacks can re-roll hit rolls of 1 until the end of the turn.” No exclusion is added: there is no notSelf, so the Big Mek’s own WALKER unit can be picked, as the text allows. The needs filter leaves out ORKS, but every unit in the Cooking list has Faction: Orks (a list fact), and Try Dat Button! and Crazed Rampage use the same filter. “this turn” = “until the end of the turn”."
  },
+ "65e531d47160c21a": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "Battle Protocols gives Protector / Conqueror / Aegis Protocol from “- **…:**”. Singular Purpose gives “Select one enemy unit” / “Select one objective marker”, i.e. its own bullets named by their first words."
+ },
  "66b0e6394d2e86b2": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -3161,6 +3227,12 @@
   "at": "2026-10-21",
   "why": "The start of the battle round comes before either player's turn (Core Rules 07.01 “before progressing to player turns”), and the Imperative lasts “Until the end of the battle round”, so either turn."
  },
+ "714c0fca8fe26bbb": {
+  "verdict": "ok",
+  "by": "review:r18b-game",
+  "at": "2026-10-21",
+  "why": "Tested with gcRound in node. A side that goes second sees its round-N command pick in round N+1’s first turn, marked as picked in round N, and from its own turn of N+1 the new round’s slot. A side that goes first always sees the current round. This matches “until the start of your next Command phase”. Battle Protocols with no pick shows Aegis Protocol (from the start of the battle), per “At the start of the battle, … that unit enters Aegis Protocols”, and after a pick the last one made."
+ },
  "7173745124f5cf5b": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -3287,6 +3359,12 @@
   "at": "2026-10-21",
   "why": "NR prints \"Lacerator and daemonic claw (Berzerker Glaive) ... 8\" (Wahapedia base A 6, +1 Relentless Rage, +1 Glaive, already marked in `from`); \"add 3 to the Attacks characteristic ... and those weapons have the [Devastating Wounds] ability\" \"until the end of the phase\", \"Once per battle, at the start of the Fight phase\" gives 8+3 = 11 and adds neither bonus again."
  },
+ "764190ca8a1f44ad": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "Round clamped 1–5 matches Event Companion 13 (“The battle ends after five battle rounds have been completed”). half 0/1 plus first matches 07.02 (“Both players now take one turn each. The same player always takes the first turn in each battle round”). first is set by step 10 (“Roll off: the winner takes the first turn.”). Each stored value out of range falls back to the new-game value for that field."
+ },
  "7644dcf1be914a6c": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
@@ -3346,6 +3424,12 @@
   "by": "review:r9-pubstomper",
   "at": "2026-10-21",
   "why": "Defiler W 18 (NR stats row); \"1-6 wounds remaining\"."
+ },
+ "79fdce8af16ef045": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "07.01 (“players resolve rules that are triggered at the start of the battle round, before progressing to player turns”) is shown in the round’s first Command phase for both lists. In round 1 that includes “At the start of the first battle round” (Singular Purpose) and “At the start of the battle” (Battle Protocols’ Aegis). Turn tags filter the rest (Icon of War not in their Command phase). Inert and Damaged rows are left out, and five-phase rules are Any phase."
  },
  "7a3d58fbc20f30b6": {
   "verdict": "ok",
@@ -3850,6 +3934,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "New Recruit: “Categories … Flash Gitz*, *from combined unit”, and the Mek is “Supporting: Flash Gitz”."
+ },
+ "88b2c21db407d33e": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "It matches the CP sentences of the lists’ rules and nothing else: Da Boss (“…gain 1CP.”), Code Chivalric (“…you gain 2CP, or 3CP … (CP gained in this way are an exemption …)”), Hive Commander (“…you gain 1CP”), Broad Spectrum Data-tether (“…on a 5+, you gain 1CP.”)."
  },
  "88f067e90f8b408d": {
   "verdict": "ok",
@@ -4517,6 +4607,12 @@
   "at": "2026-10-21",
   "why": "Same BSData entries as princes: Scouts 6\" is on the Slaughterbound model only, and the Exalted Eightbound unit links Deep Strike but not Scouts. NR standard: \"Lord of the Eightbound - Slaughterbound ... this model has the Deep Strike and Scouts 6\" abilities.\""
  },
+ "9da6bf8ff8d712f2": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "It finds exactly the rules that ask for a pick and say how long it lasts: Code Chivalric; Doctrina Imperatives; Blessings of Khorne (up to two); Kindred Sorcery (each once per battle); Singular Purpose (one per Norn unit copy); Wrathful Presence; Unearthly Power; Full Throttle; Canticles; Rod of the War Forge; Battle Protocols. Rolled only for Code Chivalric (“randomly select”), Honoured from “your army becomes Honoured”. The options themselves (Wrathful Presence’s abilities) are not choices."
+ },
  "9dbd9fcc381fd424": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -4666,6 +4762,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "Your Shooting phase."
+ },
+ "a2b31e149a65539e": {
+  "verdict": "ok",
+  "by": "review:r18b-game",
+  "at": "2026-10-21",
+  "why": "The sentence is now found on the **-free text it searches. Every list’s when still reads as its rule does: “At the end of the Read Mission Objectives step”, “At the start of the first battle round”, “At the start of the battle round”, “In your Command phase”, “At the start of your Command phase”."
  },
  "a329d040325f33fd": {
   "verdict": "ok",
@@ -5795,6 +5897,12 @@
   "at": "2026-10-16",
   "why": "\"ingress move(s)\"; 20.04."
  },
+ "ca3acd8adf4b6be2": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "Their units are offered only where an option says to select one from the opponent’s army. Code Chivalric Deed 1–2 (“select one CHARACTER model in your opponent’s army”: their units with CHARACTER, e.g. “Mek + Tankbustas”, the unit holding that model). Invocation of Machine Vengeance (“select one unit from your opponent’s army”). Singular Purpose (“Select one enemy unit”). Nothing is offered before their list is picked."
+ },
  "cab4d5e961bad9ea": {
   "verdict": "ok",
   "by": "review:m5-new",
@@ -5884,6 +5992,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "Matches NR, Thunderbuss included (the enhancement weapon)."
+ },
+ "cd078543e132b9c9": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "at “Start of the battle round” → 07.01. “At the end of your opponent’s turn” (Ambushing Hunters) → End of the turn. Start/end of a named phase → that step only in that phase, during elsewhere. Start of the battle → the battle. These match what each rule’s words name."
  },
  "cd0d55bc845278c9": {
   "verdict": "ok",
@@ -6353,6 +6467,12 @@
   "at": "2026-10-16",
   "why": "\"While this model has 1-6 wounds remaining, subtract 4 from ... OC and ... subtract 1 from the Hit roll.\""
  },
+ "de3c1d43e0d675f2": {
+  "verdict": "ok",
+  "by": "review:r18b-game",
+  "at": "2026-10-21",
+  "why": "“until the start of your next Command phase” now has its own value, command, separate from the battle round (“until the end of the battle round”, “until the start of the next battle round”). Kindred Sorcery, Full Throttle, Canticles of the Omnissiah and Rod of the War Forge get it. Doctrina, Blessings, Wrathful Presence and Unearthly Power stay round, Code Chivalric and Singular Purpose battle, Battle Protocols kept."
+ },
  "de73571038d7b631": {
   "verdict": "ok",
   "by": "review:r12-calc-marks",
@@ -6430,6 +6550,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "\"Friendly GRETCHIN units have BATTLELINE\" / \"a friendly GRETCHIN unit\": GRETCHIN only. Zodgrod's attached unit qualifies by 19.03."
+ },
+ "e0225d9b7f27a3d1": {
+  "verdict": "ok",
+  "by": "review:r18b-game",
+  "at": "2026-10-21",
+  "why": "Insane Bravery (WHEN “Battle-shock step of your Command phase…”) is now under its own step, “Battle-shock 08.03” (GW Core Rules PDF heading “3. BATTLE-SHOCK 08.03”). “Command Abilities 08.04” keeps the rest, as its words say (“excluding those … triggered … by battle-shock rolls”). The Fight middle reads “Pile In 12.02 · Fight 12.04 · Consolidate 12.07”, which are the PDF’s headings. Other steps are unchanged."
  },
  "e03e0d4c817053e9": {
   "verdict": "ok",
@@ -6574,6 +6700,12 @@
   "by": "review:m5-new",
   "at": "2026-10-20",
   "why": "Source: \"In your Movement phase, when this unit ends a normal move …\". The text names your Movement phase, so {ph:['movement'], turn:'your'}, the same as the approved shooty Mek Bomb Squig timing."
+ },
+ "e52c38c6c9f25b0f": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "It quotes the CP sentence of each army rule, detachment rule and usable ability once, with its units, and skips the italic FAQ/errata lines (Da Boss’s errata). Placed under Command points next to 08.02 (“Both players gain 1 Command Point (CP).”) and the Event Companion cap (“Excluding Core CP, each player can gain a maximum of 1CP per battle round …”), which is their place."
  },
  "e577aca646c11203": {
   "verdict": "ok",
@@ -7073,6 +7205,12 @@
   "at": "2026-10-21",
   "why": "“That VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase”: that outlasts the start of your next Command phase, so 'round' never says longer than the words and still covers every later step of this turn and the opponent's. “select one friendly ORKS VEHICLE model … That VEHICLE model’s attacks” is one model, so oneModel:true is right; the note repeats the duration word for word."
  },
+ "f78aa33334249bd2": {
+  "verdict": "ok",
+  "by": "review:r18b-game",
+  "at": "2026-10-21",
+  "why": "Only the Game tracker’s data-gnew calls it now, and its toast names what it clears: “New game: round, CP, VP, choices and both lists’ uses per battle cleared”. The Overview’s data-newgame handler matches 5bfdfca line for line: this list’s uses per battle only, toast “New game: uses per battle cleared”."
+ },
  "f7b68c48be03c803": {
   "verdict": "ok",
   "by": "review:r19-fixes",
@@ -7300,6 +7438,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "Wahapedia and NR: \"War Cry (Once per battle, per army)\"."
+ },
+ "feca44625d46ab7f": {
+  "verdict": "ok",
+  "by": "review:r18-game",
+  "at": "2026-10-21",
+  "why": "One option, tapped again for none. For Blessings, up to two with a third replacing the first, and the same Blessing can’t be picked twice (“You can only activate each Blessing of Khorne once per battle round”). Rolled/state/their unit toggle, and a new option clears its unit. A Kindred Sorcery pick ticks the Overview’s box for that ability (same key as its Uses per battle) and unticks it only if no other round picked it."
  },
  "fed3be5b69c29121": {
   "verdict": "ok",

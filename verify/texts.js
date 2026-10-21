@@ -96,10 +96,11 @@ function must(f, hint) {
 }
 const GWFILES = {
   core: 'eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.pdf',
-  uru: 'eng_wh40k_coreandkey_universal_rules_updates-lu3grocned-rphh78bl6k.pdf'
+  uru: 'eng_wh40k_coreandkey_universal_rules_updates-lu3grocned-rphh78bl6k.pdf',
+  ec: 'eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.pdf'   // only for the Game tab's quotes (D.game)
 };
 const GWLABEL = {
-  core: 'GW Core Rules (11th edition, 01/06/2026)', uru: 'GW Universal Rules Updates v1.1'
+  core: 'GW Core Rules (11th edition, 01/06/2026)', uru: 'GW Universal Rules Updates v1.1', ec: 'GW Warhammer Event Companion 1.3'
 };
 // each faction's GW Faction Pack, from sources/factions.json (Orks have none: Wahapedia is the source)
 for (const [k, v] of Object.entries(JSON.parse(fs.readFileSync(path.join(VERIFY, 'sources', 'factions.json'), 'utf8'))))
@@ -459,6 +460,34 @@ function ssSpecial() {
 }
 for (const [key, text] of Object.entries(D.rules))   // a faction term (D.ruleSrc) comes from its faction's pages, as detachment texts do
   checkLines('rules', 'core', 'rule:' + key, 'text', text, (D.ruleSrc || {})[key] ? GW_ALL.concat(FACTIONS.map(f => 'wahahtml:' + f)) : GW_ALL, WAHA_CORE, key === 'Starting Strength' ? { special: ssSpecial() } : {});
+
+/* ------------------------------------------------------------------ D.game: the Game tab's own quotes */
+// Each quote word for word in the one document it names (core: the Core Rules; ec: the Event Companion), under the heading it
+// names: a Core Rules section "Title NN.NN" (the PDF prints some step headings without spaces: "STARTOFMOVEMENTPHASE 09.01"),
+// an Event Companion heading, or a numbered step of the Event Companion's mission sequence ("8 DEPLOY ARMIES").
+if (D.game) {
+  const docOf = id => ({ core: 'core', ec: 'ec' })[id];
+  const heading = (cat, item, docId, num, title) => {
+    count(cat);
+    const d = DOCS[docOf(docId)];
+    const tries = num ? [title + ' ' + num, title.replace(/ /g, '') + ' ' + num, num + ' ' + title] : [title];
+    const hit = d && tries.map(t => locate(norm(t), [d.id])).find(Boolean);
+    if (hit) provRow(item, 'heading', hit.d, hit.off, { text: (num ? num + ' ' : '') + title });
+    else fail(cat, 'core', item, 'heading', (num ? num + ' ' : '') + title, d ? 'no heading "' + tries[0] + '" in ' + d.label : 'unknown document ' + docId, '');
+  };
+  for (const q of D.game.cp || []) {
+    const item = 'game:cp ' + (q.num ? q.num + ' ' : '') + q.title;
+    if (!docOf(q.doc)) { fail('game', 'core', item, 'doc', q.doc, 'unknown document (core or ec)', ''); continue; }
+    heading('game', item, q.doc, q.num, q.title);
+    checkLines('game', 'core', item, 'text', q.text, [docOf(q.doc)], []);
+  }
+  for (const [ph, steps] of Object.entries(D.game.steps || {})) for (const [num, title] of steps) heading('game', 'game:step ' + ph + ' ' + num, 'core', num, title);
+  for (const [n, title, text] of D.game.sequence || []) {
+    const item = 'game:sequence ' + n;
+    heading('game', item, 'ec', '', n + ' ' + title);
+    checkLines('game', 'core', item, 'text', text, ['ec'], []);
+  }
+}
 
 
 /* ------------------------------------------------------------------ source parsers: stratagems */

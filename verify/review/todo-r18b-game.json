@@ -1,0 +1,86 @@
+[
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "newGame",
+  "judgement": {
+   "code": "function newGame(a){\n  const o = gameOwner(a), opp = oppOf(o);\n  const keys = [gameKey(a), 'wh-used-' + o.id].concat(opp && opp !== o ? ['wh-used-' + opp.id] : []);\n  const was = keys.map(k => [k, store.get(k, null)]);\n  store.set(keys[0], null); for(const k of keys.slice(1)) store.set(k, []);\n  return () => { for(const [k, v] of was) store.set(k, v); };\n}"
+  },
+  "source": {
+   "implements": "the Game tracker's New game: clears this game (round, turn, CP, VP, choices) and the uses per battle of both lists of the game (the Overview's tick boxes, the same storage), with Undo; the Overview's own New game is as before (its list's uses per battle only)"
+  },
+  "key": "f78aa33334249bd2"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "gcLasts",
+  "judgement": {
+   "code": "function gcLasts(t){\n  if(/\\buntil the end of the battle(?! round)|\\bfor the coming battle\\b/i.test(t)) return 'battle';\n  if(/\\buntil the (?:end of the battle round|start of the next battle round)\\b/i.test(t)) return 'round';\n  if(/\\buntil the start of your next command phase\\b/i.test(t)) return 'command';\n  if(/\\bremains in that [a-z]+ until it enters a different one\\b/i.test(t)) return 'kept';\n  return '';\n}"
+  },
+  "source": {
+   "implements": "how long a pick lasts, from the rule's words: the battle (\"until the end of the battle\", \"for the coming battle\"), the battle round (\"until the end of the battle round\", \"until the start of the next battle round\"), until this side's next Command phase (\"until the start of your next Command phase\"), or until another is picked (\"remains in that protocol until it enters a different one\")"
+  },
+  "key": "de3c1d43e0d675f2"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "gcWhen",
+  "judgement": {
+   "code": "const gcWhen = x => {\n  const t = String(x.text || '').replace(/\\*\\*/g, ''), at = ([...t.matchAll(GC_SEL)][0] || { index:0 }).index, s0 = t.lastIndexOf('.', at) + 1, sen = t.slice(s0).trim();\n  const own = /^(?:if your army faction is [^,]+, )?((?:at the (?:start|end) of|in) [^,]+),/i.exec(sen);\n  const any = /\\b(at the (?:start|end) of (?:the |your |each |every )?[^,.]+|in your [a-z ]+? phase)/i.exec(t);\n  const w = own ? own[1] : any ? any[1] : x.at || '';\n  return w ? w.charAt(0).toUpperCase() + w.slice(1) : '';\n};"
+  },
+  "source": {
+   "implements": "when a pick is made, quoted from the rule: the start of the sentence that has the player select (found in the text without its ** marks), else the first \"at the start/end of …\" or \"in your … phase\" it names, else its at tag"
+  },
+  "key": "a2b31e149a65539e"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "gcPick",
+  "judgement": {
+   "code": "function gcPick(c, g, side){\n  const all = ((g.picks[side] || {})[c.key]) || {};\n  if(c.lasts === 'command'){ const R = gcRound(c, g, side); return { v:all[R] || {}, since:R === String(g.round) ? null : +R, all }; }\n  if(c.lasts !== 'kept') return { v:all[gcRound(c, g, side)] || {}, since:null, all };\n  for(let r = g.round; r >= 1; r--) if(isObj(all[r]) && Object.keys(all[r]).length) return { v:all[r], since:r === g.round ? null : r, all };\n  // none picked yet: the option the rule's words start the battle in (\"At the start of the battle, … that unit enters Aegis Protocols\")\n  const m = /\\b[Aa]t the start of the battle, [^.]*?\\benters (?:the )?([A-Z][\\w’']*(?: [A-Z][\\w’']*)*)/.exec(String(c.rule.text || '').replace(/\\*\\*/g, ''));\n  const gr = c.groups[0], o = m && gr.opts.find(x => m[1].toLowerCase().startsWith(x.name.toLowerCase()));\n  return o ? { v:{ [gr.name]:o.name }, since:'start', all } : { v:{}, since:null, all };\n}"
+  },
+  "source": {
+   "implements": "which pick is shown: the battle's; this battle round's; for one until the start of your next Command phase, the one made in this side's last Command phase (in the first turn of a round, for the side that goes second, the round before, shown as picked then); for one kept until changed the last one made in this or an earlier battle round, and before any the option its words start the battle in (\"At the start of the battle … that unit enters Aegis Protocols\")"
+  },
+  "key": "714c0fca8fe26bbb"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "gPhaseHtml",
+  "judgement": {
+   "code": "function gPhaseHtml(L, g, ph, turn, picked, opts, pickOf){\n  const firstTurn = g.half === 0, lastTurn = g.half === 1, start = ph === 'command' && firstTurn;\n  const items = gamePhase(L, ph, turn, { start, round:g.round }), S = D.game.steps, st = S[ph];\n  const groups = [];\n  if(start && g.round === 1) groups.push(['Start of the battle', items.filter(e => e.step === 'battle')]);\n  if(start) groups.push([gStepName(S.round[0]), items.filter(e => e.step === 'round' || e.step === 'first')]);\n  groups.push([gStepName(st[0]), items.filter(e => e.step === 'start' || (e.step === 'turnStart' && ph === 'command'))]);\n  if(ph === 'command' && opts.cp) groups.push([gStepName([D.game.cp[0].num, D.game.cp[0].title]), [], rt(D.game.cp[0].text)]);   // 08.02, after 08.01\n  const during = items.filter(e => e.step === 'during' || (e.step === 'turnStart' && ph !== 'command') || (e.step === 'turnEnd' && ph !== 'fight') || (e.step === 'roundEnd' && !(ph === 'fight' && lastTurn)));\n  // 08.03: a rule whose words name the Battle-shock step (\"Battle-shock step of your Command phase\"); 08.04's own words leave\n  // out the rules \"triggered … by battle-shock rolls\"\n  const mid = st.slice(1, -1), shock = ph === 'command' ? mid.find(([n]) => n === '08.03') : null;\n  const inShock = e => !!shock && /\\bbattle-shock step\\b/i.test(e.kind === 'strat' ? e.s.when : String((e.ab || e.x || {}).text || '').replace(/\\*\\*/g, ''));\n  if(shock) groups.push([gStepName(shock), during.filter(inShock)]);\n  groups.push([mid.filter(x => x !== shock).map(gStepName).join(' · ') || 'During the phase', during.filter(e => !inShock(e))]);\n  groups.push([gStepName(st[st.length - 1]), items.filter(e => e.step === 'end')]);\n  if(ph === 'fight') groups.push(['End of the turn', items.filter(e => e.step === 'turnEnd')]);\n  if(ph === 'fight' && lastTurn) groups.push([gStepName(S.round[1]), items.filter(e => e.step === 'roundEnd')]);\n  const sort = list => list.slice().sort((x, y) => (x.kind === 'strat') - (y.kind === 'strat') || (x.kind === 'strat' && y.kind === 'strat' ? (y.usable - x.usable) : 0));\n  let h = groups.filter(([, list, extra]) => list.length || extra).map(([title, list, extra]) => '<div class=\"gph\"><p class=\"gpt\">' + title + '</p>' + (extra || '') + gRows(L, sort(list), picked, pickOf) + '</div>').join('');\n  const any = items.filter(e => e.any);\n  if(any.length) h += '<details class=\"gx\"' + (opts.fold && opts.fold.any ? ' open' : '') + ' data-gfold=\"any\"><summary><span>Any phase</span><span class=\"c\">' + any.length + '</span>' + chev + '</summary>' + gRows(L, sort(any), picked, pickOf) + '</details>';\n  return h || '<p class=\"note\">Nothing of this list is tagged for this phase.</p>';\n}"
+  },
+  "source": {
+   "implements": "how a phase is laid out: Start of the battle (round 1) and Start of Battle Round (07.01) in the round's first Command phase, then the phase's start step, Gain Core CP (08.02) after the Command phase's start (08.01), Battle-shock (08.03: the rules whose words name the Battle-shock step, which 08.04 leaves out), the phase's other steps (during: Command Abilities 08.04; Pile In 12.02 · Fight 12.04 · Consolidate 12.07), its end step; the end of the turn after the Fight phase's end, End of Battle Round (07.03) after the round's last Fight phase; stratagems after rules and abilities in each step, the ones no unit can use last"
+  },
+  "key": "e0225d9b7f27a3d1"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "gRows",
+  "judgement": {
+   "code": "function gRows(L, items, picked, pickOf){\n  const own = L.id === cur.army;\n  const now = e => { const n = pickOf ? pickOf(e) : ''; return n ? '<span class=\"gpn\">Picked: ' + esc(n) + '</span>' : ''; };\n  return items.map(e => {\n    if(e.kind === 'strat'){ const s = e.s, pb = own && perBattle(s);\n      return '<div class=\"gr gs' + (e.usable ? '' : ' none') + '\"><span class=\"cp' + (s.cp >= 2 ? ' hot' : '') + '\">' + esc(s.cp) + '<small>CP</small></span><span class=\"grb\">' + gLink(L, 'strat', s.id, s.name) +\n        (s.gist ? '<span class=\"sg\">' + esc(s.gist) + '</span>' : '') + (e.usable ? '' : '<span class=\"from\">' + esc(inArmy(L, () => usersLine(s))) + '</span>') + (pb ? ticks('s:' + s.id, pb.n, '', s.name) : '') + '</span></div>'; }\n    if(e.kind === 'rule'){ const r = e.x, pb = own && perBattle(r, true) && !/per battle\\b(?! round)[^.)]*\\bper unit\\b/i.test(r.text || '');\n      // the Overview's boxes: \"You can only select each of these abilities once per battle\" (Kindred Sorcery) has one per ability\n      const each = pb && /\\beach of these [a-z ]+ once per battle/i.test(r.text) && r.table;\n      const boxes = !pb ? '' : each ? r.table.map(o => ticks('r:' + r.name + ':' + o[0], 1, o[0], o[0])).join('') : ticks('r:' + r.name, pb.n, '', r.name);\n      return '<div class=\"gr\"><span class=\"grb\">' + gLink(L, 'rule', e.name, e.name) + ' <span class=\"from\">· ' + esc(e.src) + '</span>' + now(e) + (boxes ? '<span class=\"gtk\">' + boxes + '</span>' : '') + '</span></div>'; }\n    const p = picked ? picked(e.ab, e.units) : null, pb = own && perBattle(e.ab) && !naReason(e.ab);\n    const who = e.ab.who && (p !== null || !e.src.includes(e.ab.who.replace(/: pick one$/, ''))) ? e.ab.who.replace(/: pick one$/, '') : '';\n    const boxes = !pb ? '' : perBattle(e.ab).army ? abilityTicks(e.ab, e.units[0]) : e.units.flatMap(u => Array.from({ length:u.copies || 1 }, (_, i) =>\n      ticks(copyKey(e.ab, u, i), perBattle(e.ab).n, e.units.length > 1 || (u.copies || 1) > 1 ? shortName(u) + ((u.copies || 1) > 1 ? ' ' + (i + 1) : '') : '', e.ab.name))).join('');\n    return '<div class=\"gr' + (p === false ? ' none' : '') + '\"><span class=\"grb\">' + gLink(L, 'ability', e.key, e.ab.name) + ' <span class=\"from\">· ' + esc(e.src) + '</span>' +\n      (who ? ' <span class=\"tg m\">' + esc(who) + (p === true ? ': picked' : p === false ? ': not picked' : '') + '</span>' : '') + now(e) + (boxes ? '<span class=\"gtk\">' + boxes + '</span>' : '') + '</span></div>';\n  }).join('');\n}"
+  },
+  "source": {
+   "implements": "a phase's rows: each opens its full text (the other list's from that list); a stratagem's gist, and which units can use it only when none can; uses per battle as the Overview's ticks, the same keys and boxes (a rule that lets each of its abilities be selected once per battle: one box per ability; a per-unit rule: none); an option of a choice marked picked / not picked this round, a choice's current pick"
+  },
+  "key": "258046ad94ca1dc1"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "gChoiceHtml",
+  "judgement": {
+   "code": "function gChoiceHtml(c, g, side, opp){\n  const P = gcPick(c, g, side), v = P.v, R = gcRound(c, g, side);\n  const pick = (grp, opt) => esc(JSON.stringify([c.key, R, grp, opt || '']));\n  const used = c.once && !c.unit ? new Set(c.groups.flatMap(gr => gr.opts.filter(o => usedSet().has('r:' + c.name + ':' + o.row + '#0')).map(o => o.name))) : new Set();\n  const lasts = c.lasts === 'battle' ? 'For the battle' : c.lasts === 'kept' ? 'Until another is picked' : c.lasts === 'command' ? 'Until the start of your next Command phase' : 'Battle round ' + g.round;\n  let h = '<div class=\"gc\"><div class=\"gch\">' + linkTo(c.link[0], c.link[1], c.name) + ' <span class=\"from\">· ' + esc(c.src) + '</span></div>' +\n    '<p class=\"gcw\">' + esc(c.when) + (c.when ? ' · ' : '') + '<b>' + esc(lasts) + '</b>' + (P.since === 'start' ? ' <span class=\"from\">(from the start of the battle)</span>' : P.since ? ' <span class=\"from\">(picked in battle round ' + P.since + ')</span>' : '') + '</p>' +\n    // a step the Event Companion's mission sequence (Before the battle) does not have, named as the rule names it\n    ((m => m && !D.game.sequence.some(([, t]) => norm(t) === norm(m[1])) ? gNote('the Event Companion’s mission sequence (Before the battle, below) has no step called ' + esc(m[1]) + '.') : '')(/\\bthe ([A-Z][a-z]+(?: [A-Z][a-z]+)+) step\\b/.exec(c.when)));\n  for(const gr of c.groups){\n    const on = gcNames(v[gr.name]);\n    h += '<div class=\"chips\" role=\"group\"' + (gr.name ? ' aria-label=\"' + esc(gr.name) + '\"' : '') + '>' + (gr.name ? '<span class=\"gcg\">' + esc(gr.name) + '</span>' : '') +\n      gr.opts.map(o => { const sel = on.includes(o.name), u = !sel && used.has(o.name);\n        return '<button class=\"chip' + (sel ? ' on' : '') + (u ? ' used' : '') + '\" data-gpick=\"' + pick(gr.name, o.name) + '\" aria-pressed=\"' + sel + '\">' + esc(o.name) + (u ? '<span class=\"u\">used</span>' : '') + '</button>'; }).join('') +\n      (c.rolled ? '<button class=\"chip rl' + (v['rolled:' + gr.name] ? ' on' : '') + '\" data-gpick=\"' + pick('rolled:' + gr.name) + '\" aria-pressed=\"' + !!v['rolled:' + gr.name] + '\">Rolled</button>' : '') + '</div>';\n    for(const o of gr.opts.filter(o => on.includes(o.name))){\n      h += '<div class=\"gq gpk\"><span class=\"gqs\">' + esc((gr.name ? gr.name + ' ' : '') + o.name + (o.title ? ' · ' + o.title : '')) + '</span>' + rt(o.text) + '</div>';\n      const tg = gcTargets(o.text, opp);\n      if(tg && tg.length){ const t = v['target:' + gr.name];\n        h += '<div class=\"chips gtg\" role=\"group\" aria-label=\"Their unit\"><span class=\"gcg\">Their unit</span>' + tg.map(x => '<button class=\"chip' + (t === x.id ? ' on' : '') + '\" data-gpick=\"' + pick('target:' + gr.name, x.id) + '\" aria-pressed=\"' + (t === x.id) + '\">' + esc(x.name) + '</button>').join('') + '</div>'; }\n    }\n  }\n  if(c.state) h += '<div class=\"chips\"><button class=\"chip' + (v['state'] ? ' on' : '') + '\" data-gpick=\"' + pick('state') + '\" aria-pressed=\"' + !!v['state'] + '\">' + esc(c.state) + '</button></div>';\n  // the picks of the other battle rounds of this game\n  if(c.lasts !== 'battle'){\n    const past = Object.keys(P.all).filter(r => r !== R && +r >= 1).sort((x, y) => x - y).map(r => [r, c.groups.flatMap(gr => gcNames((P.all[r] || {})[gr.name]))]).filter(([, n]) => n.length);\n    if(past.length) h += '<p class=\"gcp\">' + past.map(([r, n]) => 'Round ' + r + ': ' + esc(n.join(', '))).join(' · ') + '</p>';\n  }\n  return h + '</div>';\n}"
+  },
+  "source": {
+   "implements": "a choice: its rule, when the pick is made and how long it lasts in the rule's words (For the battle, Battle round N, Until the start of your next Command phase, Until another is picked; a pick from an earlier round or from the start of the battle says so), its options (an option picked in another battle round of a once-per-battle choice marked used), Rolled, the state (Honoured), the quoted text of each pick, their unit, earlier rounds' picks; an app note when its timing names a step the Event Companion's mission sequence does not have (\"the Read Mission Objectives step\")"
+  },
+  "key": "4598357d894fb025"
+ }
+]
