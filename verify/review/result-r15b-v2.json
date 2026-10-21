@@ -1,0 +1,20 @@
+[
+ {
+  "key": "7d389b29f9e84bc2",
+  "where": "purge-goes-the-foe · Cybernetica Datasmith",
+  "verdict": "ok",
+  "why": "“In your Command phase … you can select one protocol … Once a unit enters a protocol, it remains in that protocol until it enters a different one”: a different protocol can only be entered in your Command phase, so the effect surely lasts until the start of your next Command phase, which is 'round'. That carries Protector’s +2 A into every later step of this turn and the opponent’s, and no longer than the words. The rest of the footnote is unchanged."
+ },
+ {
+  "key": "6ec5caadaddaba9e",
+  "where": "purge-goes-the-foe · Cybernetica Datasmith",
+  "verdict": "ok",
+  "why": "Same words as the Protector footnote: “it remains in that protocol until it enters a different one”, and a new one is selected only “In your Command phase”. So Conqueror’s +2 A to the Twin Kastelan fist is sure to last until the start of your next Command phase, which is 'round', and no longer. The rest of the footnote is unchanged."
+ },
+ {
+  "key": "5a1cbf68843f08fb",
+  "where": "Core · Smokescreen",
+  "verdict": "ok",
+  "why": "It now uses the rule’s words: “a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit … the target has the benefit of cover against that attack (13.08)”. “to the attacking models” fits the calculator’s cover tick, which counts for all of a step’s attacks, and 13.08 decides cover per attacking model. The box it names exists with that label (app.html: 'Target has the benefit of cover')."
+ }
+]

@@ -1,0 +1,59 @@
+[
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "unit-footnote",
+  "where": "purge-goes-the-foe · Cybernetica Datasmith",
+  "judgement": {
+   "kind": "ranged",
+   "weapon": "Incendine combustor",
+   "set": {
+    "A": "+2"
+   },
+   "when": "In Protector Protocol",
+   "note": "selected in your Command phase",
+   "from": "Battle Protocols",
+   "calc": {},
+   "lasts": "round"
+  },
+  "source": {
+   "ability": "Battle Protocols",
+   "text": "At the start of the battle, if this model is leading a **KASTELAN ROBOTS** unit, that unit enters Aegis Protocols (see below). In your Command phase, if this model is leading a **KASTELAN ROBOTS** unit, you can select one protocol from those listed below for that unit to enter. Once a unit enters a protocol, it remains in that protocol until it enters a different one.\n- **Protector Protocol:** Add 2 to the Attacks characteristic of ranged weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Conqueror Protocol:** Add 2 to the Attacks characteristic of melee weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Aegis Protocol:** Add 1 to the Toughness characteristic of **KASTELAN ROBOT** models in that unit."
+  },
+  "key": "7d389b29f9e84bc2"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "unit-footnote",
+  "where": "purge-goes-the-foe · Cybernetica Datasmith",
+  "judgement": {
+   "kind": "melee",
+   "weapon": "Twin Kastelan fist",
+   "set": {
+    "A": "+2"
+   },
+   "when": "In Conqueror Protocol",
+   "note": "selected in your Command phase",
+   "from": "Battle Protocols",
+   "calc": {},
+   "lasts": "round"
+  },
+  "source": {
+   "ability": "Battle Protocols",
+   "text": "At the start of the battle, if this model is leading a **KASTELAN ROBOTS** unit, that unit enters Aegis Protocols (see below). In your Command phase, if this model is leading a **KASTELAN ROBOTS** unit, you can select one protocol from those listed below for that unit to enter. Once a unit enters a protocol, it remains in that protocol until it enters a different one.\n- **Protector Protocol:** Add 2 to the Attacks characteristic of ranged weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Conqueror Protocol:** Add 2 to the Attacks characteristic of melee weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Aegis Protocol:** Add 1 to the Toughness characteristic of **KASTELAN ROBOT** models in that unit."
+  },
+  "key": "6ec5caadaddaba9e"
+ },
+ {
+  "army": "core",
+  "kind": "strat-calcNote",
+  "where": "Core · Smokescreen",
+  "judgement": {
+   "calcNote": "for a unit that is not fully visible to the attacking models because of one or more models in your SMOKE unit, tick “Target has the benefit of cover” instead"
+  },
+  "source": {
+   "stratagem": "Smokescreen",
+   "text": "WHEN: Start of your opponent’s Shooting phase.\nTARGET: One friendly **SMOKE** unit.\nEFFECT: Until the end of the phase, each time an attack targets either your **SMOKE** unit, or a unit that is not **fully visible** to the attacking model because of one or more models in your **SMOKE** unit, the target has the **benefit of cover** against that attack (13.08)."
+  },
+  "key": "5a1cbf68843f08fb"
+ }
+]

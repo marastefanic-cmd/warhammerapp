@@ -35,6 +35,12 @@
   "at": "2026-10-20",
   "why": "NR prints 'Arrogant Invulnerability - Meganobz' (l.186); BSData profile is on the Meganobz unit. Models match NR."
  },
+ "0154e8fd609430d4": {
+  "verdict": "ok",
+  "by": "review:r15-v2",
+  "at": "2026-10-21",
+  "why": "“Ranged attacks that target your unit have -1 D” is dMinus 1. It is a change to the attack’s D characteristic, which 04.01.04 applies to the weapon (“those changes apply to the weapon making that attack”). 24.10’s mortal wounds are “equal to the D characteristic of that weapon”, so dChar:true is right; r14’s contradicting “How this is worked out” line is now split (app.html dMinus vs dMinusChar)."
+ },
  "0168fdf9ecf7c37f": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -869,6 +875,12 @@
   "at": "2026-10-16",
   "why": "Matches \"targets the closest eligible target within 18\\\", you can re-roll the Hit roll\"."
  },
+ "211ddf2c8d2e6368": {
+  "verdict": "ok",
+  "by": "review:r15-v2",
+  "at": "2026-10-21",
+  "why": "“Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll.” lasts 'battle' is “Until the end of the battle”. The calculator carries ticks within one attacker–target pair (dmPlan carryA/carryT), so “vs that unit” stays true in the later steps."
+ },
  "21292393d1a6daab": {
   "verdict": "ok",
   "by": "review:r14-cond",
@@ -1054,6 +1066,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "Matches NR: Psychic tendril neuroparasite/neurolance/neuroblast, Monstrous rending claws, Monstrous scything talons."
+ },
+ "26df013adc84dbd8": {
+  "verdict": "ok",
+  "by": "review:r15-v2",
+  "at": "2026-10-21",
+  "why": "“In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase.” That is exactly 'round' (“until the start of the player's next Command phase”). The when keeps “You can only select each of these abilities once per battle”, and the three picks say what their abilities say."
  },
  "26e838f5fe24a4de": {
   "verdict": "ok",
@@ -2345,6 +2363,12 @@
   "at": "2026-10-16",
   "why": "Fight phase, either turn."
  },
+ "54753b073d97fd6e": {
+  "verdict": "ok",
+  "by": "review:r15-v2",
+  "at": "2026-10-21",
+  "why": "“In your Shooting phase, you can select one friendly ORKS WALKER unit within 3\" of this model. That unit’s attacks can re-roll hit rolls of 1 until the end of the turn.” lasts 'turn' is exactly “until the end of the turn”, so it carries from Shoot into Fight of that turn and no further; the note “re-roll hit rolls of 1 this turn” says the same."
+ },
  "54811b59d57fd6b0": {
   "verdict": "ok",
   "by": "review:r10-superterm",
@@ -2506,6 +2530,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "Berzerker Glaive is a Berzerker Warband Enhancement."
+ },
+ "5a1cbf68843f08fb": {
+  "verdict": "ok",
+  "by": "review:r15b-v2",
+  "at": "2026-10-21",
+  "why": "It now uses the rule’s words: “a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit … the target has the benefit of cover against that attack (13.08)”. “to the attacking models” fits the calculator’s cover tick, which counts for all of a step’s attacks, and 13.08 decides cover per attacking model. The box it names exists with that label (app.html: 'Target has the benefit of cover')."
  },
  "5a5c48532674282d": {
   "verdict": "ok",
@@ -3017,6 +3047,12 @@
   "at": "2026-10-16",
   "why": "Matches NR: combi-bolter x8 (Scarab Sorcerer + 7), soulreaper x2, hellfyre x2, khopesh x9; Scarab Sorcerer has Force weapon/Malefic Curse/combi-bolter. Hellfyre racks are extra wargear (\"1 in every 5\"), NR gives no bearer; placing them on combi-bolter Terminators is legal."
  },
+ "6ec5caadaddaba9e": {
+  "verdict": "ok",
+  "by": "review:r15b-v2",
+  "at": "2026-10-21",
+  "why": "Same words as the Protector footnote: “it remains in that protocol until it enters a different one”, and a new one is selected only “In your Command phase”. So Conqueror’s +2 A to the Twin Kastelan fist is sure to last until the start of your next Command phase, which is 'round', and no longer. The rest of the footnote is unchanged."
+ },
  "6ecf5696f4195e16": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -3058,6 +3094,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "New Recruit prints “Kustom Dakka - Mek”; model lines as NR."
+ },
+ "703e80dd796c6ea7": {
+  "verdict": "ok",
+  "by": "review:r15-v2",
+  "at": "2026-10-21",
+  "why": "“EFFECT: Until the start of your next Command phase, models in your unit have the Feel No Pain 6+ ability …” lasts 'round' is exactly that, so a use in your Command phase still counts when the unit is attacked in the opponent’s turn."
  },
  "70df0ecc9690d001": {
   "verdict": "ok",
@@ -3166,6 +3208,12 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "WHEN: “Your Command phase.”: your turn."
+ },
+ "7590b5646660e689": {
+  "verdict": "ok",
+  "by": "review:r15-v2",
+  "at": "2026-10-21",
+  "why": "“The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up … with 3 wounds remaining.” comeback {roll:2, wounds:3} matches its meaning word for word (first time, end of the phase, 2+, 3 wounds). NR prints “Berserker Frenzy - Khârn the Betrayer”, so who is Khârn, and the model lines are NR’s."
  },
  "7594273457627c22": {
   "verdict": "ok",
@@ -3347,6 +3395,12 @@
   "at": "2026-10-21",
   "why": "NR roster: Big Mek 100, Painboy 45, \"(10) Nobz 240 Big Mek, Painboy\"; header \"385 PTS\". 100 + 45 + 240 = 385."
  },
+ "7d389b29f9e84bc2": {
+  "verdict": "ok",
+  "by": "review:r15b-v2",
+  "at": "2026-10-21",
+  "why": "“In your Command phase … you can select one protocol … Once a unit enters a protocol, it remains in that protocol until it enters a different one”: a different protocol can only be entered in your Command phase, so the effect surely lasts until the start of your next Command phase, which is 'round'. That carries Protector’s +2 A into every later step of this turn and the opponent’s, and no longer than the words. The rest of the footnote is unchanged."
+ },
  "7d6f39bc28b2a55a": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -3388,6 +3442,12 @@
   "by": "review:r9-pubstomper",
   "at": "2026-10-21",
   "why": "Listed in NR's \"Crimson King\" sub-table of Magnus (one model)."
+ },
+ "7f141f8d03921ac2": {
+  "verdict": "ok",
+  "by": "review:r15-v2",
+  "at": "2026-10-21",
+  "why": "“EFFECT: Until the start of your next Command phase, ranged weapons equipped by models in your unit have a Ballistic Skill characteristic of 3+ and the [IGNORES COVER] ability …” lasts 'round' is exactly that."
  },
  "7f16564ce98e8a8c": {
   "verdict": "ok",
@@ -3881,6 +3941,12 @@
   "at": "2026-10-16",
   "why": "WHEN: \"Your opponent’s Shooting phase or the Fight phase\"."
  },
+ "8d2aa752e2860054": {
+  "verdict": "ok",
+  "by": "review:r15-v2",
+  "at": "2026-10-21",
+  "why": "“In the Fight phase, when this model is destroyed, if this unit has not been selected to fight this phase, roll one D6: On a 2+, do not remove this model … When this unit has fought, or at the end of the phase (whichever comes first), this model is removed” matches 05.04.05 (models “stay on the battlefield until their unit is selected to attack and has attacked, or until the end of the phase (whichever comes first)”). So fightOnDeath {roll:2} is right; Mozrog is a one-model unit (NR “1x Mozrog Skragbad”), so this model is the unit."
+ },
  "8d3a381db49b1b51": {
   "verdict": "ok",
   "by": "review:gists",
@@ -4144,6 +4210,12 @@
   "by": "review:r14-picks",
   "at": "2026-10-21",
   "why": "\"add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength.\" Picks Below Starting Strength (+1 to hit) and Below Half-strength (+1 to hit, +1 to wound) match; the single wording is 01.02.01’s for a one-model unit (\"remaining wounds are less than its W\" / \"less than half of its W\"; {half} = ceil(W/2)−1 is the most wounds still below half). Unit state is a table condition, so unticked."
+ },
+ "97554ed70c9ee4a2": {
+  "verdict": "ok",
+  "by": "review:r15-v2",
+  "at": "2026-10-21",
+  "why": "“While this unit contains one or more PSYKER models, each time an attack targets this unit, subtract 1 from the Wound roll.” The unit holds two PSYKER models: the Sorcerer in Terminator Armour (kw Psyker) and the Scarab Occult Sorcerer (Wahapedia “SCARAB OCCULT SORCERER ONLY: PSYKER”). So it qualifies at the start of every matchup, and 05.03 (“No CHARACTER group can be earlier in the allocation order than a non-CHARACTER group”) keeps the Sorcerer until last, except under [PRECISION]. defAlways with woundMinus 1 is supported, and the companion calcNote states the approximation."
  },
  "9765f85ba5eeb202": {
   "verdict": "ok",
@@ -4720,6 +4792,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "\"Your unit has Feel No Pain 4+ against mortal wounds.\""
+ },
+ "abba383d56822d89": {
+  "verdict": "ok",
+  "by": "review:r15-v2",
+  "at": "2026-10-21",
+  "why": "Its own words give no duration (“Each time a model in a SKITARII unit from your army makes an attack: If the Protector Imperative is active for that unit, re-roll a Hit roll of 1 …”), so with no lasts it is asked in each step and never carries longer than the words say. (Doctrina Imperatives’ “Until the end of the battle round” would also support 'round', but leaving it out is not wrong.) The picks match the text, and “Both” is what Transcendent Cogitation and Omnicogitator give (“both active for your unit”)."
  },
  "abd758a2fd63c0f4": {
   "verdict": "ok",
@@ -5573,6 +5651,12 @@
   "at": "2026-10-21",
   "why": "NR: “1x Tech-Priest Enginseer — Necromechanic, Mechanicus pistol, Omnissian axe, Servo arm”. Necromechanic is the enhancement, so the weapons are the three NR rows. Wahapedia: “Mechanicus pistol; Omnissian axe; servo-arm”."
  },
+ "c9b8827a97c5a84e": {
+  "verdict": "ok",
+  "by": "review:r15-v2",
+  "at": "2026-10-21",
+  "why": "“EFFECT: Until the start of your next Command phase, each time a model in your unit makes an attack, you can re-roll the Hit roll. If your unit is Below Half-strength, you can re-roll the Wound roll as well.” lasts 'round' is exactly that duration."
+ },
  "ca1a81c9c364bcef": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -5626,6 +5710,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "NR prints \"Crude Surgery - Painboy\"."
+ },
+ "cc76946b279a491f": {
+  "verdict": "ok",
+  "by": "review:r15-v2",
+  "at": "2026-10-21",
+  "why": "“If a friendly ADEPTUS MECHANICUS VEHICLE model is destroyed within 12\" of this model, until the end of the battle, this model’s Omnissian axe has an Attacks characteristic of 6.” lasts 'battle' and the note “until the end of the battle” are the rule’s words."
  },
  "cc7842d6434ba57e": {
   "verdict": "ok",
@@ -6124,6 +6214,12 @@
   "by": "review:r12-calc-marks",
   "at": "2026-10-21",
   "why": "\"While a model is affected by this ability, each time that model makes an attack that targets a TITANIC or TOWERING model, you can re-roll the Hit roll and you can re-roll the Wound roll.\" vs any Titanic/Towering matches; being affected is a Bondsman pick (\"select one friendly ARMIGER model within 12\"\"), a table choice, so no always/selfAlways and needs Armiger are right."
+ },
+ "de7a924190347b39": {
+  "verdict": "ok",
+  "by": "review:r15-v2",
+  "at": "2026-10-21",
+  "why": "“counted for every attack” is what the calculator does (defAlways, ticked in each step) and what the rule does (“each time an attack targets this unit, subtract 1 from the Wound roll”). “as if a PSYKER model stays in the unit” truthfully says that “While this unit contains one or more PSYKER models” is not tracked, and Core Rules 05.03 make that nearly exact: the CHARACTER Sorcerer is allocated last, so only [PRECISION] (05.04.01) can remove him early. Who is the Scarab Occult Terminators, matching NR “Rites of Coalescence - Scarab Occult Terminators”."
  },
  "de9ecd05bde1cd60": {
   "verdict": "ok",
@@ -6749,6 +6845,12 @@
   "at": "2026-10-21",
   "why": "NR roster: \"Nazdreg Epic Hero 165\" and \"(5) Meganobz Infantry 200 Nazdreg\"; header \"365 PTS\". 165 + 200 = 365."
  },
+ "f3d8fa561325a985": {
+  "verdict": "ok",
+  "by": "review:r15-v2",
+  "at": "2026-10-21",
+  "why": "“Until the start of your next Command phase, this model has that ability” and “Until the start of your next Command phase, that enemy unit is your Machine Vengeance target”: both are exactly 'round'."
+ },
  "f3e8704cce991de3": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -6808,6 +6910,12 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "WHEN: “Your Shooting phase.”"
+ },
+ "f736e877a0ebaf02": {
+  "verdict": "ok",
+  "by": "review:r15-v2",
+  "at": "2026-10-21",
+  "why": "“That VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase”: that outlasts the start of your next Command phase, so 'round' never says longer than the words and still covers every later step of this turn and the opponent's. “select one friendly ORKS VEHICLE model … That VEHICLE model’s attacks” is one model, so oneModel:true is right; the note repeats the duration word for word."
  },
  "f7bf31d0c7d7834e": {
   "verdict": "ok",
@@ -7012,6 +7120,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "Counts match the models lines: plasma pistol 1+2=3, bolt pistol 7, chainblade 1+7=8, eviscerator 2; Khârn has Gorechild and plasma pistol."
+ },
+ "fe0f2cc5b9a306a6": {
+  "verdict": "ok",
+  "by": "review:r15-v2",
+  "at": "2026-10-21",
+  "why": "“Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability.” lasts 'turn' is exactly that; Dark Blessing is this model’s ranged weapon (24\", PSYCHIC)."
  },
  "fe5b7119632bd741": {
   "verdict": "ok",

@@ -1,0 +1,116 @@
+[
+ {
+  "key": "54753b073d97fd6e",
+  "where": "shooty · Big Mek Dakkarig",
+  "verdict": "ok",
+  "why": "“In your Shooting phase, you can select one friendly ORKS WALKER unit within 3\" of this model. That unit’s attacks can re-roll hit rolls of 1 until the end of the turn.” lasts 'turn' is exactly “until the end of the turn”, so it carries from Shoot into Fight of that turn and no further; the note “re-roll hit rolls of 1 this turn” says the same."
+ },
+ {
+  "key": "f736e877a0ebaf02",
+  "where": "shooty · Mek",
+  "verdict": "ok",
+  "why": "“That VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase”: that outlasts the start of your next Command phase, so 'round' never says longer than the words and still covers every later step of this turn and the opponent's. “select one friendly ORKS VEHICLE model … That VEHICLE model’s attacks” is one model, so oneModel:true is right; the note repeats the duration word for word."
+ },
+ {
+  "key": "8d2aa752e2860054",
+  "where": "melee · Mozrog Skragbad · One Last Kill",
+  "verdict": "ok",
+  "why": "“In the Fight phase, when this model is destroyed, if this unit has not been selected to fight this phase, roll one D6: On a 2+, do not remove this model … When this unit has fought, or at the end of the phase (whichever comes first), this model is removed” matches 05.04.05 (models “stay on the battlefield until their unit is selected to attack and has attacked, or until the end of the phase (whichever comes first)”). So fightOnDeath {roll:2} is right; Mozrog is a one-model unit (NR “1x Mozrog Skragbad”), so this model is the unit."
+ },
+ {
+  "key": "7590b5646660e689",
+  "where": "standard · Khârn the Betrayer · Berserker Frenzy",
+  "verdict": "ok",
+  "why": "“The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up … with 3 wounds remaining.” comeback {roll:2, wounds:3} matches its meaning word for word (first time, end of the phase, 2+, 3 wounds). NR prints “Berserker Frenzy - Khârn the Betrayer”, so who is Khârn, and the model lines are NR’s."
+ },
+ {
+  "key": "fe0f2cc5b9a306a6",
+  "where": "pubstomper · Daemon Prince of Tzeentch with wings",
+  "verdict": "ok",
+  "why": "“Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability.” lasts 'turn' is exactly that; Dark Blessing is this model’s ranged weapon (24\", PSYCHIC)."
+ },
+ {
+  "key": "97554ed70c9ee4a2",
+  "where": "pubstomper · Sorcerer in Terminator Armour · Rites of Coalescence",
+  "verdict": "ok",
+  "why": "“While this unit contains one or more PSYKER models, each time an attack targets this unit, subtract 1 from the Wound roll.” The unit holds two PSYKER models: the Sorcerer in Terminator Armour (kw Psyker) and the Scarab Occult Sorcerer (Wahapedia “SCARAB OCCULT SORCERER ONLY: PSYKER”). So it qualifies at the start of every matchup, and 05.03 (“No CHARACTER group can be earlier in the allocation order than a non-CHARACTER group”) keeps the Sorcerer until last, except under [PRECISION]. defAlways with woundMinus 1 is supported, and the companion calcNote states the approximation."
+ },
+ {
+  "key": "de7a924190347b39",
+  "where": "pubstomper · Sorcerer in Terminator Armour · Rites of Coalescence",
+  "verdict": "ok",
+  "why": "“counted for every attack” is what the calculator does (defAlways, ticked in each step) and what the rule does (“each time an attack targets this unit, subtract 1 from the Wound roll”). “as if a PSYKER model stays in the unit” truthfully says that “While this unit contains one or more PSYKER models” is not tracked, and Core Rules 05.03 make that nearly exact: the CHARACTER Sorcerer is allocated last, so only [PRECISION] (05.04.01) can remove him early. Who is the Scarab Occult Terminators, matching NR “Rites of Coalescence - Scarab Occult Terminators”."
+ },
+ {
+  "key": "26df013adc84dbd8",
+  "where": "Grand Coven rule · Kindred Sorcery",
+  "verdict": "ok",
+  "why": "“In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase.” That is exactly 'round' (“until the start of the player's next Command phase”). The when keeps “You can only select each of these abilities once per battle”, and the three picks say what their abilities say."
+ },
+ {
+  "key": "211ddf2c8d2e6368",
+  "where": "nidzillas · Norn Emissary",
+  "verdict": "ok",
+  "why": "“Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll.” lasts 'battle' is “Until the end of the battle”. The calculator carries ticks within one attacker–target pair (dmPlan carryA/carryT), so “vs that unit” stays true in the later steps."
+ },
+ {
+  "key": "0154e8fd609430d4",
+  "where": "Butchers of Khorne · Wrath Beyond Reason",
+  "verdict": "ok",
+  "why": "“Ranged attacks that target your unit have -1 D” is dMinus 1. It is a change to the attack’s D characteristic, which 04.01.04 applies to the weapon (“those changes apply to the weapon making that attack”). 24.10’s mortal wounds are “equal to the D characteristic of that weapon”, so dChar:true is right; r14’s contradicting “How this is worked out” line is now split (app.html dMinus vs dMinusChar)."
+ },
+ {
+  "key": "f3d8fa561325a985",
+  "where": "purge-goes-the-foe · Belisarius Cawl",
+  "verdict": "ok",
+  "why": "“Until the start of your next Command phase, this model has that ability” and “Until the start of your next Command phase, that enemy unit is your Machine Vengeance target”: both are exactly 'round'."
+ },
+ {
+  "key": "cc76946b279a491f",
+  "where": "purge-goes-the-foe · Tech-Priest Enginseer",
+  "verdict": "ok",
+  "why": "“If a friendly ADEPTUS MECHANICUS VEHICLE model is destroyed within 12\" of this model, until the end of the battle, this model’s Omnissian axe has an Attacks characteristic of 6.” lasts 'battle' and the note “until the end of the battle” are the rule’s words."
+ },
+ {
+  "key": "3df522cf1ff3caa4",
+  "where": "purge-goes-the-foe · Cybernetica Datasmith",
+  "verdict": "needs-change",
+  "why": "“In your Command phase … you can select one protocol … Once a unit enters a protocol, it remains in that protocol until it enters a different one”: it can enter a different one in your next Command phase, so the words do not make it last to the end of the battle. They make it last only until then. 'battle' says longer than the words; it should be lasts:'round' (until the start of your next Command phase, like Kindred Sorcery)."
+ },
+ {
+  "key": "b0aef2a2f90ee3fc",
+  "where": "purge-goes-the-foe · Cybernetica Datasmith",
+  "verdict": "needs-change",
+  "why": "Same words as the Protector footnote: “it remains in that protocol until it enters a different one”, and a new one can be selected “In your Command phase”. So Conqueror is sure to last only until the start of your next Command phase, and lasts should be 'round', not 'battle'."
+ },
+ {
+  "key": "7f141f8d03921ac2",
+  "where": "Cohort Cybernetica · Auto-divinatory Targeting",
+  "verdict": "ok",
+  "why": "“EFFECT: Until the start of your next Command phase, ranged weapons equipped by models in your unit have a Ballistic Skill characteristic of 3+ and the [IGNORES COVER] ability …” lasts 'round' is exactly that."
+ },
+ {
+  "key": "c9b8827a97c5a84e",
+  "where": "Cohort Cybernetica · Machine Spirit Resurgent",
+  "verdict": "ok",
+  "why": "“EFFECT: Until the start of your next Command phase, each time a model in your unit makes an attack, you can re-roll the Hit roll. If your unit is Below Half-strength, you can re-roll the Wound roll as well.” lasts 'round' is exactly that duration."
+ },
+ {
+  "key": "703e80dd796c6ea7",
+  "where": "Cohort Cybernetica · Benevolence of the Omnissiah",
+  "verdict": "ok",
+  "why": "“EFFECT: Until the start of your next Command phase, models in your unit have the Feel No Pain 6+ ability …” lasts 'round' is exactly that, so a use in your Command phase still counts when the unit is attacked in the opponent’s turn."
+ },
+ {
+  "key": "abba383d56822d89",
+  "where": "Eradication Cohort rule · Murderous Imperative",
+  "verdict": "ok",
+  "why": "Its own words give no duration (“Each time a model in a SKITARII unit from your army makes an attack: If the Protector Imperative is active for that unit, re-roll a Hit roll of 1 …”), so with no lasts it is asked in each step and never carries longer than the words say. (Doctrina Imperatives’ “Until the end of the battle round” would also support 'round', but leaving it out is not wrong.) The picks match the text, and “Both” is what Transcendent Cogitation and Omnicogitator give (“both active for your unit”)."
+ },
+ {
+  "key": "310f958d9cd9ce52",
+  "where": "Core · Smokescreen",
+  "verdict": "needs-change",
+  "why": "The rule’s words are “a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit”. “because of the smoke” names a cause the rule does not have (SMOKE is the unit’s keyword; its models block the view), and the note drops “to the attacking model” (13.08: cover is decided per attacking model). Make it: “for a unit that is not fully visible to the attacking models because of one or more models in your SMOKE unit, tick “Target has the benefit of cover” instead”; the box label itself is right (app.html: 'Target has the benefit of cover')."
+ }
+]

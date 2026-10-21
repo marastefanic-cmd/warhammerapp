@@ -1,0 +1,424 @@
+[
+ {
+  "army": "shooty",
+  "kind": "unit-aura",
+  "where": "shooty · Big Mek Dakkarig",
+  "judgement": {
+   "kind": "all",
+   "needs": {
+    "all": [
+     "Faction: Orks",
+     "Walker"
+    ]
+   },
+   "when": "Picked by the Dreadherder",
+   "note": "re-roll hit rolls of 1 this turn",
+   "from": "Dreadherder",
+   "lasts": "turn"
+  },
+  "source": {
+   "ability": "Dreadherder",
+   "text": "**BIG MEK** model only. While this model is within 3\" of a friendly **ORKS WALKER** unit (excluding **BIG MEK** units):\n- This model has **Lone Operative**.\n- In your Shooting phase, you can select one friendly **ORKS WALKER** unit within 3\" of this model. That unit’s attacks can re-roll **hit rolls** of 1 until the end of the turn."
+  },
+  "key": "54753b073d97fd6e"
+ },
+ {
+  "army": "shooty",
+  "kind": "unit-aura",
+  "where": "shooty · Mek",
+  "judgement": {
+   "kind": "all",
+   "needs": {
+    "all": [
+     "Faction: Orks",
+     "Vehicle"
+    ],
+    "none": [
+     "Aircraft",
+     "Titanic"
+    ]
+   },
+   "when": "Picked by a Mek’s Clever Know-wotz",
+   "note": "that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase",
+   "from": "Clever Know-wotz",
+   "calc": {
+    "hit": 1
+   },
+   "oneModel": true,
+   "lasts": "round"
+  },
+  "source": {
+   "ability": "Clever Know-wotz",
+   "text": "In your Movement phase, at the start or end of this unit’s move, you can select one friendly **ORKS VEHICLE** model (excluding **AIRCRAFT**/**TITANIC** models) within 3\" of this model:\n- That **VEHICLE** model **heals** D3 wounds.\n- That **VEHICLE** model’s attacks have +1 to **hit rolls** until the start of your next Movement phase."
+  },
+  "key": "f736e877a0ebaf02"
+ },
+ {
+  "army": "melee",
+  "kind": "ability-turn",
+  "where": "melee · Mozrog Skragbad · One Last Kill",
+  "judgement": {
+   "fightOnDeath": {
+    "roll": 2
+   },
+   "models": [
+    "1× Mozrog Skragbad"
+   ]
+  },
+  "source": {
+   "ability": "One Last Kill",
+   "text": "In the Fight phase, when this model is **destroyed**, if this unit has not been **selected to fight** this phase, roll one D6:\n- On a 2+, do not remove this model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield."
+  },
+  "key": "8d2aa752e2860054"
+ },
+ {
+  "army": "standard",
+  "kind": "ability-turn",
+  "where": "standard · Khârn the Betrayer · Berserker Frenzy",
+  "judgement": {
+   "comeback": {
+    "roll": 2,
+    "wounds": 3
+   },
+   "who": "Khârn the Betrayer",
+   "models": [
+    "1× Khârn the Betrayer",
+    "1× Khorne Berzerker Champion",
+    "7× Khorne Berzerker",
+    "2× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ]
+  },
+  "source": {
+   "ability": "Berserker Frenzy",
+   "text": "The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining."
+  },
+  "key": "7590b5646660e689"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "unit-footnote",
+  "where": "pubstomper · Daemon Prince of Tzeentch with wings",
+  "judgement": {
+   "kind": "ranged",
+   "when": "After an aetherstride this turn",
+   "note": "Dark Blessing has [SUSTAINED HITS D3]",
+   "from": "Aetherstride",
+   "calc": {
+    "sus": "D3",
+    "weapon": "Dark Blessing"
+   },
+   "lasts": "turn"
+  },
+  "source": {
+   "ability": "Aetherstride",
+   "text": "In your Movement phase, when this model is set up on the battlefield using the **Deep Strike** ability, it can perform an aetherstride. If it does:\n- It can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units.\n- Until the end of the turn, its Dark Blessing has the **[SUSTAINED HITS D3]** ability.\n- Until the end of the turn, it is not eligible to declare a charge."
+  },
+  "key": "fe0f2cc5b9a306a6"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-calc",
+  "where": "pubstomper · Sorcerer in Terminator Armour · Rites of Coalescence",
+  "judgement": {
+   "def": "-1 to wound rolls against this unit while it contains a PSYKER model",
+   "defAlways": true,
+   "defCalc": {
+    "woundMinus": 1
+   },
+   "models": [
+    "1× Sorcerer in Terminator Armour",
+    "1× Scarab Occult Sorcerer",
+    "7× Scarab Occult Terminator",
+    "2× Scarab Occult Terminator w/ soulreaper cannon"
+   ]
+  },
+  "source": {
+   "ability": "Rites of Coalescence",
+   "text": "While this unit contains one or more **PSYKER** models, each time an attack targets this unit, subtract 1 from the **Wound roll**."
+  },
+  "key": "97554ed70c9ee4a2"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-turn",
+  "where": "pubstomper · Sorcerer in Terminator Armour · Rites of Coalescence",
+  "judgement": {
+   "calcNote": "counted for every attack, as if a PSYKER model stays in the unit",
+   "who": "Scarab Occult Terminators",
+   "models": [
+    "1× Sorcerer in Terminator Armour",
+    "1× Scarab Occult Sorcerer",
+    "7× Scarab Occult Terminator",
+    "2× Scarab Occult Terminator w/ soulreaper cannon"
+   ]
+  },
+  "source": {
+   "ability": "Rites of Coalescence",
+   "text": "While this unit contains one or more **PSYKER** models, each time an attack targets this unit, subtract 1 from the **Wound roll**."
+  },
+  "key": "de7a924190347b39"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "rule-mod",
+  "where": "Grand Coven rule · Kindred Sorcery",
+  "judgement": {
+   "mod": {
+    "kind": "all",
+    "lasts": "round",
+    "when": "Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle)",
+    "note": "Psychic weapons only: Imbued Manifestation +6\" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]",
+    "pick": [
+     {
+      "name": "Imbued Manifestation",
+      "note": "Psychic weapons only: +6\" range"
+     },
+     {
+      "name": "Psychic Maelstrom",
+      "note": "Psychic weapons only: +1 to wound rolls"
+     },
+     {
+      "name": "Wrath of the Immaterium",
+      "note": "Psychic weapons only: [DEVASTATING WOUNDS]"
+     }
+    ]
+   }
+  },
+  "source": {
+   "rule": "Kindred Sorcery",
+   "text": "In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.\nImbued Manifestation: Add 6\" to the Range characteristic of ranged Psychic weapons equipped by **THOUSAND SONS** models from your army.\nPsychic Maelstrom: Each time a **THOUSAND SONS** model from your army makes an attack with a Psychic weapon, add 1 to the **Wound roll**.\nWrath of the Immaterium: Psychic weapons equipped by **THOUSAND SONS** models from your army have the **[DEVASTATING WOUNDS]** ability."
+  },
+  "key": "26df013adc84dbd8"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "unit-footnote",
+  "where": "nidzillas · Norn Emissary",
+  "judgement": {
+   "kind": "all",
+   "when": "If its Singular Purpose is an enemy unit, vs that unit",
+   "note": "re-roll hit rolls and wound rolls",
+   "from": "Singular Purpose",
+   "lasts": "battle"
+  },
+  "source": {
+   "ability": "Singular Purpose",
+   "text": "At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15."
+  },
+  "key": "211ddf2c8d2e6368"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "strat-defCalc",
+  "where": "Butchers of Khorne · Wrath Beyond Reason",
+  "judgement": {
+   "defCalc": {
+    "dMinus": 1,
+    "dChar": true
+   }
+  },
+  "source": {
+   "stratagem": "Wrath Beyond Reason",
+   "text": "WHEN: Your opponent’s Shooting Phase, when an enemy unit targets a friendly **TERMINATOR SQUAD** unit.\nTARGET: That **TERMINATOR SQUAD** unit.\nEFFECT: Ranged attacks that target your unit have -1 **D** until that enemy unit has attacked."
+  },
+  "key": "0154e8fd609430d4"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "unit-aura",
+  "where": "purge-goes-the-foe · Belisarius Cawl",
+  "judgement": {
+   "kind": "all",
+   "needs": {
+    "all": [
+     "Faction: Adeptus Mechanicus"
+    ]
+   },
+   "when": "If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target",
+   "selfWhen": "If he has Invocation of Machine Vengeance, vs your Machine Vengeance target",
+   "note": "can re-roll the hit roll",
+   "from": "Canticles of the Omnissiah",
+   "lasts": "round"
+  },
+  "source": {
+   "ability": "Canticles of the Omnissiah",
+   "text": "At the start of your Command phase, select one of the abilities in the Canticles of the Omnissiah section. Until the start of your next Command phase, this model has that ability.\n**Invocation of Machine Vengeance:** At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Machine Vengeance target. Each time a model in a friendly **ADEPTUS MECHANICUS** unit makes an attack that targets your Machine Vengeance target, you can re-roll the **Hit roll**.\n**Mantra of Discipline:** This model has the **BATTLELINE** keyword and has the following ability:\n- **Binharic Courage (Aura):** While a friendly **ADEPTUS MECHANICUS** unit is within 6\" of this model, add 1 to the Objective Control characteristic of models in that unit and each time you take a Battle-shock or **Leadership test** for that unit, add 1 to that test.\n**Shroudpsalm (Aura):** While a friendly **ADEPTUS MECHANICUS** unit is within 6\" of this model, that unit has the **Stealth** ability."
+  },
+  "key": "f3d8fa561325a985"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "unit-footnote",
+  "where": "purge-goes-the-foe · Tech-Priest Enginseer",
+  "judgement": {
+   "kind": "melee",
+   "weapon": "Omnissian axe",
+   "set": {
+    "A": "6"
+   },
+   "when": "After a friendly ADEPTUS MECHANICUS VEHICLE model is destroyed within 12\" of it",
+   "note": "until the end of the battle",
+   "from": "Vengeance for the Omnissiah",
+   "calc": {},
+   "lasts": "battle"
+  },
+  "source": {
+   "ability": "Vengeance for the Omnissiah",
+   "text": "If a friendly **ADEPTUS MECHANICUS VEHICLE** model is destroyed within 12\" of this model, until the end of the battle, this model’s Omnissian axe has an Attacks characteristic of 6."
+  },
+  "key": "cc76946b279a491f"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "unit-footnote",
+  "where": "purge-goes-the-foe · Cybernetica Datasmith",
+  "judgement": {
+   "kind": "ranged",
+   "weapon": "Incendine combustor",
+   "set": {
+    "A": "+2"
+   },
+   "when": "In Protector Protocol",
+   "note": "selected in your Command phase",
+   "from": "Battle Protocols",
+   "calc": {},
+   "lasts": "battle"
+  },
+  "source": {
+   "ability": "Battle Protocols",
+   "text": "At the start of the battle, if this model is leading a **KASTELAN ROBOTS** unit, that unit enters Aegis Protocols (see below). In your Command phase, if this model is leading a **KASTELAN ROBOTS** unit, you can select one protocol from those listed below for that unit to enter. Once a unit enters a protocol, it remains in that protocol until it enters a different one.\n- **Protector Protocol:** Add 2 to the Attacks characteristic of ranged weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Conqueror Protocol:** Add 2 to the Attacks characteristic of melee weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Aegis Protocol:** Add 1 to the Toughness characteristic of **KASTELAN ROBOT** models in that unit."
+  },
+  "key": "3df522cf1ff3caa4"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "unit-footnote",
+  "where": "purge-goes-the-foe · Cybernetica Datasmith",
+  "judgement": {
+   "kind": "melee",
+   "weapon": "Twin Kastelan fist",
+   "set": {
+    "A": "+2"
+   },
+   "when": "In Conqueror Protocol",
+   "note": "selected in your Command phase",
+   "from": "Battle Protocols",
+   "calc": {},
+   "lasts": "battle"
+  },
+  "source": {
+   "ability": "Battle Protocols",
+   "text": "At the start of the battle, if this model is leading a **KASTELAN ROBOTS** unit, that unit enters Aegis Protocols (see below). In your Command phase, if this model is leading a **KASTELAN ROBOTS** unit, you can select one protocol from those listed below for that unit to enter. Once a unit enters a protocol, it remains in that protocol until it enters a different one.\n- **Protector Protocol:** Add 2 to the Attacks characteristic of ranged weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Conqueror Protocol:** Add 2 to the Attacks characteristic of melee weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Aegis Protocol:** Add 1 to the Toughness characteristic of **KASTELAN ROBOT** models in that unit."
+  },
+  "key": "b0aef2a2f90ee3fc"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-mod",
+  "where": "Cohort Cybernetica · Auto-divinatory Targeting",
+  "judgement": {
+   "mod": {
+    "kind": "ranged",
+    "lasts": "round",
+    "when": "Your Command phase, until the start of your next Command phase",
+    "note": "BS 3+, [IGNORES COVER]; can only target units within range of the selected objective marker",
+    "calc": {
+     "set": {
+      "BS": "3+"
+     },
+     "ignoresCover": true
+    }
+   }
+  },
+  "source": {
+   "stratagem": "Auto-divinatory Targeting",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army, and one objective marker.\nEFFECT: Until the start of your next Command phase, ranged weapons equipped by models in your unit have a Ballistic Skill characteristic of 3+ and the **[IGNORES COVER]** ability, but they can only target units within range of the selected objective marker."
+  },
+  "key": "7f141f8d03921ac2"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-mod",
+  "where": "Cohort Cybernetica · Machine Spirit Resurgent",
+  "judgement": {
+   "mod": {
+    "kind": "all",
+    "lasts": "round",
+    "when": "Your Command phase, below its Starting Strength; until the start of your next Command phase",
+    "note": "can re-roll hit rolls (and wound rolls if Below Half-strength)",
+    "pick": [
+     {
+      "name": "Below Starting Strength",
+      "note": "re-roll hit rolls"
+     },
+     {
+      "name": "Below Half-strength",
+      "note": "re-roll hit rolls and wound rolls"
+     }
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Machine Spirit Resurgent",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army that is below its Starting Strength.\nEFFECT: Until the start of your next Command phase, each time a model in your unit makes an attack, you can re-roll the **Hit roll**. If your unit is **Below Half-strength**, you can re-roll the **Wound roll** as well."
+  },
+  "key": "c9b8827a97c5a84e"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-lasts",
+  "where": "Cohort Cybernetica · Benevolence of the Omnissiah",
+  "judgement": {
+   "lasts": "round"
+  },
+  "source": {
+   "stratagem": "Benevolence of the Omnissiah",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army.\nEFFECT: Until the start of your next Command phase, models in your unit have the **Feel No Pain 6+** ability, which is improved to Feel No Pain 5+ against **mortal wounds**."
+  },
+  "key": "703e80dd796c6ea7"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "rule-mod",
+  "where": "Eradication Cohort rule · Murderous Imperative",
+  "judgement": {
+   "mod": {
+    "kind": "all",
+    "when": "Protector or Conqueror Imperative active for this unit",
+    "note": "Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1",
+    "pick": [
+     {
+      "name": "Protector",
+      "note": "re-roll hit rolls of 1"
+     },
+     {
+      "name": "Conqueror",
+      "note": "re-roll wound rolls of 1"
+     },
+     {
+      "name": "Both",
+      "note": "re-roll hit rolls of 1 and wound rolls of 1"
+     }
+    ]
+   }
+  },
+  "source": {
+   "rule": "Murderous Imperative",
+   "text": "Each time a model in a **SKITARII** unit from your army makes an attack:\n- If the Protector Imperative is active for that unit, re-roll a **Hit roll** of 1.\n- If the Conqueror Imperative is active for that unit, re-roll a **Wound roll** of 1."
+  },
+  "key": "abba383d56822d89"
+ },
+ {
+  "army": "core",
+  "kind": "strat-calcNote",
+  "where": "Core · Smokescreen",
+  "judgement": {
+   "calcNote": "for a unit not fully visible because of the smoke, tick “Target has the benefit of cover” instead"
+  },
+  "source": {
+   "stratagem": "Smokescreen",
+   "text": "WHEN: Start of your opponent’s Shooting phase.\nTARGET: One friendly **SMOKE** unit.\nEFFECT: Until the end of the phase, each time an attack targets either your **SMOKE** unit, or a unit that is not **fully visible** to the attacking model because of one or more models in your **SMOKE** unit, the target has the **benefit of cover** against that attack (13.08)."
+  },
+  "key": "310f958d9cd9ce52"
+ }
+]
