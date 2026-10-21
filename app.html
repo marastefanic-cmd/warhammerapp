@@ -597,6 +597,14 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .tbr{justify-self:end; display:flex; align-items:center; gap:2px}
 .tbr .icon-btn{margin-right:-4px}
 .askctx{font-size:12.5px; color:var(--muted); margin:0 0 8px}
+.askwait{display:flex; align-items:center; gap:9px; font-size:14px; color:var(--muted)}
+.askwait.sm{font-size:12.5px; margin-top:4px}
+.askspin{width:20px; height:20px; flex:none; color:var(--accent); animation:askspin 1.4s linear infinite, askpulse 1.4s ease-in-out infinite}
+.askwait.sm .askspin{width:14px; height:14px}
+@keyframes askspin{to{transform:rotate(360deg)}}
+@keyframes askpulse{50%{opacity:.4}}
+@media (prefers-reduced-motion: reduce){.askspin{animation:none}}
+.btn.stop{background:var(--surface2); color:var(--fg)}
 .askref{display:flex; align-items:center; gap:8px; margin:14px 0 4px; padding:8px 0; font:600 15px var(--f-head); letter-spacing:.02em; color:var(--accent)}
 .askref .ic{width:18px; height:18px}
 .askrefs{display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin:4px 0 8px}
@@ -1890,6 +1898,11 @@ function askRefText(r){
     return '';
   });
 }
+// "the question is in": a turning spark while Claude thinks, looks rules up or writes (still, with reduced motion)
+const ASK_SPIN = '<svg class="askspin" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 3v5M12 16v5M3 12h5M16 12h5M5.6 5.6l3.6 3.6M14.8 14.8l3.6 3.6M5.6 18.4l3.6-3.6M14.8 9.2l3.6-3.6"/></g></svg>';
+const askBtn = () => askBusy ? '<button class="btn stop" id="askBtn" data-askstop>Stop</button>' : '<button class="btn" id="askBtn" data-asksend>Ask</button>';
+const askBtnNow = () => { const b = $('#askBtn'); if(b) b.outerHTML = askBtn(); };
+const askWait = (t, small) => '<div class="askwait' + (small ? ' sm' : '') + '" role="status">' + ASK_SPIN + '<span>' + esc(t) + '</span></div>';
 const askRefChips = () => askRefs.length ? '<div class="askrefs"><span class="il">About</span>' + askRefs.map((r, i) => '<span class="pill">' + esc(r.label) + '<button class="x" data-askunref="' + i + '" aria-label="Remove ' + esc(r.label) + '">×</button></span>').join('') + '</div>' : '';
 // what Claude is doing while it looks things up, shown in place of the answer
 function askStatus(t){ const x = askConv && askConv.shown[askConv.shown.length - 1]; if(x && !x.a){ x.status = t; const log = $('#askLog'); if(log) log.innerHTML = askLog(); } }
@@ -1901,7 +1914,7 @@ function askWhere(){
   if(u) return 'the datasheet of ' + unitLabel(u) + ' (' + a.name + ')';
   if(cur.s === 'damage'){ const st = dmState(), opp = oppOf(a); if(opp){ const A = st.dir === 'me' ? a : opp, B = st.dir === 'me' ? opp : a, x = A.units.find(v => v.id === st.atk), y = B.units.find(v => v.id === st.tgt);
     return 'the damage calculator: ' + (x ? unitLabel(x) : 'a unit') + ' of ' + A.name + ' ' + (st.ph === 'fight' ? 'fighting' : 'shooting at') + ' ' + (y ? unitLabel(y) : 'a unit') + ' of ' + B.name; } }
-  return 'the ' + (titleOf(cur) || cur.s) + ' screen of ' + a.name;
+  return 'the ' + (cur.s === 'army' ? 'Find' : titleOf(cur) || cur.s) + ' screen of ' + a.name;
 }
 // Claude's markdown, in the app's own text style (bold rule names open the rule)
 function askMd(text){
@@ -1922,7 +1935,7 @@ function askMd(text){
 }
 function askLog(){
   if(!askConv || !askConv.shown.length) return '<p class="note">Ask anything about the rules of these lists: what a stratagem does to this unit, whether two rules stack, what happens in which order. The app sends Claude its rules, both lists and the screen you are on. “Ask about this” on a datasheet, stratagem, ability or rule adds it to your question.</p>';
-  return askConv.shown.map(x => '<div class="askm q">' + (x.refs && x.refs.length ? '<span class="askon">About ' + esc(x.refs.join(', ')) + '</span>' : '') + esc(x.q) + '</div><div class="askm a">' + (x.err ? (x.a ? askMd(x.a) : '') + '<p class="askerr">' + esc(x.err) + '</p>' : askMd(x.a) || '<p class="note">' + esc(x.status || 'Thinking…') + '</p>') + '</div>').join('');
+  return askConv.shown.map(x => '<div class="askm q">' + (x.refs && x.refs.length ? '<span class="askon">About ' + esc(x.refs.join(', ')) + '</span>' : '') + esc(x.q) + '</div><div class="askm a">' + (x.err ? (x.a ? askMd(x.a) : '') + '<p class="askerr">' + esc(x.err) + '</p>' : (x.a ? askMd(x.a) + (x.done ? '' : askWait('Writing…', true)) : askWait(x.status || 'Thinking…'))) + '</div>').join('');
 }
 function openAsk(){
   if(!askOn()){ go({ s:'settings' }); toast('Add your Anthropic API key first'); const k = $('#askKey'); if(k) k.scrollIntoView({ block:'center' }); return; }
@@ -1932,7 +1945,7 @@ function openAsk(){
   openSheet('Rules question · ' + esc(m[1]) + (acct ? ' · your Claude account' : ''), a ? a.name + (opp ? ' vs ' + opp.name : '') : 'Rules question',
     '<p class="askctx">On: ' + esc(askWhere()) + '</p><div id="askLog">' + askLog() + '</div>' +
     '<div id="askRefs">' + askRefChips() + '</div>' +
-    '<div class="askin"><textarea id="askQ" rows="3" placeholder="' + (askRefs.length ? 'Your question about these…' : 'Ask a rules question…') + '" enterkeyhint="send"></textarea><button class="btn" data-asksend>Ask</button></div>' +
+    '<div class="askin"><textarea id="askQ" rows="3" placeholder="' + (askRefs.length ? 'Your question about these…' : 'Ask a rules question…') + '" enterkeyhint="send"></textarea>' + askBtn() + '</div>' +
     (askConv.shown.length ? '<button class="textbtn" data-asknew>New conversation</button>' : '') +
     '<p class="note">Claude can be wrong: check what matters with the rule itself (tap a bold rule name). ' + (acct ? 'Questions use your Claude account (your plan’s usage); the first one asks you to allow it.' : 'Your key and questions go only from this phone to Anthropic.') + '</p>');
   askConv.where = askWhere();
@@ -1951,7 +1964,7 @@ async function askSend(){
   const user = { role:'user', content };
   const draw = () => { const log = $('#askLog'); if(log){ log.innerHTML = askLog(); const s = $('#sheetIn'); if(s) s.scrollTop = s.scrollHeight; } };
   q.value = ''; draw();
-  const ctrl = new AbortController(); askBusy = ctrl;
+  const ctrl = new AbortController(); askBusy = ctrl; askBtnNow();
   if(askVia() === 'account') return askSendAcct(qtext, turn, a, opp, cfg, ctrl, draw);
   try {
     const { ask } = await askMod();
@@ -1965,9 +1978,9 @@ async function askSend(){
     else { askConv.messages.push(user, { role:'assistant', content:r.message.content }); if(r.cut) turn.a += '\n\n*(cut off: the answer was too long)*'; }
   } catch(e){
     const s = e && e.status;
-    turn.err = s === 401 ? 'The API key was not accepted. Check it in Settings.' : s === 429 ? 'Too many requests right now (rate limit). Try again in a minute.' :
+    turn.err = ctrl.signal.aborted ? 'Stopped.' : s === 401 ? 'The API key was not accepted. Check it in Settings.' : s === 429 ? 'Too many requests right now (rate limit). Try again in a minute.' :
       s ? 'Anthropic’s API answered ' + s + ': ' + (e.message || '') : 'Could not reach Anthropic’s API (' + ((e && e.message) || 'no connection') + ').';
-  } finally { askBusy = null; draw(); }
+  } finally { turn.done = true; askBusy = null; draw(); askBtnNow(); }
 }
 // the account way: the conversation is kept here as text turns (Claude keeps nothing between calls)
 async function askSendAcct(text, turn, a, opp, cfg, ctrl, draw){
@@ -1996,7 +2009,7 @@ async function askSendAcct(text, turn, a, opp, cfg, ctrl, draw){
       c === 'sampling_disabled' ? 'Claude is not available for this account here. An API key in Settings works instead.' : c === 'refused' ? 'Claude declined to answer this one.' :
       c === 'prompt_too_large' ? 'The question with both lists is too long for one go: start a new conversation.' : 'Could not reach Claude (' + ((e && e.message) || c || 'no connection') + '). Try again.';
     if(c === 'refused') turn.a = '';
-  } finally { askBusy = null; draw(); }
+  } finally { turn.done = true; askBusy = null; draw(); askBtnNow(); }
 }
 // Settings: the key, the model, GW's Core Rules PDF
 function askSettings(){
@@ -3071,6 +3084,7 @@ document.addEventListener('click', e => {
   if(el.hasAttribute('data-roll')){ rollArmy(); return; }
   if(el.hasAttribute('data-ask')){ openAsk(); return; }
   if(el.hasAttribute('data-asksend')){ askSend(); return; }
+  if(el.hasAttribute('data-askstop')){ if(askBusy) askBusy.abort(); return; }
   if(ds.askref){ const i = ds.askref.indexOf('|'), k = ds.askref.slice(0, i), v = ds.askref.slice(i + 1);
     if(!askRefs.some(r => r.k === k && r.v === v && r.army === army().id)) askRefs.push({ k, v, army:army().id, label:askRefLabel(k, v) });
     if(askOn()) openAsk(); else { hideSheet(); openAsk(); } return; }
