@@ -1,0 +1,44 @@
+[
+ {
+  "key": "f78aa33334249bd2",
+  "where": "newGame",
+  "verdict": "ok",
+  "why": "Only the Game tracker’s data-gnew calls it now, and its toast names what it clears: “New game: round, CP, VP, choices and both lists’ uses per battle cleared”. The Overview’s data-newgame handler matches 5bfdfca line for line: this list’s uses per battle only, toast “New game: uses per battle cleared”."
+ },
+ {
+  "key": "de3c1d43e0d675f2",
+  "where": "gcLasts",
+  "verdict": "ok",
+  "why": "“until the start of your next Command phase” now has its own value, command, separate from the battle round (“until the end of the battle round”, “until the start of the next battle round”). Kindred Sorcery, Full Throttle, Canticles of the Omnissiah and Rod of the War Forge get it. Doctrina, Blessings, Wrathful Presence and Unearthly Power stay round, Code Chivalric and Singular Purpose battle, Battle Protocols kept."
+ },
+ {
+  "key": "a2b31e149a65539e",
+  "where": "gcWhen",
+  "verdict": "ok",
+  "why": "The sentence is now found on the **-free text it searches. Every list’s when still reads as its rule does: “At the end of the Read Mission Objectives step”, “At the start of the first battle round”, “At the start of the battle round”, “In your Command phase”, “At the start of your Command phase”."
+ },
+ {
+  "key": "714c0fca8fe26bbb",
+  "where": "gcPick",
+  "verdict": "ok",
+  "why": "Tested with gcRound in node. A side that goes second sees its round-N command pick in round N+1’s first turn, marked as picked in round N, and from its own turn of N+1 the new round’s slot. A side that goes first always sees the current round. This matches “until the start of your next Command phase”. Battle Protocols with no pick shows Aegis Protocol (from the start of the battle), per “At the start of the battle, … that unit enters Aegis Protocols”, and after a pick the last one made."
+ },
+ {
+  "key": "e0225d9b7f27a3d1",
+  "where": "gPhaseHtml",
+  "verdict": "ok",
+  "why": "Insane Bravery (WHEN “Battle-shock step of your Command phase…”) is now under its own step, “Battle-shock 08.03” (GW Core Rules PDF heading “3. BATTLE-SHOCK 08.03”). “Command Abilities 08.04” keeps the rest, as its words say (“excluding those … triggered … by battle-shock rolls”). The Fight middle reads “Pile In 12.02 · Fight 12.04 · Consolidate 12.07”, which are the PDF’s headings. Other steps are unchanged."
+ },
+ {
+  "key": "258046ad94ca1dc1",
+  "where": "gRows",
+  "verdict": "ok",
+  "why": "A rule that lets each of its abilities be selected once per battle (Kindred Sorcery: “You can only select each of these abilities once per battle”) now gets one box per ability, keyed 'r:<rule>:<ability>#0'. Those are the Overview’s ruleTicks keys and the ones gamePick ticks. A rule that is once per battle per unit gets no box, as on the Overview (ruleOnce). Other rows are unchanged."
+ },
+ {
+  "key": "4598357d894fb025",
+  "where": "gChoiceHtml",
+  "verdict": "ok",
+  "why": "Command picks are labelled “Until the start of your next Command phase” (Kindred Sorcery, Canticles, Rod of the War Forge, Full Throttle). An earlier round’s pick reads “(picked in battle round N)”. Battle Protocols’ Aegis reads “Until another is picked (from the start of the battle)”. Earlier rounds’ picks leave out the round being shown."
+ }
+]

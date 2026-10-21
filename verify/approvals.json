@@ -1049,6 +1049,12 @@
   "at": "2026-10-17",
   "why": "Reserves line: 20.01 “Unless otherwise stated, the combined points value … (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit” and 20.03 “Unless otherwise stated, they can only do so from the second battle round onwards … destroyed, with the following exceptions: Units embarked within TRANSPORTS that have made an ingress move … Repositioned units”. Both “unless otherwise stated” are kept. The Deep Strike and Scouts lists follow “if every model in this unit has this ability” (24.09, 24.31). The headings now use the texts’ own words (“Read Mission Objectives step”, “Declare battle formations”, “Start of the battle round”). Warlord, enhancements, points, transports and once-per-battle are list facts. One leftover, display only: the Read Mission Objectives section sits above Declare battle formations. None of the given sources defines that step (the Event Companion sequence has no such step), so that order is unsourced, but no text on the screen states it."
  },
+ "258046ad94ca1dc1": {
+  "verdict": "ok",
+  "by": "review:r18b-game",
+  "at": "2026-10-21",
+  "why": "A rule that lets each of its abilities be selected once per battle (Kindred Sorcery: “You can only select each of these abilities once per battle”) now gets one box per ability, keyed 'r:<rule>:<ability>#0'. Those are the Overview’s ruleTicks keys and the ones gamePick ticks. A rule that is once per battle per unit gets no box, as on the Overview (ruleOnce). Other rows are unchanged."
+ },
  "258365c1bbdfbff0": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -2002,6 +2008,12 @@
   "by": "review:r10-superterm",
   "at": "2026-10-21",
   "why": "WHEN: \"Your opponent’s Shooting Phase, when an enemy unit targets a friendly TERMINATOR SQUAD unit.\""
+ },
+ "4598357d894fb025": {
+  "verdict": "ok",
+  "by": "review:r18b-game",
+  "at": "2026-10-21",
+  "why": "Command picks are labelled “Until the start of your next Command phase” (Kindred Sorcery, Canticles, Rod of the War Forge, Full Throttle). An earlier round’s pick reads “(picked in battle round N)”. Battle Protocols’ Aegis reads “Until another is picked (from the start of the battle)”. Earlier rounds’ picks leave out the round being shown."
  },
  "45f310dcc63f9331": {
   "verdict": "ok",
@@ -3172,6 +3184,12 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "The start of the battle round comes before either player's turn (Core Rules 07.01 “before progressing to player turns”), and the Imperative lasts “Until the end of the battle round”, so either turn."
+ },
+ "714c0fca8fe26bbb": {
+  "verdict": "ok",
+  "by": "review:r18b-game",
+  "at": "2026-10-21",
+  "why": "Tested with gcRound in node. A side that goes second sees its round-N command pick in round N+1’s first turn, marked as picked in round N, and from its own turn of N+1 the new round’s slot. A side that goes first always sees the current round. This matches “until the start of your next Command phase”. Battle Protocols with no pick shows Aegis Protocol (from the start of the battle), per “At the start of the battle, … that unit enters Aegis Protocols”, and after a pick the last one made."
  },
  "7173745124f5cf5b": {
   "verdict": "ok",
@@ -4654,6 +4672,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "Your Shooting phase."
+ },
+ "a2b31e149a65539e": {
+  "verdict": "ok",
+  "by": "review:r18b-game",
+  "at": "2026-10-21",
+  "why": "The sentence is now found on the **-free text it searches. Every list’s when still reads as its rule does: “At the end of the Read Mission Objectives step”, “At the start of the first battle round”, “At the start of the battle round”, “In your Command phase”, “At the start of your Command phase”."
  },
  "a329d040325f33fd": {
   "verdict": "ok",
@@ -6317,6 +6341,12 @@
   "at": "2026-10-16",
   "why": "\"While this model has 1-6 wounds remaining, subtract 4 from ... OC and ... subtract 1 from the Hit roll.\""
  },
+ "de3c1d43e0d675f2": {
+  "verdict": "ok",
+  "by": "review:r18b-game",
+  "at": "2026-10-21",
+  "why": "“until the start of your next Command phase” now has its own value, command, separate from the battle round (“until the end of the battle round”, “until the start of the next battle round”). Kindred Sorcery, Full Throttle, Canticles of the Omnissiah and Rod of the War Forge get it. Doctrina, Blessings, Wrathful Presence and Unearthly Power stay round, Code Chivalric and Singular Purpose battle, Battle Protocols kept."
+ },
  "de73571038d7b631": {
   "verdict": "ok",
   "by": "review:r12-calc-marks",
@@ -6394,6 +6424,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "\"Friendly GRETCHIN units have BATTLELINE\" / \"a friendly GRETCHIN unit\": GRETCHIN only. Zodgrod's attached unit qualifies by 19.03."
+ },
+ "e0225d9b7f27a3d1": {
+  "verdict": "ok",
+  "by": "review:r18b-game",
+  "at": "2026-10-21",
+  "why": "Insane Bravery (WHEN “Battle-shock step of your Command phase…”) is now under its own step, “Battle-shock 08.03” (GW Core Rules PDF heading “3. BATTLE-SHOCK 08.03”). “Command Abilities 08.04” keeps the rest, as its words say (“excluding those … triggered … by battle-shock rolls”). The Fight middle reads “Pile In 12.02 · Fight 12.04 · Consolidate 12.07”, which are the PDF’s headings. Other steps are unchanged."
  },
  "e03e0d4c817053e9": {
   "verdict": "ok",
@@ -7030,6 +7066,12 @@
   "by": "review:r15-v2",
   "at": "2026-10-21",
   "why": "“That VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase”: that outlasts the start of your next Command phase, so 'round' never says longer than the words and still covers every later step of this turn and the opponent's. “select one friendly ORKS VEHICLE model … That VEHICLE model’s attacks” is one model, so oneModel:true is right; the note repeats the duration word for word."
+ },
+ "f78aa33334249bd2": {
+  "verdict": "ok",
+  "by": "review:r18b-game",
+  "at": "2026-10-21",
+  "why": "Only the Game tracker’s data-gnew calls it now, and its toast names what it clears: “New game: round, CP, VP, choices and both lists’ uses per battle cleared”. The Overview’s data-newgame handler matches 5bfdfca line for line: this list’s uses per battle only, toast “New game: uses per battle cleared”."
  },
  "f7bf31d0c7d7834e": {
   "verdict": "ok",
