@@ -779,6 +779,12 @@
   "at": "2026-10-16",
   "why": "\"action/actions\" (16); exact-anchored."
  },
+ "292ebc44d87f5e36": {
+  "verdict": "ok",
+  "by": "review:r9-code",
+  "at": "2026-10-21",
+  "why": "RULES['Heavy'] matches 24.16 word for word in rules/core-rules.md and Wahapedia core.html: \"In your Shooting phase, each time an attack is made with a [HEAVY] weapon, add 1 to the hit roll if all of the following apply to the attacking unit: That unit is unengaged. / That unit was not set up on the battlefield this turn. / No model in that unit has moved more than 3\" this turn.\" Its bold on 'hit roll' and 'unengaged' follows Wahapedia's <b>; the only difference is Wahapedia's underline on 'all', which is formatting. ruleFor strips the brackets and the anchored /^heavy$/i matches only 'HEAVY'/'[HEAVY]'/'Heavy' (a weapon keyword, the AdMech unit's rules chip, and the **[HEAVY]** in Protector Imperative). It does not match 'Heavy bolter', 'Heavy flamer', 'Heavy weapon' or 'SUPER-HEAVY WALKER' (that one goes to its own alias), and no faction alias or army rule is named 'heavy'."
+ },
  "2a10d893105139dc": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -1426,6 +1432,12 @@
   "by": "review:m5-new",
   "at": "2026-10-20",
   "why": "The NR name line (l.141-142) is \"Ammo Runts (Once per battle, per unit) - Nobz\", and BSData's profile is named \"Ammo Runts (Once per battle, per unit)\". The tag copies it. The token line \"Place any number of Ammo Runt tokens … removing them when this ability is used\" removes all the tokens on that one use, so it does not contradict the tag."
+ },
+ "4b2539c2b4f454db": {
+  "verdict": "ok",
+  "by": "review:r9-code",
+  "at": "2026-10-21",
+  "why": "The new line `Object.entries(a.config || {}).map(([k, v]) => row(esc(k), f.armyRules.some(r => r.name === k) ? linkTo('rule', k, v) : esc(v)))` prints the label and value as given. For both Knights lists the data is { 'Code Chivalric':'Deed, Quality' }, word for word New Recruit's \"• Code Chivalric: Deed, Quality\". The value links to the army rule only on an exact name match (Imperial Knights armyRules has 'Code Chivalric'; showRule opens it) and is plain text otherwise. No other text is added, and the row is empty when an army has no config."
  },
  "4b2fe703cd0a821d": {
   "verdict": "ok",
@@ -2440,6 +2452,12 @@
   "by": "review:gists",
   "at": "2026-10-17",
   "why": "“Select one enemy unit hit by those attacks. That enemy unit is tethered until the start of your next Command phase: While a unit is tethered, that unit has -2\" M.” Same."
+ },
+ "85b025c4dd6e6e4d": {
+  "verdict": "ok",
+  "by": "review:r9-code",
+  "at": "2026-10-21",
+  "why": "For the two unplaced items it gives exactly New Recruit's line: \"Hellfyre missile rack (x2) - Scarab Occult Terminators\" becomes '2× … New Recruit lists them for the Scarab Occult Terminators, not which models carry them', and \"Icon of Flame - Rubric Marines\" becomes '1× … lists it for the Rubric Marines, not which model carries it'. The 1× matches the datasheet's \"1 Rubric Marine can be equipped with 1 icon of flame\". It finds a weapon by name, a multi-profile weapon by its group (the first profile's who/n), and an ability by name (check.js guarantees the name exists, so the {} fallback is not reached). It never names a models line: the Models and Bases rows only add a note (no base counted), and on the weapon row the carrier is 'which models: not said'. That is set before weaponJoins/useLine, and their 'name the one line' guesses skip items that already have a carrier or are on no gear line."
  },
  "85d1155813ea2230": {
   "verdict": "ok",

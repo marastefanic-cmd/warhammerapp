@@ -110,6 +110,13 @@ function check(file){
         for(const g of u.gear) for(const n of g) if(!names.has(n)) P(where, 'gear names a weapon it does not have:', n);
         // unplaced: wargear New Recruit lists for the unit but on no models line
         for(const n of u.unplaced || []) if(!names.has(n) && !(u.abilities || []).some(ab => ab.name === n)) P(where, 'unplaced names neither a weapon nor an ability of it:', n);
+        // ... and the app labels it by name, so the name is on no models line, and names one thing only
+        for(const n of u.unplaced || []){
+          if(u.gear.some(g => g.includes(n))) P(where, 'unplaced is also on a models line:', n);
+          const things = new Set([...weapons.filter(w => (w.group || w.name) === n).map(w => w.group ? 'group' : 'weapon:' + w.name), ...(u.abilities || []).filter(ab => ab.name === n).map(() => 'ability')]);
+          if(things.size > 1) P(where, 'unplaced name is both a weapon and an ability:', n);
+          if((u.unplaced || []).filter(x => x === n).length > 1) P(where, 'unplaced lists a name twice:', n);
+        }
         const carried = new Set([...u.gear.flat(), ...(u.unplaced || [])]);
         for(const n of names) if(!carried.has(n)) P(where, 'weapon not in any gear line:', n);
       }
