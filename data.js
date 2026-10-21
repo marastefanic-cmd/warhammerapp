@@ -1345,6 +1345,7 @@ const ARMIES = [
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
+        { kind:'ranged', when:'Riled up', note:'[SUSTAINED HITS 1]', from:'More Dakka' },
         { kind:'ranged', when:'Ammo Runts used (your Shooting phase, when selected to shoot)', note:'+1 to hit rolls', from:'Ammo Runts' },
         { kind:'melee', weapon:'Kustom Krumpa', when:'Kustom Krumpa of a Nob w/ Paired Krumpas', note:'can re-roll hit rolls and wound rolls', from:'Paired Krumpas' }
       ],
@@ -1378,6 +1379,7 @@ const ARMIES = [
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
+        { kind:'ranged', when:'Riled up', note:'[SUSTAINED HITS 1]', from:'More Dakka' },
         { kind:'melee', when:'Riled up, Fight phase', note:'+1 to hit rolls', from:'Krumpin’ Time' }
       ],
       rules:['Waaagh!','Leader'],
@@ -2845,7 +2847,7 @@ const ARMIES = [
         { name:'Twin Killsaw', who:'Meganobz', n:5, range:'Melee', A:'3', WS:'4+', S:'10', AP:'-2', D:'3', kw:['TWIN-LINKED','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Displays of Savagery' } }
       ],
       abilities:[
-        { name:'Nazdreg’s Know-wotz', who:'Nazdreg', text:'This unit has Deep Strike This unit’s ranged attacks have [IGNORES COVER].' },
+        { name:'Nazdreg’s Know-wotz', who:'Nazdreg', text:'- This unit has **Deep Strike**.\n- This unit’s ranged attacks have **[IGNORES COVER]**.' },
         { name:'Supreme Kunnin’', who:'Nazdreg', tag:'Once per phase, per army', ph:['movement'], turn:'opp', text:'In your opponent’s Movement phase, when an enemy unit ends a move within 8" of this unit, if this unit is **unengaged**, this unit can:\n- Make a **normal move** of up to D6".\n- Or: If this unit is **riled up**, make a **normal move** of up to 5".' },
         { name:'Intimidating Motivation', who:'Nazdreg', tag:'Once per battle round, per army', ph:['movement'], turn:'your', text:'In your Movement phase, at the start or end of this unit’s move, you can select one friendly **ORKS** unit within 6" of this unit. That unit:\n- Is no longer **battle-shocked**.\n- Is **riled up** until the start of your next turn.' },
         { name:'Krumpin’ Time', who:'Meganobz', ph:['fight'], turn:'either', text:'In the Fight phase, if this unit is **riled up**, this unit has +1 to **hit rolls**.' },
@@ -2880,11 +2882,11 @@ const ARMIES = [
         { name:'Scavenged Shivs', who:'Gretchin', n:20, range:'Melee', A:'2', WS:'4+', S:'3', AP:'0', D:'1', kw:[], from:{ A:'Super Runts', WS:'Super Runts', S:'Super Runts' } }
       ],
       abilities:[
-        { name:'Super Runts', who:'Zodgrod Wortsnagga', text:'This unit is riled up. This unit’s Scavenged Shivs weapons have +1 A, WS and S.' },
-        { name:'That’ll Learn Ya', who:'Runtherd', tag:'Once per battle round, per unit', text:'When this unit becomes battle-shocked, if this unit contains 4+ Gretchin models, you can roll one D3: That number of Gretchin models in this unit are destroyed. That unit is no longer battle-shocked.' },
+        { name:'Super Runts', who:'Zodgrod Wortsnagga', text:'- This unit is **riled up**.\n- This unit’s Scavenged Shivs weapons have +1 **A**, **WS** and **S**.' },
+        { name:'That’ll Learn Ya', who:'Runtherd', tag:'Once per battle round, per unit', text:'When this unit becomes **battle-shocked**, if this unit contains 4+ Gretchin models, you can roll one D3:\n- That number of Gretchin models in this unit are **destroyed**.\n- That unit is no longer **battle-shocked**.' },
         { name:'Downtrodden', who:'Gretchin', text:'For the purposes of **transport capacity**, each 2 Gretchin models (rounding up) take up the space of 1 model.' },
         { name:'Thievin’ Scavengers', who:'Gretchin', ph:['movement'], turn:'your', text:'At the end of your Movement phase, if this unit is controlling an **objective**, that objective is **secured**.' },
-        { name:'Extra Sneaky', who:'Gretchin', tag:'Upgrade', text:'**GRETCHIN** unit only. This unit has -3" **detection range**.' }
+        { name:'Extra Sneaky', who:'Gretchin', tag:'Upgrade', def:'-3" detection range', text:'**GRETCHIN** unit only. This unit has -3" **detection range**.' }
       ],
       rules:['Waaagh!','Leader','Support'],
       kw:['Character','Epic Hero','Faction: Orks','Infantry','Runtherd','Zodgrod Wortsnagga','Battleline','Gretchin','Grots'],
@@ -2922,6 +2924,7 @@ const ARMIES = [
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
+        { kind:'ranged', when:'Riled up', note:'[SUSTAINED HITS 1]', from:'More Dakka' },
         { kind:'ranged', when:'Ammo Runts used (your Shooting phase, when selected to shoot)', note:'+1 to hit rolls', from:'Ammo Runts' },
         { kind:'melee', weapon:'Kustom Krumpa', when:'Kustom Krumpa of a Nob w/ Paired Krumpas', note:'can re-roll hit rolls and wound rolls', from:'Paired Krumpas' }
       ],
@@ -2952,12 +2955,17 @@ const ARMIES = [
       abilities:[
         { name:'Fix Dat Armour Up', who:'Big Mek in Mega Armour', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'In your Command phase, this unit **heals** 3 wounds.\n*Place a Grot Oiler token next to the unit, removing it when this ability is used.*' },
         { name:'More Dakka', who:'Big Mek in Mega Armour', text:'This unit’s ranged attacks have:\n- **[IGNORES COVER]**.\n- If this unit is **riled up**, **[SUSTAINED HITS 1]**.' },
-        { name:'Supa-glowy Fing', who:'Big Mek in Mega Armour', tag:'Enhancement', text:'ORKS INFANTRY model only (excluding WEIRDBOY models). This model’s ranged attacks have: [ANTI-INFANTRY 4+} [DEVASTATING WOUNDS]. [SUPA-HAZARDOUS].' },
+        { name:'Supa-glowy Fing', who:'Big Mek in Mega Armour', tag:'Enhancement', text:'**ORKS INFANTRY** model only (excluding **WEIRDBOY** models). This model’s ranged attacks have:\n- **[ANTI-INFANTRY 4+]**.\n- **[DEVASTATING WOUNDS]**.\n- **[SUPA-HAZARDOUS]**.' },
         { name:'Krumpin’ Time', who:'Meganobz', ph:['fight'], turn:'either', text:'In the Fight phase, if this unit is **riled up**, this unit has +1 to **hit rolls**.' },
         { name:'Arrogant Invulnerability', who:'Meganobz', def:'Attacks that target this unit have -1 AP', text:'Attacks that target this unit have -1 **AP**.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
+      // More Dakka's [IGNORES COVER] is printed on the Big Mek's weapons only: BSData gives it to the leader's own
+      // profiles while it labels the Meganobz' Kombi-weapon "(More Dakka)" too; the rule is for the whole attached
+      // unit (Core Rules 19.04), so the Meganobz' profile stays as printed and the footnote says it
       mods:[
+        { kind:'ranged', when:'Every ranged attack', note:'[IGNORES COVER]', from:'More Dakka' },
+        { kind:'ranged', when:'Riled up', note:'[SUSTAINED HITS 1]', from:'More Dakka' },
         { kind:'melee', when:'Riled up, Fight phase', note:'+1 to hit rolls', from:'Krumpin’ Time' }
       ],
       rules:['Waaagh!','Leader','Supa-hazardous'],

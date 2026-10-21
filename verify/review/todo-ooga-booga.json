@@ -1,1202 +1,1201 @@
 [
-  {
-    "army": "ooga-booga",
-    "kind": "ability-who",
-    "where": "ooga-booga · Nazdreg · Nazdreg’s Know-wotz",
-    "judgement": {
-      "who": "Nazdreg",
-      "models": [
-        "1× Nazdreg",
-        "5× Meganob w/ Twin Killsaw"
-      ]
-    },
-    "source": {
-      "ability": "Nazdreg’s Know-wotz",
-      "text": "This unit has Deep Strike This unit’s ranged attacks have [IGNORES COVER]."
-    },
-    "key": "0f9b2fb2ce603b4c"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "unit-kwNote",
-    "where": "ooga-booga · Nazdreg",
-    "judgement": {
-      "kwNote": "Explosives, Meganobz come from the led Meganobz."
-    },
-    "source": {
-      "models": [
-        "1× Nazdreg",
-        "5× Meganob w/ Twin Killsaw"
-      ],
-      "stats": [
-        "Nazdreg W8 OC1",
-        "Meganob ×5 W3 OC1"
-      ],
-      "weapons": [
-        "Kustom Blasta X Skorcha 3 -1 1 BLAST 1, TORRENT, IGNORES COVER, ASSAULT",
-        "Kustom Blasta X Gatler 6 -2 3 HAZARDOUS, IGNORES COVER, ASSAULT",
-        "Kustom Blasta X Shoota 4 -1 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 2, IGNORES COVER, ASSAULT",
-        "Kustom Blasta X 6 -1 1 CLEAVE 1, EXTRA ATTACKS, SUSTAINED HITS 1",
-        "Moonchewa 5 -2 3 CLEAVE 1, TWIN-LINKED, SUSTAINED HITS 1",
-        "Twin Killsaw 3 -2 3 TWIN-LINKED, SUSTAINED HITS 1"
-      ]
-    },
-    "key": "faf55b462bca284f"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "unit-ptsNote",
-    "where": "ooga-booga · Nazdreg",
-    "judgement": {
-      "ptsNote": "165 + Meganobz 200"
-    },
-    "source": {
-      "models": [
-        "1× Nazdreg",
-        "5× Meganob w/ Twin Killsaw"
-      ],
-      "stats": [
-        "Nazdreg W8 OC1",
-        "Meganob ×5 W3 OC1"
-      ],
-      "weapons": [
-        "Kustom Blasta X Skorcha 3 -1 1 BLAST 1, TORRENT, IGNORES COVER, ASSAULT",
-        "Kustom Blasta X Gatler 6 -2 3 HAZARDOUS, IGNORES COVER, ASSAULT",
-        "Kustom Blasta X Shoota 4 -1 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 2, IGNORES COVER, ASSAULT",
-        "Kustom Blasta X 6 -1 1 CLEAVE 1, EXTRA ATTACKS, SUSTAINED HITS 1",
-        "Moonchewa 5 -2 3 CLEAVE 1, TWIN-LINKED, SUSTAINED HITS 1",
-        "Twin Killsaw 3 -2 3 TWIN-LINKED, SUSTAINED HITS 1"
-      ]
-    },
-    "key": "f3af1bd37741ec69"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "ability-who",
-    "where": "ooga-booga · Zodgrod Wortsnagga · Super Runts",
-    "judgement": {
-      "who": "Zodgrod Wortsnagga",
-      "models": [
-        "1× Zodgrod Wortsnagga",
-        "1× Runtherd",
-        "20× Gretchin"
-      ]
-    },
-    "source": {
-      "ability": "Super Runts",
-      "text": "This unit is riled up. This unit’s Scavenged Shivs weapons have +1 A, WS and S."
-    },
-    "key": "46f4ee751dcb6d8c"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "ability-tag",
-    "where": "ooga-booga · Zodgrod Wortsnagga · That’ll Learn Ya",
-    "judgement": {
-      "tag": "Once per battle round, per unit"
-    },
-    "source": {
-      "ability": "That’ll Learn Ya",
-      "text": "When this unit becomes battle-shocked, if this unit contains 4+ Gretchin models, you can roll one D3: That number of Gretchin models in this unit are destroyed. That unit is no longer battle-shocked."
-    },
-    "key": "49ff79c7964fc991"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "ability-who",
-    "where": "ooga-booga · Zodgrod Wortsnagga · That’ll Learn Ya",
-    "judgement": {
-      "who": "Runtherd",
-      "models": [
-        "1× Zodgrod Wortsnagga",
-        "1× Runtherd",
-        "20× Gretchin"
-      ]
-    },
-    "source": {
-      "ability": "That’ll Learn Ya",
-      "text": "When this unit becomes battle-shocked, if this unit contains 4+ Gretchin models, you can roll one D3: That number of Gretchin models in this unit are destroyed. That unit is no longer battle-shocked."
-    },
-    "key": "762d7e61e8cc1f29"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "ability-who",
-    "where": "ooga-booga · Zodgrod Wortsnagga · Downtrodden",
-    "judgement": {
-      "who": "Gretchin",
-      "models": [
-        "1× Zodgrod Wortsnagga",
-        "1× Runtherd",
-        "20× Gretchin"
-      ]
-    },
-    "source": {
-      "ability": "Downtrodden",
-      "text": "For the purposes of **transport capacity**, each 2 Gretchin models (rounding up) take up the space of 1 model."
-    },
-    "key": "9417ef8455c52be3"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "ability-who",
-    "where": "ooga-booga · Zodgrod Wortsnagga · Thievin’ Scavengers",
-    "judgement": {
-      "who": "Gretchin",
-      "models": [
-        "1× Zodgrod Wortsnagga",
-        "1× Runtherd",
-        "20× Gretchin"
-      ]
-    },
-    "source": {
-      "ability": "Thievin’ Scavengers",
-      "text": "At the end of your Movement phase, if this unit is controlling an **objective**, that objective is **secured**."
-    },
-    "key": "03c460f0fe57ff68"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "ability-tag",
-    "where": "ooga-booga · Zodgrod Wortsnagga · Extra Sneaky",
-    "judgement": {
-      "tag": "Upgrade"
-    },
-    "source": {
-      "ability": "Extra Sneaky",
-      "text": "**GRETCHIN** unit only. This unit has -3\" **detection range**."
-    },
-    "key": "d3dbc1a7e9ba2457"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "ability-who",
-    "where": "ooga-booga · Zodgrod Wortsnagga · Extra Sneaky",
-    "judgement": {
-      "who": "Gretchin",
-      "models": [
-        "1× Zodgrod Wortsnagga",
-        "1× Runtherd",
-        "20× Gretchin"
-      ]
-    },
-    "source": {
-      "ability": "Extra Sneaky",
-      "text": "**GRETCHIN** unit only. This unit has -3\" **detection range**."
-    },
-    "key": "3165d35f42ab2353"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "unit-kwNote",
-    "where": "ooga-booga · Zodgrod Wortsnagga",
-    "judgement": {
-      "kwNote": "Battleline, Gretchin, Grots come from the combined unit."
-    },
-    "source": {
-      "models": [
-        "1× Zodgrod Wortsnagga",
-        "1× Runtherd",
-        "20× Gretchin"
-      ],
-      "stats": [
-        "Zodgrod Wortsnagga W5 OC1",
-        "Runtherd W3 OC1",
-        "Gretchin ×20 W1 OC1"
-      ],
-      "weapons": [
-        "Squigstoppa 1 -1 1 ANTI-MONSTER/VEHICLE 4+, CLOSE-QUARTERS, DEVASTATING WOUNDS: MONSTER/VEHICLE, ASSAULT",
-        "Slugga 1 0 1 CLOSE-QUARTERS, LETHAL HITS: non-MONSTER/VEHICLE, ASSAULT",
-        "Grot Blasta 1 0 1 CLOSE-QUARTERS, ASSAULT",
-        "Da Grabzappa 5 -2 2",
-        "Runtherd’s Toolz 3 0 1",
-        "Scavenged Shivs 2 0 1"
-      ]
-    },
-    "key": "5951ad6922d3279f"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "unit-ptsNote",
-    "where": "ooga-booga · Zodgrod Wortsnagga",
-    "judgement": {
-      "ptsNote": "50 + Runtherd 10 + Gretchin 90"
-    },
-    "source": {
-      "models": [
-        "1× Zodgrod Wortsnagga",
-        "1× Runtherd",
-        "20× Gretchin"
-      ],
-      "stats": [
-        "Zodgrod Wortsnagga W5 OC1",
-        "Runtherd W3 OC1",
-        "Gretchin ×20 W1 OC1"
-      ],
-      "weapons": [
-        "Squigstoppa 1 -1 1 ANTI-MONSTER/VEHICLE 4+, CLOSE-QUARTERS, DEVASTATING WOUNDS: MONSTER/VEHICLE, ASSAULT",
-        "Slugga 1 0 1 CLOSE-QUARTERS, LETHAL HITS: non-MONSTER/VEHICLE, ASSAULT",
-        "Grot Blasta 1 0 1 CLOSE-QUARTERS, ASSAULT",
-        "Da Grabzappa 5 -2 2",
-        "Runtherd’s Toolz 3 0 1",
-        "Scavenged Shivs 2 0 1"
-      ]
-    },
-    "key": "c292ea097377a4cd"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "unit-weapons",
-    "where": "ooga-booga · Zodgrod Wortsnagga",
-    "judgement": {
-      "gear": [
-        [
-          "Da Grabzappa",
-          "Squigstoppa"
-        ],
-        [
-          "Runtherd’s Toolz",
-          "Slugga"
-        ],
-        [
-          "Grot Blasta",
-          "Scavenged Shivs"
-        ]
-      ],
-      "weapons": [
-        "Zodgrod Wortsnagga · Squigstoppa",
-        "Runtherd · Slugga",
-        "Gretchin · ×20 · Grot Blasta",
-        "Zodgrod Wortsnagga · Da Grabzappa",
-        "Runtherd · Runtherd’s Toolz",
-        "Gretchin · ×20 · Scavenged Shivs"
-      ]
-    },
-    "source": {
-      "models": [
-        "1× Zodgrod Wortsnagga",
-        "1× Runtherd",
-        "20× Gretchin"
-      ],
-      "leads": "Gretchin"
-    },
-    "key": "50a164a53cbb45d0"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "ability-who",
-    "where": "ooga-booga · Big Mek · Shokk-boosta",
-    "judgement": {
-      "who": "Big Mek",
-      "models": [
-        "1× Big Mek",
-        "1× Painboy",
-        "8× Nob w/ Kombi-rokkit and Kustom Krumpa",
-        "2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)"
-      ]
-    },
-    "source": {
-      "ability": "Shokk-boosta",
-      "text": "In your Movement phase, when this unit is selected to make an **advance move**, you can use this ability. If you do:\n- This unit can change that **advance roll** to a 6.\n- This unit can move through all types of model.\n- When this unit ends that **advance move**, make a **hazard roll** for each model in this unit."
-    },
-    "key": "c514ca2c6c836281"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "ability-who",
-    "where": "ooga-booga · Big Mek · More Dakka",
-    "judgement": {
-      "who": "Big Mek",
-      "models": [
-        "1× Big Mek",
-        "1× Painboy",
-        "8× Nob w/ Kombi-rokkit and Kustom Krumpa",
-        "2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)"
-      ]
-    },
-    "source": {
-      "ability": "More Dakka",
-      "text": "This unit’s ranged attacks have:\n- **[IGNORES COVER]**.\n- If this unit is **riled up**, **[SUSTAINED HITS 1]**."
-    },
-    "key": "8cd6e0396bb13428"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "ability-who",
-    "where": "ooga-booga · Big Mek · Crude Surgery",
-    "judgement": {
-      "who": "Painboy",
-      "models": [
-        "1× Big Mek",
-        "1× Painboy",
-        "8× Nob w/ Kombi-rokkit and Kustom Krumpa",
-        "2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)"
-      ]
-    },
-    "source": {
-      "ability": "Crude Surgery",
-      "text": "In your Command phase, this unit **heals** 3 wounds."
-    },
-    "key": "cc4ea41b5eb54982"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "ability-who",
-    "where": "ooga-booga · Big Mek · Catch Dat Red Bit",
-    "judgement": {
-      "who": "Painboy",
-      "models": [
-        "1× Big Mek",
-        "1× Painboy",
-        "8× Nob w/ Kombi-rokkit and Kustom Krumpa",
-        "2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)"
-      ]
-    },
-    "source": {
-      "ability": "Catch Dat Red Bit",
-      "text": "When this model uses its **Crude Surgery** ability, you can add D3 to the number of wounds **healed**.\n*Place a Grot Orderly token next to the unit, removing it when this ability is used.*"
-    },
-    "key": "7ce0e49e679deb18"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "ability-who",
-    "where": "ooga-booga · Big Mek · Ammo Runts",
-    "judgement": {
-      "who": "Nobz",
-      "models": [
-        "1× Big Mek",
-        "1× Painboy",
-        "8× Nob w/ Kombi-rokkit and Kustom Krumpa",
-        "2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)"
-      ]
-    },
-    "source": {
-      "ability": "Ammo Runts",
-      "text": "In your Shooting phase, when this unit is **selected to shoot**, you can use this ability. If you do, this unit’s ranged attacks have +1 to **hit rolls**.\n*Place any number of Ammo Runt tokens next to the unit, removing them when this ability is used.*"
-    },
-    "key": "010c6d18cd36bebf"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "ability-who",
-    "where": "ooga-booga · Big Mek · Get Out da Way!",
-    "judgement": {
-      "who": "Nobz",
-      "models": [
-        "1× Big Mek",
-        "1× Painboy",
-        "8× Nob w/ Kombi-rokkit and Kustom Krumpa",
-        "2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)"
-      ]
-    },
-    "source": {
-      "ability": "Get Out da Way!",
-      "text": "While making a **charge move**, this unit can move through models (excluding **MONSTER/VEHICLE** models)."
-    },
-    "key": "4079ef9368c07d10"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "ability-who",
-    "where": "ooga-booga · Big Mek · Paired Krumpas",
-    "judgement": {
-      "who": "Nobz",
-      "models": [
-        "1× Big Mek",
-        "1× Painboy",
-        "8× Nob w/ Kombi-rokkit and Kustom Krumpa",
-        "2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)"
-      ]
-    },
-    "source": {
-      "ability": "Paired Krumpas",
-      "text": "Attacks made with this model’s Kustom Krumpa weapon can re-roll **hit rolls** and **wound rolls**."
-    },
-    "key": "fc5dd6010b27b0cd"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "unit-kwNote",
-    "where": "ooga-booga · Big Mek",
-    "judgement": {
-      "kwNote": "Painboy, Nobz come from the combined unit."
-    },
-    "source": {
-      "models": [
-        "1× Big Mek",
-        "1× Painboy",
-        "8× Nob w/ Kombi-rokkit and Kustom Krumpa",
-        "2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)"
-      ],
-      "stats": [
-        "Big Mek W6 OC1",
-        "Painboy W3 OC1",
-        "Nob ×10 W3 OC1"
-      ],
-      "weapons": [
-        "Kustom mega-blasta 3 -2 3 HAZARDOUS, IGNORES COVER, ASSAULT",
-        "Kombi-rokkit Busta Rokkit 1 -2 3 IGNORES COVER, ASSAULT",
-        "Kombi-rokkit Shoota 2 0 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 1, IGNORES COVER, ASSAULT",
-        "Drilla 3 -3 3 SUSTAINED HITS 1",
-        "’Urty syringe 1 0 D6 ANTI-INFANTRY 4+, DEVASTATING WOUNDS: INFANTRY, EXTRA ATTACKS, SUSTAINED HITS 1",
-        "Dok’s Toolz 3 -2 2 SUSTAINED HITS 1",
-        "Kustom Krumpa 3 -2 2 SUSTAINED HITS 1"
-      ]
-    },
-    "key": "ac6d32ff43c370ed"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "unit-ptsNote",
-    "where": "ooga-booga · Big Mek",
-    "judgement": {
-      "ptsNote": "100 + Painboy 45 + Nobz 240"
-    },
-    "source": {
-      "models": [
-        "1× Big Mek",
-        "1× Painboy",
-        "8× Nob w/ Kombi-rokkit and Kustom Krumpa",
-        "2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)"
-      ],
-      "stats": [
-        "Big Mek W6 OC1",
-        "Painboy W3 OC1",
-        "Nob ×10 W3 OC1"
-      ],
-      "weapons": [
-        "Kustom mega-blasta 3 -2 3 HAZARDOUS, IGNORES COVER, ASSAULT",
-        "Kombi-rokkit Busta Rokkit 1 -2 3 IGNORES COVER, ASSAULT",
-        "Kombi-rokkit Shoota 2 0 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 1, IGNORES COVER, ASSAULT",
-        "Drilla 3 -3 3 SUSTAINED HITS 1",
-        "’Urty syringe 1 0 D6 ANTI-INFANTRY 4+, DEVASTATING WOUNDS: INFANTRY, EXTRA ATTACKS, SUSTAINED HITS 1",
-        "Dok’s Toolz 3 -2 2 SUSTAINED HITS 1",
-        "Kustom Krumpa 3 -2 2 SUSTAINED HITS 1"
-      ]
-    },
-    "key": "7cf497ade1d5af7c"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "unit-weapons",
-    "where": "ooga-booga · Big Mek",
-    "judgement": {
-      "gear": [
-        [
-          "Kustom mega-blasta",
-          "Drilla"
-        ],
-        [
-          "’Urty syringe",
-          "Dok’s Toolz"
-        ],
-        [
-          "Kombi-rokkit",
-          "Kustom Krumpa"
-        ],
-        [
-          "Kustom Krumpa"
-        ]
-      ],
-      "weapons": [
-        "Big Mek · Kustom mega-blasta",
-        "Nobz · ×8 · Kombi-rokkit · Busta Rokkit",
-        "Nobz · ×8 · Kombi-rokkit · Shoota",
-        "Big Mek · Drilla",
-        "Painboy · ’Urty syringe",
-        "Painboy · Dok’s Toolz",
-        "Nobz · ×10 · Kustom Krumpa"
-      ]
-    },
-    "source": {
-      "models": [
-        "1× Big Mek",
-        "1× Painboy",
-        "8× Nob w/ Kombi-rokkit and Kustom Krumpa",
-        "2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)"
-      ],
-      "leads": "Nobz"
-    },
-    "key": "840b224c4068287a"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "ability-who",
-    "where": "ooga-booga · Big Mek in Mega Armour · Fix Dat Armour Up",
-    "judgement": {
-      "who": "Big Mek in Mega Armour",
-      "models": [
-        "1× Big Mek in Mega Armour",
-        "5× Meganob w/ Kombi-weapon and Power Klaw"
-      ]
-    },
-    "source": {
-      "ability": "Fix Dat Armour Up",
-      "text": "In your Command phase, this unit **heals** 3 wounds.\n*Place a Grot Oiler token next to the unit, removing it when this ability is used.*"
-    },
-    "key": "c4aed3d33b72abb6"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "ability-who",
-    "where": "ooga-booga · Big Mek in Mega Armour · More Dakka",
-    "judgement": {
-      "who": "Big Mek in Mega Armour",
-      "models": [
-        "1× Big Mek in Mega Armour",
-        "5× Meganob w/ Kombi-weapon and Power Klaw"
-      ]
-    },
-    "source": {
-      "ability": "More Dakka",
-      "text": "This unit’s ranged attacks have:\n- **[IGNORES COVER]**.\n- If this unit is **riled up**, **[SUSTAINED HITS 1]**."
-    },
-    "key": "6dcb0a82569a4934"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "ability-tag",
-    "where": "ooga-booga · Big Mek in Mega Armour · Supa-glowy Fing",
-    "judgement": {
-      "tag": "Enhancement"
-    },
-    "source": {
-      "ability": "Supa-glowy Fing",
-      "text": "ORKS INFANTRY model only (excluding WEIRDBOY models). This model’s ranged attacks have: [ANTI-INFANTRY 4+} [DEVASTATING WOUNDS]. [SUPA-HAZARDOUS]."
-    },
-    "key": "3623ac30919cab9a"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "ability-who",
-    "where": "ooga-booga · Big Mek in Mega Armour · Supa-glowy Fing",
-    "judgement": {
-      "who": "Big Mek in Mega Armour",
-      "models": [
-        "1× Big Mek in Mega Armour",
-        "5× Meganob w/ Kombi-weapon and Power Klaw"
-      ]
-    },
-    "source": {
-      "ability": "Supa-glowy Fing",
-      "text": "ORKS INFANTRY model only (excluding WEIRDBOY models). This model’s ranged attacks have: [ANTI-INFANTRY 4+} [DEVASTATING WOUNDS]. [SUPA-HAZARDOUS]."
-    },
-    "key": "59a917ea78a6787c"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "ability-who",
-    "where": "ooga-booga · Big Mek in Mega Armour · Krumpin’ Time",
-    "judgement": {
-      "who": "Meganobz",
-      "models": [
-        "1× Big Mek in Mega Armour",
-        "5× Meganob w/ Kombi-weapon and Power Klaw"
-      ]
-    },
-    "source": {
-      "ability": "Krumpin’ Time",
-      "text": "In the Fight phase, if this unit is **riled up**, this unit has +1 to **hit rolls**."
-    },
-    "key": "352c2bdffb6e1e0c"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "ability-who",
-    "where": "ooga-booga · Big Mek in Mega Armour · Arrogant Invulnerability",
-    "judgement": {
-      "who": "Meganobz",
-      "models": [
-        "1× Big Mek in Mega Armour",
-        "5× Meganob w/ Kombi-weapon and Power Klaw"
-      ]
-    },
-    "source": {
-      "ability": "Arrogant Invulnerability",
-      "text": "Attacks that target this unit have -1 **AP**."
-    },
-    "key": "853d9711a0d1c8aa"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "unit-kwNote",
-    "where": "ooga-booga · Big Mek in Mega Armour",
-    "judgement": {
-      "kwNote": "Meganobz comes from the led Meganobz."
-    },
-    "source": {
-      "models": [
-        "1× Big Mek in Mega Armour",
-        "5× Meganob w/ Kombi-weapon and Power Klaw"
-      ],
-      "stats": [
-        "Big Mek in Mega Armour W5 OC1",
-        "Meganob ×5 W3 OC1"
-      ],
-      "weapons": [
-        "Kustom Mega-blasta 3 -2 3 HAZARDOUS, ANTI-INFANTRY 4+, DEVASTATING WOUNDS, SUPA-HAZARDOUS, IGNORES COVER, ASSAULT",
-        "Tellyport Blasta 6 -2 3 BLAST 1, ANTI-INFANTRY 4+, DEVASTATING WOUNDS, SUPA-HAZARDOUS, IGNORES COVER, ASSAULT",
-        "Kombi-weapon Point Blank 3 0 1 BLAST 1, TORRENT, ASSAULT",
-        "Kombi-weapon Kill Shot 1 -2 3 ASSAULT",
-        "Kombi-weapon Shoota 2 0 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 1, ASSAULT",
-        "Power Klaw 3 -2 2 SUSTAINED HITS 1",
-        "Power Klaw 3 -2 2 SUSTAINED HITS 1"
-      ]
-    },
-    "key": "b1bb7ccc40ddcf56"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "unit-ptsNote",
-    "where": "ooga-booga · Big Mek in Mega Armour",
-    "judgement": {
-      "ptsNote": "115 + Meganobz 175"
-    },
-    "source": {
-      "models": [
-        "1× Big Mek in Mega Armour",
-        "5× Meganob w/ Kombi-weapon and Power Klaw"
-      ],
-      "stats": [
-        "Big Mek in Mega Armour W5 OC1",
-        "Meganob ×5 W3 OC1"
-      ],
-      "weapons": [
-        "Kustom Mega-blasta 3 -2 3 HAZARDOUS, ANTI-INFANTRY 4+, DEVASTATING WOUNDS, SUPA-HAZARDOUS, IGNORES COVER, ASSAULT",
-        "Tellyport Blasta 6 -2 3 BLAST 1, ANTI-INFANTRY 4+, DEVASTATING WOUNDS, SUPA-HAZARDOUS, IGNORES COVER, ASSAULT",
-        "Kombi-weapon Point Blank 3 0 1 BLAST 1, TORRENT, ASSAULT",
-        "Kombi-weapon Kill Shot 1 -2 3 ASSAULT",
-        "Kombi-weapon Shoota 2 0 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 1, ASSAULT",
-        "Power Klaw 3 -2 2 SUSTAINED HITS 1",
-        "Power Klaw 3 -2 2 SUSTAINED HITS 1"
-      ]
-    },
-    "key": "17369ac9a4a5482c"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "unit-weapons",
-    "where": "ooga-booga · Big Mek in Mega Armour",
-    "judgement": {
-      "gear": [
-        [
-          "Kustom Mega-blasta",
-          "Power Klaw",
-          "Tellyport Blasta"
-        ],
-        [
-          "Kombi-weapon",
-          "Power Klaw"
-        ]
-      ],
-      "weapons": [
-        "Big Mek in Mega Armour · Kustom Mega-blasta",
-        "Big Mek in Mega Armour · Tellyport Blasta",
-        "Meganobz · ×5 · Kombi-weapon · Point Blank",
-        "Meganobz · ×5 · Kombi-weapon · Kill Shot",
-        "Meganobz · ×5 · Kombi-weapon · Shoota",
-        "Big Mek in Mega Armour · Power Klaw",
-        "Meganobz · ×5 · Power Klaw"
-      ]
-    },
-    "source": {
-      "models": [
-        "1× Big Mek in Mega Armour",
-        "5× Meganob w/ Kombi-weapon and Power Klaw"
-      ],
-      "leads": "Meganobz"
-    },
-    "key": "e9871fbf7a7aeab9"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "rule-ph",
-    "where": "Bully Boyz rule · Displays of Savagery",
-    "judgement": {
-      "ph": [
-        "fight"
-      ]
-    },
-    "source": {
-      "rule": "Displays of Savagery",
-      "text": "Friendly **MEGANOBZ**/**NOBZ** units’ melee attacks have **[SUSTAINED HITS 1]**."
-    },
-    "key": "25fbf0a8ce77471a"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "rule-turn",
-    "where": "Bully Boyz rule · Displays of Savagery",
-    "judgement": {
-      "turn": "either"
-    },
-    "source": {
-      "rule": "Displays of Savagery",
-      "text": "Friendly **MEGANOBZ**/**NOBZ** units’ melee attacks have **[SUSTAINED HITS 1]**."
-    },
-    "key": "3c1b993d6d5c8a20"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "rule-needs",
-    "where": "Bully Boyz rule · Displays of Savagery",
-    "judgement": {
-      "needs": {
-        "any": [
-          "Meganobz",
-          "Nobz"
-        ]
-      }
-    },
-    "source": {
-      "rule": "Displays of Savagery",
-      "text": "Friendly **MEGANOBZ**/**NOBZ** units’ melee attacks have **[SUSTAINED HITS 1]**."
-    },
-    "key": "66b0e6394d2e86b2"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "strat-phases",
-    "where": "Bully Boyz · Too Arrogant to Die",
-    "judgement": {
-      "phases": [
-        "fight"
-      ]
-    },
-    "source": {
-      "stratagem": "Too Arrogant to Die",
-      "text": "WHEN: Fight phase, when an enemy unit targets a friendly **MEGANOBZ**/**NOBZ** unit.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +1 to that roll if your unit is **riled up**:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
-    },
-    "key": "1ed008d0cee811ce"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "strat-turn",
-    "where": "Bully Boyz · Too Arrogant to Die",
-    "judgement": {
-      "turn": "either"
-    },
-    "source": {
-      "stratagem": "Too Arrogant to Die",
-      "text": "WHEN: Fight phase, when an enemy unit targets a friendly **MEGANOBZ**/**NOBZ** unit.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +1 to that roll if your unit is **riled up**:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
-    },
-    "key": "6853ea205d6c4714"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "strat-needs",
-    "where": "Bully Boyz · Too Arrogant to Die",
-    "judgement": {
-      "needs": {
-        "any": [
-          "Meganobz",
-          "Nobz"
-        ]
-      }
-    },
-    "source": {
-      "stratagem": "Too Arrogant to Die",
-      "text": "WHEN: Fight phase, when an enemy unit targets a friendly **MEGANOBZ**/**NOBZ** unit.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +1 to that roll if your unit is **riled up**:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
-    },
-    "key": "36dab7b1afe9e216"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "strat-gist",
-    "where": "Bully Boyz · Too Arrogant to Die",
-    "judgement": {
-      "gist": "Model in your unit destroyed, unit not selected to fight this phase: D6 (+1 if riled up); on a 4+ it stays until your unit has fought or the phase ends."
-    },
-    "source": {
-      "stratagem": "Too Arrogant to Die",
-      "text": "WHEN: Fight phase, when an enemy unit targets a friendly **MEGANOBZ**/**NOBZ** unit.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +1 to that roll if your unit is **riled up**:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
-    },
-    "key": "78c6e7bc2ee5d3cd"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "strat-phases",
-    "where": "Bully Boyz · Armed to da Teef",
-    "judgement": {
-      "phases": [
-        "shooting",
-        "fight"
-      ]
-    },
-    "source": {
-      "stratagem": "Armed to da Teef",
-      "text": "WHEN: Your Shooting phase or the Fight phase, when a friendly **MEGANOBZ**/**NOBZ** unit is **selected to attack**.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: Your unit’s attacks can:\n- Re-roll **hit rolls** of 1.\n- If your unit is **riled up**, re-roll **hit rolls**."
-    },
-    "key": "a8f82a490d45f90f"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "strat-turn",
-    "where": "Bully Boyz · Armed to da Teef",
-    "judgement": {
-      "turn": "either"
-    },
-    "source": {
-      "stratagem": "Armed to da Teef",
-      "text": "WHEN: Your Shooting phase or the Fight phase, when a friendly **MEGANOBZ**/**NOBZ** unit is **selected to attack**.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: Your unit’s attacks can:\n- Re-roll **hit rolls** of 1.\n- If your unit is **riled up**, re-roll **hit rolls**."
-    },
-    "key": "be4ed110f239644e"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "strat-turns",
-    "where": "Bully Boyz · Armed to da Teef",
-    "judgement": {
-      "turns": {
-        "shooting": "your"
-      }
-    },
-    "source": {
-      "stratagem": "Armed to da Teef",
-      "text": "WHEN: Your Shooting phase or the Fight phase, when a friendly **MEGANOBZ**/**NOBZ** unit is **selected to attack**.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: Your unit’s attacks can:\n- Re-roll **hit rolls** of 1.\n- If your unit is **riled up**, re-roll **hit rolls**."
-    },
-    "key": "5c8d6fea5fd59583"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "strat-needs",
-    "where": "Bully Boyz · Armed to da Teef",
-    "judgement": {
-      "needs": {
-        "any": [
-          "Meganobz",
-          "Nobz"
-        ]
-      }
-    },
-    "source": {
-      "stratagem": "Armed to da Teef",
-      "text": "WHEN: Your Shooting phase or the Fight phase, when a friendly **MEGANOBZ**/**NOBZ** unit is **selected to attack**.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: Your unit’s attacks can:\n- Re-roll **hit rolls** of 1.\n- If your unit is **riled up**, re-roll **hit rolls**."
-    },
-    "key": "2799ddb19d97e698"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "strat-mod",
-    "where": "Bully Boyz · Armed to da Teef",
-    "judgement": {
-      "mod": {
-        "kind": "all",
-        "when": "Your Shooting phase or the Fight phase",
-        "note": "can re-roll hit rolls of 1 (riled up: can re-roll hit rolls)"
-      }
-    },
-    "source": {
-      "stratagem": "Armed to da Teef",
-      "text": "WHEN: Your Shooting phase or the Fight phase, when a friendly **MEGANOBZ**/**NOBZ** unit is **selected to attack**.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: Your unit’s attacks can:\n- Re-roll **hit rolls** of 1.\n- If your unit is **riled up**, re-roll **hit rolls**."
-    },
-    "key": "5834a3f7790a87ec"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "strat-gist",
-    "where": "Bully Boyz · Armed to da Teef",
-    "judgement": {
-      "gist": "Your unit’s attacks can re-roll hit rolls of 1, or re-roll hit rolls if your unit is riled up."
-    },
-    "source": {
-      "stratagem": "Armed to da Teef",
-      "text": "WHEN: Your Shooting phase or the Fight phase, when a friendly **MEGANOBZ**/**NOBZ** unit is **selected to attack**.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: Your unit’s attacks can:\n- Re-roll **hit rolls** of 1.\n- If your unit is **riled up**, re-roll **hit rolls**."
-    },
-    "key": "d17aa45acd2b9011"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "strat-phases",
-    "where": "Bully Boyz · Hulking Brutes",
-    "judgement": {
-      "phases": [
-        "shooting"
-      ]
-    },
-    "source": {
-      "stratagem": "Hulking Brutes",
-      "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **MEGANOBZ**/**NOBZ** unit.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: Ranged attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**.\n**+1CP** Or: Ranged attacks that target your unit have -1 to **wound rolls**."
-    },
-    "key": "7173745124f5cf5b"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "strat-turn",
-    "where": "Bully Boyz · Hulking Brutes",
-    "judgement": {
-      "turn": "opp"
-    },
-    "source": {
-      "stratagem": "Hulking Brutes",
-      "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **MEGANOBZ**/**NOBZ** unit.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: Ranged attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**.\n**+1CP** Or: Ranged attacks that target your unit have -1 to **wound rolls**."
-    },
-    "key": "8cfe5487d405597f"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "strat-needs",
-    "where": "Bully Boyz · Hulking Brutes",
-    "judgement": {
-      "needs": {
-        "any": [
-          "Meganobz",
-          "Nobz"
-        ]
-      }
-    },
-    "source": {
-      "stratagem": "Hulking Brutes",
-      "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **MEGANOBZ**/**NOBZ** unit.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: Ranged attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**.\n**+1CP** Or: Ranged attacks that target your unit have -1 to **wound rolls**."
-    },
-    "key": "fb27b1dcb3da998d"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "strat-def",
-    "where": "Bully Boyz · Hulking Brutes",
-    "judgement": {
-      "def": "their Shooting phase: -1 to wound when the attack’s S is greater than its T (+1CP: every ranged attack)"
-    },
-    "source": {
-      "stratagem": "Hulking Brutes",
-      "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **MEGANOBZ**/**NOBZ** unit.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: Ranged attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**.\n**+1CP** Or: Ranged attacks that target your unit have -1 to **wound rolls**."
-    },
-    "key": "480ea036b578a6b1"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "strat-gist",
-    "where": "Bully Boyz · Hulking Brutes",
-    "judgement": {
-      "gist": "Ranged attacks that target your unit with S greater than its T have -1 to wound rolls; for +1CP, all ranged attacks that target it do."
-    },
-    "source": {
-      "stratagem": "Hulking Brutes",
-      "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **MEGANOBZ**/**NOBZ** unit.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: Ranged attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**.\n**+1CP** Or: Ranged attacks that target your unit have -1 to **wound rolls**."
-    },
-    "key": "ba04ffd2d4ea6ca4"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "strat-cpNote",
-    "where": "Bully Boyz · Hulking Brutes",
-    "judgement": {
-      "cpNote": "Or: +1CP"
-    },
-    "source": {
-      "stratagem": "Hulking Brutes",
-      "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **MEGANOBZ**/**NOBZ** unit.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: Ranged attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**.\n**+1CP** Or: Ranged attacks that target your unit have -1 to **wound rolls**."
-    },
-    "key": "5595cec8abfba7cb"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "rule-needs",
-    "where": "Runt Swarm rule · Sneaky Little Gitz",
-    "judgement": {
-      "needs": {
-        "all": [
-          "Gretchin"
-        ]
-      }
-    },
-    "source": {
-      "rule": "Sneaky Little Gitz",
-      "text": "- Friendly **GRETCHIN** units have **BATTLELINE**.\n- When a friendly **GRETCHIN** unit is selected to make an **advance**/**fall-back move**, that move does not prevent this unit from being **eligible to start an action**."
-    },
-    "key": "e015e94aa7e2032b"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "strat-phases",
-    "where": "Runt Swarm · Infested War Zone",
-    "judgement": {
-      "phases": [
-        "command",
-        "movement",
-        "shooting",
-        "charge",
-        "fight"
-      ]
-    },
-    "source": {
-      "stratagem": "Infested War Zone",
-      "text": "WHEN: Any phase, when an enemy unit has attacked.\nTARGET: One friendly **GRETCHIN** unit that was just **destroyed**. You can target that unit with this **stratagem** even though that unit was just **destroyed**.\nEFFECT: Add a new **GRETCHIN** unit to your army identical to your **destroyed** unit, in **strategic reserves**, at its **starting strength**, with its full wounds remaining."
-    },
-    "key": "ae604f13a7cd7852"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "strat-turn",
-    "where": "Runt Swarm · Infested War Zone",
-    "judgement": {
-      "turn": "either"
-    },
-    "source": {
-      "stratagem": "Infested War Zone",
-      "text": "WHEN: Any phase, when an enemy unit has attacked.\nTARGET: One friendly **GRETCHIN** unit that was just **destroyed**. You can target that unit with this **stratagem** even though that unit was just **destroyed**.\nEFFECT: Add a new **GRETCHIN** unit to your army identical to your **destroyed** unit, in **strategic reserves**, at its **starting strength**, with its full wounds remaining."
-    },
-    "key": "e30cfd61e3274af3"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "strat-needs",
-    "where": "Runt Swarm · Infested War Zone",
-    "judgement": {
-      "needs": {
-        "all": [
-          "Gretchin"
-        ]
-      }
-    },
-    "source": {
-      "stratagem": "Infested War Zone",
-      "text": "WHEN: Any phase, when an enemy unit has attacked.\nTARGET: One friendly **GRETCHIN** unit that was just **destroyed**. You can target that unit with this **stratagem** even though that unit was just **destroyed**.\nEFFECT: Add a new **GRETCHIN** unit to your army identical to your **destroyed** unit, in **strategic reserves**, at its **starting strength**, with its full wounds remaining."
-    },
-    "key": "6cdf8b09fde67376"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "strat-gist",
-    "where": "Runt Swarm · Infested War Zone",
-    "judgement": {
-      "gist": "Add a new GRETCHIN unit identical to your destroyed unit to your army, in strategic reserves, at its starting strength."
-    },
-    "source": {
-      "stratagem": "Infested War Zone",
-      "text": "WHEN: Any phase, when an enemy unit has attacked.\nTARGET: One friendly **GRETCHIN** unit that was just **destroyed**. You can target that unit with this **stratagem** even though that unit was just **destroyed**.\nEFFECT: Add a new **GRETCHIN** unit to your army identical to your **destroyed** unit, in **strategic reserves**, at its **starting strength**, with its full wounds remaining."
-    },
-    "key": "34713576a3c1b620"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "strat-phases",
-    "where": "Runt Swarm · Scarper!",
-    "judgement": {
-      "phases": [
-        "movement"
-      ]
-    },
-    "source": {
-      "stratagem": "Scarper!",
-      "text": "WHEN: Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly **unengaged GRETCHIN** unit.\nTARGET: That **GRETCHIN** unit.\nEFFECT: Your unit can make a **normal move** of:\n- Up to D6\".\n- Or: Up to 6\" instead if your unit is an **attached** unit."
-    },
-    "key": "40d91964a94e1872"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "strat-turn",
-    "where": "Runt Swarm · Scarper!",
-    "judgement": {
-      "turn": "opp"
-    },
-    "source": {
-      "stratagem": "Scarper!",
-      "text": "WHEN: Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly **unengaged GRETCHIN** unit.\nTARGET: That **GRETCHIN** unit.\nEFFECT: Your unit can make a **normal move** of:\n- Up to D6\".\n- Or: Up to 6\" instead if your unit is an **attached** unit."
-    },
-    "key": "258365c1bbdfbff0"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "strat-needs",
-    "where": "Runt Swarm · Scarper!",
-    "judgement": {
-      "needs": {
-        "all": [
-          "Gretchin"
-        ]
-      }
-    },
-    "source": {
-      "stratagem": "Scarper!",
-      "text": "WHEN: Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly **unengaged GRETCHIN** unit.\nTARGET: That **GRETCHIN** unit.\nEFFECT: Your unit can make a **normal move** of:\n- Up to D6\".\n- Or: Up to 6\" instead if your unit is an **attached** unit."
-    },
-    "key": "f2a6d70c4b38195f"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "strat-gist",
-    "where": "Runt Swarm · Scarper!",
-    "judgement": {
-      "gist": "Your unit can make a normal move of up to D6\", or up to 6\" if your unit is an attached unit."
-    },
-    "source": {
-      "stratagem": "Scarper!",
-      "text": "WHEN: Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly **unengaged GRETCHIN** unit.\nTARGET: That **GRETCHIN** unit.\nEFFECT: Your unit can make a **normal move** of:\n- Up to D6\".\n- Or: Up to 6\" instead if your unit is an **attached** unit."
-    },
-    "key": "f3e8704cce991de3"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "strat-phases",
-    "where": "Runt Swarm · Grot Shields",
-    "judgement": {
-      "phases": [
-        "shooting"
-      ]
-    },
-    "source": {
-      "stratagem": "Grot Shields",
-      "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **ORKS INFANTRY** unit (excluding **GRETCHIN** units).\nTARGET: One friendly **GRETCHIN** unit within 3\" of that **ORKS INFANTRY** unit.\nEFFECT: When a **hit roll** for that enemy unit’s ranged attacks that target that **ORKS** unit results in a hit, if a model in your **GRETCHIN** unit is on the battlefield, end the attack sequence for that attack and your **GRETCHIN** unit suffers 1 **mortal wound**."
-    },
-    "key": "0808d64788f50df5"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "strat-turn",
-    "where": "Runt Swarm · Grot Shields",
-    "judgement": {
-      "turn": "opp"
-    },
-    "source": {
-      "stratagem": "Grot Shields",
-      "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **ORKS INFANTRY** unit (excluding **GRETCHIN** units).\nTARGET: One friendly **GRETCHIN** unit within 3\" of that **ORKS INFANTRY** unit.\nEFFECT: When a **hit roll** for that enemy unit’s ranged attacks that target that **ORKS** unit results in a hit, if a model in your **GRETCHIN** unit is on the battlefield, end the attack sequence for that attack and your **GRETCHIN** unit suffers 1 **mortal wound**."
-    },
-    "key": "dea715684c1c6047"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "strat-needs",
-    "where": "Runt Swarm · Grot Shields",
-    "judgement": {
-      "needs": {
-        "all": [
-          "Gretchin"
-        ]
-      }
-    },
-    "source": {
-      "stratagem": "Grot Shields",
-      "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **ORKS INFANTRY** unit (excluding **GRETCHIN** units).\nTARGET: One friendly **GRETCHIN** unit within 3\" of that **ORKS INFANTRY** unit.\nEFFECT: When a **hit roll** for that enemy unit’s ranged attacks that target that **ORKS** unit results in a hit, if a model in your **GRETCHIN** unit is on the battlefield, end the attack sequence for that attack and your **GRETCHIN** unit suffers 1 **mortal wound**."
-    },
-    "key": "16a5358da88e3ea3"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "strat-gist",
-    "where": "Runt Swarm · Grot Shields",
-    "judgement": {
-      "gist": "Each hit roll of that enemy unit’s ranged attacks on that ORKS unit that results in a hit ends that attack, and your GRETCHIN unit suffers 1 mortal wound (if it has a model on the battlefield)."
-    },
-    "source": {
-      "stratagem": "Grot Shields",
-      "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **ORKS INFANTRY** unit (excluding **GRETCHIN** units).\nTARGET: One friendly **GRETCHIN** unit within 3\" of that **ORKS INFANTRY** unit.\nEFFECT: When a **hit roll** for that enemy unit’s ranged attacks that target that **ORKS** unit results in a hit, if a model in your **GRETCHIN** unit is on the battlefield, end the attack sequence for that attack and your **GRETCHIN** unit suffers 1 **mortal wound**."
-    },
-    "key": "e533f7b9f5cf729e"
-  },
-  {
-    "army": "ooga-booga",
-    "kind": "strat-note",
-    "where": "Runt Swarm · Grot Shields",
-    "judgement": {
-      "note": "Wahapedia FAQ: “When using the Grot Shields stratagem, are hits by [TORRENT] weapons considered ’hit rolls that result in a hit’?” “No.”"
-    },
-    "source": {
-      "stratagem": "Grot Shields",
-      "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **ORKS INFANTRY** unit (excluding **GRETCHIN** units).\nTARGET: One friendly **GRETCHIN** unit within 3\" of that **ORKS INFANTRY** unit.\nEFFECT: When a **hit roll** for that enemy unit’s ranged attacks that target that **ORKS** unit results in a hit, if a model in your **GRETCHIN** unit is on the battlefield, end the attack sequence for that attack and your **GRETCHIN** unit suffers 1 **mortal wound**."
-    },
-    "key": "b751dae7b6ab061b"
-  }
+ {
+  "army": "ooga-booga",
+  "kind": "unit-kwNote",
+  "where": "ooga-booga · Nazdreg",
+  "judgement": {
+   "kwNote": "Explosives, Meganobz come from the led Meganobz."
+  },
+  "source": {
+   "models": [
+    "1× Nazdreg",
+    "5× Meganob w/ Twin Killsaw"
+   ],
+   "stats": [
+    "Nazdreg W8 OC1",
+    "Meganob ×5 W3 OC1"
+   ],
+   "weapons": [
+    "Kustom Blasta X Skorcha 3 -1 1 BLAST 1, TORRENT, IGNORES COVER, ASSAULT",
+    "Kustom Blasta X Gatler 6 -2 3 HAZARDOUS, IGNORES COVER, ASSAULT",
+    "Kustom Blasta X Shoota 4 -1 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 2, IGNORES COVER, ASSAULT",
+    "Kustom Blasta X 6 -1 1 CLEAVE 1, EXTRA ATTACKS, SUSTAINED HITS 1",
+    "Moonchewa 5 -2 3 CLEAVE 1, TWIN-LINKED, SUSTAINED HITS 1",
+    "Twin Killsaw 3 -2 3 TWIN-LINKED, SUSTAINED HITS 1"
+   ]
+  },
+  "key": "faf55b462bca284f"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "unit-ptsNote",
+  "where": "ooga-booga · Nazdreg",
+  "judgement": {
+   "ptsNote": "165 + Meganobz 200"
+  },
+  "source": {
+   "models": [
+    "1× Nazdreg",
+    "5× Meganob w/ Twin Killsaw"
+   ],
+   "stats": [
+    "Nazdreg W8 OC1",
+    "Meganob ×5 W3 OC1"
+   ],
+   "weapons": [
+    "Kustom Blasta X Skorcha 3 -1 1 BLAST 1, TORRENT, IGNORES COVER, ASSAULT",
+    "Kustom Blasta X Gatler 6 -2 3 HAZARDOUS, IGNORES COVER, ASSAULT",
+    "Kustom Blasta X Shoota 4 -1 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 2, IGNORES COVER, ASSAULT",
+    "Kustom Blasta X 6 -1 1 CLEAVE 1, EXTRA ATTACKS, SUSTAINED HITS 1",
+    "Moonchewa 5 -2 3 CLEAVE 1, TWIN-LINKED, SUSTAINED HITS 1",
+    "Twin Killsaw 3 -2 3 TWIN-LINKED, SUSTAINED HITS 1"
+   ]
+  },
+  "key": "f3af1bd37741ec69"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "ability-who",
+  "where": "ooga-booga · Zodgrod Wortsnagga · Super Runts",
+  "judgement": {
+   "who": "Zodgrod Wortsnagga",
+   "models": [
+    "1× Zodgrod Wortsnagga",
+    "1× Runtherd",
+    "20× Gretchin"
+   ]
+  },
+  "source": {
+   "ability": "Super Runts",
+   "text": "- This unit is **riled up**.\n- This unit’s Scavenged Shivs weapons have +1 **A**, **WS** and **S**."
+  },
+  "key": "cd719f1c325aad43"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "ability-tag",
+  "where": "ooga-booga · Zodgrod Wortsnagga · That’ll Learn Ya",
+  "judgement": {
+   "tag": "Once per battle round, per unit"
+  },
+  "source": {
+   "ability": "That’ll Learn Ya",
+   "text": "When this unit becomes **battle-shocked**, if this unit contains 4+ Gretchin models, you can roll one D3:\n- That number of Gretchin models in this unit are **destroyed**.\n- That unit is no longer **battle-shocked**."
+  },
+  "key": "f8d700e93a3f0e3a"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "ability-who",
+  "where": "ooga-booga · Zodgrod Wortsnagga · That’ll Learn Ya",
+  "judgement": {
+   "who": "Runtherd",
+   "models": [
+    "1× Zodgrod Wortsnagga",
+    "1× Runtherd",
+    "20× Gretchin"
+   ]
+  },
+  "source": {
+   "ability": "That’ll Learn Ya",
+   "text": "When this unit becomes **battle-shocked**, if this unit contains 4+ Gretchin models, you can roll one D3:\n- That number of Gretchin models in this unit are **destroyed**.\n- That unit is no longer **battle-shocked**."
+  },
+  "key": "0ad2cd6251afec51"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "ability-who",
+  "where": "ooga-booga · Zodgrod Wortsnagga · Downtrodden",
+  "judgement": {
+   "who": "Gretchin",
+   "models": [
+    "1× Zodgrod Wortsnagga",
+    "1× Runtherd",
+    "20× Gretchin"
+   ]
+  },
+  "source": {
+   "ability": "Downtrodden",
+   "text": "For the purposes of **transport capacity**, each 2 Gretchin models (rounding up) take up the space of 1 model."
+  },
+  "key": "9417ef8455c52be3"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "ability-who",
+  "where": "ooga-booga · Zodgrod Wortsnagga · Thievin’ Scavengers",
+  "judgement": {
+   "who": "Gretchin",
+   "models": [
+    "1× Zodgrod Wortsnagga",
+    "1× Runtherd",
+    "20× Gretchin"
+   ]
+  },
+  "source": {
+   "ability": "Thievin’ Scavengers",
+   "text": "At the end of your Movement phase, if this unit is controlling an **objective**, that objective is **secured**."
+  },
+  "key": "03c460f0fe57ff68"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "ability-tag",
+  "where": "ooga-booga · Zodgrod Wortsnagga · Extra Sneaky",
+  "judgement": {
+   "tag": "Upgrade"
+  },
+  "source": {
+   "ability": "Extra Sneaky",
+   "text": "**GRETCHIN** unit only. This unit has -3\" **detection range**."
+  },
+  "key": "d3dbc1a7e9ba2457"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "ability-who",
+  "where": "ooga-booga · Zodgrod Wortsnagga · Extra Sneaky",
+  "judgement": {
+   "who": "Gretchin",
+   "models": [
+    "1× Zodgrod Wortsnagga",
+    "1× Runtherd",
+    "20× Gretchin"
+   ]
+  },
+  "source": {
+   "ability": "Extra Sneaky",
+   "text": "**GRETCHIN** unit only. This unit has -3\" **detection range**."
+  },
+  "key": "3165d35f42ab2353"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "ability-def",
+  "where": "ooga-booga · Zodgrod Wortsnagga · Extra Sneaky",
+  "judgement": {
+   "def": "-3\" detection range"
+  },
+  "source": {
+   "ability": "Extra Sneaky",
+   "text": "**GRETCHIN** unit only. This unit has -3\" **detection range**."
+  },
+  "key": "8816b6e11f48c411"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "unit-kwNote",
+  "where": "ooga-booga · Zodgrod Wortsnagga",
+  "judgement": {
+   "kwNote": "Battleline, Gretchin, Grots come from the combined unit."
+  },
+  "source": {
+   "models": [
+    "1× Zodgrod Wortsnagga",
+    "1× Runtherd",
+    "20× Gretchin"
+   ],
+   "stats": [
+    "Zodgrod Wortsnagga W5 OC1",
+    "Runtherd W3 OC1",
+    "Gretchin ×20 W1 OC1"
+   ],
+   "weapons": [
+    "Squigstoppa 1 -1 1 ANTI-MONSTER/VEHICLE 4+, CLOSE-QUARTERS, DEVASTATING WOUNDS: MONSTER/VEHICLE, ASSAULT",
+    "Slugga 1 0 1 CLOSE-QUARTERS, LETHAL HITS: non-MONSTER/VEHICLE, ASSAULT",
+    "Grot Blasta 1 0 1 CLOSE-QUARTERS, ASSAULT",
+    "Da Grabzappa 5 -2 2",
+    "Runtherd’s Toolz 3 0 1",
+    "Scavenged Shivs 2 0 1"
+   ]
+  },
+  "key": "5951ad6922d3279f"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "unit-ptsNote",
+  "where": "ooga-booga · Zodgrod Wortsnagga",
+  "judgement": {
+   "ptsNote": "50 + Runtherd 10 + Gretchin 90"
+  },
+  "source": {
+   "models": [
+    "1× Zodgrod Wortsnagga",
+    "1× Runtherd",
+    "20× Gretchin"
+   ],
+   "stats": [
+    "Zodgrod Wortsnagga W5 OC1",
+    "Runtherd W3 OC1",
+    "Gretchin ×20 W1 OC1"
+   ],
+   "weapons": [
+    "Squigstoppa 1 -1 1 ANTI-MONSTER/VEHICLE 4+, CLOSE-QUARTERS, DEVASTATING WOUNDS: MONSTER/VEHICLE, ASSAULT",
+    "Slugga 1 0 1 CLOSE-QUARTERS, LETHAL HITS: non-MONSTER/VEHICLE, ASSAULT",
+    "Grot Blasta 1 0 1 CLOSE-QUARTERS, ASSAULT",
+    "Da Grabzappa 5 -2 2",
+    "Runtherd’s Toolz 3 0 1",
+    "Scavenged Shivs 2 0 1"
+   ]
+  },
+  "key": "c292ea097377a4cd"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "unit-weapons",
+  "where": "ooga-booga · Zodgrod Wortsnagga",
+  "judgement": {
+   "gear": [
+    [
+     "Da Grabzappa",
+     "Squigstoppa"
+    ],
+    [
+     "Runtherd’s Toolz",
+     "Slugga"
+    ],
+    [
+     "Grot Blasta",
+     "Scavenged Shivs"
+    ]
+   ],
+   "weapons": [
+    "Zodgrod Wortsnagga · Squigstoppa",
+    "Runtherd · Slugga",
+    "Gretchin · ×20 · Grot Blasta",
+    "Zodgrod Wortsnagga · Da Grabzappa",
+    "Runtherd · Runtherd’s Toolz",
+    "Gretchin · ×20 · Scavenged Shivs"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Zodgrod Wortsnagga",
+    "1× Runtherd",
+    "20× Gretchin"
+   ],
+   "leads": "Gretchin"
+  },
+  "key": "50a164a53cbb45d0"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "ability-who",
+  "where": "ooga-booga · Big Mek · Shokk-boosta",
+  "judgement": {
+   "who": "Big Mek",
+   "models": [
+    "1× Big Mek",
+    "1× Painboy",
+    "8× Nob w/ Kombi-rokkit and Kustom Krumpa",
+    "2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)"
+   ]
+  },
+  "source": {
+   "ability": "Shokk-boosta",
+   "text": "In your Movement phase, when this unit is selected to make an **advance move**, you can use this ability. If you do:\n- This unit can change that **advance roll** to a 6.\n- This unit can move through all types of model.\n- When this unit ends that **advance move**, make a **hazard roll** for each model in this unit."
+  },
+  "key": "c514ca2c6c836281"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "ability-who",
+  "where": "ooga-booga · Big Mek · More Dakka",
+  "judgement": {
+   "who": "Big Mek",
+   "models": [
+    "1× Big Mek",
+    "1× Painboy",
+    "8× Nob w/ Kombi-rokkit and Kustom Krumpa",
+    "2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)"
+   ]
+  },
+  "source": {
+   "ability": "More Dakka",
+   "text": "This unit’s ranged attacks have:\n- **[IGNORES COVER]**.\n- If this unit is **riled up**, **[SUSTAINED HITS 1]**."
+  },
+  "key": "8cd6e0396bb13428"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "ability-who",
+  "where": "ooga-booga · Big Mek · Crude Surgery",
+  "judgement": {
+   "who": "Painboy",
+   "models": [
+    "1× Big Mek",
+    "1× Painboy",
+    "8× Nob w/ Kombi-rokkit and Kustom Krumpa",
+    "2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)"
+   ]
+  },
+  "source": {
+   "ability": "Crude Surgery",
+   "text": "In your Command phase, this unit **heals** 3 wounds."
+  },
+  "key": "cc4ea41b5eb54982"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "ability-who",
+  "where": "ooga-booga · Big Mek · Catch Dat Red Bit",
+  "judgement": {
+   "who": "Painboy",
+   "models": [
+    "1× Big Mek",
+    "1× Painboy",
+    "8× Nob w/ Kombi-rokkit and Kustom Krumpa",
+    "2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)"
+   ]
+  },
+  "source": {
+   "ability": "Catch Dat Red Bit",
+   "text": "When this model uses its **Crude Surgery** ability, you can add D3 to the number of wounds **healed**.\n*Place a Grot Orderly token next to the unit, removing it when this ability is used.*"
+  },
+  "key": "7ce0e49e679deb18"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "ability-who",
+  "where": "ooga-booga · Big Mek · Ammo Runts",
+  "judgement": {
+   "who": "Nobz",
+   "models": [
+    "1× Big Mek",
+    "1× Painboy",
+    "8× Nob w/ Kombi-rokkit and Kustom Krumpa",
+    "2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)"
+   ]
+  },
+  "source": {
+   "ability": "Ammo Runts",
+   "text": "In your Shooting phase, when this unit is **selected to shoot**, you can use this ability. If you do, this unit’s ranged attacks have +1 to **hit rolls**.\n*Place any number of Ammo Runt tokens next to the unit, removing them when this ability is used.*"
+  },
+  "key": "010c6d18cd36bebf"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "ability-who",
+  "where": "ooga-booga · Big Mek · Get Out da Way!",
+  "judgement": {
+   "who": "Nobz",
+   "models": [
+    "1× Big Mek",
+    "1× Painboy",
+    "8× Nob w/ Kombi-rokkit and Kustom Krumpa",
+    "2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)"
+   ]
+  },
+  "source": {
+   "ability": "Get Out da Way!",
+   "text": "While making a **charge move**, this unit can move through models (excluding **MONSTER/VEHICLE** models)."
+  },
+  "key": "4079ef9368c07d10"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "ability-who",
+  "where": "ooga-booga · Big Mek · Paired Krumpas",
+  "judgement": {
+   "who": "Nobz",
+   "models": [
+    "1× Big Mek",
+    "1× Painboy",
+    "8× Nob w/ Kombi-rokkit and Kustom Krumpa",
+    "2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)"
+   ]
+  },
+  "source": {
+   "ability": "Paired Krumpas",
+   "text": "Attacks made with this model’s Kustom Krumpa weapon can re-roll **hit rolls** and **wound rolls**."
+  },
+  "key": "fc5dd6010b27b0cd"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "unit-kwNote",
+  "where": "ooga-booga · Big Mek",
+  "judgement": {
+   "kwNote": "Painboy, Nobz come from the combined unit."
+  },
+  "source": {
+   "models": [
+    "1× Big Mek",
+    "1× Painboy",
+    "8× Nob w/ Kombi-rokkit and Kustom Krumpa",
+    "2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)"
+   ],
+   "stats": [
+    "Big Mek W6 OC1",
+    "Painboy W3 OC1",
+    "Nob ×10 W3 OC1"
+   ],
+   "weapons": [
+    "Kustom mega-blasta 3 -2 3 HAZARDOUS, IGNORES COVER, ASSAULT",
+    "Kombi-rokkit Busta Rokkit 1 -2 3 IGNORES COVER, ASSAULT",
+    "Kombi-rokkit Shoota 2 0 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 1, IGNORES COVER, ASSAULT",
+    "Drilla 3 -3 3 SUSTAINED HITS 1",
+    "’Urty syringe 1 0 D6 ANTI-INFANTRY 4+, DEVASTATING WOUNDS: INFANTRY, EXTRA ATTACKS, SUSTAINED HITS 1",
+    "Dok’s Toolz 3 -2 2 SUSTAINED HITS 1",
+    "Kustom Krumpa 3 -2 2 SUSTAINED HITS 1"
+   ]
+  },
+  "key": "ac6d32ff43c370ed"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "unit-ptsNote",
+  "where": "ooga-booga · Big Mek",
+  "judgement": {
+   "ptsNote": "100 + Painboy 45 + Nobz 240"
+  },
+  "source": {
+   "models": [
+    "1× Big Mek",
+    "1× Painboy",
+    "8× Nob w/ Kombi-rokkit and Kustom Krumpa",
+    "2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)"
+   ],
+   "stats": [
+    "Big Mek W6 OC1",
+    "Painboy W3 OC1",
+    "Nob ×10 W3 OC1"
+   ],
+   "weapons": [
+    "Kustom mega-blasta 3 -2 3 HAZARDOUS, IGNORES COVER, ASSAULT",
+    "Kombi-rokkit Busta Rokkit 1 -2 3 IGNORES COVER, ASSAULT",
+    "Kombi-rokkit Shoota 2 0 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 1, IGNORES COVER, ASSAULT",
+    "Drilla 3 -3 3 SUSTAINED HITS 1",
+    "’Urty syringe 1 0 D6 ANTI-INFANTRY 4+, DEVASTATING WOUNDS: INFANTRY, EXTRA ATTACKS, SUSTAINED HITS 1",
+    "Dok’s Toolz 3 -2 2 SUSTAINED HITS 1",
+    "Kustom Krumpa 3 -2 2 SUSTAINED HITS 1"
+   ]
+  },
+  "key": "7cf497ade1d5af7c"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "unit-weapons",
+  "where": "ooga-booga · Big Mek",
+  "judgement": {
+   "gear": [
+    [
+     "Kustom mega-blasta",
+     "Drilla"
+    ],
+    [
+     "’Urty syringe",
+     "Dok’s Toolz"
+    ],
+    [
+     "Kombi-rokkit",
+     "Kustom Krumpa"
+    ],
+    [
+     "Kustom Krumpa"
+    ]
+   ],
+   "weapons": [
+    "Big Mek · Kustom mega-blasta",
+    "Nobz · ×8 · Kombi-rokkit · Busta Rokkit",
+    "Nobz · ×8 · Kombi-rokkit · Shoota",
+    "Big Mek · Drilla",
+    "Painboy · ’Urty syringe",
+    "Painboy · Dok’s Toolz",
+    "Nobz · ×10 · Kustom Krumpa"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Big Mek",
+    "1× Painboy",
+    "8× Nob w/ Kombi-rokkit and Kustom Krumpa",
+    "2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)"
+   ],
+   "leads": "Nobz"
+  },
+  "key": "840b224c4068287a"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "ability-who",
+  "where": "ooga-booga · Big Mek in Mega Armour · Fix Dat Armour Up",
+  "judgement": {
+   "who": "Big Mek in Mega Armour",
+   "models": [
+    "1× Big Mek in Mega Armour",
+    "5× Meganob w/ Kombi-weapon and Power Klaw"
+   ]
+  },
+  "source": {
+   "ability": "Fix Dat Armour Up",
+   "text": "In your Command phase, this unit **heals** 3 wounds.\n*Place a Grot Oiler token next to the unit, removing it when this ability is used.*"
+  },
+  "key": "c4aed3d33b72abb6"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "ability-who",
+  "where": "ooga-booga · Big Mek in Mega Armour · More Dakka",
+  "judgement": {
+   "who": "Big Mek in Mega Armour",
+   "models": [
+    "1× Big Mek in Mega Armour",
+    "5× Meganob w/ Kombi-weapon and Power Klaw"
+   ]
+  },
+  "source": {
+   "ability": "More Dakka",
+   "text": "This unit’s ranged attacks have:\n- **[IGNORES COVER]**.\n- If this unit is **riled up**, **[SUSTAINED HITS 1]**."
+  },
+  "key": "6dcb0a82569a4934"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "ability-who",
+  "where": "ooga-booga · Big Mek in Mega Armour · Supa-glowy Fing",
+  "judgement": {
+   "who": "Big Mek in Mega Armour",
+   "models": [
+    "1× Big Mek in Mega Armour",
+    "5× Meganob w/ Kombi-weapon and Power Klaw"
+   ]
+  },
+  "source": {
+   "ability": "Supa-glowy Fing",
+   "text": "**ORKS INFANTRY** model only (excluding **WEIRDBOY** models). This model’s ranged attacks have:\n- **[ANTI-INFANTRY 4+]**.\n- **[DEVASTATING WOUNDS]**.\n- **[SUPA-HAZARDOUS]**."
+  },
+  "key": "4ae91ff247f0b31c"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "ability-who",
+  "where": "ooga-booga · Big Mek in Mega Armour · Krumpin’ Time",
+  "judgement": {
+   "who": "Meganobz",
+   "models": [
+    "1× Big Mek in Mega Armour",
+    "5× Meganob w/ Kombi-weapon and Power Klaw"
+   ]
+  },
+  "source": {
+   "ability": "Krumpin’ Time",
+   "text": "In the Fight phase, if this unit is **riled up**, this unit has +1 to **hit rolls**."
+  },
+  "key": "352c2bdffb6e1e0c"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "ability-who",
+  "where": "ooga-booga · Big Mek in Mega Armour · Arrogant Invulnerability",
+  "judgement": {
+   "who": "Meganobz",
+   "models": [
+    "1× Big Mek in Mega Armour",
+    "5× Meganob w/ Kombi-weapon and Power Klaw"
+   ]
+  },
+  "source": {
+   "ability": "Arrogant Invulnerability",
+   "text": "Attacks that target this unit have -1 **AP**."
+  },
+  "key": "853d9711a0d1c8aa"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "unit-footnote",
+  "where": "ooga-booga · Big Mek in Mega Armour",
+  "judgement": {
+   "kind": "ranged",
+   "when": "Every ranged attack",
+   "note": "[IGNORES COVER]",
+   "from": "More Dakka"
+  },
+  "source": {
+   "ability": "More Dakka",
+   "text": "This unit’s ranged attacks have:\n- **[IGNORES COVER]**.\n- If this unit is **riled up**, **[SUSTAINED HITS 1]**."
+  },
+  "key": "193b99e557fe69c2"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "unit-kwNote",
+  "where": "ooga-booga · Big Mek in Mega Armour",
+  "judgement": {
+   "kwNote": "Meganobz comes from the led Meganobz."
+  },
+  "source": {
+   "models": [
+    "1× Big Mek in Mega Armour",
+    "5× Meganob w/ Kombi-weapon and Power Klaw"
+   ],
+   "stats": [
+    "Big Mek in Mega Armour W5 OC1",
+    "Meganob ×5 W3 OC1"
+   ],
+   "weapons": [
+    "Kustom Mega-blasta 3 -2 3 HAZARDOUS, ANTI-INFANTRY 4+, DEVASTATING WOUNDS, SUPA-HAZARDOUS, IGNORES COVER, ASSAULT",
+    "Tellyport Blasta 6 -2 3 BLAST 1, ANTI-INFANTRY 4+, DEVASTATING WOUNDS, SUPA-HAZARDOUS, IGNORES COVER, ASSAULT",
+    "Kombi-weapon Point Blank 3 0 1 BLAST 1, TORRENT, ASSAULT",
+    "Kombi-weapon Kill Shot 1 -2 3 ASSAULT",
+    "Kombi-weapon Shoota 2 0 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 1, ASSAULT",
+    "Power Klaw 3 -2 2 SUSTAINED HITS 1",
+    "Power Klaw 3 -2 2 SUSTAINED HITS 1"
+   ]
+  },
+  "key": "b1bb7ccc40ddcf56"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "unit-ptsNote",
+  "where": "ooga-booga · Big Mek in Mega Armour",
+  "judgement": {
+   "ptsNote": "115 + Meganobz 175"
+  },
+  "source": {
+   "models": [
+    "1× Big Mek in Mega Armour",
+    "5× Meganob w/ Kombi-weapon and Power Klaw"
+   ],
+   "stats": [
+    "Big Mek in Mega Armour W5 OC1",
+    "Meganob ×5 W3 OC1"
+   ],
+   "weapons": [
+    "Kustom Mega-blasta 3 -2 3 HAZARDOUS, ANTI-INFANTRY 4+, DEVASTATING WOUNDS, SUPA-HAZARDOUS, IGNORES COVER, ASSAULT",
+    "Tellyport Blasta 6 -2 3 BLAST 1, ANTI-INFANTRY 4+, DEVASTATING WOUNDS, SUPA-HAZARDOUS, IGNORES COVER, ASSAULT",
+    "Kombi-weapon Point Blank 3 0 1 BLAST 1, TORRENT, ASSAULT",
+    "Kombi-weapon Kill Shot 1 -2 3 ASSAULT",
+    "Kombi-weapon Shoota 2 0 1 LETHAL HITS: non-MONSTER/VEHICLE, RAPID FIRE 1, ASSAULT",
+    "Power Klaw 3 -2 2 SUSTAINED HITS 1",
+    "Power Klaw 3 -2 2 SUSTAINED HITS 1"
+   ]
+  },
+  "key": "17369ac9a4a5482c"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "unit-weapons",
+  "where": "ooga-booga · Big Mek in Mega Armour",
+  "judgement": {
+   "gear": [
+    [
+     "Kustom Mega-blasta",
+     "Power Klaw",
+     "Tellyport Blasta"
+    ],
+    [
+     "Kombi-weapon",
+     "Power Klaw"
+    ]
+   ],
+   "weapons": [
+    "Big Mek in Mega Armour · Kustom Mega-blasta",
+    "Big Mek in Mega Armour · Tellyport Blasta",
+    "Meganobz · ×5 · Kombi-weapon · Point Blank",
+    "Meganobz · ×5 · Kombi-weapon · Kill Shot",
+    "Meganobz · ×5 · Kombi-weapon · Shoota",
+    "Big Mek in Mega Armour · Power Klaw",
+    "Meganobz · ×5 · Power Klaw"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Big Mek in Mega Armour",
+    "5× Meganob w/ Kombi-weapon and Power Klaw"
+   ],
+   "leads": "Meganobz"
+  },
+  "key": "e9871fbf7a7aeab9"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "rule-ph",
+  "where": "Bully Boyz rule · Displays of Savagery",
+  "judgement": {
+   "ph": [
+    "fight"
+   ]
+  },
+  "source": {
+   "rule": "Displays of Savagery",
+   "text": "Friendly **MEGANOBZ**/**NOBZ** units’ melee attacks have **[SUSTAINED HITS 1]**."
+  },
+  "key": "25fbf0a8ce77471a"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "rule-turn",
+  "where": "Bully Boyz rule · Displays of Savagery",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "rule": "Displays of Savagery",
+   "text": "Friendly **MEGANOBZ**/**NOBZ** units’ melee attacks have **[SUSTAINED HITS 1]**."
+  },
+  "key": "3c1b993d6d5c8a20"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "rule-needs",
+  "where": "Bully Boyz rule · Displays of Savagery",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Meganobz",
+     "Nobz"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Displays of Savagery",
+   "text": "Friendly **MEGANOBZ**/**NOBZ** units’ melee attacks have **[SUSTAINED HITS 1]**."
+  },
+  "key": "66b0e6394d2e86b2"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-phases",
+  "where": "Bully Boyz · Too Arrogant to Die",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Too Arrogant to Die",
+   "text": "WHEN: Fight phase, when an enemy unit targets a friendly **MEGANOBZ**/**NOBZ** unit.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +1 to that roll if your unit is **riled up**:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
+  },
+  "key": "1ed008d0cee811ce"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-turn",
+  "where": "Bully Boyz · Too Arrogant to Die",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Too Arrogant to Die",
+   "text": "WHEN: Fight phase, when an enemy unit targets a friendly **MEGANOBZ**/**NOBZ** unit.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +1 to that roll if your unit is **riled up**:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
+  },
+  "key": "6853ea205d6c4714"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-needs",
+  "where": "Bully Boyz · Too Arrogant to Die",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Meganobz",
+     "Nobz"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Too Arrogant to Die",
+   "text": "WHEN: Fight phase, when an enemy unit targets a friendly **MEGANOBZ**/**NOBZ** unit.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +1 to that roll if your unit is **riled up**:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
+  },
+  "key": "36dab7b1afe9e216"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-gist",
+  "where": "Bully Boyz · Too Arrogant to Die",
+  "judgement": {
+   "gist": "Model in your unit destroyed, unit not selected to fight this phase: D6 (+1 if riled up); on a 4+ it stays until your unit has fought or the phase ends."
+  },
+  "source": {
+   "stratagem": "Too Arrogant to Die",
+   "text": "WHEN: Fight phase, when an enemy unit targets a friendly **MEGANOBZ**/**NOBZ** unit.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +1 to that roll if your unit is **riled up**:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
+  },
+  "key": "78c6e7bc2ee5d3cd"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-phases",
+  "where": "Bully Boyz · Armed to da Teef",
+  "judgement": {
+   "phases": [
+    "shooting",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Armed to da Teef",
+   "text": "WHEN: Your Shooting phase or the Fight phase, when a friendly **MEGANOBZ**/**NOBZ** unit is **selected to attack**.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: Your unit’s attacks can:\n- Re-roll **hit rolls** of 1.\n- If your unit is **riled up**, re-roll **hit rolls**."
+  },
+  "key": "a8f82a490d45f90f"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-turn",
+  "where": "Bully Boyz · Armed to da Teef",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Armed to da Teef",
+   "text": "WHEN: Your Shooting phase or the Fight phase, when a friendly **MEGANOBZ**/**NOBZ** unit is **selected to attack**.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: Your unit’s attacks can:\n- Re-roll **hit rolls** of 1.\n- If your unit is **riled up**, re-roll **hit rolls**."
+  },
+  "key": "be4ed110f239644e"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-turns",
+  "where": "Bully Boyz · Armed to da Teef",
+  "judgement": {
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "stratagem": "Armed to da Teef",
+   "text": "WHEN: Your Shooting phase or the Fight phase, when a friendly **MEGANOBZ**/**NOBZ** unit is **selected to attack**.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: Your unit’s attacks can:\n- Re-roll **hit rolls** of 1.\n- If your unit is **riled up**, re-roll **hit rolls**."
+  },
+  "key": "5c8d6fea5fd59583"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-needs",
+  "where": "Bully Boyz · Armed to da Teef",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Meganobz",
+     "Nobz"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Armed to da Teef",
+   "text": "WHEN: Your Shooting phase or the Fight phase, when a friendly **MEGANOBZ**/**NOBZ** unit is **selected to attack**.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: Your unit’s attacks can:\n- Re-roll **hit rolls** of 1.\n- If your unit is **riled up**, re-roll **hit rolls**."
+  },
+  "key": "2799ddb19d97e698"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-mod",
+  "where": "Bully Boyz · Armed to da Teef",
+  "judgement": {
+   "mod": {
+    "kind": "all",
+    "when": "Your Shooting phase or the Fight phase",
+    "note": "can re-roll hit rolls of 1 (riled up: can re-roll hit rolls)"
+   }
+  },
+  "source": {
+   "stratagem": "Armed to da Teef",
+   "text": "WHEN: Your Shooting phase or the Fight phase, when a friendly **MEGANOBZ**/**NOBZ** unit is **selected to attack**.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: Your unit’s attacks can:\n- Re-roll **hit rolls** of 1.\n- If your unit is **riled up**, re-roll **hit rolls**."
+  },
+  "key": "5834a3f7790a87ec"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-gist",
+  "where": "Bully Boyz · Armed to da Teef",
+  "judgement": {
+   "gist": "Your unit’s attacks can re-roll hit rolls of 1, or re-roll hit rolls if your unit is riled up."
+  },
+  "source": {
+   "stratagem": "Armed to da Teef",
+   "text": "WHEN: Your Shooting phase or the Fight phase, when a friendly **MEGANOBZ**/**NOBZ** unit is **selected to attack**.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: Your unit’s attacks can:\n- Re-roll **hit rolls** of 1.\n- If your unit is **riled up**, re-roll **hit rolls**."
+  },
+  "key": "d17aa45acd2b9011"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-phases",
+  "where": "Bully Boyz · Hulking Brutes",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Hulking Brutes",
+   "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **MEGANOBZ**/**NOBZ** unit.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: Ranged attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**.\n**+1CP** Or: Ranged attacks that target your unit have -1 to **wound rolls**."
+  },
+  "key": "7173745124f5cf5b"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-turn",
+  "where": "Bully Boyz · Hulking Brutes",
+  "judgement": {
+   "turn": "opp"
+  },
+  "source": {
+   "stratagem": "Hulking Brutes",
+   "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **MEGANOBZ**/**NOBZ** unit.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: Ranged attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**.\n**+1CP** Or: Ranged attacks that target your unit have -1 to **wound rolls**."
+  },
+  "key": "8cfe5487d405597f"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-needs",
+  "where": "Bully Boyz · Hulking Brutes",
+  "judgement": {
+   "needs": {
+    "any": [
+     "Meganobz",
+     "Nobz"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Hulking Brutes",
+   "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **MEGANOBZ**/**NOBZ** unit.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: Ranged attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**.\n**+1CP** Or: Ranged attacks that target your unit have -1 to **wound rolls**."
+  },
+  "key": "fb27b1dcb3da998d"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-def",
+  "where": "Bully Boyz · Hulking Brutes",
+  "judgement": {
+   "def": "their Shooting phase: -1 to wound when the attack’s S is greater than its T (+1CP: every ranged attack)"
+  },
+  "source": {
+   "stratagem": "Hulking Brutes",
+   "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **MEGANOBZ**/**NOBZ** unit.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: Ranged attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**.\n**+1CP** Or: Ranged attacks that target your unit have -1 to **wound rolls**."
+  },
+  "key": "480ea036b578a6b1"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-gist",
+  "where": "Bully Boyz · Hulking Brutes",
+  "judgement": {
+   "gist": "Ranged attacks that target your unit with S greater than its T have -1 to wound rolls; for +1CP, all ranged attacks that target it do."
+  },
+  "source": {
+   "stratagem": "Hulking Brutes",
+   "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **MEGANOBZ**/**NOBZ** unit.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: Ranged attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**.\n**+1CP** Or: Ranged attacks that target your unit have -1 to **wound rolls**."
+  },
+  "key": "ba04ffd2d4ea6ca4"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-cpNote",
+  "where": "Bully Boyz · Hulking Brutes",
+  "judgement": {
+   "cpNote": "Or: +1CP"
+  },
+  "source": {
+   "stratagem": "Hulking Brutes",
+   "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **MEGANOBZ**/**NOBZ** unit.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: Ranged attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**.\n**+1CP** Or: Ranged attacks that target your unit have -1 to **wound rolls**."
+  },
+  "key": "5595cec8abfba7cb"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "rule-needs",
+  "where": "Runt Swarm rule · Sneaky Little Gitz",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Gretchin"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Sneaky Little Gitz",
+   "text": "- Friendly **GRETCHIN** units have **BATTLELINE**.\n- When a friendly **GRETCHIN** unit is selected to make an **advance**/**fall-back move**, that move does not prevent this unit from being **eligible to start an action**."
+  },
+  "key": "e015e94aa7e2032b"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-phases",
+  "where": "Runt Swarm · Infested War Zone",
+  "judgement": {
+   "phases": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Infested War Zone",
+   "text": "WHEN: Any phase, when an enemy unit has attacked.\nTARGET: One friendly **GRETCHIN** unit that was just **destroyed**. You can target that unit with this **stratagem** even though that unit was just **destroyed**.\nEFFECT: Add a new **GRETCHIN** unit to your army identical to your **destroyed** unit, in **strategic reserves**, at its **starting strength**, with its full wounds remaining."
+  },
+  "key": "ae604f13a7cd7852"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-turn",
+  "where": "Runt Swarm · Infested War Zone",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Infested War Zone",
+   "text": "WHEN: Any phase, when an enemy unit has attacked.\nTARGET: One friendly **GRETCHIN** unit that was just **destroyed**. You can target that unit with this **stratagem** even though that unit was just **destroyed**.\nEFFECT: Add a new **GRETCHIN** unit to your army identical to your **destroyed** unit, in **strategic reserves**, at its **starting strength**, with its full wounds remaining."
+  },
+  "key": "e30cfd61e3274af3"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-needs",
+  "where": "Runt Swarm · Infested War Zone",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Gretchin"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Infested War Zone",
+   "text": "WHEN: Any phase, when an enemy unit has attacked.\nTARGET: One friendly **GRETCHIN** unit that was just **destroyed**. You can target that unit with this **stratagem** even though that unit was just **destroyed**.\nEFFECT: Add a new **GRETCHIN** unit to your army identical to your **destroyed** unit, in **strategic reserves**, at its **starting strength**, with its full wounds remaining."
+  },
+  "key": "6cdf8b09fde67376"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-gist",
+  "where": "Runt Swarm · Infested War Zone",
+  "judgement": {
+   "gist": "Add a new GRETCHIN unit identical to your destroyed unit to your army, in strategic reserves, at its starting strength."
+  },
+  "source": {
+   "stratagem": "Infested War Zone",
+   "text": "WHEN: Any phase, when an enemy unit has attacked.\nTARGET: One friendly **GRETCHIN** unit that was just **destroyed**. You can target that unit with this **stratagem** even though that unit was just **destroyed**.\nEFFECT: Add a new **GRETCHIN** unit to your army identical to your **destroyed** unit, in **strategic reserves**, at its **starting strength**, with its full wounds remaining."
+  },
+  "key": "34713576a3c1b620"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-phases",
+  "where": "Runt Swarm · Scarper!",
+  "judgement": {
+   "phases": [
+    "movement"
+   ]
+  },
+  "source": {
+   "stratagem": "Scarper!",
+   "text": "WHEN: Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly **unengaged GRETCHIN** unit.\nTARGET: That **GRETCHIN** unit.\nEFFECT: Your unit can make a **normal move** of:\n- Up to D6\".\n- Or: Up to 6\" instead if your unit is an **attached** unit."
+  },
+  "key": "40d91964a94e1872"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-turn",
+  "where": "Runt Swarm · Scarper!",
+  "judgement": {
+   "turn": "opp"
+  },
+  "source": {
+   "stratagem": "Scarper!",
+   "text": "WHEN: Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly **unengaged GRETCHIN** unit.\nTARGET: That **GRETCHIN** unit.\nEFFECT: Your unit can make a **normal move** of:\n- Up to D6\".\n- Or: Up to 6\" instead if your unit is an **attached** unit."
+  },
+  "key": "258365c1bbdfbff0"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-needs",
+  "where": "Runt Swarm · Scarper!",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Gretchin"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Scarper!",
+   "text": "WHEN: Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly **unengaged GRETCHIN** unit.\nTARGET: That **GRETCHIN** unit.\nEFFECT: Your unit can make a **normal move** of:\n- Up to D6\".\n- Or: Up to 6\" instead if your unit is an **attached** unit."
+  },
+  "key": "f2a6d70c4b38195f"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-gist",
+  "where": "Runt Swarm · Scarper!",
+  "judgement": {
+   "gist": "Your unit can make a normal move of up to D6\", or up to 6\" if your unit is an attached unit."
+  },
+  "source": {
+   "stratagem": "Scarper!",
+   "text": "WHEN: Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly **unengaged GRETCHIN** unit.\nTARGET: That **GRETCHIN** unit.\nEFFECT: Your unit can make a **normal move** of:\n- Up to D6\".\n- Or: Up to 6\" instead if your unit is an **attached** unit."
+  },
+  "key": "f3e8704cce991de3"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-phases",
+  "where": "Runt Swarm · Grot Shields",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Grot Shields",
+   "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **ORKS INFANTRY** unit (excluding **GRETCHIN** units).\nTARGET: One friendly **GRETCHIN** unit within 3\" of that **ORKS INFANTRY** unit.\nEFFECT: When a **hit roll** for that enemy unit’s ranged attacks that target that **ORKS** unit results in a hit, if a model in your **GRETCHIN** unit is on the battlefield, end the attack sequence for that attack and your **GRETCHIN** unit suffers 1 **mortal wound**."
+  },
+  "key": "0808d64788f50df5"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-turn",
+  "where": "Runt Swarm · Grot Shields",
+  "judgement": {
+   "turn": "opp"
+  },
+  "source": {
+   "stratagem": "Grot Shields",
+   "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **ORKS INFANTRY** unit (excluding **GRETCHIN** units).\nTARGET: One friendly **GRETCHIN** unit within 3\" of that **ORKS INFANTRY** unit.\nEFFECT: When a **hit roll** for that enemy unit’s ranged attacks that target that **ORKS** unit results in a hit, if a model in your **GRETCHIN** unit is on the battlefield, end the attack sequence for that attack and your **GRETCHIN** unit suffers 1 **mortal wound**."
+  },
+  "key": "dea715684c1c6047"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-needs",
+  "where": "Runt Swarm · Grot Shields",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Gretchin"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Grot Shields",
+   "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **ORKS INFANTRY** unit (excluding **GRETCHIN** units).\nTARGET: One friendly **GRETCHIN** unit within 3\" of that **ORKS INFANTRY** unit.\nEFFECT: When a **hit roll** for that enemy unit’s ranged attacks that target that **ORKS** unit results in a hit, if a model in your **GRETCHIN** unit is on the battlefield, end the attack sequence for that attack and your **GRETCHIN** unit suffers 1 **mortal wound**."
+  },
+  "key": "16a5358da88e3ea3"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-gist",
+  "where": "Runt Swarm · Grot Shields",
+  "judgement": {
+   "gist": "Each hit roll of that enemy unit’s ranged attacks on that ORKS unit that results in a hit ends that attack, and your GRETCHIN unit suffers 1 mortal wound (if it has a model on the battlefield)."
+  },
+  "source": {
+   "stratagem": "Grot Shields",
+   "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **ORKS INFANTRY** unit (excluding **GRETCHIN** units).\nTARGET: One friendly **GRETCHIN** unit within 3\" of that **ORKS INFANTRY** unit.\nEFFECT: When a **hit roll** for that enemy unit’s ranged attacks that target that **ORKS** unit results in a hit, if a model in your **GRETCHIN** unit is on the battlefield, end the attack sequence for that attack and your **GRETCHIN** unit suffers 1 **mortal wound**."
+  },
+  "key": "e533f7b9f5cf729e"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-note",
+  "where": "Runt Swarm · Grot Shields",
+  "judgement": {
+   "note": "Wahapedia FAQ: “When using the Grot Shields stratagem, are hits by [TORRENT] weapons considered ’hit rolls that result in a hit’?” “No.”"
+  },
+  "source": {
+   "stratagem": "Grot Shields",
+   "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **ORKS INFANTRY** unit (excluding **GRETCHIN** units).\nTARGET: One friendly **GRETCHIN** unit within 3\" of that **ORKS INFANTRY** unit.\nEFFECT: When a **hit roll** for that enemy unit’s ranged attacks that target that **ORKS** unit results in a hit, if a model in your **GRETCHIN** unit is on the battlefield, end the attack sequence for that attack and your **GRETCHIN** unit suffers 1 **mortal wound**."
+  },
+  "key": "b751dae7b6ab061b"
+ }
 ]

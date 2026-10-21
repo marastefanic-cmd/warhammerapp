@@ -178,5 +178,23 @@
   "source": "You can target this unit with the Counteroffensive stratagem, regardless of any other uses of that stratagem this phase. If you do: \n- That use is ‑1 CP. \n- That use does not prevent any uses of that stratagem on other units this phase.'",
   "reason": "Typo in every source: the text ends with a closing quote mark that opens nowhere (BSData and GW's Faction Pack all print it). The app leaves the stray mark out.",
   "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_thousand_sons-4lioijwxdj-otjrinzt8c.txt lines 331-338 (Defiler datasheet): \"Destroyer of Futures (Once per phase, per unit): You can target this unit with the Counteroffensive stratagem, ... That use does not prevent any uses of that stratagem on other units this phase.’\" (the same stray mark); verify/sources/nr/pubstomper.txt line 346: \"That use does not prevent any uses of that stratagem on other units this phase.'\""
+ },
+ {
+  "army": "ooga-booga",
+  "unit": "nazdreg-meganobz",
+  "field": "ability.text",
+  "app": "Nazdreg’s Know-wotz: - This unit has **Deep Strike**.\n- This unit’s ranged attacks have **[IGNORES COVER]**.",
+  "source": "- This unit has **Deep Strike**\n- This unit's ranged attacks have **[IGNORES COVER]**.",
+  "reason": "BSData (and New Recruit) drops the full stop after \"Deep Strike\"; the app keeps it, as the melee list's Nazdreg does.",
+  "evidence": "Wahapedia datasheet wahapedia.ru/wh40k11ed/factions/orks/Nazdreg (verify/.cache/waha/ds/orks_Nazdreg.html): \"Nazdreg’s Know-wotz: This unit has Deep Strike. This unit’s ranged attacks have [Ignores Cover].\" New Recruit: verify/sources/nr/ooga-booga.txt lines 72-73."
+ },
+ {
+  "army": "ooga-booga",
+  "unit": "big-mek-in-mega-armour-meganobz",
+  "field": "ability.text",
+  "app": "Supa-glowy Fing: **ORKS INFANTRY** model only (excluding **WEIRDBOY** models). This model’s ranged attacks have:\n- **[ANTI-INFANTRY 4+]**.\n- **[DEVASTATING WOUNDS]**.\n- **[SUPA-HAZARDOUS]**.",
+  "source": "**ORKS INFANTRY** model only (excluding **WEIRDBOY** models). This model’s ranged attacks have:\n- **[ANTI-INFANTRY 4+}**\n\n- **[DEVASTATING WOUNDS]**.\n- **[SUPA-HAZARDOUS]**.",
+  "reason": "BSData (and so New Recruit) has a typo (a brace and no full stop after [ANTI-INFANTRY 4+]); the app has the enhancement's wording as the rules publish it, as the shooty list's Big Mek in Mega Armour does.",
+  "evidence": "Wahapedia, Orks, Shoota Boyz detachment, enhancement Supa-glowy Fing: \"This model’s ranged attacks have: - [Anti-Infantry 4+]. - [Devastating Wounds]. - [SUPA-HAZARDOUS].\" (verify/.cache/waha/orks.html); verify/texts.js checks the app's text against it. NR prints the typo: verify/sources/nr/ooga-booga.txt lines 340-344."
  }
 ]
