@@ -176,6 +176,10 @@ function partitionRows(lines, who) {
     // a name's "(…)" ("(Bondsman)", "(5+*)") comes after its words and before only another "(…)" or the
     // " - <unit>" suffix: a name neither starts with one nor runs on after it ("(5+*) Damaged: 1-9 …")
     if (/^\(|\)\s+[^\s(-]/.test(name)) c += 5;
+    // a name starts with a capital, and a Damaged band starts its own name: "Damaged: 1-6 / wounds / remaining", with its two
+    // description lines around the last two name lines, is one name, not "remaining" on its own or the end of the name above
+    if (/^[a-z]/.test(name)) c += 2;
+    if (/\S\s+Damaged: /.test(name)) c += 5;
     return c;
   };
   const D = new Array(N + 1).fill(Infinity), B = new Array(N + 1).fill(-1);

@@ -387,8 +387,10 @@ function applyValue(cur, m, times) {
     case 'replace': return m.arg == null ? cur : cur.split(String(m.arg)).join(m.value == null ? '' : String(m.value));
     case 'multiply': return String(Number(cur) * Number(m.value));
     case 'divide': return String(Number(cur) / Number(m.value));
-    default: CTX.warnings.add(`modifier type ${m.type} on a value`); return cur;
+    // a lower limit on the number ("2+" stays 2+: Gore-stained Veterans' +1 WS, then floor 2)
+    case 'floor': { const n = /^(-?\d+)(.*)$/.exec(cur); if (!n) break; return Number(n[1]) < Number(m.value) ? `${Number(m.value)}${n[2]}` : cur; }
   }
+  CTX.warnings.add(`modifier type ${m.type} on a value`); return cur;
 }
 // a profile or rule instance: a copy whose fields modifiers can change
 function profInst(p, sel, extra) {

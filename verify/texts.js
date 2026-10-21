@@ -736,7 +736,13 @@ const armyIdsOf = fk => fk;   // faction rules are reported under the faction, s
 const usedDetachments = fk => [...new Set(armiesOf(fk).flatMap(a => a.detachments))];
 const UPD = {}; for (const fk of FACTIONS) UPD[fk] = packUpdates(fk);
 const usedUpdates = new Set();
-const titleN = e => norm(e.title).replace(/['"]/g, '');
+// Rules Updates titles that misname the ability they change: the World Eaters pack's "Chaos Terminators, Blood Fury Ability"
+// changes the datasheet's Bloody Fury (Wahapedia, BSData and New Recruit name it so; the new text is that ability's)
+const TITLE_TYPOS = { 'chaos terminators, blood fury ability': 'chaos terminators, bloody fury ability' };
+const titleN = e => { const t = norm(e.title).replace(/['"]/g, ''); return TITLE_TYPOS[t] || t; };
+// a datasheet name in a Rules Updates title: at its start or after a separator, not the end of a longer name
+// ("Eightbound" is not in "Exalted Eightbound, Rend and Tear Ability")
+const nameInTitle = (n, t) => new RegExp('(^|[,–-]|(?<!\\p{L}) |(?<=\\band) )' + n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(,| –| -|$)', 'u').test(t);
 const nameN = t => norm(t).replace(/['"]/g, '').replace(/\.\.\.$/, '').trim();
 // app text vs the pack's "Change to" text: equal after normalisation
 function checkUpdate(cat, army, unit, field, appText, e, part) {
@@ -1162,7 +1168,7 @@ for (const a of D.armies) {
     const ds = nameN(dsName(u, ab)), an = nameN(ab.name);
     for (const e of upd) {
       const t = titleN(e);
-      const unitHit = new RegExp('(^|[ ,–-])' + ds.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(,| –| -|$)').test(t);
+      const unitHit = nameInTitle(ds, t);
       if (!unitHit) continue;
       let hit = false, part;
       if (t.includes(', ' + an + ' ability') || t.includes('– ' + an + ' ability') || t.includes('- ' + an + ' ability') || t.includes('– ' + an + ' wargear ability') || t.includes('- ' + an + ' wargear ability')) hit = true;
@@ -1224,7 +1230,11 @@ for (const fk of FACTIONS) {
     if (usedUpdates.has(e)) continue;
     const t = titleN(e);
     let concerns = e.section === 'ARMY RULES' || dets.includes(norm(e.section || ''));
-    if (e.section === 'DATASHEETS') for (const n of names) if (new RegExp('(^|[ ,–-])' + n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(,| –| -|$)').test(t) && /ability$|abilities section$|damaged section$/.test(t)) concerns = true;
+    if (e.section === 'DATASHEETS') for (const n of names) if (nameInTitle(n, t) && /ability$|abilities section$|damaged section$/.test(t)) concerns = true;
+    // a wargear ability is on a unit only with that wargear: its update concerns the list only when a unit has the ability
+    // (Jakhals without an Icon of Khorne)
+    const wg = / - (.+) wargear ability$/.exec(t);
+    if (concerns && wg && !armiesOf(fk).some(a => a.units.some(u => (u.abilities || []).some(ab => nameN(ab.name) === wg[1])))) concerns = false;
     if (!concerns) continue;
     // a datasheet update for an ability the list's unit does not have (another datasheet of the same name) is fine only if no unit has that ability
     count('packUpdate');

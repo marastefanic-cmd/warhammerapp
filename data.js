@@ -3012,13 +3012,18 @@ const ARMIES = [
         { group:'Samni’arius and Spinegrinder', name:'sweep', range:'Melee', A:'17', WS:'2+', S:'7', AP:'-2', D:'2', kw:['DEVASTATING WOUNDS'], from:{ A:'Relentless Rage' } }
       ],
       abilities:[
-        { name:'Reborn in Blood', ph:['command','movement'], turn:'either', turns:{ movement:'your' }, text:'At the start of the battle round, when you make a **Blessings of Khorne roll**, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its **Deep Strike** ability, with 8 wounds remaining.' },
-        { name:'Wrathful Presence', ph:['command'], turn:'either', text:'At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability.' },
-        { name:'Damaged: 1-6 wounds', text:'While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1' },
-        { name:'remaining', text:'from the **Hit roll**.' },
-        { name:'The Blood God’s Favour', who:'Wrathful Presence', text:'Each time you make a **Blessings of Khorne** roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.' },
-        { name:'Driven by Ultimate Rage', who:'Wrathful Presence', tag:'Aura', ph:['fight'], turn:'either', text:'While a friendly **WORLD EATERS** unit is within 6" of this unit, that unit’s melee attacks can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1.' },
-        { name:'Overwhelming Wrath', who:'Wrathful Presence', tag:'Aura', ph:['movement'], turn:'opp', text:'Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a **Leadership test**. If that test is failed, that unit must Remain Stationary this phase instead.' }
+        { name:'Reborn in Blood', ph:['command','movement'], turn:'either', turns:{ movement:'your' }, text:'At the start of the battle round, when you make a **Blessings of Khorne** roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its **Deep Strike** ability, with 8 wounds remaining.' },
+        { name:'Wrathful Presence', at:'Start of the battle round', ph:['command'], turn:'either', text:'At the start of the battle round, select one Wrathful Presence ability. Until the start of the next battle round, this model has that ability.' },
+        { name:'Damaged: 1-6 wounds remaining', damaged:'1-6', text:'While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.' },
+        // the three Wrathful Presence abilities: Angron has the one selected at the start of the battle round
+        { name:'The Blood God’s Favour', who:'Wrathful Presence: pick one', text:'Each time you make a **Blessings of Khorne** roll, if this model is on the battlefield, you can re-roll up to 6 of the D6 rolled.' },
+        // GW Faction Pack Rules Update wording (BSData has it too)
+        { name:'Driven by Ultimate Rage', who:'Wrathful Presence: pick one', tag:'Aura', ph:['fight'], turn:'either', text:'While a friendly **WORLD EATERS** unit is within 6" of this unit, that unit’s melee attacks can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1.' },
+        { name:'Overwhelming Wrath', who:'Wrathful Presence: pick one', tag:'Aura', ph:['movement'], turn:'opp', text:'Each time an enemy unit within 6" of this model is selected to Fall Back, that unit must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'all', when:'Damaged (1-6 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-6 wounds remaining' }
       ],
       aura:[
         { kind:'melee', needs:{ all:['Faction: World Eaters'] }, when:'Within 6" of Angron, if he has Driven by Ultimate Rage this round', selfWhen:'Own aura, if he has Driven by Ultimate Rage this round', note:'re-roll hit rolls of 1 and wound rolls of 1', from:'Driven by Ultimate Rage' }
@@ -3043,8 +3048,15 @@ const ARMIES = [
         { name:'Power fist', n:6, range:'Melee', A:'4', WS:'2+', S:'8', AP:'-2', D:'2', kw:[], from:{ A:'Relentless Rage', WS:'Gore-stained Veterans' } }
       ],
       abilities:[
-        { name:'Bloody Fury', text:'This unit’s ranged attacks that target the closest eligible target can re-roll hit rolls. When this unit declares a charge, you can use this part of this ability. If you do: -- This unit can re-roll that charge roll. -- This unit must end that charge move engaged with the closest charge target.' },
-        { name:'Gore-stained Veterans', tag:'Upgrade', text:'This unit’s melee attacks have +1 WS.' }
+        // GW Faction Pack Rules Update wording ("Chaos Terminators, Blood Fury Ability"), Wahapedia's bold. Its two parts are
+        // bullets there, the second with two sub-bullets; the app has one level of bullets, so the parts are paragraphs
+        { name:'Bloody Fury', ph:['movement','shooting','charge'], turn:'your', turns:{ movement:'opp' }, text:'This unit’s ranged attacks that target the closest eligible target can re-roll **hit rolls**.\nWhen this unit **declares a charge**, you can use this part of this ability. If you do:\n- This unit can re-roll that **charge roll**.\n- This unit must end that **charge move** **engaged** with the closest **charge target**.' },
+        // already in the WS values above (from); its official text starts with the restriction New Recruit leaves out
+        { name:'Gore-stained Veterans', tag:'Upgrade', text:'**TERMINATOR SQUAD** unit only. This unit’s melee attacks have +1 **WS**.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'ranged', when:'Target is the closest eligible target', note:'re-roll hit rolls', from:'Bloody Fury' }
       ],
       rules:['Deep Strike','Blessings of Khorne','Twin-linked','Anti','Rapid Fire','Sustained Hits','Devastating Wounds'],
       kw:['Chaos','Faction: World Eaters','Infantry','Khorne','Terminator','Terminator Squad']
@@ -3066,8 +3078,15 @@ const ARMIES = [
         { name:'Power fist', n:6, range:'Melee', A:'4', WS:'2+', S:'8', AP:'-2', D:'2', kw:[], from:{ A:'Relentless Rage', WS:'Gore-stained Veterans' } }
       ],
       abilities:[
-        { name:'Bloody Fury', text:'This unit’s ranged attacks that target the closest eligible target can re-roll hit rolls. When this unit declares a charge, you can use this part of this ability. If you do: -- This unit can re-roll that charge roll. -- This unit must end that charge move engaged with the closest charge target.' },
-        { name:'Gore-stained Veterans', tag:'Upgrade', text:'This unit’s melee attacks have +1 WS.' }
+        // GW Faction Pack Rules Update wording ("Chaos Terminators, Blood Fury Ability"), Wahapedia's bold. Its two parts are
+        // bullets there, the second with two sub-bullets; the app has one level of bullets, so the parts are paragraphs
+        { name:'Bloody Fury', ph:['movement','shooting','charge'], turn:'your', turns:{ movement:'opp' }, text:'This unit’s ranged attacks that target the closest eligible target can re-roll **hit rolls**.\nWhen this unit **declares a charge**, you can use this part of this ability. If you do:\n- This unit can re-roll that **charge roll**.\n- This unit must end that **charge move** **engaged** with the closest **charge target**.' },
+        // already in the WS values above (from); its official text starts with the restriction New Recruit leaves out
+        { name:'Gore-stained Veterans', tag:'Upgrade', text:'**TERMINATOR SQUAD** unit only. This unit’s melee attacks have +1 **WS**.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'ranged', when:'Target is the closest eligible target', note:'re-roll hit rolls', from:'Bloody Fury' }
       ],
       rules:['Deep Strike','Blessings of Khorne','Twin-linked','Anti','Rapid Fire','Sustained Hits','Devastating Wounds'],
       kw:['Chaos','Faction: World Eaters','Infantry','Khorne','Terminator','Terminator Squad']
@@ -3083,7 +3102,10 @@ const ARMIES = [
         { name:'Chainblades', n:3, range:'Melee', A:'6', WS:'3+', S:'8', AP:'-2', D:'2', kw:[], from:{ A:'Relentless Rage' } }
       ],
       abilities:[
-        { name:'Beacons of Rage', tag:'Aura', text:'While a friendly World Eaters unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding Monsters and Vehicles), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well.' }
+        { name:'Beacons of Rage', tag:'Aura', ph:['fight'], turn:'either', text:'While a friendly **WORLD EATERS** unit is within 6" of this unit, each time a model in that unit makes a melee attack that targets a unit (excluding **MONSTERS** and **VEHICLES**), add 1 to the Hit roll. If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well.' }
+      ],
+      aura:[
+        { kind:'melee', needs:{ all:['Faction: World Eaters'] }, when:'Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets', selfWhen:'Own aura, vs non-MONSTER/VEHICLE targets', note:'+1 to hit; also +1 to wound if the target is Below Half-strength', from:'Beacons of Rage' }
       ],
       rules:['Scouts 6"','Blessings of Khorne'],
       kw:['Chaos','Daemon','Eightbound','Faction: World Eaters','Infantry','Khorne','Possessed']
@@ -3103,7 +3125,7 @@ const ARMIES = [
         { name:'Close combat weapon', n:8, range:'Melee', A:'3', WS:'4+', S:'3', AP:'0', D:'1', kw:[], from:{ A:'Relentless Rage' } }
       ],
       abilities:[
-        { name:'Loping Speed', ph:['movement'], turn:'opp', text:'In your opponent\'s Movement phase, if an enemy unit ends a move within 8" of this unit, if this unit is not within **Engagement Range** of one or more enemy units, this unit can make a **Normal move** of up to D6".' }
+        { name:'Loping Speed', ph:['movement'], turn:'opp', text:'In your opponent’s Movement phase, if an enemy unit ends a move within 8" of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6".' }
       ],
       rules:['Infiltrators','Blessings of Khorne','Pistol','Lance'],
       kw:['Chaos','Faction: World Eaters','Goremongers','Grenades','Infantry','Khorne']
@@ -3144,8 +3166,8 @@ const ARMIES = [
         { name:'Forgefiend claws', range:'Melee', A:'7', WS:'3+', S:'6', AP:'0', D:'1', kw:[], from:{ A:'Relentless Rage' } }
       ],
       abilities:[
-        { name:'Furious Onslaught', ph:['movement','shooting'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'Each time this model makes a ranged attack that targets the closest eligible target within 18", you can re-roll the **Hit roll**.' },
-        { name:'Damaged: 1-4 wounds remaining', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' }
+        { name:'Furious Onslaught', ph:['movement','shooting'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'Each time this model makes a ranged attack that targets the closest eligible target within 18", you can re-roll the Hit roll.' },
+        { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[

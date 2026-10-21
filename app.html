@@ -1378,7 +1378,7 @@ function dmModels(u){
   }
   return rows.filter(r => r.count > 0);
 }
-const dmUnits = (a, kind) => a.units.filter(u => (kind === 'ranged' ? u.ranged : u.melee || []).length);
+const dmUnits = (a, kind) => a.units.filter(u => ((kind === 'ranged' ? u.ranged : u.melee) || []).length);
 // the pickers: the opponent's list, the attacking unit, the target
 function dmPicker(k){
   const me = army(), st = dmState();

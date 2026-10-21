@@ -268,5 +268,45 @@
   "source": "ORKS INFANTRY model only (excluding WEIRDBOY models). This model's ranged attacks have: [ANTI-INFANTRY 4+} [DEVASTATING WOUNDS]. [SUPA-HAZARDOUS].",
   "reason": "New Recruit's text has a typo (a brace and no full stop after [ANTI-INFANTRY 4+]); the app has the enhancement's wording as the rules publish it, as the shooty list's Big Mek in Mega Armour does.",
   "evidence": "Wahapedia, Orks, Shoota Boyz detachment, enhancement Supa-glowy Fing: \"This model’s ranged attacks have: - [Anti-Infantry 4+]. - [Devastating Wounds]. - [SUPA-HAZARDOUS].\" (verify/.cache/waha/orks.html); verify/texts.js checks the app's text against it. New Recruit: verify/sources/nr/ooga-booga.txt lines 340-344."
+ },
+ {
+  "army": "super-terminators",
+  "unit": "chaos-terminators",
+  "field": "abilities[Bloody Fury].text",
+  "app": "This unit's ranged attacks that target the closest eligible target can re-roll hit rolls. When this unit declares a charge, you can use this part of this ability. If you do: This unit can re-roll that charge roll. This unit must end that charge move engaged with the closest charge target.",
+  "source": "This unit's ranged attacks that target the closest eligible target can re-roll hit rolls. When this unit declares a charge, you can use this part of this ability. If you do: -- This unit can re-roll that charge roll. -- This unit must end that charge move engaged with the closest charge target.",
+  "where": "verify/sources/nr/super-terminators.txt p3",
+  "reason": "Same words, different bullets: New Recruit prints BSData’s sub-bullet markup \"-- \" as text (verify/nr.js drops bullets but not this). The official text (GW Faction Pack Rules Update) has two bullets, the second with two sub-bullets; the app has one level of bullets, so it shows the two parts as paragraphs and the sub-bullets as its bullets.",
+  "evidence": "verify/sources/nr/super-terminators.txt lines 92-94: \"If you do: / -- This unit can re-roll that charge roll. / -- This unit must end that charge move engaged with the closest charge target.\"; verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt lines 297-306: \"Chaos Terminators, Blood Fury Ability / Change to: ▪ 'This unit’s ranged attacks that target the closest eligible target can re-roll hit rolls. ▪ When this unit declares a charge, you can use this part of this ability. If you do: ▫ This unit can re-roll that charge roll. ▫ This unit must end that charge move engaged with the closest charge target.'\""
+ },
+ {
+  "army": "super-terminators",
+  "unit": "chaos-terminators",
+  "field": "abilities[Gore-stained Veterans].text",
+  "app": "TERMINATOR SQUAD unit only. This unit's melee attacks have +1 WS.",
+  "source": "This unit's melee attacks have +1 WS.",
+  "where": "verify/sources/nr/super-terminators.txt p3",
+  "reason": "The upgrade’s official text starts with its restriction \"TERMINATOR SQUAD unit only.\" (the Butchers of Khorne enhancement in data.js, which verify/texts.js checks the unit’s text against); New Recruit’s (BSData’s) upgrade text leaves that sentence out.",
+  "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt lines 104-108 (Butchers of Khorne): \"GORE-STAINED VETERANS UPGRADE … TERMINATOR SQUAD unit only. This unit’s melee attacks have +1 WS.\"; verify/.cache/waha/world-eaters.txt lines 389-390: \"- Gore-Stained VeteransUPGRADE 20 pts / **TERMINATOR SQUAD** unit only. This unit’s melee attacks have +1 **WS**.\". New Recruit prints it without: verify/sources/nr/super-terminators.txt line 95."
+ },
+ {
+  "army": "super-terminators",
+  "unit": "chaos-terminators-2",
+  "field": "abilities[Bloody Fury].text",
+  "app": "This unit's ranged attacks that target the closest eligible target can re-roll hit rolls. When this unit declares a charge, you can use this part of this ability. If you do: This unit can re-roll that charge roll. This unit must end that charge move engaged with the closest charge target.",
+  "source": "This unit's ranged attacks that target the closest eligible target can re-roll hit rolls. When this unit declares a charge, you can use this part of this ability. If you do: -- This unit can re-roll that charge roll. -- This unit must end that charge move engaged with the closest charge target.",
+  "where": "verify/sources/nr/super-terminators.txt p4",
+  "reason": "Same words, different bullets: New Recruit prints BSData’s sub-bullet markup \"-- \" as text (verify/nr.js drops bullets but not this). The official text (GW Faction Pack Rules Update) has two bullets, the second with two sub-bullets; the app has one level of bullets, so it shows the two parts as paragraphs and the sub-bullets as its bullets.",
+  "evidence": "verify/sources/nr/super-terminators.txt lines 124-126: \"If you do: / -- This unit can re-roll that charge roll. / -- This unit must end that charge move engaged with the closest charge target.\"; verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt lines 297-306: \"Chaos Terminators, Blood Fury Ability / Change to: ▪ 'This unit’s ranged attacks that target the closest eligible target can re-roll hit rolls. ▪ When this unit declares a charge, you can use this part of this ability. If you do: ▫ This unit can re-roll that charge roll. ▫ This unit must end that charge move engaged with the closest charge target.'\""
+ },
+ {
+  "army": "super-terminators",
+  "unit": "chaos-terminators-2",
+  "field": "abilities[Gore-stained Veterans].text",
+  "app": "TERMINATOR SQUAD unit only. This unit's melee attacks have +1 WS.",
+  "source": "This unit's melee attacks have +1 WS.",
+  "where": "verify/sources/nr/super-terminators.txt p4",
+  "reason": "The upgrade’s official text starts with its restriction \"TERMINATOR SQUAD unit only.\" (the Butchers of Khorne enhancement in data.js, which verify/texts.js checks the unit’s text against); New Recruit’s (BSData’s) upgrade text leaves that sentence out.",
+  "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt lines 104-108 (Butchers of Khorne): \"GORE-STAINED VETERANS UPGRADE … TERMINATOR SQUAD unit only. This unit’s melee attacks have +1 WS.\"; verify/.cache/waha/world-eaters.txt lines 389-390: \"- Gore-Stained VeteransUPGRADE 20 pts / **TERMINATOR SQUAD** unit only. This unit’s melee attacks have +1 **WS**.\". New Recruit prints it without: verify/sources/nr/super-terminators.txt line 127."
  }
 ]
