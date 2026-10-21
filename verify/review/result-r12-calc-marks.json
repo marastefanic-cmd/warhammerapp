@@ -1,0 +1,200 @@
+[
+ {
+  "key": "40c8700c8c258af0",
+  "where": "shooty · Big Mek Dakkarig",
+  "verdict": "ok",
+  "why": "Datasheet (Wahapedia the same): \"In your Shooting phase, if this unit’s Blitzkannon weapon targets a unit (excluding MONSTER/VEHICLE units), that weapon has +6 A.\" vs none Monster/Vehicle is the exclusion word for word; the only other condition is the phase and whose turn, which the matchup gives (and the app drops the pre-tick under Fire Overwatch), so always is right."
+ },
+ {
+  "key": "a010a2da186d0c10",
+  "where": "shooty · Killa Kans",
+  "verdict": "ok",
+  "why": "\"This unit’s attacks that target a unit that has no models with a T of 7+ have +1 to hit rolls.\" maxT:6 = no target model above T6, exactly that; nothing else conditions it, so always is right."
+ },
+ {
+  "key": "8de4eb361882a921",
+  "where": "Shoota Boyz · Kustom Dakka",
+  "verdict": "ok",
+  "why": "EFFECT: \"Your unit’s ranged attacks that target a unit (excluding MONSTER/VEHICLE units) have +1 to wound rolls.\" vs none Monster/Vehicle matches; as a stratagem it carries no always (never pre-ticked)."
+ },
+ {
+  "key": "4dd1066670031b82",
+  "where": "ooga-booga · Ghazghkull Thraka",
+  "verdict": "ok",
+  "why": "Wahapedia tags it \"Prophet of da Great Waaagh! (Aura)\" (data.js tag Aura) and Core Rules 22.01 says \"While a model with an aura ability is on the battlefield, it is always within range of its own aura ability\"; Ghazghkull is a friendly ORKS unit and the effect (\"that unit’s melee attacks have +1 to hit rolls, +1 to wound rolls\") has no other condition, so selfAlways is right."
+ },
+ {
+  "key": "2cd7024961fb6a08",
+  "where": "melee · Mozrog Skragbad",
+  "verdict": "ok",
+  "why": "\"This unit’s melee attacks that target a MONSTER/VEHICLE unit can re-roll wound rolls.\" vs any Monster/Vehicle is the target condition and there is no table condition, so always is right."
+ },
+ {
+  "key": "adbc1343c5ec5af2",
+  "where": "ooga-booga · Nazdreg · Arrogant Invulnerability",
+  "verdict": "ok",
+  "why": "\"Attacks that target this unit have -1 AP.\" No condition at all, so defAlways is right; it is the Meganobz’ (bodyguard) ability, which applies to the whole attached unit with Nazdreg (19.04)."
+ },
+ {
+  "key": "b897e1eb0d0cd6aa",
+  "where": "ooga-booga · Big Mek",
+  "verdict": "ok",
+  "why": "\"Attacks made with this model’s Kustom Krumpa weapon can re-roll hit rolls and wound rolls.\" No table condition; weapon Kustom Krumpa and the models line \"2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)\" limit it to those two Nobz’ Krumpas, so always is right."
+ },
+ {
+  "key": "60a1b77306300d68",
+  "where": "melee · Big Mek in Mega Armour · Arrogant Invulnerability",
+  "verdict": "ok",
+  "why": "\"Attacks that target this unit have -1 AP.\" Unconditional, so defAlways is right; the Meganobz’ ability covers the attached unit with the Big Mek (19.04)."
+ },
+ {
+  "key": "4d6fc15075b6a163",
+  "where": "standard · Khârn the Betrayer",
+  "verdict": "ok",
+  "why": "\"While this model is leading a unit, each time a model in that unit makes a melee attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.\" In this list Khârn leads the Khorne Berzerkers for the battle (leads in the export, 19.04), so the condition is read from the list and always is right."
+ },
+ {
+  "key": "43f05ce8b48a8a66",
+  "where": "princes · Daemon Prince of Khorne · Helm of Brazen Ire",
+  "verdict": "ok",
+  "why": "\"WORLD EATERS model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack.\" The bearer is the one-model Daemon Prince of Khorne (Faction: World Eaters), and nothing conditions it, so defAlways is right."
+ },
+ {
+  "key": "f45eb2bc6b70eec2",
+  "where": "standard · Exalted Eightbound",
+  "verdict": "ok",
+  "why": "\"Each time a model in this unit makes a melee attack that targets a MONSTER or VEHICLE unit, until the end of the phase, improve the Damage characteristic of that attack by 1.\" vs any Monster/Vehicle matches; no table condition, so always is right."
+ },
+ {
+  "key": "400c30ead98baaab",
+  "where": "super-terminators · Eightbound",
+  "verdict": "needs-change",
+  "why": "selfAlways (tagged \"(Aura)\", 22.01), vs none Monster/Vehicle (\"excluding MONSTERS and VEHICLES\") and calc {hit:1} (\"add 1 to the Hit roll\") are right, but the note it sits on also carries the table condition \"If that attack targets a unit that is Below Half-strength, add 1 to the Wound roll as well\", which the brief says an always mark must not carry and which now has no box of its own. Split it: this aura with note \"+1 to hit\" (selfAlways, vs none Monster/Vehicle) plus a second, unticked aura \"target Below Half-strength: +1 to wound rolls\" with the same needs and vs."
+ },
+ {
+  "key": "d2447b6b80d0fcff",
+  "where": "pubstomper · Daemon Prince of Tzeentch with wings",
+  "verdict": "needs-change",
+  "why": "vs any Character is right (\"targets a CHARACTER unit\"), but the rule’s only condition is the target’s keywords, so by the owner’s rule it starts ticked: add always:true. As written the note’s \"(vs PSYKER CHARACTER units: …)\" clause is not understood, so the box is \"not in these numbers\" whatever the mark: split it into {vs:{any:['Character']}, note:'re-roll hit rolls of 1 and wound rolls of 1', always:true} and a box for \"re-roll the hit roll and the wound roll\" against a PSYKER CHARACTER unit, which needs both keywords (vs can only say any/none, and any:['Psyker'] would wrongly take the Norn Emissary)."
+ },
+ {
+  "key": "9ed10b6874791e9a",
+  "where": "pubstomper · Sorcerer",
+  "verdict": "needs-change",
+  "why": "\"Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1\" makes always + calc {rrWound:'1s'} right for what is counted, but the note also holds the table condition \"If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead\", which the brief says always must not sit on and which has no box. Split it as More Dakka is: {when:'Every ranged attack', note:'re-roll wound rolls of 1', always:true} plus an unticked {when:'Target within range of an objective marker you do not control', note:'re-roll the wound roll'}."
+ },
+ {
+  "key": "e96341584e050020",
+  "where": "nidzillas · Hive Tyrant",
+  "verdict": "ok",
+  "why": "\"TYRANIDS MONSTER model only. Each time the bearer makes a melee attack that targets a MONSTER or VEHICLE unit, add 1 to the Wound roll.\" The Hive Tyrant is a TYRANIDS MONSTER; vs any Monster/Vehicle matches and there is no table condition, so always is right."
+ },
+ {
+  "key": "df2cf5e4debd42ac",
+  "where": "nidzillas · Hive Tyrant",
+  "verdict": "ok",
+  "why": "Wahapedia: \"Onslaught (Aura, Psychic): While a friendly TYRANIDS unit is within 6\" of this model, ranged weapons equipped by models in that unit have the [ASSAULT] and [LETHAL HITS] abilities.\" 22.01 puts the Hive Tyrant within its own aura and nothing else conditions it, so selfAlways is right (this Hive Tyrant has no ranged weapons, so it changes nothing here)."
+ },
+ {
+  "key": "65804ac187a805ae",
+  "where": "nidzillas · Norn Emissary · Unnatural Resistance",
+  "verdict": "ok",
+  "why": "\"This model has the Feel No Pain 4+ ability against Mortal Wounds.\" (Wahapedia names it Unnatural Resilience, same words.) Unconditional on a one-model unit, so defAlways is right."
+ },
+ {
+  "key": "f1b5ca6f42dd5db6",
+  "where": "6-bigs · Knight Warden",
+  "verdict": "ok",
+  "why": "\"Each time this model makes a ranged attack that targets an enemy unit (excluding MONSTERS and VEHICLES), that attack has the [DEVASTATING WOUNDS] ability.\" vs none Monster/Vehicle matches and nothing else conditions it, so always is right."
+ },
+ {
+  "key": "c15825b817c1abe5",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos",
+  "verdict": "needs-change",
+  "why": "vs any Monster/Vehicle is right (\"targets a MONSTER or VEHICLE unit\"), but both parts depend only on the target’s keywords, so by the owner’s rule they start ticked: add always:true. As written the note’s \"if the target is TITANIC or TOWERING\" clause is not understood, so the box is \"not in these numbers\": split it into {vs:{any:['Monster','Vehicle']}, note:'+1 to hit rolls', always:true} and {vs:{any:['Titanic','Towering']}, note:'+1 to wound rolls', always:true} (\"If that target is TITANIC or TOWERING, add 1 to the Wound roll as well\"; every TITANIC/TOWERING unit in data.js is also MONSTER/VEHICLE)."
+ },
+ {
+  "key": "bf581f6f827895a7",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos",
+  "verdict": "ok",
+  "why": "\"Improve the Attacks characteristic of melee weapons equipped by the bearer by 2, and each time the bearer makes a melee attack, add 1 to the Hit roll.\" The +2 A is already in the lascutter profiles (from: Bringer of Justice; base 12 → 14), and the +1 to hit has no condition, so always is right."
+ },
+ {
+  "key": "de73571038d7b631",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos",
+  "verdict": "ok",
+  "why": "\"While a model is affected by this ability, each time that model makes an attack that targets a TITANIC or TOWERING model, you can re-roll the Hit roll and you can re-roll the Wound roll.\" vs any Titanic/Towering matches; being affected is a Bondsman pick (\"select one friendly ARMIGER model within 12\"\"), a table choice, so no always/selfAlways and needs Armiger are right."
+ },
+ {
+  "key": "e67f92940ac8a31c",
+  "where": "4-megas-and-a-destrier · Knight Destrier · Sanctuary",
+  "verdict": "ok",
+  "why": "\"IMPERIAL KNIGHTS model only. The bearer has a 5+ invulnerable save.\" Unconditional and against every attack (unlike the Destrier’s own 5+* against ranged attacks), on a one-model unit, so defAlways and defCalc {insv:5} are right."
+ },
+ {
+  "key": "5856dfe907ed2957",
+  "where": "ooga-booga · Zodgrod Wortsnagga · Super Runts",
+  "verdict": "ok",
+  "why": "Datasheet (Wahapedia the same): \"This unit is riled up.\" with no condition; it is Zodgrod’s (leader) ability, so it covers the attached unit (19.04): riled:true is right."
+ },
+ {
+  "key": "1ce00103ce563531",
+  "where": "ooga-booga · Big Mek in Mega Armour · Arrogant Invulnerability",
+  "verdict": "ok",
+  "why": "\"Attacks that target this unit have -1 AP.\" Unconditional, so defAlways is right; the Meganobz’ ability covers the attached unit with the Big Mek (19.04)."
+ },
+ {
+  "key": "5481fd3392f7fb32",
+  "where": "ooga-booga · Big Mek in Mega Armour",
+  "verdict": "ok",
+  "why": "\"This unit’s ranged attacks have: [IGNORES COVER]. If this unit is riled up, [SUSTAINED HITS 1].\" The always mod holds only the unconditional [IGNORES COVER]; the riled-up [SUSTAINED HITS 1] is its own mod (when \"Riled up\", no always), and the leader’s ability covers the Meganobz’ attacks too (19.04)."
+ },
+ {
+  "key": "3805cc77f15d7051",
+  "where": "Butchers of Khorne · A Trophy for the Throne",
+  "verdict": "ok",
+  "why": "EFFECT: \"Your unit’s attacks that target a MONSTER/VEHICLE unit have +1 to wound rolls.\" (Wahapedia the same.) vs any Monster/Vehicle matches; a stratagem, so no always."
+ },
+ {
+  "key": "e0c43ab5c43ff12f",
+  "where": "purge-goes-the-foe · Belisarius Cawl",
+  "verdict": "ok",
+  "why": "The words are in data.js inside Cawl’s Canticles of the Omnissiah text (GW Faction Pack v1.4 and Wahapedia the same): \"Shroudpsalm (Aura): While a friendly ADEPTUS MECHANICUS unit is within 6\" of this model, that unit has the Stealth ability\", and Stealth (24.33) gives \"the benefit of cover\" against ranged attacks when every model has it, as here. needs Faction: Adeptus Mechanicus, kind ranged and calc {stealth:true} match; Cawl has it only when selected (\"select one of the abilities … this model has that ability\"), so an unticked box is right."
+ },
+ {
+  "key": "e9c226b214f31434",
+  "where": "purge-goes-the-foe · Tech-Priest Enginseer",
+  "verdict": "ok",
+  "why": "\"select one friendly ADEPTUS MECHANICUS model within 3\" … if it is a VEHICLE model, until the start of your next Command phase, that model has the Feel No Pain 5+ ability.\" needs AdMech + Vehicle, one model only, kind all (it lasts through both turns) and calc {fnp:5} match; the pick is the player’s, so unticked is right."
+ },
+ {
+  "key": "449dc3dd34a52139",
+  "where": "purge-goes-the-foe · Cybernetica Datasmith · Battle Protocols",
+  "verdict": "needs-change",
+  "why": "defCalc {t:1, model:'Kastelan Robot'} is right (\"Add 1 to the Toughness characteristic of KASTELAN ROBOT models in that unit\"), but defAlways is not: the unit is in Aegis only \"At the start of the battle\" until \"In your Command phase … you can select one protocol … it remains in that protocol until it enters a different one\", a choice the player makes. Drop defAlways so it is an unticked box, as the Protector/Conqueror mods already are."
+ },
+ {
+  "key": "db4cd31706545eb9",
+  "where": "purge-goes-the-foe · Cybernetica Datasmith · Robotic Bodyguard",
+  "verdict": "ok",
+  "why": "\"While a CYBERNETICA DATASMITH model is leading this unit, that model has the Feel No Pain 4+ ability.\" The Datasmith leads (as Support) the Kastelan Robots in this list, so it always holds; defCalc {fnp:4, model:'Cybernetica Datasmith'} gives it to that model only, as the words say."
+ },
+ {
+  "key": "e96a48e526939f65",
+  "where": "purge-goes-the-foe · Onager Dunecrawler",
+  "verdict": "ok",
+  "why": "\"While a friendly ADEPTUS MECHANICUS BATTLELINE model is wholly within 6\" of this model, that BATTLELINE model has a 4+ invulnerable save against ranged attacks.\" needs AdMech + Battleline, kind ranged and calc {insv:4} match; in this list it reaches the two Skitarii Rangers units (not attached), and being wholly within 6\" is table position, so unticked is right."
+ },
+ {
+  "key": "f2603203e43d1fbe",
+  "where": "purge-goes-the-foe · Skorpius Disintegrator",
+  "verdict": "ok",
+  "why": "\"Each time this model makes an attack with a ferrumite cannon that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll.\" weapon Ferrumite cannon and vs any Monster/Vehicle match, with no table condition, so always is right (this Skorpius has no belleros energy cannon)."
+ },
+ {
+  "key": "6b84d706a2c56c55",
+  "where": "Eradication Cohort · Threat-cogitation Targeters",
+  "verdict": "ok",
+  "why": "EFFECT: \"each time a ranged attack made by a model in your unit is allocated to a MONSTER or VEHICLE model, you can re-roll the Damage roll.\" vs any Monster/Vehicle matches (those keywords are on every model of such a unit); a stratagem, so no always."
+ }
+]
