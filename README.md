@@ -6,15 +6,26 @@ A phone-first Warhammer 40,000 (11th edition, matched play) reference for the ow
 searchable, and adds no rule interpretations of its own. The app opens on a picker of the lists
 (with more than two lists: filters by faction, detachment and disposition, kept on the phone; Random
 rolls one of the lists shown). The gear opens Settings: colour schemes, Keep screen on, install help.
-Each list opens on its Units, and each tab remembers where it was, per list.
+Each list opens on Find, and each tab remembers where it was, per list.
 
-Tabs: **Overview** (warlord, enhancements, detachments, the army rules, units that can Deep Strike,
-uses per battle; Bases & proxies) · **Units** (the roster, stats on each unit's line; one datasheet per
-unit, laid out like New Recruit's: models, stats with bases, weapons, abilities, rules, stratagems,
-keywords) · **Stratagems** (every stratagem of the list's detachments and the core ones, each with a
-one-line gist, its timing and which of your units can use it) · **Rules** (army and detachment rules,
-and which unit has which core rule, such as Lone Operative, quoting the ability when it is conditional;
-general rules are left out) · **Find** (search, plus the Ranged, Melee and Abilities overviews).
+Tabs: **Find** (search; Overview: warlord, enhancements, detachments, the army rules, units that can
+Deep Strike, uses per battle, Bases & proxies; the Ranged, Melee and Abilities overviews) · **Units** (the
+roster, stats on each unit's line; one datasheet per unit, laid out like New Recruit's: models, stats with
+bases, weapons, abilities, rules, stratagems, keywords) · **Stratagems** (every stratagem of the list's
+detachments and the core ones, each with a one-line gist, its timing and which of your units can use it) ·
+**Rules** (army and detachment rules, and which unit has which core rule, such as Lone Operative, quoting
+the ability when it is conditional; general rules are left out) · **Damage** (a damage calculator: one of
+your units against one of the opponent's list, picked per list; weapons, the situation and both units'
+rules as tick boxes, a rule counting only when every word of its footnote is understood; `calc.js` plays
+the 11th edition attack sequence out 10,000 times with seeded dice).
+
+**Rules questions** (the ? in the top bar, once an Anthropic API key is saved in Settings): a chat with
+Claude that is sent the Core Rules with their errata and FAQs (`rules/core-rules.md`), the rules this app
+holds, both lists (yours and the opponent picked in Damage), the screen it was opened on and the question.
+The rules part is cached for an hour. The key stays in that browser on that phone and goes only to
+api.anthropic.com; the page holds no key, so the public site cannot use anyone's. `ask-style.md` says how
+answers should look (edit it to change them). `ask.js` makes the calls with the official SDK, bundled in
+`vendor/` (@anthropic-ai/sdk 0.131.0, MIT), so no third-party script loads at run time.
 
 Older lists (Cooking, Hurrdurr, oioioi, Nidzillas, Purge Freeblade) left the app on 17 Oct 2026; they
 are in the git history, and `import-nr.js --reuse` can take their signed-off notes for the same datasheets.
@@ -22,13 +33,16 @@ are in the git history, and `import-nr.js --reuse` can take their signed-off not
 | File | What it is |
 |---|---|
 | `data.js` | the armies, plus the faction and core rules they use |
-| `app.html` | the app (published as the Claude artifact as-is, with `data.js`, `verified.js`, `fonts/`) |
+| `ask.js`, `ask-style.md`, `vendor/` | the rules-question chat, how its answers should look, and the Anthropic SDK it uses |
+| `rules/core-rules.md` | a text copy of the Core Rules with errata and FAQs as Wahapedia publishes them, for the chat (`python3 -I verify/rules-text.py verify/.cache/waha/core.html rules/core-rules.md` refreshes it) |
+| `calc.js` | the damage calculator's engine (the attack sequence, section 05 of the Core Rules), checked by the gate like the app |
+| `app.html` | the app (published as the Claude artifact as-is, with `data.js`, `calc.js`, `verified.js`, `fonts/`) |
 | `build.js` | builds `index.html`, `version.json` and the `sw.js` stamp; refuses unless the gate passed |
 | `verify/` | the gate: every fact checked against its source before a build (see below) |
 | `index.html` | generated: `app.html` wrapped as a full page with the home-screen tags |
 | `sw.js`, `manifest.webmanifest`, `icon-*.png`, `fonts/` | home-screen install and offline support (Atkinson Hyperlegible Next for text and Barlow Condensed for headings and numbers, both OFL) |
 | logo | the riveted KK plate: `icon-*.png` for the home screen, and drawn in `app.html` for the home header (in the picked colour scheme) |
-| icons | in `app.html`: the tabs (clipboard-list, users, zap, scroll, telescope), the settings gear and the dice from [Lucide](https://lucide.dev) (ISC License, notice next to them) |
+| icons | in `app.html`: the tabs and rows (clipboard-list, users, zap, scroll, telescope, swords), the settings gear and the dice from [Lucide](https://lucide.dev) (ISC License, notice next to them) |
 | `verified.js` | generated by the gate: what was checked, shown in the app under "Checked" |
 
 ## Adding or updating a list

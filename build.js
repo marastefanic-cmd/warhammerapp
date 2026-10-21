@@ -21,19 +21,20 @@ if (problems.length) { problems.forEach(p => console.error(' -', p)); throw new 
 
 const app = read('app.html');
 const data = read('data.js');
+const calc = read('calc.js') + read('ask.js');   // the damage calculator's engine and the rules-question chat
 
 // the gate: only a verified app.html + data.js is built (node verify/run.js writes the report).
 // verify/run.js itself builds with VERIFY_BUILDING=1 to check the screens of the page it is about to verify.
 if (!process.env.VERIFY_BUILDING) {
   let report = null;
   try { report = JSON.parse(read('verify/report.json')); } catch (e) {}
-  const hash = crypto.createHash('sha256').update(app + data).digest('hex');
-  if (!report || report.hash !== hash) throw new Error('not verified: app.html or data.js changed since the last verification. Run: node verify/run.js');
+  const hash = crypto.createHash('sha256').update(app + data + calc).digest('hex');
+  if (!report || report.hash !== hash) throw new Error('not verified: app.html, data.js, calc.js or ask.js changed since the last verification. Run: node verify/run.js');
   if (!report.ok) throw new Error('verification failed (see verify/report.json). Fix it, then run: node verify/run.js');
 }
 const m = data.match(/const VERSION = '([^']+)'/);
 if (!m) throw new Error('VERSION not found in data.js');
-const build = crypto.createHash('sha256').update(app).update(data).digest('hex').slice(0, 10);
+const build = crypto.createHash('sha256').update(app).update(data).update(calc).digest('hex').slice(0, 10);
 
 // the page's <title> and font links belong in <head>; the artifact-only meta tag is dropped
 const hoist = [];
@@ -45,6 +46,7 @@ const tag = '<script src="data.js"></script>';
 if (!body.includes(tag)) throw new Error('data.js script tag not found in app.html');
 body = body.replace(tag, `<script src="data.js?v=${build}"></script>`);
 body = body.replace('<script src="verified.js"></script>', `<script src="verified.js?v=${build}"></script>`);
+body = body.replace('<script src="calc.js"></script>', `<script src="calc.js?v=${build}"></script>`);
 
 const head = `<!doctype html>
 <html lang="en">

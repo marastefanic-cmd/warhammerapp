@@ -4,6 +4,7 @@ Orks · 2000 / 2000 pts · Strike Force
 War Horde · Disposition: Purge the Foe
 
 Overview
+Damage calculator
 Units
 10
 Stratagems
@@ -1074,7 +1075,158 @@ standard Saddlegit’s Shiv, Squig Jaws, Stikka
 
 From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
 
-######## strats {"folded":true} · BASES Stratagems
+######## damage shooting · BASES Damage
+OPPONENT
+Me shooty yer’ booty
+Orks
+YOU ATTACK
+THEY ATTACK
+SHOOTING
+FIGHT
+ATTACKER · YOURS
+Ghazghkull Thraka
+1 model
+TARGET · THEIRS
+Wazdakka Gutsmek
+T8 · Sv 3+ · 4+ InSv · W10
+0.0
+of 1 model destroyed
+1.5
+wounds lost
+<1%
+unit destroyed
+HITS
+WOUNDS
+THROUGH
+Mork’s Roar
+9.0
+3.0
+1.5
+WEAPONS
+Mork’s Roar
+9" · A2D6+2 · – · S6 · AP-1 · D1 · CLOSE-QUARTERS, TORRENT
+Point Blank
+Aimed
+SITUATION
+Target has the benefit of cover
+GHAZGHKULL THRAKA’S RULES
+
+No footnotes on its weapons.
+
+WAZDAKKA GUTSMEK WHEN TARGETED
+Riled up: 5+ INV
+rule
+OTHER MODIFIERS
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP better
+−
+0
++
+Damage
+−
+0
++
+Attacks
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+Averages over 10,000 games played out with the dice; one unit’s attacks against the other, nothing used up. Rules marked “not counted” are not in these numbers.
+
+######## damage fight · DAMAGE Damage
+OPPONENT
+Me shooty yer’ booty
+Orks
+YOU ATTACK
+THEY ATTACK
+SHOOTING
+FIGHT
+ATTACKER · YOURS
+Ghazghkull Thraka
+1 model
+TARGET · THEIRS
+Wazdakka Gutsmek
+T8 · Sv 3+ · 4+ InSv · W10
+0.7
+of 1 model destroyed
+8.9
+wounds lost
+71%
+unit destroyed
+HITS
+WOUNDS
+THROUGH
+Adamantine ’Eadbutt
+1.0
+0.7
+0.4
+Gork’s Klaw
+6.9
+4.6
+2.0
+WEAPONS
+Adamantine ’Eadbutt
+Melee · A1 · 2+ · S14 · AP-2 · DD3+3 · DEVASTATING WOUNDS, EXTRA ATTACKS, PRECISION, SUSTAINED HITS 1
+Gork’s Klaw
+Melee · A7 · 2+ · S14 · AP-3 · D4 · CLEAVE 2, DEVASTATING WOUNDS, SUSTAINED HITS 1
+SITUATION
+Made a charge move this turn
+GHAZGHKULL THRAKA’S RULES
+Prophet of Da Great Waaagh!
+Own aura: +1 to hit, +1 to wound
+1CP Hit ’Em Harder
+Fight phase: [LETHAL HITS]
+WAZDAKKA GUTSMEK WHEN TARGETED
+Riled up: 5+ INV
+rule
+OTHER MODIFIERS
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP better
+−
+0
++
+Damage
+−
+0
++
+Attacks
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+Averages over 10,000 games played out with the dice; one unit’s attacks against the other, nothing used up. Rules marked “not counted” are not in these numbers.
+
+######## strats {"folded":true} · DAMAGE Stratagems
 EXPAND ALL
 WAR HORDE
 6
