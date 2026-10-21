@@ -1,0 +1,86 @@
+[
+ {
+  "key": "2dd9426b5f4aceb7",
+  "where": "shooty · Mek",
+  "verdict": "needs-change",
+  "why": "{hit:1}, needs ORKS + VEHICLE and none AIRCRAFT/TITANIC are right, but the rule gives it to one model: \"select one friendly ORKS VEHICLE model … That VEHICLE model’s attacks have +1 to hit rolls\". As an aura it reaches every model of the unit, so for the Killa Kans (6 models, ORKS VEHICLE) all six Kans would get +1 to hit. Limit it to one model: for a unit of more than one model, count it for one model’s weapons, or list it as \"one model only\" (not in these numbers) as the Omnissiah’s Blessing guard does. Wazdakka and the Dakkarigs (one model each) are right as they are."
+ },
+ {
+  "key": "f7bf31d0c7d7834e",
+  "where": "pubstomper · Daemon Prince of Tzeentch with wings",
+  "verdict": "ok",
+  "why": "\"Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability.\" calc {sus:'D3', weapon:'Dark Blessing'} matches, the calculator keeps the better of it and the printed [SUSTAINED HITS 1] (24.02), and \"How this is worked out\" says how the D3 is rolled. The aetherstride is a table choice, so unticked."
+ },
+ {
+  "key": "a5ea6494ce12d91a",
+  "where": "pubstomper · Sorcerer in Terminator Armour · Rites of Coalescence",
+  "verdict": "needs-change",
+  "why": "{woundMinus:1} is what the rule says (\"subtract 1 from the Wound roll\"), but two things are missing. (1) \"While this unit contains one or more PSYKER models\" holds at the start of every matchup (the Sorcerer in Terminator Armour and the Scarab Occult Sorcerer are PSYKER, Wahapedia \"SCARAB OCCULT SORCERER ONLY: PSYKER\"), so by the owner’s rule it starts ticked: add defAlways. (2) Once ticked it counts for every attack, even after both PSYKER models are destroyed (possible when [PRECISION] attacks kill the Sorcerer, the CHARACTER allocated last), and nothing on screen says so: I found no approximation line for it in dmHow or anywhere else. Add one, e.g. \"Rites of Coalescence: counted for every attack, as if a PSYKER model stays in the unit\"."
+ },
+ {
+  "key": "bf9ef6e10673785e",
+  "where": "nidzillas · Norn Assimilator · Singular Purpose",
+  "verdict": "ok",
+  "why": "\"Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability\" (Wahapedia the same). defCalc {fnp:5} matches; the pick and position are the table’s, so it is unticked (no defAlways). The OC 15 is in the words only, which is fine because it changes no attack numbers."
+ },
+ {
+  "key": "4663acd5db5646cf",
+  "where": "nidzillas · Norn Emissary · Singular Purpose",
+  "verdict": "ok",
+  "why": "The same Singular Purpose words: \"it has the Feel No Pain 5+ ability\" while within range of the selected objective marker. defCalc {fnp:5} with no defAlways is right; with Unnatural Resistance, mortal wounds use the better 4+ (calc.js takes the lower of fnp and fnpMortal)."
+ },
+ {
+  "key": "c4f5aa59356597eb",
+  "where": "Freeblade Company · Strength from Exile",
+  "verdict": "ok",
+  "why": "\"each time a model in your unit makes an attack, if there are no other friendly units within 9\" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.\" calc {rrHit:'1s', rrWound:'1s'} matches (Wahapedia the same); the 9\" condition is in the when, on a stratagem box that is never ticked."
+ },
+ {
+  "key": "bb1c2cc902abc7c6",
+  "where": "Freeblade Company · Survivor of Strife",
+  "verdict": "ok",
+  "why": "\"each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the Wound roll.\" {woundMinusSgt:1} is exactly that (S after modifiers against the unit’s T, as calc.js plan does). It is your opponent’s Shooting phase only."
+ },
+ {
+  "key": "0154e8fd609430d4",
+  "where": "Butchers of Khorne · Wrath Beyond Reason",
+  "verdict": "needs-change",
+  "why": "{dMinus:1, dChar:true} is right: \"Ranged attacks that target your unit have -1 D\", and a modifier to an attack applies to its weapon (04.01.04), so [DEVASTATING WOUNDS] mortal wounds, \"equal to the D characteristic of that weapon\" (24.10), drop too, as the working says. But \"How this is worked out\" contradicts it: its \"[DEVASTATING WOUNDS] and -1 Damage\" line shows whenever tmod.dMinus is set and says \"The calculator does not apply it to these mortal wounds\". Show that line only for the part that is not dMinusChar (an allocation-based -1, like the Helm of Brazen Ire), and for Wrath Beyond Reason say that it lowers those mortal wounds too."
+ },
+ {
+  "key": "22720814e9220887",
+  "where": "purge-goes-the-foe · Tech-Priest Enginseer",
+  "verdict": "ok",
+  "why": "\"If a friendly ADEPTUS MECHANICUS VEHICLE model is destroyed within 12\" of this model, until the end of the battle, this model’s Omnissian axe has an Attacks characteristic of 6.\" set {A:'6'} on the Omnissian axe, with calc {} so that only the set counts, matches; the trigger is table history, so unticked."
+ },
+ {
+  "key": "cd599e8a5745cd2b",
+  "where": "purge-goes-the-foe · Cybernetica Datasmith",
+  "verdict": "ok",
+  "why": "\"Protector Protocol: Add 2 to the Attacks characteristic of ranged weapons equipped by KASTELAN ROBOT models in that unit.\" The Kastelans’ only ranged weapon here is the Incendine combustor; set {A:'+2'} (D6+2) with calc {} matches, and the protocol is the player’s choice, so unticked."
+ },
+ {
+  "key": "e03e0d4c817053e9",
+  "where": "purge-goes-the-foe · Cybernetica Datasmith",
+  "verdict": "ok",
+  "why": "\"Conqueror Protocol: Add 2 to the Attacks characteristic of melee weapons equipped by KASTELAN ROBOT models in that unit.\" The Twin Kastelan fist is their only melee weapon; set {A:'+2'} with calc {} matches, and it is unticked as a choice."
+ },
+ {
+  "key": "b596bae444898bfa",
+  "where": "Cohort Cybernetica · Auto-divinatory Targeting",
+  "verdict": "ok",
+  "why": "\"ranged weapons equipped by models in your unit have a Ballistic Skill characteristic of 3+ and the [IGNORES COVER] ability, but they can only target units within range of the selected objective marker.\" calc {set:{BS:'3+'}, ignoresCover:true} matches (Wahapedia the same); the target restriction stays in the words on a stratagem box the player ticks."
+ },
+ {
+  "key": "dc98fcec80c15c27",
+  "where": "Cohort Cybernetica · Benevolence of the Omnissiah",
+  "verdict": "ok",
+  "why": "\"Until the start of your next Command phase, models in your unit have the Feel No Pain 6+ ability, which is improved to Feel No Pain 5+ against mortal wounds.\" {fnp:6, fnpMortal:5} matches, and it lasts into the opponent’s turn (dmLasts round)."
+ },
+ {
+  "key": "dc995d8fa8d6fc09",
+  "where": "Core · Smokescreen",
+  "verdict": "ok",
+  "why": "\"each time an attack targets either your SMOKE unit, or a unit that is not fully visible … because of … your SMOKE unit, the target has the benefit of cover against that attack (13.08).\" {cover:true} gives the SMOKE unit cover against ranged attacks, which is exactly the first case; the second case (another unit behind it) is not offered and adds nothing, so the player uses the cover box."
+ }
+]

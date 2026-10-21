@@ -1,0 +1,62 @@
+[
+ {
+  "key": "b4ec840cb29ee8e6",
+  "where": "Dread Mob rule · Try Dat Button!",
+  "verdict": "ok",
+  "why": "\"roll either one D6 or two D6 (keep re-rolling duplicate results). This unit’s attacks have the relevant rule(s): 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP\" (Wahapedia the same). The six picks are every outcome: one band (one D6, or two D6 in the same band) and each pair of different bands, with the table’s numbers. It is optional (\"you can use this ability\"), so unticked is right, and the hazard roll is in the words (it changes no attack numbers)."
+ },
+ {
+  "key": "87c63a07505281b9",
+  "where": "Vessels of Wrath rule · Wrath of Khorne",
+  "verdict": "ok",
+  "why": "\"that unit’s CHARACTER models’ melee attacks can have: [CLEAVE 1]. Or: +1 AP.\" Two picks, each scoped to \"CHARACTER models\", with exactly those effects; \"can have\" is the player’s choice, so unticked is right. needs WORLD EATERS + Character, none Epic Hero matches \"(excluding EPIC HERO units)\" (an attached unit with Khârn has EPIC HERO, 19.03)."
+ },
+ {
+  "key": "9605f91bba7405aa",
+  "where": "Crusher Stampede rule · Enraged Behemoths",
+  "verdict": "ok",
+  "why": "\"add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength.\" Picks Below Starting Strength (+1 to hit) and Below Half-strength (+1 to hit, +1 to wound) match; the single wording is 01.02.01’s for a one-model unit (\"remaining wounds are less than its W\" / \"less than half of its W\"; {half} = ceil(W/2)−1 is the most wounds still below half). Unit state is a table condition, so unticked."
+ },
+ {
+  "key": "30b2893f3c65de18",
+  "where": "Crusher Stampede · Savage Roar",
+  "verdict": "ok",
+  "why": "\"each time a model in that enemy unit makes an attack that targets your unit, subtract 1 from the Hit roll. If that Battle-shock test was failed, subtract 1 from the Wound roll as well.\" Test passed {hitMinus:1}, Test failed {hitMinus:1, woundMinus:1} match (Wahapedia the same); the test is rolled at the table, so it is a pick on a stratagem box."
+ },
+ {
+  "key": "5774666c9dddd1d1",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos",
+  "verdict": "ok",
+  "why": "\"Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.\" vs any Titanic/Towering with also any Monster/Vehicle now requires both, as \"that target\" does (dmVs fails on either), and the condition is target keywords only, so always is right."
+ },
+ {
+  "key": "2b89aa894df8b6d2",
+  "where": "Bully Boyz · Armed to da Teef",
+  "verdict": "ok",
+  "why": "\"Your unit’s attacks can: Re-roll hit rolls of 1. If your unit is riled up, re-roll hit rolls.\" (Wahapedia the same.) Picks \"re-roll hit rolls of 1\" and, when riled up, \"re-roll hit rolls\" match; a stratagem, never ticked."
+ },
+ {
+  "key": "2fb562b37e49d20f",
+  "where": "Bully Boyz · Hulking Brutes",
+  "verdict": "ok",
+  "why": "\"Ranged attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls. +1CP Or: Ranged attacks that target your unit have -1 to wound rolls.\" {woundMinusSgt:1} (calc.js compares the attack’s S, after modifiers, with the T it meets: the bodyguard’s highest, 19.02) and {woundMinus:1} match; it is used in the opponent’s Shooting phase only (phases shooting, turn opp)."
+ },
+ {
+  "key": "17cec1a670775dfb",
+  "where": "Cohort Cybernetica · Machine Spirit Resurgent",
+  "verdict": "ok",
+  "why": "TARGET \"… that is below its Starting Strength\"; EFFECT \"Until the start of your next Command phase, each time a model in your unit makes an attack, you can re-roll the Hit roll. If your unit is Below Half-strength, you can re-roll the Wound roll as well.\" Picks Below Starting Strength (re-roll hit rolls) and Below Half-strength (hit and wound rolls) match, and kind all fits an effect that lasts into the opponent’s turn."
+ },
+ {
+  "key": "9cecfe42cffe0557",
+  "where": "Eradication Cohort rule · Murderous Imperative",
+  "verdict": "needs-change",
+  "why": "The numbers are right: \"If the Protector Imperative is active for that unit, re-roll a Hit roll of 1. If the Conqueror Imperative is active …, re-roll a Wound roll of 1.\" But the third pick’s label \"Both (Omnicogitator)\" names an enhancement this list does not take (New Recruit shows no Skitarii Marshal), and leaves out the way this list can get both: Transcendent Cogitation (Cohort Cybernetica, which this list also takes) on a SKITARII VEHICLE such as the Skorpius (\"the Conqueror Imperative and Protector Imperative are both active for your unit\"). Rename it \"Both (Omnicogitator or Transcendent Cogitation)\" or just \"Both\"."
+ },
+ {
+  "key": "7dbeca7548af2876",
+  "where": "Eradication Cohort · Unshackled Wrath",
+  "verdict": "ok",
+  "why": "\"Select the [SUSTAINED HITS 1] or [LETHAL HITS] ability … You can instead select the [SUSTAINED HITS 1], [LETHAL HITS] and [HAZARDOUS] abilities.\" The three picks are exactly those choices ([HAZARDOUS] changes no attack numbers)."
+ }
+]

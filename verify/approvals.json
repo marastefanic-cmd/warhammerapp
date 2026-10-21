@@ -593,6 +593,12 @@
   "at": "2026-10-20",
   "why": "Source: \"If this unit made a charge move this turn, this unit’s attacks have +1 D.\" There are no phase words; it works on attacks made after a charge move in the same turn. A charge move is made in your Charge phase, or in theirs through Heroic Intervention (\"End of your opponent’s Charge phase … Resolve a charge\"; Squighog Boyz are MOUNTED, not VEHICLE, so they qualify). In either turn the only phase left after the Charge phase is the Fight phase. Fire Overwatch is at the \"End of your opponent’s Movement phase\", before any charge that turn, and nothing in this list (War Horde stratagems or any unit's abilities) lets a unit shoot after the Charge phase or charge in another phase. So {ph:['fight'], turn:'either'}, the same reasoning as the approved Headwoppa’s Killchoppa and Might is Right."
  },
+ "17cec1a670775dfb": {
+  "verdict": "ok",
+  "by": "review:r14-picks",
+  "at": "2026-10-21",
+  "why": "TARGET \"… that is below its Starting Strength\"; EFFECT \"Until the start of your next Command phase, each time a model in your unit makes an attack, you can re-roll the Hit roll. If your unit is Below Half-strength, you can re-roll the Wound roll as well.\" Picks Below Starting Strength (re-roll hit rolls) and Below Half-strength (hit and wound rolls) match, and kind all fits an effect that lasts into the opponent’s turn."
+ },
  "185956b0a477f4da": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -917,6 +923,12 @@
   "at": "2026-10-21",
   "why": "TARGET: “One LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE unit from your army”: same keyword set as Auto-divinatory Targeting."
  },
+ "22720814e9220887": {
+  "verdict": "ok",
+  "by": "review:r14-calc",
+  "at": "2026-10-21",
+  "why": "\"If a friendly ADEPTUS MECHANICUS VEHICLE model is destroyed within 12\" of this model, until the end of the battle, this model’s Omnissian axe has an Attacks characteristic of 6.\" set {A:'6'} on the Omnissian axe, with calc {} so that only the set counts, matches; the trigger is table history, so unticked."
+ },
  "231379af293895c5": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -1151,6 +1163,12 @@
   "at": "2026-10-20",
   "why": "Source: \"In your Shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this unit’s ranged attacks have +1 to hit rolls.\" Ammo Runts is the Nobz' (bodyguard) ability and says \"this unit\", so under 19.04 / the FAQ it covers every model in the attached unit. That includes the Big Mek's Kustom mega-blasta as well as the Kustom Shootas (the Painboy has no ranged weapon). The footnote has no who, sits under the ranged table and renders under \"WHOLE UNIT\", which is right. Its condition (used, your Shooting phase, when selected to shoot) and its effect (+1 to hit rolls) are the text's, worded as the approved Boss’ Ammo Runt footnote."
  },
+ "2b89aa894df8b6d2": {
+  "verdict": "ok",
+  "by": "review:r14-picks",
+  "at": "2026-10-21",
+  "why": "\"Your unit’s attacks can: Re-roll hit rolls of 1. If your unit is riled up, re-roll hit rolls.\" (Wahapedia the same.) Picks \"re-roll hit rolls of 1\" and, when riled up, \"re-roll hit rolls\" match; a stratagem, never ticked."
+ },
  "2b8ff8b8d89c3156": {
   "verdict": "ok",
   "by": "review:r10-superterm",
@@ -1277,6 +1295,12 @@
   "at": "2026-10-18",
   "why": "EFFECT: “Your unit’s ranged attacks have: - [RAPID FIRE 1]. - Or: If that attack already has [RAPID FIRE], +1 to the value of that [RAPID FIRE]”. The gist has the same two options joined by “or”. 103 chars. text: case only, Wahapedia “[Rapid Fire 1]” in the first bullet."
  },
+ "2fb562b37e49d20f": {
+  "verdict": "ok",
+  "by": "review:r14-picks",
+  "at": "2026-10-21",
+  "why": "\"Ranged attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls. +1CP Or: Ranged attacks that target your unit have -1 to wound rolls.\" {woundMinusSgt:1} (calc.js compares the attack’s S, after modifiers, with the T it meets: the bodyguard’s highest, 19.02) and {woundMinus:1} match; it is used in the opponent’s Shooting phase only (phases shooting, turn opp)."
+ },
  "3050abb455be6ffa": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -1300,6 +1324,12 @@
   "by": "review:r11-purge-units",
   "at": "2026-10-21",
   "why": "NR prints “Emanatus Forcefield (Aura)” and Wahapedia “Emanatus Force Field (Aura)”."
+ },
+ "30b2893f3c65de18": {
+  "verdict": "ok",
+  "by": "review:r14-picks",
+  "at": "2026-10-21",
+  "why": "\"each time a model in that enemy unit makes an attack that targets your unit, subtract 1 from the Hit roll. If that Battle-shock test was failed, subtract 1 from the Wound roll as well.\" Test passed {hitMinus:1}, Test failed {hitMinus:1, woundMinus:1} match (Wahapedia the same); the test is rolled at the table, so it is a pick on a stratagem box."
  },
  "30be94740ab7c96f": {
   "verdict": "ok",
@@ -1925,6 +1955,12 @@
   "at": "2026-10-16",
   "why": "Datasheet/NR header: \"Destroyer of Futures (Once per phase, per unit)\"."
  },
+ "4663acd5db5646cf": {
+  "verdict": "ok",
+  "by": "review:r14-calc",
+  "at": "2026-10-21",
+  "why": "The same Singular Purpose words: \"it has the Feel No Pain 5+ ability\" while within range of the selected objective marker. defCalc {fnp:5} with no defAlways is right; with Unnatural Resistance, mortal wounds use the better 4+ (calc.js takes the lower of fnp and fnpMortal)."
+ },
  "4698cb326c6707a9": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -2374,6 +2410,12 @@
   "by": "review:code2",
   "at": "2026-10-17",
   "why": "I ran onceTag over every ability in all 6 lists. Branch 1 copies a BSData tag that starts \"Once/Twice per\" and drops the \" · …\" suffix, e.g. Bomb Squig \"Once per turn, twice per battle, per unit\", Supreme Kunnin’ \"Once per phase, per army\", Twisted Sorceries \"Once per battle · Psychic\" → \"Once per battle\". Branch 2 copies the text’s own words: a leading \"Once per turn\" (Harpoon Barbs, Malign Presence) or a parenthesised \"(Once per battle, per army)\" (Archslaughterer, Umbralefic Crystal). It adds \", per army\" only when the text says \"one model from your army with this ability\" (Will of the Hive Mind → \"Once per battle round, per army\"; BSData tags the same wording on Direct the Slaughter \"Once per battle round, per army\"). No limit is invented. Latent gaps, and they leave text out rather than add to it, so this stays ok: an unparenthesised \"Once per battle\" after a \"… model only.\" sentence gets no tag (enhancements Incandaeum and Null Nodules, neither in any list), and a tag-less text \"Once per turn, twice per battle, …\" would be cut to \"Once per turn\". Bomb Squig has its tag, so it is not affected."
+ },
+ "5774666c9dddd1d1": {
+  "verdict": "ok",
+  "by": "review:r14-picks",
+  "at": "2026-10-21",
+  "why": "\"Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.\" vs any Titanic/Towering with also any Monster/Vehicle now requires both, as \"that target\" does (dmVs fails on either), and the condition is target keywords only, so always is right."
  },
  "57b009df52f459f2": {
   "verdict": "ok",
@@ -3323,6 +3365,12 @@
   "at": "2026-10-21",
   "why": "WHEN: “Your Command phase.”: your turn."
  },
+ "7dbeca7548af2876": {
+  "verdict": "ok",
+  "by": "review:r14-picks",
+  "at": "2026-10-21",
+  "why": "\"Select the [SUSTAINED HITS 1] or [LETHAL HITS] ability … You can instead select the [SUSTAINED HITS 1], [LETHAL HITS] and [HAZARDOUS] abilities.\" The three picks are exactly those choices ([HAZARDOUS] changes no attack numbers)."
+ },
  "7df397384f7d9395": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -3640,6 +3688,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "“Friendly ORKS INFANTRY units’ ranged attacks have …” has no phase limit; ranged attacks are made in the Shooting phase and in Fire Overwatch (“End of your opponent’s Movement phase … shoots using snap shooting”). Movement and Shooting are the right phases; the turn per phase is item 7a652c3ac27f3762."
+ },
+ "87c63a07505281b9": {
+  "verdict": "ok",
+  "by": "review:r14-picks",
+  "at": "2026-10-21",
+  "why": "\"that unit’s CHARACTER models’ melee attacks can have: [CLEAVE 1]. Or: +1 AP.\" Two picks, each scoped to \"CHARACTER models\", with exactly those effects; \"can have\" is the player’s choice, so unticked is right. needs WORLD EATERS + Character, none Epic Hero matches \"(excluding EPIC HERO units)\" (an attached unit with Khârn has EPIC HERO, 19.03)."
  },
  "87c8aa2640b1c554": {
   "verdict": "ok",
@@ -4084,6 +4138,12 @@
   "by": "review:literal",
   "at": "2026-10-17",
   "why": "“While a friendly TYRANIDS unit is within 6\" of this model, ranged weapons equipped by models in that unit have the [ASSAULT] and [LETHAL HITS] abilities.”"
+ },
+ "9605f91bba7405aa": {
+  "verdict": "ok",
+  "by": "review:r14-picks",
+  "at": "2026-10-21",
+  "why": "\"add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength.\" Picks Below Starting Strength (+1 to hit) and Below Half-strength (+1 to hit, +1 to wound) match; the single wording is 01.02.01’s for a one-model unit (\"remaining wounds are less than its W\" / \"less than half of its W\"; {half} = ceil(W/2)−1 is the most wounds still below half). Unit state is a table condition, so unticked."
  },
  "9765f85ba5eeb202": {
   "verdict": "ok",
@@ -4961,6 +5021,12 @@
   "at": "2026-10-16",
   "why": "A Stratagem can target a unit in any phase of either turn."
  },
+ "b4ec840cb29ee8e6": {
+  "verdict": "ok",
+  "by": "review:r14-picks",
+  "at": "2026-10-21",
+  "why": "\"roll either one D6 or two D6 (keep re-rolling duplicate results). This unit’s attacks have the relevant rule(s): 1–2 +1 A · 3–4 +2 S · 5–6 +1 AP\" (Wahapedia the same). The six picks are every outcome: one band (one D6, or two D6 in the same band) and each pair of different bands, with the table’s numbers. It is optional (\"you can use this ability\"), so unticked is right, and the hazard roll is in the words (it changes no attack numbers)."
+ },
  "b4ed6cf83739211a": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -4978,6 +5044,12 @@
   "by": "review:r7-text",
   "at": "2026-10-17",
   "why": "Source (New Recruit, shooty.txt line 234): the table heading reads \"Throttlerokkit Shokka Engine Description\" above Turbo Engine, Pulse Jet and Shokk Attack Engine. Full Throttle (line 232) calls them \"one Throttlerokkit Shokka Engine ability\". \"Throttlerokkit Shokka Engine\" is that heading, copied with nothing added; dropping \"pick one\" removed the app's own summary. models \"1× Wazdakka Gutsmek\" matches \"1x Wazdakka Gutsmek\" (line 219)."
+ },
+ "b596bae444898bfa": {
+  "verdict": "ok",
+  "by": "review:r14-calc",
+  "at": "2026-10-21",
+  "why": "\"ranged weapons equipped by models in your unit have a Ballistic Skill characteristic of 3+ and the [IGNORES COVER] ability, but they can only target units within range of the selected objective marker.\" calc {set:{BS:'3+'}, ignoresCover:true} matches (Wahapedia the same); the target restriction stays in the words on a stratagem box the player ticks."
  },
  "b60342db49b96b36": {
   "verdict": "ok",
@@ -5098,6 +5170,12 @@
   "by": "review:m1-strats",
   "at": "2026-10-18",
   "why": "WHEN and TARGET: “ORKS MOUNTED/VEHICLE unit”. That gives Orks, plus any of Mounted or Vehicle. text: same as Wahapedia word for word."
+ },
+ "bb1c2cc902abc7c6": {
+  "verdict": "ok",
+  "by": "review:r14-calc",
+  "at": "2026-10-21",
+  "why": "\"each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the Wound roll.\" {woundMinusSgt:1} is exactly that (S after modifiers against the unit’s T, as calc.js plan does). It is your opponent’s Shooting phase only."
  },
  "bb65b1a5937be342": {
   "verdict": "ok",
@@ -5243,6 +5321,12 @@
   "at": "2026-10-16",
   "why": "\"this PSYKER model\" = the Sorcerer in Terminator Armour."
  },
+ "bf9ef6e10673785e": {
+  "verdict": "ok",
+  "by": "review:r14-calc",
+  "at": "2026-10-21",
+  "why": "\"Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability\" (Wahapedia the same). defCalc {fnp:5} matches; the pick and position are the table’s, so it is unticked (no defAlways). The OC 15 is in the words only, which is fine because it changes no attack numbers."
+ },
  "bffec4d6d92e83f7": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -5374,6 +5458,12 @@
   "by": "review:m5-recheck",
   "at": "2026-10-20",
   "why": "NR prints 'More Dakka - Big Mek' (l.129); BSData links the shared More Dakka profile to the Big Mek model. Models match NR."
+ },
+ "c4f5aa59356597eb": {
+  "verdict": "ok",
+  "by": "review:r14-calc",
+  "at": "2026-10-21",
+  "why": "\"each time a model in your unit makes an attack, if there are no other friendly units within 9\" of your unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.\" calc {rrHit:'1s', rrWound:'1s'} matches (Wahapedia the same); the 9\" condition is in the when, on a stratagem box that is never ticked."
  },
  "c514ca2c6c836281": {
   "verdict": "ok",
@@ -5584,6 +5674,12 @@
   "by": "review:r9-we-nids",
   "at": "2026-10-21",
   "why": "NR (princes p4) Categories: \"Exalted Eightbound*, *from combined unit\", and the Slaughterbound is \"Leading: Exalted Eightbound\"."
+ },
+ "cd599e8a5745cd2b": {
+  "verdict": "ok",
+  "by": "review:r14-calc",
+  "at": "2026-10-21",
+  "why": "\"Protector Protocol: Add 2 to the Attacks characteristic of ranged weapons equipped by KASTELAN ROBOT models in that unit.\" The Kastelans’ only ranged weapon here is the Incendine combustor; set {A:'+2'} (D6+2) with calc {} matches, and the protocol is the player’s choice, so unticked."
  },
  "cd719f1c325aad43": {
   "verdict": "ok",
@@ -5957,6 +6053,18 @@
   "at": "2026-10-21",
   "why": "Same as Wahapedia's current EFFECT (\"Until the end of the phase, all attacks made against your unit with Psychic weapons have the [hazardous] ability and all models in your unit have the Feel No Pain 4+ ability against Psychic Attacks\") with only \"all\" dropped."
  },
+ "dc98fcec80c15c27": {
+  "verdict": "ok",
+  "by": "review:r14-calc",
+  "at": "2026-10-21",
+  "why": "\"Until the start of your next Command phase, models in your unit have the Feel No Pain 6+ ability, which is improved to Feel No Pain 5+ against mortal wounds.\" {fnp:6, fnpMortal:5} matches, and it lasts into the opponent’s turn (dmLasts round)."
+ },
+ "dc995d8fa8d6fc09": {
+  "verdict": "ok",
+  "by": "review:r14-calc",
+  "at": "2026-10-21",
+  "why": "\"each time an attack targets either your SMOKE unit, or a unit that is not fully visible … because of … your SMOKE unit, the target has the benefit of cover against that attack (13.08).\" {cover:true} gives the SMOKE unit cover against ranged attacks, which is exactly the first case; the second case (another unit behind it) is not offered and adds nothing, so the player uses the cover box."
+ },
  "dcea0c4de8648e46": {
   "verdict": "ok",
   "by": "review:m5-recheck",
@@ -6082,6 +6190,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "\"Friendly GRETCHIN units have BATTLELINE\" / \"a friendly GRETCHIN unit\": GRETCHIN only. Zodgrod's attached unit qualifies by 19.03."
+ },
+ "e03e0d4c817053e9": {
+  "verdict": "ok",
+  "by": "review:r14-calc",
+  "at": "2026-10-21",
+  "why": "\"Conqueror Protocol: Add 2 to the Attacks characteristic of melee weapons equipped by KASTELAN ROBOT models in that unit.\" The Twin Kastelan fist is their only melee weapon; set {A:'+2'} with calc {} matches, and it is unticked as a choice."
  },
  "e04dadbec35357f3": {
   "verdict": "ok",
@@ -6694,6 +6808,12 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "WHEN: “Your Shooting phase.”"
+ },
+ "f7bf31d0c7d7834e": {
+  "verdict": "ok",
+  "by": "review:r14-calc",
+  "at": "2026-10-21",
+  "why": "\"Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability.\" calc {sus:'D3', weapon:'Dark Blessing'} matches, the calculator keeps the better of it and the printed [SUSTAINED HITS 1] (24.02), and \"How this is worked out\" says how the D3 is rolled. The aetherstride is a table choice, so unticked."
  },
  "f7edc8fe54408e7f": {
   "verdict": "ok",
