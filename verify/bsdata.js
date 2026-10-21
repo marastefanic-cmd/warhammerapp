@@ -292,7 +292,7 @@ function scopeSels(scope, sel) {
     case 'root-entry': return sel.node ? [sel.root] : [sel];
     case 'ancestor': return sel.ancestors().filter((s) => s.node);
     case 'model': case 'model-self': { const s = nearest(sel, (x) => x.node.type === 'model'); return s ? [s] : []; }
-    case 'unit': { const s = nearest(sel, (x) => x.node.type === 'unit'); return s ? [s] : []; }
+    case 'unit': case 'unit-self': { const s = nearest(sel, (x) => x.node.type === 'unit'); return s ? [s] : []; }
     case 'upgrade': { const s = nearest(sel, (x) => x.node.type === 'upgrade'); return s ? [s] : []; }
     case 'model-or-unit': case 'model-or-unit-self': { const s = nearest(sel, (x) => x.node.type === 'model' || x.node.type === 'unit'); return s ? [s] : []; }
     case 'force': return [CTX.force];
@@ -486,6 +486,13 @@ function addInfo(s, id, from) {
 function selHidden(sel) {
   let h = sel.node.hidden;
   for (const { m, outer } of flatMods(sel.node)) if (!m.affects && m.field === 'hidden' && timesActive(m, outer, sel)) h = m.value === true || m.value === 'true';
+  return h;
+}
+// a category entry hidden by its own modifiers is not a keyword of the unit (Recon Augury: hidden unless the
+// army has the Cohort Acquisitus detachment)
+function catHidden(ce, sel) {
+  let h = !!ce.hidden;
+  for (const { m, outer } of flatMods(ce)) if (!m.affects && m.field === 'hidden' && timesActive(m, outer, sel)) h = m.value === true || m.value === 'true';
   return h;
 }
 function costOf(sel) {                 // pts of this selection (entry cost × count, modifiers applied)
@@ -754,7 +761,7 @@ function unitFacts(roots) {
   const all = []; for (const r of roots) for (const s of r.desc(true)) all.push(s);
   for (const s of all) {
     if (s.hidden) continue;
-    for (const c of s.cats) { const ce = SRC.get(c); if (ce && !ce.hidden) { F.cats.add(nn(ce.name)); F.catWhere[nn(ce.name)] = s.where(); } }
+    for (const c of s.cats) { const ce = SRC.get(c); if (ce && !catHidden(ce, s)) { F.cats.add(nn(ce.name)); F.catWhere[nn(ce.name)] = s.where(); } }
     const isWeapon = s.profiles.some((p) => WEAPON_TYPES.includes(p.typeName));
     for (const p of s.profiles) {
       if (p.hidden) continue;

@@ -52,5 +52,14 @@
   "source": "Rules Updates \"Change to:\": while a friendly tyranidsunit is within 6\" of this model, ranged weapons equipped by models in that unit have the [assault] and [lethal hits] abilities. | differs at \"…while a friendly tyranids[ unit is within 6\" of this model, ranged…]\" vs source \"…while a friendly tyranids[unit is within 6\" of this model, ranged …]\"",
   "reason": "Typo in the Faction Pack: \"TYRANIDSunit\" has no space; the app writes \"TYRANIDS unit\". Every other word is the pack's.",
   "evidence": "GW Faction Pack Tyranids v1.3 PDF p20, Rules Updates, Hive Tyrant, Onslaught Ability (verify/.cache/gw/eng_14-10_wh40k_faction_pack_tyranids-an12izciwp-np2hnkcsje.txt line 665: \"‘While a friendly TYRANIDSunit is within 6\" of this model, ranged\"): pdftotext -bbox gives one word box \"TYRANIDSunit\" (x 101.2-147.9), where \"TYRANIDS\" alone is 33.2pt wide on the same page (x 119.4-152.6). New Recruit prints \"friendly TYRANIDS unit\" (verify/sources/nr/nidzillas.txt p3)."
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "unit": "thulia-ghuld",
+  "field": "ability:Rod of the War Forge",
+  "app": "In your Command phase, select one of the abilities in the Icon of War section. Until the start of your next Command phase, this model has that ability.",
+  "source": "…matches up to \"the abilities in the icon of war section\" then source has: \" (see next page). until the start of your next command phase, this model has that ability. mechanicus bodyguard: while t\"",
+  "reason": "Layout cross-reference. GW's Faction Pack prints Icon of War on the page after Thulia Ghuld's profile, so Rod of the War Forge says \"the Icon of War section (see next page)\"; Wahapedia copies the words. In the app Icon of War is the first ability of the same datasheet, so the app keeps New Recruit's (BSData's) text, which has no \"(see next page)\". Every other word is the pack's. The app leaves \"(see next page)\" out: the app has no pages, and Icon of War is shown on the same datasheet.",
+  "evidence": "GW Faction Pack Adeptus Mechanicus v1.4 PDF p9 (verify/.cache/gw/eng_14-10_wh40k_-faction_pack_adeptus-mechanicus-g0jwiuyz3x-f5itnst9j9.txt lines 439-443): \"Rod of the War Forge: In your Command phase, select one of the abilities in the Icon of War section (see next page). Until the start of your next Command phase, this model has that ability.\"; Icon of War is on p10 (lines 470-483); Wahapedia Thulia Ghuld datasheet (verify/.cache/waha/ds/adeptus-mechanicus_Thulia-Ghuld.html) prints the same; New Recruit (verify/sources/nr/purge-goes-the-foe.txt lines 154-155): \"In your Command phase, select one of the abilities in the Icon of War section. Until the start of your next Command phase, this model has that ability.\""
  }
 ]

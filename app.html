@@ -2103,7 +2103,9 @@ function shortWhen(x){
 const onceTag = ab => {
   if(/^(once|twice) per /i.test(ab.tag || '')) return ab.tag.replace(/ · .*$/, '');   // as BSData prints it
   const t = ab.text || '', army = /\bone (model|unit) from your army with this ability\b/i.test(t);
-  for(const src of [ab.tag || '', (/\((once per [^)]+)\)/i.exec(t) || [])[1] || '', (/^once per [^,.]+(, per (army|unit))?/i.exec(t) || [])[0] || '']){
+  // an enhancement's text starts with its restriction ("**TECH-PRIEST** model only. Once per battle round, …")
+  const t1 = t.replace(/^\*\*[^*]+\*\* model only( \([^)]*\))?\. /i, '');
+  for(const src of [ab.tag || '', (/\((once per [^)]+)\)/i.exec(t) || [])[1] || '', (/^once per [^,.]+(, per (army|unit))?/i.exec(t1) || [])[0] || '']){
     const m = /once per (battle round|battle|phase|turn)(, per (army|unit))?/i.exec(src);
     if(m) return m[0].replace(/^o/, 'O') + (!m[2] && army ? ', per army' : '');
   }
@@ -2132,7 +2134,8 @@ function abilityList(abs, u, suffix){
 // ph: only what works in that phase (a Fight-phase stratagem isn't offered against shooting)
 function defenceItems(u, ph){
   const out = [];
-  for(const r of u.rules){ const m = /^feel no pain (\d\+)/i.exec(r); if(m) out.push({ t:'Feel No Pain ' + m[1], a:'rule', v:r }); }
+  // a Feel No Pain only one model has (Robotic Bodyguard: the Datasmith, not the robots) is said by that ability's own line
+  for(const r of u.rules){ const m = /^feel no pain (\d\+)/i.exec(r); if(m && !u.abilities.some(ab => ab.def && ab.def.includes('Feel No Pain ' + m[1]))) out.push({ t:'Feel No Pain ' + m[1], a:'rule', v:r }); }
   for(const r of unitDetRules(u)) if(r.def && !out.some(x => x.t === r.def)) out.push({ t:r.def, a:'rule', v:r.name });   // e.g. Knights of Legend: FNP 6+
   for(const ab of u.abilities) if(ab.def && !naReason(ab) && !(ph && ab.defPh && !ab.defPh.includes(ph))) out.push({ t:ab.def, a:'ability', v:abilityKey(ab) });
   for(const s of allStratagems()) if(s.def && eligible(s).includes(u) && !(ph && !s.phases.includes(ph))) out.push({ t:s.cp + 'CP ' + s.name + ': ' + s.def, a:'strat', v:s.id });

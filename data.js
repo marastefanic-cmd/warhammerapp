@@ -749,9 +749,9 @@ const FACTIONS = {
   },
   'adeptus-mechanicus': {
     name: 'Adeptus Mechanicus',
-    // words players use for a rule that has another name: none yet (an alias is a judgement to sign off; New Recruit
-    // prints the Cohort Cybernetica rule as "Cyber Psalm-Programming", for the list import to resolve)
-    aliases: [],
+    // words players use for a rule that has another name: New Recruit (BSData) prints the Cohort Cybernetica rule as
+    // "Cyber Psalm-Programming" (its glossary in purge-goes-the-foe, p11); GW's Faction Pack spells it "Cyber-psalm Programming"
+    aliases: [[/^cyber psalm-programming$/i, 'Cyber-psalm Programming']],
     // Wahapedia, Adeptus Mechanicus, Army Rules: Doctrina Imperatives is its only army rule (Crusade and Boarding Actions rules left out).
     // The two Imperatives are the Rules Updates' wording in GW's Faction Pack v1.4 (legal from 14 Oct 2026), PDF p17,
     // the same words as Wahapedia's main text; the table is the two Imperatives (name, then their bullet points).
@@ -770,7 +770,10 @@ const FACTIONS = {
         // in the Faction Pack v1.4, PDF p17 ("Cyber-psalm Programming", the pack's spelling), the same words as Wahapedia's main text.
         // No ph: its words name no phase or moment. New Recruit's Move values already include its +2" (BSData: Kastelan Robot
         // and Cybernetica Datasmith M 6", New Recruit 8"); its +1 OC is not in them.
+        // statNote: the +1 OC under the unit's stats, as New Recruit's OC does not include it (one line for every profile:
+        // no {OC+1} value, a unit can have two OC values)
         rule:{ name:'Cyber-psalm Programming', needs:{ all:['Legio Cybernetica'] },
+          statNote:{ text:'OC +1 for each model unless Battle-shocked, not in the OC above' },
           text:'Add 2" to the Move characteristic of models in **LEGIO CYBERNETICA** units from your army. In addition, unless that unit is **Battle-shocked**, add 1 to the Objective Control characteristic of models in that unit.' },
         // pts from Wahapedia, matching BSData
         enhancements:[
@@ -3202,10 +3205,19 @@ const ARMIES = [
         { name:'Mechadendrite hive', range:'Melee', A:'2D6', WS:'3+', S:'4', AP:'0', D:'1', kw:['EXTRA ATTACKS'] }
       ],
       abilities:[
-        { name:'Canticles of the Omnissiah', text:'At the start of your Command phase, select one of the abilities in the Canticles of the Omnissiah section. Until the start of your next Command phase, this model has that ability. Invocation of Machine Vengeance (Aura): At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Machine Vengeance target. Each time a model in a friendly Adeptus Mechanicus unit makes an attack that targets your Machine Vengeance target, you can re-roll the Hit roll. Mantra of Discipline: This model has the Battleline keyword and has the following ability: Binharic Courage (Aura): While a friendly Adeptus Mechanicus unit is within 6" of this model, add 1 to the Objective Control characteristic of models in that unit and each time you take a Battle-shock or Leadership test for that unit, add 1 to that test.’ Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6" of this model, that unit has the Stealth ability.' },
-        { name:'Mechanicus Bodyguard', text:'While this model is within 3" of one or more other friendly **ADEPTUS MECHANICUS** units, this model has the **Lone Operative** ability.' },
-        { name:'Self-repair Mechanisms', text:'At the start of your Command phase, this model regains up to D3 lost wounds.' },
+        // New Recruit prints the ability and the Canticles of the Omnissiah section as one text. The words are the Rules
+        // Updates' in GW's Faction Pack v1.4 (PDF p17: Canticles, Invocation of Machine Vengeance, Mantra of Discipline,
+        // Shroudpsalm), with Wahapedia's markup and layout; New Recruit's "(Aura)" after Invocation of Machine Vengeance and
+        // its quote mark after "add 1 to that test." are not in them (deviations-nr.json, deviations-bsdata.json)
+        { name:'Canticles of the Omnissiah', ph:['command'], turn:'your', text:'At the start of your Command phase, select one of the abilities in the Canticles of the Omnissiah section. Until the start of your next Command phase, this model has that ability.\n**Invocation of Machine Vengeance:** At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Machine Vengeance target. Each time a model in a friendly **ADEPTUS MECHANICUS** unit makes an attack that targets your Machine Vengeance target, you can re-roll the **Hit roll**.\n**Mantra of Discipline:** This model has the **BATTLELINE** keyword and has the following ability:\n- **Binharic Courage (Aura):** While a friendly **ADEPTUS MECHANICUS** unit is within 6" of this model, add 1 to the Objective Control characteristic of models in that unit and each time you take a Battle-shock or **Leadership test** for that unit, add 1 to that test.\n**Shroudpsalm (Aura):** While a friendly **ADEPTUS MECHANICUS** unit is within 6" of this model, that unit has the **Stealth** ability.' },
+        { name:'Mechanicus Bodyguard', def:'Lone Operative while within 3" of another friendly ADEPTUS MECHANICUS unit', text:'While this model is within 3" of one or more other friendly **ADEPTUS MECHANICUS** units, this model has the **Lone Operative** ability.' },
+        { name:'Self-repair Mechanisms', ph:['command'], turn:'your', text:'At the start of your Command phase, this model regains up to D3 lost wounds.' },
         { name:'Supreme Commander', text:'If this model is in your army, it must be your Warlord.' }
+      ],
+      // what Belisarius Cawl gives other units: the Invocation of Machine Vengeance canticle (Binharic Courage's OC and
+      // test bonus and Shroudpsalm's Stealth change no attacks)
+      aura:[
+        { kind:'all', needs:{ all:['Faction: Adeptus Mechanicus'] }, when:'If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target', selfWhen:'If he has Invocation of Machine Vengeance, vs your Machine Vengeance target', note:'can re-roll the hit roll', from:'Canticles of the Omnissiah' }
       ],
       rules:['Doctrina Imperatives','Anti','Devastating Wounds','Extra Attacks','Blast','Melta'],
       kw:['Belisarius Cawl','Character','Cult Mechanicus','Epic Hero','Faction: Adeptus Mechanicus','Imperium','Mobile','Monster','Tech-Priest','Warlord']
@@ -3226,11 +3238,15 @@ const ARMIES = [
         { group:'Rod of the War Forge', name:'sweep', range:'Melee', A:'12', WS:'2+', S:'6', AP:'-1', D:'1', kw:[] }
       ],
       abilities:[
-        { name:'Icon of War', text:'**Fanatical Devotion:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Advanced.\n**Adaptive Tactics:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Fell Back.\n**The Fires of Mars:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for that unit.' },
-        { name:'Mechanicus Bodyguard', text:'While this model is within 3" of one or more other friendly **ADEPTUS MECHANICUS** units, this model has the **Lone Operative** ability.' },
-        { name:'Secutor of Olympus', text:'At the start of your Shooting phase, select one enemy **VEHICLE** unit within 12" of this model and roll one D6: on a 2+, that enemy unit suffers D3+1 **mortal wounds**.' },
+        // the three abilities Rod of the War Forge selects from: shooting and declaring a charge after an Advance or a
+        // Fall Back (your Shooting and Charge phases), and both Imperatives (attacks in either player's Fight phase too)
+        { name:'Icon of War', ph:['shooting','charge','fight'], turn:'your', turns:{ fight:'either' }, text:'**Fanatical Devotion:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Advanced.\n**Adaptive Tactics:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Fell Back.\n**The Fires of Mars:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for that unit.' },
+        { name:'Mechanicus Bodyguard', def:'Lone Operative while within 3" of another friendly ADEPTUS MECHANICUS unit', text:'While this model is within 3" of one or more other friendly **ADEPTUS MECHANICUS** units, this model has the **Lone Operative** ability.' },
+        { name:'Secutor of Olympus', ph:['shooting'], turn:'your', text:'At the start of your Shooting phase, select one enemy **VEHICLE** unit within 12" of this model and roll one D6: on a 2+, that enemy unit suffers D3+1 **mortal wounds**.' },
         { name:'Supreme Commander', text:'If this model is in your army, it must be your Warlord.' },
-        { name:'Rod of the War Forge', text:'In your Command phase, select one of the abilities in the Icon of War section. Until the start of your next Command phase, this model has that ability.' }
+        // New Recruit's words; GW's Faction Pack and Wahapedia add "(see next page)" after "section", pointing at the
+        // pack's next page, where Icon of War is printed (here it is the first ability above) (deviations-texts.json)
+        { name:'Rod of the War Forge', ph:['command'], turn:'your', text:'In your Command phase, select one of the abilities in the Icon of War section. Until the start of your next Command phase, this model has that ability.' }
       ],
       rules:['Doctrina Imperatives','Blast','Sustained Hits','Devastating Wounds'],
       kw:['Character','Cult Mechanicus','Epic Hero','Faction: Adeptus Mechanicus','Imperium','Mobile','Monster','Tech-Priest','Thulia Ghuld']
@@ -3250,8 +3266,16 @@ const ARMIES = [
         { name:'Servo arm', range:'Melee', A:'1', WS:'4+', S:'6', AP:'-2', D:'2', kw:['EXTRA ATTACKS'] }
       ],
       abilities:[
-        { name:'Enginseer', text:'While this model is within 3" of one or more friendly **ADEPTUS MECHANICUS VEHICLE** units, unless it is leading a unit, this model has the **Lone Operative** ability.' },
-        { name:'Omnissiah’s Blessing Vengeance for the Omnissiah Necromechanic', text:'In your Command phase, select one friendly Adeptus Mechanicus model within 3" of this model. That model regains up to D3 lost wounds and, if it is a Vehicle model, until the start of your next Command phase, that model has the Feel No Pain 5+ ability. Each model can only be selected for this ability once per Command phase If a friendly Adeptus Mechanicus Vehicle model is destroyed within 12" of this model, until the end of the battle, this model’s Omnissian axe has an Attacks characteristic of 6. Once per battle round, when a saving throw made for a friendly Legio Cybernetica or Adeptus Mechanicus Vehicle model within 12" of the bearer is failed, the bearer can use this Enhancement. If they do, change the Damage characteristic of that attack to 0.' }
+        { name:'Enginseer', def:'Lone Operative while within 3" of a friendly ADEPTUS MECHANICUS VEHICLE unit, unless it is leading a unit', text:'While this model is within 3" of one or more friendly **ADEPTUS MECHANICUS VEHICLE** units, unless it is leading a unit, this model has the **Lone Operative** ability.' },
+        // Wahapedia's datasheet wording; New Recruit (BSData) has no full stop at the end (deviations-nr.json)
+        { name:'Omnissiah’s Blessing', ph:['command'], turn:'your', text:'In your Command phase, select one friendly **ADEPTUS MECHANICUS** model within 3" of this model. That model regains up to D3 lost wounds and, if it is a **VEHICLE** model, until the start of your next Command phase, that model has the **Feel No Pain 5+** ability. Each model can only be selected for this ability once per Command phase.' },
+        { name:'Vengeance for the Omnissiah', text:'If a friendly **ADEPTUS MECHANICUS VEHICLE** model is destroyed within 12" of this model, until the end of the battle, this model’s Omnissian axe has an Attacks characteristic of 6.' },
+        // the Cohort Cybernetica enhancement as data.js has it; New Recruit leaves out "TECH-PRIEST model only." (deviations-nr.json)
+        { name:'Necromechanic', tag:'Enhancement', text:'**TECH-PRIEST** model only. Once per battle round, when a saving throw made for a friendly **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** model within 12" of the bearer is failed, the bearer can use this Enhancement. If they do, change the Damage characteristic of that attack to 0.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'melee', weapon:'Omnissian axe', set:{ A:'6' }, when:'After a friendly ADEPTUS MECHANICUS VEHICLE model is destroyed within 12" of it', note:'until the end of the battle', from:'Vengeance for the Omnissiah' }
       ],
       rules:['Leader','Doctrina Imperatives','Devastating Wounds','Pistol','Extra Attacks'],
       kw:['Character','Cult Mechanicus','Enginseer','Faction: Adeptus Mechanicus','Imperium','Infantry','Tech-Priest']
@@ -3274,22 +3298,30 @@ const ARMIES = [
         { name:'Twin Kastelan fist', who:'Kastelan Robots', n:4, range:'Melee', A:'4', WS:'4+', S:'12', AP:'-2', D:'3', kw:['TWIN-LINKED'] }
       ],
       abilities:[
-        { name:'Battle Protocols', who:'Cybernetica Datasmith', text:'At the start of the battle, if this model is leading a **KASTELAN ROBOTS** unit, that unit enters Aegis Protocols (see below). In your Command phase, if this model is leading a **KASTELAN ROBOTS** unit, you can select one protocol from those listed below for that unit to enter. Once a unit enters a protocol, it remains in that protocol until it enters a different one.\n- **Protector Protocol:** Add 2 to the Attacks characteristic of ranged weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Conqueror Protocol:** Add 2 to the Attacks characteristic of melee weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Aegis Protocol:** Add 1 to the Toughness characteristic of **KASTELAN ROBOT** models in that unit.' },
-        { name:'Data-severed', who:'Cybernetica Datasmith', text:'If there are no KASTELAN ROBOT models in this unit: This unit loses VEHICLE. This unit has INFANTRY.' },
+        { name:'Battle Protocols', who:'Cybernetica Datasmith', ph:['command'], turn:'your', def:'Aegis Protocol: KASTELAN ROBOT models +1 Toughness (from the start of the battle until another protocol is selected)', text:'At the start of the battle, if this model is leading a **KASTELAN ROBOTS** unit, that unit enters Aegis Protocols (see below). In your Command phase, if this model is leading a **KASTELAN ROBOTS** unit, you can select one protocol from those listed below for that unit to enter. Once a unit enters a protocol, it remains in that protocol until it enters a different one.\n- **Protector Protocol:** Add 2 to the Attacks characteristic of ranged weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Conqueror Protocol:** Add 2 to the Attacks characteristic of melee weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Aegis Protocol:** Add 1 to the Toughness characteristic of **KASTELAN ROBOT** models in that unit.' },
+        // Wahapedia's markup and bullets (BSData and GW's Faction Pack, PDF p17, print the two bullets too)
+        { name:'Data-severed', who:'Cybernetica Datasmith', text:'If there are no **KASTELAN ROBOT** models in this unit:\n- This unit loses **VEHICLE**.\n- This unit has **INFANTRY**.' },
         { name:'Martial Signatum Amplificator', who:'Cybernetica Datasmith', tag:'Enhancement', text:'**TECH-PRIEST** model only. Models in the bearer’s unit have the **SKITARII** keyword.' },
-        { name:'Robotic Bodyguard', who:'Kastelan Robots', text:'While a **CYBERNETICA DATASMITH** model is leading this unit, that model has the **Feel No Pain** 4+ ability.' },
-        { name:'Repulsor Grid', who:'Kastelan Robots', text:'When an enemy unit targets this unit with ranged attacks, until that enemy unit has shot, when this unit makes a save roll: On an unmodified 6, that enemy unit suffers 1 mortal wound after that enemy unit has shot.' }
+        { name:'Robotic Bodyguard', who:'Kastelan Robots', def:'Cybernetica Datasmith only: Feel No Pain 4+ while leading this unit', text:'While a **CYBERNETICA DATASMITH** model is leading this unit, that model has the **Feel No Pain** 4+ ability.' },
+        // GW's Faction Pack v1.4 Rules Update wording (PDF p17), with Wahapedia's markup
+        { name:'Repulsor Grid', who:'Kastelan Robots', def:'Ranged attacks: each unmodified 6 on its save rolls, 1 mortal wound to the attacking unit after it has shot', text:'When an enemy unit targets this unit with ranged attacks, until that enemy unit has shot, when this unit makes a **save roll**:\n- On an unmodified 6, that enemy unit suffers 1 **mortal wound** after that enemy unit has shot.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'ranged', weapon:'Incendine combustor', set:{ A:'+2' }, when:'In Protector Protocol', note:'selected in your Command phase', from:'Battle Protocols' },
+        { kind:'melee', weapon:'Twin Kastelan fist', set:{ A:'+2' }, when:'In Conqueror Protocol', note:'selected in your Command phase', from:'Battle Protocols' }
       ],
       rules:['Support','Doctrina Imperatives','Feel No Pain 4+','Devastating Wounds','Pistol','Deadly Demise 1','Twin-linked','Ignores Cover','Torrent'],
       kw:['Character','Cybernetica Datasmith','Faction: Adeptus Mechanicus','Imperium','Legio Cybernetica','Skitarii','Tech-Priest','Vehicle','Kastelan Robots','Walker'],
-      kwNote:'Kastelan Robots, Walker come from the supported Kastelan Robots.'
+      kwNote:'Kastelan Robots, Walker come from the supported Kastelan Robots; Skitarii from the Martial Signatum Amplificator.'
     },
     {
       id:'skitarii-rangers', name:'Skitarii Rangers', role:'Battleline', pts:85, copies:2,
       models:['1× Skitarii Ranger Alpha','1× Skitarii Ranger w/ arc rifle','1× Skitarii Ranger w/ plasma caliver','1× Skitarii Ranger w/ transuranic arquebus','1× Skitarii Ranger w/ omnispex (Omnispex)','5× Skitarii Ranger w/ galvanic rifle'],
       gear:[['Alpha combat weapon','Close combat weapon','Galvanic rifle'],['Arc rifle','Close combat weapon'],['Close combat weapon','Plasma caliver'],['Close combat weapon','Transuranic arquebus'],['Close combat weapon','Galvanic rifle'],['Close combat weapon','Galvanic rifle']],
       stats:[
-        { name:'Skitarii Rangers ×2', M:'6"', T:'3', Sv:'4+', W:'1', Ld:'7+', OC:'2', InSv:'5+', base:'25mm' }
+        // New Recruit prints "Skitarii Rangers (x2)"; the unit's 10 models all have this profile (BSData ×10) (deviations-nr.json)
+        { name:'Skitarii Rangers ×10', M:'6"', T:'3', Sv:'4+', W:'1', Ld:'7+', OC:'2', InSv:'5+', base:'25mm' }
       ],
       ranged:[
         { name:'Galvanic rifle', n:7, range:'30"', A:'2', BS:'4+', S:'4', AP:'0', D:'1', kw:['IGNORES COVER'], from:{ 'IGNORES COVER':'Omnispex' } },
@@ -3303,8 +3335,12 @@ const ARMIES = [
         { name:'Close combat weapon', n:10, range:'Melee', A:'1', WS:'4+', S:'3', AP:'0', D:'1', kw:[] }
       ],
       abilities:[
-        { name:'Objective Scouted', text:'At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.' },
-        { name:'Omnispex', text:'Ranged weapons equipped by models in the bearer’s unit have the IGNORES COVER ability.' }
+        // Wahapedia's datasheet wording (11th edition: "Level of Control", as in Core Rules 14.02); New Recruit (BSData) still
+        // prints the codex wording "…even if you have no models within range of it, until your opponent controls it at the
+        // start or end of any turn." (deviations-nr.json, deviations-bsdata.json)
+        { name:'Objective Scouted', ph:['command'], turn:'your', text:'At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.' },
+        // already in the weapons' keywords (their IGNORES COVER is marked as from the Omnispex)
+        { name:'Omnispex', text:'Ranged weapons equipped by models in the bearer’s unit have the **IGNORES COVER** ability.' }
       ],
       rules:['Scouts 6"','Doctrina Imperatives','Rapid Fire','Anti','Devastating Wounds','Hazardous','Heavy','Precision'],
       kw:['Battleline','Faction: Adeptus Mechanicus','Imperium','Infantry','Rangers','Skitarii']
@@ -3323,7 +3359,7 @@ const ARMIES = [
         { name:'Ironstrider feet', n:3, range:'Melee', A:'3', WS:'4+', S:'5', AP:'0', D:'1', kw:[] }
       ],
       abilities:[
-        { name:'Elevated Strider', text:'This unit is eligible to shoot in a turn in which it Fell Back or Advanced, and you can re-roll Desperate Escape tests taken for models in this unit.' },
+        { name:'Elevated Strider', ph:['movement','shooting'], turn:'your', text:'This unit is eligible to shoot in a turn in which it Fell Back or Advanced, and you can re-roll Desperate Escape tests taken for models in this unit.' },
         { name:'Broad Spectrum Data-tether', text:'Each time you select this unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.' }
       ],
       rules:['Deadly Demise 1','Doctrina Imperatives','Sustained Hits'],
@@ -3343,7 +3379,7 @@ const ARMIES = [
         { name:'Ironstrider feet', n:3, range:'Melee', A:'3', WS:'4+', S:'5', AP:'0', D:'1', kw:[] }
       ],
       abilities:[
-        { name:'Elevated Strider', text:'This unit is eligible to shoot in a turn in which it Fell Back or Advanced, and you can re-roll Desperate Escape tests taken for models in this unit.' },
+        { name:'Elevated Strider', ph:['movement','shooting'], turn:'your', text:'This unit is eligible to shoot in a turn in which it Fell Back or Advanced, and you can re-roll Desperate Escape tests taken for models in this unit.' },
         { name:'Broad Spectrum Data-tether', text:'Each time you select this unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.' }
       ],
       rules:['Deadly Demise 1','Doctrina Imperatives','Sustained Hits'],
@@ -3365,9 +3401,14 @@ const ARMIES = [
       ],
       abilities:[
         { name:'Emanatus Forcefield', tag:'Aura', text:'While a friendly **ADEPTUS MECHANICUS BATTLELINE** model is wholly within 6" of this model, that **BATTLELINE** model has a 4+ invulnerable save against ranged attacks.' },
-        { name:'Damaged: 1-4 wounds remaining', text:'While this mdel has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.' },
-        { name:'Scuttling Walker', text:'Each time this model makes a **Normal**, **Advance** or **Fall Back move**, it can move through friendly **MONSTER** and **VEHICLE** models and sections of **terrain features** that are 4" or less in height.' },
-        { name:'Broad spectrum data-tether', text:'The bearer loses the SMOKE keyword, but each time you target the bearer with a Stratagem, roll one D6: on a 5+, you gain 1CP.' }
+        // "mdel" in New Recruit and BSData; Wahapedia's datasheet has "model" (deviations-nr.json, deviations-bsdata.json)
+        { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' },
+        { name:'Scuttling Walker', ph:['movement'], turn:'your', text:'Each time this model makes a **Normal**, **Advance** or **Fall Back move**, it can move through friendly **MONSTER** and **VEHICLE** models and sections of **terrain features** that are 4" or less in height.' },
+        { name:'Broad spectrum data-tether', text:'The bearer loses the **SMOKE** keyword, but each time you target the bearer with a **Stratagem**, roll one D6: on a 5+, you gain 1CP.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining' }
       ],
       rules:['Deadly Demise D3','Doctrina Imperatives','Rapid Fire','Sustained Hits','Ignores Cover','Twin-linked'],
       kw:['Faction: Adeptus Mechanicus','Imperium','Onager Dunecrawler','Skitarii','Vehicle','Walker']
@@ -3390,7 +3431,12 @@ const ARMIES = [
       abilities:[
         { name:'Broad spectrum data-tether', text:'Each time you select the bearer as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.' },
         { name:'Blistering Salvoes', text:'Each time this model makes an attack with a belleros energy cannon that targets an **INFANTRY** unit, add 1 to the **Hit roll**. Each time this model makes an attack with a ferrumite cannon that targets a **MONSTER** or **VEHICLE** unit, add 1 to the Hit roll.' },
-        { name:'Damaged: 1-4 wounds remaining', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.' }
+        { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables (it has no belleros energy cannon)
+      mods:[
+        { kind:'ranged', weapon:'Ferrumite cannon', when:'Ferrumite cannon vs MONSTER or VEHICLE targets', note:'+1 to hit rolls', from:'Blistering Salvoes' },
+        { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining' }
       ],
       rules:['Deadly Demise D3','Doctrina Imperatives','Rapid Fire','Sustained Hits','Twin-linked'],
       kw:['Faction: Adeptus Mechanicus','Frame','Imperium','Skitarii','Skorpius Disintegrator','Smoke','Vehicle']

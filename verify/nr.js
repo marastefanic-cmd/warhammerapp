@@ -171,6 +171,12 @@ function partitionRows(lines, who) {
     // gaps inside a name block: lines of a name are adjacent, or alternate with description lines
     for (let x = 1; x < L.length; x++) if (L[x] - L[x - 1] > 2) c += 2;
     for (let x = 1; x < R.length; x++) if (R[x] - R[x - 1] > 2) c += 2;
+    // ... and a name whose lines run together and also skip a line skips only a line set further in than the
+    // description column (a bullet, a centred one-line description); one that skips a line at the column is
+    // two names (Enginseer: "Omnissiah's / Blessing", then "Vengeance for the / Omnissiah" after a
+    // description line that ends without a full stop)
+    const gaps = L.slice(1).map((l, x) => l - L[x]);
+    if (gaps.includes(1) && gaps.includes(2) && lines.slice(a, b).some(x => !x.L && x.atCol && x.i > L[0] && x.i < L[L.length - 1])) c += 1;
     const name = joinLines(lines.slice(a, b).filter(x => x.L).map(x => x.L));
     c += cellPenalty(name, { who });
     // a name's "(…)" ("(Bondsman)", "(5+*)") comes after its words and before only another "(…)" or the
@@ -452,7 +458,7 @@ function parseTable(sec, who) {
   const pure = lines.filter(x => indentOf(x.t) > hdrCol + 6).map(x => indentOf(x.t));
   const descCol = Math.min(col2, ...pure);
   const rows = lines.map(({ i, t }) => {
-    if (indentOf(t) > hdrCol + 6) return { i, L: '', R: t.trim() };
+    if (indentOf(t) > hdrCol + 6) return { i, L: '', R: t.trim(), atCol: indentOf(t) === descCol };
     const s = splitAt(t, descCol);
     return { i, L: s.L, R: s.R };
   });

@@ -308,5 +308,69 @@
   "where": "verify/sources/nr/super-terminators.txt p4",
   "reason": "The upgrade’s official text starts with its restriction \"TERMINATOR SQUAD unit only.\" (the Butchers of Khorne enhancement in data.js, which verify/texts.js checks the unit’s text against); New Recruit’s (BSData’s) upgrade text leaves that sentence out.",
   "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.txt lines 104-108 (Butchers of Khorne): \"GORE-STAINED VETERANS UPGRADE … TERMINATOR SQUAD unit only. This unit’s melee attacks have +1 WS.\"; verify/.cache/waha/world-eaters.txt lines 389-390: \"- Gore-Stained VeteransUPGRADE 20 pts / **TERMINATOR SQUAD** unit only. This unit’s melee attacks have +1 **WS**.\". New Recruit prints it without: verify/sources/nr/super-terminators.txt line 127."
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "unit": "belisarius-cawl",
+  "field": "abilities[Canticles of the Omnissiah].text",
+  "app": "At the start of your Command phase, select one of the abilities in the Canticles of the Omnissiah section. Until the start of your next Command phase, this model has that ability. Invocation of Machine Vengeance: At the start of your Command phase, select one unit from your opponent's army. Until the start of your next Command phase, that enemy unit is your Machine Vengeance target. Each time a model in a friendly ADEPTUS MECHANICUS unit makes an attack that targets your Machine Vengeance target, you can re-roll the Hit roll. Mantra of Discipline: This model has the BATTLELINE keyword and has the following ability: Binharic Courage (Aura): While a friendly ADEPTUS MECHANICUS unit is within 6\" of this model, add 1 to the Objective Control characteristic of models in that unit and each time you take a Battle-shock or Leadership test for that unit, add 1 to that test. Shroudpsalm (Aura): While a friendly ADEPTUS MECHANICUS unit is within 6\" of this model, that unit has the Stealth ability.",
+  "source": "At the start of your Command phase, select one of the abilities in the Canticles of the Omnissiah section. Until the start of your next Command phase, this model has that ability. Invocation of Machine Vengeance (Aura): At the start of your Command phase, select one unit from your opponent's army. Until the start of your next Command phase, that enemy unit is your Machine Vengeance target. Each time a model in a friendly Adeptus Mechanicus unit makes an attack that targets your Machine Vengeance target, you can re-roll the Hit roll. Mantra of Discipline: This model has the Battleline keyword and has the following ability: Binharic Courage (Aura): While a friendly Adeptus Mechanicus unit is within 6\" of this model, add 1 to the Objective Control characteristic of models in that unit and each time you take a Battle-shock or Leadership test for that unit, add 1 to that test.' Shroudpsalm (Aura): While a friendly Adeptus Mechanicus unit is within 6\" of this model, that unit has the Stealth ability.",
+  "where": "verify/sources/nr/purge-goes-the-foe.txt p3",
+  "reason": "Official update newer than New Recruit, and a stray quote mark: GW's Adeptus Mechanicus Faction Pack v1.4 Rules Updates rewrite the Canticles of the Omnissiah ability and its three canticles; they name \"Invocation of Machine Vengeance\" without \"(Aura)\" (the pack has \"Shroudpsalm (Aura) Ability\" but \"Invocation of Machine Vengeance Ability\"; Wahapedia's datasheet has no \"(Aura)\" either), and New Recruit (BSData) copies the pack's closing quote mark after \"add 1 to that test.\" into the rule text. The app has the pack's words, without \"(Aura)\" and the quote mark. Every other word is the same.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_-faction_pack_adeptus-mechanicus-g0jwiuyz3x-f5itnst9j9.txt lines 722-749 (Rules Updates, Belisarius Cawl): \"▪ Invocation of Machine Vengeance Ability / Change to: ‘At the start of your Command phase, select one unit from your opponent’s army. …’\", \"▪ Mantra of Discipline Ability / Change to: ‘This model has the BATTLELINE keyword … add 1 to that test.’\", \"▪ Shroudpsalm (Aura) Ability\"; verify/.cache/waha/ds/adeptus-mechanicus_Belisarius-Cawl.html line 1526: \"Invocation of Machine Vengeance:</b> At the start of your …\"; verify/sources/nr/purge-goes-the-foe.txt lines 97 and 104: \"Invocation of Machine Vengeance (Aura): At the start of your Command phase, …\", \"…add 1 to that test.’\"."
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "unit": "tech-priest-enginseer",
+  "field": "abilities[Omnissiah's Blessing].text",
+  "app": "In your Command phase, select one friendly ADEPTUS MECHANICUS model within 3\" of this model. That model regains up to D3 lost wounds and, if it is a VEHICLE model, until the start of your next Command phase, that model has the Feel No Pain 5+ ability. Each model can only be selected for this ability once per Command phase.",
+  "source": "In your Command phase, select one friendly Adeptus Mechanicus model within 3\" of this model. That model regains up to D3 lost wounds and, if it is a Vehicle model, until the start of your next Command phase, that model has the Feel No Pain 5+ ability. Each model can only be selected for this ability once per Command phase",
+  "where": "verify/sources/nr/purge-goes-the-foe.txt p5",
+  "reason": "Typo in New Recruit and BSData (no full stop after \"once per Command phase\") that Wahapedia's datasheet does not have (BSData's other copy of this ability has it too); the app follows Wahapedia.",
+  "evidence": "verify/.cache/waha/ds/adeptus-mechanicus_Tech-priest-Enginseer.html line 1529: \"Each model can only be selected for this ability once per Command phase.\"; verify/sources/nr/purge-goes-the-foe.txt line 183: \"only be selected for this ability once per Command phase\" (no full stop; New Recruit's next ability starts on line 184)."
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "unit": "tech-priest-enginseer",
+  "field": "abilities[Necromechanic].text",
+  "app": "TECH-PRIEST model only. Once per battle round, when a saving throw made for a friendly LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model within 12\" of the bearer is failed, the bearer can use this Enhancement. If they do, change the Damage characteristic of that attack to 0.",
+  "source": "Once per battle round, when a saving throw made for a friendly Legio Cybernetica or Adeptus Mechanicus Vehicle model within 12\" of the bearer is failed, the bearer can use this Enhancement. If they do, change the Damage characteristic of that attack to 0.",
+  "where": "verify/sources/nr/purge-goes-the-foe.txt p5",
+  "reason": "The enhancement's published text starts with its restriction \"TECH-PRIEST model only.\" (the Cohort Cybernetica enhancement in data.js, which verify/texts.js checks the unit's text against); New Recruit (BSData) leaves that sentence out.",
+  "evidence": "verify/.cache/waha/adeptus-mechanicus.txt lines 300-301 (Cohort Cybernetica, Enhancements): \"TECH-PRIEST model only. Once per battle round, when a saving throw made for a friendly LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model within 12\\\" of the bearer is failed, …\"; verify/sources/nr/purge-goes-the-foe.txt lines 186-188: \"Once per battle round, when a saving throw made for a friendly Legio Cybernetica or …\"."
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "unit": "skitarii-rangers",
+  "field": "stats (rows)",
+  "app": [
+   "Skitarii Rangers x10"
+  ],
+  "source": [
+   "Skitarii Rangers x2"
+  ],
+  "where": "verify/sources/nr/purge-goes-the-foe.txt p6",
+  "reason": "New Recruit prints the stat row as \"Skitarii Rangers (x2)\", but every one of the unit's 10 models has this profile (its models lines: 1 Alpha, 1 arc rifle, 1 plasma caliver, 1 transuranic arquebus, 1 omnispex, 5 galvanic rifle); BSData counts 10 models with it. \"×2\" would read as two models, so the app shows ×10. (The list has two such units, but New Recruit prints the Gretchin's row of three units as \"(x10)\", per model.)",
+  "evidence": "verify/sources/nr/purge-goes-the-foe.txt line 207: \"Skitarii Rangers (x2)   6\\\"  3  4+  1  7+  2  5+  25mm\"; lines 200-205: \"1x Skitarii Ranger Alpha\" … \"5x Skitarii Ranger w/ galvanic rifle\"; verify/out/bsdata.json: BSData Skitarii Rangers ×10; verify/sources/nr/shooty.txt lines 382 and 386: \"GRETCHIN x3\", its row \"Gretchin (x10)\"."
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "unit": "skitarii-rangers",
+  "field": "abilities[Objective Scouted].text",
+  "app": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's Level of Control over that objective marker is greater than yours at the end of a phase.",
+  "source": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.",
+  "where": "verify/sources/nr/purge-goes-the-foe.txt p6",
+  "reason": "Official update newer than New Recruit: Wahapedia's 11th-edition datasheet words Objective Scouted with the Core Rules' level of control (\"until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase\", the Core Rules' wording for a secured objective, 14.02); New Recruit (BSData) still prints the codex wording (\"…even if you have no models within range of it, until your opponent controls it at the start or end of any turn\"), which ends at another moment. The app follows Wahapedia. (New Recruit prints the World Eaters' Objective Ravaged in the new wording.)",
+  "evidence": "verify/.cache/waha/ds/adeptus-mechanicus_Skitarii-Rangers.html line 1530: \"Objective Scouted: At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.\"; verify/.cache/waha/core.txt line 691 (14.02, secured objectives): \"…remains under their control – even once they no longer have any units within range of it – until their opponent’s level of control over that objective is greater than theirs at the end of a phase.\"; verify/sources/nr/purge-goes-the-foe.txt lines 222-226; verify/sources/nr/standard.txt lines 315-319 (Objective Ravaged)."
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "unit": "onager-dunecrawler",
+  "field": "abilities[Damaged: 1-4 wounds remaining].text",
+  "app": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+  "source": "While this mdel has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+  "where": "verify/sources/nr/purge-goes-the-foe.txt p9",
+  "reason": "Typo in New Recruit and BSData (\"this mdel\") that Wahapedia's datasheet does not have; the app has \"model\".",
+  "evidence": "verify/.cache/waha/ds/adeptus-mechanicus_Onager-Dunecrawler.html line 1532: \"While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.\"; verify/sources/nr/purge-goes-the-foe.txt line 299: \"While this mdel has 1-4 wounds remaining, …\"."
  }
 ]

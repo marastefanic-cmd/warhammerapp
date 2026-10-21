@@ -1181,6 +1181,23 @@ for (const a of D.armies) {
     }
   }
 }
+// "<datasheets> – Faction Abilities section" (or Core Abilities) "Add 'X'.": each of those datasheets in the lists has X
+// in its unit's rules list (Adeptus Mechanicus: Doctrina Imperatives on Belisarius Cawl, Cybernetica Datasmith, …)
+for (const a of D.armies) {
+  for (const e of UPD[a.faction].filter(x => x.section === 'DATASHEETS' && /abilities section$/.test(titleN(x)))) {
+    const m = /^Add ['‘]([^'’]+)['’]\.?$/.exec(e.instr); if (!m) continue;
+    const t = titleN(e);
+    for (const u of a.units) {
+      const names = [...new Set([u.name, ...(u.abilities || []).filter(ab => ab.who && !/: pick one$/.test(ab.who)).map(ab => ab.who)])];
+      for (const n of names) {
+        if (!new RegExp('(^|[ ,–-])' + nameN(n).replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(,| –| -|$)').test(t)) continue;
+        usedUpdates.add(e); count('packUpdate');
+        prov.push({ item: a.id + ' / ' + u.id + ' / rules', field: 'rules', doc: e.d.label, file: e.d.file, sha256: e.d.sha256, where: e.where });
+        if (!(u.rules || []).some(r => norm(r) === norm(m[1]))) fail('packUpdate', a.id, u.id, 'rules (' + n + ')', (u.rules || []).join(', '), 'Rules Updates: "' + e.instr + '"', e.where);
+      }
+    }
+  }
+}
 // weapon abilities the Rules Updates rewrite ("Norn Assimilator, [HARPOONED] Weapon Ability") are core-rule entries in the app
 for (const fk of FACTIONS) for (const e of UPD[fk]) {
   const m = /\[([^\]]+)\] weapon ability$/.exec(titleN(e));
