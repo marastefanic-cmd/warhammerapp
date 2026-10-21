@@ -597,6 +597,10 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .tbr{justify-self:end; display:flex; align-items:center; gap:2px}
 .tbr .icon-btn{margin-right:-4px}
 .askctx{font-size:12.5px; color:var(--muted); margin:0 0 8px}
+.askway{margin:12px 0; padding:12px; border:1px solid var(--line); border-radius:10px}
+.askway b{display:block; font:700 16px/1.2 var(--f-head); letter-spacing:.02em}
+.askway .note{margin:4px 0 10px}
+a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center; text-decoration:none}
 .askwait{display:flex; align-items:center; gap:9px; font-size:14px; color:var(--muted)}
 .askwait.sm{font-size:12.5px; margin-top:4px}
 .askspin{width:20px; height:20px; flex:none; color:var(--accent); animation:askspin 1.4s linear infinite, askpulse 1.4s ease-in-out infinite}
@@ -1768,6 +1772,15 @@ const askCfg = () => Object.assign({ key:'', model:ASK_MODELS[0][0] }, isObj(sto
 let askAcct = null;
 try { if(window.claude && typeof window.claude.use === 'function') window.claude.use('sample').then(f => { askAcct = f || null; if(askAcct && cur.s === 'settings') rerender(); }, () => {}); } catch(e){}
 const askVia = () => askAcct ? 'account' : askCfg().key ? 'key' : null;
+// this app inside Claude (the owner's private artifact): there the ? runs on the viewer's Claude account. It opens
+// only for its owner and the people they share it with; on a phone the link opens the Claude app.
+const ASK_IN_CLAUDE = 'https://claude.ai/artifact/S5gvHV4q4ZZuaCfFQk582j';
+const askInClaudeBtn = () => '<a class="btn askclaude" href="' + ASK_IN_CLAUDE + '" target="_blank" rel="noopener">Open in Claude</a>';
+function askChoose(){
+  openSheet('Rules questions', 'Ask Claude a rules question', '<p>Two ways to ask, both private to you:</p>' +
+    '<div class="askway"><b>In Claude, on your Claude subscription</b><p class="note">Opens this same app inside the Claude app (or claude.ai), where the ? uses your Claude account. Only you, and people you share it with, can open it.</p>' + askInClaudeBtn() + '</div>' +
+    '<div class="askway"><b>Here, with an Anthropic API key</b><p class="note">Billed to your Anthropic Console credits, not your subscription. The key stays on this phone.</p><button class="btn2" data-askkeygo>Add an API key</button></div>');
+}
 const askOn = () => !!askVia();
 const ASK_TIER = { 'claude-opus-5-5':'complex', 'claude-sonnet-5-5':'default', 'claude-haiku-5-5':'quick' };
 let askConv = null, askBusy = null;
@@ -1938,7 +1951,7 @@ function askLog(){
   return askConv.shown.map(x => '<div class="askm q">' + (x.refs && x.refs.length ? '<span class="askon">About ' + esc(x.refs.join(', ')) + '</span>' : '') + esc(x.q) + '</div><div class="askm a">' + (x.err ? (x.a ? askMd(x.a) : '') + '<p class="askerr">' + esc(x.err) + '</p>' : (x.a ? askMd(x.a) + (x.done ? '' : askWait('Writing…', true)) : askWait(x.status || 'Thinking…'))) + '</div>').join('');
 }
 function openAsk(){
-  if(!askOn()){ go({ s:'settings' }); toast('Add your Anthropic API key first'); const k = $('#askKey'); if(k) k.scrollIntoView({ block:'center' }); return; }
+  if(!askOn()){ askChoose(); return; }
   const a = cur.army && army(), opp = a && oppOf(a), ctx = (a ? a.id : '') + '|' + (opp ? opp.id : '');
   if(!askConv || askConv.ctx !== ctx) askConv = { ctx, messages:[], shown:[] };
   const cfg = askCfg(), m = ASK_MODELS.find(x => x[0] === cfg.model) || ASK_MODELS[0], acct = askVia() === 'account';
@@ -2017,8 +2030,8 @@ function askSettings(){
   const models = () => ASK_MODELS.map(([id, name, sub]) => '<button class="row" data-askmodel="' + id + '" aria-pressed="' + (c.model === id) + '"><span class="rb"><b>' + name + '</b><span>' + sub + '</span></span>' + (c.model === id ? '<svg class="ic ok" aria-hidden="true"><use href="#i-check"/></svg>' : '') + '</button>').join('');
   if(askAcct) return '<div class="sec-h"><h2>Rules questions</h2></div><p class="note">Opened in Claude, rules questions (the ? in the top bar) use your Claude account: no API key needed, and they count towards your plan’s usage. The first question asks you to allow it. In the app on your home screen an API key is still the way.</p>' +
     '<div class="list">' + models() + '</div><p class="note">Each question sends both lists, the rules this app holds and the Core Rules’ index; Claude reads the Core Rules sections it needs.</p>';
-  if(!c.key) return '<div class="sec-h"><h2>Rules questions</h2></div><p class="note">Ask Claude rules questions about your lists from any screen (the ? in the top bar). It uses your own Anthropic API key (console.anthropic.com → API keys), kept only in this browser on this phone and sent only to Anthropic.</p>' +
-    '<div class="askkey"><input id="askKey" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="sk-ant-…" aria-label="Anthropic API key"><button class="btn" data-askkey>Save</button></div>';
+  if(!c.key) return '<div class="sec-h"><h2>Rules questions</h2></div><div class="askway"><b>In Claude, on your Claude subscription</b><p class="note">Opens this same app inside the Claude app (or claude.ai), where the ? uses your Claude account. Only you, and people you share it with, can open it.</p>' + askInClaudeBtn() + '</div><div class="askway"><b>Here, with an Anthropic API key</b><p class="note">Ask from any screen (the ? in the top bar). Billed to your Anthropic Console credits (console.anthropic.com → API keys), not your subscription; the key stays in this browser on this phone and goes only to Anthropic.</p>' +
+    '<div class="askkey"><input id="askKey" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="sk-ant-…" aria-label="Anthropic API key"><button class="btn" data-askkey>Save</button></div></div>';
   return '<div class="sec-h"><h2>Rules questions</h2></div><div class="list">' +
     '<div class="row"><span class="rb"><b>API key</b><span>Saved on this phone · …' + esc(c.key.slice(-4)) + '</span></span><button class="textbtn" data-askforget>Remove</button></div>' +
     ASK_MODELS.map(([id, name, sub]) => '<button class="row" data-askmodel="' + id + '" aria-pressed="' + (c.model === id) + '"><span class="rb"><b>' + name + '</b><span>' + sub + '</span></span>' + (c.model === id ? '<svg class="ic ok" aria-hidden="true"><use href="#i-check"/></svg>' : '') + '</button>').join('') +
@@ -3084,6 +3097,7 @@ document.addEventListener('click', e => {
   if(el.hasAttribute('data-roll')){ rollArmy(); return; }
   if(el.hasAttribute('data-ask')){ openAsk(); return; }
   if(el.hasAttribute('data-asksend')){ askSend(); return; }
+  if(el.hasAttribute('data-askkeygo')){ hideSheet(); go({ s:'settings' }); const k = $('#askKey'); if(k){ k.scrollIntoView({ block:'center' }); k.focus(); } return; }
   if(el.hasAttribute('data-askstop')){ if(askBusy) askBusy.abort(); return; }
   if(ds.askref){ const i = ds.askref.indexOf('|'), k = ds.askref.slice(0, i), v = ds.askref.slice(i + 1);
     if(!askRefs.some(r => r.k === k && r.v === v && r.army === army().id)) askRefs.push({ k, v, army:army().id, label:askRefLabel(k, v) });
