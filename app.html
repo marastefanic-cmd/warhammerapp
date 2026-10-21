@@ -1188,8 +1188,8 @@ function renderTop(){
     if(cur.army && cur.s !== 'army' && cur.s !== 'settings') right = '<button class="icon-btn" data-find aria-label="Search this army"><svg aria-hidden="true"><use href="#i-search"/></svg></button>';
   }
   else right = '<button class="icon-btn" data-settings aria-label="Settings"><svg aria-hidden="true"><use href="#i-gear"/></svg></button>';
-  // a rules question to Claude, from any screen, once a key is saved (Settings)
-  if(askOn() && cur.s !== 'settings') right = '<span class="tbr"><button class="icon-btn" data-ask aria-label="Ask a rules question"><svg aria-hidden="true"><use href="#i-ask"/></svg></button>' + (right === '<span></span>' ? '' : right) + '</span>';
+  // a rules question to Claude, from any screen; without a key saved it opens Settings to add one
+  if(cur.s !== 'settings') right = '<span class="tbr"><button class="icon-btn" data-ask aria-label="Ask a rules question"><svg aria-hidden="true"><use href="#i-ask"/></svg></button>' + (right === '<span></span>' ? '' : right) + '</span>';
   $('#topIn').innerHTML = left + '<h1 class="ttl">' + (cur.s === 'home' ? '<span class="brand">' + LOGO + 'Kunnin’ Kodex</span>' : esc(cur.s === 'unit' && army() ? army().name : titleOf(cur))) + '</h1>' + right;
 }
 function setBar(id, html){
@@ -1828,7 +1828,7 @@ function askLog(){
   return askConv.shown.map(x => '<div class="askm q">' + esc(x.q) + '</div><div class="askm a">' + (x.err ? '<p class="askerr">' + esc(x.err) + '</p>' : askMd(x.a) || '<p class="note">…</p>') + '</div>').join('');
 }
 function openAsk(){
-  if(!askOn()){ go({ s:'settings' }); toast('Add your Anthropic API key first'); return; }
+  if(!askOn()){ go({ s:'settings' }); toast('Add your Anthropic API key first'); const k = $('#askKey'); if(k) k.scrollIntoView({ block:'center' }); return; }
   const a = cur.army && army(), opp = a && oppOf(a), ctx = (a ? a.id : '') + '|' + (opp ? opp.id : '');
   if(!askConv || askConv.ctx !== ctx) askConv = { ctx, messages:[], shown:[] };
   const cfg = askCfg(), m = ASK_MODELS.find(x => x[0] === cfg.model) || ASK_MODELS[0];
