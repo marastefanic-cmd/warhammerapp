@@ -1,0 +1,188 @@
+[
+ {
+  "key": "d2c1573c6630c1c1",
+  "where": "super-terminators · Forgefiend",
+  "verdict": "ok",
+  "why": "New Recruit: \"1x Forgefiend: 2 Hades autocannons (2x Hades autocannon), Ectoplasma cannon and claws (Ectoplasma cannon, Forgefiend claws)\", tables \"Hades autocannon (x2)\", \"Ectoplasma cannon\", \"Forgefiend claws\". The one models line carries all four, so ×2 Hades autocannon, Ectoplasma cannon and Forgefiend claws match."
+ },
+ {
+  "key": "87516ef3c85932f6",
+  "where": "super-terminators · Angron · Wrathful Presence",
+  "verdict": "ok",
+  "why": "\"At the start of the battle round, select one Wrathful Presence ability\": the ability carries at:'Start of the battle round' and is listed under Command in either turn, the app's settled convention for that timing (as for Blessings of Khorne and Reborn in Blood)."
+ },
+ {
+  "key": "096905690d41d3e3",
+  "where": "super-terminators · Angron · Driven by Ultimate Rage",
+  "verdict": "ok",
+  "why": "\"that unit’s melee attacks can: Re-roll hit rolls of 1. Re-roll wound rolls of 1.\" No turn limit; melee attacks are made in the Fight phase (\"WHILE FIGHTING: You must select one melee weapon\", 04.01) of either turn."
+ },
+ {
+  "key": "7c00106c3da079a2",
+  "where": "super-terminators · Angron · Driven by Ultimate Rage",
+  "verdict": "ok",
+  "why": "New Recruit prints \"Driven by Ultimate Rage (Aura)\" and Wahapedia \"Driven by Ultimate Rage (Aura)\"; it affects units \"within 6\" of this unit\"."
+ },
+ {
+  "key": "10e2baf6fe235019",
+  "where": "super-terminators · Angron",
+  "verdict": "ok",
+  "why": "\"While a friendly WORLD EATERS unit is within 6\" of this unit, that unit’s melee attacks can: Re-roll hit rolls of 1. Re-roll wound rolls of 1.\" needs Faction: World Eaters, kind melee and the note match. The \"this round\" condition is Wrathful Presence’s \"Until the start of the next battle round, this model has that ability\", and the own-sheet line follows 22.01 \"it is always within range of its own aura ability\"."
+ },
+ {
+  "key": "d8572c3256baf0d4",
+  "where": "super-terminators · Angron",
+  "verdict": "ok",
+  "why": "New Recruit: \"1x Angron: Samni’arius and Spinegrinder, Warlord\", with the two profiles \"Samni’arius and Spinegrinder - strike\" and \"- sweep\". Both rows belong to the one weapon. Their A values 9/17 are Wahapedia’s 8/16 plus Relentless Rage, and the from:{A} marks say so."
+ },
+ {
+  "key": "69eb9442c2c155d8",
+  "where": "super-terminators · Goremongers",
+  "verdict": "ok",
+  "why": "New Recruit: \"1x Blood Herald: Autopistol, Chainblade, Close combat weapon\" and \"7x Goremonger w/ chainblade: Autopistol, Chainblade, Close combat weapon\". Tables: \"Autopistol (x8)\", \"Chainblade (x8)\", \"Close combat weapon (x8)\". Wahapedia also says \"Every model is equipped with: autopistol; chainblade; close combat weapon.\""
+ },
+ {
+  "key": "18cd4ab83bd3e57d",
+  "where": "super-terminators · Chaos Terminators · Bloody Fury",
+  "verdict": "fix",
+  "why": "Your Shooting is right. Their Movement for Fire Overwatch follows the signed-off Furious Onslaught convention. For the owner: snap shooting (15.09) says \"You cannot re-roll hit rolls\". Your Charge only is too narrow. \"When this unit declares a charge\" has no turn limit, and Heroic Intervention (\"End of your opponent’s Charge phase … Resolve a charge with your unit (11.02)\") runs 11.02, whose first step is \"That unit declares a charge\". The Chaos Terminators are an unengaged INFANTRY unit the app offers it to. This matches the signed-off Harpooned tag (charge, either), and the FAQ about steps 2–3 covers charges \"outside of the charge phase\", not this one. Should be ph:['movement','shooting','charge'], turn:'your', turns:{ movement:'opp', charge:'either' }. The text has every word of the pack’s Rules Update. Only its bullet nesting is flattened: part 1 and the \"When this unit declares a charge … If you do:\" lead-in are paragraphs, and the two sub-bullets follow as bullets.",
+  "fix": {
+   "ph": [
+    "movement",
+    "shooting",
+    "charge"
+   ],
+   "turn": "your",
+   "turns": {
+    "movement": "opp",
+    "charge": "either"
+   }
+  }
+ },
+ {
+  "key": "a38e953e2170e4fe",
+  "where": "super-terminators · Chaos Terminators · Gore-stained Veterans",
+  "verdict": "ok",
+  "why": "The Faction Pack prints \"GORE-STAINED VETERANS UPGRADE\" and Wahapedia \"Gore-Stained Veterans UPGRADE 20 pts\". Its \"+1 WS\" is already in the WS values (Wahapedia 3+/4+/3+ → New Recruit 2+/3+/2+, from:{WS:'Gore-stained Veterans'}), and no footnote adds it again."
+ },
+ {
+  "key": "b28077c91ac3877e",
+  "where": "super-terminators · Chaos Terminators",
+  "verdict": "ok",
+  "why": "\"This unit’s ranged attacks that target the closest eligible target can re-roll hit rolls\": kind ranged, when \"Target is the closest eligible target\", note \"re-roll hit rolls\", nothing added. It is worded like the signed-off Furious Onslaught footnote. The charge part does not change attacks, so it rightly has no footnote."
+ },
+ {
+  "key": "5e01097337937bb8",
+  "where": "super-terminators · Chaos Terminators",
+  "verdict": "ok",
+  "why": "Matches New Recruit line for line: Champion and \"1x Paired accursed weapons\" carry Paired accursed weapons (×2); 2× Chainfist, Combi-bolter; 4× Combi-bolter, Power fist; 2× \"Reaper autocannon, Power fist\". That gives Combi-bolter 2+4=6, Reaper autocannon 2, Chainfist 2, Power fist 4+2=6, as New Recruit’s (x6)/(x2)/(x2)/(x2)/(x6)."
+ },
+ {
+  "key": "7bc707a071beef98",
+  "where": "Butchers of Khorne rule · Adamantine Avalanche",
+  "verdict": "ok",
+  "why": "\"At the start of the Fight phase … Until the end of the phase, that Blessing of Khorne is active\": the roll and the effect are both in the Fight phase."
+ },
+ {
+  "key": "aa391c48d5ea17c6",
+  "where": "Butchers of Khorne rule · Adamantine Avalanche",
+  "verdict": "ok",
+  "why": "\"At the start of the Fight phase\" names no player, so every Fight phase, in either turn."
+ },
+ {
+  "key": "7310496e3520a5bf",
+  "where": "Butchers of Khorne rule · Adamantine Avalanche",
+  "verdict": "ok",
+  "why": "\"if a friendly TERMINATOR SQUAD unit is engaged … active for friendly TERMINATOR SQUAD units\": the rule names only TERMINATOR SQUAD, which the Chaos Terminators carry (\"Terminator Squad\" in New Recruit’s Categories)."
+ },
+ {
+  "key": "2b8ff8b8d89c3156",
+  "where": "Butchers of Khorne · Focused Ferocity",
+  "verdict": "ok",
+  "why": "WHEN: \"Fight phase, when a friendly TERMINATOR SQUAD unit is selected to fight.\""
+ },
+ {
+  "key": "af020b3de5d85db9",
+  "where": "Butchers of Khorne · Focused Ferocity",
+  "verdict": "ok",
+  "why": "WHEN: \"Fight phase\", with no \"your\" or \"your opponent’s\", so either turn."
+ },
+ {
+  "key": "54811b59d57fd6b0",
+  "where": "Butchers of Khorne · Focused Ferocity",
+  "verdict": "ok",
+  "why": "TARGET: \"That TERMINATOR SQUAD unit\" (WHEN: \"a friendly TERMINATOR SQUAD unit\")."
+ },
+ {
+  "key": "213a7eec4a753bbd",
+  "where": "Butchers of Khorne · Focused Ferocity",
+  "verdict": "ok",
+  "why": "EFFECT: \"Your unit’s melee attacks have +1 A\", when \"selected to fight\": kind melee, note \"+1 A\". This is the stratagem’s own +1 A, on top of the printed A, which already includes only Relentless Rage (from:{A:'Relentless Rage'}). It does not add Relentless Rage again."
+ },
+ {
+  "key": "27eef46c006c0cf2",
+  "where": "Butchers of Khorne · Focused Ferocity",
+  "verdict": "ok",
+  "why": "EFFECT: \"Your unit’s melee attacks have +1 A.\" The gist is the same words."
+ },
+ {
+  "key": "e27658f267cf26ec",
+  "where": "Butchers of Khorne · A Trophy for the Throne",
+  "verdict": "ok",
+  "why": "WHEN: \"Fight phase, when a friendly TERMINATOR SQUAD unit is selected to fight.\""
+ },
+ {
+  "key": "258abd30893c8d2b",
+  "where": "Butchers of Khorne · A Trophy for the Throne",
+  "verdict": "ok",
+  "why": "WHEN: \"Fight phase\", with no player named, so either turn."
+ },
+ {
+  "key": "37d6a08dab358780",
+  "where": "Butchers of Khorne · A Trophy for the Throne",
+  "verdict": "ok",
+  "why": "TARGET: \"That TERMINATOR SQUAD unit\"."
+ },
+ {
+  "key": "342591ad90ae8b0f",
+  "where": "Butchers of Khorne · A Trophy for the Throne",
+  "verdict": "ok",
+  "why": "\"Your unit’s attacks that target a MONSTER/VEHICLE unit have +1 to wound rolls\" has no duration. Core 01.02.02 says such an effect \"is only active for the phase in which it was given\", which is the Fight phase where the unit was \"selected to fight\". There \"WHILE FIGHTING: You must select one melee weapon\" (04.01), so the only attacks it covers are melee. So \"melee\" says neither more nor less than \"attacks\", as signed off for Rampaging Monstrosities (\"Fight-phase attacks are melee\"). when \"vs MONSTER/VEHICLE targets\" and note \"+1 to wound rolls\" match."
+ },
+ {
+  "key": "1fbfb936512e352b",
+  "where": "Butchers of Khorne · A Trophy for the Throne",
+  "verdict": "ok",
+  "why": "EFFECT: \"Your unit’s attacks that target a MONSTER/VEHICLE unit have +1 to wound rolls.\" The gist says \"attacks against\" where the rule says \"attacks that target\". Same meaning, nothing added."
+ },
+ {
+  "key": "45807b12c577c8eb",
+  "where": "Butchers of Khorne · Wrath Beyond Reason",
+  "verdict": "ok",
+  "why": "WHEN: \"Your opponent’s Shooting Phase, when an enemy unit targets a friendly TERMINATOR SQUAD unit.\""
+ },
+ {
+  "key": "acaca2a4d2d52cc0",
+  "where": "Butchers of Khorne · Wrath Beyond Reason",
+  "verdict": "ok",
+  "why": "WHEN: \"Your opponent’s Shooting Phase\", so their turn."
+ },
+ {
+  "key": "233e06b1415c3e15",
+  "where": "Butchers of Khorne · Wrath Beyond Reason",
+  "verdict": "ok",
+  "why": "TARGET: \"That TERMINATOR SQUAD unit\"."
+ },
+ {
+  "key": "a501c61449a4844b",
+  "where": "Butchers of Khorne · Wrath Beyond Reason",
+  "verdict": "ok",
+  "why": "WHEN \"Your opponent’s Shooting Phase, when an enemy unit targets\" the unit is what the When-targeted line is for. EFFECT \"Ranged attacks that target your unit have -1 D until that enemy unit has attacked\" becomes \"their Shooting phase: -1 D to ranged attacks that target it (until that enemy unit has attacked)\": same phase, same effect, same end, nothing added. It shows on both Chaos Terminators sheets next to Frenzied Resilience."
+ },
+ {
+  "key": "d705ebb5f99fbdc7",
+  "where": "Butchers of Khorne · Wrath Beyond Reason",
+  "verdict": "ok",
+  "why": "EFFECT: \"Ranged attacks that target your unit have -1 D until that enemy unit has attacked.\" The gist is the same words."
+ }
+]

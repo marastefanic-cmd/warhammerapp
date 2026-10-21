@@ -3051,7 +3051,7 @@ const ARMIES = [
       abilities:[
         // GW Faction Pack Rules Update wording ("Chaos Terminators, Blood Fury Ability"), Wahapedia's bold. Its two parts are
         // bullets there, the second with two sub-bullets; the app has one level of bullets, so the parts are paragraphs
-        { name:'Bloody Fury', ph:['movement','shooting','charge'], turn:'your', turns:{ movement:'opp' }, text:'This unit’s ranged attacks that target the closest eligible target can re-roll **hit rolls**.\nWhen this unit **declares a charge**, you can use this part of this ability. If you do:\n- This unit can re-roll that **charge roll**.\n- This unit must end that **charge move** **engaged** with the closest **charge target**.' },
+        { name:'Bloody Fury', ph:['movement','shooting','charge'], turn:'your', turns:{ movement:'opp', charge:'either' }, text:'This unit’s ranged attacks that target the closest eligible target can re-roll **hit rolls**.\nWhen this unit **declares a charge**, you can use this part of this ability. If you do:\n- This unit can re-roll that **charge roll**.\n- This unit must end that **charge move** **engaged** with the closest **charge target**.' },
         // already in the WS values above (from); its official text starts with the restriction New Recruit leaves out
         { name:'Gore-stained Veterans', tag:'Upgrade', text:'**TERMINATOR SQUAD** unit only. This unit’s melee attacks have +1 **WS**.' }
       ],
@@ -3081,7 +3081,7 @@ const ARMIES = [
       abilities:[
         // GW Faction Pack Rules Update wording ("Chaos Terminators, Blood Fury Ability"), Wahapedia's bold. Its two parts are
         // bullets there, the second with two sub-bullets; the app has one level of bullets, so the parts are paragraphs
-        { name:'Bloody Fury', ph:['movement','shooting','charge'], turn:'your', turns:{ movement:'opp' }, text:'This unit’s ranged attacks that target the closest eligible target can re-roll **hit rolls**.\nWhen this unit **declares a charge**, you can use this part of this ability. If you do:\n- This unit can re-roll that **charge roll**.\n- This unit must end that **charge move** **engaged** with the closest **charge target**.' },
+        { name:'Bloody Fury', ph:['movement','shooting','charge'], turn:'your', turns:{ movement:'opp', charge:'either' }, text:'This unit’s ranged attacks that target the closest eligible target can re-roll **hit rolls**.\nWhen this unit **declares a charge**, you can use this part of this ability. If you do:\n- This unit can re-roll that **charge roll**.\n- This unit must end that **charge move** **engaged** with the closest **charge target**.' },
         // already in the WS values above (from); its official text starts with the restriction New Recruit leaves out
         { name:'Gore-stained Veterans', tag:'Upgrade', text:'**TERMINATOR SQUAD** unit only. This unit’s melee attacks have +1 **WS**.' }
       ],
