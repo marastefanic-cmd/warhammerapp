@@ -1810,6 +1810,7 @@ GHAZGHKULL THRAKA
 INFANTRY
 WARBOSS
 WARLORD
+Ask about this unit
 Mozrog Skragbad ›
 
 ######## unit mozrog-skragbad · GHAZGHKULL THRAKA Melee
@@ -1921,6 +1922,7 @@ EPIC HERO
 FACTION: ORKS
 MONSTER
 MOZROG SKRAGBAD
+Ask about this unit
 ‹ Ghazghkull Thraka
 Nazdreg ›
 
@@ -2088,6 +2090,7 @@ WARBOSS
 EXPLOSIVES*
 MEGANOBZ*
 *from the led Meganobz
+Ask about this unit
 ‹ Mozrog Skragbad
 Beastboss · Headwoppa’s Killchoppa ›
 
@@ -2219,6 +2222,7 @@ CHARACTER
 FACTION: ORKS
 MONSTER
 WARBOSS
+Ask about this unit
 ‹ Nazdreg
 Big Mek · Kunnin’ But Brutal ›
 
@@ -2434,6 +2438,7 @@ INFANTRY
 PAINBOY*
 NOBZ*
 *from the combined unit
+Ask about this unit
 ‹ Beastboss · Headwoppa’s Killchoppa
 Big Mek in Mega Armour · Follow Me Ladz ›
 
@@ -2583,6 +2588,7 @@ INFANTRY
 MEGA ARMOUR
 MEGANOBZ*
 *from the led Meganobz
+Ask about this unit
 ‹ Big Mek · Kunnin’ But Brutal
 Gretchin ›
 
@@ -2668,6 +2674,7 @@ FACTION: ORKS
 GRETCHIN
 GROTS
 INFANTRY
+Ask about this unit
 ‹ Big Mek in Mega Armour · Follow Me Ladz
 Deffkoptas ›
 
@@ -2796,6 +2803,7 @@ FACTION: ORKS
 FLY
 MOUNTED
 SPEED FREEKS
+Ask about this unit
 ‹ Gretchin
 Squighog Boyz ›
 
@@ -2934,6 +2942,7 @@ FACTION: ORKS
 MOBILE
 MOUNTED
 SQUIGHOG BOYZ
+Ask about this unit
 ‹ Deffkoptas
 
 ######## popup ability:melee|Ammo Runts|In your Shooting phase, when this unit is **selected to shoot**, you can use this ability. If you do, this unit’s ranged attacks have +1 to **hit rolls**.
@@ -2948,6 +2957,8 @@ Place any number of Ammo Runt tokens next to the unit, removing them when this a
 
 UNITBig Mek · Kunnin’ But Brutal
 
+Ask about this ability
+
 ######## popup ability:melee|Arrogant Invulnerability|Attacks that target this unit have -1 **AP**. · MELEE Melee
 ABILITY
 
@@ -2957,6 +2968,8 @@ Attacks that target this unit have -1 AP.
 
 UNITNazdreg, Big Mek in Mega Armour · Follow Me Ladz
 
+Ask about this ability
+
 ######## popup ability:melee|Beast Snagga Following|While this unit is within 3" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**. · MELEE Melee
 ABILITY
 
@@ -2965,6 +2978,8 @@ Beast Snagga Following
 While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding MONSTER CHARACTER units), this unit has Lone Operative.
 
 UNITMozrog Skragbad
+
+Ask about this ability
 
 ######## popup ability:melee|Bomb Squig|In your Movement phase, when this unit ends a **normal move**, you can select one **visible** enemy unit within 12" of this unit and roll one D6:
 - On a 3+, that enemy unit suffers D3 **mortal wounds**.
@@ -2981,6 +2996,8 @@ Place one Bomb Squig token next to the unit, removing it after this ability is u
 
 UNITSquighog Boyz
 
+Ask about this ability
+
 ######## popup ability:melee|Boss of da Hunt|While this unit is within 3" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**. · MELEE Melee
 ABILITY
 
@@ -2990,6 +3007,8 @@ While this unit is within 3" of a friendly BEAST SNAGGA unit (excluding MONSTER 
 
 UNITBeastboss · Headwoppa’s Killchoppa
 
+Ask about this ability
+
 ######## popup ability:melee|Brutal Impact|If this unit made a **charge move** this turn, this unit’s attacks have +1 **D**. · MELEE Melee
 ABILITY · FIGHT · EITHER TURN
 
@@ -2998,6 +3017,8 @@ Brutal Impact
 If this unit made a charge move this turn, this unit’s attacks have +1 D.
 
 UNITSquighog Boyz
+
+Ask about this ability
 
 ######## popup ability:melee|Catch Dat Red Bit|When this model uses its **Crude Surgery** ability, you can add D3 to the number of wounds **healed**.
 *Place a Grot Orderly token next to the unit, removing it when this ability is used.* · MELEE Melee
@@ -3011,6 +3032,8 @@ Place a Grot Orderly token next to the unit, removing it when this ability is us
 
 UNITBig Mek · Kunnin’ But Brutal
 
+Ask about this ability
+
 ######## popup ability:melee|Da Bigger Dey Iz…|This unit’s melee attacks that target a **MONSTER/VEHICLE** unit can re-roll **wound rolls**. · MELEE Melee
 ABILITY · FIGHT · EITHER TURN
 
@@ -3019,6 +3042,8 @@ Da Bigger Dey Iz…
 This unit’s melee attacks that target a MONSTER/VEHICLE unit can re-roll wound rolls.
 
 UNITMozrog Skragbad
+
+Ask about this ability
 
 ######## popup ability:melee|Da Grand Warlord’s Ladz|While this unit is within 3" of another friendly **ORKS INFANTRY** unit, this unit has **Lone Operative**. · MELEE Melee
 ABILITY
@@ -3029,6 +3054,8 @@ While this unit is within 3" of another friendly ORKS INFANTRY unit, this unit h
 
 UNITGhazghkull Thraka
 
+Ask about this ability
+
 ######## popup ability:melee|Deff from Above|In your Shooting phase, if this unit made an **ingress move** this turn, this unit’s ranged attacks have +1 to **hit rolls**. · MELEE Melee
 ABILITY · SHOOTING · YOUR TURN
 
@@ -3037,6 +3064,8 @@ Deff from Above
 In your Shooting phase, if this unit made an ingress move this turn, this unit’s ranged attacks have +1 to hit rolls.
 
 UNITDeffkoptas
+
+Ask about this ability
 
 ######## popup ability:melee|Fix Dat Armour Up|In your Command phase, this unit **heals** 3 wounds.
 *Place a Grot Oiler token next to the unit, removing it when this ability is used.* · MELEE Melee
@@ -3050,6 +3079,8 @@ Place a Grot Oiler token next to the unit, removing it when this ability is used
 
 UNITBig Mek in Mega Armour · Follow Me Ladz
 
+Ask about this ability
+
 ######## popup ability:melee|Headwoppa’s Killchoppa|**ORKS** model only. If this unit made a **charge move** this turn, this model’s melee attacks have +1 AP. · MELEE Melee
 ABILITY · ENHANCEMENT · FIGHT · EITHER TURN
 
@@ -3058,6 +3089,8 @@ Headwoppa’s Killchoppa
 ORKS model only. If this unit made a charge move this turn, this model’s melee attacks have +1 AP.
 
 UNITBeastboss · Headwoppa’s Killchoppa
+
+Ask about this ability
 
 ######## popup ability:melee|Krumpin’ Time|In the Fight phase, if this unit is **riled up**, this unit has +1 to **hit rolls**. · MELEE Melee
 ABILITY · FIGHT · EITHER TURN
@@ -3068,6 +3101,8 @@ In the Fight phase, if this unit is riled up, this unit has +1 to hit rolls.
 
 UNITNazdreg, Big Mek in Mega Armour · Follow Me Ladz
 
+Ask about this ability
+
 ######## popup ability:melee|Kustom Force Field|This unit has 4+ **InSv** against ranged attacks. · MELEE Melee
 ABILITY
 
@@ -3076,6 +3111,8 @@ Kustom Force Field
 This unit has 4+ InSv against ranged attacks.
 
 UNITBig Mek in Mega Armour · Follow Me Ladz
+
+Ask about this ability
 
 ######## popup ability:melee|Makari, Hoist Dat Banner!|In your Movement phase, you can select a number of friendly **ORKS** units equal to or less than the current battle round number. Those units are **riled up** until the start of your next turn.
 *Place one Makari token next to the unit, removing it after this ability is used.* · MELEE Melee
@@ -3088,6 +3125,8 @@ In your Movement phase, you can select a number of friendly ORKS units equal to 
 Place one Makari token next to the unit, removing it after this ability is used.
 
 UNITGhazghkull Thraka
+
+Ask about this ability
 
 ######## popup ability:melee|More Dakka|This unit’s ranged attacks have:
 - **[IGNORES COVER]**.
@@ -3103,6 +3142,8 @@ If this unit is riled up, [SUSTAINED HITS 1].
 
 UNITBig Mek · Kunnin’ But Brutal, Big Mek in Mega Armour · Follow Me Ladz
 
+Ask about this ability
+
 ######## popup ability:melee|One Last Kill|In the Fight phase, when this model is **destroyed**, if this unit has not been **selected to fight** this phase, roll one D6:
 - On a 2+, do not remove this model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield. · MELEE Melee
 ABILITY · FIGHT · EITHER TURN
@@ -3115,6 +3156,8 @@ On a 2+, do not remove this model from the battlefield. When this unit has fough
 
 UNITMozrog Skragbad
 
+Ask about this ability
+
 ######## popup ability:melee|Paired Krumpas|Attacks made with this model’s Kustom Krumpa weapon can re-roll **hit rolls** and **wound rolls**. · MELEE Melee
 ABILITY
 
@@ -3123,6 +3166,8 @@ Paired Krumpas
 Attacks made with this model’s Kustom Krumpa weapon can re-roll hit rolls and wound rolls.
 
 UNITBig Mek · Kunnin’ But Brutal
+
+Ask about this ability
 
 ######## popup ability:melee|Prophet of Da Great Waaagh!|While a friendly **ORKS** unit is within 6" of this unit, that unit’s melee attacks have:
 - +1 to **hit rolls**.
@@ -3138,6 +3183,8 @@ While a friendly ORKS unit is within 6" of this unit, that unit’s melee attack
 
 UNITGhazghkull Thraka
 
+Ask about this ability
+
 ######## popup enh:war-horde|Follow Me Ladz · MELEE Melee
 ENHANCEMENT · WAR HORDE · 20 PTS
 
@@ -3146,6 +3193,8 @@ Follow Me Ladz
 ORKS model only. This unit has +2" M.
 
 ONBig Mek in Mega Armour + Meganobz
+
+Ask about this enhancement
 
 ######## popup enh:war-horde|Headwoppa’s Killchoppa · MELEE Melee
 ENHANCEMENT · WAR HORDE · 15 PTS
@@ -3156,6 +3205,8 @@ ORKS model only. If this unit made a charge move this turn, this model’s melee
 
 ONBeastboss on Squigosaur
 
+Ask about this enhancement
+
 ######## popup enh:war-horde|Kunnin’ But Brutal · MELEE Melee
 ENHANCEMENT · WAR HORDE · 20 PTS
 
@@ -3164,6 +3215,8 @@ Kunnin’ But Brutal
 ORKS model only. When this unit is selected to make a fall-back move, that fall-back move does not prevent this unit from being eligible to shoot/declare a charge.
 
 ONBig Mek + Painboy + Nobz
+
+Ask about this enhancement
 
 ######## popup grant:["Follow Me Ladz","big-mek-in-mega-armour-meganobz","M 7\"",null] · MELEE Melee
 M 7" · GRANTED BY
@@ -3374,6 +3427,8 @@ Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit 
 
 IN THIS ARMYMozrog Skragbad, Beastboss · Headwoppa’s Killchoppa, Big Mek · Kunnin’ But Brutal, Squighog Boyz
 
+Ask about this rule
+
 ######## popup rule:ANTI-MONSTER/VEHICLE 3+ · MELEE Melee
 CORE RULE
 
@@ -3384,6 +3439,8 @@ This ability always takes the form [ANTI-X Y+]. Each time an attack is made with
 Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
 
 IN THIS ARMYMozrog Skragbad, Beastboss · Headwoppa’s Killchoppa, Big Mek · Kunnin’ But Brutal, Squighog Boyz
+
+Ask about this rule
 
 ######## popup rule:ANTI-MONSTER/VEHICLE 4+ · MELEE Melee
 CORE RULE
@@ -3396,6 +3453,8 @@ Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit 
 
 IN THIS ARMYMozrog Skragbad, Beastboss · Headwoppa’s Killchoppa, Big Mek · Kunnin’ But Brutal, Squighog Boyz
 
+Ask about this rule
+
 ######## popup rule:ASSAULT · MELEE Melee
 CORE RULE
 
@@ -3404,6 +3463,8 @@ ASSAULT
 Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
 
 IN THIS ARMYSquighog Boyz
+
+Ask about this rule
 
 ######## popup rule:Advance roll · MELEE Melee
 CORE RULE
@@ -3422,6 +3483,7 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
 
 ######## popup rule:BLAST 1 · MELEE Melee
 CORE RULE
@@ -3436,6 +3498,8 @@ Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit cont
 
 IN THIS ARMYNazdreg, Deffkoptas
 
+Ask about this rule
+
 ######## popup rule:BLAST 2 · MELEE Melee
 CORE RULE
 
@@ -3449,6 +3513,8 @@ Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit cont
 
 IN THIS ARMYNazdreg, Deffkoptas
 
+Ask about this rule
+
 ######## popup rule:CLEAVE 1 · MELEE Melee
 CORE RULE
 
@@ -3460,6 +3526,8 @@ Example: If a [CLEAVE 1] weapon with an A characteristic of 3 targets one unit c
 
 IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Deffkoptas, Squighog Boyz
 
+Ask about this rule
+
 ######## popup rule:CLEAVE 2 · MELEE Melee
 CORE RULE
 
@@ -3470,6 +3538,8 @@ This ability always takes the form [CLEAVE X]. Each time you gather attack dice 
 Example: If a [CLEAVE 1] weapon with an A characteristic of 3 targets one unit containing 16 models, you would gather three additional attack dice for that weapon (for a total of six for that weapon).
 
 IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Deffkoptas, Squighog Boyz
+
+Ask about this rule
 
 ######## popup rule:CLOSE-QUARTERS · MELEE Melee
 CORE RULE
@@ -3484,6 +3554,8 @@ One or more of its other ranged weapons.
 [PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
 
 IN THIS ARMYGhazghkull Thraka, Beastboss · Headwoppa’s Killchoppa, Gretchin, Deffkoptas, Squighog Boyz
+
+Ask about this rule
 
 ######## popup rule:Charge roll · MELEE Melee
 CORE RULE
@@ -3501,6 +3573,8 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
+Ask about this rule
+
 ######## popup rule:Close-quarters · MELEE Melee
 CORE RULE
 
@@ -3515,6 +3589,8 @@ One or more of its other ranged weapons.
 
 IN THIS ARMYGhazghkull Thraka, Beastboss · Headwoppa’s Killchoppa, Gretchin, Deffkoptas, Squighog Boyz
 
+Ask about this rule
+
 ######## popup rule:DEVASTATING WOUNDS · MELEE Melee
 CORE RULE
 
@@ -3525,6 +3601,8 @@ Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critica
 Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
 
 IN THIS ARMYGhazghkull Thraka, Big Mek · Kunnin’ But Brutal
+
+Ask about this rule
 
 ######## popup rule:DEVASTATING WOUNDS: INFANTRY · MELEE Melee
 CORE RULE
@@ -3537,6 +3615,8 @@ Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of 
 
 IN THIS ARMYGhazghkull Thraka, Big Mek · Kunnin’ But Brutal
 
+Ask about this rule
+
 ######## popup rule:Da Boss · MELEE Melee
 ORKS ARMY RULE
 
@@ -3545,6 +3625,8 @@ Da Boss
 At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.
 
 Wahapedia core rules errata (07.01, CP Generated by a Warlord; not in GW’s printed Core Rules): you do not gain the 1CP while your WARLORD is destroyed.
+
+Ask about this rule
 
 ######## popup rule:Deep Strike · MELEE Melee
 CORE RULE
@@ -3556,6 +3638,8 @@ Each time this unit makes an ingress move (20.04), if every model in this unit h
 App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
 
 IN THIS ARMYNazdreg, Deffkoptas
+
+Ask about this rule
 
 ######## popup rule:EXTRA ATTACKS · MELEE Melee
 CORE RULE
@@ -3569,6 +3653,8 @@ One of that model’s other melee weapons, if possible.
 
 IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Big Mek · Kunnin’ But Brutal, Squighog Boyz
 
+Ask about this rule
+
 ######## popup rule:Feel No Pain · MELEE Melee
 CORE RULE
 
@@ -3577,6 +3663,8 @@ Feel No Pain
 This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
 
 IN THIS ARMYMozrog Skragbad, Beastboss · Headwoppa’s Killchoppa
+
+Ask about this rule
 
 ######## popup rule:Feel No Pain 5+ · MELEE Melee
 CORE RULE
@@ -3587,6 +3675,8 @@ This ability always takes the form Feel No Pain X+. Each time a model with this 
 
 IN THIS ARMYMozrog Skragbad, Beastboss · Headwoppa’s Killchoppa
 
+Ask about this rule
+
 ######## popup rule:Fights First · MELEE Melee
 CORE RULE
 
@@ -3595,6 +3685,8 @@ Fights First
 While every model in a unit has this ability, that unit is a Fights First unit.
 
 See the Resolve Fights First Combats step in the Fight phase (12.04).
+
+Ask about this rule
 
 ######## popup rule:Get Stuck In · MELEE Melee
 WAR HORDE DETACHMENT RULE
@@ -3605,6 +3697,8 @@ Friendly ORKS units’ melee attacks have [SUSTAINED HITS 1].
 
 IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Big Mek · Kunnin’ But Brutal, Big Mek in Mega Armour · Follow Me Ladz, Gretchin, Deffkoptas, Squighog Boyz
 
+Ask about this rule
+
 ######## popup rule:HAZARDOUS · MELEE Melee
 CORE RULE
 
@@ -3613,6 +3707,8 @@ HAZARDOUS
 Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.
 
 IN THIS ARMYNazdreg, Big Mek · Kunnin’ But Brutal, Big Mek in Mega Armour · Follow Me Ladz, Deffkoptas
+
+Ask about this rule
 
 ######## popup rule:Hazard roll · MELEE Melee
 CORE RULE
@@ -3626,6 +3722,8 @@ To make a hazard roll for a unit, roll one D6: on a 1-2, that roll fails and tha
 Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model in the unit make a hazard roll? No, the unit would make 1 single hazard roll.
 
 Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
+
+Ask about this rule
 
 ######## popup rule:Hunter · MELEE Melee
 CORE RULE
@@ -3642,6 +3740,8 @@ App note, not rules text: New Recruit prints these weapons as two profiles, one 
 
 IN THIS ARMYMozrog Skragbad, Beastboss · Headwoppa’s Killchoppa
 
+Ask about this rule
+
 ######## popup rule:LETHAL HITS · MELEE Melee
 CORE RULE
 
@@ -3652,6 +3752,8 @@ Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, 
 Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
 
 IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Big Mek · Kunnin’ But Brutal, Deffkoptas, Squighog Boyz
+
+Ask about this rule
 
 ######## popup rule:LETHAL HITS: non-MONSTER/VEHICLE · MELEE Melee
 CORE RULE
@@ -3664,6 +3766,8 @@ Designer’s Note: Choosing to automatically wound the target means that no woun
 
 IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Big Mek · Kunnin’ But Brutal, Deffkoptas, Squighog Boyz
 
+Ask about this rule
+
 ######## popup rule:Leader · MELEE Melee
 CORE RULE
 
@@ -3674,6 +3778,8 @@ Before the battle, in the Muster Armies step, for each leader and support unit i
 Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.
 
 IN THIS ARMYNazdreg, Big Mek · Kunnin’ But Brutal, Big Mek in Mega Armour · Follow Me Ladz
+
+Ask about this rule
 
 ######## popup rule:Lone Operative · MELEE Melee
 CORE RULE
@@ -3692,6 +3798,8 @@ If an attached unit below starting strength only contains models with Lone Opera
 
 IN THIS ARMYGhazghkull Thraka (in Da Grand Warlord’s Ladz), Mozrog Skragbad (in Beast Snagga Following), Beastboss · Headwoppa’s Killchoppa (in Boss of da Hunt)
 
+Ask about this rule
+
 ######## popup rule:PRECISION · MELEE Melee
 CORE RULE
 
@@ -3703,6 +3811,8 @@ While resolving attacks made with one or more [PRECISION] weapons, at the start 
 
 IN THIS ARMYGhazghkull Thraka
 
+Ask about this rule
+
 ######## popup rule:RAPID FIRE 2 · MELEE Melee
 CORE RULE
 
@@ -3712,6 +3822,8 @@ This ability always takes the form [RAPID FIRE X]. Each time you gather attack d
 
 IN THIS ARMYGhazghkull Thraka, Nazdreg, Big Mek · Kunnin’ But Brutal
 
+Ask about this rule
+
 ######## popup rule:RAPID FIRE 4 · MELEE Melee
 CORE RULE
 
@@ -3720,6 +3832,8 @@ RAPID FIRE 4
 This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
 
 IN THIS ARMYGhazghkull Thraka, Nazdreg, Big Mek · Kunnin’ But Brutal
+
+Ask about this rule
 
 ######## popup rule:Resolve a charge · MELEE Melee
 CORE RULE
@@ -3736,6 +3850,8 @@ It made an advance or fall-back move this turn.
 3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
 
 ######## popup rule:Select Weapons · MELEE Melee
 CORE RULE
@@ -3754,6 +3870,8 @@ Sidearms: Some models are equipped with [CLOSE-QUARTERS] weapons in addition to 
 
 04.01.03 Multiple Weapon Profiles (app): In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).
 
+Ask about this rule
+
 ######## popup rule:Support · MELEE Melee
 CORE RULE
 
@@ -3765,6 +3883,8 @@ Unless otherwise stated, each bodyguard unit can only have one leader unit and o
 
 IN THIS ARMYBig Mek · Kunnin’ But Brutal
 
+Ask about this rule
+
 ######## popup rule:TORRENT · MELEE Melee
 CORE RULE
 
@@ -3774,6 +3894,8 @@ Each time an attack is made with a [TORRENT] weapon, that attack automatically h
 
 IN THIS ARMYGhazghkull Thraka, Nazdreg
 
+Ask about this rule
+
 ######## popup rule:TWIN-LINKED · MELEE Melee
 CORE RULE
 
@@ -3782,6 +3904,8 @@ TWIN-LINKED
 Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll.
 
 IN THIS ARMYNazdreg, Big Mek in Mega Armour · Follow Me Ladz
+
+Ask about this rule
 
 ######## popup rule:Waaagh! · MELEE Melee
 ORKS ARMY RULE
@@ -3798,6 +3922,7 @@ While a unit is riled up:
 That unit has 5+ InSv.
 That unit’s ranged attacks have [ASSAULT].
 When that unit is selected to make an advance move, that advance move does not prevent that unit from being eligible to declare a charge.
+Ask about this rule
 
 ######## popup rule:War Cry · MELEE Melee
 ORKS ARMY RULE
@@ -3805,6 +3930,8 @@ ORKS ARMY RULE
 War Cry
 
 At the start of the Command phase, you can use this ability. If you do, friendly ORKS units with the Waaagh! ability are riled up until the end of the next turn.
+
+Ask about this rule
 
 ######## popup rule:[ASSAULT] · MELEE Melee
 CORE RULE
@@ -3814,6 +3941,8 @@ ASSAULT
 Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
 
 IN THIS ARMYSquighog Boyz
+
+Ask about this rule
 
 ######## popup rule:[CLEAVE 1] · MELEE Melee
 CORE RULE
@@ -3826,6 +3955,8 @@ Example: If a [CLEAVE 1] weapon with an A characteristic of 3 targets one unit c
 
 IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Deffkoptas, Squighog Boyz
 
+Ask about this rule
+
 ######## popup rule:[CLEAVE 2] · MELEE Melee
 CORE RULE
 
@@ -3836,6 +3967,8 @@ This ability always takes the form [CLEAVE X]. Each time you gather attack dice 
 Example: If a [CLEAVE 1] weapon with an A characteristic of 3 targets one unit containing 16 models, you would gather three additional attack dice for that weapon (for a total of six for that weapon).
 
 IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Deffkoptas, Squighog Boyz
+
+Ask about this rule
 
 ######## popup rule:[CLEAVE] · MELEE Melee
 CORE RULE
@@ -3848,6 +3981,8 @@ Example: If a [CLEAVE 1] weapon with an A characteristic of 3 targets one unit c
 
 IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Deffkoptas, Squighog Boyz
 
+Ask about this rule
+
 ######## popup rule:[IGNORES COVER] · MELEE Melee
 CORE RULE
 
@@ -3856,6 +3991,8 @@ IGNORES COVER
 Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
 
 IN THIS ARMYNazdreg, Big Mek · Kunnin’ But Brutal, Big Mek in Mega Armour · Follow Me Ladz
+
+Ask about this rule
 
 ######## popup rule:[LETHAL HITS] · MELEE Melee
 CORE RULE
@@ -3868,6 +4005,8 @@ Designer’s Note: Choosing to automatically wound the target means that no woun
 
 IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Big Mek · Kunnin’ But Brutal, Deffkoptas, Squighog Boyz
 
+Ask about this rule
+
 ######## popup rule:[PRECISION] · MELEE Melee
 CORE RULE
 
@@ -3879,6 +4018,8 @@ While resolving attacks made with one or more [PRECISION] weapons, at the start 
 
 IN THIS ARMYGhazghkull Thraka
 
+Ask about this rule
+
 ######## popup rule:[RAPID FIRE 1] · MELEE Melee
 CORE RULE
 
@@ -3887,6 +4028,8 @@ RAPID FIRE 1
 This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
 
 IN THIS ARMYGhazghkull Thraka, Nazdreg, Big Mek · Kunnin’ But Brutal
+
+Ask about this rule
 
 ######## popup rule:[RAPID FIRE 2] · MELEE Melee
 CORE RULE
@@ -3897,6 +4040,8 @@ This ability always takes the form [RAPID FIRE X]. Each time you gather attack d
 
 IN THIS ARMYGhazghkull Thraka, Nazdreg, Big Mek · Kunnin’ But Brutal
 
+Ask about this rule
+
 ######## popup rule:[RAPID FIRE] · MELEE Melee
 CORE RULE
 
@@ -3906,6 +4051,8 @@ This ability always takes the form [RAPID FIRE X]. Each time you gather attack d
 
 IN THIS ARMYGhazghkull Thraka, Nazdreg, Big Mek · Kunnin’ But Brutal
 
+Ask about this rule
+
 ######## popup rule:[SUSTAINED HITS 1] · MELEE Melee
 CORE RULE
 
@@ -3914,6 +4061,8 @@ SUSTAINED HITS 1
 This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
 
 IN THIS ARMYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Big Mek · Kunnin’ But Brutal, Big Mek in Mega Armour · Follow Me Ladz, Gretchin, Deffkoptas, Squighog Boyz
+
+Ask about this rule
 
 ######## popup rule:advance move · MELEE Melee
 CORE RULE
@@ -3932,6 +4081,7 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
 
 ######## popup rule:advance roll · MELEE Melee
 CORE RULE
@@ -3950,6 +4100,7 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
 
 ######## popup rule:advance rolls · MELEE Melee
 CORE RULE
@@ -3968,6 +4119,7 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
 
 ######## popup rule:battle-shock roll · MELEE Melee
 CORE RULE
@@ -3996,6 +4148,8 @@ That unit is at, or below, half-strength.
 
 If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
 
+Ask about this rule
+
 ######## popup rule:battle-shocked · MELEE Melee
 CORE RULE
 
@@ -4023,6 +4177,8 @@ That unit is at, or below, half-strength.
 
 If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
 
+Ask about this rule
+
 ######## popup rule:benefit of cover · MELEE Melee
 CORE RULE
 
@@ -4034,6 +4190,8 @@ That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area.
 That model is not fully visible to the attacking model due to one or more intervening terrain features and/or one or more intervening obscuring terrain areas (see below).
 
 Each time a ranged attack targets a unit that has the benefit of cover against it, worsen the BS characteristic of that attack by 1.
+
+Ask about this rule
 
 ######## popup rule:charge move · MELEE Melee
 CORE RULE
@@ -4059,6 +4217,7 @@ AFTER MOVING:
 Your unit must be engaged with all of the charge targets.
 Your unit cannot be engaged with one or more enemy units that are not charge targets.
 Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
 
 ######## popup rule:charge roll · MELEE Melee
 CORE RULE
@@ -4076,6 +4235,8 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
+Ask about this rule
+
 ######## popup rule:charge rolls · MELEE Melee
 CORE RULE
 
@@ -4091,6 +4252,8 @@ It made an advance or fall-back move this turn.
 3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
 
 ######## popup rule:charge targets · MELEE Melee
 CORE RULE
@@ -4116,6 +4279,7 @@ AFTER MOVING:
 Your unit must be engaged with all of the charge targets.
 Your unit cannot be engaged with one or more enemy units that are not charge targets.
 Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
 
 ######## popup rule:declare a charge · MELEE Melee
 CORE RULE
@@ -4133,6 +4297,8 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
+Ask about this rule
+
 ######## popup rule:destroyed · MELEE Melee
 CORE RULE
 
@@ -4145,6 +4311,8 @@ When a model is destroyed, first resolve any rules that are triggered when it is
 05.04.05 Fight On Death (app): Some rules enable models to attack after they have been destroyed. When a model under such an effect is destroyed, do not remove it from play.
 
 Those models will stay on the battlefield until their unit is selected to attack and has attacked, or until the end of the phase (whichever comes first). Any rules triggered by those models being destroyed are resolved, and then those destroyed models are removed.
+
+Ask about this rule
 
 ######## popup rule:eligible to declare a charge · MELEE Melee
 CORE RULE
@@ -4162,6 +4330,8 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
+Ask about this rule
+
 ######## popup rule:engaged · MELEE Melee
 CORE RULE
 
@@ -4173,6 +4343,8 @@ While a friendly model is within engagement range of one or more enemy models, t
 While a unit contains no engaged models, that unit is unengaged.
 
 Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
 
 ######## popup rule:fall-back move · MELEE Melee
 CORE RULE
@@ -4209,6 +4381,7 @@ If a stratagem or ability instructs a unit to make a Desperate Escape test, that
 Must use the desperate escape mode when it is selected to make a fall-back move.
 Must make one hazard roll for each model in that unit.
 Must make a battle-shock roll.
+Ask about this rule
 
 ######## popup rule:hazard roll · MELEE Melee
 CORE RULE
@@ -4222,6 +4395,8 @@ To make a hazard roll for a unit, roll one D6: on a 1-2, that roll fails and tha
 Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model in the unit make a hazard roll? No, the unit would make 1 single hazard roll.
 
 Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
+
+Ask about this rule
 
 ######## popup rule:ingress move · MELEE Melee
 CORE RULE
@@ -4242,6 +4417,8 @@ AFTER MOVING: Unless otherwise stated, until the start of the next Charge phase,
 
 20.03.01 Set Up As Reinforcements (app): If a rule mentions a unit being set up on the battlefield as Reinforcements, it means a unit that made an ingress move.
 
+Ask about this rule
+
 ######## popup rule:mortal wound · MELEE Melee
 CORE RULE
 
@@ -4257,6 +4434,8 @@ Otherwise, you must select one CHARACTER model in that unit.
 Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
 
 When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+Ask about this rule
 
 ######## popup rule:mortal wounds · MELEE Melee
 CORE RULE
@@ -4274,6 +4453,8 @@ Resolve Damage: The selected model loses 1 wound. If this reduces that model’s
 
 When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
 
+Ask about this rule
+
 ######## popup rule:normal move · MELEE Melee
 CORE RULE
 
@@ -4288,6 +4469,8 @@ EFFECT: Your unit moves as described in Moving (03).
 AFTER MOVING: Your unit must be unengaged.
 
 09.05.01 More Than One Normal Move in a Phase (app): A unit cannot make more than one Normal Move in a phase.
+
+Ask about this rule
 
 ######## popup rule:riled up · MELEE Melee
 ORKS ARMY RULE
@@ -4304,6 +4487,7 @@ While a unit is riled up:
 That unit has 5+ InSv.
 That unit’s ranged attacks have [ASSAULT].
 When that unit is selected to make an advance move, that advance move does not prevent that unit from being eligible to declare a charge.
+Ask about this rule
 
 ######## popup rule:snap shooting · MELEE Melee
 CORE RULE
@@ -4321,6 +4505,8 @@ Each attack only hits on an unmodified hit roll of 6 (irrespective of the attack
 You cannot re-roll hit rolls.
 
 AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.
+
+Ask about this rule
 
 ######## popup rule:strategic reserves · MELEE Melee
 CORE RULE
@@ -4345,6 +4531,7 @@ At the end of the third battle round, unless otherwise stated, all strategic res
 
 Units embarked within TRANSPORTS that have made an ingress move during the battle.
 Repositioned units (see opposite).
+Ask about this rule
 
 ######## popup rule:unengaged · MELEE Melee
 CORE RULE
@@ -4357,6 +4544,8 @@ While a friendly model is within engagement range of one or more enemy models, t
 While a unit contains no engaged models, that unit is unengaged.
 
 Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
 
 ######## popup strat:breakin-heads · MELEE Melee
 1CP · ANY PHASE · EITHER TURN
@@ -4377,6 +4566,8 @@ Your unit is no longer battle-shocked.
 
 USED BYNazdreg, Big Mek · Kunnin’ But Brutal, Big Mek in Mega Armour · Follow Me Ladz
 
+Ask about this stratagem
+
 ######## popup strat:close-range-dakka · MELEE Melee
 1CP · SHOOTING · YOUR TURN
 
@@ -4395,6 +4586,8 @@ Your unit’s ranged attacks have:
 Or: If that attack already has [RAPID FIRE], +1 to the value of that [RAPID FIRE] (e.g. [RAPID FIRE 1] becomes [RAPID FIRE 2]).
 
 USED BYany unit
+
+Ask about this stratagem
 
 ######## popup strat:command-re-roll · MELEE Melee
 1CP · ANY PHASE · EITHER TURN
@@ -4421,6 +4614,8 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:counteroffensive · MELEE Melee
 2CP · FIGHT · THEIR TURN
 
@@ -4436,6 +4631,8 @@ EFFECT
 Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
 
 USED BYany unit
+
+Ask about this stratagem
 
 ######## popup strat:crushing-impact · MELEE Melee
 1CP · CHARGE · YOUR TURN
@@ -4459,6 +4656,8 @@ Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact st
 
 USED BYMozrog Skragbad, Beastboss · Headwoppa’s Killchoppa
 
+Ask about this stratagem
+
 ######## popup strat:epic-challenge · MELEE Melee
 1CP · FIGHT · EITHER TURN
 
@@ -4474,6 +4673,8 @@ EFFECT
 Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
 
 USED BYGhazghkull Thraka, Mozrog Skragbad, Nazdreg, Beastboss · Headwoppa’s Killchoppa, Big Mek · Kunnin’ But Brutal, Big Mek in Mega Armour · Follow Me Ladz
+
+Ask about this stratagem
 
 ######## popup strat:explosives · MELEE Melee
 1CP · SHOOTING · YOUR TURN
@@ -4497,6 +4698,8 @@ Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
 
 USED BYGhazghkull Thraka, Nazdreg, Big Mek · Kunnin’ But Brutal, Big Mek in Mega Armour · Follow Me Ladz, Deffkoptas, Squighog Boyz
 
+Ask about this stratagem
+
 ######## popup strat:fire-overwatch · MELEE Melee
 1CP · MOVEMENT · THEIR TURN
 
@@ -4513,6 +4716,8 @@ Your unit shoots using snap shooting.
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:fungus-fuel-injection · MELEE Melee
 1CP · MOVEMENT · YOUR TURN
 
@@ -4528,6 +4733,8 @@ EFFECT
 Your unit has +2" M.
 
 USED BYDeffkoptas, Squighog Boyz
+
+Ask about this stratagem
 
 ######## popup strat:heroic-intervention · MELEE Melee
 1CP · CHARGE · THEIR TURN · INTO THE FRAY +1CP
@@ -4550,6 +4757,8 @@ Wahapedia FAQ: If a stratagem contains a section that carries an additional CP c
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:hit-em-harder · MELEE Melee
 1CP · FIGHT · EITHER TURN
 
@@ -4565,6 +4774,8 @@ EFFECT
 Your unit’s melee attacks have [LETHAL HITS].
 
 USED BYany unit
+
+Ask about this stratagem
 
 ######## popup strat:insane-bravery · MELEE Melee
 1CP · COMMAND · YOUR TURN · ONCE PER BATTLE
@@ -4586,6 +4797,8 @@ Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? 
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:mow-em-down · MELEE Melee
 1CP · FIGHT · EITHER TURN
 
@@ -4605,6 +4818,8 @@ Or: If that attack already has [CLEAVE], +1 to the value of that [CLEAVE] (e.g. 
 
 USED BYno unit in this list (needs VEHICLE)
 
+Ask about this stratagem
+
 ######## popup strat:orks-is-never-beaten · MELEE Melee
 1CP · FIGHT · EITHER TURN
 
@@ -4623,6 +4838,8 @@ On a 4+, do not remove that model from the battlefield. When your unit has fough
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:rapid-ingress · MELEE Melee
 1CP · MOVEMENT · THEIR TURN
 
@@ -4640,3 +4857,5 @@ Your unit makes an ingress move (20.04).
 RESTRICTIONSYou cannot use this stratagem during the first battle round.
 
 USED BYany unit
+
+Ask about this stratagem

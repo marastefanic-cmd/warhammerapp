@@ -1739,6 +1739,7 @@ GHAZGHKULL THRAKA
 INFANTRY
 WARBOSS
 WARLORD
+Ask about this unit
 Nazdreg ›
 
 ######## unit nazdreg-meganobz · GHAZGHKULL THRAKA Ooga booga
@@ -1916,6 +1917,7 @@ WARBOSS
 EXPLOSIVES*
 MEGANOBZ*
 *from the led Meganobz
+Ask about this unit
 ‹ Ghazghkull Thraka
 Zodgrod Wortsnagga ›
 
@@ -2098,6 +2100,7 @@ BATTLELINE*
 GRETCHIN*
 GROTS*
 *from the combined unit
+Ask about this unit
 ‹ Nazdreg
 Big Mek ›
 
@@ -2325,6 +2328,7 @@ INFANTRY
 PAINBOY*
 NOBZ*
 *from the combined unit
+Ask about this unit
 ‹ Zodgrod Wortsnagga
 Big Mek in Mega Armour · Supa-glowy Fing ›
 
@@ -2517,6 +2521,7 @@ INFANTRY
 MEGA ARMOUR
 MEGANOBZ*
 *from the led Meganobz
+Ask about this unit
 ‹ Big Mek
 Gretchin ›
 
@@ -2609,6 +2614,7 @@ FACTION: ORKS
 GRETCHIN
 GROTS
 INFANTRY
+Ask about this unit
 ‹ Big Mek in Mega Armour · Supa-glowy Fing
 
 ######## popup ability:ooga-booga|Ammo Runts|In your Shooting phase, when this unit is **selected to shoot**, you can use this ability. If you do, this unit’s ranged attacks have +1 to **hit rolls**.
@@ -2623,6 +2629,8 @@ Place any number of Ammo Runt tokens next to the unit, removing them when this a
 
 UNITBig Mek
 
+Ask about this ability
+
 ######## popup ability:ooga-booga|Arrogant Invulnerability|Attacks that target this unit have -1 **AP**. · OOGA BOOGA Ooga booga
 ABILITY
 
@@ -2631,6 +2639,8 @@ Arrogant Invulnerability
 Attacks that target this unit have -1 AP.
 
 UNITNazdreg, Big Mek in Mega Armour · Supa-glowy Fing
+
+Ask about this ability
 
 ######## popup ability:ooga-booga|Catch Dat Red Bit|When this model uses its **Crude Surgery** ability, you can add D3 to the number of wounds **healed**.
 *Place a Grot Orderly token next to the unit, removing it when this ability is used.* · OOGA BOOGA Ooga booga
@@ -2644,6 +2654,8 @@ Place a Grot Orderly token next to the unit, removing it when this ability is us
 
 UNITBig Mek
 
+Ask about this ability
+
 ######## popup ability:ooga-booga|Da Grand Warlord’s Ladz|While this unit is within 3" of another friendly **ORKS INFANTRY** unit, this unit has **Lone Operative**. · OOGA BOOGA Ooga booga
 ABILITY
 
@@ -2653,6 +2665,8 @@ While this unit is within 3" of another friendly ORKS INFANTRY unit, this unit h
 
 UNITGhazghkull Thraka
 
+Ask about this ability
+
 ######## popup ability:ooga-booga|Extra Sneaky|**GRETCHIN** unit only. This unit has -3" **detection range**. · OOGA BOOGA Ooga booga
 ABILITY · UPGRADE
 
@@ -2661,6 +2675,8 @@ Extra Sneaky
 GRETCHIN unit only. This unit has -3" detection range.
 
 UNITZodgrod Wortsnagga
+
+Ask about this ability
 
 ######## popup ability:ooga-booga|Fix Dat Armour Up|In your Command phase, this unit **heals** 3 wounds.
 *Place a Grot Oiler token next to the unit, removing it when this ability is used.* · OOGA BOOGA Ooga booga
@@ -2674,6 +2690,8 @@ Place a Grot Oiler token next to the unit, removing it when this ability is used
 
 UNITBig Mek in Mega Armour · Supa-glowy Fing
 
+Ask about this ability
+
 ######## popup ability:ooga-booga|Krumpin’ Time|In the Fight phase, if this unit is **riled up**, this unit has +1 to **hit rolls**. · OOGA BOOGA Ooga booga
 ABILITY · FIGHT · EITHER TURN
 
@@ -2682,6 +2700,8 @@ Krumpin’ Time
 In the Fight phase, if this unit is riled up, this unit has +1 to hit rolls.
 
 UNITNazdreg, Big Mek in Mega Armour · Supa-glowy Fing
+
+Ask about this ability
 
 ######## popup ability:ooga-booga|Makari, Hoist Dat Banner!|In your Movement phase, you can select a number of friendly **ORKS** units equal to or less than the current battle round number. Those units are **riled up** until the start of your next turn.
 *Place one Makari token next to the unit, removing it after this ability is used.* · OOGA BOOGA Ooga booga
@@ -2694,6 +2714,8 @@ In your Movement phase, you can select a number of friendly ORKS units equal to 
 Place one Makari token next to the unit, removing it after this ability is used.
 
 UNITGhazghkull Thraka
+
+Ask about this ability
 
 ######## popup ability:ooga-booga|More Dakka|This unit’s ranged attacks have:
 - **[IGNORES COVER]**.
@@ -2709,6 +2731,8 @@ If this unit is riled up, [SUSTAINED HITS 1].
 
 UNITBig Mek, Big Mek in Mega Armour · Supa-glowy Fing
 
+Ask about this ability
+
 ######## popup ability:ooga-booga|Paired Krumpas|Attacks made with this model’s Kustom Krumpa weapon can re-roll **hit rolls** and **wound rolls**. · OOGA BOOGA Ooga booga
 ABILITY
 
@@ -2717,6 +2741,8 @@ Paired Krumpas
 Attacks made with this model’s Kustom Krumpa weapon can re-roll hit rolls and wound rolls.
 
 UNITBig Mek
+
+Ask about this ability
 
 ######## popup ability:ooga-booga|Prophet of Da Great Waaagh!|While a friendly **ORKS** unit is within 6" of this unit, that unit’s melee attacks have:
 - +1 to **hit rolls**.
@@ -2732,6 +2758,8 @@ While a friendly ORKS unit is within 6" of this unit, that unit’s melee attack
 
 UNITGhazghkull Thraka
 
+Ask about this ability
+
 ######## popup enh:runt-swarm|Extra Sneaky · OOGA BOOGA Ooga booga
 UPGRADE · RUNT SWARM · 10 PTS
 
@@ -2740,6 +2768,8 @@ Extra Sneaky
 GRETCHIN unit only. This unit has -3" detection range.
 
 ONGretchin (Zodgrod Wortsnagga + Runtherd + Gretchin)
+
+Ask about this upgrade
 
 ######## popup enh:shoota-boyz|Supa-glowy Fing · OOGA BOOGA Ooga booga
 ENHANCEMENT · SHOOTA BOYZ · 25 PTS
@@ -2755,6 +2785,8 @@ ORKS INFANTRY model only (excluding WEIRDBOY models). This model’s ranged atta
 [SUPA-HAZARDOUS]: Each time a unit is selected to shoot, after that unit has resolved all of its attacks, make two hazard rolls for that unit for each [SUPA-HAZARDOUS] weapon you selected in the Select Weapons step.
 
 ONBig Mek in Mega Armour + Meganobz
+
+Ask about this enhancement
 
 ######## popup grant:["Dakka! Dakka! Dakka!","big-mek-in-mega-armour-meganobz","ASSAULT","ASSAULT"] · OOGA BOOGA Ooga booga
 ASSAULT · GRANTED BY
@@ -3069,6 +3101,8 @@ Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit 
 
 IN THIS ARMYZodgrod Wortsnagga, Big Mek, Big Mek in Mega Armour · Supa-glowy Fing
 
+Ask about this rule
+
 ######## popup rule:ANTI-MONSTER/VEHICLE 4+ · OOGA BOOGA Ooga booga
 CORE RULE
 
@@ -3079,6 +3113,8 @@ This ability always takes the form [ANTI-X Y+]. Each time an attack is made with
 Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
 
 IN THIS ARMYZodgrod Wortsnagga, Big Mek, Big Mek in Mega Armour · Supa-glowy Fing
+
+Ask about this rule
 
 ######## popup rule:Advance roll · OOGA BOOGA Ooga booga
 CORE RULE
@@ -3097,6 +3133,7 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
 
 ######## popup rule:BLAST 1 · OOGA BOOGA Ooga booga
 CORE RULE
@@ -3111,6 +3148,8 @@ Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit cont
 
 IN THIS ARMYNazdreg, Big Mek in Mega Armour · Supa-glowy Fing
 
+Ask about this rule
+
 ######## popup rule:CLEAVE 1 · OOGA BOOGA Ooga booga
 CORE RULE
 
@@ -3122,6 +3161,8 @@ Example: If a [CLEAVE 1] weapon with an A characteristic of 3 targets one unit c
 
 IN THIS ARMYGhazghkull Thraka, Nazdreg
 
+Ask about this rule
+
 ######## popup rule:CLEAVE 2 · OOGA BOOGA Ooga booga
 CORE RULE
 
@@ -3132,6 +3173,8 @@ This ability always takes the form [CLEAVE X]. Each time you gather attack dice 
 Example: If a [CLEAVE 1] weapon with an A characteristic of 3 targets one unit containing 16 models, you would gather three additional attack dice for that weapon (for a total of six for that weapon).
 
 IN THIS ARMYGhazghkull Thraka, Nazdreg
+
+Ask about this rule
 
 ######## popup rule:CLOSE-QUARTERS · OOGA BOOGA Ooga booga
 CORE RULE
@@ -3146,6 +3189,8 @@ One or more of its other ranged weapons.
 [PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
 
 IN THIS ARMYGhazghkull Thraka, Zodgrod Wortsnagga, Gretchin
+
+Ask about this rule
 
 ######## popup rule:Charge roll · OOGA BOOGA Ooga booga
 CORE RULE
@@ -3163,6 +3208,8 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
+Ask about this rule
+
 ######## popup rule:DEVASTATING WOUNDS · OOGA BOOGA Ooga booga
 CORE RULE
 
@@ -3173,6 +3220,8 @@ Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critica
 Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
 
 IN THIS ARMYGhazghkull Thraka, Zodgrod Wortsnagga, Big Mek, Big Mek in Mega Armour · Supa-glowy Fing
+
+Ask about this rule
 
 ######## popup rule:DEVASTATING WOUNDS: INFANTRY · OOGA BOOGA Ooga booga
 CORE RULE
@@ -3185,6 +3234,8 @@ Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of 
 
 IN THIS ARMYGhazghkull Thraka, Zodgrod Wortsnagga, Big Mek, Big Mek in Mega Armour · Supa-glowy Fing
 
+Ask about this rule
+
 ######## popup rule:DEVASTATING WOUNDS: MONSTER/VEHICLE · OOGA BOOGA Ooga booga
 CORE RULE
 
@@ -3196,6 +3247,8 @@ Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of 
 
 IN THIS ARMYGhazghkull Thraka, Zodgrod Wortsnagga, Big Mek, Big Mek in Mega Armour · Supa-glowy Fing
 
+Ask about this rule
+
 ######## popup rule:Da Boss · OOGA BOOGA Ooga booga
 ORKS ARMY RULE
 
@@ -3204,6 +3257,8 @@ Da Boss
 At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.
 
 Wahapedia core rules errata (07.01, CP Generated by a Warlord; not in GW’s printed Core Rules): you do not gain the 1CP while your WARLORD is destroyed.
+
+Ask about this rule
 
 ######## popup rule:Dakka! Dakka! Dakka! · OOGA BOOGA Ooga booga
 SHOOTA BOYZ DETACHMENT RULE
@@ -3217,6 +3272,8 @@ While this unit is riled up, +3" R.
 
 IN THIS ARMYGhazghkull Thraka, Nazdreg, Zodgrod Wortsnagga, Big Mek, Big Mek in Mega Armour · Supa-glowy Fing, Gretchin
 
+Ask about this rule
+
 ######## popup rule:Deep Strike · OOGA BOOGA Ooga booga
 CORE RULE
 
@@ -3228,6 +3285,8 @@ App note, not rules text: unless a rule says otherwise, units in strategic reser
 
 IN THIS ARMYNazdreg
 
+Ask about this rule
+
 ######## popup rule:Displays of Savagery · OOGA BOOGA Ooga booga
 BULLY BOYZ DETACHMENT RULE
 
@@ -3236,6 +3295,8 @@ Displays of Savagery
 Friendly MEGANOBZ/NOBZ units’ melee attacks have [SUSTAINED HITS 1].
 
 IN THIS ARMYNazdreg, Big Mek, Big Mek in Mega Armour · Supa-glowy Fing
+
+Ask about this rule
 
 ######## popup rule:EXTRA ATTACKS · OOGA BOOGA Ooga booga
 CORE RULE
@@ -3249,6 +3310,8 @@ One of that model’s other melee weapons, if possible.
 
 IN THIS ARMYGhazghkull Thraka, Nazdreg, Big Mek
 
+Ask about this rule
+
 ######## popup rule:Fights First · OOGA BOOGA Ooga booga
 CORE RULE
 
@@ -3258,6 +3321,8 @@ While every model in a unit has this ability, that unit is a Fights First unit.
 
 See the Resolve Fights First Combats step in the Fight phase (12.04).
 
+Ask about this rule
+
 ######## popup rule:HAZARDOUS · OOGA BOOGA Ooga booga
 CORE RULE
 
@@ -3266,6 +3331,8 @@ HAZARDOUS
 Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.
 
 IN THIS ARMYNazdreg, Big Mek, Big Mek in Mega Armour · Supa-glowy Fing
+
+Ask about this rule
 
 ######## popup rule:Hazard roll · OOGA BOOGA Ooga booga
 CORE RULE
@@ -3280,6 +3347,8 @@ Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model i
 
 Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
 
+Ask about this rule
+
 ######## popup rule:LETHAL HITS: non-MONSTER/VEHICLE · OOGA BOOGA Ooga booga
 CORE RULE
 
@@ -3291,6 +3360,8 @@ Designer’s Note: Choosing to automatically wound the target means that no woun
 
 IN THIS ARMYGhazghkull Thraka, Nazdreg, Zodgrod Wortsnagga, Big Mek, Big Mek in Mega Armour · Supa-glowy Fing
 
+Ask about this rule
+
 ######## popup rule:Leader · OOGA BOOGA Ooga booga
 CORE RULE
 
@@ -3301,6 +3372,8 @@ Before the battle, in the Muster Armies step, for each leader and support unit i
 Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.
 
 IN THIS ARMYNazdreg, Zodgrod Wortsnagga, Big Mek, Big Mek in Mega Armour · Supa-glowy Fing
+
+Ask about this rule
 
 ######## popup rule:Lone Operative · OOGA BOOGA Ooga booga
 CORE RULE
@@ -3319,6 +3392,8 @@ If an attached unit below starting strength only contains models with Lone Opera
 
 IN THIS ARMYGhazghkull Thraka (in Da Grand Warlord’s Ladz)
 
+Ask about this rule
+
 ######## popup rule:PRECISION · OOGA BOOGA Ooga booga
 CORE RULE
 
@@ -3330,6 +3405,8 @@ While resolving attacks made with one or more [PRECISION] weapons, at the start 
 
 IN THIS ARMYGhazghkull Thraka
 
+Ask about this rule
+
 ######## popup rule:RAPID FIRE 1 · OOGA BOOGA Ooga booga
 CORE RULE
 
@@ -3338,6 +3415,8 @@ RAPID FIRE 1
 This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
 
 IN THIS ARMYGhazghkull Thraka, Nazdreg, Big Mek, Big Mek in Mega Armour · Supa-glowy Fing
+
+Ask about this rule
 
 ######## popup rule:RAPID FIRE 2 · OOGA BOOGA Ooga booga
 CORE RULE
@@ -3348,6 +3427,8 @@ This ability always takes the form [RAPID FIRE X]. Each time you gather attack d
 
 IN THIS ARMYGhazghkull Thraka, Nazdreg, Big Mek, Big Mek in Mega Armour · Supa-glowy Fing
 
+Ask about this rule
+
 ######## popup rule:RAPID FIRE 4 · OOGA BOOGA Ooga booga
 CORE RULE
 
@@ -3356,6 +3437,8 @@ RAPID FIRE 4
 This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
 
 IN THIS ARMYGhazghkull Thraka, Nazdreg, Big Mek, Big Mek in Mega Armour · Supa-glowy Fing
+
+Ask about this rule
 
 ######## popup rule:Resolve a charge · OOGA BOOGA Ooga booga
 CORE RULE
@@ -3373,6 +3456,8 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
+Ask about this rule
+
 ######## popup rule:Scouts 6" · OOGA BOOGA Ooga booga
 CORE RULE
 
@@ -3383,6 +3468,7 @@ This ability always takes the form Scouts X". In the Resolve Pre-battle Abilitie
 If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone.
 If that unit is wholly within your deployment zone, it can make a scout move (see below).
 If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.
+Ask about this rule
 
 ######## popup rule:Sneaky Little Gitz · OOGA BOOGA Ooga booga
 RUNT SWARM DETACHMENT RULE
@@ -3392,6 +3478,8 @@ Friendly GRETCHIN units have BATTLELINE.
 When a friendly GRETCHIN unit is selected to make an advance/fall-back move, that move does not prevent this unit from being eligible to start an action.
 
 IN THIS ARMYZodgrod Wortsnagga, Gretchin
+
+Ask about this rule
 
 ######## popup rule:Support · OOGA BOOGA Ooga booga
 CORE RULE
@@ -3404,6 +3492,8 @@ Unless otherwise stated, each bodyguard unit can only have one leader unit and o
 
 IN THIS ARMYZodgrod Wortsnagga, Big Mek
 
+Ask about this rule
+
 ######## popup rule:TORRENT · OOGA BOOGA Ooga booga
 CORE RULE
 
@@ -3413,6 +3503,8 @@ Each time an attack is made with a [TORRENT] weapon, that attack automatically h
 
 IN THIS ARMYGhazghkull Thraka, Nazdreg, Big Mek in Mega Armour · Supa-glowy Fing
 
+Ask about this rule
+
 ######## popup rule:TWIN-LINKED · OOGA BOOGA Ooga booga
 CORE RULE
 
@@ -3421,6 +3513,8 @@ TWIN-LINKED
 Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll.
 
 IN THIS ARMYNazdreg
+
+Ask about this rule
 
 ######## popup rule:Waaagh! · OOGA BOOGA Ooga booga
 ORKS ARMY RULE
@@ -3437,6 +3531,7 @@ While a unit is riled up:
 That unit has 5+ InSv.
 That unit’s ranged attacks have [ASSAULT].
 When that unit is selected to make an advance move, that advance move does not prevent that unit from being eligible to declare a charge.
+Ask about this rule
 
 ######## popup rule:War Cry · OOGA BOOGA Ooga booga
 ORKS ARMY RULE
@@ -3444,6 +3539,8 @@ ORKS ARMY RULE
 War Cry
 
 At the start of the Command phase, you can use this ability. If you do, friendly ORKS units with the Waaagh! ability are riled up until the end of the next turn.
+
+Ask about this rule
 
 ######## popup rule:[ANTI-INFANTRY 4+] · OOGA BOOGA Ooga booga
 CORE RULE
@@ -3456,6 +3553,8 @@ Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit 
 
 IN THIS ARMYZodgrod Wortsnagga, Big Mek, Big Mek in Mega Armour · Supa-glowy Fing
 
+Ask about this rule
+
 ######## popup rule:[ASSAULT] · OOGA BOOGA Ooga booga
 CORE RULE
 
@@ -3464,6 +3563,8 @@ ASSAULT
 Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
 
 IN THIS ARMYGhazghkull Thraka, Nazdreg, Zodgrod Wortsnagga, Big Mek, Big Mek in Mega Armour · Supa-glowy Fing, Gretchin
+
+Ask about this rule
 
 ######## popup rule:[DEVASTATING WOUNDS] · OOGA BOOGA Ooga booga
 CORE RULE
@@ -3476,6 +3577,8 @@ Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of 
 
 IN THIS ARMYGhazghkull Thraka, Zodgrod Wortsnagga, Big Mek, Big Mek in Mega Armour · Supa-glowy Fing
 
+Ask about this rule
+
 ######## popup rule:[IGNORES COVER] · OOGA BOOGA Ooga booga
 CORE RULE
 
@@ -3484,6 +3587,8 @@ IGNORES COVER
 Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
 
 IN THIS ARMYNazdreg, Big Mek, Big Mek in Mega Armour · Supa-glowy Fing
+
+Ask about this rule
 
 ######## popup rule:[PRECISION] · OOGA BOOGA Ooga booga
 CORE RULE
@@ -3496,6 +3601,8 @@ While resolving attacks made with one or more [PRECISION] weapons, at the start 
 
 IN THIS ARMYGhazghkull Thraka
 
+Ask about this rule
+
 ######## popup rule:[SUPA-HAZARDOUS] · OOGA BOOGA Ooga booga
 SHOOTA BOYZ ENHANCEMENT SUPA-GLOWY FING
 
@@ -3503,12 +3610,16 @@ SUPA-HAZARDOUS
 
 Each time a unit is selected to shoot, after that unit has resolved all of its attacks, make two hazard rolls for that unit for each [SUPA-HAZARDOUS] weapon you selected in the Select Weapons step.
 
+Ask about this rule
+
 ######## popup rule:[SUPA-HAZARDOUS]: · OOGA BOOGA Ooga booga
 SHOOTA BOYZ ENHANCEMENT SUPA-GLOWY FING
 
 SUPA-HAZARDOUS]:
 
 Each time a unit is selected to shoot, after that unit has resolved all of its attacks, make two hazard rolls for that unit for each [SUPA-HAZARDOUS] weapon you selected in the Select Weapons step.
+
+Ask about this rule
 
 ######## popup rule:[SUSTAINED HITS 1] · OOGA BOOGA Ooga booga
 CORE RULE
@@ -3519,6 +3630,8 @@ This ability always takes the form [SUSTAINED HITS X]. Each time an attack made 
 
 IN THIS ARMYNazdreg, Big Mek, Big Mek in Mega Armour · Supa-glowy Fing
 
+Ask about this rule
+
 ######## popup rule:[TORRENT] · OOGA BOOGA Ooga booga
 CORE RULE
 
@@ -3527,6 +3640,8 @@ TORRENT
 Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.
 
 IN THIS ARMYGhazghkull Thraka, Nazdreg, Big Mek in Mega Armour · Supa-glowy Fing
+
+Ask about this rule
 
 ######## popup rule:advance · OOGA BOOGA Ooga booga
 CORE RULE
@@ -3545,6 +3660,7 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
 
 ######## popup rule:advance move · OOGA BOOGA Ooga booga
 CORE RULE
@@ -3563,6 +3679,7 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
 
 ######## popup rule:advance roll · OOGA BOOGA Ooga booga
 CORE RULE
@@ -3581,6 +3698,7 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
 
 ######## popup rule:advance rolls · OOGA BOOGA Ooga booga
 CORE RULE
@@ -3599,6 +3717,7 @@ AFTER MOVING:
 
 Your unit must be unengaged.
 Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
 
 ######## popup rule:attached · OOGA BOOGA Ooga booga
 CORE RULE
@@ -3622,6 +3741,8 @@ A specific model (e.g. the bearer of an enhancement or an item of wargear): That
 In all of the above cases, if that last model was destroyed as the result of an attack, the ability it was conferring upon the attached unit applies until the attacking unit has resolved all of its attacks.
 
 Wahapedia FAQ: When does a model’s or unit’s ability in an attached unit apply to all models in that unit? A rule that applies to ‘this/that unit’ or ‘models in this/that unit’ applies to all models in an attached unit. Rules that just apply to one model in an attached unit (for example, a rule that grants a model Feel No Pain or Lone Operative) only apply to that model, not to all models in the attached unit.
+
+Ask about this rule
 
 ######## popup rule:battle-shock roll · OOGA BOOGA Ooga booga
 CORE RULE
@@ -3650,6 +3771,8 @@ That unit is at, or below, half-strength.
 
 If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
 
+Ask about this rule
+
 ######## popup rule:battle-shocked · OOGA BOOGA Ooga booga
 CORE RULE
 
@@ -3677,6 +3800,8 @@ That unit is at, or below, half-strength.
 
 If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
 
+Ask about this rule
+
 ######## popup rule:benefit of cover · OOGA BOOGA Ooga booga
 CORE RULE
 
@@ -3688,6 +3813,8 @@ That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area.
 That model is not fully visible to the attacking model due to one or more intervening terrain features and/or one or more intervening obscuring terrain areas (see below).
 
 Each time a ranged attack targets a unit that has the benefit of cover against it, worsen the BS characteristic of that attack by 1.
+
+Ask about this rule
 
 ######## popup rule:charge move · OOGA BOOGA Ooga booga
 CORE RULE
@@ -3713,6 +3840,7 @@ AFTER MOVING:
 Your unit must be engaged with all of the charge targets.
 Your unit cannot be engaged with one or more enemy units that are not charge targets.
 Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
 
 ######## popup rule:charge roll · OOGA BOOGA Ooga booga
 CORE RULE
@@ -3730,6 +3858,8 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
+Ask about this rule
+
 ######## popup rule:charge rolls · OOGA BOOGA Ooga booga
 CORE RULE
 
@@ -3745,6 +3875,8 @@ It made an advance or fall-back move this turn.
 3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
 
 ######## popup rule:charge targets · OOGA BOOGA Ooga booga
 CORE RULE
@@ -3770,6 +3902,7 @@ AFTER MOVING:
 Your unit must be engaged with all of the charge targets.
 Your unit cannot be engaged with one or more enemy units that are not charge targets.
 Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
 
 ######## popup rule:desperate escape · OOGA BOOGA Ooga booga
 CORE RULE
@@ -3806,6 +3939,7 @@ If a stratagem or ability instructs a unit to make a Desperate Escape test, that
 Must use the desperate escape mode when it is selected to make a fall-back move.
 Must make one hazard roll for each model in that unit.
 Must make a battle-shock roll.
+Ask about this rule
 
 ######## popup rule:destroyed · OOGA BOOGA Ooga booga
 CORE RULE
@@ -3819,6 +3953,8 @@ When a model is destroyed, first resolve any rules that are triggered when it is
 05.04.05 Fight On Death (app): Some rules enable models to attack after they have been destroyed. When a model under such an effect is destroyed, do not remove it from play.
 
 Those models will stay on the battlefield until their unit is selected to attack and has attacked, or until the end of the phase (whichever comes first). Any rules triggered by those models being destroyed are resolved, and then those destroyed models are removed.
+
+Ask about this rule
 
 ######## popup rule:eligible to declare a charge · OOGA BOOGA Ooga booga
 CORE RULE
@@ -3836,6 +3972,8 @@ It made an advance or fall-back move this turn.
 
 Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
 
+Ask about this rule
+
 ######## popup rule:engaged · OOGA BOOGA Ooga booga
 CORE RULE
 
@@ -3847,6 +3985,8 @@ While a friendly model is within engagement range of one or more enemy models, t
 While a unit contains no engaged models, that unit is unengaged.
 
 Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
 
 ######## popup rule:fall-back move · OOGA BOOGA Ooga booga
 CORE RULE
@@ -3883,6 +4023,7 @@ If a stratagem or ability instructs a unit to make a Desperate Escape test, that
 Must use the desperate escape mode when it is selected to make a fall-back move.
 Must make one hazard roll for each model in that unit.
 Must make a battle-shock roll.
+Ask about this rule
 
 ######## popup rule:hazard roll · OOGA BOOGA Ooga booga
 CORE RULE
@@ -3897,6 +4038,8 @@ Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model i
 
 Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
 
+Ask about this rule
+
 ######## popup rule:hazard rolls · OOGA BOOGA Ooga booga
 CORE RULE
 
@@ -3909,6 +4052,8 @@ To make a hazard roll for a unit, roll one D6: on a 1-2, that roll fails and tha
 Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model in the unit make a hazard roll? No, the unit would make 1 single hazard roll.
 
 Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
+
+Ask about this rule
 
 ######## popup rule:ingress move · OOGA BOOGA Ooga booga
 CORE RULE
@@ -3929,6 +4074,8 @@ AFTER MOVING: Unless otherwise stated, until the start of the next Charge phase,
 
 20.03.01 Set Up As Reinforcements (app): If a rule mentions a unit being set up on the battlefield as Reinforcements, it means a unit that made an ingress move.
 
+Ask about this rule
+
 ######## popup rule:mortal wound · OOGA BOOGA Ooga booga
 CORE RULE
 
@@ -3944,6 +4091,8 @@ Otherwise, you must select one CHARACTER model in that unit.
 Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
 
 When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+Ask about this rule
 
 ######## popup rule:mortal wounds · OOGA BOOGA Ooga booga
 CORE RULE
@@ -3961,6 +4110,8 @@ Resolve Damage: The selected model loses 1 wound. If this reduces that model’s
 
 When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
 
+Ask about this rule
+
 ######## popup rule:normal move · OOGA BOOGA Ooga booga
 CORE RULE
 
@@ -3975,6 +4126,8 @@ EFFECT: Your unit moves as described in Moving (03).
 AFTER MOVING: Your unit must be unengaged.
 
 09.05.01 More Than One Normal Move in a Phase (app): A unit cannot make more than one Normal Move in a phase.
+
+Ask about this rule
 
 ######## popup rule:riled up · OOGA BOOGA Ooga booga
 ORKS ARMY RULE
@@ -3991,6 +4144,7 @@ While a unit is riled up:
 That unit has 5+ InSv.
 That unit’s ranged attacks have [ASSAULT].
 When that unit is selected to make an advance move, that advance move does not prevent that unit from being eligible to declare a charge.
+Ask about this rule
 
 ######## popup rule:selected to attack · OOGA BOOGA Ooga booga
 CORE RULE
@@ -4000,6 +4154,8 @@ Selected to Attack
 04.01.05 Selected to Attack (app): Some rules use the term selected to attack. If a unit is selected to fight, selected to shoot or chosen to make attacks, that unit is selected to attack.
 
 App note, not rules text: from the rules appendix in the Warhammer 40,000 app, as Wahapedia prints it (04.01.05); the printed Core Rules do not include it.
+
+Ask about this rule
 
 ######## popup rule:snap shooting · OOGA BOOGA Ooga booga
 CORE RULE
@@ -4017,6 +4173,8 @@ Each attack only hits on an unmodified hit roll of 6 (irrespective of the attack
 You cannot re-roll hit rolls.
 
 AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.
+
+Ask about this rule
 
 ######## popup rule:starting strength · OOGA BOOGA Ooga booga
 CORE RULE
@@ -4043,6 +4201,8 @@ Some units cannot be at half-strength: If a model’s W characteristic or a unit
 
 Example: A Captain (1 model) is attached to a unit of Intercessors (5 models). This attached unit has a starting strength of 6. If three Intercessors were destroyed, the unit would be at half-strength. If four Intercessors were destroyed, the unit would be below half-strength. If all of the Intercessors were destroyed, the remaining Captain would be below half-strength, despite having his full wounds remaining.
 
+Ask about this rule
+
 ######## popup rule:strategic reserves · OOGA BOOGA Ooga booga
 CORE RULE
 
@@ -4066,6 +4226,7 @@ At the end of the third battle round, unless otherwise stated, all strategic res
 
 Units embarked within TRANSPORTS that have made an ingress move during the battle.
 Repositioned units (see opposite).
+Ask about this rule
 
 ######## popup rule:unengaged · OOGA BOOGA Ooga booga
 CORE RULE
@@ -4078,6 +4239,8 @@ While a friendly model is within engagement range of one or more enemy models, t
 While a unit contains no engaged models, that unit is unengaged.
 
 Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
 
 ######## popup strat:armed-to-da-teef · OOGA BOOGA Ooga booga
 1CP · YOUR SHOOTING / FIGHT (EITHER TURN)
@@ -4097,6 +4260,8 @@ Re-roll hit rolls of 1.
 If your unit is riled up, re-roll hit rolls.
 
 USED BYNazdreg, Big Mek, Big Mek in Mega Armour · Supa-glowy Fing
+
+Ask about this stratagem
 
 ######## popup strat:command-re-roll · OOGA BOOGA Ooga booga
 1CP · ANY PHASE · EITHER TURN
@@ -4123,6 +4288,8 @@ You re-roll that roll. If you are rolling more than one dice together, select on
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:counteroffensive · OOGA BOOGA Ooga booga
 2CP · FIGHT · THEIR TURN
 
@@ -4139,6 +4306,8 @@ Until the end of the phase, your unit has the Fights First ability and it must b
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:epic-challenge · OOGA BOOGA Ooga booga
 1CP · FIGHT · EITHER TURN
 
@@ -4154,6 +4323,8 @@ EFFECT
 Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
 
 USED BYGhazghkull Thraka, Nazdreg, Zodgrod Wortsnagga, Big Mek, Big Mek in Mega Armour · Supa-glowy Fing
+
+Ask about this stratagem
 
 ######## popup strat:explosives · OOGA BOOGA Ooga booga
 1CP · SHOOTING · YOUR TURN
@@ -4177,6 +4348,8 @@ Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
 
 USED BYGhazghkull Thraka, Nazdreg, Big Mek, Big Mek in Mega Armour · Supa-glowy Fing
 
+Ask about this stratagem
+
 ######## popup strat:fire-overwatch · OOGA BOOGA Ooga booga
 1CP · MOVEMENT · THEIR TURN
 
@@ -4193,6 +4366,8 @@ Your unit shoots using snap shooting.
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:glowin-dakka · OOGA BOOGA Ooga booga
 1CP · SHOOTING · YOUR TURN
 
@@ -4208,6 +4383,8 @@ EFFECT
 Your unit’s ranged attacks that target a unit within 9" have +1 AP.
 
 USED BYany unit
+
+Ask about this stratagem
 
 ######## popup strat:grot-shields · OOGA BOOGA Ooga booga
 1CP · SHOOTING · THEIR TURN
@@ -4226,6 +4403,8 @@ When a hit roll for that enemy unit’s ranged attacks that target that ORKS uni
 Wahapedia FAQ: “When using the Grot Shields stratagem, are hits by [TORRENT] weapons considered ’hit rolls that result in a hit’?” “No.”
 
 USED BYZodgrod Wortsnagga, Gretchin
+
+Ask about this stratagem
 
 ######## popup strat:heroic-intervention · OOGA BOOGA Ooga booga
 1CP · CHARGE · THEIR TURN · INTO THE FRAY +1CP
@@ -4248,6 +4427,8 @@ Wahapedia FAQ: If a stratagem contains a section that carries an additional CP c
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:hulking-brutes · OOGA BOOGA Ooga booga
 1CP · SHOOTING · THEIR TURN · OR: +1CP
 
@@ -4266,6 +4447,8 @@ Ranged attacks that target your unit with a S greater than your unit’s T have 
 
 USED BYNazdreg, Big Mek, Big Mek in Mega Armour · Supa-glowy Fing
 
+Ask about this stratagem
+
 ######## popup strat:infested-war-zone · OOGA BOOGA Ooga booga
 2CP · ANY PHASE · EITHER TURN
 
@@ -4281,6 +4464,8 @@ EFFECT
 Add a new GRETCHIN unit to your army identical to your destroyed unit, in strategic reserves, at its starting strength, with its full wounds remaining.
 
 USED BYZodgrod Wortsnagga, Gretchin
+
+Ask about this stratagem
 
 ######## popup strat:insane-bravery · OOGA BOOGA Ooga booga
 1CP · COMMAND · YOUR TURN · ONCE PER BATTLE
@@ -4302,6 +4487,8 @@ Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? 
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:kustom-dakka · OOGA BOOGA Ooga booga
 1CP · SHOOTING · YOUR TURN
 
@@ -4318,6 +4505,8 @@ Your unit’s ranged attacks that target a unit (excluding MONSTER/VEHICLE units
 
 USED BYany unit
 
+Ask about this stratagem
+
 ######## popup strat:never-enough-dakka · OOGA BOOGA Ooga booga
 1CP · SHOOTING · YOUR TURN
 
@@ -4333,6 +4522,8 @@ EFFECT
 Your unit’s ranged attacks have [SUSTAINED HITS 1].
 
 USED BYany unit
+
+Ask about this stratagem
 
 ######## popup strat:rapid-ingress · OOGA BOOGA Ooga booga
 1CP · MOVEMENT · THEIR TURN
@@ -4351,6 +4542,8 @@ Your unit makes an ingress move (20.04).
 RESTRICTIONSYou cannot use this stratagem during the first battle round.
 
 USED BYany unit
+
+Ask about this stratagem
 
 ######## popup strat:scarper · OOGA BOOGA Ooga booga
 1CP · MOVEMENT · THEIR TURN
@@ -4371,6 +4564,8 @@ Or: Up to 6" instead if your unit is an attached unit.
 
 USED BYZodgrod Wortsnagga, Gretchin
 
+Ask about this stratagem
+
 ######## popup strat:too-arrogant-to-die · OOGA BOOGA Ooga booga
 1CP · FIGHT · EITHER TURN
 
@@ -4388,3 +4583,5 @@ When a model in your unit is destroyed, if your unit has not been selected to fi
 On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.
 
 USED BYNazdreg, Big Mek, Big Mek in Mega Armour · Supa-glowy Fing
+
+Ask about this stratagem
