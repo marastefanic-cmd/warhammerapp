@@ -14,6 +14,8 @@
      packUpdate     the Faction Packs' Rules Updates ("Change to …") for every army rule, detachment item and unit ability
                     in the lists; an update that concerns the lists but matches no app text is a failure
      packDatasheet  abilities of units whose datasheet a Faction Pack prints (Knight Destrier, Defiler)
+     noteQuote      every quotation (“…”) inside an app note (army/detachment rule, stratagem, ability), word for word in a
+                    source or in the verified text of the item the note is on (the note's own words are judgements: helpers.js)
    Lines the app marks as its own ("*App note, not rules text: …*") are not checked; they are listed in out/texts.json
    (appNotes). Any other line of a verbatim field that is in no source is a failure (also listed: notInAnySource).
 
@@ -1287,6 +1289,42 @@ function nearLine(n, src) {
   for (const x of src) { let i = 0; while (i < n.length && n[i] === x.n[i]) i++; if (i > bl) { bl = i; best = x; } }
   return best && bl > 10 ? '; closest source line differs at "…' + n.slice(Math.max(0, bl - 25), bl) + '[' + n.slice(bl, bl + 30) + '…]" vs "[' + best.n.slice(bl, bl + 30) + '…]"' : '';
 }
+/* ------------------------------------------------------------------ quotes in the app's notes */
+// A note (on an army or detachment rule, a stratagem or an ability) is the app's own sentence, a judgement signed off in
+// verify/helpers.js; the words it puts in quotation marks (“…”) are rules text. Each quote is found word for word in GW's
+// documents or Wahapedia, a piece at a time where it leaves words out ("…"), or in the text of the item the note is on
+// (its rule or stratagem, the unit's abilities), which the other checks verify.
+const ALL_DOCS = GW_ALL.concat(WAHA_CORE, Object.keys(DOCS).filter(k => !GW_ALL.includes(k) && !WAHA_CORE.includes(k)));   // GW's first
+function checkQuotes(army, unit, note, own) {
+  for (const m of String(note || '').matchAll(/“([^”]+)”/g)) {
+    for (const piece of m[1].split(/…|\.\.\./)) {
+      const n = norm(stripMarkup(piece)).replace(/^[\s.,;:]+|[\s,;:]+$/g, '');
+      if (!/[a-z0-9]/.test(n)) continue;
+      count('noteQuote');
+      const r = locate(n, ALL_DOCS);
+      if (r) { provRow(army + ' / ' + unit, 'note', r.d, r.off, { text: piece.trim().slice(0, 80) }); continue; }
+      if (own.some(t => normField(t).includes(n))) { prov.push({ item: army + ' / ' + unit, field: 'note', doc: 'data.js', file: 'data.js', sha256: null, where: 'the text of the item the note is on', text: piece.trim().slice(0, 80) }); continue; }
+      fail('noteQuote', army, unit, 'note', m[0], 'quoted words not in any source, nor in the text the note is on: "' + piece.trim() + '"' + (nearest(n, ALL_DOCS).text ? ' | ' + nearest(n, ALL_DOCS).text : ''), '');
+    }
+  }
+}
+const stratOwn = s => [s.when, s.target, s.effect, s.restrictions].filter(Boolean);
+for (const s of D.coreStratagems) if (s.note) checkQuotes('core', 'coreStratagem:' + s.id, s.note, stratOwn(s));
+for (const fk of FACTIONS) {
+  const F = D.factions[fk];
+  for (const r of F.armyRules) if (r.note) checkQuotes(fk, 'armyRule:' + r.name, r.note, [r.text].concat((r.table || []).map(t => t[1])));
+  for (const [dk, d] of Object.entries(F.detachments || {})) {
+    if (d.rule && d.rule.note) checkQuotes(fk, 'detachment:' + dk + '/rule', d.rule.note, [d.rule.text]);
+    for (const s of d.stratagems || []) if (s.note) checkQuotes(fk, 'detachment:' + dk + '/stratagem:' + s.id, s.note, stratOwn(s));
+  }
+}
+for (const a of D.armies) for (const u of a.units) for (const ab of u.abilities || []) if (ab.note) {
+  const f = D.factions[a.faction], dets = a.detachments.map(x => f.detachments[x]).filter(Boolean);
+  // the unit's abilities, and the rules of its list (Enraged Behemoths' words in a note on Singular Purpose)
+  const own = (u.abilities || []).map(x => x.text).concat(f.armyRules.map(r => r.text), dets.filter(d => d.rule).map(d => d.rule.text));
+  checkQuotes(a.id, u.id + ' / ability:' + ab.name, ab.note, own);
+}
+
 /* ------------------------------------------------------------------ deviations, output, provenance */
 let devs = [];
 if (fs.existsSync(DEVS)) devs = JSON.parse(fs.readFileSync(DEVS, 'utf8'));

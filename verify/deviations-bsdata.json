@@ -277,5 +277,32 @@
   "source": "While this mdel has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
   "reason": "Typo in BSData and New Recruit (\"this mdel\") that Wahapedia's datasheet does not have; the app has \"model\".",
   "evidence": "verify/.cache/bsdata/Imperium - Adeptus Mechanicus.json, profile 021a-c246-5697-b311 (Damaged: 1-4 wounds remaining) has the text in \"source\"; verify/.cache/waha/ds/adeptus-mechanicus_Onager-Dunecrawler.html line 1532: \"While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.\"; verify/sources/nr/purge-goes-the-foe.txt line 299: \"While this mdel has 1-4 wounds remaining, …\"."
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "unit": "canis-rex",
+  "field": "stats.base",
+  "app": "Sir Hekhtur: 25mm",
+  "source": "Sir Hekhtur: 170x109mm",
+  "reason": "GW's Base Size Guide gives Sir Hekhtur a 25mm base; BSData gives his model profile Canis Rex's 170x109mm (play-test finding B2, confirmed by the independent check).",
+  "evidence": "verify/.cache/bsdata/Imperium - Imperial Knights - Library.json line 470 (Sir Hekhtur, Base 170x109mm); verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 3347-3348 (\"Sir Hekhtur 25mm\"), under \"LAST UPDATED: OCTOBER 2026\" (line 2508)."
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "unit": "knight-destrier",
+  "field": "stats.InSv",
+  "app": "Knight Destrier: 5+",
+  "source": "Knight Destrier: 5+*",
+  "reason": "Sanctuary (\"The bearer has a 5+ invulnerable save.\") gives this Knight Destrier a 5+ invulnerable save against all attacks; BSData models Sanctuary without an InSv modifier, so it keeps the datasheet's 5+* (ranged attacks only). The app shows 5+ marked as from Sanctuary (play-test finding B4).",
+  "evidence": "verify/.cache/bsdata/Imperium - Imperial Knights - Library.json line 13905 (Sanctuary, cb31-e496-08de-77d4: costs and a hidden modifier only); data.js Freeblade Company enhancement Sanctuary, checked against GW's Faction Pack by verify/texts.js."
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "unit": "knight-destrier",
+  "field": "stats.from",
+  "app": "Knight Destrier: InSv ← Sanctuary",
+  "source": "(not changed by a rule)",
+  "reason": "The app marks the 5+ InSv as from Sanctuary (the enhancement's own words: \"The bearer has a 5+ invulnerable save.\"); BSData's Sanctuary has no InSv modifier to derive the mark from (play-test finding B4).",
+  "evidence": "verify/.cache/bsdata/Imperium - Imperial Knights - Library.json line 13905 (Sanctuary, cb31-e496-08de-77d4); verify/sources/nr/4-megas-and-a-destrier.txt line 195 (the Destrier takes Sanctuary)."
  }
 ]

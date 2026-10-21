@@ -59,7 +59,7 @@ const RULES = {
   'Melta': 'This ability always takes the form **[MELTA X]**. Each time a model makes an attack with a **[MELTA]** weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add **X** to that weapon’s **D** characteristic.\n*Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6. While resolving those attacks, that weapon has a D characteristic of D6+2.*',
   'Super-Heavy Walker': 'Each time a unit with this ability makes a **normal**, **advance** or **fall-back move**:\n- Models in that unit can move through models (including **MONSTER/VEHICLE** models, but excluding **TITANIC** models) and can move horizontally through sections of **terrain features** that are 4" or less in height.\n- Before moving that unit, you can select for all models in that unit to have the **MOBILE** keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked.\n*Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).*',
   'Firing Deck': 'This ability always takes the form **Firing Deck X**. In your Shooting phase, each time this **TRANSPORT** is **selected to shoot**, if one or more units are embarked within it, resolve the following sequence:\n- 1. Select up to **X** models embarked within this **TRANSPORT** (excluding models whose units have already been **selected to shoot** this phase).\n- 2. For each selected model, select one of its ranged weapons (excluding **[ONE SHOT]** weapons).\n- 3. Until this **TRANSPORT** has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons.\n- 4. Until the end of the turn, units embarked within this **TRANSPORT** are not eligible to shoot.',
-  'Scouts': 'This ability always takes the form **Scouts X"**. In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following:\n- If that unit is in **strategic reserves**, you can set up that unit anywhere that is wholly within your deployment zone.\n- If that unit is wholly within your deployment zone, it can make a **scout move** (see below).\n- If that unit is embarked within a **DEDICATED TRANSPORT** that is wholly within your deployment zone, and if every model embarked within that **DEDICATED TRANSPORT** has the Scouts ability, that **DEDICATED TRANSPORT** can make a **scout move**.',
+  'Scouts': 'This ability always takes the form **Scouts X"**. In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following:\n- If that unit is in **strategic reserves**, you can set up that unit anywhere that is wholly within your deployment zone.\n- If that unit is wholly within your deployment zone, it can make a **scout move** (see below).\n- If that unit is embarked within a **DEDICATED TRANSPORT** that is wholly within your deployment zone, and if every model embarked within that **DEDICATED TRANSPORT** has the Scouts ability, that **DEDICATED TRANSPORT** can make a **scout move**.\n**24.32 Scout Move:**\n**MAXIMUM DISTANCE:** The **X"** in **Scouts X"**.\n**ELIGIBLE IF:** It is the Resolve Pre-battle Abilities step, and your unit is wholly within your deployment zone.\n**EFFECT:** Your unit moves as described in Moving (03).\n**AFTER MOVING:** Your unit must be more than 8" horizontally from all enemy units.',
   'Psychic': 'Each time an attack is made with a **[PSYCHIC]** weapon, you can ignore any or all modifiers to that attack’s **BS** or **WS** characteristic and any or all modifiers to the **hit roll**. Attacks made with **[PSYCHIC]** weapons are known as **psychic attacks** (this can be important for the triggering of other rules).',
   // core rules terms the rules texts use (Core Rules PDF, and the app appendix where marked)
   'Hazard Roll': 'To make a **hazard roll** for a unit, roll one D6: on a 1-2, that roll fails and that unit suffers 1 **mortal wound** (see above), or 3 **mortal wounds** instead if each model in that unit is a **MONSTER/VEHICLE** model. If more than one **hazard roll** is required for a unit, make all of those rolls simultaneously.\n**06.03.01 Hazardous Test (app):** The term ‘Hazardous test’ is the same as hazard roll.\n*Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model in the unit make a hazard roll? No, the unit would make 1 single hazard roll.*\n*Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).*',
@@ -137,7 +137,7 @@ const RULE_ALIASES = [
    Wahapedia wording (Core Rules, 11th edition, section 15).
    needs: { all, any, none } keyword lists a unit must match to use it.   */
 const CORE_STRATAGEMS = [
-  { id:'command-re-roll', gist:'Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…', name:'Command Re-roll', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either',
+  { id:'command-re-roll', gist:'Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).', name:'Command Re-roll', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either',
     when:'Any phase, just after you make one of the following rolls for a friendly unit or model:\n- **Advance roll**\n- **Charge roll**\n- **Damage roll**\n- **Hazard roll**\n- **Hit roll**\n- **Save roll**\n- **Wound roll**\n- A roll to determine the number of attacks generated with a weapon.',
     target:'That unit or model.',
     effect:'You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding **charge rolls**, which you must re-roll in full).' },
@@ -413,7 +413,13 @@ const FACTIONS = {
         ] },
       // needs: a Bondsman ability only ever affects an ARMIGER model, so without one in the army it does nothing
       { name:'Bondsman', ph:['command'], turn:'your', needs:{ any:['Armiger'] },
-        text:'Some **IMPERIAL KNIGHTS** models have a Bondsman ability, tagged with the word ‘Bondsman’. In your Command phase, one or more models from your army with a Bondsman ability can use that ability. For each one that does, select one friendly **ARMIGER** model within 12" of that model (you cannot select an **ARMIGER** model that is already being affected by a Bondsman ability). Until the start of your next Command phase, that **ARMIGER** model is affected by that Bondsman ability.' }
+        text:'Some **IMPERIAL KNIGHTS** models have a Bondsman ability, tagged with the word ‘Bondsman’. In your Command phase, one or more models from your army with a Bondsman ability can use that ability. For each one that does, select one friendly **ARMIGER** model within 12" of that model (you cannot select an **ARMIGER** model that is already being affected by a Bondsman ability). Until the start of your next Command phase, that **ARMIGER** model is affected by that Bondsman ability.' },
+      // Wahapedia, Codex: Imperial Knights army rules (GW's Faction Pack 1.2 prints "FACTION: Code Chivalric, Super-heavy
+      // Walker" on the Imperial Knights datasheets). coreTwin: the core ability of the same name (Core Rules 24.35), which the
+      // datasheets' Rules line opens; the two are shown together, and the note says the sources don't settle which applies
+      { name:'Super-heavy Walker', coreTwin:'Super-Heavy Walker',
+        note:'IMPERIAL KNIGHTS datasheets list Super-heavy Walker as a FACTION ability (Faction Pack 1.2), whose Codex text differs from Core Rules 24.35; the sources don’t say which applies.',
+        text:'Each time a model with this ability makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and sections of **terrain features** that are 4" or less in height. When doing so:\n- It can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them.\n- It can also move through sections of terrain features that are more than 4" in height, but if it does, after it has moved, roll one D6: on a 1, that model is **Battle-shocked**.' }
     ],
     detachments: {
       'freeblade-company': {
@@ -443,7 +449,9 @@ const FACTIONS = {
           // "Keyword does not appear in that faction" marker, not errata, so the effect uses the pack's wording.
           // The pack's Rules Updates entry "Full Tilt Stratagem, Target Section" (PDF p27) is under VALOURSTRIKE LANCE: it is that
           // detachment's 2CP Full Tilt, a different stratagem, so this one's target stays as printed.
-          { id:'full-tilt', gist:'Until the end of the phase, if your unit Advances, no Advance roll: +6" Move instead (+9" for an ARMIGER or DESTRIER unit).', name:'Full Tilt', cp:1, phases:['movement'], turn:'your', needs:{ all:['Faction: Imperial Knights'] },
+          { id:'full-tilt', gist:'Until the end of the phase, if your unit Advances, no Advance roll: +6" Move instead (+9" for an ARMIGER or DESTRIER unit).',
+            note:'No datasheet has the DESTRIER keyword; the Knight Destrier has KNIGHT DESTRIER. Wahapedia FAQ (02.05 Keywords): “Do rules that affect a keyword include multi-word keywords that contain that keyword? For example, would rules that affect COMMISSAR units affect a unit that has the COMMISSAR GRAVES keyword?” “No.”',
+            name:'Full Tilt', cp:1, phases:['movement'], turn:'your', needs:{ all:['Faction: Imperial Knights'] },
             when:'Your Movement phase.',
             target:'One **IMPERIAL KNIGHTS** unit from your army.',
             effect:'Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6" to the Move characteristic of models in your unit, or 9" instead if your unit is an **ARMIGER** or **DESTRIER** unit.' },
@@ -808,7 +816,7 @@ const FACTIONS = {
             when:'Your Command phase.',
             target:'One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army, and one objective marker.',
             effect:'Until the start of your next Command phase, ranged weapons equipped by models in your unit have a Ballistic Skill characteristic of 3+ and the **[IGNORES COVER]** ability, but they can only target units within range of the selected objective marker.' },
-          { id:'machine-spirit-resurgent', gist:'Until the start of your next Command phase, your unit’s attacks can re-roll the hit roll, and the wound roll as well if it is Below Half-strength.', name:'Machine Spirit Resurgent', cp:1, phases:['command'], turn:'your', needs:{ all:['Faction: Adeptus Mechanicus'], any:['Legio Cybernetica','Vehicle'] },
+          { id:'machine-spirit-resurgent', gist:'Your unit, if below its Starting Strength: until the start of your next Command phase, its attacks can re-roll the hit roll, and the wound roll as well if it is Below Half-strength.', name:'Machine Spirit Resurgent', cp:1, phases:['command'], turn:'your', needs:{ all:['Faction: Adeptus Mechanicus'], any:['Legio Cybernetica','Vehicle'] },
             mod:{ kind:'all', lasts:'round', when:'Your Command phase, below its Starting Strength; until the start of your next Command phase', note:'can re-roll hit rolls (and wound rolls if Below Half-strength)',
               pick:[{ name:'Below Starting Strength', note:'re-roll hit rolls' }, { name:'Below Half-strength', note:'re-roll hit rolls and wound rolls' }] },
             when:'Your Command phase.',
@@ -912,8 +920,12 @@ const FACTIONS = {
      from        (on a weapon or stats row) values a rule of the list already changed, as
                  { keyword or field: rule name | [names] }; written from BSData's modifiers
                  by verify/bsdata.js and checked against them and New Recruit's "(…)" marks
+     printed     (on a stats row) what New Recruit prints for a value the app shows with a rule applied that
+                 BSData does not apply ({ InSv:'5+*' }, before Sanctuary); checked by verify/nr.js
      abilities   name, text, tag, who; ph/turn/turns = the phase it triggers in;
                  def = one-line summary for the datasheet's "When targeted" line
+                 note = the app's note under it (an FAQ, a core rule it meets, a question the rules leave
+                 open: both readings); its quotes are checked by verify/texts.js, its words signed off
      mods        abilities that change this unit's attacks, shown under its weapon tables:
                  kind ranged|melee|all, when, note, from. With weapon + set, that weapon's
                  cell shows both values ("8/14") and the condition becomes its footnote.
@@ -930,6 +942,9 @@ const FACTIONS = {
      aura        mods this unit gives to other units: needs = which units (keywords),
                  notSelf = not the unit itself, selfWhen = the condition on its own sheet
      rules       core/faction rules that open a glossary entry
+     partialRules  rules in `rules` that only some models of the unit have, label → the model that has it
+                 ({ 'Scouts 6"':'Slaughterbound' }): the unit cannot use a rule every model must have (24.09,
+                 24.31), and the app names that model next to the rule
      kw, kwNote  the unit's keywords ("Categories")                                     */
 const ARMIES = [
 {
@@ -1240,7 +1255,7 @@ const ARMIES = [
         { name:'Gork’s Klaw', range:'Melee', A:'7', WS:'2+', S:'14', AP:'-3', D:'4', kw:['CLEAVE 2','DEVASTATING WOUNDS','SUSTAINED HITS 1'], from:{ 'SUSTAINED HITS 1':'Get Stuck In' } }
       ],
       abilities:[
-        { name:'Supreme Commander', text:'If this model is in your army, it must be your **WARLORD**.' },
+        { name:'Supreme Commander', note:'Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”', text:'If this model is in your army, it must be your **WARLORD**.' },
         { name:'Makari, Hoist Dat Banner!', tag:'Once per battle, per army', ph:['movement'], turn:'your', text:'In your Movement phase, you can select a number of friendly **ORKS** units equal to or less than the current battle round number. Those units are **riled up** until the start of your next turn.\n*Place one Makari token next to the unit, removing it after this ability is used.*' },
         { name:'Da Grand Warlord’s Ladz', def:'Lone Operative while within 3" of another friendly ORKS INFANTRY unit', text:'While this unit is within 3" of another friendly **ORKS INFANTRY** unit, this unit has **Lone Operative**.' },
         { name:'Prophet of Da Great Waaagh!', tag:'Aura', ph:['fight'], turn:'either', text:'While a friendly **ORKS** unit is within 6" of this unit, that unit’s melee attacks have:\n- +1 to **hit rolls**.\n- +1 to **wound rolls**.' }
@@ -1633,13 +1648,13 @@ const ARMIES = [
     {
       id:'slaughterbound-exalted-eightbound', name:'Slaughterbound', role:'Character', pts:240, ptsNote:'110 + Exalted Eightbound 130', enhancement:'Battle-lust',
       // only the Slaughterbound model has Scouts 6" (Lord of the Eightbound); its Exalted Eightbound don't, so the unit can't scout (24.31)
-      partialRules:['Scouts 6"'],
+      partialRules:{ 'Scouts 6"':'Slaughterbound' },
       leads:'Exalted Eightbound',
       models:['1× Slaughterbound','1× Exalted Eightbound Champion','2× Exalted Eightbound'],
       gear:[['Lacerator and daemonic claw'],['Chainblades'],['Chainblades']],
       stats:[
         { name:'Slaughterbound', M:'10"', T:'6', Sv:'3+', W:'6', Ld:'6+', OC:'1', InSv:'5+', base:'50mm' },
-        { name:'Exalted Eightbound', M:'10"', T:'6', Sv:'3+', W:'3', Ld:'6+', OC:'1', InSv:'5+', base:'40mm' }
+        { name:'Exalted Eightbound ×3', M:'10"', T:'6', Sv:'3+', W:'3', Ld:'6+', OC:'1', InSv:'5+', base:'40mm' }
       ],
       melee:[
         { name:'Lacerator and daemonic claw', who:'Slaughterbound', range:'Melee', A:'7', WS:'2+', S:'10', AP:'-2', D:'2', kw:[], from:{ A:'Relentless Rage' } },
@@ -1738,7 +1753,7 @@ const ARMIES = [
         { name:'Forgefiend claws', range:'Melee', A:'7', WS:'3+', S:'6', AP:'0', D:'1', kw:[], from:{ A:'Relentless Rage' } }
       ],
       abilities:[
-        { name:'Furious Onslaught', ph:['movement','shooting'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'Each time this model makes a ranged attack that targets the closest eligible target within 18", you can re-roll the Hit roll.' },
+        { name:'Furious Onslaught', ph:['shooting'], turn:'your', text:'Each time this model makes a ranged attack that targets the closest eligible target within 18", you can re-roll the Hit roll.' },
         { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
@@ -1874,13 +1889,13 @@ const ARMIES = [
     {
       id:'slaughterbound-exalted-eightbound', name:'Slaughterbound', role:'Character', pts:255, ptsNote:'125 + Exalted Eightbound 130', enhancement:'Berzerker Glaive',
       // only the Slaughterbound model has Scouts 6" (Lord of the Eightbound); its Exalted Eightbound don't, so the unit can't scout (24.31)
-      partialRules:['Scouts 6"'],
+      partialRules:{ 'Scouts 6"':'Slaughterbound' },
       leads:'Exalted Eightbound',
       models:['1× Slaughterbound','1× Exalted Eightbound Champion','2× Exalted Eightbound'],
       gear:[['Lacerator and daemonic claw'],['Chainblades'],['Chainblades']],
       stats:[
         { name:'Slaughterbound', M:'10"', T:'6', Sv:'3+', W:'6', Ld:'6+', OC:'1', InSv:'5+', base:'50mm' },
-        { name:'Exalted Eightbound', M:'10"', T:'6', Sv:'3+', W:'3', Ld:'6+', OC:'1', InSv:'5+', base:'40mm' }
+        { name:'Exalted Eightbound ×3', M:'10"', T:'6', Sv:'3+', W:'3', Ld:'6+', OC:'1', InSv:'5+', base:'40mm' }
       ],
       melee:[
         { name:'Lacerator and daemonic claw', who:'Slaughterbound', range:'Melee', A:'8', WS:'2+', S:'10', AP:'-2', D:'3', kw:[], from:{ A:['Berzerker Glaive','Relentless Rage'], D:'Berzerker Glaive' } },
@@ -2019,7 +2034,7 @@ const ARMIES = [
         { name:'Forgefiend claws', range:'Melee', A:'7', WS:'3+', S:'6', AP:'0', D:'1', kw:[], from:{ A:'Relentless Rage' } }
       ],
       abilities:[
-        { name:'Furious Onslaught', ph:['movement','shooting'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'Each time this model makes a ranged attack that targets the closest eligible target within 18", you can re-roll the Hit roll.' },
+        { name:'Furious Onslaught', ph:['shooting'], turn:'your', text:'Each time this model makes a ranged attack that targets the closest eligible target within 18", you can re-roll the Hit roll.' },
         { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
@@ -2369,7 +2384,9 @@ const ARMIES = [
       abilities:[
         { name:'Harpoon Barbs', ph:['movement'], turn:'opp', text:'Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.' },
         { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.' },
-        { name:'Singular Purpose', tag:'Start of the first battle round', ph:['command','movement','shooting','charge','fight'], turn:'either', def:'If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it', defCalc:{ fnp:5 },
+        { name:'Singular Purpose', tag:'Start of the first battle round', ph:['command','movement','shooting','charge','fight'], turn:'either',
+          note:'With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.',
+          def:'If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it', defCalc:{ fnp:5 },
           text:'At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.' },
         { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
         { name:'Synaptoprescience', tag:'Enhancement', text:'**NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**.' }
@@ -2400,7 +2417,9 @@ const ARMIES = [
       abilities:[
         { name:'Harpoon Barbs', ph:['movement'], turn:'opp', text:'Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.' },
         { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.' },
-        { name:'Singular Purpose', tag:'Start of the first battle round', ph:['command','movement','shooting','charge','fight'], turn:'either', def:'If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it', defCalc:{ fnp:5 },
+        { name:'Singular Purpose', tag:'Start of the first battle round', ph:['command','movement','shooting','charge','fight'], turn:'either',
+          note:'With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.',
+          def:'If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it', defCalc:{ fnp:5 },
           text:'At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.' },
         { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
         { name:'Synaptoprescience', tag:'Enhancement', text:'**NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**.' }
@@ -2431,7 +2450,9 @@ const ARMIES = [
         { name:'Monstrous scything talons', range:'Melee', A:'6', WS:'2+', S:'9', AP:'-2', D:'3', kw:[] }
       ],
       abilities:[
-        { name:'Singular Purpose', tag:'Start of the first battle round', ph:['command','movement','shooting','charge','fight'], turn:'either', def:'If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it', defCalc:{ fnp:5 },
+        { name:'Singular Purpose', tag:'Start of the first battle round', ph:['command','movement','shooting','charge','fight'], turn:'either',
+          note:'With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.',
+          def:'If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it', defCalc:{ fnp:5 },
           text:'At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.' },
         { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.' },
         { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
@@ -2464,7 +2485,9 @@ const ARMIES = [
         { name:'Monstrous scything talons', range:'Melee', A:'6', WS:'2+', S:'9', AP:'-2', D:'3', kw:[] }
       ],
       abilities:[
-        { name:'Singular Purpose', tag:'Start of the first battle round', ph:['command','movement','shooting','charge','fight'], turn:'either', def:'If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it', defCalc:{ fnp:5 },
+        { name:'Singular Purpose', tag:'Start of the first battle round', ph:['command','movement','shooting','charge','fight'], turn:'either',
+          note:'With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.',
+          def:'If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it', defCalc:{ fnp:5 },
           text:'At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.' },
         { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.' },
         { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
@@ -2662,11 +2685,15 @@ const ARMIES = [
   units:[
     {
       id:'canis-rex', name:'Canis Rex', role:'Epic Hero', pts:415,
+      // BSData has Lone Operative on the Sir Hekhtur model only, not on Canis Rex (24.24.01: an attached unit benefits only if
+      // all its models have it). Sir Hekhtur's base: GW's Base Size Guide (Event Companion, Oct 2026) "Sir Hekhtur 25mm";
+      // BSData, and so New Recruit, give him Canis Rex's 170×109mm (deviations-nr.json, deviations-bsdata.json)
+      partialRules:{ 'Lone Operative':'Sir Hekhtur' },
       models:['1× Canis Rex','1× Sir Hekhtur'],
       gear:[['Freedom’s Hand','Las-impulsor','Questoris multi-laser'],['Close combat weapon','Hekhtur’s pistol']],
       stats:[
         { name:'Canis Rex', M:'10"', T:'11', Sv:'3+', W:'26', Ld:'6+', OC:'10', InSv:'5+*', base:'170×109mm' },
-        { name:'Sir Hekhtur', M:'6"', T:'3', Sv:'4+', W:'3', Ld:'5+', OC:'1', InSv:'–', base:'170×109mm' }
+        { name:'Sir Hekhtur', M:'6"', T:'3', Sv:'4+', W:'3', Ld:'5+', OC:'1', InSv:'–', base:'25mm' }
       ],
       ranged:[
         { group:'Las-impulsor', name:'high intensity', range:'24"', A:'D6', BS:'2+', S:'14', AP:'-3', D:'4', kw:['BLAST','SUSTAINED HITS 1'] },
@@ -2797,8 +2824,10 @@ const ARMIES = [
       id:'knight-destrier', name:'Knight Destrier', role:'Character', pts:285, enhancement:'Sanctuary',
       models:['1× Knight Destrier'],
       gear:[['Questoris heavy stubber','Titanic feet','Chastiser gatling cannon','Frag bombard']],
+      // InSv 5+ against all attacks from Sanctuary ("The bearer has a 5+ invulnerable save"); New Recruit and BSData print
+      // the datasheet's 5+* (ranged attacks only): printed, checked by verify/nr.js (deviations-nr.json, deviations-bsdata.json)
       stats:[
-        { name:'Knight Destrier', M:'12"', T:'10', Sv:'3+', W:'18', Ld:'6+', OC:'8', InSv:'5+*', base:'150×95mm' }
+        { name:'Knight Destrier', M:'12"', T:'10', Sv:'3+', W:'18', Ld:'6+', OC:'8', InSv:'5+', base:'150×95mm', from:{ InSv:'Sanctuary' }, printed:{ InSv:'5+*' } }
       ],
       ranged:[
         { name:'Questoris heavy stubber', range:'36"', A:'6', BS:'3+', S:'4', AP:'-1', D:'1', kw:['ASSAULT','RAPID FIRE 3'] },
@@ -2849,7 +2878,7 @@ const ARMIES = [
         { name:'Gork’s Klaw', range:'Melee', A:'7', WS:'2+', S:'14', AP:'-3', D:'4', kw:['CLEAVE 2','DEVASTATING WOUNDS'] }
       ],
       abilities:[
-        { name:'Supreme Commander', text:'If this model is in your army, it must be your **WARLORD**.' },
+        { name:'Supreme Commander', note:'Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”', text:'If this model is in your army, it must be your **WARLORD**.' },
         { name:'Makari, Hoist Dat Banner!', tag:'Once per battle, per army', ph:['movement'], turn:'your', text:'In your Movement phase, you can select a number of friendly **ORKS** units equal to or less than the current battle round number. Those units are **riled up** until the start of your next turn.\n*Place one Makari token next to the unit, removing it after this ability is used.*' },
         { name:'Da Grand Warlord’s Ladz', def:'Lone Operative while within 3" of another friendly ORKS INFANTRY unit', text:'While this unit is within 3" of another friendly **ORKS INFANTRY** unit, this unit has **Lone Operative**.' },
         { name:'Prophet of Da Great Waaagh!', tag:'Aura', ph:['fight'], turn:'either', text:'While a friendly **ORKS** unit is within 6" of this unit, that unit’s melee attacks have:\n- +1 to **hit rolls**.\n- +1 to **wound rolls**.' }
@@ -3083,7 +3112,7 @@ const ARMIES = [
       abilities:[
         // GW Faction Pack Rules Update wording ("Chaos Terminators, Blood Fury Ability"), Wahapedia's bold. Its two parts are
         // bullets there, the second with two sub-bullets; the app has one level of bullets, so the parts are paragraphs
-        { name:'Bloody Fury', ph:['movement','shooting','charge'], turn:'your', turns:{ movement:'opp', charge:'either' }, text:'This unit’s ranged attacks that target the closest eligible target can re-roll **hit rolls**.\nWhen this unit **declares a charge**, you can use this part of this ability. If you do:\n- This unit can re-roll that **charge roll**.\n- This unit must end that **charge move** **engaged** with the closest **charge target**.' },
+        { name:'Bloody Fury', ph:['shooting','charge'], turn:'your', turns:{ charge:'either' }, text:'This unit’s ranged attacks that target the closest eligible target can re-roll **hit rolls**.\nWhen this unit **declares a charge**, you can use this part of this ability. If you do:\n- This unit can re-roll that **charge roll**.\n- This unit must end that **charge move** **engaged** with the closest **charge target**.' },
         // already in the WS values above (from); its official text starts with the restriction New Recruit leaves out
         { name:'Gore-stained Veterans', tag:'Upgrade', text:'**TERMINATOR SQUAD** unit only. This unit’s melee attacks have +1 **WS**.' }
       ],
@@ -3113,7 +3142,7 @@ const ARMIES = [
       abilities:[
         // GW Faction Pack Rules Update wording ("Chaos Terminators, Blood Fury Ability"), Wahapedia's bold. Its two parts are
         // bullets there, the second with two sub-bullets; the app has one level of bullets, so the parts are paragraphs
-        { name:'Bloody Fury', ph:['movement','shooting','charge'], turn:'your', turns:{ movement:'opp', charge:'either' }, text:'This unit’s ranged attacks that target the closest eligible target can re-roll **hit rolls**.\nWhen this unit **declares a charge**, you can use this part of this ability. If you do:\n- This unit can re-roll that **charge roll**.\n- This unit must end that **charge move** **engaged** with the closest **charge target**.' },
+        { name:'Bloody Fury', ph:['shooting','charge'], turn:'your', turns:{ charge:'either' }, text:'This unit’s ranged attacks that target the closest eligible target can re-roll **hit rolls**.\nWhen this unit **declares a charge**, you can use this part of this ability. If you do:\n- This unit can re-roll that **charge roll**.\n- This unit must end that **charge move** **engaged** with the closest **charge target**.' },
         // already in the WS values above (from); its official text starts with the restriction New Recruit leaves out
         { name:'Gore-stained Veterans', tag:'Upgrade', text:'**TERMINATOR SQUAD** unit only. This unit’s melee attacks have +1 **WS**.' }
       ],
@@ -3200,7 +3229,7 @@ const ARMIES = [
         { name:'Forgefiend claws', range:'Melee', A:'7', WS:'3+', S:'6', AP:'0', D:'1', kw:[], from:{ A:'Relentless Rage' } }
       ],
       abilities:[
-        { name:'Furious Onslaught', ph:['movement','shooting'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'Each time this model makes a ranged attack that targets the closest eligible target within 18", you can re-roll the Hit roll.' },
+        { name:'Furious Onslaught', ph:['shooting'], turn:'your', text:'Each time this model makes a ranged attack that targets the closest eligible target within 18", you can re-roll the Hit roll.' },
         { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
@@ -3242,7 +3271,7 @@ const ARMIES = [
         { name:'Canticles of the Omnissiah', ph:['command'], turn:'your', text:'At the start of your Command phase, select one of the abilities in the Canticles of the Omnissiah section. Until the start of your next Command phase, this model has that ability.\n**Invocation of Machine Vengeance:** At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Machine Vengeance target. Each time a model in a friendly **ADEPTUS MECHANICUS** unit makes an attack that targets your Machine Vengeance target, you can re-roll the **Hit roll**.\n**Mantra of Discipline:** This model has the **BATTLELINE** keyword and has the following ability:\n- **Binharic Courage (Aura):** While a friendly **ADEPTUS MECHANICUS** unit is within 6" of this model, add 1 to the Objective Control characteristic of models in that unit and each time you take a Battle-shock or **Leadership test** for that unit, add 1 to that test.\n**Shroudpsalm (Aura):** While a friendly **ADEPTUS MECHANICUS** unit is within 6" of this model, that unit has the **Stealth** ability.' },
         { name:'Mechanicus Bodyguard', def:'Lone Operative while within 3" of another friendly ADEPTUS MECHANICUS unit', text:'While this model is within 3" of one or more other friendly **ADEPTUS MECHANICUS** units, this model has the **Lone Operative** ability.' },
         { name:'Self-repair Mechanisms', ph:['command'], turn:'your', text:'At the start of your Command phase, this model regains up to D3 lost wounds.' },
-        { name:'Supreme Commander', text:'If this model is in your army, it must be your Warlord.' }
+        { name:'Supreme Commander', note:'Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”', text:'If this model is in your army, it must be your Warlord.' }
       ],
       // what Belisarius Cawl gives other units: the Invocation of Machine Vengeance canticle (Binharic Courage's OC and
       // test bonus and Shroudpsalm's Stealth change no attacks)
@@ -3253,7 +3282,9 @@ const ARMIES = [
       guard:[
         { from:'Shroudpsalm', needs:{ all:['Faction: Adeptus Mechanicus'] }, kind:'ranged', when:'Within 6" of Cawl, if he has Shroudpsalm', note:'Stealth: the benefit of cover against ranged attacks', calc:{ stealth:true } }
       ],
-      rules:['Doctrina Imperatives','Anti','Devastating Wounds','Extra Attacks','Blast','Melta'],
+      // no Blast: none of his weapons has [BLAST] (the Solar atomiser is [MELTA 3]); BSData still links a Blast rule to it, and
+      // New Recruit prints it (deviations-nr.json, deviations-bsdata.json)
+      rules:['Doctrina Imperatives','Anti','Devastating Wounds','Extra Attacks','Melta'],
       kw:['Belisarius Cawl','Character','Cult Mechanicus','Epic Hero','Faction: Adeptus Mechanicus','Imperium','Mobile','Monster','Tech-Priest','Warlord']
     },
     {
@@ -3274,10 +3305,12 @@ const ARMIES = [
       abilities:[
         // the three abilities Rod of the War Forge selects from: shooting and declaring a charge after an Advance or a
         // Fall Back (your Shooting and Charge phases), and both Imperatives (attacks in either player's Fight phase too)
-        { name:'Icon of War', ph:['command','movement','shooting','charge','fight'], turn:'either', turns:{ command:'your', movement:'opp', charge:'your' }, text:'**Fanatical Devotion:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Advanced.\n**Adaptive Tactics:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Fell Back.\n**The Fires of Mars:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for that unit.' },
+        { name:'Icon of War', ph:['command','movement','shooting','charge','fight'], turn:'either', turns:{ command:'your', movement:'opp', charge:'your' },
+          note:'FAQ (Faction Pack 1.4): “When I select one of Thulia Ghuld’s Icon of War abilities, when do I select the unit that ability affects?” “When you have selected the Icon of War ability you want to use.”',
+          text:'**Fanatical Devotion:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Advanced.\n**Adaptive Tactics:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Fell Back.\n**The Fires of Mars:** You can select one friendly **SKITARII** or **THULIA GHULD** unit within 6" of this model; until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for that unit.' },
         { name:'Mechanicus Bodyguard', def:'Lone Operative while within 3" of another friendly ADEPTUS MECHANICUS unit', text:'While this model is within 3" of one or more other friendly **ADEPTUS MECHANICUS** units, this model has the **Lone Operative** ability.' },
         { name:'Secutor of Olympus', ph:['shooting'], turn:'your', text:'At the start of your Shooting phase, select one enemy **VEHICLE** unit within 12" of this model and roll one D6: on a 2+, that enemy unit suffers D3+1 **mortal wounds**.' },
-        { name:'Supreme Commander', text:'If this model is in your army, it must be your Warlord.' },
+        { name:'Supreme Commander', note:'Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”', text:'If this model is in your army, it must be your Warlord.' },
         // New Recruit's words; GW's Faction Pack and Wahapedia add "(see next page)" after "section", pointing at the
         // pack's next page, where Icon of War is printed (here it is the first ability above) (deviations-texts.json)
         { name:'Rod of the War Forge', ph:['command'], turn:'your', text:'In your Command phase, select one of the abilities in the Icon of War section. Until the start of your next Command phase, this model has that ability.' }

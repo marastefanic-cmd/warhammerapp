@@ -52,6 +52,10 @@ function items(D, appSource){
         if(ab.tag) add(a.id, 'ability-tag', w + ' · ' + ab.name, { tag:ab.tag }, src);
         if(ab.who) add(a.id, 'ability-who', w + ' · ' + ab.name, { who:ab.who, models:u.models }, src);
         if(ab.def) add(a.id, 'ability-def', w + ' · ' + ab.name, { def:ab.def, defPh:ab.defPh }, src);
+        // a note under the ability (an FAQ, a core rule it meets, a question the rules leave open): its own words are the app's
+        // (the quotes in it are checked by verify/texts.js); the source is the unit's abilities and the list's rules it may quote
+        if(ab.note) add(a.id, 'ability-note', w + ' · ' + ab.name, { note:ab.note }, { ability:ab.name, text:ab.text,
+          others:u.abilities.filter(x => x !== ab).map(x => x.name + ': ' + x.text), listRules:fr(a.faction).armyRules.map(r => r.name).concat(a.detachments.map(id => (fr(a.faction).detachments[id].rule || {}).name).filter(Boolean)) });
         if(ab.na) add(a.id, 'ability-na', w + ' · ' + ab.name, { na:ab.na, armyUnits:a.units.map(x => x.name + ' [' + x.kw.join(', ') + ']') }, src);
         if(ab.damaged) add(a.id, 'ability-damaged', w + ' · ' + ab.name, { damaged:ab.damaged, W:u.stats[0].W }, src);
         // the Damage tab's reading of it: always protects the unit (defAlways), its numbers (defCalc), always riled up (riled)
@@ -63,6 +67,9 @@ function items(D, appSource){
       for(const m of u.aura || []) add(a.id, 'unit-aura', w, m, cited(a.id, u, m));
       for(const m of u.guard || []) add(a.id, 'unit-guard', w, m, cited(a.id, u, m));
       for(const k of ['kwNote', 'ptsNote', 'note']) if(u[k]) add(a.id, 'unit-' + k, w, { [k]:u[k] }, unitFacts);
+      // a rule only one model of the unit has (Canis Rex's Lone Operative is Sir Hekhtur's): the unit can't use a rule every model
+      // must have, and the app names that model
+      if(u.partialRules) add(a.id, 'unit-partialRules', w, { partialRules:u.partialRules }, { models:u.models, rules:u.rules, abilities:u.abilities.map(x => (x.who ? x.who + ' · ' : '') + x.name + ': ' + x.text) });
       // weapons: which model has which, how many, and the multi-profile groups
       // unplaced: wargear on no models line (undefined, so left out of the key, for every other unit)
       add(a.id, 'unit-weapons', w, { gear:u.gear, unplaced:u.unplaced, weapons:[...(u.ranged || []), ...(u.melee || [])].map(x => [x.who, x.n && '×' + x.n, x.group, x.name].filter(Boolean).join(' · ')) }, { models:u.models, leads:u.leads || null });
@@ -72,6 +79,8 @@ function items(D, appSource){
     const rulesMeta = (where, r, srcText) => {
       const src = { rule:r.name, text:srcText };
       for(const k of ['ph', 'turn', 'turns', 'needs', 'def', 'mod', 'note', 'tag', 'statNote', 'missing', 'ask']) if(r[k] !== undefined) add(a.id, 'rule-' + k, where + ' · ' + r.name, { [k]:r[k] }, src);
+      // an army rule shown with the core ability of the same name (Super-heavy Walker): the pairing, against both texts
+      if(r.coreTwin !== undefined) add(a.id, 'rule-coreTwin', where + ' · ' + r.name, { coreTwin:r.coreTwin }, { rule:r.name, text:srcText, core:D.rules[r.coreTwin] || null });
       for(const x of r.remind || []) add(a.id, 'rule-remind', where + ' · ' + r.name, x, src);
     };
     for(const r of f.armyRules) rulesMeta(a.faction + ' army rule', r, r.text + (r.table ? '\n' + r.table.map(t => t.join(': ')).join('\n') : ''));
@@ -113,7 +122,10 @@ const CODE_RULES = {
   abilityTicks:'tick boxes on an ability row: one set per army, or one per unit copy',
   grantSource:'"Granted by": which ability, detachment rule or army rule a marked value names',
   showGrant:'"Granted by": a value or keyword that a rule of the list already changed (from BSData\'s modifiers, checked against New Recruit\'s "(…)" marks): the rule\'s text, and that the value shown includes it',
-  screenPregame:'Overview (before the battle): Warlord, enhancements, attached units, detachments (each opens its detachment rule), the army rules (folded), units with Deep Strike (24.09: every model must have it), transports, Scouts, start of round 1 / every round, once-per-battle items',
+  screenPregame:'Overview (before the battle): Warlord, enhancements, attached units, detachments (each opens its detachment rule), the army rules (folded), units with Deep Strike (24.09: every model must have it), transports, Scouts and Infiltrators (24.31, 24.20: every model must have it), start of the battle / round 1 / every round, once-per-battle items',
+  shortWhen:'the timing tag on an ability or rule row: a moment before any phase (at: "Start of the battle round", 07.01), the phases and whose turn (07.02.02), "Any phase" only when every phase has the same turn',
+  ruleParts:'a New Recruit selection under the army name that only names an army rule\'s parts ("Code Chivalric: Deed, Quality": BSData\'s Deed and Quality are fixed sub-entries holding every option), not a pick: left out of the Overview\'s list',
+  pickOptions:'the options a "select one of the abilities in the X section" / "select one X ability" asks for: the unit\'s abilities printed under that section, or the ability named X that lists them',
 };
 function appFunctions(html){
   const out = {};

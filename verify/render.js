@@ -185,9 +185,24 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       for(const [kind, name] of names){
         if(seen.has(kind + name)) continue; seen.add(kind + name);
         query[armyId] = name; moreShown.clear(); renderFinder();
-        const titles = [...document.querySelectorAll('#qres .res b')].map(b => b.textContent.trim().toLowerCase());
+        const titles = [...document.querySelectorAll('#qres .rg:not(.oth) .res b')].map(b => b.textContent.trim().toLowerCase());   // this list's, not the opponent's
         const n = name.toLowerCase();   // a weapon with profiles is found as "Gutrippa – Hunter"
         if(!titles.some(t => t === n || t.startsWith(n + ' – '))) out.push(['search-finds', kind, name]);
+      }
+      // the other list of the game: Find searches it too, after this list's and marked whose (the next list's first unit is under
+      // "Their units" and opens in that list), and its Overview, opened from this list, is "Their list"
+      const B = WH_DATA.armies[(WH_DATA.armies.findIndex(x => x.id === armyId) + 1) % WH_DATA.armies.length], wasOpp = store.get('wh-opp-' + armyId);
+      if(B.id !== armyId){
+        store.set('wh-opp-' + armyId, B.id);
+        query[armyId] = B.units[0].name; moreShown.clear(); renderFinder();
+        if(![...document.querySelectorAll('#qres .rg.oth .res[data-their="' + B.id + '"][data-unit="' + B.units[0].id + '"] b')].some(b => b.textContent.trim() === B.units[0].name))
+          out.push(['search-their', armyId, B.units[0].name + ' (' + B.id + ') is not under their units']);
+        query[armyId] = ''; renderFinder();
+        go({ s:'pregame', army:B.id });
+        const head = (document.querySelector('#view .sec-h h2') || {}).textContent || '';
+        if(head !== 'Their list') out.push(['their-list', armyId, B.id + '’s Overview opened from this list is headed “' + head + '”']);
+        go({ s:'army', army:armyId });
+        store.set('wh-opp-' + armyId, wasOpp);
       }
       query[armyId] = ''; renderFinder();
       return out;
