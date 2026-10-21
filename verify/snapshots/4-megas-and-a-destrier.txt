@@ -220,7 +220,8 @@ D3
 -4
 D6+1
 BLAST
-vs MONSTER/VEHICLE: +1 to hit rolls; also +1 to wound rolls if the target is TITANIC or TOWERING (Macro-extinction Protocols)
+vs MONSTER/VEHICLE: +1 to hit rolls (Macro-extinction Protocols)
+vs TITANIC/TOWERING: +1 to wound rolls (Macro-extinction Protocols)
 Damaged (1-10 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-10 Wounds Remaining)
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
 STRATAGEMS · FREEBLADE COMPANY
@@ -368,7 +369,8 @@ SUSTAINED HITS 1
 -1
 2
 SUSTAINED HITS 1
-vs MONSTER/VEHICLE: +1 to hit rolls; also +1 to wound rolls if the target is TITANIC or TOWERING (Macro-extinction Protocols)
+vs MONSTER/VEHICLE: +1 to hit rolls (Macro-extinction Protocols)
+vs TITANIC/TOWERING: +1 to wound rolls (Macro-extinction Protocols)
 Every melee attack: +1 to hit rolls (Bringer of Justice)
 Damaged (1-10 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-10 Wounds Remaining)
 STRATAGEMS · FREEBLADE COMPANY
@@ -712,26 +714,18 @@ FIGHT
 ATTACKER · YOURS
 Canis Rex
 2 models
-TARGET · THEIRS
+TARGET · THEIRS · OOGA BOOGA
 Ghazghkull Thraka
 T10 · Sv 2+ · 4+ InSv · W16
 0.0
 of 1 model destroyed
-4.8
+4.9
 wounds lost
 3%
 unit destroyed
-HITS
-WOUNDS
-THROUGH
-Las-impulsor
-3.5
-2.3
-1.1
-Questoris multi-laser
-3.9
-1.3
-0.2
+
+Played out with the dice, 10,000 games: damage beyond a model’s wounds is lost (05.04). Tap for the working.
+
 WEAPONS
 Las-impulsor
 24" · AD6 · 2+ · S14 · AP-3 · D4 · BLAST, SUSTAINED HITS 1
@@ -742,25 +736,42 @@ Questoris multi-laser
 Hekhtur’s pistol
 12" · A1 · 2+ · S5 · AP-1 · D2 · PISTOL
 SITUATION
-Distance to the target
-inches; blank: not set
 Target has the benefit of cover
 Plunging Fire
-on terrain 3" or higher, or TOWERING with the target within 12": BS improved by 1
+the target is visible and has a model on ground level; the attacker is on terrain 3" or higher, or TOWERING with the target within 12": BS improved by 1
 Close-quarters shooting at a unit it is engaged with
 -1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
-Fire Overwatch (snap shooting)
-hits only on an unmodified 6, never critical; no hit re-rolls
+Fire Overwatch (snap shooting), target within 24"
+the target is within 24" (15.09); hits only on an unmodified 6, never critical; no hit re-rolls
 Damaged (1-9 wounds left)
 -1 to hit rolls (and -5 OC)
-CANIS REX’S RULES
-1CP Strength from Exile
-No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) · not in these numbers
-GHAZGHKULL THRAKA WHEN TARGETED
-Lone Operative while within 3" of another friendly ORKS INFANTRY unit
-ability · not in these numbers
+RULES
+
+YOURS · CANIS REX
+
+None that change these numbers.
+
+THEIRS · GHAZGHKULL THRAKA
+
+TICK IF IT APPLIES
+
 Riled up: 5+ INV
 rule
+NOT IN THESE NUMBERS (1)
+Lone Operative while within 3" of another friendly ORKS INFANTRY unit
+ability · not in these numbers
+STRATAGEMS
+
+YOURS · CANIS REX
+
+NOT IN THESE NUMBERS (1)
+1CP Strength from Exile
+No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) · not in these numbers
+
+THEIRS · GHAZGHKULL THRAKA
+
+None that change these numbers.
+
 OTHER MODIFIERS
 Hit roll
 −
@@ -790,17 +801,108 @@ Re-roll wounds
 none
 1s
 all
+Target InSv
+−
+–
++
+Target Feel No Pain
+−
+–
++
 
-Averages over 10,000 games played out with the dice; one unit’s attacks against the other, nothing used up. Rules marked “not counted” are not in these numbers.
+Rules marked “not in these numbers” are not counted. Nothing is used up: one unit’s attacks against the other.
+
+THE WORKING
+
+Exact averages, the same every time; tap a row for each step. *Dmg is damage before allocation: damage past a model’s wounds is lost (05.04), so the wounds lost above can be less.
+
+ATT.
+HITS
+WNDS
+THRU
+DMG*
+Las-impulsor
+3.5
+3.5
+2.3
+1.2
+4.7
+
+Attacks: AD6 = 3.5 on average × 1 = 3.5
+
+Hit roll: BS 2+; hits on an unmodified 2+ (an unmodified 1 always fails) · 3.5 × 5/6 = 2.92 hits; critical: 3.5 × 1/6 = 0.583; [SUSTAINED HITS 1] (24.36): each critical hit adds 1 → +0.583 → 3.5
+
+Wound roll: S14 vs T10 → 3+ (S greater than T) · 3.5 × 4/6 = 2.33 wounds
+
+Save: Ghazghkull Thraka: Sv 2+; AP-3 → saves on 5+; InSv 4+ is better, so it is used · 2.33 × 3/6 fail (an unmodified 1 always fails) = 1.17 get through
+
+Damage: D4 · 1.17 × 4 = 4.67 damage before allocation
+
+Questoris multi-laser
+the unit is destroyed before these attacks in 3% of the games
+4
+4
+1.3
+0.2
+0.2
+
+Attacks: A4 × 1 = 4
+
+Hit roll: BS 2+; hits on an unmodified 2+ (an unmodified 1 always fails) · 4 × 5/6 = 3.33 hits; critical: 4 × 1/6 = 0.667; [SUSTAINED HITS 1] (24.36): each critical hit adds 1 → +0.667 → 4
+
+Wound roll: S6 vs T10 → 5+ (S less than T) · 4 × 2/6 = 1.33 wounds
+
+Save: Ghazghkull Thraka: Sv 2+; AP0 → saves on 2+; InSv 4+ is not better, so not used · 1.33 × 1/6 fail (an unmodified 1 always fails) = 0.222 get through
+
+Damage: D1 · 0.222 × 1 = 0.222 damage before allocation
+
+Played out: the unit is destroyed before these attacks in 3% of the games, and then they are lost (05.04); the dice give this weapon 0.2 through and 0.2 wounds lost on average.
+
+Hekhtur’s pistol
+the unit is destroyed before these attacks in 3% of the games
+1
+0.8
+0.1
+0.0
+0.1
+
+Attacks: A1 × 1 = 1
+
+Hit roll: BS 2+; hits on an unmodified 2+ (an unmodified 1 always fails) · 1 × 5/6 = 0.833 hits
+
+Wound roll: S5 vs T10 → 6+ (S half of T or less) · 0.833 × 1/6 = 0.139 wounds
+
+Save: Ghazghkull Thraka: Sv 2+; AP-1 → saves on 3+; InSv 4+ is not better, so not used · 0.139 × 2/6 fail (an unmodified 1 always fails) = 0.0463 get through
+
+Damage: D2 · 0.0463 × 2 = 0.0926 damage before allocation
+
+Played out: the unit is destroyed before these attacks in 3% of the games, and then they are lost (05.04); the dice give this weapon 0.0 through and 0.1 wounds lost on average.
+
+Total
+8.5
+8.3
+3.8
+1.4
+5.0
+
+Before allocation: 8.5 attacks → 8.33 hits → 3.81 wounds → 1.44 get through → 4.98 damage (the rows added up).
+
+Played out: the target has 1 model with 16 wounds in all. Damage beyond a model’s wounds is lost, and attacks after the unit is destroyed are lost (05.04), so models destroyed, wounds lost and the chances come from the dice: 10,000 games, the same dice for the same picks. On average 0.0 of 1 destroyed, 4.9 wounds lost; the unit is destroyed in 3% of the games.
 
 How this is worked out
 what the rules say, and what the calculator does where they leave a choice
+
+The working: each weapon’s averages are worked out exactly from the dice, step by step, against the models the attacks meet first and as if none of the damage were lost. Models destroyed, wounds lost and the chances are played out with the dice, because damage beyond a model’s wounds and attacks after the unit is destroyed are lost (05.04); the same picks always give the same numbers.
+
+Ticked for you: a rule starts ticked only when the data records that it applies here: always, or because of the target’s keywords or T. A rule that depends on the table (an objective, a charge, a distance, a protocol or ability picked, a stratagem spent) starts unticked; one the target rules out is greyed with the reason. Every box can be changed, and the working names each rule it counts, and each one the printed values already include.
 
 Weapons (04.03): the rules let the attacker pick which weapon’s attacks are resolved next; the calculator takes them in the order listed, and rolls identical attacks together.
 
 Saves and damage (05.03, 05.04): save rolls are rolled together and used from the lowest; an attack that gets through damages the one model it was allocated to, so damage beyond that model’s wounds is lost; Feel No Pain is rolled for each wound (24.12).
 
-[BLAST] and [CLEAVE] (24.05, 24.06): one more attack dice (X with [BLAST X] or [CLEAVE X]) for every five models the target had before these attacks.
+Range (04.02): every weapon is taken to be in range of the target; a rule that changes range counts only through half range.
+
+[BLAST] (24.05): one more attack dice (X with [BLAST X]) for every five models the target had before these attacks.
 
 ######## damage fight · DAMAGE Damage
 OPPONENT
@@ -813,7 +915,7 @@ FIGHT
 ATTACKER · YOURS
 Canis Rex
 2 models
-TARGET · THEIRS
+TARGET · THEIRS · OOGA BOOGA
 Ghazghkull Thraka
 T10 · Sv 2+ · 4+ InSv · W16
 0.7
@@ -822,17 +924,9 @@ of 1 model destroyed
 wounds lost
 66%
 unit destroyed
-HITS
-WOUNDS
-THROUGH
-Freedom’s Hand
-5.0
-4.1
-1.6
-Close combat weapon
-0.6
-0.1
-0.0
+
+Played out with the dice, 10,000 games: damage beyond a model’s wounds is lost (05.04). Tap for the working.
+
 WEAPONS
 Freedom’s Hand
 Melee · A5 · 2+ · S20 · AP-3 · D9 · SUSTAINED HITS 1
@@ -844,14 +938,33 @@ SITUATION
 Made a charge move this turn
 Damaged (1-9 wounds left)
 -1 to hit rolls (and -5 OC)
-CANIS REX’S RULES
-1CP Strength from Exile
-No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) · not in these numbers
-GHAZGHKULL THRAKA WHEN TARGETED
-Lone Operative while within 3" of another friendly ORKS INFANTRY unit
-ability · not in these numbers
+RULES
+
+YOURS · CANIS REX
+
+None that change these numbers.
+
+THEIRS · GHAZGHKULL THRAKA
+
+TICK IF IT APPLIES
+
 Riled up: 5+ INV
 rule
+NOT IN THESE NUMBERS (1)
+Lone Operative while within 3" of another friendly ORKS INFANTRY unit
+ability · not in these numbers
+STRATAGEMS
+
+YOURS · CANIS REX
+
+NOT IN THESE NUMBERS (1)
+1CP Strength from Exile
+No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) · not in these numbers
+
+THEIRS · GHAZGHKULL THRAKA
+
+None that change these numbers.
+
 OTHER MODIFIERS
 Hit roll
 −
@@ -881,15 +994,86 @@ Re-roll wounds
 none
 1s
 all
+Target InSv
+−
+–
++
+Target Feel No Pain
+−
+–
++
 
-Averages over 10,000 games played out with the dice; one unit’s attacks against the other, nothing used up. Rules marked “not counted” are not in these numbers.
+Rules marked “not in these numbers” are not counted. Nothing is used up: one unit’s attacks against the other.
+
+THE WORKING
+
+Exact averages, the same every time; tap a row for each step. *Dmg is damage before allocation: damage past a model’s wounds is lost (05.04), so the wounds lost above can be less.
+
+ATT.
+HITS
+WNDS
+THRU
+DMG*
+Freedom’s Hand
+5
+5
+4.2
+2.1
+19
+
+Attacks: A5 × 1 = 5
+
+Hit roll: WS 2+; hits on an unmodified 2+ (an unmodified 1 always fails) · 5 × 5/6 = 4.17 hits; critical: 5 × 1/6 = 0.833; [SUSTAINED HITS 1] (24.36): each critical hit adds 1 → +0.833 → 5
+
+Wound roll: S20 vs T10 → 2+ (S at least twice T) · 5 × 5/6 = 4.17 wounds
+
+Save: Ghazghkull Thraka: Sv 2+; AP-3 → saves on 5+; InSv 4+ is better, so it is used · 4.17 × 3/6 fail (an unmodified 1 always fails) = 2.08 get through
+
+Damage: D9 · 2.08 × 9 = 18.75 damage before allocation
+
+Close combat weapon
+the unit is destroyed before these attacks in 66% of the games
+2
+1.7
+0.3
+0.0
+0.0
+
+Attacks: A2 × 1 = 2
+
+Hit roll: WS 2+; hits on an unmodified 2+ (an unmodified 1 always fails) · 2 × 5/6 = 1.67 hits
+
+Wound roll: S3 vs T10 → 6+ (S half of T or less) · 1.67 × 1/6 = 0.278 wounds
+
+Save: Ghazghkull Thraka: Sv 2+; AP0 → saves on 2+; InSv 4+ is not better, so not used · 0.278 × 1/6 fail (an unmodified 1 always fails) = 0.0463 get through
+
+Damage: D1 · 0.0463 × 1 = 0.0463 damage before allocation
+
+Played out: the unit is destroyed before these attacks in 66% of the games, and then they are lost (05.04); the dice give this weapon 0.0 through and 0.0 wounds lost on average.
+
+Total
+7
+6.7
+4.4
+2.1
+19
+
+Before allocation: 7 attacks → 6.67 hits → 4.44 wounds → 2.13 get through → 18.8 damage (the rows added up).
+
+Played out: the target has 1 model with 16 wounds in all. Damage beyond a model’s wounds is lost, and attacks after the unit is destroyed are lost (05.04), so models destroyed, wounds lost and the chances come from the dice: 10,000 games, the same dice for the same picks. On average 0.7 of 1 destroyed, 13 wounds lost; the unit is destroyed in 66% of the games.
 
 How this is worked out
 what the rules say, and what the calculator does where they leave a choice
 
+The working: each weapon’s averages are worked out exactly from the dice, step by step, against the models the attacks meet first and as if none of the damage were lost. Models destroyed, wounds lost and the chances are played out with the dice, because damage beyond a model’s wounds and attacks after the unit is destroyed are lost (05.04); the same picks always give the same numbers.
+
+Ticked for you: a rule starts ticked only when the data records that it applies here: always, or because of the target’s keywords or T. A rule that depends on the table (an objective, a charge, a distance, a protocol or ability picked, a stratagem spent) starts unticked; one the target rules out is greyed with the reason. Every box can be changed, and the working names each rule it counts, and each one the printed values already include.
+
 Weapons (04.03): the rules let the attacker pick which weapon’s attacks are resolved next; the calculator takes them in the order listed, and rolls identical attacks together.
 
 Saves and damage (05.03, 05.04): save rolls are rolled together and used from the lowest; an attack that gets through damages the one model it was allocated to, so damage beyond that model’s wounds is lost; Feel No Pain is rolled for each wound (24.12).
+
+Range (04.02): every weapon is taken to be in range of the target; a rule that changes range counts only through half range.
 
 ######## strats {"folded":true} · DAMAGE Stratagems
 EXPAND ALL
@@ -1465,7 +1649,8 @@ WHEN TARGETEDFeel No Pain 6+ · 1CP Survivor of Strife: their Shooting phase: -1
 DAMAGED 1-10 W
 -1 TO HIT ROLLS (AND -5 OC)
 ALL ATTACKS
-vs MONSTER/VEHICLE: +1 to hit rolls; also +1 to wound rolls if the target is TITANIC or TOWERING (Macro-extinction Protocols)
+vs MONSTER/VEHICLE: +1 to hit rolls (Macro-extinction Protocols)
+vs TITANIC/TOWERING: +1 to wound rolls (Macro-extinction Protocols)
 STRATAGEMS · FREEBLADE COMPANY
 1CP re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9" (Strength from Exile)
 RANGED WEAPONS

@@ -1090,9 +1090,12 @@ FIGHT
 ATTACKER · YOURS
 Ghazghkull Thraka
 1 model
-TARGET · THEIRS
+TARGET · THEIRS · PRINCES
 Khârn the Betrayer + Khorne Berzerkers
-T5 · Sv 3+ · 4+ InSv · W5 · 10× T5 · Sv 3+ · W2
+Khârn the Betrayer: T5 · Sv 3+ · 4+ InSv · W5 · 10× Khorne Berzerker: T5 · Sv 3+ · W2
+HALF RANGE
+Within half range (18")
+[RAPID FIRE] and [MELTA] weapons
 1.2
 of 11 models destroyed
 3.0
@@ -1113,33 +1116,40 @@ unit destroyed
 
 chance to destroy at least N models
 
-HITS
-WOUNDS
-THROUGH
-Mork’s Roar
-9.0
-6.0
-3.0
+Played out with the dice, 10,000 games: damage beyond a model’s wounds is lost (05.04). Tap for the working.
+
 WEAPONS
 Mork’s Roar
 9" · A2D6+2 · – · S6 · AP-1 · D1 · CLOSE-QUARTERS, TORRENT
 Point Blank
 Aimed
 SITUATION
-Distance to the target
-inches; blank: not set
 Target has the benefit of cover
 Close-quarters shooting at a unit it is engaged with
 only [CLOSE-QUARTERS] weapons
-Fire Overwatch (snap shooting)
-hits only on an unmodified 6, never critical; no hit re-rolls
-GHAZGHKULL THRAKA’S RULES
+Fire Overwatch (snap shooting), target within 24"
+the target is within 24" (15.09); hits only on an unmodified 6, never critical; no hit re-rolls
+RULES
 
-No footnotes on its weapons.
+YOURS · GHAZGHKULL THRAKA
 
-KHÂRN THE BETRAYER WHEN TARGETED
+None that change these numbers.
+
+THEIRS · KHÂRN THE BETRAYER + KHORNE BERZERKERS
+
+NOT IN THESE NUMBERS (1)
 Khârn: the first time he is destroyed, at the end of the phase on a 2+ he is set back up with 3 wounds, as close as possible to where he was destroyed and not within Engagement Range of enemy units
 ability · not in these numbers
+STRATAGEMS
+
+YOURS · GHAZGHKULL THRAKA
+
+None that change these numbers.
+
+THEIRS · KHÂRN THE BETRAYER + KHORNE BERZERKERS
+
+None that change these numbers.
+
 OTHER MODIFIERS
 Hit roll
 −
@@ -1169,11 +1179,60 @@ Re-roll wounds
 none
 1s
 all
+Target InSv
+−
+–
++
+Target Feel No Pain
+−
+–
++
 
-Averages over 10,000 games played out with the dice; one unit’s attacks against the other, nothing used up. Rules marked “not counted” are not in these numbers.
+Rules marked “not in these numbers” are not counted. Nothing is used up: one unit’s attacks against the other.
+
+THE WORKING
+
+Exact averages, the same every time; tap a row for each step. *Dmg is damage before allocation: damage past a model’s wounds is lost (05.04), so the wounds lost above can be less.
+
+ATT.
+HITS
+WNDS
+THRU
+DMG*
+Mork’s Roar
+9
+9
+6
+3
+3
+
+Attacks: A2D6+2 = 9 on average × 1 = 9
+
+Hit roll: [TORRENT] (24.37): every attack hits automatically, never a critical hit → 9 hits
+
+Wound roll: S6 vs T5 (the bodyguard models’ highest, 19.02) → 3+ (S greater than T) · 9 × 4/6 = 6 wounds
+
+Save: Khorne Berzerker (the group the attacks meet first; when it is destroyed, the next group’s save is used): Sv 3+; AP-1 → saves on 4+ · 6 × 3/6 fail (an unmodified 1 always fails) = 3 get through
+
+Damage: D1 · 3 × 1 = 3 damage before allocation
+
+Total
+9
+9
+6
+3
+3
+
+Before allocation: 9 attacks → 9 hits → 6 wounds → 3 get through → 3 damage (the rows added up).
+
+Played out: the target has 11 models with 25 wounds in all. Damage beyond a model’s wounds is lost, and attacks after the unit is destroyed are lost (05.04), so models destroyed, wounds lost and the chances come from the dice: 10,000 games, the same dice for the same picks. On average 1.2 of 11 destroyed, 3.0 wounds lost; the unit is destroyed in <1% of the games. Allocation order: Khorne Berzerker, Khârn the Betrayer. The defender picks it (05.03); the calculator takes the one that loses the fewest models on average.
 
 How this is worked out
 what the rules say, and what the calculator does where they leave a choice
+
+The working: each weapon’s averages are worked out exactly from the dice, step by step, against the models the attacks meet first and as if none of the damage were lost. Models destroyed, wounds lost and the chances are played out with the dice, because damage beyond a model’s wounds and attacks after the unit is destroyed are lost (05.04); the same picks always give the same numbers.
+
+Ticked for you: a rule starts ticked only when the data records that it applies here: always, or because of the target’s keywords or T. A rule that depends on the table (an objective, a charge, a distance, a protocol or ability picked, a stratagem spent) starts unticked; one the target rules out is greyed with the reason. Every box can be changed, and the working names each rule it counts, and each one the printed values already include.
 
 Weapons (04.03): the rules let the attacker pick which weapon’s attacks are resolved next; the calculator takes them in the order listed, and rolls identical attacks together.
 
@@ -1182,6 +1241,8 @@ Saves and damage (05.03, 05.04): save rolls are rolled together and used from th
 Allocation order (05.03): one group for the models with the same W, Sv and InSv, one for each CHARACTER model, CHARACTER groups last. Order: Khorne Berzerker, Khârn the Betrayer.
 
 Toughness (19.02): the highest T among the bodyguard models still in the unit; once they are all destroyed, the highest T of the others.
+
+Range (04.02): every weapon is taken to be in range of the target; a rule that changes range counts only through half range. Half range ([RAPID FIRE] 24.30, [MELTA] 24.25) is the band picked above, worked out from the ranges after the ticked rules that change them: a weapon gets its bonus when its half range reaches it.
 
 ######## damage fight · DAMAGE Damage
 OPPONENT
@@ -1194,9 +1255,9 @@ FIGHT
 ATTACKER · YOURS
 Ghazghkull Thraka
 1 model
-TARGET · THEIRS
+TARGET · THEIRS · PRINCES
 Khârn the Betrayer + Khorne Berzerkers
-T5 · Sv 3+ · 4+ InSv · W5 · 10× T5 · Sv 3+ · W2
+Khârn the Betrayer: T5 · Sv 3+ · 4+ InSv · W5 · 10× Khorne Berzerker: T5 · Sv 3+ · W2
 8.3
 of 11 models destroyed
 17
@@ -1217,17 +1278,8 @@ unit destroyed
 
 chance to destroy at least N models
 
-HITS
-WOUNDS
-THROUGH
-Adamantine ’Eadbutt
-1.0
-0.8
-0.6
-Gork’s Klaw
-11
-9.1
-7.8
+Played out with the dice, 10,000 games: damage beyond a model’s wounds is lost (05.04). Tap for the working.
+
 WEAPONS
 Adamantine ’Eadbutt
 Melee · A1 · 2+ · S14 · AP-2 · DD3+3 · DEVASTATING WOUNDS, EXTRA ATTACKS, PRECISION, SUSTAINED HITS 1
@@ -1237,18 +1289,37 @@ SITUATION
 Made a charge move this turn
 Allocate [PRECISION] attacks to Khârn the Betrayer
 when visible to an attacking model; until it is destroyed
-GHAZGHKULL THRAKA’S RULES
+RULES
+
+YOURS · GHAZGHKULL THRAKA
+
+APPLIES HERE
+
 Prophet of Da Great Waaagh!
-Own aura: +1 to hit, +1 to wound
+Own aura: +1 to hit, +1 to wound · always
+
+THEIRS · KHÂRN THE BETRAYER + KHORNE BERZERKERS
+
+NOT IN THESE NUMBERS (1)
+Khârn: the first time he is destroyed, at the end of the phase on a 2+ he is set back up with 3 wounds, as close as possible to where he was destroyed and not within Engagement Range of enemy units
+ability · not in these numbers
+STRATAGEMS
+
+YOURS · GHAZGHKULL THRAKA
+
+TICK IF USED
+
 1CP Hit ’Em Harder
 Fight phase: [LETHAL HITS]
 1CP Epic Challenge
 Fight phase: This model’s melee weapons have [PRECISION]
-KHÂRN THE BETRAYER WHEN TARGETED
-Khârn: the first time he is destroyed, at the end of the phase on a 2+ he is set back up with 3 wounds, as close as possible to where he was destroyed and not within Engagement Range of enemy units
-ability · not in these numbers
-Frenzied Resilience: Fight phase: -1 Damage to each attack allocated to it
-stratagem
+
+THEIRS · KHÂRN THE BETRAYER + KHORNE BERZERKERS
+
+TICK IF USED
+
+2CP Frenzied Resilience
+Fight phase: -1 Damage to each attack allocated to it
 OTHER MODIFIERS
 Hit roll
 −
@@ -1278,11 +1349,77 @@ Re-roll wounds
 none
 1s
 all
+Target InSv
+−
+–
++
+Target Feel No Pain
+−
+–
++
 
-Averages over 10,000 games played out with the dice; one unit’s attacks against the other, nothing used up. Rules marked “not counted” are not in these numbers.
+Rules marked “not in these numbers” are not counted. Nothing is used up: one unit’s attacks against the other.
+
+THE WORKING
+
+Exact averages, the same every time; tap a row for each step. *Dmg is damage before allocation: damage past a model’s wounds is lost (05.04), so the wounds lost above can be less.
+
+ATT.
+HITS
+WNDS
+THRU
+DMG*
+Adamantine ’Eadbutt
+1
+1
+0.8
+0.6
+3.1
+
+Attacks: A1 × 1 = 1
+
+Hit roll: WS 2+; +1 to hit (Prophet of Da Great Waaagh!); hits on an unmodified 2+ (an unmodified 1 always fails) · 1 × 5/6 = 0.833 hits; critical: 1 × 1/6 = 0.167; [SUSTAINED HITS 1] (24.36, from Get Stuck In): each critical hit adds 1 → +0.167 → 1
+
+Wound roll: S14 vs T5 (the bodyguard models’ highest, 19.02) → 2+ (S at least twice T); +1 to wound (Prophet of Da Great Waaagh!); wounds on an unmodified 2+ (an unmodified 1 always fails) · 1 × 5/6 = 0.833 wounds; [DEVASTATING WOUNDS] (24.10): the critical ones, 1 × 1/6 = 0.167, become mortal wounds (no save)
+
+Save: Khorne Berzerker (the group the attacks meet first; when it is destroyed, the next group’s save is used): Sv 3+; AP-2 → saves on 5+ · 0.667 × 4/6 fail (an unmodified 1 always fails) = 0.444 get through; with the 0.167 mortal wounds: 0.611
+
+Damage: DD3+3; 5 on average · 0.444 × 5 = 2.22; mortal wounds: 0.167 × 5 = 0.833 → 3.06 damage before allocation (played out, each critical wound’s mortal wounds damage one model at most, and the rest is lost: 24.10)
+
+Gork’s Klaw
+11
+11
+9.2
+7.9
+32
+
+Attacks: A7 × 1 = 7; [CLEAVE 2] (24.06, all its attacks at this one unit): 11 models in the target → +4 × 1 → 11
+
+Hit roll: WS 2+; +1 to hit (Prophet of Da Great Waaagh!); hits on an unmodified 2+ (an unmodified 1 always fails) · 11 × 5/6 = 9.17 hits; critical: 11 × 1/6 = 1.83; [SUSTAINED HITS 1] (24.36, from Get Stuck In): each critical hit adds 1 → +1.83 → 11
+
+Wound roll: S14 vs T5 (the bodyguard models’ highest, 19.02) → 2+ (S at least twice T); +1 to wound (Prophet of Da Great Waaagh!); wounds on an unmodified 2+ (an unmodified 1 always fails) · 11 × 5/6 = 9.17 wounds; [DEVASTATING WOUNDS] (24.10): the critical ones, 11 × 1/6 = 1.83, become mortal wounds (no save)
+
+Save: Khorne Berzerker (the group the attacks meet first; when it is destroyed, the next group’s save is used): Sv 3+; AP-3 → saves on 6+ · 7.33 × 5/6 fail (an unmodified 1 always fails) = 6.11 get through; with the 1.83 mortal wounds: 7.94
+
+Damage: D4 · 6.11 × 4 = 24.44; mortal wounds: 1.83 × 4 = 7.33 → 31.78 damage before allocation (played out, each critical wound’s mortal wounds damage one model at most, and the rest is lost: 24.10)
+
+Total
+12
+12
+10
+8.6
+35
+
+Before allocation: 12 attacks → 12 hits → 10 wounds → 8.56 get through → 34.83 damage (the rows added up).
+
+Played out: the target has 11 models with 25 wounds in all. Damage beyond a model’s wounds is lost, and attacks after the unit is destroyed are lost (05.04), so models destroyed, wounds lost and the chances come from the dice: 10,000 games, the same dice for the same picks. On average 8.3 of 11 destroyed, 17 wounds lost; the unit is destroyed in 7% of the games. Allocation order: Khorne Berzerker, Khârn the Betrayer. The defender picks it (05.03); the calculator takes the one that loses the fewest models on average.
 
 How this is worked out
 what the rules say, and what the calculator does where they leave a choice
+
+The working: each weapon’s averages are worked out exactly from the dice, step by step, against the models the attacks meet first and as if none of the damage were lost. Models destroyed, wounds lost and the chances are played out with the dice, because damage beyond a model’s wounds and attacks after the unit is destroyed are lost (05.04); the same picks always give the same numbers.
+
+Ticked for you: a rule starts ticked only when the data records that it applies here: always, or because of the target’s keywords or T. A rule that depends on the table (an objective, a charge, a distance, a protocol or ability picked, a stratagem spent) starts unticked; one the target rules out is greyed with the reason. Every box can be changed, and the working names each rule it counts, and each one the printed values already include.
 
 Weapons (04.03): the rules let the attacker pick which weapon’s attacks are resolved next; the calculator takes them in the order listed, and rolls identical attacks together.
 
@@ -1292,7 +1429,9 @@ Allocation order (05.03): one group for the models with the same W, Sv and InSv,
 
 Toughness (19.02): the highest T among the bodyguard models still in the unit; once they are all destroyed, the highest T of the others.
 
-[BLAST] and [CLEAVE] (24.05, 24.06): one more attack dice (X with [BLAST X] or [CLEAVE X]) for every five models the target had before these attacks.
+Range (04.02): every weapon is taken to be in range of the target; a rule that changes range counts only through half range.
+
+[CLEAVE] (24.06): X more attack dice for every five models the target had before these attacks, when all of that weapon’s attacks target this one unit: the calculator takes it that they do.
 
 ######## strats {"folded":true} · DAMAGE Stratagems
 EXPAND ALL

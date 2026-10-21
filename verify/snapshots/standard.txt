@@ -377,7 +377,8 @@ DEVASTATING WOUNDS
 DEVASTATING WOUNDS
 Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 wounds remaining)
 Own aura, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
+Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
 1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
 Khârn the Betrayer
@@ -405,7 +406,8 @@ Khornate eviscerator×2
 While Khârn leads this unit: re-roll hit rolls of 1 and wound rolls of 1 (Legendary Killer)
 Made a charge move this turn: +1 S (Murderous Charge)
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
+Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
 1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
 Lord on Juggernaut
@@ -426,7 +428,8 @@ EXTRA ATTACKS, LANCE
 When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
 Made a charge move this turn: Bladed horn +1 to wound (Lance)
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
+Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
 1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
 STRATAGEMS · VESSELS OF WRATH
@@ -441,7 +444,8 @@ Lacerator and daemonic claw
 A 10 Possessed Lord (once per battle, start of the Fight phase), and [DEVASTATING WOUNDS] until the end of the phase (Possessed Lord)
 When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
+Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
 1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
 STRATAGEMS · VESSELS OF WRATH
@@ -468,7 +472,8 @@ ANTI-MONSTER 3+, ANTI-VEHICLE 3+
 vs MONSTER/VEHICLE: +1 D (Rend and Tear)
 When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
+Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
 1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
 STRATAGEMS · VESSELS OF WRATH
@@ -481,7 +486,8 @@ Armoured tracks
 0
 1
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
+Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
 1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
 Eightbound
@@ -493,7 +499,8 @@ Chainblades×3
 -2
 2
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-Own aura, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+Own aura, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
+Own aura, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
 1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
 Exalted Eightbound
@@ -506,7 +513,8 @@ Chainblades×3
 ANTI-MONSTER 3+, ANTI-VEHICLE 3+
 vs MONSTER/VEHICLE: +1 D (Rend and Tear)
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
+Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
 1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
 Goremongers
@@ -526,7 +534,8 @@ Close combat weapon×8
 1
 Made a charge move this turn: Chainblade +1 to wound (Lance)
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
+Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
 1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
 Jakhals
@@ -544,7 +553,8 @@ Paired manglersDISHONOURED
 0
 1
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
+Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
 1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
 Forgefiend
@@ -557,7 +567,8 @@ Forgefiend claws
 1
 Damaged (1-4 wounds left): -1 to hit rolls (Damaged: 1-4 wounds remaining)
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
+Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
 1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
 
@@ -1017,30 +1028,18 @@ FIGHT
 ATTACKER · YOURS
 Khârn the Betrayer + Khorne Berzerkers
 11 models
-TARGET · THEIRS
+TARGET · THEIRS · PUBSTOMPER
 Magnus the Red
 T11 · Sv 2+ · 4+ InSv · W16
-0.0
+0
 of 1 model destroyed
 0.6
 wounds lost
 <1%
 unit destroyed
-HITS
-WOUNDS
-THROUGH
-Plasma pistol
-0.7
-0.2
-0.1
-Plasma pistol
-1.5
-0.5
-0.2
-Bolt pistol
-3.5
-0.6
-0.2
+
+Played out with the dice, 10,000 games: damage beyond a model’s wounds is lost (05.04). Tap for the working.
+
 WEAPONS
 Plasma pistol
 12" · A1 · 3+ · S7 · AP-2 · D1 · PISTOL
@@ -1053,28 +1052,39 @@ supercharge
 Bolt pistol ×7
 12" · A1 · 4+ · S5 · AP-1 · D1 · PISTOL
 SITUATION
-Distance to the target
-inches; blank: not set
 Target has the benefit of cover
 Plunging Fire
-on terrain 3" or higher, or TOWERING with the target within 12": BS improved by 1
+the target is visible and has a model on ground level; the attacker is on terrain 3" or higher, or TOWERING with the target within 12": BS improved by 1
 Close-quarters shooting at a unit it is engaged with
 only [CLOSE-QUARTERS] weapons
 Target is engaged
 -1 to hit; no [BLAST]
-Fire Overwatch (snap shooting)
-hits only on an unmodified 6, never critical; no hit re-rolls
-KHÂRN THE BETRAYER’S RULES
+Fire Overwatch (snap shooting), target within 24"
+the target is within 24" (15.09); hits only on an unmodified 6, never critical; no hit re-rolls
+RULES
 
-No footnotes on its weapons.
+YOURS · KHÂRN THE BETRAYER + KHORNE BERZERKERS
 
-MAGNUS THE RED WHEN TARGETED
+None that change these numbers.
+
+THEIRS · MAGNUS THE RED
+
+NOT IN THESE NUMBERS (1)
 Impossible Form (if picked this round): -1 Damage to attacks against Magnus, excluding psychic attacks
 ability · not in these numbers
-Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
-stratagem · not in these numbers
-Destined by Fate: after a failed save for a PSYKER model, that attack’s Damage becomes 0
-stratagem · not in these numbers
+STRATAGEMS
+
+YOURS · KHÂRN THE BETRAYER + KHORNE BERZERKERS
+
+None that change these numbers.
+
+THEIRS · MAGNUS THE RED
+
+NOT IN THESE NUMBERS (2)
+1CP Psychic Dominion
+Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS] · not in these numbers
+1CP Destined by Fate
+after a failed save for a PSYKER model, that attack’s Damage becomes 0 · not in these numbers
 OTHER MODIFIERS
 Hit roll
 −
@@ -1104,15 +1114,100 @@ Re-roll wounds
 none
 1s
 all
+Target InSv
+−
+–
++
+Target Feel No Pain
+−
+–
++
 
-Averages over 10,000 games played out with the dice; one unit’s attacks against the other, nothing used up. Rules marked “not counted” are not in these numbers.
+Rules marked “not in these numbers” are not counted. Nothing is used up: one unit’s attacks against the other.
+
+THE WORKING
+
+Exact averages, the same every time; tap a row for each step. *Dmg is damage before allocation: damage past a model’s wounds is lost (05.04), so the wounds lost above can be less.
+
+ATT.
+HITS
+WNDS
+THRU
+DMG*
+Plasma pistol
+1
+0.7
+0.2
+0.1
+0.1
+
+Attacks: A1 × 1 = 1
+
+Hit roll: BS 3+; hits on an unmodified 3+ (an unmodified 1 always fails) · 1 × 4/6 = 0.667 hits
+
+Wound roll: S7 vs T11 → 5+ (S less than T) · 0.667 × 2/6 = 0.222 wounds
+
+Save: Magnus the Red: Sv 2+; AP-2 → saves on 4+; InSv 4+ is not better, so not used · 0.222 × 3/6 fail (an unmodified 1 always fails) = 0.111 get through
+
+Damage: D1 · 0.111 × 1 = 0.111 damage before allocation
+
+Plasma pistol
+3
+1.5
+0.5
+0.3
+0.3
+
+Attacks: A1 × 3 = 3
+
+Hit roll: BS 4+; hits on an unmodified 4+ (an unmodified 1 always fails) · 3 × 3/6 = 1.5 hits
+
+Wound roll: S7 vs T11 → 5+ (S less than T) · 1.5 × 2/6 = 0.5 wounds
+
+Save: Magnus the Red: Sv 2+; AP-2 → saves on 4+; InSv 4+ is not better, so not used · 0.5 × 3/6 fail (an unmodified 1 always fails) = 0.25 get through
+
+Damage: D1 · 0.25 × 1 = 0.25 damage before allocation
+
+Bolt pistol
+7
+3.5
+0.6
+0.2
+0.2
+
+Attacks: A1 × 7 = 7
+
+Hit roll: BS 4+; hits on an unmodified 4+ (an unmodified 1 always fails) · 7 × 3/6 = 3.5 hits
+
+Wound roll: S5 vs T11 → 6+ (S half of T or less) · 3.5 × 1/6 = 0.583 wounds
+
+Save: Magnus the Red: Sv 2+; AP-1 → saves on 3+; InSv 4+ is not better, so not used · 0.583 × 2/6 fail (an unmodified 1 always fails) = 0.194 get through
+
+Damage: D1 · 0.194 × 1 = 0.194 damage before allocation
+
+Total
+11
+5.7
+1.3
+0.6
+0.6
+
+Before allocation: 11 attacks → 5.67 hits → 1.31 wounds → 0.556 get through → 0.556 damage (the rows added up).
+
+Played out: the target has 1 model with 16 wounds in all. Damage beyond a model’s wounds is lost, and attacks after the unit is destroyed are lost (05.04), so models destroyed, wounds lost and the chances come from the dice: 10,000 games, the same dice for the same picks. On average 0 of 1 destroyed, 0.6 wounds lost; the unit is destroyed in <1% of the games.
 
 How this is worked out
 what the rules say, and what the calculator does where they leave a choice
 
+The working: each weapon’s averages are worked out exactly from the dice, step by step, against the models the attacks meet first and as if none of the damage were lost. Models destroyed, wounds lost and the chances are played out with the dice, because damage beyond a model’s wounds and attacks after the unit is destroyed are lost (05.04); the same picks always give the same numbers.
+
+Ticked for you: a rule starts ticked only when the data records that it applies here: always, or because of the target’s keywords or T. A rule that depends on the table (an objective, a charge, a distance, a protocol or ability picked, a stratagem spent) starts unticked; one the target rules out is greyed with the reason. Every box can be changed, and the working names each rule it counts, and each one the printed values already include.
+
 Weapons (04.03): the rules let the attacker pick which weapon’s attacks are resolved next; the calculator takes them in the order listed, and rolls identical attacks together.
 
 Saves and damage (05.03, 05.04): save rolls are rolled together and used from the lowest; an attack that gets through damages the one model it was allocated to, so damage beyond that model’s wounds is lost; Feel No Pain is rolled for each wound (24.12).
+
+Range (04.02): every weapon is taken to be in range of the target; a rule that changes range counts only through half range.
 
 ######## damage fight · DAMAGE Damage
 OPPONENT
@@ -1125,7 +1220,7 @@ FIGHT
 ATTACKER · YOURS
 Angron
 1 model
-TARGET · THEIRS
+TARGET · THEIRS · PUBSTOMPER
 Magnus the Red
 T11 · Sv 2+ · 4+ InSv · W16
 0.5
@@ -1134,13 +1229,9 @@ of 1 model destroyed
 wounds lost
 54%
 unit destroyed
-HITS
-WOUNDS
-THROUGH
-Samni’arius and Spinegrinder
-7.5
-5.0
-2.6
+
+Played out with the dice, 10,000 games: damage beyond a model’s wounds is lost (05.04). Tap for the working.
+
 WEAPONS
 Samni’arius and Spinegrinder
 Melee · A9 · 2+ · S14 · AP-3 · DD6+2 · DEVASTATING WOUNDS
@@ -1150,20 +1241,43 @@ SITUATION
 Made a charge move this turn
 Damaged (1-6 wounds left)
 -1 to hit rolls
-ANGRON’S RULES
+RULES
+
+YOURS · ANGRON
+
+TICK IF IT APPLIES
+
 Driven by Ultimate Rage
 Own aura, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
+
+NOT AGAINST THIS TARGET
+
 Beacons of Rage
-Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength · not in these numbers
-1CP Hack and Slash
-Made a charge move this turn: +1 AP in the Fight phase
-MAGNUS THE RED WHEN TARGETED
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit · counted: +1 to hit rolls · not against MONSTER/VEHICLE
+Beacons of Rage
+Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls · counted: +1 to wound rolls · not against MONSTER/VEHICLE
+
+THEIRS · MAGNUS THE RED
+
+NOT IN THESE NUMBERS (1)
 Impossible Form (if picked this round): -1 Damage to attacks against Magnus, excluding psychic attacks
 ability · not in these numbers
-Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
-stratagem · not in these numbers
-Destined by Fate: after a failed save for a PSYKER model, that attack’s Damage becomes 0
-stratagem · not in these numbers
+STRATAGEMS
+
+YOURS · ANGRON
+
+TICK IF USED
+
+1CP Hack and Slash
+Made a charge move this turn: +1 AP in the Fight phase
+
+THEIRS · MAGNUS THE RED
+
+NOT IN THESE NUMBERS (2)
+1CP Psychic Dominion
+Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS] · not in these numbers
+1CP Destined by Fate
+after a failed save for a PSYKER model, that attack’s Damage becomes 0 · not in these numbers
 OTHER MODIFIERS
 Hit roll
 −
@@ -1193,15 +1307,66 @@ Re-roll wounds
 none
 1s
 all
+Target InSv
+−
+–
++
+Target Feel No Pain
+−
+–
++
 
-Averages over 10,000 games played out with the dice; one unit’s attacks against the other, nothing used up. Rules marked “not counted” are not in these numbers.
+Rules marked “not in these numbers” are not counted. Nothing is used up: one unit’s attacks against the other.
+
+THE WORKING
+
+Exact averages, the same every time; tap a row for each step. *Dmg is damage before allocation: damage past a model’s wounds is lost (05.04), so the wounds lost above can be less.
+
+ATT.
+HITS
+WNDS
+THRU
+DMG*
+Samni’arius and Spinegrinder
+9
+7.5
+5
+3.1
+17
+
+Attacks: A9 (includes Relentless Rage) × 1 = 9
+
+Hit roll: WS 2+; hits on an unmodified 2+ (an unmodified 1 always fails) · 9 × 5/6 = 7.5 hits
+
+Wound roll: S14 vs T11 → 3+ (S greater than T) · 7.5 × 4/6 = 5 wounds; [DEVASTATING WOUNDS] (24.10): the critical ones, 7.5 × 1/6 = 1.25, become mortal wounds (no save)
+
+Save: Magnus the Red: Sv 2+; AP-3 → saves on 5+; InSv 4+ is better, so it is used · 3.75 × 3/6 fail (an unmodified 1 always fails) = 1.88 get through; with the 1.25 mortal wounds: 3.13
+
+Damage: DD6+2; 5.5 on average · 1.88 × 5.5 = 10.31; mortal wounds: 1.25 × 5.5 = 6.87 → 17.19 damage before allocation (played out, each critical wound’s mortal wounds damage one model at most, and the rest is lost: 24.10)
+
+Total
+9
+7.5
+5
+3.1
+17
+
+Before allocation: 9 attacks → 7.5 hits → 5 wounds → 3.13 get through → 17.19 damage (the rows added up).
+
+Played out: the target has 1 model with 16 wounds in all. Damage beyond a model’s wounds is lost, and attacks after the unit is destroyed are lost (05.04), so models destroyed, wounds lost and the chances come from the dice: 10,000 games, the same dice for the same picks. On average 0.5 of 1 destroyed, 13 wounds lost; the unit is destroyed in 54% of the games.
 
 How this is worked out
 what the rules say, and what the calculator does where they leave a choice
 
+The working: each weapon’s averages are worked out exactly from the dice, step by step, against the models the attacks meet first and as if none of the damage were lost. Models destroyed, wounds lost and the chances are played out with the dice, because damage beyond a model’s wounds and attacks after the unit is destroyed are lost (05.04); the same picks always give the same numbers.
+
+Ticked for you: a rule starts ticked only when the data records that it applies here: always, or because of the target’s keywords or T. A rule that depends on the table (an objective, a charge, a distance, a protocol or ability picked, a stratagem spent) starts unticked; one the target rules out is greyed with the reason. Every box can be changed, and the working names each rule it counts, and each one the printed values already include.
+
 Weapons (04.03): the rules let the attacker pick which weapon’s attacks are resolved next; the calculator takes them in the order listed, and rolls identical attacks together.
 
 Saves and damage (05.03, 05.04): save rolls are rolled together and used from the lowest; an attack that gets through damages the one model it was allocated to, so damage beyond that model’s wounds is lost; Feel No Pain is rolled for each wound (24.12).
+
+Range (04.02): every weapon is taken to be in range of the target; a rule that changes range counts only through half range.
 
 ######## strats {"folded":true} · DAMAGE Stratagems
 EXPAND ALL
@@ -1711,7 +1876,8 @@ DEVASTATING WOUNDS
 2
 DEVASTATING WOUNDS
 Own aura, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
+Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
 1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
 ABILITIES
@@ -1901,7 +2067,8 @@ WHOLE UNIT
 While Khârn leads this unit: re-roll hit rolls of 1 and wound rolls of 1 (Legendary Killer)
 Made a charge move this turn: +1 S (Murderous Charge)
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
+Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
 1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
 ABILITIES
@@ -2050,7 +2217,8 @@ EXTRA ATTACKS, LANCE
 When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
 Made a charge move this turn: Bladed horn +1 to wound (Lance)
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
+Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
 1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
 STRATAGEMS · VESSELS OF WRATH
@@ -2132,7 +2300,8 @@ Lacerator and daemonic claw
 A 10 Possessed Lord (once per battle, start of the Fight phase), and [DEVASTATING WOUNDS] until the end of the phase (Possessed Lord)
 When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
+Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
 1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
 STRATAGEMS · VESSELS OF WRATH
@@ -2247,7 +2416,8 @@ WHOLE UNIT
 vs MONSTER/VEHICLE: +1 D (Rend and Tear)
 When selected to fight: CHARACTER models: [CLEAVE 1] or +1 AP (Wrath of Khorne)
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
+Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
 1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
 STRATAGEMS · VESSELS OF WRATH
@@ -2370,7 +2540,8 @@ Armoured tracks
 0
 1
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
+Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
 1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
 ABILITIES
@@ -2451,7 +2622,8 @@ Chainblades×3
 -2
 2
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-Own aura, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+Own aura, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
+Own aura, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
 1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
 ABILITIES
@@ -2527,7 +2699,8 @@ Chainblades×3
 ANTI-MONSTER 3+, ANTI-VEHICLE 3+
 vs MONSTER/VEHICLE: +1 D (Rend and Tear)
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
+Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
 1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
 ABILITIES
@@ -2625,7 +2798,8 @@ Close combat weapon×8
 1
 Made a charge move this turn: Chainblade +1 to wound (Lance)
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
+Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
 1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
 ABILITIES
@@ -2730,7 +2904,8 @@ Paired manglersDISHONOURED
 0
 1
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
+Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
 1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
 ABILITIES
@@ -2827,7 +3002,8 @@ Forgefiend claws
 0
 1
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit; also +1 to wound if the target is Below Half-strength (Beacons of Rage)
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
+Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
 1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
 ABILITIES

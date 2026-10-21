@@ -851,54 +851,65 @@ FIGHT
 ATTACKER · YOURS
 The Swarmlord
 1 model
-TARGET · THEIRS
+TARGET · THEIRS · 6 BIGS
 Knight Destrier
 T10 · Sv 3+ · 5+ InSv · W18
-0.0
+0
 of 1 model destroyed
 0.9
 wounds lost
 <1%
 unit destroyed
-HITS
-WOUNDS
-THROUGH
-Synaptic Pulse
-6.5
-1.1
-0.5
+
+Played out with the dice, 10,000 games: damage beyond a model’s wounds is lost (05.04). Tap for the working.
+
 WEAPONS
 Synaptic Pulse
 18" · AD6+3 · – · S5 · AP-1 · D2 · PSYCHIC, TORRENT
 SITUATION
-Distance to the target
-inches; blank: not set
 Target has the benefit of cover
 Close-quarters shooting at a unit it is engaged with
 -1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
 Target is engaged
 -1 to hit; no [BLAST]
-Fire Overwatch (snap shooting)
-hits only on an unmodified 6, never critical; no hit re-rolls
-THE SWARMLORD’S RULES
+Fire Overwatch (snap shooting), target within 24"
+the target is within 24" (15.09); hits only on an unmodified 6, never critical; no hit re-rolls
+RULES
+
+YOURS · THE SWARMLORD
+
+TICK IF IT APPLIES
+
+Onslaught
+Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS]
+NOT IN THESE NUMBERS (2)
 Enraged Behemoths
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 4 or fewer wounds left · not in these numbers
 Domination of the Hive Mind
 Within 9" of the Swarmlord: within your army’s Synapse Range · not in these numbers
-Onslaught
-Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS]
-1CP Swarm-guided Salvoes
-Your Shooting phase: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
-KNIGHT DESTRIER WHEN TARGETED
+
+THEIRS · KNIGHT DESTRIER
+
+APPLIES HERE
 
 Feel No Pain 6+
-counted: the unit always has it
-
+rule · always
 5+ invulnerable save against ranged attacks only
-counted: the InSv in its profile
+ability · the InSv in its profile
+STRATAGEMS
 
-Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
-stratagem · not in these numbers
+YOURS · THE SWARMLORD
+
+TICK IF USED
+
+1CP Swarm-guided Salvoes
+Your Shooting phase: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
+
+THEIRS · KNIGHT DESTRIER
+
+NOT IN THESE NUMBERS (1)
+1CP Survivor of Strife
+their Shooting phase: -1 to wound when the attack’s S is greater than its T · not in these numbers
 OTHER MODIFIERS
 Hit roll
 −
@@ -928,17 +939,68 @@ Re-roll wounds
 none
 1s
 all
+Target InSv
+−
+–
++
+Target Feel No Pain
+−
+–
++
 
-Averages over 10,000 games played out with the dice; one unit’s attacks against the other, nothing used up. Rules marked “not counted” are not in these numbers.
+Rules marked “not in these numbers” are not counted. Nothing is used up: one unit’s attacks against the other.
+
+THE WORKING
+
+Exact averages, the same every time; tap a row for each step. *Dmg is damage before allocation: damage past a model’s wounds is lost (05.04), so the wounds lost above can be less.
+
+ATT.
+HITS
+WNDS
+THRU
+DMG*
+Synaptic Pulse
+6.5
+6.5
+1.1
+0.5
+0.9
+
+Attacks: AD6+3 = 6.5 on average × 1 = 6.5
+
+Hit roll: [TORRENT] (24.37): every attack hits automatically, never a critical hit → 6.5 hits
+
+Wound roll: S5 vs T10 → 6+ (S half of T or less) · 6.5 × 1/6 = 1.08 wounds
+
+Save: Knight Destrier: Sv 3+; AP-1 → saves on 4+; InSv 5+ is not better, so not used · 1.08 × 3/6 fail (an unmodified 1 always fails) = 0.542 get through
+
+Damage: D2; Feel No Pain 6+ (Knights of Legend, 24.12): 1/6 of the wounds ignored · 0.542 × 2 × 5/6 = 0.903 damage before allocation
+
+Total
+6.5
+6.5
+1.1
+0.5
+0.9
+
+Before allocation: 6.5 attacks → 6.5 hits → 1.08 wounds → 0.542 get through → 0.903 damage (the rows added up).
+
+Played out: the target has 1 model with 18 wounds in all. Damage beyond a model’s wounds is lost, and attacks after the unit is destroyed are lost (05.04), so models destroyed, wounds lost and the chances come from the dice: 10,000 games, the same dice for the same picks. On average 0 of 1 destroyed, 0.9 wounds lost; the unit is destroyed in <1% of the games.
 
 How this is worked out
 what the rules say, and what the calculator does where they leave a choice
+
+The working: each weapon’s averages are worked out exactly from the dice, step by step, against the models the attacks meet first and as if none of the damage were lost. Models destroyed, wounds lost and the chances are played out with the dice, because damage beyond a model’s wounds and attacks after the unit is destroyed are lost (05.04); the same picks always give the same numbers.
+
+Ticked for you: a rule starts ticked only when the data records that it applies here: always, or because of the target’s keywords or T. A rule that depends on the table (an objective, a charge, a distance, a protocol or ability picked, a stratagem spent) starts unticked; one the target rules out is greyed with the reason. Every box can be changed, and the working names each rule it counts, and each one the printed values already include.
 
 Weapons (04.03): the rules let the attacker pick which weapon’s attacks are resolved next; the calculator takes them in the order listed, and rolls identical attacks together.
 
 Saves and damage (05.03, 05.04): save rolls are rolled together and used from the lowest; an attack that gets through damages the one model it was allocated to, so damage beyond that model’s wounds is lost; Feel No Pain is rolled for each wound (24.12).
 
 [PSYCHIC] (24.29): an attack that can ignore any or all modifiers to BS and to the hit roll: the calculator ignores the ones that make it worse and keeps the others.
+
+Range (04.02): every weapon is taken to be in range of the target; a rule that changes range counts only through half range.
 
 ######## damage fight · DAMAGE Damage
 OPPONENT
@@ -951,7 +1013,7 @@ FIGHT
 ATTACKER · YOURS
 The Swarmlord
 1 model
-TARGET · THEIRS
+TARGET · THEIRS · 6 BIGS
 Knight Destrier
 T10 · Sv 3+ · W18
 0.0
@@ -960,34 +1022,52 @@ of 1 model destroyed
 wounds lost
 <1%
 unit destroyed
-HITS
-WOUNDS
-THROUGH
-Bone Sabres
-6.6
-3.7
-2.5
+
+Played out with the dice, 10,000 games: damage beyond a model’s wounds is lost (05.04). Tap for the working.
+
 WEAPONS
 Bone Sabres
 Melee · A8 · 2+ · S9 · AP-2 · D3 · TWIN-LINKED
 SITUATION
 Made a charge move this turn
-THE SWARMLORD’S RULES
+RULES
+
+YOURS · THE SWARMLORD
+
+TICK IF IT APPLIES
+
 Synapse
 Within Synapse Range: +1 S
+NOT IN THESE NUMBERS (2)
 Enraged Behemoths
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 4 or fewer wounds left · not in these numbers
 Domination of the Hive Mind
 Within 9" of the Swarmlord: within your army’s Synapse Range · not in these numbers
-1CP Rampaging Monstrosities
-Fight phase: re-roll hit rolls
-KNIGHT DESTRIER WHEN TARGETED
+
+THEIRS · KNIGHT DESTRIER
+
+APPLIES HERE
 
 Feel No Pain 6+
-counted: the unit always has it
+rule · always
+
+NOT AGAINST THESE ATTACKS
 
 5+ invulnerable save against ranged attacks only
-ability
+ability · not against melee attacks
+STRATAGEMS
+
+YOURS · THE SWARMLORD
+
+TICK IF USED
+
+1CP Rampaging Monstrosities
+Fight phase: re-roll hit rolls
+
+THEIRS · KNIGHT DESTRIER
+
+None that change these numbers.
+
 OTHER MODIFIERS
 Hit roll
 −
@@ -1017,17 +1097,68 @@ Re-roll wounds
 none
 1s
 all
+Target InSv
+−
+–
++
+Target Feel No Pain
+−
+–
++
 
-Averages over 10,000 games played out with the dice; one unit’s attacks against the other, nothing used up. Rules marked “not counted” are not in these numbers.
+Rules marked “not in these numbers” are not counted. Nothing is used up: one unit’s attacks against the other.
+
+THE WORKING
+
+Exact averages, the same every time; tap a row for each step. *Dmg is damage before allocation: damage past a model’s wounds is lost (05.04), so the wounds lost above can be less.
+
+ATT.
+HITS
+WNDS
+THRU
+DMG*
+Bone Sabres
+8
+6.7
+3.7
+2.5
+6.2
+
+Attacks: A8 × 1 = 8
+
+Hit roll: WS 2+; hits on an unmodified 2+ (an unmodified 1 always fails) · 8 × 5/6 = 6.67 hits
+
+Wound roll: S9 vs T10 → 5+ (S less than T); re-roll failed wound rolls ([TWIN-LINKED] (24.38)) · 6.67 × (2/6 + 4/6 × 2/6 = 20/36) = 3.7 wounds
+
+Save: Knight Destrier: Sv 3+; AP-2 → saves on 5+ · 3.7 × 4/6 fail (an unmodified 1 always fails) = 2.47 get through
+
+Damage: D3; Feel No Pain 6+ (Knights of Legend, 24.12): 1/6 of the wounds ignored · 2.47 × 3 × 5/6 = 6.17 damage before allocation
+
+Total
+8
+6.7
+3.7
+2.5
+6.2
+
+Before allocation: 8 attacks → 6.67 hits → 3.7 wounds → 2.47 get through → 6.17 damage (the rows added up).
+
+Played out: the target has 1 model with 18 wounds in all. Damage beyond a model’s wounds is lost, and attacks after the unit is destroyed are lost (05.04), so models destroyed, wounds lost and the chances come from the dice: 10,000 games, the same dice for the same picks. On average 0.0 of 1 destroyed, 6.2 wounds lost; the unit is destroyed in <1% of the games.
 
 How this is worked out
 what the rules say, and what the calculator does where they leave a choice
+
+The working: each weapon’s averages are worked out exactly from the dice, step by step, against the models the attacks meet first and as if none of the damage were lost. Models destroyed, wounds lost and the chances are played out with the dice, because damage beyond a model’s wounds and attacks after the unit is destroyed are lost (05.04); the same picks always give the same numbers.
+
+Ticked for you: a rule starts ticked only when the data records that it applies here: always, or because of the target’s keywords or T. A rule that depends on the table (an objective, a charge, a distance, a protocol or ability picked, a stratagem spent) starts unticked; one the target rules out is greyed with the reason. Every box can be changed, and the working names each rule it counts, and each one the printed values already include.
 
 Weapons (04.03): the rules let the attacker pick which weapon’s attacks are resolved next; the calculator takes them in the order listed, and rolls identical attacks together.
 
 Saves and damage (05.03, 05.04): save rolls are rolled together and used from the lowest; an attack that gets through damages the one model it was allocated to, so damage beyond that model’s wounds is lost; Feel No Pain is rolled for each wound (24.12).
 
 Re-rolls and [LETHAL HITS] (01.05.02, 24.23): the rules leave these to the attacker; the calculator re-rolls every failed roll it may, re-rolls a successful roll only to look for a critical result when that is worth more on average, and takes [LETHAL HITS] unless rolling to wound is worth more (a critical wound with [DEVASTATING WOUNDS]).
+
+Range (04.02): every weapon is taken to be in range of the target; a rule that changes range counts only through half range.
 
 ######## strats {"folded":true} · DAMAGE Stratagems
 EXPAND ALL

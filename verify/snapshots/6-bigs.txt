@@ -589,10 +589,17 @@ FIGHT
 ATTACKER · YOURS
 Knight Destrier
 1 model
-TARGET · THEIRS
+TARGET · THEIRS · 4 MEGAS AND A DESTRIER
 Canis Rex
-T11 · Sv 3+ · 5+ InSv · W26 · T3 · Sv 4+ · W3
-0.0
+Canis Rex: T11 · Sv 3+ · 5+ InSv · W26 · Sir Hekhtur: T3 · Sv 4+ · W3
+HALF RANGE
+
+[RAPID FIRE] AND [MELTA]: THE TARGET IS
+
+OUTSIDE 18"
+WITHIN 18"
+WITHIN 12"
+0
 of 2 models destroyed
 3.7
 wounds lost
@@ -603,21 +610,8 @@ unit destroyed
 
 chance to destroy at least N models
 
-HITS
-WOUNDS
-THROUGH
-Questoris heavy stubber
-4.0
-0.7
-0.3
-Chastiser gatling cannon
-8.0
-2.7
-1.3
-Frag bombard
-4.3
-1.4
-0.7
+Played out with the dice, 10,000 games: damage beyond a model’s wounds is lost (05.04). Tap for the working.
+
 WEAPONS
 Questoris heavy stubber
 36" · A6 · 3+ · S4 · AP-1 · D1 · ASSAULT, RAPID FIRE 3
@@ -626,36 +620,47 @@ Chastiser gatling cannon
 Frag bombard
 24" · AD6+3 · 3+ · S7 · AP-1 · D2 · ASSAULT, BLAST, RAPID FIRE D6+3
 SITUATION
-Distance to the target
-inches; blank: not set
-Within half range
-every [MELTA] and [RAPID FIRE] weapon; or type the distance
 Target has the benefit of cover
 Plunging Fire
-on terrain 3" or higher, or TOWERING with the target within 12": BS improved by 1
+the target is visible and has a model on ground level; the attacker is on terrain 3" or higher, or TOWERING with the target within 12": BS improved by 1
 Close-quarters shooting at a unit it is engaged with
 -1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
 Target is engaged
 -1 to hit; no [BLAST]
-Fire Overwatch (snap shooting)
-hits only on an unmodified 6, never critical; no hit re-rolls
+Fire Overwatch (snap shooting), target within 24"
+the target is within 24" (15.09); hits only on an unmodified 6, never critical; no hit re-rolls
 Damaged (1-6 wounds left)
 -1 to hit rolls (and -4 OC)
-KNIGHT DESTRIER’S RULES
+RULES
+
+YOURS · KNIGHT DESTRIER
+
+TICK IF IT APPLIES
+
 Saturation Fire
 Target within range of an objective marker: ranged attacks have [IGNORES COVER]
-1CP Strength from Exile
-No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) · not in these numbers
-CANIS REX WHEN TARGETED
+
+THEIRS · CANIS REX
+
+APPLIES HERE
 
 Feel No Pain 6+
-counted: the unit always has it
-
+rule · always
 5+ invulnerable save against ranged attacks only
-counted: the InSv in its profile
+ability · the InSv in its profile
+STRATAGEMS
 
-Survivor of Strife: their Shooting phase: -1 to wound when the attack’s S is greater than its T
-stratagem · not in these numbers
+YOURS · KNIGHT DESTRIER
+
+NOT IN THESE NUMBERS (1)
+1CP Strength from Exile
+No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) · not in these numbers
+
+THEIRS · CANIS REX
+
+NOT IN THESE NUMBERS (1)
+1CP Survivor of Strife
+their Shooting phase: -1 to wound when the attack’s S is greater than its T · not in these numbers
 OTHER MODIFIERS
 Hit roll
 −
@@ -685,21 +690,106 @@ Re-roll wounds
 none
 1s
 all
+Target InSv
+−
+–
++
+Target Feel No Pain
+−
+–
++
 
-Averages over 10,000 games played out with the dice; one unit’s attacks against the other, nothing used up. Rules marked “not counted” are not in these numbers.
+Rules marked “not in these numbers” are not counted. Nothing is used up: one unit’s attacks against the other.
+
+THE WORKING
+
+Exact averages, the same every time; tap a row for each step. *Dmg is damage before allocation: damage past a model’s wounds is lost (05.04), so the wounds lost above can be less.
+
+ATT.
+HITS
+WNDS
+THRU
+DMG*
+Questoris heavy stubber
+6
+4
+0.7
+0.3
+0.3
+
+Attacks: A6 × 1 = 6
+
+Hit roll: BS 3+; hits on an unmodified 3+ (an unmodified 1 always fails) · 6 × 4/6 = 4 hits
+
+Wound roll: S4 vs T11 (the highest in the unit, 05.02.01) → 6+ (S half of T or less) · 4 × 1/6 = 0.667 wounds
+
+Save: Canis Rex (the group the attacks meet first; when it is destroyed, the next group’s save is used): Sv 3+; AP-1 → saves on 4+; InSv 5+ is not better, so not used · 0.667 × 3/6 fail (an unmodified 1 always fails) = 0.333 get through
+
+Damage: D1; Feel No Pain 6+ (Knights of Legend, 24.12): 1/6 of the wounds ignored · 0.333 × 1 × 5/6 = 0.278 damage before allocation
+
+Chastiser gatling cannon
+12
+8
+2.7
+1.3
+2.2
+
+Attacks: A12 × 1 = 12
+
+Hit roll: BS 3+; hits on an unmodified 3+ (an unmodified 1 always fails) · 12 × 4/6 = 8 hits
+
+Wound roll: S6 vs T11 (the highest in the unit, 05.02.01) → 5+ (S less than T) · 8 × 2/6 = 2.67 wounds
+
+Save: Canis Rex (the group the attacks meet first; when it is destroyed, the next group’s save is used): Sv 3+; AP-1 → saves on 4+; InSv 5+ is not better, so not used · 2.67 × 3/6 fail (an unmodified 1 always fails) = 1.33 get through
+
+Damage: D2; Feel No Pain 6+ (Knights of Legend, 24.12): 1/6 of the wounds ignored · 1.33 × 2 × 5/6 = 2.22 damage before allocation
+
+Frag bombard
+6.5
+4.3
+1.4
+0.7
+1.2
+
+Attacks: AD6+3 = 6.5 on average × 1 = 6.5
+
+Hit roll: BS 3+; hits on an unmodified 3+ (an unmodified 1 always fails) · 6.5 × 4/6 = 4.33 hits
+
+Wound roll: S7 vs T11 (the highest in the unit, 05.02.01) → 5+ (S less than T) · 4.33 × 2/6 = 1.44 wounds
+
+Save: Canis Rex (the group the attacks meet first; when it is destroyed, the next group’s save is used): Sv 3+; AP-1 → saves on 4+; InSv 5+ is not better, so not used · 1.44 × 3/6 fail (an unmodified 1 always fails) = 0.722 get through
+
+Damage: D2; Feel No Pain 6+ (Knights of Legend, 24.12): 1/6 of the wounds ignored · 0.722 × 2 × 5/6 = 1.2 damage before allocation
+
+Total
+25
+16
+4.8
+2.4
+3.7
+
+Before allocation: 24.5 attacks → 16.33 hits → 4.78 wounds → 2.39 get through → 3.7 damage (the rows added up).
+
+Played out: the target has 2 models with 29 wounds in all. Damage beyond a model’s wounds is lost, and attacks after the unit is destroyed are lost (05.04), so models destroyed, wounds lost and the chances come from the dice: 10,000 games, the same dice for the same picks. On average 0 of 2 destroyed, 3.7 wounds lost; the unit is destroyed in <1% of the games. Allocation order: Canis Rex, Sir Hekhtur. The defender picks it (05.03); the calculator takes the one that loses the fewest models on average.
 
 How this is worked out
 what the rules say, and what the calculator does where they leave a choice
+
+The working: each weapon’s averages are worked out exactly from the dice, step by step, against the models the attacks meet first and as if none of the damage were lost. Models destroyed, wounds lost and the chances are played out with the dice, because damage beyond a model’s wounds and attacks after the unit is destroyed are lost (05.04); the same picks always give the same numbers.
+
+Ticked for you: a rule starts ticked only when the data records that it applies here: always, or because of the target’s keywords or T. A rule that depends on the table (an objective, a charge, a distance, a protocol or ability picked, a stratagem spent) starts unticked; one the target rules out is greyed with the reason. Every box can be changed, and the working names each rule it counts, and each one the printed values already include.
 
 Weapons (04.03): the rules let the attacker pick which weapon’s attacks are resolved next; the calculator takes them in the order listed, and rolls identical attacks together.
 
 Saves and damage (05.03, 05.04): save rolls are rolled together and used from the lowest; an attack that gets through damages the one model it was allocated to, so damage beyond that model’s wounds is lost; Feel No Pain is rolled for each wound (24.12).
 
-Allocation order (05.03): one group for the models with the same W, Sv and InSv, one for each CHARACTER model, CHARACTER groups last. The rules let the defender pick the order of the groups; the calculator uses the order that loses the fewest models on average: Canis Rex, Sir Hekhtur.
+Allocation order (05.03): one group for the models with the same W, Sv and InSv, one for each CHARACTER model, CHARACTER groups last. The defender declares the order at each Save Rolls step; the calculator uses one order for every weapon: the one that loses the fewest models on average over the same 10,000 games: Canis Rex, Sir Hekhtur.
 
 A dice roll in an ability ([SUSTAINED HITS D3], [RAPID FIRE D6+3]): the rules don’t say how often it is rolled; the calculator rolls [SUSTAINED HITS] for each critical hit, [RAPID FIRE] for each weapon and [MELTA] for each attack that inflicts damage.
 
-[BLAST] and [CLEAVE] (24.05, 24.06): one more attack dice (X with [BLAST X] or [CLEAVE X]) for every five models the target had before these attacks.
+Range (04.02): every weapon is taken to be in range of the target; a rule that changes range counts only through half range. Half range ([RAPID FIRE] 24.30, [MELTA] 24.25) is the band picked above, worked out from the ranges after the ticked rules that change them: a weapon gets its bonus when its half range reaches it.
+
+[BLAST] (24.05): one more attack dice (X with [BLAST X]) for every five models the target had before these attacks.
 
 ######## damage fight · DAMAGE Damage
 OPPONENT
@@ -712,10 +802,10 @@ FIGHT
 ATTACKER · YOURS
 Knight Destrier
 1 model
-TARGET · THEIRS
+TARGET · THEIRS · 4 MEGAS AND A DESTRIER
 Canis Rex
-T11 · Sv 3+ · W26 · T3 · Sv 4+ · W3
-0.0
+Canis Rex: T11 · Sv 3+ · W26 · Sir Hekhtur: T3 · Sv 4+ · W3
+0
 of 2 models destroyed
 0.6
 wounds lost
@@ -726,13 +816,8 @@ unit destroyed
 
 chance to destroy at least N models
 
-HITS
-WOUNDS
-THROUGH
-Titanic feet
-2.0
-0.7
-0.3
+Played out with the dice, 10,000 games: damage beyond a model’s wounds is lost (05.04). Tap for the working.
+
 WEAPONS
 Titanic feet
 Melee · A4 · 4+ · S7 · AP-1 · D2
@@ -740,18 +825,39 @@ SITUATION
 Made a charge move this turn
 Damaged (1-6 wounds left)
 -1 to hit rolls (and -4 OC)
-KNIGHT DESTRIER’S RULES
-1CP Strength from Exile
-No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) · not in these numbers
-1CP Epic Challenge
-Fight phase: This model’s melee weapons have [PRECISION]
-CANIS REX WHEN TARGETED
+RULES
+
+YOURS · KNIGHT DESTRIER
+
+None that change these numbers.
+
+THEIRS · CANIS REX
+
+APPLIES HERE
 
 Feel No Pain 6+
-counted: the unit always has it
+rule · always
+
+NOT AGAINST THESE ATTACKS
 
 5+ invulnerable save against ranged attacks only
-ability
+ability · not against melee attacks
+STRATAGEMS
+
+YOURS · KNIGHT DESTRIER
+
+TICK IF USED
+
+1CP Epic Challenge
+Fight phase: This model’s melee weapons have [PRECISION]
+NOT IN THESE NUMBERS (1)
+1CP Strength from Exile
+No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) · not in these numbers
+
+THEIRS · CANIS REX
+
+None that change these numbers.
+
 OTHER MODIFIERS
 Hit roll
 −
@@ -781,17 +887,68 @@ Re-roll wounds
 none
 1s
 all
+Target InSv
+−
+–
++
+Target Feel No Pain
+−
+–
++
 
-Averages over 10,000 games played out with the dice; one unit’s attacks against the other, nothing used up. Rules marked “not counted” are not in these numbers.
+Rules marked “not in these numbers” are not counted. Nothing is used up: one unit’s attacks against the other.
+
+THE WORKING
+
+Exact averages, the same every time; tap a row for each step. *Dmg is damage before allocation: damage past a model’s wounds is lost (05.04), so the wounds lost above can be less.
+
+ATT.
+HITS
+WNDS
+THRU
+DMG*
+Titanic feet
+4
+2
+0.7
+0.3
+0.6
+
+Attacks: A4 × 1 = 4
+
+Hit roll: WS 4+; hits on an unmodified 4+ (an unmodified 1 always fails) · 4 × 3/6 = 2 hits
+
+Wound roll: S7 vs T11 (the highest in the unit, 05.02.01) → 5+ (S less than T) · 2 × 2/6 = 0.667 wounds
+
+Save: Canis Rex (the group the attacks meet first; when it is destroyed, the next group’s save is used): Sv 3+; AP-1 → saves on 4+ · 0.667 × 3/6 fail (an unmodified 1 always fails) = 0.333 get through
+
+Damage: D2; Feel No Pain 6+ (Knights of Legend, 24.12): 1/6 of the wounds ignored · 0.333 × 2 × 5/6 = 0.556 damage before allocation
+
+Total
+4
+2
+0.7
+0.3
+0.6
+
+Before allocation: 4 attacks → 2 hits → 0.667 wounds → 0.333 get through → 0.556 damage (the rows added up).
+
+Played out: the target has 2 models with 29 wounds in all. Damage beyond a model’s wounds is lost, and attacks after the unit is destroyed are lost (05.04), so models destroyed, wounds lost and the chances come from the dice: 10,000 games, the same dice for the same picks. On average 0 of 2 destroyed, 0.6 wounds lost; the unit is destroyed in <1% of the games. Allocation order: Canis Rex, Sir Hekhtur. The defender picks it (05.03); the calculator takes the one that loses the fewest models on average.
 
 How this is worked out
 what the rules say, and what the calculator does where they leave a choice
+
+The working: each weapon’s averages are worked out exactly from the dice, step by step, against the models the attacks meet first and as if none of the damage were lost. Models destroyed, wounds lost and the chances are played out with the dice, because damage beyond a model’s wounds and attacks after the unit is destroyed are lost (05.04); the same picks always give the same numbers.
+
+Ticked for you: a rule starts ticked only when the data records that it applies here: always, or because of the target’s keywords or T. A rule that depends on the table (an objective, a charge, a distance, a protocol or ability picked, a stratagem spent) starts unticked; one the target rules out is greyed with the reason. Every box can be changed, and the working names each rule it counts, and each one the printed values already include.
 
 Weapons (04.03): the rules let the attacker pick which weapon’s attacks are resolved next; the calculator takes them in the order listed, and rolls identical attacks together.
 
 Saves and damage (05.03, 05.04): save rolls are rolled together and used from the lowest; an attack that gets through damages the one model it was allocated to, so damage beyond that model’s wounds is lost; Feel No Pain is rolled for each wound (24.12).
 
-Allocation order (05.03): one group for the models with the same W, Sv and InSv, one for each CHARACTER model, CHARACTER groups last. The rules let the defender pick the order of the groups; the calculator uses the order that loses the fewest models on average: Canis Rex, Sir Hekhtur.
+Allocation order (05.03): one group for the models with the same W, Sv and InSv, one for each CHARACTER model, CHARACTER groups last. The defender declares the order at each Save Rolls step; the calculator uses one order for every weapon: the one that loses the fewest models on average over the same 10,000 games: Canis Rex, Sir Hekhtur.
+
+Range (04.02): every weapon is taken to be in range of the target; a rule that changes range counts only through half range.
 
 ######## strats {"folded":true} · DAMAGE Stratagems
 EXPAND ALL
