@@ -1,0 +1,194 @@
+[
+ {
+  "key": "ec324aa2728334c2",
+  "where": "4-megas-and-a-destrier · Knight Destrier · Damaged: 1-6 Wounds Remaining",
+  "verdict": "ok",
+  "why": "Knight Destrier datasheet (GW faction pack, Wahapedia, NR): W 18 and \"DAMAGED: 1-6 WOUNDS REMAINING ... While this model has 1-6 wounds remaining\". Sanctuary does not change W, so damaged '1-6' with W 18 matches."
+ },
+ {
+  "key": "39bf8d0ae789149d",
+  "where": "6-bigs · Knight Destrier · Thundercharge",
+  "verdict": "ok",
+  "why": "\"If this model is equipped with a thundershock spear and a bellatus reaper chainsword\"; both 6-bigs Destriers (x2) carry \"Questoris heavy stubber, Titanic feet, Chastiser gatling cannon, Frag bombard\" (NR p2), so the condition is never met."
+ },
+ {
+  "key": "09187654343d9487",
+  "where": "4-megas-and-a-destrier · Knight Destrier · Ram Jets",
+  "verdict": "ok",
+  "why": "\"Each time this unit is selected to make a Normal or Advance move\": these are move types of Move Units in the Movement phase (core 09.02 \"The active player moves their units\"), so your Movement phase only."
+ },
+ {
+  "key": "553078c211266651",
+  "where": "4-megas-and-a-destrier · Knight Destrier",
+  "verdict": "ok",
+  "why": "\"subtract 4 from this model's Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll\" while it \"has 1-6 wounds remaining\": all attacks, -1 to hit, -4 OC."
+ },
+ {
+  "key": "22049e22285d487e",
+  "where": "6-bigs · Knight Errant · Aggressive Assault",
+  "verdict": "ok",
+  "why": "\"Each time this model makes a ranged attack that targets the closest eligible target\": the Errant is TITANIC, and Fire Overwatch targets \"One friendly unengaged unit (excluding TITANIC units)\", so its only ranged attacks are in your Shooting phase."
+ },
+ {
+  "key": "4f8b13c4ff04d0b8",
+  "where": "4-megas-and-a-destrier · Knight Crusader · Damaged: 1-9 Wounds Remaining",
+  "verdict": "ok",
+  "why": "Knight Crusader W 26 (Wahapedia, NR) and the faction-pack errata for the Crusader's Damaged section: \"While this model has 1-9 wounds remaining, subtract 5 ...\". Band 1-9 matches."
+ },
+ {
+  "key": "203203e2c13a6697",
+  "where": "6-bigs · Knight Errant · Errant’s Duty",
+  "verdict": "ok",
+  "why": "NR prints \"Errant's Duty (Bondsman)\" and the Bondsman rule says these abilities are \"tagged with the word 'Bondsman'\"."
+ },
+ {
+  "key": "d01de612f43a9388",
+  "where": "6-bigs · Knight Errant",
+  "verdict": "ok",
+  "why": "\"Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll\": ranged, condition and +1 to hit are all the rule's own words."
+ },
+ {
+  "key": "1a26079f75de4fea",
+  "where": "4-megas-and-a-destrier · Knight Crusader",
+  "verdict": "ok",
+  "why": "\"While this model has 1-9 wounds remaining, subtract 5 from this model's Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll\": all attacks, -1 to hit, -5 OC."
+ },
+ {
+  "key": "6f0f37a9d252f3f2",
+  "where": "6-bigs · Knight Errant",
+  "verdict": "ok",
+  "why": "Bondsman: \"select one friendly Armiger model within 12\\\" ... that Armiger model is affected\", so needs ARMIGER is right; \"ranged weapons equipped by that model have the [ASSAULT] ability\" is the note (the Advance re-roll is left out as it is not about attacks). No ARMIGER is in 6-bigs, so it shows nowhere."
+ },
+ {
+  "key": "d5c89db173cbdd7c",
+  "where": "4-megas-and-a-destrier · Canis Rex · Chainbreaker",
+  "verdict": "ok",
+  "why": "\"Once per battle, at the start of any phase\": the turn has \"a series of five phases\" (core 07.02) and nothing limits it to your turn, so all five phases, either turn."
+ },
+ {
+  "key": "67ca3c3988b858cf",
+  "where": "4-megas-and-a-destrier · Canis Rex · Legendary Freeblade",
+  "verdict": "ok",
+  "why": "\"Once per turn, when you target this model with a stratagem\" names no phase; stratagems can target Canis Rex in every phase of either turn, matching Direct the Slaughter / Will of the Hive Mind elsewhere in the app."
+ },
+ {
+  "key": "ef91d5483875f51f",
+  "where": "4-megas-and-a-destrier · Canis Rex",
+  "verdict": "ok",
+  "why": "NR Models box: \"1x Canis Rex  Freedom's Hand, Las-impulsor, Questoris multi-laser\" and \"1x Sir Hekhtur  Close combat weapon, Hekhtur's pistol\"; gear lines and the 7 weapon rows match exactly."
+ },
+ {
+  "key": "5fddcb4a9888632d",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Lancer · Damaged: 1-10 Wounds Remaining",
+  "verdict": "ok",
+  "why": "Cerastus Knight Lancer datasheet (GW faction pack): W 28 and \"DAMAGED: 1-10 WOUNDS REMAINING ... While this model has 1-10 wounds remaining\". Matches."
+ },
+ {
+  "key": "2d6cc53bc36df415",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos · Bringer of Justice",
+  "verdict": "ok",
+  "why": "Bringer of Justice is listed under ENHANCEMENTS of the Freeblade Company detachment (GW faction pack) and in the Atrapos' NR Options (\"Bringer of Justice, Atrapos lascutter, ...\")."
+ },
+ {
+  "key": "d3b9869162736fd5",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos · Atrapos’ Duty",
+  "verdict": "ok",
+  "why": "NR prints \"Atrapos' Duty (Bondsman)\" and the GW datasheet \"Atrapos' Duty (Bondsman)\"."
+ },
+ {
+  "key": "737ce6747e17b50f",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos",
+  "verdict": "ok",
+  "why": "\"Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.\" The footnote says exactly that, for all attacks."
+ },
+ {
+  "key": "bdd8fab4c3dc1ba5",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos",
+  "verdict": "ok",
+  "why": "\"each time the bearer makes a melee attack, add 1 to the Hit roll\": NR did not apply it (WS stays 3+), so it belongs in a footnote. The +2 A is already in NR's melee profiles (A 8/14 vs datasheet 6/12, marked \"(Bringer of Justice)\") and the footnote rightly does not add it again."
+ },
+ {
+  "key": "3830064c49c192ab",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Lancer",
+  "verdict": "ok",
+  "why": "\"While this model has 1-10 wounds remaining, subtract 5 from this model's Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll\": all attacks, -1 to hit, -5 OC."
+ },
+ {
+  "key": "154a7b544ff9860a",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos",
+  "verdict": "ok",
+  "why": "Bondsman affects only \"one friendly Armiger model\", hence needs ARMIGER; \"each time that model makes an attack that targets a TITANIC or TOWERING model, you can re-roll the Hit roll and you can re-roll the Wound roll\" is the condition and note. No ARMIGER is in this list."
+ },
+ {
+  "key": "78b093d9bd9f8239",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Atrapos",
+  "verdict": "ok",
+  "why": "NR: \"1x Cerastus Knight Atrapos  Bringer of Justice, Atrapos lascutter, Graviton singularity cannon\" (the enhancement is not a weapon). The lascutter appears twice because NR prints a \"(ranged)\" and a \"(melee)\" pair of profiles; they sit in separate tables."
+ },
+ {
+  "key": "c00547bcfd3eeaf6",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Lancer · Lancer’s Duty",
+  "verdict": "ok",
+  "why": "NR prints \"Lancer's Duty (Bondsman)\" and the GW datasheet \"Lancer's Duty (Bondsman)\"."
+ },
+ {
+  "key": "9ca1e425b3759c2c",
+  "where": "4-megas-and-a-destrier · Cerastus Knight Lancer",
+  "verdict": "ok",
+  "why": "NR: \"1x Cerastus Knight Lancer  Cerastus shock lance\", with one ranged profile and \"strike\"/\"sweep\" melee profiles. That matches the 3 weapon rows and the single gear line."
+ },
+ {
+  "key": "205a258b3aec0b66",
+  "where": "4-megas-and-a-destrier · Knight Crusader · Punishing Salvoes",
+  "verdict": "ok",
+  "why": "\"In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons ... have [SUSTAINED HITS 1]\": it is set in your Movement phase and its ranged-weapon effect is used in your Shooting phase. A TITANIC model can't Fire Overwatch, and the effect ends with your turn."
+ },
+ {
+  "key": "edc9c7db81dd2899",
+  "where": "4-megas-and-a-destrier · Knight Crusader · Hunter’s Eye",
+  "verdict": "ok",
+  "why": "Hunter's Eye is under ENHANCEMENTS of the Freeblade Company detachment (GW faction pack) and in the Crusader's NR Options (\"Hunter's Eye, Avenger gatling cannon, ...\")."
+ },
+ {
+  "key": "e406e6ca486638e7",
+  "where": "4-megas-and-a-destrier · Knight Crusader · Crusader’s Duty",
+  "verdict": "ok",
+  "why": "NR prints \"Crusader's Duty (Bondsman)\" and Wahapedia \"Crusader's Duty (Bondsman)\"."
+ },
+ {
+  "key": "be93871fc0767d47",
+  "where": "4-megas-and-a-destrier · Knight Crusader",
+  "verdict": "ok",
+  "why": "\"In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability\": the condition, the duration and the note are the rule's own words."
+ },
+ {
+  "key": "d4c030c1ab8b5696",
+  "where": "4-megas-and-a-destrier · Knight Crusader",
+  "verdict": "ok",
+  "why": "Bondsman affects only \"one friendly Armiger model\", hence needs ARMIGER; \"each time that model makes a ranged attack, add 1 to the Hit roll\" means ranged attacks get +1 to hit. No ARMIGER is in this list. Hunter's Eye is not repeated in any Crusader footnote."
+ },
+ {
+  "key": "9e5577b93d8cb30e",
+  "where": "4-megas-and-a-destrier · Knight Crusader",
+  "verdict": "ok",
+  "why": "NR: \"1x Knight Crusader  Hunter's Eye, Avenger gatling cannon, Heavy flamer, Titanic feet, Stormspear rocket pod, Meltagun, Rapid-fire battlecannon and Questoris heavy stubber\". All 7 weapons are on the one model line."
+ },
+ {
+  "key": "1a4f47d32132aa44",
+  "where": "4-megas-and-a-destrier · Knight Destrier · Thundercharge",
+  "verdict": "ok",
+  "why": "Same Thundercharge condition (\"equipped with a thundershock spear and a bellatus reaper chainsword\"); this Destrier has \"Sanctuary, Questoris heavy stubber, Titanic feet, Chastiser gatling cannon, Frag bombard\" (NR p6), so it does not apply."
+ },
+ {
+  "key": "9d37f11a82967acf",
+  "where": "4-megas-and-a-destrier · Knight Destrier · Sanctuary",
+  "verdict": "ok",
+  "why": "Sanctuary is under ENHANCEMENTS of the Freeblade Company detachment (GW faction pack) and in the Destrier's NR Options (\"Sanctuary, Questoris heavy stubber, ...\")."
+ },
+ {
+  "key": "a96e8ae613d047c8",
+  "where": "4-megas-and-a-destrier · Knight Destrier · Sanctuary",
+  "verdict": "ok",
+  "why": "\"The bearer has a 5+ invulnerable save.\" NR did not apply it (InSv still \"5+*\", ranged only), so the When targeted line is needed, and it says what the rule says."
+ }
+]

@@ -179,6 +179,12 @@
   "at": "2026-10-17",
   "why": "EFFECT “Your unit makes an ingress move” plus RESTRICTIONS “You cannot use this stratagem during the first battle round.” Same; “in strategic reserves” is from the TARGET."
  },
+ "09187654343d9487": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "\"Each time this unit is selected to make a Normal or Advance move\": these are move types of Move Units in the Movement phase (core 09.02 \"The active player moves their units\"), so your Movement phase only."
+ },
  "097963d6d6fc9dd7": {
   "verdict": "ok",
   "by": "review:m1-units (its fix)",
@@ -419,6 +425,12 @@
   "at": "2026-10-17",
   "why": "Source (New Recruit, shooty.txt line 234): the table heading reads \"Throttlerokkit Shokka Engine Description\" above Turbo Engine, Pulse Jet and Shokk Attack Engine. Full Throttle (line 232) calls them \"one Throttlerokkit Shokka Engine ability\". \"Throttlerokkit Shokka Engine\" is that heading, copied with nothing added; dropping \"pick one\" removed the app's own summary. models \"1× Wazdakka Gutsmek\" matches \"1x Wazdakka Gutsmek\" (line 219)."
  },
+ "154a7b544ff9860a": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "Bondsman affects only \"one friendly Armiger model\", hence needs ARMIGER; \"each time that model makes an attack that targets a TITANIC or TOWERING model, you can re-roll the Hit roll and you can re-roll the Wound roll\" is the condition and note. No ARMIGER is in this list."
+ },
  "15647cceeef35d29": {
   "verdict": "ok",
   "by": "review:m5-new",
@@ -509,6 +521,18 @@
   "at": "2026-10-16",
   "why": "\"In your Command phase, you can use this ability.\""
  },
+ "1a26079f75de4fea": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "\"While this model has 1-9 wounds remaining, subtract 5 from this model's Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll\": all attacks, -1 to hit, -5 OC."
+ },
+ "1a4f47d32132aa44": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "Same Thundercharge condition (\"equipped with a thundershock spear and a bellatus reaper chainsword\"); this Destrier has \"Sanctuary, Questoris heavy stubber, Titanic feet, Chastiser gatling cannon, Frag bombard\" (NR p6), so it does not apply."
+ },
  "1ad5c7528c89ec8c": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -593,11 +617,23 @@
   "at": "2026-10-17",
   "why": "“IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability” has no phase limit. The regain part names “the start of your Command phase”. All five phases."
  },
+ "203203e2c13a6697": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "NR prints \"Errant's Duty (Bondsman)\" and the Bondsman rule says these abilities are \"tagged with the word 'Bondsman'\"."
+ },
  "2048454965bf9873": {
   "verdict": "ok",
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "Verbatim Wahapedia FAQ in 15.01 (\"…has an original cost of 2CP\"); consistent with 15.01 \"increase the CP cost of that stratagem by the amount shown\"."
+ },
+ "205a258b3aec0b66": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "\"In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons ... have [SUSTAINED HITS 1]\": it is set in your Movement phase and its ranged-weapon effect is used in your Shooting phase. A TITANIC model can't Fire Overwatch, and the effect ends with your turn."
  },
  "209541d50efb7eec": {
   "verdict": "ok",
@@ -658,6 +694,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "\"lead\", \"leading\", \"support\" only occur in the Leader/Attached Units texts; the printed heading is \"LEADER 24.22 / SUPPORT 24.34\" (Support: \"See Attached Units (19)\") with this same text."
+ },
+ "22049e22285d487e": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "\"Each time this model makes a ranged attack that targets the closest eligible target\": the Errant is TITANIC, and Fire Overwatch targets \"One friendly unengaged unit (excluding TITANIC units)\", so its only ranged attacks are in your Shooting phase."
  },
  "231379af293895c5": {
   "verdict": "ok",
@@ -881,6 +923,12 @@
   "at": "2026-10-16",
   "why": "NR: Nodebeast and 10 Neurogaunts each \"Chitinous claws and teeth\"; \"(x11)\"."
  },
+ "2d6cc53bc36df415": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "Bringer of Justice is listed under ENHANCEMENTS of the Freeblade Company detachment (GW faction pack) and in the Atrapos' NR Options (\"Bringer of Justice, Atrapos lascutter, ...\")."
+ },
  "2d74d112cbdff773": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -1079,6 +1127,12 @@
   "at": "2026-10-16",
   "why": "Only the Knights' unit rule; 24.35."
  },
+ "3830064c49c192ab": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "\"While this model has 1-10 wounds remaining, subtract 5 from this model's Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll\": all attacks, -1 to hit, -5 OC."
+ },
  "3888f74cfb047c1b": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -1114,6 +1168,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "TARGET \"One friendly SMOKE unit\": all:[Smoke]; only the Chaos Rhino has SMOKE."
+ },
+ "39bf8d0ae789149d": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "\"If this model is equipped with a thundershock spear and a bellatus reaper chainsword\"; both 6-bigs Destriers (x2) carry \"Questoris heavy stubber, Titanic feet, Chastiser gatling cannon, Frag bombard\" (NR p2), so the condition is never met."
  },
  "39fff212d6fde57a": {
   "verdict": "ok",
@@ -1589,6 +1649,12 @@
   "at": "2026-10-18",
   "why": "WHEN: “a friendly attached ORKS INFANTRY unit”. TARGET: “That ORKS INFANTRY unit”. Orks + Infantry + attached are copied from these. The trigger “becomes battle-shocked” is not a keyword filter. text: same as Wahapedia word for word."
  },
+ "4f8b13c4ff04d0b8": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "Knight Crusader W 26 (Wahapedia, NR) and the faction-pack errata for the Crusader's Damaged section: \"While this model has 1-9 wounds remaining, subtract 5 ...\". Band 1-9 matches."
+ },
  "4f973a90aa659288": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -1678,6 +1744,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "Fight phase, either turn."
+ },
+ "553078c211266651": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "\"subtract 4 from this model's Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll\" while it \"has 1-6 wounds remaining\": all attacks, -1 to hit, -4 OC."
  },
  "553e59d3f8c0ffff": {
   "verdict": "ok",
@@ -1847,6 +1919,12 @@
   "at": "2026-10-16",
   "why": "Possessed Lord is the Slaughterbound's ability (\"this model\")."
  },
+ "5fddcb4a9888632d": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "Cerastus Knight Lancer datasheet (GW faction pack): W 28 and \"DAMAGED: 1-10 WOUNDS REMAINING ... While this model has 1-10 wounds remaining\". Matches."
+ },
  "6000c888c6a680fb": {
   "verdict": "ok",
   "by": "review:m1-strats",
@@ -2002,6 +2080,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "\"a THOUSAND SONS PSYKER model\": Magnus, Daemon Prince, the Sorcerer unit (Sorcerer, Aspiring Sorcerer) and the Terminator Sorcerer unit (Sorcerer, Scarab Occult Sorcerer). Non-PSYKER units correctly excluded."
+ },
+ "67ca3c3988b858cf": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "\"Once per turn, when you target this model with a stratagem\" names no phase; stratagems can target Canis Rex in every phase of either turn, matching Direct the Slaughter / Will of the Hive Mind elsewhere in the app."
  },
  "67cf14adbd92d038": {
   "verdict": "ok",
@@ -2159,6 +2243,12 @@
   "at": "2026-10-16",
   "why": "\"attached\", \"bodyguard\": both defined in 19.01."
  },
+ "6f0f37a9d252f3f2": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "Bondsman: \"select one friendly Armiger model within 12\\\" ... that Armiger model is affected\", so needs ARMIGER is right; \"ranged weapons equipped by that model have the [ASSAULT] ability\" is the note (the Advance re-roll is left out as it is not about attacks). No ARMIGER is in 6-bigs, so it shows nowhere."
+ },
  "6f38c6d20a694e2b": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -2194,6 +2284,12 @@
   "by": "review:m5-recheck",
   "at": "2026-10-20",
   "why": "NR Categories (l.152): 'Big Mek, Character, Explosives, Faction: Orks, Infantry, Painboy*, Nobz*, *from combined unit'. The starred keywords are exactly Painboy and Nobz. Explosives is the Big Mek's own keyword (not starred), so leaving it out of the note is right. data.js kw matches."
+ },
+ "737ce6747e17b50f": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "\"Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.\" The footnote says exactly that, for all attacks."
  },
  "73f50943dc167694": {
   "verdict": "ok",
@@ -2272,6 +2368,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "Lacerator A7 (6 +1 Relentless Rage) +3 = 10; \"until the end of the phase ... those weapons have the [Devastating Wounds] ability\"; once per battle, start of the Fight phase."
+ },
+ "78b093d9bd9f8239": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "NR: \"1x Cerastus Knight Atrapos  Bringer of Justice, Atrapos lascutter, Graviton singularity cannon\" (the enhancement is not a weapon). The lascutter appears twice because NR prints a \"(ranged)\" and a \"(melee)\" pair of profiles; they sit in separate tables."
  },
  "794b5642eaf9c0e1": {
   "verdict": "ok",
@@ -3113,6 +3215,12 @@
   "at": "2026-10-16",
   "why": "Labels: ANTI-MONSTER/VEHICLE 3+/4+, ANTI-INFANTRY 4+, ANTI-CHARACTER 2+, [ANTI-X Y+]; every [ANTI-…] is 24.03."
  },
+ "9ca1e425b3759c2c": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "NR: \"1x Cerastus Knight Lancer  Cerastus shock lance\", with one ranged profile and \"strike\"/\"sweep\" melee profiles. That matches the 3 weapon rows and the single gear line."
+ },
  "9ce616cf6ff02da6": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -3131,6 +3239,12 @@
   "at": "2026-10-20",
   "why": "NR prints 'Nazdreg's Know-wotz - Nazdreg' (melee.txt l.60); BSData profile is on the Nazdreg model. Models match NR: 1x Nazdreg, 5x Meganob w/ Twin Killsaw (roster (5) Meganobz led by Nazdreg)."
  },
+ "9d37f11a82967acf": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "Sanctuary is under ENHANCEMENTS of the Freeblade Company detachment (GW faction pack) and in the Destrier's NR Options (\"Sanctuary, Questoris heavy stubber, ...\")."
+ },
  "9d3e763483cd94d7": {
   "verdict": "ok",
   "by": "review:r9-we-nids",
@@ -3148,6 +3262,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "Shooting is \"your Shooting phase\" only."
+ },
+ "9e5577b93d8cb30e": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "NR: \"1x Knight Crusader  Hunter's Eye, Avenger gatling cannon, Heavy flamer, Titanic feet, Stormspear rocket pod, Meltagun, Rapid-fire battlecannon and Questoris heavy stubber\". All 7 weapons are on the one model line."
  },
  "9ec3263fdd7638ad": {
   "verdict": "ok",
@@ -3430,6 +3550,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "New Recruit prints Turbo Engine under the heading “Throttlerokkit Shokka Engine”, and Full Throttle says “select one Throttlerokkit Shokka Engine ability”; “pick one” is a shorter “select one”. The when and how long stay on the Full Throttle row. Model line is NR’s “1x Wazdakka Gutsmek”."
+ },
+ "a96e8ae613d047c8": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "\"The bearer has a 5+ invulnerable save.\" NR did not apply it (InSv still \"5+*\", ranged only), so the When targeted line is needed, and it says what the rule says."
  },
  "aa1d9e706e2b8571": {
   "verdict": "ok",
@@ -3899,6 +4025,12 @@
   "at": "2026-10-17",
   "why": "EFFECT: “before making the charge roll, you must select one of the following modes”. Leap to Defend: “enemy units that made a charge move this phase and are within the maximum distance”. Into the Fray: “if the result is greater than 6 (after modifiers), change it to 6 … any enemy units that are within 6\" of your unit and within the maximum distance”. The gist drops when the mode is chosen, both “within the maximum distance” conditions, “(after modifiers)”, and “of your unit”."
  },
+ "bdd8fab4c3dc1ba5": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "\"each time the bearer makes a melee attack, add 1 to the Hit roll\": NR did not apply it (WS stays 3+), so it belongs in a footnote. The +2 A is already in NR's melee profiles (A 8/14 vs datasheet 6/12, marked \"(Bringer of Justice)\") and the footnote rightly does not add it again."
+ },
  "bde59aa38a35bbe0": {
   "verdict": "ok",
   "by": "review:literal",
@@ -3910,6 +4042,12 @@
   "by": "review:code2",
   "at": "2026-10-17",
   "why": "I tested perBattle on every ability, army rule, detachment rule, enhancement and stratagem in data.js:\n- Bomb Squig \"Once per turn, twice per battle, per unit\" → n 2, per unit.\n- Makari \"Once per battle, per army\" and Archslaughterer, Umbralefic Crystal, Morgog’s Finkin’ Cap, Mysterious Guardian \"(Once per battle, per army)\" → n 1, army.\n- Protean Purpose \"(Once per battle, per unit)\" → n 1, per unit.\n- Possessed Lord, Twisted Sorceries, Resilient Organism (\"this model\"), Fix Dat Armour Up and Boss’ Ammo Runt (\"Once per battle, per unit\") → n 1, per unit.\n- Every \"once per battle round\" text gives null: Direct the Slaughter, Will of the Hive Mind, Intimidating Motivation, Keep Huntin’ and Blessings of Khorne \"activate each Blessing of Khorne once per battle round\".\n- Insane Bravery \"cannot use this stratagem more than once per battle\" → 1.\nPer-turn and per-phase limits are never counted. Note for the caller: the armyWide=true argument overrides an explicit \"per unit\" (perBattle(Higher Imperatives, true).army is true). That is where the screenPregame problem below comes from; with the argument omitted, perBattle itself reads \"per unit\" correctly."
+ },
+ "be93871fc0767d47": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "\"In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability\": the condition, the duration and the note are the rule's own words."
  },
  "bf2ab0717b0ea4a6": {
   "verdict": "ok",
@@ -3928,6 +4066,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "TARGET: \"One KHORNE BERZERKERS unit\": Khârn's and the Lord's units."
+ },
+ "c00547bcfd3eeaf6": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "NR prints \"Lancer's Duty (Bondsman)\" and the GW datasheet \"Lancer's Duty (Bondsman)\"."
  },
  "c05b371f66dc040d": {
   "verdict": "ok",
@@ -4229,6 +4373,12 @@
   "at": "2026-10-16",
   "why": "WHEN: \"Your Shooting phase.\""
  },
+ "d01de612f43a9388": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "\"Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll\": ranged, condition and +1 to hit are all the rule's own words."
+ },
  "d068c1b7d947105c": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -4295,6 +4445,12 @@
   "at": "2026-10-17",
   "why": "“In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase.” Selection is your Command phase; the abilities it can give take effect in your Command phase (Shokk Attack Engine: “In your Command phase”), your Movement phase (Pulse Jet: “In your Movement phase”; Turbo Engine: advance/fall-back moves, which core 09.02 lists as Movement-phase move types) and your Charge phase (Turbo Engine: “eligible to declare a charge”). None of them can act in the opponent’s turn, so “your” is right."
  },
+ "d3b9869162736fd5": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "NR prints \"Atrapos' Duty (Bondsman)\" and the GW datasheet \"Atrapos' Duty (Bondsman)\"."
+ },
  "d474d22b48703968": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -4313,6 +4469,12 @@
   "at": "2026-10-16",
   "why": "Only \"Hunter\" (the 04.01.03 text and Hunter profiles). Names \"Hunter of Souls\"/\"Hunter's Eye\" exist but are never passed to ruleFor."
  },
+ "d4c030c1ab8b5696": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "Bondsman affects only \"one friendly Armiger model\", hence needs ARMIGER; \"each time that model makes a ranged attack, add 1 to the Hit roll\" means ranged attacks get +1 to hit. No ARMIGER is in this list. Hunter's Eye is not repeated in any Crusader footnote."
+ },
  "d4e6a256331925ee": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -4330,6 +4492,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "\"In your opponent’s Movement phase\" (8\" per errata)."
+ },
+ "d5c89db173cbdd7c": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "\"Once per battle, at the start of any phase\": the turn has \"a series of five phases\" (core 07.02) and nothing limits it to your turn, so all five phases, either turn."
  },
  "d5e516bd6b7c5143": {
   "verdict": "ok",
@@ -4601,6 +4769,12 @@
   "at": "2026-10-17",
   "why": "The new summary, “Every model can shoot with one or more of its guns”, is 04.01 (“You can select one or more ranged weapons that model has”). It is used only when every per-model sentence is the plain ‘Can shoot with one or both / one or more of these’ form. The rest is list facts: which models line carries which weapons, the one-model carrier names, ×N counts, and leader vs bodyguard lines (19.04). The one rule problem sits in useSentence (see that item)."
  },
+ "e406e6ca486638e7": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "NR prints \"Crusader's Duty (Bondsman)\" and Wahapedia \"Crusader's Duty (Bondsman)\"."
+ },
  "e452822fb991fb7b": {
   "verdict": "ok",
   "by": "review:r9-pubstomper",
@@ -4817,6 +4991,12 @@
   "at": "2026-10-16",
   "why": "TARGET is \"That WORLD EATERS CHARACTER unit\" (excluding EPIC HERO); faction keyword missing. No change in who is offered in this army."
  },
+ "ec324aa2728334c2": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "Knight Destrier datasheet (GW faction pack, Wahapedia, NR): W 18 and \"DAMAGED: 1-6 WOUNDS REMAINING ... While this model has 1-6 wounds remaining\". Sanctuary does not change W, so damaged '1-6' with W 18 matches."
+ },
  "eccdbfa7a2b9d825": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -4828,6 +5008,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "NR labels it \"Transport Capacity\"."
+ },
+ "edc9c7db81dd2899": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "Hunter's Eye is under ENHANCEMENTS of the Freeblade Company detachment (GW faction pack) and in the Crusader's NR Options (\"Hunter's Eye, Avenger gatling cannon, ...\")."
  },
  "edccbd255a16e5a2": {
   "verdict": "ok",
@@ -4876,6 +5062,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "“If this unit made a charge move this turn, this model’s melee attacks have +3 A, +2 S.” Melee attacks are made in the Fight phase, and a charge move can happen in either turn (your Charge phase, or Heroic Intervention in theirs: “Resolve a charge with your unit”), so Fight in either turn."
+ },
+ "ef91d5483875f51f": {
+  "verdict": "ok",
+  "by": "review:r9-knights",
+  "at": "2026-10-21",
+  "why": "NR Models box: \"1x Canis Rex  Freedom's Hand, Las-impulsor, Questoris multi-laser\" and \"1x Sir Hekhtur  Close combat weapon, Hekhtur's pistol\"; gear lines and the 7 weapon rows match exactly."
  },
  "efe6a85ddeb9c4a5": {
   "verdict": "ok",
