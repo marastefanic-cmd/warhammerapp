@@ -1,0 +1,26 @@
+[
+ {
+  "key": "84253725a7395636",
+  "where": "shooty · Wazdakka Gutsmek · Pulse Jet",
+  "verdict": "ok",
+  "why": "The Pulse Jet Move (Orks army rule term), AFTER MOVING: “Until the start of your next turn, attacks that target your unit have -1 to hit rolls.” The def says exactly that, and “After a pulse jet move” is the only way to get it, since only this ability (picked with Full Throttle) allows that move. It is the line signed off as calcDef in r20, now also on Wazdakka’s When targeted line. Tapping it opens the Pulse Jet popup, whose “pulse jet move” opens the term."
+ },
+ {
+  "key": "0368964a0015629c",
+  "where": "shooty · Wazdakka Gutsmek · Pulse Jet",
+  "verdict": "ok",
+  "why": "Same numbers as signed off in r20: hitMinus 1 for attacks that target him, lasts 'round' (“until the start of your next turn”). Still no defAlways, so the Damage tab offers it unticked, which fits “can make a pulse jet move” and the Full Throttle pick."
+ },
+ {
+  "key": "2da6edf6801de86c",
+  "where": "Runt Swarm · Grot Shields",
+  "verdict": "ok",
+  "why": "WHEN “Your opponent’s Shooting phase, when an enemy unit targets a friendly ORKS INFANTRY unit (excluding GRETCHIN units)” = “their Shooting phase”. TARGET “One friendly GRETCHIN unit within 3\" of that ORKS INFANTRY unit” = “with a friendly GRETCHIN unit within 3\"”. EFFECT “When a hit roll for that enemy unit’s ranged attacks that target that ORKS unit results in a hit, if a model in your GRETCHIN unit is on the battlefield, end the attack sequence for that attack and your GRETCHIN unit suffers 1 mortal wound” = the line, shorter, adding nothing. The [TORRENT] FAQ is quoted as the stratagem’s note. It is offered to exactly the right units. In ooga-booga (Runt Swarm) that is Ghazghkull, Nazdreg + Meganobz, Big Mek + Painboy + Nobz, and Big Mek in Mega Armour + Meganobz. Zodgrod + Gretchin and Gretchin are excluded as GRETCHIN units. Shooty and melee have GRETCHIN units but not Runt Swarm, so no line."
+ },
+ {
+  "key": "c5828570851bcace",
+  "where": "defenceItems",
+  "verdict": "ok",
+  "why": "opts.shields adds a stratagem with a shield def for a unit its protects matches, when another unit of the list matches its by (a GRETCHIN unit; the stratagem is the list’s own). Only the datasheet passes it (app.html ~4659). The Damage tab calls defenceItems without it (dmFnpOf ~1966, the target’s lines ~2254) and keeps its own shield path, so nothing is counted twice; defences() is unused. With ph null the phase filter is skipped, as for the other datasheet lines."
+ }
+]

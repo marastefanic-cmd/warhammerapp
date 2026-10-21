@@ -1,0 +1,76 @@
+[
+ {
+  "army": "shooty",
+  "kind": "ability-def",
+  "where": "shooty · Wazdakka Gutsmek · Pulse Jet",
+  "judgement": {
+   "def": "After a pulse jet move: attacks that target it have -1 to hit rolls, until the start of your next turn"
+  },
+  "source": {
+   "ability": "Pulse Jet",
+   "text": "In your Movement phase, when this unit is **selected to move**, if this unit is **unengaged**, this unit can make a **pulse jet move**."
+  },
+  "key": "84253725a7395636"
+ },
+ {
+  "army": "shooty",
+  "kind": "ability-calc",
+  "where": "shooty · Wazdakka Gutsmek · Pulse Jet",
+  "judgement": {
+   "def": "After a pulse jet move: attacks that target it have -1 to hit rolls, until the start of your next turn",
+   "defCalc": {
+    "hitMinus": 1
+   },
+   "lasts": "round",
+   "models": [
+    "1× Wazdakka Gutsmek"
+   ]
+  },
+  "source": {
+   "ability": "Pulse Jet",
+   "text": "In your Movement phase, when this unit is **selected to move**, if this unit is **unengaged**, this unit can make a **pulse jet move**."
+  },
+  "key": "0368964a0015629c"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-shield",
+  "where": "Runt Swarm · Grot Shields",
+  "judgement": {
+   "shield": {
+    "protects": {
+     "all": [
+      "Faction: Orks",
+      "Infantry"
+     ],
+     "none": [
+      "Gretchin"
+     ]
+    },
+    "by": {
+     "all": [
+      "Gretchin"
+     ]
+    },
+    "def": "their Shooting phase, with a friendly GRETCHIN unit within 3\": each hit roll of the attacking unit’s ranged attacks that results in a hit ends that attack, and that GRETCHIN unit suffers 1 mortal wound, while a model of it is on the battlefield. Wahapedia FAQ: “When using the Grot Shields stratagem, are hits by [TORRENT] weapons considered ’hit rolls that result in a hit’?” “No.”"
+   }
+  },
+  "source": {
+   "stratagem": "Grot Shields",
+   "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **ORKS INFANTRY** unit (excluding **GRETCHIN** units).\nTARGET: One friendly **GRETCHIN** unit within 3\" of that **ORKS INFANTRY** unit.\nEFFECT: When a **hit roll** for that enemy unit’s ranged attacks that target that **ORKS** unit results in a hit, if a model in your **GRETCHIN** unit is on the battlefield, end the attack sequence for that attack and your **GRETCHIN** unit suffers 1 **mortal wound**."
+  },
+  "key": "2da6edf6801de86c"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "defenceItems",
+  "judgement": {
+   "code": "function defenceItems(u, ph, opts){\n  const out = [];\n  // a Feel No Pain only one model has (Robotic Bodyguard: the Datasmith, not the robots) is said by that ability's own line\n  for(const r of u.rules){ const m = /^feel no pain (\\d\\+)/i.exec(r); if(m && !u.abilities.some(ab => ab.def && ab.def.includes('Feel No Pain ' + m[1]))) out.push({ t:'Feel No Pain ' + m[1], a:'rule', v:r }); }\n  for(const r of unitDetRules(u)) if(r.def && !out.some(x => x.t === r.def)) out.push({ t:r.def, a:'rule', v:r.name });   // e.g. Knights of Legend: FNP 6+\n  for(const ab of u.abilities) if(ab.def && !naReason(ab) && !(ph && ab.defPh && !ab.defPh.includes(ph))) out.push({ t:ab.def, a:'ability', v:abilityKey(ab) });\n  for(const s of allStratagems()) if(s.def && eligible(s).includes(u) && !(ph && !s.phases.includes(ph))) out.push({ t:s.cp + 'CP ' + s.name + ': ' + s.def, a:'strat', v:s.id });\n  if(opts && opts.shields) for(const s of allStratagems()) if(s.shield && s.shield.def && matches(s.shield.protects, u) && army().units.some(x => x !== u && matches(s.shield.by, x)) && !(ph && !s.phases.includes(ph)))\n    out.push({ t:s.cp + 'CP ' + s.name + ': ' + s.shield.def, a:'strat', v:s.id });\n  if(u.rules.includes('Waaagh!')) out.push({ t:'Riled up: 5+ INV', a:'rule', v:'Waaagh!' });\n  return out;\n}"
+  },
+  "source": {
+   "implements": "what protects a unit when targeted: Feel No Pain, defensive abilities, detachment rules, stratagems usable in that phase, the Orks riled-up 5+ invulnerable save; on the datasheet (opts.shields) also a stratagem another unit of the list takes the hits with (Grot Shields: a GRETCHIN unit for an ORKS INFANTRY unit, excluding GRETCHIN)"
+  },
+  "key": "c5828570851bcace"
+ }
+]
