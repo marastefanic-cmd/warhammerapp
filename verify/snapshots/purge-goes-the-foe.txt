@@ -5,6 +5,7 @@ Cohort Cybernetica · Eradication Cohort · Disposition: Purge the Foe
 
 Overview
 Damage calculator
+Game tracker
 Opponent
 None yet: pick their list
 Units
@@ -41,7 +42,7 @@ POINTS
 2000 / 2000 · Strike Force
 ARMY RULES
 Doctrina Imperatives
-Command
+Start of the battle round
 
 At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.
 
@@ -57,6 +58,8 @@ DEPLOYMENT AND PRE-BATTLE ABILITIES
 SCOUTS
 Skitarii Rangers Scouts 6"
 START OF THE BATTLE ROUND
+START OF THE BATTLE
+Battle Protocols · Cybernetica Datasmith
 EVERY ROUND
 Doctrina Imperatives · Adeptus Mechanicus army rule
 USES PER BATTLE
@@ -605,9 +608,11 @@ Supreme Commander
 
 If this model is in your army, it must be your Warlord.
 
+Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”
+
 Thulia Ghuld
 Icon of War
-Any phase
+Your Command · Their Move · Shoot · Your Charge · Fight
 
 Your Command / Their Movement / Shooting (either turn) / Your Charge / Fight (either turn)
 
@@ -616,6 +621,8 @@ Fanatical Devotion: You can select one friendly SKITARII or THULIA GHULD unit wi
 Adaptive Tactics: You can select one friendly SKITARII or THULIA GHULD unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Fell Back.
 
 The Fires of Mars: You can select one friendly SKITARII or THULIA GHULD unit within 6" of this model; until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for that unit.
+
+FAQ (Faction Pack 1.4): “When I select one of Thulia Ghuld’s Icon of War abilities, when do I select the unit that ability affects?” “When you have selected the Icon of War ability you want to use.”
 
 Mechanicus Bodyguard
 
@@ -631,6 +638,8 @@ At the start of your Shooting phase, select one enemy VEHICLE unit within 12" of
 Supreme Commander
 
 If this model is in your army, it must be your Warlord.
+
+Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”
 
 Rod of the War Forge
 Your Command
@@ -780,7 +789,7 @@ While this model has 1-4 wounds remaining, each time this model makes an attack,
 Adeptus Mechanicus · Purge the Foe
 ARMY RULES
 Doctrina Imperatives
-Command
+Start of the battle round
 
 At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.
 
@@ -970,22 +979,24 @@ YOUR
 Belisarius Cawl
 SHOOT
 FIGHT
-THEY ATTACK
+BOTH
 THEIR
 Wazdakka Gutsmek
-
 Me shooty yer’ booty · T8 · Sv 3+ · 4+ InSv · W10
-
+THEY ATTACK
 2.8
 of 10 wounds lost
 destroyed in 4% of games
+
+≈8 pts destroyed
+
 Nothing ticked: the datasheets as printed
-2 NOT COUNTED
+3 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
 
-Effects are on this step.
+Effects are on the damage these attacks deal.
 
 HALF RANGE
 [RAPID FIRE], [MELTA]
@@ -994,8 +1005,8 @@ the target is farther than 9" (every weapon is taken to be in range)
 NOW
 Within 9"
 bonus for Solar atomiser
++13% wiped
 +1.8
-+13% WIPED
 RANGED WEAPONS
 Belisarius Cawl
 Solar atomiser
@@ -1012,24 +1023,38 @@ AP
 D
 D6
 MELTA 3
+−4% wiped
 −2.8
 WOUNDS IF UNTICKED
-−4% WIPED
 SITUATION AND RULES
 both sides
 Target has the benefit of cover
 THEIRS
 if it applies
+−1% wiped
 −0.5
 WOUNDS
-−1% WIPED
+Pulse Jet
+After a pulse jet move: attacks that target it have -1 to hit rolls, until the start of your next turn · in these numbers: -1 to their hit rolls
+THEIRS
+if it applies
+−1% wiped
+−0.5
+WOUNDS
 Canticles of the Omnissiah
 If he has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll
 YOURS
 if it applies
++2% wiped
 +0.5
 WOUNDS
-+2% WIPED
+BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit
+ticks Doctrina Imperatives (+1 AP, with Conqueror or Both)
+YOURS
+if it holds
+no change: nothing it reaches counts in this step
+0
+ALL ▾
 Riled up
 THEIRS
 if it holds
@@ -1044,36 +1069,48 @@ YOURS
 if it applies
 no change: already hits on 2+
 0
+Doctrina Imperatives
+The Imperative active for your army this battle round: Protector: [HEAVY], BS improved by 1 · Conqueror: [ASSAULT] · +1 AP with Conqueror if this unit is BATTLELINE or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit · +1 AP
+YOURS
+if it applies
+0
+Protector
+0
+Conqueror
+0
+Both
+counted by you: only with Omnicogitator, Transcendent Cogitation or The Fires of Mars (Thulia Ghuld)
+0
 Target is engaged
 -1 to hit; no [BLAST]
 YOURS
 if it applies
+−1% wiped
 −0.5
 WOUNDS
-−1% WIPED
 Close-quarters shooting at a unit it is engaged with
 -1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
 YOURS
 if it applies
+−3% wiped
 −1.1
 WOUNDS
-−3% WIPED
 Fire Overwatch (snap shooting)
 the target within 24" (15.09): hits only on an unmodified 6, never critical; no hit re-rolls
 YOURS
 if it applies
+−4% wiped
 −2.3
 WOUNDS
-−4% WIPED
 STRATAGEMS
 both sides, with their CP
 1CP Smokescreen
 Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover… · for a unit that is not fully visible to the attacking models because of one or more models in your SMOKE unit, tick “Target has the benefit of cover” instead
 THEIRS
 if used
+−1% wiped
 −0.5
 WOUNDS
-−1% WIPED
 NOT FOR THIS PAIR, BY THE RULES (5) · YOURS TO COUNT ANYWAY
 
 1CP Servo-driven Charge
@@ -1083,16 +1120,19 @@ NO CHANGE
 
 Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (yours, Fight phase only) · 1CP Epic Challenge, 2CP Counteroffensive (theirs, Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (2)
+NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
+Lone Operative (24.24)
+THEIRS
+not visible to enemy models unless they are within 12" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12" · the calculator takes it that these attacks can target it
 1CP Command Re-roll
 YOURS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Command Re-roll
 THEIRS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 OTHER MODIFIERS
 Hit roll
 −
@@ -1140,26 +1180,27 @@ YOUR
 Belisarius Cawl
 SHOOT
 FIGHT
-THEY ATTACK
+BOTH
 THEIR
 Wazdakka Gutsmek
-
 Me shooty yer’ booty · T8 · Sv 3+ · 4+ InSv · W10
-
+THEY ATTACK
 3.6
 of 10 wounds lost
 destroyed in <1% of games
+
+≈1 pts destroyed
+
 Charged this turn
 ×
-6 NOT COUNTED
+7 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
 
-Effects are over the whole turn: their models destroyed by its end, and your own losses.
+Effects are on the damage these attacks deal.
 
-Fight → Fight back · the charge is taken to succeed (no charge roll)
-TAKE FIGHT OUT
+The charge is taken to succeed (no charge roll).
 
 MELEE WEAPONS
 Belisarius Cawl
@@ -1206,12 +1247,25 @@ EXTRA ATTACKS
 WOUNDS IF UNTICKED
 SITUATION AND RULES
 both sides
+Pulse Jet
+After a pulse jet move: attacks that target it have -1 to hit rolls, until the start of your next turn · in these numbers: -1 to their hit rolls
+THEIRS
+if it applies
+−0.7
+WOUNDS
 Canticles of the Omnissiah
 If he has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll
 YOURS
 if it applies
 +0.7
 WOUNDS
+BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit
+ticks Doctrina Imperatives (+1 AP, with Conqueror or Both)
+YOURS
+if it holds
+no change: nothing it reaches counts in this step
+0
+ALL ▾
 Charged this turn
 YOURS
 said to hold
@@ -1225,6 +1279,20 @@ no change: their own InSv 4+ is better
 RULES IT SWITCHES ON
 Riled up (Waaagh!)
 0
+Doctrina Imperatives
+The Imperative active for your army this battle round: Conqueror: WS improved by 1 · +1 AP with Conqueror if this unit is BATTLELINE or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit · Protector: nothing for its melee attacks · +1 AP
+YOURS
+if it applies
+no change: Protector: nothing for these attacks
+0
+ALL ▾
+Protector
+0
+Conqueror
++0.1
+Both
+counted by you: only with Omnicogitator, Transcendent Cogitation or The Fires of Mars (Thulia Ghuld)
++0.1
 STRATAGEMS
 both sides, with their CP
 1CP Servo-driven Charge
@@ -1240,13 +1308,16 @@ THEIRS
 Shooting phase only
 NO CHANGE
 
-NOT COUNTED BY THE CALCULATOR (6)
+NOT COUNTED BY THE CALCULATOR (7)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
+Lone Operative (24.24)
+THEIRS
+not visible to enemy models unless they are within 12" of this unit · the calculator takes it that these attacks can target it
 1CP Command Re-roll
 YOURS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 YOURS
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
@@ -1255,7 +1326,379 @@ YOURS
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
 1CP Command Re-roll
 THEIRS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+1CP Epic Challenge
+THEIRS
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+THEIRS
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+OTHER MODIFIERS
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP better
+−
+0
++
+Damage
+−
+0
++
+Attacks
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+Every weapon has
+Lethal
+Sustained 1
+Dev. wounds
+Target InSv
+−
+none
++
+Target Feel No Pain
+−
+none
++
+
+######## damage both · DAMAGE Damage
+YOUR
+Belisarius Cawl
+SHOOT
+FIGHT
+BOTH
+THEIR
+Wazdakka Gutsmek
+Me shooty yer’ booty · T8 · Sv 3+ · 4+ InSv · W10
+THEY ATTACK
+6.0
+of 10 wounds lost
+destroyed in 20% of games
+
+Shoot 2.81 · Fight 3.22 · the charge is taken to succeed
+
+≈39 pts destroyed
+
+Charged this turn
+×
+10 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+SHOOT → CHARGE → FIGHT · BIGGEST FIRST
+
+Effects are on the total: their models destroyed by the end of the fight, the shooting’s choices and the fight’s alike.
+
+The charge is taken to succeed (no charge roll); “Charged this turn” is ticked for the fight.
+
+THE SHOOTING
+FIRST
+HALF RANGE
+[RAPID FIRE], [MELTA]
+No half-range bonus
+the target is farther than 9" (every weapon is taken to be in range)
+NOW
+Within 9"
+bonus for Solar atomiser
++24% wiped
++1.1
+RANGED WEAPONS
+Belisarius Cawl
+Solar atomiser
+RNG
+18"
+A
+3
+BS
+2+
+S
+14
+AP
+-4
+D
+D6
+MELTA 3
+−19% wiped
+−2.4
+WOUNDS IF UNTICKED
+SITUATION AND RULES
+both sides
+Pulse Jet
+After a pulse jet move: attacks that target it have -1 to hit rolls, until the start of your next turn · in these numbers: -1 to their hit rolls
+THEIRS
+if it applies
+−8% wiped
+−1
+WOUNDS
+Canticles of the Omnissiah
+If he has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll
+YOURS
+if it applies
++10% wiped
++0.9
+WOUNDS
+Target has the benefit of cover
+THEIRS
+if it applies
+−4% wiped
+−0.4
+WOUNDS
+BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit
+ticks Doctrina Imperatives (+1 AP, with Conqueror or Both)
+YOURS
+if it holds
+no change: nothing it reaches counts in this step
+0
+ALL ▾
+Riled up
+in the fight: riled up (Waaagh!)
+THEIRS
+if it holds
+no change: their own InSv 4+ is better
+0
+RULES IT SWITCHES ON
+Riled up (Waaagh!)
+0
+Riled up (Waaagh!) (fight)
+0
+Plunging Fire
+BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
+YOURS
+if it applies
+no change: already hits on 2+
+0
+Doctrina Imperatives
+The Imperative active for your army this battle round: Protector: [HEAVY], BS improved by 1 · Conqueror: [ASSAULT] · +1 AP with Conqueror if this unit is BATTLELINE or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit · +1 AP
+YOURS
+if it applies
+0
+Protector
+0
+Conqueror
+≈0
+Both
+counted by you: only with Omnicogitator, Transcendent Cogitation or The Fires of Mars (Thulia Ghuld)
+≈0
+Target is engaged
+-1 to hit; no [BLAST]
+YOURS
+if it applies
+−4% wiped
+−0.4
+WOUNDS
+Close-quarters shooting at a unit it is engaged with
+-1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
+YOURS
+if it applies
+−9% wiped
+−0.9
+WOUNDS
+STRATAGEMS
+both sides, with their CP
+1CP Smokescreen
+Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover… · for a unit that is not fully visible to the attacking models because of one or more models in your SMOKE unit, tick “Target has the benefit of cover” instead
+THEIRS
+if used
+−4% wiped
+−0.4
+WOUNDS
+NOT FOR THIS PAIR, BY THE RULES (5) · YOURS TO COUNT ANYWAY
+
+1CP Servo-driven Charge
+YOURS
+Fight phase only
+NO CHANGE
+
+Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (yours, Fight phase only) · 1CP Epic Challenge, 2CP Counteroffensive (theirs, Fight phase only)
+
+NOT COUNTED BY THE CALCULATOR (3)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+Lone Operative (24.24)
+THEIRS
+not visible to enemy models unless they are within 12" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12" · the calculator takes it that these attacks can target it
+1CP Command Re-roll
+YOURS
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+1CP Command Re-roll
+THEIRS
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+OTHER MODIFIERS
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP better
+−
+0
++
+Damage
+−
+0
++
+Attacks
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+Every weapon has
+Lethal
+Sustained 1
+Dev. wounds
+Target InSv
+−
+none
++
+Target Feel No Pain
+−
+none
++
+THE FIGHT
+THEN, AGAINST WHAT THE SHOOTING LEFT
+MELEE WEAPONS
+Belisarius Cawl
+
+Against what the shooting left of the target, in each game.
+
+Arc Scourge
+A
+4
+WS
+2+
+S
+5
+AP
+-1
+D
+1
+ANTI-VEHICLE 4+, DEVASTATING WOUNDS, EXTRA ATTACKS
+−9% wiped
+−1.4
+WOUNDS IF UNTICKED
+Cawl’s Omnissian axe
+A
+4
+WS
+2+
+S
+8
+AP
+-2
+D
+2
+−11% wiped
+−1.4
+WOUNDS IF UNTICKED
+Mechadendrite hive
+A
+2D6
+WS
+3+
+S
+4
+AP
+0
+D
+1
+EXTRA ATTACKS
+−1% wiped
+−0.2
+WOUNDS IF UNTICKED
+SITUATION AND RULES
+both sides
+Pulse Jet
+After a pulse jet move: attacks that target it have -1 to hit rolls, until the start of your next turn · in these numbers: -1 to their hit rolls
+THEIRS
+if it applies
+−4% wiped
+−0.6
+WOUNDS
+Canticles of the Omnissiah
+If he has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll
+YOURS
+if it applies
++6% wiped
++0.5
+WOUNDS
+Charged this turn
+YOURS
+holds: Both takes the charge as made (no charge roll)
+no change: no rule here needs it
+0
+Doctrina Imperatives
+The Imperative active for your army this battle round: Conqueror: WS improved by 1 · +1 AP with Conqueror if this unit is BATTLELINE or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit · Protector: nothing for its melee attacks · +1 AP
+YOURS
+if it applies
+no change: Protector: nothing for these attacks
+0
+ALL ▾
+Protector
+0
+Conqueror
+≈0
+Both
+counted by you: only with Omnicogitator, Transcendent Cogitation or The Fires of Mars (Thulia Ghuld)
+≈0
+STRATAGEMS
+both sides, with their CP
+1CP Servo-driven Charge
+Fight phase: [LANCE]
+YOURS
+if used
++6% wiped
++0.6
+WOUNDS
+NOT FOR THIS PAIR, BY THE RULES (1) · YOURS TO COUNT ANYWAY
+
+1CP Smokescreen
+THEIRS
+Shooting phase only
+NO CHANGE
+
+NOT COUNTED BY THE CALCULATOR (7)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+Lone Operative (24.24)
+THEIRS
+not visible to enemy models unless they are within 12" of this unit · the calculator takes it that these attacks can target it
+1CP Command Re-roll
+YOURS
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+1CP Epic Challenge
+YOURS
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+YOURS
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+1CP Command Re-roll
+THEIRS
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 THEIRS
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
@@ -1321,7 +1764,7 @@ Your Command Cybernetica Datasmith + Kastelan Robots, Ironstrider Ballistarii �
 1
 CP
 Machine Spirit Resurgent
-Until the start of your next Command phase, your unit’s attacks can re-roll the hit roll, and the wound roll as well if it is Below Half-strength.
+Your unit, if below its Starting Strength: until the start of your next Command phase, its attacks can re-roll the hit roll, and the wound roll as well if it is Below Half-strength.
 Your Command Cybernetica Datasmith + Kastelan Robots, Ironstrider Ballistarii ×2, Onager Dunecrawler, Skorpius Disintegrator ×2
 1
 CP
@@ -1415,7 +1858,7 @@ Their Fight Any unit
 1
 CP
 Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 Any phase Any unit
 1
 CP
@@ -1926,8 +2369,10 @@ Supreme Commander
 
 If this model is in your army, it must be your Warlord.
 
+Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”
+
 Rules
-Doctrina Imperatives, Blast
+Doctrina Imperatives
 Stratagems
 
 ERADICATION COHORT Unrelenting Aggression, Servo-driven Charge
@@ -2025,7 +2470,7 @@ STRATAGEMS · ERADICATION COHORT · FIGHT PHASE
 1CP [LANCE] (Servo-driven Charge)
 ABILITIES
 Icon of War
-Any phase
+Your Command · Their Move · Shoot · Your Charge · Fight
 
 Your Command / Their Movement / Shooting (either turn) / Your Charge / Fight (either turn)
 
@@ -2034,6 +2479,8 @@ Fanatical Devotion: You can select one friendly SKITARII or THULIA GHULD unit wi
 Adaptive Tactics: You can select one friendly SKITARII or THULIA GHULD unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Fell Back.
 
 The Fires of Mars: You can select one friendly SKITARII or THULIA GHULD unit within 6" of this model; until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for that unit.
+
+FAQ (Faction Pack 1.4): “When I select one of Thulia Ghuld’s Icon of War abilities, when do I select the unit that ability affects?” “When you have selected the Icon of War ability you want to use.”
 
 Mechanicus Bodyguard
 
@@ -2049,6 +2496,8 @@ At the start of your Shooting phase, select one enemy VEHICLE unit within 12" of
 Supreme Commander
 
 If this model is in your army, it must be your Warlord.
+
+Wahapedia core rules, 25.04 Fill Your Army Roster: “Some units have a rule on their datasheet stating that they must be your WARLORD. If you want to include one or more of these units in your army, you must select one of them to be your WARLORD.”
 
 Rod of the War Forge
 Your Command
@@ -2939,6 +3388,1158 @@ VEHICLE
 Ask about this unit
 ‹ Onager Dunecrawler
 
+######## game · SKORPIUS DISINTEGRATOR Game tracker
+THIS GAME
+NEW GAME
+Purge goes the Foe
+your list
+Me shooty yer’ booty
+your opponent’s list
+CP
+−
+0
++
+−
+0
++
+VP
+−
+0
++
+−
+0
++
+COMMAND POINTS
+08.02 GAIN CORE CP
+
+Both players gain 1 Command Point (CP).
+
+EVENT COMPANION · GENERATING COMMAND POINTS
+
+Excluding Core CP, each player can gain a maximum of 1CP per battle round (including he CP gained when a player discards an active Secondary Mission card).
+
+THIS LIST
+
+Broad Spectrum Data-tether · Ironstrider Ballistarii ×2: “Each time you select this unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.”
+
+Broad spectrum data-tether · Onager Dunecrawler: “The bearer loses the SMOKE keyword, but each time you target the bearer with a Stratagem, roll one D6: on a 5+, you gain 1CP.”
+
+Broad spectrum data-tether · Skorpius Disintegrator ×2: “Each time you select the bearer as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.”
+
+THEIR LIST
+
+Da Boss · Orks army rule: “At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.”
+
+CHOICES THIS GAME
+Doctrina Imperatives · Adeptus Mechanicus army rule
+
+At the start of the battle round · Battle round 1
+
+PROTECTOR IMPERATIVE
+CONQUEROR IMPERATIVE
+Canticles of the Omnissiah · Belisarius Cawl
+
+At the start of your Command phase · Until the start of your next Command phase
+
+INVOCATION OF MACHINE VENGEANCE
+MANTRA OF DISCIPLINE
+SHROUDPSALM (AURA)
+Rod of the War Forge · Thulia Ghuld
+
+In your Command phase · Until the start of your next Command phase
+
+FANATICAL DEVOTION
+ADAPTIVE TACTICS
+THE FIRES OF MARS
+Battle Protocols · Cybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator
+
+In your Command phase · Until another is picked (from the start of the battle)
+
+PROTECTOR PROTOCOL
+CONQUEROR PROTOCOL
+AEGIS PROTOCOL
+AEGIS PROTOCOL
+
+Aegis Protocol: Add 1 to the Toughness characteristic of KASTELAN ROBOT models in that unit.
+
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The first turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+START OF THE BATTLE
+
+Battle Protocols · Cybernetica Datasmith + Kastelan Robots
+Picked: Aegis Protocol
+
+START OF BATTLE ROUND 07.01
+
+Doctrina Imperatives · Adeptus Mechanicus army rule
+
+START OF COMMAND PHASE 08.01
+
+Canticles of the Omnissiah · Belisarius Cawl
+Self-repair Mechanisms · Belisarius Cawl
+
+GAIN CORE CP 08.02
+
+Both players gain 1 Command Point (CP).
+
+BATTLE-SHOCK 08.03
+
+1
+CP
+Insane Bravery
+The battle-shock roll you are about to make for your unit is automatically successful.
+
+COMMAND ABILITIES 08.04
+
+Rod of the War Forge · Thulia Ghuld
+Omnissiah’s Blessing · Tech-Priest Enginseer
+1
+CP
+Motive Imperative
+Until the start of your next Command phase, your unit has +3" Move and +1 to Advance and Charge rolls.
+1
+CP
+Auto-divinatory Targeting
+Until the start of your next Command phase, your unit’s ranged weapons have BS 3+ and [IGNORES COVER], but can only target units within range of the selected objective marker.
+1
+CP
+Machine Spirit Resurgent
+Your unit, if below its Starting Strength: until the start of your next Command phase, its attacks can re-roll the hit roll, and the wound roll as well if it is Below Half-strength.
+1
+CP
+Machine Superiority
+Until the end of the turn, your unit is eligible to shoot after Falling Back, and you can ignore any or all modifiers to its characteristics and to its rolls and tests (not saving throws).
+1
+CP
+Transcendent Cogitation
+Until the start of your next Command phase, the Conqueror and Protector Imperatives are both active for your unit.
+1
+CP
+Benevolence of the Omnissiah
+Until the start of your next Command phase, your unit has Feel No Pain 6+ (5+ against mortal wounds).
+
+END OF COMMAND PHASE 08.05
+
+Objective Scouted · Skitarii Rangers ×2
+ANY PHASE
+2
+Icon of War · Thulia Ghuld
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+ME SHOOTY YER’ BOOTY IN THIS PHASE
+
+START OF BATTLE ROUND 07.01
+
+Da Boss · Orks army rule
+
+START OF COMMAND PHASE 08.01
+
+War Cry · Orks army rule
+ANY PHASE
+1
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: MOVEMENT PHASE ›
+BEFORE THE BATTLE
+
+Warhammer Event Mission Sequence · GW Warhammer Event Companion 1.3
+
+1 Muster Armies
+
+Muster armies as described in the Warhammer 40,000 app, with the following exception: once they have mustered their army, a player selects one Force Disposition card available to them and records that on their roster.
+
+2 Determine Mission
+
+Each player finds their opponent’s Force Disposition symbol on their Force Disposition card. The Primary Mission that is listed below that symbol is that player’s Primary Mission, which describes how to score VP.
+
+3 Determine a Layout
+
+Each combination of Primary Missions has three recommended layouts, labelled A, B and C. These can be found in the Warhammer 40,000 app and at the end of this companion. As directed by the Warhammer Event organiser, the players either use the layout specified or randomly determine which of these layouts to use.
+
+4 Create the Battlefield
+
+Missions are played on rectangular battlefields 44" by 60" in size. Players set up the terrain areas as shown in the selected layout, then set up terrain features on those terrain areas as shown in the selected layout.
+
+5 Determine Attacker and Defender
+
+Players look at the selected layout and agree which edges of the battlefield the players have set up correspond with the Attacker’s and Defender’s battlefield edges labelled on the card.
+
+Roll off: the winner decides who will be the Attacker and who will be the Defender.
+
+6 Select Secondary Missions
+
+Secondary Mission cards detail additional ways to score VP. Players now secretly note down whether they will use Tactical or Fixed Secondary Missions. If using Fixed Missions, they also note down which two Fixed Missions they will use (see below). Players then reveal these decisions.
+
+7 Declare Battle Formations
+Strategic reserves
+
+Players secretly note down, in order:
+
+Which of their units will start the battle embarked within which TRANSPORTS.
+Which of their units will start the battle in strategic reserves.
+
+Players then reveal these decisions.
+
+20.01 PLACING UNITS IN STRATEGIC RESERVES
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+THIS LIST
+
+App note, not rules text: Purge goes the Foe: points limit 2000 pts (Strike Force); 50% of it is 1000 pts.
+
+THEIR LIST
+
+App note, not rules text: Me shooty yer’ booty: points limit 2000 pts (Strike Force); 50% of it is 1000 pts.
+
+Deep Strike: Wazdakka Gutsmek 200 pts, Deffkoptas 85 pts (285 pts)
+
+8 Deploy Armies
+
+Players take it in turns to set up their units (excluding those in strategic reserves) one at a time, wholly within their deployment zone, starting with the Defender.
+
+If you set up a TITANIC unit when it is your turn to set up a unit, skip your next turn to set up a unit.
+
+Once you have finished setting up your units, if your opponent has any units that have not been set up, they set up those units.
+
+9 Redeploy Units
+
+Some rules let you redeploy certain units after both armies are deployed. Unless otherwise stated, you resolve those rules in this step. Players alternate resolving any such rules, starting with the Attacker. Units placed in strategic reserves in this step do not count towards the combined points value of your strategic reserves units.
+
+10 Determine First Turn
+Who goes first
+
+Roll off: the winner takes the first turn.
+
+FIRST TURN
+PURGE GOES THE FOE
+ME SHOOTY YER’ BOOTY
+11 Resolve Pre-battle Rules
+Scouts
+
+Players alternate resolving any pre-battle rules units from their army may have, starting with the player who will take the first turn.
+
+THIS LIST
+Scouts: Skitarii Rangers ×2 Scouts 6"
+
+12 Begin the Battle
+
+The first battle round begins.
+
+13 End the Battle
+
+The battle ends after five battle rounds have been completed. Even if you have no models remaining in your army at the start of your turn, players continue to play out their turns until the battle ends.
+
+14 Determine Victor
+
+Each player scores 10VP if their army is painted to a Battle Ready standard. At the end of the battle, the player with the most VP is the victor. If the players are tied, the battle is a draw.
+
+######## game mid-game · GAME Game tracker
+THIS GAME
+NEW GAME
+Purge goes the Foe
+your list
+Me shooty yer’ booty
+your opponent’s list
+CP
+−
+3
++
+−
+2
++
+VP
+−
+15
++
+−
+10
++
+COMMAND POINTS
+08.02 GAIN CORE CP
+
+Both players gain 1 Command Point (CP).
+
+EVENT COMPANION · GENERATING COMMAND POINTS
+
+Excluding Core CP, each player can gain a maximum of 1CP per battle round (including he CP gained when a player discards an active Secondary Mission card).
+
+THIS LIST
+
+Broad Spectrum Data-tether · Ironstrider Ballistarii ×2: “Each time you select this unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.”
+
+Broad spectrum data-tether · Onager Dunecrawler: “The bearer loses the SMOKE keyword, but each time you target the bearer with a Stratagem, roll one D6: on a 5+, you gain 1CP.”
+
+Broad spectrum data-tether · Skorpius Disintegrator ×2: “Each time you select the bearer as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.”
+
+THEIR LIST
+
+Da Boss · Orks army rule: “At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.”
+
+CHOICES THIS GAME
+Doctrina Imperatives · Adeptus Mechanicus army rule
+
+At the start of the battle round · Battle round 2
+
+PROTECTOR IMPERATIVE
+CONQUEROR IMPERATIVE
+PROTECTOR IMPERATIVE
+Ranged weapons equipped by models in this unit have the [HEAVY] ability.
+Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.
+Each time a melee attack targets this unit, if this unit has the BATTLELINE keyword and/or it is within 6" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units, subtract 1 from the Hit roll.
+Canticles of the Omnissiah · Belisarius Cawl
+
+At the start of your Command phase · Until the start of your next Command phase
+
+INVOCATION OF MACHINE VENGEANCE
+MANTRA OF DISCIPLINE
+SHROUDPSALM (AURA)
+INVOCATION OF MACHINE VENGEANCE
+
+Invocation of Machine Vengeance: At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Machine Vengeance target. Each time a model in a friendly ADEPTUS MECHANICUS unit makes an attack that targets your Machine Vengeance target, you can re-roll the Hit roll.
+
+THEIR UNIT
+WAZDAKKA GUTSMEK
+BIG MEK · DREADHERDER
+BIG MEK · CYBORK BOOSTA
+BIG MEK · SUPA-GLOWY FING
+WARBOSS
+MEK + TANKBUSTAS
+MEK + FLASH GITZ
+GRETCHIN
+DEFFKOPTAS
+KILLA KANS
+Rod of the War Forge · Thulia Ghuld
+
+In your Command phase · Until the start of your next Command phase
+
+FANATICAL DEVOTION
+ADAPTIVE TACTICS
+THE FIRES OF MARS
+FANATICAL DEVOTION
+
+Fanatical Devotion: You can select one friendly SKITARII or THULIA GHULD unit within 6" of this model; until the start of your next Command phase, that unit is eligible to shoot and declare a charge in a turn in which it Advanced.
+
+Battle Protocols · Cybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator
+
+In your Command phase · Until another is picked
+
+PROTECTOR PROTOCOL
+CONQUEROR PROTOCOL
+AEGIS PROTOCOL
+PROTECTOR PROTOCOL
+
+Protector Protocol: Add 2 to the Attacks characteristic of ranged weapons equipped by KASTELAN ROBOT models in that unit.
+
+THIS PHASE
+BATTLE ROUND
+‹
+2
+›
+YOUR TURN
+THEIR TURN
+
+The second turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+START OF SHOOTING PHASE 10.01
+
+Secutor of Olympus · Thulia Ghuld
+
+SHOOT 10.02
+
+Elevated Strider · Ironstrider Ballistarii ×2
+1
+CP
+Unshackled Wrath
+Until the end of the phase, your unit’s ranged weapons have [SUSTAINED HITS 1] or [LETHAL HITS], or all of [SUSTAINED HITS 1], [LETHAL HITS] and [HAZARDOUS].
+1
+CP
+Threat-cogitation Targeters
+Until the end of the phase, your unit’s ranged attacks allocated to a MONSTER or VEHICLE model can re-roll the Damage roll.
+1
+CP
+Explosives
+One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
+No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
+ANY PHASE
+2
+Icon of War · Thulia Ghuld
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+ME SHOOTY YER’ BOOTY IN THIS PHASE
+
+START OF SHOOTING PHASE 10.01
+
+1
+CP
+Smokescreen
+Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+
+SHOOT 10.02
+
+Dakka! Dakka! Dakka! · Shoota Boyz detachment rule
+1
+CP
+Gun-crazy Show-offs
+After an enemy unit has shot and hit yours: your unit shoots using normal shooting, but only at that enemy unit.
+ANY PHASE
+1
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: CHARGE PHASE ›
+BEFORE THE BATTLE
+
+######## game round 1 your command · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The first turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+START OF THE BATTLE
+
+Battle Protocols · Cybernetica Datasmith + Kastelan Robots
+Picked: Aegis Protocol
+
+START OF BATTLE ROUND 07.01
+
+Doctrina Imperatives · Adeptus Mechanicus army rule
+
+START OF COMMAND PHASE 08.01
+
+Canticles of the Omnissiah · Belisarius Cawl
+Self-repair Mechanisms · Belisarius Cawl
+
+GAIN CORE CP 08.02
+
+Both players gain 1 Command Point (CP).
+
+BATTLE-SHOCK 08.03
+
+1
+CP
+Insane Bravery
+The battle-shock roll you are about to make for your unit is automatically successful.
+
+COMMAND ABILITIES 08.04
+
+Rod of the War Forge · Thulia Ghuld
+Omnissiah’s Blessing · Tech-Priest Enginseer
+1
+CP
+Motive Imperative
+Until the start of your next Command phase, your unit has +3" Move and +1 to Advance and Charge rolls.
+1
+CP
+Auto-divinatory Targeting
+Until the start of your next Command phase, your unit’s ranged weapons have BS 3+ and [IGNORES COVER], but can only target units within range of the selected objective marker.
+1
+CP
+Machine Spirit Resurgent
+Your unit, if below its Starting Strength: until the start of your next Command phase, its attacks can re-roll the hit roll, and the wound roll as well if it is Below Half-strength.
+1
+CP
+Machine Superiority
+Until the end of the turn, your unit is eligible to shoot after Falling Back, and you can ignore any or all modifiers to its characteristics and to its rolls and tests (not saving throws).
+1
+CP
+Transcendent Cogitation
+Until the start of your next Command phase, the Conqueror and Protector Imperatives are both active for your unit.
+1
+CP
+Benevolence of the Omnissiah
+Until the start of your next Command phase, your unit has Feel No Pain 6+ (5+ against mortal wounds).
+
+END OF COMMAND PHASE 08.05
+
+Objective Scouted · Skitarii Rangers ×2
+ANY PHASE
+2
+Icon of War · Thulia Ghuld
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+ME SHOOTY YER’ BOOTY IN THIS PHASE
+
+START OF BATTLE ROUND 07.01
+
+Da Boss · Orks army rule
+
+START OF COMMAND PHASE 08.01
+
+War Cry · Orks army rule
+ANY PHASE
+1
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: MOVEMENT PHASE ›
+
+######## game round 1 your movement · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The first turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+MOVE UNITS 09.02
+
+Elevated Strider · Ironstrider Ballistarii ×2
+Scuttling Walker · Onager Dunecrawler
+1
+CP
+Unrelenting Aggression
+Until the end of the turn, your unit is eligible to shoot after Falling Back (a SKITARII unit: to shoot and declare a charge).
+ANY PHASE
+1
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+ME SHOOTY YER’ BOOTY IN THIS PHASE
+
+MOVE UNITS 09.02
+
+Dakka! Dakka! Dakka! · Shoota Boyz detachment rule
+Even More Dakka · Big Mek Dakkarig ×2
+Spiteful Power Trip · Killa Kans
+
+END OF MOVEMENT PHASE 09.03
+
+1
+CP
+Rapid Ingress
+Your unit in strategic reserves makes an ingress move (not in the first battle round).
+1
+CP
+Fire Overwatch
+Your unit shoots using snap shooting.
+ANY PHASE
+1
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: SHOOTING PHASE ›
+
+######## game round 1 your shooting · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The first turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+START OF SHOOTING PHASE 10.01
+
+Secutor of Olympus · Thulia Ghuld
+
+SHOOT 10.02
+
+Elevated Strider · Ironstrider Ballistarii ×2
+1
+CP
+Unshackled Wrath
+Until the end of the phase, your unit’s ranged weapons have [SUSTAINED HITS 1] or [LETHAL HITS], or all of [SUSTAINED HITS 1], [LETHAL HITS] and [HAZARDOUS].
+1
+CP
+Threat-cogitation Targeters
+Until the end of the phase, your unit’s ranged attacks allocated to a MONSTER or VEHICLE model can re-roll the Damage roll.
+1
+CP
+Explosives
+One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
+No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
+ANY PHASE
+2
+Icon of War · Thulia Ghuld
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+ME SHOOTY YER’ BOOTY IN THIS PHASE
+
+START OF SHOOTING PHASE 10.01
+
+1
+CP
+Smokescreen
+Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+
+SHOOT 10.02
+
+Dakka! Dakka! Dakka! · Shoota Boyz detachment rule
+1
+CP
+Gun-crazy Show-offs
+After an enemy unit has shot and hit yours: your unit shoots using normal shooting, but only at that enemy unit.
+ANY PHASE
+1
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: CHARGE PHASE ›
+
+######## game round 1 your charge · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The first turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+CHARGE 11.02
+
+1
+CP
+Crushing Impact
+After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+1
+CP
+Precision Onslaught
+When your unit ends a Charge move: one D6 for each of its models within Engagement Range of one enemy unit; 1 mortal wound to that unit for each 4+.
+No unit in this list can use it (needs SICARIAN)
+ANY PHASE
+2
+Icon of War · Thulia Ghuld
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+ME SHOOTY YER’ BOOTY IN THIS PHASE
+
+END OF CHARGE PHASE 11.03
+
+1
+CP
+Heroic Intervention
+Your unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+ANY PHASE
+1
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: FIGHT PHASE ›
+
+######## game round 1 your fight · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The first turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
+
+1
+CP
+Servo-driven Charge
+Until the end of the phase, your unit’s melee weapons have [LANCE].
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+ANY PHASE
+2
+Icon of War · Thulia Ghuld
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+ME SHOOTY YER’ BOOTY IN THIS PHASE
+
+PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
+
+Try Dat Button! · Dread Mob detachment rule
+Might is Right · Warboss
+Clever Know-wotz · Mek + Tankbustas ×2, Mek + Flash Gitz
+Spiteful Power Trip · Killa Kans
+1
+CP
+Crazed Rampage
+Model in your unit destroyed, unit not selected to fight this phase: roll one D6; on a 4+ it stays until your unit has fought or the phase ends…
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2
+CP
+Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+
+END OF FIGHT PHASE 12.09
+
+Aerial Manoover · Deffkoptas
+ANY PHASE
+1
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: THEIR TURN ›
+
+######## game round 1 their command · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The second turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+GAIN CORE CP 08.02
+
+Both players gain 1 Command Point (CP).
+
+ANY PHASE
+1
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+ME SHOOTY YER’ BOOTY IN THIS PHASE
+
+START OF COMMAND PHASE 08.01
+
+War Cry · Orks army rule
+
+BATTLE-SHOCK 08.03
+
+1
+CP
+Insane Bravery
+The battle-shock roll you are about to make for your unit is automatically successful.
+
+COMMAND ABILITIES 08.04
+
+Full Throttle · Wazdakka Gutsmek
+Shokk Attack Engine · Wazdakka Gutsmek Throttlerokkit Shokka Engine
+Fix Dat Armour Up · Big Mek in Mega Armour
+ANY PHASE
+1
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: MOVEMENT PHASE ›
+
+######## game round 1 their movement · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The second turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+END OF MOVEMENT PHASE 09.03
+
+1
+CP
+Rapid Ingress
+Your unit in strategic reserves makes an ingress move (not in the first battle round).
+1
+CP
+Fire Overwatch
+Your unit shoots using snap shooting.
+ANY PHASE
+2
+Icon of War · Thulia Ghuld
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+ME SHOOTY YER’ BOOTY IN THIS PHASE
+
+MOVE UNITS 09.02
+
+Waaagh! · Orks army rule
+Full Throttle · Wazdakka Gutsmek
+Turbo Engine · Wazdakka Gutsmek Throttlerokkit Shokka Engine
+Pulse Jet · Wazdakka Gutsmek Throttlerokkit Shokka Engine
+Intimidating Motivation · Warboss
+Clever Know-wotz · Mek + Tankbustas ×2, Mek + Flash Gitz
+Bomb Squig · Mek + Tankbustas ×2
+1
+CP
+Dread Power
+Your unit is riled up until the start of your next turn.
+1
+CP
+Stomping Juggernaut
+Your unit has MOBILE.
+
+END OF MOVEMENT PHASE 09.03
+
+Thievin’ Scavengers · Gretchin ×3
+ANY PHASE
+1
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: SHOOTING PHASE ›
+
+######## game round 1 their shooting · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The second turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+START OF SHOOTING PHASE 10.01
+
+1
+CP
+Smokescreen
+Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+
+SHOOT 10.02
+
+1
+CP
+Analytic Reprisals
+Your unit shoots as if it were your Shooting phase, but only at that enemy unit (and only if it is an eligible target).
+ANY PHASE
+2
+Icon of War · Thulia Ghuld
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+ME SHOOTY YER’ BOOTY IN THIS PHASE
+
+SHOOT 10.02
+
+Waaagh! · Orks army rule
+Try Dat Button! · Dread Mob detachment rule
+Dakka! Dakka! Dakka! · Shoota Boyz detachment rule
+Wreckin’ and Lootin’ · Wreckas detachment rule
+Even More Dakka · Big Mek Dakkarig ×2
+Blitz Dem Gitz! · Big Mek Dakkarig ×2
+Dreadherder · Big Mek Dakkarig
+Boss’ Ammo Runt · Warboss
+Clever Know-wotz · Mek + Tankbustas ×2, Mek + Flash Gitz
+Rokkit Barrage · Mek + Tankbustas ×2
+Finderz Keeperz · Mek + Flash Gitz
+Deff from Above · Deffkoptas
+Spiteful Power Trip · Killa Kans
+1
+CP
+Kustom Dakka
+Your unit’s ranged attacks have +1 to wound rolls against a unit (excluding MONSTER/VEHICLE units).
+1
+CP
+Glowin’ Dakka
+Your unit’s ranged attacks against a unit within 9" have +1 AP.
+1
+CP
+Never Enough Dakka
+Your unit’s ranged attacks have [SUSTAINED HITS 1].
+1
+CP
+Grab It
+After shooting: can make a normal move of up to 6", ending within range of an objective; not eligible to declare a charge this turn.
+1
+CP
+Explosives
+One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
+1
+CP
+Drive-by Bustin’
+Your unit’s ranged attacks with weapons selected for Firing Deck have +1 to hit rolls.
+No unit in this list can use it (needs TRANSPORT)
+ANY PHASE
+1
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: CHARGE PHASE ›
+
+######## game round 1 their charge · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The second turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+END OF CHARGE PHASE 11.03
+
+1
+CP
+Heroic Intervention
+Your unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+ANY PHASE
+1
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+ME SHOOTY YER’ BOOTY IN THIS PHASE
+
+CHARGE 11.02
+
+Waaagh! · Orks army rule
+Full Throttle · Wazdakka Gutsmek
+Turbo Engine · Wazdakka Gutsmek Throttlerokkit Shokka Engine
+1
+CP
+Stomping Juggernaut
+Your unit has MOBILE.
+1
+CP
+Crushing Impact
+After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+ANY PHASE
+1
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: FIGHT PHASE ›
+
+######## game round 1 their fight · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The second turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
+
+1
+CP
+Servo-driven Charge
+Until the end of the phase, your unit’s melee weapons have [LANCE].
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2
+CP
+Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+ANY PHASE
+2
+Icon of War · Thulia Ghuld
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+ME SHOOTY YER’ BOOTY IN THIS PHASE
+
+PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
+
+Try Dat Button! · Dread Mob detachment rule
+Dreadherder · Big Mek Dakkarig
+Might is Right · Warboss
+Clever Know-wotz · Mek + Tankbustas ×2, Mek + Flash Gitz
+Spiteful Power Trip · Killa Kans
+1
+CP
+Crazed Rampage
+Model in your unit destroyed, unit not selected to fight this phase: roll one D6; on a 4+ it stays until your unit has fought or the phase ends…
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+ANY PHASE
+1
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: BATTLE ROUND 2 ›
+
+######## game round 2 last fight · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+2
+›
+YOUR TURN
+THEIR TURN
+
+The second turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
+
+1
+CP
+Servo-driven Charge
+Until the end of the phase, your unit’s melee weapons have [LANCE].
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2
+CP
+Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+ANY PHASE
+2
+Icon of War · Thulia Ghuld
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+ME SHOOTY YER’ BOOTY IN THIS PHASE
+
+PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
+
+Try Dat Button! · Dread Mob detachment rule
+Dreadherder · Big Mek Dakkarig
+Might is Right · Warboss
+Clever Know-wotz · Mek + Tankbustas ×2, Mek + Flash Gitz
+Spiteful Power Trip · Killa Kans
+1
+CP
+Crazed Rampage
+Model in your unit destroyed, unit not selected to fight this phase: roll one D6; on a 4+ it stays until your unit has fought or the phase ends…
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+ANY PHASE
+1
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: BATTLE ROUND 3 ›
+
 ######## popup ability:purge-goes-the-foe|Battle Protocols|At the start of the battle, if this model is leading a **KASTELAN ROBOTS** unit, that unit enters Aegis Protocols (see below). In your Command phase, if this model is leading a **KASTELAN ROBOTS** unit, you can select one protocol from those listed below for that unit to enter. Once a unit enters a protocol, it remains in that protocol until it enters a different one.
 - **Protector Protocol:** Add 2 to the Attacks characteristic of ranged weapons equipped by **KASTELAN ROBOT** models in that unit.
 - **Conqueror Protocol:** Add 2 to the Attacks characteristic of melee weapons equipped by **KASTELAN ROBOT** models in that unit.
@@ -3181,7 +4782,7 @@ If this ability takes the form [BLAST X], each time you gather attack dice for s
 
 Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
 
-IN THIS ARMYBelisarius Cawl, Thulia Ghuld
+IN THIS ARMYThulia Ghuld
 
 Ask about this rule
 
@@ -3238,21 +4839,6 @@ Below half-strength: number of remaining models in the unit is less than half of
 Some units cannot be at half-strength: If a model’s W characteristic or a unit’s starting strength cannot be evenly divided in half, that model or unit cannot be at half-strength (but can be below half-strength as described above).
 
 Example: A Captain (1 model) is attached to a unit of Intercessors (5 models). This attached unit has a starting strength of 6. If three Intercessors were destroyed, the unit would be at half-strength. If four Intercessors were destroyed, the unit would be below half-strength. If all of the Intercessors were destroyed, the remaining Captain would be below half-strength, despite having his full wounds remaining.
-
-Ask about this rule
-
-######## popup rule:Blast · PURGE GOES THE FOE Purge goes the Foe
-CORE RULE
-
-Blast
-
-Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
-
-If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead.
-
-Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
-
-IN THIS ARMYBelisarius Cawl, Thulia Ghuld
 
 Ask about this rule
 
@@ -3760,6 +5346,16 @@ If that unit is in strategic reserves, you can set up that unit anywhere that is
 If that unit is wholly within your deployment zone, it can make a scout move (see below).
 If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.
 
+24.32 Scout Move:
+
+MAXIMUM DISTANCE: The X" in Scouts X".
+
+ELIGIBLE IF: It is the Resolve Pre-battle Abilities step, and your unit is wholly within your deployment zone.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+AFTER MOVING: Your unit must be more than 8" horizontally from all enemy units.
+
 IN THIS ARMYSkitarii Rangers
 
 Ask about this rule
@@ -3774,6 +5370,16 @@ This ability always takes the form Scouts X". In the Resolve Pre-battle Abilitie
 If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone.
 If that unit is wholly within your deployment zone, it can make a scout move (see below).
 If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.
+
+24.32 Scout Move:
+
+MAXIMUM DISTANCE: The X" in Scouts X".
+
+ELIGIBLE IF: It is the Resolve Pre-battle Abilities step, and your unit is wholly within your deployment zone.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+AFTER MOVING: Your unit must be more than 8" horizontally from all enemy units.
 
 IN THIS ARMYSkitarii Rangers
 

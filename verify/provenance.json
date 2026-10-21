@@ -14,6 +14,12 @@
    "sha256": "e9368c75bf4c9040fa978e7f792080e71d140997def77182dd41e71959185a72"
   },
   {
+   "id": "ec",
+   "label": "GW Warhammer Event Companion 1.3",
+   "file": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.pdf",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
    "id": "pack:world-eaters",
    "label": "GW Faction Pack World Eaters",
    "file": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_world_eaters-rxxj1fzeoh-kfx1cectxb.pdf",
@@ -965,6 +971,38 @@
    "item": "core / rule:Scouts / text",
    "field": "text",
    "text": "- If that unit is embarked within a **DEDICATED TRANSPORT** that is wholly withi",
+   "doc": "core",
+   "where": "PDF p84",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Scouts / text",
+   "field": "text",
+   "text": "**MAXIMUM DISTANCE:** The **X\"** in **Scouts X\"**.",
+   "doc": "core",
+   "where": "PDF p84",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Scouts / text",
+   "field": "text",
+   "text": "**ELIGIBLE IF:** It is the Resolve Pre-battle Abilities step, and your unit is w",
+   "doc": "core",
+   "where": "PDF p84",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Scouts / text",
+   "field": "text",
+   "text": "**EFFECT:** Your unit moves as described in Moving (03).",
+   "doc": "core",
+   "where": "PDF p84",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / rule:Scouts / text",
+   "field": "text",
+   "text": "**AFTER MOVING:** Your unit must be more than 8\" horizontally from all enemy uni",
    "doc": "core",
    "where": "PDF p84",
    "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
@@ -2537,6 +2575,470 @@
    "doc": "wahahtml:core",
    "where": "Wahapedia core rules § 04.01.03 Multiple Weapon Profiles",
    "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+  },
+  {
+   "item": "game:cp 08.02 Gain Core CP",
+   "field": "heading",
+   "text": "08.02 Gain Core CP",
+   "doc": "core",
+   "where": "PDF p30",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "core / game:cp 08.02 Gain Core CP / text",
+   "field": "text",
+   "text": "Both players gain 1 Command Point (CP).",
+   "doc": "core",
+   "where": "PDF p30",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "game:cp Generating Command Points",
+   "field": "heading",
+   "text": "Generating Command Points",
+   "doc": "ec",
+   "where": "PDF p1",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "core / game:cp Generating Command Points / text",
+   "field": "text",
+   "text": "Excluding Core CP, each player can gain a maximum of 1CP per battle round (inclu",
+   "doc": "ec",
+   "where": "PDF p1",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "game:step round 07.01",
+   "field": "heading",
+   "text": "07.01 Start of Battle Round",
+   "doc": "core",
+   "where": "PDF p28",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "game:step round 07.03",
+   "field": "heading",
+   "text": "07.03 End of Battle Round",
+   "doc": "core",
+   "where": "PDF p28",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "game:step command 08.01",
+   "field": "heading",
+   "text": "08.01 Start of Command Phase",
+   "doc": "core",
+   "where": "PDF p30",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "game:step command 08.03",
+   "field": "heading",
+   "text": "08.03 Battle-shock",
+   "doc": "core",
+   "where": "PDF p30",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "game:step command 08.04",
+   "field": "heading",
+   "text": "08.04 Command Abilities",
+   "doc": "core",
+   "where": "PDF p30",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "game:step command 08.05",
+   "field": "heading",
+   "text": "08.05 End of Command Phase",
+   "doc": "core",
+   "where": "PDF p30",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "game:step movement 09.01",
+   "field": "heading",
+   "text": "09.01 Start of Movement Phase",
+   "doc": "core",
+   "where": "PDF p32",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "game:step movement 09.02",
+   "field": "heading",
+   "text": "09.02 Move Units",
+   "doc": "core",
+   "where": "PDF p32",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "game:step movement 09.03",
+   "field": "heading",
+   "text": "09.03 End of Movement Phase",
+   "doc": "core",
+   "where": "PDF p32",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "game:step shooting 10.01",
+   "field": "heading",
+   "text": "10.01 Start of Shooting Phase",
+   "doc": "core",
+   "where": "PDF p34",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "game:step shooting 10.02",
+   "field": "heading",
+   "text": "10.02 Shoot",
+   "doc": "core",
+   "where": "PDF p34",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "game:step shooting 10.03",
+   "field": "heading",
+   "text": "10.03 End of Shooting Phase",
+   "doc": "core",
+   "where": "PDF p34",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "game:step charge 11.01",
+   "field": "heading",
+   "text": "11.01 Start of Charge Phase",
+   "doc": "core",
+   "where": "PDF p36",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "game:step charge 11.02",
+   "field": "heading",
+   "text": "11.02 Charge",
+   "doc": "core",
+   "where": "PDF p36",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "game:step charge 11.03",
+   "field": "heading",
+   "text": "11.03 End of Charge Phase",
+   "doc": "core",
+   "where": "PDF p36",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "game:step fight 12.01",
+   "field": "heading",
+   "text": "12.01 Start of Fight Phase",
+   "doc": "core",
+   "where": "PDF p38",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "game:step fight 12.02",
+   "field": "heading",
+   "text": "12.02 Pile In",
+   "doc": "core",
+   "where": "PDF p38",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "game:step fight 12.04",
+   "field": "heading",
+   "text": "12.04 Fight",
+   "doc": "core",
+   "where": "PDF p40",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "game:step fight 12.07",
+   "field": "heading",
+   "text": "12.07 Consolidate",
+   "doc": "core",
+   "where": "PDF p42",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "game:step fight 12.09",
+   "field": "heading",
+   "text": "12.09 End of Fight Phase",
+   "doc": "core",
+   "where": "PDF p42",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "game:sequence 1",
+   "field": "heading",
+   "text": "1 Muster Armies",
+   "doc": "ec",
+   "where": "PDF p1",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "core / game:sequence 1 / text",
+   "field": "text",
+   "text": "Muster armies as described in the Warhammer 40,000 app, with the following excep",
+   "doc": "ec",
+   "where": "PDF p1",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "game:sequence 2",
+   "field": "heading",
+   "text": "2 Determine Mission",
+   "doc": "ec",
+   "where": "PDF p1",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "core / game:sequence 2 / text",
+   "field": "text",
+   "text": "Each player finds their opponent’s Force Disposition symbol on their Force Dispo",
+   "doc": "ec",
+   "where": "PDF p1",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "game:sequence 3",
+   "field": "heading",
+   "text": "3 Determine a Layout",
+   "doc": "ec",
+   "where": "PDF p1",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "core / game:sequence 3 / text",
+   "field": "text",
+   "text": "Each combination of Primary Missions has three recommended layouts, labelled A, ",
+   "doc": "ec",
+   "where": "PDF p1",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "game:sequence 4",
+   "field": "heading",
+   "text": "4 Create the Battlefield",
+   "doc": "ec",
+   "where": "PDF p2",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "core / game:sequence 4 / text",
+   "field": "text",
+   "text": "Missions are played on rectangular battlefields 44\" by 60\" in size. Players set ",
+   "doc": "ec",
+   "where": "PDF p2",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "game:sequence 5",
+   "field": "heading",
+   "text": "5 Determine Attacker and Defender",
+   "doc": "ec",
+   "where": "PDF p2",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "core / game:sequence 5 / text",
+   "field": "text",
+   "text": "Players look at the selected layout and agree which edges of the battlefield the",
+   "doc": "ec",
+   "where": "PDF p2",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "core / game:sequence 5 / text",
+   "field": "text",
+   "text": "Roll off: the winner decides who will be the Attacker and who will be the Defend",
+   "doc": "ec",
+   "where": "PDF p2",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "game:sequence 6",
+   "field": "heading",
+   "text": "6 Select Secondary Missions",
+   "doc": "ec",
+   "where": "PDF p2",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "core / game:sequence 6 / text",
+   "field": "text",
+   "text": "Secondary Mission cards detail additional ways to score VP. Players now secretly",
+   "doc": "ec",
+   "where": "PDF p2",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "game:sequence 7",
+   "field": "heading",
+   "text": "7 Declare Battle Formations",
+   "doc": "ec",
+   "where": "PDF p2",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "core / game:sequence 7 / text",
+   "field": "text",
+   "text": "Players secretly note down, in order:",
+   "doc": "ec",
+   "where": "PDF p2",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "core / game:sequence 7 / text",
+   "field": "text",
+   "text": "- Which of their units will start the battle embarked within which **TRANSPORTS*",
+   "doc": "ec",
+   "where": "PDF p2",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "core / game:sequence 7 / text",
+   "field": "text",
+   "text": "- Which of their units will start the battle in **strategic reserves**.",
+   "doc": "ec",
+   "where": "PDF p2",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "core / game:sequence 7 / text",
+   "field": "text",
+   "text": "Players then reveal these decisions.",
+   "doc": "ec",
+   "where": "PDF p2",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "game:sequence 8",
+   "field": "heading",
+   "text": "8 Deploy Armies",
+   "doc": "ec",
+   "where": "PDF p2",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "core / game:sequence 8 / text",
+   "field": "text",
+   "text": "Players take it in turns to set up their units (excluding those in **strategic r",
+   "doc": "ec",
+   "where": "PDF p2",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "core / game:sequence 8 / text",
+   "field": "text",
+   "text": "If you set up a **TITANIC** unit when it is your turn to set up a unit, skip you",
+   "doc": "ec",
+   "where": "PDF p2",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "core / game:sequence 8 / text",
+   "field": "text",
+   "text": "Once you have finished setting up your units, if your opponent has any units tha",
+   "doc": "ec",
+   "where": "PDF p2",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "game:sequence 9",
+   "field": "heading",
+   "text": "9 Redeploy Units",
+   "doc": "ec",
+   "where": "PDF p2",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "core / game:sequence 9 / text",
+   "field": "text",
+   "text": "Some rules let you redeploy certain units after both armies are deployed. Unless",
+   "doc": "ec",
+   "where": "PDF p2",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "game:sequence 10",
+   "field": "heading",
+   "text": "10 Determine First Turn",
+   "doc": "ec",
+   "where": "PDF p2",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "core / game:sequence 10 / text",
+   "field": "text",
+   "text": "Roll off: the winner takes the first turn.",
+   "doc": "ec",
+   "where": "PDF p2",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "game:sequence 11",
+   "field": "heading",
+   "text": "11 Resolve Pre-battle Rules",
+   "doc": "ec",
+   "where": "PDF p2",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "core / game:sequence 11 / text",
+   "field": "text",
+   "text": "Players alternate resolving any pre-battle rules units from their army may have,",
+   "doc": "ec",
+   "where": "PDF p2",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "game:sequence 12",
+   "field": "heading",
+   "text": "12 Begin the Battle",
+   "doc": "ec",
+   "where": "PDF p2",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "core / game:sequence 12 / text",
+   "field": "text",
+   "text": "The first battle round begins.",
+   "doc": "ec",
+   "where": "PDF p2",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "game:sequence 13",
+   "field": "heading",
+   "text": "13 End the Battle",
+   "doc": "ec",
+   "where": "PDF p2",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "core / game:sequence 13 / text",
+   "field": "text",
+   "text": "The battle ends after five battle rounds have been completed. Even if you have n",
+   "doc": "ec",
+   "where": "PDF p2",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "game:sequence 14",
+   "field": "heading",
+   "text": "14 Determine Victor",
+   "doc": "ec",
+   "where": "PDF p2",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
+  },
+  {
+   "item": "core / game:sequence 14 / text",
+   "field": "text",
+   "text": "Each player scores 10VP if their army is painted to a Battle Ready standard. At ",
+   "doc": "ec",
+   "where": "PDF p2",
+   "sha256": "187253a9b6ea377f5e44d1148454bd042b165b03bb5c45c51a5880762bf56dc2"
   },
   {
    "item": "core / coreStratagem:command-re-roll",
@@ -5130,6 +5632,13 @@
    "sha256": "583c0fcdf91ee4bb8f5f3a07a2edfa1fdbeca8429dc9c247906752e247146199"
   },
   {
+   "item": "imperial-knights / armyRule:Super-heavy Walker",
+   "field": "text",
+   "doc": "waha:imperial-knights",
+   "where": "Wahapedia imperial-knights § Army Rules (Super-heavy Walker)",
+   "sha256": "583c0fcdf91ee4bb8f5f3a07a2edfa1fdbeca8429dc9c247906752e247146199"
+  },
+  {
    "item": "world-eaters / armyRule:Blessings of Khorne",
    "field": "text",
    "doc": "waha:world-eaters",
@@ -5925,6 +6434,206 @@
    "doc": "pack:adeptus-mechanicus",
    "where": "GW Faction Pack Adeptus Mechanicus PDF p9-10 (Thulia Ghuld datasheet)",
    "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "orks / detachment:dread-mob/stratagem:crazed-rampage",
+   "field": "note",
+   "text": "If my unit has the Deadly Demise ability and has an ability that allows it to Fi",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § Charging and Fighting 23.04",
+   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+  },
+  {
+   "item": "orks / detachment:dread-mob/stratagem:crazed-rampage",
+   "field": "note",
+   "text": "Fight on Death rules are resolved before Deadly Demise abilities, meaning that y",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § Charging and Fighting 23.04",
+   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+  },
+  {
+   "item": "orks / detachment:runt-swarm/stratagem:grot-shields",
+   "field": "note",
+   "text": "When using the Grot Shields stratagem, are hits by [TORRENT] weapons considered ",
+   "doc": "waha:orks",
+   "where": "Wahapedia orks § Runt Swarm 1DP",
+   "sha256": "72ea38787008aea451b9a5ce97a3e218e6a8590a73d9ed652a5fb3ad12c4bfd7"
+  },
+  {
+   "item": "orks / detachment:runt-swarm/stratagem:grot-shields",
+   "field": "note",
+   "text": "No.",
+   "doc": "core",
+   "where": "PDF p88",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "imperial-knights / detachment:freeblade-company/stratagem:full-tilt",
+   "field": "note",
+   "text": "Do rules that affect a keyword include multi-word keywords that contain that key",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § Using Keywords & Mixed Keywords in Units 02.05.01",
+   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+  },
+  {
+   "item": "imperial-knights / detachment:freeblade-company/stratagem:full-tilt",
+   "field": "note",
+   "text": "No.",
+   "doc": "core",
+   "where": "PDF p88",
+   "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
+  },
+  {
+   "item": "world-eaters / detachment:berzerker-warband/stratagem:berzerkers-wrath",
+   "field": "note",
+   "text": "After being the target of a ranged attack, can a Leader unit make a Blood Surge ",
+   "doc": "wahahtml:world-eaters",
+   "where": "Wahapedia world-eaters § World Eaters",
+   "sha256": "7609b464b76e1f11635f1ad45d560c796142a13567e11504e5a18c090ddae8a1"
+  },
+  {
+   "item": "tyranids / armyRule:Shadow in the Warp",
+   "field": "note",
+   "text": "Can units targeted by the Shadow in the Warp army rule use the Insane Bravery St",
+   "doc": "pack:tyranids",
+   "where": "PDF p21",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "tyranids / armyRule:Shadow in the Warp",
+   "field": "note",
+   "text": "No. Insane Bravery can only be used in your Command phase.",
+   "doc": "pack:tyranids",
+   "where": "PDF p21",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:auto-divinatory-targeting",
+   "field": "note",
+   "text": "If I target a unit with the Auto-divinatory Targeting Stratagem while the Protec",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "PDF p19",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "adeptus-mechanicus / detachment:cohort-cybernetica/stratagem:auto-divinatory-targeting",
+   "field": "note",
+   "text": "The Ballistic Skill characteristic of ranged weapons equipped by models in that ",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "PDF p19",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "melee / ghazghkull-thraka / ability:Supreme Commander",
+   "field": "note",
+   "text": "Some units have a rule on their datasheet stating that they must be your WARLORD",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § Fill Your Army Roster 25.04",
+   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+  },
+  {
+   "item": "nidzillas / norn-assimilator-synaptoprescience / ability:Singular Purpose",
+   "field": "note",
+   "text": "add 2 to the Objective Control characteristic",
+   "doc": "pack:tyranids",
+   "where": "PDF p19",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "nidzillas / norn-assimilator-synaptoprescience / ability:Singular Purpose",
+   "field": "note",
+   "text": "an Objective Control characteristic of 15",
+   "doc": "data.js",
+   "where": "the text of the item the note is on",
+   "sha256": null
+  },
+  {
+   "item": "nidzillas / norn-assimilator-synaptoprescience-2 / ability:Singular Purpose",
+   "field": "note",
+   "text": "add 2 to the Objective Control characteristic",
+   "doc": "pack:tyranids",
+   "where": "PDF p19",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "nidzillas / norn-assimilator-synaptoprescience-2 / ability:Singular Purpose",
+   "field": "note",
+   "text": "an Objective Control characteristic of 15",
+   "doc": "data.js",
+   "where": "the text of the item the note is on",
+   "sha256": null
+  },
+  {
+   "item": "nidzillas / norn-emissary-destabilising-predation / ability:Singular Purpose",
+   "field": "note",
+   "text": "add 2 to the Objective Control characteristic",
+   "doc": "pack:tyranids",
+   "where": "PDF p19",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "nidzillas / norn-emissary-destabilising-predation / ability:Singular Purpose",
+   "field": "note",
+   "text": "an Objective Control characteristic of 15",
+   "doc": "data.js",
+   "where": "the text of the item the note is on",
+   "sha256": null
+  },
+  {
+   "item": "nidzillas / norn-emissary / ability:Singular Purpose",
+   "field": "note",
+   "text": "add 2 to the Objective Control characteristic",
+   "doc": "pack:tyranids",
+   "where": "PDF p19",
+   "sha256": "b8af0df04063acc6e935c8b8c29a2e722367b4b90bf5023e06f441e2b8de8e6f"
+  },
+  {
+   "item": "nidzillas / norn-emissary / ability:Singular Purpose",
+   "field": "note",
+   "text": "an Objective Control characteristic of 15",
+   "doc": "data.js",
+   "where": "the text of the item the note is on",
+   "sha256": null
+  },
+  {
+   "item": "ooga-booga / ghazghkull-thraka / ability:Supreme Commander",
+   "field": "note",
+   "text": "Some units have a rule on their datasheet stating that they must be your WARLORD",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § Fill Your Army Roster 25.04",
+   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+  },
+  {
+   "item": "purge-goes-the-foe / belisarius-cawl / ability:Supreme Commander",
+   "field": "note",
+   "text": "Some units have a rule on their datasheet stating that they must be your WARLORD",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § Fill Your Army Roster 25.04",
+   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+  },
+  {
+   "item": "purge-goes-the-foe / thulia-ghuld / ability:Icon of War",
+   "field": "note",
+   "text": "When I select one of Thulia Ghuld’s Icon of War abilities, when do I select the ",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "PDF p19",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "purge-goes-the-foe / thulia-ghuld / ability:Icon of War",
+   "field": "note",
+   "text": "When you have selected the Icon of War ability you want to use.",
+   "doc": "pack:adeptus-mechanicus",
+   "where": "PDF p19",
+   "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "purge-goes-the-foe / thulia-ghuld / ability:Supreme Commander",
+   "field": "note",
+   "text": "Some units have a rule on their datasheet stating that they must be your WARLORD",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § Fill Your Army Roster 25.04",
+   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
   }
  ]
 }

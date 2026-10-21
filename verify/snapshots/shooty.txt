@@ -120,6 +120,7 @@ Dread Mob · Shoota Boyz · Wreckas · Disposition: Purge the Foe
 
 Overview
 Damage calculator
+Game tracker
 Opponent
 None yet: pick their list
 Units
@@ -176,7 +177,7 @@ Once per battle, per army · Command
 At the start of the Command phase, you can use this ability. If you do, friendly ORKS units with the Waaagh! ability are riled up until the end of the next turn.
 
 Da Boss
-Command
+Start of the battle round
 
 At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.
 
@@ -1034,7 +1035,7 @@ Once per battle, per army · Command
 At the start of the Command phase, you can use this ability. If you do, friendly ORKS units with the Waaagh! ability are riled up until the end of the next turn.
 
 Da Boss
-Command
+Start of the battle round
 
 At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.
 
@@ -1266,22 +1267,24 @@ YOUR
 Wazdakka Gutsmek
 SHOOT
 FIGHT
-THEY ATTACK
+BOTH
 THEIR
 Ghazghkull Thraka
-
 Melee · T10 · Sv 2+ · 4+ InSv · W16
-
+THEY ATTACK
 4.6
 of 16 wounds lost
 destroyed in <1% of games
+
+≈1 pts destroyed
+
 Nothing ticked: the datasheets as printed
 3 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
 
-Effects are on this step.
+Effects are on the damage these attacks deal.
 
 RANGED WEAPONS
 Wazdakka Gutsmek
@@ -1376,10 +1379,10 @@ THEIRS
 Lone Operative while within 3" of another friendly ORKS INFANTRY unit
 1CP Command Re-roll
 YOURS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Command Re-roll
 THEIRS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 OTHER MODIFIERS
 Hit roll
 −
@@ -1427,15 +1430,17 @@ YOUR
 Wazdakka Gutsmek
 SHOOT
 FIGHT
-THEY ATTACK
+BOTH
 THEIR
 Ghazghkull Thraka
-
 Melee · T10 · Sv 2+ · 4+ InSv · W16
-
+THEY ATTACK
 5.1
 of 16 wounds lost
 destroyed in <1% of games
+
+≈0 pts destroyed
+
 Charged this turn
 ×
 8 NOT COUNTED
@@ -1443,10 +1448,9 @@ WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
 
-Effects are over the whole turn: their models destroyed by its end, and your own losses.
+Effects are on the damage these attacks deal.
 
-Fight → Fight back · the charge is taken to succeed (no charge roll)
-TAKE FIGHT OUT
+The charge is taken to succeed (no charge roll).
 
 MELEE WEAPONS
 Wazdakka Gutsmek
@@ -1533,7 +1537,7 @@ THEIRS
 Lone Operative while within 3" of another friendly ORKS INFANTRY unit
 1CP Command Re-roll
 YOURS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 YOURS
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
@@ -1545,7 +1549,324 @@ THEIRS
 Model in your unit destroyed, unit not selected to fight this phase: D6 (+1 if riled up); on a 4+ it stays until your unit has fought or the phase ends.
 1CP Command Re-roll
 THEIRS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+1CP Epic Challenge
+THEIRS
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+THEIRS
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+OTHER MODIFIERS
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP better
+−
+0
++
+Damage
+−
+0
++
+Attacks
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+Every weapon has
+Lethal
+Sustained 1
+Dev. wounds
+Target InSv
+−
+none
++
+Target Feel No Pain
+−
+none
++
+
+######## damage both · DAMAGE Damage
+YOUR
+Wazdakka Gutsmek
+SHOOT
+FIGHT
+BOTH
+THEIR
+Ghazghkull Thraka
+Melee · T10 · Sv 2+ · 4+ InSv · W16
+THEY ATTACK
+9.6
+of 16 wounds lost
+destroyed in 12% of games
+
+Shoot 4.6 · Fight 5.0 · the charge is taken to succeed
+
+≈33 pts destroyed
+
+Charged this turn
+×
+11 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+SHOOT → CHARGE → FIGHT · BIGGEST FIRST
+
+Effects are on the total: their models destroyed by the end of the fight, the shooting’s choices and the fight’s alike.
+
+The charge is taken to succeed (no charge roll); “Charged this turn” is ticked for the fight.
+
+THE SHOOTING
+FIRST
+RANGED WEAPONS
+Wazdakka Gutsmek
+Grabba Dragga
+RNG
+12"
+A
+1
+BS
+2+
+S
+10
+AP
+-2
+D
+3
+ASSAULT, PRECISION
+−3% wiped
+−0.6
+WOUNDS IF UNTICKED
+Psyko-gatler
+RNG
+24"
+A
+12
+BS
+4+
+S
+6
+AP
+-2
+D
+2
+ASSAULT, LETHAL HITS: NON-MONSTER/VEHICLE, SUSTAINED HITS 1
+−11% wiped
+−3.8
+WOUNDS IF UNTICKED
+SITUATION AND RULES
+both sides
+Target has the benefit of cover
+THEIRS
+if it applies
+−3% wiped
+−0.7
+WOUNDS
+Plunging Fire
+BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
+YOURS
+if it applies
++3% wiped
++0.6
+WOUNDS
+Riled up
+in the fight: riled up (Waaagh!)
+THEIRS
+if it holds
+no change: their own InSv 4+ is better
+0
+RULES IT SWITCHES ON
+Riled up (Waaagh!)
+0
+Riled up (Waaagh!) (fight)
+0
+Close-quarters shooting at a unit it is engaged with
+-1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
+YOURS
+if it applies
+−7% wiped
+−1.9
+WOUNDS
+HELP FROM OTHER UNITS
+of your list · if the table gives it
+Clever Know-wotz (Mek)
+Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase
+YOURS
+if it applies
++3% wiped
++0.6
+WOUNDS
+STRATAGEMS
+both sides, with their CP
+
+None that change these numbers.
+
+NOT FOR THIS PAIR, BY THE RULES (7)
+
+Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (yours, Fight phase only) · 1CP Orks Is Never Beaten, 1CP Epic Challenge, 2CP Counteroffensive (theirs, Fight phase only) · 1CP Close-range Dakka, 1CP Explosives (theirs, in its own turn only)
+
+NOT COUNTED BY THE CALCULATOR (3)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+Da Grand Warlord’s Ladz
+THEIRS
+Lone Operative while within 3" of another friendly ORKS INFANTRY unit
+1CP Command Re-roll
+YOURS
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+1CP Command Re-roll
+THEIRS
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+OTHER MODIFIERS
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP better
+−
+0
++
+Damage
+−
+0
++
+Attacks
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+Every weapon has
+Lethal
+Sustained 1
+Dev. wounds
+Target InSv
+−
+none
++
+Target Feel No Pain
+−
+none
++
+THE FIGHT
+THEN, AGAINST WHAT THE SHOOTING LEFT
+MELEE WEAPONS
+Wazdakka Gutsmek
+
+Against what the shooting left of the target, in each game.
+
+Fixit’s Wrench
+A
+1
+WS
+4+
+S
+3
+AP
+0
+D
+1
+EXTRA ATTACKS
+≈0
+WOUNDS IF UNTICKED
+Grabba Dragga
+A
+6
+WS
+2+
+S
+10
+AP
+-2
+D
+3
+CLEAVE 2, LANCE
+−11% wiped
+−4.8
+WOUNDS IF UNTICKED
+Speeding Bulk and Flaming Exhaust
+A
+3
+WS
+2+
+S
+5
+AP
+-1
+D
+1
+CLEAVE 1, EXTRA ATTACKS
+−0.1
+WOUNDS IF UNTICKED
+SITUATION AND RULES
+both sides
+Charged this turn
+YOURS
+holds: Both takes the charge as made (no charge roll)
+−5% wiped
+−1.1
+WOUNDS IF UNTICKED
+HELP FROM OTHER UNITS
+of your list · if the table gives it
+Clever Know-wotz (Mek)
+Picked by a Mek’s Clever Know-wotz: that VEHICLE model’s attacks have +1 to hit rolls until the start of your next Movement phase
+YOURS
+if it applies
+≈0
+WOUNDS
+STRATAGEMS
+both sides, with their CP
+
+None that change these numbers.
+
+NOT FOR THIS PAIR, BY THE RULES (2)
+
+Nothing to count: 1CP Close-range Dakka, 1CP Explosives (theirs, Shooting phase only)
+
+NOT COUNTED BY THE CALCULATOR (8)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+Da Grand Warlord’s Ladz
+THEIRS
+Lone Operative while within 3" of another friendly ORKS INFANTRY unit
+1CP Command Re-roll
+YOURS
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+1CP Epic Challenge
+YOURS
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+YOURS
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+1CP Orks Is Never Beaten
+THEIRS
+Model in your unit destroyed, unit not selected to fight this phase: D6 (+1 if riled up); on a 4+ it stays until your unit has fought or the phase ends.
+1CP Command Re-roll
+THEIRS
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 THEIRS
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
@@ -1697,7 +2018,7 @@ Their Fight Any unit
 1
 CP
 Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 Any phase Any unit
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
@@ -3317,6 +3638,1136 @@ VEHICLE
 WALKER
 Ask about this unit
 ‹ Deffkoptas
+
+######## game · KILLA KANS Game tracker
+THIS GAME
+NEW GAME
+Me shooty yer’ booty
+your list
+Melee
+your opponent’s list
+CP
+−
+0
++
+−
+0
++
+VP
+−
+0
++
+−
+0
++
+COMMAND POINTS
+08.02 GAIN CORE CP
+
+Both players gain 1 Command Point (CP).
+
+EVENT COMPANION · GENERATING COMMAND POINTS
+
+Excluding Core CP, each player can gain a maximum of 1CP per battle round (including he CP gained when a player discards an active Secondary Mission card).
+
+THIS LIST
+
+Da Boss · Orks army rule: “At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.”
+
+THEIR LIST
+
+Da Boss · Orks army rule: “At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.”
+
+CHOICES THIS GAME
+Full Throttle · Wazdakka Gutsmek
+
+In your Command phase · Until the start of your next Command phase
+
+TURBO ENGINE
+PULSE JET
+SHOKK ATTACK ENGINE
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The first turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+START OF BATTLE ROUND 07.01
+
+Da Boss · Orks army rule
+
+START OF COMMAND PHASE 08.01
+
+War Cry · Orks army rule
+
+GAIN CORE CP 08.02
+
+Both players gain 1 Command Point (CP).
+
+BATTLE-SHOCK 08.03
+
+1
+CP
+Insane Bravery
+The battle-shock roll you are about to make for your unit is automatically successful.
+
+COMMAND ABILITIES 08.04
+
+Full Throttle · Wazdakka Gutsmek
+Shokk Attack Engine · Wazdakka Gutsmek Throttlerokkit Shokka Engine
+Fix Dat Armour Up · Big Mek in Mega Armour
+ANY PHASE
+1
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+MELEE IN THIS PHASE
+
+START OF BATTLE ROUND 07.01
+
+Da Boss · Orks army rule
+
+START OF COMMAND PHASE 08.01
+
+War Cry · Orks army rule
+ANY PHASE
+2
+1
+CP
+Breakin’ Heads
+Roll one D3: your unit suffers that many mortal wounds and is no longer battle-shocked.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: MOVEMENT PHASE ›
+BEFORE THE BATTLE
+
+Warhammer Event Mission Sequence · GW Warhammer Event Companion 1.3
+
+1 Muster Armies
+
+Muster armies as described in the Warhammer 40,000 app, with the following exception: once they have mustered their army, a player selects one Force Disposition card available to them and records that on their roster.
+
+2 Determine Mission
+
+Each player finds their opponent’s Force Disposition symbol on their Force Disposition card. The Primary Mission that is listed below that symbol is that player’s Primary Mission, which describes how to score VP.
+
+3 Determine a Layout
+
+Each combination of Primary Missions has three recommended layouts, labelled A, B and C. These can be found in the Warhammer 40,000 app and at the end of this companion. As directed by the Warhammer Event organiser, the players either use the layout specified or randomly determine which of these layouts to use.
+
+4 Create the Battlefield
+
+Missions are played on rectangular battlefields 44" by 60" in size. Players set up the terrain areas as shown in the selected layout, then set up terrain features on those terrain areas as shown in the selected layout.
+
+5 Determine Attacker and Defender
+
+Players look at the selected layout and agree which edges of the battlefield the players have set up correspond with the Attacker’s and Defender’s battlefield edges labelled on the card.
+
+Roll off: the winner decides who will be the Attacker and who will be the Defender.
+
+6 Select Secondary Missions
+
+Secondary Mission cards detail additional ways to score VP. Players now secretly note down whether they will use Tactical or Fixed Secondary Missions. If using Fixed Missions, they also note down which two Fixed Missions they will use (see below). Players then reveal these decisions.
+
+7 Declare Battle Formations
+Strategic reserves
+
+Players secretly note down, in order:
+
+Which of their units will start the battle embarked within which TRANSPORTS.
+Which of their units will start the battle in strategic reserves.
+
+Players then reveal these decisions.
+
+20.01 PLACING UNITS IN STRATEGIC RESERVES
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+THIS LIST
+
+App note, not rules text: Me shooty yer’ booty: points limit 2000 pts (Strike Force); 50% of it is 1000 pts.
+
+Deep Strike: Wazdakka Gutsmek 200 pts, Deffkoptas 85 pts (285 pts)
+
+THEIR LIST
+
+App note, not rules text: Melee: points limit 2000 pts (Strike Force); 50% of it is 1000 pts.
+
+Deep Strike: Nazdreg + Meganobz 365 pts, Deffkoptas 85 pts (450 pts)
+
+8 Deploy Armies
+
+Players take it in turns to set up their units (excluding those in strategic reserves) one at a time, wholly within their deployment zone, starting with the Defender.
+
+If you set up a TITANIC unit when it is your turn to set up a unit, skip your next turn to set up a unit.
+
+Once you have finished setting up your units, if your opponent has any units that have not been set up, they set up those units.
+
+9 Redeploy Units
+
+Some rules let you redeploy certain units after both armies are deployed. Unless otherwise stated, you resolve those rules in this step. Players alternate resolving any such rules, starting with the Attacker. Units placed in strategic reserves in this step do not count towards the combined points value of your strategic reserves units.
+
+10 Determine First Turn
+Who goes first
+
+Roll off: the winner takes the first turn.
+
+FIRST TURN
+ME SHOOTY YER’ BOOTY
+MELEE
+11 Resolve Pre-battle Rules
+
+Players alternate resolving any pre-battle rules units from their army may have, starting with the player who will take the first turn.
+
+12 Begin the Battle
+
+The first battle round begins.
+
+13 End the Battle
+
+The battle ends after five battle rounds have been completed. Even if you have no models remaining in your army at the start of your turn, players continue to play out their turns until the battle ends.
+
+14 Determine Victor
+
+Each player scores 10VP if their army is painted to a Battle Ready standard. At the end of the battle, the player with the most VP is the victor. If the players are tied, the battle is a draw.
+
+######## game mid-game · GAME Game tracker
+THIS GAME
+NEW GAME
+Me shooty yer’ booty
+your list
+Melee
+your opponent’s list
+CP
+−
+3
++
+−
+2
++
+VP
+−
+15
++
+−
+10
++
+COMMAND POINTS
+08.02 GAIN CORE CP
+
+Both players gain 1 Command Point (CP).
+
+EVENT COMPANION · GENERATING COMMAND POINTS
+
+Excluding Core CP, each player can gain a maximum of 1CP per battle round (including he CP gained when a player discards an active Secondary Mission card).
+
+THIS LIST
+
+Da Boss · Orks army rule: “At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.”
+
+THEIR LIST
+
+Da Boss · Orks army rule: “At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.”
+
+CHOICES THIS GAME
+Full Throttle · Wazdakka Gutsmek
+
+In your Command phase · Until the start of your next Command phase
+
+TURBO ENGINE
+PULSE JET
+SHOKK ATTACK ENGINE
+TURBO ENGINE
+
+When this unit is selected to make an advance/fall-back move, that move does not prevent this unit from being eligible to declare a charge.
+
+THIS PHASE
+BATTLE ROUND
+‹
+2
+›
+YOUR TURN
+THEIR TURN
+
+The second turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+SHOOT 10.02
+
+Waaagh! · Orks army rule
+Try Dat Button! · Dread Mob detachment rule
+Dakka! Dakka! Dakka! · Shoota Boyz detachment rule
+Wreckin’ and Lootin’ · Wreckas detachment rule
+Even More Dakka · Big Mek Dakkarig ×2
+Blitz Dem Gitz! · Big Mek Dakkarig ×2
+Dreadherder · Big Mek Dakkarig
+Boss’ Ammo Runt · Warboss
+Clever Know-wotz · Mek + Tankbustas ×2, Mek + Flash Gitz
+Rokkit Barrage · Mek + Tankbustas ×2
+Finderz Keeperz · Mek + Flash Gitz
+Deff from Above · Deffkoptas
+Spiteful Power Trip · Killa Kans
+1
+CP
+Kustom Dakka
+Your unit’s ranged attacks have +1 to wound rolls against a unit (excluding MONSTER/VEHICLE units).
+1
+CP
+Glowin’ Dakka
+Your unit’s ranged attacks against a unit within 9" have +1 AP.
+1
+CP
+Never Enough Dakka
+Your unit’s ranged attacks have [SUSTAINED HITS 1].
+1
+CP
+Grab It
+After shooting: can make a normal move of up to 6", ending within range of an objective; not eligible to declare a charge this turn.
+1
+CP
+Explosives
+One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
+1
+CP
+Drive-by Bustin’
+Your unit’s ranged attacks with weapons selected for Firing Deck have +1 to hit rolls.
+No unit in this list can use it (needs TRANSPORT)
+ANY PHASE
+1
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+MELEE IN THIS PHASE
+
+START OF SHOOTING PHASE 10.01
+
+1
+CP
+Smokescreen
+Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+No unit in this list can use it (needs SMOKE)
+ANY PHASE
+2
+1
+CP
+Breakin’ Heads
+Roll one D3: your unit suffers that many mortal wounds and is no longer battle-shocked.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: CHARGE PHASE ›
+BEFORE THE BATTLE
+
+######## game round 1 your command · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The first turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+START OF BATTLE ROUND 07.01
+
+Da Boss · Orks army rule
+
+START OF COMMAND PHASE 08.01
+
+War Cry · Orks army rule
+
+GAIN CORE CP 08.02
+
+Both players gain 1 Command Point (CP).
+
+BATTLE-SHOCK 08.03
+
+1
+CP
+Insane Bravery
+The battle-shock roll you are about to make for your unit is automatically successful.
+
+COMMAND ABILITIES 08.04
+
+Full Throttle · Wazdakka Gutsmek
+Shokk Attack Engine · Wazdakka Gutsmek Throttlerokkit Shokka Engine
+Fix Dat Armour Up · Big Mek in Mega Armour
+ANY PHASE
+1
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+MELEE IN THIS PHASE
+
+START OF BATTLE ROUND 07.01
+
+Da Boss · Orks army rule
+
+START OF COMMAND PHASE 08.01
+
+War Cry · Orks army rule
+ANY PHASE
+2
+1
+CP
+Breakin’ Heads
+Roll one D3: your unit suffers that many mortal wounds and is no longer battle-shocked.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: MOVEMENT PHASE ›
+
+######## game round 1 your movement · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The first turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+MOVE UNITS 09.02
+
+Waaagh! · Orks army rule
+Full Throttle · Wazdakka Gutsmek
+Turbo Engine · Wazdakka Gutsmek Throttlerokkit Shokka Engine
+Pulse Jet · Wazdakka Gutsmek Throttlerokkit Shokka Engine
+Intimidating Motivation · Warboss
+Clever Know-wotz · Mek + Tankbustas ×2, Mek + Flash Gitz
+Bomb Squig · Mek + Tankbustas ×2
+Mek + Tankbustas 1
+Mek + Tankbustas 2
+1
+CP
+Dread Power
+Your unit is riled up until the start of your next turn.
+1
+CP
+Stomping Juggernaut
+Your unit has MOBILE.
+
+END OF MOVEMENT PHASE 09.03
+
+Thievin’ Scavengers · Gretchin ×3
+ANY PHASE
+1
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+MELEE IN THIS PHASE
+
+MOVE UNITS 09.02
+
+Supreme Kunnin’ · Nazdreg + Meganobz
+
+END OF MOVEMENT PHASE 09.03
+
+1
+CP
+Rapid Ingress
+Your unit in strategic reserves makes an ingress move (not in the first battle round).
+1
+CP
+Fire Overwatch
+Your unit shoots using snap shooting.
+ANY PHASE
+2
+1
+CP
+Breakin’ Heads
+Roll one D3: your unit suffers that many mortal wounds and is no longer battle-shocked.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: SHOOTING PHASE ›
+
+######## game round 1 your shooting · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The first turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+SHOOT 10.02
+
+Waaagh! · Orks army rule
+Try Dat Button! · Dread Mob detachment rule
+Dakka! Dakka! Dakka! · Shoota Boyz detachment rule
+Wreckin’ and Lootin’ · Wreckas detachment rule
+Even More Dakka · Big Mek Dakkarig ×2
+Blitz Dem Gitz! · Big Mek Dakkarig ×2
+Dreadherder · Big Mek Dakkarig
+Boss’ Ammo Runt · Warboss
+Clever Know-wotz · Mek + Tankbustas ×2, Mek + Flash Gitz
+Rokkit Barrage · Mek + Tankbustas ×2
+Finderz Keeperz · Mek + Flash Gitz
+Deff from Above · Deffkoptas
+Spiteful Power Trip · Killa Kans
+1
+CP
+Kustom Dakka
+Your unit’s ranged attacks have +1 to wound rolls against a unit (excluding MONSTER/VEHICLE units).
+1
+CP
+Glowin’ Dakka
+Your unit’s ranged attacks against a unit within 9" have +1 AP.
+1
+CP
+Never Enough Dakka
+Your unit’s ranged attacks have [SUSTAINED HITS 1].
+1
+CP
+Grab It
+After shooting: can make a normal move of up to 6", ending within range of an objective; not eligible to declare a charge this turn.
+1
+CP
+Explosives
+One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
+1
+CP
+Drive-by Bustin’
+Your unit’s ranged attacks with weapons selected for Firing Deck have +1 to hit rolls.
+No unit in this list can use it (needs TRANSPORT)
+ANY PHASE
+1
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+MELEE IN THIS PHASE
+
+START OF SHOOTING PHASE 10.01
+
+1
+CP
+Smokescreen
+Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+No unit in this list can use it (needs SMOKE)
+ANY PHASE
+2
+1
+CP
+Breakin’ Heads
+Roll one D3: your unit suffers that many mortal wounds and is no longer battle-shocked.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: CHARGE PHASE ›
+
+######## game round 1 your charge · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The first turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+CHARGE 11.02
+
+Waaagh! · Orks army rule
+Full Throttle · Wazdakka Gutsmek
+Turbo Engine · Wazdakka Gutsmek Throttlerokkit Shokka Engine
+1
+CP
+Stomping Juggernaut
+Your unit has MOBILE.
+1
+CP
+Crushing Impact
+After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+ANY PHASE
+1
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+MELEE IN THIS PHASE
+
+CHARGE 11.02
+
+Thundering Stampede · Beastboss on Squigosaur
+Get Out da Way! · Big Mek + Painboy + Nobz
+
+END OF CHARGE PHASE 11.03
+
+1
+CP
+Heroic Intervention
+Your unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+ANY PHASE
+2
+1
+CP
+Breakin’ Heads
+Roll one D3: your unit suffers that many mortal wounds and is no longer battle-shocked.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: FIGHT PHASE ›
+
+######## game round 1 your fight · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The first turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
+
+Try Dat Button! · Dread Mob detachment rule
+Dreadherder · Big Mek Dakkarig
+Might is Right · Warboss
+Clever Know-wotz · Mek + Tankbustas ×2, Mek + Flash Gitz
+Spiteful Power Trip · Killa Kans
+1
+CP
+Crazed Rampage
+Model in your unit destroyed, unit not selected to fight this phase: roll one D6; on a 4+ it stays until your unit has fought or the phase ends…
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+ANY PHASE
+1
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+MELEE IN THIS PHASE
+
+PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
+
+Get Stuck In · War Horde detachment rule
+Prophet of Da Great Waaagh! · Ghazghkull Thraka
+One Last Kill · Mozrog Skragbad
+Da Bigger Dey Iz… · Mozrog Skragbad
+Krumpin’ Time · Nazdreg + Meganobz, Big Mek in Mega Armour + Meganobz
+Headwoppa’s Killchoppa · Beastboss on Squigosaur
+Brutal Impact · Squighog Boyz
+1
+CP
+Hit ’Em Harder
+Your unit’s melee attacks have [LETHAL HITS].
+1
+CP
+Orks Is Never Beaten
+Model in your unit destroyed, unit not selected to fight this phase: D6 (+1 if riled up); on a 4+ it stays until your unit has fought or the phase ends.
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2
+CP
+Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+1
+CP
+Mow ’Em Down
+Your unit’s melee attacks have [CLEAVE 1], or +1 to the value of a [CLEAVE] they already have.
+No unit in this list can use it (needs VEHICLE)
+
+END OF FIGHT PHASE 12.09
+
+Aerial Manoover · Deffkoptas
+ANY PHASE
+2
+1
+CP
+Breakin’ Heads
+Roll one D3: your unit suffers that many mortal wounds and is no longer battle-shocked.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: THEIR TURN ›
+
+######## game round 1 their command · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The second turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+START OF COMMAND PHASE 08.01
+
+War Cry · Orks army rule
+
+GAIN CORE CP 08.02
+
+Both players gain 1 Command Point (CP).
+
+ANY PHASE
+1
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+MELEE IN THIS PHASE
+
+START OF COMMAND PHASE 08.01
+
+War Cry · Orks army rule
+
+BATTLE-SHOCK 08.03
+
+1
+CP
+Insane Bravery
+The battle-shock roll you are about to make for your unit is automatically successful.
+
+COMMAND ABILITIES 08.04
+
+Crude Surgery · Big Mek + Painboy + Nobz
+Catch Dat Red Bit · Big Mek + Painboy + Nobz
+Fix Dat Armour Up · Big Mek in Mega Armour + Meganobz
+ANY PHASE
+2
+1
+CP
+Breakin’ Heads
+Roll one D3: your unit suffers that many mortal wounds and is no longer battle-shocked.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: MOVEMENT PHASE ›
+
+######## game round 1 their movement · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The second turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+MOVE UNITS 09.02
+
+Dakka! Dakka! Dakka! · Shoota Boyz detachment rule
+Even More Dakka · Big Mek Dakkarig ×2
+Spiteful Power Trip · Killa Kans
+
+END OF MOVEMENT PHASE 09.03
+
+1
+CP
+Rapid Ingress
+Your unit in strategic reserves makes an ingress move (not in the first battle round).
+1
+CP
+Fire Overwatch
+Your unit shoots using snap shooting.
+ANY PHASE
+1
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+MELEE IN THIS PHASE
+
+MOVE UNITS 09.02
+
+Waaagh! · Orks army rule
+Makari, Hoist Dat Banner! · Ghazghkull Thraka
+Intimidating Motivation · Nazdreg + Meganobz
+Keep Huntin’! · Beastboss on Squigosaur
+Shokk-boosta · Big Mek + Painboy + Nobz
+Kunnin’ But Brutal · Big Mek + Painboy + Nobz
+Bomb Squig · Squighog Boyz
+1
+CP
+Fungus-fuel Injection
+Your unit has +2" M.
+
+END OF MOVEMENT PHASE 09.03
+
+Thievin’ Scavengers · Gretchin ×2
+ANY PHASE
+2
+1
+CP
+Breakin’ Heads
+Roll one D3: your unit suffers that many mortal wounds and is no longer battle-shocked.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: SHOOTING PHASE ›
+
+######## game round 1 their shooting · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The second turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+START OF SHOOTING PHASE 10.01
+
+1
+CP
+Smokescreen
+Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+
+SHOOT 10.02
+
+Dakka! Dakka! Dakka! · Shoota Boyz detachment rule
+1
+CP
+Gun-crazy Show-offs
+After an enemy unit has shot and hit yours: your unit shoots using normal shooting, but only at that enemy unit.
+ANY PHASE
+1
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+MELEE IN THIS PHASE
+
+SHOOT 10.02
+
+Waaagh! · Orks army rule
+Kunnin’ But Brutal · Big Mek + Painboy + Nobz
+Ammo Runts · Big Mek + Painboy + Nobz
+Deff from Above · Deffkoptas
+1
+CP
+Close-range Dakka
+Your unit’s ranged attacks have [RAPID FIRE 1], or +1 to the value of a [RAPID FIRE] they already have.
+1
+CP
+Explosives
+One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
+ANY PHASE
+2
+1
+CP
+Breakin’ Heads
+Roll one D3: your unit suffers that many mortal wounds and is no longer battle-shocked.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: CHARGE PHASE ›
+
+######## game round 1 their charge · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The second turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+END OF CHARGE PHASE 11.03
+
+1
+CP
+Heroic Intervention
+Your unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+ANY PHASE
+1
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+MELEE IN THIS PHASE
+
+CHARGE 11.02
+
+Waaagh! · Orks army rule
+Thundering Stampede · Beastboss on Squigosaur
+Kunnin’ But Brutal · Big Mek + Painboy + Nobz
+Get Out da Way! · Big Mek + Painboy + Nobz
+1
+CP
+Crushing Impact
+After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+ANY PHASE
+2
+1
+CP
+Breakin’ Heads
+Roll one D3: your unit suffers that many mortal wounds and is no longer battle-shocked.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: FIGHT PHASE ›
+
+######## game round 1 their fight · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The second turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
+
+Try Dat Button! · Dread Mob detachment rule
+Might is Right · Warboss
+Clever Know-wotz · Mek + Tankbustas ×2, Mek + Flash Gitz
+Spiteful Power Trip · Killa Kans
+1
+CP
+Crazed Rampage
+Model in your unit destroyed, unit not selected to fight this phase: roll one D6; on a 4+ it stays until your unit has fought or the phase ends…
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2
+CP
+Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+
+END OF FIGHT PHASE 12.09
+
+Aerial Manoover · Deffkoptas
+ANY PHASE
+1
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+MELEE IN THIS PHASE
+
+PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
+
+Get Stuck In · War Horde detachment rule
+Prophet of Da Great Waaagh! · Ghazghkull Thraka
+One Last Kill · Mozrog Skragbad
+Da Bigger Dey Iz… · Mozrog Skragbad
+Krumpin’ Time · Nazdreg + Meganobz, Big Mek in Mega Armour + Meganobz
+Headwoppa’s Killchoppa · Beastboss on Squigosaur
+Brutal Impact · Squighog Boyz
+1
+CP
+Hit ’Em Harder
+Your unit’s melee attacks have [LETHAL HITS].
+1
+CP
+Orks Is Never Beaten
+Model in your unit destroyed, unit not selected to fight this phase: D6 (+1 if riled up); on a 4+ it stays until your unit has fought or the phase ends.
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+1
+CP
+Mow ’Em Down
+Your unit’s melee attacks have [CLEAVE 1], or +1 to the value of a [CLEAVE] they already have.
+No unit in this list can use it (needs VEHICLE)
+ANY PHASE
+2
+1
+CP
+Breakin’ Heads
+Roll one D3: your unit suffers that many mortal wounds and is no longer battle-shocked.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: BATTLE ROUND 2 ›
+
+######## game round 2 last fight · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+2
+›
+YOUR TURN
+THEIR TURN
+
+The second turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
+
+Try Dat Button! · Dread Mob detachment rule
+Might is Right · Warboss
+Clever Know-wotz · Mek + Tankbustas ×2, Mek + Flash Gitz
+Spiteful Power Trip · Killa Kans
+1
+CP
+Crazed Rampage
+Model in your unit destroyed, unit not selected to fight this phase: roll one D6; on a 4+ it stays until your unit has fought or the phase ends…
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2
+CP
+Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+
+END OF FIGHT PHASE 12.09
+
+Aerial Manoover · Deffkoptas
+ANY PHASE
+1
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+MELEE IN THIS PHASE
+
+PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
+
+Get Stuck In · War Horde detachment rule
+Prophet of Da Great Waaagh! · Ghazghkull Thraka
+One Last Kill · Mozrog Skragbad
+Da Bigger Dey Iz… · Mozrog Skragbad
+Krumpin’ Time · Nazdreg + Meganobz, Big Mek in Mega Armour + Meganobz
+Headwoppa’s Killchoppa · Beastboss on Squigosaur
+Brutal Impact · Squighog Boyz
+1
+CP
+Hit ’Em Harder
+Your unit’s melee attacks have [LETHAL HITS].
+1
+CP
+Orks Is Never Beaten
+Model in your unit destroyed, unit not selected to fight this phase: D6 (+1 if riled up); on a 4+ it stays until your unit has fought or the phase ends.
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+1
+CP
+Mow ’Em Down
+Your unit’s melee attacks have [CLEAVE 1], or +1 to the value of a [CLEAVE] they already have.
+No unit in this list can use it (needs VEHICLE)
+ANY PHASE
+2
+1
+CP
+Breakin’ Heads
+Roll one D3: your unit suffers that many mortal wounds and is no longer battle-shocked.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: BATTLE ROUND 3 ›
 
 ######## popup ability:shooty|Blitz Dem Gitz!|In your Shooting phase, if this unit’s Blitzkannon weapon targets a unit (excluding **MONSTER/VEHICLE** units), that weapon has +6 **A**. · KILLA KANS Me shooty yer’ booty
 ABILITY · SHOOTING · YOUR TURN

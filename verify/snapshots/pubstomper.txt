@@ -5,6 +5,7 @@ Grand Coven · Disposition: Priority Assets
 
 Overview
 Damage calculator
+Game tracker
 Opponent
 None yet: pick their list
 Units
@@ -593,7 +594,7 @@ Damaged: 1-6 wounds remaining
 While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
 
 Unearthly Power
-Command
+Start of the battle round
 
 Start of the battle round
 
@@ -718,7 +719,7 @@ While this unit contains one or more PSYKER models, each time an attack targets 
 
 Tzaangors
 Ambushing Hunters
-Their Fight
+End of your opponent’s turn
 
 End of your opponent’s turn
 
@@ -970,22 +971,24 @@ YOUR
 Magnus the Red
 SHOOT
 FIGHT
-THEY ATTACK
+BOTH
 THEIR
 The Swarmlord
-
 Nidzillas · T10 · Sv 2+ · 4+ InSv · W10
-
+THEY ATTACK
 6.7
 of 10 wounds lost
 destroyed in 26% of games
+
+≈55 pts destroyed
+
 Nothing ticked: the datasheets as printed
 4 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
 
-Effects are on this step.
+Effects are on the damage these attacks deal.
 
 RANGED WEAPONS
 Magnus the Red
@@ -1003,9 +1006,9 @@ AP
 D
 3
 DEVASTATING WOUNDS, PSYCHIC
+−26% wiped
 −5.5
 WOUNDS IF UNTICKED
-−26% WIPED
 Tzeentch’s Firestorm
 RNG
 24"
@@ -1020,9 +1023,9 @@ AP
 D
 2
 BLAST, IGNORES COVER, PSYCHIC
+−14% wiped
 −0.9
 WOUNDS IF UNTICKED
-−14% WIPED
 SITUATION AND RULES
 both sides
 Target has the benefit of cover
@@ -1030,63 +1033,89 @@ THEIRS
 if it applies
 no change: the weapons can ignore modifiers to the hit roll
 0
+ALL ▾
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 YOURS
 if it applies
 no change: the weapons can ignore modifiers to the hit roll
 0
+ALL ▾
 Damaged (1-6 wounds left)
 -1 to hit rolls
 YOURS
 if it applies
 no change: the weapons can ignore modifiers to the hit roll
 0
+ALL ▾
 Kindred Sorcery
 Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
 YOURS
 if it applies
 no change: it changes range only, which counts through half range: pick a band
 0
+ALL ▾
 Imbued Manifestation
 0
 Psychic Maelstrom
 +1.1
-BEST · MOST WOUNDS
-+18% wiped
+BEST
 Wrath of the Immaterium
 +0.7
-+13% wiped
 Close-quarters shooting at a unit it is engaged with
 -1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
 YOURS
 if it applies
+−14% wiped
 −0.9
 WOUNDS
-−14% WIPED
 Target is engaged
 -1 to hit; no [BLAST]
 YOURS
 if it applies
+−14% wiped
 −0.9
 WOUNDS
-−14% WIPED
 Fire Overwatch (snap shooting)
 the target within 24" (15.09): hits only on an unmodified 6, never critical; no hit re-rolls
 YOURS
 if it applies
+−26% wiped
 −5.2
 WOUNDS
-−26% WIPED
+HELP FROM OTHER UNITS
+of your list · if the table gives it
+Destiny’s Ruin (Cabal of Sorcerers)
+Your Shooting phase, manifested against this target (Warp Charge 5): re-roll hit rolls of 1 (10+: re-roll hit rolls)
+YOURS
+if it applies
++11% wiped
++0.8
+WOUNDS
+Result 5-9
++0.8
+Result 10+
++0.8
+Twist of Fate (Cabal of Sorcerers)
+Your Shooting phase, manifested against this target (Warp Charge 9): +1 AP (12+: +2 AP)
+YOURS
+if it applies
++7% wiped
++0.4
+WOUNDS
+Result 9-11
++0.4
+Result 12+
++0.4
 STRATAGEMS
 both sides, with their CP
 2CP Devastating Sorcery
 Psychic weapons, your Shooting phase: +9" range, re-roll hit and wound rolls
 YOURS
 if used
++41% wiped
 +2.3
 WOUNDS
-+41% WIPED
 NOT FOR THIS PAIR, BY THE RULES (5) · YOURS TO COUNT ANYWAY
 
 1CP Savage Roar: Test passed
@@ -1105,13 +1134,13 @@ YOURS
 Re-roll all the D6 of that Psychic test (the Channelling the Warp D6 included).
 1CP Command Re-roll
 YOURS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Corrosive Viscera
 THEIRS
 Its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).
 1CP Command Re-roll
 THEIRS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 OTHER MODIFIERS
 Hit roll
 −
@@ -1159,15 +1188,17 @@ YOUR
 Magnus the Red
 SHOOT
 FIGHT
-THEY ATTACK
+BOTH
 THEIR
 The Swarmlord
-
 Nidzillas · T10 · Sv 2+ · 4+ InSv · W10
-
+THEY ATTACK
 6.6
 of 10 wounds lost
 destroyed in 19% of games
+
+≈40 pts destroyed
+
 Blade of Magnus: strike
 Charged this turn
 ×
@@ -1176,10 +1207,9 @@ WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
 
-Effects are over the whole turn: their models destroyed by its end, and your own losses.
+Effects are on the damage these attacks deal.
 
-Fight → Fight back · the charge is taken to succeed (no charge roll)
-TAKE FIGHT OUT
+The charge is taken to succeed (no charge roll).
 
 MELEE WEAPONS
 Magnus the Red
@@ -1195,14 +1225,13 @@ AP
 D
 3
 DEVASTATING WOUNDS, PSYCHIC
+−19% wiped
 −6.6
 WOUNDS IF UNTICKED
-1.1 MORE WOUNDS OF YOURS LOST (IN THE FIGHT BACK)
-+1 MORE ▾
 PICK ONE PROFILE
 strike
 6.6
-BEST · MOST WOUNDS
+BEST
 sweep
 2.6
 SITUATION AND RULES
@@ -1218,18 +1247,19 @@ YOURS
 if it applies
 no change: the weapons can ignore modifiers to the hit roll
 0
+ALL ▾
 Kindred Sorcery
 Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
 YOURS
 if it applies
 no change: it changes range only, which counts through half range: pick a band
 0
+ALL ▾
 Imbued Manifestation
 0
 Psychic Maelstrom
 +1
-BEST · MOST WOUNDS
-0.7 fewer wounds of yours lost (in the fight back)
+BEST
 Wrath of the Immaterium
 0
 STRATAGEMS
@@ -1238,14 +1268,12 @@ both sides, with their CP
 That enemy unit takes a Battle-shock test and has -1 to hit your unit until the end of the phase; also -1 to wound if it failed the test. · in these numbers: -1 to their hit rolls
 THEIRS
 if used
-no change
 0
 Test passed
 0
 Test failed
 −1.1
 SAVES MOST
-0.5 more wounds of yours lost (in the fight back)
 NOT FOR THIS PAIR, BY THE RULES (2) · YOURS TO COUNT ANYWAY
 
 2CP Devastating Sorcery
@@ -1253,7 +1281,6 @@ YOURS
 Shooting phase only
 +2.3
 WOUNDS IF YOU COUNT IT
-2.2 FEWER WOUNDS OF YOURS LOST (IN THE FIGHT BACK)
 
 Nothing to count: 1CP Arcane Focus (yours, Shooting phase only)
 
@@ -1263,7 +1290,7 @@ They can matter at the table, but the calculator does not play them: what each o
 
 1CP Command Re-roll
 YOURS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 YOURS
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
@@ -1275,7 +1302,369 @@ THEIRS
 Its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).
 1CP Command Re-roll
 THEIRS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+1CP Epic Challenge
+THEIRS
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+THEIRS
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+OTHER MODIFIERS
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP better
+−
+0
++
+Damage
+−
+0
++
+Attacks
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+Every weapon has
+Lethal
+Sustained 1
+Dev. wounds
+Target InSv
+−
+none
++
+Target Feel No Pain
+−
+none
++
+
+######## damage both · DAMAGE Damage
+YOUR
+Magnus the Red
+SHOOT
+FIGHT
+BOTH
+THEIR
+The Swarmlord
+Nidzillas · T10 · Sv 2+ · 4+ InSv · W10
+THEY ATTACK
+9.4
+of 10 wounds lost
+destroyed in 79% of games
+
+Shoot 6.7 · Fight 2.7 · the charge is taken to succeed
+
+≈165 pts destroyed
+
+Blade of Magnus: strike
+Charged this turn
+×
+11 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+SHOOT → CHARGE → FIGHT · BIGGEST FIRST
+
+Effects are on the total: their models destroyed by the end of the fight, the shooting’s choices and the fight’s alike.
+
+The charge is taken to succeed (no charge roll); “Charged this turn” is ticked for the fight.
+
+THE SHOOTING
+FIRST
+RANGED WEAPONS
+Magnus the Red
+Gaze of Magnus
+RNG
+24"
+A
+3D3
+BS
+2+
+S
+11
+AP
+-2
+D
+3
+DEVASTATING WOUNDS, PSYCHIC
+−44% wiped
+−2
+WOUNDS IF UNTICKED
+Tzeentch’s Firestorm
+RNG
+24"
+A
+D6+3
+BS
+2+
+S
+6
+AP
+-1
+D
+2
+BLAST, IGNORES COVER, PSYCHIC
+−9% wiped
+−0.2
+WOUNDS IF UNTICKED
+SITUATION AND RULES
+both sides
+Target has the benefit of cover
+THEIRS
+if it applies
+no change: the weapons can ignore modifiers to the hit roll
+0
+ALL ▾
+Plunging Fire
+BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
+YOURS
+if it applies
+no change: the weapons can ignore modifiers to the hit roll
+0
+ALL ▾
+Damaged (1-6 wounds left)
+-1 to hit rolls
+YOURS
+if it applies
+no change: the weapons can ignore modifiers to the hit roll
+0
+ALL ▾
+Kindred Sorcery
+Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+YOURS
+if it applies
+no change: it changes range only, which counts through half range: pick a band
+0
+ALL ▾
+Imbued Manifestation
+0
+Psychic Maelstrom
++0.4
+BEST
+Wrath of the Immaterium
++0.2
+Close-quarters shooting at a unit it is engaged with
+-1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
+YOURS
+if it applies
+−9% wiped
+−0.2
+WOUNDS
+Target is engaged
+-1 to hit; no [BLAST]
+YOURS
+if it applies
+−9% wiped
+−0.2
+WOUNDS
+HELP FROM OTHER UNITS
+of your list · if the table gives it
+Destiny’s Ruin (Cabal of Sorcerers)
+Your Shooting phase, manifested against this target (Warp Charge 5): re-roll hit rolls of 1 (10+: re-roll hit rolls)
+YOURS
+if it applies
++6% wiped
++0.2
+WOUNDS
+Result 5-9
++0.2
+Result 10+
++0.2
+Twist of Fate (Cabal of Sorcerers)
+Your Shooting phase, manifested against this target (Warp Charge 9): +1 AP (12+: +2 AP)
+YOURS
+if it applies
++4% wiped
++0.1
+WOUNDS
+Result 9-11
++0.1
+Result 12+
++0.1
+STRATAGEMS
+both sides, with their CP
+2CP Devastating Sorcery
+Psychic weapons, your Shooting phase: +9" range, re-roll hit and wound rolls
+YOURS
+if used
++15% wiped
++0.4
+WOUNDS
+NOT FOR THIS PAIR, BY THE RULES (5) · YOURS TO COUNT ANYWAY
+
+1CP Savage Roar: Test passed
+THEIRS
+Fight phase only
+NO CHANGE
+
+Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (yours, Fight phase only) · 1CP Epic Challenge, 2CP Counteroffensive (theirs, Fight phase only)
+
+NOT COUNTED BY THE CALCULATOR (4)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP Arcane Focus
+YOURS
+Re-roll all the D6 of that Psychic test (the Channelling the Warp D6 included).
+1CP Command Re-roll
+YOURS
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+1CP Corrosive Viscera
+THEIRS
+Its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).
+1CP Command Re-roll
+THEIRS
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+OTHER MODIFIERS
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP better
+−
+0
++
+Damage
+−
+0
++
+Attacks
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+Every weapon has
+Lethal
+Sustained 1
+Dev. wounds
+Target InSv
+−
+none
++
+Target Feel No Pain
+−
+none
++
+THE FIGHT
+THEN, AGAINST WHAT THE SHOOTING LEFT
+MELEE WEAPONS
+Magnus the Red
+
+Against what the shooting left of the target, in each game.
+
+Blade of Magnus
+A
+7
+WS
+2+
+S
+16
+AP
+-3
+D
+3
+DEVASTATING WOUNDS, PSYCHIC
+−52% wiped
+−2.7
+WOUNDS IF UNTICKED
+PICK ONE PROFILE
+strike
+9.4
+BEST
+sweep
+8.2
+SITUATION AND RULES
+both sides
+Charged this turn
+YOURS
+holds: Both takes the charge as made (no charge roll)
+no change: no rule here needs it
+0
+Damaged (1-6 wounds left)
+-1 to hit rolls
+YOURS
+if it applies
+no change: the weapons can ignore modifiers to the hit roll
+0
+ALL ▾
+Kindred Sorcery
+Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
+YOURS
+if it applies
+no change: it changes range only, which counts through half range: pick a band
+0
+ALL ▾
+Imbued Manifestation
+0
+Psychic Maelstrom
++0.2
+BEST
+Wrath of the Immaterium
+0
+STRATAGEMS
+both sides, with their CP
+1CP Savage Roar
+That enemy unit takes a Battle-shock test and has -1 to hit your unit until the end of the phase; also -1 to wound if it failed the test. · in these numbers: -1 to their hit rolls
+THEIRS
+if used
+0
+Test passed
+0
+Test failed
+−0.3
+SAVES MOST
+NOT FOR THIS PAIR, BY THE RULES (2) · YOURS TO COUNT ANYWAY
+
+2CP Devastating Sorcery
+YOURS
+Shooting phase only
++0.5
+WOUNDS IF YOU COUNT IT
+
+Nothing to count: 1CP Arcane Focus (yours, Shooting phase only)
+
+NOT COUNTED BY THE CALCULATOR (7)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP Command Re-roll
+YOURS
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+1CP Epic Challenge
+YOURS
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+YOURS
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+1CP Corrosive Viscera
+THEIRS
+Its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).
+1CP Command Re-roll
+THEIRS
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
 THEIRS
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
@@ -1403,7 +1792,7 @@ Their Fight Any unit
 1
 CP
 Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll you just made…
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 Any phase Any unit
 1
 CP
@@ -1789,7 +2178,7 @@ DEVASTATING WOUNDS, PSYCHIC
 PSYCHIC
 ABILITIES
 Unearthly Power
-Command
+Start of the battle round
 
 Start of the battle round
 
@@ -2442,7 +2831,7 @@ Tzaangor blades×10
 Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
 ABILITIES
 Ambushing Hunters
-Their Fight
+End of your opponent’s turn
 
 End of your opponent’s turn
 
@@ -2751,6 +3140,1273 @@ WALKER
 Ask about this unit
 ‹ Tzaangor Enlightened with Fatecaster greatbows
 
+######## game · DEFILER Game tracker
+THIS GAME
+NEW GAME
+Pubstomper
+your list
+Nidzillas
+your opponent’s list
+CP
+−
+0
++
+−
+0
++
+VP
+−
+0
++
+−
+0
++
+COMMAND POINTS
+08.02 GAIN CORE CP
+
+Both players gain 1 Command Point (CP).
+
+EVENT COMPANION · GENERATING COMMAND POINTS
+
+Excluding Core CP, each player can gain a maximum of 1CP per battle round (including he CP gained when a player discards an active Secondary Mission card).
+
+THEIR LIST
+
+Hive Commander · The Swarmlord: “At the start of your Command phase, if this model is on the battlefield, you gain 1CP”
+
+CHOICES THIS GAME
+Kindred Sorcery · Grand Coven detachment rule
+
+In your Command phase · Until the start of your next Command phase
+
+IMBUED MANIFESTATION
+PSYCHIC MAELSTROM
+WRATH OF THE IMMATERIUM
+Unearthly Power · Magnus the Red
+
+At the start of the battle round · Battle round 1
+
+IMPOSSIBLE FORM
+TREASON OF TZEENTCH
+TIME FLUX
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The first turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+START OF BATTLE ROUND 07.01
+
+Unearthly Power · Magnus the Red
+
+GAIN CORE CP 08.02
+
+Both players gain 1 Command Point (CP).
+
+BATTLE-SHOCK 08.03
+
+1
+CP
+Insane Bravery
+The battle-shock roll you are about to make for your unit is automatically successful.
+
+COMMAND ABILITIES 08.04
+
+Kindred Sorcery · Grand Coven detachment rule
+Imbued Manifestation
+Psychic Maelstrom
+Wrath of the Immaterium
+Umbralefic Crystal · Sorcerer in Terminator Armour + Scarab Occult Terminators
+1
+CP
+Egotistical Power
+Until the start of your next Command phase, your unit has Imbued Manifestation, Psychic Maelstrom or Wrath of the Immaterium instead of any other Kindred Sorcery ability, even one already selected this battle.
+1
+CP
+Desecration of Worlds
+That objective marker stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+ANY PHASE
+3
+1
+CP
+Psychic Dominion
+Until the end of the phase, attacks made against your unit with Psychic weapons have [HAZARDOUS], and models in your unit have Feel No Pain 4+ against Psychic Attacks.
+1
+CP
+Destined by Fate
+Change the Damage of that attack to 0.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NIDZILLAS IN THIS PHASE
+
+START OF BATTLE ROUND 07.01
+
+Singular Purpose · Norn Assimilator ×2, Norn Emissary ×2
+
+COMMAND ABILITIES 08.04
+
+Synapse · Tyranids army rule
+Shadow in the Warp · Tyranids army rule
+ANY PHASE
+5
+Enraged Behemoths · Crusher Stampede detachment rule
+Malign Presence · The Swarmlord
+Will of the Hive Mind · Hive Tyrant
+1
+CP
+Catalytic Biofortification
+Your unit has Feel No Pain 4+ against mortal wounds.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: MOVEMENT PHASE ›
+BEFORE THE BATTLE
+
+Warhammer Event Mission Sequence · GW Warhammer Event Companion 1.3
+
+1 Muster Armies
+
+Muster armies as described in the Warhammer 40,000 app, with the following exception: once they have mustered their army, a player selects one Force Disposition card available to them and records that on their roster.
+
+2 Determine Mission
+
+Each player finds their opponent’s Force Disposition symbol on their Force Disposition card. The Primary Mission that is listed below that symbol is that player’s Primary Mission, which describes how to score VP.
+
+3 Determine a Layout
+
+Each combination of Primary Missions has three recommended layouts, labelled A, B and C. These can be found in the Warhammer 40,000 app and at the end of this companion. As directed by the Warhammer Event organiser, the players either use the layout specified or randomly determine which of these layouts to use.
+
+4 Create the Battlefield
+
+Missions are played on rectangular battlefields 44" by 60" in size. Players set up the terrain areas as shown in the selected layout, then set up terrain features on those terrain areas as shown in the selected layout.
+
+5 Determine Attacker and Defender
+
+Players look at the selected layout and agree which edges of the battlefield the players have set up correspond with the Attacker’s and Defender’s battlefield edges labelled on the card.
+
+Roll off: the winner decides who will be the Attacker and who will be the Defender.
+
+6 Select Secondary Missions
+
+Secondary Mission cards detail additional ways to score VP. Players now secretly note down whether they will use Tactical or Fixed Secondary Missions. If using Fixed Missions, they also note down which two Fixed Missions they will use (see below). Players then reveal these decisions.
+
+7 Declare Battle Formations
+Strategic reserves
+
+Players secretly note down, in order:
+
+Which of their units will start the battle embarked within which TRANSPORTS.
+Which of their units will start the battle in strategic reserves.
+
+Players then reveal these decisions.
+
+20.01 PLACING UNITS IN STRATEGIC RESERVES
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+THIS LIST
+
+App note, not rules text: Pubstomper: points limit 2000 pts (Strike Force); 50% of it is 1000 pts.
+
+Deep Strike: Magnus the Red 455 pts, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph 205 pts, Sorcerer in Terminator Armour + Scarab Occult Terminators · Umbralefic Crystal 565 pts (1225 pts)
+
+THEIR LIST
+
+App note, not rules text: Nidzillas: points limit 2000 pts (Strike Force); 50% of it is 1000 pts.
+
+8 Deploy Armies
+
+Players take it in turns to set up their units (excluding those in strategic reserves) one at a time, wholly within their deployment zone, starting with the Defender.
+
+If you set up a TITANIC unit when it is your turn to set up a unit, skip your next turn to set up a unit.
+
+Once you have finished setting up your units, if your opponent has any units that have not been set up, they set up those units.
+
+9 Redeploy Units
+
+Some rules let you redeploy certain units after both armies are deployed. Unless otherwise stated, you resolve those rules in this step. Players alternate resolving any such rules, starting with the Attacker. Units placed in strategic reserves in this step do not count towards the combined points value of your strategic reserves units.
+
+10 Determine First Turn
+Who goes first
+
+Roll off: the winner takes the first turn.
+
+FIRST TURN
+PUBSTOMPER
+NIDZILLAS
+11 Resolve Pre-battle Rules
+Scouts
+
+Players alternate resolving any pre-battle rules units from their army may have, starting with the player who will take the first turn.
+
+THIS LIST
+Scouts: Tzaangors Scouts 6"
+
+12 Begin the Battle
+
+The first battle round begins.
+
+13 End the Battle
+
+The battle ends after five battle rounds have been completed. Even if you have no models remaining in your army at the start of your turn, players continue to play out their turns until the battle ends.
+
+14 Determine Victor
+
+Each player scores 10VP if their army is painted to a Battle Ready standard. At the end of the battle, the player with the most VP is the victor. If the players are tied, the battle is a draw.
+
+######## game mid-game · GAME Game tracker
+THIS GAME
+NEW GAME
+Pubstomper
+your list
+Nidzillas
+your opponent’s list
+CP
+−
+3
++
+−
+2
++
+VP
+−
+15
++
+−
+10
++
+COMMAND POINTS
+08.02 GAIN CORE CP
+
+Both players gain 1 Command Point (CP).
+
+EVENT COMPANION · GENERATING COMMAND POINTS
+
+Excluding Core CP, each player can gain a maximum of 1CP per battle round (including he CP gained when a player discards an active Secondary Mission card).
+
+THEIR LIST
+
+Hive Commander · The Swarmlord: “At the start of your Command phase, if this model is on the battlefield, you gain 1CP”
+
+CHOICES THIS GAME
+Kindred Sorcery · Grand Coven detachment rule
+
+In your Command phase · Until the start of your next Command phase
+
+IMBUED MANIFESTATION
+PSYCHIC MAELSTROM
+WRATH OF THE IMMATERIUM
+IMBUED MANIFESTATION
+
+Add 6" to the Range characteristic of ranged Psychic weapons equipped by THOUSAND SONS models from your army.
+
+Unearthly Power · Magnus the Red
+
+At the start of the battle round · Battle round 2
+
+IMPOSSIBLE FORM
+TREASON OF TZEENTCH
+TIME FLUX
+IMPOSSIBLE FORM
+
+Each time an attack is made against this PSYKER (excluding Psychic Attacks), subtract 1 from the Damage characteristic of that attack.
+
+THIS PHASE
+BATTLE ROUND
+‹
+2
+›
+YOUR TURN
+THEIR TURN
+
+The second turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+START OF SHOOTING PHASE 10.01
+
+Cabal of Sorcerers · Thousand Sons army rule
+Marked by Fate · Sorcerer in Terminator Armour + Scarab Occult Terminators
+
+SHOOT 10.02
+
+Kindred Sorcery · Grand Coven detachment rule
+Picked: Imbued Manifestation
+Imbued Manifestation
+✓
+Psychic Maelstrom
+Wrath of the Immaterium
+Lord of the Planet of the Sorcerers · Magnus the Red
+Aetherstride · Daemon Prince of Tzeentch with wings
+Hunter of Souls · Daemon Prince of Tzeentch with wings
+Twisted Sorceries · Sorcerer + Rubric Marines
+Bringers of Change · Sorcerer + Rubric Marines
+Scuttling Walker · Defiler
+1
+CP
+Arcane Focus
+Re-roll all the D6 of that Psychic test (the Channelling the Warp D6 included).
+2
+CP
+Devastating Sorcery
+Until the end of the phase, your unit’s Psychic weapons have +9" range and can re-roll the hit roll and the wound roll.
+1
+CP
+Explosives
+One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
+ANY PHASE
+3
+1
+CP
+Psychic Dominion
+Until the end of the phase, attacks made against your unit with Psychic weapons have [HAZARDOUS], and models in your unit have Feel No Pain 4+ against Psychic Attacks.
+1
+CP
+Destined by Fate
+Change the Damage of that attack to 0.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NIDZILLAS IN THIS PHASE
+
+START OF SHOOTING PHASE 10.01
+
+1
+CP
+Smokescreen
+Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+No unit in this list can use it (needs SMOKE)
+
+SHOOT 10.02
+
+Synapse · Tyranids army rule
+1
+CP
+Corrosive Viscera
+Its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).
+ANY PHASE
+6
+Enraged Behemoths · Crusher Stampede detachment rule
+Malign Presence · The Swarmlord
+Will of the Hive Mind · Hive Tyrant
+Singular Purpose · Norn Assimilator ×2, Norn Emissary ×2
+1
+CP
+Catalytic Biofortification
+Your unit has Feel No Pain 4+ against mortal wounds.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: CHARGE PHASE ›
+BEFORE THE BATTLE
+
+######## game round 1 your command · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The first turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+START OF BATTLE ROUND 07.01
+
+Unearthly Power · Magnus the Red
+
+GAIN CORE CP 08.02
+
+Both players gain 1 Command Point (CP).
+
+BATTLE-SHOCK 08.03
+
+1
+CP
+Insane Bravery
+The battle-shock roll you are about to make for your unit is automatically successful.
+
+COMMAND ABILITIES 08.04
+
+Kindred Sorcery · Grand Coven detachment rule
+Imbued Manifestation
+Psychic Maelstrom
+Wrath of the Immaterium
+Umbralefic Crystal · Sorcerer in Terminator Armour + Scarab Occult Terminators
+1
+CP
+Egotistical Power
+Until the start of your next Command phase, your unit has Imbued Manifestation, Psychic Maelstrom or Wrath of the Immaterium instead of any other Kindred Sorcery ability, even one already selected this battle.
+1
+CP
+Desecration of Worlds
+That objective marker stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+ANY PHASE
+3
+1
+CP
+Psychic Dominion
+Until the end of the phase, attacks made against your unit with Psychic weapons have [HAZARDOUS], and models in your unit have Feel No Pain 4+ against Psychic Attacks.
+1
+CP
+Destined by Fate
+Change the Damage of that attack to 0.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NIDZILLAS IN THIS PHASE
+
+START OF BATTLE ROUND 07.01
+
+Singular Purpose · Norn Assimilator ×2, Norn Emissary ×2
+
+COMMAND ABILITIES 08.04
+
+Synapse · Tyranids army rule
+Shadow in the Warp · Tyranids army rule
+ANY PHASE
+5
+Enraged Behemoths · Crusher Stampede detachment rule
+Malign Presence · The Swarmlord
+Will of the Hive Mind · Hive Tyrant
+1
+CP
+Catalytic Biofortification
+Your unit has Feel No Pain 4+ against mortal wounds.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: MOVEMENT PHASE ›
+
+######## game round 1 your movement · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The first turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+MOVE UNITS 09.02
+
+Time Flux · Magnus the Red Crimson King
+Aetherstride · Daemon Prince of Tzeentch with wings
+Umbralefic Crystal · Sorcerer in Terminator Armour + Scarab Occult Terminators
+Brayhorn · Tzaangors
+Scuttling Walker · Defiler
+ANY PHASE
+3
+1
+CP
+Psychic Dominion
+Until the end of the phase, attacks made against your unit with Psychic weapons have [HAZARDOUS], and models in your unit have Feel No Pain 4+ against Psychic Attacks.
+1
+CP
+Destined by Fate
+Change the Damage of that attack to 0.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NIDZILLAS IN THIS PHASE
+
+MOVE UNITS 09.02
+
+Synapse · Tyranids army rule
+Onslaught · Hive Tyrant
+Harpoon Barbs · Norn Assimilator ×2
+
+END OF MOVEMENT PHASE 09.03
+
+1
+CP
+Rapid Ingress
+Your unit in strategic reserves makes an ingress move (not in the first battle round).
+1
+CP
+Fire Overwatch
+Your unit shoots using snap shooting.
+ANY PHASE
+6
+Enraged Behemoths · Crusher Stampede detachment rule
+Malign Presence · The Swarmlord
+Will of the Hive Mind · Hive Tyrant
+Singular Purpose · Norn Assimilator ×2, Norn Emissary ×2
+1
+CP
+Catalytic Biofortification
+Your unit has Feel No Pain 4+ against mortal wounds.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: SHOOTING PHASE ›
+
+######## game round 1 your shooting · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The first turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+START OF SHOOTING PHASE 10.01
+
+Cabal of Sorcerers · Thousand Sons army rule
+Marked by Fate · Sorcerer in Terminator Armour + Scarab Occult Terminators
+
+SHOOT 10.02
+
+Kindred Sorcery · Grand Coven detachment rule
+Imbued Manifestation
+Psychic Maelstrom
+Wrath of the Immaterium
+Lord of the Planet of the Sorcerers · Magnus the Red
+Aetherstride · Daemon Prince of Tzeentch with wings
+Hunter of Souls · Daemon Prince of Tzeentch with wings
+Twisted Sorceries · Sorcerer + Rubric Marines
+Bringers of Change · Sorcerer + Rubric Marines
+Scuttling Walker · Defiler
+1
+CP
+Arcane Focus
+Re-roll all the D6 of that Psychic test (the Channelling the Warp D6 included).
+2
+CP
+Devastating Sorcery
+Until the end of the phase, your unit’s Psychic weapons have +9" range and can re-roll the hit roll and the wound roll.
+1
+CP
+Explosives
+One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
+ANY PHASE
+3
+1
+CP
+Psychic Dominion
+Until the end of the phase, attacks made against your unit with Psychic weapons have [HAZARDOUS], and models in your unit have Feel No Pain 4+ against Psychic Attacks.
+1
+CP
+Destined by Fate
+Change the Damage of that attack to 0.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NIDZILLAS IN THIS PHASE
+
+START OF SHOOTING PHASE 10.01
+
+1
+CP
+Smokescreen
+Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+No unit in this list can use it (needs SMOKE)
+
+SHOOT 10.02
+
+Synapse · Tyranids army rule
+1
+CP
+Corrosive Viscera
+Its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).
+ANY PHASE
+6
+Enraged Behemoths · Crusher Stampede detachment rule
+Malign Presence · The Swarmlord
+Will of the Hive Mind · Hive Tyrant
+Singular Purpose · Norn Assimilator ×2, Norn Emissary ×2
+1
+CP
+Catalytic Biofortification
+Your unit has Feel No Pain 4+ against mortal wounds.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: CHARGE PHASE ›
+
+######## game round 1 your charge · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The first turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+CHARGE 11.02
+
+Cabal of Sorcerers · Thousand Sons army rule
+Aetherstride · Daemon Prince of Tzeentch with wings
+Brayhorn · Tzaangors
+Prophesied Doom · Tzaangor Enlightened ×2
+1
+CP
+Crushing Impact
+After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+ANY PHASE
+3
+1
+CP
+Psychic Dominion
+Until the end of the phase, attacks made against your unit with Psychic weapons have [HAZARDOUS], and models in your unit have Feel No Pain 4+ against Psychic Attacks.
+1
+CP
+Destined by Fate
+Change the Damage of that attack to 0.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NIDZILLAS IN THIS PHASE
+
+CHARGE 11.02
+
+Synapse · Tyranids army rule
+
+END OF CHARGE PHASE 11.03
+
+1
+CP
+Heroic Intervention
+Your unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+ANY PHASE
+6
+Enraged Behemoths · Crusher Stampede detachment rule
+Malign Presence · The Swarmlord
+Will of the Hive Mind · Hive Tyrant
+Singular Purpose · Norn Assimilator ×2, Norn Emissary ×2
+1
+CP
+Catalytic Biofortification
+Your unit has Feel No Pain 4+ against mortal wounds.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: FIGHT PHASE ›
+
+######## game round 1 your fight · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The first turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
+
+Kindred Sorcery · Grand Coven detachment rule
+Imbued Manifestation
+Psychic Maelstrom
+Wrath of the Immaterium
+Hunter of Souls · Daemon Prince of Tzeentch with wings
+Twisted Sorceries · Sorcerer + Rubric Marines
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+ANY PHASE
+3
+1
+CP
+Psychic Dominion
+Until the end of the phase, attacks made against your unit with Psychic weapons have [HAZARDOUS], and models in your unit have Feel No Pain 4+ against Psychic Attacks.
+1
+CP
+Destined by Fate
+Change the Damage of that attack to 0.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NIDZILLAS IN THIS PHASE
+
+PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
+
+Synapse · Tyranids army rule
+Monstrous Nemesis · Hive Tyrant
+1
+CP
+Corrosive Viscera
+Its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).
+1
+CP
+Rampaging Monstrosities
+Until the end of the phase, your unit’s attacks can re-roll the hit roll.
+1
+CP
+Savage Roar
+That enemy unit takes a Battle-shock test and has -1 to hit your unit until the end of the phase; also -1 to wound if it failed the test.
+1
+CP
+Lesser Prey
+Your unit’s melee attacks have +2 S.
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2
+CP
+Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+ANY PHASE
+6
+Enraged Behemoths · Crusher Stampede detachment rule
+Malign Presence · The Swarmlord
+Will of the Hive Mind · Hive Tyrant
+Singular Purpose · Norn Assimilator ×2, Norn Emissary ×2
+1
+CP
+Catalytic Biofortification
+Your unit has Feel No Pain 4+ against mortal wounds.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: THEIR TURN ›
+
+######## game round 1 their command · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The second turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+GAIN CORE CP 08.02
+
+Both players gain 1 Command Point (CP).
+
+ANY PHASE
+3
+1
+CP
+Psychic Dominion
+Until the end of the phase, attacks made against your unit with Psychic weapons have [HAZARDOUS], and models in your unit have Feel No Pain 4+ against Psychic Attacks.
+1
+CP
+Destined by Fate
+Change the Damage of that attack to 0.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NIDZILLAS IN THIS PHASE
+
+START OF COMMAND PHASE 08.01
+
+Hive Commander · The Swarmlord
+
+BATTLE-SHOCK 08.03
+
+1
+CP
+Insane Bravery
+The battle-shock roll you are about to make for your unit is automatically successful.
+
+COMMAND ABILITIES 08.04
+
+Synapse · Tyranids army rule
+Shadow in the Warp · Tyranids army rule
+Protean Purpose · Norn Assimilator ×2, Norn Emissary ×2
+ANY PHASE
+6
+Enraged Behemoths · Crusher Stampede detachment rule
+Malign Presence · The Swarmlord
+Will of the Hive Mind · Hive Tyrant
+Singular Purpose · Norn Assimilator ×2, Norn Emissary ×2
+1
+CP
+Catalytic Biofortification
+Your unit has Feel No Pain 4+ against mortal wounds.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: MOVEMENT PHASE ›
+
+######## game round 1 their movement · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The second turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+MOVE UNITS 09.02
+
+Kindred Sorcery · Grand Coven detachment rule
+Imbued Manifestation
+Psychic Maelstrom
+Wrath of the Immaterium
+Hunter of Souls · Daemon Prince of Tzeentch with wings
+Bringers of Change · Sorcerer + Rubric Marines
+Malign Trickery · Tzaangor Enlightened with Fatecaster greatbows
+
+END OF MOVEMENT PHASE 09.03
+
+1
+CP
+Rapid Ingress
+Your unit in strategic reserves makes an ingress move (not in the first battle round).
+1
+CP
+Fire Overwatch
+Your unit shoots using snap shooting.
+ANY PHASE
+3
+1
+CP
+Psychic Dominion
+Until the end of the phase, attacks made against your unit with Psychic weapons have [HAZARDOUS], and models in your unit have Feel No Pain 4+ against Psychic Attacks.
+1
+CP
+Destined by Fate
+Change the Damage of that attack to 0.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NIDZILLAS IN THIS PHASE
+
+MOVE UNITS 09.02
+
+Synapse · Tyranids army rule
+Onslaught · Hive Tyrant
+1
+CP
+Untrammelled Ferocity
+Until the end of the phase, your unit’s Normal, Advance and Fall Back moves can pass through models (excluding TITANIC) and terrain up to 4" tall, and through Engagement Range without ending there; taller terrain too, but then, after your unit has moved, roll one D6: on a 1, your unit is Battle-shocked.
+ANY PHASE
+6
+Enraged Behemoths · Crusher Stampede detachment rule
+Malign Presence · The Swarmlord
+Will of the Hive Mind · Hive Tyrant
+Singular Purpose · Norn Assimilator ×2, Norn Emissary ×2
+1
+CP
+Catalytic Biofortification
+Your unit has Feel No Pain 4+ against mortal wounds.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: SHOOTING PHASE ›
+
+######## game round 1 their shooting · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The second turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+START OF SHOOTING PHASE 10.01
+
+Treason of Tzeentch · Magnus the Red Crimson King
+1
+CP
+Smokescreen
+Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+No unit in this list can use it (needs SMOKE)
+ANY PHASE
+3
+1
+CP
+Psychic Dominion
+Until the end of the phase, attacks made against your unit with Psychic weapons have [HAZARDOUS], and models in your unit have Feel No Pain 4+ against Psychic Attacks.
+1
+CP
+Destined by Fate
+Change the Damage of that attack to 0.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NIDZILLAS IN THIS PHASE
+
+SHOOT 10.02
+
+Synapse · Tyranids army rule
+Onslaught · Hive Tyrant
+1
+CP
+Swarm-guided Salvoes
+Until the end of the phase, your unit’s ranged weapons have [IGNORES COVER], and its attacks can ignore any or all modifiers to BS and to the hit roll.
+1
+CP
+Tanglestrike Rounds
+One enemy unit hit by those attacks is tethered (-2" M) until the start of your next Command phase.
+1
+CP
+Explosives
+One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
+No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
+ANY PHASE
+6
+Enraged Behemoths · Crusher Stampede detachment rule
+Malign Presence · The Swarmlord
+Will of the Hive Mind · Hive Tyrant
+Singular Purpose · Norn Assimilator ×2, Norn Emissary ×2
+1
+CP
+Catalytic Biofortification
+Your unit has Feel No Pain 4+ against mortal wounds.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: CHARGE PHASE ›
+
+######## game round 1 their charge · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The second turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+CHARGE 11.02
+
+Brayhorn · Tzaangors
+Prophesied Doom · Tzaangor Enlightened ×2
+
+END OF CHARGE PHASE 11.03
+
+1
+CP
+Heroic Intervention
+Your unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+ANY PHASE
+3
+1
+CP
+Psychic Dominion
+Until the end of the phase, attacks made against your unit with Psychic weapons have [HAZARDOUS], and models in your unit have Feel No Pain 4+ against Psychic Attacks.
+1
+CP
+Destined by Fate
+Change the Damage of that attack to 0.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NIDZILLAS IN THIS PHASE
+
+CHARGE 11.02
+
+Synapse · Tyranids army rule
+1
+CP
+Massive Impact
+Select one enemy unit within Engagement Range of your model and roll six D6: 1 mortal wound for each 4+.
+1
+CP
+Crushing Impact
+After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+ANY PHASE
+6
+Enraged Behemoths · Crusher Stampede detachment rule
+Malign Presence · The Swarmlord
+Will of the Hive Mind · Hive Tyrant
+Singular Purpose · Norn Assimilator ×2, Norn Emissary ×2
+1
+CP
+Catalytic Biofortification
+Your unit has Feel No Pain 4+ against mortal wounds.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: FIGHT PHASE ›
+
+######## game round 1 their fight · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+1
+›
+YOUR TURN
+THEIR TURN
+
+The second turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
+
+Kindred Sorcery · Grand Coven detachment rule
+Imbued Manifestation
+Psychic Maelstrom
+Wrath of the Immaterium
+Hunter of Souls · Daemon Prince of Tzeentch with wings
+Twisted Sorceries · Sorcerer + Rubric Marines
+Destroyer of Futures · Defiler
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2
+CP
+Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+
+END OF THE TURN
+
+Ambushing Hunters · Tzaangors
+ANY PHASE
+3
+1
+CP
+Psychic Dominion
+Until the end of the phase, attacks made against your unit with Psychic weapons have [HAZARDOUS], and models in your unit have Feel No Pain 4+ against Psychic Attacks.
+1
+CP
+Destined by Fate
+Change the Damage of that attack to 0.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NIDZILLAS IN THIS PHASE
+
+PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
+
+Synapse · Tyranids army rule
+Monstrous Nemesis · Hive Tyrant
+1
+CP
+Corrosive Viscera
+Its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).
+1
+CP
+Rampaging Monstrosities
+Until the end of the phase, your unit’s attacks can re-roll the hit roll.
+1
+CP
+Savage Roar
+That enemy unit takes a Battle-shock test and has -1 to hit your unit until the end of the phase; also -1 to wound if it failed the test.
+1
+CP
+Lesser Prey
+Your unit’s melee attacks have +2 S.
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+ANY PHASE
+6
+Enraged Behemoths · Crusher Stampede detachment rule
+Malign Presence · The Swarmlord
+Will of the Hive Mind · Hive Tyrant
+Singular Purpose · Norn Assimilator ×2, Norn Emissary ×2
+1
+CP
+Catalytic Biofortification
+Your unit has Feel No Pain 4+ against mortal wounds.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: BATTLE ROUND 2 ›
+
+######## game round 2 last fight · GAME Game tracker
+THIS PHASE
+BATTLE ROUND
+‹
+2
+›
+YOUR TURN
+THEIR TURN
+
+The second turn of this battle round
+
+COMMAND
+MOVEMENT
+SHOOTING
+CHARGE
+FIGHT
+
+PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
+
+Kindred Sorcery · Grand Coven detachment rule
+Imbued Manifestation
+Psychic Maelstrom
+Wrath of the Immaterium
+Hunter of Souls · Daemon Prince of Tzeentch with wings
+Twisted Sorceries · Sorcerer + Rubric Marines
+Destroyer of Futures · Defiler
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2
+CP
+Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+
+END OF THE TURN
+
+Ambushing Hunters · Tzaangors
+ANY PHASE
+3
+1
+CP
+Psychic Dominion
+Until the end of the phase, attacks made against your unit with Psychic weapons have [HAZARDOUS], and models in your unit have Feel No Pain 4+ against Psychic Attacks.
+1
+CP
+Destined by Fate
+Change the Damage of that attack to 0.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NIDZILLAS IN THIS PHASE
+
+PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
+
+Synapse · Tyranids army rule
+Monstrous Nemesis · Hive Tyrant
+1
+CP
+Corrosive Viscera
+Its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).
+1
+CP
+Rampaging Monstrosities
+Until the end of the phase, your unit’s attacks can re-roll the hit roll.
+1
+CP
+Savage Roar
+That enemy unit takes a Battle-shock test and has -1 to hit your unit until the end of the phase; also -1 to wound if it failed the test.
+1
+CP
+Lesser Prey
+Your unit’s melee attacks have +2 S.
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+ANY PHASE
+6
+Enraged Behemoths · Crusher Stampede detachment rule
+Malign Presence · The Swarmlord
+Will of the Hive Mind · Hive Tyrant
+Singular Purpose · Norn Assimilator ×2, Norn Emissary ×2
+1
+CP
+Catalytic Biofortification
+Your unit has Feel No Pain 4+ against mortal wounds.
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+NEXT: BATTLE ROUND 3 ›
+
 ######## popup ability:pubstomper|Aetherstride|In your Movement phase, when this model is set up on the battlefield using the **Deep Strike** ability, it can perform an aetherstride. If it does:
 - It can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units.
 - Until the end of the turn, its Dark Blessing has the **[SUSTAINED HITS D3]** ability.
@@ -2881,6 +4537,20 @@ ABILITY · START OF THE BATTLE ROUND
 Unearthly Power
 
 At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.
+
+TO PICK FROM: CRIMSON KING
+
+Impossible Form Psychic
+
+Each time an attack is made against this PSYKER (excluding Psychic Attacks), subtract 1 from the Damage characteristic of that attack.
+
+Treason of Tzeentch Psychic
+
+At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this PSYKER. Until the end of the phase, ranged weapons equipped by models in that unit have the [HAZARDOUS] ability.
+
+Time Flux Aura, Psychic
+
+While a friendly THOUSAND SONS unit is within 6" of this PSYKER, add 2" to the Move characteristic of models in that unit.
 
 UNITMagnus the Red
 
@@ -3722,6 +5392,16 @@ If that unit is in strategic reserves, you can set up that unit anywhere that is
 If that unit is wholly within your deployment zone, it can make a scout move (see below).
 If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.
 
+24.32 Scout Move:
+
+MAXIMUM DISTANCE: The X" in Scouts X".
+
+ELIGIBLE IF: It is the Resolve Pre-battle Abilities step, and your unit is wholly within your deployment zone.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+AFTER MOVING: Your unit must be more than 8" horizontally from all enemy units.
+
 IN THIS ARMYTzaangors
 
 Ask about this rule
@@ -3736,6 +5416,16 @@ This ability always takes the form Scouts X". In the Resolve Pre-battle Abilitie
 If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone.
 If that unit is wholly within your deployment zone, it can make a scout move (see below).
 If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.
+
+24.32 Scout Move:
+
+MAXIMUM DISTANCE: The X" in Scouts X".
+
+ELIGIBLE IF: It is the Resolve Pre-battle Abilities step, and your unit is wholly within your deployment zone.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+AFTER MOVING: Your unit must be more than 8" horizontally from all enemy units.
 
 IN THIS ARMYTzaangors
 
