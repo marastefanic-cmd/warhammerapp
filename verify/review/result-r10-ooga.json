@@ -1,0 +1,395 @@
+[
+ {
+  "key": "faf55b462bca284f",
+  "where": "ooga-booga · Nazdreg",
+  "verdict": "ok",
+  "why": "NR Categories: \"Explosives*, Meganobz*, *from combined unit\"; the only other unit is the led Meganobz (Wahapedia Meganobz keywords \"INFANTRY; EXPLOSIVES; MEGA ARMOUR\"; Nazdreg has no EXPLOSIVES)."
+ },
+ {
+  "key": "f3af1bd37741ec69",
+  "where": "ooga-booga · Nazdreg",
+  "verdict": "ok",
+  "why": "NR roster: \"Nazdreg Epic Hero 165\" and \"(5) Meganobz Infantry 200 Nazdreg\"; header \"365 PTS\". 165 + 200 = 365."
+ },
+ {
+  "key": "cd719f1c325aad43",
+  "where": "ooga-booga · Zodgrod Wortsnagga · Super Runts",
+  "verdict": "ok",
+  "why": "NR prints \"Super Runts - Zodgrod Wortsnagga\" (Wahapedia: Zodgrod's datasheet ability)."
+ },
+ {
+  "key": "f8d700e93a3f0e3a",
+  "where": "ooga-booga · Zodgrod Wortsnagga · That’ll Learn Ya",
+  "verdict": "ok",
+  "why": "NR prints \"That'll Learn Ya (Once per battle round, per unit) - Runtherd\"; Wahapedia Runtherd: \"That’ll Learn Ya (Once per battle round, per unit)\"."
+ },
+ {
+  "key": "0ad2cd6251afec51",
+  "where": "ooga-booga · Zodgrod Wortsnagga · That’ll Learn Ya",
+  "verdict": "ok",
+  "why": "NR prints \"That'll Learn Ya (Once per battle round, per unit) - Runtherd\"."
+ },
+ {
+  "key": "9417ef8455c52be3",
+  "where": "ooga-booga · Zodgrod Wortsnagga · Downtrodden",
+  "verdict": "ok",
+  "why": "NR prints \"Downtrodden - Gretchin\"."
+ },
+ {
+  "key": "03c460f0fe57ff68",
+  "where": "ooga-booga · Zodgrod Wortsnagga · Thievin’ Scavengers",
+  "verdict": "ok",
+  "why": "NR prints \"Thievin’ Scavengers - Gretchin\"."
+ },
+ {
+  "key": "d3dbc1a7e9ba2457",
+  "where": "ooga-booga · Zodgrod Wortsnagga · Extra Sneaky",
+  "verdict": "ok",
+  "why": "NR prints no tag, but Wahapedia Runt Swarm lists \"Extra SneakyUPGRADE 10 pts\"; same tag as the other Upgrades (Supa-snazz Dakka, Gore-stained Veterans). Core Rules FAQ: \"Upgrades are a type of enhancement\"."
+ },
+ {
+  "key": "3165d35f42ab2353",
+  "where": "ooga-booga · Zodgrod Wortsnagga · Extra Sneaky",
+  "verdict": "ok",
+  "why": "NR prints \"Extra Sneaky - Gretchin\"."
+ },
+ {
+  "key": "8816b6e11f48c411",
+  "where": "ooga-booga · Zodgrod Wortsnagga · Extra Sneaky",
+  "verdict": "ok",
+  "why": "\"This unit has -3\" detection range.\" The def repeats it word for word. Core 13.09: \"While a model is hidden, it can only be visible to enemy models that are within its detection range\", so it bears on whether enemies can target the unit, like the Lone Operative defs. \"This unit\" covers the whole attached unit (19.04)."
+ },
+ {
+  "key": "5951ad6922d3279f",
+  "where": "ooga-booga · Zodgrod Wortsnagga",
+  "verdict": "ok",
+  "why": "NR Categories: \"Battleline*, Gretchin*, Grots*, *from combined unit\"."
+ },
+ {
+  "key": "c292ea097377a4cd",
+  "where": "ooga-booga · Zodgrod Wortsnagga",
+  "verdict": "ok",
+  "why": "NR roster: Zodgrod 50, Runtherd 10, \"(20) Gretchin 90\"; header \"150 PTS\". The 90 is NR's printed figure: 80 for 20 models (Wahapedia) plus Extra Sneaky 10. The upgrade is counted in the bodyguard's points, like Supa-glowy Fing in the Big Mek in Mega Armour's 115."
+ },
+ {
+  "key": "50a164a53cbb45d0",
+  "where": "ooga-booga · Zodgrod Wortsnagga",
+  "verdict": "ok",
+  "why": "NR Options: \"Da Grabzappa, Squigstoppa\" (Zodgrod), \"Runtherd's Toolz, Slugga\" (Runtherd), \"Grot Blasta, Scavenged Shivs\" (20x Gretchin); weapon rows \"Squigstoppa … - Zodgrod Wortsnagga\", \"Slugga … - Runtherd\", \"Grot Blasta … (x20) - Gretchin\", \"Scavenged Shivs (Super Runts) (x20) - Gretchin\". All match."
+ },
+ {
+  "key": "c514ca2c6c836281",
+  "where": "ooga-booga · Big Mek · Shokk-boosta",
+  "verdict": "ok",
+  "why": "NR prints \"Shokk-boosta - Big Mek\"."
+ },
+ {
+  "key": "8cd6e0396bb13428",
+  "where": "ooga-booga · Big Mek · More Dakka",
+  "verdict": "ok",
+  "why": "NR prints \"More Dakka - Big Mek\"."
+ },
+ {
+  "key": "cc4ea41b5eb54982",
+  "where": "ooga-booga · Big Mek · Crude Surgery",
+  "verdict": "ok",
+  "why": "NR prints \"Crude Surgery - Painboy\"."
+ },
+ {
+  "key": "7ce0e49e679deb18",
+  "where": "ooga-booga · Big Mek · Catch Dat Red Bit",
+  "verdict": "ok",
+  "why": "NR prints \"Catch Dat Red Bit (Once per battle, per unit) - Painboy\"."
+ },
+ {
+  "key": "010c6d18cd36bebf",
+  "where": "ooga-booga · Big Mek · Ammo Runts",
+  "verdict": "ok",
+  "why": "NR prints \"Ammo Runts (Once per battle, per unit) - Nobz\"."
+ },
+ {
+  "key": "4079ef9368c07d10",
+  "where": "ooga-booga · Big Mek · Get Out da Way!",
+  "verdict": "ok",
+  "why": "NR prints \"Get Out da Way! - Nobz\"."
+ },
+ {
+  "key": "fc5dd6010b27b0cd",
+  "where": "ooga-booga · Big Mek · Paired Krumpas",
+  "verdict": "ok",
+  "why": "NR prints \"Paired Krumpas - Nobz\" (and \"2x Nob w/ Kustom Krumpa and Paired Krumpas\")."
+ },
+ {
+  "key": "ac6d32ff43c370ed",
+  "where": "ooga-booga · Big Mek",
+  "verdict": "ok",
+  "why": "NR Categories: \"Painboy*, Nobz*, *from combined unit\"."
+ },
+ {
+  "key": "7cf497ade1d5af7c",
+  "where": "ooga-booga · Big Mek",
+  "verdict": "ok",
+  "why": "NR roster: Big Mek 100, Painboy 45, \"(10) Nobz 240 Big Mek, Painboy\"; header \"385 PTS\". 100 + 45 + 240 = 385."
+ },
+ {
+  "key": "840b224c4068287a",
+  "where": "ooga-booga · Big Mek",
+  "verdict": "ok",
+  "why": "NR Options: \"Kustom mega-blasta, Drilla\", \"’Urty syringe, Dok's Toolz\", \"Kombi-rokkit, Kustom Krumpa\" (8x), \"Kustom Krumpa, Paired Krumpas\" (2x; Paired Krumpas is an ability, so the gear is Kustom Krumpa). Weapon rows: Kombi-rokkit (x8) - Nobz, Kustom Krumpa (x10) - Nobz, the rest Big Mek/Painboy. All match."
+ },
+ {
+  "key": "c4aed3d33b72abb6",
+  "where": "ooga-booga · Big Mek in Mega Armour · Fix Dat Armour Up",
+  "verdict": "ok",
+  "why": "NR prints \"Fix Dat Armour Up (Once per battle, per unit) - Big Mek in Mega Armour\"."
+ },
+ {
+  "key": "6dcb0a82569a4934",
+  "where": "ooga-booga · Big Mek in Mega Armour · More Dakka",
+  "verdict": "ok",
+  "why": "NR prints \"More Dakka - Big Mek in Mega Armour\"."
+ },
+ {
+  "key": "4ae91ff247f0b31c",
+  "where": "ooga-booga · Big Mek in Mega Armour · Supa-glowy Fing",
+  "verdict": "ok",
+  "why": "NR prints \"Supa-glowy Fing - Big Mek in Mega Armour\"; the text says \"This model’s ranged attacks\"."
+ },
+ {
+  "key": "352c2bdffb6e1e0c",
+  "where": "ooga-booga · Big Mek in Mega Armour · Krumpin’ Time",
+  "verdict": "ok",
+  "why": "NR prints \"Krumpin’ Time - Meganobz\"."
+ },
+ {
+  "key": "853d9711a0d1c8aa",
+  "where": "ooga-booga · Big Mek in Mega Armour · Arrogant Invulnerability",
+  "verdict": "ok",
+  "why": "NR prints \"Arrogant Invulnerability - Meganobz\"."
+ },
+ {
+  "key": "193b99e557fe69c2",
+  "where": "ooga-booga · Big Mek in Mega Armour",
+  "verdict": "ok",
+  "why": "More Dakka: \"This unit’s ranged attacks have: [IGNORES COVER]\". It is a datasheet ability (Wahapedia ABILITIES, not wargear). Core 19.04: \"abilities/rules that affect a unit (or models in it) apply to every model in an attached unit\"; FAQ: \"A rule that applies to ’this/that unit’ … applies to all models in an attached unit\". So the Meganobz' Kombi-weapon has it too, and NR prints it on the Nobz' Kombi-rokkit in the Big Mek unit. NR leaves it off the Meganobz' profiles, so the footnote is needed. It says the rule's words and nothing more. It also covers the Big Mek's two weapons, which already print it, but a keyword does not stack, so nothing is added twice. (19.04 also says it lasts only while the Big Mek is alive; the app adds that caveat nowhere for leader abilities.)"
+ },
+ {
+  "key": "b1bb7ccc40ddcf56",
+  "where": "ooga-booga · Big Mek in Mega Armour",
+  "verdict": "ok",
+  "why": "NR Categories: \"Meganobz*, *from combined unit\"; the Big Mek in Mega Armour already has EXPLOSIVES (Wahapedia \"INFANTRY; BIG MEK; CHARACTER; EXPLOSIVES; MEGA ARMOUR\")."
+ },
+ {
+  "key": "17369ac9a4a5482c",
+  "where": "ooga-booga · Big Mek in Mega Armour",
+  "verdict": "ok",
+  "why": "NR roster: \"Big Mek in Mega Armour Character 115\" and \"(5) Meganobz Infantry 175 Big Mek in Mega Armour\"; header \"290 PTS\". 115 + 175 = 290."
+ },
+ {
+  "key": "e9871fbf7a7aeab9",
+  "where": "ooga-booga · Big Mek in Mega Armour",
+  "verdict": "ok",
+  "why": "NR Options: \"Supa-glowy Fing, Kustom Mega-blasta, Power Klaw, Tellyport Blasta\" (the enhancement is not gear) and \"Kombi-weapon, Power Klaw\" (5x). Weapon rows: Kustom Mega-blasta/Tellyport Blasta/Power Klaw - Big Mek in Mega Armour; Kombi-weapon (x5) and Power Klaw (x5) - Meganobz. All match."
+ },
+ {
+  "key": "25fbf0a8ce77471a",
+  "where": "Bully Boyz rule · Displays of Savagery",
+  "verdict": "ok",
+  "why": "\"Friendly MEGANOBZ/NOBZ units’ melee attacks have [SUSTAINED HITS 1].\" Melee attacks are made only in the Fight phase. Same reading as the signed-off Get Stuck In and Relentless Rage."
+ },
+ {
+  "key": "3c1b993d6d5c8a20",
+  "where": "Bully Boyz rule · Displays of Savagery",
+  "verdict": "ok",
+  "why": "There is no turn limit, and both players fight in the Fight phase, so either turn."
+ },
+ {
+  "key": "66b0e6394d2e86b2",
+  "where": "Bully Boyz rule · Displays of Savagery",
+  "verdict": "ok",
+  "why": "\"Friendly MEGANOBZ/NOBZ units\": any of the two keywords. Attached units have their bodyguard's keywords (19.03), so Nazdreg + Meganobz, Big Mek in Mega Armour + Meganobz and both Big Mek + Nobz units qualify. No footnote re-adds the [SUSTAINED HITS 1] NR already prints."
+ },
+ {
+  "key": "1ed008d0cee811ce",
+  "where": "Bully Boyz · Too Arrogant to Die",
+  "verdict": "ok",
+  "why": "WHEN: \"Fight phase, when an enemy unit targets a friendly MEGANOBZ/NOBZ unit.\""
+ },
+ {
+  "key": "6853ea205d6c4714",
+  "where": "Bully Boyz · Too Arrogant to Die",
+  "verdict": "ok",
+  "why": "\"Fight phase\", with no \"your\"/\"your opponent’s\", so either turn."
+ },
+ {
+  "key": "36dab7b1afe9e216",
+  "where": "Bully Boyz · Too Arrogant to Die",
+  "verdict": "ok",
+  "why": "TARGET: \"That MEGANOBZ/NOBZ unit.\""
+ },
+ {
+  "key": "78c6e7bc2ee5d3cd",
+  "where": "Bully Boyz · Too Arrogant to Die",
+  "verdict": "ok",
+  "why": "EFFECT: \"When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one D6, with +1 to that roll if your unit is riled up: On a 4+, do not remove that model … When your unit has fought, or at the end of the phase (whichever comes first), that model is removed\". The gist is the same, shorter (as Crazed Rampage's)."
+ },
+ {
+  "key": "a8f82a490d45f90f",
+  "where": "Bully Boyz · Armed to da Teef",
+  "verdict": "ok",
+  "why": "WHEN: \"Your Shooting phase or the Fight phase\"."
+ },
+ {
+  "key": "be4ed110f239644e",
+  "where": "Bully Boyz · Armed to da Teef",
+  "verdict": "ok",
+  "why": "\"the Fight phase\" has no turn, so the stratagem as a whole is either turn; the Shooting phase is limited by turns."
+ },
+ {
+  "key": "5c8d6fea5fd59583",
+  "where": "Bully Boyz · Armed to da Teef",
+  "verdict": "ok",
+  "why": "\"Your Shooting phase\": shooting is your turn only; Fight is left at either."
+ },
+ {
+  "key": "2799ddb19d97e698",
+  "where": "Bully Boyz · Armed to da Teef",
+  "verdict": "ok",
+  "why": "TARGET: \"That MEGANOBZ/NOBZ unit.\""
+ },
+ {
+  "key": "5834a3f7790a87ec",
+  "where": "Bully Boyz · Armed to da Teef",
+  "verdict": "ok",
+  "why": "EFFECT: \"Your unit’s attacks can: Re-roll hit rolls of 1. If your unit is riled up, re-roll hit rolls.\" The rule says \"attacks\", so kind is all. The when copies the WHEN phases, and the note is the effect. No hit re-roll is printed by NR, so nothing is doubled."
+ },
+ {
+  "key": "d17aa45acd2b9011",
+  "where": "Bully Boyz · Armed to da Teef",
+  "verdict": "ok",
+  "why": "Same as the EFFECT: \"Re-roll hit rolls of 1\" / \"If your unit is riled up, re-roll hit rolls.\""
+ },
+ {
+  "key": "7173745124f5cf5b",
+  "where": "Bully Boyz · Hulking Brutes",
+  "verdict": "ok",
+  "why": "WHEN: \"Your opponent’s Shooting phase\"."
+ },
+ {
+  "key": "8cfe5487d405597f",
+  "where": "Bully Boyz · Hulking Brutes",
+  "verdict": "ok",
+  "why": "\"Your opponent’s Shooting phase\"."
+ },
+ {
+  "key": "fb27b1dcb3da998d",
+  "where": "Bully Boyz · Hulking Brutes",
+  "verdict": "ok",
+  "why": "TARGET: \"That MEGANOBZ/NOBZ unit.\""
+ },
+ {
+  "key": "480ea036b578a6b1",
+  "where": "Bully Boyz · Hulking Brutes",
+  "verdict": "ok",
+  "why": "EFFECT: \"Ranged attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls. +1CP Or: Ranged attacks that target your unit have -1 to wound rolls.\" The def has the phase, condition, effect and the +1CP option. On the unit's \"When targeted\" line, \"its T\" is the unit's, as in the signed-off Survivor of Strife def."
+ },
+ {
+  "key": "ba04ffd2d4ea6ca4",
+  "where": "Bully Boyz · Hulking Brutes",
+  "verdict": "ok",
+  "why": "Same as the EFFECT, both options, with the +1CP cost of the second."
+ },
+ {
+  "key": "5595cec8abfba7cb",
+  "where": "Bully Boyz · Hulking Brutes",
+  "verdict": "ok",
+  "why": "Wahapedia HTML: <div class=\"str11Text2\"><div class=\"str11CP2\">+1CP</div><u>Or:</u> Ranged attacks…, so the +1CP badge belongs to the \"Or:\" option. \"Or: +1CP\" names that option and its cost, like \"Into the Fray +1CP\" on Heroic Intervention. The effect line \"**+1CP** Or: …\" keeps the badge where Wahapedia puts it, at the start of the Or: block."
+ },
+ {
+  "key": "e015e94aa7e2032b",
+  "where": "Runt Swarm rule · Sneaky Little Gitz",
+  "verdict": "ok",
+  "why": "\"Friendly GRETCHIN units have BATTLELINE\" / \"a friendly GRETCHIN unit\": GRETCHIN only. Zodgrod's attached unit qualifies by 19.03."
+ },
+ {
+  "key": "ae604f13a7cd7852",
+  "where": "Runt Swarm · Infested War Zone",
+  "verdict": "ok",
+  "why": "WHEN: \"Any phase, when an enemy unit has attacked.\" So all five phases, as on Breakin’ Heads (\"Any phase\")."
+ },
+ {
+  "key": "e30cfd61e3274af3",
+  "where": "Runt Swarm · Infested War Zone",
+  "verdict": "ok",
+  "why": "\"Any phase\", with no turn named, so either."
+ },
+ {
+  "key": "6cdf8b09fde67376",
+  "where": "Runt Swarm · Infested War Zone",
+  "verdict": "ok",
+  "why": "TARGET: \"One friendly GRETCHIN unit that was just destroyed.\""
+ },
+ {
+  "key": "34713576a3c1b620",
+  "where": "Runt Swarm · Infested War Zone",
+  "verdict": "ok",
+  "why": "EFFECT: \"Add a new GRETCHIN unit to your army identical to your destroyed unit, in strategic reserves, at its starting strength, with its full wounds remaining.\" The gist is the same, shorter; \"full wounds\" is left out, and starting strength comes close."
+ },
+ {
+  "key": "40d91964a94e1872",
+  "where": "Runt Swarm · Scarper!",
+  "verdict": "ok",
+  "why": "WHEN: \"Your opponent’s Movement phase\"."
+ },
+ {
+  "key": "258365c1bbdfbff0",
+  "where": "Runt Swarm · Scarper!",
+  "verdict": "ok",
+  "why": "\"Your opponent’s Movement phase\"."
+ },
+ {
+  "key": "f2a6d70c4b38195f",
+  "where": "Runt Swarm · Scarper!",
+  "verdict": "ok",
+  "why": "WHEN \"a friendly unengaged GRETCHIN unit\"; TARGET: \"That GRETCHIN unit.\""
+ },
+ {
+  "key": "f3e8704cce991de3",
+  "where": "Runt Swarm · Scarper!",
+  "verdict": "ok",
+  "why": "EFFECT: \"Your unit can make a normal move of: Up to D6\". Or: Up to 6\" instead if your unit is an attached unit.\" The gist is the same."
+ },
+ {
+  "key": "0808d64788f50df5",
+  "where": "Runt Swarm · Grot Shields",
+  "verdict": "ok",
+  "why": "WHEN: \"Your opponent’s Shooting phase\"."
+ },
+ {
+  "key": "dea715684c1c6047",
+  "where": "Runt Swarm · Grot Shields",
+  "verdict": "ok",
+  "why": "\"Your opponent’s Shooting phase\"."
+ },
+ {
+  "key": "16a5358da88e3ea3",
+  "where": "Runt Swarm · Grot Shields",
+  "verdict": "ok",
+  "why": "TARGET: \"One friendly GRETCHIN unit within 3\" of that ORKS INFANTRY unit.\" needs picks the GRETCHIN unit (the 10-model Gretchin and Zodgrod's unit, by 19.03). The ORKS INFANTRY unit in WHEN is the one being shot, and it excludes GRETCHIN units."
+ },
+ {
+  "key": "e533f7b9f5cf729e",
+  "where": "Runt Swarm · Grot Shields",
+  "verdict": "fix",
+  "why": "EFFECT: \"When a hit roll … results in a hit, if a model in your GRETCHIN unit is on the battlefield, end the attack sequence for that attack and your GRETCHIN unit suffers 1 mortal wound.\" The condition covers both results. The gist puts \"(if it has a model on the battlefield)\" after the mortal wound only, so it reads as if hits are still stopped once the Gretchin are gone. Should be: \"If a model in your GRETCHIN unit is on the battlefield, each hit roll of that enemy unit’s ranged attacks on that ORKS unit that results in a hit ends that attack, and your GRETCHIN unit suffers 1 mortal wound.\"",
+  "fix": {
+   "gist": "If a model in your GRETCHIN unit is on the battlefield, each hit roll of that enemy unit’s ranged attacks on that ORKS unit that results in a hit ends that attack, and your GRETCHIN unit suffers 1 mortal wound."
+  }
+ },
+ {
+  "key": "b751dae7b6ab061b",
+  "where": "Runt Swarm · Grot Shields",
+  "verdict": "ok",
+  "why": "Wahapedia Runt Swarm FAQ: \"Q:When using the Grot Shields stratagem, are hits by [TORRENT] weapons considered ’hit rolls that result in a hit’? A: No.\" The note quotes it exactly."
+ }
+]
