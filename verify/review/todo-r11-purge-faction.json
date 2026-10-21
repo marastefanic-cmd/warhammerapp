@@ -1,0 +1,943 @@
+[
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "rule-ph",
+  "where": "adeptus-mechanicus army rule · Doctrina Imperatives",
+  "judgement": {
+   "ph": [
+    "command"
+   ]
+  },
+  "source": {
+   "rule": "Doctrina Imperatives",
+   "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\nProtector Imperative: - Ranged weapons equipped by models in this unit have the **[HEAVY]** ability.\n- Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n- Each time a melee attack targets this unit, if this unit has the **BATTLELINE** keyword and/or it is within 6\" of one or more friendly **ADEPTUS MECHANICUS BATTLELINE** units, subtract 1 from the **Hit roll**.\nConqueror Imperative: - Ranged weapons equipped by models in this unit have the **[ASSAULT]** ability.\n- Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n- Each time a model in this unit makes an attack, if this unit has the **BATTLELINE** keyword and/or it is within 6\" of one or more friendly **ADEPTUS MECHANICUS BATTLELINE** units, improve the Armour Penetration characteristic of that attack by 1."
+  },
+  "key": "27bed3347b6c58c4"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "rule-turn",
+  "where": "adeptus-mechanicus army rule · Doctrina Imperatives",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "rule": "Doctrina Imperatives",
+   "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\nProtector Imperative: - Ranged weapons equipped by models in this unit have the **[HEAVY]** ability.\n- Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n- Each time a melee attack targets this unit, if this unit has the **BATTLELINE** keyword and/or it is within 6\" of one or more friendly **ADEPTUS MECHANICUS BATTLELINE** units, subtract 1 from the **Hit roll**.\nConqueror Imperative: - Ranged weapons equipped by models in this unit have the **[ASSAULT]** ability.\n- Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n- Each time a model in this unit makes an attack, if this unit has the **BATTLELINE** keyword and/or it is within 6\" of one or more friendly **ADEPTUS MECHANICUS BATTLELINE** units, improve the Armour Penetration characteristic of that attack by 1."
+  },
+  "key": "70ee0bb2109366ae"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "rule-needs",
+  "where": "Cohort Cybernetica rule · Cyber-psalm Programming",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Legio Cybernetica"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Cyber-psalm Programming",
+   "text": "Add 2\" to the Move characteristic of models in **LEGIO CYBERNETICA** units from your army. In addition, unless that unit is **Battle-shocked**, add 1 to the Objective Control characteristic of models in that unit."
+  },
+  "key": "8ef568267ffa9b82"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "rule-statNote",
+  "where": "Cohort Cybernetica rule · Cyber-psalm Programming",
+  "judgement": {
+   "statNote": {
+    "text": "OC +1 for each model unless Battle-shocked, not in the OC above"
+   }
+  },
+  "source": {
+   "rule": "Cyber-psalm Programming",
+   "text": "Add 2\" to the Move characteristic of models in **LEGIO CYBERNETICA** units from your army. In addition, unless that unit is **Battle-shocked**, add 1 to the Objective Control characteristic of models in that unit."
+  },
+  "key": "62c6a1f7832cf597"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-phases",
+  "where": "Cohort Cybernetica · Motive Imperative",
+  "judgement": {
+   "phases": [
+    "command"
+   ]
+  },
+  "source": {
+   "stratagem": "Motive Imperative",
+   "text": "WHEN: Your Command phase.\nTARGET: One **ADEPTUS MECHANICUS VEHICLE** unit from your army.\nEFFECT: Until the start of your next Command phase, add 3\" to the Move characteristic of models in your unit and add 1 to **Advance** and **Charge rolls** made for it."
+  },
+  "key": "764904eeaa35bfa0"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-turn",
+  "where": "Cohort Cybernetica · Motive Imperative",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Motive Imperative",
+   "text": "WHEN: Your Command phase.\nTARGET: One **ADEPTUS MECHANICUS VEHICLE** unit from your army.\nEFFECT: Until the start of your next Command phase, add 3\" to the Move characteristic of models in your unit and add 1 to **Advance** and **Charge rolls** made for it."
+  },
+  "key": "621809209371aaf2"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-needs",
+  "where": "Cohort Cybernetica · Motive Imperative",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Mechanicus",
+     "Vehicle"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Motive Imperative",
+   "text": "WHEN: Your Command phase.\nTARGET: One **ADEPTUS MECHANICUS VEHICLE** unit from your army.\nEFFECT: Until the start of your next Command phase, add 3\" to the Move characteristic of models in your unit and add 1 to **Advance** and **Charge rolls** made for it."
+  },
+  "key": "3dfd40f372685fd1"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-gist",
+  "where": "Cohort Cybernetica · Motive Imperative",
+  "judgement": {
+   "gist": "Until the start of your next Command phase, your unit has +3\" Move and +1 to Advance and Charge rolls."
+  },
+  "source": {
+   "stratagem": "Motive Imperative",
+   "text": "WHEN: Your Command phase.\nTARGET: One **ADEPTUS MECHANICUS VEHICLE** unit from your army.\nEFFECT: Until the start of your next Command phase, add 3\" to the Move characteristic of models in your unit and add 1 to **Advance** and **Charge rolls** made for it."
+  },
+  "key": "9a56e921a85dd292"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-phases",
+  "where": "Cohort Cybernetica · Auto-divinatory Targeting",
+  "judgement": {
+   "phases": [
+    "command"
+   ]
+  },
+  "source": {
+   "stratagem": "Auto-divinatory Targeting",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army, and one objective marker.\nEFFECT: Until the start of your next Command phase, ranged weapons equipped by models in your unit have a Ballistic Skill characteristic of 3+ and the **[IGNORES COVER]** ability, but they can only target units within range of the selected objective marker."
+  },
+  "key": "60770741850ad225"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-turn",
+  "where": "Cohort Cybernetica · Auto-divinatory Targeting",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Auto-divinatory Targeting",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army, and one objective marker.\nEFFECT: Until the start of your next Command phase, ranged weapons equipped by models in your unit have a Ballistic Skill characteristic of 3+ and the **[IGNORES COVER]** ability, but they can only target units within range of the selected objective marker."
+  },
+  "key": "7f441a4e6f223e1e"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-needs",
+  "where": "Cohort Cybernetica · Auto-divinatory Targeting",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Mechanicus"
+    ],
+    "any": [
+     "Legio Cybernetica",
+     "Vehicle"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Auto-divinatory Targeting",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army, and one objective marker.\nEFFECT: Until the start of your next Command phase, ranged weapons equipped by models in your unit have a Ballistic Skill characteristic of 3+ and the **[IGNORES COVER]** ability, but they can only target units within range of the selected objective marker."
+  },
+  "key": "92a921496777e41a"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-mod",
+  "where": "Cohort Cybernetica · Auto-divinatory Targeting",
+  "judgement": {
+   "mod": {
+    "kind": "ranged",
+    "when": "Your Command phase, until the start of your next Command phase; only at units within range of the selected objective marker",
+    "note": "BS 3+, [IGNORES COVER]"
+   }
+  },
+  "source": {
+   "stratagem": "Auto-divinatory Targeting",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army, and one objective marker.\nEFFECT: Until the start of your next Command phase, ranged weapons equipped by models in your unit have a Ballistic Skill characteristic of 3+ and the **[IGNORES COVER]** ability, but they can only target units within range of the selected objective marker."
+  },
+  "key": "1d5f8ebb3ea7bd1d"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-gist",
+  "where": "Cohort Cybernetica · Auto-divinatory Targeting",
+  "judgement": {
+   "gist": "Until the start of your next Command phase, your unit’s ranged weapons have BS 3+ and [IGNORES COVER], but can only target units within range of the selected objective marker."
+  },
+  "source": {
+   "stratagem": "Auto-divinatory Targeting",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army, and one objective marker.\nEFFECT: Until the start of your next Command phase, ranged weapons equipped by models in your unit have a Ballistic Skill characteristic of 3+ and the **[IGNORES COVER]** ability, but they can only target units within range of the selected objective marker."
+  },
+  "key": "70059ed2a01c31f9"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-note",
+  "where": "Cohort Cybernetica · Auto-divinatory Targeting",
+  "judgement": {
+   "note": "FAQ (Faction Pack 1.4): “If I target a unit with the Auto-divinatory Targeting Stratagem while the Protector Imperative is active for my army, in what order are the Ballistic Skill modifiers applied?” “The Ballistic Skill characteristic of ranged weapons equipped by models in that unit is first changed to 3+ by the Stratagem, then improved by 1 by the Protector Imperative, for a final result of 2+ (assuming no other modifiers apply).”"
+  },
+  "source": {
+   "stratagem": "Auto-divinatory Targeting",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army, and one objective marker.\nEFFECT: Until the start of your next Command phase, ranged weapons equipped by models in your unit have a Ballistic Skill characteristic of 3+ and the **[IGNORES COVER]** ability, but they can only target units within range of the selected objective marker."
+  },
+  "key": "ec23930d6ad56d48"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-phases",
+  "where": "Cohort Cybernetica · Machine Spirit Resurgent",
+  "judgement": {
+   "phases": [
+    "command"
+   ]
+  },
+  "source": {
+   "stratagem": "Machine Spirit Resurgent",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army that is below its Starting Strength.\nEFFECT: Until the start of your next Command phase, each time a model in your unit makes an attack, you can re-roll the **Hit roll**. If your unit is **Below Half-strength**, you can re-roll the **Wound roll** as well."
+  },
+  "key": "1b57b4b850f70946"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-turn",
+  "where": "Cohort Cybernetica · Machine Spirit Resurgent",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Machine Spirit Resurgent",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army that is below its Starting Strength.\nEFFECT: Until the start of your next Command phase, each time a model in your unit makes an attack, you can re-roll the **Hit roll**. If your unit is **Below Half-strength**, you can re-roll the **Wound roll** as well."
+  },
+  "key": "758c82ad5b1ce2b7"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-needs",
+  "where": "Cohort Cybernetica · Machine Spirit Resurgent",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Mechanicus"
+    ],
+    "any": [
+     "Legio Cybernetica",
+     "Vehicle"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Machine Spirit Resurgent",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army that is below its Starting Strength.\nEFFECT: Until the start of your next Command phase, each time a model in your unit makes an attack, you can re-roll the **Hit roll**. If your unit is **Below Half-strength**, you can re-roll the **Wound roll** as well."
+  },
+  "key": "c43aae1b86b33119"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-mod",
+  "where": "Cohort Cybernetica · Machine Spirit Resurgent",
+  "judgement": {
+   "mod": {
+    "kind": "all",
+    "when": "Your Command phase, below its Starting Strength; until the start of your next Command phase",
+    "note": "can re-roll hit rolls (and wound rolls if Below Half-strength)"
+   }
+  },
+  "source": {
+   "stratagem": "Machine Spirit Resurgent",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army that is below its Starting Strength.\nEFFECT: Until the start of your next Command phase, each time a model in your unit makes an attack, you can re-roll the **Hit roll**. If your unit is **Below Half-strength**, you can re-roll the **Wound roll** as well."
+  },
+  "key": "9c62ea766ff9276a"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-gist",
+  "where": "Cohort Cybernetica · Machine Spirit Resurgent",
+  "judgement": {
+   "gist": "Until the start of your next Command phase, your unit’s attacks can re-roll the hit roll, and the wound roll as well if it is Below Half-strength."
+  },
+  "source": {
+   "stratagem": "Machine Spirit Resurgent",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army that is below its Starting Strength.\nEFFECT: Until the start of your next Command phase, each time a model in your unit makes an attack, you can re-roll the **Hit roll**. If your unit is **Below Half-strength**, you can re-roll the **Wound roll** as well."
+  },
+  "key": "c1566df972fc3159"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-phases",
+  "where": "Cohort Cybernetica · Machine Superiority",
+  "judgement": {
+   "phases": [
+    "command"
+   ]
+  },
+  "source": {
+   "stratagem": "Machine Superiority",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army.\nEFFECT: Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back and you can ignore any or all modifiers to its characteristics and/or to any roll or test made for it (excluding modifiers to saving throws)."
+  },
+  "key": "8ab4a9997922b3fc"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-turn",
+  "where": "Cohort Cybernetica · Machine Superiority",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Machine Superiority",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army.\nEFFECT: Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back and you can ignore any or all modifiers to its characteristics and/or to any roll or test made for it (excluding modifiers to saving throws)."
+  },
+  "key": "64bb4a3660b3adad"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-needs",
+  "where": "Cohort Cybernetica · Machine Superiority",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Mechanicus"
+    ],
+    "any": [
+     "Legio Cybernetica",
+     "Vehicle"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Machine Superiority",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army.\nEFFECT: Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back and you can ignore any or all modifiers to its characteristics and/or to any roll or test made for it (excluding modifiers to saving throws)."
+  },
+  "key": "2e8b6d785d3da182"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-mod",
+  "where": "Cohort Cybernetica · Machine Superiority",
+  "judgement": {
+   "mod": {
+    "kind": "all",
+    "when": "Your Command phase, until the end of the turn",
+    "note": "can ignore any or all modifiers to its characteristics and to any roll or test (not saving throws)"
+   }
+  },
+  "source": {
+   "stratagem": "Machine Superiority",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army.\nEFFECT: Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back and you can ignore any or all modifiers to its characteristics and/or to any roll or test made for it (excluding modifiers to saving throws)."
+  },
+  "key": "97348a6ad37c4eee"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-gist",
+  "where": "Cohort Cybernetica · Machine Superiority",
+  "judgement": {
+   "gist": "Until the end of the turn, your unit is eligible to shoot after Falling Back, and you can ignore any or all modifiers to its characteristics and to its rolls and tests (not saving throws)."
+  },
+  "source": {
+   "stratagem": "Machine Superiority",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army.\nEFFECT: Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back and you can ignore any or all modifiers to its characteristics and/or to any roll or test made for it (excluding modifiers to saving throws)."
+  },
+  "key": "59767b546c15283c"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-phases",
+  "where": "Cohort Cybernetica · Transcendent Cogitation",
+  "judgement": {
+   "phases": [
+    "command"
+   ]
+  },
+  "source": {
+   "stratagem": "Transcendent Cogitation",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army.\nEFFECT: Until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for your unit."
+  },
+  "key": "d1ca76ee0e8c222f"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-turn",
+  "where": "Cohort Cybernetica · Transcendent Cogitation",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Transcendent Cogitation",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army.\nEFFECT: Until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for your unit."
+  },
+  "key": "7dbb727c563cc204"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-needs",
+  "where": "Cohort Cybernetica · Transcendent Cogitation",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Mechanicus"
+    ],
+    "any": [
+     "Legio Cybernetica",
+     "Vehicle"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Transcendent Cogitation",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army.\nEFFECT: Until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for your unit."
+  },
+  "key": "226aab386f053c88"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-gist",
+  "where": "Cohort Cybernetica · Transcendent Cogitation",
+  "judgement": {
+   "gist": "Until the start of your next Command phase, the Conqueror and Protector Imperatives are both active for your unit."
+  },
+  "source": {
+   "stratagem": "Transcendent Cogitation",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army.\nEFFECT: Until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for your unit."
+  },
+  "key": "89eea4364122be6d"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-phases",
+  "where": "Cohort Cybernetica · Benevolence of the Omnissiah",
+  "judgement": {
+   "phases": [
+    "command"
+   ]
+  },
+  "source": {
+   "stratagem": "Benevolence of the Omnissiah",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army.\nEFFECT: Until the start of your next Command phase, models in your unit have the **Feel No Pain 6+** ability, which is improved to Feel No Pain 5+ against **mortal wounds**."
+  },
+  "key": "674d173afb1f9e49"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-turn",
+  "where": "Cohort Cybernetica · Benevolence of the Omnissiah",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Benevolence of the Omnissiah",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army.\nEFFECT: Until the start of your next Command phase, models in your unit have the **Feel No Pain 6+** ability, which is improved to Feel No Pain 5+ against **mortal wounds**."
+  },
+  "key": "da2c70ff17427c72"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-needs",
+  "where": "Cohort Cybernetica · Benevolence of the Omnissiah",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Mechanicus"
+    ],
+    "any": [
+     "Legio Cybernetica",
+     "Vehicle"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Benevolence of the Omnissiah",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army.\nEFFECT: Until the start of your next Command phase, models in your unit have the **Feel No Pain 6+** ability, which is improved to Feel No Pain 5+ against **mortal wounds**."
+  },
+  "key": "99fab64f76aa805c"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-def",
+  "where": "Cohort Cybernetica · Benevolence of the Omnissiah",
+  "judgement": {
+   "def": "Feel No Pain 6+ (5+ against mortal wounds), until the start of your next Command phase"
+  },
+  "source": {
+   "stratagem": "Benevolence of the Omnissiah",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army.\nEFFECT: Until the start of your next Command phase, models in your unit have the **Feel No Pain 6+** ability, which is improved to Feel No Pain 5+ against **mortal wounds**."
+  },
+  "key": "8c75a8a2a996c765"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-gist",
+  "where": "Cohort Cybernetica · Benevolence of the Omnissiah",
+  "judgement": {
+   "gist": "Until the start of your next Command phase, your unit has Feel No Pain 6+ (5+ against mortal wounds)."
+  },
+  "source": {
+   "stratagem": "Benevolence of the Omnissiah",
+   "text": "WHEN: Your Command phase.\nTARGET: One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army.\nEFFECT: Until the start of your next Command phase, models in your unit have the **Feel No Pain 6+** ability, which is improved to Feel No Pain 5+ against **mortal wounds**."
+  },
+  "key": "7644dcf1be914a6c"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "rule-needs",
+  "where": "Eradication Cohort rule · Murderous Imperative",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Skitarii"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Murderous Imperative",
+   "text": "Each time a model in a **SKITARII** unit from your army makes an attack:\n- If the Protector Imperative is active for that unit, re-roll a **Hit roll** of 1.\n- If the Conqueror Imperative is active for that unit, re-roll a **Wound roll** of 1."
+  },
+  "key": "612af652604e8038"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "rule-mod",
+  "where": "Eradication Cohort rule · Murderous Imperative",
+  "judgement": {
+   "mod": {
+    "kind": "all",
+    "when": "Protector or Conqueror Imperative active for this unit",
+    "note": "Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1"
+   }
+  },
+  "source": {
+   "rule": "Murderous Imperative",
+   "text": "Each time a model in a **SKITARII** unit from your army makes an attack:\n- If the Protector Imperative is active for that unit, re-roll a **Hit roll** of 1.\n- If the Conqueror Imperative is active for that unit, re-roll a **Wound roll** of 1."
+  },
+  "key": "c7ac4e75b8833503"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-phases",
+  "where": "Eradication Cohort · Servo-driven Charge",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Servo-driven Charge",
+   "text": "WHEN: Fight phase.\nTARGET: One **ADEPTUS MECHANICUS** unit from your army that has not been selected to fight this phase.\nEFFECT: Until the end of the phase, melee weapons equipped by models in your unit have the **[LANCE]** ability."
+  },
+  "key": "4827ffb8319f3cdb"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-turn",
+  "where": "Eradication Cohort · Servo-driven Charge",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Servo-driven Charge",
+   "text": "WHEN: Fight phase.\nTARGET: One **ADEPTUS MECHANICUS** unit from your army that has not been selected to fight this phase.\nEFFECT: Until the end of the phase, melee weapons equipped by models in your unit have the **[LANCE]** ability."
+  },
+  "key": "f9b5ec8830e2c3e2"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-needs",
+  "where": "Eradication Cohort · Servo-driven Charge",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Mechanicus"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Servo-driven Charge",
+   "text": "WHEN: Fight phase.\nTARGET: One **ADEPTUS MECHANICUS** unit from your army that has not been selected to fight this phase.\nEFFECT: Until the end of the phase, melee weapons equipped by models in your unit have the **[LANCE]** ability."
+  },
+  "key": "4cc014feef49f6f0"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-mod",
+  "where": "Eradication Cohort · Servo-driven Charge",
+  "judgement": {
+   "mod": {
+    "kind": "melee",
+    "when": "Fight phase",
+    "note": "[LANCE]"
+   }
+  },
+  "source": {
+   "stratagem": "Servo-driven Charge",
+   "text": "WHEN: Fight phase.\nTARGET: One **ADEPTUS MECHANICUS** unit from your army that has not been selected to fight this phase.\nEFFECT: Until the end of the phase, melee weapons equipped by models in your unit have the **[LANCE]** ability."
+  },
+  "key": "3d883272fd3164b7"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-gist",
+  "where": "Eradication Cohort · Servo-driven Charge",
+  "judgement": {
+   "gist": "Until the end of the phase, your unit’s melee weapons have [LANCE]."
+  },
+  "source": {
+   "stratagem": "Servo-driven Charge",
+   "text": "WHEN: Fight phase.\nTARGET: One **ADEPTUS MECHANICUS** unit from your army that has not been selected to fight this phase.\nEFFECT: Until the end of the phase, melee weapons equipped by models in your unit have the **[LANCE]** ability."
+  },
+  "key": "d9bd58207bdd22bd"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-phases",
+  "where": "Eradication Cohort · Unrelenting Aggression",
+  "judgement": {
+   "phases": [
+    "movement"
+   ]
+  },
+  "source": {
+   "stratagem": "Unrelenting Aggression",
+   "text": "WHEN: Your Movement phase, just after an **ADEPTUS MECHANICUS** unit from your army Falls Back.\nTARGET: That **ADEPTUS MECHANICUS** unit.\nEFFECT: Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back. If your unit has the **SKITARII** keyword, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back instead."
+  },
+  "key": "05490abc0c4a7e5d"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-turn",
+  "where": "Eradication Cohort · Unrelenting Aggression",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Unrelenting Aggression",
+   "text": "WHEN: Your Movement phase, just after an **ADEPTUS MECHANICUS** unit from your army Falls Back.\nTARGET: That **ADEPTUS MECHANICUS** unit.\nEFFECT: Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back. If your unit has the **SKITARII** keyword, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back instead."
+  },
+  "key": "dffee49c5074cf96"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-needs",
+  "where": "Eradication Cohort · Unrelenting Aggression",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Adeptus Mechanicus"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Unrelenting Aggression",
+   "text": "WHEN: Your Movement phase, just after an **ADEPTUS MECHANICUS** unit from your army Falls Back.\nTARGET: That **ADEPTUS MECHANICUS** unit.\nEFFECT: Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back. If your unit has the **SKITARII** keyword, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back instead."
+  },
+  "key": "d886fcb08b64b5e2"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-gist",
+  "where": "Eradication Cohort · Unrelenting Aggression",
+  "judgement": {
+   "gist": "Until the end of the turn, your unit is eligible to shoot after Falling Back (a SKITARII unit: to shoot and declare a charge)."
+  },
+  "source": {
+   "stratagem": "Unrelenting Aggression",
+   "text": "WHEN: Your Movement phase, just after an **ADEPTUS MECHANICUS** unit from your army Falls Back.\nTARGET: That **ADEPTUS MECHANICUS** unit.\nEFFECT: Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back. If your unit has the **SKITARII** keyword, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back instead."
+  },
+  "key": "70df0ecc9690d001"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-phases",
+  "where": "Eradication Cohort · Unshackled Wrath",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Unshackled Wrath",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One **SKITARII** unit from your army that has not been selected to shoot this phase.\nEFFECT: Select the **[SUSTAINED HITS 1]** or **[LETHAL HITS]** ability. Until the end of the phase, ranged weapons equipped by models in your unit have the selected ability. You can instead select the **[SUSTAINED HITS 1]**, **[LETHAL HITS]** and **[HAZARDOUS]** abilities to apply to those weapons until the end of the phase."
+  },
+  "key": "f72be3bef6871c99"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-turn",
+  "where": "Eradication Cohort · Unshackled Wrath",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Unshackled Wrath",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One **SKITARII** unit from your army that has not been selected to shoot this phase.\nEFFECT: Select the **[SUSTAINED HITS 1]** or **[LETHAL HITS]** ability. Until the end of the phase, ranged weapons equipped by models in your unit have the selected ability. You can instead select the **[SUSTAINED HITS 1]**, **[LETHAL HITS]** and **[HAZARDOUS]** abilities to apply to those weapons until the end of the phase."
+  },
+  "key": "be191e2787fe9310"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-needs",
+  "where": "Eradication Cohort · Unshackled Wrath",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Skitarii"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Unshackled Wrath",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One **SKITARII** unit from your army that has not been selected to shoot this phase.\nEFFECT: Select the **[SUSTAINED HITS 1]** or **[LETHAL HITS]** ability. Until the end of the phase, ranged weapons equipped by models in your unit have the selected ability. You can instead select the **[SUSTAINED HITS 1]**, **[LETHAL HITS]** and **[HAZARDOUS]** abilities to apply to those weapons until the end of the phase."
+  },
+  "key": "c008409bb914f191"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-mod",
+  "where": "Eradication Cohort · Unshackled Wrath",
+  "judgement": {
+   "mod": {
+    "kind": "ranged",
+    "when": "Your Shooting phase",
+    "note": "[SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS]"
+   }
+  },
+  "source": {
+   "stratagem": "Unshackled Wrath",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One **SKITARII** unit from your army that has not been selected to shoot this phase.\nEFFECT: Select the **[SUSTAINED HITS 1]** or **[LETHAL HITS]** ability. Until the end of the phase, ranged weapons equipped by models in your unit have the selected ability. You can instead select the **[SUSTAINED HITS 1]**, **[LETHAL HITS]** and **[HAZARDOUS]** abilities to apply to those weapons until the end of the phase."
+  },
+  "key": "7a4ebc6b2108284b"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-gist",
+  "where": "Eradication Cohort · Unshackled Wrath",
+  "judgement": {
+   "gist": "Until the end of the phase, your unit’s ranged weapons have [SUSTAINED HITS 1] or [LETHAL HITS], or all of [SUSTAINED HITS 1], [LETHAL HITS] and [HAZARDOUS]."
+  },
+  "source": {
+   "stratagem": "Unshackled Wrath",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One **SKITARII** unit from your army that has not been selected to shoot this phase.\nEFFECT: Select the **[SUSTAINED HITS 1]** or **[LETHAL HITS]** ability. Until the end of the phase, ranged weapons equipped by models in your unit have the selected ability. You can instead select the **[SUSTAINED HITS 1]**, **[LETHAL HITS]** and **[HAZARDOUS]** abilities to apply to those weapons until the end of the phase."
+  },
+  "key": "b092a07be6b70721"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-phases",
+  "where": "Eradication Cohort · Threat-cogitation Targeters",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Threat-cogitation Targeters",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One **SKITARII VEHICLE** unit from your army that has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, each time a ranged attack made by a model in your unit is allocated to a **MONSTER** or **VEHICLE** model, you can re-roll the Damage roll."
+  },
+  "key": "0f40e847dc09e472"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-turn",
+  "where": "Eradication Cohort · Threat-cogitation Targeters",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Threat-cogitation Targeters",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One **SKITARII VEHICLE** unit from your army that has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, each time a ranged attack made by a model in your unit is allocated to a **MONSTER** or **VEHICLE** model, you can re-roll the Damage roll."
+  },
+  "key": "4e8f7e283c8d16bc"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-needs",
+  "where": "Eradication Cohort · Threat-cogitation Targeters",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Skitarii",
+     "Vehicle"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Threat-cogitation Targeters",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One **SKITARII VEHICLE** unit from your army that has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, each time a ranged attack made by a model in your unit is allocated to a **MONSTER** or **VEHICLE** model, you can re-roll the Damage roll."
+  },
+  "key": "3f2801f3a3afc50d"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-mod",
+  "where": "Eradication Cohort · Threat-cogitation Targeters",
+  "judgement": {
+   "mod": {
+    "kind": "ranged",
+    "when": "Your Shooting phase, attacks allocated to a MONSTER or VEHICLE model",
+    "note": "can re-roll the Damage roll"
+   }
+  },
+  "source": {
+   "stratagem": "Threat-cogitation Targeters",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One **SKITARII VEHICLE** unit from your army that has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, each time a ranged attack made by a model in your unit is allocated to a **MONSTER** or **VEHICLE** model, you can re-roll the Damage roll."
+  },
+  "key": "3abe319e9a0b494e"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-gist",
+  "where": "Eradication Cohort · Threat-cogitation Targeters",
+  "judgement": {
+   "gist": "Until the end of the phase, your unit’s ranged attacks allocated to a MONSTER or VEHICLE model can re-roll the Damage roll."
+  },
+  "source": {
+   "stratagem": "Threat-cogitation Targeters",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One **SKITARII VEHICLE** unit from your army that has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, each time a ranged attack made by a model in your unit is allocated to a **MONSTER** or **VEHICLE** model, you can re-roll the Damage roll."
+  },
+  "key": "41adeec21def90b4"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-phases",
+  "where": "Eradication Cohort · Precision Onslaught",
+  "judgement": {
+   "phases": [
+    "charge"
+   ]
+  },
+  "source": {
+   "stratagem": "Precision Onslaught",
+   "text": "WHEN: Your Charge phase, just after a **SICARIAN** unit from your army **declares a charge**.\nTARGET: That **SICARIAN** unit.\nEFFECT: Until the end of the phase, when your unit ends a **Charge move**, select one enemy unit within **Engagement Range** of it, then roll one D6 for each model in your unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 **mortal wound**."
+  },
+  "key": "35ae05852210a8fd"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-turn",
+  "where": "Eradication Cohort · Precision Onslaught",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Precision Onslaught",
+   "text": "WHEN: Your Charge phase, just after a **SICARIAN** unit from your army **declares a charge**.\nTARGET: That **SICARIAN** unit.\nEFFECT: Until the end of the phase, when your unit ends a **Charge move**, select one enemy unit within **Engagement Range** of it, then roll one D6 for each model in your unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 **mortal wound**."
+  },
+  "key": "5cdf68dd00103e0b"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-needs",
+  "where": "Eradication Cohort · Precision Onslaught",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Sicarian"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Precision Onslaught",
+   "text": "WHEN: Your Charge phase, just after a **SICARIAN** unit from your army **declares a charge**.\nTARGET: That **SICARIAN** unit.\nEFFECT: Until the end of the phase, when your unit ends a **Charge move**, select one enemy unit within **Engagement Range** of it, then roll one D6 for each model in your unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 **mortal wound**."
+  },
+  "key": "15d7046004273726"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-gist",
+  "where": "Eradication Cohort · Precision Onslaught",
+  "judgement": {
+   "gist": "When your unit ends a Charge move: one D6 for each of its models within Engagement Range of one enemy unit; 1 mortal wound to that unit for each 4+."
+  },
+  "source": {
+   "stratagem": "Precision Onslaught",
+   "text": "WHEN: Your Charge phase, just after a **SICARIAN** unit from your army **declares a charge**.\nTARGET: That **SICARIAN** unit.\nEFFECT: Until the end of the phase, when your unit ends a **Charge move**, select one enemy unit within **Engagement Range** of it, then roll one D6 for each model in your unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 **mortal wound**."
+  },
+  "key": "7fa7abac9436c47b"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-phases",
+  "where": "Eradication Cohort · Analytic Reprisals",
+  "judgement": {
+   "phases": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "stratagem": "Analytic Reprisals",
+   "text": "WHEN: Your opponent’s Shooting phase, just after an enemy unit has shot.\nTARGET: One **SKITARII INFANTRY** unit from your army that lost one or more models as a result of the attacking unit’s attacks.\nEFFECT: Your unit can shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target."
+  },
+  "key": "3daa4b0242b2507e"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-turn",
+  "where": "Eradication Cohort · Analytic Reprisals",
+  "judgement": {
+   "turn": "opp"
+  },
+  "source": {
+   "stratagem": "Analytic Reprisals",
+   "text": "WHEN: Your opponent’s Shooting phase, just after an enemy unit has shot.\nTARGET: One **SKITARII INFANTRY** unit from your army that lost one or more models as a result of the attacking unit’s attacks.\nEFFECT: Your unit can shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target."
+  },
+  "key": "df8babca8f429648"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-needs",
+  "where": "Eradication Cohort · Analytic Reprisals",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Skitarii",
+     "Infantry"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Analytic Reprisals",
+   "text": "WHEN: Your opponent’s Shooting phase, just after an enemy unit has shot.\nTARGET: One **SKITARII INFANTRY** unit from your army that lost one or more models as a result of the attacking unit’s attacks.\nEFFECT: Your unit can shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target."
+  },
+  "key": "8c7224c6d842347f"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-gist",
+  "where": "Eradication Cohort · Analytic Reprisals",
+  "judgement": {
+   "gist": "Your unit shoots as if it were your Shooting phase, but only at that enemy unit (and only if it is an eligible target)."
+  },
+  "source": {
+   "stratagem": "Analytic Reprisals",
+   "text": "WHEN: Your opponent’s Shooting phase, just after an enemy unit has shot.\nTARGET: One **SKITARII INFANTRY** unit from your army that lost one or more models as a result of the attacking unit’s attacks.\nEFFECT: Your unit can shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target."
+  },
+  "key": "24ebfa24841570e3"
+ }
+]
