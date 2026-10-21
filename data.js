@@ -278,14 +278,11 @@ const FACTIONS = {
         name:'Dread Mob', dp:1,
         // tableAt: Wahapedia prints the table after "…have the relevant rule(s):", before the hazard-roll line
         rule:{ name:'Try Dat Button!', ph:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, needs:{ all:['Walker'], none:['Titanic'] }, tableAt:1,
+          // one D6: one result of the table; two D6: two different results ("keep re-rolling duplicate results": the owner's reading,
+          // two D6 always give two different results), so the picks are the three results and the three pairs. Its hazard roll with two
+          // D6 is the rules' (said in the note) and not counted: the Damage tab shows damage dealt
           mod:{ kind:'all', when:'Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6)', note:'1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked)',
-            pick:[{ name:'1–2', note:'+1 A' }, { name:'3–4', note:'+2 S' }, { name:'5–6', note:'+1 AP' }, { name:'1–2 and 3–4', note:'+1 A, +2 S' }, { name:'1–2 and 5–6', note:'+1 A, +1 AP' }, { name:'3–4 and 5–6', note:'+2 S, +1 AP' }],
-            // the dice rolled, a choice of its own beside the result: "If you rolled two D6, when this unit has attacked, this unit
-            // makes one hazard roll", whatever the result; a pick of two results is two D6 by itself. Two D6 with one result stays a
-            // choice: "keep re-rolling duplicate results" can mean the same row of the table or the same die value
-            dice:{ opts:['one D6', 'two D6'], two:['1–2 and 3–4', '1–2 and 5–6', '3–4 and 5–6'],
-              note:'two D6, one result: “keep re-rolling duplicate results” can mean the same row of the table (two D6 always give two results) or the same die value (a 1 and a 2 give one result, and the hazard roll is still made)' },
-            hazard:{ rolls:1, dice:'two D6' } },
+            pick:[{ name:'1–2', note:'+1 A' }, { name:'3–4', note:'+2 S' }, { name:'5–6', note:'+1 AP' }, { name:'1–2 and 3–4', note:'+1 A, +2 S' }, { name:'1–2 and 5–6', note:'+1 A, +1 AP' }, { name:'3–4 and 5–6', note:'+2 S, +1 AP' }] },
           text:'In your Shooting phase or the Fight phase, when a friendly **ORKS WALKER** unit (excluding **TITANIC** units) is **selected to attack**, you can use this ability. If you do, roll either one D6 or two D6 (keep re-rolling duplicate results). This unit’s attacks have the relevant rule(s):\nIf you rolled two D6, when this unit has attacked, this unit makes one **hazard roll**.',
           table:[['1–2','+1 **A**'],['3–4','+2 **S**'],['5–6','+1 **AP**']] },
         enhancements:[

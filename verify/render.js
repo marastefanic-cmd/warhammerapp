@@ -88,16 +88,17 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     await page.evaluate(id => { sess.mine = id; sess.peekD = null; }, a.id);
     if(a === armies[0]){ await take('settings', `() => { hideSheet(); go({ s:'settings' }); }`); await take('home', `() => { hideSheet(); go({ s:'home' }); }`); }
     for(const s of ['army','pregame','units','ranged','melee','abilities','rules','bases']) await screen(s);
-    // the damage calculator, against the next list: this list's first unit with ranged weapons shooting its first unit, and its first
-    // unit with melee weapons charging and fighting it, with the fight back; each taken once every effect is worked out (the list's
-    // order and every number settled: the background work is seeded, so the text is the same every run)
+    // the damage calculator, against the next list: this list's first unit with ranged weapons shooting its first unit (Shoot), its
+    // first unit with melee weapons fighting it, charged (Fight), and its first unit with both shooting, charging and fighting it (Both);
+    // each taken once every effect is worked out (the list's order and every number settled: the background work is seeded, so the text
+    // is the same every run)
     const vs = armies[(armies.indexOf(a) + 1) % armies.length].id;
-    for(const ph of ['shooting', 'fight']){
+    for(const ph of ['shooting', 'fight', 'both']){
       await page.evaluate(([id, vs, ph]) => { hideSheet(); store.set('wh-opp-' + id, vs); sess.dmg = {};
-        const A = armyById(id), B = armyById(vs), kind = ph === 'fight' ? 'melee' : 'ranged', u = A.units.find(x => (x[kind] || []).length) || A.units[0];
-        sess.dmg[id] = Object.assign({ dir:'me', atk:u.id, tArmy:vs, tgt:B.units[0].id }, ph === 'fight' ? { turn:{ me:{ charge:true, fight:true, back:true } }, step:{ me:'fight' } } : {});
+        const A = armyById(id), B = armyById(vs), kind = ph === 'fight' ? 'melee' : 'ranged', u = (ph === 'both' && A.units.find(x => (x.ranged || []).length && (x.melee || []).length)) || A.units.find(x => (x[kind] || []).length) || A.units[0];
+        sess.dmg[id] = { dir:'me', atk:u.id, tArmy:vs, tgt:B.units[0].id, turn:{ me:dmModeTurn(ph === 'shooting' ? 'shoot' : ph, ph === 'fight' ? { fc:true } : {}) } };
         go({ s:'damage', army:id }); }, [a.id, vs, ph]);
-      await page.waitForFunction(() => !dmBusy() && !document.querySelector('#dmList .fxv.wait, #dmList .fxv.est, #dmAns.prov'), null, { timeout:120000, polling:50 });
+      await page.waitForFunction(() => !dmBusy() && !document.querySelector('#dmList .fxv.wait, #dmList .fxv.est, #dmAns.prov, #dmList .upd'), null, { timeout:120000, polling:50 });
       await take('damage ' + ph, `() => {}`);
     }
     await screen('strats', { folded:true });   // every stratagem folded: its one-line gist, timing and users
@@ -253,15 +254,17 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     counts[a.id] = { screens:snap.length, links:links.size };
   }
   // ---- the Damage tab under a finger (each width): the first list's first unit with ranged weapons shooting the next list's
-  // first unit, its turn shoot → charge → fight → fight back ----
+  // first unit (Shoot; Both where it says so) ----
   {
     const A = armies[0].id;
     let B = armies[1].id;
-    const open = async () => { await page.evaluate(([A, B]) => { hideSheet(); store.set('wh-opp-' + A, B); sess.mine = A; sess.dmg = {};
-      const L = armyById(A), u = L.units.find(x => (x.ranged || []).length) || L.units[0];
-      sess.dmg[A] = { dir:'me', atk:u.id, tArmy:B, tgt:armyById(B).units[0].id, turn:{ me:{ shoot:true, charge:true, fight:true, back:true } }, step:{ me:'shoot' } };
-      go({ s:'damage', army:A }); scrollTo(0, 0); }, [A, B]);
-      await page.waitForFunction(() => !dmBusy() && !document.querySelector('#dmList .fxv.wait, #dmList .fxv.est, #dmAns.prov'), null, { timeout:120000, polling:50 }); await page.waitForTimeout(300); };
+    const settled = async () => { await page.waitForFunction(() => !dmBusy() && !document.querySelector('#dmList .fxv.wait, #dmList .fxv.est, #dmAns.prov, #dmList .upd'), null, { timeout:120000, polling:50 }); await page.waitForTimeout(300); };
+    // (at: [list, unit], another list's unit attacking: that list open as yours; a tap within 350ms of opening a screen is not taken)
+    const open = async (mode, at) => { await page.evaluate(([A, B, mode, at]) => { hideSheet(); const M = at ? at[0] : A, T = at && M === B ? A : B; store.set('wh-opp-' + M, T); sess.mine = M; sess.dmg = {};
+      const L = armyById(M), u = at ? L.units.find(x => x.id === at[1]) : L.units.find(x => (x.ranged || []).length) || L.units[0];
+      sess.dmg[M] = { dir:'me', atk:u.id, tArmy:T, tgt:armyById(T).units[0].id, turn:{ me:dmModeTurn(mode || 'shoot') } };
+      go({ s:'damage', army:M }); scrollTo(0, 0); }, [A, B, mode, at || null]);
+      await settled(); await page.waitForTimeout(200); };
     const where = () => page.evaluate(() => JSON.stringify([cur.s, cur.army, sess.dmg[cur.army] && sess.dmg[cur.army].atk, sess.dmg[cur.army] && sess.dmg[cur.army].tgt, sess.dmg[cur.army] && sess.dmg[cur.army].dir]));
     // a popup of the other list's rule, opened from the Damage tab, closed (its Close, then Escape): the same list and matchup
     // (against the first list after it whose unit has a rule of its own in the list)
@@ -293,63 +296,112 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       const end = await under();
       if(!mid || mid[0] !== id || !end || end[0] !== id || end[1] !== pt[2]) fail('damage-tap-twice', A, id, 'tapped twice at the same spot: ' + JSON.stringify([mid, end]) + ', was ' + pt[2]);
     }
-    // the card and the strip show the same figure at every moment after a tap (the same games), and Undo reverts what its toast names
-    await open();
-    const sync = await page.evaluate(async () => { const r = [...document.querySelectorAll('#dmList .dmlv[data-dmlv]')].find(e => e.getClientRects().length && !e.classList.contains('rad')); if(!r) return [];
-      r.click(); const seen = [];
-      for(let i = 0; i < 30; i++){ await new Promise(f => setTimeout(f, 80)); const a = $('#dmAns .dmbig b'), b = document.querySelector('#dmStrip .dmtile.cur .dmtv b'); seen.push((a ? a.textContent : '') + '/' + (b ? b.textContent : '')); }
-      return [...new Set(seen)].filter(x => { const [a, b] = x.split('/'); return a !== b; }); });
-    if(sync.length) fail('damage-card-strip', A, 'after a tap', 'the card and the strip differ: ' + sync.join(', '));
-    // the turn's steps in the strip: each step in the turn has either its own "Take out" or, in its place, why it stays (never both,
-    // never neither); a step not in the turn is one "Add" button; one the pair cannot play is no button at all; the step shown looks
-    // unlike the others; every control is a thumb's size (30px tall at least) and the strip fits the screen
-    await page.evaluate(() => { scrollTo(0, 0); hideSheet(); }); await page.waitForTimeout(400);
-    const strip = await page.evaluate(() => { const bad = [], t = [...document.querySelectorAll('#dmStrip .dmtile')];
-      if($('#dmStrip').classList.contains('mini')) bad.push('the strip is in its pinned form at the top of the page');
-      if(t.length !== 4) bad.push(t.length + ' step tiles');
-      for(const x of t){ const n = (x.querySelector('.l') || {}).textContent || '?';
-        if(x.classList.contains('on')){ const d = x.querySelectorAll('[data-dmdrop]').length, lk = x.querySelectorAll('.lk').length;
-          if(d + lk !== 1) bad.push(n + ': ' + d + ' take-out and ' + lk + ' reasons');
-          if(lk && !x.querySelector('.lk').textContent.trim()) bad.push(n + ': an empty reason');
-          if(lk && x.querySelector('.lk').closest('button')) bad.push(n + ': its reason is tappable'); }
-        else if(x.classList.contains('add')){ if(x.tagName !== 'BUTTON' || !x.dataset.dmadd) bad.push(n + ': Add is not a button'); }
-        else if(x.classList.contains('no')){ if(x.querySelector('button') || x.tagName === 'BUTTON') bad.push(n + ': a step it cannot play is tappable'); }
-        else bad.push(n + ': neither in the turn, nor to add, nor ruled out'); }
-      const cur = document.querySelector('#dmStrip .dmtile.cur'), other = document.querySelector('#dmStrip .dmtile.on:not(.cur)');
-      if(!cur) bad.push('no step shown'); else if(other && getComputedStyle(cur).boxShadow === getComputedStyle(other).boxShadow) bad.push('the step shown looks like the others');
-      for(const b of document.querySelectorAll('#dmStrip .dmtile button, #dmStrip button.dmtile')){ const r = b.getBoundingClientRect(); if(r.height < 29.5 || r.width < 44) bad.push((b.textContent || '').trim().slice(0, 20) + ' is ' + Math.round(r.width) + '×' + Math.round(r.height) + 'px'); }
-      const s = $('#dmStrip').getBoundingClientRect(); if(s.right > innerWidth + 0.5 || document.documentElement.scrollWidth > innerWidth) bad.push('the strip is wider than the screen');
-      return bad; });
-    if(strip.length) fail('damage-strip', A, 'the four-step turn', strip.join('; '));
-    // the only step stays, said in its tile (a turn of one step)
-    const only = await page.evaluate(async () => { const st = dmState(); st.turn[st.dir] = { fight:dmArmed(dmPair(st).au, 'melee'), shoot:!dmArmed(dmPair(st).au, 'melee') }; saveSession(); rerender();
-      await new Promise(f => setTimeout(f, 300)); const x = document.querySelector('#dmStrip .dmtile.on'); const r = x ? [x.querySelectorAll('[data-dmdrop]').length, (x.querySelector('.lk') || {}).textContent || ''] : null;
-      st.turn[st.dir] = { shoot:true, charge:true, fight:true, back:true }; saveSession(); rerender(); await new Promise(f => setTimeout(f, 300)); return r; });
-    if(!only || only[0] !== 0 || !/only step/.test(only[1])) fail('damage-strip', A, 'a turn of one step', 'its tile: ' + JSON.stringify(only));
-    // Shoot and Fight: the Charge is in the turn by itself, says why, and can be taken out (toast, Undo); taken out, the Fight says it
-    // is counted with no charge move
-    const chg = await page.evaluate(async () => { const st = dmState(); if(!dmArmed(dmPair(st).au, 'ranged') || !dmArmed(dmPair(st).au, 'melee')) return 'skip';
-      st.turn[st.dir] = { shoot:true, fight:true }; st.step[st.dir] = 'fight'; saveSession(); rerender(); await new Promise(f => setTimeout(f, 300));
-      const t = [...document.querySelectorAll('#dmStrip .dmtile')].find(x => /Charge/i.test((x.querySelector('.l') || {}).textContent || ''));
-      const r = { note:t && t.querySelector('.dmtn') ? t.querySelector('.dmtn').textContent : '', drop:!!(t && t.querySelector('[data-dmdrop="charge"]')) };
-      if(r.drop){ t.querySelector('[data-dmdrop="charge"]').click(); await new Promise(f => setTimeout(f, 300)); r.said = $('#toast').innerText; r.off = !dmCharged(dmState(), dmState().turn[dmState().dir]);
-        r.plain = /no charge move/.test($('#dmList .dmturnl') ? $('#dmList .dmturnl').innerText : '') && /no charge move/.test($('#dmChips') ? $('#dmChips').innerText : '');
-        const u = document.querySelector('#toast [data-undo]'); if(u) u.click(); await new Promise(f => setTimeout(f, 300)); r.back = dmCharged(dmState(), dmState().turn[dmState().dir]); }
-      st.turn[st.dir] = { shoot:true, charge:true, fight:true, back:true }; st.step[st.dir] = 'shoot'; saveSession(); rerender(); await new Promise(f => setTimeout(f, 300)); return r; });
-    if(chg !== 'skip' && !(chg && /added/.test(chg.note) && chg.drop && /Charge taken out/.test(chg.said || '') && chg.off && chg.plain && chg.back)) fail('damage-strip', A, 'the Charge added after Shoot', JSON.stringify(chg));
-    await page.waitForFunction(() => !dmBusy(), null, { timeout:120000, polling:50 });
-    const undo = await page.evaluate(async () => { const st = dmState(), t0 = JSON.stringify(st.turn[st.dir]);
-      const x = document.querySelector('#dmStrip [data-dmdrop="back"]'); if(x) x.click(); await new Promise(f => setTimeout(f, 300)); const t1 = JSON.stringify(dmState().turn[dmState().dir]), said = $('#toast').innerText;
-      // the toast covers no number: neither the card nor the strip, on one line
-      const tr = $('#toast').getBoundingClientRect(), hit = ['#dmAns', '#dmStrip'].filter(q => { const e = $(q); if(!e) return false; const r = e.getBoundingClientRect(); return r.bottom > tr.top + 1 && r.top < tr.bottom - 1 && r.right > tr.left && r.left < tr.right; });
-      if(hit.length || tr.height > 48) return { changed:true, back:true, said, over:hit.concat(tr.height > 48 ? ['two lines'] : []) };
-      // a tap on the toast's words reaches the tab bar below it (only its Undo takes the tap)
-      const tm = $('#toast .tm').getBoundingClientRect(), below = document.elementFromPoint(tm.left + 4, tm.top + tm.height / 2);
-      if(!below || !below.closest('#bbar')) return { changed:true, back:true, said, over:['the tab bar\'s taps'] };
-      document.querySelector('#toast [data-undo]').click(); await new Promise(f => setTimeout(f, 300));
-      return { back:JSON.stringify(dmState().turn[dmState().dir]) === t0, changed:t1 !== t0, said }; });
-    if(undo.over) fail('damage-toast', A, 'a step added', 'the toast covers ' + undo.over.join(', '));
-    else if(!undo.changed || !undo.back || !/Fight back taken out/.test(undo.said)) fail('damage-undo', A, 'Fight back taken out, then Undo', JSON.stringify(undo));
+    // the top control, Shoot | Fight | Both: every segment one tap, the one on obvious (filled, pressed), a thumb's size, the control
+    // on the screen; each mode is what the card says (its steps), and a tap moves nothing (the segment where it was, the page as tall
+    // from the first frame on)
+    await open('shoot');
+    for(const m of ['fight', 'both', 'shoot']){
+      const r = await page.evaluate(async m => { const q = () => document.querySelector('[data-dmmode="' + m + '"]'), b = q(); if(!b) return { bad:['no ' + m + ' segment'] };
+        const bad = [], r0 = b.getBoundingClientRect();
+        if(r0.height < 44 || r0.width < 60) bad.push(m + ' is ' + Math.round(r0.width) + '×' + Math.round(r0.height) + 'px');
+        const c = b.closest('.dmmode').getBoundingClientRect(); if(c.right > innerWidth + 0.5 || c.left < -0.5 || document.documentElement.scrollWidth > innerWidth) bad.push('the control is wider than the screen');
+        b.click(); const s = [], t0 = performance.now();
+        while(performance.now() - t0 < 3000){ await new Promise(f => requestAnimationFrame(f)); const x = q(); s.push([x ? Math.round(x.getBoundingClientRect().top) : null, document.documentElement.scrollHeight]); }
+        if(s.some(x => x[0] == null || Math.abs(x[0] - Math.round(r0.top)) > 2)) bad.push('the segment moved: ' + Math.round(r0.top) + ' → ' + [...new Set(s.map(x => x[0]))].join(', '));
+        if(s.some(x => x[1] !== s[0][1])) bad.push('the page height changed after the first frame: ' + [...new Set(s.map(x => x[1]))].join(' → '));
+        const on = [...document.querySelectorAll('[data-dmmode]')].filter(x => x.getAttribute('aria-pressed') === 'true').map(x => x.dataset.dmmode);
+        if(on.join() !== m) bad.push('pressed: ' + on.join());
+        const st = getComputedStyle(q()), off = getComputedStyle(document.querySelector('[data-dmmode]:not([aria-pressed="true"])'));
+        if(st.backgroundColor === off.backgroundColor) bad.push('the segment on looks like the others');
+        const want = { shoot:/^Shoot ·/, fight:/^Fight ·/, both:/^Shoot → (Charge → )?Fight ·/ }[m], ctx = (document.querySelector('#dmAns .dmctx') || {}).textContent || '';
+        if(!want.test(ctx) && !(document.querySelector('#dmAns.static .dmmsg'))) bad.push('the card says “' + ctx.slice(0, 40) + '”');
+        return { bad }; }, m);
+      if(r.bad.length) fail('damage-mode', A, m, r.bad.join('; '));
+      await settled();
+    }
+    // Both: its total is the Shoot → Charge → Fight play of the same choices (the Shoot step and the charged Fight step, one after the
+    // other in the same games), the card says each part, and the shooting's and the fight's choices are in their own sections
+    await open('both');
+    const both = await page.evaluate(() => { const C = DM_CTX; if(!C || !C.plan.both) return { skip:true };
+      const st = JSON.parse(JSON.stringify(C.st)), one = m => { const s = JSON.parse(JSON.stringify(st)); s.turn[s.dir] = dmModeTurn(m, m === 'fight' ? { fc:true } : {}); return dmPlan(s).beats[0]; };
+      const bs = [one('shoot'), one('fight')], r = WH_CALC.play({ beats:bs.map(b => ({ side:1, ph:b.ph, fight:b.ph === 'fight', input:Object.assign({}, b.M.input, { sims:undefined, seed:undefined }) })), sims:DM_X, seed:7 });
+      const one1 = C.A.one, want = WH_CALC.fmt(one1 ? r.beats.reduce((t, x) => t + x.dmg, 0) : r.sides[1].killed), got = document.querySelector('#dmAns .dmbig b').textContent;
+      const parts = (document.querySelector('#dmAns .dmparts') || {}).textContent || '';
+      const secs = [...document.querySelectorAll('#dmList .dmpart')].map(p => p.dataset.dmstep + ':' + [...p.querySelectorAll('.dmh3')].map(h => h.firstChild.textContent.trim()).filter(t => /weapons/.test(t)).join());
+      return { want, got, parts, secs }; });
+    if(!both.skip && (Math.abs(+both.want - +both.got) > 0.1 || !/^Shoot [\d.]+ · Fight [\d.]+ · /.test(both.parts) || both.secs.join('|') !== 'shoot:Ranged weapons|fight:Melee weapons'))
+      fail('damage-both', A, 'Both', JSON.stringify(both));
+    // a mode the unit has no weapons for: its segment says so and stays tappable; tapped, the card says so (Both: the part it has)
+    const gun = await page.evaluate(() => { for(const L of WH_DATA.armies) for(const u of L.units) if(!(u.ranged || []).length && (u.melee || []).length) return [L.id, u.id]; return null; });
+    if(gun){ await open('shoot', gun);
+      const g = await page.evaluate(() => { const s = document.querySelector('[data-dmmode="shoot"]'), b = document.querySelector('[data-dmmode="both"]');
+        return { s:s ? s.textContent : '', b:b ? b.textContent : '', dis:!!(s && s.disabled), msg:(document.querySelector('.dmans .dmmsg') || {}).textContent || '' }; });
+      await page.click('[data-dmmode="both"]'); await settled();
+      await page.evaluate(A => { sess.mine = A; }, A);
+      const gb = await page.evaluate(() => ({ note:(document.querySelector('#dmAns .dmparts') || {}).textContent || '', on:(document.querySelector('[data-dmmode][aria-pressed="true"]') || {}).dataset }));
+      if(!/no ranged weapons/.test(g.s) || !/fight only/.test(g.b) || g.dis || !/no ranged weapons/.test(g.msg) || !/no ranged weapons, so this is the fight alone/.test(gb.note) || gb.on.dmmode !== 'both') fail('damage-mode', A, 'a unit with no ranged weapons', JSON.stringify([g, gb])); }
+    // nothing moves while the effects fill in: a row tapped, then every frame for 3 s, the row stays where it was (within 2px) and the
+    // page is as tall as in the first frame (the effects before the tap stay in place, dimmed; every number has its room)
+    for(const mode of ['shoot', 'both']){ await open(mode);
+      const ids = await page.evaluate(() => [...document.querySelectorAll('#dmList .dmlv[data-dmlv], #dmList .dmpp[data-dmlv]')].filter(e => e.getClientRects().length).map(e => e.dataset.dmlv));
+      for(const id of ids.filter((x, i) => i % Math.max(1, Math.floor(ids.length / 5)) === 0).slice(0, 5)){
+        const r = await page.evaluate(async id => { const q = () => document.querySelector('#dmList [data-dmlv="' + CSS.escape(id) + '"]'), e = q(); if(!e) return null;
+          scrollTo(0, e.getBoundingClientRect().top + scrollY - 420); await new Promise(f => requestAnimationFrame(() => requestAnimationFrame(f)));
+          const r0 = q().getBoundingClientRect(), y0 = Math.round(r0.top); q().dispatchEvent(new MouseEvent('click', { bubbles:true, clientX:r0.left + 30, clientY:r0.top + 10 }));
+          const s = [], t0 = performance.now();
+          while(performance.now() - t0 < 3000){ await new Promise(f => requestAnimationFrame(f)); const x = q(); s.push([Math.round(scrollY), x ? Math.round(x.getBoundingClientRect().top) : null, document.documentElement.scrollHeight]); }
+          return { y0, moved:s.filter(x => x[1] == null || Math.abs(x[1] - y0) > 2).length, grew:s.filter(x => x[2] !== s[0][2]).length, frames:s.length, heights:[...new Set(s.map(x => x[2]))], tops:[...new Set(s.map(x => x[1]))] }; }, id);
+        if(r && (r.moved || r.grew)) fail('damage-steady', A, mode + ' · ' + id, r.moved + ' of ' + r.frames + ' frames the row moved (' + r.y0 + ' → ' + r.tops.join(', ') + '), ' + r.grew + ' the page height changed (' + r.heights.join(' → ') + ')');
+        await settled(); } }
+    // no divider touches or crosses a text line, a pick or a box, on the matchups with picks under their rows (Try Dat Button!, a
+    // weapon's profiles, the Blessings, the Doctrina Imperatives), every fold open, with the card in its place and pinned
+    // (in the page: every border-top/bottom line of the screen against every text line and every box; a line drawn by a box itself, or
+    // inside it, is the box's own; one under the pinned card is not seen, unless it shows through)
+    const dmLines = () => {
+      const bad = [], root = document.querySelector('#view'), pin = document.querySelector('#dmPin');
+      const pr = pin && !pin.hidden && pin.firstElementChild ? pin.firstElementChild.getBoundingClientRect() : null;
+      const under = (r, e) => pr && !pin.contains(e) && r.bottom > pr.top && r.top < pr.bottom;   // under the pinned card: not seen
+      const shown = e => { for(let x = e; x && x !== document.body; x = x.parentElement){ const cs = getComputedStyle(x); if(cs.visibility === 'hidden' || cs.display === 'none' || +cs.opacity === 0) return false; } return true; };
+      const lines = [], boxes = [];
+      const BOX = '.dmpp, .dmop, .dmchip, .dmbh, .btn, .btn2, .sd, .best, .dmmode button, .dmans, .dmmx:not([hidden]), .dmst, .dmtyin, .textbtn, .dmswap';
+      for(const e of root.querySelectorAll('*')){
+        if(!e.getClientRects().length) continue;
+        const cs = getComputedStyle(e), r = e.getBoundingClientRect();
+        if(r.width < 1 || r.height < 0.5) continue;
+        for(const s of ['Top', 'Bottom']){ const w = parseFloat(cs['border' + s + 'Width']);
+          if(w > 0 && cs['border' + s + 'Style'] !== 'none' && !/rgba\(\d+, \d+, \d+, 0\)/.test(cs['border' + s + 'Color']) && shown(e)){ const y = s === 'Top' ? r.top : r.bottom - w;
+            if(!under({ top:y, bottom:y + w }, e)) lines.push({ e, y, h:w, x1:r.left, x2:r.right, s });
+            else { const t = document.elementFromPoint((Math.max(r.left, 0) + Math.min(r.right, innerWidth)) / 2, y + w / 2); if(t && !pin.contains(t)) bad.push('a line shows through the pinned card: ' + (e.className || e.tagName)); } } }
+        if(e.matches(BOX) && shown(e) && !under(r, e)) boxes.push({ e, r });
+      }
+      const tw = document.createTreeWalker(root, NodeFilter.SHOW_TEXT); let n;
+      while((n = tw.nextNode())){ if(!n.textContent.trim()) continue; const pe = n.parentElement; if(!pe || !pe.getClientRects().length || !shown(pe)) continue;
+        const rg = document.createRange(); rg.selectNodeContents(n);
+        for(const r of rg.getClientRects()) if(r.width > 0.5 && !under(r, pe)) boxes.push({ e:pe, r, t:n.textContent.trim().slice(0, 28) }); }
+      const nm = e => (e.className && typeof e.className === 'string' ? '.' + e.className.trim().split(/\s+/)[0] : e.tagName.toLowerCase()) + (e.dataset.dmlv ? '[' + e.dataset.dmlv.slice(0, 24) + ']' : '');
+      for(const L of lines) for(const B of boxes){
+        if(!B.t && (B.e === L.e || B.e.contains(L.e))) continue;   // the box's own edge, or a line drawn inside it
+        if(pin && pin.contains(B.e) !== pin.contains(L.e)) continue;   // the list scrolling under the pinned card's edge
+        if(L.x2 <= B.r.left + 0.5 || L.x1 >= B.r.right - 0.5) continue;
+        if(L.y + L.h > B.r.top - 2 && L.y < B.r.bottom + 2){ const k = nm(L.e) + ' ' + L.s.toLowerCase() + ' line ' + (L.y < B.r.bottom && L.y + L.h > B.r.top ? 'through' : 'touching') + ' ' + (B.t ? '“' + B.t + '”' : nm(B.e));
+          if(!bad.includes(k)) bad.push(k); } }
+      return bad;
+    };
+    for(const [L0, st0, label] of [
+      ['shooty', { atk:'dakkarig-boosta', tArmy:'princes', tgt:'lord-on-juggernaut-khorne-berzerkers' }, 'Try Dat Button!'],
+      ['shooty', { atk:'mek-flashgitz', tArmy:'super-terminators', tgt:'chaos-terminators' }, 'profiles'],
+      ['princes', { atk:'kh-rn-the-betrayer-khorne-berzerkers', tArmy:'shooty', tgt:'mek-flashgitz', turn:{ me:{ mode:'fight', fight:true, charge:true, fc:true } } }, 'Blessings'],
+      ['purge-goes-the-foe', { atk:'skitarii-rangers', tArmy:'typed', typed:{ n:10, T:4, W:1, Sv:4, InSv:0, fnp:0 } }, 'Doctrina'],
+      ['shooty', { atk:'mek-flashgitz', tArmy:'princes', tgt:'lord-on-juggernaut-khorne-berzerkers', turn:{ me:{ mode:'both', shoot:true, fight:true, charge:true } } }, 'Both']]){
+      if(!armies.some(x => x.id === L0) || !await page.evaluate(([L0, u]) => !!armyById(L0).units.find(x => x.id === u), [L0, st0.atk])){ fail('damage-lines', L0, label, 'the matchup is not in the data'); continue; }
+      await page.evaluate(([L0, st0]) => { hideSheet(); sess.mine = L0; sess.dmg = { [L0]:Object.assign({ dir:'me', turn:{ me:dmModeTurn('shoot') }, fold:{ nc:true, outs:true, more:true } }, st0) }; go({ s:'damage', army:L0 }); scrollTo(0, 0); }, [L0, st0]);
+      await settled();
+      const top = await page.evaluate(dmLines);
+      await page.evaluate(async () => { scrollTo(0, 900); await new Promise(f => requestAnimationFrame(() => requestAnimationFrame(f))); dmStick(); await new Promise(f => requestAnimationFrame(f)); });
+      const bad = top.concat((await page.evaluate(dmLines)).map(x => 'pinned: ' + x)); await page.evaluate(() => scrollTo(0, 0));
+      if(bad.length) fail('damage-lines', L0, label, bad.slice(0, 6).join(' | '));
+    }
+    await page.evaluate(A => { sess.mine = A; }, A);
     // another target: the facts said about the pair (the closest target, a half-range band) reset, the toast names them, Undo puts them back
     await open();
     const rs = await page.evaluate(async B => { const st = dmState(), d = st.dir, P = dmPair(st), u = armyById(B).units.find(x => x.id !== st.tgt); if(!u) return null;
@@ -359,6 +411,16 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       document.querySelector('#toast [data-undo]').click(); await new Promise(f => setTimeout(f, 400));
       const s2 = dmState(); return { said, gone, back:!!(s2.facts[d].theirs || {}).closest && dmCh(s2, 'shoot').val.half === 9 && s2.tgt === before.tgt }; }, B);
     if(!rs || !/reset: .*closest target/.test(rs.said) || !rs.gone || !rs.back) fail('damage-reset', A, 'another target', JSON.stringify(rs));
+    // its toast: over the tab bar, on one line, covering no number of the card; a tap on its words reaches the tab bar below it
+    const toast = await page.evaluate(async B => { const st = dmState(), u = armyById(B).units.find(x => x.id !== st.tgt); if(!u) return null;
+      const before = dmBefore(st, true), r = dmSetUnit(st, 'theirs', B, u.id); saveSession(); rerender(); dmChange(r.words, before, r.dropped); await new Promise(f => setTimeout(f, 300));
+      const tr = $('#toast').getBoundingClientRect(), a = $('#dmAns'), ar = a ? a.getBoundingClientRect() : null, over = [];
+      if(ar && ar.bottom > tr.top + 1 && ar.top < tr.bottom - 1 && ar.right > tr.left && ar.left < tr.right) over.push('the card');
+      if(tr.height > 48) over.push('two lines');
+      const tm = $('#toast .tm').getBoundingClientRect(), below = document.elementFromPoint(tm.left + 4, tm.top + tm.height / 2);
+      if(!below || !below.closest('#bbar')) over.push('the tab bar\'s taps');
+      document.querySelector('#toast [data-undo]').click(); await new Promise(f => setTimeout(f, 300)); return over; }, B);
+    if(toast && toast.length) fail('damage-toast', A, 'a unit picked', 'the toast covers ' + toast.join(', '));
     // a typed number typed slowly (keys 0.4 s apart) keeps every digit; an entry it cannot count is said under the field, and leaving
     // the field puts the counted value back
     await page.evaluate(A => { hideSheet(); sess.dmg = {}; const L = armyById(A), u = L.units.find(x => (x.ranged || []).length) || L.units[0];
