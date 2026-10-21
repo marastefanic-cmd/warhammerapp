@@ -455,6 +455,18 @@
   "at": "2026-10-16",
   "why": "NR: \"Battleline*, Berzerkers*, Grenades*, Infantry*, *from combined unit\"."
  },
+ "125a1771467ea031": {
+  "verdict": "ok",
+  "by": "review:r14-cond",
+  "at": "2026-10-21",
+  "why": "\"This unit’s ranged attacks that target the closest eligible target can re-roll hit rolls\" (Wahapedia has the same): the closest eligible target is the whole condition of this effect, so cond closest is right. The charge part (\"When this unit declares a charge …\") is a separate effect, and the mark is not on it."
+ },
+ "125b2502c668bb4d": {
+  "verdict": "ok",
+  "by": "review:r14-cond",
+  "at": "2026-10-21",
+  "why": "\"If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead\": that is the whole condition of the full re-roll, which is marked cond targetObjectiveNotYours, while the re-roll of 1s is a separate always mod. Its implications (target on an objective marker → this unit or the target on an objective) follow from the words. One caveat on the label, not the mark: when the other side's list attacks, \"you\" in \"you do not control\" means the attacking player, not the viewer."
+ },
  "12745156421c7042": {
   "verdict": "ok",
   "by": "review:knights-nids (its fix)",
@@ -737,6 +749,12 @@
   "at": "2026-10-16",
   "why": "\"Your unit’s melee attacks have +2 S\", when selected to fight."
  },
+ "1d68fa71eab6355a": {
+  "verdict": "ok",
+  "by": "review:r14-cond",
+  "at": "2026-10-21",
+  "why": "\"In your Shooting phase, if any of the following apply … This unit is within range of an objective. The target of that attack is within range of an objective\": the situation is exactly \"this unit or the target within range of an objective\", and the objective fact is attacker OR target. The only other need is \"your Shooting phase\". The when names it, the ranged step is the attacker's own Shooting phase, and the code drops the tick for overwatch (/your shooting phase/)."
+ },
  "1dd70c039f74eaa3": {
   "verdict": "ok",
   "by": "review:r13-calc-marks",
@@ -844,6 +862,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "Matches \"targets the closest eligible target within 18\\\", you can re-roll the Hit roll\"."
+ },
+ "21292393d1a6daab": {
+  "verdict": "ok",
+  "by": "review:r14-cond",
+  "at": "2026-10-21",
+  "why": "\"In the Fight phase, if this unit is riled up, this unit has +1 to hit rolls\": the conditions are riled up plus the Fight phase. The mark is kind melee, and melee attacks are only made in the Fight phase (the Fight and Fight back steps, either turn), so cond riled ticks nothing the words exclude."
  },
  "213a7eec4a753bbd": {
   "verdict": "ok",
@@ -1019,6 +1043,12 @@
   "at": "2026-10-16",
   "why": "Matches NR: Psychic tendril neuroparasite/neurolance/neuroblast, Monstrous rending claws, Monstrous scything talons."
  },
+ "26e838f5fe24a4de": {
+  "verdict": "ok",
+  "by": "review:r14-cond",
+  "at": "2026-10-21",
+  "why": "\"Each time this model makes a ranged attack that targets the closest eligible target within 18\", you can re-roll the Hit roll\" (Wahapedia has the same): the target being both the closest eligible target and within 18\" is the whole condition, so cond closest18 is right. Its implication closest18 → closest is sound, and \"closest\" on its own does not tick this rule."
+ },
  "273b23f711ae4fc7": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -1036,6 +1066,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "TARGET: \"That MEGANOBZ/NOBZ unit.\""
+ },
+ "27aa9969039b1408": {
+  "verdict": "ok",
+  "by": "review:r14-cond",
+  "at": "2026-10-21",
+  "why": "\"If this unit made a charge move this turn, this unit’s melee attacks have +1 S\" (the World Eaters faction pack's own change text is the same): a charge move this turn is the whole condition, so cond charged is right."
  },
  "27bed3347b6c58c4": {
   "verdict": "ok",
@@ -1318,6 +1354,12 @@
   "by": "review:m5-recheck",
   "at": "2026-10-20",
   "why": "NR prints 'Krumpin' Time - Meganobz' (l.70); BSData profile is on the Meganobz unit, i.e. the bodyguard. Models match NR."
+ },
+ "329af2485182a556": {
+  "verdict": "ok",
+  "by": "review:r14-cond",
+  "at": "2026-10-21",
+  "why": "\"If this unit made a charge move this turn, this model’s melee attacks have +3 A, +2 S\" (BSData has the same): making a charge move this turn is the whole condition, so cond charged is right. A Heroic Intervention charge also counts, because 15.11 has the unit \"Resolve a charge\", and the screen labels the Fight back switch that way."
  },
  "329f09bdca798db1": {
   "verdict": "ok",
@@ -1709,6 +1751,12 @@
   "at": "2026-10-16",
   "why": "\"once per battle ... you can unleash the Shadow in the Warp\": the player unleashes it once, and it is shown once, as an army rule, not on each unit."
  },
+ "4041ac8f82888c91": {
+  "verdict": "ok",
+  "by": "review:r14-cond",
+  "at": "2026-10-21",
+  "why": "\"If this unit made a charge move this turn, this unit’s attacks have +1 D\": a charge move this turn is the whole condition, so cond charged is right. The words say \"attacks\" and the mark says melee, but after a charge move in the same turn only melee attacks follow (shooting comes first, and a Heroic Intervention comes after overwatch). The screen also never applies charged to the Shoot step."
+ },
  "4079ef9368c07d10": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -1925,6 +1973,12 @@
   "at": "2026-10-16",
   "why": "\"WHEN: Your Command phase\"."
  },
+ "47ba1fece642e216": {
+  "verdict": "ok",
+  "by": "review:r14-cond",
+  "at": "2026-10-21",
+  "why": "\"Friendly ORKS INFANTRY units’ ranged attacks have: [ASSAULT]. While this unit is riled up, +3\" R\" (Wahapedia has the same wording): the mark is on the +3\" bullet, whose only condition is being riled up. \"This unit\" can only mean the ORKS INFANTRY unit making the attacks, so the attacker's \"Riled up\" fact is right. The keyword need is handled by needs, not by cond."
+ },
  "480ea036b578a6b1": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -1942,6 +1996,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "The battle round starts before whichever player goes first, so either."
+ },
+ "48b448a08e7f6bc3": {
+  "verdict": "ok",
+  "by": "review:r14-cond",
+  "at": "2026-10-21",
+  "why": "\"Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll\" (Wahapedia has the same): the target being the closest eligible target (01.04.02: closest to the model using the rule) is the whole condition, so cond closest is right."
  },
  "48ed8b2b13847330": {
   "verdict": "ok",
@@ -2026,6 +2086,12 @@
   "by": "review:hurrdurr (its fix)",
   "at": "2026-10-16",
   "why": "\"Once per battle round, one model from your army with this ability can use it\" is a per-army limit, and this army has two Daemon Princes with it."
+ },
+ "4bb7620ec0bba258": {
+  "verdict": "ok",
+  "by": "review:r14-cond",
+  "at": "2026-10-21",
+  "why": "\"Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the [DEVASTATING WOUNDS] ability\" (BSData wording; Wahapedia says \"melee weapons\"): the effect holds for the rest of the turn once a charge move is made, which is exactly \"made a charge move this turn\", so cond charged is right."
  },
  "4bb96c26d1afc78a": {
   "verdict": "ok",
@@ -2176,6 +2242,12 @@
   "by": "review:gists (its fix)",
   "at": "2026-10-17",
   "why": "EFFECT: “Make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne.” The gist drops “use the results to”, which ties the Blessing to that roll; “and activate one Blessing of Khorne” reads as a free pick. The duration (“Until the end of the battle round … in addition to any other Blessings of Khorne that are currently active”) is literal."
+ },
+ "52826eb80288538e": {
+  "verdict": "ok",
+  "by": "review:r14-cond",
+  "at": "2026-10-21",
+  "why": "\"ORKS model only. If this unit made a charge move this turn, this model’s melee attacks have +1 AP\" (Wahapedia has the same): \"ORKS model only\" limits who can take the enhancement, not when it works, so the charge move this turn is the whole condition and cond charged is right."
  },
  "5288f1d167475b30": {
   "verdict": "ok",
@@ -3155,6 +3227,12 @@
   "at": "2026-10-16",
   "why": "Text: \"(Once per battle, per unit)\"."
  },
+ "7a94c964a5582ba2": {
+  "verdict": "ok",
+  "by": "review:r14-cond",
+  "at": "2026-10-21",
+  "why": "\"If this unit is riled up, this unit’s ranged attacks have [SUSTAINED HITS 1]\" (Wahapedia and BSData read the same): being riled up is the only condition, with no phase or turn, so cond riled (the attacker's \"Riled up\") is right."
+ },
  "7aa06e283a202827": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -3466,6 +3544,12 @@
   "by": "review:m5-recheck",
   "at": "2026-10-20",
   "why": "NR Categories (l.189-190): 'Big Mek, Big Mek in Mega Armour, Character, Explosives, Faction: Orks, Infantry, Mega Armour, Meganobz*, *from combined unit'. The only starred keyword is Meganobz, and the BMiMA is 'Leading: Meganobz[2]', so 'Meganobz comes from the led Meganobz' is right. data.js kw matches."
+ },
+ "8526839c952579da": {
+  "verdict": "ok",
+  "by": "review:r14-cond",
+  "at": "2026-10-21",
+  "why": "TARGET \"One WORLD EATERS unit from your army that has not been selected to fight this phase and that made a charge move this turn\", WHEN \"Fight phase\": the situation is \"made a charge move this turn\". The other needs are the keyword (needs), the Fight phase (phases) and not yet having fought, which holds for any unit about to fight. A stratagem is never ticked by a fact (it is only listed as \"also the condition of 1CP Hack and Slash\"), so nothing is over-ticked."
  },
  "853d9711a0d1c8aa": {
   "verdict": "ok",
@@ -4073,6 +4157,12 @@
   "at": "2026-10-21",
   "why": "NR: “1x Onager Dunecrawler — Broad spectrum data-tether, Cognis heavy stubber, Dunecrawler legs, Twin Onager heavy phosphor blaster”. The data-tether is wargear, not a weapon, so the weapons are the three NR rows."
  },
+ "99c1a1e146fab39f": {
+  "verdict": "ok",
+  "by": "review:r14-cond",
+  "at": "2026-10-21",
+  "why": "\"Each time this model makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1\" (Wahapedia has the same): the closest eligible target is the whole condition, so cond closest is right."
+ },
  "99d6af4a660d498c": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -4678,6 +4768,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "\"WHEN: Your Shooting phase\"."
+ },
+ "ae6008ec9323de25": {
+  "verdict": "ok",
+  "by": "review:r14-cond",
+  "at": "2026-10-21",
+  "why": "\"Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability\" (the Imperial Knights faction pack has the same): the target being in range of an objective marker is the whole condition, with no control requirement, so cond targetObjective is right. The core rules FAQ says an \"objective marker\" in a rule means an objective."
  },
  "ae604f13a7cd7852": {
   "verdict": "ok",
@@ -5704,6 +5800,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "Matches the NR line \"Powerful limbs, Stinger salvoes, Acid spray\"."
+ },
+ "d6a0dfab18ca54d5": {
+  "verdict": "ok",
+  "by": "review:r14-cond",
+  "at": "2026-10-21",
+  "why": "\"In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability\" (Wahapedia has the same): having remained stationary in your own Movement phase this turn is the whole condition, and that is the \"Remained Stationary\" fact (09.04: a move type selected in the Movement phase). The Shoot step is in the attacker's own turn, so the fact can only mean this turn's Movement phase."
  },
  "d6aca4a6ac9326da": {
   "verdict": "ok",
@@ -6755,6 +6857,12 @@
   "at": "2026-10-16",
   "why": "Crimson King ability of Magnus; Unearthly Power: \"select one of the abilities in the Crimson King section\" each battle round."
  },
+ "fc7796a060198b9c": {
+  "verdict": "ok",
+  "by": "review:r14-cond",
+  "at": "2026-10-21",
+  "why": "\"In your Shooting phase, when a friendly BREAKA BOYZ/FLASH GITZ/TANKBUSTAS unit is selected to shoot, if any of the following apply … That unit is within range of an objective. The target of that attack is within range of an objective\": as with Finderz Keeperz, the situation is \"this unit or the target on an objective\". The other needs are \"your Shooting phase\" (in the when; overwatch is excluded by the code) and the unit keywords (needs)."
+ },
  "fcc098e5fb2c4ac7": {
   "verdict": "ok",
   "by": "review:r5-text",
@@ -6808,6 +6916,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "\"At the end of your Movement phase…\""
+ },
+ "ff976d61f7607f40": {
+  "verdict": "ok",
+  "by": "review:r14-cond",
+  "at": "2026-10-21",
+  "why": "\"This unit’s ranged attacks have: [IGNORES COVER]. If this unit is riled up, [SUSTAINED HITS 1]\": the mark is on the [SUSTAINED HITS 1] bullet only, and \"riled up\" is that bullet's whole condition. [IGNORES COVER] needs nothing and has no mark."
  },
  "ffa43a43f77473b0": {
   "verdict": "ok",
