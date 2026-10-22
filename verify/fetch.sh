@@ -11,11 +11,10 @@ BSDATA_COMMIT=173d0ef
 git -C .cache/bsdata checkout -q $BSDATA_COMMIT
 # the factions of the lists (sources/factions.json): "<faction> <wahapedia page> <faction pack file or ->"
 FACTIONS=$(node -e 'const f = require("./sources/factions.json"); for(const [k, v] of Object.entries(f)) if(k[0] !== "_") console.log(k, v.waha, v.pack ? v.pack.file : "-")')
-# Games Workshop's official documents: core rules, updates, event companion, and each faction's Faction Pack
+# Games Workshop's official documents: core rules, updates, and each faction's Faction Pack
 PACKS=$(echo "$FACTIONS" | awk '$3 != "-" { print $3 }')
 for f in eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.pdf \
-         eng_wh40k_core%26key_universal_rules_updates-lu3grocned-rphh78bl6k.pdf \
-         eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.pdf $PACKS; do
+         eng_wh40k_core%26key_universal_rules_updates-lu3grocned-rphh78bl6k.pdf $PACKS; do
   out=$(echo "$f" | sed 's/%26/and/')   # GW's file name has an "&"; the cache keeps the old name
   [ -f .cache/gw/$out ] || curl -sSf -A "Mozilla/5.0" "https://assets.warhammer-community.com/$f" -o .cache/gw/$out
   [ -s .cache/gw/${out%.pdf}.txt ] || pdftotext -layout .cache/gw/$out .cache/gw/${out%.pdf}.txt

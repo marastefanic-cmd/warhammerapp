@@ -182,45 +182,6 @@ const CORE_STRATAGEMS = [
     effect:'Until the end of the phase, your unit has the **Fights First** ability and it must be the next unit you **select to fight** (12.04).' }
 ];
 
-/* ---------------- the Game tab ---------------- */
-// The rules texts the Game tab (the game tracker) quotes beyond RULES, each with the document and the place it is
-// from; verify/texts.js finds every line word for word in that document (core: GW Core Rules; ec: GW Warhammer
-// Event Companion 1.3) and every step heading under its number. Nothing else in the app shows these.
-const GAME = {
-  // Command points: the Core CP every Command phase, and the Event Companion's cap on the others
-  cp:[
-    { doc:'core', num:'08.02', title:'Gain Core CP', text:'Both players gain 1 Command Point (CP).' },
-    { doc:'ec', title:'Generating Command Points', text:'Excluding Core CP, each player can gain a maximum of 1CP per battle round (including he CP gained when a player discards an active Secondary Mission card).' }
-  ],
-  // the steps of the battle round and of each phase, as the Core Rules number them (07–12): the start, what happens during
-  // the phase, the end. The Game tab files each rule under the step its own words name ("at the start of your Command phase")
-  steps:{
-    round:[['07.01', 'Start of Battle Round'], ['07.03', 'End of Battle Round']],
-    command:[['08.01', 'Start of Command Phase'], ['08.03', 'Battle-shock'], ['08.04', 'Command Abilities'], ['08.05', 'End of Command Phase']],
-    movement:[['09.01', 'Start of Movement Phase'], ['09.02', 'Move Units'], ['09.03', 'End of Movement Phase']],
-    shooting:[['10.01', 'Start of Shooting Phase'], ['10.02', 'Shoot'], ['10.03', 'End of Shooting Phase']],
-    charge:[['11.01', 'Start of Charge Phase'], ['11.02', 'Charge'], ['11.03', 'End of Charge Phase']],
-    fight:[['12.01', 'Start of Fight Phase'], ['12.02', 'Pile In'], ['12.04', 'Fight'], ['12.07', 'Consolidate'], ['12.09', 'End of Fight Phase']]
-  },
-  // the Event Companion's Warhammer Event Mission Sequence: each step's number, title and first paragraph
-  sequence:[
-    [1, 'Muster Armies', 'Muster armies as described in the Warhammer 40,000 app, with the following exception: once they have mustered their army, a player selects one Force Disposition card available to them and records that on their roster.'],
-    [2, 'Determine Mission', 'Each player finds their opponent’s Force Disposition symbol on their Force Disposition card. The Primary Mission that is listed below that symbol is that player’s Primary Mission, which describes how to score VP.'],
-    [3, 'Determine a Layout', 'Each combination of Primary Missions has three recommended layouts, labelled A, B and C. These can be found in the Warhammer 40,000 app and at the end of this companion. As directed by the Warhammer Event organiser, the players either use the layout specified or randomly determine which of these layouts to use.'],
-    [4, 'Create the Battlefield', 'Missions are played on rectangular battlefields 44" by 60" in size. Players set up the terrain areas as shown in the selected layout, then set up terrain features on those terrain areas as shown in the selected layout.'],
-    [5, 'Determine Attacker and Defender', 'Players look at the selected layout and agree which edges of the battlefield the players have set up correspond with the Attacker’s and Defender’s battlefield edges labelled on the card.\nRoll off: the winner decides who will be the Attacker and who will be the Defender.'],
-    [6, 'Select Secondary Missions', 'Secondary Mission cards detail additional ways to score VP. Players now secretly note down whether they will use Tactical or Fixed Secondary Missions. If using Fixed Missions, they also note down which two Fixed Missions they will use (see below). Players then reveal these decisions.'],
-    [7, 'Declare Battle Formations', 'Players secretly note down, in order:\n- Which of their units will start the battle embarked within which **TRANSPORTS**.\n- Which of their units will start the battle in **strategic reserves**.\nPlayers then reveal these decisions.'],
-    [8, 'Deploy Armies', 'Players take it in turns to set up their units (excluding those in **strategic reserves**) one at a time, wholly within their deployment zone, starting with the Defender.\nIf you set up a **TITANIC** unit when it is your turn to set up a unit, skip your next turn to set up a unit.\nOnce you have finished setting up your units, if your opponent has any units that have not been set up, they set up those units.'],
-    [9, 'Redeploy Units', 'Some rules let you redeploy certain units after both armies are deployed. Unless otherwise stated, you resolve those rules in this step. Players alternate resolving any such rules, starting with the Attacker. Units placed in **strategic reserves** in this step do not count towards the combined points value of your **strategic reserves** units.'],
-    [10, 'Determine First Turn', 'Roll off: the winner takes the first turn.'],
-    [11, 'Resolve Pre-battle Rules', 'Players alternate resolving any pre-battle rules units from their army may have, starting with the player who will take the first turn.'],
-    [12, 'Begin the Battle', 'The first battle round begins.'],
-    [13, 'End the Battle', 'The battle ends after five battle rounds have been completed. Even if you have no models remaining in your army at the start of your turn, players continue to play out their turns until the battle ends.'],
-    [14, 'Determine Victor', 'Each player scores 10VP if their army is painted to a Battle Ready standard. At the end of the battle, the player with the most VP is the victor. If the players are tied, the battle is a draw.']
-  ]
-};
-
 /* ---------------- factions ---------------- */
 const FACTIONS = {
   orks: {
@@ -3639,5 +3600,5 @@ const ARMIES = [
 // core terms (not abilities): kept out of a unit's rule list and the glossary of rules units have
 const CONCEPTS = ['Hazard Roll','Mortal Wounds','Battle-shock','Engagement','Selected to Attack','Destroyed','Normal Move','Advance Move','Fall-back Move','Charge','Charge Move','Pile-in Move','Consolidation Move','Benefit of Cover','Strategic Reserves','Ingress Move','Surge Move','Scout Move','Starting Strength','Select Weapons'];
 
-return { version:VERSION, concepts:CONCEPTS, rules:RULES, ruleSrc:RULE_SRC, ruleAliases:RULE_ALIASES, coreStratagems:CORE_STRATAGEMS, game:GAME, factions:FACTIONS, armies:ARMIES };
+return { version:VERSION, concepts:CONCEPTS, rules:RULES, ruleSrc:RULE_SRC, ruleAliases:RULE_ALIASES, coreStratagems:CORE_STRATAGEMS, factions:FACTIONS, armies:ARMIES };
 })();
