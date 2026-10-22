@@ -780,6 +780,11 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .dmtt.on .ck::after{content:''; width:10px; height:5px; margin-top:-3px; border:solid var(--accent-ink); border-width:0 0 2.5px 2.5px; transform:rotate(-45deg)}
 .dmtt:active{background:var(--surface)}
 .dmleft{margin-top:10px}
+/* the half-range bands: a whole row to tap, with room between them */
+.dmbands .dmlv{grid-template-columns:24px minmax(0,1fr) var(--fxw); min-height:58px; padding:13px 2px 11px}
+.dmbands .dmlv .ck{width:24px; height:24px}
+.dmbands .dmlv.rad.on .ck::after{width:12px; height:12px}
+.dmman .dmstep button{min-height:42px; min-width:44px}
 .dmnote{margin:6px 0 0}
 /* the popups */
 .dmbars{display:grid; gap:3px; margin:6px 0 4px}
