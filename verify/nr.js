@@ -266,7 +266,8 @@ function parseArmy(lines) {
   // roster: NAME | ROLE | PTS | OPTIONS, cells centred on their row
   const hdr = lines[i]; i++;
   const optCol = hdr.indexOf('OPTIONS');
-  const roleRe = new RegExp('^(.*?)\\s+(' + ROLES.map(escRe).join('|') + ')\\s+(\\d+)\\b\\s*(.*)$');
+  // an allied unit's role is its allied faction ("(3) Nurglings   Allies: Legiones Daemonica 45")
+  const roleRe = new RegExp('^(.*?)\\s+(' + ROLES.map(escRe).join('|') + '|Allies: [A-Z][^\\d]*?)\\s+(\\d+)\\b\\s*(.*)$');
   const rows = [], Ls = [], Rs = [];
   for (; i < lines.length; i++) {
     const line = lines[i]; if (!line.trim()) continue;
