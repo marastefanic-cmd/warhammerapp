@@ -2401,7 +2401,12 @@ function dmLevers(st, plan){
   if(!plan.both) L.push(...dmLeversOf(st, plan, plan.k, '', facts, L));
   else plan.beats.forEach((b, i) => { L.push(...dmLeversOf(st, plan, i, b.id + '/', facts, L)); });
   // a fact not said to hold, with some of the rules it switches on ticked by hand: partly ticked
-  for(const f of L.filter(x => x.fact)){ const kids = L.filter(y => y.underFact === f.id); f.part = !f.on && kids.some(y => y.on); f.kidsOn = kids.filter(y => y.on).length; f.kids = kids.length; }
+  for(const f of L.filter(x => x.fact)){ const kids = L.filter(y => y.underFact === f.id); f.part = !f.on && kids.some(y => y.on); f.kidsOn = kids.filter(y => y.on).length; f.kids = kids.length;
+    // the last of its rules ticked: the fact is said to hold (its box ticked; not the charge, which is the turn's Charge)
+    if(!f.on && f.fact !== 'charged' && f.kidsOn === f.kids - 1) for(const y of kids) if(!y.on) y.apply = f.apply;
+    // one of them unticked while it is said to hold: it is not said to hold, the others stay ticked by hand
+    if(f.on && f.fact !== 'charged' && !f.why && !f.always) for(const y of kids) if(y.on) y.apply = s => { f.apply(s);
+      for(const z of kids) if(z !== y && z.on) dmCh(s, z.step).on[z.r ? z.r.k : z.x.k] = true; }; }
   return L;
 }
 // one step's levers (pf: the prefix of their ids; facts: the facts' ids made so far; prior: the levers of the steps before it)
