@@ -9,6 +9,8 @@
 const path = require('path'), fs = require('fs');
 const { ROOT, normText, serve, writeJSON, sha, loadData } = require('./lib');
 const { chromium } = require('playwright');
+// a promise rejected with nothing to catch it (the browser gone, a page closed mid-call): its cause first, so the gate's summary line shows it
+process.on('unhandledRejection', e => { console.log('render crashed: ' + ((e && e.stack) || e)); process.exit(1); });
 
 // app-written text, by where the app puts it
 const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.tg', '.cr', '.tq', '.wn small', '.lbn',
