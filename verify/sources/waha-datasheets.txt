@@ -82,3 +82,6 @@ chaos-knights Chaos-Cerastus-Knight-Lancer
 chaos-knights Knight-Despoiler
 chaos-knights Knight-Ruinator
 chaos-daemons Nurglings
+chaos-knights War-Dog-Brigand
+chaos-knights War-Dog-Executioner
+chaos-knights War-Dog-Karnivore

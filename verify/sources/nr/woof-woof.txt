@@ -1,0 +1,304 @@
+10/22/26, 11:53 PM                                                    Woof Woof - New Recruit
+
+                                                       Woof Woof [2000pts]
+  Army Roster [3 Detachment Points, 2000 pts] (Chaos - Chaos Knights)
+  • Battle Size: Strike Force (2000 Point limit)
+  • Detachment: Houndpack Lance [2Detachment Points], Hunting Warpack [1Detachment Points]
+  • Force Disposition: Reconnaissance
+  • Show/Hide Options: Nurgle Daemons are visible
+  NAME                    ROLE       PTS OPTIONS
+   War Dog Brigand                Battleline 155 Houndpack Lance Character, Warlord
+   War Dog Brigand                Battleline 135 Houndpack Lance Character
+   War Dog Brigand                Battleline 135
+   War Dog Brigand                Battleline 135
+   War Dog Brigand                Battleline 135
+   War Dog Executioner Battleline 140
+   War Dog Executioner Battleline 140
+   War Dog Executioner Battleline 140
+   War Dog Karnivore              Battleline 160 Houndpack Lance Character
+   War Dog Karnivore              Battleline 145
+   War Dog Karnivore              Battleline 145
+   War Dog Karnivore              Battleline 145
+   War Dog Karnivore              Battleline 145
+   War Dog Karnivore              Battleline 145
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada84299fa832e186c31a10?view=npvmfs                        1/9
+10/22/26, 11:53 PM                                                         Woof Woof - New Recruit
+     155 PTS                                                  WAR DOG BRIGAND
+   Models                  Options
+   1x                      Houndpack Lance Character, Warlord, Final Howl (Aura), Armoured feet, Avenger chaincannon,
+   War Dog Brigand         Daemonbreath spear, Diabolus heavy stubber
+   Unit                                     M             T      Sv          W        LD         OC       InSv        Base
+   War Dog Brigand                          12"           9      3+          14       7+         6        5+*         100mm
+   Ranged Weapons                                  Range              A         BS       S       AP   D          Keywords
+   Avenger chaincannon                             24"                12        3+       6       -1   1
+   Daemonbreath spear                               18"               2         3+       12      -4   D6         Melta 4
+   Diabolus heavy stubber                           36"               3         3+       5       0    1          Rapid Fire 3
+   Melee Weapons                            Range                A         WS          S       AP     D          Keywords
+   Armoured feet                            Melee                4         3+          6       0      1
+   Abilities                   Description
+                               Ranged weapons equipped by this model have the [Ignores Cover] ability while
+   Brigand
+                               targeting enemy units in range of one or more objective markers.
+                               While this model has 1-5 wounds remaining, subtract 3 from this model's Objective
+   Damaged: 1-5
+                               Control characteristic and each time this model makes an attack, subtract 1 from the Hit
+   wounds remaining
+                               roll.
+   *Invulnerable Save          This model has a 5+ invulnerable save against ranged attacks.
+                               While a friendly War Dog model is within 6" of the bearer, each time that model makes
+   Final Howl (Aura)
+                               an attack, re-roll a Wound roll of 1.
+    Rules Deadly Demise D3, Harbingers of Dread, Melta, Rapid Fire
+
+    Categories Battleline, Brigand, Chaos, Character, Faction: Chaos Knights, Vehicle, Walker, War Dog, Warlord
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada84299fa832e186c31a10?view=npvmfs                                                        2/9
+10/22/26, 11:53 PM                                                         Woof Woof - New Recruit
+     135 PTS                                                  WAR DOG BRIGAND
+   Models                   Options
+   1x                       Houndpack Lance Character, Armoured feet, Avenger chaincannon, Daemonbreath spear,
+   War Dog Brigand          Diabolus heavy stubber
+   Unit                                     M             T      Sv          W        LD         OC       InSv        Base
+   War Dog Brigand                          12"           9      3+          14       7+         6        5+*         100mm
+   Ranged Weapons                                  Range              A         BS       S       AP   D          Keywords
+   Avenger chaincannon                             24"                12        3+       6       -1   1
+   Daemonbreath spear                               18"               2         3+       12      -4   D6         Melta 4
+   Diabolus heavy stubber                           36"               3         3+       5       0    1          Rapid Fire 3
+   Melee Weapons                            Range                A         WS          S       AP     D          Keywords
+   Armoured feet                            Melee                4         3+          6       0      1
+   Abilities                   Description
+                               Ranged weapons equipped by this model have the [Ignores Cover] ability while
+   Brigand
+                               targeting enemy units in range of one or more objective markers.
+                               While this model has 1-5 wounds remaining, subtract 3 from this model's Objective
+   Damaged: 1-5
+                               Control characteristic and each time this model makes an attack, subtract 1 from the Hit
+   wounds remaining
+                               roll.
+   *Invulnerable Save          This model has a 5+ invulnerable save against ranged attacks.
+    Rules Deadly Demise D3, Harbingers of Dread, Melta, Rapid Fire
+
+    Categories Battleline, Brigand, Chaos, Character, Faction: Chaos Knights, Vehicle, Walker, War Dog
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada84299fa832e186c31a10?view=npvmfs                                                        3/9
+10/22/26, 11:53 PM                                                         Woof Woof - New Recruit
+     135 PTS                                                  WAR DOG BRIGAND                                                   x3
+   Models                      Options
+   1x War Dog Brigand          Armoured feet, Avenger chaincannon, Daemonbreath spear, Diabolus heavy stubber
+   Unit                                     M             T      Sv          W        LD         OC       InSv        Base
+   War Dog Brigand                          12"           9      3+          14       7+         6        5+*         100mm
+   Ranged Weapons                                  Range              A         BS       S       AP   D          Keywords
+   Avenger chaincannon                             24"                12        3+       6       -1   1
+   Daemonbreath spear                               18"               2         3+       12      -4   D6         Melta 4
+   Diabolus heavy stubber                           36"               3         3+       5       0    1          Rapid Fire 3
+   Melee Weapons                            Range                A         WS          S       AP     D          Keywords
+   Armoured feet                            Melee                4         3+          6       0      1
+   Abilities                   Description
+                               Ranged weapons equipped by this model have the [Ignores Cover] ability while
+   Brigand
+                               targeting enemy units in range of one or more objective markers.
+                               While this model has 1-5 wounds remaining, subtract 3 from this model's Objective
+   Damaged: 1-5
+                               Control characteristic and each time this model makes an attack, subtract 1 from the Hit
+   wounds remaining
+                               roll.
+   *Invulnerable Save          This model has a 5+ invulnerable save against ranged attacks.
+    Rules Deadly Demise D3, Harbingers of Dread, Melta, Rapid Fire
+
+    Categories Battleline, Brigand, Chaos, Faction: Chaos Knights, Vehicle, Walker, War Dog
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada84299fa832e186c31a10?view=npvmfs                                                             4/9
+10/22/26, 11:53 PM                                                       Woof Woof - New Recruit
+     140 PTS                                            WAR DOG EXECUTIONER                                                  x3
+   Models                           Options
+   1x War Dog Executioner           Snarling Rivalry, Armoured feet, 2x War Dog autocannon, Diabolus heavy stubber
+   Unit                                           M         T       Sv         W         LD         OC       InSv    Base
+   War Dog Executioner                            12"       9       3+         14        7+         6        5+*     100mm
+   Ranged Weapons                              Range        A    BS        S   AP     D       Keywords
+   War Dog autocannon (x2)                     48"          4    3+        9   -1     3       Ignores Cover
+   Diabolus heavy stubber                      36"          3    3+        5    0      1      Rapid Fire 3, Ignores Cover
+   Melee Weapons                            Range               A        WS          S         AP        D      Keywords
+   Armoured feet                            Melee               4        3+          6         0         1
+   Abilities              Description
+                          Each time this model makes an attack that targets a unit Below Half-strength, add 1 to the
+                          Hit roll. Each time an enemy unit is destroyed as the result of this model's attacks, before
+   Executioner
+                          removing the last model in that unit from the battlefield, each other unit from your
+                          opponent's army that is within 3" of it must take a Battle-shock test.
+   Damaged: 1-5           While this model has 1-5 wounds remaining, subtract 3 from this model's Objective Control
+   wounds remaining       characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+   *Invulnerable
+   Save
+                          This model has a 5+ invulnerable save against ranged attacks.
+
+   Snarling Rivalry       This unit’s ranged attacks have [IGNORES COVER].
+    Rules Deadly Demise D3, Harbingers of Dread, Rapid Fire
+
+    Categories Battleline, Chaos, Executioner, Faction: Chaos Knights, Vehicle, Walker, War Dog
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada84299fa832e186c31a10?view=npvmfs                                                          5/9
+10/22/26, 11:53 PM                                                    Woof Woof - New Recruit
+     160 PTS                                            WAR DOG KARNIVORE
+   Models                    Options
+   1x                        Houndpack Lance Character, Panoply of the Cursed Knights, Reaper chaintalon, Slaughterclaw,
+   War Dog Karnivore         Diabolus heavy stubber
+   Unit                                        M           T    Sv             W          LD       OC       InSv      Base
+   War Dog Karnivore                           14"         9    3+             14         7+       6        5+*       100mm
+   Ranged Weapons                                     Range            A        BS         S       AP   D      Keywords
+   Diabolus heavy stubber                             36"              3        3+         5       0    1      Rapid Fire 3
+   Melee Weapons                        Range          A       WS          S         AP        D        Keywords
+   Reaper chaintalon                    Melee          12      3+          8         -2        1        Sustained Hits 1
+   Slaughterclaw                        Melee          6       3+          12        -3        D6+2     Sustained Hits 1
+   Abilities                   Description
+   Karnivore                   You can re-roll Advance and Charge rolls made for this model.
+                               While this model has 1-5 wounds remaining, subtract 3 from this model's Objective
+   Damaged: 1-5
+                               Control characteristic and each time this model makes an attack, subtract 1 from the Hit
+   wounds remaining
+                               roll.
+   *Invulnerable Save          This model has a 5+ invulnerable save against ranged attacks.
+   Panoply of the Cursed       Each time an attack targets the bearer, worsen the Armour Penetration characteristic of
+   Knights                     that attack by 1.
+    Rules Deadly Demise D3, Harbingers of Dread, Sustained Hits, Rapid Fire
+
+    Categories Battleline, Chaos, Character, Faction: Chaos Knights, Karnivore, Vehicle, Walker, War Dog
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada84299fa832e186c31a10?view=npvmfs                                                      6/9
+10/22/26, 11:53 PM                                                    Woof Woof - New Recruit
+     145 PTS                                            WAR DOG KARNIVORE                                                     x5
+   Models                                 Options
+   1x War Dog Karnivore                   Reaper chaintalon, Slaughterclaw, Diabolus heavy stubber
+   Unit                                        M           T    Sv             W          LD       OC       InSv      Base
+   War Dog Karnivore                           14"         9    3+             14         7+       6        5+*       100mm
+   Ranged Weapons                                     Range            A        BS         S       AP   D      Keywords
+   Diabolus heavy stubber                             36"              3        3+         5       0    1      Rapid Fire 3
+   Melee Weapons                        Range          A       WS          S         AP        D        Keywords
+   Reaper chaintalon                    Melee          12      3+          8         -2        1        Sustained Hits 1
+   Slaughterclaw                        Melee          6       3+          12        -3        D6+2     Sustained Hits 1
+   Abilities                   Description
+   Karnivore                   You can re-roll Advance and Charge rolls made for this model.
+                               While this model has 1-5 wounds remaining, subtract 3 from this model's Objective
+   Damaged: 1-5
+                               Control characteristic and each time this model makes an attack, subtract 1 from the Hit
+   wounds remaining
+                               roll.
+   *Invulnerable Save          This model has a 5+ invulnerable save against ranged attacks.
+    Rules Deadly Demise D3, Harbingers of Dread, Sustained Hits, Rapid Fire
+
+    Categories Battleline, Chaos, Faction: Chaos Knights, Karnivore, Vehicle, Walker, War Dog
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada84299fa832e186c31a10?view=npvmfs                                                           7/9
+10/22/26, 11:53 PM                                                    Woof Woof - New Recruit
+
+
+  Rules
+  Deadly Demise D3:
+  This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the
+  units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that
+  model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds
+  denoted by X (if this is a random number, roll separately for each unit within 6").
+  Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any
+  unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency
+  disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved.
+  Finally, the Impulsor is removed from the battlefield.
+
+  Harbingers of Dread:
+  If your Army Faction is Chaos Knights, each model from your army with this ability gains Dread abilities,
+  depending which are active for your army. The Deathly Terror ability is active for your army from the start of the
+  battle. In addition, at the start of the first, third and fifth battle rounds, you can either select one of the other
+  Dread abilities or randomly select two Dread abilities to apply by rolling two D6 and applying the results rolled,
+  from those numbered 1-6 below.
+  Any Dread abilities that have been selected are active until the end of the battle. You cannot select the same
+  Dread ability more than once, and any duplicated Dread abilities (as a result of randomly selecting them) have no
+  additional effect.
+  N/A - Deathly Terror (Aura)
+  While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.
+  1 - Despair (Aura)
+  While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.
+  This is cumulative with the Deathly Terror ability (see above).
+  2 - Doom
+  Each time this model makes an attack, if the target is Battle-shocked, add 1 to the Wound roll.
+  3 - Darkness
+  This model has Stealth.
+  4 - Dismay (Aura)
+  In the Battle-shock step of your opponent's Command phase, for each enemy unit that is below its Starting
+  Strength and within 9" of this model, that enemy unit must take a Battle-shock test.
+  5 - Delirium (Aura)
+  While an enemy unit that is Below Half-strength is within 9" of this model, each time that model fails a Battle-
+  shock test, it suffers D3 mortal wounds.
+  6 - Dominion
+  Add 3" to the range of this model's Aura abilities.
+
+  Marked Prey:
+  At the start of your Command phase, select one unit from your opponent's army. Until the start of your next
+  Command phase, each time a War Dog model from your army makes an attack that targets that enemy unit, if
+  that unit is visible to the attacking model, that attack has the [Sustained Hits 1] ability.
+  Keywords
+  While using the Houndpack Lance Detachment, the following rules apply:
+    Your army must include 3 or more War Dog units.
+    War Dog units from your army have the Battleline keyword.
+    When mustering your army, select 3 War Dog units from your army. Until the end of the battle, those units
+     have the Character keyword.*
+
+  * Designer's Note: This means that the selected units can be given Enhancements and one of them can be
+  selected as your Warlord.
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada84299fa832e186c31a10?view=npvmfs                                              8/9
+10/22/26, 11:53 PM                                                    Woof Woof - New Recruit
+
+  Melta:
+  This ability always takes the form [MELTA X]. Each time a model makes an attack with a [MELTA] weapon, if
+  the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks
+  have been resolved, add X to that weapon’s D characteristic.
+  Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6.
+  While resolving those attacks, that weapon has a D characteristic of D6+2.
+
+  Rapid Fire:
+  This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE]
+  weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select
+  Targets step.
+  Example: If a [RAPID FIRE 1] weapon with an A characteristic of 1 targets a unit that is within half range,
+  you would gather one additional attack dice for that weapon (for a total of two for that weapon).
+
+  Scenting Fear:
+  (Once per battle round, per army) In your Shooting phase, you can select one visible enemy unit within 12" of a
+  friendly WAR DOG unit. That enemy unit has +6" detection range.
+  This detachment has the WAR DOGS tag and cannot be taken with another WAR DOGS detachment.
+
+  Sustained Hits:
+  This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED
+  HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as
+  denoted by X.
+  Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore
+  hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability).
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada84299fa832e186c31a10?view=npvmfs                                            9/9
+

@@ -1071,7 +1071,7 @@ const FACTIONS = {
           { name:'Preyslayer’s Mantle', pts:15, text:'**WAR DOG** model only. The bearer has the Super-heavy Walker ability.' },
           { name:'Final Howl (Aura)', pts:20, text:'**WAR DOG** model only. While a friendly War Dog model is within 6" of the bearer, each time that model makes an attack, re-roll a **Wound roll** of 1.' },
           { name:'Loping Predator', pts:10, text:'**WAR DOG** model only. The bearer’s ranged weapons have the **[ASSAULT]** ability.' },
-          { name:'Panoply of the Cursed Knight', pts:15, text:'**WAR DOG** model only. Each time an attack targets the bearer, worsen the Armour Penetration characteristic of that attack by 1.' }
+          { name:'Panoply of the Cursed Knights', pts:15, text:'**WAR DOG** model only. Each time an attack targets the bearer, worsen the Armour Penetration characteristic of that attack by 1.' }
         ],
         stratagems:[
           // Wahapedia strikes WAR DOG CHARACTER through (its mark for a keyword that does not appear in the faction); needs reads it as
@@ -1081,7 +1081,7 @@ const FACTIONS = {
             target:'One ~~**WAR DOG CHARACTER**~~ unit from your army.',
             effect:'Each enemy unit within 6" of your unit must take a **Battle-shock test**. Each friendly **WAR DOG** unit that is within 6" of your unit and is Battle-shocked must take a **Leadership test**; if that test is passed, that unit is no longer Battle-shocked.',
             restrictions:'You can only use this Stratagem once per turn.' },
-          { id:'hungry-for-combat', gist:'Until the end of the phase, your WAR DOG units can only target one enemy unit they are all within Engagement Range of, but their attacks score a Critical Hit on an unmodified hit roll of 5+.', mod:{ kind:'melee', when:'Start of the Fight phase, two or more WAR DOG units within Engagement Range of the target, which they alone can target', note:'a Critical Hit on an unmodified hit roll of 5+', calc:{ critHit:5 } }, name:'Hungry for Combat', cp:1, phases:['fight'], turn:'either', needs:{ all:['War Dog'] },
+          { id:'hungry-for-combat', gist:'Until the end of the phase, your WAR DOG units can only target one enemy unit they are all within Engagement Range of, but their attacks score a Critical Hit on an unmodified hit roll of 5+.', mod:{ kind:'melee', when:'Fight phase, two or more WAR DOG units within Engagement Range of the target (they can only target it)', note:'a Critical Hit on an unmodified hit roll of 5+', calc:{ critHit:5 } }, name:'Hungry for Combat', cp:1, phases:['fight'], turn:'either', needs:{ all:['War Dog'] },
             when:'Start of the Fight phase.',
             target:'Two or more **WAR DOG** units from your army within **Engagement Range** of the same enemy unit.',
             effect:'Select one enemy unit within Engagement Range of those **WAR DOG** units. Until the end of the phase, models in those **WAR DOG** units can only target that enemy unit, but each time a model in one of those **WAR DOG** units makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit.' },
@@ -4222,6 +4222,187 @@ const ARMIES = [
       ],
       rules:['Deep Strike','Infiltrators','Lethal Hits'],
       kw:['Allies: Legiones Daemonica','Battleline','Chaos','Daemon','Faction: Legiones Daemonica','Nurgle','Nurglings','Swarm']
+    }
+  ]
+},
+{
+  id:'woof-woof', name:'Woof Woof', faction:'chaos-knights', points:2000, pointsUsed:2000,
+  battleSize:'Strike Force', disposition:'Reconnaissance',
+  detachments:['houndpack-lance','hunting-warpack'],
+  source:'New Recruit, exported 22 Oct 2026',
+  units:[
+    {
+      id:'war-dog-brigand-final-howl-aura', name:'War Dog Brigand', role:'Battleline', pts:155, enhancement:'Final Howl (Aura)', warlord:true,
+      models:['1× War Dog Brigand (Houndpack Lance Character)'],
+      gear:[['Armoured feet','Avenger chaincannon','Daemonbreath spear','Diabolus heavy stubber']],
+      stats:[
+        { name:'War Dog Brigand', M:'12"', T:'9', Sv:'3+', W:'14', Ld:'7+', OC:'6', InSv:'5+*', base:'100mm' }
+      ],
+      ranged:[
+        { name:'Avenger chaincannon', range:'24"', A:'12', BS:'3+', S:'6', AP:'-1', D:'1', kw:[] },
+        { name:'Daemonbreath spear', range:'18"', A:'2', BS:'3+', S:'12', AP:'-4', D:'D6', kw:['MELTA 4'] },
+        { name:'Diabolus heavy stubber', range:'36"', A:'3', BS:'3+', S:'5', AP:'0', D:'1', kw:['RAPID FIRE 3'] }
+      ],
+      melee:[
+        { name:'Armoured feet', range:'Melee', A:'4', WS:'3+', S:'6', AP:'0', D:'1', kw:[] }
+      ],
+      abilities:[
+        { name:'Brigand', text:'Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.' },
+        { name:'Damaged: 1-5 wounds remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.' },
+        { name:'*Invulnerable Save', def:'5+ invulnerable save against ranged attacks only', text:'This model has a 5+ invulnerable save against ranged attacks.' },
+        { name:'Final Howl (Aura)', tag:'Enhancement', text:'**WAR DOG** model only. While a friendly War Dog model is within 6" of the bearer, each time that model makes an attack, re-roll a **Wound roll** of 1.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'ranged', when:'Target in range of an objective marker', cond:'targetObjective', note:'ranged attacks have [IGNORES COVER]', from:'Brigand' },
+        { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls (and -3 OC)', from:'Damaged: 1-5 wounds remaining' }
+      ],
+      aura:[
+        { kind:'all', needs:{ all:['War Dog'] }, when:'Within 6" of the War Dog Brigand with Final Howl', selfWhen:'Own aura', note:'re-roll wound rolls of 1', from:'Final Howl (Aura)', selfAlways:true }
+      ],
+      rules:['Deadly Demise D3','Harbingers of Dread','Melta','Rapid Fire'],
+      kw:['Battleline','Brigand','Chaos','Character','Faction: Chaos Knights','Vehicle','Walker','War Dog','Warlord'],
+      kwNote:'Character comes from Houndpack Lance Character (Houndpack Lance: “When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”).'
+    },
+    {
+      id:'war-dog-brigand', name:'War Dog Brigand', role:'Battleline', pts:135,
+      models:['1× War Dog Brigand (Houndpack Lance Character)'],
+      gear:[['Armoured feet','Avenger chaincannon','Daemonbreath spear','Diabolus heavy stubber']],
+      stats:[
+        { name:'War Dog Brigand', M:'12"', T:'9', Sv:'3+', W:'14', Ld:'7+', OC:'6', InSv:'5+*', base:'100mm' }
+      ],
+      ranged:[
+        { name:'Avenger chaincannon', range:'24"', A:'12', BS:'3+', S:'6', AP:'-1', D:'1', kw:[] },
+        { name:'Daemonbreath spear', range:'18"', A:'2', BS:'3+', S:'12', AP:'-4', D:'D6', kw:['MELTA 4'] },
+        { name:'Diabolus heavy stubber', range:'36"', A:'3', BS:'3+', S:'5', AP:'0', D:'1', kw:['RAPID FIRE 3'] }
+      ],
+      melee:[
+        { name:'Armoured feet', range:'Melee', A:'4', WS:'3+', S:'6', AP:'0', D:'1', kw:[] }
+      ],
+      abilities:[
+        { name:'Brigand', text:'Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.' },
+        { name:'Damaged: 1-5 wounds remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.' },
+        { name:'*Invulnerable Save', def:'5+ invulnerable save against ranged attacks only', text:'This model has a 5+ invulnerable save against ranged attacks.' },
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'ranged', when:'Target in range of an objective marker', cond:'targetObjective', note:'ranged attacks have [IGNORES COVER]', from:'Brigand' },
+        { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls (and -3 OC)', from:'Damaged: 1-5 wounds remaining' }
+      ],
+      rules:['Deadly Demise D3','Harbingers of Dread','Melta','Rapid Fire'],
+      kw:['Battleline','Brigand','Chaos','Character','Faction: Chaos Knights','Vehicle','Walker','War Dog'],
+      kwNote:'Character comes from Houndpack Lance Character (Houndpack Lance: “When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”).'
+    },
+    {
+      id:'war-dog-brigand-2', name:'War Dog Brigand', role:'Battleline', pts:135, copies:3,
+      models:['1× War Dog Brigand'],
+      gear:[['Armoured feet','Avenger chaincannon','Daemonbreath spear','Diabolus heavy stubber']],
+      stats:[
+        { name:'War Dog Brigand', M:'12"', T:'9', Sv:'3+', W:'14', Ld:'7+', OC:'6', InSv:'5+*', base:'100mm' }
+      ],
+      ranged:[
+        { name:'Avenger chaincannon', range:'24"', A:'12', BS:'3+', S:'6', AP:'-1', D:'1', kw:[] },
+        { name:'Daemonbreath spear', range:'18"', A:'2', BS:'3+', S:'12', AP:'-4', D:'D6', kw:['MELTA 4'] },
+        { name:'Diabolus heavy stubber', range:'36"', A:'3', BS:'3+', S:'5', AP:'0', D:'1', kw:['RAPID FIRE 3'] }
+      ],
+      melee:[
+        { name:'Armoured feet', range:'Melee', A:'4', WS:'3+', S:'6', AP:'0', D:'1', kw:[] }
+      ],
+      abilities:[
+        { name:'Brigand', text:'Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.' },
+        { name:'Damaged: 1-5 wounds remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.' },
+        { name:'*Invulnerable Save', def:'5+ invulnerable save against ranged attacks only', text:'This model has a 5+ invulnerable save against ranged attacks.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'ranged', when:'Target in range of an objective marker', cond:'targetObjective', note:'ranged attacks have [IGNORES COVER]', from:'Brigand' },
+        { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls (and -3 OC)', from:'Damaged: 1-5 wounds remaining' }
+      ],
+      rules:['Deadly Demise D3','Harbingers of Dread','Melta','Rapid Fire'],
+      kw:['Battleline','Brigand','Chaos','Faction: Chaos Knights','Vehicle','Walker','War Dog']
+    },
+    {
+      id:'war-dog-executioner', name:'War Dog Executioner', role:'Battleline', pts:140, copies:3, upgrade:'Snarling Rivalry',
+      models:['1× War Dog Executioner'],
+      gear:[['Armoured feet','War Dog autocannon','War Dog autocannon','Diabolus heavy stubber']],
+      stats:[
+        { name:'War Dog Executioner', M:'12"', T:'9', Sv:'3+', W:'14', Ld:'7+', OC:'6', InSv:'5+*', base:'100mm' }
+      ],
+      ranged:[
+        { name:'War Dog autocannon', n:2, range:'48"', A:'4', BS:'3+', S:'9', AP:'-1', D:'3', kw:['IGNORES COVER'], from:{ 'IGNORES COVER':'Snarling Rivalry' } },
+        { name:'Diabolus heavy stubber', range:'36"', A:'3', BS:'3+', S:'5', AP:'0', D:'1', kw:['RAPID FIRE 3','IGNORES COVER'], from:{ 'IGNORES COVER':'Snarling Rivalry' } }
+      ],
+      melee:[
+        { name:'Armoured feet', range:'Melee', A:'4', WS:'3+', S:'6', AP:'0', D:'1', kw:[] }
+      ],
+      abilities:[
+        { name:'Executioner', text:'Each time this model makes an attack that targets a unit **Below Half-strength**, add 1 to the **Hit roll**. Each time an enemy unit is destroyed as the result of this model’s attacks, before removing the last model in that unit from the battlefield, each other unit from your opponent’s army that is within 3" of it must take a **Battle-shock test**.' },
+        { name:'Damaged: 1-5 wounds remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.' },
+        { name:'*Invulnerable Save', def:'5+ invulnerable save against ranged attacks only', text:'This model has a 5+ invulnerable save against ranged attacks.' },
+        { name:'Snarling Rivalry', tag:'Upgrade', text:'**EXECUTIONER** unit only. This unit’s ranged attacks have **[IGNORES COVER]**.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      // (Snarling Rivalry's [IGNORES COVER] is already on every ranged weapon, as New Recruit prints them: no footnote)
+      mods:[
+        { kind:'all', when:'Target Below Half-strength', note:'+1 to hit rolls', from:'Executioner' },
+        { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls (and -3 OC)', from:'Damaged: 1-5 wounds remaining' }
+      ],
+      rules:['Deadly Demise D3','Harbingers of Dread','Rapid Fire'],
+      kw:['Battleline','Chaos','Executioner','Faction: Chaos Knights','Vehicle','Walker','War Dog']
+    },
+    {
+      id:'war-dog-karnivore-panoply-of-the-cursed-knights', name:'War Dog Karnivore', role:'Battleline', pts:160, enhancement:'Panoply of the Cursed Knights',
+      models:['1× War Dog Karnivore (Houndpack Lance Character)'],
+      gear:[['Reaper chaintalon','Slaughterclaw','Diabolus heavy stubber']],
+      stats:[
+        { name:'War Dog Karnivore', M:'14"', T:'9', Sv:'3+', W:'14', Ld:'7+', OC:'6', InSv:'5+*', base:'100mm' }
+      ],
+      ranged:[
+        { name:'Diabolus heavy stubber', range:'36"', A:'3', BS:'3+', S:'5', AP:'0', D:'1', kw:['RAPID FIRE 3'] }
+      ],
+      melee:[
+        { name:'Reaper chaintalon', range:'Melee', A:'12', WS:'3+', S:'8', AP:'-2', D:'1', kw:['SUSTAINED HITS 1'] },
+        { name:'Slaughterclaw', range:'Melee', A:'6', WS:'3+', S:'12', AP:'-3', D:'D6+2', kw:['SUSTAINED HITS 1'] }
+      ],
+      abilities:[
+        { name:'Karnivore', text:'You can re-roll **Advance** and **Charge rolls** made for this model.' },
+        { name:'Damaged: 1-5 wounds remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.' },
+        { name:'*Invulnerable Save', def:'5+ invulnerable save against ranged attacks only', text:'This model has a 5+ invulnerable save against ranged attacks.' },
+        { name:'Panoply of the Cursed Knights', tag:'Enhancement', def:'worsen the AP of each attack that targets it by 1', text:'**WAR DOG** model only. Each time an attack targets the bearer, worsen the Armour Penetration characteristic of that attack by 1.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls (and -3 OC)', from:'Damaged: 1-5 wounds remaining' }
+      ],
+      rules:['Deadly Demise D3','Harbingers of Dread','Sustained Hits','Rapid Fire'],
+      kw:['Battleline','Chaos','Character','Faction: Chaos Knights','Karnivore','Vehicle','Walker','War Dog'],
+      kwNote:'Character comes from Houndpack Lance Character (Houndpack Lance: “When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”).'
+    },
+    {
+      id:'war-dog-karnivore', name:'War Dog Karnivore', role:'Battleline', pts:145, copies:5,
+      models:['1× War Dog Karnivore'],
+      gear:[['Reaper chaintalon','Slaughterclaw','Diabolus heavy stubber']],
+      stats:[
+        { name:'War Dog Karnivore', M:'14"', T:'9', Sv:'3+', W:'14', Ld:'7+', OC:'6', InSv:'5+*', base:'100mm' }
+      ],
+      ranged:[
+        { name:'Diabolus heavy stubber', range:'36"', A:'3', BS:'3+', S:'5', AP:'0', D:'1', kw:['RAPID FIRE 3'] }
+      ],
+      melee:[
+        { name:'Reaper chaintalon', range:'Melee', A:'12', WS:'3+', S:'8', AP:'-2', D:'1', kw:['SUSTAINED HITS 1'] },
+        { name:'Slaughterclaw', range:'Melee', A:'6', WS:'3+', S:'12', AP:'-3', D:'D6+2', kw:['SUSTAINED HITS 1'] }
+      ],
+      abilities:[
+        { name:'Karnivore', text:'You can re-roll **Advance** and **Charge rolls** made for this model.' },
+        { name:'Damaged: 1-5 wounds remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.' },
+        { name:'*Invulnerable Save', def:'5+ invulnerable save against ranged attacks only', text:'This model has a 5+ invulnerable save against ranged attacks.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls (and -3 OC)', from:'Damaged: 1-5 wounds remaining' }
+      ],
+      rules:['Deadly Demise D3','Harbingers of Dread','Sustained Hits','Rapid Fire'],
+      kw:['Battleline','Chaos','Faction: Chaos Knights','Karnivore','Vehicle','Walker','War Dog']
     }
   ]
 },

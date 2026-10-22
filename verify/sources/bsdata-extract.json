@@ -113506,6 +113506,30 @@
      "type": "selectionEntry"
     },
     {
+     "name": "War Dog Brigand",
+     "id": "d383-2000-2743-285f",
+     "hidden": false,
+     "import": true,
+     "targetId": "753d-4e02-eda3-4809",
+     "type": "selectionEntry"
+    },
+    {
+     "name": "War Dog Executioner",
+     "id": "170-14ae-5346-c8b",
+     "hidden": false,
+     "import": true,
+     "targetId": "8df0-fc3c-8ced-ffce",
+     "type": "selectionEntry"
+    },
+    {
+     "name": "War Dog Karnivore",
+     "id": "6884-a812-e5ca-5a8d",
+     "hidden": false,
+     "import": true,
+     "targetId": "e96b-ac98-7fd2-a155",
+     "type": "selectionEntry"
+    },
+    {
      "name": "Knight Ruinator",
      "id": "89e7-84a2-bf27-fa56",
      "hidden": false,
@@ -113515,6 +113539,884 @@
     }
    ],
    "sharedSelectionEntries": [
+    {
+     "name": "War Dog Executioner",
+     "id": "8df0-fc3c-8ced-ffce",
+     "collective": false,
+     "hidden": false,
+     "import": true,
+     "type": "model",
+     "categoryLinks": [
+      {
+       "name": "Faction: Chaos Knights",
+       "id": "0368-0a60-e34a-3438",
+       "hidden": false,
+       "primary": false,
+       "targetId": "bb67-f191-6562-acc7"
+      },
+      {
+       "name": "Vehicle",
+       "id": "36b0-6d3c-5d21-28f3",
+       "hidden": false,
+       "primary": true,
+       "targetId": "dbd4-63-af05-998"
+      },
+      {
+       "name": "Walker",
+       "id": "b8e4-40f2-6789-53d0",
+       "hidden": false,
+       "primary": false,
+       "targetId": "6dda-e157-334d-e93a"
+      },
+      {
+       "name": "Chaos",
+       "id": "223f-f780-9db0-d39a",
+       "hidden": false,
+       "primary": false,
+       "targetId": "4c00-2578-faf5-6918"
+      },
+      {
+       "name": "War Dog",
+       "id": "0a45-b4a0-05b4-8755",
+       "hidden": false,
+       "primary": false,
+       "targetId": "99dc-0f47-85e2-75da"
+      },
+      {
+       "name": "Executioner",
+       "id": "8c55-b07e-303f-eee8",
+       "hidden": false,
+       "primary": false,
+       "targetId": "370b-1eb7-eac6-491c"
+      }
+     ],
+     "constraints": [
+      {
+       "id": "b0aa-5b7a-4a18-1c9f",
+       "field": "selections",
+       "includeChildForces": false,
+       "includeChildSelections": true,
+       "percentValue": false,
+       "scope": "force",
+       "shared": true,
+       "type": "max",
+       "value": 3
+      },
+      {
+       "id": "aa78-eab0-fd2d-f76d",
+       "field": "75bb-ded1-c86d-bdf0",
+       "includeChildSelections": false,
+       "scope": "self",
+       "shared": true,
+       "type": "max",
+       "value": 3
+      },
+      {
+       "id": "a736-5622-8bf1-4e90",
+       "field": "716d-91b7-d55a-1022",
+       "includeChildSelections": true,
+       "scope": "self",
+       "shared": true,
+       "type": "max",
+       "value": 0
+      },
+      {
+       "id": "231e-0b4d-d8f2-ae92",
+       "field": "716d-91b7-d55a-1022",
+       "includeChildSelections": true,
+       "scope": "self",
+       "shared": true,
+       "type": "min",
+       "value": 0
+      }
+     ],
+     "costs": [
+      {
+       "name": "pts",
+       "typeId": "51b2-306e-1021-d207",
+       "value": 130
+      },
+      {
+       "name": "Crusade Points",
+       "typeId": "b03b-c239-15a5-da55",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Battle Honours",
+       "typeId": "75bb-ded1-c86d-bdf0",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Experience",
+       "typeId": "a623-fe74-1d33-cddf",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Weapon Modifications",
+       "typeId": "716d-91b7-d55a-1022",
+       "value": 0
+      }
+     ],
+     "entryLinks": [
+      {
+       "name": "Enhancements",
+       "id": "5682-88cf-584e-d5b6",
+       "hidden": false,
+       "import": true,
+       "sortIndex": 5,
+       "targetId": "18da-1609-c0fb-cf69",
+       "type": "selectionEntryGroup",
+       "selectionEntries": [
+        {
+         "name": "Snarling Rivalry",
+         "id": "68b0-c798-79a8-28f5",
+         "hidden": false,
+         "import": true,
+         "type": "upgrade",
+         "constraints": [
+          {
+           "id": "f67b-573b-ffe0-6d8a",
+           "field": "selections",
+           "includeChildSelections": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "max",
+           "value": 1
+          },
+          {
+           "id": "322b-f505-807c-d871",
+           "field": "selections",
+           "includeChildForces": true,
+           "includeChildSelections": true,
+           "scope": "roster",
+           "shared": true,
+           "type": "max",
+           "value": 3
+          }
+         ],
+         "costs": [
+          {
+           "name": "pts",
+           "typeId": "51b2-306e-1021-d207",
+           "value": 10
+          },
+          {
+           "name": "Crusade Points",
+           "typeId": "b03b-c239-15a5-da55",
+           "value": 0
+          },
+          {
+           "name": "Crusade: Battle Honours",
+           "typeId": "75bb-ded1-c86d-bdf0",
+           "value": 0
+          },
+          {
+           "name": "Crusade: Experience",
+           "typeId": "a623-fe74-1d33-cddf",
+           "value": 0
+          },
+          {
+           "name": "Crusade: Weapon Modifications",
+           "typeId": "716d-91b7-d55a-1022",
+           "value": 0
+          },
+          {
+           "name": "Blackstone Fragments",
+           "typeId": "ac6b-ced3-9b5e-9a6e",
+           "value": 0
+          },
+          {
+           "name": "Detachment Points",
+           "typeId": "82ae-1066-5107-6ae0",
+           "value": 0
+          },
+          {
+           "name": "Enhancements",
+           "typeId": "f759-1bc4-cb3a-f0d2",
+           "value": 1
+          }
+         ],
+         "modifierGroups": [
+          {
+           "type": "and",
+           "modifiers": [
+            {
+             "field": "f759-1bc4-cb3a-f0d2",
+             "type": "divide",
+             "value": 2,
+             "conditions": [
+              {
+               "childId": "68b0-c798-79a8-28f5",
+               "childName": "Snarling Rivalry",
+               "field": "selections",
+               "includeChildForces": false,
+               "includeChildSelections": true,
+               "scope": "roster",
+               "shared": true,
+               "type": "equalTo",
+               "value": 2
+              }
+             ]
+            },
+            {
+             "field": "f759-1bc4-cb3a-f0d2",
+             "type": "divide",
+             "value": 3,
+             "conditions": [
+              {
+               "childId": "68b0-c798-79a8-28f5",
+               "childName": "Snarling Rivalry",
+               "field": "selections",
+               "includeChildForces": false,
+               "includeChildSelections": true,
+               "scope": "roster",
+               "shared": true,
+               "type": "atLeast",
+               "value": 2
+              }
+             ]
+            }
+           ]
+          }
+         ],
+         "modifiers": [
+          {
+           "affects": "self.entries.profiles.Ranged Weapons",
+           "field": "7f1b-8591-2fcf-d01c",
+           "join": ", ",
+           "scope": "parent",
+           "type": "append",
+           "value": "Ignores Cover"
+          },
+          {
+           "field": "hidden",
+           "type": "set",
+           "value": true,
+           "conditions": [
+            {
+             "childId": "5d30-981f-43b8-81be",
+             "childName": "Hunting Warpack",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "roster",
+             "shared": true,
+             "type": "lessThan",
+             "value": 1
+            }
+           ]
+          }
+         ],
+         "profiles": [
+          {
+           "name": "Snarling Rivalry",
+           "id": "d077-4803-ce89-a6bc",
+           "hidden": false,
+           "typeId": "9cc3-6d83-4dd3-9b64",
+           "typeName": "Abilities",
+           "characteristics": [
+            {
+             "name": "Description",
+             "$text": "This unit’s ranged attacks have [IGNORES COVER].",
+             "typeId": "9b8f-694b-e5e-b573"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Houndpack Lance Character",
+       "id": "4ba8-3cd2-fe30-8847",
+       "hidden": false,
+       "import": true,
+       "sortIndex": 2,
+       "targetId": "b02a-a6e2-3eb4-4872",
+       "type": "selectionEntry"
+      },
+      {
+       "name": "Warlord",
+       "id": "792d-a094-bd08-80cb",
+       "hidden": false,
+       "import": true,
+       "sortIndex": 3,
+       "targetId": "3bee-8c85-68f7-e54b",
+       "type": "selectionEntry"
+      },
+      {
+       "name": "Crusade",
+       "id": "53c4-b779-0ede-647b",
+       "hidden": false,
+       "import": true,
+       "sortIndex": 1,
+       "targetId": "e91b-3100-3431-e2f8",
+       "type": "selectionEntryGroup"
+      }
+     ],
+     "infoLinks": [
+      {
+       "name": "Deadly Demise",
+       "id": "d0e2-a29c-b8e8-e44f",
+       "hidden": false,
+       "targetId": "b68a-5ded-65ac-98c",
+       "type": "rule",
+       "modifiers": [
+        {
+         "field": "name",
+         "type": "append",
+         "value": "D3"
+        }
+       ]
+      },
+      {
+       "name": "Damaged: 1-5 wounds remaining",
+       "id": "4c84-8a9e-3fbc-3de8",
+       "hidden": false,
+       "targetId": "97fd-09c5-60a8-63c4",
+       "type": "profile"
+      },
+      {
+       "name": "Harbingers of Dread",
+       "id": "ee05-6f4a-b0b2-200b",
+       "hidden": false,
+       "targetId": "d71a-a59f-aafd-3723",
+       "type": "rule"
+      },
+      {
+       "name": "*Invulnerable Save",
+       "id": "7686-5fc0-fc07-1f3e",
+       "hidden": false,
+       "targetId": "4e9b-b002-b008-6077",
+       "type": "profile"
+      }
+     ],
+     "modifierGroups": [
+      {
+       "comment": "Crusade modifiers",
+       "type": "and",
+       "modifiers": [
+        {
+         "field": "aa78-eab0-fd2d-f76d",
+         "type": "set",
+         "value": 6,
+         "conditions": [
+          {
+           "childId": "1511-18fe-f51e-7b9d",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "self",
+           "shared": true,
+           "type": "atLeast",
+           "value": 1
+          }
+         ]
+        },
+        {
+         "field": "a736-5622-8bf1-4e90",
+         "type": "increment",
+         "value": 2,
+         "repeats": [
+          {
+           "childId": "d1a5-4297-168b-11cd",
+           "field": "selections",
+           "includeChildSelections": true,
+           "repeats": 1,
+           "roundUp": false,
+           "scope": "self",
+           "shared": true,
+           "value": 1
+          }
+         ]
+        },
+        {
+         "field": "231e-0b4d-d8f2-ae92",
+         "type": "increment",
+         "value": 2,
+         "repeats": [
+          {
+           "childId": "d1a5-4297-168b-11cd",
+           "field": "selections",
+           "includeChildSelections": true,
+           "repeats": 1,
+           "roundUp": false,
+           "scope": "self",
+           "shared": true,
+           "value": 1
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Battle-ready)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 5
+            },
+            {
+             "childId": "cac3-71d1-ea4b-795d",
+             "field": "forces",
+             "includeChildForces": true,
+             "includeChildSelections": true,
+             "scope": "roster",
+             "shared": true,
+             "type": "atLeast",
+             "value": 1
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Blooded)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "greaterThan",
+             "value": 5
+            },
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 15
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Battle-hardened)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "greaterThan",
+             "value": 15
+            },
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 30
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Heroic)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "greaterThan",
+             "value": 30
+            },
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 50
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Legendary)",
+         "conditions": [
+          {
+           "childId": "2dbf-4d49-5d74-85c9",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "self",
+           "shared": true,
+           "type": "greaterThan",
+           "value": 50
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "modifiers": [
+      {
+       "field": "category",
+       "type": "set-primary",
+       "value": "8dd6-af11-abd3-55f1",
+       "conditions": [
+        {
+         "childId": "46d8-abc8-ef3a-9f85",
+         "field": "selections",
+         "scope": "primary-catalogue",
+         "shared": true,
+         "type": "notInstanceOf",
+         "value": 1
+        }
+       ]
+      },
+      {
+       "field": "category",
+       "type": "set-primary",
+       "value": "e338-111e-d0c6-b687",
+       "conditions": [
+        {
+         "childId": "6cb5-45cf-c626-fa86",
+         "field": "selections",
+         "includeChildForces": true,
+         "includeChildSelections": true,
+         "scope": "roster",
+         "shared": true,
+         "type": "atLeast",
+         "value": 1
+        }
+       ]
+      },
+      {
+       "field": "b0aa-5b7a-4a18-1c9f",
+       "type": "multiply",
+       "value": 2,
+       "conditions": [
+        {
+         "childId": "6cb5-45cf-c626-fa86",
+         "field": "selections",
+         "includeChildSelections": true,
+         "scope": "force",
+         "shared": true,
+         "type": "atLeast",
+         "value": 1
+        }
+       ]
+      },
+      {
+       "field": "b0aa-5b7a-4a18-1c9f",
+       "type": "set",
+       "value": 2,
+       "conditions": [
+        {
+         "childId": "d62d-db22-4893-4bc0",
+         "childName": "1. Incursion (1000 Point limit)",
+         "field": "selections",
+         "includeChildSelections": true,
+         "scope": "force",
+         "shared": true,
+         "type": "atLeast",
+         "value": 1
+        }
+       ]
+      }
+     ],
+     "profiles": [
+      {
+       "name": "War Dog Executioner",
+       "id": "b861-c239-8fa2-afa5",
+       "hidden": false,
+       "typeId": "c547-1836-d8a-ff4f",
+       "typeName": "Unit",
+       "characteristics": [
+        {
+         "name": "M",
+         "$text": "12\"",
+         "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+         "name": "T",
+         "$text": "9",
+         "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+         "name": "Sv",
+         "$text": "3+",
+         "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+         "name": "W",
+         "$text": "14",
+         "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+         "name": "LD",
+         "$text": "7+",
+         "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+         "name": "OC",
+         "$text": "6",
+         "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+         "name": "InSv",
+         "$text": "5+*",
+         "typeId": "55a7-5b54-c60d-11dc"
+        },
+        {
+         "name": "Base",
+         "$text": "100mm",
+         "typeId": "nr-base-size"
+        }
+       ]
+      },
+      {
+       "name": "Executioner",
+       "id": "7e36-46d2-4914-c4af",
+       "hidden": false,
+       "typeId": "9cc3-6d83-4dd3-9b64",
+       "typeName": "Abilities",
+       "characteristics": [
+        {
+         "name": "Description",
+         "$text": "Each time this model makes an attack that targets a unit Below Half-strength, add 1 to the Hit roll. Each time an enemy unit is destroyed as the result of this model's attacks, before removing the last model in that unit from the battlefield, each other unit from your opponent's army that is within 3\" of it must take a Battle-shock test.",
+         "typeId": "9b8f-694b-e5e-b573"
+        }
+       ]
+      }
+     ],
+     "selectionEntryGroups": [
+      {
+       "name": "Wargear",
+       "id": "2d04-234d-6303-6fa1",
+       "hidden": false,
+       "sortIndex": 6,
+       "entryLinks": [
+        {
+         "name": "Armoured feet",
+         "id": "df42-5d71-b03d-14d3",
+         "collective": false,
+         "hidden": false,
+         "import": true,
+         "targetId": "6638-278a-5331-d1ff",
+         "type": "selectionEntry",
+         "entryLinks": [
+          {
+           "name": "Weapon Modifications",
+           "id": "8afc-4d9b-d2b9-956d",
+           "hidden": false,
+           "import": true,
+           "targetId": "f9da-852a-d7f0-92e9",
+           "type": "selectionEntryGroup"
+          }
+         ]
+        }
+       ],
+       "selectionEntries": [
+        {
+         "name": "War Dog autocannon",
+         "id": "7193-1dfe-7721-ecbd",
+         "collective": false,
+         "hidden": false,
+         "import": true,
+         "type": "upgrade",
+         "constraints": [
+          {
+           "id": "9e47-464c-b2fa-c7b9",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": false,
+           "percentValue": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "min",
+           "value": 2
+          },
+          {
+           "id": "e15d-04e9-a506-146e",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": false,
+           "percentValue": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "max",
+           "value": 2
+          }
+         ],
+         "costs": [
+          {
+           "name": "pts",
+           "typeId": "51b2-306e-1021-d207",
+           "value": 0
+          }
+         ],
+         "entryLinks": [
+          {
+           "name": "Weapon Modifications",
+           "id": "ba33-2cd1-31a0-d050",
+           "hidden": false,
+           "import": true,
+           "targetId": "f9da-852a-d7f0-92e9",
+           "type": "selectionEntryGroup"
+          }
+         ],
+         "profiles": [
+          {
+           "name": "War Dog autocannon",
+           "id": "ffca-811e-9ca8-4222",
+           "hidden": false,
+           "typeId": "f77d-b953-8fa4-b762",
+           "typeName": "Ranged Weapons",
+           "characteristics": [
+            {
+             "name": "Range",
+             "$text": "48\"",
+             "typeId": "9896-9419-16a1-92fc"
+            },
+            {
+             "name": "A",
+             "$text": "4",
+             "typeId": "3bb-c35f-f54-fb08"
+            },
+            {
+             "name": "BS",
+             "$text": "3+",
+             "typeId": "94d-8a98-cf90-183e"
+            },
+            {
+             "name": "S",
+             "$text": "9",
+             "typeId": "2229-f494-25db-c5d3"
+            },
+            {
+             "name": "AP",
+             "$text": "-1",
+             "typeId": "9ead-8a10-520-de15"
+            },
+            {
+             "name": "D",
+             "$text": "3",
+             "typeId": "a354-c1c8-a745-f9e3"
+            },
+            {
+             "name": "Keywords",
+             "typeId": "7f1b-8591-2fcf-d01c"
+            }
+           ]
+          }
+         ]
+        }
+       ],
+       "selectionEntryGroups": [
+        {
+         "name": "Carapace weapon",
+         "id": "7ab5-d4cd-c28f-b481",
+         "collective": false,
+         "defaultSelectionEntryId": "acd5-512d-654f-a53d",
+         "hidden": false,
+         "import": true,
+         "constraints": [
+          {
+           "id": "12c8-1564-6979-e3f2",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": false,
+           "percentValue": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "min",
+           "value": 1
+          },
+          {
+           "id": "8ca8-f441-7ff2-d0c6",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": false,
+           "percentValue": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "max",
+           "value": 1
+          }
+         ],
+         "entryLinks": [
+          {
+           "name": "Diabolus heavy stubber",
+           "id": "acd5-512d-654f-a53d",
+           "collective": false,
+           "hidden": false,
+           "import": true,
+           "targetId": "dfe8-cea0-8d16-db95",
+           "type": "selectionEntry",
+           "entryLinks": [
+            {
+             "name": "Weapon Modifications",
+             "id": "16b6-8c9b-4c5d-92f2",
+             "hidden": false,
+             "import": true,
+             "targetId": "f9da-852a-d7f0-92e9",
+             "type": "selectionEntryGroup"
+            }
+           ]
+          },
+          {
+           "name": "Daemonbreath meltagun",
+           "id": "919e-2f99-b24d-1d69",
+           "collective": false,
+           "hidden": false,
+           "import": true,
+           "targetId": "e0dc-e414-aa41-8ebd",
+           "type": "selectionEntry",
+           "entryLinks": [
+            {
+             "name": "Weapon Modifications",
+             "id": "7c04-1909-df8c-9f5f",
+             "hidden": false,
+             "import": true,
+             "targetId": "f9da-852a-d7f0-92e9",
+             "type": "selectionEntryGroup"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
     {
      "name": "Diabolus heavy stubber",
      "id": "dfe8-cea0-8d16-db95",
@@ -113675,6 +114577,1866 @@
          "name": "Keywords",
          "$text": "Melta 2",
          "typeId": "7f1b-8591-2fcf-d01c"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Armoured feet",
+     "id": "6638-278a-5331-d1ff",
+     "collective": false,
+     "hidden": false,
+     "import": true,
+     "type": "upgrade",
+     "constraints": [
+      {
+       "id": "c34c-0a86-e9f8-7cf8",
+       "field": "selections",
+       "includeChildForces": false,
+       "includeChildSelections": false,
+       "percentValue": false,
+       "scope": "parent",
+       "shared": true,
+       "type": "min",
+       "value": 1
+      },
+      {
+       "id": "6323-09f2-d8e2-df9d",
+       "field": "selections",
+       "includeChildForces": false,
+       "includeChildSelections": false,
+       "percentValue": false,
+       "scope": "parent",
+       "shared": true,
+       "type": "max",
+       "value": 1
+      }
+     ],
+     "costs": [
+      {
+       "name": "pts",
+       "typeId": "51b2-306e-1021-d207",
+       "value": 0
+      }
+     ],
+     "profiles": [
+      {
+       "name": "Armoured feet",
+       "id": "432a-109c-aeaa-84d2",
+       "hidden": false,
+       "typeId": "8a40-4aaa-c780-9046",
+       "typeName": "Melee Weapons",
+       "characteristics": [
+        {
+         "name": "Range",
+         "$text": "Melee",
+         "typeId": "914c-b413-91e3-a132"
+        },
+        {
+         "name": "A",
+         "$text": "4",
+         "typeId": "2337-daa1-6682-b110"
+        },
+        {
+         "name": "WS",
+         "$text": "3+",
+         "typeId": "95d1-95f-45b4-11d6"
+        },
+        {
+         "name": "S",
+         "$text": "6",
+         "typeId": "ab33-d393-96ce-ccba"
+        },
+        {
+         "name": "AP",
+         "$text": "0",
+         "typeId": "41a0-1301-112a-e2f2"
+        },
+        {
+         "name": "D",
+         "$text": "1",
+         "typeId": "3254-9fe6-d824-513e"
+        },
+        {
+         "name": "Keywords",
+         "typeId": "893f-9000-ccf7-648e"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Avenger chaincannon",
+     "id": "a30d-6752-d912-315e",
+     "collective": false,
+     "hidden": false,
+     "import": true,
+     "type": "upgrade",
+     "costs": [
+      {
+       "name": "pts",
+       "typeId": "51b2-306e-1021-d207",
+       "value": 0
+      }
+     ],
+     "profiles": [
+      {
+       "name": "Avenger chaincannon",
+       "id": "2ba6-4ed1-9dbe-cece",
+       "hidden": false,
+       "typeId": "f77d-b953-8fa4-b762",
+       "typeName": "Ranged Weapons",
+       "characteristics": [
+        {
+         "name": "Range",
+         "$text": "24\"",
+         "typeId": "9896-9419-16a1-92fc"
+        },
+        {
+         "name": "A",
+         "$text": "12",
+         "typeId": "3bb-c35f-f54-fb08"
+        },
+        {
+         "name": "BS",
+         "$text": "3+",
+         "typeId": "94d-8a98-cf90-183e"
+        },
+        {
+         "name": "S",
+         "$text": "6",
+         "typeId": "2229-f494-25db-c5d3"
+        },
+        {
+         "name": "AP",
+         "$text": "-1",
+         "typeId": "9ead-8a10-520-de15"
+        },
+        {
+         "name": "D",
+         "$text": "1",
+         "typeId": "a354-c1c8-a745-f9e3"
+        },
+        {
+         "name": "Keywords",
+         "typeId": "7f1b-8591-2fcf-d01c"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Daemonbreath spear",
+     "id": "0b63-2988-ec78-7913",
+     "collective": false,
+     "hidden": false,
+     "import": true,
+     "type": "upgrade",
+     "categoryLinks": [
+      {
+       "name": "Damage Dx Weapon",
+       "id": "5fb7-42a1-d375-b75b",
+       "hidden": false,
+       "primary": false,
+       "targetId": "4986-bf86-beb4-13ac"
+      },
+      {
+       "name": "Ranged Weapon",
+       "id": "c57f-0544-2fb4-ce3f",
+       "hidden": false,
+       "primary": false,
+       "targetId": "eeda-8544-a2f3-3fab"
+      }
+     ],
+     "costs": [
+      {
+       "name": "pts",
+       "typeId": "51b2-306e-1021-d207",
+       "value": 0
+      }
+     ],
+     "infoLinks": [
+      {
+       "name": "Melta",
+       "id": "653a-fc58-6168-3cea",
+       "hidden": false,
+       "targetId": "7cdb-fb99-44a9-8849",
+       "type": "rule"
+      }
+     ],
+     "profiles": [
+      {
+       "name": "Daemonbreath spear",
+       "id": "cae9-9335-5429-9523",
+       "hidden": false,
+       "typeId": "f77d-b953-8fa4-b762",
+       "typeName": "Ranged Weapons",
+       "characteristics": [
+        {
+         "name": "Range",
+         "$text": "18\"",
+         "typeId": "9896-9419-16a1-92fc"
+        },
+        {
+         "name": "A",
+         "$text": "2",
+         "typeId": "3bb-c35f-f54-fb08"
+        },
+        {
+         "name": "BS",
+         "$text": "3+",
+         "typeId": "94d-8a98-cf90-183e"
+        },
+        {
+         "name": "S",
+         "$text": "12",
+         "typeId": "2229-f494-25db-c5d3"
+        },
+        {
+         "name": "AP",
+         "$text": "-4",
+         "typeId": "9ead-8a10-520-de15"
+        },
+        {
+         "name": "D",
+         "$text": "D6",
+         "typeId": "a354-c1c8-a745-f9e3"
+        },
+        {
+         "name": "Keywords",
+         "$text": "Melta 4",
+         "typeId": "7f1b-8591-2fcf-d01c"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Havoc multi-launcher",
+     "id": "773c-c2e1-0261-d8f4",
+     "collective": false,
+     "hidden": false,
+     "import": true,
+     "type": "upgrade",
+     "categoryLinks": [
+      {
+       "name": "Attacks Dx Weapon",
+       "id": "b83a-72e8-7a4d-d48d",
+       "hidden": false,
+       "primary": false,
+       "targetId": "e993-e086-6de1-12af"
+      },
+      {
+       "name": "Ranged Weapon",
+       "id": "2442-20ce-eae0-79b3",
+       "hidden": false,
+       "primary": false,
+       "targetId": "eeda-8544-a2f3-3fab"
+      }
+     ],
+     "costs": [
+      {
+       "name": "pts",
+       "typeId": "51b2-306e-1021-d207",
+       "value": 0
+      }
+     ],
+     "infoLinks": [
+      {
+       "name": "Blast",
+       "id": "0537-4690-feb4-f55f",
+       "hidden": false,
+       "targetId": "6c1f-1cf7-ff25-c99e",
+       "type": "rule"
+      },
+      {
+       "name": "Indirect Fire",
+       "id": "ba04-e0e7-7709-75b7",
+       "hidden": false,
+       "targetId": "4ddd-4e29-acdd-5e6d",
+       "type": "rule"
+      }
+     ],
+     "profiles": [
+      {
+       "name": "Havoc multi-launcher",
+       "id": "a50f-8e7c-ff7f-9854",
+       "hidden": false,
+       "typeId": "f77d-b953-8fa4-b762",
+       "typeName": "Ranged Weapons",
+       "characteristics": [
+        {
+         "name": "Range",
+         "$text": "48\"",
+         "typeId": "9896-9419-16a1-92fc"
+        },
+        {
+         "name": "A",
+         "$text": "D6",
+         "typeId": "3bb-c35f-f54-fb08"
+        },
+        {
+         "name": "BS",
+         "$text": "3+",
+         "typeId": "94d-8a98-cf90-183e"
+        },
+        {
+         "name": "S",
+         "$text": "5",
+         "typeId": "2229-f494-25db-c5d3"
+        },
+        {
+         "name": "AP",
+         "$text": "0",
+         "typeId": "9ead-8a10-520-de15"
+        },
+        {
+         "name": "D",
+         "$text": "1",
+         "typeId": "a354-c1c8-a745-f9e3"
+        },
+        {
+         "name": "Keywords",
+         "$text": "Blast, Indirect Fire",
+         "typeId": "7f1b-8591-2fcf-d01c"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "War Dog Karnivore",
+     "id": "e96b-ac98-7fd2-a155",
+     "collective": false,
+     "hidden": false,
+     "import": true,
+     "type": "model",
+     "categoryLinks": [
+      {
+       "name": "Faction: Chaos Knights",
+       "id": "e723-2423-466a-923e",
+       "hidden": false,
+       "primary": false,
+       "targetId": "bb67-f191-6562-acc7"
+      },
+      {
+       "name": "Vehicle",
+       "id": "529f-468f-5f49-a684",
+       "hidden": false,
+       "primary": true,
+       "targetId": "dbd4-63-af05-998"
+      },
+      {
+       "name": "Walker",
+       "id": "ae5a-779f-a067-03a4",
+       "hidden": false,
+       "primary": false,
+       "targetId": "6dda-e157-334d-e93a"
+      },
+      {
+       "name": "Chaos",
+       "id": "07cf-1000-c46c-1fce",
+       "hidden": false,
+       "primary": false,
+       "targetId": "4c00-2578-faf5-6918"
+      },
+      {
+       "name": "War Dog",
+       "id": "6023-5063-8842-2df6",
+       "hidden": false,
+       "primary": false,
+       "targetId": "99dc-0f47-85e2-75da"
+      },
+      {
+       "name": "Karnivore",
+       "id": "c34d-d6f5-8e71-6910",
+       "hidden": false,
+       "primary": false,
+       "targetId": "7177-ef6b-50ae-82e2"
+      }
+     ],
+     "constraints": [
+      {
+       "id": "1df3-61b3-1a11-0900",
+       "field": "selections",
+       "includeChildForces": false,
+       "includeChildSelections": true,
+       "percentValue": false,
+       "scope": "force",
+       "shared": true,
+       "type": "max",
+       "value": 3
+      },
+      {
+       "id": "1899-280c-9930-534b",
+       "field": "75bb-ded1-c86d-bdf0",
+       "includeChildSelections": false,
+       "scope": "self",
+       "shared": true,
+       "type": "max",
+       "value": 3
+      },
+      {
+       "id": "ce73-a8d4-2ed3-37eb",
+       "field": "716d-91b7-d55a-1022",
+       "includeChildSelections": true,
+       "scope": "self",
+       "shared": true,
+       "type": "max",
+       "value": 0
+      },
+      {
+       "id": "60aa-add7-7992-85b6",
+       "field": "716d-91b7-d55a-1022",
+       "includeChildSelections": true,
+       "scope": "self",
+       "shared": true,
+       "type": "min",
+       "value": 0
+      }
+     ],
+     "costs": [
+      {
+       "name": "pts",
+       "typeId": "51b2-306e-1021-d207",
+       "value": 145
+      },
+      {
+       "name": "Crusade Points",
+       "typeId": "b03b-c239-15a5-da55",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Battle Honours",
+       "typeId": "75bb-ded1-c86d-bdf0",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Experience",
+       "typeId": "a623-fe74-1d33-cddf",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Weapon Modifications",
+       "typeId": "716d-91b7-d55a-1022",
+       "value": 0
+      },
+      {
+       "name": "Blackstone Fragments",
+       "typeId": "ac6b-ced3-9b5e-9a6e",
+       "value": 0
+      },
+      {
+       "name": "Detachment Points",
+       "typeId": "82ae-1066-5107-6ae0",
+       "value": 0
+      },
+      {
+       "name": "Enhancements",
+       "typeId": "f759-1bc4-cb3a-f0d2",
+       "value": 0
+      }
+     ],
+     "entryLinks": [
+      {
+       "name": "Enhancements",
+       "id": "7361-83ce-a6f5-a1b4",
+       "hidden": false,
+       "import": true,
+       "sortIndex": 4,
+       "targetId": "18da-1609-c0fb-cf69",
+       "type": "selectionEntryGroup"
+      },
+      {
+       "name": "Houndpack Lance Character",
+       "id": "7dab-f413-a641-6ddc",
+       "hidden": false,
+       "import": true,
+       "sortIndex": 2,
+       "targetId": "b02a-a6e2-3eb4-4872",
+       "type": "selectionEntry"
+      },
+      {
+       "name": "Warlord",
+       "id": "d1ed-a9f9-29a5-39b5",
+       "hidden": false,
+       "import": true,
+       "sortIndex": 3,
+       "targetId": "3bee-8c85-68f7-e54b",
+       "type": "selectionEntry"
+      },
+      {
+       "name": "Crusade",
+       "id": "8e83-bd72-6285-86c7",
+       "hidden": false,
+       "import": true,
+       "sortIndex": 1,
+       "targetId": "e91b-3100-3431-e2f8",
+       "type": "selectionEntryGroup"
+      }
+     ],
+     "infoLinks": [
+      {
+       "name": "Deadly Demise",
+       "id": "3de4-fb78-e6de-dca5",
+       "hidden": false,
+       "targetId": "b68a-5ded-65ac-98c",
+       "type": "rule",
+       "modifiers": [
+        {
+         "field": "name",
+         "type": "append",
+         "value": "D3"
+        }
+       ]
+      },
+      {
+       "name": "Damaged: 1-5 wounds remaining",
+       "id": "928a-574c-f429-72f8",
+       "hidden": false,
+       "targetId": "97fd-09c5-60a8-63c4",
+       "type": "profile"
+      },
+      {
+       "name": "Harbingers of Dread",
+       "id": "81c8-fc6f-d880-245b",
+       "hidden": false,
+       "targetId": "d71a-a59f-aafd-3723",
+       "type": "rule"
+      },
+      {
+       "name": "*Invulnerable Save",
+       "id": "fbd6-48b3-54d3-bc65",
+       "hidden": false,
+       "targetId": "4e9b-b002-b008-6077",
+       "type": "profile"
+      }
+     ],
+     "modifierGroups": [
+      {
+       "comment": "Crusade modifiers",
+       "type": "and",
+       "modifiers": [
+        {
+         "field": "1899-280c-9930-534b",
+         "type": "set",
+         "value": 6,
+         "conditions": [
+          {
+           "childId": "1511-18fe-f51e-7b9d",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "self",
+           "shared": true,
+           "type": "atLeast",
+           "value": 1
+          }
+         ]
+        },
+        {
+         "field": "ce73-a8d4-2ed3-37eb",
+         "type": "increment",
+         "value": 2,
+         "repeats": [
+          {
+           "childId": "d1a5-4297-168b-11cd",
+           "field": "selections",
+           "includeChildSelections": true,
+           "repeats": 1,
+           "roundUp": false,
+           "scope": "self",
+           "shared": true,
+           "value": 1
+          }
+         ]
+        },
+        {
+         "field": "60aa-add7-7992-85b6",
+         "type": "increment",
+         "value": 2,
+         "repeats": [
+          {
+           "childId": "d1a5-4297-168b-11cd",
+           "field": "selections",
+           "includeChildSelections": true,
+           "repeats": 1,
+           "roundUp": false,
+           "scope": "self",
+           "shared": true,
+           "value": 1
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Battle-ready)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 5
+            },
+            {
+             "childId": "cac3-71d1-ea4b-795d",
+             "field": "forces",
+             "includeChildForces": true,
+             "includeChildSelections": true,
+             "scope": "roster",
+             "shared": true,
+             "type": "atLeast",
+             "value": 1
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Blooded)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "greaterThan",
+             "value": 5
+            },
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 15
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Battle-hardened)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "greaterThan",
+             "value": 15
+            },
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 30
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Heroic)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "greaterThan",
+             "value": 30
+            },
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 50
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Legendary)",
+         "conditions": [
+          {
+           "childId": "2dbf-4d49-5d74-85c9",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "self",
+           "shared": true,
+           "type": "greaterThan",
+           "value": 50
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "modifiers": [
+      {
+       "field": "category",
+       "type": "set-primary",
+       "value": "8dd6-af11-abd3-55f1",
+       "conditions": [
+        {
+         "childId": "46d8-abc8-ef3a-9f85",
+         "field": "selections",
+         "scope": "primary-catalogue",
+         "shared": true,
+         "type": "notInstanceOf",
+         "value": 1
+        }
+       ]
+      },
+      {
+       "field": "category",
+       "type": "set-primary",
+       "value": "e338-111e-d0c6-b687",
+       "conditions": [
+        {
+         "childId": "6cb5-45cf-c626-fa86",
+         "field": "selections",
+         "includeChildForces": true,
+         "includeChildSelections": true,
+         "scope": "roster",
+         "shared": true,
+         "type": "atLeast",
+         "value": 1
+        }
+       ]
+      },
+      {
+       "field": "1df3-61b3-1a11-0900",
+       "type": "multiply",
+       "value": 2,
+       "conditions": [
+        {
+         "childId": "6cb5-45cf-c626-fa86",
+         "field": "selections",
+         "includeChildSelections": true,
+         "scope": "force",
+         "shared": true,
+         "type": "atLeast",
+         "value": 1
+        }
+       ]
+      },
+      {
+       "field": "1df3-61b3-1a11-0900",
+       "type": "set",
+       "value": 2,
+       "conditions": [
+        {
+         "childId": "d62d-db22-4893-4bc0",
+         "childName": "1. Incursion (1000 Point limit)",
+         "field": "selections",
+         "includeChildSelections": true,
+         "scope": "force",
+         "shared": true,
+         "type": "atLeast",
+         "value": 1
+        }
+       ]
+      }
+     ],
+     "profiles": [
+      {
+       "name": "War Dog Karnivore",
+       "id": "a907-b7f9-b9cf-a620",
+       "hidden": false,
+       "typeId": "c547-1836-d8a-ff4f",
+       "typeName": "Unit",
+       "characteristics": [
+        {
+         "name": "M",
+         "$text": "14\"",
+         "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+         "name": "T",
+         "$text": "9",
+         "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+         "name": "Sv",
+         "$text": "3+",
+         "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+         "name": "W",
+         "$text": "14",
+         "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+         "name": "LD",
+         "$text": "7+",
+         "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+         "name": "OC",
+         "$text": "6",
+         "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+         "name": "InSv",
+         "$text": "5+*",
+         "typeId": "55a7-5b54-c60d-11dc"
+        },
+        {
+         "name": "Base",
+         "$text": "100mm",
+         "typeId": "nr-base-size"
+        }
+       ]
+      },
+      {
+       "name": "Karnivore",
+       "id": "dec4-f0af-5aee-9e79",
+       "hidden": false,
+       "typeId": "9cc3-6d83-4dd3-9b64",
+       "typeName": "Abilities",
+       "characteristics": [
+        {
+         "name": "Description",
+         "$text": "You can re-roll Advance and Charge rolls made for this model.",
+         "typeId": "9b8f-694b-e5e-b573"
+        }
+       ]
+      }
+     ],
+     "selectionEntryGroups": [
+      {
+       "name": "Wargear",
+       "id": "184a-3920-781a-3fa8",
+       "hidden": false,
+       "sortIndex": 5,
+       "selectionEntries": [
+        {
+         "name": "Reaper chaintalon",
+         "id": "efec-643e-117d-a977",
+         "hidden": false,
+         "import": true,
+         "type": "upgrade",
+         "constraints": [
+          {
+           "id": "7edc-f372-4486-f8b7-min",
+           "field": "selections",
+           "includeChildSelections": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "min",
+           "value": 1
+          },
+          {
+           "id": "7edc-f372-4486-f8b7-max",
+           "field": "selections",
+           "includeChildSelections": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "max",
+           "value": 1
+          }
+         ],
+         "entryLinks": [
+          {
+           "name": "Weapon Modifications",
+           "id": "b3ae-7573-fc44-9228",
+           "hidden": false,
+           "import": true,
+           "targetId": "f9da-852a-d7f0-92e9",
+           "type": "selectionEntryGroup"
+          }
+         ],
+         "infoLinks": [
+          {
+           "name": "Sustained Hits",
+           "id": "f9be-d38c-f39c-fd6e",
+           "hidden": false,
+           "targetId": "1897-c22c-9597-12b1",
+           "type": "rule"
+          }
+         ],
+         "profiles": [
+          {
+           "name": "Reaper chaintalon",
+           "id": "9a2a-73c8-7c8c-f19b",
+           "hidden": false,
+           "typeId": "8a40-4aaa-c780-9046",
+           "typeName": "Melee Weapons",
+           "characteristics": [
+            {
+             "name": "Range",
+             "$text": "Melee",
+             "typeId": "914c-b413-91e3-a132"
+            },
+            {
+             "name": "A",
+             "$text": "12",
+             "typeId": "2337-daa1-6682-b110"
+            },
+            {
+             "name": "WS",
+             "$text": "3+",
+             "typeId": "95d1-95f-45b4-11d6"
+            },
+            {
+             "name": "S",
+             "$text": "8",
+             "typeId": "ab33-d393-96ce-ccba"
+            },
+            {
+             "name": "AP",
+             "$text": "-2",
+             "typeId": "41a0-1301-112a-e2f2"
+            },
+            {
+             "name": "D",
+             "$text": "1",
+             "typeId": "3254-9fe6-d824-513e"
+            },
+            {
+             "name": "Keywords",
+             "$text": "Sustained Hits 1",
+             "typeId": "893f-9000-ccf7-648e"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "name": "Slaughterclaw",
+         "id": "2a1d-e15f-408e-7660",
+         "collective": false,
+         "hidden": false,
+         "import": true,
+         "type": "upgrade",
+         "constraints": [
+          {
+           "id": "588c-e4f8-ebc9-db4a-min",
+           "field": "selections",
+           "includeChildSelections": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "min",
+           "value": 1
+          },
+          {
+           "id": "588c-e4f8-ebc9-db4a-max",
+           "field": "selections",
+           "includeChildSelections": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "max",
+           "value": 1
+          }
+         ],
+         "costs": [
+          {
+           "name": "pts",
+           "typeId": "51b2-306e-1021-d207",
+           "value": 0
+          }
+         ],
+         "entryLinks": [
+          {
+           "name": "Weapon Modifications",
+           "id": "9449-9dac-876f-c9ba",
+           "hidden": false,
+           "import": true,
+           "targetId": "f9da-852a-d7f0-92e9",
+           "type": "selectionEntryGroup"
+          }
+         ],
+         "infoLinks": [
+          {
+           "name": "Sustained Hits",
+           "id": "c96d-b1a0-1797-7835",
+           "hidden": false,
+           "targetId": "1897-c22c-9597-12b1",
+           "type": "rule"
+          }
+         ],
+         "profiles": [
+          {
+           "name": "Slaughterclaw",
+           "id": "70ef-396b-bb23-6560",
+           "hidden": false,
+           "typeId": "8a40-4aaa-c780-9046",
+           "typeName": "Melee Weapons",
+           "characteristics": [
+            {
+             "name": "Range",
+             "$text": "Melee",
+             "typeId": "914c-b413-91e3-a132"
+            },
+            {
+             "name": "A",
+             "$text": "6",
+             "typeId": "2337-daa1-6682-b110"
+            },
+            {
+             "name": "WS",
+             "$text": "3+",
+             "typeId": "95d1-95f-45b4-11d6"
+            },
+            {
+             "name": "S",
+             "$text": "12",
+             "typeId": "ab33-d393-96ce-ccba"
+            },
+            {
+             "name": "AP",
+             "$text": "-3",
+             "typeId": "41a0-1301-112a-e2f2"
+            },
+            {
+             "name": "D",
+             "$text": "D6+2",
+             "typeId": "3254-9fe6-d824-513e"
+            },
+            {
+             "name": "Keywords",
+             "$text": "Sustained Hits 1",
+             "typeId": "893f-9000-ccf7-648e"
+            }
+           ]
+          }
+         ]
+        }
+       ],
+       "selectionEntryGroups": [
+        {
+         "name": "Carapace weapon",
+         "id": "6c92-d9c2-33be-f547",
+         "collective": false,
+         "defaultSelectionEntryId": "12c3-4c6a-108f-807a",
+         "hidden": false,
+         "import": true,
+         "constraints": [
+          {
+           "id": "9973-000f-66c5-6573",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": false,
+           "percentValue": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "min",
+           "value": 1
+          },
+          {
+           "id": "09b0-a4c4-30a1-3acd",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": false,
+           "percentValue": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "max",
+           "value": 1
+          }
+         ],
+         "entryLinks": [
+          {
+           "name": "Diabolus heavy stubber",
+           "id": "12c3-4c6a-108f-807a",
+           "collective": false,
+           "hidden": false,
+           "import": true,
+           "targetId": "dfe8-cea0-8d16-db95",
+           "type": "selectionEntry",
+           "entryLinks": [
+            {
+             "name": "Weapon Modifications",
+             "id": "98e3-1935-77b1-ab3c",
+             "hidden": false,
+             "import": true,
+             "targetId": "f9da-852a-d7f0-92e9",
+             "type": "selectionEntryGroup"
+            }
+           ]
+          },
+          {
+           "name": "Havoc multi-launcher",
+           "id": "1cc6-dcc6-a65e-fbc2",
+           "collective": false,
+           "hidden": false,
+           "import": true,
+           "targetId": "773c-c2e1-0261-d8f4",
+           "type": "selectionEntry",
+           "entryLinks": [
+            {
+             "name": "Weapon Modifications",
+             "id": "6d85-b273-5718-7d6e",
+             "hidden": false,
+             "import": true,
+             "targetId": "f9da-852a-d7f0-92e9",
+             "type": "selectionEntryGroup"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "War Dog Brigand",
+     "id": "753d-4e02-eda3-4809",
+     "collective": false,
+     "hidden": false,
+     "import": true,
+     "type": "model",
+     "categoryLinks": [
+      {
+       "name": "Faction: Chaos Knights",
+       "id": "de39-13fa-1218-2a8c",
+       "hidden": false,
+       "primary": false,
+       "targetId": "bb67-f191-6562-acc7"
+      },
+      {
+       "name": "Vehicle",
+       "id": "7df1-6e0b-8afc-20a4",
+       "hidden": false,
+       "primary": true,
+       "targetId": "dbd4-63-af05-998"
+      },
+      {
+       "name": "Walker",
+       "id": "96e1-0018-ecf2-a9dd",
+       "hidden": false,
+       "primary": false,
+       "targetId": "6dda-e157-334d-e93a"
+      },
+      {
+       "name": "Chaos",
+       "id": "b9f3-d53d-9289-c19d",
+       "hidden": false,
+       "primary": false,
+       "targetId": "4c00-2578-faf5-6918"
+      },
+      {
+       "name": "War Dog",
+       "id": "80f4-05e3-83ed-248f",
+       "hidden": false,
+       "primary": false,
+       "targetId": "99dc-0f47-85e2-75da"
+      },
+      {
+       "name": "Brigand",
+       "id": "a129-8249-a19a-67cf",
+       "hidden": false,
+       "primary": false,
+       "targetId": "8364-7dd6-fadc-a5d2"
+      }
+     ],
+     "constraints": [
+      {
+       "id": "1995-c5fc-e109-31f1",
+       "field": "selections",
+       "includeChildForces": false,
+       "includeChildSelections": true,
+       "percentValue": false,
+       "scope": "force",
+       "shared": true,
+       "type": "max",
+       "value": 3
+      },
+      {
+       "id": "6a4b-917b-b0c2-c3e9",
+       "field": "75bb-ded1-c86d-bdf0",
+       "includeChildSelections": false,
+       "scope": "self",
+       "shared": true,
+       "type": "max",
+       "value": 3
+      },
+      {
+       "id": "d335-60b3-63e5-57b4",
+       "field": "716d-91b7-d55a-1022",
+       "includeChildSelections": true,
+       "scope": "self",
+       "shared": true,
+       "type": "max",
+       "value": 0
+      },
+      {
+       "id": "9af8-a865-1f4d-696c",
+       "field": "716d-91b7-d55a-1022",
+       "includeChildSelections": true,
+       "scope": "self",
+       "shared": true,
+       "type": "min",
+       "value": 0
+      }
+     ],
+     "costs": [
+      {
+       "name": "pts",
+       "typeId": "51b2-306e-1021-d207",
+       "value": 135
+      },
+      {
+       "name": "Crusade Points",
+       "typeId": "b03b-c239-15a5-da55",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Battle Honours",
+       "typeId": "75bb-ded1-c86d-bdf0",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Experience",
+       "typeId": "a623-fe74-1d33-cddf",
+       "value": 0
+      },
+      {
+       "name": "Crusade: Weapon Modifications",
+       "typeId": "716d-91b7-d55a-1022",
+       "value": 0
+      },
+      {
+       "name": "Blackstone Fragments",
+       "typeId": "ac6b-ced3-9b5e-9a6e",
+       "value": 0
+      },
+      {
+       "name": "Detachment Points",
+       "typeId": "82ae-1066-5107-6ae0",
+       "value": 0
+      },
+      {
+       "name": "Enhancements",
+       "typeId": "f759-1bc4-cb3a-f0d2",
+       "value": 0
+      }
+     ],
+     "entryLinks": [
+      {
+       "name": "Enhancements",
+       "id": "bcea-61fc-f700-6cb3",
+       "hidden": false,
+       "import": true,
+       "sortIndex": 4,
+       "targetId": "18da-1609-c0fb-cf69",
+       "type": "selectionEntryGroup"
+      },
+      {
+       "name": "Houndpack Lance Character",
+       "id": "5aa9-4d05-6955-3767",
+       "hidden": false,
+       "import": true,
+       "sortIndex": 2,
+       "targetId": "b02a-a6e2-3eb4-4872",
+       "type": "selectionEntry"
+      },
+      {
+       "name": "Warlord",
+       "id": "8fab-d9a1-36f3-e659",
+       "hidden": false,
+       "import": true,
+       "sortIndex": 3,
+       "targetId": "3bee-8c85-68f7-e54b",
+       "type": "selectionEntry"
+      },
+      {
+       "name": "Crusade",
+       "id": "d826-0c70-a502-dfaf",
+       "hidden": false,
+       "import": true,
+       "sortIndex": 1,
+       "targetId": "e91b-3100-3431-e2f8",
+       "type": "selectionEntryGroup"
+      }
+     ],
+     "infoLinks": [
+      {
+       "name": "Deadly Demise",
+       "id": "44f6-cdb6-f568-5c55",
+       "hidden": false,
+       "targetId": "b68a-5ded-65ac-98c",
+       "type": "rule",
+       "modifiers": [
+        {
+         "field": "name",
+         "type": "append",
+         "value": "D3"
+        }
+       ]
+      },
+      {
+       "name": "Damaged: 1-5 wounds remaining",
+       "id": "aaab-a55c-8c11-d7bf",
+       "hidden": false,
+       "targetId": "97fd-09c5-60a8-63c4",
+       "type": "profile"
+      },
+      {
+       "name": "Harbingers of Dread",
+       "id": "0b42-7bab-c9fa-55d2",
+       "hidden": false,
+       "targetId": "d71a-a59f-aafd-3723",
+       "type": "rule"
+      },
+      {
+       "name": "*Invulnerable Save",
+       "id": "1a80-0a6f-6441-c484",
+       "hidden": false,
+       "targetId": "4e9b-b002-b008-6077",
+       "type": "profile"
+      }
+     ],
+     "modifierGroups": [
+      {
+       "comment": "Crusade modifiers",
+       "type": "and",
+       "modifiers": [
+        {
+         "field": "6a4b-917b-b0c2-c3e9",
+         "type": "set",
+         "value": 6,
+         "conditions": [
+          {
+           "childId": "1511-18fe-f51e-7b9d",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "self",
+           "shared": true,
+           "type": "atLeast",
+           "value": 1
+          }
+         ]
+        },
+        {
+         "field": "d335-60b3-63e5-57b4",
+         "type": "increment",
+         "value": 2,
+         "repeats": [
+          {
+           "childId": "d1a5-4297-168b-11cd",
+           "field": "selections",
+           "includeChildSelections": true,
+           "repeats": 1,
+           "roundUp": false,
+           "scope": "self",
+           "shared": true,
+           "value": 1
+          }
+         ]
+        },
+        {
+         "field": "9af8-a865-1f4d-696c",
+         "type": "increment",
+         "value": 2,
+         "repeats": [
+          {
+           "childId": "d1a5-4297-168b-11cd",
+           "field": "selections",
+           "includeChildSelections": true,
+           "repeats": 1,
+           "roundUp": false,
+           "scope": "self",
+           "shared": true,
+           "value": 1
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Battle-ready)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 5
+            },
+            {
+             "childId": "cac3-71d1-ea4b-795d",
+             "field": "forces",
+             "includeChildForces": true,
+             "includeChildSelections": true,
+             "scope": "roster",
+             "shared": true,
+             "type": "atLeast",
+             "value": 1
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Blooded)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "greaterThan",
+             "value": 5
+            },
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 15
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Battle-hardened)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "greaterThan",
+             "value": 15
+            },
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 30
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Heroic)",
+         "conditionGroups": [
+          {
+           "type": "and",
+           "conditions": [
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "greaterThan",
+             "value": 30
+            },
+            {
+             "childId": "2dbf-4d49-5d74-85c9",
+             "field": "selections",
+             "includeChildSelections": true,
+             "scope": "self",
+             "shared": true,
+             "type": "atMost",
+             "value": 50
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "field": "name",
+         "type": "append",
+         "value": "(Legendary)",
+         "conditions": [
+          {
+           "childId": "2dbf-4d49-5d74-85c9",
+           "field": "selections",
+           "includeChildSelections": true,
+           "scope": "self",
+           "shared": true,
+           "type": "greaterThan",
+           "value": 50
+          }
+         ]
+        }
+       ]
+      }
+     ],
+     "modifiers": [
+      {
+       "field": "category",
+       "type": "set-primary",
+       "value": "8dd6-af11-abd3-55f1",
+       "conditions": [
+        {
+         "childId": "46d8-abc8-ef3a-9f85",
+         "field": "selections",
+         "scope": "primary-catalogue",
+         "shared": true,
+         "type": "notInstanceOf",
+         "value": 1
+        }
+       ]
+      },
+      {
+       "field": "category",
+       "type": "set-primary",
+       "value": "e338-111e-d0c6-b687",
+       "conditions": [
+        {
+         "childId": "6cb5-45cf-c626-fa86",
+         "field": "selections",
+         "includeChildForces": true,
+         "includeChildSelections": true,
+         "scope": "roster",
+         "shared": true,
+         "type": "atLeast",
+         "value": 1
+        }
+       ]
+      },
+      {
+       "field": "1995-c5fc-e109-31f1",
+       "type": "multiply",
+       "value": 2,
+       "conditions": [
+        {
+         "childId": "6cb5-45cf-c626-fa86",
+         "field": "selections",
+         "includeChildSelections": true,
+         "scope": "force",
+         "shared": true,
+         "type": "atLeast",
+         "value": 1
+        }
+       ]
+      },
+      {
+       "field": "1995-c5fc-e109-31f1",
+       "type": "set",
+       "value": 2,
+       "conditions": [
+        {
+         "childId": "d62d-db22-4893-4bc0",
+         "childName": "1. Incursion (1000 Point limit)",
+         "field": "selections",
+         "includeChildSelections": true,
+         "scope": "force",
+         "shared": true,
+         "type": "atLeast",
+         "value": 1
+        }
+       ]
+      }
+     ],
+     "profiles": [
+      {
+       "name": "War Dog Brigand",
+       "id": "2a67-fd95-e3f9-420e",
+       "hidden": false,
+       "typeId": "c547-1836-d8a-ff4f",
+       "typeName": "Unit",
+       "characteristics": [
+        {
+         "name": "M",
+         "$text": "12\"",
+         "typeId": "e703-ecb6-5ce7-aec1"
+        },
+        {
+         "name": "T",
+         "$text": "9",
+         "typeId": "d29d-cf75-fc2d-34a4"
+        },
+        {
+         "name": "Sv",
+         "$text": "3+",
+         "typeId": "450-a17e-9d5e-29da"
+        },
+        {
+         "name": "W",
+         "$text": "14",
+         "typeId": "750a-a2ec-90d3-21fe"
+        },
+        {
+         "name": "LD",
+         "$text": "7+",
+         "typeId": "58d2-b879-49c7-43bc"
+        },
+        {
+         "name": "OC",
+         "$text": "6",
+         "typeId": "bef7-942a-1a23-59f8"
+        },
+        {
+         "name": "InSv",
+         "$text": "5+*",
+         "typeId": "55a7-5b54-c60d-11dc"
+        },
+        {
+         "name": "Base",
+         "$text": "100mm",
+         "typeId": "nr-base-size"
+        }
+       ]
+      },
+      {
+       "name": "Brigand",
+       "id": "34ad-4a93-4309-03bd",
+       "hidden": false,
+       "typeId": "9cc3-6d83-4dd3-9b64",
+       "typeName": "Abilities",
+       "characteristics": [
+        {
+         "name": "Description",
+         "$text": "Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.",
+         "typeId": "9b8f-694b-e5e-b573"
+        }
+       ]
+      }
+     ],
+     "selectionEntryGroups": [
+      {
+       "name": "Wargear",
+       "id": "b650-3089-7379-b036",
+       "hidden": false,
+       "sortIndex": 5,
+       "entryLinks": [
+        {
+         "name": "Armoured feet",
+         "id": "151e-e8b6-67f1-ec9f",
+         "collective": false,
+         "hidden": false,
+         "import": true,
+         "targetId": "6638-278a-5331-d1ff",
+         "type": "selectionEntry",
+         "entryLinks": [
+          {
+           "name": "Weapon Modifications",
+           "id": "8404-89be-a3ee-4291",
+           "hidden": false,
+           "import": true,
+           "targetId": "f9da-852a-d7f0-92e9",
+           "type": "selectionEntryGroup"
+          }
+         ]
+        },
+        {
+         "name": "Avenger chaincannon",
+         "id": "cf74-09ac-84ee-31d8",
+         "collective": false,
+         "hidden": false,
+         "import": true,
+         "targetId": "a30d-6752-d912-315e",
+         "type": "selectionEntry",
+         "constraints": [
+          {
+           "id": "f88b-5305-c7cc-e0a8",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": false,
+           "percentValue": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "min",
+           "value": 1
+          },
+          {
+           "id": "696d-f77a-09fb-69b4",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": false,
+           "percentValue": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "max",
+           "value": 1
+          }
+         ],
+         "entryLinks": [
+          {
+           "name": "Weapon Modifications",
+           "id": "ee23-b7b6-7c69-9ffd",
+           "hidden": false,
+           "import": true,
+           "targetId": "f9da-852a-d7f0-92e9",
+           "type": "selectionEntryGroup"
+          }
+         ]
+        },
+        {
+         "name": "Daemonbreath spear",
+         "id": "8e53-240c-6aee-d942",
+         "collective": false,
+         "hidden": false,
+         "import": true,
+         "targetId": "0b63-2988-ec78-7913",
+         "type": "selectionEntry",
+         "constraints": [
+          {
+           "id": "e543-c5d5-88bc-f0ed",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": false,
+           "percentValue": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "min",
+           "value": 1
+          },
+          {
+           "id": "ce14-34e9-e946-d0aa",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": false,
+           "percentValue": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "max",
+           "value": 1
+          }
+         ],
+         "entryLinks": [
+          {
+           "name": "Weapon Modifications",
+           "id": "9e1b-ccb6-dbdb-c5de",
+           "hidden": false,
+           "import": true,
+           "targetId": "f9da-852a-d7f0-92e9",
+           "type": "selectionEntryGroup"
+          }
+         ]
+        }
+       ],
+       "selectionEntryGroups": [
+        {
+         "name": "Carapace weapon",
+         "id": "6b38-d599-2a21-b5db",
+         "collective": false,
+         "defaultSelectionEntryId": "15c2-bab2-b57a-527f",
+         "hidden": false,
+         "import": true,
+         "constraints": [
+          {
+           "id": "2364-170c-3f9b-4041",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": false,
+           "percentValue": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "min",
+           "value": 1
+          },
+          {
+           "id": "4c4e-8cfb-7a84-46b9",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": false,
+           "percentValue": false,
+           "scope": "parent",
+           "shared": true,
+           "type": "max",
+           "value": 1
+          }
+         ],
+         "entryLinks": [
+          {
+           "name": "Diabolus heavy stubber",
+           "id": "15c2-bab2-b57a-527f",
+           "collective": false,
+           "hidden": false,
+           "import": true,
+           "targetId": "dfe8-cea0-8d16-db95",
+           "type": "selectionEntry",
+           "entryLinks": [
+            {
+             "name": "Weapon Modifications",
+             "id": "b41b-6dbf-61e3-3cbd",
+             "hidden": false,
+             "import": true,
+             "targetId": "f9da-852a-d7f0-92e9",
+             "type": "selectionEntryGroup"
+            }
+           ]
+          },
+          {
+           "name": "Havoc multi-launcher",
+           "id": "abb1-9d63-b31a-7502",
+           "collective": false,
+           "hidden": false,
+           "import": true,
+           "targetId": "773c-c2e1-0261-d8f4",
+           "type": "selectionEntry",
+           "entryLinks": [
+            {
+             "name": "Weapon Modifications",
+             "id": "88c7-e872-9d31-5c45",
+             "hidden": false,
+             "import": true,
+             "targetId": "f9da-852a-d7f0-92e9",
+             "type": "selectionEntryGroup"
+            }
+           ]
+          }
+         ]
         }
        ]
       }
@@ -118944,6 +121706,69 @@
      ]
     },
     {
+     "name": "Houndpack Lance Character",
+     "id": "b02a-a6e2-3eb4-4872",
+     "hidden": false,
+     "import": true,
+     "type": "upgrade",
+     "constraints": [
+      {
+       "id": "8203-3d9a-d3f9-aa1c-min",
+       "field": "selections",
+       "includeChildForces": true,
+       "includeChildSelections": true,
+       "scope": "force",
+       "shared": true,
+       "type": "min",
+       "value": 3
+      },
+      {
+       "id": "8203-3d9a-d3f9-aa1c-max",
+       "field": "selections",
+       "includeChildForces": true,
+       "includeChildSelections": true,
+       "scope": "force",
+       "shared": true,
+       "type": "max",
+       "value": 3
+      },
+      {
+       "id": "93c2-9935-ec89-6486",
+       "field": "selections",
+       "includeChildSelections": false,
+       "scope": "parent",
+       "shared": true,
+       "type": "max",
+       "value": 1
+      }
+     ],
+     "modifiers": [
+      {
+       "field": "hidden",
+       "type": "set",
+       "value": true,
+       "conditions": [
+        {
+         "childId": "6cb5-45cf-c626-fa86",
+         "field": "selections",
+         "includeChildForces": true,
+         "includeChildSelections": true,
+         "scope": "roster",
+         "shared": true,
+         "type": "lessThan",
+         "value": 1
+        }
+       ]
+      },
+      {
+       "field": "category",
+       "scope": "parent",
+       "type": "add",
+       "value": "9cfd-1c32-585f-7d5c"
+      }
+     ]
+    },
+    {
      "name": "Knight Ruinator",
      "id": "c0a2-eb65-6d34-5bc6",
      "collective": false,
@@ -123503,6 +126328,20 @@
    ],
    "sharedProfiles": [
     {
+     "name": "Damaged: 1-5 wounds remaining",
+     "id": "97fd-09c5-60a8-63c4",
+     "hidden": false,
+     "typeId": "9cc3-6d83-4dd3-9b64",
+     "typeName": "Abilities",
+     "characteristics": [
+      {
+       "name": "Description",
+       "$text": "While this model has 1-5 wounds remaining, subtract 3 from this model's Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
+       "typeId": "9b8f-694b-e5e-b573"
+      }
+     ]
+    },
+    {
      "name": "Damaged: 1-9 wounds remaining",
      "id": "12ce-2a62-9fea-74bd",
      "hidden": false,
@@ -123571,6 +126410,229 @@
     }
    ],
    "categoryEntries": [
+    {
+     "name": "War Dog",
+     "id": "99dc-0f47-85e2-75da",
+     "hidden": false,
+     "constraints": [
+      {
+       "id": "b230-e5af-af1e-a9ec",
+       "field": "selections",
+       "includeChildForces": false,
+       "includeChildSelections": true,
+       "percentValue": false,
+       "scope": "force",
+       "shared": true,
+       "type": "max",
+       "value": -1
+      },
+      {
+       "id": "d327-f466-4331-0ac3",
+       "field": "selections",
+       "includeChildSelections": true,
+       "scope": "force",
+       "shared": true,
+       "type": "min",
+       "value": -1
+      }
+     ],
+     "modifiers": [
+      {
+       "field": "b230-e5af-af1e-a9ec",
+       "type": "set",
+       "value": 0,
+       "conditionGroups": [
+        {
+         "type": "and",
+         "conditionGroups": [
+          {
+           "type": "or",
+           "conditions": [
+            {
+             "childId": "f2d9-b5e8-4183-cb0b",
+             "field": "selections",
+             "includeChildForces": false,
+             "includeChildSelections": true,
+             "percentValue": false,
+             "scope": "force",
+             "shared": true,
+             "type": "atLeast",
+             "value": 1
+            },
+            {
+             "childId": "552f-2667-65a7-f914",
+             "field": "selections",
+             "includeChildForces": false,
+             "includeChildSelections": true,
+             "percentValue": false,
+             "scope": "force",
+             "shared": true,
+             "type": "atLeast",
+             "value": 1
+            },
+            {
+             "childId": "4ba6-5e16-28e6-835a",
+             "field": "selections",
+             "includeChildForces": false,
+             "includeChildSelections": true,
+             "percentValue": false,
+             "scope": "force",
+             "shared": true,
+             "type": "atLeast",
+             "value": 1
+            },
+            {
+             "childId": "b6d3-1a49-8a2a-b157",
+             "field": "selections",
+             "includeChildForces": false,
+             "includeChildSelections": true,
+             "percentValue": false,
+             "scope": "force",
+             "shared": true,
+             "type": "atLeast",
+             "value": 1
+            }
+           ]
+          }
+         ],
+         "conditions": [
+          {
+           "childId": "46d8-abc8-ef3a-9f85",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": false,
+           "percentValue": false,
+           "scope": "primary-catalogue",
+           "shared": true,
+           "type": "notInstanceOf",
+           "value": 0
+          },
+          {
+           "childId": "cac3-71d1-ea4b-795d",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": true,
+           "percentValue": false,
+           "scope": "force",
+           "shared": true,
+           "type": "notInstanceOf",
+           "value": 0
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "field": "b230-e5af-af1e-a9ec",
+       "type": "set",
+       "value": 3,
+       "conditionGroups": [
+        {
+         "type": "and",
+         "conditions": [
+          {
+           "childId": "46d8-abc8-ef3a-9f85",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": false,
+           "percentValue": false,
+           "scope": "primary-catalogue",
+           "shared": true,
+           "type": "notInstanceOf",
+           "value": 0
+          },
+          {
+           "childId": "f2d9-b5e8-4183-cb0b",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": true,
+           "percentValue": false,
+           "scope": "force",
+           "shared": true,
+           "type": "lessThan",
+           "value": 1
+          },
+          {
+           "childId": "552f-2667-65a7-f914",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": true,
+           "percentValue": false,
+           "scope": "force",
+           "shared": true,
+           "type": "lessThan",
+           "value": 1
+          },
+          {
+           "childId": "4ba6-5e16-28e6-835a",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": true,
+           "percentValue": false,
+           "scope": "force",
+           "shared": true,
+           "type": "lessThan",
+           "value": 1
+          },
+          {
+           "childId": "b6d3-1a49-8a2a-b157",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": true,
+           "percentValue": false,
+           "scope": "force",
+           "shared": true,
+           "type": "lessThan",
+           "value": 1
+          },
+          {
+           "childId": "cac3-71d1-ea4b-795d",
+           "field": "selections",
+           "includeChildForces": false,
+           "includeChildSelections": true,
+           "percentValue": false,
+           "scope": "force",
+           "shared": true,
+           "type": "notInstanceOf",
+           "value": 0
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "field": "d327-f466-4331-0ac3",
+       "type": "set",
+       "value": 3,
+       "conditions": [
+        {
+         "childId": "6cb5-45cf-c626-fa86",
+         "field": "selections",
+         "includeChildSelections": true,
+         "scope": "force",
+         "shared": true,
+         "type": "atLeast",
+         "value": 1
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Executioner",
+     "id": "370b-1eb7-eac6-491c",
+     "hidden": false
+    },
+    {
+     "name": "Karnivore",
+     "id": "7177-ef6b-50ae-82e2",
+     "hidden": false
+    },
+    {
+     "name": "Brigand",
+     "id": "8364-7dd6-fadc-a5d2",
+     "hidden": false
+    },
     {
      "name": "Abhorrent",
      "id": "f2d9-b5e8-4183-cb0b",
@@ -137553,6 +140615,48 @@
          "hidden": false
         }
        ]
+      }
+     ]
+    },
+    {
+     "name": "Weapon Upgrades",
+     "id": "f715-a306-e448-9c1b",
+     "flatten": true,
+     "hidden": false,
+     "entryLinks": [
+      {
+       "name": "Weapon Modifications",
+       "id": "f146-6cdb-1ade-71ce",
+       "hidden": false,
+       "import": true,
+       "targetId": "f9da-852a-d7f0-92e9",
+       "type": "selectionEntryGroup"
+      },
+      {
+       "name": "Crusade Relic Upgrades",
+       "id": "cc77-4a7f-89f8-68db",
+       "hidden": false,
+       "import": true,
+       "targetId": "b678-4a99-210e-931f",
+       "type": "selectionEntryGroup",
+       "entryLinks": [
+        {
+         "name": "Slayer Sabres upgrade",
+         "id": "98aa-23ed-bbcf-23e8",
+         "hidden": false,
+         "import": true,
+         "targetId": "4aaa-2ba5-4b0c-d2ba",
+         "type": "selectionEntry"
+        }
+       ]
+      },
+      {
+       "name": "Boarding Actiions Upgrades",
+       "id": "aaf1-5125-3c6a-a637",
+       "hidden": false,
+       "import": true,
+       "targetId": "3167-0f5b-caba-d96e",
+       "type": "selectionEntryGroup"
       }
      ]
     },
