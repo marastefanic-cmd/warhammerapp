@@ -915,6 +915,75 @@ const FACTIONS = {
       }
     }
   },
+  'emperors-children': {
+    name: 'Emperor’s Children',
+    // army rules: Wahapedia, Emperor’s Children, Army Rules (the Faction Pack 1.3 prints no army rule and its Rules Updates change none)
+    armyRules: [
+      // Wahapedia prints “another units charge” (no apostrophe); New Recruit prints “another unit's charge”
+      { name:'Thrill Seekers', ph:['shooting','charge'], turn:'your',
+        text:'If your Army Faction is **EMPEROR’S CHILDREN**, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:\n- It cannot target a unit it was within **Engagement Range** of at the start of the turn.\n- It cannot target a unit that was the target of another units charge or attack this phase.' },
+      { name:'Pact of Excess',
+        text:'When mustering your army, unless specifically stated otherwise, you cannot select **LEGIONS OF EXCESS** as your Army Faction.' }
+    ],
+    detachments: {
+      // Coterie of the Conceited: a codex detachment the Faction Pack 1.3 does not print; rule, enhancements and stratagems from
+      // Wahapedia, with the pack's Rules Updates (Armour of Abhorrence, Effect)
+      'coterie-of-the-conceited': {
+        name:'Coterie of the Conceited', dp:3,
+        // the bonuses, label = the Pact points they need (cumulative)
+        rule:{ name:'Pledges to the Dark Prince', at:'Start of the battle round', ph:['command','shooting','fight'], turn:'either', needs:{ all:['Faction: Emperor\'s Children'] },
+          // the Pact point bonuses for all attacks: one pick, the Pact points gained so far (5+ adds [LETHAL HITS] and [SUSTAINED HITS 1] to
+          // melee weapons only: each unit's own melee footnote)
+          mod:{ kind:'all', lasts:'battle', when:'Pact points gained during the battle (cumulative)', note:'1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+',
+            pick:[{ name:'1+ Pact points', note:'re-roll hit rolls of 1' }, { name:'3+ Pact points', note:'re-roll hit rolls of 1 and wound rolls of 1' },
+              { name:'7+ Pact points', note:'re-roll hit rolls of 1 and wound rolls of 1, a Critical Hit on an unmodified hit roll of 5+', calc:{ rrHit:'1s', rrWound:'1s', critHit:5 } }] },
+          text:'At the start of the battle round, if your **WARLORD** is on the battlefield, you must pledge a number to Slaanesh representing how many enemy units will be destroyed this battle round. At the end of the battle round, if the number of enemy units destroyed this battle round is greater than or equal to your pledge, you gain a number of Pact points equal to your pledge. Otherwise, you do not gain any Pact points this battle round and your **WARLORD** model suffers D3 **mortal wounds**.\n**EMPEROR’S CHILDREN** units from your army gain a bonus depending on how many Pact points you have gained during the battle, as shown below (these are all cumulative).',
+          table:[
+            ['1+', 'Each time a model in this unit makes an attack, re-roll a **Hit roll** of 1.'],
+            ['3+', 'Each time a model in this unit makes an attack, re-roll a **Wound roll** of 1.'],
+            ['5+', 'Melee weapons equipped by models in this unit have the **[LETHAL HITS]** and **[SUSTAINED HITS 1]** abilities.'],
+            ['7+', 'Each time a model in this unit makes an attack, a Critical Hit is scored on an unmodified **Hit roll** of 5+.']
+          ] },
+        enhancements:[
+          { name:'Pledge of Eternal Servitude', pts:25, text:'**EMPEROR’S CHILDREN** model only. The first time the bearer is destroyed, take a **Leadership test** for the bearer at the end of the phase. If that test is passed, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within **Engagement Range** of one or more enemy units, with D6 wounds remaining (up to its Wounds characteristic).' },
+          { name:'Pledge of Dark Glory', pts:25, text:'**EMPEROR’S CHILDREN** model only. While the bearer is leading a unit, improve the Leadership and Objective Control characteristics of models in that unit by 1.' },
+          { name:'Pledge of Mortal Pain', pts:15, text:'**EMPEROR’S CHILDREN** model only. At the start of your Shooting phase, select one enemy unit within 12" of and **visible** to the bearer. That unit must take a **Leadership test**, subtracting 2 from the result if it is **Battle-shocked**: if failed, that enemy unit suffers 3 **mortal wounds**.' },
+          { name:'Pledge of Unholy Fortune', pts:30, text:'**EMPEROR’S CHILDREN** model only. Once per turn, just after making a **Hit roll**, a **Wound roll** or a saving throw for a model in the bearer’s unit, if the bearer is not **Battle-shocked**, it can use this Enhancement. If it does, treat the result as an unmodified roll of 6 instead.' }
+        ],
+        stratagems:[
+          { id:'protection-of-the-dark-prince', gist:'Until the end of the phase, your unit has Feel No Pain 6+, and Feel No Pain 4+ against mortal wounds.', def:'Feel No Pain 6+, and Feel No Pain 4+ against mortal wounds (until the end of the phase)', name:'Protection of the Dark Prince', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Faction: Emperor\'s Children'] },
+            when:'Any phase, just after a **mortal wound** or attack is allocated to a model in an **EMPEROR’S CHILDREN** unit from your army.',
+            target:'That **EMPEROR’S CHILDREN** unit.',
+            effect:'Until the end of the phase, models in your unit have the **Feel No Pain 6+** ability, and the **Feel No Pain 4+** ability against **mortal wounds**.' },
+          // the calculator counts the hit roll part (no modifier to the wound roll is set on a target here)
+          { id:'unshakeable-opponents', gist:'Until the end of the turn, your unit’s attacks can ignore any or all modifiers to BS or WS, the hit roll and the wound roll.', mod:{ kind:'all', when:'Command phase, until the end of the turn', note:'can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll', calc:{ ignoreHitMods:true } }, name:'Unshakeable Opponents', cp:1, phases:['command'], turn:'either', needs:{ all:['Faction: Emperor\'s Children'] },
+            when:'Command phase.',
+            target:'One **EMPEROR’S CHILDREN** unit from your army.',
+            effect:'Until the end of the turn, each time a model in your unit makes an attack, you can ignore any or all modifiers to the following: that attack’s Ballistic Skill or Weapon Skill characteristic; the **Hit roll**; the **Wound roll**.' },
+          { id:'embrace-the-pain', gist:'Until the end of the phase, each enemy model within Engagement Range of your unit must select your unit as the target of its attacks.', name:'Embrace the Pain', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Emperor\'s Children','Infantry'] },
+            when:'Start of the Fight phase.',
+            target:'One **EMPEROR’S CHILDREN INFANTRY** unit from your army.',
+            effect:'Until the end of the phase, each time an enemy model within **Engagement Range** of your unit selects targets, it must select your unit as the target of its attacks.' },
+          { id:'martial-perfection', gist:'Until the end of the phase, your unit can re-roll the hit roll.', mod:{ kind:'melee', when:'Fight phase, not yet selected to fight', note:'re-roll hit rolls' }, name:'Martial Perfection', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Emperor\'s Children'] },
+            when:'Fight phase.',
+            target:'One **EMPEROR’S CHILDREN** unit from your army that has not been selected to fight this phase.',
+            effect:'Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the **Hit roll**.' },
+          // the Faction Pack’s FAQ (also on Wahapedia), as the note
+          { id:'unbound-arrogance', gist:'Just after your unit destroys an enemy unit: increase your pledge to Slaanesh by 1 (once per battle round).', name:'Unbound Arrogance', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, needs:{ all:['Faction: Emperor\'s Children'] },
+            note:'Faction Pack FAQ: “While using the Coterie of the Conceited Detachment, if my WARLORD is not on the battlefield, can I use the Unbound Arrogance Stratagem?” “Yes, your pledge to Slaanesh would increase from 0 to 1.”',
+            when:'Your Shooting phase or the Fight phase, just after an **EMPEROR’S CHILDREN** unit from your army destroys an enemy unit.',
+            target:'That **EMPEROR’S CHILDREN** unit.',
+            effect:'Increase your pledge to Slaanesh by 1.',
+            restrictions:'You can only use this Stratagem once per battle round.' },
+          // effect: the Faction Pack 1.3 Rules Updates wording (“Change to”), as Wahapedia’s errata
+          { id:'armour-of-abhorrence', gist:'Until the attacking unit has finished its attacks, worsen the AP of each attack that targets your unit by 1.', def:'their Shooting phase or the Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)', name:'Armour of Abhorrence', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'opp' }, needs:{ all:['Faction: Emperor\'s Children'] },
+            when:'Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.',
+            target:'One **EMPEROR’S CHILDREN** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.',
+            effect:'Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.' }
+        ]
+      }
+    }
+  },
 };
 
 /* ---------------- armies ----------------

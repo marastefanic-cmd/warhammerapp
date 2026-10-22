@@ -61,5 +61,14 @@
   "source": "…matches up to \"the abilities in the icon of war section\" then source has: \" (see next page). until the start of your next command phase, this model has that ability. mechanicus bodyguard: while t\"",
   "reason": "Layout cross-reference. GW's Faction Pack prints Icon of War on the page after Thulia Ghuld's profile, so Rod of the War Forge says \"the Icon of War section (see next page)\"; Wahapedia copies the words. In the app Icon of War is the first ability of the same datasheet, so the app keeps New Recruit's (BSData's) text, which has no \"(see next page)\". Every other word is the pack's. The app leaves \"(see next page)\" out: the app has no pages, and Icon of War is shown on the same datasheet.",
   "evidence": "GW Faction Pack Adeptus Mechanicus v1.4 PDF p9 (verify/.cache/gw/eng_14-10_wh40k_-faction_pack_adeptus-mechanicus-g0jwiuyz3x-f5itnst9j9.txt lines 439-443): \"Rod of the War Forge: In your Command phase, select one of the abilities in the Icon of War section (see next page). Until the start of your next Command phase, this model has that ability.\"; Icon of War is on p10 (lines 470-483); Wahapedia Thulia Ghuld datasheet (verify/.cache/waha/ds/adeptus-mechanicus_Thulia-Ghuld.html) prints the same; New Recruit (verify/sources/nr/purge-goes-the-foe.txt lines 154-155): \"In your Command phase, select one of the abilities in the Icon of War section. Until the start of your next Command phase, this model has that ability.\""
+ },
+ {
+  "army": "emperors-children",
+  "unit": "detachment:coterie-of-the-conceited/rule",
+  "field": "text (missing)",
+  "app": "",
+  "source": "source line missing from the app: PACT POINTSBONUS",
+  "reason": "Table heading, not rules text. Wahapedia prints the Pact point bonuses as a table with the column headings \"PACT POINTS\" and \"BONUS\" (its text extraction glues them into one line); the app writes the same table as rows labelled 1+, 3+, 5+ and 7+ (each row is checked word for word), so the heading line has no place in the rule text.",
+  "evidence": "verify/.cache/waha/emperors-children.txt line 288, Coterie of the Conceited, Pledges to the Dark Prince: \"**PACT POINTSBONUS\"; the four rows follow (\"**1+**Each time a model in this unit makes an attack, re-roll a **Hit roll** of 1.\" …)."
  }
 ]
