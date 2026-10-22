@@ -1,0 +1,1130 @@
+[
+  {
+    "army": "infernal-lance",
+    "kind": "ability-tag",
+    "where": "infernal-lance · Chaos Cerastus Knight Atrapos · Consumed with Hunger",
+    "judgement": {
+      "tag": "Aura"
+    },
+    "source": {
+      "ability": "Consumed with Hunger",
+      "text": "While a friendly **WAR DOG** model is within 6\" of this model, each time that **WAR DOG** model makes an attack that targets a **TITANIC** or **TOWERING** unit, you can re-roll the **Hit roll**."
+    },
+    "key": "9e1b9d39cb55ec05"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "ability-na",
+    "where": "infernal-lance · Chaos Cerastus Knight Atrapos · Consumed with Hunger",
+    "judgement": {
+      "na": "No WAR DOG in this list",
+      "armyUnits": [
+        "Chaos Cerastus Knight Atrapos [Cerastus, Chaos, Character, Faction: Chaos Knights, Knight Atrapos, Titanic, Towering, Vehicle, Walker]",
+        "Chaos Cerastus Knight Lancer [Cerastus, Chaos, Character, Faction: Chaos Knights, Knight Lancer, Titanic, Towering, Vehicle, Walker]",
+        "Knight Despoiler [Abhorrent, Chaos, Character, Faction: Chaos Knights, Knight Despoiler, Titanic, Towering, Vehicle, Walker, Warlord]",
+        "Knight Ruinator [Abhorrent, Chaos, Character, Faction: Chaos Knights, Knight Ruinator, Titanic, Towering, Vehicle, Walker]",
+        "Knight Ruinator [Abhorrent, Chaos, Character, Faction: Chaos Knights, Knight Ruinator, Titanic, Towering, Vehicle, Walker]",
+        "Nurglings [Allies: Legiones Daemonica, Battleline, Chaos, Daemon, Faction: Legiones Daemonica, Nurgle, Nurglings, Swarm]"
+      ]
+    },
+    "source": {
+      "ability": "Consumed with Hunger",
+      "text": "While a friendly **WAR DOG** model is within 6\" of this model, each time that **WAR DOG** model makes an attack that targets a **TITANIC** or **TOWERING** unit, you can re-roll the **Hit roll**."
+    },
+    "key": "818b335ec8c3c435"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "ability-damaged",
+    "where": "infernal-lance · Chaos Cerastus Knight Atrapos · Damaged: 1-10 wounds remaining",
+    "judgement": {
+      "damaged": "1-10",
+      "W": "28"
+    },
+    "source": {
+      "ability": "Damaged: 1-10 wounds remaining",
+      "text": "While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**."
+    },
+    "key": "a8728b1a5c0f7145"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "ability-tag",
+    "where": "infernal-lance · Chaos Cerastus Knight Atrapos · Knight Diabolus",
+    "judgement": {
+      "tag": "Enhancement"
+    },
+    "source": {
+      "ability": "Knight Diabolus",
+      "text": "**CHAOS KNIGHTS** model only. Improve the Weapon Skill characteristic of the bearer’s melee weapons by 1. While the bearer is using the Diabolic Power ability, its melee weapons have the **[LANCE]** ability."
+    },
+    "key": "29c8d442867499ee"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "unit-footnote",
+    "where": "infernal-lance · Chaos Cerastus Knight Atrapos",
+    "judgement": {
+      "kind": "all",
+      "when": "vs MONSTER/VEHICLE",
+      "note": "+1 to hit rolls",
+      "from": "Macro-extinction Protocols",
+      "always": true,
+      "vs": {
+        "any": [
+          "Monster",
+          "Vehicle"
+        ]
+      }
+    },
+    "source": {
+      "ability": "Macro-extinction Protocols",
+      "text": "Each time this model makes an attack that targets a **MONSTER** or **VEHICLE** unit, add 1 to the **Hit roll**. If that target is **TITANIC** or **TOWERING**, add 1 to the **Wound roll** as well."
+    },
+    "key": "34f2fbbb1f9ce13f"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "unit-footnote",
+    "where": "infernal-lance · Chaos Cerastus Knight Atrapos",
+    "judgement": {
+      "kind": "all",
+      "when": "vs TITANIC/TOWERING",
+      "note": "+1 to wound rolls",
+      "from": "Macro-extinction Protocols",
+      "always": true,
+      "vs": {
+        "any": [
+          "Titanic",
+          "Towering"
+        ],
+        "also": {
+          "any": [
+            "Monster",
+            "Vehicle"
+          ]
+        }
+      }
+    },
+    "source": {
+      "ability": "Macro-extinction Protocols",
+      "text": "Each time this model makes an attack that targets a **MONSTER** or **VEHICLE** unit, add 1 to the **Hit roll**. If that target is **TITANIC** or **TOWERING**, add 1 to the **Wound roll** as well."
+    },
+    "key": "507bb89a309d636a"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "unit-footnote",
+    "where": "infernal-lance · Chaos Cerastus Knight Atrapos",
+    "judgement": {
+      "kind": "melee",
+      "when": "Using the Diabolic Power ability (Malefic Surge)",
+      "note": "melee weapons have [LANCE]",
+      "from": "Knight Diabolus"
+    },
+    "source": {
+      "ability": "Knight Diabolus",
+      "text": "**CHAOS KNIGHTS** model only. Improve the Weapon Skill characteristic of the bearer’s melee weapons by 1. While the bearer is using the Diabolic Power ability, its melee weapons have the **[LANCE]** ability."
+    },
+    "key": "8a2f94db8cbef53e"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "unit-footnote",
+    "where": "infernal-lance · Chaos Cerastus Knight Lancer",
+    "judgement": {
+      "kind": "all",
+      "when": "Damaged (1-10 wounds left)",
+      "note": "-1 to hit rolls (and -5 OC)",
+      "from": "Damaged: 1-10 wounds remaining"
+    },
+    "source": {
+      "ability": "Damaged: 1-10 wounds remaining",
+      "text": "While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**."
+    },
+    "key": "55ff1cfe4172fd6f"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "unit-aura",
+    "where": "infernal-lance · Chaos Cerastus Knight Atrapos",
+    "judgement": {
+      "kind": "all",
+      "needs": {
+        "all": [
+          "War Dog"
+        ]
+      },
+      "when": "Within 6\" of Chaos Cerastus Knight Atrapos, vs a TITANIC or TOWERING unit",
+      "note": "re-roll the hit roll",
+      "from": "Consumed with Hunger",
+      "vs": {
+        "any": [
+          "Titanic",
+          "Towering"
+        ]
+      }
+    },
+    "source": {
+      "ability": "Consumed with Hunger",
+      "text": "While a friendly **WAR DOG** model is within 6\" of this model, each time that **WAR DOG** model makes an attack that targets a **TITANIC** or **TOWERING** unit, you can re-roll the **Hit roll**."
+    },
+    "key": "1465a561e896e637"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "unit-weapons",
+    "where": "infernal-lance · Chaos Cerastus Knight Atrapos",
+    "judgement": {
+      "gear": [
+        [
+          "Atrapos lascutter",
+          "Graviton singularity cannon"
+        ]
+      ],
+      "weapons": [
+        "Atrapos lascutter · low intensity",
+        "Atrapos lascutter · high intensity",
+        "Graviton singularity cannon · contained",
+        "Graviton singularity cannon · singularity",
+        "Atrapos lascutter · low intensity",
+        "Atrapos lascutter · high intensity"
+      ]
+    },
+    "source": {
+      "models": [
+        "1× Chaos Cerastus Knight Atrapos"
+      ],
+      "leads": null
+    },
+    "key": "ff04cd0cf3914920"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "ability-tag",
+    "where": "infernal-lance · Chaos Cerastus Knight Lancer · Dark Fervour",
+    "judgement": {
+      "tag": "Aura"
+    },
+    "source": {
+      "ability": "Dark Fervour",
+      "text": "While a friendly **WAR DOG** model is within 6\" of this model, ranged weapons equipped by that War Dog model have the **[ASSAULT]** ability."
+    },
+    "key": "cd232dd833dcc49d"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "ability-na",
+    "where": "infernal-lance · Chaos Cerastus Knight Lancer · Dark Fervour",
+    "judgement": {
+      "na": "No WAR DOG in this list",
+      "armyUnits": [
+        "Chaos Cerastus Knight Atrapos [Cerastus, Chaos, Character, Faction: Chaos Knights, Knight Atrapos, Titanic, Towering, Vehicle, Walker]",
+        "Chaos Cerastus Knight Lancer [Cerastus, Chaos, Character, Faction: Chaos Knights, Knight Lancer, Titanic, Towering, Vehicle, Walker]",
+        "Knight Despoiler [Abhorrent, Chaos, Character, Faction: Chaos Knights, Knight Despoiler, Titanic, Towering, Vehicle, Walker, Warlord]",
+        "Knight Ruinator [Abhorrent, Chaos, Character, Faction: Chaos Knights, Knight Ruinator, Titanic, Towering, Vehicle, Walker]",
+        "Knight Ruinator [Abhorrent, Chaos, Character, Faction: Chaos Knights, Knight Ruinator, Titanic, Towering, Vehicle, Walker]",
+        "Nurglings [Allies: Legiones Daemonica, Battleline, Chaos, Daemon, Faction: Legiones Daemonica, Nurgle, Nurglings, Swarm]"
+      ]
+    },
+    "source": {
+      "ability": "Dark Fervour",
+      "text": "While a friendly **WAR DOG** model is within 6\" of this model, ranged weapons equipped by that War Dog model have the **[ASSAULT]** ability."
+    },
+    "key": "c81efef17bbdafd5"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "ability-damaged",
+    "where": "infernal-lance · Chaos Cerastus Knight Lancer · Damaged: 1-10 wounds remaining",
+    "judgement": {
+      "damaged": "1-10",
+      "W": "30"
+    },
+    "source": {
+      "ability": "Damaged: 1-10 wounds remaining",
+      "text": "While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**."
+    },
+    "key": "4f8046346a592244"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "ability-tag",
+    "where": "infernal-lance · Chaos Cerastus Knight Lancer · Blasphemous Engine",
+    "judgement": {
+      "tag": "Enhancement"
+    },
+    "source": {
+      "ability": "Blasphemous Engine",
+      "text": "**CHAOS KNIGHTS** model only. Add 2 to the bearer’s Wounds characteristic. Each time the bearer’s unit makes a Malefic Surge, you can re-roll the **Leadership test** taken to see if it suffers any **mortal wounds**."
+    },
+    "key": "f329d722ca6129d0"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "unit-aura",
+    "where": "infernal-lance · Chaos Cerastus Knight Lancer",
+    "judgement": {
+      "kind": "ranged",
+      "needs": {
+        "all": [
+          "War Dog"
+        ]
+      },
+      "when": "Within 6\" of Chaos Cerastus Knight Lancer",
+      "note": "ranged weapons have [ASSAULT]",
+      "from": "Dark Fervour"
+    },
+    "source": {
+      "ability": "Dark Fervour",
+      "text": "While a friendly **WAR DOG** model is within 6\" of this model, ranged weapons equipped by that War Dog model have the **[ASSAULT]** ability."
+    },
+    "key": "b8c4662692012423"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "unit-weapons",
+    "where": "infernal-lance · Chaos Cerastus Knight Lancer",
+    "judgement": {
+      "gear": [
+        [
+          "Cerastus shock lance"
+        ]
+      ],
+      "weapons": [
+        "Cerastus shock lance",
+        "Cerastus shock lance · strike",
+        "Cerastus shock lance · sweep"
+      ]
+    },
+    "source": {
+      "models": [
+        "1× Chaos Cerastus Knight Lancer"
+      ],
+      "leads": null
+    },
+    "key": "3c19185efa31c0bc"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "ability-tag",
+    "where": "infernal-lance · Knight Despoiler · Dread Dominion",
+    "judgement": {
+      "tag": "Aura"
+    },
+    "source": {
+      "ability": "Dread Dominion",
+      "text": "While a friendly **WAR DOG** model is within 9\" of this model, improve that **WAR DOG** model’s Leadership and Objective Control characteristics by 1."
+    },
+    "key": "a63ab251c342c33b"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "ability-na",
+    "where": "infernal-lance · Knight Despoiler · Dread Dominion",
+    "judgement": {
+      "na": "No WAR DOG in this list",
+      "armyUnits": [
+        "Chaos Cerastus Knight Atrapos [Cerastus, Chaos, Character, Faction: Chaos Knights, Knight Atrapos, Titanic, Towering, Vehicle, Walker]",
+        "Chaos Cerastus Knight Lancer [Cerastus, Chaos, Character, Faction: Chaos Knights, Knight Lancer, Titanic, Towering, Vehicle, Walker]",
+        "Knight Despoiler [Abhorrent, Chaos, Character, Faction: Chaos Knights, Knight Despoiler, Titanic, Towering, Vehicle, Walker, Warlord]",
+        "Knight Ruinator [Abhorrent, Chaos, Character, Faction: Chaos Knights, Knight Ruinator, Titanic, Towering, Vehicle, Walker]",
+        "Knight Ruinator [Abhorrent, Chaos, Character, Faction: Chaos Knights, Knight Ruinator, Titanic, Towering, Vehicle, Walker]",
+        "Nurglings [Allies: Legiones Daemonica, Battleline, Chaos, Daemon, Faction: Legiones Daemonica, Nurgle, Nurglings, Swarm]"
+      ]
+    },
+    "source": {
+      "ability": "Dread Dominion",
+      "text": "While a friendly **WAR DOG** model is within 9\" of this model, improve that **WAR DOG** model’s Leadership and Objective Control characteristics by 1."
+    },
+    "key": "78ebdf095c5378b5"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "ability-timing",
+    "where": "infernal-lance · Knight Despoiler · Seething Hatred",
+    "judgement": {
+      "ph": [
+        "shooting",
+        "fight"
+      ],
+      "turn": "either",
+      "turns": {
+        "shooting": "your"
+      }
+    },
+    "source": {
+      "ability": "Seething Hatred",
+      "text": "Each time this model is selected to shoot or fight, you can re-roll one **Hit roll** or you can re-roll one **Wound roll** when resolving those attacks."
+    },
+    "key": "d19eadff1ab8ea2d"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "ability-damaged",
+    "where": "infernal-lance · Knight Ruinator · Damaged: 1-9 wounds remaining",
+    "judgement": {
+      "damaged": "1-9",
+      "W": "26"
+    },
+    "source": {
+      "ability": "Damaged: 1-9 wounds remaining",
+      "text": "While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**."
+    },
+    "key": "b2f06505a1392691"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "ability-tag",
+    "where": "infernal-lance · Knight Despoiler · Bestial Aspect",
+    "judgement": {
+      "tag": "Enhancement"
+    },
+    "source": {
+      "ability": "Bestial Aspect",
+      "text": "**CHAOS KNIGHTS** model only. The bearer’s ranged weapons have the **[ASSAULT]** ability. While the bearer is using the Unholy Hunger ability, it can ignore any or all modifiers to its Move characteristic and/or to **Advance rolls** made for its unit."
+    },
+    "key": "5f903228ac043ab7"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "unit-footnote",
+    "where": "infernal-lance · Knight Despoiler",
+    "judgement": {
+      "kind": "all",
+      "when": "Selected to shoot or fight",
+      "note": "re-roll one hit roll or one wound roll",
+      "from": "Seething Hatred"
+    },
+    "source": {
+      "ability": "Seething Hatred",
+      "text": "Each time this model is selected to shoot or fight, you can re-roll one **Hit roll** or you can re-roll one **Wound roll** when resolving those attacks."
+    },
+    "key": "7d5cd2b1b9048414"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "unit-footnote",
+    "where": "infernal-lance · Knight Ruinator",
+    "judgement": {
+      "kind": "all",
+      "when": "Damaged (1-9 wounds left)",
+      "note": "-1 to hit rolls (and -5 OC)",
+      "from": "Damaged: 1-9 wounds remaining"
+    },
+    "source": {
+      "ability": "Damaged: 1-9 wounds remaining",
+      "text": "While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**."
+    },
+    "key": "5782e15cb3c43b35"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "unit-weapons",
+    "where": "infernal-lance · Knight Despoiler",
+    "judgement": {
+      "gear": [
+        [
+          "Titanic feet",
+          "Ruinspear rocket pod",
+          "Diabolus heavy stubber",
+          "Despoiler gatling cannon",
+          "Despoiler gatling cannon",
+          "Heavy darkflamer",
+          "Heavy darkflamer"
+        ]
+      ],
+      "weapons": [
+        "Ruinspear rocket pod",
+        "×2 · Despoiler gatling cannon",
+        "×2 · Heavy darkflamer",
+        "Diabolus heavy stubber",
+        "Titanic feet"
+      ]
+    },
+    "source": {
+      "models": [
+        "1× Knight Despoiler"
+      ],
+      "leads": null
+    },
+    "key": "6e09cf276a4d9bc3"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "ability-timing",
+    "where": "infernal-lance · Knight Ruinator · Methodical Destruction",
+    "judgement": {
+      "ph": [
+        "command",
+        "shooting",
+        "fight"
+      ],
+      "turn": "either",
+      "turns": {
+        "shooting": "your"
+      }
+    },
+    "source": {
+      "ability": "Methodical Destruction",
+      "text": "At the start of the first battle round, select one unit from your opponent’s army to be this model’s victim. Each time this model makes an attack that targets its victim, you can re-roll the **Wound roll**. Each time this model’s victim is destroyed, select one new enemy unit to be this model’s victim."
+    },
+    "key": "a660017a004a29ed"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "ability-tag",
+    "where": "infernal-lance · Knight Ruinator · Close-range Killers",
+    "judgement": {
+      "tag": "Aura"
+    },
+    "source": {
+      "ability": "Close-range Killers",
+      "text": "While a friendly War Dog model is within 9\" of this model, each time that War Dog model makes an attack that targets the closest enemy unit, improve the Armour Penetration characteristic of that attack by 1."
+    },
+    "key": "a21b919c5b85d98b"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "ability-na",
+    "where": "infernal-lance · Knight Ruinator · Close-range Killers",
+    "judgement": {
+      "na": "No WAR DOG in this list",
+      "armyUnits": [
+        "Chaos Cerastus Knight Atrapos [Cerastus, Chaos, Character, Faction: Chaos Knights, Knight Atrapos, Titanic, Towering, Vehicle, Walker]",
+        "Chaos Cerastus Knight Lancer [Cerastus, Chaos, Character, Faction: Chaos Knights, Knight Lancer, Titanic, Towering, Vehicle, Walker]",
+        "Knight Despoiler [Abhorrent, Chaos, Character, Faction: Chaos Knights, Knight Despoiler, Titanic, Towering, Vehicle, Walker, Warlord]",
+        "Knight Ruinator [Abhorrent, Chaos, Character, Faction: Chaos Knights, Knight Ruinator, Titanic, Towering, Vehicle, Walker]",
+        "Knight Ruinator [Abhorrent, Chaos, Character, Faction: Chaos Knights, Knight Ruinator, Titanic, Towering, Vehicle, Walker]",
+        "Nurglings [Allies: Legiones Daemonica, Battleline, Chaos, Daemon, Faction: Legiones Daemonica, Nurgle, Nurglings, Swarm]"
+      ]
+    },
+    "source": {
+      "ability": "Close-range Killers",
+      "text": "While a friendly War Dog model is within 9\" of this model, each time that War Dog model makes an attack that targets the closest enemy unit, improve the Armour Penetration characteristic of that attack by 1."
+    },
+    "key": "b97d5160a0bcbb39"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "ability-tag",
+    "where": "infernal-lance · Knight Ruinator · Fleshmetal Fusion",
+    "judgement": {
+      "tag": "Enhancement"
+    },
+    "source": {
+      "ability": "Fleshmetal Fusion",
+      "text": "**CHAOS KNIGHTS** model only. Add 1 to the bearer’s Toughness characteristic. While the bearer is using the Unnatural Fortitude ability, each time an attack with a Damage characteristic of 1 is allocated to the bearer, add 1 to any armour saving throw made against that attack."
+    },
+    "key": "54adf6f8ce6c4191"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "unit-footnote",
+    "where": "infernal-lance · Knight Ruinator",
+    "judgement": {
+      "kind": "all",
+      "when": "Target is its victim (selected at the start of the first battle round)",
+      "note": "re-roll the wound roll",
+      "from": "Methodical Destruction"
+    },
+    "source": {
+      "ability": "Methodical Destruction",
+      "text": "At the start of the first battle round, select one unit from your opponent’s army to be this model’s victim. Each time this model makes an attack that targets its victim, you can re-roll the **Wound roll**. Each time this model’s victim is destroyed, select one new enemy unit to be this model’s victim."
+    },
+    "key": "0eb22cc0ea720923"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "unit-aura",
+    "where": "infernal-lance · Knight Ruinator",
+    "judgement": {
+      "kind": "all",
+      "needs": {
+        "all": [
+          "War Dog"
+        ]
+      },
+      "when": "Within 9\" of Knight Ruinator, target is the closest enemy unit",
+      "note": "improve AP by 1",
+      "from": "Close-range Killers"
+    },
+    "source": {
+      "ability": "Close-range Killers",
+      "text": "While a friendly War Dog model is within 9\" of this model, each time that War Dog model makes an attack that targets the closest enemy unit, improve the Armour Penetration characteristic of that attack by 1."
+    },
+    "key": "9721c4c01fd25f1b"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "unit-weapons",
+    "where": "infernal-lance · Knight Ruinator",
+    "judgement": {
+      "gear": [
+        [
+          "Darkflame lance",
+          "Fellbore",
+          "Terrorpulse missiles"
+        ]
+      ],
+      "weapons": [
+        "Darkflame lance",
+        "Terrorpulse missiles",
+        "Fellbore · strike",
+        "Fellbore · sweep"
+      ]
+    },
+    "source": {
+      "models": [
+        "1× Knight Ruinator"
+      ],
+      "leads": null
+    },
+    "key": "2998a9cfd4b75570"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "ability-timing",
+    "where": "infernal-lance · Nurglings · Mischief Makers",
+    "judgement": {
+      "ph": [
+        "fight"
+      ],
+      "turn": "either"
+    },
+    "source": {
+      "ability": "Mischief Makers",
+      "text": "Each time an enemy unit (excluding **TITANIC** units) within **Engagement Range** of one or more units with this ability is selected to fight, until the end of the phase, each time a model in that enemy unit makes a melee attack, subtract 1 from the **Hit roll**."
+    },
+    "key": "4e48759691c181c0"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "ability-tag",
+    "where": "infernal-lance · Nurglings · Mischief Makers",
+    "judgement": {
+      "tag": "Aura"
+    },
+    "source": {
+      "ability": "Mischief Makers",
+      "text": "Each time an enemy unit (excluding **TITANIC** units) within **Engagement Range** of one or more units with this ability is selected to fight, until the end of the phase, each time a model in that enemy unit makes a melee attack, subtract 1 from the **Hit roll**."
+    },
+    "key": "74ec1cd7b0afc248"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "ability-def",
+    "where": "infernal-lance · Nurglings · Mischief Makers",
+    "judgement": {
+      "def": "Fight phase: an enemy unit (excluding TITANIC units) within Engagement Range of it, selected to fight: -1 to hit with each melee attack until the end of the phase"
+    },
+    "source": {
+      "ability": "Mischief Makers",
+      "text": "Each time an enemy unit (excluding **TITANIC** units) within **Engagement Range** of one or more units with this ability is selected to fight, until the end of the phase, each time a model in that enemy unit makes a melee attack, subtract 1 from the **Hit roll**."
+    },
+    "key": "7c9381e98775052b"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "unit-weapons",
+    "where": "infernal-lance · Nurglings",
+    "judgement": {
+      "gear": [
+        [
+          "Diseased claws and teeth"
+        ]
+      ],
+      "weapons": [
+        "×3 · Diseased claws and teeth"
+      ]
+    },
+    "source": {
+      "models": [
+        "3× Nurgling Swarm"
+      ],
+      "leads": null
+    },
+    "key": "3c8515334f4840e1"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "rule-ph",
+    "where": "Infernal Lance rule · Malefic Surge",
+    "judgement": {
+      "ph": [
+        "command"
+      ]
+    },
+    "source": {
+      "rule": "Malefic Surge",
+      "text": "In your Command phase, one or more **CHAOS KNIGHTS** units from your army can make a Malefic Surge. Each one that does must first take a **Leadership test**; if that test is failed, that unit suffers D3 **mortal wounds**. Then, until the start of your next Command phase, that unit is Empowered. While a unit is Empowered it can use one of the Malefic Surge abilities below. Once that unit has used a Malefic Surge ability, it is no longer Empowered.\n- **Unholy Hunger:** When a model in this unit makes a **Normal**, **Advance** or **Fall Back move**, until the end of the phase, add 3\" to its Move characteristic.\n- **Diabolic Power:** When this unit is selected to shoot or fight, select either the **[LETHAL HITS]** or **[SUSTAINED HITS 1]** ability. Until the end of the phase, weapons equipped by models in this unit have the selected ability.\n- **Unnatural Fortitude:** When this unit is selected as the target of an attack, select one of the following to apply until the end of the phase:\n- Models in this unit have a 5+ invulnerable save.\n- Models in this unit have the **Feel No Pain 6+** ability.\n*Designer’s Note: We recommend placing a token next to Chaos Knights models that are Empowered, removing it once they have used a Malefic Surge ability, and removing all unused tokens at the start of your Command phase.*"
+    },
+    "key": "9aa383b8e2ace091"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "rule-turn",
+    "where": "Infernal Lance rule · Malefic Surge",
+    "judgement": {
+      "turn": "your"
+    },
+    "source": {
+      "rule": "Malefic Surge",
+      "text": "In your Command phase, one or more **CHAOS KNIGHTS** units from your army can make a Malefic Surge. Each one that does must first take a **Leadership test**; if that test is failed, that unit suffers D3 **mortal wounds**. Then, until the start of your next Command phase, that unit is Empowered. While a unit is Empowered it can use one of the Malefic Surge abilities below. Once that unit has used a Malefic Surge ability, it is no longer Empowered.\n- **Unholy Hunger:** When a model in this unit makes a **Normal**, **Advance** or **Fall Back move**, until the end of the phase, add 3\" to its Move characteristic.\n- **Diabolic Power:** When this unit is selected to shoot or fight, select either the **[LETHAL HITS]** or **[SUSTAINED HITS 1]** ability. Until the end of the phase, weapons equipped by models in this unit have the selected ability.\n- **Unnatural Fortitude:** When this unit is selected as the target of an attack, select one of the following to apply until the end of the phase:\n- Models in this unit have a 5+ invulnerable save.\n- Models in this unit have the **Feel No Pain 6+** ability.\n*Designer’s Note: We recommend placing a token next to Chaos Knights models that are Empowered, removing it once they have used a Malefic Surge ability, and removing all unused tokens at the start of your Command phase.*"
+    },
+    "key": "704b57e7a5bd40ac"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "rule-needs",
+    "where": "Infernal Lance rule · Malefic Surge",
+    "judgement": {
+      "needs": {
+        "all": [
+          "Faction: Chaos Knights"
+        ]
+      }
+    },
+    "source": {
+      "rule": "Malefic Surge",
+      "text": "In your Command phase, one or more **CHAOS KNIGHTS** units from your army can make a Malefic Surge. Each one that does must first take a **Leadership test**; if that test is failed, that unit suffers D3 **mortal wounds**. Then, until the start of your next Command phase, that unit is Empowered. While a unit is Empowered it can use one of the Malefic Surge abilities below. Once that unit has used a Malefic Surge ability, it is no longer Empowered.\n- **Unholy Hunger:** When a model in this unit makes a **Normal**, **Advance** or **Fall Back move**, until the end of the phase, add 3\" to its Move characteristic.\n- **Diabolic Power:** When this unit is selected to shoot or fight, select either the **[LETHAL HITS]** or **[SUSTAINED HITS 1]** ability. Until the end of the phase, weapons equipped by models in this unit have the selected ability.\n- **Unnatural Fortitude:** When this unit is selected as the target of an attack, select one of the following to apply until the end of the phase:\n- Models in this unit have a 5+ invulnerable save.\n- Models in this unit have the **Feel No Pain 6+** ability.\n*Designer’s Note: We recommend placing a token next to Chaos Knights models that are Empowered, removing it once they have used a Malefic Surge ability, and removing all unused tokens at the start of your Command phase.*"
+    },
+    "key": "5cbc8b53a5984e9c"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "rule-def",
+    "where": "Infernal Lance rule · Malefic Surge",
+    "judgement": {
+      "def": "Empowered, using Unnatural Fortitude: a 5+ invulnerable save or Feel No Pain 6+ (until the end of the phase)"
+    },
+    "source": {
+      "rule": "Malefic Surge",
+      "text": "In your Command phase, one or more **CHAOS KNIGHTS** units from your army can make a Malefic Surge. Each one that does must first take a **Leadership test**; if that test is failed, that unit suffers D3 **mortal wounds**. Then, until the start of your next Command phase, that unit is Empowered. While a unit is Empowered it can use one of the Malefic Surge abilities below. Once that unit has used a Malefic Surge ability, it is no longer Empowered.\n- **Unholy Hunger:** When a model in this unit makes a **Normal**, **Advance** or **Fall Back move**, until the end of the phase, add 3\" to its Move characteristic.\n- **Diabolic Power:** When this unit is selected to shoot or fight, select either the **[LETHAL HITS]** or **[SUSTAINED HITS 1]** ability. Until the end of the phase, weapons equipped by models in this unit have the selected ability.\n- **Unnatural Fortitude:** When this unit is selected as the target of an attack, select one of the following to apply until the end of the phase:\n- Models in this unit have a 5+ invulnerable save.\n- Models in this unit have the **Feel No Pain 6+** ability.\n*Designer’s Note: We recommend placing a token next to Chaos Knights models that are Empowered, removing it once they have used a Malefic Surge ability, and removing all unused tokens at the start of your Command phase.*"
+    },
+    "key": "1d93ea7c9ab1526a"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "rule-mod",
+    "where": "Infernal Lance rule · Malefic Surge",
+    "judgement": {
+      "mod": {
+        "kind": "all",
+        "when": "Empowered, using Diabolic Power (when selected to shoot or fight)",
+        "note": "[LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase)",
+        "pick": [
+          {
+            "name": "Lethal Hits",
+            "note": "[LETHAL HITS]"
+          },
+          {
+            "name": "Sustained Hits 1",
+            "note": "[SUSTAINED HITS 1]"
+          }
+        ]
+      }
+    },
+    "source": {
+      "rule": "Malefic Surge",
+      "text": "In your Command phase, one or more **CHAOS KNIGHTS** units from your army can make a Malefic Surge. Each one that does must first take a **Leadership test**; if that test is failed, that unit suffers D3 **mortal wounds**. Then, until the start of your next Command phase, that unit is Empowered. While a unit is Empowered it can use one of the Malefic Surge abilities below. Once that unit has used a Malefic Surge ability, it is no longer Empowered.\n- **Unholy Hunger:** When a model in this unit makes a **Normal**, **Advance** or **Fall Back move**, until the end of the phase, add 3\" to its Move characteristic.\n- **Diabolic Power:** When this unit is selected to shoot or fight, select either the **[LETHAL HITS]** or **[SUSTAINED HITS 1]** ability. Until the end of the phase, weapons equipped by models in this unit have the selected ability.\n- **Unnatural Fortitude:** When this unit is selected as the target of an attack, select one of the following to apply until the end of the phase:\n- Models in this unit have a 5+ invulnerable save.\n- Models in this unit have the **Feel No Pain 6+** ability.\n*Designer’s Note: We recommend placing a token next to Chaos Knights models that are Empowered, removing it once they have used a Malefic Surge ability, and removing all unused tokens at the start of your Command phase.*"
+    },
+    "key": "b0fda1c21fe98354"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "strat-phases",
+    "where": "Infernal Lance · Profane Symbiosis",
+    "judgement": {
+      "phases": [
+        "command",
+        "movement",
+        "shooting",
+        "charge",
+        "fight"
+      ]
+    },
+    "source": {
+      "stratagem": "Profane Symbiosis",
+      "text": "WHEN: End of any phase.\nTARGET: One **CHAOS KNIGHTS** unit from your army that is not Empowered.\nEFFECT: Your unit makes a Malefic Surge.\nRESTRICTIONS: You cannot select the same unit as the target of this Stratagem more than once per battle round."
+    },
+    "key": "079d7230d04aead9"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "strat-turn",
+    "where": "Infernal Lance · Profane Symbiosis",
+    "judgement": {
+      "turn": "either"
+    },
+    "source": {
+      "stratagem": "Profane Symbiosis",
+      "text": "WHEN: End of any phase.\nTARGET: One **CHAOS KNIGHTS** unit from your army that is not Empowered.\nEFFECT: Your unit makes a Malefic Surge.\nRESTRICTIONS: You cannot select the same unit as the target of this Stratagem more than once per battle round."
+    },
+    "key": "1208fa9ebf0cae2d"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "strat-needs",
+    "where": "Infernal Lance · Profane Symbiosis",
+    "judgement": {
+      "needs": {
+        "all": [
+          "Faction: Chaos Knights"
+        ]
+      }
+    },
+    "source": {
+      "stratagem": "Profane Symbiosis",
+      "text": "WHEN: End of any phase.\nTARGET: One **CHAOS KNIGHTS** unit from your army that is not Empowered.\nEFFECT: Your unit makes a Malefic Surge.\nRESTRICTIONS: You cannot select the same unit as the target of this Stratagem more than once per battle round."
+    },
+    "key": "b981807cc906e2a8"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "strat-gist",
+    "where": "Infernal Lance · Profane Symbiosis",
+    "judgement": {
+      "gist": "Your unit that is not Empowered makes a Malefic Surge (not the same unit more than once per battle round)."
+    },
+    "source": {
+      "stratagem": "Profane Symbiosis",
+      "text": "WHEN: End of any phase.\nTARGET: One **CHAOS KNIGHTS** unit from your army that is not Empowered.\nEFFECT: Your unit makes a Malefic Surge.\nRESTRICTIONS: You cannot select the same unit as the target of this Stratagem more than once per battle round."
+    },
+    "key": "974ec59260ce7a91"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "strat-phases",
+    "where": "Infernal Lance · Hellforged Construction",
+    "judgement": {
+      "phases": [
+        "fight"
+      ]
+    },
+    "source": {
+      "stratagem": "Hellforged Construction",
+      "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **CHAOS KNIGHTS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+    },
+    "key": "6300d931facc5642"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "strat-turn",
+    "where": "Infernal Lance · Hellforged Construction",
+    "judgement": {
+      "turn": "either"
+    },
+    "source": {
+      "stratagem": "Hellforged Construction",
+      "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **CHAOS KNIGHTS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+    },
+    "key": "f08cdc20457d51c8"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "strat-needs",
+    "where": "Infernal Lance · Hellforged Construction",
+    "judgement": {
+      "needs": {
+        "all": [
+          "Faction: Chaos Knights"
+        ]
+      }
+    },
+    "source": {
+      "stratagem": "Hellforged Construction",
+      "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **CHAOS KNIGHTS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+    },
+    "key": "e8f2553d484d0aaa"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "strat-def",
+    "where": "Infernal Lance · Hellforged Construction",
+    "judgement": {
+      "def": "Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)"
+    },
+    "source": {
+      "stratagem": "Hellforged Construction",
+      "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **CHAOS KNIGHTS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+    },
+    "key": "1886ad6e55d31ac0"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "strat-gist",
+    "where": "Infernal Lance · Hellforged Construction",
+    "judgement": {
+      "gist": "Just after an enemy unit selects your unit as a target: until that unit has finished making its attacks, worsen the AP of each attack that targets your unit by 1."
+    },
+    "source": {
+      "stratagem": "Hellforged Construction",
+      "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **CHAOS KNIGHTS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+    },
+    "key": "295ca31da0045524"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "strat-phases",
+    "where": "Infernal Lance · Corrupting Taint",
+    "judgement": {
+      "phases": [
+        "command"
+      ]
+    },
+    "source": {
+      "stratagem": "Corrupting Taint",
+      "text": "WHEN: Your Command phase, just after a **CHAOS KNIGHTS CHARACTER** unit from your army makes a Malefic Surge.\nTARGET: That **CHAOS KNIGHTS CHARACTER** unit.\nEFFECT: Select one objective marker your unit is within range of that you control. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
+    },
+    "key": "d1f3c3d5480e4c06"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "strat-turn",
+    "where": "Infernal Lance · Corrupting Taint",
+    "judgement": {
+      "turn": "your"
+    },
+    "source": {
+      "stratagem": "Corrupting Taint",
+      "text": "WHEN: Your Command phase, just after a **CHAOS KNIGHTS CHARACTER** unit from your army makes a Malefic Surge.\nTARGET: That **CHAOS KNIGHTS CHARACTER** unit.\nEFFECT: Select one objective marker your unit is within range of that you control. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
+    },
+    "key": "d268c4fdf0b8daf2"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "strat-needs",
+    "where": "Infernal Lance · Corrupting Taint",
+    "judgement": {
+      "needs": {
+        "all": [
+          "Faction: Chaos Knights",
+          "Character"
+        ]
+      }
+    },
+    "source": {
+      "stratagem": "Corrupting Taint",
+      "text": "WHEN: Your Command phase, just after a **CHAOS KNIGHTS CHARACTER** unit from your army makes a Malefic Surge.\nTARGET: That **CHAOS KNIGHTS CHARACTER** unit.\nEFFECT: Select one objective marker your unit is within range of that you control. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
+    },
+    "key": "be6c1c7a90b29a05"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "strat-gist",
+    "where": "Infernal Lance · Corrupting Taint",
+    "judgement": {
+      "gist": "Select one objective marker you control that your unit is within range of: it stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase."
+    },
+    "source": {
+      "stratagem": "Corrupting Taint",
+      "text": "WHEN: Your Command phase, just after a **CHAOS KNIGHTS CHARACTER** unit from your army makes a Malefic Surge.\nTARGET: That **CHAOS KNIGHTS CHARACTER** unit.\nEFFECT: Select one objective marker your unit is within range of that you control. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
+    },
+    "key": "9b50b5236e5d8a13"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "strat-phases",
+    "where": "Infernal Lance · Unleash Balefire",
+    "judgement": {
+      "phases": [
+        "shooting"
+      ]
+    },
+    "source": {
+      "stratagem": "Unleash Balefire",
+      "text": "WHEN: Your Shooting phase.\nTARGET: One **CHAOS KNIGHTS** unit from your army that has not been selected to shoot this phase.\nEFFECT: After your unit has shot, select one enemy unit hit by one or more of those attacks. That enemy unit must take a **Battle-shock test**; if the test is failed, until the end of your opponent’s next turn, it is aflame. While a unit is aflame, subtract 2\" from its Move characteristic and subtract 2 from **Charge rolls** made for it."
+    },
+    "key": "d593106bad9e458b"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "strat-turn",
+    "where": "Infernal Lance · Unleash Balefire",
+    "judgement": {
+      "turn": "your"
+    },
+    "source": {
+      "stratagem": "Unleash Balefire",
+      "text": "WHEN: Your Shooting phase.\nTARGET: One **CHAOS KNIGHTS** unit from your army that has not been selected to shoot this phase.\nEFFECT: After your unit has shot, select one enemy unit hit by one or more of those attacks. That enemy unit must take a **Battle-shock test**; if the test is failed, until the end of your opponent’s next turn, it is aflame. While a unit is aflame, subtract 2\" from its Move characteristic and subtract 2 from **Charge rolls** made for it."
+    },
+    "key": "f64b2a514f47fe32"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "strat-needs",
+    "where": "Infernal Lance · Unleash Balefire",
+    "judgement": {
+      "needs": {
+        "all": [
+          "Faction: Chaos Knights"
+        ]
+      }
+    },
+    "source": {
+      "stratagem": "Unleash Balefire",
+      "text": "WHEN: Your Shooting phase.\nTARGET: One **CHAOS KNIGHTS** unit from your army that has not been selected to shoot this phase.\nEFFECT: After your unit has shot, select one enemy unit hit by one or more of those attacks. That enemy unit must take a **Battle-shock test**; if the test is failed, until the end of your opponent’s next turn, it is aflame. While a unit is aflame, subtract 2\" from its Move characteristic and subtract 2 from **Charge rolls** made for it."
+    },
+    "key": "4b4e346fba823427"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "strat-gist",
+    "where": "Infernal Lance · Unleash Balefire",
+    "judgement": {
+      "gist": "After your unit has shot: one enemy unit it hit takes a Battle-shock test; if failed, it is aflame until the end of your opponent’s next turn (-2\" Move, -2 to Charge rolls)."
+    },
+    "source": {
+      "stratagem": "Unleash Balefire",
+      "text": "WHEN: Your Shooting phase.\nTARGET: One **CHAOS KNIGHTS** unit from your army that has not been selected to shoot this phase.\nEFFECT: After your unit has shot, select one enemy unit hit by one or more of those attacks. That enemy unit must take a **Battle-shock test**; if the test is failed, until the end of your opponent’s next turn, it is aflame. While a unit is aflame, subtract 2\" from its Move characteristic and subtract 2 from **Charge rolls** made for it."
+    },
+    "key": "ceb4c9f1ce3e56a7"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "strat-phases",
+    "where": "Infernal Lance · Warp Vision",
+    "judgement": {
+      "phases": [
+        "shooting"
+      ]
+    },
+    "source": {
+      "stratagem": "Warp Vision",
+      "text": "WHEN: Your Shooting phase.\nTARGET: One **CHAOS KNIGHTS** unit from your army that has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, ranged weapons equipped by models in your unit have the **[IGNORES COVER]** ability."
+    },
+    "key": "fce594ee62eae82d"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "strat-turn",
+    "where": "Infernal Lance · Warp Vision",
+    "judgement": {
+      "turn": "your"
+    },
+    "source": {
+      "stratagem": "Warp Vision",
+      "text": "WHEN: Your Shooting phase.\nTARGET: One **CHAOS KNIGHTS** unit from your army that has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, ranged weapons equipped by models in your unit have the **[IGNORES COVER]** ability."
+    },
+    "key": "29f4f242c9d16271"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "strat-needs",
+    "where": "Infernal Lance · Warp Vision",
+    "judgement": {
+      "needs": {
+        "all": [
+          "Faction: Chaos Knights"
+        ]
+      }
+    },
+    "source": {
+      "stratagem": "Warp Vision",
+      "text": "WHEN: Your Shooting phase.\nTARGET: One **CHAOS KNIGHTS** unit from your army that has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, ranged weapons equipped by models in your unit have the **[IGNORES COVER]** ability."
+    },
+    "key": "38ccb23472a5e13c"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "strat-mod",
+    "where": "Infernal Lance · Warp Vision",
+    "judgement": {
+      "mod": {
+        "kind": "ranged",
+        "when": "Your Shooting phase",
+        "note": "ranged weapons have [IGNORES COVER]"
+      }
+    },
+    "source": {
+      "stratagem": "Warp Vision",
+      "text": "WHEN: Your Shooting phase.\nTARGET: One **CHAOS KNIGHTS** unit from your army that has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, ranged weapons equipped by models in your unit have the **[IGNORES COVER]** ability."
+    },
+    "key": "c68671f1081db81d"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "strat-gist",
+    "where": "Infernal Lance · Warp Vision",
+    "judgement": {
+      "gist": "Until the end of the phase, your unit’s ranged weapons have [IGNORES COVER]."
+    },
+    "source": {
+      "stratagem": "Warp Vision",
+      "text": "WHEN: Your Shooting phase.\nTARGET: One **CHAOS KNIGHTS** unit from your army that has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, ranged weapons equipped by models in your unit have the **[IGNORES COVER]** ability."
+    },
+    "key": "dc9be766871d381b"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "strat-phases",
+    "where": "Infernal Lance · Diabolic Bulwark",
+    "judgement": {
+      "phases": [
+        "shooting"
+      ]
+    },
+    "source": {
+      "stratagem": "Diabolic Bulwark",
+      "text": "WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets.\nTARGET: One **CHAOS KNIGHTS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, models in your unit have a 4+ invulnerable save."
+    },
+    "key": "b7ec56bb88fd2790"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "strat-turn",
+    "where": "Infernal Lance · Diabolic Bulwark",
+    "judgement": {
+      "turn": "opp"
+    },
+    "source": {
+      "stratagem": "Diabolic Bulwark",
+      "text": "WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets.\nTARGET: One **CHAOS KNIGHTS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, models in your unit have a 4+ invulnerable save."
+    },
+    "key": "792d48057701cf3f"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "strat-needs",
+    "where": "Infernal Lance · Diabolic Bulwark",
+    "judgement": {
+      "needs": {
+        "all": [
+          "Faction: Chaos Knights"
+        ]
+      }
+    },
+    "source": {
+      "stratagem": "Diabolic Bulwark",
+      "text": "WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets.\nTARGET: One **CHAOS KNIGHTS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, models in your unit have a 4+ invulnerable save."
+    },
+    "key": "41d50dd5d0833a52"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "strat-def",
+    "where": "Infernal Lance · Diabolic Bulwark",
+    "judgement": {
+      "def": "their Shooting phase: 4+ invulnerable save (until the end of the phase)"
+    },
+    "source": {
+      "stratagem": "Diabolic Bulwark",
+      "text": "WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets.\nTARGET: One **CHAOS KNIGHTS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, models in your unit have a 4+ invulnerable save."
+    },
+    "key": "0333c0bb038ffe4d"
+  },
+  {
+    "army": "infernal-lance",
+    "kind": "strat-gist",
+    "where": "Infernal Lance · Diabolic Bulwark",
+    "judgement": {
+      "gist": "Just after an enemy unit selects your unit as a target: until the end of the phase, your unit’s models have a 4+ invulnerable save."
+    },
+    "source": {
+      "stratagem": "Diabolic Bulwark",
+      "text": "WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets.\nTARGET: One **CHAOS KNIGHTS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, models in your unit have a 4+ invulnerable save."
+    },
+    "key": "a25cf56c859a00e3"
+  }
+]
