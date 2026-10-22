@@ -1,0 +1,1314 @@
+[
+  {
+    "army": "defilers-and-friends",
+    "kind": "ability-timing",
+    "where": "defilers-and-friends · Lucius the Eternal · Duellist’s Hubris",
+    "judgement": {
+      "ph": [
+        "fight"
+      ],
+      "turn": "either"
+    },
+    "source": {
+      "ability": "Duellist’s Hubris",
+      "text": "At the start of the Fight phase, if this model is not leading a unit, until the end of the phase, it has the Fights First ability."
+    },
+    "key": "59226a4946203f43"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "ability-who",
+    "where": "defilers-and-friends · Lucius the Eternal · Duellist’s Hubris",
+    "judgement": {
+      "who": "Lucius the Eternal",
+      "models": [
+        "1× Lucius the Eternal",
+        "3× Flawless Blade"
+      ]
+    },
+    "source": {
+      "ability": "Duellist’s Hubris",
+      "text": "At the start of the Fight phase, if this model is not leading a unit, until the end of the phase, it has the Fights First ability."
+    },
+    "key": "4c634939000c699c"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "ability-who",
+    "where": "defilers-and-friends · Lucius the Eternal · A Challenge Worthy of Skill",
+    "judgement": {
+      "who": "Lucius the Eternal",
+      "models": [
+        "1× Lucius the Eternal",
+        "3× Flawless Blade"
+      ]
+    },
+    "source": {
+      "ability": "A Challenge Worthy of Skill",
+      "text": "Each time this model makes an attack that targets a **CHARACTER**, **MONSTER** or **WALKER** unit, you can re-roll the **Hit roll** and re-roll the **Wound roll**."
+    },
+    "key": "64a8871fca1a85af"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "ability-timing",
+    "where": "defilers-and-friends · Lucius the Eternal · Daemonic Patrons",
+    "judgement": {
+      "ph": [
+        "fight"
+      ],
+      "turn": "either"
+    },
+    "source": {
+      "ability": "Daemonic Patrons",
+      "text": "Each time this unit is selected to fight, it can call upon daemonic patrons. If it does, until the end of the phase, each time a model in this unit makes an attack. an unmodified **Wound roll** of 3+ scores a Critical Wound. At the end of the Fight phase, if this unit called upon daemonic patrons this phase and no enemy models were destroyed by attacks made by models in this unit this phase, one model in this unit is destroyed."
+    },
+    "key": "4472ae2c5333a268"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "ability-who",
+    "where": "defilers-and-friends · Lucius the Eternal · Daemonic Patrons",
+    "judgement": {
+      "who": "Flawless Blades",
+      "models": [
+        "1× Lucius the Eternal",
+        "3× Flawless Blade"
+      ]
+    },
+    "source": {
+      "ability": "Daemonic Patrons",
+      "text": "Each time this unit is selected to fight, it can call upon daemonic patrons. If it does, until the end of the phase, each time a model in this unit makes an attack. an unmodified **Wound roll** of 3+ scores a Critical Wound. At the end of the Fight phase, if this unit called upon daemonic patrons this phase and no enemy models were destroyed by attacks made by models in this unit this phase, one model in this unit is destroyed."
+    },
+    "key": "70f45b89381ae53c"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "unit-footnote",
+    "where": "defilers-and-friends · Lucius the Eternal",
+    "judgement": {
+      "kind": "all",
+      "when": "vs CHARACTER, MONSTER or WALKER units",
+      "note": "re-roll the hit roll and the wound roll",
+      "from": "A Challenge Worthy of Skill",
+      "always": true,
+      "vs": {
+        "any": [
+          "Character",
+          "Monster",
+          "Walker"
+        ]
+      }
+    },
+    "source": {
+      "ability": "A Challenge Worthy of Skill",
+      "text": "Each time this model makes an attack that targets a **CHARACTER**, **MONSTER** or **WALKER** unit, you can re-roll the **Hit roll** and re-roll the **Wound roll**."
+    },
+    "key": "4a9cfd28162134d2"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "unit-footnote",
+    "where": "defilers-and-friends · Lucius the Eternal",
+    "judgement": {
+      "kind": "melee",
+      "when": "Called upon daemonic patrons when selected to fight (until the end of the phase)",
+      "note": "a Critical Wound on an unmodified wound roll of 3+",
+      "from": "Daemonic Patrons",
+      "calc": {
+        "critWound": 3
+      }
+    },
+    "source": {
+      "ability": "Daemonic Patrons",
+      "text": "Each time this unit is selected to fight, it can call upon daemonic patrons. If it does, until the end of the phase, each time a model in this unit makes an attack. an unmodified **Wound roll** of 3+ scores a Critical Wound. At the end of the Fight phase, if this unit called upon daemonic patrons this phase and no enemy models were destroyed by attacks made by models in this unit this phase, one model in this unit is destroyed."
+    },
+    "key": "287248e16c0c7039"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "unit-footnote",
+    "where": "defilers-and-friends · Maulerfiend",
+    "judgement": {
+      "kind": "melee",
+      "when": "5+ Pact points gained during the battle",
+      "note": "[LETHAL HITS] and [SUSTAINED HITS 1]",
+      "from": "Pledges to the Dark Prince",
+      "rule": "Pledges to the Dark Prince"
+    },
+    "source": {
+      "rule": "Pledges to the Dark Prince",
+      "text": "At the start of the battle round, if your **WARLORD** is on the battlefield, you must pledge a number to Slaanesh representing how many enemy units will be destroyed this battle round. At the end of the battle round, if the number of enemy units destroyed this battle round is greater than or equal to your pledge, you gain a number of Pact points equal to your pledge. Otherwise, you do not gain any Pact points this battle round and your **WARLORD** model suffers D3 **mortal wounds**.\n**EMPEROR’S CHILDREN** units from your army gain a bonus depending on how many Pact points you have gained during the battle, as shown below (these are all cumulative)."
+    },
+    "key": "044569ab567613e5"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "unit-kwNote",
+    "where": "defilers-and-friends · Lucius the Eternal",
+    "judgement": {
+      "kwNote": "Flawless Blades, Grenades come from the led Flawless Blades."
+    },
+    "source": {
+      "models": [
+        "1× Lucius the Eternal",
+        "3× Flawless Blade"
+      ],
+      "stats": [
+        "Lucius the Eternal W6 OC1",
+        "Flawless Blades W3 OC1"
+      ],
+      "weapons": [
+        "Bolt pistol 1 -1 1 PISTOL",
+        "Blade of the Laer 6 -3 3 PRECISION",
+        "Lash of Torment 10 -1 1 SUSTAINED HITS 1",
+        "Blissblade 4 -3 2"
+      ]
+    },
+    "key": "e13f23b385f429e0"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "unit-ptsNote",
+    "where": "defilers-and-friends · Lucius the Eternal",
+    "judgement": {
+      "ptsNote": "130 + Flawless Blades 95"
+    },
+    "source": {
+      "models": [
+        "1× Lucius the Eternal",
+        "3× Flawless Blade"
+      ],
+      "stats": [
+        "Lucius the Eternal W6 OC1",
+        "Flawless Blades W3 OC1"
+      ],
+      "weapons": [
+        "Bolt pistol 1 -1 1 PISTOL",
+        "Blade of the Laer 6 -3 3 PRECISION",
+        "Lash of Torment 10 -1 1 SUSTAINED HITS 1",
+        "Blissblade 4 -3 2"
+      ]
+    },
+    "key": "7f89ed81a07c3ab7"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "unit-weapons",
+    "where": "defilers-and-friends · Lucius the Eternal",
+    "judgement": {
+      "gear": [
+        [
+          "Blade of the Laer",
+          "Lash of Torment"
+        ],
+        [
+          "Blissblade",
+          "Bolt pistol"
+        ]
+      ],
+      "weapons": [
+        "Flawless Blades · ×3 · Bolt pistol",
+        "Lucius the Eternal · Blade of the Laer",
+        "Lucius the Eternal · Lash of Torment",
+        "Flawless Blades · ×3 · Blissblade"
+      ]
+    },
+    "source": {
+      "models": [
+        "1× Lucius the Eternal",
+        "3× Flawless Blade"
+      ],
+      "leads": "Flawless Blades"
+    },
+    "key": "baee5fef4d4573fe"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "ability-timing",
+    "where": "defilers-and-friends · Daemon Prince of Slaanesh with Wings · Daemonic Destruction",
+    "judgement": {
+      "ph": [
+        "charge"
+      ],
+      "turn": "either"
+    },
+    "source": {
+      "ability": "Daemonic Destruction",
+      "text": "Each time this model ends a Charge move, select one enemy unit within Engagement Range of this model and roll one D6 for each of this model’s remaining wounds: for each 4+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds)."
+    },
+    "key": "d281e7a72b7360c8"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "ability-def",
+    "where": "defilers-and-friends · Daemon Prince of Slaanesh with Wings · Stimulated by Pain",
+    "judgement": {
+      "def": "-1 D to each attack allocated to this model"
+    },
+    "source": {
+      "ability": "Stimulated by Pain",
+      "text": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack."
+    },
+    "key": "d90330dd38f212ae"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "unit-weapons",
+    "where": "defilers-and-friends · Daemon Prince of Slaanesh with Wings",
+    "judgement": {
+      "gear": [
+        [
+          "Hellforged weapons",
+          "Infernal cannon"
+        ]
+      ],
+      "weapons": [
+        "Infernal cannon",
+        "Hellforged weapons · strike",
+        "Hellforged weapons · sweep"
+      ]
+    },
+    "source": {
+      "models": [
+        "1× Daemon Prince of Slaanesh with Wings"
+      ],
+      "leads": null
+    },
+    "key": "354ce16c190984b5"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "ability-who",
+    "where": "defilers-and-friends · Lord Exultant · Perfectionists",
+    "judgement": {
+      "who": "Lord Exultant",
+      "models": [
+        "1× Lord Exultant",
+        "1× Obsessionist",
+        "3× Infractor",
+        "1× Infractor (Icon of Excess)"
+      ]
+    },
+    "source": {
+      "ability": "Perfectionists",
+      "text": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability."
+    },
+    "key": "f0a0d8420e96a8fe"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "ability-timing",
+    "where": "defilers-and-friends · Lord Exultant · Euphoric Strikes",
+    "judgement": {
+      "ph": [
+        "fight"
+      ],
+      "turn": "either"
+    },
+    "source": {
+      "ability": "Euphoric Strikes",
+      "text": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does so, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and improve the Armour Penetration characteristic of those weapons by 1."
+    },
+    "key": "9f6996ae7cebfecf"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "ability-who",
+    "where": "defilers-and-friends · Lord Exultant · Euphoric Strikes",
+    "judgement": {
+      "who": "Lord Exultant",
+      "models": [
+        "1× Lord Exultant",
+        "1× Obsessionist",
+        "3× Infractor",
+        "1× Infractor (Icon of Excess)"
+      ]
+    },
+    "source": {
+      "ability": "Euphoric Strikes",
+      "text": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does so, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and improve the Armour Penetration characteristic of those weapons by 1."
+    },
+    "key": "4adf6535f92934e6"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "ability-who",
+    "where": "defilers-and-friends · Lord Exultant · Lord of the Host",
+    "judgement": {
+      "who": "Lord Exultant",
+      "models": [
+        "1× Lord Exultant",
+        "1× Obsessionist",
+        "3× Infractor",
+        "1× Infractor (Icon of Excess)"
+      ]
+    },
+    "source": {
+      "ability": "Lord of the Host",
+      "text": "If this model is attached to an Emperor’s Children Battleline unit during the Declare Battle Formations step, this model has the Infiltrators and Scouts 6\" ability."
+    },
+    "key": "54e9dac071b49459"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "ability-who",
+    "where": "defilers-and-friends · Lord Exultant · Excessive Assault",
+    "judgement": {
+      "who": "Infractors",
+      "models": [
+        "1× Lord Exultant",
+        "1× Obsessionist",
+        "3× Infractor",
+        "1× Infractor (Icon of Excess)"
+      ]
+    },
+    "source": {
+      "ability": "Excessive Assault",
+      "text": "Each time a model in this unit targets an enemy unit with a melee attack, re-roll a Wound roll of 1. If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead."
+    },
+    "key": "d3d39dd9727e4789"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "ability-timing",
+    "where": "defilers-and-friends · Tormentors · Icon of Excess",
+    "judgement": {
+      "ph": [
+        "shooting",
+        "fight"
+      ],
+      "turn": "either",
+      "turns": {
+        "shooting": "your"
+      }
+    },
+    "source": {
+      "ability": "Icon of Excess",
+      "text": "At the end of your Shooting phase or the Fight phase, if the bearer’s unit destroyed one or more enemy units this phase, the bearer’s unit takes a Leadership test. If that test is passed, you gain 1CP."
+    },
+    "key": "eaf9202f06d64553"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "ability-who",
+    "where": "defilers-and-friends · Lord Exultant · Icon of Excess",
+    "judgement": {
+      "who": "Infractors",
+      "models": [
+        "1× Lord Exultant",
+        "1× Obsessionist",
+        "3× Infractor",
+        "1× Infractor (Icon of Excess)"
+      ]
+    },
+    "source": {
+      "ability": "Icon of Excess",
+      "text": "At the end of your Shooting phase or the Fight phase, if the bearer’s unit destroyed one or more enemy units this phase, the bearer’s unit takes a Leadership test. If that test is passed, you gain 1CP."
+    },
+    "key": "3daa93b3114d88b4"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "unit-footnote",
+    "where": "defilers-and-friends · Lord Exultant",
+    "judgement": {
+      "kind": "melee",
+      "when": "Euphoric Strikes used at the start of the Fight phase (once per battle)",
+      "note": "+3 A and +1 AP",
+      "from": "Euphoric Strikes"
+    },
+    "source": {
+      "ability": "Euphoric Strikes",
+      "text": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does so, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and improve the Armour Penetration characteristic of those weapons by 1."
+    },
+    "key": "41c29a26d7eb7c55"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "unit-footnote",
+    "where": "defilers-and-friends · Lord Exultant",
+    "judgement": {
+      "kind": "melee",
+      "when": "Every melee attack",
+      "note": "re-roll wound rolls of 1",
+      "from": "Excessive Assault",
+      "always": true
+    },
+    "source": {
+      "ability": "Excessive Assault",
+      "text": "Each time a model in this unit targets an enemy unit with a melee attack, re-roll a Wound roll of 1. If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead."
+    },
+    "key": "4eed01873f14993c"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "unit-footnote",
+    "where": "defilers-and-friends · Lord Exultant",
+    "judgement": {
+      "kind": "melee",
+      "when": "Target within range of an objective marker",
+      "cond": "targetObjective",
+      "note": "re-roll the wound roll",
+      "from": "Excessive Assault"
+    },
+    "source": {
+      "ability": "Excessive Assault",
+      "text": "Each time a model in this unit targets an enemy unit with a melee attack, re-roll a Wound roll of 1. If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead."
+    },
+    "key": "29b66635800b3415"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "unit-kwNote",
+    "where": "defilers-and-friends · Lord Exultant",
+    "judgement": {
+      "kwNote": "Battleline, Infractors come from the led Infractors."
+    },
+    "source": {
+      "models": [
+        "1× Lord Exultant",
+        "1× Obsessionist",
+        "3× Infractor",
+        "1× Infractor (Icon of Excess)"
+      ],
+      "stats": [
+        "Lord Exultant W5 OC1",
+        "Infractors W2 OC2"
+      ],
+      "weapons": [
+        "Bolt pistol 1 -1 1 PISTOL, LETHAL HITS",
+        "Plasma pistol standard 1 -2 1 PISTOL, LETHAL HITS",
+        "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL, LETHAL HITS",
+        "Bolt pistol 1 -1 1 PISTOL, LETHAL HITS",
+        "Close combat weapon 6 0 1 LETHAL HITS",
+        "Phoenix power spear 5 -2 2 LANCE, LETHAL HITS",
+        "Rapture lash 4 -1 1 EXTRA ATTACKS, LETHAL HITS",
+        "Power sword 4 -2 1 PRECISION, LETHAL HITS",
+        "Duelling sabre 4 -1 1 PRECISION, LETHAL HITS"
+      ]
+    },
+    "key": "fee2b409459eee86"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "unit-ptsNote",
+    "where": "defilers-and-friends · Lord Exultant",
+    "judgement": {
+      "ptsNote": "95 + Infractors 95"
+    },
+    "source": {
+      "models": [
+        "1× Lord Exultant",
+        "1× Obsessionist",
+        "3× Infractor",
+        "1× Infractor (Icon of Excess)"
+      ],
+      "stats": [
+        "Lord Exultant W5 OC1",
+        "Infractors W2 OC2"
+      ],
+      "weapons": [
+        "Bolt pistol 1 -1 1 PISTOL, LETHAL HITS",
+        "Plasma pistol standard 1 -2 1 PISTOL, LETHAL HITS",
+        "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL, LETHAL HITS",
+        "Bolt pistol 1 -1 1 PISTOL, LETHAL HITS",
+        "Close combat weapon 6 0 1 LETHAL HITS",
+        "Phoenix power spear 5 -2 2 LANCE, LETHAL HITS",
+        "Rapture lash 4 -1 1 EXTRA ATTACKS, LETHAL HITS",
+        "Power sword 4 -2 1 PRECISION, LETHAL HITS",
+        "Duelling sabre 4 -1 1 PRECISION, LETHAL HITS"
+      ]
+    },
+    "key": "773b138935941351"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "unit-weapons",
+    "where": "defilers-and-friends · Lord Exultant",
+    "judgement": {
+      "gear": [
+        [
+          "Bolt pistol",
+          "Close combat weapon",
+          "Phoenix power spear",
+          "Rapture lash"
+        ],
+        [
+          "Power sword",
+          "Plasma pistol"
+        ],
+        [
+          "Bolt pistol",
+          "Duelling sabre"
+        ],
+        [
+          "Bolt pistol",
+          "Duelling sabre"
+        ]
+      ],
+      "weapons": [
+        "Lord Exultant · Bolt pistol",
+        "Infractors · Plasma pistol · standard",
+        "Infractors · Plasma pistol · supercharge",
+        "Infractors · ×4 · Bolt pistol",
+        "Lord Exultant · Close combat weapon",
+        "Lord Exultant · Phoenix power spear",
+        "Lord Exultant · Rapture lash",
+        "Infractors · Power sword",
+        "Infractors · ×4 · Duelling sabre"
+      ]
+    },
+    "source": {
+      "models": [
+        "1× Lord Exultant",
+        "1× Obsessionist",
+        "3× Infractor",
+        "1× Infractor (Icon of Excess)"
+      ],
+      "leads": "Infractors"
+    },
+    "key": "79be6437c1fd2ce8"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "ability-timing",
+    "where": "defilers-and-friends · Tormentors · Objective Defiled",
+    "judgement": {
+      "ph": [
+        "command"
+      ],
+      "turn": "your"
+    },
+    "source": {
+      "ability": "Objective Defiled",
+      "text": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
+    },
+    "key": "019519d5608843a1"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "unit-weapons",
+    "where": "defilers-and-friends · Tormentors",
+    "judgement": {
+      "gear": [
+        [
+          "Plasma pistol",
+          "Power sword"
+        ],
+        [
+          "Boltgun",
+          "Close combat weapon"
+        ],
+        [
+          "Close combat weapon",
+          "Meltagun"
+        ]
+      ],
+      "unplaced": [
+        "Icon of Excess"
+      ],
+      "weapons": [
+        "Plasma pistol · standard",
+        "Plasma pistol · supercharge",
+        "×3 · Boltgun",
+        "Meltagun",
+        "Power sword",
+        "×4 · Close combat weapon"
+      ]
+    },
+    "source": {
+      "models": [
+        "1× Obsessionist",
+        "3× Tormentor",
+        "1× Tormentor w/ meltagun"
+      ],
+      "leads": null
+    },
+    "key": "3d36ae183a8142f7"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "ability-who",
+    "where": "defilers-and-friends · Chaos Rhino · Chaos Rhino",
+    "judgement": {
+      "who": "Transport",
+      "models": [
+        "1× Chaos Rhino"
+      ]
+    },
+    "source": {
+      "ability": "Chaos Rhino",
+      "text": "This model has a transport capacity of 12 Emperor’s Children Infantrymodels (excluding Terminator and Flawless Blade models)."
+    },
+    "key": "f0f26a2b83c9714d"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "unit-weapons",
+    "where": "defilers-and-friends · Chaos Rhino",
+    "judgement": {
+      "gear": [
+        [
+          "Armoured tracks",
+          "Combi-bolter",
+          "Combi-bolter",
+          "Havoc launcher"
+        ]
+      ],
+      "weapons": [
+        "×2 · Combi-bolter",
+        "Havoc launcher",
+        "Armoured tracks"
+      ]
+    },
+    "source": {
+      "models": [
+        "1× Chaos Rhino"
+      ],
+      "leads": null
+    },
+    "key": "0489b9cfa23288ca"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "unit-footnote",
+    "where": "defilers-and-friends · Defiler",
+    "judgement": {
+      "kind": "all",
+      "when": "Target not Below Half-strength",
+      "note": "+1 to hit rolls",
+      "from": "Revel in Desecration"
+    },
+    "source": {
+      "ability": "Revel in Desecration",
+      "text": "Each time this model makes an attack that targets an enemy unit that is not below Half-strength, add 1 to the Hit roll."
+    },
+    "key": "a7234b5c6f3b906b"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "unit-footnote",
+    "where": "defilers-and-friends · Maulerfiend",
+    "judgement": {
+      "kind": "all",
+      "when": "Lost any wounds (below Starting Strength)",
+      "note": "+1 to hit rolls; also +1 to wound rolls if Below Half-strength",
+      "from": "Glutton for Punishment",
+      "pick": [
+        {
+          "name": "Below Starting Strength",
+          "note": "+1 to hit rolls"
+        },
+        {
+          "name": "Below Half-strength",
+          "note": "+1 to hit rolls, +1 to wound rolls"
+        }
+      ]
+    },
+    "source": {
+      "ability": "Glutton for Punishment",
+      "text": "Each time this model makes an attack, if it is below its Starting Strength, add 1 to the **Hit roll**. If this model is also **Below Half-strength**, add 1 to the **Wound roll** as well."
+    },
+    "key": "ab6b3384ccb074cc"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "unit-weapons",
+    "where": "defilers-and-friends · Maulerfiend",
+    "judgement": {
+      "gear": [
+        [
+          "Maulerfiend fists",
+          "Magma cutter",
+          "Magma cutter"
+        ]
+      ],
+      "weapons": [
+        "×2 · Magma cutter",
+        "Maulerfiend fists"
+      ]
+    },
+    "source": {
+      "models": [
+        "1× Maulerfiend"
+      ],
+      "leads": null
+    },
+    "key": "d598a8b66d47d2a8"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "rule-ph",
+    "where": "emperors-children army rule · Thrill Seekers",
+    "judgement": {
+      "ph": [
+        "shooting",
+        "charge"
+      ]
+    },
+    "source": {
+      "rule": "Thrill Seekers",
+      "text": "If your Army Faction is **EMPEROR’S CHILDREN**, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:\n- It cannot target a unit it was within **Engagement Range** of at the start of the turn.\n- It cannot target a unit that was the target of another units charge or attack this phase."
+    },
+    "key": "b3b936feb2489485"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "rule-turn",
+    "where": "emperors-children army rule · Thrill Seekers",
+    "judgement": {
+      "turn": "your"
+    },
+    "source": {
+      "rule": "Thrill Seekers",
+      "text": "If your Army Faction is **EMPEROR’S CHILDREN**, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:\n- It cannot target a unit it was within **Engagement Range** of at the start of the turn.\n- It cannot target a unit that was the target of another units charge or attack this phase."
+    },
+    "key": "571486b7f4a40f0a"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "rule-ph",
+    "where": "Coterie of the Conceited rule · Pledges to the Dark Prince",
+    "judgement": {
+      "ph": [
+        "command",
+        "shooting",
+        "fight"
+      ]
+    },
+    "source": {
+      "rule": "Pledges to the Dark Prince",
+      "text": "At the start of the battle round, if your **WARLORD** is on the battlefield, you must pledge a number to Slaanesh representing how many enemy units will be destroyed this battle round. At the end of the battle round, if the number of enemy units destroyed this battle round is greater than or equal to your pledge, you gain a number of Pact points equal to your pledge. Otherwise, you do not gain any Pact points this battle round and your **WARLORD** model suffers D3 **mortal wounds**.\n**EMPEROR’S CHILDREN** units from your army gain a bonus depending on how many Pact points you have gained during the battle, as shown below (these are all cumulative).\n1+: Each time a model in this unit makes an attack, re-roll a **Hit roll** of 1.\n3+: Each time a model in this unit makes an attack, re-roll a **Wound roll** of 1.\n5+: Melee weapons equipped by models in this unit have the **[LETHAL HITS]** and **[SUSTAINED HITS 1]** abilities.\n7+: Each time a model in this unit makes an attack, a Critical Hit is scored on an unmodified **Hit roll** of 5+."
+    },
+    "key": "dc9d10861785de18"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "rule-turn",
+    "where": "Coterie of the Conceited rule · Pledges to the Dark Prince",
+    "judgement": {
+      "turn": "either"
+    },
+    "source": {
+      "rule": "Pledges to the Dark Prince",
+      "text": "At the start of the battle round, if your **WARLORD** is on the battlefield, you must pledge a number to Slaanesh representing how many enemy units will be destroyed this battle round. At the end of the battle round, if the number of enemy units destroyed this battle round is greater than or equal to your pledge, you gain a number of Pact points equal to your pledge. Otherwise, you do not gain any Pact points this battle round and your **WARLORD** model suffers D3 **mortal wounds**.\n**EMPEROR’S CHILDREN** units from your army gain a bonus depending on how many Pact points you have gained during the battle, as shown below (these are all cumulative).\n1+: Each time a model in this unit makes an attack, re-roll a **Hit roll** of 1.\n3+: Each time a model in this unit makes an attack, re-roll a **Wound roll** of 1.\n5+: Melee weapons equipped by models in this unit have the **[LETHAL HITS]** and **[SUSTAINED HITS 1]** abilities.\n7+: Each time a model in this unit makes an attack, a Critical Hit is scored on an unmodified **Hit roll** of 5+."
+    },
+    "key": "4050c21fbcd3c974"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "rule-needs",
+    "where": "Coterie of the Conceited rule · Pledges to the Dark Prince",
+    "judgement": {
+      "needs": {
+        "all": [
+          "Faction: Emperor's Children"
+        ]
+      }
+    },
+    "source": {
+      "rule": "Pledges to the Dark Prince",
+      "text": "At the start of the battle round, if your **WARLORD** is on the battlefield, you must pledge a number to Slaanesh representing how many enemy units will be destroyed this battle round. At the end of the battle round, if the number of enemy units destroyed this battle round is greater than or equal to your pledge, you gain a number of Pact points equal to your pledge. Otherwise, you do not gain any Pact points this battle round and your **WARLORD** model suffers D3 **mortal wounds**.\n**EMPEROR’S CHILDREN** units from your army gain a bonus depending on how many Pact points you have gained during the battle, as shown below (these are all cumulative).\n1+: Each time a model in this unit makes an attack, re-roll a **Hit roll** of 1.\n3+: Each time a model in this unit makes an attack, re-roll a **Wound roll** of 1.\n5+: Melee weapons equipped by models in this unit have the **[LETHAL HITS]** and **[SUSTAINED HITS 1]** abilities.\n7+: Each time a model in this unit makes an attack, a Critical Hit is scored on an unmodified **Hit roll** of 5+."
+    },
+    "key": "9998a07ef9678077"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "rule-mod",
+    "where": "Coterie of the Conceited rule · Pledges to the Dark Prince",
+    "judgement": {
+      "mod": {
+        "kind": "all",
+        "lasts": "battle",
+        "when": "Pact points gained during the battle (cumulative)",
+        "note": "1+ re-roll hit rolls of 1 · 3+ also re-roll wound rolls of 1 · 7+ also a Critical Hit on an unmodified hit roll of 5+",
+        "pick": [
+          {
+            "name": "1+ Pact points",
+            "note": "re-roll hit rolls of 1"
+          },
+          {
+            "name": "3+ Pact points",
+            "note": "re-roll hit rolls of 1 and wound rolls of 1"
+          },
+          {
+            "name": "7+ Pact points",
+            "note": "re-roll hit rolls of 1 and wound rolls of 1, a Critical Hit on an unmodified hit roll of 5+",
+            "calc": {
+              "rrHit": "1s",
+              "rrWound": "1s",
+              "critHit": 5
+            }
+          }
+        ]
+      }
+    },
+    "source": {
+      "rule": "Pledges to the Dark Prince",
+      "text": "At the start of the battle round, if your **WARLORD** is on the battlefield, you must pledge a number to Slaanesh representing how many enemy units will be destroyed this battle round. At the end of the battle round, if the number of enemy units destroyed this battle round is greater than or equal to your pledge, you gain a number of Pact points equal to your pledge. Otherwise, you do not gain any Pact points this battle round and your **WARLORD** model suffers D3 **mortal wounds**.\n**EMPEROR’S CHILDREN** units from your army gain a bonus depending on how many Pact points you have gained during the battle, as shown below (these are all cumulative).\n1+: Each time a model in this unit makes an attack, re-roll a **Hit roll** of 1.\n3+: Each time a model in this unit makes an attack, re-roll a **Wound roll** of 1.\n5+: Melee weapons equipped by models in this unit have the **[LETHAL HITS]** and **[SUSTAINED HITS 1]** abilities.\n7+: Each time a model in this unit makes an attack, a Critical Hit is scored on an unmodified **Hit roll** of 5+."
+    },
+    "key": "fafffd8bb3be1965"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "strat-phases",
+    "where": "Coterie of the Conceited · Protection of the Dark Prince",
+    "judgement": {
+      "phases": [
+        "command",
+        "movement",
+        "shooting",
+        "charge",
+        "fight"
+      ]
+    },
+    "source": {
+      "stratagem": "Protection of the Dark Prince",
+      "text": "WHEN: Any phase, just after a **mortal wound** or attack is allocated to a model in an **EMPEROR’S CHILDREN** unit from your army.\nTARGET: That **EMPEROR’S CHILDREN** unit.\nEFFECT: Until the end of the phase, models in your unit have the **Feel No Pain 6+** ability, and the **Feel No Pain 4+** ability against **mortal wounds**."
+    },
+    "key": "8ac0664e8193f9c4"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "strat-turn",
+    "where": "Coterie of the Conceited · Protection of the Dark Prince",
+    "judgement": {
+      "turn": "either"
+    },
+    "source": {
+      "stratagem": "Protection of the Dark Prince",
+      "text": "WHEN: Any phase, just after a **mortal wound** or attack is allocated to a model in an **EMPEROR’S CHILDREN** unit from your army.\nTARGET: That **EMPEROR’S CHILDREN** unit.\nEFFECT: Until the end of the phase, models in your unit have the **Feel No Pain 6+** ability, and the **Feel No Pain 4+** ability against **mortal wounds**."
+    },
+    "key": "14c95468bca6f429"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "strat-needs",
+    "where": "Coterie of the Conceited · Protection of the Dark Prince",
+    "judgement": {
+      "needs": {
+        "all": [
+          "Faction: Emperor's Children"
+        ]
+      }
+    },
+    "source": {
+      "stratagem": "Protection of the Dark Prince",
+      "text": "WHEN: Any phase, just after a **mortal wound** or attack is allocated to a model in an **EMPEROR’S CHILDREN** unit from your army.\nTARGET: That **EMPEROR’S CHILDREN** unit.\nEFFECT: Until the end of the phase, models in your unit have the **Feel No Pain 6+** ability, and the **Feel No Pain 4+** ability against **mortal wounds**."
+    },
+    "key": "2c137b1eec00c2bb"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "strat-def",
+    "where": "Coterie of the Conceited · Protection of the Dark Prince",
+    "judgement": {
+      "def": "Feel No Pain 6+, and Feel No Pain 4+ against mortal wounds (until the end of the phase)"
+    },
+    "source": {
+      "stratagem": "Protection of the Dark Prince",
+      "text": "WHEN: Any phase, just after a **mortal wound** or attack is allocated to a model in an **EMPEROR’S CHILDREN** unit from your army.\nTARGET: That **EMPEROR’S CHILDREN** unit.\nEFFECT: Until the end of the phase, models in your unit have the **Feel No Pain 6+** ability, and the **Feel No Pain 4+** ability against **mortal wounds**."
+    },
+    "key": "dad38003a3f3f010"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "strat-gist",
+    "where": "Coterie of the Conceited · Protection of the Dark Prince",
+    "judgement": {
+      "gist": "Until the end of the phase, your unit has Feel No Pain 6+, and Feel No Pain 4+ against mortal wounds."
+    },
+    "source": {
+      "stratagem": "Protection of the Dark Prince",
+      "text": "WHEN: Any phase, just after a **mortal wound** or attack is allocated to a model in an **EMPEROR’S CHILDREN** unit from your army.\nTARGET: That **EMPEROR’S CHILDREN** unit.\nEFFECT: Until the end of the phase, models in your unit have the **Feel No Pain 6+** ability, and the **Feel No Pain 4+** ability against **mortal wounds**."
+    },
+    "key": "b59859e2db5886a3"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "strat-phases",
+    "where": "Coterie of the Conceited · Unshakeable Opponents",
+    "judgement": {
+      "phases": [
+        "command"
+      ]
+    },
+    "source": {
+      "stratagem": "Unshakeable Opponents",
+      "text": "WHEN: Command phase.\nTARGET: One **EMPEROR’S CHILDREN** unit from your army.\nEFFECT: Until the end of the turn, each time a model in your unit makes an attack, you can ignore any or all modifiers to the following: that attack’s Ballistic Skill or Weapon Skill characteristic; the **Hit roll**; the **Wound roll**."
+    },
+    "key": "09bbb8e510391694"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "strat-turn",
+    "where": "Coterie of the Conceited · Unshakeable Opponents",
+    "judgement": {
+      "turn": "either"
+    },
+    "source": {
+      "stratagem": "Unshakeable Opponents",
+      "text": "WHEN: Command phase.\nTARGET: One **EMPEROR’S CHILDREN** unit from your army.\nEFFECT: Until the end of the turn, each time a model in your unit makes an attack, you can ignore any or all modifiers to the following: that attack’s Ballistic Skill or Weapon Skill characteristic; the **Hit roll**; the **Wound roll**."
+    },
+    "key": "07b229d78c494cb1"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "strat-needs",
+    "where": "Coterie of the Conceited · Unshakeable Opponents",
+    "judgement": {
+      "needs": {
+        "all": [
+          "Faction: Emperor's Children"
+        ]
+      }
+    },
+    "source": {
+      "stratagem": "Unshakeable Opponents",
+      "text": "WHEN: Command phase.\nTARGET: One **EMPEROR’S CHILDREN** unit from your army.\nEFFECT: Until the end of the turn, each time a model in your unit makes an attack, you can ignore any or all modifiers to the following: that attack’s Ballistic Skill or Weapon Skill characteristic; the **Hit roll**; the **Wound roll**."
+    },
+    "key": "92a492d1705695e7"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "strat-mod",
+    "where": "Coterie of the Conceited · Unshakeable Opponents",
+    "judgement": {
+      "mod": {
+        "kind": "all",
+        "when": "Command phase, until the end of the turn",
+        "note": "can ignore any or all modifiers to BS or WS, to the hit roll and to the wound roll",
+        "calc": {
+          "ignoreHitMods": true
+        }
+      }
+    },
+    "source": {
+      "stratagem": "Unshakeable Opponents",
+      "text": "WHEN: Command phase.\nTARGET: One **EMPEROR’S CHILDREN** unit from your army.\nEFFECT: Until the end of the turn, each time a model in your unit makes an attack, you can ignore any or all modifiers to the following: that attack’s Ballistic Skill or Weapon Skill characteristic; the **Hit roll**; the **Wound roll**."
+    },
+    "key": "524ba944704b412b"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "strat-gist",
+    "where": "Coterie of the Conceited · Unshakeable Opponents",
+    "judgement": {
+      "gist": "Until the end of the turn, your unit’s attacks can ignore any or all modifiers to BS or WS, the hit roll and the wound roll."
+    },
+    "source": {
+      "stratagem": "Unshakeable Opponents",
+      "text": "WHEN: Command phase.\nTARGET: One **EMPEROR’S CHILDREN** unit from your army.\nEFFECT: Until the end of the turn, each time a model in your unit makes an attack, you can ignore any or all modifiers to the following: that attack’s Ballistic Skill or Weapon Skill characteristic; the **Hit roll**; the **Wound roll**."
+    },
+    "key": "56cbe32ed8294e4c"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "strat-phases",
+    "where": "Coterie of the Conceited · Embrace the Pain",
+    "judgement": {
+      "phases": [
+        "fight"
+      ]
+    },
+    "source": {
+      "stratagem": "Embrace the Pain",
+      "text": "WHEN: Start of the Fight phase.\nTARGET: One **EMPEROR’S CHILDREN INFANTRY** unit from your army.\nEFFECT: Until the end of the phase, each time an enemy model within **Engagement Range** of your unit selects targets, it must select your unit as the target of its attacks."
+    },
+    "key": "9e153af78c2c0928"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "strat-turn",
+    "where": "Coterie of the Conceited · Embrace the Pain",
+    "judgement": {
+      "turn": "either"
+    },
+    "source": {
+      "stratagem": "Embrace the Pain",
+      "text": "WHEN: Start of the Fight phase.\nTARGET: One **EMPEROR’S CHILDREN INFANTRY** unit from your army.\nEFFECT: Until the end of the phase, each time an enemy model within **Engagement Range** of your unit selects targets, it must select your unit as the target of its attacks."
+    },
+    "key": "3e812606a07731e7"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "strat-needs",
+    "where": "Coterie of the Conceited · Embrace the Pain",
+    "judgement": {
+      "needs": {
+        "all": [
+          "Faction: Emperor's Children",
+          "Infantry"
+        ]
+      }
+    },
+    "source": {
+      "stratagem": "Embrace the Pain",
+      "text": "WHEN: Start of the Fight phase.\nTARGET: One **EMPEROR’S CHILDREN INFANTRY** unit from your army.\nEFFECT: Until the end of the phase, each time an enemy model within **Engagement Range** of your unit selects targets, it must select your unit as the target of its attacks."
+    },
+    "key": "19b18564b8e689d2"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "strat-gist",
+    "where": "Coterie of the Conceited · Embrace the Pain",
+    "judgement": {
+      "gist": "Until the end of the phase, each enemy model within Engagement Range of your unit must select your unit as the target of its attacks."
+    },
+    "source": {
+      "stratagem": "Embrace the Pain",
+      "text": "WHEN: Start of the Fight phase.\nTARGET: One **EMPEROR’S CHILDREN INFANTRY** unit from your army.\nEFFECT: Until the end of the phase, each time an enemy model within **Engagement Range** of your unit selects targets, it must select your unit as the target of its attacks."
+    },
+    "key": "31712370a88bd6c5"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "strat-phases",
+    "where": "Coterie of the Conceited · Martial Perfection",
+    "judgement": {
+      "phases": [
+        "fight"
+      ]
+    },
+    "source": {
+      "stratagem": "Martial Perfection",
+      "text": "WHEN: Fight phase.\nTARGET: One **EMPEROR’S CHILDREN** unit from your army that has not been selected to fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the **Hit roll**."
+    },
+    "key": "38cee289b89d2abc"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "strat-turn",
+    "where": "Coterie of the Conceited · Martial Perfection",
+    "judgement": {
+      "turn": "either"
+    },
+    "source": {
+      "stratagem": "Martial Perfection",
+      "text": "WHEN: Fight phase.\nTARGET: One **EMPEROR’S CHILDREN** unit from your army that has not been selected to fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the **Hit roll**."
+    },
+    "key": "6f3fc385f5f76cc6"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "strat-needs",
+    "where": "Coterie of the Conceited · Martial Perfection",
+    "judgement": {
+      "needs": {
+        "all": [
+          "Faction: Emperor's Children"
+        ]
+      }
+    },
+    "source": {
+      "stratagem": "Martial Perfection",
+      "text": "WHEN: Fight phase.\nTARGET: One **EMPEROR’S CHILDREN** unit from your army that has not been selected to fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the **Hit roll**."
+    },
+    "key": "9c7b5db0777da822"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "strat-mod",
+    "where": "Coterie of the Conceited · Martial Perfection",
+    "judgement": {
+      "mod": {
+        "kind": "melee",
+        "when": "Fight phase, not yet selected to fight",
+        "note": "re-roll hit rolls"
+      }
+    },
+    "source": {
+      "stratagem": "Martial Perfection",
+      "text": "WHEN: Fight phase.\nTARGET: One **EMPEROR’S CHILDREN** unit from your army that has not been selected to fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the **Hit roll**."
+    },
+    "key": "b9434bdc203dba02"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "strat-gist",
+    "where": "Coterie of the Conceited · Martial Perfection",
+    "judgement": {
+      "gist": "Until the end of the phase, your unit can re-roll the hit roll."
+    },
+    "source": {
+      "stratagem": "Martial Perfection",
+      "text": "WHEN: Fight phase.\nTARGET: One **EMPEROR’S CHILDREN** unit from your army that has not been selected to fight this phase.\nEFFECT: Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the **Hit roll**."
+    },
+    "key": "b916d2cff6762308"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "strat-phases",
+    "where": "Coterie of the Conceited · Unbound Arrogance",
+    "judgement": {
+      "phases": [
+        "shooting",
+        "fight"
+      ]
+    },
+    "source": {
+      "stratagem": "Unbound Arrogance",
+      "text": "WHEN: Your Shooting phase or the Fight phase, just after an **EMPEROR’S CHILDREN** unit from your army destroys an enemy unit.\nTARGET: That **EMPEROR’S CHILDREN** unit.\nEFFECT: Increase your pledge to Slaanesh by 1.\nRESTRICTIONS: You can only use this Stratagem once per battle round."
+    },
+    "key": "4046fa1c19765d6d"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "strat-turn",
+    "where": "Coterie of the Conceited · Unbound Arrogance",
+    "judgement": {
+      "turn": "either"
+    },
+    "source": {
+      "stratagem": "Unbound Arrogance",
+      "text": "WHEN: Your Shooting phase or the Fight phase, just after an **EMPEROR’S CHILDREN** unit from your army destroys an enemy unit.\nTARGET: That **EMPEROR’S CHILDREN** unit.\nEFFECT: Increase your pledge to Slaanesh by 1.\nRESTRICTIONS: You can only use this Stratagem once per battle round."
+    },
+    "key": "c8b902372952abaf"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "strat-turns",
+    "where": "Coterie of the Conceited · Unbound Arrogance",
+    "judgement": {
+      "turns": {
+        "shooting": "your"
+      }
+    },
+    "source": {
+      "stratagem": "Unbound Arrogance",
+      "text": "WHEN: Your Shooting phase or the Fight phase, just after an **EMPEROR’S CHILDREN** unit from your army destroys an enemy unit.\nTARGET: That **EMPEROR’S CHILDREN** unit.\nEFFECT: Increase your pledge to Slaanesh by 1.\nRESTRICTIONS: You can only use this Stratagem once per battle round."
+    },
+    "key": "c6d44a7bda5336cc"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "strat-needs",
+    "where": "Coterie of the Conceited · Unbound Arrogance",
+    "judgement": {
+      "needs": {
+        "all": [
+          "Faction: Emperor's Children"
+        ]
+      }
+    },
+    "source": {
+      "stratagem": "Unbound Arrogance",
+      "text": "WHEN: Your Shooting phase or the Fight phase, just after an **EMPEROR’S CHILDREN** unit from your army destroys an enemy unit.\nTARGET: That **EMPEROR’S CHILDREN** unit.\nEFFECT: Increase your pledge to Slaanesh by 1.\nRESTRICTIONS: You can only use this Stratagem once per battle round."
+    },
+    "key": "cc77905d6fc8fa56"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "strat-gist",
+    "where": "Coterie of the Conceited · Unbound Arrogance",
+    "judgement": {
+      "gist": "Just after your unit destroys an enemy unit: increase your pledge to Slaanesh by 1 (once per battle round)."
+    },
+    "source": {
+      "stratagem": "Unbound Arrogance",
+      "text": "WHEN: Your Shooting phase or the Fight phase, just after an **EMPEROR’S CHILDREN** unit from your army destroys an enemy unit.\nTARGET: That **EMPEROR’S CHILDREN** unit.\nEFFECT: Increase your pledge to Slaanesh by 1.\nRESTRICTIONS: You can only use this Stratagem once per battle round."
+    },
+    "key": "18d790c2d4d5ecda"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "strat-note",
+    "where": "Coterie of the Conceited · Unbound Arrogance",
+    "judgement": {
+      "note": "Faction Pack FAQ: “While using the Coterie of the Conceited Detachment, if my WARLORD is not on the battlefield, can I use the Unbound Arrogance Stratagem?” “Yes, your pledge to Slaanesh would increase from 0 to 1.”"
+    },
+    "source": {
+      "stratagem": "Unbound Arrogance",
+      "text": "WHEN: Your Shooting phase or the Fight phase, just after an **EMPEROR’S CHILDREN** unit from your army destroys an enemy unit.\nTARGET: That **EMPEROR’S CHILDREN** unit.\nEFFECT: Increase your pledge to Slaanesh by 1.\nRESTRICTIONS: You can only use this Stratagem once per battle round."
+    },
+    "key": "5f0911009f47fb0f"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "strat-phases",
+    "where": "Coterie of the Conceited · Armour of Abhorrence",
+    "judgement": {
+      "phases": [
+        "shooting",
+        "fight"
+      ]
+    },
+    "source": {
+      "stratagem": "Armour of Abhorrence",
+      "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **EMPEROR’S CHILDREN** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+    },
+    "key": "05338311a17d7e9b"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "strat-turn",
+    "where": "Coterie of the Conceited · Armour of Abhorrence",
+    "judgement": {
+      "turn": "either"
+    },
+    "source": {
+      "stratagem": "Armour of Abhorrence",
+      "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **EMPEROR’S CHILDREN** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+    },
+    "key": "7ef800581701e572"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "strat-turns",
+    "where": "Coterie of the Conceited · Armour of Abhorrence",
+    "judgement": {
+      "turns": {
+        "shooting": "opp"
+      }
+    },
+    "source": {
+      "stratagem": "Armour of Abhorrence",
+      "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **EMPEROR’S CHILDREN** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+    },
+    "key": "0bbad4e05e2694f7"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "strat-needs",
+    "where": "Coterie of the Conceited · Armour of Abhorrence",
+    "judgement": {
+      "needs": {
+        "all": [
+          "Faction: Emperor's Children"
+        ]
+      }
+    },
+    "source": {
+      "stratagem": "Armour of Abhorrence",
+      "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **EMPEROR’S CHILDREN** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+    },
+    "key": "41cb081ffce6dbdf"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "strat-def",
+    "where": "Coterie of the Conceited · Armour of Abhorrence",
+    "judgement": {
+      "def": "their Shooting phase or the Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)"
+    },
+    "source": {
+      "stratagem": "Armour of Abhorrence",
+      "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **EMPEROR’S CHILDREN** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+    },
+    "key": "282ebeb4583a73cb"
+  },
+  {
+    "army": "defilers-and-friends",
+    "kind": "strat-gist",
+    "where": "Coterie of the Conceited · Armour of Abhorrence",
+    "judgement": {
+      "gist": "Until the attacking unit has finished its attacks, worsen the AP of each attack that targets your unit by 1."
+    },
+    "source": {
+      "stratagem": "Armour of Abhorrence",
+      "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **EMPEROR’S CHILDREN** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+    },
+    "key": "0da1abde16e05dac"
+  }
+]
