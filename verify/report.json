@@ -1,6 +1,6 @@
 {
- "hash": "8ae5274d388b91c6083bb951a881ea191defb018e84df4f24e50a7d4f025a6e5",
- "at": "2026-10-22T14:46:13.820Z",
+ "hash": "7a00ff4e3b845aa7c0ce1c3be0576f80b86f8c2e2374aa1f516edb30e6674b00",
+ "at": "2026-10-22T15:06:55.046Z",
  "ok": true,
  "steps": {
   "data": {
@@ -17,11 +17,11 @@
   },
   "bsdata": {
    "ok": true,
-   "summary": "bsdata: 7070 facts checked against BSData 173d0ef (clone) {\"gear\":510,\"stats\":1035,\"weapons\":3430,\"abilities\":662,\"keywords\":735,\"rules\":360,\"grants\":214,\"points\":123,\"extract\":1}; 33 deviations used; 0 failures"
+   "summary": "bsdata: 7070 facts checked against BSData 173d0ef (clone) {\"gear\":510,\"stats\":1035,\"weapons\":3430,\"abilities\":662,\"keywords\":735,\"rules\":360,\"grants\":214,\"points\":123,\"extract\":1}; 34 deviations used; 0 failures"
   },
   "nr": {
    "ok": true,
-   "summary": "nr: 0 failure(s); 8004 facts checked (army 121, units 86, roster 366, pts 172, copies 86, models 86, enhancement 172, warlord 172, leads 258, gear 158, stats 1007, ranged 1679, from 166, melee 1580, abilities 879, kw 119, rules 725, glossary 172); 42 declared deviations used. Report: verify/out/nr.json"
+   "summary": "nr: 0 failure(s); 8004 facts checked (army 121, units 86, roster 366, pts 172, copies 86, models 86, enhancement 172, warlord 172, leads 258, gear 158, stats 1007, ranged 1679, from 166, melee 1580, abilities 879, kw 119, rules 725, glossary 172); 43 declared deviations used. Report: verify/out/nr.json"
   },
   "texts": {
    "ok": true,
