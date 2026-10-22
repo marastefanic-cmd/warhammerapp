@@ -17,7 +17,7 @@ const plain = s => String(s || '').replace(/\*\*|~~/g, '').replace(/[’‘]/g, 
 // "Your Movement/Charge phase", "Your opponent's Shooting phase", "the Fight phase" -> { phase: owner }
 function phasesNamed(text){
   const t = plain(text), out = {};
-  if(/^any phase/.test(t)) { PH.forEach(p => out[p] = 'either'); return out; }
+  if(/^(?:(?:start|end) of )?any phase/.test(t)) { PH.forEach(p => out[p] = 'either'); return out; }   // "End of any phase" (Profane Symbiosis) too
   const SEP = '(?:\\s*[\\/,]\\s*|\\s+or\\s+(?:the\\s+)?|\\s+and\\s+(?:the\\s+)?)';
   const re = new RegExp("(your opponent's |your |the |either player's )?((?:command|movement|shooting|charge|fight)(?:" + SEP + "(?:command|movement|shooting|charge|fight))*) phase", 'g');
   for(let m; (m = re.exec(t));){
