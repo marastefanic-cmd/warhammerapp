@@ -1008,8 +1008,9 @@ const FACTIONS = {
       // Wahapedia, Codex: Chaos Knights army rules (GW's Faction Pack 1.2 prints "FACTION: Harbingers of Dread, Super-heavy Walker"
       // on the Chaos Knights datasheets). coreTwin: the core ability of the same name (Core Rules 24.35), which the datasheets'
       // Rules line opens; the two are shown together, and the note says the sources don't settle which applies
-      // ph/turn: where its Normal, Advance and Fall Back moves are made
-      { name:'Super-heavy Walker', coreTwin:'Super-Heavy Walker', ph:['movement'], turn:'your',
+      // ph/turn: where its Normal, Advance and Fall Back moves are made; needs: only a unit whose Rules line names it has it
+      // (the Knights; War Dogs only with Preyslayer's Mantle), so a list with none marks it as applying to no unit
+      { name:'Super-heavy Walker', coreTwin:'Super-Heavy Walker', ph:['movement'], turn:'your', needs:{ rule:['Super-heavy Walker'] },
         note:'CHAOS KNIGHTS datasheets list Super-heavy Walker as a FACTION ability (Faction Pack 1.2), whose Codex text differs from Core Rules 24.35; the sources don’t say which applies.',
         text:'Each time a model with this ability makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and sections of **terrain features** that are 4" or less in height. When doing so:\n- It can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them.\n- It can also move through sections of terrain features that are more than 4" in height, but if it does, after it has moved, roll one D6: on a 1, that model is **Battle-shocked**.' }
     ],
