@@ -670,6 +670,7 @@ const TDB = 'm:Try Dat Button!|Your Shooting phase or the Fight phase, when sele
 const dak = pick => dm.plan({ army:'shooty', atk:'dakkarig-boosta', typed:cp(BERZ), turn:{ me:MT('shoot') },
   ch:pick ? { 'me:shoot':{ on:{ [TDB]:true }, val:{ 'pick:Try Dat Button!':pick } } } : {} });
 cases.push(['Try Dat Button!: the three results and the three pairs, nothing else to pick', () => (r => +(r.pills.map(p => p[0]).join('|') === '1–2|3–4|5–6|1–2 and 3–4|1–2 and 5–6|3–4 and 5–6' && !r.dice))(dak('1–2').beats[0].M.rules.find(r => r.k === TDB)), 1]);
+cases.push(['Try Dat Button!: the picks named by their effect (kept under their dice results)', () => +(['1–2', '3–4', '5–6', '1–2 and 3–4', '1–2 and 5–6', '3–4 and 5–6'].map(k => dak(k).beats[0].M.rules.find(r => r.k === TDB).pickLabel).join('|') === '+1 A|+2 S|+1 AP|+1 A & +2 S|+1 A & +1 AP|+2 S & +1 AP'), 1]);
 cases.push(['Try Dat Button!, two results: both counted (+1 A and +1 AP)', () => (a => (b => +(b.R.groups.every((g, i) => g.out || Math.abs(g.AP) === Math.abs(a.R.groups[i].AP) + 1) && C.explain(b.input).total.attacks > C.explain(a.input).total.attacks))(dak('1–2 and 5–6').beats[0].M))(dak('').beats[0].M), 1]);
 cases.push(['Try Dat Button!, two D6: no hazard roll named', () => (M => +(!M.sit.some(x => x.k === 'c:hazard') && !M.nc.some(x => /^Hazard rolls/.test(x.name))))(dak('1–2 and 5–6').beats[0].M), 1]);
 cases.push(['Try Dat Button!, one D6: no hazard roll to name', () => +!dak('5–6').beats[0].M.nc.some(x => /^Hazard rolls/.test(x.name)), 1]);

@@ -237,7 +237,8 @@ const FACTIONS = {
           // two D6 always give two different results), so the picks are the three results and the three pairs. Its hazard roll with two
           // D6 is the rules' (said in the note) and not counted: the Damage tab shows damage dealt
           mod:{ kind:'all', when:'Your Shooting phase or the Fight phase, when selected to attack (optional: one D6 or two D6)', note:'1–2 +1 A · 3–4 +2 S · 5–6 +1 AP (two D6: keep re-rolling duplicate results; one hazard roll when the unit has attacked)',
-            pick:[{ name:'1–2', note:'+1 A' }, { name:'3–4', note:'+2 S' }, { name:'5–6', note:'+1 AP' }, { name:'1–2 and 3–4', note:'+1 A, +2 S' }, { name:'1–2 and 5–6', note:'+1 A, +1 AP' }, { name:'3–4 and 5–6', note:'+2 S, +1 AP' }] },
+            // label: what the Damage tab's chip says (the owner's call: the effect, not the dice results); name stays the key
+            pick:[{ name:'1–2', label:'+1 A', note:'+1 A' }, { name:'3–4', label:'+2 S', note:'+2 S' }, { name:'5–6', label:'+1 AP', note:'+1 AP' }, { name:'1–2 and 3–4', label:'+1 A & +2 S', note:'+1 A, +2 S' }, { name:'1–2 and 5–6', label:'+1 A & +1 AP', note:'+1 A, +1 AP' }, { name:'3–4 and 5–6', label:'+2 S & +1 AP', note:'+2 S, +1 AP' }] },
           text:'In your Shooting phase or the Fight phase, when a friendly **ORKS WALKER** unit (excluding **TITANIC** units) is **selected to attack**, you can use this ability. If you do, roll either one D6 or two D6 (keep re-rolling duplicate results). This unit’s attacks have the relevant rule(s):\nIf you rolled two D6, when this unit has attacked, this unit makes one **hazard roll**.',
           table:[['1–2','+1 **A**'],['3–4','+2 **S**'],['5–6','+1 **AP**']] },
         enhancements:[

@@ -1710,12 +1710,14 @@ const DM_FACTS = { charged:'Charged this turn', riled:'Riled up', stationary:'Re
 const DM_IMPLIES = { targetObjectiveNotYours:['targetObjective'], targetObjective:['objective'], closest18:['closest'], stationary:['heavy'] };
 // the facts that are about the target, not the unit attacking
 const DM_TGT_FACT = new Set(['targetObjective', 'targetObjectiveNotYours', 'closest', 'closest18']);
+// a pick as the Damage tab names it: its label (Try Dat Button!'s "+1 A & +2 S"), else its name (the key it is kept under)
+const dmPickLabel = (m, name) => { const p = (m.pick || []).find(x => x.name === name); return p && p.label || name || ''; };
 // one rule as the calculator reads it: its recorded numbers (calc) or its words, the effect picked when it has several (pick:
 // its own calc or words), the weapons it names (its words, or calc.weapon: "Dark Blessing has [SUSTAINED HITS D3]")
 function dmRuleOf(m, st){
   // (follow: the pick of the rule it follows, Murderous Imperative's the Doctrina Imperatives one, with no pills of its own)
   const pk = m.pick ? 'pick:' + (m.follow || m.from) : '', ch = m.pick ? m.pick.find(p => p.name === st.val[pk]) || m.pick[0] : null;
-  let mm = ch ? Object.assign({}, m, { note:ch.name + ': ' + ch.note.replace(/^([a-z][\w’'-]* weapons(?: only)?:\s*)/i, ''), scopeNote:ch.note }) : m;
+  let mm = ch ? Object.assign({}, m, { note:(ch.label ? ch.label : ch.name + ': ' + ch.note.replace(/^([a-z][\w’'-]* weapons(?: only)?:\s*)/i, '')), scopeNote:ch.note }) : m;
   const sc = dmScope(ch ? { note:ch.note, when:m.when } : m);
   let e0 = ch && ch.calc ? Object.assign({}, ch.calc) : !ch && m.calc ? Object.assign({}, m.calc) : dmEffects(sc.note, !!m.set);
   if(e0 && e0.weapon){ mm = Object.assign({}, mm, { weapon:e0.weapon }); delete e0.weapon; }
@@ -1724,7 +1726,7 @@ function dmRuleOf(m, st){
   // D6 by itself; else what the player picked, one D6 to start with
   const dk = m.dice ? 'dice:' + m.from : '', forced = !!(m.dice && ch && (m.dice.two || []).includes(ch.name));
   const dice = m.dice ? { key:dk, opts:m.dice.opts, now:forced ? m.dice.opts[1] : m.dice.opts.includes(st.val[dk]) ? st.val[dk] : m.dice.opts[0], forced, note:m.dice.note } : null;
-  return { m:mm, sc, e, pills:ch && !m.follow ? m.pick.map(p => [p.name, p === ch]) : null, pillKey:m.follow ? '' : pk, note0:ch ? m.note : '', pick:ch ? ch.name : '', dice, diceKey:dk };
+  return { m:mm, sc, e, pills:ch && !m.follow ? m.pick.map(p => [p.name, p === ch]) : null, pillKey:m.follow ? '' : pk, note0:ch ? m.note : '', pick:ch ? ch.name : '', pickLabel:ch ? dmPickLabel(m, ch.name) : '', dice, diceKey:dk };
 }
 // who gives a rule of another unit of the list: the part of an attached unit it is on, else that unit ("Clever Know-wotz (Mek)")
 function dmGiver(m, A){ const u = m.src, ab = u.abilities.find(x => x.name === m.from);
@@ -1925,7 +1927,7 @@ function dmCalc(st, A, au, tg, kind){
   for(const r of rules.filter(q => q.m.follow)){ const by = rules.find(q => q.m.from === r.m.follow && !q.m.follow);
     if(!by) continue;
     r.lead = by;
-    if(by.on && r.state !== 'out'){ r.state = 'on'; r.why = 'with ' + by.m.from + ': ' + by.pick; }
+    if(by.on && r.state !== 'out'){ r.state = 'on'; r.why = 'with ' + by.m.from + ': ' + by.pickLabel; }
     else if(r.state === 'on'){ r.state = 'choice'; r.why = ''; }
     r.on = dmOn(st, r); r.carried = r.on ? fromStep(r.k) : null;
     if(r.on && !by.on) r.extra = 'no Imperative ticked (' + by.m.from + ')'; else if(r.on && by.extra) r.extra = by.extra; }
@@ -2005,7 +2007,7 @@ function dmCalc(st, A, au, tg, kind){
   const groups = [], gOf = [];
   for(const c of ticked){
     const appl = [], kx = kwOf(c);
-    for(const r of rules) if(r.on){ const n = dmReach(au, c.it, r.m, r.sc); if(n > 0) appl.push({ n:Math.min(n, c.n), mod:Object.assign({ from:r.m.from + (r.help ? ' (' + r.help + ')' : '') + (r.pick ? ': ' + r.pick : '') + (r.over ? ' (counted by you)' : '') }, r.m.strat ? { strat:r.m.strat } : {}, r.e), r }); }
+    for(const r of rules) if(r.on){ const n = dmReach(au, c.it, r.m, r.sc); if(n > 0) appl.push({ n:Math.min(n, c.n), mod:Object.assign({ from:r.m.from + (r.help ? ' (' + r.help + ')' : '') + (r.pick ? ': ' + r.pickLabel : '') + (r.over ? ' (counted by you)' : '') }, r.m.strat ? { strat:r.m.strat } : {}, r.e), r }); }
     for(const x of dmgOn){ const n = dmReach(au, c.it, x.m, { f:null }); if(n > 0) appl.push({ n:Math.min(n, c.n), mod:Object.assign({ from:x.m.from }, x.e), r:{ m:x.m } }); }
     if(Object.keys(manual).length) appl.push({ n:c.n, mod:Object.assign({ from:'' }, manual), r:{ m:{ from:'' } } });
     const cuts = [...new Set(appl.map(x => x.n).concat(c.n))].sort((a, b) => a - b);
@@ -2311,7 +2313,7 @@ function dmNoWhy(M, M2, lv){
   if(lv.part && lv.kidsOn === lv.kids) return 'the rules it switches on are ticked already';
   // a pick with nothing for these attacks, or a part of it that waits for its fact (Doctrina Imperatives: the Conqueror's +1 AP)
   const pr = lv.r || (lv.x && lv.x.ar ? lv.x : null), pm = pr && (pr.m ? pr.m.part : pr.ar.part);
-  if(pr && pm && !pr.partOn && !Object.keys(pr.e || {}).length) return (pr.partIn ? pm.note + ' only while “' + DM_FACTS[pm.cond] + '” holds' : (pr.pick || '') + ': nothing for these attacks');
+  if(pr && pm && !pr.partOn && !Object.keys(pr.e || {}).length) return (pr.partIn ? pm.note + ' only while “' + DM_FACTS[pm.cond] + '” holds' : (pr.pickLabel || '') + ': nothing for these attacks');
   if(lv.range) return M.ctx.halfWithin ? 'no weapon it reaches gets its bonus in this band' : 'it changes range only, which counts through half range: pick a band';
   if(lv.fact && !(lv.reach || []).length) return 'no rule here needs it';
   // a fact whose rules only change range (Dakka! Dakka! Dakka!: +3" range when riled up)
@@ -2914,7 +2916,7 @@ function dmChipsOf(C, out, seen, said){
   // what the rules require, left out: the player's own call, said as one (tap: counted again)
   for(const y of C.levers) if(y.left){ const nm = y.fact ? y.label : y.r ? y.r.m.from : '';
     out.push('<button class="dmchip ovr" data-dmlv="' + esc(y.id) + '" aria-label="' + esc(nm) + ': count again">' + esc(nm + ': left out (by you)') + '<i aria-hidden="true">↺</i></button>'); }
-  for(const r of M.rules) if(r.on && !byFact(pf + 'r:' + r.k, r.k)) chip(pf + 'r:' + r.k, from(r) + (r.m.cp ? r.m.cp + 'CP ' : '') + r.m.from + (r.help ? ' (' + r.help + ')' : '') + (r.pills ? ': ' + r.pills.find(p => p[1])[0] : '') + (r.over ? ' (by you)' : ''), r.over ? 'over' : r.carried ? 'carry' : r.state === 'on' && ch.on[r.k] == null ? 'auto' : '');
+  for(const r of M.rules) if(r.on && !byFact(pf + 'r:' + r.k, r.k)) chip(pf + 'r:' + r.k, from(r) + (r.m.cp ? r.m.cp + 'CP ' : '') + r.m.from + (r.help ? ' (' + r.help + ')' : '') + (r.pills ? ': ' + r.pickLabel : '') + (r.over ? ' (by you)' : ''), r.over ? 'over' : r.carried ? 'carry' : r.state === 'on' && ch.on[r.k] == null ? 'auto' : '');
   const nMan = DM_MAN.filter(([k]) => ch.man[k] && ch.man[k] !== '0').length;
   if(nMan) out.push('<button class="dmchip" data-dmmanclear data-dmstep="' + b.id + '">' + dmManSum(ch.man) + (part ? ' (' + part + ')' : '') + '<i aria-hidden="true">×</i></button>');
 }
@@ -3040,7 +3042,7 @@ function dmLeverRow(C, x){
     const counted = cw && !words.toLowerCase().includes(cw.toLowerCase().replace(/ rolls?$/, '')) ? ' · in these numbers: ' + cw : '';
     const one = r.m.oneModel && modelCount(C.plan.beats[C.plan.k].atk.u) > 1 ? ' · one model only: counted for the weapons of one model' : '';
     // a rule that follows another's pick (Murderous Imperative), and the part of a rule a fact of the table switches on (the +1 AP)
-    const lead = r.lead ? ' · its Imperative is the one picked under ' + r.lead.m.from + ': ' + (r.lead.on ? r.lead.pick : 'none ticked') : '';
+    const lead = r.lead ? ' · its Imperative is the one picked under ' + r.lead.m.from + ': ' + (r.lead.on ? r.lead.pickLabel : 'none ticked') : '';
     const bu = C.plan.beats[C.plan.k].atk.u, pt = r.m.part ? ' · ' + r.m.part.note + (r.partOn ? ' counted (' + (hasKw(bu, 'Battleline') ? 'it is BATTLELINE' : 'said above') + ')' : r.partIn ? ' only while the BATTLELINE fact holds (above)' : '') : '';
     const sub = esc(words + counted + one + lead + pt + (part ? ' · ' + (part.length ? 'for ' + part.join(', ') : 'none of the ticked weapons') : ''));
     return dmRowHtml(C, x, title, sub, '', dmPills(C, x)); }
@@ -3072,7 +3074,7 @@ function dmPills(C, x){
     const ar = x.r ? x.r.m.ar : null, bp = p && p.both && ar && ar.both;
     const via = bp ? dmBothVia(bt.atk.army, bt.atk.u, ar.both) : [];
     const bw = bp ? '<small' + (via.length ? '' : ' class="ovr"') + '>' + esc(via.length ? 'with ' + via.join(' or ') : 'counted by you: only with ' + dmBothAll(ar.both)) + '</small>' : '';
-    return '<button class="dmpp' + (y.on ? ' on' : '') + '" data-dmlv="' + esc(y.id) + '" aria-pressed="' + y.on + '"><b>' + esc(y.name) + '</b>' + bw + '<em data-fx="' + esc(y.id) + '">' + dmFxHtml(C, y) + '</em></button>'; }).join('') + '</div>';
+    return '<button class="dmpp' + (y.on ? ' on' : '') + '" data-dmlv="' + esc(y.id) + '" aria-pressed="' + y.on + '"><b>' + esc(p && p.label || y.name) + '</b>' + bw + '<em data-fx="' + esc(y.id) + '">' + dmFxHtml(C, y) + '</em></button>'; }).join('') + '</div>';
 }
 // what the rules rule out here, in one line: each a button, the player's to count anyway (its effect with it); the other stratagems
 // of another phase, with nothing to count, named with the reason
