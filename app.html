@@ -2991,7 +2991,7 @@ const dmGv = (w, k, html, u) => w.from && w.from[k] ? '<b class="gv' + (wideGran
 const dmStatCells = (w, ranged, plus, u) => '<span class="dmwst">' + (ranged ? [['RNG', 'range', plus && parseInt(w.range, 10) ? w.range + '→' + (parseInt(w.range, 10) + plus) + '"' : w.range]] : []).concat([['A', 'A', w.A], [ranged ? 'BS' : 'WS', ranged ? 'BS' : 'WS', w.BS || w.WS], ['S', 'S', w.S], ['AP', 'AP', w.AP], ['D', 'D', w.D]])
   .map(([k, f, v]) => '<span><i>' + k + '</i><b>' + dmGv(w, f, esc(v == null ? '–' : v), u) + '</b></span>').join('') + '</span>' +
   (w.kw.length ? '<span class="kwl dmkw">' + w.kw.map((x, i) => w.from && w.from[x] && w.kw.lastIndexOf(x) === i ? '<span class="gk' + (wideGrant(w.from[x], u) ? ' w' : '') + '">' + esc(x) + '</span>' : esc(x)).join(', ') + '</span>' : '');
-// the list: what every effect measures, said once; then the step's half range, weapons, the situation and rules (ranked), the
+// the list: what every effect measures, said once; then the step's weapons, half range, the situation and rules (ranked), the
 // stratagems (ranked), what the rules rule out here (one line, each the player's to count anyway), what is not counted, the
 // modifiers. Both: the shooting's part and the fight's, each with its own sections
 function dmListHtml(C){
@@ -3013,12 +3013,6 @@ function dmListPart(C, score){
   const { M, st, plan } = C, b = plan.beats[plan.k], pf = C.pf || '', lv = id => DM_LV.get(pf + id);
   const ranked = list => !score ? list : list.map((x, i) => [x, i]).sort((a, c) => (score[c[0].id] || 0) - (score[a[0].id] || 0) || a[1] - c[1]).map(x => x[0]);
   let h = '';
-  if(M.bands){
-    h += '<section class="dmsec dmbands"><h3 class="dmh3">Half range <small>[RAPID FIRE], [MELTA]</small></h3>' + M.bands.opts.map(o => {
-      const x = lv('b:' + o.v), extra = o.all.filter(n => !o.now.includes(n));
-      const sub = !o.v ? 'the target is farther than ' + o.lo + '" (every weapon is taken to be in range)' : (o.now.length ? 'bonus for ' + esc(andList([...new Set(o.now)])) : 'no bonus for the weapons as ticked') + (extra.length ? ' · with ' + esc(M.bands.rules.join(', ')) + ': ' + esc(andList([...new Set(extra)])) : '');
-      return dmRowHtml(C, x, esc(dmBandName(o)), sub, ''); }).join('') + '</section>';
-  }
   const ranged = b.kind === 'ranged';
   h += '<section class="dmsec"><h3 class="dmh3">' + (ranged ? 'Ranged' : 'Melee') + ' weapons <small>' + esc(dmName(b.atk.u, b.atk.army)) + '</small></h3>' +
     (plan.k > 0 ? '<p class="note dmnote">Against what the shooting left of the target, in each game.</p>' : '');
@@ -3035,6 +3029,13 @@ function dmListPart(C, score){
     h += dmRowHtml(C, x, esc(M.cName(c)) + (c.n > 1 ? ' <span class="x">×' + c.n + '</span>' : '') + (c.it.who && c.it.who !== b.atk.u.name ? ' <span class="dmwho">' + esc(c.it.who) + '</span>' : ''), stat, c.dx.length ? 'one of the weapons its models pick between' : '', picks + lims);
   }
   h += '</section>';
+  // half range after the weapons: its bands follow the profiles picked
+  if(M.bands){
+    h += '<section class="dmsec dmbands"><h3 class="dmh3">Half range <small>[RAPID FIRE], [MELTA]</small></h3>' + M.bands.opts.map(o => {
+      const x = lv('b:' + o.v), extra = o.all.filter(n => !o.now.includes(n));
+      const sub = !o.v ? 'the target is farther than ' + o.lo + '" (every weapon is taken to be in range)' : (o.now.length ? 'bonus for ' + esc(andList([...new Set(o.now)])) : 'no bonus for the weapons as ticked') + (extra.length ? ' · with ' + esc(M.bands.rules.join(', ')) + ': ' + esc(andList([...new Set(extra)])) : '');
+      return dmRowHtml(C, x, esc(dmBandName(o)), sub, ''); }).join('') + '</section>';
+  }
   // a rule the rules leave out here stays in the fold below, ticked or not: a tap never moves a row
   const rl = C.levers.filter(x => x.sec === 'rule' && !x.out && !x.underFact);
   h += '<section class="dmsec"><h3 class="dmh3">Situation and rules</h3>' + (rl.length ? ranked(rl).map(x => dmLeverRow(C, x)).join('') : '<p class="note dmnone">None for this unit.</p>') + '</section>';
