@@ -1858,10 +1858,10 @@ function dmGiver(m, A){ const u = m.src, ab = u.abilities.find(x => x.name === m
 // Command phase") or to the end of this turn ('turn')
 const dmLasts = s => { const t = [(s.mod || {}).when, (s.mod || {}).note, s.def, s.gist].join(' ').toLowerCase();
   return t.includes('until the start of your next command phase') ? 'round' : t.includes('until the end of the turn') ? 'turn' : ''; };
-// the army rules' own reading for the calculator (calcMods / calcDefs / calcNc on an army rule: this tab alone reads them, the datasheets
+// the army rules' own reading for the calculator (calcMods / calcNc on an army rule: this tab alone reads them, the datasheets
 // never show them): for a unit with that rule in its rules list, or for the units its needs name (a Ritual of the Cabal of Sorcerers
 // reaches every THOUSAND SONS model of the army)
-const dmArmyOf = (L, u, kind, key) => !L || L.typed || !u || u.typed ? [] : factionOf(L).armyRules.filter(r => r[key]).flatMap(r => r[key]
+const dmArmyOf = (L, u, kind, key) => !L || !u ? [] : factionOf(L).armyRules.filter(r => r[key]).flatMap(r => r[key]
   .filter(m => (m.kind === kind || m.kind === 'all') && (m.needs ? matches(m.needs, u) : u.rules.includes(r.name))).map(m => Object.assign({ from:r.name, rule:r.name, ar:r }, m)));
 // a stratagem's name from any list (its id)
 const dmStratName = id => { for(const f of Object.values(D.factions)) for(const d of Object.values(f.detachments)) for(const s of d.stratagems || []) if(s.id === id) return s.name;
@@ -2167,7 +2167,7 @@ function dmCalc(st, A, au, tg, kind){
   for(const s of inArmy(A, () => allStratagems().filter(s => eligible(s).includes(au)))){
     const at = s.phases.filter(p => PH[p]);
     if(counted.has(s.id) || !at.length) continue;
-    // the unit's own protection is not in this attack
+    // the unit's own protection is not in this attack (def, or the numbers of one: defCalc, defPick)
     if((s.def || s.defCalc || s.defPick) && !s.mod) continue;
     const t = s.phases.includes(st.ph) ? phTurn(s, st.ph) : '';
     const why = !s.phases.includes(st.ph) ? at.map(p => PH[p]).join(' or ') + ' phase only' : st.ph !== 'fight' && t === 'opp' ? 'in the other player’s turn only' : '';
@@ -2266,9 +2266,9 @@ function dmPair(st){
   const me = dmMe(), mine = me.units.find(u => u.id === st.atk) || me.units.find(u => dmArmed(u, 'ranged') || dmArmed(u, 'melee')) || me.units[0] || null;
   return { me, mine, A:me, au:mine, tg:dmTypedVals(st), tu:dmTarget(st), ready:!!mine && (dmArmed(mine, 'ranged') || dmArmed(mine, 'melee')), armed:dmArmed };
 }
-const dmArmed = (u, kind) => !!u && !u.typed && ((kind === 'ranged' ? u.ranged : u.melee) || []).length > 0;
+const dmArmed = (u, kind) => !!u && ((kind === 'ranged' ? u.ranged : u.melee) || []).length > 0;
 // a unit's name, told apart from others of the same name in its list ("Chaos Terminators (2 of 2)")
-const dmName = (u, L) => !u ? '' : u.typed ? 'the target' : unitLabel(u) + (L && !L.typed ? dmTwin(u, L) : '');
+const dmName = (u, L) => !u ? '' : u.typed ? 'the target' : unitLabel(u) + (L ? dmTwin(u, L) : '');
 // what tells a unit from the others of its name in its list: its enhancement, the weapons only it has, its points, how many
 // identical units it stands for ("Chaos Terminators (370 pts, ×2)" and "(380 pts)")
 function dmTwin(u, L){
@@ -3357,7 +3357,7 @@ function dmSetUnit(st, id){
 }
 // a turn starts as the mode given when the unit has weapons for it, else Shoot for a unit with ranged weapons, else Fight
 function dmStart(P, mode){
-  const au = P && P.au, can = m => !au || au.typed || m === 'both' || dmArmed(au, m === 'shoot' ? 'ranged' : 'melee');
+  const au = P && P.au, can = m => !au || m === 'both' || dmArmed(au, m === 'shoot' ? 'ranged' : 'melee');
   return dmModeTurn(DM_MODES.includes(mode) && can(mode) ? mode : au && !dmArmed(au, 'ranged') && dmArmed(au, 'melee') ? 'fight' : 'shoot');
 }
 // a turn stored by the earlier screen (its steps: shoot, charge, fight, back), read as a mode (Shoot and Fight together: Both; a Fight
