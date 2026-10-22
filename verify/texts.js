@@ -940,7 +940,10 @@ for (const fk of FACTIONS) {
       for (const f of FIELDS) {
         if (st[f] == null && !ss.fields[f]) continue;
         count('detachment');
-        const u = su.find(x => x.fields[f] || (/effect section/i.test(x.title) && f === 'effect' && !Object.keys(x.fields).length) || (/target section/i.test(x.title) && f === 'target' && !Object.keys(x.fields).length));
+        // an update titled by its section ("…, When Section", "…, Target Section") with no field labels of its own is that field
+        const u = su.find(x => x.fields[f] || (new RegExp('\\b' + f + ' section', 'i').test(x.title) && !Object.keys(x.fields).length));
+        // "Change 9" to 8"." (Harrying Hounds' Target): the new value is there and the old one is not
+        if (u && !u.fields[f] && checkChangeValue('detachment', army, I, f + ' (Rules Updates)', st[f] || '', u)) continue;
         if (u) { checkUpdate('detachment', army, I, f + ' (Rules Updates)', st[f] || '', u, u.fields[f] ? u.fields[f].join('\n') : undefined); continue; }
         const r = sameField(st[f] || '', ss.fields[f] || []);
         prov.push({ item: army + ' / ' + I, field: f, doc: pack ? pack.d.label : W.d.label, file: pack ? pack.d.file : W.d.file, sha256: pack ? pack.d.sha256 : W.d.sha256, where: sWhere });
