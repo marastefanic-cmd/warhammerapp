@@ -4571,6 +4571,12 @@
   "at": "2026-10-20",
   "why": "NR Options: BMiMA 'Follow Me Ladz (enhancement), Kustom Mega-blasta, Power Klaw, Kustom Force Field (wargear)'; 5x Meganob 'Twin Killsaw'. The gear lines match. Weapon rows: Kustom Mega-blasta and Power Klaw '- Big Mek in Mega Armour'; Twin Killsaw '(x5) - Meganobz'. The weapons list matches."
  },
+ "8131e990fd5798e5": {
+  "verdict": "ok",
+  "by": "review:ck-followup",
+  "at": "2026-10-22",
+  "why": "GW Chaos Knights Faction Pack: all 8 Knight datasheets list 'FACTION: Harbingers of Dread, Super-heavy Walker'; the War Dog sheet (Moirax) lists only 'FACTION: Harbingers of Dread'. Wahapedia: Despoiler/Ruinator/Cerastus sheets show 'ARMY RULES Harbingers of Dread, Super-heavy Walker'; War Dog Brigand/Executioner/Karnivore show only 'Harbingers of Dread' (their other mentions are the rule glossary and Preyslayer's Mantle: 'WAR DOG model only. The bearer has the Super-heavy Walker ability'). New Recruit: infernal-lance's 5 Knights carry 'Super-Heavy Walker' on their Rules line (the Nurglings ally does not); woof-woof's 6 entries (14 War Dogs, enhancements Final Howl and Panoply of the Cursed Knights, no Preyslayer's Mantle) do not. data.js matches: infernal-lance 5/6 units match, woof-woof 0/6. The mark is fair: armyRuleRows still lists the rule with full text and adds 'no unit in this list it applies to' (class na), exactly as for Bondsman; it is left off only the Overview's army-rules lines (pre-existing inertRule filter), and a Preyslayer's Mantle bearer whose Rules line names it would make it apply again."
+ },
  "814ac116a15175da": {
   "verdict": "ok",
   "by": "review:r9-pubstomper",
@@ -5386,6 +5392,12 @@
   "by": "review:r19-fixes",
   "at": "2026-10-21",
   "why": "Both quotes are in their sources: Enraged Behemoths (Wahapedia, Crusher Stampede) \"add 2 to the Objective Control characteristic of models in that unit\", and Singular Purpose \"an Objective Control characteristic of 15\". Core 02.02.01 Modifiers appears only as a cross-reference in rules/core-rules.md, the GW PDF and Wahapedia core, so the note names both results (15 or 17) and picks neither. The one ordering FAQ in the sources (AdMech Faction Pack 1.4, Auto-divinatory Targeting with the Protector Imperative: \"first changed to 3+ ... then improved by 1\") covers only those two rules."
+ },
+ "9721c4c01fd25f1b": {
+  "verdict": "ok",
+  "by": "review:infernal-lance (ambiguous rule)",
+  "at": "2026-10-22",
+  "why": "Sources differ: New Recruit and BSData say \"targets the closest enemy unit\", Wahapedia \"the closest eligible target\"; GW's pack doesn't print it. The app quotes New Recruit's wording, as for every unit ability. It affects WAR DOG models only and this list has none."
  },
  "97554ed70c9ee4a2": {
   "verdict": "ok",
@@ -9100,6 +9112,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "\"At the end of your Movement phase…\""
+ },
+ "ff76ff1551e4121b": {
+  "verdict": "ok",
+  "by": "review:ck-followup",
+  "at": "2026-10-22",
+  "why": "The new line only runs when n.rule is set; the only needs object in data.js with a rule key is Chaos Knights armyRules[1] (needs keys across all data: all, any, none, unless, attached, rule), so every existing needs form (stratagems, detachment rules, shields, guards, mods) behaves as before. It compares each listed rule against u.rules case-insensitively with exact equality (no substring), and guards a missing rules array; this matters because NR/data.js spell it 'Super-Heavy Walker' while the rule is 'Super-heavy Walker'. Over the 14 lists: infernal-lance 5 Knights match, Nurglings not; woof-woof 0; the two Imperial Knights lists' Knights also match but IK's army rules carry no rule-needs so nothing changes there; the other 10 lists have no unit with the rule and no faction using it. Consumers: inertRule(name) finds the CK army rule and is true only for woof-woof, so the Rules tab marks it (still shown), the Overview drops it as it does for other inert rules, unitRules is unaffected for Knights, and the rule's 'Applies to' list (army units matching r.needs) shows the 5 Knights in infernal-lance. No false positives or negatives found."
  },
  "ff976d61f7607f40": {
   "verdict": "ok",
