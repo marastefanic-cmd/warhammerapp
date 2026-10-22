@@ -372,6 +372,8 @@ for (const nu of nrUnits) {
       else { note(tag0, 'ability ' + ab.name + ' has new words: its phase tags and footnotes were not kept'); continue; }
       for (const k of ['damaged', 'ph', 'turn', 'turns', 'def', 'na']) if (pa[k] !== undefined) ab[k] = pa[k];
     }
+    // a hand-written note on a keyword a selection of the unit gives it (Houndpack Lance Character), while the unit still has it
+    if (!u.kwNote && prev.kwNote && /^(.+?) comes? from (.+?) \(/.test(prev.kwNote) && u.models.some(l => l.includes(/^(.+?) comes? from (.+?) \(/.exec(prev.kwNote)[2]))) u.kwNote = prev.kwNote;
     const names = new Set(u.abilities.map(a => a.name));
     for (const k of ['mods', 'aura']) {
       const keep = (prev[k] || []).filter(m => !m.from || names.has(m.from) || D.factions[factionId].armyRules.some(r => r.name === m.from) || detIds.some(id => ((F.detachments[id] || {}).rule || {}).name === m.from));
