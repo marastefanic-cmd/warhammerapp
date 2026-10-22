@@ -2063,6 +2063,16 @@ function dmCalc(st, A, au, tg, kind){
   if(heavyKw) conds.a.push('stationary');
   return { input, R, rules, sit, bands, weapons:chosen, strats, nc, notes, models, tmod, ctx, ticked, groups, gOf, au, tg, kind, conds, cName };
 }
+// a characteristic a rule changes or sets, in words: "+6 A" (a change), "A 10" (a new value)
+const dmSetWords = set => Object.entries(set || {}).map(([k, v]) => /^[+-]/.test(v) ? v + ' ' + k : k + ' ' + v).join(', ');
+// a rule's row in words: its when and its note, with the characteristic it changes (its set: Blitz Dem Gitz!'s +6 A) when its
+// words do not say it: "+6 A vs non-MONSTER/VEHICLE targets, in your Shooting phase", "Possessed Lord (…): A 10 and [DEVASTATING WOUNDS] …"
+function dmRuleWords(when, note, set){
+  const sw = dmSetWords(set), said = ((when || '') + ' ' + (note || '')).toLowerCase();
+  if(!sw || sw.split(', ').every(x => said.includes(x.toLowerCase()))) return (when ? when + ': ' : '') + (note || '');
+  if(/^vs\b/i.test(when || '')) return sw + ' ' + when + (note ? ', ' + note : '');
+  return (when ? when + ': ' : '') + sw + (note ? (/^and\b/i.test(note) ? ' ' : ', ') + note : '');
+}
 // a rule's recorded numbers in words (the part of it the calculator counts)
 function dmCalcWords(e){
   const w = [];
@@ -3038,7 +3048,7 @@ function dmLeverRow(C, x){
   if(x.r){ const r = x.r, title = (r.m.cp ? '<b class="cpb">' + r.m.cp + 'CP</b> ' : '') + dmRuleLink(C, x, r.m.from || '') + (r.help ? ' (' + esc(r.help) + ')' : '');
     const reach = r.e ? C.M.ticked.map(c => [c, dmReach(C.plan.beats[C.plan.k].atk.u, c.it, r.m, r.sc)]) : [];
     const part = reach.length && reach.some(([c, n]) => n < c.n) ? reach.filter(([c, n]) => n > 0).map(([c, n]) => C.M.cName(c) + (n < c.n ? ' ×' + n : '')) : null;
-    const words = (r.m.when ? r.m.when + ': ' : '') + (r.note0 || r.m.note), cw = r.m.calc ? dmCalcWords(r.e) : '';
+    const words = dmRuleWords(r.m.when, r.note0 || r.m.note, r.e && r.e.set), cw = r.m.calc ? dmCalcWords(r.e) : '';
     const counted = cw && !words.toLowerCase().includes(cw.toLowerCase().replace(/ rolls?$/, '')) ? ' · in these numbers: ' + cw : '';
     const one = r.m.oneModel && modelCount(C.plan.beats[C.plan.k].atk.u) > 1 ? ' · one model only: counted for the weapons of one model' : '';
     // a rule that follows another's pick (Murderous Imperative), and the part of a rule a fact of the table switches on (the +1 AP)
