@@ -50,6 +50,12 @@
    "sha256": "18a192a36c22468368d957aac3eb230a40c8f7bbfaefa46372d8918422b0b49a"
   },
   {
+   "id": "pack:chaos-knights",
+   "label": "GW Faction Pack Chaos Knights",
+   "file": "verify/.cache/gw/eng_wh40k_faction_pack_chaos_knights-87ywk2jovh-xk68yzyb18.pdf",
+   "sha256": "28fd9a69ffe7ec8463199e4b5dfda93b6daf30692008fd5cf28bbec4bbfb8acd"
+  },
+  {
    "id": "waha:orks",
    "label": "Wahapedia orks (text)",
    "file": "verify/.cache/waha/orks.txt",
@@ -92,6 +98,12 @@
    "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
   },
   {
+   "id": "waha:chaos-knights",
+   "label": "Wahapedia chaos-knights (text)",
+   "file": "verify/.cache/waha/chaos-knights.txt",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
    "id": "wahahtml:orks",
    "label": "Wahapedia orks",
    "file": "verify/.cache/waha/orks.html",
@@ -132,6 +144,12 @@
    "label": "Wahapedia emperors-children",
    "file": "verify/.cache/waha/emperors-children.html",
    "sha256": "d51c66edf227f9ad1cfeced6f4e3350612211af52461531d224705de499a770b"
+  },
+  {
+   "id": "wahahtml:chaos-knights",
+   "label": "Wahapedia chaos-knights",
+   "file": "verify/.cache/waha/chaos-knights.html",
+   "sha256": "fd1ab9e09637c57491d66c4d6ecbf284358a3d6ad73d5f9af0428acbdcd89a5e"
   },
   {
    "id": "wahahtml:core",
@@ -5306,6 +5324,503 @@
    "sha256": "18a192a36c22468368d957aac3eb230a40c8f7bbfaefa46372d8918422b0b49a"
   },
   {
+   "item": "chaos-knights / detachment:infernal-lance",
+   "field": "name",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Infernal Lance 3DP",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:infernal-lance/rule / text, Unnatural Fortitude (Rules Updates)",
+   "field": "text, Unnatural Fortitude (Rules Updates)",
+   "doc": "pack:chaos-knights",
+   "where": "GW Faction Pack Chaos Knights PDF p25, Rules Updates: INFERNAL LANCE DETACHMENT / Malefic Surge Detachment Rule",
+   "sha256": "28fd9a69ffe7ec8463199e4b5dfda93b6daf30692008fd5cf28bbec4bbfb8acd"
+  },
+  {
+   "item": "chaos-knights / detachment:infernal-lance/enhancement:Knight Diabolus",
+   "field": "pts",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Infernal Lance 3DP",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:infernal-lance/enhancement:Knight Diabolus",
+   "field": "text",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Infernal Lance 3DP",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:infernal-lance/enhancement:Blasphemous Engine",
+   "field": "pts",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Infernal Lance 3DP",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:infernal-lance/enhancement:Blasphemous Engine",
+   "field": "text",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Infernal Lance 3DP",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:infernal-lance/enhancement:Fleshmetal Fusion",
+   "field": "pts",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Infernal Lance 3DP",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:infernal-lance/enhancement:Fleshmetal Fusion",
+   "field": "text",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Infernal Lance 3DP",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:infernal-lance/enhancement:Bestial Aspect",
+   "field": "pts",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Infernal Lance 3DP",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:infernal-lance/enhancement:Bestial Aspect",
+   "field": "text",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Infernal Lance 3DP",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:infernal-lance/stratagem:profane-symbiosis",
+   "field": "when",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Infernal Lance 3DP (PROFANE SYMBIOSIS)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:infernal-lance/stratagem:profane-symbiosis",
+   "field": "target",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Infernal Lance 3DP (PROFANE SYMBIOSIS)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:infernal-lance/stratagem:profane-symbiosis",
+   "field": "effect",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Infernal Lance 3DP (PROFANE SYMBIOSIS)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:infernal-lance/stratagem:profane-symbiosis",
+   "field": "restrictions",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Infernal Lance 3DP (PROFANE SYMBIOSIS)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:infernal-lance/stratagem:hellforged-construction",
+   "field": "when",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Infernal Lance 3DP (HELLFORGED CONSTRUCTION)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:infernal-lance/stratagem:hellforged-construction",
+   "field": "target",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Infernal Lance 3DP (HELLFORGED CONSTRUCTION)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:infernal-lance/stratagem:hellforged-construction / effect (Rules Updates)",
+   "field": "effect (Rules Updates)",
+   "doc": "pack:chaos-knights",
+   "where": "GW Faction Pack Chaos Knights PDF p25, Rules Updates: INFERNAL LANCE DETACHMENT / Hellforged Construction Stratagem, Effect Section",
+   "sha256": "28fd9a69ffe7ec8463199e4b5dfda93b6daf30692008fd5cf28bbec4bbfb8acd"
+  },
+  {
+   "item": "chaos-knights / detachment:infernal-lance/stratagem:corrupting-taint",
+   "field": "when",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Infernal Lance 3DP (CORRUPTING TAINT)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:infernal-lance/stratagem:corrupting-taint",
+   "field": "target",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Infernal Lance 3DP (CORRUPTING TAINT)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:infernal-lance/stratagem:corrupting-taint",
+   "field": "effect",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Infernal Lance 3DP (CORRUPTING TAINT)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:infernal-lance/stratagem:unleash-balefire",
+   "field": "when",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Infernal Lance 3DP (UNLEASH BALEFIRE)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:infernal-lance/stratagem:unleash-balefire",
+   "field": "target",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Infernal Lance 3DP (UNLEASH BALEFIRE)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:infernal-lance/stratagem:unleash-balefire",
+   "field": "effect",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Infernal Lance 3DP (UNLEASH BALEFIRE)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:infernal-lance/stratagem:warp-vision",
+   "field": "when",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Infernal Lance 3DP (WARP VISION)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:infernal-lance/stratagem:warp-vision",
+   "field": "target",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Infernal Lance 3DP (WARP VISION)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:infernal-lance/stratagem:warp-vision",
+   "field": "effect",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Infernal Lance 3DP (WARP VISION)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:infernal-lance/stratagem:diabolic-bulwark",
+   "field": "when",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Infernal Lance 3DP (DIABOLIC BULWARK)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:infernal-lance/stratagem:diabolic-bulwark",
+   "field": "target",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Infernal Lance 3DP (DIABOLIC BULWARK)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:infernal-lance/stratagem:diabolic-bulwark",
+   "field": "effect",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Infernal Lance 3DP (DIABOLIC BULWARK)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:houndpack-lance",
+   "field": "name",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Houndpack Lance 2DP",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:houndpack-lance/rule",
+   "field": "text",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Houndpack Lance 2DP",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:houndpack-lance/enhancement:Preyslayer’s Mantle",
+   "field": "pts",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Houndpack Lance 2DP",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:houndpack-lance/enhancement:Preyslayer’s Mantle",
+   "field": "text",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Houndpack Lance 2DP",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:houndpack-lance/enhancement:Final Howl (Aura)",
+   "field": "pts",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Houndpack Lance 2DP",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:houndpack-lance/enhancement:Final Howl (Aura)",
+   "field": "text",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Houndpack Lance 2DP",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:houndpack-lance/enhancement:Loping Predator",
+   "field": "pts",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Houndpack Lance 2DP",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:houndpack-lance/enhancement:Loping Predator",
+   "field": "text",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Houndpack Lance 2DP",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:houndpack-lance/stratagem:vox-howl",
+   "field": "when",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Houndpack Lance 2DP (VOX-HOWL)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:houndpack-lance/stratagem:vox-howl",
+   "field": "target",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Houndpack Lance 2DP (VOX-HOWL)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:houndpack-lance/stratagem:vox-howl",
+   "field": "effect",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Houndpack Lance 2DP (VOX-HOWL)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:houndpack-lance/stratagem:vox-howl",
+   "field": "restrictions",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Houndpack Lance 2DP (VOX-HOWL)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:houndpack-lance/stratagem:hungry-for-combat",
+   "field": "when",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Houndpack Lance 2DP (HUNGRY FOR COMBAT)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:houndpack-lance/stratagem:hungry-for-combat",
+   "field": "target",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Houndpack Lance 2DP (HUNGRY FOR COMBAT)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:houndpack-lance/stratagem:hungry-for-combat",
+   "field": "effect",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Houndpack Lance 2DP (HUNGRY FOR COMBAT)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:houndpack-lance/stratagem:cunning-hunter",
+   "field": "when",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Houndpack Lance 2DP (CUNNING HUNTER)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:houndpack-lance/stratagem:cunning-hunter",
+   "field": "target",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Houndpack Lance 2DP (CUNNING HUNTER)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:houndpack-lance/stratagem:cunning-hunter",
+   "field": "effect",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Houndpack Lance 2DP (CUNNING HUNTER)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:houndpack-lance/stratagem:animalistic-rage / when (Rules Updates)",
+   "field": "when (Rules Updates)",
+   "doc": "pack:chaos-knights",
+   "where": "GW Faction Pack Chaos Knights PDF p25, Rules Updates: HOUNDPACK LANCE DETACHMENT / Animalistic Rage Stratagem, When Section",
+   "sha256": "28fd9a69ffe7ec8463199e4b5dfda93b6daf30692008fd5cf28bbec4bbfb8acd"
+  },
+  {
+   "item": "chaos-knights / detachment:houndpack-lance/stratagem:animalistic-rage",
+   "field": "target",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Houndpack Lance 2DP (ANIMALISTIC RAGE)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:houndpack-lance/stratagem:animalistic-rage",
+   "field": "effect",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Houndpack Lance 2DP (ANIMALISTIC RAGE)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:houndpack-lance/stratagem:harrying-hounds",
+   "field": "when",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Houndpack Lance 2DP (HARRYING HOUNDS)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:houndpack-lance/stratagem:harrying-hounds / target (Rules Updates)",
+   "field": "target (Rules Updates)",
+   "doc": "pack:chaos-knights",
+   "where": "GW Faction Pack Chaos Knights PDF p25, Rules Updates: HOUNDPACK LANCE DETACHMENT / Harrying Hounds Stratagem, Target Section",
+   "sha256": "28fd9a69ffe7ec8463199e4b5dfda93b6daf30692008fd5cf28bbec4bbfb8acd"
+  },
+  {
+   "item": "chaos-knights / detachment:houndpack-lance/stratagem:harrying-hounds",
+   "field": "effect",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Houndpack Lance 2DP (HARRYING HOUNDS)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:houndpack-lance/stratagem:encircling-pack",
+   "field": "when",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Houndpack Lance 2DP (ENCIRCLING PACK)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:houndpack-lance/stratagem:encircling-pack",
+   "field": "target",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Houndpack Lance 2DP (ENCIRCLING PACK)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:houndpack-lance/stratagem:encircling-pack",
+   "field": "effect",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Houndpack Lance 2DP (ENCIRCLING PACK)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:hunting-warpack",
+   "field": "name",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Hunting Warpack 1DP",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:hunting-warpack/rule",
+   "field": "text",
+   "doc": "pack:chaos-knights",
+   "where": "GW Faction Pack Chaos Knights PDF p3",
+   "sha256": "28fd9a69ffe7ec8463199e4b5dfda93b6daf30692008fd5cf28bbec4bbfb8acd"
+  },
+  {
+   "item": "chaos-knights / detachment:hunting-warpack/enhancement:Soul-Spoor Auspicator",
+   "field": "pts",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Hunting Warpack 1DP",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:hunting-warpack/enhancement:Soul-Spoor Auspicator",
+   "field": "text",
+   "doc": "pack:chaos-knights",
+   "where": "GW Faction Pack Chaos Knights PDF p3",
+   "sha256": "28fd9a69ffe7ec8463199e4b5dfda93b6daf30692008fd5cf28bbec4bbfb8acd"
+  },
+  {
+   "item": "chaos-knights / detachment:hunting-warpack/enhancement:Snarling Rivalry",
+   "field": "pts",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Hunting Warpack 1DP",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / detachment:hunting-warpack/enhancement:Snarling Rivalry",
+   "field": "text",
+   "doc": "pack:chaos-knights",
+   "where": "GW Faction Pack Chaos Knights PDF p3",
+   "sha256": "28fd9a69ffe7ec8463199e4b5dfda93b6daf30692008fd5cf28bbec4bbfb8acd"
+  },
+  {
+   "item": "chaos-knights / detachment:hunting-warpack/stratagem:insensate-bloodthirst",
+   "field": "when",
+   "doc": "pack:chaos-knights",
+   "where": "GW Faction Pack Chaos Knights PDF p3 (INSENSATE BLOODTHIRST)",
+   "sha256": "28fd9a69ffe7ec8463199e4b5dfda93b6daf30692008fd5cf28bbec4bbfb8acd"
+  },
+  {
+   "item": "chaos-knights / detachment:hunting-warpack/stratagem:insensate-bloodthirst",
+   "field": "target",
+   "doc": "pack:chaos-knights",
+   "where": "GW Faction Pack Chaos Knights PDF p3 (INSENSATE BLOODTHIRST)",
+   "sha256": "28fd9a69ffe7ec8463199e4b5dfda93b6daf30692008fd5cf28bbec4bbfb8acd"
+  },
+  {
+   "item": "chaos-knights / detachment:hunting-warpack/stratagem:insensate-bloodthirst",
+   "field": "effect",
+   "doc": "pack:chaos-knights",
+   "where": "GW Faction Pack Chaos Knights PDF p3 (INSENSATE BLOODTHIRST)",
+   "sha256": "28fd9a69ffe7ec8463199e4b5dfda93b6daf30692008fd5cf28bbec4bbfb8acd"
+  },
+  {
+   "item": "chaos-knights / detachment:hunting-warpack/stratagem:leash-of-the-masters",
+   "field": "when",
+   "doc": "pack:chaos-knights",
+   "where": "GW Faction Pack Chaos Knights PDF p3 (LEASH OF THE MASTERS)",
+   "sha256": "28fd9a69ffe7ec8463199e4b5dfda93b6daf30692008fd5cf28bbec4bbfb8acd"
+  },
+  {
+   "item": "chaos-knights / detachment:hunting-warpack/stratagem:leash-of-the-masters",
+   "field": "target",
+   "doc": "pack:chaos-knights",
+   "where": "GW Faction Pack Chaos Knights PDF p3 (LEASH OF THE MASTERS)",
+   "sha256": "28fd9a69ffe7ec8463199e4b5dfda93b6daf30692008fd5cf28bbec4bbfb8acd"
+  },
+  {
+   "item": "chaos-knights / detachment:hunting-warpack/stratagem:leash-of-the-masters",
+   "field": "effect",
+   "doc": "pack:chaos-knights",
+   "where": "GW Faction Pack Chaos Knights PDF p3 (LEASH OF THE MASTERS)",
+   "sha256": "28fd9a69ffe7ec8463199e4b5dfda93b6daf30692008fd5cf28bbec4bbfb8acd"
+  },
+  {
+   "item": "chaos-knights / detachment:hunting-warpack/stratagem:stalking-focus",
+   "field": "when",
+   "doc": "pack:chaos-knights",
+   "where": "GW Faction Pack Chaos Knights PDF p3 (STALKING FOCUS)",
+   "sha256": "28fd9a69ffe7ec8463199e4b5dfda93b6daf30692008fd5cf28bbec4bbfb8acd"
+  },
+  {
+   "item": "chaos-knights / detachment:hunting-warpack/stratagem:stalking-focus",
+   "field": "target",
+   "doc": "pack:chaos-knights",
+   "where": "GW Faction Pack Chaos Knights PDF p3 (STALKING FOCUS)",
+   "sha256": "28fd9a69ffe7ec8463199e4b5dfda93b6daf30692008fd5cf28bbec4bbfb8acd"
+  },
+  {
+   "item": "chaos-knights / detachment:hunting-warpack/stratagem:stalking-focus",
+   "field": "effect",
+   "doc": "pack:chaos-knights",
+   "where": "GW Faction Pack Chaos Knights PDF p3 (STALKING FOCUS)",
+   "sha256": "28fd9a69ffe7ec8463199e4b5dfda93b6daf30692008fd5cf28bbec4bbfb8acd"
+  },
+  {
    "item": "orks / armyRule:Waaagh!",
    "field": "text",
    "doc": "waha:orks",
@@ -5607,6 +6122,69 @@
    "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
   },
   {
+   "item": "chaos-knights / armyRule:Harbingers of Dread",
+   "field": "text",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Army Rules (Harbingers of Dread)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / armyRule:Harbingers of Dread/row:Deathly Terror (Aura)",
+   "field": "text",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Army Rules (Harbingers of Dread)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / armyRule:Harbingers of Dread/row:Despair (Aura)",
+   "field": "text",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Army Rules (Harbingers of Dread)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / armyRule:Harbingers of Dread/row:Doom",
+   "field": "text",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Army Rules (Harbingers of Dread)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / armyRule:Harbingers of Dread/row:Darkness / text",
+   "field": "text",
+   "doc": "pack:chaos-knights",
+   "where": "GW Faction Pack Chaos Knights PDF p25, Rules Updates: ARMY RULES / Harbingers of Dread, ‘Darkness’ Dread ability",
+   "sha256": "28fd9a69ffe7ec8463199e4b5dfda93b6daf30692008fd5cf28bbec4bbfb8acd"
+  },
+  {
+   "item": "chaos-knights / armyRule:Harbingers of Dread/row:Dismay (Aura)",
+   "field": "text",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Army Rules (Harbingers of Dread)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / armyRule:Harbingers of Dread/row:Delirium (Aura)",
+   "field": "text",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Army Rules (Harbingers of Dread)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / armyRule:Harbingers of Dread/row:Dominion",
+   "field": "text",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Army Rules (Harbingers of Dread)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
+   "item": "chaos-knights / armyRule:Super-heavy Walker",
+   "field": "text",
+   "doc": "waha:chaos-knights",
+   "where": "Wahapedia chaos-knights § Army Rules (Super-heavy Walker)",
+   "sha256": "497bf132a254e1f4d4cede1a293b84b66e0ab7eda2a4a4292f995aa150f85b9c"
+  },
+  {
    "item": "shooty / dakkarig-herder / ability:Dreadherder",
    "field": "text",
    "doc": "data.js",
@@ -5821,6 +6399,55 @@
    "field": "text",
    "doc": "data.js",
    "where": "same text as the enhancement Martial Signatum Amplificator (Eradication Cohort) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "infernal-lance / chaos-cerastus-knight-atrapos / ability:Knight Diabolus",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Knight Diabolus (Infernal Lance) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "infernal-lance / chaos-cerastus-knight-lancer / ability:Blasphemous Engine",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Blasphemous Engine (Infernal Lance) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "infernal-lance / knight-despoiler / ability:Bestial Aspect",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Bestial Aspect (Infernal Lance) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "infernal-lance / knight-ruinator-fleshmetal-fusion / ability:Fleshmetal Fusion",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Fleshmetal Fusion (Infernal Lance) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "woof-woof / war-dog-brigand-final-howl-aura / ability:Final Howl (Aura)",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Final Howl (Aura) (Houndpack Lance) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "woof-woof / war-dog-executioner / ability:Snarling Rivalry",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Snarling Rivalry (Hunting Warpack) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "woof-woof / war-dog-karnivore-panoply-of-the-cursed-knights / ability:Panoply of the Cursed Knights",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Panoply of the Cursed Knights (Houndpack Lance) (whose source is recorded under that item)",
    "sha256": null
   },
   {
