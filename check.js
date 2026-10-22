@@ -103,6 +103,8 @@ function check(file){
           else if(w.group) P(where, 'mod weapon', m.weapon, 'has several profiles; set is ignored');
         }
       }
+      // kwOnly: keywords of only some models; each one is a keyword of the unit
+      for(const k of Object.keys(u.kwOnly || {})) if(!u.kw.includes(k)) P(where, 'kwOnly names a keyword the unit does not have:', k);
       // gear: one list per models line; names must be the unit's weapons, and every weapon carried
       if(u.gear){
         if(u.gear.length !== u.models.length) P(where, 'gear has', u.gear.length, 'lines but models has', u.models.length);

@@ -16,6 +16,8 @@
      packDatasheet  abilities of units whose datasheet a Faction Pack prints (Knight Destrier, Defiler)
      noteQuote      every quotation (“…”) inside an app note (army/detachment rule, stratagem, ability, a stratagem's shield line), word for word in a
                     source or in the verified text of the item the note is on (the note's own words are judgements: helpers.js)
+   A line marked "*Wahapedia core rules (…): …*" (a sentence GW's Core Rules PDF does not print) is checked word for word in
+   Wahapedia's core rules only.
    Lines the app marks as its own ("*App note, not rules text: …*") are not checked; they are listed in out/texts.json
    (appNotes). Any other line of a verbatim field that is in no source is a failure (also listed: notInAnySource).
 
@@ -334,6 +336,8 @@ function classify(line) {
   if ((m = /^\*Wahapedia FAQ:\s*(.*)\*$/.exec(t))) return { kind: 'wfaq', body: m[1] };
   if ((m = /^\*Wahapedia ([^:]*?)errata \(([^)]*)\):\s*(.*)\*$/.exec(t))) return { kind: 'werrata', body: m[3], ref: m[2] };
   if ((m = /^\*FAQ \(Faction Pack[^)]*\):\s*(.*)\*$/.exec(t))) return { kind: 'packfaq', body: m[1] };
+  // a line only Wahapedia's core rules print, marked as such ("*Wahapedia core rules (not in GW’s Core Rules PDF, 01-06): …*")
+  if ((m = /^\*Wahapedia core rules \(([^)]*)\):\s*(.*)\*$/.exec(t))) return { kind: 'wcore', body: m[2], ref: m[1] };
   if ((m = /^\*\*(?:(\d\d\.\d\d(?:\.\d\d)?) )?([^*]+?) \(app\):\*\*\s*(.*)$/.exec(t))) return { kind: 'appsec', num: m[1] || '', title: m[2], body: m[3] };
   if ((m = /^\*\*(\d\d\.\d\d(?:\.\d\d)?) ([^*]+?):\*\*\s*(.*)$/.exec(t))) return { kind: 'sec', num: m[1], title: m[2], body: m[3] };
   return { kind: 'text', body: t };
@@ -383,7 +387,8 @@ function checkLines(cat, army, unit, field, text, gwDocs, wahaDocs, opts = {}) {
     if (c.kind === 'appnote') { appWritten.push({ army, unit, field, text: raw.trim(), marked: true }); continue; }
     if (opts.special) { const sp = opts.special(raw); if (sp) { if (sp.ok) { if (sp.at) provRow(item, field, sp.at.d, sp.at.off, { text: raw.trim().slice(0, 80), how: sp.how }); } else fail(cat, army, unit, field, raw.trim(), sp.source, sp.where || ''); continue; } }
     let docs = gwDocs, less = wahaDocs, parts = [c.body];
-    if (c.kind === 'wfaq') {
+    if (c.kind === 'wcore') { docs = WAHA_CORE; less = null; }
+    else if (c.kind === 'wfaq') {
       docs = wahaDocs; less = null;
       const q = /^(.*?\?)\s+(.*)$/.exec(c.body);
       parts = q ? [q[1], q[2]] : [c.body];

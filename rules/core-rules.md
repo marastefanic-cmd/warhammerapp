@@ -32,6 +32,8 @@ SEE ALSO
 - All Types of Model 01.02.11
 - Replacing One Model with Another 01.02.12
 - Frame 17.02
+
+#### FAQ
 Q: | If a rule’s effect lasts until the end of a specific part of the battle (e.g. until the end of the phase, until the end of the turn), is that rule still in effect at the end of that part of the battle?
 A: |
 Yes. For example, if an ability gave a unit +1 **OC** until the end of the turn, at the end of the turn, that unit would still have +1 **OC**. That unit would not have +1 **OC** at the start of the next turn.
@@ -93,6 +95,8 @@ SEE ALSO
 - Battle-shock Test 01.07.02
 BATTLEFIELD MORALE
 The morale and organisation of troops can waver and break **during battle**. This is checked using battle-shock rolls, most commonly in the Command phase. Failing such a roll represents the unit’s courage faltering due to taking casualties or through other disruption, reducing its battlefield effectiveness. Similarly, some rules will require you to check a unit’s readiness by making a leadership roll.
+
+#### FAQ
 Q: | If a unit has a rule that allows it to start an action when it is battle-shocked can it also continue doing that action if it becomes **battle-shocked** after starting an **action**?
 A: |
 Yes
@@ -126,6 +130,8 @@ PROFILES AND WEAPONS
 - Full Wounds Remaining 02.02.05
 - Characteristic Modifiers & Modified Characteristics 02.02.06
 - Destroyed 05.04.04
+
+#### FAQ
 Q: | My unit has access to a rule that changes the Damage characteristic of an incoming attack to 0. When such an attack is allocated to a model in that unit, is the Damage changed before or after **save rolls**?
 A: |
 After.
@@ -155,6 +161,8 @@ Weapons have the following characteristics:
 **Damage (D):** The amount of damage inflicted by an attack.
 SEE ALSO
 - Weapons With No Strength 02.04.01
+
+#### FAQ
 Q: | My rule says that "this units ranged attacks have +1 **A**", do each of my attacks get an extra attack dice?
 A: |
 No, it increases the **A** characteristics of the unit's ranged weapons by 1.
@@ -164,6 +172,8 @@ Datasheets have a list of keywords, separated into faction keywords and other ke
 Some rules are linked to one or more keywords. For example, a rule might say that it applies to INFANTRY units. This means it only applies to units that have the INFANTRY keyword. Singular and plural instances of the same keyword function in the same way.
 SEE ALSO
 - Using Keywords & Mixed Keywords in Units 02.05.01
+
+#### FAQ
 Q: | Do rules that affect a keyword include multi-word keywords that contain that keyword? For example, would rules that affect COMMISSAR units affect a unit that has the COMMISSAR GRAVES keyword?
 A: |
 No.
@@ -173,6 +183,8 @@ This section details the number and types of models in the unit. Each of those m
 SEE ALSO
 - Bearer 02.06.01
 - Unit’s Equipment 02.06.02
+
+#### FAQ
 Q: | The Munitorium Field Manual shows my unit can attach to different units then are on it's datasheet, which do I use?
 A: |
 Use the Munitorium Field Manual.
@@ -265,6 +277,8 @@ WHAT IS COHERENCY?
 **Coherency** prevents models in the same unit from becoming too separated from each other while on the battlefield, ensuring they are set up and end every kind of move as a single group.
 COHERENCY
 Every model in this unit is within 2" of at least one other model in its unit, and every model is within 9" of every other model in its unit. This unit is therefore in **coherency**.
+
+#### FAQ
 Q: | Do models destroyed when a unit is out of **coherency** count for mission objectives?
 A: |
 Yes.
@@ -286,6 +300,8 @@ WHAT IS ENGAGEMENT?
 While opposing models are within each other’s **engagement range**, they are able to fight in vicious melee, so unless they are seeking to make melee attacks, models should keep out of their foes’ reach.
 ENGAGEMENT
 These two units have at least one model within 2" of the opposing unit, and are therefore **engaged** with each other.
+
+#### FAQ
 Q: | Does my model or unit become engaged while moving through a enemy units engagement range during a move?
 A: |
 No
@@ -335,6 +351,8 @@ SEE ALSO
 - Selecting Targets 04.02.01
 - Against An Attack 04.02.02
 - Single Target 04.02.03
+
+#### FAQ
 Q: | When selecting a target unit can the enemy model that is **visible** to my model and the enemy model that is in range of my model’s weapon be different enemy models in the same unit?
 A: |
 Yes
@@ -363,6 +381,8 @@ SEE ALSO
 - Shot 04.03.04
 - Fought 04.03.05
 - Finished Making Its Attacks 04.03.06
+
+#### FAQ
 Q: | My rule says that "this units ranged attacks have +1 **A**", do each of my attacks get an extra attack dice?
 A: |
 No, it increases the **A** characteristics of the unit's ranged weapons by 1.
@@ -405,6 +425,8 @@ Equal to or greater than that attack’s **BS**/**WS** characteristic | HIT
 Any other result | FAILS
 CRITICAL HITS
 **Critical hits** are still hits. In addition, other rules can be triggered by a **critical hit**, such as [LETHAL HITS] (24).
+
+#### FAQ
 Q: | My attack has a rule that means it results in a **critical hit** on a **hit roll** of 4+. Does this work when snap shooting?
 A: |
 Unless otherwise stated, no: when **snap shooting**, each attack only hits on a roll of 6.
@@ -448,6 +470,8 @@ The opposing player resolves the following sequence:
 - No CHARACTER group can be earlier in the allocation order than a non-CHARACTER group.
 - CHARACTER groups containing a model that has lost one or more wounds must be earlier in the allocation order than CHARACTER groups containing no wounded models.
 - **Make Save Rolls:** The opposing player makes one **save roll** for each attack that wounded the target by rolling one D6.
+
+#### FAQ
 Q: | When declaring the allocation order of groups in my unit I have more than one non-CHARACTER groups that contain a model with a missing wound, how must I select the order?
 A: |
 Those groups can be selected in an order of your choosing but must be in an order that makes them come before any non-CHARACTER groups that do not contain a model with a missing wound.
@@ -481,6 +505,8 @@ Any other result | INFLICTS DAMAGE
 - **Resolve Damage:** If that attack inflicts damage, the selected model loses a number of wounds equal to that attack’s **D** characteristic. If this reduces that model’s remaining wounds to 0 or fewer, it is **destroyed**.
 CURRENT ALLOCATION GROUP
 The first group in the allocation order begins as the current group. Once all models in an allocation group are **destroyed**, the next group in the allocation order becomes the current one.
+
+#### FAQ
 Q: | Fight On Death (05.04.05) requires models awaiting such an ability to stay on the battlefield until their unit has attacked (or until the end of the phase). How do these models function while this is the case?
 A: |
 Models awaiting a Fight On Death ability are still present on the battlefield for all rules purposes. This includes (but is not limited to) the following regarding such models:
@@ -579,6 +605,8 @@ Unit Visible
 If one or more models in a unit are **visible** to the observing model, that unit is **visible**.
 Unit Fully Visible
 If every model in a unit is **fully visible** to the observing model, that unit is **fully visible**. When determining this, the observing model can see through other models in that unit.
+
+#### FAQ
 Q: | When checking **line of sight** from one model to another, is this drawn between the bases of those models, or between any part of them?
 A: |
 **Line of sight** is drawn from any part of the observing model to any part of the model being observed.
@@ -606,12 +634,16 @@ MORTAL WOUNDS AND NORMAL DAMAGE
 When resolving **attack dice**, if those attacks inflict a mixture of both **mortal wounds** and normal damage, resolve all of the normal damage first, then resolve all of the **mortal wounds**.
 SEE ALSO
 - Normal Damage 06.02.01
+
+#### FAQ
 Q: | I have a rule that triggers when a mortal wound is allocated to a model, when does this happen?
 A: |
 When you select a model in the **Select Model step** of **Mortal Wounds** (06.02).
 
 ### Hazard Rolls 06.03
 To make a **hazard roll** for a unit, roll one D6: on a 1-2, that roll fails and that unit suffers 1 mortal wound, or 3 **mortal wounds** instead if each model in that unit is a MONSTER/VEHICLE model. If more than one **hazard roll** is required for a unit, make all of those rolls simultaneously.
+
+#### FAQ
 Q: | I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons?
 A: |
 No, you allocate the **mortal wounds** to the unit as per **Mortal Wounds** (06.02). (This represents Bob the guardsmen picking up his fallen squad mates plasma gun or that the twisting power of James the Chaos Sorcerer pulling his followers into the warp.)
@@ -634,6 +666,8 @@ Each battle round is resolved by following these steps:
 ### 1. Start of Battle Round 07.01
 At the start of the battle round, players resolve rules that are triggered at the start of the battle round, before progressing to player turns.
 When a rule states that 'At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.' you do not gain the 1CP while your WARLORD is **destroyed**.
+
+#### Errata
 CP Generated by a Warlord
 When a rule states that 'At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.' you do not gain the 1CP while your WARLORD is **destroyed**.
 
@@ -783,14 +817,14 @@ FALL-BACK MOVE09.07
 **ELIGIBLE IF:** Your unit is **engaged**.
 **EFFECT:** Your unit moves as described in Moving (03).
 **BEFORE MOVING:** Select fall-back mode:
-- If your unit is not battle-shocked, you can select this mode.
-- Otherwise, you must select this mode. Make a **hazard roll** for each model in your unit (06.03).
+- Ordered Retreat: If your unit is not battle-shocked, you can select this mode.
+- Desperate Escape: Otherwise, you must select this mode. Make a **hazard roll** for each model in your unit (06.03).
 **WHILE MOVING:**
-- Each model that is moved can be moved through enemy models.
+- Desperate Escape: Each model that is moved can be moved through enemy models.
 **AFTER MOVING:**
 - Your unit must be unengaged.
 - Until the end of the turn, unless otherwise stated, your unit is not eligible to shoot, **declare a charge** or start an action.
-- If your unit is not **battle-shocked**, you must make a **battle-shock roll** for your unit (01.07).
+- Desperate Escape: If your unit is not **battle-shocked**, you must make a **battle-shock roll** for your unit (01.07).
 
 #### Desperate Escape 09.07.01
 If a **stratagem** or ability forces a unit to make a Desperate Escape test, that unit:
@@ -835,6 +869,8 @@ SEE ALSO
 - Actions 16.00
 - Shooting at Engaged Monsters and Vehicles 17.03
 - Terrain and Visibility 13.07
+
+#### FAQ
 Q: | Can I select a unit to shoot or fight if it doesn’t have melee or ranged weapons?
 A: |
 Yes, it just makes no attacks and then the **fight type** or **shoot type** is resolved.
@@ -902,6 +938,8 @@ Note that, in the absence of modifiers to the **charge roll**, a result of 2 (a 
 SEE ALSO
 - Target No Longer Eligible or Viable 04.03.03
 - Failed Charges 11.02.01
+
+#### FAQ
 Q: | When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)?
 A: |
 Yes
@@ -931,6 +969,8 @@ These units are both within 7", so can be selected as **charge targets**. The ch
 
 #### Fight Phase
 12
+
+#### FAQ / Errata
 FAQ
 Q: | If a rule modifies how far a unit or model can move during a pile-in move or consolidation move does it also change the distance of the target units?
 A: |
@@ -996,6 +1036,8 @@ After resolving a fight in the Resolve Remaining Combats step, if there are one 
 **Fight types** are marked with this icon.
 SEE ALSO
 - Eligible to fight, but unable to fight 12.04.01
+
+#### FAQ
 Q: | Can I select a unit to shoot or fight if it doesn’t have melee or ranged weapons?
 A: |
 Yes, it just makes no attacks and then the **fight type** or **shoot type** is resolved.
@@ -1026,26 +1068,17 @@ CONSOLIDATION MOVE12.08
 **ELIGIBLE IF:** It is the Fight phase and your unit was eligible to fight this phase.
 **EFFECT:** Your unit moves as described in Moving (03).
 **BEFORE MOVING:** Select **consolidation mode**:
-- 
-If your unit is engaged, you must select this mode and select every enemy unit it is **engaged** with.
-- 
-Otherwise, if your unit is within 3" of one or more enemy units, you must select this mode and select one or more of those enemy units.
-- 
-Otherwise, if your unit is within 3" of one or more objectives, you must select this mode and select one of those **objectives**.
+- Ongoing Consolidation: If your unit is engaged, you must select this mode and select every enemy unit it is **engaged** with.
+- Engaging Consolidation: Otherwise, if your unit is within 3" of one or more enemy units, you must select this mode and select one or more of those enemy units.
+- Objective Consolidation: Otherwise, if your unit is within 3" of one or more objectives, you must select this mode and select one of those **objectives**.
 **WHILE MOVING:**
-- 
-Models in base-contact with one or more enemy models cannot be moved. Each model that is moved must end its move closer to the closest selected enemy unit, and **engaged** with it if possible.
-- 
-Each model that is moved must end its move closer to the closest selected enemy unit, and **engaged** with it if possible.
-- 
-Each model that is moved must end its move within range of the selected **objective** if possible, or closer to it if not.
+- Ongoing Consolidation: Models in base-contact with one or more enemy models cannot be moved. Each model that is moved must end its move closer to the closest selected enemy unit, and **engaged** with it if possible.
+- Engaging Consolidation: Each model that is moved must end its move closer to the closest selected enemy unit, and **engaged** with it if possible.
+- Objective Consolidation: Each model that is moved must end its move within range of the selected **objective** if possible, or closer to it if not.
 **AFTER MOVING:**
-- 
-Each model that started this move **engaged** with an enemy unit must still be **engaged** with that enemy unit. If one or more enemy units **engaged** with your unit have not been **selected to fight** this phase, your opponent must select each of those units, one at a time; when each is selected, it becomes **eligible to fight** and is **selected to fight** (12.04).
-- 
-Your unit must be **engaged** with all of the selected enemy units. If one or more enemy units **engaged** with your unit have not been **selected to fight** this phase, your opponent must select each of those units, one at a time; when each is selected, it becomes **eligible to fight** and is **selected to fight** (12.04).
-- 
-Your unit must be **unengaged** and within range of the selected **objective**.
+- Ongoing Consolidation: Each model that started this move **engaged** with an enemy unit must still be **engaged** with that enemy unit. If one or more enemy units **engaged** with your unit have not been **selected to fight** this phase, your opponent must select each of those units, one at a time; when each is selected, it becomes **eligible to fight** and is **selected to fight** (12.04).
+- Engaging Consolidation: Your unit must be **engaged** with all of the selected enemy units. If one or more enemy units **engaged** with your unit have not been **selected to fight** this phase, your opponent must select each of those units, one at a time; when each is selected, it becomes **eligible to fight** and is **selected to fight** (12.04).
+- Objective Consolidation: Your unit must be **unengaged** and within range of the selected **objective**.
 NEW FOES TO FACE
 While using the **engaging consolidation** mode, your unit can end its **consolidation move engaged** with enemy units that have not yet fought this phase. If so, each of those enemy units will have an opportunity to fight your unit, so think carefully about how aggressively you want to move your unit using this mode.
 
@@ -1068,6 +1101,8 @@ Before the battle, place a selection of terrain features on the battlefield usin
 - Place one **terrain feature** directly on the battlefield.
 - Place two or more **terrain features** directly on the battlefield in such a way that together they define the boundary of an area.
 In each case, the area of the battlefield occupied by that boundary or **terrain feature** is known as a **terrain area**. A mission’s deployment map may define the location and dimensions of each **terrain area**. Otherwise, players must agree on this before the battle.
+
+#### FAQ
 Q: | Are models that are within the boundary of a terrain area, but not on the ground floor of a **terrain area** (e.g. overhanging parts of FRAME VEHICLES or models on terrain features that are within that **terrain area**) within that **terrain area**?
 A: |
 Yes
@@ -1143,6 +1178,8 @@ Each time a ranged attack targets a unit, if every model in that unit meets one 
 - That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area.
 - That model is not fully visible to the attacking model due to one or more intervening **terrain features** and/or one or more intervening **obscuring terrain areas** (see below).
 Each time a ranged attack targets a unit that has the **benefit of cover** against it, worsen the **BS** characteristic of that attack by 1.
+
+#### FAQ
 Q: | When my unit shoots at another unit, how does it work if **some** models in the target unit are **fully visible** to **some** models in my unit, while others are within a terrain area/not **fully visible**?
 A: |
 For each attacking model in your unit, determine whether the target unit has the **benefit of cover**, as described in Terrain and Visibility. In this scenario, the target unit will likely have the **benefit of cover** against some of the attacking models, but not all.
@@ -1153,6 +1190,8 @@ A model is **hidden** while all of the following apply to it:
 - That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area that contains one or more **light/dense terrain features**.
 - That model’s unit did not make one or more ranged attacks during this turn or during the previous turn.
 While a model is **hidden**, it can only be visible to enemy models that are within its **detection range**. Unless otherwise stated, a model’s **detection range** is 15".
+
+#### Errata
 13.09 - Change to First Bullet Point
 Change to: ‘That model has the INFANTRY/BEASTS/SWARM keyword and is within a **terrain area** that contains one or more **light/dense terrain features**.’
 
@@ -1189,6 +1228,8 @@ Units **A** and **C** are **visible** to each other, because even though this **
 
 ### Objectives
 14
+
+#### FAQ
 Q: | If a rule refers to an ‘objective marker’, does this mean an ‘**objective**’?
 A: |
 Yes (excluding rules in the Core Rules)'.
@@ -1196,6 +1237,8 @@ Yes (excluding rules in the Core Rules)'.
 ### Terrain Objectives 14.01
 If a mission uses **objectives**, it will state where they are located on the battlefield. Typically, your mission will have a deployment map showing several points where **objectives** should be placed. The location of each point should coincide with a **terrain area** (13.01); that **terrain area** is the **objective**, and is called a **terrain objective**.
 When measuring distances to and from an **objective**, measure to and from the closest part of it.
+
+#### FAQ
 Q: | Are models that are within the boundary of a terrain area, but not on the ground floor of a **terrain area** (e.g. overhanging parts of FRAME VEHICLES or models on terrain features that are within that **terrain area**) within that **terrain area**?
 A: |
 Yes
@@ -1212,6 +1255,8 @@ At the end of each phase and turn, to determine a player’s **level of control*
 While one or more units from a player’s army are within range of an **objective** that player controls, for each of those units that contains one or more models with an **OC** characteristic of 1 or more, that unit is said to be controlling that **objective**.
 HOLD AT ALL COSTS
 Some units have abilities that are triggered when they control an **objective**, or when they **secure** an **objective** for your army.
+
+#### FAQ
 Q: | When determining control over an objective, can the same model’s **OC** count towards more than one **objective** that model is within range of?
 A: |
 Yes.
@@ -1227,6 +1272,8 @@ At the end of each phase and turn, the first thing players do (before any other 
 
 ### Secured Objectives 14.03
 Some rules allow an **objective** to be **secured** by a player’s army. When an **objective** is **secured** by a player’s army, that **objective** remains under their control – even once they no longer have any units within range of it – until their opponent’s **level of control** over that **objective** is greater than theirs at the end of a phase.
+
+#### FAQ
 Q: | If my unit has taken control of an **objective** at the end of my movement phase and that unit has as an ability that **secures** an objective they control, can they **secure** that objective?
 A: |
 Yes
@@ -1250,6 +1297,8 @@ battle-shocked, so the **OC** characteristic of all of its models is ‘-’.
 
 ### Stratagems
 15
+
+#### FAQ
 Q: | Can I use the Insane Bravery** stratagem** on a battle-shocked unit?
 A: |
 No, as a unit’s controlling player cannot target that unit with **stratagems** (01.07).
@@ -1274,6 +1323,8 @@ SEE ALSO
 - Affected By A Stratagem 15.01.02
 - Stratagem Definitions 15.01.03
 Some **stratagems** feature optional conditions that carry on additional CP cost. This can depend on the effect you select (see HEROIC INTERVENTION stratagem for example) or other variables such os the keywords of the unit being targeted.
+
+#### FAQ
 Q: | After using an ability that increases the CP cost of a stratagem, must my opponent continue to use the selected **stratagem** at the increased cost if they have the necessary CP available?
 A: |
 Yes.
@@ -1330,6 +1381,8 @@ Core Stratagem
 - Select one EXPLOSIVES/GRENADES model in your unit.
 - Select one **unengaged** enemy unit within 8" of and visible to that model.
 - Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
+
+#### Errata
 Grenades Stratagem
 The **Grenade Stratagem** is the same as the **Explosives stratagem**.
 CRUSHING IMPACT15.06
@@ -1341,6 +1394,8 @@ Core Stratagem
 - Select one enemy unit engaged with your unit.
 - Select one model in your unit **engaged** with that enemy unit.
 - Roll a number of D6 equal to the **T** characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 **mortal wound** (to a maximum of 6 **mortal wounds** per unit).
+
+#### Errata
 Tank Shock Stratagem
 The **Tank Shock Stratagem** is the same as the **Crushing Impact stratagem**.
 RAPID INGRESS15.07
@@ -1376,9 +1431,9 @@ Core Stratagem
 **WHEN:** End of your opponent’s Charge phase.
 **TARGET:** One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
 **EFFECT: Resolve a charge** with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
-- When selecting **charge targets**, you can only select enemy units that made a charge move this phase and are within the **maximum distance**.
+- Leap to Defend: When selecting **charge targets**, you can only select enemy units that made a charge move this phase and are within the **maximum distance**.
 +1CP
-- 
+- Into the Fray:
 - When making the **charge roll**, if the result is greater than 6 (after modifiers), change it to 6.
 - When selecting **charge targets**, you can select any enemy units that are within 6" of your unit and within the **maximum distance**.
 COUNTEROFFENSIVE15.12
@@ -1401,6 +1456,8 @@ Some rules allow units to perform **actions**. Each **action** states:
 - Any additional restrictions that may apply.
 WHERE TO FIND ACTIONS
 The **actions** players can use can be found in other publications such as mission packs. All players can use **core actions**, while other **actions** may have restrictions such as **army faction**.
+
+#### FAQ
 Q: | If a unit has a rule that allows it to start an action when it is battle-shocked can it also continue doing that action if it becomes **battle-shocked** after starting an **action**?
 A: |
 Yes
@@ -1432,6 +1489,8 @@ Example **action** for illustrative purposes only.
 
 ### Moving Monsters and Vehicles 17.01
 Each time you make a normal or advance move with a unit, MONSTER/VEHICLE models in that unit can be moved through friendly and enemy models (excluding other MONSTER/VEHICLE models).
+
+#### FAQ
 Q: | While making a move type other than a normal**/**advance move, can my MONSTER/VEHICLE unit move through friendly units?
 A: |
 Yes.
@@ -1439,6 +1498,8 @@ Yes.
 ### Frame 17.02
 Some models do not have a base; many of these are MONSTER/VEHICLE models. Such models have the FRAME keyword, as do some other large models. Whenever a rule refers to a model’s position in relation to anything else on the battlefield (e.g. when measuring distances), if that model has the FRAME keyword, unless otherwise stated, measure to and from the closest point on that model (so not necessarily from its base, if it has one).
 When rotating a FRAME model as part of a move, if that model does not have a base, turn it any amount around its central axis, while keeping it upright.
+
+#### FAQ
 Q: | Are models that are within the boundary of a terrain area, but not on the ground floor of a **terrain area** (e.g. overhanging parts of FRAME VEHICLES or models on terrain features that are within that **terrain area**) within that **terrain area**?
 A: |
 Yes
@@ -1450,6 +1511,8 @@ SHOOTING WHILE ENGAGED WITH MONSTERS/VEHICLES
 A unit that is **engaged** with an enemy MONSTER/VEHICLE unit is still not eligible to shoot, and so cannot make ranged attacks against that MONSTER/VEHICLE unit, unless that unit is **eligible to shoot** while **engaged** (e.g. because it is using **close-quarters shooting**).
 SEE ALSO
 - Shooting While Engaged With Monsters/Vehicles 17.03.01
+
+#### Errata
 17.03 - Change to First Sentence
 Add the following to the first sentence: ‘(excluding attacks made with [BLAST] weapons)’.
 ENGAGED MONSTERS/VEHICLES – SHOOTING
@@ -1462,6 +1525,8 @@ This INFANTRY unit is **engaged**, but can shoot at the VEHICLE using **close-qu
 
 #### Transports
 18
+
+#### FAQ / Errata
 FAQ
 Q: | Can a unit that used the rapid disembark mode this turn (e.g. using a Trukk’s Pilin’ Out ability) be targeted with the Heroic Intervention** stratagem**?
 A: |
@@ -1487,6 +1552,8 @@ Once the first battle round has started, a friendly unit can embark within a fri
 When a unit embarks, the active player removes that unit from the battlefield and places it to one side – it is now embarked within that TRANSPORT and is not on the battlefield.
 SEE ALSO
 - Not on the Battlefield 01.02.04
+
+#### FAQ
 Q: | Do a unit's abilities continue to function while they are embarked within a TRANSPORT?
 A: |
 Yes, within the restrictions specified by the ability itself. Embarked units are Not On The Battlefield (01.02.04), so any ability requiring visibility or measurement to another unit will fail.
@@ -1514,24 +1581,16 @@ DISEMBARK MOVE18.04
 - That TRANSPORT has not made an advance or fall-back move this phase.
 **EFFECT:** Your unit is set up as described in Set Up (03.02).
 **BEFORE MOVING:** Select **disembark mode**:
-- 
-If that TRANSPORT made a normal or ingress move this phase, you must select this mode.
-- 
-Otherwise, If that TRANSPORT remained stationary or has not yet been **selected to move** this phase, and if you can set up your unit as described below, you must select this mode.
-- 
-Otherwise, you must select this mode. Make a hazard roll for each model in your unit.
+- Rapid Disembark: If that TRANSPORT made a normal or ingress move this phase, you must select this mode.
+- Tactical Disembark: Otherwise, If that TRANSPORT remained stationary or has not yet been **selected to move** this phase, and if you can set up your unit as described below, you must select this mode.
+- Combat Disembark: Otherwise, you must select this mode. Make a hazard roll for each model in your unit.
 **WHILE MOVING:** Set up each model in your unit wholly within the **set-up distance** of that TRANSPORT.
-- 
-If that TRANSPORT made an **ingress move** this turn, each model must follow the same rules that TRANSPORT had to follow while resolving that move.
-- 
-Each model can be set up engaged with one or more enemy units that TRANSPORT is **engaged** with.
+- Rapid Disembark: If that TRANSPORT made an **ingress move** this turn, each model must follow the same rules that TRANSPORT had to follow while resolving that move.
+- Combat Disembark: Each model can be set up engaged with one or more enemy units that TRANSPORT is **engaged** with.
 **AFTER MOVING:**
-- 
-Until the end of the turn, your unit is not eligible to declare a charge.
-- 
-Select your unit to make a normal or **advance move**.
-- 
-Your unit is battle-shocked and, until the end of the turn, it is not **eligible to declare a charge**.
+- Rapid Disembark: Until the end of the turn, your unit is not eligible to declare a charge.
+- Tactical Disembark: Select your unit to make a normal or **advance move**.
+- Combat Disembark: Your unit is battle-shocked and, until the end of the turn, it is not **eligible to declare a charge**.
 RAPID DISEMBARK
 When a unit uses the **rapid disembark** mode after its TRANSPORT makes an **ingress move**, the models must follow the same rules and restrictions as that TRANSPORT did. For example, if that TRANSPORT had to be set up more than 8" from all enemy units and not within your opponent’s deployment zone, the same applies to the disembarking unit.
 EMERGENCY DISEMBARK MOVE18.05
@@ -1557,6 +1616,8 @@ SHOCK DISEMBARK MOVE18.07
 **EFFECT:** Set up as described in Set Up (03.02).
 **WHILE MOVING:** Set up each model wholly within the **set-up distance** of that TRANSPORT.
 **AFTER MOVING:** Your unit is not **eligible to declare a charge** until the end of the turn.
+
+#### FAQ
 Q: | If a unit makes any **disembark move** in a turn (i.e. Disembark move, Emergency Disembark move etc.) has it disembarked that turn?
 A: |
 Yes.
@@ -1572,6 +1633,8 @@ Before the battle, in the Muster Armies step, for each **leader** and **support*
 Unless otherwise stated, each **bodyguard** unit can only have one **leader** unit and one **support** unit attached to it.
 SEE ALSO
 - Attached Units After Their Bodyguard Unit is Destroyed 19.01.01
+
+#### FAQ
 Q: | The Munitorium Field Manual shows my unit can attach to different units then are on it’s datasheet, which do I use?
 A: |
 Use the Munitorium Field Manual.
@@ -1583,6 +1646,8 @@ Rules that are triggered when a unit is destroyed are only triggered when the la
 ### Keywords in Attached Units 19.03
 An attached unit has all of the keywords of all of its component units. As such, an **attached** unit is affected by any rule that applies to units with any of those keywords. Note that models in an **attached** unit do not gain the keywords of other models in that unit that they do not already have. Remember that attacks target units, not models.
 **Example:** An **attached** unit contains a **leader** model with the PSYKER keyword. While that model is part of that unit, that unit has the PSYKER keyword, even if the **bodyguard** models do not have that keyword. If that unit is attacked by a weapon with the [ANTI-PSYKER 4+] ability, any unmodified wound roll of 4+ made against that unit is a **critical wound**, even if the attack itself is not allocated to that **leader** model.
+
+#### FAQ
 Q: | Units have all the keywords of all their models, and **attached** units have all the keywords of all of their component units. How are **destroyed** models taken into account for these purposes?
 A: |
 These statements are only true so long as the models possessing those keywords remain part of the unit; **destroyed** models do not contribute their keywords to their prior unit.
@@ -1603,6 +1668,8 @@ SEE ALSO
 - Revived 01.02.03
 ONLY IN DEATH DOES DUTY END
 **Leader** and **support** units often have abilities that make the models they are **leading** more powerful. In the same way, some **bodyguard** units’ abilities can enhance the power of those **leading** them. The rules on the left mean that once the models conferring such effects are **destroyed**, that **attached** unit does not continue to benefit from them. Should those models later be **revived**, however, those abilities will once more apply to their **attached** unit.
+
+#### FAQ
 Q: | When does a model’s or unit’s ability in an attached unit apply to all models in that unit?
 A: |
 A rule that applies to ’this/that unit’ or ’models in this/that unit’ applies to all models in an attached unit. Rules that just apply to one model in an **attached** unit (for example, a rule that grants a model Feel No Pain or Lone Operative) only apply to that model, not to all models in the **attached** unit.
@@ -1615,6 +1682,8 @@ Before the battle, in the Declare Battle Formations step, you can select one or 
 Unless otherwise stated, the combined points value of all of your **strategic reserves** units (including those embarked within TRANSPORTS that are themselves placed in **strategic reserves**) cannot exceed 50% of your points limit for your battle size.
 SEE ALSO
 - Reserves 20.01.01
+
+#### FAQ
 Q: | If I place units in **strategic reserves** during the battle, can this exceed the 50% of my points limit for the battle restriction as mentioned in **Placing Units in Strategic Reserves** (20.01)?
 A: |
 Yes. That restriction is applicable before the battle, in the Declare Battle Formations step.
@@ -1686,6 +1755,8 @@ Each time a FLYING unit is selected to make a normal, advance, fall-back or char
 - Ignore all vertical distance for the purposes of how far it has moved.
 - It can move through all types of model (including enemy models and MONSTER/VEHICLE models).
 - It can move horizontally and vertically through all categories of terrain feature.
+
+#### FAQ
 Q: | When do the effects of a FLYING unit taking to the skies apply?
 A: |
 When that unit is selected to make a normal**/**advance**/**fall-back**/**charge move. Note that for an **advance/charge move**, this means you must declare that a unit will take to the skies before rolling for that **advance/charge move**.
@@ -1748,6 +1819,8 @@ All of these attacking models are on a section of **terrain feature** that is 3"
 
 ### Core Abilities
 24
+
+#### FAQ
 Q: | When a unit with Firing Deck is equipped with another unit’s weapons, do abilities that affect those weapons while they are equipped by that other unit affect those weapons while they are equipped by the unit with **Firing Deck**?
 A: |
 No.
@@ -1935,6 +2008,8 @@ When doing so:
 - You cannot exceed any of the values presented in the Select Battle Size table (25.03). For example, in an Incursion battle, you cannot select **detachments** with a combined value of more than 2 DP.
 - No unit (including **attached** units) can have more than one **enhancement**.
 - Your army roster must follow all restrictions placed on it by the rules and units being included in it.
+
+#### FAQ
 Q: | Can an attached unit be given an **Upgrade**?
 A: |
 Yes.
@@ -2014,6 +2089,8 @@ Some rules allow you to split units into smaller units (e.g. the Transport abili
 - The same models can only be subdivided in this way once (e.g. those smaller units cannot themselves be split further).
 - If a rule is used to split a unit into multiple units before the battle, the **starting strength** of each individual unit is changed to be equal to the number of models in that unit.
 - A unit must be split into two units, each containing as equal a number of models as possible (when splitting a unit in this way, make a note of which models form each of the two new units). If a rule states a specific **starting strength** of the split units, but this is not possible based on the number of models in the unit being split (e.g. due to **attached Leader**/**Support** models), split the unit as stated above.
+
+#### Errata
 01.02.06 Splitting Units
 Add:
 - A unit must be split into two units, each containing as equal a number of models as possible (when splitting a unit in this way, make a note of which models form each of the two new units). If a rule states a specific **starting strength** of the split units, but this is not possible based on the number of models in the unit being split (e.g. due to **attached Leader/Support** models), split the unit as stated above.
@@ -2041,12 +2118,16 @@ Before the battle, place a selection of terrain features on the battlefield usin
 - Place one **terrain feature** directly on the battlefield.
 - Place two or more **terrain features** directly on the battlefield in such a way that together they define the boundary of an area.
 In each case, the area of the battlefield occupied by that boundary or **terrain feature** is known as a **terrain area**. A mission’s deployment map may define the location and dimensions of each **terrain area**. Otherwise, players must agree on this before the battle.
+
+#### FAQ
 Q: | Are models that are within the boundary of a terrain area, but not on the ground floor of a **terrain area** (e.g. overhanging parts of FRAME VEHICLES or models on terrain features that are within that **terrain area**) within that **terrain area**?
 A: |
 Yes
 17.02 Frame
 Some models do not have a base; many of these are MONSTER/VEHICLE models. Such models have the FRAME keyword, as do some other large models. Whenever a rule refers to a model’s position in relation to anything else on the battlefield (e.g. when measuring distances), if that model has the FRAME keyword, unless otherwise stated, measure to and from the closest point on that model (so not necessarily from its base, if it has one).
 When rotating a FRAME model as part of a move, if that model does not have a base, turn it any amount around its central axis, while keeping it upright.
+
+#### FAQ
 Q: | Are models that are within the boundary of a terrain area, but not on the ground floor of a **terrain area** (e.g. overhanging parts of FRAME VEHICLES or models on terrain features that are within that **terrain area**) within that **terrain area**?
 A: |
 Yes
@@ -2165,6 +2246,8 @@ The opposing player resolves the following sequence:
 - No CHARACTER group can be earlier in the allocation order than a non-CHARACTER group.
 - CHARACTER groups containing a model that has lost one or more wounds must be earlier in the allocation order than CHARACTER groups containing no wounded models.
 - **Make Save Rolls:** The opposing player makes one **save roll** for each attack that wounded the target by rolling one D6.
+
+#### FAQ
 Q: | When declaring the allocation order of groups in my unit I have more than one non-CHARACTER groups that contain a model with a missing wound, how must I select the order?
 A: |
 Those groups can be selected in an order of your choosing but must be in an order that makes them come before any non-CHARACTER groups that do not contain a model with a missing wound.
@@ -2244,6 +2327,8 @@ Unit Visible
 If one or more models in a unit are **visible** to the observing model, that unit is **visible**.
 Unit Fully Visible
 If every model in a unit is **fully visible** to the observing model, that unit is **fully visible**. When determining this, the observing model can see through other models in that unit.
+
+#### FAQ
 Q: | When checking **line of sight** from one model to another, is this drawn between the bases of those models, or between any part of them?
 A: |
 **Line of sight** is drawn from any part of the observing model to any part of the model being observed.
@@ -2269,6 +2354,8 @@ Once the first battle round has started, a friendly unit can embark within a fri
 When a unit embarks, the active player removes that unit from the battlefield and places it to one side – it is now embarked within that TRANSPORT and is not on the battlefield.
 SEE ALSO
 - Not on the Battlefield 01.02.04
+
+#### FAQ
 Q: | Do a unit's abilities continue to function while they are embarked within a TRANSPORT?
 A: |
 Yes, within the restrictions specified by the ability itself. Embarked units are Not On The Battlefield (01.02.04), so any ability requiring visibility or measurement to another unit will fail.
@@ -2297,6 +2384,8 @@ WHAT IS COHERENCY?
 **Coherency** prevents models in the same unit from becoming too separated from each other while on the battlefield, ensuring they are set up and end every kind of move as a single group.
 COHERENCY
 Every model in this unit is within 2" of at least one other model in its unit, and every model is within 9" of every other model in its unit. This unit is therefore in **coherency**.
+
+#### FAQ
 Q: | Do models destroyed when a unit is out of **coherency** count for mission objectives?
 A: |
 Yes.
@@ -2325,6 +2414,8 @@ WHAT IS ENGAGEMENT?
 While opposing models are within each other’s **engagement range**, they are able to fight in vicious melee, so unless they are seeking to make melee attacks, models should keep out of their foes’ reach.
 ENGAGEMENT
 These two units have at least one model within 2" of the opposing unit, and are therefore **engaged** with each other.
+
+#### FAQ
 Q: | Does my model or unit become engaged while moving through a enemy units engagement range during a move?
 A: |
 No
@@ -2341,26 +2432,17 @@ CONSOLIDATION MOVE12.08
 **ELIGIBLE IF:** It is the Fight phase and your unit was eligible to fight this phase.
 **EFFECT:** Your unit moves as described in Moving (03).
 **BEFORE MOVING:** Select **consolidation mode**:
-- 
-If your unit is engaged, you must select this mode and select every enemy unit it is **engaged** with.
-- 
-Otherwise, if your unit is within 3" of one or more enemy units, you must select this mode and select one or more of those enemy units.
-- 
-Otherwise, if your unit is within 3" of one or more objectives, you must select this mode and select one of those **objectives**.
+- Ongoing Consolidation: If your unit is engaged, you must select this mode and select every enemy unit it is **engaged** with.
+- Engaging Consolidation: Otherwise, if your unit is within 3" of one or more enemy units, you must select this mode and select one or more of those enemy units.
+- Objective Consolidation: Otherwise, if your unit is within 3" of one or more objectives, you must select this mode and select one of those **objectives**.
 **WHILE MOVING:**
-- 
-Models in base-contact with one or more enemy models cannot be moved. Each model that is moved must end its move closer to the closest selected enemy unit, and **engaged** with it if possible.
-- 
-Each model that is moved must end its move closer to the closest selected enemy unit, and **engaged** with it if possible.
-- 
-Each model that is moved must end its move within range of the selected **objective** if possible, or closer to it if not.
+- Ongoing Consolidation: Models in base-contact with one or more enemy models cannot be moved. Each model that is moved must end its move closer to the closest selected enemy unit, and **engaged** with it if possible.
+- Engaging Consolidation: Each model that is moved must end its move closer to the closest selected enemy unit, and **engaged** with it if possible.
+- Objective Consolidation: Each model that is moved must end its move within range of the selected **objective** if possible, or closer to it if not.
 **AFTER MOVING:**
-- 
-Each model that started this move **engaged** with an enemy unit must still be **engaged** with that enemy unit. If one or more enemy units **engaged** with your unit have not been **selected to fight** this phase, your opponent must select each of those units, one at a time; when each is selected, it becomes **eligible to fight** and is **selected to fight** (12.04).
-- 
-Your unit must be **engaged** with all of the selected enemy units. If one or more enemy units **engaged** with your unit have not been **selected to fight** this phase, your opponent must select each of those units, one at a time; when each is selected, it becomes **eligible to fight** and is **selected to fight** (12.04).
-- 
-Your unit must be **unengaged** and within range of the selected **objective**.
+- Ongoing Consolidation: Each model that started this move **engaged** with an enemy unit must still be **engaged** with that enemy unit. If one or more enemy units **engaged** with your unit have not been **selected to fight** this phase, your opponent must select each of those units, one at a time; when each is selected, it becomes **eligible to fight** and is **selected to fight** (12.04).
+- Engaging Consolidation: Your unit must be **engaged** with all of the selected enemy units. If one or more enemy units **engaged** with your unit have not been **selected to fight** this phase, your opponent must select each of those units, one at a time; when each is selected, it becomes **eligible to fight** and is **selected to fight** (12.04).
+- Objective Consolidation: Your unit must be **unengaged** and within range of the selected **objective**.
 [HAZARDOUS]24.15
 Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of **hazard rolls** (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.
 06.02.01 Normal Damage
@@ -2381,11 +2463,15 @@ MORTAL WOUNDS AND NORMAL DAMAGE
 When resolving **attack dice**, if those attacks inflict a mixture of both **mortal wounds** and normal damage, resolve all of the normal damage first, then resolve all of the **mortal wounds**.
 SEE ALSO
 - Normal Damage 06.02.01
+
+#### FAQ
 Q: | I have a rule that triggers when a mortal wound is allocated to a model, when does this happen?
 A: |
 When you select a model in the **Select Model step** of **Mortal Wounds** (06.02).
 06.03 Hazard Rolls
 To make a **hazard roll** for a unit, roll one D6: on a 1-2, that roll fails and that unit suffers 1 mortal wound, or 3 **mortal wounds** instead if each model in that unit is a MONSTER/VEHICLE model. If more than one **hazard roll** is required for a unit, make all of those rolls simultaneously.
+
+#### FAQ
 Q: | I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons?
 A: |
 No, you allocate the **mortal wounds** to the unit as per **Mortal Wounds** (06.02). (This represents Bob the guardsmen picking up his fallen squad mates plasma gun or that the twisting power of James the Chaos Sorcerer pulling his followers into the warp.)
@@ -2397,14 +2483,14 @@ FALL-BACK MOVE09.07
 **ELIGIBLE IF:** Your unit is **engaged**.
 **EFFECT:** Your unit moves as described in Moving (03).
 **BEFORE MOVING:** Select fall-back mode:
-- If your unit is not battle-shocked, you can select this mode.
-- Otherwise, you must select this mode. Make a **hazard roll** for each model in your unit (06.03).
+- Ordered Retreat: If your unit is not battle-shocked, you can select this mode.
+- Desperate Escape: Otherwise, you must select this mode. Make a **hazard roll** for each model in your unit (06.03).
 **WHILE MOVING:**
-- Each model that is moved can be moved through enemy models.
+- Desperate Escape: Each model that is moved can be moved through enemy models.
 **AFTER MOVING:**
 - Your unit must be unengaged.
 - Until the end of the turn, unless otherwise stated, your unit is not eligible to shoot, **declare a charge** or start an action.
-- If your unit is not **battle-shocked**, you must make a **battle-shock roll** for your unit (01.07).
+- Desperate Escape: If your unit is not **battle-shocked**, you must make a **battle-shock roll** for your unit (01.07).
 NORMAL MOVE09.05
 **MAXIMUM DISTANCE:** Your unit’s **M** characteristic.
 **ELIGIBLE IF:** Your unit is on the battlefield and unengaged.
@@ -2435,24 +2521,16 @@ DISEMBARK MOVE18.04
 - That TRANSPORT has not made an advance or fall-back move this phase.
 **EFFECT:** Your unit is set up as described in Set Up (03.02).
 **BEFORE MOVING:** Select **disembark mode**:
-- 
-If that TRANSPORT made a normal or ingress move this phase, you must select this mode.
-- 
-Otherwise, If that TRANSPORT remained stationary or has not yet been **selected to move** this phase, and if you can set up your unit as described below, you must select this mode.
-- 
-Otherwise, you must select this mode. Make a hazard roll for each model in your unit.
+- Rapid Disembark: If that TRANSPORT made a normal or ingress move this phase, you must select this mode.
+- Tactical Disembark: Otherwise, If that TRANSPORT remained stationary or has not yet been **selected to move** this phase, and if you can set up your unit as described below, you must select this mode.
+- Combat Disembark: Otherwise, you must select this mode. Make a hazard roll for each model in your unit.
 **WHILE MOVING:** Set up each model in your unit wholly within the **set-up distance** of that TRANSPORT.
-- 
-If that TRANSPORT made an **ingress move** this turn, each model must follow the same rules that TRANSPORT had to follow while resolving that move.
-- 
-Each model can be set up engaged with one or more enemy units that TRANSPORT is **engaged** with.
+- Rapid Disembark: If that TRANSPORT made an **ingress move** this turn, each model must follow the same rules that TRANSPORT had to follow while resolving that move.
+- Combat Disembark: Each model can be set up engaged with one or more enemy units that TRANSPORT is **engaged** with.
 **AFTER MOVING:**
-- 
-Until the end of the turn, your unit is not eligible to declare a charge.
-- 
-Select your unit to make a normal or **advance move**.
-- 
-Your unit is battle-shocked and, until the end of the turn, it is not **eligible to declare a charge**.
+- Rapid Disembark: Until the end of the turn, your unit is not eligible to declare a charge.
+- Tactical Disembark: Select your unit to make a normal or **advance move**.
+- Combat Disembark: Your unit is battle-shocked and, until the end of the turn, it is not **eligible to declare a charge**.
 RAPID DISEMBARK
 When a unit uses the **rapid disembark** mode after its TRANSPORT makes an **ingress move**, the models must follow the same rules and restrictions as that TRANSPORT did. For example, if that TRANSPORT had to be set up more than 8" from all enemy units and not within your opponent’s deployment zone, the same applies to the disembarking unit.
 EMERGENCY DISEMBARK MOVE18.05
@@ -2544,6 +2622,8 @@ Equal to or greater than that attack’s **BS**/**WS** characteristic | HIT
 Any other result | FAILS
 CRITICAL HITS
 **Critical hits** are still hits. In addition, other rules can be triggered by a **critical hit**, such as [LETHAL HITS] (24).
+
+#### FAQ
 Q: | My attack has a rule that means it results in a **critical hit** on a **hit roll** of 4+. Does this work when snap shooting?
 A: |
 Unless otherwise stated, no: when **snap shooting**, each attack only hits on a roll of 6.
@@ -2617,6 +2697,8 @@ Each time a ranged attack targets a unit, if every model in that unit meets one 
 - That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area.
 - That model is not fully visible to the attacking model due to one or more intervening **terrain features** and/or one or more intervening **obscuring terrain areas** (see below).
 Each time a ranged attack targets a unit that has the **benefit of cover** against it, worsen the **BS** characteristic of that attack by 1.
+
+#### FAQ
 Q: | When my unit shoots at another unit, how does it work if **some** models in the target unit are **fully visible** to **some** models in my unit, while others are within a terrain area/not **fully visible**?
 A: |
 For each attacking model in your unit, determine whether the target unit has the **benefit of cover**, as described in Terrain and Visibility. In this scenario, the target unit will likely have the **benefit of cover** against some of the attacking models, but not all.
@@ -2686,6 +2768,8 @@ Any other result | INFLICTS DAMAGE
 - **Resolve Damage:** If that attack inflicts damage, the selected model loses a number of wounds equal to that attack’s **D** characteristic. If this reduces that model’s remaining wounds to 0 or fewer, it is **destroyed**.
 CURRENT ALLOCATION GROUP
 The first group in the allocation order begins as the current group. Once all models in an allocation group are **destroyed**, the next group in the allocation order becomes the current one.
+
+#### FAQ
 Q: | Fight On Death (05.04.05) requires models awaiting such an ability to stay on the battlefield until their unit has attacked (or until the end of the phase). How do these models function while this is the case?
 A: |
 Models awaiting a Fight On Death ability are still present on the battlefield for all rules purposes. This includes (but is not limited to) the following regarding such models:
@@ -2755,6 +2839,8 @@ SEE ALSO
 - Battle-shock Test 01.07.02
 BATTLEFIELD MORALE
 The morale and organisation of troops can waver and break **during battle**. This is checked using battle-shock rolls, most commonly in the Command phase. Failing such a roll represents the unit’s courage faltering due to taking casualties or through other disruption, reducing its battlefield effectiveness. Similarly, some rules will require you to check a unit’s readiness by making a leadership roll.
+
+#### FAQ
 Q: | If a unit has a rule that allows it to start an action when it is battle-shocked can it also continue doing that action if it becomes **battle-shocked** after starting an **action**?
 A: |
 Yes
@@ -2807,6 +2893,8 @@ Core Stratagem
 - Select one enemy unit engaged with your unit.
 - Select one model in your unit **engaged** with that enemy unit.
 - Roll a number of D6 equal to the **T** characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 **mortal wound** (to a maximum of 6 **mortal wounds** per unit).
+
+#### Errata
 Tank Shock Stratagem
 The **Tank Shock Stratagem** is the same as the **Crushing Impact stratagem**.
 12.04.01 Eligible to fight, but unable to fight
@@ -2833,24 +2921,16 @@ DISEMBARK MOVE18.04
 - That TRANSPORT has not made an advance or fall-back move this phase.
 **EFFECT:** Your unit is set up as described in Set Up (03.02).
 **BEFORE MOVING:** Select **disembark mode**:
-- 
-If that TRANSPORT made a normal or ingress move this phase, you must select this mode.
-- 
-Otherwise, If that TRANSPORT remained stationary or has not yet been **selected to move** this phase, and if you can set up your unit as described below, you must select this mode.
-- 
-Otherwise, you must select this mode. Make a hazard roll for each model in your unit.
+- Rapid Disembark: If that TRANSPORT made a normal or ingress move this phase, you must select this mode.
+- Tactical Disembark: Otherwise, If that TRANSPORT remained stationary or has not yet been **selected to move** this phase, and if you can set up your unit as described below, you must select this mode.
+- Combat Disembark: Otherwise, you must select this mode. Make a hazard roll for each model in your unit.
 **WHILE MOVING:** Set up each model in your unit wholly within the **set-up distance** of that TRANSPORT.
-- 
-If that TRANSPORT made an **ingress move** this turn, each model must follow the same rules that TRANSPORT had to follow while resolving that move.
-- 
-Each model can be set up engaged with one or more enemy units that TRANSPORT is **engaged** with.
+- Rapid Disembark: If that TRANSPORT made an **ingress move** this turn, each model must follow the same rules that TRANSPORT had to follow while resolving that move.
+- Combat Disembark: Each model can be set up engaged with one or more enemy units that TRANSPORT is **engaged** with.
 **AFTER MOVING:**
-- 
-Until the end of the turn, your unit is not eligible to declare a charge.
-- 
-Select your unit to make a normal or **advance move**.
-- 
-Your unit is battle-shocked and, until the end of the turn, it is not **eligible to declare a charge**.
+- Rapid Disembark: Until the end of the turn, your unit is not eligible to declare a charge.
+- Tactical Disembark: Select your unit to make a normal or **advance move**.
+- Combat Disembark: Your unit is battle-shocked and, until the end of the turn, it is not **eligible to declare a charge**.
 RAPID DISEMBARK
 When a unit uses the **rapid disembark** mode after its TRANSPORT makes an **ingress move**, the models must follow the same rules and restrictions as that TRANSPORT did. For example, if that TRANSPORT had to be set up more than 8" from all enemy units and not within your opponent’s deployment zone, the same applies to the disembarking unit.
 EMERGENCY DISEMBARK MOVE18.05
@@ -2876,6 +2956,8 @@ SHOCK DISEMBARK MOVE18.07
 **EFFECT:** Set up as described in Set Up (03.02).
 **WHILE MOVING:** Set up each model wholly within the **set-up distance** of that TRANSPORT.
 **AFTER MOVING:** Your unit is not **eligible to declare a charge** until the end of the turn.
+
+#### FAQ
 Q: | If a unit makes any **disembark move** in a turn (i.e. Disembark move, Emergency Disembark move etc.) has it disembarked that turn?
 A: |
 Yes.
@@ -2902,6 +2984,8 @@ A model is **hidden** while all of the following apply to it:
 - That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area that contains one or more **light/dense terrain features**.
 - That model’s unit did not make one or more ranged attacks during this turn or during the previous turn.
 While a model is **hidden**, it can only be visible to enemy models that are within its **detection range**. Unless otherwise stated, a model’s **detection range** is 15".
+
+#### Errata
 13.09 - Change to First Bullet Point
 Change to: ‘That model has the INFANTRY/BEASTS/SWARM keyword and is within a **terrain area** that contains one or more **light/dense terrain features**.’
 13.10 Obscuring
@@ -2929,9 +3013,9 @@ Core Stratagem
 **WHEN:** End of your opponent’s Charge phase.
 **TARGET:** One friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
 **EFFECT: Resolve a charge** with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
-- When selecting **charge targets**, you can only select enemy units that made a charge move this phase and are within the **maximum distance**.
+- Leap to Defend: When selecting **charge targets**, you can only select enemy units that made a charge move this phase and are within the **maximum distance**.
 +1CP
-- 
+- Into the Fray:
 - When making the **charge roll**, if the result is greater than 6 (after modifiers), change it to 6.
 - When selecting **charge targets**, you can select any enemy units that are within 6" of your unit and within the **maximum distance**.
 17.03.01 Shooting While Engaged With Monsters/Vehicles
@@ -2951,6 +3035,8 @@ Datasheets have a list of keywords, separated into faction keywords and other ke
 Some rules are linked to one or more keywords. For example, a rule might say that it applies to INFANTRY units. This means it only applies to units that have the INFANTRY keyword. Singular and plural instances of the same keyword function in the same way.
 SEE ALSO
 - Using Keywords & Mixed Keywords in Units 02.05.01
+
+#### FAQ
 Q: | Do rules that affect a keyword include multi-word keywords that contain that keyword? For example, would rules that affect COMMISSAR units affect a unit that has the COMMISSAR GRAVES keyword?
 A: |
 No.

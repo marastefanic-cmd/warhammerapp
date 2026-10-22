@@ -178,7 +178,28 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
           for(const m of mr) if(mm.has(k(m)) && !(m.weapon && m.set) && !u.abilities.some(ab => ab.damaged && ab.name === m.from) && !all.includes(m.note.slice(0, 40)))
             out.push(['all-attacks-block', u.id, m.from + ': ' + m.note]);
         }
+        // the army facts the datasheet shows where they matter:
+        // - a unit always riled up by its own rule (riled: Super Runts) says so on every riled-up line, When targeted and footnotes
+        // - Waaagh!'s [ASSAULT] while riled up, on a unit with Waaagh! some of whose ranged weapons lack [ASSAULT]
+        // - what another unit of the list gives it when it is attacked (guard), under When targeted
+        // - every keyword once, a keyword only some models have under those models (kwOnly)
+        const lines = [...document.querySelectorAll('#view .def, #view .mod')].map(x => x.innerText.replace(/\s+/g, ' '));
+        if(u.abilities.some(ab => ab.riled && !ab.na)) for(const l of lines) if(/(^|· |TARGETED ?)Riled up(?! \()/i.test(l)) out.push(['always-riled', u.id, 'a riled-up line without “always riled up”: ' + l.slice(0, 80)]);
+        if(u.rules.includes('Waaagh!') && (u.ranged || []).some(w => !w.kw.some(x => /^assault$/i.test(x))) && !lines.some(l => l.includes('[ASSAULT] (Waaagh!)')))
+          out.push(['riled-assault', u.id, 'no “Riled up: [ASSAULT] (Waaagh!)” footnote']);
+        const when = (document.querySelector('#view .def') || {}).innerText || '';
+        for(const src of A.units) for(const g of src.guard || []) if(src !== u && matches(g.needs, u) && !when.includes('(' + g.from + ')')) out.push(['guard-shown', u.id, g.from + ' (' + src.name + ') is not under When targeted']);
+        const pills = [...document.querySelectorAll('#sec-kw .pill')].map(x => x.textContent.replace(/\*$/, '').toLowerCase());
+        if(pills.length !== u.kw.length || u.kw.some(x => !pills.includes(x.toLowerCase()))) out.push(['keywords-shown', u.id, pills.length + ' keyword pills for ' + u.kw.length + ' keywords']);
       }
+      // the Units list: a unit with several stats rows shows each (Squighog Boyz' Nob and Boyz, Canis Rex and Sir Hekhtur)
+      go({ s:'units', army:armyId });
+      for(const u of A.units){ const n = document.querySelectorAll('[data-unit="' + u.id + '"] .sn').length;
+        if(u.stats.length > 1 && n !== u.stats.length) out.push(['units-rows', u.id, n + ' stats rows shown of ' + u.stats.length]); }
+      // the Overview lists the detachment rules with the army rules
+      go({ s:'pregame', army:armyId });
+      const ov = [...document.querySelectorAll('#view .rr > summary b')].map(b => b.textContent);
+      for(const d of detachmentsOf(A)) if(d.rule && !ov.includes(d.rule.name)) out.push(['overview-rules', armyId, d.rule.name + ' is not in the Overview’s rules']);
       // the damage calculator, for every unit of this list as the attacker (every rule ticked) and as the target:
       // - the target has as many models as the unit (dmModels), less a model not on the battlefield yet (embarked: Sir Hekhtur)
       // - an InSv marked * (against ranged attacks) is not used against melee attacks

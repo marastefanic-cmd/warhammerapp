@@ -12,7 +12,8 @@ from html.parser import HTMLParser
 
 SKIP = {'script', 'style', 'noscript', 'nav', 'header', 'footer', 'form', 'button', 'select', 'svg', 'iframe'}
 BLOCK = {'p', 'div', 'li', 'tr', 'h1', 'h2', 'h3', 'h4', 'h5', 'br', 'table', 'ul', 'ol', 'section', 'article'}
-DROP_CLASS = re.compile(r'ShowFluff|Fluff|legend|Disable|ads?\b|adsbygoogle|NavDropdown|NavColumns|sidebar|menu|tooltip_content|nav', re.I)
+# (adverts: a class "ad"/"ads", not the end of another word: Wahapedia's mode labels are class "redPad", "Ordered Retreat:")
+DROP_CLASS = re.compile(r'ShowFluff|Fluff|legend|Disable|\bads?\b|adsbygoogle|NavDropdown|NavColumns|sidebar|menu|tooltip_content|nav', re.I)
 
 class Conv(HTMLParser):
     def __init__(self):
@@ -26,9 +27,11 @@ class Conv(HTMLParser):
     def handle_starttag(self, tag, attrs):
         a = dict(attrs); cls = a.get('class', '') or ''
         drop = tag in SKIP or (cls and DROP_CLASS.search(cls)) or a.get('id', '') in ('header', 'footer')
-        self.stack.append((tag, bool(drop)))
+        # a mode's label ("Ongoing Consolidation:", class redPad) stays on its list item's line, also when it is a div
+        label = tag == 'div' and bool(re.search(r'\bredPad\b', cls))
+        self.stack.append((tag, bool(drop), label))
         if drop: self.skip += 1; return
-        if self.skip: return
+        if self.skip or label: return
         m = re.match(r'cruD(\d)', cls)
         if m: self.line.append(m.group(1)); return
         if tag in ('h1', 'h2', 'h3', 'h4', 'h5'): self.flush(); self.line.append('\0H' + tag[1])
@@ -38,11 +41,12 @@ class Conv(HTMLParser):
         elif tag in BLOCK: self.flush()
         if tag == 'img' and a.get('alt'): self.line.append(a['alt'])
     def handle_endtag(self, tag):
+        label = False
         while self.stack:
-            t, drop = self.stack.pop()
+            t, drop, label = self.stack.pop()
             if drop: self.skip -= 1
             if t == tag: break
-        if self.skip: return
+        if self.skip or label: return
         if tag in ('b', 'strong'): self.line.append('**')
         elif tag in BLOCK or tag in ('td', 'th'):
             if tag in ('td', 'th'): return
