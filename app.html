@@ -4295,6 +4295,20 @@ const UNIT_COLS = ['M','T','Sv','W','LD','OC','InSv'];
 const unitsSubbar = () => '<div class="uh"><span class="n">Unit</span>' + UNIT_COLS.map(c => '<span>' + c + '</span>').join('') + '<span class="p">Pts</span></div>';
 // the stats of one profile, one cell per column (a value a rule of the list changed is marked)
 const statCells = s => ['M','T','Sv','W','Ld','OC','InSv'].map(k => '<span class="sc">' + (s.from && s.from[k] ? '<i class="gvl">' + esc(s[k]) + '</i>' : esc(s[k])) + '</span>').join('');
+// how many models a stats row is for: its printed "×N", else the models lines with its name, the bodyguard's other models (a
+// Kaptin) on its last row ("Flash Gitz" ×10: 1 Kaptin and 9 Flash Gitz; "Rubric Marine" ×4: the two loadouts)
+function rowCounts(u){
+  const chars = new Set(charsOf(u).map(c => c.name)), stem = x => x.toLowerCase().replace(/ w\/.*$/, '').replace(/ \(.*\)$/, '').replace(/s$/, '');
+  const rows = u.stats.map(s => ({ s, name:stem(s.name.replace(/ ×\d+$/, '')), fixed:/ ×\d+$/.test(s.name), n:+((/ ×(\d+)$/.exec(s.name) || [])[1] || 0) }));
+  const longest = list => list.sort((x, y) => y.name.length - x.name.length)[0];
+  for(const line of u.models){
+    const k = parseInt(line, 10) || 1, nm = stem(line.replace(/^\d+× /, ''));
+    const hit = rows.find(r => r.name === nm) || longest(rows.filter(r => nm.startsWith(r.name))) || longest(rows.filter(r => r.name.startsWith(nm)))
+      || rows.filter(r => !r.fixed && !chars.has(r.s.name)).slice(-1)[0];
+    if(hit && !hit.fixed) hit.n += k;
+  }
+  return new Map(rows.map(r => [r.s, r.n]));
+}
 function screenUnits(){
   const a = army(), groups = {};
   for(const u of a.units){ const r = ROLE_ORDER.includes(u.role) ? u.role : 'Other'; (groups[r] = groups[r] || []).push(u); }
@@ -4303,12 +4317,15 @@ function screenUnits(){
     const one = u.models.length === 1 && u.models[0].match(/^(\d+)× /);
     const n = one && one[1] !== '1' ? '<span class="x">×' + one[1] + '</span>' : '';
     const lead = u.leads ? '<span class="lead">+ ' + esc(partsAfter(u).join(' + ')) + '</span>' : '';   // an attached unit names its other parts as loud as its leader
-    const subs = u.leads && u.stats.length > 1;   // an attached unit: one line per model type, under its name
+    // more than one stats row (an attached unit, Squighog Boyz' Nob, Canis Rex and Sir Hekhtur): one line per row, under the name,
+    // with how many models it is for
+    const subs = u.stats.length > 1, cnt = subs ? rowCounts(u) : null;
+    const subName = s => esc(s.name).replace(/ ×(\d+)$/, '<span class="x">×$1</span>') + (!/ ×\d+$/.test(s.name) && cnt.get(s) > 1 ? '<span class="x">×' + cnt.get(s) + '</span>' : '');
     const tags = nameTags(u, { noLeads:true, noCopies:true });   // how many of it: on the points ("2×215")
     return '<button class="urow' + (subs ? ' att' : '') + '" data-unit="' + esc(u.id) + '"><span class="un"><b>' + esc(u.name) + '</b>' + n + lead +
-      (tags ? '<span class="utg">' + tags + '</span>' : '') + (!one && !u.leads ? '<span class="meta">' + esc(u.models.join(', ')) + '</span>' : '') + '</span>' +
+      (tags ? '<span class="utg">' + tags + '</span>' : '') + (!one && !u.leads && !subs ? '<span class="meta">' + esc(u.models.join(', ')) + '</span>' : '') + '</span>' +
       (subs ? '' : statCells(u.stats[0])) + '<span class="pts">' + (u.copies > 1 ? esc(u.copies) + '×' : '') + esc(u.pts) + '</span>' +
-      (subs ? u.stats.map(s => '<span class="sn">' + esc(s.name).replace(/ ×(\d+)$/, '<span class="x">×$1</span>') + '</span>' + statCells(s)).join('') : '') + '</button>';
+      (subs ? u.stats.map(s => '<span class="sn">' + subName(s) + '</span>' + statCells(s)).join('') : '') + '</button>';
   }).join('') + '</div>').join('');
 }
 
