@@ -367,6 +367,7 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .urn .link{font:700 16px/1.2 var(--f-head); letter-spacing:.02em}
 .uru{margin:2px 0 0 12px; font-size:14px; line-height:1.45}
 .urq{display:block; margin-top:1px; font-size:13px; line-height:1.4; color:var(--muted)}
+.urq ul{margin:1px 0 2px; padding-left:18px} .urq li{margin:1px 0}
 .urq .link{color:var(--fg2)}
 .uru .from{color:var(--muted)}
 .gsrc{margin:6px 0 10px; padding:8px 10px; border-left:3px solid var(--accent); background:var(--surface); border-radius:0 8px 8px 0}
@@ -5489,24 +5490,30 @@ function screenRules(){
     for(const ab of u.abilities) for(const key of Object.keys(D.rules)) if(!CONCEPT.has(key) && mentions(ab.text, key)) add(key);
   }
   const weaponKw = new Set(a.units.flatMap(u => [...(u.ranged || []), ...(u.melee || [])].flatMap(w => w.kw.map(ruleKey).concat(w.hunter ? ['Hunter'] : []))));
-  const oneLine = t => t.replace(/(^|\n)\*([^*\n][^\n]*[^*\n])\*(?=\n|$)/g, '$1$2').replace(/\n(- )?/g, ' ');
+  // an ability's words on its line, its bullets kept ("select one of the following:" and the two choices)
+  const quoted = t => { let h = '', list = [];
+    const flush = () => { if(list.length){ h += '<ul>' + list.map(l => '<li>' + inline(l) + '</li>').join('') + '</ul>'; list = []; } };
+    for(const l of t.replace(/(^|\n)\*([^*\n][^\n]*[^*\n])\*(?=\n|$)/g, '$1$2').split('\n')){ if(l.startsWith('- ')) list.push(l.slice(2)); else { flush(); h += (h ? ' ' : '') + inline(l); } }
+    flush(); return h; };
   // an attached unit is named whole; Leader and Support name the character who has it ("Warboss leads Breaka Boyz")
   const who = (u, key) => { if(!u.leads) return unitLink(u);
     const cs = key === 'Leader' || key === 'Support' ? charsOf(u).filter(c => c.support === (key === 'Support')) : [];
     return cs.length ? linkTo('unit', u.id, cs.map(c => c.name).join(' and ')) + ' ' + (key === 'Support' ? 'supports ' : 'leads ') + esc(u.leads) : linkTo('unit', u.id, unitLabel(u)); };
   const holdersOf = key => a.units.flatMap(u => {
     const own = unitRules(u).filter(r => ruleKey(r) === key);
+    // from an ability: the unit, then the ability and its words (they say when)
+    const abs = u.abilities.filter(ab => mentions(ab.text, key)).map(ab => { const na = naReason(ab);
+      return '<span class="urq">' + linkTo('ability', abilityKey(ab), ab.name) + (na ? ' <i>(' + esc(na) + ')</i>' : '') + ': ' + quoted(ab.text) + '</span>'; }).join('');
     // "Deadly Demise D3", "Feel No Pain 5+": the value after the unit
     // a rule only one model has: which ("Canis Rex: Sir Hekhtur only")
-    if(own.length) return [who(u, key) + own.filter(r => r.toLowerCase() !== key.toLowerCase()).map(r => ' <span class="from">' + esc(r.toLowerCase().startsWith(key.toLowerCase()) ? r.slice(key.length).trim() : r) + '</span>').join('') + onlyTag(u, key)];
-    // from an ability: the unit, then the ability and its words (they say when)
-    const abs = u.abilities.filter(ab => mentions(ab.text, key));
-    return abs.length ? [who(u, key) + abs.map(ab => { const na = naReason(ab);
-      return '<span class="urq">' + linkTo('ability', abilityKey(ab), ab.name) + (na ? ' <i>(' + esc(na) + ')</i>' : '') + ': ' + inline(oneLine(ab.text)) + '</span>'; }).join('')] : [];
+    // a rule with no value ("Feel No Pain" on the Norn Emissary): the abilities that give it, too
+    const bare = own.length && own.every(r => r.toLowerCase() === key.toLowerCase());
+    if(own.length) return [who(u, key) + own.filter(r => r.toLowerCase() !== key.toLowerCase()).map(r => ' <span class="from">' + esc(r.toLowerCase().startsWith(key.toLowerCase()) ? r.slice(key.length).trim() : r) + '</span>').join('') + onlyTag(u, key) + (bare ? abs : '')];
+    return abs ? [who(u, key) + abs] : [];
   });
   const ur = [...used.values()].filter(r => !weaponKw.has(r.key)).sort((x, y) => x.key.localeCompare(y.key));
   if(ur.length) h += '<div class="dsec"><h2 class="lbl">Unit rules</h2><div class="urs">' + ur.map(r => '<div class="urr"><span class="urn">' + linkTo('rule', r.key, r.key) + '</span>' +
-    holdersOf(r.key).map(l => '<p class="uru">' + l + '</p>').join('') + '</div>').join('') + '</div></div>';
+    holdersOf(r.key).map(l => '<div class="uru">' + l + '</div>').join('') + '</div>').join('') + '</div></div>';
   return h + '</div>';
 }
 
