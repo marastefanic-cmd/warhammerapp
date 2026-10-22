@@ -173,17 +173,6 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .row .rb .t.f{color:var(--accent-ink); background:var(--accent)}
 .row .rb .t.d{color:var(--muted); background:none; box-shadow:inset 0 0 0 1px var(--line)}
 .army-sub{font-size:13.5px; line-height:1.4; color:var(--muted)}
-.army-sub.peek{color:var(--accent); font-weight:600}
-/* while you look at your opponent's list: whose it is, and one tap back to yours */
-.peekbar{display:flex; width:100%; max-width:720px; margin:0 auto; align-items:center; justify-content:space-between; gap:12px; min-height:36px;
-  padding:6px 16px; border:0; border-top:1px solid var(--line); background:var(--surface2); color:var(--fg2); font:inherit; font-size:13.5px; text-align:left; cursor:pointer}
-.peekbar[hidden]{display:none}
-.peekbar b{color:var(--fg); font-weight:600}
-.peekbar .pb-back{display:inline-flex; align-items:center; gap:4px; color:var(--accent); font:700 13px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; white-space:nowrap}
-.peekbar .pb-back svg{width:14px; height:14px; fill:none; stroke:currentColor}
-.rowpair{display:flex; align-items:stretch}
-.rowpair .row{flex:1; min-width:0}
-.rowpair .chg{flex:none; padding:0 4px 0 14px; border-bottom:1px solid var(--line); font:600 14px var(--f-head); letter-spacing:.02em; color:var(--accent)}
 
 /* ---------- search ---------- */
 .search{display:flex; align-items:center; gap:8px; margin:12px 0 4px; background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:0 12px}
@@ -1065,7 +1054,6 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
 
 <header class="top" id="top">
   <div class="top-in" id="topIn"></div>
-  <button class="peekbar" id="peekbar" data-mine hidden></button>
   <div class="wrap"><div class="subbar" id="subbar" hidden></div></div>
 </header>
 
@@ -1180,7 +1168,7 @@ const hasOwn = (o, k) => Object.prototype.hasOwnProperty.call(o, k);
 const sess = isObj(session.get('wh-session')) ? session.get('wh-session') : {};
 const openStrats = new Set(Array.isArray(sess.open) ? sess.open : []);
 const query = Object.assign({}, isObj(sess.query) ? sess.query : {});
-const saveSession = () => session.set('wh-session', { open:[...openStrats], query, dmg:sess.dmg, mine:sess.mine, peekD:sess.peekD, gfold:sess.gfold });
+const saveSession = () => session.set('wh-session', { open:[...openStrats], query, dmg:sess.dmg, gfold:sess.gfold });
 const moreShown = new Set();                 // search groups you expanded
 let focusSearch = false;
 
@@ -1525,10 +1513,6 @@ function renderTop(){
   else right = '<button class="icon-btn" data-settings aria-label="Settings"><svg aria-hidden="true"><use href="#i-gear"/></svg></button>';
   // a rules question to Claude, from any screen; without a key saved it opens Settings to add one
   if(cur.s !== 'settings') right = '<span class="tbr"><button class="icon-btn" data-ask aria-label="Ask a rules question"><svg aria-hidden="true"><use href="#i-ask"/></svg></button>' + (right === '<span></span>' ? '' : right) + '</span>';
-  // while you look at your opponent's list (not on its home screen, which says so): whose list this is, and back to yours
-  const pa = cur.army && army(), pk = !!pa && cur.s !== 'army' && peeking(pa), pb = $('#peekbar');
-  pb.hidden = !pk;
-  pb.innerHTML = pk ? '<span>Their list: <b>' + esc(pa.name) + '</b></span><span class="pb-back"><svg aria-hidden="true"><use href="#i-back"/></svg>Back to yours</span>' : '';
   $('#topIn').innerHTML = left + '<h1 class="ttl">' + (cur.s === 'home' ? '<span class="brand">' + LOGO + 'Kunnin’ Kodex</span>' : esc(cur.s === 'unit' && army() ? army().name : titleOf(cur))) + '</h1>' + right;
 }
 function setBar(id, html){
@@ -1637,56 +1621,36 @@ async function keepAwake(){
 }
 document.addEventListener('visibilitychange', keepAwake);
 
-/* ---------- the opponent, on Find ---------- */
-// "yours" is the list you opened from the home screen; its opponent's list opens as a look at theirs, and from
-// there the same row leads back to yours (Back, not another screen on top: no ping-pong between the two)
-const mineList = () => (ONLY || armyById(sess.mine) || null);
-const peeking = a => { const m = mineList(); return !!m && m !== a && oppOf(m) === a; };
-function oppRow(a){
-  const o = oppOf(a), m = mineList();
-  const ic = i => '<svg class="ic" aria-hidden="true"><use href="#' + i + '"/></svg>';
-  if(peeking(a)) return '<button class="row" data-mine>' + ic('i-back') + '<span class="rb"><b>Back to your list</b><span>' + esc(m.name + ' · ' + factionOf(m).name) + '</span></span></button>';
-  if(o && o !== a) return '<div class="rowpair"><button class="row" data-army="' + esc(o.id) + '" data-peek>' + ic('i-units') + '<span class="rb"><b>Opponent’s list</b><span>' + esc(o.name + ' · ' + factionOf(o).name) + '</span></span>' + arrow + '</button>' +
-    '<button class="chg" data-oppick aria-label="Change your opponent">Change</button></div>';
-  return '<button class="row" data-oppick>' + ic('i-units') + '<span class="rb"><b>Opponent</b><span>' + (o === a ? 'The same list' : 'None yet: pick their list') + '</span></span>' + arrow + '</button>';
-}
-// the same choice as in Damage; a game is both ways: their list's opponent becomes this one (unless it has another)
+/* ---------- the old Damage tab's opponent row (Part D removes this) ----------
+   Only the Damage tab's own Opponent row (Set, Change, Clear) still picks a list for it; nothing else reads it. */
+const mineList = () => null;   // Part D removes this (dmMe): "yours" is the list open
+// a game is both ways: their list's opponent becomes this one (unless it has another)
 function setOpp(a, id){
   const was = oppOf(a);
   if(was && store.get('wh-opp-' + was.id) === a.id) store.set('wh-opp-' + was.id, null);
   store.set('wh-opp-' + a.id, id || null);
   if(id && id !== a.id && !oppOf(armyById(id))) store.set('wh-opp-' + id, a.id);
 }
-let oppFor = null;   // the list the opponent picker is for (the Damage tab: your own list, even while theirs is open)
+let oppFor = null;   // the list the opponent picker is for
 function oppPicker(L){
   const me = oppFor = L || army(), now = oppOf(me);
   openSheet(me.name, 'Your opponent’s list', '<div class="list">' + D.armies.map(a => '<button class="row" data-oppset="' + esc(a.id) + '"><span class="rb"><b>' + esc(a.name) + (a === me ? ' <span class="apts">(this list)</span>' : '') + '</b><span>' + esc(factionOf(a).name + ' · ' + detachmentsOf(a).map(d => d.name).join(', ')) + '</span></span>' +
     (a === now ? '<svg class="ic ok" aria-hidden="true"><use href="#i-check"/></svg>' : '') + '</button>').join('') + (now ? '<button class="row" data-oppset=""><span class="rb"><b>No opponent</b></span></button>' : '') + '</div>');
 }
-// back to your own list from your opponent's: step back through the history to your Find screen when it is there
-function toMine(){
-  const m = mineList(); if(!m) return;
-  const steps = (cur.d || 0) - (sess.peekD == null ? -1 : sess.peekD);
-  if(sess.peekD != null && steps > 0 && !EMBEDDED){ try { history.go(-steps); return; } catch(e){} }
-  go({ s:'army', army:m.id }, 'replace');
-}
 
 /* ---------- screen: one army (search + menu) ---------- */
 function screenArmy(){
   const a = army();
-  if(!ONLY && !armyById(sess.mine)){ sess.mine = a.id; sess.peekD = null; saveSession(); }   // the first list opened is yours
   const row = (go, ic, label, count) => '<button class="row" data-go="' + go + '"><svg class="ic" aria-hidden="true"><use href="#' + ic + '"/></svg><span class="rb"><b>' + label + '</b></span>' +
     (count !== '' ? '<span class="c">' + esc(count) + '</span>' : '') + arrow + '</button>';
   return '<div id="armyHead"><p class="army-sub">' + esc(faction().name + ' · ' + a.pointsUsed + ' / ' + a.points + ' pts · ' + a.battleSize) + '</p>' +
-      '<p class="army-sub">' + esc(detachments().map(d => d.name).join(' · ')) + (a.disposition ? ' <span class="dsp">· Disposition: ' + esc(a.disposition) + '</span>' : '') + '</p>' +
-      (peeking(a) ? '<p class="army-sub peek">Your opponent’s list</p>' : '') + '</div>' +
+      '<p class="army-sub">' + esc(detachments().map(d => d.name).join(' · ')) + (a.disposition ? ' <span class="dsp">· Disposition: ' + esc(a.disposition) + '</span>' : '') + '</p></div>' +
     '<label class="search"><svg aria-hidden="true"><use href="#i-search"/></svg><input id="armyQ" type="search" placeholder="Find a unit, weapon, keyword, rule…" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" aria-label="Search this army"></label>' +
     '<div id="qres"></div>' +
     '<div id="armyMenu"><div class="list">' +
       row('pregame', 'i-flag', 'Overview', '') +
       row('damage', 'i-swords', 'Damage calculator', '') +
       row('game', 'i-hourglass', 'Game tracker', '') +
-      oppRow(a) +
       row('units', 'i-units', 'Units', unitCount(a)) +
       row('strats', 'i-cards', 'Stratagems', allStratagems(a).length) +
       row('ranged', 'i-gun', 'Ranged weapons', weaponCount(a, 'ranged')) +
@@ -4205,7 +4169,7 @@ function searchIndex(){
   }
   // a faction's own term (Pulse Jet Move, Supa-hazardous) only in a list a unit of which uses it, as on the Rules tab
   for(const key of Object.keys(D.rules)) if(!(D.ruleSrc || {})[key] || ruleUsers(key).length)
-    add({ kind:'Rules', title:key, sub:(D.ruleSrc || {})[key] || 'Core rule', hay:hay(key, D.rules[key], 'core rule keyword'), act:{ rule:key }, core:!(D.ruleSrc || {})[key] });
+    add({ kind:'Rules', title:key, sub:(D.ruleSrc || {})[key] || 'Core rule', hay:hay(key, D.rules[key], 'core rule keyword'), act:{ rule:key } });
   indexCache.set(a.id, out);
   return out;
 }
@@ -4229,8 +4193,6 @@ function highlight(text, toks){
   if(!parts.length) return esc(text);
   return String(text).split(new RegExp('(' + parts.join('|') + ')', 'gi')).map((p, i) => i % 2 ? '<mark>' + esc(p) + '</mark>' : esc(p)).join('');
 }
-// the other list of the game, searched too: the opponent picked on Find, or yours while you look at theirs (never the same list)
-const gameOther = a => { if(peeking(a)) return mineList(); const o = oppOf(a); return o && o !== a ? o : null; };
 function renderFinder(){
   const res = $('#qres');
   if(!res) return;
@@ -4249,31 +4211,28 @@ function renderFinder(){
   // nothing found: forgive a plural and a typo or two ("rubrics", "ghazkull")
   const close = list => list.filter(e => { const words = e.words || (e.words = [...new Set(e.hay.split(/[^a-z0-9]+/).filter(Boolean))]);
     return alts.every(a => a.some(t => words.some(w => near(w, t)))); }).map(e => Object.assign({ score:4 }, e));
-  // the other list's units and rules, after this list's and marked whose (the core rules both lists share are this list's)
-  const O = gameOther(army()), oIndex = O ? inArmy(O, () => searchIndex()).filter(e => !e.core) : [];
-  let hits = found(searchIndex()), oHits = found(oIndex);
-  if(!hits.length && !oHits.length){ hits = close(searchIndex()); oHits = close(oIndex); }
+  let hits = found(searchIndex());
+  if(!hits.length) hits = close(searchIndex());
   for(const [re, key] of faction().aliases || []) if(re.test(q)){
     const r = hits.find(e => e.kind === 'Rules' && e.act.rule === key) || searchIndex().find(e => e.kind === 'Rules' && e.act.rule === key);
     if(r){ const i = hits.indexOf(r); if(i >= 0) hits.splice(i, 1); hits.unshift(Object.assign({}, r, { score:-1 })); }
   }
-  if(!hits.length && !oHits.length){ res.innerHTML = '<div class="empty">Nothing in ' + esc(army().name) + (O ? ' or ' + esc(O.name) : '') + ' matches “' + esc(q) + '”.</div>'; return; }
+  if(!hits.length){ res.innerHTML = '<div class="empty">Nothing in ' + esc(army().name) + ' matches “' + esc(q) + '”.</div>'; return; }
   const groupsOf = list => { const g = KIND_ORDER.map(k => ({ k, list:list.filter(e => e.kind === k).sort((x, y) => x.score - y.score) })).filter(g => g.list.length);
     return g.sort((x, y) => x.list[0].score - y.list[0].score || KIND_ORDER.indexOf(x.k) - KIND_ORDER.indexOf(y.k)); };
   const words = q.split(/\s+/);
-  const whose = O && O === mineList() ? 'Your' : 'Their';
-  const html = (g, L) => {
-    const mk = (L ? 'o:' : '') + g.k, limit = moreShown.has(mk) ? Infinity : 6;
-    return '<div class="rg' + (L ? ' oth' : '') + '"><div class="lbl">' + (L ? esc(whose + ' ' + g.k.toLowerCase() + ' (' + L.name + ')') : g.k) + ' · ' + g.list.length + '</div>' +
+  const html = g => {
+    const limit = moreShown.has(g.k) ? Infinity : 6;
+    return '<div class="rg"><div class="lbl">' + g.k + ' · ' + g.list.length + '</div>' +
       g.list.slice(0, limit).map(e => {
         const act = e.act;
-        const attrs = (L ? 'data-their="' + esc(L.id) + '" ' : '') + (act.strat ? 'data-strat="' + esc(act.strat) + '"' : act.rule ? 'data-rule="' + esc(act.rule) + '"' : act.ability ? 'data-ability="' + esc(act.ability) + '"' :
+        const attrs = (act.strat ? 'data-strat="' + esc(act.strat) + '"' : act.rule ? 'data-rule="' + esc(act.rule) + '"' : act.ability ? 'data-ability="' + esc(act.ability) + '"' :
           act.enh ? 'data-enh="' + esc(act.enh) + '"' : 'data-unit="' + esc(act.unit) + '"' + (act.sec ? ' data-sec="' + esc(act.sec) + '"' : ''));
         return '<button class="res" ' + attrs + '><b>' + highlight(e.title, words) + '</b>' + (e.s1 ? '<span class="s1">' + esc(e.s1) + '</span>' : '') + '<span>' + esc(e.sub) + '</span></button>';
       }).join('') +
-      (g.list.length > limit ? '<button class="more" data-more="' + esc(mk) + '">Show ' + (g.list.length - limit) + ' more</button>' : '') + '</div>';
+      (g.list.length > limit ? '<button class="more" data-more="' + esc(g.k) + '">Show ' + (g.list.length - limit) + ' more</button>' : '') + '</div>';
   };
-  res.innerHTML = groupsOf(hits).map(g => html(g, null)).join('') + groupsOf(oHits).map(g => html(g, O)).join('');
+  res.innerHTML = groupsOf(hits).map(html).join('');
 }
 
 /* ---------- screen: unit list ---------- */
@@ -4879,8 +4838,7 @@ function screenPregame(){
   const enh = units.flatMap(u => [u.enhancement, u.upgrade].filter(Boolean).map(n => { const d = detachments().find(x => (x.enhancements || []).some(e => e.name === n)), e = d && d.enhancements.find(x => x.name === n);
     return (d ? linkTo('enh', d.id + '|' + n, n) : esc(n)) + (n === u.upgrade ? ' <span class="from">(upgrade)</span>' : '') + (e && e.pts ? ' <span class="from">' + e.pts + ' pts</span>' : '') + ' on ' + (n === u.enhancement && u.enhOn ? linkTo('unit', u.id, u.enhOn) : n === u.upgrade && u.leads ? linkTo('unit', u.id, u.leads) : linkTo('unit', u.id, (u.short || u.name) + unitNo(u))); }));
   const led = units.filter(u => u.leads).flatMap(u => charsOf(u).map((c, i) => (i ? linkTo('unit', u.id, c.name) : nameLink(u)) + (c.support ? ' supports ' : ' leads ') + esc(u.leads) + (u.copies > 1 ? ' <span class="from">×' + u.copies + ' units</span>' : '')));
-  // the opponent's list, opened from yours (Find's Opponent's list row): theirs, not yours
-  let h = sec(peeking(a) ? 'Their list' : 'Your list',
+  let h = sec('Your list',
     row('Warlord', warlord.map(u => u.warlordOn ? linkTo('unit', u.id, u.warlordOn) + ' <span class="from">(' + esc(unitLabel(u)) + ')</span>' : unitLink(u)).join(', ')) +
     row('Enhance&shy;ments', enh.join('<br>')) +
     row('Attached', led.join('<br>')) +
@@ -5653,14 +5611,8 @@ document.addEventListener('click', e => {
   if(el.hasAttribute('data-close')){ closeSheet(); return; }
   if(el.hasAttribute('data-back')){ back(); return; }
   if(el.hasAttribute('data-find')){ focusSearch = true; go({ s:'army', army:army().id }); return; }
-  if(el.hasAttribute('data-mine')){ toMine(); return; }
-  if(el.hasAttribute('data-oppick')){ oppPicker(); return; }
-  if(ds.oppset != null){ setOpp(oppFor || army(), ds.oppset); oppFor = null; closeSheet(); rerender(); return; }
+  if(ds.oppset != null){ setOpp(oppFor || army(), ds.oppset); oppFor = null; closeSheet(); rerender(); return; }   // Part D removes this (the old Damage tab's picker)
   if(ds.army){ const next = { s:'army', army:ds.army };
-    // a list opened from the home screen is yours; the opponent's list opened from yours is a look at theirs
-    if(cur.s === 'home') { sess.mine = ds.army; sess.peekD = null; }
-    if(el.hasAttribute('data-peek')) sess.peekD = cur.d || 0;
-    saveSession();
     if(inSheet){ hideSheet(); go(next, 'sheet'); } else go(next); return; }   // an army opens on Find: search, Overview and every list
   if(el.hasAttribute('data-settings')){ go({ s:'settings' }); return; }
   if(ds.hfopen){ showHomeFilter(ds.hfopen); return; }
@@ -5748,11 +5700,6 @@ document.addEventListener('click', e => {
     if(ds.dmrr){ const [k, v] = ds.dmrr.split('|'); man[k] = v; }
     saveSession(); rerender(); return;
   }
-  // a Find result from the other list of the game: its datasheet opens in that list (as from the Opponent's list row, Back
-  // returns here); its rules, stratagems and abilities open as that list has them, the app staying on this list
-  if(ds.their && !inSheet){ const L = armyById(ds.their); if(!L) return;
-    if(ds.unit){ if(L !== mineList()){ sess.peekD = cur.d || 0; saveSession(); } go({ s:'unit', army:L.id, unit:ds.unit }); if(ds.sec) jumpTo(ds.sec, true); return; }
-    dmShowIn(L, () => ds.strat ? showStrat(ds.strat) : ds.rule ? showRule(ds.rule) : ds.ability ? showAbility(ds.ability) : showEnhancement(ds.enh)); return; }
   if(ds.go){ go({ s:ds.go, army:army().id }); return; }
   if(ds.unit){
     const next = { s:'unit', army:army().id, unit:ds.unit };
