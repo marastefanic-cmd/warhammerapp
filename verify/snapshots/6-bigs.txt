@@ -712,19 +712,6 @@ SHOOT · BIGGEST FIRST
 
 Effects are on the damage these attacks deal.
 
-HALF RANGE
-[RAPID FIRE], [MELTA]
-No half-range bonus
-the target is farther than 18" (every weapon is taken to be in range)
-NOW
-Within 18", not 12"
-bonus for Questoris heavy stubber
-+5% wiped
-+0.1
-Within 12"
-bonus for Questoris heavy stubber and Frag bombard
-+28% wiped
-+0.6
 RANGED WEAPONS
 Knight Destrier (×2)
 Questoris heavy stubber
@@ -778,6 +765,19 @@ ASSAULT, BLAST, RAPID FIRE D6+3
 −35% wiped
 −1.1
 MODELS IF UNTICKED
+HALF RANGE
+[RAPID FIRE], [MELTA]
+No half-range bonus
+the target is farther than 18" (every weapon is taken to be in range)
+NOW
+Within 18", not 12"
+bonus for Questoris heavy stubber
++5% wiped
++0.1
+Within 12"
+bonus for Questoris heavy stubber and Frag bombard
++28% wiped
++0.6
 SITUATION AND RULES
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
@@ -1204,19 +1204,6 @@ The charge is taken to succeed (no charge roll); “Charged this turn” is tick
 
 THE SHOOTING
 FIRST
-HALF RANGE
-[RAPID FIRE], [MELTA]
-No half-range bonus
-the target is farther than 18" (every weapon is taken to be in range)
-NOW
-Within 18", not 12"
-bonus for Questoris heavy stubber
-+5% wiped
-+0.1
-Within 12"
-bonus for Questoris heavy stubber and Frag bombard
-+23% wiped
-+0.5
 RANGED WEAPONS
 Knight Destrier (×2)
 Questoris heavy stubber
@@ -1270,6 +1257,19 @@ ASSAULT, BLAST, RAPID FIRE D6+3
 −34% wiped
 −0.9
 MODELS IF UNTICKED
+HALF RANGE
+[RAPID FIRE], [MELTA]
+No half-range bonus
+the target is farther than 18" (every weapon is taken to be in range)
+NOW
+Within 18", not 12"
+bonus for Questoris heavy stubber
++5% wiped
++0.1
+Within 12"
+bonus for Questoris heavy stubber and Frag bombard
++23% wiped
++0.5
 SITUATION AND RULES
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level

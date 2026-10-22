@@ -1092,14 +1092,6 @@ SHOOT · BIGGEST FIRST
 
 Effects are on the damage these attacks deal.
 
-HALF RANGE
-[RAPID FIRE], [MELTA]
-No half-range bonus
-the target is farther than 9" (every weapon is taken to be in range)
-NOW
-Within 9"
-bonus for Solar atomiser
-+0.3
 RANGED WEAPONS
 Belisarius Cawl
 Solar atomiser
@@ -1118,6 +1110,14 @@ D6
 MELTA 3
 −1.8
 MODELS IF UNTICKED
+HALF RANGE
+[RAPID FIRE], [MELTA]
+No half-range bonus
+the target is farther than 9" (every weapon is taken to be in range)
+NOW
+Within 9"
+bonus for Solar atomiser
++0.3
 SITUATION AND RULES
 Canticles of the Omnissiah
 If he has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll
@@ -1590,15 +1590,6 @@ The charge is taken to succeed (no charge roll); “Charged this turn” is tick
 
 THE SHOOTING
 FIRST
-HALF RANGE
-[RAPID FIRE], [MELTA]
-No half-range bonus
-the target is farther than 9" (every weapon is taken to be in range)
-NOW
-Within 9"
-bonus for Solar atomiser
-+7% wiped
-+0.2
 RANGED WEAPONS
 Belisarius Cawl
 Solar atomiser
@@ -1618,6 +1609,15 @@ MELTA 3
 −40% wiped
 −1.5
 MODELS IF UNTICKED
+HALF RANGE
+[RAPID FIRE], [MELTA]
+No half-range bonus
+the target is farther than 9" (every weapon is taken to be in range)
+NOW
+Within 9"
+bonus for Solar atomiser
++7% wiped
++0.2
 SITUATION AND RULES
 Canticles of the Omnissiah
 If he has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll

@@ -867,19 +867,6 @@ SHOOT · BIGGEST FIRST
 
 Effects are on the damage these attacks deal.
 
-HALF RANGE
-[RAPID FIRE], [MELTA]
-No half-range bonus
-the target is farther than 18" (every weapon is taken to be in range)
-NOW
-Within 18", not 12"
-bonus for Reaper autocannon
-+3% wiped
-+0.5
-Within 12"
-bonus for Combi-bolter and Reaper autocannon
-+45% wiped
-+2.2
 RANGED WEAPONS
 Chaos Terminators (370 pts, ×2)
 Combi-bolter ×6
@@ -914,6 +901,19 @@ D
 DEVASTATING WOUNDS, RAPID FIRE 2, SUSTAINED HITS 1
 −1.1
 MODELS IF UNTICKED
+HALF RANGE
+[RAPID FIRE], [MELTA]
+No half-range bonus
+the target is farther than 18" (every weapon is taken to be in range)
+NOW
+Within 18", not 12"
+bonus for Reaper autocannon
++3% wiped
++0.5
+Within 12"
+bonus for Combi-bolter and Reaper autocannon
++45% wiped
++2.2
 SITUATION AND RULES
 The target is the closest eligible target
 if it holds
@@ -1144,9 +1144,31 @@ MODELS IF UNTICKED
 PICK ONE PROFILE
 strike
 4.6
+A
+9
+WS
+2+
+S
+14
+AP
+-3
+D
+D6+2
+DEVASTATING WOUNDS
 sweep
 4.9
 BEST
+A
+17
+WS
+2+
+S
+7
+AP
+-2
+D
+2
+DEVASTATING WOUNDS
 SITUATION AND RULES
 Driven by Ultimate Rage
 Own aura, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
@@ -1393,17 +1415,6 @@ Nothing here changes this: the target is destroyed in every game anyway.
 
 THE SHOOTING
 FIRST
-HALF RANGE
-[RAPID FIRE], [MELTA]
-No half-range bonus
-the target is farther than 18" (every weapon is taken to be in range)
-NOW
-Within 18", not 12"
-bonus for Reaper autocannon
-0
-Within 12"
-bonus for Combi-bolter and Reaper autocannon
-0
 RANGED WEAPONS
 Chaos Terminators (370 pts, ×2)
 Combi-bolter ×6
@@ -1435,6 +1446,17 @@ AP
 D
 1
 DEVASTATING WOUNDS, RAPID FIRE 2, SUSTAINED HITS 1
+0
+HALF RANGE
+[RAPID FIRE], [MELTA]
+No half-range bonus
+the target is farther than 18" (every weapon is taken to be in range)
+NOW
+Within 18", not 12"
+bonus for Reaper autocannon
+0
+Within 12"
+bonus for Combi-bolter and Reaper autocannon
 0
 SITUATION AND RULES
 The target is the closest eligible target

@@ -1187,9 +1187,35 @@ MODELS IF UNTICKED
 PICK ONE PROFILE
 standard
 1.4
+RNG
+12"
+A
+1
+BS
+3+
+S
+7
+AP
+-2
+D
+1
+PISTOL
 supercharge
 1.8
 BEST · 12"
+RNG
+12"
+A
+1
+BS
+3+
+S
+8
+AP
+-3
+D
+2
+HAZARDOUS, PISTOL
 Plasma pistol ×3 KHORNE BERZERKERS
 RNG
 12"
@@ -1209,9 +1235,35 @@ MODELS IF UNTICKED
 PICK ONE PROFILE
 standard
 1.1
+RNG
+12"
+A
+1
+BS
+4+
+S
+7
+AP
+-2
+D
+1
+PISTOL
 supercharge
 1.8
 BEST · 12"
+RNG
+12"
+A
+1
+BS
+4+
+S
+8
+AP
+-3
+D
+2
+HAZARDOUS, PISTOL
 Bolt pistol ×7 KHORNE BERZERKERS
 RNG
 12"
@@ -1449,9 +1501,31 @@ MODELS IF UNTICKED
 PICK ONE PROFILE
 strike
 4.6
+A
+9
+WS
+2+
+S
+14
+AP
+-3
+D
+D6+2
+DEVASTATING WOUNDS
 sweep
 4.9
 BEST
+A
+17
+WS
+2+
+S
+7
+AP
+-2
+D
+2
+DEVASTATING WOUNDS
 SITUATION AND RULES
 Driven by Ultimate Rage
 Own aura, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
@@ -1719,8 +1793,34 @@ HAZARDOUS, PISTOL
 PICK ONE PROFILE
 standard
 5
+RNG
+12"
+A
+1
+BS
+3+
+S
+7
+AP
+-2
+D
+1
+PISTOL
 supercharge
 5
+RNG
+12"
+A
+1
+BS
+3+
+S
+8
+AP
+-3
+D
+2
+HAZARDOUS, PISTOL
 Plasma pistol ×3 KHORNE BERZERKERS
 RNG
 12"
@@ -1739,8 +1839,34 @@ HAZARDOUS, PISTOL
 PICK ONE PROFILE
 standard
 5
+RNG
+12"
+A
+1
+BS
+4+
+S
+7
+AP
+-2
+D
+1
+PISTOL
 supercharge
 5
+RNG
+12"
+A
+1
+BS
+4+
+S
+8
+AP
+-3
+D
+2
+HAZARDOUS, PISTOL
 Bolt pistol ×7 KHORNE BERZERKERS
 RNG
 12"

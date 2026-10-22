@@ -1387,9 +1387,31 @@ MODELS IF UNTICKED
 PICK ONE PROFILE
 strike
 4.0
+A
+7
+WS
+2+
+S
+16
+AP
+-3
+D
+3
+DEVASTATING WOUNDS, PSYCHIC
 sweep
 4.2
 BEST
+A
+14
+WS
+2+
+S
+8
+AP
+-1
+D
+2
+PSYCHIC
 SITUATION AND RULES
 Charged this turn
 said to hold
@@ -1761,8 +1783,30 @@ MODELS IF UNTICKED
 PICK ONE PROFILE
 strike
 5.0
+A
+7
+WS
+2+
+S
+16
+AP
+-3
+D
+3
+DEVASTATING WOUNDS, PSYCHIC
 sweep
 5.0
+A
+14
+WS
+2+
+S
+8
+AP
+-1
+D
+2
+PSYCHIC
 SITUATION AND RULES
 Charged this turn
 holds: Both takes the charge as made (no charge roll)

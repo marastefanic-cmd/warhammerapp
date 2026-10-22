@@ -881,8 +881,34 @@ PICK ONE PROFILE
 high intensity
 3.1
 BEST · 24"
+RNG
+24"
+A
+D6
+BS
+2+
+S
+14
+AP
+-3
+D
+4
+BLAST, SUSTAINED HITS 1
 low intensity
 2.8
+RNG
+36"
+A
+2D6
+BS
+2+
+S
+7
+AP
+-1
+D
+2
+BLAST, SUSTAINED HITS 1
 Questoris multi-laser
 RNG
 36"
@@ -1157,9 +1183,31 @@ MODELS IF UNTICKED
 PICK ONE PROFILE
 strike
 3.4
+A
+5
+WS
+2+
+S
+20
+AP
+-3
+D
+9
+SUSTAINED HITS 1
 sweep
 4.5
 BEST
+A
+10
+WS
+2+
+S
+10
+AP
+-2
+D
+3
+SUSTAINED HITS 1
 Close combat weapon
 A
 2
@@ -1398,8 +1446,34 @@ MODELS IF UNTICKED
 PICK ONE PROFILE
 high intensity
 4.9
+RNG
+24"
+A
+D6
+BS
+2+
+S
+14
+AP
+-3
+D
+4
+BLAST, SUSTAINED HITS 1
 low intensity
 4.9
+RNG
+36"
+A
+2D6
+BS
+2+
+S
+7
+AP
+-1
+D
+2
+BLAST, SUSTAINED HITS 1
 Questoris multi-laser
 RNG
 36"
@@ -1540,9 +1614,31 @@ MODELS IF UNTICKED
 PICK ONE PROFILE
 strike
 4.8
+A
+5
+WS
+2+
+S
+20
+AP
+-3
+D
+9
+SUSTAINED HITS 1
 sweep
 4.9
 BEST
+A
+10
+WS
+2+
+S
+10
+AP
+-2
+D
+3
+SUSTAINED HITS 1
 Close combat weapon
 A
 2
