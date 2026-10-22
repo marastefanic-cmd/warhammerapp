@@ -168,7 +168,7 @@ const CORE_STRATAGEMS = [
     when:'End of your opponent’s Movement phase.',
     target:'One friendly **unengaged** unit (excluding **TITANIC** units).',
     effect:'Your unit shoots using **snap shooting**.' },
-  { id:'smokescreen', gist:'Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…', defCalc:{ cover:true }, calcNote:'for a unit that is not fully visible to the attacking models because of one or more models in your SMOKE unit, tick “Target has the benefit of cover” instead', name:'Smokescreen', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Smoke'] },
+  { id:'smokescreen', gist:'Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…', defCalc:{ cover:true }, name:'Smokescreen', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Smoke'] },
     when:'Start of your opponent’s Shooting phase.',
     target:'One friendly **SMOKE** unit.',
     effect:'Until the end of the phase, each time an attack targets either your **SMOKE** unit, or a unit that is not **fully visible** to the attacking model because of one or more models in your **SMOKE** unit, the target has the **benefit of cover** against that attack (13.08).' },
@@ -269,7 +269,6 @@ const FACTIONS = {
           // Wahapedia prints the +1CP option as a badge above "Or:"; the app writes the badge at the start of that line
           { id:'hulking-brutes', gist:'Ranged attacks that target your unit with S greater than its T have -1 to wound rolls; for +1CP, all ranged attacks that target it do.', name:'Hulking Brutes', cp:1, cpNote:'Or: +1CP', phases:['shooting'], turn:'opp', needs:{ any:['Meganobz','Nobz'] },
             def:'their Shooting phase: -1 to wound when the attack’s S is greater than its T (+1CP: every ranged attack)',
-            defPick:[{ name:'S greater than T', calc:{ woundMinusSgt:1 } }, { name:'+1CP: every ranged attack', calc:{ woundMinus:1 } }],
             when:'Your opponent’s Shooting phase, when an enemy unit targets a friendly **MEGANOBZ**/**NOBZ** unit.',
             target:'That **MEGANOBZ**/**NOBZ** unit.',
             effect:'Ranged attacks that target your unit with a **S** greater than your unit’s **T** have -1 to **wound rolls**.\n**+1CP** Or: Ranged attacks that target your unit have -1 to **wound rolls**.' }
@@ -423,8 +422,7 @@ const FACTIONS = {
             when:'Your Shooting phase, when a friendly **unengaged BREAKA BOYZ**/**FLASH GITZ**/**TANKBUSTAS** unit has shot.',
             target:'That **BREAKA BOYZ**/**FLASH GITZ**/**TANKBUSTAS** unit.',
             effect:'- Your unit can make a **normal move** of up to 6", and must end that move within range of an **objective**.\n- Your unit is not **eligible to declare a charge** until the end of the turn.' },
-          // react: the Damage tab names it to the side that shoots its unit, as a reaction it can trigger (not counted)
-          { id:'gun-crazy-show-offs', react:'hit', gist:'After an enemy unit has shot and hit yours: your unit shoots using normal shooting, but only at that enemy unit.', name:'Gun-crazy Show-offs', cp:1, phases:['shooting'], turn:'opp', needs:{ any:['Flash Gitz','Tankbustas'] },
+          { id:'gun-crazy-show-offs', gist:'After an enemy unit has shot and hit yours: your unit shoots using normal shooting, but only at that enemy unit.', name:'Gun-crazy Show-offs', cp:1, phases:['shooting'], turn:'opp', needs:{ any:['Flash Gitz','Tankbustas'] },
             when:'Your opponent’s Shooting phase, when an enemy unit has shot.',
             target:'One friendly **FLASH GITZ**/**TANKBUSTAS** unit hit by those attacks.',
             effect:'Your unit shoots using **normal shooting**, but while doing so your unit can only target that enemy unit.' }
@@ -509,7 +507,7 @@ const FACTIONS = {
             when:'Your Shooting phase.',
             target:'One **IMPERIAL KNIGHTS** unit from your army that has not been selected to shoot this phase.',
             effect:'Until the end of the phase, when making ranged attacks with Blast weapons, models in your unit can target enemy units within **Engagement Range** of your unit (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, until the end of the phase, your unit does not suffer the penalty to its **Hit rolls** for being within Engagement Range of one or more enemy units, but each time a model in your unit makes an attack with a Blast weapon that targets a unit within Engagement Range of your unit, on an unmodified Hit roll of 1, your unit suffers 1 **mortal wound** after all of its attacks have been resolved.' },
-          { id:'survivor-of-strife', gist:'Until the end of the phase, attacks against your unit whose S is greater than its T have -1 to the wound roll.', def:'their Shooting phase: -1 to wound when the attack’s S is greater than its T', defCalc:{ woundMinusSgt:1 }, name:'Survivor of Strife', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Faction: Imperial Knights'] },
+          { id:'survivor-of-strife', gist:'Until the end of the phase, attacks against your unit whose S is greater than its T have -1 to the wound roll.', def:'their Shooting phase: -1 to wound when the attack’s S is greater than its T', name:'Survivor of Strife', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Faction: Imperial Knights'] },
             when:'Your opponent’s Shooting phase, just after an enemy unit has selected its targets.',
             target:'One **IMPERIAL KNIGHTS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.',
             effect:'Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the **Wound roll**.' },
@@ -625,7 +623,7 @@ const FACTIONS = {
             target:'That **TERMINATOR SQUAD** unit.',
             effect:'Your unit’s attacks that target a **MONSTER/VEHICLE** unit have +1 to **wound rolls**.' },
           // "Shooting Phase" with a capital P, as both the pack and Wahapedia print it
-          { id:'wrath-beyond-reason', gist:'Ranged attacks that target your unit have -1 D until that enemy unit has attacked.', def:'their Shooting phase: -1 D to ranged attacks that target it (until that enemy unit has attacked)', defCalc:{ dMinus:1, dChar:true }, name:'Wrath Beyond Reason', cp:2, phases:['shooting'], turn:'opp', needs:{ all:['Terminator Squad'] },
+          { id:'wrath-beyond-reason', gist:'Ranged attacks that target your unit have -1 D until that enemy unit has attacked.', def:'their Shooting phase: -1 D to ranged attacks that target it (until that enemy unit has attacked)', name:'Wrath Beyond Reason', cp:2, phases:['shooting'], turn:'opp', needs:{ all:['Terminator Squad'] },
             when:'Your opponent’s Shooting Phase, when an enemy unit targets a friendly **TERMINATOR SQUAD** unit.',
             target:'That **TERMINATOR SQUAD** unit.',
             effect:'Ranged attacks that target your unit have -1 **D** until that enemy unit has attacked.' }
@@ -854,8 +852,8 @@ const FACTIONS = {
           ['Protector Imperative', '- Ranged weapons equipped by models in this unit have the **[HEAVY]** ability.\n- Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n- Each time a melee attack targets this unit, if this unit has the **BATTLELINE** keyword and/or it is within 6" of one or more friendly **ADEPTUS MECHANICUS BATTLELINE** units, subtract 1 from the **Hit roll**.'],
           ['Conqueror Imperative', '- Ranged weapons equipped by models in this unit have the **[ASSAULT]** ability.\n- Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n- Each time a model in this unit makes an attack, if this unit has the **BATTLELINE** keyword and/or it is within 6" of one or more friendly **ADEPTUS MECHANICUS BATTLELINE** units, improve the Armour Penetration characteristic of that attack by 1.']
         ],
-        // the Damage tab's reading (read by it alone, never shown on the datasheets): calcMods for the attacks of a unit with this ability,
-        // calcDefs for the attacks on it. One pick, the Imperative active (Protector, Conqueror, or Both where a rule of the list makes
+        // the Damage tab's reading (read by it alone, never shown on the datasheets): calcMods for the attacks of a unit with this ability.
+        // One pick, the Imperative active (Protector, Conqueror, or Both where a rule of the list makes
         // both active for that unit: both, else Both is counted by you). The BATTLELINE / within 6" condition is a fact of the table
         // (part.cond battleline6: said for the unit; a BATTLELINE unit meets it by itself). [ASSAULT] changes no numbers here.
         // The Faction Pack's FAQ (Auto-divinatory Targeting): its BS 3+ is set first, then the Protector Imperative improves it (skill)
@@ -868,11 +866,6 @@ const FACTIONS = {
             pick:[{ name:'Protector', note:'nothing for its melee attacks', calc:{} }, { name:'Conqueror', note:'WS improved by 1', calc:{ skill:1 } },
               { name:'Both', both:true, note:'WS improved by 1', calc:{ skill:1 } }],
             part:{ cond:'battleline6', picks:['Conqueror', 'Both'], calc:{ ap:1 }, note:'+1 AP' } }
-        ],
-        calcDefs:[
-          { kind:'melee', lasts:'round', when:'Melee attacks that target this unit', note:'Protector: -1 to the hit roll if this unit is BATTLELINE or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit',
-            pick:[{ name:'Protector', calc:{} }, { name:'Conqueror', note:'nothing against melee attacks', calc:{} }, { name:'Both', both:true, calc:{} }],
-            part:{ cond:'battleline6', picks:['Protector', 'Both'], calc:{ hitMinus:1 }, note:'-1 to their hit rolls' } }
         ],
         // what makes both Imperatives active for a unit: Omnicogitator (the bearer's unit), Transcendent Cogitation (its target), and
         // Thulia Ghuld's Icon of War, The Fires of Mars (a SKITARII or THULIA GHULD unit within 6" of her)
@@ -925,7 +918,7 @@ const FACTIONS = {
             when:'Your Command phase.',
             target:'One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army.',
             effect:'Until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for your unit.' },
-          { id:'benevolence-of-the-omnissiah', gist:'Until the start of your next Command phase, your unit has Feel No Pain 6+ (5+ against mortal wounds).', def:'Feel No Pain 6+ (5+ against mortal wounds), until the start of your next Command phase', defCalc:{ fnp:6, fnpMortal:5 }, lasts:'round', name:'Benevolence of the Omnissiah', cp:1, phases:['command'], turn:'your', needs:{ all:['Faction: Adeptus Mechanicus'], any:['Legio Cybernetica','Vehicle'] },
+          { id:'benevolence-of-the-omnissiah', gist:'Until the start of your next Command phase, your unit has Feel No Pain 6+ (5+ against mortal wounds).', def:'Feel No Pain 6+ (5+ against mortal wounds), until the start of your next Command phase', name:'Benevolence of the Omnissiah', cp:1, phases:['command'], turn:'your', needs:{ all:['Faction: Adeptus Mechanicus'], any:['Legio Cybernetica','Vehicle'] },
             when:'Your Command phase.',
             target:'One **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** unit from your army.',
             effect:'Until the start of your next Command phase, models in your unit have the **Feel No Pain 6+** ability, which is improved to Feel No Pain 5+ against **mortal wounds**.' }
@@ -974,8 +967,7 @@ const FACTIONS = {
             when:'Your Charge phase, just after a **SICARIAN** unit from your army **declares a charge**.',
             target:'That **SICARIAN** unit.',
             effect:'Until the end of the phase, when your unit ends a **Charge move**, select one enemy unit within **Engagement Range** of it, then roll one D6 for each model in your unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 **mortal wound**.' },
-          // react: the Damage tab names it to the side that shoots its unit, as a reaction it can trigger (not counted)
-          { id:'analytic-reprisals', react:'lost', gist:'An enemy unit has shot and your unit lost models to those attacks: your unit shoots as if it were your Shooting phase, but only at that enemy unit (and only if it is an eligible target).', name:'Analytic Reprisals', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Skitarii','Infantry'] },
+          { id:'analytic-reprisals', gist:'An enemy unit has shot and your unit lost models to those attacks: your unit shoots as if it were your Shooting phase, but only at that enemy unit (and only if it is an eligible target).', name:'Analytic Reprisals', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Skitarii','Infantry'] },
             when:'Your opponent’s Shooting phase, just after an enemy unit has shot.',
             target:'One **SKITARII INFANTRY** unit from your army that lost one or more models as a result of the attacking unit’s attacks.',
             effect:'Your unit can shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target.' }
@@ -1032,8 +1024,7 @@ const FACTIONS = {
       ticked; selfAlways = the same for an aura's own unit (22.01); vs = the targets it is for: { any:[keywords] }
       (at least one), { all:[keywords] } (every one), { none:[keywords] } (none of them), { maxT:6 } (no model T 7+);
       calc = its numbers when the words of its note say more than the calculator counts; pick = a choice of one of
-      several effects ([{ name, note }]: one box, the player picks which). On an ability: defAlways = its def always protects the unit,
-      defCalc = the def's numbers (model: only that model); riled = this unit is always riled up)
+      several effects ([{ name, note }]: one box, the player picks which). On an ability: riled = this unit is always riled up)
      guard       help this unit gives other units of its list when they are attacked: needs, kind, when, note,
                  calc (insv, fnp, stealth), one = one model only
      aura        mods this unit gives to other units: needs = which units (keywords),
@@ -1072,9 +1063,8 @@ const ARMIES = [
       abilities:[
         { name:'Full Throttle', ph:['command','movement','charge'], turn:'your', text:'In your Command phase, select one Throttlerokkit Shokka Engine ability. This unit has that ability until the start of your next Command phase.' },
         { name:'Turbo Engine', who:'Throttlerokkit Shokka Engine', ph:['movement','charge'], turn:'your', text:'When this unit is selected to make an **advance**/**fall-back move**, that move does not prevent this unit from being **eligible to declare a charge**.' },
-        // def: the "When targeted" line (the Pulse Jet Move's AFTER MOVING), on the datasheet and in the Damage tab; defCalc its numbers;
-        // unticked: it needs the Pulse Jet picked (Full Throttle) and a pulse jet move made
-        { name:'Pulse Jet', who:'Throttlerokkit Shokka Engine', ph:['movement'], turn:'your', def:'After a pulse jet move: attacks that target it have -1 to hit rolls, until the start of your next turn', defCalc:{ hitMinus:1 }, lasts:'round', text:'In your Movement phase, when this unit is **selected to move**, if this unit is **unengaged**, this unit can make a **pulse jet move**.' },
+        // def: the "When targeted" line on the datasheet (the Pulse Jet Move's AFTER MOVING)
+        { name:'Pulse Jet', who:'Throttlerokkit Shokka Engine', ph:['movement'], turn:'your', def:'After a pulse jet move: attacks that target it have -1 to hit rolls, until the start of your next turn', text:'In your Movement phase, when this unit is **selected to move**, if this unit is **unengaged**, this unit can make a **pulse jet move**.' },
         { name:'Shokk Attack Engine', who:'Throttlerokkit Shokka Engine', ph:['command'], turn:'your', text:'In your Command phase, if this unit is **unengaged**, you can place this unit in **strategic reserves**.' }
       ],
       rules:['Deadly Demise D3','Deep Strike','Lone Operative','Waaagh!'],
@@ -1385,7 +1375,7 @@ const ARMIES = [
       ],
       abilities:[
         { name:'Beast Snagga Following', def:'Lone Operative while within 3" of a friendly BEAST SNAGGA unit (not MONSTER CHARACTER)', text:'While this unit is within 3" of a friendly **BEAST SNAGGA** unit (excluding **MONSTER CHARACTER** units), this unit has **Lone Operative**.' },
-        { name:'One Last Kill', ph:['fight'], turn:'either', fightOnDeath:{ roll:2 }, def:'Destroyed in the Fight phase before being selected to fight: on a 2+ it stays until it has fought or the phase ends', text:'In the Fight phase, when this model is **destroyed**, if this unit has not been **selected to fight** this phase, roll one D6:\n- On a 2+, do not remove this model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield.' },
+        { name:'One Last Kill', ph:['fight'], turn:'either', def:'Destroyed in the Fight phase before being selected to fight: on a 2+ it stays until it has fought or the phase ends', text:'In the Fight phase, when this model is **destroyed**, if this unit has not been **selected to fight** this phase, roll one D6:\n- On a 2+, do not remove this model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield.' },
         { name:'Da Bigger Dey Iz…', ph:['fight'], turn:'either', text:'This unit’s melee attacks that target a **MONSTER/VEHICLE** unit can re-roll **wound rolls**.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
@@ -1419,7 +1409,7 @@ const ARMIES = [
         { name:'Supreme Kunnin’', who:'Nazdreg', tag:'Once per phase, per army', ph:['movement'], turn:'opp', text:'In your opponent’s Movement phase, when an enemy unit ends a move within 8" of this unit, if this unit is **unengaged**, this unit can:\n- Make a **normal move** of up to D6".\n- Or: If this unit is **riled up**, make a **normal move** of up to 5".' },
         { name:'Intimidating Motivation', who:'Nazdreg', tag:'Once per battle round, per army', ph:['movement'], turn:'your', text:'In your Movement phase, at the start or end of this unit’s move, you can select one friendly **ORKS** unit within 6" of this unit. That unit:\n- Is no longer **battle-shocked**.\n- Is **riled up** until the start of your next turn.' },
         { name:'Krumpin’ Time', who:'Meganobz', ph:['fight'], turn:'either', text:'In the Fight phase, if this unit is **riled up**, this unit has +1 to **hit rolls**.' },
-        { name:'Arrogant Invulnerability', who:'Meganobz', def:'Attacks that target this unit have -1 AP', defAlways:true, text:'Attacks that target this unit have -1 **AP**.' }
+        { name:'Arrogant Invulnerability', who:'Meganobz', def:'Attacks that target this unit have -1 AP', text:'Attacks that target this unit have -1 **AP**.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
@@ -1520,7 +1510,7 @@ const ARMIES = [
         { name:'Follow Me Ladz', who:'Big Mek in Mega Armour', tag:'Enhancement', text:'**ORKS** model only. This unit has +2" **M**.' },
         { name:'Kustom Force Field', who:'Big Mek in Mega Armour', def:'4+ InSv against ranged attacks', text:'This unit has 4+ **InSv** against ranged attacks.' },
         { name:'Krumpin’ Time', who:'Meganobz', ph:['fight'], turn:'either', text:'In the Fight phase, if this unit is **riled up**, this unit has +1 to **hit rolls**.' },
-        { name:'Arrogant Invulnerability', who:'Meganobz', def:'Attacks that target this unit have -1 AP', defAlways:true, text:'Attacks that target this unit have -1 **AP**.' }
+        { name:'Arrogant Invulnerability', who:'Meganobz', def:'Attacks that target this unit have -1 AP', text:'Attacks that target this unit have -1 **AP**.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
@@ -1640,7 +1630,7 @@ const ARMIES = [
       abilities:[
         { name:'Legendary Killer', who:'Khârn the Betrayer', ph:['fight'], turn:'either', text:'While this model is leading a unit, each time a model in that unit makes a melee attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.' },
         { name:'The Betrayer', who:'Khârn the Betrayer', ph:['charge'], turn:'your', text:'At the end of your Charge phase, if this unit is on the battlefield, is **unengaged**, and contains a **bodyguard** model, this unit makes a **leadership roll**:\n- If that **leadership roll** is failed, one **bodyguard** model in this unit is **destroyed**.' },
-        { name:'Berserker Frenzy', who:'Khârn the Betrayer', comeback:{ roll:2, wounds:3 }, def:'Khârn: the first time he is destroyed, at the end of the phase on a 2+ he is set back up with 3 wounds, as close as possible to where he was destroyed and not within Engagement Range of enemy units', text:'The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.' },
+        { name:'Berserker Frenzy', who:'Khârn the Betrayer', def:'Khârn: the first time he is destroyed, at the end of the phase on a 2+ he is set back up with 3 wounds, as close as possible to where he was destroyed and not within Engagement Range of enemy units', text:'The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.' },
         { name:'Blood Surge', who:'Khorne Berzerkers', ph:['shooting'], turn:'opp', text:'In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6+2".' },
         { name:'Murderous Charge', who:'Khorne Berzerkers', ph:['fight'], turn:'either', text:'If this unit made a charge move this turn, this unit’s melee attacks have +1 S.' },
         { name:'Icon of Khorne', who:'Khorne Berzerkers', na:'No Icon of Khorne in this unit', text:'If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.' }
@@ -1673,7 +1663,7 @@ const ARMIES = [
         { name:'Lord of Murder', def:'Lone Operative while within 3" of a friendly WORLD EATERS INFANTRY unit', text:'While this model is within 3" of one or more friendly **WORLD EATERS INFANTRY** units, this model has the **Lone Operative** ability.' },
         { name:'Devastating Assault', ph:['charge','fight'], turn:'either', text:'Each time this model makes a Charge move, until the end of the turn, its hellforged weapons have the **[DEVASTATING WOUNDS]** ability.' },
         { name:'Direct the Slaughter', ph:['command','movement','shooting','charge','fight'], turn:'either', text:'Once per battle round, one model from your army with this ability can use it when a friendly **WORLD EATERS** unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.' },
-        { name:'Helm of Brazen Ire', tag:'Enhancement', def:'-1 D to each attack allocated to this model', defAlways:true, text:'**WORLD EATERS** model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack.' }
+        { name:'Helm of Brazen Ire', tag:'Enhancement', def:'-1 D to each attack allocated to this model', text:'**WORLD EATERS** model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
@@ -1931,7 +1921,7 @@ const ARMIES = [
       abilities:[
         { name:'Legendary Killer', who:'Khârn the Betrayer', ph:['fight'], turn:'either', text:'While this model is leading a unit, each time a model in that unit makes a melee attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.' },
         { name:'The Betrayer', who:'Khârn the Betrayer', ph:['charge'], turn:'your', text:'At the end of your Charge phase, if this unit is on the battlefield, is **unengaged**, and contains a **bodyguard** model, this unit makes a **leadership roll**:\n- If that **leadership roll** is failed, one **bodyguard** model in this unit is **destroyed**.' },
-        { name:'Berserker Frenzy', who:'Khârn the Betrayer', comeback:{ roll:2, wounds:3 }, def:'Khârn: the first time he is destroyed, at the end of the phase on a 2+ he is set back up with 3 wounds, as close as possible to where he was destroyed and not within Engagement Range of enemy units', text:'The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.' },
+        { name:'Berserker Frenzy', who:'Khârn the Betrayer', def:'Khârn: the first time he is destroyed, at the end of the phase on a 2+ he is set back up with 3 wounds, as close as possible to where he was destroyed and not within Engagement Range of enemy units', text:'The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.' },
         { name:'Blood Surge', who:'Khorne Berzerkers', ph:['shooting'], turn:'opp', text:'In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6+2".' },
         { name:'Murderous Charge', who:'Khorne Berzerkers', ph:['fight'], turn:'either', text:'If this unit made a charge move this turn, this unit’s melee attacks have +1 S.' },
         { name:'Icon of Khorne', who:'Khorne Berzerkers', na:'No Icon of Khorne in this unit', text:'If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.' }
@@ -2298,7 +2288,7 @@ const ARMIES = [
         { name:'Marked by Fate', who:'Sorcerer in Terminator Armour', tag:'Psychic', ph:['shooting'], turn:'your', text:'At the start of your Shooting phase, select one enemy unit that is **visible** to this **PSYKER** model. Until the end of the phase, each time a model in this unit makes an attack that targets that enemy unit, add 1 to the **Hit roll**.' },
         { name:'Empyric Guidance', who:'Sorcerer in Terminator Armour', tag:'Psychic', text:'While this model is leading a unit, weapons equipped by models in that unit have the **[LETHAL HITS]** ability.' },
         { name:'Umbralefic Crystal', who:'Sorcerer in Terminator Armour', tag:'Enhancement', ph:['command','movement'], turn:'your', text:'**THOUSAND SONS** model only. (Once per battle, per army) In your Command phase, if this unit is **unengaged**, you can use this ability. If you do:\n- Place this unit in **strategic reserves**.\n- This unit has **Deep Strike** until the start of your next Shooting phase.\n- This unit must make an **ingress move** in your next Movement phase (including in your first turn).' },
-        { name:'Rites of Coalescence', who:'Scarab Occult Terminators', def:'-1 to wound rolls against this unit while it contains a PSYKER model', defCalc:{ woundMinus:1 }, defAlways:true, calcNote:'counted for every attack, as if a PSYKER model stays in the unit', text:'While this unit contains one or more **PSYKER** models, each time an attack targets this unit, subtract 1 from the **Wound roll**.' }
+        { name:'Rites of Coalescence', who:'Scarab Occult Terminators', def:'-1 to wound rolls against this unit while it contains a PSYKER model', text:'While this unit contains one or more **PSYKER** models, each time an attack targets this unit, subtract 1 from the **Wound roll**.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
@@ -2498,7 +2488,7 @@ const ARMIES = [
         { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.' },
         { name:'Singular Purpose', tag:'Start of the first battle round', ph:['command','movement','shooting','charge','fight'], turn:'either',
           note:'With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.',
-          def:'If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it', defCalc:{ fnp:5 },
+          def:'If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it',
           text:'At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.' },
         { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
         { name:'Synaptoprescience', tag:'Enhancement', text:'**NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**.' }
@@ -2531,7 +2521,7 @@ const ARMIES = [
         { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.' },
         { name:'Singular Purpose', tag:'Start of the first battle round', ph:['command','movement','shooting','charge','fight'], turn:'either',
           note:'With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.',
-          def:'If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it', defCalc:{ fnp:5 },
+          def:'If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it',
           text:'At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.' },
         { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
         { name:'Synaptoprescience', tag:'Enhancement', text:'**NORN ASSIMILATOR** unit only. This unit has 4+ **InSv**.' }
@@ -2564,12 +2554,12 @@ const ARMIES = [
       abilities:[
         { name:'Singular Purpose', tag:'Start of the first battle round', ph:['command','movement','shooting','charge','fight'], turn:'either',
           note:'With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.',
-          def:'If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it', defCalc:{ fnp:5 },
+          def:'If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it',
           text:'At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.' },
         { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.' },
         { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
         { name:'Destabilising Predation', tag:'Enhancement', text:'**NORN EMISSARY** unit only. This unit’s ranged attacks have **[ANTI-CHARACTER 2+]**.' },
-        { name:'Unnatural Resistance', def:'Feel No Pain 4+ against mortal wounds', defAlways:true, text:'This model has the **Feel No Pain 4+** ability against Mortal Wounds.' }
+        { name:'Unnatural Resistance', def:'Feel No Pain 4+ against mortal wounds', text:'This model has the **Feel No Pain 4+** ability against Mortal Wounds.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
@@ -2599,11 +2589,11 @@ const ARMIES = [
       abilities:[
         { name:'Singular Purpose', tag:'Start of the first battle round', ph:['command','movement','shooting','charge','fight'], turn:'either',
           note:'With Enraged Behemoths’ “add 2 to the Objective Control characteristic”: 15 or 17. The sources here don’t say whether “an Objective Control characteristic of 15” is applied before or after modifiers.',
-          def:'If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it', defCalc:{ fnp:5 },
+          def:'If its Singular Purpose is an objective marker: Feel No Pain 5+ and OC 15 while within range of it',
           text:'At the start of the first battle round, select one of the following:\n- Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll\n- Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15.' },
         { name:'Damaged: 1-5 Wounds Remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.' },
         { name:'Protean Purpose', tag:'Once per battle, per unit', ph:['command'], turn:'your', text:'(Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
-        { name:'Unnatural Resistance', def:'Feel No Pain 4+ against mortal wounds', defAlways:true, text:'This model has the **Feel No Pain 4+** ability against Mortal Wounds.' }
+        { name:'Unnatural Resistance', def:'Feel No Pain 4+ against mortal wounds', text:'This model has the **Feel No Pain 4+** ability against Mortal Wounds.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
@@ -2966,7 +2956,7 @@ const ARMIES = [
         { name:'Ram Jets', ph:['movement'], turn:'your', text:'Each time this unit is selected to make a **Normal** or **Advance move**, until the end of the phase, add D3" to the Move characteristic of this model.' },
         { name:'Saturation Fire', ph:['shooting'], turn:'your', text:'Each time this model makes a ranged attack that targets a unit within range of one or more objective markers, that attack has the **[IGNORES COVER]** ability.' },
         { name:'Invulnerable Save (5+*)', def:'5+ invulnerable save against ranged attacks only', text:'This model has a 5+ invulnerable save against ranged attacks.' },
-        { name:'Sanctuary', tag:'Enhancement', def:'Sanctuary: 5+ invulnerable save', defAlways:true, defCalc:{ insv:5 }, text:'**IMPERIAL KNIGHTS** model only. The bearer has a 5+ invulnerable save.' }
+        { name:'Sanctuary', tag:'Enhancement', def:'Sanctuary: 5+ invulnerable save', text:'**IMPERIAL KNIGHTS** model only. The bearer has a 5+ invulnerable save.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
@@ -3035,7 +3025,7 @@ const ARMIES = [
         { name:'Supreme Kunnin’', who:'Nazdreg', tag:'Once per phase, per army', ph:['movement'], turn:'opp', text:'In your opponent’s Movement phase, when an enemy unit ends a move within 8" of this unit, if this unit is **unengaged**, this unit can:\n- Make a **normal move** of up to D6".\n- Or: If this unit is **riled up**, make a **normal move** of up to 5".' },
         { name:'Intimidating Motivation', who:'Nazdreg', tag:'Once per battle round, per army', ph:['movement'], turn:'your', text:'In your Movement phase, at the start or end of this unit’s move, you can select one friendly **ORKS** unit within 6" of this unit. That unit:\n- Is no longer **battle-shocked**.\n- Is **riled up** until the start of your next turn.' },
         { name:'Krumpin’ Time', who:'Meganobz', ph:['fight'], turn:'either', text:'In the Fight phase, if this unit is **riled up**, this unit has +1 to **hit rolls**.' },
-        { name:'Arrogant Invulnerability', who:'Meganobz', def:'Attacks that target this unit have -1 AP', defAlways:true, text:'Attacks that target this unit have -1 **AP**.' }
+        { name:'Arrogant Invulnerability', who:'Meganobz', def:'Attacks that target this unit have -1 AP', text:'Attacks that target this unit have -1 **AP**.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
@@ -3141,7 +3131,7 @@ const ARMIES = [
         { name:'More Dakka', who:'Big Mek in Mega Armour', text:'This unit’s ranged attacks have:\n- **[IGNORES COVER]**.\n- If this unit is **riled up**, **[SUSTAINED HITS 1]**.' },
         { name:'Supa-glowy Fing', who:'Big Mek in Mega Armour', tag:'Enhancement', text:'**ORKS INFANTRY** model only (excluding **WEIRDBOY** models). This model’s ranged attacks have:\n- **[ANTI-INFANTRY 4+]**.\n- **[DEVASTATING WOUNDS]**.\n- **[SUPA-HAZARDOUS]**.' },
         { name:'Krumpin’ Time', who:'Meganobz', ph:['fight'], turn:'either', text:'In the Fight phase, if this unit is **riled up**, this unit has +1 to **hit rolls**.' },
-        { name:'Arrogant Invulnerability', who:'Meganobz', def:'Attacks that target this unit have -1 AP', defAlways:true, text:'Attacks that target this unit have -1 **AP**.' }
+        { name:'Arrogant Invulnerability', who:'Meganobz', def:'Attacks that target this unit have -1 AP', text:'Attacks that target this unit have -1 **AP**.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       // More Dakka's [IGNORES COVER] is printed on the Big Mek's weapons only: BSData gives it to the leader's own
@@ -3494,11 +3484,11 @@ const ARMIES = [
         { name:'Twin Kastelan fist', who:'Kastelan Robots', n:4, range:'Melee', A:'4', WS:'4+', S:'12', AP:'-2', D:'3', kw:['TWIN-LINKED'] }
       ],
       abilities:[
-        { name:'Battle Protocols', who:'Cybernetica Datasmith', ph:['command'], turn:'your', def:'Aegis Protocol: KASTELAN ROBOT models +1 Toughness (from the start of the battle until another protocol is selected)', defCalc:{ t:1, model:'Kastelan Robot' }, text:'At the start of the battle, if this model is leading a **KASTELAN ROBOTS** unit, that unit enters Aegis Protocols (see below). In your Command phase, if this model is leading a **KASTELAN ROBOTS** unit, you can select one protocol from those listed below for that unit to enter. Once a unit enters a protocol, it remains in that protocol until it enters a different one.\n- **Protector Protocol:** Add 2 to the Attacks characteristic of ranged weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Conqueror Protocol:** Add 2 to the Attacks characteristic of melee weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Aegis Protocol:** Add 1 to the Toughness characteristic of **KASTELAN ROBOT** models in that unit.' },
+        { name:'Battle Protocols', who:'Cybernetica Datasmith', ph:['command'], turn:'your', def:'Aegis Protocol: KASTELAN ROBOT models +1 Toughness (from the start of the battle until another protocol is selected)', text:'At the start of the battle, if this model is leading a **KASTELAN ROBOTS** unit, that unit enters Aegis Protocols (see below). In your Command phase, if this model is leading a **KASTELAN ROBOTS** unit, you can select one protocol from those listed below for that unit to enter. Once a unit enters a protocol, it remains in that protocol until it enters a different one.\n- **Protector Protocol:** Add 2 to the Attacks characteristic of ranged weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Conqueror Protocol:** Add 2 to the Attacks characteristic of melee weapons equipped by **KASTELAN ROBOT** models in that unit.\n- **Aegis Protocol:** Add 1 to the Toughness characteristic of **KASTELAN ROBOT** models in that unit.' },
         // Wahapedia's markup and bullets (BSData and GW's Faction Pack, PDF p17, print the two bullets too)
         { name:'Data-severed', who:'Cybernetica Datasmith', text:'If there are no **KASTELAN ROBOT** models in this unit:\n- This unit loses **VEHICLE**.\n- This unit has **INFANTRY**.' },
         { name:'Martial Signatum Amplificator', who:'Cybernetica Datasmith', tag:'Enhancement', text:'**TECH-PRIEST** model only. Models in the bearer’s unit have the **SKITARII** keyword.' },
-        { name:'Robotic Bodyguard', who:'Kastelan Robots', def:'Cybernetica Datasmith only: Feel No Pain 4+ while leading this unit', defAlways:true, defCalc:{ fnp:4, model:'Cybernetica Datasmith' }, text:'While a **CYBERNETICA DATASMITH** model is leading this unit, that model has the **Feel No Pain** 4+ ability.' },
+        { name:'Robotic Bodyguard', who:'Kastelan Robots', def:'Cybernetica Datasmith only: Feel No Pain 4+ while leading this unit', text:'While a **CYBERNETICA DATASMITH** model is leading this unit, that model has the **Feel No Pain** 4+ ability.' },
         // GW's Faction Pack v1.4 Rules Update wording (PDF p17), with Wahapedia's markup
         { name:'Repulsor Grid', who:'Kastelan Robots', def:'Ranged attacks: each unmodified 6 on its save rolls, 1 mortal wound to the attacking unit after it has shot', text:'When an enemy unit targets this unit with ranged attacks, until that enemy unit has shot, when this unit makes a **save roll**:\n- On an unmodified 6, that enemy unit suffers 1 **mortal wound** after that enemy unit has shot.' }
       ],
