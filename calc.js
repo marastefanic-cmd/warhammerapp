@@ -25,8 +25,9 @@
      input.ctx     { ranged, cover, coverSrc, halfRange (every weapon) or halfWithin (inches: the weapons whose half range
                      reaches it), charged, heavy, indirect ('1-5'|'1-3'),
                      snap, cq (close-quarters shooting at a unit the attacker is engaged with), big (the attacker is
-                     a MONSTER/VEHICLE), engaged (the target is engaged: 17.03), plunging, precision (the CHARACTER
-                     model's name the [PRECISION] attacks are allocated to) }
+                     a MONSTER/VEHICLE), cqo (close-quarters shooting by a MONSTER/VEHICLE unit at another unit: 10.06),
+                     engaged (the target is engaged: 17.03), bigTarget (the target is a MONSTER/VEHICLE, as the caller says:
+                     a target set by hand), plunging, precision (the CHARACTER model's name the [PRECISION] attacks are allocated to) }
      input.sims (default 10000), input.seed (default 1)
    result: { sims, dmg (mean wounds lost), killed (mean models destroyed), models, wipe (P all destroyed),
              dist [P(exactly k destroyed)], groups:[{ attacks, hits, wounds, unsaved, mortals, dmg, gone (P destroyed before
@@ -196,6 +197,8 @@ function prep(g, X){
   for(const m of mods) if(+m.hit) why.hit.push({ v:+m.hit, src:srcName(m) });
   if(ranged && ctx.heavy && k.heavy) why.hit.push({ v:1, src:'[HEAVY] (24.16)' });
   if(ranged && ctx.cq && ctx.big && !k.cq) why.hit.push({ v:-1, src:'close-quarters shooting by a MONSTER/VEHICLE (10.06)' });
+  // a MONSTER/VEHICLE unit's close-quarters shooting at a unit it is not engaged with: every attack, [CLOSE-QUARTERS] ones too (10.06)
+  if(ranged && ctx.cqo && !ctx.cq) why.hit.push({ v:-1, src:'close-quarters shooting by a MONSTER/VEHICLE at another unit (10.06)' });
   if(ranged && ctx.engaged && X.bigTarget && !(k.cq && ctx.cq)) why.hit.push({ v:-1, src:'an engaged MONSTER/VEHICLE target (17.03)' });
   if(tm.hitMinus) why.hit.push({ v:-tm.hitMinus, src:tsrc.hitMinus || 'the target' });
   const pos = why.hit.filter(x => x.v > 0).reduce((t, x) => t + x.v, 0), neg = why.hit.filter(x => x.v < 0).reduce((t, x) => t + x.v, 0);
@@ -312,7 +315,7 @@ function setup(input){
   const tkw = new Set((tg.kw || []).map(up));
   const { rows, groups } = allocGroups(tg);
   const total = rows.reduce((t, r) => t + r.count, 0);
-  const bigTarget = tkw.has('MONSTER') || tkw.has('VEHICLE');
+  const bigTarget = tkw.has('MONSTER') || tkw.has('VEHICLE') || !!ctx.bigTarget;
   const X = { ctx, tm, tkw, total, bigTarget };
   const G = input.groups.map(g => prep(g, X));
   // [PRECISION] (24.28): the CHARACTER the attacks are allocated to, when the caller picked one
@@ -726,7 +729,7 @@ function explain(input, orderIdx){
   const precRow = S.precOn ? S.rows.find(r => r.char && r.name === ctx.precision) : null;
   const skillKey = ctx.ranged ? 'BS' : 'WS';
   const out = S.G.map((G, i) => {
-    if(G.out || !G.n) return { attacks:0, hits:0, wounds:0, unsaved:0, mortals:0, dmg:0, out:G.out, steps:[] };
+    if(G.out || !G.n) return { attacks:0, hits:0, wounds:0, unsaved:0, mortals:0, dmg:0, dmgCap:0, out:G.out, steps:[] };
     const row = G.precision && precRow ? precRow : firstRow, M = { row, w:row.W };
     const T = T0, pl = plan(G, T, M, tm), st = [], k = G.k, why = G.why;
     // a value the printed weapon already includes from a rule (its from mark): named, so the datasheet's number is explained
@@ -767,7 +770,8 @@ function explain(input, orderIdx){
       if(G.noRr) parts.push('no hit re-rolls (' + G.noRr + ')');
       let h = 'Hit roll: ' + parts.join('; ') + ' · ' + fx(attacks) + ' × ' + frac(hr, 1) + ' = ' + fx(attacks * (pN + pC)) + ' hits';
       if(pC && (G.lethal || G.sus)) h += '; critical: ' + fx(attacks) + ' × ' + frac(hr, 2) + ' = ' + fx(attacks * pC);
-      if(pC && G.lethal) h += pl.lethal ? '; [LETHAL HITS] (24.23' + (k.from('lethal') ? ', from ' + k.from('lethal') : '') + '): these wound automatically' : '; [LETHAL HITS]' + (k.from('lethal') ? ' (from ' + k.from('lethal') + ')' : '') + ' not taken: rolling to wound is worth more here (a critical wound with [DEVASTATING WOUNDS])';
+      if(pC && G.lethal){ const lf = k.from('lethal') ? '; from ' + k.from('lethal') : '';
+        h += pl.lethal ? '; [LETHAL HITS]: these wound automatically (you can choose, 24.23' + lf + ')' : '; [LETHAL HITS]: these are rolled to wound instead (you can choose, 24.23' + lf + '): rolling to wound is worth more here (a critical wound with [DEVASTATING WOUNDS])'; }
       if(pC && G.sus){ const sm = diceMean(G.sus); h += '; [' + k.text.sus + '] (24.36' + (k.from('sus') ? ', from ' + k.from('sus') : '') + '): each critical hit adds ' + fx(sm) + (G.sus.n ? ' on average' : '') + ' → +' + fx(attacks * pC * sm) + ' → ' + fx(attacks * (pN + pC + pC * sm)); }
       st.push({ k:'hits', t:h });
     }
@@ -816,10 +820,13 @@ function explain(input, orderIdx){
     const fnp = Math.min(row.fnp || 7, tm.fnp || 7), fnpM = Math.min(fnp, row.fnpMortal || 7, tm.fnpMortal || 7);
     const keep = x => x <= 6 ? (x - 1) / 6 : 1;
     const dmgN = unsaved * dN * keep(fnp), dmgM = devC * dM * keep(fnpM);
+    // (dmgCap: the same with each attack's damage at most the wounds of the model it meets, for comparing weapons and profiles)
+    const capOf = (minus, kp) => ex(pd, v => Math.min(row.W, Math.max(RULE.minDamage, v + G.dPlus - minus) * kp));
+    const dmgCap = unsaved * capOf(tm.dMinus || 0, keep(fnp)) + devC * capOf(tm.dMinusChar || 0, keep(fnpM));
     {
       const parts = [String(G.D0) + (why.set.D ? ' (' + why.set.D + ')' : inc('D')) + why.d.filter(x => !x.target).map(x => ' ' + sgn(x.v) + ' (' + x.src + ')').join('') + (G.melta ? ', and +' + diceText(G.melta) + ' with [' + k.text.melta + '] (within half range, ' + halfTxt + ', 24.25' + kf('melta') + ')' : '')];
       for(const x of why.d.filter(x => x.target)) parts.push(sgn(x.v) + ' Damage (' + x.src + ')');
-      if(pd.size > 1 || G.dPlus || tm.dMinus) parts.push((pd.size > 1 ? fx(dN) + ' on average' : fx(dN) + ' each') + (ex(pd, v => v + G.dPlus - (tm.dMinus || 0)) < dN - 1e-9 ? ' (Damage at least 1)' : ''));
+      if(pd.size > 1 || G.dPlus || tm.dMinus) parts.push((pd.size > 1 ? fx(dN) + ' on average' : fx(dN) + ' each') + (ex(pd, v => v + G.dPlus - (tm.dMinus || 0)) < dN - 1e-9 ? ' (D cannot be less than 1, 02.02.01)' : ''));
       const fsrc = fnp < 7 ? (row.fnp === fnp && row.fnpSrc ? row.fnpSrc : tsrc.fnp || 'the target') : '';
       if(fnp < 7) parts.push('Feel No Pain ' + fnp + '+ (' + fsrc + ', 24.12): ' + (7 - fnp) + '/6 of the wounds ignored');
       let d = 'Damage: ' + parts.join('; ') + ' · ' + fx(unsaved) + ' × ' + fx(dN) + (fnp < 7 ? ' × ' + (fnp - 1) + '/6' : '') + ' = ' + fx(dmgN);
@@ -829,7 +836,7 @@ function explain(input, orderIdx){
       d += (devC ? ' → ' + fx(dmgN + dmgM) : '') + ' damage before allocation' + (devC ? ' (played out, each critical wound’s mortal wounds damage one model at most, and the rest is lost: 24.10)' : '');
       st.push({ k:'dmg', t:d });
     }
-    return { attacks, hits:toWound + auto, wounds:normal + devC, unsaved, mortals:devC, dmg:dmgN + dmgM, out:'', steps:st };
+    return { attacks, hits:toWound + auto, wounds:normal + devC, unsaved, mortals:devC, dmg:dmgN + dmgM, dmgCap, out:'', steps:st };
   });
   const sum = key => out.reduce((t, x) => t + x[key], 0);
   return { groups:out, total:{ attacks:sum('attacks'), hits:sum('hits'), wounds:sum('wounds'), through:sum('unsaved') + sum('mortals'), dmg:sum('dmg') },
