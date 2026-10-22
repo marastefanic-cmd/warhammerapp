@@ -3643,6 +3643,255 @@ const ARMIES = [
     }
   ]
 },
+{
+  id:'defilers-and-friends', name:'Defilers and friends', faction:'emperors-children', points:2000, pointsUsed:2000,
+  battleSize:'Strike Force', disposition:'Purge the Foe',
+  detachments:['coterie-of-the-conceited'],
+  source:'New Recruit, exported 22 Oct 2026',
+  units:[
+    {
+      id:'lucius-the-eternal-flawless-blades', name:'Lucius the Eternal', role:'Epic Hero', pts:225, ptsNote:'130 + Flawless Blades 95', warlord:true,
+      leads:'Flawless Blades',
+      models:['1× Lucius the Eternal','3× Flawless Blade'],
+      gear:[['Blade of the Laer','Lash of Torment'],['Blissblade','Bolt pistol']],
+      stats:[
+        { name:'Lucius the Eternal', M:'8"', T:'6', Sv:'2+', W:'6', Ld:'6+', OC:'1', InSv:'4+', base:'50mm' },
+        { name:'Flawless Blades', M:'8"', T:'5', Sv:'3+', W:'3', Ld:'6+', OC:'1', InSv:'5+', base:'40mm' }
+      ],
+      ranged:[
+        { name:'Bolt pistol', who:'Flawless Blades', n:3, range:'12"', A:'1', BS:'3+', S:'5', AP:'-1', D:'1', kw:['PISTOL'] }
+      ],
+      melee:[
+        { name:'Blade of the Laer', who:'Lucius the Eternal', range:'Melee', A:'6', WS:'2+', S:'8', AP:'-3', D:'3', kw:['PRECISION'] },
+        { name:'Lash of Torment', who:'Lucius the Eternal', range:'Melee', A:'10', WS:'2+', S:'4', AP:'-1', D:'1', kw:['SUSTAINED HITS 1'] },
+        { name:'Blissblade', who:'Flawless Blades', n:3, range:'Melee', A:'4', WS:'2+', S:'6', AP:'-3', D:'2', kw:[] }
+      ],
+      abilities:[
+        { name:'Duellist’s Hubris', who:'Lucius the Eternal', ph:['fight'], turn:'either', text:'At the start of the Fight phase, if this model is not leading a unit, until the end of the phase, it has the Fights First ability.' },
+        { name:'A Challenge Worthy of Skill', who:'Lucius the Eternal', text:'Each time this model makes an attack that targets a **CHARACTER**, **MONSTER** or **WALKER** unit, you can re-roll the **Hit roll** and re-roll the **Wound roll**.' },
+        { name:'Daemonic Patrons', who:'Flawless Blades', ph:['fight'], turn:'either', text:'Each time this unit is selected to fight, it can call upon daemonic patrons. If it does, until the end of the phase, each time a model in this unit makes an attack. an unmodified **Wound roll** of 3+ scores a Critical Wound. At the end of the Fight phase, if this unit called upon daemonic patrons this phase and no enemy models were destroyed by attacks made by models in this unit this phase, one model in this unit is destroyed.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'all', when:'vs CHARACTER, MONSTER or WALKER units', note:'re-roll the hit roll and the wound roll', from:'A Challenge Worthy of Skill', always:true, vs:{ any:['Character','Monster','Walker'] } },
+        { kind:'melee', when:'Called upon daemonic patrons when selected to fight (until the end of the phase)', note:'a Critical Wound on an unmodified wound roll of 3+', from:'Daemonic Patrons', calc:{ critWound:3 } },
+        { kind:'melee', when:'5+ Pact points gained during the battle', note:'[LETHAL HITS] and [SUSTAINED HITS 1]', from:'Pledges to the Dark Prince', rule:'Pledges to the Dark Prince' }
+      ],
+      rules:['Leader','Thrill Seekers','Feel No Pain 5+','Lone Operative','Precision','Sustained Hits','Pistol'],
+      kw:['Chaos','Character','Epic Hero','Faction: Emperor\'s Children','Infantry','Lucius the Eternal','Slaanesh','Warlord','Flawless Blades','Grenades'],
+      kwNote:'Flawless Blades, Grenades come from the led Flawless Blades.'
+    },
+    {
+      id:'daemon-prince-of-slaanesh-with-wings', name:'Daemon Prince of Slaanesh with Wings', role:'Character', pts:205,
+      models:['1× Daemon Prince of Slaanesh with Wings'],
+      gear:[['Hellforged weapons','Infernal cannon']],
+      stats:[
+        { name:'Daemon Prince of Slaanesh with Wings', M:'14"', T:'9', Sv:'2+', W:'10', Ld:'6+', OC:'3', InSv:'4+', base:'60mm' }
+      ],
+      ranged:[
+        { name:'Infernal cannon', range:'24"', A:'3', BS:'2+', S:'5', AP:'-1', D:'2', kw:[] }
+      ],
+      melee:[
+        { group:'Hellforged weapons', name:'strike', range:'Melee', A:'6', WS:'2+', S:'8', AP:'-2', D:'3', kw:[] },
+        { group:'Hellforged weapons', name:'sweep', range:'Melee', A:'14', WS:'2+', S:'6', AP:'0', D:'1', kw:[] }
+      ],
+      abilities:[
+        { name:'Daemonic Destruction', ph:['charge'], turn:'either', text:'Each time this model ends a Charge move, select one enemy unit within Engagement Range of this model and roll one D6 for each of this model’s remaining wounds: for each 4+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds).' },
+        { name:'Stimulated by Pain', def:'-1 D to each attack allocated to this model', text:'Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.' }
+      ],
+      // the Pledges to the Dark Prince bonus for melee weapons (the detachment rule's footnote has the rest)
+      mods:[
+        { kind:'melee', when:'5+ Pact points gained during the battle', note:'[LETHAL HITS] and [SUSTAINED HITS 1]', from:'Pledges to the Dark Prince', rule:'Pledges to the Dark Prince' }
+      ],
+      rules:['Deadly Demise D3','Thrill Seekers','Deep Strike'],
+      kw:['Chaos','Character','Daemon','Daemon Prince with Wings','Faction: Emperor\'s Children','Fly','Monster','Slaanesh']
+    },
+    {
+      id:'lord-exultant-infractors', name:'Lord Exultant', role:'Character', pts:190, copies:2, ptsNote:'95 + Infractors 95',
+      leads:'Infractors',
+      models:['1× Lord Exultant','1× Obsessionist','3× Infractor','1× Infractor (Icon of Excess)'],
+      gear:[['Bolt pistol','Close combat weapon','Phoenix power spear','Rapture lash'],['Power sword','Plasma pistol'],['Bolt pistol','Duelling sabre'],['Bolt pistol','Duelling sabre']],
+      stats:[
+        { name:'Lord Exultant', M:'7"', T:'5', Sv:'3+', W:'5', Ld:'6+', OC:'1', InSv:'4+', base:'40mm' },
+        { name:'Infractors', M:'7"', T:'5', Sv:'3+', W:'2', Ld:'6+', OC:'2', InSv:'–', base:'32mm' }
+      ],
+      ranged:[
+        { name:'Bolt pistol', who:'Lord Exultant', range:'12"', A:'1', BS:'2+', S:'5', AP:'-1', D:'1', kw:['PISTOL','LETHAL HITS'], from:{ 'LETHAL HITS':'Perfectionists' } },
+        { group:'Plasma pistol', who:'Infractors', name:'standard', range:'12"', A:'1', BS:'3+', S:'7', AP:'-2', D:'1', kw:['PISTOL','LETHAL HITS'], from:{ 'LETHAL HITS':'Perfectionists' } },
+        { group:'Plasma pistol', who:'Infractors', name:'supercharge', range:'12"', A:'1', BS:'3+', S:'8', AP:'-3', D:'2', kw:['HAZARDOUS','PISTOL','LETHAL HITS'], from:{ 'LETHAL HITS':'Perfectionists' } },
+        { name:'Bolt pistol', who:'Infractors', n:4, range:'12"', A:'1', BS:'3+', S:'5', AP:'-1', D:'1', kw:['PISTOL','LETHAL HITS'], from:{ 'LETHAL HITS':'Perfectionists' } }
+      ],
+      melee:[
+        { name:'Close combat weapon', who:'Lord Exultant', range:'Melee', A:'6', WS:'2+', S:'5', AP:'0', D:'1', kw:['LETHAL HITS'], from:{ 'LETHAL HITS':'Perfectionists' } },
+        { name:'Phoenix power spear', who:'Lord Exultant', range:'Melee', A:'5', WS:'2+', S:'7', AP:'-2', D:'2', kw:['LANCE','LETHAL HITS'], from:{ 'LETHAL HITS':'Perfectionists' } },
+        { name:'Rapture lash', who:'Lord Exultant', range:'Melee', A:'4', WS:'2+', S:'4', AP:'-1', D:'1', kw:['EXTRA ATTACKS','LETHAL HITS'], from:{ 'LETHAL HITS':'Perfectionists' } },
+        { name:'Power sword', who:'Infractors', range:'Melee', A:'4', WS:'3+', S:'5', AP:'-2', D:'1', kw:['PRECISION','LETHAL HITS'], from:{ 'LETHAL HITS':'Perfectionists' } },
+        { name:'Duelling sabre', who:'Infractors', n:4, range:'Melee', A:'4', WS:'3+', S:'5', AP:'-1', D:'1', kw:['PRECISION','LETHAL HITS'], from:{ 'LETHAL HITS':'Perfectionists' } }
+      ],
+      abilities:[
+        { name:'Perfectionists', who:'Lord Exultant', text:'While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.' },
+        { name:'Euphoric Strikes', who:'Lord Exultant', ph:['fight'], turn:'either', text:'Once per battle, at the start of the Fight phase, this model can use this ability. If it does so, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and improve the Armour Penetration characteristic of those weapons by 1.' },
+        { name:'Lord of the Host', who:'Lord Exultant', text:'If this model is attached to an Emperor’s Children Battleline unit during the Declare Battle Formations step, this model has the Infiltrators and Scouts 6" ability.' },
+        { name:'Excessive Assault', who:'Infractors', text:'Each time a model in this unit targets an enemy unit with a melee attack, re-roll a Wound roll of 1. If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead.' },
+        { name:'Icon of Excess', who:'Infractors', ph:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, text:'At the end of your Shooting phase or the Fight phase, if the bearer’s unit destroyed one or more enemy units this phase, the bearer’s unit takes a Leadership test. If that test is passed, you gain 1CP.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'melee', when:'Euphoric Strikes used at the start of the Fight phase (once per battle)', note:'+3 A and +1 AP', from:'Euphoric Strikes' },
+        { kind:'melee', when:'Every melee attack', note:'re-roll wound rolls of 1', from:'Excessive Assault', always:true },
+        { kind:'melee', when:'Target within range of an objective marker', cond:'targetObjective', note:'re-roll the wound roll', from:'Excessive Assault' },
+        { kind:'melee', when:'5+ Pact points gained during the battle', note:'[LETHAL HITS] and [SUSTAINED HITS 1]', from:'Pledges to the Dark Prince', rule:'Pledges to the Dark Prince' }
+      ],
+      rules:['Leader','Thrill Seekers','Infiltrators','Scouts 6"','Pistol','Lance','Extra Attacks','Precision','Hazardous'],
+      kw:['Chaos','Character','Faction: Emperor\'s Children','Grenades','Infantry','Lord Exultant','Slaanesh','Battleline','Infractors'],
+      kwNote:'Battleline, Infractors come from the led Infractors.'
+    },
+    {
+      id:'tormentors', name:'Tormentors', role:'Battleline', pts:85, copies:2,
+      models:['1× Obsessionist','3× Tormentor','1× Tormentor w/ meltagun'],
+      // New Recruit prints the Icon of Excess ability on no models line; BSData has it as an option of the unit for one of
+      // its models. Neither says which one carries it.
+      unplaced:['Icon of Excess'],
+      gear:[['Plasma pistol','Power sword'],['Boltgun','Close combat weapon'],['Close combat weapon','Meltagun']],
+      stats:[
+        { name:'Tormentors', M:'7"', T:'5', Sv:'3+', W:'2', Ld:'6+', OC:'2', InSv:'–', base:'32mm' }
+      ],
+      ranged:[
+        { group:'Plasma pistol', name:'standard', range:'12"', A:'1', BS:'3+', S:'7', AP:'-2', D:'1', kw:['PISTOL','PRECISION'] },
+        { group:'Plasma pistol', name:'supercharge', range:'12"', A:'1', BS:'3+', S:'8', AP:'-3', D:'2', kw:['HAZARDOUS','PISTOL','PRECISION'] },
+        { name:'Boltgun', n:3, range:'24"', A:'2', BS:'3+', S:'5', AP:'-1', D:'1', kw:['PRECISION'] },
+        { name:'Meltagun', range:'12"', A:'1', BS:'3+', S:'9', AP:'-4', D:'D6', kw:['MELTA 2','PRECISION'] }
+      ],
+      melee:[
+        { name:'Power sword', range:'Melee', A:'4', WS:'3+', S:'5', AP:'-2', D:'1', kw:[] },
+        { name:'Close combat weapon', n:4, range:'Melee', A:'3', WS:'3+', S:'5', AP:'0', D:'1', kw:[] }
+      ],
+      abilities:[
+        { name:'Objective Defiled', ph:['command'], turn:'your', text:'At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.' },
+        { name:'Icon of Excess', ph:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, text:'At the end of your Shooting phase or the Fight phase, if the bearer’s unit destroyed one or more enemy units this phase, the bearer’s unit takes a Leadership test. If that test is passed, you gain 1CP.' }
+      ],
+      // the Pledges to the Dark Prince bonus for melee weapons (the detachment rule's footnote has the rest)
+      mods:[
+        { kind:'melee', when:'5+ Pact points gained during the battle', note:'[LETHAL HITS] and [SUSTAINED HITS 1]', from:'Pledges to the Dark Prince', rule:'Pledges to the Dark Prince' }
+      ],
+      rules:['Infiltrators','Thrill Seekers','Hazardous','Pistol','Precision','Melta'],
+      kw:['Battleline','Chaos','Faction: Emperor\'s Children','Grenades','Infantry','Slaanesh','Tormentors']
+    },
+    {
+      id:'chaos-rhino', name:'Chaos Rhino', role:'Dedicated Transport', pts:70,
+      models:['1× Chaos Rhino'],
+      gear:[['Armoured tracks','Combi-bolter','Combi-bolter','Havoc launcher']],
+      stats:[
+        { name:'Chaos Rhino', M:'12"', T:'9', Sv:'3+', W:'10', Ld:'6+', OC:'2', InSv:'–', base:'Hull' }
+      ],
+      ranged:[
+        { name:'Combi-bolter', n:2, range:'24"', A:'2', BS:'3+', S:'5', AP:'-1', D:'1', kw:['RAPID FIRE 2'] },
+        { name:'Havoc launcher', range:'48"', A:'D6', BS:'3+', S:'5', AP:'0', D:'1', kw:['BLAST'] }
+      ],
+      melee:[
+        { name:'Armoured tracks', range:'Melee', A:'3', WS:'4+', S:'6', AP:'0', D:'1', kw:[] }
+      ],
+      abilities:[
+        { name:'Assault Vehicle', text:'Units can disembark from this Vehicle after it has Advanced. Units that do so count as having made a Normal move that phase, and cannot declare a charge in the same turn, but can otherwise act normally.' },
+        { name:'Chaos Rhino', who:'Transport', text:'This model has a transport capacity of 12 Emperor’s Children Infantrymodels (excluding Terminator and Flawless Blade models).' }
+      ],
+      // the Pledges to the Dark Prince bonus for melee weapons (the detachment rule's footnote has the rest)
+      mods:[
+        { kind:'melee', when:'5+ Pact points gained during the battle', note:'[LETHAL HITS] and [SUSTAINED HITS 1]', from:'Pledges to the Dark Prince', rule:'Pledges to the Dark Prince' }
+      ],
+      rules:['Deadly Demise D3','Thrill Seekers','Firing Deck 2','Rapid Fire','Blast'],
+      kw:['Chaos','Dedicated Transport','Faction: Emperor\'s Children','Frame','Rhino','Slaanesh','Smoke','Transport','Vehicle']
+    },
+    {
+      id:'defiler', name:'Defiler', role:'Vehicle', pts:330,
+      models:['1× Defiler'],
+      gear:[['Ectoplasma destructor','Heavy reaper autocannon','Heavy reaper autocannon','Shearing claws','Excruciator cannon','Excruciator cannon']],
+      stats:[
+        { name:'Defiler', M:'12"', T:'11', Sv:'3+', W:'18', Ld:'6+', OC:'5', InSv:'5+', base:'160mm' }
+      ],
+      ranged:[
+        { name:'Ectoplasma destructor', range:'36"', A:'D6', BS:'3+', S:'12', AP:'-3', D:'3', kw:['BLAST'] },
+        { name:'Excruciator cannon', n:2, range:'36"', A:'6', BS:'3+', S:'6', AP:'-1', D:'2', kw:[] },
+        { name:'Heavy reaper autocannon', n:2, range:'48"', A:'4', BS:'3+', S:'9', AP:'-1', D:'3', kw:['DEVASTATING WOUNDS','SUSTAINED HITS 1'] }
+      ],
+      melee:[
+        { group:'Shearing claws', name:'strike', range:'Melee', A:'5', WS:'3+', S:'16', AP:'-3', D:'D6+1', kw:['PRECISION'] },
+        { group:'Shearing claws', name:'sweep', range:'Melee', A:'10', WS:'3+', S:'6', AP:'-2', D:'1', kw:[] }
+      ],
+      abilities:[
+        { name:'Scuttling Walker', ph:['movement','shooting'], turn:'your', text:'Each time this unit makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and **terrain features**. When doing so, it can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.' },
+        { name:'Revel in Desecration', text:'Each time this model makes an attack that targets an enemy unit that is not below Half-strength, add 1 to the Hit roll.' },
+        { name:'Damaged: 1-6 wounds remaining', damaged:'1-6', text:'While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'all', when:'Target not Below Half-strength', note:'+1 to hit rolls', from:'Revel in Desecration' },
+        { kind:'all', when:'Damaged (1-6 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-6 wounds remaining' },
+        { kind:'melee', when:'5+ Pact points gained during the battle', note:'[LETHAL HITS] and [SUSTAINED HITS 1]', from:'Pledges to the Dark Prince', rule:'Pledges to the Dark Prince' }
+      ],
+      rules:['Deadly Demise D6','Thrill Seekers','Blast','Sustained Hits','Devastating Wounds','Precision'],
+      kw:['Chaos','Daemon','Defiler','Faction: Emperor\'s Children','Slaanesh','Vehicle','Walker']
+    },
+    {
+      id:'defiler-2', name:'Defiler', role:'Vehicle', pts:380,
+      models:['1× Defiler'],
+      gear:[['Ectoplasma destructor','Heavy reaper autocannon','Heavy reaper autocannon','Shearing claws','Excruciator cannon','Excruciator cannon']],
+      stats:[
+        { name:'Defiler', M:'12"', T:'11', Sv:'3+', W:'18', Ld:'6+', OC:'5', InSv:'5+', base:'160mm' }
+      ],
+      ranged:[
+        { name:'Ectoplasma destructor', range:'36"', A:'D6', BS:'3+', S:'12', AP:'-3', D:'3', kw:['BLAST'] },
+        { name:'Excruciator cannon', n:2, range:'36"', A:'6', BS:'3+', S:'6', AP:'-1', D:'2', kw:[] },
+        { name:'Heavy reaper autocannon', n:2, range:'48"', A:'4', BS:'3+', S:'9', AP:'-1', D:'3', kw:['DEVASTATING WOUNDS','SUSTAINED HITS 1'] }
+      ],
+      melee:[
+        { group:'Shearing claws', name:'strike', range:'Melee', A:'5', WS:'3+', S:'16', AP:'-3', D:'D6+1', kw:['PRECISION'] },
+        { group:'Shearing claws', name:'sweep', range:'Melee', A:'10', WS:'3+', S:'6', AP:'-2', D:'1', kw:[] }
+      ],
+      abilities:[
+        { name:'Scuttling Walker', ph:['movement','shooting'], turn:'your', text:'Each time this unit makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and **terrain features**. When doing so, it can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.' },
+        { name:'Revel in Desecration', text:'Each time this model makes an attack that targets an enemy unit that is not below Half-strength, add 1 to the Hit roll.' },
+        { name:'Damaged: 1-6 wounds remaining', damaged:'1-6', text:'While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'all', when:'Target not Below Half-strength', note:'+1 to hit rolls', from:'Revel in Desecration' },
+        { kind:'all', when:'Damaged (1-6 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-6 wounds remaining' },
+        { kind:'melee', when:'5+ Pact points gained during the battle', note:'[LETHAL HITS] and [SUSTAINED HITS 1]', from:'Pledges to the Dark Prince', rule:'Pledges to the Dark Prince' }
+      ],
+      rules:['Deadly Demise D6','Thrill Seekers','Blast','Sustained Hits','Devastating Wounds','Precision'],
+      kw:['Chaos','Daemon','Defiler','Faction: Emperor\'s Children','Slaanesh','Vehicle','Walker']
+    },
+    {
+      id:'maulerfiend', name:'Maulerfiend', role:'Vehicle', pts:120, copies:2,
+      models:['1× Maulerfiend'],
+      gear:[['Maulerfiend fists','Magma cutter','Magma cutter']],
+      stats:[
+        { name:'Maulerfiend', M:'10"', T:'10', Sv:'3+', W:'12', Ld:'6+', OC:'3', InSv:'5+', base:'120×92mm' }
+      ],
+      ranged:[
+        { name:'Magma cutter', n:2, range:'6"', A:'2', BS:'3+', S:'9', AP:'-4', D:'D6', kw:['MELTA 2'] }
+      ],
+      melee:[
+        { name:'Maulerfiend fists', range:'Melee', A:'6', WS:'3+', S:'14', AP:'-2', D:'D6+1', kw:[] }
+      ],
+      abilities:[
+        { name:'Glutton for Punishment', text:'Each time this model makes an attack, if it is below its Starting Strength, add 1 to the **Hit roll**. If this model is also **Below Half-strength**, add 1 to the **Wound roll** as well.' },
+        { name:'Damaged: 1-4 wounds remaining', damaged:'1-4', text:'While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables (one model: below its Starting Strength once it has
+      // lost a wound, Below Half-strength at 5 or fewer of its 12 wounds left)
+      mods:[
+        { kind:'all', when:'Lost any wounds (below Starting Strength)', note:'+1 to hit rolls; also +1 to wound rolls if Below Half-strength', from:'Glutton for Punishment',
+          pick:[{ name:'Below Starting Strength', note:'+1 to hit rolls' }, { name:'Below Half-strength', note:'+1 to hit rolls, +1 to wound rolls' }] },
+        { kind:'all', when:'Damaged (1-4 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-4 wounds remaining' },
+        { kind:'melee', when:'5+ Pact points gained during the battle', note:'[LETHAL HITS] and [SUSTAINED HITS 1]', from:'Pledges to the Dark Prince', rule:'Pledges to the Dark Prince' }
+      ],
+      rules:['Deadly Demise D3','Thrill Seekers'],
+      kw:['Chaos','Daemon','Faction: Emperor\'s Children','Maulerfiend','Slaanesh','Vehicle','Walker']
+    }
+  ]
+},
 ];
 
 // core terms (not abilities): kept out of a unit's rule list and the glossary of rules units have

@@ -68,3 +68,12 @@ adeptus-mechanicus Skitarii-Rangers
 adeptus-mechanicus Ironstrider-Ballistarii
 adeptus-mechanicus Onager-Dunecrawler
 adeptus-mechanicus Skorpius-Disintegrator
+emperors-children Lucius-the-Eternal
+emperors-children Flawless-Blades
+emperors-children Lord-Exultant
+emperors-children Infractors
+emperors-children Daemon-Prince-of-Slaanesh-with-Wings
+emperors-children Tormentors
+emperors-children Defiler
+emperors-children Maulerfiend
+emperors-children Chaos-Rhino
