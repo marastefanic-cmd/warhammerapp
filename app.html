@@ -1457,7 +1457,8 @@ function nameTags(u, opts){
   if(u.copies > 1 && !(opts && opts.noCopies)) t.push('<span class="tg m">×' + esc(u.copies) + ' units</span>');
   return t.join('');
 }
-const abilityKey = ab => army().id + '|' + ab.name + '|' + ab.text;
+// (a copy the unit cannot use, na: its own key, so Find and its popup never merge it with a usable copy: Khârn's Icon of Khorne)
+const abilityKey = ab => army().id + '|' + ab.name + '|' + ab.text + (ab.na ? '|na' : '');
 // the units that took an enhancement; an UPGRADE (Supa-snazz Dakka) is on the unit it upgrades, the bodyguard
 const holders = (a, name) => a.units.filter(u => u.enhancement === name || u.upgrade === name);
 // which of several same-named units ("Chaos Terminators (1–2 of 3)"), or how many an entry is ("×2")
@@ -1521,6 +1522,8 @@ const ttable = t => t.some(([k]) => String(k).length > 8)
   : '<div class="ttable">' + t.map(([k, v]) => '<span>' + esc(k) + '</span><span>' + inline(v) + '</span>').join('') + '</div>';
 const unitLink = u => '<span class="link" role="button" tabindex="0" data-unit="' + esc(u.id) + '">' + esc(shortName(u)) + '</span>';
 const usedBy = (label, units) => units.length ? '<p class="usedby"><span class="il">' + label + '</span>' + units.map(unitLink).join(', ') + '</p>' : '';
+// an attached unit by all its parts ("Sorcerer + Rubric Marines"), where an ability's or a stratagem's users are listed
+const wholeLink = u => u.leads ? linkTo('unit', u.id, unitLabel(u) + (u.enhancement && !u.enhOn ? ' · ' + u.enhancement : '') + unitNo(u)) : unitLink(u);
 
 /* ---------- top and bottom bars ---------- */
 function renderTop(){
@@ -1532,7 +1535,8 @@ function renderTop(){
   }
   else right = '<button class="icon-btn" data-settings aria-label="Settings"><svg aria-hidden="true"><use href="#i-gear"/></svg></button>';
   // a rules question to Claude, from any screen; without a key saved it opens Settings to add one
-  if(cur.s !== 'settings') right = '<span class="tbr"><button class="icon-btn" data-ask aria-label="Ask a rules question"><svg aria-hidden="true"><use href="#i-ask"/></svg></button>' + (right === '<span></span>' ? '' : right) + '</span>';
+  // (where a screen has no search button, its place stays empty: the ? never sits in the top corner where search usually is)
+  if(cur.s !== 'settings') right = '<span class="tbr"><button class="icon-btn" data-ask aria-label="Ask a rules question"><svg aria-hidden="true"><use href="#i-ask"/></svg></button>' + (right === '<span></span>' ? '<span class="icon-btn" aria-hidden="true"></span>' : right) + '</span>';
   // while you look at your opponent's list (not on its home screen, which says so): whose list this is, and back to yours
   const pa = cur.army && army(), pk = !!pa && cur.s !== 'army' && peeking(pa), pb = $('#peekbar');
   pb.hidden = !pk;
@@ -4163,7 +4167,8 @@ const norm = s => String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u03
 const hay = (...parts) => { const t = norm(parts.filter(Boolean).join(' ')); return t + ' ' + t.replace(/-/g, '') + ' ' + t.replace(/-/g, ' '); };
 const statLineText = s => 'M ' + s.M + ' · T ' + s.T + ' · Sv ' + s.Sv + ' · W ' + s.W + ' · Ld ' + s.Ld + ' · OC ' + s.OC + (s.InSv !== '–' ? ' · Inv ' + s.InSv : '');
 function weaponStatText(w, kind){
-  return [kind === 'ranged' ? w.range : 'Melee', 'A ' + w.A, kind === 'ranged' ? 'BS ' + w.BS : 'WS ' + w.WS, 'S ' + w.S, 'AP ' + w.AP, 'D ' + w.D].join(' · ');
+  // "Dmg 3", not "D 3": a flat Damage of 3 must not read as D3
+  return [kind === 'ranged' ? w.range : 'Melee', 'A ' + w.A, kind === 'ranged' ? 'BS ' + w.BS : 'WS ' + w.WS, 'S ' + w.S, 'AP ' + w.AP, 'Dmg ' + w.D].join(' · ');
 }
 const indexCache = new Map();
 const abilityIndex = new Map();
@@ -4202,7 +4207,7 @@ function searchIndex(){
     const e = { kind:'Abilities', title:ab.name, ab, units:[u], hay:hay(ab.name, 'ability', ab.text, ab.tag, ab.who, ab.def, u.name), act:{ ability:key } };
     abilityIndex.set(key, e); add(e);
   }
-  for(const e of abilityIndex.values()) e.sub = unitNames(e.units) + (e.ab.tag ? ' · ' + e.ab.tag : '') + (e.ab.ph ? ' · ' + whenTag(e.ab) : '');
+  for(const e of abilityIndex.values()) e.sub = unitNames(e.units) + (e.ab.tag ? ' · ' + e.ab.tag : '') + (e.ab.ph ? ' · ' + whenTag(e.ab) : '') + (e.ab.na ? ' · ' + e.ab.na : '');
   for(const s of allStratagems(a)){
     add({ kind:'Stratagems', title:s.name, sub:s.cp + 'CP · ' + (s.src === 'Core' ? 'Core' : s.src) + ' · ' + stratWhenLine(s) + (eligible(s, a).length ? '' : ' · no unit in this list can use it'),
       hay:hay(s.name, 'stratagem', s.when, s.target, s.effect, s.limit, s.restrictions, s.src, s.src === 'Core' ? 'core' : 'detachment', s.phases.map(p => PHASE_NAME[p]).join(' '), TURN_NAME[s.turn], s.turn === 'opp' ? 'opponent' : ''), act:{ strat:s.id } });
@@ -4316,6 +4321,8 @@ function screenUnits(){
     // one model type: its count goes after the name ("Gretchin ×10"), like a weapon count
     const one = u.models.length === 1 && u.models[0].match(/^(\d+)× /);
     const n = one && one[1] !== '1' ? '<span class="x">×' + one[1] + '</span>' : '';
+    // one models line, and a unit of the same name with another one ("1 of 2", "2 of 2"): that line's loadout tells them apart
+    const apart = one && a.units.some(x => x !== u && sameName(x, u) && x.models.join('|') !== u.models.join('|')) ? ((/ \(([^)]+)\)$/.exec(u.models[0]) || [])[1] || u.models[0].replace(/^\d+× /, '')) : '';
     const lead = u.leads ? '<span class="lead">+ ' + esc(partsAfter(u).join(' + ')) + '</span>' : '';   // an attached unit names its other parts as loud as its leader
     // more than one stats row (an attached unit, Squighog Boyz' Nob, Canis Rex and Sir Hekhtur): one line per row, under the name,
     // with how many models it is for
@@ -4323,7 +4330,7 @@ function screenUnits(){
     const subName = s => esc(s.name).replace(/ ×(\d+)$/, '<span class="x">×$1</span>') + (!/ ×\d+$/.test(s.name) && cnt.get(s) > 1 ? '<span class="x">×' + cnt.get(s) + '</span>' : '');
     const tags = nameTags(u, { noLeads:true, noCopies:true });   // how many of it: on the points ("2×215")
     return '<button class="urow' + (subs ? ' att' : '') + '" data-unit="' + esc(u.id) + '"><span class="un"><b>' + esc(u.name) + '</b>' + n + lead +
-      (tags ? '<span class="utg">' + tags + '</span>' : '') + (!one && !u.leads && !subs ? '<span class="meta">' + esc(u.models.join(', ')) + '</span>' : '') + '</span>' +
+      (tags ? '<span class="utg">' + tags + '</span>' : '') + (!one && !u.leads && !subs ? '<span class="meta">' + esc(u.models.join(', ')) + '</span>' : apart ? '<span class="meta">' + esc(apart) + '</span>' : '') + '</span>' +
       (subs ? '' : statCells(u.stats[0])) + '<span class="pts">' + (u.copies > 1 ? esc(u.copies) + '×' : '') + esc(u.pts) + '</span>' +
       (subs ? u.stats.map(s => '<span class="sn">' + subName(s) + '</span>' + statCells(s)).join('') : '') + '</button>';
   }).join('') + '</div>').join('');
@@ -4347,8 +4354,8 @@ function weaponBlock(it, keys, mods, u){
   const row = (label, cells, p) => '<div class="wr' + (p ? ' p' : '') + '"><span class="n' + (wide ? ' n2' : '') + '">' + label + '</span>' + (wide ? cells.slice(1) : cells).join('') + '</div>';
   const gv = (w, k) => granted(w, k, u, esc(w[k]), (KEY_LABEL[k] || k) + ' ' + w[k]);
   const plainCells = w => keys.map(k => '<span>' + gv(w, k) + '</span>');
-  // a keyword printed twice (Hunter's Eye's [IGNORES COVER] appended to a heavy flamer that has it): the added, last one is marked
-  const kwl = w => (w.kw || []).length ? '<div class="kwl">' + w.kw.map((x, i) => w.from && w.from[x] && w.kw.lastIndexOf(x) === i ? '<span class="gk' + (wideGrant(w.from[x], u) ? ' w' : '') + '" data-rule="' + esc(x) + '"' + grantAttr(w.from[x], u, x) + '>' + esc(x) + '</span>'
+  // a keyword printed twice (Hunter's Eye's [IGNORES COVER] appended to a heavy flamer that has it): shown once, the weapon's own
+  const kwl = w => (w.kw || []).length ? '<div class="kwl">' + w.kw.filter((x, i) => w.kw.indexOf(x) === i).map(x => w.from && w.from[x] && w.kw.lastIndexOf(x) === w.kw.indexOf(x) ? '<span class="gk' + (wideGrant(w.from[x], u) ? ' w' : '') + '" data-rule="' + esc(x) + '"' + grantAttr(w.from[x], u, x) + '>' + esc(x) + '</span>'
     : '<span role="button" tabindex="0" data-rule="' + esc(x) + '">' + esc(x) + '</span>').join(', ') + '</div>' : '';
   // "Khornate eviscerator ×4": the count wraps with the last word, never alone
   const named = (name, n) => { if(!n) return esc(name); const i = name.lastIndexOf(' '); return esc(name.slice(0, i + 1)) + '<span class="nw">' + esc(name.slice(i + 1)) + '<span class="x">×' + esc(n) + '</span></span>'; };
@@ -4645,11 +4652,16 @@ function abilityRows(abs, u, opts){
 }
 // an ability's note (data.js note: an FAQ, a core rule it meets, a question the rules leave open), the app's words around quotes
 const abilityNote = ab => ab.note ? '<p class="note it">' + esc(ab.note) + '</p>' : '';
+// the values of the unit an ability is already counted in (its granted marks, w.from / s.from: Gore-stained Veterans' WS), said on its
+// row as Relentless Rage says it ("Already in A")
+const STAT_KEYS = new Set(['M','T','Sv','W','Ld','OC','InSv','range','A','BS','WS','S','AP','D']);
+const alreadyIn = (ab, u) => !u ? '' : [...new Set([...u.stats, ...(u.ranged || []), ...(u.melee || [])].flatMap(x => Object.entries(x.from || {})
+  .filter(([k, v]) => STAT_KEYS.has(k) && [].concat(v).includes(ab.name)).map(([k]) => k === 'range' ? 'Range' : k)))].join(', ');
 function abilityList(abs, u, suffix){
   return '<div class="abl">' + abs.map(ab => {
-    const meta = [ab.tag, ab.ph ? whenTag(ab) : ''].filter(Boolean), na = naReason(ab), once = onceTag(ab);
+    const meta = [ab.tag, ab.ph ? whenTag(ab) : ''].filter(Boolean), na = naReason(ab), once = onceTag(ab), inv = alreadyIn(ab, u);
     return '<details class="ab' + (na ? ' na' : '') + '"><summary><span class="an"><b>' + esc(ab.name) + '</b>' + (suffix && ab.who ? '<span class="awho">- ' + esc(ab.who) + '</span>' : '') +
-      (ab.tag === 'Enhancement' ? '<span class="tg">Enhancement</span>' : '') + (once ? '<span class="tg once">' + esc(once) + '</span>' : '') + (na ? '<span class="tg m">' + esc(na) + '</span>' : '') + abilityTicks(ab, u) + '</span>' +
+      (ab.tag === 'Enhancement' ? '<span class="tg">Enhancement</span>' : '') + (once ? '<span class="tg once">' + esc(once) + '</span>' : '') + (inv ? '<span class="tg m">Already in ' + esc(inv) + '</span>' : '') + (na ? '<span class="tg m">' + esc(na) + '</span>' : '') + abilityTicks(ab, u) + '</span>' +
       (ab.ph && !na ? '<span class="aw">' + shortWhen(ab).split(' · ').map(x => '<span class="nw">' + esc(x) + '</span>').join(' · ') + '</span>' : '') + chev + '</summary><div class="body">' +
       (na ? '<p class="abt"><i>' + esc(na) + '</i></p>' : '') + (meta.length ? '<p class="abt">' + meta.map(esc).join(' · ') + '</p>' : '') + rt(ab.text) + abilityNote(ab) + '</div></details>';
   }).join('') + '</div>';
@@ -4754,13 +4766,15 @@ function screenUnit(){
 }
 // every stratagem the unit can use: one line per detachment, then core, each in phase order;
 // a detachment with none for this unit is named, not left out
+// a stratagem for weapons with a keyword (weaponKw: Point-Blank Barrage's "ranged attacks with Blast weapons") on a unit with none: marked
+const noWeapon = (u, st) => !!st.weaponKw && ![...(u.ranged || []), ...(u.melee || [])].some(w => w.kw.some(k => k.toUpperCase().startsWith(st.weaponKw)));
 function stratLines(u, strats){
   const first = x => { const ph = phasesOf(x); return ph.length === PHASES.length ? 99 : PHASES.findIndex(([k]) => k === ph[0]); };
   const ord = list => list.map((x, i) => [x, i]).sort((a, b) => first(a[0]) - first(b[0]) || a[1] - b[1]).map(x => x[0]);
   const groups = detachments().map(d => [d.name, strats.filter(st => st.src === d.name)]).concat([['Core', strats.filter(st => st.src === 'Core')]]);
   const none = groups.filter(([n, l]) => !l.length && n !== 'Core').map(([n]) => n);
   return '<div class="dkv sl" id="sec-strats"><span class="dk">Stratagems</span><span class="dv">' + groups.filter(([, l]) => l.length).map(([n, l]) =>
-    '<p><b class="sln">' + esc(n) + '</b> ' + ord(l).map(st => linkTo('strat', st.id, st.name)).join(', ') + '</p>').join('') +
+    '<p><b class="sln">' + esc(n) + '</b> ' + ord(l).map(st => linkTo('strat', st.id, st.name) + (noWeapon(u, st) ? ' <span class="from">(no ' + esc(st.weaponKw) + ' weapon)</span>' : '')).join(', ') + '</p>').join('') +
     (none.length ? '<p class="from">None from ' + esc(orList(none)) + '.</p>' : '') + '</span></div>';
 }
 
@@ -4783,7 +4797,7 @@ const lacks = s => { const n = s.needs || {}, us = army().units, lack = (n.all |
   if(n.any && !us.some(u => n.any.some(k => hasKw(u, k)))) return n.any.join(' or ').toUpperCase();
   if(n.attached && !us.some(u => matches(n, u))) return 'an attached unit';
   const ex = (n.none || []).filter(k => us.length && us.every(u => hasKw(u, k)));
-  return ex.length ? 'not ' + ex.join('/').toUpperCase() + ': every unit here is' : ''; };
+  return ex.length ? 'it excludes ' + ex.join('/').toUpperCase() + ' units, and every unit here is ' + ex.join('/').toUpperCase() : ''; };
 // an attached unit's characters: its own name first, then `also` (a Warboss leading the Breaka Boyz a Bigboss supports)
 const charsOf = u => u.leads ? [{ name:u.name, support:!!u.support }].concat((u.also || []).map(c => ({ name:c.name, support:!!c.support }))) : [];
 const partsAfter = u => (u.also || []).map(c => c.name).concat(u.leads ? [u.leads] : []);   // what "+ …" names after the unit's name
@@ -4796,7 +4810,7 @@ const labelList = units => { const n = new Map(); for(const u of units){ const k
   return [...n].map(([k, c]) => k + (c > 1 ? '\u00a0×' + c : '')).join(', '); };
 function usersLine(s){
   const el = stratUsers(s), all = army().units;
-  if(!el.length) return 'No unit in this list can use it' + (lacks(s) ? ' (' + (/^not /.test(lacks(s)) ? '' : 'needs ') + lacks(s) + ')' : '');
+  if(!el.length) return 'No unit in this list can use it' + (lacks(s) ? (/^it excludes /.test(lacks(s)) ? ': ' + lacks(s) : ' (needs ' + lacks(s) + ')') : '');
   if(el.length === all.length) return 'Any unit';
   const out = all.filter(u => !el.includes(u));
   return out.length <= 2 && all.length >= 5 ? 'All but ' + labelList(out) : labelList(el);
@@ -4815,7 +4829,7 @@ function stratBody(s){
     '<div><span class="il">Effect</span>' + rt(s.effect) + '</div>' +
     (s.restrictions ? '<p><span class="il">Restrictions</span>' + inline(s.restrictions) + '</p>' : '') +
     (s.note ? '<p class="note it">' + esc(s.note) + '</p>' : '') +
-    '<p class="usedby"><span class="il">Used by</span>' + (!el.length ? 'no unit in this list' + (lacks(s) ? ' (needs ' + esc(lacks(s)) + ')' : '') : el.length === army().units.length ? 'any unit' : el.map(unitLink).join(', ')) + '</p>';
+    '<p class="usedby"><span class="il">Used by</span>' + (!el.length ? 'no unit in this list' + (lacks(s) ? (/^it excludes /.test(lacks(s)) ? ': ' + esc(lacks(s)) : ' (needs ' + esc(lacks(s)) + ')') : '') : el.length === army().units.length ? 'any unit' : el.map(wholeLink).join(', ')) + '</p>';
 }
 const stratItem = s => '<details class="strat' + (stratUsers(s).length ? '' : ' none') + '" data-strat-id="' + esc(s.id) + '"' + (openStrats.has(s.id) ? ' open' : '') + '><summary>' + stratHead(s) + chev + '</summary><div class="sb">' + stratBody(s) + '</div></details>';
 // every stratagem this list can use, by detachment, in phase order (Command first, any-phase ones last)
@@ -4921,6 +4935,8 @@ function screenPregame(){
     .concat(detachments().filter(d => d.rule).map(d => ({ r:d.rule, src:d.name }))) : [];
   const ruleLine = x => linkTo('rule', x.r.name, x.r.name) + ' <span class="from">· ' + esc(x.src) + '</span>';
   const nameLink = u => linkTo('unit', u.id, u.short || u.name);   // without its enhancement: the line says it
+  // a unit's short name, or its full one when another unit of the list has that short name too (Big Mek Dakkarig, Big Mek in Mega Armour)
+  const ownName = u => u.short && units.some(x => x !== u && (x.short || x.name) === u.short && x.name !== u.name) ? u.name : u.short || u.name;
   const allAbs = units.flatMap(u => u.abilities.filter(ab => !naReason(ab)).map(ab => [u, ab]));
   // Deep Strike (24.09) and Scouts (24.31) work only if every model in the unit has them; u.partialRules names
   // the rules only some models of an attached unit have (Slaughterbound's Scouts 6": its Exalted Eightbound have none)
@@ -4931,7 +4947,7 @@ function screenPregame(){
   // your list
   const warlord = units.filter(u => u.warlord);
   const enh = units.flatMap(u => [u.enhancement, u.upgrade].filter(Boolean).map(n => { const d = detachments().find(x => (x.enhancements || []).some(e => e.name === n)), e = d && d.enhancements.find(x => x.name === n);
-    return (d ? linkTo('enh', d.id + '|' + n, n) : esc(n)) + (n === u.upgrade ? ' <span class="from">(upgrade)</span>' : '') + (e && e.pts ? ' <span class="from">' + e.pts + ' pts</span>' : '') + ' on ' + (n === u.enhancement && u.enhOn ? linkTo('unit', u.id, u.enhOn) : n === u.upgrade && u.leads ? linkTo('unit', u.id, u.leads) : linkTo('unit', u.id, (u.short || u.name) + unitNo(u))); }));
+    return (d ? linkTo('enh', d.id + '|' + n, n) : esc(n)) + (n === u.upgrade ? ' <span class="from">(upgrade)</span>' : '') + (e && e.pts ? ' <span class="from">' + e.pts + ' pts</span>' : '') + ' on ' + (n === u.enhancement && u.enhOn ? linkTo('unit', u.id, u.enhOn) : n === u.upgrade && u.leads ? linkTo('unit', u.id, u.leads) : linkTo('unit', u.id, ownName(u) + unitNo(u))); }));
   const led = units.filter(u => u.leads).flatMap(u => charsOf(u).map((c, i) => (i ? linkTo('unit', u.id, c.name) : nameLink(u)) + (c.support ? ' supports ' : ' leads ') + esc(u.leads) + (u.copies > 1 ? ' <span class="from">×' + u.copies + ' units</span>' : '')));
   // the opponent's list, opened from yours (Find's Opponent's list row): theirs, not yours
   let h = sec(peeking(a) ? 'Their list' : 'Your list',
@@ -4943,8 +4959,10 @@ function screenPregame(){
     // rule ("Code Chivalric: Deed, Quality", each part's table rows) is no pick: that rule is under Army rules
     Object.entries(a.config || {}).filter(([k, v]) => !ruleParts(f, k, v)).map(([k, v]) => row(esc(k), esc(v))).join('') +
     row('Points', esc(a.pointsUsed + ' / ' + a.points + ' · ' + a.battleSize)));
-  // the army rules, folded: each opens to its text
-  h += f.armyRules.length ? '<div class="sec-h"><h2>Army rules</h2></div><div class="abl">' + armyRuleRows(f) + '</div>' : '';
+  // the army rules and the detachment rules, folded: each opens to its text (the detachment's row as on the Rules tab)
+  const detRows = detachments().filter(d => d.rule).map(d => ruleRow(d.rule.name, metaLine(esc(d.name), d.rule.ph ? esc(shortWhen(d.rule)) : ''),
+    (d.rule.note ? '<p class="note it">' + esc(d.rule.note) + '</p>' : '') + textWithTable(d.rule) + usedBy('Applies to', units.filter(u => matches(d.rule.needs, u))))).join('');
+  h += f.armyRules.length || detRows ? '<div class="sec-h"><h2>' + (detRows ? 'Army and detachment rules' : 'Army rules') + '</h2></div><div class="abl">' + armyRuleRows(f) + detRows + '</div>' : '';
 
   const earlyAbs = group(allAbs.filter(([u, ab]) => /read mission objectives/i.test(ab.text)));
   h += sec('Read Mission Objectives step', row('Rules', early.map(ruleLine).join('<br>')) + row('Abilities', earlyAbs.map(abLine).join('<br>')));
@@ -4977,7 +4995,7 @@ function screenPregame(){
   const round = rulesOf.filter(x => /start of (the|each|every) battle round/i.test(x.r.text)).map(ruleLine)
     .concat(group(allAbs.filter(([u, ab]) => /start of (the|each|every) battle round/i.test(ab.text) && !/start of the first battle round/i.test(ab.text))).map(abLine));
   const firstRules = rulesOf.filter(x => /start of the first battle round/i.test(x.r.text)).map(ruleLine);
-  h += sec('Start of the battle round', row('Start of the battle', atStart.join('<br>')) + row('First round', firstRules.concat(first.map(abLine)).join('<br>')) + row('Every round', round.join('<br>')));
+  h += sec('Start of the battle and the battle rounds', row('Start of the battle', atStart.join('<br>')) + row('First round', firstRules.concat(first.map(abLine)).join('<br>')) + row('Every round', round.join('<br>')));
 
   // uses per battle: the resources you spend, ticked off until New game
   // a rule that gives units a "(Once per battle, per unit)" ability (Higher Imperatives) is ticked on those units, not here
@@ -5668,7 +5686,7 @@ function showAbility(key){
   const po = pickOptions(e.ab, e.units[0]);
   const opts = po.list.length ? '<div class="opts"><p class="il">To pick from: ' + esc(po.section) + '</p>' + po.list.map(o => '<div class="sub"><b class="nm">' + esc(o.name) + '</b>' +
     (o.tag ? ' <span class="tg m">' + esc(o.tag) + '</span>' : '') + rt(o.text) + abilityNote(o) + '</div>').join('') + '</div>' : '';
-  openSheet(esc(['Ability', e.ab.tag, e.ab.ph ? whenTag(e.ab) : ''].filter(Boolean).join(' · ')), e.ab.name, rt(e.ab.text) + abilityNote(e.ab) + opts + usedBy('Unit', e.units) + askRefBtn('ability', key, 'ability'));
+  openSheet(esc(['Ability', e.ab.tag, e.ab.ph ? whenTag(e.ab) : ''].filter(Boolean).join(' · ')), e.ab.name, rt(e.ab.text) + abilityNote(e.ab) + opts + (e.units.length ? '<p class="usedby"><span class="il">Unit</span>' + e.units.map(wholeLink).join(', ') + '</p>' : '') + askRefBtn('ability', key, 'ability'));
 }
 // the options an ability asks the player to select from ("select one of the abilities in the X section", "select one X
 // ability"): the unit's abilities printed under that section (who "Crimson King", "Wrathful Presence: pick one"), else the
