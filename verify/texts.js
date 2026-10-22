@@ -977,6 +977,13 @@ function weDice(fk, name) {
   const groups = [[]]; for (const c of cls) { if (c === 'cruORw') groups.push([]); else groups[groups.length - 1].push(c); }
   return groups.map(g => { const ds = g.filter(c => /D\d/.test(c)); const n = ds.length, f = ds[0] ? ds[0][4] : '?'; return (n === 2 ? 'double' : n === 3 ? 'triple' : n + '×') + ' ' + f + (g.includes('cruPlusw') ? '+' : ''); }).join(' or ');
 }
+// Chaos Knights Dread abilities: the D6 result that selects one is a dice icon next to its name (cruD6wrap: cruD3 = a 3), or "N/A"
+function ckDice(fk, name) {
+  const h = rawHtml(fk), i = h.indexOf('<span>' + name.toUpperCase() + '</span>');
+  if (i < 0) return null;
+  const m = /^<span><div class="cruD6wrap">(?:N\/A|<div class="cruD(\d)"><\/div>)<\/div><\/span>/.exec(h.slice(i + name.length + 13, i + name.length + 120));
+  return m ? (m[1] || 'n/a') : null;
+}
 // Imperial Knights Oath tables: the D6 column is dice images (d1.png …) in the row of that text
 function ikDice(fk, rowStart) {
   // the page without its tags (dice images and row ends kept), so that the row's text can be found
@@ -1036,12 +1043,14 @@ for (const fk of FACTIONS) {
         body[kName].used = true;
         let k = kName + 1;
         if (body[k] && body[k].n === 'warp charge') { extra.push('warp charge ' + (body[k + 1] ? body[k + 1].n : '?')); body[k].used = true; if (body[k + 1]) body[k + 1].used = true; k += 2; }
+        else if (body[k] && body[k].n === 'n/a') { body[k].used = true; k += 1; }   // Chaos Knights: Deathly Terror's D6 column
         kText = k < body.length ? k : -1;
       } else kText = body.findIndex(x => !x.used && x.n === t);
       // the row's update: titled with the row, or under the rule's title naming the row ("Change Protector Imperative to:")
       const ru = upd.find(e => titleN(e) === nameN(parts[0]) || titleN(e) === nameN(R.name + ', ' + parts[0]) ||
         (parts[1] && titleN(e).startsWith(nameN(R.name) + ', ') && titleN(e).includes(nameN(parts[1]).replace(/^\.\.\./, ''))) ||
-        (titleN(e) === nameN(R.name) && nameN((/^Change (.+) to:$/.exec(e.instr) || [])[1] || '') === nameN(parts[0])));
+        (titleN(e) === nameN(R.name) && nameN((/^Change (.+) to:$/.exec(e.instr) || [])[1] || '') === nameN(parts[0])) ||
+        new RegExp('^' + nameN(R.name + ', ' + parts[0].replace(/ \(aura\)$/i, '')).replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ' [a-z]+ ability$').test(titleN(e)));
       if (kText < 0) { fail('armyRule', army, rowU, 'text', text, 'no such row in ' + whereR, whereR); continue; }
       // a row of several lines (an Imperative's bullet points) is that many source lines after its name
       const nRow = kName >= 0 ? String(text).split('\n').filter(l => l.trim()).length : 1;
@@ -1081,6 +1090,7 @@ for (const fk of FACTIONS) {
         for (const r of rest) {
           if (/^warp charge/.test(r)) { if (!extra.includes(r)) probs.push('"' + r + '" vs ' + (extra[0] || 'no Warp Charge')); continue; }
           if (/^(double|triple)/.test(r)) { const dice = weDice(fk, parts[0]); if (norm(dice || '') !== r) probs.push('dice "' + r + '" vs the page\'s dice icons: ' + dice); continue; }
+          if (/^(n\/a|[1-6])$/.test(r)) { const dice = ckDice(fk, parts[0]); if (dice !== r) probs.push('D6 "' + r + '" vs the page\'s dice icon: ' + dice); continue; }
           probs.push('label part "' + r + '" not checked');
         }
         if (probs.length) fail('armyRule', army, rowU, 'label', label, probs.join('; '), whereR);
