@@ -77,11 +77,23 @@
   "at": "2026-10-20",
   "why": "NR prints 'Ammo Runts (Once per battle, per unit) - Nobz' (l.141-142); BSData profile is on the Nobz unit. Models match NR."
  },
+ "0295d01282f0fdf6": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "WHEN “Your opponent’s Shooting phase or the Fight phase, just after a TYRANIDS MONSTER model from your army with the Deadly Demise ability that cannot FLY is destroyed” = “Your MONSTER model (one that cannot FLY) just destroyed” (Deadly Demise is in “its Deadly Demise”; the phases are the row’s tag). EFFECT “Do not roll one D6 … Instead, mortal wounds are automatically inflicted” = the rest."
+ },
  "02aa503660cddef2": {
   "verdict": "ok",
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "Any phase, either turn."
+ },
+ "035ba314f3f0539b": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "The part done at a moment is “at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound”: Command. The “Feel No Pain 6+ ability” is a state, shown on every Knight’s When targeted line through the rule’s def (defenceItems takes detachment-rule defs with no phase filter) and counted by the Damage tab (calc-test: “× 5/6 (Knights of Legend, Feel No Pain 6+)”). The same tagging as Omnissiah’s Blessing (“In your Command phase … Feel No Pain 5+”: command, your). It no longer sits under “Any phase” (g5B, g3B)."
  },
  "0366d0340905c7e3": {
   "verdict": "ok",
@@ -143,6 +155,12 @@
   "at": "2026-10-16",
   "why": "WHEN: \"Your Shooting phase, when a friendly NORN ASSIMILATOR unit has shot.\""
  },
+ "051c02d6904c2331": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "WHEN “Your Shooting phase, when a friendly unengaged BREAKA BOYZ/FLASH GITZ/TANKBUSTAS unit has shot” = “After shooting, if unengaged”. EFFECT “Your unit can make a normal move of up to 6\", and must end that move within range of an objective” and “Your unit is not eligible to declare a charge until the end of the turn” = “can make a normal move of up to 6\", ending within range of an objective; not eligible to declare a charge this turn”. Nothing added or lost."
+ },
  "05490abc0c4a7e5d": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
@@ -173,6 +191,12 @@
   "at": "2026-10-21",
   "why": "For a rule with no ph tags, the phase and turn come from its first words: “At the start of your turn” → your Command phase, “At the end of your opponent’s turn” → their Fight phase (the end of that turn)."
  },
+ "060265bd0728919f": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "TARGET “One friendly unengaged unit within 12\" of one or more enemy units” = “Your unengaged unit within 12\" of an enemy unit” (the VEHICLE-only-if-CHARACTER/WALKER limit is the users column); EFFECT “Resolve a charge with your unit … you must select one of the following modes: Leap to Defend … Into the Fray (+1CP)” = “resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…”, the “…” leaving what each mode does to the text, as in the signed-off gist. “End of their Charge” is the row’s tag."
+ },
  "061c00da8250764b": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -184,6 +208,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "New Recruit PDF: \"Supreme Kunnin' (…) - Nazdreg\"."
+ },
+ "06496ce06a52c4a3": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "TARGET “One WORLD EATERS unit from your army that has not been selected to fight this phase and that made a charge move this turn” = “Your unit made a charge move this turn and has not been selected to fight this phase” (the condition the digest found dropped). EFFECT “Until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1” = “until the end of the phase, its melee weapons have +1 AP”."
  },
  "0691de7b46f3b733": {
   "verdict": "ok",
@@ -298,6 +328,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "“WHEN: Your Shooting phase”: your turn."
+ },
+ "0a51de81856a29e0": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "Wahapedia’s 11th-edition Canis Rex: “UNIT COMPOSITION 1 Canis Rex – EPIC HERO”, “1 model 415”, keywords with no INFANTRY or SIR HEKHTUR, and Sir Hekhtur listed apart under “Infantry Epic Hero”. BSData has the Sir Hekhtur model inside the Canis Rex unit, and New Recruit prints “1x Canis Rex … 1x Sir Hekhtur” with “Using Sir Hekhtur”. The note on Sir Hekhtur’s models line says just that; the base stays as New Recruit prints it (held for the owner)."
  },
  "0a58caec51ebcab0": {
   "verdict": "ok",
@@ -448,6 +484,12 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "WHEN: “Your Shooting phase.”"
+ },
+ "0ff21a306632496e": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "WHEN “Your opponent’s Shooting phase, just after an enemy unit has shot” and TARGET “One SKITARII INFANTRY unit from your army that lost one or more models as a result of the attacking unit’s attacks” = “An enemy unit has shot and your unit lost models to those attacks”; EFFECT “Your unit can shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target” = the rest."
  },
  "1069ca9b75a1a993": {
   "verdict": "ok",
@@ -1007,6 +1049,12 @@
   "at": "2026-10-21",
   "why": "\"If a friendly ADEPTUS MECHANICUS VEHICLE model is destroyed within 12\" of this model, until the end of the battle, this model’s Omnissian axe has an Attacks characteristic of 6.\" set {A:'6'} on the Omnissian axe, with calc {} so that only the set counts, matches; the trigger is table history, so unticked."
  },
+ "227c0ccd160c3f9d": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "Wahapedia’s Scarab Occult Terminators: “ARMY RULES Cabal of Sorcerers (Scarab Occult Sorcerer only)”; the Sorcerer in Terminator Armour’s own datasheet: “ARMY RULES Cabal of Sorcerers”. In this attached unit exactly those two models have it; the datasheet names them after the rule."
+ },
  "231379af293895c5": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -1115,6 +1163,12 @@
   "at": "2026-10-21",
   "why": "\"Friendly MEGANOBZ/NOBZ units’ melee attacks have [SUSTAINED HITS 1].\" Melee attacks are made only in the Fight phase. Same reading as the signed-off Get Stuck In and Relentless Rage."
  },
+ "26248e3709db5059": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "The Normal, Advance and Fall Back moves it applies to are made in your own Movement phase; nothing in these lists lets a Knight make one in the opponent’s turn. So “your”."
+ },
  "26501734dea8331a": {
   "verdict": "ok",
   "by": "review:gists",
@@ -1132,6 +1186,12 @@
   "by": "review:r5-text",
   "at": "2026-10-17",
   "why": "The rule is titled \"Support\" and its text is about \"each leader and support unit in your army\". Typing \"support unit(s)\" plainly names that rule."
+ },
+ "26b637bcf7e0a936": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "WHEN “Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly unengaged GRETCHIN unit” = “An enemy unit ends a move within 8\" of your unengaged unit” (“Their Movement”: the row’s tag); EFFECT “normal move of: Up to D6\". Or: Up to 6\" instead if your unit is an attached unit” = the rest."
  },
  "26b82ae697280554": {
   "verdict": "ok",
@@ -1211,6 +1271,12 @@
   "at": "2026-10-17",
   "why": "Verbatim from Wahapedia’s Core Abilities (24) FAQ: “Q:If my unit has the Deadly Demise ability and has an ability that allows it to Fight on Death, how do I resolve this? A: Fight on Death rules are resolved before Deadly Demise abilities, meaning that your unit’s Deadly Demise will resolve after your unit has fought/at the end of the phase and the relevant models have been removed from the battlefield.” Crazed Rampage’s effect has the wording of the app’s Fight On Death rule (05.04.05: “do not remove it from play … until their unit is selected to attack and has attacked, or until the end of the phase”). The WALKER units it targets here have Deadly Demise 1. The note adds no conclusion of the app’s own."
  },
+ "2848413850f2989b": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "TARGET “One THOUSAND SONS PSYKER unit from your army within range of an objective marker you control” gives the antecedent: “An objective marker you control that your unit is within range of”; EFFECT “That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase” = the rest. “Your Command” is the row’s tag."
+ },
  "284b5438cc2dd621": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -1235,11 +1301,23 @@
   "at": "2026-10-21",
   "why": "RULES['Heavy'] matches 24.16 word for word in rules/core-rules.md and Wahapedia core.html: \"In your Shooting phase, each time an attack is made with a [HEAVY] weapon, add 1 to the hit roll if all of the following apply to the attacking unit: That unit is unengaged. / That unit was not set up on the battlefield this turn. / No model in that unit has moved more than 3\" this turn.\" Its bold on 'hit roll' and 'unengaged' follows Wahapedia's <b>; the only difference is Wahapedia's underline on 'all', which is formatting. ruleFor strips the brackets and the anchored /^heavy$/i matches only 'HEAVY'/'[HEAVY]'/'Heavy' (a weapon keyword, the AdMech unit's rules chip, and the **[HEAVY]** in Protector Imperative). It does not match 'Heavy bolter', 'Heavy flamer', 'Heavy weapon' or 'SUPER-HEAVY WALKER' (that one goes to its own alias), and no faction alias or army rule is named 'heavy'."
  },
+ "297ce09fb084f63e": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "WHEN “Any phase, when an enemy unit has attacked” = “After an enemy unit has attacked”; TARGET “One friendly GRETCHIN unit that was just destroyed” = “your just-destroyed unit”; EFFECT “Add a new GRETCHIN unit to your army identical to your destroyed unit, in strategic reserves, at its starting strength, with its full wounds remaining” = the rest (the full-wounds clause is effect detail, not a condition, and was left to the text in the signed-off gist)."
+ },
  "2a10d893105139dc": {
   "verdict": "ok",
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "\"TYRANIDS MONSTER model ... with the Deadly Demise ability that cannot FLY\": all MONSTERs here have Deadly Demise and none has FLY."
+ },
+ "2a4120da97843063": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "WHEN “Fight phase, just after a WORLD EATERS unit from your army destroys a CHARACTER or MONSTER model” = “Just after your unit destroys a CHARACTER or MONSTER model” (the dropped condition, now in). EFFECT “Make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne. Until the end of the battle round, that Blessing of Khorne is active in addition to any other Blessings of Khorne that are currently active” = the rest, keeping “use it to activate” as the earlier gist review asked."
  },
  "2a4a2fbb14b39e71": {
   "verdict": "ok",
@@ -1349,6 +1427,12 @@
   "at": "2026-10-16",
   "why": "W 16; \"While this model has 1-6 wounds remaining\" - band and W match the datasheet."
  },
+ "2da4e8978a7297ba": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "“Each time a model with this ability makes a Normal, Advance or Fall Back move”: those are the Movement phase’s moves (09.05 Normal Move, advance and fall-back moves). No rule in 6-bigs or 4-megas gives a Knight one in another phase (the Freeblade Company and core stratagems and the units’ abilities checked; Ram Jets is Movement too). Movement is where it is used (fixlist B4: “Super-heavy Walker in Movement”, g3B)."
+ },
  "2da6edf6801de86c": {
   "verdict": "ok",
   "by": "review:r22-shields",
@@ -1372,6 +1456,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "WHEN: \"Your opponent's Shooting phase\"."
+ },
+ "2e502aa8c47b8505": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "WHEN “Any phase, just after a saving throw is failed for a THOUSAND SONS PSYKER model from your army” = “Just after a saving throw is failed for your PSYKER model” (now a model keyword, as kwOnly says); EFFECT “Change the Damage characteristic of that attack to 0” = “change the Damage of that attack to 0”. The fast-dice sentences only widen when it can be used, they set no condition, so leaving them to the full text loses none."
  },
  "2e8b6d785d3da182": {
   "verdict": "ok",
@@ -1673,6 +1763,12 @@
   "at": "2026-10-17",
   "why": "New Recruit prints “Fix Dat Armour Up (Once per battle, per unit)”; the text’s single Grot Oiler token agrees."
  },
+ "391330d40614737a": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "The ability starts “While this model is leading a unit”. The mark is on the lone Slaughterbound (id slaughterbound, models “1× Slaughterbound”, no leads); the other Slaughterbound, New Recruit’s “Leading: Exalted Eightbound[1]”, keeps Rage Eternal unmarked (checked in data.js). The text and the list facts agree."
+ },
  "391d1ffcd14a443d": {
   "verdict": "ok",
   "by": "review:literal",
@@ -1732,6 +1828,12 @@
   "by": "review:r5-text",
   "at": "2026-10-17",
   "why": "TARGET: \"One friendly unit that is in strategic reserves (excluding AIRCRAFT)\"; EFFECT: \"Your unit makes an ingress move\"; RESTRICTIONS: \"You cannot use this stratagem during the first battle round.\" The gist matches. The AIRCRAFT exclusion is part of the TARGET filter, which \"your unit\" stands for. Nothing added."
+ },
+ "3a872c33101fb622": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "WHEN “Your opponent’s Movement phase, when a unit is selected to make a fall-back move, if that unit is engaged with a friendly WORLD EATERS CHARACTER unit” and EFFECT “When an enemy unit engaged with your unit is selected to make a fall-back move, that enemy unit must use the desperate escape mode. If that enemy unit is battle-shocked, -1 from those hazard rolls” = the gist (“Their Movement” is the row’s tag). “Those hazard rolls” are desperate escape’s own (09.07: “Desperate Escape: … Make a hazard roll for each model in your unit”), as in the text."
  },
  "3abe319e9a0b494e": {
   "verdict": "ok",
@@ -1895,6 +1997,12 @@
   "at": "2026-10-21",
   "why": "TARGET: “One SKITARII VEHICLE unit from your army”: Skitarii + Vehicle picks the Ironstriders, the Onager, the Skorpius and the Datasmith + Kastelans, and not the Rangers."
  },
+ "3fa10f6d7466f8be": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "BSData’s categories, per model: the unit “Epic Hero, Character, Imperium, Faction: Imperial Knights”; the Canis Rex model “Vehicle, Walker, Titanic, Towering, Canis Rex, Questoris, Character, Epic Hero”; the Sir Hekhtur model “Infantry, Sir Hekhtur, Character, Epic Hero”. So VEHICLE, WALKER, TITANIC, TOWERING, QUESTORIS and CANIS REX are Canis Rex’s, INFANTRY and SIR HEKHTUR are Sir Hekhtur’s, and the rest both models’: exactly the judgement. Wahapedia’s Canis Rex (“KEYWORDS: VEHICLE; WALKER; TITANIC; TOWERING; QUESTORIS; CHARACTER; EPIC HERO; IMPERIUM; CANIS REX”, no INFANTRY) agrees for the Knight. New Recruit prints all twelve on the unit."
+ },
  "3fbe206fda6a4e3f": {
   "verdict": "ok",
   "by": "review:r9-pubstomper",
@@ -2021,6 +2129,12 @@
   "at": "2026-10-17",
   "why": "“Do not roll one D6 to determine whether mortal wounds are inflicted by your model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted.” Same."
  },
+ "43058fdaa20cd2e8": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "TARGET “One ARMIGER unit from your army that is within 9\" of one or more battlefield edges and not within Engagement Range of one or more enemy units” = “Your unit within 9\" of a battlefield edge and not within Engagement Range of an enemy unit”; EFFECT “Remove your unit from the battlefield and place it into Strategic Reserves” = the rest. “End of their Fight” is the row’s tag."
+ },
  "4328ed892bfbcc61": {
   "verdict": "ok",
   "by": "review:m1-strats",
@@ -2038,6 +2152,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "\"When a friendly WARBOSS model is destroyed\": the WARBOSS units are Ghazghkull, Nazdreg and both Beastbosses. Mozrog has no WARBOSS keyword (BSData/NR)."
+ },
+ "43d49aaae9bde5d6": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "All three abilities are about Psychic weapons of THOUSAND SONS models (“ranged Psychic weapons equipped by THOUSAND SONS models”, “attack with a Psychic weapon”, “Psychic weapons equipped by THOUSAND SONS models … [DEVASTATING WOUNDS]”). In pubstomper the units with Psychic weapons are Magnus, the Daemon Prince of Tzeentch, Sorcerer + Rubric Marines and Sorcerer in Terminator Armour + Scarab Occult Terminators, exactly the four PSYKER units; Tzaangors, both Tzaangor Enlightened units and the Defiler have none and no PSYKER keyword. So all:[Faction: Thousand Sons, Psyker] makes “Applies to” list the right units (fixlist 10), and the comment says why it is the same set."
  },
  "43e3cdc307f44f49": {
   "verdict": "ok",
@@ -2188,6 +2308,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "“While this unit is riled up, +3\" R.” on ranged attacks: same condition and effect; the footnote doesn’t say whose riled-up state beyond the text’s “this unit”."
+ },
+ "4931def1187f5a8f": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "The opp parameter and the “Their unit” chips (gcTargets on the opponent’s list) are removed; everything else is as before: the rule and its source, when (c.when) and how long in the rule’s words (For the battle / Until another is picked / Until the start of your next Command phase / Battle round N, with “from the start of the battle” or “picked in battle round N”), options with “used” for once-per-battle ones picked in another round, Rolled, the state, the quoted text of each pick, earlier rounds’ picks, and the app note for a step the Event Companion lacks."
  },
  "49596c6cbbb185be": {
   "verdict": "ok",
@@ -2443,9 +2569,9 @@
  },
  "52c3668253df7eb6": {
   "verdict": "ok",
-  "by": "review:literal",
-  "at": "2026-10-17",
-  "why": "“each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point” has no phase limit. The unit (pistols, GRENADES) can destroy units in your Shooting phase (shooting, Explosives), in Fire Overwatch (their Movement phase) and in the Fight phase of either turn. It is not MONSTER/VEHICLE, so it can’t use Crushing Impact in the Charge phase. “Each time you make a Blessings of Khorne roll”: at the start of the battle round (indexed under Command, the app’s settled convention for that timing) and through Skulls for the Skull Throne! (Fight phase)."
+  "by": "review:r23-army (its fix)",
+  "at": "2026-10-22",
+  "why": "The text has two triggers. “Each time you make a Blessings of Khorne roll” is at the start of the battle round (Blessings of Khorne: “at the start of the battle round, you can make a Blessings of Khorne roll”) or via Skulls for the Skull Throne! (Fight phase): the new at:“Start of the battle round” (gStep → round: shown in the round’s first Command phase only, not under Command abilities 08.04) plus fight cover it, and that is what the play test (g5 F13) asked for. But “each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point” has no phase limit, and the Lord’s unit (plasma pistols, bolt pistols, GRENADES for Explosives; not TITANIC, so Fire Overwatch at the end of your opponent’s Movement phase) can destroy units in your Shooting phase and their Movement phase too. Dropping those two phases drops where that sentence triggers, against the app’s convention for attack-triggered abilities (Hunter of Souls: movement opp, shooting your, fight either; the fixlist keeps Fire Overwatch “opp movement” tags as deliberate) and against the earlier sign-off of exactly these tags for this text (result-literal 52c3668253df7eb6). Keep the at (it alone fixes the Command placement; in the other phases place() gives “during”) and restore the phases."
  },
  "5350277d096742d2": {
   "verdict": "ok",
@@ -2735,6 +2861,12 @@
   "at": "2026-10-21",
   "why": "\"Your Shooting phase\": shooting is your turn only; Fight is left at either."
  },
+ "5c9bc19e075bbc55": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "Text: “Once per battle round, when a saving throw made for a friendly LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model within 12\" of the bearer is failed, the bearer can use this Enhancement. If they do, change the Damage characteristic of that attack to 0.” needs all Faction: Adeptus Mechanicus + any LEGIO CYBERNETICA/VEHICLE gives the same units here: Cybernetica Datasmith + Kastelan Robots (both models VEHICLE and LEGIO CYBERNETICA: BSData and Wahapedia), both Ironstrider Ballistarii, the Onager Dunecrawler and the Skorpius Disintegrator; not Cawl or Thulia Ghuld (MONSTER), not the Rangers. when “Within 12\" of the Enginseer, once per battle round” and note “after a failed saving throw, the Enginseer can change the Damage characteristic of that attack to 0” are the text, shorter; no calc, rightly (a choice, not numbers). The Enginseer holds it (New Recruit “Necromechanic, Mechanicus pistol, Omnissian axe, Servo arm”) and is a TECH-PRIEST."
+ },
  "5ca80399823b9d4d": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -2842,6 +2974,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "15.10 \"WHEN: Start of your opponent's Shooting phase.\""
+ },
+ "60f1a45be1a6d422": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "The WHEN the digest said was dropped is in: “Fight phase, when an enemy unit targets a friendly ORKS unit (excluding TITANIC units)” = “An enemy unit targets your unit” (TITANIC: the users column). EFFECT “When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one D6, with +1 to that roll if your unit is riled up: On a 4+, do not remove that model … When your unit has fought, or at the end of the phase (whichever comes first), that model is removed” = “a model of it destroyed while your unit has not been selected to fight this phase: D6 (+1 if riled up); on a 4+ it stays until your unit has fought or the phase ends.”"
  },
  "61001e33c59484af": {
   "verdict": "ok",
@@ -3172,6 +3310,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "“WHEN: Your Shooting phase”: your turn."
+ },
+ "6d62361b5f4cf98d": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "WHEN “Your Movement/Charge phase, when a friendly ORKS WALKER unit is selected to move or declares a charge” = “When your unit is selected to move or declares a charge” (the phases and “Your” are the row’s tag). EFFECT “Your unit has MOBILE.” word for word."
  },
  "6d72de2d23529f49": {
   "verdict": "ok",
@@ -3623,6 +3767,12 @@
   "at": "2026-10-21",
   "why": "\"Select the [SUSTAINED HITS 1] or [LETHAL HITS] ability … You can instead select the [SUSTAINED HITS 1], [LETHAL HITS] and [HAZARDOUS] abilities.\" The three picks are exactly those choices ([HAZARDOUS] changes no attack numbers)."
  },
+ "7dc481c947d9e298": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "Against 1ce3d8f only three things changed. (1) Ability items carry who and name, for defLine’s “Meganobz · Arrogant Invulnerability: …” (fixlist 6); the filter is unchanged. (2) With opts.shields (the datasheet only), every guard entry of another unit of the list (src !== u: “what another unit … gives this one”) whose needs the unit meets: Emanatus Forcefield (AdMech BATTLELINE: the Rangers), Shroudpsalm (AdMech), Omnissiah’s Blessing (AdMech VEHICLE) and Necromechanic (AdMech + LEGIO CYBERNETICA/VEHICLE), shown as “when: note (source)”. The Damage tab calls defenceItems without opts, so its own guard path is not doubled. (3) The Waaagh! line is flagged riled for the “always riled up” wording (Super Runts). Feel No Pain, detachment defs (Knights of Legend), stratagem defs by phase and Grot Shields are as before."
+ },
  "7df397384f7d9395": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -3634,6 +3784,12 @@
   "by": "review:r19-fixes",
   "at": "2026-10-21",
   "why": "BSData (World Eaters) links \"Scouts\" (name append 6\") only on the Slaughterbound model entry. The Exalted Eightbound unit links only Deep Strike and Blessings of Khorne. NR says the same: \"Lord of the Eightbound - Slaughterbound: ... this model has the Deep Strike and Scouts 6\" abilities.\" So the label belongs to the Slaughterbound alone."
+ },
+ "7e3f0200d540ee2d": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "WHEN “Your Charge phase, just after a TYRANIDS MONSTER model from your army ends a Charge move” = “Your model has ended a Charge move”; EFFECT “Select one enemy unit within Engagement Range of your model and roll six D6: for each 4+, that enemy unit suffers 1 mortal wound” = the rest."
  },
  "7e7edefe8b57bac7": {
   "verdict": "ok",
@@ -3803,6 +3959,12 @@
   "at": "2026-10-21",
   "why": "NR (standard p3) Categories: \"Exalted Eightbound*, *from combined unit\", and the Slaughterbound is \"Leading: Exalted Eightbound[1]\"."
  },
+ "8389a6c1ff731bfc": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "WHEN “Your Shooting phase, when a friendly NORN ASSIMILATOR unit has shot” = “After your unit has shot”; EFFECT “Select one enemy unit hit by those attacks. That enemy unit is tethered until the start of your next Command phase: While a unit is tethered, that unit has -2\" M” = the rest."
+ },
  "83c2e3919b082822": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -3850,6 +4012,12 @@
   "by": "review:m1-units",
   "at": "2026-10-18",
   "why": "NR (both Beastbosses, l.290 and l.327): \"Beastchoppa, Slugga, Squigosaur’s jaws, Thump Gun\". Profiles: Slugga, Thump Gun, \"Beastchoppa - Hunter\", \"Beastchoppa - Standard\" and \"Squigosaur’s jaws\". An exact match; the enhancement Headwoppa's Killchoppa is not a weapon."
+ },
+ "8453ee134926153a": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "TARGET “One friendly unengaged unit (excluding TITANIC units)” = “Your unengaged unit” (the TITANIC exclusion is the users column, which says “it excludes TITANIC units, and every unit here is TITANIC” where none can); WHEN “End of your opponent’s Movement phase” is the row’s tag “End of their Movement”; EFFECT “Your unit shoots using snap shooting” literal."
  },
  "84bd5ba1ef63a645": {
   "verdict": "ok",
@@ -4078,6 +4246,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "Labels: PRECISION, [PRECISION] (incl. Epic Challenge); all 24.28."
+ },
+ "8b0c201a70a8441b": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "Only the opponent’s side is gone: own (= L.id === cur.army, always true now: screenGame passes a = army()) and gLink, which was linkTo for the list on screen. Rows open their texts, stratagems show their gist and, only when none can use one, its users line; ticks use the Overview’s keys (s:id, r:name, r:name:option for “each of these … once per battle”, none for a per-unit rule, copyKey per unit copy); picked / not picked and the current pick are unchanged."
  },
  "8b140a87298b587d": {
   "verdict": "ok",
@@ -4535,6 +4709,12 @@
   "at": "2026-10-16",
   "why": "TARGET: \"One IMPERIAL KNIGHTS unit from your army that was just destroyed\": all units, and all have Deadly Demise D6."
  },
+ "999969c74ebb832f": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "WHEN “Fight phase, when an enemy unit targets a friendly MEGANOBZ/NOBZ unit” = “An enemy unit targets your unit”; EFFECT as Orks Is Never Beaten’s: “if your unit has not been selected to fight this phase, roll one D6, with +1 to that roll if your unit is riled up: On a 4+, do not remove that model … When your unit has fought, or at the end of the phase (whichever comes first), that model is removed” = the rest."
+ },
  "99bd30b87238c9ed": {
   "verdict": "ok",
   "by": "review:r11-purge-units",
@@ -4943,6 +5123,12 @@
   "at": "2026-10-16",
   "why": "Matches the NR models and options, with Nazdreg's weapons on Nazdreg, Kombi-weapon ×5 and Killsaw ×3 / Power Klaw ×2 on the Meganobz."
  },
+ "a5a3d6120cbb558f": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "The antecedent the digest said was missing is in: TARGET “One WORLD EATERS unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase” = “Your unit just destroyed within range of objective markers you controlled at the end of the previous phase”, so “one of those objective markers” now has its antecedent. EFFECT “Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase” = the rest, literal. “Any phase” is the row’s tag."
+ },
  "a60588c563fe9ec9": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -5303,6 +5489,12 @@
   "at": "2026-10-16",
   "why": "\"Until the end of the phase, each time an attack targets your unit, if the Strength ... is greater than the Toughness ... subtract 1 from the Wound roll.\" Phase, condition and effect are all there, and the line is prefixed \"1CP Survivor of Strife\"."
  },
+ "b14a406f06957ff8": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "Wahapedia’s Rubric Marines: “KEYWORDS – ALL MODELS: INFANTRY; BATTLELINE; CHAOS; TZEENTCH; RUBRICAE; RUBRIC MARINES … ASPIRING SORCERER ONLY: PSYKER”; the Sorcerer: “KEYWORDS: INFANTRY; CHARACTER; PSYKER; GRENADES; CHAOS; TZEENTCH; SORCERER”. BSData puts Psyker on the Aspiring Sorcerer model only. So PSYKER is the Sorcerer’s and the Aspiring Sorcerer’s, not the Rubric Marines’: right, and it matters for Destined by Fate (“That PSYKER model”). The Sorcerer’s own CHARACTER/GRENADES/SORCERER follow the attached-unit convention (the kwNote names the bodyguard’s). BSData’s “Rubric” category (only on the inferno boltgun and soulreaper cannon models) is no Wahapedia keyword, so not listing it apart is fine."
+ },
  "b16262a12c3d36aa": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -5483,6 +5675,12 @@
   "at": "2026-10-16",
   "why": "\"surge move\", \"surge target\"; Surge Move 21.02."
  },
+ "b95a561fd8de124d": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "Changes against 1ce3d8f: the peeking branch is gone (always “Your list”); an enhancement holder by its full name when another unit has the same short name (shooty: “Big Mek Dakkarig (1 of 2)”, “(2 of 2)”, “Big Mek in Mega Armour”; princes’ two Daemon Princes share the full name, so they keep “Daemon Prince (1 of 2)/(2 of 2)” from unitNo); the detachment rules in the army rules block as on the Rules tab (ruleRow, timing tag, note, textWithTable, “Applies to” its needs; the detachment’s name where the Rules tab says “Detachment rule”, there being no detachment heading here), headed “Army and detachment rules” (fixlist 16); “Start of the battle and the battle rounds” for the section holding Code Chivalric’s start-of-battle Deed (fixlist 19). Warlord, attached units, Deep Strike/Scouts/Infiltrators through everyModel with partialRules (24.09, 24.31), transports and uses per battle are unchanged."
+ },
  "b99a532d9c0380a6": {
   "verdict": "ok",
   "by": "review:gists",
@@ -5531,6 +5729,12 @@
   "at": "2026-10-17",
   "why": "“Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.” Same."
  },
+ "ba887dc64dca2f10": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "WHEN “Fight phase, just after an enemy unit has selected its targets” and TARGET “One TYRANIDS MONSTER unit from your army that was selected as the target of one or more of the attacking unit’s attacks” = “An enemy unit has selected your unit as a target”. EFFECT “That enemy unit must take a Battle-shock test and, until the end of the phase, each time a model in that enemy unit makes an attack that targets your unit, subtract 1 from the Hit roll. If that Battle-shock test was failed, subtract 1 from the Wound roll as well” = the rest."
+ },
  "ba96e74d92ccbc89": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -5566,6 +5770,12 @@
   "by": "review:oioioi (its fix)",
   "at": "2026-10-16",
   "why": "Condition drops the phase limit: \"Once per battle, in your Shooting phase or the Fight phase\" - e.g. not during a Fire Overwatch in their Movement phase."
+ },
+ "bb84dd7e060f8f59": {
+  "verdict": "ok",
+  "by": "review:r23-army (its fix)",
+  "at": "2026-10-22",
+  "why": "The added TARGET conditions are right: “One friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn” = “Your unengaged unit, eligible to shoot and with no advance move this turn”. But step 2 of the EFFECT is “Select one unengaged enemy unit within 8\" of and visible to that model”; the gist’s “at an enemy unit within 8\"” drops “unengaged” and “visible to”, the two conditions that decide which enemy unit it can be used on. With them in, nothing of the text is left out, so the trailing “…” goes."
  },
  "bbc956efd0611697": {
   "verdict": "ok",
@@ -5704,6 +5914,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "\"this PSYKER model\" = the Sorcerer in Terminator Armour."
+ },
+ "bf7d4ba433a820cb": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "The ability starts “While this model is leading a unit”. In standard the Lord on Juggernaut leads nothing: New Recruit lists him alone (“Lord on Juggernaut Character 95”, no “Leading:” line), data.js has no leads, and his unit is only “1× Lord on Juggernaut”. So the ability does nothing in this list; it stays on the datasheet with the mark (the owner’s “marked rather than hidden”, fixlist 19 “Rage Eternal / Aggressive Advance on a lone character marked”)."
  },
  "bf9ef6e10673785e": {
   "verdict": "ok",
@@ -6035,6 +6251,12 @@
   "at": "2026-10-21",
   "why": "NR prints \"Crude Surgery - Painboy\"."
  },
+ "cc5f1dc057f718e8": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "“At the start of your Command phase”: your turn."
+ },
  "cc76946b279a491f": {
   "verdict": "ok",
   "by": "review:r15-v2",
@@ -6046,6 +6268,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "\"Below half-strength: model's remaining wounds are less than half of its W\": ceil(W/2)-1 is the largest whole number below W/2 for even and odd W (W10→4, W16→7, W9→4)."
+ },
+ "cc81a703fb80095c": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "The condition WHEN sets is in: “a friendly ORKS VEHICLE unit (excluding WALKER units) that made a charge move this turn is selected to fight” = “Your unit made a charge move this turn”. “Is selected to fight” is the moment every “when … is selected to fight” gist leaves to the Fight tag (Hit ’Em Harder, Focused Ferocity, Lesser Prey, all signed off), and the WALKER exclusion is the users column. EFFECT “Your unit’s melee attacks have [CLEAVE 1]. Or: If that attack already has [CLEAVE], +1 to the value of that [CLEAVE]” = “its melee attacks have [CLEAVE 1], or +1 to the value of a [CLEAVE] they already have”."
  },
  "cc9862c915f856ee": {
   "verdict": "ok",
@@ -6119,6 +6347,12 @@
   "at": "2026-10-16",
   "why": "Onslaught gives \"[ASSAULT] and [LETHAL HITS]\" to ranged weapons with no turn limit. Every unit here with a ranged weapon is non-TITANIC, so it can Fire Overwatch (\"End of your opponent’s Movement phase\"). Snap shooting \"only hits on an unmodified hit roll of 6\", so every hit is critical and LETHAL HITS auto-wounds. Add the opponent’s Movement phase; shooting stays your turn."
  },
+ "ce8ee4756856cdf0": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "The only change is gLink(L, …) → linkTo(…), the same output for the list on screen (gLink returned linkTo when L.id === cur.army). The quoted sentence (G_CP on lines not starting with *, so no FAQ/errata lines), army rules not inert, detachment rules, usable unit abilities grouped once with their units: unchanged."
+ },
  "cf3efc5a4a626bc8": {
   "verdict": "ok",
   "by": "review:r20-damage",
@@ -6166,6 +6400,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "New Recruit prints “Finderz Keeperz - Flash Gitz”; model lines as NR."
+ },
+ "d0bd4bfb7890327c": {
+  "verdict": "ok",
+  "by": "review:r23-army (its fix)",
+  "at": "2026-10-22",
+  "why": "WHEN “when an enemy unit targets a friendly ORKS INFANTRY unit (excluding GRETCHIN units)”. The gist names the unit it protects by its keywords (“targets an ORKS INFANTRY unit”) but drops the exclusion, and that unit is not the one using it, so the users column does not carry it. In ooga-booga, Zodgrod Wortsnagga + Gretchin and Gretchin are ORKS INFANTRY (keywords “Faction: Orks, Infantry, … Gretchin”), so the gist reads as if one Gretchin unit could shield the other. The stratagem’s own shield data already has protects none:[Gretchin]. The rest is literal: TARGET “One friendly GRETCHIN unit within 3\" of that ORKS INFANTRY unit”; EFFECT “When a hit roll for that enemy unit’s ranged attacks that target that ORKS unit results in a hit, if a model in your GRETCHIN unit is on the battlefield, end the attack sequence for that attack and your GRETCHIN unit suffers 1 mortal wound.”"
  },
  "d0ff3d4da31577c7": {
   "verdict": "ok",
@@ -6226,6 +6466,12 @@
   "by": "review:r11-purge-units",
   "at": "2026-10-21",
   "why": "“In your Command phase, select one of the abilities in the Icon of War section.”"
+ },
+ "d2aa14be6ce4a778": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "Wahapedia’s Rubric Marines: “ARMY RULES Cabal of Sorcerers (Aspiring Sorcerer only)”; the Sorcerer’s own datasheet: “ARMY RULES Cabal of Sorcerers”. In this attached unit (1 Sorcerer, 1 Aspiring Sorcerer, 4 Rubric Marines) exactly those two models have it, which is what the datasheet’s “Cabal of Sorcerers (Sorcerer and Aspiring Sorcerer)” says. It is no every-model rule, so the Overview’s Deep Strike/Scouts counts are unaffected."
  },
  "d2c1573c6630c1c1": {
   "verdict": "ok",
@@ -6443,6 +6689,12 @@
   "at": "2026-10-21",
   "why": "WHEN: “Your Command phase.”: your turn."
  },
+ "da8ad22e88c5b068": {
+  "verdict": "ok",
+  "by": "review:r23-army (its fix)",
+  "at": "2026-10-22",
+  "why": "WHEN “Your Shooting phase, just after you take a Psychic test for a THOUSAND SONS model from your army that Channelled the Warp (before resolving that Ritual)”. The gist now states the moment but drops its own limit “(before resolving that Ritual)”: the re-roll must be made before the Ritual is resolved, not after its effect is seen. Four words keep it. EFFECT “Re-roll all of the D6 rolled for that Psychic test (including the additional D6 for Channelling the Warp)” is literal."
+ },
  "dafad866f921cb9f": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -6460,6 +6712,12 @@
   "by": "review:r12-calc-marks",
   "at": "2026-10-21",
   "why": "\"While a CYBERNETICA DATASMITH model is leading this unit, that model has the Feel No Pain 4+ ability.\" The Datasmith leads (as Support) the Kastelan Robots in this list, so it always holds; defCalc {fnp:4, model:'Cybernetica Datasmith'} gives it to that model only, as the words say."
+ },
+ "db60e53006a7d878": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "WHEN “Fight phase, when an enemy unit targets a friendly ORKS WALKER unit (excluding TITANIC units)” = “An enemy unit targets your unit” (Fight is the row’s timing tag; the TITANIC exclusion is the users column, as for every gist whose TARGET is the unit using it). EFFECT “When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one D6” = “a model of it destroyed while your unit has not been selected to fight this phase: roll one D6”; “On a 4+, do not remove that model … When your unit has fought, or at the end of the phase (whichever comes first), that model is removed” = “on a 4+ it stays until your unit has fought or the phase ends”. The “+3 … if your unit has ~~DEFF DREAD~~” is struck out on Wahapedia (its tooltip: “Keyword does not appear in that faction.”) and is not summarised as if it applied; the “…” only says the text has more."
  },
  "db70644d5fe0d9ec": {
   "verdict": "ok",
@@ -6658,6 +6916,12 @@
   "by": "review:r10-ooga (its fix)",
   "at": "2026-10-21",
   "why": "EFFECT: \"When a hit roll … results in a hit, if a model in your GRETCHIN unit is on the battlefield, end the attack sequence for that attack and your GRETCHIN unit suffers 1 mortal wound.\" The condition covers both results. The gist puts \"(if it has a model on the battlefield)\" after the mortal wound only, so it reads as if hits are still stopped once the Gretchin are gone. Should be: \"If a model in your GRETCHIN unit is on the battlefield, each hit roll of that enemy unit’s ranged attacks on that ORKS unit that results in a hit ends that attack, and your GRETCHIN unit suffers 1 mortal wound.\""
+ },
+ "e05f61d58922fd8a": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "TARGET “One IMPERIAL KNIGHTS unit from your army that was just destroyed” = “Your unit just destroyed”; EFFECT “Your unit’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 4+, adding 1 to the result if it is an ARMIGER unit, instead of only a 6” = the rest. “Any phase” is the row’s tag."
  },
  "e0869998b53fc89e": {
   "verdict": "ok",
@@ -6899,6 +7163,12 @@
   "at": "2026-10-16",
   "why": "Used by the app's own use-line verb; \"select/choosing weapon(s)\" can only mean 04.01."
  },
+ "e8237bc497607d17": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "side is “mine” (gSide gave “mine” for the list open; there is no other side now) and the target: group (the opponent’s unit) is gone: no control writes it any more, and a target: key left in older state is never read (gChoiceHtml reads only v[group], rolled: and state). One option per tap (again: none), up to c.max with the oldest dropped, Rolled and the state toggled, and the once-per-battle ticks (r:name:row#0) set on pick and cleared on unpick unless another round picked it: unchanged."
+ },
  "e83b22d75c62a36d": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -7072,6 +7342,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "NR labels it \"Transport Capacity\"."
+ },
+ "ed4a37246699c0cb": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "Wahapedia’s Tyrannofex: “KEYWORDS: MONSTER; GREAT DEVOURER; FRAME; TYRANNOFEX”, from its Errata line “Hierophant, Toxicrene, Tyrannocyte and Tyrannofex. Add the FRAME keyword.” GW’s Tyranids Faction Pack (“VERSION 1.3, Legal for matched play from 14th October 2026”, the 14-10 file) has a Tyrannofex rules update (“Rupture Cannon … D6+6”) but no FRAME change, and BSData’s Tyrannofex model has “Monster, Great Devourer, Faction: Tyranids, Tyrannofex”. The note says exactly that, and the unit keeps the keywords New Recruit prints (no FRAME). A sources-disagree mark, not a reading."
  },
  "edc9c7db81dd2899": {
   "verdict": "ok",
@@ -7301,6 +7577,12 @@
   "at": "2026-10-17",
   "why": "“While a model is affected by this ability, … ranged weapons equipped by that model have the [ASSAULT] ability” (kind ranged). Bondsman: “select one friendly ARMIGER model within 12\" of that model”, so the filter is the ARMIGER keyword copied from that text. The ‘not itself’ exclusion (notSelf) is gone. The (Bondsman) label is printed in the ability name (settled)."
  },
+ "f7015b406bb00eed": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "Wahapedia’s Scarab Occult Terminators: “KEYWORDS – ALL MODELS: INFANTRY; TERMINATOR; CHAOS; TZEENTCH; RUBRICAE; SCARAB OCCULT … SCARAB OCCULT SORCERER ONLY: PSYKER”; the Sorcerer in Terminator Armour: “KEYWORDS: INFANTRY; CHARACTER; PSYKER; TERMINATOR; CHAOS; TZEENTCH; SORCERER”. BSData: Psyker on the Scarab Occult Sorcerer model only. So PSYKER is those two models’ only, as the judgement says; it is what Rites of Coalescence (“While this unit contains one or more PSYKER models”) turns on."
+ },
  "f72be3bef6871c99": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
@@ -7463,6 +7745,12 @@
   "at": "2026-10-17",
   "why": "Read against what it implements: \"a value or keyword that a rule of the list already changed … the rule’s text, and that the value shown includes it\". The new layout keeps the same pieces and only reorders them:\n- Label: \"<value> · granted by\" (e.g. \"A 10 · granted by\", \"RAPID FIRE 1 · granted by\").\n- Title: the granting names from w.from/s.from, joined with \" + \" (e.g. \"Berzerker Glaive + Relentless Rage\").\n- Per source, from grantSource: its stored who/tag line or rule source, its stored text and table. The name is repeated as a heading only when there are several sources.\n- The unchanged note: \"Already in the value/keywords shown (as New Recruit and BSData list it/them)\". This is still backed by bsdata.json (grants compared both ways) and nr.json (values and keywords compared cell by cell) with 0 failures.\n- The keyword’s own rule (ruleFor), last.\nNo condition, scope or conclusion is added, and nothing is left out. The marks the popup names are the ones I spot-checked in the previous review, all granted by their named rule’s text. The rest is display only."
  },
+ "fbeb7c8639b3e07a": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "lists is [[a, “This list”]] only; gLink → linkTo and the inArmy around gUnitName dropped (a is the list open); step 10’s chips name this list and “Opponent”. Step 7 still quotes the 20.01 line (“50% of your points limit”) and works out the half as an app note (gNote), with the Deep Strike units counted by gEvery; step 8 TITANIC units with the TITANIC sentence set apart, and Infiltrators; step 11 Scouts. Nothing else changed."
+ },
  "fc0d74e71dfbe33b": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -7498,6 +7786,12 @@
   "by": "review:r14-cond",
   "at": "2026-10-21",
   "why": "\"In your Shooting phase, when a friendly BREAKA BOYZ/FLASH GITZ/TANKBUSTAS unit is selected to shoot, if any of the following apply … That unit is within range of an objective. The target of that attack is within range of an objective\": as with Finderz Keeperz, the situation is \"this unit or the target on an objective\". The other needs are \"your Shooting phase\" (in the when; overwatch is excluded by the code) and the unit keywords (needs)."
+ },
+ "fcbd10f0da0aab8e": {
+  "verdict": "ok",
+  "by": "review:r23-army",
+  "at": "2026-10-22",
+  "why": "keys = [gameKey(a) = “wh-game-” + a.id, “wh-used-” + a.id]; data-gnew calls newGame(army()) and usedKey() is “wh-used-” + cur.army, so the second key is the Overview’s tick storage for this list. Both are cleared (null / []) and the returned undo restores both; the toast says “New game: round, CP, VP, choices and uses per battle cleared”. The Overview’s data-newgame still clears usedKey() only (“New game: uses per battle cleared”). The only change is the opponent’s keys (gameOwner, oppOf) removed; an opponent stored by older state is never read here."
  },
  "fcc098e5fb2c4ac7": {
   "verdict": "ok",

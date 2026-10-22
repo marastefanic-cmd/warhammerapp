@@ -4718,15 +4718,13 @@ function screenUnit(){
 }
 // every stratagem the unit can use: one line per detachment, then core, each in phase order;
 // a detachment with none for this unit is named, not left out
-// a stratagem for weapons with a keyword (weaponKw: Point-Blank Barrage's "ranged attacks with Blast weapons") on a unit with none: marked
-const noWeapon = (u, st) => !!st.weaponKw && ![...(u.ranged || []), ...(u.melee || [])].some(w => w.kw.some(k => k.toUpperCase().startsWith(st.weaponKw)));
 function stratLines(u, strats){
   const first = x => { const ph = phasesOf(x); return ph.length === PHASES.length ? 99 : PHASES.findIndex(([k]) => k === ph[0]); };
   const ord = list => list.map((x, i) => [x, i]).sort((a, b) => first(a[0]) - first(b[0]) || a[1] - b[1]).map(x => x[0]);
   const groups = detachments().map(d => [d.name, strats.filter(st => st.src === d.name)]).concat([['Core', strats.filter(st => st.src === 'Core')]]);
   const none = groups.filter(([n, l]) => !l.length && n !== 'Core').map(([n]) => n);
   return '<div class="dkv sl" id="sec-strats"><span class="dk">Stratagems</span><span class="dv">' + groups.filter(([, l]) => l.length).map(([n, l]) =>
-    '<p><b class="sln">' + esc(n) + '</b> ' + ord(l).map(st => linkTo('strat', st.id, st.name) + (noWeapon(u, st) ? ' <span class="from">(no ' + esc(st.weaponKw) + ' weapon)</span>' : '')).join(', ') + '</p>').join('') +
+    '<p><b class="sln">' + esc(n) + '</b> ' + ord(l).map(st => linkTo('strat', st.id, st.name)).join(', ') + '</p>').join('') +
     (none.length ? '<p class="from">None from ' + esc(orList(none)) + '.</p>' : '') + '</span></div>';
 }
 

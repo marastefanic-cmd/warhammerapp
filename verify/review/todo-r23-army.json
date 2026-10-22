@@ -1,0 +1,847 @@
+[
+ {
+  "army": "shooty",
+  "kind": "strat-gist",
+  "where": "Dread Mob · Crazed Rampage",
+  "judgement": {
+   "gist": "An enemy unit targets your unit: a model of it destroyed while your unit has not been selected to fight this phase: roll one D6; on a 4+ it stays until your unit has fought or the phase ends…"
+  },
+  "source": {
+   "stratagem": "Crazed Rampage",
+   "text": "WHEN: Fight phase, when an enemy unit targets a friendly **ORKS WALKER** unit (excluding **TITANIC** units).\nTARGET: That **ORKS WALKER** unit.\nEFFECT: When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +3 to the result if your unit has ~~**DEFF DREAD**~~:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
+  },
+  "key": "db60e53006a7d878"
+ },
+ {
+  "army": "shooty",
+  "kind": "strat-gist",
+  "where": "Dread Mob · Stomping Juggernaut",
+  "judgement": {
+   "gist": "When your unit is selected to move or declares a charge: it has MOBILE."
+  },
+  "source": {
+   "stratagem": "Stomping Juggernaut",
+   "text": "WHEN: Your Movement/Charge phase, when a friendly **ORKS WALKER** unit is **selected to move** or **declares a charge**.\nTARGET: That **ORKS WALKER** unit.\nEFFECT: Your unit has **MOBILE**."
+  },
+  "key": "6d62361b5f4cf98d"
+ },
+ {
+  "army": "shooty",
+  "kind": "strat-gist",
+  "where": "Wreckas · Grab It",
+  "judgement": {
+   "gist": "After shooting, if unengaged: can make a normal move of up to 6\", ending within range of an objective; not eligible to declare a charge this turn."
+  },
+  "source": {
+   "stratagem": "Grab It",
+   "text": "WHEN: Your Shooting phase, when a friendly **unengaged BREAKA BOYZ**/**FLASH GITZ**/**TANKBUSTAS** unit has shot.\nTARGET: That **BREAKA BOYZ**/**FLASH GITZ**/**TANKBUSTAS** unit.\nEFFECT: - Your unit can make a **normal move** of up to 6\", and must end that move within range of an **objective**.\n- Your unit is not **eligible to declare a charge** until the end of the turn."
+  },
+  "key": "051c02d6904c2331"
+ },
+ {
+  "army": "melee",
+  "kind": "strat-gist",
+  "where": "War Horde · Orks Is Never Beaten",
+  "judgement": {
+   "gist": "An enemy unit targets your unit: a model of it destroyed while your unit has not been selected to fight this phase: D6 (+1 if riled up); on a 4+ it stays until your unit has fought or the phase ends."
+  },
+  "source": {
+   "stratagem": "Orks Is Never Beaten",
+   "text": "WHEN: Fight phase, when an enemy unit targets a friendly **ORKS** unit (excluding **TITANIC** units).\nTARGET: That **ORKS** unit.\nEFFECT: When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +1 to that roll if your unit is **riled up**:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
+  },
+  "key": "60f1a45be1a6d422"
+ },
+ {
+  "army": "melee",
+  "kind": "strat-gist",
+  "where": "War Horde · Mow ’Em Down",
+  "judgement": {
+   "gist": "Your unit made a charge move this turn: its melee attacks have [CLEAVE 1], or +1 to the value of a [CLEAVE] they already have."
+  },
+  "source": {
+   "stratagem": "Mow ’Em Down",
+   "text": "WHEN: Fight phase, when a friendly **ORKS VEHICLE** unit (excluding **WALKER** units) that made a **charge move** this turn is **selected to fight**.\nTARGET: That **ORKS VEHICLE** unit.\nEFFECT: Your unit’s melee attacks have:\n- **[CLEAVE 1]**.\n- Or: If that attack already has **[CLEAVE]**, +1 to the value of that **[CLEAVE]** (e.g. **[CLEAVE 1]** becomes **[CLEAVE 2]**)."
+  },
+  "key": "cc81a703fb80095c"
+ },
+ {
+  "army": "princes",
+  "kind": "ability-timing",
+  "where": "princes · Lord on Juggernaut · Icon of Khorne",
+  "judgement": {
+   "ph": [
+    "command",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "source": {
+   "ability": "Icon of Khorne",
+   "text": "If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost."
+  },
+  "key": "38349f8ca8f88164"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "strat-gist",
+  "where": "Berzerker Warband · Blood Offering",
+  "judgement": {
+   "gist": "Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase."
+  },
+  "source": {
+   "stratagem": "Blood Offering",
+   "text": "WHEN: Any phase.\nTARGET: One **WORLD EATERS** unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.\nEFFECT: Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
+  },
+  "key": "a5a3d6120cbb558f"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "strat-gist",
+  "where": "Berzerker Warband · Hack and Slash",
+  "judgement": {
+   "gist": "Your unit made a charge move this turn and has not been selected to fight this phase: until the end of the phase, its melee weapons have +1 AP."
+  },
+  "source": {
+   "stratagem": "Hack and Slash",
+   "text": "WHEN: Fight phase.\nTARGET: One **WORLD EATERS** unit from your army that has not been selected to fight this phase and that made a **charge move** this turn.\nEFFECT: Until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1."
+  },
+  "key": "06496ce06a52c4a3"
+ },
+ {
+  "army": "super-terminators",
+  "kind": "strat-gist",
+  "where": "Berzerker Warband · Skulls for the Skull Throne!",
+  "judgement": {
+   "gist": "Just after your unit destroys a CHARACTER or MONSTER model: make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others."
+  },
+  "source": {
+   "stratagem": "Skulls for the Skull Throne!",
+   "text": "WHEN: Fight phase, just after a **WORLD EATERS** unit from your army destroys a **CHARACTER** or **MONSTER** model.\nTARGET: That **WORLD EATERS** unit.\nEFFECT: Make a **Blessings of Khorne roll** and use the results to activate one Blessing of Khorne. Until the end of the battle round, that Blessing of Khorne is active in addition to any other Blessings of Khorne that are currently active."
+  },
+  "key": "2a4120da97843063"
+ },
+ {
+  "army": "standard",
+  "kind": "strat-gist",
+  "where": "Vessels of Wrath · Punish the Craven",
+  "judgement": {
+   "gist": "An enemy unit engaged with your unit is selected to fall back: it must use desperate escape (-1 to those hazard rolls if it is battle-shocked)."
+  },
+  "source": {
+   "stratagem": "Punish the Craven",
+   "text": "WHEN: Your opponent’s Movement phase, when a unit is selected to make a **fall-back move**, if that unit is **engaged** with a friendly **WORLD EATERS CHARACTER** unit.\nTARGET: That **WORLD EATERS CHARACTER** unit.\nEFFECT: When an enemy unit **engaged** with your unit is selected to make a **fall-back move**, that enemy unit must use the **desperate escape** mode. If that enemy unit is **battle-shocked**, -1 from those **hazard rolls**."
+  },
+  "key": "3a872c33101fb622"
+ },
+ {
+  "army": "standard",
+  "kind": "ability-na",
+  "where": "standard · Lord on Juggernaut · Aggressive Advance",
+  "judgement": {
+   "na": "Not leading a unit in this list",
+   "armyUnits": [
+    "Angron [Angron, Chaos, Character, Daemon, Epic Hero, Faction: World Eaters, Fly, Khorne, Monster, Primarch, Warlord]",
+    "Khârn the Betrayer [Chaos, Character, Epic Hero, Faction: World Eaters, Grenades, Infantry, Khorne, Khârn the Betrayer, Battleline, Berzerkers]",
+    "Lord on Juggernaut [Chaos, Character, Faction: World Eaters, Khorne, Lord on Juggernaut, Mounted]",
+    "Slaughterbound [Chaos, Character, Daemon, Faction: World Eaters, Infantry, Khorne, Possessed, Slaughterbound]",
+    "Slaughterbound [Chaos, Character, Daemon, Faction: World Eaters, Infantry, Khorne, Possessed, Slaughterbound, Exalted Eightbound]",
+    "Chaos Rhino [Chaos, Dedicated Transport, Faction: World Eaters, Frame, Khorne, Rhino, Smoke, Transport, Vehicle]",
+    "Eightbound [Chaos, Daemon, Eightbound, Faction: World Eaters, Infantry, Khorne, Possessed]",
+    "Exalted Eightbound [Chaos, Daemon, Exalted Eightbound, Faction: World Eaters, Infantry, Khorne, Possessed]",
+    "Goremongers [Chaos, Faction: World Eaters, Goremongers, Grenades, Infantry, Khorne]",
+    "Jakhals [Chaos, Faction: World Eaters, Grenades, Infantry, Jakhals, Khorne]",
+    "Forgefiend [Chaos, Daemon, Faction: World Eaters, Forgefiend, Khorne, Vehicle, Walker]"
+   ]
+  },
+  "source": {
+   "ability": "Aggressive Advance",
+   "text": "While this model is leading a unit, models in that unit have a Move characteristic of 10\" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features."
+  },
+  "key": "bf7d4ba433a820cb"
+ },
+ {
+  "army": "standard",
+  "kind": "ability-na",
+  "where": "standard · Slaughterbound · Rage Eternal",
+  "judgement": {
+   "na": "Not leading a unit in this list",
+   "armyUnits": [
+    "Angron [Angron, Chaos, Character, Daemon, Epic Hero, Faction: World Eaters, Fly, Khorne, Monster, Primarch, Warlord]",
+    "Khârn the Betrayer [Chaos, Character, Epic Hero, Faction: World Eaters, Grenades, Infantry, Khorne, Khârn the Betrayer, Battleline, Berzerkers]",
+    "Lord on Juggernaut [Chaos, Character, Faction: World Eaters, Khorne, Lord on Juggernaut, Mounted]",
+    "Slaughterbound [Chaos, Character, Daemon, Faction: World Eaters, Infantry, Khorne, Possessed, Slaughterbound]",
+    "Slaughterbound [Chaos, Character, Daemon, Faction: World Eaters, Infantry, Khorne, Possessed, Slaughterbound, Exalted Eightbound]",
+    "Chaos Rhino [Chaos, Dedicated Transport, Faction: World Eaters, Frame, Khorne, Rhino, Smoke, Transport, Vehicle]",
+    "Eightbound [Chaos, Daemon, Eightbound, Faction: World Eaters, Infantry, Khorne, Possessed]",
+    "Exalted Eightbound [Chaos, Daemon, Exalted Eightbound, Faction: World Eaters, Infantry, Khorne, Possessed]",
+    "Goremongers [Chaos, Faction: World Eaters, Goremongers, Grenades, Infantry, Khorne]",
+    "Jakhals [Chaos, Faction: World Eaters, Grenades, Infantry, Jakhals, Khorne]",
+    "Forgefiend [Chaos, Daemon, Faction: World Eaters, Forgefiend, Khorne, Vehicle, Walker]"
+   ]
+  },
+  "source": {
+   "ability": "Rage Eternal",
+   "text": "While this model is leading a unit, in your Command phase, you can return one destroyed Bodyguard model to that unit."
+  },
+  "key": "391330d40614737a"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "unit-partialRules",
+  "where": "pubstomper · Sorcerer",
+  "judgement": {
+   "partialRules": {
+    "Cabal of Sorcerers": "Sorcerer and Aspiring Sorcerer"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Sorcerer",
+    "1× Aspiring Sorcerer",
+    "1× Rubric Marine w/ soulreaper cannon",
+    "3× Rubric Marine w/ warpflamer"
+   ],
+   "rules": [
+    "Leader",
+    "Cabal of Sorcerers",
+    "Psychic",
+    "Pistol",
+    "Sustained Hits",
+    "Anti",
+    "Devastating Wounds",
+    "Torrent",
+    "Ignores Cover"
+   ],
+   "abilities": [
+    "Sorcerer · Twisted Sorceries: Once per battle, in your Shooting phase or the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristic of Psychic weapons equipped by this model by 3.",
+    "Sorcerer · Empyric Guidance: While this model is leading a unit, weapons equipped by models in that unit have the **[LETHAL HITS]** ability.",
+    "Rubric Marines · Bringers of Change: Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead.",
+    "Rubric Marines · Icon of Flame: Ranged weapons equipped by models in the bearer’s unit (excluding **CHARACTERS**) have the **[IGNORES COVER]** ability."
+   ]
+  },
+  "key": "d2aa14be6ce4a778"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "unit-kwOnly",
+  "where": "pubstomper · Sorcerer",
+  "judgement": {
+   "kwOnly": {
+    "Psyker": "Sorcerer and Aspiring Sorcerer"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Sorcerer",
+    "1× Aspiring Sorcerer",
+    "1× Rubric Marine w/ soulreaper cannon",
+    "3× Rubric Marine w/ warpflamer"
+   ],
+   "kw": [
+    "Chaos",
+    "Character",
+    "Faction: Thousand Sons",
+    "Grenades",
+    "Infantry",
+    "Psyker",
+    "Sorcerer",
+    "Tzeentch",
+    "Battleline",
+    "Rubric",
+    "Rubric Marines",
+    "Rubricae"
+   ],
+   "kwNote": "Battleline, Rubric, Rubric Marines, Rubricae come from the led Rubric Marines."
+  },
+  "key": "b14a406f06957ff8"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "unit-partialRules",
+  "where": "pubstomper · Sorcerer in Terminator Armour",
+  "judgement": {
+   "partialRules": {
+    "Cabal of Sorcerers": "Sorcerer in Terminator Armour and Scarab Occult Sorcerer"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Sorcerer in Terminator Armour",
+    "1× Scarab Occult Sorcerer",
+    "7× Scarab Occult Terminator",
+    "2× Scarab Occult Terminator w/ soulreaper cannon"
+   ],
+   "rules": [
+    "Leader",
+    "Deep Strike",
+    "Cabal of Sorcerers",
+    "Psychic",
+    "Anti",
+    "Devastating Wounds",
+    "Rapid Fire"
+   ],
+   "abilities": [
+    "Sorcerer in Terminator Armour · Marked by Fate: At the start of your Shooting phase, select one enemy unit that is **visible** to this **PSYKER** model. Until the end of the phase, each time a model in this unit makes an attack that targets that enemy unit, add 1 to the **Hit roll**.",
+    "Sorcerer in Terminator Armour · Empyric Guidance: While this model is leading a unit, weapons equipped by models in that unit have the **[LETHAL HITS]** ability.",
+    "Sorcerer in Terminator Armour · Umbralefic Crystal: **THOUSAND SONS** model only. (Once per battle, per army) In your Command phase, if this unit is **unengaged**, you can use this ability. If you do:\n- Place this unit in **strategic reserves**.\n- This unit has **Deep Strike** until the start of your next Shooting phase.\n- This unit must make an **ingress move** in your next Movement phase (including in your first turn).",
+    "Scarab Occult Terminators · Rites of Coalescence: While this unit contains one or more **PSYKER** models, each time an attack targets this unit, subtract 1 from the **Wound roll**."
+   ]
+  },
+  "key": "227c0ccd160c3f9d"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "unit-kwOnly",
+  "where": "pubstomper · Sorcerer in Terminator Armour",
+  "judgement": {
+   "kwOnly": {
+    "Psyker": "Sorcerer in Terminator Armour and Scarab Occult Sorcerer"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Sorcerer in Terminator Armour",
+    "1× Scarab Occult Sorcerer",
+    "7× Scarab Occult Terminator",
+    "2× Scarab Occult Terminator w/ soulreaper cannon"
+   ],
+   "kw": [
+    "Chaos",
+    "Character",
+    "Faction: Thousand Sons",
+    "Infantry",
+    "Psyker",
+    "Sorcerer",
+    "Terminator",
+    "Tzeentch",
+    "Rubricae",
+    "Scarab Occult"
+   ],
+   "kwNote": "Rubricae, Scarab Occult come from the led Scarab Occult Terminators."
+  },
+  "key": "f7015b406bb00eed"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "rule-needs",
+  "where": "Grand Coven rule · Kindred Sorcery",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Thousand Sons",
+     "Psyker"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Kindred Sorcery",
+   "text": "In your Command phase, you can select one of the abilities listed below to take effect until the start of your next Command phase. You can only select each of these abilities once per battle.\nImbued Manifestation: Add 6\" to the Range characteristic of ranged Psychic weapons equipped by **THOUSAND SONS** models from your army.\nPsychic Maelstrom: Each time a **THOUSAND SONS** model from your army makes an attack with a Psychic weapon, add 1 to the **Wound roll**.\nWrath of the Immaterium: Psychic weapons equipped by **THOUSAND SONS** models from your army have the **[DEVASTATING WOUNDS]** ability."
+  },
+  "key": "43d49aaae9bde5d6"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "strat-gist",
+  "where": "Grand Coven · Destined by Fate",
+  "judgement": {
+   "gist": "Just after a saving throw is failed for your PSYKER model: change the Damage of that attack to 0."
+  },
+  "source": {
+   "stratagem": "Destined by Fate",
+   "text": "WHEN: Any phase, just after a saving throw is failed for a **THOUSAND SONS PSYKER** model from your army. If you are using fast dice rolling, this Stratagem can still be used after rolling multiple saving throws at once.\nTARGET: That **PSYKER** model.\nEFFECT: Change the Damage characteristic of that attack to 0. If you are using fast dice rolling, select one of those attacks you failed a saving throw for."
+  },
+  "key": "2e502aa8c47b8505"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "strat-gist",
+  "where": "Grand Coven · Desecration of Worlds",
+  "judgement": {
+   "gist": "An objective marker you control that your unit is within range of stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase."
+  },
+  "source": {
+   "stratagem": "Desecration of Worlds",
+   "text": "WHEN: Your Command phase.\nTARGET: One **THOUSAND SONS PSYKER** unit from your army within range of an objective marker you control.\nEFFECT: That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
+  },
+  "key": "2848413850f2989b"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "strat-gist",
+  "where": "Grand Coven · Arcane Focus",
+  "judgement": {
+   "gist": "Just after your model’s Psychic test with Channelling the Warp: re-roll all the D6 of that Psychic test (the Channelling the Warp D6 included)."
+  },
+  "source": {
+   "stratagem": "Arcane Focus",
+   "text": "WHEN: Your Shooting phase, just after you take a Psychic test for a **THOUSAND SONS** model from your army that Channelled the Warp (before resolving that **Ritual**).\nTARGET: That **THOUSAND SONS** model.\nEFFECT: Re-roll all of the D6 rolled for that Psychic test (including the additional D6 for Channelling the Warp)."
+  },
+  "key": "c0bdd99fbb1fd07c"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "unit-srcNote",
+  "where": "nidzillas · Tyrannofex",
+  "judgement": {
+   "srcNote": {
+    "at": "kw",
+    "note": "Wahapedia also lists FRAME (from its errata); GW’s Faction Pack (14-10) and BSData don’t"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Tyrannofex"
+   ],
+   "kw": [
+    "Faction: Tyranids",
+    "Great Devourer",
+    "Monster",
+    "Tyrannofex"
+   ]
+  },
+  "key": "ed4a37246699c0cb"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-gist",
+  "where": "Crusher Stampede · Corrosive Viscera",
+  "judgement": {
+   "gist": "Your MONSTER model (one that cannot FLY) just destroyed: its Deadly Demise mortal wounds are inflicted automatically (no D6 roll)."
+  },
+  "source": {
+   "stratagem": "Corrosive Viscera",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after a **TYRANIDS MONSTER** model from your army with the **Deadly Demise** ability that cannot **FLY** is destroyed.\nTARGET: That **TYRANIDS MONSTER** model. You can use this Stratagem on that model even though it was just destroyed.\nEFFECT: Do not roll one D6 to determine whether **mortal wounds** are inflicted by your model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted."
+  },
+  "key": "0295d01282f0fdf6"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-gist",
+  "where": "Crusher Stampede · Savage Roar",
+  "judgement": {
+   "gist": "An enemy unit has selected your unit as a target: it takes a Battle-shock test and has -1 to hit your unit until the end of the phase; also -1 to wound if it failed the test."
+  },
+  "source": {
+   "stratagem": "Savage Roar",
+   "text": "WHEN: Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **TYRANIDS MONSTER** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: That enemy unit must take a **Battle-shock test** and, until the end of the phase, each time a model in that enemy unit makes an attack that targets your unit, subtract 1 from the **Hit roll**. If that Battle-shock test was failed, subtract 1 from the **Wound roll** as well."
+  },
+  "key": "ba887dc64dca2f10"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-gist",
+  "where": "Crusher Stampede · Massive Impact",
+  "judgement": {
+   "gist": "Your model has ended a Charge move: select one enemy unit within Engagement Range of it and roll six D6: 1 mortal wound for each 4+."
+  },
+  "source": {
+   "stratagem": "Massive Impact",
+   "text": "WHEN: Your Charge phase, just after a **TYRANIDS MONSTER** model from your army ends a **Charge move**.\nTARGET: That **TYRANIDS MONSTER** model.\nEFFECT: Select one enemy unit within **Engagement Range** of your model and roll six D6: for each 4+, that enemy unit suffers 1 **mortal wound**."
+  },
+  "key": "7e3f0200d540ee2d"
+ },
+ {
+  "army": "nidzillas",
+  "kind": "strat-gist",
+  "where": "Talons of the Norn Queen · Tanglestrike Rounds",
+  "judgement": {
+   "gist": "After your unit has shot: one enemy unit hit by those attacks is tethered (-2\" M) until the start of your next Command phase."
+  },
+  "source": {
+   "stratagem": "Tanglestrike Rounds",
+   "text": "WHEN: Your Shooting phase, when a friendly **NORN ASSIMILATOR** unit has shot.\nTARGET: That **NORN ASSIMILATOR** unit.\nEFFECT: Select one enemy unit hit by those attacks. That enemy unit is **tethered** until the start of your next Command phase:\n- While a unit is **tethered**, that unit has -2\" **M**."
+  },
+  "key": "8389a6c1ff731bfc"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "rule-ph",
+  "where": "imperial-knights army rule · Super-heavy Walker",
+  "judgement": {
+   "ph": [
+    "movement"
+   ]
+  },
+  "source": {
+   "rule": "Super-heavy Walker",
+   "text": "Each time a model with this ability makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and sections of **terrain features** that are 4\" or less in height. When doing so:\n- It can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them.\n- It can also move through sections of terrain features that are more than 4\" in height, but if it does, after it has moved, roll one D6: on a 1, that model is **Battle-shocked**."
+  },
+  "key": "2da4e8978a7297ba"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "rule-turn",
+  "where": "imperial-knights army rule · Super-heavy Walker",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "rule": "Super-heavy Walker",
+   "text": "Each time a model with this ability makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and sections of **terrain features** that are 4\" or less in height. When doing so:\n- It can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them.\n- It can also move through sections of terrain features that are more than 4\" in height, but if it does, after it has moved, roll one D6: on a 1, that model is **Battle-shocked**."
+  },
+  "key": "26248e3709db5059"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "rule-ph",
+  "where": "Freeblade Company rule · Knights of Legend",
+  "judgement": {
+   "ph": [
+    "command"
+   ]
+  },
+  "source": {
+   "rule": "Knights of Legend",
+   "text": "**IMPERIAL KNIGHTS** models from your army have the **Feel No Pain 6+** ability. In addition, at the start of your Command phase, each **IMPERIAL KNIGHTS** model from your army regains 1 lost wound."
+  },
+  "key": "035ba314f3f0539b"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "rule-turn",
+  "where": "Freeblade Company rule · Knights of Legend",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "rule": "Knights of Legend",
+   "text": "**IMPERIAL KNIGHTS** models from your army have the **Feel No Pain 6+** ability. In addition, at the start of your Command phase, each **IMPERIAL KNIGHTS** model from your army regains 1 lost wound."
+  },
+  "key": "cc5f1dc057f718e8"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "strat-gist",
+  "where": "Freeblade Company · Noble Sacrifice",
+  "judgement": {
+   "gist": "Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6."
+  },
+  "source": {
+   "stratagem": "Noble Sacrifice",
+   "text": "WHEN: Any phase.\nTARGET: One **IMPERIAL KNIGHTS** unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.\nEFFECT: Your unit’s **Deadly Demise** ability inflicts **mortal wounds** on a D6 roll of 4+, adding 1 to the result if it is an **ARMIGER** unit, instead of only a 6."
+  },
+  "key": "e05f61d58922fd8a"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "strat-weaponKw",
+  "where": "Freeblade Company · Point-Blank Barrage",
+  "judgement": {
+   "weaponKw": "BLAST"
+  },
+  "source": {
+   "stratagem": "Point-Blank Barrage",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One **IMPERIAL KNIGHTS** unit from your army that has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, when making ranged attacks with Blast weapons, models in your unit can target enemy units within **Engagement Range** of your unit (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, until the end of the phase, your unit does not suffer the penalty to its **Hit rolls** for being within Engagement Range of one or more enemy units, but each time a model in your unit makes an attack with a Blast weapon that targets a unit within Engagement Range of your unit, on an unmodified Hit roll of 1, your unit suffers 1 **mortal wound** after all of its attacks have been resolved."
+  },
+  "key": "886868f6acffee7c"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "strat-gist",
+  "where": "Freeblade Company · Flanking Manoeuvres",
+  "judgement": {
+   "gist": "Your unit within 9\" of a battlefield edge and not within Engagement Range of an enemy unit: remove it from the battlefield and place it into Strategic Reserves."
+  },
+  "source": {
+   "stratagem": "Flanking Manoeuvres",
+   "text": "WHEN: End of your opponent’s Fight phase.\nTARGET: One **ARMIGER** unit from your army that is within 9\" of one or more battlefield edges and not within **Engagement Range** of one or more enemy units.\nEFFECT: Remove your unit from the battlefield and place it into **Strategic Reserves**."
+  },
+  "key": "43058fdaa20cd2e8"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "unit-kwOnly",
+  "where": "4-megas-and-a-destrier · Canis Rex",
+  "judgement": {
+   "kwOnly": {
+    "Canis Rex": "Canis Rex",
+    "Questoris": "Canis Rex",
+    "Titanic": "Canis Rex",
+    "Towering": "Canis Rex",
+    "Vehicle": "Canis Rex",
+    "Walker": "Canis Rex",
+    "Infantry": "Sir Hekhtur",
+    "Sir Hekhtur": "Sir Hekhtur"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Canis Rex",
+    "1× Sir Hekhtur"
+   ],
+   "kw": [
+    "Canis Rex",
+    "Character",
+    "Epic Hero",
+    "Faction: Imperial Knights",
+    "Imperium",
+    "Infantry",
+    "Questoris",
+    "Sir Hekhtur",
+    "Titanic",
+    "Towering",
+    "Vehicle",
+    "Walker"
+   ],
+   "kwNote": null
+  },
+  "key": "3fa10f6d7466f8be"
+ },
+ {
+  "army": "4-megas-and-a-destrier",
+  "kind": "unit-srcNote",
+  "where": "4-megas-and-a-destrier · Canis Rex",
+  "judgement": {
+   "srcNote": {
+    "at": "Sir Hekhtur",
+    "note": "Wahapedia: his own EPIC HERO datasheet; BSData and New Recruit: in this unit"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Canis Rex",
+    "1× Sir Hekhtur"
+   ],
+   "kw": [
+    "Canis Rex",
+    "Character",
+    "Epic Hero",
+    "Faction: Imperial Knights",
+    "Imperium",
+    "Infantry",
+    "Questoris",
+    "Sir Hekhtur",
+    "Titanic",
+    "Towering",
+    "Vehicle",
+    "Walker"
+   ]
+  },
+  "key": "0a51de81856a29e0"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-gist",
+  "where": "Bully Boyz · Too Arrogant to Die",
+  "judgement": {
+   "gist": "An enemy unit targets your unit: a model of it destroyed while your unit has not been selected to fight this phase: D6 (+1 if riled up); on a 4+ it stays until your unit has fought or the phase ends."
+  },
+  "source": {
+   "stratagem": "Too Arrogant to Die",
+   "text": "WHEN: Fight phase, when an enemy unit targets a friendly **MEGANOBZ**/**NOBZ** unit.\nTARGET: That **MEGANOBZ**/**NOBZ** unit.\nEFFECT: When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +1 to that roll if your unit is **riled up**:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield."
+  },
+  "key": "999969c74ebb832f"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-gist",
+  "where": "Runt Swarm · Infested War Zone",
+  "judgement": {
+   "gist": "After an enemy unit has attacked: add a new GRETCHIN unit identical to your just-destroyed unit to your army, in strategic reserves, at its starting strength."
+  },
+  "source": {
+   "stratagem": "Infested War Zone",
+   "text": "WHEN: Any phase, when an enemy unit has attacked.\nTARGET: One friendly **GRETCHIN** unit that was just **destroyed**. You can target that unit with this **stratagem** even though that unit was just **destroyed**.\nEFFECT: Add a new **GRETCHIN** unit to your army identical to your **destroyed** unit, in **strategic reserves**, at its **starting strength**, with its full wounds remaining."
+  },
+  "key": "297ce09fb084f63e"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-gist",
+  "where": "Runt Swarm · Scarper!",
+  "judgement": {
+   "gist": "An enemy unit ends a move within 8\" of your unengaged unit: your unit can make a normal move of up to D6\", or up to 6\" if it is an attached unit."
+  },
+  "source": {
+   "stratagem": "Scarper!",
+   "text": "WHEN: Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly **unengaged GRETCHIN** unit.\nTARGET: That **GRETCHIN** unit.\nEFFECT: Your unit can make a **normal move** of:\n- Up to D6\".\n- Or: Up to 6\" instead if your unit is an **attached** unit."
+  },
+  "key": "26b637bcf7e0a936"
+ },
+ {
+  "army": "ooga-booga",
+  "kind": "strat-gist",
+  "where": "Runt Swarm · Grot Shields",
+  "judgement": {
+   "gist": "An enemy unit targets an ORKS INFANTRY unit within 3\" of your GRETCHIN unit: if a model in your GRETCHIN unit is on the battlefield, each hit roll of that enemy unit’s ranged attacks on that ORKS unit that results in a hit ends that attack, and your GRETCHIN unit suffers 1 mortal wound."
+  },
+  "source": {
+   "stratagem": "Grot Shields",
+   "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **ORKS INFANTRY** unit (excluding **GRETCHIN** units).\nTARGET: One friendly **GRETCHIN** unit within 3\" of that **ORKS INFANTRY** unit.\nEFFECT: When a **hit roll** for that enemy unit’s ranged attacks that target that **ORKS** unit results in a hit, if a model in your **GRETCHIN** unit is on the battlefield, end the attack sequence for that attack and your **GRETCHIN** unit suffers 1 **mortal wound**."
+  },
+  "key": "6c8714e1567fcec4"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "unit-guard",
+  "where": "purge-goes-the-foe · Tech-Priest Enginseer",
+  "judgement": {
+   "from": "Necromechanic",
+   "needs": {
+    "all": [
+     "Faction: Adeptus Mechanicus"
+    ],
+    "any": [
+     "Legio Cybernetica",
+     "Vehicle"
+    ]
+   },
+   "kind": "all",
+   "when": "Within 12\" of the Enginseer, once per battle round",
+   "note": "after a failed saving throw, the Enginseer can change the Damage characteristic of that attack to 0"
+  },
+  "source": {
+   "ability": "Necromechanic",
+   "text": "**TECH-PRIEST** model only. Once per battle round, when a saving throw made for a friendly **LEGIO CYBERNETICA** or **ADEPTUS MECHANICUS VEHICLE** model within 12\" of the bearer is failed, the bearer can use this Enhancement. If they do, change the Damage characteristic of that attack to 0."
+  },
+  "key": "5c9bc19e075bbc55"
+ },
+ {
+  "army": "purge-goes-the-foe",
+  "kind": "strat-gist",
+  "where": "Eradication Cohort · Analytic Reprisals",
+  "judgement": {
+   "gist": "An enemy unit has shot and your unit lost models to those attacks: your unit shoots as if it were your Shooting phase, but only at that enemy unit (and only if it is an eligible target)."
+  },
+  "source": {
+   "stratagem": "Analytic Reprisals",
+   "text": "WHEN: Your opponent’s Shooting phase, just after an enemy unit has shot.\nTARGET: One **SKITARII INFANTRY** unit from your army that lost one or more models as a result of the attacking unit’s attacks.\nEFFECT: Your unit can shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target."
+  },
+  "key": "0ff21a306632496e"
+ },
+ {
+  "army": "core",
+  "kind": "strat-gist",
+  "where": "Core · Explosives",
+  "judgement": {
+   "gist": "Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8\", 1 mortal wound for each 4+…"
+  },
+  "source": {
+   "stratagem": "Explosives",
+   "text": "WHEN: Your Shooting phase.\nTARGET: One friendly **unengaged** **EXPLOSIVES/GRENADES** unit that is **eligible to shoot** and did not make an **advance move** this turn.\nEFFECT: Resolve the following sequence:\n- 1. Select one **EXPLOSIVES/GRENADES** model in your unit.\n- 2. Select one **unengaged** enemy unit within 8\" of and **visible** to that model.\n- 3. Roll six D6: for each 4+, that enemy unit suffers 1 **mortal wound** (06.02)."
+  },
+  "key": "79ae4ff0828b87db"
+ },
+ {
+  "army": "core",
+  "kind": "strat-gist",
+  "where": "Core · Fire Overwatch",
+  "judgement": {
+   "gist": "Your unengaged unit shoots using snap shooting."
+  },
+  "source": {
+   "stratagem": "Fire Overwatch",
+   "text": "WHEN: End of your opponent’s Movement phase.\nTARGET: One friendly **unengaged** unit (excluding **TITANIC** units).\nEFFECT: Your unit shoots using **snap shooting**."
+  },
+  "key": "8453ee134926153a"
+ },
+ {
+  "army": "core",
+  "kind": "strat-gist",
+  "where": "Core · Heroic Intervention",
+  "judgement": {
+   "gist": "Your unengaged unit within 12\" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…"
+  },
+  "source": {
+   "stratagem": "Heroic Intervention",
+   "text": "WHEN: End of your opponent’s Charge phase.\nTARGET: One friendly **unengaged** unit within 12\" of one or more enemy units. You can only select a **VEHICLE** unit if it is a **CHARACTER/WALKER** unit.\nEFFECT: **Resolve a charge** with your unit (11.02). While doing so, before making the **charge roll**, you must select one of the following modes:\n- **Leap to Defend:** When selecting **charge targets**, you can only select enemy units that made a **charge move** this phase and are within the **maximum distance**.\n- **Into the Fray (+1CP):** When making the **charge roll**, if the result is greater than 6 (after modifiers), change it to 6. When selecting **charge targets**, you can select any enemy units that are within 6\" of your unit and within the **maximum distance**."
+  },
+  "key": "060265bd0728919f"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "defenceItems",
+  "judgement": {
+   "code": "function defenceItems(u, ph, opts){\n  const out = [];\n  // a Feel No Pain only one model has (Robotic Bodyguard: the Datasmith, not the robots) is said by that ability's own line\n  for(const r of u.rules){ const m = /^feel no pain (\\d\\+)/i.exec(r); if(m && !u.abilities.some(ab => ab.def && ab.def.includes('Feel No Pain ' + m[1]))) out.push({ t:'Feel No Pain ' + m[1], a:'rule', v:r }); }\n  for(const r of unitDetRules(u)) if(r.def && !out.some(x => x.t === r.def)) out.push({ t:r.def, a:'rule', v:r.name });   // e.g. Knights of Legend: FNP 6+\n  // (who, name: the model of an attached unit the ability is on, for the datasheet's line)\n  for(const ab of u.abilities) if(ab.def && !naReason(ab) && !(ph && ab.defPh && !ab.defPh.includes(ph))) out.push({ t:ab.def, a:'ability', v:abilityKey(ab), who:ab.who, name:ab.name });\n  for(const s of allStratagems()) if(s.def && eligible(s).includes(u) && !(ph && !s.phases.includes(ph))) out.push({ t:s.cp + 'CP ' + s.name + ': ' + s.def, a:'strat', v:s.id });\n  if(opts && opts.shields) for(const s of allStratagems()) if(s.shield && s.shield.def && matches(s.shield.protects, u) && army().units.some(x => x !== u && matches(s.shield.by, x)) && !(ph && !s.phases.includes(ph)))\n    out.push({ t:s.cp + 'CP ' + s.name + ': ' + s.shield.def, a:'strat', v:s.id });\n  // and on the datasheet what another unit of the list gives this one when it is attacked (guard: Emanatus Forcefield,\n  // Shroudpsalm, Necromechanic), as its attack auras show under its weapons; the source's name opens that unit\n  if(opts && opts.shields) for(const src of army().units) for(const g of src.guard || []) if(src !== u && matches(g.needs, u))\n    out.push({ t:g.when + ': ' + g.note, a:'unit', v:src.id, guard:g });\n  if(u.rules.includes('Waaagh!')) out.push({ t:'Riled up: 5+ INV', a:'rule', v:'Waaagh!', riled:true });\n  return out;\n}"
+  },
+  "source": {
+   "implements": "what protects a unit when targeted: Feel No Pain, defensive abilities, detachment rules, stratagems usable in that phase, the Orks riled-up 5+ invulnerable save; on the datasheet (opts.shields) also a stratagem another unit of the list takes the hits with (Grot Shields: a GRETCHIN unit for an ORKS INFANTRY unit, excluding GRETCHIN), and what another unit of the list gives this one when it is attacked (its guard entries whose needs it meets: Emanatus Forcefield, Shroudpsalm, Omnissiah's Blessing, Necromechanic)"
+  },
+  "key": "7dc481c947d9e298"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "screenPregame",
+  "judgement": {
+   "code": "function screenPregame(){\n  const a = army(), f = faction(), units = a.units;\n  const row = (k, v) => v ? '<div class=\"pgr\"><span class=\"pgk\">' + k + '</span><span class=\"pgv\">' + v + '</span></div>' : '';\n  const sec = (title, body) => body ? '<div class=\"sec-h\"><h2>' + title + '</h2></div><div class=\"pg\">' + body + '</div>' : '';\n  // the same ability on several units is one line: \"Singular Purpose · Assimilator (280), Norn Emissary ×2\"\n  const group = list => { const m = new Map(); for(const [u, ab] of list){ const k = ab.name + '|' + ab.text; if(!m.has(k)) m.set(k, { ab, units:[] }); m.get(k).units.push(u); } return [...m.values()]; };\n  const abLine = g => linkTo('ability', abilityKey(g.ab), g.ab.name) + ' <span class=\"from\">· ' + esc(unitNames(g.units)) + '</span>';\n  const rulesOf = units.length ? f.armyRules.filter(r => !inertRule(r.name)).map(r => ({ r, src:f.name + ' army rule' }))\n    .concat(detachments().filter(d => d.rule).map(d => ({ r:d.rule, src:d.name }))) : [];\n  const ruleLine = x => linkTo('rule', x.r.name, x.r.name) + ' <span class=\"from\">· ' + esc(x.src) + '</span>';\n  const nameLink = u => linkTo('unit', u.id, u.short || u.name);   // without its enhancement: the line says it\n  // a unit's short name, or its full one when another unit of the list has that short name too (Big Mek Dakkarig, Big Mek in Mega Armour)\n  const ownName = u => u.short && units.some(x => x !== u && (x.short || x.name) === u.short && x.name !== u.name) ? u.name : u.short || u.name;\n  const allAbs = units.flatMap(u => u.abilities.filter(ab => !naReason(ab)).map(ab => [u, ab]));\n  // Deep Strike (24.09) and Scouts (24.31) work only if every model in the unit has them; u.partialRules names\n  // the rules only some models of an attached unit have (Slaughterbound's Scouts 6\": its Exalted Eightbound have none)\n  const everyModel = (u, test) => unitRules(u).some(test) && !Object.keys(u.partialRules || {}).some(test);\n  // rules resolved before Declare Battle Formations (Code Chivalric: end of the Read Mission Objectives step)\n  const early = rulesOf.filter(x => /read mission objectives/i.test(x.r.text));\n\n  // your list\n  const warlord = units.filter(u => u.warlord);\n  const enh = units.flatMap(u => [u.enhancement, u.upgrade].filter(Boolean).map(n => { const d = detachments().find(x => (x.enhancements || []).some(e => e.name === n)), e = d && d.enhancements.find(x => x.name === n);\n    return (d ? linkTo('enh', d.id + '|' + n, n) : esc(n)) + (n === u.upgrade ? ' <span class=\"from\">(upgrade)</span>' : '') + (e && e.pts ? ' <span class=\"from\">' + e.pts + ' pts</span>' : '') + ' on ' + (n === u.enhancement && u.enhOn ? linkTo('unit', u.id, u.enhOn) : n === u.upgrade && u.leads ? linkTo('unit', u.id, u.leads) : linkTo('unit', u.id, ownName(u) + unitNo(u))); }));\n  const led = units.filter(u => u.leads).flatMap(u => charsOf(u).map((c, i) => (i ? linkTo('unit', u.id, c.name) : nameLink(u)) + (c.support ? ' supports ' : ' leads ') + esc(u.leads) + (u.copies > 1 ? ' <span class=\"from\">×' + u.copies + ' units</span>' : '')));\n  let h = sec('Your list',\n    row('Warlord', warlord.map(u => u.warlordOn ? linkTo('unit', u.id, u.warlordOn) + ' <span class=\"from\">(' + esc(unitLabel(u)) + ')</span>' : unitLink(u)).join(', ')) +\n    row('Enhance&shy;ments', enh.join('<br>')) +\n    row('Attached', led.join('<br>')) +\n    row('Detach&shy;ments', detachments().map(d => (d.rule ? linkTo('rule', d.rule.name, d.name) : esc(d.name)) + (d.dp ? ' <span class=\"from\">(' + d.dp + ' DP)</span>' : '')).join(', ') + (a.disposition ? '<br><span class=\"from\">Disposition:</span> ' + esc(a.disposition) : '')) +\n    // the other selections New Recruit prints under the army name, as printed; one that only names the parts of an army\n    // rule (\"Code Chivalric: Deed, Quality\", each part's table rows) is no pick: that rule is under Army rules\n    Object.entries(a.config || {}).filter(([k, v]) => !ruleParts(f, k, v)).map(([k, v]) => row(esc(k), esc(v))).join('') +\n    row('Points', esc(a.pointsUsed + ' / ' + a.points + ' · ' + a.battleSize)));\n  // the army rules and the detachment rules, folded: each opens to its text (the detachment's row as on the Rules tab)\n  const detRows = detachments().filter(d => d.rule).map(d => ruleRow(d.rule.name, metaLine(esc(d.name), d.rule.ph ? esc(shortWhen(d.rule)) : ''),\n    (d.rule.note ? '<p class=\"note it\">' + esc(d.rule.note) + '</p>' : '') + textWithTable(d.rule) + usedBy('Applies to', units.filter(u => matches(d.rule.needs, u))))).join('');\n  h += f.armyRules.length || detRows ? '<div class=\"sec-h\"><h2>' + (detRows ? 'Army and detachment rules' : 'Army rules') + '</h2></div><div class=\"abl\">' + armyRuleRows(f) + detRows + '</div>' : '';\n\n  const earlyAbs = group(allAbs.filter(([u, ab]) => /read mission objectives/i.test(ab.text)));\n  h += sec('Read Mission Objectives step', row('Rules', early.map(ruleLine).join('<br>')) + row('Abilities', earlyAbs.map(abLine).join('<br>')));\n\n  // declare battle formations: reserves and transports\n  const ds = units.filter(u => everyModel(u, r => ruleKey(r) === 'Deep Strike'));\n  const dsPts = ds.reduce((t, u) => t + (u.pts || 0) * (u.copies || 1), 0);\n  const transports = units.filter(u => hasKw(u, 'Transport')).map(u => { const ab = u.abilities.find(x => /transport capacity/i.test(x.text)); return unitLink(u) + (ab ? ': <span class=\"from\">' + inline(ab.text.replace(/(^|\\n)\\*([^*\\n][^\\n]*[^*\\n])\\*(?=\\n|$)/g, '$1$2').replace(/\\n(- )?/g, ' ')) + '</span>' : ''); });\n  h += sec('Declare battle formations',\n    row(linkTo('rule', 'Deep Strike', 'Deep Strike'), ds.map(u => (u.leads ? linkTo('unit', u.id, unitLabel(u)) : unitLink(u)) + ' <span class=\"from\">' + u.pts + ' pts' + (u.copies > 1 ? ' each, ×' + u.copies : '') + '</span>').join('<br>') + (ds.length > 1 ? '<br><span class=\"from\">All of them: ' + dsPts + ' pts</span>' : '')) +\n    row('Transports', transports.join('<br>')));\n\n  // deployment and pre-battle abilities\n  const scouts = units.filter(u => everyModel(u, r => /^scouts|^infiltrators/i.test(r)));\n  const scoutRules = u => unitRules(u).filter(r => /^scouts|^infiltrators/i.test(r));\n  const scoutKeys = [...new Set(scouts.flatMap(u => scoutRules(u).map(ruleKey)))].sort((x, y) => (x === 'Scouts' ? 0 : 1) - (y === 'Scouts' ? 0 : 1));\n  const pre = group(allAbs.filter(([u, ab]) => PREGAME_RE.test(ab.text) && !/start of the first battle round|read mission objectives/i.test(ab.text)));\n  h += sec('Deployment and pre-battle abilities',\n    row(scoutKeys.map(k => linkTo('rule', k, k)).join(' and '), scouts.map(u => unitLink(u) + ' <span class=\"from\">' + scoutRules(u).map(r => linkTo('rule', r, r)).join(', ') + '</span>').join('<br>')) +\n    row('Abilities', pre.map(abLine).join('<br>')) +\n    row('Rules', rulesOf.filter(x => PREGAME_RE.test(x.r.text) && !early.includes(x)).map(ruleLine).join('<br>')));\n\n  // decided at the start of the battle (before the first battle round: Aegis Protocol, Code Chivalric's Deed 1–2, a row of its\n  // table), of the first battle round or of every battle round\n  const START = /\\bstart of the battle\\b(?! round)/i;\n  const atStart = rulesOf.flatMap(x => { const rows = START.test(x.r.text) ? [] : (x.r.table || []).filter(([, t]) => START.test(t)).map(([l]) => String(l).split(' · ')[0]);\n    return START.test(x.r.text) || rows.length ? [linkTo('rule', x.r.name, x.r.name) + ' <span class=\"from\">' + (rows.length ? '(' + esc(rows.join(', ')) + ') ' : '') + '· ' + esc(x.src) + '</span>'] : []; })\n    .concat(group(allAbs.filter(([u, ab]) => START.test(ab.text))).map(abLine));\n  const first = group(allAbs.filter(([u, ab]) => /start of the first battle round/i.test(ab.text)));\n  const round = rulesOf.filter(x => /start of (the|each|every) battle round/i.test(x.r.text)).map(ruleLine)\n    .concat(group(allAbs.filter(([u, ab]) => /start of (the|each|every) battle round/i.test(ab.text) && !/start of the first battle round/i.test(ab.text))).map(abLine));\n  const firstRules = rulesOf.filter(x => /start of the first battle round/i.test(x.r.text)).map(ruleLine);\n  h += sec('Start of the battle and the battle rounds', row('Start of the battle', atStart.join('<br>')) + row('First round', firstRules.concat(first.map(abLine)).join('<br>')) + row('Every round', round.join('<br>')));\n\n  // uses per battle: the resources you spend, ticked off until New game\n  // a rule that gives units a \"(Once per battle, per unit)\" ability (Higher Imperatives) is ticked on those units, not here\n  const ruleOnce = r => perBattle(r) && !/per battle\\b(?! round)[^.)]*\\bper unit\\b/i.test(r.text || '');\n  const onceRules = f.armyRules.filter(r => !inertRule(r.name) && ruleOnce(r)).map(r => ({ r, src:f.name + ' army rule' }))\n    .concat(detachments().filter(d => d.rule && ruleOnce(d.rule)).map(d => ({ r:d.rule, src:d.name })));\n  const tl = (boxes, text) => '<div class=\"tl\">' + boxes + '<span>' + text + '</span></div>';\n  const ruleTicks = x => { const r = x.r, pb = perBattle(r, true);\n    // \"You can only select each of these abilities once per battle\" (Kindred Sorcery): a box per option\n    if(/\\beach of these [a-z ]+ once per battle/i.test(r.text) && r.table) return '<div class=\"tl\"><span>' + ruleLine(x) + ':</span></div>' + r.table.map(o => tl(ticks('r:' + r.name + ':' + o[0], 1, '', o[0]), esc(o[0]))).join('');\n    return tl(ticks('r:' + r.name, pb.n, '', r.name), ruleLine(x)); };\n  const onceAbs = group(allAbs.filter(([u, ab]) => perBattle(ab)));\n  const abTicks = g => perBattle(g.ab).army ? tl(abilityTicks(g.ab, g.units[0]), abLine(g) + ' <span class=\"tg once\">per army</span>')\n    : g.units.flatMap(u => Array.from({ length:u.copies || 1 }, (_, i) => tl(ticks(copyKey(g.ab, u, i), perBattle(g.ab).n, '', g.ab.name + (u.copies > 1 ? ', Unit ' + (i + 1) : '')),\n        linkTo('ability', abilityKey(g.ab), g.ab.name) + ' · ' + linkTo('unit', u.id, unitLabel(u)) + (u.copies > 1 ? ' <span class=\"from\">· Unit ' + (i + 1) + '</span>' : '')))).join('');\n  const onceStrats = allStratagems().filter(s => eligible(s).length && perBattle(s));\n  h += sec('Uses per battle',\n    row('Rules', onceRules.map(ruleTicks).join('')) +\n    row('Abilities', onceAbs.map(abTicks).join('')) +\n    row('Strata&shy;gems', onceStrats.map(s => tl(ticks('s:' + s.id, perBattle(s, true).n, '', s.name), linkTo('strat', s.id, s.cp + 'CP ' + s.name))).join('')));\n  if(onceRules.length || onceAbs.length || onceStrats.length) h = h.replace(/(<div class=\"sec-h\"><h2>Uses per battle<\\/h2>)/, '$1<button class=\"textbtn\" data-newgame>New game</button>');\n  return h + '<p class=\"note\">Gathered from this list’s datasheets and rules; each line opens the full text.</p>';\n}"
+  },
+  "source": {
+   "implements": "Overview (before the battle): Warlord, enhancements, attached units, detachments (each opens its detachment rule), the army rules (folded), units with Deep Strike (24.09: every model must have it), transports, Scouts and Infiltrators (24.31, 24.20: every model must have it), start of the battle / round 1 / every round, once-per-battle items; the army rules block also holds the detachment rules (as on the Rules tab); an enhancement's holder by its full name when another unit of the list has the same short name"
+  },
+  "key": "b95a561fd8de124d"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "newGame",
+  "judgement": {
+   "code": "function newGame(a){\n  const keys = [gameKey(a), 'wh-used-' + a.id];\n  const was = keys.map(k => [k, store.get(k, null)]);\n  store.set(keys[0], null); for(const k of keys.slice(1)) store.set(k, []);\n  return () => { for(const [k, v] of was) store.set(k, v); };\n}"
+  },
+  "source": {
+   "implements": "the Game tracker's New game: clears this game (round, turn, CP, VP, choices) and the list's uses per battle (the Overview's tick boxes, the same storage), with Undo; the Overview's own New game is as before (the uses per battle only)"
+  },
+  "key": "fcbd10f0da0aab8e"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "gRows",
+  "judgement": {
+   "code": "function gRows(L, items, picked, pickOf){\n  const now = e => { const n = pickOf ? pickOf(e) : ''; return n ? '<span class=\"gpn\">Picked: ' + esc(n) + '</span>' : ''; };\n  return items.map(e => {\n    if(e.kind === 'strat'){ const s = e.s, pb = perBattle(s);\n      return '<div class=\"gr gs' + (e.usable ? '' : ' none') + '\"><span class=\"cp' + (s.cp >= 2 ? ' hot' : '') + '\">' + esc(s.cp) + '<small>CP</small></span><span class=\"grb\">' + linkTo('strat', s.id, s.name) +\n        (s.gist ? '<span class=\"sg\">' + esc(s.gist) + '</span>' : '') + (e.usable ? '' : '<span class=\"from\">' + esc(inArmy(L, () => usersLine(s))) + '</span>') + (pb ? ticks('s:' + s.id, pb.n, '', s.name) : '') + '</span></div>'; }\n    if(e.kind === 'rule'){ const r = e.x, pb = perBattle(r, true) && !/per battle\\b(?! round)[^.)]*\\bper unit\\b/i.test(r.text || '');\n      // the Overview's boxes: \"You can only select each of these abilities once per battle\" (Kindred Sorcery) has one per ability\n      const each = pb && /\\beach of these [a-z ]+ once per battle/i.test(r.text) && r.table;\n      const boxes = !pb ? '' : each ? r.table.map(o => ticks('r:' + r.name + ':' + o[0], 1, o[0], o[0])).join('') : ticks('r:' + r.name, pb.n, '', r.name);\n      return '<div class=\"gr\"><span class=\"grb\">' + linkTo('rule', e.name, e.name) + ' <span class=\"from\">· ' + esc(e.src) + '</span>' + now(e) + (boxes ? '<span class=\"gtk\">' + boxes + '</span>' : '') + '</span></div>'; }\n    const p = picked ? picked(e.ab, e.units) : null, pb = perBattle(e.ab) && !naReason(e.ab);\n    const who = e.ab.who && (p !== null || !e.src.includes(e.ab.who.replace(/: pick one$/, ''))) ? e.ab.who.replace(/: pick one$/, '') : '';\n    const boxes = !pb ? '' : perBattle(e.ab).army ? abilityTicks(e.ab, e.units[0]) : e.units.flatMap(u => Array.from({ length:u.copies || 1 }, (_, i) =>\n      ticks(copyKey(e.ab, u, i), perBattle(e.ab).n, e.units.length > 1 || (u.copies || 1) > 1 ? shortName(u) + ((u.copies || 1) > 1 ? ' ' + (i + 1) : '') : '', e.ab.name))).join('');\n    return '<div class=\"gr' + (p === false ? ' none' : '') + '\"><span class=\"grb\">' + linkTo('ability', e.key, e.ab.name) + ' <span class=\"from\">· ' + esc(e.src) + '</span>' +\n      (who ? ' <span class=\"tg m\">' + esc(who) + (p === true ? ': picked' : p === false ? ': not picked' : '') + '</span>' : '') + now(e) + (boxes ? '<span class=\"gtk\">' + boxes + '</span>' : '') + '</span></div>';\n  }).join('');\n}"
+  },
+  "source": {
+   "implements": "a phase's rows: each opens its full text; a stratagem's gist, and which units can use it only when none can; uses per battle as the Overview's ticks, the same keys and boxes (a rule that lets each of its abilities be selected once per battle: one box per ability; a per-unit rule: none); an option of a choice marked picked / not picked this round, a choice's current pick"
+  },
+  "key": "8b0c201a70a8441b"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "gameCpRules",
+  "judgement": {
+   "code": "function gameCpRules(L){\n  const out = inArmy(L, () => {\n    const out = [], f = faction(), line = t => String(t || '').split('\\n').filter(l => !/^\\*/.test(l.trim())).map(l => (G_CP.exec(l) || [])[0]).find(Boolean);\n    for(const r of f.armyRules){ const s = !inertRule(r.name) && line(r.text); if(s) out.push({ t:'rule', v:r.name, name:r.name, src:f.name + ' army rule', s:s.trim() }); }\n    for(const d of detachments()){ const s = d.rule && line(d.rule.text); if(s) out.push({ t:'rule', v:d.rule.name, name:d.rule.name, src:d.name, s:s.trim() }); }\n    const by = new Map();\n    for(const u of army().units) for(const ab of u.abilities){ const s = !naReason(ab) && line(ab.text); if(!s) continue;\n      const k = abilityKey(ab); if(!by.has(k)) by.set(k, { t:'ability', v:k, name:ab.name, s:s.trim(), units:[] }); by.get(k).units.push(u); }\n    for(const e of by.values()) out.push(Object.assign(e, { src:labelList(e.units) }));\n    return out;\n  });\n  return out.map(e => Object.assign(e, { link:linkTo(e.t, e.v, e.name) }));\n}"
+  },
+  "source": {
+   "implements": "the rules of a list that give CP, quoted by that sentence (not their FAQ or errata lines): army rules (not inert), detachment rules, unit abilities (usable in the list), each once with its units"
+  },
+  "key": "ce8ee4756856cdf0"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "gPregameHtml",
+  "judgement": {
+   "code": "function gPregameHtml(a, g, me){\n  const lists = [[a, 'This list']];\n  const unitsLine = (L, us, extra) => us.map(u => linkTo('unit', u.id, gUnitName(u)) + (u.copies > 1 ? ' <span class=\"from\">×' + u.copies + '</span>' : '') + (extra ? ' <span class=\"from\">' + esc(extra(u)) + '</span>' : '')).join(', ');\n  const per = (fn) => lists.map(([L, label]) => { const t = fn(L); return t ? '<p class=\"gpl\"><span class=\"il\">' + label + '</span>' + t + '</p>' : ''; }).join('');\n  const add = {\n    7:() => { const line = D.rules['Strategic Reserves'].split('\\n').find(l => /50% of your points limit/.test(l));\n      return gq(esc('20.01 Placing Units in Strategic Reserves'), line) + per(L => { const ds = gEvery(L, r => inArmy(L, () => ruleKey(r)) === 'Deep Strike');\n        const pts = ds.reduce((t, u) => t + (u.pts || 0) * (u.copies || 1), 0);\n        return gNote(esc(L.name) + ': points limit ' + L.points + ' pts (' + esc(L.battleSize) + '); 50% of it is ' + Math.floor(L.points / 2) + ' pts.') +\n          (ds.length ? '<span class=\"gpu\">Deep Strike: ' + unitsLine(L, ds, u => u.pts + ' pts' + (u.copies > 1 ? ' each, ×' + u.copies : '')) + (ds.length > 1 ? ' <span class=\"from\">(' + pts + ' pts)</span>' : '') + '</span>' : ''); }); },\n    8:() => per(L => { const tt = L.units.filter(u => hasKw(u, 'Titanic')), inf = gEvery(L, r => /^infiltrators/i.test(r));\n      return [tt.length ? '<span class=\"gpu\">TITANIC: ' + unitsLine(L, tt) + '</span>' : '', inf.length ? '<span class=\"gpu\">' + linkTo('rule', 'Infiltrators', 'Infiltrators') + ': ' + unitsLine(L, inf) + '</span>' : ''].join(''); }),\n    10:() => '<div class=\"chips\" role=\"group\" aria-label=\"Who takes the first turn\"><span class=\"gcg\">First turn</span>' + [me, gOther(me)].map(s => { const on = g.first === s;\n      return '<button class=\"chip' + (on ? ' on' : '') + '\" data-gset=\"first|' + s + '\" aria-pressed=\"' + on + '\">' + (s === me ? esc(a.name) : 'Opponent') + '</button>'; }).join('') + '</div>',\n    11:() => per(L => { const sc = gEvery(L, r => /^scouts/i.test(r));\n      return sc.length ? '<span class=\"gpu\">' + linkTo('rule', 'Scouts', 'Scouts') + ': ' + unitsLine(L, sc, u => inArmy(L, () => unitRules(u).filter(r => /^scouts/i.test(r)).join(', '))) + '</span>' : ''; })\n  };\n  const titanic = lists.some(([L]) => L.units.some(u => hasKw(u, 'Titanic'))), infil = lists.some(([L]) => gEvery(L, r => /^infiltrators/i.test(r)).length);\n  const scouts = lists.some(([L]) => gEvery(L, r => /^scouts/i.test(r)).length);\n  const sub = { 7:'Strategic reserves', 8:[titanic ? 'TITANIC' : '', infil ? 'Infiltrators' : ''].filter(Boolean).join(', '), 10:'Who goes first', 11:scouts ? 'Scouts' : '' };\n  return '<p class=\"note\">Warhammer Event Mission Sequence · GW Warhammer Event Companion 1.3</p><div class=\"abl\">' + D.game.sequence.map(([n, title, text]) => {\n    const more = add[n] ? add[n]() : '';\n    const body = n === 8 && titanic ? rt(text.split('\\n').map(l => /\\bTITANIC\\b/.test(l) ? '- ' + l : l).join('\\n')) : rt(text);\n    return '<details class=\"ab rr gseq\"><summary><span class=\"an\"><b><span class=\"gn\">' + n + '</span> ' + esc(title) + '</b>' + (sub[n] ? '<span class=\"rs\">' + esc(sub[n]) + '</span>' : '') + '</span>' + chev + '</summary><div class=\"body\">' + body + more + '</div></details>';\n  }).join('') + '</div>';\n}"
+  },
+  "source": {
+   "implements": "the Event Companion's mission sequence with this list's numbers: step 7 the strategic reserves limit (20.01: 50% of the points limit for the battle size, worked out from the list's points limit, marked as an app note) and the units with Deep Strike; step 8 the TITANIC units (its TITANIC sentence set apart when the list has one) and the Infiltrators; step 10 who takes the first turn; step 11 the units with Scouts"
+  },
+  "key": "fbeb7c8639b3e07a"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "gChoiceHtml",
+  "judgement": {
+   "code": "function gChoiceHtml(c, g, side){\n  const P = gcPick(c, g, side), v = P.v, R = gcRound(c, g, side);\n  const pick = (grp, opt) => esc(JSON.stringify([c.key, R, grp, opt || '']));\n  const used = c.once && !c.unit ? new Set(c.groups.flatMap(gr => gr.opts.filter(o => usedSet().has('r:' + c.name + ':' + o.row + '#0')).map(o => o.name))) : new Set();\n  const lasts = c.lasts === 'battle' ? 'For the battle' : c.lasts === 'kept' ? 'Until another is picked' : c.lasts === 'command' ? 'Until the start of your next Command phase' : 'Battle round ' + g.round;\n  let h = '<div class=\"gc\"><div class=\"gch\">' + linkTo(c.link[0], c.link[1], c.name) + ' <span class=\"from\">· ' + esc(c.src) + '</span></div>' +\n    '<p class=\"gcw\">' + esc(c.when) + (c.when ? ' · ' : '') + '<b>' + esc(lasts) + '</b>' + (P.since === 'start' ? ' <span class=\"from\">(from the start of the battle)</span>' : P.since ? ' <span class=\"from\">(picked in battle round ' + P.since + ')</span>' : '') + '</p>' +\n    // a step the Event Companion's mission sequence (Before the battle) does not have, named as the rule names it\n    ((m => m && !D.game.sequence.some(([, t]) => norm(t) === norm(m[1])) ? gNote('the Event Companion’s mission sequence (Before the battle, below) has no step called ' + esc(m[1]) + '.') : '')(/\\bthe ([A-Z][a-z]+(?: [A-Z][a-z]+)+) step\\b/.exec(c.when)));\n  for(const gr of c.groups){\n    const on = gcNames(v[gr.name]);\n    h += '<div class=\"chips\" role=\"group\"' + (gr.name ? ' aria-label=\"' + esc(gr.name) + '\"' : '') + '>' + (gr.name ? '<span class=\"gcg\">' + esc(gr.name) + '</span>' : '') +\n      gr.opts.map(o => { const sel = on.includes(o.name), u = !sel && used.has(o.name);\n        return '<button class=\"chip' + (sel ? ' on' : '') + (u ? ' used' : '') + '\" data-gpick=\"' + pick(gr.name, o.name) + '\" aria-pressed=\"' + sel + '\">' + esc(o.name) + (u ? '<span class=\"u\">used</span>' : '') + '</button>'; }).join('') +\n      (c.rolled ? '<button class=\"chip rl' + (v['rolled:' + gr.name] ? ' on' : '') + '\" data-gpick=\"' + pick('rolled:' + gr.name) + '\" aria-pressed=\"' + !!v['rolled:' + gr.name] + '\">Rolled</button>' : '') + '</div>';\n    for(const o of gr.opts.filter(o => on.includes(o.name))){\n      h += '<div class=\"gq gpk\"><span class=\"gqs\">' + esc((gr.name ? gr.name + ' ' : '') + o.name + (o.title ? ' · ' + o.title : '')) + '</span>' + rt(o.text) + '</div>';\n    }\n  }\n  if(c.state) h += '<div class=\"chips\"><button class=\"chip' + (v['state'] ? ' on' : '') + '\" data-gpick=\"' + pick('state') + '\" aria-pressed=\"' + !!v['state'] + '\">' + esc(c.state) + '</button></div>';\n  // the picks of the other battle rounds of this game\n  if(c.lasts !== 'battle'){\n    const past = Object.keys(P.all).filter(r => r !== R && +r >= 1).sort((x, y) => x - y).map(r => [r, c.groups.flatMap(gr => gcNames((P.all[r] || {})[gr.name]))]).filter(([, n]) => n.length);\n    if(past.length) h += '<p class=\"gcp\">' + past.map(([r, n]) => 'Round ' + r + ': ' + esc(n.join(', '))).join(' · ') + '</p>';\n  }\n  return h + '</div>';\n}"
+  },
+  "source": {
+   "implements": "a choice: its rule, when the pick is made and how long it lasts in the rule's words (For the battle, Battle round N, Until the start of your next Command phase, Until another is picked; a pick from an earlier round or from the start of the battle says so), its options (an option picked in another battle round of a once-per-battle choice marked used), Rolled, the state (Honoured), the quoted text of each pick, earlier rounds' picks; an app note when its timing names a step the Event Companion's mission sequence does not have (\"the Read Mission Objectives step\")"
+  },
+  "key": "4931def1187f5a8f"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "gamePick",
+  "judgement": {
+   "code": "function gamePick(a, spec){\n  let k, R, grp, opt;\n  try { [k, R, grp, opt] = JSON.parse(spec); } catch(e){ return; }\n  const g = gameOf(a), side = 'mine', c = gameChoices(a).find(x => x.key === k);\n  if(!c) return;\n  const P = g.picks[side] = isObj(g.picks[side]) ? g.picks[side] : {}, all = P[k] = isObj(P[k]) ? P[k] : {}, v = all[R] = isObj(all[R]) ? all[R] : {};\n  if(/^rolled:|^state$/.test(grp)){ const x = opt || true; if(v[grp] === x) delete v[grp]; else v[grp] = x; }\n  else {\n    const was = gcNames(v[grp]), next = was.includes(opt) ? was.filter(x => x !== opt) : c.max > 1 ? was.concat(opt).slice(-c.max) : [opt];\n    if(next.length) v[grp] = c.max > 1 ? next : next[0]; else delete v[grp];\n    const gr = c.groups.find(x => x.name === grp);\n    if(c.once && gr){ const used = usedSet();\n      for(const o of gr.opts){ const tk = 'r:' + c.name + ':' + o.row + '#0', other = Object.entries(all).some(([r, x]) => r !== R && gcNames((x || {})[grp]).includes(o.name));\n        if(next.includes(o.name)) used.add(tk); else if(was.includes(o.name) && !other) used.delete(tk); }\n      store.set(usedKey(), [...used]); }\n  }\n  if(!Object.keys(v).length) delete all[R];\n  gameSave(a, g);\n}"
+  },
+  "source": {
+   "implements": "a pick: one option (tapped again: none), with up to two a third replaces the first; Rolled and the state on and off; picking an option of a once-per-battle choice (Kindred Sorcery) ticks the Overview's box for it, unpicking it unticks it unless another battle round picked it"
+  },
+  "key": "e8237bc497607d17"
+ }
+]
