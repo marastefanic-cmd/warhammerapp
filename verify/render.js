@@ -59,14 +59,12 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
             : Object.entries(x.dataset).filter(([k]) => ['rule','strat','ability','enh','kw'].includes(k)).map(([k, v]) => k + ':' + v)[0]);
         return { title:$('#top').innerText.replace(/\s+/g, ' ').trim(), text:host.innerText, hs, links, overflow:document.documentElement.scrollWidth - innerWidth,
           bigIcons:[...document.querySelectorAll('#top svg, #view svg, #sheetIn svg, #subbar svg, #bbar svg')].filter(x => x.getBoundingClientRect().width > 40 || x.getBoundingClientRect().height > 40).map(x => (x.getAttribute('class') || '') + ' ' + ((x.querySelector('use') || {}).getAttribute ? x.querySelector('use').getAttribute('href') : '') + ' in .' + x.parentElement.className).slice(0, 3), tabs:document.querySelectorAll('#bbar .tabs button').length === 5,
-          cut:[...document.querySelectorAll('#bbar .tabs button span')].filter(x => x.scrollWidth > x.clientWidth + 0.5).map(x => x.textContent),
-          dmrules:[...document.querySelectorAll('#view .game [data-dmrule]')].map(x => x.dataset.dmrule) };
+          cut:[...document.querySelectorAll('#bbar .tabs button span')].filter(x => x.scrollWidth > x.clientWidth + 0.5).map(x => x.textContent) };
       }, [String(fn), HELPER_SEL, !!folded]);
       if(r.overflow > 0) fail('no-sideways-scroll', a.id, label, 'the page is ' + r.overflow + 'px wider than the phone');
       if(r.bigIcons.length) fail('icon-size', a.id, label, 'icons drawn over 40px (no size set): ' + r.bigIcons.join(', '));
       if(label !== 'home' && label !== 'settings' && !r.tabs) fail('tabs', a.id, label, 'no tab bar');
       if(r.cut.length) fail('tabs-fit', a.id, label, 'tab labels cut off: ' + r.cut.join(', '));   // each of the five labels whole
-      r.dmrules.forEach(l => gameOther.add(l));
       // the data version changes with every release: the snapshot keeps a placeholder
       snap.push('######## ' + label + ' · ' + r.title + '\n' + r.text.replace(/[ \t]+\n/g, '\n').replace(/\n{3,}/g, '\n\n').trim().replace(/^Data \d{4}-\d\d-\d\d\.\d+$/m, 'Data (version)'));
       for(const h of r.hs){
@@ -79,13 +77,11 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       }
       return r;
     };
-    const links = new Set(), gameLinks = new Set(), gameOther = new Set();   // gameOther: the Game tracker's links to the opponent's rules (opened from their list)
+    const links = new Set(), gameLinks = new Set();
     const screen = async (s, extra) => {
       const r = await take(s + (extra ? ' ' + JSON.stringify(extra) : ''), `() => { hideSheet(); openStrats.clear(); ${extra && extra.open ? `allStratagems().forEach(x => openStrats.add(x.id));` : ''} go({ s:'${s}', army:'${a.id}' }); }`, extra && extra.folded);
       r.links.forEach(l => links.add(l));
     };
-    // each list is checked as the one you opened (yours), not as a look at another list's opponent
-    await page.evaluate(id => { sess.mine = id; sess.peekD = null; }, a.id);
     if(a === armies[0]){ await take('settings', `() => { hideSheet(); go({ s:'settings' }); }`); await take('home', `() => { hideSheet(); go({ s:'home' }); }`); }
     for(const s of ['army','pregame','units','ranged','melee','abilities','rules','bases']) await screen(s);
     // the damage calculator, against the next list: this list's first unit with ranged weapons shooting its first unit (Shoot), its
@@ -107,18 +103,17 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       const r = await take('unit ' + u, `() => { hideSheet(); go({ s:'unit', army:'${a.id}', unit:'${u}' }); }`);
       r.links.forEach(l => links.add(l));
     }
-    // the Game tracker, against the next list (after the datasheets, so every other screen and popup is taken as before): a new
-    // game (every fold open); round 2 with the first option of every choice picked (and the first of their units where it asks
-    // for one); then each phase of both turns of the first battle round, the This phase part only (the folds of the phase
-    // open), and the last turn's Fight phase of round 2 (the end of the battle round)
+    // the Game tracker (after the datasheets, so every other screen and popup is taken as before): a new game (every fold open);
+    // round 2 with the first option of every choice picked; then each phase of both turns of the first battle round, the This
+    // phase part only (the folds of the phase open), and the last turn's Fight phase of round 2 (the end of the battle round)
     const gameAt = async (label, state, part) => {
-      const r = await take(label, `() => { hideSheet(); sess.gfold = {}; store.set('wh-opp-${a.id}', '${vs}'); store.set('wh-used-${a.id}', []);
+      const r = await take(label, `() => { hideSheet(); sess.gfold = {}; store.set('wh-used-${a.id}', []);
         store.set('wh-game-${a.id}', ${JSON.stringify(state)}); go({ s:'game', army:'${a.id}' });
         ${state.pickAll ? `const A = armyById('${a.id}'); for(const c of gameChoices(A)) for(const gr of c.groups){ const g = gameOf(A), R = gcRound(c, g), o = gr.opts[0];
-          gamePick(A, JSON.stringify([c.key, R, gr.name, o.name])); const tg = gcTargets(o.text, oppOf(A)); if(tg && tg.length) gamePick(A, JSON.stringify([c.key, R, 'target:' + gr.name, tg[0].id])); }
+          gamePick(A, JSON.stringify([c.key, R, gr.name, o.name])); }
           render();` : ''}
         ${part ? `const P = $('#gPhase'); if(P){ while(P.previousElementSibling) P.previousElementSibling.remove(); const pre = $('#view .gpre'); if(pre) pre.remove(); }
-          document.querySelectorAll('#view .gphase details, #view details.gopp').forEach(d => d.open = true);` : state.pickAll ? `document.querySelectorAll('#view details:not(.gpre):not(.gseq)').forEach(d => d.open = true);` : ''} }`, !!(part || state.pickAll));
+          document.querySelectorAll('#view .gphase details').forEach(d => d.open = true);` : state.pickAll ? `document.querySelectorAll('#view details:not(.gpre):not(.gseq)').forEach(d => d.open = true);` : ''} }`, !!(part || state.pickAll));
       r.links.forEach(l => gameLinks.add(l));
     };
     await gameAt('game', {});
@@ -143,13 +138,6 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       const ok = await page.evaluate(([id, k, v]) => { hideSheet(); go({ s:'game', army:id }); ({ rule:showRule, strat:showStrat, ability:showAbility, enh:showEnhancement })[k](v);
         return !$('#sheetHost').hidden && $('#sheetTitle').textContent.trim().length > 0; }, [a.id, k, v]);
       if(!ok) fail('link-resolves', a.id, 'game: ' + l, 'the link opens nothing');
-    }
-    for(const l of [...gameOther].sort()){
-      const ok = await page.evaluate(([id, l]) => { hideSheet(); go({ s:'game', army:id }); const [t, aid, ...rest] = l.split('|'), k = rest.join('|'), L = armyById(aid);
-        if(!L || !['strat', 'rule', 'ability'].includes(t)) return false;
-        dmShowIn(L, () => t === 'strat' ? showStrat(k) : t === 'rule' ? showRule(k) : showAbility(k));
-        return !$('#sheetHost').hidden && $('#sheetTitle').textContent.trim().length > 0; }, [a.id, l]);
-      if(!ok) fail('link-resolves', a.id, 'game: ' + l, 'the opponent’s rule opens nothing');
     }
     await page.evaluate(id => { hideSheet(); store.set('wh-game-' + id, null); store.set('wh-used-' + id, []); }, a.id);
 
@@ -247,31 +235,30 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       for(const [kind, name] of names){
         if(seen.has(kind + name)) continue; seen.add(kind + name);
         query[armyId] = name; moreShown.clear(); renderFinder();
-        const titles = [...document.querySelectorAll('#qres .rg:not(.oth) .res b')].map(b => b.textContent.trim().toLowerCase());   // this list's, not the opponent's
+        const titles = [...document.querySelectorAll('#qres .rg .res b')].map(b => b.textContent.trim().toLowerCase());
         const n = name.toLowerCase();   // a weapon with profiles is found as "Gutrippa – Hunter"
         if(!titles.some(t => t === n || t.startsWith(n + ' – '))) out.push(['search-finds', kind, name]);
       }
-      // the other list of the game: Find searches it too, after this list's and marked whose (the next list's first unit is under
-      // "Their units" and opens in that list), and its Overview, opened from this list, is "Their list"
-      const B = WH_DATA.armies[(WH_DATA.armies.findIndex(x => x.id === armyId) + 1) % WH_DATA.armies.length], wasOpp = store.get('wh-opp-' + armyId);
-      if(B.id !== armyId){
-        store.set('wh-opp-' + armyId, B.id);
-        query[armyId] = B.units[0].name; moreShown.clear(); renderFinder();
-        if(![...document.querySelectorAll('#qres .rg.oth .res[data-their="' + B.id + '"][data-unit="' + B.units[0].id + '"] b')].some(b => b.textContent.trim() === B.units[0].name))
-          out.push(['search-their', armyId, B.units[0].name + ' (' + B.id + ') is not under their units']);
-        query[armyId] = ''; renderFinder();
-        go({ s:'pregame', army:B.id });
-        const head = (document.querySelector('#view .sec-h h2') || {}).textContent || '';
-        if(head !== 'Their list') out.push(['their-list', armyId, B.id + '’s Overview opened from this list is headed “' + head + '”']);
-        // on their screens a bar says whose list it is and takes you back to yours (not on their list's home, which says it)
-        const bar = $('#peekbar');
-        if(bar.hidden || !bar.textContent.includes(B.name)) out.push(['their-bar', armyId, B.id + '’s Overview has no “Their list: ' + B.name + '” bar']);
-        go({ s:'army', army:B.id }); if(!$('#peekbar').hidden) out.push(['their-bar', armyId, B.id + '’s own home shows the bar']);
-        go({ s:'pregame', army:B.id }); toMine();
-        if(cur.army !== armyId || !$('#peekbar').hidden) out.push(['their-bar', armyId, 'Back to yours did not return to ' + armyId + ' (at ' + cur.army + ')']);
-        go({ s:'army', army:armyId });
-        store.set('wh-opp-' + armyId, wasOpp);
-      }
+      // an opponent named by older saved state (the Opponent row's pick, the list that was "yours") is ignored: Find searches
+      // this list only, the Overview is "Your list", the Game tracker's sides are this list and "Opponent"; and the rules chat
+      // says it sends your list (a key stands in for one saved)
+      const B = WH_DATA.armies[(WH_DATA.armies.findIndex(x => x.id === armyId) + 1) % WH_DATA.armies.length], wasOpp = store.get('wh-opp-' + armyId), wasAsk = store.get('wh-ask');
+      store.set('wh-opp-' + armyId, B.id); sess.mine = B.id; sess.peekD = 0;
+      query[armyId] = B.units[0].name; moreShown.clear(); renderFinder();
+      const other = [...document.querySelectorAll('#qres .rg > .lbl')].map(l => l.textContent).filter(t => !KIND_ORDER.some(k => t.startsWith(k + ' · ')));
+      if(other.length || document.querySelector('#qres [data-their]')) out.push(['opp-ignored', armyId, 'Find, searching ' + B.units[0].name + ', shows another list: ' + other.join(', ')]);
+      query[armyId] = ''; renderFinder();
+      go({ s:'pregame', army:armyId });
+      const head = (document.querySelector('#view .sec-h h2') || {}).textContent || '';
+      if(head !== 'Your list') out.push(['opp-ignored', armyId, 'the Overview is headed “' + head + '”']);
+      go({ s:'game', army:armyId });
+      const sides = [...document.querySelectorAll('#view .gsc .gsd b')].map(b => b.textContent);
+      if(sides.join('|') !== A.name + '|Opponent' || document.querySelector('#view [data-dmrule]')) out.push(['opp-ignored', armyId, 'the Game tracker: sides ' + sides.join(', ') + (document.querySelector('#view [data-dmrule]') ? ', another list’s rule' : '')]);
+      store.set('wh-ask', { key:'sk-ant-check' }); openAsk();
+      const sent = [...document.querySelectorAll('#sheetIn .note')].map(x => x.textContent).find(t => /^Sent with each question/.test(t)) || '';
+      if(sent !== 'Sent with each question: your list (' + A.name + '), the Core Rules and this screen.') out.push(['ask-sends', armyId, '“' + sent + '”']);
+      hideSheet(); askConv = null; store.set('wh-ask', wasAsk == null ? null : wasAsk); store.set('wh-opp-' + armyId, wasOpp); delete sess.mine; delete sess.peekD;
+      go({ s:'army', army:armyId });
       query[armyId] = ''; renderFinder();
       return out;
     }, a.id);
@@ -482,9 +469,9 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
   // ---- the Game tracker under a finger (each width): opened from its row on Find and Back to Find; the steppers, ten Next taps
   // (round 1's two turns), a pick, New game and Undo ----
   {
-    const A = armies[0].id, B = armies[1].id;
+    const A = armies[0].id;
     const tapIt = async sel => { await page.evaluate(sel => { const e = document.querySelector(sel); e.scrollIntoView({ block:'center' }); }, sel); await page.waitForTimeout(120); await page.click(sel); await page.waitForTimeout(150); };
-    await page.evaluate(([A, B]) => { hideSheet(); store.set('wh-opp-' + A, B); store.set('wh-game-' + A, null); store.set('wh-used-' + A, []); sess.mine = A; go({ s:'army', army:A }); scrollTo(0, 0); }, [A, B]);
+    await page.evaluate(A => { hideSheet(); store.set('wh-game-' + A, null); store.set('wh-used-' + A, []); go({ s:'army', army:A }); scrollTo(0, 0); }, A);
     await page.waitForTimeout(500);
     await tapIt('#armyMenu [data-go="game"]'); await page.waitForTimeout(400);
     const nav = await page.evaluate(() => [cur.s, $('#top .back') ? $('#top .back').innerText.trim() : '', $('#bbar [data-tab].on') ? $('#bbar [data-tab].on').dataset.tab : '']);

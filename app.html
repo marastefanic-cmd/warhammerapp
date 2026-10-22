@@ -173,17 +173,6 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .row .rb .t.f{color:var(--accent-ink); background:var(--accent)}
 .row .rb .t.d{color:var(--muted); background:none; box-shadow:inset 0 0 0 1px var(--line)}
 .army-sub{font-size:13.5px; line-height:1.4; color:var(--muted)}
-.army-sub.peek{color:var(--accent); font-weight:600}
-/* while you look at your opponent's list: whose it is, and one tap back to yours */
-.peekbar{display:flex; width:100%; max-width:720px; margin:0 auto; align-items:center; justify-content:space-between; gap:12px; min-height:36px;
-  padding:6px 16px; border:0; border-top:1px solid var(--line); background:var(--surface2); color:var(--fg2); font:inherit; font-size:13.5px; text-align:left; cursor:pointer}
-.peekbar[hidden]{display:none}
-.peekbar b{color:var(--fg); font-weight:600}
-.peekbar .pb-back{display:inline-flex; align-items:center; gap:4px; color:var(--accent); font:700 13px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; white-space:nowrap}
-.peekbar .pb-back svg{width:14px; height:14px; fill:none; stroke:currentColor}
-.rowpair{display:flex; align-items:stretch}
-.rowpair .row{flex:1; min-width:0}
-.rowpair .chg{flex:none; padding:0 4px 0 14px; border-bottom:1px solid var(--line); font:600 14px var(--f-head); letter-spacing:.02em; color:var(--accent)}
 
 /* ---------- search ---------- */
 .search{display:flex; align-items:center; gap:8px; margin:12px 0 4px; background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:0 12px}
@@ -930,7 +919,7 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
 .gx > summary .c{font:600 13px var(--f-head); letter-spacing:.04em; color:var(--muted)}
 .gx > summary .chev{margin-left:auto}
 .gx.gcpr{border-top:1px solid var(--line); padding-bottom:8px}
-.gx.gcpr > summary, .gx.gopp > summary{font:600 12.5px/1.2 var(--f-head); letter-spacing:.09em; color:var(--fg2); min-height:40px}
+.gx.gcpr > summary{font:600 12.5px/1.2 var(--f-head); letter-spacing:.09em; color:var(--fg2); min-height:40px}
 .gx.gcpr:not([open]){padding-bottom:0}
 .gq{margin:8px 0 0; padding:1px 0 1px 9px; border-left:2px solid var(--line); font-size:13.5px; line-height:1.42; color:var(--fg2)}
 .gq .gqs{display:block; margin-bottom:1px; font:600 11px/1.3 var(--f-head); letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
@@ -978,8 +967,6 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
 .gpn{display:block; margin-top:1px; font:600 12.5px/1.3 var(--f-body); color:var(--accent)}
 .gr .ticks{margin:5px 8px 0 0; vertical-align:0}
 .gnext{display:block; width:100%; margin-top:14px}
-.gx.gopp .gphase{padding-bottom:10px}
-.gx.gopp .gphase > details.gx:last-child{border-bottom:0}
 .gx.gpre{margin-top:20px; border-top:1px solid var(--line)}
 .gpre > .note{margin:0 0 6px}
 .gseq .gn{display:inline-block; min-width:20px; color:var(--accent)}
@@ -1068,7 +1055,6 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
 
 <header class="top" id="top">
   <div class="top-in" id="topIn"></div>
-  <button class="peekbar" id="peekbar" data-mine hidden></button>
   <div class="wrap"><div class="subbar" id="subbar" hidden></div></div>
 </header>
 
@@ -1183,7 +1169,7 @@ const hasOwn = (o, k) => Object.prototype.hasOwnProperty.call(o, k);
 const sess = isObj(session.get('wh-session')) ? session.get('wh-session') : {};
 const openStrats = new Set(Array.isArray(sess.open) ? sess.open : []);
 const query = Object.assign({}, isObj(sess.query) ? sess.query : {});
-const saveSession = () => session.set('wh-session', { open:[...openStrats], query, dmg:sess.dmg, mine:sess.mine, peekD:sess.peekD, gfold:sess.gfold });
+const saveSession = () => session.set('wh-session', { open:[...openStrats], query, dmg:sess.dmg, gfold:sess.gfold });
 const moreShown = new Set();                 // search groups you expanded
 let focusSearch = false;
 
@@ -1537,10 +1523,6 @@ function renderTop(){
   // a rules question to Claude, from any screen; without a key saved it opens Settings to add one
   // (where a screen has no search button, its place stays empty: the ? never sits in the top corner where search usually is)
   if(cur.s !== 'settings') right = '<span class="tbr"><button class="icon-btn" data-ask aria-label="Ask a rules question"><svg aria-hidden="true"><use href="#i-ask"/></svg></button>' + (right === '<span></span>' ? '<span class="icon-btn" aria-hidden="true"></span>' : right) + '</span>';
-  // while you look at your opponent's list (not on its home screen, which says so): whose list this is, and back to yours
-  const pa = cur.army && army(), pk = !!pa && cur.s !== 'army' && peeking(pa), pb = $('#peekbar');
-  pb.hidden = !pk;
-  pb.innerHTML = pk ? '<span>Their list: <b>' + esc(pa.name) + '</b></span><span class="pb-back"><svg aria-hidden="true"><use href="#i-back"/></svg>Back to yours</span>' : '';
   $('#topIn').innerHTML = left + '<h1 class="ttl">' + (cur.s === 'home' ? '<span class="brand">' + LOGO + 'Kunnin’ Kodex</span>' : esc(cur.s === 'unit' && army() ? army().name : titleOf(cur))) + '</h1>' + right;
 }
 function setBar(id, html){
@@ -1649,56 +1631,36 @@ async function keepAwake(){
 }
 document.addEventListener('visibilitychange', keepAwake);
 
-/* ---------- the opponent, on Find ---------- */
-// "yours" is the list you opened from the home screen; its opponent's list opens as a look at theirs, and from
-// there the same row leads back to yours (Back, not another screen on top: no ping-pong between the two)
-const mineList = () => (ONLY || armyById(sess.mine) || null);
-const peeking = a => { const m = mineList(); return !!m && m !== a && oppOf(m) === a; };
-function oppRow(a){
-  const o = oppOf(a), m = mineList();
-  const ic = i => '<svg class="ic" aria-hidden="true"><use href="#' + i + '"/></svg>';
-  if(peeking(a)) return '<button class="row" data-mine>' + ic('i-back') + '<span class="rb"><b>Back to your list</b><span>' + esc(m.name + ' · ' + factionOf(m).name) + '</span></span></button>';
-  if(o && o !== a) return '<div class="rowpair"><button class="row" data-army="' + esc(o.id) + '" data-peek>' + ic('i-units') + '<span class="rb"><b>Opponent’s list</b><span>' + esc(o.name + ' · ' + factionOf(o).name) + '</span></span>' + arrow + '</button>' +
-    '<button class="chg" data-oppick aria-label="Change your opponent">Change</button></div>';
-  return '<button class="row" data-oppick>' + ic('i-units') + '<span class="rb"><b>Opponent</b><span>' + (o === a ? 'The same list' : 'None yet: pick their list') + '</span></span>' + arrow + '</button>';
-}
-// the same choice as in Damage; a game is both ways: their list's opponent becomes this one (unless it has another)
+/* ---------- the old Damage tab's opponent row (Part D removes this) ----------
+   Only the Damage tab's own Opponent row (Set, Change, Clear) still picks a list for it; nothing else reads it. */
+const mineList = () => null;   // Part D removes this (dmMe): "yours" is the list open
+// a game is both ways: their list's opponent becomes this one (unless it has another)
 function setOpp(a, id){
   const was = oppOf(a);
   if(was && store.get('wh-opp-' + was.id) === a.id) store.set('wh-opp-' + was.id, null);
   store.set('wh-opp-' + a.id, id || null);
   if(id && id !== a.id && !oppOf(armyById(id))) store.set('wh-opp-' + id, a.id);
 }
-let oppFor = null;   // the list the opponent picker is for (the Damage tab: your own list, even while theirs is open)
+let oppFor = null;   // the list the opponent picker is for
 function oppPicker(L){
   const me = oppFor = L || army(), now = oppOf(me);
   openSheet(me.name, 'Your opponent’s list', '<div class="list">' + D.armies.map(a => '<button class="row" data-oppset="' + esc(a.id) + '"><span class="rb"><b>' + esc(a.name) + (a === me ? ' <span class="apts">(this list)</span>' : '') + '</b><span>' + esc(factionOf(a).name + ' · ' + detachmentsOf(a).map(d => d.name).join(', ')) + '</span></span>' +
     (a === now ? '<svg class="ic ok" aria-hidden="true"><use href="#i-check"/></svg>' : '') + '</button>').join('') + (now ? '<button class="row" data-oppset=""><span class="rb"><b>No opponent</b></span></button>' : '') + '</div>');
 }
-// back to your own list from your opponent's: step back through the history to your Find screen when it is there
-function toMine(){
-  const m = mineList(); if(!m) return;
-  const steps = (cur.d || 0) - (sess.peekD == null ? -1 : sess.peekD);
-  if(sess.peekD != null && steps > 0 && !EMBEDDED){ try { history.go(-steps); return; } catch(e){} }
-  go({ s:'army', army:m.id }, 'replace');
-}
 
 /* ---------- screen: one army (search + menu) ---------- */
 function screenArmy(){
   const a = army();
-  if(!ONLY && !armyById(sess.mine)){ sess.mine = a.id; sess.peekD = null; saveSession(); }   // the first list opened is yours
   const row = (go, ic, label, count) => '<button class="row" data-go="' + go + '"><svg class="ic" aria-hidden="true"><use href="#' + ic + '"/></svg><span class="rb"><b>' + label + '</b></span>' +
     (count !== '' ? '<span class="c">' + esc(count) + '</span>' : '') + arrow + '</button>';
   return '<div id="armyHead"><p class="army-sub">' + esc(faction().name + ' · ' + a.pointsUsed + ' / ' + a.points + ' pts · ' + a.battleSize) + '</p>' +
-      '<p class="army-sub">' + esc(detachments().map(d => d.name).join(' · ')) + (a.disposition ? ' <span class="dsp">· Disposition: ' + esc(a.disposition) + '</span>' : '') + '</p>' +
-      (peeking(a) ? '<p class="army-sub peek">Your opponent’s list</p>' : '') + '</div>' +
+      '<p class="army-sub">' + esc(detachments().map(d => d.name).join(' · ')) + (a.disposition ? ' <span class="dsp">· Disposition: ' + esc(a.disposition) + '</span>' : '') + '</p></div>' +
     '<label class="search"><svg aria-hidden="true"><use href="#i-search"/></svg><input id="armyQ" type="search" placeholder="Find a unit, weapon, keyword, rule…" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" aria-label="Search this army"></label>' +
     '<div id="qres"></div>' +
     '<div id="armyMenu"><div class="list">' +
       row('pregame', 'i-flag', 'Overview', '') +
       row('damage', 'i-swords', 'Damage calculator', '') +
       row('game', 'i-hourglass', 'Game tracker', '') +
-      oppRow(a) +
       row('units', 'i-units', 'Units', unitCount(a)) +
       row('strats', 'i-cards', 'Stratagems', allStratagems(a).length) +
       row('ranged', 'i-gun', 'Ranged weapons', weaponCount(a, 'ranged')) +
@@ -3861,7 +3823,7 @@ addEventListener('scroll', dmStick, { passive:true });
 /* ---------- rules questions (Claude) ----------
    A chat in a popup ("?" in the top bar, once a key is saved in Settings). It sends Anthropic's API, from
    this phone, the Core Rules with their errata and FAQs (rules/core-rules.md), the rules this app holds (the
-   glossary, the core stratagems, both lists' army and detachment rules, every datasheet), the screen it was
+   glossary, the core stratagems, your list's army and detachment rules, every datasheet), the screen it was
    opened on and the question. The key stays in this browser (store 'wh-ask'); ask.js does the calls. */
 const ASK_MODELS = [['claude-opus-5-5', 'Opus 5.5', 'best answers'], ['claude-sonnet-5-5', 'Sonnet 5.5', 'cheaper'], ['claude-haiku-5-5', 'Haiku 5.5', 'cheapest, quickest']];
 const askCfg = () => Object.assign({ key:'', model:ASK_MODELS[0][0] }, isObj(store.get('wh-ask')) ? store.get('wh-ask') : {});
@@ -3918,7 +3880,7 @@ async function askFiles(){
   if(askStyle == null) askStyle = await get('ask-style.md');
   if(askCore == null) askCore = await get('rules/core-rules.md');
 }
-async function askSystem(a, opp){
+async function askSystem(a){
   await askFiles();
   const intro = 'You answer Warhammer 40,000 rules questions at the gaming table for players using Kunnin’ Kodex, a phone reference for their army lists. The game is 11th edition, matched play.\n' +
     'Use the rules given here: the Core Rules with their errata and FAQs, and the lists’ rules in their official wording, checked against Games Workshop’s documents, Wahapedia and BSData (the data New Recruit uses). They win over anything you remember: earlier editions differ (for example, in 11th edition the benefit of cover worsens the attack’s BS by 1 instead of improving the save). Cite Core Rules sections by their numbers (e.g. 05.04).\n' +
@@ -3927,7 +3889,7 @@ async function askSystem(a, opp){
     'A question may come with the units, stratagems, abilities or rules it is about, in full as the app shows them: answer about those. The app cannot see the table (positions, what was used this turn): when it matters, say what the answer depends on.\n' +
     'Follow this answer format exactly:\n\n' + (askStyle || '');
   return [{ type:'text', text:intro }, { type:'text', text:(askCore ? askCore + '\n\n' : '') + askRules(), cache_control:{ type:'ephemeral', ttl:'1h' } },
-    { type:'text', text:armyText(a, 'The player’s list') + (opp && opp !== a ? '\n\n' + armyText(opp, 'The opponent’s list') : opp === a ? '\n\n(The opponent plays the same list.)' : '\n\n(No opponent list chosen.)'), cache_control:{ type:'ephemeral', ttl:'1h' } }];
+    { type:'text', text:armyText(a, 'The player’s list'), cache_control:{ type:'ephemeral', ttl:'1h' } }];
 }
 // On the account a question can carry at most 256 KiB of text and the Core Rules alone are about that size, so
 // Claude gets their index and looks sections up (two page functions); everything else goes in the question.
@@ -3969,9 +3931,9 @@ const ASK_TOOLS = [
     } }
 ];
 // the standing first turn of an account question: the instructions, the rules this app holds, the lists, the index
-async function askAcctBase(a, opp, tools){
+async function askAcctBase(a, tools){
   await askFiles();
-  const sys = a ? await askSystem(a, opp) : [{ text:'You answer Warhammer 40,000 (11th edition) rules questions. Use these rules; say so when they do not settle it. Cite Core Rules sections by their numbers.\n\n' + (askStyle || '') }, { text:askRules() }, { text:'' }];
+  const sys = a ? await askSystem(a) : [{ text:'You answer Warhammer 40,000 (11th edition) rules questions. Use these rules; say so when they do not settle it. Cite Core Rules sections by their numbers.\n\n' + (askStyle || '') }, { text:askRules() }, { text:'' }];
   const intro = sys[0].text, lists = sys[2].text;
   // the rules part without the Core Rules' full text (sys[1] = Core Rules + this app's quotes of them)
   const quoted = askRules();
@@ -4045,14 +4007,8 @@ function askMd(text){
   return '<div class="rt">' + out.join('') + '</div>';
 }
 function askLog(){
-  if(!askConv || !askConv.shown.length) return '<p class="note">Ask anything about the rules of these lists: what a stratagem does to this unit, whether two rules stack, what happens in which order. The app sends Claude its rules, both lists and the screen you are on. “Ask about this” on a datasheet, stratagem, ability or rule adds it to your question.</p>';
+  if(!askConv || !askConv.shown.length) return '<p class="note">Ask anything about the rules of your list: what a stratagem does to this unit, whether two rules stack, what happens in which order. The app sends Claude its rules, your list and the screen you are on. “Ask about this” on a datasheet, stratagem, ability or rule adds it to your question.</p>';
   return askConv.shown.map(x => '<div class="askm q">' + (x.refs && x.refs.length ? '<span class="askon">About ' + esc(x.refs.join(', ')) + '</span>' : '') + esc(x.q) + '</div><div class="askm a">' + (x.err ? (x.a ? askMd(x.a) : '') + '<p class="askerr">' + esc(x.err) + '</p>' : (x.a ? askMd(x.a) + (x.done ? '' : askWait('Writing…', true)) : askWait(x.status || 'Thinking…'))) + '</div>').join('');
-}
-// the two lists a question is about: the player's own and their opponent's, also while the opponent's list is open
-function askPair(){
-  const a = cur.army && army();
-  if(!a) return { a:null, opp:null };
-  return peeking(a) ? { a:mineList(), opp:a } : { a, opp:oppOf(a) };
 }
 // the top bar's ?: a question about this screen. "Ask about this" chips from an earlier screen are dropped; on the Damage tab
 // the two units of the matchup are put in, as chips the player can remove
@@ -4064,11 +4020,11 @@ function askFresh(){
 }
 function openAsk(){
   if(!askOn()){ askChoose(); return; }
-  const { a, opp } = askPair(), ctx = (a ? a.id : '') + '|' + (opp ? opp.id : '');
+  const a = cur.army ? army() : null, ctx = a ? a.id : '';
   if(!askConv || askConv.ctx !== ctx) askConv = { ctx, messages:[], shown:[] };
   const cfg = askCfg(), m = ASK_MODELS.find(x => x[0] === cfg.model) || ASK_MODELS[0], acct = askVia() === 'account';
-  openSheet('Rules question · ' + esc(m[1]) + (acct ? ' · your Claude account' : ''), a ? a.name + (opp ? ' vs ' + opp.name : '') : 'Rules question',
-    '<p class="askctx">On: ' + esc(askWhere()) + '</p>' + (a ? '<p class="note">Sent with each question: your list (' + esc(a.name) + ')' + (opp ? ' and your opponent’s (' + esc(opp.name) + ')' : ', no opponent’s list (pick one in Find)') + ', the Core Rules and this screen.</p>' : '') + '<div id="askLog">' + askLog() + '</div>' +
+  openSheet('Rules question · ' + esc(m[1]) + (acct ? ' · your Claude account' : ''), a ? a.name : 'Rules question',
+    '<p class="askctx">On: ' + esc(askWhere()) + '</p>' + (a ? '<p class="note">Sent with each question: your list (' + esc(a.name) + '), the Core Rules and this screen.</p>' : '') + '<div id="askLog">' + askLog() + '</div>' +
     '<div id="askRefs">' + askRefChips() + '</div>' +
     '<div class="askin"><textarea id="askQ" rows="3" placeholder="' + (askRefs.length ? 'Your question about these…' : 'Ask a rules question…') + '" enterkeyhint="send"></textarea>' + askBtn() + '</div>' +
     (askConv.shown.length ? '<button class="textbtn" data-asknew>New conversation</button>' : '') +
@@ -4079,7 +4035,7 @@ function openAsk(){
 async function askSend(){
   const q = $('#askQ'), text = q && q.value.trim();
   if(!text || askBusy) return;
-  const cfg = askCfg(), { a, opp } = askPair();
+  const cfg = askCfg(), a = cur.army ? army() : null;
   const refs = askRefs.splice(0), turn = { q:text, a:'', refs:refs.map(r => r.label) };
   askConv.shown.push(turn);
   const rc = $('#askRefs'); if(rc) rc.innerHTML = '';
@@ -4090,11 +4046,11 @@ async function askSend(){
   const draw = () => { const log = $('#askLog'); if(log){ log.innerHTML = askLog(); const s = $('#sheetIn'); if(s) s.scrollTop = s.scrollHeight; } };
   q.value = ''; draw();
   const ctrl = new AbortController(); askBusy = ctrl; askBtnNow();
-  if(askVia() === 'account') return askSendAcct(qtext, turn, a, opp, cfg, ctrl, draw);
+  if(askVia() === 'account') return askSendAcct(qtext, turn, a, cfg, ctrl, draw);
   try {
     const { ask } = await askMod();
     if(!a) await askFiles();
-    const system = a ? await askSystem(a, opp) : [{ type:'text', text:'You answer Warhammer 40,000 (11th edition) rules questions. Use these rules; say so when they do not settle it. Cite Core Rules sections by their numbers.\n\n' + (askStyle || '') }, { type:'text', text:(askCore ? askCore + '\n\n' : '') + askRules(), cache_control:{ type:'ephemeral', ttl:'1h' } }];
+    const system = a ? await askSystem(a) : [{ type:'text', text:'You answer Warhammer 40,000 (11th edition) rules questions. Use these rules; say so when they do not settle it. Cite Core Rules sections by their numbers.\n\n' + (askStyle || '') }, { type:'text', text:(askCore ? askCore + '\n\n' : '') + askRules(), cache_control:{ type:'ephemeral', ttl:'1h' } }];
     let last = 0;
     const r = await ask({ key:cfg.key, model:cfg.model, system, messages:askConv.messages.concat(user), signal:ctrl.signal,
       onText:snap => { turn.a = snap; const now = performance.now(); if(now - last > 120){ last = now; draw(); } } });
@@ -4108,11 +4064,11 @@ async function askSend(){
   } finally { turn.done = true; askBusy = null; draw(); askBtnNow(); }
 }
 // the account way: the conversation is kept here as text turns (Claude keeps nothing between calls)
-async function askSendAcct(text, turn, a, opp, cfg, ctrl, draw){
+async function askSendAcct(text, turn, a, cfg, ctrl, draw){
   const sample = askAcct;
   try {
     const lim = await sample.limits().catch(() => null), tools = !!(lim && lim.tools);
-    const base = await askAcctBase(a, opp, tools);
+    const base = await askAcctBase(a, tools);
     const q = { role:'user', content:text };
     askConv.acct = askConv.acct || [];
     // the oldest turns go first when the conversation outgrows what one question can carry (never the instructions)
@@ -4132,7 +4088,7 @@ async function askSendAcct(text, turn, a, opp, cfg, ctrl, draw){
     turn.err = c === 'cancelled' ? 'Stopped.' : c === 'not_granted' ? 'Claude is not allowed for this page. Allow it in the artifact’s menu (Permissions), or add an API key in Settings.' :
       c === 'rate_limited' ? 'Your Claude usage limit, or too many questions at once: try again later.' : c === 'session_expired' ? 'Sign in to Claude again, then ask again.' :
       c === 'sampling_disabled' ? 'Claude is not available for this account here. An API key in Settings works instead.' : c === 'refused' ? 'Claude declined to answer this one.' :
-      c === 'prompt_too_large' ? 'The question with both lists is too long for one go: start a new conversation.' : 'Could not reach Claude (' + ((e && e.message) || c || 'no connection') + '). Try again.';
+      c === 'prompt_too_large' ? 'The question with your list is too long for one go: start a new conversation.' : 'Could not reach Claude (' + ((e && e.message) || c || 'no connection') + '). Try again.';
     if(c === 'refused') turn.a = '';
   } finally { turn.done = true; askBusy = null; draw(); askBtnNow(); }
 }
@@ -4141,13 +4097,13 @@ function askSettings(){
   const c = askCfg();
   const models = () => ASK_MODELS.map(([id, name, sub]) => '<button class="row" data-askmodel="' + id + '" aria-pressed="' + (c.model === id) + '"><span class="rb"><b>' + name + '</b><span>' + sub + '</span></span>' + (c.model === id ? '<svg class="ic ok" aria-hidden="true"><use href="#i-check"/></svg>' : '') + '</button>').join('');
   if(askAcct) return '<div class="sec-h"><h2>Rules questions</h2></div><p class="note">Opened in Claude, rules questions (the ? in the top bar) use your Claude account: no API key needed, and they count towards your plan’s usage. The first question asks you to allow it. In the app on your home screen an API key is still the way.</p>' +
-    '<div class="list">' + models() + '</div><p class="note">Each question sends both lists, the rules this app holds and the Core Rules’ index; Claude reads the Core Rules sections it needs.</p>';
+    '<div class="list">' + models() + '</div><p class="note">Each question sends your list, the rules this app holds and the Core Rules’ index; Claude reads the Core Rules sections it needs.</p>';
   if(!c.key) return '<div class="sec-h"><h2>Rules questions</h2></div><div class="askway"><b>In Claude, on your Claude subscription</b><p class="note">Opens this same app inside the Claude app (or claude.ai), where the ? uses your Claude account. Only you, and people you share it with, can open it.</p>' + askInClaudeBtn() + '</div><div class="askway"><b>Here, with an Anthropic API key</b><p class="note">Ask from any screen (the ? in the top bar). Billed to your Anthropic Console credits (console.anthropic.com → API keys), not your subscription; the key stays in this browser on this phone and goes only to Anthropic.</p>' +
     '<div class="askkey"><input id="askKey" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="sk-ant-…" aria-label="Anthropic API key"><button class="btn" data-askkey>Save</button></div></div>';
   return '<div class="sec-h"><h2>Rules questions</h2></div><div class="list">' +
     '<div class="row"><span class="rb"><b>API key</b><span>Saved on this phone · …' + esc(c.key.slice(-4)) + '</span></span><button class="textbtn" data-askforget>Remove</button></div>' +
     ASK_MODELS.map(([id, name, sub]) => '<button class="row" data-askmodel="' + id + '" aria-pressed="' + (c.model === id) + '"><span class="rb"><b>' + name + '</b><span>' + sub + '</span></span>' + (c.model === id ? '<svg class="ic ok" aria-hidden="true"><use href="#i-check"/></svg>' : '') + '</button>').join('') +
-    '</div><p class="note">Each question sends the Core Rules (with errata and FAQs), both lists and the question; the rules part is cached for an hour, so follow-up questions cost little.</p>';
+    '</div><p class="note">Each question sends the Core Rules (with errata and FAQs), your list and the question; the rules part is cached for an hour, so follow-up questions cost little.</p>';
 }
 async function askKeySave(){
   const k = ($('#askKey') || {}).value || '';
@@ -4224,7 +4180,7 @@ function searchIndex(){
   }
   // a faction's own term (Pulse Jet Move, Supa-hazardous) only in a list a unit of which uses it, as on the Rules tab
   for(const key of Object.keys(D.rules)) if(!(D.ruleSrc || {})[key] || ruleUsers(key).length)
-    add({ kind:'Rules', title:key, sub:(D.ruleSrc || {})[key] || 'Core rule', hay:hay(key, D.rules[key], 'core rule keyword'), act:{ rule:key }, core:!(D.ruleSrc || {})[key] });
+    add({ kind:'Rules', title:key, sub:(D.ruleSrc || {})[key] || 'Core rule', hay:hay(key, D.rules[key], 'core rule keyword'), act:{ rule:key } });
   indexCache.set(a.id, out);
   return out;
 }
@@ -4248,8 +4204,6 @@ function highlight(text, toks){
   if(!parts.length) return esc(text);
   return String(text).split(new RegExp('(' + parts.join('|') + ')', 'gi')).map((p, i) => i % 2 ? '<mark>' + esc(p) + '</mark>' : esc(p)).join('');
 }
-// the other list of the game, searched too: the opponent picked on Find, or yours while you look at theirs (never the same list)
-const gameOther = a => { if(peeking(a)) return mineList(); const o = oppOf(a); return o && o !== a ? o : null; };
 function renderFinder(){
   const res = $('#qres');
   if(!res) return;
@@ -4268,31 +4222,28 @@ function renderFinder(){
   // nothing found: forgive a plural and a typo or two ("rubrics", "ghazkull")
   const close = list => list.filter(e => { const words = e.words || (e.words = [...new Set(e.hay.split(/[^a-z0-9]+/).filter(Boolean))]);
     return alts.every(a => a.some(t => words.some(w => near(w, t)))); }).map(e => Object.assign({ score:4 }, e));
-  // the other list's units and rules, after this list's and marked whose (the core rules both lists share are this list's)
-  const O = gameOther(army()), oIndex = O ? inArmy(O, () => searchIndex()).filter(e => !e.core) : [];
-  let hits = found(searchIndex()), oHits = found(oIndex);
-  if(!hits.length && !oHits.length){ hits = close(searchIndex()); oHits = close(oIndex); }
+  let hits = found(searchIndex());
+  if(!hits.length) hits = close(searchIndex());
   for(const [re, key] of faction().aliases || []) if(re.test(q)){
     const r = hits.find(e => e.kind === 'Rules' && e.act.rule === key) || searchIndex().find(e => e.kind === 'Rules' && e.act.rule === key);
     if(r){ const i = hits.indexOf(r); if(i >= 0) hits.splice(i, 1); hits.unshift(Object.assign({}, r, { score:-1 })); }
   }
-  if(!hits.length && !oHits.length){ res.innerHTML = '<div class="empty">Nothing in ' + esc(army().name) + (O ? ' or ' + esc(O.name) : '') + ' matches “' + esc(q) + '”.</div>'; return; }
+  if(!hits.length){ res.innerHTML = '<div class="empty">Nothing in ' + esc(army().name) + ' matches “' + esc(q) + '”.</div>'; return; }
   const groupsOf = list => { const g = KIND_ORDER.map(k => ({ k, list:list.filter(e => e.kind === k).sort((x, y) => x.score - y.score) })).filter(g => g.list.length);
     return g.sort((x, y) => x.list[0].score - y.list[0].score || KIND_ORDER.indexOf(x.k) - KIND_ORDER.indexOf(y.k)); };
   const words = q.split(/\s+/);
-  const whose = O && O === mineList() ? 'Your' : 'Their';
-  const html = (g, L) => {
-    const mk = (L ? 'o:' : '') + g.k, limit = moreShown.has(mk) ? Infinity : 6;
-    return '<div class="rg' + (L ? ' oth' : '') + '"><div class="lbl">' + (L ? esc(whose + ' ' + g.k.toLowerCase() + ' (' + L.name + ')') : g.k) + ' · ' + g.list.length + '</div>' +
+  const html = g => {
+    const limit = moreShown.has(g.k) ? Infinity : 6;
+    return '<div class="rg"><div class="lbl">' + g.k + ' · ' + g.list.length + '</div>' +
       g.list.slice(0, limit).map(e => {
         const act = e.act;
-        const attrs = (L ? 'data-their="' + esc(L.id) + '" ' : '') + (act.strat ? 'data-strat="' + esc(act.strat) + '"' : act.rule ? 'data-rule="' + esc(act.rule) + '"' : act.ability ? 'data-ability="' + esc(act.ability) + '"' :
+        const attrs = (act.strat ? 'data-strat="' + esc(act.strat) + '"' : act.rule ? 'data-rule="' + esc(act.rule) + '"' : act.ability ? 'data-ability="' + esc(act.ability) + '"' :
           act.enh ? 'data-enh="' + esc(act.enh) + '"' : 'data-unit="' + esc(act.unit) + '"' + (act.sec ? ' data-sec="' + esc(act.sec) + '"' : ''));
         return '<button class="res" ' + attrs + '><b>' + highlight(e.title, words) + '</b>' + (e.s1 ? '<span class="s1">' + esc(e.s1) + '</span>' : '') + '<span>' + esc(e.sub) + '</span></button>';
       }).join('') +
-      (g.list.length > limit ? '<button class="more" data-more="' + esc(mk) + '">Show ' + (g.list.length - limit) + ' more</button>' : '') + '</div>';
+      (g.list.length > limit ? '<button class="more" data-more="' + esc(g.k) + '">Show ' + (g.list.length - limit) + ' more</button>' : '') + '</div>';
   };
-  res.innerHTML = groupsOf(hits).map(g => html(g, null)).join('') + groupsOf(oHits).map(g => html(g, O)).join('');
+  res.innerHTML = groupsOf(hits).map(html).join('');
 }
 
 /* ---------- screen: unit list ---------- */
@@ -4950,8 +4901,7 @@ function screenPregame(){
   const enh = units.flatMap(u => [u.enhancement, u.upgrade].filter(Boolean).map(n => { const d = detachments().find(x => (x.enhancements || []).some(e => e.name === n)), e = d && d.enhancements.find(x => x.name === n);
     return (d ? linkTo('enh', d.id + '|' + n, n) : esc(n)) + (n === u.upgrade ? ' <span class="from">(upgrade)</span>' : '') + (e && e.pts ? ' <span class="from">' + e.pts + ' pts</span>' : '') + ' on ' + (n === u.enhancement && u.enhOn ? linkTo('unit', u.id, u.enhOn) : n === u.upgrade && u.leads ? linkTo('unit', u.id, u.leads) : linkTo('unit', u.id, ownName(u) + unitNo(u))); }));
   const led = units.filter(u => u.leads).flatMap(u => charsOf(u).map((c, i) => (i ? linkTo('unit', u.id, c.name) : nameLink(u)) + (c.support ? ' supports ' : ' leads ') + esc(u.leads) + (u.copies > 1 ? ' <span class="from">×' + u.copies + ' units</span>' : '')));
-  // the opponent's list, opened from yours (Find's Opponent's list row): theirs, not yours
-  let h = sec(peeking(a) ? 'Their list' : 'Your list',
+  let h = sec('Your list',
     row('Warlord', warlord.map(u => u.warlordOn ? linkTo('unit', u.id, u.warlordOn) + ' <span class="from">(' + esc(unitLabel(u)) + ')</span>' : unitLink(u)).join(', ')) +
     row('Enhance&shy;ments', enh.join('<br>')) +
     row('Attached', led.join('<br>')) +
@@ -5023,14 +4973,13 @@ function screenPregame(){
 
 /* ---------- screen: the Game tracker (a row on Find, like the Damage calculator) ----------
    Everything for running a game, and only here: the battle round, whose turn and the phase; both players' CP and VP; the
-   choices this list's rules ask for (the Oath, Blessings, Doctrina Imperatives…), kept for the game; what this list (and,
-   folded, the opponent's) can do in the phase shown; the Event Companion's mission sequence with this list's numbers.
+   choices this list's rules ask for (the Oath, Blessings, Doctrina Imperatives…), kept for the game; what this list can do
+   in the phase shown; the Event Companion's mission sequence with this list's numbers.
    Every rules sentence is a quote (data.js GAME, or the list's own rules); what the screen works out is marked as an app note.
-   The game is kept on this phone under the list you opened (yours); your opponent's list, opened from yours, shows the same
-   game from their side. Its uses per battle are the Overview's ticks (the same storage), which its New game also clears.
+   The game is kept on this phone under the list. Its uses per battle are the Overview's ticks (the same storage), which its
+   New game also clears.
    Nothing here changes a datasheet or any other screen. */
-const gameOwner = a => peeking(a) ? mineList() : a;   // whose game this is: your list's, also when you look at your opponent's
-const gameKey = a => 'wh-game-' + gameOwner(a).id;
+const gameKey = a => 'wh-game-' + a.id;
 // { round 1–5, half 0|1 (the first or the second turn of the round), first: the side that takes the first turn, ph: the phase,
 //   cp / vp per side, picks[side][choice key][round, or 0 for the battle] = { group: option name(s), 'rolled:group', 'target:group' } }
 function gameOf(a){
@@ -5040,15 +4989,12 @@ function gameOf(a){
     cp:two(o.cp, 99), vp:two(o.vp, 999), picks:isObj(o.picks) ? o.picks : {} };
 }
 const gameSave = (a, g) => store.set(gameKey(a), g);
-const gSide = a => a === gameOwner(a) ? 'mine' : 'opp';            // the side of the list on screen
 const gOther = s => s === 'mine' ? 'opp' : 'mine';
 const gTurnSide = g => g.half ? gOther(g.first) : g.first;           // whose turn it is
-const gList = (a, s) => s === 'mine' ? gameOwner(a) : oppOf(gameOwner(a)) || null;   // a side's list (none picked yet: null)
-// the Game tracker's New game: this game's round, turn, CP, VP and choices, and the uses per battle of both its lists (the
-// Overview's tick boxes, the same storage); returns the undo. The Overview's own New game clears its list's uses per battle only
+// the Game tracker's New game: this game's round, turn, CP, VP and choices, and the list's uses per battle (the Overview's
+// tick boxes, the same storage); returns the undo. The Overview's own New game clears the uses per battle only
 function newGame(a){
-  const o = gameOwner(a), opp = oppOf(o);
-  const keys = [gameKey(a), 'wh-used-' + o.id].concat(opp && opp !== o ? ['wh-used-' + opp.id] : []);
+  const keys = [gameKey(a), 'wh-used-' + a.id];
   const was = keys.map(k => [k, store.get(k, null)]);
   store.set(keys[0], null); for(const k of keys.slice(1)) store.set(k, []);
   return () => { for(const [k, v] of was) store.set(k, v); };
@@ -5159,15 +5105,6 @@ function gcPick(c, g, side){
   return o ? { v:{ [gr.name]:o.name }, since:'start', all } : { v:{}, since:null, all };
 }
 const gcNames = v => [].concat(v == null ? [] : v);
-// the units a picked option has the player select from the opponent's army ("select one CHARACTER model in your opponent's
-// army", "select one enemy unit"), when their list is picked
-function gcTargets(text, opp){
-  if(!opp) return null;
-  const t = String(text || '').replace(/\*\*/g, ''), m = /\bselect one (?:([A-Z][A-Z -]*[A-Z]) )?(?:model|unit) (?:in|from) your opponent[’']s army\b|\bselect one (enemy) unit\b/i.exec(t);
-  if(!m) return null;
-  const kw = m[1] && m[1] === m[1].toUpperCase() ? m[1] : '';
-  return inArmy(opp, () => opp.units.filter(u => !kw || hasKw(u, kw)).map(u => ({ id:u.id, name:shortName(u) })));
-}
 
 // ---- what a list can do in a phase ----
 // A rule, ability or stratagem is in a phase of a turn when its phase tags say so (ph/phases, turn/turns, and an army
@@ -5248,10 +5185,6 @@ const gq = (src, text) => '<div class="gq"><span class="gqs">' + src + '</span>'
 const gNote = t => '<p class="gnote">App note, not rules text: ' + t + '</p>';
 const gStepper = (k, side, v) => '<span class="gst"><button data-gstep="' + k + '|' + side + '|-1" aria-label="' + k.toUpperCase() + ' minus 1">−</button><b class="num">' + v +
   '</b><button data-gstep="' + k + '|' + side + '|1" aria-label="' + k.toUpperCase() + ' plus 1">+</button></span>';
-// a link to a rule of a list: as the other screens open it when the list is the one on screen, else its popup from that list
-// (dmShowIn, as the Damage tab opens the other side's rules); a unit of the other list is not a link (it would open a datasheet
-// of that list as if it were this one)
-const gLink = (L, t, v, label) => L.id === cur.army ? linkTo(t, v, label) : t === 'unit' ? esc(label) : '<span class="link" role="button" tabindex="0" data-dmrule="' + esc(t + '|' + L.id + '|' + v) + '">' + esc(label) + '</span>';
 // the sentence of a rule that gives CP ("…, you gain 1CP"), from its own text (not its FAQ or errata lines)
 const G_CP = /[^.\n]*\b(?:gain|gains)\b[^.\n]*(?:\dCP|\bCP\b|Command Points?)[^.\n]*\.?/i;
 function gameCpRules(L){
@@ -5265,27 +5198,26 @@ function gameCpRules(L){
     for(const e of by.values()) out.push(Object.assign(e, { src:labelList(e.units) }));
     return out;
   });
-  return out.map(e => Object.assign(e, { link:gLink(L, e.t, e.v, e.name) }));   // linked from the list on screen
+  return out.map(e => Object.assign(e, { link:linkTo(e.t, e.v, e.name) }));
 }
 const gStepName = ([num, title]) => esc(title) + ' <span class="gnum">' + num + '</span>';
 // the rows of a phase: links to the full texts, the uses per battle as the Overview's ticks
 function gRows(L, items, picked, pickOf){
-  const own = L.id === cur.army;
   const now = e => { const n = pickOf ? pickOf(e) : ''; return n ? '<span class="gpn">Picked: ' + esc(n) + '</span>' : ''; };
   return items.map(e => {
-    if(e.kind === 'strat'){ const s = e.s, pb = own && perBattle(s);
-      return '<div class="gr gs' + (e.usable ? '' : ' none') + '"><span class="cp' + (s.cp >= 2 ? ' hot' : '') + '">' + esc(s.cp) + '<small>CP</small></span><span class="grb">' + gLink(L, 'strat', s.id, s.name) +
+    if(e.kind === 'strat'){ const s = e.s, pb = perBattle(s);
+      return '<div class="gr gs' + (e.usable ? '' : ' none') + '"><span class="cp' + (s.cp >= 2 ? ' hot' : '') + '">' + esc(s.cp) + '<small>CP</small></span><span class="grb">' + linkTo('strat', s.id, s.name) +
         (s.gist ? '<span class="sg">' + esc(s.gist) + '</span>' : '') + (e.usable ? '' : '<span class="from">' + esc(inArmy(L, () => usersLine(s))) + '</span>') + (pb ? ticks('s:' + s.id, pb.n, '', s.name) : '') + '</span></div>'; }
-    if(e.kind === 'rule'){ const r = e.x, pb = own && perBattle(r, true) && !/per battle\b(?! round)[^.)]*\bper unit\b/i.test(r.text || '');
+    if(e.kind === 'rule'){ const r = e.x, pb = perBattle(r, true) && !/per battle\b(?! round)[^.)]*\bper unit\b/i.test(r.text || '');
       // the Overview's boxes: "You can only select each of these abilities once per battle" (Kindred Sorcery) has one per ability
       const each = pb && /\beach of these [a-z ]+ once per battle/i.test(r.text) && r.table;
       const boxes = !pb ? '' : each ? r.table.map(o => ticks('r:' + r.name + ':' + o[0], 1, o[0], o[0])).join('') : ticks('r:' + r.name, pb.n, '', r.name);
-      return '<div class="gr"><span class="grb">' + gLink(L, 'rule', e.name, e.name) + ' <span class="from">· ' + esc(e.src) + '</span>' + now(e) + (boxes ? '<span class="gtk">' + boxes + '</span>' : '') + '</span></div>'; }
-    const p = picked ? picked(e.ab, e.units) : null, pb = own && perBattle(e.ab) && !naReason(e.ab);
+      return '<div class="gr"><span class="grb">' + linkTo('rule', e.name, e.name) + ' <span class="from">· ' + esc(e.src) + '</span>' + now(e) + (boxes ? '<span class="gtk">' + boxes + '</span>' : '') + '</span></div>'; }
+    const p = picked ? picked(e.ab, e.units) : null, pb = perBattle(e.ab) && !naReason(e.ab);
     const who = e.ab.who && (p !== null || !e.src.includes(e.ab.who.replace(/: pick one$/, ''))) ? e.ab.who.replace(/: pick one$/, '') : '';
     const boxes = !pb ? '' : perBattle(e.ab).army ? abilityTicks(e.ab, e.units[0]) : e.units.flatMap(u => Array.from({ length:u.copies || 1 }, (_, i) =>
       ticks(copyKey(e.ab, u, i), perBattle(e.ab).n, e.units.length > 1 || (u.copies || 1) > 1 ? shortName(u) + ((u.copies || 1) > 1 ? ' ' + (i + 1) : '') : '', e.ab.name))).join('');
-    return '<div class="gr' + (p === false ? ' none' : '') + '"><span class="grb">' + gLink(L, 'ability', e.key, e.ab.name) + ' <span class="from">· ' + esc(e.src) + '</span>' +
+    return '<div class="gr' + (p === false ? ' none' : '') + '"><span class="grb">' + linkTo('ability', e.key, e.ab.name) + ' <span class="from">· ' + esc(e.src) + '</span>' +
       (who ? ' <span class="tg m">' + esc(who) + (p === true ? ': picked' : p === false ? ': not picked' : '') + '</span>' : '') + now(e) + (boxes ? '<span class="gtk">' + boxes + '</span>' : '') + '</span></div>';
   }).join('');
 }
@@ -5315,12 +5247,11 @@ function gPhaseHtml(L, g, ph, turn, picked, opts, pickOf){
   return h || '<p class="note">Nothing of this list is tagged for this phase.</p>';
 }
 function screenGame(){
-  const a = army(), g = gameOf(a), me = gSide(a), them = gOther(me), opp = gList(a, them);
+  const a = army(), g = gameOf(a), me = 'mine', them = 'opp';
   const fold = isObj(sess.gfold) ? sess.gfold : {};
   const turnMe = gTurnSide(g) === me;
-  // each side by its list's name: yours, or your opponent's (when you look at theirs, theirs is the one on screen)
-  const side = s => { const L = gList(a, s);
-    return '<span class="gsd"><b>' + esc(L ? L.name : 'Opponent') + '</b><span>' + (!L ? '<span class="link" role="button" tabindex="0" data-oppick>pick their list</span>' : s === 'mine' ? 'your list' : 'your opponent’s list') + '</span></span>'; };
+  // each side: this list, and the opponent (their numbers only)
+  const side = s => '<span class="gsd"><b>' + (s === me ? esc(a.name) : 'Opponent') + '</b>' + (s === me ? '<span>your list</span>' : '') + '</span>';
   // this game: both players' CP and VP, and the rules that give CP
   let h = '<div class="sec-h"><h2>This game</h2><button class="textbtn" data-gnew>New game</button></div>' +
     '<div class="gsc"><span></span>' + side(me) + side(them) +
@@ -5329,7 +5260,7 @@ function screenGame(){
   const cpLine = (L, label) => { const rs = gameCpRules(L); return rs.length ? '<div class="gq"><span class="gqs">' + label + '</span>' + rs.map(r => '<p>' + r.link + ' <span class="from">· ' + esc(r.src) + '</span>: “' + inline(r.s) + '”</p>').join('') + '</div>' : ''; };
   h += '<details class="gx gcpr"' + (fold.cp !== false ? ' open' : '') + ' data-gfold="cp"><summary><span>Command points</span>' + chev + '</summary>' +
     gq(esc(D.game.cp[0].num + ' ' + D.game.cp[0].title), D.game.cp[0].text) + gq('Event Companion · ' + esc(D.game.cp[1].title), D.game.cp[1].text) +
-    cpLine(a, 'This list') + (opp && opp !== a ? cpLine(opp, 'Their list') : '') + '</details>';
+    cpLine(a, 'This list') + '</details>';
 
   // choices this game
   const choices = gameChoices(a);
@@ -5350,7 +5281,7 @@ function screenGame(){
     return cs[0].groups.map(gr => gcNames(v[gr.name]).map(n => (gr.name ? gr.name + ' ' : '') + n).join(', ')).filter(Boolean).join(' · ');
   };
   if(choices.length){
-    h += '<div class="sec-h"><h2>Choices this game</h2></div><div class="gcs">' + choices.map(c => gChoiceHtml(c, g, me, opp)).join('') + '</div>';
+    h += '<div class="sec-h"><h2>Choices this game</h2></div><div class="gcs">' + choices.map(c => gChoiceHtml(c, g, me)).join('') + '</div>';
   }
 
   // this phase: the battle round, whose turn and the phase, and what this list can do then
@@ -5363,20 +5294,16 @@ function screenGame(){
     '<p class="gsub">' + (g.half ? 'The second turn of this battle round' : 'The first turn of this battle round') + '</p>' +
     '<div class="gphs" role="group" aria-label="Phase">' + PHASES.map(([k, label, short]) => '<button class="chip' + (k === ph ? ' on' : '') + '" data-gset="ph|' + k + '" aria-pressed="' + (k === ph) + '"><span class="lf">' + label + '</span><span class="ls">' + short + '</span></button>').join('') + '</div>' +
     '<div class="gphase">' + gPhaseHtml(a, g, ph, turn, pickedOf, { cp:true, fold }, pickOf) + '</div>';
-  if(opp){
-    const theirs = gPhaseHtml(opp, g, ph, turnMe ? 'opp' : 'your', null, { fold:{} });
-    h += '<details class="gx gopp"' + (fold.opp ? ' open' : '') + ' data-gfold="opp"><summary><span>' + esc(opp.name) + ' in this phase</span>' + chev + '</summary><div class="gphase">' + theirs + '</div></details>';
-  }
   const pi = PHASES.findIndex(([k]) => k === ph), last = pi === PHASES.length - 1, end = last && g.half === 1 && g.round >= 5;
   const next = !last ? PHASE_NAME[PHASES[pi + 1][0]] + ' phase' : g.half === 0 ? (turnMe ? 'their' : 'your') + ' turn' : 'battle round ' + (g.round + 1);
   h += end ? gq('Event Companion · 13 End the Battle', D.game.sequence[12][2]) : '<button class="btn2 gnext" data-gnext>Next: ' + esc(next) + ' ›</button>';
 
-  // before the battle: the Event Companion's mission sequence, with both lists' numbers where a step needs them
-  h += '<details class="gx gpre"' + (fold.pre ? ' open' : '') + ' data-gfold="pre"><summary><span>Before the battle</span>' + chev + '</summary>' + gPregameHtml(a, opp, g, me) + '</details>';
+  // before the battle: the Event Companion's mission sequence, with this list's numbers where a step needs them
+  h += '<details class="gx gpre"' + (fold.pre ? ' open' : '') + ' data-gfold="pre"><summary><span>Before the battle</span>' + chev + '</summary>' + gPregameHtml(a, g, me) + '</details>';
   return '<div class="game">' + h + '</div>';
 }
 // one choice: its rule, when the pick is made and for how long, the options as chips, then the text of the pick, quoted
-function gChoiceHtml(c, g, side, opp){
+function gChoiceHtml(c, g, side){
   const P = gcPick(c, g, side), v = P.v, R = gcRound(c, g, side);
   const pick = (grp, opt) => esc(JSON.stringify([c.key, R, grp, opt || '']));
   const used = c.once && !c.unit ? new Set(c.groups.flatMap(gr => gr.opts.filter(o => usedSet().has('r:' + c.name + ':' + o.row + '#0')).map(o => o.name))) : new Set();
@@ -5393,9 +5320,6 @@ function gChoiceHtml(c, g, side, opp){
       (c.rolled ? '<button class="chip rl' + (v['rolled:' + gr.name] ? ' on' : '') + '" data-gpick="' + pick('rolled:' + gr.name) + '" aria-pressed="' + !!v['rolled:' + gr.name] + '">Rolled</button>' : '') + '</div>';
     for(const o of gr.opts.filter(o => on.includes(o.name))){
       h += '<div class="gq gpk"><span class="gqs">' + esc((gr.name ? gr.name + ' ' : '') + o.name + (o.title ? ' · ' + o.title : '')) + '</span>' + rt(o.text) + '</div>';
-      const tg = gcTargets(o.text, opp);
-      if(tg && tg.length){ const t = v['target:' + gr.name];
-        h += '<div class="chips gtg" role="group" aria-label="Their unit"><span class="gcg">Their unit</span>' + tg.map(x => '<button class="chip' + (t === x.id ? ' on' : '') + '" data-gpick="' + pick('target:' + gr.name, x.id) + '" aria-pressed="' + (t === x.id) + '">' + esc(x.name) + '</button>').join('') + '</div>'; }
     }
   }
   if(c.state) h += '<div class="chips"><button class="chip' + (v['state'] ? ' on' : '') + '" data-gpick="' + pick('state') + '" aria-pressed="' + !!v['state'] + '">' + esc(c.state) + '</button></div>';
@@ -5407,19 +5331,18 @@ function gChoiceHtml(c, g, side, opp){
   return h + '</div>';
 }
 // a chip of a choice tapped: its option picked for the battle or this battle round (tapped again: unpicked); with "up to two" a
-// third pick replaces the first; Rolled, the state (Honoured) and their unit go on and off. The options a rule lets you pick
+// third pick replaces the first; Rolled and the state (Honoured) go on and off. The options a rule lets you pick
 // once per battle (Kindred Sorcery) are the Overview's ticks for them: picking one ticks it, unpicking it unticks it
 function gamePick(a, spec){
   let k, R, grp, opt;
   try { [k, R, grp, opt] = JSON.parse(spec); } catch(e){ return; }
-  const g = gameOf(a), side = gSide(a), c = gameChoices(a).find(x => x.key === k);
+  const g = gameOf(a), side = 'mine', c = gameChoices(a).find(x => x.key === k);
   if(!c) return;
   const P = g.picks[side] = isObj(g.picks[side]) ? g.picks[side] : {}, all = P[k] = isObj(P[k]) ? P[k] : {}, v = all[R] = isObj(all[R]) ? all[R] : {};
-  if(/^(rolled|target):|^state$/.test(grp)){ const x = opt || true; if(v[grp] === x) delete v[grp]; else v[grp] = x; }
+  if(/^rolled:|^state$/.test(grp)){ const x = opt || true; if(v[grp] === x) delete v[grp]; else v[grp] = x; }
   else {
     const was = gcNames(v[grp]), next = was.includes(opt) ? was.filter(x => x !== opt) : c.max > 1 ? was.concat(opt).slice(-c.max) : [opt];
     if(next.length) v[grp] = c.max > 1 ? next : next[0]; else delete v[grp];
-    if(!next.includes(opt) || c.max === 1) delete v['target:' + grp];   // another option: its unit is picked again
     const gr = c.groups.find(x => x.name === grp);
     if(c.once && gr){ const used = usedSet();
       for(const o of gr.opts){ const tk = 'r:' + c.name + ':' + o.row + '#0', other = Object.entries(all).some(([r, x]) => r !== R && gcNames((x || {})[grp]).includes(o.name));
@@ -5432,9 +5355,9 @@ function gamePick(a, spec){
 // a list's units with a core rule that every model of the unit has (Deep Strike 24.09, Scouts 24.31, Infiltrators: "if every
 // model in a unit has this ability"), as the Overview counts them
 const gEvery = (L, test) => inArmy(L, () => L.units.filter(u => unitRules(u).some(test) && !Object.keys(u.partialRules || {}).some(test)));   // (partialRules: label → the model that has it)
-function gPregameHtml(a, opp, g, me){
-  const lists = [[a, 'This list']].concat(opp && opp !== a ? [[opp, 'Their list']] : []);
-  const unitsLine = (L, us, extra) => us.map(u => gLink(L, 'unit', u.id, inArmy(L, () => gUnitName(u))) + (u.copies > 1 ? ' <span class="from">×' + u.copies + '</span>' : '') + (extra ? ' <span class="from">' + esc(extra(u)) + '</span>' : '')).join(', ');
+function gPregameHtml(a, g, me){
+  const lists = [[a, 'This list']];
+  const unitsLine = (L, us, extra) => us.map(u => linkTo('unit', u.id, gUnitName(u)) + (u.copies > 1 ? ' <span class="from">×' + u.copies + '</span>' : '') + (extra ? ' <span class="from">' + esc(extra(u)) + '</span>' : '')).join(', ');
   const per = (fn) => lists.map(([L, label]) => { const t = fn(L); return t ? '<p class="gpl"><span class="il">' + label + '</span>' + t + '</p>' : ''; }).join('');
   const add = {
     7:() => { const line = D.rules['Strategic Reserves'].split('\n').find(l => /50% of your points limit/.test(l));
@@ -5443,11 +5366,11 @@ function gPregameHtml(a, opp, g, me){
         return gNote(esc(L.name) + ': points limit ' + L.points + ' pts (' + esc(L.battleSize) + '); 50% of it is ' + Math.floor(L.points / 2) + ' pts.') +
           (ds.length ? '<span class="gpu">Deep Strike: ' + unitsLine(L, ds, u => u.pts + ' pts' + (u.copies > 1 ? ' each, ×' + u.copies : '')) + (ds.length > 1 ? ' <span class="from">(' + pts + ' pts)</span>' : '') + '</span>' : ''); }); },
     8:() => per(L => { const tt = L.units.filter(u => hasKw(u, 'Titanic')), inf = gEvery(L, r => /^infiltrators/i.test(r));
-      return [tt.length ? '<span class="gpu">TITANIC: ' + unitsLine(L, tt) + '</span>' : '', inf.length ? '<span class="gpu">' + gLink(L, 'rule', 'Infiltrators', 'Infiltrators') + ': ' + unitsLine(L, inf) + '</span>' : ''].join(''); }),
-    10:() => '<div class="chips" role="group" aria-label="Who takes the first turn"><span class="gcg">First turn</span>' + [me, gOther(me)].map(s => { const L = gList(a, s), on = g.first === s;
-      return '<button class="chip' + (on ? ' on' : '') + '" data-gset="first|' + s + '" aria-pressed="' + on + '">' + esc(L ? L.name : 'Opponent') + '</button>'; }).join('') + '</div>',
+      return [tt.length ? '<span class="gpu">TITANIC: ' + unitsLine(L, tt) + '</span>' : '', inf.length ? '<span class="gpu">' + linkTo('rule', 'Infiltrators', 'Infiltrators') + ': ' + unitsLine(L, inf) + '</span>' : ''].join(''); }),
+    10:() => '<div class="chips" role="group" aria-label="Who takes the first turn"><span class="gcg">First turn</span>' + [me, gOther(me)].map(s => { const on = g.first === s;
+      return '<button class="chip' + (on ? ' on' : '') + '" data-gset="first|' + s + '" aria-pressed="' + on + '">' + (s === me ? esc(a.name) : 'Opponent') + '</button>'; }).join('') + '</div>',
     11:() => per(L => { const sc = gEvery(L, r => /^scouts/i.test(r));
-      return sc.length ? '<span class="gpu">' + gLink(L, 'rule', 'Scouts', 'Scouts') + ': ' + unitsLine(L, sc, u => inArmy(L, () => unitRules(u).filter(r => /^scouts/i.test(r)).join(', '))) + '</span>' : ''; })
+      return sc.length ? '<span class="gpu">' + linkTo('rule', 'Scouts', 'Scouts') + ': ' + unitsLine(L, sc, u => inArmy(L, () => unitRules(u).filter(r => /^scouts/i.test(r)).join(', '))) + '</span>' : ''; })
   };
   const titanic = lists.some(([L]) => L.units.some(u => hasKw(u, 'Titanic'))), infil = lists.some(([L]) => gEvery(L, r => /^infiltrators/i.test(r)).length);
   const scouts = lists.some(([L]) => gEvery(L, r => /^scouts/i.test(r)).length);
@@ -5759,14 +5682,8 @@ document.addEventListener('click', e => {
   if(el.hasAttribute('data-close')){ closeSheet(); return; }
   if(el.hasAttribute('data-back')){ back(); return; }
   if(el.hasAttribute('data-find')){ focusSearch = true; go({ s:'army', army:army().id }); return; }
-  if(el.hasAttribute('data-mine')){ toMine(); return; }
-  if(el.hasAttribute('data-oppick')){ oppPicker(); return; }
-  if(ds.oppset != null){ setOpp(oppFor || army(), ds.oppset); oppFor = null; closeSheet(); rerender(); return; }
+  if(ds.oppset != null){ setOpp(oppFor || army(), ds.oppset); oppFor = null; closeSheet(); rerender(); return; }   // Part D removes this (the old Damage tab's picker)
   if(ds.army){ const next = { s:'army', army:ds.army };
-    // a list opened from the home screen is yours; the opponent's list opened from yours is a look at theirs
-    if(cur.s === 'home') { sess.mine = ds.army; sess.peekD = null; }
-    if(el.hasAttribute('data-peek')) sess.peekD = cur.d || 0;
-    saveSession();
     if(inSheet){ hideSheet(); go(next, 'sheet'); } else go(next); return; }   // an army opens on Find: search, Overview and every list
   if(el.hasAttribute('data-settings')){ go({ s:'settings' }); return; }
   if(ds.hfopen){ showHomeFilter(ds.hfopen); return; }
@@ -5854,11 +5771,6 @@ document.addEventListener('click', e => {
     if(ds.dmrr){ const [k, v] = ds.dmrr.split('|'); man[k] = v; }
     saveSession(); rerender(); return;
   }
-  // a Find result from the other list of the game: its datasheet opens in that list (as from the Opponent's list row, Back
-  // returns here); its rules, stratagems and abilities open as that list has them, the app staying on this list
-  if(ds.their && !inSheet){ const L = armyById(ds.their); if(!L) return;
-    if(ds.unit){ if(L !== mineList()){ sess.peekD = cur.d || 0; saveSession(); } go({ s:'unit', army:L.id, unit:ds.unit }); if(ds.sec) jumpTo(ds.sec, true); return; }
-    dmShowIn(L, () => ds.strat ? showStrat(ds.strat) : ds.rule ? showRule(ds.rule) : ds.ability ? showAbility(ds.ability) : showEnhancement(ds.enh)); return; }
   if(ds.go){ go({ s:ds.go, army:army().id }); return; }
   if(ds.unit){
     const next = { s:'unit', army:army().id, unit:ds.unit };
@@ -5897,7 +5809,7 @@ document.addEventListener('click', e => {
     toastUndo('New game: uses per battle cleared', () => { store.set(key, was); rerender(); }); return; }
   // the Game tracker
   if(el.hasAttribute('data-gnew')){ const undo = newGame(army()); rerender();
-    toastUndo('New game: round, CP, VP, choices and both lists’ uses per battle cleared', () => { undo(); rerender(); }); return; }
+    toastUndo('New game: round, CP, VP, choices and uses per battle cleared', () => { undo(); rerender(); }); return; }
   if(ds.gstep){ const [k, side, d] = ds.gstep.split('|'), a = army(), g = gameOf(a);
     g[k][side] = Math.max(0, Math.min(k === 'cp' ? 99 : 999, g[k][side] + +d)); gameSave(a, g);
     const b = el.parentElement.querySelector('b'); if(b) b.textContent = g[k][side]; return; }

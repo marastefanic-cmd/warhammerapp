@@ -20,13 +20,13 @@ rules as tick boxes, a rule counting only when every word of its footnote is und
 the 11th edition attack sequence out 10,000 times with seeded dice). **Game tracker** (a row on Find, like the Damage
 calculator, and the only place anything for running a game shows): battle round, whose turn and phase; both players' CP
 and VP; the choices this list's rules ask for, such as the Oath, Blessings or Doctrina, found in the rules' own words and
-kept for the game; what this list and the opponent's can do in the phase shown, by the Core Rules' phase steps; the Event
-Companion's mission sequence with both lists' numbers. Every rules sentence is quoted, the Core Rules' and Event
+kept for the game; what this list can do in the phase shown, by the Core Rules' phase steps; the Event
+Companion's mission sequence with this list's numbers. Every rules sentence is quoted, the Core Rules' and Event
 Companion's from `data.js` GAME, checked by `verify/texts.js`. It shares the Overview's uses-per-battle ticks and its New game.
 
 **Rules questions** (the ? in the top bar, once an Anthropic API key is saved in Settings): a chat with
 Claude that is sent the Core Rules with their errata and FAQs (`rules/core-rules.md`), the rules this app
-holds, both lists (yours and the opponent picked in Damage), the screen it was opened on and the question.
+holds, your list, the screen it was opened on and the question.
 The rules part is cached for an hour. The key stays in that browser on that phone and goes only to
 api.anthropic.com; the page holds no key, so the public site cannot use anyone's. `ask-style.md` says how
 answers should look (edit it to change them). `ask.js` makes the calls with the official SDK, bundled in

@@ -19,7 +19,7 @@ The first line is the answer, usable at the table without reading further:
 - **Reasoning:** only when the answer is not written in the rules but follows from them: each step, and the rule
   it rests on. Keep it apart from the quotes, so it is clear what is the rules' text and what is worked out.
 - **Timing**, when it matters: in which phase and step it happens, and in what order.
-- Use the two lists: name the actual units and their values, not generic ones. A value marked "already
+- Use the list: name the actual units and their values, not generic ones. A value marked "already
   includes" a rule already has that bonus in it.
 
 ## 3. When the rules don't settle it
