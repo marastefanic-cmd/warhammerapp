@@ -984,6 +984,151 @@ const FACTIONS = {
       }
     }
   },
+  'chaos-knights': {
+    name: 'Chaos Knights',
+    // Wahapedia also lists Dreadblades (CHAOS KNIGHTS models in another faction's army); it does nothing in these lists, so it is left out.
+    armyRules: [
+      // Wahapedia wording; the table is the Dread abilities, label = the name and the D6 result that selects it (drawn as a dice
+      // icon on the page; Deathly Terror prints N/A). Darkness is the Rules Updates wording of GW's Faction Pack 1.2 (legal from
+      // 26 Aug 2026), which Wahapedia's text already has.
+      { name:'Harbingers of Dread', at:'Start of the battle round', ph:['command'], turn:'either',
+        text:'If your Army Faction is **CHAOS KNIGHTS**, each unit from your army with this ability gains Dread abilities, depending which are active for your army (see below). The Deathly Terror ability is active for your army from the start of the battle. In addition, at the start of the first, third and fifth battle rounds, you can either select one of the other Dread abilities or randomly select two Dread abilities to apply by rolling two D6 and applying the results rolled, from those numbered 1-6.\nAny Dread abilities that have been selected are active until the end of the battle. You cannot select the same Dread ability more than once, and any duplicated Dread abilities (as a result of randomly selecting them) have no additional effect.',
+        table:[
+          ['Deathly Terror (Aura) · N/A', 'While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.'],
+          ['Despair (Aura) · 1', 'While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1. This is cumulative with the Deathly Terror ability (see above).'],
+          ['Doom · 2', 'Each time this model makes an attack, if the target of that attack is **Battle-shocked**, add 1 to the **Wound roll**.'],
+          ['Darkness · 3', 'This model has **Stealth**.'],
+          ['Dismay (Aura) · 4', 'In the Battle-shock step of your opponent’s Command phase, for each enemy unit that is below its Starting Strength and within 9" of this model, that enemy unit must take a Battle-shock test.'],
+          ['Delirium (Aura) · 5', 'While an enemy unit that is **Below Half-strength** is within 9" of this model, each time that unit fails a Battle-shock test, it suffers D3 **mortal wounds**.'],
+          ['Dominion · 6', 'Add 3" to the range of this model’s **Aura abilities**.']
+        ],
+        // the Damage tab's reading (read by it alone): Doom, a box the player ticks (whether it is active and the target Battle-shocked
+        // is theirs to say); the other Dread abilities change no numbers of your attacks
+        calcMods:[{ kind:'all', from:'Doom', lasts:'battle', when:'Doom active (Harbingers of Dread), the target Battle-shocked', note:'+1 to wound rolls' }] },
+      // Wahapedia, Codex: Chaos Knights army rules (GW's Faction Pack 1.2 prints "FACTION: Harbingers of Dread, Super-heavy Walker"
+      // on the Chaos Knights datasheets). coreTwin: the core ability of the same name (Core Rules 24.35), which the datasheets'
+      // Rules line opens; the two are shown together, and the note says the sources don't settle which applies
+      // ph/turn: where its Normal, Advance and Fall Back moves are made
+      { name:'Super-heavy Walker', coreTwin:'Super-Heavy Walker', ph:['movement'], turn:'your',
+        note:'CHAOS KNIGHTS datasheets list Super-heavy Walker as a FACTION ability (Faction Pack 1.2), whose Codex text differs from Core Rules 24.35; the sources don’t say which applies.',
+        text:'Each time a model with this ability makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and sections of **terrain features** that are 4" or less in height. When doing so:\n- It can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them.\n- It can also move through sections of terrain features that are more than 4" in height, but if it does, after it has moved, roll one D6: on a 1, that model is **Battle-shocked**.' }
+    ],
+    detachments: {
+      // Infernal Lance: a codex detachment the Faction Pack 1.2 does not print; rule, enhancements and stratagems from Wahapedia, with
+      // the pack's Rules Updates (Malefic Surge's Unnatural Fortitude, Hellforged Construction's Effect), which Wahapedia's text already has
+      'infernal-lance': {
+        name:'Infernal Lance', dp:3,
+        // ph/turn: the Malefic Surge is made in your Command phase; Diabolic Power (an attack bonus, one of two) is the footnote,
+        // Unnatural Fortitude (5+ invulnerable save or Feel No Pain 6+) the When targeted line
+        rule:{ name:'Malefic Surge', ph:['command'], turn:'your', needs:{ all:['Faction: Chaos Knights'] },
+          mod:{ kind:'all', when:'Empowered, using Diabolic Power (when selected to shoot or fight)', note:'[LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase)',
+            pick:[{ name:'Lethal Hits', note:'[LETHAL HITS]' }, { name:'Sustained Hits 1', note:'[SUSTAINED HITS 1]' }] },
+          def:'Empowered, using Unnatural Fortitude: a 5+ invulnerable save or Feel No Pain 6+ (until the end of the phase)',
+          text:'In your Command phase, one or more **CHAOS KNIGHTS** units from your army can make a Malefic Surge. Each one that does must first take a **Leadership test**; if that test is failed, that unit suffers D3 **mortal wounds**. Then, until the start of your next Command phase, that unit is Empowered. While a unit is Empowered it can use one of the Malefic Surge abilities below. Once that unit has used a Malefic Surge ability, it is no longer Empowered.\n- **Unholy Hunger:** When a model in this unit makes a **Normal**, **Advance** or **Fall Back move**, until the end of the phase, add 3" to its Move characteristic.\n- **Diabolic Power:** When this unit is selected to shoot or fight, select either the **[LETHAL HITS]** or **[SUSTAINED HITS 1]** ability. Until the end of the phase, weapons equipped by models in this unit have the selected ability.\n- **Unnatural Fortitude:** When this unit is selected as the target of an attack, select one of the following to apply until the end of the phase:\n- Models in this unit have a 5+ invulnerable save.\n- Models in this unit have the **Feel No Pain 6+** ability.\n*Designer’s Note: We recommend placing a token next to Chaos Knights models that are Empowered, removing it once they have used a Malefic Surge ability, and removing all unused tokens at the start of your Command phase.*' },
+        enhancements:[
+          { name:'Knight Diabolus', pts:25, text:'**CHAOS KNIGHTS** model only. Improve the Weapon Skill characteristic of the bearer’s melee weapons by 1. While the bearer is using the Diabolic Power ability, its melee weapons have the **[LANCE]** ability.' },
+          { name:'Blasphemous Engine', pts:35, text:'**CHAOS KNIGHTS** model only. Add 2 to the bearer’s Wounds characteristic. Each time the bearer’s unit makes a Malefic Surge, you can re-roll the **Leadership test** taken to see if it suffers any **mortal wounds**.' },
+          { name:'Fleshmetal Fusion', pts:35, text:'**CHAOS KNIGHTS** model only. Add 1 to the bearer’s Toughness characteristic. While the bearer is using the Unnatural Fortitude ability, each time an attack with a Damage characteristic of 1 is allocated to the bearer, add 1 to any armour saving throw made against that attack.' },
+          { name:'Bestial Aspect', pts:30, text:'**CHAOS KNIGHTS** model only. The bearer’s ranged weapons have the **[ASSAULT]** ability. While the bearer is using the Unholy Hunger ability, it can ignore any or all modifiers to its Move characteristic and/or to **Advance rolls** made for its unit.' }
+        ],
+        stratagems:[
+          { id:'profane-symbiosis', gist:'Your unit that is not Empowered makes a Malefic Surge (not the same unit more than once per battle round).', name:'Profane Symbiosis', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Faction: Chaos Knights'] },
+            when:'End of any phase.',
+            target:'One **CHAOS KNIGHTS** unit from your army that is not Empowered.',
+            effect:'Your unit makes a Malefic Surge.',
+            restrictions:'You cannot select the same unit as the target of this Stratagem more than once per battle round.' },
+          { id:'hellforged-construction', gist:'Just after an enemy unit selects your unit as a target: until that unit has finished making its attacks, worsen the AP of each attack that targets your unit by 1.', def:'Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked)', name:'Hellforged Construction', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Chaos Knights'] },
+            when:'Fight phase, just after an enemy unit has selected its targets.',
+            target:'One **CHAOS KNIGHTS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.',
+            effect:'Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.' },
+          { id:'corrupting-taint', gist:'Select one objective marker you control that your unit is within range of: it stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.', name:'Corrupting Taint', cp:1, phases:['command'], turn:'your', needs:{ all:['Faction: Chaos Knights','Character'] },
+            when:'Your Command phase, just after a **CHAOS KNIGHTS CHARACTER** unit from your army makes a Malefic Surge.',
+            target:'That **CHAOS KNIGHTS CHARACTER** unit.',
+            effect:'Select one objective marker your unit is within range of that you control. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.' },
+          { id:'unleash-balefire', gist:'After your unit has shot: one enemy unit it hit takes a Battle-shock test; if failed, it is aflame until the end of your opponent’s next turn (-2" Move, -2 to Charge rolls).', name:'Unleash Balefire', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Faction: Chaos Knights'] },
+            when:'Your Shooting phase.',
+            target:'One **CHAOS KNIGHTS** unit from your army that has not been selected to shoot this phase.',
+            effect:'After your unit has shot, select one enemy unit hit by one or more of those attacks. That enemy unit must take a **Battle-shock test**; if the test is failed, until the end of your opponent’s next turn, it is aflame. While a unit is aflame, subtract 2" from its Move characteristic and subtract 2 from **Charge rolls** made for it.' },
+          { id:'warp-vision', gist:'Until the end of the phase, your unit’s ranged weapons have [IGNORES COVER].', mod:{ kind:'ranged', when:'Your Shooting phase', note:'ranged weapons have [IGNORES COVER]' }, name:'Warp Vision', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Faction: Chaos Knights'] },
+            when:'Your Shooting phase.',
+            target:'One **CHAOS KNIGHTS** unit from your army that has not been selected to shoot this phase.',
+            effect:'Until the end of the phase, ranged weapons equipped by models in your unit have the **[IGNORES COVER]** ability.' },
+          { id:'diabolic-bulwark', gist:'Just after an enemy unit selects your unit as a target: until the end of the phase, your unit’s models have a 4+ invulnerable save.', def:'their Shooting phase: 4+ invulnerable save (until the end of the phase)', name:'Diabolic Bulwark', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Faction: Chaos Knights'] },
+            when:'Your opponent’s Shooting phase, just after an enemy unit has selected its targets.',
+            target:'One **CHAOS KNIGHTS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.',
+            effect:'Until the end of the phase, models in your unit have a 4+ invulnerable save.' }
+        ]
+      },
+      // Houndpack Lance: a codex detachment the Faction Pack 1.2 does not print; Wahapedia wording, with the pack's Rules Updates
+      // (Animalistic Rage's When, Harrying Hounds' Target), which Wahapedia's text already has
+      'houndpack-lance': {
+        name:'Houndpack Lance', dp:2,
+        // ph/turn: the unit is selected at the start of your Command phase; the attack bonus is the footnote of every WAR DOG unit
+        rule:{ name:'Marked Prey', ph:['command'], turn:'your', needs:{ all:['War Dog'] },
+          mod:{ kind:'all', lasts:'round', when:'Target is the unit selected at the start of your Command phase, visible to the attacking model', note:'[SUSTAINED HITS 1]' },
+          text:'At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, each time a **WAR DOG** model from your army makes an attack that targets that enemy unit, if that unit is visible to the attacking model, that attack has the **[SUSTAINED HITS 1]** ability.\nKEYWORDS\nWhile using the Houndpack Lance Detachment, the following rules apply:\n- Your army must include three or more **WAR DOG** units.\n- **WAR DOG** units from your army have the **BATTLELINE** keyword.\n- When mustering your army, select three **WAR DOG** units from your army. Until the end of the battle, those units have the **CHARACTER** keyword.*\n***Designer’s Note:** This means that the selected units can be given Enhancements and one of them can be selected as your **WARLORD**.' },
+        enhancements:[
+          { name:'Preyslayer’s Mantle', pts:15, text:'**WAR DOG** model only. The bearer has the Super-heavy Walker ability.' },
+          { name:'Final Howl (Aura)', pts:20, text:'**WAR DOG** model only. While a friendly War Dog model is within 6" of the bearer, each time that model makes an attack, re-roll a **Wound roll** of 1.' },
+          { name:'Loping Predator', pts:10, text:'**WAR DOG** model only. The bearer’s ranged weapons have the **[ASSAULT]** ability.' },
+          { name:'Panoply of the Cursed Knight', pts:15, text:'**WAR DOG** model only. Each time an attack targets the bearer, worsen the Armour Penetration characteristic of that attack by 1.' }
+        ],
+        stratagems:[
+          // Wahapedia strikes WAR DOG CHARACTER through (its mark for a keyword that does not appear in the faction); needs reads it as
+          // a WAR DOG unit with the CHARACTER keyword (this detachment's three selected units)
+          { id:'vox-howl', gist:'Each enemy unit within 6" of your unit takes a Battle-shock test; each Battle-shocked friendly WAR DOG unit within 6" takes a Leadership test and, if passed, is no longer Battle-shocked (once per turn).', name:'Vox-howl', cp:2, phases:['shooting','fight'], turn:'either', needs:{ all:['War Dog','Character'] },
+            when:'Start of the Shooting phase or the start of the Fight phase.',
+            target:'One ~~**WAR DOG CHARACTER**~~ unit from your army.',
+            effect:'Each enemy unit within 6" of your unit must take a **Battle-shock test**. Each friendly **WAR DOG** unit that is within 6" of your unit and is Battle-shocked must take a **Leadership test**; if that test is passed, that unit is no longer Battle-shocked.',
+            restrictions:'You can only use this Stratagem once per turn.' },
+          { id:'hungry-for-combat', gist:'Until the end of the phase, your WAR DOG units can only target one enemy unit they are all within Engagement Range of, but their attacks score a Critical Hit on an unmodified hit roll of 5+.', mod:{ kind:'melee', when:'Start of the Fight phase, two or more WAR DOG units within Engagement Range of the target, which they alone can target', note:'a Critical Hit on an unmodified hit roll of 5+', calc:{ critHit:5 } }, name:'Hungry for Combat', cp:1, phases:['fight'], turn:'either', needs:{ all:['War Dog'] },
+            when:'Start of the Fight phase.',
+            target:'Two or more **WAR DOG** units from your army within **Engagement Range** of the same enemy unit.',
+            effect:'Select one enemy unit within Engagement Range of those **WAR DOG** units. Until the end of the phase, models in those **WAR DOG** units can only target that enemy unit, but each time a model in one of those **WAR DOG** units makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit.' },
+          { id:'cunning-hunter', gist:'Until the end of the turn, your unit can shoot and declare a charge in a turn in which it Fell Back.', name:'Cunning Hunter', cp:1, phases:['movement'], turn:'your', needs:{ all:['War Dog'] },
+            when:'Your Movement phase, just after a **WAR DOG** unit from your army Falls Back.',
+            target:'That **WAR DOG** unit.',
+            effect:'Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back.' },
+          { id:'animalistic-rage', gist:'Your WAR DOG unit just destroyed before it attacked this phase: before its Deadly Demise, it can shoot or fight, targeting only the enemy unit that destroyed it.', name:'Animalistic Rage', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'opp' }, needs:{ all:['War Dog'] },
+            when:'Your opponent’s Shooting phase or the Fight phase, just after a **WAR DOG** unit from your army that has not been **selected to attack** this phase is **destroyed**.',
+            target:'That **WAR DOG** unit. You can use this **Stratagem** on that unit even though it was just destroyed.',
+            effect:'Before resolving your unit’s **Deadly Demise** ability, it can either shoot or fight. When doing so, it must target only the enemy unit that just destroyed it, and can only do so if that enemy unit is an eligible target. After it has done so and after any **Consolidation moves** have been made, resolve your unit’s **Deadly Demise** ability as normal.' },
+          { id:'harrying-hounds', gist:'An enemy unit just ended a Normal, Advance or Fall Back move within 8" of your unit: your unit can make a Normal move of up to 6".', name:'Harrying Hounds', cp:1, phases:['movement'], turn:'opp', needs:{ all:['War Dog'] },
+            when:'Your opponent’s Movement phase, just after an enemy unit ends a **Normal**, **Advance** or **Fall Back move**.',
+            target:'One **WAR DOG** unit from your army that is within 8" of that enemy unit.',
+            effect:'Your unit can make a **Normal move** of up to 6".' },
+          { id:'encircling-pack', gist:'Your unit wholly within 12" of a battlefield edge and not within Engagement Range of an enemy unit: remove it from the battlefield and place it into Strategic Reserves.', name:'Encircling Pack', cp:1, phases:['fight'], turn:'opp', needs:{ all:['War Dog'] },
+            when:'End of your opponent’s Fight phase.',
+            target:'One **WAR DOG** unit from your army that is wholly within 12" of one or more battlefield edges and not within **Engagement Range** of one or more enemy units.',
+            effect:'Remove your unit from the battlefield and place it into **Strategic Reserves**.' }
+        ]
+      },
+      // Hunting Warpack: GW's Faction Pack 1.2 prints it in full (p3); its wording, checked against Wahapedia's
+      'hunting-warpack': {
+        name:'Hunting Warpack', dp:1,
+        rule:{ name:'Scenting Fear', tag:'Once per battle round, per army', ph:['shooting'], turn:'your', needs:{ all:['War Dog'] },
+          text:'(Once per battle round, per army) In your Shooting phase, you can select one **visible** enemy unit within 12" of a friendly **WAR DOG** unit. That enemy unit has +6" **detection range**.\nThis detachment has the **WAR DOGS** tag and cannot be taken with another **WAR DOGS** detachment.' },
+        enhancements:[
+          { name:'Soul-Spoor Auspicator', pts:15, upgrade:true, text:'**HUNTSMAN** unit only. This unit’s ranged attacks have +6" **R**.' },
+          { name:'Snarling Rivalry', pts:10, upgrade:true, text:'**EXECUTIONER** unit only. This unit’s ranged attacks have **[IGNORES COVER]**.' }
+        ],
+        stratagems:[
+          { id:'insensate-bloodthirst', gist:'An enemy unit targets your unit in the Fight phase: your unit has Feel No Pain 5+.', def:'Fight phase: Feel No Pain 5+', name:'Insensate Bloodthirst', cp:1, phases:['fight'], turn:'either', needs:{ all:['War Dog'] },
+            when:'Fight phase, when an enemy unit targets a friendly **WAR DOG** unit.',
+            target:'That **WAR DOG** unit.',
+            effect:'Your unit has **Feel No Pain 5+**.' },
+          { id:'leash-of-the-masters', gist:'Your unit has shot: those attacks do not prevent it from being eligible to start an action.', name:'Leash of the Masters', cp:1, phases:['shooting'], turn:'your', needs:{ all:['War Dog'] },
+            when:'Your Shooting phase, when a friendly **WAR DOG** unit has shot.',
+            target:'That **WAR DOG** unit.',
+            effect:'Those attacks do not prevent your unit from being **eligible to start an action**.' },
+          { id:'stalking-focus', gist:'An enemy unit targets your unit within range of an objective: ranged attacks that target your unit have -1 AP until that enemy unit has attacked.', def:'their Shooting phase, within range of an objective: -1 AP to ranged attacks that target it (until that enemy unit has attacked)', name:'Stalking Focus', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['War Dog'] },
+            when:'Your opponent’s Shooting phase, when an enemy unit targets a friendly **WAR DOG** unit within range of an **objective**.',
+            target:'That **WAR DOG** unit.',
+            effect:'Ranged attacks that target your unit have -1 **AP** until that enemy unit has attacked.' }
+        ]
+      }
+    }
+  },
 };
 
 /* ---------------- armies ----------------
