@@ -3851,7 +3851,7 @@ addEventListener('scroll', dmStick, { passive:true });
 /* ---------- rules questions (Claude) ----------
    A chat in a popup ("?" in the top bar, once a key is saved in Settings). It sends Anthropic's API, from
    this phone, the Core Rules with their errata and FAQs (rules/core-rules.md), the rules this app holds (the
-   glossary, the core stratagems, both lists' army and detachment rules, every datasheet), the screen it was
+   glossary, the core stratagems, your list's army and detachment rules, every datasheet), the screen it was
    opened on and the question. The key stays in this browser (store 'wh-ask'); ask.js does the calls. */
 const ASK_MODELS = [['claude-opus-5-5', 'Opus 5.5', 'best answers'], ['claude-sonnet-5-5', 'Sonnet 5.5', 'cheaper'], ['claude-haiku-5-5', 'Haiku 5.5', 'cheapest, quickest']];
 const askCfg = () => Object.assign({ key:'', model:ASK_MODELS[0][0] }, isObj(store.get('wh-ask')) ? store.get('wh-ask') : {});
@@ -3908,7 +3908,7 @@ async function askFiles(){
   if(askStyle == null) askStyle = await get('ask-style.md');
   if(askCore == null) askCore = await get('rules/core-rules.md');
 }
-async function askSystem(a, opp){
+async function askSystem(a){
   await askFiles();
   const intro = 'You answer Warhammer 40,000 rules questions at the gaming table for players using Kunnin’ Kodex, a phone reference for their army lists. The game is 11th edition, matched play.\n' +
     'Use the rules given here: the Core Rules with their errata and FAQs, and the lists’ rules in their official wording, checked against Games Workshop’s documents, Wahapedia and BSData (the data New Recruit uses). They win over anything you remember: earlier editions differ (for example, in 11th edition the benefit of cover worsens the attack’s BS by 1 instead of improving the save). Cite Core Rules sections by their numbers (e.g. 05.04).\n' +
@@ -3917,7 +3917,7 @@ async function askSystem(a, opp){
     'A question may come with the units, stratagems, abilities or rules it is about, in full as the app shows them: answer about those. The app cannot see the table (positions, what was used this turn): when it matters, say what the answer depends on.\n' +
     'Follow this answer format exactly:\n\n' + (askStyle || '');
   return [{ type:'text', text:intro }, { type:'text', text:(askCore ? askCore + '\n\n' : '') + askRules(), cache_control:{ type:'ephemeral', ttl:'1h' } },
-    { type:'text', text:armyText(a, 'The player’s list') + (opp && opp !== a ? '\n\n' + armyText(opp, 'The opponent’s list') : opp === a ? '\n\n(The opponent plays the same list.)' : '\n\n(No opponent list chosen.)'), cache_control:{ type:'ephemeral', ttl:'1h' } }];
+    { type:'text', text:armyText(a, 'The player’s list'), cache_control:{ type:'ephemeral', ttl:'1h' } }];
 }
 // On the account a question can carry at most 256 KiB of text and the Core Rules alone are about that size, so
 // Claude gets their index and looks sections up (two page functions); everything else goes in the question.
@@ -3959,9 +3959,9 @@ const ASK_TOOLS = [
     } }
 ];
 // the standing first turn of an account question: the instructions, the rules this app holds, the lists, the index
-async function askAcctBase(a, opp, tools){
+async function askAcctBase(a, tools){
   await askFiles();
-  const sys = a ? await askSystem(a, opp) : [{ text:'You answer Warhammer 40,000 (11th edition) rules questions. Use these rules; say so when they do not settle it. Cite Core Rules sections by their numbers.\n\n' + (askStyle || '') }, { text:askRules() }, { text:'' }];
+  const sys = a ? await askSystem(a) : [{ text:'You answer Warhammer 40,000 (11th edition) rules questions. Use these rules; say so when they do not settle it. Cite Core Rules sections by their numbers.\n\n' + (askStyle || '') }, { text:askRules() }, { text:'' }];
   const intro = sys[0].text, lists = sys[2].text;
   // the rules part without the Core Rules' full text (sys[1] = Core Rules + this app's quotes of them)
   const quoted = askRules();
@@ -4035,14 +4035,8 @@ function askMd(text){
   return '<div class="rt">' + out.join('') + '</div>';
 }
 function askLog(){
-  if(!askConv || !askConv.shown.length) return '<p class="note">Ask anything about the rules of these lists: what a stratagem does to this unit, whether two rules stack, what happens in which order. The app sends Claude its rules, both lists and the screen you are on. “Ask about this” on a datasheet, stratagem, ability or rule adds it to your question.</p>';
+  if(!askConv || !askConv.shown.length) return '<p class="note">Ask anything about the rules of your list: what a stratagem does to this unit, whether two rules stack, what happens in which order. The app sends Claude its rules, your list and the screen you are on. “Ask about this” on a datasheet, stratagem, ability or rule adds it to your question.</p>';
   return askConv.shown.map(x => '<div class="askm q">' + (x.refs && x.refs.length ? '<span class="askon">About ' + esc(x.refs.join(', ')) + '</span>' : '') + esc(x.q) + '</div><div class="askm a">' + (x.err ? (x.a ? askMd(x.a) : '') + '<p class="askerr">' + esc(x.err) + '</p>' : (x.a ? askMd(x.a) + (x.done ? '' : askWait('Writing…', true)) : askWait(x.status || 'Thinking…'))) + '</div>').join('');
-}
-// the two lists a question is about: the player's own and their opponent's, also while the opponent's list is open
-function askPair(){
-  const a = cur.army && army();
-  if(!a) return { a:null, opp:null };
-  return peeking(a) ? { a:mineList(), opp:a } : { a, opp:oppOf(a) };
 }
 // the top bar's ?: a question about this screen. "Ask about this" chips from an earlier screen are dropped; on the Damage tab
 // the two units of the matchup are put in, as chips the player can remove
@@ -4054,11 +4048,11 @@ function askFresh(){
 }
 function openAsk(){
   if(!askOn()){ askChoose(); return; }
-  const { a, opp } = askPair(), ctx = (a ? a.id : '') + '|' + (opp ? opp.id : '');
+  const a = cur.army ? army() : null, ctx = a ? a.id : '';
   if(!askConv || askConv.ctx !== ctx) askConv = { ctx, messages:[], shown:[] };
   const cfg = askCfg(), m = ASK_MODELS.find(x => x[0] === cfg.model) || ASK_MODELS[0], acct = askVia() === 'account';
-  openSheet('Rules question · ' + esc(m[1]) + (acct ? ' · your Claude account' : ''), a ? a.name + (opp ? ' vs ' + opp.name : '') : 'Rules question',
-    '<p class="askctx">On: ' + esc(askWhere()) + '</p>' + (a ? '<p class="note">Sent with each question: your list (' + esc(a.name) + ')' + (opp ? ' and your opponent’s (' + esc(opp.name) + ')' : ', no opponent’s list (pick one in Find)') + ', the Core Rules and this screen.</p>' : '') + '<div id="askLog">' + askLog() + '</div>' +
+  openSheet('Rules question · ' + esc(m[1]) + (acct ? ' · your Claude account' : ''), a ? a.name : 'Rules question',
+    '<p class="askctx">On: ' + esc(askWhere()) + '</p>' + (a ? '<p class="note">Sent with each question: your list (' + esc(a.name) + '), the Core Rules and this screen.</p>' : '') + '<div id="askLog">' + askLog() + '</div>' +
     '<div id="askRefs">' + askRefChips() + '</div>' +
     '<div class="askin"><textarea id="askQ" rows="3" placeholder="' + (askRefs.length ? 'Your question about these…' : 'Ask a rules question…') + '" enterkeyhint="send"></textarea>' + askBtn() + '</div>' +
     (askConv.shown.length ? '<button class="textbtn" data-asknew>New conversation</button>' : '') +
@@ -4069,7 +4063,7 @@ function openAsk(){
 async function askSend(){
   const q = $('#askQ'), text = q && q.value.trim();
   if(!text || askBusy) return;
-  const cfg = askCfg(), { a, opp } = askPair();
+  const cfg = askCfg(), a = cur.army ? army() : null;
   const refs = askRefs.splice(0), turn = { q:text, a:'', refs:refs.map(r => r.label) };
   askConv.shown.push(turn);
   const rc = $('#askRefs'); if(rc) rc.innerHTML = '';
@@ -4080,11 +4074,11 @@ async function askSend(){
   const draw = () => { const log = $('#askLog'); if(log){ log.innerHTML = askLog(); const s = $('#sheetIn'); if(s) s.scrollTop = s.scrollHeight; } };
   q.value = ''; draw();
   const ctrl = new AbortController(); askBusy = ctrl; askBtnNow();
-  if(askVia() === 'account') return askSendAcct(qtext, turn, a, opp, cfg, ctrl, draw);
+  if(askVia() === 'account') return askSendAcct(qtext, turn, a, cfg, ctrl, draw);
   try {
     const { ask } = await askMod();
     if(!a) await askFiles();
-    const system = a ? await askSystem(a, opp) : [{ type:'text', text:'You answer Warhammer 40,000 (11th edition) rules questions. Use these rules; say so when they do not settle it. Cite Core Rules sections by their numbers.\n\n' + (askStyle || '') }, { type:'text', text:(askCore ? askCore + '\n\n' : '') + askRules(), cache_control:{ type:'ephemeral', ttl:'1h' } }];
+    const system = a ? await askSystem(a) : [{ type:'text', text:'You answer Warhammer 40,000 (11th edition) rules questions. Use these rules; say so when they do not settle it. Cite Core Rules sections by their numbers.\n\n' + (askStyle || '') }, { type:'text', text:(askCore ? askCore + '\n\n' : '') + askRules(), cache_control:{ type:'ephemeral', ttl:'1h' } }];
     let last = 0;
     const r = await ask({ key:cfg.key, model:cfg.model, system, messages:askConv.messages.concat(user), signal:ctrl.signal,
       onText:snap => { turn.a = snap; const now = performance.now(); if(now - last > 120){ last = now; draw(); } } });
@@ -4098,11 +4092,11 @@ async function askSend(){
   } finally { turn.done = true; askBusy = null; draw(); askBtnNow(); }
 }
 // the account way: the conversation is kept here as text turns (Claude keeps nothing between calls)
-async function askSendAcct(text, turn, a, opp, cfg, ctrl, draw){
+async function askSendAcct(text, turn, a, cfg, ctrl, draw){
   const sample = askAcct;
   try {
     const lim = await sample.limits().catch(() => null), tools = !!(lim && lim.tools);
-    const base = await askAcctBase(a, opp, tools);
+    const base = await askAcctBase(a, tools);
     const q = { role:'user', content:text };
     askConv.acct = askConv.acct || [];
     // the oldest turns go first when the conversation outgrows what one question can carry (never the instructions)
@@ -4122,7 +4116,7 @@ async function askSendAcct(text, turn, a, opp, cfg, ctrl, draw){
     turn.err = c === 'cancelled' ? 'Stopped.' : c === 'not_granted' ? 'Claude is not allowed for this page. Allow it in the artifact’s menu (Permissions), or add an API key in Settings.' :
       c === 'rate_limited' ? 'Your Claude usage limit, or too many questions at once: try again later.' : c === 'session_expired' ? 'Sign in to Claude again, then ask again.' :
       c === 'sampling_disabled' ? 'Claude is not available for this account here. An API key in Settings works instead.' : c === 'refused' ? 'Claude declined to answer this one.' :
-      c === 'prompt_too_large' ? 'The question with both lists is too long for one go: start a new conversation.' : 'Could not reach Claude (' + ((e && e.message) || c || 'no connection') + '). Try again.';
+      c === 'prompt_too_large' ? 'The question with your list is too long for one go: start a new conversation.' : 'Could not reach Claude (' + ((e && e.message) || c || 'no connection') + '). Try again.';
     if(c === 'refused') turn.a = '';
   } finally { turn.done = true; askBusy = null; draw(); askBtnNow(); }
 }
@@ -4131,13 +4125,13 @@ function askSettings(){
   const c = askCfg();
   const models = () => ASK_MODELS.map(([id, name, sub]) => '<button class="row" data-askmodel="' + id + '" aria-pressed="' + (c.model === id) + '"><span class="rb"><b>' + name + '</b><span>' + sub + '</span></span>' + (c.model === id ? '<svg class="ic ok" aria-hidden="true"><use href="#i-check"/></svg>' : '') + '</button>').join('');
   if(askAcct) return '<div class="sec-h"><h2>Rules questions</h2></div><p class="note">Opened in Claude, rules questions (the ? in the top bar) use your Claude account: no API key needed, and they count towards your plan’s usage. The first question asks you to allow it. In the app on your home screen an API key is still the way.</p>' +
-    '<div class="list">' + models() + '</div><p class="note">Each question sends both lists, the rules this app holds and the Core Rules’ index; Claude reads the Core Rules sections it needs.</p>';
+    '<div class="list">' + models() + '</div><p class="note">Each question sends your list, the rules this app holds and the Core Rules’ index; Claude reads the Core Rules sections it needs.</p>';
   if(!c.key) return '<div class="sec-h"><h2>Rules questions</h2></div><div class="askway"><b>In Claude, on your Claude subscription</b><p class="note">Opens this same app inside the Claude app (or claude.ai), where the ? uses your Claude account. Only you, and people you share it with, can open it.</p>' + askInClaudeBtn() + '</div><div class="askway"><b>Here, with an Anthropic API key</b><p class="note">Ask from any screen (the ? in the top bar). Billed to your Anthropic Console credits (console.anthropic.com → API keys), not your subscription; the key stays in this browser on this phone and goes only to Anthropic.</p>' +
     '<div class="askkey"><input id="askKey" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="sk-ant-…" aria-label="Anthropic API key"><button class="btn" data-askkey>Save</button></div></div>';
   return '<div class="sec-h"><h2>Rules questions</h2></div><div class="list">' +
     '<div class="row"><span class="rb"><b>API key</b><span>Saved on this phone · …' + esc(c.key.slice(-4)) + '</span></span><button class="textbtn" data-askforget>Remove</button></div>' +
     ASK_MODELS.map(([id, name, sub]) => '<button class="row" data-askmodel="' + id + '" aria-pressed="' + (c.model === id) + '"><span class="rb"><b>' + name + '</b><span>' + sub + '</span></span>' + (c.model === id ? '<svg class="ic ok" aria-hidden="true"><use href="#i-check"/></svg>' : '') + '</button>').join('') +
-    '</div><p class="note">Each question sends the Core Rules (with errata and FAQs), both lists and the question; the rules part is cached for an hour, so follow-up questions cost little.</p>';
+    '</div><p class="note">Each question sends the Core Rules (with errata and FAQs), your list and the question; the rules part is cached for an hour, so follow-up questions cost little.</p>';
 }
 async function askKeySave(){
   const k = ($('#askKey') || {}).value || '';
