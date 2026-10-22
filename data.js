@@ -1032,7 +1032,7 @@ const FACTIONS = {
           { name:'Bestial Aspect', pts:30, text:'**CHAOS KNIGHTS** model only. The bearer’s ranged weapons have the **[ASSAULT]** ability. While the bearer is using the Unholy Hunger ability, it can ignore any or all modifiers to its Move characteristic and/or to **Advance rolls** made for its unit.' }
         ],
         stratagems:[
-          { id:'profane-symbiosis', gist:'Your unit that is not Empowered makes a Malefic Surge (not the same unit more than once per battle round).', name:'Profane Symbiosis', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Faction: Chaos Knights'] },
+          { id:'profane-symbiosis', gist:'End of any phase: your unit that is not Empowered makes a Malefic Surge (not the same unit more than once per battle round).', name:'Profane Symbiosis', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Faction: Chaos Knights'] },
             when:'End of any phase.',
             target:'One **CHAOS KNIGHTS** unit from your army that is not Empowered.',
             effect:'Your unit makes a Malefic Surge.',
@@ -1041,7 +1041,7 @@ const FACTIONS = {
             when:'Fight phase, just after an enemy unit has selected its targets.',
             target:'One **CHAOS KNIGHTS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.',
             effect:'Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.' },
-          { id:'corrupting-taint', gist:'Select one objective marker you control that your unit is within range of: it stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.', name:'Corrupting Taint', cp:1, phases:['command'], turn:'your', needs:{ all:['Faction: Chaos Knights','Character'] },
+          { id:'corrupting-taint', gist:'Just after your unit makes a Malefic Surge: select one objective marker you control that your unit is within range of; it stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.', name:'Corrupting Taint', cp:1, phases:['command'], turn:'your', needs:{ all:['Faction: Chaos Knights','Character'] },
             when:'Your Command phase, just after a **CHAOS KNIGHTS CHARACTER** unit from your army makes a Malefic Surge.',
             target:'That **CHAOS KNIGHTS CHARACTER** unit.',
             effect:'Select one objective marker your unit is within range of that you control. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.' },
@@ -1081,7 +1081,7 @@ const FACTIONS = {
             target:'One ~~**WAR DOG CHARACTER**~~ unit from your army.',
             effect:'Each enemy unit within 6" of your unit must take a **Battle-shock test**. Each friendly **WAR DOG** unit that is within 6" of your unit and is Battle-shocked must take a **Leadership test**; if that test is passed, that unit is no longer Battle-shocked.',
             restrictions:'You can only use this Stratagem once per turn.' },
-          { id:'hungry-for-combat', gist:'Until the end of the phase, your WAR DOG units can only target one enemy unit they are all within Engagement Range of, but their attacks score a Critical Hit on an unmodified hit roll of 5+.', mod:{ kind:'melee', when:'Fight phase, two or more WAR DOG units within Engagement Range of the target (they can only target it)', note:'a Critical Hit on an unmodified hit roll of 5+', calc:{ critHit:5 } }, name:'Hungry for Combat', cp:1, phases:['fight'], turn:'either', needs:{ all:['War Dog'] },
+          { id:'hungry-for-combat', gist:'Two or more of your WAR DOG units within Engagement Range of the same enemy unit: until the end of the phase, they can only target one enemy unit within Engagement Range of them, but their attacks score a Critical Hit on an unmodified hit roll of 5+.', mod:{ kind:'melee', when:'Fight phase, two or more WAR DOG units within Engagement Range of the target (they can only target it)', note:'a Critical Hit on an unmodified hit roll of 5+', calc:{ critHit:5 } }, name:'Hungry for Combat', cp:1, phases:['fight'], turn:'either', needs:{ all:['War Dog'] },
             when:'Start of the Fight phase.',
             target:'Two or more **WAR DOG** units from your army within **Engagement Range** of the same enemy unit.',
             effect:'Select one enemy unit within Engagement Range of those **WAR DOG** units. Until the end of the phase, models in those **WAR DOG** units can only target that enemy unit, but each time a model in one of those **WAR DOG** units makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit.' },
@@ -1089,7 +1089,7 @@ const FACTIONS = {
             when:'Your Movement phase, just after a **WAR DOG** unit from your army Falls Back.',
             target:'That **WAR DOG** unit.',
             effect:'Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back.' },
-          { id:'animalistic-rage', gist:'Your WAR DOG unit just destroyed before it attacked this phase: before its Deadly Demise, it can shoot or fight, targeting only the enemy unit that destroyed it.', name:'Animalistic Rage', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'opp' }, needs:{ all:['War Dog'] },
+          { id:'animalistic-rage', gist:'Your WAR DOG unit just destroyed, not yet selected to attack this phase: before its Deadly Demise, it can shoot or fight, targeting only the enemy unit that destroyed it, if that unit is an eligible target.', name:'Animalistic Rage', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'opp' }, needs:{ all:['War Dog'] },
             when:'Your opponent’s Shooting phase or the Fight phase, just after a **WAR DOG** unit from your army that has not been **selected to attack** this phase is **destroyed**.',
             target:'That **WAR DOG** unit. You can use this **Stratagem** on that unit even though it was just destroyed.',
             effect:'Before resolving your unit’s **Deadly Demise** ability, it can either shoot or fight. When doing so, it must target only the enemy unit that just destroyed it, and can only do so if that enemy unit is an eligible target. After it has done so and after any **Consolidation moves** have been made, resolve your unit’s **Deadly Demise** ability as normal.' },
@@ -4166,7 +4166,7 @@ const ARMIES = [
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
-        { kind:'all', when:'Target is its victim (selected at the start of the first battle round)', note:'re-roll the wound roll', from:'Methodical Destruction' },
+        { kind:'all', when:'Target is its victim (selected at the start of the first battle round, and a new one each time its victim is destroyed)', note:'re-roll the wound roll', from:'Methodical Destruction' },
         { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 wounds remaining' }
       ],
       aura:[
@@ -4198,7 +4198,7 @@ const ARMIES = [
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
-        { kind:'all', when:'Target is its victim (selected at the start of the first battle round)', note:'re-roll the wound roll', from:'Methodical Destruction' },
+        { kind:'all', when:'Target is its victim (selected at the start of the first battle round, and a new one each time its victim is destroyed)', note:'re-roll the wound roll', from:'Methodical Destruction' },
         { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 wounds remaining' }
       ],
       aura:[
@@ -4282,7 +4282,7 @@ const ARMIES = [
       abilities:[
         { name:'Brigand', text:'Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.' },
         { name:'Damaged: 1-5 wounds remaining', damaged:'1-5', text:'While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.' },
-        { name:'*Invulnerable Save', def:'5+ invulnerable save against ranged attacks only', text:'This model has a 5+ invulnerable save against ranged attacks.' },
+        { name:'*Invulnerable Save', def:'5+ invulnerable save against ranged attacks only', text:'This model has a 5+ invulnerable save against ranged attacks.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[

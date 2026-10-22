@@ -95,6 +95,12 @@
   "at": "2026-10-16",
   "why": "Any phase, either turn."
  },
+ "0333c0bb038ffe4d": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“Until the end of the phase, models in your unit have a 4+ invulnerable save.” The line has their Shooting phase, 4+ invulnerable, and the duration."
+ },
  "035ba314f3f0539b": {
   "verdict": "ok",
   "by": "review:r23-army",
@@ -130,6 +136,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "NR prints \"Thievin’ Scavengers - Gretchin\"."
+ },
+ "040b27634dda3565": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "TARGET: “One WAR DOG unit from your army”."
  },
  "044569ab567613e5": {
   "verdict": "ok",
@@ -215,6 +227,12 @@
   "at": "2026-10-21",
   "why": "For a rule with no ph tags, the phase and turn come from its first words: “At the start of your turn” → your Command phase, “At the end of your opponent’s turn” → their Fight phase (the end of that turn)."
  },
+ "05f24cbd21cedac7": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "WHEN: “Start of the Shooting phase or the start of the Fight phase.” = Shooting, Fight."
+ },
  "060265bd0728919f": {
   "verdict": "ok",
   "by": "review:r23-army",
@@ -227,6 +245,12 @@
   "at": "2026-10-16",
   "why": "WHEN: \"Your Movement/Charge phase…\"."
  },
+ "06229b9b84965c12": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "WHEN: “End of your opponent’s Fight phase.”"
+ },
  "06254bc8d1d4ce75": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -238,6 +262,12 @@
   "by": "review:r23-army",
   "at": "2026-10-22",
   "why": "TARGET “One WORLD EATERS unit from your army that has not been selected to fight this phase and that made a charge move this turn” = “Your unit made a charge move this turn and has not been selected to fight this phase” (the condition the digest found dropped). EFFECT “Until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1” = “until the end of the phase, its melee weapons have +1 AP”."
+ },
+ "065a80ad15a723e7": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "Pack 1.2: “In your Shooting phase, you can select one visible enemy unit within 12\" of a friendly WAR DOG unit.”"
  },
  "0691de7b46f3b733": {
   "verdict": "ok",
@@ -263,6 +293,18 @@
   "at": "2026-10-21",
   "why": "On Canticles of the Omnissiah it finds Invocation of Machine Vengeance, Mantra of Discipline (with its “- **Binharic Courage (Aura):** …” line) and Shroudpsalm (Aura). On Icon of War it finds Fanatical Devotion, Adaptive Tactics and The Fires of Mars. These are the sections’ own bold-named parts, and the lead sentence isn’t taken as an option."
  },
+ "07954ef6d9d07e64": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "“Your opponent’s Shooting phase … within range of an objective” + EFFECT “Ranged attacks that target your unit have -1 AP until that enemy unit has attacked.” = the def, in the approved form of Diabolic Bulwark / Hellforged Construction."
+ },
+ "079d7230d04aead9": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“WHEN: End of any phase.” That is all five phases (invariants.js: an “End of any phase” WHEN names every phase)."
+ },
  "07b229d78c494cb1": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
@@ -280,6 +322,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "TARGET: \"One TYRANIDS MONSTER unit from your army\"."
+ },
+ "07fc2ca32894493a": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "Codex text (Wahapedia): “it can move through models (excluding TITANIC models) and sections of terrain features that are 4\" or less in height … roll one D6: on a 1, that model is Battle-shocked”; Core Rules 24.35: “(including MONSTER/VEHICLE models, but excluding TITANIC models) … select for all models in that unit to have the MOBILE keyword”. The texts differ, and neither 22.02 nor the Universal Rules Updates says which wins, so “the sources don’t say which applies” is a both-readings note that picks neither, word for word the approved Imperial Knights note. (No unit in this list has the ability; see the report.)"
  },
  "08029749b346bce5": {
   "verdict": "ok",
@@ -395,6 +443,12 @@
   "at": "2026-10-21",
   "why": "NR prints \"That'll Learn Ya (Once per battle round, per unit) - Runtherd\"."
  },
+ "0ad9c08b7fce02a3": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "“your opponent’s Fight phase”: opp."
+ },
  "0ada62b205cc1961": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -479,6 +533,12 @@
   "at": "2026-10-17",
   "why": "The rule text is now the three Dense lines of 13.06 in full (checked against the PDF). MOBILE appears in the Core Rules only in 13.06 and 24.35, so it has no rule of its own. The Designer’s Note is quoted verbatim: “Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).” The note no longer says which lines MOBILE changes."
  },
+ "0d3ab4ce31d52b6f": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "WHEN: “Your Movement phase, just after a WAR DOG unit from your army Falls Back.”"
+ },
  "0d46c1ce090bde07": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -539,6 +599,12 @@
   "at": "2026-10-21",
   "why": "The source says the weapons “can only target units within range of the selected objective marker”, a targeting restriction, but the footnote puts “only at units within range…” in the condition slot, so it reads as if BS 3+/[IGNORES COVER] apply only against those units and the unit can still shoot other units normally. It should be when:'Your Command phase, until the start of your next Command phase', note:'BS 3+, [IGNORES COVER]; can only target units within range of the selected objective marker'."
  },
+ "107c732c464202b5": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "WHEN “when a friendly WAR DOG unit has shot” = “Your unit has shot”; EFFECT “Those attacks do not prevent your unit from being eligible to start an action.” word for word."
+ },
  "107f167cff2eb9f0": {
   "verdict": "ok",
   "by": "review:r19-fixes",
@@ -586,6 +652,12 @@
   "by": "review:defilers-and-friends (its fix)",
   "at": "2026-10-22",
   "why": "The effect is the Rules Updates wording shortened, but the gist drops the moment that decides when it can be used: WHEN \"just after an enemy unit has selected its targets\", TARGET a unit \"that was selected as the target of one or more of the attacking unit’s attacks\" (it must be used before those attacks are made, only by a unit they target)."
+ },
+ "1208fa9ebf0cae2d": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“End of any phase”, with no player named, so either turn."
  },
  "1245ce399f9123d9": {
   "verdict": "ok",
@@ -658,6 +730,12 @@
   "by": "review:gists",
   "at": "2026-10-17",
   "why": "“Change the Damage characteristic of that attack to 0.” The second sentence, “If you are using fast dice rolling, select one of those attacks you failed a saving throw for”, only says which attack “that attack” is when saves are rolled together. The gist’s singular “that attack” keeps the one-attack limit, so the meaning is unchanged."
+ },
+ "1465a561e896e637": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "The aura is for WAR DOG units, within 6\" of the Atrapos, vs TITANIC or TOWERING, and gives “you can re-roll the Hit roll”. It is literal. It applies to no unit here (no WAR DOG), which is consistent with the na mark."
  },
  "14b552e2180cb5fb": {
   "verdict": "ok",
@@ -760,6 +838,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "Red \"Opponent's turn\" card."
+ },
+ "1886ad6e55d31ac0": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "This is the Rules Update Effect (Faction Pack 1.2: “‘Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.’”). The line has Fight phase, AP worsened by 1, and “until that enemy unit has attacked”, which is the same duration."
  },
  "18a852729f3e2615": {
   "verdict": "ok",
@@ -887,6 +971,12 @@
   "at": "2026-10-21",
   "why": "NR (standard p5): \"1x Lord on Juggernaut | Bladed horn, Exalted chainblade, Plasma pistol\", with weapon rows \"Plasma pistol - standard\", \"Plasma pistol - supercharge\", \"Bladed horn\", \"Exalted chainblade\"."
  },
+ "1bdf99c06d4fec6c": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "EFFECT “Your unit has Feel No Pain 5+.” in the Fight phase; the text gives no duration and the def adds none."
+ },
  "1c0a9e192798899b": {
   "verdict": "ok",
   "by": "review:r11-purge-units",
@@ -929,11 +1019,23 @@
   "at": "2026-10-16",
   "why": "\"Your unit’s melee attacks have +2 S\", when selected to fight."
  },
+ "1d25652e34de8562": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "TARGET: “Two or more WAR DOG units from your army”."
+ },
  "1d68fa71eab6355a": {
   "verdict": "ok",
   "by": "review:r14-cond",
   "at": "2026-10-21",
   "why": "\"In your Shooting phase, if any of the following apply … This unit is within range of an objective. The target of that attack is within range of an objective\": the situation is exactly \"this unit or the target within range of an objective\", and the objective fact is attacker OR target. The only other need is \"your Shooting phase\". The when names it, the ranged step is the attacker's own Shooting phase, and the code drops the tick for overwatch (/your shooting phase/)."
+ },
+ "1d93ea7c9ab1526a": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "This is the Rules Update wording (Faction Pack 1.2, “Change Unnatural Fortitude to: ‘When this unit is selected as the target of an attack, select one of the following to apply until the end of the phase: ▪ Models in this unit have a 5+ invulnerable save. ▪ Models in this unit have the Feel No Pain 6+ ability.’”). The line keeps the Empowered condition and the “or” (a choice the player makes) and the duration."
  },
  "1dd70c039f74eaa3": {
   "verdict": "ok",
@@ -1157,6 +1259,12 @@
   "at": "2026-10-17",
   "why": "Blessings apply “until the end of the battle round” and act on “charge rolls” (the Charge phase of both turns, through Heroic Intervention), on “Pile-in or Consolidation move” and on “destroyed by a melee attack” / melee weapons (Fight phase). The roll is made “at the start of the battle round”. The rule labels that with at: 'Start of the battle round' and lists it under Command (settled convention)."
  },
+ "23f2a1c484cce1f6": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "“at the start of the first, third and fifth battle rounds, you can either select one of the other Dread abilities or randomly select two”: the start of the battle round is filed under Command with at:'Start of the battle round' shown, the settled convention (Da Boss, Doctrina Imperatives, Wrathful Presence). Dismay is “In the Battle-shock step of your opponent’s Command phase”, also Command. Doom (“Each time this model makes an attack”) names no phase, which is how Doctrina Imperatives was left at Command only (Pledges to the Dark Prince went the other way and lists Shooting/Fight); Doom's numbers are the Damage tab's calcMods tick."
+ },
  "245471d573bda22a": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -1198,6 +1306,12 @@
   "by": "review:literal",
   "at": "2026-10-17",
   "why": "Reserves line: 20.01 “Unless otherwise stated, the combined points value … (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit” and 20.03 “Unless otherwise stated, they can only do so from the second battle round onwards … destroyed, with the following exceptions: Units embarked within TRANSPORTS that have made an ingress move … Repositioned units”. Both “unless otherwise stated” are kept. The Deep Strike and Scouts lists follow “if every model in this unit has this ability” (24.09, 24.31). The headings now use the texts’ own words (“Read Mission Objectives step”, “Declare battle formations”, “Start of the battle round”). Warlord, enhancements, points, transports and once-per-battle are list facts. One leftover, display only: the Read Mission Objectives section sits above Declare battle formations. None of the given sources defines that step (the Event Companion sequence has no such step), so that order is unsourced, but no text on the screen states it."
+ },
+ "2578de9823d2b541": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "Text (NR, BSData profile *Invulnerable Save): “This model has a 5+ invulnerable save against ranged attacks.” Wahapedia's War Dog datasheets print “INSV* 5+ * Against ranged attacks only”, so the def's “only” is Wahapedia's word, not an addition. Same text and def on the Brigand and Executioner (same key). Same wording as the approved Armiger 5+* defs."
  },
  "258046ad94ca1dc1": {
   "verdict": "ok",
@@ -1373,11 +1487,29 @@
   "at": "2026-10-16",
   "why": "\"action/actions\" (16); exact-anchored."
  },
+ "2916ae5057a4184a": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "“a WAR DOG unit from your army” / TARGET “That WAR DOG unit”."
+ },
  "292ebc44d87f5e36": {
   "verdict": "ok",
   "by": "review:r9-code",
   "at": "2026-10-21",
   "why": "RULES['Heavy'] matches 24.16 word for word in rules/core-rules.md and Wahapedia core.html: \"In your Shooting phase, each time an attack is made with a [HEAVY] weapon, add 1 to the hit roll if all of the following apply to the attacking unit: That unit is unengaged. / That unit was not set up on the battlefield this turn. / No model in that unit has moved more than 3\" this turn.\" Its bold on 'hit roll' and 'unengaged' follows Wahapedia's <b>; the only difference is Wahapedia's underline on 'all', which is formatting. ruleFor strips the brackets and the anchored /^heavy$/i matches only 'HEAVY'/'[HEAVY]'/'Heavy' (a weapon keyword, the AdMech unit's rules chip, and the **[HEAVY]** in Protector Imperative). It does not match 'Heavy bolter', 'Heavy flamer', 'Heavy weapon' or 'SUPER-HEAVY WALKER' (that one goes to its own alias), and no faction alias or army rule is named 'heavy'."
+ },
+ "2952bf06aeba01fb": {
+  "verdict": "ok",
+  "by": "review:infernal-lance (its fix)",
+  "at": "2026-10-22",
+  "why": "“At the start of the first battle round, select one unit … to be this model’s victim. … Each time this model’s victim is destroyed, select one new enemy unit to be this model’s victim.” The condition's parenthesis names only the first selection, so after the first victim dies it reads as if only that original unit counts. The re-roll and the target tick are fine. The fix keeps the shape and adds the reselection in the text's words."
+ },
+ "295ca31da0045524": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "It keeps the WHEN/TARGET trigger (“just after an enemy unit has selected its targets” with your unit among them) and the updated EFFECT word for word in short form. The row's “Fight · Either turn” gives the phase."
  },
  "297ce09fb084f63e": {
   "verdict": "ok",
@@ -1385,11 +1517,29 @@
   "at": "2026-10-22",
   "why": "WHEN “Any phase, when an enemy unit has attacked” = “After an enemy unit has attacked”; TARGET “One friendly GRETCHIN unit that was just destroyed” = “your just-destroyed unit”; EFFECT “Add a new GRETCHIN unit to your army identical to your destroyed unit, in strategic reserves, at its starting strength, with its full wounds remaining” = the rest (the full-wounds clause is effect detail, not a condition, and was left to the text in the signed-off gist)."
  },
+ "2998a9cfd4b75570": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "NR and Wahapedia: darkflame lance, terrorpulse missiles, and fellbore (strike and sweep). The profiles match the pack's Rules Updates: “Darkflame Lance [IGNORES COVER, TORRENT] 18\" D6+6 N/A 8 -1 2” and “Terrorpulse Missiles [BLAST] 36\" D6+6 3+ 8 -2 2”."
+ },
  "29b66635800b3415": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "\"If that enemy unit is within range of an objective marker, you can re-roll the Wound roll instead\": a fact about the target, the player's tick (targetObjective), melee only."
+ },
+ "29c8d442867499ee": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "An Infernal Lance enhancement (Wahapedia “Knight Diabolus 25 pts”). NR gives it to the Atrapos: “Options: Knight Diabolus, Atrapos lascutter, …”."
+ },
+ "29f4f242c9d16271": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“Your Shooting phase.”"
  },
  "2a10d893105139dc": {
   "verdict": "ok",
@@ -1757,6 +1907,12 @@
   "at": "2026-10-21",
   "why": "EFFECT: \"Add a new GRETCHIN unit to your army identical to your destroyed unit, in strategic reserves, at its starting strength, with its full wounds remaining.\" The gist is the same, shorter; \"full wounds\" is left out, and starting strength comes close."
  },
+ "34f2fbbb1f9ce13f": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll.” The footnote covers all attacks with +1 to hit vs MONSTER/VEHICLE. Being always on, keyed to the hand-set target's keywords, is the owner's Damage-tab convention."
+ },
  "352c2bdffb6e1e0c": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -1853,6 +2009,12 @@
   "at": "2026-10-16",
   "why": "\"melee attacks that target a MONSTER/VEHICLE unit\": Fight phase, either turn. [restored: the same judgement on the same text, signed off for an earlier list]"
  },
+ "38ccb23472a5e13c": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“One CHAOS KNIGHTS unit from your army …”."
+ },
  "38cee289b89d2abc": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
@@ -1883,6 +2045,12 @@
   "at": "2026-10-17",
   "why": "07: “START OF BATTLE ROUND / PLAYER TURNS / END OF BATTLE ROUND … the mission you are playing will tell you which player this is.” 07.02: Start of Turn step, five phases, End of Turn step. 08: “Both players gain 1 Command Point (CP)”, and “one battle-shock roll … for each unit in their army that … is currently battle-shocked … is at, or below, half-strength”. 05.01/05.02 (dice checked on PDF p18: 1, 6, 2+ to 6+). 05.04: the InSv row has no AP, and only the ‘Save and AP’ row says “After modifying the result by the attacking weapon’s AP”. The allocation note now copies all three 05.03 bullets, including “non-CHARACTER” and the wounded-CHARACTER-group order."
  },
+ "394a9ad28bbec937": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "“Your Movement phase”: your turn."
+ },
  "395cc43d9ac7c845": {
   "verdict": "ok",
   "by": "review:code3",
@@ -1900,6 +2068,12 @@
   "by": "review:r9-knights",
   "at": "2026-10-21",
   "why": "\"If this model is equipped with a thundershock spear and a bellatus reaper chainsword\"; both 6-bigs Destriers (x2) carry \"Questoris heavy stubber, Titanic feet, Chastiser gatling cannon, Frag bombard\" (NR p2), so the condition is never met."
+ },
+ "39fd18bc2ca70efb": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "“each time a WAR DOG model from your army makes an attack”."
  },
  "39fff212d6fde57a": {
   "verdict": "ok",
@@ -1991,6 +2165,12 @@
   "at": "2026-10-16",
   "why": "\"While this model has 1-9 wounds remaining, subtract 5 from ... OC and ... subtract 1 from the Hit roll\": all attacks, -1 hit, -5 OC."
  },
+ "3c19185efa31c0bc": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "NR and Wahapedia: one Cerastus shock lance, with a ranged profile (12\" A6, ASSAULT, SUSTAINED HITS 2) and two melee profiles, strike and sweep."
+ },
  "3c1b993d6d5c8a20": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -2008,6 +2188,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "\"In the Fight phase, if this unit is riled up, this unit has +1 to hit rolls\". Fight-phase attacks are melee. [restored: the same judgement on the same text, signed off for an earlier list]"
+ },
+ "3c8515334f4840e1": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "NR: “3x Nurgling Swarm — Diseased claws and teeth”, printed “Diseased claws and teeth (x3)”. Wahapedia: “Every model is equipped with: diseased claws and teeth.” ×3 for three models is correct."
  },
  "3ca40c1c6892df1b": {
   "verdict": "ok",
@@ -2231,6 +2417,12 @@
   "at": "2026-10-22",
   "why": "TARGET: \"One EMPEROR’S CHILDREN unit from your army that was selected as the target ...\"."
  },
+ "41d50dd5d0833a52": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“One CHAOS KNIGHTS unit from your army that was selected as the target …”."
+ },
  "41d8328d44bae9dd": {
   "verdict": "ok",
   "by": "review:m5-recheck",
@@ -2357,6 +2549,12 @@
   "at": "2026-10-21",
   "why": "Command picks are labelled “Until the start of your next Command phase” (Kindred Sorcery, Canticles, Rod of the War Forge, Full Throttle). An earlier round’s pick reads “(picked in battle round N)”. Battle Protocols’ Aegis reads “Until another is picked (from the start of the battle)”. Earlier rounds’ picks leave out the round being shown."
  },
+ "45ec4ca45df3a0d6": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "Same gear for the plain Karnivores (NR x5: “Reaper chaintalon, Slaughterclaw, Diabolus heavy stubber”)."
+ },
  "45f310dcc63f9331": {
   "verdict": "ok",
   "by": "review:code2",
@@ -2368,6 +2566,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "Datasheet/NR header: \"Destroyer of Futures (Once per phase, per unit)\"."
+ },
+ "4651641540c3e152": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "EFFECT “Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back.” Only “is eligible to” becomes “can”. The trigger “just after … Falls Back” is in “a turn in which it Fell Back” and the Movement tag, in the approved form of “Until the end of the turn, your unit is eligible to declare a charge even though it Advanced.”"
  },
  "4663acd5db5646cf": {
   "verdict": "ok",
@@ -2465,6 +2669,12 @@
   "at": "2026-10-17",
   "why": "“While this unit is riled up, +3\" R.” on ranged attacks: same condition and effect; the footnote doesn’t say whose riled-up state beyond the text’s “this unit”."
  },
+ "490ac95f048acd69": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "“Each time this model makes an attack that targets a unit Below Half-strength, add 1 to the Hit roll.” = kind all, +1 to hit rolls, under a target fact the player ticks. The Battle-shock part changes no attack numbers and stays in the ability text."
+ },
  "4931def1187f5a8f": {
   "verdict": "ok",
   "by": "review:r23-army",
@@ -2513,11 +2723,23 @@
   "at": "2026-10-21",
   "why": "NR prints “Data-severed - Cybernetica Datasmith”."
  },
+ "4a7848e45f344b93": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "WHEN says neither “your” nor “your opponent’s”, and Wahapedia colours it str11ColorEither: either turn. The once-per-turn restriction is in the gist."
+ },
  "4a9cfd28162134d2": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "\"Each time this model makes an attack that targets a CHARACTER, MONSTER or WALKER unit, you can re-roll the Hit roll and re-roll the Wound roll\": all attacks, target keywords as the player's tick (vs any), both re-rolls; reaches Lucius's weapons only (\"this model makes\")."
+ },
+ "4aa2ccdaaa8b2664": {
+  "verdict": "ok",
+  "by": "review:infernal-lance (its fix)",
+  "at": "2026-10-22",
+  "why": "The EFFECT part is literal (“Select one objective marker your unit is within range of that you control … until your opponent’s Level of Control … is greater than yours at the end of a phase”). But the WHEN trigger “just after a CHAOS KNIGHTS CHARACTER unit from your army makes a Malefic Surge” decides when it can be used, and it is dropped. The row shows only “Your Command”, so it reads as usable at any point of the Command phase by any Knight. The fix adds the trigger, as the Hellforged and Bulwark gists keep their “Just after …”."
  },
  "4adf6535f92934e6": {
   "verdict": "ok",
@@ -2549,11 +2771,23 @@
   "at": "2026-10-20",
   "why": "NR prints 'Kunnin' But Brutal - Big Mek' (l.132-134); it is a War Horde enhancement (BSData upgrade), taken on the Big Mek (NR Options 'Kunnin' But Brutal, ...'). Models match NR."
  },
+ "4b4e346fba823427": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“One CHAOS KNIGHTS unit from your army that has not been selected to shoot this phase.”"
+ },
  "4b8d05889b445c4b": {
   "verdict": "ok",
   "by": "review:hurrdurr (its fix)",
   "at": "2026-10-16",
   "why": "\"Once per battle round, one model from your army with this ability can use it\" is a per-army limit, and this army has two Daemon Princes with it."
+ },
+ "4bb40a48eab4154a": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "“Until the start of your next Command phase, each time a WAR DOG model from your army makes an attack that targets that enemy unit, if that unit is visible to the attacking model, that attack has the [SUSTAINED HITS 1] ability.” = kind all, [SUSTAINED HITS 1], under the two conditions the text names (the selected unit, visible), lasts 'round' = the app's mark for “until the start of your next Command phase” (dmLasts)."
  },
  "4bb7620ec0bba258": {
   "verdict": "ok",
@@ -2639,6 +2873,12 @@
   "at": "2026-10-16",
   "why": "\"Once per battle, when an attack is allocated to this model, you can change the Damage characteristic of that attack to 0.\""
  },
+ "4e48759691c181c0": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“Each time an enemy unit … within Engagement Range of one or more units with this ability is selected to fight”. That is the Fight phase, in either player's turn."
+ },
  "4e4e83101df4a99b": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -2675,6 +2915,12 @@
   "at": "2026-10-18",
   "why": "WHEN: “a friendly attached ORKS INFANTRY unit”. TARGET: “That ORKS INFANTRY unit”. Orks + Infantry + attached are copied from these. The trigger “becomes battle-shocked” is not a keyword filter. text: same as Wahapedia word for word."
  },
+ "4f8046346a592244": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "The datasheet has W 28 and Blasphemous Engine says “Add 2 to the bearer’s Wounds characteristic”, which makes 30, as NR prints (W 30). The band is fixed by the text, “While this model has 1-10 wounds remaining” (Wahapedia DAMAGED: 1-10), and the enhancement does not change it."
+ },
  "4f8b13c4ff04d0b8": {
   "verdict": "ok",
   "by": "review:r9-knights",
@@ -2698,6 +2944,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "“TARGET: One friendly FLASH GITZ/TANKBUSTAS unit hit by those attacks.”: either keyword, copied."
+ },
+ "507bb89a309d636a": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.” “That target” is the MONSTER or VEHICLE target of the first sentence, so vs any TITANIC/TOWERING also requiring MONSTER/VEHICLE is exactly the text. +1 to wound is literal."
  },
  "50a164a53cbb45d0": {
   "verdict": "ok",
@@ -2740,6 +2992,12 @@
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "Note: \"you can ignore any or all modifiers to the following: that attack’s Ballistic Skill or Weapon Skill characteristic; the Hit roll; the Wound roll\", all three kept; when \"Until the end of the turn\". calc ignoreHitMods (calc.js: ignores the worsening hit modifiers and the cover BS) counts the BS/WS and hit-roll part. The wound-roll part is not marked as not counted, but nothing needs to be: the Damage tab's target set by hand has no wound-roll modifier (tmod holds only fnp and -1 D), and no rule of this list worsens its own wound rolls, so ignoring them would change no number."
+ },
+ "524baec0e3e4a612": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "“Your opponent’s Shooting phase” = turns {shooting:'opp'}; “the Fight phase” stays either."
  },
  "5281c385e56c8931": {
   "verdict": "ok",
@@ -2837,6 +3095,12 @@
   "at": "2026-10-21",
   "why": "\"This unit’s ranged attacks have: [IGNORES COVER]. If this unit is riled up, [SUSTAINED HITS 1].\" The always mod holds only the unconditional [IGNORES COVER]; the riled-up [SUSTAINED HITS 1] is its own mod (when \"Riled up\", no always), and the leader’s ability covers the Meganobz’ attacks too (19.04)."
  },
+ "54adf6f8ce6c4191": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "An Infernal Lance enhancement (Wahapedia “Fleshmetal Fusion 35 pts”). NR gives it to the 360-pt Ruinator: “Options: Fleshmetal Fusion, Darkflame lance, …”, with T 12."
+ },
  "54e9dac071b49459": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
@@ -2891,6 +3155,12 @@
   "at": "2026-10-16",
   "why": "Crusher Stampede enhancement (25 pts), NR option \"Monstrous Nemesis\"."
  },
+ "55ff1cfe4172fd6f": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.” The footnote has the band, -1 to hit on all attacks, and -5 OC. The same item covers the Atrapos (identical text)."
+ },
  "5605b234336611ac": {
   "verdict": "ok",
   "by": "review:literal",
@@ -2921,6 +3191,12 @@
   "at": "2026-10-21",
   "why": "\"Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.\" vs any Titanic/Towering with also any Monster/Vehicle now requires both, as \"that target\" does (dmVs fails on either), and the condition is target keywords only, so always is right."
  },
+ "5782e15cb3c43b35": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and … subtract 1 from the Hit roll.” The footnote has -1 to hit (all attacks) and -5 OC. It is shared by both Ruinators and the Despoiler."
+ },
  "57b009df52f459f2": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -2939,6 +3215,12 @@
   "at": "2026-10-21",
   "why": "Datasheet (Wahapedia the same): \"This unit is riled up.\" with no condition; it is Zodgrod’s (leader) ability, so it covers the attached unit (19.04): riled:true is right."
  },
+ "587b4f4a94f9d8ca": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "WHEN: “Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.”"
+ },
  "5893021178d0cfc9": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -2956,6 +3238,12 @@
   "by": "review:gists",
   "at": "2026-10-17",
   "why": "“Your unit shoots using normal shooting, but while doing so your unit can only target that enemy unit.” Same; “that enemy unit” refers to the WHEN."
+ },
+ "58c49bea694c5ec9": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "Pack 1.2 WHEN: “Fight phase, when an enemy unit targets a friendly WAR DOG unit.”"
  },
  "58ea7cd756f7c62d": {
   "verdict": "ok",
@@ -3016,6 +3304,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "\"Your Command phase\"."
+ },
+ "5a13062b1d592ce1": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "Brigand (NR): “Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.” (Wahapedia: “Each time this model makes a ranged attack that targets a unit that is within range of one or more objective markers, that attack has the [IGNORES COVER] ability.”) = ranged, [IGNORES COVER], under a target fact the player ticks (cond targetObjective), as Saturation Fire on the Armigers. Nothing added."
  },
  "5a18f707958fb766": {
   "verdict": "ok",
@@ -3089,6 +3383,12 @@
   "at": "2026-10-16",
   "why": "WHEN: \"Your opponent's Movement phase\"."
  },
+ "5cbc8b53a5984e9c": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“one or more CHAOS KNIGHTS units from your army”. It correctly leaves out the allied Nurglings (Faction: Legiones Daemonica)."
+ },
  "5cc536812372bb3b": {
   "verdict": "ok",
   "by": "review:o1-code",
@@ -3113,6 +3413,12 @@
   "at": "2026-10-20",
   "why": "NR prints 'Supreme Kunnin' (Once per phase, per army) - Nazdreg' (l.63-64); BSData profile is on the Nazdreg model. Models match NR."
  },
+ "5e998a8cf2e0d5a2": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "WHEN condition (“an enemy unit targets a friendly WAR DOG unit within range of an objective”) and EFFECT word for word; the opponent's Shooting phase is the timing tag."
+ },
  "5ed6689ef3c39cad": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -3131,11 +3437,29 @@
   "at": "2026-10-22",
   "why": "Quotes the Faction Pack 1.3 FAQ word for word (also on Wahapedia): \"Q: While using the Coterie of the Conceited Detachment, if my WARLORD is not on the battlefield, can I use the Unbound Arrogance Stratagem? A: Yes, your pledge to Slaanesh would increase from 0 to 1.\" An official FAQ quoted, not the app's answer."
  },
+ "5f29be0e48bda329": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "EFFECT “Each enemy unit within 6\" of your unit must take a Battle-shock test. Each friendly WAR DOG unit that is within 6\" of your unit and is Battle-shocked must take a Leadership test; if that test is passed, that unit is no longer Battle-shocked.” and RESTRICTIONS “once per turn”: all in the gist, nothing added. WHEN is the timing tag and TARGET the users column, as for every gist whose TARGET is the unit using it."
+ },
+ "5f307d7e4188fff4": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "TARGET: “That WAR DOG unit.”"
+ },
  "5f32bf2f5e27f672": {
   "verdict": "ok",
   "by": "review:literal",
   "at": "2026-10-17",
   "why": "“while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic” has no phase limit, and neither does the attack part."
+ },
+ "5f903228ac043ab7": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "An Infernal Lance enhancement (Wahapedia “Bestial Aspect 30 pts”). NR: “Options: Warlord, Bestial Aspect, …”."
  },
  "5fc14251069843f4": {
   "verdict": "ok",
@@ -3190,6 +3514,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "Matches \"starting strength\", \"below starting strength\", \"half-strength\", \"Below Half-strength\" (Crusher Stampede); all are defined only in Starting Strength."
+ },
+ "60ce4ad2ae95c1a7": {
+  "verdict": "ok",
+  "by": "review:woof-woof (its fix)",
+  "at": "2026-10-22",
+  "why": "Updated WHEN: “a WAR DOG unit from your army that has not been selected to attack this phase is destroyed”. “before it attacked this phase” is a different moment: a unit selected to attack whose attacks have not yet been resolved fits the gist but not the text, the same slip fixed in the Orks gist (“not been selected to fight”). The gist also drops “and can only do so if that enemy unit is an eligible target”, a condition deciding whether it can be used."
  },
  "60dfba8bfe260dea": {
   "verdict": "ok",
@@ -3287,6 +3617,24 @@
   "at": "2026-10-21",
   "why": "“unless that unit is Battle-shocked, add 1 to the Objective Control characteristic of models in that unit”; New Recruit prints OC 1 (Datasmith) and 2 (Kastelan Robot), the same as Wahapedia's base OC 1 and 2, so the +1 is not in them (its M 8\" does include the +2\")."
  },
+ "6300d931facc5642": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“WHEN: Fight phase, just after an enemy unit has selected its targets.”"
+ },
+ "633ec50dc5e13fad": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "NR prints the selection “Houndpack Lance Character” on the models line and “Character” in Categories; Wahapedia's Brigand KEYWORDS have no CHARACTER. The quote is the detachment rule word for word (“When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”), without the Designer's Note, so the note only says where the keyword comes from (kwStars stars CHARACTER and shows “*from Houndpack Lance Character (…)”) and nothing more than the rule."
+ },
+ "64452615088d1087": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "Final Howl (Aura) is one of the Houndpack Lance Enhancements (Wahapedia “Enhancements - Final Howl (Aura) 20 pts”); NR lists it in the Brigand's options (155 pts = 135 + 20). Tag Enhancement is right; the “(Aura)” stays in its name."
+ },
  "64a8871fca1a85af": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
@@ -3305,11 +3653,23 @@
   "at": "2026-10-16",
   "why": "\"mortal wound(s)\"; 06.02."
  },
+ "64fa0845c84f9517": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "WHEN: “Start of the Fight phase.”"
+ },
  "65090dc2a1ea5e06": {
   "verdict": "ok",
   "by": "review:literal",
   "at": "2026-10-17",
   "why": "Checked. The printed 01/06/2026 PDF (12.08) has Ongoing Consolidation “Each model that started this move engaged with an enemy unit must still be engaged with that enemy unit.” and Objective Consolidation “Your unit must be within range of the selected objective.” Wahapedia prints “Errata 12.08 - Consolidation Move, After Moving Section, Ongoing Consolidation · Change to: …” and “Your unit must be unengaged and within range of the selected objective.” No other GW PDF in the cache mentions consolidation. The note does not say which text takes precedence."
+ },
+ "65146711677992ba": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "“a WAR DOG unit from your army” / TARGET “That WAR DOG unit”."
  },
  "652535488e26ccb9": {
   "verdict": "ok",
@@ -3443,6 +3803,12 @@
   "at": "2026-10-22",
   "why": "Each label states exactly its table row: '1–2: +1 A', '3–4: +2 S', '5–6: +1 AP'; the pair labels join two rows' effects ('This unit's attacks have the relevant rule(s)'), matching each pick's existing note. The six picks cover every outcome of 'roll either one D6 or two D6 (keep re-rolling duplicate results)': under the recorded owner reading (a duplicate result = the same table row, so two D6 always land on two different rows) the three pairs are all C(3,2) combinations; even if read as duplicate numbers, two D6 landing in one band (e.g. 1 and 2) give only that row's one rule, which the single picks already cover. Names (the calc keys), notes, when and the mod note are unchanged; label is display-only (app dmPickLabel falls back to name). Versus 8ef74cb, this entry's only change is the added label fields and their comment."
  },
+ "6995fec6263b70b9": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "Doom · 2: “Each time this model makes an attack, if the target of that attack is Battle-shocked, add 1 to the Wound roll.” = kind all, +1 to wound rolls. Whether Doom is active and the target Battle-shocked are the player's ticks (“Doom active (Harbingers of Dread), the target Battle-shocked”); lasts 'battle' = “Any Dread abilities that have been selected are active until the end of the battle.” Nothing added."
+ },
  "69eb9442c2c155d8": {
   "verdict": "ok",
   "by": "review:r10-superterm",
@@ -3575,6 +3941,12 @@
   "at": "2026-10-16",
   "why": "True: \"Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.\" Fight phase, either turn."
  },
+ "6e09cf276a4d9bc3": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "NR: “Titanic feet, Ruinspear rocket pod, Diabolus heavy stubber, 2x Gatling cannon and flamer (Despoiler gatling cannon, Heavy darkflamer)”. The weapons are therefore ×2 gatling cannon and ×2 heavy darkflamer. This is legal per Wahapedia's options: the reaper chainsword and the warpstrike claw can each be replaced with “1 despoiler gatling cannon and 1 heavy darkflamer”, the meltagun with a heavy stubber, and it can take a ruinspear rocket pod."
+ },
  "6e625fc7be865aa6": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -3623,6 +3995,12 @@
   "at": "2026-10-16",
   "why": "Their turn."
  },
+ "6f39b4905110dc02": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "NR: “1x War Dog Brigand … Armoured feet, Avenger chaincannon, Daemonbreath spear, Diabolus heavy stubber”; Wahapedia: “equipped with: avenger chaincannon; daemonbreath spear; diabolus heavy stubber; armoured feet”. One models line, all four weapons, one each."
+ },
  "6f3fc385f5f76cc6": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
@@ -3652,6 +4030,12 @@
   "by": "review:r15-v2",
   "at": "2026-10-21",
   "why": "“EFFECT: Until the start of your next Command phase, models in your unit have the Feel No Pain 6+ ability …” lasts 'round' is exactly that, so a use in your Command phase still counts when the unit is attacked in the opponent’s turn."
+ },
+ "704b57e7a5bd40ac": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“In your Command phase” is your turn only. Surges made at other times come from Profane Symbiosis, which has its own timing."
  },
  "70df0ecc9690d001": {
   "verdict": "ok",
@@ -3761,6 +4145,12 @@
   "at": "2026-10-16",
   "why": "NR: 2 Hades autocannons, ectoplasma cannon and claws."
  },
+ "74ec1cd7b0afc248": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "NR prints “Mischief Makers (Aura)”, and BSData (Chaos Daemons Library) has “Mischief Makers (Aura)”. Wahapedia's datasheet prints the name without the label, a minor source difference. Two sources, including the owner's export, carry it, so the tag quotes a label and adds nothing."
+ },
  "7502ff4d3e4afc81": {
   "verdict": "ok",
   "by": "review:r17c-v2",
@@ -3827,6 +4217,12 @@
   "at": "2026-10-22",
   "why": "NR roster: Lord Exultant 95, (5) Infractors 95; card \"190 PTS\"."
  },
+ "779abb4c642ccc74": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "TARGET “wholly within 12\" of one or more battlefield edges and not within Engagement Range of one or more enemy units” and EFFECT “Remove your unit from the battlefield and place it into Strategic Reserves.” are both kept, “wholly” included."
+ },
  "77b4378e2c4371f7": {
   "verdict": "ok",
   "by": "review:m5-new",
@@ -3856,6 +4252,18 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "EFFECT: \"When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one D6, with +1 to that roll if your unit is riled up: On a 4+, do not remove that model … When your unit has fought, or at the end of the phase (whichever comes first), that model is removed\". The gist is the same, shorter (as Crazed Rampage's)."
+ },
+ "78ebdf095c5378b5": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“While a friendly WAR DOG model is within 9\" of this model, improve that WAR DOG model’s Leadership and Objective Control …”. The list has no WAR DOG model, and no rule of this detachment extends WAR DOG auras. The mark is certain and the ability stays visible."
+ },
+ "792d48057701cf3f": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“Your opponent’s Shooting phase” is their turn."
  },
  "794b5642eaf9c0e1": {
   "verdict": "ok",
@@ -3977,6 +4385,12 @@
   "at": "2026-10-21",
   "why": "\"Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1.\" The note is now only that unconditional part, calc {rrWound:'1s'} says it exactly, and always is right. It is the Rubric Marines’ (bodyguard) ability, so it covers the Sorcerer’s attacks too (19.04)."
  },
+ "7c9381e98775052b": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“Each time an enemy unit (excluding TITANIC units) within Engagement Range … is selected to fight, until the end of the phase, each time a model in that enemy unit makes a melee attack, subtract 1 from the Hit roll.” The When targeted line keeps the TITANIC exclusion, the Engagement Range condition, melee only and the duration. Any enemy melee attack on the Nurglings is made from within Engagement Range, so the line is right for the unit itself."
+ },
  "7cb3e911df27ef6c": {
   "verdict": "ok",
   "by": "review:m5-recheck",
@@ -4000,6 +4414,12 @@
   "by": "review:r15b-v2",
   "at": "2026-10-21",
   "why": "“In your Command phase … you can select one protocol … Once a unit enters a protocol, it remains in that protocol until it enters a different one”: a different protocol can only be entered in your Command phase, so the effect surely lasts until the start of your next Command phase, which is 'round'. That carries Protector’s +2 A into every later step of this turn and the opponent’s, and no longer than the words. The rest of the footnote is unchanged."
+ },
+ "7d5cd2b1b9048414": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“Each time this model is selected to shoot or fight, you can re-roll one Hit roll or you can re-roll one Wound roll when resolving those attacks.” The footnote keeps “one” and the either/or, so the choice is left to the player."
  },
  "7d6f39bc28b2a55a": {
   "verdict": "ok",
@@ -4157,6 +4577,12 @@
   "at": "2026-10-21",
   "why": "NR \"Empyric Guidance (Psychic) - Sorcerer\"; \"While this model is leading a unit\" = the Sorcerer."
  },
+ "818b335ec8c3c435": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "The ability only works for “a friendly WAR DOG model”. None of the six units in armyUnits has WAR DOG (four Knights are Cerastus/Abhorrent TITANIC, plus the Nurglings), and nothing in the Infernal Lance detachment makes a non-WAR DOG unit count as one or be affected by WAR DOG auras. The two rules that would (Masters of the Pack and Throne Tyrannicus, both Helhunt Lance) and A Long Leash (Traitoris Lance) are not in this list. So the mark is certain. It is a fact about the list, not a reading of the rule, and the ability stays on the datasheet with its text, so it is marked rather than hidden. This matches the precedent (“No VEHICLE in this list”, Thundercharge on the Knight lists)."
+ },
  "8190a61db4a912a7": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -4168,6 +4594,12 @@
   "by": "review:m5-new",
   "at": "2026-10-20",
   "why": "Source: \"When this model uses its Crude Surgery ability, you can add D3 to the number of wounds healed.\" It has no phase words of its own. It works only at the moment Crude Surgery is used, and Crude Surgery's text is \"In your Command phase, this unit heals 3 wounds.\" Nothing else in the list uses Crude Surgery, so {ph:['command'], turn:'your'} is the only moment the text can apply."
+ },
+ "81c7db638c9ca6d3": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "Wahapedia's strike-through is its keyword linker, not an errata: the HTML is <span class=\"tooltip\" title=\"Keyword does not appear in that faction.\"><s class=\"kwbs\">WAR DOG CHARACTER</s></span>, the same mark it put on DEFF DREAD and DESTRIER. No datasheet has WAR DOG and CHARACTER natively (the War Dog KEYWORDS are VEHICLE, WALKER, CHAOS, WAR DOG, <name>), so the linker cannot match the pair. Pack 1.2's Rules Updates change only Animalistic Rage and Harrying Hounds in this detachment, and Wahapedia shows no Errata under Vox-howl. The detachment itself gives three WAR DOG units “the CHARACTER keyword”, and TARGET reads “One WAR DOG CHARACTER unit”, so needs all [War Dog, Character] is the text: here the three Houndpack Lance Characters."
  },
  "81c9ba88f89288e3": {
   "verdict": "ok",
@@ -4216,6 +4648,12 @@
   "by": "review:m5-recheck",
   "at": "2026-10-20",
   "why": "NR prints 'Intimidating Motivation (Once per battle round, per army) - Nazdreg' (l.67-68); BSData links it to the Nazdreg model (shared profile also on Warboss). Models match NR."
+ },
+ "8348ec400f57c2c2": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "“Your Shooting phase”: your turn."
  },
  "836312dea8f3763f": {
   "verdict": "ok",
@@ -4445,6 +4883,12 @@
   "at": "2026-10-21",
   "why": "It matches the CP sentences of the lists’ rules and nothing else: Da Boss (“…gain 1CP.”), Code Chivalric (“…you gain 2CP, or 3CP … (CP gained in this way are an exemption …)”), Hive Commander (“…you gain 1CP”), Broad Spectrum Data-tether (“…on a 5+, you gain 1CP.”)."
  },
+ "88de4d5ed7a4247e": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "NR: “Reaper chaintalon, Slaughterclaw, Diabolus heavy stubber”; Wahapedia: “equipped with: diabolus heavy stubber; reaper chaintalon; slaughterclaw”. One models line, three weapons."
+ },
  "88f067e90f8b408d": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -4462,6 +4906,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "\"Your Movement phase\"."
+ },
+ "89abbff4dbb5107e": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "TARGET: “That WAR DOG unit.”"
  },
  "89eea4364122be6d": {
   "verdict": "ok",
@@ -4481,11 +4931,23 @@
   "at": "2026-10-16",
   "why": "\"In your Shooting phase, if this unit's Blitzkannon weapon targets…\""
  },
+ "8a04304e5afbe2e7": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "“each time a model in one of those WAR DOG units makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit” = critHit 5. Melee for a Fight-phase stratagem is the settled convention (Rampaging Monstrosities, Martial Perfection). The when keeps the conditions: Fight phase, two or more WAR DOG units within Engagement Range of the target, and “can only target that enemy unit”."
+ },
  "8a0a04b58d7f4558": {
   "verdict": "ok",
   "by": "review:gists",
   "at": "2026-10-17",
   "why": "“Select one EXPLOSIVES/GRENADES model in your unit. Select one unengaged enemy unit within 8\" of and visible to that model. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.” Same."
+ },
+ "8a2f94db8cbef53e": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“While the bearer is using the Diabolic Power ability, its melee weapons have the [LANCE] ability.” The footnote is melee only, and its condition is Diabolic Power (a Malefic Surge ability). The WS +1 part is already in the profiles (NR prints WS 2+; the datasheet has 3+), as data.js says."
  },
  "8a3b372cb39242dc": {
   "verdict": "ok",
@@ -4504,6 +4966,12 @@
   "by": "review:r11-purge-units",
   "at": "2026-10-21",
   "why": "NR prints “Robotic Bodyguard - Kastelan Robots”. It is a Kastelan Robots datasheet ability (Wahapedia)."
+ },
+ "8aa125d1dcbf66f0": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "The start of the battle round comes before either player's turn (Core Rules 07.01 “before progressing to player turns”), Dismay is in “your opponent’s Command phase”, and the Dread abilities are “active until the end of the battle”: either."
  },
  "8ab4a9997922b3fc": {
   "verdict": "ok",
@@ -4600,6 +5068,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "NR prints \"More Dakka - Big Mek\"."
+ },
+ "8cf5ee3144adb113": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "Same gear as above for the plain Brigands (NR “1x War Dog Brigand Armoured feet, Avenger chaincannon, Daemonbreath spear, Diabolus heavy stubber”, x3)."
  },
  "8cfe5487d405597f": {
   "verdict": "ok",
@@ -5063,6 +5537,12 @@
   "at": "2026-10-21",
   "why": "NR (standard p2) Categories: \"Battleline*, Berzerkers*, *from combined unit\", and the combined unit is Khârn leading Khorne Berzerkers."
  },
+ "9aa383b8e2ace091": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“In your Command phase, one or more CHAOS KNIGHTS units from your army can make a Malefic Surge.”"
+ },
  "9afba01052e3c1e4": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -5177,6 +5657,12 @@
   "at": "2026-10-22",
   "why": "WHEN: \"Start of the Fight phase.\""
  },
+ "9e1b9d39cb55ec05": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "The ability is printed with the (Aura) label in all three sources: Wahapedia datasheet “Consumed with Hunger (Aura): While a friendly WAR DOG model is within 6\" …”, New Recruit “Consumed with Hunger (Aura)”, BSData “Consumed with Hunger (Aura)”."
+ },
  "9e5577b93d8cb30e": {
   "verdict": "ok",
   "by": "review:r9-knights",
@@ -5224,6 +5710,12 @@
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "\"Once per battle, at the start of the Fight phase ... until the end of the phase\": the Fight phase, either turn."
+ },
+ "9f8af59f723d522c": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "WHEN “Fight phase, when an enemy unit targets a friendly WAR DOG unit” + EFFECT “Your unit has Feel No Pain 5+.”: both kept, nothing added."
  },
  "9f95b099784a3975": {
   "verdict": "ok",
@@ -5314,6 +5806,18 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "Crimson King section lists \"Impossible Form (Psychic)\"."
+ },
+ "a21b919c5b85d98b": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "Wahapedia “Close-range Killers (Aura):”, NR “Close-range Killers (Aura)”, BSData “Close-range Killers (Aura)”."
+ },
+ "a25cf56c859a00e3": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "It keeps the trigger (just after an enemy unit selects your unit as a target) and the EFFECT word for word in short form. The row's “Their Shooting” gives the phase and turn."
  },
  "a2880c80dd8fbd65": {
   "verdict": "ok",
@@ -5441,11 +5945,23 @@
   "at": "2026-10-16",
   "why": "The only BEAST SNAGGA units are Mozrog and the two Beastbosses, and all three are MONSTER + CHARACTER. Meganobz are not BEAST SNAGGA either, so the ability can never switch on."
  },
+ "a63ab251c342c33b": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "Wahapedia “Dread Dominion (Aura):”, NR “Dread Dominion (Aura)”, BSData “Dread Dominion (Aura)”."
+ },
  "a63f2322eb83abb4": {
   "verdict": "ok",
   "by": "review:r5-text",
   "at": "2026-10-17",
   "why": "WHEN: \"just before you make a battle-shock roll for a friendly unit\"; EFFECT: \"That battle-shock roll is automatically successful.\" The gist matches the EFFECT in full. It leaves out \"RESTRICTIONS: You cannot use this stratagem more than once per battle.\" That line is a RESTRICTION, not part of the EFFECT, so by the stated standard it need not appear (optional: add \"(once per battle)\" to match how Rapid Ingress shows its restriction)."
+ },
+ "a660017a004a29ed": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "The selection is “At the start of the first battle round” (the at tag, listed with the Command phase as for the other start-of-round rules). The re-roll applies “each time this model makes an attack that targets its victim”: shooting in your turn, fight in either turn. This is the same shape as the approved Start of the battle round entries."
  },
  "a667d6acb47ab155": {
   "verdict": "ok",
@@ -5519,6 +6035,12 @@
   "at": "2026-10-21",
   "why": "NR (princes p3) Categories: \"Battleline*, Berzerkers*, Grenades*, Infantry*, *from combined unit\", and the Lord is \"Leading: Khorne Berzerkers\"."
  },
+ "a8728b1a5c0f7145": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "The datasheet (Wahapedia, NR) has W 28 and “DAMAGED: 1-10 WOUNDS REMAINING … While this model has 1-10 wounds remaining”. Knight Diabolus does not change W. The band and the W match."
+ },
  "a890df5755b7d20d": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -5572,6 +6094,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "\"Your unit has Feel No Pain 4+ against mortal wounds.\""
+ },
+ "ab4e5b5298b04c77": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "“Your opponent’s Shooting phase”: opp."
  },
  "ab6b3384ccb074cc": {
   "verdict": "ok",
@@ -5747,6 +6275,12 @@
   "at": "2026-10-16",
   "why": "\"ranged attack that targets a unit within range of one or more objective markers, that attack has the [IGNORES COVER] ability.\""
  },
+ "afa25b759c672600": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "Pack 1.2 WHEN: “Your Shooting phase, when a friendly WAR DOG unit has shot.”"
+ },
  "afbdb042f0da43a9": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -5800,6 +6334,12 @@
   "by": "review:gists",
   "at": "2026-10-17",
   "why": "“Your unit can make a normal move of up to 6\", and must end that move within range of an objective. Your unit is not eligible to declare a charge until the end of the turn.” “ending within range” states the same end condition; the charge restriction and its duration are kept."
+ },
+ "b0fda1c21fe98354": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“Diabolic Power: When this unit is selected to shoot or fight, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until the end of the phase, weapons equipped by models in this unit have the selected ability.” The pick offers both options, kind all (all weapons), with the Empowered condition and the duration."
  },
  "b1239f6c266b0434": {
   "verdict": "ok",
@@ -5861,6 +6401,12 @@
   "at": "2026-10-20",
   "why": "NR Options: 1x Nob on Smasha Squig 'Big Choppa, Slugga, Squig Jaws'; 3x Squighog Boy 'Saddlegit's Shiv, Squig Jaws, Stikka'. The gear lines match, and BSData model wargear agrees (Nob: Big Choppa/Squig Jaws/Slugga; Boy: Stikka/Saddlegit's Shiv/Squig Jaws). Weapon rows: Slugga (1), Saddlegit's Shiv (x3), Stikka ranged (x3), Big Choppa (1), Squig Jaws (x4 = 1+3), Stikka melee (x3). The weapons list matches. The unit is not attached (leads null), so no who labels."
  },
+ "b2f06505a1392691": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "Ruinator: Wahapedia and NR give W 26 and “DAMAGED: 1-9 WOUNDS REMAINING”. Fleshmetal Fusion changes T, not W. The Despoiler (W 26, “1-9 wounds remaining”) has the identical item. The band and the W match."
+ },
  "b32f67f8d86c1706": {
   "verdict": "ok",
   "by": "review:oioioi (its fix)",
@@ -5903,11 +6449,29 @@
   "at": "2026-10-21",
   "why": "NR: every one of the four models lines has \"Tzaangor blades\" (Brayhorn and Herd banner are printed on their lines, kept in the line names); Tzaangor blades (x10) = 1+7+1+1."
  },
+ "b4467ac786a00744": {
+  "verdict": "ok",
+  "by": "review:woof-woof (its fix)",
+  "at": "2026-10-22",
+  "why": "TARGET “Two or more WAR DOG units from your army within Engagement Range of the same enemy unit” decides when it can be used, and the gist drops it: “your WAR DOG units” reads as all of them. EFFECT applies only to “those WAR DOG units”. “one enemy unit they are all within Engagement Range of” also reads more into “Select one enemy unit within Engagement Range of those WAR DOG units” than the text says. The fix keeps the TARGET condition and the EFFECT's own words."
+ },
  "b47db1720f346a2f": {
   "verdict": "ok",
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "NR categories: \"Battleline*, Rubric*, Rubric Marines*, Rubricae*, *from combined unit\"."
+ },
+ "b49011766af92534": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "Pack 1.2: “(Once per battle round, per army)”, word for word."
+ },
+ "b49e8ea0a6fb6dfd": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "Fight phase in either turn, Shooting in the opponent's: turn either, narrowed by turns."
  },
  "b4aa6b68533e3b18": {
   "verdict": "ok",
@@ -5981,11 +6545,23 @@
   "at": "2026-10-21",
   "why": "Wahapedia Runt Swarm FAQ: \"Q:When using the Grot Shields stratagem, are hits by [TORRENT] weapons considered ’hit rolls that result in a hit’? A: No.\" The note quotes it exactly."
  },
+ "b7ec56bb88fd2790": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets.”"
+ },
  "b897e1eb0d0cd6aa": {
   "verdict": "ok",
   "by": "review:r12-calc-marks",
   "at": "2026-10-21",
   "why": "\"Attacks made with this model’s Kustom Krumpa weapon can re-roll hit rolls and wound rolls.\" No table condition; weapon Kustom Krumpa and the models line \"2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)\" limit it to those two Nobz’ Krumpas, so always is right."
+ },
+ "b8c4662692012423": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“ranged weapons equipped by that War Dog model have the [ASSAULT] ability”. The aura is ranged, for WAR DOG, within 6\". It is literal."
  },
  "b8de0f5f89f76da3": {
   "verdict": "ok",
@@ -6010,6 +6586,18 @@
   "by": "review:r23-army",
   "at": "2026-10-22",
   "why": "Changes against 1ce3d8f: the peeking branch is gone (always “Your list”); an enhancement holder by its full name when another unit has the same short name (shooty: “Big Mek Dakkarig (1 of 2)”, “(2 of 2)”, “Big Mek in Mega Armour”; princes’ two Daemon Princes share the full name, so they keep “Daemon Prince (1 of 2)/(2 of 2)” from unitNo); the detachment rules in the army rules block as on the Rules tab (ruleRow, timing tag, note, textWithTable, “Applies to” its needs; the detachment’s name where the Rules tab says “Detachment rule”, there being no detachment heading here), headed “Army and detachment rules” (fixlist 16); “Start of the battle and the battle rounds” for the section holding Code Chivalric’s start-of-battle Deed (fixlist 19). Warlord, attached units, Deep Strike/Scouts/Infiltrators through everyModel with partialRules (24.09, 24.31), transports and uses per battle are unchanged."
+ },
+ "b97d5160a0bcbb39": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“While a friendly War Dog model is within 9\" of this model, each time that War Dog model makes an attack …”. The list has no WAR DOG and nothing extends the aura. The mark is certain and the ability is shown."
+ },
+ "b981807cc906e2a8": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“TARGET: One CHAOS KNIGHTS unit from your army that is not Empowered.” Not being Empowered is a game state, so it stays in the gist rather than in needs."
  },
  "b99a532d9c0380a6": {
   "verdict": "ok",
@@ -6070,6 +6658,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "\"melee attacks have +1 A\" only matters in the Fight phase."
+ },
+ "bab6fb141f51dc93": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "“At the start of your Command phase, select one unit from your opponent’s army.” Command, as Malefic Surge and Knights of Legend; the attack bonus is each WAR DOG unit's footnote."
  },
  "bae82088ae43cfe6": {
   "verdict": "ok",
@@ -6220,6 +6814,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "\"the Fight phase\" has no turn, so the stratagem as a whole is either turn; the Shooting phase is limited by turns."
+ },
+ "be6c1c7a90b29a05": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“That CHAOS KNIGHTS CHARACTER unit.” Every Knight in this list is a CHARACTER (NR Categories), and the Nurglings are excluded."
  },
  "be8c973c18c5fe88": {
   "verdict": "ok",
@@ -6431,6 +7031,12 @@
   "at": "2026-10-17",
   "why": "EFFECT: “You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).” The gist keeps both. The roll list it repeats is the WHEN’s, complete."
  },
+ "c5f8cf3ad171957b": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "“your Shooting phase”: your turn."
+ },
  "c638e54714706332": {
   "verdict": "ok",
   "by": "review:r19-fixes",
@@ -6443,11 +7049,23 @@
   "at": "2026-10-16",
   "why": "Choice shown as \"or\", CHARACTER models only, on selection to fight: matches \"can have: [CLEAVE 1]. Or: +1 AP\"."
  },
+ "c68671f1081db81d": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“Until the end of the phase, ranged weapons equipped by models in your unit have the [IGNORES COVER] ability.” The footnote is ranged, in your Shooting phase. It is literal."
+ },
  "c6d44a7bda5336cc": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "\"Your Shooting phase\"."
+ },
+ "c71c010b880609a4": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "TARGET: “One WAR DOG unit from your army”."
  },
  "c751fbe84d0e36e9": {
   "verdict": "ok",
@@ -6508,6 +7126,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "Their turn."
+ },
+ "c81efef17bbdafd5": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“While a friendly WAR DOG model is within 6\" of this model …”. No unit in armyUnits is WAR DOG, and no Infernal Lance rule changes that (see Consumed with Hunger). The mark is certain and the ability is still shown."
  },
  "c8433eeae24f96d5": {
   "verdict": "ok",
@@ -6677,6 +7301,12 @@
   "at": "2026-10-16",
   "why": "NR: \"Marked by Fate (Psychic)\"."
  },
+ "cd232dd833dcc49d": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "Wahapedia “Dark Fervour (Aura):”, NR “Dark Fervour (Aura)”, BSData “Dark Fervour (Aura)”."
+ },
  "cd32b3d2ea1ecc87": {
   "verdict": "ok",
   "by": "review:r9-we-nids",
@@ -6701,6 +7331,12 @@
   "at": "2026-10-17",
   "why": "Same as Turbo Engine: New Recruit prints Shokk Attack Engine under “Throttlerokkit Shokka Engine”, and Full Throttle says “select one Throttlerokkit Shokka Engine ability”."
  },
+ "cddcf47f50871c03": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "8\" is the Pack 1.2 Rules Update (“Harrying Hounds Stratagem, Target Section: Change 9\" to 8\".”), which Wahapedia's text also has. The WHEN (“just after an enemy unit ends a Normal, Advance or Fall Back move”), the TARGET (“within 8\" of that enemy unit”) and the EFFECT (“Your unit can make a Normal move of up to 6\".”) are all kept."
+ },
  "ce8b0b4c278746d4": {
   "verdict": "ok",
   "by": "review:knights-nids (its fix)",
@@ -6712,6 +7348,18 @@
   "by": "review:r23-army",
   "at": "2026-10-22",
   "why": "The only change is gLink(L, …) → linkTo(…), the same output for the list on screen (gLink returned linkTo when L.id === cur.army). The quoted sentence (G_CP on lines not starting with *, so no FAQ/errata lines), army rules not inert, detachment rules, usable unit abilities grouped once with their units: unchanged."
+ },
+ "ceb4c9f1ce3e56a7": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“After your unit has shot, select one enemy unit hit by one or more of those attacks … Battle-shock test; if the test is failed, until the end of your opponent’s next turn, it is aflame … subtract 2\" from its Move characteristic and subtract 2 from Charge rolls.” Everything is kept. Leaving out “has not been selected to shoot this phase” follows the approved gists (Swarm-guided Salvoes, Unshackled Wrath, Devastating Sorcery …), and it is implied by “after your unit has shot”."
+ },
+ "cf29a9c8fd4333ff": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "“Start of the Fight phase”, no “your”: either turn."
  },
  "cf3efc5a4a626bc8": {
   "verdict": "ok",
@@ -6748,6 +7396,12 @@
   "by": "review:r9-knights",
   "at": "2026-10-21",
   "why": "\"Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll\": ranged, condition and +1 to hit are all the rule's own words."
+ },
+ "d05ff62d736752b1": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "Faction Pack 1.2, Hunting Warpack: “SNARLING RIVALRY UPGRADE … EXECUTIONER unit only. This unit’s ranged attacks have [IGNORES COVER].” BSData has it as type “upgrade”, NR prints it in the options. Tag Upgrade is the pack's word. Its [IGNORES COVER] is on the autocannons and the heavy stubber (NR prints it on both) and not on the Armoured feet, which matches “ranged attacks”."
  },
  "d068c1b7d947105c": {
   "verdict": "ok",
@@ -6791,6 +7445,12 @@
   "at": "2026-10-17",
   "why": "“Each time this model makes a ranged attack that targets the closest eligible target within 18\", you can re-roll the Hit roll” has no phase limit. The model makes ranged attacks in your Shooting phase and in Fire Overwatch (their Movement phase); the Forgefiend is VEHICLE WALKER, not TITANIC. For the owner: Snap Shooting (15.09) says “You cannot re-roll hit rolls.” The tag indexes where the ability’s own words apply and does not say which of the two rules wins, so it is not a ruling. Leaving that phase out would itself decide the conflict."
  },
+ "d15b0853ba1855fb": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "“At the start of your Command phase”: your turn."
+ },
  "d17aa45acd2b9011": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -6802,6 +7462,12 @@
   "by": "review:r9-we-nids",
   "at": "2026-10-21",
   "why": "NR (standard p6): \"1x Slaughterbound | Lacerator and daemonic claw\", the only weapon row."
+ },
+ "d19eadff1ab8ea2d": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“Each time this model is selected to shoot or fight”. That is the Shooting phase (your turn) and the Fight phase (either turn). This is the same convention as the 11 approved “selected to shoot” abilities with turns {shooting:'your'}."
  },
  "d1ba45843b5d09c0": {
   "verdict": "ok",
@@ -6815,11 +7481,23 @@
   "at": "2026-10-21",
   "why": "WHEN: “Your Command phase.”"
  },
+ "d1f3c3d5480e4c06": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“WHEN: Your Command phase, just after a CHAOS KNIGHTS CHARACTER unit from your army makes a Malefic Surge.”"
+ },
  "d22236a049b94f81": {
   "verdict": "ok",
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "“In your Shooting phase, if any of the following apply, this unit’s ranged attacks have +1 AP. This unit is within range of an objective. The target of that attack is within range of an objective.” Same phase, the same two alternative conditions, the same effect."
+ },
+ "d268c4fdf0b8daf2": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“Your Command phase.”"
  },
  "d281e7a72b7360c8": {
   "verdict": "ok",
@@ -6916,6 +7594,12 @@
   "by": "review:hurrdurr (its fix)",
   "at": "2026-10-16",
   "why": "Drops \"friendly\": the rule is \"within 3\\\" of one or more friendly WORLD EATERS INFANTRY units\" (matters in a mirror match). The army does have such units (Jakhals, Eightbound, Slaughterbound's and Khârn's/Lord's units)."
+ },
+ "d593106bad9e458b": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“WHEN: Your Shooting phase.”"
  },
  "d598a8b66d47d2a8": {
   "verdict": "ok",
@@ -7115,6 +7799,24 @@
   "at": "2026-10-17",
   "why": "“a friendly BREAKA BOYZ/FLASH GITZ/TANKBUSTAS unit”: any of the three, copied (the text has no ORKS keyword)."
  },
+ "dbe829747230249f": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "WHEN (Pack 1.2 Rules Update, which the data has): “Your opponent’s Shooting phase or the Fight phase” = Shooting, Fight."
+ },
+ "dc210ef8cb21a370": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "“Fight phase” with no “your”/“opponent’s”: either turn (the enemy unit can fight in either)."
+ },
+ "dc22d6dced42b74f": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "“Your opponent’s Movement phase”: opp."
+ },
  "dc6af6247ab2f48e": {
   "verdict": "ok",
   "by": "review:core-code (its fix)",
@@ -7150,6 +7852,12 @@
   "by": "review:r14-calc",
   "at": "2026-10-21",
   "why": "\"each time an attack targets either your SMOKE unit, or a unit that is not fully visible … because of … your SMOKE unit, the target has the benefit of cover against that attack (13.08).\" {cover:true} gives the SMOKE unit cover against ranged attacks, which is exactly the first case; the second case (another unit behind it) is not offered and adds nothing, so the player uses the cover box."
+ },
+ "dc9be766871d381b": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "It is the EFFECT, shortened. The unshot-unit target condition is left out as in the approved Swarm-guided Salvoes gist."
  },
  "dc9d10861785de18": {
   "verdict": "ok",
@@ -7217,6 +7925,12 @@
   "at": "2026-10-21",
   "why": "“until the start of your next Command phase” now has its own value, command, separate from the battle round (“until the end of the battle round”, “until the start of the next battle round”). Kindred Sorcery, Full Throttle, Canticles of the Omnissiah and Rod of the War Forge get it. Doctrina, Blessings, Wrathful Presence and Unearthly Power stay round, Code Chivalric and Singular Purpose battle, Battle Protocols kept."
  },
+ "de3f22a8dc58a2ff": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "“While this model has 1-5 wounds remaining” = damaged 1-5; W 14 matches NR (“War Dog Karnivore … W 14”), Wahapedia and every War Dog in the list (same key)."
+ },
  "de73571038d7b631": {
   "verdict": "ok",
   "by": "review:r12-calc-marks",
@@ -7246,6 +7960,12 @@
   "by": "review:r12-calc-marks",
   "at": "2026-10-21",
   "why": "Wahapedia: \"Onslaught (Aura, Psychic): While a friendly TYRANIDS unit is within 6\" of this model, ranged weapons equipped by models in that unit have the [ASSAULT] and [LETHAL HITS] abilities.\" 22.01 puts the Hive Tyrant within its own aura and nothing else conditions it, so selfAlways is right (this Hive Tyrant has no ranged weapons, so it changes nothing here)."
+ },
+ "df522ec971752b32": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "“within 12\" of a friendly WAR DOG unit”: the rule is for WAR DOG units."
  },
  "df654e88688e1a60": {
   "verdict": "ok",
@@ -7463,6 +8183,12 @@
   "at": "2026-10-21",
   "why": "It quotes the CP sentence of each army rule, detachment rule and usable ability once, with its units, and skips the italic FAQ/errata lines (Da Boss’s errata). Placed under Command points next to 08.02 (“Both players gain 1 Command Point (CP).”) and the Event Companion cap (“Excluding Core CP, each player can gain a maximum of 1CP per battle round …”), which is their place."
  },
+ "e560acd173c99147": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "NR: “Armoured feet, 2x War Dog autocannon, Diabolus heavy stubber” and “War Dog autocannon (x2)”; Wahapedia: “diabolus heavy stubber; 2 War Dog autocannons; armoured feet”. ×2 autocannon is right."
+ },
  "e577aca646c11203": {
   "verdict": "ok",
   "by": "review:m1-strats",
@@ -7589,6 +8315,12 @@
   "at": "2026-10-18",
   "why": "WHEN: “a friendly ORKS unit”. TARGET: “That ORKS unit”. text: case only, “[Rapid Fire 1]” vs “[RAPID FIRE 1]”."
  },
+ "e8f2553d484d0aaa": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“One CHAOS KNIGHTS unit from your army that was selected as the target …”."
+ },
  "e936f57d4687120b": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -7612,6 +8344,12 @@
   "by": "review:r12-calc-marks",
   "at": "2026-10-21",
   "why": "\"While a friendly ADEPTUS MECHANICUS BATTLELINE model is wholly within 6\" of this model, that BATTLELINE model has a 4+ invulnerable save against ranged attacks.\" needs AdMech + Battleline, kind ranged and calc {insv:4} match; in this list it reaches the two Skitarii Rangers units (not attached), and being wholly within 6\" is table position, so unticked is right."
+ },
+ "e96f6bcecb9fe47e": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "TARGET: “That WAR DOG unit.”"
  },
  "e97e13f8366d8a58": {
   "verdict": "ok",
@@ -7642,6 +8380,18 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "\"IMPERIAL KNIGHTS models from your army\": every unit here."
+ },
+ "ea10b1dad5d39f7e": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "A Houndpack Lance Enhancement (Wahapedia “Panoply of the Cursed Knight 15 pts”); NR lists it on the Karnivore (160 = 145 + 15). Tag Enhancement. (The name differs between the sources; see the report.)"
+ },
+ "ea4ea78104a4a851": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "Final Howl (Aura): “While a friendly War Dog model is within 6\" of the bearer, each time that model makes an attack, re-roll a Wound roll of 1.” = needs WAR DOG, kind all, re-roll wound rolls of 1, within 6\" of the bearer (the player's tick). selfAlways/“Own aura”: the bearer is a WAR DOG, and Core Rules 22.01 “While a model with an aura ability is on the battlefield, it is always within range of its own aura ability.” Same form as Ghazghkull's and the Hive Tyrant's approved auras."
  },
  "ea570e4174008c93": {
   "verdict": "ok",
@@ -7696,6 +8446,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "WHEN: \"Fight phase\"."
+ },
+ "eba8309b22fe4885": {
+  "verdict": "ok",
+  "by": "review:infernal-lance (its fix)",
+  "at": "2026-10-22",
+  "why": "The target, effect and restriction are literal: “not Empowered”, “makes a Malefic Surge”, “cannot select the same unit … more than once per battle round”. But the WHEN “End of any phase.” is lost on the row. stratWhenShort adds “End of” only when shortWhen is not “Any phase”, and with all five phases at turn either shortWhen is “Any phase”. So the row reads “Any phase” and the gist alone can carry the moment that decides when it can be used."
  },
  "ebb2fe680a92425d": {
   "verdict": "ok",
@@ -7829,6 +8585,12 @@
   "at": "2026-10-16",
   "why": "\"WHEN: Your Movement phase, just after ... is selected to Advance\"."
  },
+ "f08cdc20457d51c8": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "The Fight phase with no player named, so either turn."
+ },
  "f0a0d8420e96a8fe": {
   "verdict": "ok",
   "by": "review:defilers-and-friends",
@@ -7919,6 +8681,12 @@
   "at": "2026-10-16",
   "why": "TARGET: \"That NORN ASSIMILATOR/NORN EMISSARY unit\": either keyword."
  },
+ "f329d722ca6129d0": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "An Infernal Lance enhancement (Wahapedia “Blasphemous Engine 35 pts”). NR: “Options: Blasphemous Engine, Cerastus shock lance”."
+ },
  "f3af1bd37741ec69": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -7955,6 +8723,12 @@
   "at": "2026-10-21",
   "why": "WHEN: “when an enemy unit targets a friendly ORKS INFANTRY unit (excluding GRETCHIN units)” = protects Orks + Infantry, not Gretchin. TARGET: “One friendly GRETCHIN unit within 3\" of that ORKS INFANTRY unit” = by Gretchin (the 3\" is the player’s tick). It is offered against ranged attacks on the protected unit, unticked, and ruled out in Fire Overwatch (“Your opponent’s Shooting phase”). Each hit-roll hit ends that attack and gives the GRETCHIN unit 1 mortal wound while a model of it is on the battlefield. [TORRENT] goes through, per the FAQ."
  },
+ "f47f632fd5537c04": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "“Each time an attack targets the bearer, worsen the Armour Penetration characteristic of that attack by 1.” = “worsen the AP of each attack that targets it by 1”, any phase (no defPh), as the text has no phase."
+ },
  "f4b38a30a286dbd1": {
   "verdict": "ok",
   "by": "review:literal",
@@ -7985,11 +8759,23 @@
   "at": "2026-10-21",
   "why": "Quality 1–2: “Each time this model is selected to shoot or fight, you can re-roll one Hit roll and you can re-roll one Wound roll.” It is listed as not counted, and the reason given (“one re-roll: the calculator re-rolls no single die”) is true. The when names the Quality picked for the Oath."
  },
+ "f5b87dc0d359a948": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "NR: “Houndpack Lance Character, Panoply of the Cursed Knights …” and Categories “Character”; Wahapedia KEYWORDS have no CHARACTER. The quote is the detachment rule word for word and the note only names where the keyword comes from. Accurate, and no more than the rule says."
+ },
  "f60bc79bbd228e3a": {
   "verdict": "ok",
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "Matches the NR line \"Avenger gatling cannon, Heavy flamer, Stormspear rocket pod, Meltagun, Reaper chainsword\" and BSData wargear (no titanic feet on a Warden); one model carries all, chainsword as strike/sweep profiles."
+ },
+ "f64b2a514f47fe32": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“Your Shooting phase.”"
  },
  "f64da36b2747df91": {
   "verdict": "ok",
@@ -8111,6 +8897,12 @@
   "at": "2026-10-17",
   "why": "“Until the end of the phase, Psychic weapons equipped by models in the attacking unit have the [HAZARDOUS] ability, and models in your unit have the Feel No Pain 4+ ability against Psychic Attacks.” Same."
  },
+ "fa9f667dcf2d6501": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "“While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.” = kind all, -1 to hit rolls, and -3 OC, in the approved Armiger form (“-1 to hit rolls (and -4 OC)”)."
+ },
  "fabaddbc59357b09": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -8225,6 +9017,12 @@
   "at": "2026-10-17",
   "why": "WHEN: \"when an enemy unit has shot\"; TARGET: \"One friendly FLASH GITZ/TANKBUSTAS unit hit by those attacks\"; EFFECT: \"Your unit shoots using normal shooting, but while doing so your unit can only target that enemy unit.\" The gist puts the trigger first, shortened (the phase is left out, as in the allowed \"After shooting:\" example). \"hit yours\" comes from the TARGET, and \"only at that enemy unit\" = \"can only target that enemy unit\". Nothing added."
  },
+ "fce594ee62eae82d": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "“WHEN: Your Shooting phase.”"
+ },
  "fd21ae46923c1f3a": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -8255,6 +9053,12 @@
   "at": "2026-10-21",
   "why": "“Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability.” lasts 'turn' is exactly that; Dark Blessing is this model’s ranged weapon (24\", PSYCHIC)."
  },
+ "fe51f646ccf1f890": {
+  "verdict": "ok",
+  "by": "review:woof-woof",
+  "at": "2026-10-22",
+  "why": "Pack 1.2 WHEN: “Your opponent’s Shooting phase, when an enemy unit targets a friendly WAR DOG unit within range of an objective.”"
+ },
  "fe5b7119632bd741": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -8284,6 +9088,12 @@
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "NR Categories: \"... Battleline*, Infractors*, *from combined unit\"."
+ },
+ "ff04cd0cf3914920": {
+  "verdict": "ok",
+  "by": "review:infernal-lance",
+  "at": "2026-10-22",
+  "why": "NR: “1x Chaos Cerastus Knight Atrapos — Atrapos lascutter, Graviton singularity cannon”. The ranged profiles are lascutter low/high intensity and graviton contained/singularity, and the melee profiles are lascutter low/high intensity. The datasheet says “equipped with: Atrapos lascutter; graviton singularity cannon”."
  },
  "ff6f78dd40c2fb4d": {
   "verdict": "ok",
