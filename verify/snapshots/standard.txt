@@ -1162,7 +1162,7 @@ Benefit of cover
 of 5 destroyed
 4.2 wounds lost · wiped in 1% of games
 Plasma pistol: supercharge
-4 NOT COUNTED
+3 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1268,12 +1268,10 @@ MODELS IF YOU COUNT IT
 
 Nothing to count: 1CP Skulls for the Skull Throne!, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only) · 1CP Berzerker’s Wrath (in the other player’s turn only)
 
-NOT COUNTED BY THE CALCULATOR (4)
+NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-Hazard rolls (06.03)
-not counted, the calculator shows damage dealt · Plasma pistol
 1CP Blood Offering
 Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1CP Command Re-roll
@@ -1691,7 +1689,7 @@ Plasma pistol: supercharge
 Charged this turn
 ×
 Legendary Killer
-9 NOT COUNTED
+8 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
@@ -1787,12 +1785,10 @@ NO CHANGE
 
 Nothing to count: 1CP Skulls for the Skull Throne!, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only) · 1CP Berzerker’s Wrath (in the other player’s turn only)
 
-NOT COUNTED BY THE CALCULATOR (4)
+NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-Hazard rolls (06.03)
-not counted, the calculator shows damage dealt · Plasma pistol
 1CP Blood Offering
 Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1CP Command Re-roll
