@@ -827,7 +827,13 @@ for (const fk of FACTIONS) {
     if (!srcRule || !srcRule.name) fail('detachment', army, U + '/rule', 'name', R.name || '', 'no detachment rule found in the source', where);
     else if (norm(R.name || '') !== norm(srcRule.name)) fail('detachment', army, U + '/rule', 'name', R.name || '', srcRule.name, where);
     const ruleUpd = upd.find(e => titleN(e) === nameN(R.name + ' detachment rule'));
-    if (ruleUpd) checkUpdate('detachment', army, U + '/rule', 'text (Rules Updates)', R.text, ruleUpd);
+    // "Change Unnatural Fortitude to:": one named part of the rule ("- **Unnatural Fortitude:** …" and the bullets under it)
+    const partOf = (text, name) => { const L = String(text).split('\n'), k = L.findIndex(l => nameN(l.replace(/^-\s+/, '').replace(/\*\*/g, '')).startsWith(nameN(name) + ':'));
+      if (k < 0) return null; const out = [L[k].replace(/^-\s+/, '').replace(/^\*\*[^*]+:\*\*\s*|^[^:]+:\s*/, '')];
+      for (let j = k + 1; j < L.length && /^-\s+(?!\*\*)/.test(L[j]); j++) out.push(L[j]); return out.join('\n'); };
+    const ruleNamed = ruleUpd && /^Change (.+) to:$/.exec(ruleUpd.instr);
+    if (ruleNamed && partOf(R.text, ruleNamed[1]) != null) checkUpdate('detachment', army, U + '/rule', 'text, ' + ruleNamed[1] + ' (Rules Updates)', partOf(R.text, ruleNamed[1]), ruleUpd);
+    else if (ruleUpd) checkUpdate('detachment', army, U + '/rule', 'text (Rules Updates)', R.text, ruleUpd);
     if (srcRule && srcRule.name) {
       count('detachment');
       if (pack && W.rule && !suffixOf(W.rule.body.map(l => l.text).join('\n'), srcRule.body).ok)
