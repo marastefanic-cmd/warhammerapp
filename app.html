@@ -929,7 +929,7 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
 .gx > summary .c{font:600 13px var(--f-head); letter-spacing:.04em; color:var(--muted)}
 .gx > summary .chev{margin-left:auto}
 .gx.gcpr{border-top:1px solid var(--line); padding-bottom:8px}
-.gx.gcpr > summary, .gx.gopp > summary{font:600 12.5px/1.2 var(--f-head); letter-spacing:.09em; color:var(--fg2); min-height:40px}
+.gx.gcpr > summary{font:600 12.5px/1.2 var(--f-head); letter-spacing:.09em; color:var(--fg2); min-height:40px}
 .gx.gcpr:not([open]){padding-bottom:0}
 .gq{margin:8px 0 0; padding:1px 0 1px 9px; border-left:2px solid var(--line); font-size:13.5px; line-height:1.42; color:var(--fg2)}
 .gq .gqs{display:block; margin-bottom:1px; font:600 11px/1.3 var(--f-head); letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
@@ -977,8 +977,6 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
 .gpn{display:block; margin-top:1px; font:600 12.5px/1.3 var(--f-body); color:var(--accent)}
 .gr .ticks{margin:5px 8px 0 0; vertical-align:0}
 .gnext{display:block; width:100%; margin-top:14px}
-.gx.gopp .gphase{padding-bottom:10px}
-.gx.gopp .gphase > details.gx:last-child{border-bottom:0}
 .gx.gpre{margin-top:20px; border-top:1px solid var(--line)}
 .gpre > .note{margin:0 0 6px}
 .gseq .gn{display:inline-block; min-width:20px; color:var(--accent)}
@@ -4952,14 +4950,13 @@ function screenPregame(){
 
 /* ---------- screen: the Game tracker (a row on Find, like the Damage calculator) ----------
    Everything for running a game, and only here: the battle round, whose turn and the phase; both players' CP and VP; the
-   choices this list's rules ask for (the Oath, Blessings, Doctrina Imperatives…), kept for the game; what this list (and,
-   folded, the opponent's) can do in the phase shown; the Event Companion's mission sequence with this list's numbers.
+   choices this list's rules ask for (the Oath, Blessings, Doctrina Imperatives…), kept for the game; what this list can do
+   in the phase shown; the Event Companion's mission sequence with this list's numbers.
    Every rules sentence is a quote (data.js GAME, or the list's own rules); what the screen works out is marked as an app note.
-   The game is kept on this phone under the list you opened (yours); your opponent's list, opened from yours, shows the same
-   game from their side. Its uses per battle are the Overview's ticks (the same storage), which its New game also clears.
+   The game is kept on this phone under the list. Its uses per battle are the Overview's ticks (the same storage), which its
+   New game also clears.
    Nothing here changes a datasheet or any other screen. */
-const gameOwner = a => peeking(a) ? mineList() : a;   // whose game this is: your list's, also when you look at your opponent's
-const gameKey = a => 'wh-game-' + gameOwner(a).id;
+const gameKey = a => 'wh-game-' + a.id;
 // { round 1–5, half 0|1 (the first or the second turn of the round), first: the side that takes the first turn, ph: the phase,
 //   cp / vp per side, picks[side][choice key][round, or 0 for the battle] = { group: option name(s), 'rolled:group', 'target:group' } }
 function gameOf(a){
@@ -4969,15 +4966,12 @@ function gameOf(a){
     cp:two(o.cp, 99), vp:two(o.vp, 999), picks:isObj(o.picks) ? o.picks : {} };
 }
 const gameSave = (a, g) => store.set(gameKey(a), g);
-const gSide = a => a === gameOwner(a) ? 'mine' : 'opp';            // the side of the list on screen
 const gOther = s => s === 'mine' ? 'opp' : 'mine';
 const gTurnSide = g => g.half ? gOther(g.first) : g.first;           // whose turn it is
-const gList = (a, s) => s === 'mine' ? gameOwner(a) : oppOf(gameOwner(a)) || null;   // a side's list (none picked yet: null)
-// the Game tracker's New game: this game's round, turn, CP, VP and choices, and the uses per battle of both its lists (the
-// Overview's tick boxes, the same storage); returns the undo. The Overview's own New game clears its list's uses per battle only
+// the Game tracker's New game: this game's round, turn, CP, VP and choices, and the list's uses per battle (the Overview's
+// tick boxes, the same storage); returns the undo. The Overview's own New game clears the uses per battle only
 function newGame(a){
-  const o = gameOwner(a), opp = oppOf(o);
-  const keys = [gameKey(a), 'wh-used-' + o.id].concat(opp && opp !== o ? ['wh-used-' + opp.id] : []);
+  const keys = [gameKey(a), 'wh-used-' + a.id];
   const was = keys.map(k => [k, store.get(k, null)]);
   store.set(keys[0], null); for(const k of keys.slice(1)) store.set(k, []);
   return () => { for(const [k, v] of was) store.set(k, v); };
@@ -5088,15 +5082,6 @@ function gcPick(c, g, side){
   return o ? { v:{ [gr.name]:o.name }, since:'start', all } : { v:{}, since:null, all };
 }
 const gcNames = v => [].concat(v == null ? [] : v);
-// the units a picked option has the player select from the opponent's army ("select one CHARACTER model in your opponent's
-// army", "select one enemy unit"), when their list is picked
-function gcTargets(text, opp){
-  if(!opp) return null;
-  const t = String(text || '').replace(/\*\*/g, ''), m = /\bselect one (?:([A-Z][A-Z -]*[A-Z]) )?(?:model|unit) (?:in|from) your opponent[’']s army\b|\bselect one (enemy) unit\b/i.exec(t);
-  if(!m) return null;
-  const kw = m[1] && m[1] === m[1].toUpperCase() ? m[1] : '';
-  return inArmy(opp, () => opp.units.filter(u => !kw || hasKw(u, kw)).map(u => ({ id:u.id, name:shortName(u) })));
-}
 
 // ---- what a list can do in a phase ----
 // A rule, ability or stratagem is in a phase of a turn when its phase tags say so (ph/phases, turn/turns, and an army
@@ -5177,10 +5162,6 @@ const gq = (src, text) => '<div class="gq"><span class="gqs">' + src + '</span>'
 const gNote = t => '<p class="gnote">App note, not rules text: ' + t + '</p>';
 const gStepper = (k, side, v) => '<span class="gst"><button data-gstep="' + k + '|' + side + '|-1" aria-label="' + k.toUpperCase() + ' minus 1">−</button><b class="num">' + v +
   '</b><button data-gstep="' + k + '|' + side + '|1" aria-label="' + k.toUpperCase() + ' plus 1">+</button></span>';
-// a link to a rule of a list: as the other screens open it when the list is the one on screen, else its popup from that list
-// (dmShowIn, as the Damage tab opens the other side's rules); a unit of the other list is not a link (it would open a datasheet
-// of that list as if it were this one)
-const gLink = (L, t, v, label) => L.id === cur.army ? linkTo(t, v, label) : t === 'unit' ? esc(label) : '<span class="link" role="button" tabindex="0" data-dmrule="' + esc(t + '|' + L.id + '|' + v) + '">' + esc(label) + '</span>';
 // the sentence of a rule that gives CP ("…, you gain 1CP"), from its own text (not its FAQ or errata lines)
 const G_CP = /[^.\n]*\b(?:gain|gains)\b[^.\n]*(?:\dCP|\bCP\b|Command Points?)[^.\n]*\.?/i;
 function gameCpRules(L){
@@ -5194,27 +5175,26 @@ function gameCpRules(L){
     for(const e of by.values()) out.push(Object.assign(e, { src:labelList(e.units) }));
     return out;
   });
-  return out.map(e => Object.assign(e, { link:gLink(L, e.t, e.v, e.name) }));   // linked from the list on screen
+  return out.map(e => Object.assign(e, { link:linkTo(e.t, e.v, e.name) }));
 }
 const gStepName = ([num, title]) => esc(title) + ' <span class="gnum">' + num + '</span>';
 // the rows of a phase: links to the full texts, the uses per battle as the Overview's ticks
 function gRows(L, items, picked, pickOf){
-  const own = L.id === cur.army;
   const now = e => { const n = pickOf ? pickOf(e) : ''; return n ? '<span class="gpn">Picked: ' + esc(n) + '</span>' : ''; };
   return items.map(e => {
-    if(e.kind === 'strat'){ const s = e.s, pb = own && perBattle(s);
-      return '<div class="gr gs' + (e.usable ? '' : ' none') + '"><span class="cp' + (s.cp >= 2 ? ' hot' : '') + '">' + esc(s.cp) + '<small>CP</small></span><span class="grb">' + gLink(L, 'strat', s.id, s.name) +
+    if(e.kind === 'strat'){ const s = e.s, pb = perBattle(s);
+      return '<div class="gr gs' + (e.usable ? '' : ' none') + '"><span class="cp' + (s.cp >= 2 ? ' hot' : '') + '">' + esc(s.cp) + '<small>CP</small></span><span class="grb">' + linkTo('strat', s.id, s.name) +
         (s.gist ? '<span class="sg">' + esc(s.gist) + '</span>' : '') + (e.usable ? '' : '<span class="from">' + esc(inArmy(L, () => usersLine(s))) + '</span>') + (pb ? ticks('s:' + s.id, pb.n, '', s.name) : '') + '</span></div>'; }
-    if(e.kind === 'rule'){ const r = e.x, pb = own && perBattle(r, true) && !/per battle\b(?! round)[^.)]*\bper unit\b/i.test(r.text || '');
+    if(e.kind === 'rule'){ const r = e.x, pb = perBattle(r, true) && !/per battle\b(?! round)[^.)]*\bper unit\b/i.test(r.text || '');
       // the Overview's boxes: "You can only select each of these abilities once per battle" (Kindred Sorcery) has one per ability
       const each = pb && /\beach of these [a-z ]+ once per battle/i.test(r.text) && r.table;
       const boxes = !pb ? '' : each ? r.table.map(o => ticks('r:' + r.name + ':' + o[0], 1, o[0], o[0])).join('') : ticks('r:' + r.name, pb.n, '', r.name);
-      return '<div class="gr"><span class="grb">' + gLink(L, 'rule', e.name, e.name) + ' <span class="from">· ' + esc(e.src) + '</span>' + now(e) + (boxes ? '<span class="gtk">' + boxes + '</span>' : '') + '</span></div>'; }
-    const p = picked ? picked(e.ab, e.units) : null, pb = own && perBattle(e.ab) && !naReason(e.ab);
+      return '<div class="gr"><span class="grb">' + linkTo('rule', e.name, e.name) + ' <span class="from">· ' + esc(e.src) + '</span>' + now(e) + (boxes ? '<span class="gtk">' + boxes + '</span>' : '') + '</span></div>'; }
+    const p = picked ? picked(e.ab, e.units) : null, pb = perBattle(e.ab) && !naReason(e.ab);
     const who = e.ab.who && (p !== null || !e.src.includes(e.ab.who.replace(/: pick one$/, ''))) ? e.ab.who.replace(/: pick one$/, '') : '';
     const boxes = !pb ? '' : perBattle(e.ab).army ? abilityTicks(e.ab, e.units[0]) : e.units.flatMap(u => Array.from({ length:u.copies || 1 }, (_, i) =>
       ticks(copyKey(e.ab, u, i), perBattle(e.ab).n, e.units.length > 1 || (u.copies || 1) > 1 ? shortName(u) + ((u.copies || 1) > 1 ? ' ' + (i + 1) : '') : '', e.ab.name))).join('');
-    return '<div class="gr' + (p === false ? ' none' : '') + '"><span class="grb">' + gLink(L, 'ability', e.key, e.ab.name) + ' <span class="from">· ' + esc(e.src) + '</span>' +
+    return '<div class="gr' + (p === false ? ' none' : '') + '"><span class="grb">' + linkTo('ability', e.key, e.ab.name) + ' <span class="from">· ' + esc(e.src) + '</span>' +
       (who ? ' <span class="tg m">' + esc(who) + (p === true ? ': picked' : p === false ? ': not picked' : '') + '</span>' : '') + now(e) + (boxes ? '<span class="gtk">' + boxes + '</span>' : '') + '</span></div>';
   }).join('');
 }
@@ -5244,12 +5224,11 @@ function gPhaseHtml(L, g, ph, turn, picked, opts, pickOf){
   return h || '<p class="note">Nothing of this list is tagged for this phase.</p>';
 }
 function screenGame(){
-  const a = army(), g = gameOf(a), me = gSide(a), them = gOther(me), opp = gList(a, them);
+  const a = army(), g = gameOf(a), me = 'mine', them = 'opp';
   const fold = isObj(sess.gfold) ? sess.gfold : {};
   const turnMe = gTurnSide(g) === me;
-  // each side by its list's name: yours, or your opponent's (when you look at theirs, theirs is the one on screen)
-  const side = s => { const L = gList(a, s);
-    return '<span class="gsd"><b>' + esc(L ? L.name : 'Opponent') + '</b><span>' + (!L ? '<span class="link" role="button" tabindex="0" data-oppick>pick their list</span>' : s === 'mine' ? 'your list' : 'your opponent’s list') + '</span></span>'; };
+  // each side: this list, and the opponent (their numbers only)
+  const side = s => '<span class="gsd"><b>' + (s === me ? esc(a.name) : 'Opponent') + '</b>' + (s === me ? '<span>your list</span>' : '') + '</span>';
   // this game: both players' CP and VP, and the rules that give CP
   let h = '<div class="sec-h"><h2>This game</h2><button class="textbtn" data-gnew>New game</button></div>' +
     '<div class="gsc"><span></span>' + side(me) + side(them) +
@@ -5258,7 +5237,7 @@ function screenGame(){
   const cpLine = (L, label) => { const rs = gameCpRules(L); return rs.length ? '<div class="gq"><span class="gqs">' + label + '</span>' + rs.map(r => '<p>' + r.link + ' <span class="from">· ' + esc(r.src) + '</span>: “' + inline(r.s) + '”</p>').join('') + '</div>' : ''; };
   h += '<details class="gx gcpr"' + (fold.cp !== false ? ' open' : '') + ' data-gfold="cp"><summary><span>Command points</span>' + chev + '</summary>' +
     gq(esc(D.game.cp[0].num + ' ' + D.game.cp[0].title), D.game.cp[0].text) + gq('Event Companion · ' + esc(D.game.cp[1].title), D.game.cp[1].text) +
-    cpLine(a, 'This list') + (opp && opp !== a ? cpLine(opp, 'Their list') : '') + '</details>';
+    cpLine(a, 'This list') + '</details>';
 
   // choices this game
   const choices = gameChoices(a);
@@ -5279,7 +5258,7 @@ function screenGame(){
     return cs[0].groups.map(gr => gcNames(v[gr.name]).map(n => (gr.name ? gr.name + ' ' : '') + n).join(', ')).filter(Boolean).join(' · ');
   };
   if(choices.length){
-    h += '<div class="sec-h"><h2>Choices this game</h2></div><div class="gcs">' + choices.map(c => gChoiceHtml(c, g, me, opp)).join('') + '</div>';
+    h += '<div class="sec-h"><h2>Choices this game</h2></div><div class="gcs">' + choices.map(c => gChoiceHtml(c, g, me)).join('') + '</div>';
   }
 
   // this phase: the battle round, whose turn and the phase, and what this list can do then
@@ -5292,20 +5271,16 @@ function screenGame(){
     '<p class="gsub">' + (g.half ? 'The second turn of this battle round' : 'The first turn of this battle round') + '</p>' +
     '<div class="gphs" role="group" aria-label="Phase">' + PHASES.map(([k, label, short]) => '<button class="chip' + (k === ph ? ' on' : '') + '" data-gset="ph|' + k + '" aria-pressed="' + (k === ph) + '"><span class="lf">' + label + '</span><span class="ls">' + short + '</span></button>').join('') + '</div>' +
     '<div class="gphase">' + gPhaseHtml(a, g, ph, turn, pickedOf, { cp:true, fold }, pickOf) + '</div>';
-  if(opp){
-    const theirs = gPhaseHtml(opp, g, ph, turnMe ? 'opp' : 'your', null, { fold:{} });
-    h += '<details class="gx gopp"' + (fold.opp ? ' open' : '') + ' data-gfold="opp"><summary><span>' + esc(opp.name) + ' in this phase</span>' + chev + '</summary><div class="gphase">' + theirs + '</div></details>';
-  }
   const pi = PHASES.findIndex(([k]) => k === ph), last = pi === PHASES.length - 1, end = last && g.half === 1 && g.round >= 5;
   const next = !last ? PHASE_NAME[PHASES[pi + 1][0]] + ' phase' : g.half === 0 ? (turnMe ? 'their' : 'your') + ' turn' : 'battle round ' + (g.round + 1);
   h += end ? gq('Event Companion · 13 End the Battle', D.game.sequence[12][2]) : '<button class="btn2 gnext" data-gnext>Next: ' + esc(next) + ' ›</button>';
 
-  // before the battle: the Event Companion's mission sequence, with both lists' numbers where a step needs them
-  h += '<details class="gx gpre"' + (fold.pre ? ' open' : '') + ' data-gfold="pre"><summary><span>Before the battle</span>' + chev + '</summary>' + gPregameHtml(a, opp, g, me) + '</details>';
+  // before the battle: the Event Companion's mission sequence, with this list's numbers where a step needs them
+  h += '<details class="gx gpre"' + (fold.pre ? ' open' : '') + ' data-gfold="pre"><summary><span>Before the battle</span>' + chev + '</summary>' + gPregameHtml(a, g, me) + '</details>';
   return '<div class="game">' + h + '</div>';
 }
 // one choice: its rule, when the pick is made and for how long, the options as chips, then the text of the pick, quoted
-function gChoiceHtml(c, g, side, opp){
+function gChoiceHtml(c, g, side){
   const P = gcPick(c, g, side), v = P.v, R = gcRound(c, g, side);
   const pick = (grp, opt) => esc(JSON.stringify([c.key, R, grp, opt || '']));
   const used = c.once && !c.unit ? new Set(c.groups.flatMap(gr => gr.opts.filter(o => usedSet().has('r:' + c.name + ':' + o.row + '#0')).map(o => o.name))) : new Set();
@@ -5322,9 +5297,6 @@ function gChoiceHtml(c, g, side, opp){
       (c.rolled ? '<button class="chip rl' + (v['rolled:' + gr.name] ? ' on' : '') + '" data-gpick="' + pick('rolled:' + gr.name) + '" aria-pressed="' + !!v['rolled:' + gr.name] + '">Rolled</button>' : '') + '</div>';
     for(const o of gr.opts.filter(o => on.includes(o.name))){
       h += '<div class="gq gpk"><span class="gqs">' + esc((gr.name ? gr.name + ' ' : '') + o.name + (o.title ? ' · ' + o.title : '')) + '</span>' + rt(o.text) + '</div>';
-      const tg = gcTargets(o.text, opp);
-      if(tg && tg.length){ const t = v['target:' + gr.name];
-        h += '<div class="chips gtg" role="group" aria-label="Their unit"><span class="gcg">Their unit</span>' + tg.map(x => '<button class="chip' + (t === x.id ? ' on' : '') + '" data-gpick="' + pick('target:' + gr.name, x.id) + '" aria-pressed="' + (t === x.id) + '">' + esc(x.name) + '</button>').join('') + '</div>'; }
     }
   }
   if(c.state) h += '<div class="chips"><button class="chip' + (v['state'] ? ' on' : '') + '" data-gpick="' + pick('state') + '" aria-pressed="' + !!v['state'] + '">' + esc(c.state) + '</button></div>';
@@ -5336,19 +5308,18 @@ function gChoiceHtml(c, g, side, opp){
   return h + '</div>';
 }
 // a chip of a choice tapped: its option picked for the battle or this battle round (tapped again: unpicked); with "up to two" a
-// third pick replaces the first; Rolled, the state (Honoured) and their unit go on and off. The options a rule lets you pick
+// third pick replaces the first; Rolled and the state (Honoured) go on and off. The options a rule lets you pick
 // once per battle (Kindred Sorcery) are the Overview's ticks for them: picking one ticks it, unpicking it unticks it
 function gamePick(a, spec){
   let k, R, grp, opt;
   try { [k, R, grp, opt] = JSON.parse(spec); } catch(e){ return; }
-  const g = gameOf(a), side = gSide(a), c = gameChoices(a).find(x => x.key === k);
+  const g = gameOf(a), side = 'mine', c = gameChoices(a).find(x => x.key === k);
   if(!c) return;
   const P = g.picks[side] = isObj(g.picks[side]) ? g.picks[side] : {}, all = P[k] = isObj(P[k]) ? P[k] : {}, v = all[R] = isObj(all[R]) ? all[R] : {};
-  if(/^(rolled|target):|^state$/.test(grp)){ const x = opt || true; if(v[grp] === x) delete v[grp]; else v[grp] = x; }
+  if(/^rolled:|^state$/.test(grp)){ const x = opt || true; if(v[grp] === x) delete v[grp]; else v[grp] = x; }
   else {
     const was = gcNames(v[grp]), next = was.includes(opt) ? was.filter(x => x !== opt) : c.max > 1 ? was.concat(opt).slice(-c.max) : [opt];
     if(next.length) v[grp] = c.max > 1 ? next : next[0]; else delete v[grp];
-    if(!next.includes(opt) || c.max === 1) delete v['target:' + grp];   // another option: its unit is picked again
     const gr = c.groups.find(x => x.name === grp);
     if(c.once && gr){ const used = usedSet();
       for(const o of gr.opts){ const tk = 'r:' + c.name + ':' + o.row + '#0', other = Object.entries(all).some(([r, x]) => r !== R && gcNames((x || {})[grp]).includes(o.name));
@@ -5361,9 +5332,9 @@ function gamePick(a, spec){
 // a list's units with a core rule that every model of the unit has (Deep Strike 24.09, Scouts 24.31, Infiltrators: "if every
 // model in a unit has this ability"), as the Overview counts them
 const gEvery = (L, test) => inArmy(L, () => L.units.filter(u => unitRules(u).some(test) && !Object.keys(u.partialRules || {}).some(test)));   // (partialRules: label → the model that has it)
-function gPregameHtml(a, opp, g, me){
-  const lists = [[a, 'This list']].concat(opp && opp !== a ? [[opp, 'Their list']] : []);
-  const unitsLine = (L, us, extra) => us.map(u => gLink(L, 'unit', u.id, inArmy(L, () => gUnitName(u))) + (u.copies > 1 ? ' <span class="from">×' + u.copies + '</span>' : '') + (extra ? ' <span class="from">' + esc(extra(u)) + '</span>' : '')).join(', ');
+function gPregameHtml(a, g, me){
+  const lists = [[a, 'This list']];
+  const unitsLine = (L, us, extra) => us.map(u => linkTo('unit', u.id, gUnitName(u)) + (u.copies > 1 ? ' <span class="from">×' + u.copies + '</span>' : '') + (extra ? ' <span class="from">' + esc(extra(u)) + '</span>' : '')).join(', ');
   const per = (fn) => lists.map(([L, label]) => { const t = fn(L); return t ? '<p class="gpl"><span class="il">' + label + '</span>' + t + '</p>' : ''; }).join('');
   const add = {
     7:() => { const line = D.rules['Strategic Reserves'].split('\n').find(l => /50% of your points limit/.test(l));
@@ -5372,11 +5343,11 @@ function gPregameHtml(a, opp, g, me){
         return gNote(esc(L.name) + ': points limit ' + L.points + ' pts (' + esc(L.battleSize) + '); 50% of it is ' + Math.floor(L.points / 2) + ' pts.') +
           (ds.length ? '<span class="gpu">Deep Strike: ' + unitsLine(L, ds, u => u.pts + ' pts' + (u.copies > 1 ? ' each, ×' + u.copies : '')) + (ds.length > 1 ? ' <span class="from">(' + pts + ' pts)</span>' : '') + '</span>' : ''); }); },
     8:() => per(L => { const tt = L.units.filter(u => hasKw(u, 'Titanic')), inf = gEvery(L, r => /^infiltrators/i.test(r));
-      return [tt.length ? '<span class="gpu">TITANIC: ' + unitsLine(L, tt) + '</span>' : '', inf.length ? '<span class="gpu">' + gLink(L, 'rule', 'Infiltrators', 'Infiltrators') + ': ' + unitsLine(L, inf) + '</span>' : ''].join(''); }),
-    10:() => '<div class="chips" role="group" aria-label="Who takes the first turn"><span class="gcg">First turn</span>' + [me, gOther(me)].map(s => { const L = gList(a, s), on = g.first === s;
-      return '<button class="chip' + (on ? ' on' : '') + '" data-gset="first|' + s + '" aria-pressed="' + on + '">' + esc(L ? L.name : 'Opponent') + '</button>'; }).join('') + '</div>',
+      return [tt.length ? '<span class="gpu">TITANIC: ' + unitsLine(L, tt) + '</span>' : '', inf.length ? '<span class="gpu">' + linkTo('rule', 'Infiltrators', 'Infiltrators') + ': ' + unitsLine(L, inf) + '</span>' : ''].join(''); }),
+    10:() => '<div class="chips" role="group" aria-label="Who takes the first turn"><span class="gcg">First turn</span>' + [me, gOther(me)].map(s => { const on = g.first === s;
+      return '<button class="chip' + (on ? ' on' : '') + '" data-gset="first|' + s + '" aria-pressed="' + on + '">' + (s === me ? esc(a.name) : 'Opponent') + '</button>'; }).join('') + '</div>',
     11:() => per(L => { const sc = gEvery(L, r => /^scouts/i.test(r));
-      return sc.length ? '<span class="gpu">' + gLink(L, 'rule', 'Scouts', 'Scouts') + ': ' + unitsLine(L, sc, u => inArmy(L, () => unitRules(u).filter(r => /^scouts/i.test(r)).join(', '))) + '</span>' : ''; })
+      return sc.length ? '<span class="gpu">' + linkTo('rule', 'Scouts', 'Scouts') + ': ' + unitsLine(L, sc, u => inArmy(L, () => unitRules(u).filter(r => /^scouts/i.test(r)).join(', '))) + '</span>' : ''; })
   };
   const titanic = lists.some(([L]) => L.units.some(u => hasKw(u, 'Titanic'))), infil = lists.some(([L]) => gEvery(L, r => /^infiltrators/i.test(r)).length);
   const scouts = lists.some(([L]) => gEvery(L, r => /^scouts/i.test(r)).length);
@@ -5820,7 +5791,7 @@ document.addEventListener('click', e => {
     toastUndo('New game: uses per battle cleared', () => { store.set(key, was); rerender(); }); return; }
   // the Game tracker
   if(el.hasAttribute('data-gnew')){ const undo = newGame(army()); rerender();
-    toastUndo('New game: round, CP, VP, choices and both lists’ uses per battle cleared', () => { undo(); rerender(); }); return; }
+    toastUndo('New game: round, CP, VP, choices and uses per battle cleared', () => { undo(); rerender(); }); return; }
   if(ds.gstep){ const [k, side, d] = ds.gstep.split('|'), a = army(), g = gameOf(a);
     g[k][side] = Math.max(0, Math.min(k === 'cp' ? 99 : 999, g[k][side] + +d)); gameSave(a, g);
     const b = el.parentElement.querySelector('b'); if(b) b.textContent = g[k][side]; return; }
