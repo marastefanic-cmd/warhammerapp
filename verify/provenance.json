@@ -44,6 +44,12 @@
    "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
   },
   {
+   "id": "pack:emperors-children",
+   "label": "GW Faction Pack Emperor's Children",
+   "file": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_emperors_children-xp2mhzppxs-1cvykicdxu.pdf",
+   "sha256": "18a192a36c22468368d957aac3eb230a40c8f7bbfaefa46372d8918422b0b49a"
+  },
+  {
    "id": "waha:orks",
    "label": "Wahapedia orks (text)",
    "file": "verify/.cache/waha/orks.txt",
@@ -80,6 +86,12 @@
    "sha256": "c717764cb4a40cf12082491c14378f76c567f757360e4b86d23d9241cf364c08"
   },
   {
+   "id": "waha:emperors-children",
+   "label": "Wahapedia emperors-children (text)",
+   "file": "verify/.cache/waha/emperors-children.txt",
+   "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
+  },
+  {
    "id": "wahahtml:orks",
    "label": "Wahapedia orks",
    "file": "verify/.cache/waha/orks.html",
@@ -114,6 +126,12 @@
    "label": "Wahapedia adeptus-mechanicus",
    "file": "verify/.cache/waha/adeptus-mechanicus.html",
    "sha256": "72a35cd059776363def7febc4444afcd2e93bbce7c1e91ac4d8f06660123fd60"
+  },
+  {
+   "id": "wahahtml:emperors-children",
+   "label": "Wahapedia emperors-children",
+   "file": "verify/.cache/waha/emperors-children.html",
+   "sha256": "d51c66edf227f9ad1cfeced6f4e3350612211af52461531d224705de499a770b"
   },
   {
    "id": "wahahtml:core",
@@ -5085,6 +5103,209 @@
    "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
   },
   {
+   "item": "emperors-children / detachment:coterie-of-the-conceited",
+   "field": "name",
+   "doc": "waha:emperors-children",
+   "where": "Wahapedia emperors-children § Coterie of the Conceited 3DP",
+   "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
+  },
+  {
+   "item": "emperors-children / detachment:coterie-of-the-conceited/rule",
+   "field": "text",
+   "doc": "waha:emperors-children",
+   "where": "Wahapedia emperors-children § Coterie of the Conceited 3DP",
+   "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
+  },
+  {
+   "item": "emperors-children / detachment:coterie-of-the-conceited/enhancement:Pledge of Eternal Servitude",
+   "field": "pts",
+   "doc": "waha:emperors-children",
+   "where": "Wahapedia emperors-children § Coterie of the Conceited 3DP",
+   "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
+  },
+  {
+   "item": "emperors-children / detachment:coterie-of-the-conceited/enhancement:Pledge of Eternal Servitude",
+   "field": "text",
+   "doc": "waha:emperors-children",
+   "where": "Wahapedia emperors-children § Coterie of the Conceited 3DP",
+   "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
+  },
+  {
+   "item": "emperors-children / detachment:coterie-of-the-conceited/enhancement:Pledge of Dark Glory",
+   "field": "pts",
+   "doc": "waha:emperors-children",
+   "where": "Wahapedia emperors-children § Coterie of the Conceited 3DP",
+   "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
+  },
+  {
+   "item": "emperors-children / detachment:coterie-of-the-conceited/enhancement:Pledge of Dark Glory",
+   "field": "text",
+   "doc": "waha:emperors-children",
+   "where": "Wahapedia emperors-children § Coterie of the Conceited 3DP",
+   "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
+  },
+  {
+   "item": "emperors-children / detachment:coterie-of-the-conceited/enhancement:Pledge of Mortal Pain",
+   "field": "pts",
+   "doc": "waha:emperors-children",
+   "where": "Wahapedia emperors-children § Coterie of the Conceited 3DP",
+   "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
+  },
+  {
+   "item": "emperors-children / detachment:coterie-of-the-conceited/enhancement:Pledge of Mortal Pain",
+   "field": "text",
+   "doc": "waha:emperors-children",
+   "where": "Wahapedia emperors-children § Coterie of the Conceited 3DP",
+   "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
+  },
+  {
+   "item": "emperors-children / detachment:coterie-of-the-conceited/enhancement:Pledge of Unholy Fortune",
+   "field": "pts",
+   "doc": "waha:emperors-children",
+   "where": "Wahapedia emperors-children § Coterie of the Conceited 3DP",
+   "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
+  },
+  {
+   "item": "emperors-children / detachment:coterie-of-the-conceited/enhancement:Pledge of Unholy Fortune",
+   "field": "text",
+   "doc": "waha:emperors-children",
+   "where": "Wahapedia emperors-children § Coterie of the Conceited 3DP",
+   "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
+  },
+  {
+   "item": "emperors-children / detachment:coterie-of-the-conceited/stratagem:protection-of-the-dark-prince",
+   "field": "when",
+   "doc": "waha:emperors-children",
+   "where": "Wahapedia emperors-children § Coterie of the Conceited 3DP (PROTECTION OF THE DARK PRINCE)",
+   "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
+  },
+  {
+   "item": "emperors-children / detachment:coterie-of-the-conceited/stratagem:protection-of-the-dark-prince",
+   "field": "target",
+   "doc": "waha:emperors-children",
+   "where": "Wahapedia emperors-children § Coterie of the Conceited 3DP (PROTECTION OF THE DARK PRINCE)",
+   "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
+  },
+  {
+   "item": "emperors-children / detachment:coterie-of-the-conceited/stratagem:protection-of-the-dark-prince",
+   "field": "effect",
+   "doc": "waha:emperors-children",
+   "where": "Wahapedia emperors-children § Coterie of the Conceited 3DP (PROTECTION OF THE DARK PRINCE)",
+   "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
+  },
+  {
+   "item": "emperors-children / detachment:coterie-of-the-conceited/stratagem:unshakeable-opponents",
+   "field": "when",
+   "doc": "waha:emperors-children",
+   "where": "Wahapedia emperors-children § Coterie of the Conceited 3DP (UNSHAKEABLE OPPONENTS)",
+   "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
+  },
+  {
+   "item": "emperors-children / detachment:coterie-of-the-conceited/stratagem:unshakeable-opponents",
+   "field": "target",
+   "doc": "waha:emperors-children",
+   "where": "Wahapedia emperors-children § Coterie of the Conceited 3DP (UNSHAKEABLE OPPONENTS)",
+   "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
+  },
+  {
+   "item": "emperors-children / detachment:coterie-of-the-conceited/stratagem:unshakeable-opponents",
+   "field": "effect",
+   "doc": "waha:emperors-children",
+   "where": "Wahapedia emperors-children § Coterie of the Conceited 3DP (UNSHAKEABLE OPPONENTS)",
+   "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
+  },
+  {
+   "item": "emperors-children / detachment:coterie-of-the-conceited/stratagem:embrace-the-pain",
+   "field": "when",
+   "doc": "waha:emperors-children",
+   "where": "Wahapedia emperors-children § Coterie of the Conceited 3DP (EMBRACE THE PAIN)",
+   "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
+  },
+  {
+   "item": "emperors-children / detachment:coterie-of-the-conceited/stratagem:embrace-the-pain",
+   "field": "target",
+   "doc": "waha:emperors-children",
+   "where": "Wahapedia emperors-children § Coterie of the Conceited 3DP (EMBRACE THE PAIN)",
+   "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
+  },
+  {
+   "item": "emperors-children / detachment:coterie-of-the-conceited/stratagem:embrace-the-pain",
+   "field": "effect",
+   "doc": "waha:emperors-children",
+   "where": "Wahapedia emperors-children § Coterie of the Conceited 3DP (EMBRACE THE PAIN)",
+   "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
+  },
+  {
+   "item": "emperors-children / detachment:coterie-of-the-conceited/stratagem:martial-perfection",
+   "field": "when",
+   "doc": "waha:emperors-children",
+   "where": "Wahapedia emperors-children § Coterie of the Conceited 3DP (MARTIAL PERFECTION)",
+   "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
+  },
+  {
+   "item": "emperors-children / detachment:coterie-of-the-conceited/stratagem:martial-perfection",
+   "field": "target",
+   "doc": "waha:emperors-children",
+   "where": "Wahapedia emperors-children § Coterie of the Conceited 3DP (MARTIAL PERFECTION)",
+   "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
+  },
+  {
+   "item": "emperors-children / detachment:coterie-of-the-conceited/stratagem:martial-perfection",
+   "field": "effect",
+   "doc": "waha:emperors-children",
+   "where": "Wahapedia emperors-children § Coterie of the Conceited 3DP (MARTIAL PERFECTION)",
+   "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
+  },
+  {
+   "item": "emperors-children / detachment:coterie-of-the-conceited/stratagem:unbound-arrogance",
+   "field": "when",
+   "doc": "waha:emperors-children",
+   "where": "Wahapedia emperors-children § Coterie of the Conceited 3DP (UNBOUND ARROGANCE)",
+   "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
+  },
+  {
+   "item": "emperors-children / detachment:coterie-of-the-conceited/stratagem:unbound-arrogance",
+   "field": "target",
+   "doc": "waha:emperors-children",
+   "where": "Wahapedia emperors-children § Coterie of the Conceited 3DP (UNBOUND ARROGANCE)",
+   "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
+  },
+  {
+   "item": "emperors-children / detachment:coterie-of-the-conceited/stratagem:unbound-arrogance",
+   "field": "effect",
+   "doc": "waha:emperors-children",
+   "where": "Wahapedia emperors-children § Coterie of the Conceited 3DP (UNBOUND ARROGANCE)",
+   "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
+  },
+  {
+   "item": "emperors-children / detachment:coterie-of-the-conceited/stratagem:unbound-arrogance",
+   "field": "restrictions",
+   "doc": "waha:emperors-children",
+   "where": "Wahapedia emperors-children § Coterie of the Conceited 3DP (UNBOUND ARROGANCE)",
+   "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
+  },
+  {
+   "item": "emperors-children / detachment:coterie-of-the-conceited/stratagem:armour-of-abhorrence",
+   "field": "when",
+   "doc": "waha:emperors-children",
+   "where": "Wahapedia emperors-children § Coterie of the Conceited 3DP (ARMOUR OF ABHORRENCE)",
+   "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
+  },
+  {
+   "item": "emperors-children / detachment:coterie-of-the-conceited/stratagem:armour-of-abhorrence",
+   "field": "target",
+   "doc": "waha:emperors-children",
+   "where": "Wahapedia emperors-children § Coterie of the Conceited 3DP (ARMOUR OF ABHORRENCE)",
+   "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
+  },
+  {
+   "item": "emperors-children / detachment:coterie-of-the-conceited/stratagem:armour-of-abhorrence / effect (Rules Updates)",
+   "field": "effect (Rules Updates)",
+   "doc": "pack:emperors-children",
+   "where": "GW Faction Pack Emperor's Children PDF p9, Rules Updates: COTERIE OF THE CONCEITED DETACHMENT / Armour of Abhorrence Stratagem, Effect Section",
+   "sha256": "18a192a36c22468368d957aac3eb230a40c8f7bbfaefa46372d8918422b0b49a"
+  },
+  {
    "item": "orks / armyRule:Waaagh!",
    "field": "text",
    "doc": "waha:orks",
@@ -5370,6 +5591,20 @@
    "doc": "pack:adeptus-mechanicus",
    "where": "GW Faction Pack Adeptus Mechanicus PDF p17, Rules Updates: ARMY RULES / Doctrina Imperatives",
    "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "emperors-children / armyRule:Thrill Seekers",
+   "field": "text",
+   "doc": "waha:emperors-children",
+   "where": "Wahapedia emperors-children § Army Rules (Thrill Seekers)",
+   "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
+  },
+  {
+   "item": "emperors-children / armyRule:Pact of Excess",
+   "field": "text",
+   "doc": "waha:emperors-children",
+   "where": "Wahapedia emperors-children § Army Rules (Pact of Excess)",
+   "sha256": "35c371cdaa2e2b82b94e2864365f21f806973f763ad1de0e5291a802e159d135"
   },
   {
    "item": "shooty / dakkarig-herder / ability:Dreadherder",
@@ -5974,6 +6209,48 @@
    "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
   },
   {
+   "item": "defilers-and-friends / defiler / ability:Scuttling Walker",
+   "field": "text",
+   "doc": "pack:emperors-children",
+   "where": "GW Faction Pack Emperor's Children PDF p7-8 (Defiler datasheet)",
+   "sha256": "18a192a36c22468368d957aac3eb230a40c8f7bbfaefa46372d8918422b0b49a"
+  },
+  {
+   "item": "defilers-and-friends / defiler / ability:Revel in Desecration",
+   "field": "text",
+   "doc": "pack:emperors-children",
+   "where": "GW Faction Pack Emperor's Children PDF p7-8 (Defiler datasheet)",
+   "sha256": "18a192a36c22468368d957aac3eb230a40c8f7bbfaefa46372d8918422b0b49a"
+  },
+  {
+   "item": "defilers-and-friends / defiler / ability:Damaged: 1-6 wounds remaining",
+   "field": "text",
+   "doc": "pack:emperors-children",
+   "where": "GW Faction Pack Emperor's Children PDF p7-8 (Defiler datasheet)",
+   "sha256": "18a192a36c22468368d957aac3eb230a40c8f7bbfaefa46372d8918422b0b49a"
+  },
+  {
+   "item": "defilers-and-friends / defiler-2 / ability:Scuttling Walker",
+   "field": "text",
+   "doc": "pack:emperors-children",
+   "where": "GW Faction Pack Emperor's Children PDF p7-8 (Defiler datasheet)",
+   "sha256": "18a192a36c22468368d957aac3eb230a40c8f7bbfaefa46372d8918422b0b49a"
+  },
+  {
+   "item": "defilers-and-friends / defiler-2 / ability:Revel in Desecration",
+   "field": "text",
+   "doc": "pack:emperors-children",
+   "where": "GW Faction Pack Emperor's Children PDF p7-8 (Defiler datasheet)",
+   "sha256": "18a192a36c22468368d957aac3eb230a40c8f7bbfaefa46372d8918422b0b49a"
+  },
+  {
+   "item": "defilers-and-friends / defiler-2 / ability:Damaged: 1-6 wounds remaining",
+   "field": "text",
+   "doc": "pack:emperors-children",
+   "where": "GW Faction Pack Emperor's Children PDF p7-8 (Defiler datasheet)",
+   "sha256": "18a192a36c22468368d957aac3eb230a40c8f7bbfaefa46372d8918422b0b49a"
+  },
+  {
    "item": "orks / detachment:dread-mob/stratagem:crazed-rampage",
    "field": "note",
    "text": "If my unit has the Deadly Demise ability and has an ability that allows it to Fi",
@@ -6076,6 +6353,22 @@
    "doc": "pack:adeptus-mechanicus",
    "where": "PDF p19",
    "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "emperors-children / detachment:coterie-of-the-conceited/stratagem:unbound-arrogance",
+   "field": "note",
+   "text": "While using the Coterie of the Conceited Detachment, if my WARLORD is not on the",
+   "doc": "pack:emperors-children",
+   "where": "PDF p10",
+   "sha256": "18a192a36c22468368d957aac3eb230a40c8f7bbfaefa46372d8918422b0b49a"
+  },
+  {
+   "item": "emperors-children / detachment:coterie-of-the-conceited/stratagem:unbound-arrogance",
+   "field": "note",
+   "text": "Yes, your pledge to Slaanesh would increase from 0 to 1.",
+   "doc": "pack:emperors-children",
+   "where": "PDF p10",
+   "sha256": "18a192a36c22468368d957aac3eb230a40c8f7bbfaefa46372d8918422b0b49a"
   },
   {
    "item": "melee / ghazghkull-thraka / ability:Supreme Commander",
