@@ -2234,10 +2234,12 @@ function dmPlan(st){
     const view = { beat:id, ph:S0.ph, overwatch:!(tr.charge || tr.fight), on:Object.assign(on0, c.on), own:c.on, carried:ca, off:c.off, pick:c.pick, man:c.man, val:Object.assign(val0, c.val), fold:st.fold, fx:F.fx, fxWhy:F.why, left, auto:{} };
     let M = dmCalc(view, A.army, A.u, P.tg, S0.kind);
     // open on the BEST profile: for each weapon with several profiles and no pick of the player's, the profile (that its box does not
-    // rule out) that does the most to the target here, worked out exactly; the first of them on a tie
+    // rule out) that does the most to the target here, worked out exactly; the first of them on a tie. Worked out with no half-range
+    // bonus: the bands follow the profile, so a band tapped never changes the profile under it
+    const view0 = Object.assign({}, view, { val:Object.assign({}, view.val, { half:0 }) });
     for(const c0 of M.weapons.filter(x => x.ps.length > 1 && !x.own)){
       let bi = -1, bv = -1;
-      c0.ps.forEach((p, i) => { if(!c0.can[i]) return; const v = dmWorth(dmCalc(Object.assign({}, view, { auto:Object.assign({}, view.auto, { [c0.k]:i }) }), A.army, A.u, P.tg, S0.kind)); if(v > bv + 1e-9){ bv = v; bi = i; } });
+      c0.ps.forEach((p, i) => { if(!c0.can[i]) return; const v = dmWorth(dmCalc(Object.assign({}, view0, { auto:Object.assign({}, view.auto, { [c0.k]:i }) }), A.army, A.u, P.tg, S0.kind)); if(v > bv + 1e-9){ bv = v; bi = i; } });
       if(bi >= 0) view.auto[c0.k] = bi; }
     if(Object.keys(view.auto).length) M = dmCalc(view, A.army, A.u, P.tg, S0.kind);
     const lasting = l => l === 'turn' || l === 'round' || l === 'battle';
