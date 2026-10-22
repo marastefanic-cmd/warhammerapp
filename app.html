@@ -1063,9 +1063,11 @@ function themePicker(){
 const PHASES = [['command','Command','Cmd'], ['movement','Movement','Move'], ['shooting','Shooting','Shoot'], ['charge','Charge','Charge'], ['fight','Fight','Fight']];
 const PHASE_NAME = Object.fromEntries(PHASES.map(([k, l]) => [k, l]));
 const TURN_NAME = { your:'Your turn', opp:'Their turn', either:'Either turn' };
-const ROLE_ORDER = ['Epic Hero','Character','Battleline','Infantry','Mounted','Beast','Swarm','Monster','Vehicle','Dedicated Transport','Fortification','Other'];
+const ROLE_ORDER = ['Epic Hero','Character','Battleline','Infantry','Mounted','Beast','Swarm','Monster','Vehicle','Dedicated Transport','Fortification','Allies','Other'];
 const ROLE_LABEL = { 'Epic Hero':'Epic Heroes', 'Character':'Characters', 'Battleline':'Battleline', 'Infantry':'Infantry', 'Mounted':'Mounted', 'Beast':'Beasts', 'Swarm':'Swarms',
-  'Monster':'Monsters', 'Vehicle':'Vehicles', 'Dedicated Transport':'Dedicated Transports', 'Fortification':'Fortifications', 'Other':'Other' };
+  'Monster':'Monsters', 'Vehicle':'Vehicles', 'Dedicated Transport':'Dedicated Transports', 'Fortification':'Fortifications', 'Allies':'Allies', 'Other':'Other' };
+// a unit's group in the Units list: its role, an allied unit's under Allies (New Recruit's role "Allies: Legiones Daemonica")
+const roleGroup = u => ROLE_ORDER.includes(u.role) ? u.role : /^Allies:/.test(u.role || '') ? 'Allies' : 'Other';
 const SCREEN_TITLE = { pregame:'Overview', damage:'Damage', units:'Units', strats:'Stratagems', ranged:'Ranged weapons', melee:'Melee weapons', abilities:'Abilities', rules:'Rules', bases:'Bases & proxies' };
 const BACK_TITLE = { pregame:'Overview', ranged:'Ranged', melee:'Melee', rules:'Rules', bases:'Bases' };
 const HUNTER_KW = 'HUNTER: MONSTER/VEHICLE';
@@ -1124,7 +1126,7 @@ function abilityTicks(ab, u){
 const copyKey = (ab, u, i) => 'a:' + ab.name + '|' + u.id + ((u.copies || 1) > 1 ? '.' + i : '');
 // the units in the order of the Units list, for ‹ › on a datasheet
 function unitFlip(u){
-  const order = ROLE_ORDER.flatMap(r => army().units.filter(x => (ROLE_ORDER.includes(x.role) ? x.role : 'Other') === r));
+  const order = ROLE_ORDER.flatMap(r => army().units.filter(x => roleGroup(x) === r));
   const i = order.indexOf(u), prev = order[i - 1], next = order[i + 1];
   const b = (x, cls, label) => x ? '<button class="flip ' + cls + '" data-flip="' + esc(x.id) + '">' + label + '</button>' : '<span></span>';
   return '<div class="flips">' + b(prev, 'p', '‹ ' + esc(shortName(prev || {}))) + b(next, 'n', esc(shortName(next || {})) + ' ›') + '</div>';
@@ -3774,7 +3776,7 @@ function rowCounts(u){
 }
 function screenUnits(){
   const a = army(), groups = {};
-  for(const u of a.units){ const r = ROLE_ORDER.includes(u.role) ? u.role : 'Other'; (groups[r] = groups[r] || []).push(u); }
+  for(const u of a.units){ const r = roleGroup(u); (groups[r] = groups[r] || []).push(u); }
   return ROLE_ORDER.filter(r => groups[r]).map(r => '<h2 class="rgh"><span>' + ROLE_LABEL[r] + '</span><span class="c">' + groups[r].reduce((t, u) => t + (u.copies || 1), 0) + '</span></h2><div class="list ul">' + groups[r].map(u => {
     // one model type: its count goes after the name ("Gretchin ×10"), like a weapon count
     const one = u.models.length === 1 && u.models[0].match(/^(\d+)× /);
@@ -4354,7 +4356,7 @@ function proxyLines(u){
 }
 function screenBases(){
   const a = army(), total = new Map();
-  const units = ROLE_ORDER.flatMap(r => a.units.filter(u => (ROLE_ORDER.includes(u.role) ? u.role : 'Other') === r));
+  const units = ROLE_ORDER.flatMap(r => a.units.filter(u => roleGroup(u) === r));
   const cards = units.map(u => {
     const lines = proxyLines(u), c = u.copies || 1;
     for(const l of lines) if(/\d/.test(l.base)) total.set(l.base, (total.get(l.base) || 0) + l.n * c);   // "Hull": no base
