@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" href="icon-192.png">
 <style>:root{padding-top:env(safe-area-inset-top,0px)}img{max-width:100%}</style>
 <title>Kunnin’ Kodex</title>
-<script>window.WH_BUILD = '7a00ff4e3b';</script>
+<script>window.WH_BUILD = 'ae2999aa3b';</script>
 </head>
 <body>
 <style>
@@ -898,83 +898,6 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
 .dl i{font-style:normal; font:600 11px var(--f-head); letter-spacing:.08em; color:var(--muted); margin-right:2px}
 .dl .sv{font:700 14.5px var(--f-head); font-variant-numeric:tabular-nums}
 
-/* ---------- the Game tracker ----------
-   both players' CP and VP as big steppers, the choices as chips (the home filters' pills), each phase's steps as the
-   datasheet's quiet row labels, and every quote with its source above it, under a hairline, as the Overview's rows */
-.gsc{display:grid; grid-template-columns:28px minmax(0,1fr) minmax(0,1fr); align-items:center; gap:8px 10px; padding:10px 2px 12px; border-top:1px solid var(--line)}
-.gsd{display:grid; gap:2px; min-width:0; text-align:center}
-.gsd b{font:700 15px/1.15 var(--f-head); letter-spacing:.02em; overflow-wrap:anywhere}
-.gsd > span{font-size:12px; line-height:1.25; color:var(--muted)}
-.gk{font:600 11.5px/1 var(--f-head); letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
-.gst{display:grid; grid-template-columns:44px minmax(0,1fr) 44px; align-items:center; min-height:48px; border-radius:10px; background:var(--surface); box-shadow:inset 0 0 0 1px var(--line)}
-.gst button{height:48px; display:grid; place-items:center; border-radius:10px; font:700 26px/1 var(--f-head); color:var(--accent)}
-.gst button:active{background:var(--surface2)}
-.gst button[disabled]{color:var(--line); cursor:default}
-.gst b{min-width:0; text-align:center; font:700 26px/1 var(--f-head); font-variant-numeric:tabular-nums}
-.gst.sm{grid-template-columns:40px 30px 40px; min-height:40px}
-.gst.sm button{height:40px; font-size:22px}
-.gst.sm b{font-size:21px}
-.gx{border-bottom:1px solid var(--line)}
-.gx > summary{display:flex; align-items:center; gap:8px; min-height:44px; padding:6px 2px; font:700 15.5px/1.1 var(--f-head); letter-spacing:.1em; text-transform:uppercase}
-.gx > summary:active{background:var(--surface)}
-.gx > summary .c{font:600 13px var(--f-head); letter-spacing:.04em; color:var(--muted)}
-.gx > summary .chev{margin-left:auto}
-.gx.gcpr{border-top:1px solid var(--line); padding-bottom:8px}
-.gx.gcpr > summary{font:600 12.5px/1.2 var(--f-head); letter-spacing:.09em; color:var(--fg2); min-height:40px}
-.gx.gcpr:not([open]){padding-bottom:0}
-.gq{margin:8px 0 0; padding:1px 0 1px 9px; border-left:2px solid var(--line); font-size:13.5px; line-height:1.42; color:var(--fg2)}
-.gq .gqs{display:block; margin-bottom:1px; font:600 11px/1.3 var(--f-head); letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
-.gq > p{margin:0 0 3px} .gq > p:last-child{margin-bottom:0}
-.gq .from{color:var(--muted)}
-.gq.gpk{border-left-color:var(--accent); color:var(--fg)}
-.gnote{margin:6px 0 0; font-size:12.5px; line-height:1.4; font-style:italic; color:var(--muted)}
-.chips{display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin:8px 0 0}
-.chip{display:inline-flex; align-items:center; gap:6px; min-height:38px; max-width:100%; padding:0 13px; border-radius:19px; background:var(--surface); box-shadow:inset 0 0 0 1px var(--line);
-  font:700 13.5px/1.1 var(--f-head); letter-spacing:.05em; text-transform:uppercase; color:var(--fg2); text-align:left}
-.chip.on{background:var(--accent); color:var(--accent-ink); box-shadow:none}
-.chip:active{opacity:.75}
-.chip.used{color:var(--muted)}
-.chip .u{font:600 11px/1 var(--f-head); letter-spacing:.06em; color:var(--muted)}
-.gcg{flex:0 0 auto; margin-right:2px; font:600 11px/1 var(--f-head); letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
-.gcs{border-top:1px solid var(--line)}
-.gc{padding:9px 2px 12px; border-bottom:1px solid var(--line)}
-.gch .link{font:700 16.5px/1.2 var(--f-head); letter-spacing:.02em}
-.gch .from, .gcw .from{font-size:13px; color:var(--muted)}
-.gcw{margin-top:1px; font-size:13px; line-height:1.35; color:var(--muted)}
-.gcw b{font-weight:600; color:var(--fg2)}
-.gcp{margin-top:8px; font-size:12.5px; color:var(--muted)}
-.gclk{display:grid; grid-template-columns:auto auto; justify-content:space-between; align-items:center; gap:8px 10px; padding-top:8px; border-top:1px solid var(--line)}
-.gclk .seg{grid-column:1 / -1; display:grid; grid-template-columns:1fr 1fr; gap:6px}
-.gclk .seg .chip{justify-content:center}
-.gsub{margin:5px 0 0; font-size:12.5px; color:var(--muted)}
-.gphs{display:grid; grid-template-columns:repeat(5, minmax(0, 1fr)); gap:5px; margin:10px 0 2px}
-.gphs .chip{justify-content:center; padding:0 2px; letter-spacing:.03em}
-.gphs .ls{display:none}
-@media (max-width:389px){ .gphs .lf{display:none} .gphs .ls{display:inline} }
-.gph{margin-top:12px}
-.gpt{padding:0 2px 4px; border-bottom:1px solid var(--line); font:600 11.5px/1.3 var(--f-head); letter-spacing:.08em; text-transform:uppercase; color:var(--fg2)}
-.gpt .gnum{margin-left:3px; color:var(--muted); letter-spacing:.04em}
-.gph > .rt{padding:6px 2px 7px; border-bottom:1px solid var(--line); font-size:14px; color:var(--fg2)}
-.gr{display:flex; align-items:flex-start; gap:10px; padding:6px 2px 7px; border-bottom:1px solid var(--line); font-size:14px; line-height:1.38}
-.grb{flex:1; min-width:0}
-.gr .link{font:700 15.5px/1.2 var(--f-head); letter-spacing:.02em}
-.gr .from{font-size:13px; color:var(--muted)}
-.gr.none .link{color:var(--muted)}
-.gr .sg{display:block; margin-top:1px; font-size:13px; line-height:1.32; color:var(--fg2)}
-.gr.gs .from{display:block; font-size:12.5px}
-.gr .cp{flex:none; margin-top:1px}
-.gr .tg{white-space:normal}
-.gtk{display:block}
-.gpn{display:block; margin-top:1px; font:600 12.5px/1.3 var(--f-body); color:var(--accent)}
-.gr .ticks{margin:5px 8px 0 0; vertical-align:0}
-.gnext{display:block; width:100%; margin-top:14px}
-.gx.gpre{margin-top:20px; border-top:1px solid var(--line)}
-.gpre > .note{margin:0 0 6px}
-.gseq .gn{display:inline-block; min-width:20px; color:var(--accent)}
-.gpl{margin-top:8px; font-size:14px; line-height:1.5}
-.gpl .gnote{margin-top:2px}
-.gpu{display:block}
-
 /* ---------- rules ---------- */
 .xp{border-bottom:1px solid var(--line)}
 .xp > summary{display:flex; align-items:center; gap:10px; min-height:44px; padding:7px 2px}
@@ -1038,7 +961,7 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
     <symbol id="i-back" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></symbol>
     <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></symbol>
     <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
-    <!-- The icons clipboard-list, users, zap, scroll, telescope, swords, hourglass, circle-question-mark, the settings gear and the dice are from Lucide, https://lucide.dev
+    <!-- The icons clipboard-list, users, zap, scroll, telescope, swords, circle-question-mark, the settings gear and the dice are from Lucide, https://lucide.dev
      ISC License. Copyright (c) 2026 Lucide Icons and Contributors. Permission to use, copy, modify, and/or distribute this software for any
      purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
      THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
@@ -1050,7 +973,6 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
     <symbol id="i-ask" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /> <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /> <path d="M12 17h.01" /></g></symbol>
     <symbol id="i-gear" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915" /> <circle cx="12" cy="12" r="3" /></g></symbol>
     <symbol id="i-dice" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="12" height="12" x="2" y="10" rx="2" ry="2" /> <path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6" /> <path d="M6 18h.01" /> <path d="M10 14h.01" /> <path d="M15 6h.01" /> <path d="M18 9h.01" /></g></symbol>
-    <symbol id="i-hourglass" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22h14" /> <path d="M5 2h14" /> <path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22" /> <path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2" /></g></symbol>
   </defs>
 </svg>
 
@@ -1072,9 +994,9 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="verified.js?v=7a00ff4e3b"></script>
-<script src="data.js?v=7a00ff4e3b"></script>
-<script src="calc.js?v=7a00ff4e3b"></script>
+<script src="verified.js?v=ae2999aa3b"></script>
+<script src="data.js?v=ae2999aa3b"></script>
+<script src="calc.js?v=ae2999aa3b"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -1150,8 +1072,8 @@ const TURN_NAME = { your:'Your turn', opp:'Their turn', either:'Either turn' };
 const ROLE_ORDER = ['Epic Hero','Character','Battleline','Infantry','Mounted','Beast','Swarm','Monster','Vehicle','Dedicated Transport','Fortification','Other'];
 const ROLE_LABEL = { 'Epic Hero':'Epic Heroes', 'Character':'Characters', 'Battleline':'Battleline', 'Infantry':'Infantry', 'Mounted':'Mounted', 'Beast':'Beasts', 'Swarm':'Swarms',
   'Monster':'Monsters', 'Vehicle':'Vehicles', 'Dedicated Transport':'Dedicated Transports', 'Fortification':'Fortifications', 'Other':'Other' };
-const SCREEN_TITLE = { pregame:'Overview', damage:'Damage', game:'Game tracker', units:'Units', strats:'Stratagems', ranged:'Ranged weapons', melee:'Melee weapons', abilities:'Abilities', rules:'Rules', bases:'Bases & proxies' };
-const BACK_TITLE = { pregame:'Overview', game:'Game', ranged:'Ranged', melee:'Melee', rules:'Rules', bases:'Bases' };
+const SCREEN_TITLE = { pregame:'Overview', damage:'Damage', units:'Units', strats:'Stratagems', ranged:'Ranged weapons', melee:'Melee weapons', abilities:'Abilities', rules:'Rules', bases:'Bases & proxies' };
+const BACK_TITLE = { pregame:'Overview', ranged:'Ranged', melee:'Melee', rules:'Rules', bases:'Bases' };
 const HUNTER_KW = 'HUNTER: MONSTER/VEHICLE';
 const KEY_LABEL = { range:'RNG', A:'A', BS:'BS', WS:'WS', S:'S', AP:'AP', D:'D' };
 // a value or keyword that a rule of the list changes (w.from / s.from, derived from BSData and checked
@@ -1170,7 +1092,7 @@ const hasOwn = (o, k) => Object.prototype.hasOwnProperty.call(o, k);
 const sess = isObj(session.get('wh-session')) ? session.get('wh-session') : {};
 const openStrats = new Set(Array.isArray(sess.open) ? sess.open : []);
 const query = Object.assign({}, isObj(sess.query) ? sess.query : {});
-const saveSession = () => session.set('wh-session', { open:[...openStrats], query, dmg:sess.dmg, gfold:sess.gfold });
+const saveSession = () => session.set('wh-session', { open:[...openStrats], query, dmg:sess.dmg });
 const moreShown = new Set();                 // search groups you expanded
 let focusSearch = false;
 
@@ -1180,7 +1102,7 @@ let focusSearch = false;
 // the tabs, and which one the current screen belongs to
 const TABS = [['army', 'i-telescope', 'Find'], ['units', 'i-units', 'Units'], ['strats', 'i-cards', 'Stratagems'], ['rules', 'i-book', 'Rules'], ['damage', 'i-swords', 'Damage']];
 const isTab = s => TABS.some(([k]) => k === s);
-const tabOf = s => ({ unit:'units', pregame:'army', game:'army', bases:'army', ranged:'army', melee:'army', abilities:'army' })[s] || s;
+const tabOf = s => ({ unit:'units', pregame:'army', bases:'army', ranged:'army', melee:'army', abilities:'army' })[s] || s;
 const tabBar = () => '<div class="tabs">' + TABS.map(([s, ic, label]) => '<button data-tab="' + s + '"' + (tabOf(cur.s) === s ? ' class="on" aria-current="page"' : '') + '><svg class="ic" aria-hidden="true"><use href="#' + ic + '"/></svg><span>' + label + '</span></button>').join('') + '</div>';
 // uses per battle ticked off in this game (Bomb Squig: twice per battle, per unit), per army, until New game
 const usedKey = () => 'wh-used-' + (cur.army || '');
@@ -1643,16 +1565,15 @@ function screenArmy(){
     '<div id="qres"></div>' +
     '<div id="armyMenu"><div class="list">' +
       row('pregame', 'i-flag', 'Overview', '') +
-      row('damage', 'i-swords', 'Damage calculator', '') +
-      row('game', 'i-hourglass', 'Game tracker', '') +
+      row('bases', 'i-base', 'Bases & proxies', a.units.reduce((t, u) => t + modelCount(u) * (u.copies || 1), 0)) +
       row('units', 'i-units', 'Units', unitCount(a)) +
       row('strats', 'i-cards', 'Stratagems', allStratagems(a).length) +
       row('ranged', 'i-gun', 'Ranged weapons', weaponCount(a, 'ranged')) +
       row('melee', 'i-blade', 'Melee weapons', weaponCount(a, 'melee')) +
       row('abilities', 'i-spark', 'Abilities', a.units.reduce((t, u) => t + u.abilities.length, 0)) +
       row('rules', 'i-book', 'Rules', '') +
-      row('bases', 'i-base', 'Bases & proxies', a.units.reduce((t, u) => t + modelCount(u) * (u.copies || 1), 0)) +
-      awakeRow() + (ONLY ? row('settings', 'i-gear', 'Settings', '') : '') +
+      row('damage', 'i-swords', 'Damage calculator', '') +
+      (ONLY ? row('settings', 'i-gear', 'Settings', '') : '') +
     '</div><p class="note">' + esc(a.source) + '</p></div>' + (ONLY ? verifiedLine() : '');
 }
 
@@ -1804,12 +1725,14 @@ const DM_FACTS = { charged:'Charged this turn', riled:'Riled up', stationary:'Re
 const DM_IMPLIES = { targetObjectiveNotYours:['targetObjective'], targetObjective:['objective'], closest18:['closest'], stationary:['heavy'] };
 // the facts that are about the target, not the unit attacking
 const DM_TGT_FACT = new Set(['targetObjective', 'targetObjectiveNotYours', 'closest', 'closest18']);
+// a pick as the Damage tab names it: its label (Try Dat Button!'s "+1 A & +2 S"), else its name (the key it is kept under)
+const dmPickLabel = (m, name) => { const p = (m.pick || []).find(x => x.name === name); return p && p.label || name || ''; };
 // one rule as the calculator reads it: its recorded numbers (calc) or its words, the effect picked when it has several (pick:
 // its own calc or words), the weapons it names (its words, or calc.weapon: "Dark Blessing has [SUSTAINED HITS D3]")
 function dmRuleOf(m, st){
   // (follow: the pick of the rule it follows, Murderous Imperative's the Doctrina Imperatives one, with no pills of its own)
   const pk = m.pick ? 'pick:' + (m.follow || m.from) : '', ch = m.pick ? m.pick.find(p => p.name === st.val[pk]) || m.pick[0] : null;
-  let mm = ch ? Object.assign({}, m, { note:ch.name + ': ' + ch.note.replace(/^([a-z][\w’'-]* weapons(?: only)?:\s*)/i, ''), scopeNote:ch.note }) : m;
+  let mm = ch ? Object.assign({}, m, { note:(ch.label ? ch.label : ch.name + ': ' + ch.note.replace(/^([a-z][\w’'-]* weapons(?: only)?:\s*)/i, '')), scopeNote:ch.note }) : m;
   const sc = dmScope(ch ? { note:ch.note, when:m.when } : m);
   let e0 = ch && ch.calc ? Object.assign({}, ch.calc) : !ch && m.calc ? Object.assign({}, m.calc) : dmEffects(sc.note, !!m.set);
   if(e0 && e0.weapon){ mm = Object.assign({}, mm, { weapon:e0.weapon }); delete e0.weapon; }
@@ -1818,7 +1741,7 @@ function dmRuleOf(m, st){
   // D6 by itself; else what the player picked, one D6 to start with
   const dk = m.dice ? 'dice:' + m.from : '', forced = !!(m.dice && ch && (m.dice.two || []).includes(ch.name));
   const dice = m.dice ? { key:dk, opts:m.dice.opts, now:forced ? m.dice.opts[1] : m.dice.opts.includes(st.val[dk]) ? st.val[dk] : m.dice.opts[0], forced, note:m.dice.note } : null;
-  return { m:mm, sc, e, pills:ch && !m.follow ? m.pick.map(p => [p.name, p === ch]) : null, pillKey:m.follow ? '' : pk, note0:ch ? m.note : '', pick:ch ? ch.name : '', dice, diceKey:dk };
+  return { m:mm, sc, e, pills:ch && !m.follow ? m.pick.map(p => [p.name, p === ch]) : null, pillKey:m.follow ? '' : pk, note0:ch ? m.note : '', pick:ch ? ch.name : '', pickLabel:ch ? dmPickLabel(m, ch.name) : '', dice, diceKey:dk };
 }
 // who gives a rule of another unit of the list: the part of an attached unit it is on, else that unit ("Clever Know-wotz (Mek)")
 function dmGiver(m, A){ const u = m.src, ab = u.abilities.find(x => x.name === m.from);
@@ -2019,7 +1942,7 @@ function dmCalc(st, A, au, tg, kind){
   for(const r of rules.filter(q => q.m.follow)){ const by = rules.find(q => q.m.from === r.m.follow && !q.m.follow);
     if(!by) continue;
     r.lead = by;
-    if(by.on && r.state !== 'out'){ r.state = 'on'; r.why = 'with ' + by.m.from + ': ' + by.pick; }
+    if(by.on && r.state !== 'out'){ r.state = 'on'; r.why = 'with ' + by.m.from + ': ' + by.pickLabel; }
     else if(r.state === 'on'){ r.state = 'choice'; r.why = ''; }
     r.on = dmOn(st, r); r.carried = r.on ? fromStep(r.k) : null;
     if(r.on && !by.on) r.extra = 'no Imperative ticked (' + by.m.from + ')'; else if(r.on && by.extra) r.extra = by.extra; }
@@ -2099,7 +2022,7 @@ function dmCalc(st, A, au, tg, kind){
   const groups = [], gOf = [];
   for(const c of ticked){
     const appl = [], kx = kwOf(c);
-    for(const r of rules) if(r.on){ const n = dmReach(au, c.it, r.m, r.sc); if(n > 0) appl.push({ n:Math.min(n, c.n), mod:Object.assign({ from:r.m.from + (r.help ? ' (' + r.help + ')' : '') + (r.pick ? ': ' + r.pick : '') + (r.over ? ' (counted by you)' : '') }, r.m.strat ? { strat:r.m.strat } : {}, r.e), r }); }
+    for(const r of rules) if(r.on){ const n = dmReach(au, c.it, r.m, r.sc); if(n > 0) appl.push({ n:Math.min(n, c.n), mod:Object.assign({ from:r.m.from + (r.help ? ' (' + r.help + ')' : '') + (r.pick ? ': ' + r.pickLabel : '') + (r.over ? ' (counted by you)' : '') }, r.m.strat ? { strat:r.m.strat } : {}, r.e), r }); }
     for(const x of dmgOn){ const n = dmReach(au, c.it, x.m, { f:null }); if(n > 0) appl.push({ n:Math.min(n, c.n), mod:Object.assign({ from:x.m.from }, x.e), r:{ m:x.m } }); }
     if(Object.keys(manual).length) appl.push({ n:c.n, mod:Object.assign({ from:'' }, manual), r:{ m:{ from:'' } } });
     const cuts = [...new Set(appl.map(x => x.n).concat(c.n))].sort((a, b) => a - b);
@@ -2154,6 +2077,16 @@ function dmCalc(st, A, au, tg, kind){
   if(!ranged || lance) conds.a.push('charged');
   if(heavyKw) conds.a.push('stationary');
   return { input, R, rules, sit, bands, weapons:chosen, strats, nc, notes, models, tmod, ctx, ticked, groups, gOf, au, tg, kind, conds, cName };
+}
+// a characteristic a rule changes or sets, in words: "+6 A" (a change), "A 10" (a new value)
+const dmSetWords = set => Object.entries(set || {}).map(([k, v]) => /^[+-]/.test(v) ? v + ' ' + k : k + ' ' + v).join(', ');
+// a rule's row in words: its when and its note, with the characteristic it changes (its set: Blitz Dem Gitz!'s +6 A) when its
+// words do not say it: "+6 A vs non-MONSTER/VEHICLE targets, in your Shooting phase", "Possessed Lord (…): A 10 and [DEVASTATING WOUNDS] …"
+function dmRuleWords(when, note, set){
+  const sw = dmSetWords(set), said = ((when || '') + ' ' + (note || '')).toLowerCase();
+  if(!sw || sw.split(', ').every(x => said.includes(x.toLowerCase()))) return (when ? when + ': ' : '') + (note || '');
+  if(/^vs\b/i.test(when || '')) return sw + ' ' + when + (note ? ', ' + note : '');
+  return (when ? when + ': ' : '') + sw + (note ? (/^and\b/i.test(note) ? ' ' : ', ') + note : '');
 }
 // a rule's recorded numbers in words (the part of it the calculator counts)
 function dmCalcWords(e){
@@ -2405,7 +2338,7 @@ function dmNoWhy(M, M2, lv){
   if(lv.part && lv.kidsOn === lv.kids) return 'the rules it switches on are ticked already';
   // a pick with nothing for these attacks, or a part of it that waits for its fact (Doctrina Imperatives: the Conqueror's +1 AP)
   const pr = lv.r || (lv.x && lv.x.ar ? lv.x : null), pm = pr && (pr.m ? pr.m.part : pr.ar.part);
-  if(pr && pm && !pr.partOn && !Object.keys(pr.e || {}).length) return (pr.partIn ? pm.note + ' only while “' + DM_FACTS[pm.cond] + '” holds' : (pr.pick || '') + ': nothing for these attacks');
+  if(pr && pm && !pr.partOn && !Object.keys(pr.e || {}).length) return (pr.partIn ? pm.note + ' only while “' + DM_FACTS[pm.cond] + '” holds' : (pr.pickLabel || '') + ': nothing for these attacks');
   if(lv.range) return M.ctx.halfWithin ? 'no weapon it reaches gets its bonus in this band' : 'it changes range only, which counts through half range: pick a band';
   if(lv.fact && !(lv.reach || []).length) return 'no rule here needs it';
   // a fact whose rules only change range (Dakka! Dakka! Dakka!: +3" range when riled up)
@@ -3008,7 +2941,7 @@ function dmChipsOf(C, out, seen, said){
   // what the rules require, left out: the player's own call, said as one (tap: counted again)
   for(const y of C.levers) if(y.left){ const nm = y.fact ? y.label : y.r ? y.r.m.from : '';
     out.push('<button class="dmchip ovr" data-dmlv="' + esc(y.id) + '" aria-label="' + esc(nm) + ': count again">' + esc(nm + ': left out (by you)') + '<i aria-hidden="true">↺</i></button>'); }
-  for(const r of M.rules) if(r.on && !byFact(pf + 'r:' + r.k, r.k)) chip(pf + 'r:' + r.k, from(r) + (r.m.cp ? r.m.cp + 'CP ' : '') + r.m.from + (r.help ? ' (' + r.help + ')' : '') + (r.pills ? ': ' + r.pills.find(p => p[1])[0] : '') + (r.over ? ' (by you)' : ''), r.over ? 'over' : r.carried ? 'carry' : r.state === 'on' && ch.on[r.k] == null ? 'auto' : '');
+  for(const r of M.rules) if(r.on && !byFact(pf + 'r:' + r.k, r.k)) chip(pf + 'r:' + r.k, from(r) + (r.m.cp ? r.m.cp + 'CP ' : '') + r.m.from + (r.help ? ' (' + r.help + ')' : '') + (r.pills ? ': ' + r.pickLabel : '') + (r.over ? ' (by you)' : ''), r.over ? 'over' : r.carried ? 'carry' : r.state === 'on' && ch.on[r.k] == null ? 'auto' : '');
   const nMan = DM_MAN.filter(([k]) => ch.man[k] && ch.man[k] !== '0').length;
   if(nMan) out.push('<button class="dmchip" data-dmmanclear data-dmstep="' + b.id + '">' + dmManSum(ch.man) + (part ? ' (' + part + ')' : '') + '<i aria-hidden="true">×</i></button>');
 }
@@ -3130,11 +3063,11 @@ function dmLeverRow(C, x){
   if(x.r){ const r = x.r, title = (r.m.cp ? '<b class="cpb">' + r.m.cp + 'CP</b> ' : '') + dmRuleLink(C, x, r.m.from || '') + (r.help ? ' (' + esc(r.help) + ')' : '');
     const reach = r.e ? C.M.ticked.map(c => [c, dmReach(C.plan.beats[C.plan.k].atk.u, c.it, r.m, r.sc)]) : [];
     const part = reach.length && reach.some(([c, n]) => n < c.n) ? reach.filter(([c, n]) => n > 0).map(([c, n]) => C.M.cName(c) + (n < c.n ? ' ×' + n : '')) : null;
-    const words = (r.m.when ? r.m.when + ': ' : '') + (r.note0 || r.m.note), cw = r.m.calc ? dmCalcWords(r.e) : '';
+    const words = dmRuleWords(r.m.when, r.note0 || r.m.note, r.e && r.e.set), cw = r.m.calc ? dmCalcWords(r.e) : '';
     const counted = cw && !words.toLowerCase().includes(cw.toLowerCase().replace(/ rolls?$/, '')) ? ' · in these numbers: ' + cw : '';
     const one = r.m.oneModel && modelCount(C.plan.beats[C.plan.k].atk.u) > 1 ? ' · one model only: counted for the weapons of one model' : '';
     // a rule that follows another's pick (Murderous Imperative), and the part of a rule a fact of the table switches on (the +1 AP)
-    const lead = r.lead ? ' · its Imperative is the one picked under ' + r.lead.m.from + ': ' + (r.lead.on ? r.lead.pick : 'none ticked') : '';
+    const lead = r.lead ? ' · its Imperative is the one picked under ' + r.lead.m.from + ': ' + (r.lead.on ? r.lead.pickLabel : 'none ticked') : '';
     const bu = C.plan.beats[C.plan.k].atk.u, pt = r.m.part ? ' · ' + r.m.part.note + (r.partOn ? ' counted (' + (hasKw(bu, 'Battleline') ? 'it is BATTLELINE' : 'said above') + ')' : r.partIn ? ' only while the BATTLELINE fact holds (above)' : '') : '';
     const sub = esc(words + counted + one + lead + pt + (part ? ' · ' + (part.length ? 'for ' + part.join(', ') : 'none of the ticked weapons') : ''));
     return dmRowHtml(C, x, title, sub, '', dmPills(C, x)); }
@@ -3166,7 +3099,7 @@ function dmPills(C, x){
     const ar = x.r ? x.r.m.ar : null, bp = p && p.both && ar && ar.both;
     const via = bp ? dmBothVia(bt.atk.army, bt.atk.u, ar.both) : [];
     const bw = bp ? '<small' + (via.length ? '' : ' class="ovr"') + '>' + esc(via.length ? 'with ' + via.join(' or ') : 'counted by you: only with ' + dmBothAll(ar.both)) + '</small>' : '';
-    return '<button class="dmpp' + (y.on ? ' on' : '') + '" data-dmlv="' + esc(y.id) + '" aria-pressed="' + y.on + '"><b>' + esc(y.name) + '</b>' + bw + '<em data-fx="' + esc(y.id) + '">' + dmFxHtml(C, y) + '</em></button>'; }).join('') + '</div>';
+    return '<button class="dmpp' + (y.on ? ' on' : '') + '" data-dmlv="' + esc(y.id) + '" aria-pressed="' + y.on + '"><b>' + esc(p && p.label || y.name) + '</b>' + bw + '<em data-fx="' + esc(y.id) + '">' + dmFxHtml(C, y) + '</em></button>'; }).join('') + '</div>';
 }
 // what the rules rule out here, in one line: each a button, the player's to count anyway (its effect with it); the other stratagems
 // of another phase, with nothing to count, named with the reason
@@ -4540,417 +4473,6 @@ function screenPregame(){
   return h + '<p class="note">Gathered from this list’s datasheets and rules; each line opens the full text.</p>';
 }
 
-/* ---------- screen: the Game tracker (a row on Find, like the Damage calculator) ----------
-   Everything for running a game, and only here: the battle round, whose turn and the phase; both players' CP and VP; the
-   choices this list's rules ask for (the Oath, Blessings, Doctrina Imperatives…), kept for the game; what this list can do
-   in the phase shown; the Event Companion's mission sequence with this list's numbers.
-   Every rules sentence is a quote (data.js GAME, or the list's own rules); what the screen works out is marked as an app note.
-   The game is kept on this phone under the list. Its uses per battle are the Overview's ticks (the same storage), which its
-   New game also clears.
-   Nothing here changes a datasheet or any other screen. */
-const gameKey = a => 'wh-game-' + a.id;
-// { round 1–5, half 0|1 (the first or the second turn of the round), first: the side that takes the first turn, ph: the phase,
-//   cp / vp per side, picks[side][choice key][round, or 0 for the battle] = { group: option name(s), 'rolled:group', 'target:group' } }
-function gameOf(a){
-  const g = store.get(gameKey(a)), o = isObj(g) ? g : {}, n = (v, lo, hi, d) => Number.isInteger(v) && v >= lo && v <= hi ? v : d;
-  const two = (x, hi) => ({ mine:n((x || {}).mine, 0, hi, 0), opp:n((x || {}).opp, 0, hi, 0) });
-  return { round:n(o.round, 1, 5, 1), half:n(o.half, 0, 1, 0), first:o.first === 'opp' ? 'opp' : 'mine', ph:hasOwn(PHASE_NAME, o.ph) ? o.ph : 'command',
-    cp:two(o.cp, 99), vp:two(o.vp, 999), picks:isObj(o.picks) ? o.picks : {} };
-}
-const gameSave = (a, g) => store.set(gameKey(a), g);
-const gOther = s => s === 'mine' ? 'opp' : 'mine';
-const gTurnSide = g => g.half ? gOther(g.first) : g.first;           // whose turn it is
-// the Game tracker's New game: this game's round, turn, CP, VP and choices, and the list's uses per battle (the Overview's
-// tick boxes, the same storage); returns the undo. The Overview's own New game clears the uses per battle only
-function newGame(a){
-  const keys = [gameKey(a), 'wh-used-' + a.id];
-  const was = keys.map(k => [k, store.get(k, null)]);
-  store.set(keys[0], null); for(const k of keys.slice(1)) store.set(k, []);
-  return () => { for(const [k, v] of was) store.set(k, v); };
-}
-
-// ---- the choices a list's rules ask for ----
-// A rule whose words have the player select (or activate) one, or up to two, of its options and say how long the pick
-// lasts: until the end of the battle (or "for the coming battle"), for the battle round (until its end or the start of the
-// next), until the start of this side's next Command phase (which is not the battle round for the player who goes second),
-// or until another is picked ("remains in that protocol until it enters a different one"). Its options, in its own words: its table (Doctrina Imperatives; Code Chivalric's Deeds and
-// Qualities by their D6 results), the abilities of the section it names ("the abilities in the Crimson King section": the
-// abilities listed under that name, or the bold-named parts of the ability of that name), or its own bullets (Battle
-// Protocols, Singular Purpose). A rule that has a unit or a model picked but no options (Omnissiah's Blessing) is not one.
-const GC_SEL = /\b(?:select|activate)\s+(one|up to two|up to three)\b([^.]*)/gi;
-function gcLasts(t){
-  if(/\buntil the end of the battle(?! round)|\bfor the coming battle\b/i.test(t)) return 'battle';
-  if(/\buntil the (?:end of the battle round|start of the next battle round)\b/i.test(t)) return 'round';
-  if(/\buntil the start of your next command phase\b/i.test(t)) return 'command';
-  if(/\bremains in that [a-z]+ until it enters a different one\b/i.test(t)) return 'kept';
-  return '';
-}
-// "**Mantra of Discipline:** …" parts of a text, each with the "- " lines under it
-function gcParts(text){
-  const out = [];
-  for(const raw of String(text || '').split('\n')){
-    const l = raw.trim(), m = /^\*\*([^*]+?):\*\*\s*/.exec(l);
-    if(m) out.push({ name:m[1], text:l });
-    else if(out.length && /^- /.test(l)) out[out.length - 1].text += '\n' + l;
-  }
-  return out;
-}
-// "- **Protector Protocol:** …" or "- Select one enemy unit. …" lines
-const gcBullets = text => String(text || '').split('\n').map(l => l.trim()).filter(l => /^- /.test(l)).map(l => {
-  const b = /^- \*\*([^*]+?):\*\*/.exec(l), s = /^- ([^.:]+)[.:]/.exec(l);
-  return { name:b ? b[1] : s ? s[1] : l.slice(2), text:l.slice(2) }; });
-// a table's rows as options: "Deed 1–2 · We vow to lay low the tyrant…" is option 1–2 of the Deeds; "Unbridled Bloodlust ·
-// double 1+" is the option Unbridled Bloodlust
-function gcTable(table){
-  const rows = table.map(([k, v]) => { const d = /^(\S+) (\d[–-]\d) · (.*)$/.exec(k), p = String(k).split(' · ');
-    return d ? { group:d[1], name:d[2], title:d[3], text:v, row:k } : { group:'', name:p[0], title:p.slice(1).join(' · '), text:v, row:k }; });
-  return [...new Set(rows.map(r => r.group))].map(g => ({ name:g, opts:rows.filter(r => r.group === g) }));
-}
-function gcOptions(x, u){
-  const t = x.text || '', sel = [...t.matchAll(GC_SEL)];
-  if(!sel.length) return null;
-  if(x.table && x.table.length){
-    const groups = gcTable(x.table);
-    if(sel.some(m => /\bbelow\b/i.test(m[2]) || groups.some(g => g.name && new RegExp('^\\s*' + g.name + '\\b', 'i').test(m[2])))) return groups;
-  }
-  for(const m of sel){
-    const sec = /^\s*(?:of the abilities in the )?(.+?) (?:section|ability)\b/i.exec(m[2]);
-    if(sec && u){
-      const N = sec[1].replace(/\*\*/g, '').trim();
-      const whos = u.abilities.filter(ab => ab.who && (ab.who === N || ab.who.startsWith(N + ':')));
-      if(whos.length) return [{ name:'', opts:whos.map(ab => ({ name:ab.name, text:ab.text, ab })) }];
-      const host = u.abilities.find(ab => ab.name === N), parts = host ? gcParts(host.text) : [];
-      if(parts.length > 1) return [{ name:'', opts:parts, host }];
-    }
-    if(/\b(?:of the following|listed below|from those listed below)\b/i.test(m[2])){ const b = gcBullets(t); if(b.length > 1) return [{ name:'', opts:b }]; }
-  }
-  return null;
-}
-// when the pick is made, in the rule's words: the start of the sentence that has the player select, or the first time the text names
-// (the sentence is found in the text without its ** marks, the text it is read from)
-const gcWhen = x => {
-  const t = String(x.text || '').replace(/\*\*/g, ''), at = ([...t.matchAll(GC_SEL)][0] || { index:0 }).index, s0 = t.lastIndexOf('.', at) + 1, sen = t.slice(s0).trim();
-  const own = /^(?:if your army faction is [^,]+, )?((?:at the (?:start|end) of|in) [^,]+),/i.exec(sen);
-  const any = /\b(at the (?:start|end) of (?:the |your |each |every )?[^,.]+|in your [a-z ]+? phase)/i.exec(t);
-  const w = own ? own[1] : any ? any[1] : x.at || '';
-  return w ? w.charAt(0).toUpperCase() + w.slice(1) : '';
-};
-// a unit as the Overview names it: the attached unit whole, its enhancement, which of several ("Norn Assimilator (1 of 2)")
-const gUnitName = u => unitLabel(u) + (u.enhancement && !u.enhOn ? ' · ' + u.enhancement : '') + unitNo(u).replace(/ ×\d+$/, '');
-function gameChoices(a){
-  return inArmy(a, () => {
-    const f = faction(), out = [];
-    const add = (x, key, src, link, u, i) => {
-      const lasts = gcLasts(x.text || ''), groups = lasts && gcOptions(x, u);
-      if(!groups) return;
-      const m = [...String(x.text || '').matchAll(GC_SEL)][0];
-      out.push({ key, name:x.name, src, link, lasts, groups, unit:u || null, copy:i || 0, when:gcWhen(x, m.index),
-        max:{ 'up to two':2, 'up to three':3 }[m[1].toLowerCase()] || 1, rolled:/\brandomly select\b/i.test(x.text),
-        state:(/\byour army becomes ([A-Z][a-z]+)\b/.exec(x.text) || [])[1] || '', once:/\bselect each of these [a-z ]+ once per battle\b/i.test(x.text), rule:x });
-    };
-    for(const r of f.armyRules) if(!inertRule(r.name)) add(r, 'r:' + r.name, f.name + ' army rule', ['rule', r.name]);
-    for(const d of detachments()) if(d.rule && army().units.some(u => matches(d.rule.needs, u))) add(d.rule, 'r:' + d.rule.name, d.name + ' detachment rule', ['rule', d.rule.name]);
-    for(const u of army().units) for(const ab of u.abilities){
-      if(naReason(ab)) continue;
-      const c = u.copies || 1;
-      for(let i = 0; i < c; i++) add(ab, copyKey(ab, u, i), gUnitName(u) + (c > 1 ? ' · Unit ' + (i + 1) : ''), ['ability', abilityKey(ab)], u, i);
-    }
-    // an option of another choice of the same unit (a Crimson King ability, Wrathful Presence: pick one) is not a choice itself
-    return out.filter(c => !c.unit || !out.some(o => o !== c && o.unit === c.unit && o.groups.some(gr => gr.opts.some(x => x.ab === c.rule))));
-  });
-}
-// the round a pick is kept under: 0 for the battle, else the battle round; one until this side's next Command phase, the round of
-// this side's last Command phase (in the first turn of a round, for the player who goes second, the round before); a pick kept
-// until changed is the last one made
-const gcRound = (c, g, side) => c.lasts === 'battle' ? '0' : c.lasts === 'command' ? String(Math.max(1, g.half >= ((side || 'mine') === g.first ? 0 : 1) ? g.round : g.round - 1)) : String(g.round);
-function gcPick(c, g, side){
-  const all = ((g.picks[side] || {})[c.key]) || {};
-  if(c.lasts === 'command'){ const R = gcRound(c, g, side); return { v:all[R] || {}, since:R === String(g.round) ? null : +R, all }; }
-  if(c.lasts !== 'kept') return { v:all[gcRound(c, g, side)] || {}, since:null, all };
-  for(let r = g.round; r >= 1; r--) if(isObj(all[r]) && Object.keys(all[r]).length) return { v:all[r], since:r === g.round ? null : r, all };
-  // none picked yet: the option the rule's words start the battle in ("At the start of the battle, … that unit enters Aegis Protocols")
-  const m = /\b[Aa]t the start of the battle, [^.]*?\benters (?:the )?([A-Z][\w’']*(?: [A-Z][\w’']*)*)/.exec(String(c.rule.text || '').replace(/\*\*/g, ''));
-  const gr = c.groups[0], o = m && gr.opts.find(x => m[1].toLowerCase().startsWith(x.name.toLowerCase()));
-  return o ? { v:{ [gr.name]:o.name }, since:'start', all } : { v:{}, since:null, all };
-}
-const gcNames = v => [].concat(v == null ? [] : v);
-
-// ---- what a list can do in a phase ----
-// A rule, ability or stratagem is in a phase of a turn when its phase tags say so (ph/phases, turn/turns, and an army
-// rule's reminders), read here from the data itself. It sits in the step its own words name: "At the start of your Command
-// phase" → Start of Command Phase, "At the end of …" → the end, anything else during the phase; a rule for every phase is
-// "Any phase". What is triggered outside the players' turns is shown in the battle round's first Command phase, for both
-// lists whatever their turn tags: "At the start of the battle round" (or an `at` of that) under Start of Battle Round, and in
-// the first battle round also "At the start of the first battle round" and "At the start of the battle" (Battle Protocols'
-// Aegis Protocol); in a later Command phase such a rule is shown only when its words also name the Command phase ("In your
-// Command phase, … select one protocol"). The end of a turn ("At the end of your opponent's turn") is shown at the end of
-// that turn's Fight phase. A rule with no phase tags is shown where its own first words put it ("At the end of your
-// opponent's turn", "At the start of your Shooting phase").
-const G_STEP = /^(?:\((?:once|twice) per [^)]*\) )?(?:(?:once per [a-z ]+|if your army faction is [^,]+), )?(?:at )?(?:the )?(start|end) of (?:(your opponent[’']s |your |the |each |every |any )?(command|movement|shooting|charge|fight) phase|(?:your opponent[’']s |your |the |each |a )?(first battle round|battle round|battle|turn|phase))\b/i;
-const gText = x => String(x.when || x.text || '').replace(/^\*\*[^*]+\*\* model only( \([^)]*\))?\. /i, '').replace(/\*\*/g, '').trim();
-// the step a rule's own words put it in, for a phase: start / during / end, or round, first, battle, roundEnd, turnStart, turnEnd
-function gStep(x, ph){
-  if(/^start of the battle round$/i.test(x.at || '')) return 'round';
-  if(/^end of (your opponent[’']s|your) turn$/i.test(x.at || '')) return 'turnEnd';
-  const m = G_STEP.exec(gText(x));
-  if(!m) return 'during';
-  const se = m[1].toLowerCase();
-  if(m[3]) return m[3].toLowerCase() === ph ? se : 'during';
-  const w = m[4].toLowerCase();
-  if(w === 'battle round' || w === 'first battle round') return se === 'start' ? (w === 'first battle round' ? 'first' : 'round') : 'roundEnd';
-  if(w === 'battle') return se === 'start' ? 'battle' : 'during';
-  if(w === 'turn') return se === 'start' ? 'turnStart' : 'turnEnd';
-  return se;   // "at the start of any phase"
-}
-// an untagged rule's phase and turn, from its first words ("At the end of your opponent's turn": the Fight phase, their turn)
-function gUntagged(x){
-  const m = G_STEP.exec(gText(x));
-  if(!m) return null;
-  const who = /opponent/i.test(m[2] || m[0]) ? 'opp' : /\byour\b/i.test(m[2] || m[0]) ? 'your' : 'either';
-  if(m[3]) return { ph:[m[3].toLowerCase()], turn:who };
-  if(/^turn$/i.test(m[4])) return { ph:[m[1].toLowerCase() === 'start' ? 'command' : 'fight'], turn:who };
-  return null;
-}
-// opts: { start: the battle round's first Command phase, round: the battle round }
-function gamePhase(a, ph, turn, opts){
-  opts = opts || {};
-  return inArmy(a, () => {
-    const f = faction(), out = [];
-    const tags = x => phasesOf(x).length ? x : gUntagged(x) || x;
-    const on = x => { const t = tags(x); return phasesOf(t).includes(ph) && (phTurn(t, ph) === 'either' || phTurn(t, ph) === turn); };
-    const every = x => phasesOf(x).length === PHASES.length && !(x.remind || []).some(on);
-    // where it goes in this phase (null: not here)
-    const place = (x, hit) => {
-      const s = gStep(x, ph);
-      if(s === 'round' || s === 'first' || s === 'battle'){
-        if(opts.start && (s === 'round' || opts.round === 1)) return s;
-        if(!hit) return null;
-        if(every(x)) return 'any';
-        return ph !== 'command' || /\bcommand phase\b/i.test(gText(x).replace(/^[^.]*\./, '')) ? 'during' : null;
-      }
-      return hit ? (every(x) ? 'any' : s) : null;
-    };
-    const rule = (r, src) => { const st = place(r, on(r) || (r.remind || []).some(on)); if(st) out.push({ kind:'rule', name:r.name, src, x:r, step:st }); };
-    for(const r of f.armyRules) if(!inertRule(r.name)) rule(r, f.name + ' army rule');
-    for(const d of detachments()) if(d.rule && army().units.some(u => matches(d.rule.needs, u))) rule(d.rule, d.name + ' detachment rule');
-    const abs = new Map();
-    for(const u of army().units) for(const ab of u.abilities){
-      if(naReason(ab) || ab.damaged) continue;
-      const st = place(ab, on(ab));
-      if(!st) continue;
-      const k = abilityKey(ab);
-      if(!abs.has(k)) abs.set(k, { kind:'ability', name:ab.name, ab, key:k, units:[], step:st });
-      abs.get(k).units.push(u);
-    }
-    for(const e of abs.values()) out.push(Object.assign(e, { src:labelList(e.units) }));
-    for(const s of allStratagems()){ const st = place({ when:s.when, phases:s.phases, turn:s.turn, turns:s.turns }, on(s)); if(st) out.push({ kind:'strat', name:s.name, s, src:s.src, usable:eligible(s).length > 0, step:st }); }
-    for(const e of out) e.any = e.step === 'any';
-    return out;
-  });
-}
-
-// ---- the screen ----
-const gq = (src, text) => '<div class="gq"><span class="gqs">' + src + '</span>' + rt(text) + '</div>';
-const gNote = t => '<p class="gnote">App note, not rules text: ' + t + '</p>';
-const gStepper = (k, side, v) => '<span class="gst"><button data-gstep="' + k + '|' + side + '|-1" aria-label="' + k.toUpperCase() + ' minus 1">−</button><b class="num">' + v +
-  '</b><button data-gstep="' + k + '|' + side + '|1" aria-label="' + k.toUpperCase() + ' plus 1">+</button></span>';
-// the sentence of a rule that gives CP ("…, you gain 1CP"), from its own text (not its FAQ or errata lines)
-const G_CP = /[^.\n]*\b(?:gain|gains)\b[^.\n]*(?:\dCP|\bCP\b|Command Points?)[^.\n]*\.?/i;
-function gameCpRules(L){
-  const out = inArmy(L, () => {
-    const out = [], f = faction(), line = t => String(t || '').split('\n').filter(l => !/^\*/.test(l.trim())).map(l => (G_CP.exec(l) || [])[0]).find(Boolean);
-    for(const r of f.armyRules){ const s = !inertRule(r.name) && line(r.text); if(s) out.push({ t:'rule', v:r.name, name:r.name, src:f.name + ' army rule', s:s.trim() }); }
-    for(const d of detachments()){ const s = d.rule && line(d.rule.text); if(s) out.push({ t:'rule', v:d.rule.name, name:d.rule.name, src:d.name, s:s.trim() }); }
-    const by = new Map();
-    for(const u of army().units) for(const ab of u.abilities){ const s = !naReason(ab) && line(ab.text); if(!s) continue;
-      const k = abilityKey(ab); if(!by.has(k)) by.set(k, { t:'ability', v:k, name:ab.name, s:s.trim(), units:[] }); by.get(k).units.push(u); }
-    for(const e of by.values()) out.push(Object.assign(e, { src:labelList(e.units) }));
-    return out;
-  });
-  return out.map(e => Object.assign(e, { link:linkTo(e.t, e.v, e.name) }));
-}
-const gStepName = ([num, title]) => esc(title) + ' <span class="gnum">' + num + '</span>';
-// the rows of a phase: links to the full texts, the uses per battle as the Overview's ticks
-function gRows(L, items, picked, pickOf){
-  const now = e => { const n = pickOf ? pickOf(e) : ''; return n ? '<span class="gpn">Picked: ' + esc(n) + '</span>' : ''; };
-  return items.map(e => {
-    if(e.kind === 'strat'){ const s = e.s, pb = perBattle(s);
-      return '<div class="gr gs' + (e.usable ? '' : ' none') + '"><span class="cp' + (s.cp >= 2 ? ' hot' : '') + '">' + esc(s.cp) + '<small>CP</small></span><span class="grb">' + linkTo('strat', s.id, s.name) +
-        (s.gist ? '<span class="sg">' + esc(s.gist) + '</span>' : '') + (e.usable ? '' : '<span class="from">' + esc(inArmy(L, () => usersLine(s))) + '</span>') + (pb ? ticks('s:' + s.id, pb.n, '', s.name) : '') + '</span></div>'; }
-    if(e.kind === 'rule'){ const r = e.x, pb = perBattle(r, true) && !/per battle\b(?! round)[^.)]*\bper unit\b/i.test(r.text || '');
-      // the Overview's boxes: "You can only select each of these abilities once per battle" (Kindred Sorcery) has one per ability
-      const each = pb && /\beach of these [a-z ]+ once per battle/i.test(r.text) && r.table;
-      const boxes = !pb ? '' : each ? r.table.map(o => ticks('r:' + r.name + ':' + o[0], 1, o[0], o[0])).join('') : ticks('r:' + r.name, pb.n, '', r.name);
-      return '<div class="gr"><span class="grb">' + linkTo('rule', e.name, e.name) + ' <span class="from">· ' + esc(e.src) + '</span>' + now(e) + (boxes ? '<span class="gtk">' + boxes + '</span>' : '') + '</span></div>'; }
-    const p = picked ? picked(e.ab, e.units) : null, pb = perBattle(e.ab) && !naReason(e.ab);
-    const who = e.ab.who && (p !== null || !e.src.includes(e.ab.who.replace(/: pick one$/, ''))) ? e.ab.who.replace(/: pick one$/, '') : '';
-    const boxes = !pb ? '' : perBattle(e.ab).army ? abilityTicks(e.ab, e.units[0]) : e.units.flatMap(u => Array.from({ length:u.copies || 1 }, (_, i) =>
-      ticks(copyKey(e.ab, u, i), perBattle(e.ab).n, e.units.length > 1 || (u.copies || 1) > 1 ? shortName(u) + ((u.copies || 1) > 1 ? ' ' + (i + 1) : '') : '', e.ab.name))).join('');
-    return '<div class="gr' + (p === false ? ' none' : '') + '"><span class="grb">' + linkTo('ability', e.key, e.ab.name) + ' <span class="from">· ' + esc(e.src) + '</span>' +
-      (who ? ' <span class="tg m">' + esc(who) + (p === true ? ': picked' : p === false ? ': not picked' : '') + '</span>' : '') + now(e) + (boxes ? '<span class="gtk">' + boxes + '</span>' : '') + '</span></div>';
-  }).join('');
-}
-// a phase's items, in its steps (the battle round's start in its first Command phase, its end in its last Fight phase)
-function gPhaseHtml(L, g, ph, turn, picked, opts, pickOf){
-  const firstTurn = g.half === 0, lastTurn = g.half === 1, start = ph === 'command' && firstTurn;
-  const items = gamePhase(L, ph, turn, { start, round:g.round }), S = D.game.steps, st = S[ph];
-  const groups = [];
-  if(start && g.round === 1) groups.push(['Start of the battle', items.filter(e => e.step === 'battle')]);
-  if(start) groups.push([gStepName(S.round[0]), items.filter(e => e.step === 'round' || e.step === 'first')]);
-  groups.push([gStepName(st[0]), items.filter(e => e.step === 'start' || (e.step === 'turnStart' && ph === 'command'))]);
-  if(ph === 'command' && opts.cp) groups.push([gStepName([D.game.cp[0].num, D.game.cp[0].title]), [], rt(D.game.cp[0].text)]);   // 08.02, after 08.01
-  const during = items.filter(e => e.step === 'during' || (e.step === 'turnStart' && ph !== 'command') || (e.step === 'turnEnd' && ph !== 'fight') || (e.step === 'roundEnd' && !(ph === 'fight' && lastTurn)));
-  // 08.03: a rule whose words name the Battle-shock step ("Battle-shock step of your Command phase"); 08.04's own words leave
-  // out the rules "triggered … by battle-shock rolls"
-  const mid = st.slice(1, -1), shock = ph === 'command' ? mid.find(([n]) => n === '08.03') : null;
-  const inShock = e => !!shock && /\bbattle-shock step\b/i.test(e.kind === 'strat' ? e.s.when : String((e.ab || e.x || {}).text || '').replace(/\*\*/g, ''));
-  if(shock) groups.push([gStepName(shock), during.filter(inShock)]);
-  groups.push([mid.filter(x => x !== shock).map(gStepName).join(' · ') || 'During the phase', during.filter(e => !inShock(e))]);
-  groups.push([gStepName(st[st.length - 1]), items.filter(e => e.step === 'end')]);
-  if(ph === 'fight') groups.push(['End of the turn', items.filter(e => e.step === 'turnEnd')]);
-  if(ph === 'fight' && lastTurn) groups.push([gStepName(S.round[1]), items.filter(e => e.step === 'roundEnd')]);
-  const sort = list => list.slice().sort((x, y) => (x.kind === 'strat') - (y.kind === 'strat') || (x.kind === 'strat' && y.kind === 'strat' ? (y.usable - x.usable) : 0));
-  let h = groups.filter(([, list, extra]) => list.length || extra).map(([title, list, extra]) => '<div class="gph"><p class="gpt">' + title + '</p>' + (extra || '') + gRows(L, sort(list), picked, pickOf) + '</div>').join('');
-  const any = items.filter(e => e.any);
-  if(any.length) h += '<details class="gx"' + (opts.fold && opts.fold.any ? ' open' : '') + ' data-gfold="any"><summary><span>Any phase</span><span class="c">' + any.length + '</span>' + chev + '</summary>' + gRows(L, sort(any), picked, pickOf) + '</details>';
-  return h || '<p class="note">Nothing of this list is tagged for this phase.</p>';
-}
-function screenGame(){
-  const a = army(), g = gameOf(a), me = 'mine', them = 'opp';
-  const fold = isObj(sess.gfold) ? sess.gfold : {};
-  const turnMe = gTurnSide(g) === me;
-  // each side: this list, and the opponent (their numbers only)
-  const side = s => '<span class="gsd"><b>' + (s === me ? esc(a.name) : 'Opponent') + '</b>' + (s === me ? '<span>your list</span>' : '') + '</span>';
-  // this game: both players' CP and VP, and the rules that give CP
-  let h = '<div class="sec-h"><h2>This game</h2><button class="textbtn" data-gnew>New game</button></div>' +
-    '<div class="gsc"><span></span>' + side(me) + side(them) +
-      '<span class="gk">CP</span>' + gStepper('cp', me, g.cp[me]) + gStepper('cp', them, g.cp[them]) +
-      '<span class="gk">VP</span>' + gStepper('vp', me, g.vp[me]) + gStepper('vp', them, g.vp[them]) + '</div>';
-  const cpLine = (L, label) => { const rs = gameCpRules(L); return rs.length ? '<div class="gq"><span class="gqs">' + label + '</span>' + rs.map(r => '<p>' + r.link + ' <span class="from">· ' + esc(r.src) + '</span>: “' + inline(r.s) + '”</p>').join('') + '</div>' : ''; };
-  h += '<details class="gx gcpr"' + (fold.cp !== false ? ' open' : '') + ' data-gfold="cp"><summary><span>Command points</span>' + chev + '</summary>' +
-    gq(esc(D.game.cp[0].num + ' ' + D.game.cp[0].title), D.game.cp[0].text) + gq('Event Companion · ' + esc(D.game.cp[1].title), D.game.cp[1].text) +
-    cpLine(a, 'This list') + '</details>';
-
-  // choices this game
-  const choices = gameChoices(a);
-  const pickedOf = (ab, units) => {   // an ability that is one option of a choice: picked this round or not (null: no pick yet)
-    for(const c of choices){ if(!units.includes(c.unit)) continue;
-      const hit = c.groups.some(gr => gr.opts.some(o => o.ab === ab || (gr.host && gr.host === ab)));
-      if(!hit) continue;
-      const v = gcPick(c, g, me).v, names = c.groups.flatMap(gr => gcNames(v[gr.name]));
-      if(!names.length) return null;
-      return c.groups.some(gr => gr.host === ab) ? true : names.includes(ab.name);
-    }
-    return null;
-  };
-  const pickOf = e => {   // a choice's row in the phase: what is picked now (a rule, or an ability on one unit)
-    const cs = choices.filter(c => e.kind === 'rule' ? c.key === 'r:' + e.name : e.kind === 'ability' && c.rule === e.ab);
-    if(cs.length !== 1) return '';
-    const v = gcPick(cs[0], g, me).v;
-    return cs[0].groups.map(gr => gcNames(v[gr.name]).map(n => (gr.name ? gr.name + ' ' : '') + n).join(', ')).filter(Boolean).join(' · ');
-  };
-  if(choices.length){
-    h += '<div class="sec-h"><h2>Choices this game</h2></div><div class="gcs">' + choices.map(c => gChoiceHtml(c, g, me)).join('') + '</div>';
-  }
-
-  // this phase: the battle round, whose turn and the phase, and what this list can do then
-  const ph = g.ph, turn = turnMe ? 'your' : 'opp';
-  h += '<div class="sec-h" id="gPhase"><h2>This phase</h2></div>' +
-    '<div class="gclk"><span class="gk">Battle round</span><span class="gst sm"><button data-gset="round|-1" aria-label="Previous battle round"' + (g.round <= 1 ? ' disabled' : '') + '>‹</button><b class="num">' + g.round +
-      '</b><button data-gset="round|1" aria-label="Next battle round"' + (g.round >= 5 ? ' disabled' : '') + '>›</button></span>' +
-      '<span class="seg" role="group" aria-label="Whose turn"><button class="chip' + (turnMe ? ' on' : '') + '" data-gset="turn|' + me + '" aria-pressed="' + turnMe + '">Your turn</button>' +
-      '<button class="chip' + (!turnMe ? ' on' : '') + '" data-gset="turn|' + them + '" aria-pressed="' + !turnMe + '">Their turn</button></span></div>' +
-    '<p class="gsub">' + (g.half ? 'The second turn of this battle round' : 'The first turn of this battle round') + '</p>' +
-    '<div class="gphs" role="group" aria-label="Phase">' + PHASES.map(([k, label, short]) => '<button class="chip' + (k === ph ? ' on' : '') + '" data-gset="ph|' + k + '" aria-pressed="' + (k === ph) + '"><span class="lf">' + label + '</span><span class="ls">' + short + '</span></button>').join('') + '</div>' +
-    '<div class="gphase">' + gPhaseHtml(a, g, ph, turn, pickedOf, { cp:true, fold }, pickOf) + '</div>';
-  const pi = PHASES.findIndex(([k]) => k === ph), last = pi === PHASES.length - 1, end = last && g.half === 1 && g.round >= 5;
-  const next = !last ? PHASE_NAME[PHASES[pi + 1][0]] + ' phase' : g.half === 0 ? (turnMe ? 'their' : 'your') + ' turn' : 'battle round ' + (g.round + 1);
-  h += end ? gq('Event Companion · 13 End the Battle', D.game.sequence[12][2]) : '<button class="btn2 gnext" data-gnext>Next: ' + esc(next) + ' ›</button>';
-
-  // before the battle: the Event Companion's mission sequence, with this list's numbers where a step needs them
-  h += '<details class="gx gpre"' + (fold.pre ? ' open' : '') + ' data-gfold="pre"><summary><span>Before the battle</span>' + chev + '</summary>' + gPregameHtml(a, g, me) + '</details>';
-  return '<div class="game">' + h + '</div>';
-}
-// one choice: its rule, when the pick is made and for how long, the options as chips, then the text of the pick, quoted
-function gChoiceHtml(c, g, side){
-  const P = gcPick(c, g, side), v = P.v, R = gcRound(c, g, side);
-  const pick = (grp, opt) => esc(JSON.stringify([c.key, R, grp, opt || '']));
-  const used = c.once && !c.unit ? new Set(c.groups.flatMap(gr => gr.opts.filter(o => usedSet().has('r:' + c.name + ':' + o.row + '#0')).map(o => o.name))) : new Set();
-  const lasts = c.lasts === 'battle' ? 'For the battle' : c.lasts === 'kept' ? 'Until another is picked' : c.lasts === 'command' ? 'Until the start of your next Command phase' : 'Battle round ' + g.round;
-  let h = '<div class="gc"><div class="gch">' + linkTo(c.link[0], c.link[1], c.name) + ' <span class="from">· ' + esc(c.src) + '</span></div>' +
-    '<p class="gcw">' + esc(c.when) + (c.when ? ' · ' : '') + '<b>' + esc(lasts) + '</b>' + (P.since === 'start' ? ' <span class="from">(from the start of the battle)</span>' : P.since ? ' <span class="from">(picked in battle round ' + P.since + ')</span>' : '') + '</p>' +
-    // a step the Event Companion's mission sequence (Before the battle) does not have, named as the rule names it
-    ((m => m && !D.game.sequence.some(([, t]) => norm(t) === norm(m[1])) ? gNote('the Event Companion’s mission sequence (Before the battle, below) has no step called ' + esc(m[1]) + '.') : '')(/\bthe ([A-Z][a-z]+(?: [A-Z][a-z]+)+) step\b/.exec(c.when)));
-  for(const gr of c.groups){
-    const on = gcNames(v[gr.name]);
-    h += '<div class="chips" role="group"' + (gr.name ? ' aria-label="' + esc(gr.name) + '"' : '') + '>' + (gr.name ? '<span class="gcg">' + esc(gr.name) + '</span>' : '') +
-      gr.opts.map(o => { const sel = on.includes(o.name), u = !sel && used.has(o.name);
-        return '<button class="chip' + (sel ? ' on' : '') + (u ? ' used' : '') + '" data-gpick="' + pick(gr.name, o.name) + '" aria-pressed="' + sel + '">' + esc(o.name) + (u ? '<span class="u">used</span>' : '') + '</button>'; }).join('') +
-      (c.rolled ? '<button class="chip rl' + (v['rolled:' + gr.name] ? ' on' : '') + '" data-gpick="' + pick('rolled:' + gr.name) + '" aria-pressed="' + !!v['rolled:' + gr.name] + '">Rolled</button>' : '') + '</div>';
-    for(const o of gr.opts.filter(o => on.includes(o.name))){
-      h += '<div class="gq gpk"><span class="gqs">' + esc((gr.name ? gr.name + ' ' : '') + o.name + (o.title ? ' · ' + o.title : '')) + '</span>' + rt(o.text) + '</div>';
-    }
-  }
-  if(c.state) h += '<div class="chips"><button class="chip' + (v['state'] ? ' on' : '') + '" data-gpick="' + pick('state') + '" aria-pressed="' + !!v['state'] + '">' + esc(c.state) + '</button></div>';
-  // the picks of the other battle rounds of this game
-  if(c.lasts !== 'battle'){
-    const past = Object.keys(P.all).filter(r => r !== R && +r >= 1).sort((x, y) => x - y).map(r => [r, c.groups.flatMap(gr => gcNames((P.all[r] || {})[gr.name]))]).filter(([, n]) => n.length);
-    if(past.length) h += '<p class="gcp">' + past.map(([r, n]) => 'Round ' + r + ': ' + esc(n.join(', '))).join(' · ') + '</p>';
-  }
-  return h + '</div>';
-}
-// a chip of a choice tapped: its option picked for the battle or this battle round (tapped again: unpicked); with "up to two" a
-// third pick replaces the first; Rolled and the state (Honoured) go on and off. The options a rule lets you pick
-// once per battle (Kindred Sorcery) are the Overview's ticks for them: picking one ticks it, unpicking it unticks it
-function gamePick(a, spec){
-  let k, R, grp, opt;
-  try { [k, R, grp, opt] = JSON.parse(spec); } catch(e){ return; }
-  const g = gameOf(a), side = 'mine', c = gameChoices(a).find(x => x.key === k);
-  if(!c) return;
-  const P = g.picks[side] = isObj(g.picks[side]) ? g.picks[side] : {}, all = P[k] = isObj(P[k]) ? P[k] : {}, v = all[R] = isObj(all[R]) ? all[R] : {};
-  if(/^rolled:|^state$/.test(grp)){ const x = opt || true; if(v[grp] === x) delete v[grp]; else v[grp] = x; }
-  else {
-    const was = gcNames(v[grp]), next = was.includes(opt) ? was.filter(x => x !== opt) : c.max > 1 ? was.concat(opt).slice(-c.max) : [opt];
-    if(next.length) v[grp] = c.max > 1 ? next : next[0]; else delete v[grp];
-    const gr = c.groups.find(x => x.name === grp);
-    if(c.once && gr){ const used = usedSet();
-      for(const o of gr.opts){ const tk = 'r:' + c.name + ':' + o.row + '#0', other = Object.entries(all).some(([r, x]) => r !== R && gcNames((x || {})[grp]).includes(o.name));
-        if(next.includes(o.name)) used.add(tk); else if(was.includes(o.name) && !other) used.delete(tk); }
-      store.set(usedKey(), [...used]); }
-  }
-  if(!Object.keys(v).length) delete all[R];
-  gameSave(a, g);
-}
-// a list's units with a core rule that every model of the unit has (Deep Strike 24.09, Scouts 24.31, Infiltrators: "if every
-// model in a unit has this ability"), as the Overview counts them
-const gEvery = (L, test) => inArmy(L, () => L.units.filter(u => unitRules(u).some(test) && !Object.keys(u.partialRules || {}).some(test)));   // (partialRules: label → the model that has it)
-function gPregameHtml(a, g, me){
-  const lists = [[a, 'This list']];
-  const unitsLine = (L, us, extra) => us.map(u => linkTo('unit', u.id, gUnitName(u)) + (u.copies > 1 ? ' <span class="from">×' + u.copies + '</span>' : '') + (extra ? ' <span class="from">' + esc(extra(u)) + '</span>' : '')).join(', ');
-  const per = (fn) => lists.map(([L, label]) => { const t = fn(L); return t ? '<p class="gpl"><span class="il">' + label + '</span>' + t + '</p>' : ''; }).join('');
-  const add = {
-    7:() => { const line = D.rules['Strategic Reserves'].split('\n').find(l => /50% of your points limit/.test(l));
-      return gq(esc('20.01 Placing Units in Strategic Reserves'), line) + per(L => { const ds = gEvery(L, r => inArmy(L, () => ruleKey(r)) === 'Deep Strike');
-        const pts = ds.reduce((t, u) => t + (u.pts || 0) * (u.copies || 1), 0);
-        return gNote(esc(L.name) + ': points limit ' + L.points + ' pts (' + esc(L.battleSize) + '); 50% of it is ' + Math.floor(L.points / 2) + ' pts.') +
-          (ds.length ? '<span class="gpu">Deep Strike: ' + unitsLine(L, ds, u => u.pts + ' pts' + (u.copies > 1 ? ' each, ×' + u.copies : '')) + (ds.length > 1 ? ' <span class="from">(' + pts + ' pts)</span>' : '') + '</span>' : ''); }); },
-    8:() => per(L => { const tt = L.units.filter(u => hasKw(u, 'Titanic')), inf = gEvery(L, r => /^infiltrators/i.test(r));
-      return [tt.length ? '<span class="gpu">TITANIC: ' + unitsLine(L, tt) + '</span>' : '', inf.length ? '<span class="gpu">' + linkTo('rule', 'Infiltrators', 'Infiltrators') + ': ' + unitsLine(L, inf) + '</span>' : ''].join(''); }),
-    10:() => '<div class="chips" role="group" aria-label="Who takes the first turn"><span class="gcg">First turn</span>' + [me, gOther(me)].map(s => { const on = g.first === s;
-      return '<button class="chip' + (on ? ' on' : '') + '" data-gset="first|' + s + '" aria-pressed="' + on + '">' + (s === me ? esc(a.name) : 'Opponent') + '</button>'; }).join('') + '</div>',
-    11:() => per(L => { const sc = gEvery(L, r => /^scouts/i.test(r));
-      return sc.length ? '<span class="gpu">' + linkTo('rule', 'Scouts', 'Scouts') + ': ' + unitsLine(L, sc, u => inArmy(L, () => unitRules(u).filter(r => /^scouts/i.test(r)).join(', '))) + '</span>' : ''; })
-  };
-  const titanic = lists.some(([L]) => L.units.some(u => hasKw(u, 'Titanic'))), infil = lists.some(([L]) => gEvery(L, r => /^infiltrators/i.test(r)).length);
-  const scouts = lists.some(([L]) => gEvery(L, r => /^scouts/i.test(r)).length);
-  const sub = { 7:'Strategic reserves', 8:[titanic ? 'TITANIC' : '', infil ? 'Infiltrators' : ''].filter(Boolean).join(', '), 10:'Who goes first', 11:scouts ? 'Scouts' : '' };
-  return '<p class="note">Warhammer Event Mission Sequence · GW Warhammer Event Companion 1.3</p><div class="abl">' + D.game.sequence.map(([n, title, text]) => {
-    const more = add[n] ? add[n]() : '';
-    const body = n === 8 && titanic ? rt(text.split('\n').map(l => /\bTITANIC\b/.test(l) ? '- ' + l : l).join('\n')) : rt(text);
-    return '<details class="ab rr gseq"><summary><span class="an"><b><span class="gn">' + n + '</span> ' + esc(title) + '</b>' + (sub[n] ? '<span class="rs">' + esc(sub[n]) + '</span>' : '') + '</span>' + chev + '</summary><div class="body">' + body + more + '</div></details>';
-  }).join('') + '</div>';
-}
-
 /* ---------- screen: rules & keywords ---------- */
 const xp = (name, sub, tags, body, open) => '<details class="xp"' + (open ? ' open' : '') + '><summary><span class="xh"><b>' + esc(name) + '</b>' + (sub ? '<span>' + esc(sub) + '</span>' : '') + '</span>' +
   (tags || '') + chev + '</summary><div class="body">' + body + '</div></details>';
@@ -5064,7 +4586,6 @@ function render(){
   else if(s === 'pregame') v.innerHTML = screenPregame();
   else if(s === 'settings') v.innerHTML = screenSettings();
   else if(s === 'damage') v.innerHTML = screenDamage();
-  else if(s === 'game') v.innerHTML = screenGame();
   if(cur.army) bot = tabBar();
   setBar('subbar', sub);
   setBar('bbar', bot);
@@ -5350,23 +4871,6 @@ document.addEventListener('click', e => {
   }
   if(el.hasAttribute('data-newgame')){ const was = [...usedSet()], key = usedKey(); store.set(key, []); rerender();
     toastUndo('New game: uses per battle cleared', () => { store.set(key, was); rerender(); }); return; }
-  // the Game tracker
-  if(el.hasAttribute('data-gnew')){ const undo = newGame(army()); rerender();
-    toastUndo('New game: round, CP, VP, choices and uses per battle cleared', () => { undo(); rerender(); }); return; }
-  if(ds.gstep){ const [k, side, d] = ds.gstep.split('|'), a = army(), g = gameOf(a);
-    g[k][side] = Math.max(0, Math.min(k === 'cp' ? 99 : 999, g[k][side] + +d)); gameSave(a, g);
-    const b = el.parentElement.querySelector('b'); if(b) b.textContent = g[k][side]; return; }
-  if(ds.gset){ const [k, v] = ds.gset.split('|'), a = army(), g = gameOf(a);
-    if(k === 'round') g.round = Math.max(1, Math.min(5, g.round + +v));
-    if(k === 'turn' && gTurnSide(g) !== v) g.half = 1 - g.half;
-    if(k === 'ph') g.ph = v;
-    if(k === 'first') g.first = v;
-    gameSave(a, g); rerender(); return; }
-  if(el.hasAttribute('data-gnext')){ const a = army(), g = gameOf(a), i = PHASES.findIndex(([k]) => k === g.ph);
-    if(i < PHASES.length - 1) g.ph = PHASES[i + 1][0];
-    else { g.ph = PHASES[0][0]; if(g.half === 0) g.half = 1; else if(g.round < 5){ g.half = 0; g.round++; } }
-    gameSave(a, g); render(); const t = $('#gPhase'); if(t) scrollTo(0, Math.max(0, t.getBoundingClientRect().top + scrollY - $('#top').getBoundingClientRect().bottom - 8)); return; }
-  if(ds.gpick != null){ gamePick(army(), ds.gpick); rerender(); return; }
   if(el.hasAttribute('data-undo')){ const f = undoFn; undoFn = null; $('#toast').classList.remove('show', 'act'); if(f){ const m = f(); if(m !== null) toast(typeof m === 'string' ? m : 'Ticks restored'); } return; }
   if(el.hasAttribute('data-awake')){ awake.on = !awake.on; store.set('wh-awake', awake.on); if(awake.on) keepAwake(); else if(awake.lock){ awake.lock.release(); awake.lock = null; } rerender(); return; }
   if(el.hasAttribute('data-expand')){
@@ -5383,7 +4887,6 @@ document.addEventListener('toggle', e => {
   if(d.hasAttribute('data-dmfold')){ dmState().fold[d.dataset.dmfold] = d.open; saveSession();   // the Damage tab's folds stay as left
     if(d.open) for(const w of d.querySelectorAll('.dwv[data-wh]')) w.scrollTop = +w.dataset.i * WH_ROW;   // (a wheel drawn folded takes its row once shown)
     return; }
-  if(d.hasAttribute('data-gfold')){ sess.gfold = Object.assign(isObj(sess.gfold) ? sess.gfold : {}, { [d.dataset.gfold]:d.open }); saveSession(); return; }   // and the Game tracker's
   if(d.dataset.stratId){
     if(d.open) openStrats.add(d.dataset.stratId); else openStrats.delete(d.dataset.stratId);
     saveSession();
