@@ -27,8 +27,10 @@ done
 # Wahapedia datasheet pages of the units in the lists (verify/choice.js reads their pick-one markers)
 mkdir -p .cache/waha/ds
 while read -r fac unit; do
+  # the faction's Wahapedia page name (sources/factions.json: emperors-children is "emperor-s-children"), else the faction itself
+  page=$(echo "$FACTIONS" | awk -v f="$fac" '$1 == f { print $2 }'); page=${page:-$fac}
   # a page that cannot be fetched (a misspelt name: Wahapedia's addresses are case-sensitive) is reported, not fatal
-  [ -f ".cache/waha/ds/${fac}_${unit}.html" ] || curl -sSf -A "Mozilla/5.0" "https://wahapedia.ru/wh40k11ed/factions/$fac/$unit" -o ".cache/waha/ds/${fac}_${unit}.html" || echo "could not fetch the Wahapedia datasheet $fac/$unit: check its name in sources/waha-datasheets.txt" >&2
+  [ -f ".cache/waha/ds/${fac}_${unit}.html" ] || curl -sSf -A "Mozilla/5.0" "https://wahapedia.ru/wh40k11ed/factions/$page/$unit" -o ".cache/waha/ds/${fac}_${unit}.html" || echo "could not fetch the Wahapedia datasheet $page/$unit: check its name in sources/waha-datasheets.txt" >&2
 done < sources/waha-datasheets.txt
 # Wahapedia text extraction the rules-text check reads
 for p in $(echo "$FACTIONS" | awk '{ print $1 }') core; do
