@@ -583,12 +583,6 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .dmmode button.on > small{color:var(--accent-ink); opacity:.85}
 .dmmode button:active{background:var(--surface2)}
 .dmmode button.on:active{background:var(--accent)}
-.dmswap{justify-self:end; display:inline-flex; align-items:center; gap:5px; min-height:38px; padding:0 2px 0 8px; font:700 13px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--accent)}
-.dmswap .ic{width:17px; height:17px}
-.dmts{margin:4px 0 0 50px; font-size:12.5px; line-height:1.35; color:var(--muted)}
-.dmtsw{display:flex; align-items:center; justify-content:space-between; gap:4px 10px; flex-wrap:wrap}
-.dmtsw > span{flex:1 1 150px; min-width:0}
-.dmtsw > .dmswap{margin-left:auto}
 .dmans{position:relative; margin:12px -6px 0; padding:9px 12px 10px; border-radius:10px; background:var(--surface); box-shadow:0 1px 0 var(--line), 0 8px 18px rgba(0,0,0,.28)}
 /* pinned while the list scrolls: a compact copy of the card over the top of the list (the card itself stays in its place, so nothing
    below it moves and no gap opens when it shrinks) */
@@ -597,16 +591,10 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .dmpin > .dmans{margin:0}
 .dmans.static{position:static}
 .dmctx{display:none; margin:0 0 2px; font:600 12px/1.2 var(--f-head); letter-spacing:.04em; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
-.dmans.stuck .dmctx, .dmans.bk .dmctx{display:block}
-.dmans.bk .dmctx{color:var(--accent); white-space:normal; font-size:14px; font-weight:700}
+.dmans.stuck .dmctx{display:block}
 .dmans.stuck .dmbig > b{font-size:32px}
 .dmans.stuck{padding-top:6px; padding-bottom:6px}
-.dmans.stuck .dmchips, .dmans.stuck .dmcardf, .dmans.stuck .dmhz, .dmans.stuck .dmchar small{display:none}
-.dmans.stuck .dmchar{margin-top:2px; font-size:12px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
-.dmchar .sh, .dmans.stuck .dmchar .lg{display:none}
-.dmans.stuck .dmchar .sh{display:inline}
-.dmans.stuck .dmchar b{font-size:13px}
-.dmans.stuck.bk .dmctx{white-space:nowrap; font-size:12.5px}
+.dmans.stuck .dmchips, .dmans.stuck .dmcardf{display:none}
 .dmans.stuck .dmbig > span{font-size:15px}
 /* the number and what it is of on one line; the words under them take the card's whole width, so a wider number never re-wraps them */
 .dmbig{display:grid; grid-template-columns:auto minmax(0,1fr); align-items:baseline; column-gap:10px; width:100%; text-align:left}
@@ -616,13 +604,8 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 @keyframes dmflash{0%{color:var(--fg); transform:scale(1.06)} 100%{color:var(--accent); transform:none}}
 .dmbig > span{min-width:0; font:700 17px/1.15 var(--f-head); letter-spacing:.02em}
 .dmbig > span small{grid-column:1 / -1; display:block; margin-top:4px; font:400 12.5px/1.3 var(--f-body); letter-spacing:0; color:var(--muted)}
-.dmchar{margin-top:5px; font-size:13px; line-height:1.35; color:var(--fg2)}
-.dmchar b{color:var(--accent); font:700 14px var(--f-head)}
-.dmchar small, .dmhz{display:block; margin-top:2px; font-size:12px; line-height:1.35; color:var(--muted)}
-.dmhz{margin-top:4px; color:var(--fg2)}
 .dmparts{margin-top:4px; font:600 13px/1.35 var(--f-head); letter-spacing:.02em; color:var(--fg2); font-variant-numeric:tabular-nums}
-.dmpts{margin-top:3px; font-size:12px; line-height:1.35; color:var(--muted)}
-.dmans.stuck .dmpts, .dmans.stuck .dmparts{display:none}
+.dmans.stuck .dmparts{display:none}
 .dmmsg{font-size:14.5px; line-height:1.45; color:var(--fg2)}
 .dmchips{display:flex; flex-wrap:wrap; align-items:center; gap:5px; margin-top:8px}
 .dmchip{display:inline-flex; align-items:center; gap:4px; max-width:100%; min-height:28px; padding:3px 9px; border-radius:999px; background:var(--accent); color:var(--accent-ink);
@@ -652,9 +635,6 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .dmlv.flash{animation:dmflash2 1.2s ease-out}
 @keyframes dmflash2{0%{background:var(--surface2)} 100%{background:none}}
 .dmchip.ovr{background:none; color:var(--accent); border:1.5px dashed var(--accent); padding:1.5px 7.5px}
-.dmswap.off{color:var(--muted)}
-.dmacts{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
-.dmacts .btn, .dmacts .btn2{flex:1 1 140px}
 .dmhd{display:flex; align-items:baseline; justify-content:space-between; gap:8px; margin:20px 0 2px; font:700 15.5px/1.1 var(--f-head); letter-spacing:.1em; text-transform:uppercase; color:var(--fg)}
 .dmhd small{font:600 11px/1 var(--f-head); letter-spacing:.08em; color:var(--muted)}
 .dmh3{display:flex; align-items:baseline; gap:8px; margin:16px 0 0; padding-bottom:5px; border-bottom:1px solid var(--line); font:700 12.5px/1.2 var(--f-head); letter-spacing:.1em; text-transform:uppercase; color:var(--fg2)}
@@ -683,7 +663,7 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .dmlv .why .ovr{color:var(--accent); font-weight:600}
 .dmlv.out.on .ck{background:none; box-shadow:none; border:1.5px dashed var(--accent)}
 .dmlv.out.on .ck::after{border-color:var(--accent)}
-.dmlv .lb small > .warn, .dmlv .lb small > .dmkw, .dmlv .lb small > .dmsub{display:block}
+.dmlv .lb small > .warn, .dmlv .lb small > .dmkw{display:block}
 .dmwst{display:flex; flex-wrap:wrap; gap:0 14px; margin-top:2px}
 .dmwst > span{display:grid; justify-items:start}
 .dmwst i{font:600 10.5px/1.15 var(--f-head); font-style:normal; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
@@ -722,7 +702,6 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .dmpp small{font-size:11px; line-height:1.2; color:var(--muted)}
 .dmpp em small.pa{color:var(--fg2)}
 .dmouts{padding:6px 2px 2px}
-.dmgl{margin:4px 0 2px; font:600 11px/1.2 var(--f-head); letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
 .dmout{margin:4px 0 0; padding:0; font-size:12px; line-height:1.4; color:var(--muted)}
 .dmout b{font:600 12.5px/1.2 var(--f-head); letter-spacing:.02em; color:var(--fg2)}
 .dmoutl{display:grid; grid-template-columns:minmax(0, 1fr); gap:6px; margin:4px 0 0}
@@ -752,9 +731,8 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .dmstep{display:flex; align-items:center; gap:6px}
 .dmstep > span{flex:1; font:600 15px/1.2 var(--f-head); letter-spacing:.02em}
 .dmstep > b{min-width:38px; text-align:center; font:700 16px var(--f-head)}
-.dmstep button, .dmpf button{min-height:34px; min-width:36px; padding:0 10px; border-radius:6px; box-shadow:inset 0 0 0 1px var(--line); font:700 13px/1 var(--f-head); letter-spacing:.04em; color:var(--fg2)}
-.dmstep button.rr.on, .dmpf button.on{background:var(--accent); color:var(--accent-ink); box-shadow:none}
-.dmpf{display:flex; flex-wrap:wrap; gap:6px; padding:8px 0}
+.dmstep button{min-height:34px; min-width:36px; padding:0 10px; border-radius:6px; box-shadow:inset 0 0 0 1px var(--line); font:700 13px/1 var(--f-head); letter-spacing:.04em; color:var(--fg2)}
+.dmstep button.rr.on{background:var(--accent); color:var(--accent-ink); box-shadow:none}
 /* the target, set by hand: a row of wheels (scroll-snap columns, the value in the middle row), then its two boxes */
 .dmtg{margin-top:12px}
 .dmtgh{margin:0 0 6px}
@@ -811,27 +789,14 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .dmhow{margin-top:14px; border-top:1px solid var(--line)}
 .dmhow .dmh{margin:0 0 7px; font-size:13.5px}
 .dmhow .dmh b{color:var(--fg2)}
-.dmopp{display:flex; align-items:center; gap:10px; margin:0 0 4px; font-size:13.5px; color:var(--fg2)}
-.dmopp span{flex:1; min-width:0}
-.dmq{margin:4px 0 10px}
-.dmgrp .grp-h{margin-top:12px; padding-bottom:4px}
-details.dmgrp > summary{display:flex; align-items:baseline; gap:6px; min-height:40px; align-items:center; cursor:pointer}
-details.dmgrp > summary::-webkit-details-marker{display:none}
-details.dmgrp:not([open]) > summary::after{content:'›'; margin-left:auto; font-size:18px; color:var(--muted)}
-.dmnomatch{margin:6px 0}
-.dmquick{margin-top:2px; max-height:none}
-.dmans.static .dmgl{margin-top:14px}
 @media (max-width:359px){
   .dml1{grid-template-columns:38px minmax(0,1fr)}
-  .dmts{margin-left:44px}
   .dmtok b{font-size:19px}
   .dmmode button > span{font-size:15.5px; letter-spacing:.05em}
   .dmmode button > small{font-size:10px}
-  .dmswap span{font-size:12px}
   .dmbig > b{font-size:40px}
   .dmlv{gap:0 8px}
   .dmrw{--fxw:84px}
-  .dmtyg{grid-template-columns:repeat(2, minmax(0,1fr))}
   .dmwst{gap:0 11px}
 }
 /* rules questions */
@@ -1829,42 +1794,9 @@ function dmReach(u, it, m, sc){
   }
   return n;
 }
-// the target's models for calc.js: each stats row, how many models have it, its T, W, Sv and InSv, and whether it is
-// a CHARACTER (alone in its allocation group, last) or a bodyguard model (its T counts first: 19.02)
 // the models of a unit that are not on the battlefield yet (an ability's embarked mark: Sir Hekhtur while Canis Rex lives) and why, quoted
 const dmEmbarked = u => { const ab = (u.abilities || []).find(a => a.embarked); return ab ? { names:new Set([ab.embarked.model]), until:ab.embarked.until, ab,
   quote:'“' + ab.text.split('. ')[0].replace(/\.$/, '') + '” (' + ab.name + ')' } : null; };
-function dmModels(u, kind){
-  const chars = new Set(charsOf(u).map(c => c.name)), emb = dmEmbarked(u);
-  const lone = !u.leads && hasKw(u, 'Character');
-  // an InSv marked * applies only to some attacks: against ranged attacks, when its ability says so (insvStar; dmCalc
-  // applies it through that ability's line); Feel No Pain comes from the "when targeted" lines too
-  const starRanged = u.abilities.some(ab => /\b(?:insv|invulnerable save) against ranged attacks\b/i.test(ab.text.replace(/\*\*/g, '')));
-  const rows = u.stats.filter(s => !emb || !emb.names.has(s.name.replace(/ ×\d+$/, ''))).map(s => { const m = / ×(\d+)$/.exec(s.name), nm = s.name.replace(/ ×\d+$/, ''), v = parseInt(s.InSv, 10) || 7, star = /\*/.test(s.InSv);
-    return { name:nm, count:m ? +m[1] : 0, fixed:!!m, W:parseInt(s.W, 10) || 1, T:parseInt(s.T, 10) || 1, Sv:parseInt(s.Sv, 10) || 7, InSv:star ? 7 : v, star, insvStar:star && starRanged && kind === 'ranged' ? v : 7,
-      fnp:7, char:lone || chars.has(nm), bodyguard:!!u.leads && !chars.has(nm), part:chars.has(nm) ? nm : u.leads || u.name }; });
-  // a models line counts for the row its name starts with ("Jakhal Pack Leader" → Jakhal), else for the bodyguard's row;
-  // a row that prints its count ("Tankbusta ×5") already has its models
-  // (the same name first, then the longest row name the line starts with: "Neurogaunt" is not "Neurogaunt Nodebeast")
-  const stem = x => x.toLowerCase().replace(/ w\/.*$/, '').replace(/s$/, '');
-  const longest = list => list.sort((a, b) => b.name.length - a.name.length)[0];
-  u.models.forEach((line, li) => {
-    if(emb && emb.names.has(line.replace(/^\d+× /, '').replace(/ \(.*\)$/, ''))) return;
-    const n = parseInt(line, 10) || 1, name = stem(line.replace(/^\d+× /, '').replace(/ \(.*\)$/, ''));
-    const hit = rows.find(r => stem(r.name) === name) || longest(rows.filter(r => name.startsWith(stem(r.name)))) || longest(rows.filter(r => stem(r.name).startsWith(name)))
-      || rows.filter(r => !r.fixed && !r.char).slice(-1)[0];
-    if(hit && !hit.fixed) hit.count += n;
-    if(hit) (hit.lines = hit.lines || []).push({ id:li, n });
-  });
-  // the models lines of each row, in the order the defender removes them: within an allocation group the rules leave the model to
-  // the defender (05.03 Allocation Order, 05.04 Select Model); the calculator's choice for the defender keeps the champions and the
-  // special weapons to the last: the rank and file first (a line named as its row), then a champion (another name), then the
-  // models with other weapons ("w/ …"), the bigger line first; a row whose lines do not add up to its models has none (what is
-  // left of it then attacks as a whole: see dmCalc)
-  const keep = (r, l) => { const t = u.models[l.id].replace(/^\d+× /, '').replace(/ \(.*\)$/, ''); return / w\//.test(t) ? 2 : stem(t) === stem(r.name) ? 0 : 1; };
-  for(const r of rows){ if(r.lines && r.lines.reduce((t, l) => t + l.n, 0) === r.count) r.lines.sort((a, b) => keep(r, a) - keep(r, b) || b.n - a.n || a.id - b.id); else delete r.lines; }
-  return rows.filter(r => r.count > 0);
-}
 const dmUnits = (a, kind) => a.units.filter(u => ((kind === 'ranged' ? u.ranged : u.melee) || []).length);
 // the two sides: your unit (this list) and the target set by hand
 function dmSides(st){
@@ -2517,7 +2449,6 @@ function dmNoWhy(M, M2, lv){
   // a fact whose rules only change range (Dakka! Dakka! Dakka!: +3" range when riled up)
   if(lv.fact && M2){ const now = M2.rules.filter(r => r.on && r.e && !M.rules.some(q => q.k === r.k && q.on));
     if(now.length && now.every(r => Object.keys(r.e).every(k => k === 'range'))) return M.ctx.halfWithin ? 'no weapon it reaches gets its bonus in this band' : andList(now.map(r => r.m.from)) + ' changes range only, which counts through half range: pick a band'; }
-  if(lv.x && lv.x.k === 'c:cover' && M.ticked.length && M.ticked.every(c => c.w.kw.some(k => /^ignores cover/i.test(k)))) return 'the weapons have [IGNORES COVER]';
   if(!M2 || dmKey(M.input) === dmKey(M2.input)) return lv.fact ? 'nothing it reaches counts in this step' : 'not for the weapons ticked';
   const a = M.R.groups, b = M2.R.groups;
   if(a.length !== b.length) return '';
@@ -2911,6 +2842,7 @@ function dmBest(C){
 
 /* ---- the screen ---- */
 function screenDamage(){
+  dmScreenN++;
   const st = dmState(); dmModeOld(st);
   const plan = dmPlan(st), P = plan.P;
   dmGen++;
@@ -2976,7 +2908,7 @@ const dmWhTxt = (k, v) => ['Sv', 'InSv', 'fnp'].includes(k) ? (v ? v + '+' : '�
 // the row of a value (a value the wheel lacks, kept from the earlier screen: the nearest)
 const whAt = (vals, v) => { const i = vals.indexOf(v); if(i >= 0) return i; let b = 0; vals.forEach((x, j) => { if(Math.abs(x - v) < Math.abs(vals[b] - v)) b = j; }); return b; };
 const whHtml = (id, label, aria, texts, i) => '<div class="dw"><span class="dwl" aria-hidden="true">' + esc(label) + '</span><div class="dwb"><div class="dwv" role="spinbutton" tabindex="0" data-wh="' + esc(id) + '" data-i="' + i + '" aria-label="' + esc(aria) + '" aria-valuemin="0" aria-valuemax="' + (texts.length - 1) + '" aria-valuenow="' + i + '" aria-valuetext="' + esc(texts[i]) + '">' +
-  '<i class="dwp"></i>' + texts.map((t, j) => '<span class="dwi' + (j === i ? ' cur' : '') + '">' + esc(t) + '</span>').join('') + '<i class="dwp"></i></div></div></div>';
+  '<i class="dwp"></i>' + texts.map((t, j) => '<span class="dwi' + (j === i ? ' cur' : '') + '" aria-hidden="true">' + esc(t) + '</span>').join('') + '<i class="dwp"></i></div></div></div>';
 // the target, set by hand: six wheels, the benefit of cover and -1 Damage
 function dmTargetHtml(st){
   const t = dmTypedVals(st);
@@ -3490,10 +3422,12 @@ function dmPicker(){
 // the answer card says what it is about once it is pinned under the top bar (the sentence has scrolled away)
 // a tap never moves the row under the finger: the row tapped is kept where it was on the screen through the redraw, and through
 // everything that comes in after it (the effects, the answer's 10,000 games, the list put in order), until the player scrolls
-let dmAnchor = null;
-function dmAnchorSet(el, id){ dmAnchor = el && el.closest('#dmList') ? { id, top:el.getBoundingClientRect().top, at:performance.now() } : null; }
+// (the drawing a tap's row is kept through is the one right after the tap: another screen opened since drops it)
+let dmAnchor = null, dmScreenN = 0;
+function dmAnchorSet(el, id){ dmAnchor = el && el.closest('#dmList') ? { id, top:el.getBoundingClientRect().top, at:performance.now(), n:dmScreenN + 1 } : null; }
 function dmAnchorKeep(){
   dmStick();
+  if(dmAnchor && dmAnchor.n !== dmScreenN) dmAnchor = null;
   if(!dmAnchor || cur.s !== 'damage') return;
   if(performance.now() - dmAnchor.at > 15000){ dmAnchor = null; return; }
   const e = document.querySelector('#dmList [data-dmlv="' + CSS.escape(dmAnchor.id) + '"]');

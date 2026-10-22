@@ -88,16 +88,16 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     await page.evaluate(id => { sess.mine = id; sess.peekD = null; }, a.id);
     if(a === armies[0]){ await take('settings', `() => { hideSheet(); go({ s:'settings' }); }`); await take('home', `() => { hideSheet(); go({ s:'home' }); }`); }
     for(const s of ['army','pregame','units','ranged','melee','abilities','rules','bases']) await screen(s);
-    // the damage calculator, against the next list: this list's first unit with ranged weapons shooting its first unit (Shoot), its
-    // first unit with melee weapons fighting it, charged (Fight), and its first unit with both shooting, charging and fighting it (Both);
-    // each taken once every effect is worked out (the list's order and every number settled: the background work is seeded, so the text
-    // is the same every run)
-    const vs = armies[(armies.indexOf(a) + 1) % armies.length].id;
+    // the damage calculator, at a target set by hand (a fresh one: 5 × T4 Sv 3+ W2): this list's first unit with ranged weapons
+    // shooting (Shoot), its first unit with melee weapons fighting, charged (Fight), and its first unit with both shooting, charging
+    // and fighting (Both); each taken once every effect is worked out (the list's order and every number settled: the background work
+    // is seeded, so the text is the same every run)
+    const vs = armies[(armies.indexOf(a) + 1) % armies.length].id;   // (the Game tracker's opponent)
     for(const ph of ['shooting', 'fight', 'both']){
-      await page.evaluate(([id, vs, ph]) => { hideSheet(); store.set('wh-opp-' + id, vs); sess.dmg = {};
-        const A = armyById(id), B = armyById(vs), kind = ph === 'fight' ? 'melee' : 'ranged', u = (ph === 'both' && A.units.find(x => (x.ranged || []).length && (x.melee || []).length)) || A.units.find(x => (x[kind] || []).length) || A.units[0];
-        sess.dmg[id] = { dir:'me', atk:u.id, tArmy:vs, tgt:B.units[0].id, turn:{ me:dmModeTurn(ph === 'shooting' ? 'shoot' : ph, ph === 'fight' ? { fc:true } : {}) } };
-        go({ s:'damage', army:id }); }, [a.id, vs, ph]);
+      await page.evaluate(([id, ph]) => { hideSheet(); sess.dmg = {};
+        const A = armyById(id), kind = ph === 'fight' ? 'melee' : 'ranged', u = (ph === 'both' && A.units.find(x => (x.ranged || []).length && (x.melee || []).length)) || A.units.find(x => (x[kind] || []).length) || A.units[0];
+        sess.dmg[id] = { atk:u.id, turn:{ me:dmModeTurn(ph === 'shooting' ? 'shoot' : ph, ph === 'fight' ? { fc:true } : {}) } };
+        go({ s:'damage', army:id }); }, [a.id, ph]);
       await page.waitForFunction(() => !dmBusy() && !document.querySelector('#dmList .fxv.wait, #dmList .fxv.est, #dmAns.prov, #dmList .upd'), null, { timeout:120000, polling:50 });
       await take('damage ' + ph, `() => {}`);
     }
@@ -179,22 +179,16 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
             out.push(['all-attacks-block', u.id, m.from + ': ' + m.note]);
         }
       }
-      // the damage calculator, for every unit of this list as the attacker (every rule ticked) and as the target:
-      // - the target has as many models as the unit (dmModels), less a model not on the battlefield yet (embarked: Sir Hekhtur)
-      // - an InSv marked * (against ranged attacks) is not used against melee attacks
+      // the damage calculator, for every unit of this list as the attacker (every rule ticked), at a target set by hand:
       // - a value New Recruit already includes (a weapon's `from`) is never added again by the same rule
       // - a rule for one weapon or one model of an attached unit reaches only that weapon or model
-      const foe = A.units[0];
       for(const u of A.units){
         for(const kind of ['ranged', 'melee']){
-          const rows = dmModels(u, kind), emb = dmEmbarked(u), away = emb ? u.models.filter(l => emb.names.has(l.replace(/^\d+× /, '').replace(/ \(.*\)$/, ''))).reduce((t, l) => t + (parseInt(l, 10) || 1), 0) : 0;
-          if(rows.reduce((t, r) => t + r.count, 0) !== modelCount(u) - away) out.push(['damage-models', u.id, kind + ': ' + rows.reduce((t, r) => t + r.count, 0) + ' models, the unit has ' + modelCount(u)]);
-          if(kind === 'melee' && rows.some(r => r.star && r.InSv < 7)) out.push(['damage-insv', u.id, 'an InSv marked * (ranged attacks) is used against melee attacks']);
           if(!(u[kind] || []).length) continue;
-          const st = { dir:'me', ph:kind === 'ranged' ? 'shooting' : 'fight', off:{}, pick:{}, on:{}, man:{}, val:{}, dist:null };
-          for(const r of dmCalc(st, A, A, u, foe, kind).rules) st.on[r.k] = true;
+          const st = { dir:'me', ph:kind === 'ranged' ? 'shooting' : 'fight', off:{}, pick:{}, on:{}, man:{}, val:{} };
+          for(const r of dmCalc(st, A, u, {}, kind).rules) st.on[r.k] = true;
           for(const it of weaponItems(u[kind])) st.off[kind + ':' + itemName(it) + '|' + (it.who || '')] = false;
-          const c = dmCalc(st, A, A, u, foe, kind);
+          const c = dmCalc(st, A, u, {}, kind);
           c.input.groups.forEach((g, i) => {
             const w = c.gOf[i].w, it = c.gOf[i].it;
             if(g.from !== w.from) out.push(['damage-bonus-twice', u.id, g.name + ': the weapon’s pre-applied values are not passed to the calculator']);
@@ -259,41 +253,40 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     if(main) fs.writeFileSync(path.join(ROOT, 'verify/out/snapshots', a.id + '.txt'), snap.join('\n\n') + '\n');
     counts[a.id] = { screens:snap.length, links:links.size };
   }
-  // ---- the Damage tab under a finger (each width): the first list's first unit with ranged weapons shooting the next list's
-  // first unit (Shoot; Both where it says so) ----
+  // ---- the Damage tab under a finger (each width): the first list's first unit with ranged weapons at a target set by hand (Shoot;
+  // Both where it says so) ----
   {
     const A = armies[0].id;
-    let B = armies[1].id;
     const settled = async () => { await page.waitForFunction(() => !dmBusy() && !document.querySelector('#dmList .fxv.wait, #dmList .fxv.est, #dmAns.prov, #dmList .upd'), null, { timeout:120000, polling:50 }); await page.waitForTimeout(300); };
-    // (at: [list, unit], another list's unit attacking: that list open as yours; a tap within 350ms of opening a screen is not taken)
-    const open = async (mode, at) => { await page.evaluate(([A, B, mode, at]) => { hideSheet(); const M = at ? at[0] : A, T = at && M === B ? A : B; store.set('wh-opp-' + M, T); sess.mine = M; sess.dmg = {};
+    // (at: [list, unit], that list's unit; a tap within 350ms of opening a screen is not taken)
+    const open = async (mode, at, more) => { await page.evaluate(([A, mode, at, more]) => { hideSheet(); const M = at ? at[0] : A; sess.dmg = {};
       const L = armyById(M), u = at ? L.units.find(x => x.id === at[1]) : L.units.find(x => (x.ranged || []).length) || L.units[0];
-      sess.dmg[M] = { dir:'me', atk:u.id, tArmy:T, tgt:armyById(T).units[0].id, turn:{ me:dmModeTurn(mode || 'shoot') } };
-      go({ s:'damage', army:M }); scrollTo(0, 0); }, [A, B, mode, at || null]);
+      sess.dmg[M] = Object.assign({ atk:u.id, turn:{ me:dmModeTurn(mode || 'shoot') } }, more || {});
+      go({ s:'damage', army:M }); scrollTo(0, 0); }, [A, mode || '', at || null, more || null]);
       await settled(); await page.waitForTimeout(200); };
-    const where = () => page.evaluate(() => JSON.stringify([cur.s, cur.army, sess.dmg[cur.army] && sess.dmg[cur.army].atk, sess.dmg[cur.army] && sess.dmg[cur.army].tgt, sess.dmg[cur.army] && sess.dmg[cur.army].dir]));
-    // a popup of the other list's rule, opened from the Damage tab, closed (its Close, then Escape): the same list and matchup
-    // (against the first list after it whose unit has a rule of its own in the list)
-    const foreign = () => page.evaluate(A => !![...document.querySelectorAll('#dmList [data-dmrule]')].find(x => x.dataset.dmrule.split('|')[1] !== A), A);
-    for(const L of armies.slice(1)){ B = L.id; await open(); if(await foreign()) break; }
-    const home = await where();
-    for(const how of ['close', 'escape']){
-      const ok = await page.evaluate(A => { const l = [...document.querySelectorAll('#dmList [data-dmrule]')].find(x => x.dataset.dmrule.split('|')[1] !== A); if(!l) return false; l.scrollIntoView({ block:'center' }); return true; }, A);
-      if(!ok){ fail('damage-popup-stays', A, 'no rule of the other list in the list', ''); break; }
-      await page.waitForTimeout(200);
-      await page.evaluate(A => [...document.querySelectorAll('#dmList [data-dmrule]')].find(x => x.dataset.dmrule.split('|')[1] !== A).click(), A);
-      await page.waitForTimeout(400);
-      if(how === 'close') await page.evaluate(() => { const c = document.querySelector('#sheetIn [data-close], #sheet [data-close]'); if(c) c.click(); else closeSheet(); });
-      else await page.keyboard.press('Escape');
-      await page.waitForTimeout(500);
-      const now = await where();
-      if(now !== home) fail('damage-popup-stays', A, 'closed with ' + how, 'the app moved from ' + home + ' to ' + now);
-    }
+    const where = () => page.evaluate(() => JSON.stringify([cur.s, cur.army, sess.dmg[cur.army] && sess.dmg[cur.army].atk]));
+    // a rule's popup opened from the list, closed (its Close, then Escape): the same screen and unit
+    const linked = await page.evaluate(A => (armyById(A).units.find(u => { hideSheet(); sess.dmg = { [A]:{ atk:u.id } }; go({ s:'damage', army:A }); return !!document.querySelector('#dmList .dmrl'); }) || {}).id, A);
+    if(!linked) fail('damage-popup-stays', A, 'no rule of the list in the list', '');
+    else { await open('', [A, linked]);
+      const home = await where();
+      for(const how of ['close', 'escape']){
+        await page.evaluate(() => document.querySelector('#dmList .dmrl').scrollIntoView({ block:'center' })); await page.waitForTimeout(200);
+        await page.evaluate(() => document.querySelector('#dmList .dmrl').click()); await page.waitForTimeout(400);
+        const shown = await page.evaluate(() => !$('#sheetHost').hidden);
+        if(how === 'close') await page.evaluate(() => { const c = document.querySelector('#sheetIn [data-close], #sheet [data-close]'); if(c) c.click(); else closeSheet(); });
+        else await page.keyboard.press('Escape');
+        await page.waitForTimeout(500);
+        const now = await where();
+        if(!shown || now !== home) fail('damage-popup-stays', A, 'closed with ' + how, (shown ? '' : 'no popup; ') + 'the app moved from ' + home + ' to ' + now);
+      } }
     // a tap never moves the row under the finger: the same spot tapped twice, quickly, toggles the same row back
-    B = armies[1].id; await open();
+    await open();
     const rows = await page.evaluate(() => [...document.querySelectorAll('#dmList .dmlv[data-dmlv]')].filter(e => e.getClientRects().length && !e.classList.contains('rad')).map(e => e.dataset.dmlv));
     for(const id of rows.slice(0, 6)){
-      const pt = await page.evaluate(id => { const e = [...document.querySelectorAll('#dmList .dmlv[data-dmlv]')].find(x => x.dataset.dmlv === id); scrollTo(0, e.getBoundingClientRect().top + scrollY - 420); const r = e.getBoundingClientRect(); return [r.left + 30, r.top + 12, e.getAttribute('aria-pressed')]; }, id);
+      await settled();
+      // (scrolled to it as a finger would: a scroll lets go of the row tapped before, dmAnchor)
+      const pt = await page.evaluate(id => { dmAnchor = null; const e = [...document.querySelectorAll('#dmList .dmlv[data-dmlv]')].find(x => x.dataset.dmlv === id); scrollTo(0, e.getBoundingClientRect().top + scrollY - 420); const r = e.getBoundingClientRect(), k = e.querySelector('.ck').getBoundingClientRect(); return [k.left + k.width / 2, k.top + k.height / 2, e.getAttribute('aria-pressed')]; }, id);   // (its box: the rule's name opens its rule)
       await page.waitForTimeout(300);
       const under = () => page.evaluate(([x, y]) => { const e = document.elementFromPoint(x, y), r = e && e.closest('[data-dmlv]'); return r ? [r.dataset.dmlv, r.getAttribute('aria-pressed')] : null; }, pt);
       await page.mouse.click(pt[0], pt[1]); await page.waitForTimeout(120);
@@ -320,7 +313,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
         const st = getComputedStyle(q()), off = getComputedStyle(document.querySelector('[data-dmmode]:not([aria-pressed="true"])'));
         if(st.backgroundColor === off.backgroundColor) bad.push('the segment on looks like the others');
         const want = { shoot:/^Shoot ·/, fight:/^Fight ·/, both:/^Shoot → (Charge → )?Fight ·/ }[m], ctx = (document.querySelector('#dmAns .dmctx') || {}).textContent || '';
-        if(!want.test(ctx) && !(document.querySelector('#dmAns.static .dmmsg'))) bad.push('the card says “' + ctx.slice(0, 40) + '”');
+        if(!want.test(ctx) && !(document.querySelector('.dmans.static .dmmsg'))) bad.push('the card says “' + ctx.slice(0, 40) + '”');
         return { bad }; }, m);
       if(r.bad.length) fail('damage-mode', A, m, r.bad.join('; '));
       await settled();
@@ -329,13 +322,12 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     // other in the same games), the card says each part, and the shooting's and the fight's choices are in their own sections
     await open('both');
     const both = await page.evaluate(() => { const C = DM_CTX; if(!C || !C.plan.both) return { skip:true };
-      const st = JSON.parse(JSON.stringify(C.st)), one = m => { const s = JSON.parse(JSON.stringify(st)); s.turn[s.dir] = dmModeTurn(m, m === 'fight' ? { fc:true } : {}); return dmPlan(s).beats[0]; };
-      const bs = [one('shoot'), one('fight')], r = WH_CALC.play({ beats:bs.map(b => ({ side:1, ph:b.ph, fight:b.ph === 'fight', input:Object.assign({}, b.M.input, { sims:undefined, seed:undefined }) })), sims:DM_X, seed:7 });
+      const r = WH_CALC.play({ beats:C.plan.beats.map(b => ({ side:1, ph:b.ph, fight:b.ph === 'fight', input:Object.assign({}, b.M.input, { sims:undefined, seed:undefined }) })), sims:DM_X, seed:7 });
       const one1 = C.A.one, want = WH_CALC.fmt(one1 ? r.beats.reduce((t, x) => t + x.dmg, 0) : r.sides[1].killed), got = document.querySelector('#dmAns .dmbig b').textContent;
       const parts = (document.querySelector('#dmAns .dmparts') || {}).textContent || '';
       const secs = [...document.querySelectorAll('#dmList .dmpart')].map(p => p.dataset.dmstep + ':' + [...p.querySelectorAll('.dmh3')].map(h => h.firstChild.textContent.trim()).filter(t => /weapons/.test(t)).join());
-      return { want, got, parts, secs }; });
-    if(!both.skip && (Math.abs(+both.want - +both.got) > 0.1 || !/^Shoot [\d.]+ · Fight [\d.]+ · /.test(both.parts) || both.secs.join('|') !== 'shoot:Ranged weapons|fight:Melee weapons'))
+      return { want, got, parts, secs, charged:C.plan.beats[1].M.ctx.charged }; });
+    if(!both.skip && (Math.abs(+both.want - +both.got) > 0.1 || !/^Shoot [\d.]+ · Fight [\d.]+ · /.test(both.parts) || both.secs.join('|') !== 'shoot:Ranged weapons|fight:Melee weapons' || !both.charged))
       fail('damage-both', A, 'Both', JSON.stringify(both));
     // a mode the unit has no weapons for: its segment says so and stays tappable; tapped, the card says so (Both: the part it has)
     const gun = await page.evaluate(() => { for(const L of WH_DATA.armies) for(const u of L.units) if(!(u.ranged || []).length && (u.melee || []).length) return [L.id, u.id]; return null; });
@@ -343,7 +335,6 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       const g = await page.evaluate(() => { const s = document.querySelector('[data-dmmode="shoot"]'), b = document.querySelector('[data-dmmode="both"]');
         return { s:s ? s.textContent : '', b:b ? b.textContent : '', dis:!!(s && s.disabled), msg:(document.querySelector('.dmans .dmmsg') || {}).textContent || '' }; });
       await page.click('[data-dmmode="both"]'); await settled();
-      await page.evaluate(A => { sess.mine = A; }, A);
       const gb = await page.evaluate(() => ({ note:(document.querySelector('#dmAns .dmparts') || {}).textContent || '', on:(document.querySelector('[data-dmmode][aria-pressed="true"]') || {}).dataset }));
       if(!/no ranged weapons/.test(g.s) || !/fight only/.test(g.b) || g.dis || !/no ranged weapons/.test(g.msg) || !/no ranged weapons, so this is the fight alone/.test(gb.note) || gb.on.dmmode !== 'both') fail('damage-mode', A, 'a unit with no ranged weapons', JSON.stringify([g, gb])); }
     // nothing moves while the effects fill in: a row tapped, then every frame for 3 s, the row stays where it was (within 2px) and the
@@ -359,8 +350,8 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
           return { y0, moved:s.filter(x => x[1] == null || Math.abs(x[1] - y0) > 2).length, grew:s.filter(x => x[2] !== s[0][2]).length, frames:s.length, heights:[...new Set(s.map(x => x[2]))], tops:[...new Set(s.map(x => x[1]))] }; }, id);
         if(r && (r.moved || r.grew)) fail('damage-steady', A, mode + ' · ' + id, r.moved + ' of ' + r.frames + ' frames the row moved (' + r.y0 + ' → ' + r.tops.join(', ') + '), ' + r.grew + ' the page height changed (' + r.heights.join(' → ') + ')');
         await settled(); } }
-    // no divider touches or crosses a text line, a pick or a box, on the matchups with picks under their rows (Try Dat Button!, a
-    // weapon's profiles, the Blessings, the Doctrina Imperatives), every fold open, with the card in its place and pinned
+    // no divider touches or crosses a text line, a pick or a box, on the units with picks under their rows (Try Dat Button!, a weapon's
+    // profiles and its boxes, the Blessings, the Doctrina Imperatives), every fold open, with the card in its place and pinned
     // (in the page: every border-top/bottom line of the screen against every text line and every box; a line drawn by a box itself, or
     // inside it, is the box's own; one under the pinned card is not seen, unless it shows through)
     const dmLines = () => {
@@ -369,7 +360,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       const under = (r, e) => pr && !pin.contains(e) && r.bottom > pr.top && r.top < pr.bottom;   // under the pinned card: not seen
       const shown = e => { for(let x = e; x && x !== document.body; x = x.parentElement){ const cs = getComputedStyle(x); if(cs.visibility === 'hidden' || cs.display === 'none' || +cs.opacity === 0) return false; } return true; };
       const lines = [], boxes = [];
-      const BOX = '.dmpp, .dmop, .dmchip, .dmbh, .btn, .btn2, .sd, .best, .dmmode button, .dmans, .dmmx:not([hidden]), .dmst, .dmtyin, .textbtn, .dmswap';
+      const BOX = '.dmpp, .dmop, .dmchip, .dmbh, .btn, .btn2, .sd, .best, .dmmode button, .dmans, .dmmx:not([hidden]), .dwb, .dmtt, .textbtn';
       for(const e of root.querySelectorAll('*')){
         if(!e.getClientRects().length) continue;
         const cs = getComputedStyle(e), r = e.getBoundingClientRect();
@@ -382,6 +373,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       }
       const tw = document.createTreeWalker(root, NodeFilter.SHOW_TEXT); let n;
       while((n = tw.nextNode())){ if(!n.textContent.trim()) continue; const pe = n.parentElement; if(!pe || !pe.getClientRects().length || !shown(pe)) continue;
+        if(pe.closest('.dwv')) continue;   // (a wheel's rows scroll inside it: the wheel is the box)
         const rg = document.createRange(); rg.selectNodeContents(n);
         for(const r of rg.getClientRects()) if(r.width > 0.5 && !under(r, pe)) boxes.push({ e:pe, r, t:n.textContent.trim().slice(0, 28) }); }
       const nm = e => (e.className && typeof e.className === 'string' ? '.' + e.className.trim().split(/\s+/)[0] : e.tagName.toLowerCase()) + (e.dataset.dmlv ? '[' + e.dataset.dmlv.slice(0, 24) + ']' : '');
@@ -394,66 +386,77 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       return bad;
     };
     for(const [L0, st0, label] of [
-      ['shooty', { atk:'dakkarig-boosta', tArmy:'princes', tgt:'lord-on-juggernaut-khorne-berzerkers' }, 'Try Dat Button!'],
-      ['shooty', { atk:'mek-flashgitz', tArmy:'super-terminators', tgt:'chaos-terminators' }, 'profiles'],
-      ['princes', { atk:'kh-rn-the-betrayer-khorne-berzerkers', tArmy:'shooty', tgt:'mek-flashgitz', turn:{ me:{ mode:'fight', fight:true, charge:true, fc:true } } }, 'Blessings'],
-      ['purge-goes-the-foe', { atk:'skitarii-rangers', tArmy:'typed', typed:{ n:10, T:4, W:1, Sv:4, InSv:0, fnp:0 } }, 'Doctrina'],
-      ['shooty', { atk:'mek-flashgitz', tArmy:'princes', tgt:'lord-on-juggernaut-khorne-berzerkers', turn:{ me:{ mode:'both', shoot:true, fight:true, charge:true } } }, 'Both']]){
-      if(!armies.some(x => x.id === L0) || !await page.evaluate(([L0, u]) => !!armyById(L0).units.find(x => x.id === u), [L0, st0.atk])){ fail('damage-lines', L0, label, 'the matchup is not in the data'); continue; }
-      await page.evaluate(([L0, st0]) => { hideSheet(); sess.mine = L0; sess.dmg = { [L0]:Object.assign({ dir:'me', turn:{ me:dmModeTurn('shoot') }, fold:{ nc:true, outs:true, more:true } }, st0) }; go({ s:'damage', army:L0 }); scrollTo(0, 0); }, [L0, st0]);
+      ['shooty', { atk:'dakkarig-boosta' }, 'Try Dat Button!'],
+      ['shooty', { atk:'mek-flashgitz' }, 'profiles, models left'],
+      ['princes', { atk:'kh-rn-the-betrayer-khorne-berzerkers', turn:{ me:{ mode:'fight', fight:true, charge:true, fc:true } } }, 'Blessings'],
+      ['purge-goes-the-foe', { atk:'skitarii-rangers', typed:{ n:10, T:4, W:1, Sv:4, InSv:0, fnp:0 } }, 'Doctrina'],
+      ['shooty', { atk:'mek-flashgitz', turn:{ me:{ mode:'both', shoot:true, fight:true, charge:true } } }, 'Both']]){
+      if(!armies.some(x => x.id === L0) || !await page.evaluate(([L0, u]) => !!armyById(L0).units.find(x => x.id === u), [L0, st0.atk])){ fail('damage-lines', L0, label, 'the unit is not in the data'); continue; }
+      await page.evaluate(([L0, st0]) => { hideSheet(); sess.dmg = { [L0]:Object.assign({ turn:{ me:dmModeTurn('shoot') }, fold:{ nc:true, outs:true, more:true, left:true } }, st0) }; go({ s:'damage', army:L0 }); scrollTo(0, 0); }, [L0, st0]);
       await settled();
       const top = await page.evaluate(dmLines);
       await page.evaluate(async () => { scrollTo(0, 900); await new Promise(f => requestAnimationFrame(() => requestAnimationFrame(f))); dmStick(); await new Promise(f => requestAnimationFrame(f)); });
       const bad = top.concat((await page.evaluate(dmLines)).map(x => 'pinned: ' + x)); await page.evaluate(() => scrollTo(0, 0));
       if(bad.length) fail('damage-lines', L0, label, bad.slice(0, 6).join(' | '));
     }
-    await page.evaluate(A => { sess.mine = A; }, A);
-    // another target: the facts said about the pair (the closest target, a half-range band) reset, the toast names them, Undo puts them back
+    // your unit changed: the facts about the attack (the closest target, a half-range band) reset, the toast names them, Undo puts them back
     await open();
-    const rs = await page.evaluate(async B => { const st = dmState(), d = st.dir, P = dmPair(st), u = armyById(B).units.find(x => x.id !== st.tgt); if(!u) return null;
-      st.facts[d] = { theirs:{ closest:true } }; dmCh(st, 'shoot').val.half = 9; saveSession();
-      const before = dmBefore(st, true), r = dmSetUnit(st, 'theirs', B, u.id); saveSession(); rerender(); dmChange(r.words, before, r.dropped);
-      await new Promise(f => setTimeout(f, 300)); const said = $('#toast').innerText, gone = !(dmState().facts[d].theirs || {}).closest;
+    const rs = await page.evaluate(async A => { const st = dmState(), u = armyById(A).units.find(x => x.id !== st.atk && (x.ranged || []).length); if(!u) return null;
+      st.facts.me = { theirs:{ closest:true } }; dmCh(st, 'shoot').val.half = 9; saveSession();
+      const before = dmBefore(st, true), r = dmSetUnit(st, u.id); saveSession(); rerender(); dmChange(r.words, before, r.dropped);
+      await new Promise(f => setTimeout(f, 300)); const said = $('#toast').innerText, gone = !(dmState().facts.me.theirs || {}).closest;
       document.querySelector('#toast [data-undo]').click(); await new Promise(f => setTimeout(f, 400));
-      const s2 = dmState(); return { said, gone, back:!!(s2.facts[d].theirs || {}).closest && dmCh(s2, 'shoot').val.half === 9 && s2.tgt === before.tgt }; }, B);
-    if(!rs || !/reset: .*closest target/.test(rs.said) || !rs.gone || !rs.back) fail('damage-reset', A, 'another target', JSON.stringify(rs));
+      const s2 = dmState(); return { said, gone, back:!!(s2.facts.me.theirs || {}).closest && dmCh(s2, 'shoot').val.half === 9 && s2.atk === before.atk }; }, A);
+    if(!rs || !/reset: .*closest target/.test(rs.said) || !rs.gone || !rs.back) fail('damage-reset', A, 'another unit', JSON.stringify(rs));
     // its toast: over the tab bar, on one line, covering no number of the card; a tap on its words reaches the tab bar below it
-    const toast = await page.evaluate(async B => { const st = dmState(), u = armyById(B).units.find(x => x.id !== st.tgt); if(!u) return null;
-      const before = dmBefore(st, true), r = dmSetUnit(st, 'theirs', B, u.id); saveSession(); rerender(); dmChange(r.words, before, r.dropped); await new Promise(f => setTimeout(f, 300));
+    const toast = await page.evaluate(async A => { const st = dmState(), u = armyById(A).units.find(x => x.id !== st.atk && (x.ranged || []).length); if(!u) return null;
+      const before = dmBefore(st, true), r = dmSetUnit(st, u.id); saveSession(); rerender(); dmChange(r.words, before, r.dropped); await new Promise(f => setTimeout(f, 300));
       const tr = $('#toast').getBoundingClientRect(), a = $('#dmAns'), ar = a ? a.getBoundingClientRect() : null, over = [];
       if(ar && ar.bottom > tr.top + 1 && ar.top < tr.bottom - 1 && ar.right > tr.left && ar.left < tr.right) over.push('the card');
       if(tr.height > 48) over.push('two lines');
       const tm = $('#toast .tm').getBoundingClientRect(), below = document.elementFromPoint(tm.left + 4, tm.top + tm.height / 2);
       if(!below || !below.closest('#bbar')) over.push('the tab bar\'s taps');
-      document.querySelector('#toast [data-undo]').click(); await new Promise(f => setTimeout(f, 300)); return over; }, B);
+      document.querySelector('#toast [data-undo]').click(); await new Promise(f => setTimeout(f, 300)); return over; }, A);
     if(toast && toast.length) fail('damage-toast', A, 'a unit picked', 'the toast covers ' + toast.join(', '));
-    // a typed number typed slowly (keys 0.4 s apart) keeps every digit; an entry it cannot count is said under the field, and leaving
-    // the field puts the counted value back
-    await page.evaluate(A => { hideSheet(); sess.dmg = {}; const L = armyById(A), u = L.units.find(x => (x.ranged || []).length) || L.units[0];
-      sess.dmg[A] = { dir:'me', atk:u.id, tArmy:'typed', typed:{ n:5, T:4, W:2, Sv:3 } }; go({ s:'damage', army:A }); scrollTo(0, 0); }, A);
-    await page.waitForTimeout(800);
-    await page.click('[data-dmtyped="n"]'); await page.waitForTimeout(150);
-    await page.keyboard.press('1'); await page.waitForTimeout(400); await page.keyboard.press('2'); await page.waitForTimeout(700);
-    const ty = await page.evaluate(() => ({ n:dmTypedVals(dmState()).n, field:document.querySelector('[data-dmtyped="n"]').value, focus:(document.activeElement || {}).dataset ? document.activeElement.dataset.dmtyped : '' }));
-    if(ty.n !== 12 || ty.field !== '12' || ty.focus !== 'n') fail('damage-typed-slow', A, '"1", 0.4 s, "2"', JSON.stringify(ty));
-    await page.keyboard.press('Tab'); await page.waitForTimeout(400);
-    await page.click('[data-dmtyped="Sv"]'); await page.waitForTimeout(150); await page.keyboard.press('9'); await page.waitForTimeout(500);
-    const hint = await page.evaluate(() => ({ shown:!$('#dmTyHint').hidden, sv:dmTypedVals(dmState()).Sv }));
-    await page.keyboard.press('Tab'); await page.waitForTimeout(500);
-    const back = await page.evaluate(() => ({ field:document.querySelector('[data-dmtyped="Sv"]').value, hint:$('#dmTyHint').hidden }));
-    if(!hint.shown || hint.sv !== 3 || back.field !== '3+' || !back.hint) fail('damage-typed-hint', A, 'Save "9"', JSON.stringify([hint, back]));
-    // too big an entry is put back as the hint says, not clamped (Models "101" leaves 12)
-    await page.click('[data-dmtyped="n"]'); await page.waitForTimeout(150); await page.keyboard.press('Control+A');
-    await page.keyboard.type('101', { delay:120 }); await page.waitForTimeout(500); await page.keyboard.press('Tab'); await page.waitForTimeout(500);
-    const big = await page.evaluate(() => ({ n:dmTypedVals(dmState()).n, field:document.querySelector('[data-dmtyped="n"]').value }));
-    if(big.n !== 12 || big.field !== '12') fail('damage-typed-big', A, 'Models "101", then leaving the field', JSON.stringify(big));
+    // the target's wheels: six spinbuttons a thumb wide, the value in the middle row (role, aria-valuenow and its words); the arrow keys
+    // and the mouse wheel change the value once the column stops, and the answer with it; the screen is redrawn around the wheels (the
+    // same nodes) and the page stays where it was
+    await open();
+    const wh = await page.evaluate(() => [...document.querySelectorAll('#dmTgt .dwv[role="spinbutton"]')].map(e => { const r = e.getBoundingClientRect(); e._seen = 1; return [e.dataset.wh, Math.round(r.width), Math.round(r.height), e.getAttribute('aria-valuetext'), e.getAttribute('aria-label'), Math.round(e.scrollTop)]; }));
+    const wantTxt = ['5', '4', '3+', '2', '–', '–'];
+    if(wh.length !== 6 || wh.some((x, i) => x[1] < 40 || x[2] < 100 || x[3] !== wantTxt[i] || !x[4])) fail('damage-wheels', A, 'the target', JSON.stringify(wh));
+    const y0 = await page.evaluate(() => { scrollTo(0, 40); return scrollY; });
+    await page.focus('[data-wh="tg:n"]'); await page.keyboard.press('ArrowUp'); await page.waitForTimeout(1400);
+    const kb = await page.evaluate(() => ({ n:dmTypedVals(dmState()).n, kept:document.querySelector('[data-wh="tg:n"]')._seen === 1, now:document.querySelector('[data-wh="tg:n"]').getAttribute('aria-valuenow'), ctx:$('#dmAns .dmctx').textContent, y:scrollY }));
+    if(kb.n !== 6 || !kb.kept || kb.now !== '5' || !/→ 6 × T4/.test(kb.ctx) || Math.abs(kb.y - y0) > 1) fail('damage-wheels', A, 'Models: the arrow key up', JSON.stringify(kb));
+    const box = await page.evaluate(() => { const r = document.querySelector('[data-wh="tg:T"]').getBoundingClientRect(); return [r.left + r.width / 2, r.top + r.height / 2]; });
+    await page.mouse.move(box[0], box[1]); await page.mouse.wheel(0, 80); await page.waitForTimeout(1600);
+    const mw = await page.evaluate(() => ({ T:dmTypedVals(dmState()).T, txt:document.querySelector('[data-wh="tg:T"]').getAttribute('aria-valuetext'), kept:document.querySelector('[data-wh="tg:n"]')._seen === 1 }));
+    if(!(mw.T > 4) || mw.txt !== String(mw.T) || !mw.kept) fail('damage-wheels', A, 'T: the mouse wheel', JSON.stringify(mw));
+    // its two boxes: the benefit of cover and -1 Damage, pressed, counted (the card says so), the wheels kept
+    await page.click('[data-dmtt="cover"]'); await page.waitForTimeout(600);
+    const tt = await page.evaluate(() => ({ cover:dmTypedVals(dmState()).cover, pressed:document.querySelector('[data-dmtt="cover"]').getAttribute('aria-pressed'), ctx:$('#dmAns .dmctx').textContent, kept:document.querySelector('[data-wh="tg:n"]')._seen === 1 }));
+    if(!tt.cover || tt.pressed !== 'true' || !/cover/.test(tt.ctx) || !tt.kept) fail('damage-wheels', A, 'Benefit of cover', JSON.stringify(tt));
+    // the modifiers, folded under one row that says what is set: +1 to hit set, said there and as a chip
+    await page.evaluate(() => { const d = document.querySelector('#dmList .dmmanf'); d.open = true; d.scrollIntoView({ block:'center' }); }); await page.waitForTimeout(300);
+    await page.click('[data-dmman="hit|1"]'); await settled();
+    const md = await page.evaluate(() => ({ sum:document.querySelector('#dmList .dmmanf > summary').textContent, chip:[...document.querySelectorAll('#dmAns .dmchip')].map(c => c.textContent).join(' | ') }));
+    if(!/Modifiers · Hit \+1/.test(md.sum) || !/Hit \+1/.test(md.chip)) fail('damage-modifiers', A, '+1 to hit', JSON.stringify(md));
+    // the models left of your unit: one wheel for each models line, folded; one fewer said in its row
+    const many = await page.evaluate(() => { for(const u of armyById(WH_DATA.armies[0].id).units) if(u.models.length > 1 && (u.ranged || []).length) return u.id; return null; });
+    if(many){ await open('', [A, many], { fold:{ left:true } });
+      const lw = await page.evaluate(() => ({ n:document.querySelectorAll('#dmLeft .dwv[role="spinbutton"]').length, lines:dmPair(dmState()).au.models.length, sum:document.querySelector('#dmLeft > summary').textContent }));
+      const last = '[data-wh="left:' + (lw.lines - 1) + '"]';
+      await page.focus(last); await page.keyboard.press('ArrowDown'); await page.waitForTimeout(1400);
+      const lw2 = await page.evaluate(last => ({ sum:document.querySelector('#dmLeft > summary').textContent, left:JSON.stringify(dmState().left), open:document.querySelector('#dmLeft').open }), last);
+      if(lw.n !== lw.lines || !/Models left · all \d+/.test(lw.sum) || !/Models left · \d+ of \d+/.test(lw2.sum) || !lw2.open) fail('damage-models-left', A, many, JSON.stringify([lw, lw2])); }
     // no empty band under the pinned card at any scroll position: just below it there is always some of the screen's content
     await open();
     const gaps = await page.evaluate(async () => { const out = [], H = document.documentElement.scrollHeight - innerHeight;
       for(let y = 0; y <= Math.min(H, 2400); y += 15){ scrollTo(0, y); await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
         const pin = $('#dmPin'); if(!pin || pin.hidden) continue;
         const b = pin.getBoundingClientRect().bottom, x = innerWidth / 2; let hit = false;
-        for(let dy = 2; dy <= 72 && !hit; dy += 6){ const e = document.elementFromPoint(x, b + dy); hit = !!(e && e.closest('#dmAns, #dmList, .dmty, .dmsent, .dmpin')); }
+        for(let dy = 2; dy <= 72 && !hit; dy += 6){ const e = document.elementFromPoint(x, b + dy); hit = !!(e && e.closest('#dmAns, #dmList, .dmtg, .dmsen, .dmpin')); }
         if(!hit) out.push(y); }
       scrollTo(0, 0); return out; });
     if(gaps.length) fail('damage-no-gap', A, 'scrollY ' + gaps.slice(0, 8).join(', '), 'an empty band of over 70px under the pinned card');
