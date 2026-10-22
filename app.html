@@ -1413,6 +1413,11 @@ function unitMods(u, kind){
   const strat = allStratagems().filter(s => s.mod && eligible(s).includes(u)).map(s => Object.assign({ from:s.name, strat:s.id, cp:s.cp }, s.mod));
   return (u.mods || []).concat(det, auraMods(u), strat).filter(m => m.kind === kind || m.kind === 'all');
 }
+// the footnotes the weapon tables show (datasheet, Ranged and Melee screens): unitMods, and the Waaagh! army rule's "That unit's
+// ranged attacks have [ASSAULT]" while riled up, for a unit with that rule some of whose ranged weapons lack [ASSAULT] (a weapon
+// keyword only: the Damage tab has nothing to count for it)
+const shownMods = (u, kind) => unitMods(u, kind).concat(kind === 'ranged' && u.rules.includes('Waaagh!') && (u.ranged || []).some(w => !w.kw.some(k => /^assault$/i.test(k)))
+  ? [{ kind:'ranged', when:'Riled up', cond:'riled', note:'[ASSAULT]', from:'Waaagh!', rule:'Waaagh!' }] : []);
 // phases and turn: turns can override the turn for one phase ("your Shooting phase or the Fight phase")
 const phasesOf = x => x.phases || x.ph || [];
 const phTurn = (x, p) => (x.turns && x.turns[p]) || x.turn || 'either';
@@ -4389,7 +4394,7 @@ function modGroupLines(mods, u, hasHunter){
   for(const m of mods){ const k = norm(m.when); if(!groups.has(k)) groups.set(k, { when:m.when, items:[] }); groups.get(k).items.push(m); }
   return [...groups.values()].map(g => {
     const named = g.items.length === 1 && g.when.indexOf(g.items[0].from) >= 0 ? g.items[0] : null;
-    const when = named ? esc(g.when).replace(esc(named.from), modFrom(named, u)) : esc(g.when);
+    const when = riledWhen(named ? esc(g.when).replace(esc(named.from), modFrom(named, u)) : esc(g.when), u);
     return '<div class="mod">' + (g.items.every(m => m.scope === g.items[0].scope) && g.items[0].scope ? '<i class="sc">' + g.items[0].scope + '</i>' : '') +
       '<b>' + when + ':</b> ' + g.items.map(m => (m.scope && !g.items.every(x => x.scope === m.scope) ? '<i class="sc">' + m.scope + '</i>' : '') + (m.who ? esc(m.who) + ' ' : '') + esc(m.note) +
       (m.hunter && hasHunter ? ' (the (+' + Object.values(m.hunter)[0] + ') on the Hunter rows; add it to the other weapons too)' : '') + (m === named ? '' : ' <span class="from">(' + modFrom(m, u) + ')</span>')).join(' · ') + '</div>';
@@ -4536,7 +4541,7 @@ function weaponTable(list, kind, mods, u){
 function unitWeapons(u){
   const r = u.ranged || [], m = u.melee || [];
   if(!r.length && !m.length) return '';
-  const mr = r.length ? unitMods(u, 'ranged') : [], mm = m.length ? unitMods(u, 'melee') : [];
+  const mr = r.length ? shownMods(u, 'ranged') : [], mm = m.length ? shownMods(u, 'melee') : [];
   const head = (id, label, cols, wide) => '<div class="anc" id="sec-' + id + '"></div><div class="wh both"><span class="n' + (wide ? ' n2' : '') + '">' + label + '</span>' + cols.map(c => '<span>' + c + '</span>').join('') + '</div>';
   let h = '<!--A-->' + (r.length ? '<section class="dbx wt both">' : '');
   const rItems = weaponItems(r);
@@ -4641,12 +4646,32 @@ function defenceItems(u, ph, opts){
   // a Feel No Pain only one model has (Robotic Bodyguard: the Datasmith, not the robots) is said by that ability's own line
   for(const r of u.rules){ const m = /^feel no pain (\d\+)/i.exec(r); if(m && !u.abilities.some(ab => ab.def && ab.def.includes('Feel No Pain ' + m[1]))) out.push({ t:'Feel No Pain ' + m[1], a:'rule', v:r }); }
   for(const r of unitDetRules(u)) if(r.def && !out.some(x => x.t === r.def)) out.push({ t:r.def, a:'rule', v:r.name });   // e.g. Knights of Legend: FNP 6+
-  for(const ab of u.abilities) if(ab.def && !naReason(ab) && !(ph && ab.defPh && !ab.defPh.includes(ph))) out.push({ t:ab.def, a:'ability', v:abilityKey(ab) });
+  // (who, name: the model of an attached unit the ability is on, for the datasheet's line)
+  for(const ab of u.abilities) if(ab.def && !naReason(ab) && !(ph && ab.defPh && !ab.defPh.includes(ph))) out.push({ t:ab.def, a:'ability', v:abilityKey(ab), who:ab.who, name:ab.name });
   for(const s of allStratagems()) if(s.def && eligible(s).includes(u) && !(ph && !s.phases.includes(ph))) out.push({ t:s.cp + 'CP ' + s.name + ': ' + s.def, a:'strat', v:s.id });
   if(opts && opts.shields) for(const s of allStratagems()) if(s.shield && s.shield.def && matches(s.shield.protects, u) && army().units.some(x => x !== u && matches(s.shield.by, x)) && !(ph && !s.phases.includes(ph)))
     out.push({ t:s.cp + 'CP ' + s.name + ': ' + s.shield.def, a:'strat', v:s.id });
-  if(u.rules.includes('Waaagh!')) out.push({ t:'Riled up: 5+ INV', a:'rule', v:'Waaagh!' });
+  // and on the datasheet what another unit of the list gives this one when it is attacked (guard: Emanatus Forcefield,
+  // Shroudpsalm, Necromechanic), as its attack auras show under its weapons; the source's name opens that unit
+  if(opts && opts.shields) for(const src of army().units) for(const g of src.guard || []) if(src !== u && matches(g.needs, u))
+    out.push({ t:g.when + ': ' + g.note, a:'unit', v:src.id, guard:g });
+  if(u.rules.includes('Waaagh!')) out.push({ t:'Riled up: 5+ INV', a:'rule', v:'Waaagh!', riled:true });
   return out;
+}
+// a unit always riled up by one of its own rules (riled: Super Runts): its riled-up lines say so, with the model that has the
+// rule in an attached unit ("Riled up (Zodgrod Wortsnagga · Super Runts: always riled up): 5+ INV")
+const alwaysRiled = u => { const ab = u.abilities.find(x => x.riled && !naReason(x));
+  return ab ? (ab.who && u.leads ? esc(ab.who) + ' · ' : '') + linkTo('ability', abilityKey(ab), ab.name) + ': always riled up' : ''; };
+const riledWhen = (html, u) => { const ar = /^Riled up\b/.test(html) && alwaysRiled(u); return ar ? html.replace(/^Riled up/, 'Riled up (' + ar + ')') : html; };
+// one "When targeted" line on the datasheet: its rule's name or its first words open the rule; an ability of one model of an
+// attached unit names that model first ("Meganobz · Arrogant Invulnerability: Attacks that target this unit have -1 AP")
+function defLine(x, u){
+  const i = x.t.indexOf(': ');
+  if(x.guard) return esc(x.t) + ' <span class="from">(' + linkTo(x.a, x.v, x.guard.from) + ')</span>';
+  if(x.riled){ const ar = alwaysRiled(u); return linkTo(x.a, x.v, 'Riled up') + (ar ? ' (' + ar + ')' : '') + esc(x.t.slice('Riled up'.length)); }
+  const who = x.who && u.leads && !(i > 0 && x.who.startsWith(x.t.slice(0, i))) ? esc(x.who) + ' · ' : '';
+  if(who && i < 0) return who + linkTo(x.a, x.v, x.name) + ': ' + esc(x.t);
+  return who + (i > 0 ? linkTo(x.a, x.v, x.t.slice(0, i)) + esc(x.t.slice(i)) : linkTo(x.a, x.v, x.t));
 }
 const defences = (u, ph) => defenceItems(u, ph).map(x => x.t);
 const linkTo = (attr, val, label) => '<span class="link" role="button" tabindex="0" data-' + attr + '="' + esc(val) + '">' + esc(label) + '</span>';
@@ -4691,7 +4716,7 @@ function screenUnit(){
     '<div class="dnt">' +
     unitDetRules(u).filter(r => r.statNote).map(r => { const n = modelCount(u) === 1 && r.statNote.single ? r.statNote.single : r.statNote.text;
       return '<p class="dsl">' + esc(n.replace(/\{OC\+(\d)\}/, (x, d) => String((parseInt(u.stats[0].OC, 10) || 0) + +d))) + ' (' + linkTo('rule', r.name, r.name) + ')</p>'; }).join('') +
-    (def.length ? '<div class="def"><span class="il">When targeted</span>' + def.map(x => { const i = x.t.indexOf(': '); return i > 0 ? linkTo(x.a, x.v, x.t.slice(0, i)) + esc(x.t.slice(i)) : linkTo(x.a, x.v, x.t); }).join(' · ') + '</div>' : '') +
+    (def.length ? '<div class="def"><span class="il">When targeted</span>' + def.map(x => defLine(x, u)).join(' · ') + '</div>' : '') +
     u.abilities.filter(ab => ab.damaged).map(ab => { const m = (u.mods || []).find(x => x.from === ab.name);
       const psy = m && /hit/i.test(m.note) && [...(u.ranged || []), ...(u.melee || [])].some(w => w.kw.some(k => /^psychic/i.test(k)));
       return '<div class="def dmg"><span class="il">Damaged ' + esc(ab.damaged) + ' W</span>' + linkTo('ability', abilityKey(ab), m ? m.note : 'see the rule') +
@@ -4699,10 +4724,13 @@ function screenUnit(){
   const abilities = abil.length ? '<section class="dbx" id="sec-abilities"><div class="dh2"><span>Abilities</span></div>' + abilityRows(abil, u, { suffix:true }) + '</section>' : '';
   const rules = allUnitRules(u).filter(r => !weaponKeys.has(ruleKey(r)));
   const ks = kwStars(u);
+  // keywords only some models have (kwOnly), apart under the others, as Wahapedia prints them ("ASPIRING SORCERER ONLY: PSYKER")
+  const only = u.kwOnly || {}, pill = k => '<span class="pill">' + esc(k) + (ks.starred.has(k) ? '*' : '') + '</span>';
+  const kwModels = [...new Set(Object.values(only))].map(w => '<span class="kwn">' + esc(w) + ' only:</span><span class="pills">' + u.kw.filter(k => only[k] === w).map(pill).join('') + '</span>').join('');
   const foot = '<section class="dbx dft">' +
     (rules.length ? '<div class="dkv" id="sec-rules"><span class="dk">Rules</span><span class="dv">' + rules.map(r => linkTo('rule', r, r) + (partialWho(u, r) ? ' <span class="from">(' + esc(partialWho(u, r)) + ')</span>' : '') + (inertRule(r) ? ' <span class="from">(no unit in this list it applies to)</span>' : '')).join(', ') + '</span></div>' : '') +
     stratLines(u, strats) +
-    '<div class="dkv" id="sec-kw"><span class="dk">Keywords</span><span class="dv"><span class="pills">' + u.kw.map(k => '<span class="pill">' + esc(k) + (ks.starred.has(k) ? '*' : '') + '</span>').join('') + '</span>' +
+    '<div class="dkv" id="sec-kw"><span class="dk">Keywords</span><span class="dv"><span class="pills">' + u.kw.filter(k => !hasOwn(only, k)).map(pill).join('') + '</span>' + kwModels +
       (ks.note ? '<span class="kwn">' + esc(ks.note) + '</span>' : '') + '</span></div></section>';
   return '<div class="ds"><section class="dbx">' + band + models + stats + '</section>' + unitWeapons(u) + abilities + foot + '</div>' + askRefBtn('unit', u.id, 'unit');
 }
@@ -4723,7 +4751,7 @@ const band = u => '<button class="band" data-unit="' + esc(u.id) + '"><b>' + esc
 function screenWeapons(kind){
   const list = army().units.filter(u => (u[kind] || []).length);
   if(!list.length) return '<div class="empty">No ' + kind + ' weapons in this army.</div>';
-  return '<div class="slice">' + list.map(u => '<section class="us">' + band(u) + weaponTable(u[kind], kind, unitMods(u, kind), u, false) + '</section>').join('') + '</div>';
+  return '<div class="slice">' + list.map(u => '<section class="us">' + band(u) + weaponTable(u[kind], kind, shownMods(u, kind), u, false) + '</section>').join('') + '</div>';
 }
 const screenAbilities = () => '<div class="slice">' + army().units.filter(u => u.abilities.length).map(u => '<section class="us">' + band(u) + abilityRows(u.abilities, u) + '</section>').join('') + '</div>';
 

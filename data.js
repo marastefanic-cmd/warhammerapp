@@ -1035,6 +1035,8 @@ const FACTIONS = {
      aura        mods this unit gives to other units: needs = which units (keywords),
                  notSelf = not the unit itself, selfWhen = the condition on its own sheet
      rules       core/faction rules that open a glossary entry
+     kwOnly      keywords in `kw` that only some models of the unit have, keyword → those models (Wahapedia's "KEYWORDS – ALL
+                 MODELS: … ASPIRING SORCERER ONLY: PSYKER", BSData's categories on one model): the datasheet lists them apart
      partialRules  rules in `rules` that only some models of the unit have, label → the model that has it
                  ({ 'Scouts 6"':'Slaughterbound' }): the unit cannot use a rule every model must have (24.09,
                  24.31), and the app names that model next to the rule
@@ -2251,7 +2253,11 @@ const ARMIES = [
       ],
       rules:['Leader','Cabal of Sorcerers','Psychic','Pistol','Sustained Hits','Anti','Devastating Wounds','Torrent','Ignores Cover'],
       kw:['Chaos','Character','Faction: Thousand Sons','Grenades','Infantry','Psyker','Sorcerer','Tzeentch','Battleline','Rubric','Rubric Marines','Rubricae'],
-      kwNote:'Battleline, Rubric, Rubric Marines, Rubricae come from the led Rubric Marines.'
+      kwNote:'Battleline, Rubric, Rubric Marines, Rubricae come from the led Rubric Marines.',
+      // Wahapedia's Rubric Marines: "ASPIRING SORCERER ONLY: PSYKER" and "Cabal of Sorcerers (Aspiring Sorcerer only)"; BSData has
+      // both on the Aspiring Sorcerer model; the Sorcerer has both on his own datasheet
+      kwOnly:{ 'Psyker':'Sorcerer and Aspiring Sorcerer' },
+      partialRules:{ 'Cabal of Sorcerers':'Sorcerer and Aspiring Sorcerer' }
     },
     {
       id:'sorcerer-in-terminator-armour-scarab-occult-terminators', name:'Sorcerer in Terminator Armour', role:'Character', pts:565, ptsNote:'140 + Scarab Occult Terminators 425', enhancement:'Umbralefic Crystal',
@@ -2293,7 +2299,11 @@ const ARMIES = [
       ],
       rules:['Leader','Deep Strike','Cabal of Sorcerers','Psychic','Anti','Devastating Wounds','Rapid Fire'],
       kw:['Chaos','Character','Faction: Thousand Sons','Infantry','Psyker','Sorcerer','Terminator','Tzeentch','Rubricae','Scarab Occult'],
-      kwNote:'Rubricae, Scarab Occult come from the led Scarab Occult Terminators.'
+      kwNote:'Rubricae, Scarab Occult come from the led Scarab Occult Terminators.',
+      // Wahapedia's Scarab Occult Terminators: "SCARAB OCCULT SORCERER ONLY: PSYKER" and "Cabal of Sorcerers (Scarab Occult Sorcerer
+      // only)"; BSData has both on the Scarab Occult Sorcerer model; the Sorcerer in Terminator Armour has both on his own datasheet
+      kwOnly:{ 'Psyker':'Sorcerer in Terminator Armour and Scarab Occult Sorcerer' },
+      partialRules:{ 'Cabal of Sorcerers':'Sorcerer in Terminator Armour and Scarab Occult Sorcerer' }
     },
     {
       id:'tzaangors', name:'Tzaangors', role:'Infantry', pts:75,
@@ -2814,7 +2824,9 @@ const ARMIES = [
         { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 Wounds Remaining' }
       ],
       rules:['Deadly Demise D6','Sustained Hits','Super-Heavy Walker','Blast','Code Chivalric','Lone Operative'],
-      kw:['Canis Rex','Character','Epic Hero','Faction: Imperial Knights','Imperium','Infantry','Questoris','Sir Hekhtur','Titanic','Towering','Vehicle','Walker']
+      kw:['Canis Rex','Character','Epic Hero','Faction: Imperial Knights','Imperium','Infantry','Questoris','Sir Hekhtur','Titanic','Towering','Vehicle','Walker'],
+      // BSData's categories on each model (the unit has the others)
+      kwOnly:{ 'Canis Rex':'Canis Rex', 'Questoris':'Canis Rex', 'Titanic':'Canis Rex', 'Towering':'Canis Rex', 'Vehicle':'Canis Rex', 'Walker':'Canis Rex', 'Infantry':'Sir Hekhtur', 'Sir Hekhtur':'Sir Hekhtur' }
     },
     {
       id:'cerastus-knight-atrapos', name:'Cerastus Knight Atrapos', role:'Character', pts:450, enhancement:'Bringer of Justice',
@@ -3442,7 +3454,10 @@ const ARMIES = [
       ],
       // help this unit gives other units of its list when they are attacked (the Damage tab offers it as a tick box)
       guard:[
-        { from:'Omnissiah’s Blessing', needs:{ all:['Faction: Adeptus Mechanicus','Vehicle'] }, kind:'all', one:true, when:'Picked by the Enginseer in your Command phase (within 3")', note:'Feel No Pain 5+ for that VEHICLE model', calc:{ fnp:5 } }
+        { from:'Omnissiah’s Blessing', needs:{ all:['Faction: Adeptus Mechanicus','Vehicle'] }, kind:'all', one:true, when:'Picked by the Enginseer in your Command phase (within 3")', note:'Feel No Pain 5+ for that VEHICLE model', calc:{ fnp:5 } },
+        // the enhancement's "friendly LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model": no calc (a choice once per battle round
+        // after a failed save, not numbers the calculator plays)
+        { from:'Necromechanic', needs:{ all:['Faction: Adeptus Mechanicus'], any:['Legio Cybernetica','Vehicle'] }, kind:'all', when:'Within 12" of the Enginseer, once per battle round', note:'after a failed saving throw, the Enginseer can change the Damage characteristic of that attack to 0' }
       ],
       rules:['Leader','Doctrina Imperatives','Devastating Wounds','Pistol','Extra Attacks'],
       kw:['Character','Cult Mechanicus','Enginseer','Faction: Adeptus Mechanicus','Imperium','Infantry','Tech-Priest']
