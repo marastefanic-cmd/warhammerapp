@@ -690,6 +690,15 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .dmpp.on{background:var(--surface2); box-shadow:inset 0 0 0 2px var(--accent)}
 .dmpp.over{box-shadow:none; border:1.5px dashed var(--accent)}
 .dmpp small{font-size:11px; line-height:1.2; color:var(--muted)}
+/* a weapon's profiles: one to a row, each with its characteristics and keywords */
+.dmprofs{grid-template-columns:1fr}
+.dmprofs .dmpp{grid-template-columns:minmax(0, 1fr) auto; column-gap:8px; padding:6px 10px 7px}
+.dmprofs .dmpp > em{grid-column:2; grid-row:1; justify-self:end}
+.dmprofs .dmpp > .dmwst, .dmprofs .dmpp > .dmkw, .dmprofs .dmpp > small{grid-column:1 / -1}
+.dmpp .dmwst{gap:0 12px}
+.dmpp .dmwst i{font-size:9.5px}
+.dmpp .dmwst b{font:700 14px/1.15 var(--f-head); letter-spacing:0; font-variant-numeric:tabular-nums; color:var(--fg)}
+.dmpp .dmkw{margin-top:2px; font-size:10.5px; line-height:1.3}
 .dmpp em small.pa{color:var(--fg2)}
 .dmouts{padding:6px 2px 2px}
 .dmout{margin:4px 0 0; padding:0; font-size:12px; line-height:1.4; color:var(--muted)}
@@ -1954,13 +1963,12 @@ function dmCalc(st, A, au, tg, kind){
   const sit = [];   // { k ('c:…'), label, sub, on, why (why it is ticked for you), fixed (counted, no box) }
   const box = (k, label, sub, def, why) => { const v = tick(k, def); sit.push({ k:'c:' + k, label, sub:sub || '', on:v, why:v && def && st.on['c:' + k] == null ? why || '' : '' }); return v; };
   // half range ([RAPID FIRE] 24.30, [MELTA] 24.25): bands of the distance to the target, from the half ranges of the weapons as
-  // picked, both with and without every rule here that changes range: so the band the player picked keeps its meaning
-  // when one of those rules is ticked ("within 7.5", not 6"" stays that, and a 12" weapon with +3" gets its bonus there)
+  // picked, with and without each ticked rule here that changes range (a rule not ticked makes no band)
   const rangeRules = rules.filter(r => r.e && r.e.range && r.state !== 'out' && r.state !== 'nc');
   const plusOf = (c, every) => { const rs = rangeRules.filter(r => every || r.on).map(r => [r.e.range, dmReach(au, c.it, r.m, r.sc)]).filter(([, n]) => n > 0);
     let sums = [0]; for(const [v] of rs) sums = [...new Set(sums.concat(sums.map(x => x + v)))]; return sums; };
   const halfOf = (c, every) => c.ps[c.pi] && halfKw(c.w) && parseInt(c.w.range, 10) ? plusOf(c, every).map(p => (parseInt(c.w.range, 10) + p) / 2) : [];
-  const halves = ranged ? [...new Set(chosen.flatMap(c => halfOf(c, true)))].sort((a, b) => b - a) : [];
+  const halves = ranged ? [...new Set(chosen.flatMap(c => halfOf(c, false)))].sort((a, b) => b - a) : [];
   let bands = null;
   if(halves.length){
     const want = +st.val.half || 0, near = Math.min(...halves.filter(h => h >= want), Infinity), v = want && near < Infinity ? near : 0;
@@ -2129,7 +2137,7 @@ function dmHowLines(c, st, r0, plan){
   if(c.ctx.snap && gi.some(i => g[i].kw.some(k => /^torrent/i.test(k)))) L.push(['[TORRENT] in snap shooting (24.37)', 'each attack made with a [TORRENT] weapon “automatically hits the target”: in Fire Overwatch too.']);
   if(c.rules.some(r => r.on && r.m.ar && r.m.ar.name === 'Doctrina Imperatives')) L.push(['Doctrina Imperatives', 'the Imperative picked counts for this unit; Both only where a rule of the list makes both active for it (Omnicogitator, Transcendent Cogitation, The Fires of Mars), else as your own call. A value a rule sets comes first and the Imperative improves it: the Faction Pack’s FAQ, Auto-divinatory Targeting’s BS 3+ improved by the Protector Imperative to 2+. The +1 AP (Conqueror) counts while “BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit” holds for the unit: a BATTLELINE unit by itself, else as you say.']);
   if(c.rules.some(r => r.on && r.m.limit)) L.push(['Blessings of Khorne', 'each one ticked counts as active this battle round; by the rules two are active at once (one more with Skulls for the Skull Throne! or, for a TERMINATOR SQUAD unit, Adamantine Avalanche; every one with Archslaughterer for its bearer’s unit), so a Blessing ticked past that is counted by you.']);
-  L.push(['Range (04.02)', 'every weapon is taken to be in range of the target; a rule that changes range counts only through half range.' + (c.ctx.halves && c.ctx.halves.length ? ' Half range ([RAPID FIRE] 24.30, [MELTA] 24.25) is the band picked: the bands come from the half ranges of the weapons as picked, with and without each rule here that changes range, so a band keeps its meaning when such a rule is ticked; a weapon gets its bonus when its half range, after the ticked rules, reaches the band.' : '')]);
+  L.push(['Range (04.02)', 'every weapon is taken to be in range of the target; a rule that changes range counts only through half range.' + (c.ctx.halves && c.ctx.halves.length ? ' Half range ([RAPID FIRE] 24.30, [MELTA] 24.25) is the band picked: the bands come from the half ranges of the weapons as picked, with and without each ticked rule here that changes range; a weapon gets its bonus when its half range, after the ticked rules, reaches the band.' : '')]);
   L.push(['The number beside each choice', 'the whole turn played again with that one choice changed, in the same games: it is what the answer becomes when the choice is tapped (models destroyed, for Both the shooting and the fight added up; wounds lost for a one-model unit; when that does not move, the chance to wipe the unit). Only the damage dealt is measured: what the attacking unit loses is not played. It comes first from ' + String(DM_Q).replace(/\B(?=(\d{3})+$)/g, ',') + ' games (' + String(DM_Q / 2).replace(/\B(?=(\d{3})+$)/g, ',') + ' for Both; shown faint), then from the answer’s own 10,000; after a tap, the numbers before it stay in place, dimmed, until the new ones are in. The list is ordered once for each unit and mode, by what each choice gains, and then stays put.']);
   L.push(['Another unit’s rule', 'an aura or ability of another unit of the list that reaches this unit (Clever Know-wotz from a Mek, Beacons of Rage from Eightbound) is listed with the unit it comes from, and is never ticked for you: whether that unit gives it depends on the table.']);
   L.push(['Not counted', 'a rule whose effect the calculator does not play (Fights First, mortal wounds of its own, a single re-roll) is listed with its words; when one of the Modifiers says the same thing, “Count it by hand” sets that modifier for this step, as your own call.']);
@@ -2234,10 +2242,12 @@ function dmPlan(st){
     const view = { beat:id, ph:S0.ph, overwatch:!(tr.charge || tr.fight), on:Object.assign(on0, c.on), own:c.on, carried:ca, off:c.off, pick:c.pick, man:c.man, val:Object.assign(val0, c.val), fold:st.fold, fx:F.fx, fxWhy:F.why, left, auto:{} };
     let M = dmCalc(view, A.army, A.u, P.tg, S0.kind);
     // open on the BEST profile: for each weapon with several profiles and no pick of the player's, the profile (that its box does not
-    // rule out) that does the most to the target here, worked out exactly; the first of them on a tie
+    // rule out) that does the most to the target here, worked out exactly; the first of them on a tie. Worked out with no half-range
+    // bonus: the bands follow the profile, so a band tapped never changes the profile under it
+    const view0 = Object.assign({}, view, { val:Object.assign({}, view.val, { half:0 }) });
     for(const c0 of M.weapons.filter(x => x.ps.length > 1 && !x.own)){
       let bi = -1, bv = -1;
-      c0.ps.forEach((p, i) => { if(!c0.can[i]) return; const v = dmWorth(dmCalc(Object.assign({}, view, { auto:Object.assign({}, view.auto, { [c0.k]:i }) }), A.army, A.u, P.tg, S0.kind)); if(v > bv + 1e-9){ bv = v; bi = i; } });
+      c0.ps.forEach((p, i) => { if(!c0.can[i]) return; const v = dmWorth(dmCalc(Object.assign({}, view0, { auto:Object.assign({}, view.auto, { [c0.k]:i }) }), A.army, A.u, P.tg, S0.kind)); if(v > bv + 1e-9){ bv = v; bi = i; } });
       if(bi >= 0) view.auto[c0.k] = bi; }
     if(Object.keys(view.auto).length) M = dmCalc(view, A.army, A.u, P.tg, S0.kind);
     const lasting = l => l === 'turn' || l === 'round' || l === 'battle';
@@ -2400,7 +2410,12 @@ function dmLevers(st, plan){
   if(!plan.both) L.push(...dmLeversOf(st, plan, plan.k, '', facts, L));
   else plan.beats.forEach((b, i) => { L.push(...dmLeversOf(st, plan, i, b.id + '/', facts, L)); });
   // a fact not said to hold, with some of the rules it switches on ticked by hand: partly ticked
-  for(const f of L.filter(x => x.fact)){ const kids = L.filter(y => y.underFact === f.id); f.part = !f.on && kids.some(y => y.on); f.kidsOn = kids.filter(y => y.on).length; f.kids = kids.length; }
+  for(const f of L.filter(x => x.fact)){ const kids = L.filter(y => y.underFact === f.id); f.part = !f.on && kids.some(y => y.on); f.kidsOn = kids.filter(y => y.on).length; f.kids = kids.length;
+    // the last of its rules ticked: the fact is said to hold (its box ticked, as a tap on it does)
+    if(!f.on && !f.off && f.kidsOn === f.kids - 1) for(const y of kids) if(!y.on) y.apply = f.apply;
+    // one of them unticked while it is said to hold: it is not said to hold, the others stay ticked by hand
+    if(f.on && !f.why && !f.always) for(const y of kids) if(y.on) y.apply = s => { f.apply(s);
+      for(const z of kids) if(z !== y && z.on) dmCh(s, z.step).on[z.r ? z.r.k : z.x.k] = true; }; }
   return L;
 }
 // one step's levers (pf: the prefix of their ids; facts: the facts' ids made so far; prior: the levers of the steps before it)
@@ -2985,7 +3000,7 @@ const dmGv = (w, k, html, u) => w.from && w.from[k] ? '<b class="gv' + (wideGran
 const dmStatCells = (w, ranged, plus, u) => '<span class="dmwst">' + (ranged ? [['RNG', 'range', plus && parseInt(w.range, 10) ? w.range + '→' + (parseInt(w.range, 10) + plus) + '"' : w.range]] : []).concat([['A', 'A', w.A], [ranged ? 'BS' : 'WS', ranged ? 'BS' : 'WS', w.BS || w.WS], ['S', 'S', w.S], ['AP', 'AP', w.AP], ['D', 'D', w.D]])
   .map(([k, f, v]) => '<span><i>' + k + '</i><b>' + dmGv(w, f, esc(v == null ? '–' : v), u) + '</b></span>').join('') + '</span>' +
   (w.kw.length ? '<span class="kwl dmkw">' + w.kw.map((x, i) => w.from && w.from[x] && w.kw.lastIndexOf(x) === i ? '<span class="gk' + (wideGrant(w.from[x], u) ? ' w' : '') + '">' + esc(x) + '</span>' : esc(x)).join(', ') + '</span>' : '');
-// the list: what every effect measures, said once; then the step's half range, weapons, the situation and rules (ranked), the
+// the list: what every effect measures, said once; then the step's weapons, half range, the situation and rules (ranked), the
 // stratagems (ranked), what the rules rule out here (one line, each the player's to count anyway), what is not counted, the
 // modifiers. Both: the shooting's part and the fight's, each with its own sections
 function dmListHtml(C){
@@ -3007,12 +3022,6 @@ function dmListPart(C, score){
   const { M, st, plan } = C, b = plan.beats[plan.k], pf = C.pf || '', lv = id => DM_LV.get(pf + id);
   const ranked = list => !score ? list : list.map((x, i) => [x, i]).sort((a, c) => (score[c[0].id] || 0) - (score[a[0].id] || 0) || a[1] - c[1]).map(x => x[0]);
   let h = '';
-  if(M.bands){
-    h += '<section class="dmsec dmbands"><h3 class="dmh3">Half range <small>[RAPID FIRE], [MELTA]</small></h3>' + M.bands.opts.map(o => {
-      const x = lv('b:' + o.v), extra = o.all.filter(n => !o.now.includes(n));
-      const sub = !o.v ? 'the target is farther than ' + o.lo + '" (every weapon is taken to be in range)' : (o.now.length ? 'bonus for ' + esc(andList([...new Set(o.now)])) : 'no bonus for the weapons as ticked') + (extra.length ? ' · with ' + esc(M.bands.rules.join(', ')) + ': ' + esc(andList([...new Set(extra)])) : '');
-      return dmRowHtml(C, x, esc(dmBandName(o)), sub, ''); }).join('') + '</section>';
-  }
   const ranged = b.kind === 'ranged';
   h += '<section class="dmsec"><h3 class="dmh3">' + (ranged ? 'Ranged' : 'Melee') + ' weapons <small>' + esc(dmName(b.atk.u, b.atk.army)) + '</small></h3>' +
     (plan.k > 0 ? '<p class="note dmnote">Against what the shooting left of the target, in each game.</p>' : '');
@@ -3020,8 +3029,9 @@ function dmListPart(C, score){
     const w = c.w, x = lv('w:' + c.k), outs = [...new Set(M.groups.map((g, i) => M.gOf[i] === c ? M.R.groups[i].out : '').filter(Boolean))];
     const plus = ranged ? M.rules.filter(r => r.on && r.e && r.e.range && dmReach(b.atk.u, c.it, r.m, r.sc) > 0).reduce((t, r) => t + r.e.range, 0) : 0;
     const stat = dmStatCells(w, ranged, plus, b.atk.u) + (outs.length ? '<span class="warn">Left out: ' + esc(outs.join('; ')) + '</span>' : '');
-    const picks = c.ps.length > 1 ? '<div class="dmprof"><span class="dmpl">Pick one profile</span>' + c.ps.map((p, i) => { const y = lv('p:' + c.k + '|' + i);
-      return '<button class="dmpp' + (y.on ? ' on' : '') + (y.over ? ' over' : '') + '" data-dmlv="' + esc(y.id) + '" aria-pressed="' + y.on + '"><b>' + esc(String(p.name).replace(new RegExp('^' + (c.it.group || '').replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\s*[–-]\\s*'), '')) + '</b><em data-fx="' + esc(y.id) + '">' + dmFxHtml(C, y) + '</em>' +
+    // each profile with its own characteristics and keywords
+    const picks = c.ps.length > 1 ? '<div class="dmprof dmprofs"><span class="dmpl">Pick one profile</span>' + c.ps.map((p, i) => { const y = lv('p:' + c.k + '|' + i);
+      return '<button class="dmpp' + (y.on ? ' on' : '') + (y.over ? ' over' : '') + '" data-dmlv="' + esc(y.id) + '" aria-pressed="' + y.on + '"><b>' + esc(String(p.name).replace(new RegExp('^' + (c.it.group || '').replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\s*[–-]\\s*'), '')) + '</b><em data-fx="' + esc(y.id) + '">' + dmFxHtml(C, y) + '</em>' + dmStatCells(p, ranged, plus, b.atk.u) +
         (c.can[i] ? '' : '<small>by the rules: ' + esc((c.hunter[i] || []).join('/')) + ' only</small>') + '</button>'; }).join('') + '</div>' : '';
     // the boxes of the target's keywords its abilities need
     const lims = c.lim.length ? '<div class="dmprof sub dmkids"><span class="dmpl">Against this target</span>' + c.lim.map(l => { const y = lv('x:' + c.k + '|' + l.t);
@@ -3029,6 +3039,13 @@ function dmListPart(C, score){
     h += dmRowHtml(C, x, esc(M.cName(c)) + (c.n > 1 ? ' <span class="x">×' + c.n + '</span>' : '') + (c.it.who && c.it.who !== b.atk.u.name ? ' <span class="dmwho">' + esc(c.it.who) + '</span>' : ''), stat, c.dx.length ? 'one of the weapons its models pick between' : '', picks + lims);
   }
   h += '</section>';
+  // half range after the weapons: its bands follow the profiles picked
+  if(M.bands){
+    h += '<section class="dmsec dmbands"><h3 class="dmh3">Half range <small>[RAPID FIRE], [MELTA]</small></h3>' + M.bands.opts.map(o => {
+      const x = lv('b:' + o.v), extra = o.all.filter(n => !o.now.includes(n));
+      const sub = !o.v ? 'the target is farther than ' + o.lo + '" (every weapon is taken to be in range)' : (o.now.length ? 'bonus for ' + esc(andList([...new Set(o.now)])) : 'no bonus for the weapons as ticked') + (extra.length ? ' · with ' + esc(M.bands.rules.join(', ')) + ': ' + esc(andList([...new Set(extra)])) : '');
+      return dmRowHtml(C, x, esc(dmBandName(o)), sub, ''); }).join('') + '</section>';
+  }
   // a rule the rules leave out here stays in the fold below, ticked or not: a tap never moves a row
   const rl = C.levers.filter(x => x.sec === 'rule' && !x.out && !x.underFact);
   h += '<section class="dmsec"><h3 class="dmh3">Situation and rules</h3>' + (rl.length ? ranked(rl).map(x => dmLeverRow(C, x)).join('') : '<p class="note dmnone">None for this unit.</p>') + '</section>';
