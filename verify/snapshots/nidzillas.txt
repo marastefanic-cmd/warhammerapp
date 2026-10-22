@@ -6,8 +6,6 @@ Crusher Stampede · Talons of the Norn Queen · Disposition: Purge the Foe
 Overview
 Damage calculator
 Game tracker
-Opponent
-None yet: pick their list
 Units
 10
 Stratagems
@@ -40,7 +38,7 @@ Crusher Stampede (2 DP), Talons of the Norn Queen (1 DP)
 Disposition: Purge the Foe
 POINTS
 2000 / 2000 · Strike Force
-ARMY RULES
+ARMY AND DETACHMENT RULES
 Synapse
 
 If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:
@@ -54,7 +52,23 @@ Wahapedia FAQ: “Can units targeted by the Shadow in the Warp army rule use the
 
 If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6" of one or more SYNAPSE units from your army, subtract 1 from that test.
 
-START OF THE BATTLE ROUND
+Enraged Behemoths
+Crusher Stampede · Any phase
+
+Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.
+
+APPLIES TOThe Swarmlord, Hive Tyrant · Monstrous Nemesis, Norn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2), Norn Emissary · Destabilising Predation, Norn Emissary, Tyrannofex
+
+Higher Imperatives
+Talons of the Norn Queen
+
+Friendly NORN EMISSARY/NORN ASSIMILATOR units have the following ability:
+
+Protean Purpose: (Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its Singular Purpose ability (this replaces the previous selection).
+
+APPLIES TONorn Assimilator · Synaptoprescience (1 of 2), Norn Assimilator · Synaptoprescience (2 of 2), Norn Emissary · Destabilising Predation, Norn Emissary
+
+START OF THE BATTLE AND THE BATTLE ROUNDS
 FIRST ROUND
 Singular Purpose · Norn Assimilator ×2, Norn Emissary ×2
 USES PER BATTLE
@@ -101,7 +115,8 @@ Monstrous Nemesis
 INFANTRY
 2
 Neurogaunts
-1× Neurogaunt Nodebeast, 10× Neurogaunt
+2×45
+Neurogaunt Nodebeast
 6"
 3
 6+
@@ -109,7 +124,14 @@ Neurogaunts
 8+
 1
 –
-2×45
+Neurogaunt×10
+6"
+3
+6+
+1
+8+
+1
+–
 MONSTERS
 6
 Norn Assimilator
@@ -177,7 +199,7 @@ Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rol
 Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll (Swarm-guided Salvoes)
+1CP Swarm-guided Salvoes: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
 Norn Assimilator
 Synaptoprescience
 1 of 2
@@ -195,7 +217,7 @@ Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rol
 Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll (Swarm-guided Salvoes)
+1CP Swarm-guided Salvoes: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
 Norn Assimilator
 Synaptoprescience
 2 of 2
@@ -213,7 +235,7 @@ Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rol
 Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll (Swarm-guided Salvoes)
+1CP Swarm-guided Salvoes: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
 Norn Emissary
 Destabilising Predation
 Psychic tendril
@@ -247,7 +269,7 @@ Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rol
 Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll (Swarm-guided Salvoes)
+1CP Swarm-guided Salvoes: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
 Norn Emissary
 Psychic tendril
 ➤neuroparasite
@@ -280,7 +302,7 @@ Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rol
 Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll (Swarm-guided Salvoes)
+1CP Swarm-guided Salvoes: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
 Tyrannofex
 ×2 units
 Stinger salvoes
@@ -303,7 +325,7 @@ Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rol
 Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll (Swarm-guided Salvoes)
+1CP Swarm-guided Salvoes: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 The Swarmlord
@@ -318,7 +340,7 @@ Within Synapse Range: +1 S
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 4 or fewer wounds left (Enraged Behemoths)
 Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP re-roll hit rolls (Rampaging Monstrosities)
+1CP Rampaging Monstrosities: re-roll hit rolls
 Hive Tyrant
 Warlord
 Monstrous Nemesis
@@ -342,7 +364,7 @@ vs MONSTER/VEHICLE: +1 to wound rolls (Monstrous Nemesis)
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 4 or fewer wounds left (Enraged Behemoths)
 Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP re-roll hit rolls (Rampaging Monstrosities)
+1CP Rampaging Monstrosities: re-roll hit rolls
 Neurogaunts
 ×2 units
 Chitinous claws and teeth×11
@@ -376,9 +398,9 @@ If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wo
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
 Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP re-roll hit rolls (Rampaging Monstrosities)
+1CP Rampaging Monstrosities: re-roll hit rolls
 STRATAGEMS · TALONS OF THE NORN QUEEN
-1CP +2 S, When selected to fight (Lesser Prey)
+1CP Lesser Prey: +2 S, When selected to fight
 Norn Assimilator
 Synaptoprescience
 2 of 2
@@ -402,9 +424,9 @@ If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wo
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
 Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP re-roll hit rolls (Rampaging Monstrosities)
+1CP Rampaging Monstrosities: re-roll hit rolls
 STRATAGEMS · TALONS OF THE NORN QUEEN
-1CP +2 S, When selected to fight (Lesser Prey)
+1CP Lesser Prey: +2 S, When selected to fight
 Norn Emissary
 Destabilising Predation
 Monstrous scything talons
@@ -427,9 +449,9 @@ If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wo
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
 Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP re-roll hit rolls (Rampaging Monstrosities)
+1CP Rampaging Monstrosities: re-roll hit rolls
 STRATAGEMS · TALONS OF THE NORN QUEEN
-1CP +2 S, When selected to fight (Lesser Prey)
+1CP Lesser Prey: +2 S, When selected to fight
 Norn Emissary
 Monstrous scything talons
 6
@@ -451,9 +473,9 @@ If its Singular Purpose is an enemy unit, vs that unit: re-roll hit rolls and wo
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
 Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP re-roll hit rolls (Rampaging Monstrosities)
+1CP Rampaging Monstrosities: re-roll hit rolls
 STRATAGEMS · TALONS OF THE NORN QUEEN
-1CP +2 S, When selected to fight (Lesser Prey)
+1CP Lesser Prey: +2 S, When selected to fight
 Tyrannofex
 ×2 units
 Powerful limbs
@@ -467,7 +489,7 @@ Damaged (1-5 wounds left): -1 to hit rolls (Damaged: 1-5 Wounds Remaining)
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 7 or fewer wounds left (Enraged Behemoths)
 Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP re-roll hit rolls (Rampaging Monstrosities)
+1CP Rampaging Monstrosities: re-roll hit rolls
 
 ######## abilities · MELEE Abilities
 The Swarmlord
@@ -561,6 +583,7 @@ Once per battle, per unit · Command · Your turn
 
 Synaptoprescience
 Enhancement
+Already in InSv
 
 Enhancement
 
@@ -603,6 +626,7 @@ Once per battle, per unit · Command · Your turn
 
 Synaptoprescience
 Enhancement
+Already in InSv
 
 Enhancement
 
@@ -765,46 +789,39 @@ STRATAGEMSTanglestrike Rounds, Lesser Prey, Catalytic Biofortification
 
 UNIT RULES
 Assault
-
 Hive Tyrant · Monstrous Nemesis
 Onslaught: While a friendly TYRANIDS unit is within 6" of this model, ranged weapons equipped by models in that unit have the [ASSAULT] and [LETHAL HITS] abilities.
-
 Deadly Demise
-
 The Swarmlord D3
-
 Hive Tyrant · Monstrous Nemesis D3
-
 Norn Assimilator · Synaptoprescience (1 of 2) D6
-
 Norn Assimilator · Synaptoprescience (2 of 2) D6
-
 Norn Emissary · Destabilising Predation D6
-
 Norn Emissary D6
-
 Tyrannofex D6
-
 Feel No Pain
-
 Norn Assimilator · Synaptoprescience (1 of 2)
-Singular Purpose: At the start of the first battle round, select one of the following: Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
-
+Singular Purpose: At the start of the first battle round, select one of the following:
+Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
+Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
 Norn Assimilator · Synaptoprescience (2 of 2)
-Singular Purpose: At the start of the first battle round, select one of the following: Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
-
+Singular Purpose: At the start of the first battle round, select one of the following:
+Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
+Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
 Norn Emissary · Destabilising Predation
-
+Singular Purpose: At the start of the first battle round, select one of the following:
+Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
+Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
+Unnatural Resistance: This model has the Feel No Pain 4+ ability against Mortal Wounds.
 Norn Emissary
-
+Singular Purpose: At the start of the first battle round, select one of the following:
+Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
+Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the Feel No Pain 5+ ability and an Objective Control characteristic of 15.
+Unnatural Resistance: This model has the Feel No Pain 4+ ability against Mortal Wounds.
 Leader
-
 The Swarmlord
-
 Hive Tyrant · Monstrous Nemesis
-
 Lethal Hits
-
 Hive Tyrant · Monstrous Nemesis
 Onslaught: While a friendly TYRANIDS unit is within 6" of this model, ranged weapons equipped by models in that unit have the [ASSAULT] and [LETHAL HITS] abilities.
 
@@ -859,19 +876,116 @@ The Swarmlord
 SHOOT
 FIGHT
 BOTH
-THEIR
-Knight Destrier (×2)
-6 bigs · T10 · Sv 3+ · W18
-THEY ATTACK
-0.9
-of 18 wounds lost
-destroyed in <1% of games
-
-≈0 pts destroyed
-
-theirs: Knights of Legend
-theirs: Invulnerable Save (5+*)
-4 NOT COUNTED
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+2.1
+of 5 destroyed
+4.3 wounds lost · wiped in 5% of games
+Nothing ticked: the datasheets as printed
+2 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -894,45 +1008,34 @@ AP
 D
 2
 PSYCHIC, TORRENT
-−0.9
-WOUNDS IF UNTICKED
+−5% wiped
+−2.1
+MODELS IF UNTICKED
 SITUATION AND RULES
-both sides
-Knights of Legend
-Feel No Pain 6+
-THEIRS
-always counted · you can leave it out
-if left out: +0.2 wounds
-Target has the benefit of cover
-THEIRS
-if it applies
-no change: [TORRENT] hits automatically: no hit roll
-0
-ALL ▾
 Close-quarters shooting at a unit it is engaged with
 -1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
-YOURS
 if it applies
 no change: [TORRENT] hits automatically: no hit roll
 0
 ALL ▾
-Target is engaged
--1 to hit; no [BLAST]
-YOURS
+Close-quarters shooting at another unit
+-1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
+if it applies
+0
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
 if it applies
 no change: [TORRENT] hits automatically: no hit roll
 0
 ALL ▾
 Fire Overwatch (snap shooting)
 the target within 24" (15.09): hits only on an unmodified 6, never critical; no hit re-rolls
-YOURS
 if it applies
 no change: [TORRENT] hits automatically: no hit roll
 0
 ALL ▾
 Enraged Behemoths
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 4 or fewer wounds left
-YOURS
 if it applies
 no change: [TORRENT] hits automatically: no hit roll
 0
@@ -940,60 +1043,37 @@ ALL ▾
 Below Starting Strength
 0
 Below Half-strength
-+0.9
++0.5
 BEST
-Invulnerable Save (5+*)
-5+ invulnerable save against ranged attacks only
-THEIRS
-always counted · you can leave it out
-if left out: no change
-HELP FROM OTHER UNITS
-of your list · if the table gives it
 Onslaught (Hive Tyrant)
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS]
-YOURS
 if it applies
 no change: [TORRENT] hits automatically: no hit roll
 0
 ALL ▾
 STRATAGEMS
-both sides, with their CP
+with their CP
 1CP Swarm-guided Salvoes
 Your Shooting phase: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
-YOURS
 if used
 0
-1CP Survivor of Strife
-when targeted in the Shooting phase: -1 to wound when the attack’s S is greater than its T · in these numbers: -1 to their wound rolls when S is greater than T
-THEIRS
-if used
-0
-NOT FOR THIS PAIR, BY THE RULES (7) · YOURS TO COUNT ANYWAY
+NOT FOR THIS STEP, BY THE RULES (4) · YOURS TO COUNT ANYWAY
 
 1CP Rampaging Monstrosities
-YOURS
 Fight phase only
 NO CHANGE
 
-Nothing to count: 1CP Corrosive Viscera (yours, in the other player’s turn only) · 1CP Epic Challenge, 2CP Counteroffensive (yours, Fight phase only) · 1CP Point-Blank Barrage (theirs, in its own turn only) · 1CP Epic Challenge, 2CP Counteroffensive (theirs, Fight phase only)
+Nothing to count: 1CP Corrosive Viscera (in the other player’s turn only) · 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (4)
+NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 Domination of the Hive Mind
-YOURS
 Within 9" of the Swarmlord: within your army’s Synapse Range
 1CP Command Re-roll
-YOURS
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-1CP Noble Sacrifice
-THEIRS
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
-1CP Command Re-roll
-THEIRS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-OTHER MODIFIERS
+MODIFIERS · NONE
 Hit roll
 −
 0
@@ -1002,15 +1082,11 @@ Wound roll
 −
 0
 +
-AP better
+AP
 −
 0
 +
 Damage
-−
-0
-+
-Attacks
 −
 0
 +
@@ -1022,18 +1098,6 @@ Re-roll wounds
 none
 1s
 all
-Every weapon has
-Lethal
-Sustained 1
-Dev. wounds
-Target InSv
-−
-none
-+
-Target Feel No Pain
-−
-none
-+
 
 ######## damage fight · DAMAGE Damage
 YOUR
@@ -1041,20 +1105,117 @@ The Swarmlord
 SHOOT
 FIGHT
 BOTH
-THEIR
-Knight Destrier (×2)
-6 bigs · T10 · Sv 3+ · W18
-THEY ATTACK
-6.2
-of 18 wounds lost
-destroyed in <1% of games
-
-≈0 pts destroyed
-
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+4.0
+of 5 destroyed
+8.1 wounds lost · wiped in 45% of games
 Charged this turn
 ×
-theirs: Knights of Legend
-9 NOT COUNTED
+5 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1077,94 +1238,57 @@ AP
 D
 3
 TWIN-LINKED
-−6.2
-WOUNDS IF UNTICKED
+−45% wiped
+−4
+MODELS IF UNTICKED
 SITUATION AND RULES
-both sides
-Synapse
-Within Synapse Range: +1 S
-YOURS
-if it applies
-+2.2
-WOUNDS
-Knights of Legend
-Feel No Pain 6+
-THEIRS
-always counted · you can leave it out
-if left out: +1.2 wounds · +1% wiped
 Charged this turn
-YOURS
 said to hold
 no change: no rule here needs it
 0
+Synapse
+Within Synapse Range: +1 S
+if it applies
+no change: S10 still wounds T4 on 2+
+0
 Enraged Behemoths
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 4 or fewer wounds left
-YOURS
 if it applies
 no change: already hits on 2+
 0
 Below Starting Strength
 0
 Below Half-strength
-+2.2
-BEST
+0
 STRATAGEMS
-both sides, with their CP
+with their CP
 1CP Rampaging Monstrosities
 Fight phase: re-roll hit rolls
-YOURS
 if used
-+1.1
-WOUNDS
-NOT FOR THIS PAIR, BY THE RULES (4) · YOURS TO COUNT ANYWAY
++22% wiped
++0.4
+MODELS
+NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 
 1CP Swarm-guided Salvoes
-YOURS
-Shooting phase only
-NO CHANGE
-Invulnerable Save (5+*)
-THEIRS
-not against melee attacks
-NO CHANGE
-1CP Survivor of Strife
-THEIRS
 Shooting phase only
 NO CHANGE
 
-Nothing to count: 1CP Point-Blank Barrage (theirs, Shooting phase only)
-
-NOT COUNTED BY THE CALCULATOR (9)
+NOT COUNTED BY THE CALCULATOR (5)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 Domination of the Hive Mind
-YOURS
 Within 9" of the Swarmlord: within your army’s Synapse Range
 1CP Corrosive Viscera
-YOURS
-Its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).
+Your MONSTER model (one that cannot FLY) just destroyed: its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).
 1CP Command Re-roll
-YOURS
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
-YOURS
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive
-YOURS
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-1CP Noble Sacrifice
-THEIRS
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
-1CP Command Re-roll
-THEIRS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-1CP Epic Challenge
-THEIRS
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
-THEIRS
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-OTHER MODIFIERS
+MODIFIERS · NONE
 Hit roll
 −
 0
@@ -1173,15 +1297,11 @@ Wound roll
 −
 0
 +
-AP better
+AP
 −
 0
 +
 Damage
-−
-0
-+
-Attacks
 −
 0
 +
@@ -1193,18 +1313,6 @@ Re-roll wounds
 none
 1s
 all
-Every weapon has
-Lethal
-Sustained 1
-Dev. wounds
-Target InSv
-−
-none
-+
-Target Feel No Pain
-−
-none
-+
 
 ######## damage both · DAMAGE Damage
 YOUR
@@ -1212,29 +1320,125 @@ The Swarmlord
 SHOOT
 FIGHT
 BOTH
-THEIR
-Knight Destrier (×2)
-6 bigs · T10 · Sv 3+ · W18
-THEY ATTACK
-7.0
-of 18 wounds lost
-destroyed in 1% of games
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+4.8
+of 5 destroyed
+9.6 wounds lost · wiped in 85% of games
 
-Shoot 0.90 · Fight 6.13 · the charge is taken to succeed
+Shoot 2.14 · Fight 2.63 · the charge is taken to succeed
 
-≈1 pts destroyed
-
-theirs: Knights of Legend
-theirs: Invulnerable Save (5+*)
 Charged this turn
 ×
-theirs: Knights of Legend (fight)
-13 NOT COUNTED
+7 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
 
-Effects are on the total: their models destroyed by the end of the fight, the shooting’s choices and the fight’s alike.
+Effects are on the total: models destroyed by the end of the fight, the shooting’s choices and the fight’s alike.
 
 The charge is taken to succeed (no charge roll); “Charged this turn” is ticked for the fight.
 
@@ -1256,38 +1460,28 @@ AP
 D
 2
 PSYCHIC, TORRENT
-−0.9
-WOUNDS IF UNTICKED
+−40% wiped
+−0.7
+MODELS IF UNTICKED
 SITUATION AND RULES
-both sides
-Knights of Legend
-Feel No Pain 6+
-THEIRS
-always counted · you can leave it out
-if left out: +0.2 wounds
-Target has the benefit of cover
-THEIRS
-if it applies
-no change: [TORRENT] hits automatically: no hit roll
-0
-ALL ▾
 Close-quarters shooting at a unit it is engaged with
 -1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
-YOURS
 if it applies
 no change: [TORRENT] hits automatically: no hit roll
 0
 ALL ▾
-Target is engaged
--1 to hit; no [BLAST]
-YOURS
+Close-quarters shooting at another unit
+-1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
+if it applies
+0
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
 if it applies
 no change: [TORRENT] hits automatically: no hit roll
 0
 ALL ▾
 Enraged Behemoths
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 4 or fewer wounds left
-YOURS
 if it applies
 no change: [TORRENT] hits automatically: no hit roll
 0
@@ -1295,60 +1489,37 @@ ALL ▾
 Below Starting Strength
 0
 Below Half-strength
-+0.9
++0.1
 BEST
-Invulnerable Save (5+*)
-5+ invulnerable save against ranged attacks only
-THEIRS
-always counted · you can leave it out
-if left out: no change
-HELP FROM OTHER UNITS
-of your list · if the table gives it
 Onslaught (Hive Tyrant)
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS]
-YOURS
 if it applies
 no change: [TORRENT] hits automatically: no hit roll
 0
 ALL ▾
 STRATAGEMS
-both sides, with their CP
+with their CP
 1CP Swarm-guided Salvoes
 Your Shooting phase: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
-YOURS
 if used
 0
-1CP Survivor of Strife
-when targeted in the Shooting phase: -1 to wound when the attack’s S is greater than its T · in these numbers: -1 to their wound rolls when S is greater than T
-THEIRS
-if used
-0
-NOT FOR THIS PAIR, BY THE RULES (7) · YOURS TO COUNT ANYWAY
+NOT FOR THIS STEP, BY THE RULES (4) · YOURS TO COUNT ANYWAY
 
 1CP Rampaging Monstrosities
-YOURS
 Fight phase only
 NO CHANGE
 
-Nothing to count: 1CP Corrosive Viscera (yours, in the other player’s turn only) · 1CP Epic Challenge, 2CP Counteroffensive (yours, Fight phase only) · 1CP Point-Blank Barrage (theirs, in its own turn only) · 1CP Epic Challenge, 2CP Counteroffensive (theirs, Fight phase only)
+Nothing to count: 1CP Corrosive Viscera (in the other player’s turn only) · 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (4)
+NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 Domination of the Hive Mind
-YOURS
 Within 9" of the Swarmlord: within your army’s Synapse Range
 1CP Command Re-roll
-YOURS
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-1CP Noble Sacrifice
-THEIRS
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
-1CP Command Re-roll
-THEIRS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-OTHER MODIFIERS
+MODIFIERS · NONE
 Hit roll
 −
 0
@@ -1357,15 +1528,11 @@ Wound roll
 −
 0
 +
-AP better
+AP
 −
 0
 +
 Damage
-−
-0
-+
-Attacks
 −
 0
 +
@@ -1377,18 +1544,6 @@ Re-roll wounds
 none
 1s
 all
-Every weapon has
-Lethal
-Sustained 1
-Dev. wounds
-Target InSv
-−
-none
-+
-Target Feel No Pain
-−
-none
-+
 THE FIGHT
 THEN, AGAINST WHAT THE SHOOTING LEFT
 MELEE WEAPONS
@@ -1408,95 +1563,57 @@ AP
 D
 3
 TWIN-LINKED
-−6.1
-WOUNDS IF UNTICKED
+−80% wiped
+−2.6
+MODELS IF UNTICKED
 SITUATION AND RULES
-both sides
-Synapse
-Within Synapse Range: +1 S
-YOURS
-if it applies
-+1% wiped
-+2.2
-WOUNDS
-Knights of Legend
-Feel No Pain 6+
-THEIRS
-always counted · you can leave it out
-if left out: +1.2 wounds · +2% wiped
 Charged this turn
-YOURS
 holds: Both takes the charge as made (no charge roll)
 no change: no rule here needs it
 0
+Synapse
+Within Synapse Range: +1 S
+if it applies
+no change: S10 still wounds T4 on 2+
+0
 Enraged Behemoths
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 4 or fewer wounds left
-YOURS
 if it applies
 no change: already hits on 2+
 0
 Below Starting Strength
 0
 Below Half-strength
-+2.2
-BEST
+0
 STRATAGEMS
-both sides, with their CP
+with their CP
 1CP Rampaging Monstrosities
 Fight phase: re-roll hit rolls
-YOURS
 if used
-+1
-WOUNDS
-NOT FOR THIS PAIR, BY THE RULES (4) · YOURS TO COUNT ANYWAY
++8% wiped
++0.1
+MODELS
+NOT FOR THIS STEP, BY THE RULES (1) · YOURS TO COUNT ANYWAY
 
 1CP Swarm-guided Salvoes
-YOURS
-Shooting phase only
-NO CHANGE
-Invulnerable Save (5+*)
-THEIRS
-not against melee attacks
-NO CHANGE
-1CP Survivor of Strife
-THEIRS
 Shooting phase only
 NO CHANGE
 
-Nothing to count: 1CP Point-Blank Barrage (theirs, Shooting phase only)
-
-NOT COUNTED BY THE CALCULATOR (9)
+NOT COUNTED BY THE CALCULATOR (5)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 Domination of the Hive Mind
-YOURS
 Within 9" of the Swarmlord: within your army’s Synapse Range
 1CP Corrosive Viscera
-YOURS
-Its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).
+Your MONSTER model (one that cannot FLY) just destroyed: its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).
 1CP Command Re-roll
-YOURS
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
-YOURS
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive
-YOURS
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-1CP Noble Sacrifice
-THEIRS
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
-1CP Command Re-roll
-THEIRS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-1CP Epic Challenge
-THEIRS
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
-THEIRS
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-OTHER MODIFIERS
+MODIFIERS · NONE
 Hit roll
 −
 0
@@ -1505,15 +1622,11 @@ Wound roll
 −
 0
 +
-AP better
+AP
 −
 0
 +
 Damage
-−
-0
-+
-Attacks
 −
 0
 +
@@ -1525,18 +1638,6 @@ Re-roll wounds
 none
 1s
 all
-Every weapon has
-Lethal
-Sustained 1
-Dev. wounds
-Target InSv
-−
-none
-+
-Target Feel No Pain
-−
-none
-+
 
 ######## strats {"folded":true} · DAMAGE Stratagems
 EXPAND ALL
@@ -1550,7 +1651,7 @@ Your Movement All but Neurogaunts ×2
 1
 CP
 Corrosive Viscera
-Its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).
+Your MONSTER model (one that cannot FLY) just destroyed: its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).
 Their Shoot · Fight All but Neurogaunts ×2
 1
 CP
@@ -1560,7 +1661,7 @@ Your Shooting All but Neurogaunts ×2
 1
 CP
 Massive Impact
-Select one enemy unit within Engagement Range of your model and roll six D6: 1 mortal wound for each 4+.
+Your model has ended a Charge move: select one enemy unit within Engagement Range of it and roll six D6: 1 mortal wound for each 4+.
 Your Charge All but Neurogaunts ×2
 1
 CP
@@ -1570,14 +1671,14 @@ Fight All but Neurogaunts ×2
 1
 CP
 Savage Roar
-That enemy unit takes a Battle-shock test and has -1 to hit your unit until the end of the phase; also -1 to wound if it failed the test.
+An enemy unit has selected your unit as a target: it takes a Battle-shock test and has -1 to hit your unit until the end of the phase; also -1 to wound if it failed the test.
 Fight All but Neurogaunts ×2
 TALONS OF THE NORN QUEEN
 3
 1
 CP
 Tanglestrike Rounds
-One enemy unit hit by those attacks is tethered (-2" M) until the start of your next Command phase.
+After your unit has shot: one enemy unit hit by those attacks is tethered (-2" M) until the start of your next Command phase.
 Your Shooting Norn Assimilator ×2
 1
 CP
@@ -1604,7 +1705,7 @@ End of their Movement Any unit
 1
 CP
 Fire Overwatch
-Your unit shoots using snap shooting.
+Your unengaged unit shoots using snap shooting.
 End of their Movement All but Hive Tyrant, Neurogaunts ×2
 1
 CP
@@ -1614,7 +1715,7 @@ Your Charge All but Neurogaunts ×2
 1
 CP
 Heroic Intervention
-Your unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
 End of their Charge · Into the Fray +1CP Any unit
 1
 CP
@@ -1634,7 +1735,7 @@ Any phase Any unit
 1
 CP
 Explosives
-One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
+Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
 1
 CP
@@ -2043,7 +2144,7 @@ D6+3
 PSYCHIC, TORRENT
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll (Swarm-guided Salvoes)
+1CP Swarm-guided Salvoes: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
 MELEE WEAPONS
 A
 WS
@@ -2059,7 +2160,7 @@ Bone Sabres
 TWIN-LINKED
 Within Synapse Range: +1 S
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP re-roll hit rolls (Rampaging Monstrosities)
+1CP Rampaging Monstrosities: re-roll hit rolls
 ABILITIES
 Hive Commander
 Your Command
@@ -2161,7 +2262,7 @@ vs MONSTER/VEHICLE: +1 to wound rolls (Monstrous Nemesis)
 Lost any wounds (below Starting Strength): +1 to hit rolls; also +1 to wound rolls at 4 or fewer wounds left (Enraged Behemoths)
 Within 9" of the Swarmlord: within your army’s Synapse Range (Domination of the Hive Mind)
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP re-roll hit rolls (Rampaging Monstrosities)
+1CP Rampaging Monstrosities: re-roll hit rolls
 ABILITIES
 Onslaught
 Move · Your Shoot
@@ -2336,7 +2437,7 @@ D6+1
 HARPOONED
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll (Swarm-guided Salvoes)
+1CP Swarm-guided Salvoes: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
 MELEE WEAPONS
 A
 WS
@@ -2359,9 +2460,9 @@ D6+1
 EXTRA ATTACKS
 Within Synapse Range: +1 S
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP re-roll hit rolls (Rampaging Monstrosities)
+1CP Rampaging Monstrosities: re-roll hit rolls
 STRATAGEMS · TALONS OF THE NORN QUEEN
-1CP +2 S, When selected to fight (Lesser Prey)
+1CP Lesser Prey: +2 S, When selected to fight
 ABILITIES
 Harpoon Barbs
 Once per turn
@@ -2393,6 +2494,7 @@ Once per battle, per unit · Command · Your turn
 
 Synaptoprescience
 Enhancement
+Already in InSv
 
 Enhancement
 
@@ -2473,7 +2575,7 @@ D6+1
 HARPOONED
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll (Swarm-guided Salvoes)
+1CP Swarm-guided Salvoes: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
 MELEE WEAPONS
 A
 WS
@@ -2496,9 +2598,9 @@ D6+1
 EXTRA ATTACKS
 Within Synapse Range: +1 S
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP re-roll hit rolls (Rampaging Monstrosities)
+1CP Rampaging Monstrosities: re-roll hit rolls
 STRATAGEMS · TALONS OF THE NORN QUEEN
-1CP +2 S, When selected to fight (Lesser Prey)
+1CP Lesser Prey: +2 S, When selected to fight
 ABILITIES
 Harpoon Barbs
 Once per turn
@@ -2530,6 +2632,7 @@ Once per battle, per unit · Command · Your turn
 
 Synaptoprescience
 Enhancement
+Already in InSv
 
 Enhancement
 
@@ -2627,7 +2730,7 @@ MELTA 2, PSYCHIC, ANTI-CHARACTER 2+
 BLAST, PSYCHIC, ANTI-CHARACTER 2+
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll (Swarm-guided Salvoes)
+1CP Swarm-guided Salvoes: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
 MELEE WEAPONS
 A
 WS
@@ -2650,9 +2753,9 @@ Monstrous rending claws
 EXTRA ATTACKS
 Within Synapse Range: +1 S
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP re-roll hit rolls (Rampaging Monstrosities)
+1CP Rampaging Monstrosities: re-roll hit rolls
 STRATAGEMS · TALONS OF THE NORN QUEEN
-1CP +2 S, When selected to fight (Lesser Prey)
+1CP Lesser Prey: +2 S, When selected to fight
 ABILITIES
 Singular Purpose
 Any phase
@@ -2776,7 +2879,7 @@ MELTA 2, PSYCHIC
 BLAST, PSYCHIC
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll (Swarm-guided Salvoes)
+1CP Swarm-guided Salvoes: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
 MELEE WEAPONS
 A
 WS
@@ -2799,9 +2902,9 @@ Monstrous rending claws
 EXTRA ATTACKS
 Within Synapse Range: +1 S
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP re-roll hit rolls (Rampaging Monstrosities)
+1CP Rampaging Monstrosities: re-roll hit rolls
 STRATAGEMS · TALONS OF THE NORN QUEEN
-1CP +2 S, When selected to fight (Lesser Prey)
+1CP Lesser Prey: +2 S, When selected to fight
 ABILITIES
 Singular Purpose
 Any phase
@@ -2906,7 +3009,7 @@ D6+6
 TORRENT
 Within 6" of the Hive Tyrant: ranged weapons have [ASSAULT] and [LETHAL HITS] (Onslaught)
 STRATAGEMS · CRUSHER STAMPEDE · YOUR SHOOTING PHASE
-1CP [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll (Swarm-guided Salvoes)
+1CP Swarm-guided Salvoes: [IGNORES COVER]; can ignore any or all modifiers to BS and any or all modifiers to the hit roll
 MELEE WEAPONS
 A
 WS
@@ -2921,7 +3024,7 @@ Powerful limbs
 2
 Within Synapse Range: +1 S
 STRATAGEMS · CRUSHER STAMPEDE · FIGHT PHASE
-1CP re-roll hit rolls (Rampaging Monstrosities)
+1CP Rampaging Monstrosities: re-roll hit rolls
 ABILITIES
 Resilient Organism
 Once per battle
@@ -2947,6 +3050,7 @@ FACTION: TYRANIDS
 GREAT DEVOURER
 MONSTER
 TYRANNOFEX
+Wahapedia also lists FRAME (from its errata); GW’s Faction Pack (14-10) and BSData don’t
 Ask about this unit
 ‹ Norn Emissary
 
@@ -2955,8 +3059,7 @@ THIS GAME
 NEW GAME
 Nidzillas
 your list
-6 bigs
-your opponent’s list
+Opponent
 CP
 −
 0
@@ -2983,10 +3086,6 @@ Excluding Core CP, each player can gain a maximum of 1CP per battle round (inclu
 THIS LIST
 
 Hive Commander · The Swarmlord: “At the start of your Command phase, if this model is on the battlefield, you gain 1CP”
-
-THEIR LIST
-
-Code Chivalric · Imperial Knights army rule: “The first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).”
 
 CHOICES THIS GAME
 Singular Purpose · Norn Assimilator · Synaptoprescience (1 of 2)
@@ -3070,18 +3169,6 @@ Your unit has Feel No Pain 4+ against mortal wounds.
 CP
 Command Re-roll
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-6 BIGS IN THIS PHASE
-ANY PHASE
-3
-Knights of Legend · Freeblade Company detachment rule
-1
-CP
-Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 NEXT: MOVEMENT PHASE ›
 BEFORE THE BATTLE
 
@@ -3131,21 +3218,13 @@ THIS LIST
 
 App note, not rules text: Nidzillas: points limit 2000 pts (Strike Force); 50% of it is 1000 pts.
 
-THEIR LIST
-
-App note, not rules text: 6 bigs: points limit 2000 pts (Strike Force); 50% of it is 1000 pts.
-
 8 Deploy Armies
-TITANIC
 
 Players take it in turns to set up their units (excluding those in strategic reserves) one at a time, wholly within their deployment zone, starting with the Defender.
 
 If you set up a TITANIC unit when it is your turn to set up a unit, skip your next turn to set up a unit.
 
 Once you have finished setting up your units, if your opponent has any units that have not been set up, they set up those units.
-
-THEIR LIST
-TITANIC: Knight Destrier ×2, Knight Errant, Knight Paladin ×2, Knight Warden
 
 9 Redeploy Units
 
@@ -3158,7 +3237,7 @@ Roll off: the winner takes the first turn.
 
 FIRST TURN
 NIDZILLAS
-6 BIGS
+OPPONENT
 11 Resolve Pre-battle Rules
 
 Players alternate resolving any pre-battle rules units from their army may have, starting with the player who will take the first turn.
@@ -3180,8 +3259,7 @@ THIS GAME
 NEW GAME
 Nidzillas
 your list
-6 bigs
-your opponent’s list
+Opponent
 CP
 −
 3
@@ -3209,10 +3287,6 @@ THIS LIST
 
 Hive Commander · The Swarmlord: “At the start of your Command phase, if this model is on the battlefield, you gain 1CP”
 
-THEIR LIST
-
-Code Chivalric · Imperial Knights army rule: “The first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).”
-
 CHOICES THIS GAME
 Singular Purpose · Norn Assimilator · Synaptoprescience (1 of 2)
 
@@ -3224,11 +3298,6 @@ SELECT ONE ENEMY UNIT
 
 Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
 
-THEIR UNIT
-KNIGHT DESTRIER
-KNIGHT ERRANT
-KNIGHT PALADIN
-KNIGHT WARDEN
 Singular Purpose · Norn Assimilator · Synaptoprescience (2 of 2)
 
 At the start of the first battle round · For the battle
@@ -3239,11 +3308,6 @@ SELECT ONE ENEMY UNIT
 
 Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
 
-THEIR UNIT
-KNIGHT DESTRIER
-KNIGHT ERRANT
-KNIGHT PALADIN
-KNIGHT WARDEN
 Singular Purpose · Norn Emissary · Destabilising Predation
 
 At the start of the first battle round · For the battle
@@ -3254,11 +3318,6 @@ SELECT ONE ENEMY UNIT
 
 Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
 
-THEIR UNIT
-KNIGHT DESTRIER
-KNIGHT ERRANT
-KNIGHT PALADIN
-KNIGHT WARDEN
 Singular Purpose · Norn Emissary
 
 At the start of the first battle round · For the battle
@@ -3269,11 +3328,6 @@ SELECT ONE ENEMY UNIT
 
 Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
 
-THEIR UNIT
-KNIGHT DESTRIER
-KNIGHT ERRANT
-KNIGHT PALADIN
-KNIGHT WARDEN
 THIS PHASE
 BATTLE ROUND
 ‹
@@ -3301,11 +3355,11 @@ Until the end of the phase, your unit’s ranged weapons have [IGNORES COVER], a
 1
 CP
 Tanglestrike Rounds
-One enemy unit hit by those attacks is tethered (-2" M) until the start of your next Command phase.
+After your unit has shot: one enemy unit hit by those attacks is tethered (-2" M) until the start of your next Command phase.
 1
 CP
 Explosives
-One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
+Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
 ANY PHASE
 6
@@ -3318,33 +3372,6 @@ Picked: Select one enemy unit
 CP
 Catalytic Biofortification
 Your unit has Feel No Pain 4+ against mortal wounds.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-6 BIGS IN THIS PHASE
-
-START OF SHOOTING PHASE 10.01
-
-1
-CP
-Smokescreen
-Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
-No unit in this list can use it (needs SMOKE)
-
-SHOOT 10.02
-
-1
-CP
-Survivor of Strife
-Until the end of the phase, attacks against your unit whose S is greater than its T have -1 to the wound roll.
-ANY PHASE
-3
-Knights of Legend · Freeblade Company detachment rule
-1
-CP
-Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
 1
 CP
 Command Re-roll
@@ -3410,18 +3437,6 @@ Your unit has Feel No Pain 4+ against mortal wounds.
 CP
 Command Re-roll
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-6 BIGS IN THIS PHASE
-ANY PHASE
-3
-Knights of Legend · Freeblade Company detachment rule
-1
-CP
-Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 NEXT: MOVEMENT PHASE ›
 
 ######## game round 1 your movement · GAME Game tracker
@@ -3463,30 +3478,6 @@ Your unit has Feel No Pain 4+ against mortal wounds.
 CP
 Command Re-roll
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-6 BIGS IN THIS PHASE
-
-END OF MOVEMENT PHASE 09.03
-
-1
-CP
-Rapid Ingress
-Your unit in strategic reserves makes an ingress move (not in the first battle round).
-1
-CP
-Fire Overwatch
-Your unit shoots using snap shooting.
-No unit in this list can use it (not TITANIC: every unit here is)
-ANY PHASE
-3
-Knights of Legend · Freeblade Company detachment rule
-1
-CP
-Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 NEXT: SHOOTING PHASE ›
 
 ######## game round 1 your shooting · GAME Game tracker
@@ -3517,11 +3508,11 @@ Until the end of the phase, your unit’s ranged weapons have [IGNORES COVER], a
 1
 CP
 Tanglestrike Rounds
-One enemy unit hit by those attacks is tethered (-2" M) until the start of your next Command phase.
+After your unit has shot: one enemy unit hit by those attacks is tethered (-2" M) until the start of your next Command phase.
 1
 CP
 Explosives
-One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
+Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
 ANY PHASE
 6
@@ -3533,33 +3524,6 @@ Singular Purpose · Norn Assimilator ×2, Norn Emissary ×2
 CP
 Catalytic Biofortification
 Your unit has Feel No Pain 4+ against mortal wounds.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-6 BIGS IN THIS PHASE
-
-START OF SHOOTING PHASE 10.01
-
-1
-CP
-Smokescreen
-Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
-No unit in this list can use it (needs SMOKE)
-
-SHOOT 10.02
-
-1
-CP
-Survivor of Strife
-Until the end of the phase, attacks against your unit whose S is greater than its T have -1 to the wound roll.
-ANY PHASE
-3
-Knights of Legend · Freeblade Company detachment rule
-1
-CP
-Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
 1
 CP
 Command Re-roll
@@ -3589,7 +3553,7 @@ Synapse · Tyranids army rule
 1
 CP
 Massive Impact
-Select one enemy unit within Engagement Range of your model and roll six D6: 1 mortal wound for each 4+.
+Your model has ended a Charge move: select one enemy unit within Engagement Range of it and roll six D6: 1 mortal wound for each 4+.
 1
 CP
 Crushing Impact
@@ -3604,29 +3568,6 @@ Singular Purpose · Norn Assimilator ×2, Norn Emissary ×2
 CP
 Catalytic Biofortification
 Your unit has Feel No Pain 4+ against mortal wounds.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-6 BIGS IN THIS PHASE
-
-CHARGE 11.02
-
-Code Chivalric · Imperial Knights army rule
-
-END OF CHARGE PHASE 11.03
-
-1
-CP
-Heroic Intervention
-Your unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
-ANY PHASE
-3
-Knights of Legend · Freeblade Company detachment rule
-1
-CP
-Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
 1
 CP
 Command Re-roll
@@ -3657,7 +3598,7 @@ Monstrous Nemesis · Hive Tyrant
 1
 CP
 Corrosive Viscera
-Its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).
+Your MONSTER model (one that cannot FLY) just destroyed: its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).
 1
 CP
 Rampaging Monstrosities
@@ -3665,7 +3606,7 @@ Until the end of the phase, your unit’s attacks can re-roll the hit roll.
 1
 CP
 Savage Roar
-That enemy unit takes a Battle-shock test and has -1 to hit your unit until the end of the phase; also -1 to wound if it failed the test.
+An enemy unit has selected your unit as a target: it takes a Battle-shock test and has -1 to hit your unit until the end of the phase; also -1 to wound if it failed the test.
 1
 CP
 Lesser Prey
@@ -3684,42 +3625,6 @@ Singular Purpose · Norn Assimilator ×2, Norn Emissary ×2
 CP
 Catalytic Biofortification
 Your unit has Feel No Pain 4+ against mortal wounds.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-6 BIGS IN THIS PHASE
-
-PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
-
-Code Chivalric · Imperial Knights army rule
-1
-CP
-Strength from Exile
-Until the end of the phase, if no other friendly units are within 9", your unit’s attacks re-roll a hit roll of 1 and a wound roll of 1.
-1
-CP
-Epic Challenge
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2
-CP
-Counteroffensive
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-
-END OF FIGHT PHASE 12.09
-
-1
-CP
-Flanking Manoeuvres
-Remove your unit from the battlefield and place it into Strategic Reserves.
-No unit in this list can use it (needs ARMIGER)
-ANY PHASE
-3
-Knights of Legend · Freeblade Company detachment rule
-1
-CP
-Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
 1
 CP
 Command Re-roll
@@ -3765,25 +3670,6 @@ Your unit has Feel No Pain 4+ against mortal wounds.
 CP
 Command Re-roll
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-6 BIGS IN THIS PHASE
-
-BATTLE-SHOCK 08.03
-
-1
-CP
-Insane Bravery
-The battle-shock roll you are about to make for your unit is automatically successful.
-ANY PHASE
-3
-Knights of Legend · Freeblade Company detachment rule
-1
-CP
-Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 NEXT: MOVEMENT PHASE ›
 
 ######## game round 1 their movement · GAME Game tracker
@@ -3818,7 +3704,7 @@ Your unit in strategic reserves makes an ingress move (not in the first battle r
 1
 CP
 Fire Overwatch
-Your unit shoots using snap shooting.
+Your unengaged unit shoots using snap shooting.
 ANY PHASE
 6
 Enraged Behemoths · Crusher Stampede detachment rule
@@ -3829,27 +3715,6 @@ Singular Purpose · Norn Assimilator ×2, Norn Emissary ×2
 CP
 Catalytic Biofortification
 Your unit has Feel No Pain 4+ against mortal wounds.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-6 BIGS IN THIS PHASE
-
-MOVE UNITS 09.02
-
-Code Chivalric · Imperial Knights army rule
-Ram Jets · Knight Destrier ×2
-1
-CP
-Full Tilt
-Until the end of the phase, if your unit Advances, no Advance roll: +6" Move instead (+9" for an ARMIGER or DESTRIER unit).
-ANY PHASE
-3
-Knights of Legend · Freeblade Company detachment rule
-1
-CP
-Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
 1
 CP
 Command Re-roll
@@ -3887,7 +3752,7 @@ Synapse · Tyranids army rule
 1
 CP
 Corrosive Viscera
-Its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).
+Your MONSTER model (one that cannot FLY) just destroyed: its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).
 ANY PHASE
 6
 Enraged Behemoths · Crusher Stampede detachment rule
@@ -3898,39 +3763,6 @@ Singular Purpose · Norn Assimilator ×2, Norn Emissary ×2
 CP
 Catalytic Biofortification
 Your unit has Feel No Pain 4+ against mortal wounds.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-6 BIGS IN THIS PHASE
-
-SHOOT 10.02
-
-Code Chivalric · Imperial Knights army rule
-Saturation Fire · Knight Destrier ×2
-Aggressive Assault · Knight Errant
-Seasoned Noble · Knight Paladin ×2
-Thin Their Ranks · Knight Warden
-1
-CP
-Strength from Exile
-Until the end of the phase, if no other friendly units are within 9", your unit’s attacks re-roll a hit roll of 1 and a wound roll of 1.
-1
-CP
-Point-Blank Barrage
-Until the end of the phase, your unit’s Blast weapons can target enemy units within Engagement Range of it (if no other friendly unit is within Engagement Range of that enemy unit) and it has no hit roll penalty for being within Engagement Range; each unmodified hit roll of 1 with a Blast weapon against a unit within Engagement Range of it is 1 mortal wound to your unit, after all its attacks are resolved.
-1
-CP
-Explosives
-One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
-No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
-ANY PHASE
-3
-Knights of Legend · Freeblade Company detachment rule
-1
-CP
-Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
 1
 CP
 Command Re-roll
@@ -3963,7 +3795,7 @@ END OF CHARGE PHASE 11.03
 1
 CP
 Heroic Intervention
-Your unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
 ANY PHASE
 6
 Enraged Behemoths · Crusher Stampede detachment rule
@@ -3974,26 +3806,6 @@ Singular Purpose · Norn Assimilator ×2, Norn Emissary ×2
 CP
 Catalytic Biofortification
 Your unit has Feel No Pain 4+ against mortal wounds.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-6 BIGS IN THIS PHASE
-
-CHARGE 11.02
-
-Code Chivalric · Imperial Knights army rule
-1
-CP
-Crushing Impact
-After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
-ANY PHASE
-3
-Knights of Legend · Freeblade Company detachment rule
-1
-CP
-Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
 1
 CP
 Command Re-roll
@@ -4024,7 +3836,7 @@ Monstrous Nemesis · Hive Tyrant
 1
 CP
 Corrosive Viscera
-Its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).
+Your MONSTER model (one that cannot FLY) just destroyed: its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).
 1
 CP
 Rampaging Monstrosities
@@ -4032,7 +3844,7 @@ Until the end of the phase, your unit’s attacks can re-roll the hit roll.
 1
 CP
 Savage Roar
-That enemy unit takes a Battle-shock test and has -1 to hit your unit until the end of the phase; also -1 to wound if it failed the test.
+An enemy unit has selected your unit as a target: it takes a Battle-shock test and has -1 to hit your unit until the end of the phase; also -1 to wound if it failed the test.
 1
 CP
 Lesser Prey
@@ -4055,30 +3867,6 @@ Singular Purpose · Norn Assimilator ×2, Norn Emissary ×2
 CP
 Catalytic Biofortification
 Your unit has Feel No Pain 4+ against mortal wounds.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-6 BIGS IN THIS PHASE
-
-PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
-
-Code Chivalric · Imperial Knights army rule
-1
-CP
-Strength from Exile
-Until the end of the phase, if no other friendly units are within 9", your unit’s attacks re-roll a hit roll of 1 and a wound roll of 1.
-1
-CP
-Epic Challenge
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-ANY PHASE
-3
-Knights of Legend · Freeblade Company detachment rule
-1
-CP
-Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
 1
 CP
 Command Re-roll
@@ -4109,7 +3897,7 @@ Monstrous Nemesis · Hive Tyrant
 1
 CP
 Corrosive Viscera
-Its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).
+Your MONSTER model (one that cannot FLY) just destroyed: its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).
 1
 CP
 Rampaging Monstrosities
@@ -4117,7 +3905,7 @@ Until the end of the phase, your unit’s attacks can re-roll the hit roll.
 1
 CP
 Savage Roar
-That enemy unit takes a Battle-shock test and has -1 to hit your unit until the end of the phase; also -1 to wound if it failed the test.
+An enemy unit has selected your unit as a target: it takes a Battle-shock test and has -1 to hit your unit until the end of the phase; also -1 to wound if it failed the test.
 1
 CP
 Lesser Prey
@@ -4140,30 +3928,6 @@ Singular Purpose · Norn Assimilator ×2, Norn Emissary ×2
 CP
 Catalytic Biofortification
 Your unit has Feel No Pain 4+ against mortal wounds.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-6 BIGS IN THIS PHASE
-
-PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
-
-Code Chivalric · Imperial Knights army rule
-1
-CP
-Strength from Exile
-Until the end of the phase, if no other friendly units are within 9", your unit’s attacks re-roll a hit roll of 1 and a wound roll of 1.
-1
-CP
-Epic Challenge
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-ANY PHASE
-3
-Knights of Legend · Freeblade Company detachment rule
-1
-CP
-Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
 1
 CP
 Command Re-roll
@@ -5193,6 +4957,9 @@ WHILE SHOOTING:
 
 You can only target one visible enemy unit within 24" of your unit (and only if it is an eligible target).
 Each attack only hits on an unmodified hit roll of 6 (irrespective of the attacking weapon’s BS characteristic or any modifiers).
+
+Wahapedia core rules (not in GW’s Core Rules PDF, 01-06): Those hits are not critical hits.
+
 You cannot re-roll hit rolls.
 
 AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.

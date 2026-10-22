@@ -6,8 +6,6 @@ Freeblade Company · Disposition: Purge the Foe
 Overview
 Damage calculator
 Game tracker
-Opponent
-None yet: pick their list
 Units
 6
 Stratagems
@@ -35,7 +33,7 @@ Freeblade Company (3 DP)
 Disposition: Purge the Foe
 POINTS
 2000 / 2000 · Strike Force
-ARMY RULES
+ARMY AND DETACHMENT RULES
 Code Chivalric
 
 If your Army Faction is IMPERIAL KNIGHTS, at the end of the Read Mission Objectives step, you must determine your army’s Oath for the coming battle. An Oath consists of two parts - one Deed and one Quality. There are three options for each part, shown below.
@@ -76,6 +74,7 @@ Your Command · no unit in this list it applies to
 Some IMPERIAL KNIGHTS models have a Bondsman ability, tagged with the word ‘Bondsman’. In your Command phase, one or more models from your army with a Bondsman ability can use that ability. For each one that does, select one friendly ARMIGER model within 12" of that model (you cannot select an ARMIGER model that is already being affected by a Bondsman ability). Until the start of your next Command phase, that ARMIGER model is affected by that Bondsman ability.
 
 Super-heavy Walker
+Your Movement
 
 IMPERIAL KNIGHTS datasheets list Super-heavy Walker as a FACTION ability (Faction Pack 1.2), whose Codex text differs from Core Rules 24.35; the sources don’t say which applies.
 
@@ -86,10 +85,17 @@ It can also move through sections of terrain features that are more than 4" in h
 
 CORE RULESuper-Heavy Walker
 
+Knights of Legend
+Freeblade Company · Your Command
+
+IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
+
+APPLIES TOKnight Destrier, Knight Errant, Knight Paladin, Knight Warden
+
 READ MISSION OBJECTIVES STEP
 RULES
 Code Chivalric · Imperial Knights army rule
-START OF THE BATTLE ROUND
+START OF THE BATTLE AND THE BATTLE ROUNDS
 START OF THE BATTLE
 Code Chivalric (Deed 1–2) · Imperial Knights army rule
 USES PER BATTLE
@@ -171,7 +177,7 @@ Target within range of an objective marker: ranged attacks have [IGNORES COVER] 
 Damaged (1-6 wounds left): -1 to hit rolls (and -4 OC) (Damaged: 1-6 Wounds Remaining)
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
 STRATAGEMS · FREEBLADE COMPANY
-1CP re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9" (Strength from Exile)
+1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
 Knight Errant
 Thermal cannon
 24"
@@ -200,7 +206,7 @@ Target is the closest eligible target: +1 to hit rolls (Aggressive Assault)
 Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
 STRATAGEMS · FREEBLADE COMPANY
-1CP re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9" (Strength from Exile)
+1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
 Knight Paladin
 ×2 units
 Questoris heavy stubber
@@ -238,7 +244,7 @@ Target is the closest eligible target: improve AP by 1 (Seasoned Noble)
 Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
 STRATAGEMS · FREEBLADE COMPANY
-1CP re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9" (Strength from Exile)
+1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
 Knight Warden
 Warlord
 Avenger gatling cannon
@@ -275,7 +281,7 @@ vs non-MONSTER/VEHICLE targets: ranged attacks have [DEVASTATING WOUNDS] (Thin T
 Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
 Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
 STRATAGEMS · FREEBLADE COMPANY
-1CP re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9" (Strength from Exile)
+1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Knight Destrier
@@ -288,7 +294,7 @@ Titanic feet
 2
 Damaged (1-6 wounds left): -1 to hit rolls (and -4 OC) (Damaged: 1-6 Wounds Remaining)
 STRATAGEMS · FREEBLADE COMPANY
-1CP re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9" (Strength from Exile)
+1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
 Knight Errant
 Reaper chainsword
 ➤strike
@@ -305,7 +311,7 @@ Reaper chainsword
 2
 Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
 STRATAGEMS · FREEBLADE COMPANY
-1CP re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9" (Strength from Exile)
+1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
 Knight Paladin
 ×2 units
 Reaper chainsword
@@ -323,7 +329,7 @@ Reaper chainsword
 2
 Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
 STRATAGEMS · FREEBLADE COMPANY
-1CP re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9" (Strength from Exile)
+1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
 Knight Warden
 Warlord
 Reaper chainsword
@@ -341,7 +347,7 @@ Reaper chainsword
 2
 Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 Wounds Remaining)
 STRATAGEMS · FREEBLADE COMPANY
-1CP re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9" (Strength from Exile)
+1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
 
 ######## abilities · MELEE Abilities
 Knight Destrier
@@ -495,6 +501,7 @@ Your Command · no unit in this list it applies to
 Some IMPERIAL KNIGHTS models have a Bondsman ability, tagged with the word ‘Bondsman’. In your Command phase, one or more models from your army with a Bondsman ability can use that ability. For each one that does, select one friendly ARMIGER model within 12" of that model (you cannot select an ARMIGER model that is already being affected by a Bondsman ability). Until the start of your next Command phase, that ARMIGER model is affected by that Bondsman ability.
 
 Super-heavy Walker
+Your Movement
 
 IMPERIAL KNIGHTS datasheets list Super-heavy Walker as a FACTION ability (Faction Pack 1.2), whose Codex text differs from Core Rules 24.35; the sources don’t say which applies.
 
@@ -508,7 +515,7 @@ CORE RULESuper-Heavy Walker
 DETACHMENTS
 FREEBLADE COMPANY
 Knights of Legend
-Detachment rule · Any phase
+Detachment rule · Your Command
 
 IMPERIAL KNIGHTS models from your army have the Feel No Pain 6+ ability. In addition, at the start of your Command phase, each IMPERIAL KNIGHTS model from your army regains 1 lost wound.
 
@@ -539,41 +546,25 @@ STRATAGEMSFull Tilt, Strength from Exile, Point-Blank Barrage, Survivor of Strif
 
 UNIT RULES
 Deadly Demise
-
 Knight Destrier D6
-
 Knight Errant D6
-
 Knight Paladin D6
-
 Knight Warden D6
-
 Devastating Wounds
-
 Knight Warden
-
+Thin Their Ranks: Each time this model makes a ranged attack that targets an enemy unit (excluding MONSTERS and VEHICLES), that attack has the [DEVASTATING WOUNDS] ability.
 Lance
-
 Knight Paladin
 Paladin’s Duty (No ARMIGER models in this list): While a model is affected by this ability, weapons equipped by that model have the [LETHAL HITS] ability, and melee weapons equipped by that model have the [LANCE] ability.
-
 Lethal Hits
-
 Knight Paladin
 Paladin’s Duty (No ARMIGER models in this list): While a model is affected by this ability, weapons equipped by that model have the [LETHAL HITS] ability, and melee weapons equipped by that model have the [LANCE] ability.
-
 Super-Heavy Walker
-
 Knight Destrier
-
 Knight Errant
-
 Knight Paladin
-
 Knight Warden
-
 Sustained Hits
-
 Knight Warden
 Warden’s Duty (No ARMIGER models in this list): While a model is affected by this ability, weapons equipped by that model have the [SUSTAINED HITS 1] ability, and ranged weapons equipped by that model have the [IGNORES COVER] ability.
 
@@ -608,19 +599,116 @@ Knight Destrier (×2)
 SHOOT
 FIGHT
 BOTH
-THEIR
-Canis Rex
-4 megas and a destrier · T11 · Sv 3+ · W26
-THEY ATTACK
-3.7
-of 26 wounds lost
-Canis Rex destroyed in <1% of games
-
-≈0 pts destroyed · Canis Rex’s share of the unit’s 415 (Sir Hekhtur not on the battlefield yet)
-
-theirs: Knights of Legend
-theirs: Invulnerable Save (5+*)
-6 NOT COUNTED
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+4.0
+of 5 destroyed
+8.0 wounds lost · wiped in 50% of games
+Nothing ticked: the datasheets as printed
+4 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -634,10 +722,12 @@ the target is farther than 18" (every weapon is taken to be in range)
 NOW
 Within 18", not 12"
 bonus for Questoris heavy stubber
++5% wiped
 +0.1
 Within 12"
 bonus for Questoris heavy stubber and Frag bombard
-+1.3
++28% wiped
++0.6
 RANGED WEAPONS
 Knight Destrier (×2)
 Questoris heavy stubber
@@ -654,8 +744,9 @@ AP
 D
 1
 ASSAULT, RAPID FIRE 3
-−0.3
-WOUNDS IF UNTICKED
+−6% wiped
+−0.1
+MODELS IF UNTICKED
 Chastiser gatling cannon
 RNG
 24"
@@ -670,8 +761,9 @@ AP
 D
 2
 ASSAULT
-−2.3
-WOUNDS IF UNTICKED
+−46% wiped
+−2.1
+MODELS IF UNTICKED
 Frag bombard
 RNG
 24"
@@ -686,28 +778,17 @@ AP
 D
 2
 ASSAULT, BLAST, RAPID FIRE D6+3
-−1.2
-WOUNDS IF UNTICKED
+−35% wiped
+−1.1
+MODELS IF UNTICKED
 SITUATION AND RULES
-both sides
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
-YOURS
 if it applies
-+0.9
-WOUNDS
-Target has the benefit of cover
-THEIRS
-if it applies
-−1
-WOUNDS
-Knights of Legend
-Feel No Pain 6+
-THEIRS
-always counted · you can leave it out
-if left out: +0.7 wounds
++22% wiped
++0.5
+MODELS
 The target within range of an objective marker
-THEIRS
 if it holds
 no change: [IGNORES COVER] counts only when the target has the benefit of cover
 0
@@ -715,75 +796,61 @@ ALL ▾
 RULES IT SWITCHES ON
 Saturation Fire
 0
-Invulnerable Save (5+*)
-5+ invulnerable save against ranged attacks only
-THEIRS
-always counted · you can leave it out
-if left out: no change
+Close-quarters shooting at another unit
+-1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
+if it applies
+−25% wiped
+−0.8
+MODELS
 Damaged (1-6 wounds left)
 -1 to hit rolls (and -4 OC)
-YOURS
 if it applies
-−1
-WOUNDS
-Target is engaged
--1 to hit; no [BLAST]
-YOURS
-if it applies
-−1.8
-WOUNDS
+−25% wiped
+−0.8
+MODELS
 Close-quarters shooting at a unit it is engaged with
 -1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
-YOURS
 if it applies
-−2.5
-WOUNDS
+−44% wiped
+−1.9
+MODELS
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
+if it applies
+−44% wiped
+−1.9
+MODELS
 Fire Overwatch (snap shooting)
 the target within 24" (15.09): hits only on an unmodified 6, never critical; no hit re-rolls
-YOURS
 by the rules: Fire Overwatch: “TARGET: One friendly unengaged unit (excluding TITANIC units)” (15.08) · yours to count anyway
-−2.8
-WOUNDS
+−49% wiped
+−2.9
+MODELS
 STRATAGEMS
-both sides, with their CP
+with their CP
 1CP Strength from Exile
 No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) · in these numbers: re-roll hit rolls of 1, re-roll wound rolls of 1
-YOURS
 if used
-+1.3
-WOUNDS
-1CP Survivor of Strife
-when targeted in the Shooting phase: -1 to wound when the attack’s S is greater than its T · in these numbers: -1 to their wound rolls when S is greater than T
-THEIRS
-if used
-0
-NOT FOR THIS PAIR, BY THE RULES (5)
++29% wiped
++0.7
+MODELS
+NOT FOR THIS STEP, BY THE RULES (2)
 
-Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (yours, Fight phase only) · 1CP Point-Blank Barrage (theirs, in its own turn only) · 1CP Epic Challenge, 2CP Counteroffensive (theirs, Fight phase only)
+Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (6)
+NOT COUNTED BY THE CALCULATOR (4)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 Code Chivalric: Quality 1–2 (…with our martial valour risen over all)
-YOURS
 each time this model is selected to shoot or fight, you can re-roll one Hit roll and one Wound roll · one re-roll: the calculator re-rolls no single die
 1CP Noble Sacrifice
-YOURS
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
+Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
 1CP Point-Blank Barrage
-YOURS
 Until the end of the phase, your unit’s Blast weapons can target enemy units within Engagement Range of it (if no other friendly unit is within Engagement Range of that enemy unit) and it has no hit roll penalty for being within Engagement Range; each unmodified hit roll of 1 with a Blast weapon against a unit within Engagement Range of it is 1 mortal wound to your unit, after all its attacks are resolved.
 1CP Command Re-roll
-YOURS
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-1CP Noble Sacrifice
-THEIRS
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
-1CP Command Re-roll
-THEIRS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-OTHER MODIFIERS
+MODIFIERS · NONE
 Hit roll
 −
 0
@@ -792,15 +859,11 @@ Wound roll
 −
 0
 +
-AP better
+AP
 −
 0
 +
 Damage
-−
-0
-+
-Attacks
 −
 0
 +
@@ -812,18 +875,6 @@ Re-roll wounds
 none
 1s
 all
-Every weapon has
-Lethal
-Sustained 1
-Dev. wounds
-Target InSv
-−
-none
-+
-Target Feel No Pain
-−
-none
-+
 
 ######## damage fight · DAMAGE Damage
 YOUR
@@ -831,20 +882,117 @@ Knight Destrier (×2)
 SHOOT
 FIGHT
 BOTH
-THEIR
-Canis Rex
-4 megas and a destrier · T11 · Sv 3+ · W26
-THEY ATTACK
-0.6
-of 26 wounds lost
-Canis Rex destroyed in <1% of games
-
-≈0 pts destroyed · Canis Rex’s share of the unit’s 415 (Sir Hekhtur not on the battlefield yet)
-
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+0.7
+of 5 destroyed
+1.3 wounds lost · wiped in <1% of games
 Charged this turn
 ×
-theirs: Knights of Legend
-9 NOT COUNTED
+5 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -866,79 +1014,44 @@ AP
 -1
 D
 2
-−0.6
-WOUNDS IF UNTICKED
+−0.7
+MODELS IF UNTICKED
 SITUATION AND RULES
-both sides
-Knights of Legend
-Feel No Pain 6+
-THEIRS
-always counted · you can leave it out
-if left out: +0.1 wounds
 Charged this turn
-YOURS
 said to hold
 no change: no rule here needs it
 0
 Damaged (1-6 wounds left)
 -1 to hit rolls (and -4 OC)
-YOURS
 if it applies
 −0.2
-WOUNDS
+MODELS
 STRATAGEMS
-both sides, with their CP
+with their CP
 1CP Strength from Exile
 No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) · in these numbers: re-roll hit rolls of 1, re-roll wound rolls of 1
-YOURS
 if used
-+0.2
-WOUNDS
-NOT FOR THIS PAIR, BY THE RULES (4) · YOURS TO COUNT ANYWAY
++0.3
+MODELS
+NOT FOR THIS STEP, BY THE RULES (1)
 
-Invulnerable Save (5+*)
-THEIRS
-not against melee attacks
-NO CHANGE
-1CP Survivor of Strife
-THEIRS
-Shooting phase only
-NO CHANGE
+Nothing to count: 1CP Point-Blank Barrage (Shooting phase only)
 
-Nothing to count: 1CP Point-Blank Barrage (yours, Shooting phase only) · 1CP Point-Blank Barrage (theirs, Shooting phase only)
-
-NOT COUNTED BY THE CALCULATOR (9)
+NOT COUNTED BY THE CALCULATOR (5)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 Code Chivalric: Quality 1–2 (…with our martial valour risen over all)
-YOURS
 each time this model is selected to shoot or fight, you can re-roll one Hit roll and one Wound roll · one re-roll: the calculator re-rolls no single die
 1CP Noble Sacrifice
-YOURS
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
+Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
 1CP Command Re-roll
-YOURS
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
-YOURS
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive
-YOURS
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-1CP Noble Sacrifice
-THEIRS
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
-1CP Command Re-roll
-THEIRS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-1CP Epic Challenge
-THEIRS
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
-THEIRS
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-OTHER MODIFIERS
+MODIFIERS · NONE
 Hit roll
 −
 0
@@ -947,15 +1060,11 @@ Wound roll
 −
 0
 +
-AP better
+AP
 −
 0
 +
 Damage
-−
-0
-+
-Attacks
 −
 0
 +
@@ -967,18 +1076,6 @@ Re-roll wounds
 none
 1s
 all
-Every weapon has
-Lethal
-Sustained 1
-Dev. wounds
-Target InSv
-−
-none
-+
-Target Feel No Pain
-−
-none
-+
 
 ######## damage both · DAMAGE Damage
 YOUR
@@ -986,29 +1083,125 @@ Knight Destrier (×2)
 SHOOT
 FIGHT
 BOTH
-THEIR
-Canis Rex
-4 megas and a destrier · T11 · Sv 3+ · W26
-THEY ATTACK
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
 4.3
-of 26 wounds lost
-Canis Rex destroyed in <1% of games
+of 5 destroyed
+8.6 wounds lost · wiped in 63% of games
 
-Shoot 3.7 · Fight 0.6 · the charge is taken to succeed
+Shoot 4.0 · Fight 0.3 · the charge is taken to succeed
 
-≈0 pts destroyed · Canis Rex’s share of the unit’s 415 (Sir Hekhtur not on the battlefield yet)
-
-theirs: Knights of Legend
-theirs: Invulnerable Save (5+*)
 Charged this turn
 ×
-theirs: Knights of Legend (fight)
-15 NOT COUNTED
+9 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
 
-Effects are on the total: their models destroyed by the end of the fight, the shooting’s choices and the fight’s alike.
+Effects are on the total: models destroyed by the end of the fight, the shooting’s choices and the fight’s alike.
 
 The charge is taken to succeed (no charge roll); “Charged this turn” is ticked for the fight.
 
@@ -1021,10 +1214,12 @@ the target is farther than 18" (every weapon is taken to be in range)
 NOW
 Within 18", not 12"
 bonus for Questoris heavy stubber
++5% wiped
 +0.1
 Within 12"
 bonus for Questoris heavy stubber and Frag bombard
-+1.3
++23% wiped
++0.5
 RANGED WEAPONS
 Knight Destrier (×2)
 Questoris heavy stubber
@@ -1041,8 +1236,9 @@ AP
 D
 1
 ASSAULT, RAPID FIRE 3
-−0.3
-WOUNDS IF UNTICKED
+−5% wiped
+−0.1
+MODELS IF UNTICKED
 Chastiser gatling cannon
 RNG
 24"
@@ -1057,8 +1253,9 @@ AP
 D
 2
 ASSAULT
-−2.3
-WOUNDS IF UNTICKED
+−51% wiped
+−1.7
+MODELS IF UNTICKED
 Frag bombard
 RNG
 24"
@@ -1073,28 +1270,17 @@ AP
 D
 2
 ASSAULT, BLAST, RAPID FIRE D6+3
-−1.2
-WOUNDS IF UNTICKED
+−34% wiped
+−0.9
+MODELS IF UNTICKED
 SITUATION AND RULES
-both sides
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
-YOURS
 if it applies
-+0.9
-WOUNDS
-Target has the benefit of cover
-THEIRS
-if it applies
-−1
-WOUNDS
-Knights of Legend
-Feel No Pain 6+
-THEIRS
-always counted · you can leave it out
-if left out: +0.7 wounds
++18% wiped
++0.4
+MODELS
 The target within range of an objective marker
-THEIRS
 if it holds
 no change: [IGNORES COVER] counts only when the target has the benefit of cover
 0
@@ -1102,69 +1288,55 @@ ALL ▾
 RULES IT SWITCHES ON
 Saturation Fire
 0
-Invulnerable Save (5+*)
-5+ invulnerable save against ranged attacks only
-THEIRS
-always counted · you can leave it out
-if left out: no change
+Close-quarters shooting at another unit
+-1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
+if it applies
+−23% wiped
+−0.6
+MODELS
 Damaged (1-6 wounds left)
 -1 to hit rolls (and -4 OC)
-YOURS
 if it applies
-−1
-WOUNDS
-Target is engaged
--1 to hit; no [BLAST]
-YOURS
-if it applies
-−1.8
-WOUNDS
+−23% wiped
+−0.6
+MODELS
 Close-quarters shooting at a unit it is engaged with
 -1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
-YOURS
 if it applies
-−2.5
-WOUNDS
+−48% wiped
+−1.5
+MODELS
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
+if it applies
+−48% wiped
+−1.5
+MODELS
 STRATAGEMS
-both sides, with their CP
+with their CP
 1CP Strength from Exile
 No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) · in these numbers: re-roll hit rolls of 1, re-roll wound rolls of 1
-YOURS
 if used
-+1.3
-WOUNDS
-1CP Survivor of Strife
-when targeted in the Shooting phase: -1 to wound when the attack’s S is greater than its T · in these numbers: -1 to their wound rolls when S is greater than T
-THEIRS
-if used
-0
-NOT FOR THIS PAIR, BY THE RULES (5)
++24% wiped
++0.5
+MODELS
+NOT FOR THIS STEP, BY THE RULES (2)
 
-Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (yours, Fight phase only) · 1CP Point-Blank Barrage (theirs, in its own turn only) · 1CP Epic Challenge, 2CP Counteroffensive (theirs, Fight phase only)
+Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (6)
+NOT COUNTED BY THE CALCULATOR (4)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 Code Chivalric: Quality 1–2 (…with our martial valour risen over all)
-YOURS
 each time this model is selected to shoot or fight, you can re-roll one Hit roll and one Wound roll · one re-roll: the calculator re-rolls no single die
 1CP Noble Sacrifice
-YOURS
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
+Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
 1CP Point-Blank Barrage
-YOURS
 Until the end of the phase, your unit’s Blast weapons can target enemy units within Engagement Range of it (if no other friendly unit is within Engagement Range of that enemy unit) and it has no hit roll penalty for being within Engagement Range; each unmodified hit roll of 1 with a Blast weapon against a unit within Engagement Range of it is 1 mortal wound to your unit, after all its attacks are resolved.
 1CP Command Re-roll
-YOURS
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-1CP Noble Sacrifice
-THEIRS
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
-1CP Command Re-roll
-THEIRS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-OTHER MODIFIERS
+MODIFIERS · NONE
 Hit roll
 −
 0
@@ -1173,15 +1345,11 @@ Wound roll
 −
 0
 +
-AP better
+AP
 −
 0
 +
 Damage
-−
-0
-+
-Attacks
 −
 0
 +
@@ -1193,18 +1361,6 @@ Re-roll wounds
 none
 1s
 all
-Every weapon has
-Lethal
-Sustained 1
-Dev. wounds
-Target InSv
-−
-none
-+
-Target Feel No Pain
-−
-none
-+
 THE FIGHT
 THEN, AGAINST WHAT THE SHOOTING LEFT
 MELEE WEAPONS
@@ -1223,79 +1379,47 @@ AP
 -1
 D
 2
-−0.6
-WOUNDS IF UNTICKED
+−13% wiped
+−0.3
+MODELS IF UNTICKED
 SITUATION AND RULES
-both sides
-Knights of Legend
-Feel No Pain 6+
-THEIRS
-always counted · you can leave it out
-if left out: +0.1 wounds
 Charged this turn
-YOURS
 holds: Both takes the charge as made (no charge roll)
 no change: no rule here needs it
 0
 Damaged (1-6 wounds left)
 -1 to hit rolls (and -4 OC)
-YOURS
 if it applies
-−0.2
-WOUNDS
+−4% wiped
+−0.1
+MODELS
 STRATAGEMS
-both sides, with their CP
+with their CP
 1CP Strength from Exile
 No other friendly unit within 9": re-roll hit and wound rolls of 1 (your Shooting or the Fight phase) · in these numbers: re-roll hit rolls of 1, re-roll wound rolls of 1
-YOURS
 if used
-+0.2
-WOUNDS
-NOT FOR THIS PAIR, BY THE RULES (4) · YOURS TO COUNT ANYWAY
++3% wiped
++0.1
+MODELS
+NOT FOR THIS STEP, BY THE RULES (1)
 
-Invulnerable Save (5+*)
-THEIRS
-not against melee attacks
-NO CHANGE
-1CP Survivor of Strife
-THEIRS
-Shooting phase only
-NO CHANGE
+Nothing to count: 1CP Point-Blank Barrage (Shooting phase only)
 
-Nothing to count: 1CP Point-Blank Barrage (yours, Shooting phase only) · 1CP Point-Blank Barrage (theirs, Shooting phase only)
-
-NOT COUNTED BY THE CALCULATOR (9)
+NOT COUNTED BY THE CALCULATOR (5)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
 Code Chivalric: Quality 1–2 (…with our martial valour risen over all)
-YOURS
 each time this model is selected to shoot or fight, you can re-roll one Hit roll and one Wound roll · one re-roll: the calculator re-rolls no single die
 1CP Noble Sacrifice
-YOURS
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
+Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
 1CP Command Re-roll
-YOURS
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
-YOURS
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive
-YOURS
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-1CP Noble Sacrifice
-THEIRS
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
-1CP Command Re-roll
-THEIRS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-1CP Epic Challenge
-THEIRS
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
-THEIRS
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-OTHER MODIFIERS
+MODIFIERS · NONE
 Hit roll
 −
 0
@@ -1304,15 +1428,11 @@ Wound roll
 −
 0
 +
-AP better
+AP
 −
 0
 +
 Damage
-−
-0
-+
-Attacks
 −
 0
 +
@@ -1324,18 +1444,6 @@ Re-roll wounds
 none
 1s
 all
-Every weapon has
-Lethal
-Sustained 1
-Dev. wounds
-Target InSv
-−
-none
-+
-Target Feel No Pain
-−
-none
-+
 
 ######## strats {"folded":true} · DAMAGE Stratagems
 EXPAND ALL
@@ -1364,12 +1472,12 @@ Their Shooting Any unit
 1
 CP
 Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
+Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
 Any phase Any unit
 1
 CP
 Flanking Manoeuvres
-Remove your unit from the battlefield and place it into Strategic Reserves.
+Your unit within 9" of a battlefield edge and not within Engagement Range of an enemy unit: remove it from the battlefield and place it into Strategic Reserves.
 End of their Fight No unit in this list can use it (needs ARMIGER)
 CORE STRATAGEMS
 10
@@ -1391,7 +1499,7 @@ Your Charge Any unit
 1
 CP
 Heroic Intervention
-Your unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
 End of their Charge · Into the Fray +1CP Any unit
 1
 CP
@@ -1411,12 +1519,12 @@ Any phase Any unit
 1
 CP
 Fire Overwatch
-Your unit shoots using snap shooting.
-End of their Movement No unit in this list can use it (not TITANIC: every unit here is)
+Your unengaged unit shoots using snap shooting.
+End of their Movement No unit in this list can use it: it excludes TITANIC units, and every unit here is TITANIC
 1
 CP
 Explosives
-One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
+Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
 1
 CP
@@ -1671,7 +1779,7 @@ USED BYany unit
 1
 CP
 Fire Overwatch
-End of their Movement No unit in this list can use it (not TITANIC: every unit here is)
+End of their Movement No unit in this list can use it: it excludes TITANIC units, and every unit here is TITANIC
 WHEN
 
 End of your opponent’s Movement phase.
@@ -1682,7 +1790,7 @@ EFFECT
 
 Your unit shoots using snap shooting.
 
-USED BYno unit in this list (needs not TITANIC: every unit here is)
+USED BYno unit in this list: it excludes TITANIC units, and every unit here is TITANIC
 
 1
 CP
@@ -1754,7 +1862,7 @@ DAMAGED 1-6 W
 -1 TO HIT ROLLS (AND -4 OC)
 ALL ATTACKS
 STRATAGEMS · FREEBLADE COMPANY
-1CP re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9" (Strength from Exile)
+1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
 RANGED WEAPONS
 Range
 A
@@ -1877,7 +1985,7 @@ DAMAGED 1-9 W
 -1 TO HIT ROLLS (AND -5 OC)
 ALL ATTACKS
 STRATAGEMS · FREEBLADE COMPANY
-1CP re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9" (Strength from Exile)
+1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
 RANGED WEAPONS
 Range
 A
@@ -2002,7 +2110,7 @@ DAMAGED 1-9 W
 -1 TO HIT ROLLS (AND -5 OC)
 ALL ATTACKS
 STRATAGEMS · FREEBLADE COMPANY
-1CP re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9" (Strength from Exile)
+1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
 RANGED WEAPONS
 Range
 A
@@ -2136,7 +2244,7 @@ DAMAGED 1-9 W
 -1 TO HIT ROLLS (AND -5 OC)
 ALL ATTACKS
 STRATAGEMS · FREEBLADE COMPANY
-1CP re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9" (Strength from Exile)
+1CP Strength from Exile: re-roll hit and wound rolls of 1 (your Shooting or the Fight phase), No other friendly unit within 9"
 RANGED WEAPONS
 Range
 A
@@ -2243,8 +2351,7 @@ THIS GAME
 NEW GAME
 6 bigs
 your list
-4 megas and a destrier
-your opponent’s list
+Opponent
 CP
 −
 0
@@ -2269,10 +2376,6 @@ EVENT COMPANION · GENERATING COMMAND POINTS
 Excluding Core CP, each player can gain a maximum of 1CP per battle round (including he CP gained when a player discards an active Secondary Mission card).
 
 THIS LIST
-
-Code Chivalric · Imperial Knights army rule: “The first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).”
-
-THEIR LIST
 
 Code Chivalric · Imperial Knights army rule: “The first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).”
 
@@ -2320,27 +2423,16 @@ BATTLE-SHOCK 08.03
 CP
 Insane Bravery
 The battle-shock roll you are about to make for your unit is automatically successful.
-ANY PHASE
-3
+
+COMMAND ABILITIES 08.04
+
 Knights of Legend · Freeblade Company detachment rule
+ANY PHASE
+2
 1
 CP
 Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-4 MEGAS AND A DESTRIER IN THIS PHASE
-ANY PHASE
-5
-Knights of Legend · Freeblade Company detachment rule
-Chainbreaker · Canis Rex
-Legendary Freeblade · Canis Rex
-1
-CP
-Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
+Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
 1
 CP
 Command Re-roll
@@ -2394,10 +2486,6 @@ THIS LIST
 
 App note, not rules text: 6 bigs: points limit 2000 pts (Strike Force); 50% of it is 1000 pts.
 
-THEIR LIST
-
-App note, not rules text: 4 megas and a destrier: points limit 2000 pts (Strike Force); 50% of it is 1000 pts.
-
 8 Deploy Armies
 TITANIC
 
@@ -2410,9 +2498,6 @@ Once you have finished setting up your units, if your opponent has any units tha
 THIS LIST
 TITANIC: Knight Destrier ×2, Knight Errant, Knight Paladin ×2, Knight Warden
 
-THEIR LIST
-TITANIC: Canis Rex, Cerastus Knight Atrapos · Bringer of Justice, Cerastus Knight Lancer, Knight Crusader · Hunter’s Eye, Knight Destrier · Sanctuary
-
 9 Redeploy Units
 
 Some rules let you redeploy certain units after both armies are deployed. Unless otherwise stated, you resolve those rules in this step. Players alternate resolving any such rules, starting with the Attacker. Units placed in strategic reserves in this step do not count towards the combined points value of your strategic reserves units.
@@ -2424,7 +2509,7 @@ Roll off: the winner takes the first turn.
 
 FIRST TURN
 6 BIGS
-4 MEGAS AND A DESTRIER
+OPPONENT
 11 Resolve Pre-battle Rules
 
 Players alternate resolving any pre-battle rules units from their army may have, starting with the player who will take the first turn.
@@ -2446,8 +2531,7 @@ THIS GAME
 NEW GAME
 6 bigs
 your list
-4 megas and a destrier
-your opponent’s list
+Opponent
 CP
 −
 3
@@ -2475,10 +2559,6 @@ THIS LIST
 
 Code Chivalric · Imperial Knights army rule: “The first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).”
 
-THEIR LIST
-
-Code Chivalric · Imperial Knights army rule: “The first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).”
-
 CHOICES THIS GAME
 Code Chivalric · Imperial Knights army rule
 
@@ -2495,12 +2575,6 @@ DEED 1–2 · WE VOW TO LAY LOW THE TYRANT…
 
 At the start of the battle, select one CHARACTER model in your opponent’s army. This Deed is completed at the end of a turn if that CHARACTER is destroyed.
 
-THEIR UNIT
-CANIS REX
-CERASTUS KNIGHT ATRAPOS · BRINGER OF JUSTICE
-CERASTUS KNIGHT LANCER
-KNIGHT CRUSADER · HUNTER’S EYE
-KNIGHT DESTRIER · SANCTUARY
 QUALITY
 1–2
 3–4
@@ -2546,44 +2620,14 @@ Until the end of the phase, your unit’s Blast weapons can target enemy units w
 1
 CP
 Explosives
-One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
+Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
 ANY PHASE
-3
-Knights of Legend · Freeblade Company detachment rule
+2
 1
 CP
 Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-4 MEGAS AND A DESTRIER IN THIS PHASE
-
-START OF SHOOTING PHASE 10.01
-
-1
-CP
-Smokescreen
-Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
-No unit in this list can use it (needs SMOKE)
-
-SHOOT 10.02
-
-1
-CP
-Survivor of Strife
-Until the end of the phase, attacks against your unit whose S is greater than its T have -1 to the wound roll.
-ANY PHASE
-5
-Knights of Legend · Freeblade Company detachment rule
-Chainbreaker · Canis Rex
-Legendary Freeblade · Canis Rex
-1
-CP
-Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
+Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
 1
 CP
 Command Re-roll
@@ -2618,27 +2662,16 @@ BATTLE-SHOCK 08.03
 CP
 Insane Bravery
 The battle-shock roll you are about to make for your unit is automatically successful.
-ANY PHASE
-3
+
+COMMAND ABILITIES 08.04
+
 Knights of Legend · Freeblade Company detachment rule
+ANY PHASE
+2
 1
 CP
 Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-4 MEGAS AND A DESTRIER IN THIS PHASE
-ANY PHASE
-5
-Knights of Legend · Freeblade Company detachment rule
-Chainbreaker · Canis Rex
-Legendary Freeblade · Canis Rex
-1
-CP
-Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
+Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
 1
 CP
 Command Re-roll
@@ -2665,44 +2698,18 @@ FIGHT
 MOVE UNITS 09.02
 
 Code Chivalric · Imperial Knights army rule
+Super-heavy Walker · Imperial Knights army rule
 Ram Jets · Knight Destrier ×2
 1
 CP
 Full Tilt
 Until the end of the phase, if your unit Advances, no Advance roll: +6" Move instead (+9" for an ARMIGER or DESTRIER unit).
 ANY PHASE
-3
-Knights of Legend · Freeblade Company detachment rule
+2
 1
 CP
 Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-4 MEGAS AND A DESTRIER IN THIS PHASE
-
-END OF MOVEMENT PHASE 09.03
-
-1
-CP
-Rapid Ingress
-Your unit in strategic reserves makes an ingress move (not in the first battle round).
-1
-CP
-Fire Overwatch
-Your unit shoots using snap shooting.
-No unit in this list can use it (not TITANIC: every unit here is)
-ANY PHASE
-5
-Knights of Legend · Freeblade Company detachment rule
-Chainbreaker · Canis Rex
-Legendary Freeblade · Canis Rex
-1
-CP
-Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
+Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
 1
 CP
 Command Re-roll
@@ -2744,44 +2751,14 @@ Until the end of the phase, your unit’s Blast weapons can target enemy units w
 1
 CP
 Explosives
-One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
+Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
 ANY PHASE
-3
-Knights of Legend · Freeblade Company detachment rule
+2
 1
 CP
 Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-4 MEGAS AND A DESTRIER IN THIS PHASE
-
-START OF SHOOTING PHASE 10.01
-
-1
-CP
-Smokescreen
-Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
-No unit in this list can use it (needs SMOKE)
-
-SHOOT 10.02
-
-1
-CP
-Survivor of Strife
-Until the end of the phase, attacks against your unit whose S is greater than its T have -1 to the wound roll.
-ANY PHASE
-5
-Knights of Legend · Freeblade Company detachment rule
-Chainbreaker · Canis Rex
-Legendary Freeblade · Canis Rex
-1
-CP
-Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
+Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
 1
 CP
 Command Re-roll
@@ -2813,37 +2790,11 @@ CP
 Crushing Impact
 After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
 ANY PHASE
-3
-Knights of Legend · Freeblade Company detachment rule
+2
 1
 CP
 Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-4 MEGAS AND A DESTRIER IN THIS PHASE
-
-CHARGE 11.02
-
-Code Chivalric · Imperial Knights army rule
-
-END OF CHARGE PHASE 11.03
-
-1
-CP
-Heroic Intervention
-Your unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
-ANY PHASE
-5
-Knights of Legend · Freeblade Company detachment rule
-Chainbreaker · Canis Rex
-Legendary Freeblade · Canis Rex
-1
-CP
-Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
+Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
 1
 CP
 Command Re-roll
@@ -2879,50 +2830,11 @@ CP
 Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 ANY PHASE
-3
-Knights of Legend · Freeblade Company detachment rule
-1
-CP
-Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-4 MEGAS AND A DESTRIER IN THIS PHASE
-
-PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
-
-Code Chivalric · Imperial Knights army rule
-1
-CP
-Strength from Exile
-Until the end of the phase, if no other friendly units are within 9", your unit’s attacks re-roll a hit roll of 1 and a wound roll of 1.
-1
-CP
-Epic Challenge
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2
-CP
-Counteroffensive
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-
-END OF FIGHT PHASE 12.09
-
-1
-CP
-Flanking Manoeuvres
-Remove your unit from the battlefield and place it into Strategic Reserves.
-No unit in this list can use it (needs ARMIGER)
-ANY PHASE
-5
-Knights of Legend · Freeblade Company detachment rule
-Chainbreaker · Canis Rex
-Legendary Freeblade · Canis Rex
 1
 CP
 Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
+Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
 1
 CP
 Command Re-roll
@@ -2951,33 +2863,11 @@ GAIN CORE CP 08.02
 Both players gain 1 Command Point (CP).
 
 ANY PHASE
-3
-Knights of Legend · Freeblade Company detachment rule
+2
 1
 CP
 Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-4 MEGAS AND A DESTRIER IN THIS PHASE
-
-BATTLE-SHOCK 08.03
-
-1
-CP
-Insane Bravery
-The battle-shock roll you are about to make for your unit is automatically successful.
-ANY PHASE
-5
-Knights of Legend · Freeblade Company detachment rule
-Chainbreaker · Canis Rex
-Legendary Freeblade · Canis Rex
-1
-CP
-Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
+Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
 1
 CP
 Command Re-roll
@@ -3010,39 +2900,14 @@ Your unit in strategic reserves makes an ingress move (not in the first battle r
 1
 CP
 Fire Overwatch
-Your unit shoots using snap shooting.
-No unit in this list can use it (not TITANIC: every unit here is)
+Your unengaged unit shoots using snap shooting.
+No unit in this list can use it: it excludes TITANIC units, and every unit here is TITANIC
 ANY PHASE
-3
-Knights of Legend · Freeblade Company detachment rule
+2
 1
 CP
 Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-4 MEGAS AND A DESTRIER IN THIS PHASE
-
-MOVE UNITS 09.02
-
-Code Chivalric · Imperial Knights army rule
-Punishing Salvoes · Knight Crusader
-Ram Jets · Knight Destrier
-1
-CP
-Full Tilt
-Until the end of the phase, if your unit Advances, no Advance roll: +6" Move instead (+9" for an ARMIGER or DESTRIER unit).
-ANY PHASE
-5
-Knights of Legend · Freeblade Company detachment rule
-Chainbreaker · Canis Rex
-Legendary Freeblade · Canis Rex
-1
-CP
-Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
+Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
 1
 CP
 Command Re-roll
@@ -3081,45 +2946,11 @@ CP
 Survivor of Strife
 Until the end of the phase, attacks against your unit whose S is greater than its T have -1 to the wound roll.
 ANY PHASE
-3
-Knights of Legend · Freeblade Company detachment rule
+2
 1
 CP
 Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-4 MEGAS AND A DESTRIER IN THIS PHASE
-
-SHOOT 10.02
-
-Code Chivalric · Imperial Knights army rule
-Punishing Salvoes · Knight Crusader
-Saturation Fire · Knight Destrier
-1
-CP
-Strength from Exile
-Until the end of the phase, if no other friendly units are within 9", your unit’s attacks re-roll a hit roll of 1 and a wound roll of 1.
-1
-CP
-Point-Blank Barrage
-Until the end of the phase, your unit’s Blast weapons can target enemy units within Engagement Range of it (if no other friendly unit is within Engagement Range of that enemy unit) and it has no hit roll penalty for being within Engagement Range; each unmodified hit roll of 1 with a Blast weapon against a unit within Engagement Range of it is 1 mortal wound to your unit, after all its attacks are resolved.
-1
-CP
-Explosives
-One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
-No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
-ANY PHASE
-5
-Knights of Legend · Freeblade Company detachment rule
-Chainbreaker · Canis Rex
-Legendary Freeblade · Canis Rex
-1
-CP
-Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
+Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
 1
 CP
 Command Re-roll
@@ -3152,36 +2983,13 @@ END OF CHARGE PHASE 11.03
 1
 CP
 Heroic Intervention
-Your unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
 ANY PHASE
-3
-Knights of Legend · Freeblade Company detachment rule
+2
 1
 CP
 Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-4 MEGAS AND A DESTRIER IN THIS PHASE
-
-CHARGE 11.02
-
-Code Chivalric · Imperial Knights army rule
-1
-CP
-Crushing Impact
-After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
-ANY PHASE
-5
-Knights of Legend · Freeblade Company detachment rule
-Chainbreaker · Canis Rex
-Legendary Freeblade · Canis Rex
-1
-CP
-Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
+Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
 1
 CP
 Command Re-roll
@@ -3226,41 +3034,14 @@ END OF FIGHT PHASE 12.09
 1
 CP
 Flanking Manoeuvres
-Remove your unit from the battlefield and place it into Strategic Reserves.
+Your unit within 9" of a battlefield edge and not within Engagement Range of an enemy unit: remove it from the battlefield and place it into Strategic Reserves.
 No unit in this list can use it (needs ARMIGER)
 ANY PHASE
-3
-Knights of Legend · Freeblade Company detachment rule
+2
 1
 CP
 Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-4 MEGAS AND A DESTRIER IN THIS PHASE
-
-PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
-
-Code Chivalric · Imperial Knights army rule
-1
-CP
-Strength from Exile
-Until the end of the phase, if no other friendly units are within 9", your unit’s attacks re-roll a hit roll of 1 and a wound roll of 1.
-1
-CP
-Epic Challenge
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-ANY PHASE
-5
-Knights of Legend · Freeblade Company detachment rule
-Chainbreaker · Canis Rex
-Legendary Freeblade · Canis Rex
-1
-CP
-Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
+Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
 1
 CP
 Command Re-roll
@@ -3305,41 +3086,14 @@ END OF FIGHT PHASE 12.09
 1
 CP
 Flanking Manoeuvres
-Remove your unit from the battlefield and place it into Strategic Reserves.
+Your unit within 9" of a battlefield edge and not within Engagement Range of an enemy unit: remove it from the battlefield and place it into Strategic Reserves.
 No unit in this list can use it (needs ARMIGER)
 ANY PHASE
-3
-Knights of Legend · Freeblade Company detachment rule
+2
 1
 CP
 Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-4 MEGAS AND A DESTRIER IN THIS PHASE
-
-PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
-
-Code Chivalric · Imperial Knights army rule
-1
-CP
-Strength from Exile
-Until the end of the phase, if no other friendly units are within 9", your unit’s attacks re-roll a hit roll of 1 and a wound roll of 1.
-1
-CP
-Epic Challenge
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-ANY PHASE
-5
-Knights of Legend · Freeblade Company detachment rule
-Chainbreaker · Canis Rex
-Legendary Freeblade · Canis Rex
-1
-CP
-Noble Sacrifice
-Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
+Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.
 1
 CP
 Command Re-roll
@@ -4324,6 +4078,9 @@ WHILE SHOOTING:
 
 You can only target one visible enemy unit within 24" of your unit (and only if it is an eligible target).
 Each attack only hits on an unmodified hit roll of 6 (irrespective of the attacking weapon’s BS characteristic or any modifiers).
+
+Wahapedia core rules (not in GW’s Core Rules PDF, 01-06): Those hits are not critical hits.
+
 You cannot re-roll hit rolls.
 
 AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.

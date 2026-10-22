@@ -6,8 +6,6 @@ Berzerker Warband · Butchers of Khorne · Disposition: Take and Hold
 Overview
 Damage calculator
 Game tracker
-Opponent
-None yet: pick their list
 Units
 9
 Stratagems
@@ -38,7 +36,7 @@ Berzerker Warband (2 DP), Butchers of Khorne (1 DP)
 Disposition: Take and Hold
 POINTS
 2000 / 2000 · Strike Force
-ARMY RULES
+ARMY AND DETACHMENT RULES
 Blessings of Khorne
 Start of the battle round
 
@@ -76,6 +74,22 @@ Decapitating Strikes · double 6 or triple 3+
 
 Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
 
+Relentless Rage
+Berzerker Warband · Fight
+
+Already counted: every melee A value in this app includes this +1 A. Do not add it again.
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+APPLIES TOAngron, Chaos Terminators (1–2 of 3), Chaos Terminators (3 of 3), Eightbound, Goremongers, Jakhals, Forgefiend
+
+Adamantine Avalanche
+Butchers of Khorne · Fight
+
+At the start of the Fight phase, if a friendly TERMINATOR SQUAD unit is engaged, make a Blessings of Khorne roll and use the results to activate one Blessing of Khorne. Until the end of the phase, that Blessing of Khorne is active for friendly TERMINATOR SQUAD units in addition to any other Blessings of Khorne that are currently active.
+
+APPLIES TOChaos Terminators (1–2 of 3), Chaos Terminators (3 of 3)
+
 DECLARE BATTLE FORMATIONS
 DEEP STRIKE
 Angron 330 pts
@@ -86,7 +100,7 @@ DEPLOYMENT AND PRE-BATTLE ABILITIES
 SCOUTS AND INFILTRATORS
 Eightbound Scouts 6"
 Goremongers Infiltrators
-START OF THE BATTLE ROUND
+START OF THE BATTLE AND THE BATTLE ROUNDS
 EVERY ROUND
 Blessings of Khorne · World Eaters army rule
 Reborn in Blood · Angron
@@ -158,7 +172,8 @@ Goremongers
 –
 70
 Jakhals
-1× Jakhal Pack Leader, 1× Dishonoured w/ paired manglers, 8× Jakhal
+65
+Jakhal×9
 7"
 4
 6+
@@ -166,7 +181,14 @@ Jakhals
 7+
 1
 –
-65
+Dishonoured w/ paired manglers
+7"
+4
+6+
+1
+7+
+1
+–
 VEHICLES
 2
 Forgefiend
@@ -283,7 +305,7 @@ Own aura, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 a
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 Chaos Terminators
 Gore-stained Veterans
 1–2 of 3
@@ -312,10 +334,10 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 STRATAGEMS · BUTCHERS OF KHORNE
-1CP +1 A, When selected to fight (Focused Ferocity)
-1CP +1 to wound rolls, When selected to fight, vs MONSTER/VEHICLE targets (A Trophy for the Throne)
+1CP Focused Ferocity: +1 A, When selected to fight
+1CP A Trophy for the Throne: +1 to wound rolls, When selected to fight, vs MONSTER/VEHICLE targets
 Chaos Terminators
 Gore-stained Veterans
 3 of 3
@@ -343,10 +365,10 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 STRATAGEMS · BUTCHERS OF KHORNE
-1CP +1 A, When selected to fight (Focused Ferocity)
-1CP +1 to wound rolls, When selected to fight, vs MONSTER/VEHICLE targets (A Trophy for the Throne)
+1CP Focused Ferocity: +1 A, When selected to fight
+1CP A Trophy for the Throne: +1 to wound rolls, When selected to fight, vs MONSTER/VEHICLE targets
 Eightbound
 Chainblades×3
 6
@@ -358,7 +380,7 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Own aura, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Own aura, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 Goremongers
 Chainblade×8
 4
@@ -379,7 +401,7 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 Jakhals
 Chainblades×9
 4
@@ -397,7 +419,7 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 Forgefiend
 ×2 units
 Forgefiend claws
@@ -411,7 +433,7 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 
 ######## abilities · MELEE Abilities
 Angron
@@ -471,6 +493,7 @@ When this unit declares a charge, you can use this part of this ability. If you 
 This unit can re-roll that charge roll.
 This unit must end that charge move engaged with the closest charge target.
 Gore-stained Veterans
+Already in WS
 
 Upgrade
 
@@ -491,6 +514,7 @@ When this unit declares a charge, you can use this part of this ability. If you 
 This unit can re-roll that charge roll.
 This unit must end that charge move engaged with the closest charge target.
 Gore-stained Veterans
+Already in WS
 
 Upgrade
 
@@ -629,25 +653,16 @@ STRATAGEMSWrath Beyond Reason, Focused Ferocity, A Trophy for the Throne
 
 UNIT RULES
 Deadly Demise
-
 Angron D6
-
 Forgefiend D3
-
 Deep Strike
-
 Angron
-
+Reborn in Blood: At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its Deep Strike ability, with 8 wounds remaining.
 Chaos Terminators (1–2 of 3)
-
 Chaos Terminators (3 of 3)
-
 Infiltrators
-
 Goremongers
-
 Scouts
-
 Eightbound 6"
 
 ######## bases · RULES Bases & proxies
@@ -718,18 +733,137 @@ Chaos Terminators (370 pts, ×2)
 SHOOT
 FIGHT
 BOTH
-THEIR
-Belisarius Cawl
-Purge goes the Foe · T8 · Sv 2+ · 4+ InSv · W10
-THEY ATTACK
+MODELS LEFT · ALL 10
+Terminator Champion
+0
+1
+Combi-bolter, chainfist
+0
+1
+2
+Combi-bolter, power fist
+0
+1
+2
+3
+4
+Paired accursed weapons
+0
+1
+Heavy weapon
+0
+1
+2
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
 1.9
-of 10 wounds lost
-destroyed in <1% of games
-
-≈0 pts destroyed
-
+of 5 destroyed
+4.2 wounds lost · wiped in 1% of games
 Nothing ticked: the datasheets as printed
-4 NOT COUNTED
+2 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -743,10 +877,12 @@ the target is farther than 18" (every weapon is taken to be in range)
 NOW
 Within 18", not 12"
 bonus for Reaper autocannon
-+0.6
++3% wiped
++0.5
 Within 12"
 bonus for Combi-bolter and Reaper autocannon
-+2
++45% wiped
++2.2
 RANGED WEAPONS
 Chaos Terminators (370 pts, ×2)
 Combi-bolter ×6
@@ -763,8 +899,8 @@ AP
 D
 1
 RAPID FIRE 4
-−0.7
-WOUNDS IF UNTICKED
+−1
+MODELS IF UNTICKED
 Reaper autocannon ×2
 RNG
 36"
@@ -779,92 +915,65 @@ AP
 D
 1
 DEVASTATING WOUNDS, RAPID FIRE 2, SUSTAINED HITS 1
-−1.2
-WOUNDS IF UNTICKED
+−1.1
+MODELS IF UNTICKED
 SITUATION AND RULES
-both sides
-Plunging Fire
-BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
-YOURS
-if it applies
-+0.5
-WOUNDS
-Target has the benefit of cover
-THEIRS
-if it applies
-−0.5
-WOUNDS
-Target is engaged
--1 to hit; no [BLAST]
-YOURS
-if it applies
-−0.5
-WOUNDS
 The target is the closest eligible target
-THEIRS
 if it holds
-+0.9
-WOUNDS
++7% wiped
++1
+MODELS
 RULES IT SWITCHES ON
 Bloody Fury
-+0.9
-wounds
++1
+models
+Plunging Fire
+BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
+if it applies
++2% wiped
++0.6
+MODELS
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
+if it applies
+−0.6
+MODELS
 Fire Overwatch (snap shooting)
 the target within 24" (15.09): hits only on an unmodified 6, never critical; no hit re-rolls
-YOURS
 if it applies
-−1.3
-WOUNDS
-HELP FROM OTHER UNITS
-of their list · if the table gives it
-Shroudpsalm (Belisarius Cawl)
-Within 6" of Cawl, if he has Shroudpsalm: Stealth: the benefit of cover against ranged attacks
-THEIRS
-if it applies
-−0.5
-WOUNDS
+−1.5
+MODELS
 STRATAGEMS
-both sides, with their CP
+with their CP
 
 None that change these numbers.
 
-NOT FOR THIS PAIR, BY THE RULES (7) · YOURS TO COUNT ANYWAY
+NOT FOR THIS STEP, BY THE RULES (5) · YOURS TO COUNT ANYWAY
 
 1CP Hack and Slash
-YOURS
+Fight phase only
++0.6
+MODELS IF YOU COUNT IT
+1CP Focused Ferocity
+Fight phase only
++0.8
+MODELS IF YOU COUNT IT
+1CP A Trophy for the Throne
 Fight phase only
 +0.5
-WOUNDS IF YOU COUNT IT
-1CP Focused Ferocity
-YOURS
-Fight phase only
-+0.6
-WOUNDS IF YOU COUNT IT
-1CP A Trophy for the Throne
-YOURS
-Fight phase only
-+0.6
-WOUNDS IF YOU COUNT IT
+MODELS IF YOU COUNT IT
 
-Nothing to count: 1CP Skulls for the Skull Throne!, 2CP Counteroffensive (yours, Fight phase only) · 1CP Epic Challenge, 2CP Counteroffensive (theirs, Fight phase only)
+Nothing to count: 1CP Skulls for the Skull Throne!, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (4)
+NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-Mechanicus Bodyguard
-THEIRS
-Lone Operative while within 3" of another friendly ADEPTUS MECHANICUS unit
 1CP Blood Offering
-YOURS
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1CP Command Re-roll
-YOURS
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-1CP Command Re-roll
-THEIRS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-OTHER MODIFIERS
+MODIFIERS · NONE
 Hit roll
 −
 0
@@ -873,15 +982,11 @@ Wound roll
 −
 0
 +
-AP better
+AP
 −
 0
 +
 Damage
-−
-0
-+
-Attacks
 −
 0
 +
@@ -893,18 +998,6 @@ Re-roll wounds
 none
 1s
 all
-Every weapon has
-Lethal
-Sustained 1
-Dev. wounds
-Target InSv
-−
-none
-+
-Target Feel No Pain
-−
-none
-+
 
 ######## damage fight · DAMAGE Damage
 YOUR
@@ -914,20 +1007,118 @@ no ranged weapons
 FIGHT
 BOTH
 fight only
-THEIR
-Belisarius Cawl
-Purge goes the Foe · T8 · Sv 2+ · 4+ InSv · W10
-THEY ATTACK
-9.2
-of 10 wounds lost
-destroyed in 81% of games
-
-≈178 pts destroyed
-
-Samni’arius and Spinegrinder: strike
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+4.9
+of 5 destroyed
+9.7 wounds lost · wiped in 90% of games
+Samni’arius and Spinegrinder: sweep
 Charged this turn
 ×
-9 NOT COUNTED
+5 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -940,138 +1131,93 @@ MELEE WEAPONS
 Angron
 Samni’arius and Spinegrinder
 A
-9
+17
 WS
 2+
 S
-14
+7
 AP
--3
+-2
 D
-D6+2
+2
 DEVASTATING WOUNDS
-−81% wiped
-−9.2
-WOUNDS IF UNTICKED
+−90% wiped
+−4.9
+MODELS IF UNTICKED
 PICK ONE PROFILE
 strike
-9.2
-BEST
+4.6
 sweep
-6.7
+4.9
+BEST
 SITUATION AND RULES
-both sides
 Driven by Ultimate Rage
 Own aura, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-YOURS
 if it applies
-+13% wiped
-+0.6
-WOUNDS
++10% wiped
++0.1
+MODELS
+Beacons of Rage (Eightbound)
+Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls
+if it applies
++8% wiped
++0.1
+MODELS
 Martial Excellence
 Blessing of Khorne active this battle round: [SUSTAINED HITS 1]
-YOURS
 if it applies
-+7% wiped
-+0.3
-WOUNDS
++6% wiped
++0.1
+MODELS
 Warp Blades
 Blessing of Khorne active this battle round: [LETHAL HITS]
-YOURS
 if it applies
-+2% wiped
++3% wiped
 +0.1
-WOUNDS
+MODELS
 Charged this turn
 also the condition of 1CP Hack and Slash (tick it under Stratagems)
-YOURS
 said to hold
 no change: no rule here needs it
 0
-BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit
-ticks Doctrina Imperatives (-1 to their hit rolls)
-THEIRS
-if it holds
-no change: nothing it reaches counts in this step
-0
-ALL ▾
-Doctrina Imperatives
-Melee attacks that target this unit: Protector: -1 to the hit roll if this unit is BATTLELINE or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit · -1 to their hit rolls only while the BATTLELINE fact holds for it (above)
-THEIRS
+Beacons of Rage (Eightbound)
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit
 if it applies
-no change: -1 to their hit rolls only while “BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit” holds
+no change: already hits on 2+
 0
-ALL ▾
-Protector
-0
-Conqueror
-0
-Both
-counted by you: only with Omnicogitator, Transcendent Cogitation or The Fires of Mars (Thulia Ghuld)
+Decapitating Strikes
+Blessing of Khorne active this battle round, melee attacks that target an INFANTRY unit: [DEVASTATING WOUNDS]
+if it applies
 0
 Damaged (1-6 wounds left)
 -1 to hit rolls
-YOURS
 if it applies
-−13% wiped
-−0.7
-WOUNDS
+−18% wiped
+−0.3
+MODELS
 STRATAGEMS
-both sides, with their CP
+with their CP
 1CP Hack and Slash
 Made a charge move this turn: +1 AP in the Fight phase
-YOURS
 if used
-no change: their InSv 4+ is better
-0
-NOT FOR THIS PAIR, BY THE RULES (3) · YOURS TO COUNT ANYWAY
-
-Beacons of Rage
-YOURS
-not against MONSTER/VEHICLE
-NO CHANGE
-Beacons of Rage
-YOURS
-not against MONSTER/VEHICLE
-+0.4
-WOUNDS IF YOU COUNT IT
-Decapitating Strikes
-YOURS
-only against INFANTRY
-NO CHANGE
-
-NOT COUNTED BY THE CALCULATOR (9)
++7% wiped
++0.1
+MODELS
+NOT COUNTED BY THE CALCULATOR (5)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-Mechanicus Bodyguard
-THEIRS
-Lone Operative while within 3" of another friendly ADEPTUS MECHANICUS unit
 1CP Blood Offering
-YOURS
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1CP Skulls for the Skull Throne!
-YOURS
-Make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
+Just after your unit destroys a CHARACTER or MONSTER model: make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
 1CP Command Re-roll
-YOURS
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
-YOURS
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive
-YOURS
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-1CP Command Re-roll
-THEIRS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-1CP Epic Challenge
-THEIRS
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
-THEIRS
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-OTHER MODIFIERS
+MODIFIERS · NONE
 Hit roll
 −
 0
@@ -1080,15 +1226,11 @@ Wound roll
 −
 0
 +
-AP better
+AP
 −
 0
 +
 Damage
-−
-0
-+
-Attacks
 −
 0
 +
@@ -1100,18 +1242,6 @@ Re-roll wounds
 none
 1s
 all
-Every weapon has
-Lethal
-Sustained 1
-Dev. wounds
-Target InSv
-−
-none
-+
-Target Feel No Pain
-−
-none
-+
 
 ######## damage both · DAMAGE Damage
 YOUR
@@ -1119,28 +1249,150 @@ Chaos Terminators (370 pts, ×2)
 SHOOT
 FIGHT
 BOTH
-THEIR
-Belisarius Cawl
-Purge goes the Foe · T8 · Sv 2+ · 4+ InSv · W10
-THEY ATTACK
-9.9
-of 10 wounds lost
-destroyed in 95% of games
+MODELS LEFT · ALL 10
+Terminator Champion
+0
+1
+Combi-bolter, chainfist
+0
+1
+2
+Combi-bolter, power fist
+0
+1
+2
+3
+4
+Paired accursed weapons
+0
+1
+Heavy weapon
+0
+1
+2
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+5
+of 5 destroyed
+10 wounds lost · wiped in >99% of games
 
-Shoot 1.9 · Fight 8.0 · the charge is taken to succeed
-
-≈210 pts destroyed
+Shoot 1.9 · Fight 3.1 · the charge is taken to succeed
 
 Charged this turn
 ×
-12 NOT COUNTED
+6 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
 
-Effects are on the total: their models destroyed by the end of the fight, the shooting’s choices and the fight’s alike.
+Effects are on the total: models destroyed by the end of the fight, the shooting’s choices and the fight’s alike.
 
 The charge is taken to succeed (no charge roll); “Charged this turn” is ticked for the fight.
+
+Nothing here changes this: the target is destroyed in every game anyway.
 
 THE SHOOTING
 FIRST
@@ -1151,12 +1403,10 @@ the target is farther than 18" (every weapon is taken to be in range)
 NOW
 Within 18", not 12"
 bonus for Reaper autocannon
-+1% wiped
-≈0
+0
 Within 12"
 bonus for Combi-bolter and Reaper autocannon
-+3% wiped
-+0.1
+0
 RANGED WEAPONS
 Chaos Terminators (370 pts, ×2)
 Combi-bolter ×6
@@ -1173,9 +1423,7 @@ AP
 D
 1
 RAPID FIRE 4
-−1% wiped
-≈0
-WOUNDS IF UNTICKED
+0
 Reaper autocannon ×2
 RNG
 36"
@@ -1190,91 +1438,50 @@ AP
 D
 1
 DEVASTATING WOUNDS, RAPID FIRE 2, SUSTAINED HITS 1
-−3% wiped
-−0.1
-WOUNDS IF UNTICKED
+0
 SITUATION AND RULES
-both sides
-Plunging Fire
-BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
-YOURS
-if it applies
-≈0
-WOUNDS
-Target has the benefit of cover
-THEIRS
-if it applies
-−1% wiped
-≈0
-WOUNDS
-Target is engaged
--1 to hit; no [BLAST]
-YOURS
-if it applies
-−1% wiped
-≈0
-WOUNDS
 The target is the closest eligible target
-THEIRS
 if it holds
-+2% wiped
-≈0
-WOUNDS
+0
 RULES IT SWITCHES ON
 Bloody Fury
-≈0
-wounds
-HELP FROM OTHER UNITS
-of their list · if the table gives it
-Shroudpsalm (Belisarius Cawl)
-Within 6" of Cawl, if he has Shroudpsalm: Stealth: the benefit of cover against ranged attacks
-THEIRS
+0
+Plunging Fire
+BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
 if it applies
-−1% wiped
-≈0
-WOUNDS
+0
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
+if it applies
+0
 STRATAGEMS
-both sides, with their CP
+with their CP
 
 None that change these numbers.
 
-NOT FOR THIS PAIR, BY THE RULES (7) · YOURS TO COUNT ANYWAY
+NOT FOR THIS STEP, BY THE RULES (5) · YOURS TO COUNT ANYWAY
 
 1CP Hack and Slash
-YOURS
 Fight phase only
-≈0
-WOUNDS IF YOU COUNT IT
+NO CHANGE
 1CP Focused Ferocity
-YOURS
 Fight phase only
-≈0
-WOUNDS IF YOU COUNT IT
+NO CHANGE
 1CP A Trophy for the Throne
-YOURS
 Fight phase only
-≈0
-WOUNDS IF YOU COUNT IT
+NO CHANGE
 
-Nothing to count: 1CP Skulls for the Skull Throne!, 2CP Counteroffensive (yours, Fight phase only) · 1CP Epic Challenge, 2CP Counteroffensive (theirs, Fight phase only)
+Nothing to count: 1CP Skulls for the Skull Throne!, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (4)
+NOT COUNTED BY THE CALCULATOR (2)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-Mechanicus Bodyguard
-THEIRS
-Lone Operative while within 3" of another friendly ADEPTUS MECHANICUS unit
 1CP Blood Offering
-YOURS
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1CP Command Re-roll
-YOURS
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-1CP Command Re-roll
-THEIRS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-OTHER MODIFIERS
+MODIFIERS · NONE
 Hit roll
 −
 0
@@ -1283,15 +1490,11 @@ Wound roll
 −
 0
 +
-AP better
+AP
 −
 0
 +
 Damage
-−
-0
-+
-Attacks
 −
 0
 +
@@ -1303,18 +1506,6 @@ Re-roll wounds
 none
 1s
 all
-Every weapon has
-Lethal
-Sustained 1
-Dev. wounds
-Target InSv
-−
-none
-+
-Target Feel No Pain
-−
-none
-+
 THE FIGHT
 THEN, AGAINST WHAT THE SHOOTING LEFT
 MELEE WEAPONS
@@ -1334,9 +1525,7 @@ AP
 D
 1
 TWIN-LINKED
-−9% wiped
-−0.3
-WOUNDS IF UNTICKED
+0
 Chainfist ×2
 A
 4
@@ -1349,9 +1538,10 @@ AP
 D
 2
 ANTI-VEHICLE 3+
-−7% wiped
-−0.2
-WOUNDS IF UNTICKED
+0
+AGAINST THIS TARGET
+[ANTI-VEHICLE 3+]
+0
 Power fist ×6
 A
 4
@@ -1363,130 +1553,65 @@ AP
 -2
 D
 2
-−73% wiped
-−2.9
-WOUNDS IF UNTICKED
+−1% wiped
+≈0
+MODELS IF UNTICKED
 SITUATION AND RULES
-both sides
-Martial Excellence
-Blessing of Khorne active this battle round: [SUSTAINED HITS 1]
-YOURS
-if it applies
-+3% wiped
-+0.1
-WOUNDS
-Warp Blades
-Blessing of Khorne active this battle round: [LETHAL HITS]
-YOURS
-if it applies
-+3% wiped
-+0.1
-WOUNDS
 Charged this turn
 also the condition of 1CP Hack and Slash (tick it under Stratagems)
-YOURS
 holds: Both takes the charge as made (no charge roll)
-no change: no rule here needs it
 0
-BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit
-ticks Doctrina Imperatives (-1 to their hit rolls)
-THEIRS
-if it holds
-no change: nothing it reaches counts in this step
-0
-ALL ▾
-Doctrina Imperatives
-Melee attacks that target this unit: Protector: -1 to the hit roll if this unit is BATTLELINE or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit · -1 to their hit rolls only while the BATTLELINE fact holds for it (above)
-THEIRS
-if it applies
-no change: -1 to their hit rolls only while “BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit” holds
-0
-ALL ▾
-Protector
-0
-Conqueror
-0
-Both
-counted by you: only with Omnicogitator, Transcendent Cogitation or The Fires of Mars (Thulia Ghuld)
-0
-HELP FROM OTHER UNITS
-of your list · if the table gives it
 Driven by Ultimate Rage (Angron)
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-YOURS
 if it applies
-+4% wiped
-+0.1
-WOUNDS
+0
+Beacons of Rage (Eightbound)
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit
+if it applies
+0
+Beacons of Rage (Eightbound)
+Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls
+if it applies
+0
+Martial Excellence
+Blessing of Khorne active this battle round: [SUSTAINED HITS 1]
+if it applies
+0
+Warp Blades
+Blessing of Khorne active this battle round: [LETHAL HITS]
+if it applies
+0
+Decapitating Strikes
+Blessing of Khorne active this battle round, melee attacks that target an INFANTRY unit: [DEVASTATING WOUNDS]
+if it applies
+0
 STRATAGEMS
-both sides, with their CP
-1CP A Trophy for the Throne
-When selected to fight, vs MONSTER/VEHICLE targets: +1 to wound rolls
-YOURS
-if used
-+4% wiped
-+0.1
-WOUNDS
-1CP Focused Ferocity
-When selected to fight: +1 A
-YOURS
-if used
-+4% wiped
-+0.1
-WOUNDS
+with their CP
 1CP Hack and Slash
 Made a charge move this turn: +1 AP in the Fight phase
-YOURS
 if used
-no change: their InSv 4+ is better
 0
-NOT FOR THIS PAIR, BY THE RULES (3) · YOURS TO COUNT ANYWAY
-
-Beacons of Rage
-YOURS
-not against MONSTER/VEHICLE
-≈0
-WOUNDS IF YOU COUNT IT
-Beacons of Rage
-YOURS
-not against MONSTER/VEHICLE
-+0.1
-WOUNDS IF YOU COUNT IT
-Decapitating Strikes
-YOURS
-only against INFANTRY
-+0.1
-WOUNDS IF YOU COUNT IT
-
-NOT COUNTED BY THE CALCULATOR (8)
+1CP Focused Ferocity
+When selected to fight: +1 A
+if used
+0
+1CP A Trophy for the Throne
+When selected to fight, vs MONSTER/VEHICLE targets: +1 to wound rolls
+if used
+0
+NOT COUNTED BY THE CALCULATOR (4)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-Mechanicus Bodyguard
-THEIRS
-Lone Operative while within 3" of another friendly ADEPTUS MECHANICUS unit
 1CP Blood Offering
-YOURS
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1CP Skulls for the Skull Throne!
-YOURS
-Make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
+Just after your unit destroys a CHARACTER or MONSTER model: make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
 1CP Command Re-roll
-YOURS
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 2CP Counteroffensive
-YOURS
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-1CP Command Re-roll
-THEIRS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-1CP Epic Challenge
-THEIRS
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
-THEIRS
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-OTHER MODIFIERS
+MODIFIERS · NONE
 Hit roll
 −
 0
@@ -1495,15 +1620,11 @@ Wound roll
 −
 0
 +
-AP better
+AP
 −
 0
 +
 Damage
-−
-0
-+
-Attacks
 −
 0
 +
@@ -1515,18 +1636,6 @@ Re-roll wounds
 none
 1s
 all
-Every weapon has
-Lethal
-Sustained 1
-Dev. wounds
-Target InSv
-−
-none
-+
-Target Feel No Pain
-−
-none
-+
 
 ######## strats {"folded":true} · DAMAGE Stratagems
 EXPAND ALL
@@ -1535,7 +1644,7 @@ BERZERKER WARBAND
 1
 CP
 Hack and Slash
-Until the end of the phase, your unit’s melee weapons have +1 AP.
+Your unit made a charge move this turn and has not been selected to fight this phase: until the end of the phase, its melee weapons have +1 AP.
 Fight Any unit
 2
 CP
@@ -1545,12 +1654,12 @@ Fight Any unit
 1
 CP
 Skulls for the Skull Throne!
-Make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
+Just after your unit destroys a CHARACTER or MONSTER model: make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
 Fight Any unit
 1
 CP
 Blood Offering
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 Any phase Any unit
 1
 CP
@@ -1594,12 +1703,12 @@ End of their Movement Any unit
 1
 CP
 Fire Overwatch
-Your unit shoots using snap shooting.
+Your unengaged unit shoots using snap shooting.
 End of their Movement All but Angron, Eightbound
 1
 CP
 Explosives
-One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
+Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 Your Shooting Goremongers, Jakhals
 1
 CP
@@ -1609,7 +1718,7 @@ Your Charge Angron, Forgefiend ×2
 1
 CP
 Heroic Intervention
-Your unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
 End of their Charge · Into the Fray +1CP Any unit
 1
 CP
@@ -2036,7 +2145,7 @@ Own aura, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 a
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 ABILITIES
 Reborn in Blood
 Command · Your Move
@@ -2190,10 +2299,10 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 STRATAGEMS · BUTCHERS OF KHORNE
-1CP +1 A, When selected to fight (Focused Ferocity)
-1CP +1 to wound rolls, When selected to fight, vs MONSTER/VEHICLE targets (A Trophy for the Throne)
+1CP Focused Ferocity: +1 A, When selected to fight
+1CP A Trophy for the Throne: +1 to wound rolls, When selected to fight, vs MONSTER/VEHICLE targets
 ABILITIES
 Bloody Fury
 Your Shoot · Charge
@@ -2207,6 +2316,7 @@ When this unit declares a charge, you can use this part of this ability. If you 
 This unit can re-roll that charge roll.
 This unit must end that charge move engaged with the closest charge target.
 Gore-stained Veterans
+Already in WS
 
 Upgrade
 
@@ -2323,10 +2433,10 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 STRATAGEMS · BUTCHERS OF KHORNE
-1CP +1 A, When selected to fight (Focused Ferocity)
-1CP +1 to wound rolls, When selected to fight, vs MONSTER/VEHICLE targets (A Trophy for the Throne)
+1CP Focused Ferocity: +1 A, When selected to fight
+1CP A Trophy for the Throne: +1 to wound rolls, When selected to fight, vs MONSTER/VEHICLE targets
 ABILITIES
 Bloody Fury
 Your Shoot · Charge
@@ -2340,6 +2450,7 @@ When this unit declares a charge, you can use this part of this ability. If you 
 This unit can re-roll that charge roll.
 This unit must end that charge move engaged with the closest charge target.
 Gore-stained Veterans
+Already in WS
 
 Upgrade
 
@@ -2410,7 +2521,7 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Own aura, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Own aura, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 ABILITIES
 Beacons of Rage
 Fight
@@ -2509,7 +2620,7 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 ABILITIES
 Loping Speed
 Their Movement
@@ -2615,7 +2726,7 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 ABILITIES
 Objective Ravaged
 Your Command
@@ -2713,7 +2824,7 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 ABILITIES
 Furious Onslaught
 Your Shooting
@@ -2748,8 +2859,7 @@ THIS GAME
 NEW GAME
 Super Terminators
 your list
-Purge goes the Foe
-your opponent’s list
+Opponent
 CP
 −
 0
@@ -2772,14 +2882,6 @@ Both players gain 1 Command Point (CP).
 EVENT COMPANION · GENERATING COMMAND POINTS
 
 Excluding Core CP, each player can gain a maximum of 1CP per battle round (including he CP gained when a player discards an active Secondary Mission card).
-
-THEIR LIST
-
-Broad Spectrum Data-tether · Ironstrider Ballistarii ×2: “Each time you select this unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.”
-
-Broad spectrum data-tether · Onager Dunecrawler: “The bearer loses the SMOKE keyword, but each time you target the bearer with a Stratagem, roll one D6: on a 5+, you gain 1CP.”
-
-Broad spectrum data-tether · Skorpius Disintegrator ×2: “Each time you select the bearer as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.”
 
 CHOICES THIS GAME
 Blessings of Khorne · World Eaters army rule
@@ -2840,22 +2942,7 @@ ANY PHASE
 1
 CP
 Blood Offering
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-PURGE GOES THE FOE IN THIS PHASE
-
-START OF THE BATTLE
-
-Battle Protocols · Cybernetica Datasmith + Kastelan Robots
-
-START OF BATTLE ROUND 07.01
-
-Doctrina Imperatives · Adeptus Mechanicus army rule
-ANY PHASE
-1
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1
 CP
 Command Re-roll
@@ -2911,10 +2998,6 @@ App note, not rules text: Super Terminators: points limit 2000 pts (Strike Force
 
 Deep Strike: Angron 330 pts, Chaos Terminators (1–2 of 3) ×2 370 pts each, ×2, Chaos Terminators (3 of 3) 380 pts (1450 pts)
 
-THEIR LIST
-
-App note, not rules text: Purge goes the Foe: points limit 2000 pts (Strike Force); 50% of it is 1000 pts.
-
 8 Deploy Armies
 Infiltrators
 
@@ -2938,7 +3021,7 @@ Roll off: the winner takes the first turn.
 
 FIRST TURN
 SUPER TERMINATORS
-PURGE GOES THE FOE
+OPPONENT
 11 Resolve Pre-battle Rules
 Scouts
 
@@ -2946,9 +3029,6 @@ Players alternate resolving any pre-battle rules units from their army may have,
 
 THIS LIST
 Scouts: Eightbound Scouts 6"
-
-THEIR LIST
-Scouts: Skitarii Rangers ×2 Scouts 6"
 
 12 Begin the Battle
 
@@ -2967,8 +3047,7 @@ THIS GAME
 NEW GAME
 Super Terminators
 your list
-Purge goes the Foe
-your opponent’s list
+Opponent
 CP
 −
 3
@@ -2991,14 +3070,6 @@ Both players gain 1 Command Point (CP).
 EVENT COMPANION · GENERATING COMMAND POINTS
 
 Excluding Core CP, each player can gain a maximum of 1CP per battle round (including he CP gained when a player discards an active Secondary Mission card).
-
-THEIR LIST
-
-Broad Spectrum Data-tether · Ironstrider Ballistarii ×2: “Each time you select this unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.”
-
-Broad spectrum data-tether · Onager Dunecrawler: “The bearer loses the SMOKE keyword, but each time you target the bearer with a Stratagem, roll one D6: on a 5+, you gain 1CP.”
-
-Broad spectrum data-tether · Skorpius Disintegrator ×2: “Each time you select the bearer as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.”
 
 CHOICES THIS GAME
 Blessings of Khorne · World Eaters army rule
@@ -3049,35 +3120,13 @@ Furious Onslaught · Forgefiend ×2
 1
 CP
 Explosives
-One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
+Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 ANY PHASE
 2
 1
 CP
 Blood Offering
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-PURGE GOES THE FOE IN THIS PHASE
-
-START OF SHOOTING PHASE 10.01
-
-1
-CP
-Smokescreen
-Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
-
-SHOOT 10.02
-
-1
-CP
-Analytic Reprisals
-Your unit shoots as if it were your Shooting phase, but only at that enemy unit (and only if it is an eligible target).
-ANY PHASE
-2
-Icon of War · Thulia Ghuld
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1
 CP
 Command Re-roll
@@ -3127,22 +3176,7 @@ ANY PHASE
 1
 CP
 Blood Offering
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-PURGE GOES THE FOE IN THIS PHASE
-
-START OF THE BATTLE
-
-Battle Protocols · Cybernetica Datasmith + Kastelan Robots
-
-START OF BATTLE ROUND 07.01
-
-Doctrina Imperatives · Adeptus Mechanicus army rule
-ANY PHASE
-1
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1
 CP
 Command Re-roll
@@ -3179,26 +3213,7 @@ ANY PHASE
 1
 CP
 Blood Offering
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-PURGE GOES THE FOE IN THIS PHASE
-
-END OF MOVEMENT PHASE 09.03
-
-1
-CP
-Rapid Ingress
-Your unit in strategic reserves makes an ingress move (not in the first battle round).
-1
-CP
-Fire Overwatch
-Your unit shoots using snap shooting.
-ANY PHASE
-2
-Icon of War · Thulia Ghuld
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1
 CP
 Command Re-roll
@@ -3229,35 +3244,13 @@ Furious Onslaught · Forgefiend ×2
 1
 CP
 Explosives
-One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
+Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 ANY PHASE
 2
 1
 CP
 Blood Offering
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-PURGE GOES THE FOE IN THIS PHASE
-
-START OF SHOOTING PHASE 10.01
-
-1
-CP
-Smokescreen
-Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
-
-SHOOT 10.02
-
-1
-CP
-Analytic Reprisals
-Your unit shoots as if it were your Shooting phase, but only at that enemy unit (and only if it is an eligible target).
-ANY PHASE
-2
-Icon of War · Thulia Ghuld
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1
 CP
 Command Re-roll
@@ -3294,21 +3287,7 @@ ANY PHASE
 1
 CP
 Blood Offering
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-PURGE GOES THE FOE IN THIS PHASE
-
-END OF CHARGE PHASE 11.03
-
-1
-CP
-Heroic Intervention
-Your unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
-ANY PHASE
-1
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1
 CP
 Command Re-roll
@@ -3345,7 +3324,7 @@ Beacons of Rage · Eightbound
 1
 CP
 Hack and Slash
-Until the end of the phase, your unit’s melee weapons have +1 AP.
+Your unit made a charge move this turn and has not been selected to fight this phase: until the end of the phase, its melee weapons have +1 AP.
 2
 CP
 Frenzied Resilience
@@ -3353,7 +3332,7 @@ Until the end of the phase, -1 Damage to each attack allocated to a model in you
 1
 CP
 Skulls for the Skull Throne!
-Make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
+Just after your unit destroys a CHARACTER or MONSTER model: make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
 1
 CP
 Focused Ferocity
@@ -3371,30 +3350,7 @@ ANY PHASE
 1
 CP
 Blood Offering
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-PURGE GOES THE FOE IN THIS PHASE
-
-PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
-
-1
-CP
-Servo-driven Charge
-Until the end of the phase, your unit’s melee weapons have [LANCE].
-1
-CP
-Epic Challenge
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2
-CP
-Counteroffensive
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-ANY PHASE
-2
-Icon of War · Thulia Ghuld
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1
 CP
 Command Re-roll
@@ -3427,61 +3383,7 @@ ANY PHASE
 1
 CP
 Blood Offering
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-PURGE GOES THE FOE IN THIS PHASE
-
-START OF COMMAND PHASE 08.01
-
-Canticles of the Omnissiah · Belisarius Cawl
-Self-repair Mechanisms · Belisarius Cawl
-
-BATTLE-SHOCK 08.03
-
-1
-CP
-Insane Bravery
-The battle-shock roll you are about to make for your unit is automatically successful.
-
-COMMAND ABILITIES 08.04
-
-Rod of the War Forge · Thulia Ghuld
-Omnissiah’s Blessing · Tech-Priest Enginseer
-Battle Protocols · Cybernetica Datasmith + Kastelan Robots
-1
-CP
-Motive Imperative
-Until the start of your next Command phase, your unit has +3" Move and +1 to Advance and Charge rolls.
-1
-CP
-Auto-divinatory Targeting
-Until the start of your next Command phase, your unit’s ranged weapons have BS 3+ and [IGNORES COVER], but can only target units within range of the selected objective marker.
-1
-CP
-Machine Spirit Resurgent
-Your unit, if below its Starting Strength: until the start of your next Command phase, its attacks can re-roll the hit roll, and the wound roll as well if it is Below Half-strength.
-1
-CP
-Machine Superiority
-Until the end of the turn, your unit is eligible to shoot after Falling Back, and you can ignore any or all modifiers to its characteristics and to its rolls and tests (not saving throws).
-1
-CP
-Transcendent Cogitation
-Until the start of your next Command phase, the Conqueror and Protector Imperatives are both active for your unit.
-1
-CP
-Benevolence of the Omnissiah
-Until the start of your next Command phase, your unit has Feel No Pain 6+ (5+ against mortal wounds).
-
-END OF COMMAND PHASE 08.05
-
-Objective Scouted · Skitarii Rangers ×2
-ANY PHASE
-2
-Icon of War · Thulia Ghuld
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1
 CP
 Command Re-roll
@@ -3519,29 +3421,13 @@ Your unit in strategic reserves makes an ingress move (not in the first battle r
 1
 CP
 Fire Overwatch
-Your unit shoots using snap shooting.
+Your unengaged unit shoots using snap shooting.
 ANY PHASE
 2
 1
 CP
 Blood Offering
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-PURGE GOES THE FOE IN THIS PHASE
-
-MOVE UNITS 09.02
-
-Elevated Strider · Ironstrider Ballistarii ×2
-Scuttling Walker · Onager Dunecrawler
-1
-CP
-Unrelenting Aggression
-Until the end of the turn, your unit is eligible to shoot after Falling Back (a SKITARII unit: to shoot and declare a charge).
-ANY PHASE
-1
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1
 CP
 Command Re-roll
@@ -3589,36 +3475,7 @@ ANY PHASE
 1
 CP
 Blood Offering
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-PURGE GOES THE FOE IN THIS PHASE
-
-START OF SHOOTING PHASE 10.01
-
-Secutor of Olympus · Thulia Ghuld
-
-SHOOT 10.02
-
-Elevated Strider · Ironstrider Ballistarii ×2
-1
-CP
-Unshackled Wrath
-Until the end of the phase, your unit’s ranged weapons have [SUSTAINED HITS 1] or [LETHAL HITS], or all of [SUSTAINED HITS 1], [LETHAL HITS] and [HAZARDOUS].
-1
-CP
-Threat-cogitation Targeters
-Until the end of the phase, your unit’s ranged attacks allocated to a MONSTER or VEHICLE model can re-roll the Damage roll.
-1
-CP
-Explosives
-One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
-No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
-ANY PHASE
-2
-Icon of War · Thulia Ghuld
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1
 CP
 Command Re-roll
@@ -3652,33 +3509,13 @@ END OF CHARGE PHASE 11.03
 1
 CP
 Heroic Intervention
-Your unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
 ANY PHASE
 2
 1
 CP
 Blood Offering
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-PURGE GOES THE FOE IN THIS PHASE
-
-CHARGE 11.02
-
-1
-CP
-Crushing Impact
-After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
-1
-CP
-Precision Onslaught
-When your unit ends a Charge move: one D6 for each of its models within Engagement Range of one enemy unit; 1 mortal wound to that unit for each 4+.
-No unit in this list can use it (needs SICARIAN)
-ANY PHASE
-2
-Icon of War · Thulia Ghuld
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1
 CP
 Command Re-roll
@@ -3715,7 +3552,7 @@ Beacons of Rage · Eightbound
 1
 CP
 Hack and Slash
-Until the end of the phase, your unit’s melee weapons have +1 AP.
+Your unit made a charge move this turn and has not been selected to fight this phase: until the end of the phase, its melee weapons have +1 AP.
 2
 CP
 Frenzied Resilience
@@ -3723,7 +3560,7 @@ Until the end of the phase, -1 Damage to each attack allocated to a model in you
 1
 CP
 Skulls for the Skull Throne!
-Make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
+Just after your unit destroys a CHARACTER or MONSTER model: make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
 1
 CP
 Focused Ferocity
@@ -3745,26 +3582,7 @@ ANY PHASE
 1
 CP
 Blood Offering
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-PURGE GOES THE FOE IN THIS PHASE
-
-PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
-
-1
-CP
-Servo-driven Charge
-Until the end of the phase, your unit’s melee weapons have [LANCE].
-1
-CP
-Epic Challenge
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-ANY PHASE
-2
-Icon of War · Thulia Ghuld
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1
 CP
 Command Re-roll
@@ -3801,7 +3619,7 @@ Beacons of Rage · Eightbound
 1
 CP
 Hack and Slash
-Until the end of the phase, your unit’s melee weapons have +1 AP.
+Your unit made a charge move this turn and has not been selected to fight this phase: until the end of the phase, its melee weapons have +1 AP.
 2
 CP
 Frenzied Resilience
@@ -3809,7 +3627,7 @@ Until the end of the phase, -1 Damage to each attack allocated to a model in you
 1
 CP
 Skulls for the Skull Throne!
-Make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
+Just after your unit destroys a CHARACTER or MONSTER model: make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
 1
 CP
 Focused Ferocity
@@ -3831,26 +3649,7 @@ ANY PHASE
 1
 CP
 Blood Offering
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-PURGE GOES THE FOE IN THIS PHASE
-
-PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
-
-1
-CP
-Servo-driven Charge
-Until the end of the phase, your unit’s melee weapons have [LANCE].
-1
-CP
-Epic Challenge
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-ANY PHASE
-2
-Icon of War · Thulia Ghuld
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1
 CP
 Command Re-roll
@@ -5045,6 +4844,9 @@ WHILE SHOOTING:
 
 You can only target one visible enemy unit within 24" of your unit (and only if it is an eligible target).
 Each attack only hits on an unmodified hit roll of 6 (irrespective of the attacking weapon’s BS characteristic or any modifiers).
+
+Wahapedia core rules (not in GW’s Core Rules PDF, 01-06): Those hits are not critical hits.
+
 You cannot re-roll hit rolls.
 
 AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.

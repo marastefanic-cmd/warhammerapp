@@ -6,8 +6,6 @@ Berzerker Warband · Vessels of Wrath · Disposition: Purge the Foe
 Overview
 Damage calculator
 Game tracker
-Opponent
-None yet: pick their list
 Units
 14
 Stratagems
@@ -40,7 +38,7 @@ Berzerker Warband (2 DP), Vessels of Wrath (1 DP)
 Disposition: Purge the Foe
 POINTS
 2000 / 2000 · Strike Force
-ARMY RULES
+ARMY AND DETACHMENT RULES
 Blessings of Khorne
 Start of the battle round
 
@@ -78,6 +76,25 @@ Decapitating Strikes · double 6 or triple 3+
 
 Each time a model in this unit makes a melee attack that targets an INFANTRY unit, that attack has the [DEVASTATING WOUNDS] ability.
 
+Relentless Rage
+Berzerker Warband · Fight
+
+Already counted: every melee A value in this app includes this +1 A. Do not add it again.
+
+Friendly WORLD EATERS units’ melee attacks have +1 A.
+
+APPLIES TOAngron, Khârn the Betrayer, Lord on Juggernaut, Slaughterbound, Slaughterbound · Berzerker Glaive, Chaos Rhino, Eightbound, Exalted Eightbound, Goremongers, Jakhals, Forgefiend
+
+Wrath of Khorne
+Vessels of Wrath · Fight
+
+When a friendly WORLD EATERS CHARACTER unit (excluding EPIC HERO units) is selected to fight, that unit’s CHARACTER models’ melee attacks can have:
+
+[CLEAVE 1].
+Or: +1 AP.
+
+APPLIES TOLord on Juggernaut, Slaughterbound, Slaughterbound · Berzerker Glaive
+
 DECLARE BATTLE FORMATIONS
 DEEP STRIKE
 Angron 330 pts
@@ -92,7 +109,7 @@ Eightbound Scouts 6"
 Goremongers Infiltrators
 ABILITIES
 Lord of the Eightbound · Slaughterbound ×2
-START OF THE BATTLE ROUND
+START OF THE BATTLE AND THE BATTLE ROUNDS
 EVERY ROUND
 Blessings of Khorne · World Eaters army rule
 Reborn in Blood · Angron
@@ -212,7 +229,8 @@ Goremongers
 –
 70
 Jakhals
-1× Jakhal Pack Leader, 1× Dishonoured w/ paired manglers, 8× Jakhal
+2×65
+Jakhal×9
 7"
 4
 6+
@@ -220,7 +238,14 @@ Jakhals
 7+
 1
 –
-2×65
+Dishonoured w/ paired manglers
+7"
+4
+6+
+1
+7+
+1
+–
 VEHICLES
 2
 Forgefiend
@@ -381,7 +406,7 @@ Own aura, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 a
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 Khârn the Betrayer
 + Khorne Berzerkers
 KHÂRN THE BETRAYER
@@ -410,7 +435,7 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 Lord on Juggernaut
 Exalted chainblade
 8
@@ -432,9 +457,9 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 STRATAGEMS · VESSELS OF WRATH
-1CP CHARACTER models +1 A, +2 S, When selected to fight (Aspire to Infamy)
+1CP Aspire to Infamy: CHARACTER models +1 A, +2 S, When selected to fight
 Slaughterbound
 Lacerator and daemonic claw
 7/10
@@ -448,9 +473,9 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 STRATAGEMS · VESSELS OF WRATH
-1CP CHARACTER models +1 A, +2 S, When selected to fight (Aspire to Infamy)
+1CP Aspire to Infamy: CHARACTER models +1 A, +2 S, When selected to fight
 Slaughterbound
 Berzerker Glaive
 + Exalted Eightbound
@@ -476,9 +501,9 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 STRATAGEMS · VESSELS OF WRATH
-1CP CHARACTER models +1 A, +2 S, When selected to fight (Aspire to Infamy)
+1CP Aspire to Infamy: CHARACTER models +1 A, +2 S, When selected to fight
 Chaos Rhino
 Armoured tracks
 7
@@ -490,7 +515,7 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 Eightbound
 ×2 units
 Chainblades×3
@@ -503,7 +528,7 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Own aura, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Own aura, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 Exalted Eightbound
 Chainblades×3
 5
@@ -517,7 +542,7 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 Goremongers
 Chainblade×8
 4
@@ -538,7 +563,7 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 Jakhals
 ×2 units
 Chainblades×9
@@ -557,7 +582,7 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 Forgefiend
 ×2 units
 Forgefiend claws
@@ -571,7 +596,7 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 
 ######## abilities · MELEE Abilities
 Angron
@@ -661,7 +686,9 @@ If the bearer’s unit contains one or more Icons of Khorne, each time the beare
 
 Lord on Juggernaut
 Aggressive Advance
-Your Move · Charge
+Not leading a unit in this list
+
+Not leading a unit in this list
 
 Your Movement / Charge (either turn)
 
@@ -676,7 +703,9 @@ Each time this model’s unit is selected to fight, you can use this ability. Wh
 
 Slaughterbound
 Rage Eternal
-Your Command
+Not leading a unit in this list
+
+Not leading a unit in this list
 
 Command · Your turn
 
@@ -719,6 +748,7 @@ If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Ba
 
 Berzerker Glaive
 Enhancement
+Already in A, D
 
 Enhancement
 
@@ -895,53 +925,32 @@ STRATAGEMSPunish the Craven, Aspire to Infamy, Scorn the Witch
 
 UNIT RULES
 Deadly Demise
-
 Angron D6
-
 Slaughterbound D3
-
 Slaughterbound + Exalted Eightbound D3
-
 Chaos Rhino D3
-
 Forgefiend D3
-
 Deep Strike
-
 Angron
-
+Reborn in Blood: At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its Deep Strike ability, with 8 wounds remaining.
 Slaughterbound
 Lord of the Eightbound: If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step, this model has the Deep Strike and Scouts 6" abilities.
-
 Slaughterbound + Exalted Eightbound
-
+Lord of the Eightbound: If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step, this model has the Deep Strike and Scouts 6" abilities.
 Exalted Eightbound
-
 Firing Deck
-
 Chaos Rhino 2
-
 Infiltrators
-
 Goremongers
-
 Leader
-
 Khârn the Betrayer leads Khorne Berzerkers
-
 Lord on Juggernaut
-
 Slaughterbound
-
 Slaughterbound leads Exalted Eightbound
-
 Scouts
-
 Slaughterbound
 Lord of the Eightbound: If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step, this model has the Deep Strike and Scouts 6" abilities.
-
 Slaughterbound + Exalted Eightbound 6": Slaughterbound only
-
 Eightbound 6"
 
 ######## bases · RULES Bases & proxies
@@ -1024,18 +1033,136 @@ Khârn the Betrayer + Khorne Berzerkers
 SHOOT
 FIGHT
 BOTH
-THEIR
-Magnus the Red
-Pubstomper · T11 · Sv 2+ · 4+ InSv · W16
-THEY ATTACK
-0.6
-of 16 wounds lost
-destroyed in <1% of games
-
-≈0 pts destroyed
-
-Plasma pistol: standard
-7 NOT COUNTED
+MODELS LEFT · ALL 11
+Khârn the Betrayer
+0
+1
+Khorne Berzerker Champion
+0
+1
+Khorne Berzerker
+0
+1
+2
+3
+4
+5
+6
+7
+Khorne Berzerker w/ eviscerator and plasma pistol
+0
+1
+2
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+1.8
+of 5 destroyed
+4.2 wounds lost · wiped in 1% of games
+Plasma pistol: supercharge
+4 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1052,20 +1179,20 @@ A
 BS
 3+
 S
-7
+8
 AP
--2
+-3
 D
-1
-PISTOL
-−0.1
-WOUNDS IF UNTICKED
+2
+HAZARDOUS, PISTOL
+−0.4
+MODELS IF UNTICKED
 PICK ONE PROFILE
 standard
-0.6
+1.4
 supercharge
-0.7
-BEST
+1.8
+BEST · 12"
 Plasma pistol ×3 KHORNE BERZERKERS
 RNG
 12"
@@ -1074,20 +1201,20 @@ A
 BS
 4+
 S
-7
+8
 AP
--2
+-3
 D
-1
-PISTOL
-−0.2
-WOUNDS IF UNTICKED
+2
+HAZARDOUS, PISTOL
+−1
+MODELS IF UNTICKED
 PICK ONE PROFILE
 standard
-0.6
+1.1
 supercharge
-0.8
-BEST
+1.8
+BEST · 12"
 Bolt pistol ×7 KHORNE BERZERKERS
 RNG
 12"
@@ -1102,83 +1229,58 @@ AP
 D
 1
 PISTOL
-−0.2
-WOUNDS IF UNTICKED
+−0.3
+MODELS IF UNTICKED
 SITUATION AND RULES
-both sides
-Target has the benefit of cover
-THEIRS
-if it applies
-−0.2
-WOUNDS
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
-YOURS
 if it applies
-+0.2
-WOUNDS
++3% wiped
++0.7
+MODELS
 Close-quarters shooting at a unit it is engaged with
 only [CLOSE-QUARTERS] weapons
-YOURS
 if it applies
 no change: every weapon ticked is a [CLOSE-QUARTERS] weapon
 0
 ALL ▾
-Target is engaged
--1 to hit; no [BLAST]
-YOURS
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
 if it applies
-−0.2
-WOUNDS
+−0.6
+MODELS
 Fire Overwatch (snap shooting)
 the target within 24" (15.09): hits only on an unmodified 6, never critical; no hit re-rolls
-YOURS
 if it applies
-−0.4
-WOUNDS
+−1.3
+MODELS
 STRATAGEMS
-both sides, with their CP
+with their CP
 
 None that change these numbers.
 
-NOT FOR THIS PAIR, BY THE RULES (8) · YOURS TO COUNT ANYWAY
+NOT FOR THIS STEP, BY THE RULES (5) · YOURS TO COUNT ANYWAY
 
 1CP Hack and Slash
-YOURS
 Fight phase only
-+0.1
-WOUNDS IF YOU COUNT IT
++0.5
+MODELS IF YOU COUNT IT
 
-Nothing to count: 1CP Skulls for the Skull Throne!, 1CP Epic Challenge, 2CP Counteroffensive (yours, Fight phase only) · 1CP Berzerker’s Wrath (yours, in the other player’s turn only) · 1CP Arcane Focus (theirs, in its own turn only) · 1CP Epic Challenge, 2CP Counteroffensive (theirs, Fight phase only)
+Nothing to count: 1CP Skulls for the Skull Throne!, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only) · 1CP Berzerker’s Wrath (in the other player’s turn only)
 
-NOT COUNTED BY THE CALCULATOR (7)
+NOT COUNTED BY THE CALCULATOR (4)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-Impossible Form
-THEIRS
-Impossible Form (if picked this round): -1 Damage to attacks against Magnus, excluding psychic attacks
-COUNT IT BY HAND: DAMAGE −1
-1CP Psychic Dominion
-THEIRS
-Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
-COUNT IT BY HAND: TARGET FEEL NO PAIN 4+
-1CP Destined by Fate
-THEIRS
-after a failed save for a PSYKER model, that attack’s Damage becomes 0
+Hazard rolls (06.03)
+not counted, the calculator shows damage dealt · Plasma pistol
 1CP Blood Offering
-YOURS
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1CP Command Re-roll
-YOURS
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Explosives
-YOURS
-One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
-1CP Command Re-roll
-THEIRS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-OTHER MODIFIERS
+Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
+MODIFIERS · NONE
 Hit roll
 −
 0
@@ -1187,15 +1289,11 @@ Wound roll
 −
 0
 +
-AP better
+AP
 −
 0
 +
 Damage
-−
-0
-+
-Attacks
 −
 0
 +
@@ -1207,18 +1305,6 @@ Re-roll wounds
 none
 1s
 all
-Every weapon has
-Lethal
-Sustained 1
-Dev. wounds
-Target InSv
-−
-none
-+
-Target Feel No Pain
-−
-none
-+
 
 ######## damage fight · DAMAGE Damage
 YOUR
@@ -1228,20 +1314,118 @@ no ranged weapons
 FIGHT
 BOTH
 fight only
-THEIR
-Magnus the Red
-Pubstomper · T11 · Sv 2+ · 4+ InSv · W16
-THEY ATTACK
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
 13
-of 16 wounds lost
-destroyed in 54% of games
-
-≈247 pts destroyed
-
-Samni’arius and Spinegrinder: strike
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+4.9
+of 5 destroyed
+9.7 wounds lost · wiped in 90% of games
+Samni’arius and Spinegrinder: sweep
 Charged this turn
 ×
-11 NOT COUNTED
+5 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1254,127 +1438,93 @@ MELEE WEAPONS
 Angron
 Samni’arius and Spinegrinder
 A
-9
+17
 WS
 2+
 S
-14
+7
 AP
--3
+-2
 D
-D6+2
+2
 DEVASTATING WOUNDS
-−54% wiped
-−13.2
-WOUNDS IF UNTICKED
+−90% wiped
+−4.9
+MODELS IF UNTICKED
 PICK ONE PROFILE
 strike
-13
-BEST
+4.6
 sweep
-7.0
+4.9
+BEST
 SITUATION AND RULES
-both sides
 Driven by Ultimate Rage
 Own aura, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-YOURS
 if it applies
-+26% wiped
-+1.8
-WOUNDS
++10% wiped
++0.1
+MODELS
+Beacons of Rage (Eightbound (×2))
+Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls
+if it applies
++8% wiped
++0.1
+MODELS
 Martial Excellence
 Blessing of Khorne active this battle round: [SUSTAINED HITS 1]
-YOURS
 if it applies
-+13% wiped
-+0.9
-WOUNDS
++6% wiped
++0.1
+MODELS
 Warp Blades
 Blessing of Khorne active this battle round: [LETHAL HITS]
-YOURS
 if it applies
 +3% wiped
-+0.2
-WOUNDS
++0.1
+MODELS
 Charged this turn
 also the condition of 1CP Hack and Slash (tick it under Stratagems)
-YOURS
 said to hold
 no change: no rule here needs it
 0
+Beacons of Rage (Eightbound (×2))
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit
+if it applies
+no change: already hits on 2+
+0
+Decapitating Strikes
+Blessing of Khorne active this battle round, melee attacks that target an INFANTRY unit: [DEVASTATING WOUNDS]
+if it applies
+0
 Damaged (1-6 wounds left)
 -1 to hit rolls
-YOURS
 if it applies
-−16% wiped
-−1.7
-WOUNDS
+−18% wiped
+−0.3
+MODELS
 STRATAGEMS
-both sides, with their CP
+with their CP
 1CP Hack and Slash
 Made a charge move this turn: +1 AP in the Fight phase
-YOURS
 if used
-no change: their InSv 4+ is better
-0
-NOT FOR THIS PAIR, BY THE RULES (4) · YOURS TO COUNT ANYWAY
-
-Beacons of Rage
-YOURS
-not against MONSTER/VEHICLE
-NO CHANGE
-Beacons of Rage
-YOURS
-not against MONSTER/VEHICLE
-+1.2
-WOUNDS IF YOU COUNT IT
-Decapitating Strikes
-YOURS
-only against INFANTRY
-NO CHANGE
-
-Nothing to count: 1CP Arcane Focus (theirs, Shooting phase only)
-
-NOT COUNTED BY THE CALCULATOR (11)
++7% wiped
++0.1
+MODELS
+NOT COUNTED BY THE CALCULATOR (5)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-Impossible Form
-THEIRS
-Impossible Form (if picked this round): -1 Damage to attacks against Magnus, excluding psychic attacks
-COUNT IT BY HAND: DAMAGE −1
-1CP Psychic Dominion
-THEIRS
-Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
-COUNT IT BY HAND: TARGET FEEL NO PAIN 4+
-1CP Destined by Fate
-THEIRS
-after a failed save for a PSYKER model, that attack’s Damage becomes 0
 1CP Blood Offering
-YOURS
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1CP Skulls for the Skull Throne!
-YOURS
-Make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
+Just after your unit destroys a CHARACTER or MONSTER model: make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
 1CP Command Re-roll
-YOURS
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
-YOURS
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive
-YOURS
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-1CP Command Re-roll
-THEIRS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-1CP Epic Challenge
-THEIRS
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
-THEIRS
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-OTHER MODIFIERS
+MODIFIERS · NONE
 Hit roll
 −
 0
@@ -1383,15 +1533,11 @@ Wound roll
 −
 0
 +
-AP better
+AP
 −
 0
 +
 Damage
-−
-0
-+
-Attacks
 −
 0
 +
@@ -1403,18 +1549,6 @@ Re-roll wounds
 none
 1s
 all
-Every weapon has
-Lethal
-Sustained 1
-Dev. wounds
-Target InSv
-−
-none
-+
-Target Feel No Pain
-−
-none
-+
 
 ######## damage both · DAMAGE Damage
 YOUR
@@ -1422,30 +1556,151 @@ Khârn the Betrayer + Khorne Berzerkers
 SHOOT
 FIGHT
 BOTH
-THEIR
-Magnus the Red
-Pubstomper · T11 · Sv 2+ · 4+ InSv · W16
-THEY ATTACK
+MODELS LEFT · ALL 11
+Khârn the Betrayer
+0
+1
+Khorne Berzerker Champion
+0
+1
+Khorne Berzerker
+0
+1
+2
+3
+4
+5
+6
+7
+Khorne Berzerker w/ eviscerator and plasma pistol
+0
+1
+2
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
 12
-of 16 wounds lost
-destroyed in 23% of games
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+5
+of 5 destroyed
+10 wounds lost · wiped in >99% of games
 
-Shoot 0.6 · Fight 11 · the charge is taken to succeed
+Shoot 1.8 · Fight 3.2 · the charge is taken to succeed
 
-≈102 pts destroyed
-
-Plasma pistol: standard
+Plasma pistol: supercharge
 Charged this turn
 ×
 Legendary Killer
-18 NOT COUNTED
+9 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
 
-Effects are on the total: their models destroyed by the end of the fight, the shooting’s choices and the fight’s alike.
+Effects are on the total: models destroyed by the end of the fight, the shooting’s choices and the fight’s alike.
 
 The charge is taken to succeed (no charge roll); “Charged this turn” is ticked for the fight.
+
+Nothing here changes this: the target is destroyed in every game anyway.
 
 THE SHOOTING
 FIRST
@@ -1459,19 +1714,18 @@ A
 BS
 3+
 S
-7
+8
 AP
--2
+-3
 D
-1
-PISTOL
-−0.1
-WOUNDS IF UNTICKED
+2
+HAZARDOUS, PISTOL
+0
 PICK ONE PROFILE
 standard
-12
+5
 supercharge
-12
+5
 Plasma pistol ×3 KHORNE BERZERKERS
 RNG
 12"
@@ -1480,20 +1734,18 @@ A
 BS
 4+
 S
-7
+8
 AP
--2
+-3
 D
-1
-PISTOL
-−2% wiped
-−0.3
-WOUNDS IF UNTICKED
+2
+HAZARDOUS, PISTOL
+0
 PICK ONE PROFILE
 standard
-12
+5
 supercharge
-12
+5
 Bolt pistol ×7 KHORNE BERZERKERS
 RNG
 12"
@@ -1508,81 +1760,46 @@ AP
 D
 1
 PISTOL
-−2% wiped
-−0.3
-WOUNDS IF UNTICKED
+0
 SITUATION AND RULES
-both sides
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
-YOURS
 if it applies
-+1% wiped
-+0.1
-WOUNDS
-Target has the benefit of cover
-THEIRS
-if it applies
-−1% wiped
-−0.2
-WOUNDS
-Target is engaged
--1 to hit; no [BLAST]
-YOURS
-if it applies
-−1% wiped
-−0.2
-WOUNDS
+0
 Close-quarters shooting at a unit it is engaged with
 only [CLOSE-QUARTERS] weapons
-YOURS
 if it applies
-−11% wiped
-−1.8
-WOUNDS
+0
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
+if it applies
+0
 STRATAGEMS
-both sides, with their CP
+with their CP
 
 None that change these numbers.
 
-NOT FOR THIS PAIR, BY THE RULES (8) · YOURS TO COUNT ANYWAY
+NOT FOR THIS STEP, BY THE RULES (5) · YOURS TO COUNT ANYWAY
 
 1CP Hack and Slash
-YOURS
 Fight phase only
-≈0
-WOUNDS IF YOU COUNT IT
+NO CHANGE
 
-Nothing to count: 1CP Skulls for the Skull Throne!, 1CP Epic Challenge, 2CP Counteroffensive (yours, Fight phase only) · 1CP Berzerker’s Wrath (yours, in the other player’s turn only) · 1CP Arcane Focus (theirs, in its own turn only) · 1CP Epic Challenge, 2CP Counteroffensive (theirs, Fight phase only)
+Nothing to count: 1CP Skulls for the Skull Throne!, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only) · 1CP Berzerker’s Wrath (in the other player’s turn only)
 
-NOT COUNTED BY THE CALCULATOR (7)
+NOT COUNTED BY THE CALCULATOR (4)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-Impossible Form
-THEIRS
-Impossible Form (if picked this round): -1 Damage to attacks against Magnus, excluding psychic attacks
-COUNT IT BY HAND: DAMAGE −1
-1CP Psychic Dominion
-THEIRS
-Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
-COUNT IT BY HAND: TARGET FEEL NO PAIN 4+
-1CP Destined by Fate
-THEIRS
-after a failed save for a PSYKER model, that attack’s Damage becomes 0
+Hazard rolls (06.03)
+not counted, the calculator shows damage dealt · Plasma pistol
 1CP Blood Offering
-YOURS
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1CP Command Re-roll
-YOURS
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Explosives
-YOURS
-One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
-1CP Command Re-roll
-THEIRS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-OTHER MODIFIERS
+Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
+MODIFIERS · NONE
 Hit roll
 −
 0
@@ -1591,15 +1808,11 @@ Wound roll
 −
 0
 +
-AP better
+AP
 −
 0
 +
 Damage
-−
-0
-+
-Attacks
 −
 0
 +
@@ -1611,18 +1824,6 @@ Re-roll wounds
 none
 1s
 all
-Every weapon has
-Lethal
-Sustained 1
-Dev. wounds
-Target InSv
-−
-none
-+
-Target Feel No Pain
-−
-none
-+
 THE FIGHT
 THEN, AGAINST WHAT THE SHOOTING LEFT
 MELEE WEAPONS
@@ -1641,9 +1842,7 @@ AP
 -2
 D
 3
-−22% wiped
-−4.6
-WOUNDS IF UNTICKED
+0
 Chainblade ×8 KHORNE BERZERKERS
 A
 5
@@ -1655,9 +1854,7 @@ AP
 -1
 D
 1
-−18% wiped
-−3.6
-WOUNDS IF UNTICKED
+0
 Khornate eviscerator ×2 KHORNE BERZERKERS
 A
 4
@@ -1669,117 +1866,68 @@ AP
 -2
 D
 2
-−14% wiped
-−2.1
-WOUNDS IF UNTICKED
+0
 SITUATION AND RULES
-both sides
-Warp Blades
-Blessing of Khorne active this battle round: [LETHAL HITS]
-YOURS
-if it applies
-+32% wiped
-+2.5
-WOUNDS
-Legendary Killer
-While Khârn leads this unit: re-roll hit rolls of 1 and wound rolls of 1
-YOURS
-always counted · you can leave it out
-if left out: −2.7 wounds · −16% wiped
 Charged this turn
 also the condition of 1CP Hack and Slash (tick it under Stratagems)
-YOURS
 holds: Both takes the charge as made (no charge roll)
-−11% wiped
-−1.8
-WOUNDS IF UNTICKED
+0
 RULES IT SWITCHES ON
 ✓Murderous Charge
-−1.8
-wounds if unticked
-Martial Excellence
-Blessing of Khorne active this battle round: [SUSTAINED HITS 1]
-YOURS
-if it applies
-+20% wiped
-+1.6
-WOUNDS
-HELP FROM OTHER UNITS
-of your list · if the table gives it
+0
+Legendary Killer
+While Khârn leads this unit: re-roll hit rolls of 1 and wound rolls of 1
+always counted · you can leave it out
+if left out: no change
 Driven by Ultimate Rage (Angron)
 Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 and wound rolls of 1
-YOURS
+if it applies
+0
+Beacons of Rage (Eightbound (×2))
+Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit
+if it applies
+0
+Beacons of Rage (Eightbound (×2))
+Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls
+if it applies
+0
+Martial Excellence
+Blessing of Khorne active this battle round: [SUSTAINED HITS 1]
+if it applies
+0
+Warp Blades
+Blessing of Khorne active this battle round: [LETHAL HITS]
+if it applies
+0
+Decapitating Strikes
+Blessing of Khorne active this battle round, melee attacks that target an INFANTRY unit: [DEVASTATING WOUNDS]
 if it applies
 0
 STRATAGEMS
-both sides, with their CP
+with their CP
 1CP Hack and Slash
 Made a charge move this turn: +1 AP in the Fight phase
-YOURS
 if used
-+15% wiped
-+1.4
-WOUNDS
-NOT FOR THIS PAIR, BY THE RULES (6) · YOURS TO COUNT ANYWAY
+0
+NOT FOR THIS STEP, BY THE RULES (2)
 
-Beacons of Rage
-YOURS
-not against MONSTER/VEHICLE
-+1.1
-WOUNDS IF YOU COUNT IT
-Beacons of Rage
-YOURS
-not against MONSTER/VEHICLE
-+3.1
-WOUNDS IF YOU COUNT IT
-Decapitating Strikes
-YOURS
-only against INFANTRY
-+3.6
-WOUNDS IF YOU COUNT IT
+Nothing to count: 1CP Berzerker’s Wrath, 1CP Explosives (Shooting phase only)
 
-Nothing to count: 1CP Berzerker’s Wrath, 1CP Explosives (yours, Shooting phase only) · 1CP Arcane Focus (theirs, Shooting phase only)
-
-NOT COUNTED BY THE CALCULATOR (11)
+NOT COUNTED BY THE CALCULATOR (5)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-Impossible Form
-THEIRS
-Impossible Form (if picked this round): -1 Damage to attacks against Magnus, excluding psychic attacks
-COUNT IT BY HAND: DAMAGE −1
-1CP Psychic Dominion
-THEIRS
-Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
-COUNT IT BY HAND: TARGET FEEL NO PAIN 4+
-1CP Destined by Fate
-THEIRS
-after a failed save for a PSYKER model, that attack’s Damage becomes 0
 1CP Blood Offering
-YOURS
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1CP Skulls for the Skull Throne!
-YOURS
-Make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
+Just after your unit destroys a CHARACTER or MONSTER model: make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
 1CP Command Re-roll
-YOURS
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
-YOURS
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive
-YOURS
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-1CP Command Re-roll
-THEIRS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-1CP Epic Challenge
-THEIRS
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
-THEIRS
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-OTHER MODIFIERS
+MODIFIERS · NONE
 Hit roll
 −
 0
@@ -1788,15 +1936,11 @@ Wound roll
 −
 0
 +
-AP better
+AP
 −
 0
 +
 Damage
-−
-0
-+
-Attacks
 −
 0
 +
@@ -1808,18 +1952,6 @@ Re-roll wounds
 none
 1s
 all
-Every weapon has
-Lethal
-Sustained 1
-Dev. wounds
-Target InSv
-−
-none
-+
-Target Feel No Pain
-−
-none
-+
 
 ######## strats {"folded":true} · DAMAGE Stratagems
 EXPAND ALL
@@ -1838,7 +1970,7 @@ Their Shooting Khârn the Betrayer + Khorne Berzerkers
 1
 CP
 Hack and Slash
-Until the end of the phase, your unit’s melee weapons have +1 AP.
+Your unit made a charge move this turn and has not been selected to fight this phase: until the end of the phase, its melee weapons have +1 AP.
 Fight Any unit
 2
 CP
@@ -1848,19 +1980,19 @@ Fight Any unit
 1
 CP
 Skulls for the Skull Throne!
-Make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
+Just after your unit destroys a CHARACTER or MONSTER model: make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
 Fight Any unit
 1
 CP
 Blood Offering
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 Any phase Any unit
 VESSELS OF WRATH
 3
 1
 CP
 Punish the Craven
-That enemy unit must use desperate escape (-1 to those hazard rolls if it is battle-shocked).
+An enemy unit engaged with your unit is selected to fall back: it must use desperate escape (-1 to those hazard rolls if it is battle-shocked).
 Their Movement Angron, Khârn the Betrayer + Khorne Berzerkers, Lord on Juggernaut, Slaughterbound, Slaughterbound + Exalted Eightbound
 1
 CP
@@ -1887,12 +2019,12 @@ End of their Movement Any unit
 1
 CP
 Fire Overwatch
-Your unit shoots using snap shooting.
+Your unengaged unit shoots using snap shooting.
 End of their Movement Khârn the Betrayer + Khorne Berzerkers, Lord on Juggernaut, Chaos Rhino, Goremongers, Jakhals ×2, Forgefiend ×2
 1
 CP
 Explosives
-One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
+Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 Your Shooting Khârn the Betrayer + Khorne Berzerkers, Goremongers, Jakhals ×2
 1
 CP
@@ -1907,7 +2039,7 @@ Your Charge Angron, Chaos Rhino, Forgefiend ×2
 1
 CP
 Heroic Intervention
-Your unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
 End of their Charge · Into the Fray +1CP All but Chaos Rhino
 1
 CP
@@ -1945,7 +2077,7 @@ EFFECT
 
 Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced.
 
-USED BYKhârn the Betrayer
+USED BYKhârn the Betrayer + Khorne Berzerkers
 
 1
 CP
@@ -1963,7 +2095,7 @@ Do not roll a D6 to determine how far models in your unit can move when they mak
 
 Wahapedia FAQ: “After being the target of a ranged attack, can a Leader unit make a Blood Surge move if it was previously attached to a unit of Khorne Berzerkers and if the last model in the attached unit was destroyed by that ranged attack?” No.
 
-USED BYKhârn the Betrayer
+USED BYKhârn the Betrayer + Khorne Berzerkers
 
 1
 CP
@@ -2045,7 +2177,7 @@ EFFECT
 
 When an enemy unit engaged with your unit is selected to make a fall-back move, that enemy unit must use the desperate escape mode. If that enemy unit is battle-shocked, -1 from those hazard rolls.
 
-USED BYAngron, Khârn the Betrayer, Lord on Juggernaut, Slaughterbound, Slaughterbound · Berzerker Glaive
+USED BYAngron, Khârn the Betrayer + Khorne Berzerkers, Lord on Juggernaut, Slaughterbound, Slaughterbound + Exalted Eightbound · Berzerker Glaive
 
 1
 CP
@@ -2064,7 +2196,7 @@ Your unit’s CHARACTER models’ melee attacks have:
 +1 A.
 +2 S.
 
-USED BYLord on Juggernaut, Slaughterbound, Slaughterbound · Berzerker Glaive
+USED BYLord on Juggernaut, Slaughterbound, Slaughterbound + Exalted Eightbound · Berzerker Glaive
 
 1
 CP
@@ -2080,7 +2212,7 @@ EFFECT
 
 Your unit has Feel No Pain 4+ against mortal wounds.
 
-USED BYLord on Juggernaut, Slaughterbound, Slaughterbound · Berzerker Glaive
+USED BYLord on Juggernaut, Slaughterbound, Slaughterbound + Exalted Eightbound · Berzerker Glaive
 
 CORE STRATAGEMS
 10
@@ -2136,7 +2268,7 @@ EFFECT
 
 Your unit shoots using snap shooting.
 
-USED BYKhârn the Betrayer, Lord on Juggernaut, Chaos Rhino, Goremongers, Jakhals, Forgefiend
+USED BYKhârn the Betrayer + Khorne Berzerkers, Lord on Juggernaut, Chaos Rhino, Goremongers, Jakhals, Forgefiend
 
 1
 CP
@@ -2158,7 +2290,7 @@ Resolve the following sequence:
 
 Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
 
-USED BYKhârn the Betrayer, Goremongers, Jakhals
+USED BYKhârn the Betrayer + Khorne Berzerkers, Goremongers, Jakhals
 
 1
 CP
@@ -2217,7 +2349,7 @@ Into the Fray (+1CP): When making the charge roll, if the result is greater than
 
 Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
 
-USED BYAngron, Khârn the Betrayer, Lord on Juggernaut, Slaughterbound, Slaughterbound · Berzerker Glaive, Eightbound, Exalted Eightbound, Goremongers, Jakhals, Forgefiend
+USED BYAngron, Khârn the Betrayer + Khorne Berzerkers, Lord on Juggernaut, Slaughterbound, Slaughterbound + Exalted Eightbound · Berzerker Glaive, Eightbound, Exalted Eightbound, Goremongers, Jakhals, Forgefiend
 
 1
 CP
@@ -2233,7 +2365,7 @@ EFFECT
 
 Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
 
-USED BYAngron, Khârn the Betrayer, Lord on Juggernaut, Slaughterbound, Slaughterbound · Berzerker Glaive
+USED BYAngron, Khârn the Betrayer + Khorne Berzerkers, Lord on Juggernaut, Slaughterbound, Slaughterbound + Exalted Eightbound · Berzerker Glaive
 
 2
 CP
@@ -2332,7 +2464,7 @@ Own aura, if he has Driven by Ultimate Rage this round: re-roll hit rolls of 1 a
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 ABILITIES
 Reborn in Blood
 Command · Your Move
@@ -2523,7 +2655,7 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 ABILITIES
 Legendary Killer
 - Khârn the Betrayer
@@ -2673,12 +2805,14 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 STRATAGEMS · VESSELS OF WRATH
-1CP CHARACTER models +1 A, +2 S, When selected to fight (Aspire to Infamy)
+1CP Aspire to Infamy: CHARACTER models +1 A, +2 S, When selected to fight
 ABILITIES
 Aggressive Advance
-Your Move · Charge
+Not leading a unit in this list
+
+Not leading a unit in this list
 
 Your Movement / Charge (either turn)
 
@@ -2756,12 +2890,14 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 STRATAGEMS · VESSELS OF WRATH
-1CP CHARACTER models +1 A, +2 S, When selected to fight (Aspire to Infamy)
+1CP Aspire to Infamy: CHARACTER models +1 A, +2 S, When selected to fight
 ABILITIES
 Rage Eternal
-Your Command
+Not leading a unit in this list
+
+Not leading a unit in this list
 
 Command · Your turn
 
@@ -2872,9 +3008,9 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 STRATAGEMS · VESSELS OF WRATH
-1CP CHARACTER models +1 A, +2 S, When selected to fight (Aspire to Infamy)
+1CP Aspire to Infamy: CHARACTER models +1 A, +2 S, When selected to fight
 ABILITIES
 Rage Eternal
 - Slaughterbound
@@ -2901,6 +3037,7 @@ If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Ba
 Berzerker Glaive
 - Slaughterbound
 Enhancement
+Already in A, D
 
 Enhancement
 
@@ -2996,7 +3133,7 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 ABILITIES
 Meet Any Challenge
 Their Movement
@@ -3078,7 +3215,7 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Own aura, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Own aura, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 ABILITIES
 Beacons of Rage
 Fight
@@ -3155,7 +3292,7 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 ABILITIES
 Rend and Tear
 Fight
@@ -3254,7 +3391,7 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 ABILITIES
 Loping Speed
 Their Movement
@@ -3360,7 +3497,7 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 ABILITIES
 Objective Ravaged
 Your Command
@@ -3458,7 +3595,7 @@ Within 6" of Angron, if he has Driven by Ultimate Rage this round: re-roll hit r
 Within 6" of Eightbound, vs non-MONSTER/VEHICLE targets: +1 to hit (Beacons of Rage)
 Within 6" of Eightbound, target Below Half-strength, vs non-MONSTER/VEHICLE targets: +1 to wound rolls (Beacons of Rage)
 STRATAGEMS · BERZERKER WARBAND
-1CP +1 AP in the Fight phase, Made a charge move this turn (Hack and Slash)
+1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 ABILITIES
 Furious Onslaught
 Your Shooting
@@ -3494,8 +3631,7 @@ THIS GAME
 NEW GAME
 Standard
 your list
-Pubstomper
-your opponent’s list
+Opponent
 CP
 −
 0
@@ -3572,7 +3708,7 @@ The battle-shock roll you are about to make for your unit is automatically succe
 
 COMMAND ABILITIES 08.04
 
-Rage Eternal · Slaughterbound, Slaughterbound + Exalted Eightbound
+Rage Eternal · Slaughterbound + Exalted Eightbound
 
 END OF COMMAND PHASE 08.05
 
@@ -3582,30 +3718,11 @@ ANY PHASE
 1
 CP
 Blood Offering
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1
 CP
 Scorn the Witch
 Your unit has Feel No Pain 4+ against mortal wounds.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-PUBSTOMPER IN THIS PHASE
-
-START OF BATTLE ROUND 07.01
-
-Unearthly Power · Magnus the Red
-ANY PHASE
-3
-1
-CP
-Psychic Dominion
-Until the end of the phase, attacks made against your unit with Psychic weapons have [HAZARDOUS], and models in your unit have Feel No Pain 4+ against Psychic Attacks.
-1
-CP
-Destined by Fate
-Change the Damage of that attack to 0.
 1
 CP
 Command Re-roll
@@ -3661,12 +3778,6 @@ App note, not rules text: Standard: points limit 2000 pts (Strike Force); 50% of
 
 Deep Strike: Angron 330 pts, Slaughterbound + Exalted Eightbound · Berzerker Glaive 255 pts, Exalted Eightbound 130 pts (715 pts)
 
-THEIR LIST
-
-App note, not rules text: Pubstomper: points limit 2000 pts (Strike Force); 50% of it is 1000 pts.
-
-Deep Strike: Magnus the Red 455 pts, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph 205 pts, Sorcerer in Terminator Armour + Scarab Occult Terminators · Umbralefic Crystal 565 pts (1225 pts)
-
 8 Deploy Armies
 Infiltrators
 
@@ -3690,7 +3801,7 @@ Roll off: the winner takes the first turn.
 
 FIRST TURN
 STANDARD
-PUBSTOMPER
+OPPONENT
 11 Resolve Pre-battle Rules
 Scouts
 
@@ -3698,9 +3809,6 @@ Players alternate resolving any pre-battle rules units from their army may have,
 
 THIS LIST
 Scouts: Eightbound ×2 Scouts 6"
-
-THEIR LIST
-Scouts: Tzaangors Scouts 6"
 
 12 Begin the Battle
 
@@ -3719,8 +3827,7 @@ THIS GAME
 NEW GAME
 Standard
 your list
-Pubstomper
-your opponent’s list
+Opponent
 CP
 −
 3
@@ -3792,41 +3899,17 @@ Furious Onslaught · Forgefiend ×2
 1
 CP
 Explosives
-One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
+Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 ANY PHASE
 3
 1
 CP
 Blood Offering
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1
 CP
 Scorn the Witch
 Your unit has Feel No Pain 4+ against mortal wounds.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-PUBSTOMPER IN THIS PHASE
-
-START OF SHOOTING PHASE 10.01
-
-Treason of Tzeentch · Magnus the Red Crimson King
-1
-CP
-Smokescreen
-Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
-No unit in this list can use it (needs SMOKE)
-ANY PHASE
-3
-1
-CP
-Psychic Dominion
-Until the end of the phase, attacks made against your unit with Psychic weapons have [HAZARDOUS], and models in your unit have Feel No Pain 4+ against Psychic Attacks.
-1
-CP
-Destined by Fate
-Change the Damage of that attack to 0.
 1
 CP
 Command Re-roll
@@ -3870,7 +3953,7 @@ The battle-shock roll you are about to make for your unit is automatically succe
 
 COMMAND ABILITIES 08.04
 
-Rage Eternal · Slaughterbound, Slaughterbound + Exalted Eightbound
+Rage Eternal · Slaughterbound + Exalted Eightbound
 
 END OF COMMAND PHASE 08.05
 
@@ -3880,30 +3963,11 @@ ANY PHASE
 1
 CP
 Blood Offering
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1
 CP
 Scorn the Witch
 Your unit has Feel No Pain 4+ against mortal wounds.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-PUBSTOMPER IN THIS PHASE
-
-START OF BATTLE ROUND 07.01
-
-Unearthly Power · Magnus the Red
-ANY PHASE
-3
-1
-CP
-Psychic Dominion
-Until the end of the phase, attacks made against your unit with Psychic weapons have [HAZARDOUS], and models in your unit have Feel No Pain 4+ against Psychic Attacks.
-1
-CP
-Destined by Fate
-Change the Damage of that attack to 0.
 1
 CP
 Command Re-roll
@@ -3930,7 +3994,6 @@ FIGHT
 MOVE UNITS 09.02
 
 Reborn in Blood · Angron
-Aggressive Advance · Lord on Juggernaut
 1
 CP
 Apoplectic Frenzy
@@ -3940,44 +4003,11 @@ ANY PHASE
 1
 CP
 Blood Offering
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1
 CP
 Scorn the Witch
 Your unit has Feel No Pain 4+ against mortal wounds.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-PUBSTOMPER IN THIS PHASE
-
-MOVE UNITS 09.02
-
-Kindred Sorcery · Grand Coven detachment rule
-Hunter of Souls · Daemon Prince of Tzeentch with wings
-Bringers of Change · Sorcerer + Rubric Marines
-Malign Trickery · Tzaangor Enlightened with Fatecaster greatbows
-
-END OF MOVEMENT PHASE 09.03
-
-1
-CP
-Rapid Ingress
-Your unit in strategic reserves makes an ingress move (not in the first battle round).
-1
-CP
-Fire Overwatch
-Your unit shoots using snap shooting.
-ANY PHASE
-3
-1
-CP
-Psychic Dominion
-Until the end of the phase, attacks made against your unit with Psychic weapons have [HAZARDOUS], and models in your unit have Feel No Pain 4+ against Psychic Attacks.
-1
-CP
-Destined by Fate
-Change the Damage of that attack to 0.
 1
 CP
 Command Re-roll
@@ -4007,41 +4037,17 @@ Furious Onslaught · Forgefiend ×2
 1
 CP
 Explosives
-One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
+Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 ANY PHASE
 3
 1
 CP
 Blood Offering
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1
 CP
 Scorn the Witch
 Your unit has Feel No Pain 4+ against mortal wounds.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-PUBSTOMPER IN THIS PHASE
-
-START OF SHOOTING PHASE 10.01
-
-Treason of Tzeentch · Magnus the Red Crimson King
-1
-CP
-Smokescreen
-Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
-No unit in this list can use it (needs SMOKE)
-ANY PHASE
-3
-1
-CP
-Psychic Dominion
-Until the end of the phase, attacks made against your unit with Psychic weapons have [HAZARDOUS], and models in your unit have Feel No Pain 4+ against Psychic Attacks.
-1
-CP
-Destined by Fate
-Change the Damage of that attack to 0.
 1
 CP
 Command Re-roll
@@ -4068,7 +4074,6 @@ FIGHT
 CHARGE 11.02
 
 Blessings of Khorne · World Eaters army rule
-Aggressive Advance · Lord on Juggernaut
 1
 CP
 Crushing Impact
@@ -4082,38 +4087,11 @@ ANY PHASE
 1
 CP
 Blood Offering
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1
 CP
 Scorn the Witch
 Your unit has Feel No Pain 4+ against mortal wounds.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-PUBSTOMPER IN THIS PHASE
-
-CHARGE 11.02
-
-Brayhorn · Tzaangors
-Prophesied Doom · Tzaangor Enlightened ×2
-
-END OF CHARGE PHASE 11.03
-
-1
-CP
-Heroic Intervention
-Your unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
-ANY PHASE
-3
-1
-CP
-Psychic Dominion
-Until the end of the phase, attacks made against your unit with Psychic weapons have [HAZARDOUS], and models in your unit have Feel No Pain 4+ against Psychic Attacks.
-1
-CP
-Destined by Fate
-Change the Damage of that attack to 0.
 1
 CP
 Command Re-roll
@@ -4157,7 +4135,7 @@ Beacons of Rage · Eightbound ×2
 1
 CP
 Hack and Slash
-Until the end of the phase, your unit’s melee weapons have +1 AP.
+Your unit made a charge move this turn and has not been selected to fight this phase: until the end of the phase, its melee weapons have +1 AP.
 2
 CP
 Frenzied Resilience
@@ -4165,7 +4143,7 @@ Until the end of the phase, -1 Damage to each attack allocated to a model in you
 1
 CP
 Skulls for the Skull Throne!
-Make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
+Just after your unit destroys a CHARACTER or MONSTER model: make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
 1
 CP
 Aspire to Infamy
@@ -4179,45 +4157,11 @@ ANY PHASE
 1
 CP
 Blood Offering
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1
 CP
 Scorn the Witch
 Your unit has Feel No Pain 4+ against mortal wounds.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-PUBSTOMPER IN THIS PHASE
-
-PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
-
-Kindred Sorcery · Grand Coven detachment rule
-Hunter of Souls · Daemon Prince of Tzeentch with wings
-Twisted Sorceries · Sorcerer + Rubric Marines
-Destroyer of Futures · Defiler
-1
-CP
-Epic Challenge
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2
-CP
-Counteroffensive
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-
-END OF THE TURN
-
-Ambushing Hunters · Tzaangors
-ANY PHASE
-3
-1
-CP
-Psychic Dominion
-Until the end of the phase, attacks made against your unit with Psychic weapons have [HAZARDOUS], and models in your unit have Feel No Pain 4+ against Psychic Attacks.
-1
-CP
-Destined by Fate
-Change the Damage of that attack to 0.
 1
 CP
 Command Re-roll
@@ -4250,46 +4194,11 @@ ANY PHASE
 1
 CP
 Blood Offering
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1
 CP
 Scorn the Witch
 Your unit has Feel No Pain 4+ against mortal wounds.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-PUBSTOMPER IN THIS PHASE
-
-BATTLE-SHOCK 08.03
-
-1
-CP
-Insane Bravery
-The battle-shock roll you are about to make for your unit is automatically successful.
-
-COMMAND ABILITIES 08.04
-
-Kindred Sorcery · Grand Coven detachment rule
-Umbralefic Crystal · Sorcerer in Terminator Armour + Scarab Occult Terminators
-1
-CP
-Egotistical Power
-Until the start of your next Command phase, your unit has Imbued Manifestation, Psychic Maelstrom or Wrath of the Immaterium instead of any other Kindred Sorcery ability, even one already selected this battle.
-1
-CP
-Desecration of Worlds
-That objective marker stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
-ANY PHASE
-3
-1
-CP
-Psychic Dominion
-Until the end of the phase, attacks made against your unit with Psychic weapons have [HAZARDOUS], and models in your unit have Feel No Pain 4+ against Psychic Attacks.
-1
-CP
-Destined by Fate
-Change the Damage of that attack to 0.
 1
 CP
 Command Re-roll
@@ -4321,7 +4230,7 @@ Loping Speed · Goremongers
 1
 CP
 Punish the Craven
-That enemy unit must use desperate escape (-1 to those hazard rolls if it is battle-shocked).
+An enemy unit engaged with your unit is selected to fall back: it must use desperate escape (-1 to those hazard rolls if it is battle-shocked).
 
 END OF MOVEMENT PHASE 09.03
 
@@ -4332,40 +4241,17 @@ Your unit in strategic reserves makes an ingress move (not in the first battle r
 1
 CP
 Fire Overwatch
-Your unit shoots using snap shooting.
+Your unengaged unit shoots using snap shooting.
 ANY PHASE
 3
 1
 CP
 Blood Offering
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1
 CP
 Scorn the Witch
 Your unit has Feel No Pain 4+ against mortal wounds.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-PUBSTOMPER IN THIS PHASE
-
-MOVE UNITS 09.02
-
-Time Flux · Magnus the Red Crimson King
-Aetherstride · Daemon Prince of Tzeentch with wings
-Umbralefic Crystal · Sorcerer in Terminator Armour + Scarab Occult Terminators
-Brayhorn · Tzaangors
-Scuttling Walker · Defiler
-ANY PHASE
-3
-1
-CP
-Psychic Dominion
-Until the end of the phase, attacks made against your unit with Psychic weapons have [HAZARDOUS], and models in your unit have Feel No Pain 4+ against Psychic Attacks.
-1
-CP
-Destined by Fate
-Change the Damage of that attack to 0.
 1
 CP
 Command Re-roll
@@ -4408,53 +4294,11 @@ ANY PHASE
 1
 CP
 Blood Offering
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1
 CP
 Scorn the Witch
 Your unit has Feel No Pain 4+ against mortal wounds.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-PUBSTOMPER IN THIS PHASE
-
-START OF SHOOTING PHASE 10.01
-
-Cabal of Sorcerers · Thousand Sons army rule
-Marked by Fate · Sorcerer in Terminator Armour + Scarab Occult Terminators
-
-SHOOT 10.02
-
-Kindred Sorcery · Grand Coven detachment rule
-Lord of the Planet of the Sorcerers · Magnus the Red
-Aetherstride · Daemon Prince of Tzeentch with wings
-Hunter of Souls · Daemon Prince of Tzeentch with wings
-Twisted Sorceries · Sorcerer + Rubric Marines
-Bringers of Change · Sorcerer + Rubric Marines
-Scuttling Walker · Defiler
-1
-CP
-Arcane Focus
-Re-roll all the D6 of that Psychic test (the Channelling the Warp D6 included).
-2
-CP
-Devastating Sorcery
-Until the end of the phase, your unit’s Psychic weapons have +9" range and can re-roll the hit roll and the wound roll.
-1
-CP
-Explosives
-One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
-ANY PHASE
-3
-1
-CP
-Psychic Dominion
-Until the end of the phase, attacks made against your unit with Psychic weapons have [HAZARDOUS], and models in your unit have Feel No Pain 4+ against Psychic Attacks.
-1
-CP
-Destined by Fate
-Change the Damage of that attack to 0.
 1
 CP
 Command Re-roll
@@ -4481,50 +4325,23 @@ FIGHT
 CHARGE 11.02
 
 Blessings of Khorne · World Eaters army rule
-Aggressive Advance · Lord on Juggernaut
 
 END OF CHARGE PHASE 11.03
 
 1
 CP
 Heroic Intervention
-Your unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
 ANY PHASE
 3
 1
 CP
 Blood Offering
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1
 CP
 Scorn the Witch
 Your unit has Feel No Pain 4+ against mortal wounds.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-PUBSTOMPER IN THIS PHASE
-
-CHARGE 11.02
-
-Cabal of Sorcerers · Thousand Sons army rule
-Aetherstride · Daemon Prince of Tzeentch with wings
-Brayhorn · Tzaangors
-Prophesied Doom · Tzaangor Enlightened ×2
-1
-CP
-Crushing Impact
-After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
-ANY PHASE
-3
-1
-CP
-Psychic Dominion
-Until the end of the phase, attacks made against your unit with Psychic weapons have [HAZARDOUS], and models in your unit have Feel No Pain 4+ against Psychic Attacks.
-1
-CP
-Destined by Fate
-Change the Damage of that attack to 0.
 1
 CP
 Command Re-roll
@@ -4568,7 +4385,7 @@ Beacons of Rage · Eightbound ×2
 1
 CP
 Hack and Slash
-Until the end of the phase, your unit’s melee weapons have +1 AP.
+Your unit made a charge move this turn and has not been selected to fight this phase: until the end of the phase, its melee weapons have +1 AP.
 2
 CP
 Frenzied Resilience
@@ -4576,7 +4393,7 @@ Until the end of the phase, -1 Damage to each attack allocated to a model in you
 1
 CP
 Skulls for the Skull Throne!
-Make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
+Just after your unit destroys a CHARACTER or MONSTER model: make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
 1
 CP
 Aspire to Infamy
@@ -4594,36 +4411,11 @@ ANY PHASE
 1
 CP
 Blood Offering
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1
 CP
 Scorn the Witch
 Your unit has Feel No Pain 4+ against mortal wounds.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-PUBSTOMPER IN THIS PHASE
-
-PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
-
-Kindred Sorcery · Grand Coven detachment rule
-Hunter of Souls · Daemon Prince of Tzeentch with wings
-Twisted Sorceries · Sorcerer + Rubric Marines
-1
-CP
-Epic Challenge
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-ANY PHASE
-3
-1
-CP
-Psychic Dominion
-Until the end of the phase, attacks made against your unit with Psychic weapons have [HAZARDOUS], and models in your unit have Feel No Pain 4+ against Psychic Attacks.
-1
-CP
-Destined by Fate
-Change the Damage of that attack to 0.
 1
 CP
 Command Re-roll
@@ -4667,7 +4459,7 @@ Beacons of Rage · Eightbound ×2
 1
 CP
 Hack and Slash
-Until the end of the phase, your unit’s melee weapons have +1 AP.
+Your unit made a charge move this turn and has not been selected to fight this phase: until the end of the phase, its melee weapons have +1 AP.
 2
 CP
 Frenzied Resilience
@@ -4675,7 +4467,7 @@ Until the end of the phase, -1 Damage to each attack allocated to a model in you
 1
 CP
 Skulls for the Skull Throne!
-Make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
+Just after your unit destroys a CHARACTER or MONSTER model: make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.
 1
 CP
 Aspire to Infamy
@@ -4693,36 +4485,11 @@ ANY PHASE
 1
 CP
 Blood Offering
-One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
 1
 CP
 Scorn the Witch
 Your unit has Feel No Pain 4+ against mortal wounds.
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-PUBSTOMPER IN THIS PHASE
-
-PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
-
-Kindred Sorcery · Grand Coven detachment rule
-Hunter of Souls · Daemon Prince of Tzeentch with wings
-Twisted Sorceries · Sorcerer + Rubric Marines
-1
-CP
-Epic Challenge
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-ANY PHASE
-3
-1
-CP
-Psychic Dominion
-Until the end of the phase, attacks made against your unit with Psychic weapons have [HAZARDOUS], and models in your unit have Feel No Pain 4+ against Psychic Attacks.
-1
-CP
-Destined by Fate
-Change the Damage of that attack to 0.
 1
 CP
 Command Re-roll
@@ -4747,7 +4514,7 @@ Berserker Frenzy
 
 The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.
 
-UNITKhârn the Betrayer
+UNITKhârn the Betrayer + Khorne Berzerkers
 
 Ask about this ability
 
@@ -4807,7 +4574,7 @@ Legendary Killer
 
 While this model is leading a unit, each time a model in that unit makes a melee attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.
 
-UNITKhârn the Betrayer
+UNITKhârn the Betrayer + Khorne Berzerkers
 
 Ask about this ability
 
@@ -4818,7 +4585,7 @@ Lord of the Eightbound
 
 If this model is attached to a WORLD EATERS POSSESSED unit during the Declare Battle Formations step, this model has the Deep Strike and Scouts 6" abilities.
 
-UNITSlaughterbound, Slaughterbound · Berzerker Glaive
+UNITSlaughterbound, Slaughterbound + Exalted Eightbound · Berzerker Glaive
 
 Ask about this ability
 
@@ -4829,7 +4596,7 @@ Murderous Charge
 
 If this unit made a charge move this turn, this unit’s melee attacks have +1 S.
 
-UNITKhârn the Betrayer
+UNITKhârn the Betrayer + Khorne Berzerkers
 
 Ask about this ability
 
@@ -4840,7 +4607,7 @@ Possessed Lord
 
 Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [Devastating Wounds] ability.
 
-UNITSlaughterbound, Slaughterbound · Berzerker Glaive
+UNITSlaughterbound, Slaughterbound + Exalted Eightbound · Berzerker Glaive
 
 Ask about this ability
 
@@ -4862,7 +4629,7 @@ Rend and Tear
 
 Each time a model in this unit makes a melee attack that targets a MONSTER or VEHICLE unit, until the end of the phase, improve the Damage characteristic of that attack by 1.
 
-UNITSlaughterbound · Berzerker Glaive, Exalted Eightbound
+UNITSlaughterbound + Exalted Eightbound · Berzerker Glaive, Exalted Eightbound
 
 Ask about this ability
 
@@ -6247,6 +6014,9 @@ WHILE SHOOTING:
 
 You can only target one visible enemy unit within 24" of your unit (and only if it is an eligible target).
 Each attack only hits on an unmodified hit roll of 6 (irrespective of the attacking weapon’s BS characteristic or any modifiers).
+
+Wahapedia core rules (not in GW’s Core Rules PDF, 01-06): Those hits are not critical hits.
+
 You cannot re-roll hit rolls.
 
 AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.
@@ -6337,7 +6107,7 @@ EFFECT
 
 Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced.
 
-USED BYKhârn the Betrayer
+USED BYKhârn the Betrayer + Khorne Berzerkers
 
 Ask about this stratagem
 
@@ -6358,7 +6128,7 @@ Your unit’s CHARACTER models’ melee attacks have:
 +1 A.
 +2 S.
 
-USED BYLord on Juggernaut, Slaughterbound, Slaughterbound · Berzerker Glaive
+USED BYLord on Juggernaut, Slaughterbound, Slaughterbound + Exalted Eightbound · Berzerker Glaive
 
 Ask about this stratagem
 
@@ -6378,7 +6148,7 @@ Do not roll a D6 to determine how far models in your unit can move when they mak
 
 Wahapedia FAQ: “After being the target of a ranged attack, can a Leader unit make a Blood Surge move if it was previously attached to a unit of Khorne Berzerkers and if the last model in the attached unit was destroyed by that ranged attack?” No.
 
-USED BYKhârn the Betrayer
+USED BYKhârn the Betrayer + Khorne Berzerkers
 
 Ask about this stratagem
 
@@ -6483,7 +6253,7 @@ EFFECT
 
 Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
 
-USED BYAngron, Khârn the Betrayer, Lord on Juggernaut, Slaughterbound, Slaughterbound · Berzerker Glaive
+USED BYAngron, Khârn the Betrayer + Khorne Berzerkers, Lord on Juggernaut, Slaughterbound, Slaughterbound + Exalted Eightbound · Berzerker Glaive
 
 Ask about this stratagem
 
@@ -6507,7 +6277,7 @@ Resolve the following sequence:
 
 Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
 
-USED BYKhârn the Betrayer, Goremongers, Jakhals
+USED BYKhârn the Betrayer + Khorne Berzerkers, Goremongers, Jakhals
 
 Ask about this stratagem
 
@@ -6525,7 +6295,7 @@ EFFECT
 
 Your unit shoots using snap shooting.
 
-USED BYKhârn the Betrayer, Lord on Juggernaut, Chaos Rhino, Goremongers, Jakhals, Forgefiend
+USED BYKhârn the Betrayer + Khorne Berzerkers, Lord on Juggernaut, Chaos Rhino, Goremongers, Jakhals, Forgefiend
 
 Ask about this stratagem
 
@@ -6584,7 +6354,7 @@ Into the Fray (+1CP): When making the charge roll, if the result is greater than
 
 Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
 
-USED BYAngron, Khârn the Betrayer, Lord on Juggernaut, Slaughterbound, Slaughterbound · Berzerker Glaive, Eightbound, Exalted Eightbound, Goremongers, Jakhals, Forgefiend
+USED BYAngron, Khârn the Betrayer + Khorne Berzerkers, Lord on Juggernaut, Slaughterbound, Slaughterbound + Exalted Eightbound · Berzerker Glaive, Eightbound, Exalted Eightbound, Goremongers, Jakhals, Forgefiend
 
 Ask about this stratagem
 
@@ -6624,7 +6394,7 @@ EFFECT
 
 When an enemy unit engaged with your unit is selected to make a fall-back move, that enemy unit must use the desperate escape mode. If that enemy unit is battle-shocked, -1 from those hazard rolls.
 
-USED BYAngron, Khârn the Betrayer, Lord on Juggernaut, Slaughterbound, Slaughterbound · Berzerker Glaive
+USED BYAngron, Khârn the Betrayer + Khorne Berzerkers, Lord on Juggernaut, Slaughterbound, Slaughterbound + Exalted Eightbound · Berzerker Glaive
 
 Ask about this stratagem
 
@@ -6662,7 +6432,7 @@ EFFECT
 
 Your unit has Feel No Pain 4+ against mortal wounds.
 
-USED BYLord on Juggernaut, Slaughterbound, Slaughterbound · Berzerker Glaive
+USED BYLord on Juggernaut, Slaughterbound, Slaughterbound + Exalted Eightbound · Berzerker Glaive
 
 Ask about this stratagem
 

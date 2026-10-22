@@ -6,8 +6,6 @@ Cohort Cybernetica · Eradication Cohort · Disposition: Purge the Foe
 Overview
 Damage calculator
 Game tracker
-Opponent
-None yet: pick their list
 Units
 11
 Stratagems
@@ -40,7 +38,7 @@ Cohort Cybernetica (1 DP), Eradication Cohort (2 DP)
 Disposition: Purge the Foe
 POINTS
 2000 / 2000 · Strike Force
-ARMY RULES
+ARMY AND DETACHMENT RULES
 Doctrina Imperatives
 Start of the battle round
 
@@ -54,10 +52,27 @@ Conqueror Imperative
 Ranged weapons equipped by models in this unit have the [ASSAULT] ability.
 Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.
 Each time a model in this unit makes an attack, if this unit has the BATTLELINE keyword and/or it is within 6" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units, improve the Armour Penetration characteristic of that attack by 1.
+Cyber-psalm Programming
+Cohort Cybernetica
+
+Add 2" to the Move characteristic of models in LEGIO CYBERNETICA units from your army. In addition, unless that unit is Battle-shocked, add 1 to the Objective Control characteristic of models in that unit.
+
+APPLIES TOCybernetica Datasmith · Martial Signatum Amplificator
+
+Murderous Imperative
+Eradication Cohort
+
+Each time a model in a SKITARII unit from your army makes an attack:
+
+If the Protector Imperative is active for that unit, re-roll a Hit roll of 1.
+If the Conqueror Imperative is active for that unit, re-roll a Wound roll of 1.
+
+APPLIES TOCybernetica Datasmith · Martial Signatum Amplificator, Skitarii Rangers, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+
 DEPLOYMENT AND PRE-BATTLE ABILITIES
 SCOUTS
 Skitarii Rangers Scouts 6"
-START OF THE BATTLE ROUND
+START OF THE BATTLE AND THE BATTLE ROUNDS
 START OF THE BATTLE
 Battle Protocols · Cybernetica Datasmith
 EVERY ROUND
@@ -140,6 +155,7 @@ VEHICLES
 Ironstrider Ballistarii
 ×3
 1 of 2
+Twin cognis lascannon
 10"
 7
 3+
@@ -151,6 +167,7 @@ Ironstrider Ballistarii
 Ironstrider Ballistarii
 ×3
 2 of 2
+Twin cognis autocannon
 10"
 7
 3+
@@ -246,12 +263,12 @@ A +2 In Protector Protocol, selected in your Command phase (Battle Protocols)
 Protector or Conqueror Imperative active for this unit: Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1 (Murderous Imperative)
 If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
 STRATAGEMS · COHORT CYBERNETICA · YOUR COMMAND PHASE
-1CP BS 3+, [IGNORES COVER]; can only target units within range of the selected objective marker, until the start of your next Command phase (Auto-divinatory Targeting)
-1CP can re-roll hit rolls (and wound rolls if Below Half-strength), below its Starting Strength; until the start of your next Command phase (Machine Spirit Resurgent)
-1CP can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws), until the end of the turn (Machine Superiority)
+1CP Auto-divinatory Targeting: BS 3+, [IGNORES COVER]; can only target units within range of the selected objective marker, until the start of your next Command phase
+1CP Machine Spirit Resurgent: can re-roll hit rolls (and wound rolls if Below Half-strength), below its Starting Strength; until the start of your next Command phase
+1CP Machine Superiority: can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws), until the end of the turn
 STRATAGEMS · ERADICATION COHORT · YOUR SHOOTING PHASE
-1CP [SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS] (Unshackled Wrath)
-1CP can re-roll the Damage roll, attacks allocated to a MONSTER or VEHICLE model (Threat-cogitation Targeters)
+1CP Unshackled Wrath: [SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS]
+1CP Threat-cogitation Targeters: can re-roll the Damage roll, attacks allocated to a MONSTER or VEHICLE model
 Skitarii Rangers
 ×2 units
 Galvanic rifle×7
@@ -298,7 +315,7 @@ HEAVY, PRECISION, IGNORES COVER
 Protector or Conqueror Imperative active for this unit: Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1 (Murderous Imperative)
 If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
 STRATAGEMS · ERADICATION COHORT · YOUR SHOOTING PHASE
-1CP [SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS] (Unshackled Wrath)
+1CP Unshackled Wrath: [SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS]
 Ironstrider Ballistarii
 1 of 2
 Twin cognis lascannon×3
@@ -312,12 +329,12 @@ SUSTAINED HITS 1, TWIN-LINKED
 Protector or Conqueror Imperative active for this unit: Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1 (Murderous Imperative)
 If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
 STRATAGEMS · COHORT CYBERNETICA · YOUR COMMAND PHASE
-1CP BS 3+, [IGNORES COVER]; can only target units within range of the selected objective marker, until the start of your next Command phase (Auto-divinatory Targeting)
-1CP can re-roll hit rolls (and wound rolls if Below Half-strength), below its Starting Strength; until the start of your next Command phase (Machine Spirit Resurgent)
-1CP can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws), until the end of the turn (Machine Superiority)
+1CP Auto-divinatory Targeting: BS 3+, [IGNORES COVER]; can only target units within range of the selected objective marker, until the start of your next Command phase
+1CP Machine Spirit Resurgent: can re-roll hit rolls (and wound rolls if Below Half-strength), below its Starting Strength; until the start of your next Command phase
+1CP Machine Superiority: can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws), until the end of the turn
 STRATAGEMS · ERADICATION COHORT · YOUR SHOOTING PHASE
-1CP [SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS] (Unshackled Wrath)
-1CP can re-roll the Damage roll, attacks allocated to a MONSTER or VEHICLE model (Threat-cogitation Targeters)
+1CP Unshackled Wrath: [SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS]
+1CP Threat-cogitation Targeters: can re-roll the Damage roll, attacks allocated to a MONSTER or VEHICLE model
 Ironstrider Ballistarii
 2 of 2
 Twin cognis autocannon×3
@@ -331,12 +348,12 @@ SUSTAINED HITS 1, TWIN-LINKED
 Protector or Conqueror Imperative active for this unit: Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1 (Murderous Imperative)
 If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
 STRATAGEMS · COHORT CYBERNETICA · YOUR COMMAND PHASE
-1CP BS 3+, [IGNORES COVER]; can only target units within range of the selected objective marker, until the start of your next Command phase (Auto-divinatory Targeting)
-1CP can re-roll hit rolls (and wound rolls if Below Half-strength), below its Starting Strength; until the start of your next Command phase (Machine Spirit Resurgent)
-1CP can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws), until the end of the turn (Machine Superiority)
+1CP Auto-divinatory Targeting: BS 3+, [IGNORES COVER]; can only target units within range of the selected objective marker, until the start of your next Command phase
+1CP Machine Spirit Resurgent: can re-roll hit rolls (and wound rolls if Below Half-strength), below its Starting Strength; until the start of your next Command phase
+1CP Machine Superiority: can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws), until the end of the turn
 STRATAGEMS · ERADICATION COHORT · YOUR SHOOTING PHASE
-1CP [SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS] (Unshackled Wrath)
-1CP can re-roll the Damage roll, attacks allocated to a MONSTER or VEHICLE model (Threat-cogitation Targeters)
+1CP Unshackled Wrath: [SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS]
+1CP Threat-cogitation Targeters: can re-roll the Damage roll, attacks allocated to a MONSTER or VEHICLE model
 Onager Dunecrawler
 Cognis heavy stubber
 36"
@@ -358,12 +375,12 @@ Damaged (1-4 wounds left): -1 to hit rolls (Damaged: 1-4 wounds remaining)
 Protector or Conqueror Imperative active for this unit: Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1 (Murderous Imperative)
 If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
 STRATAGEMS · COHORT CYBERNETICA · YOUR COMMAND PHASE
-1CP BS 3+, [IGNORES COVER]; can only target units within range of the selected objective marker, until the start of your next Command phase (Auto-divinatory Targeting)
-1CP can re-roll hit rolls (and wound rolls if Below Half-strength), below its Starting Strength; until the start of your next Command phase (Machine Spirit Resurgent)
-1CP can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws), until the end of the turn (Machine Superiority)
+1CP Auto-divinatory Targeting: BS 3+, [IGNORES COVER]; can only target units within range of the selected objective marker, until the start of your next Command phase
+1CP Machine Spirit Resurgent: can re-roll hit rolls (and wound rolls if Below Half-strength), below its Starting Strength; until the start of your next Command phase
+1CP Machine Superiority: can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws), until the end of the turn
 STRATAGEMS · ERADICATION COHORT · YOUR SHOOTING PHASE
-1CP [SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS] (Unshackled Wrath)
-1CP can re-roll the Damage roll, attacks allocated to a MONSTER or VEHICLE model (Threat-cogitation Targeters)
+1CP Unshackled Wrath: [SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS]
+1CP Threat-cogitation Targeters: can re-roll the Damage roll, attacks allocated to a MONSTER or VEHICLE model
 Skorpius Disintegrator
 ×2 units
 Cognis heavy stubber×3
@@ -394,12 +411,12 @@ Damaged (1-4 wounds left): -1 to hit rolls (Damaged: 1-4 wounds remaining)
 Protector or Conqueror Imperative active for this unit: Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1 (Murderous Imperative)
 If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
 STRATAGEMS · COHORT CYBERNETICA · YOUR COMMAND PHASE
-1CP BS 3+, [IGNORES COVER]; can only target units within range of the selected objective marker, until the start of your next Command phase (Auto-divinatory Targeting)
-1CP can re-roll hit rolls (and wound rolls if Below Half-strength), below its Starting Strength; until the start of your next Command phase (Machine Spirit Resurgent)
-1CP can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws), until the end of the turn (Machine Superiority)
+1CP Auto-divinatory Targeting: BS 3+, [IGNORES COVER]; can only target units within range of the selected objective marker, until the start of your next Command phase
+1CP Machine Spirit Resurgent: can re-roll hit rolls (and wound rolls if Below Half-strength), below its Starting Strength; until the start of your next Command phase
+1CP Machine Superiority: can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws), until the end of the turn
 STRATAGEMS · ERADICATION COHORT · YOUR SHOOTING PHASE
-1CP [SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS] (Unshackled Wrath)
-1CP can re-roll the Damage roll, attacks allocated to a MONSTER or VEHICLE model (Threat-cogitation Targeters)
+1CP Unshackled Wrath: [SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS]
+1CP Threat-cogitation Targeters: can re-roll the Damage roll, attacks allocated to a MONSTER or VEHICLE model
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Belisarius Cawl
@@ -428,7 +445,7 @@ Mechadendrite hive
 EXTRA ATTACKS
 If he has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
 STRATAGEMS · ERADICATION COHORT · FIGHT PHASE
-1CP [LANCE] (Servo-driven Charge)
+1CP Servo-driven Charge: [LANCE]
 Thulia Ghuld
 Rod of the War Forge
 ➤strike
@@ -445,7 +462,7 @@ Rod of the War Forge
 1
 If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
 STRATAGEMS · ERADICATION COHORT · FIGHT PHASE
-1CP [LANCE] (Servo-driven Charge)
+1CP Servo-driven Charge: [LANCE]
 Tech-Priest Enginseer
 Necromechanic
 Omnissian axe
@@ -465,7 +482,7 @@ Servo arm
 EXTRA ATTACKS
 If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
 STRATAGEMS · ERADICATION COHORT · FIGHT PHASE
-1CP [LANCE] (Servo-driven Charge)
+1CP Servo-driven Charge: [LANCE]
 Cybernetica Datasmith
 Martial Signatum Amplificator
 + Kastelan Robots
@@ -489,10 +506,10 @@ A +2 In Conqueror Protocol, selected in your Command phase (Battle Protocols)
 Protector or Conqueror Imperative active for this unit: Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1 (Murderous Imperative)
 If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
 STRATAGEMS · COHORT CYBERNETICA · YOUR COMMAND PHASE
-1CP can re-roll hit rolls (and wound rolls if Below Half-strength), below its Starting Strength; until the start of your next Command phase (Machine Spirit Resurgent)
-1CP can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws), until the end of the turn (Machine Superiority)
+1CP Machine Spirit Resurgent: can re-roll hit rolls (and wound rolls if Below Half-strength), below its Starting Strength; until the start of your next Command phase
+1CP Machine Superiority: can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws), until the end of the turn
 STRATAGEMS · ERADICATION COHORT · FIGHT PHASE
-1CP [LANCE] (Servo-driven Charge)
+1CP Servo-driven Charge: [LANCE]
 Skitarii Rangers
 ×2 units
 Alpha combat weaponSKITARII RANGER ALPHA
@@ -512,7 +529,7 @@ Close combat weapon×10
 Protector or Conqueror Imperative active for this unit: Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1 (Murderous Imperative)
 If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
 STRATAGEMS · ERADICATION COHORT · FIGHT PHASE
-1CP [LANCE] (Servo-driven Charge)
+1CP Servo-driven Charge: [LANCE]
 Ironstrider Ballistarii
 1 of 2
 Ironstrider feet×3
@@ -524,10 +541,10 @@ Ironstrider feet×3
 Protector or Conqueror Imperative active for this unit: Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1 (Murderous Imperative)
 If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
 STRATAGEMS · COHORT CYBERNETICA · YOUR COMMAND PHASE
-1CP can re-roll hit rolls (and wound rolls if Below Half-strength), below its Starting Strength; until the start of your next Command phase (Machine Spirit Resurgent)
-1CP can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws), until the end of the turn (Machine Superiority)
+1CP Machine Spirit Resurgent: can re-roll hit rolls (and wound rolls if Below Half-strength), below its Starting Strength; until the start of your next Command phase
+1CP Machine Superiority: can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws), until the end of the turn
 STRATAGEMS · ERADICATION COHORT · FIGHT PHASE
-1CP [LANCE] (Servo-driven Charge)
+1CP Servo-driven Charge: [LANCE]
 Ironstrider Ballistarii
 2 of 2
 Ironstrider feet×3
@@ -539,10 +556,10 @@ Ironstrider feet×3
 Protector or Conqueror Imperative active for this unit: Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1 (Murderous Imperative)
 If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
 STRATAGEMS · COHORT CYBERNETICA · YOUR COMMAND PHASE
-1CP can re-roll hit rolls (and wound rolls if Below Half-strength), below its Starting Strength; until the start of your next Command phase (Machine Spirit Resurgent)
-1CP can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws), until the end of the turn (Machine Superiority)
+1CP Machine Spirit Resurgent: can re-roll hit rolls (and wound rolls if Below Half-strength), below its Starting Strength; until the start of your next Command phase
+1CP Machine Superiority: can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws), until the end of the turn
 STRATAGEMS · ERADICATION COHORT · FIGHT PHASE
-1CP [LANCE] (Servo-driven Charge)
+1CP Servo-driven Charge: [LANCE]
 Onager Dunecrawler
 Dunecrawler legs
 3
@@ -554,10 +571,10 @@ Damaged (1-4 wounds left): -1 to hit rolls (Damaged: 1-4 wounds remaining)
 Protector or Conqueror Imperative active for this unit: Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1 (Murderous Imperative)
 If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
 STRATAGEMS · COHORT CYBERNETICA · YOUR COMMAND PHASE
-1CP can re-roll hit rolls (and wound rolls if Below Half-strength), below its Starting Strength; until the start of your next Command phase (Machine Spirit Resurgent)
-1CP can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws), until the end of the turn (Machine Superiority)
+1CP Machine Spirit Resurgent: can re-roll hit rolls (and wound rolls if Below Half-strength), below its Starting Strength; until the start of your next Command phase
+1CP Machine Superiority: can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws), until the end of the turn
 STRATAGEMS · ERADICATION COHORT · FIGHT PHASE
-1CP [LANCE] (Servo-driven Charge)
+1CP Servo-driven Charge: [LANCE]
 Skorpius Disintegrator
 ×2 units
 Armoured hull
@@ -570,10 +587,10 @@ Damaged (1-4 wounds left): -1 to hit rolls (Damaged: 1-4 wounds remaining)
 Protector or Conqueror Imperative active for this unit: Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1 (Murderous Imperative)
 If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
 STRATAGEMS · COHORT CYBERNETICA · YOUR COMMAND PHASE
-1CP can re-roll hit rolls (and wound rolls if Below Half-strength), below its Starting Strength; until the start of your next Command phase (Machine Spirit Resurgent)
-1CP can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws), until the end of the turn (Machine Superiority)
+1CP Machine Spirit Resurgent: can re-roll hit rolls (and wound rolls if Below Half-strength), below its Starting Strength; until the start of your next Command phase
+1CP Machine Superiority: can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws), until the end of the turn
 STRATAGEMS · ERADICATION COHORT · FIGHT PHASE
-1CP [LANCE] (Servo-driven Charge)
+1CP Servo-driven Charge: [LANCE]
 
 ######## abilities · MELEE Abilities
 Belisarius Cawl
@@ -869,50 +886,32 @@ STRATAGEMSUnrelenting Aggression, Unshackled Wrath, Threat-cogitation Targeters,
 
 UNIT RULES
 Deadly Demise
-
 Cybernetica Datasmith + Kastelan Robots 1
-
 Ironstrider Ballistarii (1 of 2) 1
-
 Ironstrider Ballistarii (2 of 2) 1
-
 Onager Dunecrawler D3
-
 Skorpius Disintegrator D3
-
 Feel No Pain
-
 Tech-Priest Enginseer · Necromechanic
 Omnissiah’s Blessing: In your Command phase, select one friendly ADEPTUS MECHANICUS model within 3" of this model. That model regains up to D3 lost wounds and, if it is a VEHICLE model, until the start of your next Command phase, that model has the Feel No Pain 5+ ability. Each model can only be selected for this ability once per Command phase.
-
 Cybernetica Datasmith + Kastelan Robots 4+
-
 Leader
-
 Tech-Priest Enginseer · Necromechanic
-
 Lone Operative
-
 Belisarius Cawl
 Mechanicus Bodyguard: While this model is within 3" of one or more other friendly ADEPTUS MECHANICUS units, this model has the Lone Operative ability.
-
 Thulia Ghuld
 Mechanicus Bodyguard: While this model is within 3" of one or more other friendly ADEPTUS MECHANICUS units, this model has the Lone Operative ability.
-
 Tech-Priest Enginseer · Necromechanic
 Enginseer: While this model is within 3" of one or more friendly ADEPTUS MECHANICUS VEHICLE units, unless it is leading a unit, this model has the Lone Operative ability.
-
 Scouts
-
 Skitarii Rangers 6"
-
 Stealth
-
 Belisarius Cawl
-Canticles of the Omnissiah: At the start of your Command phase, select one of the abilities in the Canticles of the Omnissiah section. Until the start of your next Command phase, this model has that ability. Invocation of Machine Vengeance: At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Machine Vengeance target. Each time a model in a friendly ADEPTUS MECHANICUS unit makes an attack that targets your Machine Vengeance target, you can re-roll the Hit roll. Mantra of Discipline: This model has the BATTLELINE keyword and has the following ability: Binharic Courage (Aura): While a friendly ADEPTUS MECHANICUS unit is within 6" of this model, add 1 to the Objective Control characteristic of models in that unit and each time you take a Battle-shock or Leadership test for that unit, add 1 to that test. Shroudpsalm (Aura): While a friendly ADEPTUS MECHANICUS unit is within 6" of this model, that unit has the Stealth ability.
-
+Canticles of the Omnissiah: At the start of your Command phase, select one of the abilities in the Canticles of the Omnissiah section. Until the start of your next Command phase, this model has that ability. Invocation of Machine Vengeance: At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Machine Vengeance target. Each time a model in a friendly ADEPTUS MECHANICUS unit makes an attack that targets your Machine Vengeance target, you can re-roll the Hit roll. Mantra of Discipline: This model has the BATTLELINE keyword and has the following ability:
+Binharic Courage (Aura): While a friendly ADEPTUS MECHANICUS unit is within 6" of this model, add 1 to the Objective Control characteristic of models in that unit and each time you take a Battle-shock or Leadership test for that unit, add 1 to that test.
+Shroudpsalm (Aura): While a friendly ADEPTUS MECHANICUS unit is within 6" of this model, that unit has the Stealth ability.
 Support
-
 Cybernetica Datasmith supports Kastelan Robots
 
 ######## bases · RULES Bases & proxies
@@ -980,18 +979,116 @@ Belisarius Cawl
 SHOOT
 FIGHT
 BOTH
-THEIR
-Wazdakka Gutsmek
-Me shooty yer’ booty · T8 · Sv 3+ · 4+ InSv · W10
-THEY ATTACK
-2.8
-of 10 wounds lost
-destroyed in 4% of games
-
-≈8 pts destroyed
-
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+1.8
+of 5 destroyed
+3.7 wounds lost · wiped in <1% of games
 Nothing ticked: the datasheets as printed
-3 NOT COUNTED
+1 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT · BIGGEST FIRST
@@ -1005,8 +1102,7 @@ the target is farther than 9" (every weapon is taken to be in range)
 NOW
 Within 9"
 bonus for Solar atomiser
-+13% wiped
-+1.8
++0.3
 RANGED WEAPONS
 Belisarius Cawl
 Solar atomiser
@@ -1023,55 +1119,27 @@ AP
 D
 D6
 MELTA 3
-−4% wiped
-−2.8
-WOUNDS IF UNTICKED
+−1.8
+MODELS IF UNTICKED
 SITUATION AND RULES
-both sides
-Target has the benefit of cover
-THEIRS
-if it applies
-−1% wiped
-−0.5
-WOUNDS
-Pulse Jet
-After a pulse jet move: attacks that target it have -1 to hit rolls, until the start of your next turn · in these numbers: -1 to their hit rolls
-THEIRS
-if it applies
-−1% wiped
-−0.5
-WOUNDS
 Canticles of the Omnissiah
 If he has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll
-YOURS
 if it applies
-+2% wiped
-+0.5
-WOUNDS
++0.3
+MODELS
 BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit
 ticks Doctrina Imperatives (+1 AP, with Conqueror or Both)
-YOURS
 if it holds
 no change: nothing it reaches counts in this step
 0
 ALL ▾
-Riled up
-THEIRS
-if it holds
-no change: their own InSv 4+ is better
-0
-RULES IT SWITCHES ON
-Riled up (Waaagh!)
-0
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
-YOURS
 if it applies
 no change: already hits on 2+
 0
 Doctrina Imperatives
 The Imperative active for your army this battle round: Protector: [HEAVY], BS improved by 1 · Conqueror: [ASSAULT] · +1 AP with Conqueror if this unit is BATTLELINE or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit · +1 AP
-YOURS
 if it applies
 0
 Protector
@@ -1081,59 +1149,46 @@ Conqueror
 Both
 counted by you: only with Omnicogitator, Transcendent Cogitation or The Fires of Mars (Thulia Ghuld)
 0
-Target is engaged
--1 to hit; no [BLAST]
-YOURS
-if it applies
-−1% wiped
-−0.5
-WOUNDS
 Close-quarters shooting at a unit it is engaged with
 -1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
-YOURS
 if it applies
-−3% wiped
-−1.1
-WOUNDS
+−0.4
+MODELS
+Close-quarters shooting at another unit
+-1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
+if it applies
+−0.4
+MODELS
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
+if it applies
+−0.4
+MODELS
 Fire Overwatch (snap shooting)
 the target within 24" (15.09): hits only on an unmodified 6, never critical; no hit re-rolls
-YOURS
 if it applies
-−4% wiped
-−2.3
-WOUNDS
+−1.4
+MODELS
 STRATAGEMS
-both sides, with their CP
-1CP Smokescreen
-Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover… · for a unit that is not fully visible to the attacking models because of one or more models in your SMOKE unit, tick “Target has the benefit of cover” instead
-THEIRS
-if used
-−1% wiped
-−0.5
-WOUNDS
-NOT FOR THIS PAIR, BY THE RULES (5) · YOURS TO COUNT ANYWAY
+with their CP
+
+None that change these numbers.
+
+NOT FOR THIS STEP, BY THE RULES (3) · YOURS TO COUNT ANYWAY
 
 1CP Servo-driven Charge
-YOURS
 Fight phase only
 NO CHANGE
 
-Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (yours, Fight phase only) · 1CP Epic Challenge, 2CP Counteroffensive (theirs, Fight phase only)
+Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (3)
+NOT COUNTED BY THE CALCULATOR (1)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-Lone Operative (24.24)
-THEIRS
-not visible to enemy models unless they are within 12" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12" · the calculator takes it that these attacks can target it
 1CP Command Re-roll
-YOURS
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-1CP Command Re-roll
-THEIRS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-OTHER MODIFIERS
+MODIFIERS · NONE
 Hit roll
 −
 0
@@ -1142,15 +1197,11 @@ Wound roll
 −
 0
 +
-AP better
+AP
 −
 0
 +
 Damage
-−
-0
-+
-Attacks
 −
 0
 +
@@ -1162,18 +1213,6 @@ Re-roll wounds
 none
 1s
 all
-Every weapon has
-Lethal
-Sustained 1
-Dev. wounds
-Target InSv
-−
-none
-+
-Target Feel No Pain
-−
-none
-+
 
 ######## damage fight · DAMAGE Damage
 YOUR
@@ -1181,19 +1220,117 @@ Belisarius Cawl
 SHOOT
 FIGHT
 BOTH
-THEIR
-Wazdakka Gutsmek
-Me shooty yer’ booty · T8 · Sv 3+ · 4+ InSv · W10
-THEY ATTACK
-3.6
-of 10 wounds lost
-destroyed in <1% of games
-
-≈1 pts destroyed
-
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+2.5
+of 5 destroyed
+5.4 wounds lost · wiped in 4% of games
 Charged this turn
 ×
-7 NOT COUNTED
+3 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 FIGHT · BIGGEST FIRST
@@ -1216,8 +1353,13 @@ AP
 D
 1
 ANTI-VEHICLE 4+, DEVASTATING WOUNDS, EXTRA ATTACKS
-−1.7
-WOUNDS IF UNTICKED
+−4% wiped
+−0.4
+MODELS IF UNTICKED
+AGAINST THIS TARGET
+[ANTI-VEHICLE 4+]
++0.3
+models
 Cawl’s Omnissian axe
 A
 4
@@ -1229,8 +1371,9 @@ AP
 -2
 D
 2
+−4% wiped
 −1.7
-WOUNDS IF UNTICKED
+MODELS IF UNTICKED
 Mechadendrite hive
 A
 2D6
@@ -1243,45 +1386,28 @@ AP
 D
 1
 EXTRA ATTACKS
-−0.3
-WOUNDS IF UNTICKED
+−2% wiped
+−0.2
+MODELS IF UNTICKED
 SITUATION AND RULES
-both sides
-Pulse Jet
-After a pulse jet move: attacks that target it have -1 to hit rolls, until the start of your next turn · in these numbers: -1 to their hit rolls
-THEIRS
-if it applies
-−0.7
-WOUNDS
 Canticles of the Omnissiah
 If he has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll
-YOURS
 if it applies
-+0.7
-WOUNDS
++7% wiped
++0.5
+MODELS
 BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit
 ticks Doctrina Imperatives (+1 AP, with Conqueror or Both)
-YOURS
 if it holds
 no change: nothing it reaches counts in this step
 0
 ALL ▾
 Charged this turn
-YOURS
 said to hold
 no change: no rule here needs it
 0
-Riled up
-THEIRS
-if it holds
-no change: their own InSv 4+ is better
-0
-RULES IT SWITCHES ON
-Riled up (Waaagh!)
-0
 Doctrina Imperatives
 The Imperative active for your army this battle round: Conqueror: WS improved by 1 · +1 AP with Conqueror if this unit is BATTLELINE or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit · Protector: nothing for its melee attacks · +1 AP
-YOURS
 if it applies
 no change: Protector: nothing for these attacks
 0
@@ -1294,46 +1420,24 @@ Both
 counted by you: only with Omnicogitator, Transcendent Cogitation or The Fires of Mars (Thulia Ghuld)
 +0.1
 STRATAGEMS
-both sides, with their CP
+with their CP
 1CP Servo-driven Charge
 Fight phase: [LANCE]
-YOURS
 if used
-+0.8
-WOUNDS
-NOT FOR THIS PAIR, BY THE RULES (1) · YOURS TO COUNT ANYWAY
-
-1CP Smokescreen
-THEIRS
-Shooting phase only
-NO CHANGE
-
-NOT COUNTED BY THE CALCULATOR (7)
++3% wiped
++0.2
+MODELS
+NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-Lone Operative (24.24)
-THEIRS
-not visible to enemy models unless they are within 12" of this unit · the calculator takes it that these attacks can target it
 1CP Command Re-roll
-YOURS
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
-YOURS
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive
-YOURS
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-1CP Command Re-roll
-THEIRS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-1CP Epic Challenge
-THEIRS
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
-THEIRS
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-OTHER MODIFIERS
+MODIFIERS · NONE
 Hit roll
 −
 0
@@ -1342,15 +1446,11 @@ Wound roll
 −
 0
 +
-AP better
+AP
 −
 0
 +
 Damage
-−
-0
-+
-Attacks
 −
 0
 +
@@ -1362,18 +1462,6 @@ Re-roll wounds
 none
 1s
 all
-Every weapon has
-Lethal
-Sustained 1
-Dev. wounds
-Target InSv
-−
-none
-+
-Target Feel No Pain
-−
-none
-+
 
 ######## damage both · DAMAGE Damage
 YOUR
@@ -1381,26 +1469,125 @@ Belisarius Cawl
 SHOOT
 FIGHT
 BOTH
-THEIR
-Wazdakka Gutsmek
-Me shooty yer’ booty · T8 · Sv 3+ · 4+ InSv · W10
-THEY ATTACK
-6.0
-of 10 wounds lost
-destroyed in 20% of games
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+4.1
+of 5 destroyed
+8.4 wounds lost · wiped in 44% of games
 
-Shoot 2.81 · Fight 3.22 · the charge is taken to succeed
-
-≈39 pts destroyed
+Shoot 1.8 · Fight 2.3 · the charge is taken to succeed
 
 Charged this turn
 ×
-10 NOT COUNTED
+4 NOT COUNTED
 WORKING ›
 WHAT CHANGES THIS
 SHOOT → CHARGE → FIGHT · BIGGEST FIRST
 
-Effects are on the total: their models destroyed by the end of the fight, the shooting’s choices and the fight’s alike.
+Effects are on the total: models destroyed by the end of the fight, the shooting’s choices and the fight’s alike.
 
 The charge is taken to succeed (no charge roll); “Charged this turn” is ticked for the fight.
 
@@ -1413,8 +1600,8 @@ the target is farther than 9" (every weapon is taken to be in range)
 NOW
 Within 9"
 bonus for Solar atomiser
-+24% wiped
-+1.1
++7% wiped
++0.2
 RANGED WEAPONS
 Belisarius Cawl
 Solar atomiser
@@ -1431,113 +1618,76 @@ AP
 D
 D6
 MELTA 3
-−19% wiped
-−2.4
-WOUNDS IF UNTICKED
+−40% wiped
+−1.5
+MODELS IF UNTICKED
 SITUATION AND RULES
-both sides
-Pulse Jet
-After a pulse jet move: attacks that target it have -1 to hit rolls, until the start of your next turn · in these numbers: -1 to their hit rolls
-THEIRS
-if it applies
-−8% wiped
-−1
-WOUNDS
 Canticles of the Omnissiah
 If he has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll
-YOURS
 if it applies
-+10% wiped
-+0.9
-WOUNDS
-Target has the benefit of cover
-THEIRS
-if it applies
-−4% wiped
-−0.4
-WOUNDS
++23% wiped
++0.5
+MODELS
 BATTLELINE, or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit
 ticks Doctrina Imperatives (+1 AP, with Conqueror or Both)
-YOURS
 if it holds
 no change: nothing it reaches counts in this step
 0
 ALL ▾
-Riled up
-in the fight: riled up (Waaagh!)
-THEIRS
-if it holds
-no change: their own InSv 4+ is better
-0
-RULES IT SWITCHES ON
-Riled up (Waaagh!)
-0
-Riled up (Waaagh!) (fight)
-0
 Plunging Fire
 BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
-YOURS
 if it applies
 no change: already hits on 2+
 0
 Doctrina Imperatives
 The Imperative active for your army this battle round: Protector: [HEAVY], BS improved by 1 · Conqueror: [ASSAULT] · +1 AP with Conqueror if this unit is BATTLELINE or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit · +1 AP
-YOURS
 if it applies
 0
 Protector
 0
 Conqueror
-≈0
++2% wiped
 Both
 counted by you: only with Omnicogitator, Transcendent Cogitation or The Fires of Mars (Thulia Ghuld)
-≈0
-Target is engaged
--1 to hit; no [BLAST]
-YOURS
-if it applies
-−4% wiped
-−0.4
-WOUNDS
++2% wiped
 Close-quarters shooting at a unit it is engaged with
 -1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
-YOURS
 if it applies
-−9% wiped
-−0.9
-WOUNDS
+−10% wiped
+−0.3
+MODELS
+Close-quarters shooting at another unit
+-1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
+if it applies
+−10% wiped
+−0.3
+MODELS
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
+if it applies
+−10% wiped
+−0.3
+MODELS
 STRATAGEMS
-both sides, with their CP
-1CP Smokescreen
-Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover… · for a unit that is not fully visible to the attacking models because of one or more models in your SMOKE unit, tick “Target has the benefit of cover” instead
-THEIRS
-if used
-−4% wiped
-−0.4
-WOUNDS
-NOT FOR THIS PAIR, BY THE RULES (5) · YOURS TO COUNT ANYWAY
+with their CP
+
+None that change these numbers.
+
+NOT FOR THIS STEP, BY THE RULES (3) · YOURS TO COUNT ANYWAY
 
 1CP Servo-driven Charge
-YOURS
 Fight phase only
 NO CHANGE
 
-Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (yours, Fight phase only) · 1CP Epic Challenge, 2CP Counteroffensive (theirs, Fight phase only)
+Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
 
-NOT COUNTED BY THE CALCULATOR (3)
+NOT COUNTED BY THE CALCULATOR (1)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-Lone Operative (24.24)
-THEIRS
-not visible to enemy models unless they are within 12" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12" · the calculator takes it that these attacks can target it
 1CP Command Re-roll
-YOURS
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-1CP Command Re-roll
-THEIRS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-OTHER MODIFIERS
+MODIFIERS · NONE
 Hit roll
 −
 0
@@ -1546,15 +1696,11 @@ Wound roll
 −
 0
 +
-AP better
+AP
 −
 0
 +
 Damage
-−
-0
-+
-Attacks
 −
 0
 +
@@ -1566,18 +1712,6 @@ Re-roll wounds
 none
 1s
 all
-Every weapon has
-Lethal
-Sustained 1
-Dev. wounds
-Target InSv
-−
-none
-+
-Target Feel No Pain
-−
-none
-+
 THE FIGHT
 THEN, AGAINST WHAT THE SHOOTING LEFT
 MELEE WEAPONS
@@ -1597,9 +1731,13 @@ AP
 D
 1
 ANTI-VEHICLE 4+, DEVASTATING WOUNDS, EXTRA ATTACKS
-−9% wiped
-−1.4
-WOUNDS IF UNTICKED
+−14% wiped
+−0.4
+MODELS IF UNTICKED
+AGAINST THIS TARGET
+[ANTI-VEHICLE 4+]
++0.2
+models
 Cawl’s Omnissian axe
 A
 4
@@ -1611,9 +1749,9 @@ AP
 -2
 D
 2
-−11% wiped
+−41% wiped
 −1.4
-WOUNDS IF UNTICKED
+MODELS IF UNTICKED
 Mechadendrite hive
 A
 2D6
@@ -1626,33 +1764,22 @@ AP
 D
 1
 EXTRA ATTACKS
-−1% wiped
-−0.2
-WOUNDS IF UNTICKED
+−5% wiped
+−0.1
+MODELS IF UNTICKED
 SITUATION AND RULES
-both sides
-Pulse Jet
-After a pulse jet move: attacks that target it have -1 to hit rolls, until the start of your next turn · in these numbers: -1 to their hit rolls
-THEIRS
-if it applies
-−4% wiped
-−0.6
-WOUNDS
 Canticles of the Omnissiah
 If he has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll
-YOURS
 if it applies
-+6% wiped
-+0.5
-WOUNDS
++15% wiped
++0.3
+MODELS
 Charged this turn
-YOURS
 holds: Both takes the charge as made (no charge roll)
 no change: no rule here needs it
 0
 Doctrina Imperatives
 The Imperative active for your army this battle round: Conqueror: WS improved by 1 · +1 AP with Conqueror if this unit is BATTLELINE or within 6" of a friendly ADEPTUS MECHANICUS BATTLELINE unit · Protector: nothing for its melee attacks · +1 AP
-YOURS
 if it applies
 no change: Protector: nothing for these attacks
 0
@@ -1660,52 +1787,29 @@ ALL ▾
 Protector
 0
 Conqueror
-≈0
++2% wiped
 Both
 counted by you: only with Omnicogitator, Transcendent Cogitation or The Fires of Mars (Thulia Ghuld)
-≈0
++2% wiped
 STRATAGEMS
-both sides, with their CP
+with their CP
 1CP Servo-driven Charge
 Fight phase: [LANCE]
-YOURS
 if used
 +6% wiped
-+0.6
-WOUNDS
-NOT FOR THIS PAIR, BY THE RULES (1) · YOURS TO COUNT ANYWAY
-
-1CP Smokescreen
-THEIRS
-Shooting phase only
-NO CHANGE
-
-NOT COUNTED BY THE CALCULATOR (7)
++0.1
+MODELS
+NOT COUNTED BY THE CALCULATOR (3)
 
 They can matter at the table, but the calculator does not play them: what each one says.
 
-Lone Operative (24.24)
-THEIRS
-not visible to enemy models unless they are within 12" of this unit · the calculator takes it that these attacks can target it
 1CP Command Re-roll
-YOURS
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 1CP Epic Challenge
-YOURS
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
 2CP Counteroffensive
-YOURS
 Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-1CP Command Re-roll
-THEIRS
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-1CP Epic Challenge
-THEIRS
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2CP Counteroffensive
-THEIRS
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-OTHER MODIFIERS
+MODIFIERS · NONE
 Hit roll
 −
 0
@@ -1714,15 +1818,11 @@ Wound roll
 −
 0
 +
-AP better
+AP
 −
 0
 +
 Damage
-−
-0
-+
-Attacks
 −
 0
 +
@@ -1734,18 +1834,6 @@ Re-roll wounds
 none
 1s
 all
-Every weapon has
-Lethal
-Sustained 1
-Dev. wounds
-Target InSv
-−
-none
-+
-Target Feel No Pain
-−
-none
-+
 
 ######## strats {"folded":true} · DAMAGE Stratagems
 EXPAND ALL
@@ -1801,7 +1889,7 @@ Your Shooting Cybernetica Datasmith + Kastelan Robots, Ironstrider Ballistarii 
 1
 CP
 Analytic Reprisals
-Your unit shoots as if it were your Shooting phase, but only at that enemy unit (and only if it is an eligible target).
+An enemy unit has shot and your unit lost models to those attacks: your unit shoots as if it were your Shooting phase, but only at that enemy unit (and only if it is an eligible target).
 Their Shooting Skitarii Rangers ×2
 1
 CP
@@ -1828,7 +1916,7 @@ End of their Movement Any unit
 1
 CP
 Fire Overwatch
-Your unit shoots using snap shooting.
+Your unengaged unit shoots using snap shooting.
 End of their Movement Any unit
 1
 CP
@@ -1843,7 +1931,7 @@ Your Charge All but Tech-Priest Enginseer, Skitarii Rangers ×2
 1
 CP
 Heroic Intervention
-Your unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
 End of their Charge · Into the Fray +1CP All but Skorpius Disintegrator ×2
 1
 CP
@@ -1863,7 +1951,7 @@ Any phase Any unit
 1
 CP
 Explosives
-One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
+Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
 
 Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
@@ -1886,7 +1974,7 @@ EFFECT
 
 Until the start of your next Command phase, add 3" to the Move characteristic of models in your unit and add 1 to Advance and Charge rolls made for it.
 
-USED BYCybernetica Datasmith · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+USED BYCybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
 
 1
 CP
@@ -1904,7 +1992,7 @@ Until the start of your next Command phase, ranged weapons equipped by models in
 
 FAQ (Faction Pack 1.4): “If I target a unit with the Auto-divinatory Targeting Stratagem while the Protector Imperative is active for my army, in what order are the Ballistic Skill modifiers applied?” “The Ballistic Skill characteristic of ranged weapons equipped by models in that unit is first changed to 3+ by the Stratagem, then improved by 1 by the Protector Imperative, for a final result of 2+ (assuming no other modifiers apply).”
 
-USED BYCybernetica Datasmith · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+USED BYCybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
 
 1
 CP
@@ -1920,7 +2008,7 @@ EFFECT
 
 Until the start of your next Command phase, each time a model in your unit makes an attack, you can re-roll the Hit roll. If your unit is Below Half-strength, you can re-roll the Wound roll as well.
 
-USED BYCybernetica Datasmith · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+USED BYCybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
 
 1
 CP
@@ -1936,7 +2024,7 @@ EFFECT
 
 Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back and you can ignore any or all modifiers to its characteristics and/or to any roll or test made for it (excluding modifiers to saving throws).
 
-USED BYCybernetica Datasmith · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+USED BYCybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
 
 1
 CP
@@ -1952,7 +2040,7 @@ EFFECT
 
 Until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for your unit.
 
-USED BYCybernetica Datasmith · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+USED BYCybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
 
 1
 CP
@@ -1968,7 +2056,7 @@ EFFECT
 
 Until the start of your next Command phase, models in your unit have the Feel No Pain 6+ ability, which is improved to Feel No Pain 5+ against mortal wounds.
 
-USED BYCybernetica Datasmith · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+USED BYCybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
 
 ERADICATION COHORT
 6
@@ -2002,7 +2090,7 @@ EFFECT
 
 Select the [SUSTAINED HITS 1] or [LETHAL HITS] ability. Until the end of the phase, ranged weapons equipped by models in your unit have the selected ability. You can instead select the [SUSTAINED HITS 1], [LETHAL HITS] and [HAZARDOUS] abilities to apply to those weapons until the end of the phase.
 
-USED BYCybernetica Datasmith · Martial Signatum Amplificator, Skitarii Rangers, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+USED BYCybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator, Skitarii Rangers, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
 
 1
 CP
@@ -2018,7 +2106,7 @@ EFFECT
 
 Until the end of the phase, each time a ranged attack made by a model in your unit is allocated to a MONSTER or VEHICLE model, you can re-roll the Damage roll.
 
-USED BYCybernetica Datasmith · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+USED BYCybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
 
 1
 CP
@@ -2160,7 +2248,7 @@ Resolve the following sequence:
 
 Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
 
-USED BYBelisarius Cawl, Thulia Ghuld, Cybernetica Datasmith · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+USED BYBelisarius Cawl, Thulia Ghuld, Cybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
 
 1
 CP
@@ -2181,7 +2269,7 @@ Into the Fray (+1CP): When making the charge roll, if the result is greater than
 
 Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
 
-USED BYBelisarius Cawl, Thulia Ghuld, Tech-Priest Enginseer · Necromechanic, Cybernetica Datasmith · Martial Signatum Amplificator, Skitarii Rangers, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler
+USED BYBelisarius Cawl, Thulia Ghuld, Tech-Priest Enginseer · Necromechanic, Cybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator, Skitarii Rangers, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler
 
 1
 CP
@@ -2197,7 +2285,7 @@ EFFECT
 
 Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
 
-USED BYBelisarius Cawl, Thulia Ghuld, Tech-Priest Enginseer · Necromechanic, Cybernetica Datasmith · Martial Signatum Amplificator
+USED BYBelisarius Cawl, Thulia Ghuld, Tech-Priest Enginseer · Necromechanic, Cybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator
 
 2
 CP
@@ -2337,7 +2425,7 @@ Mechadendrite hive
 1
 EXTRA ATTACKS
 STRATAGEMS · ERADICATION COHORT · FIGHT PHASE
-1CP [LANCE] (Servo-driven Charge)
+1CP Servo-driven Charge: [LANCE]
 ABILITIES
 Canticles of the Omnissiah
 Your Command
@@ -2420,7 +2508,7 @@ Thulia Ghuld
 6+
 3
 4+
-WHEN TARGETEDLone Operative while within 3" of another friendly ADEPTUS MECHANICUS unit
+WHEN TARGETEDLone Operative while within 3" of another friendly ADEPTUS MECHANICUS unit · Within 6" of Cawl, if he has Shroudpsalm: Stealth: the benefit of cover against ranged attacks (Shroudpsalm)
 ALL ATTACKS
 If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
 RANGED WEAPONS
@@ -2467,7 +2555,7 @@ Rod of the War Forge
 -1
 1
 STRATAGEMS · ERADICATION COHORT · FIGHT PHASE
-1CP [LANCE] (Servo-driven Charge)
+1CP Servo-driven Charge: [LANCE]
 ABILITIES
 Icon of War
 Your Command · Their Move · Shoot · Your Charge · Fight
@@ -2556,7 +2644,7 @@ Tech-Priest Enginseer
 7+
 1
 5+
-WHEN TARGETEDLone Operative while within 3" of a friendly ADEPTUS MECHANICUS VEHICLE unit, unless it is leading a unit
+WHEN TARGETEDLone Operative while within 3" of a friendly ADEPTUS MECHANICUS VEHICLE unit, unless it is leading a unit · Within 6" of Cawl, if he has Shroudpsalm: Stealth: the benefit of cover against ranged attacks (Shroudpsalm)
 ALL ATTACKS
 If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
 RANGED WEAPONS
@@ -2596,7 +2684,7 @@ Servo arm
 2
 EXTRA ATTACKS
 STRATAGEMS · ERADICATION COHORT · FIGHT PHASE
-1CP [LANCE] (Servo-driven Charge)
+1CP Servo-driven Charge: [LANCE]
 ABILITIES
 Enginseer
 
@@ -2684,13 +2772,13 @@ Kastelan Robot×4
 
 OC +1 for each model unless Battle-shocked, not in the OC above (Cyber-psalm Programming)
 
-WHEN TARGETEDAegis Protocol: KASTELAN ROBOT models +1 Toughness (from the start of the battle until another protocol is selected) · Cybernetica Datasmith only: Feel No Pain 4+ while leading this unit · Ranged attacks: each unmodified 6 on its save rolls, 1 mortal wound to the attacking unit after it has shot · 1CP Benevolence of the Omnissiah: Feel No Pain 6+ (5+ against mortal wounds), until the start of your next Command phase
+WHEN TARGETEDCybernetica Datasmith · Aegis Protocol: KASTELAN ROBOT models +1 Toughness (from the start of the battle until another protocol is selected) · Kastelan Robots · Cybernetica Datasmith only: Feel No Pain 4+ while leading this unit · Kastelan Robots · Ranged attacks: each unmodified 6 on its save rolls, 1 mortal wound to the attacking unit after it has shot · 1CP Benevolence of the Omnissiah: Feel No Pain 6+ (5+ against mortal wounds), until the start of your next Command phase · Within 6" of Cawl, if he has Shroudpsalm: Stealth: the benefit of cover against ranged attacks (Shroudpsalm) · Picked by the Enginseer in your Command phase (within 3"): Feel No Pain 5+ for that VEHICLE model (Omnissiah’s Blessing) · Within 12" of the Enginseer, once per battle round: after a failed saving throw, the Enginseer can change the Damage characteristic of that attack to 0 (Necromechanic)
 ALL ATTACKS · WHOLE UNIT
 Protector or Conqueror Imperative active for this unit: Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1 (Murderous Imperative)
 If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
 STRATAGEMS · COHORT CYBERNETICA · YOUR COMMAND PHASE
-1CP can re-roll hit rolls (and wound rolls if Below Half-strength), below its Starting Strength; until the start of your next Command phase (Machine Spirit Resurgent)
-1CP can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws), until the end of the turn (Machine Superiority)
+1CP Machine Spirit Resurgent: can re-roll hit rolls (and wound rolls if Below Half-strength), below its Starting Strength; until the start of your next Command phase
+1CP Machine Superiority: can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws), until the end of the turn
 RANGED WEAPONS
 Range
 A
@@ -2720,10 +2808,10 @@ IGNORES COVER, TORRENT
 A +2 In Protector Protocol, selected in your Command phase (Battle Protocols)
 WHOLE UNIT
 STRATAGEMS · COHORT CYBERNETICA · YOUR COMMAND PHASE
-1CP BS 3+, [IGNORES COVER]; can only target units within range of the selected objective marker, until the start of your next Command phase (Auto-divinatory Targeting)
+1CP Auto-divinatory Targeting: BS 3+, [IGNORES COVER]; can only target units within range of the selected objective marker, until the start of your next Command phase
 STRATAGEMS · ERADICATION COHORT · YOUR SHOOTING PHASE
-1CP [SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS] (Unshackled Wrath)
-1CP can re-roll the Damage roll, attacks allocated to a MONSTER or VEHICLE model (Threat-cogitation Targeters)
+1CP Unshackled Wrath: [SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS]
+1CP Threat-cogitation Targeters: can re-roll the Damage roll, attacks allocated to a MONSTER or VEHICLE model
 MELEE WEAPONS
 A
 WS
@@ -2749,7 +2837,7 @@ TWIN-LINKED
 A +2 In Conqueror Protocol, selected in your Command phase (Battle Protocols)
 WHOLE UNIT
 STRATAGEMS · ERADICATION COHORT · FIGHT PHASE
-1CP [LANCE] (Servo-driven Charge)
+1CP Servo-driven Charge: [LANCE]
 ABILITIES
 Battle Protocols
 - Cybernetica Datasmith
@@ -2849,6 +2937,7 @@ Skitarii Rangers×10
 7+
 2
 5+
+WHEN TARGETEDWithin 6" of Cawl, if he has Shroudpsalm: Stealth: the benefit of cover against ranged attacks (Shroudpsalm) · Wholly within 6" of the Onager Dunecrawler: 4+ InSv against ranged attacks (Emanatus Forcefield)
 ALL ATTACKS
 Protector or Conqueror Imperative active for this unit: Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1 (Murderous Imperative)
 If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
@@ -2901,7 +2990,7 @@ Transuranic arquebusSKITARII RANGER
 D3
 HEAVY, PRECISION, IGNORES COVER
 STRATAGEMS · ERADICATION COHORT · YOUR SHOOTING PHASE
-1CP [SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS] (Unshackled Wrath)
+1CP Unshackled Wrath: [SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS]
 MELEE WEAPONS
 A
 WS
@@ -2923,7 +3012,7 @@ Close combat weapon×10
 0
 1
 STRATAGEMS · ERADICATION COHORT · FIGHT PHASE
-1CP [LANCE] (Servo-driven Charge)
+1CP Servo-driven Charge: [LANCE]
 ABILITIES
 Objective Scouted
 Your Command
@@ -2983,13 +3072,13 @@ Ironstrider Ballistarii×3
 7+
 2
 5+
-WHEN TARGETED1CP Benevolence of the Omnissiah: Feel No Pain 6+ (5+ against mortal wounds), until the start of your next Command phase
+WHEN TARGETED1CP Benevolence of the Omnissiah: Feel No Pain 6+ (5+ against mortal wounds), until the start of your next Command phase · Within 6" of Cawl, if he has Shroudpsalm: Stealth: the benefit of cover against ranged attacks (Shroudpsalm) · Picked by the Enginseer in your Command phase (within 3"): Feel No Pain 5+ for that VEHICLE model (Omnissiah’s Blessing) · Within 12" of the Enginseer, once per battle round: after a failed saving throw, the Enginseer can change the Damage characteristic of that attack to 0 (Necromechanic)
 ALL ATTACKS
 Protector or Conqueror Imperative active for this unit: Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1 (Murderous Imperative)
 If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
 STRATAGEMS · COHORT CYBERNETICA · YOUR COMMAND PHASE
-1CP can re-roll hit rolls (and wound rolls if Below Half-strength), below its Starting Strength; until the start of your next Command phase (Machine Spirit Resurgent)
-1CP can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws), until the end of the turn (Machine Superiority)
+1CP Machine Spirit Resurgent: can re-roll hit rolls (and wound rolls if Below Half-strength), below its Starting Strength; until the start of your next Command phase
+1CP Machine Superiority: can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws), until the end of the turn
 RANGED WEAPONS
 Range
 A
@@ -3006,10 +3095,10 @@ Twin cognis lascannon×3
 D6+1
 SUSTAINED HITS 1, TWIN-LINKED
 STRATAGEMS · COHORT CYBERNETICA · YOUR COMMAND PHASE
-1CP BS 3+, [IGNORES COVER]; can only target units within range of the selected objective marker, until the start of your next Command phase (Auto-divinatory Targeting)
+1CP Auto-divinatory Targeting: BS 3+, [IGNORES COVER]; can only target units within range of the selected objective marker, until the start of your next Command phase
 STRATAGEMS · ERADICATION COHORT · YOUR SHOOTING PHASE
-1CP [SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS] (Unshackled Wrath)
-1CP can re-roll the Damage roll, attacks allocated to a MONSTER or VEHICLE model (Threat-cogitation Targeters)
+1CP Unshackled Wrath: [SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS]
+1CP Threat-cogitation Targeters: can re-roll the Damage roll, attacks allocated to a MONSTER or VEHICLE model
 MELEE WEAPONS
 A
 WS
@@ -3023,7 +3112,7 @@ Ironstrider feet×3
 0
 1
 STRATAGEMS · ERADICATION COHORT · FIGHT PHASE
-1CP [LANCE] (Servo-driven Charge)
+1CP Servo-driven Charge: [LANCE]
 ABILITIES
 Elevated Strider
 Your Move/Shoot
@@ -3084,13 +3173,13 @@ Ironstrider Ballistarii×3
 7+
 2
 5+
-WHEN TARGETED1CP Benevolence of the Omnissiah: Feel No Pain 6+ (5+ against mortal wounds), until the start of your next Command phase
+WHEN TARGETED1CP Benevolence of the Omnissiah: Feel No Pain 6+ (5+ against mortal wounds), until the start of your next Command phase · Within 6" of Cawl, if he has Shroudpsalm: Stealth: the benefit of cover against ranged attacks (Shroudpsalm) · Picked by the Enginseer in your Command phase (within 3"): Feel No Pain 5+ for that VEHICLE model (Omnissiah’s Blessing) · Within 12" of the Enginseer, once per battle round: after a failed saving throw, the Enginseer can change the Damage characteristic of that attack to 0 (Necromechanic)
 ALL ATTACKS
 Protector or Conqueror Imperative active for this unit: Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1 (Murderous Imperative)
 If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
 STRATAGEMS · COHORT CYBERNETICA · YOUR COMMAND PHASE
-1CP can re-roll hit rolls (and wound rolls if Below Half-strength), below its Starting Strength; until the start of your next Command phase (Machine Spirit Resurgent)
-1CP can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws), until the end of the turn (Machine Superiority)
+1CP Machine Spirit Resurgent: can re-roll hit rolls (and wound rolls if Below Half-strength), below its Starting Strength; until the start of your next Command phase
+1CP Machine Superiority: can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws), until the end of the turn
 RANGED WEAPONS
 Range
 A
@@ -3107,10 +3196,10 @@ Twin cognis autocannon×3
 3
 SUSTAINED HITS 1, TWIN-LINKED
 STRATAGEMS · COHORT CYBERNETICA · YOUR COMMAND PHASE
-1CP BS 3+, [IGNORES COVER]; can only target units within range of the selected objective marker, until the start of your next Command phase (Auto-divinatory Targeting)
+1CP Auto-divinatory Targeting: BS 3+, [IGNORES COVER]; can only target units within range of the selected objective marker, until the start of your next Command phase
 STRATAGEMS · ERADICATION COHORT · YOUR SHOOTING PHASE
-1CP [SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS] (Unshackled Wrath)
-1CP can re-roll the Damage roll, attacks allocated to a MONSTER or VEHICLE model (Threat-cogitation Targeters)
+1CP Unshackled Wrath: [SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS]
+1CP Threat-cogitation Targeters: can re-roll the Damage roll, attacks allocated to a MONSTER or VEHICLE model
 MELEE WEAPONS
 A
 WS
@@ -3124,7 +3213,7 @@ Ironstrider feet×3
 0
 1
 STRATAGEMS · ERADICATION COHORT · FIGHT PHASE
-1CP [LANCE] (Servo-driven Charge)
+1CP Servo-driven Charge: [LANCE]
 ABILITIES
 Elevated Strider
 Your Move/Shoot
@@ -3184,15 +3273,15 @@ Onager Dunecrawler
 7+
 3
 4+
-WHEN TARGETED1CP Benevolence of the Omnissiah: Feel No Pain 6+ (5+ against mortal wounds), until the start of your next Command phase
+WHEN TARGETED1CP Benevolence of the Omnissiah: Feel No Pain 6+ (5+ against mortal wounds), until the start of your next Command phase · Within 6" of Cawl, if he has Shroudpsalm: Stealth: the benefit of cover against ranged attacks (Shroudpsalm) · Picked by the Enginseer in your Command phase (within 3"): Feel No Pain 5+ for that VEHICLE model (Omnissiah’s Blessing) · Within 12" of the Enginseer, once per battle round: after a failed saving throw, the Enginseer can change the Damage characteristic of that attack to 0 (Necromechanic)
 DAMAGED 1-4 W
 -1 TO HIT ROLLS
 ALL ATTACKS
 Protector or Conqueror Imperative active for this unit: Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1 (Murderous Imperative)
 If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
 STRATAGEMS · COHORT CYBERNETICA · YOUR COMMAND PHASE
-1CP can re-roll hit rolls (and wound rolls if Below Half-strength), below its Starting Strength; until the start of your next Command phase (Machine Spirit Resurgent)
-1CP can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws), until the end of the turn (Machine Superiority)
+1CP Machine Spirit Resurgent: can re-roll hit rolls (and wound rolls if Below Half-strength), below its Starting Strength; until the start of your next Command phase
+1CP Machine Superiority: can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws), until the end of the turn
 RANGED WEAPONS
 Range
 A
@@ -3217,10 +3306,10 @@ Twin Onager heavy phosphor blaster
 2
 IGNORES COVER, TWIN-LINKED
 STRATAGEMS · COHORT CYBERNETICA · YOUR COMMAND PHASE
-1CP BS 3+, [IGNORES COVER]; can only target units within range of the selected objective marker, until the start of your next Command phase (Auto-divinatory Targeting)
+1CP Auto-divinatory Targeting: BS 3+, [IGNORES COVER]; can only target units within range of the selected objective marker, until the start of your next Command phase
 STRATAGEMS · ERADICATION COHORT · YOUR SHOOTING PHASE
-1CP [SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS] (Unshackled Wrath)
-1CP can re-roll the Damage roll, attacks allocated to a MONSTER or VEHICLE model (Threat-cogitation Targeters)
+1CP Unshackled Wrath: [SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS]
+1CP Threat-cogitation Targeters: can re-roll the Damage roll, attacks allocated to a MONSTER or VEHICLE model
 MELEE WEAPONS
 A
 WS
@@ -3234,7 +3323,7 @@ Dunecrawler legs
 0
 1
 STRATAGEMS · ERADICATION COHORT · FIGHT PHASE
-1CP [LANCE] (Servo-driven Charge)
+1CP Servo-driven Charge: [LANCE]
 ABILITIES
 Emanatus Forcefield
 
@@ -3299,15 +3388,15 @@ Hull
 7+
 3
 –
-WHEN TARGETED1CP Benevolence of the Omnissiah: Feel No Pain 6+ (5+ against mortal wounds), until the start of your next Command phase
+WHEN TARGETED1CP Benevolence of the Omnissiah: Feel No Pain 6+ (5+ against mortal wounds), until the start of your next Command phase · Within 6" of Cawl, if he has Shroudpsalm: Stealth: the benefit of cover against ranged attacks (Shroudpsalm) · Picked by the Enginseer in your Command phase (within 3"): Feel No Pain 5+ for that VEHICLE model (Omnissiah’s Blessing) · Within 12" of the Enginseer, once per battle round: after a failed saving throw, the Enginseer can change the Damage characteristic of that attack to 0 (Necromechanic)
 DAMAGED 1-4 W
 -1 TO HIT ROLLS
 ALL ATTACKS
 Protector or Conqueror Imperative active for this unit: Protector: re-roll hit rolls of 1 · Conqueror: re-roll wound rolls of 1 (Murderous Imperative)
 If Cawl has Invocation of Machine Vengeance, vs your Machine Vengeance target: can re-roll the hit roll (Canticles of the Omnissiah)
 STRATAGEMS · COHORT CYBERNETICA · YOUR COMMAND PHASE
-1CP can re-roll hit rolls (and wound rolls if Below Half-strength), below its Starting Strength; until the start of your next Command phase (Machine Spirit Resurgent)
-1CP can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws), until the end of the turn (Machine Superiority)
+1CP Machine Spirit Resurgent: can re-roll hit rolls (and wound rolls if Below Half-strength), below its Starting Strength; until the start of your next Command phase
+1CP Machine Superiority: can ignore any or all modifiers to its characteristics and to any roll or test made for it (not saving throws), until the end of the turn
 RANGED WEAPONS
 Range
 A
@@ -3339,10 +3428,10 @@ Ferrumite cannon
 -3
 D6+1
 STRATAGEMS · COHORT CYBERNETICA · YOUR COMMAND PHASE
-1CP BS 3+, [IGNORES COVER]; can only target units within range of the selected objective marker, until the start of your next Command phase (Auto-divinatory Targeting)
+1CP Auto-divinatory Targeting: BS 3+, [IGNORES COVER]; can only target units within range of the selected objective marker, until the start of your next Command phase
 STRATAGEMS · ERADICATION COHORT · YOUR SHOOTING PHASE
-1CP [SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS] (Unshackled Wrath)
-1CP can re-roll the Damage roll, attacks allocated to a MONSTER or VEHICLE model (Threat-cogitation Targeters)
+1CP Unshackled Wrath: [SUSTAINED HITS 1] or [LETHAL HITS], or both and [HAZARDOUS]
+1CP Threat-cogitation Targeters: can re-roll the Damage roll, attacks allocated to a MONSTER or VEHICLE model
 Ferrumite cannon vs MONSTER or VEHICLE targets: +1 to hit rolls (Blistering Salvoes)
 MELEE WEAPONS
 A
@@ -3357,7 +3446,7 @@ Armoured hull
 0
 1
 STRATAGEMS · ERADICATION COHORT · FIGHT PHASE
-1CP [LANCE] (Servo-driven Charge)
+1CP Servo-driven Charge: [LANCE]
 ABILITIES
 Broad spectrum data-tether
 
@@ -3393,8 +3482,7 @@ THIS GAME
 NEW GAME
 Purge goes the Foe
 your list
-Me shooty yer’ booty
-your opponent’s list
+Opponent
 CP
 −
 0
@@ -3425,10 +3513,6 @@ Broad Spectrum Data-tether · Ironstrider Ballistarii ×2: “Each time you sel
 Broad spectrum data-tether · Onager Dunecrawler: “The bearer loses the SMOKE keyword, but each time you target the bearer with a Stratagem, roll one D6: on a 5+, you gain 1CP.”
 
 Broad spectrum data-tether · Skorpius Disintegrator ×2: “Each time you select the bearer as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.”
-
-THEIR LIST
-
-Da Boss · Orks army rule: “At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.”
 
 CHOICES THIS GAME
 Doctrina Imperatives · Adeptus Mechanicus army rule
@@ -3542,21 +3626,6 @@ Icon of War · Thulia Ghuld
 CP
 Command Re-roll
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-ME SHOOTY YER’ BOOTY IN THIS PHASE
-
-START OF BATTLE ROUND 07.01
-
-Da Boss · Orks army rule
-
-START OF COMMAND PHASE 08.01
-
-War Cry · Orks army rule
-ANY PHASE
-1
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 NEXT: MOVEMENT PHASE ›
 BEFORE THE BATTLE
 
@@ -3606,12 +3675,6 @@ THIS LIST
 
 App note, not rules text: Purge goes the Foe: points limit 2000 pts (Strike Force); 50% of it is 1000 pts.
 
-THEIR LIST
-
-App note, not rules text: Me shooty yer’ booty: points limit 2000 pts (Strike Force); 50% of it is 1000 pts.
-
-Deep Strike: Wazdakka Gutsmek 200 pts, Deffkoptas 85 pts (285 pts)
-
 8 Deploy Armies
 
 Players take it in turns to set up their units (excluding those in strategic reserves) one at a time, wholly within their deployment zone, starting with the Defender.
@@ -3631,7 +3694,7 @@ Roll off: the winner takes the first turn.
 
 FIRST TURN
 PURGE GOES THE FOE
-ME SHOOTY YER’ BOOTY
+OPPONENT
 11 Resolve Pre-battle Rules
 Scouts
 
@@ -3657,8 +3720,7 @@ THIS GAME
 NEW GAME
 Purge goes the Foe
 your list
-Me shooty yer’ booty
-your opponent’s list
+Opponent
 CP
 −
 3
@@ -3690,10 +3752,6 @@ Broad spectrum data-tether · Onager Dunecrawler: “The bearer loses the SMOKE 
 
 Broad spectrum data-tether · Skorpius Disintegrator ×2: “Each time you select the bearer as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.”
 
-THEIR LIST
-
-Da Boss · Orks army rule: “At the start of the battle round, if a model with this ability is your WARLORD, gain 1CP.”
-
 CHOICES THIS GAME
 Doctrina Imperatives · Adeptus Mechanicus army rule
 
@@ -3716,17 +3774,6 @@ INVOCATION OF MACHINE VENGEANCE
 
 Invocation of Machine Vengeance: At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Machine Vengeance target. Each time a model in a friendly ADEPTUS MECHANICUS unit makes an attack that targets your Machine Vengeance target, you can re-roll the Hit roll.
 
-THEIR UNIT
-WAZDAKKA GUTSMEK
-BIG MEK · DREADHERDER
-BIG MEK · CYBORK BOOSTA
-BIG MEK · SUPA-GLOWY FING
-WARBOSS
-MEK + TANKBUSTAS
-MEK + FLASH GITZ
-GRETCHIN
-DEFFKOPTAS
-KILLA KANS
 Rod of the War Forge · Thulia Ghuld
 
 In your Command phase · Until the start of your next Command phase
@@ -3783,33 +3830,11 @@ Until the end of the phase, your unit’s ranged attacks allocated to a MONSTER 
 1
 CP
 Explosives
-One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
+Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
 ANY PHASE
 2
 Icon of War · Thulia Ghuld
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-ME SHOOTY YER’ BOOTY IN THIS PHASE
-
-START OF SHOOTING PHASE 10.01
-
-1
-CP
-Smokescreen
-Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
-
-SHOOT 10.02
-
-Dakka! Dakka! Dakka! · Shoota Boyz detachment rule
-1
-CP
-Gun-crazy Show-offs
-After an enemy unit has shot and hit yours: your unit shoots using normal shooting, but only at that enemy unit.
-ANY PHASE
-1
 1
 CP
 Command Re-roll
@@ -3898,21 +3923,6 @@ Icon of War · Thulia Ghuld
 CP
 Command Re-roll
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-ME SHOOTY YER’ BOOTY IN THIS PHASE
-
-START OF BATTLE ROUND 07.01
-
-Da Boss · Orks army rule
-
-START OF COMMAND PHASE 08.01
-
-War Cry · Orks army rule
-ANY PHASE
-1
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 NEXT: MOVEMENT PHASE ›
 
 ######## game round 1 your movement · GAME Game tracker
@@ -3940,30 +3950,6 @@ Scuttling Walker · Onager Dunecrawler
 CP
 Unrelenting Aggression
 Until the end of the turn, your unit is eligible to shoot after Falling Back (a SKITARII unit: to shoot and declare a charge).
-ANY PHASE
-1
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-ME SHOOTY YER’ BOOTY IN THIS PHASE
-
-MOVE UNITS 09.02
-
-Dakka! Dakka! Dakka! · Shoota Boyz detachment rule
-Even More Dakka · Big Mek Dakkarig ×2
-Spiteful Power Trip · Killa Kans
-
-END OF MOVEMENT PHASE 09.03
-
-1
-CP
-Rapid Ingress
-Your unit in strategic reserves makes an ingress move (not in the first battle round).
-1
-CP
-Fire Overwatch
-Your unit shoots using snap shooting.
 ANY PHASE
 1
 1
@@ -4007,33 +3993,11 @@ Until the end of the phase, your unit’s ranged attacks allocated to a MONSTER 
 1
 CP
 Explosives
-One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
+Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
 No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
 ANY PHASE
 2
 Icon of War · Thulia Ghuld
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-ME SHOOTY YER’ BOOTY IN THIS PHASE
-
-START OF SHOOTING PHASE 10.01
-
-1
-CP
-Smokescreen
-Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
-
-SHOOT 10.02
-
-Dakka! Dakka! Dakka! · Shoota Boyz detachment rule
-1
-CP
-Gun-crazy Show-offs
-After an enemy unit has shot and hit yours: your unit shoots using normal shooting, but only at that enemy unit.
-ANY PHASE
-1
 1
 CP
 Command Re-roll
@@ -4075,20 +4039,6 @@ Icon of War · Thulia Ghuld
 CP
 Command Re-roll
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-ME SHOOTY YER’ BOOTY IN THIS PHASE
-
-END OF CHARGE PHASE 11.03
-
-1
-CP
-Heroic Intervention
-Your unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
-ANY PHASE
-1
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 NEXT: FIGHT PHASE ›
 
 ######## game round 1 your fight · GAME Game tracker
@@ -4125,36 +4075,6 @@ Icon of War · Thulia Ghuld
 CP
 Command Re-roll
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-ME SHOOTY YER’ BOOTY IN THIS PHASE
-
-PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
-
-Try Dat Button! · Dread Mob detachment rule
-Might is Right · Warboss
-Clever Know-wotz · Mek + Tankbustas ×2, Mek + Flash Gitz
-Spiteful Power Trip · Killa Kans
-1
-CP
-Crazed Rampage
-Model in your unit destroyed, unit not selected to fight this phase: roll one D6; on a 4+ it stays until your unit has fought or the phase ends…
-1
-CP
-Epic Challenge
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-2
-CP
-Counteroffensive
-Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
-
-END OF FIGHT PHASE 12.09
-
-Aerial Manoover · Deffkoptas
-ANY PHASE
-1
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 NEXT: THEIR TURN ›
 
 ######## game round 1 their command · GAME Game tracker
@@ -4178,30 +4098,6 @@ GAIN CORE CP 08.02
 
 Both players gain 1 Command Point (CP).
 
-ANY PHASE
-1
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-ME SHOOTY YER’ BOOTY IN THIS PHASE
-
-START OF COMMAND PHASE 08.01
-
-War Cry · Orks army rule
-
-BATTLE-SHOCK 08.03
-
-1
-CP
-Insane Bravery
-The battle-shock roll you are about to make for your unit is automatically successful.
-
-COMMAND ABILITIES 08.04
-
-Full Throttle · Wazdakka Gutsmek
-Shokk Attack Engine · Wazdakka Gutsmek Throttlerokkit Shokka Engine
-Fix Dat Armour Up · Big Mek in Mega Armour
 ANY PHASE
 1
 1
@@ -4236,39 +4132,10 @@ Your unit in strategic reserves makes an ingress move (not in the first battle r
 1
 CP
 Fire Overwatch
-Your unit shoots using snap shooting.
+Your unengaged unit shoots using snap shooting.
 ANY PHASE
 2
 Icon of War · Thulia Ghuld
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-ME SHOOTY YER’ BOOTY IN THIS PHASE
-
-MOVE UNITS 09.02
-
-Waaagh! · Orks army rule
-Full Throttle · Wazdakka Gutsmek
-Turbo Engine · Wazdakka Gutsmek Throttlerokkit Shokka Engine
-Pulse Jet · Wazdakka Gutsmek Throttlerokkit Shokka Engine
-Intimidating Motivation · Warboss
-Clever Know-wotz · Mek + Tankbustas ×2, Mek + Flash Gitz
-Bomb Squig · Mek + Tankbustas ×2
-1
-CP
-Dread Power
-Your unit is riled up until the start of your next turn.
-1
-CP
-Stomping Juggernaut
-Your unit has MOBILE.
-
-END OF MOVEMENT PHASE 09.03
-
-Thievin’ Scavengers · Gretchin ×3
-ANY PHASE
-1
 1
 CP
 Command Re-roll
@@ -4304,58 +4171,10 @@ SHOOT 10.02
 1
 CP
 Analytic Reprisals
-Your unit shoots as if it were your Shooting phase, but only at that enemy unit (and only if it is an eligible target).
+An enemy unit has shot and your unit lost models to those attacks: your unit shoots as if it were your Shooting phase, but only at that enemy unit (and only if it is an eligible target).
 ANY PHASE
 2
 Icon of War · Thulia Ghuld
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-ME SHOOTY YER’ BOOTY IN THIS PHASE
-
-SHOOT 10.02
-
-Waaagh! · Orks army rule
-Try Dat Button! · Dread Mob detachment rule
-Dakka! Dakka! Dakka! · Shoota Boyz detachment rule
-Wreckin’ and Lootin’ · Wreckas detachment rule
-Even More Dakka · Big Mek Dakkarig ×2
-Blitz Dem Gitz! · Big Mek Dakkarig ×2
-Dreadherder · Big Mek Dakkarig
-Boss’ Ammo Runt · Warboss
-Clever Know-wotz · Mek + Tankbustas ×2, Mek + Flash Gitz
-Rokkit Barrage · Mek + Tankbustas ×2
-Finderz Keeperz · Mek + Flash Gitz
-Deff from Above · Deffkoptas
-Spiteful Power Trip · Killa Kans
-1
-CP
-Kustom Dakka
-Your unit’s ranged attacks have +1 to wound rolls against a unit (excluding MONSTER/VEHICLE units).
-1
-CP
-Glowin’ Dakka
-Your unit’s ranged attacks against a unit within 9" have +1 AP.
-1
-CP
-Never Enough Dakka
-Your unit’s ranged attacks have [SUSTAINED HITS 1].
-1
-CP
-Grab It
-After shooting: can make a normal move of up to 6", ending within range of an objective; not eligible to declare a charge this turn.
-1
-CP
-Explosives
-One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…
-1
-CP
-Drive-by Bustin’
-Your unit’s ranged attacks with weapons selected for Firing Deck have +1 to hit rolls.
-No unit in this list can use it (needs TRANSPORT)
-ANY PHASE
-1
 1
 CP
 Command Re-roll
@@ -4384,28 +4203,7 @@ END OF CHARGE PHASE 11.03
 1
 CP
 Heroic Intervention
-Your unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
-ANY PHASE
-1
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-ME SHOOTY YER’ BOOTY IN THIS PHASE
-
-CHARGE 11.02
-
-Waaagh! · Orks army rule
-Full Throttle · Wazdakka Gutsmek
-Turbo Engine · Wazdakka Gutsmek Throttlerokkit Shokka Engine
-1
-CP
-Stomping Juggernaut
-Your unit has MOBILE.
-1
-CP
-Crushing Impact
-After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
 ANY PHASE
 1
 1
@@ -4452,29 +4250,6 @@ Icon of War · Thulia Ghuld
 CP
 Command Re-roll
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-ME SHOOTY YER’ BOOTY IN THIS PHASE
-
-PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
-
-Try Dat Button! · Dread Mob detachment rule
-Dreadherder · Big Mek Dakkarig
-Might is Right · Warboss
-Clever Know-wotz · Mek + Tankbustas ×2, Mek + Flash Gitz
-Spiteful Power Trip · Killa Kans
-1
-CP
-Crazed Rampage
-Model in your unit destroyed, unit not selected to fight this phase: roll one D6; on a 4+ it stays until your unit has fought or the phase ends…
-1
-CP
-Epic Challenge
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-ANY PHASE
-1
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 NEXT: BATTLE ROUND 2 ›
 
 ######## game round 2 last fight · GAME Game tracker
@@ -4515,29 +4290,6 @@ Icon of War · Thulia Ghuld
 CP
 Command Re-roll
 Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
-ME SHOOTY YER’ BOOTY IN THIS PHASE
-
-PILE IN 12.02 · FIGHT 12.04 · CONSOLIDATE 12.07
-
-Try Dat Button! · Dread Mob detachment rule
-Dreadherder · Big Mek Dakkarig
-Might is Right · Warboss
-Clever Know-wotz · Mek + Tankbustas ×2, Mek + Flash Gitz
-Spiteful Power Trip · Killa Kans
-1
-CP
-Crazed Rampage
-Model in your unit destroyed, unit not selected to fight this phase: roll one D6; on a 4+ it stays until your unit has fought or the phase ends…
-1
-CP
-Epic Challenge
-One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-ANY PHASE
-1
-1
-CP
-Command Re-roll
-Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
 NEXT: BATTLE ROUND 3 ›
 
 ######## popup ability:purge-goes-the-foe|Battle Protocols|At the start of the battle, if this model is leading a **KASTELAN ROBOTS** unit, that unit enters Aegis Protocols (see below). In your Command phase, if this model is leading a **KASTELAN ROBOTS** unit, you can select one protocol from those listed below for that unit to enter. Once a unit enters a protocol, it remains in that protocol until it enters a different one.
@@ -4554,7 +4306,7 @@ Protector Protocol: Add 2 to the Attacks characteristic of ranged weapons equipp
 Conqueror Protocol: Add 2 to the Attacks characteristic of melee weapons equipped by KASTELAN ROBOT models in that unit.
 Aegis Protocol: Add 1 to the Toughness characteristic of KASTELAN ROBOT models in that unit.
 
-UNITCybernetica Datasmith · Martial Signatum Amplificator
+UNITCybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator
 
 Ask about this ability
 
@@ -4646,7 +4398,7 @@ When an enemy unit targets this unit with ranged attacks, until that enemy unit 
 
 On an unmodified 6, that enemy unit suffers 1 mortal wound after that enemy unit has shot.
 
-UNITCybernetica Datasmith · Martial Signatum Amplificator
+UNITCybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator
 
 Ask about this ability
 
@@ -4657,7 +4409,7 @@ Robotic Bodyguard
 
 While a CYBERNETICA DATASMITH model is leading this unit, that model has the Feel No Pain 4+ ability.
 
-UNITCybernetica Datasmith · Martial Signatum Amplificator
+UNITCybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator
 
 Ask about this ability
 
@@ -5805,6 +5557,9 @@ WHILE SHOOTING:
 
 You can only target one visible enemy unit within 24" of your unit (and only if it is an eligible target).
 Each attack only hits on an unmodified hit roll of 6 (irrespective of the attacking weapon’s BS characteristic or any modifiers).
+
+Wahapedia core rules (not in GW’s Core Rules PDF, 01-06): Those hits are not critical hits.
+
 You cannot re-roll hit rolls.
 
 AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.
@@ -5884,7 +5639,7 @@ Until the start of your next Command phase, ranged weapons equipped by models in
 
 FAQ (Faction Pack 1.4): “If I target a unit with the Auto-divinatory Targeting Stratagem while the Protector Imperative is active for my army, in what order are the Ballistic Skill modifiers applied?” “The Ballistic Skill characteristic of ranged weapons equipped by models in that unit is first changed to 3+ by the Stratagem, then improved by 1 by the Protector Imperative, for a final result of 2+ (assuming no other modifiers apply).”
 
-USED BYCybernetica Datasmith · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+USED BYCybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
 
 Ask about this stratagem
 
@@ -5902,7 +5657,7 @@ EFFECT
 
 Until the start of your next Command phase, models in your unit have the Feel No Pain 6+ ability, which is improved to Feel No Pain 5+ against mortal wounds.
 
-USED BYCybernetica Datasmith · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+USED BYCybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
 
 Ask about this stratagem
 
@@ -5971,7 +5726,7 @@ Resolve the following sequence:
 
 Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
 
-USED BYBelisarius Cawl, Thulia Ghuld, Cybernetica Datasmith · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+USED BYBelisarius Cawl, Thulia Ghuld, Cybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
 
 Ask about this stratagem
 
@@ -5989,7 +5744,7 @@ EFFECT
 
 Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
 
-USED BYBelisarius Cawl, Thulia Ghuld, Tech-Priest Enginseer · Necromechanic, Cybernetica Datasmith · Martial Signatum Amplificator
+USED BYBelisarius Cawl, Thulia Ghuld, Tech-Priest Enginseer · Necromechanic, Cybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator
 
 Ask about this stratagem
 
@@ -6030,7 +5785,7 @@ Into the Fray (+1CP): When making the charge roll, if the result is greater than
 
 Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
 
-USED BYBelisarius Cawl, Thulia Ghuld, Tech-Priest Enginseer · Necromechanic, Cybernetica Datasmith · Martial Signatum Amplificator, Skitarii Rangers, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler
+USED BYBelisarius Cawl, Thulia Ghuld, Tech-Priest Enginseer · Necromechanic, Cybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator, Skitarii Rangers, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler
 
 Ask about this stratagem
 
@@ -6070,7 +5825,7 @@ EFFECT
 
 Until the start of your next Command phase, each time a model in your unit makes an attack, you can re-roll the Hit roll. If your unit is Below Half-strength, you can re-roll the Wound roll as well.
 
-USED BYCybernetica Datasmith · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+USED BYCybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
 
 Ask about this stratagem
 
@@ -6088,7 +5843,7 @@ EFFECT
 
 Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back and you can ignore any or all modifiers to its characteristics and/or to any roll or test made for it (excluding modifiers to saving throws).
 
-USED BYCybernetica Datasmith · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+USED BYCybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
 
 Ask about this stratagem
 
@@ -6106,7 +5861,7 @@ EFFECT
 
 Until the start of your next Command phase, add 3" to the Move characteristic of models in your unit and add 1 to Advance and Charge rolls made for it.
 
-USED BYCybernetica Datasmith · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+USED BYCybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
 
 Ask about this stratagem
 
@@ -6198,7 +5953,7 @@ EFFECT
 
 Until the end of the phase, each time a ranged attack made by a model in your unit is allocated to a MONSTER or VEHICLE model, you can re-roll the Damage roll.
 
-USED BYCybernetica Datasmith · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+USED BYCybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
 
 Ask about this stratagem
 
@@ -6216,7 +5971,7 @@ EFFECT
 
 Until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for your unit.
 
-USED BYCybernetica Datasmith · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+USED BYCybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
 
 Ask about this stratagem
 
@@ -6252,6 +6007,6 @@ EFFECT
 
 Select the [SUSTAINED HITS 1] or [LETHAL HITS] ability. Until the end of the phase, ranged weapons equipped by models in your unit have the selected ability. You can instead select the [SUSTAINED HITS 1], [LETHAL HITS] and [HAZARDOUS] abilities to apply to those weapons until the end of the phase.
 
-USED BYCybernetica Datasmith · Martial Signatum Amplificator, Skitarii Rangers, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
+USED BYCybernetica Datasmith + Kastelan Robots · Martial Signatum Amplificator, Skitarii Rangers, Ironstrider Ballistarii (1 of 2), Ironstrider Ballistarii (2 of 2), Onager Dunecrawler, Skorpius Disintegrator
 
 Ask about this stratagem
