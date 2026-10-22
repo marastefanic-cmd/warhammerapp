@@ -1,0 +1,4410 @@
+######## army · DEFILERS AND FRIENDS Infernal Lance
+Chaos Knights · 2000 / 2000 pts · Strike Force
+
+Infernal Lance · Disposition: Purge the Foe
+
+Overview
+Bases & proxies
+8
+Units
+6
+Stratagems
+16
+Ranged weapons
+11
+Melee weapons
+6
+Abilities
+23
+Rules
+Damage calculator
+
+New Recruit, exported 22 Oct 2026
+
+######## pregame · INFERNAL LANCE Overview
+YOUR LIST
+WARLORD
+Knight Despoiler · Bestial Aspect
+ENHANCE­MENTS
+Knight Diabolus 25 pts on Chaos Cerastus Knight Atrapos
+Blasphemous Engine 35 pts on Chaos Cerastus Knight Lancer
+Bestial Aspect 30 pts on Knight Despoiler
+Fleshmetal Fusion 35 pts on Knight Ruinator
+DETACH­MENTS
+Infernal Lance (3 DP)
+Disposition: Purge the Foe
+POINTS
+2000 / 2000 · Strike Force
+ARMY AND DETACHMENT RULES
+Harbingers of Dread
+Start of the battle round
+
+If your Army Faction is CHAOS KNIGHTS, each unit from your army with this ability gains Dread abilities, depending which are active for your army (see below). The Deathly Terror ability is active for your army from the start of the battle. In addition, at the start of the first, third and fifth battle rounds, you can either select one of the other Dread abilities or randomly select two Dread abilities to apply by rolling two D6 and applying the results rolled, from those numbered 1-6.
+
+Any Dread abilities that have been selected are active until the end of the battle. You cannot select the same Dread ability more than once, and any duplicated Dread abilities (as a result of randomly selecting them) have no additional effect.
+
+Deathly Terror (Aura) · N/A
+
+While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.
+
+Despair (Aura) · 1
+
+While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1. This is cumulative with the Deathly Terror ability (see above).
+
+Doom · 2
+
+Each time this model makes an attack, if the target of that attack is Battle-shocked, add 1 to the Wound roll.
+
+Darkness · 3
+
+This model has Stealth.
+
+Dismay (Aura) · 4
+
+In the Battle-shock step of your opponent’s Command phase, for each enemy unit that is below its Starting Strength and within 9" of this model, that enemy unit must take a Battle-shock test.
+
+Delirium (Aura) · 5
+
+While an enemy unit that is Below Half-strength is within 9" of this model, each time that unit fails a Battle-shock test, it suffers D3 mortal wounds.
+
+Dominion · 6
+
+Add 3" to the range of this model’s Aura abilities.
+
+Super-heavy Walker
+Your Movement
+
+CHAOS KNIGHTS datasheets list Super-heavy Walker as a FACTION ability (Faction Pack 1.2), whose Codex text differs from Core Rules 24.35; the sources don’t say which applies.
+
+Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4" or less in height. When doing so:
+
+It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.
+It can also move through sections of terrain features that are more than 4" in height, but if it does, after it has moved, roll one D6: on a 1, that model is Battle-shocked.
+
+CORE RULESuper-Heavy Walker
+
+Malefic Surge
+Infernal Lance · Your Command
+
+In your Command phase, one or more CHAOS KNIGHTS units from your army can make a Malefic Surge. Each one that does must first take a Leadership test; if that test is failed, that unit suffers D3 mortal wounds. Then, until the start of your next Command phase, that unit is Empowered. While a unit is Empowered it can use one of the Malefic Surge abilities below. Once that unit has used a Malefic Surge ability, it is no longer Empowered.
+
+Unholy Hunger: When a model in this unit makes a Normal, Advance or Fall Back move, until the end of the phase, add 3" to its Move characteristic.
+Diabolic Power: When this unit is selected to shoot or fight, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until the end of the phase, weapons equipped by models in this unit have the selected ability.
+Unnatural Fortitude: When this unit is selected as the target of an attack, select one of the following to apply until the end of the phase:
+Models in this unit have a 5+ invulnerable save.
+Models in this unit have the Feel No Pain 6+ ability.
+
+Designer’s Note: We recommend placing a token next to Chaos Knights models that are Empowered, removing it once they have used a Malefic Surge ability, and removing all unused tokens at the start of your Command phase.
+
+APPLIES TOChaos Cerastus Knight Atrapos · Knight Diabolus, Chaos Cerastus Knight Lancer · Blasphemous Engine, Knight Despoiler · Bestial Aspect, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+DECLARE BATTLE FORMATIONS
+DEEP STRIKE
+Nurglings 45 pts
+DEPLOYMENT AND PRE-BATTLE ABILITIES
+INFILTRATORS
+Nurglings Infiltrators
+START OF THE BATTLE AND THE BATTLE ROUNDS
+START OF THE BATTLE
+Harbingers of Dread · Chaos Knights army rule
+FIRST ROUND
+Methodical Destruction · Knight Ruinator ×2
+USES PER BATTLE
+NEW GAME
+STRATA­GEMS
+1CP Insane Bravery
+
+Gathered from this list’s datasheets and rules; each line opens the full text.
+
+######## units · OVERVIEW Units Unit M T Sv W LD OC InSv Pts
+CHARACTERS
+5
+Chaos Cerastus Knight Atrapos
+Knight Diabolus
+12"
+11
+3+
+28
+6+
+10
+5+
+410
+Chaos Cerastus Knight Lancer
+Blasphemous Engine
+14"
+11
+3+
+30
+6+
+10
+4+
+420
+Knight Despoiler
+Warlord
+Bestial Aspect
+10"
+11
+3+
+26
+6+
+10
+5+*
+440
+Knight Ruinator
+Fleshmetal Fusion
+10"
+12
+3+
+26
+6+
+10
+5+*
+360
+Knight Ruinator
+10"
+11
+3+
+26
+6+
+10
+5+*
+325
+ALLIES
+1
+Nurglings
+×3
+5"
+3
+7+
+4
+8+
+0
+5+
+45
+
+######## ranged · UNITS Ranged weapons WEAPON RNG A BS S AP D
+Chaos Cerastus Knight Atrapos
+Knight Diabolus
+Atrapos lascutter
+➤low intensity
+36"
+2D6
+3+
+7
+-1
+2
+SUSTAINED HITS 1
+➤high intensity
+24"
+D6
+3+
+14
+-3
+4
+SUSTAINED HITS 1
+Graviton singularity cannon
+➤contained
+24"
+D3
+3+
+16
+-4
+D6+1
+BLAST
+➤singularity
+24"
+D3
+3+
+16
+-4
+D6+1
+BLAST, DEVASTATING WOUNDS, HAZARDOUS
+vs MONSTER/VEHICLE: +1 to hit rolls (Macro-extinction Protocols)
+vs TITANIC/TOWERING: +1 to wound rolls (Macro-extinction Protocols)
+Damaged (1-10 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-10 wounds remaining)
+Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase) (Malefic Surge)
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
+1CP Warp Vision: ranged weapons have [IGNORES COVER]
+Chaos Cerastus Knight Lancer
+Blasphemous Engine
+Cerastus shock lance
+12"
+6
+3+
+6
+0
+2
+ASSAULT, SUSTAINED HITS 2
+Damaged (1-10 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-10 wounds remaining)
+Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase) (Malefic Surge)
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
+1CP Warp Vision: ranged weapons have [IGNORES COVER]
+Knight Despoiler
+Warlord
+Bestial Aspect
+Ruinspear rocket pod
+48"
+3
+3+
+8
+-2
+D6
+ASSAULT
+Despoiler gatling cannon×2
+36"
+18
+3+
+6
+-2
+2
+ASSAULT
+Heavy darkflamer×2
+12"
+D6
+–
+5
+-1
+1
+TORRENT, IGNORES COVER, ASSAULT
+Diabolus heavy stubber
+36"
+3
+3+
+5
+0
+1
+RAPID FIRE 3, ASSAULT
+Selected to shoot or fight: re-roll one hit roll or one wound roll (Seething Hatred)
+Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 wounds remaining)
+Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase) (Malefic Surge)
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
+1CP Warp Vision: ranged weapons have [IGNORES COVER]
+Knight Ruinator
+Fleshmetal Fusion
+Darkflame lance
+18"
+D6+6
+–
+8
+-1
+2
+IGNORES COVER, TORRENT
+Terrorpulse missiles
+36"
+D6+6
+3+
+8
+-2
+2
+BLAST
+Target is its victim (selected at the start of the first battle round, and a new one each time its victim is destroyed): re-roll the wound roll (Methodical Destruction)
+Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 wounds remaining)
+Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase) (Malefic Surge)
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
+1CP Warp Vision: ranged weapons have [IGNORES COVER]
+Knight Ruinator
+Darkflame lance
+18"
+D6+6
+–
+8
+-1
+2
+IGNORES COVER, TORRENT
+Terrorpulse missiles
+36"
+D6+6
+3+
+8
+-2
+2
+BLAST
+Target is its victim (selected at the start of the first battle round, and a new one each time its victim is destroyed): re-roll the wound roll (Methodical Destruction)
+Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 wounds remaining)
+Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase) (Malefic Surge)
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
+1CP Warp Vision: ranged weapons have [IGNORES COVER]
+
+######## melee · RANGED Melee weapons WEAPON A WS S AP D
+Chaos Cerastus Knight Atrapos
+Knight Diabolus
+Atrapos lascutter
+➤low intensity
+12
+2+
+7
+-1
+2
+SUSTAINED HITS 1
+➤high intensity
+6
+2+
+14
+-3
+4
+SUSTAINED HITS 1
+vs MONSTER/VEHICLE: +1 to hit rolls (Macro-extinction Protocols)
+vs TITANIC/TOWERING: +1 to wound rolls (Macro-extinction Protocols)
+Using the Diabolic Power ability (Malefic Surge): melee weapons have [LANCE] (Knight Diabolus)
+Damaged (1-10 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-10 wounds remaining)
+Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase) (Malefic Surge)
+Chaos Cerastus Knight Lancer
+Blasphemous Engine
+Cerastus shock lance
+➤strike
+5
+2+
+20
+-3
+8
+LANCE
+➤sweep
+10
+2+
+10
+-2
+3
+Damaged (1-10 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-10 wounds remaining)
+Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase) (Malefic Surge)
+Made a charge move this turn: Cerastus shock lance +1 to wound (Lance)
+Knight Despoiler
+Warlord
+Bestial Aspect
+Titanic feet
+4
+4+
+8
+-1
+2
+Selected to shoot or fight: re-roll one hit roll or one wound roll (Seething Hatred)
+Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 wounds remaining)
+Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase) (Malefic Surge)
+Knight Ruinator
+Fleshmetal Fusion
+Fellbore
+➤strike
+4
+3+
+14
+-3
+6
+ANTI-MONSTER 2+, ANTI-VEHICLE 2+
+➤sweep
+10
+3+
+9
+-2
+2
+Target is its victim (selected at the start of the first battle round, and a new one each time its victim is destroyed): re-roll the wound roll (Methodical Destruction)
+Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 wounds remaining)
+Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase) (Malefic Surge)
+Knight Ruinator
+Fellbore
+➤strike
+4
+3+
+14
+-3
+6
+ANTI-MONSTER 2+, ANTI-VEHICLE 2+
+➤sweep
+10
+3+
+9
+-2
+2
+Target is its victim (selected at the start of the first battle round, and a new one each time its victim is destroyed): re-roll the wound roll (Methodical Destruction)
+Damaged (1-9 wounds left): -1 to hit rolls (and -5 OC) (Damaged: 1-9 wounds remaining)
+Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase) (Malefic Surge)
+Nurglings
+Diseased claws and teeth×3
+4
+5+
+2
+0
+1
+LETHAL HITS
+
+######## abilities · MELEE Abilities
+Chaos Cerastus Knight Atrapos
+Knight Diabolus
+Macro-extinction Protocols
+
+Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.
+
+Consumed with Hunger
+No WAR DOG in this list
+
+No WAR DOG in this list
+
+Aura
+
+While a friendly WAR DOG model is within 6" of this model, each time that WAR DOG model makes an attack that targets a TITANIC or TOWERING unit, you can re-roll the Hit roll.
+
+Damaged: 1-10 wounds remaining
+
+While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+Knight Diabolus
+Enhancement
+Already in WS
+
+Enhancement
+
+CHAOS KNIGHTS model only. Improve the Weapon Skill characteristic of the bearer’s melee weapons by 1. While the bearer is using the Diabolic Power ability, its melee weapons have the [LANCE] ability.
+
+Chaos Cerastus Knight Lancer
+Blasphemous Engine
+Shock Charge
+
+You can target this model with the Tank Shock Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.
+
+Dark Fervour
+No WAR DOG in this list
+
+No WAR DOG in this list
+
+Aura
+
+While a friendly WAR DOG model is within 6" of this model, ranged weapons equipped by that War Dog model have the [ASSAULT] ability.
+
+Damaged: 1-10 wounds remaining
+
+While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+Blasphemous Engine
+Enhancement
+Already in W
+
+Enhancement
+
+CHAOS KNIGHTS model only. Add 2 to the bearer’s Wounds characteristic. Each time the bearer’s unit makes a Malefic Surge, you can re-roll the Leadership test taken to see if it suffers any mortal wounds.
+
+Knight Despoiler
+Warlord
+Bestial Aspect
+Dread Dominion
+No WAR DOG in this list
+
+No WAR DOG in this list
+
+Aura
+
+While a friendly WAR DOG model is within 9" of this model, improve that WAR DOG model’s Leadership and Objective Control characteristics by 1.
+
+Seething Hatred
+Your Shoot · Fight
+
+Your Shooting / Fight (either turn)
+
+Each time this model is selected to shoot or fight, you can re-roll one Hit roll or you can re-roll one Wound roll when resolving those attacks.
+
+Damaged: 1-9 wounds remaining
+
+While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+*Invulnerable Save
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Bestial Aspect
+Enhancement
+
+Enhancement
+
+CHAOS KNIGHTS model only. The bearer’s ranged weapons have the [ASSAULT] ability. While the bearer is using the Unholy Hunger ability, it can ignore any or all modifiers to its Move characteristic and/or to Advance rolls made for its unit.
+
+Knight Ruinator
+Fleshmetal Fusion
+Methodical Destruction
+Start of the first battle round
+
+Start of the first battle round
+
+At the start of the first battle round, select one unit from your opponent’s army to be this model’s victim. Each time this model makes an attack that targets its victim, you can re-roll the Wound roll. Each time this model’s victim is destroyed, select one new enemy unit to be this model’s victim.
+
+Close-range Killers
+No WAR DOG in this list
+
+No WAR DOG in this list
+
+Aura
+
+While a friendly War Dog model is within 9" of this model, each time that War Dog model makes an attack that targets the closest enemy unit, improve the Armour Penetration characteristic of that attack by 1.
+
+Damaged: 1-9 wounds remaining
+
+While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+*Invulnerable Save
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Fleshmetal Fusion
+Enhancement
+Already in T
+
+Enhancement
+
+CHAOS KNIGHTS model only. Add 1 to the bearer’s Toughness characteristic. While the bearer is using the Unnatural Fortitude ability, each time an attack with a Damage characteristic of 1 is allocated to the bearer, add 1 to any armour saving throw made against that attack.
+
+Knight Ruinator
+Methodical Destruction
+Start of the first battle round
+
+Start of the first battle round
+
+At the start of the first battle round, select one unit from your opponent’s army to be this model’s victim. Each time this model makes an attack that targets its victim, you can re-roll the Wound roll. Each time this model’s victim is destroyed, select one new enemy unit to be this model’s victim.
+
+Close-range Killers
+No WAR DOG in this list
+
+No WAR DOG in this list
+
+Aura
+
+While a friendly War Dog model is within 9" of this model, each time that War Dog model makes an attack that targets the closest enemy unit, improve the Armour Penetration characteristic of that attack by 1.
+
+Damaged: 1-9 wounds remaining
+
+While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+*Invulnerable Save
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Nurglings
+Mischief Makers
+Fight
+
+Aura · Fight · Either turn
+
+Each time an enemy unit (excluding TITANIC units) within Engagement Range of one or more units with this ability is selected to fight, until the end of the phase, each time a model in that enemy unit makes a melee attack, subtract 1 from the Hit roll.
+
+######## rules · ABILITIES Rules
+Chaos Knights · Purge the Foe
+ARMY RULES
+Harbingers of Dread
+Start of the battle round
+
+If your Army Faction is CHAOS KNIGHTS, each unit from your army with this ability gains Dread abilities, depending which are active for your army (see below). The Deathly Terror ability is active for your army from the start of the battle. In addition, at the start of the first, third and fifth battle rounds, you can either select one of the other Dread abilities or randomly select two Dread abilities to apply by rolling two D6 and applying the results rolled, from those numbered 1-6.
+
+Any Dread abilities that have been selected are active until the end of the battle. You cannot select the same Dread ability more than once, and any duplicated Dread abilities (as a result of randomly selecting them) have no additional effect.
+
+Deathly Terror (Aura) · N/A
+
+While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.
+
+Despair (Aura) · 1
+
+While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1. This is cumulative with the Deathly Terror ability (see above).
+
+Doom · 2
+
+Each time this model makes an attack, if the target of that attack is Battle-shocked, add 1 to the Wound roll.
+
+Darkness · 3
+
+This model has Stealth.
+
+Dismay (Aura) · 4
+
+In the Battle-shock step of your opponent’s Command phase, for each enemy unit that is below its Starting Strength and within 9" of this model, that enemy unit must take a Battle-shock test.
+
+Delirium (Aura) · 5
+
+While an enemy unit that is Below Half-strength is within 9" of this model, each time that unit fails a Battle-shock test, it suffers D3 mortal wounds.
+
+Dominion · 6
+
+Add 3" to the range of this model’s Aura abilities.
+
+Super-heavy Walker
+Your Movement
+
+CHAOS KNIGHTS datasheets list Super-heavy Walker as a FACTION ability (Faction Pack 1.2), whose Codex text differs from Core Rules 24.35; the sources don’t say which applies.
+
+Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4" or less in height. When doing so:
+
+It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.
+It can also move through sections of terrain features that are more than 4" in height, but if it does, after it has moved, roll one D6: on a 1, that model is Battle-shocked.
+
+CORE RULESuper-Heavy Walker
+
+DETACHMENTS
+INFERNAL LANCE
+Malefic Surge
+Detachment rule · Your Command
+
+In your Command phase, one or more CHAOS KNIGHTS units from your army can make a Malefic Surge. Each one that does must first take a Leadership test; if that test is failed, that unit suffers D3 mortal wounds. Then, until the start of your next Command phase, that unit is Empowered. While a unit is Empowered it can use one of the Malefic Surge abilities below. Once that unit has used a Malefic Surge ability, it is no longer Empowered.
+
+Unholy Hunger: When a model in this unit makes a Normal, Advance or Fall Back move, until the end of the phase, add 3" to its Move characteristic.
+Diabolic Power: When this unit is selected to shoot or fight, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until the end of the phase, weapons equipped by models in this unit have the selected ability.
+Unnatural Fortitude: When this unit is selected as the target of an attack, select one of the following to apply until the end of the phase:
+Models in this unit have a 5+ invulnerable save.
+Models in this unit have the Feel No Pain 6+ ability.
+
+Designer’s Note: We recommend placing a token next to Chaos Knights models that are Empowered, removing it once they have used a Malefic Surge ability, and removing all unused tokens at the start of your Command phase.
+
+APPLIES TOChaos Cerastus Knight Atrapos · Knight Diabolus, Chaos Cerastus Knight Lancer · Blasphemous Engine, Knight Despoiler · Bestial Aspect, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+Knight Diabolus
+Enhancement · 25 pts · on Chaos Cerastus Knight Atrapos
+
+CHAOS KNIGHTS model only. Improve the Weapon Skill characteristic of the bearer’s melee weapons by 1. While the bearer is using the Diabolic Power ability, its melee weapons have the [LANCE] ability.
+
+ONChaos Cerastus Knight Atrapos
+
+Blasphemous Engine
+Enhancement · 35 pts · on Chaos Cerastus Knight Lancer
+
+CHAOS KNIGHTS model only. Add 2 to the bearer’s Wounds characteristic. Each time the bearer’s unit makes a Malefic Surge, you can re-roll the Leadership test taken to see if it suffers any mortal wounds.
+
+ONChaos Cerastus Knight Lancer
+
+Fleshmetal Fusion
+Enhancement · 35 pts · on Knight Ruinator
+
+CHAOS KNIGHTS model only. Add 1 to the bearer’s Toughness characteristic. While the bearer is using the Unnatural Fortitude ability, each time an attack with a Damage characteristic of 1 is allocated to the bearer, add 1 to any armour saving throw made against that attack.
+
+ONKnight Ruinator
+
+Bestial Aspect
+Enhancement · 30 pts · on Knight Despoiler
+
+CHAOS KNIGHTS model only. The bearer’s ranged weapons have the [ASSAULT] ability. While the bearer is using the Unholy Hunger ability, it can ignore any or all modifiers to its Move characteristic and/or to Advance rolls made for its unit.
+
+ONKnight Despoiler
+
+STRATAGEMSCorrupting Taint, Unleash Balefire, Warp Vision, Diabolic Bulwark, Hellforged Construction, Profane Symbiosis
+
+UNIT RULES
+Deadly Demise
+Chaos Cerastus Knight Atrapos · Knight Diabolus D6+2
+Chaos Cerastus Knight Lancer · Blasphemous Engine D6+2
+Knight Despoiler · Bestial Aspect D6
+Knight Ruinator · Fleshmetal Fusion D6
+Knight Ruinator D6
+Deep Strike
+Nurglings
+Infiltrators
+Nurglings
+Super-Heavy Walker
+Chaos Cerastus Knight Atrapos · Knight Diabolus
+Chaos Cerastus Knight Lancer · Blasphemous Engine
+Knight Despoiler · Bestial Aspect
+Knight Ruinator · Fleshmetal Fusion
+Knight Ruinator
+
+######## bases · RULES Bases & proxies
+BASES TO PRINT
+
+3× 40mm
+5× 170×109mm
+
+WHAT TO WRITE ON EACH BASE
+
+Chaos Cerastus Knight Atrapos · Knight Diabolus
+1× 170×109mm
+Chaos Cerastus Knight Atrapos · Knight Diabolus
+Chaos Cerastus Knight Lancer · Blasphemous Engine
+1× 170×109mm
+Chaos Cerastus Knight Lancer · Blasphemous Engine
+Knight Despoiler · Bestial Aspect
+1× 170×109mm
+Knight Despoiler · Warlord · Bestial Aspect
+Knight Ruinator · Fleshmetal Fusion
+1× 170×109mm
+Knight Ruinator · Fleshmetal Fusion
+Knight Ruinator
+1× 170×109mm
+Knight Ruinator
+Nurglings
+3× 40mm
+standard Diseased claws and teeth
+
+From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
+
+######## damage shooting · BASES Damage
+YOUR
+Chaos Cerastus Knight Atrapos
+SHOOT
+FIGHT
+BOTH
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+3.4
+of 5 destroyed
+6.8 wounds lost · wiped in 30% of games
+Atrapos lascutter: high intensity
+Graviton singularity cannon: contained
+3 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+SHOOT · BIGGEST FIRST
+
+Effects are on the damage these attacks deal.
+
+RANGED WEAPONS
+Chaos Cerastus Knight Atrapos
+Atrapos lascutter
+RNG
+24"
+A
+D6
+BS
+3+
+S
+14
+AP
+-3
+D
+4
+SUSTAINED HITS 1
+−30% wiped
+−1.7
+MODELS IF UNTICKED
+PICK ONE PROFILE
+low intensity
+3.4
+RNG
+36"
+A
+2D6
+BS
+3+
+S
+7
+AP
+-1
+D
+2
+SUSTAINED HITS 1
+high intensity
+3.4
+RNG
+24"
+A
+D6
+BS
+3+
+S
+14
+AP
+-3
+D
+4
+SUSTAINED HITS 1
+Graviton singularity cannon
+RNG
+24"
+A
+D3
+BS
+3+
+S
+16
+AP
+-4
+D
+D6+1
+BLAST
+−23% wiped
+−1.4
+MODELS IF UNTICKED
+PICK ONE PROFILE
+contained
+3.4
+RNG
+24"
+A
+D3
+BS
+3+
+S
+16
+AP
+-4
+D
+D6+1
+BLAST
+singularity
+3.4
+RNG
+24"
+A
+D3
+BS
+3+
+S
+16
+AP
+-4
+D
+D6+1
+BLAST, DEVASTATING WOUNDS, HAZARDOUS
+SITUATION AND RULES
+Plunging Fire
+BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
+if it applies
++17% wiped
++0.6
+MODELS
+Macro-extinction Protocols
+vs MONSTER/VEHICLE: +1 to hit rolls
+if it applies
++17% wiped
++0.6
+MODELS
+Macro-extinction Protocols
+vs TITANIC/TOWERING: +1 to wound rolls
+if it applies
++8% wiped
++0.3
+MODELS
+Doom
+Doom active (Harbingers of Dread), the target Battle-shocked: +1 to wound rolls
+if it applies
++8% wiped
++0.3
+MODELS
+Malefic Surge
+Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase)
+if it applies
++3% wiped
++0.1
+MODELS
+Lethal Hits
++0.1
+Sustained Hits 1
++0.2
+BEST
+Close-quarters shooting at another unit
+-1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
+if it applies
+−14% wiped
+−0.6
+MODELS
+Damaged (1-10 wounds left)
+-1 to hit rolls (and -5 OC)
+if it applies
+−14% wiped
+−0.6
+MODELS
+Close-quarters shooting at a unit it is engaged with
+-1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
+if it applies
+−26% wiped
+−1.8
+MODELS
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
+if it applies
+−26% wiped
+−1.8
+MODELS
+Fire Overwatch (snap shooting)
+the target within 24" (15.09): hits only on an unmodified 6, never critical; no hit re-rolls
+by the rules: Fire Overwatch: “TARGET: One friendly unengaged unit (excluding TITANIC units)” (15.08) · yours to count anyway
+−30% wiped
+−2.6
+MODELS
+STRATAGEMS
+with their CP
+1CP Warp Vision
+Your Shooting phase: ranged weapons have [IGNORES COVER]
+if used
+no change: [IGNORES COVER] counts only when the target has the benefit of cover
+0
+ALL ▾
+NOT FOR THIS STEP, BY THE RULES (2)
+
+Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
+
+NOT COUNTED BY THE CALCULATOR (3)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP Profane Symbiosis
+End of any phase: your unit that is not Empowered makes a Malefic Surge (not the same unit more than once per battle round).
+1CP Unleash Balefire
+After your unit has shot: one enemy unit it hit takes a Battle-shock test; if failed, it is aflame until the end of your opponent’s next turn (-2" Move, -2 to Charge rolls).
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## damage fight · DAMAGE Damage
+YOUR
+Chaos Cerastus Knight Atrapos
+SHOOT
+FIGHT
+BOTH
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+3.9
+of 5 destroyed
+7.8 wounds lost · wiped in 40% of games
+Atrapos lascutter: high intensity
+Charged this turn
+×
+4 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+FIGHT · BIGGEST FIRST
+
+Effects are on the damage these attacks deal.
+
+The charge is taken to succeed (no charge roll).
+
+MELEE WEAPONS
+Chaos Cerastus Knight Atrapos
+Atrapos lascutter
+A
+6
+WS
+2+
+S
+14
+AP
+-3
+D
+4
+SUSTAINED HITS 1
+−40% wiped
+−3.9
+MODELS IF UNTICKED
+PICK ONE PROFILE
+low intensity
+3.7
+A
+12
+WS
+2+
+S
+7
+AP
+-1
+D
+2
+SUSTAINED HITS 1
+high intensity
+3.9
+BEST
+A
+6
+WS
+2+
+S
+14
+AP
+-3
+D
+4
+SUSTAINED HITS 1
+SITUATION AND RULES
+Macro-extinction Protocols
+vs TITANIC/TOWERING: +1 to wound rolls
+if it applies
++18% wiped
++0.4
+MODELS
+Knight Diabolus
+Using the Diabolic Power ability (Malefic Surge): melee weapons have [LANCE]
+if it applies
++18% wiped
++0.4
+MODELS
+Doom
+Doom active (Harbingers of Dread), the target Battle-shocked: +1 to wound rolls
+if it applies
++18% wiped
++0.4
+MODELS
+Charged this turn
+said to hold
+no change: no rule here needs it
+0
+Macro-extinction Protocols
+vs MONSTER/VEHICLE: +1 to hit rolls
+if it applies
+no change: already hits on 2+
+0
+Malefic Surge
+Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase)
+if it applies
++4% wiped
+≈0
+MODELS
+Lethal Hits
++4% wiped
+Sustained Hits 1
+0
+Damaged (1-10 wounds left)
+-1 to hit rolls (and -5 OC)
+if it applies
+−16% wiped
+−0.6
+MODELS
+STRATAGEMS
+with their CP
+
+None that change these numbers.
+
+NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
+
+1CP Warp Vision
+Shooting phase only
+NO CHANGE
+
+Nothing to count: 1CP Unleash Balefire (Shooting phase only)
+
+NOT COUNTED BY THE CALCULATOR (4)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP Profane Symbiosis
+End of any phase: your unit that is not Empowered makes a Malefic Surge (not the same unit more than once per battle round).
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+1CP Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## damage both · DAMAGE Damage
+YOUR
+Chaos Cerastus Knight Atrapos
+SHOOT
+FIGHT
+BOTH
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+4.9
+of 5 destroyed
+9.8 wounds lost · wiped in 93% of games
+
+Shoot 3.4 · Fight 1.5 · the charge is taken to succeed
+
+Atrapos lascutter: high intensity
+Graviton singularity cannon: contained
+Charged this turn
+×
+7 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+SHOOT → CHARGE → FIGHT · BIGGEST FIRST
+
+Effects are on the total: models destroyed by the end of the fight, the shooting’s choices and the fight’s alike.
+
+The charge is taken to succeed (no charge roll); “Charged this turn” is ticked for the fight.
+
+THE SHOOTING
+FIRST
+RANGED WEAPONS
+Chaos Cerastus Knight Atrapos
+Atrapos lascutter
+RNG
+24"
+A
+D6
+BS
+3+
+S
+14
+AP
+-3
+D
+4
+SUSTAINED HITS 1
+−16% wiped
+−0.3
+MODELS IF UNTICKED
+PICK ONE PROFILE
+low intensity
+4.9
+RNG
+36"
+A
+2D6
+BS
+3+
+S
+7
+AP
+-1
+D
+2
+SUSTAINED HITS 1
+high intensity
+4.9
+RNG
+24"
+A
+D6
+BS
+3+
+S
+14
+AP
+-3
+D
+4
+SUSTAINED HITS 1
+Graviton singularity cannon
+RNG
+24"
+A
+D3
+BS
+3+
+S
+16
+AP
+-4
+D
+D6+1
+BLAST
+−15% wiped
+−0.3
+MODELS IF UNTICKED
+PICK ONE PROFILE
+contained
+4.9
+RNG
+24"
+A
+D3
+BS
+3+
+S
+16
+AP
+-4
+D
+D6+1
+BLAST
+singularity
+4.9
+RNG
+24"
+A
+D3
+BS
+3+
+S
+16
+AP
+-4
+D
+D6+1
+BLAST, DEVASTATING WOUNDS, HAZARDOUS
+SITUATION AND RULES
+Plunging Fire
+BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
+if it applies
++3% wiped
+≈0
+MODELS
++1 MORE ▾
+Macro-extinction Protocols
+vs MONSTER/VEHICLE: +1 to hit rolls
+if it applies
++3% wiped
+≈0
+MODELS
++1 MORE ▾
+Doom
+Doom active (Harbingers of Dread), the target Battle-shocked: +1 to wound rolls
+if it applies
++3% wiped
+≈0
+MODELS
++1 MORE ▾
+Malefic Surge
+Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase)
+if it applies
+≈0
+MODELS
+Lethal Hits
+≈0
+Sustained Hits 1
+≈0
+Macro-extinction Protocols
+vs TITANIC/TOWERING: +1 to wound rolls
+if it applies
++1% wiped
+≈0
+MODELS
+Close-quarters shooting at another unit
+-1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
+if it applies
+−5% wiped
+−0.1
+MODELS
+Damaged (1-10 wounds left)
+-1 to hit rolls (and -5 OC)
+if it applies
+−5% wiped
+−0.1
+MODELS
+Close-quarters shooting at a unit it is engaged with
+-1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
+if it applies
+−20% wiped
+−0.3
+MODELS
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
+if it applies
+−20% wiped
+−0.3
+MODELS
+STRATAGEMS
+with their CP
+1CP Warp Vision
+Your Shooting phase: ranged weapons have [IGNORES COVER]
+if used
+no change: [IGNORES COVER] counts only when the target has the benefit of cover
+0
+ALL ▾
+NOT FOR THIS STEP, BY THE RULES (2)
+
+Nothing to count: 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
+
+NOT COUNTED BY THE CALCULATOR (3)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP Profane Symbiosis
+End of any phase: your unit that is not Empowered makes a Malefic Surge (not the same unit more than once per battle round).
+1CP Unleash Balefire
+After your unit has shot: one enemy unit it hit takes a Battle-shock test; if failed, it is aflame until the end of your opponent’s next turn (-2" Move, -2 to Charge rolls).
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+THE FIGHT
+THEN, AGAINST WHAT THE SHOOTING LEFT
+MELEE WEAPONS
+Chaos Cerastus Knight Atrapos
+
+Against what the shooting left of the target, in each game.
+
+Atrapos lascutter
+A
+6
+WS
+2+
+S
+14
+AP
+-3
+D
+4
+SUSTAINED HITS 1
+−63% wiped
+−1.5
+MODELS IF UNTICKED
+PICK ONE PROFILE
+low intensity
+4.9
+A
+12
+WS
+2+
+S
+7
+AP
+-1
+D
+2
+SUSTAINED HITS 1
+high intensity
+4.9
+BEST
+A
+6
+WS
+2+
+S
+14
+AP
+-3
+D
+4
+SUSTAINED HITS 1
+SITUATION AND RULES
+Macro-extinction Protocols
+vs TITANIC/TOWERING: +1 to wound rolls
+if it applies
++2% wiped
+≈0
+MODELS
++1 MORE ▾
+Knight Diabolus
+Using the Diabolic Power ability (Malefic Surge): melee weapons have [LANCE]
+if it applies
++2% wiped
+≈0
+MODELS
++1 MORE ▾
+Doom
+Doom active (Harbingers of Dread), the target Battle-shocked: +1 to wound rolls
+if it applies
++2% wiped
+≈0
+MODELS
++1 MORE ▾
+Charged this turn
+holds: Both takes the charge as made (no charge roll)
+no change: no rule here needs it
+0
+Macro-extinction Protocols
+vs MONSTER/VEHICLE: +1 to hit rolls
+if it applies
+no change: already hits on 2+
+0
+Malefic Surge
+Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase)
+if it applies
+−1% wiped
+≈0
+MODELS
++1 MORE ▾
+Lethal Hits
+−1% wiped
+Sustained Hits 1
+0
+Damaged (1-10 wounds left)
+-1 to hit rolls (and -5 OC)
+if it applies
+−7% wiped
+−0.1
+MODELS
+STRATAGEMS
+with their CP
+
+None that change these numbers.
+
+NOT FOR THIS STEP, BY THE RULES (2) · YOURS TO COUNT ANYWAY
+
+1CP Warp Vision
+Shooting phase only
+NO CHANGE
+
+Nothing to count: 1CP Unleash Balefire (Shooting phase only)
+
+NOT COUNTED BY THE CALCULATOR (4)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP Profane Symbiosis
+End of any phase: your unit that is not Empowered makes a Malefic Surge (not the same unit more than once per battle round).
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+1CP Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## strats {"folded":true} · DAMAGE Stratagems
+EXPAND ALL
+INFERNAL LANCE
+6
+1
+CP
+Corrupting Taint
+Just after your unit makes a Malefic Surge: select one objective marker you control that your unit is within range of; it stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
+Your Command All but Nurglings
+1
+CP
+Unleash Balefire
+After your unit has shot: one enemy unit it hit takes a Battle-shock test; if failed, it is aflame until the end of your opponent’s next turn (-2" Move, -2 to Charge rolls).
+Your Shooting All but Nurglings
+1
+CP
+Warp Vision
+Until the end of the phase, your unit’s ranged weapons have [IGNORES COVER].
+Your Shooting All but Nurglings
+1
+CP
+Diabolic Bulwark
+Just after an enemy unit selects your unit as a target: until the end of the phase, your unit’s models have a 4+ invulnerable save.
+Their Shooting All but Nurglings
+1
+CP
+Hellforged Construction
+Just after an enemy unit selects your unit as a target: until that unit has finished making its attacks, worsen the AP of each attack that targets your unit by 1.
+Fight All but Nurglings
+1
+CP
+Profane Symbiosis
+End of any phase: your unit that is not Empowered makes a Malefic Surge (not the same unit more than once per battle round).
+Any phase All but Nurglings
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+The battle-shock roll you are about to make for your unit is automatically successful.
+Your Command · Once per battle Any unit
+1
+CP
+Rapid Ingress
+Your unit in strategic reserves makes an ingress move (not in the first battle round).
+End of their Movement Any unit
+1
+CP
+Fire Overwatch
+Your unengaged unit shoots using snap shooting.
+End of their Movement No unit in this list can use it
+1
+CP
+Crushing Impact
+After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+Your Charge All but Nurglings
+1
+CP
+Heroic Intervention
+Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+End of their Charge · Into the Fray +1CP Any unit
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+Fight All but Nurglings
+2
+CP
+Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+Their Fight Any unit
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+Any phase Any unit
+1
+CP
+Explosives
+Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
+Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
+1
+CP
+Smokescreen
+Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+Start of their Shooting No unit in this list can use it (needs SMOKE)
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## strats {"open":true} · STRATAGEMS Stratagems
+COLLAPSE ALL
+INFERNAL LANCE
+6
+1
+CP
+Corrupting Taint
+Your Command All but Nurglings
+WHEN
+
+Your Command phase, just after a CHAOS KNIGHTS CHARACTER unit from your army makes a Malefic Surge.
+
+TARGETThat CHAOS KNIGHTS CHARACTER unit.
+
+EFFECT
+
+Select one objective marker your unit is within range of that you control. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
+
+USED BYChaos Cerastus Knight Atrapos · Knight Diabolus, Chaos Cerastus Knight Lancer · Blasphemous Engine, Knight Despoiler · Bestial Aspect, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+1
+CP
+Unleash Balefire
+Your Shooting All but Nurglings
+WHEN
+
+Your Shooting phase.
+
+TARGETOne CHAOS KNIGHTS unit from your army that has not been selected to shoot this phase.
+
+EFFECT
+
+After your unit has shot, select one enemy unit hit by one or more of those attacks. That enemy unit must take a Battle-shock test; if the test is failed, until the end of your opponent’s next turn, it is aflame. While a unit is aflame, subtract 2" from its Move characteristic and subtract 2 from Charge rolls made for it.
+
+USED BYChaos Cerastus Knight Atrapos · Knight Diabolus, Chaos Cerastus Knight Lancer · Blasphemous Engine, Knight Despoiler · Bestial Aspect, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+1
+CP
+Warp Vision
+Your Shooting All but Nurglings
+WHEN
+
+Your Shooting phase.
+
+TARGETOne CHAOS KNIGHTS unit from your army that has not been selected to shoot this phase.
+
+EFFECT
+
+Until the end of the phase, ranged weapons equipped by models in your unit have the [IGNORES COVER] ability.
+
+USED BYChaos Cerastus Knight Atrapos · Knight Diabolus, Chaos Cerastus Knight Lancer · Blasphemous Engine, Knight Despoiler · Bestial Aspect, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+1
+CP
+Diabolic Bulwark
+Their Shooting All but Nurglings
+WHEN
+
+Your opponent’s Shooting phase, just after an enemy unit has selected its targets.
+
+TARGETOne CHAOS KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, models in your unit have a 4+ invulnerable save.
+
+USED BYChaos Cerastus Knight Atrapos · Knight Diabolus, Chaos Cerastus Knight Lancer · Blasphemous Engine, Knight Despoiler · Bestial Aspect, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+1
+CP
+Hellforged Construction
+Fight All but Nurglings
+WHEN
+
+Fight phase, just after an enemy unit has selected its targets.
+
+TARGETOne CHAOS KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.
+
+USED BYChaos Cerastus Knight Atrapos · Knight Diabolus, Chaos Cerastus Knight Lancer · Blasphemous Engine, Knight Despoiler · Bestial Aspect, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+1
+CP
+Profane Symbiosis
+Any phase All but Nurglings
+WHEN
+
+End of any phase.
+
+TARGETOne CHAOS KNIGHTS unit from your army that is not Empowered.
+
+EFFECT
+
+Your unit makes a Malefic Surge.
+
+RESTRICTIONSYou cannot select the same unit as the target of this Stratagem more than once per battle round.
+
+USED BYChaos Cerastus Knight Atrapos · Knight Diabolus, Chaos Cerastus Knight Lancer · Blasphemous Engine, Knight Despoiler · Bestial Aspect, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+Your Command · Once per battle Any unit
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+1
+CP
+Rapid Ingress
+End of their Movement Any unit
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+1
+CP
+Fire Overwatch
+End of their Movement No unit in this list can use it
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYno unit in this list
+
+1
+CP
+Crushing Impact
+Your Charge All but Nurglings
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYChaos Cerastus Knight Atrapos · Knight Diabolus, Chaos Cerastus Knight Lancer · Blasphemous Engine, Knight Despoiler · Bestial Aspect, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+1
+CP
+Heroic Intervention
+End of their Charge · Into the Fray +1CP Any unit
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYany unit
+
+1
+CP
+Epic Challenge
+Fight All but Nurglings
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYChaos Cerastus Knight Atrapos · Knight Diabolus, Chaos Cerastus Knight Lancer · Blasphemous Engine, Knight Despoiler · Bestial Aspect, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+2
+CP
+Counteroffensive
+Their Fight Any unit
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+1
+CP
+Command Re-roll
+Any phase Any unit
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+1
+CP
+Explosives
+Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
+WHEN
+
+Your Shooting phase.
+
+TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one EXPLOSIVES/GRENADES model in your unit.
+2. Select one unengaged enemy unit within 8" of and visible to that model.
+3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
+
+Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+
+USED BYno unit in this list (needs EXPLOSIVES OR GRENADES)
+
+1
+CP
+Smokescreen
+Start of their Shooting No unit in this list can use it (needs SMOKE)
+WHEN
+
+Start of your opponent’s Shooting phase.
+
+TARGETOne friendly SMOKE unit.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
+
+USED BYno unit in this list (needs SMOKE)
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## unit chaos-cerastus-knight-atrapos · STRATAGEMS Infernal Lance
+CHAOS CERASTUS KNIGHT ATRAPOS
+410 PTS
+Character
+Knight Diabolus
+Models
+Options
+1× Chaos Cerastus Knight Atrapos
+Atrapos lascutter, Graviton singularity cannon
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Chaos Cerastus Knight Atrapos
+170×109mm
+12"
+11
+3+
+28
+6+
+10
+5+
+WHEN TARGETEDEmpowered, using Unnatural Fortitude: a 5+ invulnerable save or Feel No Pain 6+ (until the end of the phase) · 1CP Hellforged Construction: Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked) · 1CP Diabolic Bulwark: their Shooting phase: 4+ invulnerable save (until the end of the phase)
+DAMAGED 1-10 W
+-1 TO HIT ROLLS (AND -5 OC)
+ALL ATTACKS
+vs MONSTER/VEHICLE: +1 to hit rolls (Macro-extinction Protocols)
+vs TITANIC/TOWERING: +1 to wound rolls (Macro-extinction Protocols)
+Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase) (Malefic Surge)
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Atrapos lascutter
+➤low intensity
+36"
+2D6
+3+
+7
+-1
+2
+SUSTAINED HITS 1
+➤high intensity
+24"
+D6
+3+
+14
+-3
+4
+SUSTAINED HITS 1
+Graviton singularity cannon
+➤contained
+24"
+D3
+3+
+16
+-4
+D6+1
+BLAST
+➤singularity
+24"
+D3
+3+
+16
+-4
+D6+1
+BLAST, DEVASTATING WOUNDS, HAZARDOUS
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
+1CP Warp Vision: ranged weapons have [IGNORES COVER]
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Atrapos lascutter
+➤low intensity
+12
+2+
+7
+-1
+2
+SUSTAINED HITS 1
+➤high intensity
+6
+2+
+14
+-3
+4
+SUSTAINED HITS 1
+Using the Diabolic Power ability (Malefic Surge): melee weapons have [LANCE] (Knight Diabolus)
+ABILITIES
+Macro-extinction Protocols
+
+Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.
+
+Consumed with Hunger
+No WAR DOG in this list
+
+No WAR DOG in this list
+
+Aura
+
+While a friendly WAR DOG model is within 6" of this model, each time that WAR DOG model makes an attack that targets a TITANIC or TOWERING unit, you can re-roll the Hit roll.
+
+Knight Diabolus
+Enhancement
+Already in WS
+
+Enhancement
+
+CHAOS KNIGHTS model only. Improve the Weapon Skill characteristic of the bearer’s melee weapons by 1. While the bearer is using the Diabolic Power ability, its melee weapons have the [LANCE] ability.
+
+Rules
+Deadly Demise D6+2, Harbingers of Dread, Super-Heavy Walker, Malefic Surge
+Stratagems
+
+INFERNAL LANCE Corrupting Taint, Unleash Balefire, Warp Vision, Diabolic Bulwark, Hellforged Construction, Profane Symbiosis
+
+CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+CERASTUS
+CHAOS
+CHARACTER
+FACTION: CHAOS KNIGHTS
+KNIGHT ATRAPOS
+TITANIC
+TOWERING
+VEHICLE
+WALKER
+Ask about this unit
+Chaos Cerastus Knight Lancer · Blasphemous Engine ›
+
+######## unit chaos-cerastus-knight-lancer · CHAOS CERASTUS KNIGHT ATRAPOS Infernal Lance
+CHAOS CERASTUS KNIGHT LANCER
+420 PTS
+Character
+Blasphemous Engine
+Models
+Options
+1× Chaos Cerastus Knight Lancer
+Cerastus shock lance
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Chaos Cerastus Knight Lancer
+170×109mm
+14"
+11
+3+
+30
+6+
+10
+4+
+WHEN TARGETEDEmpowered, using Unnatural Fortitude: a 5+ invulnerable save or Feel No Pain 6+ (until the end of the phase) · 1CP Hellforged Construction: Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked) · 1CP Diabolic Bulwark: their Shooting phase: 4+ invulnerable save (until the end of the phase)
+DAMAGED 1-10 W
+-1 TO HIT ROLLS (AND -5 OC)
+ALL ATTACKS
+Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase) (Malefic Surge)
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Cerastus shock lance
+12"
+6
+3+
+6
+0
+2
+ASSAULT, SUSTAINED HITS 2
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
+1CP Warp Vision: ranged weapons have [IGNORES COVER]
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Cerastus shock lance
+➤strike
+5
+2+
+20
+-3
+8
+LANCE
+➤sweep
+10
+2+
+10
+-2
+3
+Made a charge move this turn: Cerastus shock lance +1 to wound (Lance)
+ABILITIES
+Shock Charge
+
+You can target this model with the Tank Shock Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.
+
+Dark Fervour
+No WAR DOG in this list
+
+No WAR DOG in this list
+
+Aura
+
+While a friendly WAR DOG model is within 6" of this model, ranged weapons equipped by that War Dog model have the [ASSAULT] ability.
+
+Blasphemous Engine
+Enhancement
+Already in W
+
+Enhancement
+
+CHAOS KNIGHTS model only. Add 2 to the bearer’s Wounds characteristic. Each time the bearer’s unit makes a Malefic Surge, you can re-roll the Leadership test taken to see if it suffers any mortal wounds.
+
+Rules
+Deadly Demise D6+2, Harbingers of Dread, Super-Heavy Walker, Malefic Surge
+Stratagems
+
+INFERNAL LANCE Corrupting Taint, Unleash Balefire, Warp Vision, Diabolic Bulwark, Hellforged Construction, Profane Symbiosis
+
+CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+CERASTUS
+CHAOS
+CHARACTER
+FACTION: CHAOS KNIGHTS
+KNIGHT LANCER
+TITANIC
+TOWERING
+VEHICLE
+WALKER
+Ask about this unit
+‹ Chaos Cerastus Knight Atrapos · Knight Diabolus
+Knight Despoiler · Bestial Aspect ›
+
+######## unit knight-despoiler · CHAOS CERASTUS KNIGHT LANCER Infernal Lance
+KNIGHT DESPOILER
+440 PTS
+Character
+Warlord
+Bestial Aspect
+Models
+Options
+1× Knight Despoiler
+Titanic feet, Ruinspear rocket pod, Diabolus heavy stubber, 2× Despoiler gatling cannon, 2× Heavy darkflamer
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Knight Despoiler
+170×109mm
+10"
+11
+3+
+26
+6+
+10
+5+*
+WHEN TARGETEDEmpowered, using Unnatural Fortitude: a 5+ invulnerable save or Feel No Pain 6+ (until the end of the phase) · 5+ invulnerable save against ranged attacks only · 1CP Hellforged Construction: Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked) · 1CP Diabolic Bulwark: their Shooting phase: 4+ invulnerable save (until the end of the phase)
+DAMAGED 1-9 W
+-1 TO HIT ROLLS (AND -5 OC)
+ALL ATTACKS
+Selected to shoot or fight: re-roll one hit roll or one wound roll (Seething Hatred)
+Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase) (Malefic Surge)
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Ruinspear rocket pod
+48"
+3
+3+
+8
+-2
+D6
+ASSAULT
+Despoiler gatling cannon×2
+36"
+18
+3+
+6
+-2
+2
+ASSAULT
+Heavy darkflamer×2
+12"
+D6
+–
+5
+-1
+1
+TORRENT, IGNORES COVER, ASSAULT
+Diabolus heavy stubber
+36"
+3
+3+
+5
+0
+1
+RAPID FIRE 3, ASSAULT
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
+1CP Warp Vision: ranged weapons have [IGNORES COVER]
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Titanic feet
+4
+4+
+8
+-1
+2
+ABILITIES
+Dread Dominion
+No WAR DOG in this list
+
+No WAR DOG in this list
+
+Aura
+
+While a friendly WAR DOG model is within 9" of this model, improve that WAR DOG model’s Leadership and Objective Control characteristics by 1.
+
+Seething Hatred
+Your Shoot · Fight
+
+Your Shooting / Fight (either turn)
+
+Each time this model is selected to shoot or fight, you can re-roll one Hit roll or you can re-roll one Wound roll when resolving those attacks.
+
+*Invulnerable Save
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Bestial Aspect
+Enhancement
+
+Enhancement
+
+CHAOS KNIGHTS model only. The bearer’s ranged weapons have the [ASSAULT] ability. While the bearer is using the Unholy Hunger ability, it can ignore any or all modifiers to its Move characteristic and/or to Advance rolls made for its unit.
+
+Rules
+Super-Heavy Walker, Deadly Demise D6, Harbingers of Dread, Malefic Surge
+Stratagems
+
+INFERNAL LANCE Corrupting Taint, Unleash Balefire, Warp Vision, Diabolic Bulwark, Hellforged Construction, Profane Symbiosis
+
+CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+ABHORRENT
+CHAOS
+CHARACTER
+FACTION: CHAOS KNIGHTS
+KNIGHT DESPOILER
+TITANIC
+TOWERING
+VEHICLE
+WALKER
+WARLORD
+Ask about this unit
+‹ Chaos Cerastus Knight Lancer · Blasphemous Engine
+Knight Ruinator · Fleshmetal Fusion ›
+
+######## unit knight-ruinator-fleshmetal-fusion · KNIGHT DESPOILER Infernal Lance
+KNIGHT RUINATOR
+360 PTS
+Character
+Fleshmetal Fusion
+Models
+Options
+1× Knight Ruinator
+Darkflame lance, Fellbore, Terrorpulse missiles
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Knight Ruinator
+170×109mm
+10"
+12
+3+
+26
+6+
+10
+5+*
+WHEN TARGETEDEmpowered, using Unnatural Fortitude: a 5+ invulnerable save or Feel No Pain 6+ (until the end of the phase) · 5+ invulnerable save against ranged attacks only · 1CP Hellforged Construction: Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked) · 1CP Diabolic Bulwark: their Shooting phase: 4+ invulnerable save (until the end of the phase)
+DAMAGED 1-9 W
+-1 TO HIT ROLLS (AND -5 OC)
+ALL ATTACKS
+Target is its victim (selected at the start of the first battle round, and a new one each time its victim is destroyed): re-roll the wound roll (Methodical Destruction)
+Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase) (Malefic Surge)
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Darkflame lance
+18"
+D6+6
+–
+8
+-1
+2
+IGNORES COVER, TORRENT
+Terrorpulse missiles
+36"
+D6+6
+3+
+8
+-2
+2
+BLAST
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
+1CP Warp Vision: ranged weapons have [IGNORES COVER]
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Fellbore
+➤strike
+4
+3+
+14
+-3
+6
+ANTI-MONSTER 2+, ANTI-VEHICLE 2+
+➤sweep
+10
+3+
+9
+-2
+2
+ABILITIES
+Methodical Destruction
+Start of the first battle round
+
+Start of the first battle round
+
+At the start of the first battle round, select one unit from your opponent’s army to be this model’s victim. Each time this model makes an attack that targets its victim, you can re-roll the Wound roll. Each time this model’s victim is destroyed, select one new enemy unit to be this model’s victim.
+
+Close-range Killers
+No WAR DOG in this list
+
+No WAR DOG in this list
+
+Aura
+
+While a friendly War Dog model is within 9" of this model, each time that War Dog model makes an attack that targets the closest enemy unit, improve the Armour Penetration characteristic of that attack by 1.
+
+*Invulnerable Save
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Fleshmetal Fusion
+Enhancement
+Already in T
+
+Enhancement
+
+CHAOS KNIGHTS model only. Add 1 to the bearer’s Toughness characteristic. While the bearer is using the Unnatural Fortitude ability, each time an attack with a Damage characteristic of 1 is allocated to the bearer, add 1 to any armour saving throw made against that attack.
+
+Rules
+Super-Heavy Walker, Deadly Demise D6, Harbingers of Dread, Sustained Hits, Malefic Surge
+Stratagems
+
+INFERNAL LANCE Corrupting Taint, Unleash Balefire, Warp Vision, Diabolic Bulwark, Hellforged Construction, Profane Symbiosis
+
+CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+ABHORRENT
+CHAOS
+CHARACTER
+FACTION: CHAOS KNIGHTS
+KNIGHT RUINATOR
+TITANIC
+TOWERING
+VEHICLE
+WALKER
+Ask about this unit
+‹ Knight Despoiler · Bestial Aspect
+Knight Ruinator ›
+
+######## unit knight-ruinator · KNIGHT RUINATOR Infernal Lance
+KNIGHT RUINATOR
+325 PTS
+Character
+Models
+Options
+1× Knight Ruinator
+Darkflame lance, Fellbore, Terrorpulse missiles
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Knight Ruinator
+170×109mm
+10"
+11
+3+
+26
+6+
+10
+5+*
+WHEN TARGETEDEmpowered, using Unnatural Fortitude: a 5+ invulnerable save or Feel No Pain 6+ (until the end of the phase) · 5+ invulnerable save against ranged attacks only · 1CP Hellforged Construction: Fight phase: worsen the AP of attacks that target it by 1 (until that enemy unit has attacked) · 1CP Diabolic Bulwark: their Shooting phase: 4+ invulnerable save (until the end of the phase)
+DAMAGED 1-9 W
+-1 TO HIT ROLLS (AND -5 OC)
+ALL ATTACKS
+Target is its victim (selected at the start of the first battle round, and a new one each time its victim is destroyed): re-roll the wound roll (Methodical Destruction)
+Empowered, using Diabolic Power (when selected to shoot or fight): [LETHAL HITS] or [SUSTAINED HITS 1] (until the end of the phase) (Malefic Surge)
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Darkflame lance
+18"
+D6+6
+–
+8
+-1
+2
+IGNORES COVER, TORRENT
+Terrorpulse missiles
+36"
+D6+6
+3+
+8
+-2
+2
+BLAST
+Visible target within 12" with models on ground level (not AIRCRAFT): BS improved by 1 (Plunging Fire)
+STRATAGEMS · INFERNAL LANCE · YOUR SHOOTING PHASE
+1CP Warp Vision: ranged weapons have [IGNORES COVER]
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Fellbore
+➤strike
+4
+3+
+14
+-3
+6
+ANTI-MONSTER 2+, ANTI-VEHICLE 2+
+➤sweep
+10
+3+
+9
+-2
+2
+ABILITIES
+Methodical Destruction
+Start of the first battle round
+
+Start of the first battle round
+
+At the start of the first battle round, select one unit from your opponent’s army to be this model’s victim. Each time this model makes an attack that targets its victim, you can re-roll the Wound roll. Each time this model’s victim is destroyed, select one new enemy unit to be this model’s victim.
+
+Close-range Killers
+No WAR DOG in this list
+
+No WAR DOG in this list
+
+Aura
+
+While a friendly War Dog model is within 9" of this model, each time that War Dog model makes an attack that targets the closest enemy unit, improve the Armour Penetration characteristic of that attack by 1.
+
+*Invulnerable Save
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Rules
+Super-Heavy Walker, Deadly Demise D6, Harbingers of Dread, Sustained Hits, Malefic Surge
+Stratagems
+
+INFERNAL LANCE Corrupting Taint, Unleash Balefire, Warp Vision, Diabolic Bulwark, Hellforged Construction, Profane Symbiosis
+
+CORE Insane Bravery, Rapid Ingress, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+ABHORRENT
+CHAOS
+CHARACTER
+FACTION: CHAOS KNIGHTS
+KNIGHT RUINATOR
+TITANIC
+TOWERING
+VEHICLE
+WALKER
+Ask about this unit
+‹ Knight Ruinator · Fleshmetal Fusion
+Nurglings ›
+
+######## unit nurglings · KNIGHT RUINATOR Infernal Lance
+NURGLINGS
+45 PTS
+Allies: Legiones Daemonica
+Models
+Options
+3× Nurgling Swarm
+Diseased claws and teeth
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Nurglings
+40mm
+5"
+3
+7+
+4
+8+
+0
+5+
+WHEN TARGETEDFight phase: an enemy unit (excluding TITANIC units) within Engagement Range of it, selected to fight: -1 to hit with each melee attack until the end of the phase
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Diseased claws and teeth×3
+4
+5+
+2
+0
+1
+LETHAL HITS
+ABILITIES
+Mischief Makers
+Fight
+
+Aura · Fight · Either turn
+
+Each time an enemy unit (excluding TITANIC units) within Engagement Range of one or more units with this ability is selected to fight, until the end of the phase, each time a model in that enemy unit makes a melee attack, subtract 1 from the Hit roll.
+
+Rules
+Deep Strike, Infiltrators
+Stratagems
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Infernal Lance.
+
+Keywords
+ALLIES: LEGIONES DAEMONICA
+BATTLELINE
+CHAOS
+DAEMON
+FACTION: LEGIONES DAEMONICA
+NURGLE
+NURGLINGS
+SWARM
+Ask about this unit
+‹ Knight Ruinator
+
+######## popup ability:infernal-lance|*Invulnerable Save|This model has a 5+ invulnerable save against ranged attacks. · NURGLINGS Infernal Lance
+ABILITY
+
+*Invulnerable Save
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+UNITKnight Despoiler · Bestial Aspect, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+Ask about this ability
+
+######## popup ability:infernal-lance|Damaged: 1-10 wounds remaining|While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**. · INFERNAL LANCE Infernal Lance
+ABILITY
+
+Damaged: 1-10 wounds remaining
+
+While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+UNITChaos Cerastus Knight Atrapos · Knight Diabolus, Chaos Cerastus Knight Lancer · Blasphemous Engine
+
+Ask about this ability
+
+######## popup ability:infernal-lance|Damaged: 1-9 wounds remaining|While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**. · INFERNAL LANCE Infernal Lance
+ABILITY
+
+Damaged: 1-9 wounds remaining
+
+While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+UNITKnight Despoiler · Bestial Aspect, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+Ask about this ability
+
+######## popup ability:infernal-lance|Knight Diabolus|**CHAOS KNIGHTS** model only. Improve the Weapon Skill characteristic of the bearer’s melee weapons by 1. While the bearer is using the Diabolic Power ability, its melee weapons have the **[LANCE]** ability. · INFERNAL LANCE Infernal Lance
+ABILITY · ENHANCEMENT
+
+Knight Diabolus
+
+CHAOS KNIGHTS model only. Improve the Weapon Skill characteristic of the bearer’s melee weapons by 1. While the bearer is using the Diabolic Power ability, its melee weapons have the [LANCE] ability.
+
+UNITChaos Cerastus Knight Atrapos · Knight Diabolus
+
+Ask about this ability
+
+######## popup ability:infernal-lance|Macro-extinction Protocols|Each time this model makes an attack that targets a **MONSTER** or **VEHICLE** unit, add 1 to the **Hit roll**. If that target is **TITANIC** or **TOWERING**, add 1 to the **Wound roll** as well. · INFERNAL LANCE Infernal Lance
+ABILITY
+
+Macro-extinction Protocols
+
+Each time this model makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll. If that target is TITANIC or TOWERING, add 1 to the Wound roll as well.
+
+UNITChaos Cerastus Knight Atrapos · Knight Diabolus
+
+Ask about this ability
+
+######## popup ability:infernal-lance|Methodical Destruction|At the start of the first battle round, select one unit from your opponent’s army to be this model’s victim. Each time this model makes an attack that targets its victim, you can re-roll the **Wound roll**. Each time this model’s victim is destroyed, select one new enemy unit to be this model’s victim. · INFERNAL LANCE Infernal Lance
+ABILITY · START OF THE FIRST BATTLE ROUND
+
+Methodical Destruction
+
+At the start of the first battle round, select one unit from your opponent’s army to be this model’s victim. Each time this model makes an attack that targets its victim, you can re-roll the Wound roll. Each time this model’s victim is destroyed, select one new enemy unit to be this model’s victim.
+
+UNITKnight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+Ask about this ability
+
+######## popup ability:infernal-lance|Mischief Makers|Each time an enemy unit (excluding **TITANIC** units) within **Engagement Range** of one or more units with this ability is selected to fight, until the end of the phase, each time a model in that enemy unit makes a melee attack, subtract 1 from the **Hit roll**. · INFERNAL LANCE Infernal Lance
+ABILITY · AURA · FIGHT · EITHER TURN
+
+Mischief Makers
+
+Each time an enemy unit (excluding TITANIC units) within Engagement Range of one or more units with this ability is selected to fight, until the end of the phase, each time a model in that enemy unit makes a melee attack, subtract 1 from the Hit roll.
+
+UNITNurglings
+
+Ask about this ability
+
+######## popup ability:infernal-lance|Seething Hatred|Each time this model is selected to shoot or fight, you can re-roll one **Hit roll** or you can re-roll one **Wound roll** when resolving those attacks. · INFERNAL LANCE Infernal Lance
+ABILITY · YOUR SHOOTING / FIGHT (EITHER TURN)
+
+Seething Hatred
+
+Each time this model is selected to shoot or fight, you can re-roll one Hit roll or you can re-roll one Wound roll when resolving those attacks.
+
+UNITKnight Despoiler · Bestial Aspect
+
+Ask about this ability
+
+######## popup enh:infernal-lance|Bestial Aspect · INFERNAL LANCE Infernal Lance
+ENHANCEMENT · INFERNAL LANCE · 30 PTS
+
+Bestial Aspect
+
+CHAOS KNIGHTS model only. The bearer’s ranged weapons have the [ASSAULT] ability. While the bearer is using the Unholy Hunger ability, it can ignore any or all modifiers to its Move characteristic and/or to Advance rolls made for its unit.
+
+ONKnight Despoiler
+
+Ask about this enhancement
+
+######## popup enh:infernal-lance|Blasphemous Engine · INFERNAL LANCE Infernal Lance
+ENHANCEMENT · INFERNAL LANCE · 35 PTS
+
+Blasphemous Engine
+
+CHAOS KNIGHTS model only. Add 2 to the bearer’s Wounds characteristic. Each time the bearer’s unit makes a Malefic Surge, you can re-roll the Leadership test taken to see if it suffers any mortal wounds.
+
+ONChaos Cerastus Knight Lancer
+
+Ask about this enhancement
+
+######## popup enh:infernal-lance|Fleshmetal Fusion · INFERNAL LANCE Infernal Lance
+ENHANCEMENT · INFERNAL LANCE · 35 PTS
+
+Fleshmetal Fusion
+
+CHAOS KNIGHTS model only. Add 1 to the bearer’s Toughness characteristic. While the bearer is using the Unnatural Fortitude ability, each time an attack with a Damage characteristic of 1 is allocated to the bearer, add 1 to any armour saving throw made against that attack.
+
+ONKnight Ruinator
+
+Ask about this enhancement
+
+######## popup enh:infernal-lance|Knight Diabolus · INFERNAL LANCE Infernal Lance
+ENHANCEMENT · INFERNAL LANCE · 25 PTS
+
+Knight Diabolus
+
+CHAOS KNIGHTS model only. Improve the Weapon Skill characteristic of the bearer’s melee weapons by 1. While the bearer is using the Diabolic Power ability, its melee weapons have the [LANCE] ability.
+
+ONChaos Cerastus Knight Atrapos
+
+Ask about this enhancement
+
+######## popup grant:["Bestial Aspect","knight-despoiler","ASSAULT","ASSAULT"] · INFERNAL LANCE Infernal Lance
+ASSAULT · GRANTED BY
+
+Bestial Aspect
+
+Enhancement
+
+CHAOS KNIGHTS model only. The bearer’s ranged weapons have the [ASSAULT] ability. While the bearer is using the Unholy Hunger ability, it can ignore any or all modifiers to its Move characteristic and/or to Advance rolls made for its unit.
+
+Already in the keywords shown (as New Recruit and BSData list them).
+
+ASSAULT Core rule
+
+Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
+
+######## popup grant:["Blasphemous Engine","chaos-cerastus-knight-lancer","W 30",null] · INFERNAL LANCE Infernal Lance
+W 30 · GRANTED BY
+
+Blasphemous Engine
+
+Enhancement
+
+CHAOS KNIGHTS model only. Add 2 to the bearer’s Wounds characteristic. Each time the bearer’s unit makes a Malefic Surge, you can re-roll the Leadership test taken to see if it suffers any mortal wounds.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Fleshmetal Fusion","knight-ruinator-fleshmetal-fusion","T 12",null] · INFERNAL LANCE Infernal Lance
+T 12 · GRANTED BY
+
+Fleshmetal Fusion
+
+Enhancement
+
+CHAOS KNIGHTS model only. Add 1 to the bearer’s Toughness characteristic. While the bearer is using the Unnatural Fortitude ability, each time an attack with a Damage characteristic of 1 is allocated to the bearer, add 1 to any armour saving throw made against that attack.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup grant:["Knight Diabolus","chaos-cerastus-knight-atrapos","WS 2+",null] · INFERNAL LANCE Infernal Lance
+WS 2+ · GRANTED BY
+
+Knight Diabolus
+
+Enhancement
+
+CHAOS KNIGHTS model only. Improve the Weapon Skill characteristic of the bearer’s melee weapons by 1. While the bearer is using the Diabolic Power ability, its melee weapons have the [LANCE] ability.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup rule:ANTI-MONSTER 2+ · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+ANTI-MONSTER 2+
+
+This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.
+
+Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
+
+IN THIS ARMYKnight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+Ask about this rule
+
+######## popup rule:ANTI-VEHICLE 2+ · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+ANTI-VEHICLE 2+
+
+This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.
+
+Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
+
+IN THIS ARMYKnight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+Ask about this rule
+
+######## popup rule:ASSAULT · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+ASSAULT
+
+Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
+
+IN THIS ARMYChaos Cerastus Knight Lancer · Blasphemous Engine, Knight Despoiler · Bestial Aspect
+
+Ask about this rule
+
+######## popup rule:Advance · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:Advance roll · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:Advance rolls · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:BLAST · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+BLAST
+
+Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead.
+
+Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+IN THIS ARMYChaos Cerastus Knight Atrapos · Knight Diabolus, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+Ask about this rule
+
+######## popup rule:Battle-shock test · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:Battle-shocked · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:Below Half-strength · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Starting Strength
+
+The number of models a unit contains at the start of the first battle round is its starting strength. The starting strength of an attached unit is the number of models that unit contains at the start of the first battle round.
+
+Some rules refer to units being below starting strength, or at – or below – half-strength. The meaning of these terms varies depending on a unit’s starting strength, as shown below.
+
+Starting strength of 1:
+
+Below starting strength: model’s remaining wounds are less than its W characteristic.
+At half-strength: model’s remaining wounds are half of its W characteristic.
+Below half-strength: model’s remaining wounds are less than half of its W characteristic.
+
+Starting strength of 2 or more:
+
+Below starting strength: number of remaining models in the unit is less than its starting strength.
+At half-strength: number of remaining models in the unit is half of its starting strength.
+Below half-strength: number of remaining models in the unit is less than half of its starting strength.
+
+Some units cannot be at half-strength: If a model’s W characteristic or a unit’s starting strength cannot be evenly divided in half, that model or unit cannot be at half-strength (but can be below half-strength as described above).
+
+Example: A Captain (1 model) is attached to a unit of Intercessors (5 models). This attached unit has a starting strength of 6. If three Intercessors were destroyed, the unit would be at half-strength. If four Intercessors were destroyed, the unit would be below half-strength. If all of the Intercessors were destroyed, the remaining Captain would be below half-strength, despite having his full wounds remaining.
+
+Ask about this rule
+
+######## popup rule:Charge roll · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:Charge rolls · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:DEVASTATING WOUNDS · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+DEVASTATING WOUNDS
+
+Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+
+Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+
+IN THIS ARMYChaos Cerastus Knight Atrapos · Knight Diabolus
+
+Ask about this rule
+
+######## popup rule:Deadly Demise · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Deadly Demise
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYChaos Cerastus Knight Atrapos · Knight Diabolus, Chaos Cerastus Knight Lancer · Blasphemous Engine, Knight Despoiler · Bestial Aspect, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+Ask about this rule
+
+######## popup rule:Deadly Demise D6 · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Deadly Demise D6
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYChaos Cerastus Knight Atrapos · Knight Diabolus, Chaos Cerastus Knight Lancer · Blasphemous Engine, Knight Despoiler · Bestial Aspect, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+Ask about this rule
+
+######## popup rule:Deadly Demise D6+2 · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Deadly Demise D6+2
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYChaos Cerastus Knight Atrapos · Knight Diabolus, Chaos Cerastus Knight Lancer · Blasphemous Engine, Knight Despoiler · Bestial Aspect, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+Ask about this rule
+
+######## popup rule:Deep Strike · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Deep Strike
+
+Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
+
+App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
+
+IN THIS ARMYNurglings
+
+Ask about this rule
+
+######## popup rule:Engagement Range · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
+######## popup rule:Fall Back move · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Fall-back Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is engaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select fall-back mode:
+
+Ordered Retreat: If your unit is not battle-shocked, you can select this mode.
+Desperate Escape: Otherwise, you must select this mode. Make a hazard roll for each model in your unit (06.03).
+
+WHILE MOVING:
+
+Desperate Escape: Each model that is moved can be moved through enemy models.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to shoot, declare a charge or start an action.
+Desperate Escape: If your unit is not battle-shocked, you must make a battle-shock roll for your unit (01.07).
+
+Desperate Escape Test (app): Some rules may reference the term ‘Desperate Escape test’. In all instances this means the hazard rolls made for the desperate escape mode of a fall-back move.
+
+Abilities that subtract from a unit’s Desperate Escape test instead subtract from those hazard rolls.
+
+If a stratagem or ability instructs a unit to make a Desperate Escape test, that unit:
+
+Must use the desperate escape mode when it is selected to make a fall-back move.
+Must make one hazard roll for each model in that unit.
+Must make a battle-shock roll.
+Ask about this rule
+
+######## popup rule:Feel No Pain 6+ · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Feel No Pain 6+
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+Ask about this rule
+
+######## popup rule:Fights First · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Fights First
+
+While every model in a unit has this ability, that unit is a Fights First unit.
+
+See the Resolve Fights First Combats step in the Fight phase (12.04).
+
+Ask about this rule
+
+######## popup rule:HAZARDOUS · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+HAZARDOUS
+
+Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.
+
+IN THIS ARMYChaos Cerastus Knight Atrapos · Knight Diabolus
+
+Ask about this rule
+
+######## popup rule:Harbingers of Dread · INFERNAL LANCE Infernal Lance
+CHAOS KNIGHTS ARMY RULE
+
+Harbingers of Dread
+
+If your Army Faction is CHAOS KNIGHTS, each unit from your army with this ability gains Dread abilities, depending which are active for your army (see below). The Deathly Terror ability is active for your army from the start of the battle. In addition, at the start of the first, third and fifth battle rounds, you can either select one of the other Dread abilities or randomly select two Dread abilities to apply by rolling two D6 and applying the results rolled, from those numbered 1-6.
+
+Any Dread abilities that have been selected are active until the end of the battle. You cannot select the same Dread ability more than once, and any duplicated Dread abilities (as a result of randomly selecting them) have no additional effect.
+
+Deathly Terror (Aura) · N/A
+
+While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.
+
+Despair (Aura) · 1
+
+While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1. This is cumulative with the Deathly Terror ability (see above).
+
+Doom · 2
+
+Each time this model makes an attack, if the target of that attack is Battle-shocked, add 1 to the Wound roll.
+
+Darkness · 3
+
+This model has Stealth.
+
+Dismay (Aura) · 4
+
+In the Battle-shock step of your opponent’s Command phase, for each enemy unit that is below its Starting Strength and within 9" of this model, that enemy unit must take a Battle-shock test.
+
+Delirium (Aura) · 5
+
+While an enemy unit that is Below Half-strength is within 9" of this model, each time that unit fails a Battle-shock test, it suffers D3 mortal wounds.
+
+Dominion · 6
+
+Add 3" to the range of this model’s Aura abilities.
+
+Ask about this rule
+
+######## popup rule:Hazard roll · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Hazard Roll
+
+To make a hazard roll for a unit, roll one D6: on a 1-2, that roll fails and that unit suffers 1 mortal wound (see above), or 3 mortal wounds instead if each model in that unit is a MONSTER/VEHICLE model. If more than one hazard roll is required for a unit, make all of those rolls simultaneously.
+
+06.03.01 Hazardous Test (app): The term ‘Hazardous test’ is the same as hazard roll.
+
+Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model in the unit make a hazard roll? No, the unit would make 1 single hazard roll.
+
+Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
+
+Ask about this rule
+
+######## popup rule:IGNORES COVER · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+IGNORES COVER
+
+Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+IN THIS ARMYKnight Despoiler · Bestial Aspect, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+Ask about this rule
+
+######## popup rule:Infiltrators · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Infiltrators
+
+During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from your opponent’s deployment zone and all enemy units.
+
+IN THIS ARMYNurglings
+
+Ask about this rule
+
+######## popup rule:LANCE · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+LANCE
+
+Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
+
+IN THIS ARMYChaos Cerastus Knight Atrapos · Knight Diabolus (in Knight Diabolus), Chaos Cerastus Knight Lancer · Blasphemous Engine
+
+Ask about this rule
+
+######## popup rule:LETHAL HITS · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+LETHAL HITS
+
+Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
+
+Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
+
+IN THIS ARMYNurglings
+
+Ask about this rule
+
+######## popup rule:Lance · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Lance
+
+Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
+
+IN THIS ARMYChaos Cerastus Knight Atrapos · Knight Diabolus (in Knight Diabolus), Chaos Cerastus Knight Lancer · Blasphemous Engine
+
+Ask about this rule
+
+######## popup rule:Leadership test · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:Malefic Surge · INFERNAL LANCE Infernal Lance
+INFERNAL LANCE DETACHMENT RULE
+
+Malefic Surge
+
+In your Command phase, one or more CHAOS KNIGHTS units from your army can make a Malefic Surge. Each one that does must first take a Leadership test; if that test is failed, that unit suffers D3 mortal wounds. Then, until the start of your next Command phase, that unit is Empowered. While a unit is Empowered it can use one of the Malefic Surge abilities below. Once that unit has used a Malefic Surge ability, it is no longer Empowered.
+
+Unholy Hunger: When a model in this unit makes a Normal, Advance or Fall Back move, until the end of the phase, add 3" to its Move characteristic.
+Diabolic Power: When this unit is selected to shoot or fight, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until the end of the phase, weapons equipped by models in this unit have the selected ability.
+Unnatural Fortitude: When this unit is selected as the target of an attack, select one of the following to apply until the end of the phase:
+Models in this unit have a 5+ invulnerable save.
+Models in this unit have the Feel No Pain 6+ ability.
+
+Designer’s Note: We recommend placing a token next to Chaos Knights models that are Empowered, removing it once they have used a Malefic Surge ability, and removing all unused tokens at the start of your Command phase.
+
+IN THIS ARMYChaos Cerastus Knight Atrapos · Knight Diabolus, Chaos Cerastus Knight Lancer · Blasphemous Engine, Knight Despoiler · Bestial Aspect, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+Ask about this rule
+
+######## popup rule:Normal · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Normal Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+AFTER MOVING: Your unit must be unengaged.
+
+09.05.01 More Than One Normal Move in a Phase (app): A unit cannot make more than one Normal Move in a phase.
+
+Ask about this rule
+
+######## popup rule:Plunging Fire · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Plunging Fire
+
+Each time a model makes a ranged attack that targets a visible unit containing one or more models on ground level, if one or more of the following conditions apply, improve the BS characteristic of that attack by 1:
+
+The attacking model is on a section of a terrain feature that is 3" or more in height.
+The attacking model has the TOWERING keyword and the target unit is within 12".
+
+23.03 Shooting: The Plunging Fire rule (22.05) has no effect on attacks made by, or targeting, AIRCRAFT units.
+
+Ask about this rule
+
+######## popup rule:RAPID FIRE 3 · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+RAPID FIRE 3
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYKnight Despoiler · Bestial Aspect
+
+Ask about this rule
+
+######## popup rule:Resolve a charge · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:SUSTAINED HITS 1 · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+SUSTAINED HITS 1
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYChaos Cerastus Knight Atrapos · Knight Diabolus, Chaos Cerastus Knight Lancer · Blasphemous Engine, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+Ask about this rule
+
+######## popup rule:SUSTAINED HITS 2 · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+SUSTAINED HITS 2
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYChaos Cerastus Knight Atrapos · Knight Diabolus, Chaos Cerastus Knight Lancer · Blasphemous Engine, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+Ask about this rule
+
+######## popup rule:Stealth · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Stealth
+
+If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).
+
+Ask about this rule
+
+######## popup rule:Super-Heavy Walker · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Super-Heavy Walker
+
+Each time a unit with this ability makes a normal, advance or fall-back move:
+
+Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding TITANIC models) and can move horizontally through sections of terrain features that are 4" or less in height.
+Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked.
+
+Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).
+
+CHAOS KNIGHTS ARMY RULE
+
+Super-heavy Walker
+
+Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4" or less in height. When doing so:
+
+It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.
+It can also move through sections of terrain features that are more than 4" in height, but if it does, after it has moved, roll one D6: on a 1, that model is Battle-shocked.
+
+CHAOS KNIGHTS datasheets list Super-heavy Walker as a FACTION ability (Faction Pack 1.2), whose Codex text differs from Core Rules 24.35; the sources don’t say which applies.
+
+IN THIS ARMYChaos Cerastus Knight Atrapos · Knight Diabolus, Chaos Cerastus Knight Lancer · Blasphemous Engine, Knight Despoiler · Bestial Aspect, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+Ask about this rule
+
+######## popup rule:Sustained Hits · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Sustained Hits
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYChaos Cerastus Knight Atrapos · Knight Diabolus, Chaos Cerastus Knight Lancer · Blasphemous Engine, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+Ask about this rule
+
+######## popup rule:TORRENT · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+TORRENT
+
+Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.
+
+IN THIS ARMYKnight Despoiler · Bestial Aspect, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+Ask about this rule
+
+######## popup rule:TOWERING · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+TOWERING
+
+Each time a model makes a ranged attack that targets a visible unit containing one or more models on ground level, if one or more of the following conditions apply, improve the BS characteristic of that attack by 1:
+
+The attacking model is on a section of a terrain feature that is 3" or more in height.
+The attacking model has the TOWERING keyword and the target unit is within 12".
+
+23.03 Shooting: The Plunging Fire rule (22.05) has no effect on attacks made by, or targeting, AIRCRAFT units.
+
+Ask about this rule
+
+######## popup rule:[ASSAULT] · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+ASSAULT
+
+Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
+
+IN THIS ARMYChaos Cerastus Knight Lancer · Blasphemous Engine, Knight Despoiler · Bestial Aspect
+
+Ask about this rule
+
+######## popup rule:[IGNORES COVER] · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+IGNORES COVER
+
+Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+IN THIS ARMYKnight Despoiler · Bestial Aspect, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+Ask about this rule
+
+######## popup rule:[LANCE] · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+LANCE
+
+Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
+
+IN THIS ARMYChaos Cerastus Knight Atrapos · Knight Diabolus (in Knight Diabolus), Chaos Cerastus Knight Lancer · Blasphemous Engine
+
+Ask about this rule
+
+######## popup rule:[LETHAL HITS] · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+LETHAL HITS
+
+Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
+
+Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
+
+IN THIS ARMYNurglings
+
+Ask about this rule
+
+######## popup rule:[PRECISION] · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+PRECISION
+
+While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.
+
+24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
+
+Ask about this rule
+
+######## popup rule:[SUSTAINED HITS 1] · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+SUSTAINED HITS 1
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYChaos Cerastus Knight Atrapos · Knight Diabolus, Chaos Cerastus Knight Lancer · Blasphemous Engine, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+Ask about this rule
+
+######## popup rule:advance move · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:battle-shock roll · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:benefit of cover · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Benefit of Cover
+
+Each time a ranged attack targets a unit, if every model in that unit meets one or more of the following conditions, that unit has the benefit of cover against that attack:
+
+That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area.
+That model is not fully visible to the attacking model due to one or more intervening terrain features and/or one or more intervening obscuring terrain areas (see below).
+
+Each time a ranged attack targets a unit that has the benefit of cover against it, worsen the BS characteristic of that attack by 1.
+
+Ask about this rule
+
+######## popup rule:charge move · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
+
+######## popup rule:charge roll · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:charge rolls · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:charge targets · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
+
+######## popup rule:engaged · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
+######## popup rule:ingress move · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Ingress Move
+
+SET-UP DISTANCE: 6"
+
+ELIGIBLE IF: Your unit is in strategic reserves (excluding units that are embarked within TRANSPORTS that are themselves in strategic reserves).
+
+EFFECT: Your unit is set up as described in Set Up (03.02).
+
+WHILE MOVING: Set up your unit wholly within the set-up distance of one or more battlefield edges and more than 8" horizontally from all enemy units.
+
+Before the Third Battle Round: While doing so, no models can be set up within your opponent’s deployment zone.
+
+AFTER MOVING: Unless otherwise stated, until the start of the next Charge phase, your unit is not eligible to make any other type of move.
+
+20.03.01 Set Up As Reinforcements (app): If a rule mentions a unit being set up on the battlefield as Reinforcements, it means a unit that made an ingress move.
+
+Ask about this rule
+
+######## popup rule:mortal wound · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+Ask about this rule
+
+######## popup rule:mortal wounds · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+Ask about this rule
+
+######## popup rule:snap shooting · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+snap shooting
+
+ELIGIBLE IF: As stated in the rule allowing this shooting type.
+
+EFFECT: Your unit shoots as described in Making Attacks (04).
+
+WHILE SHOOTING:
+
+You can only target one visible enemy unit within 24" of your unit (and only if it is an eligible target).
+Each attack only hits on an unmodified hit roll of 6 (irrespective of the attacking weapon’s BS characteristic or any modifiers).
+
+Wahapedia core rules (not in GW’s Core Rules PDF, 01-06): Those hits are not critical hits.
+
+You cannot re-roll hit rolls.
+
+AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.
+
+Ask about this rule
+
+######## popup rule:strategic reserves · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Strategic Reserves
+
+Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding FORTIFICATIONS) to place in strategic reserves. Instead of setting up these units on the battlefield during deployment, place them to one side; they are strategic reserves units, and will arrive later in the battle.
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+20.01.01 Reserves (app): The term ‘Reserves’ is the same as strategic reserves.
+
+20.02 Repositioned Units: Some rules allow units to be removed from the battlefield and placed in strategic reserves during the battle. Units that use such rules are known as repositioned units. In addition to any other rules that apply to such units (such as where they can or cannot arrive), all of the following rules apply to them:
+
+If used in the Movement phase, such rules can be used on units that have already moved that phase.
+A repositioned unit that is set up in the same turn in which it made an advance, fall-back or disembark move has still made an advance, fall-back or disembark move that turn.
+When they are removed from the battlefield, any rules that are affecting such units for a specified duration or under specified circumstances continue to affect them while that duration and/or those circumstances apply.
+
+20.03 Arriving from Strategic Reserves: To arrive on the battlefield, each strategic reserves unit must make an ingress move (see below). Unless otherwise stated, they can only do so from the second battle round onwards.
+
+At the end of the third battle round, unless otherwise stated, all strategic reserves units that have not made one or more ingress moves are destroyed, with the following exceptions:
+
+Units embarked within TRANSPORTS that have made an ingress move during the battle.
+Repositioned units (see opposite).
+Ask about this rule
+
+######## popup rule:unengaged · INFERNAL LANCE Infernal Lance
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
+######## popup strat:command-re-roll · INFERNAL LANCE Infernal Lance
+1CP · ANY PHASE · EITHER TURN
+
+Command Re-roll
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:corrupting-taint · INFERNAL LANCE Infernal Lance
+1CP · COMMAND · YOUR TURN
+
+Corrupting Taint
+WHEN
+
+Your Command phase, just after a CHAOS KNIGHTS CHARACTER unit from your army makes a Malefic Surge.
+
+TARGETThat CHAOS KNIGHTS CHARACTER unit.
+
+EFFECT
+
+Select one objective marker your unit is within range of that you control. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
+
+USED BYChaos Cerastus Knight Atrapos · Knight Diabolus, Chaos Cerastus Knight Lancer · Blasphemous Engine, Knight Despoiler · Bestial Aspect, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+Ask about this stratagem
+
+######## popup strat:counteroffensive · INFERNAL LANCE Infernal Lance
+2CP · FIGHT · THEIR TURN
+
+Counteroffensive
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:crushing-impact · INFERNAL LANCE Infernal Lance
+1CP · CHARGE · YOUR TURN
+
+Crushing Impact
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYChaos Cerastus Knight Atrapos · Knight Diabolus, Chaos Cerastus Knight Lancer · Blasphemous Engine, Knight Despoiler · Bestial Aspect, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+Ask about this stratagem
+
+######## popup strat:diabolic-bulwark · INFERNAL LANCE Infernal Lance
+1CP · SHOOTING · THEIR TURN
+
+Diabolic Bulwark
+WHEN
+
+Your opponent’s Shooting phase, just after an enemy unit has selected its targets.
+
+TARGETOne CHAOS KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, models in your unit have a 4+ invulnerable save.
+
+USED BYChaos Cerastus Knight Atrapos · Knight Diabolus, Chaos Cerastus Knight Lancer · Blasphemous Engine, Knight Despoiler · Bestial Aspect, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+Ask about this stratagem
+
+######## popup strat:epic-challenge · INFERNAL LANCE Infernal Lance
+1CP · FIGHT · EITHER TURN
+
+Epic Challenge
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYChaos Cerastus Knight Atrapos · Knight Diabolus, Chaos Cerastus Knight Lancer · Blasphemous Engine, Knight Despoiler · Bestial Aspect, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+Ask about this stratagem
+
+######## popup strat:fire-overwatch · INFERNAL LANCE Infernal Lance
+1CP · MOVEMENT · THEIR TURN
+
+Fire Overwatch
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYno unit in this list
+
+Ask about this stratagem
+
+######## popup strat:hellforged-construction · INFERNAL LANCE Infernal Lance
+1CP · FIGHT · EITHER TURN
+
+Hellforged Construction
+WHEN
+
+Fight phase, just after an enemy unit has selected its targets.
+
+TARGETOne CHAOS KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.
+
+USED BYChaos Cerastus Knight Atrapos · Knight Diabolus, Chaos Cerastus Knight Lancer · Blasphemous Engine, Knight Despoiler · Bestial Aspect, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+Ask about this stratagem
+
+######## popup strat:heroic-intervention · INFERNAL LANCE Infernal Lance
+1CP · CHARGE · THEIR TURN · INTO THE FRAY +1CP
+
+Heroic Intervention
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:insane-bravery · INFERNAL LANCE Infernal Lance
+1CP · COMMAND · YOUR TURN · ONCE PER BATTLE
+
+Insane Bravery
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:profane-symbiosis · INFERNAL LANCE Infernal Lance
+1CP · ANY PHASE · EITHER TURN
+
+Profane Symbiosis
+WHEN
+
+End of any phase.
+
+TARGETOne CHAOS KNIGHTS unit from your army that is not Empowered.
+
+EFFECT
+
+Your unit makes a Malefic Surge.
+
+RESTRICTIONSYou cannot select the same unit as the target of this Stratagem more than once per battle round.
+
+USED BYChaos Cerastus Knight Atrapos · Knight Diabolus, Chaos Cerastus Knight Lancer · Blasphemous Engine, Knight Despoiler · Bestial Aspect, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+Ask about this stratagem
+
+######## popup strat:rapid-ingress · INFERNAL LANCE Infernal Lance
+1CP · MOVEMENT · THEIR TURN
+
+Rapid Ingress
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:unleash-balefire · INFERNAL LANCE Infernal Lance
+1CP · SHOOTING · YOUR TURN
+
+Unleash Balefire
+WHEN
+
+Your Shooting phase.
+
+TARGETOne CHAOS KNIGHTS unit from your army that has not been selected to shoot this phase.
+
+EFFECT
+
+After your unit has shot, select one enemy unit hit by one or more of those attacks. That enemy unit must take a Battle-shock test; if the test is failed, until the end of your opponent’s next turn, it is aflame. While a unit is aflame, subtract 2" from its Move characteristic and subtract 2 from Charge rolls made for it.
+
+USED BYChaos Cerastus Knight Atrapos · Knight Diabolus, Chaos Cerastus Knight Lancer · Blasphemous Engine, Knight Despoiler · Bestial Aspect, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+Ask about this stratagem
+
+######## popup strat:warp-vision · INFERNAL LANCE Infernal Lance
+1CP · SHOOTING · YOUR TURN
+
+Warp Vision
+WHEN
+
+Your Shooting phase.
+
+TARGETOne CHAOS KNIGHTS unit from your army that has not been selected to shoot this phase.
+
+EFFECT
+
+Until the end of the phase, ranged weapons equipped by models in your unit have the [IGNORES COVER] ability.
+
+USED BYChaos Cerastus Knight Atrapos · Knight Diabolus, Chaos Cerastus Knight Lancer · Blasphemous Engine, Knight Despoiler · Bestial Aspect, Knight Ruinator · Fleshmetal Fusion, Knight Ruinator
+
+Ask about this stratagem

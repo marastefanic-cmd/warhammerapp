@@ -1,0 +1,4083 @@
+######## army · INFERNAL LANCE Woof Woof
+Chaos Knights · 2000 / 2000 pts · Strike Force
+
+Houndpack Lance · Hunting Warpack · Disposition: Reconnaissance
+
+Overview
+Bases & proxies
+14
+Units
+14
+Stratagems
+19
+Ranged weapons
+13
+Melee weapons
+8
+Abilities
+21
+Rules
+Damage calculator
+
+New Recruit, exported 22 Oct 2026
+
+######## pregame · WOOF WOOF Overview
+YOUR LIST
+WARLORD
+War Dog Brigand · Final Howl (Aura)
+ENHANCE­MENTS
+Final Howl (Aura) 20 pts on War Dog Brigand
+Snarling Rivalry (upgrade) 10 pts on War Dog Executioner ×3
+Panoply of the Cursed Knights 15 pts on War Dog Karnivore
+DETACH­MENTS
+Houndpack Lance (2 DP), Hunting Warpack (1 DP)
+Disposition: Reconnaissance
+POINTS
+2000 / 2000 · Strike Force
+ARMY AND DETACHMENT RULES
+Harbingers of Dread
+Start of the battle round
+
+If your Army Faction is CHAOS KNIGHTS, each unit from your army with this ability gains Dread abilities, depending which are active for your army (see below). The Deathly Terror ability is active for your army from the start of the battle. In addition, at the start of the first, third and fifth battle rounds, you can either select one of the other Dread abilities or randomly select two Dread abilities to apply by rolling two D6 and applying the results rolled, from those numbered 1-6.
+
+Any Dread abilities that have been selected are active until the end of the battle. You cannot select the same Dread ability more than once, and any duplicated Dread abilities (as a result of randomly selecting them) have no additional effect.
+
+Deathly Terror (Aura) · N/A
+
+While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.
+
+Despair (Aura) · 1
+
+While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1. This is cumulative with the Deathly Terror ability (see above).
+
+Doom · 2
+
+Each time this model makes an attack, if the target of that attack is Battle-shocked, add 1 to the Wound roll.
+
+Darkness · 3
+
+This model has Stealth.
+
+Dismay (Aura) · 4
+
+In the Battle-shock step of your opponent’s Command phase, for each enemy unit that is below its Starting Strength and within 9" of this model, that enemy unit must take a Battle-shock test.
+
+Delirium (Aura) · 5
+
+While an enemy unit that is Below Half-strength is within 9" of this model, each time that unit fails a Battle-shock test, it suffers D3 mortal wounds.
+
+Dominion · 6
+
+Add 3" to the range of this model’s Aura abilities.
+
+Super-heavy Walker
+Your Movement · no unit in this list it applies to
+
+CHAOS KNIGHTS datasheets list Super-heavy Walker as a FACTION ability (Faction Pack 1.2), whose Codex text differs from Core Rules 24.35; the sources don’t say which applies.
+
+Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4" or less in height. When doing so:
+
+It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.
+It can also move through sections of terrain features that are more than 4" in height, but if it does, after it has moved, roll one D6: on a 1, that model is Battle-shocked.
+
+CORE RULESuper-Heavy Walker
+
+Marked Prey
+Houndpack Lance · Your Command
+
+At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, each time a WAR DOG model from your army makes an attack that targets that enemy unit, if that unit is visible to the attacking model, that attack has the [SUSTAINED HITS 1] ability.
+
+KEYWORDS
+
+While using the Houndpack Lance Detachment, the following rules apply:
+
+Your army must include three or more WAR DOG units.
+WAR DOG units from your army have the BATTLELINE keyword.
+When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.*
+
+*Designer’s Note: This means that the selected units can be given Enhancements and one of them can be selected as your WARLORD.
+
+APPLIES TOWar Dog Brigand · Final Howl (Aura), War Dog Brigand (1 of 4), War Dog Brigand (2–4 of 4), War Dog Executioner, War Dog Karnivore · Panoply of the Cursed Knights, War Dog Karnivore
+
+Scenting Fear
+Hunting Warpack · Your Shooting
+
+(Once per battle round, per army) In your Shooting phase, you can select one visible enemy unit within 12" of a friendly WAR DOG unit. That enemy unit has +6" detection range.
+
+This detachment has the WAR DOGS tag and cannot be taken with another WAR DOGS detachment.
+
+APPLIES TOWar Dog Brigand · Final Howl (Aura), War Dog Brigand (1 of 4), War Dog Brigand (2–4 of 4), War Dog Executioner, War Dog Karnivore · Panoply of the Cursed Knights, War Dog Karnivore
+
+START OF THE BATTLE AND THE BATTLE ROUNDS
+START OF THE BATTLE
+Harbingers of Dread · Chaos Knights army rule
+USES PER BATTLE
+NEW GAME
+STRATA­GEMS
+1CP Insane Bravery
+
+Gathered from this list’s datasheets and rules; each line opens the full text.
+
+######## units · OVERVIEW Units Unit M T Sv W LD OC InSv Pts
+BATTLELINE
+14
+War Dog Brigand
+Warlord
+Final Howl (Aura)
+12"
+9
+3+
+14
+7+
+6
+5+*
+155
+War Dog Brigand
+1 of 4
+Houndpack Lance Character
+12"
+9
+3+
+14
+7+
+6
+5+*
+135
+War Dog Brigand
+2–4 of 4
+War Dog Brigand
+12"
+9
+3+
+14
+7+
+6
+5+*
+3×135
+War Dog Executioner
+Snarling Rivalry
+12"
+9
+3+
+14
+7+
+6
+5+*
+3×140
+War Dog Karnivore
+Panoply of the Cursed Knights
+14"
+9
+3+
+14
+7+
+6
+5+*
+160
+War Dog Karnivore
+14"
+9
+3+
+14
+7+
+6
+5+*
+5×145
+
+######## ranged · UNITS Ranged weapons WEAPON RNG A BS S AP D
+War Dog Brigand
+Warlord
+Final Howl (Aura)
+Avenger chaincannon
+24"
+12
+3+
+6
+-1
+1
+Daemonbreath spear
+18"
+2
+3+
+12
+-4
+D6
+MELTA 4
+Diabolus heavy stubber
+36"
+3
+3+
+5
+0
+1
+RAPID FIRE 3
+Target in range of an objective marker: ranged attacks have [IGNORES COVER] (Brigand)
+Damaged (1-5 wounds left): -1 to hit rolls (and -3 OC) (Damaged: 1-5 wounds remaining)
+Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
+Own aura: re-roll wound rolls of 1 (Final Howl (Aura))
+War Dog Brigand
+1 of 4
+Avenger chaincannon
+24"
+12
+3+
+6
+-1
+1
+Daemonbreath spear
+18"
+2
+3+
+12
+-4
+D6
+MELTA 4
+Diabolus heavy stubber
+36"
+3
+3+
+5
+0
+1
+RAPID FIRE 3
+Target in range of an objective marker: ranged attacks have [IGNORES COVER] (Brigand)
+Damaged (1-5 wounds left): -1 to hit rolls (and -3 OC) (Damaged: 1-5 wounds remaining)
+Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
+Within 6" of the War Dog Brigand with Final Howl: re-roll wound rolls of 1 (Final Howl (Aura))
+War Dog Brigand
+2–4 of 4
+×3 units
+Avenger chaincannon
+24"
+12
+3+
+6
+-1
+1
+Daemonbreath spear
+18"
+2
+3+
+12
+-4
+D6
+MELTA 4
+Diabolus heavy stubber
+36"
+3
+3+
+5
+0
+1
+RAPID FIRE 3
+Target in range of an objective marker: ranged attacks have [IGNORES COVER] (Brigand)
+Damaged (1-5 wounds left): -1 to hit rolls (and -3 OC) (Damaged: 1-5 wounds remaining)
+Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
+Within 6" of the War Dog Brigand with Final Howl: re-roll wound rolls of 1 (Final Howl (Aura))
+War Dog Executioner
+Snarling Rivalry
+×3 units
+War Dog autocannon×2
+48"
+4
+3+
+9
+-1
+3
+IGNORES COVER
+Diabolus heavy stubber
+36"
+3
+3+
+5
+0
+1
+RAPID FIRE 3, IGNORES COVER
+Target Below Half-strength: +1 to hit rolls (Executioner)
+Damaged (1-5 wounds left): -1 to hit rolls (and -3 OC) (Damaged: 1-5 wounds remaining)
+Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
+Within 6" of the War Dog Brigand with Final Howl: re-roll wound rolls of 1 (Final Howl (Aura))
+War Dog Karnivore
+Panoply of the Cursed Knights
+Diabolus heavy stubber
+36"
+3
+3+
+5
+0
+1
+RAPID FIRE 3
+Damaged (1-5 wounds left): -1 to hit rolls (and -3 OC) (Damaged: 1-5 wounds remaining)
+Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
+Within 6" of the War Dog Brigand with Final Howl: re-roll wound rolls of 1 (Final Howl (Aura))
+War Dog Karnivore
+×5 units
+Diabolus heavy stubber
+36"
+3
+3+
+5
+0
+1
+RAPID FIRE 3
+Damaged (1-5 wounds left): -1 to hit rolls (and -3 OC) (Damaged: 1-5 wounds remaining)
+Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
+Within 6" of the War Dog Brigand with Final Howl: re-roll wound rolls of 1 (Final Howl (Aura))
+
+######## melee · RANGED Melee weapons WEAPON A WS S AP D
+War Dog Brigand
+Warlord
+Final Howl (Aura)
+Armoured feet
+4
+3+
+6
+0
+1
+Damaged (1-5 wounds left): -1 to hit rolls (and -3 OC) (Damaged: 1-5 wounds remaining)
+Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
+Own aura: re-roll wound rolls of 1 (Final Howl (Aura))
+STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
+1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
+War Dog Brigand
+1 of 4
+Armoured feet
+4
+3+
+6
+0
+1
+Damaged (1-5 wounds left): -1 to hit rolls (and -3 OC) (Damaged: 1-5 wounds remaining)
+Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
+Within 6" of the War Dog Brigand with Final Howl: re-roll wound rolls of 1 (Final Howl (Aura))
+STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
+1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
+War Dog Brigand
+2–4 of 4
+×3 units
+Armoured feet
+4
+3+
+6
+0
+1
+Damaged (1-5 wounds left): -1 to hit rolls (and -3 OC) (Damaged: 1-5 wounds remaining)
+Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
+Within 6" of the War Dog Brigand with Final Howl: re-roll wound rolls of 1 (Final Howl (Aura))
+STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
+1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
+War Dog Executioner
+Snarling Rivalry
+×3 units
+Armoured feet
+4
+3+
+6
+0
+1
+Target Below Half-strength: +1 to hit rolls (Executioner)
+Damaged (1-5 wounds left): -1 to hit rolls (and -3 OC) (Damaged: 1-5 wounds remaining)
+Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
+Within 6" of the War Dog Brigand with Final Howl: re-roll wound rolls of 1 (Final Howl (Aura))
+STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
+1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
+War Dog Karnivore
+Panoply of the Cursed Knights
+Reaper chaintalon
+12
+3+
+8
+-2
+1
+SUSTAINED HITS 1
+OR
+Slaughterclaw
+6
+3+
+12
+-3
+D6+2
+SUSTAINED HITS 1
+Damaged (1-5 wounds left): -1 to hit rolls (and -3 OC) (Damaged: 1-5 wounds remaining)
+Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
+Within 6" of the War Dog Brigand with Final Howl: re-roll wound rolls of 1 (Final Howl (Aura))
+STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
+1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
+War Dog Karnivore
+×5 units
+Reaper chaintalon
+12
+3+
+8
+-2
+1
+SUSTAINED HITS 1
+OR
+Slaughterclaw
+6
+3+
+12
+-3
+D6+2
+SUSTAINED HITS 1
+Damaged (1-5 wounds left): -1 to hit rolls (and -3 OC) (Damaged: 1-5 wounds remaining)
+Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
+Within 6" of the War Dog Brigand with Final Howl: re-roll wound rolls of 1 (Final Howl (Aura))
+STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
+1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
+
+######## abilities · MELEE Abilities
+War Dog Brigand
+Warlord
+Final Howl (Aura)
+Brigand
+
+Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.
+
+Damaged: 1-5 wounds remaining
+
+While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+*Invulnerable Save
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Final Howl (Aura)
+Enhancement
+
+Enhancement
+
+WAR DOG model only. While a friendly War Dog model is within 6" of the bearer, each time that model makes an attack, re-roll a Wound roll of 1.
+
+War Dog Brigand
+1 of 4
+Brigand
+
+Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.
+
+Damaged: 1-5 wounds remaining
+
+While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+*Invulnerable Save
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+War Dog Brigand
+2–4 of 4
+×3 units
+Brigand
+
+Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.
+
+Damaged: 1-5 wounds remaining
+
+While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+*Invulnerable Save
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+War Dog Executioner
+Snarling Rivalry
+×3 units
+Executioner
+
+Each time this model makes an attack that targets a unit Below Half-strength, add 1 to the Hit roll. Each time an enemy unit is destroyed as the result of this model’s attacks, before removing the last model in that unit from the battlefield, each other unit from your opponent’s army that is within 3" of it must take a Battle-shock test.
+
+Damaged: 1-5 wounds remaining
+
+While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+*Invulnerable Save
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Snarling Rivalry
+
+Upgrade
+
+EXECUTIONER unit only. This unit’s ranged attacks have [IGNORES COVER].
+
+War Dog Karnivore
+Panoply of the Cursed Knights
+Karnivore
+
+You can re-roll Advance and Charge rolls made for this model.
+
+Damaged: 1-5 wounds remaining
+
+While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+*Invulnerable Save
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Panoply of the Cursed Knights
+Enhancement
+
+Enhancement
+
+WAR DOG model only. Each time an attack targets the bearer, worsen the Armour Penetration characteristic of that attack by 1.
+
+War Dog Karnivore
+×5 units
+Karnivore
+
+You can re-roll Advance and Charge rolls made for this model.
+
+Damaged: 1-5 wounds remaining
+
+While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+*Invulnerable Save
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+######## rules · ABILITIES Rules
+Chaos Knights · Reconnaissance
+ARMY RULES
+Harbingers of Dread
+Start of the battle round
+
+If your Army Faction is CHAOS KNIGHTS, each unit from your army with this ability gains Dread abilities, depending which are active for your army (see below). The Deathly Terror ability is active for your army from the start of the battle. In addition, at the start of the first, third and fifth battle rounds, you can either select one of the other Dread abilities or randomly select two Dread abilities to apply by rolling two D6 and applying the results rolled, from those numbered 1-6.
+
+Any Dread abilities that have been selected are active until the end of the battle. You cannot select the same Dread ability more than once, and any duplicated Dread abilities (as a result of randomly selecting them) have no additional effect.
+
+Deathly Terror (Aura) · N/A
+
+While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.
+
+Despair (Aura) · 1
+
+While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1. This is cumulative with the Deathly Terror ability (see above).
+
+Doom · 2
+
+Each time this model makes an attack, if the target of that attack is Battle-shocked, add 1 to the Wound roll.
+
+Darkness · 3
+
+This model has Stealth.
+
+Dismay (Aura) · 4
+
+In the Battle-shock step of your opponent’s Command phase, for each enemy unit that is below its Starting Strength and within 9" of this model, that enemy unit must take a Battle-shock test.
+
+Delirium (Aura) · 5
+
+While an enemy unit that is Below Half-strength is within 9" of this model, each time that unit fails a Battle-shock test, it suffers D3 mortal wounds.
+
+Dominion · 6
+
+Add 3" to the range of this model’s Aura abilities.
+
+Super-heavy Walker
+Your Movement · no unit in this list it applies to
+
+CHAOS KNIGHTS datasheets list Super-heavy Walker as a FACTION ability (Faction Pack 1.2), whose Codex text differs from Core Rules 24.35; the sources don’t say which applies.
+
+Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4" or less in height. When doing so:
+
+It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.
+It can also move through sections of terrain features that are more than 4" in height, but if it does, after it has moved, roll one D6: on a 1, that model is Battle-shocked.
+
+CORE RULESuper-Heavy Walker
+
+DETACHMENTS
+HOUNDPACK LANCE
+Marked Prey
+Detachment rule · Your Command
+
+At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, each time a WAR DOG model from your army makes an attack that targets that enemy unit, if that unit is visible to the attacking model, that attack has the [SUSTAINED HITS 1] ability.
+
+KEYWORDS
+
+While using the Houndpack Lance Detachment, the following rules apply:
+
+Your army must include three or more WAR DOG units.
+WAR DOG units from your army have the BATTLELINE keyword.
+When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.*
+
+*Designer’s Note: This means that the selected units can be given Enhancements and one of them can be selected as your WARLORD.
+
+APPLIES TOWar Dog Brigand · Final Howl (Aura), War Dog Brigand (1 of 4), War Dog Brigand (2–4 of 4), War Dog Executioner, War Dog Karnivore · Panoply of the Cursed Knights, War Dog Karnivore
+
+Final Howl (Aura)
+Enhancement · 20 pts · on War Dog Brigand
+
+WAR DOG model only. While a friendly War Dog model is within 6" of the bearer, each time that model makes an attack, re-roll a Wound roll of 1.
+
+ONWar Dog Brigand
+
+Panoply of the Cursed Knights
+Enhancement · 15 pts · on War Dog Karnivore
+
+WAR DOG model only. Each time an attack targets the bearer, worsen the Armour Penetration characteristic of that attack by 1.
+
+ONWar Dog Karnivore
+
+Other enhancements
+2 not in this list
+Preyslayer’s Mantle 15 pts
+
+WAR DOG model only. The bearer has the Super-heavy Walker ability.
+
+Loping Predator 10 pts
+
+WAR DOG model only. The bearer’s ranged weapons have the [ASSAULT] ability.
+
+STRATAGEMSCunning Hunter, Harrying Hounds, Vox-howl, Animalistic Rage, Hungry for Combat, Encircling Pack
+
+HUNTING WARPACK
+Scenting Fear
+Detachment rule · Your Shooting
+
+(Once per battle round, per army) In your Shooting phase, you can select one visible enemy unit within 12" of a friendly WAR DOG unit. That enemy unit has +6" detection range.
+
+This detachment has the WAR DOGS tag and cannot be taken with another WAR DOGS detachment.
+
+APPLIES TOWar Dog Brigand · Final Howl (Aura), War Dog Brigand (1 of 4), War Dog Brigand (2–4 of 4), War Dog Executioner, War Dog Karnivore · Panoply of the Cursed Knights, War Dog Karnivore
+
+Snarling Rivalry
+Upgrade · 10 pts · on War Dog Executioner ×3
+
+EXECUTIONER unit only. This unit’s ranged attacks have [IGNORES COVER].
+
+ONWar Dog Executioner ×3
+
+Other enhancements
+1 not in this list
+Soul-Spoor Auspicator 15 pts
+
+HUNTSMAN unit only. This unit’s ranged attacks have +6" R.
+
+STRATAGEMSLeash of the Masters, Stalking Focus, Insensate Bloodthirst
+
+UNIT RULES
+Deadly Demise
+War Dog Brigand · Final Howl (Aura) D3
+War Dog Brigand (1 of 4) D3
+War Dog Brigand (2–4 of 4) D3
+War Dog Executioner D3
+War Dog Karnivore · Panoply of the Cursed Knights D3
+War Dog Karnivore D3
+
+######## bases · RULES Bases & proxies
+BASES TO PRINT
+
+14× 100mm
+
+WHAT TO WRITE ON EACH BASE
+
+War Dog Brigand · Final Howl (Aura)
+1× 100mm
+War Dog Brigand · Warlord · Final Howl (Aura)
+War Dog Brigand
+1 of 4
+1× 100mm
+War Dog Brigand
+War Dog Brigand
+3 units: mark them apart (2, 3, 4)
+1× 100mm
+War Dog Brigand
+War Dog Executioner
+3 units: mark them apart (1, 2, 3)
+1× 100mm
+War Dog Executioner
+War Dog Karnivore · Panoply of the Cursed Knights
+1× 100mm
+War Dog Karnivore · Panoply of the Cursed Knights
+War Dog Karnivore
+5 units: mark them apart (1, 2, 3, 4, 5)
+1× 100mm
+War Dog Karnivore
+
+From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
+
+######## damage shooting · BASES Damage
+YOUR
+War Dog Brigand (Final Howl (Aura), 155 pts)
+SHOOT
+FIGHT
+BOTH
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+2.6
+of 5 destroyed
+5.6 wounds lost · wiped in 3% of games
+Final Howl (Aura)
+3 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+SHOOT · BIGGEST FIRST
+
+Effects are on the damage these attacks deal.
+
+RANGED WEAPONS
+War Dog Brigand (Final Howl (Aura), 155 pts)
+Avenger chaincannon
+RNG
+24"
+A
+12
+BS
+3+
+S
+6
+AP
+-1
+D
+1
+−3% wiped
+−1.4
+MODELS IF UNTICKED
+Daemonbreath spear
+RNG
+18"
+A
+2
+BS
+3+
+S
+12
+AP
+-4
+D
+D6
+MELTA 4
+−3% wiped
+−1
+MODELS IF UNTICKED
+Diabolus heavy stubber
+RNG
+36"
+A
+3
+BS
+3+
+S
+5
+AP
+0
+D
+1
+RAPID FIRE 3
+−1% wiped
+−0.1
+MODELS IF UNTICKED
+HALF RANGE
+[RAPID FIRE], [MELTA]
+No half-range bonus
+the target is farther than 18" (every weapon is taken to be in range)
+NOW
+Within 18", not 9"
+bonus for Diabolus heavy stubber
++3% wiped
++0.2
+Within 9"
+bonus for Daemonbreath spear and Diabolus heavy stubber
++4% wiped
++0.3
+SITUATION AND RULES
+Plunging Fire
+BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
+if it applies
++9% wiped
++0.7
+MODELS
+Marked Prey
+Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1]
+if it applies
++15% wiped
++0.7
+MODELS
+Doom
+Doom active (Harbingers of Dread), the target Battle-shocked: +1 to wound rolls
+if it applies
++5% wiped
++0.4
+MODELS
+Final Howl (Aura)
+Own aura: re-roll wound rolls of 1
+always counted · you can leave it out
+if left out: −0.4 models · −2% wiped
+The target within range of an objective marker
+if it holds
+no change: [IGNORES COVER] counts only when the target has the benefit of cover
+0
+ALL ▾
+RULES IT SWITCHES ON
+Brigand
+0
+Close-quarters shooting at a unit it is engaged with
+-1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
+if it applies
+−3% wiped
+−0.7
+MODELS
+Close-quarters shooting at another unit
+-1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
+if it applies
+−3% wiped
+−0.7
+MODELS
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
+if it applies
+−3% wiped
+−0.7
+MODELS
+Damaged (1-5 wounds left)
+-1 to hit rolls (and -3 OC)
+if it applies
+−3% wiped
+−0.7
+MODELS
+Fire Overwatch (snap shooting)
+the target within 24" (15.09): hits only on an unmodified 6, never critical; no hit re-rolls
+if it applies
+−3% wiped
+−2.1
+MODELS
+STRATAGEMS
+with their CP
+
+None that change these numbers.
+
+NOT FOR THIS STEP, BY THE RULES (5) · YOURS TO COUNT ANYWAY
+
+1CP Hungry for Combat
+Fight phase only
+NO CHANGE
+
+Nothing to count: 1CP Animalistic Rage (in the other player’s turn only) · 1CP Encircling Pack, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
+
+NOT COUNTED BY THE CALCULATOR (3)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+2CP Vox-howl
+Each enemy unit within 6" of your unit takes a Battle-shock test; each Battle-shocked friendly WAR DOG unit within 6" takes a Leadership test and, if passed, is no longer Battle-shocked (once per turn).
+1CP Leash of the Masters
+Your unit has shot: those attacks do not prevent it from being eligible to start an action.
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## damage fight · DAMAGE Damage
+YOUR
+War Dog Brigand (Final Howl (Aura), 155 pts)
+SHOOT
+FIGHT
+BOTH
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+0.1
+of 5 destroyed
+0.7 wounds lost · wiped in <1% of games
+Charged this turn
+×
+Final Howl (Aura)
+6 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+FIGHT · BIGGEST FIRST
+
+Effects are on the damage these attacks deal.
+
+The charge is taken to succeed (no charge roll).
+
+MELEE WEAPONS
+War Dog Brigand (Final Howl (Aura), 155 pts)
+Armoured feet
+A
+4
+WS
+3+
+S
+6
+AP
+0
+D
+1
+−0.1
+MODELS IF UNTICKED
+SITUATION AND RULES
+Marked Prey
+Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1]
+if it applies
++0.1
+MODELS
+Doom
+Doom active (Harbingers of Dread), the target Battle-shocked: +1 to wound rolls
+if it applies
++0.1
+MODELS
+Final Howl (Aura)
+Own aura: re-roll wound rolls of 1
+always counted · you can leave it out
+if left out: ≈0 models · −0.1 wounds
+Charged this turn
+said to hold
+no change: no rule here needs it
+0
+Damaged (1-5 wounds left)
+-1 to hit rolls (and -3 OC)
+if it applies
+−0.1
+MODELS
+STRATAGEMS
+with their CP
+1CP Hungry for Combat
+Fight phase, two or more WAR DOG units within Engagement Range of the target (they can only target it): a Critical Hit on an unmodified hit roll of 5+
+if used
+0
+NOT FOR THIS STEP, BY THE RULES (1)
+
+Nothing to count: 1CP Leash of the Masters (Shooting phase only)
+
+NOT COUNTED BY THE CALCULATOR (6)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+2CP Vox-howl
+Each enemy unit within 6" of your unit takes a Battle-shock test; each Battle-shocked friendly WAR DOG unit within 6" takes a Leadership test and, if passed, is no longer Battle-shocked (once per turn).
+1CP Animalistic Rage
+Your WAR DOG unit just destroyed, not yet selected to attack this phase: before its Deadly Demise, it can shoot or fight, targeting only the enemy unit that destroyed it, if that unit is an eligible target.
+1CP Encircling Pack
+Your unit wholly within 12" of a battlefield edge and not within Engagement Range of an enemy unit: remove it from the battlefield and place it into Strategic Reserves.
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+1CP Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## damage both · DAMAGE Damage
+YOUR
+War Dog Brigand (Final Howl (Aura), 155 pts)
+SHOOT
+FIGHT
+BOTH
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+2.9
+of 5 destroyed
+6.3 wounds lost · wiped in 8% of games
+
+Shoot 2.6 · Fight 0.3 · the charge is taken to succeed
+
+Final Howl (Aura)
+Charged this turn
+×
+Final Howl (Aura) (fight)
+9 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+SHOOT → CHARGE → FIGHT · BIGGEST FIRST
+
+Effects are on the total: models destroyed by the end of the fight, the shooting’s choices and the fight’s alike.
+
+The charge is taken to succeed (no charge roll); “Charged this turn” is ticked for the fight.
+
+THE SHOOTING
+FIRST
+RANGED WEAPONS
+War Dog Brigand (Final Howl (Aura), 155 pts)
+Avenger chaincannon
+RNG
+24"
+A
+12
+BS
+3+
+S
+6
+AP
+-1
+D
+1
+−8% wiped
+−1.4
+MODELS IF UNTICKED
+Daemonbreath spear
+RNG
+18"
+A
+2
+BS
+3+
+S
+12
+AP
+-4
+D
+D6
+MELTA 4
+−7% wiped
+−1
+MODELS IF UNTICKED
+Diabolus heavy stubber
+RNG
+36"
+A
+3
+BS
+3+
+S
+5
+AP
+0
+D
+1
+RAPID FIRE 3
+−4% wiped
+−0.2
+MODELS IF UNTICKED
+HALF RANGE
+[RAPID FIRE], [MELTA]
+No half-range bonus
+the target is farther than 18" (every weapon is taken to be in range)
+NOW
+Within 18", not 9"
+bonus for Diabolus heavy stubber
++4% wiped
++0.2
+Within 9"
+bonus for Daemonbreath spear and Diabolus heavy stubber
++6% wiped
++0.3
+SITUATION AND RULES
+Plunging Fire
+BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
+if it applies
++13% wiped
++0.7
+MODELS
+Marked Prey
+Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1]
+if it applies
++20% wiped
++0.7
+MODELS
+Doom
+Doom active (Harbingers of Dread), the target Battle-shocked: +1 to wound rolls
+if it applies
++10% wiped
++0.5
+MODELS
+Final Howl (Aura)
+Own aura: re-roll wound rolls of 1
+always counted · you can leave it out
+if left out: −0.4 models · −4% wiped
+The target within range of an objective marker
+if it holds
+no change: [IGNORES COVER] counts only when the target has the benefit of cover
+0
+ALL ▾
+RULES IT SWITCHES ON
+Brigand
+0
+Close-quarters shooting at a unit it is engaged with
+-1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
+if it applies
+−6% wiped
+−0.7
+MODELS
+Close-quarters shooting at another unit
+-1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
+if it applies
+−6% wiped
+−0.7
+MODELS
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
+if it applies
+−6% wiped
+−0.7
+MODELS
+Damaged (1-5 wounds left)
+-1 to hit rolls (and -3 OC)
+if it applies
+−6% wiped
+−0.7
+MODELS
+STRATAGEMS
+with their CP
+
+None that change these numbers.
+
+NOT FOR THIS STEP, BY THE RULES (5) · YOURS TO COUNT ANYWAY
+
+1CP Hungry for Combat
+Fight phase only
+NO CHANGE
+
+Nothing to count: 1CP Animalistic Rage (in the other player’s turn only) · 1CP Encircling Pack, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
+
+NOT COUNTED BY THE CALCULATOR (3)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+2CP Vox-howl
+Each enemy unit within 6" of your unit takes a Battle-shock test; each Battle-shocked friendly WAR DOG unit within 6" takes a Leadership test and, if passed, is no longer Battle-shocked (once per turn).
+1CP Leash of the Masters
+Your unit has shot: those attacks do not prevent it from being eligible to start an action.
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+THE FIGHT
+THEN, AGAINST WHAT THE SHOOTING LEFT
+MELEE WEAPONS
+War Dog Brigand (Final Howl (Aura), 155 pts)
+
+Against what the shooting left of the target, in each game.
+
+Armoured feet
+A
+4
+WS
+3+
+S
+6
+AP
+0
+D
+1
+−4% wiped
+−0.3
+MODELS IF UNTICKED
+SITUATION AND RULES
+Doom
+Doom active (Harbingers of Dread), the target Battle-shocked: +1 to wound rolls
+if it applies
++1% wiped
++0.1
+MODELS
+Marked Prey
+Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1]
+if it applies
++2% wiped
++0.1
+MODELS
+Final Howl (Aura)
+Own aura: re-roll wound rolls of 1
+always counted · you can leave it out
+if left out: −0.1 models
+Charged this turn
+holds: Both takes the charge as made (no charge roll)
+no change: no rule here needs it
+0
+Damaged (1-5 wounds left)
+-1 to hit rolls (and -3 OC)
+if it applies
+−1% wiped
+−0.1
+MODELS
+STRATAGEMS
+with their CP
+1CP Hungry for Combat
+Fight phase, two or more WAR DOG units within Engagement Range of the target (they can only target it): a Critical Hit on an unmodified hit roll of 5+
+if used
+0
+NOT FOR THIS STEP, BY THE RULES (1)
+
+Nothing to count: 1CP Leash of the Masters (Shooting phase only)
+
+NOT COUNTED BY THE CALCULATOR (6)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+2CP Vox-howl
+Each enemy unit within 6" of your unit takes a Battle-shock test; each Battle-shocked friendly WAR DOG unit within 6" takes a Leadership test and, if passed, is no longer Battle-shocked (once per turn).
+1CP Animalistic Rage
+Your WAR DOG unit just destroyed, not yet selected to attack this phase: before its Deadly Demise, it can shoot or fight, targeting only the enemy unit that destroyed it, if that unit is an eligible target.
+1CP Encircling Pack
+Your unit wholly within 12" of a battlefield edge and not within Engagement Range of an enemy unit: remove it from the battlefield and place it into Strategic Reserves.
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+1CP Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## strats {"folded":true} · DAMAGE Stratagems
+EXPAND ALL
+HOUNDPACK LANCE
+6
+1
+CP
+Cunning Hunter
+Until the end of the turn, your unit can shoot and declare a charge in a turn in which it Fell Back.
+Your Movement Any unit
+1
+CP
+Harrying Hounds
+An enemy unit just ended a Normal, Advance or Fall Back move within 8" of your unit: your unit can make a Normal move of up to 6".
+Their Movement Any unit
+2
+CP
+Vox-howl
+Each enemy unit within 6" of your unit takes a Battle-shock test; each Battle-shocked friendly WAR DOG unit within 6" takes a Leadership test and, if passed, is no longer Battle-shocked (once per turn).
+Start of Shoot/Fight War Dog Brigand ×2, War Dog Karnivore
+1
+CP
+Animalistic Rage
+Your WAR DOG unit just destroyed, not yet selected to attack this phase: before its Deadly Demise, it can shoot or fight, targeting only the enemy unit that destroyed it, if that unit is an eligible target.
+Their Shoot · Fight Any unit
+1
+CP
+Hungry for Combat
+Two or more of your WAR DOG units within Engagement Range of the same enemy unit: until the end of the phase, they can only target one enemy unit within Engagement Range of them, but their attacks score a Critical Hit on an unmodified hit roll of 5+.
+Start of Fight Any unit
+1
+CP
+Encircling Pack
+Your unit wholly within 12" of a battlefield edge and not within Engagement Range of an enemy unit: remove it from the battlefield and place it into Strategic Reserves.
+End of their Fight Any unit
+HUNTING WARPACK
+3
+1
+CP
+Leash of the Masters
+Your unit has shot: those attacks do not prevent it from being eligible to start an action.
+Your Shooting Any unit
+1
+CP
+Stalking Focus
+An enemy unit targets your unit within range of an objective: ranged attacks that target your unit have -1 AP until that enemy unit has attacked.
+Their Shooting Any unit
+1
+CP
+Insensate Bloodthirst
+An enemy unit targets your unit in the Fight phase: your unit has Feel No Pain 5+.
+Fight Any unit
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+The battle-shock roll you are about to make for your unit is automatically successful.
+Your Command · Once per battle Any unit
+1
+CP
+Rapid Ingress
+Your unit in strategic reserves makes an ingress move (not in the first battle round).
+End of their Movement Any unit
+1
+CP
+Fire Overwatch
+Your unengaged unit shoots using snap shooting.
+End of their Movement Any unit
+1
+CP
+Crushing Impact
+After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+Your Charge Any unit
+1
+CP
+Heroic Intervention
+Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+End of their Charge · Into the Fray +1CP Any unit
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+Fight War Dog Brigand ×2, War Dog Karnivore
+2
+CP
+Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+Their Fight Any unit
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+Any phase Any unit
+1
+CP
+Explosives
+Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
+Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
+1
+CP
+Smokescreen
+Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+Start of their Shooting No unit in this list can use it (needs SMOKE)
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## strats {"open":true} · STRATAGEMS Stratagems
+COLLAPSE ALL
+HOUNDPACK LANCE
+6
+1
+CP
+Cunning Hunter
+Your Movement Any unit
+WHEN
+
+Your Movement phase, just after a WAR DOG unit from your army Falls Back.
+
+TARGETThat WAR DOG unit.
+
+EFFECT
+
+Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back.
+
+USED BYany unit
+
+1
+CP
+Harrying Hounds
+Their Movement Any unit
+WHEN
+
+Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.
+
+TARGETOne WAR DOG unit from your army that is within 8" of that enemy unit.
+
+EFFECT
+
+Your unit can make a Normal move of up to 6".
+
+USED BYany unit
+
+2
+CP
+Vox-howl
+Start of Shoot/Fight War Dog Brigand ×2, War Dog Karnivore
+WHEN
+
+Start of the Shooting phase or the start of the Fight phase.
+
+TARGETOne WAR DOG CHARACTER unit from your army.
+
+EFFECT
+
+Each enemy unit within 6" of your unit must take a Battle-shock test. Each friendly WAR DOG unit that is within 6" of your unit and is Battle-shocked must take a Leadership test; if that test is passed, that unit is no longer Battle-shocked.
+
+RESTRICTIONSYou can only use this Stratagem once per turn.
+
+USED BYWar Dog Brigand · Final Howl (Aura), War Dog Brigand (1 of 4), War Dog Karnivore · Panoply of the Cursed Knights
+
+1
+CP
+Animalistic Rage
+Their Shoot · Fight Any unit
+WHEN
+
+Your opponent’s Shooting phase or the Fight phase, just after a WAR DOG unit from your army that has not been selected to attack this phase is destroyed.
+
+TARGETThat WAR DOG unit. You can use this Stratagem on that unit even though it was just destroyed.
+
+EFFECT
+
+Before resolving your unit’s Deadly Demise ability, it can either shoot or fight. When doing so, it must target only the enemy unit that just destroyed it, and can only do so if that enemy unit is an eligible target. After it has done so and after any Consolidation moves have been made, resolve your unit’s Deadly Demise ability as normal.
+
+USED BYany unit
+
+1
+CP
+Hungry for Combat
+Start of Fight Any unit
+WHEN
+
+Start of the Fight phase.
+
+TARGETTwo or more WAR DOG units from your army within Engagement Range of the same enemy unit.
+
+EFFECT
+
+Select one enemy unit within Engagement Range of those WAR DOG units. Until the end of the phase, models in those WAR DOG units can only target that enemy unit, but each time a model in one of those WAR DOG units makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.
+
+USED BYany unit
+
+1
+CP
+Encircling Pack
+End of their Fight Any unit
+WHEN
+
+End of your opponent’s Fight phase.
+
+TARGETOne WAR DOG unit from your army that is wholly within 12" of one or more battlefield edges and not within Engagement Range of one or more enemy units.
+
+EFFECT
+
+Remove your unit from the battlefield and place it into Strategic Reserves.
+
+USED BYany unit
+
+HUNTING WARPACK
+3
+1
+CP
+Leash of the Masters
+Your Shooting Any unit
+WHEN
+
+Your Shooting phase, when a friendly WAR DOG unit has shot.
+
+TARGETThat WAR DOG unit.
+
+EFFECT
+
+Those attacks do not prevent your unit from being eligible to start an action.
+
+USED BYany unit
+
+1
+CP
+Stalking Focus
+Their Shooting Any unit
+WHEN
+
+Your opponent’s Shooting phase, when an enemy unit targets a friendly WAR DOG unit within range of an objective.
+
+TARGETThat WAR DOG unit.
+
+EFFECT
+
+Ranged attacks that target your unit have -1 AP until that enemy unit has attacked.
+
+USED BYany unit
+
+1
+CP
+Insensate Bloodthirst
+Fight Any unit
+WHEN
+
+Fight phase, when an enemy unit targets a friendly WAR DOG unit.
+
+TARGETThat WAR DOG unit.
+
+EFFECT
+
+Your unit has Feel No Pain 5+.
+
+USED BYany unit
+
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+Your Command · Once per battle Any unit
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+1
+CP
+Rapid Ingress
+End of their Movement Any unit
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+1
+CP
+Fire Overwatch
+End of their Movement Any unit
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYany unit
+
+1
+CP
+Crushing Impact
+Your Charge Any unit
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYany unit
+
+1
+CP
+Heroic Intervention
+End of their Charge · Into the Fray +1CP Any unit
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYany unit
+
+1
+CP
+Epic Challenge
+Fight War Dog Brigand ×2, War Dog Karnivore
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYWar Dog Brigand · Final Howl (Aura), War Dog Brigand (1 of 4), War Dog Karnivore · Panoply of the Cursed Knights
+
+2
+CP
+Counteroffensive
+Their Fight Any unit
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+1
+CP
+Command Re-roll
+Any phase Any unit
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+1
+CP
+Explosives
+Your Shooting No unit in this list can use it (needs EXPLOSIVES OR GRENADES)
+WHEN
+
+Your Shooting phase.
+
+TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one EXPLOSIVES/GRENADES model in your unit.
+2. Select one unengaged enemy unit within 8" of and visible to that model.
+3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
+
+Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+
+USED BYno unit in this list (needs EXPLOSIVES OR GRENADES)
+
+1
+CP
+Smokescreen
+Start of their Shooting No unit in this list can use it (needs SMOKE)
+WHEN
+
+Start of your opponent’s Shooting phase.
+
+TARGETOne friendly SMOKE unit.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
+
+USED BYno unit in this list (needs SMOKE)
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## unit war-dog-brigand-final-howl-aura · STRATAGEMS Woof Woof
+WAR DOG BRIGAND
+155 PTS
+Battleline
+Warlord
+Final Howl (Aura)
+Models
+Options
+1× War Dog Brigand (Houndpack Lance Character)
+Armoured feet, Avenger chaincannon, Daemonbreath spear, Diabolus heavy stubber
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+War Dog Brigand
+100mm
+12"
+9
+3+
+14
+7+
+6
+5+*
+WHEN TARGETED5+ invulnerable save against ranged attacks only · 1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+ · 1CP Stalking Focus: their Shooting phase, within range of an objective: -1 AP to ranged attacks that target it (until that enemy unit has attacked)
+DAMAGED 1-5 W
+-1 TO HIT ROLLS (AND -3 OC)
+ALL ATTACKS
+Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
+Own aura: re-roll wound rolls of 1 (Final Howl (Aura))
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Avenger chaincannon
+24"
+12
+3+
+6
+-1
+1
+Daemonbreath spear
+18"
+2
+3+
+12
+-4
+D6
+MELTA 4
+Diabolus heavy stubber
+36"
+3
+3+
+5
+0
+1
+RAPID FIRE 3
+Target in range of an objective marker: ranged attacks have [IGNORES COVER] (Brigand)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Armoured feet
+4
+3+
+6
+0
+1
+STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
+1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
+ABILITIES
+Brigand
+
+Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.
+
+*Invulnerable Save
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Final Howl (Aura)
+Enhancement
+
+Enhancement
+
+WAR DOG model only. While a friendly War Dog model is within 6" of the bearer, each time that model makes an attack, re-roll a Wound roll of 1.
+
+Rules
+Deadly Demise D3, Harbingers of Dread, Marked Prey, Scenting Fear
+Stratagems
+
+HOUNDPACK LANCE Cunning Hunter, Harrying Hounds, Vox-howl, Animalistic Rage, Hungry for Combat, Encircling Pack
+
+HUNTING WARPACK Leash of the Masters, Stalking Focus, Insensate Bloodthirst
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+BATTLELINE
+BRIGAND
+CHAOS
+CHARACTER*
+FACTION: CHAOS KNIGHTS
+VEHICLE
+WALKER
+WAR DOG
+WARLORD
+*from Houndpack Lance Character (Houndpack Lance: “When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”)
+Ask about this unit
+War Dog Brigand (1 of 4) ›
+
+######## unit war-dog-brigand · WAR DOG BRIGAND Woof Woof
+WAR DOG BRIGAND
+135 PTS
+Battleline
+1 of 4
+Models
+Options
+1× War Dog Brigand (Houndpack Lance Character)
+Armoured feet, Avenger chaincannon, Daemonbreath spear, Diabolus heavy stubber
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+War Dog Brigand
+100mm
+12"
+9
+3+
+14
+7+
+6
+5+*
+WHEN TARGETED5+ invulnerable save against ranged attacks only · 1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+ · 1CP Stalking Focus: their Shooting phase, within range of an objective: -1 AP to ranged attacks that target it (until that enemy unit has attacked)
+DAMAGED 1-5 W
+-1 TO HIT ROLLS (AND -3 OC)
+ALL ATTACKS
+Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
+Within 6" of the War Dog Brigand with Final Howl: re-roll wound rolls of 1 (Final Howl (Aura))
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Avenger chaincannon
+24"
+12
+3+
+6
+-1
+1
+Daemonbreath spear
+18"
+2
+3+
+12
+-4
+D6
+MELTA 4
+Diabolus heavy stubber
+36"
+3
+3+
+5
+0
+1
+RAPID FIRE 3
+Target in range of an objective marker: ranged attacks have [IGNORES COVER] (Brigand)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Armoured feet
+4
+3+
+6
+0
+1
+STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
+1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
+ABILITIES
+Brigand
+
+Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.
+
+*Invulnerable Save
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Rules
+Deadly Demise D3, Harbingers of Dread, Marked Prey, Scenting Fear
+Stratagems
+
+HOUNDPACK LANCE Cunning Hunter, Harrying Hounds, Vox-howl, Animalistic Rage, Hungry for Combat, Encircling Pack
+
+HUNTING WARPACK Leash of the Masters, Stalking Focus, Insensate Bloodthirst
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+BATTLELINE
+BRIGAND
+CHAOS
+CHARACTER*
+FACTION: CHAOS KNIGHTS
+VEHICLE
+WALKER
+WAR DOG
+*from Houndpack Lance Character (Houndpack Lance: “When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”)
+Ask about this unit
+‹ War Dog Brigand · Final Howl (Aura)
+War Dog Brigand (2–4 of 4) ›
+
+######## unit war-dog-brigand-2 · WAR DOG BRIGAND Woof Woof
+WAR DOG BRIGAND
+135 PTS EACH
+Battleline · ×3 in list
+2–4 of 4
+Models
+Options
+1× War Dog Brigand
+Armoured feet, Avenger chaincannon, Daemonbreath spear, Diabolus heavy stubber
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+War Dog Brigand
+100mm
+12"
+9
+3+
+14
+7+
+6
+5+*
+WHEN TARGETED5+ invulnerable save against ranged attacks only · 1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+ · 1CP Stalking Focus: their Shooting phase, within range of an objective: -1 AP to ranged attacks that target it (until that enemy unit has attacked)
+DAMAGED 1-5 W
+-1 TO HIT ROLLS (AND -3 OC)
+ALL ATTACKS
+Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
+Within 6" of the War Dog Brigand with Final Howl: re-roll wound rolls of 1 (Final Howl (Aura))
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Avenger chaincannon
+24"
+12
+3+
+6
+-1
+1
+Daemonbreath spear
+18"
+2
+3+
+12
+-4
+D6
+MELTA 4
+Diabolus heavy stubber
+36"
+3
+3+
+5
+0
+1
+RAPID FIRE 3
+Target in range of an objective marker: ranged attacks have [IGNORES COVER] (Brigand)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Armoured feet
+4
+3+
+6
+0
+1
+STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
+1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
+ABILITIES
+Brigand
+
+Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.
+
+*Invulnerable Save
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Rules
+Deadly Demise D3, Harbingers of Dread, Marked Prey, Scenting Fear
+Stratagems
+
+HOUNDPACK LANCE Cunning Hunter, Harrying Hounds, Animalistic Rage, Hungry for Combat, Encircling Pack
+
+HUNTING WARPACK Leash of the Masters, Stalking Focus, Insensate Bloodthirst
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
+
+Keywords
+BATTLELINE
+BRIGAND
+CHAOS
+FACTION: CHAOS KNIGHTS
+VEHICLE
+WALKER
+WAR DOG
+Ask about this unit
+‹ War Dog Brigand (1 of 4)
+War Dog Executioner ›
+
+######## unit war-dog-executioner · WAR DOG BRIGAND Woof Woof
+WAR DOG EXECUTIONER
+140 PTS EACH
+Battleline · ×3 in list
+Snarling Rivalry
+Models
+Options
+1× War Dog Executioner
+Armoured feet, 2× War Dog autocannon, Diabolus heavy stubber
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+War Dog Executioner
+100mm
+12"
+9
+3+
+14
+7+
+6
+5+*
+WHEN TARGETED5+ invulnerable save against ranged attacks only · 1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+ · 1CP Stalking Focus: their Shooting phase, within range of an objective: -1 AP to ranged attacks that target it (until that enemy unit has attacked)
+DAMAGED 1-5 W
+-1 TO HIT ROLLS (AND -3 OC)
+ALL ATTACKS
+Target Below Half-strength: +1 to hit rolls (Executioner)
+Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
+Within 6" of the War Dog Brigand with Final Howl: re-roll wound rolls of 1 (Final Howl (Aura))
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+War Dog autocannon×2
+48"
+4
+3+
+9
+-1
+3
+IGNORES COVER
+Diabolus heavy stubber
+36"
+3
+3+
+5
+0
+1
+RAPID FIRE 3, IGNORES COVER
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Armoured feet
+4
+3+
+6
+0
+1
+STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
+1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
+ABILITIES
+Executioner
+
+Each time this model makes an attack that targets a unit Below Half-strength, add 1 to the Hit roll. Each time an enemy unit is destroyed as the result of this model’s attacks, before removing the last model in that unit from the battlefield, each other unit from your opponent’s army that is within 3" of it must take a Battle-shock test.
+
+*Invulnerable Save
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Snarling Rivalry
+
+Upgrade
+
+EXECUTIONER unit only. This unit’s ranged attacks have [IGNORES COVER].
+
+Rules
+Deadly Demise D3, Harbingers of Dread, Marked Prey, Scenting Fear
+Stratagems
+
+HOUNDPACK LANCE Cunning Hunter, Harrying Hounds, Animalistic Rage, Hungry for Combat, Encircling Pack
+
+HUNTING WARPACK Leash of the Masters, Stalking Focus, Insensate Bloodthirst
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
+
+Keywords
+BATTLELINE
+CHAOS
+EXECUTIONER
+FACTION: CHAOS KNIGHTS
+VEHICLE
+WALKER
+WAR DOG
+Ask about this unit
+‹ War Dog Brigand (2–4 of 4)
+War Dog Karnivore · Panoply of the Cursed Knights ›
+
+######## unit war-dog-karnivore-panoply-of-the-cursed-knights · WAR DOG EXECUTIONER Woof Woof
+WAR DOG KARNIVORE
+160 PTS
+Battleline
+Panoply of the Cursed Knights
+Models
+Options
+1× War Dog Karnivore (Houndpack Lance Character)
+Reaper chaintalon, Slaughterclaw, Diabolus heavy stubber
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+War Dog Karnivore
+100mm
+14"
+9
+3+
+14
+7+
+6
+5+*
+WHEN TARGETED5+ invulnerable save against ranged attacks only · worsen the AP of each attack that targets it by 1 · 1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+ · 1CP Stalking Focus: their Shooting phase, within range of an objective: -1 AP to ranged attacks that target it (until that enemy unit has attacked)
+DAMAGED 1-5 W
+-1 TO HIT ROLLS (AND -3 OC)
+ALL ATTACKS
+Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
+Within 6" of the War Dog Brigand with Final Howl: re-roll wound rolls of 1 (Final Howl (Aura))
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Diabolus heavy stubber
+36"
+3
+3+
+5
+0
+1
+RAPID FIRE 3
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Reaper chaintalon
+12
+3+
+8
+-2
+1
+SUSTAINED HITS 1
+OR
+Slaughterclaw
+6
+3+
+12
+-3
+D6+2
+SUSTAINED HITS 1
+STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
+1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
+ABILITIES
+Karnivore
+
+You can re-roll Advance and Charge rolls made for this model.
+
+*Invulnerable Save
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Panoply of the Cursed Knights
+Enhancement
+
+Enhancement
+
+WAR DOG model only. Each time an attack targets the bearer, worsen the Armour Penetration characteristic of that attack by 1.
+
+Rules
+Deadly Demise D3, Harbingers of Dread, Marked Prey, Scenting Fear
+Stratagems
+
+HOUNDPACK LANCE Cunning Hunter, Harrying Hounds, Vox-howl, Animalistic Rage, Hungry for Combat, Encircling Pack
+
+HUNTING WARPACK Leash of the Masters, Stalking Focus, Insensate Bloodthirst
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+BATTLELINE
+CHAOS
+CHARACTER*
+FACTION: CHAOS KNIGHTS
+KARNIVORE
+VEHICLE
+WALKER
+WAR DOG
+*from Houndpack Lance Character (Houndpack Lance: “When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”)
+Ask about this unit
+‹ War Dog Executioner
+War Dog Karnivore ›
+
+######## unit war-dog-karnivore · WAR DOG KARNIVORE Woof Woof
+WAR DOG KARNIVORE
+145 PTS EACH
+Battleline · ×5 in list
+Models
+Options
+1× War Dog Karnivore
+Reaper chaintalon, Slaughterclaw, Diabolus heavy stubber
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+War Dog Karnivore
+100mm
+14"
+9
+3+
+14
+7+
+6
+5+*
+WHEN TARGETED5+ invulnerable save against ranged attacks only · 1CP Insensate Bloodthirst: Fight phase: Feel No Pain 5+ · 1CP Stalking Focus: their Shooting phase, within range of an objective: -1 AP to ranged attacks that target it (until that enemy unit has attacked)
+DAMAGED 1-5 W
+-1 TO HIT ROLLS (AND -3 OC)
+ALL ATTACKS
+Target is the unit selected at the start of your Command phase, visible to the attacking model: [SUSTAINED HITS 1] (Marked Prey)
+Within 6" of the War Dog Brigand with Final Howl: re-roll wound rolls of 1 (Final Howl (Aura))
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Diabolus heavy stubber
+36"
+3
+3+
+5
+0
+1
+RAPID FIRE 3
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Reaper chaintalon
+12
+3+
+8
+-2
+1
+SUSTAINED HITS 1
+OR
+Slaughterclaw
+6
+3+
+12
+-3
+D6+2
+SUSTAINED HITS 1
+STRATAGEMS · HOUNDPACK LANCE · FIGHT PHASE
+1CP Hungry for Combat: a Critical Hit on an unmodified hit roll of 5+, two or more WAR DOG units within Engagement Range of the target (they can only target it)
+ABILITIES
+Karnivore
+
+You can re-roll Advance and Charge rolls made for this model.
+
+*Invulnerable Save
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+Rules
+Deadly Demise D3, Harbingers of Dread, Marked Prey, Scenting Fear
+Stratagems
+
+HOUNDPACK LANCE Cunning Hunter, Harrying Hounds, Animalistic Rage, Hungry for Combat, Encircling Pack
+
+HUNTING WARPACK Leash of the Masters, Stalking Focus, Insensate Bloodthirst
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
+
+Keywords
+BATTLELINE
+CHAOS
+FACTION: CHAOS KNIGHTS
+KARNIVORE
+VEHICLE
+WALKER
+WAR DOG
+Ask about this unit
+‹ War Dog Karnivore · Panoply of the Cursed Knights
+
+######## popup ability:woof-woof|*Invulnerable Save|This model has a 5+ invulnerable save against ranged attacks. · WAR DOG KARNIVORE Woof Woof
+ABILITY
+
+*Invulnerable Save
+
+This model has a 5+ invulnerable save against ranged attacks.
+
+UNITWar Dog Brigand · Final Howl (Aura), War Dog Brigand (1 of 4), War Dog Brigand (2–4 of 4), War Dog Executioner, War Dog Karnivore · Panoply of the Cursed Knights, War Dog Karnivore
+
+Ask about this ability
+
+######## popup ability:woof-woof|Brigand|Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers. · WOOF WOOF Woof Woof
+ABILITY
+
+Brigand
+
+Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers.
+
+UNITWar Dog Brigand · Final Howl (Aura), War Dog Brigand (1 of 4), War Dog Brigand (2–4 of 4)
+
+Ask about this ability
+
+######## popup ability:woof-woof|Damaged: 1-5 wounds remaining|While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**. · WOOF WOOF Woof Woof
+ABILITY
+
+Damaged: 1-5 wounds remaining
+
+While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+
+UNITWar Dog Brigand · Final Howl (Aura), War Dog Brigand (1 of 4), War Dog Brigand (2–4 of 4), War Dog Executioner, War Dog Karnivore · Panoply of the Cursed Knights, War Dog Karnivore
+
+Ask about this ability
+
+######## popup ability:woof-woof|Executioner|Each time this model makes an attack that targets a unit **Below Half-strength**, add 1 to the **Hit roll**. Each time an enemy unit is destroyed as the result of this model’s attacks, before removing the last model in that unit from the battlefield, each other unit from your opponent’s army that is within 3" of it must take a **Battle-shock test**. · WOOF WOOF Woof Woof
+ABILITY
+
+Executioner
+
+Each time this model makes an attack that targets a unit Below Half-strength, add 1 to the Hit roll. Each time an enemy unit is destroyed as the result of this model’s attacks, before removing the last model in that unit from the battlefield, each other unit from your opponent’s army that is within 3" of it must take a Battle-shock test.
+
+UNITWar Dog Executioner
+
+Ask about this ability
+
+######## popup ability:woof-woof|Final Howl (Aura)|**WAR DOG** model only. While a friendly War Dog model is within 6" of the bearer, each time that model makes an attack, re-roll a **Wound roll** of 1. · WOOF WOOF Woof Woof
+ABILITY · ENHANCEMENT
+
+Final Howl (Aura)
+
+WAR DOG model only. While a friendly War Dog model is within 6" of the bearer, each time that model makes an attack, re-roll a Wound roll of 1.
+
+UNITWar Dog Brigand · Final Howl (Aura)
+
+Ask about this ability
+
+######## popup ability:woof-woof|Panoply of the Cursed Knights|**WAR DOG** model only. Each time an attack targets the bearer, worsen the Armour Penetration characteristic of that attack by 1. · WOOF WOOF Woof Woof
+ABILITY · ENHANCEMENT
+
+Panoply of the Cursed Knights
+
+WAR DOG model only. Each time an attack targets the bearer, worsen the Armour Penetration characteristic of that attack by 1.
+
+UNITWar Dog Karnivore · Panoply of the Cursed Knights
+
+Ask about this ability
+
+######## popup enh:houndpack-lance|Final Howl (Aura) · WOOF WOOF Woof Woof
+ENHANCEMENT · HOUNDPACK LANCE · 20 PTS
+
+Final Howl (Aura)
+
+WAR DOG model only. While a friendly War Dog model is within 6" of the bearer, each time that model makes an attack, re-roll a Wound roll of 1.
+
+ONWar Dog Brigand
+
+Ask about this enhancement
+
+######## popup enh:houndpack-lance|Panoply of the Cursed Knights · WOOF WOOF Woof Woof
+ENHANCEMENT · HOUNDPACK LANCE · 15 PTS
+
+Panoply of the Cursed Knights
+
+WAR DOG model only. Each time an attack targets the bearer, worsen the Armour Penetration characteristic of that attack by 1.
+
+ONWar Dog Karnivore
+
+Ask about this enhancement
+
+######## popup enh:hunting-warpack|Snarling Rivalry · WOOF WOOF Woof Woof
+UPGRADE · HUNTING WARPACK · 10 PTS
+
+Snarling Rivalry
+
+EXECUTIONER unit only. This unit’s ranged attacks have [IGNORES COVER].
+
+ONWar Dog Executioner ×3
+
+Ask about this upgrade
+
+######## popup grant:["Snarling Rivalry","war-dog-executioner","IGNORES COVER","IGNORES COVER"] · WOOF WOOF Woof Woof
+IGNORES COVER · GRANTED BY
+
+Snarling Rivalry
+
+Upgrade
+
+EXECUTIONER unit only. This unit’s ranged attacks have [IGNORES COVER].
+
+Already in the keywords shown (as New Recruit and BSData list them).
+
+IGNORES COVER Core rule
+
+Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+######## popup rule:Advance · WOOF WOOF Woof Woof
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:Advance roll · WOOF WOOF Woof Woof
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:Battle-shock test · WOOF WOOF Woof Woof
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:Battle-shocked · WOOF WOOF Woof Woof
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:Below Half-strength · WOOF WOOF Woof Woof
+CORE RULE
+
+Starting Strength
+
+The number of models a unit contains at the start of the first battle round is its starting strength. The starting strength of an attached unit is the number of models that unit contains at the start of the first battle round.
+
+Some rules refer to units being below starting strength, or at – or below – half-strength. The meaning of these terms varies depending on a unit’s starting strength, as shown below.
+
+Starting strength of 1:
+
+Below starting strength: model’s remaining wounds are less than its W characteristic.
+At half-strength: model’s remaining wounds are half of its W characteristic.
+Below half-strength: model’s remaining wounds are less than half of its W characteristic.
+
+Starting strength of 2 or more:
+
+Below starting strength: number of remaining models in the unit is less than its starting strength.
+At half-strength: number of remaining models in the unit is half of its starting strength.
+Below half-strength: number of remaining models in the unit is less than half of its starting strength.
+
+Some units cannot be at half-strength: If a model’s W characteristic or a unit’s starting strength cannot be evenly divided in half, that model or unit cannot be at half-strength (but can be below half-strength as described above).
+
+Example: A Captain (1 model) is attached to a unit of Intercessors (5 models). This attached unit has a starting strength of 6. If three Intercessors were destroyed, the unit would be at half-strength. If four Intercessors were destroyed, the unit would be below half-strength. If all of the Intercessors were destroyed, the remaining Captain would be below half-strength, despite having his full wounds remaining.
+
+Ask about this rule
+
+######## popup rule:Charge roll · WOOF WOOF Woof Woof
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:Charge rolls · WOOF WOOF Woof Woof
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:Consolidation moves · WOOF WOOF Woof Woof
+CORE RULE
+
+Consolidation Move
+
+MAXIMUM DISTANCE: 3"
+
+ELIGIBLE IF: It is the Fight phase and your unit was eligible to fight this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select consolidation mode:
+
+Ongoing Consolidation: If your unit is engaged, you must select this mode and select every enemy unit it is engaged with.
+Engaging Consolidation: Otherwise, if your unit is within 3" of one or more enemy units, you must select this mode and select one or more of those enemy units.
+Objective Consolidation: Otherwise, if your unit is within 3" of one or more objectives, you must select this mode and select one of those objectives.
+
+WHILE MOVING:
+
+Ongoing Consolidation: Models in base-contact with one or more enemy models cannot be moved. Each model that is moved must end its move closer to the closest selected enemy unit, and engaged with it if possible.
+Engaging Consolidation: Each model that is moved must end its move closer to the closest selected enemy unit, and engaged with it if possible.
+Objective Consolidation: Each model that is moved must end its move within range of the selected objective if possible, or closer to it if not.
+
+AFTER MOVING:
+
+Ongoing Consolidation: Each model that started this move engaged with an enemy unit must still be engaged with that enemy unit.
+Engaging Consolidation: Your unit must be engaged with all of the selected enemy units. If one or more enemy units engaged with your unit have not been selected to fight this phase, your opponent must select each of those units, one at a time; when each is selected, it becomes eligible to fight and is selected to fight (12.04).
+Objective Consolidation: Your unit must be within range of the selected objective.
+
+Wahapedia core rules errata (12.08 Consolidation Move, After Moving, Ongoing Consolidation): Each model that started this move engaged with an enemy unit must still be engaged with that enemy unit. If one or more enemy units engaged with your unit have not been selected to fight this phase, your opponent must select each of those units, one at a time; when each is selected, it becomes eligible to fight and is selected to fight
+
+App note, not rules text: the lines above the errata are the printed Core Rules (01/06/2026). GW’s Warhammer 40,000 app, as Wahapedia prints it, changes two After Moving lines: the errata replaces the Ongoing Consolidation line, and the Objective Consolidation line reads “Your unit must be unengaged and within range of the selected objective”. No GW PDF has either change yet (16 Oct 2026).
+
+Ask about this rule
+
+######## popup rule:Deadly Demise · WOOF WOOF Woof Woof
+CORE RULE
+
+Deadly Demise
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYWar Dog Brigand · Final Howl (Aura), War Dog Brigand (1 of 4), War Dog Brigand (2–4 of 4), War Dog Executioner, War Dog Karnivore · Panoply of the Cursed Knights, War Dog Karnivore
+
+Ask about this rule
+
+######## popup rule:Deadly Demise D3 · WOOF WOOF Woof Woof
+CORE RULE
+
+Deadly Demise D3
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYWar Dog Brigand · Final Howl (Aura), War Dog Brigand (1 of 4), War Dog Brigand (2–4 of 4), War Dog Executioner, War Dog Karnivore · Panoply of the Cursed Knights, War Dog Karnivore
+
+Ask about this rule
+
+######## popup rule:Engagement Range · WOOF WOOF Woof Woof
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
+######## popup rule:Fall Back move · WOOF WOOF Woof Woof
+CORE RULE
+
+Fall-back Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is engaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select fall-back mode:
+
+Ordered Retreat: If your unit is not battle-shocked, you can select this mode.
+Desperate Escape: Otherwise, you must select this mode. Make a hazard roll for each model in your unit (06.03).
+
+WHILE MOVING:
+
+Desperate Escape: Each model that is moved can be moved through enemy models.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to shoot, declare a charge or start an action.
+Desperate Escape: If your unit is not battle-shocked, you must make a battle-shock roll for your unit (01.07).
+
+Desperate Escape Test (app): Some rules may reference the term ‘Desperate Escape test’. In all instances this means the hazard rolls made for the desperate escape mode of a fall-back move.
+
+Abilities that subtract from a unit’s Desperate Escape test instead subtract from those hazard rolls.
+
+If a stratagem or ability instructs a unit to make a Desperate Escape test, that unit:
+
+Must use the desperate escape mode when it is selected to make a fall-back move.
+Must make one hazard roll for each model in that unit.
+Must make a battle-shock roll.
+Ask about this rule
+
+######## popup rule:Feel No Pain 5+ · WOOF WOOF Woof Woof
+CORE RULE
+
+Feel No Pain 5+
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+Ask about this rule
+
+######## popup rule:Fights First · WOOF WOOF Woof Woof
+CORE RULE
+
+Fights First
+
+While every model in a unit has this ability, that unit is a Fights First unit.
+
+See the Resolve Fights First Combats step in the Fight phase (12.04).
+
+Ask about this rule
+
+######## popup rule:Harbingers of Dread · WOOF WOOF Woof Woof
+CHAOS KNIGHTS ARMY RULE
+
+Harbingers of Dread
+
+If your Army Faction is CHAOS KNIGHTS, each unit from your army with this ability gains Dread abilities, depending which are active for your army (see below). The Deathly Terror ability is active for your army from the start of the battle. In addition, at the start of the first, third and fifth battle rounds, you can either select one of the other Dread abilities or randomly select two Dread abilities to apply by rolling two D6 and applying the results rolled, from those numbered 1-6.
+
+Any Dread abilities that have been selected are active until the end of the battle. You cannot select the same Dread ability more than once, and any duplicated Dread abilities (as a result of randomly selecting them) have no additional effect.
+
+Deathly Terror (Aura) · N/A
+
+While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.
+
+Despair (Aura) · 1
+
+While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1. This is cumulative with the Deathly Terror ability (see above).
+
+Doom · 2
+
+Each time this model makes an attack, if the target of that attack is Battle-shocked, add 1 to the Wound roll.
+
+Darkness · 3
+
+This model has Stealth.
+
+Dismay (Aura) · 4
+
+In the Battle-shock step of your opponent’s Command phase, for each enemy unit that is below its Starting Strength and within 9" of this model, that enemy unit must take a Battle-shock test.
+
+Delirium (Aura) · 5
+
+While an enemy unit that is Below Half-strength is within 9" of this model, each time that unit fails a Battle-shock test, it suffers D3 mortal wounds.
+
+Dominion · 6
+
+Add 3" to the range of this model’s Aura abilities.
+
+Ask about this rule
+
+######## popup rule:Hazard roll · WOOF WOOF Woof Woof
+CORE RULE
+
+Hazard Roll
+
+To make a hazard roll for a unit, roll one D6: on a 1-2, that roll fails and that unit suffers 1 mortal wound (see above), or 3 mortal wounds instead if each model in that unit is a MONSTER/VEHICLE model. If more than one hazard roll is required for a unit, make all of those rolls simultaneously.
+
+06.03.01 Hazardous Test (app): The term ‘Hazardous test’ is the same as hazard roll.
+
+Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model in the unit make a hazard roll? No, the unit would make 1 single hazard roll.
+
+Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
+
+Ask about this rule
+
+######## popup rule:Leadership test · WOOF WOOF Woof Woof
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:MELTA 4 · WOOF WOOF Woof Woof
+CORE RULE
+
+MELTA 4
+
+This ability always takes the form [MELTA X]. Each time a model makes an attack with a [MELTA] weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add X to that weapon’s D characteristic.
+
+Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6. While resolving those attacks, that weapon has a D characteristic of D6+2.
+
+IN THIS ARMYWar Dog Brigand · Final Howl (Aura), War Dog Brigand (1 of 4), War Dog Brigand (2–4 of 4)
+
+Ask about this rule
+
+######## popup rule:Marked Prey · WOOF WOOF Woof Woof
+HOUNDPACK LANCE DETACHMENT RULE
+
+Marked Prey
+
+At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, each time a WAR DOG model from your army makes an attack that targets that enemy unit, if that unit is visible to the attacking model, that attack has the [SUSTAINED HITS 1] ability.
+
+KEYWORDS
+
+While using the Houndpack Lance Detachment, the following rules apply:
+
+Your army must include three or more WAR DOG units.
+WAR DOG units from your army have the BATTLELINE keyword.
+When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.*
+
+*Designer’s Note: This means that the selected units can be given Enhancements and one of them can be selected as your WARLORD.
+
+IN THIS ARMYWar Dog Brigand · Final Howl (Aura), War Dog Brigand (1 of 4), War Dog Brigand (2–4 of 4), War Dog Executioner, War Dog Karnivore · Panoply of the Cursed Knights, War Dog Karnivore
+
+Ask about this rule
+
+######## popup rule:Normal · WOOF WOOF Woof Woof
+CORE RULE
+
+Normal Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+AFTER MOVING: Your unit must be unengaged.
+
+09.05.01 More Than One Normal Move in a Phase (app): A unit cannot make more than one Normal Move in a phase.
+
+Ask about this rule
+
+######## popup rule:Normal move · WOOF WOOF Woof Woof
+CORE RULE
+
+Normal Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+AFTER MOVING: Your unit must be unengaged.
+
+09.05.01 More Than One Normal Move in a Phase (app): A unit cannot make more than one Normal Move in a phase.
+
+Ask about this rule
+
+######## popup rule:RAPID FIRE 3 · WOOF WOOF Woof Woof
+CORE RULE
+
+RAPID FIRE 3
+
+This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step.
+
+IN THIS ARMYWar Dog Brigand · Final Howl (Aura), War Dog Brigand (1 of 4), War Dog Brigand (2–4 of 4), War Dog Executioner, War Dog Karnivore · Panoply of the Cursed Knights, War Dog Karnivore
+
+Ask about this rule
+
+######## popup rule:Resolve a charge · WOOF WOOF Woof Woof
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:SUSTAINED HITS 1 · WOOF WOOF Woof Woof
+CORE RULE
+
+SUSTAINED HITS 1
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYWar Dog Karnivore · Panoply of the Cursed Knights, War Dog Karnivore
+
+Ask about this rule
+
+######## popup rule:Scenting Fear · WOOF WOOF Woof Woof
+HUNTING WARPACK DETACHMENT RULE
+
+Scenting Fear
+
+(Once per battle round, per army) In your Shooting phase, you can select one visible enemy unit within 12" of a friendly WAR DOG unit. That enemy unit has +6" detection range.
+
+This detachment has the WAR DOGS tag and cannot be taken with another WAR DOGS detachment.
+
+IN THIS ARMYWar Dog Brigand · Final Howl (Aura), War Dog Brigand (1 of 4), War Dog Brigand (2–4 of 4), War Dog Executioner, War Dog Karnivore · Panoply of the Cursed Knights, War Dog Karnivore
+
+Ask about this rule
+
+######## popup rule:Select Weapons · WOOF WOOF Woof Woof
+CORE RULE
+
+Select Weapons
+
+For each model in the attacking unit, select which weapons that model will make attacks with. Models make ranged attacks with ranged weapons, and make melee attacks with melee weapons.
+
+While shooting: You can select one or more ranged weapons that model has.
+
+While fighting: You must select one melee weapon that model has.
+
+Sidearms: Some models are equipped with [CLOSE-QUARTERS] weapons in addition to other firearms. Such models can be an exception to the rules in this section, as you may not be able to select all of their weapons to make attacks with.
+
+24.11 [EXTRA ATTACKS]: Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others.
+
+04.01.03 Multiple Weapon Profiles (app): In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).
+
+Ask about this rule
+
+######## popup rule:Stealth · WOOF WOOF Woof Woof
+CORE RULE
+
+Stealth
+
+If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).
+
+Ask about this rule
+
+######## popup rule:Strategic Reserves · WOOF WOOF Woof Woof
+CORE RULE
+
+Strategic Reserves
+
+Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding FORTIFICATIONS) to place in strategic reserves. Instead of setting up these units on the battlefield during deployment, place them to one side; they are strategic reserves units, and will arrive later in the battle.
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+20.01.01 Reserves (app): The term ‘Reserves’ is the same as strategic reserves.
+
+20.02 Repositioned Units: Some rules allow units to be removed from the battlefield and placed in strategic reserves during the battle. Units that use such rules are known as repositioned units. In addition to any other rules that apply to such units (such as where they can or cannot arrive), all of the following rules apply to them:
+
+If used in the Movement phase, such rules can be used on units that have already moved that phase.
+A repositioned unit that is set up in the same turn in which it made an advance, fall-back or disembark move has still made an advance, fall-back or disembark move that turn.
+When they are removed from the battlefield, any rules that are affecting such units for a specified duration or under specified circumstances continue to affect them while that duration and/or those circumstances apply.
+
+20.03 Arriving from Strategic Reserves: To arrive on the battlefield, each strategic reserves unit must make an ingress move (see below). Unless otherwise stated, they can only do so from the second battle round onwards.
+
+At the end of the third battle round, unless otherwise stated, all strategic reserves units that have not made one or more ingress moves are destroyed, with the following exceptions:
+
+Units embarked within TRANSPORTS that have made an ingress move during the battle.
+Repositioned units (see opposite).
+Ask about this rule
+
+######## popup rule:Super-Heavy Walker · WOOF WOOF Woof Woof
+CORE RULE
+
+Super-Heavy Walker
+
+Each time a unit with this ability makes a normal, advance or fall-back move:
+
+Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding TITANIC models) and can move horizontally through sections of terrain features that are 4" or less in height.
+Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked.
+
+Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).
+
+CHAOS KNIGHTS ARMY RULE
+
+Super-heavy Walker
+
+Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4" or less in height. When doing so:
+
+It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.
+It can also move through sections of terrain features that are more than 4" in height, but if it does, after it has moved, roll one D6: on a 1, that model is Battle-shocked.
+
+CHAOS KNIGHTS datasheets list Super-heavy Walker as a FACTION ability (Faction Pack 1.2), whose Codex text differs from Core Rules 24.35; the sources don’t say which applies.
+
+Ask about this rule
+
+######## popup rule:[ASSAULT] · WOOF WOOF Woof Woof
+CORE RULE
+
+ASSAULT
+
+Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
+
+Ask about this rule
+
+######## popup rule:[IGNORES COVER] · WOOF WOOF Woof Woof
+CORE RULE
+
+IGNORES COVER
+
+Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+IN THIS ARMYWar Dog Brigand · Final Howl (Aura) (in Brigand), War Dog Brigand (1 of 4) (in Brigand), War Dog Brigand (2–4 of 4) (in Brigand), War Dog Executioner
+
+Ask about this rule
+
+######## popup rule:[PRECISION] · WOOF WOOF Woof Woof
+CORE RULE
+
+PRECISION
+
+While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.
+
+24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
+
+Ask about this rule
+
+######## popup rule:[SUSTAINED HITS 1] · WOOF WOOF Woof Woof
+CORE RULE
+
+SUSTAINED HITS 1
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYWar Dog Karnivore · Panoply of the Cursed Knights, War Dog Karnivore
+
+Ask about this rule
+
+######## popup rule:advance move · WOOF WOOF Woof Woof
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:battle-shock roll · WOOF WOOF Woof Woof
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:benefit of cover · WOOF WOOF Woof Woof
+CORE RULE
+
+Benefit of Cover
+
+Each time a ranged attack targets a unit, if every model in that unit meets one or more of the following conditions, that unit has the benefit of cover against that attack:
+
+That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area.
+That model is not fully visible to the attacking model due to one or more intervening terrain features and/or one or more intervening obscuring terrain areas (see below).
+
+Each time a ranged attack targets a unit that has the benefit of cover against it, worsen the BS characteristic of that attack by 1.
+
+Ask about this rule
+
+######## popup rule:charge move · WOOF WOOF Woof Woof
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
+
+######## popup rule:charge roll · WOOF WOOF Woof Woof
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:charge rolls · WOOF WOOF Woof Woof
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:charge targets · WOOF WOOF Woof Woof
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
+
+######## popup rule:destroyed · WOOF WOOF Woof Woof
+CORE RULE
+
+Destroyed
+
+Throughout a battle, models will suffer damage, lose wounds and be destroyed. When every model in a unit has been destroyed, that unit is destroyed.
+
+When a model is destroyed, first resolve any rules that are triggered when it is destroyed, then it is removed from the battlefield. If any such rules apply, and if the model was destroyed as the result of an attack, unless otherwise stated, those rules are only resolved and that model is only removed after the attacking unit’s attacks have been resolved. Unless otherwise stated, destroyed models and units cannot use abilities or be selected or targeted by rules.
+
+05.04.05 Fight On Death (app): Some rules enable models to attack after they have been destroyed. When a model under such an effect is destroyed, do not remove it from play.
+
+Those models will stay on the battlefield until their unit is selected to attack and has attacked, or until the end of the phase (whichever comes first). Any rules triggered by those models being destroyed are resolved, and then those destroyed models are removed.
+
+Ask about this rule
+
+######## popup rule:engaged · WOOF WOOF Woof Woof
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
+######## popup rule:ingress move · WOOF WOOF Woof Woof
+CORE RULE
+
+Ingress Move
+
+SET-UP DISTANCE: 6"
+
+ELIGIBLE IF: Your unit is in strategic reserves (excluding units that are embarked within TRANSPORTS that are themselves in strategic reserves).
+
+EFFECT: Your unit is set up as described in Set Up (03.02).
+
+WHILE MOVING: Set up your unit wholly within the set-up distance of one or more battlefield edges and more than 8" horizontally from all enemy units.
+
+Before the Third Battle Round: While doing so, no models can be set up within your opponent’s deployment zone.
+
+AFTER MOVING: Unless otherwise stated, until the start of the next Charge phase, your unit is not eligible to make any other type of move.
+
+20.03.01 Set Up As Reinforcements (app): If a rule mentions a unit being set up on the battlefield as Reinforcements, it means a unit that made an ingress move.
+
+Ask about this rule
+
+######## popup rule:mortal wound · WOOF WOOF Woof Woof
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+Ask about this rule
+
+######## popup rule:mortal wounds · WOOF WOOF Woof Woof
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+Ask about this rule
+
+######## popup rule:selected to attack · WOOF WOOF Woof Woof
+CORE RULE
+
+Selected to Attack
+
+04.01.05 Selected to Attack (app): Some rules use the term selected to attack. If a unit is selected to fight, selected to shoot or chosen to make attacks, that unit is selected to attack.
+
+App note, not rules text: from the rules appendix in the Warhammer 40,000 app, as Wahapedia prints it (04.01.05); the printed Core Rules do not include it.
+
+Ask about this rule
+
+######## popup rule:snap shooting · WOOF WOOF Woof Woof
+CORE RULE
+
+snap shooting
+
+ELIGIBLE IF: As stated in the rule allowing this shooting type.
+
+EFFECT: Your unit shoots as described in Making Attacks (04).
+
+WHILE SHOOTING:
+
+You can only target one visible enemy unit within 24" of your unit (and only if it is an eligible target).
+Each attack only hits on an unmodified hit roll of 6 (irrespective of the attacking weapon’s BS characteristic or any modifiers).
+
+Wahapedia core rules (not in GW’s Core Rules PDF, 01-06): Those hits are not critical hits.
+
+You cannot re-roll hit rolls.
+
+AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.
+
+Ask about this rule
+
+######## popup rule:strategic reserves · WOOF WOOF Woof Woof
+CORE RULE
+
+Strategic Reserves
+
+Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding FORTIFICATIONS) to place in strategic reserves. Instead of setting up these units on the battlefield during deployment, place them to one side; they are strategic reserves units, and will arrive later in the battle.
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+20.01.01 Reserves (app): The term ‘Reserves’ is the same as strategic reserves.
+
+20.02 Repositioned Units: Some rules allow units to be removed from the battlefield and placed in strategic reserves during the battle. Units that use such rules are known as repositioned units. In addition to any other rules that apply to such units (such as where they can or cannot arrive), all of the following rules apply to them:
+
+If used in the Movement phase, such rules can be used on units that have already moved that phase.
+A repositioned unit that is set up in the same turn in which it made an advance, fall-back or disembark move has still made an advance, fall-back or disembark move that turn.
+When they are removed from the battlefield, any rules that are affecting such units for a specified duration or under specified circumstances continue to affect them while that duration and/or those circumstances apply.
+
+20.03 Arriving from Strategic Reserves: To arrive on the battlefield, each strategic reserves unit must make an ingress move (see below). Unless otherwise stated, they can only do so from the second battle round onwards.
+
+At the end of the third battle round, unless otherwise stated, all strategic reserves units that have not made one or more ingress moves are destroyed, with the following exceptions:
+
+Units embarked within TRANSPORTS that have made an ingress move during the battle.
+Repositioned units (see opposite).
+Ask about this rule
+
+######## popup rule:unengaged · WOOF WOOF Woof Woof
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
+######## popup strat:animalistic-rage · WOOF WOOF Woof Woof
+1CP · THEIR SHOOTING / FIGHT (EITHER TURN)
+
+Animalistic Rage
+WHEN
+
+Your opponent’s Shooting phase or the Fight phase, just after a WAR DOG unit from your army that has not been selected to attack this phase is destroyed.
+
+TARGETThat WAR DOG unit. You can use this Stratagem on that unit even though it was just destroyed.
+
+EFFECT
+
+Before resolving your unit’s Deadly Demise ability, it can either shoot or fight. When doing so, it must target only the enemy unit that just destroyed it, and can only do so if that enemy unit is an eligible target. After it has done so and after any Consolidation moves have been made, resolve your unit’s Deadly Demise ability as normal.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:command-re-roll · WOOF WOOF Woof Woof
+1CP · ANY PHASE · EITHER TURN
+
+Command Re-roll
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:counteroffensive · WOOF WOOF Woof Woof
+2CP · FIGHT · THEIR TURN
+
+Counteroffensive
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:crushing-impact · WOOF WOOF Woof Woof
+1CP · CHARGE · YOUR TURN
+
+Crushing Impact
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:cunning-hunter · WOOF WOOF Woof Woof
+1CP · MOVEMENT · YOUR TURN
+
+Cunning Hunter
+WHEN
+
+Your Movement phase, just after a WAR DOG unit from your army Falls Back.
+
+TARGETThat WAR DOG unit.
+
+EFFECT
+
+Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:encircling-pack · WOOF WOOF Woof Woof
+1CP · FIGHT · THEIR TURN
+
+Encircling Pack
+WHEN
+
+End of your opponent’s Fight phase.
+
+TARGETOne WAR DOG unit from your army that is wholly within 12" of one or more battlefield edges and not within Engagement Range of one or more enemy units.
+
+EFFECT
+
+Remove your unit from the battlefield and place it into Strategic Reserves.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:epic-challenge · WOOF WOOF Woof Woof
+1CP · FIGHT · EITHER TURN
+
+Epic Challenge
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYWar Dog Brigand · Final Howl (Aura), War Dog Brigand (1 of 4), War Dog Karnivore · Panoply of the Cursed Knights
+
+Ask about this stratagem
+
+######## popup strat:fire-overwatch · WOOF WOOF Woof Woof
+1CP · MOVEMENT · THEIR TURN
+
+Fire Overwatch
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:harrying-hounds · WOOF WOOF Woof Woof
+1CP · MOVEMENT · THEIR TURN
+
+Harrying Hounds
+WHEN
+
+Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.
+
+TARGETOne WAR DOG unit from your army that is within 8" of that enemy unit.
+
+EFFECT
+
+Your unit can make a Normal move of up to 6".
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:heroic-intervention · WOOF WOOF Woof Woof
+1CP · CHARGE · THEIR TURN · INTO THE FRAY +1CP
+
+Heroic Intervention
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:hungry-for-combat · WOOF WOOF Woof Woof
+1CP · FIGHT · EITHER TURN
+
+Hungry for Combat
+WHEN
+
+Start of the Fight phase.
+
+TARGETTwo or more WAR DOG units from your army within Engagement Range of the same enemy unit.
+
+EFFECT
+
+Select one enemy unit within Engagement Range of those WAR DOG units. Until the end of the phase, models in those WAR DOG units can only target that enemy unit, but each time a model in one of those WAR DOG units makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:insane-bravery · WOOF WOOF Woof Woof
+1CP · COMMAND · YOUR TURN · ONCE PER BATTLE
+
+Insane Bravery
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:insensate-bloodthirst · WOOF WOOF Woof Woof
+1CP · FIGHT · EITHER TURN
+
+Insensate Bloodthirst
+WHEN
+
+Fight phase, when an enemy unit targets a friendly WAR DOG unit.
+
+TARGETThat WAR DOG unit.
+
+EFFECT
+
+Your unit has Feel No Pain 5+.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:leash-of-the-masters · WOOF WOOF Woof Woof
+1CP · SHOOTING · YOUR TURN
+
+Leash of the Masters
+WHEN
+
+Your Shooting phase, when a friendly WAR DOG unit has shot.
+
+TARGETThat WAR DOG unit.
+
+EFFECT
+
+Those attacks do not prevent your unit from being eligible to start an action.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:rapid-ingress · WOOF WOOF Woof Woof
+1CP · MOVEMENT · THEIR TURN
+
+Rapid Ingress
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:stalking-focus · WOOF WOOF Woof Woof
+1CP · SHOOTING · THEIR TURN
+
+Stalking Focus
+WHEN
+
+Your opponent’s Shooting phase, when an enemy unit targets a friendly WAR DOG unit within range of an objective.
+
+TARGETThat WAR DOG unit.
+
+EFFECT
+
+Ranged attacks that target your unit have -1 AP until that enemy unit has attacked.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:vox-howl · WOOF WOOF Woof Woof
+2CP · SHOOTING / FIGHT · EITHER TURN
+
+Vox-howl
+WHEN
+
+Start of the Shooting phase or the start of the Fight phase.
+
+TARGETOne WAR DOG CHARACTER unit from your army.
+
+EFFECT
+
+Each enemy unit within 6" of your unit must take a Battle-shock test. Each friendly WAR DOG unit that is within 6" of your unit and is Battle-shocked must take a Leadership test; if that test is passed, that unit is no longer Battle-shocked.
+
+RESTRICTIONSYou can only use this Stratagem once per turn.
+
+USED BYWar Dog Brigand · Final Howl (Aura), War Dog Brigand (1 of 4), War Dog Karnivore · Panoply of the Cursed Knights
+
+Ask about this stratagem
