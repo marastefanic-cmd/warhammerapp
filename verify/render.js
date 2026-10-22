@@ -242,6 +242,12 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
         go({ s:'pregame', army:B.id });
         const head = (document.querySelector('#view .sec-h h2') || {}).textContent || '';
         if(head !== 'Their list') out.push(['their-list', armyId, B.id + '’s Overview opened from this list is headed “' + head + '”']);
+        // on their screens a bar says whose list it is and takes you back to yours (not on their list's home, which says it)
+        const bar = $('#peekbar');
+        if(bar.hidden || !bar.textContent.includes(B.name)) out.push(['their-bar', armyId, B.id + '’s Overview has no “Their list: ' + B.name + '” bar']);
+        go({ s:'army', army:B.id }); if(!$('#peekbar').hidden) out.push(['their-bar', armyId, B.id + '’s own home shows the bar']);
+        go({ s:'pregame', army:B.id }); toMine();
+        if(cur.army !== armyId || !$('#peekbar').hidden) out.push(['their-bar', armyId, 'Back to yours did not return to ' + armyId + ' (at ' + cur.army + ')']);
         go({ s:'army', army:armyId });
         store.set('wh-opp-' + armyId, wasOpp);
       }
