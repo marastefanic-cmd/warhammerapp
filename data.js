@@ -150,7 +150,7 @@ const CORE_STRATAGEMS = [
     target:'That unit.',
     effect:'That **battle-shock roll** is automatically successful.',
     restrictions:'You cannot use this **stratagem** more than once per battle.' },
-  { id:'explosives', gist:'One EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…', note:'Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.', name:'Explosives', cp:1, phases:['shooting'], turn:'your', needs:{ any:['Explosives','Grenades'] },
+  { id:'explosives', gist:'Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an enemy unit within 8", 1 mortal wound for each 4+…', note:'Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.', name:'Explosives', cp:1, phases:['shooting'], turn:'your', needs:{ any:['Explosives','Grenades'] },
     when:'Your Shooting phase.',
     target:'One friendly **unengaged** **EXPLOSIVES/GRENADES** unit that is **eligible to shoot** and did not make an **advance move** this turn.',
     effect:'Resolve the following sequence:\n- 1. Select one **EXPLOSIVES/GRENADES** model in your unit.\n- 2. Select one **unengaged** enemy unit within 8" of and **visible** to that model.\n- 3. Roll six D6: for each 4+, that enemy unit suffers 1 **mortal wound** (06.02).' },
@@ -163,7 +163,7 @@ const CORE_STRATAGEMS = [
     target:'One friendly unit that is in **strategic reserves** (excluding **AIRCRAFT**).',
     effect:'Your unit makes an **ingress move** (20.04).',
     restrictions:'You cannot use this **stratagem** during the first battle round.' },
-  { id:'fire-overwatch', gist:'Your unit shoots using snap shooting.', name:'Fire Overwatch', cp:1, phases:['movement'], turn:'opp', needs:{ none:['Titanic'] },
+  { id:'fire-overwatch', gist:'Your unengaged unit shoots using snap shooting.', name:'Fire Overwatch', cp:1, phases:['movement'], turn:'opp', needs:{ none:['Titanic'] },
     when:'End of your opponent’s Movement phase.',
     target:'One friendly **unengaged** unit (excluding **TITANIC** units).',
     effect:'Your unit shoots using **snap shooting**.' },
@@ -171,7 +171,7 @@ const CORE_STRATAGEMS = [
     when:'Start of your opponent’s Shooting phase.',
     target:'One friendly **SMOKE** unit.',
     effect:'Until the end of the phase, each time an attack targets either your **SMOKE** unit, or a unit that is not **fully visible** to the attacking model because of one or more models in your **SMOKE** unit, the target has the **benefit of cover** against that attack (13.08).' },
-  { id:'heroic-intervention', gist:'Your unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…', note:'Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.', name:'Heroic Intervention', cp:1, cpNote:'Into the Fray +1CP', phases:['charge'], turn:'opp', needs:{ unless:{ all:['Vehicle'], none:['Character','Walker'] } },
+  { id:'heroic-intervention', gist:'Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…', note:'Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.', name:'Heroic Intervention', cp:1, cpNote:'Into the Fray +1CP', phases:['charge'], turn:'opp', needs:{ unless:{ all:['Vehicle'], none:['Character','Walker'] } },
     when:'End of your opponent’s Charge phase.',
     target:'One friendly **unengaged** unit within 12" of one or more enemy units. You can only select a **VEHICLE** unit if it is a **CHARACTER/WALKER** unit.',
     effect:'**Resolve a charge** with your unit (11.02). While doing so, before making the **charge roll**, you must select one of the following modes:\n- **Leap to Defend:** When selecting **charge targets**, you can only select enemy units that made a **charge move** this phase and are within the **maximum distance**.\n- **Into the Fray (+1CP):** When making the **charge roll**, if the result is greater than 6 (after modifiers), change it to 6. When selecting **charge targets**, you can select any enemy units that are within 6" of your unit and within the **maximum distance**.' },
@@ -254,7 +254,7 @@ const FACTIONS = {
           { name:'Tellyporta Boss', pts:20, text:'**MEGA ARMOUR** model only. This unit (excluding **VEHICLE** units) has **Deep Strike**.' }
         ],
         stratagems:[
-          { id:'too-arrogant-to-die', gist:'Model in your unit destroyed, unit not selected to fight this phase: D6 (+1 if riled up); on a 4+ it stays until your unit has fought or the phase ends.', name:'Too Arrogant to Die', cp:1, phases:['fight'], turn:'either', needs:{ any:['Meganobz','Nobz'] },
+          { id:'too-arrogant-to-die', gist:'An enemy unit targets your unit: a model of it destroyed while your unit has not been selected to fight this phase: D6 (+1 if riled up); on a 4+ it stays until your unit has fought or the phase ends.', name:'Too Arrogant to Die', cp:1, phases:['fight'], turn:'either', needs:{ any:['Meganobz','Nobz'] },
             def:'Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (D6, +1 if riled up; removed once your unit has fought or at the end of the phase)',
             when:'Fight phase, when an enemy unit targets a friendly **MEGANOBZ**/**NOBZ** unit.',
             target:'That **MEGANOBZ**/**NOBZ** unit.',
@@ -290,7 +290,7 @@ const FACTIONS = {
           { name:'Dreadherder', pts:30, text:'**BIG MEK** model only. While this model is within 3" of a friendly **ORKS WALKER** unit (excluding **BIG MEK** units):\n- This model has **Lone Operative**.\n- In your Shooting phase, you can select one friendly **ORKS WALKER** unit within 3" of this model. That unit’s attacks can re-roll **hit rolls** of 1 until the end of the turn.' }
         ],
         stratagems:[
-          { id:'crazed-rampage', gist:'Model in your unit destroyed, unit not selected to fight this phase: roll one D6; on a 4+ it stays until your unit has fought or the phase ends…', name:'Crazed Rampage', cp:1, phases:['fight'], turn:'either', needs:{ all:['Walker'], none:['Titanic'] },
+          { id:'crazed-rampage', gist:'An enemy unit targets your unit: a model of it destroyed while your unit has not been selected to fight this phase: roll one D6; on a 4+ it stays until your unit has fought or the phase ends…', name:'Crazed Rampage', cp:1, phases:['fight'], turn:'either', needs:{ all:['Walker'], none:['Titanic'] },
             note:'Wahapedia FAQ: “If my unit has the Deadly Demise ability and has an ability that allows it to Fight on Death, how do I resolve this?” “Fight on Death rules are resolved before Deadly Demise abilities, meaning that your unit’s Deadly Demise will resolve after your unit has fought/at the end of the phase and the relevant models have been removed from the battlefield.”',
             def:'Fight phase: a model destroyed while your unit has not been selected to fight this phase is not removed on a 4+ (removed once your unit has fought or at the end of the phase)',
             when:'Fight phase, when an enemy unit targets a friendly **ORKS WALKER** unit (excluding **TITANIC** units).',
@@ -300,7 +300,7 @@ const FACTIONS = {
             when:'Your Movement phase.',
             target:'One friendly **ORKS WALKER** unit.',
             effect:'Your unit is **riled up** until the start of your next turn.' },
-          { id:'stomping-juggernaut', gist:'Your unit has MOBILE.', name:'Stomping Juggernaut', cp:1, phases:['movement','charge'], turn:'your', needs:{ all:['Walker'] },
+          { id:'stomping-juggernaut', gist:'When your unit is selected to move or declares a charge: it has MOBILE.', name:'Stomping Juggernaut', cp:1, phases:['movement','charge'], turn:'your', needs:{ all:['Walker'] },
             when:'Your Movement/Charge phase, when a friendly **ORKS WALKER** unit is **selected to move** or **declares a charge**.',
             target:'That **ORKS WALKER** unit.',
             effect:'Your unit has **MOBILE**.' }
@@ -316,11 +316,11 @@ const FACTIONS = {
           { name:'Minefield Detail', pts:10, upgrade:true, text:'**GRETCHIN** unit only. While this unit is not embarked, this unit has **Scouts 6"**.' }
         ],
         stratagems:[
-          { id:'infested-war-zone', gist:'Add a new GRETCHIN unit identical to your destroyed unit to your army, in strategic reserves, at its starting strength.', name:'Infested War Zone', cp:2, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Gretchin'] },
+          { id:'infested-war-zone', gist:'After an enemy unit has attacked: add a new GRETCHIN unit identical to your just-destroyed unit to your army, in strategic reserves, at its starting strength.', name:'Infested War Zone', cp:2, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Gretchin'] },
             when:'Any phase, when an enemy unit has attacked.',
             target:'One friendly **GRETCHIN** unit that was just **destroyed**. You can target that unit with this **stratagem** even though that unit was just **destroyed**.',
             effect:'Add a new **GRETCHIN** unit to your army identical to your **destroyed** unit, in **strategic reserves**, at its **starting strength**, with its full wounds remaining.' },
-          { id:'scarper', gist:'Your unit can make a normal move of up to D6", or up to 6" if your unit is an attached unit.', name:'Scarper!', cp:1, phases:['movement'], turn:'opp', needs:{ all:['Gretchin'] },
+          { id:'scarper', gist:'An enemy unit ends a move within 8" of your unengaged unit: your unit can make a normal move of up to D6", or up to 6" if it is an attached unit.', name:'Scarper!', cp:1, phases:['movement'], turn:'opp', needs:{ all:['Gretchin'] },
             when:'Your opponent’s Movement phase, when an enemy unit ends a move within 8" of a friendly **unengaged GRETCHIN** unit.',
             target:'That **GRETCHIN** unit.',
             effect:'Your unit can make a **normal move** of:\n- Up to D6".\n- Or: Up to 6" instead if your unit is an **attached** unit.' },
@@ -331,7 +331,7 @@ const FACTIONS = {
           // shield.def: the "When targeted" line of each unit it protects (their Shooting phase only), with the FAQ quoted
           { id:'grot-shields', shield:{ protects:{ all:['Faction: Orks','Infantry'], none:['Gretchin'] }, by:{ all:['Gretchin'] },
               def:'their Shooting phase, with a friendly GRETCHIN unit within 3": each hit roll of the attacking unit’s ranged attacks that results in a hit ends that attack, and that GRETCHIN unit suffers 1 mortal wound, while a model of it is on the battlefield. Wahapedia FAQ: “When using the Grot Shields stratagem, are hits by [TORRENT] weapons considered ’hit rolls that result in a hit’?” “No.”' },
-            gist:'If a model in your GRETCHIN unit is on the battlefield, each hit roll of that enemy unit’s ranged attacks on that ORKS unit that results in a hit ends that attack, and your GRETCHIN unit suffers 1 mortal wound.', name:'Grot Shields', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Gretchin'] },
+            gist:'An enemy unit targets an ORKS INFANTRY unit within 3" of your GRETCHIN unit: if a model in your GRETCHIN unit is on the battlefield, each hit roll of that enemy unit’s ranged attacks on that ORKS unit that results in a hit ends that attack, and your GRETCHIN unit suffers 1 mortal wound.', name:'Grot Shields', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Gretchin'] },
             note:'Wahapedia FAQ: “When using the Grot Shields stratagem, are hits by [TORRENT] weapons considered ’hit rolls that result in a hit’?” “No.”',
             when:'Your opponent’s Shooting phase, when an enemy unit targets a friendly **ORKS INFANTRY** unit (excluding **GRETCHIN** units).',
             target:'One friendly **GRETCHIN** unit within 3" of that **ORKS INFANTRY** unit.',
@@ -386,11 +386,11 @@ const FACTIONS = {
             when:'Fight phase, when a friendly **ORKS** unit is **selected to fight**.',
             target:'That **ORKS** unit.',
             effect:'Your unit’s melee attacks have **[LETHAL HITS]**.' },
-          { id:'orks-is-never-beaten', gist:'Model in your unit destroyed, unit not selected to fight this phase: D6 (+1 if riled up); on a 4+ it stays until your unit has fought or the phase ends.', name:'Orks Is Never Beaten', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Orks'], none:['Titanic'] },
+          { id:'orks-is-never-beaten', gist:'An enemy unit targets your unit: a model of it destroyed while your unit has not been selected to fight this phase: D6 (+1 if riled up); on a 4+ it stays until your unit has fought or the phase ends.', name:'Orks Is Never Beaten', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Orks'], none:['Titanic'] },
             when:'Fight phase, when an enemy unit targets a friendly **ORKS** unit (excluding **TITANIC** units).',
             target:'That **ORKS** unit.',
             effect:'When a model in your unit is **destroyed**, if your unit has not been **selected to fight** this phase, roll one D6, with +1 to that roll if your unit is **riled up**:\n- On a 4+, do not remove that model from the battlefield. When your unit has fought, or at the end of the phase (whichever comes first), that model is removed from the battlefield.' },
-          { id:'mow-em-down', gist:'Your unit’s melee attacks have [CLEAVE 1], or +1 to the value of a [CLEAVE] they already have.', name:'Mow ’Em Down', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Orks','Vehicle'], none:['Walker'] },
+          { id:'mow-em-down', gist:'Your unit made a charge move this turn: its melee attacks have [CLEAVE 1], or +1 to the value of a [CLEAVE] they already have.', name:'Mow ’Em Down', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Orks','Vehicle'], none:['Walker'] },
             when:'Fight phase, when a friendly **ORKS VEHICLE** unit (excluding **WALKER** units) that made a **charge move** this turn is **selected to fight**.',
             target:'That **ORKS VEHICLE** unit.',
             effect:'Your unit’s melee attacks have:\n- **[CLEAVE 1]**.\n- Or: If that attack already has **[CLEAVE]**, +1 to the value of that **[CLEAVE]** (e.g. **[CLEAVE 1]** becomes **[CLEAVE 2]**).' },
@@ -418,7 +418,7 @@ const FACTIONS = {
             when:'Your Shooting phase, when a friendly **ORKS TRANSPORT** unit is **selected to shoot**.',
             target:'That **ORKS TRANSPORT** unit.',
             effect:'Your unit’s ranged attacks with weapons selected for the **Firing Deck** ability have +1 to **hit rolls**.' },
-          { id:'grab-it', gist:'After shooting: can make a normal move of up to 6", ending within range of an objective; not eligible to declare a charge this turn.', name:'Grab It', cp:1, phases:['shooting'], turn:'your', needs:{ any:['Breaka Boyz','Flash Gitz','Tankbustas'] },
+          { id:'grab-it', gist:'After shooting, if unengaged: can make a normal move of up to 6", ending within range of an objective; not eligible to declare a charge this turn.', name:'Grab It', cp:1, phases:['shooting'], turn:'your', needs:{ any:['Breaka Boyz','Flash Gitz','Tankbustas'] },
             when:'Your Shooting phase, when a friendly **unengaged BREAKA BOYZ**/**FLASH GITZ**/**TANKBUSTAS** unit has shot.',
             target:'That **BREAKA BOYZ**/**FLASH GITZ**/**TANKBUSTAS** unit.',
             effect:'- Your unit can make a **normal move** of up to 6", and must end that move within range of an **objective**.\n- Your unit is not **eligible to declare a charge** until the end of the turn.' },
@@ -483,7 +483,7 @@ const FACTIONS = {
           { name:'Sanctuary', pts:20, text:'**IMPERIAL KNIGHTS** model only. The bearer has a 5+ invulnerable save.' }
         ],
         stratagems:[
-          { id:'noble-sacrifice', gist:'Its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.', name:'Noble Sacrifice', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Faction: Imperial Knights'] },
+          { id:'noble-sacrifice', gist:'Your unit just destroyed: its Deadly Demise inflicts mortal wounds on a D6 roll of 4+ (adding 1 if it is an ARMIGER unit) instead of only a 6.', name:'Noble Sacrifice', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Faction: Imperial Knights'] },
             when:'Any phase.',
             target:'One **IMPERIAL KNIGHTS** unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.',
             effect:'Your unit’s **Deadly Demise** ability inflicts **mortal wounds** on a D6 roll of 4+, adding 1 to the result if it is an **ARMIGER** unit, instead of only a 6.' },
@@ -509,7 +509,7 @@ const FACTIONS = {
             when:'Your opponent’s Shooting phase, just after an enemy unit has selected its targets.',
             target:'One **IMPERIAL KNIGHTS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.',
             effect:'Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the **Wound roll**.' },
-          { id:'flanking-manoeuvres', gist:'Remove your unit from the battlefield and place it into Strategic Reserves.', name:'Flanking Manoeuvres', cp:1, phases:['fight'], turn:'opp', needs:{ all:['Armiger'] },
+          { id:'flanking-manoeuvres', gist:'Your unit within 9" of a battlefield edge and not within Engagement Range of an enemy unit: remove it from the battlefield and place it into Strategic Reserves.', name:'Flanking Manoeuvres', cp:1, phases:['fight'], turn:'opp', needs:{ all:['Armiger'] },
             when:'End of your opponent’s Fight phase.',
             target:'One **ARMIGER** unit from your army that is within 9" of one or more battlefield edges and not within **Engagement Range** of one or more enemy units.',
             effect:'Remove your unit from the battlefield and place it into **Strategic Reserves**.' }
@@ -569,11 +569,11 @@ const FACTIONS = {
           { name:'Battle-lust', pts:20, text:'**WORLD EATERS** model only. You can re-roll **Charge rolls** made for the bearer’s unit. In addition, while the Unbridled Bloodlust Blessing of Khorne is active for your army, add 1 to Charge rolls made for the bearer’s unit.' }
         ],
         stratagems:[
-          { id:'blood-offering', gist:'One of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.', name:'Blood Offering', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Faction: World Eaters'] },
+          { id:'blood-offering', gist:'Your unit just destroyed within range of objective markers you controlled at the end of the previous phase: one of those objective markers stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.', name:'Blood Offering', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Faction: World Eaters'] },
             when:'Any phase.',
             target:'One **WORLD EATERS** unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.',
             effect:'Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.' },
-          { id:'hack-and-slash', gist:'Until the end of the phase, your unit’s melee weapons have +1 AP.', mod:{ kind:'melee', when:'Made a charge move this turn', cond:'charged', note:'+1 AP in the Fight phase' }, name:'Hack and Slash', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: World Eaters'] },
+          { id:'hack-and-slash', gist:'Your unit made a charge move this turn and has not been selected to fight this phase: until the end of the phase, its melee weapons have +1 AP.', mod:{ kind:'melee', when:'Made a charge move this turn', cond:'charged', note:'+1 AP in the Fight phase' }, name:'Hack and Slash', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: World Eaters'] },
             when:'Fight phase.',
             target:'One **WORLD EATERS** unit from your army that has not been selected to fight this phase and that made a **charge move** this turn.',
             effect:'Until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1.' },
@@ -581,7 +581,7 @@ const FACTIONS = {
             when:'Fight phase, just after an enemy unit has selected its targets.',
             target:'One **WORLD EATERS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.',
             effect:'Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack.' },
-          { id:'skulls-for-the-skull-throne', gist:'Make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.', name:'Skulls for the Skull Throne!', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: World Eaters'] },
+          { id:'skulls-for-the-skull-throne', gist:'Just after your unit destroys a CHARACTER or MONSTER model: make a Blessings of Khorne roll and use it to activate one Blessing of Khorne, active until the end of the battle round in addition to the others.', name:'Skulls for the Skull Throne!', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: World Eaters'] },
             when:'Fight phase, just after a **WORLD EATERS** unit from your army destroys a **CHARACTER** or **MONSTER** model.',
             target:'That **WORLD EATERS** unit.',
             effect:'Make a **Blessings of Khorne roll** and use the results to activate one Blessing of Khorne. Until the end of the battle round, that Blessing of Khorne is active in addition to any other Blessings of Khorne that are currently active.' },
@@ -646,7 +646,7 @@ const FACTIONS = {
             when:'Fight phase, when a friendly **WORLD EATERS CHARACTER** unit (excluding **EPIC HERO** units) is **selected to fight**.',
             target:'That **WORLD EATERS CHARACTER** unit.',
             effect:'Your unit’s **CHARACTER** models’ melee attacks have:\n- +1 **A**.\n- +2 **S**.' },
-          { id:'punish-the-craven', gist:'That enemy unit must use desperate escape (-1 to those hazard rolls if it is battle-shocked).', name:'Punish the Craven', cp:1, phases:['movement'], turn:'opp', needs:{ all:['Faction: World Eaters','Character'] },
+          { id:'punish-the-craven', gist:'An enemy unit engaged with your unit is selected to fall back: it must use desperate escape (-1 to those hazard rolls if it is battle-shocked).', name:'Punish the Craven', cp:1, phases:['movement'], turn:'opp', needs:{ all:['Faction: World Eaters','Character'] },
             when:'Your opponent’s Movement phase, when a unit is selected to make a **fall-back move**, if that unit is **engaged** with a friendly **WORLD EATERS CHARACTER** unit.',
             target:'That **WORLD EATERS CHARACTER** unit.',
             effect:'When an enemy unit **engaged** with your unit is selected to make a **fall-back move**, that enemy unit must use the **desperate escape** mode. If that enemy unit is **battle-shocked**, -1 from those **hazard rolls**.' }
@@ -713,7 +713,7 @@ const FACTIONS = {
             target:'One **THOUSAND SONS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.',
             effect:'Until the end of the phase, all attacks made against your unit with Psychic weapons have the **[HAZARDOUS]** ability and all models in your unit have the **Feel No Pain 4+** ability against **Psychic Attacks**.' },
           // mod/def candidate, not active: def:'After a failed save for a PSYKER model: that attack’s Damage becomes 0'
-          { id:'destined-by-fate', gist:'Change the Damage of that attack to 0.', def:'after a failed save for a PSYKER model, that attack’s Damage becomes 0', name:'Destined by Fate', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Faction: Thousand Sons','Psyker'] },
+          { id:'destined-by-fate', gist:'Just after a saving throw is failed for your PSYKER model: change the Damage of that attack to 0.', def:'after a failed save for a PSYKER model, that attack’s Damage becomes 0', name:'Destined by Fate', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Faction: Thousand Sons','Psyker'] },
             when:'Any phase, just after a saving throw is failed for a **THOUSAND SONS PSYKER** model from your army. If you are using fast dice rolling, this Stratagem can still be used after rolling multiple saving throws at once.',
             target:'That **PSYKER** model.',
             effect:'Change the Damage characteristic of that attack to 0. If you are using fast dice rolling, select one of those attacks you failed a saving throw for.' },
@@ -722,12 +722,12 @@ const FACTIONS = {
             when:'Your Command phase.',
             target:'One **THOUSAND SONS PSYKER** unit from your army.',
             effect:'Select the Imbued Manifestation, Psychic Maelstrom or Wrath of the Immaterium ability. Until the start of your next Command phase, that ability applies to your unit instead of any other Kindred Sorcery ability, even if you have already selected that ability this battle.' },
-          { id:'desecration-of-worlds', gist:'That objective marker stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.', name:'Desecration of Worlds', cp:1, phases:['command'], turn:'your', needs:{ all:['Faction: Thousand Sons','Psyker'] },
+          { id:'desecration-of-worlds', gist:'An objective marker you control that your unit is within range of stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.', name:'Desecration of Worlds', cp:1, phases:['command'], turn:'your', needs:{ all:['Faction: Thousand Sons','Psyker'] },
             when:'Your Command phase.',
             target:'One **THOUSAND SONS PSYKER** unit from your army within range of an objective marker you control.',
             effect:'That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.' },
           // needs: only models with Cabal of Sorcerers take Psychic tests; in this list every one of them is a PSYKER
-          { id:'arcane-focus', gist:'Re-roll all the D6 of that Psychic test (the Channelling the Warp D6 included).', name:'Arcane Focus', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Faction: Thousand Sons'] },
+          { id:'arcane-focus', gist:'Just after your model’s Psychic test with Channelling the Warp: re-roll all the D6 of that Psychic test (the Channelling the Warp D6 included).', name:'Arcane Focus', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Faction: Thousand Sons'] },
             when:'Your Shooting phase, just after you take a Psychic test for a **THOUSAND SONS** model from your army that Channelled the Warp (before resolving that **Ritual**).',
             target:'That **THOUSAND SONS** model.',
             effect:'Re-roll all of the D6 rolled for that Psychic test (including the additional D6 for Channelling the Warp).' },
@@ -778,7 +778,7 @@ const FACTIONS = {
           { name:'Monstrous Nemesis', pts:25, text:'**TYRANIDS MONSTER** model only. Each time the bearer makes a melee attack that targets a **MONSTER** or **VEHICLE** unit, add 1 to the **Wound roll**.' }
         ],
         stratagems:[
-          { id:'corrosive-viscera', gist:'Its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).', name:'Corrosive Viscera', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'opp' }, needs:{ all:['Faction: Tyranids','Monster'], none:['Fly'] },
+          { id:'corrosive-viscera', gist:'Your MONSTER model (one that cannot FLY) just destroyed: its Deadly Demise mortal wounds are inflicted automatically (no D6 roll).', name:'Corrosive Viscera', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'opp' }, needs:{ all:['Faction: Tyranids','Monster'], none:['Fly'] },
             when:'Your opponent’s Shooting phase or the Fight phase, just after a **TYRANIDS MONSTER** model from your army with the **Deadly Demise** ability that cannot **FLY** is destroyed.',
             target:'That **TYRANIDS MONSTER** model. You can use this Stratagem on that model even though it was just destroyed.',
             effect:'Do not roll one D6 to determine whether **mortal wounds** are inflicted by your model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted.' },
@@ -786,7 +786,7 @@ const FACTIONS = {
             when:'Fight phase.',
             target:'One **TYRANIDS MONSTER** unit from your army that has not been selected to fight this phase.',
             effect:'Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the **Hit roll**.' },
-          { id:'savage-roar', gist:'That enemy unit takes a Battle-shock test and has -1 to hit your unit until the end of the phase; also -1 to wound if it failed the test.',
+          { id:'savage-roar', gist:'An enemy unit has selected your unit as a target: it takes a Battle-shock test and has -1 to hit your unit until the end of the phase; also -1 to wound if it failed the test.',
             defPick:[{ name:'Test passed', calc:{ hitMinus:1 } }, { name:'Test failed', calc:{ hitMinus:1, woundMinus:1 } }], name:'Savage Roar', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Tyranids','Monster'] },
             when:'Fight phase, just after an enemy unit has selected its targets.',
             target:'One **TYRANIDS MONSTER** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.',
@@ -800,7 +800,7 @@ const FACTIONS = {
             when:'Your Shooting phase.',
             target:'One **TYRANIDS MONSTER** unit from your army that has not been selected to shoot this phase.',
             effect:'Until the end of the phase, ranged weapons equipped by models in your unit have the **[IGNORES COVER]** ability, and until the end of the phase each time a model in your unit makes an attack, you can ignore any or all modifiers to that model’s Ballistic Skill characteristic and any or all modifiers to the **Hit roll**.' },
-          { id:'massive-impact', gist:'Select one enemy unit within Engagement Range of your model and roll six D6: 1 mortal wound for each 4+.', name:'Massive Impact', cp:1, phases:['charge'], turn:'your', needs:{ all:['Faction: Tyranids','Monster'] },
+          { id:'massive-impact', gist:'Your model has ended a Charge move: select one enemy unit within Engagement Range of it and roll six D6: 1 mortal wound for each 4+.', name:'Massive Impact', cp:1, phases:['charge'], turn:'your', needs:{ all:['Faction: Tyranids','Monster'] },
             when:'Your Charge phase, just after a **TYRANIDS MONSTER** model from your army ends a **Charge move**.',
             target:'That **TYRANIDS MONSTER** model.',
             effect:'Select one enemy unit within **Engagement Range** of your model and roll six D6: for each 4+, that enemy unit suffers 1 **mortal wound**.' }
@@ -827,7 +827,7 @@ const FACTIONS = {
             when:'Fight phase, when a friendly **NORN ASSIMILATOR/NORN EMISSARY** unit is **selected to fight**.',
             target:'That **NORN ASSIMILATOR/NORN EMISSARY** unit.',
             effect:'Your unit’s melee attacks have +2 **S**.' },
-          { id:'tanglestrike-rounds', gist:'One enemy unit hit by those attacks is tethered (-2" M) until the start of your next Command phase.', name:'Tanglestrike Rounds', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Norn Assimilator'] },
+          { id:'tanglestrike-rounds', gist:'After your unit has shot: one enemy unit hit by those attacks is tethered (-2" M) until the start of your next Command phase.', name:'Tanglestrike Rounds', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Norn Assimilator'] },
             when:'Your Shooting phase, when a friendly **NORN ASSIMILATOR** unit has shot.',
             target:'That **NORN ASSIMILATOR** unit.',
             effect:'Select one enemy unit hit by those attacks. That enemy unit is **tethered** until the start of your next Command phase:\n- While a unit is **tethered**, that unit has -2" **M**.' }
@@ -971,7 +971,7 @@ const FACTIONS = {
             target:'That **SICARIAN** unit.',
             effect:'Until the end of the phase, when your unit ends a **Charge move**, select one enemy unit within **Engagement Range** of it, then roll one D6 for each model in your unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 **mortal wound**.' },
           // react: the Damage tab names it to the side that shoots its unit, as a reaction it can trigger (not counted)
-          { id:'analytic-reprisals', react:'lost', gist:'Your unit shoots as if it were your Shooting phase, but only at that enemy unit (and only if it is an eligible target).', name:'Analytic Reprisals', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Skitarii','Infantry'] },
+          { id:'analytic-reprisals', react:'lost', gist:'An enemy unit has shot and your unit lost models to those attacks: your unit shoots as if it were your Shooting phase, but only at that enemy unit (and only if it is an eligible target).', name:'Analytic Reprisals', cp:1, phases:['shooting'], turn:'opp', needs:{ all:['Skitarii','Infantry'] },
             when:'Your opponent’s Shooting phase, just after an enemy unit has shot.',
             target:'One **SKITARII INFANTRY** unit from your army that lost one or more models as a result of the attacking unit’s attacks.',
             effect:'Your unit can shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target.' }
