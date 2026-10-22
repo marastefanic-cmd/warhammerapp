@@ -706,15 +706,16 @@ Knight Destrier · Sanctuary
 ######## bases · RULES Bases & proxies
 BASES TO PRINT
 
+1× 25mm
 1× 150×95mm
-5× 170×109mm
+4× 170×109mm
 
 WHAT TO WRITE ON EACH BASE
 
 Canis Rex
 1× 170×109mm
 standard Freedom’s Hand, Las-impulsor, Questoris multi-laser
-1× 170×109mm
+1× 25mm
 Sir Hekhtur · Close combat weapon + Hekhtur’s pistol
 Cerastus Knight Atrapos · Bringer of Justice
 1× 170×109mm
@@ -2038,7 +2039,7 @@ Canis Rex
 10
 5+*
 Sir Hekhtur
-170×109mm
+25mm
 6"
 3
 4+
