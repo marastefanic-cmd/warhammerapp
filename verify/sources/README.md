@@ -16,6 +16,7 @@ Everything the app states as a fact is checked against these, mechanically, befo
 | nr/ooga-booga.txt | Ooga booga - New Recruit.pdf (exported 10/20/26) | a2b11ffbb14e2e0aaaea7b4ea69dcae654486992c0f34240dcc1893b4d698c4d |
 | nr/super-terminators.txt | Super Terminators - New Recruit.pdf (exported 10/20/26) | 00f2317c6bef15df77ae952c90414ce0da1294a42efb347c89e6fff733666069 |
 | nr/purge-goes-the-foe.txt | Purge goes the Foe - New Recruit.pdf (exported 10/20/26) | cdcdfe52576d558f460e7d9b6afe4076e0aa4f12e6dd6d84b53646217ff5f392 |
+| nr/defilers-and-friends.txt | Defilers and friends - New Recruit.pdf (exported 10/22/26) | fb7b785ca640f46895d0564984d92f0e2cad94d17d4461baea038e9ceb09106f |
 | packet/core-stratagems.txt | Core_stratagemy.pdf | d62979edcfd0323c1d3382a6d238f0f87b312fb07f103125ecbccdb6bd96e5a8 |
 
 Text made with `pdftotext -layout <pdf> <txt>` (poppler).

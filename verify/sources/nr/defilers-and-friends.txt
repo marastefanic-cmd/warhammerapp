@@ -1,0 +1,526 @@
+10/22/26, 9:36 PM                                                Defilers and friends - New Recruit
+
+                                                  Defilers and friends [2000pts]
+  Army Roster [3 Detachment Points, 2000 pts] (Chaos - Emperor's Children)
+  • Battle Size: Strike Force (2000 Point limit)
+  • Detachment: Coterie of the Conceited [3Detachment Points]
+  • Force Disposition: Purge the Foe
+  • Show/Hide Options
+  NAME                                       ROLE             PTS OPTIONS
+   Lucius the Eternal                                      Epic Hero                    130 Warlord
+   Daemon Prince of Slaanesh with Wings Character                                       205
+   Lord Exultant                                           Character                    95
+   Lord Exultant                                           Character                    95
+   (5) Infractors                                          Battleline                   95      Lord Exultant
+   (5) Infractors                                          Battleline                   95      Lord Exultant
+   (5) Tormentors                                          Battleline                   85
+   (5) Tormentors                                          Battleline                   85
+                                                                                                Lucius the Eternal
+   (3) Flawless Blades                                     Infantry                     95
+                                                                                                3x Flawless Blade
+   Defiler                                                 Vehicle                      330
+   Defiler                                                 Vehicle                      380
+   Maulerfiend                                             Vehicle                      120
+   Maulerfiend                                             Vehicle                      120
+   Chaos Rhino                                             Dedicated Transport 70
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada5ccb3cecbed872ccbcc2                                                         1/13
+10/22/26, 9:36 PM                                                 Defilers and friends - New Recruit
+     225 PTS                                            LUCIUS THE ETERNAL
+   Models                                         Options
+                                                  Blade of the Laer, Lash of Torment, Warlord
+   1x Lucius the Eternal
+                                                  • Leading: Flawless Blades
+   3x Flawless Blade                              Blissblade, Bolt pistol
+   Unit                                                               M      T     Sv       W       LD    OC          InSv   Base
+   Lucius the Eternal - Lucius the Eternal                            8"     6     2+       6       6+    1           4+     50mm
+   Flawless Blades - Flawless Blades                                  8"     5     3+       3       6+       1        5+     40mm
+   Ranged Weapons                                                 Range           A        BS       S    AP       D     Keywords
+   Bolt pistol (x3) - Flawless Blades                             12"             1        3+       5    -1       1     Pistol
+   Melee Weapons                                                Range        A        WS        S   AP   D       Keywords
+   Blade of the Laer - Lucius the Eternal                       Melee        6        2+        8   -3   3       Precision
+   Lash of Torment - Lucius the Eternal                         Melee        10       2+        4   -1   1       Sustained Hits 1
+   Blissblade (x3) - Flawless Blades                            Melee        4        2+        6   -3   2
+   Abilities              Description
+   Duellist’s Hubris
+                          At the start of the Fight phase, if this model is not leading a unit, until the end of the phase,
+   - Lucius the
+                          it has the Fights First ability.
+   Eternal
+   A Challenge
+                      Each time this model makes an attack that targets a Character, Monster or Walker unit,
+   Worthy of Skill -
+   Lucius the Eternal
+                      you can re-roll the Hit roll and re-roll the Wound roll.
+
+                          Each time this unit is selected to fight, it can call upon daemonic patrons. If it does, until the
+   Daemonic               end of the phase, each time a model in this unit makes an attack. an unmodified Wound roll
+   Patrons -              of 3+ scores a Critical Wound. At the end of the Fight phase, if this unit called upon
+   Flawless Blades        daemonic patrons this phase and no enemy models were destroyed by attacks made by
+                          models in this unit this phase, one model in this unit is destroyed.
+    Rules Leader, Thrill Seekers, Feel No Pain 5+, Lone Operative, Precision, Sustained Hits, Thrill Seekers, Pistol
+
+    Categories Chaos, Character, Epic Hero, Faction: Emperor's Children, Infantry, Lucius the Eternal, Slaanesh, Warlord,
+               Flawless Blades*, Grenades*, *from combined unit
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada5ccb3cecbed872ccbcc2                                                                        2/13
+10/22/26, 9:36 PM                                                      Defilers and friends - New Recruit
+     190 PTS                                                   LORD EXULTANT
+   Models                       Options
+                                Bolt pistol, Close combat weapon, Phoenix power spear, Rapture lash
+   1x Lord Exultant
+                                • Leading: Infractors[1]
+   1x Obsessionist              Power sword, Plasma pistol
+   3x Infractor                 Bolt pistol, Duelling sabre
+   1x Infractor                 Bolt pistol, Duelling sabre, Icon of Excess
+   Unit                                                         M        T       Sv         W        LD          OC      InSv       Base
+   Lord Exultant - Lord Exultant                                7"       5       3+         5        6+          1       4+         40mm
+   Infractors - Infractors                                      7"       5       3+         2        6+          2                  32mm
+   Ranged Weapons                                               Range        A BS      S AP D Keywords
+   Bolt pistol - Lord Exultant                                  12"          1 2+      5 -1 1 Pistol, Lethal Hits
+   ➤ Plasma pistol - standard - Infractors                      12"          1 3+      7 -2          1       Pistol, Lethal Hits
+   ➤ Plasma pistol - supercharge - Infractors                   12"          1 3+      8 -3          2       Hazardous, Pistol, Lethal Hits
+   Bolt pistol (x4) - Infractors                                12"          1 3+      5 -1          1       Pistol, Lethal Hits
+   Melee Weapons                                               Range         A   WS     S       AP       D    Keywords
+   Close combat weapon - Lord Exultant                         Melee         6   2+     5       0        1    Lethal Hits
+   Phoenix power spear - Lord Exultant                         Melee         5   2+     7       -2       2     Lance, Lethal Hits
+   Rapture lash - Lord Exultant                                Melee         4   2+     4       -1       1     Extra Attacks, Lethal Hits
+   Power sword - Infractors                                    Melee         4   3+     5       -2       1     Precision, Lethal Hits
+   Duelling sabre (x4) - Infractors                            Melee         4   3+     5       -1       1     Precision, Lethal Hits
+   Abilities               Description
+   Perfectionists -        While this model is leading a unit, weapons equipped by models in that unit have the
+   Lord Exultant           [LETHAL HITS] ability.
+                           Once per battle, at the start of the Fight phase, this model can use this ability. If it does so,
+   Euphoric Strikes -
+                           until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped
+   Lord Exultant
+                           by this model and improve the Armour Penetration characteristic of those weapons by 1.
+   Lord of the Host -      If this model is attached to an Emperor's Children Battleline unit during the Declare
+   Lord Exultant           Battle Formations step, this model has the Infiltrators and Scouts 6" ability.
+                           Each time a model in this unit targets an enemy unit with a melee attack, re-roll a Wound
+   Excessive Assault
+                           roll of 1. If that enemy unit is within range of an objective marker, you can re-roll the
+   - Infractors
+                           Wound roll instead.
+                           At the end of your Shooting phase or the Fight phase, if the bearer's unit destroyed one or
+   Icon of Excess -
+                           more enemy units this phase, the bearer's unit takes a Leadership test. If that test is
+   Infractors
+                           passed, you gain 1CP.
+    Rules Leader, Thrill Seekers, Infiltrators, Scouts 6", Pistol, Lance, Extra Attacks, Thrill Seekers, Scouts 6", Precision,
+          Hazardous, Pistol
+    Categories Chaos, Character, Faction: Emperor's Children, Grenades, Infantry, Lord Exultant, Slaanesh, Battleline*,
+               Infractors*, *from combined unit
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada5ccb3cecbed872ccbcc2                                                                                  3/13
+10/22/26, 9:36 PM                                                      Defilers and friends - New Recruit
+     190 PTS                                                   LORD EXULTANT
+   Models                       Options
+                                Bolt pistol, Close combat weapon, Phoenix power spear, Rapture lash
+   1x Lord Exultant
+                                • Leading: Infractors[2]
+   1x Obsessionist              Power sword, Plasma pistol
+   3x Infractor                 Bolt pistol, Duelling sabre
+   1x Infractor                 Bolt pistol, Duelling sabre, Icon of Excess
+   Unit                                                         M        T       Sv         W        LD          OC      InSv       Base
+   Lord Exultant - Lord Exultant                                7"       5       3+         5        6+          1       4+         40mm
+   Infractors - Infractors                                      7"       5       3+         2        6+          2                  32mm
+   Ranged Weapons                                               Range        A BS      S AP D Keywords
+   Bolt pistol - Lord Exultant                                  12"          1 2+      5 -1 1 Pistol, Lethal Hits
+   ➤ Plasma pistol - standard - Infractors                      12"          1 3+      7 -2          1       Pistol, Lethal Hits
+   ➤ Plasma pistol - supercharge - Infractors                   12"          1 3+      8 -3          2       Hazardous, Pistol, Lethal Hits
+   Bolt pistol (x4) - Infractors                                12"          1 3+      5 -1          1       Pistol, Lethal Hits
+   Melee Weapons                                               Range         A   WS     S       AP       D    Keywords
+   Close combat weapon - Lord Exultant                         Melee         6   2+     5       0        1    Lethal Hits
+   Phoenix power spear - Lord Exultant                         Melee         5   2+     7       -2       2     Lance, Lethal Hits
+   Rapture lash - Lord Exultant                                Melee         4   2+     4       -1       1     Extra Attacks, Lethal Hits
+   Power sword - Infractors                                    Melee         4   3+     5       -2       1     Precision, Lethal Hits
+   Duelling sabre (x4) - Infractors                            Melee         4   3+     5       -1       1     Precision, Lethal Hits
+   Abilities               Description
+   Perfectionists -        While this model is leading a unit, weapons equipped by models in that unit have the
+   Lord Exultant           [LETHAL HITS] ability.
+                           Once per battle, at the start of the Fight phase, this model can use this ability. If it does so,
+   Euphoric Strikes -
+                           until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped
+   Lord Exultant
+                           by this model and improve the Armour Penetration characteristic of those weapons by 1.
+   Lord of the Host -      If this model is attached to an Emperor's Children Battleline unit during the Declare
+   Lord Exultant           Battle Formations step, this model has the Infiltrators and Scouts 6" ability.
+                           Each time a model in this unit targets an enemy unit with a melee attack, re-roll a Wound
+   Excessive Assault
+                           roll of 1. If that enemy unit is within range of an objective marker, you can re-roll the
+   - Infractors
+                           Wound roll instead.
+                           At the end of your Shooting phase or the Fight phase, if the bearer's unit destroyed one or
+   Icon of Excess -
+                           more enemy units this phase, the bearer's unit takes a Leadership test. If that test is
+   Infractors
+                           passed, you gain 1CP.
+    Rules Leader, Thrill Seekers, Infiltrators, Scouts 6", Pistol, Lance, Extra Attacks, Thrill Seekers, Scouts 6", Precision,
+          Hazardous, Pistol
+    Categories Chaos, Character, Faction: Emperor's Children, Grenades, Infantry, Lord Exultant, Slaanesh, Battleline*,
+               Infractors*, *from combined unit
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada5ccb3cecbed872ccbcc2                                                                                  4/13
+10/22/26, 9:36 PM                                               Defilers and friends - New Recruit
+     205 PTS                               DAEMON PRINCE OF SLAANESH WITH WINGS
+   Models                                                        Options
+   1x Daemon Prince of Slaanesh with Wings                                 Hellforged weapons, Infernal cannon
+   Unit                                                             M          T    Sv        W        LD        OC       InSv   Base
+   Daemon Prince of Slaanesh with Wings                             14"        9    2+        10       6+        3        4+     60mm
+   Ranged Weapons                               Range           A         BS         S        AP            D         Keywords
+   Infernal cannon                              24"             3         2+         5        -1            2
+   Melee Weapons                                               Range           A         WS        S        AP        D    Keywords
+   ➤ Hellforged weapons - strike                               Melee           6         2+        8        -2        3
+   ➤ Hellforged weapons - sweep                                Melee           14        2+        6        0         1
+   Abilities           Description
+                       Each time this model ends a Charge move, select one enemy unit within Engagement Range of
+   Daemonic
+                       this model and roll one D6 for each of this model's remaining wounds: for each 4+, that enemy
+   Destruction
+                       unit suffers 1 mortal wound (to a maximum of 6 mortal wounds).
+   Stimulated by       Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of
+   Pain                that attack.
+    Rules Deadly Demise D3, Thrill Seekers, Deep Strike
+
+    Categories Chaos, Character, Daemon, Daemon Prince with Wings, Faction: Emperor's Children, Fly, Monster, Slaanesh
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada5ccb3cecbed872ccbcc2                                                                            5/13
+10/22/26, 9:36 PM                                                    Defilers and friends - New Recruit
+     85 PTS                                                    TORMENTORS                                                            x2
+   Models                                                         Options
+   1x Obsessionist                                                   Plasma pistol, Power sword
+   3x Tormentor                                                      Boltgun, Close combat weapon
+   1x Tormentor w/ meltagun                                          Close combat weapon, Meltagun
+   Unit                               M         T         Sv           W          LD            OC            InSv         Base
+   Tormentors                         7"        5         3+           2          6+            2                          32mm
+   Ranged Weapons                                   Range        A     BS     S       AP    D        Keywords
+   ➤ Plasma pistol - standard                       12"          1     3+     7       -2    1        Pistol, Precision
+   ➤ Plasma pistol - supercharge                    12"          1     3+     8       -3    2        Hazardous, Pistol, Precision
+   Boltgun (x3)                                     24"          2     3+     5       -1    1        Precision
+   Meltagun                                         12"          1     3+     9       -4    D6       Melta 2, Precision
+   Melee Weapons                                               Range              A        WS        S    AP         D    Keywords
+   Power sword                                                 Melee              4        3+        5    -2         1
+   Close combat weapon (x4)                                    Melee              3        3+        5    0          1
+   Abilities        Description
+                    At the end of your Command phase, if this unit is within range of an objective marker you control,
+   Objective
+                    that objective marker remains under your control until your opponent's Level of Control over that
+   Defiled
+                    objective marker is greater than yours at the end of a phase.
+                    At the end of your Shooting phase or the Fight phase, if the bearer's unit destroyed one or more
+   Icon of
+                    enemy units this phase, the bearer's unit takes a Leadership test. If that test is passed, you gain
+   Excess
+                    1CP.
+    Rules Infiltrators, Thrill Seekers, Hazardous, Pistol, Precision, Melta
+
+    Categories Battleline, Chaos, Faction: Emperor's Children, Grenades, Infantry, Slaanesh, Tormentors
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada5ccb3cecbed872ccbcc2                                                                              6/13
+10/22/26, 9:36 PM                                                   Defilers and friends - New Recruit
+     330 PTS                                                    DEFILER
+   Models    Options
+   1x               Ectoplasma destructor, 2x Heavy reaper autocannon, Shearing claws, Two excruciator cannons (2x
+   Defiler          Excruciator cannon)
+   Unit                    M             T          Sv         W             LD          OC              InSv     Base
+   Defiler                 12"           11         3+         18            6+          5               5+       160mm
+   Ranged Weapons                             Range      A     BS       S    AP D Keywords
+   Ectoplasma destructor                      36"        D6    3+       12   -3   3    Blast
+   Excruciator cannon (x2)                    36"        6     3+       6    -1   2
+   Heavy reaper autocannon (x2)               48"        4     3+       9    -1   3    Devastating Wounds, Sustained Hits 1
+   Melee Weapons                                    Range           A        WS         S        AP        D       Keywords
+   Shearing claws - strike                          Melee           5        3+         16       -3        D6+1    Precision
+   Shearing claws - sweep                           Melee           10       3+         6        -2        1
+   Abilities               Description
+                           Each time this unit makes a Normal, Advance or Fall Back move, it can move through models
+                           (excluding Titanic models) and terrain features. When doing so, it can move within
+   Scuttling Walker
+                           Engagement Range of enemy models, but cannot end that move within Engagement Range
+                           of them, and any Desperate Escape test is automatically passed.
+   Revel in                Each time this model makes an attack that targets an enemy unit that is not below Half-
+   Desecration             strength, add 1 to the Hit roll.
+   Damaged: 1-6
+                           While this model has 1-6 wounds remaining, each time this model makes an attack, subtract
+   wounds
+                           1 from the Hit roll.
+   remaining
+    Rules Deadly Demise D6, Thrill Seekers, Blast, Sustained Hits, Devastating Wounds, Precision
+
+    Categories Chaos, Daemon, Defiler, Faction: Emperor's Children, Slaanesh, Vehicle, Walker
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada5ccb3cecbed872ccbcc2                                                                   7/13
+10/22/26, 9:36 PM                                                   Defilers and friends - New Recruit
+     380 PTS                                                    DEFILER
+   Models    Options
+   1x               Ectoplasma destructor, 2x Heavy reaper autocannon, Shearing claws, Two excruciator cannons (2x
+   Defiler          Excruciator cannon)
+   Unit                    M            T           Sv         W             LD          OC              InSv     Base
+   Defiler                 12"          11          3+         18            6+          5               5+       160mm
+   Ranged Weapons                             Range      A     BS       S    AP D Keywords
+   Ectoplasma destructor                      36"        D6    3+       12   -3   3    Blast
+   Excruciator cannon (x2)                    36"        6     3+       6    -1   2
+   Heavy reaper autocannon (x2)               48"        4     3+       9    -1   3    Devastating Wounds, Sustained Hits 1
+   Melee Weapons                                    Range           A        WS         S        AP        D       Keywords
+   Shearing claws - strike                          Melee           5        3+         16       -3        D6+1    Precision
+   Shearing claws - sweep                           Melee           10       3+         6        -2        1
+   Abilities               Description
+                           Each time this unit makes a Normal, Advance or Fall Back move, it can move through models
+                           (excluding Titanic models) and terrain features. When doing so, it can move within
+   Scuttling Walker
+                           Engagement Range of enemy models, but cannot end that move within Engagement Range
+                           of them, and any Desperate Escape test is automatically passed.
+   Revel in                Each time this model makes an attack that targets an enemy unit that is not below Half-
+   Desecration             strength, add 1 to the Hit roll.
+   Damaged: 1-6
+                           While this model has 1-6 wounds remaining, each time this model makes an attack, subtract
+   wounds
+                           1 from the Hit roll.
+   remaining
+    Rules Deadly Demise D6, Thrill Seekers, Blast, Sustained Hits, Devastating Wounds, Precision
+
+    Categories Chaos, Daemon, Defiler, Faction: Emperor's Children, Slaanesh, Vehicle, Walker
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada5ccb3cecbed872ccbcc2                                                                   8/13
+10/22/26, 9:36 PM                                                   Defilers and friends - New Recruit
+     120 PTS                                                   MAULERFIEND                                                     x2
+   Models                           Options
+   1x Maulerfiend                     Maulerfiend fists, 2 magma cutters (2x Magma cutter)
+   Unit                           M           T        Sv          W        LD          OC            InSv        Base
+   Maulerfiend                    10"         10       3+          12        6+         3             5+          120x92mm
+   Ranged Weapons                                  Range            A       BS          S        AP          D      Keywords
+   Magma cutter (x2)                               6"               2       3+          9        -4          D6     Melta 2
+   Melee Weapons                            Range              A    WS           S          AP        D             Keywords
+   Maulerfiend fists                        Melee              6    3+           14         -2         D6+1
+   Abilities                   Description
+   Glutton for                 Each time this model makes an attack, if it is below its Starting Strength, add 1 to the
+   Punishment                  Hit roll. If this model is also Below Half-Strength, add 1 to the Wound roll as well.
+   Damaged: 1-4                While this model has 1-4 wounds remaining, each time this model makes an attack,
+   wounds remaining            subtract 1 from the Hit roll.
+    Rules Deadly Demise D3, Thrill Seekers
+
+    Categories Chaos, Daemon, Faction: Emperor's Children, Maulerfiend, Slaanesh, Vehicle, Walker
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada5ccb3cecbed872ccbcc2                                                                        9/13
+10/22/26, 9:36 PM                                                   Defilers and friends - New Recruit
+     70 PTS                                                    CHAOS RHINO
+   Models                              Options
+   1x Chaos Rhino                      Armoured tracks, 2x Combi-bolter, Havoc launcher
+   Unit                                 M            T         Sv        W            LD               OC           InSv           Base
+   Chaos Rhino                          12"          9         3+        10           6+               2                           Hull
+   Ranged Weapons                             Range             A          BS          S      AP            D       Keywords
+   Combi-bolter (x2)                          24"               2          3+          5       -1           1       Rapid Fire 2
+   Havoc launcher                             48"               D6         3+          5       0            1       Blast
+   Melee Weapons                                 Range              A      WS           S          AP           D      Keywords
+   Armoured tracks                               Melee              3      4+           6          0            1
+   Abilities        Description
+                    Units can disembark from this Vehicle after it has Advanced. Units that do so count as having
+   Assault
+                    made a Normal move that phase, and cannot declare a charge in the same turn, but can otherwise
+   Vehicle
+                    act normally.
+   Transport        Capacity
+   Chaos            This model has a transport capacity of 12 Emperor's Children Infantrymodels (excluding
+   Rhino            Terminator and Flawless Blade models).
+    Rules Deadly Demise D3, Thrill Seekers, Firing Deck 2, Rapid Fire, Blast
+
+    Categories Chaos, Dedicated Transport, Faction: Emperor's Children, Frame, Rhino, Slaanesh, Smoke, Transport,
+               Vehicle
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada5ccb3cecbed872ccbcc2                                                                              10/13
+10/22/26, 9:36 PM                                              Defilers and friends - New Recruit
+
+
+  Rules
+  Blast:
+  Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models
+  that were in the target unit in the Select Targets step (rounding down). If this ability takes the form [BLAST X],
+  each time you gather attack dice for such a weapon, add X additional attack dice for every five models that
+  were in the target unit in the Select Targets step (rounding down) instead.
+  Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would
+  gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+  Deadly Demise D3 / Deadly Demise D6:
+  This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the
+  units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that
+  model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds
+  denoted by X (if this is a random number, roll separately for each unit within 6").
+  Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any
+  unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency
+  disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved.
+  Finally, the Impulsor is removed from the battlefield.
+
+  Deep Strike:
+  Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up
+  anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your
+  opponent’s deployment zone.
+
+  Devastating Wounds:
+  Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack
+  sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D
+  characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+  Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for
+  each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+  Example: An attack made with a [DEVASTATING WOUNDS] weapon with a D characteristic of 3 results in a
+  critical wound against an Intercessor Squad, so inflicts 3 mortal wounds. The first 2 mortal wounds are
+  sufficient to destroy 1 Intercessor model, so the remaining mortal wound is lost.
+
+  Extra Attacks:
+  Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will
+  make attacks with those weapons in addition to any others. In the Select Weapons step (04.01), for each of
+  those models, you must select:
+    All of that model’s [EXTRA ATTACKS] weapons.
+    One of that model’s other melee weapons, if possible.
+
+  Feel No Pain 5+:
+  This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll
+  one D6: on an X+, that wound is not lost.
+
+  Firing Deck 2:
+  This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is
+  selected to shoot, if one or more units are embarked within it, resolve the following sequence:
+
+       1.Select up to X models embarked within this TRANSPORT (excluding models whose units have already
+          been selected to shoot this phase).
+       2.For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons).
+       3.Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its
+          other weapons.
+       4.Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada5ccb3cecbed872ccbcc2                                                          11/13
+10/22/26, 9:36 PM                                              Defilers and friends - New Recruit
+
+  Hazardous:
+  Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make
+  a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in
+  the Select Weapons step.
+
+  Infiltrators:
+  During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is
+  more than 8" horizontally from your opponent’s deployment zone and all enemy units.
+
+  Lance:
+  Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this
+  turn, add 1 to the wound roll.
+
+  Leader:
+  Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one
+  friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an
+  attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one
+  support unit attached to it.
+
+  Lone Operative:
+  Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12" of this unit,
+  and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12" of this unit.
+  If this ability takes the form Lone Operative X", unless part of an attached unit, this unit is not visible to
+  enemy models unless they are within X" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons
+  unless the attacking model is within X" of this unit.
+
+  Melta:
+  This ability always takes the form [MELTA X]. Each time a model makes an attack with a [MELTA] weapon, if
+  the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks
+  have been resolved, add X to that weapon’s D characteristic.
+  Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6.
+  While resolving those attacks, that weapon has a D characteristic of D6+2.
+
+  Pistol:
+  [PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
+  Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters
+  shooting (10.06). When using another shooting type, for each model in that unit (excluding
+  MONSTER/VEHICLE models), you can only select one of the following to make attacks with:
+   One or more of its [CLOSE-QUARTERS] weapons.
+   One or more of its other ranged weapons.
+
+  Pledges to the Dark Prince:
+  At the start of the battle round, if your Warlord is on the battlefield, you must pledge a number to Slaanesh
+  representing how many enemy units will be destroyed this battle round. At the end of the battle round, if the
+  number of enemy units destroyed this battle round is greater than or equal to your pledge, you gain a number of
+  Pact points equal to your pledge. Otherwise, you do not gain any Pact points this battle round and your Warlord
+  model suffers D3 mortal wounds.
+  Emperor's Children units from your army gain a bonus depending on how many Pact points you have gained
+  during the battle, as shown below (these are all cumulative).
+  1+: Each time a model in this unit makes an attack, re-roll a Hit roll of 1.
+  3+: Each time a model in this unit makes an attack, re-roll a Wound roll of 1.
+  5+: Melee weapons equipped by models in this unit have the [Lethal Hits] and [Sustained Hits 1]] abilities.
+  7+: Each time a model in this unit makes an attack, a Critical Hit is scored on an unmodified Hit roll of 5+.
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada5ccb3cecbed872ccbcc2                                                           12/13
+10/22/26, 9:36 PM                                              Defilers and friends - New Recruit
+
+  Precision:
+  While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step
+  (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking
+  models, the active player can select one allocation group that contains one of those visible CHARACTER
+  models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever
+  happens first), that CHARACTER group is the current allocation group.
+
+  Rapid Fire:
+  This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE]
+  weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select
+  Targets step.
+  Example: If a [RAPID FIRE 1] weapon with an A characteristic of 1 targets a unit that is within half range,
+  you would gather one additional attack dice for that weapon (for a total of two for that weapon).
+
+  Scouts 6":
+  This ability always takes the form Scouts X". In the Resolve Pre-battle Abilities step, if every model in a unit has
+  this ability, you can do one of the following:
+    If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment
+     zone.
+    If that unit is wholly within your deployment zone, it can make a scout move.
+    If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if
+     every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED
+     TRANSPORT can make a scout move.
+
+  Sustained Hits:
+  This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED
+  HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as
+  denoted by X.
+  Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore
+  hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability).
+
+  Thrill Seekers:
+  If your Army Faction is Emperor's Children, this unit is eligible to shoot and declare a charge in a turn in which it
+  Advanced or Fell Back, but when doing so:
+    It cannot target a unit it was within Engagement Range of at the start of the turn
+    It cannot target a unit that was the target of another unit's charge or attack this phase.
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada5ccb3cecbed872ccbcc2                                                         13/13
+

@@ -133,7 +133,8 @@ for(const [p, url] of pages){
 }
 for(const line of fs.readFileSync(path.join(V, 'sources/waha-datasheets.txt'), 'utf8').split('\n').filter(Boolean)){
   const [fac, unit] = line.trim().split(/\s+/);
-  if(curl('https://wahapedia.ru/wh40k11ed/factions/' + fac + '/' + unit, path.join(wdir, 'ds', fac + '_' + unit + '.html')).status !== 0){ wahaOk = false; problems.push('Wahapedia datasheet could not be read: ' + fac + '/' + unit); }
+  const page = (readJSON(path.join(V, 'sources/factions.json'), {})[fac] || {}).waha || fac;   // its Wahapedia page name (emperor-s-children)
+  if(curl('https://wahapedia.ru/wh40k11ed/factions/' + page + '/' + unit, path.join(wdir, 'ds', fac + '_' + unit + '.html')).status !== 0){ wahaOk = false; problems.push('Wahapedia datasheet could not be read: ' + fac + '/' + unit); }
 }
 // the GW documents stay the pinned ones: texts.js reads GW from the same cache
 if(!fs.existsSync(path.join(LATEST, 'gw'))) fs.mkdirSync(path.join(LATEST, 'gw'));
