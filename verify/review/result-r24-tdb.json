@@ -1,0 +1,8 @@
+[
+  {
+    "key": "6978f75a3d9f3031",
+    "where": "Dread Mob rule · Try Dat Button!",
+    "verdict": "ok",
+    "why": "Each label states exactly its table row: '1–2: +1 A', '3–4: +2 S', '5–6: +1 AP'; the pair labels join two rows' effects ('This unit's attacks have the relevant rule(s)'), matching each pick's existing note. The six picks cover every outcome of 'roll either one D6 or two D6 (keep re-rolling duplicate results)': under the recorded owner reading (a duplicate result = the same table row, so two D6 always land on two different rows) the three pairs are all C(3,2) combinations; even if read as duplicate numbers, two D6 landing in one band (e.g. 1 and 2) give only that row's one rule, which the single picks already cover. Names (the calc keys), notes, when and the mod note are unchanged; label is display-only (app dmPickLabel falls back to name). Versus 8ef74cb, this entry's only change is the added label fields and their comment."
+  }
+]
