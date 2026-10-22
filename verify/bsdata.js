@@ -596,6 +596,13 @@ function assignGear(items) {            // items: [{ name, cands: [path] }]
   return best ? best.pick : items.map(() => null);
 }
 
+// the list's New Recruit Show/Hide Options, "X are visible" -> X (verify/sources/nr/<army>.txt)
+function showOptions(armyId) {
+  const f = path.join(HERE, 'sources', 'nr', armyId + '.txt');
+  if (!fs.existsSync(f)) return [];
+  const v = require('./nr').parseNR(f, []).bullets['Show/Hide Options'];
+  return typeof v === 'string' ? v.split(/,\s*/).map((x) => x.replace(/\s+are visible$/, '').trim()).filter(Boolean) : [];
+}
 function buildRoster(army, MAP, issues) {
   ORDER = 0;
   const catName = MAP.catalogues[army.faction];
@@ -622,6 +629,16 @@ function buildRoster(army, MAP, issues) {
     const p = detRoot && searchBelow(detRoot.n, (k) => k.type === 'upgrade' && nn(k.name) === nn(name))[0];
     if (p) addChain(detTop, p, 1);
     else issues.push({ unit: '(army)', field: 'detachment', app: name, source: '', where: `${cat.fname} › Detachment` });
+  }
+  // the Show/Hide Options the PDF prints ("Nurgle Daemons are visible"): BSData hides an allied unit (Nurglings) unless the
+  // roster has its "Show Nurgle Daemons" selection
+  const shown = showOptions(army.id);
+  const shRoot = shown.length ? rootNode(cat, 'Show/Hide Options')[0] : null;
+  if (shRoot) {
+    const top = new Sel(shRoot.n, 1, force);
+    // its options: below the entry, and the links the faction's catalogue adds inside its own link to it (Show Nurgle Daemons)
+    const opts = kids(shRoot.n).concat(((shRoot.n.link || {}).entryLinks || []).map((l) => { const t = SRC.get(l.targetId); return t ? node(t, l) : null; }).filter(Boolean));
+    for (const o of shown) { const k = opts.find((x) => x.type === 'upgrade' && nn(x.name) === nn('Show ' + o)); if (k) addChain(top, [k], 1); }
   }
   // units, every copy
   const built = [];
