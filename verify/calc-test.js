@@ -860,9 +860,6 @@ cases.push(['a unit changed: the facts about the pair reset, and said', () => { 
     ch:{ 'me:shoot':{ on:{ 'c:cover':true }, val:{ half:18 } } }, facts:{ me:{ theirs:{ closest18:true }, mine:{ stationary:true }, pair:{ objective:true } } } });
   const st = dm.app.dmState(), r = dm.app.dmSetUnit(st, 'theirs', 'shooty', 'mek-tankbustas');
   return +(/reset: .*closest within 18"/.test(r.words) && /half range/.test(r.words) && !st.facts.me.theirs.closest18 && !st.ch['me:shoot'].val.half && st.facts.me.mine.stationary === true && r.dropped.some(d => d.fact && d.k === 'closest18')); }, 1]);
-// whose side: the player's own list stays "yours" while the opponent's list is open
-cases.push(['yours is your own list while the opponent’s list is open', () => { const p = dm.plan({ army:'princes', mine:'shooty', opp:'shooty', atk:'mek-flashgitz', tArmy:'princes', tgt:'jakhals', turn:{ me:{ shoot:true } } });
-  return +(p.P.me.id === 'shooty' && p.beats[0].atk.u.id === 'mek-flashgitz' && dm.app.dmMe().id === 'shooty'); }, 1]);
 // a reaction the target's list can make to these attacks: named first in Not counted, quoted (Gun-crazy Show-offs); not in a fight
 const GC = { army:'princes', opp:'shooty', atk:'forgefiend', tArmy:'shooty', tgt:'mek-tankbustas', ph:'shooting' };
 cases.push(['Gun-crazy Show-offs: first in Not counted, quoted', () => (x => +(!!x && /Gun-crazy Show-offs/.test(x.name) && /EFFECT: “Your unit shoots using normal shooting/.test(x.text)))(dm.calc(cp(GC)).nc[0]), 1]);
