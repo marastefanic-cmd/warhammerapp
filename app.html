@@ -4352,17 +4352,16 @@ function modLines(mods, u, hasHunter){
   parts.sort((x, y) => (x[0] == null ? -1 : at(x[0])) - (y[0] == null ? -1 : at(y[0])));
   return parts.map(([det, list]) => !list.length ? '' : det == null ? modGroupLines(list, u, hasHunter) : stratModLines(det, list, u, hasHunter)).join('');
 }
-// a stratagem's footnote: its cost first, then what it does, then when ("1CP +1 to wound rolls vs non-MONSTER/VEHICLE
-// targets (Kustom Dakka)"); a phase they all share is said once, on the detachment's label
+// a stratagem's footnote: its cost, its name, then what it does and when ("1CP Kustom Dakka: +1 to wound rolls vs
+// non-MONSTER/VEHICLE targets"), as players name it at the table; a phase they all share is said once, on the detachment's label
 const PHASE_LEAD = /^((?:your |your opponent’s |the )?(?:command|movement|shooting|charge|fight) phase)(?:, |$)/i;
 function stratModLines(det, list, u, hasHunter){
   const lead = m => (PHASE_LEAD.exec(m.when) || [])[1] || '';
   const shared = list.every(m => lead(m) && lead(m) === lead(list[0])) ? lead(list[0]) : '';
   return '<div class="msep">Stratagems · ' + esc(det) + (shared ? ' · ' + esc(shared) : '') + '</div>' + list.map(m => {
     const cond = shared ? m.when.slice(shared.length).replace(/^, /, '') : m.when;
-    return '<div class="mod sm"><b class="cpb">' + esc(m.cp) + 'CP</b> ' + (m.scope ? '<i class="sc">' + m.scope + '</i>' : '') + (m.who ? esc(m.who) + ' ' : '') + '<b>' + esc(m.note) + '</b>' +
-      (cond ? (/^vs\b/i.test(cond) ? ' ' : ', ') + esc(cond) : '') + (m.hunter && hasHunter ? ' (the (+' + Object.values(m.hunter)[0] + ') on the Hunter rows; add it to the other weapons too)' : '') +
-      ' <span class="from">(' + linkTo('strat', m.strat, m.from) + ')</span></div>';
+    return '<div class="mod sm"><b class="cpb">' + esc(m.cp) + 'CP</b> <b>' + linkTo('strat', m.strat, m.from) + ':</b> ' + (m.scope ? '<i class="sc">' + m.scope + '</i>' : '') + (m.who ? esc(m.who) + ' ' : '') + esc(m.note) +
+      (cond ? (/^vs\b/i.test(cond) ? ' ' : ', ') + esc(cond) : '') + (m.hunter && hasHunter ? ' (the (+' + Object.values(m.hunter)[0] + ') on the Hunter rows; add it to the other weapons too)' : '') + '</div>';
   }).join('');
 }
 function modGroupLines(mods, u, hasHunter){
