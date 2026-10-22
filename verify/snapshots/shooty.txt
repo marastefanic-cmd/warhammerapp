@@ -45,75 +45,68 @@ DETACHMENT
 DISPOSITION
 YOUR ARMIES
 RANDOM
-Me shooty yer’ booty
+ADEPTUS MECHANICUS
+1
+Purge goes the Foe
 2000 pts
-ORKS
-DREAD MOB
-SHOOTA BOYZ
-WRECKAS
+Cohort Cybernetica · Eradication Cohort
 PURGE THE FOE
-Melee
+EMPEROR’S CHILDREN
+1
+Defilers and friends
 2000 pts
-ORKS
-WAR HORDE
+Coterie of the Conceited
 PURGE THE FOE
-Princes
-2000 pts
-WORLD EATERS
-BERZERKER WARBAND
-VESSELS OF WRATH
-PURGE THE FOE
-Standard
-2000 pts
-WORLD EATERS
-BERZERKER WARBAND
-VESSELS OF WRATH
-PURGE THE FOE
-Pubstomper
-2000 pts
-THOUSAND SONS
-GRAND COVEN
-PRIORITY ASSETS
-Nidzillas
-2000 pts
-TYRANIDS
-CRUSHER STAMPEDE
-TALONS OF THE NORN QUEEN
-PURGE THE FOE
+IMPERIAL KNIGHTS
+2
 6 bigs
 2000 pts
-IMPERIAL KNIGHTS
-FREEBLADE COMPANY
+Freeblade Company
 PURGE THE FOE
 4 megas and a destrier
 2000 pts
-IMPERIAL KNIGHTS
-FREEBLADE COMPANY
+Freeblade Company
+PURGE THE FOE
+ORKS
+3
+Me shooty yer’ booty
+2000 pts
+Dread Mob · Shoota Boyz · Wreckas
+PURGE THE FOE
+Melee
+2000 pts
+War Horde
 PURGE THE FOE
 Ooga booga
 2000 pts
-ORKS
-BULLY BOYZ
-RUNT SWARM
-SHOOTA BOYZ
+Bully Boyz · Runt Swarm · Shoota Boyz
+PURGE THE FOE
+THOUSAND SONS
+1
+Pubstomper
+2000 pts
+Grand Coven
+PRIORITY ASSETS
+TYRANIDS
+1
+Nidzillas
+2000 pts
+Crusher Stampede · Talons of the Norn Queen
+PURGE THE FOE
+WORLD EATERS
+3
+Princes
+2000 pts
+Berzerker Warband · Vessels of Wrath
+PURGE THE FOE
+Standard
+2000 pts
+Berzerker Warband · Vessels of Wrath
 PURGE THE FOE
 Super Terminators
 2000 pts
-WORLD EATERS
-BERZERKER WARBAND
-BUTCHERS OF KHORNE
+Berzerker Warband · Butchers of Khorne
 TAKE AND HOLD
-Purge goes the Foe
-2000 pts
-ADEPTUS MECHANICUS
-COHORT CYBERNETICA
-ERADICATION COHORT
-PURGE THE FOE
-Defilers and friends
-2000 pts
-EMPEROR’S CHILDREN
-COTERIE OF THE CONCEITED
-PURGE THE FOE
 Checked (date of the check) against your New Recruit lists, BSData and GW’s rules
 
 Put it on your home screen: Safari → Share → Add to Home Screen.
