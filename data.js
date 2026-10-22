@@ -464,7 +464,8 @@ const FACTIONS = {
       // Wahapedia, Codex: Imperial Knights army rules (GW's Faction Pack 1.2 prints "FACTION: Code Chivalric, Super-heavy
       // Walker" on the Imperial Knights datasheets). coreTwin: the core ability of the same name (Core Rules 24.35), which the
       // datasheets' Rules line opens; the two are shown together, and the note says the sources don't settle which applies
-      { name:'Super-heavy Walker', coreTwin:'Super-Heavy Walker',
+      // ph/turn: where its Normal, Advance and Fall Back moves are made
+      { name:'Super-heavy Walker', coreTwin:'Super-Heavy Walker', ph:['movement'], turn:'your',
         note:'IMPERIAL KNIGHTS datasheets list Super-heavy Walker as a FACTION ability (Faction Pack 1.2), whose Codex text differs from Core Rules 24.35; the sources don’t say which applies.',
         text:'Each time a model with this ability makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and sections of **terrain features** that are 4" or less in height. When doing so:\n- It can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them.\n- It can also move through sections of terrain features that are more than 4" in height, but if it does, after it has moved, roll one D6: on a 1, that model is **Battle-shocked**.' }
     ],
@@ -473,7 +474,9 @@ const FACTIONS = {
         name:'Freeblade Company', dp:3,
         // rule, enhancements and stratagems: Wahapedia wording (Freeblade Company, App. Imperial Knights 11th edition v1.2),
         // checked word for word against GW's Faction Pack v1.2 (legal from 26 Aug 2026), pp5-6, which prints this detachment in full.
-        rule:{ name:'Knights of Legend', ph:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Faction: Imperial Knights'] },
+        // ph/turn: the part done at a moment, "at the start of your Command phase" (its Feel No Pain 6+ is a state: the datasheets'
+        // When targeted line)
+        rule:{ name:'Knights of Legend', ph:['command'], turn:'your', needs:{ all:['Faction: Imperial Knights'] },
           // proposed: the app adds this to the "When targeted" line of every unit the rule applies to
           def:'Feel No Pain 6+',
           text:'**IMPERIAL KNIGHTS** models from your army have the **Feel No Pain 6+** ability. In addition, at the start of your Command phase, each **IMPERIAL KNIGHTS** model from your army regains 1 lost wound.' },
@@ -1734,7 +1737,9 @@ const ARMIES = [
         { name:'Archslaughterer', who:'Lord on Juggernaut', tag:'Enhancement', ph:['command'], turn:'your', text:'**WORLD EATERS** model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, every **Blessing of Khorne** is active for this unit until the start of your next turn.' },
         { name:'Blood Surge', who:'Khorne Berzerkers', ph:['shooting'], turn:'opp', text:'In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6+2".' },
         { name:'Murderous Charge', who:'Khorne Berzerkers', ph:['fight'], turn:'either', text:'If this unit made a charge move this turn, this unit’s melee attacks have +1 S.' },
-        { name:'Icon of Khorne', who:'Khorne Berzerkers', ph:['command','movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.' }
+        // at/ph: when its extra dice are rolled, with a Blessings of Khorne roll (the start of the battle round; Skulls for the Skull
+        // Throne! in the Fight phase)
+        { name:'Icon of Khorne', who:'Khorne Berzerkers', at:'Start of the battle round', ph:['command','fight'], turn:'either', text:'If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
