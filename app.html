@@ -1242,6 +1242,8 @@ function matches(n, u){
   if(n.any && !n.any.some(k => hasKw(u, k))) return false;
   if(n.none && n.none.some(k => hasKw(u, k))) return false;
   if(n.unless && matches(n.unless, u)) return false;
+  // rule: the unit's Rules line names one of these rules (a Chaos Knight's Super-Heavy Walker, or a Preyslayer's Mantle bearer's)
+  if(n.rule && !n.rule.some(r => (u.rules || []).some(x => x.toLowerCase() === r.toLowerCase()))) return false;
   if(n.attached && !u.leads) return false;   // "a friendly attached … unit": one with a leader or support character
   return true;
 }
