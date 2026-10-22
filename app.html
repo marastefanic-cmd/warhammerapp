@@ -690,6 +690,15 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .dmpp.on{background:var(--surface2); box-shadow:inset 0 0 0 2px var(--accent)}
 .dmpp.over{box-shadow:none; border:1.5px dashed var(--accent)}
 .dmpp small{font-size:11px; line-height:1.2; color:var(--muted)}
+/* a weapon's profiles: one to a row, each with its characteristics and keywords */
+.dmprofs{grid-template-columns:1fr}
+.dmprofs .dmpp{grid-template-columns:minmax(0, 1fr) auto; column-gap:8px; padding:6px 10px 7px}
+.dmprofs .dmpp > em{grid-column:2; grid-row:1; justify-self:end}
+.dmprofs .dmpp > .dmwst, .dmprofs .dmpp > .dmkw, .dmprofs .dmpp > small{grid-column:1 / -1}
+.dmpp .dmwst{gap:0 12px}
+.dmpp .dmwst i{font-size:9.5px}
+.dmpp .dmwst b{font:700 14px/1.15 var(--f-head); letter-spacing:0; font-variant-numeric:tabular-nums; color:var(--fg)}
+.dmpp .dmkw{margin-top:2px; font-size:10.5px; line-height:1.3}
 .dmpp em small.pa{color:var(--fg2)}
 .dmouts{padding:6px 2px 2px}
 .dmout{margin:4px 0 0; padding:0; font-size:12px; line-height:1.4; color:var(--muted)}
@@ -3020,8 +3029,9 @@ function dmListPart(C, score){
     const w = c.w, x = lv('w:' + c.k), outs = [...new Set(M.groups.map((g, i) => M.gOf[i] === c ? M.R.groups[i].out : '').filter(Boolean))];
     const plus = ranged ? M.rules.filter(r => r.on && r.e && r.e.range && dmReach(b.atk.u, c.it, r.m, r.sc) > 0).reduce((t, r) => t + r.e.range, 0) : 0;
     const stat = dmStatCells(w, ranged, plus, b.atk.u) + (outs.length ? '<span class="warn">Left out: ' + esc(outs.join('; ')) + '</span>' : '');
-    const picks = c.ps.length > 1 ? '<div class="dmprof"><span class="dmpl">Pick one profile</span>' + c.ps.map((p, i) => { const y = lv('p:' + c.k + '|' + i);
-      return '<button class="dmpp' + (y.on ? ' on' : '') + (y.over ? ' over' : '') + '" data-dmlv="' + esc(y.id) + '" aria-pressed="' + y.on + '"><b>' + esc(String(p.name).replace(new RegExp('^' + (c.it.group || '').replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\s*[–-]\\s*'), '')) + '</b><em data-fx="' + esc(y.id) + '">' + dmFxHtml(C, y) + '</em>' +
+    // each profile with its own characteristics and keywords
+    const picks = c.ps.length > 1 ? '<div class="dmprof dmprofs"><span class="dmpl">Pick one profile</span>' + c.ps.map((p, i) => { const y = lv('p:' + c.k + '|' + i);
+      return '<button class="dmpp' + (y.on ? ' on' : '') + (y.over ? ' over' : '') + '" data-dmlv="' + esc(y.id) + '" aria-pressed="' + y.on + '"><b>' + esc(String(p.name).replace(new RegExp('^' + (c.it.group || '').replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\s*[–-]\\s*'), '')) + '</b><em data-fx="' + esc(y.id) + '">' + dmFxHtml(C, y) + '</em>' + dmStatCells(p, ranged, plus, b.atk.u) +
         (c.can[i] ? '' : '<small>by the rules: ' + esc((c.hunter[i] || []).join('/')) + ' only</small>') + '</button>'; }).join('') + '</div>' : '';
     // the boxes of the target's keywords its abilities need
     const lims = c.lim.length ? '<div class="dmprof sub dmkids"><span class="dmpl">Against this target</span>' + c.lim.map(l => { const y = lv('x:' + c.k + '|' + l.t);
