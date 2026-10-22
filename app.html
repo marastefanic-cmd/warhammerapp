@@ -4734,7 +4734,8 @@ function screenUnit(){
     const c = i < cs.length ? cs[i] : null;
     const role = c ? '<span class="mlt">' + linkTo('rule', c.support ? 'Support' : 'Leader', (c.support ? 'Supporting ' : 'Leading ') + u.leads) + '</span>' : '';
     const g = (u.gear || [])[i] || [];
-    return '<div class="ml"><span class="mn">' + esc(m) + '</span><span class="mg">' + (g.length ? esc(gearText(g)) : '') + role + '</span></div>';
+    const sn = u.srcNote && u.srcNote.at === m.replace(/^\d+× /, '') ? '<span class="mlt">' + esc(u.srcNote.note) + '</span>' : '';   // the sources disagree about this model
+    return '<div class="ml"><span class="mn">' + esc(m) + '</span><span class="mg">' + (g.length ? esc(gearText(g)) : '') + role + sn + '</span></div>';
   }).join('') + unplacedOf(u).map(x => '<div class="ml"><span class="mn">' + x.n + '× ' + esc(x.name) + '</span><span class="mg"><span class="mlt">' + esc(x.note) + '</span></span></div>').join('') + '</section>';
   const abil = u.abilities.filter(ab => !shownElsewhere(ab, u));
   const weaponKeys = new Set([...(u.ranged || []), ...(u.melee || [])].flatMap(w => w.kw.map(ruleKey)));
@@ -4761,7 +4762,7 @@ function screenUnit(){
     (rules.length ? '<div class="dkv" id="sec-rules"><span class="dk">Rules</span><span class="dv">' + rules.map(r => linkTo('rule', r, r) + (partialWho(u, r) ? ' <span class="from">(' + esc(partialWho(u, r)) + ')</span>' : '') + (inertRule(r) ? ' <span class="from">(no unit in this list it applies to)</span>' : '')).join(', ') + '</span></div>' : '') +
     stratLines(u, strats) +
     '<div class="dkv" id="sec-kw"><span class="dk">Keywords</span><span class="dv"><span class="pills">' + u.kw.filter(k => !hasOwn(only, k)).map(pill).join('') + '</span>' + kwModels +
-      (ks.note ? '<span class="kwn">' + esc(ks.note) + '</span>' : '') + '</span></div></section>';
+      (ks.note ? '<span class="kwn">' + esc(ks.note) + '</span>' : '') + (u.srcNote && u.srcNote.at === 'kw' ? '<span class="kwn">' + esc(u.srcNote.note) + '</span>' : '') + '</span></div></section>';
   return '<div class="ds"><section class="dbx">' + band + models + stats + '</section>' + unitWeapons(u) + abilities + foot + '</div>' + askRefBtn('unit', u.id, 'unit');
 }
 // every stratagem the unit can use: one line per detachment, then core, each in phase order;

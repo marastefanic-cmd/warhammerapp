@@ -1036,6 +1036,7 @@ const FACTIONS = {
      aura        mods this unit gives to other units: needs = which units (keywords),
                  notSelf = not the unit itself, selfWhen = the condition on its own sheet
      rules       core/faction rules that open a glossary entry
+     srcNote     where the sources disagree about the unit: { at: a model's name (its models line) or 'kw' (the keywords), note }
      kwOnly      keywords in `kw` that only some models of the unit have, keyword → those models (Wahapedia's "KEYWORDS – ALL
                  MODELS: … ASPIRING SORCERER ONLY: PSYKER", BSData's categories on one model): the datasheet lists them apart
      partialRules  rules in `rules` that only some models of the unit have, label → the model that has it
@@ -2632,7 +2633,11 @@ const ARMIES = [
         { kind:'all', when:'Damaged (1-5 wounds left)', note:'-1 to hit rolls', from:'Damaged: 1-5 Wounds Remaining' }
       ],
       rules:['Deadly Demise D6','Synapse','Torrent'],
-      kw:['Faction: Tyranids','Great Devourer','Monster','Tyrannofex']
+      kw:['Faction: Tyranids','Great Devourer','Monster','Tyrannofex'],
+      // the keywords as BSData and New Recruit have them; Wahapedia's Tyrannofex page lists FRAME too, from its errata line
+      // "Hierophant, Toxicrene, Tyrannocyte and Tyrannofex. Add the FRAME keyword.", which GW's Tyranids Faction Pack (14-10, the
+      // newest on GW's downloads on 22 Oct 2026) does not print
+      srcNote:{ at:'kw', note:'Wahapedia also lists FRAME (from its errata); GW’s Faction Pack (14-10) and BSData don’t' }
     }
   ]
 },
@@ -2826,6 +2831,9 @@ const ARMIES = [
       ],
       rules:['Deadly Demise D6','Sustained Hits','Super-Heavy Walker','Blast','Code Chivalric','Lone Operative'],
       kw:['Canis Rex','Character','Epic Hero','Faction: Imperial Knights','Imperium','Infantry','Questoris','Sir Hekhtur','Titanic','Towering','Vehicle','Walker'],
+      // Wahapedia's 11th-edition Canis Rex is "1 Canis Rex – EPIC HERO" (415 pts), Sir Hekhtur its own EPIC HERO datasheet; BSData
+      // and New Recruit have him in this unit (his base: as New Recruit prints it, the owner's rule)
+      srcNote:{ at:'Sir Hekhtur', note:'Wahapedia: his own EPIC HERO datasheet; BSData and New Recruit: in this unit' },
       // BSData's categories on each model (the unit has the others)
       kwOnly:{ 'Canis Rex':'Canis Rex', 'Questoris':'Canis Rex', 'Titanic':'Canis Rex', 'Towering':'Canis Rex', 'Vehicle':'Canis Rex', 'Walker':'Canis Rex', 'Infantry':'Sir Hekhtur', 'Sir Hekhtur':'Sir Hekhtur' }
     },
