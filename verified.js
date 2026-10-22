@@ -1,8 +1,8 @@
 // written by verify/run.js: the last verification of this app.html + data.js
 window.WH_VERIFIED = {
  "ok": true,
- "build": "59aebfcf0b",
- "data": "2026-10-22.1",
+ "build": "3030b3e9e9",
+ "data": "2026-10-22.2",
  "date": "22 Oct 2026",
  "checks": [
   {
@@ -19,7 +19,7 @@ window.WH_VERIFIED = {
   },
   {
    "label": "Games Workshop’s rules text:",
-   "detail": "every rule, enhancement and stratagem is the wording of GW’s newest official document, or Wahapedia where GW has none (2143 texts)."
+   "detail": "every rule, enhancement and stratagem is the wording of GW’s newest official document, or Wahapedia where GW has none (2144 texts)."
   },
   {
    "label": "Rules logic:",
@@ -27,11 +27,11 @@ window.WH_VERIFIED = {
   },
   {
    "label": "The app’s own notes:",
-   "detail": "1046 footnotes, reminders, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
+   "detail": "1033 footnotes, reminders, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off."
   },
   {
    "label": "Every screen:",
-   "detail": "1533 screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
+   "detail": "1536 screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search."
   }
  ],
  "sources": [

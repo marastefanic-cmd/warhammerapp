@@ -1,6 +1,6 @@
 {
- "hash": "59aebfcf0b6409a0379f6ab640db4f56babbc54fff3da766bd562323137a25d5",
- "at": "2026-10-22T06:33:44.761Z",
+ "hash": "3030b3e9e964836f75a7b479c42226a3abb7c6a863e9239f9eee350ad4c861b3",
+ "at": "2026-10-22T10:56:52.602Z",
  "ok": true,
  "steps": {
   "data": {
@@ -25,19 +25,19 @@
   },
   "texts": {
    "ok": true,
-   "summary": "0 failure(s) in 2143 checked facts, 7 deviation(s) used; verify/out/texts.json, verify/provenance.json"
+   "summary": "0 failure(s) in 2144 checked facts, 7 deviation(s) used; verify/out/texts.json, verify/provenance.json"
   },
   "calc": {
    "ok": true,
-   "summary": "calc: 307 of 307 hand-worked cases within margin"
+   "summary": "calc: 267 of 267 hand-worked cases within margin"
   },
   "screens": {
    "ok": true,
-   "summary": "render at 390px: 1533 screens and popups, 860 helper texts, 0 failures"
+   "summary": "render at 390px: 1536 screens and popups, 872 helper texts, 0 failures"
   },
   "small phone": {
    "ok": true,
-   "summary": "render at 320px: 1533 screens and popups, 860 helper texts, 0 failures"
+   "summary": "render at 320px: 1536 screens and popups, 872 helper texts, 0 failures"
   },
   "snapshots": {
    "ok": true,
@@ -45,7 +45,7 @@
   },
   "helpers": {
    "ok": true,
-   "summary": "helpers: 1046 judgements, 1046 approved, 0 to check, 220 stale approvals"
+   "summary": "helpers: 1033 judgements, 1033 approved, 0 to check, 282 stale approvals"
   }
  }
 }

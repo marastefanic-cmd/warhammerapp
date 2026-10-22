@@ -802,9 +802,17 @@
   {
    "item": "core / rule:Snap Shooting / text",
    "field": "text",
+   "text": "*Wahapedia core rules (not in GW’s Core Rules PDF, 01-06): Those hits are not cr",
+   "doc": "wahahtml:core",
+   "where": "Wahapedia core rules § Stratagem Definitions 15.01.03",
+   "sha256": "3871eb408cf7f355ea74aba06033ef1a57d9aa7b0919fb811417f74f230788f1"
+  },
+  {
+   "item": "core / rule:Snap Shooting / text",
+   "field": "text",
    "text": "- You cannot re-roll hit rolls.",
    "doc": "core",
-   "where": "PDF p57",
+   "where": "PDF p35",
    "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
   },
   {
@@ -812,7 +820,7 @@
    "field": "text",
    "text": "AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start a",
    "doc": "core",
-   "where": "PDF p57",
+   "where": "PDF p35",
    "sha256": "f6a2443a44627ac5f0ef08407d29aa5ec7e97339998f05bc35f3ae37bf276833"
   },
   {
