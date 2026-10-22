@@ -169,6 +169,9 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .arow .rb b{display:flex; align-items:baseline; gap:10px; font-size:19px}
 .arow .apts{font:600 13px var(--f-head); color:var(--muted); letter-spacing:.02em}
 .tags{display:flex; flex-wrap:wrap; gap:4px}
+.row .rb .adet{display:flex; flex-wrap:wrap; align-items:center; gap:3px 8px; font-size:14px; line-height:1.3}
+.row .rb .adet > span:first-child{font-size:14px; color:var(--fg2)}
+.armies .rgh:first-child{margin-top:6px}
 .row .rb .t{font:700 12px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--fg2); background:var(--surface2); border-radius:5px; padding:4px 6px 3px}
 .row .rb .t.f{color:var(--accent-ink); background:var(--accent)}
 .row .rb .t.d{color:var(--muted); background:none; box-shadow:inset 0 0 0 1px var(--line)}
@@ -1456,14 +1459,20 @@ function measure(){
 /* ---------- screen: armies ---------- */
 // each army: its own (silly) name, then tags saying what it is
 const armyRow = a => '<button class="row arow" data-army="' + esc(a.id) + '"><span class="rb"><b>' + esc(a.name) + '<span class="apts">' + esc(a.pointsUsed) + ' pts</span></b>' +
-  '<span class="tags"><span class="t f">' + esc(factionOf(a).name) + '</span>' + detachmentsOf(a).map(d => '<span class="t">' + esc(d.name) + '</span>').join('') +
-  '<span class="t d">' + esc(a.disposition) + '</span></span></span>' + arrow + '</button>';
+  '<span class="adet"><span>' + detachmentsOf(a).map(d => esc(d.name)).join(' · ') + '</span>' + (a.disposition ? '<span class="t d">' + esc(a.disposition) + '</span>' : '') + '</span></span>' + arrow + '</button>';
+// the lists grouped by faction (factions A to Z, lists in their own order), each under a band as the Units list's roles
+function armyGroups(list){
+  const g = new Map();
+  for(const a of list){ const f = factionOf(a).name; if(!g.has(f)) g.set(f, []); g.get(f).push(a); }
+  return [...g.keys()].sort((x, y) => x.localeCompare(y)).map(f => '<h2 class="rgh"><span>' + esc(f) + '</span><span class="c">' + g.get(f).length + '</span></h2>' +
+    '<div class="list ul">' + g.get(f).map(armyRow).join('') + '</div>').join('');
+}
 function screenHome(){
   const all = D.armies, f = homeFilter(), shown = all.filter(a => hfMatch(a, f));
   return (all.length > 2 ? homeFilters(f) : '') +
     '<div class="hlh"><div class="lbl grp-h">Your armies' + (shown.length < all.length ? ' <span class="hfn">' + shown.length + ' of ' + all.length + '</span>' : '') + '</div>' +
     (shown.length > 1 ? '<button class="rnd" data-roll><svg class="ic" aria-hidden="true"><use href="#i-dice"/></svg>Random</button>' : '') + '</div>' +
-    (shown.length ? '<div class="list">' + shown.map(armyRow).join('') + '</div>'
+    (shown.length ? '<div class="armies">' + armyGroups(shown) + '</div>'
       : '<p class="note">No army has all of these. <button class="link" data-hfclear>Clear the filters</button></p>') +
     verifiedLine() + (INSTALLED ? '' : '<p class="note">' + installText() + '</p>');
 }
