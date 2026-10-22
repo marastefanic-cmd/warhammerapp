@@ -1550,15 +1550,15 @@ function screenArmy(){
     '<div id="qres"></div>' +
     '<div id="armyMenu"><div class="list">' +
       row('pregame', 'i-flag', 'Overview', '') +
-      row('damage', 'i-swords', 'Damage calculator', '') +
+      row('bases', 'i-base', 'Bases & proxies', a.units.reduce((t, u) => t + modelCount(u) * (u.copies || 1), 0)) +
       row('units', 'i-units', 'Units', unitCount(a)) +
       row('strats', 'i-cards', 'Stratagems', allStratagems(a).length) +
       row('ranged', 'i-gun', 'Ranged weapons', weaponCount(a, 'ranged')) +
       row('melee', 'i-blade', 'Melee weapons', weaponCount(a, 'melee')) +
       row('abilities', 'i-spark', 'Abilities', a.units.reduce((t, u) => t + u.abilities.length, 0)) +
       row('rules', 'i-book', 'Rules', '') +
-      row('bases', 'i-base', 'Bases & proxies', a.units.reduce((t, u) => t + modelCount(u) * (u.copies || 1), 0)) +
-      awakeRow() + (ONLY ? row('settings', 'i-gear', 'Settings', '') : '') +
+      row('damage', 'i-swords', 'Damage calculator', '') +
+      (ONLY ? row('settings', 'i-gear', 'Settings', '') : '') +
     '</div><p class="note">' + esc(a.source) + '</p></div>' + (ONLY ? verifiedLine() : '');
 }
 
