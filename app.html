@@ -1807,9 +1807,11 @@ function dmSides(st){
 // the target, set by hand: models, T, Sv, W, InSv, Feel No Pain (a save of 0: none), the benefit of cover, -1 Damage. Its keywords are
 // not set: each rule or weapon ability about them is the player's own box
 const DM_TYPED = { n:5, T:4, Sv:3, W:2, InSv:0, fnp:0, cover:false, dm1:false };
+// (a value the wheels do not have, an earlier screen's typed one: the nearest they have)
 const dmTypedVals = st => { const t = Object.assign({}, DM_TYPED, isObj(st.typed) ? st.typed : {});
   for(const k of ['n', 'T', 'W']) t[k] = Math.max(1, +t[k] || DM_TYPED[k]);
   for(const k of ['Sv', 'InSv', 'fnp']) t[k] = +t[k] >= 2 && +t[k] <= (k === 'Sv' ? 7 : 6) ? +t[k] : 0;
+  for(const [k, , , vals] of DM_WHEELS) t[k] = vals[whAt(vals, t[k])];
   t.cover = !!t.cover; t.dm1 = !!t.dm1; return t; };
 // the target as a unit the screen names ("the target"): no keywords, no rules of its own
 const dmTarget = st => ({ id:'typed', typed:true, name:'the target', kw:[], abilities:[], rules:[], mods:[], models:[dmTypedVals(st).n + '× Target'], stats:[] });
@@ -1897,7 +1899,7 @@ const DM_ONE_STRAT = '“Unless otherwise stated, each player cannot target the 
 // everything the calculator needs for one attack of your unit at the target set by hand, and every choice that can change it (no
 // page: the screen draws it)
 //   returns { input, R, rules, sit, bands, weapons, strats (the other stratagems, not counted), nc, notes, conds (the facts of the
-//   table its rules read), models, tmod, ctx, ticked, groups, gOf, au, tg, kind }
+//   table its rules read), models, tmod, ctx, ticked, groups, gOf, au, tg, kind, cName (a weapon's name) }
 // st: one fight's choices (on, off, pick, auto, val, man), the phase (ph), the facts of the table (fx: { charged, riled, objective, … },
 // fxWhy: why one holds by itself), the models left of the unit (left: models line → how many)
 function dmCalc(st, A, au, tg, kind){
@@ -2190,7 +2192,7 @@ function dmCalc(st, A, au, tg, kind){
   const conds = { a:[...new Set(rules.filter(r => r.cond).map(r => r.cond).concat(rules.filter(r => r.pcond && r.state !== 'nc').map(r => r.pcond)))], t:[] };
   if(!ranged || lance) conds.a.push('charged');
   if(heavyKw) conds.a.push('stationary');
-  return { input, R, rules, sit, bands, weapons:chosen, strats, nc, notes, models, tmod, ctx, ticked, groups, gOf, au, tg, kind, conds, cName, defs:[] };
+  return { input, R, rules, sit, bands, weapons:chosen, strats, nc, notes, models, tmod, ctx, ticked, groups, gOf, au, tg, kind, conds, cName };
 }
 // a rule's recorded numbers in words (the part of it the calculator counts)
 function dmCalcWords(e){
@@ -2331,9 +2333,8 @@ function dmFx(st, atk, charged){
   return { fx, why };
 }
 // what a step's weapons do to the target, worked out exactly (no dice): the damage after Feel No Pain, each attack's at most a model's
-// wounds, at most the whole unit's (to find the best profile)
-const dmWorth = M => { if(!M.input.groups.length) return 0; const x = WH_CALC.explain(M.input), t = M.tg;
-  return Math.min(t.n * t.W, x.groups.reduce((s, g) => s + (g.dmgCap || 0), 0)); };
+// wounds (to find the best profile; past the whole unit too, so that two profiles that would both wipe it are still told apart)
+const dmWorth = M => !M.input.groups.length ? 0 : WH_CALC.explain(M.input).groups.reduce((s, g) => s + (g.dmgCap || 0), 0);
 // everything the screen shows, from the state: your unit and the target, the steps of the turn, each step's calculation and the
 // engine's input (play: the steps one after another in the same games)
 function dmPlan(st){
@@ -2436,7 +2437,7 @@ function dmDelta(a, b){
 const dmSatWhy = C => { const A = C.A; if(!A) return '';
   if(A.before >= A.models - 0.005) return 'nothing is left of the target by this step';
   if(A.rb.groups.length && A.rb.groups.every(g => g.n < 0.005)) return 'nothing is left of the unit attacking';
-  if(A.wipe >= 0.995) return 'their unit is destroyed in every game anyway';
+  if(A.wipe >= 0.995) return 'the target is destroyed in every game anyway';
   return A.lost < 0.005 ? 'these attacks do no damage either way' : ''; };
 // why a choice changes nothing here: from what the calculator does with it and without it (calc.js resolve)
 function dmNoWhy(M, M2, lv){
