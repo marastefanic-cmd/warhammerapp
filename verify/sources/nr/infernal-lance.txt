@@ -1,0 +1,373 @@
+10/22/26, 11:41 PM                                                  Infernal Lance - New Recruit
+
+                                                    Infernal Lance [2000pts]
+  Army Roster [3 Detachment Points, 2000 pts] (Chaos - Chaos Knights)
+  • Battle Size: Strike Force (2000 Point limit)
+  • Detachment: Infernal Lance [3Detachment Points]
+  • Force Disposition: Purge the Foe
+  • Show/Hide Options: Nurgle Daemons are visible
+  NAME                              ROLE                    PTS OPTIONS
+   Chaos Cerastus Knight Atrapos Character                                            410
+   Chaos Cerastus Knight Lancer               Character                               420
+   Knight Despoiler                           Character                               440 Warlord
+   Knight Ruinator                            Character                               360
+   Knight Ruinator                            Character                               325
+   (3) Nurglings                              Allies: Legiones Daemonica 45                  3x Nurgling Swarm
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada786b9fa832e186c3196c?view=96omdd                                         1/10
+10/22/26, 11:41 PM                                                       Infernal Lance - New Recruit
+     410 PTS                                  CHAOS CERASTUS KNIGHT ATRAPOS
+   Models                                        Options
+   1x Chaos Cerastus Knight Atrapos                Knight Diabolus, Atrapos lascutter, Graviton singularity cannon
+   Unit                                                  M          T       Sv      W       LD          OC   InSv    Base
+   Chaos Cerastus Knight Atrapos                         12"        11      3+      28      6+          10   5+      170x109mm
+   Ranged Weapons                                  Range A   BS S                  AP D           Keywords
+   ➤ Atrapos lascutter - low intensity             36"   2D6 3+ 7                  -1 2           Sustained Hits 1
+   ➤ Atrapos lascutter - high intensity            24"         D6    3+ 14 -3 4                   Sustained Hits 1
+   ➤ Graviton singularity cannon -
+                                                   24"         D3    3+ 16 -4 D6+1 Blast
+   contained
+   ➤ Graviton singularity cannon -                                                                Blast, Devastating Wounds,
+                                                   24"         D3    3+ 16 -4 D6+1
+   singularity                                                                                    Hazardous
+   Melee Weapons                                               Range          A      WS       S         AP   D   Keywords
+   ➤ Atrapos lascutter - low intensity                         Melee          12     2+       7         -1   2   Sustained Hits 1
+   ➤ Atrapos lascutter - high intensity                        Melee          6       2+      14        -3   4   Sustained Hits 1
+   Abilities                  Description
+   Macro-extinction           Each time this model makes an attack that targets a Monster or Vehicle unit, add 1 to
+   Protocols                  the Hit roll. If that target is Titanic or Towering, add 1 to the Wound roll as well.
+                              While a friendly War Dog model is within 6" of this model, each time that War Dog
+   Consumed with
+                              model makes an attack that targets a Titanic or Towering unit, you can re-roll the Hit
+   Hunger (Aura)
+                              roll.
+                              While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective
+   Damaged: 1-10
+                              Control characteristic and each time this model makes an attack, subtract 1 from the Hit
+   wounds remaining
+                              roll.
+                              Improve the Weapon Skill characteristic of the bearer's melee weapons by 1. While the
+   Knight Diabolus
+                              bearer is using the Diabolic Power ability, its melee weapons have the [Lance] ability.
+    Rules Deadly Demise D6+2, Harbingers of Dread, Super-Heavy Walker, Sustained Hits, Blast, Devastating Wounds,
+          Hazardous
+    Categories Cerastus, Chaos, Character, Faction: Chaos Knights, Knight Atrapos, Titanic, Towering, Vehicle, Walker
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada786b9fa832e186c3196c?view=96omdd                                                            2/10
+10/22/26, 11:41 PM                                                  Infernal Lance - New Recruit
+     420 PTS                                   CHAOS CERASTUS KNIGHT LANCER
+   Models                                               Options
+   1x Chaos Cerastus Knight Lancer                            Blasphemous Engine, Cerastus shock lance
+   Unit                                                M       T       Sv      W        LD       OC     InSv       Base
+   Chaos Cerastus Knight Lancer                        14"     11      3+      30       6+       10     4+         170x109mm
+   Ranged Weapons                         Range         A     BS       S    AP      D        Keywords
+   Cerastus shock lance                   12"           6     3+       6    0       2        Assault, Sustained Hits 2
+   Melee Weapons                                               Range         A          WS         S    AP     D     Keywords
+   ➤ Cerastus shock lance - strike                             Melee         5          2+         20   -3     8     Lance
+   ➤ Cerastus shock lance - sweep                              Melee          10        2+         10   -2     3
+   Abilities                   Description
+                               You can target this model with the Tank Shock Stratagem for 0CP, and can do so even if
+   Shock Charge
+                               you have already targeted a different unit with that Stratagem this phase.
+                               While a friendly War Dog model is within 6" of this model, ranged weapons equipped
+   Dark Fervour (Aura)
+                               by that War Dog model have the [ASSAULT] ability.
+                               While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective
+   Damaged: 1-10
+                               Control characteristic and each time this model makes an attack, subtract 1 from the
+   wounds remaining
+                               Hit roll.
+                               Add 2 to the bearer's Wounds characteristic. Each time the bearer's unit makes a
+   Blasphemous Engine          Malefic Surge, you can re-roll the Leadership test taken to see if it suffers any mortal
+                               wounds.
+    Rules Deadly Demise D6+2, Harbingers of Dread, Super-Heavy Walker, Sustained Hits, Assault, Lance
+
+    Categories Cerastus, Chaos, Character, Faction: Chaos Knights, Knight Lancer, Titanic, Towering, Vehicle, Walker
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada786b9fa832e186c3196c?view=96omdd                                                        3/10
+10/22/26, 11:41 PM                                                   Infernal Lance - New Recruit
+     440 PTS                                             KNIGHT DESPOILER
+   Models                 Options
+   1x                     Warlord, Bestial Aspect, Titanic feet, Ruinspear rocket pod, Diabolus heavy stubber, 2x Gatling
+   Knight Despoiler       cannon and flamer (Despoiler gatling cannon, Heavy darkflamer)
+   Unit                                M          T       Sv        W          LD       OC          InSv       Base
+   Knight Despoiler                    10"        11      3+        26         6+       10          5+*        170x109mm
+   Ranged Weapons                              Range      A     BS         S   AP   D      Keywords
+   Ruinspear rocket pod                        48"        3     3+         8   -2   D6     Assault
+   Despoiler gatling cannon (x2)               36"        18    3+         6   -2   2        Assault
+   Heavy darkflamer (x2)                       12"        D6    N/A        5   -1   1        Torrent, Ignores Cover, Assault
+   Diabolus heavy stubber                      36"        3     3+         5   0    1        Rapid Fire 3, Assault
+   Melee Weapons                             Range             A       WS           S        AP            D   Keywords
+   Titanic feet                              Melee             4       4+           8        -1            2
+   Abilities                 Description
+   Dread Dominion            While a friendly War Dog model is within 9" of this model, improve that War Dog
+   (Aura)                    model's Leadership and Objective Control characteristics by 1.
+                             Each time this model is selected to shoot or fight, you can re-roll one Hit roll or you can
+   Seething Hatred
+                             re-roll one Wound roll when resolving those attacks.
+                             While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective
+   Damaged: 1-9
+                             Control characteristic and each time this model makes an attack, subtract 1 from the Hit
+   wounds remaining
+                             roll.
+   *Invulnerable Save        This model has a 5+ invulnerable save against ranged attacks.
+                             The bearer's ranged weapons have the [Assault] ability. While the bearer is using the
+   Bestial Aspect            Unholy Hunger ability, it can ignore any or all modifiers to its Move characteristic and/or
+                             to Advance rolls made for its unit.
+    Rules Super-Heavy Walker, Deadly Demise D6, Harbingers of Dread, Assault, Torrent, Ignores Cover, Rapid Fire
+
+    Categories Abhorrent, Chaos, Character, Faction: Chaos Knights, Knight Despoiler, Titanic, Towering, Vehicle, Walker,
+               Warlord
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada786b9fa832e186c3196c?view=96omdd                                                       4/10
+10/22/26, 11:41 PM                                                   Infernal Lance - New Recruit
+     360 PTS                                             KNIGHT RUINATOR
+   Models                          Options
+   1x Knight Ruinator              Fleshmetal Fusion, Darkflame lance, Fellbore, Terrorpulse missiles
+   Unit                               M         T        Sv         W       LD          OC          InSv      Base
+   Knight Ruinator                    10"       12       3+         26      6+          10          5+*       170x109mm
+   Ranged Weapons                      Range         A              BS       S     AP      D        Keywords
+   Darkflame lance                     18"           D6+6           N/A      8     -1      2        Ignores Cover, Torrent
+   Terrorpulse missiles                36"           D6+6           3+       8     -2        2      Blast
+   Melee Weapons                    Range       A      WS      S      AP     D    Keywords
+   ➤ Fellbore - strike              Melee       4      3+      14     -3     6    Anti-Monster 2+, Anti-Vehicle 2+
+   ➤ Fellbore - sweep               Melee       10     3+      9      -2     2
+   Abilities               Description
+                           At the start of the first battle round, select one unit from your opponent's army to be this
+   Methodical              model's victim. Each time this model makes an attack that targets its victim, you can re-roll
+   Destruction             the Wound roll. Each time this model's victim is destroyed, select one new enemy unit to
+                           be this model's victim.
+                           While a friendly War Dog model is within 9" of this model, each time that War Dog model
+   Close-range Killers
+                           makes an attack that targets the closest enemy unit, improve the Armour Penetration
+   (Aura)
+                           characteristic of that attack by 1.
+   Damaged: 1-9            While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control
+   wounds remaining        characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+   *Invulnerable Save      This model has a 5+ invulnerable save against ranged attacks.
+                           Add 1 to the bearer's Toughness characteristic. While the bearer is using the Unnatural
+   Fleshmetal Fusion       Fortitude ability, each time an attack with a Damage characteristic of 1 is allocated to the
+                           bearer, add 1 to any armour saving throw made against that attack.
+    Rules Super-Heavy Walker, Deadly Demise D6, Harbingers of Dread, Ignores Cover, Torrent, Sustained Hits, Blast
+
+    Categories Abhorrent, Chaos, Character, Faction: Chaos Knights, Knight Ruinator, Titanic, Towering, Vehicle, Walker
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada786b9fa832e186c3196c?view=96omdd                                                     5/10
+10/22/26, 11:41 PM                                                   Infernal Lance - New Recruit
+     325 PTS                                             KNIGHT RUINATOR
+   Models                                    Options
+   1x Knight Ruinator                        Darkflame lance, Fellbore, Terrorpulse missiles
+   Unit                               M          T       Sv         W       LD          OC          InSv      Base
+   Knight Ruinator                    10"        11      3+         26      6+          10          5+*       170x109mm
+   Ranged Weapons                      Range           A            BS       S     AP      D        Keywords
+   Darkflame lance                     18"             D6+6         N/A      8     -1      2        Ignores Cover, Torrent
+   Terrorpulse missiles                36"             D6+6         3+       8     -2        2      Blast
+   Melee Weapons                    Range       A      WS      S      AP     D    Keywords
+   ➤ Fellbore - strike              Melee       4      3+      14     -3     6    Anti-Monster 2+, Anti-Vehicle 2+
+   ➤ Fellbore - sweep               Melee        10     3+     9      -2     2
+   Abilities               Description
+                           At the start of the first battle round, select one unit from your opponent's army to be this
+   Methodical              model's victim. Each time this model makes an attack that targets its victim, you can re-roll
+   Destruction             the Wound roll. Each time this model's victim is destroyed, select one new enemy unit to
+                           be this model's victim.
+                           While a friendly War Dog model is within 9" of this model, each time that War Dog model
+   Close-range Killers
+                           makes an attack that targets the closest enemy unit, improve the Armour Penetration
+   (Aura)
+                           characteristic of that attack by 1.
+   Damaged: 1-9            While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control
+   wounds remaining        characteristic and each time this model makes an attack, subtract 1 from the Hit roll.
+   *Invulnerable Save      This model has a 5+ invulnerable save against ranged attacks.
+    Rules Super-Heavy Walker, Deadly Demise D6, Harbingers of Dread, Ignores Cover, Torrent, Sustained Hits, Blast
+
+    Categories Abhorrent, Chaos, Character, Faction: Chaos Knights, Knight Ruinator, Titanic, Towering, Vehicle, Walker
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada786b9fa832e186c3196c?view=96omdd                                                     6/10
+10/22/26, 11:41 PM                                                  Infernal Lance - New Recruit
+     45 PTS                                                  NURGLINGS
+   Models                                                    Options
+   3x Nurgling Swarm                                          Diseased claws and teeth
+   Unit                          M         T        Sv          W          LD          OC          InSv         Base
+   Nurglings                     5"         3       7+          4          8+          0           5+           40mm
+   Melee Weapons                                              Range             A   WS        S    AP     D   Keywords
+   Diseased claws and teeth (x3)                              Melee             4   5+        2    0      1   Lethal Hits
+   Abilities         Description
+   Mischief          Each time an enemy unit (excluding Titanic units) within Engagement Range of one or more
+   Makers            units with this ability is selected to fight, until the end of the phase, each time a model in that
+   (Aura)            enemy unit makes a melee attack, subtract 1 from the Hit roll.
+    Rules Deep Strike, Infiltrators, Lethal Hits
+
+    Categories Allies: Legiones Daemonica, Battleline, Chaos, Daemon, Faction: Legiones Daemonica, Nurgle, Nurglings,
+               Swarm
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada786b9fa832e186c3196c?view=96omdd                                                    7/10
+10/22/26, 11:41 PM                                                  Infernal Lance - New Recruit
+
+
+  Rules
+  Assault:
+  Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).
+
+  Blast:
+  Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models
+  that were in the target unit in the Select Targets step (rounding down). If this ability takes the form [BLAST X],
+  each time you gather attack dice for such a weapon, add X additional attack dice for every five models that
+  were in the target unit in the Select Targets step (rounding down) instead.
+  Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would
+  gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+  Deadly Demise D6 / Deadly Demise D6+2:
+  This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the
+  units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that
+  model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds
+  denoted by X (if this is a random number, roll separately for each unit within 6").
+  Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any
+  unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency
+  disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved.
+  Finally, the Impulsor is removed from the battlefield.
+
+  Deep Strike:
+  Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up
+  anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your
+  opponent’s deployment zone.
+
+  Devastating Wounds:
+  Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack
+  sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D
+  characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+  Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for
+  each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+  Example: An attack made with a [DEVASTATING WOUNDS] weapon with a D characteristic of 3 results in a
+  critical wound against an Intercessor Squad, so inflicts 3 mortal wounds. The first 2 mortal wounds are
+  sufficient to destroy 1 Intercessor model, so the remaining mortal wound is lost.
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada786b9fa832e186c3196c?view=96omdd                                              8/10
+10/22/26, 11:41 PM                                                  Infernal Lance - New Recruit
+
+  Harbingers of Dread:
+  If your Army Faction is Chaos Knights, each model from your army with this ability gains Dread abilities,
+  depending which are active for your army. The Deathly Terror ability is active for your army from the start of the
+  battle. In addition, at the start of the first, third and fifth battle rounds, you can either select one of the other
+  Dread abilities or randomly select two Dread abilities to apply by rolling two D6 and applying the results rolled,
+  from those numbered 1-6 below.
+  Any Dread abilities that have been selected are active until the end of the battle. You cannot select the same
+  Dread ability more than once, and any duplicated Dread abilities (as a result of randomly selecting them) have no
+  additional effect.
+  N/A - Deathly Terror (Aura)
+  While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.
+  1 - Despair (Aura)
+  While an enemy unit is within 9" of this model, worsen the Leadership characteristic of models in that unit by 1.
+  This is cumulative with the Deathly Terror ability (see above).
+  2 - Doom
+  Each time this model makes an attack, if the target is Battle-shocked, add 1 to the Wound roll.
+  3 - Darkness
+  This model has Stealth.
+  4 - Dismay (Aura)
+  In the Battle-shock step of your opponent's Command phase, for each enemy unit that is below its Starting
+  Strength and within 9" of this model, that enemy unit must take a Battle-shock test.
+  5 - Delirium (Aura)
+  While an enemy unit that is Below Half-strength is within 9" of this model, each time that model fails a Battle-
+  shock test, it suffers D3 mortal wounds.
+  6 - Dominion
+  Add 3" to the range of this model's Aura abilities.
+
+  Hazardous:
+  Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make
+  a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in
+  the Select Weapons step.
+
+  Ignores Cover:
+  Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover
+  against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+  Infiltrators:
+  During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is
+  more than 8" horizontally from your opponent’s deployment zone and all enemy units.
+
+  Lance:
+  Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this
+  turn, add 1 to the wound roll.
+
+  Lethal Hits:
+  Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that
+  attack to automatically wound the target.
+  Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that
+  attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot
+  trigger other abilities such as [DEVASTATING WOUNDS].
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada786b9fa832e186c3196c?view=96omdd                                               9/10
+10/22/26, 11:41 PM                                                  Infernal Lance - New Recruit
+
+  Malefic Surge:
+  In your Command phase, one or more Chaos Knights units from your army can make a Malefic Surge. Each one
+  that does must first take a Leadership test; if that test is failed, that unit suffers D3 mortal wounds. Then, until
+  the start of your next Command phase, that unit is Empowered. While a unit is Empowered, it can use one of the
+  Malefic Surge abilities below. Once that unit has used a Malefic Surge ability, it is no longer Empowered.
+  Unholy Hunger: When a model in this unit makes a Normal, Advance or Fall Back move, until the end of the
+  phase, add 3" to its Move characteristic.
+  Diabolic Power: When this unit is selected to shoot or fight, select either the [Lethal Hits] or [Sustained Hits 1]
+  ability. Until the end of the phase, weapons equipped by models in this unit have the selected ability.
+  Unnatural Fortitude: When this unit is selected as the target of an attack, until the end of the phase, select
+  one of the following:
+    Models in this unit have a 5+ invulnerable save
+    Models in this unit have the Feel No Pain 6+ ability.
+
+  Rapid Fire:
+  This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE]
+  weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select
+  Targets step.
+  Example: If a [RAPID FIRE 1] weapon with an A characteristic of 1 targets a unit that is within half range,
+  you would gather one additional attack dice for that weapon (for a total of two for that weapon).
+
+  Super-Heavy Walker:
+  Each time a unit with this ability makes a normal, advance or fall-back move:
+   Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding
+    TITANIC models) and can move horizontally through sections of terrain features that are 4" or less in
+    height.
+   Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move
+    ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked.
+    Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to
+    move horizontally through dense terrain features (13.06).
+
+  Sustained Hits:
+  This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED
+  HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as
+  denoted by X.
+  Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore
+  hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability).
+
+  Torrent:
+  Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ada786b9fa832e186c3196c?view=96omdd                                            10/10
+

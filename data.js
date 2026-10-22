@@ -4037,6 +4037,194 @@ const ARMIES = [
     }
   ]
 },
+{
+  id:'infernal-lance', name:'Infernal Lance', faction:'chaos-knights', points:2000, pointsUsed:2000,
+  battleSize:'Strike Force', disposition:'Purge the Foe',
+  detachments:['infernal-lance'],
+  source:'New Recruit, exported 22 Oct 2026',
+  units:[
+    {
+      id:'chaos-cerastus-knight-atrapos', name:'Chaos Cerastus Knight Atrapos', role:'Character', pts:410, enhancement:'Knight Diabolus',
+      models:['1× Chaos Cerastus Knight Atrapos'],
+      gear:[['Atrapos lascutter','Graviton singularity cannon']],
+      stats:[
+        { name:'Chaos Cerastus Knight Atrapos', M:'12"', T:'11', Sv:'3+', W:'28', Ld:'6+', OC:'10', InSv:'5+', base:'170×109mm' }
+      ],
+      ranged:[
+        { group:'Atrapos lascutter', name:'low intensity', range:'36"', A:'2D6', BS:'3+', S:'7', AP:'-1', D:'2', kw:['SUSTAINED HITS 1'] },
+        { group:'Atrapos lascutter', name:'high intensity', range:'24"', A:'D6', BS:'3+', S:'14', AP:'-3', D:'4', kw:['SUSTAINED HITS 1'] },
+        { group:'Graviton singularity cannon', name:'contained', range:'24"', A:'D3', BS:'3+', S:'16', AP:'-4', D:'D6+1', kw:['BLAST'] },
+        { group:'Graviton singularity cannon', name:'singularity', range:'24"', A:'D3', BS:'3+', S:'16', AP:'-4', D:'D6+1', kw:['BLAST','DEVASTATING WOUNDS','HAZARDOUS'] }
+      ],
+      melee:[
+        { group:'Atrapos lascutter', name:'low intensity', range:'Melee', A:'12', WS:'2+', S:'7', AP:'-1', D:'2', kw:['SUSTAINED HITS 1'], from:{ 'WS':'Knight Diabolus' } },
+        { group:'Atrapos lascutter', name:'high intensity', range:'Melee', A:'6', WS:'2+', S:'14', AP:'-3', D:'4', kw:['SUSTAINED HITS 1'], from:{ 'WS':'Knight Diabolus' } }
+      ],
+      abilities:[
+        { name:'Macro-extinction Protocols', text:'Each time this model makes an attack that targets a **MONSTER** or **VEHICLE** unit, add 1 to the **Hit roll**. If that target is **TITANIC** or **TOWERING**, add 1 to the **Wound roll** as well.' },
+        { name:'Consumed with Hunger', tag:'Aura', na:'No WAR DOG in this list', text:'While a friendly **WAR DOG** model is within 6" of this model, each time that **WAR DOG** model makes an attack that targets a **TITANIC** or **TOWERING** unit, you can re-roll the **Hit roll**.' },
+        { name:'Damaged: 1-10 wounds remaining', damaged:'1-10', text:'While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.' },
+        { name:'Knight Diabolus', tag:'Enhancement', text:'**CHAOS KNIGHTS** model only. Improve the Weapon Skill characteristic of the bearer’s melee weapons by 1. While the bearer is using the Diabolic Power ability, its melee weapons have the **[LANCE]** ability.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      // (Knight Diabolus's improved WS is already in the melee profiles, as New Recruit prints them: only its [LANCE] is a footnote)
+      mods:[
+        { kind:'all', when:'vs MONSTER/VEHICLE', note:'+1 to hit rolls', from:'Macro-extinction Protocols', always:true, vs:{ any:['Monster','Vehicle'] } },
+        { kind:'all', when:'vs TITANIC/TOWERING', note:'+1 to wound rolls', from:'Macro-extinction Protocols', always:true, vs:{ any:['Titanic','Towering'], also:{ any:['Monster','Vehicle'] } } },
+        { kind:'melee', when:'Using the Diabolic Power ability (Malefic Surge)', note:'melee weapons have [LANCE]', from:'Knight Diabolus' },
+        { kind:'all', when:'Damaged (1-10 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-10 wounds remaining' }
+      ],
+      aura:[
+        { kind:'all', needs:{ all:['War Dog'] }, when:'Within 6" of Chaos Cerastus Knight Atrapos, vs a TITANIC or TOWERING unit', note:'re-roll the hit roll', from:'Consumed with Hunger', vs:{ any:['Titanic','Towering'] } }
+      ],
+      rules:['Deadly Demise D6+2','Harbingers of Dread','Super-Heavy Walker','Sustained Hits','Blast','Devastating Wounds','Hazardous'],
+      kw:['Cerastus','Chaos','Character','Faction: Chaos Knights','Knight Atrapos','Titanic','Towering','Vehicle','Walker']
+    },
+    {
+      id:'chaos-cerastus-knight-lancer', name:'Chaos Cerastus Knight Lancer', role:'Character', pts:420, enhancement:'Blasphemous Engine',
+      models:['1× Chaos Cerastus Knight Lancer'],
+      gear:[['Cerastus shock lance']],
+      stats:[
+        { name:'Chaos Cerastus Knight Lancer', M:'14"', T:'11', Sv:'3+', W:'30', Ld:'6+', OC:'10', InSv:'4+', base:'170×109mm', from:{ 'W':'Blasphemous Engine' } }
+      ],
+      ranged:[
+        { name:'Cerastus shock lance', range:'12"', A:'6', BS:'3+', S:'6', AP:'0', D:'2', kw:['ASSAULT','SUSTAINED HITS 2'] }
+      ],
+      melee:[
+        { group:'Cerastus shock lance', name:'strike', range:'Melee', A:'5', WS:'2+', S:'20', AP:'-3', D:'8', kw:['LANCE'] },
+        { group:'Cerastus shock lance', name:'sweep', range:'Melee', A:'10', WS:'2+', S:'10', AP:'-2', D:'3', kw:[] }
+      ],
+      abilities:[
+        { name:'Shock Charge', text:'You can target this model with the Tank Shock Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.' },
+        { name:'Dark Fervour', tag:'Aura', na:'No WAR DOG in this list', text:'While a friendly **WAR DOG** model is within 6" of this model, ranged weapons equipped by that War Dog model have the **[ASSAULT]** ability.' },
+        { name:'Damaged: 1-10 wounds remaining', damaged:'1-10', text:'While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.' },
+        { name:'Blasphemous Engine', tag:'Enhancement', text:'**CHAOS KNIGHTS** model only. Add 2 to the bearer’s Wounds characteristic. Each time the bearer’s unit makes a Malefic Surge, you can re-roll the **Leadership test** taken to see if it suffers any **mortal wounds**.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'all', when:'Damaged (1-10 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-10 wounds remaining' }
+      ],
+      aura:[
+        { kind:'ranged', needs:{ all:['War Dog'] }, when:'Within 6" of Chaos Cerastus Knight Lancer', note:'ranged weapons have [ASSAULT]', from:'Dark Fervour' }
+      ],
+      rules:['Deadly Demise D6+2','Harbingers of Dread','Super-Heavy Walker','Sustained Hits','Assault','Lance'],
+      kw:['Cerastus','Chaos','Character','Faction: Chaos Knights','Knight Lancer','Titanic','Towering','Vehicle','Walker']
+    },
+    {
+      id:'knight-despoiler', name:'Knight Despoiler', role:'Character', pts:440, enhancement:'Bestial Aspect', warlord:true,
+      models:['1× Knight Despoiler'],
+      gear:[['Titanic feet','Ruinspear rocket pod','Diabolus heavy stubber','Despoiler gatling cannon','Despoiler gatling cannon','Heavy darkflamer','Heavy darkflamer']],
+      stats:[
+        { name:'Knight Despoiler', M:'10"', T:'11', Sv:'3+', W:'26', Ld:'6+', OC:'10', InSv:'5+*', base:'170×109mm' }
+      ],
+      ranged:[
+        { name:'Ruinspear rocket pod', range:'48"', A:'3', BS:'3+', S:'8', AP:'-2', D:'D6', kw:['ASSAULT'], from:{ 'ASSAULT':'Bestial Aspect' } },
+        { name:'Despoiler gatling cannon', n:2, range:'36"', A:'18', BS:'3+', S:'6', AP:'-2', D:'2', kw:['ASSAULT'], from:{ 'ASSAULT':'Bestial Aspect' } },
+        { name:'Heavy darkflamer', n:2, range:'12"', A:'D6', BS:'–', S:'5', AP:'-1', D:'1', kw:['TORRENT','IGNORES COVER','ASSAULT'], from:{ 'ASSAULT':'Bestial Aspect' } },
+        { name:'Diabolus heavy stubber', range:'36"', A:'3', BS:'3+', S:'5', AP:'0', D:'1', kw:['RAPID FIRE 3','ASSAULT'], from:{ 'ASSAULT':'Bestial Aspect' } }
+      ],
+      melee:[
+        { name:'Titanic feet', range:'Melee', A:'4', WS:'4+', S:'8', AP:'-1', D:'2', kw:[] }
+      ],
+      abilities:[
+        { name:'Dread Dominion', tag:'Aura', na:'No WAR DOG in this list', text:'While a friendly **WAR DOG** model is within 9" of this model, improve that **WAR DOG** model’s Leadership and Objective Control characteristics by 1.' },
+        { name:'Seething Hatred', ph:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, text:'Each time this model is selected to shoot or fight, you can re-roll one **Hit roll** or you can re-roll one **Wound roll** when resolving those attacks.' },
+        { name:'Damaged: 1-9 wounds remaining', damaged:'1-9', text:'While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.' },
+        { name:'*Invulnerable Save', def:'5+ invulnerable save against ranged attacks only', text:'This model has a 5+ invulnerable save against ranged attacks.' },
+        { name:'Bestial Aspect', tag:'Enhancement', text:'**CHAOS KNIGHTS** model only. The bearer’s ranged weapons have the **[ASSAULT]** ability. While the bearer is using the Unholy Hunger ability, it can ignore any or all modifiers to its Move characteristic and/or to **Advance rolls** made for its unit.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      // (Bestial Aspect's [ASSAULT] is already on every ranged weapon, as New Recruit prints them: no footnote)
+      mods:[
+        { kind:'all', when:'Selected to shoot or fight', note:'re-roll one hit roll or one wound roll', from:'Seething Hatred' },
+        { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 wounds remaining' }
+      ],
+      rules:['Super-Heavy Walker','Deadly Demise D6','Harbingers of Dread','Assault','Torrent','Ignores Cover','Rapid Fire'],
+      kw:['Abhorrent','Chaos','Character','Faction: Chaos Knights','Knight Despoiler','Titanic','Towering','Vehicle','Walker','Warlord']
+    },
+    {
+      id:'knight-ruinator-fleshmetal-fusion', name:'Knight Ruinator', role:'Character', pts:360, enhancement:'Fleshmetal Fusion',
+      models:['1× Knight Ruinator'],
+      gear:[['Darkflame lance','Fellbore','Terrorpulse missiles']],
+      stats:[
+        { name:'Knight Ruinator', M:'10"', T:'12', Sv:'3+', W:'26', Ld:'6+', OC:'10', InSv:'5+*', base:'170×109mm', from:{ 'T':'Fleshmetal Fusion' } }
+      ],
+      ranged:[
+        { name:'Darkflame lance', range:'18"', A:'D6+6', BS:'–', S:'8', AP:'-1', D:'2', kw:['IGNORES COVER','TORRENT'] },
+        { name:'Terrorpulse missiles', range:'36"', A:'D6+6', BS:'3+', S:'8', AP:'-2', D:'2', kw:['BLAST'] }
+      ],
+      melee:[
+        { group:'Fellbore', name:'strike', range:'Melee', A:'4', WS:'3+', S:'14', AP:'-3', D:'6', kw:['ANTI-MONSTER 2+','ANTI-VEHICLE 2+'] },
+        { group:'Fellbore', name:'sweep', range:'Melee', A:'10', WS:'3+', S:'9', AP:'-2', D:'2', kw:[] }
+      ],
+      abilities:[
+        { name:'Methodical Destruction', at:'Start of the first battle round', ph:['command','shooting','fight'], turn:'either', turns:{ shooting:'your' }, text:'At the start of the first battle round, select one unit from your opponent’s army to be this model’s victim. Each time this model makes an attack that targets its victim, you can re-roll the **Wound roll**. Each time this model’s victim is destroyed, select one new enemy unit to be this model’s victim.' },
+        { name:'Close-range Killers', tag:'Aura', na:'No WAR DOG in this list', text:'While a friendly War Dog model is within 9" of this model, each time that War Dog model makes an attack that targets the closest enemy unit, improve the Armour Penetration characteristic of that attack by 1.' },
+        { name:'Damaged: 1-9 wounds remaining', damaged:'1-9', text:'While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.' },
+        { name:'*Invulnerable Save', def:'5+ invulnerable save against ranged attacks only', text:'This model has a 5+ invulnerable save against ranged attacks.' },
+        { name:'Fleshmetal Fusion', tag:'Enhancement', text:'**CHAOS KNIGHTS** model only. Add 1 to the bearer’s Toughness characteristic. While the bearer is using the Unnatural Fortitude ability, each time an attack with a Damage characteristic of 1 is allocated to the bearer, add 1 to any armour saving throw made against that attack.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'all', when:'Target is its victim (selected at the start of the first battle round)', note:'re-roll the wound roll', from:'Methodical Destruction' },
+        { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 wounds remaining' }
+      ],
+      aura:[
+        { kind:'all', needs:{ all:['War Dog'] }, when:'Within 9" of Knight Ruinator, target is the closest enemy unit', note:'improve AP by 1', from:'Close-range Killers' }
+      ],
+      rules:['Super-Heavy Walker','Deadly Demise D6','Harbingers of Dread','Ignores Cover','Torrent','Sustained Hits','Blast'],
+      kw:['Abhorrent','Chaos','Character','Faction: Chaos Knights','Knight Ruinator','Titanic','Towering','Vehicle','Walker']
+    },
+    {
+      id:'knight-ruinator', name:'Knight Ruinator', role:'Character', pts:325,
+      models:['1× Knight Ruinator'],
+      gear:[['Darkflame lance','Fellbore','Terrorpulse missiles']],
+      stats:[
+        { name:'Knight Ruinator', M:'10"', T:'11', Sv:'3+', W:'26', Ld:'6+', OC:'10', InSv:'5+*', base:'170×109mm' }
+      ],
+      ranged:[
+        { name:'Darkflame lance', range:'18"', A:'D6+6', BS:'–', S:'8', AP:'-1', D:'2', kw:['IGNORES COVER','TORRENT'] },
+        { name:'Terrorpulse missiles', range:'36"', A:'D6+6', BS:'3+', S:'8', AP:'-2', D:'2', kw:['BLAST'] }
+      ],
+      melee:[
+        { group:'Fellbore', name:'strike', range:'Melee', A:'4', WS:'3+', S:'14', AP:'-3', D:'6', kw:['ANTI-MONSTER 2+','ANTI-VEHICLE 2+'] },
+        { group:'Fellbore', name:'sweep', range:'Melee', A:'10', WS:'3+', S:'9', AP:'-2', D:'2', kw:[] }
+      ],
+      abilities:[
+        { name:'Methodical Destruction', at:'Start of the first battle round', ph:['command','shooting','fight'], turn:'either', turns:{ shooting:'your' }, text:'At the start of the first battle round, select one unit from your opponent’s army to be this model’s victim. Each time this model makes an attack that targets its victim, you can re-roll the **Wound roll**. Each time this model’s victim is destroyed, select one new enemy unit to be this model’s victim.' },
+        { name:'Close-range Killers', tag:'Aura', na:'No WAR DOG in this list', text:'While a friendly War Dog model is within 9" of this model, each time that War Dog model makes an attack that targets the closest enemy unit, improve the Armour Penetration characteristic of that attack by 1.' },
+        { name:'Damaged: 1-9 wounds remaining', damaged:'1-9', text:'While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**.' },
+        { name:'*Invulnerable Save', def:'5+ invulnerable save against ranged attacks only', text:'This model has a 5+ invulnerable save against ranged attacks.' }
+      ],
+      // abilities that change this unit's attacks, shown inside its weapon tables
+      mods:[
+        { kind:'all', when:'Target is its victim (selected at the start of the first battle round)', note:'re-roll the wound roll', from:'Methodical Destruction' },
+        { kind:'all', when:'Damaged (1-9 wounds left)', note:'-1 to hit rolls (and -5 OC)', from:'Damaged: 1-9 wounds remaining' }
+      ],
+      aura:[
+        { kind:'all', needs:{ all:['War Dog'] }, when:'Within 9" of Knight Ruinator, target is the closest enemy unit', note:'improve AP by 1', from:'Close-range Killers' }
+      ],
+      rules:['Super-Heavy Walker','Deadly Demise D6','Harbingers of Dread','Ignores Cover','Torrent','Sustained Hits','Blast'],
+      kw:['Abhorrent','Chaos','Character','Faction: Chaos Knights','Knight Ruinator','Titanic','Towering','Vehicle','Walker']
+    },
+    {
+      id:'nurglings', name:'Nurglings', role:'Allies: Legiones Daemonica', pts:45,
+      models:['3× Nurgling Swarm'],
+      gear:[['Diseased claws and teeth']],
+      stats:[
+        { name:'Nurglings', M:'5"', T:'3', Sv:'7+', W:'4', Ld:'8+', OC:'0', InSv:'5+', base:'40mm' }
+      ],
+      melee:[
+        { name:'Diseased claws and teeth', n:3, range:'Melee', A:'4', WS:'5+', S:'2', AP:'0', D:'1', kw:['LETHAL HITS'] }
+      ],
+      abilities:[
+        { name:'Mischief Makers', tag:'Aura', ph:['fight'], turn:'either', def:'Fight phase: an enemy unit (excluding TITANIC units) within Engagement Range of it, selected to fight: -1 to hit with each melee attack until the end of the phase', text:'Each time an enemy unit (excluding **TITANIC** units) within **Engagement Range** of one or more units with this ability is selected to fight, until the end of the phase, each time a model in that enemy unit makes a melee attack, subtract 1 from the **Hit roll**.' }
+      ],
+      rules:['Deep Strike','Infiltrators','Lethal Hits'],
+      kw:['Allies: Legiones Daemonica','Battleline','Chaos','Daemon','Faction: Legiones Daemonica','Nurgle','Nurglings','Swarm']
+    }
+  ]
+},
 ];
 
 // core terms (not abilities): kept out of a unit's rule list and the glossary of rules units have
