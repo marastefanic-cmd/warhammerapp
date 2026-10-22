@@ -91,8 +91,8 @@ function writeVerified(ok){
     { label:'BSData,', detail:'the data New Recruit is built from: every stat, weapon, keyword, ability and points value (' + total(out('bsdata').checked) + ' facts).' },
     { label:'Granted values:', detail:'every keyword or value marked + is one a rule of your list changes in BSData, named as that rule, and matches the rules New Recruit prints beside the weapon (' + ((out('bsdata').checked || {}).grants || 0) + ' values).' },
     { label:'Games Workshop’s rules text:', detail:'every rule, enhancement and stratagem is the wording of GW’s newest official document, or Wahapedia where GW has none (' + total(out('texts').checked) + ' texts).' },
-    { label:'Rules logic:', detail:'each stratagem is offered in the phases its WHEN names and to the units its TARGET names; every number in a reminder is in the rule it cites.' },
-    { label:'The app’s own notes:', detail:(help.approved || 0) + ' footnotes, reminders, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off.' },
+    { label:'Rules logic:', detail:'each stratagem is offered in the phases its WHEN names and to the units its TARGET names; every number in a footnote is in the rule it cites.' },
+    { label:'The app’s own notes:', detail:(help.approved || 0) + ' footnotes, phase tags and summaries, each read against its rule and signed off; a changed rule voids its sign-off.' },
     { label:'Every screen:', detail:screens + ' screens and popups render on a 390 and a 320px-wide phone; they list every ability, open every link and find every name in search.' }
   ];
   const FJ = JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/sources/factions.json'), 'utf8'));

@@ -4,7 +4,7 @@
 // - a stratagem is offered to exactly the units its TARGET's keywords describe
 // - an ability whose text names a phase ("In your Command phase") is in that phase's list
 // - a Damaged band says the wound range the ability's name says
-// - every number in a footnote, "When targeted" line or reminder is in the text it cites
+// - every number in a footnote or "When targeted" line is in the text it cites
 // - a weapon carried by several models says how many (×N) and the count adds up
 // - in an attached unit, every weapon belongs to the leader or the bodyguard
 // An exception needs an entry in verify/allow-invariants.json: { check, where, reason }.
@@ -118,7 +118,6 @@ function run(D){
     const rules = f.armyRules.concat(a.detachments.map(id => f.detachments[id].rule).filter(Boolean));
     for(const r of rules){
       const text = r.text + JSON.stringify(r.table || '');
-      for(const x of r.remind || []) for(const n of nums(x.text)) if(!has(text, n) && !has(JSON.stringify(D.factions[a.faction]), n)) F('number-cited', a.id + ' · ' + r.name + ' reminder', '"' + n + '" in "' + x.text + '" is not in the faction\'s rules');
       for(const k of ['def']) if(r[k]) for(const n of nums(r[k])) if(!has(text, n)) F('number-cited', a.id + ' · ' + r.name, '"' + n + '" in "' + r[k] + '" is not in its text');
       if(r.mod) for(const n of nums([r.mod.when, r.mod.note].join(' '))) if(!has(text, n)) F('number-cited', a.id + ' · ' + r.name, '"' + n + '" in its footnote is not in its text');
     }

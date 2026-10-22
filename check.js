@@ -54,7 +54,7 @@ function check(file){
   D.coreStratagems.forEach(s => strat(s, 'core'));
   for(const [fk, f] of Object.entries(D.factions)){
     if(!Array.isArray(f.armyRules)) P('faction', fk, 'has no armyRules');
-    for(const r of f.armyRules || []){ timing(r, 'army rule ' + r.name); for(const x of r.remind || []) timing(x, 'reminder of ' + r.name); }
+    for(const r of f.armyRules || [])timing(r, 'army rule ' + r.name);
     for(const [dk, d] of Object.entries(f.detachments || {})){
       for(const k of ['name','enhancements','stratagems']) if(!d[k]) P('detachment', dk, 'missing', k);
       if(d.rule) timing(d.rule, 'detachment rule ' + d.rule.name);

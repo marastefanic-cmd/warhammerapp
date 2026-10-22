@@ -190,12 +190,6 @@ const FACTIONS = {
     aliases: [[/^riled up/i, 'Waaagh!']],
     armyRules: [
       { name:'Waaagh!',
-        // short reminders shown in the stratagem phase views (app wording, not rules text)
-        remind:[
-          { ph:['movement'], turn:'your', text:'Re-roll advance rolls. Riled up: advancing still lets a unit declare a charge.' },
-          { ph:['shooting'], turn:'your', text:'Riled up: ranged attacks have [ASSAULT].' },
-          { ph:['charge'], turn:'your', text:'A unit that was riled up when it advanced can still declare a charge.' }
-        ],
         text:'Friendly **ORKS** units with this ability can:\n- Re-roll **advance rolls**.\n- Become **riled up**, as stated in other rules.\nWhile a unit is **riled up**:\n- That unit has 5+ **InSv**.\n- That unit’s ranged attacks have **[ASSAULT]**.\n- When that unit is selected to make an **advance move**, that **advance move** does not prevent that unit from being **eligible to declare a charge**.' },
       { name:'War Cry', tag:'Once per battle, per army', ph:['command'], turn:'either',
         text:'At the start of the Command phase, you can use this ability. If you do, friendly **ORKS** units with the **Waaagh!** ability are **riled up** until the end of the next turn.' },
@@ -400,11 +394,6 @@ const FACTIONS = {
       // The 'We pledge to reap a great tally' Deed is Wahapedia's errata wording (the page text already has it),
       // identical to the Rules Updates in GW's Faction Pack v1.2 (legal from 26 Aug 2026), PDF p27.
       { name:'Code Chivalric',
-        // short reminders shown in the stratagem phase views (app wording, not rules text)
-        remind:[
-          { ph:['movement','charge'], turn:'either', turns:{ movement:'your' }, text:'Quality 3–4 (eager for the challenge): +2" Move, +1 to Advance and Charge rolls.' },
-          { ph:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, text:'Quality 1–2 (martial valour): each time a Knight shoots or fights, re-roll one Hit roll and one Wound roll.' }
-        ],
         text:'If your Army Faction is **IMPERIAL KNIGHTS**, at the end of the Read Mission Objectives step, you must determine your army’s Oath for the coming battle. An Oath consists of two parts - one Deed and one Quality. There are three options for each part, shown below.\nTo determine your army’s Deed, you can either select one Deed or you can randomly select one Deed by rolling a D6 and consulting the relevant table below. The selected Deed will describe what needs to be achieved in order to complete that Deed.\nTo determine your army’s Quality, you can either select one Quality or you can randomly select one Quality by rolling a D6 and consulting the relevant table below. Until the end of the battle, the ability described in the Quality selected applies to all models in your army with this ability.\nThe first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).',
         table:[
           ['Deed 1–2 · We vow to lay low the tyrant…', 'At the start of the battle, select one **CHARACTER** model in your opponent’s army. This Deed is completed at the end of a turn if that **CHARACTER** is destroyed.'],
@@ -487,12 +476,6 @@ const FACTIONS = {
     // Wahapedia also lists Pact of Blood (a mustering restriction on BLOOD LEGIONS); it does nothing in play, so it is left out.
     armyRules: [
       { name:'Blessings of Khorne', at:'Start of the battle round', ph:['command','charge','fight'], turn:'either',
-        // short reminder shown in the stratagem phase views (app wording, not rules text)
-        remind:[
-          { ph:['command'], turn:'either', text:'Start of the battle round: roll 8 D6, activate up to two Blessings.' },
-          { ph:['charge'], turn:'either', text:'Unbridled Bloodlust active? +1 to charge rolls. Battle-lust: while Unbridled Bloodlust is active for your army, add 1 to Charge rolls made for the Slaughterbound’s unit. Archslaughterer used: every Blessing of Khorne is active for the Lord’s unit until the start of your next turn.' },
-          { ph:['fight'], turn:'either', text:'Active Blessings: Martial Excellence [SUSTAINED HITS 1] · Warp Blades [LETHAL HITS] · Decapitating Strikes [DEVASTATING WOUNDS] vs INFANTRY · Rage-fuelled Invigoration: 6" pile-in and consolidation · Total Carnage: each time a model is destroyed by a melee attack, if it has not fought this phase, on a 4+ it is not removed; it can fight after the attacking unit has finished making its attacks, then is removed. Archslaughterer used: all six for the Lord’s unit.' }
-        ],
         // Wahapedia wording; the example's "1,2, 2" typo is written "1, 2, 2"
         text:'If your Army Faction is **WORLD EATERS**, at the start of the battle round, you can make a Blessings of Khorne roll. To do so, roll eight D6. You can then use those dice to activate up to two Blessings of Khorne (see below). Each Blessing of Khorne specifies the dice results it requires (where a number is specified, a double or triple of that value or higher is required). You can only activate each Blessing of Khorne once per battle round. Any unused dice from the Blessings of Khorne roll are then discarded. Once activated, each Blessing of Khorne applies to all units from your army with this ability until the end of the battle round.\n*Example: Ash makes a Blessings of Khorne roll, getting the following: 1, 2, 2, 2, 3, 4, 6, 6.*\n*First they use the two 6s to activate Warp Blades (which requires a double 5+), leaving the following dice: 1, 2, 2, 2, 3, 4.*\n*They then use the two 2s to activate Unbridled Bloodlust.*\n*Now that two Blessings of Khorne have been activated, no more can be activated and the remaining dice are discarded.*',
         // the six Blessings (Wahapedia), label = name and the dice it requires (drawn as dice icons on the page);
@@ -710,11 +693,6 @@ const FACTIONS = {
     armyRules: [
       // Wahapedia wording (the errata "Change to" text has the same words, without the bold)
       { name:'Synapse',
-        // short reminders shown in the stratagem phase views (app wording, not rules text)
-        remind:[
-          { ph:['command','movement','shooting','charge','fight'], turn:'either', text:'Within Synapse Range: Battle-shock tests are taken on 3D6 instead of 2D6.' },
-          { ph:['fight'], turn:'either', text:'Within Synapse Range: melee attacks have +1 S.' }
-        ],
         text:'If your Army Faction is **TYRANIDS**, while a **TYRANIDS** unit from your army is within 6" of one or more friendly **SYNAPSE** models, that **TYRANIDS** unit is said to be within Synapse Range of that model and of your army. While a **TYRANIDS** unit from your army is within Synapse Range of your army:\n- Each time that unit takes a **Battle-shock test**, take that test on 3D6 instead of 2D6.\n- Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.' },
       // Wahapedia wording (the errata "Change to" text has the same words, without the bold)
       { name:'Shadow in the Warp', tag:'Once per battle', ph:['command'], turn:'either',

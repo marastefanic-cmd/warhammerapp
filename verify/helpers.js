@@ -2,7 +2,7 @@
 //
 // The paper packet has rules text; the app adds judgements on top: footnotes under weapons,
 // "When targeted" entries, the phase and turn a rule is listed in, which units a stratagem is
-// for, reminders, notes, and the code that turns weapons into "Pick one / Shoots with both".
+// for, notes, and the code that turns weapons into "Pick one / Shoots with both".
 // Every one of them is an item here. Its key is a hash of the judgement AND of the source text it
 // summarises, so changing either one voids its approval: it must be checked again.
 //
@@ -87,7 +87,6 @@ function items(D, appSource){
       for(const k of ['ph', 'turn', 'turns', 'needs', 'def', 'mod', 'note', 'tag', 'statNote', 'missing', 'ask', 'calcMods', 'calcDefs', 'calcNc', 'both', 'limit']) if(r[k] !== undefined) add(a.id, 'rule-' + k, where + ' · ' + r.name, { [k]:r[k] }, src);
       // an army rule shown with the core ability of the same name (Super-heavy Walker): the pairing, against both texts
       if(r.coreTwin !== undefined) add(a.id, 'rule-coreTwin', where + ' · ' + r.name, { coreTwin:r.coreTwin }, { rule:r.name, text:srcText, core:D.rules[r.coreTwin] || null });
-      for(const x of r.remind || []) add(a.id, 'rule-remind', where + ' · ' + r.name, x, src);
     };
     for(const r of f.armyRules) rulesMeta(a.faction + ' army rule', r, r.text + (r.table ? '\n' + r.table.map(t => t.join(': ')).join('\n') : ''));
     for(const id of a.detachments){
