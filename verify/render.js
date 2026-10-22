@@ -438,6 +438,68 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
         if(!hit) out.push(y); }
       scrollTo(0, 0); return out; });
     if(gaps.length) fail('damage-no-gap', A, 'scrollY ' + gaps.slice(0, 8).join(', '), 'an empty band of over 70px under the pinned card');
+
+    // ---- half range: a band tapped stays selected and the profiles picked stay (Mek + Flash Gitz, the Snazzgun opening on Dakka;
+    // and the first units of the other lists with bands); the weapons and their profiles come before the bands ----
+    const bandUnits = await page.evaluate(() => { const out = [['shooty', 'mek-flashgitz']], seen = new Set(['shooty']);
+      for(const L of WH_DATA.armies) for(const u of L.units){ if(seen.has(L.id) || !(u.ranged || []).length) continue;
+        const st = { dir:'me', ph:'shooting', on:{}, off:{}, pick:{}, man:{}, val:{} };
+        let M = null; try { M = inArmy(L, () => dmCalc(st, L, u, {}, 'ranged')); } catch(e){}
+        if(M && M.bands && M.bands.opts.length > 1){ out.push([L.id, u.id]); seen.add(L.id); } }
+      return out.slice(0, 4); });
+    const prof = () => page.evaluate(() => [...document.querySelectorAll('#dmList .dmprofs .dmpp')].map(e => e.dataset.dmlv + '=' + e.getAttribute('aria-pressed')).join(' '));
+    const bandIds = () => page.evaluate(() => [...document.querySelectorAll('#dmList .dmbands [data-dmlv]')].map(e => e.dataset.dmlv));
+    const tapBands = async (at, tag) => {
+      for(const id of await bandIds()){
+        const p0 = await prof(), b0 = await bandIds();
+        const there = await page.evaluate(id => { const e = [...document.querySelectorAll('#dmList .dmbands [data-dmlv]')].find(x => x.dataset.dmlv === id); if(e) e.scrollIntoView({ block:'center' }); return !!e; }, id);
+        if(!there){ fail('damage-band-stays', at[0], at[1] + tag + ' · ' + id, 'the band is gone: ' + b0.join()); break; }
+        await page.waitForTimeout(400);
+        await page.click('#dmList .dmbands [data-dmlv="' + id + '"] .ck');
+        await settled();
+        const on = await page.evaluate(() => [...document.querySelectorAll('#dmList .dmbands [data-dmlv]')].filter(e => e.getAttribute('aria-pressed') === 'true').map(e => e.dataset.dmlv));
+        const p1 = await prof(), b1 = await bandIds();
+        if(on.join() !== id || p1 !== p0 || b1.join() !== b0.join()) fail('damage-band-stays', at[0], at[1] + tag + ' · ' + id, 'selected ' + on.join() + '; profiles ' + p0 + ' → ' + p1 + '; bands ' + b0.join() + ' → ' + b1.join()); } };
+    for(const at of bandUnits){
+      await open('shoot', at);
+      const order = await page.evaluate(() => { const b = document.querySelector('#dmList .dmbands'), w = [...document.querySelectorAll('#dmList .dmh3')].find(h => /weapons/.test(h.textContent));
+        return !b ? 'no bands' : !w ? 'no weapons' : w.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING ? '' : 'the bands come before the weapons'; });
+      if(order) fail('damage-band-order', at[0], at[1], order);
+      await tapBands(at, '');
+    }
+    // with Dakka! Dakka! Dakka! ticked (+3" range while riled up): a band of its own; without it, none
+    {
+      const at = ['shooty', 'mek-flashgitz'], kid = '#dmList [data-dmlv^="r:m:Dakka! Dakka! Dakka!"]';
+      await open('shoot', at);
+      const before = (await bandIds()).join();
+      await page.evaluate(k => document.querySelector(k).scrollIntoView({ block:'center' }), kid); await page.waitForTimeout(400);
+      await page.click(kid); await settled();
+      const after = (await bandIds()).join();
+      if(before !== 'b:0,b:12' || after !== 'b:0,b:13.5,b:12') fail('damage-band-ticked', at[0], at[1], 'bands ' + before + ' unticked, ' + after + ' with Dakka! Dakka! Dakka! ticked');
+      await tapBands(at, ' (Dakka! Dakka! Dakka! ticked)');
+    }
+    // a fact's box with the rules it switches on: none ticked, empty; some, partly; all, ticked (one rule: Riled up → Dakka!
+    // Dakka! Dakka!; two: the objective → Finderz Keeperz, Wreckin’ and Lootin’)
+    {
+      const at = ['shooty', 'mek-flashgitz'];
+      const mark = f => page.evaluate(f => { const e = document.querySelector('#dmList [data-dmlv="' + f + '"]'); return e.classList.contains('part') ? 'part' : e.getAttribute('aria-pressed') === 'true' ? 'on' : 'off'; }, f);
+      const kidTap = async (f, i) => { const sel = '#dmList .dmrw:has([data-dmlv="' + f + '"]) .dmkid';
+        await page.evaluate(([s, i]) => document.querySelectorAll(s)[i].scrollIntoView({ block:'center' }), [sel, i]); await page.waitForTimeout(400);
+        await page.locator(sel).nth(i).click(); await settled(); };
+      for(const [f, n] of [['f:mine:riled', 1], ['f:pair:objective', 2]]){
+        await open('shoot', at);
+        const seen = [await mark(f)], want = n === 1 ? ['off', 'on', 'off'] : ['off', 'part', 'on', 'part', 'off'];
+        for(const i of n === 1 ? [0, 0] : [0, 1, 0, 1]){ await kidTap(f, i); seen.push(await mark(f)); }
+        if(seen.join() !== want.join()) fail('damage-fact-kids', at[0], f, 'its box ' + seen.join(' → ') + ', not ' + want.join(' → ')); }
+    }
+    // each profile to pick shows its own characteristics (RNG for a ranged one) and keywords, inside the screen
+    {
+      await open('shoot', ['shooty', 'mek-flashgitz']);
+      const ps = await page.evaluate(() => [...document.querySelectorAll('#dmList .dmprofs .dmpp')].map(e => { const r = e.getBoundingClientRect();
+        return { t:e.querySelector('b').textContent, cells:[...e.querySelectorAll('.dmwst > span > i')].map(i => i.textContent).join(' '), kw:!!e.querySelector('.dmkw'), out:r.right > innerWidth + 0.5 || r.left < -0.5 }; }));
+      const bad = ps.filter(p => p.cells !== 'RNG A BS S AP D' || !p.kw || p.out);
+      if(ps.length !== 3 || bad.length) fail('damage-profile-stats', 'shooty', 'Snazzgun', JSON.stringify(ps.length !== 3 ? ps : bad));
+    }
   }
   if(pageErrors.length) fail('page-errors', '', '', pageErrors.join(' | '));
 
