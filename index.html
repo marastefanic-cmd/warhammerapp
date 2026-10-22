@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" href="icon-192.png">
 <style>:root{padding-top:env(safe-area-inset-top,0px)}img{max-width:100%}</style>
 <title>Kunnin’ Kodex</title>
-<script>window.WH_BUILD = '3030b3e9e9';</script>
+<script>window.WH_BUILD = '8ae5274d38';</script>
 </head>
 <body>
 <style>
@@ -1072,9 +1072,9 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="verified.js?v=3030b3e9e9"></script>
-<script src="data.js?v=3030b3e9e9"></script>
-<script src="calc.js?v=3030b3e9e9"></script>
+<script src="verified.js?v=8ae5274d38"></script>
+<script src="data.js?v=8ae5274d38"></script>
+<script src="calc.js?v=8ae5274d38"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -2085,13 +2085,6 @@ function dmCalc(st, A, au, tg, kind){
       ctx.snapSix = false; }
   }
   ctx.charged = sitOn('charged') && (!ranged || lance);
-  // hazard rolls (06.03, 24.15): not counted, the calculator shows the damage dealt (said under Not counted, with the weapons and rules
-  // that would make them)
-  const hzOf = c => { const k = c.w.kw.map(x => String(x).toUpperCase()), r = rules.some(q => q.on && q.e && q.e.hazardous && dmReach(au, c.it, q.m, q.sc) > 0);
-    return k.includes('HAZARDOUS') || r || (ranged && k.includes('SUPA-HAZARDOUS')); };
-  const hzNames = [...new Set(ticked.filter(hzOf).map(cName))]
-    // (a rule's own roll for the unit: Try Dat Button! with two D6, a pick of two results)
-    .concat(rules.filter(r => r.on && r.pick && / and /.test(r.pick) && /two D6[^)]*hazard roll/i.test(r.note0 || r.m.note || '')).map(r => r.m.from + ' (two D6)'));
   // a Damaged band (24.39): the datasheet's printed effect
   const dmgOn = [], nc = [];
   for(const m of (au.mods || []).filter(m => damaged.has(m.from) && (m.kind === kind || m.kind === 'all'))){
@@ -2145,7 +2138,6 @@ function dmCalc(st, A, au, tg, kind){
   for(const r of rules) if(r.state === 'nc') nc.push({ side:'a', name:(r.m.cp ? r.m.cp + 'CP ' : '') + r.m.from, text:(r.m.when ? r.m.when + ': ' : '') + r.m.note, why:r.why, strat:!!r.m.strat });
   // the army rules' parts the calculator does not play (calcNc: Code Chivalric's one re-roll)
   for(const m of dmArmyOf(A, au, kind, 'calcNc')) nc.push({ side:'a', name:m.from + ': ' + m.when, text:m.note, why:m.why });
-  if(hzNames.length) nc.push({ side:'a', name:'Hazard rolls (06.03)', text:'not counted, the calculator shows damage dealt', why:andList(hzNames) });
   // notes for the working: the same ability twice (24.02), a value the printed weapon already includes, modifiers past ±1
   const kwText = x => '[' + (typeof x === 'string' ? x : x.t) + ']' + (x.src ? ' (' + x.src + ')' : '');
   const notes = [];
@@ -2224,7 +2216,7 @@ function dmHowLines(c, st, r0, plan){
   L.push(['Another unit’s rule', 'an aura or ability of another unit of the list that reaches this unit (Clever Know-wotz from a Mek, Beacons of Rage from Eightbound) is listed with the unit it comes from, and is never ticked for you: whether that unit gives it depends on the table.']);
   L.push(['Not counted', 'a rule whose effect the calculator does not play (Fights First, mortal wounds of its own, a single re-roll) is listed with its words; when one of the Modifiers says the same thing, “Count it by hand” sets that modifier for this step, as your own call.']);
   L.push(['A fact of the table', 'saying one holds (charged, riled up, on an objective, remained stationary, the closest target) ticks every rule of this step whose condition it is, for the unit it is about; each can still be unticked by itself, and a stratagem with that condition is never ticked for you.']);
-  L.push(['Shoot, Fight, Both', 'Shoot is the shooting alone, Fight the fight alone (“Charged this turn” as you say). Both plays the shooting, then the charge, then the fight, in the same games: the fight meets what the shooting left. The charge is taken to be made, not rolled: “Charged this turn” is ticked for the fight (untick it for a fight with no charge move; a unit that shot with close-quarters shooting is engaged and cannot declare one, 10.06). Fights First and which models are in engagement range are not played: every model left takes part. What the target does back and the unit’s own losses to hazard rolls are not played: the calculator shows the damage dealt.']);
+  L.push(['Shoot, Fight, Both', 'Shoot is the shooting alone, Fight the fight alone (“Charged this turn” as you say). Both plays the shooting, then the charge, then the fight, in the same games: the fight meets what the shooting left. The charge is taken to be made, not rolled: “Charged this turn” is ticked for the fight (untick it for a fight with no charge move; a unit that shot with close-quarters shooting is engaged and cannot declare one, 10.06). Fights First and which models are in engagement range are not played: every model left takes part. What the target does back and what the unit loses are not played: the calculator shows the damage dealt.']);
   if(beats.some(x => x.M.rules.some(r => r.carried))) L.push(['A tick that lasts', 'a rule or stratagem whose words make it last past its step (to the end of the turn, the battle round, until your next Command or Movement phase) carries from the shooting into the fight of the same unit, as a carried chip (an army rule by its name and pick: a Doctrina Imperative ticked for the shooting is the one in the fight); the fight can untick it for itself. A rule whose words do not say how long it lasts stays in its step.']);
   if(kw(/^blast\b/i)) L.push(['[BLAST] (24.05)', 'one more attack dice (X with [BLAST X]) for every five models the target had before these attacks.']);
   if(kw(/^cleave\b/i)) L.push(['[CLEAVE] (24.06)', 'X more attack dice for every five models the target had before these attacks, when all of that weapon’s attacks target this one unit: the calculator takes it that they do.']);
