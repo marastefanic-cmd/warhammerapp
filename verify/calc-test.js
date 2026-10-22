@@ -611,7 +611,7 @@ const FGX = memo(() => { const p0 = dm.plan(Object.assign({ turn:{ me:MT('both')
 cases.push(['Both: the shooting, then the charged fight (two steps, the fight charged)', () => +(FG().p.both && FG().p.beats.map(b => b.id).join() === 'shoot,fight' && FG().p.beats[1].M.ctx.charged === true), 1]);
 cases.push(['Both: the total is the Shoot → Charge → Fight play of the same choices', () => dm.app.dmTotalAns(FG().p, FG().r).killed - FGX().sides[1].killed, 0, 0.05]);
 cases.push(['Both: the total is the two parts added up', () => (A => A.killed - A.parts.reduce((t, x) => t + x.killed, 0))(dm.app.dmTotalAns(FG().p, FG().r)), 0, 1e-9]);
-cases.push(['Both: no hazard rolls on the screen; said under Not counted, with the weapons', () => +(!FG().r.beats[0].hazard && FG().p.beats[0].M.nc.some(x => x.name === 'Hazard rolls (06.03)' && /not counted, the calculator shows damage dealt/.test(x.text) && /Mega-slugga/.test(x.why))), 1]);
+cases.push(['Both: no hazard rolls, on the screen or under Not counted', () => +(!FG().r.beats[0].hazard && !FG().p.beats[0].M.nc.some(x => /^Hazard rolls/.test(x.name))), 1]);
 cases.push(['Both: all 10 Gitz fight', () => FG().r.beats[1].groups.find(x => x.n > 1).n, 10, 0]);
 // Both with no ranged weapons is the fight alone (said); Fight's "Charged this turn" is the player's (unticked to start with)
 cases.push(['Both, no ranged weapons: the fight alone, said', () => (p => +(!p.both && p.beats.map(b => b.id).join() === 'fight' && /no ranged weapons, so this is the fight alone/.test(p.note)))(dm.plan({ army:'princes', atk:'eightbound', turn:{ me:MT('both') } })), 1]);
@@ -671,11 +671,11 @@ const dak = pick => dm.plan({ army:'shooty', atk:'dakkarig-boosta', typed:cp(BER
   ch:pick ? { 'me:shoot':{ on:{ [TDB]:true }, val:{ 'pick:Try Dat Button!':pick } } } : {} });
 cases.push(['Try Dat Button!: the three results and the three pairs, nothing else to pick', () => (r => +(r.pills.map(p => p[0]).join('|') === '1–2|3–4|5–6|1–2 and 3–4|1–2 and 5–6|3–4 and 5–6' && !r.dice))(dak('1–2').beats[0].M.rules.find(r => r.k === TDB)), 1]);
 cases.push(['Try Dat Button!, two results: both counted (+1 A and +1 AP)', () => (a => (b => +(b.R.groups.every((g, i) => g.out || Math.abs(g.AP) === Math.abs(a.R.groups[i].AP) + 1) && C.explain(b.input).total.attacks > C.explain(a.input).total.attacks))(dak('1–2 and 5–6').beats[0].M))(dak('').beats[0].M), 1]);
-cases.push(['Try Dat Button!, two D6: its hazard roll not counted, said under Not counted', () => (M => +(!M.sit.some(x => x.k === 'c:hazard') && M.nc.some(x => x.name === 'Hazard rolls (06.03)' && /Try Dat Button! \(two D6\)/.test(x.why))))(dak('1–2 and 5–6').beats[0].M), 1]);
+cases.push(['Try Dat Button!, two D6: no hazard roll named', () => (M => +(!M.sit.some(x => x.k === 'c:hazard') && !M.nc.some(x => /^Hazard rolls/.test(x.name))))(dak('1–2 and 5–6').beats[0].M), 1]);
 cases.push(['Try Dat Button!, one D6: no hazard roll to name', () => +!dak('5–6').beats[0].M.nc.some(x => /^Hazard rolls/.test(x.name)), 1]);
-// the Kustom Mega-blasta, [HAZARDOUS] and [SUPA-HAZARDOUS]: not counted, named under Not counted (the engine still plays hazard rolls when
+// the Kustom Mega-blasta, [HAZARDOUS] and [SUPA-HAZARDOUS]: hazard rolls are not counted and not named (the engine still plays them when
 // asked: the cases above)
-cases.push(['hazard: Big Mek in Mega Armour shooting: not counted, said with its weapons', () => (p => +p.beats[0].M.nc.some(x => x.name === 'Hazard rolls (06.03)' && /Kustom Mega-blasta/.test(x.why)))(dm.plan({ army:'shooty', atk:'bigmek-mega', typed:{}, turn:{ me:MT('shoot') } })), 1]);
+cases.push(['hazard: Big Mek in Mega Armour shooting: no hazard line (the owner: irrelevant for the damage)', () => (p => +!p.beats[0].M.nc.some(x => /^Hazard rolls/.test(x.name)))(dm.plan({ army:'shooty', atk:'bigmek-mega', typed:{}, turn:{ me:MT('shoot') } })), 1]);
 // a choice's effect is the damage dealt over the whole turn: nothing of what the attacking unit loses
 const effOf = (s, id) => { const p0 = dm.plan(s), st = dm.app.dmState(), lv = dm.app.dmLevers(st, p0).find(l => l.id === id), s2 = JSON.parse(JSON.stringify(st)); lv.apply(s2);
   const p2 = dm.app.dmPlan(s2), a = dm.app.dmNums(p0, p0.k, C.play(dm.app.dmIn(p0, 10000))), b = dm.app.dmNums(p2, p2.beats.findIndex(x => x.id === p0.beats[p0.k].id), C.play(dm.app.dmIn(p2, 10000)));
