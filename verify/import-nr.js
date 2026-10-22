@@ -72,6 +72,10 @@ const catalogues = Object.fromEntries(Object.entries(JSON.parse(fs.readFileSync(
 const factionId = Object.keys(catalogues).find(k => nm(catalogues[k]) === nm(nr0.faction)) ||
   Object.keys(D.factions).find(k => nm(D.factions[k].name) === nm(nr0.faction.replace(/^.* - /, ''))) || slug(nr0.faction.replace(/^.* - /, ''));
 const F = D.factions[factionId];
+// an allied unit (New Recruit's role "Allies: Legiones Daemonica") has its datasheet under its own faction's Wahapedia pages:
+// sources/factions.json names them (the faction's "allies": { "Legiones Daemonica": "chaos-daemons" })
+const ALLIES = (JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/sources/factions.json'), 'utf8'))[factionId] || {}).allies || {};
+const allyOf = role => { const m = /^Allies: (.+)$/.exec(role || ''); return m ? m[1] : null; };
 if (!F) note(null, 'faction ' + nr0.faction + ' is not in data.js: transcribe its army rules, detachments, enhancements and stratagems from Wahapedia/GW, and add it to verify/sources/factions.json (verify/add-army.js does)');
 const enhs = F ? Object.values(F.detachments).flatMap(d => d.enhancements || []) : [];
 const nr = NR.parseNR(path.resolve(srcFile), enhs.map(e => e.name));   // again, now knowing which options are enhancements
@@ -150,9 +154,9 @@ function markup(tokens, P, a, b) {
   return out.replace(/\n{2,}/g, '\n').replace(/ +\n/g, '\n').replace(/\*\*\*\*/g, '').trim();
 }
 const wahaCache = new Map();
-function wahaPage(unitName) {
+function wahaPage(unitName, fac = factionId) {
   const dir = path.join(ROOT, 'verify/.cache/waha/ds');
-  const want = (factionId + '_' + wahaAddress(unitName)).toLowerCase();
+  const want = (fac + '_' + wahaAddress(unitName)).toLowerCase();
   if (wahaCache.has(want)) return wahaCache.get(want);
   const f = fs.existsSync(dir) && fs.readdirSync(dir).find(x => x.toLowerCase() === want + '.html');
   let r = null;
@@ -244,6 +248,9 @@ for (const nu of nrUnits) {
     name = rs[0].name; role = rs[0].role;
   }
   name = typo(name);
+  // the Wahapedia faction of its datasheet: an allied unit's own
+  const ally = allyOf(role), pageFac = ally ? ALLIES[ally] : factionId;
+  if (ally && !pageFac) note(name, 'allied unit (' + role + '): name its Wahapedia faction in verify/sources/factions.json (' + factionId + '.allies), then import again');
   const tag0 = [name].concat(also.map(c => c.name), lead ? [typo(lead)] : []).join(' + ');   // how the notes name it
 
   // weapons first: their names (and letter case) are what the gear lines refer to
@@ -277,8 +284,10 @@ for (const nu of nrUnits) {
     for (const it0 of m.options.map(nm)) {
       if (it0 === 'Warlord' || /^•/.test(it0) || (o.enhItem && it0 === o.enhItem)) continue;
       const inner = /^.*?\((.*)\)$/.exec(it0);
+      // a bundle taken more than once ("2x Gatling cannon and flamer (Despoiler gatling cannon, Heavy darkflamer)"): each of its items as often
+      const times0 = inner ? +((/^(\d+)x\s+/.exec(it0) || [0, 1])[1]) : 1;
       for (const p of inner ? splitItems(inner[1]) : [it0]) {
-        const c = /^(\d+)x\s+(.*)$/.exec(nm(p)), n = c ? +c[1] : 1, base = c ? c[2] : nm(p);
+        const c = /^(\d+)x\s+(.*)$/.exec(nm(p)), n = (c ? +c[1] : 1) * times0, base = c ? c[2] : nm(p);
         const w = weaponName.get(lc(base));
         if (w) for (let j = 0; j < n; j++) g.push(typo(w)); else wargear.push(typo(base));
       }
@@ -294,9 +303,9 @@ for (const nu of nrUnits) {
   });
 
   // abilities: New Recruit's tables, worded as the datasheet (or the enhancement) words them
-  const pages = uniq([name].concat(also.map(c => c.name), nu.who.length ? nu.who : [], bodyguard ? [bodyguard] : [])).map(wahaPage);
+  const pages = pageFac ? uniq([name].concat(also.map(c => c.name), nu.who.length ? nu.who : [], bodyguard ? [bodyguard] : [])).map(n => wahaPage(n, pageFac)) : [];
   // every datasheet page the unit's wording comes from, for verify/fetch.sh (Wahapedia's address is the name, words capitalised)
-  uniq([name].concat(also.map(c => c.name), nu.who.length ? nu.who : [], bodyguard ? [bodyguard] : [])).forEach((n, k) => { wantPages.add(factionId + ' ' + wahaAddress(n)); });
+  uniq([name].concat(also.map(c => c.name), nu.who.length ? nu.who : [], bodyguard ? [bodyguard] : [])).forEach((n, k) => { if (pageFac) wantPages.add(pageFac + ' ' + wahaAddress(n)); });
   if (!pages.some(Boolean)) note(tag0, 'no cached Wahapedia datasheet: its ability texts are New Recruit’s plain words (run sh verify/fetch.sh and import again)');
   let upgrade = null;
   const abilities = [];
@@ -363,6 +372,8 @@ for (const nu of nrUnits) {
       else { note(tag0, 'ability ' + ab.name + ' has new words: its phase tags and footnotes were not kept'); continue; }
       for (const k of ['damaged', 'ph', 'turn', 'turns', 'def', 'na']) if (pa[k] !== undefined) ab[k] = pa[k];
     }
+    // a hand-written note on a keyword a selection of the unit gives it (Houndpack Lance Character), while the unit still has it
+    if (!u.kwNote && prev.kwNote && /^(.+?) comes? from (.+?) \(/.test(prev.kwNote) && u.models.some(l => l.includes(/^(.+?) comes? from (.+?) \(/.exec(prev.kwNote)[2]))) u.kwNote = prev.kwNote;
     const names = new Set(u.abilities.map(a => a.name));
     for (const k of ['mods', 'aura']) {
       const keep = (prev[k] || []).filter(m => !m.from || names.has(m.from) || D.factions[factionId].armyRules.some(r => r.name === m.from) || detIds.some(id => ((F.detachments[id] || {}).rule || {}).name === m.from));
@@ -419,7 +430,8 @@ for (const d of deviations) {
 }
 
 // sorted as the roster reads: role, then units without a leader, then New Recruit's page order
-units.sort((a, b) => (ROLES.indexOf(a.role) - ROLES.indexOf(b.role)) || ((a.leads ? 1 : 0) - (b.leads ? 1 : 0)) || (a._page - b._page));
+const roleAt = r => ROLES.includes(r) ? ROLES.indexOf(r) : ROLES.length;   // allied units last
+units.sort((a, b) => (roleAt(a.role) - roleAt(b.role)) || ((a.leads ? 1 : 0) - (b.leads ? 1 : 0)) || (a._page - b._page));
 
 // ---------------------------------------------------------------- what it cannot know
 const PHASE = /\b(Command|Movement|Shooting|Charge|Fight) phase\b|\bbattle round\b|\bturn\b|\bselected to (shoot|fight|move)|\bcharge move\b|\bwhen\b/i;

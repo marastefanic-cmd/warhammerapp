@@ -1,0 +1,1102 @@
+[
+  {
+    "army": "woof-woof",
+    "kind": "ability-def",
+    "where": "woof-woof · War Dog Karnivore · *Invulnerable Save",
+    "judgement": {
+      "def": "5+ invulnerable save against ranged attacks only"
+    },
+    "source": {
+      "ability": "*Invulnerable Save",
+      "text": "This model has a 5+ invulnerable save against ranged attacks."
+    },
+    "key": "2578de9823d2b541"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "rule-ph",
+    "where": "chaos-knights army rule · Harbingers of Dread",
+    "judgement": {
+      "ph": [
+        "command"
+      ]
+    },
+    "source": {
+      "rule": "Harbingers of Dread",
+      "text": "If your Army Faction is **CHAOS KNIGHTS**, each unit from your army with this ability gains Dread abilities, depending which are active for your army (see below). The Deathly Terror ability is active for your army from the start of the battle. In addition, at the start of the first, third and fifth battle rounds, you can either select one of the other Dread abilities or randomly select two Dread abilities to apply by rolling two D6 and applying the results rolled, from those numbered 1-6.\nAny Dread abilities that have been selected are active until the end of the battle. You cannot select the same Dread ability more than once, and any duplicated Dread abilities (as a result of randomly selecting them) have no additional effect.\nDeathly Terror (Aura) · N/A: While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1.\nDespair (Aura) · 1: While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1. This is cumulative with the Deathly Terror ability (see above).\nDoom · 2: Each time this model makes an attack, if the target of that attack is **Battle-shocked**, add 1 to the **Wound roll**.\nDarkness · 3: This model has **Stealth**.\nDismay (Aura) · 4: In the Battle-shock step of your opponent’s Command phase, for each enemy unit that is below its Starting Strength and within 9\" of this model, that enemy unit must take a Battle-shock test.\nDelirium (Aura) · 5: While an enemy unit that is **Below Half-strength** is within 9\" of this model, each time that unit fails a Battle-shock test, it suffers D3 **mortal wounds**.\nDominion · 6: Add 3\" to the range of this model’s **Aura abilities**."
+    },
+    "key": "23f2a1c484cce1f6"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "rule-turn",
+    "where": "chaos-knights army rule · Harbingers of Dread",
+    "judgement": {
+      "turn": "either"
+    },
+    "source": {
+      "rule": "Harbingers of Dread",
+      "text": "If your Army Faction is **CHAOS KNIGHTS**, each unit from your army with this ability gains Dread abilities, depending which are active for your army (see below). The Deathly Terror ability is active for your army from the start of the battle. In addition, at the start of the first, third and fifth battle rounds, you can either select one of the other Dread abilities or randomly select two Dread abilities to apply by rolling two D6 and applying the results rolled, from those numbered 1-6.\nAny Dread abilities that have been selected are active until the end of the battle. You cannot select the same Dread ability more than once, and any duplicated Dread abilities (as a result of randomly selecting them) have no additional effect.\nDeathly Terror (Aura) · N/A: While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1.\nDespair (Aura) · 1: While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1. This is cumulative with the Deathly Terror ability (see above).\nDoom · 2: Each time this model makes an attack, if the target of that attack is **Battle-shocked**, add 1 to the **Wound roll**.\nDarkness · 3: This model has **Stealth**.\nDismay (Aura) · 4: In the Battle-shock step of your opponent’s Command phase, for each enemy unit that is below its Starting Strength and within 9\" of this model, that enemy unit must take a Battle-shock test.\nDelirium (Aura) · 5: While an enemy unit that is **Below Half-strength** is within 9\" of this model, each time that unit fails a Battle-shock test, it suffers D3 **mortal wounds**.\nDominion · 6: Add 3\" to the range of this model’s **Aura abilities**."
+    },
+    "key": "8aa125d1dcbf66f0"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "rule-calcMods",
+    "where": "chaos-knights army rule · Harbingers of Dread",
+    "judgement": {
+      "calcMods": [
+        {
+          "kind": "all",
+          "from": "Doom",
+          "lasts": "battle",
+          "when": "Doom active (Harbingers of Dread), the target Battle-shocked",
+          "note": "+1 to wound rolls"
+        }
+      ]
+    },
+    "source": {
+      "rule": "Harbingers of Dread",
+      "text": "If your Army Faction is **CHAOS KNIGHTS**, each unit from your army with this ability gains Dread abilities, depending which are active for your army (see below). The Deathly Terror ability is active for your army from the start of the battle. In addition, at the start of the first, third and fifth battle rounds, you can either select one of the other Dread abilities or randomly select two Dread abilities to apply by rolling two D6 and applying the results rolled, from those numbered 1-6.\nAny Dread abilities that have been selected are active until the end of the battle. You cannot select the same Dread ability more than once, and any duplicated Dread abilities (as a result of randomly selecting them) have no additional effect.\nDeathly Terror (Aura) · N/A: While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1.\nDespair (Aura) · 1: While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1. This is cumulative with the Deathly Terror ability (see above).\nDoom · 2: Each time this model makes an attack, if the target of that attack is **Battle-shocked**, add 1 to the **Wound roll**.\nDarkness · 3: This model has **Stealth**.\nDismay (Aura) · 4: In the Battle-shock step of your opponent’s Command phase, for each enemy unit that is below its Starting Strength and within 9\" of this model, that enemy unit must take a Battle-shock test.\nDelirium (Aura) · 5: While an enemy unit that is **Below Half-strength** is within 9\" of this model, each time that unit fails a Battle-shock test, it suffers D3 **mortal wounds**.\nDominion · 6: Add 3\" to the range of this model’s **Aura abilities**."
+    },
+    "key": "6995fec6263b70b9"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "rule-note",
+    "where": "chaos-knights army rule · Super-heavy Walker",
+    "judgement": {
+      "note": "CHAOS KNIGHTS datasheets list Super-heavy Walker as a FACTION ability (Faction Pack 1.2), whose Codex text differs from Core Rules 24.35; the sources don’t say which applies."
+    },
+    "source": {
+      "rule": "Super-heavy Walker",
+      "text": "Each time a model with this ability makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and sections of **terrain features** that are 4\" or less in height. When doing so:\n- It can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them.\n- It can also move through sections of terrain features that are more than 4\" in height, but if it does, after it has moved, roll one D6: on a 1, that model is **Battle-shocked**."
+    },
+    "key": "07fc2ca32894493a"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "ability-damaged",
+    "where": "woof-woof · War Dog Karnivore · Damaged: 1-5 wounds remaining",
+    "judgement": {
+      "damaged": "1-5",
+      "W": "14"
+    },
+    "source": {
+      "ability": "Damaged: 1-5 wounds remaining",
+      "text": "While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**."
+    },
+    "key": "de3f22a8dc58a2ff"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "ability-tag",
+    "where": "woof-woof · War Dog Brigand · Final Howl (Aura)",
+    "judgement": {
+      "tag": "Enhancement"
+    },
+    "source": {
+      "ability": "Final Howl (Aura)",
+      "text": "**WAR DOG** model only. While a friendly War Dog model is within 6\" of the bearer, each time that model makes an attack, re-roll a **Wound roll** of 1."
+    },
+    "key": "64452615088d1087"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "unit-footnote",
+    "where": "woof-woof · War Dog Brigand",
+    "judgement": {
+      "kind": "ranged",
+      "when": "Target in range of an objective marker",
+      "cond": "targetObjective",
+      "note": "ranged attacks have [IGNORES COVER]",
+      "from": "Brigand"
+    },
+    "source": {
+      "ability": "Brigand",
+      "text": "Ranged weapons equipped by this model have the [Ignores Cover] ability while targeting enemy units in range of one or more objective markers."
+    },
+    "key": "5a13062b1d592ce1"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "unit-footnote",
+    "where": "woof-woof · War Dog Karnivore",
+    "judgement": {
+      "kind": "all",
+      "when": "Damaged (1-5 wounds left)",
+      "note": "-1 to hit rolls (and -3 OC)",
+      "from": "Damaged: 1-5 wounds remaining"
+    },
+    "source": {
+      "ability": "Damaged: 1-5 wounds remaining",
+      "text": "While this model has 1-5 wounds remaining, subtract 3 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the **Hit roll**."
+    },
+    "key": "fa9f667dcf2d6501"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "unit-aura",
+    "where": "woof-woof · War Dog Brigand",
+    "judgement": {
+      "kind": "all",
+      "needs": {
+        "all": [
+          "War Dog"
+        ]
+      },
+      "when": "Within 6\" of the War Dog Brigand with Final Howl",
+      "selfWhen": "Own aura",
+      "note": "re-roll wound rolls of 1",
+      "from": "Final Howl (Aura)",
+      "selfAlways": true
+    },
+    "source": {
+      "ability": "Final Howl (Aura)",
+      "text": "**WAR DOG** model only. While a friendly War Dog model is within 6\" of the bearer, each time that model makes an attack, re-roll a **Wound roll** of 1."
+    },
+    "key": "ea4ea78104a4a851"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "unit-kwNote",
+    "where": "woof-woof · War Dog Brigand",
+    "judgement": {
+      "kwNote": "Character comes from Houndpack Lance Character (Houndpack Lance: “When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”)."
+    },
+    "source": {
+      "models": [
+        "1× War Dog Brigand (Houndpack Lance Character)"
+      ],
+      "stats": [
+        "War Dog Brigand W14 OC6"
+      ],
+      "weapons": [
+        "Avenger chaincannon 12 -1 1",
+        "Daemonbreath spear 2 -4 D6 MELTA 4",
+        "Diabolus heavy stubber 3 0 1 RAPID FIRE 3",
+        "Armoured feet 4 0 1"
+      ]
+    },
+    "key": "633ec50dc5e13fad"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "unit-weapons",
+    "where": "woof-woof · War Dog Brigand",
+    "judgement": {
+      "gear": [
+        [
+          "Armoured feet",
+          "Avenger chaincannon",
+          "Daemonbreath spear",
+          "Diabolus heavy stubber"
+        ]
+      ],
+      "weapons": [
+        "Avenger chaincannon",
+        "Daemonbreath spear",
+        "Diabolus heavy stubber",
+        "Armoured feet"
+      ]
+    },
+    "source": {
+      "models": [
+        "1× War Dog Brigand (Houndpack Lance Character)"
+      ],
+      "leads": null
+    },
+    "key": "6f39b4905110dc02"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "unit-weapons",
+    "where": "woof-woof · War Dog Brigand",
+    "judgement": {
+      "gear": [
+        [
+          "Armoured feet",
+          "Avenger chaincannon",
+          "Daemonbreath spear",
+          "Diabolus heavy stubber"
+        ]
+      ],
+      "weapons": [
+        "Avenger chaincannon",
+        "Daemonbreath spear",
+        "Diabolus heavy stubber",
+        "Armoured feet"
+      ]
+    },
+    "source": {
+      "models": [
+        "1× War Dog Brigand"
+      ],
+      "leads": null
+    },
+    "key": "8cf5ee3144adb113"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "ability-tag",
+    "where": "woof-woof · War Dog Executioner · Snarling Rivalry",
+    "judgement": {
+      "tag": "Upgrade"
+    },
+    "source": {
+      "ability": "Snarling Rivalry",
+      "text": "**EXECUTIONER** unit only. This unit’s ranged attacks have **[IGNORES COVER]**."
+    },
+    "key": "d05ff62d736752b1"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "unit-footnote",
+    "where": "woof-woof · War Dog Executioner",
+    "judgement": {
+      "kind": "all",
+      "when": "Target Below Half-strength",
+      "note": "+1 to hit rolls",
+      "from": "Executioner"
+    },
+    "source": {
+      "ability": "Executioner",
+      "text": "Each time this model makes an attack that targets a unit **Below Half-strength**, add 1 to the **Hit roll**. Each time an enemy unit is destroyed as the result of this model’s attacks, before removing the last model in that unit from the battlefield, each other unit from your opponent’s army that is within 3\" of it must take a **Battle-shock test**."
+    },
+    "key": "490ac95f048acd69"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "unit-weapons",
+    "where": "woof-woof · War Dog Executioner",
+    "judgement": {
+      "gear": [
+        [
+          "Armoured feet",
+          "War Dog autocannon",
+          "War Dog autocannon",
+          "Diabolus heavy stubber"
+        ]
+      ],
+      "weapons": [
+        "×2 · War Dog autocannon",
+        "Diabolus heavy stubber",
+        "Armoured feet"
+      ]
+    },
+    "source": {
+      "models": [
+        "1× War Dog Executioner"
+      ],
+      "leads": null
+    },
+    "key": "e560acd173c99147"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "ability-tag",
+    "where": "woof-woof · War Dog Karnivore · Panoply of the Cursed Knights",
+    "judgement": {
+      "tag": "Enhancement"
+    },
+    "source": {
+      "ability": "Panoply of the Cursed Knights",
+      "text": "**WAR DOG** model only. Each time an attack targets the bearer, worsen the Armour Penetration characteristic of that attack by 1."
+    },
+    "key": "ea10b1dad5d39f7e"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "ability-def",
+    "where": "woof-woof · War Dog Karnivore · Panoply of the Cursed Knights",
+    "judgement": {
+      "def": "worsen the AP of each attack that targets it by 1"
+    },
+    "source": {
+      "ability": "Panoply of the Cursed Knights",
+      "text": "**WAR DOG** model only. Each time an attack targets the bearer, worsen the Armour Penetration characteristic of that attack by 1."
+    },
+    "key": "f47f632fd5537c04"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "unit-kwNote",
+    "where": "woof-woof · War Dog Karnivore",
+    "judgement": {
+      "kwNote": "Character comes from Houndpack Lance Character (Houndpack Lance: “When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”)."
+    },
+    "source": {
+      "models": [
+        "1× War Dog Karnivore (Houndpack Lance Character)"
+      ],
+      "stats": [
+        "War Dog Karnivore W14 OC6"
+      ],
+      "weapons": [
+        "Diabolus heavy stubber 3 0 1 RAPID FIRE 3",
+        "Reaper chaintalon 12 -2 1 SUSTAINED HITS 1",
+        "Slaughterclaw 6 -3 D6+2 SUSTAINED HITS 1"
+      ]
+    },
+    "key": "f5b87dc0d359a948"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "unit-weapons",
+    "where": "woof-woof · War Dog Karnivore",
+    "judgement": {
+      "gear": [
+        [
+          "Reaper chaintalon",
+          "Slaughterclaw",
+          "Diabolus heavy stubber"
+        ]
+      ],
+      "weapons": [
+        "Diabolus heavy stubber",
+        "Reaper chaintalon",
+        "Slaughterclaw"
+      ]
+    },
+    "source": {
+      "models": [
+        "1× War Dog Karnivore (Houndpack Lance Character)"
+      ],
+      "leads": null
+    },
+    "key": "88de4d5ed7a4247e"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "unit-weapons",
+    "where": "woof-woof · War Dog Karnivore",
+    "judgement": {
+      "gear": [
+        [
+          "Reaper chaintalon",
+          "Slaughterclaw",
+          "Diabolus heavy stubber"
+        ]
+      ],
+      "weapons": [
+        "Diabolus heavy stubber",
+        "Reaper chaintalon",
+        "Slaughterclaw"
+      ]
+    },
+    "source": {
+      "models": [
+        "1× War Dog Karnivore"
+      ],
+      "leads": null
+    },
+    "key": "45ec4ca45df3a0d6"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "rule-ph",
+    "where": "Houndpack Lance rule · Marked Prey",
+    "judgement": {
+      "ph": [
+        "command"
+      ]
+    },
+    "source": {
+      "rule": "Marked Prey",
+      "text": "At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, each time a **WAR DOG** model from your army makes an attack that targets that enemy unit, if that unit is visible to the attacking model, that attack has the **[SUSTAINED HITS 1]** ability.\nKEYWORDS\nWhile using the Houndpack Lance Detachment, the following rules apply:\n- Your army must include three or more **WAR DOG** units.\n- **WAR DOG** units from your army have the **BATTLELINE** keyword.\n- When mustering your army, select three **WAR DOG** units from your army. Until the end of the battle, those units have the **CHARACTER** keyword.*\n***Designer’s Note:** This means that the selected units can be given Enhancements and one of them can be selected as your **WARLORD**."
+    },
+    "key": "bab6fb141f51dc93"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "rule-turn",
+    "where": "Houndpack Lance rule · Marked Prey",
+    "judgement": {
+      "turn": "your"
+    },
+    "source": {
+      "rule": "Marked Prey",
+      "text": "At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, each time a **WAR DOG** model from your army makes an attack that targets that enemy unit, if that unit is visible to the attacking model, that attack has the **[SUSTAINED HITS 1]** ability.\nKEYWORDS\nWhile using the Houndpack Lance Detachment, the following rules apply:\n- Your army must include three or more **WAR DOG** units.\n- **WAR DOG** units from your army have the **BATTLELINE** keyword.\n- When mustering your army, select three **WAR DOG** units from your army. Until the end of the battle, those units have the **CHARACTER** keyword.*\n***Designer’s Note:** This means that the selected units can be given Enhancements and one of them can be selected as your **WARLORD**."
+    },
+    "key": "d15b0853ba1855fb"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "rule-needs",
+    "where": "Houndpack Lance rule · Marked Prey",
+    "judgement": {
+      "needs": {
+        "all": [
+          "War Dog"
+        ]
+      }
+    },
+    "source": {
+      "rule": "Marked Prey",
+      "text": "At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, each time a **WAR DOG** model from your army makes an attack that targets that enemy unit, if that unit is visible to the attacking model, that attack has the **[SUSTAINED HITS 1]** ability.\nKEYWORDS\nWhile using the Houndpack Lance Detachment, the following rules apply:\n- Your army must include three or more **WAR DOG** units.\n- **WAR DOG** units from your army have the **BATTLELINE** keyword.\n- When mustering your army, select three **WAR DOG** units from your army. Until the end of the battle, those units have the **CHARACTER** keyword.*\n***Designer’s Note:** This means that the selected units can be given Enhancements and one of them can be selected as your **WARLORD**."
+    },
+    "key": "39fd18bc2ca70efb"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "rule-mod",
+    "where": "Houndpack Lance rule · Marked Prey",
+    "judgement": {
+      "mod": {
+        "kind": "all",
+        "lasts": "round",
+        "when": "Target is the unit selected at the start of your Command phase, visible to the attacking model",
+        "note": "[SUSTAINED HITS 1]"
+      }
+    },
+    "source": {
+      "rule": "Marked Prey",
+      "text": "At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, each time a **WAR DOG** model from your army makes an attack that targets that enemy unit, if that unit is visible to the attacking model, that attack has the **[SUSTAINED HITS 1]** ability.\nKEYWORDS\nWhile using the Houndpack Lance Detachment, the following rules apply:\n- Your army must include three or more **WAR DOG** units.\n- **WAR DOG** units from your army have the **BATTLELINE** keyword.\n- When mustering your army, select three **WAR DOG** units from your army. Until the end of the battle, those units have the **CHARACTER** keyword.*\n***Designer’s Note:** This means that the selected units can be given Enhancements and one of them can be selected as your **WARLORD**."
+    },
+    "key": "4bb40a48eab4154a"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-phases",
+    "where": "Houndpack Lance · Vox-howl",
+    "judgement": {
+      "phases": [
+        "shooting",
+        "fight"
+      ]
+    },
+    "source": {
+      "stratagem": "Vox-howl",
+      "text": "WHEN: Start of the Shooting phase or the start of the Fight phase.\nTARGET: One ~~**WAR DOG CHARACTER**~~ unit from your army.\nEFFECT: Each enemy unit within 6\" of your unit must take a **Battle-shock test**. Each friendly **WAR DOG** unit that is within 6\" of your unit and is Battle-shocked must take a **Leadership test**; if that test is passed, that unit is no longer Battle-shocked.\nRESTRICTIONS: You can only use this Stratagem once per turn."
+    },
+    "key": "05f24cbd21cedac7"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-turn",
+    "where": "Houndpack Lance · Vox-howl",
+    "judgement": {
+      "turn": "either"
+    },
+    "source": {
+      "stratagem": "Vox-howl",
+      "text": "WHEN: Start of the Shooting phase or the start of the Fight phase.\nTARGET: One ~~**WAR DOG CHARACTER**~~ unit from your army.\nEFFECT: Each enemy unit within 6\" of your unit must take a **Battle-shock test**. Each friendly **WAR DOG** unit that is within 6\" of your unit and is Battle-shocked must take a **Leadership test**; if that test is passed, that unit is no longer Battle-shocked.\nRESTRICTIONS: You can only use this Stratagem once per turn."
+    },
+    "key": "4a7848e45f344b93"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-needs",
+    "where": "Houndpack Lance · Vox-howl",
+    "judgement": {
+      "needs": {
+        "all": [
+          "War Dog",
+          "Character"
+        ]
+      }
+    },
+    "source": {
+      "stratagem": "Vox-howl",
+      "text": "WHEN: Start of the Shooting phase or the start of the Fight phase.\nTARGET: One ~~**WAR DOG CHARACTER**~~ unit from your army.\nEFFECT: Each enemy unit within 6\" of your unit must take a **Battle-shock test**. Each friendly **WAR DOG** unit that is within 6\" of your unit and is Battle-shocked must take a **Leadership test**; if that test is passed, that unit is no longer Battle-shocked.\nRESTRICTIONS: You can only use this Stratagem once per turn."
+    },
+    "key": "81c7db638c9ca6d3"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-gist",
+    "where": "Houndpack Lance · Vox-howl",
+    "judgement": {
+      "gist": "Each enemy unit within 6\" of your unit takes a Battle-shock test; each Battle-shocked friendly WAR DOG unit within 6\" takes a Leadership test and, if passed, is no longer Battle-shocked (once per turn)."
+    },
+    "source": {
+      "stratagem": "Vox-howl",
+      "text": "WHEN: Start of the Shooting phase or the start of the Fight phase.\nTARGET: One ~~**WAR DOG CHARACTER**~~ unit from your army.\nEFFECT: Each enemy unit within 6\" of your unit must take a **Battle-shock test**. Each friendly **WAR DOG** unit that is within 6\" of your unit and is Battle-shocked must take a **Leadership test**; if that test is passed, that unit is no longer Battle-shocked.\nRESTRICTIONS: You can only use this Stratagem once per turn."
+    },
+    "key": "5f29be0e48bda329"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-phases",
+    "where": "Houndpack Lance · Hungry for Combat",
+    "judgement": {
+      "phases": [
+        "fight"
+      ]
+    },
+    "source": {
+      "stratagem": "Hungry for Combat",
+      "text": "WHEN: Start of the Fight phase.\nTARGET: Two or more **WAR DOG** units from your army within **Engagement Range** of the same enemy unit.\nEFFECT: Select one enemy unit within Engagement Range of those **WAR DOG** units. Until the end of the phase, models in those **WAR DOG** units can only target that enemy unit, but each time a model in one of those **WAR DOG** units makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit."
+    },
+    "key": "64fa0845c84f9517"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-turn",
+    "where": "Houndpack Lance · Hungry for Combat",
+    "judgement": {
+      "turn": "either"
+    },
+    "source": {
+      "stratagem": "Hungry for Combat",
+      "text": "WHEN: Start of the Fight phase.\nTARGET: Two or more **WAR DOG** units from your army within **Engagement Range** of the same enemy unit.\nEFFECT: Select one enemy unit within Engagement Range of those **WAR DOG** units. Until the end of the phase, models in those **WAR DOG** units can only target that enemy unit, but each time a model in one of those **WAR DOG** units makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit."
+    },
+    "key": "cf29a9c8fd4333ff"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-needs",
+    "where": "Houndpack Lance · Hungry for Combat",
+    "judgement": {
+      "needs": {
+        "all": [
+          "War Dog"
+        ]
+      }
+    },
+    "source": {
+      "stratagem": "Hungry for Combat",
+      "text": "WHEN: Start of the Fight phase.\nTARGET: Two or more **WAR DOG** units from your army within **Engagement Range** of the same enemy unit.\nEFFECT: Select one enemy unit within Engagement Range of those **WAR DOG** units. Until the end of the phase, models in those **WAR DOG** units can only target that enemy unit, but each time a model in one of those **WAR DOG** units makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit."
+    },
+    "key": "1d25652e34de8562"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-mod",
+    "where": "Houndpack Lance · Hungry for Combat",
+    "judgement": {
+      "mod": {
+        "kind": "melee",
+        "when": "Fight phase, two or more WAR DOG units within Engagement Range of the target (they can only target it)",
+        "note": "a Critical Hit on an unmodified hit roll of 5+",
+        "calc": {
+          "critHit": 5
+        }
+      }
+    },
+    "source": {
+      "stratagem": "Hungry for Combat",
+      "text": "WHEN: Start of the Fight phase.\nTARGET: Two or more **WAR DOG** units from your army within **Engagement Range** of the same enemy unit.\nEFFECT: Select one enemy unit within Engagement Range of those **WAR DOG** units. Until the end of the phase, models in those **WAR DOG** units can only target that enemy unit, but each time a model in one of those **WAR DOG** units makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit."
+    },
+    "key": "8a04304e5afbe2e7"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-gist",
+    "where": "Houndpack Lance · Hungry for Combat",
+    "judgement": {
+      "gist": "Until the end of the phase, your WAR DOG units can only target one enemy unit they are all within Engagement Range of, but their attacks score a Critical Hit on an unmodified hit roll of 5+."
+    },
+    "source": {
+      "stratagem": "Hungry for Combat",
+      "text": "WHEN: Start of the Fight phase.\nTARGET: Two or more **WAR DOG** units from your army within **Engagement Range** of the same enemy unit.\nEFFECT: Select one enemy unit within Engagement Range of those **WAR DOG** units. Until the end of the phase, models in those **WAR DOG** units can only target that enemy unit, but each time a model in one of those **WAR DOG** units makes an attack, an unmodified **Hit roll** of 5+ scores a Critical Hit."
+    },
+    "key": "bdb486099de3f9f1"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-phases",
+    "where": "Houndpack Lance · Cunning Hunter",
+    "judgement": {
+      "phases": [
+        "movement"
+      ]
+    },
+    "source": {
+      "stratagem": "Cunning Hunter",
+      "text": "WHEN: Your Movement phase, just after a **WAR DOG** unit from your army Falls Back.\nTARGET: That **WAR DOG** unit.\nEFFECT: Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back."
+    },
+    "key": "0d3ab4ce31d52b6f"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-turn",
+    "where": "Houndpack Lance · Cunning Hunter",
+    "judgement": {
+      "turn": "your"
+    },
+    "source": {
+      "stratagem": "Cunning Hunter",
+      "text": "WHEN: Your Movement phase, just after a **WAR DOG** unit from your army Falls Back.\nTARGET: That **WAR DOG** unit.\nEFFECT: Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back."
+    },
+    "key": "394a9ad28bbec937"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-needs",
+    "where": "Houndpack Lance · Cunning Hunter",
+    "judgement": {
+      "needs": {
+        "all": [
+          "War Dog"
+        ]
+      }
+    },
+    "source": {
+      "stratagem": "Cunning Hunter",
+      "text": "WHEN: Your Movement phase, just after a **WAR DOG** unit from your army Falls Back.\nTARGET: That **WAR DOG** unit.\nEFFECT: Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back."
+    },
+    "key": "65146711677992ba"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-gist",
+    "where": "Houndpack Lance · Cunning Hunter",
+    "judgement": {
+      "gist": "Until the end of the turn, your unit can shoot and declare a charge in a turn in which it Fell Back."
+    },
+    "source": {
+      "stratagem": "Cunning Hunter",
+      "text": "WHEN: Your Movement phase, just after a **WAR DOG** unit from your army Falls Back.\nTARGET: That **WAR DOG** unit.\nEFFECT: Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back."
+    },
+    "key": "4651641540c3e152"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-phases",
+    "where": "Houndpack Lance · Animalistic Rage",
+    "judgement": {
+      "phases": [
+        "shooting",
+        "fight"
+      ]
+    },
+    "source": {
+      "stratagem": "Animalistic Rage",
+      "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after a **WAR DOG** unit from your army that has not been **selected to attack** this phase is **destroyed**.\nTARGET: That **WAR DOG** unit. You can use this **Stratagem** on that unit even though it was just destroyed.\nEFFECT: Before resolving your unit’s **Deadly Demise** ability, it can either shoot or fight. When doing so, it must target only the enemy unit that just destroyed it, and can only do so if that enemy unit is an eligible target. After it has done so and after any **Consolidation moves** have been made, resolve your unit’s **Deadly Demise** ability as normal."
+    },
+    "key": "dbe829747230249f"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-turn",
+    "where": "Houndpack Lance · Animalistic Rage",
+    "judgement": {
+      "turn": "either"
+    },
+    "source": {
+      "stratagem": "Animalistic Rage",
+      "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after a **WAR DOG** unit from your army that has not been **selected to attack** this phase is **destroyed**.\nTARGET: That **WAR DOG** unit. You can use this **Stratagem** on that unit even though it was just destroyed.\nEFFECT: Before resolving your unit’s **Deadly Demise** ability, it can either shoot or fight. When doing so, it must target only the enemy unit that just destroyed it, and can only do so if that enemy unit is an eligible target. After it has done so and after any **Consolidation moves** have been made, resolve your unit’s **Deadly Demise** ability as normal."
+    },
+    "key": "b49e8ea0a6fb6dfd"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-turns",
+    "where": "Houndpack Lance · Animalistic Rage",
+    "judgement": {
+      "turns": {
+        "shooting": "opp"
+      }
+    },
+    "source": {
+      "stratagem": "Animalistic Rage",
+      "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after a **WAR DOG** unit from your army that has not been **selected to attack** this phase is **destroyed**.\nTARGET: That **WAR DOG** unit. You can use this **Stratagem** on that unit even though it was just destroyed.\nEFFECT: Before resolving your unit’s **Deadly Demise** ability, it can either shoot or fight. When doing so, it must target only the enemy unit that just destroyed it, and can only do so if that enemy unit is an eligible target. After it has done so and after any **Consolidation moves** have been made, resolve your unit’s **Deadly Demise** ability as normal."
+    },
+    "key": "524baec0e3e4a612"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-needs",
+    "where": "Houndpack Lance · Animalistic Rage",
+    "judgement": {
+      "needs": {
+        "all": [
+          "War Dog"
+        ]
+      }
+    },
+    "source": {
+      "stratagem": "Animalistic Rage",
+      "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after a **WAR DOG** unit from your army that has not been **selected to attack** this phase is **destroyed**.\nTARGET: That **WAR DOG** unit. You can use this **Stratagem** on that unit even though it was just destroyed.\nEFFECT: Before resolving your unit’s **Deadly Demise** ability, it can either shoot or fight. When doing so, it must target only the enemy unit that just destroyed it, and can only do so if that enemy unit is an eligible target. After it has done so and after any **Consolidation moves** have been made, resolve your unit’s **Deadly Demise** ability as normal."
+    },
+    "key": "2916ae5057a4184a"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-gist",
+    "where": "Houndpack Lance · Animalistic Rage",
+    "judgement": {
+      "gist": "Your WAR DOG unit just destroyed before it attacked this phase: before its Deadly Demise, it can shoot or fight, targeting only the enemy unit that destroyed it."
+    },
+    "source": {
+      "stratagem": "Animalistic Rage",
+      "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after a **WAR DOG** unit from your army that has not been **selected to attack** this phase is **destroyed**.\nTARGET: That **WAR DOG** unit. You can use this **Stratagem** on that unit even though it was just destroyed.\nEFFECT: Before resolving your unit’s **Deadly Demise** ability, it can either shoot or fight. When doing so, it must target only the enemy unit that just destroyed it, and can only do so if that enemy unit is an eligible target. After it has done so and after any **Consolidation moves** have been made, resolve your unit’s **Deadly Demise** ability as normal."
+    },
+    "key": "fe27859127f5209f"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-phases",
+    "where": "Houndpack Lance · Harrying Hounds",
+    "judgement": {
+      "phases": [
+        "movement"
+      ]
+    },
+    "source": {
+      "stratagem": "Harrying Hounds",
+      "text": "WHEN: Your opponent’s Movement phase, just after an enemy unit ends a **Normal**, **Advance** or **Fall Back move**.\nTARGET: One **WAR DOG** unit from your army that is within 8\" of that enemy unit.\nEFFECT: Your unit can make a **Normal move** of up to 6\"."
+    },
+    "key": "587b4f4a94f9d8ca"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-turn",
+    "where": "Houndpack Lance · Harrying Hounds",
+    "judgement": {
+      "turn": "opp"
+    },
+    "source": {
+      "stratagem": "Harrying Hounds",
+      "text": "WHEN: Your opponent’s Movement phase, just after an enemy unit ends a **Normal**, **Advance** or **Fall Back move**.\nTARGET: One **WAR DOG** unit from your army that is within 8\" of that enemy unit.\nEFFECT: Your unit can make a **Normal move** of up to 6\"."
+    },
+    "key": "dc22d6dced42b74f"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-needs",
+    "where": "Houndpack Lance · Harrying Hounds",
+    "judgement": {
+      "needs": {
+        "all": [
+          "War Dog"
+        ]
+      }
+    },
+    "source": {
+      "stratagem": "Harrying Hounds",
+      "text": "WHEN: Your opponent’s Movement phase, just after an enemy unit ends a **Normal**, **Advance** or **Fall Back move**.\nTARGET: One **WAR DOG** unit from your army that is within 8\" of that enemy unit.\nEFFECT: Your unit can make a **Normal move** of up to 6\"."
+    },
+    "key": "040b27634dda3565"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-gist",
+    "where": "Houndpack Lance · Harrying Hounds",
+    "judgement": {
+      "gist": "An enemy unit just ended a Normal, Advance or Fall Back move within 8\" of your unit: your unit can make a Normal move of up to 6\"."
+    },
+    "source": {
+      "stratagem": "Harrying Hounds",
+      "text": "WHEN: Your opponent’s Movement phase, just after an enemy unit ends a **Normal**, **Advance** or **Fall Back move**.\nTARGET: One **WAR DOG** unit from your army that is within 8\" of that enemy unit.\nEFFECT: Your unit can make a **Normal move** of up to 6\"."
+    },
+    "key": "cddcf47f50871c03"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-phases",
+    "where": "Houndpack Lance · Encircling Pack",
+    "judgement": {
+      "phases": [
+        "fight"
+      ]
+    },
+    "source": {
+      "stratagem": "Encircling Pack",
+      "text": "WHEN: End of your opponent’s Fight phase.\nTARGET: One **WAR DOG** unit from your army that is wholly within 12\" of one or more battlefield edges and not within **Engagement Range** of one or more enemy units.\nEFFECT: Remove your unit from the battlefield and place it into **Strategic Reserves**."
+    },
+    "key": "06229b9b84965c12"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-turn",
+    "where": "Houndpack Lance · Encircling Pack",
+    "judgement": {
+      "turn": "opp"
+    },
+    "source": {
+      "stratagem": "Encircling Pack",
+      "text": "WHEN: End of your opponent’s Fight phase.\nTARGET: One **WAR DOG** unit from your army that is wholly within 12\" of one or more battlefield edges and not within **Engagement Range** of one or more enemy units.\nEFFECT: Remove your unit from the battlefield and place it into **Strategic Reserves**."
+    },
+    "key": "0ad9c08b7fce02a3"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-needs",
+    "where": "Houndpack Lance · Encircling Pack",
+    "judgement": {
+      "needs": {
+        "all": [
+          "War Dog"
+        ]
+      }
+    },
+    "source": {
+      "stratagem": "Encircling Pack",
+      "text": "WHEN: End of your opponent’s Fight phase.\nTARGET: One **WAR DOG** unit from your army that is wholly within 12\" of one or more battlefield edges and not within **Engagement Range** of one or more enemy units.\nEFFECT: Remove your unit from the battlefield and place it into **Strategic Reserves**."
+    },
+    "key": "c71c010b880609a4"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-gist",
+    "where": "Houndpack Lance · Encircling Pack",
+    "judgement": {
+      "gist": "Your unit wholly within 12\" of a battlefield edge and not within Engagement Range of an enemy unit: remove it from the battlefield and place it into Strategic Reserves."
+    },
+    "source": {
+      "stratagem": "Encircling Pack",
+      "text": "WHEN: End of your opponent’s Fight phase.\nTARGET: One **WAR DOG** unit from your army that is wholly within 12\" of one or more battlefield edges and not within **Engagement Range** of one or more enemy units.\nEFFECT: Remove your unit from the battlefield and place it into **Strategic Reserves**."
+    },
+    "key": "779abb4c642ccc74"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "rule-ph",
+    "where": "Hunting Warpack rule · Scenting Fear",
+    "judgement": {
+      "ph": [
+        "shooting"
+      ]
+    },
+    "source": {
+      "rule": "Scenting Fear",
+      "text": "(Once per battle round, per army) In your Shooting phase, you can select one **visible** enemy unit within 12\" of a friendly **WAR DOG** unit. That enemy unit has +6\" **detection range**.\nThis detachment has the **WAR DOGS** tag and cannot be taken with another **WAR DOGS** detachment."
+    },
+    "key": "065a80ad15a723e7"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "rule-turn",
+    "where": "Hunting Warpack rule · Scenting Fear",
+    "judgement": {
+      "turn": "your"
+    },
+    "source": {
+      "rule": "Scenting Fear",
+      "text": "(Once per battle round, per army) In your Shooting phase, you can select one **visible** enemy unit within 12\" of a friendly **WAR DOG** unit. That enemy unit has +6\" **detection range**.\nThis detachment has the **WAR DOGS** tag and cannot be taken with another **WAR DOGS** detachment."
+    },
+    "key": "c5f8cf3ad171957b"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "rule-needs",
+    "where": "Hunting Warpack rule · Scenting Fear",
+    "judgement": {
+      "needs": {
+        "all": [
+          "War Dog"
+        ]
+      }
+    },
+    "source": {
+      "rule": "Scenting Fear",
+      "text": "(Once per battle round, per army) In your Shooting phase, you can select one **visible** enemy unit within 12\" of a friendly **WAR DOG** unit. That enemy unit has +6\" **detection range**.\nThis detachment has the **WAR DOGS** tag and cannot be taken with another **WAR DOGS** detachment."
+    },
+    "key": "df522ec971752b32"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "rule-tag",
+    "where": "Hunting Warpack rule · Scenting Fear",
+    "judgement": {
+      "tag": "Once per battle round, per army"
+    },
+    "source": {
+      "rule": "Scenting Fear",
+      "text": "(Once per battle round, per army) In your Shooting phase, you can select one **visible** enemy unit within 12\" of a friendly **WAR DOG** unit. That enemy unit has +6\" **detection range**.\nThis detachment has the **WAR DOGS** tag and cannot be taken with another **WAR DOGS** detachment."
+    },
+    "key": "b49011766af92534"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-phases",
+    "where": "Hunting Warpack · Insensate Bloodthirst",
+    "judgement": {
+      "phases": [
+        "fight"
+      ]
+    },
+    "source": {
+      "stratagem": "Insensate Bloodthirst",
+      "text": "WHEN: Fight phase, when an enemy unit targets a friendly **WAR DOG** unit.\nTARGET: That **WAR DOG** unit.\nEFFECT: Your unit has **Feel No Pain 5+**."
+    },
+    "key": "58c49bea694c5ec9"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-turn",
+    "where": "Hunting Warpack · Insensate Bloodthirst",
+    "judgement": {
+      "turn": "either"
+    },
+    "source": {
+      "stratagem": "Insensate Bloodthirst",
+      "text": "WHEN: Fight phase, when an enemy unit targets a friendly **WAR DOG** unit.\nTARGET: That **WAR DOG** unit.\nEFFECT: Your unit has **Feel No Pain 5+**."
+    },
+    "key": "dc210ef8cb21a370"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-needs",
+    "where": "Hunting Warpack · Insensate Bloodthirst",
+    "judgement": {
+      "needs": {
+        "all": [
+          "War Dog"
+        ]
+      }
+    },
+    "source": {
+      "stratagem": "Insensate Bloodthirst",
+      "text": "WHEN: Fight phase, when an enemy unit targets a friendly **WAR DOG** unit.\nTARGET: That **WAR DOG** unit.\nEFFECT: Your unit has **Feel No Pain 5+**."
+    },
+    "key": "89abbff4dbb5107e"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-def",
+    "where": "Hunting Warpack · Insensate Bloodthirst",
+    "judgement": {
+      "def": "Fight phase: Feel No Pain 5+"
+    },
+    "source": {
+      "stratagem": "Insensate Bloodthirst",
+      "text": "WHEN: Fight phase, when an enemy unit targets a friendly **WAR DOG** unit.\nTARGET: That **WAR DOG** unit.\nEFFECT: Your unit has **Feel No Pain 5+**."
+    },
+    "key": "1bdf99c06d4fec6c"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-gist",
+    "where": "Hunting Warpack · Insensate Bloodthirst",
+    "judgement": {
+      "gist": "An enemy unit targets your unit in the Fight phase: your unit has Feel No Pain 5+."
+    },
+    "source": {
+      "stratagem": "Insensate Bloodthirst",
+      "text": "WHEN: Fight phase, when an enemy unit targets a friendly **WAR DOG** unit.\nTARGET: That **WAR DOG** unit.\nEFFECT: Your unit has **Feel No Pain 5+**."
+    },
+    "key": "9f8af59f723d522c"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-phases",
+    "where": "Hunting Warpack · Leash of the Masters",
+    "judgement": {
+      "phases": [
+        "shooting"
+      ]
+    },
+    "source": {
+      "stratagem": "Leash of the Masters",
+      "text": "WHEN: Your Shooting phase, when a friendly **WAR DOG** unit has shot.\nTARGET: That **WAR DOG** unit.\nEFFECT: Those attacks do not prevent your unit from being **eligible to start an action**."
+    },
+    "key": "afa25b759c672600"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-turn",
+    "where": "Hunting Warpack · Leash of the Masters",
+    "judgement": {
+      "turn": "your"
+    },
+    "source": {
+      "stratagem": "Leash of the Masters",
+      "text": "WHEN: Your Shooting phase, when a friendly **WAR DOG** unit has shot.\nTARGET: That **WAR DOG** unit.\nEFFECT: Those attacks do not prevent your unit from being **eligible to start an action**."
+    },
+    "key": "8348ec400f57c2c2"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-needs",
+    "where": "Hunting Warpack · Leash of the Masters",
+    "judgement": {
+      "needs": {
+        "all": [
+          "War Dog"
+        ]
+      }
+    },
+    "source": {
+      "stratagem": "Leash of the Masters",
+      "text": "WHEN: Your Shooting phase, when a friendly **WAR DOG** unit has shot.\nTARGET: That **WAR DOG** unit.\nEFFECT: Those attacks do not prevent your unit from being **eligible to start an action**."
+    },
+    "key": "e96f6bcecb9fe47e"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-gist",
+    "where": "Hunting Warpack · Leash of the Masters",
+    "judgement": {
+      "gist": "Your unit has shot: those attacks do not prevent it from being eligible to start an action."
+    },
+    "source": {
+      "stratagem": "Leash of the Masters",
+      "text": "WHEN: Your Shooting phase, when a friendly **WAR DOG** unit has shot.\nTARGET: That **WAR DOG** unit.\nEFFECT: Those attacks do not prevent your unit from being **eligible to start an action**."
+    },
+    "key": "107c732c464202b5"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-phases",
+    "where": "Hunting Warpack · Stalking Focus",
+    "judgement": {
+      "phases": [
+        "shooting"
+      ]
+    },
+    "source": {
+      "stratagem": "Stalking Focus",
+      "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **WAR DOG** unit within range of an **objective**.\nTARGET: That **WAR DOG** unit.\nEFFECT: Ranged attacks that target your unit have -1 **AP** until that enemy unit has attacked."
+    },
+    "key": "fe51f646ccf1f890"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-turn",
+    "where": "Hunting Warpack · Stalking Focus",
+    "judgement": {
+      "turn": "opp"
+    },
+    "source": {
+      "stratagem": "Stalking Focus",
+      "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **WAR DOG** unit within range of an **objective**.\nTARGET: That **WAR DOG** unit.\nEFFECT: Ranged attacks that target your unit have -1 **AP** until that enemy unit has attacked."
+    },
+    "key": "ab4e5b5298b04c77"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-needs",
+    "where": "Hunting Warpack · Stalking Focus",
+    "judgement": {
+      "needs": {
+        "all": [
+          "War Dog"
+        ]
+      }
+    },
+    "source": {
+      "stratagem": "Stalking Focus",
+      "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **WAR DOG** unit within range of an **objective**.\nTARGET: That **WAR DOG** unit.\nEFFECT: Ranged attacks that target your unit have -1 **AP** until that enemy unit has attacked."
+    },
+    "key": "5f307d7e4188fff4"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-def",
+    "where": "Hunting Warpack · Stalking Focus",
+    "judgement": {
+      "def": "their Shooting phase, within range of an objective: -1 AP to ranged attacks that target it (until that enemy unit has attacked)"
+    },
+    "source": {
+      "stratagem": "Stalking Focus",
+      "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **WAR DOG** unit within range of an **objective**.\nTARGET: That **WAR DOG** unit.\nEFFECT: Ranged attacks that target your unit have -1 **AP** until that enemy unit has attacked."
+    },
+    "key": "07954ef6d9d07e64"
+  },
+  {
+    "army": "woof-woof",
+    "kind": "strat-gist",
+    "where": "Hunting Warpack · Stalking Focus",
+    "judgement": {
+      "gist": "An enemy unit targets your unit within range of an objective: ranged attacks that target your unit have -1 AP until that enemy unit has attacked."
+    },
+    "source": {
+      "stratagem": "Stalking Focus",
+      "text": "WHEN: Your opponent’s Shooting phase, when an enemy unit targets a friendly **WAR DOG** unit within range of an **objective**.\nTARGET: That **WAR DOG** unit.\nEFFECT: Ranged attacks that target your unit have -1 **AP** until that enemy unit has attacked."
+    },
+    "key": "5e998a8cf2e0d5a2"
+  }
+]

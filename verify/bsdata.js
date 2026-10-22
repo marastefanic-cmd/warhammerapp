@@ -192,9 +192,12 @@ function node(obj, link) {
 }
 function kids(n) {
   const out = [];
-  for (const e of n.obj.selectionEntries || []) out.push(node(e));
-  for (const g of n.obj.selectionEntryGroups || []) out.push(node(g));
-  for (const l of n.obj.entryLinks || []) {
+  // the entry's children, and those a link adds inside itself (the Chaos Knights catalogue's "Show Nurgle Daemons" in its
+  // Show/Hide Options link, the War Dog Executioner's Snarling Rivalry in its Enhancements link)
+  const own = (k) => [...(n.obj[k] || []), ...((n.link && n.link[k]) || [])];
+  for (const e of own('selectionEntries')) out.push(node(e));
+  for (const g of own('selectionEntryGroups')) out.push(node(g));
+  for (const l of own('entryLinks')) {
     if (SKIP_LINK.test(l.name || '')) continue;
     const t = SRC.get(l.targetId); if (!t || SKIP_LINK.test(t.name || '')) continue;
     out.push(node(t, l));
@@ -464,7 +467,7 @@ function applyAcross(sel) {            // modifiers with "affects", and category
   for (const { m, outer } of flatMods(sel.node)) {
     const isCat = m.field === 'category'; const isInfo = m.field === 'add-info';
     if (!m.affects && !isCat && !isInfo) continue;
-    if (!m.affects && isCat) { const t = timesActive(m, outer, sel); if (t) applyCat(sel, m); continue; }
+    if (!m.affects && isCat) { const t = timesActive(m, outer, sel); if (t) for (const s of scopeSels(m.scope || 'self', sel)) applyCat(s, m); continue; }
     const t = timesActive(m, outer, sel); if (!t) continue;
     const base = scopeSels(m.scope || 'self', sel)[0]; if (!base) continue;
     const { sels, profType } = m.affects ? resolveAffects(m.affects, base) : { sels: [sel], profType: null };
@@ -472,6 +475,11 @@ function applyAcross(sel) {            // modifiers with "affects", and category
     if (isInfo) { const tg = m.affects === 'group' ? groupOf(base) : sels; for (const s of tg) addInfo(s, m.value, sel); continue; }
     if (profType) for (const s of sels) for (const p of s.profiles) if (p.typeName === profType) applyTracked(p, m, t, [nn(sel.node.name), ...condNames(m, outer)]);
   }
+}
+// a selection's own category changes, on the selection its scope names (Houndpack Lance Character adds CHARACTER to its parent,
+// the War Dog): made before the hidden flags, which can depend on them (Final Howl and Warlord need a CHARACTER War Dog)
+function applyOwnCats(sel) {
+  for (const { m, outer } of flatMods(sel.node)) if (m.field === 'category' && !m.affects && timesActive(m, outer, sel)) for (const s of scopeSels(m.scope || 'self', sel)) applyCat(s, m);
 }
 function applyCat(s, m) {
   if (m.type === 'set-primary') s.primary = m.value;
@@ -596,6 +604,13 @@ function assignGear(items) {            // items: [{ name, cands: [path] }]
   return best ? best.pick : items.map(() => null);
 }
 
+// the list's New Recruit Show/Hide Options, "X are visible" -> X (verify/sources/nr/<army>.txt)
+function showOptions(armyId) {
+  const f = path.join(HERE, 'sources', 'nr', armyId + '.txt');
+  if (!fs.existsSync(f)) return [];
+  const v = require('./nr').parseNR(f, []).bullets['Show/Hide Options'];
+  return typeof v === 'string' ? v.split(/,\s*/).map((x) => x.replace(/\s+are visible$/, '').trim()).filter(Boolean) : [];
+}
 function buildRoster(army, MAP, issues) {
   ORDER = 0;
   const catName = MAP.catalogues[army.faction];
@@ -622,6 +637,15 @@ function buildRoster(army, MAP, issues) {
     const p = detRoot && searchBelow(detRoot.n, (k) => k.type === 'upgrade' && nn(k.name) === nn(name))[0];
     if (p) addChain(detTop, p, 1);
     else issues.push({ unit: '(army)', field: 'detachment', app: name, source: '', where: `${cat.fname} › Detachment` });
+  }
+  // the Show/Hide Options the PDF prints ("Nurgle Daemons are visible"): BSData hides an allied unit (Nurglings) unless the
+  // roster has its "Show Nurgle Daemons" selection
+  const shown = showOptions(army.id);
+  const shRoot = shown.length ? rootNode(cat, 'Show/Hide Options')[0] : null;
+  if (shRoot) {
+    const top = new Sel(shRoot.n, 1, force);
+    const opts = kids(shRoot.n);
+    for (const o of shown) { const k = opts.find((x) => x.type === 'upgrade' && nn(x.name) === nn('Show ' + o)); if (k) addChain(top, [k], 1); }
   }
   // units, every copy
   const built = [];
@@ -1100,6 +1124,7 @@ function main() {
     if (!R) continue;
     // evaluate the roster: hidden flags, profiles/rules, cross-selection modifiers
     const allSels = R.roster.desc(false).filter((s) => s.node);
+    for (const s of allSels) applyOwnCats(s);
     for (const s of allSels) s.hidden = selHidden(s);
     for (const s of allSels) collectInfo(s);
     for (const s of allSels) applyAcross(s);

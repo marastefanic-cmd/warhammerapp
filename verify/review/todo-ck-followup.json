@@ -1,0 +1,31 @@
+[
+ {
+  "army": "woof-woof",
+  "kind": "rule-needs",
+  "where": "chaos-knights army rule · Super-heavy Walker",
+  "judgement": {
+   "needs": {
+    "rule": [
+     "Super-heavy Walker"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Super-heavy Walker",
+   "text": "Each time a model with this ability makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and sections of **terrain features** that are 4\" or less in height. When doing so:\n- It can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them.\n- It can also move through sections of terrain features that are more than 4\" in height, but if it does, after it has moved, roll one D6: on a 1, that model is **Battle-shocked**."
+  },
+  "key": "8131e990fd5798e5"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "matches",
+  "judgement": {
+   "code": "function matches(n, u){\n  if(!n) return true;\n  if(n.all && !n.all.every(k => hasKw(u, k))) return false;\n  if(n.any && !n.any.some(k => hasKw(u, k))) return false;\n  if(n.none && n.none.some(k => hasKw(u, k))) return false;\n  if(n.unless && matches(n.unless, u)) return false;\n  // rule: the unit's Rules line names one of these rules (a Chaos Knight's Super-Heavy Walker, or a Preyslayer's Mantle bearer's)\n  if(n.rule && !n.rule.some(r => (u.rules || []).some(x => x.toLowerCase() === r.toLowerCase()))) return false;\n  if(n.attached && !u.leads) return false;   // \"a friendly attached … unit\": one with a leader or support character\n  return true;\n}"
+  },
+  "source": {
+   "implements": "stratagem/rule eligibility by keywords (all / any / none)"
+  },
+  "key": "ff76ff1551e4121b"
+ }
+]

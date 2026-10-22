@@ -266,7 +266,8 @@ function parseArmy(lines) {
   // roster: NAME | ROLE | PTS | OPTIONS, cells centred on their row
   const hdr = lines[i]; i++;
   const optCol = hdr.indexOf('OPTIONS');
-  const roleRe = new RegExp('^(.*?)\\s+(' + ROLES.map(escRe).join('|') + ')\\s+(\\d+)\\b\\s*(.*)$');
+  // an allied unit's role is its allied faction ("(3) Nurglings   Allies: Legiones Daemonica 45")
+  const roleRe = new RegExp('^(.*?)\\s+(' + ROLES.map(escRe).join('|') + '|Allies: [A-Z][^\\d]*?)\\s+(\\d+)\\b\\s*(.*)$');
   const rows = [], Ls = [], Rs = [];
   for (; i < lines.length; i++) {
     const line = lines[i]; if (!line.trim()) continue;
@@ -775,7 +776,8 @@ function compareUnit(nu, au, enhNames, { fail, chk, cmp, armyRuleNames = new Set
   });
   const nrModels = opts.map(o => o.line);
   cmp('models', 'models', (au.models || []).map(nm), nrModels);
-  const nrEnh = opts.map(o => o.enhancement).filter(Boolean);
+  // (an UPGRADE enhancement New Recruit prints on the models line, Snarling Rivalry, is the app's upgrade)
+  const nrEnh = opts.map(o => o.enhancement).filter(Boolean).filter(e => !(au.upgrade && nm(e) === nm(au.upgrade)));
   cmp('enhancement', 'enhancement', au.enhancement ? nm(au.enhancement) : null, nrEnh.length ? nrEnh.join(', ') : null);
   cmp('warlord', 'warlord', !!au.warlord, opts.some(o => o.warlord));
   const nrLeads = uniq(opts.map(o => o.leads).filter(Boolean).map(nm));
@@ -896,7 +898,11 @@ function compareUnit(nu, au, enhNames, { fail, chk, cmp, armyRuleNames = new Set
   const starred = cats.filter(c => /\*$/.test(c)).map(c => nm(c.replace(/\*$/, '')));
   cmp('kw', 'kw', (au.kw || []).map(nm).sort(), uniq(cats.map(c => nm(c.replace(/\*$/, '')))).sort());
   for (const s of starred) { chk('kw'); if (!au.kwNote || !nm(au.kwNote).includes(s)) fail('kwNote', au.kwNote || null, s + '* (from combined unit)'); }
-  if (!starred.length && au.kwNote) { chk('kw'); fail('kwNote', au.kwNote, null); }
+  // a keyword a selection on the unit's own models line gives it (“Character comes from Houndpack Lance Character (…)”: the
+  // selection is printed in the Options column, the keyword in the Categories): no New Recruit star
+  const fromSel = /^(.+?) comes? from (.+?) \(/.exec(au.kwNote || '');
+  const selOk = fromSel && fromSel[1].split(', ').every(k => (au.kw || []).map(nm).includes(nm(k))) && (au.models || []).some(l => nm(l).includes('(' + nm(fromSel[2]) + ')') || nm(l).includes(nm(fromSel[2]) + ',') || nm(l).includes(', ' + nm(fromSel[2])));
+  if (!starred.length && au.kwNote && !selOk) { chk('kw'); fail('kwNote', au.kwNote, null); }
 
   // rules
   const nrRules = uniq(nu.rules.map(nm));

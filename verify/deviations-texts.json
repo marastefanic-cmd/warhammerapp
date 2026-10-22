@@ -70,5 +70,23 @@
   "source": "source line missing from the app: PACT POINTSBONUS",
   "reason": "Table heading, not rules text. Wahapedia prints the Pact point bonuses as a table with the column headings \"PACT POINTS\" and \"BONUS\" (its text extraction glues them into one line); the app writes the same table as rows labelled 1+, 3+, 5+ and 7+ (each row is checked word for word), so the heading line has no place in the rule text.",
   "evidence": "verify/.cache/waha/emperors-children.txt line 288, Coterie of the Conceited, Pledges to the Dark Prince: \"**PACT POINTSBONUS\"; the four rows follow (\"**1+**Each time a model in this unit makes an attack, re-roll a **Hit roll** of 1.\" …)."
+ },
+ {
+  "army": "chaos-knights",
+  "unit": "detachment:houndpack-lance/enhancement:Panoply of the Cursed Knight",
+  "field": "missing",
+  "app": "",
+  "source": "Panoply of the Cursed Knight is in Wahapedia chaos-knights § Houndpack Lance 2DP but not in the app",
+  "reason": "Spelling of the name. Wahapedia prints the Houndpack Lance enhancement as “Panoply of the Cursed Knight”; New Recruit and BSData (the list the owner exported) name it “Panoply of the Cursed Knights”. The app uses New Recruit’s name, so the enhancement on the War Dog Karnivore matches the PDF; its rules text is Wahapedia’s word for word (checked).",
+  "evidence": "verify/.cache/waha/chaos-knights.txt line 276: \"- Panoply of the Cursed Knight 15 pts\"; verify/sources/nr/woof-woof.txt p6: \"Houndpack Lance Character, Panoply of the Cursed Knights\"; BSData verify/.cache/bsdata/Chaos - Chaos Knights Library.json (sharedSelectionEntryGroups Enhancements): \"name\": \"Panoply of the Cursed Knights\""
+ },
+ {
+  "army": "chaos-knights",
+  "unit": "detachment:houndpack-lance/enhancement:Panoply of the Cursed Knights",
+  "field": "name",
+  "app": "Panoply of the Cursed Knights",
+  "source": "not an enhancement of Houndpack Lance in Wahapedia chaos-knights § Houndpack Lance 2DP",
+  "reason": "Spelling of the name. Wahapedia prints the Houndpack Lance enhancement as “Panoply of the Cursed Knight”; New Recruit and BSData (the list the owner exported) name it “Panoply of the Cursed Knights”. The app uses New Recruit’s name, so the enhancement on the War Dog Karnivore matches the PDF; its rules text is Wahapedia’s word for word (checked).",
+  "evidence": "verify/.cache/waha/chaos-knights.txt line 276: \"- Panoply of the Cursed Knight 15 pts\"; verify/sources/nr/woof-woof.txt p6: \"Houndpack Lance Character, Panoply of the Cursed Knights\"; BSData verify/.cache/bsdata/Chaos - Chaos Knights Library.json (sharedSelectionEntryGroups Enhancements): \"name\": \"Panoply of the Cursed Knights\""
  }
 ]
