@@ -170,7 +170,15 @@ function partitionRows(lines, who) {
     if (b < N && !endsSentence(lastR)) c += 0.6;
     // gaps inside a name block: lines of a name are adjacent, or alternate with description lines
     for (let x = 1; x < L.length; x++) if (L[x] - L[x - 1] > 2) c += 2;
-    for (let x = 1; x < R.length; x++) if (R[x] - R[x - 1] > 2) c += 2;
+    // (a gap filled by this row's own name lines, after a description line that does not end a sentence, is not one:
+    // Lucius the Eternal's "A Challenge / [description …unit,] / Worthy of Skill - / Lucius the Eternal / [description]")
+    const nameOnly = new Set(), rText = new Map();
+    for (let t = a; t < b; t++) { if (lines[t].L && !lines[t].R) nameOnly.add(lines[t].i); if (lines[t].R) rText.set(lines[t].i, lines[t].R); }
+    for (let x = 1; x < R.length; x++) if (R[x] - R[x - 1] > 2) {
+      let filled = !endsSentence(rText.get(R[x - 1]));
+      for (let k = R[x - 1] + 1; filled && k < R[x]; k++) if (!nameOnly.has(k)) filled = false;
+      if (!filled) c += 2;
+    }
     // ... and a name whose lines run together and also skip a line skips only a line set further in than the
     // description column (a bullet, a centred one-line description); one that skips a line at the column is
     // two names (Enginseer: "Omnissiah's / Blessing", then "Vengeance for the / Omnissiah" after a
