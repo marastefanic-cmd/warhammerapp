@@ -1,9 +1,9 @@
 // written by verify/run.js: the last verification of this app.html + data.js
 window.WH_VERIFIED = {
  "ok": true,
- "build": "21b23e9f36",
- "data": "2026-10-21.5",
- "date": "21 Oct 2026",
+ "build": "59aebfcf0b",
+ "data": "2026-10-22.1",
+ "date": "22 Oct 2026",
  "checks": [
   {
    "label": "Your New Recruit lists:",

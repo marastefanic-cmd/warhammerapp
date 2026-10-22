@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" href="icon-192.png">
 <style>:root{padding-top:env(safe-area-inset-top,0px)}img{max-width:100%}</style>
 <title>Kunnin’ Kodex</title>
-<script>window.WH_BUILD = '21b23e9f36';</script>
+<script>window.WH_BUILD = '59aebfcf0b';</script>
 </head>
 <body>
 <style>
@@ -189,6 +189,13 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .row .rb .t.d{color:var(--muted); background:none; box-shadow:inset 0 0 0 1px var(--line)}
 .army-sub{font-size:13.5px; line-height:1.4; color:var(--muted)}
 .army-sub.peek{color:var(--accent); font-weight:600}
+/* while you look at your opponent's list: whose it is, and one tap back to yours */
+.peekbar{display:flex; width:100%; max-width:720px; margin:0 auto; align-items:center; justify-content:space-between; gap:12px; min-height:36px;
+  padding:6px 16px; border:0; border-top:1px solid var(--line); background:var(--surface2); color:var(--fg2); font:inherit; font-size:13.5px; text-align:left; cursor:pointer}
+.peekbar[hidden]{display:none}
+.peekbar b{color:var(--fg); font-weight:600}
+.peekbar .pb-back{display:inline-flex; align-items:center; gap:4px; color:var(--accent); font:700 13px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; white-space:nowrap}
+.peekbar .pb-back svg{width:14px; height:14px; fill:none; stroke:currentColor}
 .rowpair{display:flex; align-items:stretch}
 .rowpair .row{flex:1; min-width:0}
 .rowpair .chg{flex:none; padding:0 4px 0 14px; border-bottom:1px solid var(--line); font:600 14px var(--f-head); letter-spacing:.02em; color:var(--accent)}
@@ -1075,6 +1082,7 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
 
 <header class="top" id="top">
   <div class="top-in" id="topIn"></div>
+  <button class="peekbar" id="peekbar" data-mine hidden></button>
   <div class="wrap"><div class="subbar" id="subbar" hidden></div></div>
 </header>
 
@@ -1091,9 +1099,9 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="verified.js?v=21b23e9f36"></script>
-<script src="data.js?v=21b23e9f36"></script>
-<script src="calc.js?v=21b23e9f36"></script>
+<script src="verified.js?v=59aebfcf0b"></script>
+<script src="data.js?v=59aebfcf0b"></script>
+<script src="calc.js?v=59aebfcf0b"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -1534,6 +1542,10 @@ function renderTop(){
   else right = '<button class="icon-btn" data-settings aria-label="Settings"><svg aria-hidden="true"><use href="#i-gear"/></svg></button>';
   // a rules question to Claude, from any screen; without a key saved it opens Settings to add one
   if(cur.s !== 'settings') right = '<span class="tbr"><button class="icon-btn" data-ask aria-label="Ask a rules question"><svg aria-hidden="true"><use href="#i-ask"/></svg></button>' + (right === '<span></span>' ? '' : right) + '</span>';
+  // while you look at your opponent's list (not on its home screen, which says so): whose list this is, and back to yours
+  const pa = cur.army && army(), pk = !!pa && cur.s !== 'army' && peeking(pa), pb = $('#peekbar');
+  pb.hidden = !pk;
+  pb.innerHTML = pk ? '<span>Their list: <b>' + esc(pa.name) + '</b></span><span class="pb-back"><svg aria-hidden="true"><use href="#i-back"/></svg>Back to yours</span>' : '';
   $('#topIn').innerHTML = left + '<h1 class="ttl">' + (cur.s === 'home' ? '<span class="brand">' + LOGO + 'Kunnin’ Kodex</span>' : esc(cur.s === 'unit' && army() ? army().name : titleOf(cur))) + '</h1>' + right;
 }
 function setBar(id, html){
