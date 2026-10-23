@@ -1311,7 +1311,8 @@ const allUnitRules = u => u.rules.concat(unitDetRules(u).map(r => r.name).filter
 const unitRules = u => allUnitRules(u).filter(r => !inertRule(r));   // the ones that do something in this list
 // a rule of the unit only one of its models has (data.js partialRules: Canis Rex's Lone Operative is Sir Hekhtur's): that model
 const partialWho = (u, label) => { const p = u.partialRules || {}; if(hasOwn(p, label)) return p[label];
-  const k = ruleKey(label), e = k && Object.entries(p).find(([r]) => ruleKey(r) === k); return e ? e[1] : ''; };
+  // (not another entry of the same Rules line: Trajann's own "Feel No Pain 5+" is not the unit's "Feel No Pain 5+*")
+  const rl = u.rules || [], k = ruleKey(label), e = k && Object.entries(p).find(([r]) => ruleKey(r) === k && !(rl.includes(r) && rl.includes(label))); return e ? e[1] : ''; };
 // "Canis Rex: Sir Hekhtur only" on a line of its own, "Canis Rex (Sir Hekhtur only)" in a list
 const onlyTag = (u, label, inList) => !partialWho(u, label) ? '' : '<span class="from">' + (inList ? ' (' : ': ') + esc(partialWho(u, label)) + ' only' + (inList ? ')' : '') + '</span>';
 // an army rule that needs units this army doesn't have, e.g. Bondsman with no ARMIGER models
@@ -4222,7 +4223,11 @@ function abilityList(abs, u, suffix){
 function defenceItems(u, ph, opts){
   const out = [];
   // a Feel No Pain only one model has (Robotic Bodyguard: the Datasmith, not the robots) is said by that ability's own line
-  for(const r of u.rules){ const m = /^feel no pain (\d\+)/i.exec(r); if(m && !u.abilities.some(ab => ab.def && ab.def.includes('Feel No Pain ' + m[1]))) out.push({ t:'Feel No Pain ' + m[1], a:'rule', v:r }); }
+  // an army rule of the unit's Rules line can say it with its condition (def: Aegis of the Emperor, "Feel No Pain 5+ against mortal
+  // wounds"); New Recruit's starred "Feel No Pain 5+*" is that one, so it is not said again without its condition
+  const fac = factionOf(army()) || {}, armyDefs = (fac.armyRules || []).filter(r => r.def && u.rules.includes(r.name));
+  for(const r of u.rules){ const m = /^feel no pain (\d\+)/i.exec(r); if(m && !u.abilities.some(ab => ab.def && ab.def.includes('Feel No Pain ' + m[1])) && !(/\*$/.test(r) && armyDefs.some(x => x.def.includes('Feel No Pain ' + m[1])))) out.push({ t:'Feel No Pain ' + m[1], a:'rule', v:r, who:partialWho(u, r) || undefined }); }   // (who: one model's, partialRules)
+  for(const r of armyDefs) out.push({ t:r.def, a:'rule', v:r.name });
   for(const r of unitDetRules(u)) if(r.def && !out.some(x => x.t === r.def)) out.push({ t:r.def, a:'rule', v:r.name });   // e.g. Knights of Legend: FNP 6+
   for(const { rule, part } of unitDetParts(u)) if(part.def) out.push({ t:part.def, a:'rule', v:rule.name });   // a part of it for some units (Boon of Blood)
   // (who, name: the model of an attached unit the ability is on, for the datasheet's line)
@@ -4249,7 +4254,7 @@ function defLine(x, u){
   if(x.guard) return esc(x.t) + ' <span class="from">(' + linkTo(x.a, x.v, x.guard.from) + ')</span>';
   if(x.riled){ const ar = alwaysRiled(u); return linkTo(x.a, x.v, 'Riled up') + (ar ? ' (' + ar + ')' : '') + esc(x.t.slice('Riled up'.length)); }
   const who = x.who && u.leads && !(i > 0 && x.who.startsWith(x.t.slice(0, i))) ? esc(x.who) + ' · ' : '';
-  if(who && i < 0) return who + linkTo(x.a, x.v, x.name) + ': ' + esc(x.t);
+  if(who && i < 0) return who + (x.name ? linkTo(x.a, x.v, x.name) + ': ' + esc(x.t) : linkTo(x.a, x.v, x.t));   // (a rule of one model: Trajann's Feel No Pain 5+)
   return who + (i > 0 ? linkTo(x.a, x.v, x.t.slice(0, i)) + esc(x.t.slice(i)) : linkTo(x.a, x.v, x.t));
 }
 const defences = (u, ph) => defenceItems(u, ph).map(x => x.t);

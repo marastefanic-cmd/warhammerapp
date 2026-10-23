@@ -1310,11 +1310,11 @@ const FACTIONS = {
           { kind:'melee', from:'Martial Ka’tah', when:'Dacatarai (start of the Fight phase, a readied unit), vs non-MONSTER/VEHICLE targets', note:'re-roll hit rolls of 1', vs:{ none:['Monster','Vehicle'] } },
           { kind:'melee', from:'Martial Ka’tah', when:'Rendax (Fight phase, a readied unit selected to fight), vs MONSTER/VEHICLE targets', note:'[LETHAL HITS]', vs:{ any:['Monster','Vehicle'] } }
         ] },
-      { name:'Aegis of the Emperor',
+      { name:'Aegis of the Emperor', def:'Feel No Pain 5+ against mortal wounds',
         text:'Friendly **ADEPTUS CUSTODES** units with this ability have Feel No Pain 5+ against mortal wounds.' },
       { name:'Aquila Commander', at:'Start of the battle round', ph:['command'], turn:'either',
         text:'At the start of the battle round, if a model with this ability is your **WARLORD**, gain 1CP.' },
-      { name:'Daughters of the Abyss',
+      { name:'Daughters of the Abyss', def:'Feel No Pain 3+ against psychic attacks',
         text:'- Friendly **ANATHEMA PSYKANA** units with this ability have Feel No Pain 3+ against psychic attacks.\n- Friendly **ANATHEMA PSYKANA** units with this ability have the following ability:\n**Psychic Null (Aura):** Friendly **ADEPTUS CUSTODES** units within 6" of this unit have **Feel No Pain 5+** against **psychic attacks**.' },
       // how an Adeptus Custodes army includes the Prosecutors and Witchseekers (ANATHEMA PSYKANA, not ADEPTUS CUSTODES)
       { name:'Anathema Psykana',
@@ -5255,6 +5255,8 @@ const ARMIES = [
       rules:['Aquila Commander','Aegis of the Emperor','Martial Ka\'tah','Leader','Deep Strike','Feel No Pain 5+*','Feel No Pain 5+','Assault','Rapid Fire','Cleave','Blast'],
       kw:['Character','Epic Hero','Faction: Adeptus Custodes','Imperium','Infantry','Trajann Valoris','Warlord','Allarus Custodians','Terminator'],
       kwNote:'Allarus Custodians, Terminator come from the led Allarus Custodians.',
+      // Feel No Pain 5+: a core ability of Trajann Valoris's datasheet (Wahapedia, CORE ABILITIES), not of the Allarus Custodians
+      partialRules:{ 'Feel No Pain 5+':'Trajann Valoris' },
       mods:[
         { kind:'melee', weapon:'Watcher’s Axe', when:'Moment Shackle (once per battle, at the start of any phase, one of its two effects), until the end of the phase', note:'+3 A', from:'Moment Shackle' },
         { kind:'melee', when:'Target has a T greater than this unit’s T', note:'+1 to wound rolls', from:'Slayers of Tyrants' }
@@ -5339,8 +5341,9 @@ const ARMIES = [
       ],
       abilities:[
         { name:'Advanced Firepower', text:'This unit’s ranged attacks that target a **MONSTER/VEHICLE** unit can:\n- Re-roll one **hit roll**.\n- Re-roll one **wound roll**.\n- Re-roll one **damage roll**.' },
-        // the Grav-Assault Force detachment rule, as New Recruit prints it on the unit; the 4+* InSv in the profile is it (from)
-        { name:'Flare Shields', def:'4+ InSv against ranged attacks', text:'This unit has a 4+ InSv against ranged attacks.' }
+        // the Grav-Assault Force detachment rule, as New Recruit prints it on the unit; the 4+* InSv in the profile is it (from), and the
+        // detachment rule's own When targeted line says it
+        { name:'Flare Shields', text:'This unit has a 4+ InSv against ranged attacks.' }
       ],
       rules:['Deadly Demise D3','Aegis of the Emperor','Feel No Pain 5+*','Damaged 5','Deep Strike','Lethal Hits','Sustained Hits'],
       kw:['Caladius Annihilator Grav-tank','Faction: Adeptus Custodes','Fly','Frame','Grav-assault','Imperium','Vehicle'],
