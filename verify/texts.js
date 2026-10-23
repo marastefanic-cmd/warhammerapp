@@ -611,7 +611,10 @@ function wahaDetachment(faction, name) {
     if (seg === 'rule') { if (inNote) continue; if (!res.rule.name) { res.rule.name = t; res.rule.at = L[i]; } else res.rule.body.push(L[i]); }
     else if (seg === 'enh') {
       const m = /^- (.+?)\s*(UPGRADE)?\s*(\d+) pts$/.exec(t);
-      if (m) { cur = { name: m[1].trim(), upgrade: !!m[2], pts: +m[3], body: [], at: L[i] }; res.enh.push(cur); inNote = false; continue; }
+      // a limit printed after the name ("Memento Moritoi (one per army)UPGRADE 30 pts") is not part of the name, which New Recruit and
+      // BSData print without it: it is the enhancement's limit, checked against the app's `limit`
+      const lim = m && /^(.*?)\s*\((one per army)\)$/i.exec(m[1].trim());
+      if (m) { cur = { name: lim ? lim[1] : m[1].trim(), limit: lim ? lim[2] : null, upgrade: !!m[2], pts: +m[3], body: [], at: L[i] }; res.enh.push(cur); inNote = false; continue; }
       if (cur && !inNote) cur.body.push(L[i]);
     }
   }
@@ -894,6 +897,7 @@ for (const fk of FACTIONS) {
       prov.push({ item: army + ' / ' + I, field: 'pts', doc: W.d.label, file: W.d.file, sha256: W.d.sha256, where: W.where });
       if (!we) fail('detachment', army, I, 'pts', String(e.pts), 'not on Wahapedia (the only source with points)', W.where);
       else if (e.pts !== we.pts) fail('detachment', army, I, 'pts', String(e.pts), we.pts + ' pts', W.where);
+      if (we && norm(e.limit || '') !== norm(we.limit || '')) fail('detachment', army, I, 'limit', e.limit || '', we.limit ? '(' + we.limit + ') after its name' : 'no limit after its name', W.where);
       const eu = upd.find(x => titleN(x) === nameN(e.name + ' enhancement'));
       if (eu) checkUpdate('detachment', army, I, 'text (Rules Updates)', e.text, eu);
       count('detachment');
@@ -986,18 +990,19 @@ for (const fk of FACTIONS) {
 // line; its body runs to the next name line, without its "FAQ"/"Errata" spoilers. A short line followed by bullet
 // points is a heading inside the rule (Doctrina Imperatives: "Protector Imperative", then its bullets), not a new rule.
 // A short line the page draws as a sub-heading (<span class="hi_custom">, the Adeptus Custodes' "Favoured Ka’tah" inside
-// Martial Ka’tah) and not as a rule's own heading (<h3>) is a heading inside the rule above it.
-function wahaSubHeads(fk) {
+// Martial Ka’tah) and not as a rule's own heading (<h3>) is a heading inside the rule above it; a line the page draws as a
+// rule's heading is a rule's name even when its text starts with bullet points (Daughters of the Abyss).
+function wahaHeads(fk) {
   const h = rawHtml(fk), h3 = new Set(), sub = new Set();
   for (const m of h.matchAll(/<h3\b[^>]*>([^<]+)</g)) h3.add(norm(decode(m[1])));
   for (const m of h.matchAll(/<span class="hi_custom">([^<]+)</g)) sub.add(norm(decode(m[1])));
-  return new Set([...sub].filter(t => !h3.has(t)));
+  return { h3, sub: new Set([...sub].filter(t => !h3.has(t))) };
 }
 function wahaArmyRules(fk) {
   const sec = wahaSection(fk, 'Army Rules'); if (!sec) return null;
   const L = docLines(sec.d, sec.pi, sec.pi);
-  const SUB = wahaSubHeads(fk);
-  const isName = i => { const t = L[i].text, n = L[i + 1] && L[i + 1].text; return t.length < 50 && /^[A-Z]/.test(t) && /[a-z]/.test(t) && !/[.:,;]/.test(t) && !/ Army Rule$/.test(t) && !/^(Errata|FAQ|Show|FAQ \/ Errata)$/.test(t) && !!n && n.length >= 35 && !/^- /.test(n) && !SUB.has(norm(t)); };
+  const HEADS = wahaHeads(fk);
+  const isName = i => { const t = L[i].text, n = L[i + 1] && L[i + 1].text; return t.length < 50 && /^[A-Z]/.test(t) && /[a-z]/.test(t) && !/[.:,;]/.test(t) && !/ Army Rule$/.test(t) && !/^(Errata|FAQ|Show|FAQ \/ Errata)$/.test(t) && !!n && n.length >= 35 && (!/^- /.test(n) || HEADS.h3.has(norm(t))) && !HEADS.sub.has(norm(t)); };
   const rules = []; let cur = null, note = false;
   for (let i = 0; i < L.length; i++) {
     if (isName(i)) { cur = { name: L[i].text, at: L[i], body: [] }; rules.push(cur); note = false; continue; }
