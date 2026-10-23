@@ -77,8 +77,8 @@ const ACTIVITY_RULES = [
     why:'it protects the unit against ranged attacks: the attacker\'s Shooting phase' },
   { id:'targeted-melee', def:true, re:/\bagainst melee attacks\b|\bmelee attacks? (?:that )?targets? (?:this|it)\b/i, ph:{ fight:'either' },
     why:'it protects the unit against melee attacks: the Fight phase' },
-  { id:'targeted', def:true, re:/\b(?:an attack|attacks?) (?:that )?(?:targets?|is made against) (?:this|the bearer|that unit|it)\b|\b(?:is|are) allocated to (?:this|the bearer|that model)\b|\bmade against this\b|\binvulnerable save\b|\binsv\b|\bsave characteristic\b|\bsaving throws?\b|\bsave rolls?\b|\bfeel no pain\b/i, ph:TARGETED,
-    why:'it protects the unit when it is attacked (a save, an invulnerable save, Feel No Pain, a modifier to attacks on it): the attacker\'s phases (their Shooting phase, the Fight phase)' },
+  { id:'targeted', def:true, re:/(?<!\bmakes? (?:ranged |melee )?|\bmakes? (?:an?|its) (?:ranged |melee )?|\b(?:unit|model|bearer)'s )\b(?:an attack|attacks?) (?:that )?(?:targets?|is made against) (?:this|the bearer|that unit|it)\b|\b(?:is|are) allocated to (?:this|the bearer|that model)\b|\bmade against this\b|\binvulnerable save\b|\binsv\b|\bsave characteristic\b|\bsaving throws?\b|\bsave rolls?\b|\bfeel no pain\b/i, ph:TARGETED,
+    why:'it protects the unit when it is attacked (a save, an invulnerable save, Feel No Pain, a modifier to attacks on it): the attacker\'s phases (their Shooting phase, the Fight phase). Not the unit\'s own attacks: "this model makes an attack that targets that unit" is an attack it makes' },
   { id:'lone-operative', def:true, re:/\bhas (?:the )?lone operative\b/i, ph:{ shooting:'opp' },
     why:'Lone Operative: it cannot be selected as the target of a ranged attack from far away: the attacker\'s Shooting phase' },
   { id:'pre-battle', re:/\bdeclare battle formations\b|\bafter both players have deployed\b|\bif this model is in your army\b|\btransport capacity\b/i, none:true,
@@ -120,6 +120,8 @@ const USED_MODIFIERS = [
     why:'"made a charge move this turn": a condition, not a move; only the Fight phase is left in that turn (its attacks are not in the Shooting phase)' },
   { id:'overwatch', why:'an always-on ranged effect (no trigger in the text) is also used when the unit shoots with a Core stratagem whose EFFECT is "Your unit shoots" (Fire Overwatch: its WHEN, your opponent\'s Movement phase); when it protects against ranged attacks, the same moment in the other turn (the enemy\'s Fire Overwatch)' },
   { id:'trigger-phase', why:'an effect used in the phase it is triggered in has the trigger\'s turn ("In your opponent\'s Movement phase, … this unit can make a Normal move": the opponent\'s Movement phase only)' },
+  { id:'same-phase', re:/\buntil the end of the phase\b/i,
+    why:'triggered in a phase with an effect "until the end of the phase": used in that phase only (Destiny\'s Ruin: manifested at the start of your Shooting phase, so its attacks are that phase\'s)' },
   { id:'same-turn', re:/\buntil the end of the turn\b|\bthis turn\b/i,
     why:'triggered in one player\'s turn with an effect "until the end of the turn": used in that turn only, from the trigger\'s phase on' },
 ];
@@ -219,6 +221,12 @@ function usedIn(text, ctx, trig){
   }
   // an effect used in the phase it is triggered in is used in that turn ("In your opponent's Movement phase, … make a Normal move")
   if(trig) for(const p of Object.keys(out)) if(trig.ph[p]) out[p] = trig.ph[p];
+  // triggered in a phase, "until the end of the phase": that phase only
+  const samePh = USED_MODIFIERS.find(r => r.id === 'same-phase').re.exec(t);
+  if(trig && samePh && Object.keys(out).length && Object.keys(out).some(p => !trig.ph[p])){
+    for(const p of Object.keys(out)) if(!trig.ph[p]) delete out[p];
+    reasons.push({ rule:'same-phase', match:samePh[0] });
+  }
   // triggered in one turn, "until the end of the turn": that turn only, from the trigger's phase on
   const same = USED_MODIFIERS.find(r => r.id === 'same-turn').re.exec(t);
   if(trig && same && Object.keys(out).length){
@@ -485,14 +493,15 @@ const tidyNeeds = n => { const o = {}; for(const k of ['all', 'any', 'none', 'un
 // =============================================================================================
 const TAG_RULES = [
   { id:'tag-enhancement', why:'the ability is named as an enhancement of the list\'s detachments: "Enhancement" ("Upgrade" when that entry is an upgrade)' },
-  { id:'tag-aura-name', name:/\(Aura\)/i, give:'Aura', why:'the ability\'s name says "(Aura)"' },
-  { id:'tag-aura', re:/\b(?:friendly|enemy)\b[^.]*?\b(?:units?|models?)(?: \([^)]*\))? (?:is |are )?(?:wholly )?within (?:\d+"|engagement range) of (?:this|the bearer|that model|one or more units with this ability)\b|\bunits? from their army within \d+" of this\b/i, give:'Aura', sentence:true,
-    why:'it affects other units (friendly or enemy) while they are within a distance of this model ("While a friendly X unit is within 6" of this model", "an enemy unit within 6" of this model"); not a unit it selects, not a unit that "ends a move within"' },
+  // Aura is GW's tag, never the wording: Core Rules 22.01, aura abilities "are tagged with the word 'Aura'". GW's tag is part of
+  // the printed name ("Final Howl (Aura)"); otherwise it is the "(Aura)" New Recruit prints after the name, which data.js keeps as
+  // the tag and verify/nr.js checks against the PDF, so it is a part the text cannot give (like Psychic)
+  { id:'tag-aura-name', name:/\(Aura\)/i, give:'Aura', why:'the ability\'s name as GW prints it says "(Aura)" (Core Rules 22.01: aura abilities are tagged with the word "Aura"); never derived from wording such as "within 6" of this model". An "(Aura)" New Recruit prints after the name is GW\'s tag the text cannot give: kept as stored, checked by verify/nr.js' },
   { id:'tag-bondsman', re:/^while a model is affected by this ability\b/i, give:'Bondsman',
     why:'"While a model is affected by this ability": the wording of a Bondsman ability (the Bondsman army rule: "affected by that Bondsman ability")' },
   { id:'tag-capacity', re:/\btransport capacity of \d+/i, give:'Capacity', why:'"has a transport capacity of N": the Transport ability' },
-  { id:'tag-once', re:/^\((once per [^)]+)\)|^(?:\*\*[^*]+\*\* (?:model|unit) only(?: \([^)]*\))?\. )?\((once per [^)]+)\)|^(once per (?:battle round|battle|turn|phase)(?:, per (?:army|unit))?)[,.]/i, once:true,
-    why:'the text opens with "(Once per …)" or "Once per …,": that limit (the app\'s onceTag reads the same words from the text, so the row shows it either way)' },
+  { id:'tag-once', re:/^(?:[^.]*? (?:model|unit) only(?: \([^)]*\))?\. )?[^.]*?\(?\b(once per (?:battle round|battle|turn|phase)(?:, per (?:army|unit))?)\b/i, once:true,
+    why:'"Once per …" in the opening sentence (after a "X model only." prefix): that limit (the app\'s onceTag reads the same words from the text, so the row shows it either way)' },
 ];
 // a stored tag in parts: "Once per turn, twice per battle, per unit" is one part; "Aura, Psychic" two
 function tagParts(tag){
@@ -506,19 +515,17 @@ function tagParts(tag){
   for(const p of t.split(/\s*(?:,| · )\s*/)) if(p) out.push(p);
   return out;
 }
-const DERIVABLE_TAG = p => /^(Aura|Enhancement|Upgrade|Bondsman|Capacity)$/.test(p) || /^(once|twice) per /i.test(p);
+const DERIVABLE_TAG = (p, ab) => /^(Enhancement|Upgrade|Bondsman|Capacity)$/.test(p) || /^(once|twice) per /i.test(p) || (p === 'Aura' && !!ab && /\(Aura\)/i.test(ab.name));
 function abilityTag(ab, ctx){
   const reasons = [], parts = [];
   const en = (ctx.enh || []).find(e => e.name === ab.name);
   if(en){ parts.push(en.upgrade ? 'Upgrade' : 'Enhancement'); reasons.push({ rule:'tag-enhancement', match:(en.upgrade ? 'upgrade ' : 'enhancement ') + en.name }); }
   const t = plain(ab.text);
   for(const r of TAG_RULES.slice(1)){
-    let m = r.name ? r.name.exec(ab.name) : r.sentence ? null : r.re.exec(t);
-    // (an aura: in one sentence, and not a unit the ability selects: "select one friendly ORKS unit within 6"")
-    if(r.sentence) for(const x of sentences(t)){ const y = r.re.exec(x); if(y && !/\bselect/i.test(x.slice(0, y.index + y[0].length))){ m = y; break; } }
+    const m = r.name ? r.name.exec(ab.name) : r.re.exec(r.once ? (sentences(t)[0] || '') + ' ' + ((/^[^.]+ (?:model|unit) only(?: \([^)]*\))?\.(?: |$)/i.test(sentences(t)[0] || '') && sentences(t)[1]) || '') : t);
     if(m && parts.includes(r.give)) continue;
     if(!m) continue;
-    if(r.once){ const o = (m[1] || m[2] || m[3]); parts.push(o[0].toUpperCase() + o.slice(1)); }
+    if(r.once){ const o = m[1]; parts.push(o[0].toUpperCase() + o.slice(1)); }
     else parts.push(r.give);
     reasons.push({ rule:r.id, match:clip(m[0], 90) });
   }
@@ -637,7 +644,7 @@ function derive(D){
   }
   function tagItem(kind, where, ab, tctx, comments, dedupe){
     const d = abilityTag(ab, tctx);
-    const sp = tagParts(ab.tag), sder = sp.filter(DERIVABLE_TAG), skept = sp.filter(p => !DERIVABLE_TAG(p));
+    const sp = tagParts(ab.tag), sder = sp.filter(p => DERIVABLE_TAG(p, ab)), skept = sp.filter(p => !DERIVABLE_TAG(p, ab));
     if(!sp.length && !d.parts.length) return;
     const same = JSON.stringify([...sder].map(x => x.toLowerCase()).sort()) === JSON.stringify([...d.parts].map(x => x.toLowerCase()).sort());
     const status = !d.parts.length ? 'not-derivable' : same ? 'identical' : 'different';
@@ -841,7 +848,7 @@ function report(items){
     ...USED_MODIFIERS.map(r => '- `' + r.id + '`: ' + r.why), '',
     '### 2. Needs', '', ...Object.entries(NEEDS_RULES).map(([k, v]) => '- `' + k + '`: ' + v),
     '- Keywords: a bold run in capitals is split into the keywords units in data.js have (longest first; "THOUSAND SONS" is the Faction keyword); capital words no unit has, in a row, are one keyword ("BREAKA BOYZ"); a plural with a singular keyword is that keyword ("MONSTERS").', '',
-    '### 3. Tags', '', ...TAG_RULES.map(r => '- `' + r.id + '`: ' + r.why), '- Not derivable from the text (kept as stored, shown under "parts the text cannot give"): Psychic (New Recruit\'s name suffix), a "Once per…" that only the ability\'s name in New Recruit carries, other words.', '',
+    '### 3. Tags', '', ...TAG_RULES.map(r => '- `' + r.id + '`: ' + r.why), '- Not derivable from the text (kept as stored, shown under "parts the text cannot give"): Aura and Psychic (GW\'s tags, as New Recruit prints them after the name), a "Once per…" that only the ability\'s name in New Recruit carries, other words.', '',
     '### 4. Coverage only', '', '- `aura-reach`: "within N" of this model" in the ability vs the distance in the aura\'s "Within N" of …" line.',
     '- attack bonuses: ' + BONUS_RULES.map(b => '`' + b.id + '`').join(', ') + ': named in the ability\'s text vs named in its footnotes on that unit (their note and set) together. Footnotes of rules and stratagems are not covered.',
     '- protections: ' + DEF_RULES.map(b => '`' + b.id + '`').join(', ') + ': named in the ability\'s text vs its "When targeted" line (def).',

@@ -1600,6 +1600,7 @@
    ],
    "turn": "either"
   },
+  "rule-tag | Tyranids army rule · Shadow in the Warp": "Once per battle",
   "rule-needs | Tyranids · Crusher Stampede rule · Enraged Behemoths": {
    "all": [
     "Faction: Tyranids",
@@ -1644,6 +1645,12 @@
    "rule": [
     "Super-heavy Walker"
    ]
+  },
+  "rule-timing | Chaos Knights · Infernal Lance rule · Malefic Surge": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
   },
   "rule-needs | Chaos Knights · Infernal Lance rule · Malefic Surge": {
    "all": [
@@ -1837,7 +1844,6 @@
    ],
    "turn": "either"
   },
-  "ability-tag | melee · Ghazghkull Thraka · Prophet of Da Great Waaagh!": "Aura",
   "ability-timing | melee · Mozrog Skragbad · One Last Kill": {
    "ph": [
     "fight"
@@ -1874,7 +1880,6 @@
    ],
    "turn": "either"
   },
-  "ability-tag | melee · Beastboss on Squigosaur · Thundering Stampede": "Aura",
   "ability-timing | melee · Beastboss on Squigosaur · Keep Huntin’!": {
    "ph": [
     "movement"
@@ -1997,7 +2002,7 @@
    ],
    "turn": "either"
   },
-  "ability-tag | princes · Daemon Prince of Khorne [daemon-prince-of-khorne-helm-of-brazen-ire] · Direct the Slaughter": "Aura, Once per battle round",
+  "ability-tag | princes · Daemon Prince of Khorne [daemon-prince-of-khorne-helm-of-brazen-ire] · Direct the Slaughter": "Once per battle round",
   "ability-tag | princes · Daemon Prince of Khorne [daemon-prince-of-khorne-helm-of-brazen-ire] · Helm of Brazen Ire": "Enhancement",
   "ability-timing | princes · Daemon Prince of Khorne [daemon-prince-of-khorne-berzerker-glaive] · Direct the Slaughter": {
    "ph": [
@@ -2009,7 +2014,7 @@
    ],
    "turn": "either"
   },
-  "ability-tag | princes · Daemon Prince of Khorne [daemon-prince-of-khorne-berzerker-glaive] · Direct the Slaughter": "Aura, Once per battle round",
+  "ability-tag | princes · Daemon Prince of Khorne [daemon-prince-of-khorne-berzerker-glaive] · Direct the Slaughter": "Once per battle round",
   "ability-tag | princes · Daemon Prince of Khorne [daemon-prince-of-khorne-berzerker-glaive] · Berzerker Glaive": "Enhancement",
   "ability-timing | princes · Lord on Juggernaut · Lord on Juggernaut · Aggressive Advance": {
    "ph": [
@@ -2033,7 +2038,6 @@
    ],
    "turn": "your"
   },
-  "ability-tag | princes · Lord on Juggernaut · Lord on Juggernaut · Archslaughterer": "Enhancement",
   "ability-timing | princes · Lord on Juggernaut · Khorne Berzerkers · Blood Surge": {
    "ph": [
     "shooting"
@@ -2051,6 +2055,12 @@
     "command"
    ],
    "turn": "your"
+  },
+  "ability-timing | princes · Slaughterbound · Slaughterbound · Possessed Lord": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
   },
   "ability-tag | princes · Slaughterbound · Slaughterbound · Possessed Lord": "Once per battle",
   "ability-timing | princes · Slaughterbound · Slaughterbound · Lord of the Eightbound": {},
@@ -2081,7 +2091,6 @@
    ],
    "turn": "either"
   },
-  "ability-tag | princes · Eightbound · Beacons of Rage": "Aura",
   "ability-timing | princes · Jakhals · Objective Ravaged": {
    "ph": [
     "command"
@@ -2112,14 +2121,12 @@
    ],
    "turn": "either"
   },
-  "ability-tag | standard · Angron · Wrathful Presence: pick one · Driven by Ultimate Rage": "Aura",
   "ability-timing | standard · Angron · Wrathful Presence: pick one · Overwhelming Wrath": {
    "ph": [
     "movement"
    ],
    "turn": "opp"
   },
-  "ability-tag | standard · Angron · Wrathful Presence: pick one · Overwhelming Wrath": "Aura",
   "ability-timing | standard · Khârn the Betrayer · Khârn the Betrayer · Legendary Killer": {
    "ph": [
     "fight"
@@ -2166,6 +2173,12 @@
    ],
    "turn": "your"
   },
+  "ability-timing | standard · Slaughterbound [slaughterbound] · Possessed Lord": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
   "ability-tag | standard · Slaughterbound [slaughterbound] · Possessed Lord": "Once per battle",
   "ability-timing | standard · Slaughterbound [slaughterbound] · Lord of the Eightbound": {},
   "ability-timing | standard · Slaughterbound [slaughterbound-exalted-eightbound] · Slaughterbound · Rage Eternal": {
@@ -2173,6 +2186,12 @@
     "command"
    ],
    "turn": "your"
+  },
+  "ability-timing | standard · Slaughterbound [slaughterbound-exalted-eightbound] · Slaughterbound · Possessed Lord": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
   },
   "ability-tag | standard · Slaughterbound [slaughterbound-exalted-eightbound] · Slaughterbound · Possessed Lord": "Once per battle",
   "ability-timing | standard · Slaughterbound [slaughterbound-exalted-eightbound] · Slaughterbound · Lord of the Eightbound": {},
@@ -2197,7 +2216,6 @@
    ],
    "turn": "either"
   },
-  "ability-tag | standard · Eightbound · Beacons of Rage": "Aura",
   "ability-timing | standard · Exalted Eightbound · Rend and Tear": {
    "ph": [
     "fight"
@@ -2241,7 +2259,6 @@
    ],
    "turn": "your"
   },
-  "ability-tag | pubstomper · Magnus the Red · Crimson King · Time Flux": "Aura",
   "ability-timing | pubstomper · Daemon Prince of Tzeentch with wings · Hunter of Souls": {
    "ph": [
     "movement",
@@ -2267,7 +2284,6 @@
    ],
    "turn": "your"
   },
-  "ability-tag | pubstomper · Exalted Sorcerer · Exalted Sorcerer · Incandaeum": "Enhancement",
   "ability-timing | pubstomper · Exalted Sorcerer · Rubric Marines · Bringers of Change": {
    "ph": [
     "movement",
@@ -2278,6 +2294,12 @@
     "shooting": "your"
    }
   },
+  "ability-timing | pubstomper · Sorcerer in Terminator Armour · Sorcerer in Terminator Armour · Marked by Fate": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
   "ability-timing | pubstomper · Sorcerer in Terminator Armour · Sorcerer in Terminator Armour · Umbralefic Crystal": {
    "ph": [
     "command",
@@ -2285,7 +2307,6 @@
    ],
    "turn": "your"
   },
-  "ability-tag | pubstomper · Sorcerer in Terminator Armour · Sorcerer in Terminator Armour · Umbralefic Crystal": "Enhancement",
   "ability-timing | pubstomper · Tzaangors · Ambushing Hunters": {
    "at": "End of your opponent’s turn",
    "ph": [
@@ -2339,9 +2360,7 @@
    ],
    "turn": "either"
   },
-  "ability-tag | nidzillas · The Swarmlord · Malign Presence": "Aura, Once per turn",
-  "ability-tag | nidzillas · The Swarmlord · Domination of the Hive Mind": "Aura",
-  "ability-tag | nidzillas · Hive Tyrant · Onslaught": "Aura",
+  "ability-tag | nidzillas · The Swarmlord · Malign Presence": "Once per turn",
   "ability-timing | nidzillas · Hive Tyrant · Will of the Hive Mind": {
    "ph": [
     "command",
@@ -2352,7 +2371,7 @@
    ],
    "turn": "either"
   },
-  "ability-tag | nidzillas · Hive Tyrant · Will of the Hive Mind": "Aura, Once per battle round",
+  "ability-tag | nidzillas · Hive Tyrant · Will of the Hive Mind": "Once per battle round",
   "ability-timing | nidzillas · Hive Tyrant · Monstrous Nemesis": {
    "ph": [
     "fight"
@@ -2366,7 +2385,7 @@
    ],
    "turn": "opp"
   },
-  "ability-tag | nidzillas · Norn Assimilator [norn-assimilator-synaptoprescience] · Harpoon Barbs": "Aura, Once per turn",
+  "ability-tag | nidzillas · Norn Assimilator [norn-assimilator-synaptoprescience] · Harpoon Barbs": "Once per turn",
   "ability-timing | nidzillas · Norn Assimilator [norn-assimilator-synaptoprescience] · Singular Purpose": {
    "at": "Start of the first battle round",
    "ph": [
@@ -2374,10 +2393,7 @@
     "shooting",
     "fight"
    ],
-   "turn": "either",
-   "turns": {
-    "shooting": "opp"
-   }
+   "turn": "either"
   },
   "ability-timing | nidzillas · Norn Assimilator [norn-assimilator-synaptoprescience] · Protean Purpose": {
    "ph": [
@@ -2393,7 +2409,7 @@
    ],
    "turn": "opp"
   },
-  "ability-tag | nidzillas · Norn Assimilator [norn-assimilator-synaptoprescience-2] · Harpoon Barbs": "Aura, Once per turn",
+  "ability-tag | nidzillas · Norn Assimilator [norn-assimilator-synaptoprescience-2] · Harpoon Barbs": "Once per turn",
   "ability-timing | nidzillas · Norn Assimilator [norn-assimilator-synaptoprescience-2] · Singular Purpose": {
    "at": "Start of the first battle round",
    "ph": [
@@ -2401,10 +2417,7 @@
     "shooting",
     "fight"
    ],
-   "turn": "either",
-   "turns": {
-    "shooting": "opp"
-   }
+   "turn": "either"
   },
   "ability-timing | nidzillas · Norn Assimilator [norn-assimilator-synaptoprescience-2] · Protean Purpose": {
    "ph": [
@@ -2421,10 +2434,7 @@
     "shooting",
     "fight"
    ],
-   "turn": "either",
-   "turns": {
-    "shooting": "opp"
-   }
+   "turn": "either"
   },
   "ability-timing | nidzillas · Norn Emissary [norn-emissary-destabilising-predation] · Protean Purpose": {
    "ph": [
@@ -2441,10 +2451,7 @@
     "shooting",
     "fight"
    ],
-   "turn": "either",
-   "turns": {
-    "shooting": "opp"
-   }
+   "turn": "either"
   },
   "ability-timing | nidzillas · Norn Emissary [norn-emissary] · Protean Purpose": {
    "ph": [
@@ -2517,7 +2524,6 @@
    ],
    "turn": "either"
   },
-  "ability-tag | ooga-booga · Ghazghkull Thraka · Prophet of Da Great Waaagh!": "Aura",
   "ability-timing | ooga-booga · Nazdreg · Nazdreg · Supreme Kunnin’": {
    "ph": [
     "movement"
@@ -2618,14 +2624,12 @@
    ],
    "turn": "either"
   },
-  "ability-tag | super-terminators · Angron · Wrathful Presence: pick one · Driven by Ultimate Rage": "Aura",
   "ability-timing | super-terminators · Angron · Wrathful Presence: pick one · Overwhelming Wrath": {
    "ph": [
     "movement"
    ],
    "turn": "opp"
   },
-  "ability-tag | super-terminators · Angron · Wrathful Presence: pick one · Overwhelming Wrath": "Aura",
   "ability-tag | super-terminators · Chaos Terminators [chaos-terminators] · Gore-stained Veterans": "Upgrade",
   "ability-tag | super-terminators · Chaos Terminators [chaos-terminators-2] · Gore-stained Veterans": "Upgrade",
   "ability-timing | super-terminators · Eightbound · Beacons of Rage": {
@@ -2634,7 +2638,6 @@
    ],
    "turn": "either"
   },
-  "ability-tag | super-terminators · Eightbound · Beacons of Rage": "Aura",
   "ability-timing | super-terminators · Goremongers · Loping Speed": {
    "ph": [
     "movement"
@@ -2647,7 +2650,6 @@
    ],
    "turn": "your"
   },
-  "ability-tag | purge-goes-the-foe · Belisarius Cawl · Canticles of the Omnissiah": "Aura",
   "ability-timing | purge-goes-the-foe · Belisarius Cawl · Self-repair Mechanisms": {
    "ph": [
     "command"
@@ -2668,7 +2670,7 @@
    ],
    "turn": "your"
   },
-  "ability-tag | purge-goes-the-foe · Tech-Priest Enginseer · Necromechanic": "Enhancement, Aura",
+  "ability-tag | purge-goes-the-foe · Tech-Priest Enginseer · Necromechanic": "Enhancement, Once per battle round",
   "ability-tag | purge-goes-the-foe · Cybernetica Datasmith · Cybernetica Datasmith · Martial Signatum Amplificator": "Enhancement",
   "ability-timing | purge-goes-the-foe · Skitarii Rangers · Objective Scouted": {
    "ph": [
@@ -2676,7 +2678,6 @@
    ],
    "turn": "your"
   },
-  "ability-tag | purge-goes-the-foe · Onager Dunecrawler · Emanatus Forcefield": "Aura",
   "ability-timing | purge-goes-the-foe · Onager Dunecrawler · Scuttling Walker": {
    "ph": [
     "movement"
@@ -2684,6 +2685,12 @@
    "turn": "your"
   },
   "ability-timing | defilers-and-friends · Lucius the Eternal · Lucius the Eternal · Duellist’s Hubris": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | defilers-and-friends · Lucius the Eternal · Flawless Blades · Daemonic Patrons": {
    "ph": [
     "fight"
    ],
@@ -2731,11 +2738,8 @@
   },
   "ability-timing | defilers-and-friends · Chaos Rhino · Transport": {},
   "ability-tag | defilers-and-friends · Chaos Rhino · Transport": "Capacity",
-  "ability-tag | infernal-lance · Chaos Cerastus Knight Atrapos · Consumed with Hunger": "Aura",
   "ability-tag | infernal-lance · Chaos Cerastus Knight Atrapos · Knight Diabolus": "Enhancement",
-  "ability-tag | infernal-lance · Chaos Cerastus Knight Lancer · Dark Fervour": "Aura",
   "ability-tag | infernal-lance · Chaos Cerastus Knight Lancer · Blasphemous Engine": "Enhancement",
-  "ability-tag | infernal-lance · Knight Despoiler · Dread Dominion": "Aura",
   "ability-tag | infernal-lance · Knight Despoiler · Bestial Aspect": "Enhancement",
   "ability-timing | infernal-lance · Knight Ruinator [knight-ruinator-fleshmetal-fusion] · Methodical Destruction": {
    "at": "Start of the first battle round",
@@ -2749,7 +2753,6 @@
     "shooting": "your"
    }
   },
-  "ability-tag | infernal-lance · Knight Ruinator [knight-ruinator-fleshmetal-fusion] · Close-range Killers": "Aura",
   "ability-tag | infernal-lance · Knight Ruinator [knight-ruinator-fleshmetal-fusion] · Fleshmetal Fusion": "Enhancement",
   "ability-timing | infernal-lance · Knight Ruinator [knight-ruinator] · Methodical Destruction": {
    "at": "Start of the first battle round",
@@ -2763,14 +2766,12 @@
     "shooting": "your"
    }
   },
-  "ability-tag | infernal-lance · Knight Ruinator [knight-ruinator] · Close-range Killers": "Aura",
   "ability-timing | infernal-lance · Nurglings · Mischief Makers": {
    "ph": [
     "fight"
    ],
    "turn": "either"
   },
-  "ability-tag | infernal-lance · Nurglings · Mischief Makers": "Aura",
   "ability-tag | woof-woof · War Dog Brigand [war-dog-brigand-final-howl-aura] · Final Howl (Aura)": "Enhancement, Aura",
   "ability-tag | woof-woof · War Dog Executioner · Snarling Rivalry": "Upgrade",
   "ability-tag | woof-woof · War Dog Karnivore [war-dog-karnivore-panoply-of-the-cursed-knights] · Panoply of the Cursed Knights": "Enhancement",
@@ -2798,28 +2799,24 @@
    ],
    "turn": "either"
   },
-  "ability-tag | big-demons-baby · Angron · Wrathful Presence: pick one · Driven by Ultimate Rage": "Aura",
   "ability-timing | big-demons-baby · Angron · Wrathful Presence: pick one · Overwhelming Wrath": {
    "ph": [
     "movement"
    ],
    "turn": "opp"
   },
-  "ability-tag | big-demons-baby · Angron · Wrathful Presence: pick one · Overwhelming Wrath": "Aura",
   "ability-timing | big-demons-baby · Skarbrand · Rage Embodied": {
    "ph": [
     "fight"
    ],
    "turn": "either"
   },
-  "ability-tag | big-demons-baby · Skarbrand · Rage Embodied": "Aura",
   "ability-timing | big-demons-baby · Bloodthirster · Daemon Lord of Khorne": {
    "ph": [
     "fight"
    ],
    "turn": "either"
   },
-  "ability-tag | big-demons-baby · Bloodthirster · Daemon Lord of Khorne": "Aura",
   "ability-timing | big-demons-baby · Bloodthirster · Relentless Carnage": {
    "ph": [
     "fight"
@@ -2836,7 +2833,7 @@
    ],
    "turn": "either"
   },
-  "ability-tag | big-demons-baby · Daemon Prince of Khorne · Direct the Slaughter": "Aura, Once per battle round",
+  "ability-tag | big-demons-baby · Daemon Prince of Khorne · Direct the Slaughter": "Once per battle round",
   "ability-tag | big-demons-baby · Daemon Prince of Khorne · Blade of Endless Bloodshed": "Enhancement",
   "ability-timing | big-demons-baby · Master of Executions · A Worthy Skull": {
    "ph": [
@@ -2918,7 +2915,6 @@
    ],
    "turn": "your"
   },
-  "ability-tag | mucho-mutantes · Magnus the Red · Crimson King · Time Flux": "Aura",
   "ability-timing | mucho-mutantes · Ahriman · Ahriman · Scryer of Fates": {},
   "ability-timing | mucho-mutantes · Ahriman · Ahriman · Arch-Sorcerer of Tzeentch": {
    "ph": [

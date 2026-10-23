@@ -4179,8 +4179,9 @@ function shortWhen(x){
 // "Once per battle", "Once per battle round, per army": a limited use is part of the row, not hidden in it
 // (from the tag, a "(Once per …)" in the text, or a text that starts "Once per …,")
 const onceTag = ab => {
-  if(/^(once|twice) per /i.test(ab.tag || '')) return ab.tag.replace(/ · .*$/, '');   // as BSData prints it
   const t = ab.text || '', army = /\bone (model|unit) from your army with this ability\b/i.test(t);
+  // as BSData prints it; ", per army" as below when the tag does not say per what ("Once per battle round": Direct the Slaughter)
+  if(/^(once|twice) per /i.test(ab.tag || '')){ const tg = ab.tag.replace(/ · .*$/, ''); return tg + (army && !/\bper (army|unit)\b/i.test(tg) ? ', per army' : ''); }
   // an enhancement's text starts with its restriction ("**TECH-PRIEST** model only. Once per battle round, …")
   const t1 = t.replace(/^\*\*[^*]+\*\* model only( \([^)]*\))?\. /i, '');
   for(const src of [ab.tag || '', (/\((once per [^)]+)\)/i.exec(t) || [])[1] || '', (/^once per [^,.]+(, per (army|unit))?/i.exec(t1) || [])[0] || '']){

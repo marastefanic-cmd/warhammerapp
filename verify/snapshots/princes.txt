@@ -672,7 +672,7 @@ Direct the Slaughter
 Once per battle round, per army
 Any phase
 
-Aura · Once per battle round · Any phase · Either turn
+Once per battle round · Any phase · Either turn
 
 Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
 
@@ -700,7 +700,7 @@ Direct the Slaughter
 Once per battle round, per army
 Any phase
 
-Aura · Once per battle round · Any phase · Either turn
+Once per battle round · Any phase · Either turn
 
 Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
 
@@ -2842,7 +2842,7 @@ Direct the Slaughter
 Once per battle round, per army
 Any phase
 
-Aura · Once per battle round · Any phase · Either turn
+Once per battle round · Any phase · Either turn
 
 Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
 
@@ -2961,7 +2961,7 @@ Direct the Slaughter
 Once per battle round, per army
 Any phase
 
-Aura · Once per battle round · Any phase · Either turn
+Once per battle round · Any phase · Either turn
 
 Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
 

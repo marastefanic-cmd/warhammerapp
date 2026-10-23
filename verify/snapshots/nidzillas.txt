@@ -528,7 +528,7 @@ Will of the Hive Mind
 Once per battle round, per army
 Any phase
 
-Aura · Once per battle round · Any phase · Either turn
+Once per battle round · Any phase · Either turn
 
 Once per battle round, one model from your army with this ability can use it when a friendly TYRANIDS unit within 12" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.
 
@@ -553,7 +553,7 @@ Harpoon Barbs
 Once per turn
 Their Movement
 
-Aura · Once per turn · Movement · Their turn
+Once per turn · Movement · Their turn
 
 Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.
 
@@ -596,7 +596,7 @@ Harpoon Barbs
 Once per turn
 Their Movement
 
-Aura · Once per turn · Movement · Their turn
+Once per turn · Movement · Their turn
 
 Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.
 
@@ -2275,7 +2275,7 @@ Will of the Hive Mind
 Once per battle round, per army
 Any phase
 
-Aura · Once per battle round · Any phase · Either turn
+Once per battle round · Any phase · Either turn
 
 Once per battle round, one model from your army with this ability can use it when a friendly TYRANIDS unit within 12" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.
 
@@ -2468,7 +2468,7 @@ Harpoon Barbs
 Once per turn
 Their Movement
 
-Aura · Once per turn · Movement · Their turn
+Once per turn · Movement · Their turn
 
 Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.
 
@@ -2606,7 +2606,7 @@ Harpoon Barbs
 Once per turn
 Their Movement
 
-Aura · Once per turn · Movement · Their turn
+Once per turn · Movement · Their turn
 
 Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.
 

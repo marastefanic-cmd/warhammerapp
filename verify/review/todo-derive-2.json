@@ -1,0 +1,14 @@
+[
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "onceTag",
+  "judgement": {
+   "code": "const onceTag = ab => {\n  const t = ab.text || '', army = /\\bone (model|unit) from your army with this ability\\b/i.test(t);\n  // as BSData prints it; \", per army\" as below when the tag does not say per what (\"Once per battle round\": Direct the Slaughter)\n  if(/^(once|twice) per /i.test(ab.tag || '')){ const tg = ab.tag.replace(/ · .*$/, ''); return tg + (army && !/\\bper (army|unit)\\b/i.test(tg) ? ', per army' : ''); }\n  // an enhancement's text starts with its restriction (\"**TECH-PRIEST** model only. Once per battle round, …\")\n  const t1 = t.replace(/^\\*\\*[^*]+\\*\\* model only( \\([^)]*\\))?\\. /i, '');\n  for(const src of [ab.tag || '', (/\\((once per [^)]+)\\)/i.exec(t) || [])[1] || '', (/^once per [^,.]+(, per (army|unit))?/i.exec(t1) || [])[0] || '']){\n    const m = /once per (battle round|battle|phase|turn)(, per (army|unit))?/i.exec(src);\n    if(m) return m[0].replace(/^o/, 'O') + (!m[2] && army ? ', per army' : '');\n  }\n  return '';\n};"
+  },
+  "source": {
+   "implements": "\"Once per …\" limits shown on the ability row"
+  },
+  "key": "ceaaa881bbacc022"
+ }
+]

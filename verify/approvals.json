@@ -587,6 +587,18 @@
   "at": "2026-10-16",
   "why": "\"One THOUSAND SONS unit from your army\"; every unit in this list has Faction: Thousand Sons."
  },
+ "0c739c88d1c91cf8": {
+  "verdict": "ok",
+  "by": "review:derive (its fix)",
+  "at": "2026-10-23",
+  "why": "'Once per turn' is exact. 'Aura' is not on GW's card (Wahapedia tyranids_Norn-Assimilator: 'Harpoon Barbs: Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back…', no tag; New Recruit has no tag either). It is a one-off trigger on a unit falling back, not a standing effect over a stated distance. The deviations-nr.json entries (norn-assimilator-synaptoprescience, -2) should go."
+ },
+ "0c943028a617befa": {
+  "verdict": "ok",
+  "by": "review:derive",
+  "at": "2026-10-23",
+  "why": "New Recruit prints 'Transport Capacity' for the Chaos Rhino (defilers-and-friends.txt l.349-351). The old entry had name and who swapped (name 'Chaos Rhino', who 'Transport'). It now matches the two World Eaters Rhino entries (name 'Transport', tag 'Capacity'). The text is unchanged."
+ },
  "0c954ec614b08f88": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -3293,6 +3305,12 @@
   "at": "2026-10-18",
   "why": "WHEN: “a friendly attached ORKS INFANTRY unit”. TARGET: “That ORKS INFANTRY unit”. Orks + Infantry + attached are copied from these. The trigger “becomes battle-shocked” is not a keyword filter. text: same as Wahapedia word for word."
  },
+ "4f3d801cb7199fcd": {
+  "verdict": "ok",
+  "by": "review:derive (its fix)",
+  "at": "2026-10-23",
+  "why": "Enhancement: right. 'Aura': GW does not tag the enhancement (Wahapedia Cohort Cybernetica: 'Necromechanic 20 pts … TECH-PRIEST model only. Once per battle round, when a saving throw made for a friendly … model within 12\" of the bearer is failed, the bearer can use this Enhancement'). It is a once-per-round triggered use, not a standing effect over a range, so the deviations-nr.json entry (tech-priest-enginseer) is wrong. The text's limit 'Once per battle round' is missing from the tag: tag-once only looks at the opening, and here the text opens with the 'TECH-PRIEST model only.' restriction. The app's onceTag strips that restriction, so the chip shows the limit anyway, but the stored label should say it the way the other items now do."
+ },
  "4f8046346a592244": {
   "verdict": "ok",
   "by": "review:infernal-lance",
@@ -4367,6 +4385,12 @@
   "at": "2026-10-21",
   "why": "EFFECT: \"each time a ranged attack made by a model in your unit is allocated to a MONSTER or VEHICLE model, you can re-roll the Damage roll.\" vs any Monster/Vehicle matches (those keywords are on every model of such a unit); a stratagem, so no always."
  },
+ "6c01bc8bce6ada5b": {
+  "verdict": "ok",
+  "by": "review:derive",
+  "at": "2026-10-23",
+  "why": "The text (Wahapedia errata / Thousand Sons Faction Pack) opens 'Once per turn, when you target this unit…'. No range, so no Aura."
+ },
  "6c05052014c75eaf": {
   "verdict": "ok",
   "by": "review:m1-strats",
@@ -4834,6 +4858,12 @@
   "by": "review:m5-new",
   "at": "2026-10-20",
   "why": "Source: \"In your Command phase, this unit heals 3 wounds.\" The text names your Command phase, so {ph:['command'], turn:'your'}. NR l.136 has the same words."
+ },
+ "77f2ded0bfcaf2bf": {
+  "verdict": "ok",
+  "by": "review:derive",
+  "at": "2026-10-23",
+  "why": "GW tags it Aura (Wahapedia 'Malign Presence (Aura)'; New Recruit prints '(Aura)'). The Tyranids Faction Pack 14-10 replaces only its text with 'Once per turn, when your opponent targets a unit … within 12\" of this model…', so 'Once per turn' is exact."
  },
  "77f4e335f0bf4290": {
   "verdict": "ok",
@@ -6725,6 +6755,12 @@
   "at": "2026-10-16",
   "why": "\"WHEN: Your opponent’s Shooting phase\"."
  },
+ "a4e35bc068c8fef5": {
+  "verdict": "ok",
+  "by": "review:derive",
+  "at": "2026-10-23",
+  "why": "The text opens 'Once per battle, at the start of any phase…' (Wahapedia imperial-knights_Canis-Rex). It selects a unit within 12\", which is not an aura, and it is correctly untagged."
+ },
  "a501c61449a4844b": {
   "verdict": "ok",
   "by": "review:r10-superterm",
@@ -6761,11 +6797,23 @@
   "at": "2026-10-22",
   "why": "The antecedent the digest said was missing is in: TARGET “One WORLD EATERS unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase” = “Your unit just destroyed within range of objective markers you controlled at the end of the previous phase”, so “one of those objective markers” now has its antecedent. EFFECT “Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase” = the rest, literal. “Any phase” is the row’s tag."
  },
+ "a5a8a2348e4f6c1b": {
+  "verdict": "ok",
+  "by": "review:derive",
+  "at": "2026-10-23",
+  "why": "The regex matches 'Enhancement' as a whole part of a tag separated by ', ' or ' · ' (it would not match 'Upgrade', and none of the 22 Enhancement tags in data.js has another form). It is used only for the chip in abilityList. The old test (=== 'Enhancement') gave Final Howl and Necromechanic the chip when their tag was plain 'Enhancement', so the screen keeps the chip they already had. The meta line, search sub, ability sheet and Ask text print ab.tag verbatim and are not affected beyond showing the new tag. onceTag still finds a 'Once per …' that is not the first part. Under my Necromechanic fix ('Enhancement · Once per battle round'), isEnhancement still matches."
+ },
  "a60588c563fe9ec9": {
   "verdict": "ok",
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "The only BEAST SNAGGA units are Mozrog and the two Beastbosses, and all three are MONSTER + CHARACTER. Meganobz are not BEAST SNAGGA either, so the ability can never switch on."
+ },
+ "a629626640e11c33": {
+  "verdict": "ok",
+  "by": "review:derive (its fix)",
+  "at": "2026-10-23",
+  "why": "'Once per battle round' is right (the text opens with it; the app's onceTag adds ', per army' from 'one model from your army with this ability'). 'Aura' is not: GW does not tag this ability Aura (Wahapedia datasheet world-eaters_Daemon-Prince-of-Khorne: 'Direct the Slaughter: Once per battle round, …', no tag, while the same card tags its real auras), and 22.01 says aura abilities 'are tagged with the word Aura'. The 12\" is the trigger condition for a CP discount on a Stratagem, not an effect on units within range. The deviations-nr.json entries for Direct the Slaughter (princes x2, big-demons-baby) argue only from New Recruit wording and leave out that GW's own card has no tag."
  },
  "a63ab251c342c33b": {
   "verdict": "ok",
@@ -6845,6 +6893,12 @@
   "at": "2026-10-16",
   "why": "NR: Aviarch + 2 Enlightened, Divining spear x3."
  },
+ "a7bcf41c25496882": {
+  "verdict": "ok",
+  "by": "review:derive",
+  "at": "2026-10-23",
+  "why": "The text opens 'Once per turn, when you target this model with a stratagem…' (Wahapedia). No range."
+ },
  "a7fe6e9b31f9522e": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -6904,6 +6958,12 @@
   "by": "review:hurrdurr (its fix)",
   "at": "2026-10-16",
   "why": "TARGET is \"That WORLD EATERS CHARACTER unit\" (no EPIC HERO exclusion, so Khârn is rightly included); faction keyword missing. No change in who is offered in this army."
+ },
+ "aa28911a6a85539b": {
+  "verdict": "ok",
+  "by": "review:derive (its fix)",
+  "at": "2026-10-23",
+  "why": "'Once per battle round' is exact (Tyranids Faction Pack 14-10 change text). 'Aura' is not on GW's card: Wahapedia tyranids_Hive-Tyrant prints 'Will of the Hive Mind:' with no tag next to 'Onslaught (Aura, Psychic)', and the pack's new text has none either. It is a CP discount when a unit within 12\" is targeted with a Stratagem, the same as Direct the Slaughter. The deviations-nr.json entry (hive-tyrant) is wrong for the same reason."
  },
  "aa391c48d5ea17c6": {
   "verdict": "ok",
@@ -6982,6 +7042,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "\"targets an enemy unit (excluding MONSTERS and VEHICLES), that attack has the [DEVASTATING WOUNDS] ability\": ranged only, condition and effect exact."
+ },
+ "ac0320d1ad5b083f": {
+  "verdict": "ok",
+  "by": "review:derive",
+  "at": "2026-10-23",
+  "why": "The text opens 'Once per battle, at the start of the Fight phase…' (Wahapedia emperors-children_Lord-Exultant, New Recruit)."
  },
  "ac29be93a958f89b": {
   "verdict": "ok",
@@ -7126,6 +7192,12 @@
   "by": "review:r10-superterm",
   "at": "2026-10-21",
   "why": "WHEN: \"Fight phase\", with no \"your\" or \"your opponent’s\", so either turn."
+ },
+ "af2215338e8d56ad": {
+  "verdict": "ok",
+  "by": "review:derive (its fix)",
+  "at": "2026-10-23",
+  "why": "turns:{shooting:'opp'} is a derive.js misread. The rule `targeted` (/an attack that targets … that unit/) matches 'each time this model makes an attack that targets that unit', where 'that unit' is the selected ENEMY unit. That sentence is this model's own attacks (any-attack: your Shooting phase and the Fight phase), and the Norn Emissary has 18\" Psychic Tendril ranged weapons, so its own Shooting phase is the main use. The objective option (Feel No Pain 5+) adds the opponent's Shooting phase and the Fight phase. Together: shooting in both turns, so no turns override. Command is right (the choice is made at the start of the first battle round, before the Command phase). Moving the old tag to at:'Start of the first battle round' is right. The same misread applies to all four Singular Purpose copies (Norn Emissary and Norn Assimilator, data.js ~2799/2832/2865/2900)."
  },
  "af265ebea3742653": {
   "verdict": "ok",
@@ -8590,6 +8662,12 @@
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "NR Options \"Maulerfiend fists, 2 magma cutters (2x Magma cutter)\"; rows \"Magma cutter (x2)\", \"Maulerfiend fists\"."
+ },
+ "d5b0cdbc119cec53": {
+  "verdict": "ok",
+  "by": "review:derive",
+  "at": "2026-10-23",
+  "why": "GW names it 'Final Howl (Aura)' (Wahapedia Houndpack Lance enhancements), and it is a standing effect on friendly War Dogs within 6\" of the bearer. 'Enhancement · Aura' is exact, and the deviations-nr.json entry for it is right."
  },
  "d5bf0782f33379a7": {
   "verdict": "ok",
