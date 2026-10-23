@@ -32,6 +32,7 @@ existing faction in `data.js` (e.g. `tyranids`):
 
 - `armyRules`: `{ name, text, tag?, ph?, turn?, at?, remind? }`
 - a detachment `'<id>': { name, dp, rule:{ name, text, needs? }, enhancements:[{ name, pts, text, upgrade? }], stratagems:[…] }`
+  (`nr`: an enhancement's name as New Recruit and BSData spell it, where it differs from GW's: "Incandeum" for "Incandaeum")
 - a stratagem `{ id, gist, name, cp, phases, turn, needs, when, target, effect, mod?, def?, note? }`
   - `when` / `target` / `effect`: the printed words, with the markup the app uses (`**bold**` for keywords
     and rules terms as Wahapedia bolds them, `- ` bullets)

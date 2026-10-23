@@ -1,0 +1,9 @@
+[
+ {
+  "key": "1f3900a4b053e14e",
+  "where": "Warpmeld Pact rule · Warpmeld Sacrifice",
+  "verdict": "ok",
+  "why": "Fire Overwatch is shooting by a selected-to-shoot unit. Its EFFECT is \"Your unit shoots using snap shooting\", and snap shooting is a shooting type (15.09: \"Your unit shoots as described in Making Attacks (04)\"). Shooting types are what a unit that is \"selected to shoot\" resolves. Making Attacks (04) has \"the active player\" resolve every shot, and in the opponent's turn only 01.03 makes the overwatching player active: \"Each time a unit is selected to shoot or selected to fight, that unit’s controlling player is the active player until those attacks are resolved.\" Warpmeld Sacrifice names no phase, so it is not phase-locked (07.02.01). It therefore triggers in Fire Overwatch: the own-attacks part in the opponent's Movement phase, and the targeted part when the enemy overwatches in your Movement phase. ph ['movement','shooting','fight'] with turn 'either' is correct. The Core Rules never say outright that a Fire Overwatch unit is \"selected to shoot\", but the active-player rule only works if it is. This matches result-knights-nids.json.",
+  "fix": null
+ }
+]

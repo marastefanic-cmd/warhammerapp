@@ -407,18 +407,19 @@ function parseStats(sec) {
   const rows = [], others = [];
   for (const { i, t } of sec.lines) {
     if (!t.trim()) continue;
-    const m = /^(.*?\S)\s+(\d+"|-)\s+(\d+)\s+(\d\+|-)\s+(\d+)\s+(\d\+|-)\s+(\d+)((?:\s+\S+)*)$/.exec(t);
+    // (a values line can have no name on it: an attached unit's long "<model> - <unit>" name wraps above and below it)
+    const m = /^\s*(?:(.*?\S)\s+)?(\d+"|-)\s+(\d+)\s+(\d\+|-)\s+(\d+)\s+(\d\+|-)\s+(\d+)((?:\s+\S+)*)$/.exec(t);
     if (!m) { others.push({ i, t: t.trim() }); continue; }
     const rest = m[8].trim() ? m[8].trim().split(/\s+/) : [];
     let InSv = '', Base = '';
     if (rest.length === 2) [InSv, Base] = rest;
     else if (rest.length === 1) { if (/^\d\+\*?$/.test(rest[0])) InSv = rest[0]; else Base = rest[0]; }
     else if (rest.length > 2) throw new Error('stat row with too many cells: ' + t.trim());
-    rows.push({ i, name: m[1].trim(), M: m[2], T: m[3], Sv: m[4], W: m[5], LD: m[6], OC: m[7], InSv, Base });
+    rows.push({ i, name: (m[1] || '').trim(), M: m[2], T: m[3], Sv: m[4], W: m[5], LD: m[6], OC: m[7], InSv, Base });
   }
-  const pieces = (k, idx) => [...idx.map(ii => others.find(x => x.i === ii)), { i: rows[k].i, t: rows[k].name }];
-  const given = distribute(rows.map(r => ({ centre: r.i, own: [r.i] })), others.map(x => x.i),
-    { penalty: (k, idx) => cellPenalty(cellText(pieces(k, idx))) });
+  const pieces = (k, idx) => [...idx.map(ii => others.find(x => x.i === ii)), ...(rows[k].name ? [{ i: rows[k].i, t: rows[k].name }] : [])];
+  const given = distribute(rows.map(r => ({ centre: r.i, own: r.name ? [r.i] : [] })), others.map(x => x.i),
+    { emptyCost: 5, penalty: (k, idx) => cellPenalty(cellText(pieces(k, idx)), { required: true }) });
   rows.forEach((r, k) => { r.name = cellText(pieces(k, given[k])); delete r.i; });
   return rows;
 }
@@ -470,9 +471,18 @@ function parseTable(sec, who) {
   const lines = sec.lines.filter(x => x.t.trim());
   const pure = lines.filter(x => indentOf(x.t) > hdrCol + 6).map(x => indentOf(x.t));
   const descCol = Math.min(col2, ...pure);
+  // A block of rows can set its description a few columns off the header's (Tzaangor Shaman: "Bestial Prophet -      While …"
+  // right of it, Malign Trickery: "Malign Trickery -         In your …" left of it): a gap of 3+ spaces near the column is where
+  // that line's description starts, and the next line without such a gap is split at the same column when a word starts there
+  // ("with Fatecaster greatbows unit can make …", "Tzaangor Shaman phase, add D3 …")
+  const gapAt = t => { const w = words(t); for (let x = 1; x < w.length; x++) if (w[x].s - w[x - 1].e >= 3 && w[x].s >= hdrCol + 8 && w[x].s <= descCol + 12) return w[x].s; return null; };
+  let lastCol = null;
   const rows = lines.map(({ i, t }) => {
-    if (indentOf(t) > hdrCol + 6) return { i, L: '', R: t.trim(), atCol: indentOf(t) === descCol };
-    const s = splitAt(t, descCol);
+    if (indentOf(t) > hdrCol + 6) { lastCol = null; return { i, L: '', R: t.trim(), atCol: indentOf(t) === descCol }; }
+    const g = gapAt(t);
+    const col = g !== null ? g : (lastCol !== null && words(t).some(w => w.s === lastCol) ? lastCol : descCol);
+    lastCol = g;
+    const s = splitAt(t, col);
     return { i, L: s.L, R: s.R };
   });
   const segs = partitionRows(rows, who);
@@ -614,6 +624,14 @@ function nrAbility(name, who) {
   const m = /^(.*?)\s*\(([^()]*)\)$/.exec(t);
   return { full: t, base: m ? m[1] : t, paren: m ? m[2] : null, who: w };
 }
+// an enhancement New Recruit spells otherwise than GW (data.js enhancement `nr`: "Incandeum" for "Incandaeum"):
+// New Recruit's spelling -> GW's, for the faction(s) whose enhancement names were asked for
+const ENH_SPELL = new Map();
+function enhNamesOf(F) {
+  const es = Object.values(F.detachments).flatMap(d => d.enhancements || []);
+  for (const e of es) if (e.nr) ENH_SPELL.set(lc(nm(e.nr)), e.name);
+  return es.flatMap(e => e.nr ? [e.name, e.nr] : [e.name]);
+}
 // option items of one model line
 function nrOptions(items, enhNames) {
   const r = { warlord: false, leads: null, support: false, enhancement: null, gear: [] };
@@ -623,7 +641,7 @@ function nrOptions(items, enhNames) {
     let m;
     if (it === 'Warlord') r.warlord = true;
     else if ((m = /^•\s*(Leading|Supporting):\s*(.+?)(\[\d+\])?$/.exec(it))) { r.leads = m[2]; r.support = m[1] === 'Supporting'; }
-    else if (enh.has(lc(it))) { r.enhancement = it; r.enhItem = it; }
+    else if (enh.has(lc(it))) { r.enhancement = ENH_SPELL.has(lc(it)) ? nm(ENH_SPELL.get(lc(it))) : it; r.enhItem = it; }
     else {
       // "Ectoplasma cannon and claws (Ectoplasma cannon, Forgefiend claws)" counts as its weapons; "2x Weapon" as Weapon
       const g = /^.*?\((.*)\)$/.exec(it);
@@ -641,7 +659,7 @@ const kwRule = k => lc(k).replace(/:.*$/, '').replace(/^anti-.*$/, 'anti').repla
 // ---------------------------------------------------------------- per army
 function compareArmy(D, A, nr, out, srcFile) {
   const F = D.factions[A.faction];
-  const enhNames = Object.values(F.detachments).flatMap(d => (d.enhancements || []).map(e => e.name));
+  const enhNames = enhNamesOf(F);
   const where = p => path.relative(ROOT, srcFile) + (p ? ' p' + p : '');
   const fail = (unit, field, app, source, page) => out.failures.push({ army: A.id, unit, field, app: app === undefined ? null : app, source: source === undefined ? null : source, where: where(page) });
   const chk = (cat, n = 1) => { out.checked[cat] = (out.checked[cat] || 0) + n; };
@@ -869,6 +887,7 @@ function compareUnit(nu, au, enhNames, { fail, chk, cmp, armyRuleNames = new Set
   const appA = (au.abilities || []).map(x => ({ name: nm(x.name), who: x.who ? nm(x.who) : null, tag: x.tag ? nm(x.tag) : null, x }));
   const nrA = [];
   for (const t of nu.tables) for (const r of t.rows) nrA.push(Object.assign(nrAbility(r.name, nu.who), { table: t.name, col2: t.col2, text: r.text }));
+  for (const na of nrA) { const g = ENH_SPELL.get(lc(na.base)); if (g) { if (na.full === na.base) na.full = nm(g); na.base = nm(g); } }
   const used = new Set();
   const nrKeys = [];
   for (const na of nrA) {
@@ -916,14 +935,14 @@ function compareUnit(nu, au, enhNames, { fail, chk, cmp, armyRuleNames = new Set
 }
 
 // the same readings for verify/import-nr.js, so the importer writes what this file checks
-Object.assign(module.exports, { nrOptions, nrWeapon, nrStatName, nrAbility, nrDetachments, splitItems, nm, lc, q, cellV, appText, textEq, compareArmy });
+Object.assign(module.exports, { enhNamesOf, nrOptions, nrWeapon, nrStatName, nrAbility, nrDetachments, splitItems, nm, lc, q, cellV, appText, textEq, compareArmy });
 
 // ---------------------------------------------------------------- main
 function main(args) {
   const ctx = { window: {} }; vm.createContext(ctx);
   vm.runInContext(fs.readFileSync(args.data, 'utf8'), ctx);
   const D = ctx.window.WH_DATA;
-  const enhOf = A => Object.values(D.factions[A.faction].detachments).flatMap(d => (d.enhancements || []).map(e => e.name));
+  const enhOf = A => enhNamesOf(D.factions[A.faction]);
   if (args.dump) {
     const A = D.armies.find(x => x.id === args.dump);
     console.log(JSON.stringify(parseNR(path.join(args.sources, args.dump + '.txt'), enhOf(A)), null, 1));

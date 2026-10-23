@@ -125,6 +125,12 @@
   "at": "2026-10-21",
   "why": "Same numbers as signed off in r20: hitMinus 1 for attacks that target him, lasts 'round' (“until the start of your next turn”). Still no defAlways, so the Damage tab offers it unticked, which fits “can make a pulse jet move” and the Full Throttle pick."
  },
+ "037b88d71538b9f8": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight”: Shooting your turn, Fight either."
+ },
  "039302018ddab078": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -166,6 +172,12 @@
   "by": "review:r9-we-nids",
   "at": "2026-10-21",
   "why": "NR (standard p4) prints \"Driven by Ultimate Rage (Aura)\" in the \"Wrathful Presence | Effect\" table of the one-model Angron unit; Wrathful Presence: \"select one Wrathful Presence ability ... this model has that ability\"."
+ },
+ "047e5e9b10c71e20": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“Until the end of the phase, models in your unit have a 4+ invulnerable save”; phases as the WHEN says."
  },
  "0489b9cfa23288ca": {
   "verdict": "ok",
@@ -299,6 +311,12 @@
   "at": "2026-10-21",
   "why": "On Canticles of the Omnissiah it finds Invocation of Machine Vengeance, Mantra of Discipline (with its “- **Binharic Courage (Aura):** …” line) and Shroudpsalm (Aura). On Icon of War it finds Fanatical Devotion, Adaptive Tactics and The Fires of Mars. These are the sections’ own bold-named parts, and the lead sentence isn’t taken as an option."
  },
+ "0777707a104d6463": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes (its fix)",
+  "at": "2026-10-23",
+  "why": "The effect's point is “set up anywhere on the battlefield”; the gist drops it, so it reads like the normal Strategic Reserves set-up with a distance. Also “more than 8\"” (not just 8\"), and “until the end of the turn” is the text's. 6\" and 8\" are right after the Rules Update (3\"→6\", 9\"→8\")."
+ },
  "07954ef6d9d07e64": {
   "verdict": "ok",
   "by": "review:woof-woof",
@@ -371,6 +389,12 @@
   "at": "2026-10-17",
   "why": "EFFECT “Your unit makes an ingress move” plus RESTRICTIONS “You cannot use this stratagem during the first battle round.” Same; “in strategic reserves” is from the TARGET."
  },
+ "09018edd67259b09": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Wahapedia: “Every model is equipped with: heavy warpflamer; hellfyre missile rack; pyreflux meltagun; close combat weapon.” New Recruit: 2× Sekhetar Robot with Close combat weapon, Heavy warpflamer, Hellfyre missile rack, Pyreflux meltagun. ×2 each."
+ },
  "09187654343d9487": {
   "verdict": "ok",
   "by": "review:r9-knights",
@@ -413,11 +437,23 @@
   "at": "2026-10-22",
   "why": "WHEN: \"Command phase.\""
  },
+ "09bfd0fa9b8dc85a": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "The Disc's own ability (“after this model has shot … made with Arcane Fire”); Arcane Fire is his."
+ },
  "09f889140f55da33": {
   "verdict": "ok",
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "Ranged attacks only; every unit is TITANIC so none can Fire Overwatch (\"excluding TITANIC units\"), leaving only your Shooting phase."
+ },
+ "0a3bad53e44646aa": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Keeps the WHEN/TARGET (just after an enemy unit selects your unit as a target) and “until the end of the phase … models in your unit”."
  },
  "0a46878ac578653c": {
   "verdict": "ok",
@@ -521,6 +557,12 @@
   "at": "2026-10-17",
   "why": "“In your Shooting phase, you can select one friendly ORKS WALKER unit within 3\" of this model. That unit’s attacks can re-roll hit rolls of 1 until the end of the turn.” That covers your Shooting phase and, through “until the end of the turn”, your Fight phase. No core rule gives attacks in the Charge phase. The other bullet, “This model has Lone Operative”, is carried by the ability’s own def line (“Lone Operative while within 3\" of a friendly ORKS WALKER unit (not BIG MEK)”), which shows under “When targeted” in their Shooting and Fight phases. The app’s other Lone Operative abilities (Lord of Murder, Da Grand Warlord’s Ladz) also have no phase tag."
  },
+ "0bd7f1f824fa0685": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“Your opponent’s Shooting phase”: shooting is their turn only."
+ },
  "0bff2841140fb5a4": {
   "verdict": "ok",
   "by": "review:r13-calc-marks",
@@ -544,6 +586,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "Their turn."
+ },
+ "0cdae548b1769f3d": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“WHEN: Fight phase”."
  },
  "0d16f5c226759018": {
   "verdict": "ok",
@@ -761,6 +809,18 @@
   "at": "2026-10-23",
   "why": "\"Each time this model makes a melee attack that targets a CHARACTER unit\": melee, in either player's Fight phase."
  },
+ "13e76bbc59bdb004": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“When a friendly THOUSAND SONS PSYKER unit … successfully manifests a Ritual”; Rituals are attempted “at the start of your Shooting phase” (Cabal of Sorcerers, Rules Update)."
+ },
+ "13fe6aa89ee63846": {
+  "verdict": "ok",
+  "by": "review:pubstomper",
+  "at": "2026-10-23",
+  "why": "NR \"Rebind Rubricae (Psychic) - Exalted Sorcerer\"; \"if this model is leading a unit\" = the Exalted Sorcerer's own ability. Model lines match NR."
+ },
  "1465a561e896e637": {
   "verdict": "ok",
   "by": "review:infernal-lance",
@@ -778,6 +838,12 @@
   "by": "review:r7-text",
   "at": "2026-10-17",
   "why": "Source (New Recruit, shooty.txt line 234): the table heading reads \"Throttlerokkit Shokka Engine Description\" above Turbo Engine, Pulse Jet and Shokk Attack Engine. Full Throttle (line 232) calls them \"one Throttlerokkit Shokka Engine ability\". \"Throttlerokkit Shokka Engine\" is that heading, copied with nothing added; dropping \"pick one\" removed the app's own summary. models \"1× Wazdakka Gutsmek\" matches \"1x Wazdakka Gutsmek\" (line 219)."
+ },
+ "14c01af7f002b9ff": {
+  "verdict": "ok",
+  "by": "review:pubstomper",
+  "at": "2026-10-23",
+  "why": "Grand Coven enhancement (GW Faction Pack Rules Update \"Grand Coven Detachment, Incandaeum Enhancement\"; Wahapedia \"Incandaeum 15 pts\"); NR lists it first in the Exalted Sorcerer's options (spelled \"Incandeum\"), and 115 = 100 + 15. The text is the Rules Update's word for word (\"have already attempted\"), the GW spelling of the name kept; NR's \"Incandeum\"/\"has\" are its own."
  },
  "14c95468bca6f429": {
   "verdict": "ok",
@@ -839,11 +905,23 @@
   "at": "2026-10-21",
   "why": "NR \"Marked by Fate (Psychic) - Sorcerer in Terminator Armour\"; \"this PSYKER model\" = that Sorcerer. Model lines match NR."
  },
+ "171dc5c7552b4572": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“WHEN: Your Command phase.”"
+ },
  "17369ac9a4a5482c": {
   "verdict": "ok",
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "NR roster: \"Big Mek in Mega Armour Character 115\" and \"(5) Meganobz Infantry 175 Big Mek in Mega Armour\"; header \"290 PTS\". 115 + 175 = 290."
+ },
+ "17b184e71d966a00": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“WHEN: Start of your Movement phase.”"
  },
  "17c493ac935599c7": {
   "verdict": "ok",
@@ -965,6 +1043,12 @@
   "at": "2026-10-21",
   "why": "Same Thundercharge condition (\"equipped with a thundershock spear and a bellatus reaper chainsword\"); this Destrier has \"Sanctuary, Questoris heavy stubber, Titanic feet, Chastiser gatling cannon, Frag bombard\" (NR p6), so it does not apply."
  },
+ "1a80b2d2c0722982": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "New Recruit: Disc 95 + Fatecasters 110 = 205."
+ },
  "1ad5c7528c89ec8c": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -1025,6 +1109,12 @@
   "at": "2026-10-21",
   "why": "“Protector Protocol: Add 2 to the Attacks characteristic of ranged weapons equipped by KASTELAN ROBOT models in that unit.” The Robots’ only ranged weapon here is the Incendine combustor (A D6, so D6+2). The Datasmith’s pistol is rightly left out. Protocols are picked “In your Command phase”."
  },
+ "1c6d25ea58dc55b4": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“Your opponent’s Shooting phase or the Fight phase”."
+ },
  "1c8025941c34696f": {
   "verdict": "ok",
   "by": "review:r11-purge-units",
@@ -1066,6 +1156,12 @@
   "by": "review:woof-woof",
   "at": "2026-10-22",
   "why": "TARGET: “Two or more WAR DOG units from your army”."
+ },
+ "1d3a9da100a61f34": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“One TZEENTCH MUTANT unit from your army that is arriving from Strategic Reserves”."
  },
  "1d68fa71eab6355a": {
   "verdict": "ok",
@@ -1133,6 +1229,12 @@
   "at": "2026-10-21",
   "why": "Listed in NR's \"Crimson King\" sub-table of Magnus (one model)."
  },
+ "1f3900a4b053e14e": {
+  "verdict": "ok",
+  "by": "review:mucho-2",
+  "at": "2026-10-23",
+  "why": "Fire Overwatch is shooting by a selected-to-shoot unit. Its EFFECT is \"Your unit shoots using snap shooting\", and snap shooting is a shooting type (15.09: \"Your unit shoots as described in Making Attacks (04)\"). Shooting types are what a unit that is \"selected to shoot\" resolves. Making Attacks (04) has \"the active player\" resolve every shot, and in the opponent's turn only 01.03 makes the overwatching player active: \"Each time a unit is selected to shoot or selected to fight, that unit’s controlling player is the active player until those attacks are resolved.\" Warpmeld Sacrifice names no phase, so it is not phase-locked (07.02.01). It therefore triggers in Fire Overwatch: the own-attacks part in the opponent's Movement phase, and the targeted part when the enemy overwatches in your Movement phase. ph ['movement','shooting','fight'] with turn 'either' is correct. The Core Rules never say outright that a Fire Overwatch unit is \"selected to shoot\", but the active-player rule only works if it is. This matches result-knights-nids.json."
+ },
  "1f60647795b8073c": {
   "verdict": "ok",
   "by": "review:literal",
@@ -1174,6 +1276,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "Fight phase of either turn."
+ },
+ "20c4d6421602ed64": {
+  "verdict": "ok",
+  "by": "review:pubstomper",
+  "at": "2026-10-23",
+  "why": "NR roster: Exalted Sorcerer 115 (Wahapedia 100 + Incandaeum 15), (5) Rubric Marines 115; card 230 PTS = pts 230. The enhancement inside the leader's number, as in \"140 + Scarab Occult Terminators 425\"."
  },
  "20ca783c453305ad": {
   "verdict": "ok",
@@ -1247,6 +1355,12 @@
   "at": "2026-10-16",
   "why": "\"lead\", \"leading\", \"support\" only occur in the Leader/Attached Units texts; the printed heading is \"LEADER 24.22 / SUPPORT 24.34\" (Support: \"See Attached Units (19)\") with this same text."
  },
+ "21eb2b6d9fb15359": {
+  "verdict": "ok",
+  "by": "review:pubstomper",
+  "at": "2026-10-23",
+  "why": "Wahapedia datasheet and NR: \"Rebind Rubricae (Psychic)\"."
+ },
  "22049e22285d487e": {
   "verdict": "ok",
   "by": "review:r9-knights",
@@ -1270,6 +1384,12 @@
   "by": "review:r23-army",
   "at": "2026-10-22",
   "why": "Wahapedia’s Scarab Occult Terminators: “ARMY RULES Cabal of Sorcerers (Scarab Occult Sorcerer only)”; the Sorcerer in Terminator Armour’s own datasheet: “ARMY RULES Cabal of Sorcerers”. In this attached unit exactly those two models have it; the datasheet names them after the rule."
+ },
+ "22882f03eb839c8c": {
+  "verdict": "ok",
+  "by": "review:pubstomper",
+  "at": "2026-10-23",
+  "why": "NR \"Incandeum - Exalted Sorcerer\"; \"EXALTED SORCERER model only … the bearer\" = the Exalted Sorcerer. Model lines match NR."
  },
  "231379af293895c5": {
   "verdict": "ok",
@@ -1348,6 +1468,12 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "“Your unit can shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target.”: the gist says that."
+ },
+ "24fe9149caf136cd": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "The Faction Pack 1.3 FAQ as printed (“A: No.”); the list has Tzaangors with Ambushing Hunters."
  },
  "251b4f1c1a3e255b": {
   "verdict": "ok",
@@ -1535,6 +1661,12 @@
   "at": "2026-10-17",
   "why": "“In your Shooting phase”: your turn (Gun-crazy Show-offs shooting in their turn is outside it)."
  },
+ "285f5a45a32b5866": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Tzaangor Shaman 65 + Curse of Life 20 = 85 (New Recruit 85), Tzaangor Enlightened 90; 175."
+ },
  "286f30ecd176b339": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -1582,6 +1714,12 @@
   "by": "review:r23-army",
   "at": "2026-10-22",
   "why": "WHEN “Any phase, when an enemy unit has attacked” = “After an enemy unit has attacked”; TARGET “One friendly GRETCHIN unit that was just destroyed” = “your just-destroyed unit”; EFFECT “Add a new GRETCHIN unit to your army identical to your destroyed unit, in strategic reserves, at its starting strength, with its full wounds remaining” = the rest (the full-wounds clause is effect detail, not a condition, and was left to the text in the signed-off gist)."
+ },
+ "2984cefe1221870b": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "The Faction Pack 1.3 FAQ, question and answer as printed (“A: No, you may decide later in the turn.”): a quoted GW FAQ, as other notes in the app."
  },
  "2998a9cfd4b75570": {
   "verdict": "ok",
@@ -1708,6 +1846,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "NR: \"Domination of the Hive Mind (Aura)\"."
+ },
+ "2cf592eb5e88f8cc": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "New Recruit: “Mutant*, Tzaangor Enlightened*, Tzaangor Enlightened with Fatecaster Greatbows*, *from combined unit”; Wahapedia Disc keywords have no MUTANT."
  },
  "2d1eaca8609e1bcf": {
   "verdict": "ok",
@@ -1937,6 +2081,12 @@
   "at": "2026-10-16",
   "why": "True. NR prints the tendril profiles \"(Destabilising Predation)\" with \"Anti-Character 2+\"; the second Emissary (no enhancement) lacks it."
  },
+ "334ae6a5ff412542": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "The effect word for word."
+ },
  "334c67a51959573a": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -1960,6 +2110,12 @@
   "by": "review:big-demons-baby",
   "at": "2026-10-23",
   "why": "New Recruit \"Daemon Lord of Khorne (Aura)\", Wahapedia \"(Aura)\"."
+ },
+ "33fd22b16d34f394": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Keeps the WHEN (suffers a mortal wound) and the effect's “against mortal wounds”; the target keywords are the needs."
  },
  "3419a390c2c27281": {
   "verdict": "ok",
@@ -2027,6 +2183,12 @@
   "at": "2026-10-20",
   "why": "NR prints 'Arrogant Invulnerability - Meganobz' (l.71); BSData profile is on the Meganobz unit. Models match NR."
  },
+ "365988ef4ec55eb7": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“a friendly INFANTRY/MOUNTED THOUSAND SONS PSYKER unit”: unit-level; the Ahriman/Disc/Shaman units qualify (PSYKER leader, MOUNTED), Magnus and the Daemon Prince do not (MONSTER, no INFANTRY/MOUNTED)."
+ },
  "369e1c45c684d79f": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -2056,6 +2218,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "\"consolidation mode\", \"Consolidation move\"; 12.08."
+ },
+ "3717e6d2a9e9f671": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "TARGET: “One THOUSAND SONS PSYKER model … and one friendly TZAANGORS unit”: either half of the target is a unit of the list, so shown on PSYKER units (Magnus, Daemon Prince, the led units) and on the Tzaangors."
  },
  "3760fbf478878852": {
   "verdict": "ok",
@@ -2177,6 +2345,12 @@
   "at": "2026-10-17",
   "why": "“WHEN: Your Shooting phase”: your turn."
  },
+ "3a23c7ae4bb47824": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“WHEN: Reinforcements step of your Movement phase.”"
+ },
  "3a2f55e77f30de6d": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -2284,6 +2458,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "\"In the Fight phase, if this unit is riled up, this unit has +1 to hit rolls\". Fight-phase attacks are melee. [restored: the same judgement on the same text, signed off for an earlier list]"
+ },
+ "3c55794ca197e2ab": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Your Command phase."
  },
  "3c8515334f4840e1": {
   "verdict": "ok",
@@ -2441,6 +2621,12 @@
   "at": "2026-10-16",
   "why": "\"once per battle ... you can unleash the Shadow in the Warp\": the player unleashes it once, and it is shown once, as an army rule, not on each unit."
  },
+ "40412209e87ae258": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Wahapedia and New Recruit: “Arch-Sorcerer of Tzeentch (Psychic)”."
+ },
  "4041ac8f82888c91": {
   "verdict": "ok",
   "by": "review:r14-cond",
@@ -2488,6 +2674,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "WHEN: \"Your opponent’s Movement phase\"."
+ },
+ "414f9c27f36dbed4": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "The Shaman's ability; its effect reaches every model of the led unit (see the footnote)."
  },
  "416a5f9b81853e1a": {
   "verdict": "ok",
@@ -2542,6 +2734,12 @@
   "by": "review:m5-recheck",
   "at": "2026-10-20",
   "why": "NR prints 'Shokk-boosta - Big Mek' (l.124); BSData profile is on the Big Mek model. Models match NR: 1x Big Mek (Leading: Nobz), 1x Painboy (Supporting: Nobz), 8x Nob w/ Kustom Shoota and Kustom Krumpa, 2x Nob w/ Kustom Krumpa and Paired Krumpas. The '(Paired Krumpas)' suffix follows nr.js's convention for non-weapon wargear."
+ },
+ "41e6a7e1dc29827c": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Wahapedia: Ahriman “INFANTRY; MOUNTED; … PSYKER”; Fatecaster Enlightened “MOUNTED; FLY; CHAOS; TZEENTCH; MUTANT; …”, no INFANTRY or PSYKER."
  },
  "41f5c3fc3d84f28e": {
   "verdict": "ok",
@@ -2638,6 +2836,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "Matches NR: 10× Grot Blasta, 10× Scavenged Shivs."
+ },
+ "4427fde92e0ac639": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "The text opens “(Once per turn, per unit)”."
  },
  "4472ae2c5333a268": {
   "verdict": "ok",
@@ -2747,6 +2951,12 @@
   "at": "2026-10-16",
   "why": "\"WHEN: Your Command phase\"."
  },
+ "4777c00b7b396028": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“One TZAANGORS unit from your army”: the two Tzaangors units."
+ },
  "47ba1fece642e216": {
   "verdict": "ok",
   "by": "review:r14-cond",
@@ -2825,6 +3035,12 @@
   "at": "2026-10-16",
   "why": "\"every A value\" is not literally true: ranged A values (pistols, autocannons) do not and should not include it; the rule is \"melee attacks have +1 A\"."
  },
+ "49a00874319b183a": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“One TZEENTCH MUTANT unit from your army”."
+ },
  "4a1e7204bd251a77": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -2836,6 +3052,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "+1 S applies to melee attacks (Fight phase); a charge move can be made in either turn (Heroic Intervention), so either turn is right."
+ },
+ "4a5f3630972ee8f2": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“One friendly engaged THOUSAND SONS PSYKER unit”: TS + PSYKER (engaged is a table state, in the gist)."
  },
  "4a6bd8d7bd9b20df": {
   "verdict": "ok",
@@ -3053,6 +3275,12 @@
   "at": "2026-10-22",
   "why": "\"Each time a model in this unit targets an enemy unit with a melee attack, re-roll a Wound roll of 1\": every melee attack of the attached unit (19.04 FAQ)."
  },
+ "4ef23def31b046de": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Same TARGET as Relentless Rebirth: INFANTRY/MOUNTED THOUSAND SONS PSYKER unit."
+ },
  "4efde77a998f7403": {
   "verdict": "ok",
   "by": "review:m1-strats",
@@ -3118,6 +3346,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "\"At the start of your Command phase, if this model is on the battlefield, you gain 1CP\"."
+ },
+ "51a107ce3fb86e22": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Prophesied Doom is the Tzaangor Enlightened datasheet's ability."
  },
  "51a1cd0f752d4cf4": {
   "verdict": "ok",
@@ -3197,11 +3431,23 @@
   "at": "2026-10-21",
   "why": "It matches the words that ask for a pick: “select one” (Doctrina, Code Chivalric’s “select one Deed”, Kindred Sorcery, Singular Purpose, Wrathful Presence, Unearthly Power, Full Throttle, Canticles, Rod of the War Forge, Battle Protocols) and Blessings of Khorne’s “activate up to two”. Unit-only picks it also matches (Omnissiah’s Blessing, Dreadherder, …) are dropped later by gcLasts/gcOptions."
  },
+ "53b14315bcfc2b0d": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Fire Overwatch: “WHEN: End of your opponent’s Movement phase”; Heroic Intervention: “WHEN: End of your opponent’s Charge phase” (core 15.08, 15.11). The ability works only when targeting this unit with those two, so their Movement and Charge phases. Text is the pack's Rules Update."
+ },
  "53c6814a6f373472": {
   "verdict": "ok",
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "WHEN: \"Any phase, when a friendly NORN ASSIMILATOR unit suffers a mortal wound.\""
+ },
+ "53f9e87729f2a75d": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“Your Movement phase”."
  },
  "54071d68dfae3f21": {
   "verdict": "ok",
@@ -3214,6 +3460,12 @@
   "by": "review:r11-misc",
   "at": "2026-10-21",
   "why": "I ran it on every unit ability in data.js and compared with the same code without the restriction strip. The only change is Necromechanic (\"**TECH-PRIEST** model only. Once per battle round, when a saving throw … is failed\"), now tagged \"Once per battle round\", which is correct. Every other enhancement that starts \"model only.\" still gets no tag. The strip removes only the leading restriction, and a tag still needs \"Once per\" at the start of the next sentence."
+ },
+ "543e6ae95f0ec502": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll.” No who: every model of the unit, the Shaman included; always while leading."
  },
  "54631371c46e761a": {
   "verdict": "ok",
@@ -3323,6 +3575,12 @@
   "at": "2026-10-17",
   "why": "“While a model is affected by this ability, … melee weapons equipped by that model have the [LANCE] ability” (kind melee). Bondsman: “select one friendly ARMIGER model within 12\" of that model”, so the filter is the ARMIGER keyword copied from that text. The ‘not itself’ exclusion (notSelf) is gone. The (Bondsman) label is printed in the ability name (settled)."
  },
+ "56495bb6de2b5c6c": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "New Recruit categories: “Mutant*, Tzaangor Enlightened*, Tzaangor Enlightened with Fatecaster Greatbows*, *from combined unit”; Wahapedia Ahriman has no MUTANT."
+ },
  "568bc755fedfbd58": {
   "verdict": "ok",
   "by": "review:code2",
@@ -3407,6 +3665,12 @@
   "at": "2026-10-17",
   "why": "“Your unit’s ranged attacks have [SUSTAINED HITS 1]”, WHEN “Your Shooting phase”: same."
  },
+ "58ec3016f716242e": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“selected to make an advance/fall back move … That move does not prevent your unit from being eligible to start an action.” The WHEN is in “advance or fall back move”."
+ },
  "58f5b90e7aaa9b10": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -3436,6 +3700,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "Labels: Firing Deck 2 (Chaos Rhino), Firing Deck X; 24.14."
+ },
+ "596771c0f7b0602c": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "New Recruit: only Tzaangor Enlightened is “*from combined unit”."
  },
  "596bbe4cb3d1d0f1": {
   "verdict": "ok",
@@ -3563,11 +3833,23 @@
   "at": "2026-10-21",
   "why": "WHEN: “Your Charge phase”: your turn."
  },
+ "5df7ecf601b79724": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“a friendly THOUSAND SONS PSYKER unit (excluding MONSTER units)”: a rule about units, so the led units with a PSYKER leader count; Magnus and the Daemon Prince are MONSTER."
+ },
  "5e01097337937bb8": {
   "verdict": "ok",
   "by": "review:r10-superterm",
   "at": "2026-10-21",
   "why": "Matches New Recruit line for line: Champion and \"1x Paired accursed weapons\" carry Paired accursed weapons (×2); 2× Chainfist, Combi-bolter; 4× Combi-bolter, Power fist; 2× \"Reaper autocannon, Power fist\". That gives Combi-bolter 2+4=6, Reaper autocannon 2, Chainfist 2, Power fist 4+2=6, as New Recruit’s (x6)/(x2)/(x2)/(x2)/(x6)."
+ },
+ "5e433fb70da04630": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“a TZEENTCH MUTANT unit from your army”: unit-level, the led Fatecaster units count (MUTANT from the Enlightened)."
  },
  "5e8bdfc785d66320": {
   "verdict": "ok",
@@ -3622,6 +3904,12 @@
   "by": "review:infernal-lance",
   "at": "2026-10-22",
   "why": "An Infernal Lance enhancement (Wahapedia “Bestial Aspect 30 pts”). NR: “Options: Warlord, Bestial Aspect, …”."
+ },
+ "5f9fd1aac73ee831": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“the Fight phase”: either turn."
  },
  "5fc14251069843f4": {
   "verdict": "ok",
@@ -3700,6 +3988,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "TARGET: \"unengaged BEAST SNAGGA unit…\"."
+ },
+ "6108e6e301811a54": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Any phase, either turn."
  },
  "611c8b6cf344c2c0": {
   "verdict": "ok",
@@ -3797,6 +4091,12 @@
   "at": "2026-10-22",
   "why": "NR prints the selection “Houndpack Lance Character” on the models line and “Character” in Categories; Wahapedia's Brigand KEYWORDS have no CHARACTER. The quote is the detachment rule word for word (“When mustering your army, select three WAR DOG units from your army. Until the end of the battle, those units have the CHARACTER keyword.”), without the Designer's Note, so the note only says where the keyword comes from (kwStars stars CHARACTER and shows “*from Houndpack Lance Character (…)”) and nothing more than the rule."
  },
+ "638a4fdf554bf3dd": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Keeps “engaged” and the effect word for word (“Select one enemy unit engaged with your unit. Roll six D6: For each 4+ … 1 mortal wound”)."
+ },
  "64385370643e5b6e": {
   "verdict": "ok",
   "by": "review:big-demons-baby",
@@ -3808,6 +4108,12 @@
   "by": "review:woof-woof",
   "at": "2026-10-22",
   "why": "Final Howl (Aura) is one of the Houndpack Lance Enhancements (Wahapedia “Enhancements - Final Howl (Aura) 20 pts”); NR lists it in the Brigand's options (155 pts = 135 + 20). Tag Enhancement is right; the “(Aura)” stays in its name."
+ },
+ "647a19681f6e214a": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Cabal of Sorcerers: the Shaman's datasheet; Feel No Pain 4+: “The bearer has” (Flowing Flesh), a model rule."
  },
  "6481a63ec3979d0e": {
   "verdict": "ok",
@@ -3910,6 +4216,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "“This unit’s ranged attacks have: … If this unit is riled up, [SUSTAINED HITS 1].” Same condition, same effect, ranged only."
+ },
+ "673790405b00d4e1": {
+  "verdict": "ok",
+  "by": "review:pubstomper",
+  "at": "2026-10-23",
+  "why": "NR \"Icon of Flame - Rubric Marines\"; the datasheet's \"1 Rubric Marine can be equipped with 1 icon of flame\" and NR name no bearer, so who names the unit (as approved before). Its IGNORES COVER marks are on Malefic Curse and Soulreaper cannon only (native on the warpflamers; the CHARACTER Exalted Sorcerer's weapons excluded, the Aspiring Sorcerer is not a CHARACTER)."
  },
  "674d173afb1f9e49": {
   "verdict": "ok",
@@ -4061,6 +4373,12 @@
   "at": "2026-10-21",
   "why": "It does what the line says. Deep Strike, Scouts and Infiltrators use everyModel, which drops partialRules keys, matching 24.09/24.20/24.31 \"if every model in a unit has this ability\" (Slaughterbound left out; Eightbound and Goremongers listed as \"Scouts and Infiltrators\"). Code Chivalric \"Deed, Quality\" is dropped via ruleParts. START (/start of the battle\\b(?! round)/) catches only Code Chivalric Deed 1–2 (\"At the start of the battle, select one CHARACTER\") and Battle Protocols (\"At the start of the battle, ... enters Aegis Protocols\"), under a \"Start of the battle\" row as the digest asked."
  },
+ "6c0d8ae1cd2c4a21": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "The Exalted Sorcerer on Disc's own ability (“While this model is leading a unit”)."
+ },
  "6c93107162208ccd": {
   "verdict": "ok",
   "by": "review:r11-misc",
@@ -4096,6 +4414,12 @@
   "by": "review:r10-ooga",
   "at": "2026-10-21",
   "why": "TARGET: \"One friendly GRETCHIN unit that was just destroyed.\""
+ },
+ "6cef97a162b7ac84": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“One THOUSAND SONS CHARACTER model from your army (excluding MONSTERS)”: shown on the Ahriman, Disc and Shaman units, not on Magnus or the Daemon Prince (MONSTER)."
  },
  "6d40009d2ea65bd4": {
   "verdict": "ok",
@@ -4205,6 +4529,12 @@
   "at": "2026-10-16",
   "why": "15.06 \"WHEN: Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.\""
  },
+ "6f43ca1ac3af87ba": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "65 + Flowing Flesh 10 = 75, Tzaangor Enlightened 90: 165."
+ },
  "70046468e20fa613": {
   "verdict": "ok",
   "by": "review:big-demons-baby",
@@ -4216,6 +4546,12 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "“ranged weapons … have a Ballistic Skill characteristic of 3+ and the [IGNORES COVER] ability, but they can only target units within range of the selected objective marker”, until the start of your next Command phase: the gist says exactly that."
+ },
+ "701089ff05673ec4": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Wahapedia: the Disc has Cabal of Sorcerers; the Fatecaster Enlightened do not."
  },
  "702720775727342e": {
   "verdict": "ok",
@@ -4253,6 +4589,12 @@
   "at": "2026-10-22",
   "why": "NR prints \"Daemonic Patrons - Flawless Blades\": the bodyguard's datasheet ability, named by its unit (same pattern as the signed-off \"Bringers of Change - Rubric Marines\")."
  },
+ "7106690bf2b0ec29": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“INFANTRY/MOUNTED THOUSAND SONS PSYKER model only”: the Shaman is INFANTRY, MOUNTED, PSYKER and the bearer."
+ },
  "714c0fca8fe26bbb": {
   "verdict": "ok",
   "by": "review:r18b-game",
@@ -4283,6 +4625,12 @@
   "at": "2026-10-20",
   "why": "NR Categories (l.152): 'Big Mek, Character, Explosives, Faction: Orks, Infantry, Painboy*, Nobz*, *from combined unit'. The starred keywords are exactly Painboy and Nobz. Explosives is the Big Mek's own keyword (not starred), so leaving it out of the note is right. data.js kw matches."
  },
+ "724e8deca9f26c9b": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "New Recruit: Ahriman 105, Tzaangor Enlightened with Fatecaster greatbows 110; unit 215."
+ },
  "7310496e3520a5bf": {
   "verdict": "ok",
   "by": "review:r10-superterm",
@@ -4294,6 +4642,12 @@
   "by": "review:big-demons-baby",
   "at": "2026-10-23",
   "why": "\"WHEN: Start of your Fight phase.\""
+ },
+ "73322c7a1b2f01a3": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Your Movement phase."
  },
  "733e2fe1b139e22c": {
   "verdict": "ok",
@@ -4367,6 +4721,12 @@
   "at": "2026-10-21",
   "why": "“select one friendly ORKS WALKER unit within 3\" of this model” has no ‘other’ (01.02.05 excludes the rule’s own unit only when a rule says ‘other’), and 01.02.04 says “units are within range of their own abilities”. So “Picked by the Dreadherder for its own unit (no ‘other’ in the rule; units are within range of their own abilities, 01.02.04)” is true and quotes Core Rules exactly. It stays unticked (no selfAlways), which fits “you can select”; needs, when, note and lasts 'turn' are unchanged."
  },
+ "750fcc8198eb93d6": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Malign Trickery is on the Tzaangor Enlightened with Fatecaster Greatbows datasheet (Wahapedia), the led unit."
+ },
  "756a91e86e363ee4": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -4421,11 +4781,35 @@
   "at": "2026-10-21",
   "why": "WHEN: “Your Command phase.”"
  },
+ "768d195ef8f3bc67": {
+  "verdict": "ok",
+  "by": "review:pubstomper",
+  "at": "2026-10-23",
+  "why": "\"In your Command phase\": Command, your turn."
+ },
  "76c5e19cbb491d29": {
   "verdict": "ok",
   "by": "review:big-demons-baby",
   "at": "2026-10-23",
   "why": "New Recruit: \"1x Master of Executions  Blood-forged Armour, Axe of dismemberment, Bolt pistol\"."
+ },
+ "76cf60eb361e1192": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Your Movement phase."
+ },
+ "76d9f5ae80bf6946": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Ahriman's datasheet ability; “this model” is Ahriman."
+ },
+ "76e875ecfc38a3d0": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Wahapedia and New Recruit: “Illusions of Tzeentch (Psychic)”."
  },
  "773b138935941351": {
   "verdict": "ok",
@@ -4469,6 +4853,12 @@
   "at": "2026-10-21",
   "why": "EFFECT: \"When a model in your unit is destroyed, if your unit has not been selected to fight this phase, roll one D6, with +1 to that roll if your unit is riled up: On a 4+, do not remove that model … When your unit has fought, or at the end of the phase (whichever comes first), that model is removed\". The gist is the same, shorter (as Crazed Rampage's)."
  },
+ "78e3889fb069f604": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Only your own Shooting phase (Cabal of Sorcerers: “at the start of your Shooting phase”)."
+ },
  "78ebdf095c5378b5": {
   "verdict": "ok",
   "by": "review:infernal-lance",
@@ -4511,11 +4901,23 @@
   "at": "2026-10-22",
   "why": "Gear matches NR's four Options lines (Icon of Excess left off the gear, kept in the line name); rows \"Bolt pistol - Lord Exultant\", \"➤ Plasma pistol - standard/supercharge - Infractors\", \"Bolt pistol (x4) - Infractors\", CCW, Phoenix power spear, Rapture lash (Lord), \"Power sword - Infractors\", \"Duelling sabre (x4) - Infractors\" (1 + 3 + 0 and 3 + 1 = 4)."
  },
+ "79c543e400e00cba": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“While the bearer is leading a unit, each time an attack targets that unit, subtract 1 from the Hit roll.” The When targeted line keeps “while the bearer leads it”."
+ },
  "79fdce8af16ef045": {
   "verdict": "ok",
   "by": "review:r18-game",
   "at": "2026-10-21",
   "why": "07.01 (“players resolve rules that are triggered at the start of the battle round, before progressing to player turns”) is shown in the round’s first Command phase for both lists. In round 1 that includes “At the start of the first battle round” (Singular Purpose) and “At the start of the battle” (Battle Protocols’ Aegis). Turn tags filter the rest (Icon of War not in their Command phase). Inert and Damaged rows are left out, and five-phase rules are Any phase."
+ },
+ "7a03a13a1de89771": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“WHEN: Start of the Fight phase.”"
  },
  "7a3d58fbc20f30b6": {
   "verdict": "ok",
@@ -4534,6 +4936,12 @@
   "by": "review:r11-purge-faction",
   "at": "2026-10-21",
   "why": "“Select the [SUSTAINED HITS 1] or [LETHAL HITS] ability … You can instead select the [SUSTAINED HITS 1], [LETHAL HITS] and [HAZARDOUS] abilities”, until the end of the phase: “or both and [HAZARDOUS]” says that, on ranged weapons."
+ },
+ "7a645a279a26ef4e": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Wahapedia and New Recruit: “Binding Tendrils (Psychic)”."
  },
  "7a7192abcfde6c84": {
   "verdict": "ok",
@@ -4582,6 +4990,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "NR glaive profiles strike A10 D4 / sweep A18 D2 vs base A9 D3 / A17 D1: +1 A and +1 D are included."
+ },
+ "7bc53c14d45dff9d": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Ahriman's own datasheet ability (Wahapedia Ahriman: Scryer of Fates), not the Enlightened's."
  },
  "7bc707a071beef98": {
   "verdict": "ok",
@@ -4679,6 +5093,12 @@
   "at": "2026-10-16",
   "why": "11th-ed 15.08 \"WHEN: End of your opponent's Movement phase.\" only (no Charge-phase use any more)."
  },
+ "7dfe6d181f5cef02": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Wahapedia: the Shaman has Cabal of Sorcerers; Tzaangor Enlightened have no army rule."
+ },
  "7e38ba43759ec810": {
   "verdict": "ok",
   "by": "review:r19-fixes",
@@ -4708,6 +5128,12 @@
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "Fight phase in either turn."
+ },
+ "7f0fcd56bbeb0d7c": {
+  "verdict": "ok",
+  "by": "review:pubstomper",
+  "at": "2026-10-23",
+  "why": "NR \"Arcane Shield (Psychic) - Exalted Sorcerer\"; \"this model\" is the Exalted Sorcerer, an ability of his own datasheet. Model lines match NR (1 Exalted Sorcerer, 1 Aspiring Sorcerer, 1 w/ soulreaper cannon, 3 w/ warpflamer). The 4+ it gives the Rubric Marine and Aspiring Sorcerer lines (native 5+ on the Rubric Marines datasheet) carries a from: Arcane Shield mark and no footnote; the Exalted Sorcerer's own 4+ is his datasheet's (Wahapedia INSV 4+), so it rightly has no mark."
  },
  "7f141f8d03921ac2": {
   "verdict": "ok",
@@ -4786,6 +5212,12 @@
   "by": "review:m1-strats",
   "at": "2026-10-18",
   "why": "“Friendly ORKS units”: ORKS is the faction keyword, which New Recruit prints as “Faction: Orks”. The text names no other keyword. text: case only, “[Sustained Hits 1]” vs “[SUSTAINED HITS 1]”."
+ },
+ "80efec13495f136f": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Warpmeld Pact enhancement, New Recruit 85 = 65 + 20."
  },
  "8105780c0e5019de": {
   "verdict": "ok",
@@ -5261,6 +5693,12 @@
   "at": "2026-10-16",
   "why": "charge/charge roll(s)/declare(s/d) a charge/eligible to declare a charge/resolve a charge: all 11.02 terms."
  },
+ "8b56a4a4c5a45193": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Wahapedia Shaman: “INFANTRY; MOUNTED; … PSYKER”; Tzaangor Enlightened: “MOUNTED; FLY; CHAOS; TZEENTCH; MUTANT; TZAANGOR ENLIGHTENED”."
+ },
  "8b7b173abe53714f": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -5410,6 +5848,12 @@
   "by": "review:r5-text",
   "at": "2026-10-17",
   "why": "EFFECT: \"Resolve a charge with your unit. While doing so, before making the charge roll, you must select one of the following modes: Leap to Defend ... Into the Fray (+1CP)\". The gist names the action and both modes, including the +1CP. The mode details are left out, and it ends with \"…\"."
+ },
+ "8eb32ed72e35c7a3": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Wahapedia Disc: “INFANTRY; MOUNTED; CHARACTER; FLY; GRENADES; PSYKER …”; the Fatecaster Enlightened have none of GRENADES, INFANTRY, PSYKER."
  },
  "8ed65398b19b370c": {
   "verdict": "ok",
@@ -5657,6 +6101,12 @@
   "at": "2026-10-21",
   "why": "\"add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength.\" Picks Below Starting Strength (+1 to hit) and Below Half-strength (+1 to hit, +1 to wound) match; the single wording is 01.02.01’s for a one-model unit (\"remaining wounds are less than its W\" / \"less than half of its W\"; {half} = ceil(W/2)−1 is the most wounds still below half). Unit state is a table condition, so unticked."
  },
+ "96d6d2a8873f7635": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“TZAANGOR SHAMAN model only. The bearer has the Feel No Pain 4+ ability”."
+ },
  "96e04b459d738c9e": {
   "verdict": "ok",
   "by": "review:r19-fixes",
@@ -5861,6 +6311,12 @@
   "at": "2026-10-21",
   "why": "Faction Pack v1.4 Rules Update, Invocation of Machine Vengeance: “Each time a model in a friendly ADEPTUS MECHANICUS unit makes an attack that targets your Machine Vengeance target, you can re-roll the Hit roll.” There is no range, so needs = every friendly ADEPTUS MECHANICUS unit, Cawl included. The when keeps the condition that Cawl picked that canticle. NR’s “(Aura)” is not in GW’s or Wahapedia’s text, and the footnote rightly sets no range."
  },
+ "9bc7e4c0be3b95a1": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "New Recruit: “Tzaangor Enlightened*, *from combined unit”; Wahapedia Shaman keywords include MOUNTED, FLY, MUTANT."
+ },
  "9c62ea766ff9276a": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
@@ -5933,6 +6389,12 @@
   "at": "2026-10-23",
   "why": "protects WORLD EATERS units (the unit whose models get the save: \"models in your WORLD EATERS unit\" are all of the unit's models, the BLOOD LEGIONS Lord in the Lord + Berzerkers unit too), by a BLOOD LEGIONS unit of the list; \"their Shooting phase\" is the opponent's, the wording of the signed-off shields (Grot Shields); 6\" is said, a range the player judges."
  },
+ "9d9ae95a9c7f1cac": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Warpmeld Pact enhancement, 65 + 10 = 75 (New Recruit)."
+ },
  "9d9bcb9766e506d9": {
   "verdict": "ok",
   "by": "review:r19-fixes",
@@ -5962,6 +6424,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "Shooting is \"your Shooting phase\" only."
+ },
+ "9defbbe537955fd9": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Part 1: “subtract 1 from the Wound roll” for attacks targeting the unit, with the D3 mortal wounds and “until the end of the phase”. Part 2: “each time a model in that unit makes an attack, add 1 to the Wound roll”: no who, so every model including the non-MUTANT leaders. Keywords part: needs TZAANGORS (only the two Tzaangors units; the Enlightened are not TZAANGORS), +1 OC only for “TZAANGOR models” while not Battle-shocked, and New Recruit's OC 1 does not include it. The Rules Update's “Change to” quotes only the two sacrifice paragraphs; Wahapedia (errata applied) and BSData keep the BATTLELINE/OC paragraph, and New Recruit gives the Tzaangors BATTLELINE, so keeping it is right."
  },
  "9e153af78c2c0928": {
   "verdict": "ok",
@@ -6065,6 +6533,12 @@
   "at": "2026-10-21",
   "why": "\"This unit’s attacks that target a unit that has no models with a T of 7+ have +1 to hit rolls.\" maxT:6 = no target model above T6, exactly that; nothing else conditions it, so always is right."
  },
+ "a033ad085e8c5fa8": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Pile-in/Consolidation “up to 6\" instead of up to 3\"”, models “within 3\" of one or more enemy models are eligible to fight”, targets “within 3\" of them and within Engagement Range of their unit”: all kept."
+ },
  "a058a8d8ded48cc8": {
   "verdict": "ok",
   "by": "review:cooking",
@@ -6107,6 +6581,12 @@
   "at": "2026-10-17",
   "why": "Text: “your unit does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units” applies to all of the unit’s hit rolls. The gist ties it to the Blast weapons (“Blast weapons can target … with no hit penalty”): narrowed. The mortal wound applies “each time a model in your unit makes an attack with a Blast weapon that targets a unit within Engagement Range of your unit, on an unmodified Hit roll of 1 … after all of its attacks have been resolved”. The gist’s “each unmodified hit roll of 1 with them” drops the target condition (so it widens to every Blast attack) and the timing. “(if no other friendly units are)” leaves out what they must not be within: “within Engagement Range of that enemy unit”."
  },
+ "a15d82efd26faf53": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Curse of Life acts when this model heals from Sorcerous Invigoration, which comes from manifesting a Ritual, attempted “at the start of your Shooting phase” (Cabal of Sorcerers)."
+ },
  "a174127d2045f01b": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -6136,6 +6616,12 @@
   "by": "review:infernal-lance",
   "at": "2026-10-22",
   "why": "It keeps the trigger (just after an enemy unit selects your unit as a target) and the EFFECT word for word in short form. The row's “Their Shooting” gives the phase and turn."
+ },
+ "a2828c7e97ad7cf0": {
+  "verdict": "ok",
+  "by": "review:pubstomper",
+  "at": "2026-10-23",
+  "why": "Rituals are selected only \"at the start of your Shooting phase\" (Cabal of Sorcerers, Rules Update wording), and the text says \"this phase\": your Shooting phase. Same reading as the approved Lord of the Planet of the Sorcerers / Arch-Sorcerer timings."
  },
  "a2880c80dd8fbd65": {
   "verdict": "ok",
@@ -6250,6 +6736,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "Quoted verbatim from the Wahapedia World Eaters FAQ; consistent with Core 19.04 (a bodyguard ability ends once the attacking unit has resolved its attacks)."
+ },
+ "a55516593fe0aa19": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "WHEN “when … suffers a mortal wound”, EFFECT “Your unit has Feel No Pain 5+ against mortal wounds”: the condition and the limit kept."
  },
  "a58c5a00ddee38cb": {
   "verdict": "ok",
@@ -6413,6 +6905,12 @@
   "at": "2026-10-21",
   "why": "\"At the start of the Fight phase\" names no player, so every Fight phase, in either turn."
  },
+ "aab2889bb2157c6a": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Wahapedia: Ahriman has Cabal of Sorcerers under ARMY RULES; the Fatecaster Enlightened datasheet has none."
+ },
  "aac0d7591d5d2ddf": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -6430,6 +6928,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "\"Your unit has Feel No Pain 4+ against mortal wounds.\""
+ },
+ "ab4c28696f89c3b2": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Keeps the TARGET condition (just destroyed), the end-of-phase timing, “as close as possible”, not within Engagement Range (unengaged) and the once-per-battle-round restriction."
  },
  "ab4e5b5298b04c77": {
   "verdict": "ok",
@@ -6521,6 +7025,12 @@
   "at": "2026-10-16",
   "why": "WHEN: \"Fight phase, when a friendly NORN ASSIMILATOR/NORN EMISSARY unit is selected to fight.\""
  },
+ "ad660349b515ce5e": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“Any phase”, either player's turn (mortal wounds can come in either)."
+ },
  "ad6e9f43bfab3707": {
   "verdict": "ok",
   "by": "review:literal (its fix, applied as written)",
@@ -6532,6 +7042,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "W 18; \"1-6 wounds remaining\"."
+ },
+ "ad94ada820936d61": {
+  "verdict": "ok",
+  "by": "review:pubstomper",
+  "at": "2026-10-23",
+  "why": "NR Categories: \"… Tzeentch, Battleline*, Rubric*, Rubric Marines*, Rubricae*, *from combined unit\" — the same four, the same note as approved for the previous build; it says where the keywords come from, it answers no rules question."
  },
  "adbc1343c5ec5af2": {
   "verdict": "ok",
@@ -6827,6 +7343,12 @@
   "at": "2026-10-16",
   "why": "A Stratagem can target a unit in any phase of either turn."
  },
+ "b4d8681ec8000012": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "A Ritual is attempted only by Cabal of Sorcerers, “at the start of your Shooting phase” (Faction Pack Rules Update); same tag as Lord of the Planet of the Sorcerers."
+ },
  "b4ec840cb29ee8e6": {
   "verdict": "ok",
   "by": "review:r14-picks",
@@ -6844,6 +7366,12 @@
   "by": "review:core-code",
   "at": "2026-10-16",
   "why": "Matches Wahapedia 15.05 errata: \"The Grenade Stratagem is the same as the Explosives stratagem.\""
+ },
+ "b5491afbe176604d": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Wahapedia and New Recruit both print “Scryer of Fates (Psychic)”."
  },
  "b59592e3e5a8ea08": {
   "verdict": "ok",
@@ -6904,6 +7432,18 @@
   "by": "review:infernal-lance",
   "at": "2026-10-22",
   "why": "“WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets.”"
+ },
+ "b8165ca6f4d415a0": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“TZAANGOR SHAMAN model only”: the bearer."
+ },
+ "b8567d9ea16aaade": {
+  "verdict": "ok",
+  "by": "review:pubstomper",
+  "at": "2026-10-23",
+  "why": "Wahapedia's Exalted Sorcerer datasheet and NR both print \"Arcane Shield (Psychic)\"."
  },
  "b897e1eb0d0cd6aa": {
   "verdict": "ok",
@@ -7103,6 +7643,12 @@
   "at": "2026-10-17",
   "why": "The Feel No Pain 6+ part has no turn limit, so it applies in either turn."
  },
+ "bca7e87b252343d2": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“TZEENTCH MUTANT INFANTRY or TZEENTCH MUTANT MOUNTED units” = TZEENTCH + MUTANT + (INFANTRY or MOUNTED). A rule about units: the led Fatecaster units (MUTANT from the Enlightened, MOUNTED), Shaman units, Tzaangors; not Magnus, the Daemon Prince or the Sekhetar Robots. Text is the Rules Update wording (identical to Wahapedia's)."
+ },
  "bcbbd82290d33558": {
   "verdict": "ok",
   "by": "review:shooty",
@@ -7192,6 +7738,12 @@
   "by": "review:r9-knights",
   "at": "2026-10-21",
   "why": "\"In your Movement phase, if this model Remains Stationary, until the end of the turn, ranged weapons equipped by this model have the [SUSTAINED HITS 1] ability\": the condition, the duration and the note are the rule's own words."
+ },
+ "becd11b1f352ecca": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“In your Shooting phase, after this model has shot”."
  },
  "bf2ab0717b0ea4a6": {
   "verdict": "ok",
@@ -7385,6 +7937,12 @@
   "at": "2026-10-21",
   "why": "NR prints \"Shokk-boosta - Big Mek\"."
  },
+ "c5472f5c64144bd1": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“WHEN: Any phase”: all five phases."
+ },
  "c54cf31f7c1da0d5": {
   "verdict": "ok",
   "by": "review:m1-strats",
@@ -7523,6 +8081,12 @@
   "at": "2026-10-22",
   "why": "Fight phase in either turn."
  },
+ "c8d7c89d95925d9f": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“WHEN: Any phase.”"
+ },
  "c952caab83d5eeb5": {
   "verdict": "ok",
   "by": "review:gists",
@@ -7534,6 +8098,12 @@
   "by": "review:oioioi",
   "at": "2026-10-16",
   "why": "\"At the end of your opponent’s turn\" = after their last phase; filed under their Fight phase (app convention for end of turn)."
+ },
+ "c9760fd9924eb4b9": {
+  "verdict": "ok",
+  "by": "review:pubstomper",
+  "at": "2026-10-23",
+  "why": "NR \"Bringers of Change - Rubric Marines\": the Rubric Marines' datasheet ability; who names the unit it comes from, as approved for the previous Sorcerer-led build. Only the model lines changed (Sorcerer → Exalted Sorcerer), matching NR."
  },
  "c9b38d3ba2b0d3c6": {
   "verdict": "ok",
@@ -7558,6 +8128,12 @@
   "by": "review:r18-game",
   "at": "2026-10-21",
   "why": "Their units are offered only where an option says to select one from the opponent’s army. Code Chivalric Deed 1–2 (“select one CHARACTER model in your opponent’s army”: their units with CHARACTER, e.g. “Mek + Tankbustas”, the unit holding that model). Invocation of Machine Vengeance (“select one unit from your opponent’s army”). Singular Purpose (“Select one enemy unit”). Nothing is offered before their list is picked."
+ },
+ "ca803e22dbfdaccf": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Shaman: Baleful Devolution, force stave; Aviarch + 5 Enlightened: divining spear each (×6)."
  },
  "cab4d5e961bad9ea": {
   "verdict": "ok",
@@ -7673,6 +8249,12 @@
   "at": "2026-10-21",
   "why": "at “Start of the battle round” → 07.01. “At the end of your opponent’s turn” (Ambushing Hunters) → End of the turn. Start/end of a named phase → that step only in that phase, during elsewhere. Start of the battle → the battle. These match what each rule’s words name."
  },
+ "cd07e75508796e24": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Ritual of Regeneration enhancement (New Recruit options: Curse of Life)."
+ },
  "cd0d55bc845278c9": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -7708,6 +8290,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "Same as Turbo Engine: New Recruit prints Shokk Attack Engine under “Throttlerokkit Shokka Engine”, and Full Throttle says “select one Throttlerokkit Shokka Engine ability”."
+ },
+ "cda97efefd22f169": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“WHEN: Your Movement phase”."
  },
  "cddcf47f50871c03": {
   "verdict": "ok",
@@ -7810,6 +8398,12 @@
   "by": "review:r9-we-nids",
   "at": "2026-10-21",
   "why": "NR (princes p2) gives Khârn's unit only \"Chainblade, Plasma pistol\", \"Bolt pistol, Chainblade\" and \"Khornate eviscerator, Plasma pistol\"; no models line has Icon of Khorne (only the Lord on Juggernaut's unit does), so \"If the bearer’s unit contains one or more Icons of Khorne\" cannot apply."
+ },
+ "d1170326e6c9920b": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Ahriman: inferno bolt pistol, Transmogrifying Blast, Black Staff of Ahriman; Aviarch + 5 Enlightened each fatecaster greatbow and close combat weapon (Wahapedia “Every model is equipped with”, New Recruit ×6)."
  },
  "d127e9d92d44729c": {
   "verdict": "ok",
@@ -8068,6 +8662,12 @@
   "by": "review:gists",
   "at": "2026-10-17",
   "why": "Word for word the EFFECT: “Your unit has Feel No Pain 4+ against mortal wounds.”"
+ },
+ "d7c2a1ad5f62b6c8": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Same as the Curse of Life unit: only the Shaman has Cabal of Sorcerers."
  },
  "d7cbd41f8f1fb5d0": {
   "verdict": "ok",
@@ -8537,6 +9137,12 @@
   "at": "2026-10-23",
   "why": "\"Any phase, when the last model in a unit is destroyed\": either player's turn."
  },
+ "e3c7ea2f00825918": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "The Shaman's ability (“this model can use this ability … Psychic weapons equipped by this model”)."
+ },
  "e406e6ca486638e7": {
   "verdict": "ok",
   "by": "review:r9-knights",
@@ -8548,6 +9154,12 @@
   "by": "review:r11-purge-units",
   "at": "2026-10-21",
   "why": "Both wordings start “At the end of your Command phase”, so Your Command is right. Following Wahapedia’s wording over NR’s is also right. The 11th-edition Core Rules (14.03) word a secured objective as “until their opponent’s level of control over that objective is greater than theirs at the end of a phase”. GW’s Thousand Sons Faction Pack (30 Sep 2026) and Wahapedia’s AdMech Cached Acquisition use the same words. The AdMech Faction Pack v1.4 (14 Oct 2026) does not print Objective Scouted. The same NR export prints World Eaters’ Objective Ravaged (same shape) in the new wording, which is in BSData 11e since its first commit, while BSData’s AdMech file still has the codex’s “start or end of any turn”."
+ },
+ "e4524bf188e07664": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Keeps “below its Starting Strength”, “within 12\" of that PSYKER model”, “up to D3+1” and “(excluding CHARACTERS)”."
  },
  "e452822fb991fb7b": {
   "verdict": "ok",
@@ -8741,6 +9353,12 @@
   "at": "2026-10-22",
   "why": "“One CHAOS KNIGHTS unit from your army that was selected as the target …”."
  },
+ "e905ba0e1f1b4857": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Fight phase, either turn."
+ },
  "e936f57d4687120b": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -8771,6 +9389,12 @@
   "at": "2026-10-22",
   "why": "TARGET: “That WAR DOG unit.”"
  },
+ "e976bf2182f6dfc4": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Wahapedia: “Arcane Fire; inferno bolt pistol; force weapon” and “can be equipped with 1 Prosperine khopesh”; New Recruit lists all four for the Disc, greatbow + close combat weapon ×6 for the Enlightened."
+ },
  "e97e13f8366d8a58": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -8788,6 +9412,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "TARGET: \"One IMPERIAL KNIGHTS unit from your army...\". The Warden has no Blast weapon but can still use the no-hit-penalty half."
+ },
+ "e9aa83e97e46e4bc": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Malign Trickery is the Fatecaster Enlightened datasheet's ability."
  },
  "e9c226b214f31434": {
   "verdict": "ok",
@@ -8830,6 +9460,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "Aggressive Advance is the Lord on Juggernaut's ability (\"While this model is leading a unit\")."
+ },
+ "ea7c704b289d87a9": {
+  "verdict": "ok",
+  "by": "review:pubstomper",
+  "at": "2026-10-23",
+  "why": "Rubric Marines: \"KEYWORDS – ALL MODELS: …; ASPIRING SORCERER ONLY: PSYKER\"; Exalted Sorcerer: \"KEYWORDS: INFANTRY; CHARACTER; GRENADES; PSYKER; CHAOS; TZEENTCH; EXALTED SORCERER\". So the two models with PSYKER are those named; the unit still has the PSYKER keyword (a unit has a keyword if one model has it), which kw keeps."
  },
  "ea8d5f2f5d80e089": {
   "verdict": "ok",
@@ -8903,6 +9539,12 @@
   "at": "2026-10-21",
   "why": "Both quotes are in their sources: Enraged Behemoths (Wahapedia, Crusher Stampede) \"add 2 to the Objective Control characteristic of models in that unit\", and Singular Purpose \"an Objective Control characteristic of 15\". Core 02.02.01 Modifiers appears only as a cross-reference in rules/core-rules.md, the GW PDF and Wahapedia core, so the note names both results (15 or 17) and picks neither. The one ordering FAQ in the sources (AdMech Faction Pack 1.4, Auto-divinatory Targeting with the Protector Imperative: \"first changed to 3+ ... then improved by 1\") covers only those two rules."
  },
+ "ec04ea6b0052d88a": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Enemy units shoot in their Shooting phase and fight in either Fight phase; your units shoot in yours and fight in either: either turn for both phases."
+ },
  "ec06f99eb0858c2b": {
   "verdict": "ok",
   "by": "review:hurrdurr (its fix)",
@@ -8920,6 +9562,12 @@
   "by": "review:r9-knights",
   "at": "2026-10-21",
   "why": "Knight Destrier datasheet (GW faction pack, Wahapedia, NR): W 18 and \"DAMAGED: 1-6 WOUNDS REMAINING ... While this model has 1-6 wounds remaining\". Sanctuary does not change W, so damaged '1-6' with W 18 matches."
+ },
+ "ecae1981e543f482": {
+  "verdict": "ok",
+  "by": "review:pubstomper",
+  "at": "2026-10-23",
+  "why": "Wahapedia's Exalted Sorcerer: \"ARMY RULES Cabal of Sorcerers\"; Rubric Marines: \"ARMY RULES Cabal of Sorcerers (Aspiring Sorcerer only)\". In this attached unit exactly the Exalted Sorcerer and the Aspiring Sorcerer have it (\"models from your army with this ability\")."
  },
  "eccdbfa7a2b9d825": {
   "verdict": "ok",
@@ -9010,6 +9658,12 @@
   "by": "review:hurrdurr",
   "at": "2026-10-16",
   "why": "\"WHEN: Your Movement phase, just after ... is selected to Advance\"."
+ },
+ "eff64e3b9385ef90": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "Fight phase of either turn; shooting is limited by turns."
  },
  "f08cdc20457d51c8": {
   "verdict": "ok",
@@ -9425,6 +10079,12 @@
   "at": "2026-10-21",
   "why": "NR prints \"Paired Krumpas - Nobz\" (and \"2x Nob w/ Kustom Krumpa and Paired Krumpas\")."
  },
+ "fc63627187bf9093": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“that unit can only be selected as the target of a ranged attack if the attacking model is within 18\"”: the When targeted line keeps the ranged-only and 18\" conditions."
+ },
  "fc640f5c77c3361a": {
   "verdict": "ok",
   "by": "review:oioioi",
@@ -9461,6 +10121,12 @@
   "at": "2026-10-17",
   "why": "“In your Shooting phase, when this unit is selected to shoot, you can use this ability. If you do, this model’s ranged attacks have +1 to hit rolls.” The footnote keeps the condition (used, your Shooting phase, when selected to shoot) and adds no duration or scope of its own."
  },
+ "fd477bbee10d5064": {
+  "verdict": "ok",
+  "by": "review:mucho-mutantes",
+  "at": "2026-10-23",
+  "why": "“add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model”: who is the Shaman; when keeps “your Shooting phase and the Fight phase”, the Bodyguard model destroyed and “until the end of the phase”."
+ },
  "fd6306bbd10419f0": {
   "verdict": "ok",
   "by": "review:m5-new",
@@ -9484,6 +10150,12 @@
   "by": "review:r15-v2",
   "at": "2026-10-21",
   "why": "“Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability.” lasts 'turn' is exactly that; Dark Blessing is this model’s ranged weapon (24\", PSYCHIC)."
+ },
+ "fe4e20b85edf76f4": {
+  "verdict": "ok",
+  "by": "review:pubstomper",
+  "at": "2026-10-23",
+  "why": "Gear matches NR's four Options lines (the Incandeum enhancement left out, as Umbralefic Crystal on the Terminator Sorcerer); Wahapedia: Astral Blast, inferno bolt pistol, force weapon plus the optional Prosperine khopesh. Counts match (Warpflamer (x3), Close combat weapon (x4)); the weapons list has every NR row with its owner. Icon of Flame is printed only in the Abilities table, on no models line, so unplaced stays right."
  },
  "fe51f646ccf1f890": {
   "verdict": "ok",

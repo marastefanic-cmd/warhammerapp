@@ -1,4 +1,4 @@
-10/20/26, 11:35 PM                                                Pubstomper - New Recruit
+10/23/26, 3:17 PM                                                 Pubstomper - New Recruit
 
                                                         Pubstomper [2000pts]
   Army Roster [3 Detachment Points, 2000 pts] (Chaos - Thousand Sons)
@@ -6,90 +6,94 @@
   • Detachment: Grand Coven [3Detachment Points]
   • Force Disposition: Priority Assets
   • Rituals reference
-  • Show/Hide Options: Chaos Knights are visible, Crucible Characters are visible, Legends are
-  visible, Titans are visible, Unaligned Forces are visible, Unaligned Fortifications are visible
-  NAME                                                   ROLE        PTS OPTIONS
+  • Show/Hide Options: Unaligned Forces are visible, Unaligned Fortifications are visible
+  NAME                                               ROLE       PTS OPTIONS
    Magnus the Red                                                    Epic Hero 455
    Daemon Prince of Tzeentch with wings                              Character 205
-   Sorcerer                                                          Character 100
+   Exalted Sorcerer                                                  Character 115
    Sorcerer in Terminator Armour                                     Character 140
-   (5) Rubric Marines                                                Battleline 115 Sorcerer
+   (5) Rubric Marines                                                Battleline 115 Exalted Sorcerer
                                                                                              Sorcerer in Terminator
-   (10) Scarab Occult Terminators                                    Infantry       425
+   (10) Scarab Occult Terminators                                    Infantry        425
                                                                                              Armour
-   (10) Tzaangors                                                    Infantry       75
-   (3) Tzaangor Enlightened                                          Mounted        50
-   (3) Tzaangor Enlightened                                          Mounted        50
+   (10) Tzaangors                                                    Infantry        75
    (3) Tzaangor Enlightened with Fatecaster
-                                                                     Mounted        55       2x Enlightened
+                                                                     Mounted         55      2x Enlightened
    greatbows
-   Defiler                                                           Vehicle        330
+   Defiler                                                           Vehicle         330
+   (2) Sekhetar Robots                                               Vehicle         85
 
 
 
 
 https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                                                          1/12
-10/20/26, 11:35 PM                                                       Pubstomper - New Recruit
-     215 PTS                                                     SORCERER
-   Models                                           Options
-                                                    Force weapon, Inferno bolt pistol, Pandaemonic Delusion, Prosperine khopesh
-   1x Sorcerer
-                                                    • Leading: Rubric Marines
-   1x Aspiring Sorcerer                             Force weapon, Malefic Curse, Warpflame pistol
-   1x Rubric Marine w/ soulreaper cannon Close combat weapon, Soulreaper cannon
-   3x Rubric Marine w/ warpflamer                   Close combat weapon, Warpflamer
-   Unit                                                             M        T   Sv       W         LD       OC       InSv      Base
-   Sorcerer - Sorcerer                                              6"       5   3+       4         6+       1        5+        40mm
-   Rubric Marine - Rubric Marines                                   6"       5    3+      2         7+       2        5+        32mm
-   Aspiring Sorcerer - Rubric Marines                               6"       5    3+      3         6+       2        5+        32mm
-   Ranged Weapons                 Range A             BS       S AP D Keywords
-   Inferno bolt pistol - Sorcerer 12"   1             3+       5 -2 1 Pistol, Lethal Hits
-   Pandaemonic Delusion -
-                                       24"      6     3+       5 -1 1 Psychic, Sustained Hits 3, Lethal Hits
+10/23/26, 3:17 PM                                                    Pubstomper - New Recruit
+     230 PTS                                            EXALTED SORCERER
+   Models                                         Options
+                                                   Incandeum, Astral Blast, Force weapon, Inferno bolt pistol, Prosperine
+   1x Exalted Sorcerer                             khopesh
+                                                   • Leading: Rubric Marines
+   1x Aspiring Sorcerer                            Force weapon, Malefic Curse, Warpflame pistol
+   1x
+                                                   Close combat weapon, Soulreaper cannon
+   Rubric Marine w/ soulreaper cannon
+   3x Rubric Marine w/ warpflamer                  Close combat weapon, Warpflamer
+   Unit                                                            M     T     Sv      W        LD       OC   InSv     Base
+   Exalted Sorcerer - Exalted Sorcerer                             6"    5     3+      5        6+       1    4+       32mm
+   Rubric Marine - Rubric Marines                                  6"    5     3+      2        7+       2    4+       32mm
+   Aspiring Sorcerer - Rubric Marines                              6"    5     3+      3        6+       2    4+       32mm
+   Ranged Weapons                        Range A BS            S AP D Keywords
+   Astral Blast - Exalted Sorcerer       18"   D6 2+           6 -2 D3 Blast, Devastating Wounds, Psychic
+   Inferno bolt pistol - Exalted
    Sorcerer
-   Malefic Curse - Rubric                                                 Anti-INFANTRY 4+, Devastating Wounds, Ignores
-                                       24"      3     3+       4 -3 1
-   Marines                                                                Cover, Psychic, Lethal Hits
+                                         12"       1    2+     5 -2 1     Pistol
+
+                                                                          Anti-INFANTRY 4+, Devastating Wounds, Ignores
+   Malefic Curse - Rubric Marines        24"       3    3+     4 -3 1
+                                                                          Cover, Psychic
    Warpflame pistol - Rubric
    Marines
-                                       12"      D6 N/A 3 -1 1 Ignores Cover, Pistol, Torrent, Lethal Hits
+                                         12"       D6 N/A 3 -1 1          Ignores Cover, Pistol, Torrent
    Soulreaper cannon - Rubric
+                                         24"       6    3+     6 -2 1     Devastating Wounds, Ignores Cover
    Marines
-                                       24"      6     3+       6 -2 1 Devastating Wounds, Ignores Cover, Lethal Hits
    Warpflamer (x3) - Rubric
+                                         12"       D6 N/A 4 -1 1          Ignores Cover, Torrent
    Marines
-                                       12"      D6 N/A 4 -1 1 Ignores Cover, Torrent, Lethal Hits
-
-   Melee Weapons                                                    Range        A   WS       S   AP     D        Keywords
-   Force weapon[1] - Sorcerer                                       Melee        4   3+       6   -1     D3       Psychic, Lethal Hits
-   Prosperine khopesh - Sorcerer                                     Melee       3   3+       5     -2   2        Lethal Hits
-   Force weapon[2] - Rubric Marines                                  Melee       3   3+       6     -1   D3       Psychic, Lethal Hits
-   Close combat weapon (x4) - Rubric Marines                         Melee       2   3+       5     0    1        Lethal Hits
-   Abilities            Description
-                        Once per battle, in your Shooting phase or the Fight phase, this model can use this ability.
-   Twisted Sorceries
-                        If it does, until the end of the phase, improve the Strength and Attacks characteristic of
-   (Psychic) - Sorcerer
-                        Psychic weapons equipped by this model by 3.
-   Empyric Guidance     While this model is leading a unit, weapons equipped by models in that unit have the
-   (Psychic) - Sorcerer [LETHAL HITS] ability.
-                             Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the
-   Bringers of Change
-                             attack targets a unit within range of an objective marker you do not control, you can re-
-   - Rubric Marines
-                             roll the Wound roll instead.
-   Icon of Flame -           Ranged weapons equipped by models in the bearer's unit (excluding Characters) have the
-   Rubric Marines            [Ignores Cover] ability.
-    Rules Leader, Cabal of Sorcerers, Psychic, Pistol, Sustained Hits, Cabal of Sorcerers, Psychic, Anti,
+   Melee Weapons                                                         Range        A    WS        S   AP   D      Keywords
+   Force weapon[1] - Exalted Sorcerer                                    Melee        5    2+        6   -1   D3     Psychic
+   Prosperine khopesh - Exalted Sorcerer                                 Melee        4    2+        5   -2   2
+   Force weapon - Rubric Marines                                         Melee        3    3+        6   -1   D3     Psychic
+   Close combat weapon (x4) - Rubric Marines                             Melee        2    3+        5   0    1
+   Abilities                   Description
+   Arcane Shield
+   (Psychic) - Exalted         While this model is leading a unit, models in that unit have a 4+ invulnerable save.
+   Sorcerer
+   Rebind Rubricae             In your Command phase, if this model is leading a unit, you can roll one D6: on a 1, that
+   (Psychic) - Exalted         unit suffers D3 mortal wounds; on a 2-5, you can return 1 destroyed Bodyguard model
+   Sorcerer                    to that unit; on a 6, you can return up to 2 destroyed Bodyguard models to that unit.
+                               Once per battle, when selecting a Ritual for the bearer to attempt, you can select
+   Incandeum - Exalted
+                               Doombolt, even if a model from your army has already attempted to manifest that Ritual
+   Sorcerer
+                               this phase.
+                               Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the
+   Bringers of Change -
+                               attack targets a unit within range of an objective marker you do not control, you can re-
+   Rubric Marines
+                               roll the Wound roll instead.
+   Icon of Flame -             Ranged weapons equipped by models in the bearer's unit (excluding Characters) have
+   Rubric Marines              the [Ignores Cover] ability.
+    Rules Leader, Cabal of Sorcerers, Blast, Devastating Wounds, Psychic, Pistol, Cabal of Sorcerers, Psychic, Anti,
           Devastating Wounds, Pistol, Torrent, Ignores Cover
-    Categories Chaos, Character, Faction: Thousand Sons, Grenades, Infantry, Psyker, Sorcerer, Tzeentch, Battleline*,
-               Rubric*, Rubric Marines*, Rubricae*, *from combined unit
+    Categories Chaos, Character, Exalted Sorcerer, Faction: Thousand Sons, Grenades, Infantry, Psyker, Tzeentch,
+               Battleline*, Rubric*, Rubric Marines*, Rubricae*, *from combined unit
 
 
 
 
-https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                                                                             2/12
-10/20/26, 11:35 PM                                                    Pubstomper - New Recruit
+https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                                                                    2/12
+10/23/26, 3:17 PM                                                    Pubstomper - New Recruit
      565 PTS                                    SORCERER IN TERMINATOR ARMOUR
    Models                                                Options
                                                                Umbralefic Crystal, Force weapon, Gaze of Hate, Inferno combi-
@@ -100,10 +104,10 @@ https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                    
    2x
                                                                Prosperine khopesh, Soulreaper cannon
    Scarab Occult Terminator w/ soulreaper cannon
-   Unit                                                                              M T Sv         W LD         OC InSv    Base
-   Sorcerer in Terminator Armour - Sorcerer in Terminator Armour                     5" 6 2+        5 6+         1  4+      40mm
-   Scarab Occult Sorcerer - Scarab Occult Terminators                                5"   6 2+      4       6+   1   4+     40mm
-   Scarab Occult Terminator (x9) - Scarab Occult Terminators                         5"   6 2+      3       7+   1   4+     40mm
+   Unit                                                                              M T Sv            W LD         OC InSv    Base
+   Sorcerer in Terminator Armour - Sorcerer in Terminator Armour                     5" 6 2+           5 6+         1  4+      40mm
+   Scarab Occult Sorcerer - Scarab Occult Terminators                                5"   6 2+         4       6+   1   4+     40mm
+   Scarab Occult Terminator (x9) - Scarab Occult Terminators                         5"   6 2+         3       7+   1   4+     40mm
    Ranged Weapons                              Range A BS S          AP D Keywords
    Gaze of Hate - Sorcerer in                                             Anti-MONSTER 4+, Anti-VEHICLE 4+,
    Terminator Armour
@@ -126,10 +130,10 @@ https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                    
    Occult Terminators
                                                36"       2 3+ 10 -2 3 Lethal Hits
 
-   Melee Weapons                                                        Range     A WS       S AP D          Keywords
-   Force weapon[1] - Sorcerer in Terminator Armour                      Melee     5 3+       6 -1 D3         Psychic, Lethal Hits
-   Force weapon[2] - Scarab Occult Terminators                          Melee      4 3+      6 -1       D3   Psychic, Lethal Hits
-   Prosperine khopesh (x9) - Scarab Occult Terminators                  Melee      3 3+      5 -2       2    Lethal Hits
+   Melee Weapons                                                        Range     A WS          S AP D          Keywords
+   Force weapon[1] - Sorcerer in Terminator Armour                      Melee     5 3+          6 -1 D3         Psychic, Lethal Hits
+   Force weapon[2] - Scarab Occult Terminators                          Melee     4 3+          6 -1       D3   Psychic, Lethal Hits
+   Prosperine khopesh (x9) - Scarab Occult Terminators                  Melee     3 3+          5 -2       2    Lethal Hits
    Abilities                          Description
    Marked by Fate (Psychic) -         At the start of your Shooting phase, select one enemy unit that is visible to this
    Sorcerer in Terminator             Psyker model. Until the end of the phase, each time a model in this unit makes an
@@ -161,8 +165,8 @@ https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                    
 
 
 
-https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                                                                        3/12
-10/20/26, 11:35 PM                                                        Pubstomper - New Recruit
+https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                                                                           3/12
+10/23/26, 3:17 PM                                                         Pubstomper - New Recruit
      455 PTS                                                   MAGNUS THE RED
    Models                            Options
    1x Magnus the Red                 Blade of Magnus, Gaze of Magnus, Tzeentch's Firestorm, Warlord
@@ -201,20 +205,20 @@ https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                    
 
 
 https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                                                                          4/12
-10/20/26, 11:35 PM                                                   Pubstomper - New Recruit
+10/23/26, 3:17 PM                                                    Pubstomper - New Recruit
      205 PTS                               DAEMON PRINCE OF TZEENTCH WITH WINGS
    Models                                        Options
    1x                                                Eldritch Vortex of E'taph, Dark Blessing, Hellforged weapons, Infernal
    Daemon Prince of Tzeentch with wings              cannon
-   Unit                                                             M       T    Sv      W      LD      OC    InSv     Base
-   Daemon Prince of Tzeentch with wings                             13"     9    2+      10     6+      3     4+       60mm
+   Unit                                                             M       T     Sv      W     LD      OC    InSv     Base
+   Daemon Prince of Tzeentch with wings                             13"     9     2+      10    6+      3     4+       60mm
    Ranged Weapons                                     Range A BS S AP D Keywords
    Dark Blessing (Eldritch Vortex of E'taph)          24"   9 2+ 5 -1 2 Ignores Cover, Psychic, Sustained Hits 1
-   Infernal cannon                                    24"      3 2+ 5 -2        2
-   Melee Weapons                                                    Range A         WS S AP D Keywords
-                                                                                              Devastating Wounds,
-   ➤ Hellforged weapons - strike (Eldritch Vortex of E'taph)        Melee 6         2+ 9 -2 4
-                                                                                              Psychic
+   Infernal cannon                                    24"      3 2+ 5 -2         2
+   Melee Weapons                                                    Range A          WS S AP D Keywords
+                                                                                               Devastating Wounds,
+   ➤ Hellforged weapons - strike (Eldritch Vortex of E'taph)        Melee 6          2+ 9 -2 4
+                                                                                               Psychic
    ➤ Hellforged weapons - sweep (Eldritch Vortex of                                                  Devastating Wounds,
                                                                     Melee 12 2+ 7 -1 2
    E'taph)                                                                                           Psychic
@@ -243,17 +247,17 @@ https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                    
 
 
 https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                                                                  5/12
-10/20/26, 11:35 PM                                                   Pubstomper - New Recruit
+10/23/26, 3:17 PM                                                    Pubstomper - New Recruit
      75 PTS                                                    TZAANGORS
    Models                                                             Options
    1x Twistbray                                                         Tzaangor blades
    7x Tzaangor w/ Tzaangor blades                                       Tzaangor blades
    1x Tzaangor w/ Tzaangor blades                                       Tzaangor blades, Brayhorn
    1x Tzaangor w/ Tzaangor blades                                       Tzaangor blades, Herd banner
-   Unit                             M         T        Sv        W         LD         OC             InSv         Base
-   Tzaangors                        6"        4        6+        1         7+         1              6+           32mm
-   Melee Weapons                                        Range          A     WS         S       AP          D   Keywords
-   Tzaangor blades (x10)                                Melee          2     4+         5       0           1
+   Unit                             M         T        Sv        W         LD          OC            InSv         Base
+   Tzaangors                        6"        4        6+        1         7+          1             6+           32mm
+   Melee Weapons                                        Range          A      WS         S      AP          D   Keywords
+   Tzaangor blades (x10)                                Melee          2      4+         5      0           1
    Abilities           Description
    Ambushing            At the end of your opponent's turn, if this unit is more than 6" horizontally away from all
    Hunters              enemy units, you can remove this unit from the battlefield and place it into Strategic Reserves.
@@ -269,46 +273,23 @@ https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                    
 
 
 https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                                                               6/12
-10/20/26, 11:35 PM                                                  Pubstomper - New Recruit
-     50 PTS                                            TZAANGOR ENLIGHTENED                                                x2
-   Models                                                                                 Options
-   1x Aviarch                                                                              Divining spear
-   2x Divining spear Enlightened                                                           Divining spear
-   Unit                                              M         T   Sv        W       LD        OC      InSv         Base
-   Tzaangor Enlightened                              10"       4   5+        2       7+        2       5+           40mm
-   Melee Weapons                              Range            A   WS       S     AP       D     Keywords
-   Divining spear (x3)                         Melee           3   4+       5     -1       2     Lance, Precision
-   Abilities         Description
-                     Each time this unit makes a Charge move, select one enemy unit within Engagement Range of
-   Prophesied
-                     it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy
-   Doom
-                     unit: for each 4+, that enemy unit suffers 1 mortal wound.
-    Rules Lance, Precision
-
-    Categories Chaos, Faction: Thousand Sons, Fly, Mounted, Mutant, Tzaangor Enlightened, Tzeentch
-
-
-
-
-https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                                                                    7/12
-10/20/26, 11:35 PM                                                      Pubstomper - New Recruit
+10/23/26, 3:17 PM                                                       Pubstomper - New Recruit
      55 PTS                       TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS
    Models                              Options
    1x Aviarch                             Close combat weapon, Fatecaster greatbow
    2x Enlightened                         Close combat weapon, Fatecaster greatbow
-   Unit                                                                       M       T   Sv       W       LD   OC    InSv   Base
-   Tzaangor Enlightened with Fatecaster greatbows                             10"     4   5+       2       7+   2     5+     40mm
+   Unit                                                                       M       T    Sv       W    LD   OC    InSv    Base
+   Tzaangor Enlightened with Fatecaster greatbows                             10"     4    5+       2    7+   2     5+      40mm
    Ranged Weapons                          Range       A       BS   S   AP    D     Keywords
    Fatecaster greatbow (x3)                30"         2       4+   5   -2    2     Ignores Cover, Lethal Hits, Precision
-   Melee Weapons                                               Range          A      WS        S       AP       D    Keywords
-   Close combat weapon (x3)                                    Melee          2      4+        4       0        1
-   Abilities         Description
-                     In your opponent's Movement phase, if an enemy unit ends a move within 8" of this unit, if this
+   Melee Weapons                                               Range          A      WS         S       AP    D    Keywords
+   Close combat weapon (x3)                                    Melee          2      4+         4       0     1
+   Abilities        Description
+                    In your opponent's Movement phase, if an enemy unit ends a move within 8" of this unit, if this
    Malign
-                     unit is not within Engagement Range of one or more enemy units, this unit can make a Normal
+                    unit is not within Engagement Range of one or more enemy units, this unit can make a Normal
    Trickery
-                     move of up to D6".
+                    move of up to D6".
     Rules Ignores Cover, Lethal Hits, Precision
 
     Categories Chaos, Faction: Thousand Sons, Fly, Mounted, Mutant, Tzaangor Enlightened,
@@ -317,35 +298,35 @@ https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                    
 
 
 
-https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                                                                        8/12
-10/20/26, 11:35 PM                                                          Pubstomper - New Recruit
+https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                                                                       7/12
+10/23/26, 3:17 PM                                                           Pubstomper - New Recruit
      330 PTS                                                    DEFILER
    Models    Options
-   1x            Ectoplasma destructor, 2x Heavy reaper autocannon, Shearing claws, Two excruciator cannons (2x
-   Defiler       Excruciator cannon)
-   Unit                   M             T           Sv         W               LD          OC          InSv        Base
-   Defiler                12"           11          3+         18              6+          5           5+          160mm
-   Ranged Weapons                             Range      A     BS       S      AP D Keywords
-   Ectoplasma destructor                      36"        D6    3+       12     -3 3 Blast
-   Excruciator cannon (x2)                    36"        6     3+       6      -2    2
-   Heavy reaper autocannon (x2)               48"        4     3+       9      -2    3   Devastating Wounds, Sustained Hits 1
-   Melee Weapons                                    Range           A           WS        S       AP        D       Keywords
-   Shearing claws - strike                          Melee           5           3+        16      -3        D6+1
-   Shearing claws - sweep                           Melee           10          3+        6       -2        1
-   Abilities                Description
-                            Each time this unit makes a Normal, Advance or Fall Back move, it can move through
-                            models (excluding Titanic models) and terrain features. When doing so, it can move within
+   1x               Ectoplasma destructor, 2x Heavy reaper autocannon, Shearing claws, Two excruciator cannons (2x
+   Defiler          Excruciator cannon)
+   Unit                    M            T           Sv         W               LD          OC           InSv     Base
+   Defiler                 12"          11          3+         18              6+          5            5+       160mm
+   Ranged Weapons                             Range      A     BS       S       AP D Keywords
+   Ectoplasma destructor                      36"        D6    3+       12      -3    3   Blast
+   Excruciator cannon (x2)                    36"        6     3+       6       -2    2
+   Heavy reaper autocannon (x2)               48"        4     3+       9       -2    3   Devastating Wounds, Sustained Hits 1
+   Melee Weapons                                    Range           A            WS       S        AP     D        Keywords
+   Shearing claws - strike                          Melee           5            3+       16       -3     D6+1
+   Shearing claws - sweep                           Melee           10           3+       6        -2     1
+   Abilities                 Description
+                             Each time this unit makes a Normal, Advance or Fall Back move, it can move through
+                             models (excluding Titanic models) and terrain features. When doing so, it can move within
    Scuttling Walker
-                            Engagement Range of enemy models, but cannot end that move within Engagement
-                            Range of them, and any Desperate Escape test is automatically passed.
-                            You can target this unit with the Counteroffensive stratagem, regardless of any other uses
-   Destroyer of             of that stratagem this phase. If you do:
+                             Engagement Range of enemy models, but cannot end that move within Engagement
+                             Range of them, and any Desperate Escape test is automatically passed.
+                             You can target this unit with the Counteroffensive stratagem, regardless of any other uses
+   Destroyer of              of that stratagem this phase. If you do:
    Futures (Once per
-                             That use is ‑1 CP.
+                              That use is ‑1 CP.
    phase, per unit)
-                             That use does not prevent any uses of that stratagem on other units this phase.'
-   Damaged: 1-6             While this model has 1-6 wounds remaining, each time this model makes an attack,
-   wounds remaining         subtract 1 from the Hit roll.
+                              That use does not prevent any uses of that stratagem on other units this phase.'
+   Damaged: 1-6              While this model has 1-6 wounds remaining, each time this model makes an attack,
+   wounds remaining          subtract 1 from the Hit roll.
     Rules Deadly Demise D6, Blast, Sustained Hits, Devastating Wounds
 
     Categories Chaos, Daemon, Defiler, Faction: Thousand Sons, Tzeentch, Vehicle, Walker
@@ -353,8 +334,32 @@ https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                    
 
 
 
-https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                                                                    9/12
-10/20/26, 11:35 PM                                             Pubstomper - New Recruit
+https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                                                                     8/12
+10/23/26, 3:17 PM                                                        Pubstomper - New Recruit
+     85 PTS                                                SEKHETAR ROBOTS
+   Models                                            Options
+   2x                                                Close combat weapon, Heavy warpflamer, Hellfyre missile rack, Pyreflux
+   Sekhetar Robot w/ pyreflux meltagun               meltagun
+   Unit                                               M            T   Sv          W        LD           OC        InSv      Base
+   Sekhetar Robots (x2)                               8"           6   3+          4        7+           1         5+        40mm
+   Ranged Weapons                              Range           A       BS      S       AP        D       Keywords
+   Heavy warpflamer (x2)                       12"             D6      N/A     5       -2        1       Ignores Cover, Torrent
+   Hellfyre missile rack (x2)                  36"             2       4+      10      -2        3
+   Pyreflux meltagun (x2)                      12"             1       4+      10      -4        D6      Melta 2
+   Melee Weapons                                               Range           A       WS            S       AP     D     Keywords
+   Close combat weapon (x2)                                    Melee           3       4+            5       0      1
+   Abilities             Description
+   Prophetic              Once per turn, when you target this unit with the Fire Overwatch/ Heroic Intervention
+   Sentinels              stratagem, that use is ‑1 CP.
+    Rules Infiltrators, Stealth, Ignores Cover, Torrent, Melta
+
+    Categories Chaos, Faction: Thousand Sons, Sekhetar Robots, Tzeentch, Vehicle, Walker
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                                                                         9/12
+10/23/26, 3:17 PM                                              Pubstomper - New Recruit
 
 
   Rules
@@ -416,11 +421,15 @@ https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                    
 
 
 https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                                                              10/12
-10/20/26, 11:35 PM                                             Pubstomper - New Recruit
+10/23/26, 3:17 PM                                              Pubstomper - New Recruit
 
   Ignores Cover:
   Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover
   against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+  Infiltrators:
+  During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is
+  more than 8" horizontally from your opponent’s deployment zone and all enemy units.
 
   Kindred Sorcery:
   In your Command phase, you can select one of the abilities listed below to take effect until the start of your next
@@ -432,10 +441,6 @@ https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                    
   roll.
   Wrath of the Immaterium
   Psychic weapons equipped by Thousand Sons models in your army have the [Devastating Wounds] ability.
-
-  Lance:
-  Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this
-  turn, add 1 to the wound roll.
 
   Leader:
   Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one
@@ -449,6 +454,13 @@ https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                    
   Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that
   attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot
   trigger other abilities such as [DEVASTATING WOUNDS].
+
+  Melta:
+  This ability always takes the form [MELTA X]. Each time a model makes an attack with a [MELTA] weapon, if
+  the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks
+  have been resolved, add X to that weapon’s D characteristic.
+  Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6.
+  While resolving those attacks, that weapon has a D characteristic of D6+2.
 
   Pistol:
   [PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
@@ -470,15 +482,15 @@ https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                    
   or WS characteristic and any or all modifiers to the hit roll. Attacks made with [PSYCHIC] weapons are known
   as psychic attacks (this can be important for the triggering of other rules).
 
+https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                                                           11/12
+10/23/26, 3:17 PM                                              Pubstomper - New Recruit
+
   Rapid Fire:
   This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE]
   weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select
   Targets step.
   Example: If a [RAPID FIRE 1] weapon with an A characteristic of 1 targets a unit that is within half range,
   you would gather one additional attack dice for that weapon (for a total of two for that weapon).
-
-https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                                                       11/12
-10/20/26, 11:35 PM                                             Pubstomper - New Recruit
 
   Scouts 6":
   This ability always takes the form Scouts X". In the Resolve Pre-battle Abilities step, if every model in a unit has
@@ -489,6 +501,10 @@ https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                    
     If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if
      every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED
      TRANSPORT can make a scout move.
+
+  Stealth:
+  If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of
+  cover against that attack (13.08).
 
   Sustained Hits:
   This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED
@@ -503,5 +519,5 @@ https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                    
 
 
 
-https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                                                        12/12
+https://www.newrecruit.eu/app/Lists/6ac9575378177fc2601e84fa                                                         12/12
 

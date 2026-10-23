@@ -1,0 +1,587 @@
+[
+ {
+  "key": "53b14315bcfc2b0d",
+  "where": "mucho-mutantes · Sekhetar Robots · Prophetic Sentinels",
+  "verdict": "ok",
+  "why": "Fire Overwatch: “WHEN: End of your opponent’s Movement phase”; Heroic Intervention: “WHEN: End of your opponent’s Charge phase” (core 15.08, 15.11). The ability works only when targeting this unit with those two, so their Movement and Charge phases. Text is the pack's Rules Update."
+ },
+ {
+  "key": "09018edd67259b09",
+  "where": "mucho-mutantes · Sekhetar Robots",
+  "verdict": "ok",
+  "why": "Wahapedia: “Every model is equipped with: heavy warpflamer; hellfyre missile rack; pyreflux meltagun; close combat weapon.” New Recruit: 2× Sekhetar Robot with Close combat weapon, Heavy warpflamer, Hellfyre missile rack, Pyreflux meltagun. ×2 each."
+ },
+ {
+  "key": "b5491afbe176604d",
+  "where": "mucho-mutantes · Ahriman · Scryer of Fates",
+  "verdict": "ok",
+  "why": "Wahapedia and New Recruit both print “Scryer of Fates (Psychic)”."
+ },
+ {
+  "key": "7bc53c14d45dff9d",
+  "where": "mucho-mutantes · Ahriman · Scryer of Fates",
+  "verdict": "ok",
+  "why": "Ahriman's own datasheet ability (Wahapedia Ahriman: Scryer of Fates), not the Enlightened's."
+ },
+ {
+  "key": "b4d8681ec8000012",
+  "where": "mucho-mutantes · Ahriman · Arch-Sorcerer of Tzeentch",
+  "verdict": "ok",
+  "why": "A Ritual is attempted only by Cabal of Sorcerers, “at the start of your Shooting phase” (Faction Pack Rules Update); same tag as Lord of the Planet of the Sorcerers."
+ },
+ {
+  "key": "40412209e87ae258",
+  "where": "mucho-mutantes · Ahriman · Arch-Sorcerer of Tzeentch",
+  "verdict": "ok",
+  "why": "Wahapedia and New Recruit: “Arch-Sorcerer of Tzeentch (Psychic)”."
+ },
+ {
+  "key": "76d9f5ae80bf6946",
+  "where": "mucho-mutantes · Ahriman · Arch-Sorcerer of Tzeentch",
+  "verdict": "ok",
+  "why": "Ahriman's datasheet ability; “this model” is Ahriman."
+ },
+ {
+  "key": "750fcc8198eb93d6",
+  "where": "mucho-mutantes · Ahriman · Malign Trickery",
+  "verdict": "ok",
+  "why": "Malign Trickery is on the Tzaangor Enlightened with Fatecaster Greatbows datasheet (Wahapedia), the led unit."
+ },
+ {
+  "key": "56495bb6de2b5c6c",
+  "where": "mucho-mutantes · Ahriman",
+  "verdict": "ok",
+  "why": "New Recruit categories: “Mutant*, Tzaangor Enlightened*, Tzaangor Enlightened with Fatecaster Greatbows*, *from combined unit”; Wahapedia Ahriman has no MUTANT."
+ },
+ {
+  "key": "724e8deca9f26c9b",
+  "where": "mucho-mutantes · Ahriman",
+  "verdict": "ok",
+  "why": "New Recruit: Ahriman 105, Tzaangor Enlightened with Fatecaster greatbows 110; unit 215."
+ },
+ {
+  "key": "aab2889bb2157c6a",
+  "where": "mucho-mutantes · Ahriman",
+  "verdict": "ok",
+  "why": "Wahapedia: Ahriman has Cabal of Sorcerers under ARMY RULES; the Fatecaster Enlightened datasheet has none."
+ },
+ {
+  "key": "41e6a7e1dc29827c",
+  "where": "mucho-mutantes · Ahriman",
+  "verdict": "ok",
+  "why": "Wahapedia: Ahriman “INFANTRY; MOUNTED; … PSYKER”; Fatecaster Enlightened “MOUNTED; FLY; CHAOS; TZEENTCH; MUTANT; …”, no INFANTRY or PSYKER."
+ },
+ {
+  "key": "d1170326e6c9920b",
+  "where": "mucho-mutantes · Ahriman",
+  "verdict": "ok",
+  "why": "Ahriman: inferno bolt pistol, Transmogrifying Blast, Black Staff of Ahriman; Aviarch + 5 Enlightened each fatecaster greatbow and close combat weapon (Wahapedia “Every model is equipped with”, New Recruit ×6)."
+ },
+ {
+  "key": "76e875ecfc38a3d0",
+  "where": "mucho-mutantes · Exalted Sorcerer on Disc of Tzeentch · Illusions of Tzeentch",
+  "verdict": "ok",
+  "why": "Wahapedia and New Recruit: “Illusions of Tzeentch (Psychic)”."
+ },
+ {
+  "key": "6c0d8ae1cd2c4a21",
+  "where": "mucho-mutantes · Exalted Sorcerer on Disc of Tzeentch · Illusions of Tzeentch",
+  "verdict": "ok",
+  "why": "The Exalted Sorcerer on Disc's own ability (“While this model is leading a unit”)."
+ },
+ {
+  "key": "fc63627187bf9093",
+  "where": "mucho-mutantes · Exalted Sorcerer on Disc of Tzeentch · Illusions of Tzeentch",
+  "verdict": "ok",
+  "why": "“that unit can only be selected as the target of a ranged attack if the attacking model is within 18\"”: the When targeted line keeps the ranged-only and 18\" conditions."
+ },
+ {
+  "key": "becd11b1f352ecca",
+  "where": "mucho-mutantes · Exalted Sorcerer on Disc of Tzeentch · Binding Tendrils",
+  "verdict": "ok",
+  "why": "“In your Shooting phase, after this model has shot”."
+ },
+ {
+  "key": "7a645a279a26ef4e",
+  "where": "mucho-mutantes · Exalted Sorcerer on Disc of Tzeentch · Binding Tendrils",
+  "verdict": "ok",
+  "why": "Wahapedia and New Recruit: “Binding Tendrils (Psychic)”."
+ },
+ {
+  "key": "09bfd0fa9b8dc85a",
+  "where": "mucho-mutantes · Exalted Sorcerer on Disc of Tzeentch · Binding Tendrils",
+  "verdict": "ok",
+  "why": "The Disc's own ability (“after this model has shot … made with Arcane Fire”); Arcane Fire is his."
+ },
+ {
+  "key": "e9aa83e97e46e4bc",
+  "where": "mucho-mutantes · Exalted Sorcerer on Disc of Tzeentch · Malign Trickery",
+  "verdict": "ok",
+  "why": "Malign Trickery is the Fatecaster Enlightened datasheet's ability."
+ },
+ {
+  "key": "2cf592eb5e88f8cc",
+  "where": "mucho-mutantes · Exalted Sorcerer on Disc of Tzeentch",
+  "verdict": "ok",
+  "why": "New Recruit: “Mutant*, Tzaangor Enlightened*, Tzaangor Enlightened with Fatecaster Greatbows*, *from combined unit”; Wahapedia Disc keywords have no MUTANT."
+ },
+ {
+  "key": "1a80b2d2c0722982",
+  "where": "mucho-mutantes · Exalted Sorcerer on Disc of Tzeentch",
+  "verdict": "ok",
+  "why": "New Recruit: Disc 95 + Fatecasters 110 = 205."
+ },
+ {
+  "key": "701089ff05673ec4",
+  "where": "mucho-mutantes · Exalted Sorcerer on Disc of Tzeentch",
+  "verdict": "ok",
+  "why": "Wahapedia: the Disc has Cabal of Sorcerers; the Fatecaster Enlightened do not."
+ },
+ {
+  "key": "8eb32ed72e35c7a3",
+  "where": "mucho-mutantes · Exalted Sorcerer on Disc of Tzeentch",
+  "verdict": "ok",
+  "why": "Wahapedia Disc: “INFANTRY; MOUNTED; CHARACTER; FLY; GRENADES; PSYKER …”; the Fatecaster Enlightened have none of GRENADES, INFANTRY, PSYKER."
+ },
+ {
+  "key": "e976bf2182f6dfc4",
+  "where": "mucho-mutantes · Exalted Sorcerer on Disc of Tzeentch",
+  "verdict": "ok",
+  "why": "Wahapedia: “Arcane Fire; inferno bolt pistol; force weapon” and “can be equipped with 1 Prosperine khopesh”; New Recruit lists all four for the Disc, greatbow + close combat weapon ×6 for the Enlightened."
+ },
+ {
+  "key": "037b88d71538b9f8",
+  "where": "mucho-mutantes · Tzaangor Shaman · Sacrificial Blessing",
+  "verdict": "ok",
+  "why": "“in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight”: Shooting your turn, Fight either."
+ },
+ {
+  "key": "e3c7ea2f00825918",
+  "where": "mucho-mutantes · Tzaangor Shaman · Sacrificial Blessing",
+  "verdict": "ok",
+  "why": "The Shaman's ability (“this model can use this ability … Psychic weapons equipped by this model”)."
+ },
+ {
+  "key": "414f9c27f36dbed4",
+  "where": "mucho-mutantes · Tzaangor Shaman · Bestial Prophet",
+  "verdict": "ok",
+  "why": "The Shaman's ability; its effect reaches every model of the led unit (see the footnote)."
+ },
+ {
+  "key": "a15d82efd26faf53",
+  "where": "mucho-mutantes · Tzaangor Shaman · Curse of Life",
+  "verdict": "ok",
+  "why": "Curse of Life acts when this model heals from Sorcerous Invigoration, which comes from manifesting a Ritual, attempted “at the start of your Shooting phase” (Cabal of Sorcerers)."
+ },
+ {
+  "key": "cd07e75508796e24",
+  "where": "mucho-mutantes · Tzaangor Shaman · Curse of Life",
+  "verdict": "ok",
+  "why": "Ritual of Regeneration enhancement (New Recruit options: Curse of Life)."
+ },
+ {
+  "key": "7106690bf2b0ec29",
+  "where": "mucho-mutantes · Tzaangor Shaman · Curse of Life",
+  "verdict": "ok",
+  "why": "“INFANTRY/MOUNTED THOUSAND SONS PSYKER model only”: the Shaman is INFANTRY, MOUNTED, PSYKER and the bearer."
+ },
+ {
+  "key": "51a107ce3fb86e22",
+  "where": "mucho-mutantes · Tzaangor Shaman · Prophesied Doom",
+  "verdict": "ok",
+  "why": "Prophesied Doom is the Tzaangor Enlightened datasheet's ability."
+ },
+ {
+  "key": "543e6ae95f0ec502",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "verdict": "ok",
+  "why": "“While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll.” No who: every model of the unit, the Shaman included; always while leading."
+ },
+ {
+  "key": "fd477bbee10d5064",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "verdict": "ok",
+  "why": "“add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model”: who is the Shaman; when keeps “your Shooting phase and the Fight phase”, the Bodyguard model destroyed and “until the end of the phase”."
+ },
+ {
+  "key": "9bc7e4c0be3b95a1",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "verdict": "ok",
+  "why": "New Recruit: “Tzaangor Enlightened*, *from combined unit”; Wahapedia Shaman keywords include MOUNTED, FLY, MUTANT."
+ },
+ {
+  "key": "285f5a45a32b5866",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "verdict": "ok",
+  "why": "Tzaangor Shaman 65 + Curse of Life 20 = 85 (New Recruit 85), Tzaangor Enlightened 90; 175."
+ },
+ {
+  "key": "7dfe6d181f5cef02",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "verdict": "ok",
+  "why": "Wahapedia: the Shaman has Cabal of Sorcerers; Tzaangor Enlightened have no army rule."
+ },
+ {
+  "key": "8b56a4a4c5a45193",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "verdict": "ok",
+  "why": "Wahapedia Shaman: “INFANTRY; MOUNTED; … PSYKER”; Tzaangor Enlightened: “MOUNTED; FLY; CHAOS; TZEENTCH; MUTANT; TZAANGOR ENLIGHTENED”."
+ },
+ {
+  "key": "ca803e22dbfdaccf",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "verdict": "ok",
+  "why": "Shaman: Baleful Devolution, force stave; Aviarch + 5 Enlightened: divining spear each (×6)."
+ },
+ {
+  "key": "80efec13495f136f",
+  "where": "mucho-mutantes · Tzaangor Shaman · Diamond of Distortion",
+  "verdict": "ok",
+  "why": "Warpmeld Pact enhancement, New Recruit 85 = 65 + 20."
+ },
+ {
+  "key": "b8165ca6f4d415a0",
+  "where": "mucho-mutantes · Tzaangor Shaman · Diamond of Distortion",
+  "verdict": "ok",
+  "why": "“TZAANGOR SHAMAN model only”: the bearer."
+ },
+ {
+  "key": "79c543e400e00cba",
+  "where": "mucho-mutantes · Tzaangor Shaman · Diamond of Distortion",
+  "verdict": "ok",
+  "why": "“While the bearer is leading a unit, each time an attack targets that unit, subtract 1 from the Hit roll.” The When targeted line keeps “while the bearer leads it”."
+ },
+ {
+  "key": "d7c2a1ad5f62b6c8",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "verdict": "ok",
+  "why": "Same as the Curse of Life unit: only the Shaman has Cabal of Sorcerers."
+ },
+ {
+  "key": "9d9ae95a9c7f1cac",
+  "where": "mucho-mutantes · Tzaangor Shaman · Flowing Flesh",
+  "verdict": "ok",
+  "why": "Warpmeld Pact enhancement, 65 + 10 = 75 (New Recruit)."
+ },
+ {
+  "key": "96d6d2a8873f7635",
+  "where": "mucho-mutantes · Tzaangor Shaman · Flowing Flesh",
+  "verdict": "ok",
+  "why": "“TZAANGOR SHAMAN model only. The bearer has the Feel No Pain 4+ ability”."
+ },
+ {
+  "key": "596771c0f7b0602c",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "verdict": "ok",
+  "why": "New Recruit: only Tzaangor Enlightened is “*from combined unit”."
+ },
+ {
+  "key": "6f43ca1ac3af87ba",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "verdict": "ok",
+  "why": "65 + Flowing Flesh 10 = 75, Tzaangor Enlightened 90: 165."
+ },
+ {
+  "key": "647a19681f6e214a",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "verdict": "ok",
+  "why": "Cabal of Sorcerers: the Shaman's datasheet; Feel No Pain 4+: “The bearer has” (Flowing Flesh), a model rule."
+ },
+ {
+  "key": "13e76bbc59bdb004",
+  "where": "Ritual of Regeneration rule · Sorcerous Invigoration",
+  "verdict": "ok",
+  "why": "“When a friendly THOUSAND SONS PSYKER unit … successfully manifests a Ritual”; Rituals are attempted “at the start of your Shooting phase” (Cabal of Sorcerers, Rules Update)."
+ },
+ {
+  "key": "78e3889fb069f604",
+  "where": "Ritual of Regeneration rule · Sorcerous Invigoration",
+  "verdict": "ok",
+  "why": "Only your own Shooting phase (Cabal of Sorcerers: “at the start of your Shooting phase”)."
+ },
+ {
+  "key": "5df7ecf601b79724",
+  "where": "Ritual of Regeneration rule · Sorcerous Invigoration",
+  "verdict": "ok",
+  "why": "“a friendly THOUSAND SONS PSYKER unit (excluding MONSTER units)”: a rule about units, so the led units with a PSYKER leader count; Magnus and the Daemon Prince are MONSTER."
+ },
+ {
+  "key": "4427fde92e0ac639",
+  "where": "Ritual of Regeneration rule · Sorcerous Invigoration",
+  "verdict": "ok",
+  "why": "The text opens “(Once per turn, per unit)”."
+ },
+ {
+  "key": "c5472f5c64144bd1",
+  "where": "Ritual of Regeneration · Relentless Rebirth",
+  "verdict": "ok",
+  "why": "“WHEN: Any phase”: all five phases."
+ },
+ {
+  "key": "ad660349b515ce5e",
+  "where": "Ritual of Regeneration · Relentless Rebirth",
+  "verdict": "ok",
+  "why": "“Any phase”, either player's turn (mortal wounds can come in either)."
+ },
+ {
+  "key": "365988ef4ec55eb7",
+  "where": "Ritual of Regeneration · Relentless Rebirth",
+  "verdict": "ok",
+  "why": "“a friendly INFANTRY/MOUNTED THOUSAND SONS PSYKER unit”: unit-level; the Ahriman/Disc/Shaman units qualify (PSYKER leader, MOUNTED), Magnus and the Daemon Prince do not (MONSTER, no INFANTRY/MOUNTED)."
+ },
+ {
+  "key": "a55516593fe0aa19",
+  "where": "Ritual of Regeneration · Relentless Rebirth",
+  "verdict": "ok",
+  "why": "WHEN “when … suffers a mortal wound”, EFFECT “Your unit has Feel No Pain 5+ against mortal wounds”: the condition and the limit kept."
+ },
+ {
+  "key": "33fd22b16d34f394",
+  "where": "Ritual of Regeneration · Relentless Rebirth",
+  "verdict": "ok",
+  "why": "Keeps the WHEN (suffers a mortal wound) and the effect's “against mortal wounds”; the target keywords are the needs."
+ },
+ {
+  "key": "7a03a13a1de89771",
+  "where": "Ritual of Regeneration · Mutagenic Magicks",
+  "verdict": "ok",
+  "why": "“WHEN: Start of the Fight phase.”"
+ },
+ {
+  "key": "5f9fd1aac73ee831",
+  "where": "Ritual of Regeneration · Mutagenic Magicks",
+  "verdict": "ok",
+  "why": "“the Fight phase”: either turn."
+ },
+ {
+  "key": "4a5f3630972ee8f2",
+  "where": "Ritual of Regeneration · Mutagenic Magicks",
+  "verdict": "ok",
+  "why": "“One friendly engaged THOUSAND SONS PSYKER unit”: TS + PSYKER (engaged is a table state, in the gist)."
+ },
+ {
+  "key": "638a4fdf554bf3dd",
+  "where": "Ritual of Regeneration · Mutagenic Magicks",
+  "verdict": "ok",
+  "why": "Keeps “engaged” and the effect word for word (“Select one enemy unit engaged with your unit. Roll six D6: For each 4+ … 1 mortal wound”)."
+ },
+ {
+  "key": "cda97efefd22f169",
+  "where": "Ritual of Regeneration · Multitudinous Limbs",
+  "verdict": "ok",
+  "why": "“WHEN: Your Movement phase”."
+ },
+ {
+  "key": "53f9e87729f2a75d",
+  "where": "Ritual of Regeneration · Multitudinous Limbs",
+  "verdict": "ok",
+  "why": "“Your Movement phase”."
+ },
+ {
+  "key": "4ef23def31b046de",
+  "where": "Ritual of Regeneration · Multitudinous Limbs",
+  "verdict": "ok",
+  "why": "Same TARGET as Relentless Rebirth: INFANTRY/MOUNTED THOUSAND SONS PSYKER unit."
+ },
+ {
+  "key": "58ec3016f716242e",
+  "where": "Ritual of Regeneration · Multitudinous Limbs",
+  "verdict": "ok",
+  "why": "“selected to make an advance/fall back move … That move does not prevent your unit from being eligible to start an action.” The WHEN is in “advance or fall back move”."
+ },
+ {
+  "key": "f1b2230c541c5b88",
+  "where": "Warpmeld Pact rule · Warpmeld Sacrifice",
+  "verdict": "unclear",
+  "why": "Shooting and Fight, either turn, is complete if only Shooting-phase shooting is “selected to shoot”. But Fire Overwatch (“End of your opponent’s Movement phase … Your unit shoots using snap shooting”) also makes ranged attacks: an enemy overwatching your Fatecaster/Shaman/Tzaangors units in your Movement phase, or your Fatecaster/Shaman units (greatbows, Baleful Devolution) overwatching in theirs. Whether that unit is “selected to shoot” the rules leave open (04.01.05 lists “selected to shoot” and “chosen to make attacks” apart); the +1/-1 to wound would apply to snap shots (only the hit roll is fixed at 6). Reading 1: keep {ph:['shooting','fight'], turn:'either'}. Reading 2 (as result-knights-nids treated “selected to shoot or fight”): {ph:['movement','shooting','fight'], turn:'either'}."
+ },
+ {
+  "key": "ec04ea6b0052d88a",
+  "where": "Warpmeld Pact rule · Warpmeld Sacrifice",
+  "verdict": "ok",
+  "why": "Enemy units shoot in their Shooting phase and fight in either Fight phase; your units shoot in yours and fight in either: either turn for both phases."
+ },
+ {
+  "key": "bca7e87b252343d2",
+  "where": "Warpmeld Pact rule · Warpmeld Sacrifice",
+  "verdict": "ok",
+  "why": "“TZEENTCH MUTANT INFANTRY or TZEENTCH MUTANT MOUNTED units” = TZEENTCH + MUTANT + (INFANTRY or MOUNTED). A rule about units: the led Fatecaster units (MUTANT from the Enlightened, MOUNTED), Shaman units, Tzaangors; not Magnus, the Daemon Prince or the Sekhetar Robots. Text is the Rules Update wording (identical to Wahapedia's)."
+ },
+ {
+  "key": "9defbbe537955fd9",
+  "where": "Warpmeld Pact rule · Warpmeld Sacrifice",
+  "verdict": "ok",
+  "why": "Part 1: “subtract 1 from the Wound roll” for attacks targeting the unit, with the D3 mortal wounds and “until the end of the phase”. Part 2: “each time a model in that unit makes an attack, add 1 to the Wound roll”: no who, so every model including the non-MUTANT leaders. Keywords part: needs TZAANGORS (only the two Tzaangors units; the Enlightened are not TZAANGORS), +1 OC only for “TZAANGOR models” while not Battle-shocked, and New Recruit's OC 1 does not include it. The Rules Update's “Change to” quotes only the two sacrifice paragraphs; Wahapedia (errata applied) and BSData keep the BATTLELINE/OC paragraph, and New Recruit gives the Tzaangors BATTLELINE, so keeping it is right."
+ },
+ {
+  "key": "c8d7c89d95925d9f",
+  "where": "Warpmeld Pact · Gift of Change",
+  "verdict": "ok",
+  "why": "“WHEN: Any phase.”"
+ },
+ {
+  "key": "6108e6e301811a54",
+  "where": "Warpmeld Pact · Gift of Change",
+  "verdict": "ok",
+  "why": "Any phase, either turn."
+ },
+ {
+  "key": "6cef97a162b7ac84",
+  "where": "Warpmeld Pact · Gift of Change",
+  "verdict": "ok",
+  "why": "“One THOUSAND SONS CHARACTER model from your army (excluding MONSTERS)”: shown on the Ahriman, Disc and Shaman units, not on Magnus or the Daemon Prince (MONSTER)."
+ },
+ {
+  "key": "ab4c28696f89c3b2",
+  "where": "Warpmeld Pact · Gift of Change",
+  "verdict": "ok",
+  "why": "Keeps the TARGET condition (just destroyed), the end-of-phase timing, “as close as possible”, not within Engagement Range (unengaged) and the once-per-battle-round restriction."
+ },
+ {
+  "key": "1c6d25ea58dc55b4",
+  "where": "Warpmeld Pact · Warped Vicissitude",
+  "verdict": "ok",
+  "why": "“Your opponent’s Shooting phase or the Fight phase”."
+ },
+ {
+  "key": "eff64e3b9385ef90",
+  "where": "Warpmeld Pact · Warped Vicissitude",
+  "verdict": "ok",
+  "why": "Fight phase of either turn; shooting is limited by turns."
+ },
+ {
+  "key": "0bd7f1f824fa0685",
+  "where": "Warpmeld Pact · Warped Vicissitude",
+  "verdict": "ok",
+  "why": "“Your opponent’s Shooting phase”: shooting is their turn only."
+ },
+ {
+  "key": "4777c00b7b396028",
+  "where": "Warpmeld Pact · Warped Vicissitude",
+  "verdict": "ok",
+  "why": "“One TZAANGORS unit from your army”: the two Tzaangors units."
+ },
+ {
+  "key": "047e5e9b10c71e20",
+  "where": "Warpmeld Pact · Warped Vicissitude",
+  "verdict": "ok",
+  "why": "“Until the end of the phase, models in your unit have a 4+ invulnerable save”; phases as the WHEN says."
+ },
+ {
+  "key": "0a3bad53e44646aa",
+  "where": "Warpmeld Pact · Warped Vicissitude",
+  "verdict": "ok",
+  "why": "Keeps the WHEN/TARGET (just after an enemy unit selects your unit as a target) and “until the end of the phase … models in your unit”."
+ },
+ {
+  "key": "0cdae548b1769f3d",
+  "where": "Warpmeld Pact · Deranged Ferocity",
+  "verdict": "ok",
+  "why": "“WHEN: Fight phase”."
+ },
+ {
+  "key": "e905ba0e1f1b4857",
+  "where": "Warpmeld Pact · Deranged Ferocity",
+  "verdict": "ok",
+  "why": "Fight phase, either turn."
+ },
+ {
+  "key": "5e433fb70da04630",
+  "where": "Warpmeld Pact · Deranged Ferocity",
+  "verdict": "ok",
+  "why": "“a TZEENTCH MUTANT unit from your army”: unit-level, the led Fatecaster units count (MUTANT from the Enlightened)."
+ },
+ {
+  "key": "a033ad085e8c5fa8",
+  "where": "Warpmeld Pact · Deranged Ferocity",
+  "verdict": "ok",
+  "why": "Pile-in/Consolidation “up to 6\" instead of up to 3\"”, models “within 3\" of one or more enemy models are eligible to fight”, targets “within 3\" of them and within Engagement Range of their unit”: all kept."
+ },
+ {
+  "key": "171dc5c7552b4572",
+  "where": "Warpmeld Pact · Blessed Transmutations",
+  "verdict": "ok",
+  "why": "“WHEN: Your Command phase.”"
+ },
+ {
+  "key": "3c55794ca197e2ab",
+  "where": "Warpmeld Pact · Blessed Transmutations",
+  "verdict": "ok",
+  "why": "Your Command phase."
+ },
+ {
+  "key": "3717e6d2a9e9f671",
+  "where": "Warpmeld Pact · Blessed Transmutations",
+  "verdict": "ok",
+  "why": "TARGET: “One THOUSAND SONS PSYKER model … and one friendly TZAANGORS unit”: either half of the target is a unit of the list, so shown on PSYKER units (Magnus, Daemon Prince, the led units) and on the Tzaangors."
+ },
+ {
+  "key": "e4524bf188e07664",
+  "where": "Warpmeld Pact · Blessed Transmutations",
+  "verdict": "ok",
+  "why": "Keeps “below its Starting Strength”, “within 12\" of that PSYKER model”, “up to D3+1” and “(excluding CHARACTERS)”."
+ },
+ {
+  "key": "17b184e71d966a00",
+  "where": "Warpmeld Pact · Touched by Tzeentch",
+  "verdict": "ok",
+  "why": "“WHEN: Start of your Movement phase.”"
+ },
+ {
+  "key": "76cf60eb361e1192",
+  "where": "Warpmeld Pact · Touched by Tzeentch",
+  "verdict": "ok",
+  "why": "Your Movement phase."
+ },
+ {
+  "key": "49a00874319b183a",
+  "where": "Warpmeld Pact · Touched by Tzeentch",
+  "verdict": "ok",
+  "why": "“One TZEENTCH MUTANT unit from your army”."
+ },
+ {
+  "key": "334ae6a5ff412542",
+  "where": "Warpmeld Pact · Touched by Tzeentch",
+  "verdict": "ok",
+  "why": "The effect word for word."
+ },
+ {
+  "key": "2984cefe1221870b",
+  "where": "Warpmeld Pact · Touched by Tzeentch",
+  "verdict": "ok",
+  "why": "The Faction Pack 1.3 FAQ, question and answer as printed (“A: No, you may decide later in the turn.”): a quoted GW FAQ, as other notes in the app."
+ },
+ {
+  "key": "3a23c7ae4bb47824",
+  "where": "Warpmeld Pact · Twisted Mirage",
+  "verdict": "ok",
+  "why": "“WHEN: Reinforcements step of your Movement phase.”"
+ },
+ {
+  "key": "73322c7a1b2f01a3",
+  "where": "Warpmeld Pact · Twisted Mirage",
+  "verdict": "ok",
+  "why": "Your Movement phase."
+ },
+ {
+  "key": "1d3a9da100a61f34",
+  "where": "Warpmeld Pact · Twisted Mirage",
+  "verdict": "ok",
+  "why": "“One TZEENTCH MUTANT unit from your army that is arriving from Strategic Reserves”."
+ },
+ {
+  "key": "6b0f16e75c2c4557",
+  "where": "Warpmeld Pact · Twisted Mirage",
+  "verdict": "fix",
+  "why": "The effect's point is “set up anywhere on the battlefield”; the gist drops it, so it reads like the normal Strategic Reserves set-up with a distance. Also “more than 8\"” (not just 8\"), and “until the end of the turn” is the text's. 6\" and 8\" are right after the Rules Update (3\"→6\", 9\"→8\").",
+  "fix": {
+   "gist": "Your unit arriving from Strategic Reserves can be set up anywhere on the battlefield more than 6\" horizontally away from all enemy units (more than 8\" for a MONSTER unit); until the end of the turn, it is not eligible to declare a charge."
+  }
+ },
+ {
+  "key": "24fe9149caf136cd",
+  "where": "Warpmeld Pact · Twisted Mirage",
+  "verdict": "ok",
+  "why": "The Faction Pack 1.3 FAQ as printed (“A: No.”); the list has Tzaangors with Ambushing Hunters."
+ }
+]

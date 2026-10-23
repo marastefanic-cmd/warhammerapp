@@ -725,7 +725,8 @@ function buildUnit(army, u, um, cat, force, issues) {
   if (u.enhancement) {
     const host = (u.enhOn && roots.find((r) => nn(r.node.name) === nn(u.enhOn))) || lead;
     if (u.enhOn && host === lead && nn(lead.node.name) !== nn(u.enhOn)) fail('enhOn', u.enhOn, roots.map((r) => r.node.name).join(' / '), 'no part of the unit is named as enhOn');
-    const p = searchBelow(host.node, (k) => k.type === 'upgrade' && nn(k.name) === nn(u.enhancement))[0];
+    const spelt = enhSpelling(army, u.enhancement);
+    const p = searchBelow(host.node, (k) => k.type === 'upgrade' && (nn(k.name) === nn(u.enhancement) || (spelt && nn(k.name) === nn(spelt))))[0];
     if (!p) fail('enhancement', u.enhancement, '', `no enhancement "${u.enhancement}" for ${host.node.name}`);
     else {
       const last = p[p.length - 1];
@@ -852,6 +853,11 @@ const CHAR_KEY = { Range: 'range', LD: 'Ld', Base: 'base' };
 const CHAR_WORDS = { M: /\bMove\b|\bM\b/, T: /\bToughness\b|\bT\b/, Sv: /\bSave\b|\bSv\b/, W: /\bWounds characteristic\b|\bW\b/, Ld: /\bLeadership\b|\bLd\b/,
   OC: /\bObjective Control\b|\bOC\b/, InSv: /\bInSv\b|\binvulnerable save\b/i, A: /\bAttacks\b|\bA\b/, S: /\bStrength\b|\bS\b/, D: /\bDamage\b|\bD\b/,
   AP: /\bAP\b/, BS: /\bBS\b|\bBallistic Skill\b/, WS: /\bWS\b|\bWeapon Skill\b/, range: /\bRange\b|\bR\b/ };
+// an enhancement's name as New Recruit and BSData spell it, where it differs from GW's (data.js enhancement `nr`)
+function enhSpelling(army, name) {
+  const e = Object.values(DATA.factions[army.faction].detachments).flatMap((d) => d.enhancements || []).find((x) => x.name === name);
+  return e && e.nr ? e.nr : null;
+}
 function grantNames(army) {
   const f = DATA.factions[army.faction];
   const dets = army.detachments.map((d) => f.detachments[d]).filter(Boolean);
@@ -977,7 +983,8 @@ function compareUnit(army, u, F, fail) {
     let pool = whoRoot ? F.abilities.filter((b) => b.root === whoRoot) : F.abilities;
     if (a.who && !whoRoot) pool = pool.filter((b) => nn(a.who).startsWith(nn(b.typeName)));
     if (a.tag === 'Enhancement') pool = pool.filter((b) => b.enh);
-    const nameOk = (b) => names(b).some((x) => x === nn(a.name) || splitAbilityName(x).base === nn(a.name));
+    const spelt = a.tag === 'Enhancement' ? enhSpelling(army, a.name) : null;
+    const nameOk = (b) => names(b).some((x) => x === nn(a.name) || splitAbilityName(x).base === nn(a.name) || (spelt && (x === nn(spelt) || splitAbilityName(x).base === nn(spelt))));
     let cands = pool.filter(nameOk);
     if (!cands.length && a.na) cands = F.roots.flatMap((r) => datasheetAbilities(r)).filter(nameOk);
     checked('abilities');
