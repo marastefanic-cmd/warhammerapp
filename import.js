@@ -116,6 +116,7 @@ function resolve(input, D, opt){
   const leadsTo = new Map();
   for(const s of roots) for(const a of s.associations || []) if(a.type === 'outgoing' && a.action === 'group'){
     if(!byId.has(a.to)){ err('leader attachment of ' + nn(s.name) + ' not recognized (the unit it ' + String(a.name || 'leads').toLowerCase() + ' is not in the list)'); continue; }
+    if(leadsTo.has(s)){ err('leader attachment of ' + nn(s.name) + ' to two units not recognized'); continue; }
     leadsTo.set(s, byId.get(a.to));
   }
   const groups = [], groupOf = new Map();
