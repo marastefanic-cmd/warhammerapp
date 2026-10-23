@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" href="icon-192.png">
 <style>:root{padding-top:env(safe-area-inset-top,0px)}img{max-width:100%}</style>
 <title>Kunnin’ Kodex</title>
-<script>window.WH_BUILD = 'e1174ffba4';</script>
+<script>window.WH_BUILD = '4f915be72e';</script>
 </head>
 <body>
 <style>
@@ -1012,9 +1012,9 @@ a.btn.askcopy{display:flex; width:100%; margin-top:8px}
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="verified.js?v=e1174ffba4"></script>
-<script src="data.js?v=e1174ffba4"></script>
-<script src="calc.js?v=e1174ffba4"></script>
+<script src="verified.js?v=4f915be72e"></script>
+<script src="data.js?v=4f915be72e"></script>
+<script src="calc.js?v=4f915be72e"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -3592,7 +3592,9 @@ function askExport(q){
   let dm = '';
   if(cur.s === 'damage'){ const big = document.querySelector('#view .dmans .dmbig'), chips = [...document.querySelectorAll('#view .dmans .dmchips > *')].map(x => x.textContent.trim()).filter(Boolean);
     if(big) dm = 'Damage tab shows: ' + [...big.children].map(x => x.textContent.replace(/\s+/g, ' ').trim()).filter(Boolean).join(' ') + (chips.length ? ' · counted: ' + chips.join(' · ') : ''); }
-  return [head, 'Looking at: ' + askWhere(), dm, about.length ? 'About:\n' + about.join('\n\n') : '', 'Question: ' + q].filter(Boolean).join('\n');
+  // the whole list as the app has it now (the app updates itself, so this is always the current list): the Project keeps no copy
+  const list = a ? '\n=== The list, as the app shows it today ===\n' + armyText(a, 'List') : '';
+  return [head, 'Looking at: ' + askWhere(), dm, 'Question: ' + q, about.length ? '\n=== About (in full) ===\n' + about.join('\n\n') : '', list].filter(Boolean).join('\n');
 }
 function askProject(){
   const a = cur.army ? army() : null, set = !!askCfg().project;
@@ -3600,7 +3602,7 @@ function askProject(){
     '<p class="askctx">On: ' + esc(askWhere()) + '</p><div id="askRefs">' + askRefChips() + '</div>' +
     '<div class="askin"><textarea id="askQ" rows="3" placeholder="' + (askRefs.length ? 'Your question about these…' : 'Ask a rules question…') + '"></textarea></div>' +
     '<a class="btn askcopy" role="button" data-askcopy href="' + esc(askProjUrl()) + '" target="_blank" rel="noopener">Copy and open Claude</a>' +
-    '<p class="note">Copies your question with ' + (a ? 'this list, ' : '') + 'this screen' + (askRefs.length ? ' and what it is about' : '') + ', then opens ' + (set ? 'your Project' : 'your Claude projects') + ': start a chat there and paste.' +
+    '<p class="note">Copies your question with ' + [a ? 'your whole list' : '', 'this screen', askRefs.length ? 'what it is about' : ''].filter(Boolean).join(', ').replace(/, ([^,]*)$/, ' and $1') + ', then opens ' + (set ? 'your Project' : 'your Claude projects') + ': start a chat there and paste.' +
     (set ? '' : ' Add your Project’s link in Settings to open it straight away.') + '</p>' +
     '<button class="textbtn" data-askother>Other ways to ask</button>');
   setTimeout(() => { const q = $('#askQ'); if(q) q.focus(); }, 50);
