@@ -68,8 +68,9 @@ html{touch-action:manipulation; background:var(--bg)}
    claude.ai's page along (its own background, and the tab bar moving with the frame) */
 html.embedded, html.embedded body{overscroll-behavior:none}
 /* on the home screen of an iPhone (iOS 26), a page shorter than the screen gets a gap under the fixed bottom bar (WebKit
-   bugs 237961, 301994); long pages don't: a short page is made as tall as the screen (--scr-h, set in the script) */
-html.tall body{min-height:calc(var(--scr-h, 0px) - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px))}
+   bugs 237961, 301994); long pages don't: a short page is made a pixel taller than the screen (--scr-h, set in the script;
+   the root's own top padding is the status bar's) */
+html.tall body{min-height:calc(var(--scr-h, 0px) - env(safe-area-inset-top, 0px) + 1px)}
 html.lock, html.lock body{overflow:hidden}
 [hidden]{display:none !important}
 body{
@@ -1612,7 +1613,7 @@ setInterval(() => {
   el.textContent = 'Frame: ' + [ 'win ' + innerWidth + '×' + innerHeight, 'screen ' + screen.width + '×' + screen.height, 'vv ' + (vv ? Math.round(vv.height) + ' @' + Math.round(vv.offsetTop) : '-'),
     'client ' + de.clientHeight, 'doc ' + de.scrollHeight, 'body ' + Math.round(document.body.getBoundingClientRect().height) + ' min ' + getComputedStyle(document.body).minHeight,
     'scr-h ' + (de.style.getPropertyValue('--scr-h') || '-'), 'inset ' + it + '/' + ib, 'coarse ' + matchMedia('(pointer: coarse)').matches,
-    'bar ' + (bb && !bb.hidden ? Math.round(bb.getBoundingClientRect().bottom) : '-'), 'top ' + Math.round(document.getElementById('top').getBoundingClientRect().top) + ' · ua ' + (navigator.userAgent.match(/OS [\d_]+/) || ['-'])[0], 'build ' + (window.WH_BUILD || '-') ].join(' · ');
+    'bar ' + (bb && !bb.hidden ? Math.round(bb.getBoundingClientRect().bottom) : '-'), 'top ' + Math.round(document.getElementById('top').getBoundingClientRect().top) + ' · ua ' + (navigator.userAgent.match(/OS [\d_]+/) || ['-'])[0], 'data ' + D.version + ' · build ' + (window.WH_BUILD || '-') ].join(' · ');
 }, 500);
 
 /* ---------- screen: damage ----------
