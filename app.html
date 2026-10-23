@@ -4241,7 +4241,8 @@ function defenceItems(u, ph, opts){
     out.push({ t:s.cp + 'CP ' + s.name + ': ' + s.shield.def, a:'strat', v:s.id });
   // and on the datasheet what another unit of the list gives this one when it is attacked (guard: Emanatus Forcefield,
   // Shroudpsalm, Necromechanic), as its attack auras show under its weapons; the source's name opens that unit
-  if(opts && opts.shields) for(const src of army().units) for(const g of src.guard || []) if(src !== u && matches(g.needs, u))
+  // (one line for the same help from several units: the three Anathema Psykana units' Psychic Null)
+  if(opts && opts.shields) for(const src of army().units) for(const g of src.guard || []) if(src !== u && matches(g.needs, u) && !out.some(x => x.guard && x.t === g.when + ': ' + g.note))
     out.push({ t:g.when + ': ' + g.note, a:'unit', v:src.id, guard:g });
   if(u.rules.includes('Waaagh!')) out.push({ t:'Riled up: 5+ INV', a:'rule', v:'Waaagh!', riled:true });
   return out;
