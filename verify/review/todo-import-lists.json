@@ -1,0 +1,592 @@
+[
+ {
+  "army": "shooty",
+  "kind": "unit-kwNote",
+  "where": "shooty · Mek",
+  "judgement": {
+   "kwNote": "Tankbustas comes from the supported Tankbustas."
+  },
+  "source": {
+   "models": [
+    "1× Mek",
+    "1× Nob",
+    "1× Tankbusta w/ Two Busta Rokkit Launchas",
+    "4× Tankbusta w/ Busta Rokkit Launcha"
+   ],
+   "stats": [
+    "Mek W4 OC1",
+    "Nob W3 OC1",
+    "Tankbusta ×5 W2 OC1"
+   ],
+   "weapons": [
+    "Kustom Mega-slugga 3 -2 3 CLOSE-QUARTERS, HAZARDOUS, IGNORES COVER, ASSAULT",
+    "Rokkit pistol 1 -2 3 CLOSE-QUARTERS, ASSAULT, IGNORES COVER",
+    "Busta Rokkit Launcha Hunter 3 -2 3 ASSAULT, IGNORES COVER",
+    "Busta Rokkit Launcha Standard 2 -2 3 ASSAULT, IGNORES COVER",
+    "Mek’s Toolz 3 0 1",
+    "Choppa 4 -1 1",
+    "Gitstikka 3 0 1"
+   ]
+  },
+  "key": "0415accd06a388c5"
+ },
+ {
+  "army": "shooty",
+  "kind": "unit-ptsNote",
+  "where": "shooty · Mek",
+  "judgement": {
+   "ptsNote": "55 + Tankbustas 160"
+  },
+  "source": {
+   "models": [
+    "1× Mek",
+    "1× Nob",
+    "1× Tankbusta w/ Two Busta Rokkit Launchas",
+    "4× Tankbusta w/ Busta Rokkit Launcha"
+   ],
+   "stats": [
+    "Mek W4 OC1",
+    "Nob W3 OC1",
+    "Tankbusta ×5 W2 OC1"
+   ],
+   "weapons": [
+    "Kustom Mega-slugga 3 -2 3 CLOSE-QUARTERS, HAZARDOUS, IGNORES COVER, ASSAULT",
+    "Rokkit pistol 1 -2 3 CLOSE-QUARTERS, ASSAULT, IGNORES COVER",
+    "Busta Rokkit Launcha Hunter 3 -2 3 ASSAULT, IGNORES COVER",
+    "Busta Rokkit Launcha Standard 2 -2 3 ASSAULT, IGNORES COVER",
+    "Mek’s Toolz 3 0 1",
+    "Choppa 4 -1 1",
+    "Gitstikka 3 0 1"
+   ]
+  },
+  "key": "01668dc0cdd7d1bb"
+ },
+ {
+  "army": "shooty",
+  "kind": "unit-weapons",
+  "where": "shooty · Mek",
+  "judgement": {
+   "gear": [
+    [
+     "Kustom Mega-slugga",
+     "Mek’s Toolz"
+    ],
+    [
+     "Choppa",
+     "Rokkit pistol",
+     "Rokkit pistol"
+    ],
+    [
+     "Busta Rokkit Launcha",
+     "Busta Rokkit Launcha",
+     "Gitstikka"
+    ],
+    [
+     "Busta Rokkit Launcha",
+     "Gitstikka"
+    ]
+   ],
+   "weapons": [
+    "Mek · Kustom Mega-slugga",
+    "Tankbustas · ×2 · Rokkit pistol",
+    "Tankbustas · ×6 · Busta Rokkit Launcha · Hunter",
+    "Tankbustas · ×6 · Busta Rokkit Launcha · Standard",
+    "Mek · Mek’s Toolz",
+    "Tankbustas · Choppa",
+    "Tankbustas · ×5 · Gitstikka"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Mek",
+    "1× Nob",
+    "1× Tankbusta w/ Two Busta Rokkit Launchas",
+    "4× Tankbusta w/ Busta Rokkit Launcha"
+   ],
+   "leads": "Tankbustas"
+  },
+  "key": "12449d993b191c9f"
+ },
+ {
+  "army": "standard",
+  "kind": "ability-who",
+  "where": "standard · Khârn the Betrayer · Legendary Killer",
+  "judgement": {
+   "who": "Khârn the Betrayer",
+   "models": [
+    "1× Khârn the Betrayer",
+    "1× Khorne Berzerker Champion (Icon of Khorne)",
+    "7× Khorne Berzerker",
+    "2× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ]
+  },
+  "source": {
+   "ability": "Legendary Killer",
+   "text": "While this model is leading a unit, each time a model in that unit makes a melee attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1."
+  },
+  "key": "c60a4363a9214c4f"
+ },
+ {
+  "army": "standard",
+  "kind": "ability-who",
+  "where": "standard · Khârn the Betrayer · The Betrayer",
+  "judgement": {
+   "who": "Khârn the Betrayer",
+   "models": [
+    "1× Khârn the Betrayer",
+    "1× Khorne Berzerker Champion (Icon of Khorne)",
+    "7× Khorne Berzerker",
+    "2× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ]
+  },
+  "source": {
+   "ability": "The Betrayer",
+   "text": "At the end of your Charge phase, if this unit is on the battlefield, is **unengaged**, and contains a **bodyguard** model, this unit makes a **leadership roll**:\n- If that **leadership roll** is failed, one **bodyguard** model in this unit is **destroyed**."
+  },
+  "key": "1b9090630eb71704"
+ },
+ {
+  "army": "standard",
+  "kind": "ability-who",
+  "where": "standard · Khârn the Betrayer · Berserker Frenzy",
+  "judgement": {
+   "who": "Khârn the Betrayer",
+   "models": [
+    "1× Khârn the Betrayer",
+    "1× Khorne Berzerker Champion (Icon of Khorne)",
+    "7× Khorne Berzerker",
+    "2× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ]
+  },
+  "source": {
+   "ability": "Berserker Frenzy",
+   "text": "The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining."
+  },
+  "key": "3fc27a03647e7b87"
+ },
+ {
+  "army": "standard",
+  "kind": "ability-who",
+  "where": "standard · Khârn the Betrayer · Blood Surge",
+  "judgement": {
+   "who": "Khorne Berzerkers",
+   "models": [
+    "1× Khârn the Betrayer",
+    "1× Khorne Berzerker Champion (Icon of Khorne)",
+    "7× Khorne Berzerker",
+    "2× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ]
+  },
+  "source": {
+   "ability": "Blood Surge",
+   "text": "In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6+2\"."
+  },
+  "key": "c7186ee01822ed24"
+ },
+ {
+  "army": "standard",
+  "kind": "ability-who",
+  "where": "standard · Khârn the Betrayer · Murderous Charge",
+  "judgement": {
+   "who": "Khorne Berzerkers",
+   "models": [
+    "1× Khârn the Betrayer",
+    "1× Khorne Berzerker Champion (Icon of Khorne)",
+    "7× Khorne Berzerker",
+    "2× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ]
+  },
+  "source": {
+   "ability": "Murderous Charge",
+   "text": "If this unit made a charge move this turn, this unit’s melee attacks have +1 S."
+  },
+  "key": "2e8a7337084e3ca9"
+ },
+ {
+  "army": "standard",
+  "kind": "ability-who",
+  "where": "standard · Khârn the Betrayer · Icon of Khorne",
+  "judgement": {
+   "who": "Khorne Berzerkers",
+   "models": [
+    "1× Khârn the Betrayer",
+    "1× Khorne Berzerker Champion (Icon of Khorne)",
+    "7× Khorne Berzerker",
+    "2× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ]
+  },
+  "source": {
+   "ability": "Icon of Khorne",
+   "text": "If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost."
+  },
+  "key": "428fa0292043da00"
+ },
+ {
+  "army": "standard",
+  "kind": "unit-kwNote",
+  "where": "standard · Khârn the Betrayer",
+  "judgement": {
+   "kwNote": "Battleline, Berzerkers come from the led Khorne Berzerkers."
+  },
+  "source": {
+   "models": [
+    "1× Khârn the Betrayer",
+    "1× Khorne Berzerker Champion (Icon of Khorne)",
+    "7× Khorne Berzerker",
+    "2× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ],
+   "stats": [
+    "Khârn the Betrayer W5 OC1",
+    "Khorne Berzerker ×10 W2 OC2"
+   ],
+   "weapons": [
+    "Plasma pistol standard 1 -2 1 PISTOL",
+    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
+    "Plasma pistol standard 1 -2 1 PISTOL",
+    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
+    "Bolt pistol 1 -1 1 PISTOL",
+    "Gorechild 9 -2 3",
+    "Chainblade 5 -1 1",
+    "Khornate eviscerator 4 -2 2"
+   ]
+  },
+  "key": "8d56a990a6e48110"
+ },
+ {
+  "army": "standard",
+  "kind": "unit-ptsNote",
+  "where": "standard · Khârn the Betrayer",
+  "judgement": {
+   "ptsNote": "115 + Khorne Berzerkers 170"
+  },
+  "source": {
+   "models": [
+    "1× Khârn the Betrayer",
+    "1× Khorne Berzerker Champion (Icon of Khorne)",
+    "7× Khorne Berzerker",
+    "2× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ],
+   "stats": [
+    "Khârn the Betrayer W5 OC1",
+    "Khorne Berzerker ×10 W2 OC2"
+   ],
+   "weapons": [
+    "Plasma pistol standard 1 -2 1 PISTOL",
+    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
+    "Plasma pistol standard 1 -2 1 PISTOL",
+    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
+    "Bolt pistol 1 -1 1 PISTOL",
+    "Gorechild 9 -2 3",
+    "Chainblade 5 -1 1",
+    "Khornate eviscerator 4 -2 2"
+   ]
+  },
+  "key": "1cd828f33e8cc806"
+ },
+ {
+  "army": "standard",
+  "kind": "unit-weapons",
+  "where": "standard · Khârn the Betrayer",
+  "judgement": {
+   "gear": [
+    [
+     "Gorechild",
+     "Plasma pistol"
+    ],
+    [
+     "Chainblade",
+     "Plasma pistol"
+    ],
+    [
+     "Bolt pistol",
+     "Chainblade"
+    ],
+    [
+     "Khornate eviscerator",
+     "Plasma pistol"
+    ]
+   ],
+   "weapons": [
+    "Khârn the Betrayer · Plasma pistol · standard",
+    "Khârn the Betrayer · Plasma pistol · supercharge",
+    "Khorne Berzerkers · ×3 · Plasma pistol · standard",
+    "Khorne Berzerkers · ×3 · Plasma pistol · supercharge",
+    "Khorne Berzerkers · ×7 · Bolt pistol",
+    "Khârn the Betrayer · Gorechild",
+    "Khorne Berzerkers · ×8 · Chainblade",
+    "Khorne Berzerkers · ×2 · Khornate eviscerator"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Khârn the Betrayer",
+    "1× Khorne Berzerker Champion (Icon of Khorne)",
+    "7× Khorne Berzerker",
+    "2× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ],
+   "leads": "Khorne Berzerkers"
+  },
+  "key": "756236bc27288769"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-who",
+  "where": "big-demons-baby · Lord on Juggernaut · Aggressive Advance",
+  "judgement": {
+   "who": "Lord on Juggernaut",
+   "models": [
+    "1× Lord on Juggernaut",
+    "1× Khorne Berzerker Champion (Icon of Khorne)",
+    "15× Khorne Berzerker",
+    "4× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ]
+  },
+  "source": {
+   "ability": "Aggressive Advance",
+   "text": "While this model is leading a unit, models in that unit have a Move characteristic of 10\" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features."
+  },
+  "key": "482214c0cbcc8796"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-who",
+  "where": "big-demons-baby · Lord on Juggernaut · Crush All Who Stand Before Us",
+  "judgement": {
+   "who": "Lord on Juggernaut",
+   "models": [
+    "1× Lord on Juggernaut",
+    "1× Khorne Berzerker Champion (Icon of Khorne)",
+    "15× Khorne Berzerker",
+    "4× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ]
+  },
+  "source": {
+   "ability": "Crush All Who Stand Before Us",
+   "text": "Each time this model’s unit is selected to fight, you can use this ability. When determining which models in this unit are eligible to fight, any models in it that are within 3\" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3\" of them and within Engagement Range of their unit."
+  },
+  "key": "ca98ffff14650de8"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-who",
+  "where": "big-demons-baby · Lord on Juggernaut · Disciple of Khorne",
+  "judgement": {
+   "who": "Lord on Juggernaut",
+   "models": [
+    "1× Lord on Juggernaut",
+    "1× Khorne Berzerker Champion (Icon of Khorne)",
+    "15× Khorne Berzerker",
+    "4× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ]
+  },
+  "source": {
+   "ability": "Disciple of Khorne",
+   "text": "**LORD ON JUGGERNAUT** model only. The bearer has the Deep Strike ability, and it has the **BLOOD LEGIONS** Faction keyword instead of the **WORLD EATERS** Faction keyword."
+  },
+  "key": "d04d544914bfae79"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-who",
+  "where": "big-demons-baby · Lord on Juggernaut · Blood Surge",
+  "judgement": {
+   "who": "Khorne Berzerkers",
+   "models": [
+    "1× Lord on Juggernaut",
+    "1× Khorne Berzerker Champion (Icon of Khorne)",
+    "15× Khorne Berzerker",
+    "4× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ]
+  },
+  "source": {
+   "ability": "Blood Surge",
+   "text": "In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6+2\"."
+  },
+  "key": "377b912e8cd0b41d"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-who",
+  "where": "big-demons-baby · Lord on Juggernaut · Murderous Charge",
+  "judgement": {
+   "who": "Khorne Berzerkers",
+   "models": [
+    "1× Lord on Juggernaut",
+    "1× Khorne Berzerker Champion (Icon of Khorne)",
+    "15× Khorne Berzerker",
+    "4× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ]
+  },
+  "source": {
+   "ability": "Murderous Charge",
+   "text": "If this unit made a charge move this turn, this unit’s melee attacks have +1 S."
+  },
+  "key": "2c9260478782ab06"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "ability-who",
+  "where": "big-demons-baby · Lord on Juggernaut · Icon of Khorne",
+  "judgement": {
+   "who": "Khorne Berzerkers",
+   "models": [
+    "1× Lord on Juggernaut",
+    "1× Khorne Berzerker Champion (Icon of Khorne)",
+    "15× Khorne Berzerker",
+    "4× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ]
+  },
+  "source": {
+   "ability": "Icon of Khorne",
+   "text": "If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost."
+  },
+  "key": "3c8401a4b8a2df3c"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "unit-kwNote",
+  "where": "big-demons-baby · Lord on Juggernaut",
+  "judgement": {
+   "kwNote": "Battleline, Berzerkers, Faction: World Eaters, Grenades, Infantry come from the led Khorne Berzerkers; Faction: Blood Legions comes from Disciple of Khorne on the Lord on Juggernaut (“The bearer has the Deep Strike ability, and it has the BLOOD LEGIONS Faction keyword instead of the WORLD EATERS Faction keyword.”)."
+  },
+  "source": {
+   "models": [
+    "1× Lord on Juggernaut",
+    "1× Khorne Berzerker Champion (Icon of Khorne)",
+    "15× Khorne Berzerker",
+    "4× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ],
+   "stats": [
+    "Lord on Juggernaut W7 OC2",
+    "Khorne Berzerker ×20 W2 OC2"
+   ],
+   "weapons": [
+    "Plasma pistol standard 1 -2 1 PISTOL",
+    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
+    "Plasma pistol standard 1 -2 1 PISTOL",
+    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
+    "Bolt pistol 1 -1 1 PISTOL",
+    "Bladed horn 4 -1 2 EXTRA ATTACKS, LANCE",
+    "Exalted chainblade 7 -1 2",
+    "Chainblade 4 -1 1",
+    "Khornate eviscerator 3 -2 2"
+   ]
+  },
+  "key": "c4891fac4cfef6fd"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "unit-ptsNote",
+  "where": "big-demons-baby · Lord on Juggernaut",
+  "judgement": {
+   "ptsNote": "110 + Khorne Berzerkers 330"
+  },
+  "source": {
+   "models": [
+    "1× Lord on Juggernaut",
+    "1× Khorne Berzerker Champion (Icon of Khorne)",
+    "15× Khorne Berzerker",
+    "4× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ],
+   "stats": [
+    "Lord on Juggernaut W7 OC2",
+    "Khorne Berzerker ×20 W2 OC2"
+   ],
+   "weapons": [
+    "Plasma pistol standard 1 -2 1 PISTOL",
+    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
+    "Plasma pistol standard 1 -2 1 PISTOL",
+    "Plasma pistol supercharge 1 -3 2 HAZARDOUS, PISTOL",
+    "Bolt pistol 1 -1 1 PISTOL",
+    "Bladed horn 4 -1 2 EXTRA ATTACKS, LANCE",
+    "Exalted chainblade 7 -1 2",
+    "Chainblade 4 -1 1",
+    "Khornate eviscerator 3 -2 2"
+   ]
+  },
+  "key": "e6d64d1d268860ef"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "unit-partialRules",
+  "where": "big-demons-baby · Lord on Juggernaut",
+  "judgement": {
+   "partialRules": {
+    "Deep Strike": "Lord on Juggernaut"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Lord on Juggernaut",
+    "1× Khorne Berzerker Champion (Icon of Khorne)",
+    "15× Khorne Berzerker",
+    "4× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ],
+   "rules": [
+    "Leader",
+    "Blessings of Khorne",
+    "Deep Strike",
+    "Extra Attacks",
+    "Lance",
+    "Pistol",
+    "Hazardous"
+   ],
+   "abilities": [
+    "Lord on Juggernaut · Aggressive Advance: While this model is leading a unit, models in that unit have a Move characteristic of 10\" and each time a model in that unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features.",
+    "Lord on Juggernaut · Crush All Who Stand Before Us: Each time this model’s unit is selected to fight, you can use this ability. When determining which models in this unit are eligible to fight, any models in it that are within 3\" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3\" of them and within Engagement Range of their unit.",
+    "Lord on Juggernaut · Disciple of Khorne: **LORD ON JUGGERNAUT** model only. The bearer has the Deep Strike ability, and it has the **BLOOD LEGIONS** Faction keyword instead of the **WORLD EATERS** Faction keyword.",
+    "Khorne Berzerkers · Blood Surge: In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6+2\".",
+    "Khorne Berzerkers · Murderous Charge: If this unit made a charge move this turn, this unit’s melee attacks have +1 S.",
+    "Khorne Berzerkers · Icon of Khorne: If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost."
+   ]
+  },
+  "key": "7e8d4f09f78e2062"
+ },
+ {
+  "army": "big-demons-baby",
+  "kind": "unit-weapons",
+  "where": "big-demons-baby · Lord on Juggernaut",
+  "judgement": {
+   "gear": [
+    [
+     "Bladed horn",
+     "Exalted chainblade",
+     "Plasma pistol"
+    ],
+    [
+     "Chainblade",
+     "Plasma pistol"
+    ],
+    [
+     "Bolt pistol",
+     "Chainblade"
+    ],
+    [
+     "Khornate eviscerator",
+     "Plasma pistol"
+    ]
+   ],
+   "weapons": [
+    "Lord on Juggernaut · Plasma pistol · standard",
+    "Lord on Juggernaut · Plasma pistol · supercharge",
+    "Khorne Berzerkers · ×5 · Plasma pistol · standard",
+    "Khorne Berzerkers · ×5 · Plasma pistol · supercharge",
+    "Khorne Berzerkers · ×15 · Bolt pistol",
+    "Lord on Juggernaut · Bladed horn",
+    "Lord on Juggernaut · Exalted chainblade",
+    "Khorne Berzerkers · ×16 · Chainblade",
+    "Khorne Berzerkers · ×4 · Khornate eviscerator"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Lord on Juggernaut",
+    "1× Khorne Berzerker Champion (Icon of Khorne)",
+    "15× Khorne Berzerker",
+    "4× Khorne Berzerker w/ eviscerator and plasma pistol"
+   ],
+   "leads": "Khorne Berzerkers"
+  },
+  "key": "e3851faea72b012e"
+ }
+]

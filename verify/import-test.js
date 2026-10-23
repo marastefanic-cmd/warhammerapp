@@ -24,20 +24,14 @@ const DATE = '23 Oct 2026';
 
 // the only differences between an imported list and the built-in list it equals
 const INTENDED = {
-  id: (a, b) => b === 'import-' + a,                       // an imported list's own id (the built-in one keeps its id)
+  id: (a, b, A) => b === 'import-' + A.name.toLowerCase().replace(/[’']/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''),   // its own id: import- and the list's name (the built-in one keeps its id)
   source: (a, b) => /^New Recruit, exported /.test(a) && b === 'New Recruit, imported ' + DATE,   // the JSON export carries no export date
   imported: (a, b) => a === undefined && b === true        // marks a list kept on the phone (it can be removed)
 };
 // exports that differ from the PDF the app's list was made from (verify/sources/nr/<id>.txt): what the import says
 const EXPORT_DIFFERS = {
-  'shooty': { why:'the export’s Tankbustas Nob has two Rokkit Pistols; the PDF’s (and the app’s) has Choppa, Rokkit Pistol, Smash Hammer',
-    errors:['option 2× Rokkit Pistol on unit Tankbustas not recognized', 'unit Tankbustas without Smash Hammer not recognized'] },
-  'princes': { why:'the export gives Khârn’s Khorne Berzerkers an Icon of Khorne; the PDF (and the app) has none in that unit',
-    errors:['option Icon of Khorne on unit Khorne Berzerkers not recognized'] },
-  'standard': { why:'the export gives Khârn’s Khorne Berzerkers an Icon of Khorne; the PDF (and the app) has none in that unit',
-    errors:['option Icon of Khorne on unit Khorne Berzerkers not recognized'] },
-  'big-demons-baby': { why:'the export gives the Lord on Juggernaut’s Khorne Berzerkers an Icon of Khorne; the PDF (and the app) has none in that unit',
-    errors:['option Icon of Khorne on unit Khorne Berzerkers not recognized'] }
+  // none: the owner confirmed the exports of shooty, princes, standard and big-demons-baby as the current lists (23 Oct 2026),
+  // and data.js has them; their older PDFs' differences are declared in verify/deviations-nr.json ("superseded")
 };
 // exports of lists the app does not have: the import must fail, saying this first
 const NO_LIST = { 'lite-knights.json':'faction Adeptus Custodes not recognized' };
@@ -86,7 +80,7 @@ for(const f of files){
   ok(r.ok, f + ': does not import: ' + (r.errors || []).join('; '));
   if(!r.ok) continue;
   const d = diff(clone(a), r.army, '', []);
-  const bad = d.filter(x => !(INTENDED[x.p] && INTENDED[x.p](x.a, x.b)));
+  const bad = d.filter(x => !(INTENDED[x.p] && INTENDED[x.p](x.a, x.b, a)));
   for(const x of bad) ok(false, a.id + ': ' + x.p + ' is ' + JSON.stringify(x.b) + ' in the import, ' + JSON.stringify(x.a) + ' in data.js');
   for(const k of Object.keys(INTENDED)) ok(d.some(x => x.p === k), a.id + ': expected difference ' + k + ' missing');
   if(!bad.length){ same++; report.push(a.id + ': identical to data.js (' + r.army.units.length + ' units) except ' + d.map(x => x.p).join(', ')); }
@@ -157,7 +151,7 @@ if(base && byArmy['4-megas-and-a-destrier']){
 const outF = path.join(ROOT, 'verify/out/import.json');
 fs.mkdirSync(path.dirname(outF), { recursive:true });
 fs.writeFileSync(outF, JSON.stringify({ check:'import', checks, fails, report }, null, 1) + '\n');
-console.log('import: ' + same + ' of ' + (same + differs) + ' exported lists import identically (' + differs + ' exports differ from the app’s PDF: ' + Object.keys(EXPORT_DIFFERS).join(', ') + '), ' +
+console.log('import: ' + same + ' of ' + (same + differs) + ' exported lists import identically (' + differs + ' exports differ from the app’s list' + (differs ? ': ' + Object.keys(EXPORT_DIFFERS).join(', ') : '') + '), ' +
   none + ' without a list refused, ' + NEGATIVE.length + ' changed exports refused; ' + checks + ' checks, ' + fails.length + ' failures');
 for(const r of report) console.log('  ' + r);
 for(const f of fails) console.log('  FAIL ' + f);

@@ -1489,7 +1489,7 @@ const ARMIES = [
       id:'mek-tankbustas', name:'Mek', role:'Character', pts:215, copies:2, ptsNote:'55 + Tankbustas 160',
       leads:'Tankbustas', support:true,
       models:['1× Mek','1× Nob','1× Tankbusta w/ Two Busta Rokkit Launchas','4× Tankbusta w/ Busta Rokkit Launcha'],
-      gear:[['Kustom Mega-slugga','Mek’s Toolz'],['Choppa','Rokkit pistol','Smash Hammer'],['Busta Rokkit Launcha','Busta Rokkit Launcha','Gitstikka'],['Busta Rokkit Launcha','Gitstikka']],
+      gear:[['Kustom Mega-slugga','Mek’s Toolz'],['Choppa','Rokkit pistol','Rokkit pistol'],['Busta Rokkit Launcha','Busta Rokkit Launcha','Gitstikka'],['Busta Rokkit Launcha','Gitstikka']],
       stats:[
         { name:'Mek', M:'6"', T:'5', Sv:'5+', W:'4', Ld:'7+', OC:'1', InSv:'–', base:'32mm' },
         { name:'Nob', M:'6"', T:'5', Sv:'4+', W:'3', Ld:'7+', OC:'1', InSv:'–', base:'32mm' },
@@ -1497,15 +1497,13 @@ const ARMIES = [
       ],
       ranged:[
         { name:'Kustom Mega-slugga', who:'Mek', range:'12"', A:'3', BS:'4+', S:'8', AP:'-2', D:'3', kw:['CLOSE-QUARTERS','HAZARDOUS','IGNORES COVER','ASSAULT'], from:{ 'IGNORES COVER':'Kustom Dakka', ASSAULT:'Dakka! Dakka! Dakka!' } },
-        { name:'Rokkit pistol', who:'Tankbustas', range:'12"', A:'1', BS:'4+', S:'10', AP:'-2', D:'3', kw:['CLOSE-QUARTERS','ASSAULT','IGNORES COVER'], from:{ ASSAULT:'Dakka! Dakka! Dakka!', 'IGNORES COVER':'Kustom Dakka' } },
+        { name:'Rokkit pistol', who:'Tankbustas', n:2, range:'12"', A:'1', BS:'4+', S:'10', AP:'-2', D:'3', kw:['CLOSE-QUARTERS','ASSAULT','IGNORES COVER'], from:{ ASSAULT:'Dakka! Dakka! Dakka!', 'IGNORES COVER':'Kustom Dakka' } },
         { group:'Busta Rokkit Launcha', who:'Tankbustas', n:6, name:'Hunter', hunter:true, range:'24"', A:'3', BS:'4+', S:'12', AP:'-2', D:'3', kw:['ASSAULT','IGNORES COVER'], from:{ ASSAULT:'Dakka! Dakka! Dakka!', 'IGNORES COVER':'Kustom Dakka' } },
         { group:'Busta Rokkit Launcha', who:'Tankbustas', n:6, name:'Standard', range:'24"', A:'2', BS:'4+', S:'10', AP:'-2', D:'3', kw:['ASSAULT','IGNORES COVER'], from:{ ASSAULT:'Dakka! Dakka! Dakka!', 'IGNORES COVER':'Kustom Dakka' } }
       ],
       melee:[
         { name:'Mek’s Toolz', who:'Mek', range:'Melee', A:'3', WS:'3+', S:'5', AP:'0', D:'1', kw:[] },
         { name:'Choppa', who:'Tankbustas', range:'Melee', A:'4', WS:'3+', S:'5', AP:'-1', D:'1', kw:[] },
-        { group:'Smash Hammer', who:'Tankbustas', name:'Hunter', hunter:true, range:'Melee', A:'3', WS:'3+', S:'12', AP:'-2', D:'3', kw:[] },
-        { group:'Smash Hammer', who:'Tankbustas', name:'Standard', range:'Melee', A:'3', WS:'3+', S:'7', AP:'-2', D:'2', kw:[] },
         { name:'Gitstikka', who:'Tankbustas', n:5, range:'Melee', A:'3', WS:'3+', S:'5', AP:'0', D:'1', kw:[] }
       ],
       abilities:[
@@ -1915,7 +1913,7 @@ const ARMIES = [
     {
       id:'kh-rn-the-betrayer-khorne-berzerkers', name:'Khârn the Betrayer', role:'Epic Hero', pts:285, ptsNote:'115 + Khorne Berzerkers 170',
       leads:'Khorne Berzerkers',
-      models:['1× Khârn the Betrayer','1× Khorne Berzerker Champion','7× Khorne Berzerker','2× Khorne Berzerker w/ eviscerator and plasma pistol'],
+      models:['1× Khârn the Betrayer','1× Khorne Berzerker Champion (Icon of Khorne)','7× Khorne Berzerker','2× Khorne Berzerker w/ eviscerator and plasma pistol'],
       gear:[['Gorechild','Plasma pistol'],['Chainblade','Plasma pistol'],['Bolt pistol','Chainblade'],['Khornate eviscerator','Plasma pistol']],
       stats:[
         { name:'Khârn the Betrayer', M:'8"', T:'5', Sv:'3+', W:'5', Ld:'6+', OC:'1', InSv:'4+', base:'40mm' },
@@ -1939,7 +1937,9 @@ const ARMIES = [
         { name:'Berserker Frenzy', who:'Khârn the Betrayer', def:'Khârn: the first time he is destroyed, at the end of the phase on a 2+ he is set back up with 3 wounds, as close as possible to where he was destroyed and not within Engagement Range of enemy units', text:'The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.' },
         { name:'Blood Surge', who:'Khorne Berzerkers', ph:['shooting'], turn:'opp', text:'In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6+2".' },
         { name:'Murderous Charge', who:'Khorne Berzerkers', ph:['fight'], turn:'either', text:'If this unit made a charge move this turn, this unit’s melee attacks have +1 S.' },
-        { name:'Icon of Khorne', who:'Khorne Berzerkers', na:'No Icon of Khorne in this unit', text:'If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.' }
+        // at/ph: when its extra dice are rolled, with a Blessings of Khorne roll (the start of the battle round; Skulls for the Skull
+        // Throne! in the Fight phase)
+        { name:'Icon of Khorne', who:'Khorne Berzerkers', at:'Start of the battle round', ph:['command','movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
@@ -2206,7 +2206,7 @@ const ARMIES = [
     {
       id:'kh-rn-the-betrayer-khorne-berzerkers', name:'Khârn the Betrayer', role:'Epic Hero', pts:285, ptsNote:'115 + Khorne Berzerkers 170',
       leads:'Khorne Berzerkers',
-      models:['1× Khârn the Betrayer','1× Khorne Berzerker Champion','7× Khorne Berzerker','2× Khorne Berzerker w/ eviscerator and plasma pistol'],
+      models:['1× Khârn the Betrayer','1× Khorne Berzerker Champion (Icon of Khorne)','7× Khorne Berzerker','2× Khorne Berzerker w/ eviscerator and plasma pistol'],
       gear:[['Gorechild','Plasma pistol'],['Chainblade','Plasma pistol'],['Bolt pistol','Chainblade'],['Khornate eviscerator','Plasma pistol']],
       stats:[
         { name:'Khârn the Betrayer', M:'8"', T:'5', Sv:'3+', W:'5', Ld:'6+', OC:'1', InSv:'4+', base:'40mm' },
@@ -2230,7 +2230,9 @@ const ARMIES = [
         { name:'Berserker Frenzy', who:'Khârn the Betrayer', def:'Khârn: the first time he is destroyed, at the end of the phase on a 2+ he is set back up with 3 wounds, as close as possible to where he was destroyed and not within Engagement Range of enemy units', text:'The first time this model is destroyed, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.' },
         { name:'Blood Surge', who:'Khorne Berzerkers', ph:['shooting'], turn:'opp', text:'In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6+2".' },
         { name:'Murderous Charge', who:'Khorne Berzerkers', ph:['fight'], turn:'either', text:'If this unit made a charge move this turn, this unit’s melee attacks have +1 S.' },
-        { name:'Icon of Khorne', who:'Khorne Berzerkers', na:'No Icon of Khorne in this unit', text:'If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.' }
+        // at/ph: when its extra dice are rolled, with a Blessings of Khorne roll (the start of the battle round; Skulls for the Skull
+        // Throne! in the Fight phase)
+        { name:'Icon of Khorne', who:'Khorne Berzerkers', at:'Start of the battle round', ph:['command','movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
@@ -4714,7 +4716,7 @@ const ARMIES = [
     {
       id:'lord-on-juggernaut-khorne-berzerkers', name:'Lord on Juggernaut', role:'Character', pts:440, ptsNote:'110 + Khorne Berzerkers 330', enhancement:'Disciple of Khorne',
       leads:'Khorne Berzerkers',
-      models:['1× Lord on Juggernaut','1× Khorne Berzerker Champion','15× Khorne Berzerker','4× Khorne Berzerker w/ eviscerator and plasma pistol'],
+      models:['1× Lord on Juggernaut','1× Khorne Berzerker Champion (Icon of Khorne)','15× Khorne Berzerker','4× Khorne Berzerker w/ eviscerator and plasma pistol'],
       gear:[['Bladed horn','Exalted chainblade','Plasma pistol'],['Chainblade','Plasma pistol'],['Bolt pistol','Chainblade'],['Khornate eviscerator','Plasma pistol']],
       stats:[
         { name:'Lord on Juggernaut', M:'10"', T:'6', Sv:'3+', W:'7', Ld:'6+', OC:'2', InSv:'4+', base:'90×52.5mm' },
@@ -4739,7 +4741,9 @@ const ARMIES = [
         { name:'Disciple of Khorne', who:'Lord on Juggernaut', tag:'Enhancement', text:'**LORD ON JUGGERNAUT** model only. The bearer has the Deep Strike ability, and it has the **BLOOD LEGIONS** Faction keyword instead of the **WORLD EATERS** Faction keyword.' },
         { name:'Blood Surge', who:'Khorne Berzerkers', ph:['shooting'], turn:'opp', text:'In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed as a result of those attacks, this unit can make a surge move of up to D6+2".' },
         { name:'Murderous Charge', who:'Khorne Berzerkers', ph:['fight'], turn:'either', text:'If this unit made a charge move this turn, this unit’s melee attacks have +1 S.' },
-        { name:'Icon of Khorne', who:'Khorne Berzerkers', na:'No Icon of Khorne in this unit', text:'If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.' }
+        // at/ph: when its extra dice are rolled, with a Blessings of Khorne roll (the start of the battle round; Skulls for the Skull
+        // Throne! in the Fight phase)
+        { name:'Icon of Khorne', who:'Khorne Berzerkers', at:'Start of the battle round', ph:['command','movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a **Blessings of Khorne** roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
@@ -5165,7 +5169,7 @@ const BS_IDS = {
     "big-demons-baby/flesh-hounds":["b657-1743-6e3a-0838|4×13cd-5399-07f2-6d79,4×13cd-5399-07f2-6d79/c7e3-601f-3442-250b,4×13cd-5399-07f2-6d79/dd8d-1bc7-029f-3674,1×a0d5-2805-f05a-29e1,1×a0d5-2805-f05a-29e1/c214-c491-ef49-04ec,1×a0d5-2805-f05a-29e1/c7e3-601f-3442-250b,1×a0d5-2805-f05a-29e1/dd8d-1bc7-029f-3674"],
     "big-demons-baby/goremongers":["b399-9b66-e550-8050|7×3a22-1796-8a64-6d3b,7×3a22-1796-8a64-6d3b/062f-464f-9cfe-5dce,7×3a22-1796-8a64-6d3b/81d1-50cc-2825-7475,7×3a22-1796-8a64-6d3b/f70d-d0cb-5cb8-3be9,1×f60b-c058-268e-5e87,1×f60b-c058-268e-5e87/062f-464f-9cfe-5dce,1×f60b-c058-268e-5e87/81d1-50cc-2825-7475,1×f60b-c058-268e-5e87/f70d-d0cb-5cb8-3be9"],
     "big-demons-baby/jakhals":["6f81-4538-a414-251e|1×307d-0ce0-fcf0-9100,1×307d-0ce0-fcf0-9100/88ee-2f6b-0b00-0852,1×47af-ef6b-9d50-2c4a,1×47af-ef6b-9d50-2c4a/cde4-4b0b-0fa4-766e,1×47af-ef6b-9d50-2c4a/f70d-d0cb-5cb8-3be9,1×a93b-d0d4-9bfe-40c3,8×a93b-d0d4-9bfe-40c3/0620-25eb-4da2-5dae,8×a93b-d0d4-9bfe-40c3/0620-25eb-4da2-5dae/cde4-4b0b-0fa4-766e,8×a93b-d0d4-9bfe-40c3/0620-25eb-4da2-5dae/f70d-d0cb-5cb8-3be9"],
-    "big-demons-baby/lord-on-juggernaut-khorne-berzerkers":["ec72-f024-4283-0558|1×1673-a61f-d5a2-b17c,1×4292-1471-4fd6-7dac,1×47e1-9e86-8a80-66e1,1×6d28-ca9d-79a5-063a","f909-00c7-8ba4-018a|1×38fb-1df5-8eb6-fdf6,1×38fb-1df5-8eb6-fdf6/44b0-1947-ea4a-3005,1×38fb-1df5-8eb6-fdf6/f20c-0563-3e0a-e0c8,4×8cbb-0e54-096a-e053,4×8cbb-0e54-096a-e053/6fd1-efa4-7787-db82,4×8cbb-0e54-096a-e053/a3b4-f330-4ed9-8314,15×b568-8a23-be6f-a14d,15×b568-8a23-be6f-a14d/2ba4-635b-fffd-0f59,15×b568-8a23-be6f-a14d/44b0-1947-ea4a-3005"],
+    "big-demons-baby/lord-on-juggernaut-khorne-berzerkers":["ec72-f024-4283-0558|1×1673-a61f-d5a2-b17c,1×4292-1471-4fd6-7dac,1×47e1-9e86-8a80-66e1,1×6d28-ca9d-79a5-063a","f909-00c7-8ba4-018a|1×38fb-1df5-8eb6-fdf6,1×38fb-1df5-8eb6-fdf6/44b0-1947-ea4a-3005,1×38fb-1df5-8eb6-fdf6/f20c-0563-3e0a-e0c8,4×8cbb-0e54-096a-e053,4×8cbb-0e54-096a-e053/6fd1-efa4-7787-db82,4×8cbb-0e54-096a-e053/a3b4-f330-4ed9-8314,1×8e1d-9846-a460-6002,15×b568-8a23-be6f-a14d,15×b568-8a23-be6f-a14d/2ba4-635b-fffd-0f59,15×b568-8a23-be6f-a14d/44b0-1947-ea4a-3005"],
     "big-demons-baby/master-of-executions":["1b56-682c-ac33-bc5f|1×6105-a18c-fcd1-a9da,1×c41d-61c0-3e59-01b5,1×eddd-9b27-00c2-b0ce"],
     "big-demons-baby/skarbrand":["71d9-9dc2-2b9a-6db3|1×1d6b-5a43-7bc9-18af,1×78e7-69eb-d93a-2b00"],
     "defilers-and-friends/chaos-rhino":["8ae1-aa47-e1d1-1b31|2×02c9-ea19-b105-af58,1×661a-207c-a66d-8da0,1×7695-54a2-f38b-a89c"],
@@ -5220,7 +5224,7 @@ const BS_IDS = {
     "princes/eightbound":["9435-1f44-7e5b-d510|1×6f2c-fc26-53bc-34bd,1×6f2c-fc26-53bc-34bd/adff-65e7-4566-084b,2×7e60-1733-57d1-71f3,2×7e60-1733-57d1-71f3/f8bc-c08c-22f0-8ebb"],
     "princes/forgefiend":["81e1-b212-69c1-308f|1×54ca-fec8-f0c6-2c77,1×54ca-fec8-f0c6-2c77/4b2a-4860-aed5-56b6,1×54ca-fec8-f0c6-2c77/a58b-974d-14a0-ece2,1×d877-3dd3-2d5a-e092,2×d877-3dd3-2d5a-e092/a343-07e9-e8f9-67f2"],
     "princes/jakhals":["6f81-4538-a414-251e|1×307d-0ce0-fcf0-9100,1×307d-0ce0-fcf0-9100/88ee-2f6b-0b00-0852,1×47af-ef6b-9d50-2c4a,1×47af-ef6b-9d50-2c4a/cde4-4b0b-0fa4-766e,1×47af-ef6b-9d50-2c4a/f70d-d0cb-5cb8-3be9,1×a93b-d0d4-9bfe-40c3,8×a93b-d0d4-9bfe-40c3/0620-25eb-4da2-5dae,8×a93b-d0d4-9bfe-40c3/0620-25eb-4da2-5dae/cde4-4b0b-0fa4-766e,8×a93b-d0d4-9bfe-40c3/0620-25eb-4da2-5dae/f70d-d0cb-5cb8-3be9"],
-    "princes/kh-rn-the-betrayer-khorne-berzerkers":["3449-7dac-6ac8-5d51|1×47e1-9e86-8a80-66e1,1×ee6b-763b-5885-19da","f909-00c7-8ba4-018a|1×38fb-1df5-8eb6-fdf6,1×38fb-1df5-8eb6-fdf6/44b0-1947-ea4a-3005,1×38fb-1df5-8eb6-fdf6/f20c-0563-3e0a-e0c8,2×8cbb-0e54-096a-e053,2×8cbb-0e54-096a-e053/6fd1-efa4-7787-db82,2×8cbb-0e54-096a-e053/a3b4-f330-4ed9-8314,7×b568-8a23-be6f-a14d,7×b568-8a23-be6f-a14d/2ba4-635b-fffd-0f59,7×b568-8a23-be6f-a14d/44b0-1947-ea4a-3005"],
+    "princes/kh-rn-the-betrayer-khorne-berzerkers":["3449-7dac-6ac8-5d51|1×47e1-9e86-8a80-66e1,1×ee6b-763b-5885-19da","f909-00c7-8ba4-018a|1×38fb-1df5-8eb6-fdf6,1×38fb-1df5-8eb6-fdf6/44b0-1947-ea4a-3005,1×38fb-1df5-8eb6-fdf6/f20c-0563-3e0a-e0c8,2×8cbb-0e54-096a-e053,2×8cbb-0e54-096a-e053/6fd1-efa4-7787-db82,2×8cbb-0e54-096a-e053/a3b4-f330-4ed9-8314,1×8e1d-9846-a460-6002,7×b568-8a23-be6f-a14d,7×b568-8a23-be6f-a14d/2ba4-635b-fffd-0f59,7×b568-8a23-be6f-a14d/44b0-1947-ea4a-3005"],
     "princes/lord-on-juggernaut-khorne-berzerkers":["ec72-f024-4283-0558|1×1673-a61f-d5a2-b17c,1×4292-1471-4fd6-7dac,1×47e1-9e86-8a80-66e1,1×5b76-3e1c-8801-1e4b","f909-00c7-8ba4-018a|1×38fb-1df5-8eb6-fdf6,1×38fb-1df5-8eb6-fdf6/44b0-1947-ea4a-3005,1×38fb-1df5-8eb6-fdf6/f20c-0563-3e0a-e0c8,4×8cbb-0e54-096a-e053,4×8cbb-0e54-096a-e053/6fd1-efa4-7787-db82,4×8cbb-0e54-096a-e053/a3b4-f330-4ed9-8314,1×8e1d-9846-a460-6002,15×b568-8a23-be6f-a14d,15×b568-8a23-be6f-a14d/2ba4-635b-fffd-0f59,15×b568-8a23-be6f-a14d/44b0-1947-ea4a-3005"],
     "princes/slaughterbound-exalted-eightbound":["71c9-b10b-b55f-483e|1×33e2-4ee8-2e10-3e47,1×a085-ae61-1810-46d0","9932-3d2b-1e47-d53b|2×8719-8732-d0be-c527,2×8719-8732-d0be-c527/2307-58f3-bfa0-52a1,1×d009-9bd9-59a1-9119,1×d009-9bd9-59a1-9119/217a-9e22-3821-27e9"],
     "pubstomper/daemon-prince-of-tzeentch-with-wings":["66f4-929e-1769-f277|1×2313-45a2-28ff-c81a,1×7205-f4fe-f064-0edf,1×7213-a7b3-4c8e-96bc,1×ca9c-de3c-61e1-31"],
@@ -5247,7 +5251,7 @@ const BS_IDS = {
     "shooty/gretchin":["de8f-24f9-c543-92b7|10×43dd-f974-3fc8-8abc,10×43dd-f974-3fc8-8abc/140d-7163-8a11-81c5,10×43dd-f974-3fc8-8abc/5cd1-cb47-fd8f-5704"],
     "shooty/killa-kans":["8c36-c946-2e0f-f648|6×f03b-8761-eac6-1405,6×f03b-8761-eac6-1405/3ea6-60b4-5fb0-b40f,6×f03b-8761-eac6-1405/d7b7-a7e-ef2-783a"],
     "shooty/mek-flashgitz":["3b2-8c11-616a-1005|1×1d21-9b32-c427-398e,1×c6e4-e5a5-d4be-d07c","1de9-b138-28a1-9c4b|1×217d-4d10-bad0-1d6e,9×65c-aa48-f306-465a,9×65c-aa48-f306-465a/8fca-90dd-a784-b5c0,9×65c-aa48-f306-465a/f606-38ce-2ada-4fbd,1×7d0f-67d3-25b-f6fe,1×7d0f-67d3-25b-f6fe/8fca-90dd-a784-b5c0,1×7d0f-67d3-25b-f6fe/f606-38ce-2ada-4fbd"],
-    "shooty/mek-tankbustas":["3b2-8c11-616a-1005|1×1d21-9b32-c427-398e,1×c6e4-e5a5-d4be-d07c","dadc-d370-ef10-853c|1×3697-d01c-ebcd-835d,2×3697-d01c-ebcd-835d/7819-56c3-cf02-6cdb,1×3697-d01c-ebcd-835d/9707-82cf-9501-fb43,4×40b3-1364-acb9-c1eb,4×40b3-1364-acb9-c1eb/7819-56c3-cf02-6cdb,4×40b3-1364-acb9-c1eb/9707-82cf-9501-fb43,1×cdd4-c8f7-bc72-9af0,1×cdd4-c8f7-bc72-9af0/5987-fa47-5ae9-93d2,1×cdd4-c8f7-bc72-9af0/811f-e844-83ab-78a4,1×cdd4-c8f7-bc72-9af0/8fca-90dd-a784-b5c0"],
+    "shooty/mek-tankbustas":["3b2-8c11-616a-1005|1×1d21-9b32-c427-398e,1×c6e4-e5a5-d4be-d07c","dadc-d370-ef10-853c|1×3697-d01c-ebcd-835d,2×3697-d01c-ebcd-835d/7819-56c3-cf02-6cdb,1×3697-d01c-ebcd-835d/9707-82cf-9501-fb43,4×40b3-1364-acb9-c1eb,4×40b3-1364-acb9-c1eb/7819-56c3-cf02-6cdb,4×40b3-1364-acb9-c1eb/9707-82cf-9501-fb43,1×cdd4-c8f7-bc72-9af0,2×cdd4-c8f7-bc72-9af0/811f-e844-83ab-78a4,1×cdd4-c8f7-bc72-9af0/8fca-90dd-a784-b5c0"],
     "shooty/warboss":["2efc-c4b3-2ecc-5a37|1×8b5-898c-f79b-5a9c,1×8bba-d0bf-1102-2131,1×d034-cadd-41e5-dc21"],
     "shooty/wazdakka":["2ab7-ab71-0af4-5d39|1×5447-603b-27a0-7240,1×6739-941d-5e71-b461,1×c26c-fe9c-e557-e706,1×ef63-b27a-c026-19f2"],
     "standard/angron":["f4b8-1179-de57-4d69|1×3f1f-49de-78f6-e59e,1×9754-481c-c292-a1f9"],
@@ -5257,7 +5261,7 @@ const BS_IDS = {
     "standard/forgefiend":["81e1-b212-69c1-308f|1×54ca-fec8-f0c6-2c77,1×54ca-fec8-f0c6-2c77/4b2a-4860-aed5-56b6,1×54ca-fec8-f0c6-2c77/a58b-974d-14a0-ece2,1×d877-3dd3-2d5a-e092,2×d877-3dd3-2d5a-e092/a343-07e9-e8f9-67f2"],
     "standard/goremongers":["b399-9b66-e550-8050|7×3a22-1796-8a64-6d3b,7×3a22-1796-8a64-6d3b/062f-464f-9cfe-5dce,7×3a22-1796-8a64-6d3b/81d1-50cc-2825-7475,7×3a22-1796-8a64-6d3b/f70d-d0cb-5cb8-3be9,1×f60b-c058-268e-5e87,1×f60b-c058-268e-5e87/062f-464f-9cfe-5dce,1×f60b-c058-268e-5e87/81d1-50cc-2825-7475,1×f60b-c058-268e-5e87/f70d-d0cb-5cb8-3be9"],
     "standard/jakhals":["6f81-4538-a414-251e|1×307d-0ce0-fcf0-9100,1×307d-0ce0-fcf0-9100/88ee-2f6b-0b00-0852,1×47af-ef6b-9d50-2c4a,1×47af-ef6b-9d50-2c4a/cde4-4b0b-0fa4-766e,1×47af-ef6b-9d50-2c4a/f70d-d0cb-5cb8-3be9,1×a93b-d0d4-9bfe-40c3,8×a93b-d0d4-9bfe-40c3/0620-25eb-4da2-5dae,8×a93b-d0d4-9bfe-40c3/0620-25eb-4da2-5dae/cde4-4b0b-0fa4-766e,8×a93b-d0d4-9bfe-40c3/0620-25eb-4da2-5dae/f70d-d0cb-5cb8-3be9"],
-    "standard/kh-rn-the-betrayer-khorne-berzerkers":["3449-7dac-6ac8-5d51|1×47e1-9e86-8a80-66e1,1×ee6b-763b-5885-19da","f909-00c7-8ba4-018a|1×38fb-1df5-8eb6-fdf6,1×38fb-1df5-8eb6-fdf6/44b0-1947-ea4a-3005,1×38fb-1df5-8eb6-fdf6/f20c-0563-3e0a-e0c8,2×8cbb-0e54-096a-e053,2×8cbb-0e54-096a-e053/6fd1-efa4-7787-db82,2×8cbb-0e54-096a-e053/a3b4-f330-4ed9-8314,7×b568-8a23-be6f-a14d,7×b568-8a23-be6f-a14d/2ba4-635b-fffd-0f59,7×b568-8a23-be6f-a14d/44b0-1947-ea4a-3005"],
+    "standard/kh-rn-the-betrayer-khorne-berzerkers":["3449-7dac-6ac8-5d51|1×47e1-9e86-8a80-66e1,1×ee6b-763b-5885-19da","f909-00c7-8ba4-018a|1×38fb-1df5-8eb6-fdf6,1×38fb-1df5-8eb6-fdf6/44b0-1947-ea4a-3005,1×38fb-1df5-8eb6-fdf6/f20c-0563-3e0a-e0c8,2×8cbb-0e54-096a-e053,2×8cbb-0e54-096a-e053/6fd1-efa4-7787-db82,2×8cbb-0e54-096a-e053/a3b4-f330-4ed9-8314,1×8e1d-9846-a460-6002,7×b568-8a23-be6f-a14d,7×b568-8a23-be6f-a14d/2ba4-635b-fffd-0f59,7×b568-8a23-be6f-a14d/44b0-1947-ea4a-3005"],
     "standard/lord-on-juggernaut":["ec72-f024-4283-0558|1×1673-a61f-d5a2-b17c,1×4292-1471-4fd6-7dac,1×47e1-9e86-8a80-66e1"],
     "standard/slaughterbound":["71c9-b10b-b55f-483e|1×a085-ae61-1810-46d0"],
     "standard/slaughterbound-exalted-eightbound":["71c9-b10b-b55f-483e|1×2c4c-5aac-b510-28ef,1×a085-ae61-1810-46d0","9932-3d2b-1e47-d53b|2×8719-8732-d0be-c527,2×8719-8732-d0be-c527/2307-58f3-bfa0-52a1,1×d009-9bd9-59a1-9119,1×d009-9bd9-59a1-9119/217a-9e22-3821-27e9"],
@@ -5422,7 +5426,6 @@ const BS_IDS = {
     "570a-6d55-51ee-9fc7":"Transmogrifying Blast",
     "5720-2873-8c2c-edc3":"Norn Emissary",
     "58f8-dd4e-bb8f-f357":"Cerastus shock lance",
-    "5987-fa47-5ae9-93d2":"Smash Hammer",
     "59a4-4504-cb52-93b1":"Monstrous scything talons",
     "5b76-3e1c-8801-1e4b":"Archslaughterer",
     "5b9-7d59-48fd-b485":"Tzaangor w/ Tzaangor blades",
