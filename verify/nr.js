@@ -411,10 +411,12 @@ function parseStats(sec) {
     const m = /^\s*(?:(.*?\S)\s+)?(\d+"|-)\s+(\d+)\s+(\d\+|-)\s+(\d+)\s+(\d\+|-)\s+(\d+)((?:\s+\S+)*)$/.exec(t);
     if (!m) { others.push({ i, t: t.trim() }); continue; }
     const rest = m[8].trim() ? m[8].trim().split(/\s+/) : [];
-    let InSv = '', Base = '';
-    if (rest.length === 2) [InSv, Base] = rest;
-    else if (rest.length === 1) { if (/^\d\+\*?$/.test(rest[0])) InSv = rest[0]; else Base = rest[0]; }
-    else if (rest.length > 2) throw new Error('stat row with too many cells: ' + t.trim());
+    // InSv: one or more saves ("5+, 4+*": one for every unit, one from a rule), then the base, which can be
+    // more than one word ("150x95mm Oval")
+    let k = 0;
+    while (k < rest.length && /^(\d\+\*?|-),?$/.test(rest[k]) && (k === 0 || rest[k - 1].endsWith(','))) k++;
+    if (k && rest[k - 1].endsWith(',')) throw new Error('stat row with an unfinished InSv cell: ' + t.trim());
+    const InSv = rest.slice(0, k).join(' '), Base = rest.slice(k).join(' ');
     rows.push({ i, name: (m[1] || '').trim(), M: m[2], T: m[3], Sv: m[4], W: m[5], LD: m[6], OC: m[7], InSv, Base });
   }
   const pieces = (k, idx) => [...idx.map(ii => others.find(x => x.i === ii)), ...(rows[k].name ? [{ i: rows[k].i, t: rows[k].name }] : [])];
