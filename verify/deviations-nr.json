@@ -629,5 +629,45 @@
   "where": "verify/sources/nr/mucho-mutantes.txt p11",
   "reason": "Spacing only: GW's Faction Pack Rules Updates break the line after \"Fire Overwatch/\" and Wahapedia prints \"Fire Overwatch/Heroic Intervention\" with no space; New Recruit and BSData print \"Fire Overwatch/ Heroic Intervention\". The app follows Wahapedia's (verify/texts.js checks it against the Faction Pack).",
   "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_thousand_sons-4lioijwxdj-otjrinzt8c.txt lines 541-544: \"Sekhetar Robots, Prophetic Sentinels Ability. Change to: 'Once per turn, when you target this unit with the Fire Overwatch/ [line break] Heroic Intervention stratagem, that use is -1 CP.\"; verify/.cache/waha/ds/thousand-sons_Sekhetar-Robots.html: \"Once per turn, when you target this unit with the <b>Fire Overwatch</b>/<b>Heroic Intervention</b> stratagem, that use is -1 CP.\"; New Recruit: verify/sources/nr/mucho-mutantes.txt line 426 (p11)"
+ },
+ {
+  "army": "lite-knights",
+  "unit": "witchseeker-squad",
+  "field": "abilities[Sanctified Flames].text",
+  "app": "In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll if that enemy unit is a PSYKER unit.",
+  "source": "In your Shooting phase, when this unit has shot, select one enemy unit hit by those attacks. That enemy unit makes a *battle-shock roll with -1 to that *battle-shock roll* if that enemy unit is a Psyker unit..",
+  "where": "verify/sources/nr/lite-knights.txt p4",
+  "reason": "New Recruit (from BSData) prints Sanctified Flames without \"you can\", with stray asterisks (\"*battle-shock roll\", \"battle-shock roll*\") and a double full stop; the app has the datasheet's wording, as Wahapedia prints it (\"when this unit has shot, you can select one enemy unit … makes a battle-shock roll, with -1 …\"), which leaves the selection to the player.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html: \"Sanctified Flames: In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll if that enemy unit is a PSYKER unit.\"; New Recruit: verify/sources/nr/lite-knights.txt page 4 (lines 110-114 / 134-138)."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "witchseeker-squad-2",
+  "field": "abilities[Sanctified Flames].text",
+  "app": "In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll if that enemy unit is a PSYKER unit.",
+  "source": "In your Shooting phase, when this unit has shot, select one enemy unit hit by those attacks. That enemy unit makes a *battle-shock roll with -1 to that *battle-shock roll* if that enemy unit is a Psyker unit..",
+  "where": "verify/sources/nr/lite-knights.txt p5",
+  "reason": "New Recruit (from BSData) prints Sanctified Flames without \"you can\", with stray asterisks (\"*battle-shock roll\", \"battle-shock roll*\") and a double full stop; the app has the datasheet's wording, as Wahapedia prints it (\"when this unit has shot, you can select one enemy unit … makes a battle-shock roll, with -1 …\"), which leaves the selection to the player.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html: \"Sanctified Flames: In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll if that enemy unit is a PSYKER unit.\"; New Recruit: verify/sources/nr/lite-knights.txt page 5 (lines 110-114 / 134-138)."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "contemptor-galatus-dreadnought",
+  "field": "abilities[Memento Moritoi].text",
+  "app": "ADEPTUS CUSTODES DREADNOUGHT model only. This model's melee attacks have +1 A, S and D.",
+  "source": "This model's melee attacks have +1 A, S and D.",
+  "where": "verify/sources/nr/lite-knights.txt p8",
+  "reason": "The upgrade's official text starts with its restriction \"ADEPTUS CUSTODES DREADNOUGHT model only.\" (the Might of the Moritoi enhancement in data.js, which verify/texts.js checks the unit's text against); New Recruit's (BSData's) text leaves that sentence out.",
+  "evidence": "verify/.cache/waha/adeptus-custodes.txt lines 494-495: \"- Memento Moritoi (one per army)UPGRADE 30 pts / **ADEPTUS CUSTODES DREADNOUGHT** model only. This model’s melee attacks have +1 **A**, **S** and **D**.\"; verify/sources/nr/lite-knights.txt line 206."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "telemon-heavy-dreadnought",
+  "field": "abilities[Augury Uplink].text",
+  "app": "ADEPTUS CUSTODES DREADNOUGHT model only. This model has Feel No Pain 5+.",
+  "source": "This model has Feel No Pain 5+.",
+  "where": "verify/sources/nr/lite-knights.txt p9",
+  "reason": "The upgrade's official text starts with its restriction \"ADEPTUS CUSTODES DREADNOUGHT model only.\" (the Might of the Moritoi enhancement in data.js, which verify/texts.js checks the unit's text against); New Recruit's (BSData's) text leaves that sentence out.",
+  "evidence": "verify/.cache/waha/adeptus-custodes.txt lines 496-497: \"- Augury Uplink (one per army)UPGRADE 30 pts / **ADEPTUS CUSTODES DREADNOUGHT** model only. This model has **Feel No Pain 5+**.\"; verify/sources/nr/lite-knights.txt line 229."
  }
 ]

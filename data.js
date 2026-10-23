@@ -48,6 +48,7 @@ const RULES = {
 
   'Deep Strike': 'Each time this unit makes an **ingress move** (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.\n*App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).*',
   'Deadly Demise': 'This ability always takes the form **Deadly Demise X**. Each time a model in this unit is **destroyed**, after the units embarked within it (if any) have made their **emergency disembark moves**, roll one D6. On a 6, that model suffers a **deadly demise**; each unit within 6" of that model suffers a number of **mortal wounds** denoted by **X** (if this is a random number, roll separately for each unit within 6").',
+  'Damaged': '*Wahapedia core rules (24.39, not in GW’s Core Rules PDF, 01-06): This ability always takes the form Damaged X. While a model’s remaining wounds are equal to or less than X, that model is damaged: while damaged, that model’s attacks have -1 to hit rolls.*',
   'Feel No Pain': 'This ability always takes the form **Feel No Pain X+**. Each time a model with this ability would lose a wound, roll one D6: on an **X+**, that wound is not lost.',
   'Leader': 'Before the battle, in the Muster Armies step, for each **leader** and **support** unit in your army, you can select one friendly **bodyguard** unit that unit can **lead**. That unit will then **lead** that **bodyguard** unit for the battle and form an **attached** unit with it.\nUnless otherwise stated, each **bodyguard** unit can only have one **leader** unit and one **support** unit attached to it.',
   'Support': 'Before the battle, in the Muster Armies step, for each **leader** and **support** unit in your army, you can select one friendly **bodyguard** unit that unit can **lead**. That unit will then **lead** that **bodyguard** unit for the battle and form an **attached** unit with it.\nUnless otherwise stated, each **bodyguard** unit can only have one **leader** unit and one **support** unit attached to it.',
@@ -106,7 +107,7 @@ const RULE_ALIASES = [
   [/^leader\b/i, 'Leader'], [/^lone operative/i, 'Lone Operative'], [/^mobile/i, 'Mobile'], [/^hunter/i, 'Hunter'], [/^snap shooting/i, 'Snap Shooting'],
   [/^fights first/i, 'Fights First'], [/^actions?$/i, 'Actions'],
   [/^melta/i, 'Melta'], [/^lance/i, 'Lance'], [/^super-heavy walker/i, 'Super-Heavy Walker'],
-  [/^firing deck/i, 'Firing Deck'], [/^scouts/i, 'Scouts'],
+  [/^firing deck/i, 'Firing Deck'], [/^scouts/i, 'Scouts'], [/^damaged \d+$/i, 'Damaged'],
   [/^psychic$/i, 'Psychic'],
   [/^harpooned$/i, 'Harpooned'],
   [/^hazard(ous)? (roll|test)s?$/i, 'Hazard Roll'],
@@ -1283,6 +1284,8 @@ const FACTIONS = {
   },
   'adeptus-custodes': {
     name: 'Adeptus Custodes',
+    // New Recruit (BSData) spells the army rule with a straight apostrophe, Wahapedia "Martial Ka’tah"
+    aliases: [[/^martial ka'tah$/i, 'Martial Ka’tah']],
     // army rules: Wahapedia, Adeptus Custodes, Army Rules (Codex: Adeptus Custodes). GW's Faction Pack 1.2 (legal from 30 Sep 2026)
     // prints no army rule, and its Rules Updates change none of these. Martial Ka’tah: the rule, then its Favoured Ka’tah paragraph
     // (a sub-heading inside the rule on Wahapedia); the table is the six ka’tah abilities (name, then their WHEN / TARGET / EFFECT).
@@ -1321,7 +1324,7 @@ const FACTIONS = {
       // Emperor’s Chosen: a codex detachment the Faction Pack 1.2 does not print; rule, enhancements and stratagems from Wahapedia
       // (the pack's Rules Updates change none of them)
       'emperors-chosen': {
-        name:'Emperor’s Chosen', dp:1,
+        name:'Emperor’s Chosen', dispositions:['Priority Assets'], dp:1,
         // ph/turn: "selected to attack" (shoot or fight); the Favoured Ka’tah's additional effect is Rendax's, in the Fight phase
         rule:{ name:'Magna Imperator', ph:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, needs:{ all:['Faction: Adeptus Custodes'] },
           mod:{ kind:'all', when:'Selected to attack', note:'re-roll one hit roll and re-roll one wound roll' },
@@ -1349,7 +1352,7 @@ const FACTIONS = {
       },
       // Grav-Assault Force: a codex detachment the Faction Pack 1.2 does not print; Wahapedia wording (no Rules Updates for it)
       'grav-assault-force': {
-        name:'Grav-Assault Force', dp:1,
+        name:'Grav-Assault Force', dispositions:['Reconnaissance'], dp:1,
         rule:{ name:'Flare Shields', needs:{ all:['Grav-assault'] }, def:'4+ InSv against ranged attacks',
           text:'Friendly **GRAV-ASSAULT** units have 4+ **InSv** against ranged attacks.' },
         enhancements:[
@@ -1377,9 +1380,10 @@ const FACTIONS = {
       // Dead, Interred Expertise, Auramite Sarcophagus, Flawless Construction, Unstoppable Advance, Prioritised Eradication), which has
       // neither enhancement: declared in verify/deviations-texts.json. The pack's Rules Updates change nothing here
       'might-of-the-moritoi': {
-        name:'Might of the Moritoi', dp:1,
+        name:'Might of the Moritoi', dispositions:['Take and Hold'], dp:1,
         // the re-rolls for below starting strength / below half-strength: one pick (OC +2 at starting strength is not an attack)
         rule:{ name:'Moritoi Ancients', needs:{ all:['Faction: Adeptus Custodes','Dreadnought'] },
+          note:'GW’s Faction Pack 1.2 prints another detachment named Might of the Moritoi (rule March of the Honoured Dead, no Memento Moritoi or Augury Uplink). This is the one New Recruit and Wahapedia print; the sources don’t say which applies.',
           mod:{ kind:'all', when:'Below starting strength, or below half-strength', note:'below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1',
             pick:[{ name:'Below starting strength', note:'re-roll hit rolls of 1' }, { name:'Below half-strength', note:'re-roll hit rolls of 1 and wound rolls of 1' }] },
           text:'- While a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit is at **starting strength**, that unit has +2 **OC**.\n- While a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit is **below starting strength**, that unit’s attacks can re-roll **hit rolls** of 1.\n- While a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit is **below half-strength**, that unit’s attacks can:\n- Re-roll **hit rolls** of 1.\n- Re-roll **wound rolls** of 1.' },
@@ -5239,14 +5243,26 @@ const ARMIES = [
         { name:'Castellan axe', who:'Allarus Custodians', n:2, range:'Melee', A:'3', WS:'2+', S:'10', AP:'-2', D:'4', kw:[] }
       ],
       abilities:[
-        { name:'Captain-General', who:'Trajann Valoris', tag:'Aura', text:'Friendly Adeptus Custodes units (excluding MONSTER/VEHICLE units) within 6" of this model can: Re-roll hit rolls of 1 Re-roll wound rolls of 1' },
-        { name:'Moment Shackle', who:'Trajann Valoris', text:'(Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase: This model’s Watcher’s Axe weapon has +3 A. This model has 3+ InSv.' },
+        // New Recruit's words, with the bullets and bold keywords of BSData and Wahapedia (Wahapedia ends each bullet with a full stop)
+        { name:'Captain-General', who:'Trajann Valoris', tag:'Aura', text:'Friendly **ADEPTUS CUSTODES** units (excluding **MONSTER/VEHICLE** units) within 6" of this model can:\n- Re-roll hit rolls of 1\n- Re-roll wound rolls of 1' },
+        // ph/turn: "at the start of any phase"; the +3 A is the Watcher's Axe footnote, the 3+ InSv the When targeted line (one of the two)
+        { name:'Moment Shackle', who:'Trajann Valoris', tag:'Once per battle, per army', ph:['command','movement','shooting','charge','fight'], turn:'either',
+          def:'Moment Shackle (once per battle, at the start of any phase, one of its two effects): 3+ InSv until the end of the phase',
+          text:'(Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase:\n- This model’s Watcher’s Axe weapon has +3 **A**.\n- This model has 3+ **InSv**.' },
         { name:'Slayers of Tyrants', who:'Allarus Custodians', text:'This unit’s melee attacks that target a unit with a **T** greater than this unit’s **T** have +1 to **wound rolls**.' },
-        { name:'Vexilla', who:'Allarus Custodians', text:'This unit has +1 **OC**.\n- This unit can ignore modifiers to this unit’s **Ld**.' }
+        { name:'Vexilla', who:'Allarus Custodians', text:'- This unit has +1 **OC**.\n- This unit can ignore modifiers to this unit’s **Ld**.' }
       ],
       rules:['Aquila Commander','Aegis of the Emperor','Martial Ka\'tah','Leader','Deep Strike','Feel No Pain 5+*','Feel No Pain 5+','Assault','Rapid Fire','Cleave','Blast'],
       kw:['Character','Epic Hero','Faction: Adeptus Custodes','Imperium','Infantry','Trajann Valoris','Warlord','Allarus Custodians','Terminator'],
-      kwNote:'Allarus Custodians, Terminator come from the led Allarus Custodians.'
+      kwNote:'Allarus Custodians, Terminator come from the led Allarus Custodians.',
+      mods:[
+        { kind:'melee', weapon:'Watcher’s Axe', when:'Moment Shackle (once per battle, at the start of any phase, one of its two effects), until the end of the phase', note:'+3 A', from:'Moment Shackle' },
+        { kind:'melee', when:'Target has a T greater than this unit’s T', note:'+1 to wound rolls', from:'Slayers of Tyrants' }
+      ],
+      // Captain-General: friendly ADEPTUS CUSTODES units (excluding MONSTER/VEHICLE units) within 6" of Trajann, his own unit included
+      aura:[
+        { kind:'all', needs:{ all:['Faction: Adeptus Custodes'], none:['Monster','Vehicle'] }, when:'Within 6" of Trajann Valoris', selfWhen:'Own aura', note:'re-roll hit rolls of 1 and wound rolls of 1', from:'Captain-General', selfAlways:true }
+      ]
     },
     {
       id:'prosecutor-squad', name:'Prosecutor Squad', role:'Infantry', pts:45, copies:2,
@@ -5262,7 +5278,7 @@ const ARMIES = [
         { name:'Gun Stock', n:4, range:'Melee', A:'3', WS:'3+', S:'3', AP:'0', D:'1', kw:[] }
       ],
       abilities:[
-        { name:'Purity of Execution', text:'In your Shooting phase, you can select one **visible** enemy unit within 18" of this unit. That unit is **detected**.\n- While a unit is **detected**, that unit has +3" **detection range**.' }
+        { name:'Purity of Execution', ph:['shooting'], turn:'your', text:'In your Shooting phase, you can select one **visible** enemy unit within 18" of this unit. That unit is **detected**.\n- While a unit is **detected**, that unit has +3" **detection range**.' }
       ],
       rules:['Feel No Pain 3+*','Daughters of the Abyss','Assault','Anti','Rapid Fire'],
       kw:['Anathema Psykana','Faction: Anathema Psykana','Imperium','Infantry','Prosecutor Squad']
@@ -5281,7 +5297,8 @@ const ARMIES = [
         { name:'Gun Stock', n:4, range:'Melee', A:'3', WS:'3+', S:'3', AP:'0', D:'1', kw:[] }
       ],
       abilities:[
-        { name:'Sanctified Flames', text:'In your Shooting phase, when this unit has shot, select one enemy unit hit by those attacks. That enemy unit makes a *battle-shock roll with -1 to that *battle-shock roll* if that enemy unit is a Psyker unit..' }
+        // Wahapedia's wording: New Recruit (BSData) prints it without "you can", with stray asterisks and a double full stop (deviations-nr, deviations-bsdata)
+        { name:'Sanctified Flames', ph:['shooting'], turn:'your', text:'In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit makes a **battle-shock roll**, with -1 to that **battle-shock roll** if that enemy unit is a **PSYKER** unit.' }
       ],
       rules:['Scouts 7"','Feel No Pain 3+*','Daughters of the Abyss','Anti','Torrent','Assault','Blast'],
       kw:['Anathema Psykana','Faction: Anathema Psykana','Imperium','Infantry','Witchseeker Squad']
@@ -5300,7 +5317,8 @@ const ARMIES = [
         { name:'Gun Stock', n:5, range:'Melee', A:'3', WS:'3+', S:'3', AP:'0', D:'1', kw:[] }
       ],
       abilities:[
-        { name:'Sanctified Flames', text:'In your Shooting phase, when this unit has shot, select one enemy unit hit by those attacks. That enemy unit makes a *battle-shock roll with -1 to that *battle-shock roll* if that enemy unit is a Psyker unit..' }
+        // Wahapedia's wording: New Recruit (BSData) prints it without "you can", with stray asterisks and a double full stop (deviations-nr, deviations-bsdata)
+        { name:'Sanctified Flames', ph:['shooting'], turn:'your', text:'In your Shooting phase, when this unit has shot, you can select one enemy unit hit by those attacks. That enemy unit makes a **battle-shock roll**, with -1 to that **battle-shock roll** if that enemy unit is a **PSYKER** unit.' }
       ],
       rules:['Scouts 7"','Feel No Pain 3+*','Daughters of the Abyss','Anti','Torrent','Assault','Blast'],
       kw:['Anathema Psykana','Faction: Anathema Psykana','Imperium','Infantry','Witchseeker Squad']
@@ -5321,10 +5339,15 @@ const ARMIES = [
       ],
       abilities:[
         { name:'Advanced Firepower', text:'This unit’s ranged attacks that target a **MONSTER/VEHICLE** unit can:\n- Re-roll one **hit roll**.\n- Re-roll one **wound roll**.\n- Re-roll one **damage roll**.' },
-        { name:'Flare Shields', text:'This unit has a 4+ InSv against ranged attacks.' }
+        // the Grav-Assault Force detachment rule, as New Recruit prints it on the unit; the 4+* InSv in the profile is it (from)
+        { name:'Flare Shields', def:'4+ InSv against ranged attacks', text:'This unit has a 4+ InSv against ranged attacks.' }
       ],
       rules:['Deadly Demise D3','Aegis of the Emperor','Feel No Pain 5+*','Damaged 5','Deep Strike','Lethal Hits','Sustained Hits'],
-      kw:['Caladius Annihilator Grav-tank','Faction: Adeptus Custodes','Fly','Frame','Grav-assault','Imperium','Vehicle']
+      kw:['Caladius Annihilator Grav-tank','Faction: Adeptus Custodes','Fly','Frame','Grav-assault','Imperium','Vehicle'],
+      mods:[
+        { kind:'ranged', when:'vs MONSTER/VEHICLE', note:'re-roll one hit roll, one wound roll and one damage roll', from:'Advanced Firepower', always:true, vs:{ any:['Monster','Vehicle'] } },
+        { kind:'all', when:'Damaged (5 or fewer wounds remaining)', note:'-1 to hit rolls', from:'Damaged 5' }
+      ]
     },
     {
       id:'contemptor-achillus-dreadnought', name:'Contemptor-Achillus Dreadnought', role:'Vehicle', pts:230,
@@ -5341,10 +5364,13 @@ const ARMIES = [
         { name:'Dreadspear', range:'Melee', A:'5', WS:'2+', S:'12', AP:'-3', D:'D3+3', kw:['LANCE'] }
       ],
       abilities:[
-        { name:'Unyielding Ancient', text:'Attacks that target this unit with a **S** greater than this unit’s **T** have -1 to **wound rolls**.' }
+        { name:'Unyielding Ancient', def:'-1 to wound rolls for attacks with S greater than its T', text:'Attacks that target this unit with a **S** greater than this unit’s **T** have -1 to **wound rolls**.' }
       ],
       rules:['Martial Ka\'tah','Deadly Demise 1','Aegis of the Emperor','Feel No Pain 5+*','Damaged 4','Lance','Rapid Fire'],
-      kw:['Contemptor-Achillus Dreadnought','Dreadnought','Faction: Adeptus Custodes','Imperium','Vehicle','Walker']
+      kw:['Contemptor-Achillus Dreadnought','Dreadnought','Faction: Adeptus Custodes','Imperium','Vehicle','Walker'],
+      mods:[
+        { kind:'all', when:'Damaged (4 or fewer wounds remaining)', note:'-1 to hit rolls', from:'Damaged 4' }
+      ]
     },
     {
       id:'contemptor-galatus-dreadnought', name:'Contemptor-Galatus Dreadnought', role:'Vehicle', pts:250, upgrade:'Memento Moritoi',
@@ -5360,11 +5386,16 @@ const ARMIES = [
         { name:'Warblade', range:'Melee', A:'9', WS:'2+', S:'11', AP:'-2', D:'4', kw:['CLEAVE 1','SUSTAINED HITS 1: non-MONSTER/VEHICLE'], from:{ 'A':'Memento Moritoi', 'S':'Memento Moritoi', 'D':'Memento Moritoi' } }
       ],
       abilities:[
-        { name:'Unyielding Ancient', text:'Attacks that target this unit with a **S** greater than this unit’s **T** have -1 to **wound rolls**.' },
-        { name:'Memento Moritoi', tag:'Upgrade', text:'This model’s melee attacks have +1 **A**, **S** and **D**.' }
+        { name:'Unyielding Ancient', def:'-1 to wound rolls for attacks with S greater than its T', text:'Attacks that target this unit with a **S** greater than this unit’s **T** have -1 to **wound rolls**.' },
+        // the upgrade's published text starts with its restriction, which New Recruit (BSData) leaves out; the +1 A, S and D are in the
+        // Warblade's melee profile already (from)
+        { name:'Memento Moritoi', tag:'Upgrade', text:'**ADEPTUS CUSTODES DREADNOUGHT** model only. This model’s melee attacks have +1 **A**, **S** and **D**.' }
       ],
       rules:['Martial Ka\'tah','Deadly Demise 1','Aegis of the Emperor','Feel No Pain 5+*','Damaged 4','Blast','Torrent','Twin-linked'],
-      kw:['Contemptor-Galatus Dreadnought','Dreadnought','Faction: Adeptus Custodes','Imperium','Vehicle','Walker']
+      kw:['Contemptor-Galatus Dreadnought','Dreadnought','Faction: Adeptus Custodes','Imperium','Vehicle','Walker'],
+      mods:[
+        { kind:'all', when:'Damaged (4 or fewer wounds remaining)', note:'-1 to hit rolls', from:'Damaged 4' }
+      ]
     },
     {
       id:'telemon-heavy-dreadnought', name:'Telemon Heavy Dreadnought', role:'Vehicle', pts:310, upgrade:'Augury Uplink',
@@ -5381,11 +5412,15 @@ const ARMIES = [
         { name:'Dual Caestus Fists', range:'Melee', A:'7', WS:'2+', S:'14', AP:'-3', D:'4', kw:['TWIN-LINKED'] }
       ],
       abilities:[
-        { name:'Guardian Eternal', text:'Ranged attacks that target this unit have -1 **D**.' },
-        { name:'Augury Uplink', tag:'Upgrade', text:'This model has **Feel No Pain 5+**.' }
+        { name:'Guardian Eternal', def:'Ranged attacks that target it have -1 D', text:'Ranged attacks that target this unit have -1 **D**.' },
+        // the upgrade's published text starts with its restriction, which New Recruit (BSData) leaves out
+        { name:'Augury Uplink', tag:'Upgrade', def:'Feel No Pain 5+', text:'**ADEPTUS CUSTODES DREADNOUGHT** model only. This model has **Feel No Pain 5+**.' }
       ],
       rules:['Martial Ka\'tah','Deadly Demise D3','Damaged 5','Aegis of the Emperor','Feel No Pain 5+*','Feel No Pain 5+','Blast','Twin-linked','Torrent'],
-      kw:['Dreadnought','Faction: Adeptus Custodes','Imperium','Telemon Heavy Dreadnought','Vehicle','Walker']
+      kw:['Dreadnought','Faction: Adeptus Custodes','Imperium','Telemon Heavy Dreadnought','Vehicle','Walker'],
+      mods:[
+        { kind:'all', when:'Damaged (5 or fewer wounds remaining)', note:'-1 to hit rolls', from:'Damaged 5' }
+      ]
     },
     {
       id:'telemon-heavy-dreadnought-2', name:'Telemon Heavy Dreadnought', role:'Vehicle', pts:310,
@@ -5403,10 +5438,13 @@ const ARMIES = [
         { name:'Caestus Fist', range:'Melee', A:'5', WS:'2+', S:'14', AP:'-3', D:'4', kw:[] }
       ],
       abilities:[
-        { name:'Guardian Eternal', text:'Ranged attacks that target this unit have -1 **D**.' }
+        { name:'Guardian Eternal', def:'Ranged attacks that target it have -1 D', text:'Ranged attacks that target this unit have -1 **D**.' }
       ],
       rules:['Martial Ka\'tah','Deadly Demise D3','Damaged 5','Aegis of the Emperor','Feel No Pain 5+*','Blast','Torrent','Twin-linked'],
-      kw:['Dreadnought','Faction: Adeptus Custodes','Imperium','Telemon Heavy Dreadnought','Vehicle','Walker']
+      kw:['Dreadnought','Faction: Adeptus Custodes','Imperium','Telemon Heavy Dreadnought','Vehicle','Walker'],
+      mods:[
+        { kind:'all', when:'Damaged (5 or fewer wounds remaining)', note:'-1 to hit rolls', from:'Damaged 5' }
+      ]
     }
   ]
 },
