@@ -1262,7 +1262,7 @@ function matches(n, u){
   if(n.none && n.none.some(k => hasKw(u, k))) return false;
   if(n.unless && matches(n.unless, u)) return false;
   // rule: the unit's Rules line names one of these rules (a Chaos Knight's Super-Heavy Walker, or a Preyslayer's Mantle bearer's)
-  if(n.rule && !n.rule.some(r => (u.rules || []).some(x => x.toLowerCase() === r.toLowerCase()))) return false;
+  if(n.rule && !n.rule.some(r => hasRule(u, r))) return false;
   if(n.attached && !u.leads) return false;   // "a friendly attached … unit": one with a leader or support character
   return true;
 }
@@ -1794,10 +1794,14 @@ const dmLasts = s => { const t = [(s.mod || {}).when, (s.mod || {}).note, s.def,
 // reaches every THOUSAND SONS model of the army)
 // (or that a part of a detachment rule of the list gives it, grants: Blood Tithe's Might of Khorne gives BLOOD LEGIONS units the
 // Blessings of Khorne ability; its condition joins the when)
+// a unit's Rules line names this rule: names compared with either apostrophe (New Recruit's "Martial Ka'tah", Wahapedia's
+// "Martial Ka’tah") and in any case
+const ruleNameN = s => String(s || '').toLowerCase().replace(/[’‘]/g, "'");
+const hasRule = (u, name) => (u.rules || []).some(r => ruleNameN(r) === ruleNameN(name));
 const dmArmyOf = (L, u, kind, key) => { if(!L || !u) return [];
   const via = inArmy(L, () => unitDetParts(u)).filter(x => x.part.grants);
-  return factionOf(L).armyRules.filter(r => r[key]).flatMap(r => { const g = !u.rules.includes(r.name) && via.find(x => x.part.grants === r.name);
-    return r[key].filter(m => (m.kind === kind || m.kind === 'all') && (m.needs ? matches(m.needs, u) : u.rules.includes(r.name) || !!g))
+  return factionOf(L).armyRules.filter(r => r[key]).flatMap(r => { const g = !hasRule(u, r.name) && via.find(x => x.part.grants === r.name);
+    return r[key].filter(m => (m.kind === kind || m.kind === 'all') && (m.needs ? matches(m.needs, u) : hasRule(u, r.name) || !!g))
       .map(m => Object.assign({ from:r.name, rule:r.name, ar:r }, m, g && !m.needs ? { when:m.when + ' (' + g.part.when + ')' } : {})); }); };
 // a stratagem's name from any list (its id)
 const dmStratName = id => { for(const f of Object.values(D.factions)) for(const d of Object.values(f.detachments)) for(const s of d.stratagems || []) if(s.id === id) return s.name;
@@ -4225,7 +4229,7 @@ function defenceItems(u, ph, opts){
   // a Feel No Pain only one model has (Robotic Bodyguard: the Datasmith, not the robots) is said by that ability's own line
   // an army rule of the unit's Rules line can say it with its condition (def: Aegis of the Emperor, "Feel No Pain 5+ against mortal
   // wounds"); New Recruit's starred "Feel No Pain 5+*" is that one, so it is not said again without its condition
-  const fac = factionOf(army()) || {}, armyDefs = (fac.armyRules || []).filter(r => r.def && u.rules.includes(r.name));
+  const fac = factionOf(army()) || {}, armyDefs = (fac.armyRules || []).filter(r => r.def && hasRule(u, r.name));
   for(const r of u.rules){ const m = /^feel no pain (\d\+)/i.exec(r); if(m && !u.abilities.some(ab => ab.def && ab.def.includes('Feel No Pain ' + m[1])) && !(/\*$/.test(r) && armyDefs.some(x => x.def.includes('Feel No Pain ' + m[1])))) out.push({ t:'Feel No Pain ' + m[1], a:'rule', v:r, who:partialWho(u, r) || undefined }); }   // (who: the one model that has it, partialRules)
   for(const r of armyDefs) out.push({ t:r.def, a:'rule', v:r.name });
   for(const r of unitDetRules(u)) if(r.def && !out.some(x => x.t === r.def)) out.push({ t:r.def, a:'rule', v:r.name });   // e.g. Knights of Legend: FNP 6+
