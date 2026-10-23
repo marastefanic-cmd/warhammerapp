@@ -699,10 +699,20 @@ function packUpdates(fk) {
     }
     if (isCapsHeader(t)) { section = t; title = []; continue; }
     if (isInstr(t)) {
+      // a title with its new text and no instruction, before this entry's title: the Thousand Sons pack's "Bray Lord Enhancement /
+      // SORCERER or INFERNAL MASTER model only. The bearer has the / Scouts 6" ability." then "Twisted Mirage Stratagem, Effect
+      // Section / ▪ Change 3" to 6"." is read as a "Change to:" of the first title (its text: the lines up to the one ending a sentence)
+      const k0 = title.findIndex((l, k) => k < title.length - 2 && /\b(Enhancement|Stratagem|Ability|Detachment Rule)$/.test(l));
+      const k1 = k0 < 0 ? -1 : title.findIndex((l, k) => k > k0 && /\.$/.test(l));
+      if (k0 >= 0 && k1 > k0 && k1 < title.length - 1) {
+        out.push({ section, title: title.slice(0, k0 + 1).join(' '), instr: 'Change to:', implicit: true, text: title.slice(k0 + 1, k1 + 1), quoted: false, at: L[i - (title.length - k0 - 1)], d });
+        title = title.slice(k1 + 1);
+      }
       // "Change <part> to:" right after another entry, with no title of its own, is under that entry's title
       // ("Doctrina Imperatives / Change Protector Imperative to: … / Change Conqueror Imperative to: …")
       const prev = out[out.length - 1];
-      const cont = !title.length && prev && prev.section === section && /^Change .+ to:$/.test(t);
+      // (and so is a "▪ Change 9" to 8"." bullet right after another bullet: Twisted Mirage Stratagem, Effect Section)
+      const cont = !title.length && prev && prev.section === section && (/^Change .+ to:$/.test(t) || (/^[▪■]/.test(t) && /^[▪■]/.test(prev.instr)));
       cur = { section, title: cont ? prev.title : title.join(' '), instr: t, text: [], quoted: null, at: L[i], d };
       out.push(cur); title = [];
       const m = /:\s*(.*)$/.exec(t);
@@ -833,7 +843,19 @@ for (const fk of FACTIONS) {
       for (let j = k + 1; j < L.length && /^-\s+(?!\*\*)/.test(L[j]); j++) out.push(L[j]); return out.join('\n'); };
     const ruleNamed = ruleUpd && /^Change (.+) to:$/.exec(ruleUpd.instr);
     if (ruleNamed && partOf(R.text, ruleNamed[1]) != null) checkUpdate('detachment', army, U + '/rule', 'text, ' + ruleNamed[1] + ' (Rules Updates)', partOf(R.text, ruleNamed[1]), ruleUpd);
-    else if (ruleUpd) checkUpdate('detachment', army, U + '/rule', 'text (Rules Updates)', R.text, ruleUpd);
+    else if (ruleUpd) {
+      // a Rules Update of the rule changes its text, not the KEYWORDS section after it (Warpmeld Pact): that part is checked against
+      // Wahapedia's KEYWORDS lines
+      const kw = String(R.text).split('\n'), kAt = kw.findIndex(l => /^KEYWORDS$/.test(l.trim()));
+      checkUpdate('detachment', army, U + '/rule', 'text (Rules Updates)', kAt < 0 ? R.text : kw.slice(0, kAt).join('\n'), ruleUpd);
+      if (kAt >= 0) {
+        count('detachment');
+        const wb = W.rule ? W.rule.body : [], wAt = wb.findIndex(l => /^KEYWORDS$/.test(l.text.trim()));
+        const probs = wAt < 0 ? [{ app: 'KEYWORDS', msg: 'no KEYWORDS section in the source' }] : compareWahaBody(kw.slice(kAt).join('\n'), null, wb.slice(wAt), '');
+        prov.push({ item: army + ' / ' + U + '/rule', field: 'text (KEYWORDS)', doc: W.d.label, file: W.d.file, sha256: W.d.sha256, where: W.where });
+        for (const pr of probs) fail('detachment', army, U + '/rule', 'text (KEYWORDS)', pr.app || '', pr.msg + (pr.src ? ': ' + pr.src : ''), W.where);
+      }
+    }
     if (srcRule && srcRule.name) {
       count('detachment');
       if (pack && W.rule && !suffixOf(W.rule.body.map(l => l.text).join('\n'), srcRule.body).ok)
@@ -941,9 +963,10 @@ for (const fk of FACTIONS) {
         if (st[f] == null && !ss.fields[f]) continue;
         count('detachment');
         // an update titled by its section ("…, When Section", "…, Target Section") with no field labels of its own is that field
-        const u = su.find(x => x.fields[f] || (new RegExp('\\b' + f + ' section', 'i').test(x.title) && !Object.keys(x.fields).length));
-        // "Change 9" to 8"." (Harrying Hounds' Target): the new value is there and the old one is not
-        if (u && !u.fields[f] && checkChangeValue('detachment', army, I, f + ' (Rules Updates)', st[f] || '', u)) continue;
+        const us = su.filter(x => x.fields[f] || (new RegExp('\\b' + f + ' section', 'i').test(x.title) && !Object.keys(x.fields).length)), u = us[0];
+        // "Change 9" to 8"." (Harrying Hounds' Target): the new value is there and the old one is not (each of them, when the section
+        // has several: Twisted Mirage's "Change 3" to 6"." and "Change 9" to 8".")
+        if (u && !u.fields[f] && us.every(x => !x.fields[f]) && us.map(x => checkChangeValue('detachment', army, I, f + ' (Rules Updates)', st[f] || '', x)).every(Boolean)) continue;
         if (u) { checkUpdate('detachment', army, I, f + ' (Rules Updates)', st[f] || '', u, u.fields[f] ? u.fields[f].join('\n') : undefined); continue; }
         const r = sameField(st[f] || '', ss.fields[f] || []);
         prov.push({ item: army + ' / ' + I, field: f, doc: pack ? pack.d.label : W.d.label, file: pack ? pack.d.file : W.d.file, sha256: pack ? pack.d.sha256 : W.d.sha256, where: sWhere });

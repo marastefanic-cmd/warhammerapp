@@ -4254,7 +4254,8 @@ function screenUnit(){
       u.stats.map(s => '<span class="n"><b>' + esc(s.name).replace(/ ×(\d+)$/, '<span class="x">×$1</span>') + '</b><small>' + esc(s.base) + '</small></span>' +
         ['M','T','Sv','W','Ld','OC','InSv'].map((k, i) => '<span>' + granted(s, k, u, esc(s[k]), ['M','T','SV','W','LD','OC','INV'][i] + ' ' + s[k]) + '</span>').join('')).join('') + '</div>' +
     '<div class="dnt">' +
-    unitDetRules(u).filter(r => r.statNote).map(r => { const n = modelCount(u) === 1 && r.statNote.single ? r.statNote.single : r.statNote.text;
+    // (a part of a detachment rule for some of its units can carry one too: Warpmeld Sacrifice's KEYWORDS, for TZAANGORS units)
+    unitDetRules(u).filter(r => r.statNote).map(r => [r, r.statNote]).concat(unitDetParts(u).filter(x => x.part.statNote).map(x => [x.rule, x.part.statNote])).map(([r, sn]) => { const n = modelCount(u) === 1 && sn.single ? sn.single : sn.text;
       return '<p class="dsl">' + esc(n.replace(/\{OC\+(\d)\}/, (x, d) => String((parseInt(u.stats[0].OC, 10) || 0) + +d))) + ' (' + linkTo('rule', r.name, r.name) + ')</p>'; }).join('') +
     (def.length ? '<div class="def"><span class="il">When targeted</span>' + def.map(x => defLine(x, u)).join(' · ') + '</div>' : '') +
     u.abilities.filter(ab => ab.damaged).map(ab => { const m = (u.mods || []).find(x => x.from === ab.name);

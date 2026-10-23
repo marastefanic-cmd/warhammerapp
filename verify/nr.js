@@ -407,18 +407,19 @@ function parseStats(sec) {
   const rows = [], others = [];
   for (const { i, t } of sec.lines) {
     if (!t.trim()) continue;
-    const m = /^(.*?\S)\s+(\d+"|-)\s+(\d+)\s+(\d\+|-)\s+(\d+)\s+(\d\+|-)\s+(\d+)((?:\s+\S+)*)$/.exec(t);
+    // (a values line can have no name on it: an attached unit's long "<model> - <unit>" name wraps above and below it)
+    const m = /^\s*(?:(.*?\S)\s+)?(\d+"|-)\s+(\d+)\s+(\d\+|-)\s+(\d+)\s+(\d\+|-)\s+(\d+)((?:\s+\S+)*)$/.exec(t);
     if (!m) { others.push({ i, t: t.trim() }); continue; }
     const rest = m[8].trim() ? m[8].trim().split(/\s+/) : [];
     let InSv = '', Base = '';
     if (rest.length === 2) [InSv, Base] = rest;
     else if (rest.length === 1) { if (/^\d\+\*?$/.test(rest[0])) InSv = rest[0]; else Base = rest[0]; }
     else if (rest.length > 2) throw new Error('stat row with too many cells: ' + t.trim());
-    rows.push({ i, name: m[1].trim(), M: m[2], T: m[3], Sv: m[4], W: m[5], LD: m[6], OC: m[7], InSv, Base });
+    rows.push({ i, name: (m[1] || '').trim(), M: m[2], T: m[3], Sv: m[4], W: m[5], LD: m[6], OC: m[7], InSv, Base });
   }
-  const pieces = (k, idx) => [...idx.map(ii => others.find(x => x.i === ii)), { i: rows[k].i, t: rows[k].name }];
-  const given = distribute(rows.map(r => ({ centre: r.i, own: [r.i] })), others.map(x => x.i),
-    { penalty: (k, idx) => cellPenalty(cellText(pieces(k, idx))) });
+  const pieces = (k, idx) => [...idx.map(ii => others.find(x => x.i === ii)), ...(rows[k].name ? [{ i: rows[k].i, t: rows[k].name }] : [])];
+  const given = distribute(rows.map(r => ({ centre: r.i, own: r.name ? [r.i] : [] })), others.map(x => x.i),
+    { emptyCost: 5, penalty: (k, idx) => cellPenalty(cellText(pieces(k, idx)), { required: true }) });
   rows.forEach((r, k) => { r.name = cellText(pieces(k, given[k])); delete r.i; });
   return rows;
 }
@@ -470,9 +471,18 @@ function parseTable(sec, who) {
   const lines = sec.lines.filter(x => x.t.trim());
   const pure = lines.filter(x => indentOf(x.t) > hdrCol + 6).map(x => indentOf(x.t));
   const descCol = Math.min(col2, ...pure);
+  // A block of rows can set its description a few columns off the header's (Tzaangor Shaman: "Bestial Prophet -      While …"
+  // right of it, Malign Trickery: "Malign Trickery -         In your …" left of it): a gap of 3+ spaces near the column is where
+  // that line's description starts, and the next line without such a gap is split at the same column when a word starts there
+  // ("with Fatecaster greatbows unit can make …", "Tzaangor Shaman phase, add D3 …")
+  const gapAt = t => { const w = words(t); for (let x = 1; x < w.length; x++) if (w[x].s - w[x - 1].e >= 3 && w[x].s >= hdrCol + 8 && w[x].s <= descCol + 12) return w[x].s; return null; };
+  let lastCol = null;
   const rows = lines.map(({ i, t }) => {
-    if (indentOf(t) > hdrCol + 6) return { i, L: '', R: t.trim(), atCol: indentOf(t) === descCol };
-    const s = splitAt(t, descCol);
+    if (indentOf(t) > hdrCol + 6) { lastCol = null; return { i, L: '', R: t.trim(), atCol: indentOf(t) === descCol }; }
+    const g = gapAt(t);
+    const col = g !== null ? g : (lastCol !== null && words(t).some(w => w.s === lastCol) ? lastCol : descCol);
+    lastCol = g;
+    const s = splitAt(t, col);
     return { i, L: s.L, R: s.R };
   });
   const segs = partitionRows(rows, who);

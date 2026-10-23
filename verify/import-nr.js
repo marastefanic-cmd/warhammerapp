@@ -399,7 +399,7 @@ for (const nu of nrUnits) {
     if (d) {
       if (d.short) u.short = d.short;
       const names = new Set(u.abilities.map(a => a.name)), weapons = new Set([...u.ranged, ...u.melee].map(w => w.group || w.name));
-      const sameWords = n => { const a1 = u.abilities.find(a => a.name === n), a2 = (d.abilities || []).find(a => a.name === n); return a1 && a2 && appText(a1.text).s === appText(a2.text).s; };
+      const sameWords = n => { const a1 = u.abilities.find(a => a.name === n), a2 = (d.abilities || []).find(a => a.name === n); return a1 && a2 && (appText(a1.text).s === appText(a2.text).s || (a1._plain && textEq(a2.text, a1.text))); };
       for (const k of ['mods', 'aura']) {
         const keep = (d[k] || []).filter(m => (!m.weapon || weapons.has(m.weapon)) && (!m.from || (names.has(m.from) && sameWords(m.from)) || armyNames.has(m.from)));
         if (keep.length) { u[k] = JSON.parse(JSON.stringify(keep)); reused.push(tag0 + ': ' + k + ' from ' + d._army + '/' + d.id); }
@@ -409,9 +409,9 @@ for (const nu of nrUnits) {
   // each ability's phase tags and "When targeted" line: from any copy of it with the same name and words
   for (const ab of u.abilities) {
     if (ab.ph !== undefined) continue;
-    const da = donorUnits.flatMap(x => (x.abilities || []).map(a => [x, a])).find(([x, a]) => a.name === ab.name && appText(a.text).s === appText(ab.text).s);
+    const da = donorUnits.flatMap(x => (x.abilities || []).map(a => [x, a])).find(([x, a]) => a.name === ab.name && (appText(a.text).s === appText(ab.text).s || (ab._plain && textEq(a.text, ab.text))));
     if (!da) continue;
-    for (const k of ['at', 'ph', 'turn', 'turns', 'def']) if (da[1][k] !== undefined) ab[k] = JSON.parse(JSON.stringify(da[1][k]));
+    for (const k of ['damaged', 'at', 'ph', 'turn', 'turns', 'def']) if (da[1][k] !== undefined) ab[k] = JSON.parse(JSON.stringify(da[1][k]));
     // "not usable here" (na) is about that list's units: not copied, only pointed out
     if (da[1].na) note(tag0, 'ability ' + ab.name + ': another list marks it "' + da[1].na + '"; check whether that holds for this list before writing na');
     if (ab._plain) { ab.text = da[1].text; delete ab._plain; }   // its markup as written there
