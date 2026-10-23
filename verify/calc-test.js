@@ -412,11 +412,11 @@ const app = [
   // Prophet of Da Great Waaagh!: Ghazghkull is always within his own aura (22.01): +1 to hit and wound, ticked; at Mozrog as set (W10,
   // Feel No Pain 5+), played out: 8.5 wounds lost (the reviewer's own simulator: 8.5)
   ['own aura: Prophet of Da Great Waaagh!, wounds lost', () => C.run(Object.assign({}, dm.calc({ army:'melee', ph:'fight', atk:'ghazghkull-thraka', typed:cp(MOZROG) }).input, { sims:20000, seed:7 })).dmg, 8.5],
-  // Bringers of Change (always: re-roll wound rolls of 1): Warpflamers 3 × D6 = 10.5 torrent hits × (2/6 + 1/6 × 2/6) (S4 vs T5) = 4.08
+  // Bringers of Change (always: re-roll wound rolls of 1): the Exalted Sorcerer's Rubric Marines' Warpflamers 3 × D6 = 10.5 torrent hits × (2/6 + 1/6 × 2/6) (S4 vs T5) = 4.08
   // wounds; the working multiplies out as shown (the reviewer's Warpflamers: 10.5, not 11)
-  ['steps: 3.5 × 3 = 10.5, then 10.5 × 14/36 = 4.08', () => +(w => w.includes('× 3 = 10.5') && w.includes('10.5 × (2/6 + 1/6 × 2/6 = 14/36) = 4.08'))(C.explain(dm.calc({ army:'pubstomper', ph:'shooting', atk:'sorcerer-rubric-marines', typed:cp(BERZ) }).input).groups.flatMap(g => g.steps.map(x => x.t)).join('\n')), 1],
-  ['Bringers of Change: re-roll 1s, always', () => (c => C.explain(c.input).groups.find(g => g.steps[0].t.includes('× 3 = 10.5')).dmg)(dm.calc({ army:'pubstomper', ph:'shooting', atk:'sorcerer-rubric-marines', typed:{ n:10, T:4, W:1, Sv:0 } })), 10.5 * 21 / 36],
-  ['Bringers of Change: objective box, re-roll the wound roll', () => { const s = { army:'pubstomper', ph:'shooting', atk:'sorcerer-rubric-marines', typed:{ n:10, T:4, W:1, Sv:0 } }; s.on = { [boxN(s, 'Bringers of Change', 're-roll the wound roll').k]:true };
+  ['steps: 3.5 × 3 = 10.5, then 10.5 × 14/36 = 4.08', () => +(w => w.includes('× 3 = 10.5') && w.includes('10.5 × (2/6 + 1/6 × 2/6 = 14/36) = 4.08'))(C.explain(dm.calc({ army:'pubstomper', ph:'shooting', atk:'exalted-sorcerer-rubric-marines', typed:cp(BERZ) }).input).groups.flatMap(g => g.steps.map(x => x.t)).join('\n')), 1],
+  ['Bringers of Change: re-roll 1s, always', () => (c => C.explain(c.input).groups.find(g => g.steps[0].t.includes('× 3 = 10.5')).dmg)(dm.calc({ army:'pubstomper', ph:'shooting', atk:'exalted-sorcerer-rubric-marines', typed:{ n:10, T:4, W:1, Sv:0 } })), 10.5 * 21 / 36],
+  ['Bringers of Change: objective box, re-roll the wound roll', () => { const s = { army:'pubstomper', ph:'shooting', atk:'exalted-sorcerer-rubric-marines', typed:{ n:10, T:4, W:1, Sv:0 } }; s.on = { [boxN(s, 'Bringers of Change', 're-roll the wound roll').k]:true };
     return (c => C.explain(c.input).groups.find(g => g.steps[0].t.includes('× 3 = 10.5')).dmg)(dm.calc(s)); }, 10.5 * 27 / 36],
   // Kindred Sorcery: one of three abilities, picked: Psychic Maelstrom (+1 to wound with Psychic weapons) ticked: the Daemon Prince's
   // Hellforged weapons (A6 WS 2+ S9 D4, [PSYCHIC]) at a T5 target, no save: 6 × 5/6 = 5 hits × 5/6 (3+ → 2+) × 4
@@ -443,7 +443,7 @@ const app = [
   ['W1 target: destroyed = wounds lost', () => (c => { const r = C.run(c.input), x = C.explain(c.input, r.orderIdx), v = dm.app.dmShown(c, r, x); return +(C.fmt(v.killed) === C.fmt(v.lost)); })(dm.calc({ army:'princes', ph:'shooting', atk:'kh-rn-the-betrayer-khorne-berzerkers', typed:{ n:10, T:4, W:1, Sv:6, InSv:6 } })), 1],
   // ---- the working names a bonus the printed value already includes (New Recruit): Gorechild's A includes Relentless Rage ----
   ['the working names included bonuses', () => +/^Attacks: \d+ \(includes Relentless Rage\)/.test(C.explain(dm.calc({ army:'princes', ph:'fight', atk:'kh-rn-the-betrayer-khorne-berzerkers', typed:{ n:10, T:4, W:1, Sv:6, InSv:6 } }).input).groups.flatMap(g => g.steps.map(x => x.t)).find(t => /includes Relentless Rage/.test(t)) || ''), 1],
-  ['the working names included keywords', () => +C.explain(dm.calc({ army:'pubstomper', ph:'shooting', atk:'sorcerer-rubric-marines', typed:{ n:10, T:4, W:1, Sv:3 } }).input).groups.flatMap(g => g.steps.map(x => x.t)).some(t => t.includes('[LETHAL HITS]: these wound automatically (you can choose, 24.23; from Empyric Guidance)')), 1],
+  ['the working names included keywords', () => +C.explain(dm.calc({ army:'pubstomper', ph:'shooting', atk:'sorcerer-in-terminator-armour-scarab-occult-terminators', typed:{ n:10, T:4, W:1, Sv:3 } }).input).groups.flatMap(g => g.steps.map(x => x.t)).some(t => t.includes('[LETHAL HITS]: these wound automatically (you can choose, 24.23; from Empyric Guidance)')), 1],
   // ---- the situation reaches every rule with that condition ----
   // "This unit or the target within range of an objective" ticks Finderz Keeperz (+1 AP) and Wreckin' and Lootin' (re-roll hit rolls
   // of 1) at once. Flash Gitz at 10 T4 W1 Sv 3+ models, before allocation: Cutta 10 × (3/6 + 1/6 × 3/6) = 5.83 hits × 5/6 (S9 vs T4:

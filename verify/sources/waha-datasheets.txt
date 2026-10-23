@@ -89,3 +89,5 @@ world-eaters Skarbrand
 world-eaters Bloodthirster
 world-eaters Master-of-Executions
 world-eaters Flesh-Hounds
+thousand-sons Exalted-Sorcerer
+thousand-sons Sekhetar-Robots

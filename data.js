@@ -711,7 +711,8 @@ const FACTIONS = {
         // pts match the New Recruit roster: Sorcerer in Terminator Armour 110 + 30 = 140, Daemon Prince 170 + 35 = 205
         enhancements:[
           { name:'Lord of Forbidden Lore', pts:20, text:'**THOUSAND SONS** model only. Each time the bearer manifests a **Ritual**, while resolving that Ritual, add 6" to its range.' },
-          { name:'Incandaeum', pts:15, text:'**EXALTED SORCERER** model only. Once per battle, when selecting a **Ritual** for the bearer to attempt, you can select Doombolt, even if a model from your army have already attempted to manifest that Ritual this phase.' },
+          // nr: New Recruit and BSData spell it "Incandeum"; GW (Wahapedia, Faction Pack) "Incandaeum"
+          { name:'Incandaeum', nr:'Incandeum', pts:15, text:'**EXALTED SORCERER** model only. Once per battle, when selecting a **Ritual** for the bearer to attempt, you can select Doombolt, even if a model from your army have already attempted to manifest that Ritual this phase.' },
           { name:'Umbralefic Crystal', pts:30, text:'**THOUSAND SONS** model only. (Once per battle, per army) In your Command phase, if this unit is **unengaged**, you can use this ability. If you do:\n- Place this unit in **strategic reserves**.\n- This unit has **Deep Strike** until the start of your next Shooting phase.\n- This unit must make an **ingress move** in your next Movement phase (including in your first turn).' },
           { name:'Eldritch Vortex of E’taph', pts:35, text:'**THOUSAND SONS** model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.' }
         ],
@@ -2363,7 +2364,7 @@ const ARMIES = [
   id:'pubstomper', name:'Pubstomper', faction:'thousand-sons', points:2000, pointsUsed:2000,
   battleSize:'Strike Force', disposition:'Priority Assets',
   detachments:['grand-coven'],
-  source:'New Recruit, exported 20 Oct 2026',
+  source:'New Recruit, exported 23 Oct 2026',
   units:[
     {
       id:'magnus-the-red', name:'Magnus the Red', role:'Epic Hero', pts:455, warlord:true,
@@ -2412,10 +2413,8 @@ const ARMIES = [
       ],
       abilities:[
         // Aetherstride: the Faction Pack's Rules Updates wording ("that is more than 6\""); New Recruit and BSData print the older text
-        { name:'Aetherstride', tag:'Psychic', ph:['movement','shooting','charge'], turn:'your',
-          text:'In your Movement phase, when this model is set up on the battlefield using the **Deep Strike** ability, it can perform an aetherstride. If it does:\n- It can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units.\n- Until the end of the turn, its Dark Blessing has the **[SUSTAINED HITS D3]** ability.\n- Until the end of the turn, it is not eligible to declare a charge.' },
-        { name:'Hunter of Souls', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' },
-          text:'Each time this model makes an attack that targets a **CHARACTER** unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a **PSYKER CHARACTER** unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a **CHARACTER** unit, this model regains up to D3 lost wounds (if that **CHARACTER** unit was a **PSYKER**, this model regains up to 3 lost wounds instead).' },
+        { name:'Aetherstride', tag:'Psychic', ph:['movement','shooting','charge'], turn:'your', text:'In your Movement phase, when this model is set up on the battlefield using the **Deep Strike** ability, it can perform an aetherstride. If it does:\n- It can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units.\n- Until the end of the turn, its Dark Blessing has the **[SUSTAINED HITS D3]** ability.\n- Until the end of the turn, it is not eligible to declare a charge.' },
+        { name:'Hunter of Souls', ph:['movement','shooting','fight'], turn:'either', turns:{ movement:'opp', shooting:'your' }, text:'Each time this model makes an attack that targets a **CHARACTER** unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a **PSYKER CHARACTER** unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a **CHARACTER** unit, this model regains up to D3 lost wounds (if that **CHARACTER** unit was a **PSYKER**, this model regains up to 3 lost wounds instead).' },
         { name:'Eldritch Vortex of E’taph', tag:'Enhancement', text:'**THOUSAND SONS** model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
@@ -2428,51 +2427,53 @@ const ARMIES = [
       kw:['Chaos','Character','Daemon','Daemon Prince','Faction: Thousand Sons','Fly','Monster','Psyker','Tzeentch']
     },
     {
-      id:'sorcerer-rubric-marines', name:'Sorcerer', role:'Character', pts:215, ptsNote:'100 + Rubric Marines 115',
+      id:'exalted-sorcerer-rubric-marines', name:'Exalted Sorcerer', role:'Character', pts:230, ptsNote:'115 + Rubric Marines 115', enhancement:'Incandaeum',
       leads:'Rubric Marines',
-      models:['1× Sorcerer','1× Aspiring Sorcerer','1× Rubric Marine w/ soulreaper cannon','3× Rubric Marine w/ warpflamer'],
+      models:['1× Exalted Sorcerer','1× Aspiring Sorcerer','1× Rubric Marine w/ soulreaper cannon','3× Rubric Marine w/ warpflamer'],
       // New Recruit prints "Icon of Flame - Rubric Marines" with the abilities, on no models line; BSData has it as an
       // option of the unit for one of its Rubric Marines. Neither says which one carries it.
       unplaced:['Icon of Flame'],
-      gear:[['Force weapon','Inferno bolt pistol','Pandaemonic Delusion','Prosperine khopesh'],['Force weapon','Malefic Curse','Warpflame pistol'],['Close combat weapon','Soulreaper cannon'],['Close combat weapon','Warpflamer']],
+      gear:[['Astral Blast','Force weapon','Inferno bolt pistol','Prosperine khopesh'],['Force weapon','Malefic Curse','Warpflame pistol'],['Close combat weapon','Soulreaper cannon'],['Close combat weapon','Warpflamer']],
       stats:[
-        { name:'Sorcerer', M:'6"', T:'5', Sv:'3+', W:'4', Ld:'6+', OC:'1', InSv:'5+', base:'40mm' },
-        { name:'Rubric Marine', M:'6"', T:'5', Sv:'3+', W:'2', Ld:'7+', OC:'2', InSv:'5+', base:'32mm' },
-        { name:'Aspiring Sorcerer', M:'6"', T:'5', Sv:'3+', W:'3', Ld:'6+', OC:'2', InSv:'5+', base:'32mm' }
+        { name:'Exalted Sorcerer', M:'6"', T:'5', Sv:'3+', W:'5', Ld:'6+', OC:'1', InSv:'4+', base:'32mm' },
+        { name:'Rubric Marine', M:'6"', T:'5', Sv:'3+', W:'2', Ld:'7+', OC:'2', InSv:'4+', base:'32mm', from:{ 'InSv':'Arcane Shield' } },
+        { name:'Aspiring Sorcerer', M:'6"', T:'5', Sv:'3+', W:'3', Ld:'6+', OC:'2', InSv:'4+', base:'32mm', from:{ 'InSv':'Arcane Shield' } }
       ],
       ranged:[
-        { name:'Inferno bolt pistol', who:'Sorcerer', range:'12"', A:'1', BS:'3+', S:'5', AP:'-2', D:'1', kw:['PISTOL','LETHAL HITS'], from:{ 'LETHAL HITS':'Empyric Guidance' } },
-        { name:'Pandaemonic Delusion', who:'Sorcerer', range:'24"', A:'6', BS:'3+', S:'5', AP:'-1', D:'1', kw:['PSYCHIC','SUSTAINED HITS 3','LETHAL HITS'], from:{ 'LETHAL HITS':'Empyric Guidance' } },
-        { name:'Malefic Curse', who:'Rubric Marines', range:'24"', A:'3', BS:'3+', S:'4', AP:'-3', D:'1', kw:['ANTI-INFANTRY 4+','DEVASTATING WOUNDS','IGNORES COVER','PSYCHIC','LETHAL HITS'], from:{ 'IGNORES COVER':'Icon of Flame', 'LETHAL HITS':'Empyric Guidance' } },
-        { name:'Warpflame pistol', who:'Rubric Marines', range:'12"', A:'D6', BS:'–', S:'3', AP:'-1', D:'1', kw:['IGNORES COVER','PISTOL','TORRENT','LETHAL HITS'], from:{ 'LETHAL HITS':'Empyric Guidance' } },
-        { name:'Soulreaper cannon', who:'Rubric Marines', range:'24"', A:'6', BS:'3+', S:'6', AP:'-2', D:'1', kw:['DEVASTATING WOUNDS','IGNORES COVER','LETHAL HITS'], from:{ 'IGNORES COVER':'Icon of Flame', 'LETHAL HITS':'Empyric Guidance' } },
-        { name:'Warpflamer', who:'Rubric Marines', n:3, range:'12"', A:'D6', BS:'–', S:'4', AP:'-1', D:'1', kw:['IGNORES COVER','TORRENT','LETHAL HITS'], from:{ 'LETHAL HITS':'Empyric Guidance' } }
+        { name:'Astral Blast', who:'Exalted Sorcerer', range:'18"', A:'D6', BS:'2+', S:'6', AP:'-2', D:'D3', kw:['BLAST','DEVASTATING WOUNDS','PSYCHIC'] },
+        { name:'Inferno bolt pistol', who:'Exalted Sorcerer', range:'12"', A:'1', BS:'2+', S:'5', AP:'-2', D:'1', kw:['PISTOL'] },
+        { name:'Malefic Curse', who:'Rubric Marines', range:'24"', A:'3', BS:'3+', S:'4', AP:'-3', D:'1', kw:['ANTI-INFANTRY 4+','DEVASTATING WOUNDS','IGNORES COVER','PSYCHIC'], from:{ 'IGNORES COVER':'Icon of Flame' } },
+        { name:'Warpflame pistol', who:'Rubric Marines', range:'12"', A:'D6', BS:'–', S:'3', AP:'-1', D:'1', kw:['IGNORES COVER','PISTOL','TORRENT'] },
+        { name:'Soulreaper cannon', who:'Rubric Marines', range:'24"', A:'6', BS:'3+', S:'6', AP:'-2', D:'1', kw:['DEVASTATING WOUNDS','IGNORES COVER'], from:{ 'IGNORES COVER':'Icon of Flame' } },
+        { name:'Warpflamer', who:'Rubric Marines', n:3, range:'12"', A:'D6', BS:'–', S:'4', AP:'-1', D:'1', kw:['IGNORES COVER','TORRENT'] }
       ],
       melee:[
-        { name:'Force weapon', who:'Sorcerer', range:'Melee', A:'4', WS:'3+', S:'6', AP:'-1', D:'D3', kw:['PSYCHIC','LETHAL HITS'], from:{ 'LETHAL HITS':'Empyric Guidance' } },
-        { name:'Prosperine khopesh', who:'Sorcerer', range:'Melee', A:'3', WS:'3+', S:'5', AP:'-2', D:'2', kw:['LETHAL HITS'], from:{ 'LETHAL HITS':'Empyric Guidance' } },
-        { name:'Force weapon', who:'Rubric Marines', range:'Melee', A:'3', WS:'3+', S:'6', AP:'-1', D:'D3', kw:['PSYCHIC','LETHAL HITS'], from:{ 'LETHAL HITS':'Empyric Guidance' } },
-        { name:'Close combat weapon', who:'Rubric Marines', n:4, range:'Melee', A:'2', WS:'3+', S:'5', AP:'0', D:'1', kw:['LETHAL HITS'], from:{ 'LETHAL HITS':'Empyric Guidance' } }
+        { name:'Force weapon', who:'Exalted Sorcerer', range:'Melee', A:'5', WS:'2+', S:'6', AP:'-1', D:'D3', kw:['PSYCHIC'] },
+        { name:'Prosperine khopesh', who:'Exalted Sorcerer', range:'Melee', A:'4', WS:'2+', S:'5', AP:'-2', D:'2', kw:[] },
+        { name:'Force weapon', who:'Rubric Marines', range:'Melee', A:'3', WS:'3+', S:'6', AP:'-1', D:'D3', kw:['PSYCHIC'] },
+        { name:'Close combat weapon', who:'Rubric Marines', n:4, range:'Melee', A:'2', WS:'3+', S:'5', AP:'0', D:'1', kw:[] }
       ],
       abilities:[
-        { name:'Twisted Sorceries', who:'Sorcerer', tag:'Psychic', ph:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, text:'Once per battle, in your Shooting phase or the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristic of Psychic weapons equipped by this model by 3.' },
-        { name:'Empyric Guidance', who:'Sorcerer', tag:'Psychic', text:'While this model is leading a unit, weapons equipped by models in that unit have the **[LETHAL HITS]** ability.' },
+        { name:'Arcane Shield', who:'Exalted Sorcerer', tag:'Psychic', text:'While this model is leading a unit, models in that unit have a 4+ invulnerable save.' },
+        { name:'Rebind Rubricae', who:'Exalted Sorcerer', tag:'Psychic', ph:['command'], turn:'your', text:'In your Command phase, if this model is leading a unit, you can roll one D6: on a 1, that unit suffers D3 **mortal wounds**; on a 2-5, you can return 1 destroyed **Bodyguard** model to that unit; on a 6, you can return up to 2 destroyed Bodyguard models to that unit.' },
+        // Incandaeum: GW’s spelling and wording (Faction Pack Rules Updates, Wahapedia); New Recruit and BSData spell it "Incandeum" (the enhancement’s nr)
+        // and print it without "EXALTED SORCERER model only." and with "has" for GW's "have" (verify/deviations-nr.json)
+        { name:'Incandaeum', who:'Exalted Sorcerer', tag:'Enhancement', ph:['shooting'], turn:'your', text:'**EXALTED SORCERER** model only. Once per battle, when selecting a **Ritual** for the bearer to attempt, you can select Doombolt, even if a model from your army have already attempted to manifest that Ritual this phase.' },
         { name:'Bringers of Change', who:'Rubric Marines', ph:['movement','shooting'], turn:'your', turns:{ movement:'opp' }, text:'Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead.' },
         { name:'Icon of Flame', who:'Rubric Marines', text:'Ranged weapons equipped by models in the bearer’s unit (excluding **CHARACTERS**) have the **[IGNORES COVER]** ability.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
       mods:[
-        { kind:'all', who:'Sorcerer', when:'Twisted Sorceries used this phase (your Shooting phase or the Fight phase, once per battle)', note:'Psychic weapons +3 S and +3 A', from:'Twisted Sorceries' },
         { kind:'ranged', when:'Every ranged attack', note:'re-roll wound rolls of 1', from:'Bringers of Change', always:true, calc:{ rrWound:'1s' } },
         { kind:'ranged', when:'Target within range of an objective marker you do not control', cond:'targetObjectiveNotYours', note:'re-roll the wound roll', from:'Bringers of Change', calc:{ rrWound:'all' } }
       ],
-      rules:['Leader','Cabal of Sorcerers','Psychic','Pistol','Sustained Hits','Anti','Devastating Wounds','Torrent','Ignores Cover'],
-      kw:['Chaos','Character','Faction: Thousand Sons','Grenades','Infantry','Psyker','Sorcerer','Tzeentch','Battleline','Rubric','Rubric Marines','Rubricae'],
+      rules:['Leader','Cabal of Sorcerers','Blast','Devastating Wounds','Psychic','Pistol','Anti','Torrent','Ignores Cover'],
+      kw:['Chaos','Character','Exalted Sorcerer','Faction: Thousand Sons','Grenades','Infantry','Psyker','Tzeentch','Battleline','Rubric','Rubric Marines','Rubricae'],
       kwNote:'Battleline, Rubric, Rubric Marines, Rubricae come from the led Rubric Marines.',
       // Wahapedia's Rubric Marines: "ASPIRING SORCERER ONLY: PSYKER" and "Cabal of Sorcerers (Aspiring Sorcerer only)"; BSData has
-      // both on the Aspiring Sorcerer model; the Sorcerer has both on his own datasheet
-      kwOnly:{ 'Psyker':'Sorcerer and Aspiring Sorcerer' },
-      partialRules:{ 'Cabal of Sorcerers':'Sorcerer and Aspiring Sorcerer' }
+      // both on the Aspiring Sorcerer model; the Exalted Sorcerer has both on his own datasheet
+      kwOnly:{ 'Psyker':'Exalted Sorcerer and Aspiring Sorcerer' },
+      partialRules:{ 'Cabal of Sorcerers':'Exalted Sorcerer and Aspiring Sorcerer' }
     },
     {
       id:'sorcerer-in-terminator-armour-scarab-occult-terminators', name:'Sorcerer in Terminator Armour', role:'Character', pts:565, ptsNote:'140 + Scarab Occult Terminators 425', enhancement:'Umbralefic Crystal',
@@ -2539,22 +2540,6 @@ const ARMIES = [
       kw:['Chaos','Faction: Thousand Sons','Infantry','Mutant','Tzaangors','Tzeentch']
     },
     {
-      id:'tzaangor-enlightened', name:'Tzaangor Enlightened', role:'Mounted', pts:50, copies:2,
-      models:['1× Aviarch','2× Divining spear Enlightened'],
-      gear:[['Divining spear'],['Divining spear']],
-      stats:[
-        { name:'Tzaangor Enlightened', M:'10"', T:'4', Sv:'5+', W:'2', Ld:'7+', OC:'2', InSv:'5+', base:'40mm' }
-      ],
-      melee:[
-        { name:'Divining spear', n:3, range:'Melee', A:'3', WS:'4+', S:'5', AP:'-1', D:'2', kw:['LANCE','PRECISION'] }
-      ],
-      abilities:[
-        { name:'Prophesied Doom', ph:['charge'], turn:'either', text:'Each time this unit makes a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 **mortal wound**.' }
-      ],
-      rules:['Lance','Precision'],
-      kw:['Chaos','Faction: Thousand Sons','Fly','Mounted','Mutant','Tzaangor Enlightened','Tzeentch']
-    },
-    {
       id:'tzaangor-enlightened-with-fatecaster-greatbows', name:'Tzaangor Enlightened with Fatecaster greatbows', role:'Mounted', pts:55,
       models:['1× Aviarch','2× Enlightened'],
       gear:[['Close combat weapon','Fatecaster greatbow'],['Close combat weapon','Fatecaster greatbow']],
@@ -2592,8 +2577,7 @@ const ARMIES = [
       abilities:[
         { name:'Scuttling Walker', ph:['movement','shooting'], turn:'your', text:'Each time this unit makes a **Normal**, **Advance** or **Fall Back move**, it can move through models (excluding **TITANIC** models) and **terrain features**. When doing so, it can move within **Engagement Range** of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.' },
         // every source ends the text with a stray closing quote mark (’); the app leaves it out
-        { name:'Destroyer of Futures', tag:'Once per phase, per unit', ph:['fight'], turn:'opp',
-          text:'You can target this unit with the Counteroffensive stratagem, regardless of any other uses of that stratagem this phase. If you do:\n- That use is -1 CP.\n- That use does not prevent any uses of that stratagem on other units this phase.' },
+        { name:'Destroyer of Futures', tag:'Once per phase, per unit', ph:['fight'], turn:'opp', text:'You can target this unit with the Counteroffensive stratagem, regardless of any other uses of that stratagem this phase. If you do:\n- That use is -1 CP.\n- That use does not prevent any uses of that stratagem on other units this phase.' },
         { name:'Damaged: 1-6 wounds remaining', damaged:'1-6', text:'While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.' }
       ],
       // abilities that change this unit's attacks, shown inside its weapon tables
@@ -2602,6 +2586,27 @@ const ARMIES = [
       ],
       rules:['Deadly Demise D6','Blast','Sustained Hits','Devastating Wounds'],
       kw:['Chaos','Daemon','Defiler','Faction: Thousand Sons','Tzeentch','Vehicle','Walker']
+    },
+    {
+      id:'sekhetar-robots', name:'Sekhetar Robots', role:'Vehicle', pts:85,
+      models:['2× Sekhetar Robot w/ pyreflux meltagun'],
+      gear:[['Close combat weapon','Heavy warpflamer','Hellfyre missile rack','Pyreflux meltagun']],
+      stats:[
+        { name:'Sekhetar Robots ×2', M:'8"', T:'6', Sv:'3+', W:'4', Ld:'7+', OC:'1', InSv:'5+', base:'40mm' }
+      ],
+      ranged:[
+        { name:'Heavy warpflamer', n:2, range:'12"', A:'D6', BS:'–', S:'5', AP:'-2', D:'1', kw:['IGNORES COVER','TORRENT'] },
+        { name:'Hellfyre missile rack', n:2, range:'36"', A:'2', BS:'4+', S:'10', AP:'-2', D:'3', kw:[] },
+        { name:'Pyreflux meltagun', n:2, range:'12"', A:'1', BS:'4+', S:'10', AP:'-4', D:'D6', kw:['MELTA 2'] }
+      ],
+      melee:[
+        { name:'Close combat weapon', n:2, range:'Melee', A:'3', WS:'4+', S:'5', AP:'0', D:'1', kw:[] }
+      ],
+      abilities:[
+        { name:'Prophetic Sentinels', ph:['movement','charge'], turn:'opp', text:'Once per turn, when you target this unit with the **Fire Overwatch**/**Heroic Intervention** stratagem, that use is -1 CP.' }
+      ],
+      rules:['Infiltrators','Stealth','Ignores Cover','Torrent','Melta'],
+      kw:['Chaos','Faction: Thousand Sons','Sekhetar Robots','Tzeentch','Vehicle','Walker']
     }
   ]
 },
