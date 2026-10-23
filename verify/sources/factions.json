@@ -14,5 +14,7 @@
   "emperors-children": { "waha": "emperor-s-children", "bsdata": "Chaos - Emperor's Children",
     "pack": { "file": "eng_30-09_wh40k_faction_pack_emperors_children-xp2mhzppxs-1cvykicdxu.pdf", "label": "GW Faction Pack Emperor's Children" } },
   "chaos-knights": { "waha": "chaos-knights", "bsdata": "Chaos - Chaos Knights", "allies": { "Legiones Daemonica": "chaos-daemons" },
-    "pack": { "file": "eng_wh40k_faction_pack_chaos_knights-87ywk2jovh-xk68yzyb18.pdf", "label": "GW Faction Pack Chaos Knights" } }
+    "pack": { "file": "eng_wh40k_faction_pack_chaos_knights-87ywk2jovh-xk68yzyb18.pdf", "label": "GW Faction Pack Chaos Knights" } },
+  "adeptus-custodes": { "waha": "adeptus-custodes", "bsdata": "Imperium - Adeptus Custodes",
+    "pack": { "file": "eng_30-09_wh40k_faction_pack_adeptus_custodes-xlscee8b1b-b1evo9u920.pdf", "label": "GW Faction Pack Adeptus Custodes" } }
 }
