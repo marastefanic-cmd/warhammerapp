@@ -4232,6 +4232,216 @@
    "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
   },
   {
+   "item": "world-eaters / detachment:khorne-daemonkin",
+   "field": "name",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Khorne Daemonkin 2DP",
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
+  },
+  {
+   "item": "world-eaters / detachment:khorne-daemonkin/rule",
+   "field": "text",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Khorne Daemonkin 2DP",
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
+  },
+  {
+   "item": "world-eaters / detachment:khorne-daemonkin/enhancement:Icon of War",
+   "field": "pts",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Khorne Daemonkin 2DP",
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
+  },
+  {
+   "item": "world-eaters / detachment:khorne-daemonkin/enhancement:Icon of War",
+   "field": "text",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Khorne Daemonkin 2DP",
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
+  },
+  {
+   "item": "world-eaters / detachment:khorne-daemonkin/enhancement:Blood-forged Armour",
+   "field": "pts",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Khorne Daemonkin 2DP",
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
+  },
+  {
+   "item": "world-eaters / detachment:khorne-daemonkin/enhancement:Blood-forged Armour",
+   "field": "text",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Khorne Daemonkin 2DP",
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
+  },
+  {
+   "item": "world-eaters / detachment:khorne-daemonkin/enhancement:Disciple of Khorne",
+   "field": "pts",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Khorne Daemonkin 2DP",
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
+  },
+  {
+   "item": "world-eaters / detachment:khorne-daemonkin/enhancement:Disciple of Khorne / text (Rules Updates)",
+   "field": "text (Rules Updates)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p7, Rules Updates: KHORNE DAEMONKIN DETACHMENT / Disciple of Khorne Enhancement",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / detachment:khorne-daemonkin/enhancement:Blade of Endless Bloodshed",
+   "field": "pts",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Khorne Daemonkin 2DP",
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
+  },
+  {
+   "item": "world-eaters / detachment:khorne-daemonkin/enhancement:Blade of Endless Bloodshed",
+   "field": "text",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Khorne Daemonkin 2DP",
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
+  },
+  {
+   "item": "world-eaters / detachment:khorne-daemonkin/stratagem:summoned-by-slaughter / when (Rules Updates)",
+   "field": "when (Rules Updates)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p7, Rules Updates: KHORNE DAEMONKIN DETACHMENT / Summoned by Slaughter Stratagem",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / detachment:khorne-daemonkin/stratagem:summoned-by-slaughter / target (Rules Updates)",
+   "field": "target (Rules Updates)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p7, Rules Updates: KHORNE DAEMONKIN DETACHMENT / Summoned by Slaughter Stratagem",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / detachment:khorne-daemonkin/stratagem:summoned-by-slaughter / effect (Rules Updates)",
+   "field": "effect (Rules Updates)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p7, Rules Updates: KHORNE DAEMONKIN DETACHMENT / Summoned by Slaughter Stratagem",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / detachment:khorne-daemonkin/stratagem:summoned-by-slaughter / restrictions (Rules Updates)",
+   "field": "restrictions (Rules Updates)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p7, Rules Updates: KHORNE DAEMONKIN DETACHMENT / Summoned by Slaughter Stratagem",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "world-eaters / detachment:khorne-daemonkin/stratagem:daemonic-fury",
+   "field": "when",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Khorne Daemonkin 2DP (DAEMONIC FURY)",
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
+  },
+  {
+   "item": "world-eaters / detachment:khorne-daemonkin/stratagem:daemonic-fury",
+   "field": "target",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Khorne Daemonkin 2DP (DAEMONIC FURY)",
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
+  },
+  {
+   "item": "world-eaters / detachment:khorne-daemonkin/stratagem:daemonic-fury",
+   "field": "effect",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Khorne Daemonkin 2DP (DAEMONIC FURY)",
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
+  },
+  {
+   "item": "world-eaters / detachment:khorne-daemonkin/stratagem:a-worthy-skull",
+   "field": "when",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Khorne Daemonkin 2DP (A WORTHY SKULL)",
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
+  },
+  {
+   "item": "world-eaters / detachment:khorne-daemonkin/stratagem:a-worthy-skull",
+   "field": "target",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Khorne Daemonkin 2DP (A WORTHY SKULL)",
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
+  },
+  {
+   "item": "world-eaters / detachment:khorne-daemonkin/stratagem:a-worthy-skull",
+   "field": "effect",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Khorne Daemonkin 2DP (A WORTHY SKULL)",
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
+  },
+  {
+   "item": "world-eaters / detachment:khorne-daemonkin/stratagem:blessing-of-burning-blood",
+   "field": "when",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Khorne Daemonkin 2DP (BLESSING OF BURNING BLOOD)",
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
+  },
+  {
+   "item": "world-eaters / detachment:khorne-daemonkin/stratagem:blessing-of-burning-blood",
+   "field": "target",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Khorne Daemonkin 2DP (BLESSING OF BURNING BLOOD)",
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
+  },
+  {
+   "item": "world-eaters / detachment:khorne-daemonkin/stratagem:blessing-of-burning-blood",
+   "field": "effect",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Khorne Daemonkin 2DP (BLESSING OF BURNING BLOOD)",
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
+  },
+  {
+   "item": "world-eaters / detachment:khorne-daemonkin/stratagem:daemontide",
+   "field": "when",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Khorne Daemonkin 2DP (DAEMONTIDE)",
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
+  },
+  {
+   "item": "world-eaters / detachment:khorne-daemonkin/stratagem:daemontide",
+   "field": "target",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Khorne Daemonkin 2DP (DAEMONTIDE)",
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
+  },
+  {
+   "item": "world-eaters / detachment:khorne-daemonkin/stratagem:daemontide",
+   "field": "effect",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Khorne Daemonkin 2DP (DAEMONTIDE)",
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
+  },
+  {
+   "item": "world-eaters / detachment:khorne-daemonkin/stratagem:daemontide",
+   "field": "restrictions",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Khorne Daemonkin 2DP (DAEMONTIDE)",
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
+  },
+  {
+   "item": "world-eaters / detachment:khorne-daemonkin/stratagem:murder-call",
+   "field": "when",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Khorne Daemonkin 2DP (MURDER-CALL)",
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
+  },
+  {
+   "item": "world-eaters / detachment:khorne-daemonkin/stratagem:murder-call",
+   "field": "target",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Khorne Daemonkin 2DP (MURDER-CALL)",
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
+  },
+  {
+   "item": "world-eaters / detachment:khorne-daemonkin/stratagem:murder-call",
+   "field": "effect",
+   "doc": "waha:world-eaters",
+   "where": "Wahapedia world-eaters § Khorne Daemonkin 2DP (MURDER-CALL)",
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
+  },
+  {
    "item": "thousand-sons / detachment:grand-coven",
    "field": "name",
    "doc": "waha:thousand-sons",
@@ -6451,6 +6661,27 @@
    "sha256": null
   },
   {
+   "item": "big-demons-baby / daemon-prince-of-khorne / ability:Blade of Endless Bloodshed",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Blade of Endless Bloodshed (Khorne Daemonkin) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "big-demons-baby / master-of-executions / ability:Blood-forged Armour",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Blood-forged Armour (Khorne Daemonkin) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
+   "item": "big-demons-baby / lord-on-juggernaut-khorne-berzerkers / ability:Disciple of Khorne",
+   "field": "text",
+   "doc": "data.js",
+   "where": "same text as the enhancement Disciple of Khorne (Khorne Daemonkin) (whose source is recorded under that item)",
+   "sha256": null
+  },
+  {
    "item": "princes / kh-rn-the-betrayer-khorne-berzerkers / ability:The Betrayer (Khârn the Betrayer)",
    "field": "ability:The Betrayer (Khârn the Betrayer)",
    "doc": "pack:world-eaters",
@@ -6687,6 +6918,41 @@
    "doc": "pack:adeptus-mechanicus",
    "where": "GW Faction Pack Adeptus Mechanicus PDF p18, Rules Updates: DATASHEETS / Ironstrider Ballistarii, Ranged Weapons Twin Cognis Autocannon [SUSTAINED HITS 1,TWIN-LINKED] RANGE A BS S AP D 48\" 4 4+ 9 -1 3 Twin Cognis Lascannon [SUSTAINED HITS 1,TWIN-LINKED] RANGE A BS S AP D 48\" 2 4+ 12 -3 D6+1 Kastelan Robots, Repulsor Grid ability",
    "sha256": "35908c5bfa7bd6428936b00f48ca0c4b666ac14575cdf38341180c23650d0149"
+  },
+  {
+   "item": "big-demons-baby / angron / ability:Driven by Ultimate Rage (Wrathful Presence: pick one)",
+   "field": "ability:Driven by Ultimate Rage (Wrathful Presence: pick one)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p7, Rules Updates: DATASHEETS / Angron, Driven by Ultimate Rage Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "big-demons-baby / lord-on-juggernaut-khorne-berzerkers / ability:Blood Surge (Khorne Berzerkers)",
+   "field": "ability:Blood Surge (Khorne Berzerkers)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p8, Rules Updates: DATASHEETS / Khorne Berzerkers, Blood Surge Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "big-demons-baby / lord-on-juggernaut-khorne-berzerkers / ability:Murderous Charge (Khorne Berzerkers)",
+   "field": "ability:Murderous Charge (Khorne Berzerkers)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p8, Rules Updates: DATASHEETS / Khorne Berzerkers, Abilities Section",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "big-demons-baby / lord-on-juggernaut-khorne-berzerkers / ability:Icon of Khorne (Khorne Berzerkers)",
+   "field": "ability:Icon of Khorne (Khorne Berzerkers)",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p8, Rules Updates: DATASHEETS / Khorne Berzerkers, Jakhals – Icon of Khorne Wargear Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
+  },
+  {
+   "item": "big-demons-baby / goremongers / ability:Loping Speed",
+   "field": "ability:Loping Speed",
+   "doc": "pack:world-eaters",
+   "where": "GW Faction Pack World Eaters PDF p8, Rules Updates: DATASHEETS / Goremongers, Loping Speed Ability",
+   "sha256": "93e29f1b166d2a06fafa37a543890e56ae59c712b73b5a1e26f0a1c1ecf6a8e9"
   },
   {
    "item": "purge-goes-the-foe / belisarius-cawl / rules",

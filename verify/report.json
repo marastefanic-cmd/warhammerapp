@@ -1,6 +1,6 @@
 {
- "hash": "5d6b3b8c2dbe93e8674ee1d16ec7b32ca798dd62d239846b3074a9e0bdf5bb87",
- "at": "2026-10-23T10:37:41.243Z",
+ "hash": "303ae32155629af220409f9ca7ff244d55d8ab95112bb918c6f1963f5d7a445e",
+ "at": "2026-10-23T11:26:02.104Z",
  "ok": true,
  "steps": {
   "data": {
@@ -13,19 +13,19 @@
   },
   "choice": {
    "ok": true,
-   "summary": "choice: 46 weapons with several profiles checked against BSData and Wahapedia, 0 failures"
+   "summary": "choice: 49 weapons with several profiles checked against BSData and Wahapedia, 0 failures"
   },
   "bsdata": {
    "ok": true,
-   "summary": "bsdata: 8664 facts checked against BSData 173d0ef (clone) {\"gear\":616,\"stats\":1233,\"weapons\":4240,\"abilities\":802,\"keywords\":919,\"rules\":464,\"grants\":233,\"points\":156,\"extract\":1}; 41 deviations used; 0 failures"
+   "summary": "bsdata: 9311 facts checked against BSData 173d0ef (clone) {\"gear\":664,\"stats\":1332,\"weapons\":4540,\"abilities\":866,\"keywords\":999,\"rules\":501,\"grants\":241,\"points\":167,\"extract\":1}; 46 deviations used; 0 failures"
   },
   "nr": {
    "ok": true,
-   "summary": "nr: 0 failure(s); 9827 facts checked (army 154, units 106, roster 450, pts 212, copies 106, models 106, enhancement 212, warlord 212, leads 318, gear 184, stats 1203, ranged 2104, from 166, melee 1924, abilities 1077, kw 143, rules 933, glossary 217); 50 declared deviations used. Report: verify/out/nr.json"
+   "summary": "nr: 0 failure(s); 10580 facts checked (army 165, units 115, roster 487, pts 230, copies 115, models 115, enhancement 230, warlord 230, leads 345, gear 200, stats 1300, ranged 2221, from 169, melee 2095, abilities 1164, kw 157, rules 1007, glossary 235); 55 declared deviations used. Report: verify/out/nr.json"
   },
   "texts": {
    "ok": true,
-   "summary": "0 failure(s) in 2522 checked facts, 10 deviation(s) used; verify/out/texts.json, verify/provenance.json"
+   "summary": "0 failure(s) in 2657 checked facts, 11 deviation(s) used; verify/out/texts.json, verify/provenance.json"
   },
   "calc": {
    "ok": true,
@@ -33,11 +33,11 @@
   },
   "screens": {
    "ok": true,
-   "summary": "render at 390px: 1706 screens and popups, 1031 helper texts, 0 failures"
+   "summary": "render at 390px: 1834 screens and popups, 1096 helper texts, 0 failures"
   },
   "small phone": {
    "ok": true,
-   "summary": "render at 320px: 1706 screens and popups, 1031 helper texts, 0 failures"
+   "summary": "render at 320px: 1834 screens and popups, 1096 helper texts, 0 failures"
   },
   "snapshots": {
    "ok": true,
@@ -45,7 +45,7 @@
   },
   "helpers": {
    "ok": true,
-   "summary": "helpers: 1209 judgements, 1209 approved, 0 to check, 316 stale approvals"
+   "summary": "helpers: 1276 judgements, 1276 approved, 0 to check, 319 stale approvals"
   }
  }
 }
