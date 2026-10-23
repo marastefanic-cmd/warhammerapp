@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" href="icon-192.png">
 <style>:root{padding-top:env(safe-area-inset-top,0px)}img{max-width:100%}</style>
 <title>Kunnin’ Kodex</title>
-<script>window.WH_BUILD = '4f915be72e';</script>
+<script>window.WH_BUILD = 'd78764dfef';</script>
 </head>
 <body>
 <style>
@@ -190,6 +190,9 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .tags{display:flex; flex-wrap:wrap; gap:4px}
 .row .rb .adet{display:flex; flex-wrap:wrap; align-items:center; gap:3px 8px; font-size:14px; line-height:1.3}
 .row .rb .adet > span:first-child{font-size:14px; color:var(--fg2)}
+.row .rb .t.d.on{color:var(--fg); box-shadow:inset 0 0 0 1.5px var(--accent)}
+.row .rb .adisp{margin-top:4px}
+.vh{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
 .armies .rgh:first-child{margin-top:6px}
 .row .rb .t{font:700 12px/1 var(--f-head); letter-spacing:.06em; text-transform:uppercase; color:var(--fg2); background:var(--surface2); border-radius:5px; padding:4px 6px 3px}
 .row .rb .t.f{color:var(--accent-ink); background:var(--accent)}
@@ -828,8 +831,8 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .askway{margin:12px 0; padding:12px; border:1px solid var(--line); border-radius:10px}
 .askway b{display:block; font:700 16px/1.2 var(--f-head); letter-spacing:.02em}
 .askway .note{margin:4px 0 10px}
-a.btn.askclaude, a.btn.askcopy{display:inline-flex; align-items:center; justify-content:center; text-decoration:none}
-a.btn.askcopy{display:flex; width:100%; margin-top:8px}
+a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center; text-decoration:none}
+.btn.askcopy{display:block; width:100%; margin-top:8px}
 .askwait{display:flex; align-items:center; gap:9px; font-size:14px; color:var(--muted)}
 .askwait.sm{font-size:12.5px; margin-top:4px}
 .askspin{width:20px; height:20px; flex:none; color:var(--accent); animation:askspin 1.4s linear infinite, askpulse 1.4s ease-in-out infinite}
@@ -1012,9 +1015,9 @@ a.btn.askcopy{display:flex; width:100%; margin-top:8px}
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="verified.js?v=4f915be72e"></script>
-<script src="data.js?v=4f915be72e"></script>
-<script src="calc.js?v=4f915be72e"></script>
+<script src="verified.js?v=d78764dfef"></script>
+<script src="data.js?v=d78764dfef"></script>
+<script src="calc.js?v=d78764dfef"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -1497,10 +1500,17 @@ function measure(){
   r.setProperty('--bb', ($('#bbar').hidden ? 0 : $('#bbar').offsetHeight) + 'px');
 }
 
+// every Force Disposition a list can lock: those its detachments allow (data.js, checked against BSData by verify/dispositions.js),
+// in BSData's order; the one New Recruit printed for the list (a.disposition) is the chosen one
+const DISP_ORDER = ['Disruption', 'Priority Assets', 'Purge the Foe', 'Take and Hold', 'Reconnaissance'];
+const dispsOf = a => { const all = new Set(detachmentsOf(a).flatMap(d => d.dispositions || [])); if(a.disposition) all.add(a.disposition);
+  return DISP_ORDER.filter(x => all.has(x)).concat([...all].filter(x => !DISP_ORDER.includes(x))); };
+const dispText = a => dispsOf(a).map(x => esc(x) + (x === a.disposition ? ' <span class="from">(chosen)</span>' : '')).join(' · ');
 /* ---------- screen: armies ---------- */
 // each army: its own (silly) name, then tags saying what it is
 const armyRow = a => '<button class="row arow" data-army="' + esc(a.id) + '"><span class="rb"><b>' + esc(a.name) + '<span class="apts">' + esc(a.pointsUsed) + ' pts</span></b>' +
-  '<span class="adet"><span>' + detachmentsOf(a).map(d => esc(d.name)).join(' · ') + '</span>' + (a.disposition ? '<span class="t d">' + esc(a.disposition) + '</span>' : '') + '</span></span>' + arrow + '</button>';
+  '<span class="adet"><span>' + detachmentsOf(a).map(d => esc(d.name)).join(' · ') + '</span></span>' +
+  '<span class="adisp tags">' + dispsOf(a).map(x => '<span class="t d' + (x === a.disposition ? ' on' : '') + '">' + esc(x) + (x === a.disposition ? '<span class="vh">, chosen</span>' : '') + '</span>').join('') + '</span></span>' + arrow + '</button>';
 // the lists grouped by faction (factions A to Z, lists in their own order), each under a band as the Units list's roles
 function armyGroups(list){
   const g = new Map();
@@ -1522,7 +1532,7 @@ function screenHome(){
 // (shown once there are more than two lists)
 const HF_KEYS = ['faction', 'det', 'disp'];
 const HF_LABEL = { faction:'Faction', det:'Detachment', disp:'Disposition' };
-const hfOf = (a, k) => k === 'faction' ? [factionOf(a).name] : k === 'det' ? detachmentsOf(a).map(d => d.name) : a.disposition ? [a.disposition] : [];
+const hfOf = (a, k) => k === 'faction' ? [factionOf(a).name] : k === 'det' ? detachmentsOf(a).map(d => d.name) : dispsOf(a);   // disposition: any it can lock
 function homeFilter(){
   if(D.armies.length <= 2) return {};
   const f = store.get('wh-home-filter'), out = {};
@@ -1604,7 +1614,7 @@ function screenArmy(){
   const row = (go, ic, label, count) => '<button class="row" data-go="' + go + '"><svg class="ic" aria-hidden="true"><use href="#' + ic + '"/></svg><span class="rb"><b>' + label + '</b></span>' +
     (count !== '' ? '<span class="c">' + esc(count) + '</span>' : '') + arrow + '</button>';
   return '<div id="armyHead"><p class="army-sub">' + esc(faction().name + ' · ' + a.pointsUsed + ' / ' + a.points + ' pts · ' + a.battleSize) + '</p>' +
-      '<p class="army-sub">' + esc(detachments().map(d => d.name).join(' · ')) + (a.disposition ? ' <span class="dsp">· Disposition: ' + esc(a.disposition) + '</span>' : '') + '</p></div>' +
+      '<p class="army-sub">' + esc(detachments().map(d => d.name).join(' · ')) + '</p><p class="army-sub">Dispositions: ' + dispText(a) + '</p></div>' +
     '<label class="search"><svg aria-hidden="true"><use href="#i-search"/></svg><input id="armyQ" type="search" placeholder="Find a unit, weapon, keyword, rule…" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" aria-label="Search this army"></label>' +
     '<div id="qres"></div>' +
     '<div id="armyMenu"><div class="list">' +
@@ -3580,10 +3590,9 @@ function askFresh(){
   const P = dmPair(dmState());
   if(P.au) askRefs.push({ k:'unit', v:P.au.id, army:P.A.id, label:unitLabel(P.au) });
 }
-// the owner's Claude Project for rules questions (project/ in the repo: its files, instructions and skills): the app writes the
-// question with this list, the screen and anything added to it, the player pastes it into a chat there (their subscription)
+// the owner's Claude Project for rules questions (project/ in the repo: its files, instructions and skills): the app copies the
+// question with this list, the screen and anything added to it; the player pastes it into a chat there (their subscription)
 let askKeyChat = false;   // "Other ways to ask" → the API key chat, once
-const askProjUrl = () => askCfg().project || 'https://claude.ai/projects';
 function askExport(q){
   const a = cur.army && army();
   const head = a ? 'KODEX · ' + a.name + ' · ' + faction().name + ' · ' + detachments().map(d => d.name).join(' + ') + (a.disposition ? ' · ' + a.disposition : '') + ' · data ' + D.version : 'KODEX · data ' + D.version;
@@ -3597,31 +3606,30 @@ function askExport(q){
   return [head, 'Looking at: ' + askWhere(), dm, 'Question: ' + q, about.length ? '\n=== About (in full) ===\n' + about.join('\n\n') : '', list].filter(Boolean).join('\n');
 }
 function askProject(){
-  const a = cur.army ? army() : null, set = !!askCfg().project;
-  openSheet('Rules question · your Claude Project', a ? a.name : 'Rules question',
+  const a = cur.army ? army() : null;
+  openSheet('Rules question · for your Claude Project', a ? a.name : 'Rules question',
     '<p class="askctx">On: ' + esc(askWhere()) + '</p><div id="askRefs">' + askRefChips() + '</div>' +
     '<div class="askin"><textarea id="askQ" rows="3" placeholder="' + (askRefs.length ? 'Your question about these…' : 'Ask a rules question…') + '"></textarea></div>' +
-    '<a class="btn askcopy" role="button" data-askcopy href="' + esc(askProjUrl()) + '" target="_blank" rel="noopener">Copy and open Claude</a>' +
-    '<p class="note">Copies your question with ' + [a ? 'your whole list' : '', 'this screen', askRefs.length ? 'what it is about' : ''].filter(Boolean).join(', ').replace(/, ([^,]*)$/, ' and $1') + ', then opens ' + (set ? 'your Project' : 'your Claude projects') + ': start a chat there and paste.' +
-    (set ? '' : ' Add your Project’s link in Settings to open it straight away.') + '</p>' +
+    '<button class="btn askcopy" data-askcopy>Copy</button>' +
+    '<p class="note">Copies your question with ' + [a ? 'your whole list' : '', 'this screen', askRefs.length ? 'what it is about' : ''].filter(Boolean).join(', ').replace(/, ([^,]*)$/, ' and $1') + ': paste it into a chat in your Claude Project.</p>' +
     '<button class="textbtn" data-askother>Other ways to ask</button>');
   setTimeout(() => { const q = $('#askQ'); if(q) q.focus(); }, 50);
 }
-function askCopy(e){
+function askCopy(){
   const q = (($('#askQ') || {}).value || '').trim();
-  if(!q && !askRefs.length){ e.preventDefault(); toast('Type your question first'); return; }
+  if(!q && !askRefs.length){ toast('Type your question first'); return; }
   const text = askExport(q || 'What should I know about this?');
-  // copied two ways in this tap: the old way first (it works in every browser and finishes before the link opens Claude),
-  // then the clipboard API; the question stays in the sheet to copy by hand if both fail
+  // the old way first (works in every browser, inside this tap), then the clipboard API
   let ok = false;
   try { const t = document.createElement('textarea'); t.value = text; t.setAttribute('readonly', ''); t.style.cssText = 'position:fixed;top:0;left:0;opacity:0;font-size:16px';
     document.body.appendChild(t); t.select(); t.setSelectionRange(0, text.length); ok = document.execCommand('copy'); t.remove(); } catch(err){}
-  try { if(navigator.clipboard) navigator.clipboard.writeText(text).catch(() => {}); } catch(err){}
-  if(!ok && !navigator.clipboard){ e.preventDefault(); toast('Could not copy here: select the question and copy it'); }
+  const done = () => toast('Copied: paste it into a chat in your Claude Project'), fail = () => toast('Could not copy here: select your question and copy it');
+  if(ok){ done(); try { navigator.clipboard && navigator.clipboard.writeText(text).catch(() => {}); } catch(err){} return; }
+  try { navigator.clipboard.writeText(text).then(done, fail); } catch(err){ fail(); }
 }
 function openAsk(){
-  // outside Claude the Project comes first once its link is saved (Other ways to ask: the API key chat)
-  if(!EMBEDDED && (askCfg().project || !askOn()) && !askKeyChat){ askProject(); return; }
+  // outside Claude the copy for the Project comes first (Other ways to ask: the API key chat)
+  if(!EMBEDDED && !askKeyChat){ askProject(); return; }
   askKeyChat = false;
   if(!askOn()){ askChoose(); return; }
   const a = cur.army ? army() : null, ctx = a ? a.id : '';
@@ -3697,17 +3705,16 @@ async function askSendAcct(text, turn, a, cfg, ctrl, draw){
   } finally { turn.done = true; askBusy = null; draw(); askBtnNow(); }
 }
 // Settings: the key, the model, GW's Core Rules PDF
-// the Project's link (outside Claude): where "Copy and open Claude" goes
-const askProjRow = c => EMBEDDED ? '' : '<div class="askway"><b>Your Claude Project</b><p class="note">The ? copies your question with this list and screen, and opens this Project in Claude, where it runs on your subscription. Paste the Project’s link (claude.ai/project/…) here.</p>' +
-  '<div class="askkey"><input id="askProj" type="url" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="https://claude.ai/project/…" value="' + esc(c.project || '') + '" aria-label="Claude Project link"><button class="btn" data-askprojsave>Save</button></div></div>';
+// outside Claude: the ? copies the question for the owner's Claude Project (project/ in the repo)
+const askProjNote = () => EMBEDDED ? '' : '<div class="askway"><b>Your Claude Project</b><p class="note">The ? copies your question with your list and this screen: paste it into a chat in your rules Project in Claude, where it runs on your subscription.</p></div>';
 function askSettings(){
   const c = askCfg();
   const models = () => ASK_MODELS.map(([id, name, sub]) => '<button class="row" data-askmodel="' + id + '" aria-pressed="' + (c.model === id) + '"><span class="rb"><b>' + name + '</b><span>' + sub + '</span></span>' + (c.model === id ? '<svg class="ic ok" aria-hidden="true"><use href="#i-check"/></svg>' : '') + '</button>').join('');
   if(askAcct) return '<div class="sec-h"><h2>Rules questions</h2></div><p class="note">Opened in Claude, rules questions (the ? in the top bar) use your Claude account: no API key needed, and they count towards your plan’s usage. The first question asks you to allow it. In the app on your home screen an API key is still the way.</p>' +
     '<div class="list">' + models() + '</div><p class="note">Each question sends your list, the rules this app holds and the Core Rules’ index; Claude reads the Core Rules sections it needs.</p>';
-  if(!c.key) return '<div class="sec-h"><h2>Rules questions</h2></div>' + askProjRow(c) + '<div class="askway"><b>In Claude, on your Claude subscription</b><p class="note">Opens this same app inside the Claude app (or claude.ai), where the ? uses your Claude account. Only you, and people you share it with, can open it.</p>' + askInClaudeBtn() + '</div><div class="askway"><b>Here, with an Anthropic API key</b><p class="note">Ask from any screen (the ? in the top bar). Billed to your Anthropic Console credits (console.anthropic.com → API keys), not your subscription; the key stays in this browser on this phone and goes only to Anthropic.</p>' +
+  if(!c.key) return '<div class="sec-h"><h2>Rules questions</h2></div>' + askProjNote() + '<div class="askway"><b>In Claude, on your Claude subscription</b><p class="note">Opens this same app inside the Claude app (or claude.ai), where the ? uses your Claude account. Only you, and people you share it with, can open it.</p>' + askInClaudeBtn() + '</div><div class="askway"><b>Here, with an Anthropic API key</b><p class="note">Ask from any screen (the ? in the top bar). Billed to your Anthropic Console credits (console.anthropic.com → API keys), not your subscription; the key stays in this browser on this phone and goes only to Anthropic.</p>' +
     '<div class="askkey"><input id="askKey" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="sk-ant-…" aria-label="Anthropic API key"><button class="btn" data-askkey>Save</button></div></div>';
-  return '<div class="sec-h"><h2>Rules questions</h2></div>' + askProjRow(c) + '<div class="list">' +
+  return '<div class="sec-h"><h2>Rules questions</h2></div>' + askProjNote() + '<div class="list">' +
     '<div class="row"><span class="rb"><b>API key</b><span>Saved on this phone · …' + esc(c.key.slice(-4)) + '</span></span><button class="textbtn" data-askforget>Remove</button></div>' +
     ASK_MODELS.map(([id, name, sub]) => '<button class="row" data-askmodel="' + id + '" aria-pressed="' + (c.model === id) + '"><span class="rb"><b>' + name + '</b><span>' + sub + '</span></span>' + (c.model === id ? '<svg class="ic ok" aria-hidden="true"><use href="#i-check"/></svg>' : '') + '</button>').join('') +
     '</div><p class="note">Each question sends the Core Rules (with errata and FAQs), your list and the question; the rules part is cached for an hour, so follow-up questions cost little.</p>';
@@ -4512,7 +4519,8 @@ function screenPregame(){
     row('Warlord', warlord.map(u => u.warlordOn ? linkTo('unit', u.id, u.warlordOn) + ' <span class="from">(' + esc(unitLabel(u)) + ')</span>' : unitLink(u)).join(', ')) +
     row('Enhance&shy;ments', enh.join('<br>')) +
     row('Attached', led.join('<br>')) +
-    row('Detach&shy;ments', detachments().map(d => (d.rule ? linkTo('rule', d.rule.name, d.name) : esc(d.name)) + (d.dp ? ' <span class="from">(' + d.dp + ' DP)</span>' : '')).join(', ') + (a.disposition ? '<br><span class="from">Disposition:</span> ' + esc(a.disposition) : '')) +
+    row('Detach&shy;ments', detachments().map(d => (d.rule ? linkTo('rule', d.rule.name, d.name) : esc(d.name)) + (d.dp ? ' <span class="from">(' + d.dp + ' DP)</span>' : '')).join(', ')) +
+    row('Disposi&shy;tions', dispText(a)) +
     // the other selections New Recruit prints under the army name, as printed; one that only names the parts of an army
     // rule ("Code Chivalric: Deed, Quality", each part's table rows) is no pick: that rule is under Army rules
     Object.entries(a.config || {}).filter(([k, v]) => !ruleParts(f, k, v)).map(([k, v]) => row(esc(k), esc(v))).join('') +
@@ -4888,11 +4896,8 @@ document.addEventListener('click', e => {
   if(el.hasAttribute('data-roll')){ rollArmy(); return; }
   if(el.hasAttribute('data-ask')){ askFresh(); openAsk(); return; }
   if(el.hasAttribute('data-asksend')){ askSend(); return; }
-  if(el.hasAttribute('data-askcopy')){ askCopy(e); return; }   // the link then opens the Project
+  if(el.hasAttribute('data-askcopy')){ askCopy(); return; }
   if(el.hasAttribute('data-askother')){ if(askOn()){ askKeyChat = true; openAsk(); } else askChoose(); return; }
-  if(el.hasAttribute('data-askprojsave')){ const v = (($('#askProj') || {}).value || '').trim();
-    if(v && !/^https:\/\/claude\.ai\/project\/[\w-]+/.test(v)){ toast('Paste the link of your Project (claude.ai/project/…)'); return; }
-    store.set('wh-ask', Object.assign(askCfg(), { project:v })); rerender(); toast(v ? 'Project link saved on this phone' : 'Project link removed'); return; }
   if(el.hasAttribute('data-askkeygo')){ hideSheet(); go({ s:'settings' }); const k = $('#askKey'); if(k){ k.scrollIntoView({ block:'center' }); k.focus(); } return; }
   if(el.hasAttribute('data-askstop')){ if(askBusy) askBusy.abort(); return; }
   if(ds.askref){ const i = ds.askref.indexOf('|'), k = ds.askref.slice(0, i), v = ds.askref.slice(i + 1);
