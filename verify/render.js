@@ -571,7 +571,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
     await page.reload(); await page.evaluate(() => document.fonts.ready);
     const st = await page.evaluate(() => { hideSheet(); go({ s:'home' }); const r = document.querySelector('#view [data-impstale="import-broken"]'); return { row:!!r, n:WH_DATA.armies.length }; });
     if(!st.row || st.n !== armies.length) fail('import-stale', L, 'a kept export that cannot be read', JSON.stringify(st));
-    await page.waitForTimeout(400); await page.click('#view [data-impstale="import-broken"]'); await page.waitForTimeout(300);
+    await page.waitForTimeout(400); await page.click('#view [data-impstale="import-broken"]'); await page.waitForTimeout(450);   // (a tap right after the sheet opens is dropped)
     await page.click('#sheetIn [data-imprm]'); await page.waitForTimeout(200); await page.click('#sheetIn [data-imprmyes]'); await page.waitForTimeout(300);
     const st2 = await page.evaluate(() => ({ row:!!document.querySelector('#view [data-impstale]'), kept:localStorage.getItem('wh-imported') }));
     if(st2.row || st2.kept !== '[]') fail('import-stale', L, 'Remove', JSON.stringify(st2));
