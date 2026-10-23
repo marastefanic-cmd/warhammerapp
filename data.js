@@ -546,6 +546,65 @@ const FACTIONS = {
             effect:'Do not roll a D6 to determine how far models in your unit can move when they make a **surge move**. Instead, when making a **surge move**, those models can move up to 8".' }
         ]
       },
+      // Khorne Daemonkin: GW's Faction Pack (1.3) does not print it, only Rules Updates to Disciple of Khorne and Summoned by
+      // Slaughter (their wording is used); the rest is Wahapedia's. The detachment rule's RESTRICTIONS are part of it as printed.
+      'khorne-daemonkin': {
+        name:'Khorne Daemonkin', dp:2,
+        rule:{ name:'Blood Tithe', ph:['command'], turn:'either', needs:{ any:['Faction: Blood Legions','Faction: World Eaters'] },
+          text:'Each time a **BLOOD LEGIONS** or **WORLD EATERS** unit from your army destroys an enemy unit, roll one D6: on a 3+, you gain 1 Blood Tithe point (BTP). At the start of the Command phase, you can spend one or more of your BTP to activate one of the following abilities until the end of the battle:\n- **Enraged Abjuration [2BTP]**\n**BLOOD LEGIONS** and **WORLD EATERS** models from your army have the **Feel No Pain 5+** ability against **Psychic Attacks** and **mortal wounds**.\n- **Daemonic Rage [3BTP]**\nMelee weapons equipped by **BLOOD LEGIONS** units from your army have the **[lance]** ability.\n- **Boon of Blood [4BTP]**\n**BLOOD LEGIONS** units from your army have a 4+ invulnerable save.\n- **Might of Khorne [5BTP]**\n**BLOOD LEGIONS** units from your army gain the Blessings of Khorne ability.\nRESTRICTIONS\nYou can include the **BLOOD LEGIONS** units in your army. The combined points cost of such units you can include in your army is:\n- **Incursion:** Up to 500 pts\n- **Strike Force:** Up to 1000 pts\n- **Onslaught:** Up to 1500 pts\nNo **BLOOD LEGIONS** model from your army can be your **WARLORD**.',
+          // the four abilities, each on the units its words name (BLOOD LEGIONS and WORLD EATERS models, BLOOD LEGIONS units): once
+          // activated with BTP they last until the end of the battle, so each is shown with "active"
+          parts:[
+            { name:'Enraged Abjuration', needs:{ any:['Faction: Blood Legions','Faction: World Eaters'] }, def:'Enraged Abjuration active (2BTP): Feel No Pain 5+ against Psychic Attacks and mortal wounds' },
+            { name:'Daemonic Rage', needs:{ any:['Faction: Blood Legions'] }, mod:{ kind:'melee', when:'Daemonic Rage active (3BTP)', note:'[LANCE]' } },
+            { name:'Boon of Blood', needs:{ any:['Faction: Blood Legions'] }, def:'Boon of Blood active (4BTP): 4+ invulnerable save' },
+            // grants: the Damage tab gives a BLOOD LEGIONS unit without the Blessings of Khorne ability the Blessings' ticks, with this condition
+            { name:'Might of Khorne', needs:{ any:['Faction: Blood Legions'] }, grants:'Blessings of Khorne', when:'Might of Khorne active (5BTP)' }
+          ] },
+        enhancements:[
+          { name:'Icon of War', pts:25, text:'**WORLD EATERS** model only. While a friendly **BLOOD LEGIONS** unit is within 6" of the bearer, that unit has the Blessings of Khorne ability. If the Might of Khorne ability is active for your army, then while a friendly **BLOOD LEGIONS** unit is within 6" of the bearer, you can re-roll **Battle-shock tests** taken for that unit.' },
+          { name:'Blood-forged Armour', pts:20, text:'**BLOOD LEGIONS** or **WORLD EATERS** model only. The bearer has a Save characteristic of 2+. If the bearer is destroyed, you gain 1 Blood Tithe point.' },
+          // the Faction Pack's Rules Update (Wahapedia's errata is the same)
+          { name:'Disciple of Khorne', pts:15, text:'**LORD ON JUGGERNAUT** model only. The bearer has the Deep Strike ability, and it has the **BLOOD LEGIONS** Faction keyword instead of the **WORLD EATERS** Faction keyword.' },
+          // "bearer’s" as BSData and New Recruit print it (Wahapedia: "bearers", deviations-texts.json)
+          { name:'Blade of Endless Bloodshed', pts:30, text:'**WORLD EATERS** model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. Each time the bearer’s unit destroys an enemy unit with a melee attack, do not roll to gain a Blood Tithe point, you automatically gain 1 Blood Tithe point instead.' }
+        ],
+        stratagems:[
+          // the Faction Pack's Rules Update (Wahapedia's text has "first.)" for "first)."); no BLOODLETTERS unit in a list shows it on no unit
+          { id:'summoned-by-slaughter', gist:'The last model of a unit is destroyed: set your BLOODLETTERS unit in Reserves up wholly within 9" of that model and more than 6" horizontally away from all enemy units (once per battle round).', name:'Summoned by Slaughter', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Bloodletters'] },
+            when:'Any phase, when the last model in a unit is destroyed, before removing it from play. (If that unit is a **TRANSPORT**, any units embarked within that **TRANSPORT** model must disembark first).',
+            target:'One **BLOODLETTERS** unit from your army that is in Reserves.',
+            effect:'Set your unit up anywhere on the battlefield wholly within 9" of that destroyed model and more than 6" horizontally away from all enemy units, then remove the destroyed model from play.',
+            restrictions:'You cannot use this Stratagem more than once per battle round.' },
+          // needs is the TARGET (the BLOOD LEGIONS unit); the WORLD EATERS unit within 6" it selects is the one whose weapons change
+          { id:'daemonic-fury', gist:'Select one friendly WORLD EATERS unit within 6" of your unit: until the end of the turn its melee weapons have [LANCE] (and [TWIN-LINKED] until the end of the phase if Daemonic Rage is active).', name:'Daemonic Fury', cp:1, phases:['fight'], turn:'your', needs:{ all:['Faction: Blood Legions'] },
+            when:'Start of your Fight phase.',
+            target:'One **BLOOD LEGIONS** unit from your army.',
+            effect:'Select one friendly **WORLD EATERS** unit within 6" of your unit. Until the end of the turn, melee weapons equipped by models in your **WORLD EATERS** unit have the **[LANCE]** ability. If the Daemonic Rage ability is active for your army, then until the end of the phase those melee weapons also have the **[TWIN-LINKED]** ability.' },
+          { id:'a-worthy-skull', gist:'Your unit has fought and destroyed one or more enemy CHARACTER or MONSTER models: you gain D3BTP and can then spend BTP to activate one of the Blood Tithe abilities.', name:'A Worthy Skull', cp:1, phases:['fight'], turn:'either', needs:{ any:['Faction: Blood Legions','Faction: World Eaters'] },
+            when:'Fight phase, just after a **BLOOD LEGIONS** or **WORLD EATERS** unit from your army has fought, and one or more enemy **CHARACTER** or **MONSTER** models were destroyed as a result of those attacks.',
+            target:'That **BLOOD LEGIONS** or **WORLD EATERS** unit.',
+            effect:'You gain D3BTP and you can then spend one or more BTP you have to activate one of the Blood Tithe abilities.' },
+          // needs is the TARGET (the BLOOD LEGIONS unit); shield.def: the "When targeted" line of each WORLD EATERS unit, with a
+          // BLOOD LEGIONS unit in the list, as the effect says it ("models in your WORLD EATERS unit")
+          { id:'blessing-of-burning-blood', shield:{ protects:{ all:['Faction: World Eaters'] }, by:{ all:['Faction: Blood Legions'] },
+              def:'their Shooting phase or the Fight phase, with a friendly BLOOD LEGIONS unit within 6": its models have a 5+ invulnerable save until the end of the phase (4+ if Boon of Blood is active)' },
+            gist:'A WORLD EATERS unit within 6" of your unit is selected as a target: until the end of the phase, models in that WORLD EATERS unit have a 5+ invulnerable save (4+ if Boon of Blood is active).', name:'Blessing of Burning Blood', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'opp' }, needs:{ all:['Faction: Blood Legions'] },
+            when:'Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.',
+            target:'One **BLOOD LEGIONS** unit from your army that is within 6" of a friendly **WORLD EATERS** unit that was selected as the target as one or more of the attacking unit’s attacks.',
+            effect:'Until the end of the phase, models in your **WORLD EATERS** unit have a 5+ invulnerable save. If the Boon of Blood ability is active for your army, then until the end of the phase, models in your **WORLD EATERS** unit have a 4+ invulnerable save.' },
+          // needs is the TARGET (the WORLD EATERS unit); the models return to a BLOOD LEGIONS unit within 6" of it
+          { id:'daemontide', gist:'Select one friendly BLOOD LEGIONS unit within 6" of your unit: one destroyed MOUNTED model, up to D3 destroyed BEAST models or up to D6 destroyed INFANTRY models return to it with full wounds (not CHARACTER models to Attached units).', name:'Daemontide', cp:1, phases:['command'], turn:'your', needs:{ all:['Faction: World Eaters'] },
+            when:'Your Command phase.',
+            target:'One **WORLD EATERS** unit from your army.',
+            effect:'Select one friendly **BLOOD LEGIONS** unit within 6" of your unit. One destroyed **MOUNTED** model, up to D3 destroyed **BEAST** models, or up to D6 destroyed **INFANTRY** models are returned to that **BLOOD LEGIONS** unit with their full wounds remaining.',
+            restrictions:'This Stratagem cannot be used to return destroyed **CHARACTER** models to Attached units.' },
+          { id:'murder-call', gist:'Remove your unit from the battlefield and place it into Strategic Reserves.', name:'Murder-call', cp:1, phases:['fight'], turn:'opp', needs:{ all:['Faction: Blood Legions'] },
+            when:'End of your opponent’s Fight phase.',
+            target:'One **BLOOD LEGIONS** unit from your army that is on the battlefield and not within **Engagement Range** of one or more enemy units.',
+            effect:'Remove your unit from the battlefield and place it into **Strategic Reserves**.' }
+        ]
+      },
       // Butchers of Khorne: the Faction Pack (1.3, p3) prints it in full, word for word as Wahapedia; its Rules Updates do not change it
       'butchers-of-khorne': {
         name:'Butchers of Khorne', dp:1,

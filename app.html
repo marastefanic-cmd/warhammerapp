@@ -1285,6 +1285,9 @@ function unitNames(units){
 }
 // detachment rules that apply to a unit (by keyword)
 const unitDetRules = u => detachments().filter(d => d.rule && d.rule.needs && matches(d.rule.needs, u)).map(d => d.rule);
+// the parts of a detachment rule that are for some of its units only (parts: Blood Tithe's Daemonic Rage and Boon of Blood are for
+// BLOOD LEGIONS units), each with the rule it is part of
+const unitDetParts = u => unitDetRules(u).flatMap(r => (r.parts || []).filter(p => matches(p.needs, u)).map(p => ({ rule:r, part:p })));
 const allUnitRules = u => u.rules.concat(unitDetRules(u).map(r => r.name).filter(n => !u.rules.includes(n)));
 const unitRules = u => allUnitRules(u).filter(r => !inertRule(r));   // the ones that do something in this list
 // a rule of the unit only one of its models has (data.js partialRules: Canis Rex's Lone Operative is Sir Hekhtur's): that model
@@ -1315,7 +1318,8 @@ function auraMods(u){
 const halfBelow = u => Math.ceil((parseInt(u.stats[0].W, 10) || 0) / 2) - 1;
 const singleMod = (m, u) => m.single && modelCount(u) === 1 ? Object.assign({}, m, { when:m.single.when, note:m.single.note.replace('{half}', halfBelow(u)) }) : m;
 function unitMods(u, kind){
-  const det = unitDetRules(u).filter(r => r.mod).map(r => Object.assign({ from:r.name, rule:r.name }, singleMod(r.mod, u)));
+  const det = unitDetRules(u).filter(r => r.mod).map(r => Object.assign({ from:r.name, rule:r.name }, singleMod(r.mod, u)))
+    .concat(unitDetParts(u).filter(x => x.part.mod).map(x => Object.assign({ from:x.rule.name, rule:x.rule.name }, x.part.mod)));
   for(const [k, list] of [['ranged', u.ranged], ['melee', u.melee]]){
     const lance = [...new Set((list || []).filter(w => w.kw.some(x => /^lance/i.test(x))).map(w => w.group || w.name))];
     if(lance.length) det.push({ kind:k, when:'Made a charge move this turn', note:andList(lance) + ' +1 to wound', from:'Lance', rule:'Lance' });
@@ -1760,8 +1764,13 @@ const dmLasts = s => { const t = [(s.mod || {}).when, (s.mod || {}).note, s.def,
 // the army rules' own reading for the calculator (calcMods / calcNc on an army rule: this tab alone reads them, the datasheets
 // never show them): for a unit with that rule in its rules list, or for the units its needs name (a Ritual of the Cabal of Sorcerers
 // reaches every THOUSAND SONS model of the army)
-const dmArmyOf = (L, u, kind, key) => !L || !u ? [] : factionOf(L).armyRules.filter(r => r[key]).flatMap(r => r[key]
-  .filter(m => (m.kind === kind || m.kind === 'all') && (m.needs ? matches(m.needs, u) : u.rules.includes(r.name))).map(m => Object.assign({ from:r.name, rule:r.name, ar:r }, m)));
+// (or that a part of a detachment rule of the list gives it, grants: Blood Tithe's Might of Khorne gives BLOOD LEGIONS units the
+// Blessings of Khorne ability; its condition joins the when)
+const dmArmyOf = (L, u, kind, key) => { if(!L || !u) return [];
+  const via = inArmy(L, () => unitDetParts(u)).filter(x => x.part.grants);
+  return factionOf(L).armyRules.filter(r => r[key]).flatMap(r => { const g = !u.rules.includes(r.name) && via.find(x => x.part.grants === r.name);
+    return r[key].filter(m => (m.kind === kind || m.kind === 'all') && (m.needs ? matches(m.needs, u) : u.rules.includes(r.name) || !!g))
+      .map(m => Object.assign({ from:r.name, rule:r.name, ar:r }, m, g && !m.needs ? { when:m.when + ' (' + g.part.when + ')' } : {})); }); };
 // a stratagem's name from any list (its id)
 const dmStratName = id => { for(const f of Object.values(D.factions)) for(const d of Object.values(f.detachments)) for(const s of d.stratagems || []) if(s.id === id) return s.name;
   const c = D.coreStratagems.find(s => s.id === id); return c ? c.name : id; };
@@ -4146,6 +4155,7 @@ function defenceItems(u, ph, opts){
   // a Feel No Pain only one model has (Robotic Bodyguard: the Datasmith, not the robots) is said by that ability's own line
   for(const r of u.rules){ const m = /^feel no pain (\d\+)/i.exec(r); if(m && !u.abilities.some(ab => ab.def && ab.def.includes('Feel No Pain ' + m[1]))) out.push({ t:'Feel No Pain ' + m[1], a:'rule', v:r }); }
   for(const r of unitDetRules(u)) if(r.def && !out.some(x => x.t === r.def)) out.push({ t:r.def, a:'rule', v:r.name });   // e.g. Knights of Legend: FNP 6+
+  for(const { rule, part } of unitDetParts(u)) if(part.def) out.push({ t:part.def, a:'rule', v:rule.name });   // a part of it for some units (Boon of Blood)
   // (who, name: the model of an attached unit the ability is on, for the datasheet's line)
   for(const ab of u.abilities) if(ab.def && !naReason(ab) && !(ph && ab.defPh && !ab.defPh.includes(ph))) out.push({ t:ab.def, a:'ability', v:abilityKey(ab), who:ab.who, name:ab.name });
   for(const s of allStratagems()) if(s.def && eligible(s).includes(u) && !(ph && !s.phases.includes(ph))) out.push({ t:s.cp + 'CP ' + s.name + ': ' + s.def, a:'strat', v:s.id });
