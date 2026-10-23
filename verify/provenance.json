@@ -71,7 +71,7 @@
    "id": "waha:world-eaters",
    "label": "Wahapedia world-eaters (text)",
    "file": "verify/.cache/waha/world-eaters.txt",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "id": "waha:thousand-sons",
@@ -3830,7 +3830,7 @@
    "field": "name",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Berzerker Warband 2DP",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / detachment:berzerker-warband/rule / text (Rules Updates)",
@@ -3844,168 +3844,168 @@
    "field": "pts",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Berzerker Warband 2DP",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / detachment:berzerker-warband/enhancement:Berzerker Glaive",
    "field": "text",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Berzerker Warband 2DP",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / detachment:berzerker-warband/enhancement:Helm of Brazen Ire",
    "field": "pts",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Berzerker Warband 2DP",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / detachment:berzerker-warband/enhancement:Helm of Brazen Ire",
    "field": "text",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Berzerker Warband 2DP",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / detachment:berzerker-warband/enhancement:Favoured of Khorne",
    "field": "pts",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Berzerker Warband 2DP",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / detachment:berzerker-warband/enhancement:Favoured of Khorne",
    "field": "text",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Berzerker Warband 2DP",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / detachment:berzerker-warband/enhancement:Battle-lust",
    "field": "pts",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Berzerker Warband 2DP",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / detachment:berzerker-warband/enhancement:Battle-lust",
    "field": "text",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Berzerker Warband 2DP",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / detachment:berzerker-warband/stratagem:blood-offering",
    "field": "when",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Berzerker Warband 2DP (BLOOD OFFERING)",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / detachment:berzerker-warband/stratagem:blood-offering",
    "field": "target",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Berzerker Warband 2DP (BLOOD OFFERING)",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / detachment:berzerker-warband/stratagem:blood-offering",
    "field": "effect",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Berzerker Warband 2DP (BLOOD OFFERING)",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / detachment:berzerker-warband/stratagem:hack-and-slash",
    "field": "when",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Berzerker Warband 2DP (HACK AND SLASH)",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / detachment:berzerker-warband/stratagem:hack-and-slash",
    "field": "target",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Berzerker Warband 2DP (HACK AND SLASH)",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / detachment:berzerker-warband/stratagem:hack-and-slash",
    "field": "effect",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Berzerker Warband 2DP (HACK AND SLASH)",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / detachment:berzerker-warband/stratagem:frenzied-resilience",
    "field": "when",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Berzerker Warband 2DP (FRENZIED RESILIENCE)",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / detachment:berzerker-warband/stratagem:frenzied-resilience",
    "field": "target",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Berzerker Warband 2DP (FRENZIED RESILIENCE)",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / detachment:berzerker-warband/stratagem:frenzied-resilience",
    "field": "effect",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Berzerker Warband 2DP (FRENZIED RESILIENCE)",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / detachment:berzerker-warband/stratagem:skulls-for-the-skull-throne",
    "field": "when",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Berzerker Warband 2DP (SKULLS FOR THE SKULL THRONE!)",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / detachment:berzerker-warband/stratagem:skulls-for-the-skull-throne",
    "field": "target",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Berzerker Warband 2DP (SKULLS FOR THE SKULL THRONE!)",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / detachment:berzerker-warband/stratagem:skulls-for-the-skull-throne",
    "field": "effect",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Berzerker Warband 2DP (SKULLS FOR THE SKULL THRONE!)",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / detachment:berzerker-warband/stratagem:apoplectic-frenzy",
    "field": "when",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Berzerker Warband 2DP (APOPLECTIC FRENZY)",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / detachment:berzerker-warband/stratagem:apoplectic-frenzy",
    "field": "target",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Berzerker Warband 2DP (APOPLECTIC FRENZY)",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / detachment:berzerker-warband/stratagem:apoplectic-frenzy",
    "field": "effect",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Berzerker Warband 2DP (APOPLECTIC FRENZY)",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / detachment:berzerker-warband/stratagem:berzerkers-wrath",
    "field": "when",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Berzerker Warband 2DP (BERZERKER’S WRATH)",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / detachment:berzerker-warband/stratagem:berzerkers-wrath / target (Rules Updates)",
@@ -4026,7 +4026,7 @@
    "field": "name",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Vessels of Wrath 1DP",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / detachment:vessels-of-wrath/rule",
@@ -4040,7 +4040,7 @@
    "field": "pts",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Vessels of Wrath 1DP",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / detachment:vessels-of-wrath/enhancement:Archslaughterer",
@@ -4054,7 +4054,7 @@
    "field": "pts",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Vessels of Wrath 1DP",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / detachment:vessels-of-wrath/enhancement:Gateways to Glory",
@@ -4131,7 +4131,7 @@
    "field": "name",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Butchers of Khorne 1DP",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / detachment:butchers-of-khorne/rule",
@@ -4145,7 +4145,7 @@
    "field": "pts",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Butchers of Khorne 1DP",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / detachment:butchers-of-khorne/enhancement:Sanctified in Slaughter",
@@ -4159,7 +4159,7 @@
    "field": "pts",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Butchers of Khorne 1DP",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / detachment:butchers-of-khorne/enhancement:Gore-stained Veterans",
@@ -5917,7 +5917,7 @@
    "field": "text",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Army Rules (Blessings of Khorne)",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / armyRule:Blessings of Khorne/row:Unbridled Bloodlust / text",
@@ -5931,35 +5931,35 @@
    "field": "text",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Army Rules (Blessings of Khorne)",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / armyRule:Blessings of Khorne/row:Total Carnage",
    "field": "text",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Army Rules (Blessings of Khorne)",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / armyRule:Blessings of Khorne/row:Martial Excellence",
    "field": "text",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Army Rules (Blessings of Khorne)",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / armyRule:Blessings of Khorne/row:Warp Blades",
    "field": "text",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Army Rules (Blessings of Khorne)",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "world-eaters / armyRule:Blessings of Khorne/row:Decapitating Strikes",
    "field": "text",
    "doc": "waha:world-eaters",
    "where": "Wahapedia world-eaters § Army Rules (Blessings of Khorne)",
-   "sha256": "20bf61ac788cb3f3c364e7b405193d04b24da93787782497a246b22c47def977"
+   "sha256": "915e5d710cb6a20290daaabb6078d08fb7ba52ade7f5d9450cadcdee33eb49e4"
   },
   {
    "item": "thousand-sons / armyRule:Cabal of Sorcerers",

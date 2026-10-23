@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" href="icon-192.png">
 <style>:root{padding-top:env(safe-area-inset-top,0px)}img{max-width:100%}</style>
 <title>Kunnin’ Kodex</title>
-<script>window.WH_BUILD = '14f98377a7';</script>
+<script>window.WH_BUILD = '5d6b3b8c2d';</script>
 </head>
 <body>
 <style>
@@ -82,6 +82,9 @@ html{touch-action:manipulation; background:var(--bg)}
 /* inside Claude (the artifact) the app is a frame on claude.ai's page: scrolling past either end must not pull
    claude.ai's page along (its own background, and the tab bar moving with the frame) */
 html.embedded, html.embedded body{overscroll-behavior:none}
+/* the Claude app sizes its frame to the page when the page is shorter than the phone, and the bottom bar then sits at the
+   frame's bottom with a gap under it: a short page is made as tall as the screen (--scr-h, set in the script on a phone) */
+html.embedded body{min-height:calc(var(--scr-h, 0px) - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px))}
 html.lock, html.lock body{overflow:hidden}
 [hidden]{display:none !important}
 body{
@@ -1006,9 +1009,9 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="verified.js?v=14f98377a7"></script>
-<script src="data.js?v=14f98377a7"></script>
-<script src="calc.js?v=14f98377a7"></script>
+<script src="verified.js?v=5d6b3b8c2d"></script>
+<script src="data.js?v=5d6b3b8c2d"></script>
+<script src="calc.js?v=5d6b3b8c2d"></script>
 <script>
 'use strict';
 const D = window.WH_DATA;
@@ -1231,6 +1234,12 @@ addEventListener('popstate', e => {
 // rebuild the history chain for a screen, so Back works after reopening the app
 const EMBEDDED = (() => { try { return window.top !== window.self; } catch(e){ return true; } })();
 if(EMBEDDED) document.documentElement.classList.add('embedded');
+// inside Claude on a phone: the screen's height in this orientation (see html.embedded body in the styles)
+function setScrH(){
+  const lo = Math.min(screen.width, screen.height), hi = Math.max(screen.width, screen.height);
+  document.documentElement.style.setProperty('--scr-h', (innerWidth > innerHeight ? lo : hi) + 'px');
+}
+if(EMBEDDED && matchMedia('(pointer: coarse)').matches){ setScrH(); addEventListener('resize', setScrH); }
 function restore(target){
   if(EMBEDDED){   // inside the Claude app: don't add entries to the host page's history
     cur = Object.assign(plain(target), { d:0, from:target.s === 'home' ? undefined : backTitle(parentOf(target)) });
