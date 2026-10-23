@@ -1,7 +1,9 @@
 ######## army · 6 BIGS 4 megas and a destrier
 Imperial Knights · 2000 / 2000 pts · Strike Force
 
-Freeblade Company · Disposition: Purge the Foe
+Freeblade Company
+
+Dispositions: Priority Assets · Purge the Foe (chosen)
 
 Overview
 Bases & proxies
@@ -29,7 +31,8 @@ Hunter’s Eye 25 pts on Knight Crusader
 Sanctuary 20 pts on Knight Destrier
 DETACH­MENTS
 Freeblade Company (3 DP)
-Disposition: Purge the Foe
+DISPOSI­TIONS
+Priority Assets · Purge the Foe (chosen)
 POINTS
 2000 / 2000 · Strike Force
 ARMY AND DETACHMENT RULES

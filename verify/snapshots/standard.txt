@@ -1,7 +1,9 @@
 ######## army · PRINCES Standard
 World Eaters · 2000 / 2000 pts · Strike Force
 
-Berzerker Warband · Vessels of Wrath · Disposition: Purge the Foe
+Berzerker Warband · Vessels of Wrath
+
+Dispositions: Priority Assets · Purge the Foe (chosen)
 
 Overview
 Bases & proxies
@@ -32,7 +34,8 @@ Khârn the Betrayer leads Khorne Berzerkers
 Slaughterbound leads Exalted Eightbound
 DETACH­MENTS
 Berzerker Warband (2 DP), Vessels of Wrath (1 DP)
-Disposition: Purge the Foe
+DISPOSI­TIONS
+Priority Assets · Purge the Foe (chosen)
 POINTS
 2000 / 2000 · Strike Force
 ARMY AND DETACHMENT RULES

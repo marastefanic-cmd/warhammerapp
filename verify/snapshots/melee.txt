@@ -1,7 +1,9 @@
 ######## army · ME SHOOTY YER’ BOOTY Melee
 Orks · 2000 / 2000 pts · Strike Force
 
-War Horde · Disposition: Purge the Foe
+War Horde
+
+Dispositions: Purge the Foe (chosen) · Take and Hold
 
 Overview
 Bases & proxies
@@ -36,7 +38,8 @@ Painboy supports Nobz
 Big Mek in Mega Armour leads Meganobz
 DETACH­MENTS
 War Horde (3 DP)
-Disposition: Purge the Foe
+DISPOSI­TIONS
+Purge the Foe (chosen) · Take and Hold
 POINTS
 2000 / 2000 · Strike Force
 ARMY AND DETACHMENT RULES

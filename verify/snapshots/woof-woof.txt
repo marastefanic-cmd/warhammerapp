@@ -1,7 +1,9 @@
 ######## army · INFERNAL LANCE Woof Woof
 Chaos Knights · 2000 / 2000 pts · Strike Force
 
-Houndpack Lance · Hunting Warpack · Disposition: Reconnaissance
+Houndpack Lance · Hunting Warpack
+
+Dispositions: Reconnaissance (chosen)
 
 Overview
 Bases & proxies
@@ -31,7 +33,8 @@ Snarling Rivalry (upgrade) 10 pts on War Dog Executioner ×3
 Panoply of the Cursed Knights 15 pts on War Dog Karnivore
 DETACH­MENTS
 Houndpack Lance (2 DP), Hunting Warpack (1 DP)
-Disposition: Reconnaissance
+DISPOSI­TIONS
+Reconnaissance (chosen)
 POINTS
 2000 / 2000 · Strike Force
 ARMY AND DETACHMENT RULES

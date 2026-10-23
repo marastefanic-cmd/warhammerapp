@@ -1,7 +1,9 @@
 ######## army · PUBSTOMPER Nidzillas
 Tyranids · 2000 / 2000 pts · Strike Force
 
-Crusher Stampede · Talons of the Norn Queen · Disposition: Purge the Foe
+Crusher Stampede · Talons of the Norn Queen
+
+Dispositions: Purge the Foe (chosen) · Take and Hold
 
 Overview
 Bases & proxies
@@ -32,7 +34,8 @@ Synaptoprescience 30 pts on Norn Assimilator (2 of 2)
 Destabilising Predation 20 pts on Norn Emissary
 DETACH­MENTS
 Crusher Stampede (2 DP), Talons of the Norn Queen (1 DP)
-Disposition: Purge the Foe
+DISPOSI­TIONS
+Purge the Foe (chosen) · Take and Hold
 POINTS
 2000 / 2000 · Strike Force
 ARMY AND DETACHMENT RULES

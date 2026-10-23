@@ -1,7 +1,9 @@
 ######## army · STANDARD Pubstomper
 Thousand Sons · 2000 / 2000 pts · Strike Force
 
-Grand Coven · Disposition: Priority Assets
+Grand Coven
+
+Dispositions: Disruption · Priority Assets (chosen)
 
 Overview
 Bases & proxies
@@ -34,7 +36,8 @@ Exalted Sorcerer leads Rubric Marines
 Sorcerer in Terminator Armour leads Scarab Occult Terminators
 DETACH­MENTS
 Grand Coven (3 DP)
-Disposition: Priority Assets
+DISPOSI­TIONS
+Disruption · Priority Assets (chosen)
 POINTS
 2000 / 2000 · Strike Force
 ARMY AND DETACHMENT RULES

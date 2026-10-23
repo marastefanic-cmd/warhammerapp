@@ -1,7 +1,9 @@
 ######## army · DEFILERS AND FRIENDS Infernal Lance
 Chaos Knights · 2000 / 2000 pts · Strike Force
 
-Infernal Lance · Disposition: Purge the Foe
+Infernal Lance
+
+Dispositions: Priority Assets · Purge the Foe (chosen)
 
 Overview
 Bases & proxies
@@ -32,7 +34,8 @@ Bestial Aspect 30 pts on Knight Despoiler
 Fleshmetal Fusion 35 pts on Knight Ruinator
 DETACH­MENTS
 Infernal Lance (3 DP)
-Disposition: Purge the Foe
+DISPOSI­TIONS
+Priority Assets · Purge the Foe (chosen)
 POINTS
 2000 / 2000 · Strike Force
 ARMY AND DETACHMENT RULES

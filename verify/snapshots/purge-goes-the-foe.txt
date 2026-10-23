@@ -1,7 +1,9 @@
 ######## army · SUPER TERMINATORS Purge goes the Foe
 Adeptus Mechanicus · 2000 / 2000 pts · Strike Force
 
-Cohort Cybernetica · Eradication Cohort · Disposition: Purge the Foe
+Cohort Cybernetica · Eradication Cohort
+
+Dispositions: Purge the Foe (chosen) · Take and Hold
 
 Overview
 Bases & proxies
@@ -32,7 +34,8 @@ ATTACHED
 Cybernetica Datasmith supports Kastelan Robots
 DETACH­MENTS
 Cohort Cybernetica (1 DP), Eradication Cohort (2 DP)
-Disposition: Purge the Foe
+DISPOSI­TIONS
+Purge the Foe (chosen) · Take and Hold
 POINTS
 2000 / 2000 · Strike Force
 ARMY AND DETACHMENT RULES

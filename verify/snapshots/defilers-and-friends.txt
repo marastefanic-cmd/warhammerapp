@@ -1,7 +1,9 @@
 ######## army · PURGE GOES THE FOE Defilers and friends
 Emperor’s Children · 2000 / 2000 pts · Strike Force
 
-Coterie of the Conceited · Disposition: Purge the Foe
+Coterie of the Conceited
+
+Dispositions: Priority Assets · Purge the Foe (chosen)
 
 Overview
 Bases & proxies
@@ -30,7 +32,8 @@ Lucius the Eternal leads Flawless Blades
 Lord Exultant leads Infractors ×2 units
 DETACH­MENTS
 Coterie of the Conceited (3 DP)
-Disposition: Purge the Foe
+DISPOSI­TIONS
+Priority Assets · Purge the Foe (chosen)
 POINTS
 2000 / 2000 · Strike Force
 ARMY AND DETACHMENT RULES

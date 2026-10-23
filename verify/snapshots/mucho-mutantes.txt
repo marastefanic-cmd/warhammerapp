@@ -1,7 +1,9 @@
 ######## army · BIG DEMONS BABY Mucho Mutantes
 Thousand Sons · 2000 / 2000 pts · Strike Force
 
-Ritual of Regeneration · Warpmeld Pact · Disposition: Purge the Foe
+Ritual of Regeneration · Warpmeld Pact
+
+Dispositions: Purge the Foe (chosen) · Take and Hold
 
 Overview
 Bases & proxies
@@ -37,7 +39,8 @@ Tzaangor Shaman leads Tzaangor Enlightened
 Tzaangor Shaman leads Tzaangor Enlightened
 DETACH­MENTS
 Ritual of Regeneration (1 DP), Warpmeld Pact (2 DP)
-Disposition: Purge the Foe
+DISPOSI­TIONS
+Purge the Foe (chosen) · Take and Hold
 POINTS
 2000 / 2000 · Strike Force
 ARMY AND DETACHMENT RULES

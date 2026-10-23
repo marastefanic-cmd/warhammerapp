@@ -1,7 +1,9 @@
 ######## army · WOOF WOOF Big demons baby
 World Eaters · 2000 / 2000 pts · Strike Force
 
-Khorne Daemonkin · Vessels of Wrath · Disposition: Priority Assets
+Khorne Daemonkin · Vessels of Wrath
+
+Dispositions: Priority Assets (chosen) · Reconnaissance
 
 Overview
 Bases & proxies
@@ -33,7 +35,8 @@ ATTACHED
 Lord on Juggernaut leads Khorne Berzerkers
 DETACH­MENTS
 Khorne Daemonkin (2 DP), Vessels of Wrath (1 DP)
-Disposition: Priority Assets
+DISPOSI­TIONS
+Priority Assets (chosen) · Reconnaissance
 POINTS
 2000 / 2000 · Strike Force
 ARMY AND DETACHMENT RULES

@@ -25,9 +25,8 @@ Off
 RULES QUESTIONS
 Your Claude Project
 
-The ? copies your question with this list and screen, and opens this Project in Claude, where it runs on your subscription. Paste the Project’s link (claude.ai/project/…) here.
+The ? copies your question with your list and this screen: paste it into a chat in your rules Project in Claude, where it runs on your subscription.
 
-Save
 In Claude, on your Claude subscription
 
 Opens this same app inside the Claude app (or claude.ai), where the ? uses your Claude account. Only you, and people you share it with, can open it.
@@ -56,80 +55,111 @@ Purge goes the Foe
 2000 pts
 Cohort Cybernetica · Eradication Cohort
 PURGE THE FOE
+, CHOSEN
+TAKE AND HOLD
 CHAOS KNIGHTS
 2
 Infernal Lance
 2000 pts
 Infernal Lance
+PRIORITY ASSETS
 PURGE THE FOE
+, CHOSEN
 Woof Woof
 2000 pts
 Houndpack Lance · Hunting Warpack
 RECONNAISSANCE
+, CHOSEN
 EMPEROR’S CHILDREN
 1
 Defilers and friends
 2000 pts
 Coterie of the Conceited
+PRIORITY ASSETS
 PURGE THE FOE
+, CHOSEN
 IMPERIAL KNIGHTS
 2
 6 bigs
 2000 pts
 Freeblade Company
+PRIORITY ASSETS
 PURGE THE FOE
+, CHOSEN
 4 megas and a destrier
 2000 pts
 Freeblade Company
+PRIORITY ASSETS
 PURGE THE FOE
+, CHOSEN
 ORKS
 3
 Me shooty yer’ booty
 2000 pts
 Dread Mob · Shoota Boyz · Wreckas
+PRIORITY ASSETS
 PURGE THE FOE
+, CHOSEN
 Melee
 2000 pts
 War Horde
 PURGE THE FOE
+, CHOSEN
+TAKE AND HOLD
 Ooga booga
 2000 pts
 Bully Boyz · Runt Swarm · Shoota Boyz
+PRIORITY ASSETS
 PURGE THE FOE
+, CHOSEN
 THOUSAND SONS
 2
 Pubstomper
 2000 pts
 Grand Coven
+DISRUPTION
 PRIORITY ASSETS
+, CHOSEN
 Mucho Mutantes
 2000 pts
 Ritual of Regeneration · Warpmeld Pact
 PURGE THE FOE
+, CHOSEN
+TAKE AND HOLD
 TYRANIDS
 1
 Nidzillas
 2000 pts
 Crusher Stampede · Talons of the Norn Queen
 PURGE THE FOE
+, CHOSEN
+TAKE AND HOLD
 WORLD EATERS
 4
 Princes
 2000 pts
 Berzerker Warband · Vessels of Wrath
+PRIORITY ASSETS
 PURGE THE FOE
+, CHOSEN
 Standard
 2000 pts
 Berzerker Warband · Vessels of Wrath
+PRIORITY ASSETS
 PURGE THE FOE
+, CHOSEN
 Super Terminators
 2000 pts
 Berzerker Warband · Butchers of Khorne
+PURGE THE FOE
 TAKE AND HOLD
+, CHOSEN
 Big demons baby
 2000 pts
 Khorne Daemonkin · Vessels of Wrath
 PRIORITY ASSETS
+, CHOSEN
+RECONNAISSANCE
 Checked (date of the check) against your New Recruit lists, BSData and GW’s rules
 
 Put it on your home screen: Safari → Share → Add to Home Screen.
@@ -137,7 +167,9 @@ Put it on your home screen: Safari → Share → Add to Home Screen.
 ######## army · ARMIES Me shooty yer’ booty
 Orks · 2000 / 2000 pts · Strike Force
 
-Dread Mob · Shoota Boyz · Wreckas · Disposition: Purge the Foe
+Dread Mob · Shoota Boyz · Wreckas
+
+Dispositions: Priority Assets · Purge the Foe (chosen)
 
 Overview
 Bases & proxies
@@ -171,7 +203,8 @@ Mek supports Tankbustas ×2 units
 Mek supports Flash Gitz
 DETACH­MENTS
 Dread Mob (1 DP), Shoota Boyz (1 DP), Wreckas (1 DP)
-Disposition: Purge the Foe
+DISPOSI­TIONS
+Priority Assets · Purge the Foe (chosen)
 POINTS
 2000 / 2000 · Strike Force
 ARMY AND DETACHMENT RULES

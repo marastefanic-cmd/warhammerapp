@@ -1,7 +1,9 @@
 ######## army · 4 MEGAS AND A DESTRIER Ooga booga
 Orks · 2000 / 2000 pts · Strike Force
 
-Bully Boyz · Runt Swarm · Shoota Boyz · Disposition: Purge the Foe
+Bully Boyz · Runt Swarm · Shoota Boyz
+
+Dispositions: Priority Assets · Purge the Foe (chosen)
 
 Overview
 Bases & proxies
@@ -37,7 +39,8 @@ Painboy supports Nobz ×2 units
 Big Mek in Mega Armour leads Meganobz
 DETACH­MENTS
 Bully Boyz (1 DP), Runt Swarm (1 DP), Shoota Boyz (1 DP)
-Disposition: Purge the Foe
+DISPOSI­TIONS
+Priority Assets · Purge the Foe (chosen)
 POINTS
 2000 / 2000 · Strike Force
 ARMY AND DETACHMENT RULES

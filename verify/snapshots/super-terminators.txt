@@ -1,7 +1,9 @@
 ######## army · OOGA BOOGA Super Terminators
 World Eaters · 2000 / 2000 pts · Strike Force
 
-Berzerker Warband · Butchers of Khorne · Disposition: Take and Hold
+Berzerker Warband · Butchers of Khorne
+
+Dispositions: Purge the Foe · Take and Hold (chosen)
 
 Overview
 Bases & proxies
@@ -30,7 +32,8 @@ Gore-stained Veterans (upgrade) 20 pts on Chaos Terminators (1–2 of 3)
 Gore-stained Veterans (upgrade) 20 pts on Chaos Terminators (3 of 3)
 DETACH­MENTS
 Berzerker Warband (2 DP), Butchers of Khorne (1 DP)
-Disposition: Take and Hold
+DISPOSI­TIONS
+Purge the Foe · Take and Hold (chosen)
 POINTS
 2000 / 2000 · Strike Force
 ARMY AND DETACHMENT RULES
