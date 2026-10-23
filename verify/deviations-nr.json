@@ -759,5 +759,35 @@
   "where": "verify/sources/nr/lite-knights.txt p8",
   "reason": "The new codex's datasheet has Deadly Demise D3; New Recruit (BSData) prints Deadly Demise 1. The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
   "evidence": "verify/.cache/waha/ds/adeptus-custodes_Contemptor-Galatus-Dreadnought.html, CORE ABILITIES: \"Damaged 4, Deadly Demise D3\"; verify/sources/nr/lite-knights.txt line 207 (Rules: \"Martial Ka'tah, Deadly Demise 1, …\")."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "prosecutor-squad",
+  "field": "melee[Gun Stock].A",
+  "app": "2",
+  "source": "3",
+  "where": "verify/sources/nr/lite-knights.txt p3",
+  "reason": "The new codex's datasheet gives the Gun Stock A 2; New Recruit and BSData (the pin 173d0ef and the newest fd7dfae, 23 Oct 2026) give A 3. No GW PDF prints the profile (the Faction Pack 1.2, the Printed Product Updates of 14 Oct 2026 and the Imperial Agents Faction Pack have no Gun Stock). The owner, 2026-10-23: GW and the new codex are the source of truth; the app has A 2.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html, MELEE WEAPONS: \"Gun Stock Melee 2 3+ 3 0 1\"; BSData Imperium - Adeptus Custodes.json, shared profile Gun Stock: A 3 (173d0ef: WS 2+; fd7dfae: WS 3+); verify/sources/nr/lite-knights.txt line 84 (\"Gun Stock … Melee 3 3+ 3 0 1\")."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "witchseeker-squad",
+  "field": "melee[Gun Stock].A",
+  "app": "2",
+  "source": "3",
+  "where": "verify/sources/nr/lite-knights.txt p4",
+  "reason": "The new codex's datasheet gives the Gun Stock A 2; New Recruit and BSData (the pin 173d0ef and the newest fd7dfae, 23 Oct 2026) give A 3. No GW PDF prints the profile (the Faction Pack 1.2, the Printed Product Updates of 14 Oct 2026 and the Imperial Agents Faction Pack have no Gun Stock). The owner, 2026-10-23: GW and the new codex are the source of truth; the app has A 2.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html, MELEE WEAPONS: \"Gun Stock Melee 2 3+ 3 0 1\"; BSData Imperium - Adeptus Custodes.json, shared profile Gun Stock: A 3 (173d0ef: WS 2+; fd7dfae: WS 3+); verify/sources/nr/lite-knights.txt line 108 (\"Gun Stock … Melee 3 3+ 3 0 1\")."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "witchseeker-squad-2",
+  "field": "melee[Gun Stock].A",
+  "app": "2",
+  "source": "3",
+  "where": "verify/sources/nr/lite-knights.txt p5",
+  "reason": "The new codex's datasheet gives the Gun Stock A 2; New Recruit and BSData (the pin 173d0ef and the newest fd7dfae, 23 Oct 2026) give A 3. No GW PDF prints the profile (the Faction Pack 1.2, the Printed Product Updates of 14 Oct 2026 and the Imperial Agents Faction Pack have no Gun Stock). The owner, 2026-10-23: GW and the new codex are the source of truth; the app has A 2.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Witchseeker-Squad.html, MELEE WEAPONS: \"Gun Stock Melee 2 3+ 3 0 1\"; BSData Imperium - Adeptus Custodes.json, shared profile Gun Stock: A 3 (173d0ef: WS 2+; fd7dfae: WS 3+); verify/sources/nr/lite-knights.txt line 132 (\"Gun Stock … Melee 3 3+ 3 0 1\")."
  }
 ]

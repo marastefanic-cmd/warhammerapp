@@ -5279,7 +5279,8 @@ const ARMIES = [
         { name:'Boltgun', n:4, range:'24"', A:'1', BS:'3+', S:'5', AP:'-1', D:'1', kw:['ANTI-PSYKER 4+','ASSAULT','RAPID FIRE 1'] }
       ],
       melee:[
-        { name:'Gun Stock', n:4, range:'Melee', A:'3', WS:'3+', S:'3', AP:'0', D:'1', kw:[] }
+        // Gun Stock: the new codex's A 2 (Wahapedia); New Recruit and BSData give A 3 (deviations-nr.json, deviations-bsdata.json)
+        { name:'Gun Stock', n:4, range:'Melee', A:'2', WS:'3+', S:'3', AP:'0', D:'1', kw:[] }
       ],
       abilities:[
         { name:'Purity of Execution', ph:['shooting'], turn:'your', text:'In your Shooting phase, you can select one **visible** enemy unit within 18" of this unit. That unit is **detected**:\n- While a unit is **detected**, that unit has +3" **detection range**.' }
@@ -5302,7 +5303,8 @@ const ARMIES = [
         { name:'Flamer', n:4, range:'12"', A:'3', BS:'–', S:'4', AP:'-1', D:'1', kw:['ANTI-PSYKER 4+','ASSAULT','BLAST 1','TORRENT'] }
       ],
       melee:[
-        { name:'Gun Stock', n:4, range:'Melee', A:'3', WS:'3+', S:'3', AP:'0', D:'1', kw:[] }
+        // Gun Stock: the new codex's A 2 (Wahapedia); New Recruit and BSData give A 3 (deviations-nr.json, deviations-bsdata.json)
+        { name:'Gun Stock', n:4, range:'Melee', A:'2', WS:'3+', S:'3', AP:'0', D:'1', kw:[] }
       ],
       abilities:[
         // Wahapedia's wording: New Recruit (BSData) prints it without "you can", with stray asterisks and a double full stop (deviations-nr, deviations-bsdata)
@@ -5326,7 +5328,8 @@ const ARMIES = [
         { name:'Flamer', n:5, range:'12"', A:'3', BS:'–', S:'4', AP:'-1', D:'1', kw:['ANTI-PSYKER 4+','ASSAULT','BLAST 1','TORRENT'] }
       ],
       melee:[
-        { name:'Gun Stock', n:5, range:'Melee', A:'3', WS:'3+', S:'3', AP:'0', D:'1', kw:[] }
+        // Gun Stock: the new codex's A 2 (Wahapedia); New Recruit and BSData give A 3 (deviations-nr.json, deviations-bsdata.json)
+        { name:'Gun Stock', n:5, range:'Melee', A:'2', WS:'3+', S:'3', AP:'0', D:'1', kw:[] }
       ],
       abilities:[
         // Wahapedia's wording: New Recruit (BSData) prints it without "you can", with stray asterisks and a double full stop (deviations-nr, deviations-bsdata)
