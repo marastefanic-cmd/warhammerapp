@@ -1,0 +1,19 @@
+[
+ {
+  "army": "mucho-mutantes",
+  "kind": "rule-ph",
+  "where": "Warpmeld Pact rule · Warpmeld Sacrifice",
+  "judgement": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ]
+  },
+  "source": {
+   "rule": "Warpmeld Sacrifice",
+   "text": "Each time an enemy unit is selected to shoot or fight and one or more **TZEENTCH MUTANT INFANTRY** or **TZEENTCH MUTANT MOUNTED** units from your army are selected as a target of one or more of those attacks, each of those **TZEENTCH MUTANT** units can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time an attack targets that unit, subtract 1 from the Wound roll. At the end of the phase, that **TZEENTCH MUTANT** unit suffers D3 mortal wounds.\nEach time a **TZEENTCH MUTANT INFANTRY** or **TZEENTCH MUTANT MOUNTED** unit from your army is selected to shoot or fight, before selecting its targets, that unit can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time a model in that unit makes an attack, add 1 to the Wound roll. At the end of the phase, that **TZEENTCH MUTANT** unit suffers D3 mortal wounds.\nKEYWORDS\n**TZAANGORS** units from your army have the **BATTLELINE** keyword, and while such a unit is not **Battle-shocked**, add 1 to the Objective Control characteristic of **TZAANGOR** models in that unit."
+  },
+  "key": "1f3900a4b053e14e"
+ }
+]

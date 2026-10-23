@@ -784,9 +784,10 @@ const FACTIONS = {
       'warpmeld-pact': {
         name:'Warpmeld Pact', dp:2,
         // needs: TZEENTCH MUTANT INFANTRY or TZEENTCH MUTANT MOUNTED units (a unit with one such model is one: the rule is about units)
+        // ph: wherever a unit is selected to shoot or fight (Fire Overwatch, at the end of the opponent's Movement phase, included)
         // parts: the sacrifice when selected as a target ("When targeted") and when selected to shoot or fight (its attacks); the
         // KEYWORDS paragraph is for TZAANGORS units: its +1 OC is not in New Recruit's OC (statNote)
-        rule:{ name:'Warpmeld Sacrifice', ph:['shooting','fight'], turn:'either', needs:{ all:['Tzeentch','Mutant'], any:['Infantry','Mounted'] },
+        rule:{ name:'Warpmeld Sacrifice', ph:['movement','shooting','fight'], turn:'either', needs:{ all:['Tzeentch','Mutant'], any:['Infantry','Mounted'] },
           text:'Each time an enemy unit is selected to shoot or fight and one or more **TZEENTCH MUTANT INFANTRY** or **TZEENTCH MUTANT MOUNTED** units from your army are selected as a target of one or more of those attacks, each of those **TZEENTCH MUTANT** units can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time an attack targets that unit, subtract 1 from the Wound roll. At the end of the phase, that **TZEENTCH MUTANT** unit suffers D3 mortal wounds.\nEach time a **TZEENTCH MUTANT INFANTRY** or **TZEENTCH MUTANT MOUNTED** unit from your army is selected to shoot or fight, before selecting its targets, that unit can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time a model in that unit makes an attack, add 1 to the Wound roll. At the end of the phase, that **TZEENTCH MUTANT** unit suffers D3 mortal wounds.\nKEYWORDS\n**TZAANGORS** units from your army have the **BATTLELINE** keyword, and while such a unit is not **Battle-shocked**, add 1 to the Objective Control characteristic of **TZAANGOR** models in that unit.',
           parts:[
             { name:'Warpmeld Sacrifice (selected as a target)', needs:{ all:['Tzeentch','Mutant'], any:['Infantry','Mounted'] }, def:'Warpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound rolls against it until the end of the phase' },
@@ -828,7 +829,7 @@ const FACTIONS = {
             target:'One **TZEENTCH MUTANT** unit from your army.',
             effect:'Until the end of the turn, your unit is eligible to shoot or declare a charge in a turn in which it Advanced.' },
           // effect: the Faction Pack's Rules Update (6" and 8"), as Wahapedia prints it
-          { id:'twisted-mirage', gist:'Your unit arriving from Strategic Reserves can be set up more than 6" horizontally away from all enemy units (8" for a MONSTER unit); it is then not eligible to declare a charge this turn.', name:'Twisted Mirage', cp:1, phases:['movement'], turn:'your', needs:{ all:['Tzeentch','Mutant'] },
+          { id:'twisted-mirage', gist:'Your unit arriving from Strategic Reserves can be set up anywhere on the battlefield more than 6" horizontally away from all enemy units (more than 8" for a MONSTER unit); until the end of the turn, it is not eligible to declare a charge.', name:'Twisted Mirage', cp:1, phases:['movement'], turn:'your', needs:{ all:['Tzeentch','Mutant'] },
             note:'FAQ (Faction Pack 1.3): When going second, can a Tzaangor unit that started the game on the battlefield and was placed into Strategic Reserves by its Ambushing Hunters ability then arrive during my first turn using the Twisted Mirage Stratagem? No.',
             when:'Reinforcements step of your Movement phase.',
             target:'One **TZEENTCH MUTANT** unit from your army that is arriving from **Strategic Reserves** this phase.',
