@@ -20,6 +20,7 @@ Everything the app states as a fact is checked against these, mechanically, befo
 | nr/infernal-lance.txt | Infernal Lance - New Recruit.pdf (exported 10/22/26) | 1674d10be857de4ad27ca37f7a706182ac5da166681c4b308f83974391dc094b |
 | nr/woof-woof.txt | Woof Woof - New Recruit.pdf (exported 10/22/26) | d424cd61be2205fb71c81cc635af499cc852f8dd99cb80f601967855b9761523 |
 | nr/big-demons-baby.txt | Big demons baby - New Recruit.pdf (exported 10/23/26) | a0dffd221bf54165594c5642dd342da8031644838cbbedf143a32c57e5011ef2 |
+| nr/mucho-mutantes.txt | Mucho Mutantes - New Recruit.pdf (exported 10/23/26) | d24a29b27d240ef8a7e9f9d03399289bae7b37d1df92a94f2ca8f9abb2247902 |
 | packet/core-stratagems.txt | Core_stratagemy.pdf | d62979edcfd0323c1d3382a6d238f0f87b312fb07f103125ecbccdb6bd96e5a8 |
 
 Text made with `pdftotext -layout <pdf> <txt>` (poppler).

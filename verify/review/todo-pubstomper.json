@@ -356,50 +356,5 @@
    "leads": "Rubric Marines"
   },
   "key": "fe4e20b85edf76f4"
- },
- {
-  "army": "pubstomper",
-  "kind": "ability-timing",
-  "where": "pubstomper · Sekhetar Robots · Prophetic Sentinels",
-  "judgement": {
-   "ph": [
-    "movement",
-    "charge"
-   ],
-   "turn": "opp"
-  },
-  "source": {
-   "ability": "Prophetic Sentinels",
-   "text": "Once per turn, when you target this unit with the **Fire Overwatch**/**Heroic Intervention** stratagem, that use is -1 CP."
-  },
-  "key": "53b14315bcfc2b0d"
- },
- {
-  "army": "pubstomper",
-  "kind": "unit-weapons",
-  "where": "pubstomper · Sekhetar Robots",
-  "judgement": {
-   "gear": [
-    [
-     "Close combat weapon",
-     "Heavy warpflamer",
-     "Hellfyre missile rack",
-     "Pyreflux meltagun"
-    ]
-   ],
-   "weapons": [
-    "×2 · Heavy warpflamer",
-    "×2 · Hellfyre missile rack",
-    "×2 · Pyreflux meltagun",
-    "×2 · Close combat weapon"
-   ]
-  },
-  "source": {
-   "models": [
-    "2× Sekhetar Robot w/ pyreflux meltagun"
-   ],
-   "leads": null
-  },
-  "key": "09018edd67259b09"
  }
 ]

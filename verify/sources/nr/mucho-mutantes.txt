@@ -1,0 +1,598 @@
+10/23/26, 3:17 PM                                              Mucho Mutantes - New Recruit
+
+                                                    Mucho Mutantes [2000pts]
+  Army Roster [3 Detachment Points, 2000 pts] (Chaos - Thousand Sons)
+  • Battle Size: Strike Force (2000 Point limit)
+  • Detachment: Ritual of Regeneration [1Detachment Points], Warpmeld Pact [2Detachment Points]
+  • Force Disposition: Purge the Foe
+  • Rituals reference
+  • Show/Hide Options: Unaligned Forces are visible, Unaligned Fortifications are visible
+  NAME                                           ROLE       PTS OPTIONS
+   Ahriman                                                      Epic Hero 105
+   Magnus the Red                                               Epic Hero 455
+   Daemon Prince of Tzeentch with wings                         Character 170
+   Exalted Sorcerer on Disc of Tzeentch                         Character 95
+   Exalted Sorcerer on Disc of Tzeentch                         Character 95
+   Tzaangor Shaman                                              Character 85
+   Tzaangor Shaman                                              Character 85
+   Tzaangor Shaman                                              Character 75
+   (10) Tzaangors                                               Battleline 75
+   (10) Tzaangors                                               Battleline 75
+   (6) Tzaangor Enlightened                                     Mounted        90     Tzaangor Shaman
+   (6) Tzaangor Enlightened                                     Mounted        90     Tzaangor Shaman
+   (6) Tzaangor Enlightened                                     Mounted        90     Tzaangor Shaman
+   (6) Tzaangor Enlightened with Fatecaster                                           Ahriman
+                                                                Mounted        110
+   greatbows                                                                          5x Enlightened
+                                                                                   Exalted Sorcerer on Disc of
+   (6) Tzaangor Enlightened with Fatecaster
+                                                                Mounted        110 Tzeentch
+   greatbows
+                                                                                   5x Enlightened
+                                                                                   Exalted Sorcerer on Disc of
+   (6) Tzaangor Enlightened with Fatecaster
+                                                                Mounted        110 Tzeentch
+   greatbows
+                                                                                   5x Enlightened
+   (2) Sekhetar Robots                                          Vehicle        85
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6adb5988ed6fb1bb87a885c0                                                     1/14
+10/23/26, 3:17 PM                                                Mucho Mutantes - New Recruit
+     215 PTS                                                   AHRIMAN
+   Models                       Options
+                                Black Staff of Ahriman, Inferno bolt pistol, Transmogrifying Blast
+   1x Ahriman
+                                • Leading: Tzaangor Enlightened with Fatecaster greatbows[1]
+   1x Aviarch                   Close combat weapon, Fatecaster greatbow
+   5x Enlightened               Close combat weapon, Fatecaster greatbow
+   Unit                                                                                M   T Sv W LD OC InSv Base
+   Ahriman - Ahriman                                                                   10" 5 3+ 6 6+ 2 4+ 40mm
+   Tzaangor Enlightened with Fatecaster greatbows - Tzaangor Enlightened
+   with Fatecaster greatbows
+                                                                                        10" 4 5+ 2        7+ 2     5+    40mm
+
+   Ranged Weapons                                               Range A           BS S AP D          Keywords
+   Inferno bolt pistol - Ahriman                                12"   1           2+ 5 -2 1          Pistol
+   Transmogrifying Blast - Ahriman                              18"      D6+1 2+ 6 -1 D3 Blast, Psychic
+   Fatecaster greatbow (x6) - Tzaangor Enlightened with                                              Ignores Cover, Lethal Hits,
+   Fatecaster greatbows
+                                                                30"      2        4+ 5 -2 2
+                                                                                                     Precision
+   Melee Weapons                                                                          Range A WS S AP D Keywords
+   Black Staff of Ahriman - Ahriman                                                       Melee 5 2+ 7 -1 3 Psychic
+   Close combat weapon (x6) - Tzaangor Enlightened with Fatecaster greatbows              Melee 2 4+ 4 0           1
+   Abilities                       Description
+                                   if your army includes this model, after both players have deployed their armies, you
+   Scryer of Fates (Psychic)       can select up to 3 Thousand Sons units from your army and redeploy them. When
+   - Ahriman                       doing so, you can set those units up in Strategic Reserves if you wish, regardless of
+                                   how many units are already in Strategic Reserves.
+   Arch-Sorcerer of
+   Tzeentch (Psychic) -            Each time this model attempts a Ritual, add 1 to the Psychic test result.
+   Ahriman
+   Malign Trickery -
+                                   In your opponent's Movement phase, if an enemy unit ends a move within 8" of this
+   Tzaangor Enlightened
+   with Fatecaster
+                                   unit, if this unit is not within Engagement Range of one or more enemy units, this
+   greatbows                       unit can make a Normal move of up to D6".
+
+    Rules Leader, Cabal of Sorcerers, Psychic, Pistol, Blast, Ignores Cover, Lethal Hits, Precision
+
+    Categories Ahriman, Chaos, Character, Epic Hero, Faction: Thousand Sons, Fly, Infantry, Mounted, Psyker, Tzeentch,
+               Mutant*, Tzaangor Enlightened*, Tzaangor Enlightened with Fatecaster Greatbows*, *from combined unit
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6adb5988ed6fb1bb87a885c0                                                                   2/14
+10/23/26, 3:17 PM                                                 Mucho Mutantes - New Recruit
+     205 PTS                               EXALTED SORCERER ON DISC OF TZEENTCH
+   Models                                          Options
+                                                       Arcane Fire, Force weapon, Inferno bolt pistol, Prosperine khopesh
+   1x Exalted Sorcerer on Disc of Tzeentch
+                                                       • Leading: Tzaangor Enlightened with Fatecaster greatbows[2]
+   1x Aviarch                                          Close combat weapon, Fatecaster greatbow
+   5x Enlightened                                      Close combat weapon, Fatecaster greatbow
+   Unit                                                                                 M   T Sv W LD OC InSv Base
+   Exalted Sorcerer on Disc of Tzeentch - Exalted Sorcerer on Disc of Tzeentch          10" 5 3+ 6 6+ 2 4+ 40mm
+   Tzaangor Enlightened with Fatecaster greatbows - Tzaangor Enlightened
+   with Fatecaster greatbows
+                                                                                         10" 4 5+ 2        7+ 2       5+    40mm
+
+   Ranged Weapons                                                  Range A       BS    S AP D
+                                                                                           Keywords
+                                                                                           Ignores Cover, Psychic,
+   Arcane Fire - Exalted Sorcerer on Disc of Tzeentch              18"      D6 N/A 6 -2 D3
+                                                                                           Torrent
+   Inferno bolt pistol - Exalted Sorcerer on Disc of
+   Tzeentch
+                                                                   12"      1    2+    5 -2 1     Pistol
+
+   Fatecaster greatbow (x6) - Tzaangor Enlightened with                                           Ignores Cover, Lethal Hits,
+                                                                   30"      2    4+    5 -2 2
+   Fatecaster greatbows                                                                           Precision
+   Melee Weapons                                                                          Range A WS S AP D Keywords
+   Force weapon - Exalted Sorcerer on Disc of Tzeentch                                    Melee 5 2+ 6 -1 D3 Psychic
+   Prosperine khopesh - Exalted Sorcerer on Disc of Tzeentch                              Melee 4 2+ 5 -2 2
+   Close combat weapon (x6) - Tzaangor Enlightened with Fatecaster greatbows Melee 2 4+ 4 0                       1
+   Abilities                       Description
+   Illusions of Tzeentch
+   (Psychic) - Exalted             While this model is leading a unit, that unit can only be selected as the target of a
+   Sorcerer on Disc of             ranged attack if the attacking model is within 18".
+   Tzeentch
+                                   In your Shooting phase, after this model has shot, select one enemy Infantry unit
+   Binding Tendrils (Psychic)
+                                   hit by one or more of those attacks made with Arcane Fire. Until the start of your
+    - Exalted Sorcerer on
+   Disc of Tzeentch
+                                   next turn, that unit is ensnared. While a unit is ensnared, subtract 2" from its Move
+                                   characteristic and subtract 2 from Charge rolls made for it.
+   Malign Trickery -         In your opponent's Movement phase, if an enemy unit ends a move within 8" of this
+   Tzaangor Enlightened      unit, if this unit is not within Engagement Range of one or more enemy units, this
+   with Fatecaster greatbows unit can make a Normal move of up to D6".
+    Rules Leader, Cabal of Sorcerers, Torrent, Ignores Cover, Psychic, Pistol, Ignores Cover, Lethal Hits, Precision
+
+    Categories Chaos, Character, Exalted Sorcerer, Faction: Thousand Sons, Fly, Grenades, Infantry, Mounted, Psyker,
+               Tzeentch, Mutant*, Tzaangor Enlightened*, Tzaangor Enlightened with Fatecaster Greatbows*,
+               *from combined unit
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6adb5988ed6fb1bb87a885c0                                                                    3/14
+10/23/26, 3:17 PM                                                 Mucho Mutantes - New Recruit
+     205 PTS                               EXALTED SORCERER ON DISC OF TZEENTCH
+   Models                                          Options
+                                                       Arcane Fire, Force weapon, Inferno bolt pistol, Prosperine khopesh
+   1x Exalted Sorcerer on Disc of Tzeentch
+                                                       • Leading: Tzaangor Enlightened with Fatecaster greatbows[3]
+   1x Aviarch                                          Close combat weapon, Fatecaster greatbow
+   5x Enlightened                                      Close combat weapon, Fatecaster greatbow
+   Unit                                                                                 M   T Sv W LD OC InSv Base
+   Exalted Sorcerer on Disc of Tzeentch - Exalted Sorcerer on Disc of Tzeentch          10" 5 3+ 6 6+ 2 4+ 40mm
+   Tzaangor Enlightened with Fatecaster greatbows - Tzaangor Enlightened
+                                                                                         10" 4 5+ 2        7+ 2       5+    40mm
+   with Fatecaster greatbows
+   Ranged Weapons                                                  Range A       BS    S AP D
+                                                                                           Keywords
+                                                                                           Ignores Cover, Psychic,
+   Arcane Fire - Exalted Sorcerer on Disc of Tzeentch              18"      D6 N/A 6 -2 D3
+                                                                                           Torrent
+   Inferno bolt pistol - Exalted Sorcerer on Disc of
+   Tzeentch
+                                                                   12"      1    2+    5 -2 1     Pistol
+
+   Fatecaster greatbow (x6) - Tzaangor Enlightened with                                           Ignores Cover, Lethal Hits,
+   Fatecaster greatbows
+                                                                   30"      2    4+    5 -2 2
+                                                                                                  Precision
+   Melee Weapons                                                                          Range A WS S AP D Keywords
+   Force weapon - Exalted Sorcerer on Disc of Tzeentch                                    Melee 5 2+ 6 -1 D3 Psychic
+   Prosperine khopesh - Exalted Sorcerer on Disc of Tzeentch                              Melee 4 2+ 5 -2 2
+   Close combat weapon (x6) - Tzaangor Enlightened with Fatecaster greatbows Melee 2 4+ 4 0                       1
+   Abilities                       Description
+   Illusions of Tzeentch
+   (Psychic) - Exalted             While this model is leading a unit, that unit can only be selected as the target of a
+   Sorcerer on Disc of             ranged attack if the attacking model is within 18".
+   Tzeentch
+                                   In your Shooting phase, after this model has shot, select one enemy Infantry unit
+   Binding Tendrils (Psychic)
+                                   hit by one or more of those attacks made with Arcane Fire. Until the start of your
+    - Exalted Sorcerer on
+   Disc of Tzeentch
+                                   next turn, that unit is ensnared. While a unit is ensnared, subtract 2" from its Move
+                                   characteristic and subtract 2 from Charge rolls made for it.
+   Malign Trickery -         In your opponent's Movement phase, if an enemy unit ends a move within 8" of this
+   Tzaangor Enlightened      unit, if this unit is not within Engagement Range of one or more enemy units, this
+   with Fatecaster greatbows unit can make a Normal move of up to D6".
+    Rules Leader, Cabal of Sorcerers, Torrent, Ignores Cover, Psychic, Pistol, Ignores Cover, Lethal Hits, Precision
+
+    Categories Chaos, Character, Exalted Sorcerer, Faction: Thousand Sons, Fly, Grenades, Infantry, Mounted, Psyker,
+               Tzeentch, Mutant*, Tzaangor Enlightened*, Tzaangor Enlightened with Fatecaster Greatbows*,
+               *from combined unit
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6adb5988ed6fb1bb87a885c0                                                                    4/14
+10/23/26, 3:17 PM                                                  Mucho Mutantes - New Recruit
+     175 PTS                                              TZAANGOR SHAMAN
+   Models                                                  Options
+                                                           Curse of Life, Baleful Devolution, Force stave
+   1x Tzaangor Shaman
+                                                           • Leading: Tzaangor Enlightened[1]
+   1x Aviarch                                              Divining spear
+   5x Divining spear Enlightened                           Divining spear
+   Unit                                                                     M         T    Sv       W        LD    OC     InSv     Base
+   Tzaangor Shaman - Tzaangor Shaman                                        10"       4    5+       4        7+    2      5+       40mm
+   Tzaangor Enlightened - Tzaangor Enlightened                              10"       4    5+       2        7+    2       5+      40mm
+   Ranged Weapons                                     Range    A  BS S AP D Keywords
+   Baleful Devolution - Tzaangor Shaman               18"      D6 3+ 9 0  1 Blast, Devastating Wounds, Psychic
+   Melee Weapons                                                   Range          A       WS    S       AP    D        Keywords
+   Force stave - Tzaangor Shaman                                   Melee          3       3+    5       -1    D3       Psychic
+   Divining spear (x6) - Tzaangor Enlightened                       Melee         3       4+    5       -1    2        Lance, Precision
+   Abilities       Description
+                   While this model is leading a unit, in your Shooting phase and the Fight phase, each time
+   Sacrificial     that unit is selected to shoot or fight, this model can use this ability. If it does, select one
+   Blessing -      Bodyguard model in that unit; that Bodyguard model is destroyed and, until the end of the
+   Tzaangor Shaman phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by
+                   this model.
+   Bestial Prophet -      While this model is leading a unit, each time a model in that unit makes an attack, add 1 to
+   Tzaangor Shaman        the Hit roll.
+   Curse of Life -        When this model heals as a result of the Sorcerous Invigoration detachment rule, you
+   Tzaangor Shaman        can add 3 to the number of wounds healed.
+   Prophesied Doom        Each time this unit makes a Charge move, select one enemy unit within Engagement Range
+    - Tzaangor            of it, then roll one D6 for each model in this unit that is within Engagement Range of that
+   Enlightened            enemy unit: for each 4+, that enemy unit suffers 1 mortal wound.
+    Rules Leader, Cabal of Sorcerers, Devastating Wounds, Blast, Psychic, Lance, Precision
+
+    Categories Chaos, Character, Faction: Thousand Sons, Fly, Infantry, Mounted, Mutant, Psyker, Tzaangor Shaman,
+               Tzeentch, Tzaangor Enlightened*, *from combined unit
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6adb5988ed6fb1bb87a885c0                                                                              5/14
+10/23/26, 3:17 PM                                                 Mucho Mutantes - New Recruit
+     175 PTS                                             TZAANGOR SHAMAN
+   Models                                            Options
+                                                     Diamond of Distortion, Baleful Devolution, Force stave
+   1x Tzaangor Shaman
+                                                     • Leading: Tzaangor Enlightened[2]
+   1x Aviarch                                        Divining spear
+   5x Divining spear Enlightened                     Divining spear
+   Unit                                                                 M         T    Sv       W        LD    OC     InSv     Base
+   Tzaangor Shaman - Tzaangor Shaman                                    10"       4    5+       4        7+    2      5+       40mm
+   Tzaangor Enlightened - Tzaangor Enlightened                          10"       4    5+       2        7+    2       5+      40mm
+   Ranged Weapons                                     Range    A  BS S AP D Keywords
+   Baleful Devolution - Tzaangor Shaman               18"      D6 3+ 9 0  1 Blast, Devastating Wounds, Psychic
+   Melee Weapons                                                  Range       A       WS    S       AP    D        Keywords
+   Force stave - Tzaangor Shaman                                  Melee       3       3+    5       -1    D3       Psychic
+   Divining spear (x6) - Tzaangor Enlightened                      Melee      3       4+    5       -1    2        Lance, Precision
+   Abilities              Description
+                          While this model is leading a unit, in your Shooting phase and the Fight phase, each time
+   Sacrificial            that unit is selected to shoot or fight, this model can use this ability. If it does, select one
+   Blessing -             Bodyguard model in that unit; that Bodyguard model is destroyed and, until the end of the
+   Tzaangor Shaman        phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by
+                          this model.
+   Bestial Prophet -      While this model is leading a unit, each time a model in that unit makes an attack, add 1 to
+   Tzaangor Shaman        the Hit roll.
+   Diamond of
+                          While the bearer is leading a unit, each time an attack targets that unit, subtract 1 from the
+   Distortion -
+                          Hit roll.
+   Tzaangor Shaman
+   Prophesied Doom        Each time this unit makes a Charge move, select one enemy unit within Engagement Range
+    - Tzaangor            of it, then roll one D6 for each model in this unit that is within Engagement Range of that
+   Enlightened            enemy unit: for each 4+, that enemy unit suffers 1 mortal wound.
+    Rules Leader, Cabal of Sorcerers, Devastating Wounds, Blast, Psychic, Lance, Precision
+
+    Categories Chaos, Character, Faction: Thousand Sons, Fly, Infantry, Mounted, Mutant, Psyker, Tzaangor Shaman,
+               Tzeentch, Tzaangor Enlightened*, *from combined unit
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6adb5988ed6fb1bb87a885c0                                                                          6/14
+10/23/26, 3:17 PM                                                   Mucho Mutantes - New Recruit
+     165 PTS                                              TZAANGOR SHAMAN
+   Models                                                 Options
+                                                           Flowing Flesh, Baleful Devolution, Force stave
+   1x Tzaangor Shaman
+                                                           • Leading: Tzaangor Enlightened[3]
+   1x Aviarch                                              Divining spear
+   5x Divining spear Enlightened                           Divining spear
+   Unit                                                                     M         T    Sv       W        LD    OC     InSv     Base
+   Tzaangor Shaman - Tzaangor Shaman                                        10"       4    5+       5        7+    2      5+       40mm
+   Tzaangor Enlightened - Tzaangor Enlightened                              10"       4    5+       2        7+    2       5+      40mm
+   Ranged Weapons                                     Range     A  BS S AP D Keywords
+   Baleful Devolution - Tzaangor Shaman               18"       D6 3+ 9 0  1 Blast, Devastating Wounds, Psychic
+   Melee Weapons                                                    Range         A       WS    S       AP    D        Keywords
+   Force stave - Tzaangor Shaman                                    Melee         3       3+    5       -1    D3       Psychic
+   Divining spear (x6) - Tzaangor Enlightened                       Melee         3       4+    5       -1    2        Lance, Precision
+   Abilities       Description
+                   While this model is leading a unit, in your Shooting phase and the Fight phase, each time
+   Sacrificial     that unit is selected to shoot or fight, this model can use this ability. If it does, select one
+   Blessing -      Bodyguard model in that unit; that Bodyguard model is destroyed and, until the end of the
+   Tzaangor Shaman phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by
+                   this model.
+   Bestial Prophet -      While this model is leading a unit, each time a model in that unit makes an attack, add 1 to
+   Tzaangor Shaman        the Hit roll.
+   Flowing Flesh -
+                          The bearer has the Feel No Pain 4+ ability and a Wounds characteristic of 5.
+   Tzaangor Shaman
+   Prophesied Doom        Each time this unit makes a Charge move, select one enemy unit within Engagement Range
+    - Tzaangor            of it, then roll one D6 for each model in this unit that is within Engagement Range of that
+   Enlightened            enemy unit: for each 4+, that enemy unit suffers 1 mortal wound.
+    Rules Leader, Cabal of Sorcerers, Feel No Pain 4+, Devastating Wounds, Blast, Psychic, Lance, Precision
+
+    Categories Chaos, Character, Faction: Thousand Sons, Fly, Infantry, Mounted, Mutant, Psyker, Tzaangor Shaman,
+               Tzeentch, Tzaangor Enlightened*, *from combined unit
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6adb5988ed6fb1bb87a885c0                                                                              7/14
+10/23/26, 3:17 PM                                                         Mucho Mutantes - New Recruit
+     455 PTS                                                 MAGNUS THE RED
+   Models                            Options
+   1x Magnus the Red                 Blade of Magnus, Gaze of Magnus, Tzeentch's Firestorm, Warlord
+   Unit                                     M           T           Sv             W              LD          OC      InSv        Base
+   Magnus the Red                           14"         11          2+             16             5+          6       4+          100mm
+   Ranged Weapons                     Range         A               BS        S         AP        D       Keywords
+   Gaze of Magnus                     24"           3D3             2+        11        -2        3       Devastating Wounds, Psychic
+   Tzeentch's Firestorm               24"           D6+3            2+        6         -1        2       Blast, Ignores Cover, Psychic
+   Melee Weapons                                  Range        A         WS        S         AP       D    Keywords
+   ➤ Blade of Magnus - strike                     Melee        7         2+        16        -3       3    Devastating Wounds, Psychic
+   ➤ Blade of Magnus - sweep                      Melee        14        2+        8         -1       2     Psychic
+   Abilities                         Description
+   Damaged: 1-6 wounds               While this model has 1-6 wounds remaining, each time this model makes an
+   remaining                         attack, subtract 1 from the Hit roll.
+                                     At the start of the battle round, select one of the abilities in the Crimson King
+   Unearthly Power
+                                     section. Until the start of the next battle round, this model has that ability.
+   Lord of the Planet of the         This model can attempt up to 2 Rituals per turn instead of one, and each time this
+   Sorcerers (Psychic)               model attempts a Ritual, add 2 to the Psychic test result.
+   Crimson King             Effect
+   Impossible Form          Each time an attack is made against this Psyker (excluding Psychic Attacks), subtract 1
+   (Psychic)                from the Damage characteristic of that attack.
+                            At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this
+   Treason of
+                            Psyker. Until the end of the phase, ranged weapons equipped by models in that unit have
+   Tzeentch (Psychic)
+                            the [HAZARDOUS] ability.
+   Time Flux (Aura,         While a friendly Thousand Sons unit is within 6" of this Psyker, add 2" to the Move
+   Psychic)                 characteristic of models in that unit.
+    Rules Deep Strike, Deadly Demise D6, Cabal of Sorcerers, Devastating Wounds, Psychic, Blast, Ignores Cover
+
+    Categories Chaos, Character, Daemon, Epic Hero, Faction: Thousand Sons, Fly, Magnus the Red, Monster, Primarch,
+               Psyker, Tzeentch, Warlord
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6adb5988ed6fb1bb87a885c0                                                                              8/14
+10/23/26, 3:17 PM                                                     Mucho Mutantes - New Recruit
+     170 PTS                              DAEMON PRINCE OF TZEENTCH WITH WINGS
+   Models                                               Options
+   1x Daemon Prince of Tzeentch with wings                          Dark Blessing, Hellforged weapons, Infernal cannon
+   Unit                                                                   M       T       Sv       W    LD    OC    InSv    Base
+   Daemon Prince of Tzeentch with wings                                   13"        9    2+       10   6+    3     4+      60mm
+   Ranged Weapons               Range       A    BS     S      AP     D       Keywords
+   Dark Blessing                24"         9    2+     4      -1     1       Ignores Cover, Psychic, Sustained Hits 1
+   Infernal cannon              24"         3    2+      5     -2     2
+   Melee Weapons                                   Range        A      WS        S       AP    D   Keywords
+   ➤ Hellforged weapons - strike                   Melee        6      2+        8       -2    3   Devastating Wounds, Psychic
+   ➤ Hellforged weapons - sweep                    Melee        12     2+        6       -1    1   Devastating Wounds, Psychic
+   Abilities          Description
+                      In your Movement phase, when this model is set up on the battlefield using the Deep Strike
+                      ability, it can perform an aetherstride. If it does:
+   Aetherstride         It can be set up anywhere on the battlefield more than 6" horizontally away from all enemy
+   (Psychic)             units.
+                        Until the end of the turn, its Dark Blessing has the [Sustained Hits D3] ability.
+                        Until the end of the turn, it is not eligible to declare a charge.
+                      Each time this model makes an attack that targets a Character unit, re-roll a Hit roll of 1 and
+                      re-roll a Wound roll of 1 (if that attack targets a Psyker Character unit, you can re-roll the Hit
+   Hunter of
+                      roll and you can re-roll the Wound roll instead). Each time this model destroys a Character
+   Souls
+                      unit, this model regains up to D3 lost wounds (if that Character unit was a Psyker, this model
+                      regains up to 3 lost wounds instead).
+    Rules Deadly Demise D3, Cabal of Sorcerers, Deep Strike, Ignores Cover, Sustained Hits, Psychic, Devastating Wounds
+
+    Categories Chaos, Character, Daemon, Daemon Prince, Faction: Thousand Sons, Fly, Monster, Psyker, Tzeentch
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6adb5988ed6fb1bb87a885c0                                                                       9/14
+10/23/26, 3:17 PM                                                    Mucho Mutantes - New Recruit
+     75 PTS                                                    TZAANGORS                                                       x2
+   Models                                                                                        Options
+   1x Twistbray                                                                                  Tzaangor blades
+   9x Tzaangor w/ Tzaangor blades                                                                Tzaangor blades
+   Unit                            M          T       Sv         W           LD          OC              InSv         Base
+   Tzaangors                       6"         4       6+         1           7+          1               6+           32mm
+   Melee Weapons                                       Range             A        WS         S      AP          D   Keywords
+   Tzaangor blades (x10)                               Melee             2        4+         5      0           1
+   Abilities           Description
+   Ambushing           At the end of your opponent's turn, if this unit is more than 6" horizontally away from all
+   Hunters             enemy units, you can remove this unit from the battlefield and place it into Strategic Reserves.
+    Rules Scouts 6"
+
+    Categories Battleline, Chaos, Faction: Thousand Sons, Infantry, Mutant, Tzaangors, Tzeentch
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6adb5988ed6fb1bb87a885c0                                                                        10/14
+10/23/26, 3:17 PM                                                      Mucho Mutantes - New Recruit
+     85 PTS                                               SEKHETAR ROBOTS
+   Models                                           Options
+   2x                                               Close combat weapon, Heavy warpflamer, Hellfyre missile rack, Pyreflux
+   Sekhetar Robot w/ pyreflux meltagun              meltagun
+   Unit                                              M             T   Sv          W        LD           OC        InSv      Base
+   Sekhetar Robots (x2)                              8"            6   3+          4        7+           1         5+        40mm
+   Ranged Weapons                             Range            A       BS      S       AP        D       Keywords
+   Heavy warpflamer (x2)                      12"              D6      N/A     5       -2        1       Ignores Cover, Torrent
+   Hellfyre missile rack (x2)                 36"              2       4+      10      -2        3
+   Pyreflux meltagun (x2)                     12"              1       4+      10      -4        D6      Melta 2
+   Melee Weapons                                               Range           A       WS            S       AP     D     Keywords
+   Close combat weapon (x2)                                    Melee           3       4+            5       0      1
+   Abilities             Description
+   Prophetic             Once per turn, when you target this unit with the Fire Overwatch/ Heroic Intervention
+   Sentinels             stratagem, that use is ‑1 CP.
+    Rules Infiltrators, Stealth, Ignores Cover, Torrent, Melta
+
+    Categories Chaos, Faction: Thousand Sons, Sekhetar Robots, Tzeentch, Vehicle, Walker
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6adb5988ed6fb1bb87a885c0                                                                         11/14
+10/23/26, 3:17 PM                                              Mucho Mutantes - New Recruit
+
+
+  Rules
+  Blast:
+  Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models
+  that were in the target unit in the Select Targets step (rounding down). If this ability takes the form [BLAST X],
+  each time you gather attack dice for such a weapon, add X additional attack dice for every five models that
+  were in the target unit in the Select Targets step (rounding down) instead.
+  Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would
+  gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+  Cabal of Sorcerers:
+  If your army Faction is Thousand Sons, at the start of your Shooting phase, one or more models from your army
+  with this ability can attempt Rituals. To do so, select one model from your army with this ability that has not yet
+  attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn,
+  then take a Psychic test by following the sequence below:
+
+       1.Roll 2D6
+       2.Optionally, roll one additional D6 (Channel the Warp). Then, if one or more doubles or triples were rolled
+          during this test, that model's unit suffers D3 mortal wounds.
+       3.If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test
+          result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model
+          manifests that Ritual and you resolve its effects.
+
+
+  Deadly Demise D3 / Deadly Demise D6:
+  This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the
+  units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that
+  model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds
+  denoted by X (if this is a random number, roll separately for each unit within 6").
+  Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any
+  unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency
+  disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved.
+  Finally, the Impulsor is removed from the battlefield.
+
+  Deep Strike:
+  Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up
+  anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your
+  opponent’s deployment zone.
+
+  Devastating Wounds:
+  Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack
+  sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D
+  characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+  Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for
+  each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+  Example: An attack made with a [DEVASTATING WOUNDS] weapon with a D characteristic of 3 results in a
+  critical wound against an Intercessor Squad, so inflicts 3 mortal wounds. The first 2 mortal wounds are
+  sufficient to destroy 1 Intercessor model, so the remaining mortal wound is lost.
+
+  Feel No Pain 4+:
+  This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll
+  one D6: on an X+, that wound is not lost.
+
+  Ignores Cover:
+  Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover
+  against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+
+
+https://www.newrecruit.eu/app/Lists/6adb5988ed6fb1bb87a885c0                                                              12/14
+10/23/26, 3:17 PM                                              Mucho Mutantes - New Recruit
+
+  Infiltrators:
+  During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is
+  more than 8" horizontally from your opponent’s deployment zone and all enemy units.
+
+  Lance:
+  Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this
+  turn, add 1 to the wound roll.
+
+  Leader:
+  Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one
+  friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an
+  attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one
+  support unit attached to it.
+
+  Lethal Hits:
+  Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that
+  attack to automatically wound the target.
+  Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that
+  attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot
+  trigger other abilities such as [DEVASTATING WOUNDS].
+
+  Melta:
+  This ability always takes the form [MELTA X]. Each time a model makes an attack with a [MELTA] weapon, if
+  the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks
+  have been resolved, add X to that weapon’s D characteristic.
+  Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6.
+  While resolving those attacks, that weapon has a D characteristic of D6+2.
+
+  Pistol:
+  [PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
+  Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters
+  shooting (10.06). When using another shooting type, for each model in that unit (excluding
+  MONSTER/VEHICLE models), you can only select one of the following to make attacks with:
+   One or more of its [CLOSE-QUARTERS] weapons.
+   One or more of its other ranged weapons.
+
+  Precision:
+  While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step
+  (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking
+  models, the active player can select one allocation group that contains one of those visible CHARACTER
+  models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever
+  happens first), that CHARACTER group is the current allocation group.
+
+  Psychic:
+  Each time an attack is made with a [PSYCHIC] weapon, you can ignore any or all modifiers to that attack’s BS
+  or WS characteristic and any or all modifiers to the hit roll. Attacks made with [PSYCHIC] weapons are known
+  as psychic attacks (this can be important for the triggering of other rules).
+
+  Scouts 6":
+  This ability always takes the form Scouts X". In the Resolve Pre-battle Abilities step, if every model in a unit has
+  this ability, you can do one of the following:
+    If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment
+     zone.
+    If that unit is wholly within your deployment zone, it can make a scout move.
+    If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if
+     every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED
+     TRANSPORT can make a scout move.
+
+
+
+https://www.newrecruit.eu/app/Lists/6adb5988ed6fb1bb87a885c0                                                           13/14
+10/23/26, 3:17 PM                                              Mucho Mutantes - New Recruit
+
+  Sorcerous Invigoration:
+  (Once per turn, per unit) When a friendly THOUSAND SONS PSYKER unit (excluding MONSTER units)
+  successfully manifests a Ritual, that unit heals D3 wounds.
+
+  Stealth:
+  If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of
+  cover against that attack (13.08).
+
+  Sustained Hits:
+  This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED
+  HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as
+  denoted by X.
+  Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore
+  hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability).
+
+  Torrent:
+  Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.
+
+  Warpmeld Sacrifice:
+  Each time an enemy unit is selected to shoot or fight and one or more Tzeentch Mutant Infantry or Tzeentch
+  Mutant Mounted units from your army are selected as a target of one or more of those attacks, each of those
+  Tzeentch Mutant units can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time an attack
+  targets that unit, subtract 1 from the Wound roll. At the end of the phase, that Tzeentch Mutant unit suffers D3
+  mortal wounds.
+  Each time a Tzeentch Mutant Infantry or Tzeentch Mutant Mounted* unit from your army is selected to shoot
+  or fight, before selecting its targets, that unit can make a Warpmeld Sacrifice. If it does, until the end of the
+  phase, each time a model in that unit makes an attack, add 1 to the Wound roll. At the end of the phase, that
+  Tzeentch Mutant unit suffers D3 mortal wounds.
+  Tzaangors units from your army have the Battleline keyword, and while such a unit is not Battle-shocked, add 1
+  to the Objective Control characteristic of models in that unit.
+
+
+
+
+https://www.newrecruit.eu/app/Lists/6adb5988ed6fb1bb87a885c0                                                         14/14
+

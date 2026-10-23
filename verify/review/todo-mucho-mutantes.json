@@ -1,0 +1,1864 @@
+[
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-timing",
+  "where": "mucho-mutantes · Sekhetar Robots · Prophetic Sentinels",
+  "judgement": {
+   "ph": [
+    "movement",
+    "charge"
+   ],
+   "turn": "opp"
+  },
+  "source": {
+   "ability": "Prophetic Sentinels",
+   "text": "Once per turn, when you target this unit with the **Fire Overwatch**/**Heroic Intervention** stratagem, that use is -1 CP."
+  },
+  "key": "53b14315bcfc2b0d"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "unit-weapons",
+  "where": "mucho-mutantes · Sekhetar Robots",
+  "judgement": {
+   "gear": [
+    [
+     "Close combat weapon",
+     "Heavy warpflamer",
+     "Hellfyre missile rack",
+     "Pyreflux meltagun"
+    ]
+   ],
+   "weapons": [
+    "×2 · Heavy warpflamer",
+    "×2 · Hellfyre missile rack",
+    "×2 · Pyreflux meltagun",
+    "×2 · Close combat weapon"
+   ]
+  },
+  "source": {
+   "models": [
+    "2× Sekhetar Robot w/ pyreflux meltagun"
+   ],
+   "leads": null
+  },
+  "key": "09018edd67259b09"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-tag",
+  "where": "mucho-mutantes · Ahriman · Scryer of Fates",
+  "judgement": {
+   "tag": "Psychic"
+  },
+  "source": {
+   "ability": "Scryer of Fates",
+   "text": "If your army includes this model, after both players have deployed their armies, you can select up to three **THOUSAND SONS** units from your army and redeploy them. When doing so, you can set those units up in **Strategic Reserves** if you wish, regardless of how many units are already in Strategic Reserves."
+  },
+  "key": "b5491afbe176604d"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-who",
+  "where": "mucho-mutantes · Ahriman · Scryer of Fates",
+  "judgement": {
+   "who": "Ahriman",
+   "models": [
+    "1× Ahriman",
+    "1× Aviarch",
+    "5× Enlightened"
+   ]
+  },
+  "source": {
+   "ability": "Scryer of Fates",
+   "text": "If your army includes this model, after both players have deployed their armies, you can select up to three **THOUSAND SONS** units from your army and redeploy them. When doing so, you can set those units up in **Strategic Reserves** if you wish, regardless of how many units are already in Strategic Reserves."
+  },
+  "key": "7bc53c14d45dff9d"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-timing",
+  "where": "mucho-mutantes · Ahriman · Arch-Sorcerer of Tzeentch",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Arch-Sorcerer of Tzeentch",
+   "text": "Each time this model attempts a **Ritual**, add 1 to the Psychic test result."
+  },
+  "key": "b4d8681ec8000012"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-tag",
+  "where": "mucho-mutantes · Ahriman · Arch-Sorcerer of Tzeentch",
+  "judgement": {
+   "tag": "Psychic"
+  },
+  "source": {
+   "ability": "Arch-Sorcerer of Tzeentch",
+   "text": "Each time this model attempts a **Ritual**, add 1 to the Psychic test result."
+  },
+  "key": "40412209e87ae258"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-who",
+  "where": "mucho-mutantes · Ahriman · Arch-Sorcerer of Tzeentch",
+  "judgement": {
+   "who": "Ahriman",
+   "models": [
+    "1× Ahriman",
+    "1× Aviarch",
+    "5× Enlightened"
+   ]
+  },
+  "source": {
+   "ability": "Arch-Sorcerer of Tzeentch",
+   "text": "Each time this model attempts a **Ritual**, add 1 to the Psychic test result."
+  },
+  "key": "76d9f5ae80bf6946"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-who",
+  "where": "mucho-mutantes · Ahriman · Malign Trickery",
+  "judgement": {
+   "who": "Tzaangor Enlightened with Fatecaster greatbows",
+   "models": [
+    "1× Ahriman",
+    "1× Aviarch",
+    "5× Enlightened"
+   ]
+  },
+  "source": {
+   "ability": "Malign Trickery",
+   "text": "In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within **Engagement Range** of one or more enemy units, this unit can make a **Normal move** of up to D6”."
+  },
+  "key": "750fcc8198eb93d6"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "unit-kwNote",
+  "where": "mucho-mutantes · Ahriman",
+  "judgement": {
+   "kwNote": "Mutant, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster Greatbows come from the led Tzaangor Enlightened with Fatecaster greatbows."
+  },
+  "source": {
+   "models": [
+    "1× Ahriman",
+    "1× Aviarch",
+    "5× Enlightened"
+   ],
+   "stats": [
+    "Ahriman W6 OC2",
+    "Tzaangor Enlightened with Fatecaster greatbows W2 OC2"
+   ],
+   "weapons": [
+    "Inferno bolt pistol 1 -2 1 PISTOL",
+    "Transmogrifying Blast D6+1 -1 D3 BLAST, PSYCHIC",
+    "Fatecaster greatbow 2 -2 2 IGNORES COVER, LETHAL HITS, PRECISION",
+    "Black Staff of Ahriman 5 -1 3 PSYCHIC",
+    "Close combat weapon 2 0 1"
+   ]
+  },
+  "key": "56495bb6de2b5c6c"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "unit-ptsNote",
+  "where": "mucho-mutantes · Ahriman",
+  "judgement": {
+   "ptsNote": "105 + Tzaangor Enlightened with Fatecaster greatbows 110"
+  },
+  "source": {
+   "models": [
+    "1× Ahriman",
+    "1× Aviarch",
+    "5× Enlightened"
+   ],
+   "stats": [
+    "Ahriman W6 OC2",
+    "Tzaangor Enlightened with Fatecaster greatbows W2 OC2"
+   ],
+   "weapons": [
+    "Inferno bolt pistol 1 -2 1 PISTOL",
+    "Transmogrifying Blast D6+1 -1 D3 BLAST, PSYCHIC",
+    "Fatecaster greatbow 2 -2 2 IGNORES COVER, LETHAL HITS, PRECISION",
+    "Black Staff of Ahriman 5 -1 3 PSYCHIC",
+    "Close combat weapon 2 0 1"
+   ]
+  },
+  "key": "724e8deca9f26c9b"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "unit-partialRules",
+  "where": "mucho-mutantes · Ahriman",
+  "judgement": {
+   "partialRules": {
+    "Cabal of Sorcerers": "Ahriman"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Ahriman",
+    "1× Aviarch",
+    "5× Enlightened"
+   ],
+   "rules": [
+    "Leader",
+    "Cabal of Sorcerers",
+    "Psychic",
+    "Pistol",
+    "Blast",
+    "Ignores Cover",
+    "Lethal Hits",
+    "Precision"
+   ],
+   "abilities": [
+    "Ahriman · Scryer of Fates: If your army includes this model, after both players have deployed their armies, you can select up to three **THOUSAND SONS** units from your army and redeploy them. When doing so, you can set those units up in **Strategic Reserves** if you wish, regardless of how many units are already in Strategic Reserves.",
+    "Ahriman · Arch-Sorcerer of Tzeentch: Each time this model attempts a **Ritual**, add 1 to the Psychic test result.",
+    "Tzaangor Enlightened with Fatecaster greatbows · Malign Trickery: In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within **Engagement Range** of one or more enemy units, this unit can make a **Normal move** of up to D6”."
+   ]
+  },
+  "key": "aab2889bb2157c6a"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "unit-kwOnly",
+  "where": "mucho-mutantes · Ahriman",
+  "judgement": {
+   "kwOnly": {
+    "Infantry": "Ahriman",
+    "Psyker": "Ahriman"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Ahriman",
+    "1× Aviarch",
+    "5× Enlightened"
+   ],
+   "kw": [
+    "Ahriman",
+    "Chaos",
+    "Character",
+    "Epic Hero",
+    "Faction: Thousand Sons",
+    "Fly",
+    "Infantry",
+    "Mounted",
+    "Psyker",
+    "Tzeentch",
+    "Mutant",
+    "Tzaangor Enlightened",
+    "Tzaangor Enlightened with Fatecaster Greatbows"
+   ],
+   "kwNote": "Mutant, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster Greatbows come from the led Tzaangor Enlightened with Fatecaster greatbows."
+  },
+  "key": "41e6a7e1dc29827c"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "unit-weapons",
+  "where": "mucho-mutantes · Ahriman",
+  "judgement": {
+   "gear": [
+    [
+     "Black Staff of Ahriman",
+     "Inferno bolt pistol",
+     "Transmogrifying Blast"
+    ],
+    [
+     "Close combat weapon",
+     "Fatecaster greatbow"
+    ],
+    [
+     "Close combat weapon",
+     "Fatecaster greatbow"
+    ]
+   ],
+   "weapons": [
+    "Ahriman · Inferno bolt pistol",
+    "Ahriman · Transmogrifying Blast",
+    "Tzaangor Enlightened with Fatecaster greatbows · ×6 · Fatecaster greatbow",
+    "Ahriman · Black Staff of Ahriman",
+    "Tzaangor Enlightened with Fatecaster greatbows · ×6 · Close combat weapon"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Ahriman",
+    "1× Aviarch",
+    "5× Enlightened"
+   ],
+   "leads": "Tzaangor Enlightened with Fatecaster greatbows"
+  },
+  "key": "d1170326e6c9920b"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-tag",
+  "where": "mucho-mutantes · Exalted Sorcerer on Disc of Tzeentch · Illusions of Tzeentch",
+  "judgement": {
+   "tag": "Psychic"
+  },
+  "source": {
+   "ability": "Illusions of Tzeentch",
+   "text": "While this model is leading a unit, that unit can only be selected as the target of a ranged attack if the attacking model is within 18\"."
+  },
+  "key": "76e875ecfc38a3d0"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-who",
+  "where": "mucho-mutantes · Exalted Sorcerer on Disc of Tzeentch · Illusions of Tzeentch",
+  "judgement": {
+   "who": "Exalted Sorcerer on Disc of Tzeentch",
+   "models": [
+    "1× Exalted Sorcerer on Disc of Tzeentch",
+    "1× Aviarch",
+    "5× Enlightened"
+   ]
+  },
+  "source": {
+   "ability": "Illusions of Tzeentch",
+   "text": "While this model is leading a unit, that unit can only be selected as the target of a ranged attack if the attacking model is within 18\"."
+  },
+  "key": "6c0d8ae1cd2c4a21"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-def",
+  "where": "mucho-mutantes · Exalted Sorcerer on Disc of Tzeentch · Illusions of Tzeentch",
+  "judgement": {
+   "def": "only by a ranged attack whose attacking model is within 18\""
+  },
+  "source": {
+   "ability": "Illusions of Tzeentch",
+   "text": "While this model is leading a unit, that unit can only be selected as the target of a ranged attack if the attacking model is within 18\"."
+  },
+  "key": "fc63627187bf9093"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-timing",
+  "where": "mucho-mutantes · Exalted Sorcerer on Disc of Tzeentch · Binding Tendrils",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Binding Tendrils",
+   "text": "In your Shooting phase, after this model has shot, select one enemy **INFANTRY** unit hit by one or more of those attacks made with Arcane Fire. Until the start of your next turn, that unit is ensnared. While a unit is ensnared, subtract 2\" from its Move characteristic and subtract 2 from **Charge rolls** made for it."
+  },
+  "key": "becd11b1f352ecca"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-tag",
+  "where": "mucho-mutantes · Exalted Sorcerer on Disc of Tzeentch · Binding Tendrils",
+  "judgement": {
+   "tag": "Psychic"
+  },
+  "source": {
+   "ability": "Binding Tendrils",
+   "text": "In your Shooting phase, after this model has shot, select one enemy **INFANTRY** unit hit by one or more of those attacks made with Arcane Fire. Until the start of your next turn, that unit is ensnared. While a unit is ensnared, subtract 2\" from its Move characteristic and subtract 2 from **Charge rolls** made for it."
+  },
+  "key": "7a645a279a26ef4e"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-who",
+  "where": "mucho-mutantes · Exalted Sorcerer on Disc of Tzeentch · Binding Tendrils",
+  "judgement": {
+   "who": "Exalted Sorcerer on Disc of Tzeentch",
+   "models": [
+    "1× Exalted Sorcerer on Disc of Tzeentch",
+    "1× Aviarch",
+    "5× Enlightened"
+   ]
+  },
+  "source": {
+   "ability": "Binding Tendrils",
+   "text": "In your Shooting phase, after this model has shot, select one enemy **INFANTRY** unit hit by one or more of those attacks made with Arcane Fire. Until the start of your next turn, that unit is ensnared. While a unit is ensnared, subtract 2\" from its Move characteristic and subtract 2 from **Charge rolls** made for it."
+  },
+  "key": "09bfd0fa9b8dc85a"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-who",
+  "where": "mucho-mutantes · Exalted Sorcerer on Disc of Tzeentch · Malign Trickery",
+  "judgement": {
+   "who": "Tzaangor Enlightened with Fatecaster greatbows",
+   "models": [
+    "1× Exalted Sorcerer on Disc of Tzeentch",
+    "1× Aviarch",
+    "5× Enlightened"
+   ]
+  },
+  "source": {
+   "ability": "Malign Trickery",
+   "text": "In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within **Engagement Range** of one or more enemy units, this unit can make a **Normal move** of up to D6”."
+  },
+  "key": "e9aa83e97e46e4bc"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "unit-kwNote",
+  "where": "mucho-mutantes · Exalted Sorcerer on Disc of Tzeentch",
+  "judgement": {
+   "kwNote": "Mutant, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster Greatbows come from the led Tzaangor Enlightened with Fatecaster greatbows."
+  },
+  "source": {
+   "models": [
+    "1× Exalted Sorcerer on Disc of Tzeentch",
+    "1× Aviarch",
+    "5× Enlightened"
+   ],
+   "stats": [
+    "Exalted Sorcerer on Disc of Tzeentch W6 OC2",
+    "Tzaangor Enlightened with Fatecaster greatbows W2 OC2"
+   ],
+   "weapons": [
+    "Arcane Fire D6 -2 D3 IGNORES COVER, PSYCHIC, TORRENT",
+    "Inferno bolt pistol 1 -2 1 PISTOL",
+    "Fatecaster greatbow 2 -2 2 IGNORES COVER, LETHAL HITS, PRECISION",
+    "Force weapon 5 -1 D3 PSYCHIC",
+    "Prosperine khopesh 4 -2 2",
+    "Close combat weapon 2 0 1"
+   ]
+  },
+  "key": "2cf592eb5e88f8cc"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "unit-ptsNote",
+  "where": "mucho-mutantes · Exalted Sorcerer on Disc of Tzeentch",
+  "judgement": {
+   "ptsNote": "95 + Tzaangor Enlightened with Fatecaster greatbows 110"
+  },
+  "source": {
+   "models": [
+    "1× Exalted Sorcerer on Disc of Tzeentch",
+    "1× Aviarch",
+    "5× Enlightened"
+   ],
+   "stats": [
+    "Exalted Sorcerer on Disc of Tzeentch W6 OC2",
+    "Tzaangor Enlightened with Fatecaster greatbows W2 OC2"
+   ],
+   "weapons": [
+    "Arcane Fire D6 -2 D3 IGNORES COVER, PSYCHIC, TORRENT",
+    "Inferno bolt pistol 1 -2 1 PISTOL",
+    "Fatecaster greatbow 2 -2 2 IGNORES COVER, LETHAL HITS, PRECISION",
+    "Force weapon 5 -1 D3 PSYCHIC",
+    "Prosperine khopesh 4 -2 2",
+    "Close combat weapon 2 0 1"
+   ]
+  },
+  "key": "1a80b2d2c0722982"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "unit-partialRules",
+  "where": "mucho-mutantes · Exalted Sorcerer on Disc of Tzeentch",
+  "judgement": {
+   "partialRules": {
+    "Cabal of Sorcerers": "Exalted Sorcerer on Disc of Tzeentch"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Exalted Sorcerer on Disc of Tzeentch",
+    "1× Aviarch",
+    "5× Enlightened"
+   ],
+   "rules": [
+    "Leader",
+    "Cabal of Sorcerers",
+    "Torrent",
+    "Ignores Cover",
+    "Psychic",
+    "Pistol",
+    "Lethal Hits",
+    "Precision"
+   ],
+   "abilities": [
+    "Exalted Sorcerer on Disc of Tzeentch · Illusions of Tzeentch: While this model is leading a unit, that unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
+    "Exalted Sorcerer on Disc of Tzeentch · Binding Tendrils: In your Shooting phase, after this model has shot, select one enemy **INFANTRY** unit hit by one or more of those attacks made with Arcane Fire. Until the start of your next turn, that unit is ensnared. While a unit is ensnared, subtract 2\" from its Move characteristic and subtract 2 from **Charge rolls** made for it.",
+    "Tzaangor Enlightened with Fatecaster greatbows · Malign Trickery: In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within **Engagement Range** of one or more enemy units, this unit can make a **Normal move** of up to D6”."
+   ]
+  },
+  "key": "701089ff05673ec4"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "unit-kwOnly",
+  "where": "mucho-mutantes · Exalted Sorcerer on Disc of Tzeentch",
+  "judgement": {
+   "kwOnly": {
+    "Grenades": "Exalted Sorcerer on Disc of Tzeentch",
+    "Infantry": "Exalted Sorcerer on Disc of Tzeentch",
+    "Psyker": "Exalted Sorcerer on Disc of Tzeentch"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Exalted Sorcerer on Disc of Tzeentch",
+    "1× Aviarch",
+    "5× Enlightened"
+   ],
+   "kw": [
+    "Chaos",
+    "Character",
+    "Exalted Sorcerer",
+    "Faction: Thousand Sons",
+    "Fly",
+    "Grenades",
+    "Infantry",
+    "Mounted",
+    "Psyker",
+    "Tzeentch",
+    "Mutant",
+    "Tzaangor Enlightened",
+    "Tzaangor Enlightened with Fatecaster Greatbows"
+   ],
+   "kwNote": "Mutant, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster Greatbows come from the led Tzaangor Enlightened with Fatecaster greatbows."
+  },
+  "key": "8eb32ed72e35c7a3"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "unit-weapons",
+  "where": "mucho-mutantes · Exalted Sorcerer on Disc of Tzeentch",
+  "judgement": {
+   "gear": [
+    [
+     "Arcane Fire",
+     "Force weapon",
+     "Inferno bolt pistol",
+     "Prosperine khopesh"
+    ],
+    [
+     "Close combat weapon",
+     "Fatecaster greatbow"
+    ],
+    [
+     "Close combat weapon",
+     "Fatecaster greatbow"
+    ]
+   ],
+   "weapons": [
+    "Exalted Sorcerer on Disc of Tzeentch · Arcane Fire",
+    "Exalted Sorcerer on Disc of Tzeentch · Inferno bolt pistol",
+    "Tzaangor Enlightened with Fatecaster greatbows · ×6 · Fatecaster greatbow",
+    "Exalted Sorcerer on Disc of Tzeentch · Force weapon",
+    "Exalted Sorcerer on Disc of Tzeentch · Prosperine khopesh",
+    "Tzaangor Enlightened with Fatecaster greatbows · ×6 · Close combat weapon"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Exalted Sorcerer on Disc of Tzeentch",
+    "1× Aviarch",
+    "5× Enlightened"
+   ],
+   "leads": "Tzaangor Enlightened with Fatecaster greatbows"
+  },
+  "key": "e976bf2182f6dfc4"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-timing",
+  "where": "mucho-mutantes · Tzaangor Shaman · Sacrificial Blessing",
+  "judgement": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "source": {
+   "ability": "Sacrificial Blessing",
+   "text": "While this model is leading a unit, in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight, this model can use this ability. If it does, select one **Bodyguard** model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model."
+  },
+  "key": "037b88d71538b9f8"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-who",
+  "where": "mucho-mutantes · Tzaangor Shaman · Sacrificial Blessing",
+  "judgement": {
+   "who": "Tzaangor Shaman",
+   "models": [
+    "1× Tzaangor Shaman",
+    "1× Aviarch",
+    "5× Divining spear Enlightened"
+   ]
+  },
+  "source": {
+   "ability": "Sacrificial Blessing",
+   "text": "While this model is leading a unit, in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight, this model can use this ability. If it does, select one **Bodyguard** model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model."
+  },
+  "key": "e3c7ea2f00825918"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-who",
+  "where": "mucho-mutantes · Tzaangor Shaman · Bestial Prophet",
+  "judgement": {
+   "who": "Tzaangor Shaman",
+   "models": [
+    "1× Tzaangor Shaman",
+    "1× Aviarch",
+    "5× Divining spear Enlightened"
+   ]
+  },
+  "source": {
+   "ability": "Bestial Prophet",
+   "text": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the **Hit roll**."
+  },
+  "key": "414f9c27f36dbed4"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-timing",
+  "where": "mucho-mutantes · Tzaangor Shaman · Curse of Life",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "source": {
+   "ability": "Curse of Life",
+   "text": "**INFANTRY**/**MOUNTED THOUSAND SONS PSYKER** model only. When this model **heals** as a result of the **Sorcerous Invigoration detachment rule**, you can add 3 to the number of wounds **healed**."
+  },
+  "key": "a15d82efd26faf53"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-tag",
+  "where": "mucho-mutantes · Tzaangor Shaman · Curse of Life",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Curse of Life",
+   "text": "**INFANTRY**/**MOUNTED THOUSAND SONS PSYKER** model only. When this model **heals** as a result of the **Sorcerous Invigoration detachment rule**, you can add 3 to the number of wounds **healed**."
+  },
+  "key": "cd07e75508796e24"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-who",
+  "where": "mucho-mutantes · Tzaangor Shaman · Curse of Life",
+  "judgement": {
+   "who": "Tzaangor Shaman",
+   "models": [
+    "1× Tzaangor Shaman",
+    "1× Aviarch",
+    "5× Divining spear Enlightened"
+   ]
+  },
+  "source": {
+   "ability": "Curse of Life",
+   "text": "**INFANTRY**/**MOUNTED THOUSAND SONS PSYKER** model only. When this model **heals** as a result of the **Sorcerous Invigoration detachment rule**, you can add 3 to the number of wounds **healed**."
+  },
+  "key": "7106690bf2b0ec29"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-who",
+  "where": "mucho-mutantes · Tzaangor Shaman · Prophesied Doom",
+  "judgement": {
+   "who": "Tzaangor Enlightened",
+   "models": [
+    "1× Tzaangor Shaman",
+    "1× Aviarch",
+    "5× Divining spear Enlightened"
+   ]
+  },
+  "source": {
+   "ability": "Prophesied Doom",
+   "text": "Each time this unit makes a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 **mortal wound**."
+  },
+  "key": "51a107ce3fb86e22"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "unit-footnote",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "judgement": {
+   "kind": "all",
+   "when": "Every attack (this model leads the unit)",
+   "note": "+1 to hit rolls",
+   "from": "Bestial Prophet",
+   "always": true
+  },
+  "source": {
+   "ability": "Bestial Prophet",
+   "text": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the **Hit roll**."
+  },
+  "key": "543e6ae95f0ec502"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "unit-footnote",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "judgement": {
+   "kind": "all",
+   "who": "Tzaangor Shaman",
+   "when": "Sacrificial Blessing used this phase (your Shooting phase or the Fight phase; one Bodyguard model destroyed)",
+   "note": "Psychic weapons +D3 A and +D3 S",
+   "from": "Sacrificial Blessing"
+  },
+  "source": {
+   "ability": "Sacrificial Blessing",
+   "text": "While this model is leading a unit, in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight, this model can use this ability. If it does, select one **Bodyguard** model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model."
+  },
+  "key": "fd477bbee10d5064"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "unit-kwNote",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "judgement": {
+   "kwNote": "Tzaangor Enlightened comes from the led Tzaangor Enlightened."
+  },
+  "source": {
+   "models": [
+    "1× Tzaangor Shaman",
+    "1× Aviarch",
+    "5× Divining spear Enlightened"
+   ],
+   "stats": [
+    "Tzaangor Shaman W4 OC2",
+    "Tzaangor Enlightened W2 OC2"
+   ],
+   "weapons": [
+    "Baleful Devolution D6 0 1 BLAST, DEVASTATING WOUNDS, PSYCHIC",
+    "Force stave 3 -1 D3 PSYCHIC",
+    "Divining spear 3 -1 2 LANCE, PRECISION"
+   ]
+  },
+  "key": "9bc7e4c0be3b95a1"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "unit-ptsNote",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "judgement": {
+   "ptsNote": "85 + Tzaangor Enlightened 90"
+  },
+  "source": {
+   "models": [
+    "1× Tzaangor Shaman",
+    "1× Aviarch",
+    "5× Divining spear Enlightened"
+   ],
+   "stats": [
+    "Tzaangor Shaman W4 OC2",
+    "Tzaangor Enlightened W2 OC2"
+   ],
+   "weapons": [
+    "Baleful Devolution D6 0 1 BLAST, DEVASTATING WOUNDS, PSYCHIC",
+    "Force stave 3 -1 D3 PSYCHIC",
+    "Divining spear 3 -1 2 LANCE, PRECISION"
+   ]
+  },
+  "key": "285f5a45a32b5866"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "unit-partialRules",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "judgement": {
+   "partialRules": {
+    "Cabal of Sorcerers": "Tzaangor Shaman"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Tzaangor Shaman",
+    "1× Aviarch",
+    "5× Divining spear Enlightened"
+   ],
+   "rules": [
+    "Leader",
+    "Cabal of Sorcerers",
+    "Devastating Wounds",
+    "Blast",
+    "Psychic",
+    "Lance",
+    "Precision"
+   ],
+   "abilities": [
+    "Tzaangor Shaman · Sacrificial Blessing: While this model is leading a unit, in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight, this model can use this ability. If it does, select one **Bodyguard** model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model.",
+    "Tzaangor Shaman · Bestial Prophet: While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the **Hit roll**.",
+    "Tzaangor Shaman · Curse of Life: **INFANTRY**/**MOUNTED THOUSAND SONS PSYKER** model only. When this model **heals** as a result of the **Sorcerous Invigoration detachment rule**, you can add 3 to the number of wounds **healed**.",
+    "Tzaangor Enlightened · Prophesied Doom: Each time this unit makes a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 **mortal wound**."
+   ]
+  },
+  "key": "7dfe6d181f5cef02"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "unit-kwOnly",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "judgement": {
+   "kwOnly": {
+    "Infantry": "Tzaangor Shaman",
+    "Psyker": "Tzaangor Shaman"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Tzaangor Shaman",
+    "1× Aviarch",
+    "5× Divining spear Enlightened"
+   ],
+   "kw": [
+    "Chaos",
+    "Character",
+    "Faction: Thousand Sons",
+    "Fly",
+    "Infantry",
+    "Mounted",
+    "Mutant",
+    "Psyker",
+    "Tzaangor Shaman",
+    "Tzeentch",
+    "Tzaangor Enlightened"
+   ],
+   "kwNote": "Tzaangor Enlightened comes from the led Tzaangor Enlightened."
+  },
+  "key": "8b56a4a4c5a45193"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "unit-weapons",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "judgement": {
+   "gear": [
+    [
+     "Baleful Devolution",
+     "Force stave"
+    ],
+    [
+     "Divining spear"
+    ],
+    [
+     "Divining spear"
+    ]
+   ],
+   "weapons": [
+    "Tzaangor Shaman · Baleful Devolution",
+    "Tzaangor Shaman · Force stave",
+    "Tzaangor Enlightened · ×6 · Divining spear"
+   ]
+  },
+  "source": {
+   "models": [
+    "1× Tzaangor Shaman",
+    "1× Aviarch",
+    "5× Divining spear Enlightened"
+   ],
+   "leads": "Tzaangor Enlightened"
+  },
+  "key": "ca803e22dbfdaccf"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-tag",
+  "where": "mucho-mutantes · Tzaangor Shaman · Diamond of Distortion",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Diamond of Distortion",
+   "text": "**TZAANGOR SHAMAN** model only. While the bearer is leading a unit, each time an attack targets that unit, subtract 1 from the **Hit roll**."
+  },
+  "key": "80efec13495f136f"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-who",
+  "where": "mucho-mutantes · Tzaangor Shaman · Diamond of Distortion",
+  "judgement": {
+   "who": "Tzaangor Shaman",
+   "models": [
+    "1× Tzaangor Shaman",
+    "1× Aviarch",
+    "5× Divining spear Enlightened"
+   ]
+  },
+  "source": {
+   "ability": "Diamond of Distortion",
+   "text": "**TZAANGOR SHAMAN** model only. While the bearer is leading a unit, each time an attack targets that unit, subtract 1 from the **Hit roll**."
+  },
+  "key": "b8165ca6f4d415a0"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-def",
+  "where": "mucho-mutantes · Tzaangor Shaman · Diamond of Distortion",
+  "judgement": {
+   "def": "-1 to hit rolls against it (while the bearer leads it)"
+  },
+  "source": {
+   "ability": "Diamond of Distortion",
+   "text": "**TZAANGOR SHAMAN** model only. While the bearer is leading a unit, each time an attack targets that unit, subtract 1 from the **Hit roll**."
+  },
+  "key": "79c543e400e00cba"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "unit-partialRules",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "judgement": {
+   "partialRules": {
+    "Cabal of Sorcerers": "Tzaangor Shaman"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Tzaangor Shaman",
+    "1× Aviarch",
+    "5× Divining spear Enlightened"
+   ],
+   "rules": [
+    "Leader",
+    "Cabal of Sorcerers",
+    "Devastating Wounds",
+    "Blast",
+    "Psychic",
+    "Lance",
+    "Precision"
+   ],
+   "abilities": [
+    "Tzaangor Shaman · Sacrificial Blessing: While this model is leading a unit, in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight, this model can use this ability. If it does, select one **Bodyguard** model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model.",
+    "Tzaangor Shaman · Bestial Prophet: While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the **Hit roll**.",
+    "Tzaangor Shaman · Diamond of Distortion: **TZAANGOR SHAMAN** model only. While the bearer is leading a unit, each time an attack targets that unit, subtract 1 from the **Hit roll**.",
+    "Tzaangor Enlightened · Prophesied Doom: Each time this unit makes a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 **mortal wound**."
+   ]
+  },
+  "key": "d7c2a1ad5f62b6c8"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-tag",
+  "where": "mucho-mutantes · Tzaangor Shaman · Flowing Flesh",
+  "judgement": {
+   "tag": "Enhancement"
+  },
+  "source": {
+   "ability": "Flowing Flesh",
+   "text": "**TZAANGOR SHAMAN** model only. The bearer has the **Feel No Pain 4+** ability and a Wounds characteristic of 5."
+  },
+  "key": "9d9ae95a9c7f1cac"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "ability-who",
+  "where": "mucho-mutantes · Tzaangor Shaman · Flowing Flesh",
+  "judgement": {
+   "who": "Tzaangor Shaman",
+   "models": [
+    "1× Tzaangor Shaman",
+    "1× Aviarch",
+    "5× Divining spear Enlightened"
+   ]
+  },
+  "source": {
+   "ability": "Flowing Flesh",
+   "text": "**TZAANGOR SHAMAN** model only. The bearer has the **Feel No Pain 4+** ability and a Wounds characteristic of 5."
+  },
+  "key": "96d6d2a8873f7635"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "unit-kwNote",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "judgement": {
+   "kwNote": "Tzaangor Enlightened comes from the led Tzaangor Enlightened."
+  },
+  "source": {
+   "models": [
+    "1× Tzaangor Shaman",
+    "1× Aviarch",
+    "5× Divining spear Enlightened"
+   ],
+   "stats": [
+    "Tzaangor Shaman W5 OC2",
+    "Tzaangor Enlightened W2 OC2"
+   ],
+   "weapons": [
+    "Baleful Devolution D6 0 1 BLAST, DEVASTATING WOUNDS, PSYCHIC",
+    "Force stave 3 -1 D3 PSYCHIC",
+    "Divining spear 3 -1 2 LANCE, PRECISION"
+   ]
+  },
+  "key": "596771c0f7b0602c"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "unit-ptsNote",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "judgement": {
+   "ptsNote": "75 + Tzaangor Enlightened 90"
+  },
+  "source": {
+   "models": [
+    "1× Tzaangor Shaman",
+    "1× Aviarch",
+    "5× Divining spear Enlightened"
+   ],
+   "stats": [
+    "Tzaangor Shaman W5 OC2",
+    "Tzaangor Enlightened W2 OC2"
+   ],
+   "weapons": [
+    "Baleful Devolution D6 0 1 BLAST, DEVASTATING WOUNDS, PSYCHIC",
+    "Force stave 3 -1 D3 PSYCHIC",
+    "Divining spear 3 -1 2 LANCE, PRECISION"
+   ]
+  },
+  "key": "6f43ca1ac3af87ba"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "unit-partialRules",
+  "where": "mucho-mutantes · Tzaangor Shaman",
+  "judgement": {
+   "partialRules": {
+    "Cabal of Sorcerers": "Tzaangor Shaman",
+    "Feel No Pain 4+": "Tzaangor Shaman"
+   }
+  },
+  "source": {
+   "models": [
+    "1× Tzaangor Shaman",
+    "1× Aviarch",
+    "5× Divining spear Enlightened"
+   ],
+   "rules": [
+    "Leader",
+    "Cabal of Sorcerers",
+    "Feel No Pain 4+",
+    "Devastating Wounds",
+    "Blast",
+    "Psychic",
+    "Lance",
+    "Precision"
+   ],
+   "abilities": [
+    "Tzaangor Shaman · Sacrificial Blessing: While this model is leading a unit, in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight, this model can use this ability. If it does, select one **Bodyguard** model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model.",
+    "Tzaangor Shaman · Bestial Prophet: While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the **Hit roll**.",
+    "Tzaangor Shaman · Flowing Flesh: **TZAANGOR SHAMAN** model only. The bearer has the **Feel No Pain 4+** ability and a Wounds characteristic of 5.",
+    "Tzaangor Enlightened · Prophesied Doom: Each time this unit makes a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 **mortal wound**."
+   ]
+  },
+  "key": "647a19681f6e214a"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "rule-ph",
+  "where": "Ritual of Regeneration rule · Sorcerous Invigoration",
+  "judgement": {
+   "ph": [
+    "shooting"
+   ]
+  },
+  "source": {
+   "rule": "Sorcerous Invigoration",
+   "text": "(Once per turn, per unit) When a friendly **THOUSAND SONS PSYKER** unit (excluding **MONSTER** units) successfully manifests a **Ritual**, that unit **heals** D3 wounds."
+  },
+  "key": "13e76bbc59bdb004"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "rule-turn",
+  "where": "Ritual of Regeneration rule · Sorcerous Invigoration",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "rule": "Sorcerous Invigoration",
+   "text": "(Once per turn, per unit) When a friendly **THOUSAND SONS PSYKER** unit (excluding **MONSTER** units) successfully manifests a **Ritual**, that unit **heals** D3 wounds."
+  },
+  "key": "78e3889fb069f604"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "rule-needs",
+  "where": "Ritual of Regeneration rule · Sorcerous Invigoration",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Thousand Sons",
+     "Psyker"
+    ],
+    "none": [
+     "Monster"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Sorcerous Invigoration",
+   "text": "(Once per turn, per unit) When a friendly **THOUSAND SONS PSYKER** unit (excluding **MONSTER** units) successfully manifests a **Ritual**, that unit **heals** D3 wounds."
+  },
+  "key": "5df7ecf601b79724"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "rule-tag",
+  "where": "Ritual of Regeneration rule · Sorcerous Invigoration",
+  "judgement": {
+   "tag": "Once per turn, per unit"
+  },
+  "source": {
+   "rule": "Sorcerous Invigoration",
+   "text": "(Once per turn, per unit) When a friendly **THOUSAND SONS PSYKER** unit (excluding **MONSTER** units) successfully manifests a **Ritual**, that unit **heals** D3 wounds."
+  },
+  "key": "4427fde92e0ac639"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-phases",
+  "where": "Ritual of Regeneration · Relentless Rebirth",
+  "judgement": {
+   "phases": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Relentless Rebirth",
+   "text": "WHEN: Any phase, when a friendly **INFANTRY**/**MOUNTED THOUSAND SONS PSYKER** unit suffers a **mortal wound**.\nTARGET: That **INFANTRY/MOUNTED THOUSAND SONS PSYKER** unit.\nEFFECT: Your unit has **Feel No Pain 5+** against **mortal wounds**."
+  },
+  "key": "c5472f5c64144bd1"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-turn",
+  "where": "Ritual of Regeneration · Relentless Rebirth",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Relentless Rebirth",
+   "text": "WHEN: Any phase, when a friendly **INFANTRY**/**MOUNTED THOUSAND SONS PSYKER** unit suffers a **mortal wound**.\nTARGET: That **INFANTRY/MOUNTED THOUSAND SONS PSYKER** unit.\nEFFECT: Your unit has **Feel No Pain 5+** against **mortal wounds**."
+  },
+  "key": "ad660349b515ce5e"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-needs",
+  "where": "Ritual of Regeneration · Relentless Rebirth",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Thousand Sons",
+     "Psyker"
+    ],
+    "any": [
+     "Infantry",
+     "Mounted"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Relentless Rebirth",
+   "text": "WHEN: Any phase, when a friendly **INFANTRY**/**MOUNTED THOUSAND SONS PSYKER** unit suffers a **mortal wound**.\nTARGET: That **INFANTRY/MOUNTED THOUSAND SONS PSYKER** unit.\nEFFECT: Your unit has **Feel No Pain 5+** against **mortal wounds**."
+  },
+  "key": "365988ef4ec55eb7"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-def",
+  "where": "Ritual of Regeneration · Relentless Rebirth",
+  "judgement": {
+   "def": "when it suffers a mortal wound: Feel No Pain 5+ against mortal wounds"
+  },
+  "source": {
+   "stratagem": "Relentless Rebirth",
+   "text": "WHEN: Any phase, when a friendly **INFANTRY**/**MOUNTED THOUSAND SONS PSYKER** unit suffers a **mortal wound**.\nTARGET: That **INFANTRY/MOUNTED THOUSAND SONS PSYKER** unit.\nEFFECT: Your unit has **Feel No Pain 5+** against **mortal wounds**."
+  },
+  "key": "a55516593fe0aa19"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-gist",
+  "where": "Ritual of Regeneration · Relentless Rebirth",
+  "judgement": {
+   "gist": "When your unit suffers a mortal wound: it has Feel No Pain 5+ against mortal wounds."
+  },
+  "source": {
+   "stratagem": "Relentless Rebirth",
+   "text": "WHEN: Any phase, when a friendly **INFANTRY**/**MOUNTED THOUSAND SONS PSYKER** unit suffers a **mortal wound**.\nTARGET: That **INFANTRY/MOUNTED THOUSAND SONS PSYKER** unit.\nEFFECT: Your unit has **Feel No Pain 5+** against **mortal wounds**."
+  },
+  "key": "33fd22b16d34f394"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-phases",
+  "where": "Ritual of Regeneration · Mutagenic Magicks",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Mutagenic Magicks",
+   "text": "WHEN: Start of the Fight phase.\nTARGET: One friendly **engaged THOUSAND SONS PSYKER** unit.\nEFFECT: Select one enemy unit engaged with your unit. Roll six D6:\n- For each 4+, that enemy unit suffers 1 **mortal wound**."
+  },
+  "key": "7a03a13a1de89771"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-turn",
+  "where": "Ritual of Regeneration · Mutagenic Magicks",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Mutagenic Magicks",
+   "text": "WHEN: Start of the Fight phase.\nTARGET: One friendly **engaged THOUSAND SONS PSYKER** unit.\nEFFECT: Select one enemy unit engaged with your unit. Roll six D6:\n- For each 4+, that enemy unit suffers 1 **mortal wound**."
+  },
+  "key": "5f9fd1aac73ee831"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-needs",
+  "where": "Ritual of Regeneration · Mutagenic Magicks",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Thousand Sons",
+     "Psyker"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Mutagenic Magicks",
+   "text": "WHEN: Start of the Fight phase.\nTARGET: One friendly **engaged THOUSAND SONS PSYKER** unit.\nEFFECT: Select one enemy unit engaged with your unit. Roll six D6:\n- For each 4+, that enemy unit suffers 1 **mortal wound**."
+  },
+  "key": "4a5f3630972ee8f2"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-gist",
+  "where": "Ritual of Regeneration · Mutagenic Magicks",
+  "judgement": {
+   "gist": "Your engaged unit: select one enemy unit engaged with it and roll six D6; for each 4+, that enemy unit suffers 1 mortal wound."
+  },
+  "source": {
+   "stratagem": "Mutagenic Magicks",
+   "text": "WHEN: Start of the Fight phase.\nTARGET: One friendly **engaged THOUSAND SONS PSYKER** unit.\nEFFECT: Select one enemy unit engaged with your unit. Roll six D6:\n- For each 4+, that enemy unit suffers 1 **mortal wound**."
+  },
+  "key": "638a4fdf554bf3dd"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-phases",
+  "where": "Ritual of Regeneration · Multitudinous Limbs",
+  "judgement": {
+   "phases": [
+    "movement"
+   ]
+  },
+  "source": {
+   "stratagem": "Multitudinous Limbs",
+   "text": "WHEN: Your Movement phase, when a friendly **INFANTRY**/**MOUNTED THOUSAND SONS PSYKER** unit is selected to make an **advance**/**fall back move**.\nTARGET: That **INFANTRY/MOUNTED THOUSAND SONS PSYKER** unit.\nEFFECT: That move does not prevent your unit from being **eligible to start an action**."
+  },
+  "key": "cda97efefd22f169"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-turn",
+  "where": "Ritual of Regeneration · Multitudinous Limbs",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Multitudinous Limbs",
+   "text": "WHEN: Your Movement phase, when a friendly **INFANTRY**/**MOUNTED THOUSAND SONS PSYKER** unit is selected to make an **advance**/**fall back move**.\nTARGET: That **INFANTRY/MOUNTED THOUSAND SONS PSYKER** unit.\nEFFECT: That move does not prevent your unit from being **eligible to start an action**."
+  },
+  "key": "53f9e87729f2a75d"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-needs",
+  "where": "Ritual of Regeneration · Multitudinous Limbs",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Thousand Sons",
+     "Psyker"
+    ],
+    "any": [
+     "Infantry",
+     "Mounted"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Multitudinous Limbs",
+   "text": "WHEN: Your Movement phase, when a friendly **INFANTRY**/**MOUNTED THOUSAND SONS PSYKER** unit is selected to make an **advance**/**fall back move**.\nTARGET: That **INFANTRY/MOUNTED THOUSAND SONS PSYKER** unit.\nEFFECT: That move does not prevent your unit from being **eligible to start an action**."
+  },
+  "key": "4ef23def31b046de"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-gist",
+  "where": "Ritual of Regeneration · Multitudinous Limbs",
+  "judgement": {
+   "gist": "Your unit’s advance or fall back move does not prevent it from being eligible to start an action."
+  },
+  "source": {
+   "stratagem": "Multitudinous Limbs",
+   "text": "WHEN: Your Movement phase, when a friendly **INFANTRY**/**MOUNTED THOUSAND SONS PSYKER** unit is selected to make an **advance**/**fall back move**.\nTARGET: That **INFANTRY/MOUNTED THOUSAND SONS PSYKER** unit.\nEFFECT: That move does not prevent your unit from being **eligible to start an action**."
+  },
+  "key": "58ec3016f716242e"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "rule-ph",
+  "where": "Warpmeld Pact rule · Warpmeld Sacrifice",
+  "judgement": {
+   "ph": [
+    "shooting",
+    "fight"
+   ]
+  },
+  "source": {
+   "rule": "Warpmeld Sacrifice",
+   "text": "Each time an enemy unit is selected to shoot or fight and one or more **TZEENTCH MUTANT INFANTRY** or **TZEENTCH MUTANT MOUNTED** units from your army are selected as a target of one or more of those attacks, each of those **TZEENTCH MUTANT** units can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time an attack targets that unit, subtract 1 from the Wound roll. At the end of the phase, that **TZEENTCH MUTANT** unit suffers D3 mortal wounds.\nEach time a **TZEENTCH MUTANT INFANTRY** or **TZEENTCH MUTANT MOUNTED** unit from your army is selected to shoot or fight, before selecting its targets, that unit can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time a model in that unit makes an attack, add 1 to the Wound roll. At the end of the phase, that **TZEENTCH MUTANT** unit suffers D3 mortal wounds.\nKEYWORDS\n**TZAANGORS** units from your army have the **BATTLELINE** keyword, and while such a unit is not **Battle-shocked**, add 1 to the Objective Control characteristic of **TZAANGOR** models in that unit."
+  },
+  "key": "f1b2230c541c5b88"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "rule-turn",
+  "where": "Warpmeld Pact rule · Warpmeld Sacrifice",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "rule": "Warpmeld Sacrifice",
+   "text": "Each time an enemy unit is selected to shoot or fight and one or more **TZEENTCH MUTANT INFANTRY** or **TZEENTCH MUTANT MOUNTED** units from your army are selected as a target of one or more of those attacks, each of those **TZEENTCH MUTANT** units can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time an attack targets that unit, subtract 1 from the Wound roll. At the end of the phase, that **TZEENTCH MUTANT** unit suffers D3 mortal wounds.\nEach time a **TZEENTCH MUTANT INFANTRY** or **TZEENTCH MUTANT MOUNTED** unit from your army is selected to shoot or fight, before selecting its targets, that unit can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time a model in that unit makes an attack, add 1 to the Wound roll. At the end of the phase, that **TZEENTCH MUTANT** unit suffers D3 mortal wounds.\nKEYWORDS\n**TZAANGORS** units from your army have the **BATTLELINE** keyword, and while such a unit is not **Battle-shocked**, add 1 to the Objective Control characteristic of **TZAANGOR** models in that unit."
+  },
+  "key": "ec04ea6b0052d88a"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "rule-needs",
+  "where": "Warpmeld Pact rule · Warpmeld Sacrifice",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Tzeentch",
+     "Mutant"
+    ],
+    "any": [
+     "Infantry",
+     "Mounted"
+    ]
+   }
+  },
+  "source": {
+   "rule": "Warpmeld Sacrifice",
+   "text": "Each time an enemy unit is selected to shoot or fight and one or more **TZEENTCH MUTANT INFANTRY** or **TZEENTCH MUTANT MOUNTED** units from your army are selected as a target of one or more of those attacks, each of those **TZEENTCH MUTANT** units can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time an attack targets that unit, subtract 1 from the Wound roll. At the end of the phase, that **TZEENTCH MUTANT** unit suffers D3 mortal wounds.\nEach time a **TZEENTCH MUTANT INFANTRY** or **TZEENTCH MUTANT MOUNTED** unit from your army is selected to shoot or fight, before selecting its targets, that unit can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time a model in that unit makes an attack, add 1 to the Wound roll. At the end of the phase, that **TZEENTCH MUTANT** unit suffers D3 mortal wounds.\nKEYWORDS\n**TZAANGORS** units from your army have the **BATTLELINE** keyword, and while such a unit is not **Battle-shocked**, add 1 to the Objective Control characteristic of **TZAANGOR** models in that unit."
+  },
+  "key": "bca7e87b252343d2"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "rule-parts",
+  "where": "Warpmeld Pact rule · Warpmeld Sacrifice",
+  "judgement": {
+   "parts": [
+    {
+     "name": "Warpmeld Sacrifice (selected as a target)",
+     "needs": {
+      "all": [
+       "Tzeentch",
+       "Mutant"
+      ],
+      "any": [
+       "Infantry",
+       "Mounted"
+      ]
+     },
+     "def": "Warpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound rolls against it until the end of the phase"
+    },
+    {
+     "name": "Warpmeld Sacrifice (selected to shoot or fight)",
+     "needs": {
+      "all": [
+       "Tzeentch",
+       "Mutant"
+      ],
+      "any": [
+       "Infantry",
+       "Mounted"
+      ]
+     },
+     "mod": {
+      "kind": "all",
+      "when": "Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase)",
+      "note": "+1 to wound rolls"
+     }
+    },
+    {
+     "name": "Keywords",
+     "needs": {
+      "all": [
+       "Tzaangors"
+      ]
+     },
+     "statNote": {
+      "text": "OC +1 for each TZAANGOR model unless Battle-shocked, not in the OC above"
+     }
+    }
+   ]
+  },
+  "source": {
+   "rule": "Warpmeld Sacrifice",
+   "text": "Each time an enemy unit is selected to shoot or fight and one or more **TZEENTCH MUTANT INFANTRY** or **TZEENTCH MUTANT MOUNTED** units from your army are selected as a target of one or more of those attacks, each of those **TZEENTCH MUTANT** units can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time an attack targets that unit, subtract 1 from the Wound roll. At the end of the phase, that **TZEENTCH MUTANT** unit suffers D3 mortal wounds.\nEach time a **TZEENTCH MUTANT INFANTRY** or **TZEENTCH MUTANT MOUNTED** unit from your army is selected to shoot or fight, before selecting its targets, that unit can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time a model in that unit makes an attack, add 1 to the Wound roll. At the end of the phase, that **TZEENTCH MUTANT** unit suffers D3 mortal wounds.\nKEYWORDS\n**TZAANGORS** units from your army have the **BATTLELINE** keyword, and while such a unit is not **Battle-shocked**, add 1 to the Objective Control characteristic of **TZAANGOR** models in that unit."
+  },
+  "key": "9defbbe537955fd9"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-phases",
+  "where": "Warpmeld Pact · Gift of Change",
+  "judgement": {
+   "phases": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Gift of Change",
+   "text": "WHEN: Any phase.\nTARGET: One **THOUSAND SONS CHARACTER** model from your army (excluding **MONSTERS**) that was just destroyed. You can use this Stratagem on that model even though it was just destroyed.\nEFFECT: At the end of the phase, add one **TZEENTCH CHAOS SPAWN** unit containing one model to your army, and set it up as close as possible to where your model was destroyed and not within **Engagement Range** of one or more enemy units.\nRESTRICTIONS: You can only use this Stratagem once per battle round."
+  },
+  "key": "c8d7c89d95925d9f"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-turn",
+  "where": "Warpmeld Pact · Gift of Change",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Gift of Change",
+   "text": "WHEN: Any phase.\nTARGET: One **THOUSAND SONS CHARACTER** model from your army (excluding **MONSTERS**) that was just destroyed. You can use this Stratagem on that model even though it was just destroyed.\nEFFECT: At the end of the phase, add one **TZEENTCH CHAOS SPAWN** unit containing one model to your army, and set it up as close as possible to where your model was destroyed and not within **Engagement Range** of one or more enemy units.\nRESTRICTIONS: You can only use this Stratagem once per battle round."
+  },
+  "key": "6108e6e301811a54"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-needs",
+  "where": "Warpmeld Pact · Gift of Change",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Thousand Sons",
+     "Character"
+    ],
+    "none": [
+     "Monster"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Gift of Change",
+   "text": "WHEN: Any phase.\nTARGET: One **THOUSAND SONS CHARACTER** model from your army (excluding **MONSTERS**) that was just destroyed. You can use this Stratagem on that model even though it was just destroyed.\nEFFECT: At the end of the phase, add one **TZEENTCH CHAOS SPAWN** unit containing one model to your army, and set it up as close as possible to where your model was destroyed and not within **Engagement Range** of one or more enemy units.\nRESTRICTIONS: You can only use this Stratagem once per battle round."
+  },
+  "key": "6cef97a162b7ac84"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-gist",
+  "where": "Warpmeld Pact · Gift of Change",
+  "judgement": {
+   "gist": "Your CHARACTER model just destroyed: at the end of the phase, add a TZEENTCH CHAOS SPAWN unit of one model to your army, set up as close as possible to where it was destroyed and unengaged (once per battle round)."
+  },
+  "source": {
+   "stratagem": "Gift of Change",
+   "text": "WHEN: Any phase.\nTARGET: One **THOUSAND SONS CHARACTER** model from your army (excluding **MONSTERS**) that was just destroyed. You can use this Stratagem on that model even though it was just destroyed.\nEFFECT: At the end of the phase, add one **TZEENTCH CHAOS SPAWN** unit containing one model to your army, and set it up as close as possible to where your model was destroyed and not within **Engagement Range** of one or more enemy units.\nRESTRICTIONS: You can only use this Stratagem once per battle round."
+  },
+  "key": "ab4c28696f89c3b2"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-phases",
+  "where": "Warpmeld Pact · Warped Vicissitude",
+  "judgement": {
+   "phases": [
+    "shooting",
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Warped Vicissitude",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **TZAANGORS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, models in your unit have a 4+ invulnerable save."
+  },
+  "key": "1c6d25ea58dc55b4"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-turn",
+  "where": "Warpmeld Pact · Warped Vicissitude",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Warped Vicissitude",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **TZAANGORS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, models in your unit have a 4+ invulnerable save."
+  },
+  "key": "eff64e3b9385ef90"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-turns",
+  "where": "Warpmeld Pact · Warped Vicissitude",
+  "judgement": {
+   "turns": {
+    "shooting": "opp"
+   }
+  },
+  "source": {
+   "stratagem": "Warped Vicissitude",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **TZAANGORS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, models in your unit have a 4+ invulnerable save."
+  },
+  "key": "0bd7f1f824fa0685"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-needs",
+  "where": "Warpmeld Pact · Warped Vicissitude",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Tzaangors"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Warped Vicissitude",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **TZAANGORS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, models in your unit have a 4+ invulnerable save."
+  },
+  "key": "4777c00b7b396028"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-def",
+  "where": "Warpmeld Pact · Warped Vicissitude",
+  "judgement": {
+   "def": "their Shooting phase or the Fight phase: 4+ invulnerable save (until the end of the phase)"
+  },
+  "source": {
+   "stratagem": "Warped Vicissitude",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **TZAANGORS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, models in your unit have a 4+ invulnerable save."
+  },
+  "key": "047e5e9b10c71e20"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-gist",
+  "where": "Warpmeld Pact · Warped Vicissitude",
+  "judgement": {
+   "gist": "Just after an enemy unit selects your unit as a target: until the end of the phase, your unit’s models have a 4+ invulnerable save."
+  },
+  "source": {
+   "stratagem": "Warped Vicissitude",
+   "text": "WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.\nTARGET: One **TZAANGORS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, models in your unit have a 4+ invulnerable save."
+  },
+  "key": "0a3bad53e44646aa"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-phases",
+  "where": "Warpmeld Pact · Deranged Ferocity",
+  "judgement": {
+   "phases": [
+    "fight"
+   ]
+  },
+  "source": {
+   "stratagem": "Deranged Ferocity",
+   "text": "WHEN: Fight phase, just after a **TZEENTCH MUTANT** unit from your army is selected to fight.\nTARGET: That **TZEENTCH MUTANT** unit.\nEFFECT: Until the end of the phase, each time a model in your unit makes a Pile-in or **Consolidation move**, it can move up to 6\" instead of up to 3\", and when determining which models in it are eligible to fight, any models in it that are within 3\" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3\" of them and within **Engagement Range** of their unit."
+  },
+  "key": "0cdae548b1769f3d"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-turn",
+  "where": "Warpmeld Pact · Deranged Ferocity",
+  "judgement": {
+   "turn": "either"
+  },
+  "source": {
+   "stratagem": "Deranged Ferocity",
+   "text": "WHEN: Fight phase, just after a **TZEENTCH MUTANT** unit from your army is selected to fight.\nTARGET: That **TZEENTCH MUTANT** unit.\nEFFECT: Until the end of the phase, each time a model in your unit makes a Pile-in or **Consolidation move**, it can move up to 6\" instead of up to 3\", and when determining which models in it are eligible to fight, any models in it that are within 3\" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3\" of them and within **Engagement Range** of their unit."
+  },
+  "key": "e905ba0e1f1b4857"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-needs",
+  "where": "Warpmeld Pact · Deranged Ferocity",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Tzeentch",
+     "Mutant"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Deranged Ferocity",
+   "text": "WHEN: Fight phase, just after a **TZEENTCH MUTANT** unit from your army is selected to fight.\nTARGET: That **TZEENTCH MUTANT** unit.\nEFFECT: Until the end of the phase, each time a model in your unit makes a Pile-in or **Consolidation move**, it can move up to 6\" instead of up to 3\", and when determining which models in it are eligible to fight, any models in it that are within 3\" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3\" of them and within **Engagement Range** of their unit."
+  },
+  "key": "5e433fb70da04630"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-gist",
+  "where": "Warpmeld Pact · Deranged Ferocity",
+  "judgement": {
+   "gist": "Until the end of the phase, your unit’s models pile in and consolidate up to 6\", and models within 3\" of enemy models are eligible to fight (targeting an enemy unit within 3\" of them and engaged with their unit)."
+  },
+  "source": {
+   "stratagem": "Deranged Ferocity",
+   "text": "WHEN: Fight phase, just after a **TZEENTCH MUTANT** unit from your army is selected to fight.\nTARGET: That **TZEENTCH MUTANT** unit.\nEFFECT: Until the end of the phase, each time a model in your unit makes a Pile-in or **Consolidation move**, it can move up to 6\" instead of up to 3\", and when determining which models in it are eligible to fight, any models in it that are within 3\" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3\" of them and within **Engagement Range** of their unit."
+  },
+  "key": "a033ad085e8c5fa8"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-phases",
+  "where": "Warpmeld Pact · Blessed Transmutations",
+  "judgement": {
+   "phases": [
+    "command"
+   ]
+  },
+  "source": {
+   "stratagem": "Blessed Transmutations",
+   "text": "WHEN: Your Command phase.\nTARGET: One **THOUSAND SONS PSYKER** model from your army, and one friendly **TZAANGORS** unit that is below its Starting Strength and within 12\" of that **PSYKER** model.\nEFFECT: Return up to D3+1 destroyed models (excluding **CHARACTERS**) to your **TZAANGORS** unit."
+  },
+  "key": "171dc5c7552b4572"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-turn",
+  "where": "Warpmeld Pact · Blessed Transmutations",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Blessed Transmutations",
+   "text": "WHEN: Your Command phase.\nTARGET: One **THOUSAND SONS PSYKER** model from your army, and one friendly **TZAANGORS** unit that is below its Starting Strength and within 12\" of that **PSYKER** model.\nEFFECT: Return up to D3+1 destroyed models (excluding **CHARACTERS**) to your **TZAANGORS** unit."
+  },
+  "key": "3c55794ca197e2ab"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-needs",
+  "where": "Warpmeld Pact · Blessed Transmutations",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Faction: Thousand Sons"
+    ],
+    "any": [
+     "Psyker",
+     "Tzaangors"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Blessed Transmutations",
+   "text": "WHEN: Your Command phase.\nTARGET: One **THOUSAND SONS PSYKER** model from your army, and one friendly **TZAANGORS** unit that is below its Starting Strength and within 12\" of that **PSYKER** model.\nEFFECT: Return up to D3+1 destroyed models (excluding **CHARACTERS**) to your **TZAANGORS** unit."
+  },
+  "key": "3717e6d2a9e9f671"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-gist",
+  "where": "Warpmeld Pact · Blessed Transmutations",
+  "judgement": {
+   "gist": "Return up to D3+1 destroyed models (excluding CHARACTERS) to a TZAANGORS unit below its Starting Strength within 12\" of your PSYKER model."
+  },
+  "source": {
+   "stratagem": "Blessed Transmutations",
+   "text": "WHEN: Your Command phase.\nTARGET: One **THOUSAND SONS PSYKER** model from your army, and one friendly **TZAANGORS** unit that is below its Starting Strength and within 12\" of that **PSYKER** model.\nEFFECT: Return up to D3+1 destroyed models (excluding **CHARACTERS**) to your **TZAANGORS** unit."
+  },
+  "key": "e4524bf188e07664"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-phases",
+  "where": "Warpmeld Pact · Touched by Tzeentch",
+  "judgement": {
+   "phases": [
+    "movement"
+   ]
+  },
+  "source": {
+   "stratagem": "Touched by Tzeentch",
+   "text": "WHEN: Start of your Movement phase.\nTARGET: One **TZEENTCH MUTANT** unit from your army.\nEFFECT: Until the end of the turn, your unit is eligible to shoot or declare a charge in a turn in which it Advanced."
+  },
+  "key": "17b184e71d966a00"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-turn",
+  "where": "Warpmeld Pact · Touched by Tzeentch",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Touched by Tzeentch",
+   "text": "WHEN: Start of your Movement phase.\nTARGET: One **TZEENTCH MUTANT** unit from your army.\nEFFECT: Until the end of the turn, your unit is eligible to shoot or declare a charge in a turn in which it Advanced."
+  },
+  "key": "76cf60eb361e1192"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-needs",
+  "where": "Warpmeld Pact · Touched by Tzeentch",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Tzeentch",
+     "Mutant"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Touched by Tzeentch",
+   "text": "WHEN: Start of your Movement phase.\nTARGET: One **TZEENTCH MUTANT** unit from your army.\nEFFECT: Until the end of the turn, your unit is eligible to shoot or declare a charge in a turn in which it Advanced."
+  },
+  "key": "49a00874319b183a"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-gist",
+  "where": "Warpmeld Pact · Touched by Tzeentch",
+  "judgement": {
+   "gist": "Until the end of the turn, your unit is eligible to shoot or declare a charge in a turn in which it Advanced."
+  },
+  "source": {
+   "stratagem": "Touched by Tzeentch",
+   "text": "WHEN: Start of your Movement phase.\nTARGET: One **TZEENTCH MUTANT** unit from your army.\nEFFECT: Until the end of the turn, your unit is eligible to shoot or declare a charge in a turn in which it Advanced."
+  },
+  "key": "334ae6a5ff412542"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-note",
+  "where": "Warpmeld Pact · Touched by Tzeentch",
+  "judgement": {
+   "note": "FAQ (Faction Pack 1.3): When using the Touched by Tzeentch Stratagem in the Warpmeld Pact Detachment, do I have to declare if my unit will shoot or charge after Advancing as soon as I use the Stratagem? No, you may decide later in the turn."
+  },
+  "source": {
+   "stratagem": "Touched by Tzeentch",
+   "text": "WHEN: Start of your Movement phase.\nTARGET: One **TZEENTCH MUTANT** unit from your army.\nEFFECT: Until the end of the turn, your unit is eligible to shoot or declare a charge in a turn in which it Advanced."
+  },
+  "key": "2984cefe1221870b"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-phases",
+  "where": "Warpmeld Pact · Twisted Mirage",
+  "judgement": {
+   "phases": [
+    "movement"
+   ]
+  },
+  "source": {
+   "stratagem": "Twisted Mirage",
+   "text": "WHEN: Reinforcements step of your Movement phase.\nTARGET: One **TZEENTCH MUTANT** unit from your army that is arriving from **Strategic Reserves** this phase.\nEFFECT: Your unit can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units, or anywhere on the battlefield that is more than 8\" horizontally away from all enemy units if it is a **MONSTER** unit. In either case, until the end of the turn, it is not eligible to declare a charge."
+  },
+  "key": "3a23c7ae4bb47824"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-turn",
+  "where": "Warpmeld Pact · Twisted Mirage",
+  "judgement": {
+   "turn": "your"
+  },
+  "source": {
+   "stratagem": "Twisted Mirage",
+   "text": "WHEN: Reinforcements step of your Movement phase.\nTARGET: One **TZEENTCH MUTANT** unit from your army that is arriving from **Strategic Reserves** this phase.\nEFFECT: Your unit can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units, or anywhere on the battlefield that is more than 8\" horizontally away from all enemy units if it is a **MONSTER** unit. In either case, until the end of the turn, it is not eligible to declare a charge."
+  },
+  "key": "73322c7a1b2f01a3"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-needs",
+  "where": "Warpmeld Pact · Twisted Mirage",
+  "judgement": {
+   "needs": {
+    "all": [
+     "Tzeentch",
+     "Mutant"
+    ]
+   }
+  },
+  "source": {
+   "stratagem": "Twisted Mirage",
+   "text": "WHEN: Reinforcements step of your Movement phase.\nTARGET: One **TZEENTCH MUTANT** unit from your army that is arriving from **Strategic Reserves** this phase.\nEFFECT: Your unit can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units, or anywhere on the battlefield that is more than 8\" horizontally away from all enemy units if it is a **MONSTER** unit. In either case, until the end of the turn, it is not eligible to declare a charge."
+  },
+  "key": "1d3a9da100a61f34"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-gist",
+  "where": "Warpmeld Pact · Twisted Mirage",
+  "judgement": {
+   "gist": "Your unit arriving from Strategic Reserves can be set up more than 6\" horizontally away from all enemy units (8\" for a MONSTER unit); it is then not eligible to declare a charge this turn."
+  },
+  "source": {
+   "stratagem": "Twisted Mirage",
+   "text": "WHEN: Reinforcements step of your Movement phase.\nTARGET: One **TZEENTCH MUTANT** unit from your army that is arriving from **Strategic Reserves** this phase.\nEFFECT: Your unit can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units, or anywhere on the battlefield that is more than 8\" horizontally away from all enemy units if it is a **MONSTER** unit. In either case, until the end of the turn, it is not eligible to declare a charge."
+  },
+  "key": "6b0f16e75c2c4557"
+ },
+ {
+  "army": "mucho-mutantes",
+  "kind": "strat-note",
+  "where": "Warpmeld Pact · Twisted Mirage",
+  "judgement": {
+   "note": "FAQ (Faction Pack 1.3): When going second, can a Tzaangor unit that started the game on the battlefield and was placed into Strategic Reserves by its Ambushing Hunters ability then arrive during my first turn using the Twisted Mirage Stratagem? No."
+  },
+  "source": {
+   "stratagem": "Twisted Mirage",
+   "text": "WHEN: Reinforcements step of your Movement phase.\nTARGET: One **TZEENTCH MUTANT** unit from your army that is arriving from **Strategic Reserves** this phase.\nEFFECT: Your unit can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units, or anywhere on the battlefield that is more than 8\" horizontally away from all enemy units if it is a **MONSTER** unit. In either case, until the end of the turn, it is not eligible to declare a charge."
+  },
+  "key": "24fe9149caf136cd"
+ }
+]

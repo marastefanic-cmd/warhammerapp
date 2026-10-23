@@ -91,3 +91,6 @@ world-eaters Master-of-Executions
 world-eaters Flesh-Hounds
 thousand-sons Exalted-Sorcerer
 thousand-sons Sekhetar-Robots
+thousand-sons Ahriman
+thousand-sons Exalted-Sorcerer-on-Disc-of-Tzeentch
+thousand-sons Tzaangor-Shaman
