@@ -1,0 +1,8 @@
+[
+ {
+  "key": "06ac3e05d245cf69",
+  "where": "screenPregame",
+  "verdict": "ok",
+  "why": "The new 'Dispositions' row (row('Disposi&shy;tions', dispText(a))) lists every Force Disposition the list's detachments allow, in BSData's order, with the roster's chosen one marked '(chosen)'; the Detachments row no longer carries the old 'Disposition:' line, so nothing is duplicated. dispText escapes each name; row() hides the line if empty. Matches the rules: Core Rules (Select Detachments) says each detachment gives access to force dispositions, and the Event Companion (Muster Armies) says the player selects one Force Disposition card available to them and records it on the roster, so the union over all detachments (not only the highest-DP one) is right. Checked against data.js: e.g. Grand Coven list shows 'Disruption · Priority Assets (chosen)', Woof Woof 'Reconnaissance (chosen)', super-terminators 'Purge the Foe · Take and Hold (chosen)'."
+ }
+]

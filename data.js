@@ -202,7 +202,7 @@ const FACTIONS = {
       // Bully Boyz and Runt Swarm: Wahapedia wording (Orks, codex; GW publishes no Orks Faction Pack);
       // enhancement pts and UPGRADE marks from Wahapedia, matching BSData
       'bully-boyz': {
-        name:'Bully Boyz', dp:1,
+        name:'Bully Boyz', dispositions:['Purge the Foe'], dp:1,
         rule:{ name:'Displays of Savagery', ph:['fight'], turn:'either', needs:{ any:['Meganobz','Nobz'] },
           text:'Friendly **MEGANOBZ**/**NOBZ** units’ melee attacks have **[SUSTAINED HITS 1]**.' },
         enhancements:[
@@ -230,7 +230,7 @@ const FACTIONS = {
         ]
       },
       'dread-mob': {
-        name:'Dread Mob', dp:1,
+        name:'Dread Mob', dispositions:['Purge the Foe'], dp:1,
         // tableAt: Wahapedia prints the table after "…have the relevant rule(s):", before the hazard-roll line
         rule:{ name:'Try Dat Button!', ph:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, needs:{ all:['Walker'], none:['Titanic'] }, tableAt:1,
           // one D6: one result of the table; two D6: two different results ("keep re-rolling duplicate results": the owner's reading,
@@ -264,7 +264,7 @@ const FACTIONS = {
       },
       // the rule names no phase (an advance or fall-back move), so it has no ph
       'runt-swarm': {
-        name:'Runt Swarm', dp:1,
+        name:'Runt Swarm', dispositions:['Priority Assets'], dp:1,
         rule:{ name:'Sneaky Little Gitz', needs:{ all:['Gretchin'] },
           text:'- Friendly **GRETCHIN** units have **BATTLELINE**.\n- When a friendly **GRETCHIN** unit is selected to make an **advance**/**fall-back move**, that move does not prevent this unit from being **eligible to start an action**.' },
         enhancements:[
@@ -296,7 +296,7 @@ const FACTIONS = {
       },
       // Shoota Boyz and Wreckas: Wahapedia wording (Orks, codex; GW publishes no Orks Faction Pack)
       'shoota-boyz': {
-        name:'Shoota Boyz', dp:1,
+        name:'Shoota Boyz', dispositions:['Purge the Foe'], dp:1,
         rule:{ name:'Dakka! Dakka! Dakka!', ph:['movement','shooting'], turn:'either', turns:{ movement:'opp' }, needs:{ all:['Faction: Orks','Infantry'] },
           mod:{ kind:'ranged', when:'Riled up', cond:'riled', note:'+3" range' },
           text:'Friendly **ORKS INFANTRY** units’ ranged attacks have:\n- **[ASSAULT]**.\n- While this unit is **riled up**, +3" **R**.' },
@@ -323,7 +323,7 @@ const FACTIONS = {
         ]
       },
       'war-horde': {
-        name:'War Horde', dp:3,
+        name:'War Horde', dispositions:['Purge the Foe','Take and Hold'], dp:3,
         rule:{ name:'Get Stuck In', ph:['fight'], turn:'either', needs:{ all:['Faction: Orks'] },
           text:'Friendly **ORKS** units’ melee attacks have **[SUSTAINED HITS 1]**.' },
         enhancements:[
@@ -361,7 +361,7 @@ const FACTIONS = {
         ]
       },
       'wreckas': {
-        name:'Wreckas', dp:1,
+        name:'Wreckas', dispositions:['Priority Assets'], dp:1,
         rule:{ name:'Wreckin’ and Lootin’', ph:['shooting'], turn:'your', needs:{ any:['Breaka Boyz','Flash Gitz','Tankbustas'] },
           mod:{ kind:'ranged', when:'Your Shooting phase, this unit or the target within range of an objective', cond:'objective', note:'can re-roll hit rolls of 1' },
           text:'In your Shooting phase, when a friendly **BREAKA BOYZ**/**FLASH GITZ**/**TANKBUSTAS** unit is **selected to shoot**, if any of the following apply, that unit’s attacks can re-roll **hit rolls** of 1:\n- That unit is within range of an **objective**.\n- The target of that attack is within range of an **objective**.' },
@@ -420,7 +420,7 @@ const FACTIONS = {
     ],
     detachments: {
       'freeblade-company': {
-        name:'Freeblade Company', dp:3,
+        name:'Freeblade Company', dispositions:['Priority Assets','Purge the Foe'], dp:3,
         // rule, enhancements and stratagems: Wahapedia wording (Freeblade Company, App. Imperial Knights 11th edition v1.2),
         // checked word for word against GW's Faction Pack v1.2 (legal from 26 Aug 2026), pp5-6, which prints this detachment in full.
         // ph/turn: the part done at a moment, "at the start of your Command phase" (its Feel No Pain 6+ is a state: the datasheets'
@@ -504,7 +504,7 @@ const FACTIONS = {
     ],
     detachments: {
       'berzerker-warband': {
-        name:'Berzerker Warband', dp:2,
+        name:'Berzerker Warband', dispositions:['Purge the Foe'], dp:2,
         // Wahapedia wording (the errata "Change to" text is the same as the main text)
         rule:{ name:'Relentless Rage', ph:['fight'], turn:'either', needs:{ all:['Faction: World Eaters'] },
           tag:'Already in A', note:'Already counted: every melee A value in this app includes this +1 A. Do not add it again.',
@@ -549,7 +549,7 @@ const FACTIONS = {
       // Khorne Daemonkin: GW's Faction Pack (1.3) does not print it, only Rules Updates to Disciple of Khorne and Summoned by
       // Slaughter (their wording is used); the rest is Wahapedia's. The detachment rule's RESTRICTIONS are part of it as printed.
       'khorne-daemonkin': {
-        name:'Khorne Daemonkin', dp:2,
+        name:'Khorne Daemonkin', dispositions:['Reconnaissance'], dp:2,
         rule:{ name:'Blood Tithe', ph:['command'], turn:'either', needs:{ any:['Faction: Blood Legions','Faction: World Eaters'] },
           text:'Each time a **BLOOD LEGIONS** or **WORLD EATERS** unit from your army destroys an enemy unit, roll one D6: on a 3+, you gain 1 Blood Tithe point (BTP). At the start of the Command phase, you can spend one or more of your BTP to activate one of the following abilities until the end of the battle:\n- **Enraged Abjuration [2BTP]**\n**BLOOD LEGIONS** and **WORLD EATERS** models from your army have the **Feel No Pain 5+** ability against **Psychic Attacks** and **mortal wounds**.\n- **Daemonic Rage [3BTP]**\nMelee weapons equipped by **BLOOD LEGIONS** units from your army have the **[lance]** ability.\n- **Boon of Blood [4BTP]**\n**BLOOD LEGIONS** units from your army have a 4+ invulnerable save.\n- **Might of Khorne [5BTP]**\n**BLOOD LEGIONS** units from your army gain the Blessings of Khorne ability.\nRESTRICTIONS\nYou can include the **BLOOD LEGIONS** units in your army. The combined points cost of such units you can include in your army is:\n- **Incursion:** Up to 500 pts\n- **Strike Force:** Up to 1000 pts\n- **Onslaught:** Up to 1500 pts\nNo **BLOOD LEGIONS** model from your army can be your **WARLORD**.',
           // the four abilities, each on the units its words name (BLOOD LEGIONS and WORLD EATERS models, BLOOD LEGIONS units): once
@@ -611,7 +611,7 @@ const FACTIONS = {
       },
       // Butchers of Khorne: the Faction Pack (1.3, p3) prints it in full, word for word as Wahapedia; its Rules Updates do not change it
       'butchers-of-khorne': {
-        name:'Butchers of Khorne', dp:1,
+        name:'Butchers of Khorne', dispositions:['Take and Hold'], dp:1,
         rule:{ name:'Adamantine Avalanche', ph:['fight'], turn:'either', needs:{ all:['Terminator Squad'] },
           text:'At the start of the Fight phase, if a friendly **TERMINATOR SQUAD** unit is **engaged**, make a **Blessings of Khorne roll** and use the results to activate one **Blessing of Khorne**. Until the end of the phase, that **Blessing of Khorne** is active for friendly **TERMINATOR SQUAD** units in addition to any other **Blessings of Khorne** that are currently active.' },
         // pts from Wahapedia, matching BSData; both are Upgrades (Wahapedia and the pack mark them UPGRADE).
@@ -638,7 +638,7 @@ const FACTIONS = {
         ]
       },
       'vessels-of-wrath': {
-        name:'Vessels of Wrath', dp:1,
+        name:'Vessels of Wrath', dispositions:['Priority Assets'], dp:1,
         rule:{ name:'Wrath of Khorne', ph:['fight'], turn:'either', needs:{ all:['Faction: World Eaters','Character'], none:['Epic Hero'] },
           mod:{ kind:'melee', when:'When selected to fight', note:'CHARACTER models: [CLEAVE 1] or +1 AP',
             pick:[{ name:'[CLEAVE 1]', note:'CHARACTER models: [CLEAVE 1]' }, { name:'+1 AP', note:'CHARACTER models: +1 AP' }] },
@@ -696,7 +696,7 @@ const FACTIONS = {
     ],
     detachments: {
       'grand-coven': {
-        name:'Grand Coven', dp:3,
+        name:'Grand Coven', dispositions:['Disruption','Priority Assets'], dp:3,
         // rule, enhancements and stratagems: Wahapedia, Thousand Sons, Grand Coven
         // needs: the units with Psychic weapons (every one of them is a PSYKER unit, and no other unit of the list has one)
         rule:{ name:'Kindred Sorcery', ph:['command','movement','shooting','fight'], turn:'either', turns:{ command:'your', movement:'opp', shooting:'your' }, needs:{ all:['Faction: Thousand Sons','Psyker'] },
@@ -752,7 +752,7 @@ const FACTIONS = {
       // Ritual of Regeneration: GW's Faction Pack (1.3) prints it in full (p2); its wording, with Wahapedia's bold keywords.
       // (Wahapedia's Mutagenic Magicks EFFECT repeats its WHEN and TARGET before "Select one enemy unit"; the pack's does not.)
       'ritual-of-regeneration': {
-        name:'Ritual of Regeneration', dp:1,
+        name:'Ritual of Regeneration', dispositions:['Take and Hold'], dp:1,
         // ph/turn: a Ritual is attempted at the start of your Shooting phase (Cabal of Sorcerers)
         // needs: a THOUSAND SONS PSYKER unit (a unit with one PSYKER model is one), excluding MONSTER units
         rule:{ name:'Sorcerous Invigoration', tag:'Once per turn, per unit', ph:['shooting'], turn:'your', needs:{ all:['Faction: Thousand Sons','Psyker'], none:['Monster'] },
@@ -782,7 +782,7 @@ const FACTIONS = {
       // Warpmeld Pact: a codex detachment the Faction Pack (1.3) does not print, only Rules Updates (Warpmeld Sacrifice, Bray Lord,
       // Twisted Mirage) and FAQs; Wahapedia wording with those updates (Wahapedia's errata texts are the same)
       'warpmeld-pact': {
-        name:'Warpmeld Pact', dp:2,
+        name:'Warpmeld Pact', dispositions:['Purge the Foe'], dp:2,
         // needs: TZEENTCH MUTANT INFANTRY or TZEENTCH MUTANT MOUNTED units (a unit with one such model is one: the rule is about units)
         // ph: wherever a unit is selected to shoot or fight (Fire Overwatch, at the end of the opponent's Movement phase, included)
         // parts: the sacrifice when selected as a target ("When targeted") and when selected to shoot or fight (its attacks); the
@@ -855,7 +855,7 @@ const FACTIONS = {
       // Wahapedia still prints this detachment in its codex wording (Battle-shock test, Engagement Range,
       // Normal/Advance/Fall Back move), not in the 11th-edition terms of the Talons below.
       'crusher-stampede': {
-        name:'Crusher Stampede', dp:2,
+        name:'Crusher Stampede', dispositions:['Purge the Foe'], dp:2,
         // Wahapedia wording (the errata "Change to" text has the same words, without the bold)
         rule:{ name:'Enraged Behemoths', ph:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Faction: Tyranids','Monster'] },
           mod:{ kind:'all', when:'Below Starting Strength', note:'+1 to hit rolls; also +1 to wound rolls if Below Half-strength',
@@ -900,7 +900,7 @@ const FACTIONS = {
         ]
       },
       'talons-of-the-norn-queen': {
-        name:'Talons of the Norn Queen', dp:1,
+        name:'Talons of the Norn Queen', dispositions:['Take and Hold'], dp:1,
         // Protean Purpose is also on the Norn units' cards (with ph), so the rule itself has no ph
         rule:{ name:'Higher Imperatives', needs:{ any:['Norn Emissary','Norn Assimilator'] },
           text:'Friendly **NORN EMISSARY/NORN ASSIMILATOR** units have the following ability:\n**Protean Purpose:** (Once per battle, per unit) In your Command phase, you can use this ability. If you do, this unit can make a selection for its **Singular Purpose** ability (this replaces the previous selection).' },
@@ -964,7 +964,7 @@ const FACTIONS = {
     ],
     detachments: {
       'cohort-cybernetica': {
-        name:'Cohort Cybernetica', dp:1,
+        name:'Cohort Cybernetica', dispositions:['Take and Hold'], dp:1,
         // Wahapedia wording (codex detachment; GW's Faction Pack v1.4 does not print it). The rule is the Rules Updates' wording
         // in the Faction Pack v1.4, PDF p17 ("Cyber-psalm Programming", the pack's spelling), the same words as Wahapedia's main text.
         // No ph: its words name no phase or moment. New Recruit's Move values already include its +2" (BSData: Kastelan Robot
@@ -1016,7 +1016,7 @@ const FACTIONS = {
         ]
       },
       'eradication-cohort': {
-        name:'Eradication Cohort', dp:2,
+        name:'Eradication Cohort', dispositions:['Purge the Foe'], dp:2,
         // rule, enhancements and stratagems: GW's Faction Pack v1.4 (legal from 14 Oct 2026), PDF pp5-6, which prints this
         // detachment in full (the same words as Wahapedia), with Wahapedia's markup; pts from Wahapedia, matching BSData.
         // Belicosa-class: the pack prints the name in capitals; "-class" as BSData and New Recruit spell it.
@@ -1080,7 +1080,7 @@ const FACTIONS = {
       // Coterie of the Conceited: a codex detachment the Faction Pack 1.3 does not print; rule, enhancements and stratagems from
       // Wahapedia, with the pack's Rules Updates (Armour of Abhorrence, Effect)
       'coterie-of-the-conceited': {
-        name:'Coterie of the Conceited', dp:3,
+        name:'Coterie of the Conceited', dispositions:['Priority Assets','Purge the Foe'], dp:3,
         // the bonuses, label = the Pact points they need (cumulative)
         rule:{ name:'Pledges to the Dark Prince', at:'Start of the battle round', ph:['command','shooting','fight'], turn:'either', needs:{ all:['Faction: Emperor\'s Children'] },
           // the Pact point bonuses for all attacks: one pick, the Pact points gained so far (5+ adds [LETHAL HITS] and [SUSTAINED HITS 1] to
@@ -1169,7 +1169,7 @@ const FACTIONS = {
       // Infernal Lance: a codex detachment the Faction Pack 1.2 does not print; rule, enhancements and stratagems from Wahapedia, with
       // the pack's Rules Updates (Malefic Surge's Unnatural Fortitude, Hellforged Construction's Effect), which Wahapedia's text already has
       'infernal-lance': {
-        name:'Infernal Lance', dp:3,
+        name:'Infernal Lance', dispositions:['Priority Assets','Purge the Foe'], dp:3,
         // ph/turn: the Malefic Surge is made in your Command phase; Diabolic Power (an attack bonus, one of two) is the footnote,
         // Unnatural Fortitude (5+ invulnerable save or Feel No Pain 6+) the When targeted line
         rule:{ name:'Malefic Surge', ph:['command'], turn:'your', needs:{ all:['Faction: Chaos Knights'] },
@@ -1214,7 +1214,7 @@ const FACTIONS = {
       // Houndpack Lance: a codex detachment the Faction Pack 1.2 does not print; Wahapedia wording, with the pack's Rules Updates
       // (Animalistic Rage's When, Harrying Hounds' Target), which Wahapedia's text already has
       'houndpack-lance': {
-        name:'Houndpack Lance', dp:2,
+        name:'Houndpack Lance', dispositions:['Reconnaissance'], dp:2,
         // ph/turn: the unit is selected at the start of your Command phase; the attack bonus is the footnote of every WAR DOG unit
         rule:{ name:'Marked Prey', ph:['command'], turn:'your', needs:{ all:['War Dog'] },
           mod:{ kind:'all', lasts:'round', when:'Target is the unit selected at the start of your Command phase, visible to the attacking model', note:'[SUSTAINED HITS 1]' },
@@ -1257,7 +1257,7 @@ const FACTIONS = {
       },
       // Hunting Warpack: GW's Faction Pack 1.2 prints it in full (p3); its wording, checked against Wahapedia's
       'hunting-warpack': {
-        name:'Hunting Warpack', dp:1,
+        name:'Hunting Warpack', dispositions:['Reconnaissance'], dp:1,
         rule:{ name:'Scenting Fear', tag:'Once per battle round, per army', ph:['shooting'], turn:'your', needs:{ all:['War Dog'] },
           text:'(Once per battle round, per army) In your Shooting phase, you can select one **visible** enemy unit within 12" of a friendly **WAR DOG** unit. That enemy unit has +6" **detection range**.\nThis detachment has the **WAR DOGS** tag and cannot be taken with another **WAR DOGS** detachment.' },
         enhancements:[
