@@ -657,5 +657,85 @@
   "where": "Caladius Annihilator Grav-tank",
   "reason": "GW's Base Size Guide gives the Caladius Grav-tank a 170x109mm oval base; BSData gives the Caladius Annihilator Grav-tank 150x95mm oval and New Recruit prints it. The owner, 2026-10-23: GW is the ultimate source of truth for base sizes. Bases & proxies counts its base from this value.",
   "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2508-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 2625 (\"Caladius Grav-tank 170x109mm Oval Base\"); verify/.cache/bsdata/Imperium - Adeptus Custodes.json line 11604 (Base 150x95mm Oval); verify/sources/nr/lite-knights.txt line 152."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "trajann-valoris-allarus-custodians",
+  "field": "ability.text",
+  "app": "Captain-General: Friendly **ADEPTUS CUSTODES** units (excluding **MONSTER/VEHICLE** units) within 6\" of this model can:\n- Re-roll hit rolls of 1.\n- Re-roll wound rolls of 1.",
+  "source": "Friendly ^^**Adeptus Custodes**^^ units (excluding ^^**MONSTER/VEHICLE**^^ units) within 6\" of this model can:\n- Re-roll hit rolls of 1\n- Re-roll wound rolls of 1",
+  "where": "Trajann Valoris › Captain-General (Aura)",
+  "reason": "Punctuation only: the new codex ends each of the two bullets with a full stop; New Recruit (BSData) prints them without. The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Trajann-Valoris.html, ABILITIES: \"Captain-General (Aura): … within 6\\\" of this model can: Re-roll hit rolls of 1. Re-roll wound rolls of 1.\"; verify/sources/nr/lite-knights.txt lines 49-52."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "trajann-valoris-allarus-custodians",
+  "field": "ability",
+  "app": "Slayer of Tyrants",
+  "source": "",
+  "where": "no BSData ability \"Slayer of Tyrants\" for Allarus Custodians",
+  "reason": "The new codex names the Allarus Custodians' ability \"Slayer of Tyrants\"; New Recruit (BSData) prints \"Slayers of Tyrants\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html, ABILITIES: \"Slayer of Tyrants: This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.\"; verify/sources/nr/lite-knights.txt line 60."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "trajann-valoris-allarus-custodians",
+  "field": "ability",
+  "app": "",
+  "source": "Slayers of Tyrants",
+  "where": "Allarus Custodians › Slayers of Tyrants: missing in the app",
+  "reason": "The new codex names the Allarus Custodians' ability \"Slayer of Tyrants\"; New Recruit (BSData) prints \"Slayers of Tyrants\" (the same words otherwise). The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Allarus-Custodians.html, ABILITIES: \"Slayer of Tyrants: This unit’s melee attacks that target a unit with a T greater than this unit’s T have +1 to wound rolls.\"; verify/sources/nr/lite-knights.txt line 60."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "prosecutor-squad",
+  "field": "ability.text",
+  "app": "Purity of Execution: In your Shooting phase, you can select one **visible** enemy unit within 18\" of this unit. That unit is **detected**:\n- While a unit is **detected**, that unit has +3\" **detection range**.",
+  "source": "In your Shooting phase, you can select one **visible** enemy unit within 18\" of this unit. That unit is **detected**.\n- While a unit is **detected**, that unit has +3\" **detection range**.",
+  "where": "Prosecutor Squad › Purity of Execution",
+  "reason": "Punctuation only: the new codex has \"That unit is detected:\" before its bullet; New Recruit (BSData) prints \"That unit is detected.\". The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Prosecutor-Squad.html, ABILITIES: \"Purity of Execution: In your Shooting phase, you can select one visible enemy unit within 18\\\" of this unit. That unit is detected: While a unit is detected, that unit has +3\\\" detection range.\"; verify/sources/nr/lite-knights.txt lines 86-90."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "contemptor-achillus-dreadnought",
+  "field": "rules",
+  "app": "Deadly Demise D3",
+  "source": "Martial Ka'tah, Deadly Demise 1, Aegis of the Emperor, Feel No Pain 5+*, Damaged 4",
+  "where": "neither a BSData rule of the unit, nor a keyword of its weapons, nor named in an ability it uses",
+  "reason": "The new codex's datasheet has Deadly Demise D3; New Recruit (BSData) prints Deadly Demise 1. The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Contemptor-Achillus-Dreadnought.html, CORE ABILITIES: \"Damaged 4, Deadly Demise D3\"; verify/sources/nr/lite-knights.txt line 186 (Rules: \"Martial Ka'tah, Deadly Demise 1, …\")."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "contemptor-achillus-dreadnought",
+  "field": "rules",
+  "app": "",
+  "source": "Deadly Demise 1",
+  "where": "Contemptor-Achillus Dreadnought › rule Deadly Demise 1: rule missing in the app",
+  "reason": "The new codex's datasheet has Deadly Demise D3; New Recruit (BSData) prints Deadly Demise 1. The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Contemptor-Achillus-Dreadnought.html, CORE ABILITIES: \"Damaged 4, Deadly Demise D3\"; verify/sources/nr/lite-knights.txt line 186 (Rules: \"Martial Ka'tah, Deadly Demise 1, …\")."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "contemptor-galatus-dreadnought",
+  "field": "rules",
+  "app": "Deadly Demise D3",
+  "source": "Martial Ka'tah, Deadly Demise 1, Aegis of the Emperor, Feel No Pain 5+*, Damaged 4",
+  "where": "neither a BSData rule of the unit, nor a keyword of its weapons, nor named in an ability it uses",
+  "reason": "The new codex's datasheet has Deadly Demise D3; New Recruit (BSData) prints Deadly Demise 1. The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Contemptor-Galatus-Dreadnought.html, CORE ABILITIES: \"Damaged 4, Deadly Demise D3\"; verify/sources/nr/lite-knights.txt line 207 (Rules: \"Martial Ka'tah, Deadly Demise 1, …\")."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "contemptor-galatus-dreadnought",
+  "field": "rules",
+  "app": "",
+  "source": "Deadly Demise 1",
+  "where": "Contemptor-Galatus Dreadnought › rule Deadly Demise 1: rule missing in the app",
+  "reason": "The new codex's datasheet has Deadly Demise D3; New Recruit (BSData) prints Deadly Demise 1. The owner, 2026-10-23: the new codex applies everywhere; the app has the new Codex: Adeptus Custodes as Wahapedia prints it.",
+  "evidence": "verify/.cache/waha/ds/adeptus-custodes_Contemptor-Galatus-Dreadnought.html, CORE ABILITIES: \"Damaged 4, Deadly Demise D3\"; verify/sources/nr/lite-knights.txt line 207 (Rules: \"Martial Ka'tah, Deadly Demise 1, …\")."
  }
 ]
