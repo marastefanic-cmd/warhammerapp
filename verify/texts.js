@@ -985,10 +985,19 @@ for (const fk of FACTIONS) {
 // Wahapedia "Army Rules": a rule starts at a short name line ("Waaagh!", "Code Chivalric") that is followed by a long
 // line; its body runs to the next name line, without its "FAQ"/"Errata" spoilers. A short line followed by bullet
 // points is a heading inside the rule (Doctrina Imperatives: "Protector Imperative", then its bullets), not a new rule.
+// A short line the page draws as a sub-heading (<span class="hi_custom">, the Adeptus Custodes' "Favoured Ka’tah" inside
+// Martial Ka’tah) and not as a rule's own heading (<h3>) is a heading inside the rule above it.
+function wahaSubHeads(fk) {
+  const h = rawHtml(fk), h3 = new Set(), sub = new Set();
+  for (const m of h.matchAll(/<h3\b[^>]*>([^<]+)</g)) h3.add(norm(decode(m[1])));
+  for (const m of h.matchAll(/<span class="hi_custom">([^<]+)</g)) sub.add(norm(decode(m[1])));
+  return new Set([...sub].filter(t => !h3.has(t)));
+}
 function wahaArmyRules(fk) {
   const sec = wahaSection(fk, 'Army Rules'); if (!sec) return null;
   const L = docLines(sec.d, sec.pi, sec.pi);
-  const isName = i => { const t = L[i].text, n = L[i + 1] && L[i + 1].text; return t.length < 50 && /^[A-Z]/.test(t) && /[a-z]/.test(t) && !/[.:,;]/.test(t) && !/ Army Rule$/.test(t) && !/^(Errata|FAQ|Show|FAQ \/ Errata)$/.test(t) && !!n && n.length >= 35 && !/^- /.test(n); };
+  const SUB = wahaSubHeads(fk);
+  const isName = i => { const t = L[i].text, n = L[i + 1] && L[i + 1].text; return t.length < 50 && /^[A-Z]/.test(t) && /[a-z]/.test(t) && !/[.:,;]/.test(t) && !/ Army Rule$/.test(t) && !/^(Errata|FAQ|Show|FAQ \/ Errata)$/.test(t) && !!n && n.length >= 35 && !/^- /.test(n) && !SUB.has(norm(t)); };
   const rules = []; let cur = null, note = false;
   for (let i = 0; i < L.length; i++) {
     if (isName(i)) { cur = { name: L[i].text, at: L[i], body: [] }; rules.push(cur); note = false; continue; }
