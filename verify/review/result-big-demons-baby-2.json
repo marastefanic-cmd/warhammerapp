@@ -1,0 +1,36 @@
+[
+ {
+  "key": "30f5e8c11eeba055",
+  "where": "Khorne Daemonkin · Daemonic Fury",
+  "verdict": "fix",
+  "why": "Who/when/cost are right (1CP, start of your Fight phase, target a BLOOD LEGIONS unit, which selects a friendly WORLD EATERS unit within 6\"; melee weapons; GW's World Eaters Faction Pack has no Rules Update to this stratagem, only to Disciple of Khorne and Summoned by Slaughter). But the note '[LANCE] or [LANCE], [TWIN-LINKED]' reads as a choice: the rule always gives [LANCE] (until the end of the turn) and adds [TWIN-LINKED] only if Daemonic Rage is active, and that one lasts until the end of the phase, not the turn; the when's '(until the end of the turn)' wrongly covers both. Fix uses the house form for a conditional extra (Armed to da Teef: 'x (riled up: y)'), moves the durations into the note. The picks are fine as they are (the Damage tab uses them).",
+  "fix": {
+   "help": {
+    "to": { "all": ["Faction: World Eaters"] },
+    "by": { "all": ["Faction: Blood Legions"] },
+    "via": "its target: a BLOOD LEGIONS unit within 6\"",
+    "mod": {
+     "kind": "melee",
+     "when": "Start of your Fight phase, selected by its target, a friendly BLOOD LEGIONS unit within 6\"",
+     "note": "[LANCE] until the end of the turn (Daemonic Rage active: also [TWIN-LINKED] until the end of the phase)",
+     "pick": [
+      { "name": "[LANCE]", "note": "[LANCE]" },
+      { "name": "Daemonic Rage active", "note": "[LANCE], [TWIN-LINKED]" }
+     ]
+    }
+   }
+  }
+ },
+ {
+  "key": "aa0b2dc073430170",
+  "where": "unitMods",
+  "verdict": "ok",
+  "why": "The only change concatenates helpedBy(u)'s help.mod with from/strat/cp, same shape as eligible stratagem mods, so the footnote, CP prefix and Damage tab tick work as for any stratagem. No double entry: Daemonic Fury has no top-level mod, so the eligible() path adds nothing for the Lord on Juggernaut unit (BLOOD LEGIONS + WORLD EATERS); it gets the footnote once, via help. kind 'melee' filters it to melee tables only. Snapshot: footnote on Angron, Daemon Prince, Master of Executions, Lord on Juggernaut + Berzerkers, Goremongers, Jakhals; none on Skarbrand, Bloodthirster, Flesh Hounds (BLOOD LEGIONS only). Screenshot 14 shows it as a stratagem with the two picks."
+ },
+ {
+  "key": "4d4bd04ff488a071",
+  "where": "helpedBy",
+  "verdict": "ok",
+  "why": "allStratagems(a) lists only the army's detachments' stratagems (plus Core), so Princes, Standard and Super Terminators (Berzerker Warband/Vessels of Wrath/Butchers of Khorne, all units only Faction: World Eaters) can never get it. The snapshots confirm: 'Daemonic Fury' shows up only in big-demons-baby.txt. In Big demons baby every WORLD EATERS unit qualifies, because there is at least one other BLOOD LEGIONS unit (Skarbrand, Bloodthirster, Flesh Hounds). x !== u is the conservative reading: the Lord unit is not counted as helping itself, but it does get the footnote because other BLOOD LEGIONS units are in the list. The hasKw match on unit keywords is right for an attached unit, which has both faction keywords (Disciple of Khorne Rules Update: the Lord has BLOOD LEGIONS instead of WORLD EATERS; the Berzerkers keep WORLD EATERS)."
+ }
+]
