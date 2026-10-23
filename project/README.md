@@ -1,18 +1,17 @@
-# The Kunnin' Kodex Claude Project
+# The rules judge: a Claude Project
 
-A Claude Project (claude.ai → Projects) that answers rules questions on your Claude subscription, with the app handing it the question.
+A Claude Project (claude.ai → Projects) that answers Warhammer 40,000 11th edition rules questions for any faction, on your Claude subscription. Its instructions make it look up the current rule every time (GW's Faction Packs and FAQs, Wahapedia's 11th edition pages), so it does not go stale; the app can hand it a question with your list as extra context.
 
 ## Set up once
-1. In Claude, create a Project (e.g. "Kunnin' Kodex").
+1. In Claude, create a Project (e.g. "Rules judge"). Goal and context can stay empty.
 2. Paste the text of `instructions.md` into the Project's instructions.
-3. Add these files to the Project's knowledge: `project/00-start-here.md`, `project/kodex-lists.md`, `rules/core-rules.md`, and the GW and codex files (`core-and-key-rules-updates.md`, `event-companion.md`, `pack-*.md`, `codex-*.md`), which are sent to you separately and are not on the public site.
-4. Optional skills (Settings → Capabilities → Skills, with code execution on): upload `project/skills/kodex-dice-maths.zip` and `project/skills/kodex-game-review.zip` (make.js builds them).
-5. Copy the Project's link (claude.ai/project/…) into the app: Settings → Rules questions → Your Claude Project.
+3. Add two files to the Project's knowledge: `core-rules.md` and `detachment-dispositions.md`.
+4. Skills (Settings → Capabilities → Skills; code execution and web search on): upload `skills/kodex-rules-lookup.zip`, and optionally `skills/kodex-dice-maths.zip` and `skills/kodex-game-review.zip`.
+5. Turn on web search for the Project's chats.
+6. Optional: copy the Project's link (claude.ai/project/…) into the app: Settings → Rules questions → Your Claude Project.
 
 ## Use
-The first time, the link may open claude.ai in a browser view rather than the Claude app: sign in there once, or long-press the link to open it in the Claude app.
+Ask in a new chat in the Project; no need to say the game or edition. From the app: tap ?, type the question, "Copy and open Claude", paste. The first time, the link may open claude.ai in a browser view: sign in once, or long-press the link to open the Claude app.
 
-Tap ? in the app, type the question, tap "Copy and open Claude", start a chat in the Project and paste. "Ask about this" on a unit, stratagem or rule adds its full text to what is copied.
-
-## When a list changes
-Each release rebuilds `kodex-lists.md` (`node project/make.js`). Replace that file in the Project; its first line shows the data version.
+## Keeping it current
+Faction rules are read live each time. The two files carry their date: ask the Project "is anything out of date?" now and then. If core-rules.md or detachment-dispositions.md is older than GW's newest documents, take the new copies from this folder (each release rebuilds them: `node project/make.js`) and replace them in the Project.
