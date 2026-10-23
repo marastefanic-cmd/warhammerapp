@@ -2038,6 +2038,7 @@
    ],
    "turn": "your"
   },
+  "ability-tag | princes · Lord on Juggernaut · Lord on Juggernaut · Archslaughterer": "Enhancement, Once per battle, per army",
   "ability-timing | princes · Lord on Juggernaut · Khorne Berzerkers · Blood Surge": {
    "ph": [
     "shooting"
@@ -2284,6 +2285,7 @@
    ],
    "turn": "your"
   },
+  "ability-tag | pubstomper · Exalted Sorcerer · Exalted Sorcerer · Incandaeum": "Enhancement, Once per battle",
   "ability-timing | pubstomper · Exalted Sorcerer · Rubric Marines · Bringers of Change": {
    "ph": [
     "movement",
@@ -2307,6 +2309,7 @@
    ],
    "turn": "your"
   },
+  "ability-tag | pubstomper · Sorcerer in Terminator Armour · Sorcerer in Terminator Armour · Umbralefic Crystal": "Enhancement, Once per battle, per army",
   "ability-timing | pubstomper · Tzaangors · Ambushing Hunters": {
    "at": "End of your opponent’s turn",
    "ph": [

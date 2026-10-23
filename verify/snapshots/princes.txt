@@ -736,7 +736,7 @@ Enhancement
 Once per battle, per army
 Your Command
 
-Enhancement · Command · Your turn
+Enhancement · Once per battle, per army · Command · Your turn
 
 WORLD EATERS model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, every Blessing of Khorne is active for this unit until the start of your next turn.
 
@@ -3159,7 +3159,7 @@ Enhancement
 Once per battle, per army
 Your Command
 
-Enhancement · Command · Your turn
+Enhancement · Once per battle, per army · Command · Your turn
 
 WORLD EATERS model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, every Blessing of Khorne is active for this unit until the start of your next turn.
 
@@ -3719,7 +3719,7 @@ Ask about this unit
 Chaos Rhino ›
 
 ######## popup ability:princes|Archslaughterer|**WORLD EATERS** model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, every **Blessing of Khorne** is active for this unit until the start of your next turn. · FORGEFIEND Princes
-ABILITY · ENHANCEMENT · COMMAND · YOUR TURN
+ABILITY · ENHANCEMENT · ONCE PER BATTLE, PER ARMY · COMMAND · YOUR TURN
 
 Archslaughterer
 

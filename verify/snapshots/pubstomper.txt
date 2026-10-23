@@ -711,7 +711,7 @@ Enhancement
 Once per battle
 Your Shooting
 
-Enhancement · Shooting · Your turn
+Enhancement · Once per battle · Shooting · Your turn
 
 EXALTED SORCERER model only. Once per battle, when selecting a Ritual for the bearer to attempt, you can select Doombolt, even if a model from your army have already attempted to manifest that Ritual this phase.
 
@@ -749,7 +749,7 @@ Enhancement
 Once per battle, per army
 Your Command/Move
 
-Enhancement · Command / Movement · Your turn
+Enhancement · Once per battle, per army · Command / Movement · Your turn
 
 THOUSAND SONS model only. (Once per battle, per army) In your Command phase, if this unit is unengaged, you can use this ability. If you do:
 
@@ -2752,7 +2752,7 @@ Enhancement
 Once per battle
 Your Shooting
 
-Enhancement · Shooting · Your turn
+Enhancement · Once per battle · Shooting · Your turn
 
 EXALTED SORCERER model only. Once per battle, when selecting a Ritual for the bearer to attempt, you can select Doombolt, even if a model from your army have already attempted to manifest that Ritual this phase.
 
@@ -2964,7 +2964,7 @@ Enhancement
 Once per battle, per army
 Your Command/Move
 
-Enhancement · Command / Movement · Your turn
+Enhancement · Once per battle, per army · Command / Movement · Your turn
 
 THOUSAND SONS model only. (Once per battle, per army) In your Command phase, if this unit is unengaged, you can use this ability. If you do:
 
@@ -3438,7 +3438,7 @@ UNITMagnus the Red
 Ask about this ability
 
 ######## popup ability:pubstomper|Incandaeum|**EXALTED SORCERER** model only. Once per battle, when selecting a **Ritual** for the bearer to attempt, you can select Doombolt, even if a model from your army have already attempted to manifest that Ritual this phase. · PUBSTOMPER Pubstomper
-ABILITY · ENHANCEMENT · SHOOTING · YOUR TURN
+ABILITY · ENHANCEMENT · ONCE PER BATTLE · SHOOTING · YOUR TURN
 
 Incandaeum
 
@@ -3485,7 +3485,7 @@ Ask about this ability
 - Place this unit in **strategic reserves**.
 - This unit has **Deep Strike** until the start of your next Shooting phase.
 - This unit must make an **ingress move** in your next Movement phase (including in your first turn). · PUBSTOMPER Pubstomper
-ABILITY · ENHANCEMENT · COMMAND / MOVEMENT · YOUR TURN
+ABILITY · ENHANCEMENT · ONCE PER BATTLE, PER ARMY · COMMAND / MOVEMENT · YOUR TURN
 
 Umbralefic Crystal
 

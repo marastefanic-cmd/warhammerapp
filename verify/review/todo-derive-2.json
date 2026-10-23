@@ -1,5 +1,44 @@
 [
  {
+  "army": "princes",
+  "kind": "ability-tag",
+  "where": "princes · Lord on Juggernaut · Archslaughterer",
+  "judgement": {
+   "tag": "Enhancement · Once per battle, per army"
+  },
+  "source": {
+   "ability": "Archslaughterer",
+   "text": "**WORLD EATERS** model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, every **Blessing of Khorne** is active for this unit until the start of your next turn."
+  },
+  "key": "b87fb18756a65a5f"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-tag",
+  "where": "pubstomper · Exalted Sorcerer · Incandaeum",
+  "judgement": {
+   "tag": "Enhancement · Once per battle"
+  },
+  "source": {
+   "ability": "Incandaeum",
+   "text": "**EXALTED SORCERER** model only. Once per battle, when selecting a **Ritual** for the bearer to attempt, you can select Doombolt, even if a model from your army have already attempted to manifest that Ritual this phase."
+  },
+  "key": "a5ad2af6f741a824"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-tag",
+  "where": "pubstomper · Sorcerer in Terminator Armour · Umbralefic Crystal",
+  "judgement": {
+   "tag": "Enhancement · Once per battle, per army"
+  },
+  "source": {
+   "ability": "Umbralefic Crystal",
+   "text": "**THOUSAND SONS** model only. (Once per battle, per army) In your Command phase, if this unit is **unengaged**, you can use this ability. If you do:\n- Place this unit in **strategic reserves**.\n- This unit has **Deep Strike** until the start of your next Shooting phase.\n- This unit must make an **ingress move** in your next Movement phase (including in your first turn)."
+  },
+  "key": "fb1643ee9accc02a"
+ },
+ {
   "army": "code",
   "kind": "code",
   "where": "onceTag",
