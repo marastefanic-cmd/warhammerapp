@@ -824,9 +824,20 @@ for (const fk of FACTIONS) {
     const W = wahaDetachment(fk, det.name);
     const P = packDetachment(fk, det.name);
     if (P && P.error) fail('detachment', army, U, 'source', det.name, P.error, P.d.label);
-    const pack = P && !P.error ? P : null;
+    let pack = P && !P.error ? P : null;
     count('detachment');
     if (!W) { fail('detachment', army, U, 'name', det.name, 'no Wahapedia section of this name in ' + DOCS['waha:' + fk].label, ''); continue; }
+    // the pack prints a detachment of this name that has nothing in common with Wahapedia's (another rule, no enhancement and no
+    // stratagem of the same name: the Adeptus Custodes pack's Might of the Moritoi): two detachments, not two wordings of one. That is a
+    // failure to declare; the app's detachment is then checked against Wahapedia's
+    if (pack) {
+      const share = (a, b) => a.some(x => b.some(y => norm(x.name) === norm(y.name)));
+      if (!(pack.rule && W.rule && norm(pack.rule.name || '') === norm(W.rule.name || '')) && !share(pack.enh, W.enh) && !share(pack.strats, W.strats)) {
+        fail('detachment', army, U, 'source (Faction Pack)', det.name, 'the Faction Pack prints another detachment of this name (rule ' + (pack.rule && pack.rule.name) + '; enhancements ' +
+          pack.enh.map(e => e.name).join(', ') + '; stratagems ' + pack.strats.map(x => x.name).join(', ') + '), nothing in common with ' + W.where + ', which the app is checked against', pack.where);
+        pack = null;
+      }
+    }
     const where = (pack ? pack.where + '; ' : '') + W.where;
     provRow(army + ' / ' + U, 'name', W.d, W.d.starts[0], { where: W.where });
     count('detachment');

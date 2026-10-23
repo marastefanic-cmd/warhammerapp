@@ -707,7 +707,8 @@ function compareArmy(D, A, nr, out, srcFile) {
     const enh = nu.models.map(m => nrOptions(m.options, enhNames).enhancement).find(Boolean) || null;
     let c = pool.filter(u => nm(u.name).toUpperCase() === nm(nu.header));
     if (c.length > 1 && c.some(u => u.pts === nu.pts)) c = c.filter(u => u.pts === nu.pts);
-    if (c.length > 1) c = c.filter(u => (u.enhancement ? nm(u.enhancement) : null) === enh);
+    // (an UPGRADE enhancement, on the unit as `upgrade`, tells two units apart too: the Telemon with Augury Uplink)
+    if (c.length > 1) c = c.filter(u => (u.enhancement || u.upgrade ? nm(u.enhancement || u.upgrade) : null) === enh);
     // two units printed alike ("Supporting: Tankbustas[1]" and "[2]"): the next one of them
     if (c.length > 1 && c.every(u => u.pts === c[0].pts && (u.leads || '') === (c[0].leads || ''))) c = [c[0]];
     chk('units');
