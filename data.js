@@ -1281,6 +1281,130 @@ const FACTIONS = {
       }
     }
   },
+  'adeptus-custodes': {
+    name: 'Adeptus Custodes',
+    // army rules: Wahapedia, Adeptus Custodes, Army Rules (Codex: Adeptus Custodes). GW's Faction Pack 1.2 (legal from 30 Sep 2026)
+    // prints no army rule, and its Rules Updates change none of these. Martial Ka’tah: the rule, then its Favoured Ka’tah paragraph
+    // (a sub-heading inside the rule on Wahapedia); the table is the six ka’tah abilities (name, then their WHEN / TARGET / EFFECT).
+    // Wahapedia also lists Special Move Types (the Shock Disembark Move, for a unit embarked within a TRANSPORT): no TRANSPORT in these
+    // lists, so it is left out.
+    armyRules: [
+      { name:'Martial Ka’tah', at:'Start of your Command phase', ph:['command','movement','shooting','fight'], turn:'either', turns:{ command:'your', movement:'your', shooting:'your' },
+        text:'At the start of your Command phase, friendly **ADEPTUS CUSTODES** units with this ability are **readied**. While a friendly unit is **readied**, you can select one of the **ka’tah abilities** presented below for that unit to use. If you do, that unit is no longer **readied**.\nEach **ka’tah ability** will tell you when that **ka’tah ability** can be used, and the effects that **ka’tah ability** has on the unit using it.\nWe recommend placing a token next to each **readied** unit, removing it when that unit is no longer **readied**.\n**Favoured Ka’tah**\nAll **detachments** tagged ‘Unique: Shield Host’ state a Favoured Ka’tah. If you selected one of these **detachments**, the **ka’tah ability** that is the Favoured Ka’tah of that **detachment** grants the additional effect listed in that **detachment**.\n**Example:** If you selected the Solar Watch **detachment**, when you select the Calistus **ka’tah ability** for a **readied** unit, that unit has +2" **M** in addition to the normal effect of Calistus.',
+        table:[
+          ['Conservai', 'KA’TAH ABILITY\n**WHEN:** Your Command phase.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Until the end of the turn:\n- Being **engaged**/**battle-shocked** does not prevent your unit from being eligible to start an action.\n- Starting an action does not prevent your unit from being eligible to shoot.'],
+          ['Calistus', 'KA’TAH ABILITY\n**WHEN:** Your Movement phase, when a friendly **readied** unit is selected to move.\n**TARGET:** That **readied** unit.\n**EFFECT:** When your unit makes a normal/advance/fall-back move, your unit can move through all types of model.'],
+          ['Salvus', 'KA’TAH ABILITY\n**WHEN:** Your Shooting phase, when a friendly **readied** unit is selected to shoot.\n**TARGET:** That **readied** unit.\n**EFFECT:** Your unit can ignore modifiers to your unit’s:\n- **BS.**\n- Hit rolls and wound rolls.'],
+          ['Dacatarai', 'KA’TAH ABILITY\n**WHEN:** Start of the Fight phase.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Your unit’s melee attacks that target an enemy unit (excluding **MONSTER**/**VEHICLE** units) can **re-roll hit rolls** of 1.'],
+          ['Kaptaris', 'KA’TAH ABILITY\n**WHEN:** Start of the Fight phase.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Melee attacks that target your unit have -1 to hit rolls.'],
+          ['Rendax', 'KA’TAH ABILITY\n**WHEN:** Fight phase, when a friendly **readied** unit is selected to fight.\n**TARGET:** One friendly **readied** unit.\n**EFFECT:** Your unit’s melee attacks have **[Lethal Hits: Monster/Vehicle]**.']
+        ],
+        // the Damage tab's reading (read by it alone): the ka’tah abilities that change your unit's attacks, each a box the player ticks
+        // (whether the unit is readied and which ka’tah it uses are theirs to say). Salvus: the calculator counts the hit roll part.
+        // Kaptaris protects the unit and Calistus / Conservai change no numbers of its attacks
+        calcMods:[
+          { kind:'ranged', from:'Martial Ka’tah', when:'Salvus (your Shooting phase, a readied unit selected to shoot)', note:'can ignore modifiers to BS, hit rolls and wound rolls', calc:{ ignoreHitMods:true } },
+          { kind:'melee', from:'Martial Ka’tah', when:'Dacatarai (start of the Fight phase, a readied unit), vs non-MONSTER/VEHICLE targets', note:'re-roll hit rolls of 1', vs:{ none:['Monster','Vehicle'] } },
+          { kind:'melee', from:'Martial Ka’tah', when:'Rendax (Fight phase, a readied unit selected to fight), vs MONSTER/VEHICLE targets', note:'[LETHAL HITS]', vs:{ any:['Monster','Vehicle'] } }
+        ] },
+      { name:'Aegis of the Emperor',
+        text:'Friendly **ADEPTUS CUSTODES** units with this ability have Feel No Pain 5+ against mortal wounds.' },
+      { name:'Aquila Commander', at:'Start of the battle round', ph:['command'], turn:'either',
+        text:'At the start of the battle round, if a model with this ability is your **WARLORD**, gain 1CP.' },
+      { name:'Daughters of the Abyss',
+        text:'- Friendly **ANATHEMA PSYKANA** units with this ability have Feel No Pain 3+ against psychic attacks.\n- Friendly **ANATHEMA PSYKANA** units with this ability have the following ability:\n**Psychic Null (Aura):** Friendly **ADEPTUS CUSTODES** units within 6" of this unit have **Feel No Pain 5+** against **psychic attacks**.' },
+      // how an Adeptus Custodes army includes the Prosecutors and Witchseekers (ANATHEMA PSYKANA, not ADEPTUS CUSTODES)
+      { name:'Anathema Psykana',
+        text:'You can include **ANATHEMA PSYKANA** units in your army, even though they do not have the **ADEPTUS CUSTODES** faction keyword.\nWhen mustering your army, unless otherwise stated:\n- You cannot select **ANATHEMA PSYKANA** as your army faction.\n- You cannot select an **ANATHEMA PSYKANA** model to be your **WARLORD**.' }
+    ],
+    detachments: {
+      // Emperor’s Chosen: a codex detachment the Faction Pack 1.2 does not print; rule, enhancements and stratagems from Wahapedia
+      // (the pack's Rules Updates change none of them)
+      'emperors-chosen': {
+        name:'Emperor’s Chosen', dp:1,
+        // ph/turn: "selected to attack" (shoot or fight); the Favoured Ka’tah's additional effect is Rendax's, in the Fight phase
+        rule:{ name:'Magna Imperator', ph:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, needs:{ all:['Faction: Adeptus Custodes'] },
+          mod:{ kind:'all', when:'Selected to attack', note:'re-roll one hit roll and re-roll one wound roll' },
+          text:'When a friendly **ADEPTUS CUSTODES** unit is **selected to attack**, that unit’s attacks can:\n- Re-roll one **hit roll**.\n- Re-roll one **wound roll**.\n**Favoured ka’tah: RENDAX**\n**Additional Effect:** You can select one enemy **MONSTER**/**VEHICLE** unit **engaged** with your unit and roll one D6:\n- On a 1-2, that enemy unit suffers 1 **mortal wound**.\n- On a 3-5, that enemy unit suffers D3 **mortal wounds**.\n- On a 6, that enemy unit suffers 3 **mortal wounds**.' },
+        enhancements:[
+          { name:'From the Hall of Armouries', pts:15, text:'**ADEPTUS CUSTODES** model only. This model’s melee attacks have **[Devastating Wounds]**.' },
+          { name:'Radiant Mantle', pts:40, text:'**ADEPTUS CUSTODES INFANTRY** model only. Attacks that target this unit have -1 to **hit rolls**.' }
+        ],
+        stratagems:[
+          { id:'in-auramite-clad', gist:'An enemy unit targets your unit: attacks that target your unit have -1 AP until that enemy unit has attacked.', def:'their Shooting phase or the Fight phase: -1 AP to attacks that target it (until that enemy unit has attacked)', name:'In Auramite Clad', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'opp' }, needs:{ all:['Faction: Adeptus Custodes'], none:['Custodian Wardens'] },
+            when:'Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **ADEPTUS CUSTODES** unit (excluding **CUSTODIAN WARDENS** units).',
+            target:'That **ADEPTUS CUSTODES** unit.',
+            effect:'Attacks that target your unit have -1 **AP** until that enemy unit has attacked.' },
+          { id:'superhuman-focus', gist:'End of any phase: your unit that is not readied is readied (not the same unit more than once per battle round).', name:'Superhuman Focus', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Faction: Adeptus Custodes'] },
+            when:'End of any phase.',
+            target:'One friendly **ADEPTUS CUSTODES** unit that is not **readied**.',
+            effect:'Your unit is **readied**.',
+            restrictions:'You cannot select the same unit as the target of this **stratagem** more than once per battle round.' },
+          // Wahapedia strikes MONSTER through (its mark for a keyword that does not appear in the faction)
+          { id:'impenetrable-bastion', gist:'Select one objective your unit is controlling: that objective is secured.', name:'Impenetrable Bastion', cp:1, phases:['movement'], turn:'your', needs:{ all:['Faction: Adeptus Custodes'], none:['Monster','Vehicle'] },
+            when:'End of your Movement phase.',
+            target:'One friendly **ADEPTUS CUSTODES** unit (excluding ~~MONSTER~~/**VEHICLE** units).',
+            effect:'Select one **objective** your unit is controlling. That **objective** is **secured**.' }
+        ]
+      },
+      // Grav-Assault Force: a codex detachment the Faction Pack 1.2 does not print; Wahapedia wording (no Rules Updates for it)
+      'grav-assault-force': {
+        name:'Grav-Assault Force', dp:1,
+        rule:{ name:'Flare Shields', needs:{ all:['Grav-assault'] }, def:'4+ InSv against ranged attacks',
+          text:'Friendly **GRAV-ASSAULT** units have 4+ **InSv** against ranged attacks.' },
+        enhancements:[
+          { name:'Anti-gravitic Mobility', pts:15, upgrade:true, text:'**GRAV-ASSAULT** unit only. When this unit makes a **fall-back move**, that **fall-back move** does not prevent this unit from being **eligible to shoot**.' },
+          { name:'Combat Deployment', pts:20, upgrade:true, text:'**GRAV-ASSAULT TRANSPORT** model only. When a friendly **ADEPTUS CUSTODES** unit is selected to make a **disembark move** from this unit, until the end of the turn:\n- That unit can re-roll **charge rolls**.\n- Enemy units cannot target that unit with **snap shooting** attacks.' }
+        ],
+        stratagems:[
+          { id:'victory-before-death', gist:'Your unit within range of an objective is destroyed: an objective it was controlling, with no enemy units (excluding AIRCRAFT) within range, is secured.', name:'Victory Before Death', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Grav-assault'] },
+            when:'Any phase, when a friendly **GRAV-ASSAULT** unit within range of an **objective** is **destroyed**.',
+            target:'That **GRAV-ASSAULT** unit. You can target that unit with this **stratagem** even though it is **destroyed**.',
+            effect:'Select one **objective** that:\n- Your unit was controlling when it was **destroyed**.\n- Has no enemy units (excluding **AIRCRAFT** units) within range of it.\nThat **objective** is **secured**.' },
+          { id:'advanced-stabilisers', gist:'Your unit’s ranged attacks have [ASSAULT].', mod:{ kind:'ranged', when:'Your Shooting phase, selected to shoot', note:'ranged attacks have [ASSAULT]' }, name:'Advanced Stabilisers', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Grav-assault'] },
+            when:'Your Shooting phase, when a friendly **GRAV-ASSAULT** unit is **selected to shoot**.',
+            target:'That **GRAV-ASSAULT** unit.',
+            effect:'Your unit’s ranged attacks have **[Assault]**.' },
+          // the calculator counts the hit roll part (BS and hit roll modifiers)
+          { id:'inevitable-annihilation', gist:'Your unit can ignore modifiers to its BS and hit rolls.', mod:{ kind:'ranged', when:'Your Shooting phase, selected to shoot', note:'can ignore modifiers to BS and hit rolls', calc:{ ignoreHitMods:true } }, name:'Inevitable Annihilation', cp:1, phases:['shooting'], turn:'your', needs:{ all:['Grav-assault'] },
+            when:'Your Shooting phase, when a friendly **GRAV-ASSAULT** unit is **selected to shoot**.',
+            target:'That **GRAV-ASSAULT** unit.',
+            effect:'Your unit can ignore modifiers to your unit’s:\n- **BS**.\n- **Hit rolls**.' }
+        ]
+      },
+      // Might of the Moritoi: the codex detachment, as Wahapedia and New Recruit print it (Moritoi Ancients; the list's Memento Moritoi
+      // and Augury Uplink). GW's Faction Pack 1.2 prints a different detachment of the same name (UNIQUE: ARMOURY; March of the Honoured
+      // Dead, Interred Expertise, Auramite Sarcophagus, Flawless Construction, Unstoppable Advance, Prioritised Eradication), which has
+      // neither enhancement: declared in verify/deviations-texts.json. The pack's Rules Updates change nothing here
+      'might-of-the-moritoi': {
+        name:'Might of the Moritoi', dp:1,
+        // the re-rolls for below starting strength / below half-strength: one pick (OC +2 at starting strength is not an attack)
+        rule:{ name:'Moritoi Ancients', needs:{ all:['Faction: Adeptus Custodes','Dreadnought'] },
+          mod:{ kind:'all', when:'Below starting strength, or below half-strength', note:'below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1',
+            pick:[{ name:'Below starting strength', note:'re-roll hit rolls of 1' }, { name:'Below half-strength', note:'re-roll hit rolls of 1 and wound rolls of 1' }] },
+          text:'- While a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit is at **starting strength**, that unit has +2 **OC**.\n- While a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit is **below starting strength**, that unit’s attacks can re-roll **hit rolls** of 1.\n- While a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit is **below half-strength**, that unit’s attacks can:\n- Re-roll **hit rolls** of 1.\n- Re-roll **wound rolls** of 1.' },
+        // limit: Wahapedia prints "(one per army)" after the name; New Recruit and BSData name them without it
+        enhancements:[
+          { name:'Memento Moritoi', limit:'one per army', pts:30, upgrade:true, text:'**ADEPTUS CUSTODES DREADNOUGHT** model only. This model’s melee attacks have +1 **A**, **S** and **D**.' },
+          { name:'Augury Uplink', limit:'one per army', pts:30, upgrade:true, text:'**ADEPTUS CUSTODES DREADNOUGHT** model only. This model has **Feel No Pain 5+**.' }
+        ],
+        stratagems:[
+          { id:'honoured-interred', gist:'Your unit has the Honoured Interred aura: friendly ADEPTUS CUSTODES units within 6" can re-roll hit rolls of 1.', mod:{ kind:'all', when:'Your Shooting phase or the Fight phase (Honoured Interred, friendly ADEPTUS CUSTODES units within 6")', note:'re-roll hit rolls of 1' }, name:'Honoured Interred', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'your' }, needs:{ all:['Faction: Adeptus Custodes','Dreadnought'] },
+            when:'Your Shooting phase or the Fight phase.',
+            target:'One friendly **ADEPTUS CUSTODES DREADNOUGHT** unit.',
+            effect:'Your unit has the following ability:\n**Honoured Interred (Aura):** Friendly **ADEPTUS CUSTODES** units within 6" of this unit can re-roll **hit rolls** of 1.' },
+          { id:'unceasing-onslaught', gist:'Your unit ended an advance move: its ranged attacks have [ASSAULT] until the end of the turn, and that move does not prevent it from declaring a charge.', mod:{ kind:'ranged', when:'Ended an advance move this turn (until the end of the turn)', note:'ranged attacks have [ASSAULT]' }, name:'Unceasing Onslaught', cp:1, phases:['movement'], turn:'your', needs:{ all:['Faction: Adeptus Custodes','Dreadnought'] },
+            when:'Your Movement phase, when a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit ends an **advance move**.',
+            target:'That **ADEPTUS CUSTODES DREADNOUGHT** unit.',
+            effect:'- Your unit’s ranged attacks have **[Assault]** until the end of the turn.\n- That move does not prevent your unit from being **eligible to declare a charge**.' },
+          { id:'unstoppable-momentum', gist:'Your unit selected to move or declaring a charge has MOBILE.', name:'Unstoppable Momentum', cp:1, phases:['movement','charge'], turn:'your', needs:{ all:['Faction: Adeptus Custodes','Dreadnought'] },
+            when:'Your Movement/Charge phase, when a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit is **selected to move** or **declares a charge**.',
+            target:'That **ADEPTUS CUSTODES DREADNOUGHT** unit.',
+            effect:'Your unit has **MOBILE**.' }
+        ]
+      }
+    }
+  },
 };
 
 /* ---------------- armies ----------------
