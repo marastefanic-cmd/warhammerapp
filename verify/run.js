@@ -50,6 +50,7 @@ step('data', ['check.js']);
 step('invariants', ['verify/invariants.js']);
 step('choice', ['verify/choice.js']);
 step('bsdata', ['verify/bsdata.js']);
+step('dispositions', ['verify/dispositions.js']);   // each detachment's Force Dispositions against BSData
 step('nr', ['verify/nr.js']);
 step('texts', ['verify/texts.js']);
 step('calc', ['verify/calc-test.js']);   // the damage calculator against hand-worked cases

@@ -218,7 +218,11 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       go({ s:'pregame', army:armyId });
       const head = (document.querySelector('#view .sec-h h2') || {}).textContent || '';
       if(head !== 'Your list') out.push(['opp-ignored', armyId, 'the Overview is headed “' + head + '”']);
-      store.set('wh-ask', { key:'sk-ant-check' }); openAsk();
+      // outside Claude the ? opens the copy for the Claude Project (with a Copy button); with a key, "Other ways to ask" opens the key chat
+      store.set('wh-ask', { key:'sk-ant-check' }); askKeyChat = false; openAsk();
+      const copyNote = [...document.querySelectorAll('#sheetIn .note')].map(x => x.textContent).find(t => /^Copies your question/.test(t)) || '';
+      if(!document.querySelector('#sheetIn [data-askcopy]') || !/your whole list/.test(copyNote)) out.push(['ask-copy', armyId, 'no Copy button or note: “' + copyNote + '”']);
+      hideSheet(); askKeyChat = true; openAsk();
       const sent = [...document.querySelectorAll('#sheetIn .note')].map(x => x.textContent).find(t => /^Sent with each question/.test(t)) || '';
       if(sent !== 'Sent with each question: your list (' + A.name + '), the Core Rules and this screen.') out.push(['ask-sends', armyId, '“' + sent + '”']);
       hideSheet(); askConv = null; store.set('wh-ask', wasAsk == null ? null : wasAsk); store.set('wh-opp-' + armyId, wasOpp); delete sess.mine; delete sess.peekD;
