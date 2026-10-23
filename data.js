@@ -5214,6 +5214,202 @@ const ARMIES = [
     }
   ]
 },
+{
+  id:'lite-knights', name:'Lite Knights', faction:'adeptus-custodes', points:2000, pointsUsed:2000,
+  battleSize:'Strike Force', disposition:'Take and Hold',
+  detachments:['emperors-chosen','grav-assault-force','might-of-the-moritoi'],
+  source:'New Recruit, exported 23 Oct 2026',
+  units:[
+    {
+      id:'trajann-valoris-allarus-custodians', name:'Trajann Valoris', role:'Epic Hero', pts:445, ptsNote:'265 + Allarus Custodians 180', warlord:true,
+      leads:'Allarus Custodians',
+      models:['1× Trajann Valoris','1× Allarus Custodian','1× Allarus Custodian (Vexilla)'],
+      gear:[['Eagle’s Scream','Watcher’s Axe'],['Balistus grenade launcher','Castellan axe'],['Balistus grenade launcher','Castellan axe']],
+      stats:[
+        { name:'Trajann Valoris', M:'8"', T:'7', Sv:'2+', W:'10', Ld:'5+', OC:'3', InSv:'4+', base:'40mm', from:{ 'OC':'Vexilla' } },
+        { name:'Allarus Custodian ×2', M:'7"', T:'8', Sv:'2+', W:'6', Ld:'5+', OC:'3', InSv:'4+', base:'40mm', from:{ 'OC':'Vexilla' } }
+      ],
+      ranged:[
+        { name:'Eagle’s Scream', who:'Trajann Valoris', range:'24"', A:'2', BS:'2+', S:'6', AP:'-2', D:'2', kw:['ASSAULT','RAPID FIRE 2'] },
+        { name:'Balistus grenade launcher', who:'Allarus Custodians', n:2, range:'18"', A:'3', BS:'2+', S:'5', AP:'-1', D:'1', kw:['ASSAULT','BLAST 1'] },
+        { name:'Castellan axe', who:'Allarus Custodians', n:2, range:'24"', A:'2', BS:'2+', S:'5', AP:'-1', D:'2', kw:['ASSAULT','RAPID FIRE 2'] }
+      ],
+      melee:[
+        { name:'Watcher’s Axe', who:'Trajann Valoris', range:'Melee', A:'6', WS:'2+', S:'12', AP:'-3', D:'4', kw:['CLEAVE 1'] },
+        { name:'Castellan axe', who:'Allarus Custodians', n:2, range:'Melee', A:'3', WS:'2+', S:'10', AP:'-2', D:'4', kw:[] }
+      ],
+      abilities:[
+        { name:'Captain-General', who:'Trajann Valoris', tag:'Aura', text:'Friendly Adeptus Custodes units (excluding MONSTER/VEHICLE units) within 6" of this model can: Re-roll hit rolls of 1 Re-roll wound rolls of 1' },
+        { name:'Moment Shackle', who:'Trajann Valoris', text:'(Once per battle, per army) At the start of any phase, you can select one of the following to take effect until the end of the phase: This model’s Watcher’s Axe weapon has +3 A. This model has 3+ InSv.' },
+        { name:'Slayers of Tyrants', who:'Allarus Custodians', text:'This unit’s melee attacks that target a unit with a **T** greater than this unit’s **T** have +1 to **wound rolls**.' },
+        { name:'Vexilla', who:'Allarus Custodians', text:'This unit has +1 **OC**.\n- This unit can ignore modifiers to this unit’s **Ld**.' }
+      ],
+      rules:['Aquila Commander','Aegis of the Emperor','Martial Ka\'tah','Leader','Deep Strike','Feel No Pain 5+*','Feel No Pain 5+','Assault','Rapid Fire','Cleave','Blast'],
+      kw:['Character','Epic Hero','Faction: Adeptus Custodes','Imperium','Infantry','Trajann Valoris','Warlord','Allarus Custodians','Terminator'],
+      kwNote:'Allarus Custodians, Terminator come from the led Allarus Custodians.'
+    },
+    {
+      id:'prosecutor-squad', name:'Prosecutor Squad', role:'Infantry', pts:45, copies:2,
+      models:['4× Prosecutor'],
+      gear:[['Boltgun','Gun Stock']],
+      stats:[
+        { name:'Prosecutor ×4', M:'7"', T:'3', Sv:'3+', W:'1', Ld:'6+', OC:'2', InSv:'–', base:'32mm' }
+      ],
+      ranged:[
+        { name:'Boltgun', n:4, range:'24"', A:'1', BS:'3+', S:'5', AP:'-1', D:'1', kw:['ANTI-PSYKER 4+','ASSAULT','RAPID FIRE 1'] }
+      ],
+      melee:[
+        { name:'Gun Stock', n:4, range:'Melee', A:'3', WS:'3+', S:'3', AP:'0', D:'1', kw:[] }
+      ],
+      abilities:[
+        { name:'Purity of Execution', text:'In your Shooting phase, you can select one **visible** enemy unit within 18" of this unit. That unit is **detected**.\n- While a unit is **detected**, that unit has +3" **detection range**.' }
+      ],
+      rules:['Feel No Pain 3+*','Daughters of the Abyss','Assault','Anti','Rapid Fire'],
+      kw:['Anathema Psykana','Faction: Anathema Psykana','Imperium','Infantry','Prosecutor Squad']
+    },
+    {
+      id:'witchseeker-squad', name:'Witchseeker Squad', role:'Infantry', pts:55,
+      models:['4× Witchseeker'],
+      gear:[['Flamer','Gun Stock']],
+      stats:[
+        { name:'Witchseeker ×4', M:'7"', T:'3', Sv:'3+', W:'1', Ld:'6+', OC:'1', InSv:'–', base:'32mm' }
+      ],
+      ranged:[
+        { name:'Flamer', n:4, range:'12"', A:'3', BS:'–', S:'4', AP:'-1', D:'1', kw:['ANTI-PSYKER 4+','ASSAULT','BLAST 1','TORRENT'] }
+      ],
+      melee:[
+        { name:'Gun Stock', n:4, range:'Melee', A:'3', WS:'3+', S:'3', AP:'0', D:'1', kw:[] }
+      ],
+      abilities:[
+        { name:'Sanctified Flames', text:'In your Shooting phase, when this unit has shot, select one enemy unit hit by those attacks. That enemy unit makes a *battle-shock roll with -1 to that *battle-shock roll* if that enemy unit is a Psyker unit..' }
+      ],
+      rules:['Scouts 7"','Feel No Pain 3+*','Daughters of the Abyss','Anti','Torrent','Assault','Blast'],
+      kw:['Anathema Psykana','Faction: Anathema Psykana','Imperium','Infantry','Witchseeker Squad']
+    },
+    {
+      id:'witchseeker-squad-2', name:'Witchseeker Squad', role:'Infantry', pts:60,
+      models:['5× Witchseeker'],
+      gear:[['Flamer','Gun Stock']],
+      stats:[
+        { name:'Witchseeker ×5', M:'7"', T:'3', Sv:'3+', W:'1', Ld:'6+', OC:'1', InSv:'–', base:'32mm' }
+      ],
+      ranged:[
+        { name:'Flamer', n:5, range:'12"', A:'3', BS:'–', S:'4', AP:'-1', D:'1', kw:['ANTI-PSYKER 4+','ASSAULT','BLAST 1','TORRENT'] }
+      ],
+      melee:[
+        { name:'Gun Stock', n:5, range:'Melee', A:'3', WS:'3+', S:'3', AP:'0', D:'1', kw:[] }
+      ],
+      abilities:[
+        { name:'Sanctified Flames', text:'In your Shooting phase, when this unit has shot, select one enemy unit hit by those attacks. That enemy unit makes a *battle-shock roll with -1 to that *battle-shock roll* if that enemy unit is a Psyker unit..' }
+      ],
+      rules:['Scouts 7"','Feel No Pain 3+*','Daughters of the Abyss','Anti','Torrent','Assault','Blast'],
+      kw:['Anathema Psykana','Faction: Anathema Psykana','Imperium','Infantry','Witchseeker Squad']
+    },
+    {
+      id:'caladius-annihilator-grav-tank', name:'Caladius Annihilator Grav-tank', role:'Vehicle', pts:250,
+      models:['1× Caladius Annihilator Grav-tank'],
+      gear:[['Arachnus Blaze Carronade','Twin Lastrum Bolt Cannon','Armoured hull']],
+      stats:[
+        { name:'Caladius Annihilator Grav-tank', M:'10"', T:'11', Sv:'2+', W:'14', Ld:'5+', OC:'4', InSv:'5+, 4+*', base:'150×95mm Oval', from:{ 'InSv':'Flare Shields' } }
+      ],
+      ranged:[
+        { name:'Arachnus Blaze Carronade', range:'48"', A:'4', BS:'2+', S:'12', AP:'-3', D:'D6+2', kw:['LETHAL HITS: MONSTER/VEHICLE'] },
+        { name:'Twin Lastrum Bolt Cannon', range:'36"', A:'3', BS:'2+', S:'6', AP:'-2', D:'2', kw:['SUSTAINED HITS 1','TWIN-LINKED'] }
+      ],
+      melee:[
+        { name:'Armoured hull', range:'Melee', A:'4', WS:'4+', S:'6', AP:'0', D:'1', kw:[] }
+      ],
+      abilities:[
+        { name:'Advanced Firepower', text:'This unit’s ranged attacks that target a **MONSTER/VEHICLE** unit can:\n- Re-roll one **hit roll**.\n- Re-roll one **wound roll**.\n- Re-roll one **damage roll**.' },
+        { name:'Flare Shields', text:'This unit has a 4+ InSv against ranged attacks.' }
+      ],
+      rules:['Deadly Demise D3','Aegis of the Emperor','Feel No Pain 5+*','Damaged 5','Deep Strike','Lethal Hits','Sustained Hits'],
+      kw:['Caladius Annihilator Grav-tank','Faction: Adeptus Custodes','Fly','Frame','Grav-assault','Imperium','Vehicle']
+    },
+    {
+      id:'contemptor-achillus-dreadnought', name:'Contemptor-Achillus Dreadnought', role:'Vehicle', pts:230,
+      models:['1× Contemptor-Achillus Dreadnought'],
+      gear:[['Dreadspear','Lastrum storm bolter','Lastrum storm bolter']],
+      stats:[
+        { name:'Contemptor-Achillus Dreadnought', M:'9"', T:'10', Sv:'2+', W:'12', Ld:'5+', OC:'3', InSv:'5+', base:'60mm' }
+      ],
+      ranged:[
+        { name:'Dreadspear', range:'18"', A:'2', BS:'2+', S:'10', AP:'-3', D:'D3+2', kw:[] },
+        { name:'Lastrum storm bolter', n:2, range:'24"', A:'3', BS:'2+', S:'5', AP:'-1', D:'1', kw:['RAPID FIRE 3'] }
+      ],
+      melee:[
+        { name:'Dreadspear', range:'Melee', A:'5', WS:'2+', S:'12', AP:'-3', D:'D3+3', kw:['LANCE'] }
+      ],
+      abilities:[
+        { name:'Unyielding Ancient', text:'Attacks that target this unit with a **S** greater than this unit’s **T** have -1 to **wound rolls**.' }
+      ],
+      rules:['Martial Ka\'tah','Deadly Demise 1','Aegis of the Emperor','Feel No Pain 5+*','Damaged 4','Lance','Rapid Fire'],
+      kw:['Contemptor-Achillus Dreadnought','Dreadnought','Faction: Adeptus Custodes','Imperium','Vehicle','Walker']
+    },
+    {
+      id:'contemptor-galatus-dreadnought', name:'Contemptor-Galatus Dreadnought', role:'Vehicle', pts:250, upgrade:'Memento Moritoi',
+      models:['1× Contemptor-Galatus Dreadnought'],
+      gear:[['Warblade']],
+      stats:[
+        { name:'Contemptor-Galatus Dreadnought', M:'9"', T:'10', Sv:'2+', W:'12', Ld:'5+', OC:'3', InSv:'4+', base:'60mm' }
+      ],
+      ranged:[
+        { name:'Warblade', range:'12"', A:'4', BS:'–', S:'6', AP:'-1', D:'2', kw:['BLAST 2','TORRENT','TWIN-LINKED'] }
+      ],
+      melee:[
+        { name:'Warblade', range:'Melee', A:'9', WS:'2+', S:'11', AP:'-2', D:'4', kw:['CLEAVE 1','SUSTAINED HITS 1: non-MONSTER/VEHICLE'], from:{ 'A':'Memento Moritoi', 'S':'Memento Moritoi', 'D':'Memento Moritoi' } }
+      ],
+      abilities:[
+        { name:'Unyielding Ancient', text:'Attacks that target this unit with a **S** greater than this unit’s **T** have -1 to **wound rolls**.' },
+        { name:'Memento Moritoi', tag:'Upgrade', text:'This model’s melee attacks have +1 **A**, **S** and **D**.' }
+      ],
+      rules:['Martial Ka\'tah','Deadly Demise 1','Aegis of the Emperor','Feel No Pain 5+*','Damaged 4','Blast','Torrent','Twin-linked'],
+      kw:['Contemptor-Galatus Dreadnought','Dreadnought','Faction: Adeptus Custodes','Imperium','Vehicle','Walker']
+    },
+    {
+      id:'telemon-heavy-dreadnought', name:'Telemon Heavy Dreadnought', role:'Vehicle', pts:310, upgrade:'Augury Uplink',
+      models:['1× Telemon Heavy Dreadnought'],
+      gear:[['Spiculus bolt launcher','Dual Caestus Fists','Twin Neutronium Cascade Projectors','Twin Neutronium Cascade Projectors']],
+      stats:[
+        { name:'Telemon Heavy Dreadnought', M:'10"', T:'11', Sv:'2+', W:'14', Ld:'5+', OC:'4', InSv:'4+', base:'100mm' }
+      ],
+      ranged:[
+        { name:'Spiculus bolt launcher', range:'36"', A:'6', BS:'2+', S:'5', AP:'-1', D:'1', kw:['BLAST 2'] },
+        { name:'Twin Neutronium Cascade Projectors', n:2, range:'12"', A:'3', BS:'–', S:'7', AP:'-2', D:'1', kw:['BLAST 1','TORRENT','TWIN-LINKED'] }
+      ],
+      melee:[
+        { name:'Dual Caestus Fists', range:'Melee', A:'7', WS:'2+', S:'14', AP:'-3', D:'4', kw:['TWIN-LINKED'] }
+      ],
+      abilities:[
+        { name:'Guardian Eternal', text:'Ranged attacks that target this unit have -1 **D**.' },
+        { name:'Augury Uplink', tag:'Upgrade', text:'This model has **Feel No Pain 5+**.' }
+      ],
+      rules:['Martial Ka\'tah','Deadly Demise D3','Damaged 5','Aegis of the Emperor','Feel No Pain 5+*','Feel No Pain 5+','Blast','Twin-linked','Torrent'],
+      kw:['Dreadnought','Faction: Adeptus Custodes','Imperium','Telemon Heavy Dreadnought','Vehicle','Walker']
+    },
+    {
+      id:'telemon-heavy-dreadnought-2', name:'Telemon Heavy Dreadnought', role:'Vehicle', pts:310,
+      models:['1× Telemon Heavy Dreadnought'],
+      gear:[['Spiculus bolt launcher','Adrathic Desolator','Caestus Fist','Twin Neutronium Cascade Projectors']],
+      stats:[
+        { name:'Telemon Heavy Dreadnought', M:'10"', T:'11', Sv:'2+', W:'14', Ld:'5+', OC:'4', InSv:'4+', base:'100mm' }
+      ],
+      ranged:[
+        { name:'Spiculus bolt launcher', range:'36"', A:'6', BS:'2+', S:'5', AP:'-1', D:'1', kw:['BLAST 2'] },
+        { name:'Adrathic Desolator', range:'24"', A:'4', BS:'2+', S:'10', AP:'-2', D:'4', kw:[] },
+        { name:'Twin Neutronium Cascade Projectors', range:'12"', A:'3', BS:'–', S:'7', AP:'-2', D:'1', kw:['BLAST 1','TORRENT','TWIN-LINKED'] }
+      ],
+      melee:[
+        { name:'Caestus Fist', range:'Melee', A:'5', WS:'2+', S:'14', AP:'-3', D:'4', kw:[] }
+      ],
+      abilities:[
+        { name:'Guardian Eternal', text:'Ranged attacks that target this unit have -1 **D**.' }
+      ],
+      rules:['Martial Ka\'tah','Deadly Demise D3','Damaged 5','Aegis of the Emperor','Feel No Pain 5+*','Blast','Torrent','Twin-linked'],
+      kw:['Dreadnought','Faction: Adeptus Custodes','Imperium','Telemon Heavy Dreadnought','Vehicle','Walker']
+    }
+  ]
+},
 ];
 
 // core terms (not abilities): kept out of a unit's rule list and the glossary of rules units have
