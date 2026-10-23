@@ -68,21 +68,25 @@ const MOMENT_RULES = [
   { id:'end-opp-turn', re:/^at the end of your opponent's turn\b/i, at:'End of your opponent’s turn', ph:{ fight:'opp' },
     why:'"At the end of your opponent\'s turn": after their Fight phase, the last phase of the turn' },
 ];
-// When the text names no phase and no moment, what the ability does says when it is used.
-// (Tried sentence by sentence; every rule that matches adds its phases.)
+// Where its EFFECT IS USED: read from what the effect does, clause by clause (every rule that matches adds its phases).
+// The phases the app shows are the trigger's (above) and these together.
+const TARGETED = { shooting:'opp', fight:'either' };     // an attack on your unit: the attacker's Shooting phase, or a fight
 const ACTIVITY_RULES = [
-  { id:'damaged-band', re:/^while this model has \d+-\d+ wounds remaining\b/i, none:true,
-    why:'a Damaged band ("While this model has 1-6 wounds remaining"): always on while damaged, no phase' },
-  { id:'defensive', re:/\b(?:attacks? (?:that )?targets? (?:this|the bearer|that unit)|(?:is|are) allocated to (?:this|the bearer)|made against this|against (?:ranged|melee) attacks|invulnerable save|\binsv\b|save characteristic|saving throw|feel no pain|target of a ranged attack|targets this unit with)/i, none:true,
-    why:'it protects the unit when it is attacked: shown as "When targeted", not in a phase' },
-  { id:'lone-operative', re:/\bhas (?:the )?lone operative\b/i, none:true,
-    why:'it gives Lone Operative (it cannot be targeted from far away): a protection, no phase' },
+  // being attacked: the attacker's phases (a sentence about the unit being attacked is read by these rules only)
+  { id:'targeted-ranged', def:true, re:/\bagainst ranged attacks\b|\btarget of a ranged attack\b|\btargets this unit with ranged attacks\b|\branged attacks? (?:that )?targets? (?:this|it)\b/i, ph:{ shooting:'opp' },
+    why:'it protects the unit against ranged attacks: the attacker\'s Shooting phase' },
+  { id:'targeted-melee', def:true, re:/\bagainst melee attacks\b|\bmelee attacks? (?:that )?targets? (?:this|it)\b/i, ph:{ fight:'either' },
+    why:'it protects the unit against melee attacks: the Fight phase' },
+  { id:'targeted', def:true, re:/\b(?:an attack|attacks?) (?:that )?(?:targets?|is made against) (?:this|the bearer|that unit|it)\b|\b(?:is|are) allocated to (?:this|the bearer|that model)\b|\bmade against this\b|\binvulnerable save\b|\binsv\b|\bsave characteristic\b|\bsaving throws?\b|\bsave rolls?\b|\bfeel no pain\b/i, ph:TARGETED,
+    why:'it protects the unit when it is attacked (a save, an invulnerable save, Feel No Pain, a modifier to attacks on it): the attacker\'s phases (their Shooting phase, the Fight phase)' },
+  { id:'lone-operative', def:true, re:/\bhas (?:the )?lone operative\b/i, ph:{ shooting:'opp' },
+    why:'Lone Operative: it cannot be selected as the target of a ranged attack from far away: the attacker\'s Shooting phase' },
   { id:'pre-battle', re:/\bdeclare battle formations\b|\bafter both players have deployed\b|\bif this model is in your army\b|\btransport capacity\b/i, none:true,
     why:'before the battle (Declare Battle Formations, deployment, mustering) or what it can carry: no phase' },
   { id:'named-ability', named:true,
-    why:'"when this model uses its X ability" / "as a result of the X detachment rule": that ability\'s or rule\'s timing (this table, on its text)' },
+    why:'"when this model uses its X ability" / "as a result of the X detachment rule": that ability\'s or rule\'s phases (this table, on its text)' },
   { id:'named-core-stratagem', core:true,
-    why:'it names a Core stratagem: that stratagem\'s phases and turn (from its WHEN, table 1)' },
+    why:'it names a Core stratagem: that stratagem\'s phases and turn (from its WHEN)' },
   { id:'named-other-stratagem', re:/\bthe ((?:[A-Z][\w'-]*)(?: [A-Z][\w'-]*)*) stratagem\b/, blocker:true,
     why:'it names a stratagem this file has no WHEN for: not derivable' },
   { id:'any-stratagem', re:/\b(?:targets?|targeted|select)\b[^.]*\bwith an? stratagem\b|\btarget of an? stratagem\b|\btarget the bearer with an? stratagem\b/i, ph:Object.fromEntries(PH.map(p => [p, 'either'])),
@@ -91,15 +95,15 @@ const ACTIVITY_RULES = [
     why:'Rituals are attempted at the start of your Shooting phase (the Cabal of Sorcerers army rule)' },
   { id:'melee-only-keyword', re:/\[(?:LANCE|EXTRA ATTACKS)\]|\bWS\b|\bweapon skill\b/i, ph:{ fight:'either' },
     why:'a melee-only weapon ability ([LANCE], [EXTRA ATTACKS]) or Weapon Skill: the Fight phase' },
-  { id:'ranged-only-keyword', re:/\[(?:RAPID FIRE|HEAVY|ASSAULT|BLAST|TORRENT|INDIRECT FIRE|IGNORES COVER)[^\]]*\]|\bBS\b|\bballistic skill\b/i, ph:{ shooting:'your' },
+  { id:'ranged-only-keyword', re:/\[(?:RAPID FIRE|HEAVY|ASSAULT|BLAST|TORRENT|INDIRECT FIRE|IGNORES COVER)[^\]]*\]|\bBS\b|\bballistic skill\b/i, ph:{ shooting:'your' }, shoots:true,
     why:'a ranged-only weapon ability ([RAPID FIRE], [HEAVY], [ASSAULT], [IGNORES COVER]…) or Ballistic Skill: your Shooting phase' },
-  { id:'weapons-have', re:/\b(?<!ranged |melee |psychic )weapons (?:equipped by [^.]*? )?have\b/i, ph:{ shooting:'your', fight:'either' },
+  { id:'weapons-have', re:/\b(?<!ranged |melee |psychic )weapons (?:equipped by [^.]*? )?have\b/i, ph:{ shooting:'your', fight:'either' }, shoots:true,
     why:'"weapons … have" (ranged and melee alike): your Shooting phase and the Fight phase; not when the clause gives a ranged-only or melee-only weapon ability' },
-  { id:'melee', re:/\bmelee (?:attacks?|weapons?)\b|\bselected to fight\b|\beligible to fight\b|\bfights first\b/i, ph:{ fight:'either' },
-    why:'melee attacks / "selected to fight": the Fight phase of either turn' },
-  { id:'ranged', re:/(?<!against |target of a |with )\branged (?:attacks?|weapons?)\b|\bselected to shoot\b|\beligible to shoot\b|\bhas shot\b/i, ph:{ shooting:'your' },
-    why:'ranged attacks / "selected to shoot": your Shooting phase (Fire Overwatch, a stratagem, is not counted)' },
-  { id:'any-attack', re:/\bmakes? an attack\b|\b(?:unit|model|bearer)'s attacks\b|\battacks made (?:with|by) (?:this|the bearer)|\bselected to shoot or fight\b/i, ph:{ shooting:'your', fight:'either' },
+  { id:'melee', re:/\bmelee (?:attacks?|weapons?)\b|\bselected to fight\b|\beligible to fight\b|\bfights first\b|\bpile-in\b|\bconsolidation move\b/i, ph:{ fight:'either' },
+    why:'melee attacks / "selected to fight" / pile-in and consolidation moves: the Fight phase of either turn' },
+  { id:'ranged', re:/(?<!against |target of a |with )\branged (?:attacks?|weapons?)\b|\bselected to shoot\b|\beligible to shoot\b|\bhas shot\b|\bshoots\b/i, ph:{ shooting:'your' }, shoots:true,
+    why:'ranged attacks / "selected to shoot": your Shooting phase' },
+  { id:'any-attack', re:/\bmakes? an attack\b|\b(?:unit|model|bearer)'s attacks\b|\battacks made (?:with|by) (?:this|the bearer)|\bselected to shoot or fight\b/i, ph:{ shooting:'your', fight:'either' }, shoots:true,
     why:'"makes an attack" (ranged or melee): your Shooting phase and the Fight phase' },
   { id:'charge-move', re:/\bcharge (?:rolls?|moves?)\b|\bends a charge\b|\bmakes a charge\b/i, ph:{ charge:'either' },
     why:'charge rolls / charge moves: the Charge phase (either turn: a Heroic Intervention is a charge move too)' },
@@ -110,12 +114,19 @@ const ACTIVITY_RULES = [
   { id:'move-own', re:/\b(?:normal|advance|fall[- ]back|pulse jet|ingress) moves?\b|\badvance (?:and charge )?rolls?\b|\bselected to (?:move|advance)\b|\bmove characteristic\b|\b(?:advanced|fell back|falls back|remains stationary)\b|\+\d+" m\b/i, ph:{ movement:'your' },
     why:'its own moves (Normal, Advance, Fall Back), advance rolls, its Move characteristic: your Movement phase' },
 ];
-// "If this unit made a charge move this turn": only the Fight phase follows the Charge phase in that turn
-const AFTER_CHARGE = { id:'after-charge', re:/\bmade a charge move this turn\b/i,
-  why:'"made a charge move this turn": a condition, not a move; only the Fight phase is left in that turn' };
+// modifiers on the phases above
+const USED_MODIFIERS = [
+  { id:'after-charge', re:/\bmade a charge move this turn\b/i,
+    why:'"made a charge move this turn": a condition, not a move; only the Fight phase is left in that turn (its attacks are not in the Shooting phase)' },
+  { id:'overwatch', why:'an always-on ranged effect (no trigger in the text) is also used when the unit shoots with a Core stratagem whose EFFECT is "Your unit shoots" (Fire Overwatch: its WHEN, your opponent\'s Movement phase); when it protects against ranged attacks, the same moment in the other turn (the enemy\'s Fire Overwatch)' },
+  { id:'trigger-phase', why:'an effect used in the phase it is triggered in has the trigger\'s turn ("In your opponent\'s Movement phase, … this unit can make a Normal move": the opponent\'s Movement phase only)' },
+  { id:'same-turn', re:/\buntil the end of the turn\b|\bthis turn\b/i,
+    why:'triggered in one player\'s turn with an effect "until the end of the turn": used in that turn only, from the trigger\'s phase on' },
+];
+const AFTER_CHARGE = USED_MODIFIERS[0];
 
 const addPh = (out, p, t) => { out[p] = out[p] && out[p] !== t ? 'either' : t; };
-
+const OTHER = { your:'opp', opp:'your', either:'either' };
 // phases named in the text (table 1, explicit part); null when it names none
 function explicitTiming(text, opts){
   let t = plain(rulesText(text));
@@ -142,59 +153,93 @@ function explicitTiming(text, opts){
   return Object.keys(out).length ? { ph:out, at, reasons } : null;
 }
 
-// table 1 in full: explicit phases first; if none, the activities
-function timing(text, ctx){
-  const ex = explicitTiming(text);
-  if(ex) return Object.assign({ how:'explicit' }, ex);
+// table 1 in full: where it is triggered (the phases and moments the text names) and where its effect is used
+function usedIn(text, ctx, trig){
   let t = plain(rulesText(text));
   const reasons = [], out = {};
-  let none = null, blocked = null;
+  let none = null, blocked = null, shoots = false, guarded = false;
   const afterCharge = AFTER_CHARGE.re.exec(t);
   if(afterCharge) t = t.replace(AFTER_CHARGE.re, ' ');                  // a condition: no charge-move rule on it
+  const add = (ph, r) => { for(const [p, o] of Object.entries(ph)){ if(afterCharge && p === 'shooting' && r.shoots && r.id !== 'ranged' && r.id !== 'ranged-only-keyword') continue; addPh(out, p, o); } };
   for(const sent of sentences(t)){
-    // a sentence about the unit being attacked (or a Damaged band) says nothing about when the unit acts
-    const quiet = ACTIVITY_RULES.filter(r => r.none).map(r => [r, r.re.exec(sent)]).find(x => x[1]);
-    if(quiet){ none = none || { rule:quiet[0].id, match:quiet[1][0] }; continue; }
+    // a sentence about the unit being attacked is read by the "targeted" rules only
+    const defs = ACTIVITY_RULES.filter(r => r.def).map(r => [r, r.re.exec(sent)]).filter(x => x[1]);
+    if(defs.length){
+      const d = defs.find(x => x[0].id !== 'targeted') || defs[0];      // "against ranged attacks" is more precise than "invulnerable save"
+      add(d[0].ph, d[0]); reasons.push({ rule:d[0].id, match:d[1][0] });
+      if(d[0].ph.shooting) guarded = true;
+      continue;
+    }
     // clause by clause ("weapons … have [LETHAL HITS], and melee weapons … have [LANCE]")
     for(const s of sent.split(/,\s+and\s+|;\s+/)){
-    const kwOnly = ACTIVITY_RULES.filter(r => /-only-keyword$/.test(r.id)).some(r => r.re.test(s));
-    for(const r of ACTIVITY_RULES){
-      if(r.id === 'weapons-have' && kwOnly) continue;   // "Snazzgun weapons have [RAPID FIRE 1]": the keyword says which weapons
-      if(r.named){
-        const m = /\b(?:uses its|as a result of the) ([A-Z][^,.]*?)(?: ability| detachment rule)\b/.exec(s);
-        const other = m && ctx && ctx.named && ctx.named(m[1]);
-        if(other){
-          const w = timing(other, { core:ctx.core });
-          if(w.ph && Object.keys(w.ph).length){ for(const [p, o] of Object.entries(w.ph)) addPh(out, p, o); reasons.push({ rule:r.id, match:m[0] + ' → ' + w.reasons.map(x => x.match).join(', ') }); }
+      const kwOnly = ACTIVITY_RULES.filter(r => /-only-keyword$/.test(r.id)).some(r => r.re.test(s));
+      for(const r of ACTIVITY_RULES){
+        if(r.def) continue;
+        if(r.id === 'weapons-have' && kwOnly) continue;   // "Snazzgun weapons have [RAPID FIRE 1]": the keyword says which weapons
+        if(r.named){
+          const m = /\b(?:uses its|as a result of the) ([A-Z][^,.]*?)(?: ability| detachment rule)\b/.exec(s);
+          const other = m && ctx && ctx.named && ctx.named(m[1]);
+          if(other){
+            const w = timing(other, { core:ctx.core });
+            if(w.ph && Object.keys(w.ph).length){ add(w.ph, r); reasons.push({ rule:r.id, match:m[0] + ' → ' + w.reasons.map(x => x.match).join(', ') }); }
+          }
+          continue;
         }
-        continue;
-      }
-      if(r.core){
-        for(const cs of (ctx && ctx.core) || []){
-          const m = new RegExp('\\b' + cs.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b[^.]*\\bstratagem\\b', 'i').exec(s);
-          if(!m) continue;
-          const w = explicitTiming(cs.when.split(/[.:]/)[0]);
-          if(w) { for(const [p, o] of Object.entries(w.ph)) addPh(out, p, o); reasons.push({ rule:r.id, match:cs.name + ' → ' + w.reasons.map(x => x.match).join(', ') }); }
+        if(r.core){
+          for(const cs of (ctx && ctx.core) || []){
+            const m = new RegExp('\\b' + cs.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b[^.]*\\bstratagem\\b', 'i').exec(s);
+            if(!m) continue;
+            const w = explicitTiming(cs.when.split(/[.:]/)[0]);
+            if(w){ add(w.ph, r); reasons.push({ rule:r.id, match:cs.name + ' → ' + w.reasons.map(x => x.match).join(', ') }); }
+          }
+          continue;
         }
-        continue;
+        const m = r.re.exec(s);
+        if(!m) continue;
+        if(r.blocker){ if(!((ctx && ctx.core) || []).some(cs => cs.name.toLowerCase() === m[1].toLowerCase())) blocked = { rule:r.id, match:m[0] }; continue; }
+        if(r.none){ none = none || { rule:r.id, match:m[0] }; continue; }
+        if(r.id === 'any-stratagem' && reasons.some(x => x.rule === 'named-core-stratagem')) continue;
+        if(r.id === 'move-own' && /\benemy unit\b/i.test(s) && ACTIVITY_RULES.find(x => x.id === 'move-enemy').re.test(s)) continue;
+        if(r.shoots && !(afterCharge && r.id === 'any-attack')) shoots = true;
+        add(r.ph, r);
+        reasons.push({ rule:r.id, match:m[0] });
       }
-      const m = r.re.exec(s);
-      if(!m) continue;
-      if(r.blocker){ if(!((ctx && ctx.core) || []).some(cs => cs.name.toLowerCase() === m[1].toLowerCase())) blocked = { rule:r.id, match:m[0] }; continue; }
-      if(r.id === 'any-stratagem' && reasons.some(x => x.rule === 'named-core-stratagem')) continue;
-      if(r.id === 'move-own' && /\benemy unit\b/i.test(s) && ACTIVITY_RULES.find(x => x.id === 'move-enemy').re.test(s)) continue;
-      for(const [p, o] of Object.entries(r.ph)){
-        if(afterCharge && p === 'shooting' && (r.id === 'any-attack')) continue;
-        addPh(out, p, o);
-      }
-      reasons.push({ rule:r.id, match:m[0] });
-    }
     }
   }
-  if(afterCharge && reasons.some(r => r.rule === 'any-attack')) reasons.push({ rule:AFTER_CHARGE.id, match:afterCharge[0] });
-  if(Object.keys(out).length) return { how:'activity', ph:out, reasons };
-  if(blocked) return { how:'none', blocked:true, reasons:[blocked] };
-  if(none) return { how:'activity', ph:{}, reasons:[none] };          // positively: no phase
+  if(afterCharge && reasons.some(r => r.rule === 'any-attack' || r.rule === 'weapons-have')) reasons.push({ rule:'after-charge', match:afterCharge[0] });
+  // Fire Overwatch: an always-on effect only (a triggered one lasts from its trigger)
+  if(!trig && (shoots || guarded)){
+    for(const cs of (ctx && ctx.core) || []){
+      if(!/\byour unit shoots\b/i.test(plain(cs.effect))) continue;
+      const w = explicitTiming(cs.when.split(/[.:]/)[0]);
+      if(!w) continue;
+      for(const [p, o] of Object.entries(w.ph)){ if(shoots) addPh(out, p, o); if(guarded) addPh(out, p, OTHER[o]); }
+      reasons.push({ rule:'overwatch', match:cs.name + ': ' + w.reasons.map(x => x.match).join(', ') + (guarded && !shoots ? ' (the enemy\'s)' : '') });
+    }
+  }
+  // an effect used in the phase it is triggered in is used in that turn ("In your opponent's Movement phase, … make a Normal move")
+  if(trig) for(const p of Object.keys(out)) if(trig.ph[p]) out[p] = trig.ph[p];
+  // triggered in one turn, "until the end of the turn": that turn only, from the trigger's phase on
+  const same = USED_MODIFIERS.find(r => r.id === 'same-turn').re.exec(t);
+  if(trig && same && Object.keys(out).length){
+    const owners = [...new Set(Object.values(trig.ph))], first = PH.findIndex(p => trig.ph[p]);
+    if(owners.length === 1 && owners[0] !== 'either'){
+      for(const p of Object.keys(out)){ if(PH.indexOf(p) < first) delete out[p]; else out[p] = owners[0]; }
+      reasons.push({ rule:'same-turn', match:same[0] });
+    }
+  }
+  return { ph:out, reasons, none, blocked };
+}
+function timing(text, ctx){
+  const trig = explicitTiming(text);
+  const used = usedIn(text, ctx, trig);
+  const ph = Object.assign({}, trig ? trig.ph : {});
+  for(const [p, o] of Object.entries(used.ph)) addPh(ph, p, o);
+  const reasons = (trig ? trig.reasons.map(r => Object.assign({ part:'trigger' }, r)) : []).concat(used.reasons.map(r => Object.assign({ part:'used' }, r)));
+  const trigLabel = trig ? asLabel(trig.ph, trig.at) : null, usedLabel = Object.keys(used.ph).length ? asLabel(used.ph) : null;
+  if(Object.keys(ph).length || (trig && trig.at)) return { how:trig ? 'explicit' : 'activity', ph, at:trig && trig.at, reasons, trigger:trigLabel, used:usedLabel };
+  if(used.blocked) return { how:'none', blocked:true, reasons:[used.blocked] };
+  if(used.none) return { how:'activity', ph:{}, reasons:[used.none], trigger:null, used:null };   // positively: no phase
   return { how:'none', reasons:[] };
 }
 
@@ -229,6 +274,8 @@ const NEEDS_RULES = {
   'that-unit':     'TARGET "That … unit": the unit WHEN names (its keywords and exclusions) and TARGET\'s keywords',
   'first-unit':    'stratagems: the first unit TARGET names; rules: the first friendly / "from your army" unit the text names with a keyword. Later units (a unit it is near, an enemy) are not who it is for',
   'no-keyword':    'the unit named has no keyword: any unit (no needs)',
+  'multi-target':  'TARGET with two targets ("One X model …, and one friendly Y unit …"): for a unit of either kind (the alternatives as "or")',
+  'kw-every':      'compared without a keyword every unit of that faction\'s lists has (the Faction keyword "ORKS" in Orks lists): in the app\'s matches() it selects nothing, and data.js names it in some needs and not in others',
 };
 
 function vocab(D){
@@ -276,15 +323,20 @@ function parseAlt(V, s){
 // a keyword run: "**BLOOD LEGIONS** or **WORLD EATERS**" → needs, with the rule ids used
 function parseRun(V, run){
   const r = run.replace(/\*\*/g, '').trim();
-  const alts = r.split(/\s*,\s*(?:or\s+)?|\s+or\s+/).filter(Boolean).map(a => parseAlt(V, a));
+  const alts = r.split(/\s*,\s*(?:or\s+|and\s+)?|\s+or\s+|\s+and\s+/).filter(Boolean).map(a => parseAlt(V, a));
   const rules = new Set();
   if(alts.some(a => a.multiAny)) return { bad:'two "/" groups in one run', rules:['kw-slash'] };
   if(alts.some(a => a.slash)) rules.add('kw-slash');
   if(alts.length === 1) { if(alts[0].all.length) rules.add('kw-all'); return { all:alts[0].all, any:alts[0].any, rules:[...rules] }; }
   if(alts.some(a => a.any.length)) return { bad:'"or" between runs that use "/"', rules:['kw-or'] };
   rules.add('kw-or');
-  let sets = alts.map(a => a.all);
-  if(sets.every(x => x.length === 1)) return { all:[], any:sets.map(x => x[0]), rules:[...rules] };
+  const c = combineAlts(alts.map(a => a.all));
+  return c.bad ? { bad:c.bad, rules:[...rules] } : { all:c.all, any:c.any, rules:[...rules, ...c.rules] };
+}
+// alternatives, each a list of keywords the unit has all of → { all, any }
+function combineAlts(sets){
+  const rules = new Set();
+  if(sets.every(x => x.length === 1)) return { all:[], any:sets.map(x => x[0]), rules:['kw-or'] };
   const common = sets[0].filter(k => sets.every(x => x.includes(k)));
   let rest = sets.map(x => x.filter(k => !common.includes(k)));
   if(common.length && rest.every(x => x.length === 1)){ rules.add('kw-or-common'); return { all:common, any:rest.map(x => x[0]), rules:[...rules] }; }
@@ -363,6 +415,25 @@ function stratNeeds(V, s){
   reasons.push({ rule:'first-unit', match:plain(first.slice(0, unit.at + unit.matched.length)) });
   let n = needsOf(V, unit, reasons);
   if(n.bad) return { how:'none', reasons:[{ rule:'unparsed', match:n.bad }] };
+  // "One X model from your army, and one friendly Y unit …": two targets, the stratagem is for a unit of either kind
+  const parts = first.split(/,?\s+and\s+(?=(?:one|two|up to \w+)\b)/i);
+  if(parts.length > 1){
+    const alts = [n];
+    for(const part of parts.slice(1)){
+      const u2 = friendlyUnit(V, part, { any:true });
+      if(!u2 || !u2.run) continue;
+      const r2 = [], n2 = needsOf(V, u2, r2);
+      if(n2.bad || n2.any.length || n2.none.length || (n.any || []).length || (n.none || []).length) return { how:'none', reasons:[{ rule:'unparsed', match:'two targets with "/" or exclusions: ' + clip(plain(first), 90) }] };
+      alts.push(n2);
+      reasons.push({ rule:'multi-target', match:plain(u2.matched) });
+    }
+    if(alts.length > 1){
+      const c = combineAlts(alts.map(x => x.all));
+      if(c.bad) return { how:'none', reasons:[{ rule:'unparsed', match:c.bad }] };
+      n = { all:c.all, any:c.any, none:[] };
+      reasons.push({ rule:c.rules.join('+'), match:alts.map(x => x.all.join(' ')).join(' | ') });
+    }
+  }
   if(/^that\b/i.test(plain(first))){
     const w = friendlyUnit(V, when);
     if(w){
@@ -394,10 +465,10 @@ function ruleNeeds(V, r){
   return { how:'none', reasons:[] };
 }
 // needs in one form for comparing: a one-keyword "any" is "all"; empty lists dropped; sorted
-function canonNeeds(n){
+function canonNeeds(n, every){
   if(!n) return {};
   const o = {};
-  const all = [...(n.all || [])], any = [...(n.any || [])];
+  const all = [...(n.all || [])].filter(k => !(every && every.has(norm(k).toLowerCase()))), any = [...(n.any || [])];
   if(any.length === 1) all.push(any.shift());
   if(all.length) o.all = [...new Set(all)].sort();
   if(any.length) o.any = [...new Set(any)].sort();
@@ -415,7 +486,7 @@ const tidyNeeds = n => { const o = {}; for(const k of ['all', 'any', 'none', 'un
 const TAG_RULES = [
   { id:'tag-enhancement', why:'the ability is named as an enhancement of the list\'s detachments: "Enhancement" ("Upgrade" when that entry is an upgrade)' },
   { id:'tag-aura-name', name:/\(Aura\)/i, give:'Aura', why:'the ability\'s name says "(Aura)"' },
-  { id:'tag-aura', re:/\b(?:friendly|enemy)\b[^.]*?\b(?:units?|models?)(?: \([^)]*\))? (?:is |are )?(?:wholly )?within (?:\d+"|engagement range) of (?:this|the bearer|one or more units with this ability)\b|\bunits? from their army within \d+" of this\b/i, give:'Aura', sentence:true,
+  { id:'tag-aura', re:/\b(?:friendly|enemy)\b[^.]*?\b(?:units?|models?)(?: \([^)]*\))? (?:is |are )?(?:wholly )?within (?:\d+"|engagement range) of (?:this|the bearer|that model|one or more units with this ability)\b|\bunits? from their army within \d+" of this\b/i, give:'Aura', sentence:true,
     why:'it affects other units (friendly or enemy) while they are within a distance of this model ("While a friendly X unit is within 6" of this model", "an enemy unit within 6" of this model"); not a unit it selects, not a unit that "ends a move within"' },
   { id:'tag-bondsman', re:/^while a model is affected by this ability\b/i, give:'Bondsman',
     why:'"While a model is affected by this ability": the wording of a Bondsman ability (the Bondsman army rule: "affected by that Bondsman ability")' },
@@ -513,6 +584,10 @@ function derive(D){
   const items = [];
   const add = it => items.push(it);
   const unitsOf = fk => D.armies.filter(a => !fk || a.faction === fk).flatMap(a => a.units.map(u => ({ a, u })));
+  // a keyword every unit of the faction's lists has ("ORKS" in an Orks list) selects nothing in the app's matches(): needs may
+  // name it or leave it out (data.js does both: Kustom Dakka has Faction: Orks, Dread Power not), so it is not compared
+  const everyKw = fk => { if(!fk) return null; const us = unitsOf(fk).map(x => x.u); if(!us.length) return null;
+    return new Set(us[0].kw.map(k => norm(k).toLowerCase()).filter(k => us.every(u => u.kw.some(x => norm(x).toLowerCase() === k)))); };
   const selDiff = (fk, n1, n2) => unitsOf(fk).filter(({ u }) => matches(n1 && Object.keys(n1).length ? n1 : null, u) !== matches(n2 && Object.keys(n2).length ? n2 : null, u)).map(({ a, u }) => a.id + '/' + u.name);
 
   const timingItem = (kind, where, x, text, extra, tctx) => {
@@ -521,7 +596,7 @@ function derive(D){
     let status;
     if(d.how === 'none') status = 'not-derivable';
     else status = mapKey(sm, sAt) === mapKey(d.ph, d.at) ? 'identical' : 'different';
-    add(Object.assign({ kind, where, stored, derived:d.how === 'none' ? null : asLabel(d.ph, d.at), how:d.how, status, reasons:d.reasons, text }, extra));
+    add(Object.assign({ kind, where, stored, derived:d.how === 'none' ? null : asLabel(d.ph, d.at), trigger:d.trigger, used:d.used, how:d.how, status, reasons:d.reasons, text }, extra));
   };
 
   // stratagems: core and every detachment's
@@ -535,7 +610,7 @@ function derive(D){
     add({ kind:'strat-timing', where, stored:Object.assign({ ph:s.phases, turn:s.turn }, s.turns ? { turns:s.turns } : {}), derived:ex ? asLabel(ex.ph) : null, how:ex ? 'explicit' : 'none',
       status:!ex ? 'not-derivable' : mapKey(sm) === mapKey(ex.ph) ? 'identical' : 'different', reasons:ex ? ex.reasons : [], text:'WHEN: ' + s.when, comments });
     const dn = stratNeeds(V, s);
-    const st = canonNeeds(s.needs), dv = dn.needs ? canonNeeds(dn.needs) : null;
+    const st = canonNeeds(s.needs, everyKw(fk)), dv = dn.needs ? canonNeeds(dn.needs, everyKw(fk)) : null;
     const status = !dv ? 'not-derivable' : JSON.stringify(st) === JSON.stringify(dv) ? 'identical' : 'different';
     add({ kind:'strat-needs', where, stored:s.needs || null, derived:dn.needs ? tidyNeeds(dn.needs) : null, how:dn.how, status, reasons:dn.reasons,
       text:'TARGET: ' + s.target + '\nWHEN: ' + s.when, comments, selects:status === 'different' ? selDiff(fk, s.needs, tidyNeeds(dn.needs)) : undefined });
@@ -549,7 +624,7 @@ function derive(D){
       timingItem('rule-timing', where, r, r.text, { comments });
       if(det || r.needs){
         const dn = ruleNeeds(V, r);
-        const st = canonNeeds(r.needs), dv = dn.needs ? canonNeeds(dn.needs) : null;
+        const st = canonNeeds(r.needs, everyKw(fk)), dv = dn.needs ? canonNeeds(dn.needs, everyKw(fk)) : null;
         const status = !dv ? 'not-derivable' : JSON.stringify(st) === JSON.stringify(dv) ? 'identical' : 'different';
         add({ kind:'rule-needs', where, stored:r.needs || null, derived:dn.needs ? tidyNeeds(dn.needs) : null, how:dn.how, status, reasons:dn.reasons, text:r.text, comments,
           selects:status === 'different' ? selDiff(fk, r.needs, tidyNeeds(dn.needs)) : undefined });
@@ -584,7 +659,10 @@ function derive(D){
           const r = f.armyRules.concat(a.detachments.map(id => (f.detachments[id] || {}).rule).filter(Boolean)).find(x => norm(x.name).toLowerCase() === norm(n).toLowerCase());
           return r ? r.text : null;
         } });
+        const tItem = items[items.length - 1]; Object.defineProperty(tItem, 'ab', { value:ab, enumerable:false });
+        const before = items.length;
         tagItem('ability-tag', where, ab, { enh }, comments, ab.name + '\n' + ab.text);
+        if(items.length > before) Object.defineProperty(items[items.length - 1], 'ab', { value:ab, enumerable:false });
       }
       // coverage only: aura reach, and the bonuses a footnote's source text names vs what the footnote says
       for(const m of u.aura || []){
@@ -600,21 +678,110 @@ function derive(D){
       for(const [k, ms] of byFrom){
         const ab = u.abilities.find(x => x.name === ms[0].from);
         if(!ab) continue;
-        const text = plain(ab.text), said = ms.map(m => (m.note || '') + ' ' + JSON.stringify(m.set || {})).join(' | ');
+        const text = plain(ab.text), said = ms.map(m => (m.note || '') + ' ' + JSON.stringify(m.set || {}).replace(/"(A|S|D)":"\d/g, '"$1":"+')).join(' | ') + elsewhere(u, ab);
         cover('unit-mod', a.id + ' · ' + uName + ' · ' + k, BONUS_RULES, text, said, ms.map(m => m.note).join(' | '), ab.text, k + '\n' + ab.text + '\n' + said);
       }
       for(const ab of u.abilities){
         const text = plain(ab.text);
         if(!DEF_RULES.some(r => r.re.test(text)) && !ab.def) continue;
-        cover('ability-def', a.id + ' · ' + uName + ' · ' + ab.name, DEF_RULES, text, ab.def || '', ab.def || null, ab.text, ab.name + '\n' + ab.text + '\n' + (ab.def || ''));
+        cover('ability-def', a.id + ' · ' + uName + ' · ' + ab.name, DEF_RULES, text, (ab.def || '') + elsewhere(u, ab), ab.def || null, ab.text, ab.name + '\n' + ab.text + '\n' + (ab.def || ''));
       }
+    }
+  }
+  // what the datasheet shows for an ability outside its footnotes: a value or keyword it grants (marked + on the weapon or
+  // stat line, from BSData), a Feel No Pain on the unit's Rules line, the "given to other units" lines (guard)
+  function elsewhere(u, ab){
+    const out = [];
+    for(const x of [...u.stats, ...(u.ranged || []), ...(u.melee || [])]) for(const [k, v] of Object.entries(x.from || {})) if([].concat(v).includes(ab.name))
+      out.push(/^(A|S|D)$/.test(k) ? '"' + k + '":"+' : k === 'AP' ? '+1 AP' : k === 'InSv' ? 'invulnerable save' : k === 'W' ? 'Wounds' : '[' + k + ']');
+    if(/feel no pain/i.test(ab.text)) for(const r of u.rules || []) if(/^feel no pain \d\+/i.test(r) && plain(ab.text).toLowerCase().includes(r.toLowerCase())) out.push('Feel No Pain (Rules line)');
+    for(const g of u.guard || []) if(g.from === ab.name) out.push((g.note || '') + ' ' + JSON.stringify(g.calc || {}).replace(/"fnp":/, 'feel no pain '));
+    return out.length ? ' | elsewhere: ' + out.join(' | ') : '';
+  }
+  // ---- rule options and grants (coverage only) ----
+  for(const [fk, f] of Object.entries(D.factions)){
+    const rules = f.armyRules.map(r => ({ r, where:f.name + ' army rule · ' + r.name }))
+      .concat(Object.values(f.detachments).filter(d => d.rule).map(d => ({ r:d.rule, where:f.name + ' · ' + d.name + ' rule · ' + d.rule.name })));
+    for(const { r, where } of rules) optionsAndGrants(where, r, r.text, r.table, storedOptionsOfRule(r), fk);
+  }
+  { const seen = new Set();
+    for(const a of D.armies) for(const u of a.units) for(const ab of u.abilities){
+      const k = ab.name + '\n' + ab.text; if(seen.has(k)) continue; seen.add(k);
+      optionsAndGrants(a.id + ' · ' + u.name + ' · ' + ab.name, ab, ab.text, null, storedOptionsOfAbility(u, ab), a.faction, u);
+    } }
+  function storedOptionsOfRule(r){
+    const out = [];
+    for(const m of r.calcMods || []) out.push({ name:m.from, what:'calcMods (' + m.kind + ')', kind:m.kind, picks:(m.pick || []).map(p => p.name) });
+    for(const p of r.parts || []) out.push({ name:p.name, what:'parts' + (p.mod ? ' mod (' + p.mod.kind + ')' : p.def ? ' def' : p.grants ? ' grants ' + p.grants : ''), kind:p.mod ? p.mod.kind : p.def ? 'def' : null, grants:p.grants, needs:p.needs, when:p.when });
+    if(r.mod) out.push({ name:null, what:'mod (' + r.mod.kind + ')', kind:r.mod.kind, picks:(r.mod.pick || []).map(p => p.name), note:r.mod.note });
+    return out;
+  }
+  function storedOptionsOfAbility(u, ab){
+    return (u.mods || []).concat(u.aura || [], u.guard || []).filter(m => m.from === ab.name).map(m => ({ name:null, what:'footnote (' + m.kind + ')', kind:m.kind, picks:(m.pick || []).map(p => p.name), note:m.note }));
+  }
+  function optionsAndGrants(where, x, text, table, stored, fk, self){
+    const t = rulesText(text);
+    const opts = [];
+    for(const row of table || []) opts.push({ name:String(row[0]).split(' · ')[0].replace(/ \((?:Aura|Psychic)\)$/, ''), text:row[1], how:'table row' });
+    const lines = t.split('\n');
+    lines.forEach((l, i) => {
+      let m = /^(?:- )?\*\*([^*]{3,60}?)(?::\*\*|\*\*:)\s*(.+)$/.exec(l);
+      if(m && !isUpperWord(m[1].replace(/[^A-Za-z]/g, '') || 'a')) { opts.push({ name:m[1].trim(), text:m[2], how:'"**Name:** effect"' }); return; }
+      m = /^- \*\*([^*]{3,60})\*\*\s*$/.exec(l);
+      if(m && lines[i + 1] && !/^\s*- /.test(lines[i + 1]) && !/^\s*\*\*[^*]+\*\*\s*$/.test(lines[i + 1])) opts.push({ name:m[1].replace(/\s*\[[^\]]*\]$/, '').trim(), text:lines[i + 1], how:'bullet "**Name**" and its line' });
+    });
+    // army-building limits ("**Incursion:** Up to 500 pts") are not options
+    for(let i = opts.length - 1; i >= 0; i--) if(/^up to \d+ ?pts\b/i.test(plain(opts[i].text))) opts.splice(i, 1);
+    // the rule's own trigger: its text without its options
+    const parentTrig = explicitTiming(opts.reduce((s2, o) => s2.replace(o.text, ''), t));
+    for(const o of opts){
+      const own = explicitTiming(o.text), trig = own || parentTrig;
+      const used = usedIn(o.text, { core:D.coreStratagems }, trig);
+      const ph = Object.assign({}, trig ? trig.ph : {}); for(const [p, v] of Object.entries(used.ph)) addPh(ph, p, v);
+      const mine = stored.filter(sx => sx.name && norm(sx.name).toLowerCase().startsWith(norm(o.name).toLowerCase()) || (sx.picks || []).some(n => norm(o.name).toLowerCase().startsWith(norm(n).toLowerCase()) || norm(n).toLowerCase().startsWith(norm(o.name).split(' ')[0].toLowerCase())));
+      const storedPh = new Set(mine.flatMap(sx => sx.kind === 'melee' ? ['fight'] : sx.kind === 'ranged' ? ['shooting'] : sx.kind === 'all' ? ['shooting', 'fight'] : sx.kind === 'def' ? ['shooting', 'fight'] : []));
+      const inDerived = [...storedPh].every(p => ph[p]);
+      const status = !Object.keys(ph).length ? 'not-derivable' : !mine.length ? 'different' : inDerived ? 'identical' : 'different';
+      add({ kind:'rule-option', coverage:true, where:where + ' · ' + o.name, stored:mine.length ? mine.map(sx => sx.what + (sx.picks && sx.picks.length ? ' picks ' + sx.picks.join('/') : '')).join('; ') : null,
+        derived:Object.keys(ph).length ? asLabel(ph, trig && trig.at) : null, trigger:trig ? asLabel(trig.ph, trig.at) : null, used:Object.keys(used.ph).length ? asLabel(used.ph) : null,
+        how:own ? 'explicit' : 'activity', status, noPerOption:!mine.length || undefined, optionFrom:o.how + (own ? '' : parentTrig ? ', trigger: the rule\'s' : ''),
+        reasons:(trig ? trig.reasons.map(r => Object.assign({ part:own ? 'trigger' : 'rule trigger' }, r)) : []).concat(used.reasons.map(r => Object.assign({ part:'used' }, r))), text:o.text });
+      grantsIn(where + ' · ' + o.name, o.text, stored, fk, o.name + ' active', self);
+    }
+    grantsIn(where, opts.reduce((s2, o) => s2.replace(o.text, ''), t), stored, fk, null, self);
+  }
+  // "BLOOD LEGIONS units from your army gain the Blessings of Khorne ability", "Friendly X units have the following ability:"
+  function grantsIn(where, text, stored, fk, whileOpt, self){
+    for(const sent of sentences(norm(text))){
+      const m = /\b(gains?|have|has)(?: the)? (?:(following) abilit(?:y|ies)|\*\*([^*\[\]]+)\*\*(?: abilit(?:y|ies))?|([A-Z][\w'’ -]+?) abilit(?:y|ies))/.exec(sent);
+      if(!m) continue;
+      const name = (m[3] || m[4] || (m[2] ? ((/\*\*([^*]+?):?\*\*:?/.exec(norm(text).slice(norm(text).indexOf(sent) + sent.length)) || [])[1] || 'the following ability') : '')).replace(/:$/, '').trim();
+      if(!name || /^\[/.test(name) || /\b(?:keyword|characteristic)\b/i.test(name)) continue;
+      const before = sent.slice(0, m.index);
+      const subj = friendlyUnit(V, before + ' ', { any:true }) || friendlyUnit(V, before.replace(/$/, ' unit'), { any:true });
+      const rs = [];
+      const to = /\b(?:this|the bearer'?s?|that) (?:unit|model)\b|\bthe bearer\b|\bthis model\b/i.test(before) && !(subj && subj.run) ? 'this unit / model' : subj && subj.run ? tidyNeeds(needsOf(V, subj, rs)) : null;
+      const cond = (/^(while|if|when|until) [^,]+/i.exec(plain(sent)) || [])[0];
+      const wh = [whileOpt, cond].filter(Boolean).join('; ') || null;
+      const grantName = name.replace(/ ability$/i, '');
+      const type = isUpperWord(grantName.replace(/[^A-Za-z]/g, '')) ? 'keyword or weapon ability' : 'ability';
+      const inParts = stored.find(sx => sx.grants && norm(sx.grants).toLowerCase() === norm(grantName).toLowerCase());
+      const holds = u => (u.rules || []).concat(u.abilities.map(y => y.name), u.kw || []).some(r => norm(r).toLowerCase() === norm(grantName).toLowerCase() || norm(r).toLowerCase().startsWith(norm(grantName).toLowerCase() + ' '));
+      // who should hold it: this unit (an ability's own grant) or the units it is for
+      const forUnits = to === 'this unit / model' ? (self ? [self] : []) : to ? D.armies.filter(a => a.faction === fk).flatMap(a => a.units.filter(u => matches(to, u))) : [];
+      const onSheets = forUnits.filter(holds).map(u => u.name);
+      const storedG = inParts ? { grants:inParts.grants, to:inParts.needs || null, while:inParts.when || null } : onSheets.length ? 'on the datasheet' + (onSheets.length > 1 ? 's' : '') + ' (Rules line, abilities or keywords): ' + [...new Set(onSheets)].slice(0, 5).join(', ') + (new Set(onSheets).size > 5 ? '…' : '') + (onSheets.length < forUnits.length ? ' (' + onSheets.length + ' of ' + forUnits.length + ' units it is for)' : '') : null;
+      const same = inParts ? JSON.stringify(canonNeeds(inParts.needs)) === JSON.stringify(canonNeeds(typeof to === 'object' ? to : null)) : !!onSheets.length;
+      add({ kind:'rule-grant', coverage:true, where:where + ' → ' + grantName, derived:{ grants:grantName, type, to, while:wh }, stored:storedG,
+        how:'explicit', status:same ? 'identical' : 'different', noPerOption:!storedG || undefined, reasons:[{ rule:'grant', match:clip(plain(sent), 120) }], text:sent });
     }
   }
   function cover(kind, where, table, text, said, stored, src, dedupe){
     const got = table.filter(b => b.re.test(text)), has = table.filter(b => b.note.test(said));
     if(!got.length && !has.length) return;
     const missing = got.filter(b => !has.includes(b)).map(b => b.id), extra = has.filter(b => !got.includes(b)).map(b => b.id);
-    add({ kind, coverage:true, where, stored, derived:got.map(b => b.id).join(', ') || null, how:got.length ? 'explicit' : 'none',
+    const shownElsewhere = /\| elsewhere: /.test(said) ? said.split('| elsewhere: ')[1] : undefined;
+    add({ kind, coverage:true, where, stored, shownElsewhere, derived:got.map(b => b.id).join(', ') || null, how:got.length ? 'explicit' : 'none',
       status:!got.length ? 'not-derivable' : !missing.length && !extra.length ? 'identical' : 'different',
       reasons:got.map(b => ({ rule:b.id, match:(b.re.exec(text) || [''])[0] })), missing:missing.length ? missing : undefined, extra:extra.length ? extra : undefined, text:src, dedupe });
   }
@@ -624,14 +791,15 @@ function derive(D){
 // =============================================================================================
 // report and gate
 // =============================================================================================
-const KINDS = ['strat-timing', 'strat-needs', 'rule-timing', 'rule-needs', 'rule-tag', 'ability-timing', 'ability-tag', 'unit-aura', 'unit-mod', 'ability-def'];
+const KINDS = ['strat-timing', 'strat-needs', 'rule-timing', 'rule-needs', 'rule-tag', 'ability-timing', 'ability-tag', 'unit-aura', 'unit-mod', 'ability-def', 'rule-option', 'rule-grant'];
 const KIND_TITLE = {
   'strat-timing':'Stratagems: phases and turn (from WHEN)', 'strat-needs':'Stratagems: needs (from TARGET)',
   'rule-timing':'Army and detachment rules: phases, turn, moment', 'rule-needs':'Army and detachment rules: needs', 'rule-tag':'Army and detachment rules: tag',
   'ability-timing':'Abilities: phases, turn, moment', 'ability-tag':'Abilities: tag',
   'unit-aura':'Auras: reach (coverage only)', 'unit-mod':'Damage-tab footnotes: attack bonuses named (coverage only)', 'ability-def':'"When targeted" lines: protections named (coverage only)',
+  'rule-option':'Options inside a rule or ability: trigger and used-in per option (coverage only)', 'rule-grant':'Grants: a rule giving units an ability (coverage only)',
 };
-const J = x => x == null ? '—' : typeof x === 'string' ? x : JSON.stringify(x).replace(/"/g, '').replace(/,/g, ', ').replace(/:/g, ':');
+const J = x => x == null ? '—' : typeof x === 'string' ? x : JSON.stringify(x).replace(/"/g, '').replace(/,(?! )/g, ', ');
 function counts(items){
   const c = {};
   for(const k of KINDS) c[k] = { identical:0, different:0, 'not-derivable':0 };
@@ -660,14 +828,14 @@ function report(items){
     ...KINDS.map(k => '| ' + KIND_TITLE[k] + ' | ' + c[k].identical + ' | ' + c[k].different + ' | ' + c[k]['not-derivable'] + ' |'), '',
     '(Counts are per place: an ability on three lists counts three times.)', '',
     '## The rule tables', '',
-    '### 1. Timing', '',
+    '### 1. Timing: shown = where it is triggered ∪ where its effect is used', '',
+    'Trigger: the phases and moments the text names (stratagems: the first sentence of WHEN, nothing else).', '',
     ...OWNER_RULES.map(r => '- `' + r.id + '`: ' + r.why),
     ...NOT_TIMING.map(r => '- `skip-' + r.id + '`: ' + r.why), '- `' + NOTE_LINE.id + '`: ' + NOTE_LINE.why,
     ...MOMENT_RULES.map(r => '- `' + r.id + '`: ' + r.why + (r.at ? ' → at "' + r.at + '"' : '')),
-    '- Only when the text names no phase or moment, the activities (sentence by sentence):',
-    ...ACTIVITY_RULES.map(r => '  - `' + r.id + '`: ' + r.why + (r.ph ? ' → ' + J(r.ph) : '')),
-    '  - `' + AFTER_CHARGE.id + '`: ' + AFTER_CHARGE.why,
-    '- Stratagems: the first sentence of WHEN only, phases only (no activities): every stratagem\'s WHEN names its phases.', '',
+    '', 'Used in: what the effect does, sentence by sentence and clause by clause (a sentence about the unit being attacked is read by the `targeted` rules only):', '',
+    ...ACTIVITY_RULES.map(r => '- `' + r.id + '`: ' + r.why + (r.ph ? ' → ' + J(r.ph) : '')),
+    ...USED_MODIFIERS.map(r => '- `' + r.id + '`: ' + r.why), '',
     '### 2. Needs', '', ...Object.entries(NEEDS_RULES).map(([k, v]) => '- `' + k + '`: ' + v),
     '- Keywords: a bold run in capitals is split into the keywords units in data.js have (longest first; "THOUSAND SONS" is the Faction keyword); capital words no unit has, in a row, are one keyword ("BREAKA BOYZ"); a plural with a singular keyword is that keyword ("MONSTERS").', '',
     '### 3. Tags', '', ...TAG_RULES.map(r => '- `' + r.id + '`: ' + r.why), '- Not derivable from the text (kept as stored, shown under "parts the text cannot give"): Psychic (New Recruit\'s name suffix), a "Once per…" that only the ability\'s name in New Recruit carries, other words.', '',
@@ -690,8 +858,8 @@ function report(items){
     lines.push('### (b) Different (' + diff.length + ')', '');
     for(const it of diff){
       lines.push('#### ' + it.where + (it.places.length > 1 ? ' (+' + (it.places.length - 1) + ' more)' : ''), '',
-        '- stored: `' + J(it.stored) + '`', '- derived: `' + J(it.derived) + '`' + (it.how === 'activity' ? ' (from what it does: the text names no phase)' : ''),
-        '- rules: ' + (it.reasons.length ? it.reasons.map(r => '`' + r.rule + '` "' + clip(r.match, 100) + '"').join(' · ') : '—'));
+        '- stored: `' + J(it.stored) + '`', '- derived: `' + J(it.derived) + '`' + (it.trigger !== undefined ? ' = trigger `' + J(it.trigger) + '` ∪ used in `' + J(it.used) + '`' : ''),
+        '- rules: ' + (it.reasons.length ? it.reasons.map(r => (r.part ? r.part + ' ' : '') + '`' + r.rule + '` "' + clip(r.match, 100) + '"').join(' · ') : '—'));
       if(it.selects) lines.push('- ' + (it.selects.length ? 'selects other units: ' + it.selects.slice(0, 8).join(', ') + (it.selects.length > 8 ? ' (+' + (it.selects.length - 8) + ')' : '') : 'selects the same units in every list in data.js'));
       if(it.missing) lines.push('- the text names, the footnote does not: ' + it.missing.join(', '));
       if(it.extra) lines.push('- the footnote names, the text does not: ' + it.extra.join(', '));
@@ -704,12 +872,75 @@ function report(items){
     lines.push('### (c) Not derivable (' + nd.length + ')', '');
     for(const it of nd) lines.push('- **' + it.where + '**' + (it.places.length > 1 ? ' (+' + (it.places.length - 1) + ')' : '') + ': stored `' + J(it.stored) + '`' +
       (it.reasons.length ? ' · ' + it.reasons.map(r => '`' + r.rule + '` "' + clip(r.match, 80) + '"').join(' · ') : '') +
-      (it.comments && it.comments.length ? ' · data.js: "' + clip(it.comments.join(' '), 200) + '"' : '') + ' · text: "' + clip(plain(it.text), 160) + '"');
+      (it.comments && it.comments.length ? ' · data.js: "' + clip(it.comments.join(' '), 200) + '"' : '') + ' · text: "' + clip(plain(it.text).replace(/\n/g, ' / '), 160) + '"');
     lines.push('');
     const id = g.filter(x => x.status === 'identical');
     lines.push('### (a) Identical (' + id.length + ')', '', id.map(it => it.where.replace(/^[^·]+ · /, k.startsWith('ability') || k.startsWith('unit') ? '' : '$&').trim() + ' `' + J(it.derived) + '`').join(' · '), '');
   }
+  // would change on screen
+  const wc = wouldChange(items), vis = wc.filter(x => x.visible);
+  const seenW = new Map();
+  for(const x of wc){ const k = x.kind + x.where.split(' · ').pop() + JSON.stringify(x.change) + x.before; if(!seenW.has(k)) seenW.set(k, Object.assign({}, x, { places:[x.where] })); else seenW.get(k).places.push(x.where); }
+  lines.push('## Would change on screen (' + vis.length + ' places, ' + [...seenW.values()].filter(x => x.visible).length + ' entries; not applied)', '',
+    'The plain inconsistencies: the same words stored differently on different lists, and a tag or moment the text gives that the label lacks. Each is set to the derived value here and shown as the ability row would show it (the app\'s own whenTag / shortWhen / onceTag). Every one changes what a screen shows, so none is applied to data.js: the owner decides. (Invisible ones would be applied: ' + (wc.length - vis.length) + '.)', '');
+  for(const x of seenW.values()) lines.push('- **' + x.where + '**' + (x.places.length > 1 ? ' (+' + (x.places.length - 1) + ': ' + x.places.slice(1).map(p => p.split(' · ')[0]).join(', ') + ')' : '') + ': `' + J(x.change) + '` · before: ' + x.before + ' → after: ' + x.after + ' · ' + x.why + ' · text: "' + clip(plain(x.text).replace(/\n/g, ' / '), 160) + '"');
+  lines.push('');
   return lines.join('\n');
+}
+
+// ---------------------------------------------------------------------------------------------
+// "would change on screen": the plain inconsistencies (the same words stored differently; a tag or moment the text gives and
+// the label lacks), each set to the derived value, and what the ability's row would show before and after. The app's own
+// whenTag / shortWhen / onceTag (from app.html) say what is shown. Nothing here is applied to data.js.
+// ---------------------------------------------------------------------------------------------
+function screenFns(){
+  const html = fs.readFileSync(path.join(ROOT, 'app.html'), 'utf8');
+  const grab = re => { const m = re.exec(html); if(!m) throw new Error('app.html: ' + re); return m[0]; };
+  const fn = name => { const m = new RegExp('\\n(function ' + name + '\\(|const ' + name + ' = )').exec(html); const rest = html.slice(m.index + 1), end = rest.slice(1).search(/\n(function |const |let |\/\/ |\/\*)/); return rest.slice(0, end + 1); };
+  const src = [grab(/const PHASES = [^\n]*/), grab(/const PHASE_NAME = [^\n]*/), grab(/const TURN_NAME = [^\n]*/), grab(/const PHASE_SHORT = [^\n]*/),
+    fn('phasesOf'), fn('phTurn'), fn('whenTag'), fn('shortWhen'), fn('onceTag')].join('\n');
+  return new Function(src + '\nreturn { whenTag, shortWhen, onceTag };')();
+}
+function screenOf(F, ab){
+  const once = F.onceTag(ab), row = (ab.ph && !ab.na ? F.shortWhen(ab) : '');
+  const meta = [ab.tag, ab.ph ? F.whenTag(ab) : ''].filter(Boolean).join(' · ');
+  return ['row: ' + [ab.tag === 'Enhancement' ? '[Enhancement]' : '', once ? '[' + once + ']' : '', row].filter(Boolean).join(' '), 'opened: ' + (meta || '—')].join(' | ');
+}
+function wouldChange(items){
+  const F = screenFns(), out = [];
+  const ab = items.filter(it => it.ab);
+  const at = new Set(MOMENT_RULES.filter(r => r.at).map(r => r.at.toLowerCase()));
+  const propose = (it, change, why) => {
+    const before = screenOf(F, it.ab), after = screenOf(F, Object.assign({}, it.ab, change));
+    for(const k of Object.keys(change)) if(change[k] === undefined) delete change[k];
+    out.push({ where:it.where, kind:it.kind, change, before, after, visible:before !== after, why, text:it.ab.text, reasons:it.reasons });
+  };
+  // the same words stored differently: the copies in the minority take the majority's label
+  const groups = new Map();
+  for(const it of ab.filter(x => x.kind === 'ability-timing')){ const k = it.ab.name + '\n' + it.ab.text; if(!groups.has(k)) groups.set(k, []); groups.get(k).push(it); }
+  for(const g of groups.values()){
+    const by = new Map(); for(const it of g){ const k = JSON.stringify(it.stored); if(!by.has(k)) by.set(k, []); by.get(k).push(it); }
+    if(by.size < 2) continue;
+    const ranked = [...by.entries()].sort((x, y) => y[1].length - x[1].length);
+    if(ranked[0][1].length === ranked[1][1].length) continue;
+    const major = JSON.parse(ranked[0][0]);
+    for(const [, its] of ranked.slice(1)) for(const it of its) propose(it, { at:major.at, ph:major.ph, turn:major.turn, turns:major.turns }, 'the same words are stored as ' + J(major) + ' on ' + ranked[0][1].length + ' other lists');
+  }
+  for(const it of ab){
+    if(it.kind === 'ability-tag' && it.status === 'different'){
+      const keep = (it.notDerivableParts || []);
+      const tag = [...new Set([].concat(it.derived ? it.derived.split(/, (?!per )/) : [], keep))].join(', ');
+      propose(it, { tag }, 'the tag the text gives (' + it.reasons.map(r => r.rule).join(', ') + ')');
+    }
+    if(it.kind === 'ability-timing' && it.status === 'different' && it.derived){
+      const sm = storedMap(it.ab), dm = Object.fromEntries((it.derived.ph || []).map(p => [p, (it.derived.turns && it.derived.turns[p]) || it.derived.turn]));
+      const tagMoment = it.ab.tag && at.has(it.ab.tag.toLowerCase());
+      if(mapKey(sm) === mapKey(dm) && (it.ab.at || '') !== (it.derived.at || '')) propose(it, { at:it.derived.at }, 'the text opens with the moment "' + it.derived.at + '"');
+      else if(tagMoment && it.derived.at && it.derived.at.toLowerCase() === it.ab.tag.toLowerCase())
+        propose(it, { tag:undefined, at:it.derived.at, ph:it.derived.ph, turn:it.derived.turn, turns:it.derived.turns }, 'its tag is the moment the text opens with; as `at`, like Methodical Destruction');
+    }
+  }
+  return out;
 }
 
 const AGREED = path.join(ROOT, 'verify/derive-agreed.json');
@@ -724,7 +955,7 @@ if(require.main === module){
     const out = path.join(ROOT, 'verify/out');
     fs.mkdirSync(out, { recursive:true });
     fs.writeFileSync(path.join(out, 'derive.md'), report(items) + '\n');
-    writeJSON(path.join(out, 'derive.json'), { counts:c, rules:{ owner:OWNER_RULES.map(r => r.id), notTiming:NOT_TIMING.map(r => r.id), moments:MOMENT_RULES.map(r => r.id), activity:ACTIVITY_RULES.map(r => r.id).concat(AFTER_CHARGE.id), needs:Object.keys(NEEDS_RULES), tags:TAG_RULES.map(r => r.id), coverage:['aura-reach'].concat(BONUS_RULES.map(b => b.id), DEF_RULES.map(b => b.id)) },
+    writeJSON(path.join(out, 'derive.json'), { counts:c, wouldChangeOnScreen:wouldChange(items), rules:{ owner:OWNER_RULES.map(r => r.id), notTiming:NOT_TIMING.map(r => r.id), moments:MOMENT_RULES.map(r => r.id), used:ACTIVITY_RULES.map(r => r.id).concat(USED_MODIFIERS.map(r => r.id)), needs:Object.keys(NEEDS_RULES), tags:TAG_RULES.map(r => r.id), coverage:['aura-reach'].concat(BONUS_RULES.map(b => b.id), DEF_RULES.map(b => b.id)) },
       items:items.map(({ dedupe, ...it }) => it) });
     if(process.argv.includes('--report')) console.log('derive: report written to verify/out/derive.md and derive.json');
   }
@@ -750,4 +981,4 @@ if(require.main === module){
   for(const d of drift) console.log('  DRIFT ' + d);
   process.exit(drift.length ? 1 : 0);
 }
-module.exports = { derive, timing, explicitTiming, stratNeeds, ruleNeeds, canonNeeds, OWNER_RULES, NOT_TIMING, MOMENT_RULES, ACTIVITY_RULES, NEEDS_RULES, TAG_RULES, BONUS_RULES, DEF_RULES };
+module.exports = { derive, timing, explicitTiming, stratNeeds, ruleNeeds, canonNeeds, OWNER_RULES, NOT_TIMING, MOMENT_RULES, ACTIVITY_RULES, USED_MODIFIERS, NEEDS_RULES, TAG_RULES, BONUS_RULES, DEF_RULES };

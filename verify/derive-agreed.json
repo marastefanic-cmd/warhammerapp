@@ -157,11 +157,26 @@
    ],
    "turn": "either"
   },
+  "strat-needs | Orks · Dread Mob · Crazed Rampage": {
+   "all": [
+    "Faction: Orks",
+    "Walker"
+   ],
+   "none": [
+    "Titanic"
+   ]
+  },
   "strat-timing | Orks · Dread Mob · Dread Power": {
    "ph": [
     "movement"
    ],
    "turn": "your"
+  },
+  "strat-needs | Orks · Dread Mob · Dread Power": {
+   "all": [
+    "Faction: Orks",
+    "Walker"
+   ]
   },
   "strat-timing | Orks · Dread Mob · Stomping Juggernaut": {
    "ph": [
@@ -169,6 +184,12 @@
     "charge"
    ],
    "turn": "your"
+  },
+  "strat-needs | Orks · Dread Mob · Stomping Juggernaut": {
+   "all": [
+    "Faction: Orks",
+    "Walker"
+   ]
   },
   "strat-timing | Orks · Runt Swarm · Infested War Zone": {
    "ph": [
@@ -491,11 +512,23 @@
    ],
    "turn": "your"
   },
+  "strat-needs | World Eaters · Berzerker Warband · Apoplectic Frenzy": {
+   "all": [
+    "Khorne",
+    "Berzerkers"
+   ]
+  },
   "strat-timing | World Eaters · Berzerker Warband · Berzerker’s Wrath": {
    "ph": [
     "shooting"
    ],
    "turn": "opp"
+  },
+  "strat-needs | World Eaters · Berzerker Warband · Berzerker’s Wrath": {
+   "all": [
+    "Khorne",
+    "Berzerkers"
+   ]
   },
   "strat-timing | World Eaters · Khorne Daemonkin · Summoned by Slaughter": {
    "ph": [
@@ -828,6 +861,15 @@
     "command"
    ],
    "turn": "your"
+  },
+  "strat-needs | Thousand Sons · Warpmeld Pact · Blessed Transmutations": {
+   "all": [
+    "Faction: Thousand Sons"
+   ],
+   "any": [
+    "Psyker",
+    "Tzaangors"
+   ]
   },
   "strat-timing | Thousand Sons · Warpmeld Pact · Touched by Tzeentch": {
    "ph": [
@@ -1415,6 +1457,15 @@
     "shooting": "your"
    }
   },
+  "rule-needs | Orks · Dread Mob rule · Try Dat Button!": {
+   "all": [
+    "Faction: Orks",
+    "Walker"
+   ],
+   "none": [
+    "Titanic"
+   ]
+  },
   "rule-needs | Orks · Runt Swarm rule · Sneaky Little Gitz": {
    "all": [
     "Gretchin"
@@ -1436,12 +1487,6 @@
    "all": [
     "Faction: Orks"
    ]
-  },
-  "rule-timing | Orks · Wreckas rule · Wreckin’ and Lootin’": {
-   "ph": [
-    "shooting"
-   ],
-   "turn": "your"
   },
   "rule-needs | Orks · Wreckas rule · Wreckin’ and Lootin’": {
    "any": [
@@ -1467,12 +1512,6 @@
    ],
    "turn": "your"
   },
-  "rule-timing | Imperial Knights · Freeblade Company rule · Knights of Legend": {
-   "ph": [
-    "command"
-   ],
-   "turn": "your"
-  },
   "rule-needs | Imperial Knights · Freeblade Company rule · Knights of Legend": {
    "all": [
     "Faction: Imperial Knights"
@@ -1488,12 +1527,6 @@
    "all": [
     "Faction: World Eaters"
    ]
-  },
-  "rule-timing | World Eaters · Khorne Daemonkin rule · Blood Tithe": {
-   "ph": [
-    "command"
-   ],
-   "turn": "either"
   },
   "rule-needs | World Eaters · Khorne Daemonkin rule · Blood Tithe": {
    "any": [
@@ -1543,6 +1576,14 @@
    ]
   },
   "rule-tag | Thousand Sons · Ritual of Regeneration rule · Sorcerous Invigoration": "Once per turn, per unit",
+  "rule-timing | Thousand Sons · Warpmeld Pact rule · Warpmeld Sacrifice": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either"
+  },
   "rule-needs | Thousand Sons · Warpmeld Pact rule · Warpmeld Sacrifice": {
    "all": [
     "Tzeentch",
@@ -1604,22 +1645,10 @@
     "Super-heavy Walker"
    ]
   },
-  "rule-timing | Chaos Knights · Infernal Lance rule · Malefic Surge": {
-   "ph": [
-    "command"
-   ],
-   "turn": "your"
-  },
   "rule-needs | Chaos Knights · Infernal Lance rule · Malefic Surge": {
    "all": [
     "Faction: Chaos Knights"
    ]
-  },
-  "rule-timing | Chaos Knights · Houndpack Lance rule · Marked Prey": {
-   "ph": [
-    "command"
-   ],
-   "turn": "your"
   },
   "rule-needs | Chaos Knights · Houndpack Lance rule · Marked Prey": {
    "all": [
@@ -1657,13 +1686,40 @@
    ],
    "turn": "your"
   },
+  "ability-timing | shooty · Big Mek Dakkarig [dakkarig-herder] · Even More Dakka": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
   "ability-timing | shooty · Big Mek Dakkarig [dakkarig-herder] · Blitz Dem Gitz!": {
    "ph": [
     "shooting"
    ],
    "turn": "your"
   },
+  "ability-timing | shooty · Big Mek Dakkarig [dakkarig-herder] · Dreadherder": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "your"
+  },
   "ability-tag | shooty · Big Mek Dakkarig [dakkarig-herder] · Dreadherder": "Enhancement",
+  "ability-timing | shooty · Big Mek Dakkarig [dakkarig-boosta] · Even More Dakka": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
   "ability-timing | shooty · Big Mek Dakkarig [dakkarig-boosta] · Blitz Dem Gitz!": {
    "ph": [
     "shooting"
@@ -1696,6 +1752,17 @@
    ],
    "turn": "your"
   },
+  "ability-timing | shooty · Mek [mek-tankbustas] · Mek · Clever Know-wotz": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "your",
+   "turns": {
+    "fight": "either"
+   }
+  },
   "ability-timing | shooty · Mek [mek-tankbustas] · Tankbustas · Rokkit Barrage": {
    "ph": [
     "shooting"
@@ -1707,6 +1774,17 @@
     "movement"
    ],
    "turn": "your"
+  },
+  "ability-timing | shooty · Mek [mek-flashgitz] · Mek · Clever Know-wotz": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "your",
+   "turns": {
+    "fight": "either"
+   }
   },
   "ability-timing | shooty · Mek [mek-flashgitz] · Flash Gitz · Finderz Keeperz": {
    "ph": [
@@ -1734,6 +1812,18 @@
    ],
    "turn": "your"
   },
+  "ability-timing | shooty · Killa Kans · Spiteful Power Trip": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
   "ability-timing | melee · Ghazghkull Thraka · Supreme Commander": {},
   "ability-timing | melee · Ghazghkull Thraka · Makari, Hoist Dat Banner!": {
    "ph": [
@@ -1741,7 +1831,6 @@
    ],
    "turn": "your"
   },
-  "ability-timing | melee · Ghazghkull Thraka · Da Grand Warlord’s Ladz": {},
   "ability-timing | melee · Ghazghkull Thraka · Prophet of Da Great Waaagh!": {
    "ph": [
     "fight"
@@ -1749,7 +1838,6 @@
    "turn": "either"
   },
   "ability-tag | melee · Ghazghkull Thraka · Prophet of Da Great Waaagh!": "Aura",
-  "ability-timing | melee · Mozrog Skragbad · Beast Snagga Following": {},
   "ability-timing | melee · Mozrog Skragbad · One Last Kill": {
    "ph": [
     "fight"
@@ -1780,7 +1868,6 @@
    ],
    "turn": "either"
   },
-  "ability-timing | melee · Nazdreg · Meganobz · Arrogant Invulnerability": {},
   "ability-timing | melee · Beastboss on Squigosaur · Thundering Stampede": {
    "ph": [
     "charge"
@@ -1788,7 +1875,6 @@
    "turn": "either"
   },
   "ability-tag | melee · Beastboss on Squigosaur · Thundering Stampede": "Aura",
-  "ability-timing | melee · Beastboss on Squigosaur · Boss of da Hunt": {},
   "ability-timing | melee · Beastboss on Squigosaur · Keep Huntin’!": {
    "ph": [
     "movement"
@@ -1805,14 +1891,6 @@
   "ability-timing | melee · Big Mek · Big Mek · Shokk-boosta": {
    "ph": [
     "movement"
-   ],
-   "turn": "your"
-  },
-  "ability-timing | melee · Big Mek · Big Mek · Kunnin’ But Brutal": {
-   "ph": [
-    "movement",
-    "shooting",
-    "charge"
    ],
    "turn": "your"
   },
@@ -1848,14 +1926,12 @@
    "turn": "your"
   },
   "ability-tag | melee · Big Mek in Mega Armour · Big Mek in Mega Armour · Follow Me Ladz": "Enhancement",
-  "ability-timing | melee · Big Mek in Mega Armour · Big Mek in Mega Armour · Kustom Force Field": {},
   "ability-timing | melee · Big Mek in Mega Armour · Meganobz · Krumpin’ Time": {
    "ph": [
     "fight"
    ],
    "turn": "either"
   },
-  "ability-timing | melee · Big Mek in Mega Armour · Meganobz · Arrogant Invulnerability": {},
   "ability-timing | melee · Gretchin · Downtrodden": {},
   "ability-timing | melee · Gretchin · Thievin’ Scavengers": {
    "ph": [
@@ -1911,7 +1987,6 @@
    ],
    "turn": "either"
   },
-  "ability-timing | princes · Daemon Prince of Khorne [daemon-prince-of-khorne-helm-of-brazen-ire] · Lord of Murder": {},
   "ability-timing | princes · Daemon Prince of Khorne [daemon-prince-of-khorne-helm-of-brazen-ire] · Direct the Slaughter": {
    "ph": [
     "command",
@@ -1922,9 +1997,7 @@
    ],
    "turn": "either"
   },
-  "ability-timing | princes · Daemon Prince of Khorne [daemon-prince-of-khorne-helm-of-brazen-ire] · Helm of Brazen Ire": {},
   "ability-tag | princes · Daemon Prince of Khorne [daemon-prince-of-khorne-helm-of-brazen-ire] · Helm of Brazen Ire": "Enhancement",
-  "ability-timing | princes · Daemon Prince of Khorne [daemon-prince-of-khorne-berzerker-glaive] · Lord of Murder": {},
   "ability-timing | princes · Daemon Prince of Khorne [daemon-prince-of-khorne-berzerker-glaive] · Direct the Slaughter": {
    "ph": [
     "command",
@@ -1977,12 +2050,6 @@
    ],
    "turn": "your"
   },
-  "ability-timing | princes · Slaughterbound · Slaughterbound · Possessed Lord": {
-   "ph": [
-    "fight"
-   ],
-   "turn": "either"
-  },
   "ability-timing | princes · Slaughterbound · Slaughterbound · Lord of the Eightbound": {},
   "ability-timing | princes · Slaughterbound · Slaughterbound · Battle-lust": {
    "ph": [
@@ -2018,13 +2085,6 @@
    ],
    "turn": "your"
   },
-  "ability-timing | princes · Forgefiend · Furious Onslaught": {
-   "ph": [
-    "shooting"
-   ],
-   "turn": "your"
-  },
-  "ability-timing | princes · Forgefiend · Damaged: 1-4 wounds remaining": {},
   "ability-timing | standard · Angron · Wrathful Presence": {
    "at": "Start of the battle round",
    "ph": [
@@ -2032,7 +2092,6 @@
    ],
    "turn": "either"
   },
-  "ability-timing | standard · Angron · Damaged: 1-6 wounds remaining": {},
   "ability-timing | standard · Angron · Wrathful Presence: pick one · Driven by Ultimate Rage": {
    "ph": [
     "fight"
@@ -2093,24 +2152,12 @@
    ],
    "turn": "your"
   },
-  "ability-timing | standard · Slaughterbound [slaughterbound] · Possessed Lord": {
-   "ph": [
-    "fight"
-   ],
-   "turn": "either"
-  },
   "ability-timing | standard · Slaughterbound [slaughterbound] · Lord of the Eightbound": {},
   "ability-timing | standard · Slaughterbound [slaughterbound-exalted-eightbound] · Slaughterbound · Rage Eternal": {
    "ph": [
     "command"
    ],
    "turn": "your"
-  },
-  "ability-timing | standard · Slaughterbound [slaughterbound-exalted-eightbound] · Slaughterbound · Possessed Lord": {
-   "ph": [
-    "fight"
-   ],
-   "turn": "either"
   },
   "ability-timing | standard · Slaughterbound [slaughterbound-exalted-eightbound] · Slaughterbound · Lord of the Eightbound": {},
   "ability-tag | standard · Slaughterbound [slaughterbound-exalted-eightbound] · Slaughterbound · Berzerker Glaive": "Enhancement",
@@ -2153,14 +2200,6 @@
    ],
    "turn": "your"
   },
-  "ability-timing | standard · Forgefiend · Furious Onslaught": {
-   "ph": [
-    "shooting"
-   ],
-   "turn": "your"
-  },
-  "ability-timing | standard · Forgefiend · Damaged: 1-4 wounds remaining": {},
-  "ability-timing | pubstomper · Magnus the Red · Damaged: 1-6 wounds remaining": {},
   "ability-timing | pubstomper · Magnus the Red · Unearthly Power": {
    "at": "Start of the battle round",
    "ph": [
@@ -2174,7 +2213,6 @@
    ],
    "turn": "your"
   },
-  "ability-timing | pubstomper · Magnus the Red · Crimson King · Impossible Form": {},
   "ability-timing | pubstomper · Magnus the Red · Crimson King · Treason of Tzeentch": {
    "ph": [
     "shooting"
@@ -2188,8 +2226,19 @@
    "turn": "your"
   },
   "ability-tag | pubstomper · Magnus the Red · Crimson King · Time Flux": "Aura",
+  "ability-timing | pubstomper · Daemon Prince of Tzeentch with wings · Hunter of Souls": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
   "ability-tag | pubstomper · Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph": "Enhancement",
-  "ability-timing | pubstomper · Exalted Sorcerer · Exalted Sorcerer · Arcane Shield": {},
   "ability-timing | pubstomper · Exalted Sorcerer · Exalted Sorcerer · Rebind Rubricae": {
    "ph": [
     "command"
@@ -2203,11 +2252,15 @@
    "turn": "your"
   },
   "ability-tag | pubstomper · Exalted Sorcerer · Exalted Sorcerer · Incandaeum": "Enhancement",
-  "ability-timing | pubstomper · Sorcerer in Terminator Armour · Sorcerer in Terminator Armour · Marked by Fate": {
+  "ability-timing | pubstomper · Exalted Sorcerer · Rubric Marines · Bringers of Change": {
    "ph": [
+    "movement",
     "shooting"
    ],
-   "turn": "your"
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
   },
   "ability-timing | pubstomper · Sorcerer in Terminator Armour · Sorcerer in Terminator Armour · Umbralefic Crystal": {
    "ph": [
@@ -2217,7 +2270,6 @@
    "turn": "your"
   },
   "ability-tag | pubstomper · Sorcerer in Terminator Armour · Sorcerer in Terminator Armour · Umbralefic Crystal": "Enhancement",
-  "ability-timing | pubstomper · Sorcerer in Terminator Armour · Scarab Occult Terminators · Rites of Coalescence": {},
   "ability-timing | pubstomper · Tzaangors · Ambushing Hunters": {
    "at": "End of your opponent’s turn",
    "ph": [
@@ -2247,7 +2299,6 @@
    ],
    "turn": "opp"
   },
-  "ability-timing | pubstomper · Defiler · Damaged: 1-6 wounds remaining": {},
   "ability-timing | pubstomper · Sekhetar Robots · Prophetic Sentinels": {
    "ph": [
     "movement",
@@ -2296,7 +2347,6 @@
    ],
    "turn": "opp"
   },
-  "ability-timing | nidzillas · Norn Assimilator [norn-assimilator-synaptoprescience] · Damaged: 1-5 Wounds Remaining": {},
   "ability-timing | nidzillas · Norn Assimilator [norn-assimilator-synaptoprescience] · Protean Purpose": {
    "ph": [
     "command"
@@ -2304,7 +2354,6 @@
    "turn": "your"
   },
   "ability-tag | nidzillas · Norn Assimilator [norn-assimilator-synaptoprescience] · Protean Purpose": "Once per battle, per unit",
-  "ability-timing | nidzillas · Norn Assimilator [norn-assimilator-synaptoprescience] · Synaptoprescience": {},
   "ability-tag | nidzillas · Norn Assimilator [norn-assimilator-synaptoprescience] · Synaptoprescience": "Enhancement",
   "ability-timing | nidzillas · Norn Assimilator [norn-assimilator-synaptoprescience-2] · Harpoon Barbs": {
    "ph": [
@@ -2312,7 +2361,6 @@
    ],
    "turn": "opp"
   },
-  "ability-timing | nidzillas · Norn Assimilator [norn-assimilator-synaptoprescience-2] · Damaged: 1-5 Wounds Remaining": {},
   "ability-timing | nidzillas · Norn Assimilator [norn-assimilator-synaptoprescience-2] · Protean Purpose": {
    "ph": [
     "command"
@@ -2320,9 +2368,7 @@
    "turn": "your"
   },
   "ability-tag | nidzillas · Norn Assimilator [norn-assimilator-synaptoprescience-2] · Protean Purpose": "Once per battle, per unit",
-  "ability-timing | nidzillas · Norn Assimilator [norn-assimilator-synaptoprescience-2] · Synaptoprescience": {},
   "ability-tag | nidzillas · Norn Assimilator [norn-assimilator-synaptoprescience-2] · Synaptoprescience": "Enhancement",
-  "ability-timing | nidzillas · Norn Emissary [norn-emissary-destabilising-predation] · Damaged: 1-5 Wounds Remaining": {},
   "ability-timing | nidzillas · Norn Emissary [norn-emissary-destabilising-predation] · Protean Purpose": {
    "ph": [
     "command"
@@ -2331,8 +2377,6 @@
   },
   "ability-tag | nidzillas · Norn Emissary [norn-emissary-destabilising-predation] · Protean Purpose": "Once per battle, per unit",
   "ability-tag | nidzillas · Norn Emissary [norn-emissary-destabilising-predation] · Destabilising Predation": "Enhancement",
-  "ability-timing | nidzillas · Norn Emissary [norn-emissary-destabilising-predation] · Unnatural Resistance": {},
-  "ability-timing | nidzillas · Norn Emissary [norn-emissary] · Damaged: 1-5 Wounds Remaining": {},
   "ability-timing | nidzillas · Norn Emissary [norn-emissary] · Protean Purpose": {
    "ph": [
     "command"
@@ -2340,50 +2384,15 @@
    "turn": "your"
   },
   "ability-tag | nidzillas · Norn Emissary [norn-emissary] · Protean Purpose": "Once per battle, per unit",
-  "ability-timing | nidzillas · Norn Emissary [norn-emissary] · Unnatural Resistance": {},
-  "ability-timing | nidzillas · Tyrannofex · Resilient Organism": {},
   "ability-tag | nidzillas · Tyrannofex · Resilient Organism": "Once per battle",
-  "ability-timing | nidzillas · Tyrannofex · Damaged: 1-5 Wounds Remaining": {},
-  "ability-timing | 6-bigs · Knight Destrier · Damaged: 1-6 Wounds Remaining": {},
   "ability-timing | 6-bigs · Knight Destrier · Ram Jets": {
    "ph": [
     "movement"
    ],
    "turn": "your"
   },
-  "ability-timing | 6-bigs · Knight Destrier · Saturation Fire": {
-   "ph": [
-    "shooting"
-   ],
-   "turn": "your"
-  },
-  "ability-timing | 6-bigs · Knight Destrier · Invulnerable Save (5+*)": {},
-  "ability-timing | 6-bigs · Knight Errant · Aggressive Assault": {
-   "ph": [
-    "shooting"
-   ],
-   "turn": "your"
-  },
-  "ability-timing | 6-bigs · Knight Errant · Invulnerable Save (5+*)": {},
-  "ability-timing | 6-bigs · Knight Errant · Damaged: 1-9 Wounds Remaining": {},
   "ability-tag | 6-bigs · Knight Errant · Errant’s Duty": "Bondsman",
-  "ability-timing | 6-bigs · Knight Paladin · Seasoned Noble": {
-   "ph": [
-    "shooting"
-   ],
-   "turn": "your"
-  },
-  "ability-timing | 6-bigs · Knight Paladin · Invulnerable Save (5+*)": {},
-  "ability-timing | 6-bigs · Knight Paladin · Damaged: 1-9 Wounds Remaining": {},
   "ability-tag | 6-bigs · Knight Paladin · Paladin’s Duty": "Bondsman",
-  "ability-timing | 6-bigs · Knight Warden · Thin Their Ranks": {
-   "ph": [
-    "shooting"
-   ],
-   "turn": "your"
-  },
-  "ability-timing | 6-bigs · Knight Warden · Invulnerable Save (5+*)": {},
-  "ability-timing | 6-bigs · Knight Warden · Damaged: 1-9 Wounds Remaining": {},
   "ability-tag | 6-bigs · Knight Warden · Warden’s Duty": "Bondsman",
   "ability-timing | 4-megas-and-a-destrier · Canis Rex · Chainbreaker": {
    "ph": [
@@ -2405,32 +2414,24 @@
    ],
    "turn": "either"
   },
-  "ability-timing | 4-megas-and-a-destrier · Canis Rex · Invulnerable Save (5+*)": {},
-  "ability-timing | 4-megas-and-a-destrier · Canis Rex · Damaged: 1-9 Wounds Remaining": {},
-  "ability-timing | 4-megas-and-a-destrier · Cerastus Knight Atrapos · Damaged: 1-10 Wounds Remaining": {},
   "ability-tag | 4-megas-and-a-destrier · Cerastus Knight Atrapos · Bringer of Justice": "Enhancement",
   "ability-tag | 4-megas-and-a-destrier · Cerastus Knight Atrapos · Atrapos’ Duty": "Bondsman",
-  "ability-timing | 4-megas-and-a-destrier · Cerastus Knight Lancer · Damaged: 1-10 Wounds Remaining": {},
   "ability-tag | 4-megas-and-a-destrier · Cerastus Knight Lancer · Lancer’s Duty": "Bondsman",
-  "ability-timing | 4-megas-and-a-destrier · Knight Crusader · Invulnerable Save (5+*)": {},
-  "ability-timing | 4-megas-and-a-destrier · Knight Crusader · Damaged: 1-9 Wounds Remaining": {},
+  "ability-timing | 4-megas-and-a-destrier · Knight Crusader · Punishing Salvoes": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "your"
+  },
   "ability-tag | 4-megas-and-a-destrier · Knight Crusader · Hunter’s Eye": "Enhancement",
   "ability-tag | 4-megas-and-a-destrier · Knight Crusader · Crusader’s Duty": "Bondsman",
-  "ability-timing | 4-megas-and-a-destrier · Knight Destrier · Damaged: 1-6 Wounds Remaining": {},
   "ability-timing | 4-megas-and-a-destrier · Knight Destrier · Ram Jets": {
    "ph": [
     "movement"
    ],
    "turn": "your"
   },
-  "ability-timing | 4-megas-and-a-destrier · Knight Destrier · Saturation Fire": {
-   "ph": [
-    "shooting"
-   ],
-   "turn": "your"
-  },
-  "ability-timing | 4-megas-and-a-destrier · Knight Destrier · Invulnerable Save (5+*)": {},
-  "ability-timing | 4-megas-and-a-destrier · Knight Destrier · Sanctuary": {},
   "ability-tag | 4-megas-and-a-destrier · Knight Destrier · Sanctuary": "Enhancement",
   "ability-timing | ooga-booga · Ghazghkull Thraka · Supreme Commander": {},
   "ability-timing | ooga-booga · Ghazghkull Thraka · Makari, Hoist Dat Banner!": {
@@ -2439,7 +2440,6 @@
    ],
    "turn": "your"
   },
-  "ability-timing | ooga-booga · Ghazghkull Thraka · Da Grand Warlord’s Ladz": {},
   "ability-timing | ooga-booga · Ghazghkull Thraka · Prophet of Da Great Waaagh!": {
    "ph": [
     "fight"
@@ -2465,7 +2465,6 @@
    ],
    "turn": "either"
   },
-  "ability-timing | ooga-booga · Nazdreg · Meganobz · Arrogant Invulnerability": {},
   "ability-timing | ooga-booga · Zodgrod Wortsnagga · Gretchin · Downtrodden": {},
   "ability-timing | ooga-booga · Zodgrod Wortsnagga · Gretchin · Thievin’ Scavengers": {
    "ph": [
@@ -2517,7 +2516,6 @@
    ],
    "turn": "either"
   },
-  "ability-timing | ooga-booga · Big Mek in Mega Armour · Meganobz · Arrogant Invulnerability": {},
   "ability-timing | ooga-booga · Gretchin · Downtrodden": {},
   "ability-timing | ooga-booga · Gretchin · Thievin’ Scavengers": {
    "ph": [
@@ -2532,7 +2530,6 @@
    ],
    "turn": "either"
   },
-  "ability-timing | super-terminators · Angron · Damaged: 1-6 wounds remaining": {},
   "ability-timing | super-terminators · Angron · Wrathful Presence: pick one · Driven by Ultimate Rage": {
    "ph": [
     "fight"
@@ -2547,27 +2544,7 @@
    "turn": "opp"
   },
   "ability-tag | super-terminators · Angron · Wrathful Presence: pick one · Overwhelming Wrath": "Aura",
-  "ability-timing | super-terminators · Chaos Terminators [chaos-terminators] · Bloody Fury": {
-   "ph": [
-    "shooting",
-    "charge"
-   ],
-   "turn": "either",
-   "turns": {
-    "shooting": "your"
-   }
-  },
   "ability-tag | super-terminators · Chaos Terminators [chaos-terminators] · Gore-stained Veterans": "Upgrade",
-  "ability-timing | super-terminators · Chaos Terminators [chaos-terminators-2] · Bloody Fury": {
-   "ph": [
-    "shooting",
-    "charge"
-   ],
-   "turn": "either",
-   "turns": {
-    "shooting": "your"
-   }
-  },
   "ability-tag | super-terminators · Chaos Terminators [chaos-terminators-2] · Gore-stained Veterans": "Upgrade",
   "ability-timing | super-terminators · Eightbound · Beacons of Rage": {
    "ph": [
@@ -2588,20 +2565,6 @@
    ],
    "turn": "your"
   },
-  "ability-timing | super-terminators · Forgefiend · Furious Onslaught": {
-   "ph": [
-    "shooting"
-   ],
-   "turn": "your"
-  },
-  "ability-timing | super-terminators · Forgefiend · Damaged: 1-4 wounds remaining": {},
-  "ability-timing | purge-goes-the-foe · Belisarius Cawl · Canticles of the Omnissiah": {
-   "ph": [
-    "command"
-   ],
-   "turn": "your"
-  },
-  "ability-timing | purge-goes-the-foe · Belisarius Cawl · Mechanicus Bodyguard": {},
   "ability-timing | purge-goes-the-foe · Belisarius Cawl · Self-repair Mechanisms": {
    "ph": [
     "command"
@@ -2609,7 +2572,6 @@
    "turn": "your"
   },
   "ability-timing | purge-goes-the-foe · Belisarius Cawl · Supreme Commander": {},
-  "ability-timing | purge-goes-the-foe · Thulia Ghuld · Mechanicus Bodyguard": {},
   "ability-timing | purge-goes-the-foe · Thulia Ghuld · Secutor of Olympus": {
    "ph": [
     "shooting"
@@ -2623,59 +2585,21 @@
    ],
    "turn": "your"
   },
-  "ability-timing | purge-goes-the-foe · Tech-Priest Enginseer · Enginseer": {},
-  "ability-timing | purge-goes-the-foe · Tech-Priest Enginseer · Omnissiah’s Blessing": {
-   "ph": [
-    "command"
-   ],
-   "turn": "your"
-  },
-  "ability-timing | purge-goes-the-foe · Tech-Priest Enginseer · Necromechanic": {},
-  "ability-timing | purge-goes-the-foe · Cybernetica Datasmith · Cybernetica Datasmith · Battle Protocols": {
-   "ph": [
-    "command"
-   ],
-   "turn": "your"
-  },
   "ability-tag | purge-goes-the-foe · Cybernetica Datasmith · Cybernetica Datasmith · Martial Signatum Amplificator": "Enhancement",
-  "ability-timing | purge-goes-the-foe · Cybernetica Datasmith · Kastelan Robots · Robotic Bodyguard": {},
   "ability-timing | purge-goes-the-foe · Skitarii Rangers · Objective Scouted": {
    "ph": [
     "command"
    ],
    "turn": "your"
   },
-  "ability-timing | purge-goes-the-foe · Ironstrider Ballistarii [ironstrider-ballistarii] · Elevated Strider": {
-   "ph": [
-    "movement",
-    "shooting"
-   ],
-   "turn": "your"
-  },
-  "ability-timing | purge-goes-the-foe · Ironstrider Ballistarii [ironstrider-ballistarii-2] · Elevated Strider": {
-   "ph": [
-    "movement",
-    "shooting"
-   ],
-   "turn": "your"
-  },
-  "ability-timing | purge-goes-the-foe · Onager Dunecrawler · Emanatus Forcefield": {},
   "ability-tag | purge-goes-the-foe · Onager Dunecrawler · Emanatus Forcefield": "Aura",
-  "ability-timing | purge-goes-the-foe · Onager Dunecrawler · Damaged: 1-4 wounds remaining": {},
   "ability-timing | purge-goes-the-foe · Onager Dunecrawler · Scuttling Walker": {
    "ph": [
     "movement"
    ],
    "turn": "your"
   },
-  "ability-timing | purge-goes-the-foe · Skorpius Disintegrator · Damaged: 1-4 wounds remaining": {},
   "ability-timing | defilers-and-friends · Lucius the Eternal · Lucius the Eternal · Duellist’s Hubris": {
-   "ph": [
-    "fight"
-   ],
-   "turn": "either"
-  },
-  "ability-timing | defilers-and-friends · Lucius the Eternal · Flawless Blades · Daemonic Patrons": {
    "ph": [
     "fight"
    ],
@@ -2687,7 +2611,6 @@
    ],
    "turn": "either"
   },
-  "ability-timing | defilers-and-friends · Daemon Prince of Slaanesh with Wings · Stimulated by Pain": {},
   "ability-timing | defilers-and-friends · Lord Exultant · Lord Exultant · Euphoric Strikes": {
    "ph": [
     "fight"
@@ -2722,18 +2645,16 @@
    }
   },
   "ability-timing | defilers-and-friends · Chaos Rhino · Transport · Chaos Rhino": {},
-  "ability-timing | defilers-and-friends · Defiler [defiler] · Damaged: 1-6 wounds remaining": {},
-  "ability-timing | defilers-and-friends · Defiler [defiler-2] · Damaged: 1-6 wounds remaining": {},
-  "ability-timing | defilers-and-friends · Maulerfiend · Damaged: 1-4 wounds remaining": {},
   "ability-tag | infernal-lance · Chaos Cerastus Knight Atrapos · Consumed with Hunger": "Aura",
-  "ability-timing | infernal-lance · Chaos Cerastus Knight Atrapos · Damaged: 1-10 wounds remaining": {},
   "ability-tag | infernal-lance · Chaos Cerastus Knight Atrapos · Knight Diabolus": "Enhancement",
   "ability-tag | infernal-lance · Chaos Cerastus Knight Lancer · Dark Fervour": "Aura",
-  "ability-timing | infernal-lance · Chaos Cerastus Knight Lancer · Damaged: 1-10 wounds remaining": {},
   "ability-tag | infernal-lance · Chaos Cerastus Knight Lancer · Blasphemous Engine": "Enhancement",
   "ability-tag | infernal-lance · Knight Despoiler · Dread Dominion": "Aura",
-  "ability-timing | infernal-lance · Knight Despoiler · Seething Hatred": {
+  "ability-tag | infernal-lance · Knight Despoiler · Bestial Aspect": "Enhancement",
+  "ability-timing | infernal-lance · Knight Ruinator [knight-ruinator-fleshmetal-fusion] · Methodical Destruction": {
+   "at": "Start of the first battle round",
    "ph": [
+    "command",
     "shooting",
     "fight"
    ],
@@ -2742,17 +2663,21 @@
     "shooting": "your"
    }
   },
-  "ability-timing | infernal-lance · Knight Despoiler · Damaged: 1-9 wounds remaining": {},
-  "ability-timing | infernal-lance · Knight Despoiler · *Invulnerable Save": {},
-  "ability-tag | infernal-lance · Knight Despoiler · Bestial Aspect": "Enhancement",
   "ability-tag | infernal-lance · Knight Ruinator [knight-ruinator-fleshmetal-fusion] · Close-range Killers": "Aura",
-  "ability-timing | infernal-lance · Knight Ruinator [knight-ruinator-fleshmetal-fusion] · Damaged: 1-9 wounds remaining": {},
-  "ability-timing | infernal-lance · Knight Ruinator [knight-ruinator-fleshmetal-fusion] · *Invulnerable Save": {},
-  "ability-timing | infernal-lance · Knight Ruinator [knight-ruinator-fleshmetal-fusion] · Fleshmetal Fusion": {},
   "ability-tag | infernal-lance · Knight Ruinator [knight-ruinator-fleshmetal-fusion] · Fleshmetal Fusion": "Enhancement",
+  "ability-timing | infernal-lance · Knight Ruinator [knight-ruinator] · Methodical Destruction": {
+   "at": "Start of the first battle round",
+   "ph": [
+    "command",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
   "ability-tag | infernal-lance · Knight Ruinator [knight-ruinator] · Close-range Killers": "Aura",
-  "ability-timing | infernal-lance · Knight Ruinator [knight-ruinator] · Damaged: 1-9 wounds remaining": {},
-  "ability-timing | infernal-lance · Knight Ruinator [knight-ruinator] · *Invulnerable Save": {},
   "ability-timing | infernal-lance · Nurglings · Mischief Makers": {
    "ph": [
     "fight"
@@ -2760,21 +2685,8 @@
    "turn": "either"
   },
   "ability-tag | infernal-lance · Nurglings · Mischief Makers": "Aura",
-  "ability-timing | woof-woof · War Dog Brigand [war-dog-brigand-final-howl-aura] · Damaged: 1-5 wounds remaining": {},
-  "ability-timing | woof-woof · War Dog Brigand [war-dog-brigand-final-howl-aura] · *Invulnerable Save": {},
-  "ability-timing | woof-woof · War Dog Brigand [war-dog-brigand] · Damaged: 1-5 wounds remaining": {},
-  "ability-timing | woof-woof · War Dog Brigand [war-dog-brigand] · *Invulnerable Save": {},
-  "ability-timing | woof-woof · War Dog Brigand [war-dog-brigand-2] · Damaged: 1-5 wounds remaining": {},
-  "ability-timing | woof-woof · War Dog Brigand [war-dog-brigand-2] · *Invulnerable Save": {},
-  "ability-timing | woof-woof · War Dog Executioner · Damaged: 1-5 wounds remaining": {},
-  "ability-timing | woof-woof · War Dog Executioner · *Invulnerable Save": {},
   "ability-tag | woof-woof · War Dog Executioner · Snarling Rivalry": "Upgrade",
-  "ability-timing | woof-woof · War Dog Karnivore [war-dog-karnivore-panoply-of-the-cursed-knights] · Damaged: 1-5 wounds remaining": {},
-  "ability-timing | woof-woof · War Dog Karnivore [war-dog-karnivore-panoply-of-the-cursed-knights] · *Invulnerable Save": {},
-  "ability-timing | woof-woof · War Dog Karnivore [war-dog-karnivore-panoply-of-the-cursed-knights] · Panoply of the Cursed Knights": {},
   "ability-tag | woof-woof · War Dog Karnivore [war-dog-karnivore-panoply-of-the-cursed-knights] · Panoply of the Cursed Knights": "Enhancement",
-  "ability-timing | woof-woof · War Dog Karnivore [war-dog-karnivore] · Damaged: 1-5 wounds remaining": {},
-  "ability-timing | woof-woof · War Dog Karnivore [war-dog-karnivore] · *Invulnerable Save": {},
   "ability-timing | big-demons-baby · Angron · Wrathful Presence": {
    "at": "Start of the battle round",
    "ph": [
@@ -2782,7 +2694,6 @@
    ],
    "turn": "either"
   },
-  "ability-timing | big-demons-baby · Angron · Damaged: 1-6 wounds remaining": {},
   "ability-timing | big-demons-baby · Angron · Wrathful Presence: pick one · Driven by Ultimate Rage": {
    "ph": [
     "fight"
@@ -2804,7 +2715,6 @@
    "turn": "either"
   },
   "ability-tag | big-demons-baby · Skarbrand · Rage Embodied": "Aura",
-  "ability-timing | big-demons-baby · Skarbrand · Damaged: 1-7 wounds remaining": {},
   "ability-timing | big-demons-baby · Bloodthirster · Daemon Lord of Khorne": {
    "ph": [
     "fight"
@@ -2818,8 +2728,6 @@
    ],
    "turn": "either"
   },
-  "ability-timing | big-demons-baby · Bloodthirster · Damaged: 1-6 wounds remaining": {},
-  "ability-timing | big-demons-baby · Daemon Prince of Khorne · Lord of Murder": {},
   "ability-timing | big-demons-baby · Daemon Prince of Khorne · Direct the Slaughter": {
    "ph": [
     "command",
@@ -2837,7 +2745,6 @@
    ],
    "turn": "either"
   },
-  "ability-timing | big-demons-baby · Master of Executions · Blood-forged Armour": {},
   "ability-tag | big-demons-baby · Master of Executions · Blood-forged Armour": "Enhancement",
   "ability-timing | big-demons-baby · Lord on Juggernaut · Lord on Juggernaut · Aggressive Advance": {
    "ph": [
@@ -2887,8 +2794,6 @@
    ],
    "turn": "opp"
   },
-  "ability-timing | big-demons-baby · Flesh Hounds · Collar of Khorne": {},
-  "ability-timing | mucho-mutantes · Magnus the Red · Damaged: 1-6 wounds remaining": {},
   "ability-timing | mucho-mutantes · Magnus the Red · Unearthly Power": {
    "at": "Start of the battle round",
    "ph": [
@@ -2902,7 +2807,6 @@
    ],
    "turn": "your"
   },
-  "ability-timing | mucho-mutantes · Magnus the Red · Crimson King · Impossible Form": {},
   "ability-timing | mucho-mutantes · Magnus the Red · Crimson King · Treason of Tzeentch": {
    "ph": [
     "shooting"
@@ -2929,12 +2833,17 @@
    ],
    "turn": "opp"
   },
-  "ability-timing | mucho-mutantes · Exalted Sorcerer on Disc of Tzeentch · Exalted Sorcerer on Disc of Tzeentch · Illusions of Tzeentch": {},
-  "ability-timing | mucho-mutantes · Exalted Sorcerer on Disc of Tzeentch · Exalted Sorcerer on Disc of Tzeentch · Binding Tendrils": {
+  "ability-timing | mucho-mutantes · Daemon Prince of Tzeentch with wings · Hunter of Souls": {
    "ph": [
-    "shooting"
+    "movement",
+    "shooting",
+    "fight"
    ],
-   "turn": "your"
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
   },
   "ability-timing | mucho-mutantes · Exalted Sorcerer on Disc of Tzeentch · Tzaangor Enlightened with Fatecaster greatbows · Malign Trickery": {
    "ph": [
@@ -2975,7 +2884,6 @@
     "shooting": "your"
    }
   },
-  "ability-timing | mucho-mutantes · Tzaangor Shaman [tzaangor-shaman-tzaangor-enlightened-diamond-of-distortion] · Tzaangor Shaman · Diamond of Distortion": {},
   "ability-tag | mucho-mutantes · Tzaangor Shaman [tzaangor-shaman-tzaangor-enlightened-diamond-of-distortion] · Tzaangor Shaman · Diamond of Distortion": "Enhancement",
   "ability-timing | mucho-mutantes · Tzaangor Shaman [tzaangor-shaman-tzaangor-enlightened-diamond-of-distortion] · Tzaangor Enlightened · Prophesied Doom": {
    "ph": [
@@ -2993,7 +2901,6 @@
     "shooting": "your"
    }
   },
-  "ability-timing | mucho-mutantes · Tzaangor Shaman [tzaangor-shaman-tzaangor-enlightened-flowing-flesh] · Tzaangor Shaman · Flowing Flesh": {},
   "ability-tag | mucho-mutantes · Tzaangor Shaman [tzaangor-shaman-tzaangor-enlightened-flowing-flesh] · Tzaangor Shaman · Flowing Flesh": "Enhancement",
   "ability-timing | mucho-mutantes · Tzaangor Shaman [tzaangor-shaman-tzaangor-enlightened-flowing-flesh] · Tzaangor Enlightened · Prophesied Doom": {
    "ph": [
