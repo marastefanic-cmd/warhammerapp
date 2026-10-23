@@ -614,6 +614,14 @@ function nrAbility(name, who) {
   const m = /^(.*?)\s*\(([^()]*)\)$/.exec(t);
   return { full: t, base: m ? m[1] : t, paren: m ? m[2] : null, who: w };
 }
+// an enhancement New Recruit spells otherwise than GW (data.js enhancement `nr`: "Incandeum" for "Incandaeum"):
+// New Recruit's spelling -> GW's, for the faction(s) whose enhancement names were asked for
+const ENH_SPELL = new Map();
+function enhNamesOf(F) {
+  const es = Object.values(F.detachments).flatMap(d => d.enhancements || []);
+  for (const e of es) if (e.nr) ENH_SPELL.set(lc(nm(e.nr)), e.name);
+  return es.flatMap(e => e.nr ? [e.name, e.nr] : [e.name]);
+}
 // option items of one model line
 function nrOptions(items, enhNames) {
   const r = { warlord: false, leads: null, support: false, enhancement: null, gear: [] };
@@ -623,7 +631,7 @@ function nrOptions(items, enhNames) {
     let m;
     if (it === 'Warlord') r.warlord = true;
     else if ((m = /^•\s*(Leading|Supporting):\s*(.+?)(\[\d+\])?$/.exec(it))) { r.leads = m[2]; r.support = m[1] === 'Supporting'; }
-    else if (enh.has(lc(it))) { r.enhancement = it; r.enhItem = it; }
+    else if (enh.has(lc(it))) { r.enhancement = ENH_SPELL.has(lc(it)) ? nm(ENH_SPELL.get(lc(it))) : it; r.enhItem = it; }
     else {
       // "Ectoplasma cannon and claws (Ectoplasma cannon, Forgefiend claws)" counts as its weapons; "2x Weapon" as Weapon
       const g = /^.*?\((.*)\)$/.exec(it);
@@ -641,7 +649,7 @@ const kwRule = k => lc(k).replace(/:.*$/, '').replace(/^anti-.*$/, 'anti').repla
 // ---------------------------------------------------------------- per army
 function compareArmy(D, A, nr, out, srcFile) {
   const F = D.factions[A.faction];
-  const enhNames = Object.values(F.detachments).flatMap(d => (d.enhancements || []).map(e => e.name));
+  const enhNames = enhNamesOf(F);
   const where = p => path.relative(ROOT, srcFile) + (p ? ' p' + p : '');
   const fail = (unit, field, app, source, page) => out.failures.push({ army: A.id, unit, field, app: app === undefined ? null : app, source: source === undefined ? null : source, where: where(page) });
   const chk = (cat, n = 1) => { out.checked[cat] = (out.checked[cat] || 0) + n; };
@@ -869,6 +877,7 @@ function compareUnit(nu, au, enhNames, { fail, chk, cmp, armyRuleNames = new Set
   const appA = (au.abilities || []).map(x => ({ name: nm(x.name), who: x.who ? nm(x.who) : null, tag: x.tag ? nm(x.tag) : null, x }));
   const nrA = [];
   for (const t of nu.tables) for (const r of t.rows) nrA.push(Object.assign(nrAbility(r.name, nu.who), { table: t.name, col2: t.col2, text: r.text }));
+  for (const na of nrA) { const g = ENH_SPELL.get(lc(na.base)); if (g) { if (na.full === na.base) na.full = nm(g); na.base = nm(g); } }
   const used = new Set();
   const nrKeys = [];
   for (const na of nrA) {
@@ -916,14 +925,14 @@ function compareUnit(nu, au, enhNames, { fail, chk, cmp, armyRuleNames = new Set
 }
 
 // the same readings for verify/import-nr.js, so the importer writes what this file checks
-Object.assign(module.exports, { nrOptions, nrWeapon, nrStatName, nrAbility, nrDetachments, splitItems, nm, lc, q, cellV, appText, textEq, compareArmy });
+Object.assign(module.exports, { enhNamesOf, nrOptions, nrWeapon, nrStatName, nrAbility, nrDetachments, splitItems, nm, lc, q, cellV, appText, textEq, compareArmy });
 
 // ---------------------------------------------------------------- main
 function main(args) {
   const ctx = { window: {} }; vm.createContext(ctx);
   vm.runInContext(fs.readFileSync(args.data, 'utf8'), ctx);
   const D = ctx.window.WH_DATA;
-  const enhOf = A => Object.values(D.factions[A.faction].detachments).flatMap(d => (d.enhancements || []).map(e => e.name));
+  const enhOf = A => enhNamesOf(D.factions[A.faction]);
   if (args.dump) {
     const A = D.armies.find(x => x.id === args.dump);
     console.log(JSON.stringify(parseNR(path.join(args.sources, args.dump + '.txt'), enhOf(A)), null, 1));

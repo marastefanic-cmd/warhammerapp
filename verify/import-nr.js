@@ -78,7 +78,9 @@ const ALLIES = (JSON.parse(fs.readFileSync(path.join(ROOT, 'verify/sources/facti
 const allyOf = role => { const m = /^Allies: (.+)$/.exec(role || ''); return m ? m[1] : null; };
 if (!F) note(null, 'faction ' + nr0.faction + ' is not in data.js: transcribe its army rules, detachments, enhancements and stratagems from Wahapedia/GW, and add it to verify/sources/factions.json (verify/add-army.js does)');
 const enhs = F ? Object.values(F.detachments).flatMap(d => d.enhancements || []) : [];
-const nr = NR.parseNR(path.resolve(srcFile), enhs.map(e => e.name));   // again, now knowing which options are enhancements
+// (with New Recruit's spelling where it differs from GW's: an enhancement's `nr`)
+const enhNames = F ? NR.enhNamesOf(F) : [];
+const nr = NR.parseNR(path.resolve(srcFile), enhNames);   // again, now knowing which options are enhancements
 const detIds = nrDetachments(nr.bullets['Detachment']).map(n => {
   const id = F && Object.keys(F.detachments).find(k => nm(F.detachments[k].name) === n);
   if (!id) note(null, 'detachment ' + n + ' is not in data.js: transcribe its rule, enhancements and stratagems (each stratagem with a gist)');
@@ -214,7 +216,7 @@ const reused = [];
 const units = [];
 
 for (const nu of nrUnits) {
-  const opts = nu.models.map(m => nrOptions(m.options, enhs.map(e => e.name)));
+  const opts = nu.models.map(m => nrOptions(m.options, enhNames));
   // the characters: every models line "• Leading: X" / "• Supporting: X" (a Warboss leading and a Bigboss
   // supporting the same Breaka Boyz are one unit); the first names the unit, the others are `also`
   const chars = nu.models.map((m, k) => ({ name: nm(m.line).replace(/^\d+x\s+/, ''), o: opts[k] })).filter(c => c.o.leads);
@@ -260,7 +262,8 @@ for (const nu of nrUnits) {
     // in data.js's order: group, who, n, name, hunter for a profile; name, who, n for a weapon
     if (w.group) o.group = typo(w.group); else o.name = typo(w.name);
     // New Recruit marks the profiles you pick one of with "➤"; a group without it fires every profile (Kustom Blasta X)
-    if (w.group && !/^\s*➤/.test(r.name)) o.fireAll = true;
+    // (a melee group is always a pick: a model fights with one melee weapon, 04.01; verify/choice.js)
+    if (kind === 'ranged' && w.group && !/^\s*➤/.test(r.name)) o.fireAll = true;
     if (w.who) o.who = typo(w.who);
     if (w.n && w.n > 1) o.n = w.n;
     if (w.group) o.name = typo(w.name);
@@ -311,7 +314,7 @@ for (const nu of nrUnits) {
   const abilities = [];
   for (const t of nu.tables) for (const r of t.rows) {
     const a = nrAbility(r.name, nu.who), o = {};
-    const e = enhs.find(x => nm(x.name) === a.base || nm(x.name) === a.full);
+    const e = enhs.find(x => [x.name, x.nr].filter(Boolean).map(nm).some(n => n === a.base || n === a.full));
     o.name = typo(e ? e.name : (a.paren !== null && /\d\+\*?$/.test(a.paren) ? a.full : a.base));
     if (t.name !== 'Abilities') o.who = typo(t.name);
     else if (a.who) o.who = typo(a.who);
@@ -368,12 +371,18 @@ for (const nu of nrUnits) {
       if (pa.who) ab.who = pa.who;
       // the same words: its markup as written; or the official wording where New Recruit has a typo (deviations-nr.json)
       const typoDev = deviations.some(d => d.unit === prev.id && /^abilities\[/.test(d.field) && d.field.slice(10).startsWith(nm(ab.name)) && appText(d.source).s === appText(ab.text).s);
-      if (appText(pa.text).s === appText(ab.text).s || typoDev) { ab.text = pa.text; delete ab._plain; }
+      // (New Recruit's plain words against the bold keywords as written: "Character unit" = "**CHARACTER** unit")
+      if (appText(pa.text).s === appText(ab.text).s || (ab._plain && textEq(pa.text, ab.text)) || typoDev) { ab.text = pa.text; delete ab._plain; }
       else { note(tag0, 'ability ' + ab.name + ' has new words: its phase tags and footnotes were not kept'); continue; }
-      for (const k of ['damaged', 'ph', 'turn', 'turns', 'def', 'na']) if (pa[k] !== undefined) ab[k] = pa[k];
+      for (const k of ['damaged', 'at', 'ph', 'turn', 'turns', 'def', 'na']) if (pa[k] !== undefined) ab[k] = pa[k];
     }
     // a hand-written note on a keyword a selection of the unit gives it (Houndpack Lance Character), while the unit still has it
     if (!u.kwNote && prev.kwNote && /^(.+?) comes? from (.+?) \(/.test(prev.kwNote) && u.models.some(l => l.includes(/^(.+?) comes? from (.+?) \(/.exec(prev.kwNote)[2]))) u.kwNote = prev.kwNote;
+    // which models of the unit have a keyword or rule, and what no models line carries: while the unit still has them
+    const gearNames = new Set([...u.ranged || [], ...u.melee || []].map(w => w.group || w.name).concat(u.abilities.map(a => a.name)));
+    if (prev.unplaced) { const keep = prev.unplaced.filter(n => gearNames.has(n) && !u.models.some(l => l.includes(n))); if (keep.length) u.unplaced = keep; }
+    if (prev.kwOnly) { const keep = Object.entries(prev.kwOnly).filter(([k]) => u.kw.includes(k)); if (keep.length) u.kwOnly = Object.fromEntries(keep); }
+    if (prev.partialRules) { const keep = Object.entries(prev.partialRules).filter(([k]) => u.rules.includes(k)); if (keep.length) u.partialRules = Object.fromEntries(keep); }
     const names = new Set(u.abilities.map(a => a.name));
     for (const k of ['mods', 'aura']) {
       const keep = (prev[k] || []).filter(m => !m.from || names.has(m.from) || D.factions[factionId].armyRules.some(r => r.name === m.from) || detIds.some(id => ((F.detachments[id] || {}).rule || {}).name === m.from));
@@ -402,7 +411,7 @@ for (const nu of nrUnits) {
     if (ab.ph !== undefined) continue;
     const da = donorUnits.flatMap(x => (x.abilities || []).map(a => [x, a])).find(([x, a]) => a.name === ab.name && appText(a.text).s === appText(ab.text).s);
     if (!da) continue;
-    for (const k of ['ph', 'turn', 'turns', 'def']) if (da[1][k] !== undefined) ab[k] = JSON.parse(JSON.stringify(da[1][k]));
+    for (const k of ['at', 'ph', 'turn', 'turns', 'def']) if (da[1][k] !== undefined) ab[k] = JSON.parse(JSON.stringify(da[1][k]));
     // "not usable here" (na) is about that list's units: not copied, only pointed out
     if (da[1].na) note(tag0, 'ability ' + ab.name + ': another list marks it "' + da[1].na + '"; check whether that holds for this list before writing na');
     if (ab._plain) { ab.text = da[1].text; delete ab._plain; }   // its markup as written there
@@ -471,13 +480,13 @@ function unitSrc(u) {
   const head = ['id', 'name', 'short', 'role', 'pts', 'copies', 'ptsNote', 'enhancement', 'enhOn', 'upgrade', 'warlord', 'warlordOn'].filter(k => u[k] !== undefined).map(k => k + ':' + lit(u[k])).join(', ');
   let s = '    {\n      ' + head + ',\n';
   if (u.leads) s += '      leads:' + lit(u.leads) + (u.support ? ', support:true' : '') + (u.also ? ', also:' + lit(u.also) : '') + ',\n';
-  s += '      models:' + lit(u.models) + ',\n      gear:' + lit(u.gear) + ',\n';
-  const AB = ['name', 'who', 'tag', 'damaged', 'ph', 'turn', 'turns', 'def', 'na', 'text'];   // an ability's fields in data.js's order
+  s += '      models:' + lit(u.models) + ',\n' + (u.unplaced ? '      unplaced:' + lit(u.unplaced) + ',\n' : '') + '      gear:' + lit(u.gear) + ',\n';
+  const AB = ['name', 'who', 'tag', 'damaged', 'at', 'ph', 'turn', 'turns', 'def', 'na', 'text'];   // an ability's fields in data.js's order
   const abs = u.abilities.map(a => Object.fromEntries(Object.keys(a).sort((x, y) => (AB.indexOf(x) + 1 || 99) - (AB.indexOf(y) + 1 || 99)).map(k => [k, a[k]])));
   s += block('stats', u.stats) + block('ranged', u.ranged) + block('melee', u.melee) + block('abilities', abs);
   if (u.mods) s += "      // abilities that change this unit's attacks, shown inside its weapon tables\n" + block('mods', u.mods);
   s += block('aura', u.aura);
-  s += '      rules:' + lit(u.rules) + ',\n      kw:' + lit(u.kw) + (u.kwNote ? ',\n      kwNote:' + lit(u.kwNote) : '') + '\n    }';
+  s += '      rules:' + lit(u.rules) + ',\n      kw:' + lit(u.kw) + (u.kwNote ? ',\n      kwNote:' + lit(u.kwNote) : '') + (u.kwOnly ? ',\n      kwOnly:' + lit(u.kwOnly) : '') + (u.partialRules ? ',\n      partialRules:' + lit(u.partialRules) : '') + '\n    }';
   return s;
 }
 const src = '{\n' + ['id', 'name', 'faction', 'points', 'pointsUsed'].map(k => k + ':' + lit(army[k])).join(', ').replace(/^/, '  ') + ',\n' +
