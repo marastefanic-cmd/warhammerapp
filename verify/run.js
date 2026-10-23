@@ -14,6 +14,7 @@
 //   nr          verify/nr.js: everything the owner's New Recruit PDFs print is in the app, identically
 //   texts       verify/texts.js: every rules text equals GW's official documents (or Wahapedia)
 //   calc        verify/calc-test.js: the damage calculator (calc.js) gives the averages worked out by hand from the Core Rules
+//   import      verify/import-test.js: the list import (import.js) turns each New Recruit JSON export into exactly its list in data.js
 //   screens     verify/render.js: every screen and popup renders; screen-level checks; no sideways scroll
 //   small phone the same at 320px wide
 //   snapshots   the text of every screen equals the accepted snapshot (verify/snapshots/)
@@ -46,8 +47,8 @@ const step = (name, args, env) => {
   console.log((r.status === 0 ? 'PASS ' : 'FAIL ') + name + '  ' + out.split('\n')[0]);
 };
 
-// the verified files: the app, its data and the calculator's engine
-const hash = sha(['app.html', 'data.js', 'calc.js', 'ask.js'].map(f => fs.readFileSync(path.join(ROOT, f), 'utf8')).join(''));
+// the verified files: the app, its data, the calculator's engine and the list import
+const hash = sha(['app.html', 'data.js', 'calc.js', 'ask.js', 'import.js'].map(f => fs.readFileSync(path.join(ROOT, f), 'utf8')).join(''));
 step('data', ['check.js']);
 step('invariants', ['verify/invariants.js']);
 step('derive', ['verify/derive.js']);
@@ -57,6 +58,7 @@ step('dispositions', ['verify/dispositions.js']);   // each detachment's Force D
 step('nr', ['verify/nr.js']);
 step('texts', ['verify/texts.js']);
 step('calc', ['verify/calc-test.js']);   // the damage calculator against hand-worked cases
+step('import', ['verify/import-test.js']);   // the list import against every New Recruit JSON export
 // the screens need the built page: build it without the gate, check it, and the real build follows
 const b = node(['build.js'], { VERIFY_BUILDING:'1' });
 if(b.status !== 0){ console.log(b.stdout + b.stderr); process.exit(1); }

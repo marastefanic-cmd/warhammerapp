@@ -1,0 +1,134 @@
+[
+{
+"key": "0415accd06a388c5",
+"where": "shooty · Mek",
+"verdict": "ok",
+"why": "Export categories: Mek “Character, Infantry, Mek, Faction: Orks, Explosives, Support”; Tankbustas “Infantry, Tankbustas, Faction: Orks, Explosives”. The only keyword the Mek lacks is Tankbustas, and Support is the rule in rules. data.js kw matches."
+},
+{
+"key": "01668dc0cdd7d1bb",
+"where": "shooty · Mek",
+"verdict": "ok",
+"why": "Export: Mek 55 pts (both Meks that support Tankbustas, associations ‘Supporting’ → the two Tankbustas units), Tankbustas 160 pts. 55 + 160 = 215 = pts, copies 2."
+},
+{
+"key": "12449d993b191c9f",
+"where": "shooty · Mek",
+"verdict": "ok",
+"why": "Export: Mek: Kustom Mega-slugga, Mek's Toolz. Nob: 1× Choppa, 2× Rokkit Pistol (the owner's current list, no Smash Hammer). 1× Tankbusta w/ Two Busta Rokkit Launchas: 2× Busta Rokkit Launcha, 1× Gitstikka. 4× Tankbusta w/ Busta Rokkit Launcha: 4× Busta Rokkit Launcha, 4× Gitstikka. So Rokkit pistol ×2, Busta Rokkit Launcha ×6 (both profiles, Hunter: MONSTER/VEHICLE), Gitstikka ×5, Choppa ×1. The profile name is “Rokkit pistol” (the selection says Rokkit Pistol). gear and weapons match."
+},
+{
+"key": "c60a4363a9214c4f",
+"where": "standard · Khârn the Betrayer · Legendary Killer",
+"verdict": "ok",
+"why": "Export: it is an Abilities profile of the Khârn the Betrayer selection, so who = Khârn the Betrayer. The models match the export: 1 Khârn, the Champion (the Icon of Khorne is associated to it), 7× Khorne Berzerker, 2× w/ eviscerator and plasma pistol."
+},
+{
+"key": "1b9090630eb71704",
+"where": "standard · Khârn the Betrayer · The Betrayer",
+"verdict": "ok",
+"why": "Export: it is an Abilities profile of the Khârn the Betrayer selection, so who = Khârn the Betrayer. The models match the export: 1 Khârn, the Champion (the Icon of Khorne is associated to it), 7× Khorne Berzerker, 2× w/ eviscerator and plasma pistol."
+},
+{
+"key": "3fc27a03647e7b87",
+"where": "standard · Khârn the Betrayer · Berserker Frenzy",
+"verdict": "ok",
+"why": "Export: it is an Abilities profile of the Khârn the Betrayer selection, so who = Khârn the Betrayer. The models match the export: 1 Khârn, the Champion (the Icon of Khorne is associated to it), 7× Khorne Berzerker, 2× w/ eviscerator and plasma pistol."
+},
+{
+"key": "c7186ee01822ed24",
+"where": "standard · Khârn the Betrayer · Blood Surge",
+"verdict": "ok",
+"why": "Export: it is an Abilities profile of the Khorne Berzerkers unit selection, so who = Khorne Berzerkers. The models match the export: 1 Khârn, the Champion (the Icon of Khorne is associated to it), 7× Khorne Berzerker, 2× w/ eviscerator and plasma pistol."
+},
+{
+"key": "2e8a7337084e3ca9",
+"where": "standard · Khârn the Betrayer · Murderous Charge",
+"verdict": "ok",
+"why": "Export: it is an Abilities profile of the Khorne Berzerkers unit selection, so who = Khorne Berzerkers. The models match the export: 1 Khârn, the Champion (the Icon of Khorne is associated to it), 7× Khorne Berzerker, 2× w/ eviscerator and plasma pistol."
+},
+{
+"key": "428fa0292043da00",
+"where": "standard · Khârn the Betrayer · Icon of Khorne",
+"verdict": "ok",
+"why": "Export: it is the Icon of Khorne upgrade's profile on the Khorne Berzerkers unit (association → the Champion): “If the bearer's unit contains 1 or more Icons of Khorne …”, so who = Khorne Berzerkers. The models match the export: 1 Khârn, the Champion (the Icon of Khorne is associated to it), 7× Khorne Berzerker, 2× w/ eviscerator and plasma pistol."
+},
+{
+"key": "8d56a990a6e48110",
+"where": "standard · Khârn the Betrayer",
+"verdict": "ok",
+"why": "Export categories: Khârn “Faction: World Eaters, Infantry, Character, Epic Hero, Grenades, Chaos, Khorne, Khârn the Betrayer”; Khorne Berzerkers “Faction: World Eaters, Infantry, Battleline, Grenades, Chaos, Khorne, Berzerkers”. Only Battleline and Berzerkers come from the bodyguard."
+},
+{
+"key": "1cd828f33e8cc806",
+"where": "standard · Khârn the Betrayer",
+"verdict": "ok",
+"why": "Export: Khârn the Betrayer 115 pts (no enhancement), Khorne Berzerkers 170 pts. 115 + 170 = 285 = pts."
+},
+{
+"key": "756236bc27288769",
+"where": "standard · Khârn the Betrayer",
+"verdict": "ok",
+"why": "Export: Khârn: Gorechild, Plasma pistol. Champion: Chainblade, Plasma pistol. 7× Khorne Berzerker: 7× Bolt pistol, 7× Chainblade. 2× w/ eviscerator and plasma pistol: 2× Khornate eviscerator, 2× Plasma pistol. Icon of Khorne is a unit upgrade, not a weapon. So Plasma pistol ×3 (both profiles), Bolt pistol ×7, Chainblade ×8, Khornate eviscerator ×2, plus Khârn's two. gear and weapons match."
+},
+{
+"key": "482214c0cbcc8796",
+"where": "big-demons-baby · Lord on Juggernaut · Aggressive Advance",
+"verdict": "ok",
+"why": "Export: it is an Abilities profile of the Lord on Juggernaut selection, so who = Lord on Juggernaut. The models match the export: 1 Lord on Juggernaut, the Champion (with the Icon of Khorne), 15× Khorne Berzerker, 4× w/ eviscerator and plasma pistol."
+},
+{
+"key": "ca98ffff14650de8",
+"where": "big-demons-baby · Lord on Juggernaut · Crush All Who Stand Before Us",
+"verdict": "ok",
+"why": "Export: it is an Abilities profile of the Lord on Juggernaut selection, so who = Lord on Juggernaut. The models match the export: 1 Lord on Juggernaut, the Champion (with the Icon of Khorne), 15× Khorne Berzerker, 4× w/ eviscerator and plasma pistol."
+},
+{
+"key": "d04d544914bfae79",
+"where": "big-demons-baby · Lord on Juggernaut · Disciple of Khorne",
+"verdict": "ok",
+"why": "Export: it is the enhancement selection on the Lord on Juggernaut (15 pts): “The bearer has the Deep Strike ability …”, so who = Lord on Juggernaut. The models match the export: 1 Lord on Juggernaut, the Champion (with the Icon of Khorne), 15× Khorne Berzerker, 4× w/ eviscerator and plasma pistol."
+},
+{
+"key": "377b912e8cd0b41d",
+"where": "big-demons-baby · Lord on Juggernaut · Blood Surge",
+"verdict": "ok",
+"why": "Export: it is an Abilities profile of the Khorne Berzerkers unit selection, so who = Khorne Berzerkers. The models match the export: 1 Lord on Juggernaut, the Champion (with the Icon of Khorne), 15× Khorne Berzerker, 4× w/ eviscerator and plasma pistol."
+},
+{
+"key": "2c9260478782ab06",
+"where": "big-demons-baby · Lord on Juggernaut · Murderous Charge",
+"verdict": "ok",
+"why": "Export: it is an Abilities profile of the Khorne Berzerkers unit selection, so who = Khorne Berzerkers. The models match the export: 1 Lord on Juggernaut, the Champion (with the Icon of Khorne), 15× Khorne Berzerker, 4× w/ eviscerator and plasma pistol."
+},
+{
+"key": "3c8401a4b8a2df3c",
+"where": "big-demons-baby · Lord on Juggernaut · Icon of Khorne",
+"verdict": "ok",
+"why": "Export: it is the Icon of Khorne upgrade's profile on the Khorne Berzerkers unit (association → the Champion): “If the bearer's unit contains 1 or more Icons of Khorne …”, so who = Khorne Berzerkers. The models match the export: 1 Lord on Juggernaut, the Champion (with the Icon of Khorne), 15× Khorne Berzerker, 4× w/ eviscerator and plasma pistol."
+},
+{
+"key": "c4891fac4cfef6fd",
+"where": "big-demons-baby · Lord on Juggernaut",
+"verdict": "ok",
+"why": "Export categories: Lord on Juggernaut “Mounted, Character, Chaos, Khorne, Lord on Juggernaut, Faction: Blood Legions” (New Recruit has already applied Disciple of Khorne); Khorne Berzerkers “Faction: World Eaters, Infantry, Battleline, Grenades, Chaos, Khorne, Berzerkers”. Battleline, Berzerkers, Faction: World Eaters, Grenades and Infantry come from the bodyguard. Blood Legions comes from the enhancement, quoted word for word as the export's Disciple of Khorne profile (“The bearer has the Deep Strike ability, and it has the BLOOD LEGIONS Faction keyword instead of the WORLD EATERS Faction keyword.”)."
+},
+{
+"key": "e6d64d1d268860ef",
+"where": "big-demons-baby · Lord on Juggernaut",
+"verdict": "ok",
+"why": "Export: Lord on Juggernaut 95 pts + Disciple of Khorne 15 pts = 110, Khorne Berzerkers 330 pts. 110 + 330 = 440 = pts."
+},
+{
+"key": "7e8d4f09f78e2062",
+"where": "big-demons-baby · Lord on Juggernaut",
+"verdict": "ok",
+"why": "Export: the Deep Strike rule sits only under the Disciple of Khorne selection on the Lord on Juggernaut (“The bearer has the Deep Strike ability”). The Khorne Berzerkers carry only Blessings of Khorne, Pistol and Hazardous. So Deep Strike is the Lord's alone."
+},
+{
+"key": "e3851faea72b012e",
+"where": "big-demons-baby · Lord on Juggernaut",
+"verdict": "ok",
+"why": "Export: Lord on Juggernaut: Bladed horn (Extra Attacks, Lance), Exalted chainblade, Plasma pistol. Champion: Chainblade, Plasma pistol. 15× Khorne Berzerker: 15× Bolt pistol, 15× Chainblade. 4× w/ eviscerator and plasma pistol: 4× Khornate eviscerator, 4× Plasma pistol. So Plasma pistol ×5, Bolt pistol ×15, Chainblade ×16, Khornate eviscerator ×4. gear and weapons match."
+}
+]

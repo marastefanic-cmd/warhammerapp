@@ -967,8 +967,21 @@ function main(args) {
     if (k < 0) return true;
     usedDev.add(k); return false;
   });
+  // a PDF superseded by a newer New Recruit JSON export (d.superseded: verify/sources/nr-json/<army>.json): the difference is
+  // accepted only while import.js turns that export into exactly this list of data.js (verify/import-test.js checks the rest)
+  const WH_IMPORT = require(path.join(ROOT, 'import.js')), resolved = {};
+  const canon = v => JSON.stringify(v, (k, x) => x && typeof x === 'object' && !Array.isArray(x) ? Object.fromEntries(Object.keys(x).sort().map(y => [y, x[y]])) : x);   // field for field, in any key order
+  const supersededOk = d => {
+    const f = path.join(ROOT, d.superseded);
+    if (!fs.existsSync(f)) return 'no file ' + d.superseded;
+    if (!(d.army in resolved)) { const A = D.armies.find(x => x.id === d.army), r = WH_IMPORT.resolve(fs.readFileSync(f, 'utf8'), JSON.parse(JSON.stringify(D)));
+      resolved[d.army] = !A ? 'no army ' + d.army : !r.ok ? 'the export does not import: ' + r.errors.join('; ') : canon(r.army.units) !== canon(A.units) ? 'the export imports to other units than data.js has' : ''; }
+    return resolved[d.army];
+  };
   devs.forEach((d, i) => {
-    if (!d.reason || !d.evidence) out.failures.push({ army: d.army, unit: d.unit, field: d.field, app: d.app, source: d.source, where: path.relative(ROOT, args.deviations) + ' #' + i + ': no reason or evidence' });
+    const sup = d.superseded ? supersededOk(d) : '';
+    if (sup) out.failures.push({ army: d.army, unit: d.unit, field: d.field, app: d.app, source: d.source, where: path.relative(ROOT, args.deviations) + ' #' + i + ': superseded by ' + d.superseded + ', but ' + sup });
+    else if (!d.reason || !d.evidence) out.failures.push({ army: d.army, unit: d.unit, field: d.field, app: d.app, source: d.source, where: path.relative(ROOT, args.deviations) + ' #' + i + ': no reason or evidence' });
     else if (!usedDev.has(i)) out.failures.push({ army: d.army, unit: d.unit, field: d.field, app: d.app, source: d.source, where: path.relative(ROOT, args.deviations) + ' #' + i + ': stale (nothing matches it)' });
   });
   out.deviations = usedDev.size;

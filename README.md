@@ -36,7 +36,8 @@ are in the git history, and `import-nr.js --reuse` can take their signed-off not
 | `ask.js`, `ask-style.md`, `vendor/` | the rules-question chat, how its answers should look, and the Anthropic SDK it uses |
 | `rules/core-rules.md` | a text copy of the Core Rules with errata and FAQs as Wahapedia publishes them, for the chat (`python3 -I verify/rules-text.py verify/.cache/waha/core.html rules/core-rules.md` refreshes it) |
 | `calc.js` | the damage calculator's engine (the attack sequence, section 05 of the Core Rules), checked by the gate like the app |
-| `app.html` | the app (published as the Claude artifact as-is, with `data.js`, `calc.js`, `verified.js`, `fonts/`) |
+| `import.js` | the list import: a New Recruit JSON export becomes a list only when every unit, option, enhancement and detachment in it is one data.js already has (by BSData id, from the `BS_IDS` table `verify/import-ids.js` writes into `data.js`); checked by the gate (`verify/import-test.js`) against every export in `verify/sources/nr-json/` |
+| `app.html` | the app (published as the Claude artifact as-is, with `data.js`, `calc.js`, `import.js`, `verified.js`, `fonts/`) |
 | `build.js` | builds `index.html`, `version.json` and the `sw.js` stamp; refuses unless the gate passed |
 | `verify/` | the gate: every fact checked against its source before a build (see below) |
 | `index.html` | generated: `app.html` wrapped as a full page with the home-screen tags |
@@ -68,7 +69,7 @@ The facts come from New Recruit, never typed by hand:
    renders every screen at 390 and 320px; shows any screen change (accept with `--accept` after
    reading the diff); and lists every judgement the app adds that has no sign-off yet. Those are
    reviewed (`verify/review/`, then `node verify/approve.js verify/review/result-<name>.json`).
-6. Bump `VERSION` in `data.js`, `node build.js`, commit and push; republish the artifact.
+6. `node verify/import-ids.js --write` (the BSData ids the in-app import resolves exports by). Bump `VERSION` in `data.js`, `node build.js`, commit and push; republish the artifact.
 
 The New Recruit PDF (not the copy-paste text export) is the input on purpose: it names every models line
 with its wargear, and it is New Recruit's own calculation from BSData, which the gate compares with its

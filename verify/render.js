@@ -28,7 +28,7 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
   await page.route(/^https?:\/\/(?!127\.0\.0\.1)/, r => r.abort());   // the app ships its own fonts
   // verified.js is the result of the last gate run (this one writes it when it ends): a fixed stand-in, as if
   // this build passed, so the screens and their snapshots do not depend on how the previous run went
-  const build = sha(['app.html', 'data.js', 'calc.js', 'ask.js'].map(f => fs.readFileSync(path.join(ROOT, f), 'utf8')).join('')).slice(0, 10);
+  const build = sha(['app.html', 'data.js', 'calc.js', 'ask.js', 'import.js'].map(f => fs.readFileSync(path.join(ROOT, f), 'utf8')).join('')).slice(0, 10);
   const stub = { ok:true, build, data:loadData().version, date:'(date of the check)', checks:[{ label:'(checks)', detail:'(as listed by verify/run.js)' }], sources:[{ label:'(sources)', detail:'(as listed by verify/run.js)' }] };
   await page.route(/\/verified\.js(\?|$)/, r => r.fulfill({ contentType:'application/javascript', body:'window.WH_VERIFIED = ' + JSON.stringify(stub) + ';' }));
   await page.goto(site.url + 'index.html');
@@ -37,6 +37,9 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
   await page.reload();
 
   const failures = [], helpers = new Map(), counts = {};
+  // the list import: a New Recruit JSON export of a list in data.js, and the same with a unit renamed (refused)
+  const IMPORT_FILE = path.join(ROOT, 'verify/sources/nr-json/6-bigs.json');
+  const IMPORT_BAD = (j => { j.roster.forces[0].selections.find(x => x.name === 'Knight Errant').name = 'Knight Errant Mk II'; return j; })(JSON.parse(fs.readFileSync(IMPORT_FILE, 'utf8')));
   const fail = (check, army, where, detail) => failures.push({ check, army, where, detail });
   const armies = await page.evaluate(() => WH_DATA.armies.map(a => ({ id:a.id, units:a.units.map(u => u.id) })));
   // a fresh folder each run, so a list that left the app leaves no old snapshot behind
@@ -65,7 +68,8 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       }, [String(fn), HELPER_SEL, !!folded]);
       if(r.overflow > 0) fail('no-sideways-scroll', a.id, label, 'the page is ' + r.overflow + 'px wider than the phone');
       if(r.bigIcons.length) fail('icon-size', a.id, label, 'icons drawn over 40px (no size set): ' + r.bigIcons.join(', '));
-      if(label !== 'home' && label !== 'settings' && !r.tabs) fail('tabs', a.id, label, 'no tab bar');
+      if(label !== 'home' && label !== 'settings' && !/^popup import/.test(label) && !r.tabs)   // (the import sheet opens on the home screen)
+      fail('tabs', a.id, label, 'no tab bar');
       if(r.unnamed.length) fail('tabs-named', a.id, label, 'tabs (icons only) without a name for screen readers: ' + r.unnamed.join(', '));
       // the data version changes with every release: the snapshot keeps a placeholder
       snap.push('######## ' + label + ' · ' + r.title + '\n' + r.text.replace(/[ \t]+\n/g, '\n').replace(/\n{3,}/g, '\n\n').trim().replace(/^Data \d{4}-\d\d-\d\d\.\d+$/m, 'Data (version)'));
@@ -84,7 +88,10 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       const r = await take(s + (extra ? ' ' + JSON.stringify(extra) : ''), `() => { hideSheet(); openStrats.clear(); ${extra && extra.open ? `allStratagems().forEach(x => openStrats.add(x.id));` : ''} go({ s:'${s}', army:'${a.id}' }); }`, extra && extra.folded);
       r.links.forEach(l => links.add(l));
     };
-    if(a === armies[0]){ await take('settings', `() => { hideSheet(); go({ s:'settings' }); }`); await take('home', `() => { hideSheet(); go({ s:'home' }); }`); }
+    if(a === armies[0]){ await take('settings', `() => { hideSheet(); go({ s:'settings' }); }`); await take('home', `() => { hideSheet(); go({ s:'home' }); }`);
+      // the list import's sheet, empty and with an export it refuses (6 bigs with a unit renamed: verify/import-test.js has the rest)
+      await take('popup import', `() => { hideSheet(); go({ s:'home' }); showImport(); }`);
+      await take('popup import (not recognized)', `() => { hideSheet(); go({ s:'home' }); showImport(); runImport(${JSON.stringify(JSON.stringify(IMPORT_BAD))}); }`); }
     for(const s of ['army','pregame','units','ranged','melee','abilities','rules','bases']) await screen(s);
     // the damage calculator, at a target set by hand (a fresh one: 5 × T4 Sv 3+ W2): this list's first unit with ranged weapons
     // shooting (Shoot), its first unit with melee weapons fighting, charged (Fight), and its first unit with both shooting, charging
@@ -504,6 +511,71 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       const bad = ps.filter(p => p.cells !== 'RNG A BS S AP D' || !p.kw || p.out);
       if(ps.length !== 3 || bad.length) fail('damage-profile-stats', 'shooty', 'Snazzgun', JSON.stringify(ps.length !== 3 ? ps : bad));
     }
+  }
+  // ---- the list import: the sheet (a file picker for .json, a paste box, Import) fits the phone; the export chosen as a file opens
+  // as a list exactly like the app's own (every screen's text the same but its source line and its Remove), kept over a reload;
+  // a refused one lists every item import.js names, one per line, and adds nothing; Remove asks on the page, then the list is gone ----
+  {
+    const L = 'import';
+    await page.evaluate(() => { localStorage.clear(); sessionStorage.clear(); }); await page.reload(); await page.evaluate(() => document.fonts.ready);
+    const fit = () => page.evaluate(() => { const r = $('#sheet').getBoundingClientRect(), bad = [];
+      if(document.documentElement.scrollWidth > innerWidth) bad.push('the page is wider than the phone');
+      for(const e of $('#sheetIn').querySelectorAll('*')){ const b = e.getBoundingClientRect(); if(b.width && (b.right > r.right + 0.5 || b.left < r.left - 0.5)) { bad.push((e.className || e.tagName) + ' wider than the sheet'); break; } }
+      return bad; });
+    await page.evaluate(() => { hideSheet(); go({ s:'home' }); });
+    const row = await page.evaluate(() => { const b = document.querySelector('#view [data-import]'); const l = b && b.closest('.list'), last = [...document.querySelectorAll('#view .armies .arow')].pop();
+      return !b ? 'no row' : !(last && last.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING) ? 'not under the armies' : /Import a list from New Recruit/.test(b.textContent) ? '' : 'says ' + b.textContent; });
+    if(row) fail('import-row', L, 'home', row);
+    await page.waitForTimeout(400);   // (a tap right after a screen change is taken as a double tap and dropped)
+    await page.click('#view [data-import]'); await page.waitForTimeout(300);
+    const sh = await page.evaluate(() => { const f = $('#sheetIn input[type=file]'); return { open:!$('#sheetHost').hidden, accept:f ? f.accept : null, box:!!$('#sheetIn textarea'), go:!!$('#sheetIn [data-impgo]'), title:$('#sheetTitle').textContent }; });
+    if(!sh.open || !/\.json/.test(sh.accept || '') || !sh.box || !sh.go || sh.title !== 'Import a list') fail('import-sheet', L, 'the sheet', JSON.stringify(sh));
+    for(const b of await fit()) fail('import-sheet', L, 'the sheet', b);
+    // refused: pasted, every message one line, nothing kept
+    const want = await page.evaluate(bad => WH_IMPORT.resolve(bad, WH_DATA).errors, IMPORT_BAD);
+    await page.fill('#impText', JSON.stringify(IMPORT_BAD)); await page.click('#sheetIn [data-impgo]'); await page.waitForTimeout(300);
+    const no = await page.evaluate(() => ({ lines:[...document.querySelectorAll('#impOut li')].map(x => x.textContent), kept:localStorage.getItem('wh-imported'), n:WH_DATA.armies.length, open:!$('#sheetHost').hidden }));
+    if(JSON.stringify(no.lines.map(x => x.toLowerCase())) !== JSON.stringify(want.map(x => x.toLowerCase())) || no.kept || !no.open || no.n !== armies.length) fail('import-refused', L, 'a unit renamed', JSON.stringify([no, want]));
+    for(const b of await fit()) fail('import-refused', L, 'the sheet', b);
+    // imported from the file: opens the list
+    await page.waitForTimeout(400); await page.setInputFiles('#impFile', IMPORT_FILE); await page.waitForTimeout(600);
+    const yes = await page.evaluate(() => ({ cur:plain(cur), kept:JSON.parse(localStorage.getItem('wh-imported') || '[]').map(x => x.id), sheet:$('#sheetHost').hidden }));
+    const id = yes.cur.army;
+    if(yes.cur.s !== 'army' || !/^import-/.test(id || '') || yes.kept.join() !== id || !yes.sheet) fail('import-opens', L, '6 bigs', JSON.stringify(yes));
+    // kept over a reload, under its faction on the home screen, and every screen as the app's own list's
+    await page.reload(); await page.evaluate(() => document.fonts.ready);
+    const same = await page.evaluate(([id, orig]) => { const out = [], A = armyById(id); if(!A) return ['not there after a reload'];
+      const txt = (s, a, x) => { hideSheet(); go(Object.assign({ s, army:a }, x || {})); document.querySelectorAll('#view details').forEach(d => d.open = true); return $('#view').innerText; };
+      const drop = (t, imp) => imp ? t.replace(/New Recruit, imported [^\n]*/, '').replace(/\nON THIS PHONE[\s\S]*$/i, '') : t.replace(/New Recruit, exported [^\n]*/, '');
+      for(const s of ['army', 'pregame', 'units', 'strats', 'ranged', 'melee', 'abilities', 'rules', 'bases']) if(drop(txt(s, orig), false).trim() !== drop(txt(s, id), true).trim()) out.push(s + ' differs');
+      for(const u of armyById(orig).units) if(txt('unit', orig, { unit:u.id }) !== txt('unit', id, { unit:u.id })) out.push('unit ' + u.id + ' differs');
+      hideSheet(); go({ s:'home' });
+      const rows = [...document.querySelectorAll('#view .arow')].filter(r => r.dataset.army === id || r.dataset.army === orig).map(r => r.closest('.list').previousElementSibling.textContent);
+      if(rows.length !== 2 || rows[0] !== rows[1]) out.push('home rows: ' + rows.join(' | '));
+      return out; }, [id, '6-bigs']);
+    for(const x of same) fail('import-same', L, '6 bigs', x);
+    // Remove: a confirm on the page with both buttons in sight; Keep it leaves it; Remove takes it off the phone
+    await page.evaluate(id => { hideSheet(); go({ s:'pregame', army:id }); }, id);
+    await page.waitForTimeout(400); await page.locator('[data-imprm]').scrollIntoViewIfNeeded(); await page.click('[data-imprm]'); await page.waitForTimeout(300);
+    const conf = await page.evaluate(() => { const bb = $('#bbar').hidden ? innerHeight : $('#bbar').getBoundingClientRect().top;
+      return ['[data-imprmyes]', '[data-imprmno]'].map(q => { const e = document.querySelector(q); if(!e) return q + ' missing'; const r = e.getBoundingClientRect(); return r.top >= 0 && r.bottom <= bb + 0.5 ? '' : q + ' not in sight (' + Math.round(r.top) + '–' + Math.round(r.bottom) + ', tab bar at ' + Math.round(bb) + ')'; }).filter(Boolean); });
+    for(const c of conf) fail('import-remove', L, 'the confirm', c);
+    await page.click('[data-imprmno]'); await page.waitForTimeout(200);
+    const kept = await page.evaluate(id => !!armyById(id) && !!document.querySelector('[data-imprm]'), id);
+    if(!kept) fail('import-remove', L, 'Keep it', 'the list or its Remove is gone');
+    await page.click('[data-imprm]'); await page.waitForTimeout(200); await page.click('[data-imprmyes]'); await page.waitForTimeout(400);
+    const gone = await page.evaluate(id => ({ s:cur.s, there:!!armyById(id), kept:localStorage.getItem('wh-imported'), n:WH_DATA.armies.length }), id);
+    if(gone.s !== 'home' || gone.there || gone.kept !== '[]' || gone.n !== armies.length) fail('import-remove', L, 'Remove', JSON.stringify(gone));
+    // a kept export that cannot be read: the app starts, lists it as out of date with its Remove
+    await page.evaluate(() => localStorage.setItem('wh-imported', JSON.stringify([{ id:'import-broken', name:'Broken', date:'1 Jan 2026', json:{ roster:{ forces:[{ catalogueId:'x', selections:[null] }] } } }])));
+    await page.reload(); await page.evaluate(() => document.fonts.ready);
+    const st = await page.evaluate(() => { hideSheet(); go({ s:'home' }); const r = document.querySelector('#view [data-impstale="import-broken"]'); return { row:!!r, n:WH_DATA.armies.length }; });
+    if(!st.row || st.n !== armies.length) fail('import-stale', L, 'a kept export that cannot be read', JSON.stringify(st));
+    await page.waitForTimeout(400); await page.click('#view [data-impstale="import-broken"]'); await page.waitForTimeout(450);   // (a tap right after the sheet opens is dropped)
+    await page.click('#sheetIn [data-imprm]'); await page.waitForTimeout(200); await page.click('#sheetIn [data-imprmyes]'); await page.waitForTimeout(300);
+    const st2 = await page.evaluate(() => ({ row:!!document.querySelector('#view [data-impstale]'), kept:localStorage.getItem('wh-imported') }));
+    if(st2.row || st2.kept !== '[]') fail('import-stale', L, 'Remove', JSON.stringify(st2));
+    counts[L] = { screens:6, links:0 };
   }
   if(pageErrors.length) fail('page-errors', '', '', pageErrors.join(' | '));
 

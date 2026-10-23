@@ -705,8 +705,21 @@ function buildUnit(army, u, um, cat, force, issues) {
       if (rep.length === f - 1) for (const k of rep.reverse()) own.splice(k, 1);
     }
     const picks = assignGear(own);
+    // an item named twice whose second place is taken: the same option taken twice (one selection of 2: a Nob's two Rokkit
+    // Pistols), when the entry allows that many per model
+    const maxPer = (n) => { const c = n.constraints.find((x) => x.type === 'max' && x.scope === 'parent' && x.field === 'selections'); return c ? c.value : Infinity; };
+    const times = new Map();
     own.forEach((it, j) => {
+      if (picks[j] || !it.cands.length) return;
+      const k = own.findIndex((x, i) => i < j && picks[i] && x.name === it.name && x.parent === it.parent);
+      if (k < 0) return;
+      const n = (times.get(k) || 1) + 1, leaf = picks[k][picks[k].length - 1];
+      if (n <= maxPer(leaf)) { times.set(k, n); picks[j] = 'same'; }
+    });
+    own.forEach((it, j) => {
+      if (picks[j] === 'same') return;
       if (!picks[j]) { fail('gear', it.g, '', `no BSData wargear "${it.name}" for ${msel.node.name}${it.cands.length ? ' (every place it is offered is taken)' : ''}`); return; }
+      if (times.has(j)) { addChain(it.parent, picks[j], it.cnt * times.get(j)); return; }
       // below a model selection counts are per models line (the model selection holds ln.count models)
       addChain(it.parent, picks[j], it.cnt);
     });
@@ -1110,7 +1123,8 @@ function comparePoints(army, built, failArmy) {
    Main
 --------------------------------------------------------------------- */
 let DATA = null;
-function main() {
+// data.js, the name mapping and the BSData source (the clone, else the pinned extract)
+function setup() {
   global.window = {}; require(P.data); DATA = global.window.WH_DATA;
   const MAP = JSON.parse(fs.readFileSync(P.map, 'utf8'));
   // the catalogue of each faction: sources/factions.json (map-bsdata.json may still name one)
@@ -1120,6 +1134,20 @@ function main() {
   const useExtract = flag('--extract') || !haveClone;
   if (flag('--write-extract') && useExtract) { console.error('--write-extract needs the BSData clone (sh verify/fetch.sh)'); process.exit(2); }
   SRC = useExtract ? loadExtract(P.extract) : loadFull(P.bsdata, catalogueNames);
+  return MAP;
+}
+// every army's roster as this check builds it (for verify/import-ids.js): the selections of each unit, evaluated
+function rosters() {
+  const MAP = setup(); const out = [];
+  for (const army of DATA.armies) {
+    const issues = []; const R = buildRoster(army, MAP, issues);
+    if (R) { const all = R.roster.desc(false).filter((s) => s.node); for (const s of all) applyOwnCats(s); for (const s of all) s.hidden = selHidden(s); }
+    out.push({ army, R, issues });
+  }
+  return { DATA, SRC, MAP, out, kids, costOf, rootNode, rootLinksOf, searchBelow, node };
+}
+function main() {
+  const MAP = setup();
   const failures = []; const pin = pinnedCommit();
   const push = (army, f) => failures.push({ army, unit: f.unit, field: f.field, app: str(f.app), source: str(f.source), where: f.where });
   if (pin && !(SRC.commit || '').startsWith(pin)) push('(all)', { unit: '(source)', field: 'bsdata.commit', app: pin, source: SRC.commit || 'unknown', where: `${SRC.mode}: BSData commit differs from the pin in verify/fetch.sh` });
@@ -1186,4 +1214,5 @@ function explainUnit(u, F) {
   console.log(`  rules ${F.rules.map((r) => r.name + (r.weapon ? '(w)' : '') + (r.infoGroup ? '(g)' : '')).join(', ')}`);
   console.log(`  categories ${[...F.cats].join(', ')}`);
 }
-main();
+if (require.main === module) main();
+module.exports = { rosters, nn };

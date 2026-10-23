@@ -47,6 +47,12 @@
   "at": "2026-10-21",
   "why": "“Ranged attacks that target your unit have -1 D” is dMinus 1. It is a change to the attack’s D characteristic, which 04.01.04 applies to the weapon (“those changes apply to the weapon making that attack”). 24.10’s mortal wounds are “equal to the D characteristic of that weapon”, so dChar:true is right; r14’s contradicting “How this is worked out” line is now split (app.html dMinus vs dMinusChar)."
  },
+ "01668dc0cdd7d1bb": {
+  "verdict": "ok",
+  "by": "review:import-lists",
+  "at": "2026-10-23",
+  "why": "Export: Mek 55 pts (both Meks that support Tankbustas, associations ‘Supporting’ → the two Tankbustas units), Tankbustas 160 pts. 55 + 160 = 215 = pts, copies 2."
+ },
  "0168fdf9ecf7c37f": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -154,6 +160,12 @@
   "by": "review:woof-woof",
   "at": "2026-10-22",
   "why": "TARGET: “One WAR DOG unit from your army”."
+ },
+ "0415accd06a388c5": {
+  "verdict": "ok",
+  "by": "review:import-lists",
+  "at": "2026-10-23",
+  "why": "Export categories: Mek “Character, Infantry, Mek, Faction: Orks, Explosives, Support”; Tankbustas “Infantry, Tankbustas, Faction: Orks, Explosives”. The only keyword the Mek lacks is Tankbustas, and Support is the rule in rules. data.js kw matches."
  },
  "044569ab567613e5": {
   "verdict": "ok",
@@ -749,6 +761,12 @@
   "at": "2026-10-22",
   "why": "“End of any phase”, with no player named, so either turn."
  },
+ "12449d993b191c9f": {
+  "verdict": "ok",
+  "by": "review:import-lists",
+  "at": "2026-10-23",
+  "why": "Export: Mek: Kustom Mega-slugga, Mek's Toolz. Nob: 1× Choppa, 2× Rokkit Pistol (the owner's current list, no Smash Hammer). 1× Tankbusta w/ Two Busta Rokkit Launchas: 2× Busta Rokkit Launcha, 1× Gitstikka. 4× Tankbusta w/ Busta Rokkit Launcha: 4× Busta Rokkit Launcha, 4× Gitstikka. So Rokkit pistol ×2, Busta Rokkit Launcha ×6 (both profiles, Hunter: MONSTER/VEHICLE), Gitstikka ×5, Choppa ×1. The profile name is “Rokkit pistol” (the selection says Rokkit Pistol). gear and weapons match."
+ },
  "1245ce399f9123d9": {
   "verdict": "ok",
   "by": "review:hurrdurr",
@@ -1103,6 +1121,12 @@
   "at": "2026-10-21",
   "why": "NR Categories: \"Battleline*, Rubric*, Rubric Marines*, Rubricae*, *from combined unit\"."
  },
+ "1b9090630eb71704": {
+  "verdict": "ok",
+  "by": "review:import-lists",
+  "at": "2026-10-23",
+  "why": "Export: it is an Abilities profile of the Khârn the Betrayer selection, so who = Khârn the Betrayer. The models match the export: 1 Khârn, the Champion (the Icon of Khorne is associated to it), 7× Khorne Berzerker, 2× w/ eviscerator and plasma pistol."
+ },
  "1bc62fc3d84ec4ea": {
   "verdict": "ok",
   "by": "review:r18-game",
@@ -1150,6 +1174,12 @@
   "by": "review:m1-units",
   "at": "2026-10-18",
   "why": "Source: \"This unit’s melee attacks that target a MONSTER/VEHICLE unit can re-roll wound rolls.\" kind melee, when \"vs MONSTER/VEHICLE\", note \"can re-roll wound rolls\". Exact, with the optional \"can\" kept. Mozrog is a one-model unit, so no who is needed."
+ },
+ "1cd828f33e8cc806": {
+  "verdict": "ok",
+  "by": "review:import-lists",
+  "at": "2026-10-23",
+  "why": "Export: Khârn the Betrayer 115 pts (no enhancement), Khorne Berzerkers 170 pts. 115 + 170 = 285 = pts."
  },
  "1ce00103ce563531": {
   "verdict": "ok",
@@ -1841,6 +1871,12 @@
   "at": "2026-10-18",
   "why": "EFFECT: “Your unit’s melee attacks have [LETHAL HITS]”. WHEN: “Fight phase”. The footnote has the same kind (melee), the same timing and the same ability. text: case only, “[Lethal Hits]” vs “[LETHAL HITS]”."
  },
+ "2c9260478782ab06": {
+  "verdict": "ok",
+  "by": "review:import-lists",
+  "at": "2026-10-23",
+  "why": "Export: it is an Abilities profile of the Khorne Berzerkers unit selection, so who = Khorne Berzerkers. The models match the export: 1 Lord on Juggernaut, the Champion (with the Icon of Khorne), 15× Khorne Berzerker, 4× w/ eviscerator and plasma pistol."
+ },
  "2cafe615347b2701": {
   "verdict": "ok",
   "by": "review:m5-recheck",
@@ -1942,6 +1978,12 @@
   "by": "review:r23-army",
   "at": "2026-10-22",
   "why": "WHEN “Any phase, just after a saving throw is failed for a THOUSAND SONS PSYKER model from your army” = “Just after a saving throw is failed for your PSYKER model” (now a model keyword, as kwOnly says); EFFECT “Change the Damage characteristic of that attack to 0” = “change the Damage of that attack to 0”. The fast-dice sentences only widen when it can be used, they set no condition, so leaving them to the full text loses none."
+ },
+ "2e8a7337084e3ca9": {
+  "verdict": "ok",
+  "by": "review:import-lists",
+  "at": "2026-10-23",
+  "why": "Export: it is an Abilities profile of the Khorne Berzerkers unit selection, so who = Khorne Berzerkers. The models match the export: 1 Khârn, the Champion (the Icon of Khorne is associated to it), 7× Khorne Berzerker, 2× w/ eviscerator and plasma pistol."
  },
  "2e8b6d785d3da182": {
   "verdict": "ok",
@@ -2195,6 +2237,12 @@
   "at": "2026-10-21",
   "why": "WHEN: “Your Charge phase, just after a SICARIAN unit from your army declares a charge.”"
  },
+ "3617145e79607863": {
+  "verdict": "ok",
+  "by": "review:import-2 (its fix)",
+  "at": "2026-10-23",
+  "why": "Two concrete defects (tested against HEAD, then with the fix in a scratch copy, where import-test.js passes: 16/16 identical, 44 negatives, 131 checks, 0 failures).\n(1) A top-level selection that is no known one is silently accepted when its entry id is an Object.prototype name, because T = D.bsIds is a plain object literal and T.info[id] is then inherited. 6 bigs with sels.unshift({id:'q', name:'Knight Castellan', entryId:'aaaa::constructor', number:1, type:'upgrade'}) imports (OK knight-destrier×2, knight-errant, knight-paladin×2, knight-warden). Adding a child {name:'Knight Castellan', entryId:'zz::toString', type:'model'} under an entry 'aaaa::hasOwnProperty' imports too, because T.infoKids is inherited the same way. That breaks “every other top-level selection … with known choices only” and the owner's rule that anything else is refused. A catalogueId of 'constructor' also hits T.factions.constructor and ends in “it could not be read” instead of “faction … not recognized”. The fix makes null-prototype copies of the tables. Both inputs are then refused with “selection Knight Castellan not recognized” / “selection Extra not recognized”, and the catalogue one with “faction Imperial Knights not recognized”.\n(2) “A unit taken again as its copies” fails when the same unit comes from two lists of the pool. princes with its second Daemon Prince of Khorne swapped for a third Forgefiend (1910 pts) imports as forgefiend ×2 plus a separate forgefiend-2. picks reuses princes' Forgefiend up to its copies:2, then takes standard's Forgefiend (same detachments, so it is in the pool). The two are different objects, so `made` (keyed by object) does not merge them. They are identical field for field (JSON equal apart from copies). The fix keys `made` by the unit's JSON without copies, giving forgefiend ×3. (6 bigs with a third Knight Destrier merges only because no other IK list has a Destrier.)\nThe rest holds. Warlord, enhancement, Epic Hero, points limit/total, battle size, dispositions, config, Show/Hide children, holders and leader-attachment checks all behave as the item says (the gate's 44 negatives plus my probes: self-association, a cycle, an association to undefined, unit ×0, a string cost, no costLimits). Noted but within the spec's own carve-out (“max per list that no modifier changes”): 6 bigs with 4 Knight Destriers imports (1800 pts). BSData's force max of 3 (constraint 4632-a555-f127-f48c) has a modifier that sets it to 2, so it is not in maxPerList."
+ },
  "36181620840c71e3": {
   "verdict": "ok",
   "by": "review:m5-recheck",
@@ -2248,6 +2296,12 @@
   "by": "review:shooty",
   "at": "2026-10-17",
   "why": "Matches the New Recruit PDF: options “Supa-glowy Fing, Kustom Mega-blasta, Power Klaw, Tellyport Blasta” (the enhancement is not a weapon); ranged Kustom Mega-blasta and Tellyport Blasta, melee Power Klaw."
+ },
+ "377b912e8cd0b41d": {
+  "verdict": "ok",
+  "by": "review:import-lists",
+  "at": "2026-10-23",
+  "why": "Export: it is an Abilities profile of the Khorne Berzerkers unit selection, so who = Khorne Berzerkers. The models match the export: 1 Lord on Juggernaut, the Champion (with the Icon of Khorne), 15× Khorne Berzerker, 4× w/ eviscerator and plasma pistol."
  },
  "3783b487e78f734a": {
   "verdict": "ok",
@@ -2483,6 +2537,12 @@
   "at": "2026-10-23",
   "why": "Your Command phase."
  },
+ "3c8401a4b8a2df3c": {
+  "verdict": "ok",
+  "by": "review:import-lists",
+  "at": "2026-10-23",
+  "why": "Export: it is the Icon of Khorne upgrade's profile on the Khorne Berzerkers unit (association → the Champion): “If the bearer's unit contains 1 or more Icons of Khorne …”, so who = Khorne Berzerkers. The models match the export: 1 Lord on Juggernaut, the Champion (with the Icon of Khorne), 15× Khorne Berzerker, 4× w/ eviscerator and plasma pistol."
+ },
  "3c8515334f4840e1": {
   "verdict": "ok",
   "by": "review:infernal-lance",
@@ -2633,6 +2693,12 @@
   "at": "2026-10-21",
   "why": "NR roster: Sorcerer 100, (5) Rubric Marines 115; card 215 PTS."
  },
+ "3fc27a03647e7b87": {
+  "verdict": "ok",
+  "by": "review:import-lists",
+  "at": "2026-10-23",
+  "why": "Export: it is an Abilities profile of the Khârn the Betrayer selection, so who = Khârn the Betrayer. The models match the export: 1 Khârn, the Champion (the Icon of Khorne is associated to it), 7× Khorne Berzerker, 2× w/ eviscerator and plasma pistol."
+ },
  "402ab9cd746aa6e1": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -2782,6 +2848,12 @@
   "by": "review:knights-nids",
   "at": "2026-10-16",
   "why": "Talons enhancement (an Upgrade); core FAQ: \"Upgrades are a type of enhancement\"."
+ },
+ "428fa0292043da00": {
+  "verdict": "ok",
+  "by": "review:import-lists",
+  "at": "2026-10-23",
+  "why": "Export: it is the Icon of Khorne upgrade's profile on the Khorne Berzerkers unit (association → the Champion): “If the bearer's unit contains 1 or more Icons of Khorne …”, so who = Khorne Berzerkers. The models match the export: 1 Khârn, the Champion (the Icon of Khorne is associated to it), 7× Khorne Berzerker, 2× w/ eviscerator and plasma pistol."
  },
  "429b1dfb317daea4": {
   "verdict": "ok",
@@ -2987,6 +3059,12 @@
   "at": "2026-10-21",
   "why": "EFFECT: \"Ranged attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls. +1CP Or: Ranged attacks that target your unit have -1 to wound rolls.\" The def has the phase, condition, effect and the +1CP option. On the unit's \"When targeted\" line, \"its T\" is the unit's, as in the signed-off Survivor of Strife def."
  },
+ "482214c0cbcc8796": {
+  "verdict": "ok",
+  "by": "review:import-lists",
+  "at": "2026-10-23",
+  "why": "Export: it is an Abilities profile of the Lord on Juggernaut selection, so who = Lord on Juggernaut. The models match the export: 1 Lord on Juggernaut, the Champion (with the Icon of Khorne), 15× Khorne Berzerker, 4× w/ eviscerator and plasma pistol."
+ },
  "4827ffb8319f3cdb": {
   "verdict": "ok",
   "by": "review:r11-purge-faction",
@@ -3094,6 +3172,12 @@
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "\"Each time this model makes an attack that targets a CHARACTER, MONSTER or WALKER unit, you can re-roll the Hit roll and re-roll the Wound roll\": all attacks, target keywords as the player's tick (vs any), both re-rolls; reaches Lucius's weapons only (\"this model makes\")."
+ },
+ "4a9f85ad31dcaecc": {
+  "verdict": "ok",
+  "by": "review:import-2",
+  "at": "2026-10-23",
+  "why": "Text or JSON in, never an exception out, as the item says. Probed against HEAD with WH_DATA loaded as import-test.js loads it: '{ this is not json' → “not a New Recruit JSON export (the text is not JSON)”; [], 5, 'null' and undefined → “(no roster)”; a selection nested 5000 deep → “(a selection is malformed)” (malformed stops at depth 12); forces:[null] and catalogueId 'constructor' get past malformed and throw inside resolveRoster, and the try turns that into “(it could not be read)”. 6000 random mutations of the 17 exports (counts, deleted/duplicated/swapped selections, extra children, associations, types, costs) threw nothing."
  },
  "4aa043e5f4f2e084": {
   "verdict": "ok",
@@ -4757,6 +4841,12 @@
   "at": "2026-10-23",
   "why": "Malign Trickery is on the Tzaangor Enlightened with Fatecaster Greatbows datasheet (Wahapedia), the led unit."
  },
+ "756236bc27288769": {
+  "verdict": "ok",
+  "by": "review:import-lists",
+  "at": "2026-10-23",
+  "why": "Export: Khârn: Gorechild, Plasma pistol. Champion: Chainblade, Plasma pistol. 7× Khorne Berzerker: 7× Bolt pistol, 7× Chainblade. 2× w/ eviscerator and plasma pistol: 2× Khornate eviscerator, 2× Plasma pistol. Icon of Khorne is a unit upgrade, not a weapon. So Plasma pistol ×3 (both profiles), Bolt pistol ×7, Chainblade ×8, Khornate eviscerator ×2, plus Khârn's two. gear and weapons match."
+ },
  "756a91e86e363ee4": {
   "verdict": "ok",
   "by": "review:knights-nids",
@@ -5027,6 +5117,12 @@
   "at": "2026-10-16",
   "why": "NR glaive profiles strike A10 D4 / sweep A18 D2 vs base A9 D3 / A17 D1: +1 A and +1 D are included."
  },
+ "7b1e320ba54444cf": {
+  "verdict": "ok",
+  "by": "review:import-2",
+  "at": "2026-10-23",
+  "why": "It matches the item. 'On this phone' gives the source and date (esc) and says “Kept on this phone only.” when importedKept() has the entry. When it does not, it says “This phone could not keep it: it is gone when the app next starts.” (the earlier review's nit is fixed). The Remove this list button (impRmBtn, id escaped) leads to askRemove's on-page Remove / Keep it, and Keep it restores the button. It is used only for a.imported (screenPregame line 4667)."
+ },
  "7bc53c14d45dff9d": {
   "verdict": "ok",
   "by": "review:mucho-mutantes",
@@ -5152,6 +5248,12 @@
   "by": "review:r9-pubstomper",
   "at": "2026-10-21",
   "why": "NR prints \"Treason of Tzeentch (Psychic)\"."
+ },
+ "7e8d4f09f78e2062": {
+  "verdict": "ok",
+  "by": "review:import-lists",
+  "at": "2026-10-23",
+  "why": "Export: the Deep Strike rule sits only under the Disciple of Khorne selection on the Lord on Juggernaut (“The bearer has the Deep Strike ability”). The Khorne Berzerkers carry only Blessings of Khorne, Pistol and Hazardous. So Deep Strike is the Lord's alone."
  },
  "7eda1e9889eeee96": {
   "verdict": "ok",
@@ -5735,6 +5837,12 @@
   "at": "2026-10-23",
   "why": "Wahapedia Shaman: “INFANTRY; MOUNTED; … PSYKER”; Tzaangor Enlightened: “MOUNTED; FLY; CHAOS; TZEENTCH; MUTANT; TZAANGOR ENLIGHTENED”."
  },
+ "8b6b2f8033eabb14": {
+  "verdict": "ok",
+  "by": "review:import",
+  "at": "2026-10-23",
+  "why": "The only change appends importedFoot(a) when a.imported; built-in lists are unchanged, and render.js checks an imported list's screens show the same text as the built-in one apart from the source line and the On this phone footer."
+ },
  "8b7b173abe53714f": {
   "verdict": "ok",
   "by": "review:core-code",
@@ -5842,6 +5950,12 @@
   "by": "review:r19-fixes",
   "at": "2026-10-21",
   "why": "Same name, same ability: the IK datasheets' \"Super-heavy Walker\" FACTION ability beside Core Rules \"SUPER-HEAVY WALKER 24.35\" (the GW PDF text matches RULES). The faction text matches Wahapedia's Codex: Imperial Knights army rule word for word (\"Each time a model with this ability makes a Normal, Advance or Fall Back move ... on a 1, that model is Battle-shocked.\"). ruleFor sends the label to the core rule (alias /^super-heavy walker/i), and showRule then shows the twin."
+ },
+ "8d56a990a6e48110": {
+  "verdict": "ok",
+  "by": "review:import-lists",
+  "at": "2026-10-23",
+  "why": "Export categories: Khârn “Faction: World Eaters, Infantry, Character, Epic Hero, Grenades, Chaos, Khorne, Khârn the Betrayer”; Khorne Berzerkers “Faction: World Eaters, Infantry, Battleline, Grenades, Chaos, Khorne, Berzerkers”. Only Battleline and Berzerkers come from the bodyguard."
  },
  "8de4eb361882a921": {
   "verdict": "ok",
@@ -6148,6 +6262,12 @@
   "by": "review:r19-fixes",
   "at": "2026-10-21",
   "why": "Both quotes are in their sources: Enraged Behemoths (Wahapedia, Crusher Stampede) \"add 2 to the Objective Control characteristic of models in that unit\", and Singular Purpose \"an Objective Control characteristic of 15\". Core 02.02.01 Modifiers appears only as a cross-reference in rules/core-rules.md, the GW PDF and Wahapedia core, so the note names both results (15 or 17) and picks neither. The one ordering FAQ in the sources (AdMech Faction Pack 1.4, Auto-divinatory Targeting with the Protector Imperative: \"first changed to 3+ ... then improved by 1\") covers only those two rules."
+ },
+ "96f174439e82a029": {
+  "verdict": "ok",
+  "by": "review:import-2",
+  "at": "2026-10-23",
+  "why": "It checks what the item says: roster object, forces array, costs/costLimits arrays of objects, and every selection at every depth an object with a string entryId/name/type, a non-negative integer number, and array selections/costs/associations of objects. A name of {} or a number of '1' → “a selection is malformed”, and selections:'abc' → “the force has no selections”. Forces other than exactly one object return null on purpose (“refused with its own message”). forces:[null] is not caught here, but resolveRoster's first line throws and resolve's try refuses it, so nothing crashes. All 17 real exports pass, so depth 12 is enough for them."
  },
  "9721c4c01fd25f1b": {
   "verdict": "ok",
@@ -8003,6 +8123,12 @@
   "at": "2026-10-16",
   "why": "\"In your Command phase\"."
  },
+ "c4891fac4cfef6fd": {
+  "verdict": "ok",
+  "by": "review:import-lists",
+  "at": "2026-10-23",
+  "why": "Export categories: Lord on Juggernaut “Mounted, Character, Chaos, Khorne, Lord on Juggernaut, Faction: Blood Legions” (New Recruit has already applied Disciple of Khorne); Khorne Berzerkers “Faction: World Eaters, Infantry, Battleline, Grenades, Chaos, Khorne, Berzerkers”. Battleline, Berzerkers, Faction: World Eaters, Grenades and Infantry come from the bodyguard. Blood Legions comes from the enhancement, quoted word for word as the export's Disciple of Khorne profile (“The bearer has the Deep Strike ability, and it has the BLOOD LEGIONS Faction keyword instead of the WORLD EATERS Faction keyword.”)."
+ },
  "c4aed3d33b72abb6": {
   "verdict": "ok",
   "by": "review:r10-ooga",
@@ -8057,6 +8183,12 @@
   "at": "2026-10-22",
   "why": "“your Shooting phase”: your turn."
  },
+ "c60a4363a9214c4f": {
+  "verdict": "ok",
+  "by": "review:import-lists",
+  "at": "2026-10-23",
+  "why": "Export: it is an Abilities profile of the Khârn the Betrayer selection, so who = Khârn the Betrayer. The models match the export: 1 Khârn, the Champion (the Icon of Khorne is associated to it), 7× Khorne Berzerker, 2× w/ eviscerator and plasma pistol."
+ },
  "c638e54714706332": {
   "verdict": "ok",
   "by": "review:r19-fixes",
@@ -8086,6 +8218,12 @@
   "by": "review:defilers-and-friends",
   "at": "2026-10-22",
   "why": "\"Your Shooting phase\"."
+ },
+ "c7186ee01822ed24": {
+  "verdict": "ok",
+  "by": "review:import-lists",
+  "at": "2026-10-23",
+  "why": "Export: it is an Abilities profile of the Khorne Berzerkers unit selection, so who = Khorne Berzerkers. The models match the export: 1 Khârn, the Champion (the Icon of Khorne is associated to it), 7× Khorne Berzerker, 2× w/ eviscerator and plasma pistol."
  },
  "c71c010b880609a4": {
   "verdict": "ok",
@@ -8224,6 +8362,12 @@
   "by": "review:mucho-mutantes",
   "at": "2026-10-23",
   "why": "Shaman: Baleful Devolution, force stave; Aviarch + 5 Enlightened: divining spear each (×6)."
+ },
+ "ca98ffff14650de8": {
+  "verdict": "ok",
+  "by": "review:import-lists",
+  "at": "2026-10-23",
+  "why": "Export: it is an Abilities profile of the Lord on Juggernaut selection, so who = Lord on Juggernaut. The models match the export: 1 Lord on Juggernaut, the Champion (with the Icon of Khorne), 15× Khorne Berzerker, 4× w/ eviscerator and plasma pistol."
  },
  "cab4d5e961bad9ea": {
   "verdict": "ok",
@@ -8423,6 +8567,12 @@
   "at": "2026-10-23",
   "why": "Each part on the units its words name: Enraged Abjuration \"BLOOD LEGIONS and WORLD EATERS models\" (every model in this list has one of the two, models-level so any:[both]); Daemonic Rage \"Melee weapons equipped by BLOOD LEGIONS units\" (unit-level: the Lord + Berzerkers unit is one, so all its melee weapons, the Berzerkers' too, have [LANCE]); Boon of Blood \"BLOOD LEGIONS units ... 4+ invulnerable save\" (the whole Lord + Berzerkers unit); Might of Khorne \"BLOOD LEGIONS units ... gain the Blessings of Khorne ability\" (Skarbrand, Bloodthirster, Flesh Hounds lack it; the Lord unit has it already). Each marked \"active (nBTP)\", the player's choice."
  },
+ "cf1e7a2f1d52dfa1": {
+  "verdict": "ok",
+  "by": "review:import-2",
+  "at": "2026-10-23",
+  "why": "It matches the item. It filters the kept export out of wh-imported, splices only the D.armies entry with that id that is marked imported, drops the importStale row, removes 'wh-used-'+id (the per-battle ticks; usedKey is 'wh-used-'+cur.army, and the earlier nit is fixed), recomputes ONLY, hides any sheet and goes home with 'replace'. wh-last and history states that name the removed id fail valid() (armyById) and fall back to home, so nothing points at the gone list."
+ },
  "cf29a9c8fd4333ff": {
   "verdict": "ok",
   "by": "review:woof-woof",
@@ -8464,6 +8614,18 @@
   "by": "review:r9-knights",
   "at": "2026-10-21",
   "why": "\"Each time this model makes a ranged attack that targets the closest eligible target, add 1 to the Hit roll\": ranged, condition and +1 to hit are all the rule's own words."
+ },
+ "d01eb673c7224e8d": {
+  "verdict": "ok",
+  "by": "review:import-2",
+  "at": "2026-10-23",
+  "why": "It matches the item. Empty text → “Nothing to import”. A refusal lists r.errors one per <li>, escaped (impList/esc), and keeps nothing. resolve is in a try with the same fallback message. The id is checked against D.armies and every kept entry (stale ones too) and gets -2, -3… past a clash. It keeps WH_IMPORT.slim(json) (import-test checks the slim copy resolves identically for all 17 exports), checks `saved` by reading storage back (keep.set already swallows quota errors), and the toast says “for now: this phone could not keep it” when not saved. Then it pushes, resets ONLY and opens the list. The startup loop (lines 1039-1044) resolves every kept export in its own try and lists one that fails or clashes as importStale, so one bad entry cannot stop the app. toast uses textContent, so a markup list name stays text."
+ },
+ "d04d544914bfae79": {
+  "verdict": "ok",
+  "by": "review:import-lists",
+  "at": "2026-10-23",
+  "why": "Export: it is the enhancement selection on the Lord on Juggernaut (15 pts): “The bearer has the Deep Strike ability …”, so who = Lord on Juggernaut. The models match the export: 1 Lord on Juggernaut, the Champion (with the Icon of Khorne), 15× Khorne Berzerker, 4× w/ eviscerator and plasma pistol."
  },
  "d05ff62d736752b1": {
   "verdict": "ok",
@@ -9227,6 +9389,12 @@
   "at": "2026-10-17",
   "why": "The new summary, “Every model can shoot with one or more of its guns”, is 04.01 (“You can select one or more ranged weapons that model has”). It is used only when every per-model sentence is the plain ‘Can shoot with one or both / one or more of these’ form. The rest is list facts: which models line carries which weapons, the one-model carrier names, ×N counts, and leader vs bodyguard lines (19.04). The one rule problem sits in useSentence (see that item)."
  },
+ "e3851faea72b012e": {
+  "verdict": "ok",
+  "by": "review:import-lists",
+  "at": "2026-10-23",
+  "why": "Export: Lord on Juggernaut: Bladed horn (Extra Attacks, Lance), Exalted chainblade, Plasma pistol. Champion: Chainblade, Plasma pistol. 15× Khorne Berzerker: 15× Bolt pistol, 15× Chainblade. 4× w/ eviscerator and plasma pistol: 4× Khornate eviscerator, 4× Plasma pistol. So Plasma pistol ×5, Bolt pistol ×15, Chainblade ×16, Khornate eviscerator ×4. gear and weapons match."
+ },
  "e392c5aef14cc013": {
   "verdict": "ok",
   "by": "review:r11-purge-units",
@@ -9352,6 +9520,12 @@
   "by": "review:cooking",
   "at": "2026-10-16",
   "why": "\"In the Fight phase, when this model is destroyed…\": the Fight phase in either turn. [restored: the same judgement on the same text, signed off for an earlier list]"
+ },
+ "e6d64d1d268860ef": {
+  "verdict": "ok",
+  "by": "review:import-lists",
+  "at": "2026-10-23",
+  "why": "Export: Lord on Juggernaut 95 pts + Disciple of Khorne 15 pts = 110, Khorne Berzerkers 330 pts. 110 + 330 = 440 = pts."
  },
  "e6e26838129096b2": {
   "verdict": "ok",
@@ -10060,6 +10234,12 @@
   "by": "review:big-demons-baby",
   "at": "2026-10-23",
   "why": "Keeps the WHEN (\"just after an enemy unit has selected its targets\"), the TARGET's condition (a WORLD EATERS unit within 6\" of your unit that was selected as a target) and the EFFECT (\"models in your WORLD EATERS unit have a 5+ invulnerable save\", 4+ with Boon of Blood) until the end of the phase."
+ },
+ "f9711fef849e1774": {
+  "verdict": "ok",
+  "by": "review:import-2",
+  "at": "2026-10-23",
+  "why": "It matches the item. Each selection's path of entry ids from the part, with its count: s.n, the same path summed (m.get(k)+…), and 1 for a non-model option that holds models. import-ids.js writes BS_IDS with this same function, and import-test's table check passes. The earlier review's “a bundle ×2 imports” is gone: 4 megas' 'Rapid-fire battlecannon and Questoris heavy stubber' ×2 and 'Two excruciator cannons' ×2 are refused (resolve also refuses a holder whose number is not 1). Ids containing ',', '/' or '×' could make two different trees give one string. But the import then copies data.js's unit at data.js's points, and the names and total checks still apply, so no list data.js lacks can come in that way: not a defect."
  },
  "f9b5ec8830e2c3e2": {
   "verdict": "ok",

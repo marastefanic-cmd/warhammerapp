@@ -732,9 +732,9 @@ Fight · Either turn
 If this unit made a charge move this turn, this unit’s melee attacks have +1 S.
 
 Icon of Khorne
-No Icon of Khorne in this unit
+Start of the battle round
 
-No Icon of Khorne in this unit
+Start of the battle round
 
 If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.
 
@@ -959,7 +959,7 @@ Lord on Juggernaut · Disciple of Khorne
 1× 90×52.5mm
 Lord on Juggernaut · Disciple of Khorne
 1× 32mm
-Champion · Plasma pistol
+Champion · Plasma pistol · Icon of Khorne
 15× 32mm
 standard Bolt pistol, Chainblade
 4× 32mm
@@ -2809,7 +2809,7 @@ Options
 1× Lord on Juggernaut
 Bladed horn, Exalted chainblade, Plasma pistol
 Leading Khorne Berzerkers
-1× Khorne Berzerker Champion
+1× Khorne Berzerker Champion (Icon of Khorne)
 Chainblade, Plasma pistol
 15× Khorne Berzerker
 Bolt pistol, Chainblade
@@ -2983,9 +2983,9 @@ If this unit made a charge move this turn, this unit’s melee attacks have +1 S
 
 Icon of Khorne
 - Khorne Berzerkers
-No Icon of Khorne in this unit
+Start of the battle round
 
-No Icon of Khorne in this unit
+Start of the battle round
 
 If the bearer’s unit contains one or more Icons of Khorne, each time the bearer’s unit destroys an enemy unit, you gain 1 Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.
 
