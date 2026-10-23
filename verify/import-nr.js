@@ -284,7 +284,15 @@ for (const nu of nrUnits) {
     const o = opts[k], g = [], wargear = [];
     if (o.warlord) warlord = true;
     if (o.enhancement) enhancement = typo(o.enhancement);
-    for (const it0 of m.options.map(nm)) {
+    // a bundle whose own name has a comma ("Adrathic Desolator, 1 Fist and 1 Projectors (Adrathic Desolator, Caestus Fist, …)"):
+    // the part before the comma is not an item of its own when the bundle holds it and the weapon table prints it once
+    const items0 = m.options.map(nm).filter((it, j, all) => {
+      const nx = all[j + 1] && /^.*?\((.*)\)$/.exec(all[j + 1]);
+      if (/\(/.test(it) || !nx || !splitItems(nx[1]).some(x => lc(nm(x)) === lc(it))) return true;
+      const rows = [...kinds.ranged, ...kinds.melee].filter(w => lc(w.group || w.name) === lc(it));
+      return !(rows.length && rows.every(w => !w.n));
+    });
+    for (const it0 of items0) {
       if (it0 === 'Warlord' || /^•/.test(it0) || (o.enhItem && it0 === o.enhItem)) continue;
       const inner = /^.*?\((.*)\)$/.exec(it0);
       // a bundle taken more than once ("2x Gatling cannon and flamer (Despoiler gatling cannon, Heavy darkflamer)"): each of its items as often
