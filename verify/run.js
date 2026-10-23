@@ -7,6 +7,8 @@
 // Steps (each must pass):
 //   data        check.js: the data is complete and consistent
 //   invariants  verify/invariants.js: mechanical rules (phases, eligibility, cited numbers, counts)
+//   derive      verify/derive.js: phases, turn, needs and tags derived from the rules text by fixed rules; every label
+//               that agrees with data.js today must keep agreeing (verify/derive-agreed.json); differences are listed, not failed
 //   choice      verify/choice.js: every weapon with several profiles is "pick one" or "all fire" as BSData and Wahapedia mark it
 //   bsdata      verify/bsdata.js: every unit fact equals BSData, the data New Recruit is built from
 //   nr          verify/nr.js: everything the owner's New Recruit PDFs print is in the app, identically
@@ -48,6 +50,7 @@ const step = (name, args, env) => {
 const hash = sha(['app.html', 'data.js', 'calc.js', 'ask.js'].map(f => fs.readFileSync(path.join(ROOT, f), 'utf8')).join(''));
 step('data', ['check.js']);
 step('invariants', ['verify/invariants.js']);
+step('derive', ['verify/derive.js']);
 step('choice', ['verify/choice.js']);
 step('bsdata', ['verify/bsdata.js']);
 step('dispositions', ['verify/dispositions.js']);   // each detachment's Force Dispositions against BSData

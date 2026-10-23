@@ -982,13 +982,14 @@ function compareUnit(army, u, F, fail) {
     const whoRoot = rootFor(a.who);
     let pool = whoRoot ? F.abilities.filter((b) => b.root === whoRoot) : F.abilities;
     if (a.who && !whoRoot) pool = pool.filter((b) => nn(a.who).startsWith(nn(b.typeName)));
-    if (a.tag === 'Enhancement') pool = pool.filter((b) => b.enh);
-    const spelt = a.tag === 'Enhancement' ? enhSpelling(army, a.name) : null;
+    const isEnh = /(^|, | · )Enhancement(, | · |$)/.test(a.tag || '');
+    if (isEnh) pool = pool.filter((b) => b.enh);
+    const spelt = isEnh ? enhSpelling(army, a.name) : null;
     const nameOk = (b) => names(b).some((x) => x === nn(a.name) || splitAbilityName(x).base === nn(a.name) || (spelt && (x === nn(spelt) || splitAbilityName(x).base === nn(spelt))));
     let cands = pool.filter(nameOk);
     if (!cands.length && a.na) cands = F.roots.flatMap((r) => datasheetAbilities(r)).filter(nameOk);
     checked('abilities');
-    if (!cands.length) { fail('ability', a.name, '', `no BSData ability "${a.name}"${a.who ? ' for ' + a.who : ''}${a.tag === 'Enhancement' ? ' (enhancement)' : ''}${a.na ? ' (looked in the whole datasheet)' : ''}`); continue; }
+    if (!cands.length) { fail('ability', a.name, '', `no BSData ability "${a.name}"${a.who ? ' for ' + a.who : ''}${isEnh ? ' (enhancement)' : ''}${a.na ? ' (looked in the whole datasheet)' : ''}`); continue; }
     const best = cands.find((b) => nt(b.text) === nt(a.text)) || cands[0];
     usedA.add(best);
     const bname = names(best).find((x) => x === nn(a.name)) || best.name;

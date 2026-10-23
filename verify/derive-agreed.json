@@ -1,0 +1,3025 @@
+{
+ "note": "labels derived from the text (verify/derive.js) that equal data.js; the gate keeps them equal",
+ "items": {
+  "strat-timing | Core · Command Re-roll": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | Core · Command Re-roll": {},
+  "strat-timing | Core · Epic Challenge": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | Core · Epic Challenge": {
+   "all": [
+    "Character"
+   ]
+  },
+  "strat-timing | Core · Insane Bravery": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Core · Insane Bravery": {},
+  "strat-timing | Core · Explosives": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Core · Explosives": {
+   "any": [
+    "Explosives",
+    "Grenades"
+   ]
+  },
+  "strat-timing | Core · Crushing Impact": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Core · Crushing Impact": {
+   "any": [
+    "Monster",
+    "Vehicle"
+   ]
+  },
+  "strat-timing | Core · Rapid Ingress": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
+  },
+  "strat-needs | Core · Rapid Ingress": {
+   "none": [
+    "Aircraft"
+   ]
+  },
+  "strat-timing | Core · Fire Overwatch": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
+  },
+  "strat-needs | Core · Fire Overwatch": {
+   "none": [
+    "Titanic"
+   ]
+  },
+  "strat-timing | Core · Smokescreen": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "opp"
+  },
+  "strat-needs | Core · Smokescreen": {
+   "all": [
+    "Smoke"
+   ]
+  },
+  "strat-timing | Core · Heroic Intervention": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "opp"
+  },
+  "strat-needs | Core · Heroic Intervention": {
+   "unless": {
+    "all": [
+     "Vehicle"
+    ],
+    "none": [
+     "Character",
+     "Walker"
+    ]
+   }
+  },
+  "strat-timing | Core · Counteroffensive": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "opp"
+  },
+  "strat-needs | Core · Counteroffensive": {},
+  "strat-timing | Orks · Bully Boyz · Too Arrogant to Die": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | Orks · Bully Boyz · Too Arrogant to Die": {
+   "any": [
+    "Meganobz",
+    "Nobz"
+   ]
+  },
+  "strat-timing | Orks · Bully Boyz · Armed to da Teef": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "strat-needs | Orks · Bully Boyz · Armed to da Teef": {
+   "any": [
+    "Meganobz",
+    "Nobz"
+   ]
+  },
+  "strat-timing | Orks · Bully Boyz · Hulking Brutes": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "opp"
+  },
+  "strat-needs | Orks · Bully Boyz · Hulking Brutes": {
+   "any": [
+    "Meganobz",
+    "Nobz"
+   ]
+  },
+  "strat-timing | Orks · Dread Mob · Crazed Rampage": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | Orks · Dread Mob · Crazed Rampage": {
+   "all": [
+    "Faction: Orks",
+    "Walker"
+   ],
+   "none": [
+    "Titanic"
+   ]
+  },
+  "strat-timing | Orks · Dread Mob · Dread Power": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Orks · Dread Mob · Dread Power": {
+   "all": [
+    "Faction: Orks",
+    "Walker"
+   ]
+  },
+  "strat-timing | Orks · Dread Mob · Stomping Juggernaut": {
+   "ph": [
+    "movement",
+    "charge"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Orks · Dread Mob · Stomping Juggernaut": {
+   "all": [
+    "Faction: Orks",
+    "Walker"
+   ]
+  },
+  "strat-timing | Orks · Runt Swarm · Infested War Zone": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | Orks · Runt Swarm · Infested War Zone": {
+   "all": [
+    "Gretchin"
+   ]
+  },
+  "strat-timing | Orks · Runt Swarm · Scarper!": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
+  },
+  "strat-needs | Orks · Runt Swarm · Scarper!": {
+   "all": [
+    "Gretchin"
+   ]
+  },
+  "strat-timing | Orks · Runt Swarm · Grot Shields": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "opp"
+  },
+  "strat-needs | Orks · Runt Swarm · Grot Shields": {
+   "all": [
+    "Gretchin"
+   ]
+  },
+  "strat-timing | Orks · Shoota Boyz · Kustom Dakka": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Orks · Shoota Boyz · Kustom Dakka": {
+   "all": [
+    "Faction: Orks",
+    "Infantry"
+   ]
+  },
+  "strat-timing | Orks · Shoota Boyz · Glowin’ Dakka": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Orks · Shoota Boyz · Glowin’ Dakka": {
+   "all": [
+    "Faction: Orks",
+    "Infantry"
+   ]
+  },
+  "strat-timing | Orks · Shoota Boyz · Never Enough Dakka": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Orks · Shoota Boyz · Never Enough Dakka": {
+   "all": [
+    "Faction: Orks",
+    "Infantry"
+   ]
+  },
+  "strat-timing | Orks · War Horde · Breakin’ Heads": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | Orks · War Horde · Breakin’ Heads": {
+   "all": [
+    "Faction: Orks",
+    "Infantry"
+   ],
+   "attached": true
+  },
+  "strat-timing | Orks · War Horde · Hit ’Em Harder": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | Orks · War Horde · Hit ’Em Harder": {
+   "all": [
+    "Faction: Orks"
+   ]
+  },
+  "strat-timing | Orks · War Horde · Orks Is Never Beaten": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | Orks · War Horde · Orks Is Never Beaten": {
+   "all": [
+    "Faction: Orks"
+   ],
+   "none": [
+    "Titanic"
+   ]
+  },
+  "strat-timing | Orks · War Horde · Mow ’Em Down": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | Orks · War Horde · Mow ’Em Down": {
+   "all": [
+    "Faction: Orks",
+    "Vehicle"
+   ],
+   "none": [
+    "Walker"
+   ]
+  },
+  "strat-timing | Orks · War Horde · Fungus-fuel Injection": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Orks · War Horde · Fungus-fuel Injection": {
+   "all": [
+    "Faction: Orks"
+   ],
+   "any": [
+    "Mounted",
+    "Vehicle"
+   ]
+  },
+  "strat-timing | Orks · War Horde · Close-range Dakka": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Orks · War Horde · Close-range Dakka": {
+   "all": [
+    "Faction: Orks"
+   ]
+  },
+  "strat-timing | Orks · Wreckas · Drive-by Bustin’": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Orks · Wreckas · Drive-by Bustin’": {
+   "all": [
+    "Faction: Orks",
+    "Transport"
+   ]
+  },
+  "strat-timing | Orks · Wreckas · Grab It": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Orks · Wreckas · Grab It": {
+   "any": [
+    "Breaka Boyz",
+    "Flash Gitz",
+    "Tankbustas"
+   ]
+  },
+  "strat-timing | Orks · Wreckas · Gun-crazy Show-offs": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "opp"
+  },
+  "strat-needs | Orks · Wreckas · Gun-crazy Show-offs": {
+   "any": [
+    "Flash Gitz",
+    "Tankbustas"
+   ]
+  },
+  "strat-timing | Imperial Knights · Freeblade Company · Noble Sacrifice": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | Imperial Knights · Freeblade Company · Noble Sacrifice": {
+   "all": [
+    "Faction: Imperial Knights"
+   ]
+  },
+  "strat-timing | Imperial Knights · Freeblade Company · Strength from Exile": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "strat-needs | Imperial Knights · Freeblade Company · Strength from Exile": {
+   "all": [
+    "Faction: Imperial Knights"
+   ]
+  },
+  "strat-timing | Imperial Knights · Freeblade Company · Full Tilt": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Imperial Knights · Freeblade Company · Full Tilt": {
+   "all": [
+    "Faction: Imperial Knights"
+   ]
+  },
+  "strat-timing | Imperial Knights · Freeblade Company · Point-Blank Barrage": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Imperial Knights · Freeblade Company · Point-Blank Barrage": {
+   "all": [
+    "Faction: Imperial Knights"
+   ]
+  },
+  "strat-timing | Imperial Knights · Freeblade Company · Survivor of Strife": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "opp"
+  },
+  "strat-needs | Imperial Knights · Freeblade Company · Survivor of Strife": {
+   "all": [
+    "Faction: Imperial Knights"
+   ]
+  },
+  "strat-timing | Imperial Knights · Freeblade Company · Flanking Manoeuvres": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "opp"
+  },
+  "strat-needs | Imperial Knights · Freeblade Company · Flanking Manoeuvres": {
+   "all": [
+    "Armiger"
+   ]
+  },
+  "strat-timing | World Eaters · Berzerker Warband · Blood Offering": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | World Eaters · Berzerker Warband · Blood Offering": {
+   "all": [
+    "Faction: World Eaters"
+   ]
+  },
+  "strat-timing | World Eaters · Berzerker Warband · Hack and Slash": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | World Eaters · Berzerker Warband · Hack and Slash": {
+   "all": [
+    "Faction: World Eaters"
+   ]
+  },
+  "strat-timing | World Eaters · Berzerker Warband · Frenzied Resilience": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | World Eaters · Berzerker Warband · Frenzied Resilience": {
+   "all": [
+    "Faction: World Eaters"
+   ]
+  },
+  "strat-timing | World Eaters · Berzerker Warband · Skulls for the Skull Throne!": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | World Eaters · Berzerker Warband · Skulls for the Skull Throne!": {
+   "all": [
+    "Faction: World Eaters"
+   ]
+  },
+  "strat-timing | World Eaters · Berzerker Warband · Apoplectic Frenzy": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | World Eaters · Berzerker Warband · Apoplectic Frenzy": {
+   "all": [
+    "Khorne",
+    "Berzerkers"
+   ]
+  },
+  "strat-timing | World Eaters · Berzerker Warband · Berzerker’s Wrath": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "opp"
+  },
+  "strat-needs | World Eaters · Berzerker Warband · Berzerker’s Wrath": {
+   "all": [
+    "Khorne",
+    "Berzerkers"
+   ]
+  },
+  "strat-timing | World Eaters · Khorne Daemonkin · Summoned by Slaughter": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | World Eaters · Khorne Daemonkin · Summoned by Slaughter": {
+   "all": [
+    "Bloodletters"
+   ]
+  },
+  "strat-timing | World Eaters · Khorne Daemonkin · Daemonic Fury": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | World Eaters · Khorne Daemonkin · Daemonic Fury": {
+   "all": [
+    "Faction: Blood Legions"
+   ]
+  },
+  "strat-timing | World Eaters · Khorne Daemonkin · A Worthy Skull": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | World Eaters · Khorne Daemonkin · A Worthy Skull": {
+   "any": [
+    "Faction: Blood Legions",
+    "Faction: World Eaters"
+   ]
+  },
+  "strat-timing | World Eaters · Khorne Daemonkin · Blessing of Burning Blood": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "opp"
+   }
+  },
+  "strat-needs | World Eaters · Khorne Daemonkin · Blessing of Burning Blood": {
+   "all": [
+    "Faction: Blood Legions"
+   ]
+  },
+  "strat-timing | World Eaters · Khorne Daemonkin · Daemontide": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | World Eaters · Khorne Daemonkin · Daemontide": {
+   "all": [
+    "Faction: World Eaters"
+   ]
+  },
+  "strat-timing | World Eaters · Khorne Daemonkin · Murder-call": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "opp"
+  },
+  "strat-needs | World Eaters · Khorne Daemonkin · Murder-call": {
+   "all": [
+    "Faction: Blood Legions"
+   ]
+  },
+  "strat-timing | World Eaters · Butchers of Khorne · Focused Ferocity": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | World Eaters · Butchers of Khorne · Focused Ferocity": {
+   "all": [
+    "Terminator Squad"
+   ]
+  },
+  "strat-timing | World Eaters · Butchers of Khorne · A Trophy for the Throne": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | World Eaters · Butchers of Khorne · A Trophy for the Throne": {
+   "all": [
+    "Terminator Squad"
+   ]
+  },
+  "strat-timing | World Eaters · Butchers of Khorne · Wrath Beyond Reason": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "opp"
+  },
+  "strat-needs | World Eaters · Butchers of Khorne · Wrath Beyond Reason": {
+   "all": [
+    "Terminator Squad"
+   ]
+  },
+  "strat-timing | World Eaters · Vessels of Wrath · Scorn the Witch": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | World Eaters · Vessels of Wrath · Scorn the Witch": {
+   "all": [
+    "Faction: World Eaters",
+    "Character"
+   ],
+   "none": [
+    "Epic Hero"
+   ]
+  },
+  "strat-timing | World Eaters · Vessels of Wrath · Aspire to Infamy": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | World Eaters · Vessels of Wrath · Aspire to Infamy": {
+   "all": [
+    "Faction: World Eaters",
+    "Character"
+   ],
+   "none": [
+    "Epic Hero"
+   ]
+  },
+  "strat-timing | World Eaters · Vessels of Wrath · Punish the Craven": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
+  },
+  "strat-needs | World Eaters · Vessels of Wrath · Punish the Craven": {
+   "all": [
+    "Faction: World Eaters",
+    "Character"
+   ]
+  },
+  "strat-timing | Thousand Sons · Grand Coven · Psychic Dominion": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | Thousand Sons · Grand Coven · Psychic Dominion": {
+   "all": [
+    "Faction: Thousand Sons"
+   ]
+  },
+  "strat-timing | Thousand Sons · Grand Coven · Destined by Fate": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | Thousand Sons · Grand Coven · Destined by Fate": {
+   "all": [
+    "Psyker",
+    "Faction: Thousand Sons"
+   ]
+  },
+  "strat-timing | Thousand Sons · Grand Coven · Egotistical Power": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Thousand Sons · Grand Coven · Egotistical Power": {
+   "all": [
+    "Faction: Thousand Sons",
+    "Psyker"
+   ]
+  },
+  "strat-timing | Thousand Sons · Grand Coven · Desecration of Worlds": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Thousand Sons · Grand Coven · Desecration of Worlds": {
+   "all": [
+    "Faction: Thousand Sons",
+    "Psyker"
+   ]
+  },
+  "strat-timing | Thousand Sons · Grand Coven · Arcane Focus": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Thousand Sons · Grand Coven · Arcane Focus": {
+   "all": [
+    "Faction: Thousand Sons"
+   ]
+  },
+  "strat-timing | Thousand Sons · Grand Coven · Devastating Sorcery": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Thousand Sons · Grand Coven · Devastating Sorcery": {
+   "all": [
+    "Faction: Thousand Sons",
+    "Psyker"
+   ]
+  },
+  "strat-timing | Thousand Sons · Ritual of Regeneration · Relentless Rebirth": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | Thousand Sons · Ritual of Regeneration · Relentless Rebirth": {
+   "all": [
+    "Faction: Thousand Sons",
+    "Psyker"
+   ],
+   "any": [
+    "Infantry",
+    "Mounted"
+   ]
+  },
+  "strat-timing | Thousand Sons · Ritual of Regeneration · Mutagenic Magicks": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | Thousand Sons · Ritual of Regeneration · Mutagenic Magicks": {
+   "all": [
+    "Faction: Thousand Sons",
+    "Psyker"
+   ]
+  },
+  "strat-timing | Thousand Sons · Ritual of Regeneration · Multitudinous Limbs": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Thousand Sons · Ritual of Regeneration · Multitudinous Limbs": {
+   "all": [
+    "Faction: Thousand Sons",
+    "Psyker"
+   ],
+   "any": [
+    "Infantry",
+    "Mounted"
+   ]
+  },
+  "strat-timing | Thousand Sons · Warpmeld Pact · Gift of Change": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | Thousand Sons · Warpmeld Pact · Gift of Change": {
+   "all": [
+    "Faction: Thousand Sons",
+    "Character"
+   ],
+   "none": [
+    "Monster"
+   ]
+  },
+  "strat-timing | Thousand Sons · Warpmeld Pact · Warped Vicissitude": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "opp"
+   }
+  },
+  "strat-needs | Thousand Sons · Warpmeld Pact · Warped Vicissitude": {
+   "all": [
+    "Tzaangors"
+   ]
+  },
+  "strat-timing | Thousand Sons · Warpmeld Pact · Deranged Ferocity": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | Thousand Sons · Warpmeld Pact · Deranged Ferocity": {
+   "all": [
+    "Tzeentch",
+    "Mutant"
+   ]
+  },
+  "strat-timing | Thousand Sons · Warpmeld Pact · Blessed Transmutations": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Thousand Sons · Warpmeld Pact · Blessed Transmutations": {
+   "all": [
+    "Faction: Thousand Sons"
+   ],
+   "any": [
+    "Psyker",
+    "Tzaangors"
+   ]
+  },
+  "strat-timing | Thousand Sons · Warpmeld Pact · Touched by Tzeentch": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Thousand Sons · Warpmeld Pact · Touched by Tzeentch": {
+   "all": [
+    "Tzeentch",
+    "Mutant"
+   ]
+  },
+  "strat-timing | Thousand Sons · Warpmeld Pact · Twisted Mirage": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Thousand Sons · Warpmeld Pact · Twisted Mirage": {
+   "all": [
+    "Tzeentch",
+    "Mutant"
+   ]
+  },
+  "strat-timing | Tyranids · Crusher Stampede · Corrosive Viscera": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "opp"
+   }
+  },
+  "strat-needs | Tyranids · Crusher Stampede · Corrosive Viscera": {
+   "all": [
+    "Faction: Tyranids",
+    "Monster"
+   ],
+   "none": [
+    "Fly"
+   ]
+  },
+  "strat-timing | Tyranids · Crusher Stampede · Rampaging Monstrosities": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | Tyranids · Crusher Stampede · Rampaging Monstrosities": {
+   "all": [
+    "Faction: Tyranids",
+    "Monster"
+   ]
+  },
+  "strat-timing | Tyranids · Crusher Stampede · Savage Roar": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | Tyranids · Crusher Stampede · Savage Roar": {
+   "all": [
+    "Faction: Tyranids",
+    "Monster"
+   ]
+  },
+  "strat-timing | Tyranids · Crusher Stampede · Untrammelled Ferocity": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Tyranids · Crusher Stampede · Untrammelled Ferocity": {
+   "all": [
+    "Faction: Tyranids",
+    "Monster"
+   ]
+  },
+  "strat-timing | Tyranids · Crusher Stampede · Swarm-guided Salvoes": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Tyranids · Crusher Stampede · Swarm-guided Salvoes": {
+   "all": [
+    "Faction: Tyranids",
+    "Monster"
+   ]
+  },
+  "strat-timing | Tyranids · Crusher Stampede · Massive Impact": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Tyranids · Crusher Stampede · Massive Impact": {
+   "all": [
+    "Faction: Tyranids",
+    "Monster"
+   ]
+  },
+  "strat-timing | Tyranids · Talons of the Norn Queen · Catalytic Biofortification": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | Tyranids · Talons of the Norn Queen · Catalytic Biofortification": {
+   "all": [
+    "Norn Assimilator"
+   ]
+  },
+  "strat-timing | Tyranids · Talons of the Norn Queen · Lesser Prey": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | Tyranids · Talons of the Norn Queen · Lesser Prey": {
+   "any": [
+    "Norn Assimilator",
+    "Norn Emissary"
+   ]
+  },
+  "strat-timing | Tyranids · Talons of the Norn Queen · Tanglestrike Rounds": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Tyranids · Talons of the Norn Queen · Tanglestrike Rounds": {
+   "all": [
+    "Norn Assimilator"
+   ]
+  },
+  "strat-timing | Adeptus Mechanicus · Cohort Cybernetica · Motive Imperative": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Adeptus Mechanicus · Cohort Cybernetica · Motive Imperative": {
+   "all": [
+    "Faction: Adeptus Mechanicus",
+    "Vehicle"
+   ]
+  },
+  "strat-timing | Adeptus Mechanicus · Cohort Cybernetica · Auto-divinatory Targeting": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Adeptus Mechanicus · Cohort Cybernetica · Auto-divinatory Targeting": {
+   "all": [
+    "Faction: Adeptus Mechanicus"
+   ],
+   "any": [
+    "Legio Cybernetica",
+    "Vehicle"
+   ]
+  },
+  "strat-timing | Adeptus Mechanicus · Cohort Cybernetica · Machine Spirit Resurgent": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Adeptus Mechanicus · Cohort Cybernetica · Machine Spirit Resurgent": {
+   "all": [
+    "Faction: Adeptus Mechanicus"
+   ],
+   "any": [
+    "Legio Cybernetica",
+    "Vehicle"
+   ]
+  },
+  "strat-timing | Adeptus Mechanicus · Cohort Cybernetica · Machine Superiority": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Adeptus Mechanicus · Cohort Cybernetica · Machine Superiority": {
+   "all": [
+    "Faction: Adeptus Mechanicus"
+   ],
+   "any": [
+    "Legio Cybernetica",
+    "Vehicle"
+   ]
+  },
+  "strat-timing | Adeptus Mechanicus · Cohort Cybernetica · Transcendent Cogitation": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Adeptus Mechanicus · Cohort Cybernetica · Transcendent Cogitation": {
+   "all": [
+    "Faction: Adeptus Mechanicus"
+   ],
+   "any": [
+    "Legio Cybernetica",
+    "Vehicle"
+   ]
+  },
+  "strat-timing | Adeptus Mechanicus · Cohort Cybernetica · Benevolence of the Omnissiah": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Adeptus Mechanicus · Cohort Cybernetica · Benevolence of the Omnissiah": {
+   "all": [
+    "Faction: Adeptus Mechanicus"
+   ],
+   "any": [
+    "Legio Cybernetica",
+    "Vehicle"
+   ]
+  },
+  "strat-timing | Adeptus Mechanicus · Eradication Cohort · Servo-driven Charge": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | Adeptus Mechanicus · Eradication Cohort · Servo-driven Charge": {
+   "all": [
+    "Faction: Adeptus Mechanicus"
+   ]
+  },
+  "strat-timing | Adeptus Mechanicus · Eradication Cohort · Unrelenting Aggression": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Adeptus Mechanicus · Eradication Cohort · Unrelenting Aggression": {
+   "all": [
+    "Faction: Adeptus Mechanicus"
+   ]
+  },
+  "strat-timing | Adeptus Mechanicus · Eradication Cohort · Unshackled Wrath": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Adeptus Mechanicus · Eradication Cohort · Unshackled Wrath": {
+   "all": [
+    "Skitarii"
+   ]
+  },
+  "strat-timing | Adeptus Mechanicus · Eradication Cohort · Threat-cogitation Targeters": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Adeptus Mechanicus · Eradication Cohort · Threat-cogitation Targeters": {
+   "all": [
+    "Skitarii",
+    "Vehicle"
+   ]
+  },
+  "strat-timing | Adeptus Mechanicus · Eradication Cohort · Precision Onslaught": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Adeptus Mechanicus · Eradication Cohort · Precision Onslaught": {
+   "all": [
+    "Sicarian"
+   ]
+  },
+  "strat-timing | Adeptus Mechanicus · Eradication Cohort · Analytic Reprisals": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "opp"
+  },
+  "strat-needs | Adeptus Mechanicus · Eradication Cohort · Analytic Reprisals": {
+   "all": [
+    "Skitarii",
+    "Infantry"
+   ]
+  },
+  "strat-timing | Emperor’s Children · Coterie of the Conceited · Protection of the Dark Prince": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | Emperor’s Children · Coterie of the Conceited · Protection of the Dark Prince": {
+   "all": [
+    "Faction: Emperor's Children"
+   ]
+  },
+  "strat-timing | Emperor’s Children · Coterie of the Conceited · Unshakeable Opponents": {
+   "ph": [
+    "command"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | Emperor’s Children · Coterie of the Conceited · Unshakeable Opponents": {
+   "all": [
+    "Faction: Emperor's Children"
+   ]
+  },
+  "strat-timing | Emperor’s Children · Coterie of the Conceited · Embrace the Pain": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | Emperor’s Children · Coterie of the Conceited · Embrace the Pain": {
+   "all": [
+    "Faction: Emperor's Children",
+    "Infantry"
+   ]
+  },
+  "strat-timing | Emperor’s Children · Coterie of the Conceited · Martial Perfection": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | Emperor’s Children · Coterie of the Conceited · Martial Perfection": {
+   "all": [
+    "Faction: Emperor's Children"
+   ]
+  },
+  "strat-timing | Emperor’s Children · Coterie of the Conceited · Unbound Arrogance": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "strat-needs | Emperor’s Children · Coterie of the Conceited · Unbound Arrogance": {
+   "all": [
+    "Faction: Emperor's Children"
+   ]
+  },
+  "strat-timing | Emperor’s Children · Coterie of the Conceited · Armour of Abhorrence": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "opp"
+   }
+  },
+  "strat-needs | Emperor’s Children · Coterie of the Conceited · Armour of Abhorrence": {
+   "all": [
+    "Faction: Emperor's Children"
+   ]
+  },
+  "strat-timing | Chaos Knights · Infernal Lance · Profane Symbiosis": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | Chaos Knights · Infernal Lance · Profane Symbiosis": {
+   "all": [
+    "Faction: Chaos Knights"
+   ]
+  },
+  "strat-timing | Chaos Knights · Infernal Lance · Hellforged Construction": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | Chaos Knights · Infernal Lance · Hellforged Construction": {
+   "all": [
+    "Faction: Chaos Knights"
+   ]
+  },
+  "strat-timing | Chaos Knights · Infernal Lance · Corrupting Taint": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Chaos Knights · Infernal Lance · Corrupting Taint": {
+   "all": [
+    "Faction: Chaos Knights",
+    "Character"
+   ]
+  },
+  "strat-timing | Chaos Knights · Infernal Lance · Unleash Balefire": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Chaos Knights · Infernal Lance · Unleash Balefire": {
+   "all": [
+    "Faction: Chaos Knights"
+   ]
+  },
+  "strat-timing | Chaos Knights · Infernal Lance · Warp Vision": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Chaos Knights · Infernal Lance · Warp Vision": {
+   "all": [
+    "Faction: Chaos Knights"
+   ]
+  },
+  "strat-timing | Chaos Knights · Infernal Lance · Diabolic Bulwark": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "opp"
+  },
+  "strat-needs | Chaos Knights · Infernal Lance · Diabolic Bulwark": {
+   "all": [
+    "Faction: Chaos Knights"
+   ]
+  },
+  "strat-timing | Chaos Knights · Houndpack Lance · Vox-howl": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | Chaos Knights · Houndpack Lance · Vox-howl": {
+   "all": [
+    "War Dog",
+    "Character"
+   ]
+  },
+  "strat-timing | Chaos Knights · Houndpack Lance · Hungry for Combat": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | Chaos Knights · Houndpack Lance · Hungry for Combat": {
+   "all": [
+    "War Dog"
+   ]
+  },
+  "strat-timing | Chaos Knights · Houndpack Lance · Cunning Hunter": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Chaos Knights · Houndpack Lance · Cunning Hunter": {
+   "all": [
+    "War Dog"
+   ]
+  },
+  "strat-timing | Chaos Knights · Houndpack Lance · Animalistic Rage": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "opp"
+   }
+  },
+  "strat-needs | Chaos Knights · Houndpack Lance · Animalistic Rage": {
+   "all": [
+    "War Dog"
+   ]
+  },
+  "strat-timing | Chaos Knights · Houndpack Lance · Harrying Hounds": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
+  },
+  "strat-needs | Chaos Knights · Houndpack Lance · Harrying Hounds": {
+   "all": [
+    "War Dog"
+   ]
+  },
+  "strat-timing | Chaos Knights · Houndpack Lance · Encircling Pack": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "opp"
+  },
+  "strat-needs | Chaos Knights · Houndpack Lance · Encircling Pack": {
+   "all": [
+    "War Dog"
+   ]
+  },
+  "strat-timing | Chaos Knights · Hunting Warpack · Insensate Bloodthirst": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "strat-needs | Chaos Knights · Hunting Warpack · Insensate Bloodthirst": {
+   "all": [
+    "War Dog"
+   ]
+  },
+  "strat-timing | Chaos Knights · Hunting Warpack · Leash of the Masters": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "strat-needs | Chaos Knights · Hunting Warpack · Leash of the Masters": {
+   "all": [
+    "War Dog"
+   ]
+  },
+  "strat-timing | Chaos Knights · Hunting Warpack · Stalking Focus": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "opp"
+  },
+  "strat-needs | Chaos Knights · Hunting Warpack · Stalking Focus": {
+   "all": [
+    "War Dog"
+   ]
+  },
+  "rule-timing | Orks army rule · War Cry": {
+   "ph": [
+    "command"
+   ],
+   "turn": "either"
+  },
+  "rule-timing | Orks army rule · Da Boss": {
+   "at": "Start of the battle round",
+   "ph": [
+    "command"
+   ],
+   "turn": "either"
+  },
+  "rule-timing | Orks · Bully Boyz rule · Displays of Savagery": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "rule-needs | Orks · Bully Boyz rule · Displays of Savagery": {
+   "any": [
+    "Meganobz",
+    "Nobz"
+   ]
+  },
+  "rule-timing | Orks · Dread Mob rule · Try Dat Button!": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "rule-needs | Orks · Dread Mob rule · Try Dat Button!": {
+   "all": [
+    "Faction: Orks",
+    "Walker"
+   ],
+   "none": [
+    "Titanic"
+   ]
+  },
+  "rule-needs | Orks · Runt Swarm rule · Sneaky Little Gitz": {
+   "all": [
+    "Gretchin"
+   ]
+  },
+  "rule-needs | Orks · Shoota Boyz rule · Dakka! Dakka! Dakka!": {
+   "all": [
+    "Faction: Orks",
+    "Infantry"
+   ]
+  },
+  "rule-timing | Orks · War Horde rule · Get Stuck In": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "rule-needs | Orks · War Horde rule · Get Stuck In": {
+   "all": [
+    "Faction: Orks"
+   ]
+  },
+  "rule-needs | Orks · Wreckas rule · Wreckin’ and Lootin’": {
+   "any": [
+    "Breaka Boyz",
+    "Flash Gitz",
+    "Tankbustas"
+   ]
+  },
+  "rule-timing | Imperial Knights army rule · Bondsman": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "rule-needs | Imperial Knights army rule · Bondsman": {
+   "all": [
+    "Armiger"
+   ]
+  },
+  "rule-timing | Imperial Knights army rule · Super-heavy Walker": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "rule-needs | Imperial Knights · Freeblade Company rule · Knights of Legend": {
+   "all": [
+    "Faction: Imperial Knights"
+   ]
+  },
+  "rule-timing | World Eaters · Berzerker Warband rule · Relentless Rage": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "rule-needs | World Eaters · Berzerker Warband rule · Relentless Rage": {
+   "all": [
+    "Faction: World Eaters"
+   ]
+  },
+  "rule-needs | World Eaters · Khorne Daemonkin rule · Blood Tithe": {
+   "any": [
+    "Faction: Blood Legions",
+    "Faction: World Eaters"
+   ]
+  },
+  "rule-timing | World Eaters · Butchers of Khorne rule · Adamantine Avalanche": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "rule-needs | World Eaters · Butchers of Khorne rule · Adamantine Avalanche": {
+   "all": [
+    "Terminator Squad"
+   ]
+  },
+  "rule-timing | World Eaters · Vessels of Wrath rule · Wrath of Khorne": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "rule-needs | World Eaters · Vessels of Wrath rule · Wrath of Khorne": {
+   "all": [
+    "Faction: World Eaters",
+    "Character"
+   ],
+   "none": [
+    "Epic Hero"
+   ]
+  },
+  "rule-timing | Thousand Sons · Ritual of Regeneration rule · Sorcerous Invigoration": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "rule-needs | Thousand Sons · Ritual of Regeneration rule · Sorcerous Invigoration": {
+   "all": [
+    "Faction: Thousand Sons",
+    "Psyker"
+   ],
+   "none": [
+    "Monster"
+   ]
+  },
+  "rule-tag | Thousand Sons · Ritual of Regeneration rule · Sorcerous Invigoration": "Once per turn, per unit",
+  "rule-timing | Thousand Sons · Warpmeld Pact rule · Warpmeld Sacrifice": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "rule-needs | Thousand Sons · Warpmeld Pact rule · Warpmeld Sacrifice": {
+   "all": [
+    "Tzeentch",
+    "Mutant"
+   ],
+   "any": [
+    "Infantry",
+    "Mounted"
+   ]
+  },
+  "rule-timing | Tyranids army rule · Shadow in the Warp": {
+   "ph": [
+    "command"
+   ],
+   "turn": "either"
+  },
+  "rule-tag | Tyranids army rule · Shadow in the Warp": "Once per battle",
+  "rule-needs | Tyranids · Crusher Stampede rule · Enraged Behemoths": {
+   "all": [
+    "Faction: Tyranids",
+    "Monster"
+   ]
+  },
+  "rule-needs | Tyranids · Talons of the Norn Queen rule · Higher Imperatives": {
+   "any": [
+    "Norn Emissary",
+    "Norn Assimilator"
+   ]
+  },
+  "rule-timing | Adeptus Mechanicus army rule · Doctrina Imperatives": {
+   "at": "Start of the battle round",
+   "ph": [
+    "command"
+   ],
+   "turn": "either"
+  },
+  "rule-needs | Adeptus Mechanicus · Cohort Cybernetica rule · Cyber-psalm Programming": {
+   "all": [
+    "Legio Cybernetica"
+   ]
+  },
+  "rule-needs | Adeptus Mechanicus · Eradication Cohort rule · Murderous Imperative": {
+   "all": [
+    "Skitarii"
+   ]
+  },
+  "rule-needs | Emperor’s Children · Coterie of the Conceited rule · Pledges to the Dark Prince": {
+   "all": [
+    "Faction: Emperor's Children"
+   ]
+  },
+  "rule-timing | Chaos Knights army rule · Super-heavy Walker": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "rule-needs | Chaos Knights army rule · Super-heavy Walker": {
+   "rule": [
+    "Super-heavy Walker"
+   ]
+  },
+  "rule-timing | Chaos Knights · Infernal Lance rule · Malefic Surge": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "rule-needs | Chaos Knights · Infernal Lance rule · Malefic Surge": {
+   "all": [
+    "Faction: Chaos Knights"
+   ]
+  },
+  "rule-needs | Chaos Knights · Houndpack Lance rule · Marked Prey": {
+   "all": [
+    "War Dog"
+   ]
+  },
+  "rule-timing | Chaos Knights · Hunting Warpack rule · Scenting Fear": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "rule-needs | Chaos Knights · Hunting Warpack rule · Scenting Fear": {
+   "all": [
+    "War Dog"
+   ]
+  },
+  "rule-tag | Chaos Knights · Hunting Warpack rule · Scenting Fear": "Once per battle round, per army",
+  "ability-timing | shooty · Wazdakka Gutsmek · Throttlerokkit Shokka Engine · Turbo Engine": {
+   "ph": [
+    "movement",
+    "charge"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | shooty · Wazdakka Gutsmek · Throttlerokkit Shokka Engine · Pulse Jet": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | shooty · Wazdakka Gutsmek · Throttlerokkit Shokka Engine · Shokk Attack Engine": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | shooty · Big Mek Dakkarig [dakkarig-herder] · Even More Dakka": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "ability-timing | shooty · Big Mek Dakkarig [dakkarig-herder] · Blitz Dem Gitz!": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | shooty · Big Mek Dakkarig [dakkarig-herder] · Dreadherder": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "your"
+  },
+  "ability-tag | shooty · Big Mek Dakkarig [dakkarig-herder] · Dreadherder": "Enhancement",
+  "ability-timing | shooty · Big Mek Dakkarig [dakkarig-boosta] · Even More Dakka": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "ability-timing | shooty · Big Mek Dakkarig [dakkarig-boosta] · Blitz Dem Gitz!": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "ability-tag | shooty · Big Mek Dakkarig [dakkarig-boosta] · Cybork Boosta": "Enhancement",
+  "ability-timing | shooty · Big Mek in Mega Armour · Fix Dat Armour Up": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "ability-tag | shooty · Big Mek in Mega Armour · Supa-glowy Fing": "Enhancement",
+  "ability-timing | shooty · Warboss · Might is Right": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | shooty · Warboss · Boss’ Ammo Runt": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | shooty · Warboss · Intimidating Motivation": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | shooty · Mek [mek-tankbustas] · Mek · Clever Know-wotz": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "your",
+   "turns": {
+    "fight": "either"
+   }
+  },
+  "ability-timing | shooty · Mek [mek-tankbustas] · Tankbustas · Rokkit Barrage": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | shooty · Mek [mek-tankbustas] · Tankbustas · Bomb Squig": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | shooty · Mek [mek-flashgitz] · Mek · Clever Know-wotz": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "your",
+   "turns": {
+    "fight": "either"
+   }
+  },
+  "ability-timing | shooty · Mek [mek-flashgitz] · Flash Gitz · Finderz Keeperz": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "ability-tag | shooty · Mek [mek-flashgitz] · Flash Gitz · Supa-snazz Dakka": "Upgrade",
+  "ability-timing | shooty · Gretchin · Downtrodden": {},
+  "ability-timing | shooty · Gretchin · Thievin’ Scavengers": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | shooty · Deffkoptas · Aerial Manoover": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "opp"
+  },
+  "ability-timing | shooty · Deffkoptas · Deff from Above": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | shooty · Killa Kans · Spiteful Power Trip": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "ability-timing | melee · Ghazghkull Thraka · Supreme Commander": {},
+  "ability-timing | melee · Ghazghkull Thraka · Makari, Hoist Dat Banner!": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | melee · Ghazghkull Thraka · Prophet of Da Great Waaagh!": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | melee · Mozrog Skragbad · One Last Kill": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | melee · Mozrog Skragbad · Da Bigger Dey Iz…": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | melee · Nazdreg · Nazdreg · Supreme Kunnin’": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
+  },
+  "ability-timing | melee · Nazdreg · Nazdreg · Intimidating Motivation": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | melee · Nazdreg · Meganobz · Krumpin’ Time": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | melee · Beastboss on Squigosaur · Thundering Stampede": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | melee · Beastboss on Squigosaur · Keep Huntin’!": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | melee · Beastboss on Squigosaur · Headwoppa’s Killchoppa": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-tag | melee · Beastboss on Squigosaur · Headwoppa’s Killchoppa": "Enhancement",
+  "ability-timing | melee · Big Mek · Big Mek · Shokk-boosta": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "ability-tag | melee · Big Mek · Big Mek · Kunnin’ But Brutal": "Enhancement",
+  "ability-timing | melee · Big Mek · Painboy · Crude Surgery": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | melee · Big Mek · Painboy · Catch Dat Red Bit": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | melee · Big Mek · Nobz · Ammo Runts": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | melee · Big Mek · Nobz · Get Out da Way!": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | melee · Big Mek in Mega Armour · Big Mek in Mega Armour · Fix Dat Armour Up": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "ability-tag | melee · Big Mek in Mega Armour · Big Mek in Mega Armour · Follow Me Ladz": "Enhancement",
+  "ability-timing | melee · Big Mek in Mega Armour · Meganobz · Krumpin’ Time": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | melee · Gretchin · Downtrodden": {},
+  "ability-timing | melee · Gretchin · Thievin’ Scavengers": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | melee · Deffkoptas · Aerial Manoover": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "opp"
+  },
+  "ability-timing | melee · Deffkoptas · Deff from Above": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | melee · Squighog Boyz · Brutal Impact": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | melee · Squighog Boyz · Bomb Squig": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | princes · Khârn the Betrayer · Khârn the Betrayer · Legendary Killer": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | princes · Khârn the Betrayer · Khârn the Betrayer · The Betrayer": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | princes · Khârn the Betrayer · Khorne Berzerkers · Blood Surge": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "opp"
+  },
+  "ability-timing | princes · Khârn the Betrayer · Khorne Berzerkers · Murderous Charge": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | princes · Daemon Prince of Khorne [daemon-prince-of-khorne-helm-of-brazen-ire] · Direct the Slaughter": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-tag | princes · Daemon Prince of Khorne [daemon-prince-of-khorne-helm-of-brazen-ire] · Direct the Slaughter": "Once per battle round",
+  "ability-tag | princes · Daemon Prince of Khorne [daemon-prince-of-khorne-helm-of-brazen-ire] · Helm of Brazen Ire": "Enhancement",
+  "ability-timing | princes · Daemon Prince of Khorne [daemon-prince-of-khorne-berzerker-glaive] · Direct the Slaughter": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-tag | princes · Daemon Prince of Khorne [daemon-prince-of-khorne-berzerker-glaive] · Direct the Slaughter": "Once per battle round",
+  "ability-tag | princes · Daemon Prince of Khorne [daemon-prince-of-khorne-berzerker-glaive] · Berzerker Glaive": "Enhancement",
+  "ability-timing | princes · Lord on Juggernaut · Lord on Juggernaut · Aggressive Advance": {
+   "ph": [
+    "movement",
+    "charge"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "your"
+   }
+  },
+  "ability-timing | princes · Lord on Juggernaut · Lord on Juggernaut · Crush All Who Stand Before Us": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | princes · Lord on Juggernaut · Lord on Juggernaut · Archslaughterer": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "ability-tag | princes · Lord on Juggernaut · Lord on Juggernaut · Archslaughterer": "Enhancement, Once per battle, per army",
+  "ability-timing | princes · Lord on Juggernaut · Khorne Berzerkers · Blood Surge": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "opp"
+  },
+  "ability-timing | princes · Lord on Juggernaut · Khorne Berzerkers · Murderous Charge": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | princes · Slaughterbound · Slaughterbound · Rage Eternal": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | princes · Slaughterbound · Slaughterbound · Possessed Lord": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-tag | princes · Slaughterbound · Slaughterbound · Possessed Lord": "Once per battle",
+  "ability-timing | princes · Slaughterbound · Slaughterbound · Lord of the Eightbound": {},
+  "ability-timing | princes · Slaughterbound · Slaughterbound · Battle-lust": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "either"
+  },
+  "ability-tag | princes · Slaughterbound · Slaughterbound · Battle-lust": "Enhancement",
+  "ability-timing | princes · Slaughterbound · Exalted Eightbound · Rend and Tear": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | princes · Chaos Rhino · Meet Any Challenge": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
+  },
+  "ability-timing | princes · Chaos Rhino · Transport": {},
+  "ability-tag | princes · Chaos Rhino · Transport": "Capacity",
+  "ability-timing | princes · Eightbound · Beacons of Rage": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | princes · Jakhals · Objective Ravaged": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | standard · Angron · Reborn in Blood": {
+   "at": "Start of the battle round",
+   "ph": [
+    "command",
+    "movement"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "your"
+   }
+  },
+  "ability-timing | standard · Angron · Wrathful Presence": {
+   "at": "Start of the battle round",
+   "ph": [
+    "command"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | standard · Angron · Wrathful Presence: pick one · Driven by Ultimate Rage": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | standard · Angron · Wrathful Presence: pick one · Overwhelming Wrath": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
+  },
+  "ability-timing | standard · Khârn the Betrayer · Khârn the Betrayer · Legendary Killer": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | standard · Khârn the Betrayer · Khârn the Betrayer · The Betrayer": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | standard · Khârn the Betrayer · Khorne Berzerkers · Blood Surge": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "opp"
+  },
+  "ability-timing | standard · Khârn the Betrayer · Khorne Berzerkers · Murderous Charge": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | standard · Lord on Juggernaut · Aggressive Advance": {
+   "ph": [
+    "movement",
+    "charge"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "your"
+   }
+  },
+  "ability-timing | standard · Lord on Juggernaut · Crush All Who Stand Before Us": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | standard · Slaughterbound [slaughterbound] · Rage Eternal": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | standard · Slaughterbound [slaughterbound] · Possessed Lord": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-tag | standard · Slaughterbound [slaughterbound] · Possessed Lord": "Once per battle",
+  "ability-timing | standard · Slaughterbound [slaughterbound] · Lord of the Eightbound": {},
+  "ability-timing | standard · Slaughterbound [slaughterbound-exalted-eightbound] · Slaughterbound · Rage Eternal": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | standard · Slaughterbound [slaughterbound-exalted-eightbound] · Slaughterbound · Possessed Lord": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-tag | standard · Slaughterbound [slaughterbound-exalted-eightbound] · Slaughterbound · Possessed Lord": "Once per battle",
+  "ability-timing | standard · Slaughterbound [slaughterbound-exalted-eightbound] · Slaughterbound · Lord of the Eightbound": {},
+  "ability-tag | standard · Slaughterbound [slaughterbound-exalted-eightbound] · Slaughterbound · Berzerker Glaive": "Enhancement",
+  "ability-timing | standard · Slaughterbound [slaughterbound-exalted-eightbound] · Exalted Eightbound · Rend and Tear": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | standard · Chaos Rhino · Meet Any Challenge": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
+  },
+  "ability-timing | standard · Chaos Rhino · Transport": {},
+  "ability-tag | standard · Chaos Rhino · Transport": "Capacity",
+  "ability-timing | standard · Eightbound · Beacons of Rage": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | standard · Exalted Eightbound · Rend and Tear": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | standard · Goremongers · Loping Speed": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
+  },
+  "ability-timing | standard · Jakhals · Objective Ravaged": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | pubstomper · Magnus the Red · Unearthly Power": {
+   "at": "Start of the battle round",
+   "ph": [
+    "command"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | pubstomper · Magnus the Red · Lord of the Planet of the Sorcerers": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | pubstomper · Magnus the Red · Crimson King · Treason of Tzeentch": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "opp"
+  },
+  "ability-timing | pubstomper · Magnus the Red · Crimson King · Time Flux": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | pubstomper · Daemon Prince of Tzeentch with wings · Hunter of Souls": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "ability-tag | pubstomper · Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph": "Enhancement",
+  "ability-timing | pubstomper · Exalted Sorcerer · Exalted Sorcerer · Rebind Rubricae": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | pubstomper · Exalted Sorcerer · Exalted Sorcerer · Incandaeum": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "ability-tag | pubstomper · Exalted Sorcerer · Exalted Sorcerer · Incandaeum": "Enhancement, Once per battle",
+  "ability-timing | pubstomper · Exalted Sorcerer · Rubric Marines · Bringers of Change": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "opp",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "ability-timing | pubstomper · Sorcerer in Terminator Armour · Sorcerer in Terminator Armour · Marked by Fate": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | pubstomper · Sorcerer in Terminator Armour · Sorcerer in Terminator Armour · Umbralefic Crystal": {
+   "ph": [
+    "command",
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "ability-tag | pubstomper · Sorcerer in Terminator Armour · Sorcerer in Terminator Armour · Umbralefic Crystal": "Enhancement, Once per battle, per army",
+  "ability-timing | pubstomper · Tzaangors · Ambushing Hunters": {
+   "at": "End of your opponent’s turn",
+   "ph": [
+    "fight"
+   ],
+   "turn": "opp"
+  },
+  "ability-timing | pubstomper · Tzaangors · Brayhorn": {
+   "ph": [
+    "movement",
+    "charge"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "your"
+   }
+  },
+  "ability-timing | pubstomper · Tzaangor Enlightened with Fatecaster greatbows · Malign Trickery": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
+  },
+  "ability-timing | pubstomper · Defiler · Destroyer of Futures": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "opp"
+  },
+  "ability-timing | pubstomper · Sekhetar Robots · Prophetic Sentinels": {
+   "ph": [
+    "movement",
+    "charge"
+   ],
+   "turn": "opp"
+  },
+  "ability-tag | pubstomper · Sekhetar Robots · Prophetic Sentinels": "Once per turn",
+  "ability-timing | nidzillas · The Swarmlord · Hive Commander": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | nidzillas · The Swarmlord · Malign Presence": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-tag | nidzillas · The Swarmlord · Malign Presence": "Once per turn",
+  "ability-timing | nidzillas · Hive Tyrant · Will of the Hive Mind": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-tag | nidzillas · Hive Tyrant · Will of the Hive Mind": "Once per battle round",
+  "ability-timing | nidzillas · Hive Tyrant · Monstrous Nemesis": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-tag | nidzillas · Hive Tyrant · Monstrous Nemesis": "Enhancement",
+  "ability-timing | nidzillas · Norn Assimilator [norn-assimilator-synaptoprescience] · Harpoon Barbs": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
+  },
+  "ability-tag | nidzillas · Norn Assimilator [norn-assimilator-synaptoprescience] · Harpoon Barbs": "Once per turn",
+  "ability-timing | nidzillas · Norn Assimilator [norn-assimilator-synaptoprescience] · Singular Purpose": {
+   "at": "Start of the first battle round",
+   "ph": [
+    "command",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | nidzillas · Norn Assimilator [norn-assimilator-synaptoprescience] · Protean Purpose": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "ability-tag | nidzillas · Norn Assimilator [norn-assimilator-synaptoprescience] · Protean Purpose": "Once per battle, per unit",
+  "ability-tag | nidzillas · Norn Assimilator [norn-assimilator-synaptoprescience] · Synaptoprescience": "Enhancement",
+  "ability-timing | nidzillas · Norn Assimilator [norn-assimilator-synaptoprescience-2] · Harpoon Barbs": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
+  },
+  "ability-tag | nidzillas · Norn Assimilator [norn-assimilator-synaptoprescience-2] · Harpoon Barbs": "Once per turn",
+  "ability-timing | nidzillas · Norn Assimilator [norn-assimilator-synaptoprescience-2] · Singular Purpose": {
+   "at": "Start of the first battle round",
+   "ph": [
+    "command",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | nidzillas · Norn Assimilator [norn-assimilator-synaptoprescience-2] · Protean Purpose": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "ability-tag | nidzillas · Norn Assimilator [norn-assimilator-synaptoprescience-2] · Protean Purpose": "Once per battle, per unit",
+  "ability-tag | nidzillas · Norn Assimilator [norn-assimilator-synaptoprescience-2] · Synaptoprescience": "Enhancement",
+  "ability-timing | nidzillas · Norn Emissary [norn-emissary-destabilising-predation] · Singular Purpose": {
+   "at": "Start of the first battle round",
+   "ph": [
+    "command",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | nidzillas · Norn Emissary [norn-emissary-destabilising-predation] · Protean Purpose": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "ability-tag | nidzillas · Norn Emissary [norn-emissary-destabilising-predation] · Protean Purpose": "Once per battle, per unit",
+  "ability-tag | nidzillas · Norn Emissary [norn-emissary-destabilising-predation] · Destabilising Predation": "Enhancement",
+  "ability-timing | nidzillas · Norn Emissary [norn-emissary] · Singular Purpose": {
+   "at": "Start of the first battle round",
+   "ph": [
+    "command",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | nidzillas · Norn Emissary [norn-emissary] · Protean Purpose": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "ability-tag | nidzillas · Norn Emissary [norn-emissary] · Protean Purpose": "Once per battle, per unit",
+  "ability-tag | nidzillas · Tyrannofex · Resilient Organism": "Once per battle",
+  "ability-timing | 6-bigs · Knight Destrier · Ram Jets": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "ability-tag | 6-bigs · Knight Errant · Errant’s Duty": "Bondsman",
+  "ability-tag | 6-bigs · Knight Paladin · Paladin’s Duty": "Bondsman",
+  "ability-tag | 6-bigs · Knight Warden · Warden’s Duty": "Bondsman",
+  "ability-timing | 4-megas-and-a-destrier · Canis Rex · Chainbreaker": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-tag | 4-megas-and-a-destrier · Canis Rex · Chainbreaker": "Once per battle",
+  "ability-timing | 4-megas-and-a-destrier · Canis Rex · Legendary Freeblade": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-tag | 4-megas-and-a-destrier · Canis Rex · Legendary Freeblade": "Once per turn",
+  "ability-tag | 4-megas-and-a-destrier · Cerastus Knight Atrapos · Bringer of Justice": "Enhancement",
+  "ability-tag | 4-megas-and-a-destrier · Cerastus Knight Atrapos · Atrapos’ Duty": "Bondsman",
+  "ability-tag | 4-megas-and-a-destrier · Cerastus Knight Lancer · Lancer’s Duty": "Bondsman",
+  "ability-timing | 4-megas-and-a-destrier · Knight Crusader · Punishing Salvoes": {
+   "ph": [
+    "movement",
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "ability-tag | 4-megas-and-a-destrier · Knight Crusader · Hunter’s Eye": "Enhancement",
+  "ability-tag | 4-megas-and-a-destrier · Knight Crusader · Crusader’s Duty": "Bondsman",
+  "ability-timing | 4-megas-and-a-destrier · Knight Destrier · Ram Jets": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "ability-tag | 4-megas-and-a-destrier · Knight Destrier · Sanctuary": "Enhancement",
+  "ability-timing | ooga-booga · Ghazghkull Thraka · Supreme Commander": {},
+  "ability-timing | ooga-booga · Ghazghkull Thraka · Makari, Hoist Dat Banner!": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | ooga-booga · Ghazghkull Thraka · Prophet of Da Great Waaagh!": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | ooga-booga · Nazdreg · Nazdreg · Supreme Kunnin’": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
+  },
+  "ability-timing | ooga-booga · Nazdreg · Nazdreg · Intimidating Motivation": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | ooga-booga · Nazdreg · Meganobz · Krumpin’ Time": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | ooga-booga · Zodgrod Wortsnagga · Gretchin · Downtrodden": {},
+  "ability-timing | ooga-booga · Zodgrod Wortsnagga · Gretchin · Thievin’ Scavengers": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "ability-tag | ooga-booga · Zodgrod Wortsnagga · Gretchin · Extra Sneaky": "Upgrade",
+  "ability-timing | ooga-booga · Big Mek · Big Mek · Shokk-boosta": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | ooga-booga · Big Mek · Painboy · Crude Surgery": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | ooga-booga · Big Mek · Painboy · Catch Dat Red Bit": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | ooga-booga · Big Mek · Nobz · Ammo Runts": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | ooga-booga · Big Mek · Nobz · Get Out da Way!": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | ooga-booga · Big Mek in Mega Armour · Big Mek in Mega Armour · Fix Dat Armour Up": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "ability-tag | ooga-booga · Big Mek in Mega Armour · Big Mek in Mega Armour · Supa-glowy Fing": "Enhancement",
+  "ability-timing | ooga-booga · Big Mek in Mega Armour · Meganobz · Krumpin’ Time": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | ooga-booga · Gretchin · Downtrodden": {},
+  "ability-timing | ooga-booga · Gretchin · Thievin’ Scavengers": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | super-terminators · Angron · Reborn in Blood": {
+   "at": "Start of the battle round",
+   "ph": [
+    "command",
+    "movement"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "your"
+   }
+  },
+  "ability-timing | super-terminators · Angron · Wrathful Presence": {
+   "at": "Start of the battle round",
+   "ph": [
+    "command"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | super-terminators · Angron · Wrathful Presence: pick one · Driven by Ultimate Rage": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | super-terminators · Angron · Wrathful Presence: pick one · Overwhelming Wrath": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
+  },
+  "ability-tag | super-terminators · Chaos Terminators [chaos-terminators] · Gore-stained Veterans": "Upgrade",
+  "ability-tag | super-terminators · Chaos Terminators [chaos-terminators-2] · Gore-stained Veterans": "Upgrade",
+  "ability-timing | super-terminators · Eightbound · Beacons of Rage": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | super-terminators · Goremongers · Loping Speed": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
+  },
+  "ability-timing | super-terminators · Jakhals · Objective Ravaged": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | purge-goes-the-foe · Belisarius Cawl · Self-repair Mechanisms": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | purge-goes-the-foe · Belisarius Cawl · Supreme Commander": {},
+  "ability-timing | purge-goes-the-foe · Thulia Ghuld · Secutor of Olympus": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | purge-goes-the-foe · Thulia Ghuld · Supreme Commander": {},
+  "ability-timing | purge-goes-the-foe · Thulia Ghuld · Rod of the War Forge": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "ability-tag | purge-goes-the-foe · Tech-Priest Enginseer · Necromechanic": "Enhancement, Once per battle round",
+  "ability-tag | purge-goes-the-foe · Cybernetica Datasmith · Cybernetica Datasmith · Martial Signatum Amplificator": "Enhancement",
+  "ability-timing | purge-goes-the-foe · Skitarii Rangers · Objective Scouted": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | purge-goes-the-foe · Onager Dunecrawler · Scuttling Walker": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | defilers-and-friends · Lucius the Eternal · Lucius the Eternal · Duellist’s Hubris": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | defilers-and-friends · Lucius the Eternal · Flawless Blades · Daemonic Patrons": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | defilers-and-friends · Daemon Prince of Slaanesh with Wings · Daemonic Destruction": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | defilers-and-friends · Lord Exultant · Lord Exultant · Euphoric Strikes": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-tag | defilers-and-friends · Lord Exultant · Lord Exultant · Euphoric Strikes": "Once per battle",
+  "ability-timing | defilers-and-friends · Lord Exultant · Lord Exultant · Lord of the Host": {},
+  "ability-timing | defilers-and-friends · Lord Exultant · Infractors · Icon of Excess": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "ability-timing | defilers-and-friends · Tormentors · Objective Defiled": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | defilers-and-friends · Tormentors · Icon of Excess": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "ability-timing | defilers-and-friends · Chaos Rhino · Transport": {},
+  "ability-tag | defilers-and-friends · Chaos Rhino · Transport": "Capacity",
+  "ability-tag | infernal-lance · Chaos Cerastus Knight Atrapos · Knight Diabolus": "Enhancement",
+  "ability-tag | infernal-lance · Chaos Cerastus Knight Lancer · Blasphemous Engine": "Enhancement",
+  "ability-tag | infernal-lance · Knight Despoiler · Bestial Aspect": "Enhancement",
+  "ability-timing | infernal-lance · Knight Ruinator [knight-ruinator-fleshmetal-fusion] · Methodical Destruction": {
+   "at": "Start of the first battle round",
+   "ph": [
+    "command",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "ability-tag | infernal-lance · Knight Ruinator [knight-ruinator-fleshmetal-fusion] · Fleshmetal Fusion": "Enhancement",
+  "ability-timing | infernal-lance · Knight Ruinator [knight-ruinator] · Methodical Destruction": {
+   "at": "Start of the first battle round",
+   "ph": [
+    "command",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "ability-timing | infernal-lance · Nurglings · Mischief Makers": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-tag | woof-woof · War Dog Brigand [war-dog-brigand-final-howl-aura] · Final Howl (Aura)": "Enhancement, Aura",
+  "ability-tag | woof-woof · War Dog Executioner · Snarling Rivalry": "Upgrade",
+  "ability-tag | woof-woof · War Dog Karnivore [war-dog-karnivore-panoply-of-the-cursed-knights] · Panoply of the Cursed Knights": "Enhancement",
+  "ability-timing | big-demons-baby · Angron · Reborn in Blood": {
+   "at": "Start of the battle round",
+   "ph": [
+    "command",
+    "movement"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "your"
+   }
+  },
+  "ability-timing | big-demons-baby · Angron · Wrathful Presence": {
+   "at": "Start of the battle round",
+   "ph": [
+    "command"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | big-demons-baby · Angron · Wrathful Presence: pick one · Driven by Ultimate Rage": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | big-demons-baby · Angron · Wrathful Presence: pick one · Overwhelming Wrath": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
+  },
+  "ability-timing | big-demons-baby · Skarbrand · Rage Embodied": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | big-demons-baby · Bloodthirster · Daemon Lord of Khorne": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | big-demons-baby · Bloodthirster · Relentless Carnage": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | big-demons-baby · Daemon Prince of Khorne · Direct the Slaughter": {
+   "ph": [
+    "command",
+    "movement",
+    "shooting",
+    "charge",
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-tag | big-demons-baby · Daemon Prince of Khorne · Direct the Slaughter": "Once per battle round",
+  "ability-tag | big-demons-baby · Daemon Prince of Khorne · Blade of Endless Bloodshed": "Enhancement",
+  "ability-timing | big-demons-baby · Master of Executions · A Worthy Skull": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-tag | big-demons-baby · Master of Executions · Blood-forged Armour": "Enhancement",
+  "ability-timing | big-demons-baby · Lord on Juggernaut · Lord on Juggernaut · Aggressive Advance": {
+   "ph": [
+    "movement",
+    "charge"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "your"
+   }
+  },
+  "ability-timing | big-demons-baby · Lord on Juggernaut · Lord on Juggernaut · Crush All Who Stand Before Us": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-tag | big-demons-baby · Lord on Juggernaut · Lord on Juggernaut · Disciple of Khorne": "Enhancement",
+  "ability-timing | big-demons-baby · Lord on Juggernaut · Khorne Berzerkers · Blood Surge": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "opp"
+  },
+  "ability-timing | big-demons-baby · Lord on Juggernaut · Khorne Berzerkers · Murderous Charge": {
+   "ph": [
+    "fight"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | big-demons-baby · Goremongers · Loping Speed": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
+  },
+  "ability-timing | big-demons-baby · Jakhals · Objective Ravaged": {
+   "ph": [
+    "command"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | big-demons-baby · Flesh Hounds · Hunters from the Warp": {
+   "at": "End of your opponent’s turn",
+   "ph": [
+    "fight"
+   ],
+   "turn": "opp"
+  },
+  "ability-timing | mucho-mutantes · Magnus the Red · Unearthly Power": {
+   "at": "Start of the battle round",
+   "ph": [
+    "command"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | mucho-mutantes · Magnus the Red · Lord of the Planet of the Sorcerers": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | mucho-mutantes · Magnus the Red · Crimson King · Treason of Tzeentch": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "opp"
+  },
+  "ability-timing | mucho-mutantes · Magnus the Red · Crimson King · Time Flux": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | mucho-mutantes · Ahriman · Ahriman · Scryer of Fates": {},
+  "ability-timing | mucho-mutantes · Ahriman · Ahriman · Arch-Sorcerer of Tzeentch": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "ability-timing | mucho-mutantes · Ahriman · Tzaangor Enlightened with Fatecaster greatbows · Malign Trickery": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
+  },
+  "ability-timing | mucho-mutantes · Daemon Prince of Tzeentch with wings · Hunter of Souls": {
+   "ph": [
+    "movement",
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "movement": "opp",
+    "shooting": "your"
+   }
+  },
+  "ability-timing | mucho-mutantes · Exalted Sorcerer on Disc of Tzeentch · Tzaangor Enlightened with Fatecaster greatbows · Malign Trickery": {
+   "ph": [
+    "movement"
+   ],
+   "turn": "opp"
+  },
+  "ability-timing | mucho-mutantes · Tzaangor Shaman [tzaangor-shaman-tzaangor-enlightened-curse-of-life] · Tzaangor Shaman · Sacrificial Blessing": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "ability-timing | mucho-mutantes · Tzaangor Shaman [tzaangor-shaman-tzaangor-enlightened-curse-of-life] · Tzaangor Shaman · Curse of Life": {
+   "ph": [
+    "shooting"
+   ],
+   "turn": "your"
+  },
+  "ability-tag | mucho-mutantes · Tzaangor Shaman [tzaangor-shaman-tzaangor-enlightened-curse-of-life] · Tzaangor Shaman · Curse of Life": "Enhancement",
+  "ability-timing | mucho-mutantes · Tzaangor Shaman [tzaangor-shaman-tzaangor-enlightened-curse-of-life] · Tzaangor Enlightened · Prophesied Doom": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | mucho-mutantes · Tzaangor Shaman [tzaangor-shaman-tzaangor-enlightened-diamond-of-distortion] · Tzaangor Shaman · Sacrificial Blessing": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "ability-tag | mucho-mutantes · Tzaangor Shaman [tzaangor-shaman-tzaangor-enlightened-diamond-of-distortion] · Tzaangor Shaman · Diamond of Distortion": "Enhancement",
+  "ability-timing | mucho-mutantes · Tzaangor Shaman [tzaangor-shaman-tzaangor-enlightened-diamond-of-distortion] · Tzaangor Enlightened · Prophesied Doom": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | mucho-mutantes · Tzaangor Shaman [tzaangor-shaman-tzaangor-enlightened-flowing-flesh] · Tzaangor Shaman · Sacrificial Blessing": {
+   "ph": [
+    "shooting",
+    "fight"
+   ],
+   "turn": "either",
+   "turns": {
+    "shooting": "your"
+   }
+  },
+  "ability-tag | mucho-mutantes · Tzaangor Shaman [tzaangor-shaman-tzaangor-enlightened-flowing-flesh] · Tzaangor Shaman · Flowing Flesh": "Enhancement",
+  "ability-timing | mucho-mutantes · Tzaangor Shaman [tzaangor-shaman-tzaangor-enlightened-flowing-flesh] · Tzaangor Enlightened · Prophesied Doom": {
+   "ph": [
+    "charge"
+   ],
+   "turn": "either"
+  },
+  "ability-timing | mucho-mutantes · Tzaangors · Ambushing Hunters": {
+   "at": "End of your opponent’s turn",
+   "ph": [
+    "fight"
+   ],
+   "turn": "opp"
+  },
+  "ability-timing | mucho-mutantes · Sekhetar Robots · Prophetic Sentinels": {
+   "ph": [
+    "movement",
+    "charge"
+   ],
+   "turn": "opp"
+  },
+  "ability-tag | mucho-mutantes · Sekhetar Robots · Prophetic Sentinels": "Once per turn"
+ }
+}

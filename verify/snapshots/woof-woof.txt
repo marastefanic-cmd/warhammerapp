@@ -448,7 +448,7 @@ This model has a 5+ invulnerable save against ranged attacks.
 Final Howl (Aura)
 Enhancement
 
-Enhancement
+Enhancement · Aura
 
 WAR DOG model only. While a friendly War Dog model is within 6" of the bearer, each time that model makes an attack, re-roll a Wound roll of 1.
 
@@ -2156,7 +2156,7 @@ This model has a 5+ invulnerable save against ranged attacks.
 Final Howl (Aura)
 Enhancement
 
-Enhancement
+Enhancement · Aura
 
 WAR DOG model only. While a friendly War Dog model is within 6" of the bearer, each time that model makes an attack, re-roll a Wound roll of 1.
 
@@ -2763,7 +2763,7 @@ UNITWar Dog Executioner
 Ask about this ability
 
 ######## popup ability:woof-woof|Final Howl (Aura)|**WAR DOG** model only. While a friendly War Dog model is within 6" of the bearer, each time that model makes an attack, re-roll a **Wound roll** of 1. · WOOF WOOF Woof Woof
-ABILITY · ENHANCEMENT
+ABILITY · ENHANCEMENT · AURA
 
 Final Howl (Aura)
 

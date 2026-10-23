@@ -647,7 +647,7 @@ Unit 1
 Unit 2
 Fight
 
-Fight · Either turn
+Once per battle · Fight · Either turn
 
 Once per battle, at the start of the Fight phase, this model can use this ability. If it does so, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and improve the Armour Penetration characteristic of those weapons by 1.
 
@@ -688,8 +688,9 @@ Assault Vehicle
 
 Units can disembark from this Vehicle after it has Advanced. Units that do so count as having made a Normal move that phase, and cannot declare a charge in the same turn, but can otherwise act normally.
 
-TRANSPORT
-Chaos Rhino
+Transport
+
+Capacity
 
 This model has a transport capacity of 12 Emperor’s Children Infantrymodels (excluding Terminator and Flawless Blade models).
 
@@ -2549,7 +2550,7 @@ Unit 1
 Unit 2
 Fight
 
-Fight · Either turn
+Once per battle · Fight · Either turn
 
 Once per battle, at the start of the Fight phase, this model can use this ability. If it does so, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and improve the Armour Penetration characteristic of those weapons by 1.
 
@@ -2799,8 +2800,9 @@ Assault Vehicle
 
 Units can disembark from this Vehicle after it has Advanced. Units that do so count as having made a Normal move that phase, and cannot declare a charge in the same turn, but can otherwise act normally.
 
-Chaos Rhino
-- Transport
+Transport
+
+Capacity
 
 This model has a transport capacity of 12 Emperor’s Children Infantrymodels (excluding Terminator and Flawless Blade models).
 
@@ -3207,7 +3209,7 @@ UNITLucius the Eternal + Flawless Blades
 Ask about this ability
 
 ######## popup ability:defilers-and-friends|Euphoric Strikes|Once per battle, at the start of the Fight phase, this model can use this ability. If it does so, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and improve the Armour Penetration characteristic of those weapons by 1. · DEFILERS AND FRIENDS Defilers and friends
-ABILITY · FIGHT · EITHER TURN
+ABILITY · ONCE PER BATTLE · FIGHT · EITHER TURN
 
 Euphoric Strikes
 

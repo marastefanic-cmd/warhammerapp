@@ -504,7 +504,7 @@ Malign Presence
 Once per turn
 Any phase
 
-Aura · Any phase · Either turn
+Aura · Once per turn · Any phase · Either turn
 
 Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.
 
@@ -528,7 +528,7 @@ Will of the Hive Mind
 Once per battle round, per army
 Any phase
 
-Any phase · Either turn
+Once per battle round · Any phase · Either turn
 
 Once per battle round, one model from your army with this ability can use it when a friendly TYRANIDS unit within 12" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.
 
@@ -553,7 +553,7 @@ Harpoon Barbs
 Once per turn
 Their Movement
 
-Movement · Their turn
+Once per turn · Movement · Their turn
 
 Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.
 
@@ -562,9 +562,9 @@ Damaged: 1-5 Wounds Remaining
 While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
 
 Singular Purpose
-Any phase
+Start of the first battle round
 
-Start of the first battle round · Any phase · Either turn
+Start of the first battle round
 
 At the start of the first battle round, select one of the following:
 
@@ -596,7 +596,7 @@ Harpoon Barbs
 Once per turn
 Their Movement
 
-Movement · Their turn
+Once per turn · Movement · Their turn
 
 Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.
 
@@ -605,9 +605,9 @@ Damaged: 1-5 Wounds Remaining
 While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
 
 Singular Purpose
-Any phase
+Start of the first battle round
 
-Start of the first battle round · Any phase · Either turn
+Start of the first battle round
 
 At the start of the first battle round, select one of the following:
 
@@ -635,9 +635,9 @@ NORN ASSIMILATOR unit only. This unit has 4+ InSv.
 Norn Emissary
 Destabilising Predation
 Singular Purpose
-Any phase
+Start of the first battle round
 
-Start of the first battle round · Any phase · Either turn
+Start of the first battle round
 
 At the start of the first battle round, select one of the following:
 
@@ -671,9 +671,9 @@ This model has the Feel No Pain 4+ ability against Mortal Wounds.
 
 Norn Emissary
 Singular Purpose
-Any phase
+Start of the first battle round
 
-Start of the first battle round · Any phase · Either turn
+Start of the first battle round
 
 At the start of the first battle round, select one of the following:
 
@@ -2173,7 +2173,7 @@ Malign Presence
 Once per turn
 Any phase
 
-Aura · Any phase · Either turn
+Aura · Once per turn · Any phase · Either turn
 
 Once per turn, when your opponent targets a unit from their army within 12" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.
 
@@ -2275,7 +2275,7 @@ Will of the Hive Mind
 Once per battle round, per army
 Any phase
 
-Any phase · Either turn
+Once per battle round · Any phase · Either turn
 
 Once per battle round, one model from your army with this ability can use it when a friendly TYRANIDS unit within 12" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.
 
@@ -2468,14 +2468,14 @@ Harpoon Barbs
 Once per turn
 Their Movement
 
-Movement · Their turn
+Once per turn · Movement · Their turn
 
 Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.
 
 Singular Purpose
-Any phase
+Start of the first battle round
 
-Start of the first battle round · Any phase · Either turn
+Start of the first battle round
 
 At the start of the first battle round, select one of the following:
 
@@ -2606,14 +2606,14 @@ Harpoon Barbs
 Once per turn
 Their Movement
 
-Movement · Their turn
+Once per turn · Movement · Their turn
 
 Once per turn, when an enemy unit within Engagement Range of this unit is chosen to Fall Back, roll one D6; on a 2+, that unit suffers D6 mortal wounds.
 
 Singular Purpose
-Any phase
+Start of the first battle round
 
-Start of the first battle round · Any phase · Either turn
+Start of the first battle round
 
 At the start of the first battle round, select one of the following:
 
@@ -2758,9 +2758,9 @@ STRATAGEMS · TALONS OF THE NORN QUEEN
 1CP Lesser Prey: +2 S, When selected to fight
 ABILITIES
 Singular Purpose
-Any phase
+Start of the first battle round
 
-Start of the first battle round · Any phase · Either turn
+Start of the first battle round
 
 At the start of the first battle round, select one of the following:
 
@@ -2907,9 +2907,9 @@ STRATAGEMS · TALONS OF THE NORN QUEEN
 1CP Lesser Prey: +2 S, When selected to fight
 ABILITIES
 Singular Purpose
-Any phase
+Start of the first battle round
 
-Start of the first battle round · Any phase · Either turn
+Start of the first battle round
 
 At the start of the first battle round, select one of the following:
 
@@ -3123,7 +3123,7 @@ Ask about this ability
 ######## popup ability:nidzillas|Singular Purpose|At the start of the first battle round, select one of the following:
 - Select one enemy unit. Until the end of the battle, each time this model makes an attack that targets that unit you can re-roll the Hit roll and you can re-roll the Wound roll
 - Select one objective marker. Until the end of the battle, while this model is within range of that objective marker, it has the **Feel No Pain 5+** ability and an Objective Control characteristic of 15. · NIDZILLAS Nidzillas
-ABILITY · START OF THE FIRST BATTLE ROUND · ANY PHASE · EITHER TURN
+ABILITY · START OF THE FIRST BATTLE ROUND
 
 Singular Purpose
 

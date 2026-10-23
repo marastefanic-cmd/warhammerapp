@@ -629,5 +629,14 @@
   "where": "verify/sources/nr/mucho-mutantes.txt p11",
   "reason": "Spacing only: GW's Faction Pack Rules Updates break the line after \"Fire Overwatch/\" and Wahapedia prints \"Fire Overwatch/Heroic Intervention\" with no space; New Recruit and BSData print \"Fire Overwatch/ Heroic Intervention\". The app follows Wahapedia's (verify/texts.js checks it against the Faction Pack).",
   "evidence": "verify/.cache/gw/eng_30-09_wh40k_faction_pack_thousand_sons-4lioijwxdj-otjrinzt8c.txt lines 541-544: \"Sekhetar Robots, Prophetic Sentinels Ability. Change to: 'Once per turn, when you target this unit with the Fire Overwatch/ [line break] Heroic Intervention stratagem, that use is -1 CP.\"; verify/.cache/waha/ds/thousand-sons_Sekhetar-Robots.html: \"Once per turn, when you target this unit with the <b>Fire Overwatch</b>/<b>Heroic Intervention</b> stratagem, that use is -1 CP.\"; New Recruit: verify/sources/nr/mucho-mutantes.txt line 426 (p11)"
+ },
+ {
+  "army": "woof-woof",
+  "unit": "war-dog-brigand-final-howl-aura",
+  "field": "abilities[Final Howl (Aura)].tag",
+  "app": "Aura",
+  "source": null,
+  "reason": "The app adds the Aura tag New Recruit does not print: verify/derive.js derives it from the ability's own text (tag-aura-name on \"(Aura)\"), the same wording as abilities New Recruit does tag Aura (Malign Presence, Overwhelming Wrath); approved by the owner on 2026-10-23 with the derive report's \"would change on screen\" list.",
+  "evidence": "Ability text in data.js (checked word for word by verify/texts.js); verify/out/derive.md, Abilities: tag; New Recruit: verify/sources/nr/woof-woof.txt p2"
  }
 ]

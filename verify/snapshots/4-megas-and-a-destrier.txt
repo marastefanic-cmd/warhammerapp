@@ -450,7 +450,7 @@ Chainbreaker
 Once per battle
 Any phase
 
-Any phase · Either turn
+Once per battle · Any phase · Either turn
 
 Once per battle, at the start of any phase, you can select one friendly IMPERIUM unit that is Battle-shocked and within 12" of this model. That unit is no longer Battle-shocked.
 
@@ -458,7 +458,7 @@ Legendary Freeblade
 Once per turn
 Any phase
 
-Any phase · Either turn
+Once per turn · Any phase · Either turn
 
 Once per turn, when you target this model with a stratagem, you may reduce the CP cost of that use of that stratagem by 1CP.
 
@@ -2222,7 +2222,7 @@ Chainbreaker
 Once per battle
 Any phase
 
-Any phase · Either turn
+Once per battle · Any phase · Either turn
 
 Once per battle, at the start of any phase, you can select one friendly IMPERIUM unit that is Battle-shocked and within 12" of this model. That unit is no longer Battle-shocked.
 
@@ -2230,7 +2230,7 @@ Legendary Freeblade
 Once per turn
 Any phase
 
-Any phase · Either turn
+Once per turn · Any phase · Either turn
 
 Once per turn, when you target this model with a stratagem, you may reduce the CP cost of that use of that stratagem by 1CP.
 
@@ -2809,7 +2809,7 @@ UNITCerastus Knight Atrapos · Bringer of Justice
 Ask about this ability
 
 ######## popup ability:4-megas-and-a-destrier|Chainbreaker|Once per battle, at the start of any phase, you can select one friendly **IMPERIUM** unit that is **Battle-shocked** and within 12" of this model. That unit is no longer Battle-shocked. · 4 MEGAS AND A DESTRIER 4 megas and a destrier
-ABILITY · ANY PHASE · EITHER TURN
+ABILITY · ONCE PER BATTLE · ANY PHASE · EITHER TURN
 
 Chainbreaker
 

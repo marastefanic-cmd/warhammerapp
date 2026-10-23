@@ -562,9 +562,9 @@ Within 6" of the Bloodthirster: +1 to hit (Daemon Lord of Khorne)
 Angron
 Warlord
 Reborn in Blood
-Command · Your Move
+Start of the battle round
 
-Command (either turn) / Your Movement
+Start of the battle round
 
 At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its Deep Strike ability, with 8 wounds remaining.
 
@@ -652,7 +652,7 @@ Direct the Slaughter
 Once per battle round, per army
 Any phase
 
-Any phase · Either turn
+Once per battle round · Any phase · Either turn
 
 Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
 
@@ -2308,9 +2308,9 @@ STRATAGEMS · KHORNE DAEMONKIN
 1CP Daemonic Fury: [LANCE] until the end of the turn (Daemonic Rage active: also [TWIN-LINKED] until the end of the phase), Start of your Fight phase, selected by its target, a friendly BLOOD LEGIONS unit within 6"
 ABILITIES
 Reborn in Blood
-Command · Your Move
+Start of the battle round
 
-Command (either turn) / Your Movement
+Start of the battle round
 
 At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its Deep Strike ability, with 8 wounds remaining.
 
@@ -2657,7 +2657,7 @@ Direct the Slaughter
 Once per battle round, per army
 Any phase
 
-Any phase · Either turn
+Once per battle round · Any phase · Either turn
 
 Once per battle round, one model from your army with this ability can use it when a friendly WORLD EATERS unit within 12" of this model is targeted with a Stratagem. If it does, reduce the CP cost of that Stratagem by 1CP.
 
@@ -3434,7 +3434,7 @@ UNITSkarbrand
 Ask about this ability
 
 ######## popup ability:big-demons-baby|Reborn in Blood|At the start of the battle round, when you make a **Blessings of Khorne** roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its **Deep Strike** ability, with 8 wounds remaining. · BIG DEMONS BABY Big demons baby
-ABILITY · COMMAND (EITHER TURN) / YOUR MOVEMENT
+ABILITY · START OF THE BATTLE ROUND
 
 Reborn in Blood
 

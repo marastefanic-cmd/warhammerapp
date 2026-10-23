@@ -1,0 +1,53 @@
+[
+ {
+  "army": "princes",
+  "kind": "ability-tag",
+  "where": "princes · Lord on Juggernaut · Archslaughterer",
+  "judgement": {
+   "tag": "Enhancement · Once per battle, per army"
+  },
+  "source": {
+   "ability": "Archslaughterer",
+   "text": "**WORLD EATERS** model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, every **Blessing of Khorne** is active for this unit until the start of your next turn."
+  },
+  "key": "b87fb18756a65a5f"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-tag",
+  "where": "pubstomper · Exalted Sorcerer · Incandaeum",
+  "judgement": {
+   "tag": "Enhancement · Once per battle"
+  },
+  "source": {
+   "ability": "Incandaeum",
+   "text": "**EXALTED SORCERER** model only. Once per battle, when selecting a **Ritual** for the bearer to attempt, you can select Doombolt, even if a model from your army have already attempted to manifest that Ritual this phase."
+  },
+  "key": "a5ad2af6f741a824"
+ },
+ {
+  "army": "pubstomper",
+  "kind": "ability-tag",
+  "where": "pubstomper · Sorcerer in Terminator Armour · Umbralefic Crystal",
+  "judgement": {
+   "tag": "Enhancement · Once per battle, per army"
+  },
+  "source": {
+   "ability": "Umbralefic Crystal",
+   "text": "**THOUSAND SONS** model only. (Once per battle, per army) In your Command phase, if this unit is **unengaged**, you can use this ability. If you do:\n- Place this unit in **strategic reserves**.\n- This unit has **Deep Strike** until the start of your next Shooting phase.\n- This unit must make an **ingress move** in your next Movement phase (including in your first turn)."
+  },
+  "key": "fb1643ee9accc02a"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "onceTag",
+  "judgement": {
+   "code": "const onceTag = ab => {\n  const t = ab.text || '', army = /\\bone (model|unit) from your army with this ability\\b/i.test(t);\n  // as BSData prints it; \", per army\" as below when the tag does not say per what (\"Once per battle round\": Direct the Slaughter)\n  if(/^(once|twice) per /i.test(ab.tag || '')){ const tg = ab.tag.replace(/ · .*$/, ''); return tg + (army && !/\\bper (army|unit)\\b/i.test(tg) ? ', per army' : ''); }\n  // an enhancement's text starts with its restriction (\"**TECH-PRIEST** model only. Once per battle round, …\")\n  const t1 = t.replace(/^\\*\\*[^*]+\\*\\* model only( \\([^)]*\\))?\\. /i, '');\n  for(const src of [ab.tag || '', (/\\((once per [^)]+)\\)/i.exec(t) || [])[1] || '', (/^once per [^,.]+(, per (army|unit))?/i.exec(t1) || [])[0] || '']){\n    const m = /once per (battle round|battle|phase|turn)(, per (army|unit))?/i.exec(src);\n    if(m) return m[0].replace(/^o/, 'O') + (!m[2] && army ? ', per army' : '');\n  }\n  return '';\n};"
+  },
+  "source": {
+   "implements": "\"Once per …\" limits shown on the ability row"
+  },
+  "key": "ceaaa881bbacc022"
+ }
+]

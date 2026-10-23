@@ -439,9 +439,9 @@ STRATAGEMS · BERZERKER WARBAND
 Angron
 Warlord
 Reborn in Blood
-Command · Your Move
+Start of the battle round
 
-Command (either turn) / Your Movement
+Start of the battle round
 
 At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its Deep Strike ability, with 8 wounds remaining.
 
@@ -2170,9 +2170,9 @@ STRATAGEMS · BERZERKER WARBAND
 1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 ABILITIES
 Reborn in Blood
-Command · Your Move
+Start of the battle round
 
-Command (either turn) / Your Movement
+Start of the battle round
 
 At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its Deep Strike ability, with 8 wounds remaining.
 
@@ -2956,7 +2956,7 @@ UNITForgefiend
 Ask about this ability
 
 ######## popup ability:super-terminators|Reborn in Blood|At the start of the battle round, when you make a **Blessings of Khorne** roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its **Deep Strike** ability, with 8 wounds remaining. · SUPER TERMINATORS Super Terminators
-ABILITY · COMMAND (EITHER TURN) / YOUR MOVEMENT
+ABILITY · START OF THE BATTLE ROUND
 
 Reborn in Blood
 

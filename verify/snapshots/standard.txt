@@ -602,9 +602,9 @@ STRATAGEMS · BERZERKER WARBAND
 Angron
 Warlord
 Reborn in Blood
-Command · Your Move
+Start of the battle round
 
-Command (either turn) / Your Movement
+Start of the battle round
 
 At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its Deep Strike ability, with 8 wounds remaining.
 
@@ -715,7 +715,7 @@ Possessed Lord
 Once per battle
 Fight
 
-Fight · Either turn
+Once per battle · Fight · Either turn
 
 Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [Devastating Wounds] ability.
 
@@ -738,7 +738,7 @@ Possessed Lord
 Once per battle
 Fight
 
-Fight · Either turn
+Once per battle · Fight · Either turn
 
 Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [Devastating Wounds] ability.
 
@@ -2589,9 +2589,9 @@ STRATAGEMS · BERZERKER WARBAND
 1CP Hack and Slash: +1 AP in the Fight phase, Made a charge move this turn
 ABILITIES
 Reborn in Blood
-Command · Your Move
+Start of the battle round
 
-Command (either turn) / Your Movement
+Start of the battle round
 
 At the start of the battle round, when you make a Blessings of Khorne roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its Deep Strike ability, with 8 wounds remaining.
 
@@ -3029,7 +3029,7 @@ Possessed Lord
 Once per battle
 Fight
 
-Fight · Either turn
+Once per battle · Fight · Either turn
 
 Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [Devastating Wounds] ability.
 
@@ -3147,7 +3147,7 @@ Possessed Lord
 Once per battle
 Fight
 
-Fight · Either turn
+Once per battle · Fight · Either turn
 
 Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [Devastating Wounds] ability.
 
@@ -3853,7 +3853,7 @@ UNITKhârn the Betrayer + Khorne Berzerkers
 Ask about this ability
 
 ######## popup ability:standard|Possessed Lord|Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the **[Devastating Wounds]** ability. · STANDARD Standard
-ABILITY · FIGHT · EITHER TURN
+ABILITY · ONCE PER BATTLE · FIGHT · EITHER TURN
 
 Possessed Lord
 
@@ -3864,7 +3864,7 @@ UNITSlaughterbound, Slaughterbound + Exalted Eightbound · Berzerker Glaive
 Ask about this ability
 
 ######## popup ability:standard|Reborn in Blood|At the start of the battle round, when you make a **Blessings of Khorne** roll, if this model is destroyed, you can use a triple 6 from that roll to use this ability instead of activating any Blessings of Khorne at the start of that battle round. If you do, this model is no longer destroyed and in the Reinforcements step of your next Movement phase, it is set up anywhere on the battlefield using its **Deep Strike** ability, with 8 wounds remaining. · STANDARD Standard
-ABILITY · COMMAND (EITHER TURN) / YOUR MOVEMENT
+ABILITY · START OF THE BATTLE ROUND
 
 Reborn in Blood
 
