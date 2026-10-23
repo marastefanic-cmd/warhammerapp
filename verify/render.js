@@ -68,7 +68,8 @@ const HELPER_SEL = ['.mod', '.def', '.rem', '.use', '.dsl', '.varc', '.note', '.
       }, [String(fn), HELPER_SEL, !!folded]);
       if(r.overflow > 0) fail('no-sideways-scroll', a.id, label, 'the page is ' + r.overflow + 'px wider than the phone');
       if(r.bigIcons.length) fail('icon-size', a.id, label, 'icons drawn over 40px (no size set): ' + r.bigIcons.join(', '));
-      if(label !== 'home' && label !== 'settings' && !r.tabs) fail('tabs', a.id, label, 'no tab bar');
+      if(label !== 'home' && label !== 'settings' && !/^popup import/.test(label) && !r.tabs)   // (the import sheet opens on the home screen)
+      fail('tabs', a.id, label, 'no tab bar');
       if(r.unnamed.length) fail('tabs-named', a.id, label, 'tabs (icons only) without a name for screen readers: ' + r.unnamed.join(', '));
       // the data version changes with every release: the snapshot keeps a placeholder
       snap.push('######## ' + label + ' · ' + r.title + '\n' + r.text.replace(/[ \t]+\n/g, '\n').replace(/\n{3,}/g, '\n\n').trim().replace(/^Data \d{4}-\d\d-\d\d\.\d+$/m, 'Data (version)'));
