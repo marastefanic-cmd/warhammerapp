@@ -3220,7 +3220,7 @@ Tzaangor Enlightened
 7+
 2
 5+
-WHEN TARGETEDFeel No Pain 4+ · Warpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound rolls against it until the end of the phase · 1CP Relentless Rebirth: when it suffers a mortal wound: Feel No Pain 5+ against mortal wounds
+WHEN TARGETEDTzaangor Shaman · Feel No Pain 4+ · Warpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound rolls against it until the end of the phase · 1CP Relentless Rebirth: when it suffers a mortal wound: Feel No Pain 5+ against mortal wounds
 ALL ATTACKS · WHOLE UNIT
 Every attack (this model leads the unit): +1 to hit rolls (Bestial Prophet)
 Sacrificial Blessing used this phase (your Shooting phase or the Fight phase; one Bodyguard model destroyed): Tzaangor Shaman Psychic weapons +D3 A and +D3 S
