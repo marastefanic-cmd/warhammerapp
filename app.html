@@ -1251,6 +1251,9 @@ function matches(n, u){
   return true;
 }
 const eligible = (s, a) => (a || army()).units.filter(u => matches(s.needs, u));
+// a stratagem whose TARGET is another unit of the list but whose effect changes this unit's attacks (help: Daemonic Fury, a BLOOD
+// LEGIONS target and the WORLD EATERS unit within 6" it selects), as shield is for the defence
+const helpedBy = (u, a) => allStratagems(a).filter(s => s.help && matches(s.help.to, u) && (a || army()).units.some(x => x !== u && matches(s.help.by, x)));
 function allStratagems(a){
   a = a || army();
   const out = [];
@@ -1325,7 +1328,8 @@ function unitMods(u, kind){
     if(lance.length) det.push({ kind:k, when:'Made a charge move this turn', note:andList(lance) + ' +1 to wound', from:'Lance', rule:'Lance' });
   }
   if(hasKw(u, 'Towering') && !hasKw(u, 'Aircraft') && D.rules['Plunging Fire']) det.push({ kind:'ranged', when:'Visible target within 12" with models on ground level (not AIRCRAFT)', note:'BS improved by 1', from:'Plunging Fire', rule:'Plunging Fire' });
-  const strat = allStratagems().filter(s => s.mod && eligible(s).includes(u)).map(s => Object.assign({ from:s.name, strat:s.id, cp:s.cp }, s.mod));
+  const strat = allStratagems().filter(s => s.mod && eligible(s).includes(u)).map(s => Object.assign({ from:s.name, strat:s.id, cp:s.cp }, s.mod))
+    .concat(helpedBy(u).map(s => Object.assign({ from:s.name, strat:s.id, cp:s.cp }, s.help.mod)));
   return (u.mods || []).concat(det, auraMods(u), strat).filter(m => m.kind === kind || m.kind === 'all');
 }
 // the footnotes the weapon tables show (datasheet, Ranged and Melee screens): unitMods, and the Waaagh! army rule's "That unit's
@@ -4202,7 +4206,8 @@ function kwStars(u){
 function screenUnit(){
   const u = unitById(cur.unit);
   if(!u) return '<div class="empty">This unit is no longer in the list.</div>';
-  const strats = allStratagems().filter(s => eligible(s).includes(u));   // every one it can be the target of
+  const strats = allStratagems().filter(s => eligible(s).includes(u))   // every one it can be the target of
+    .concat(helpedBy(u).filter(s => !eligible(s).includes(u)).map(s => Object.assign({}, s, { via:s.help.via })));   // and one another unit is the target of (help)
   const def = defenceItems(u, null, { shields:true });
   const meta = [esc(u.role)].concat(u.ptsNote ? [esc(u.ptsNote)] : [], u.copies > 1 ? ['×' + esc(u.copies) + ' in list'] : []);
   const band = '<div class="dsh"><span class="dsn">' + esc(unitLabel(u)) + '</span><span class="dpts num">' + esc(u.pts) + ' pts' + (u.copies > 1 ? ' each' : '') + '</span></div>' +
@@ -4253,7 +4258,7 @@ function stratLines(u, strats){
   const groups = detachments().map(d => [d.name, strats.filter(st => st.src === d.name)]).concat([['Core', strats.filter(st => st.src === 'Core')]]);
   const none = groups.filter(([n, l]) => !l.length && n !== 'Core').map(([n]) => n);
   return '<div class="dkv sl" id="sec-strats"><span class="dk">Stratagems</span><span class="dv">' + groups.filter(([, l]) => l.length).map(([n, l]) =>
-    '<p><b class="sln">' + esc(n) + '</b> ' + ord(l).map(st => linkTo('strat', st.id, st.name)).join(', ') + '</p>').join('') +
+    '<p><b class="sln">' + esc(n) + '</b> ' + ord(l).map(st => linkTo('strat', st.id, st.name) + (st.via ? ' <span class="from">(' + esc(st.via) + ')</span>' : '')).join(', ') + '</p>').join('') +
     (none.length ? '<p class="from">None from ' + esc(orList(none)) + '.</p>' : '') + '</span></div>';
 }
 

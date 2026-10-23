@@ -93,7 +93,7 @@ function items(D, appSource){
     for(const id of a.detachments){
       const d = f.detachments[id];
       if(d.rule) rulesMeta(d.name + ' rule', d.rule, d.rule.text + (d.rule.table ? '\n' + d.rule.table.map(t => t.join(': ')).join('\n') : ''));
-      for(const s of d.stratagems || []) for(const k of ['phases', 'turn', 'turns', 'needs', 'mod', 'def', 'defCalc', 'defPick', 'calcNote', 'lasts', 'gist', 'note', 'cpNote', 'ask', 'shield', 'react', 'weaponKw'])
+      for(const s of d.stratagems || []) for(const k of ['phases', 'turn', 'turns', 'needs', 'mod', 'def', 'defCalc', 'defPick', 'calcNote', 'lasts', 'gist', 'note', 'cpNote', 'ask', 'shield', 'help', 'react', 'weaponKw'])
         if(s[k] !== undefined) add(a.id, 'strat-' + k, d.name + ' · ' + s.name, { [k]:s[k] }, { stratagem:s.name, text:stratText(s) });
     }
   }
@@ -114,7 +114,8 @@ const CODE_RULES = {
   useSentence:'04.01 Select Weapons; Close-quarters (non-MONSTER/VEHICLE: pistols or other ranged weapons); Extra Attacks (24.11); a multi-profile weapon uses one profile (04.01.03)',
   useLine:'which models carry which weapons (gear per models line); attached units (19.04)',
   weaponJoins:'the dividers between weapon rows: 04.01 Select Weapons (ranged: every weapon the model has; melee: one, [EXTRA ATTACKS] on top); Close-quarters (a non-MONSTER/VEHICLE model: its [CLOSE-QUARTERS] weapons or the others); per models line (gear); attached units by part',
-  unitMods:'which footnotes a unit gets: its own, detachment rules matching its keywords (and the parts of a detachment rule whose needs it meets), auras, stratagems it is eligible for; Lance (+1 to wound after a charge); Plunging Fire for TOWERING (22.05)',
+  unitMods:'which footnotes a unit gets: its own, detachment rules matching its keywords (and the parts of a detachment rule whose needs it meets), auras, stratagems it is eligible for, and those another unit of the list is the target of whose effect changes its attacks (helpedBy); Lance (+1 to wound after a charge); Plunging Fire for TOWERING (22.05)',
+  helpedBy:'a stratagem whose TARGET is another unit of the list (help.by) and whose effect changes this unit\'s attacks (help.to: Daemonic Fury, a BLOOD LEGIONS target selecting a friendly WORLD EATERS unit within 6"): listed on this unit\'s datasheet with who is its target, its footnote on this unit',
   unitDetParts:'the parts of a detachment rule that apply to a unit: those of the rules that apply to it (by keyword) whose own needs it meets (Blood Tithe: Daemonic Rage and Boon of Blood for BLOOD LEGIONS units, Might of Khorne giving them the Blessings of Khorne ability)',
   singleMod:'Starting Strength for a one-model unit (Core Rules p86)',
   halfBelow:'Below half-strength for a one-model unit: remaining wounds less than half its W',
