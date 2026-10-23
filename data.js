@@ -1286,8 +1286,10 @@ const FACTIONS = {
     name: 'Adeptus Custodes',
     // New Recruit (BSData) spells the army rule with a straight apostrophe, Wahapedia "Martial Ka’tah"
     aliases: [[/^martial ka'tah$/i, 'Martial Ka’tah']],
-    // army rules: Wahapedia, Adeptus Custodes, Army Rules (Codex: Adeptus Custodes). GW's Faction Pack 1.2 (legal from 30 Sep 2026)
-    // prints no army rule, and its Rules Updates change none of these. Martial Ka’tah: the rule, then its Favoured Ka’tah paragraph
+    // Sources: the new Codex: Adeptus Custodes as Wahapedia prints it (with GW's Printed Product Updates of 14 Oct 2026, which change
+    // nothing in this list). GW's Faction Pack 1.2 (legal from 30 Sep 2026) is the previous codex's: its Rules Updates and its
+    // detachments (a Might of the Moritoi of its own among them) are not used.
+    // army rules: Wahapedia, Adeptus Custodes, Army Rules. Martial Ka’tah: the rule, then its Favoured Ka’tah paragraph
     // (a sub-heading inside the rule on Wahapedia); the table is the six ka’tah abilities (name, then their WHEN / TARGET / EFFECT).
     // Wahapedia also lists Special Move Types (the Shock Disembark Move, for a unit embarked within a TRANSPORT): no TRANSPORT in these
     // lists, so it is left out.
@@ -1321,8 +1323,7 @@ const FACTIONS = {
         text:'You can include **ANATHEMA PSYKANA** units in your army, even though they do not have the **ADEPTUS CUSTODES** faction keyword.\nWhen mustering your army, unless otherwise stated:\n- You cannot select **ANATHEMA PSYKANA** as your army faction.\n- You cannot select an **ANATHEMA PSYKANA** model to be your **WARLORD**.' }
     ],
     detachments: {
-      // Emperor’s Chosen: a codex detachment the Faction Pack 1.2 does not print; rule, enhancements and stratagems from Wahapedia
-      // (the pack's Rules Updates change none of them)
+      // Emperor’s Chosen: rule, enhancements and stratagems from Wahapedia (the codex)
       'emperors-chosen': {
         name:'Emperor’s Chosen', dispositions:['Priority Assets'], dp:1,
         // ph/turn: "selected to attack" (shoot or fight); the Favoured Ka’tah's additional effect is Rendax's, in the Fight phase
@@ -1350,7 +1351,7 @@ const FACTIONS = {
             effect:'Select one **objective** your unit is controlling. That **objective** is **secured**.' }
         ]
       },
-      // Grav-Assault Force: a codex detachment the Faction Pack 1.2 does not print; Wahapedia wording (no Rules Updates for it)
+      // Grav-Assault Force: Wahapedia wording (the codex)
       'grav-assault-force': {
         name:'Grav-Assault Force', dispositions:['Reconnaissance'], dp:1,
         rule:{ name:'Flare Shields', needs:{ all:['Grav-assault'] }, def:'4+ InSv against ranged attacks',
@@ -1375,15 +1376,12 @@ const FACTIONS = {
             effect:'Your unit can ignore modifiers to your unit’s:\n- **BS**.\n- **Hit rolls**.' }
         ]
       },
-      // Might of the Moritoi: the codex detachment, as Wahapedia and New Recruit print it (Moritoi Ancients; the list's Memento Moritoi
-      // and Augury Uplink). GW's Faction Pack 1.2 prints a different detachment of the same name (UNIQUE: ARMOURY; March of the Honoured
-      // Dead, Interred Expertise, Auramite Sarcophagus, Flawless Construction, Unstoppable Advance, Prioritised Eradication), which has
-      // neither enhancement: declared in verify/deviations-texts.json. The pack's Rules Updates change nothing here
+      // Might of the Moritoi: the codex detachment (Moritoi Ancients, Memento Moritoi, Augury Uplink), as Wahapedia, BSData and New
+      // Recruit print it
       'might-of-the-moritoi': {
         name:'Might of the Moritoi', dispositions:['Take and Hold'], dp:1,
         // the re-rolls for below starting strength / below half-strength: one pick (OC +2 at starting strength is not an attack)
         rule:{ name:'Moritoi Ancients', needs:{ all:['Faction: Adeptus Custodes','Dreadnought'] },
-          note:'GW’s Faction Pack 1.2 prints another detachment named Might of the Moritoi (rule March of the Honoured Dead, no Memento Moritoi or Augury Uplink). This is the one New Recruit and Wahapedia print; the sources don’t say which applies.',
           mod:{ kind:'all', when:'Below starting strength, or below half-strength', note:'below starting strength: re-roll hit rolls of 1 · below half-strength: re-roll hit rolls of 1 and wound rolls of 1',
             pick:[{ name:'Below starting strength', note:'re-roll hit rolls of 1' }, { name:'Below half-strength', note:'re-roll hit rolls of 1 and wound rolls of 1' }] },
           text:'- While a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit is at **starting strength**, that unit has +2 **OC**.\n- While a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit is **below starting strength**, that unit’s attacks can re-roll **hit rolls** of 1.\n- While a friendly **ADEPTUS CUSTODES DREADNOUGHT** unit is **below half-strength**, that unit’s attacks can:\n- Re-roll **hit rolls** of 1.\n- Re-roll **wound rolls** of 1.' },
@@ -5330,7 +5328,9 @@ const ARMIES = [
       models:['1× Caladius Annihilator Grav-tank'],
       gear:[['Arachnus Blaze Carronade','Twin Lastrum Bolt Cannon','Armoured hull']],
       stats:[
-        { name:'Caladius Annihilator Grav-tank', M:'10"', T:'11', Sv:'2+', W:'14', Ld:'5+', OC:'4', InSv:'5+, 4+*', base:'150×95mm Oval', from:{ 'InSv':'Flare Shields' } }
+        // base: GW's Base Size Guide (Event Companion, Oct 2026) "Caladius Grav-tank 170x109mm Oval Base"; BSData, and so New Recruit,
+        // give 150×95mm (deviations-nr.json, deviations-bsdata.json)
+        { name:'Caladius Annihilator Grav-tank', M:'10"', T:'11', Sv:'2+', W:'14', Ld:'5+', OC:'4', InSv:'5+, 4+*', base:'170×109mm Oval', from:{ 'InSv':'Flare Shields' } }
       ],
       ranged:[
         { name:'Arachnus Blaze Carronade', range:'48"', A:'4', BS:'2+', S:'12', AP:'-3', D:'D6+2', kw:['LETHAL HITS: MONSTER/VEHICLE'] },

@@ -669,5 +669,15 @@
   "where": "verify/sources/nr/lite-knights.txt p9",
   "reason": "The upgrade's official text starts with its restriction \"ADEPTUS CUSTODES DREADNOUGHT model only.\" (the Might of the Moritoi enhancement in data.js, which verify/texts.js checks the unit's text against); New Recruit's (BSData's) text leaves that sentence out.",
   "evidence": "verify/.cache/waha/adeptus-custodes.txt lines 496-497: \"- Augury Uplink (one per army)UPGRADE 30 pts / **ADEPTUS CUSTODES DREADNOUGHT** model only. This model has **Feel No Pain 5+**.\"; verify/sources/nr/lite-knights.txt line 229."
+ },
+ {
+  "army": "lite-knights",
+  "unit": "caladius-annihilator-grav-tank",
+  "field": "stats[Caladius Annihilator Grav-tank].base",
+  "app": "170x109mm Oval",
+  "source": "150x95mm Oval",
+  "where": "verify/sources/nr/lite-knights.txt p6",
+  "reason": "GW's Base Size Guide gives the Caladius Grav-tank a 170x109mm oval base; BSData gives the Caladius Annihilator Grav-tank 150x95mm oval and New Recruit prints it. The owner, 2026-10-23: GW is the ultimate source of truth for base sizes. Bases & proxies counts its base from this value.",
+  "evidence": "verify/.cache/gw/eng_14-10_wh40k_event_companion-rdwnqprl4c-nj8oqogadv.txt lines 2508-2509 (\"LAST UPDATED: OCTOBER 2026\", \"the most up-to-date base sizes\") and 2625 (\"Caladius Grav-tank 170x109mm Oval Base\"); verify/.cache/bsdata/Imperium - Adeptus Custodes.json line 11604 (Base 150x95mm Oval); verify/sources/nr/lite-knights.txt line 152."
  }
 ]
