@@ -705,8 +705,21 @@ function buildUnit(army, u, um, cat, force, issues) {
       if (rep.length === f - 1) for (const k of rep.reverse()) own.splice(k, 1);
     }
     const picks = assignGear(own);
+    // an item named twice whose second place is taken: the same option taken twice (one selection of 2: a Nob's two Rokkit
+    // Pistols), when the entry allows that many per model
+    const maxPer = (n) => { const c = n.constraints.find((x) => x.type === 'max' && x.scope === 'parent' && x.field === 'selections'); return c ? c.value : Infinity; };
+    const times = new Map();
     own.forEach((it, j) => {
+      if (picks[j] || !it.cands.length) return;
+      const k = own.findIndex((x, i) => i < j && picks[i] && x.name === it.name && x.parent === it.parent);
+      if (k < 0) return;
+      const n = (times.get(k) || 1) + 1, leaf = picks[k][picks[k].length - 1];
+      if (n <= maxPer(leaf)) { times.set(k, n); picks[j] = 'same'; }
+    });
+    own.forEach((it, j) => {
+      if (picks[j] === 'same') return;
       if (!picks[j]) { fail('gear', it.g, '', `no BSData wargear "${it.name}" for ${msel.node.name}${it.cands.length ? ' (every place it is offered is taken)' : ''}`); return; }
+      if (times.has(j)) { addChain(it.parent, picks[j], it.cnt * times.get(j)); return; }
       // below a model selection counts are per models line (the model selection holds ln.count models)
       addChain(it.parent, picks[j], it.cnt);
     });
