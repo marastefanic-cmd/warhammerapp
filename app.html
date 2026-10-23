@@ -1598,8 +1598,20 @@ function screenArmy(){
       row('rules', 'i-book', 'Rules', '') +
       row('damage', 'i-swords', 'Damage calculator', '') +
       (ONLY ? row('settings', 'i-gear', 'Settings', '') : '') +
-    '</div><p class="note">' + esc(a.source) + '</p></div>' + (ONLY ? verifiedLine() : '');
+    '</div><p class="note">' + esc(a.source) + '</p></div>' + (ONLY ? verifiedLine() : '') +
+    (!EMBEDDED && (matchMedia('(display-mode: standalone)').matches || navigator.standalone === true) ? '<p class="note" id="frameInfo"></p>' : '');   // temporary: the screen's measurements in the installed app (bottom bar gap)
 }
+// temporary: what the installed iPhone app reports, to find the gap under the bottom bar
+setInterval(() => {
+  const el = document.getElementById('frameInfo'); if(!el) return;
+  const pr = document.createElement('div'); pr.style.cssText = 'position:fixed;visibility:hidden;padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)';
+  document.body.appendChild(pr); const ps = getComputedStyle(pr), it = ps.paddingTop, ib = ps.paddingBottom; pr.remove();
+  const de = document.documentElement, vv = window.visualViewport, bb = document.getElementById('bbar');
+  el.textContent = 'Frame: ' + [ 'win ' + innerWidth + '×' + innerHeight, 'screen ' + screen.width + '×' + screen.height, 'vv ' + (vv ? Math.round(vv.height) + ' @' + Math.round(vv.offsetTop) : '-'),
+    'client ' + de.clientHeight, 'doc ' + de.scrollHeight, 'body ' + Math.round(document.body.getBoundingClientRect().height) + ' min ' + getComputedStyle(document.body).minHeight,
+    'scr-h ' + (de.style.getPropertyValue('--scr-h') || '-'), 'inset ' + it + '/' + ib, 'coarse ' + matchMedia('(pointer: coarse)').matches,
+    'bar ' + (bb && !bb.hidden ? Math.round(bb.getBoundingClientRect().bottom) : '-'), 'top ' + Math.round(document.getElementById('top').getBoundingClientRect().top) + ' · ua ' + (navigator.userAgent.match(/OS [\d_]+/) || ['-'])[0], 'build ' + (window.WH_BUILD || '-') ].join(' · ');
+}, 500);
 
 /* ---------- screen: damage ----------
    "The answer, and what moves it". One of your units attacks a target set by hand: your unit · Shoot / Fight / Both, then the
