@@ -748,6 +748,92 @@ const FACTIONS = {
             target:'One **THOUSAND SONS PSYKER** unit from your army that has not been selected to shoot this phase.',
             effect:'Until the end of the phase, add 9" to the Range characteristic of Psychic weapons equipped by models in your unit, and each time a model in your unit makes an attack with a Psychic weapon, you can re-roll the **Hit roll** and you can re-roll the **Wound roll**.' }
         ]
+      },
+      // Ritual of Regeneration: GW's Faction Pack (1.3) prints it in full (p2); its wording, with Wahapedia's bold keywords.
+      // (Wahapedia's Mutagenic Magicks EFFECT repeats its WHEN and TARGET before "Select one enemy unit"; the pack's does not.)
+      'ritual-of-regeneration': {
+        name:'Ritual of Regeneration', dp:1,
+        // ph/turn: a Ritual is attempted at the start of your Shooting phase (Cabal of Sorcerers)
+        // needs: a THOUSAND SONS PSYKER unit (a unit with one PSYKER model is one), excluding MONSTER units
+        rule:{ name:'Sorcerous Invigoration', tag:'Once per turn, per unit', ph:['shooting'], turn:'your', needs:{ all:['Faction: Thousand Sons','Psyker'], none:['Monster'] },
+          text:'(Once per turn, per unit) When a friendly **THOUSAND SONS PSYKER** unit (excluding **MONSTER** units) successfully manifests a **Ritual**, that unit **heals** D3 wounds.' },
+        // pts from Wahapedia (the pack prints none), matching New Recruit: Tzaangor Shaman 65 + Curse of Life 20 = 85
+        enhancements:[
+          { name:'Eruption of Vitality', pts:35, text:'**INFANTRY**/**MOUNTED THOUSAND SONS PSYKER** model only. (Once per battle, per army) When this model is **destroyed**, at the end of the phase, roll one D6:\n- On a 2+, set up this model on the battlefield, **unengaged** and as close as possible to where it was destroyed. This model is not part of an attached unit and its unit has a **starting strength** of 1. This model has 3 wounds remaining.' },
+          { name:'Curse of Life', pts:20, text:'**INFANTRY**/**MOUNTED THOUSAND SONS PSYKER** model only. When this model **heals** as a result of the **Sorcerous Invigoration detachment rule**, you can add 3 to the number of wounds **healed**.' }
+        ],
+        // phases and turn from the WHEN ("Any phase" = all five, either turn)
+        // needs: "INFANTRY/MOUNTED THOUSAND SONS PSYKER unit" is a THOUSAND SONS PSYKER unit that is INFANTRY or MOUNTED
+        stratagems:[
+          { id:'relentless-rebirth', gist:'When your unit suffers a mortal wound: it has Feel No Pain 5+ against mortal wounds.', def:'when it suffers a mortal wound: Feel No Pain 5+ against mortal wounds', name:'Relentless Rebirth', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Faction: Thousand Sons','Psyker'], any:['Infantry','Mounted'] },
+            when:'Any phase, when a friendly **INFANTRY**/**MOUNTED THOUSAND SONS PSYKER** unit suffers a **mortal wound**.',
+            target:'That **INFANTRY/MOUNTED THOUSAND SONS PSYKER** unit.',
+            effect:'Your unit has **Feel No Pain 5+** against **mortal wounds**.' },
+          { id:'mutagenic-magicks', gist:'Your engaged unit: select one enemy unit engaged with it and roll six D6; for each 4+, that enemy unit suffers 1 mortal wound.', name:'Mutagenic Magicks', cp:1, phases:['fight'], turn:'either', needs:{ all:['Faction: Thousand Sons','Psyker'] },
+            when:'Start of the Fight phase.',
+            target:'One friendly **engaged THOUSAND SONS PSYKER** unit.',
+            effect:'Select one enemy unit engaged with your unit. Roll six D6:\n- For each 4+, that enemy unit suffers 1 **mortal wound**.' },
+          { id:'multitudinous-limbs', gist:'Your unit’s advance or fall back move does not prevent it from being eligible to start an action.', name:'Multitudinous Limbs', cp:1, phases:['movement'], turn:'your', needs:{ all:['Faction: Thousand Sons','Psyker'], any:['Infantry','Mounted'] },
+            when:'Your Movement phase, when a friendly **INFANTRY**/**MOUNTED THOUSAND SONS PSYKER** unit is selected to make an **advance**/**fall back move**.',
+            target:'That **INFANTRY/MOUNTED THOUSAND SONS PSYKER** unit.',
+            effect:'That move does not prevent your unit from being **eligible to start an action**.' }
+        ]
+      },
+      // Warpmeld Pact: a codex detachment the Faction Pack (1.3) does not print, only Rules Updates (Warpmeld Sacrifice, Bray Lord,
+      // Twisted Mirage) and FAQs; Wahapedia wording with those updates (Wahapedia's errata texts are the same)
+      'warpmeld-pact': {
+        name:'Warpmeld Pact', dp:2,
+        // needs: TZEENTCH MUTANT INFANTRY or TZEENTCH MUTANT MOUNTED units (a unit with one such model is one: the rule is about units)
+        // parts: the sacrifice when selected as a target ("When targeted") and when selected to shoot or fight (its attacks); the
+        // KEYWORDS paragraph is for TZAANGORS units: its +1 OC is not in New Recruit's OC (statNote)
+        rule:{ name:'Warpmeld Sacrifice', ph:['shooting','fight'], turn:'either', needs:{ all:['Tzeentch','Mutant'], any:['Infantry','Mounted'] },
+          text:'Each time an enemy unit is selected to shoot or fight and one or more **TZEENTCH MUTANT INFANTRY** or **TZEENTCH MUTANT MOUNTED** units from your army are selected as a target of one or more of those attacks, each of those **TZEENTCH MUTANT** units can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time an attack targets that unit, subtract 1 from the Wound roll. At the end of the phase, that **TZEENTCH MUTANT** unit suffers D3 mortal wounds.\nEach time a **TZEENTCH MUTANT INFANTRY** or **TZEENTCH MUTANT MOUNTED** unit from your army is selected to shoot or fight, before selecting its targets, that unit can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time a model in that unit makes an attack, add 1 to the Wound roll. At the end of the phase, that **TZEENTCH MUTANT** unit suffers D3 mortal wounds.\nKEYWORDS\n**TZAANGORS** units from your army have the **BATTLELINE** keyword, and while such a unit is not **Battle-shocked**, add 1 to the Objective Control characteristic of **TZAANGOR** models in that unit.',
+          parts:[
+            { name:'Warpmeld Sacrifice (selected as a target)', needs:{ all:['Tzeentch','Mutant'], any:['Infantry','Mounted'] }, def:'Warpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound rolls against it until the end of the phase' },
+            { name:'Warpmeld Sacrifice (selected to shoot or fight)', needs:{ all:['Tzeentch','Mutant'], any:['Infantry','Mounted'] }, mod:{ kind:'all', when:'Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase)', note:'+1 to wound rolls' } },
+            { name:'Keywords', needs:{ all:['Tzaangors'] }, statNote:{ text:'OC +1 for each TZAANGOR model unless Battle-shocked, not in the OC above' } }
+          ] },
+        // pts from Wahapedia, matching New Recruit: Tzaangor Shaman 65 + Diamond of Distortion 20 = 85, + Flowing Flesh 10 = 75
+        enhancements:[
+          { name:'Warpmeld Dagger', pts:10, text:'**TZAANGOR SHAMAN** model only. Each time the bearer attempts a **Ritual**, just before determining the Psychic test result, the bearer can use this Enhancement. If it does, the bearer suffers D3 **mortal wounds**; if it is not destroyed as a result, add 1 to that Psychic test result for each of those mortal wounds suffered.' },
+          { name:'Diamond of Distortion', pts:20, text:'**TZAANGOR SHAMAN** model only. While the bearer is leading a unit, each time an attack targets that unit, subtract 1 from the **Hit roll**.' },
+          // the Faction Pack's Rules Update (Wahapedia's errata is the same; its main text has a stray "LEADER: TZAANGORS" line)
+          { name:'Bray Lord', pts:15, text:'**SORCERER** or **INFERNAL MASTER** model only. The bearer has the **Scouts 6"** ability.' },
+          { name:'Flowing Flesh', pts:10, text:'**TZAANGOR SHAMAN** model only. The bearer has the **Feel No Pain 4+** ability and a Wounds characteristic of 5.' }
+        ],
+        // phases and turn from the WHEN
+        stratagems:[
+          // needs: a THOUSAND SONS CHARACTER model (excluding MONSTERS): the unit it is in
+          { id:'gift-of-change', gist:'Your CHARACTER model just destroyed: at the end of the phase, add a TZEENTCH CHAOS SPAWN unit of one model to your army, set up as close as possible to where it was destroyed and unengaged (once per battle round).', name:'Gift of Change', cp:1, phases:['command','movement','shooting','charge','fight'], turn:'either', needs:{ all:['Faction: Thousand Sons','Character'], none:['Monster'] },
+            when:'Any phase.',
+            target:'One **THOUSAND SONS CHARACTER** model from your army (excluding **MONSTERS**) that was just destroyed. You can use this Stratagem on that model even though it was just destroyed.',
+            effect:'At the end of the phase, add one **TZEENTCH CHAOS SPAWN** unit containing one model to your army, and set it up as close as possible to where your model was destroyed and not within **Engagement Range** of one or more enemy units.',
+            restrictions:'You can only use this Stratagem once per battle round.' },
+          { id:'warped-vicissitude', gist:'Just after an enemy unit selects your unit as a target: until the end of the phase, your unit’s models have a 4+ invulnerable save.', def:'their Shooting phase or the Fight phase: 4+ invulnerable save (until the end of the phase)', name:'Warped Vicissitude', cp:1, phases:['shooting','fight'], turn:'either', turns:{ shooting:'opp' }, needs:{ all:['Tzaangors'] },
+            when:'Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.',
+            target:'One **TZAANGORS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks.',
+            effect:'Until the end of the phase, models in your unit have a 4+ invulnerable save.' },
+          { id:'deranged-ferocity', gist:'Until the end of the phase, your unit’s models pile in and consolidate up to 6", and models within 3" of enemy models are eligible to fight (targeting an enemy unit within 3" of them and engaged with their unit).', name:'Deranged Ferocity', cp:1, phases:['fight'], turn:'either', needs:{ all:['Tzeentch','Mutant'] },
+            when:'Fight phase, just after a **TZEENTCH MUTANT** unit from your army is selected to fight.',
+            target:'That **TZEENTCH MUTANT** unit.',
+            effect:'Until the end of the phase, each time a model in your unit makes a Pile-in or **Consolidation move**, it can move up to 6" instead of up to 3", and when determining which models in it are eligible to fight, any models in it that are within 3" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3" of them and within **Engagement Range** of their unit.' },
+          // needs: its two targets, a THOUSAND SONS PSYKER model and a TZAANGORS unit: shown on the units of either
+          { id:'blessed-transmutations', gist:'Return up to D3+1 destroyed models (excluding CHARACTERS) to a TZAANGORS unit below its Starting Strength within 12" of your PSYKER model.', name:'Blessed Transmutations', cp:1, phases:['command'], turn:'your', needs:{ all:['Faction: Thousand Sons'], any:['Psyker','Tzaangors'] },
+            when:'Your Command phase.',
+            target:'One **THOUSAND SONS PSYKER** model from your army, and one friendly **TZAANGORS** unit that is below its Starting Strength and within 12" of that **PSYKER** model.',
+            effect:'Return up to D3+1 destroyed models (excluding **CHARACTERS**) to your **TZAANGORS** unit.' },
+          { id:'touched-by-tzeentch', gist:'Until the end of the turn, your unit is eligible to shoot or declare a charge in a turn in which it Advanced.', name:'Touched by Tzeentch', cp:1, phases:['movement'], turn:'your', needs:{ all:['Tzeentch','Mutant'] },
+            note:'FAQ (Faction Pack 1.3): When using the Touched by Tzeentch Stratagem in the Warpmeld Pact Detachment, do I have to declare if my unit will shoot or charge after Advancing as soon as I use the Stratagem? No, you may decide later in the turn.',
+            when:'Start of your Movement phase.',
+            target:'One **TZEENTCH MUTANT** unit from your army.',
+            effect:'Until the end of the turn, your unit is eligible to shoot or declare a charge in a turn in which it Advanced.' },
+          // effect: the Faction Pack's Rules Update (6" and 8"), as Wahapedia prints it
+          { id:'twisted-mirage', gist:'Your unit arriving from Strategic Reserves can be set up more than 6" horizontally away from all enemy units (8" for a MONSTER unit); it is then not eligible to declare a charge this turn.', name:'Twisted Mirage', cp:1, phases:['movement'], turn:'your', needs:{ all:['Tzeentch','Mutant'] },
+            note:'FAQ (Faction Pack 1.3): When going second, can a Tzaangor unit that started the game on the battlefield and was placed into Strategic Reserves by its Ambushing Hunters ability then arrive during my first turn using the Twisted Mirage Stratagem? No.',
+            when:'Reinforcements step of your Movement phase.',
+            target:'One **TZEENTCH MUTANT** unit from your army that is arriving from **Strategic Reserves** this phase.',
+            effect:'Your unit can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units, or anywhere on the battlefield that is more than 8" horizontally away from all enemy units if it is a **MONSTER** unit. In either case, until the end of the turn, it is not eligible to declare a charge.' }
+        ]
       }
     }
   },
