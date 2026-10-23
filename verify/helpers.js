@@ -22,7 +22,10 @@ function items(D, appSource){
     const ar = f.armyRules.find(r => r.name === name);
     if(ar) return ar.text + (ar.table ? '\n' + ar.table.map(r => r.join(': ')).join('\n') : '');
     for(const d of a.detachments.map(id => f.detachments[id])) if(d && d.rule && d.rule.name === name) return d.rule.text;
-    return D.rules[name] || null;
+    if(D.rules[name]) return D.rules[name];
+    // a core rule with its value in its name ("Damaged 5"): the glossary entry its alias names, with the name (the X of "Damaged X")
+    const k = (D.ruleAliases.find(([re]) => re.test(name)) || [])[1];
+    return k && D.rules[k] && /\d/.test(name) ? name + ': ' + D.rules[k] : null;
   };
   const strat = (army, nameOrId) => {
     const a = D.armies.find(x => x.id === army), f = fr(a.faction);
