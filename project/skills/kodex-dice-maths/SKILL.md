@@ -14,6 +14,8 @@ The Damage tab's engine is in `scripts/calc.js` (it plays the 11th edition attac
 4. Answer the way the Project's instructions say: the number first ("≈5.6 wounds lost, 5–6 Boyz; 85% to kill at least 4"), then what was counted (each rule, with where it comes from) and what was not. Round to one decimal; give a chance as a percentage.
 
 ## Notes
+- Check that the first lines and the Working name every rule you meant to count: a keyword the engine did not count is listed as "Keywords not counted" (misspelt, a missing number, or one that changes no numbers).
+- The game results (killed, damage) can be a little lower than the Working's exact averages: once the target is destroyed, the remaining attacks count for nothing, and damage beyond a model's wounds is lost. Both are right; report the game results as the outcome.
 - The engine applies only what you give it: whether a rule applies is a rules question. Say which rules you counted.
 - Compare options by running each and giving both numbers side by side.
 - Other odds (charge distance 2D6 ≥ X, a single save) can be computed directly; show the fraction and the percentage.

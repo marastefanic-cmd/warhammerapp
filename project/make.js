@@ -36,8 +36,10 @@ function dispositionsByDetachment(){
       const L = D.armies.map(a => { const f = factionOf(a), dets = detachmentsOf(a), seen = new Set();
         const rows = dets.map(d => { const ds = DISP[d.name.toLowerCase()]; (ds || []).forEach(x => seen.add(x)); return '- ' + d.name + ': ' + (ds ? ds.join(', ') : 'not found in BSData'); });
         const disp = '## Force Dispositions this list can lock (BSData: each detachment allows these)\n' + rows.join('\n') + '\nThis list: ' + ([...seen].join(', ') || 'unknown') + ' (locked for this list: ' + (a.disposition || 'not given') + ')';
-        return armyText(a, 'List').replace(/\n\n## Army rules/, '\n\n' + disp + '\n\n## Army rules'); });
-      const core = '# Core stratagems\n' + D.coreStratagems.map(s => '- ' + s.name + ' (' + s.cp + 'CP). WHEN: ' + s.when + ' TARGET: ' + s.target + ' EFFECT: ' + s.effect.replace(/\n/g, ' ')).join('\n');
+        // each datasheet heading names its list, so a passage found on its own still says whose unit it is
+        const t = armyText(a, 'List').replace(/\n\n## Army rules/, '\n\n' + disp + '\n\n## Army rules'), at = t.indexOf('\n## Units');
+        return at < 0 ? t : t.slice(0, at) + t.slice(at).replace(/^### /gm, '### ' + a.name + ' · '); });
+      const core = '# Core stratagems\n' + D.coreStratagems.map(s => '- ' + s.name + ' (' + s.cp + 'CP). WHEN: ' + s.when.replace(/\n- /g, ' · ').replace(/\n/g, ' ') + ' TARGET: ' + s.target.replace(/\n/g, ' ') + ' EFFECT: ' + s.effect.replace(/\n- /g, ' · ').replace(/\n/g, ' ')).join('\n');
       return { version:D.version, names:D.armies.map(a => a.name + ' (' + factionOf(a).name + ')'), body:L.join('\n\n---\n\n'), core };
     }, DISP);
     const head = '# Kunnin’ Kodex lists (data ' + out.version + ')\n\n' +
@@ -47,6 +49,12 @@ function dispositionsByDetachment(){
     fs.writeFileSync(path.join(__dirname, 'kodex-lists.md'), head + out.body + '\n');
     // the dice-maths skill runs the app's own damage engine: keep its copy the same file
     fs.copyFileSync(path.join(ROOT, 'calc.js'), path.join(__dirname, 'skills/kodex-dice-maths/scripts/calc.js'));
+    // each skill as a zip to upload to Claude (Settings → Capabilities → Skills): the skill's folder at the zip's root
+    const { execFileSync } = require('child_process');
+    for(const sk of fs.readdirSync(path.join(__dirname, 'skills')).filter(f => fs.statSync(path.join(__dirname, 'skills', f)).isDirectory())){
+      const zip = path.join(__dirname, 'skills', sk + '.zip'); try { fs.unlinkSync(zip); } catch(e){}
+      execFileSync('zip', ['-qrX', zip, sk], { cwd:path.join(__dirname, 'skills') });
+    }
     console.log('project/kodex-lists.md: ' + out.names.length + ' lists, data ' + out.version + ', ' + Math.round((head + out.body).length / 1024) + ' KB');
   } finally { await browser.close(); site.close && site.close(); }
 })().catch(e => { console.error(e); process.exit(1); });

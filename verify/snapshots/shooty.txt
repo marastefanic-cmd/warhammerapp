@@ -23,6 +23,11 @@ AT THE TABLE
 Keep screen on
 Off
 RULES QUESTIONS
+Your Claude Project
+
+The ? copies your question with this list and screen, and opens this Project in Claude, where it runs on your subscription. Paste the Project’s link (claude.ai/project/…) here.
+
+Save
 In Claude, on your Claude subscription
 
 Opens this same app inside the Claude app (or claude.ai), where the ? uses your Claude account. Only you, and people you share it with, can open it.
@@ -92,11 +97,15 @@ Ooga booga
 Bully Boyz · Runt Swarm · Shoota Boyz
 PURGE THE FOE
 THOUSAND SONS
-1
+2
 Pubstomper
 2000 pts
 Grand Coven
 PRIORITY ASSETS
+Mucho Mutantes
+2000 pts
+Ritual of Regeneration · Warpmeld Pact
+PURGE THE FOE
 TYRANIDS
 1
 Nidzillas

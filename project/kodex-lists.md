@@ -1,27 +1,19 @@
-# Kunnin’ Kodex lists (data 2026-10-23.4)
+# Kunnin’ Kodex lists (data 2026-10-23.5)
 
 Every army list in the owner’s Kunnin’ Kodex app, as the app shows it: army rules, detachment rules, enhancements, stratagems and every datasheet. The values are checked against New Recruit, BSData and GW’s rules. A value marked “already includes <rule>” already contains that rule’s bonus: never add it again.
 
-Lists: Me shooty yer’ booty (Orks) · Melee (Orks) · Princes (World Eaters) · Standard (World Eaters) · Pubstomper (Thousand Sons) · Nidzillas (Tyranids) · 6 bigs (Imperial Knights) · 4 megas and a destrier (Imperial Knights) · Ooga booga (Orks) · Super Terminators (World Eaters) · Purge goes the Foe (Adeptus Mechanicus) · Defilers and friends (Emperor’s Children) · Infernal Lance (Chaos Knights) · Woof Woof (Chaos Knights) · Big demons baby (World Eaters)
+Lists: Me shooty yer’ booty (Orks) · Melee (Orks) · Princes (World Eaters) · Standard (World Eaters) · Pubstomper (Thousand Sons) · Nidzillas (Tyranids) · 6 bigs (Imperial Knights) · 4 megas and a destrier (Imperial Knights) · Ooga booga (Orks) · Super Terminators (World Eaters) · Purge goes the Foe (Adeptus Mechanicus) · Defilers and friends (Emperor’s Children) · Infernal Lance (Chaos Knights) · Woof Woof (Chaos Knights) · Big demons baby (World Eaters) · Mucho Mutantes (Thousand Sons)
 
 # Core stratagems
-- Command Re-roll (1CP). WHEN: Any phase, just after you make one of the following rolls for a friendly unit or model:
-- **Advance roll**
-- **Charge roll**
-- **Damage roll**
-- **Hazard roll**
-- **Hit roll**
-- **Save roll**
-- **Wound roll**
-- A roll to determine the number of attacks generated with a weapon. TARGET: That unit or model. EFFECT: You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding **charge rolls**, which you must re-roll in full).
+- Command Re-roll (1CP). WHEN: Any phase, just after you make one of the following rolls for a friendly unit or model: · **Advance roll** · **Charge roll** · **Damage roll** · **Hazard roll** · **Hit roll** · **Save roll** · **Wound roll** · A roll to determine the number of attacks generated with a weapon. TARGET: That unit or model. EFFECT: You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding **charge rolls**, which you must re-roll in full).
 - Epic Challenge (1CP). WHEN: Fight phase, just after a friendly **CHARACTER** unit is **selected to fight**. TARGET: That **CHARACTER** unit. EFFECT: Select one **CHARACTER** model in your unit. Until the end of the phase, that model’s melee weapons have the **[PRECISION]** ability.
 - Insane Bravery (1CP). WHEN: Battle-shock step of your Command phase, just before you make a **battle-shock roll** for a friendly unit. TARGET: That unit. EFFECT: That **battle-shock roll** is automatically successful.
-- Explosives (1CP). WHEN: Your Shooting phase. TARGET: One friendly **unengaged** **EXPLOSIVES/GRENADES** unit that is **eligible to shoot** and did not make an **advance move** this turn. EFFECT: Resolve the following sequence: - 1. Select one **EXPLOSIVES/GRENADES** model in your unit. - 2. Select one **unengaged** enemy unit within 8" of and **visible** to that model. - 3. Roll six D6: for each 4+, that enemy unit suffers 1 **mortal wound** (06.02).
-- Crushing Impact (1CP). WHEN: Your Charge phase, just after a friendly **MONSTER/VEHICLE** unit ends a **charge move**. TARGET: That **MONSTER/VEHICLE** unit. EFFECT: Resolve the following sequence: - 1. Select one enemy unit **engaged** with your unit. - 2. Select one model in your unit **engaged** with that enemy unit. - 3. Roll a number of D6 equal to the **T** characteristic of that model: for each 1, your unit suffers 1 **mortal wound**; for each 5+, that enemy unit suffers 1 **mortal wound** (to a maximum of 6 **mortal wounds** per unit).
+- Explosives (1CP). WHEN: Your Shooting phase. TARGET: One friendly **unengaged** **EXPLOSIVES/GRENADES** unit that is **eligible to shoot** and did not make an **advance move** this turn. EFFECT: Resolve the following sequence: · 1. Select one **EXPLOSIVES/GRENADES** model in your unit. · 2. Select one **unengaged** enemy unit within 8" of and **visible** to that model. · 3. Roll six D6: for each 4+, that enemy unit suffers 1 **mortal wound** (06.02).
+- Crushing Impact (1CP). WHEN: Your Charge phase, just after a friendly **MONSTER/VEHICLE** unit ends a **charge move**. TARGET: That **MONSTER/VEHICLE** unit. EFFECT: Resolve the following sequence: · 1. Select one enemy unit **engaged** with your unit. · 2. Select one model in your unit **engaged** with that enemy unit. · 3. Roll a number of D6 equal to the **T** characteristic of that model: for each 1, your unit suffers 1 **mortal wound**; for each 5+, that enemy unit suffers 1 **mortal wound** (to a maximum of 6 **mortal wounds** per unit).
 - Rapid Ingress (1CP). WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in **strategic reserves** (excluding **AIRCRAFT**). EFFECT: Your unit makes an **ingress move** (20.04).
 - Fire Overwatch (1CP). WHEN: End of your opponent’s Movement phase. TARGET: One friendly **unengaged** unit (excluding **TITANIC** units). EFFECT: Your unit shoots using **snap shooting**.
 - Smokescreen (1CP). WHEN: Start of your opponent’s Shooting phase. TARGET: One friendly **SMOKE** unit. EFFECT: Until the end of the phase, each time an attack targets either your **SMOKE** unit, or a unit that is not **fully visible** to the attacking model because of one or more models in your **SMOKE** unit, the target has the **benefit of cover** against that attack (13.08).
-- Heroic Intervention (1CP). WHEN: End of your opponent’s Charge phase. TARGET: One friendly **unengaged** unit within 12" of one or more enemy units. You can only select a **VEHICLE** unit if it is a **CHARACTER/WALKER** unit. EFFECT: **Resolve a charge** with your unit (11.02). While doing so, before making the **charge roll**, you must select one of the following modes: - **Leap to Defend:** When selecting **charge targets**, you can only select enemy units that made a **charge move** this phase and are within the **maximum distance**. - **Into the Fray (+1CP):** When making the **charge roll**, if the result is greater than 6 (after modifiers), change it to 6. When selecting **charge targets**, you can select any enemy units that are within 6" of your unit and within the **maximum distance**.
+- Heroic Intervention (1CP). WHEN: End of your opponent’s Charge phase. TARGET: One friendly **unengaged** unit within 12" of one or more enemy units. You can only select a **VEHICLE** unit if it is a **CHARACTER/WALKER** unit. EFFECT: **Resolve a charge** with your unit (11.02). While doing so, before making the **charge roll**, you must select one of the following modes: · **Leap to Defend:** When selecting **charge targets**, you can only select enemy units that made a **charge move** this phase and are within the **maximum distance**. · **Into the Fray (+1CP):** When making the **charge roll**, if the result is greater than 6 (after modifiers), change it to 6. When selecting **charge targets**, you can select any enemy units that are within 6" of your unit and within the **maximum distance**.
 - Counteroffensive (2CP). WHEN: Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks. TARGET: One friendly unit that is **eligible to fight**. EFFECT: Until the end of the phase, your unit has the **Fights First** ability and it must be the next unit you **select to fight** (12.04).
 
 ---
@@ -92,7 +84,7 @@ In your Shooting phase, when a friendly **BREAKA BOYZ**/**FLASH GITZ**/**TANKBUS
 
 ## Units
 
-### Wazdakka Gutsmek · Epic Hero · 200 pts
+### Me shooty yer’ booty · Wazdakka Gutsmek · Epic Hero · 200 pts
 Models: 1× Wazdakka Gutsmek
 Stats: Wazdakka Gutsmek M 14" T 8 Sv 3+ W 10 Ld 6+ OC 3 InSv 4+
 Ranged weapons:
@@ -110,7 +102,7 @@ Abilities:
 Rules: Deadly Demise D3, Deep Strike, Lone Operative, Waaagh!
 Keywords: Character, Epic Hero, Faction: Orks, Mounted, Smoke, Speed Freeks, Vehicle, Wazdakka Gutsmek
 
-### Big Mek Dakkarig · Character · 190 pts
+### Me shooty yer’ booty · Big Mek Dakkarig · Character · 190 pts
 Enhancement: Dreadherder
 Models: 1× Big Mek Dakkarig
 Stats: Big Mek Dakkarig M 8" T 8 Sv 3+ W 11 Ld 7+ OC 3 InSv 5+
@@ -126,7 +118,7 @@ Abilities:
 Rules: Deadly Demise 1, Waaagh!
 Keywords: Big Mek, Big Mek Dakkarig, Character, Faction: Orks, Vehicle, Walker
 
-### Big Mek Dakkarig · Character · 170 pts
+### Me shooty yer’ booty · Big Mek Dakkarig · Character · 170 pts
 Enhancement: Cybork Boosta
 Models: 1× Big Mek Dakkarig
 Stats: Big Mek Dakkarig M 10" T 8 Sv 3+ W 11 Ld 7+ OC 3 InSv 5+ [M already includes Cybork Boosta]
@@ -142,7 +134,7 @@ Abilities:
 Rules: Deadly Demise 1, Waaagh!
 Keywords: Big Mek, Big Mek Dakkarig, Character, Faction: Orks, Vehicle, Walker
 
-### Big Mek in Mega Armour · Character · 115 pts
+### Me shooty yer’ booty · Big Mek in Mega Armour · Character · 115 pts
 Enhancement: Supa-glowy Fing
 Models: 1× Big Mek in Mega Armour
 Stats: Big Mek in Mega Armour M 5" T 6 Sv 2+ W 5 Ld 7+ OC 1 InSv –
@@ -158,7 +150,7 @@ Abilities:
 Rules: Waaagh!, Leader, Supa-hazardous
 Keywords: Big Mek, Big Mek in Mega Armour, Character, Explosives, Faction: Orks, Infantry, Mega Armour
 
-### Warboss · Character · 100 pts
+### Me shooty yer’ booty · Warboss · Character · 100 pts
 Warlord
 Models: 1× Warboss
 Stats: Warboss M 6" T 6 Sv 4+ W 6 Ld 6+ OC 1 InSv 5+
@@ -173,7 +165,7 @@ Abilities:
 Rules: Da Boss, Leader, Waaagh!
 Keywords: Character, Faction: Orks, Grenades, Infantry, Warboss, Warlord
 
-### Mek + Tankbustas · Character · 215 pts each, ×2 in the list
+### Me shooty yer’ booty · Mek + Tankbustas · Character · 215 pts each, ×2 in the list
 Supports Tankbustas
 Models: 1× Mek; 1× Nob; 1× Tankbusta w/ Two Busta Rokkit Launchas; 4× Tankbusta w/ Busta Rokkit Launcha
 Stats: Mek M 6" T 5 Sv 5+ W 4 Ld 7+ OC 1 InSv – | Nob M 6" T 5 Sv 4+ W 3 Ld 7+ OC 1 InSv – | Tankbusta ×5 M 6" T 5 Sv 4+ W 2 Ld 7+ OC 1 InSv –
@@ -196,7 +188,7 @@ Abilities:
 Rules: Waaagh!, Support
 Keywords: Character, Explosives, Faction: Orks, Infantry, Mek, Tankbustas
 
-### Mek + Flash Gitz · Character · 300 pts
+### Me shooty yer’ booty · Mek + Flash Gitz · Character · 300 pts
 Upgrade: Supa-snazz Dakka · Supports Flash Gitz
 Models: 1× Mek; 1× Kaptin; 9× Flash Gitz
 Stats: Mek M 6" T 5 Sv 5+ W 4 Ld 7+ OC 1 InSv – | Flash Gitz M 6" T 5 Sv 4+ W 3 Ld 7+ OC 1 InSv –
@@ -216,7 +208,7 @@ Abilities:
 Rules: Waaagh!, Support
 Keywords: Character, Explosives, Faction: Orks, Infantry, Mek, Flash Gitz
 
-### Gretchin · Infantry · 45 pts each, ×3 in the list
+### Me shooty yer’ booty · Gretchin · Infantry · 45 pts each, ×3 in the list
 Models: 10× Gretchin
 Stats: Gretchin ×10 M 6" T 2 Sv 6+ W 1 Ld 8+ OC 1 InSv –
 Ranged weapons:
@@ -229,7 +221,7 @@ Abilities:
 Rules: Waaagh!
 Keywords: Faction: Orks, Gretchin, Grots, Infantry
 
-### Deffkoptas · Mounted · 85 pts
+### Me shooty yer’ booty · Deffkoptas · Mounted · 85 pts
 Models: 3× Deffkopta
 Stats: Deffkoptas ×3 M 12" T 6 Sv 4+ W 4 Ld 7+ OC 2 InSv 6+
 Ranged weapons:
@@ -245,7 +237,7 @@ Abilities:
 Rules: Deep Strike, Waaagh!
 Keywords: Deffkoptas, Explosives, Faction: Orks, Fly, Mounted, Speed Freeks
 
-### Killa Kans · Vehicle · 275 pts
+### Me shooty yer’ booty · Killa Kans · Vehicle · 275 pts
 Models: 6× Killa Kan
 Stats: Killa Kan ×6 M 8" T 7 Sv 3+ W 5 Ld 8+ OC 2 InSv 6+
 Ranged weapons:
@@ -303,7 +295,7 @@ Friendly **ORKS** units’ melee attacks have **[SUSTAINED HITS 1]**.
 
 ## Units
 
-### Ghazghkull Thraka · Epic Hero · 290 pts
+### Melee · Ghazghkull Thraka · Epic Hero · 290 pts
 Warlord
 Models: 1× Ghazghkull Thraka
 Stats: Ghazghkull Thraka M 8" T 10 Sv 2+ W 16 Ld 6+ OC 4 InSv 4+
@@ -321,7 +313,7 @@ Abilities:
 Rules: Waaagh!, Da Boss
 Keywords: Character, Epic Hero, Explosives, Faction: Orks, Ghazghkull Thraka, Infantry, Warboss, Warlord
 
-### Mozrog Skragbad · Epic Hero · 170 pts
+### Melee · Mozrog Skragbad · Epic Hero · 170 pts
 Models: 1× Mozrog Skragbad
 Stats: Mozrog Skragbad M 10" T 9 Sv 3+ W 10 Ld 6+ OC 3 InSv 4+
 Ranged weapons:
@@ -337,7 +329,7 @@ Abilities:
 Rules: Feel No Pain 5+, Waaagh!
 Keywords: Beast Snagga, Character, Epic Hero, Faction: Orks, Monster, Mozrog Skragbad
 
-### Nazdreg + Meganobz · Epic Hero · 365 pts
+### Melee · Nazdreg + Meganobz · Epic Hero · 365 pts
 Leads Meganobz
 Models: 1× Nazdreg; 5× Meganob w/ Twin Killsaw
 Stats: Nazdreg M 5" T 7 Sv 2+ W 8 Ld 6+ OC 1 InSv 5+ | Meganob ×5 M 5" T 6 Sv 2+ W 3 Ld 7+ OC 1 InSv –
@@ -358,7 +350,7 @@ Abilities:
 Rules: Waaagh!, Leader, Da Boss, Deep Strike
 Keywords: Character, Epic Hero, Faction: Orks, Infantry, Mega Armour, Nazdreg, Warboss, Explosives, Meganobz
 
-### Beastboss on Squigosaur · Character · 155 pts
+### Melee · Beastboss on Squigosaur · Character · 155 pts
 Enhancement: Headwoppa’s Killchoppa
 Models: 1× Beastboss on Squigosaur
 Stats: Beastboss on Squigosaur M 10" T 9 Sv 3+ W 10 Ld 6+ OC 3 InSv 5+
@@ -377,7 +369,7 @@ Abilities:
 Rules: Da Boss, Waaagh!, Feel No Pain 5+
 Keywords: Beast Snagga, Beastboss on Squigosaur, Character, Faction: Orks, Monster, Warboss
 
-### Big Mek + Painboy + Nobz · Character · 405 pts
+### Melee · Big Mek + Painboy + Nobz · Character · 405 pts
 Enhancement: Kunnin’ But Brutal · Leads Nobz
 Models: 1× Big Mek; 1× Painboy; 8× Nob w/ Kustom Shoota and Kustom Krumpa; 2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)
 Stats: Big Mek M 6" T 5 Sv 3+ W 6 Ld 7+ OC 1 InSv – | Painboy M 6" T 5 Sv 5+ W 3 Ld 7+ OC 1 InSv – | Nob ×10 M 6" T 5 Sv 4+ W 3 Ld 7+ OC 1 InSv –
@@ -401,7 +393,7 @@ Abilities:
 Rules: Waaagh!, Leader, Support
 Keywords: Big Mek, Character, Explosives, Faction: Orks, Infantry, Painboy, Nobz
 
-### Big Mek in Mega Armour + Meganobz · Character · 310 pts
+### Melee · Big Mek in Mega Armour + Meganobz · Character · 310 pts
 Enhancement: Follow Me Ladz · Leads Meganobz
 Models: 1× Big Mek in Mega Armour (Kustom Force Field); 5× Meganob w/ Twin Killsaw
 Stats: Big Mek in Mega Armour M 7" T 6 Sv 2+ W 5 Ld 7+ OC 1 InSv 4+* [M already includes Follow Me Ladz] | Meganob ×5 M 7" T 6 Sv 2+ W 3 Ld 7+ OC 1 InSv 4+* [M already includes Follow Me Ladz]
@@ -420,7 +412,7 @@ Abilities:
 Rules: Waaagh!, Leader
 Keywords: Big Mek, Big Mek in Mega Armour, Character, Explosives, Faction: Orks, Infantry, Mega Armour, Meganobz
 
-### Gretchin · Infantry · 45 pts each, ×2 in the list
+### Melee · Gretchin · Infantry · 45 pts each, ×2 in the list
 Models: 10× Gretchin
 Stats: Gretchin ×10 M 6" T 2 Sv 6+ W 1 Ld 8+ OC 1 InSv –
 Ranged weapons:
@@ -433,7 +425,7 @@ Abilities:
 Rules: Waaagh!
 Keywords: Faction: Orks, Gretchin, Grots, Infantry
 
-### Deffkoptas · Mounted · 85 pts
+### Melee · Deffkoptas · Mounted · 85 pts
 Models: 2× Deffkopta; 1× Deffkopta w/ Kustom mega-blasta
 Stats: Deffkoptas ×3 M 12" T 6 Sv 4+ W 4 Ld 7+ OC 2 InSv 6+
 Ranged weapons:
@@ -450,7 +442,7 @@ Abilities:
 Rules: Deep Strike, Waaagh!
 Keywords: Deffkoptas, Explosives, Faction: Orks, Fly, Mounted, Speed Freeks
 
-### Squighog Boyz · Mounted · 130 pts
+### Melee · Squighog Boyz · Mounted · 130 pts
 Models: 1× Nob on Smasha Squig; 3× Squighog Boy
 Stats: Nob on Smasha Squig M 10" T 6 Sv 4+ W 4 Ld 7+ OC 2 InSv 6+ | Squighog Boyz ×3 M 10" T 6 Sv 4+ W 3 Ld 7+ OC 2 InSv 6+
 Ranged weapons:
@@ -522,7 +514,7 @@ When a friendly **WORLD EATERS CHARACTER** unit (excluding **EPIC HERO** units) 
 
 ## Units
 
-### Khârn the Betrayer + Khorne Berzerkers · Epic Hero · 285 pts
+### Princes · Khârn the Betrayer + Khorne Berzerkers · Epic Hero · 285 pts
 Leads Khorne Berzerkers
 Models: 1× Khârn the Betrayer; 1× Khorne Berzerker Champion; 7× Khorne Berzerker; 2× Khorne Berzerker w/ eviscerator and plasma pistol
 Stats: Khârn the Betrayer M 8" T 5 Sv 3+ W 5 Ld 6+ OC 1 InSv 4+ | Khorne Berzerker ×10 M 8" T 5 Sv 3+ W 2 Ld 6+ OC 2 InSv –
@@ -546,7 +538,7 @@ Abilities:
 Rules: Leader, Blessings of Khorne, Pistol, Hazardous
 Keywords: Chaos, Character, Epic Hero, Faction: World Eaters, Grenades, Infantry, Khorne, Khârn the Betrayer, Battleline, Berzerkers
 
-### Daemon Prince of Khorne · Character · 230 pts
+### Princes · Daemon Prince of Khorne · Character · 230 pts
 Warlord · Enhancement: Helm of Brazen Ire
 Models: 1× Daemon Prince of Khorne
 Stats: Daemon Prince of Khorne M 10" T 10 Sv 2+ W 10 Ld 6+ OC 3 InSv 4+
@@ -563,7 +555,7 @@ Abilities:
 Rules: Deadly Demise D3, Blessings of Khorne, Rapid Fire
 Keywords: Chaos, Character, Daemon, Daemon Prince, Faction: World Eaters, Khorne, Monster, Warlord
 
-### Daemon Prince of Khorne · Character · 235 pts
+### Princes · Daemon Prince of Khorne · Character · 235 pts
 Enhancement: Berzerker Glaive
 Models: 1× Daemon Prince of Khorne
 Stats: Daemon Prince of Khorne M 10" T 10 Sv 2+ W 10 Ld 6+ OC 3 InSv 4+
@@ -580,7 +572,7 @@ Abilities:
 Rules: Deadly Demise D3, Blessings of Khorne, Rapid Fire
 Keywords: Chaos, Character, Daemon, Daemon Prince, Faction: World Eaters, Khorne, Monster
 
-### Lord on Juggernaut + Khorne Berzerkers · Character · 455 pts
+### Princes · Lord on Juggernaut + Khorne Berzerkers · Character · 455 pts
 Enhancement: Archslaughterer · Leads Khorne Berzerkers
 Models: 1× Lord on Juggernaut; 1× Khorne Berzerker Champion; 15× Khorne Berzerker; 3× Khorne Berzerker w/ eviscerator and plasma pistol; 1× Khorne Berzerker w/ eviscerator and plasma pistol (Icon of Khorne)
 Stats: Lord on Juggernaut M 10" T 6 Sv 3+ W 7 Ld 6+ OC 2 InSv 4+ | Khorne Berzerker ×20 M 10" T 5 Sv 3+ W 2 Ld 6+ OC 2 InSv – [M already includes Aggressive Advance]
@@ -605,7 +597,7 @@ Abilities:
 Rules: Leader, Blessings of Khorne, Extra Attacks, Lance, Pistol, Hazardous
 Keywords: Chaos, Character, Faction: World Eaters, Khorne, Lord on Juggernaut, Mounted, Battleline, Berzerkers, Grenades, Infantry
 
-### Slaughterbound + Exalted Eightbound · Character · 240 pts
+### Princes · Slaughterbound + Exalted Eightbound · Character · 240 pts
 Enhancement: Battle-lust · Leads Exalted Eightbound
 Models: 1× Slaughterbound; 1× Exalted Eightbound Champion; 2× Exalted Eightbound
 Stats: Slaughterbound M 10" T 6 Sv 3+ W 6 Ld 6+ OC 1 InSv 5+ | Exalted Eightbound ×3 M 10" T 6 Sv 3+ W 3 Ld 6+ OC 1 InSv 5+
@@ -621,7 +613,7 @@ Abilities:
 Rules: Leader, Deadly Demise D3, Blessings of Khorne, Deep Strike, Scouts 6", Anti
 Keywords: Chaos, Character, Daemon, Faction: World Eaters, Infantry, Khorne, Possessed, Slaughterbound, Exalted Eightbound
 
-### Chaos Rhino · Dedicated Transport · 75 pts
+### Princes · Chaos Rhino · Dedicated Transport · 75 pts
 Models: 1× Chaos Rhino
 Stats: Chaos Rhino M 12" T 9 Sv 3+ W 10 Ld 6+ OC 2 InSv –
 Ranged weapons:
@@ -634,7 +626,7 @@ Abilities:
 Rules: Deadly Demise D3, Blessings of Khorne, Firing Deck 2, Rapid Fire
 Keywords: Chaos, Dedicated Transport, Faction: World Eaters, Frame, Khorne, Rhino, Smoke, Transport, Vehicle
 
-### Eightbound · Infantry · 125 pts
+### Princes · Eightbound · Infantry · 125 pts
 Models: 1× Eightbound Champion; 2× Eightbound
 Stats: Eightbound M 10" T 6 Sv 3+ W 3 Ld 6+ OC 1 InSv 5+
 Melee weapons:
@@ -644,7 +636,7 @@ Abilities:
 Rules: Scouts 6", Blessings of Khorne
 Keywords: Chaos, Daemon, Eightbound, Faction: World Eaters, Infantry, Khorne, Possessed
 
-### Jakhals · Infantry · 65 pts
+### Princes · Jakhals · Infantry · 65 pts
 Models: 1× Jakhal Pack Leader; 1× Dishonoured w/ paired manglers; 8× Jakhal
 Stats: Jakhal M 7" T 4 Sv 6+ W 1 Ld 7+ OC 1 InSv – | Dishonoured w/ paired manglers M 7" T 4 Sv 6+ W 1 Ld 7+ OC 1 InSv –
 Ranged weapons:
@@ -657,7 +649,7 @@ Abilities:
 Rules: Blessings of Khorne, Pistol
 Keywords: Chaos, Faction: World Eaters, Grenades, Infantry, Jakhals, Khorne
 
-### Forgefiend · Vehicle · 145 pts each, ×2 in the list
+### Princes · Forgefiend · Vehicle · 145 pts each, ×2 in the list
 Models: 1× Forgefiend
 Stats: Forgefiend M 10" T 10 Sv 3+ W 12 Ld 6+ OC 3 InSv 5+
 Ranged weapons:
@@ -726,7 +718,7 @@ When a friendly **WORLD EATERS CHARACTER** unit (excluding **EPIC HERO** units) 
 
 ## Units
 
-### Angron · Epic Hero · 330 pts
+### Standard · Angron · Epic Hero · 330 pts
 Warlord
 Models: 1× Angron
 Stats: Angron M 14" T 11 Sv 2+ W 16 Ld 5+ OC 6 InSv 4+
@@ -743,7 +735,7 @@ Abilities:
 Rules: Deadly Demise D6, Deep Strike, Blessings of Khorne, Devastating Wounds
 Keywords: Angron, Chaos, Character, Daemon, Epic Hero, Faction: World Eaters, Fly, Khorne, Monster, Primarch, Warlord
 
-### Khârn the Betrayer + Khorne Berzerkers · Epic Hero · 285 pts
+### Standard · Khârn the Betrayer + Khorne Berzerkers · Epic Hero · 285 pts
 Leads Khorne Berzerkers
 Models: 1× Khârn the Betrayer; 1× Khorne Berzerker Champion; 7× Khorne Berzerker; 2× Khorne Berzerker w/ eviscerator and plasma pistol
 Stats: Khârn the Betrayer M 8" T 5 Sv 3+ W 5 Ld 6+ OC 1 InSv 4+ | Khorne Berzerker ×10 M 8" T 5 Sv 3+ W 2 Ld 6+ OC 2 InSv –
@@ -767,7 +759,7 @@ Abilities:
 Rules: Leader, Blessings of Khorne, Pistol, Hazardous
 Keywords: Chaos, Character, Epic Hero, Faction: World Eaters, Grenades, Infantry, Khorne, Khârn the Betrayer, Battleline, Berzerkers
 
-### Lord on Juggernaut · Character · 95 pts
+### Standard · Lord on Juggernaut · Character · 95 pts
 Models: 1× Lord on Juggernaut
 Stats: Lord on Juggernaut M 10" T 6 Sv 3+ W 7 Ld 6+ OC 2 InSv 4+
 Ranged weapons:
@@ -782,7 +774,7 @@ Abilities:
 Rules: Leader, Blessings of Khorne, Extra Attacks, Lance, Pistol, Hazardous
 Keywords: Chaos, Character, Faction: World Eaters, Khorne, Lord on Juggernaut, Mounted
 
-### Slaughterbound · Character · 90 pts
+### Standard · Slaughterbound · Character · 90 pts
 Models: 1× Slaughterbound
 Stats: Slaughterbound M 10" T 6 Sv 3+ W 6 Ld 6+ OC 1 InSv 5+
 Melee weapons:
@@ -794,7 +786,7 @@ Abilities:
 Rules: Leader, Deadly Demise D3, Blessings of Khorne
 Keywords: Chaos, Character, Daemon, Faction: World Eaters, Infantry, Khorne, Possessed, Slaughterbound
 
-### Slaughterbound + Exalted Eightbound · Character · 255 pts
+### Standard · Slaughterbound + Exalted Eightbound · Character · 255 pts
 Enhancement: Berzerker Glaive · Leads Exalted Eightbound
 Models: 1× Slaughterbound; 1× Exalted Eightbound Champion; 2× Exalted Eightbound
 Stats: Slaughterbound M 10" T 6 Sv 3+ W 6 Ld 6+ OC 1 InSv 5+ | Exalted Eightbound ×3 M 10" T 6 Sv 3+ W 3 Ld 6+ OC 1 InSv 5+
@@ -810,7 +802,7 @@ Abilities:
 Rules: Leader, Deadly Demise D3, Blessings of Khorne, Deep Strike, Scouts 6", Anti
 Keywords: Chaos, Character, Daemon, Faction: World Eaters, Infantry, Khorne, Possessed, Slaughterbound, Exalted Eightbound
 
-### Chaos Rhino · Dedicated Transport · 75 pts
+### Standard · Chaos Rhino · Dedicated Transport · 75 pts
 Models: 1× Chaos Rhino
 Stats: Chaos Rhino M 12" T 9 Sv 3+ W 10 Ld 6+ OC 2 InSv –
 Ranged weapons:
@@ -823,7 +815,7 @@ Abilities:
 Rules: Deadly Demise D3, Blessings of Khorne, Firing Deck 2, Rapid Fire
 Keywords: Chaos, Dedicated Transport, Faction: World Eaters, Frame, Khorne, Rhino, Smoke, Transport, Vehicle
 
-### Eightbound · Infantry · 125 pts each, ×2 in the list
+### Standard · Eightbound · Infantry · 125 pts each, ×2 in the list
 Models: 1× Eightbound Champion; 2× Eightbound
 Stats: Eightbound M 10" T 6 Sv 3+ W 3 Ld 6+ OC 1 InSv 5+
 Melee weapons:
@@ -833,7 +825,7 @@ Abilities:
 Rules: Scouts 6", Blessings of Khorne
 Keywords: Chaos, Daemon, Eightbound, Faction: World Eaters, Infantry, Khorne, Possessed
 
-### Exalted Eightbound · Infantry · 130 pts
+### Standard · Exalted Eightbound · Infantry · 130 pts
 Models: 1× Exalted Eightbound Champion; 2× Exalted Eightbound
 Stats: Exalted Eightbound M 10" T 6 Sv 3+ W 3 Ld 6+ OC 1 InSv 5+
 Melee weapons:
@@ -843,7 +835,7 @@ Abilities:
 Rules: Deep Strike, Blessings of Khorne, Anti
 Keywords: Chaos, Daemon, Exalted Eightbound, Faction: World Eaters, Infantry, Khorne, Possessed
 
-### Goremongers · Infantry · 70 pts
+### Standard · Goremongers · Infantry · 70 pts
 Models: 1× Blood Herald; 7× Goremonger w/ chainblade
 Stats: Goremongers M 9" T 4 Sv 6+ W 1 Ld 7+ OC 1 InSv –
 Ranged weapons:
@@ -856,7 +848,7 @@ Abilities:
 Rules: Infiltrators, Blessings of Khorne, Pistol, Lance
 Keywords: Chaos, Faction: World Eaters, Goremongers, Grenades, Infantry, Khorne
 
-### Jakhals · Infantry · 65 pts each, ×2 in the list
+### Standard · Jakhals · Infantry · 65 pts each, ×2 in the list
 Models: 1× Jakhal Pack Leader; 1× Dishonoured w/ paired manglers; 8× Jakhal
 Stats: Jakhal M 7" T 4 Sv 6+ W 1 Ld 7+ OC 1 InSv – | Dishonoured w/ paired manglers M 7" T 4 Sv 6+ W 1 Ld 7+ OC 1 InSv –
 Ranged weapons:
@@ -869,7 +861,7 @@ Abilities:
 Rules: Blessings of Khorne, Pistol
 Keywords: Chaos, Faction: World Eaters, Grenades, Infantry, Jakhals, Khorne
 
-### Forgefiend · Vehicle · 145 pts each, ×2 in the list
+### Standard · Forgefiend · Vehicle · 145 pts each, ×2 in the list
 Models: 1× Forgefiend
 Stats: Forgefiend M 10" T 10 Sv 3+ W 12 Ld 6+ OC 3 InSv 5+
 Ranged weapons:
@@ -930,7 +922,7 @@ In your Command phase, you can select one of the abilities listed below to take 
 
 ## Units
 
-### Magnus the Red · Epic Hero · 455 pts
+### Pubstomper · Magnus the Red · Epic Hero · 455 pts
 Warlord
 Models: 1× Magnus the Red
 Stats: Magnus the Red M 14" T 11 Sv 2+ W 16 Ld 5+ OC 6 InSv 4+
@@ -950,7 +942,7 @@ Abilities:
 Rules: Deep Strike, Deadly Demise D6, Cabal of Sorcerers, Devastating Wounds, Psychic, Blast, Ignores Cover
 Keywords: Chaos, Character, Daemon, Epic Hero, Faction: Thousand Sons, Fly, Magnus the Red, Monster, Primarch, Psyker, Tzeentch, Warlord
 
-### Daemon Prince of Tzeentch with wings · Character · 205 pts
+### Pubstomper · Daemon Prince of Tzeentch with wings · Character · 205 pts
 Enhancement: Eldritch Vortex of E’taph
 Models: 1× Daemon Prince of Tzeentch with wings
 Stats: Daemon Prince of Tzeentch with wings M 13" T 9 Sv 2+ W 10 Ld 6+ OC 3 InSv 4+
@@ -967,31 +959,32 @@ Abilities:
 Rules: Deadly Demise D3, Cabal of Sorcerers, Deep Strike, Ignores Cover, Sustained Hits, Psychic, Devastating Wounds
 Keywords: Chaos, Character, Daemon, Daemon Prince, Faction: Thousand Sons, Fly, Monster, Psyker, Tzeentch
 
-### Sorcerer + Rubric Marines · Character · 215 pts
-Leads Rubric Marines
-Models: 1× Sorcerer; 1× Aspiring Sorcerer; 1× Rubric Marine w/ soulreaper cannon; 3× Rubric Marine w/ warpflamer
-Stats: Sorcerer M 6" T 5 Sv 3+ W 4 Ld 6+ OC 1 InSv 5+ | Rubric Marine M 6" T 5 Sv 3+ W 2 Ld 7+ OC 2 InSv 5+ | Aspiring Sorcerer M 6" T 5 Sv 3+ W 3 Ld 6+ OC 2 InSv 5+
+### Pubstomper · Exalted Sorcerer + Rubric Marines · Character · 230 pts
+Enhancement: Incandaeum · Leads Rubric Marines
+Models: 1× Exalted Sorcerer; 1× Aspiring Sorcerer; 1× Rubric Marine w/ soulreaper cannon; 3× Rubric Marine w/ warpflamer
+Stats: Exalted Sorcerer M 6" T 5 Sv 3+ W 5 Ld 6+ OC 1 InSv 4+ | Rubric Marine M 6" T 5 Sv 3+ W 2 Ld 7+ OC 2 InSv 4+ [InSv already includes Arcane Shield] | Aspiring Sorcerer M 6" T 5 Sv 3+ W 3 Ld 6+ OC 2 InSv 4+ [InSv already includes Arcane Shield]
 Ranged weapons:
-- Inferno bolt pistol · Sorcerer: 12", A 1, BS 3+, S 5, AP -2, D 1 [PISTOL, LETHAL HITS] [LETHAL HITS already includes Empyric Guidance]
-- Pandaemonic Delusion · Sorcerer: 24", A 6, BS 3+, S 5, AP -1, D 1 [PSYCHIC, SUSTAINED HITS 3, LETHAL HITS] [LETHAL HITS already includes Empyric Guidance]
-- Malefic Curse · Rubric Marines: 24", A 3, BS 3+, S 4, AP -3, D 1 [ANTI-INFANTRY 4+, DEVASTATING WOUNDS, IGNORES COVER, PSYCHIC, LETHAL HITS] [IGNORES COVER already includes Icon of Flame; LETHAL HITS already includes Empyric Guidance]
-- Warpflame pistol · Rubric Marines: 12", A D6, BS –, S 3, AP -1, D 1 [IGNORES COVER, PISTOL, TORRENT, LETHAL HITS] [LETHAL HITS already includes Empyric Guidance]
-- Soulreaper cannon · Rubric Marines: 24", A 6, BS 3+, S 6, AP -2, D 1 [DEVASTATING WOUNDS, IGNORES COVER, LETHAL HITS] [IGNORES COVER already includes Icon of Flame; LETHAL HITS already includes Empyric Guidance]
-- Warpflamer ×3 · Rubric Marines: 12", A D6, BS –, S 4, AP -1, D 1 [IGNORES COVER, TORRENT, LETHAL HITS] [LETHAL HITS already includes Empyric Guidance]
+- Astral Blast · Exalted Sorcerer: 18", A D6, BS 2+, S 6, AP -2, D D3 [BLAST, DEVASTATING WOUNDS, PSYCHIC]
+- Inferno bolt pistol · Exalted Sorcerer: 12", A 1, BS 2+, S 5, AP -2, D 1 [PISTOL]
+- Malefic Curse · Rubric Marines: 24", A 3, BS 3+, S 4, AP -3, D 1 [ANTI-INFANTRY 4+, DEVASTATING WOUNDS, IGNORES COVER, PSYCHIC] [IGNORES COVER already includes Icon of Flame]
+- Warpflame pistol · Rubric Marines: 12", A D6, BS –, S 3, AP -1, D 1 [IGNORES COVER, PISTOL, TORRENT]
+- Soulreaper cannon · Rubric Marines: 24", A 6, BS 3+, S 6, AP -2, D 1 [DEVASTATING WOUNDS, IGNORES COVER] [IGNORES COVER already includes Icon of Flame]
+- Warpflamer ×3 · Rubric Marines: 12", A D6, BS –, S 4, AP -1, D 1 [IGNORES COVER, TORRENT]
 Melee weapons:
-- Force weapon · Sorcerer: Melee, A 4, WS 3+, S 6, AP -1, D D3 [PSYCHIC, LETHAL HITS] [LETHAL HITS already includes Empyric Guidance]
-- Prosperine khopesh · Sorcerer: Melee, A 3, WS 3+, S 5, AP -2, D 2 [LETHAL HITS] [LETHAL HITS already includes Empyric Guidance]
-- Force weapon · Rubric Marines: Melee, A 3, WS 3+, S 6, AP -1, D D3 [PSYCHIC, LETHAL HITS] [LETHAL HITS already includes Empyric Guidance]
-- Close combat weapon ×4 · Rubric Marines: Melee, A 2, WS 3+, S 5, AP 0, D 1 [LETHAL HITS] [LETHAL HITS already includes Empyric Guidance]
+- Force weapon · Exalted Sorcerer: Melee, A 5, WS 2+, S 6, AP -1, D D3 [PSYCHIC]
+- Prosperine khopesh · Exalted Sorcerer: Melee, A 4, WS 2+, S 5, AP -2, D 2
+- Force weapon · Rubric Marines: Melee, A 3, WS 3+, S 6, AP -1, D D3 [PSYCHIC]
+- Close combat weapon ×4 · Rubric Marines: Melee, A 2, WS 3+, S 5, AP 0, D 1
 Abilities:
-- Twisted Sorceries (Psychic) · Sorcerer: Once per battle, in your Shooting phase or the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristic of Psychic weapons equipped by this model by 3.
-- Empyric Guidance (Psychic) · Sorcerer: While this model is leading a unit, weapons equipped by models in that unit have the **[LETHAL HITS]** ability.
+- Arcane Shield (Psychic) · Exalted Sorcerer: While this model is leading a unit, models in that unit have a 4+ invulnerable save.
+- Rebind Rubricae (Psychic) · Exalted Sorcerer: In your Command phase, if this model is leading a unit, you can roll one D6: on a 1, that unit suffers D3 **mortal wounds**; on a 2-5, you can return 1 destroyed **Bodyguard** model to that unit; on a 6, you can return up to 2 destroyed Bodyguard models to that unit.
+- Incandaeum (Enhancement) · Exalted Sorcerer: **EXALTED SORCERER** model only. Once per battle, when selecting a **Ritual** for the bearer to attempt, you can select Doombolt, even if a model from your army have already attempted to manifest that Ritual this phase.
 - Bringers of Change · Rubric Marines: Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead.
 - Icon of Flame · Rubric Marines: Ranged weapons equipped by models in the bearer’s unit (excluding **CHARACTERS**) have the **[IGNORES COVER]** ability.
-Rules: Leader, Cabal of Sorcerers, Psychic, Pistol, Sustained Hits, Anti, Devastating Wounds, Torrent, Ignores Cover
-Keywords: Chaos, Character, Faction: Thousand Sons, Grenades, Infantry, Psyker, Sorcerer, Tzeentch, Battleline, Rubric, Rubric Marines, Rubricae
+Rules: Leader, Cabal of Sorcerers, Blast, Devastating Wounds, Psychic, Pistol, Anti, Torrent, Ignores Cover
+Keywords: Chaos, Character, Exalted Sorcerer, Faction: Thousand Sons, Grenades, Infantry, Psyker, Tzeentch, Battleline, Rubric, Rubric Marines, Rubricae
 
-### Sorcerer in Terminator Armour + Scarab Occult Terminators · Character · 565 pts
+### Pubstomper · Sorcerer in Terminator Armour + Scarab Occult Terminators · Character · 565 pts
 Enhancement: Umbralefic Crystal · Leads Scarab Occult Terminators
 Models: 1× Sorcerer in Terminator Armour; 1× Scarab Occult Sorcerer; 7× Scarab Occult Terminator; 2× Scarab Occult Terminator w/ soulreaper cannon
 Stats: Sorcerer in Terminator Armour M 5" T 6 Sv 2+ W 5 Ld 6+ OC 1 InSv 4+ | Scarab Occult Sorcerer M 5" T 6 Sv 2+ W 4 Ld 6+ OC 1 InSv 4+ | Scarab Occult Terminator ×9 M 5" T 6 Sv 2+ W 3 Ld 7+ OC 1 InSv 4+
@@ -1014,7 +1007,7 @@ Abilities:
 Rules: Leader, Deep Strike, Cabal of Sorcerers, Psychic, Anti, Devastating Wounds, Rapid Fire
 Keywords: Chaos, Character, Faction: Thousand Sons, Infantry, Psyker, Sorcerer, Terminator, Tzeentch, Rubricae, Scarab Occult
 
-### Tzaangors · Infantry · 75 pts
+### Pubstomper · Tzaangors · Infantry · 75 pts
 Models: 1× Twistbray; 7× Tzaangor w/ Tzaangor blades; 1× Tzaangor w/ Tzaangor blades (Brayhorn); 1× Tzaangor w/ Tzaangor blades (Herd banner)
 Stats: Tzaangors M 6" T 4 Sv 6+ W 1 Ld 7+ OC 1 InSv 6+
 Melee weapons:
@@ -1026,17 +1019,7 @@ Abilities:
 Rules: Scouts 6"
 Keywords: Chaos, Faction: Thousand Sons, Infantry, Mutant, Tzaangors, Tzeentch
 
-### Tzaangor Enlightened · Mounted · 50 pts each, ×2 in the list
-Models: 1× Aviarch; 2× Divining spear Enlightened
-Stats: Tzaangor Enlightened M 10" T 4 Sv 5+ W 2 Ld 7+ OC 2 InSv 5+
-Melee weapons:
-- Divining spear ×3: Melee, A 3, WS 4+, S 5, AP -1, D 2 [LANCE, PRECISION]
-Abilities:
-- Prophesied Doom: Each time this unit makes a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 **mortal wound**.
-Rules: Lance, Precision
-Keywords: Chaos, Faction: Thousand Sons, Fly, Mounted, Mutant, Tzaangor Enlightened, Tzeentch
-
-### Tzaangor Enlightened with Fatecaster greatbows · Mounted · 55 pts
+### Pubstomper · Tzaangor Enlightened with Fatecaster greatbows · Mounted · 55 pts
 Models: 1× Aviarch; 2× Enlightened
 Stats: Tzaangor Enlightened with Fatecaster greatbows M 10" T 4 Sv 5+ W 2 Ld 7+ OC 2 InSv 5+
 Ranged weapons:
@@ -1048,7 +1031,7 @@ Abilities:
 Rules: Ignores Cover, Lethal Hits, Precision
 Keywords: Chaos, Faction: Thousand Sons, Fly, Mounted, Mutant, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster Greatbows, Tzeentch
 
-### Defiler · Vehicle · 330 pts
+### Pubstomper · Defiler · Vehicle · 330 pts
 Models: 1× Defiler
 Stats: Defiler M 12" T 11 Sv 3+ W 18 Ld 6+ OC 5 InSv 5+
 Ranged weapons:
@@ -1064,6 +1047,20 @@ Abilities:
 - Damaged: 1-6 wounds remaining: While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.
 Rules: Deadly Demise D6, Blast, Sustained Hits, Devastating Wounds
 Keywords: Chaos, Daemon, Defiler, Faction: Thousand Sons, Tzeentch, Vehicle, Walker
+
+### Pubstomper · Sekhetar Robots · Vehicle · 85 pts
+Models: 2× Sekhetar Robot w/ pyreflux meltagun
+Stats: Sekhetar Robots ×2 M 8" T 6 Sv 3+ W 4 Ld 7+ OC 1 InSv 5+
+Ranged weapons:
+- Heavy warpflamer ×2: 12", A D6, BS –, S 5, AP -2, D 1 [IGNORES COVER, TORRENT]
+- Hellfyre missile rack ×2: 36", A 2, BS 4+, S 10, AP -2, D 3
+- Pyreflux meltagun ×2: 12", A 1, BS 4+, S 10, AP -4, D D6 [MELTA 2]
+Melee weapons:
+- Close combat weapon ×2: Melee, A 3, WS 4+, S 5, AP 0, D 1
+Abilities:
+- Prophetic Sentinels: Once per turn, when you target this unit with the **Fire Overwatch**/**Heroic Intervention** stratagem, that use is -1 CP.
+Rules: Infiltrators, Stealth, Ignores Cover, Torrent, Melta
+Keywords: Chaos, Faction: Thousand Sons, Sekhetar Robots, Tzeentch, Vehicle, Walker
 
 ---
 
@@ -1114,7 +1111,7 @@ Friendly **NORN EMISSARY/NORN ASSIMILATOR** units have the following ability:
 
 ## Units
 
-### The Swarmlord · Epic Hero · 210 pts
+### Nidzillas · The Swarmlord · Epic Hero · 210 pts
 Models: 1× The Swarmlord
 Stats: The Swarmlord M 8" T 10 Sv 2+ W 10 Ld 7+ OC 3 InSv 4+
 Ranged weapons:
@@ -1128,7 +1125,7 @@ Abilities:
 Rules: Deadly Demise D3, Shadow in the Warp, Synapse, Leader, Twin-linked, Torrent
 Keywords: Character, Epic Hero, Faction: Tyranids, Great Devourer, Hive Tyrant, Monster, Psyker, Synapse, The Swarmlord
 
-### Hive Tyrant · Character · 220 pts
+### Nidzillas · Hive Tyrant · Character · 220 pts
 Warlord · Enhancement: Monstrous Nemesis
 Models: 1× Hive Tyrant
 Stats: Hive Tyrant M 8" T 10 Sv 2+ W 10 Ld 7+ OC 3 InSv 4+
@@ -1142,7 +1139,7 @@ Abilities:
 Rules: Deadly Demise D3, Shadow in the Warp, Synapse, Leader, Twin-linked, Extra Attacks
 Keywords: Character, Faction: Tyranids, Great Devourer, Hive Tyrant, Monster, Psyker, Synapse, Warlord
 
-### Neurogaunts · Infantry · 45 pts each, ×2 in the list
+### Nidzillas · Neurogaunts · Infantry · 45 pts each, ×2 in the list
 Models: 1× Neurogaunt Nodebeast; 10× Neurogaunt
 Stats: Neurogaunt Nodebeast M 6" T 3 Sv 6+ W 1 Ld 8+ OC 1 InSv – | Neurogaunt ×10 M 6" T 3 Sv 6+ W 1 Ld 8+ OC 1 InSv –
 Melee weapons:
@@ -1152,7 +1149,7 @@ Abilities:
 Rules: Synapse
 Keywords: Endless Multitude, Faction: Tyranids, Great Devourer, Infantry, Neurogaunts
 
-### Norn Assimilator · Monster · 280 pts
+### Nidzillas · Norn Assimilator · Monster · 280 pts
 Enhancement: Synaptoprescience
 Models: 1× Norn Assimilator
 Stats: Norn Assimilator M 10" T 11 Sv 2+ W 16 Ld 7+ OC 5 InSv 4+ [InSv already includes Synaptoprescience]
@@ -1170,7 +1167,7 @@ Abilities:
 Rules: Deadly Demise D6, Shadow in the Warp, Synapse, Harpooned, Extra Attacks
 Keywords: Faction: Tyranids, Great Devourer, Harvester, Monster, Norn Assimilator, Synapse
 
-### Norn Assimilator · Monster · 300 pts
+### Nidzillas · Norn Assimilator · Monster · 300 pts
 Enhancement: Synaptoprescience
 Models: 1× Norn Assimilator
 Stats: Norn Assimilator M 10" T 11 Sv 2+ W 16 Ld 7+ OC 5 InSv 4+ [InSv already includes Synaptoprescience]
@@ -1188,7 +1185,7 @@ Abilities:
 Rules: Deadly Demise D6, Shadow in the Warp, Synapse, Harpooned, Extra Attacks
 Keywords: Faction: Tyranids, Great Devourer, Harvester, Monster, Norn Assimilator, Synapse
 
-### Norn Emissary · Monster · 270 pts
+### Nidzillas · Norn Emissary · Monster · 270 pts
 Enhancement: Destabilising Predation
 Models: 1× Norn Emissary
 Stats: Norn Emissary M 10" T 11 Sv 2+ W 16 Ld 7+ OC 5 InSv 4+
@@ -1208,7 +1205,7 @@ Abilities:
 Rules: Deadly Demise D6, Shadow in the Warp, Synapse, Feel No Pain, Anti, Extra Attacks, Melta, Blast, Psychic
 Keywords: Faction: Tyranids, Great Devourer, Monster, Norn Emissary, Psyker, Synapse
 
-### Norn Emissary · Monster · 270 pts
+### Nidzillas · Norn Emissary · Monster · 270 pts
 Models: 1× Norn Emissary
 Stats: Norn Emissary M 10" T 11 Sv 2+ W 16 Ld 7+ OC 5 InSv 4+
 Ranged weapons:
@@ -1226,7 +1223,7 @@ Abilities:
 Rules: Deadly Demise D6, Shadow in the Warp, Synapse, Feel No Pain, Extra Attacks, Melta, Blast, Psychic
 Keywords: Faction: Tyranids, Great Devourer, Monster, Norn Emissary, Psyker, Synapse
 
-### Tyrannofex · Monster · 180 pts each, ×2 in the list
+### Nidzillas · Tyrannofex · Monster · 180 pts each, ×2 in the list
 Models: 1× Tyrannofex
 Stats: Tyrannofex M 9" T 12 Sv 2+ W 16 Ld 8+ OC 5 InSv –
 Ranged weapons:
@@ -1288,7 +1285,7 @@ Each time a model with this ability makes a **Normal**, **Advance** or **Fall Ba
 
 ## Units
 
-### Knight Destrier · Character · 265 pts each, ×2 in the list
+### 6 bigs · Knight Destrier · Character · 265 pts each, ×2 in the list
 Models: 1× Knight Destrier
 Stats: Knight Destrier M 12" T 10 Sv 3+ W 18 Ld 6+ OC 8 InSv 5+*
 Ranged weapons:
@@ -1306,7 +1303,7 @@ Abilities:
 Rules: Deadly Demise D6, Super-Heavy Walker, Code Chivalric, Assault, Rapid Fire, Blast
 Keywords: Bellatus, Character, Faction: Imperial Knights, Imperium, Knight Destrier, Titanic, Towering, Vehicle, Walker
 
-### Knight Errant · Character · 355 pts
+### 6 bigs · Knight Errant · Character · 355 pts
 Models: 1× Knight Errant
 Stats: Knight Errant M 10" T 11 Sv 3+ W 26 Ld 6+ OC 10 InSv 5+*
 Ranged weapons:
@@ -1324,7 +1321,7 @@ Abilities:
 Rules: Deadly Demise D6, Super-Heavy Walker, Code Chivalric, Bondsman, Melta, Blast
 Keywords: Character, Faction: Imperial Knights, Imperium, Knight Errant, Questoris, Titanic, Towering, Vehicle, Walker
 
-### Knight Paladin · Character · 375 pts each, ×2 in the list
+### 6 bigs · Knight Paladin · Character · 375 pts each, ×2 in the list
 Models: 1× Knight Paladin
 Stats: Knight Paladin M 10" T 11 Sv 3+ W 26 Ld 6+ OC 10 InSv 5+*
 Ranged weapons:
@@ -1343,7 +1340,7 @@ Abilities:
 Rules: Deadly Demise D6, Super-Heavy Walker, Code Chivalric, Bondsman, Rapid Fire, Blast, Melta
 Keywords: Character, Faction: Imperial Knights, Imperium, Knight Paladin, Questoris, Titanic, Towering, Vehicle, Walker
 
-### Knight Warden · Character · 365 pts
+### 6 bigs · Knight Warden · Character · 365 pts
 Warlord
 Models: 1× Knight Warden
 Stats: Knight Warden M 10" T 11 Sv 3+ W 26 Ld 6+ OC 10 InSv 5+*
@@ -1411,7 +1408,7 @@ Each time a model with this ability makes a **Normal**, **Advance** or **Fall Ba
 
 ## Units
 
-### Canis Rex · Epic Hero · 415 pts
+### 4 megas and a destrier · Canis Rex · Epic Hero · 415 pts
 Models: 1× Canis Rex; 1× Sir Hekhtur
 Stats: Canis Rex M 10" T 11 Sv 3+ W 26 Ld 6+ OC 10 InSv 5+* | Sir Hekhtur M 6" T 3 Sv 4+ W 3 Ld 5+ OC 1 InSv –
 Ranged weapons:
@@ -1432,7 +1429,7 @@ Abilities:
 Rules: Deadly Demise D6, Sustained Hits, Super-Heavy Walker, Blast, Code Chivalric, Lone Operative
 Keywords: Canis Rex, Character, Epic Hero, Faction: Imperial Knights, Imperium, Infantry, Questoris, Sir Hekhtur, Titanic, Towering, Vehicle, Walker
 
-### Cerastus Knight Atrapos · Character · 450 pts
+### 4 megas and a destrier · Cerastus Knight Atrapos · Character · 450 pts
 Enhancement: Bringer of Justice
 Models: 1× Cerastus Knight Atrapos
 Stats: Cerastus Knight Atrapos M 12" T 11 Sv 3+ W 28 Ld 6+ OC 10 InSv 5+
@@ -1452,7 +1449,7 @@ Abilities:
 Rules: Code Chivalric, Deadly Demise D6+2, Super-Heavy Walker, Bondsman, Sustained Hits, Blast, Devastating Wounds, Hazardous
 Keywords: Cerastus, Character, Faction: Imperial Knights, Imperium, Knight Atrapos, Titanic, Towering, Vehicle, Walker
 
-### Cerastus Knight Lancer · Character · 415 pts
+### 4 megas and a destrier · Cerastus Knight Lancer · Character · 415 pts
 Models: 1× Cerastus Knight Lancer
 Stats: Cerastus Knight Lancer M 14" T 11 Sv 3+ W 28 Ld 6+ OC 10 InSv 4+
 Ranged weapons:
@@ -1467,7 +1464,7 @@ Abilities:
 Rules: Deadly Demise D6+2, Code Chivalric, Super-Heavy Walker, Bondsman, Sustained Hits, Assault, Lance
 Keywords: Cerastus, Character, Faction: Imperial Knights, Imperium, Knight Lancer, Titanic, Towering, Vehicle, Walker
 
-### Knight Crusader · Character · 435 pts
+### 4 megas and a destrier · Knight Crusader · Character · 435 pts
 Enhancement: Hunter’s Eye
 Models: 1× Knight Crusader
 Stats: Knight Crusader M 10" T 11 Sv 3+ W 26 Ld 6+ OC 10 InSv 5+*
@@ -1489,7 +1486,7 @@ Abilities:
 Rules: Deadly Demise D6, Super-Heavy Walker, Code Chivalric, Sustained Hits, Bondsman, Ignores Cover, Torrent, Melta, Rapid Fire, Blast
 Keywords: Character, Faction: Imperial Knights, Imperium, Knight Crusader, Questoris, Titanic, Towering, Vehicle, Walker
 
-### Knight Destrier · Character · 285 pts
+### 4 megas and a destrier · Knight Destrier · Character · 285 pts
 Enhancement: Sanctuary
 Models: 1× Knight Destrier
 Stats: Knight Destrier M 12" T 10 Sv 3+ W 18 Ld 6+ OC 8 InSv 5+ [InSv already includes Sanctuary]
@@ -1575,7 +1572,7 @@ Friendly **ORKS INFANTRY** units’ ranged attacks have:
 
 ## Units
 
-### Ghazghkull Thraka · Epic Hero · 290 pts
+### Ooga booga · Ghazghkull Thraka · Epic Hero · 290 pts
 Warlord
 Models: 1× Ghazghkull Thraka
 Stats: Ghazghkull Thraka M 8" T 10 Sv 2+ W 16 Ld 6+ OC 4 InSv 4+
@@ -1593,7 +1590,7 @@ Abilities:
 Rules: Waaagh!, Da Boss
 Keywords: Character, Epic Hero, Explosives, Faction: Orks, Ghazghkull Thraka, Infantry, Warboss, Warlord
 
-### Nazdreg + Meganobz · Epic Hero · 365 pts
+### Ooga booga · Nazdreg + Meganobz · Epic Hero · 365 pts
 Leads Meganobz
 Models: 1× Nazdreg; 5× Meganob w/ Twin Killsaw
 Stats: Nazdreg M 5" T 7 Sv 2+ W 8 Ld 6+ OC 1 InSv 5+ | Meganob ×5 M 5" T 6 Sv 2+ W 3 Ld 7+ OC 1 InSv –
@@ -1614,7 +1611,7 @@ Abilities:
 Rules: Waaagh!, Leader, Da Boss, Deep Strike
 Keywords: Character, Epic Hero, Faction: Orks, Infantry, Mega Armour, Nazdreg, Warboss, Explosives, Meganobz
 
-### Zodgrod Wortsnagga + Runtherd + Gretchin · Epic Hero · 150 pts
+### Ooga booga · Zodgrod Wortsnagga + Runtherd + Gretchin · Epic Hero · 150 pts
 Upgrade: Extra Sneaky · Leads Gretchin
 Models: 1× Zodgrod Wortsnagga; 1× Runtherd; 20× Gretchin
 Stats: Zodgrod Wortsnagga M 6" T 5 Sv 5+ W 5 Ld 7+ OC 1 InSv 6+ | Runtherd M 6" T 5 Sv 5+ W 3 Ld 7+ OC 1 InSv – | Gretchin ×20 M 6" T 2 Sv 6+ W 1 Ld 8+ OC 1 InSv –
@@ -1635,7 +1632,7 @@ Abilities:
 Rules: Waaagh!, Leader, Support
 Keywords: Character, Epic Hero, Faction: Orks, Infantry, Runtherd, Zodgrod Wortsnagga, Battleline, Gretchin, Grots
 
-### Big Mek + Painboy + Nobz · Character · 385 pts each, ×2 in the list
+### Ooga booga · Big Mek + Painboy + Nobz · Character · 385 pts each, ×2 in the list
 Leads Nobz
 Models: 1× Big Mek; 1× Painboy; 8× Nob w/ Kombi-rokkit and Kustom Krumpa; 2× Nob w/ Kustom Krumpa and Paired Krumpas (Paired Krumpas)
 Stats: Big Mek M 6" T 5 Sv 3+ W 6 Ld 7+ OC 1 InSv – | Painboy M 6" T 5 Sv 5+ W 3 Ld 7+ OC 1 InSv – | Nob ×10 M 6" T 5 Sv 4+ W 3 Ld 7+ OC 1 InSv –
@@ -1659,7 +1656,7 @@ Abilities:
 Rules: Waaagh!, Leader, Support
 Keywords: Big Mek, Character, Explosives, Faction: Orks, Infantry, Painboy, Nobz
 
-### Big Mek in Mega Armour + Meganobz · Character · 290 pts
+### Ooga booga · Big Mek in Mega Armour + Meganobz · Character · 290 pts
 Enhancement: Supa-glowy Fing · Leads Meganobz
 Models: 1× Big Mek in Mega Armour; 5× Meganob w/ Kombi-weapon and Power Klaw
 Stats: Big Mek in Mega Armour M 5" T 6 Sv 2+ W 5 Ld 7+ OC 1 InSv – | Meganob ×5 M 5" T 6 Sv 2+ W 3 Ld 7+ OC 1 InSv –
@@ -1681,7 +1678,7 @@ Abilities:
 Rules: Waaagh!, Leader, Supa-hazardous
 Keywords: Big Mek, Big Mek in Mega Armour, Character, Explosives, Faction: Orks, Infantry, Mega Armour, Meganobz
 
-### Gretchin · Battleline · 45 pts each, ×3 in the list
+### Ooga booga · Gretchin · Battleline · 45 pts each, ×3 in the list
 Models: 10× Gretchin
 Stats: Gretchin ×10 M 6" T 2 Sv 6+ W 1 Ld 8+ OC 1 InSv –
 Ranged weapons:
@@ -1747,7 +1744,7 @@ At the start of the Fight phase, if a friendly **TERMINATOR SQUAD** unit is **en
 
 ## Units
 
-### Angron · Epic Hero · 330 pts
+### Super Terminators · Angron · Epic Hero · 330 pts
 Warlord
 Models: 1× Angron
 Stats: Angron M 14" T 11 Sv 2+ W 16 Ld 5+ OC 6 InSv 4+
@@ -1764,7 +1761,7 @@ Abilities:
 Rules: Deadly Demise D6, Deep Strike, Blessings of Khorne, Devastating Wounds
 Keywords: Angron, Chaos, Character, Daemon, Epic Hero, Faction: World Eaters, Fly, Khorne, Monster, Primarch, Warlord
 
-### Chaos Terminators · Infantry · 370 pts each, ×2 in the list
+### Super Terminators · Chaos Terminators · Infantry · 370 pts each, ×2 in the list
 Upgrade: Gore-stained Veterans
 Models: 1× Terminator Champion; 2× Combi-bolter, chainfist; 4× Combi-bolter, power fist; 1× Paired accursed weapons; 2× Heavy weapon
 Stats: Chaos Terminators M 7" T 6 Sv 2+ W 3 Ld 6+ OC 1 InSv 4+
@@ -1781,7 +1778,7 @@ Abilities:
 Rules: Deep Strike, Blessings of Khorne, Twin-linked, Anti, Rapid Fire, Sustained Hits, Devastating Wounds
 Keywords: Chaos, Faction: World Eaters, Infantry, Khorne, Terminator, Terminator Squad
 
-### Chaos Terminators · Infantry · 380 pts
+### Super Terminators · Chaos Terminators · Infantry · 380 pts
 Upgrade: Gore-stained Veterans
 Models: 1× Terminator Champion; 2× Combi-bolter, chainfist; 4× Combi-bolter, power fist; 1× Paired accursed weapons; 2× Heavy weapon
 Stats: Chaos Terminators M 7" T 6 Sv 2+ W 3 Ld 6+ OC 1 InSv 4+
@@ -1798,7 +1795,7 @@ Abilities:
 Rules: Deep Strike, Blessings of Khorne, Twin-linked, Anti, Rapid Fire, Sustained Hits, Devastating Wounds
 Keywords: Chaos, Faction: World Eaters, Infantry, Khorne, Terminator, Terminator Squad
 
-### Eightbound · Infantry · 125 pts
+### Super Terminators · Eightbound · Infantry · 125 pts
 Models: 1× Eightbound Champion; 2× Eightbound
 Stats: Eightbound M 10" T 6 Sv 3+ W 3 Ld 6+ OC 1 InSv 5+
 Melee weapons:
@@ -1808,7 +1805,7 @@ Abilities:
 Rules: Scouts 6", Blessings of Khorne
 Keywords: Chaos, Daemon, Eightbound, Faction: World Eaters, Infantry, Khorne, Possessed
 
-### Goremongers · Infantry · 70 pts
+### Super Terminators · Goremongers · Infantry · 70 pts
 Models: 1× Blood Herald; 7× Goremonger w/ chainblade
 Stats: Goremongers M 9" T 4 Sv 6+ W 1 Ld 7+ OC 1 InSv –
 Ranged weapons:
@@ -1821,7 +1818,7 @@ Abilities:
 Rules: Infiltrators, Blessings of Khorne, Pistol, Lance
 Keywords: Chaos, Faction: World Eaters, Goremongers, Grenades, Infantry, Khorne
 
-### Jakhals · Infantry · 65 pts
+### Super Terminators · Jakhals · Infantry · 65 pts
 Models: 1× Jakhal Pack Leader; 1× Dishonoured w/ paired manglers; 8× Jakhal
 Stats: Jakhal M 7" T 4 Sv 6+ W 1 Ld 7+ OC 1 InSv – | Dishonoured w/ paired manglers M 7" T 4 Sv 6+ W 1 Ld 7+ OC 1 InSv –
 Ranged weapons:
@@ -1834,7 +1831,7 @@ Abilities:
 Rules: Blessings of Khorne, Pistol
 Keywords: Chaos, Faction: World Eaters, Grenades, Infantry, Jakhals, Khorne
 
-### Forgefiend · Vehicle · 145 pts each, ×2 in the list
+### Super Terminators · Forgefiend · Vehicle · 145 pts each, ×2 in the list
 Models: 1× Forgefiend
 Stats: Forgefiend M 10" T 10 Sv 3+ W 12 Ld 6+ OC 3 InSv 5+
 Ranged weapons:
@@ -1904,7 +1901,7 @@ Each time a model in a **SKITARII** unit from your army makes an attack:
 
 ## Units
 
-### Belisarius Cawl · Epic Hero · 220 pts
+### Purge goes the Foe · Belisarius Cawl · Epic Hero · 220 pts
 Warlord
 Models: 1× Belisarius Cawl
 Stats: Belisarius Cawl M 8" T 8 Sv 2+ W 10 Ld 6+ OC 3 InSv 4+
@@ -1922,7 +1919,7 @@ Abilities:
 Rules: Doctrina Imperatives, Anti, Devastating Wounds, Extra Attacks, Melta
 Keywords: Belisarius Cawl, Character, Cult Mechanicus, Epic Hero, Faction: Adeptus Mechanicus, Imperium, Mobile, Monster, Tech-Priest, Warlord
 
-### Thulia Ghuld · Epic Hero · 180 pts
+### Purge goes the Foe · Thulia Ghuld · Epic Hero · 180 pts
 Models: 1× Thulia Ghuld
 Stats: Thulia Ghuld M 8" T 8 Sv 2+ W 10 Ld 6+ OC 3 InSv 4+
 Ranged weapons:
@@ -1940,7 +1937,7 @@ Abilities:
 Rules: Doctrina Imperatives, Blast, Sustained Hits, Devastating Wounds
 Keywords: Character, Cult Mechanicus, Epic Hero, Faction: Adeptus Mechanicus, Imperium, Mobile, Monster, Tech-Priest, Thulia Ghuld
 
-### Tech-Priest Enginseer · Character · 75 pts
+### Purge goes the Foe · Tech-Priest Enginseer · Character · 75 pts
 Enhancement: Necromechanic
 Models: 1× Tech-Priest Enginseer
 Stats: Tech-Priest Enginseer M 6" T 4 Sv 3+ W 3 Ld 7+ OC 1 InSv 5+
@@ -1957,7 +1954,7 @@ Abilities:
 Rules: Leader, Doctrina Imperatives, Devastating Wounds, Pistol, Extra Attacks
 Keywords: Character, Cult Mechanicus, Enginseer, Faction: Adeptus Mechanicus, Imperium, Infantry, Tech-Priest
 
-### Cybernetica Datasmith + Kastelan Robots · Character · 335 pts
+### Purge goes the Foe · Cybernetica Datasmith + Kastelan Robots · Character · 335 pts
 Enhancement: Martial Signatum Amplificator · Supports Kastelan Robots
 Models: 1× Cybernetica Datasmith; 4× Kastelan Robot
 Stats: Cybernetica Datasmith M 8" T 4 Sv 2+ W 3 Ld 7+ OC 1 InSv 5+ [M already includes Cyber-psalm Programming] | Kastelan Robot ×4 M 8" T 9 Sv 2+ W 7 Ld 7+ OC 2 InSv 5+ [M already includes Cyber-psalm Programming]
@@ -1976,7 +1973,7 @@ Abilities:
 Rules: Support, Doctrina Imperatives, Feel No Pain 4+, Devastating Wounds, Pistol, Deadly Demise 1, Twin-linked, Ignores Cover, Torrent
 Keywords: Character, Cybernetica Datasmith, Faction: Adeptus Mechanicus, Imperium, Legio Cybernetica, Skitarii, Tech-Priest, Vehicle, Kastelan Robots, Walker
 
-### Skitarii Rangers · Battleline · 85 pts each, ×2 in the list
+### Purge goes the Foe · Skitarii Rangers · Battleline · 85 pts each, ×2 in the list
 Models: 1× Skitarii Ranger Alpha; 1× Skitarii Ranger w/ arc rifle; 1× Skitarii Ranger w/ plasma caliver; 1× Skitarii Ranger w/ transuranic arquebus; 1× Skitarii Ranger w/ omnispex (Omnispex); 5× Skitarii Ranger w/ galvanic rifle
 Stats: Skitarii Rangers ×10 M 6" T 3 Sv 4+ W 1 Ld 7+ OC 2 InSv 5+
 Ranged weapons:
@@ -1994,7 +1991,7 @@ Abilities:
 Rules: Scouts 6", Doctrina Imperatives, Rapid Fire, Anti, Devastating Wounds, Hazardous, Heavy, Precision
 Keywords: Battleline, Faction: Adeptus Mechanicus, Imperium, Infantry, Rangers, Skitarii
 
-### Ironstrider Ballistarii · Vehicle · 280 pts
+### Purge goes the Foe · Ironstrider Ballistarii · Vehicle · 280 pts
 Models: 3× Ironstrider Ballistarius (Twin cognis lascannon)
 Stats: Ironstrider Ballistarii ×3 M 10" T 7 Sv 3+ W 7 Ld 7+ OC 2 InSv 5+
 Ranged weapons:
@@ -2007,7 +2004,7 @@ Abilities:
 Rules: Deadly Demise 1, Doctrina Imperatives, Sustained Hits
 Keywords: Faction: Adeptus Mechanicus, Imperium, Ironstrider Ballistarii, Skitarii, Smoke, Vehicle, Walker
 
-### Ironstrider Ballistarii · Vehicle · 250 pts
+### Purge goes the Foe · Ironstrider Ballistarii · Vehicle · 250 pts
 Models: 3× Ironstrider Ballistarius (Twin cognis autocannon)
 Stats: Ironstrider Ballistarii ×3 M 10" T 7 Sv 3+ W 7 Ld 7+ OC 2 InSv 5+
 Ranged weapons:
@@ -2020,7 +2017,7 @@ Abilities:
 Rules: Deadly Demise 1, Doctrina Imperatives, Sustained Hits
 Keywords: Faction: Adeptus Mechanicus, Imperium, Ironstrider Ballistarii, Skitarii, Smoke, Vehicle, Walker
 
-### Onager Dunecrawler · Vehicle · 150 pts
+### Purge goes the Foe · Onager Dunecrawler · Vehicle · 150 pts
 Models: 1× Onager Dunecrawler (Broad spectrum data-tether)
 Stats: Onager Dunecrawler M 8" T 10 Sv 2+ W 11 Ld 7+ OC 3 InSv 4+
 Ranged weapons:
@@ -2036,7 +2033,7 @@ Abilities:
 Rules: Deadly Demise D3, Doctrina Imperatives, Rapid Fire, Sustained Hits, Ignores Cover, Twin-linked
 Keywords: Faction: Adeptus Mechanicus, Imperium, Onager Dunecrawler, Skitarii, Vehicle, Walker
 
-### Skorpius Disintegrator · Vehicle · 170 pts each, ×2 in the list
+### Purge goes the Foe · Skorpius Disintegrator · Vehicle · 170 pts each, ×2 in the list
 Models: 1× Skorpius Disintegrator
 Stats: Skorpius Disintegrator M 10" T 10 Sv 2+ W 12 Ld 7+ OC 3 InSv –
 Ranged weapons:
@@ -2089,7 +2086,7 @@ At the start of the battle round, if your **WARLORD** is on the battlefield, you
 
 ## Units
 
-### Lucius the Eternal + Flawless Blades · Epic Hero · 225 pts
+### Defilers and friends · Lucius the Eternal + Flawless Blades · Epic Hero · 225 pts
 Warlord · Leads Flawless Blades
 Models: 1× Lucius the Eternal; 3× Flawless Blade
 Stats: Lucius the Eternal M 8" T 6 Sv 2+ W 6 Ld 6+ OC 1 InSv 4+ | Flawless Blades M 8" T 5 Sv 3+ W 3 Ld 6+ OC 1 InSv 5+
@@ -2106,7 +2103,7 @@ Abilities:
 Rules: Leader, Thrill Seekers, Feel No Pain 5+, Lone Operative, Precision, Sustained Hits, Pistol
 Keywords: Chaos, Character, Epic Hero, Faction: Emperor's Children, Infantry, Lucius the Eternal, Slaanesh, Warlord, Flawless Blades, Grenades
 
-### Daemon Prince of Slaanesh with Wings · Character · 205 pts
+### Defilers and friends · Daemon Prince of Slaanesh with Wings · Character · 205 pts
 Models: 1× Daemon Prince of Slaanesh with Wings
 Stats: Daemon Prince of Slaanesh with Wings M 14" T 9 Sv 2+ W 10 Ld 6+ OC 3 InSv 4+
 Ranged weapons:
@@ -2120,7 +2117,7 @@ Abilities:
 Rules: Deadly Demise D3, Thrill Seekers, Deep Strike
 Keywords: Chaos, Character, Daemon, Daemon Prince with Wings, Faction: Emperor's Children, Fly, Monster, Slaanesh
 
-### Lord Exultant + Infractors · Character · 190 pts each, ×2 in the list
+### Defilers and friends · Lord Exultant + Infractors · Character · 190 pts each, ×2 in the list
 Leads Infractors
 Models: 1× Lord Exultant; 1× Obsessionist; 3× Infractor; 1× Infractor (Icon of Excess)
 Stats: Lord Exultant M 7" T 5 Sv 3+ W 5 Ld 6+ OC 1 InSv 4+ | Infractors M 7" T 5 Sv 3+ W 2 Ld 6+ OC 2 InSv –
@@ -2144,7 +2141,7 @@ Abilities:
 Rules: Leader, Thrill Seekers, Infiltrators, Scouts 6", Pistol, Lance, Extra Attacks, Precision, Hazardous
 Keywords: Chaos, Character, Faction: Emperor's Children, Grenades, Infantry, Lord Exultant, Slaanesh, Battleline, Infractors
 
-### Tormentors · Battleline · 85 pts each, ×2 in the list
+### Defilers and friends · Tormentors · Battleline · 85 pts each, ×2 in the list
 Models: 1× Obsessionist; 3× Tormentor; 1× Tormentor w/ meltagun
 Stats: Tormentors M 7" T 5 Sv 3+ W 2 Ld 6+ OC 2 InSv –
 Ranged weapons:
@@ -2161,7 +2158,7 @@ Abilities:
 Rules: Infiltrators, Thrill Seekers, Hazardous, Pistol, Precision, Melta
 Keywords: Battleline, Chaos, Faction: Emperor's Children, Grenades, Infantry, Slaanesh, Tormentors
 
-### Chaos Rhino · Dedicated Transport · 70 pts
+### Defilers and friends · Chaos Rhino · Dedicated Transport · 70 pts
 Models: 1× Chaos Rhino
 Stats: Chaos Rhino M 12" T 9 Sv 3+ W 10 Ld 6+ OC 2 InSv –
 Ranged weapons:
@@ -2175,7 +2172,7 @@ Abilities:
 Rules: Deadly Demise D3, Thrill Seekers, Firing Deck 2, Rapid Fire, Blast
 Keywords: Chaos, Dedicated Transport, Faction: Emperor's Children, Frame, Rhino, Slaanesh, Smoke, Transport, Vehicle
 
-### Defiler · Vehicle · 330 pts
+### Defilers and friends · Defiler · Vehicle · 330 pts
 Models: 1× Defiler
 Stats: Defiler M 12" T 11 Sv 3+ W 18 Ld 6+ OC 5 InSv 5+
 Ranged weapons:
@@ -2192,7 +2189,7 @@ Abilities:
 Rules: Deadly Demise D6, Thrill Seekers, Blast, Sustained Hits, Devastating Wounds, Precision
 Keywords: Chaos, Daemon, Defiler, Faction: Emperor's Children, Slaanesh, Vehicle, Walker
 
-### Defiler · Vehicle · 380 pts
+### Defilers and friends · Defiler · Vehicle · 380 pts
 Models: 1× Defiler
 Stats: Defiler M 12" T 11 Sv 3+ W 18 Ld 6+ OC 5 InSv 5+
 Ranged weapons:
@@ -2209,7 +2206,7 @@ Abilities:
 Rules: Deadly Demise D6, Thrill Seekers, Blast, Sustained Hits, Devastating Wounds, Precision
 Keywords: Chaos, Daemon, Defiler, Faction: Emperor's Children, Slaanesh, Vehicle, Walker
 
-### Maulerfiend · Vehicle · 120 pts each, ×2 in the list
+### Defilers and friends · Maulerfiend · Vehicle · 120 pts each, ×2 in the list
 Models: 1× Maulerfiend
 Stats: Maulerfiend M 10" T 10 Sv 3+ W 12 Ld 6+ OC 3 InSv 5+
 Ranged weapons:
@@ -2272,7 +2269,7 @@ In your Command phase, one or more **CHAOS KNIGHTS** units from your army can ma
 
 ## Units
 
-### Chaos Cerastus Knight Atrapos · Character · 410 pts
+### Infernal Lance · Chaos Cerastus Knight Atrapos · Character · 410 pts
 Enhancement: Knight Diabolus
 Models: 1× Chaos Cerastus Knight Atrapos
 Stats: Chaos Cerastus Knight Atrapos M 12" T 11 Sv 3+ W 28 Ld 6+ OC 10 InSv 5+
@@ -2292,7 +2289,7 @@ Abilities:
 Rules: Deadly Demise D6+2, Harbingers of Dread, Super-Heavy Walker, Sustained Hits, Blast, Devastating Wounds, Hazardous
 Keywords: Cerastus, Chaos, Character, Faction: Chaos Knights, Knight Atrapos, Titanic, Towering, Vehicle, Walker
 
-### Chaos Cerastus Knight Lancer · Character · 420 pts
+### Infernal Lance · Chaos Cerastus Knight Lancer · Character · 420 pts
 Enhancement: Blasphemous Engine
 Models: 1× Chaos Cerastus Knight Lancer
 Stats: Chaos Cerastus Knight Lancer M 14" T 11 Sv 3+ W 30 Ld 6+ OC 10 InSv 4+ [W already includes Blasphemous Engine]
@@ -2309,7 +2306,7 @@ Abilities:
 Rules: Deadly Demise D6+2, Harbingers of Dread, Super-Heavy Walker, Sustained Hits, Assault, Lance
 Keywords: Cerastus, Chaos, Character, Faction: Chaos Knights, Knight Lancer, Titanic, Towering, Vehicle, Walker
 
-### Knight Despoiler · Character · 440 pts
+### Infernal Lance · Knight Despoiler · Character · 440 pts
 Warlord · Enhancement: Bestial Aspect
 Models: 1× Knight Despoiler
 Stats: Knight Despoiler M 10" T 11 Sv 3+ W 26 Ld 6+ OC 10 InSv 5+*
@@ -2329,7 +2326,7 @@ Abilities:
 Rules: Super-Heavy Walker, Deadly Demise D6, Harbingers of Dread, Assault, Torrent, Ignores Cover, Rapid Fire
 Keywords: Abhorrent, Chaos, Character, Faction: Chaos Knights, Knight Despoiler, Titanic, Towering, Vehicle, Walker, Warlord
 
-### Knight Ruinator · Character · 360 pts
+### Infernal Lance · Knight Ruinator · Character · 360 pts
 Enhancement: Fleshmetal Fusion
 Models: 1× Knight Ruinator
 Stats: Knight Ruinator M 10" T 12 Sv 3+ W 26 Ld 6+ OC 10 InSv 5+* [T already includes Fleshmetal Fusion]
@@ -2348,7 +2345,7 @@ Abilities:
 Rules: Super-Heavy Walker, Deadly Demise D6, Harbingers of Dread, Ignores Cover, Torrent, Sustained Hits, Blast
 Keywords: Abhorrent, Chaos, Character, Faction: Chaos Knights, Knight Ruinator, Titanic, Towering, Vehicle, Walker
 
-### Knight Ruinator · Character · 325 pts
+### Infernal Lance · Knight Ruinator · Character · 325 pts
 Models: 1× Knight Ruinator
 Stats: Knight Ruinator M 10" T 11 Sv 3+ W 26 Ld 6+ OC 10 InSv 5+*
 Ranged weapons:
@@ -2365,7 +2362,7 @@ Abilities:
 Rules: Super-Heavy Walker, Deadly Demise D6, Harbingers of Dread, Ignores Cover, Torrent, Sustained Hits, Blast
 Keywords: Abhorrent, Chaos, Character, Faction: Chaos Knights, Knight Ruinator, Titanic, Towering, Vehicle, Walker
 
-### Nurglings · Allies: Legiones Daemonica · 45 pts
+### Infernal Lance · Nurglings · Allies: Legiones Daemonica · 45 pts
 Models: 3× Nurgling Swarm
 Stats: Nurglings M 5" T 3 Sv 7+ W 4 Ld 8+ OC 0 InSv 5+
 Melee weapons:
@@ -2438,7 +2435,7 @@ This detachment has the **WAR DOGS** tag and cannot be taken with another **WAR 
 
 ## Units
 
-### War Dog Brigand · Battleline · 155 pts
+### Woof Woof · War Dog Brigand · Battleline · 155 pts
 Warlord · Enhancement: Final Howl (Aura)
 Models: 1× War Dog Brigand (Houndpack Lance Character)
 Stats: War Dog Brigand M 12" T 9 Sv 3+ W 14 Ld 7+ OC 6 InSv 5+*
@@ -2456,7 +2453,7 @@ Abilities:
 Rules: Deadly Demise D3, Harbingers of Dread, Melta, Rapid Fire
 Keywords: Battleline, Brigand, Chaos, Character, Faction: Chaos Knights, Vehicle, Walker, War Dog, Warlord
 
-### War Dog Brigand · Battleline · 135 pts
+### Woof Woof · War Dog Brigand · Battleline · 135 pts
 Models: 1× War Dog Brigand (Houndpack Lance Character)
 Stats: War Dog Brigand M 12" T 9 Sv 3+ W 14 Ld 7+ OC 6 InSv 5+*
 Ranged weapons:
@@ -2472,7 +2469,7 @@ Abilities:
 Rules: Deadly Demise D3, Harbingers of Dread, Melta, Rapid Fire
 Keywords: Battleline, Brigand, Chaos, Character, Faction: Chaos Knights, Vehicle, Walker, War Dog
 
-### War Dog Brigand · Battleline · 135 pts each, ×3 in the list
+### Woof Woof · War Dog Brigand · Battleline · 135 pts each, ×3 in the list
 Models: 1× War Dog Brigand
 Stats: War Dog Brigand M 12" T 9 Sv 3+ W 14 Ld 7+ OC 6 InSv 5+*
 Ranged weapons:
@@ -2488,7 +2485,7 @@ Abilities:
 Rules: Deadly Demise D3, Harbingers of Dread, Melta, Rapid Fire
 Keywords: Battleline, Brigand, Chaos, Faction: Chaos Knights, Vehicle, Walker, War Dog
 
-### War Dog Executioner · Battleline · 140 pts each, ×3 in the list
+### Woof Woof · War Dog Executioner · Battleline · 140 pts each, ×3 in the list
 Upgrade: Snarling Rivalry
 Models: 1× War Dog Executioner
 Stats: War Dog Executioner M 12" T 9 Sv 3+ W 14 Ld 7+ OC 6 InSv 5+*
@@ -2505,7 +2502,7 @@ Abilities:
 Rules: Deadly Demise D3, Harbingers of Dread, Rapid Fire
 Keywords: Battleline, Chaos, Executioner, Faction: Chaos Knights, Vehicle, Walker, War Dog
 
-### War Dog Karnivore · Battleline · 160 pts
+### Woof Woof · War Dog Karnivore · Battleline · 160 pts
 Enhancement: Panoply of the Cursed Knights
 Models: 1× War Dog Karnivore (Houndpack Lance Character)
 Stats: War Dog Karnivore M 14" T 9 Sv 3+ W 14 Ld 7+ OC 6 InSv 5+*
@@ -2522,7 +2519,7 @@ Abilities:
 Rules: Deadly Demise D3, Harbingers of Dread, Sustained Hits, Rapid Fire
 Keywords: Battleline, Chaos, Character, Faction: Chaos Knights, Karnivore, Vehicle, Walker, War Dog
 
-### War Dog Karnivore · Battleline · 145 pts each, ×5 in the list
+### Woof Woof · War Dog Karnivore · Battleline · 145 pts each, ×5 in the list
 Models: 1× War Dog Karnivore
 Stats: War Dog Karnivore M 14" T 9 Sv 3+ W 14 Ld 7+ OC 6 InSv 5+*
 Ranged weapons:
@@ -2606,7 +2603,7 @@ When a friendly **WORLD EATERS CHARACTER** unit (excluding **EPIC HERO** units) 
 
 ## Units
 
-### Angron · Epic Hero · 330 pts
+### Big demons baby · Angron · Epic Hero · 330 pts
 Warlord
 Models: 1× Angron
 Stats: Angron M 14" T 11 Sv 2+ W 16 Ld 5+ OC 6 InSv 4+
@@ -2623,7 +2620,7 @@ Abilities:
 Rules: Deadly Demise D6, Deep Strike, Blessings of Khorne, Devastating Wounds
 Keywords: Angron, Chaos, Character, Daemon, Epic Hero, Faction: World Eaters, Fly, Khorne, Monster, Primarch, Warlord
 
-### Skarbrand · Epic Hero · 315 pts
+### Big demons baby · Skarbrand · Epic Hero · 315 pts
 Models: 1× Skarbrand
 Stats: Skarbrand M 10" T 11 Sv 3+ W 20 Ld 6+ OC 5 InSv 4+
 Ranged weapons:
@@ -2638,7 +2635,7 @@ Abilities:
 Rules: Deadly Demise D6, Deep Strike, Ignores Cover, Torrent
 Keywords: Chaos, Character, Daemon, Epic Hero, Faction: Blood Legions, Khorne, Monster, Skarbrand
 
-### Bloodthirster · Character · 320 pts
+### Big demons baby · Bloodthirster · Character · 320 pts
 Models: 1× Bloodthirster
 Stats: Bloodthirster M 12" T 11 Sv 3+ W 18 Ld 6+ OC 5 InSv 4+
 Ranged weapons:
@@ -2653,7 +2650,7 @@ Abilities:
 Rules: Deadly Demise D6, Deep Strike, Ignores Cover, Torrent
 Keywords: Bloodthirster, Chaos, Character, Daemon, Faction: Blood Legions, Fly, Khorne, Monster, Summoned
 
-### Daemon Prince of Khorne · Character · 230 pts
+### Big demons baby · Daemon Prince of Khorne · Character · 230 pts
 Enhancement: Blade of Endless Bloodshed
 Models: 1× Daemon Prince of Khorne
 Stats: Daemon Prince of Khorne M 10" T 10 Sv 2+ W 10 Ld 6+ OC 3 InSv 4+
@@ -2670,7 +2667,7 @@ Abilities:
 Rules: Deadly Demise D3, Blessings of Khorne, Rapid Fire
 Keywords: Chaos, Character, Daemon, Daemon Prince, Faction: World Eaters, Khorne, Monster
 
-### Master of Executions · Character · 80 pts
+### Big demons baby · Master of Executions · Character · 80 pts
 Enhancement: Blood-forged Armour
 Models: 1× Master of Executions
 Stats: Master of Executions M 8" T 5 Sv 2+ W 4 Ld 6+ OC 1 InSv – [Sv already includes Blood-forged Armour]
@@ -2685,7 +2682,7 @@ Abilities:
 Rules: Leader, Blessings of Khorne, Precision, Devastating Wounds, Pistol
 Keywords: Chaos, Character, Faction: World Eaters, Infantry, Khorne, Master of Executions
 
-### Lord on Juggernaut + Khorne Berzerkers · Character · 440 pts
+### Big demons baby · Lord on Juggernaut + Khorne Berzerkers · Character · 440 pts
 Enhancement: Disciple of Khorne · Leads Khorne Berzerkers
 Models: 1× Lord on Juggernaut; 1× Khorne Berzerker Champion; 15× Khorne Berzerker; 4× Khorne Berzerker w/ eviscerator and plasma pistol
 Stats: Lord on Juggernaut M 10" T 6 Sv 3+ W 7 Ld 6+ OC 2 InSv 4+ | Khorne Berzerker ×20 M 10" T 5 Sv 3+ W 2 Ld 6+ OC 2 InSv – [M already includes Aggressive Advance]
@@ -2710,7 +2707,7 @@ Abilities:
 Rules: Leader, Blessings of Khorne, Deep Strike, Extra Attacks, Lance, Pistol, Hazardous
 Keywords: Chaos, Character, Faction: Blood Legions, Khorne, Lord on Juggernaut, Mounted, Battleline, Berzerkers, Faction: World Eaters, Grenades, Infantry
 
-### Goremongers · Infantry · 70 pts
+### Big demons baby · Goremongers · Infantry · 70 pts
 Models: 1× Blood Herald; 7× Goremonger w/ chainblade
 Stats: Goremongers M 9" T 4 Sv 6+ W 1 Ld 7+ OC 1 InSv –
 Ranged weapons:
@@ -2723,7 +2720,7 @@ Abilities:
 Rules: Infiltrators, Blessings of Khorne, Pistol, Lance
 Keywords: Chaos, Faction: World Eaters, Goremongers, Grenades, Infantry, Khorne
 
-### Jakhals · Infantry · 65 pts
+### Big demons baby · Jakhals · Infantry · 65 pts
 Models: 1× Jakhal Pack Leader; 1× Dishonoured w/ paired manglers; 8× Jakhal
 Stats: Jakhal M 7" T 4 Sv 6+ W 1 Ld 7+ OC 1 InSv – | Dishonoured w/ paired manglers M 7" T 4 Sv 6+ W 1 Ld 7+ OC 1 InSv –
 Ranged weapons:
@@ -2736,7 +2733,7 @@ Abilities:
 Rules: Blessings of Khorne, Pistol
 Keywords: Chaos, Faction: World Eaters, Grenades, Infantry, Jakhals, Khorne
 
-### Flesh Hounds · Beast · 75 pts each, ×2 in the list
+### Big demons baby · Flesh Hounds · Beast · 75 pts each, ×2 in the list
 Models: 1× Gore Hound (Collar of Khorne); 4× Flesh Hound (Collar of Khorne)
 Stats: Flesh Hounds M 12" T 4 Sv 7+ W 2 Ld 7+ OC 1 InSv 5+
 Ranged weapons:
@@ -2748,3 +2745,212 @@ Abilities:
 - Collar of Khorne: The bearer has the Feel No Pain 3+ ability against Psychic Attacks.
 Rules: Deep Strike, Ignores Cover, Torrent, Feel No Pain 3+
 Keywords: Beast, Chaos, Daemon, Faction: Blood Legions, Flesh Hounds, Khorne, Summoned
+
+---
+
+# List: Mucho Mutantes (Thousand Sons, 2000 pts, disposition Purge the Foe)
+
+## Force Dispositions this list can lock (BSData: each detachment allows these)
+- Ritual of Regeneration: Take and Hold
+- Warpmeld Pact: Purge the Foe
+This list: Take and Hold, Purge the Foe (locked for this list: Purge the Foe)
+
+## Army rules
+
+### Cabal of Sorcerers
+If your Army Faction is **THOUSAND SONS**, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.
+**Psychic Test Sequence**
+- **Roll 2D6**
+- **Channel the Warp** (Optional)
+- Then, if one or more doubles or triples were rolled during this test, that model’s unit suffers D3 mortal wounds.
+- If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects.
+*FAQ (Faction Pack 1.3): Do I need to sequence all of my Cabal of Sorcerers Rituals at the start of my Shooting phase? No, you just pick a model with the Cabal of Sorcerers rule, pick a Ritual to manifest, and attempt it, then repeat the process until you have run out of models or Rituals or both.*
+*FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, do I have to choose whether to Channel the Warp before rolling any dice? No.*
+*FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, if I roll one or more doubles or triples, does my model only suffer D3 mortal wounds if I chose to Channel the Warp? Yes.*
+*App note, not rules text: Channel the Warp means rolling one more D6 for the test (the printed card shows it as a die).*
+Destiny’s Ruin (Psychic) · Warp Charge 5: Select one enemy unit within 24" of and **visible** to the manifesting model. Until the end of the phase, each time a **THOUSAND SONS** or **SCINTILLATING LEGIONS** model from your army makes an attack that targets that unit, re-roll a **Hit roll** of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.
+Temporal Surge (Psychic) · Warp Charge 6: Select one friendly **THOUSAND SONS** or **SCINTILLATING LEGIONS** unit that is not within **Engagement Range** of one or more enemy units and is within 24" of and **visible** to the manifesting model. That unit can make a **Normal move** of up to D6". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.
+Doombolt (Psychic) · Warp Charge 7: Select one enemy unit within 24" of and **visible** to the manifesting model (excluding units with the **Lone Operative** ability that are not part of an Attached unit and are not within 12" of the manifesting model); that unit suffers D3 **mortal wounds**. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.
+Twist of Fate (Psychic) · Warp Charge 9: Select one enemy unit within 24" of and **visible** to the manifesting model. Until the end of the phase, each time a **THOUSAND SONS** or **SCINTILLATING LEGIONS** model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead.
+
+### Pact of Sorcery
+When mustering your army, unless specifically stated otherwise, you cannot select **SCINTILLATING LEGIONS** as your Army Faction.
+
+## Detachment: Ritual of Regeneration
+### Sorcerous Invigoration
+(Once per turn, per unit) When a friendly **THOUSAND SONS PSYKER** unit (excluding **MONSTER** units) successfully manifests a **Ritual**, that unit **heals** D3 wounds.
+### Enhancements
+- Eruption of Vitality (35 pts): **INFANTRY**/**MOUNTED THOUSAND SONS PSYKER** model only. (Once per battle, per army) When this model is **destroyed**, at the end of the phase, roll one D6: - On a 2+, set up this model on the battlefield, **unengaged** and as close as possible to where it was destroyed. This model is not part of an attached unit and its unit has a **starting strength** of 1. This model has 3 wounds remaining.
+- Curse of Life (20 pts): **INFANTRY**/**MOUNTED THOUSAND SONS PSYKER** model only. When this model **heals** as a result of the **Sorcerous Invigoration detachment rule**, you can add 3 to the number of wounds **healed**.
+### Stratagems
+- Relentless Rebirth (1CP). WHEN: Any phase, when a friendly **INFANTRY**/**MOUNTED THOUSAND SONS PSYKER** unit suffers a **mortal wound**. TARGET: That **INFANTRY/MOUNTED THOUSAND SONS PSYKER** unit. EFFECT: Your unit has **Feel No Pain 5+** against **mortal wounds**.
+- Mutagenic Magicks (1CP). WHEN: Start of the Fight phase. TARGET: One friendly **engaged THOUSAND SONS PSYKER** unit. EFFECT: Select one enemy unit engaged with your unit. Roll six D6: - For each 4+, that enemy unit suffers 1 **mortal wound**.
+- Multitudinous Limbs (1CP). WHEN: Your Movement phase, when a friendly **INFANTRY**/**MOUNTED THOUSAND SONS PSYKER** unit is selected to make an **advance**/**fall back move**. TARGET: That **INFANTRY/MOUNTED THOUSAND SONS PSYKER** unit. EFFECT: That move does not prevent your unit from being **eligible to start an action**.
+
+## Detachment: Warpmeld Pact
+### Warpmeld Sacrifice
+Each time an enemy unit is selected to shoot or fight and one or more **TZEENTCH MUTANT INFANTRY** or **TZEENTCH MUTANT MOUNTED** units from your army are selected as a target of one or more of those attacks, each of those **TZEENTCH MUTANT** units can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time an attack targets that unit, subtract 1 from the Wound roll. At the end of the phase, that **TZEENTCH MUTANT** unit suffers D3 mortal wounds.
+Each time a **TZEENTCH MUTANT INFANTRY** or **TZEENTCH MUTANT MOUNTED** unit from your army is selected to shoot or fight, before selecting its targets, that unit can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time a model in that unit makes an attack, add 1 to the Wound roll. At the end of the phase, that **TZEENTCH MUTANT** unit suffers D3 mortal wounds.
+KEYWORDS
+**TZAANGORS** units from your army have the **BATTLELINE** keyword, and while such a unit is not **Battle-shocked**, add 1 to the Objective Control characteristic of **TZAANGOR** models in that unit.
+### Enhancements
+- Warpmeld Dagger (10 pts): **TZAANGOR SHAMAN** model only. Each time the bearer attempts a **Ritual**, just before determining the Psychic test result, the bearer can use this Enhancement. If it does, the bearer suffers D3 **mortal wounds**; if it is not destroyed as a result, add 1 to that Psychic test result for each of those mortal wounds suffered.
+- Diamond of Distortion (20 pts): **TZAANGOR SHAMAN** model only. While the bearer is leading a unit, each time an attack targets that unit, subtract 1 from the **Hit roll**.
+- Bray Lord (15 pts): **SORCERER** or **INFERNAL MASTER** model only. The bearer has the **Scouts 6"** ability.
+- Flowing Flesh (10 pts): **TZAANGOR SHAMAN** model only. The bearer has the **Feel No Pain 4+** ability and a Wounds characteristic of 5.
+### Stratagems
+- Gift of Change (1CP). WHEN: Any phase. TARGET: One **THOUSAND SONS CHARACTER** model from your army (excluding **MONSTERS**) that was just destroyed. You can use this Stratagem on that model even though it was just destroyed. EFFECT: At the end of the phase, add one **TZEENTCH CHAOS SPAWN** unit containing one model to your army, and set it up as close as possible to where your model was destroyed and not within **Engagement Range** of one or more enemy units.
+- Warped Vicissitude (1CP). WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. TARGET: One **TZAANGORS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks. EFFECT: Until the end of the phase, models in your unit have a 4+ invulnerable save.
+- Deranged Ferocity (1CP). WHEN: Fight phase, just after a **TZEENTCH MUTANT** unit from your army is selected to fight. TARGET: That **TZEENTCH MUTANT** unit. EFFECT: Until the end of the phase, each time a model in your unit makes a Pile-in or **Consolidation move**, it can move up to 6" instead of up to 3", and when determining which models in it are eligible to fight, any models in it that are within 3" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3" of them and within **Engagement Range** of their unit.
+- Blessed Transmutations (1CP). WHEN: Your Command phase. TARGET: One **THOUSAND SONS PSYKER** model from your army, and one friendly **TZAANGORS** unit that is below its Starting Strength and within 12" of that **PSYKER** model. EFFECT: Return up to D3+1 destroyed models (excluding **CHARACTERS**) to your **TZAANGORS** unit.
+- Touched by Tzeentch (1CP). WHEN: Start of your Movement phase. TARGET: One **TZEENTCH MUTANT** unit from your army. EFFECT: Until the end of the turn, your unit is eligible to shoot or declare a charge in a turn in which it Advanced.
+- Twisted Mirage (1CP). WHEN: Reinforcements step of your Movement phase. TARGET: One **TZEENTCH MUTANT** unit from your army that is arriving from **Strategic Reserves** this phase. EFFECT: Your unit can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units, or anywhere on the battlefield that is more than 8" horizontally away from all enemy units if it is a **MONSTER** unit. In either case, until the end of the turn, it is not eligible to declare a charge.
+
+## Units
+
+### Mucho Mutantes · Magnus the Red · Epic Hero · 455 pts
+Warlord
+Models: 1× Magnus the Red
+Stats: Magnus the Red M 14" T 11 Sv 2+ W 16 Ld 5+ OC 6 InSv 4+
+Ranged weapons:
+- Gaze of Magnus: 24", A 3D3, BS 2+, S 11, AP -2, D 3 [DEVASTATING WOUNDS, PSYCHIC]
+- Tzeentch’s Firestorm: 24", A D6+3, BS 2+, S 6, AP -1, D 2 [BLAST, IGNORES COVER, PSYCHIC]
+Melee weapons:
+- Blade of Magnus (strike): Melee, A 7, WS 2+, S 16, AP -3, D 3 [DEVASTATING WOUNDS, PSYCHIC]
+- Blade of Magnus (sweep): Melee, A 14, WS 2+, S 8, AP -1, D 2 [PSYCHIC]
+Abilities:
+- Damaged: 1-6 wounds remaining: While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**.
+- Unearthly Power: At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.
+- Lord of the Planet of the Sorcerers (Psychic): This model can attempt up to 2 **Rituals** per turn instead of one, and each time this model attempts a **Ritual**, add 2 to the **Psychic test** result.
+- Impossible Form (Psychic) · Crimson King: Each time an attack is made against this **PSYKER** (excluding **Psychic Attacks**), subtract 1 from the Damage characteristic of that attack.
+- Treason of Tzeentch (Psychic) · Crimson King: At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this **PSYKER**. Until the end of the phase, ranged weapons equipped by models in that unit have the **[HAZARDOUS]** ability.
+- Time Flux (Aura, Psychic) · Crimson King: While a friendly **THOUSAND SONS** unit is within 6" of this **PSYKER**, add 2" to the Move characteristic of models in that unit.
+Rules: Deep Strike, Deadly Demise D6, Cabal of Sorcerers, Devastating Wounds, Psychic, Blast, Ignores Cover
+Keywords: Chaos, Character, Daemon, Epic Hero, Faction: Thousand Sons, Fly, Magnus the Red, Monster, Primarch, Psyker, Tzeentch, Warlord
+
+### Mucho Mutantes · Ahriman + Tzaangor Enlightened with Fatecaster greatbows · Epic Hero · 215 pts
+Leads Tzaangor Enlightened with Fatecaster greatbows
+Models: 1× Ahriman; 1× Aviarch; 5× Enlightened
+Stats: Ahriman M 10" T 5 Sv 3+ W 6 Ld 6+ OC 2 InSv 4+ | Tzaangor Enlightened with Fatecaster greatbows M 10" T 4 Sv 5+ W 2 Ld 7+ OC 2 InSv 5+
+Ranged weapons:
+- Inferno bolt pistol · Ahriman: 12", A 1, BS 2+, S 5, AP -2, D 1 [PISTOL]
+- Transmogrifying Blast · Ahriman: 18", A D6+1, BS 2+, S 6, AP -1, D D3 [BLAST, PSYCHIC]
+- Fatecaster greatbow ×6 · Tzaangor Enlightened with Fatecaster greatbows: 30", A 2, BS 4+, S 5, AP -2, D 2 [IGNORES COVER, LETHAL HITS, PRECISION]
+Melee weapons:
+- Black Staff of Ahriman · Ahriman: Melee, A 5, WS 2+, S 7, AP -1, D 3 [PSYCHIC]
+- Close combat weapon ×6 · Tzaangor Enlightened with Fatecaster greatbows: Melee, A 2, WS 4+, S 4, AP 0, D 1
+Abilities:
+- Scryer of Fates (Psychic) · Ahriman: If your army includes this model, after both players have deployed their armies, you can select up to three **THOUSAND SONS** units from your army and redeploy them. When doing so, you can set those units up in **Strategic Reserves** if you wish, regardless of how many units are already in Strategic Reserves.
+- Arch-Sorcerer of Tzeentch (Psychic) · Ahriman: Each time this model attempts a **Ritual**, add 1 to the Psychic test result.
+- Malign Trickery · Tzaangor Enlightened with Fatecaster greatbows: In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within **Engagement Range** of one or more enemy units, this unit can make a **Normal move** of up to D6”.
+Rules: Leader, Cabal of Sorcerers, Psychic, Pistol, Blast, Ignores Cover, Lethal Hits, Precision
+Keywords: Ahriman, Chaos, Character, Epic Hero, Faction: Thousand Sons, Fly, Infantry, Mounted, Psyker, Tzeentch, Mutant, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster Greatbows
+
+### Mucho Mutantes · Daemon Prince of Tzeentch with wings · Character · 170 pts
+Models: 1× Daemon Prince of Tzeentch with wings
+Stats: Daemon Prince of Tzeentch with wings M 13" T 9 Sv 2+ W 10 Ld 6+ OC 3 InSv 4+
+Ranged weapons:
+- Dark Blessing: 24", A 9, BS 2+, S 4, AP -1, D 1 [IGNORES COVER, PSYCHIC, SUSTAINED HITS 1]
+- Infernal cannon: 24", A 3, BS 2+, S 5, AP -2, D 2
+Melee weapons:
+- Hellforged weapons (strike): Melee, A 6, WS 2+, S 8, AP -2, D 3 [DEVASTATING WOUNDS, PSYCHIC]
+- Hellforged weapons (sweep): Melee, A 12, WS 2+, S 6, AP -1, D 1 [DEVASTATING WOUNDS, PSYCHIC]
+Abilities:
+- Aetherstride (Psychic): In your Movement phase, when this model is set up on the battlefield using the **Deep Strike** ability, it can perform an aetherstride. If it does: - It can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units. - Until the end of the turn, its Dark Blessing has the **[SUSTAINED HITS D3]** ability. - Until the end of the turn, it is not eligible to declare a charge.
+- Hunter of Souls: Each time this model makes an attack that targets a **CHARACTER** unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a **PSYKER CHARACTER** unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a **CHARACTER** unit, this model regains up to D3 lost wounds (if that **CHARACTER** unit was a **PSYKER**, this model regains up to 3 lost wounds instead).
+Rules: Deadly Demise D3, Cabal of Sorcerers, Deep Strike, Ignores Cover, Sustained Hits, Psychic, Devastating Wounds
+Keywords: Chaos, Character, Daemon, Daemon Prince, Faction: Thousand Sons, Fly, Monster, Psyker, Tzeentch
+
+### Mucho Mutantes · Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows · Character · 205 pts each, ×2 in the list
+Leads Tzaangor Enlightened with Fatecaster greatbows
+Models: 1× Exalted Sorcerer on Disc of Tzeentch; 1× Aviarch; 5× Enlightened
+Stats: Exalted Sorcerer on Disc of Tzeentch M 10" T 5 Sv 3+ W 6 Ld 6+ OC 2 InSv 4+ | Tzaangor Enlightened with Fatecaster greatbows M 10" T 4 Sv 5+ W 2 Ld 7+ OC 2 InSv 5+
+Ranged weapons:
+- Arcane Fire · Exalted Sorcerer on Disc of Tzeentch: 18", A D6, BS –, S 6, AP -2, D D3 [IGNORES COVER, PSYCHIC, TORRENT]
+- Inferno bolt pistol · Exalted Sorcerer on Disc of Tzeentch: 12", A 1, BS 2+, S 5, AP -2, D 1 [PISTOL]
+- Fatecaster greatbow ×6 · Tzaangor Enlightened with Fatecaster greatbows: 30", A 2, BS 4+, S 5, AP -2, D 2 [IGNORES COVER, LETHAL HITS, PRECISION]
+Melee weapons:
+- Force weapon · Exalted Sorcerer on Disc of Tzeentch: Melee, A 5, WS 2+, S 6, AP -1, D D3 [PSYCHIC]
+- Prosperine khopesh · Exalted Sorcerer on Disc of Tzeentch: Melee, A 4, WS 2+, S 5, AP -2, D 2
+- Close combat weapon ×6 · Tzaangor Enlightened with Fatecaster greatbows: Melee, A 2, WS 4+, S 4, AP 0, D 1
+Abilities:
+- Illusions of Tzeentch (Psychic) · Exalted Sorcerer on Disc of Tzeentch: While this model is leading a unit, that unit can only be selected as the target of a ranged attack if the attacking model is within 18".
+- Binding Tendrils (Psychic) · Exalted Sorcerer on Disc of Tzeentch: In your Shooting phase, after this model has shot, select one enemy **INFANTRY** unit hit by one or more of those attacks made with Arcane Fire. Until the start of your next turn, that unit is ensnared. While a unit is ensnared, subtract 2" from its Move characteristic and subtract 2 from **Charge rolls** made for it.
+- Malign Trickery · Tzaangor Enlightened with Fatecaster greatbows: In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within **Engagement Range** of one or more enemy units, this unit can make a **Normal move** of up to D6”.
+Rules: Leader, Cabal of Sorcerers, Torrent, Ignores Cover, Psychic, Pistol, Lethal Hits, Precision
+Keywords: Chaos, Character, Exalted Sorcerer, Faction: Thousand Sons, Fly, Grenades, Infantry, Mounted, Psyker, Tzeentch, Mutant, Tzaangor Enlightened, Tzaangor Enlightened with Fatecaster Greatbows
+
+### Mucho Mutantes · Tzaangor Shaman + Tzaangor Enlightened · Character · 175 pts
+Enhancement: Curse of Life · Leads Tzaangor Enlightened
+Models: 1× Tzaangor Shaman; 1× Aviarch; 5× Divining spear Enlightened
+Stats: Tzaangor Shaman M 10" T 4 Sv 5+ W 4 Ld 7+ OC 2 InSv 5+ | Tzaangor Enlightened M 10" T 4 Sv 5+ W 2 Ld 7+ OC 2 InSv 5+
+Ranged weapons:
+- Baleful Devolution · Tzaangor Shaman: 18", A D6, BS 3+, S 9, AP 0, D 1 [BLAST, DEVASTATING WOUNDS, PSYCHIC]
+Melee weapons:
+- Force stave · Tzaangor Shaman: Melee, A 3, WS 3+, S 5, AP -1, D D3 [PSYCHIC]
+- Divining spear ×6 · Tzaangor Enlightened: Melee, A 3, WS 4+, S 5, AP -1, D 2 [LANCE, PRECISION]
+Abilities:
+- Sacrificial Blessing · Tzaangor Shaman: While this model is leading a unit, in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight, this model can use this ability. If it does, select one **Bodyguard** model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model.
+- Bestial Prophet · Tzaangor Shaman: While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the **Hit roll**.
+- Curse of Life (Enhancement) · Tzaangor Shaman: **INFANTRY**/**MOUNTED THOUSAND SONS PSYKER** model only. When this model **heals** as a result of the **Sorcerous Invigoration detachment rule**, you can add 3 to the number of wounds **healed**.
+- Prophesied Doom · Tzaangor Enlightened: Each time this unit makes a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 **mortal wound**.
+Rules: Leader, Cabal of Sorcerers, Devastating Wounds, Blast, Psychic, Lance, Precision
+Keywords: Chaos, Character, Faction: Thousand Sons, Fly, Infantry, Mounted, Mutant, Psyker, Tzaangor Shaman, Tzeentch, Tzaangor Enlightened
+
+### Mucho Mutantes · Tzaangor Shaman + Tzaangor Enlightened · Character · 175 pts
+Enhancement: Diamond of Distortion · Leads Tzaangor Enlightened
+Models: 1× Tzaangor Shaman; 1× Aviarch; 5× Divining spear Enlightened
+Stats: Tzaangor Shaman M 10" T 4 Sv 5+ W 4 Ld 7+ OC 2 InSv 5+ | Tzaangor Enlightened M 10" T 4 Sv 5+ W 2 Ld 7+ OC 2 InSv 5+
+Ranged weapons:
+- Baleful Devolution · Tzaangor Shaman: 18", A D6, BS 3+, S 9, AP 0, D 1 [BLAST, DEVASTATING WOUNDS, PSYCHIC]
+Melee weapons:
+- Force stave · Tzaangor Shaman: Melee, A 3, WS 3+, S 5, AP -1, D D3 [PSYCHIC]
+- Divining spear ×6 · Tzaangor Enlightened: Melee, A 3, WS 4+, S 5, AP -1, D 2 [LANCE, PRECISION]
+Abilities:
+- Sacrificial Blessing · Tzaangor Shaman: While this model is leading a unit, in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight, this model can use this ability. If it does, select one **Bodyguard** model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model.
+- Bestial Prophet · Tzaangor Shaman: While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the **Hit roll**.
+- Diamond of Distortion (Enhancement) · Tzaangor Shaman: **TZAANGOR SHAMAN** model only. While the bearer is leading a unit, each time an attack targets that unit, subtract 1 from the **Hit roll**.
+- Prophesied Doom · Tzaangor Enlightened: Each time this unit makes a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 **mortal wound**.
+Rules: Leader, Cabal of Sorcerers, Devastating Wounds, Blast, Psychic, Lance, Precision
+Keywords: Chaos, Character, Faction: Thousand Sons, Fly, Infantry, Mounted, Mutant, Psyker, Tzaangor Shaman, Tzeentch, Tzaangor Enlightened
+
+### Mucho Mutantes · Tzaangor Shaman + Tzaangor Enlightened · Character · 165 pts
+Enhancement: Flowing Flesh · Leads Tzaangor Enlightened
+Models: 1× Tzaangor Shaman; 1× Aviarch; 5× Divining spear Enlightened
+Stats: Tzaangor Shaman M 10" T 4 Sv 5+ W 5 Ld 7+ OC 2 InSv 5+ [W already includes Flowing Flesh] | Tzaangor Enlightened M 10" T 4 Sv 5+ W 2 Ld 7+ OC 2 InSv 5+
+Ranged weapons:
+- Baleful Devolution · Tzaangor Shaman: 18", A D6, BS 3+, S 9, AP 0, D 1 [BLAST, DEVASTATING WOUNDS, PSYCHIC]
+Melee weapons:
+- Force stave · Tzaangor Shaman: Melee, A 3, WS 3+, S 5, AP -1, D D3 [PSYCHIC]
+- Divining spear ×6 · Tzaangor Enlightened: Melee, A 3, WS 4+, S 5, AP -1, D 2 [LANCE, PRECISION]
+Abilities:
+- Sacrificial Blessing · Tzaangor Shaman: While this model is leading a unit, in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight, this model can use this ability. If it does, select one **Bodyguard** model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model.
+- Bestial Prophet · Tzaangor Shaman: While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the **Hit roll**.
+- Flowing Flesh (Enhancement) · Tzaangor Shaman: **TZAANGOR SHAMAN** model only. The bearer has the **Feel No Pain 4+** ability and a Wounds characteristic of 5.
+- Prophesied Doom · Tzaangor Enlightened: Each time this unit makes a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 **mortal wound**.
+Rules: Leader, Cabal of Sorcerers, Feel No Pain 4+, Devastating Wounds, Blast, Psychic, Lance, Precision
+Keywords: Chaos, Character, Faction: Thousand Sons, Fly, Infantry, Mounted, Mutant, Psyker, Tzaangor Shaman, Tzeentch, Tzaangor Enlightened
+
+### Mucho Mutantes · Tzaangors · Battleline · 75 pts each, ×2 in the list
+Models: 1× Twistbray; 9× Tzaangor w/ Tzaangor blades
+Stats: Tzaangors M 6" T 4 Sv 6+ W 1 Ld 7+ OC 1 InSv 6+
+Melee weapons:
+- Tzaangor blades ×10: Melee, A 2, WS 4+, S 5, AP 0, D 1
+Abilities:
+- Ambushing Hunters: At the end of your opponent’s turn, if this unit is more than 6" horizontally away from all enemy units, you can remove this unit from the battlefield and place it into **Strategic Reserves**.
+Rules: Scouts 6"
+Keywords: Battleline, Chaos, Faction: Thousand Sons, Infantry, Mutant, Tzaangors, Tzeentch
+
+### Mucho Mutantes · Sekhetar Robots · Vehicle · 85 pts
+Models: 2× Sekhetar Robot w/ pyreflux meltagun
+Stats: Sekhetar Robots ×2 M 8" T 6 Sv 3+ W 4 Ld 7+ OC 1 InSv 5+
+Ranged weapons:
+- Heavy warpflamer ×2: 12", A D6, BS –, S 5, AP -2, D 1 [IGNORES COVER, TORRENT]
+- Hellfyre missile rack ×2: 36", A 2, BS 4+, S 10, AP -2, D 3
+- Pyreflux meltagun ×2: 12", A 1, BS 4+, S 10, AP -4, D D6 [MELTA 2]
+Melee weapons:
+- Close combat weapon ×2: Melee, A 3, WS 4+, S 5, AP 0, D 1
+Abilities:
+- Prophetic Sentinels: Once per turn, when you target this unit with the **Fire Overwatch**/**Heroic Intervention** stratagem, that use is -1 CP.
+Rules: Infiltrators, Stealth, Ignores Cover, Torrent, Melta
+Keywords: Chaos, Faction: Thousand Sons, Sekhetar Robots, Tzeentch, Vehicle, Walker

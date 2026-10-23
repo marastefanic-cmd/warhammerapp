@@ -5,21 +5,21 @@ Grand Coven · Disposition: Priority Assets
 
 Overview
 Bases & proxies
-39
+35
 Units
-9
+8
 Stratagems
 16
 Ranged weapons
-20
+23
 Melee weapons
 13
 Abilities
-25
+26
 Rules
 Damage calculator
 
-New Recruit, exported 20 Oct 2026
+New Recruit, exported 23 Oct 2026
 
 ######## pregame · PUBSTOMPER Overview
 YOUR LIST
@@ -27,9 +27,10 @@ WARLORD
 Magnus the Red
 ENHANCE­MENTS
 Eldritch Vortex of E’taph 35 pts on Daemon Prince of Tzeentch with wings
+Incandaeum 15 pts on Exalted Sorcerer
 Umbralefic Crystal 30 pts on Sorcerer in Terminator Armour
 ATTACHED
-Sorcerer leads Rubric Marines
+Exalted Sorcerer leads Rubric Marines
 Sorcerer in Terminator Armour leads Scarab Occult Terminators
 DETACH­MENTS
 Grand Coven (3 DP)
@@ -94,7 +95,7 @@ Wrath of the Immaterium
 
 Psychic weapons equipped by THOUSAND SONS models from your army have the [DEVASTATING WOUNDS] ability.
 
-APPLIES TOMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+APPLIES TOMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Exalted Sorcerer · Incandaeum, Sorcerer in Terminator Armour · Umbralefic Crystal
 
 DECLARE BATTLE FORMATIONS
 DEEP STRIKE
@@ -103,8 +104,9 @@ Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph 205 pts
 Sorcerer in Terminator Armour + Scarab Occult Terminators 565 pts
 All of them: 1225 pts
 DEPLOYMENT AND PRE-BATTLE ABILITIES
-SCOUTS
+SCOUTS AND INFILTRATORS
 Tzaangors Scouts 6"
+Sekhetar Robots Infiltrators
 START OF THE BATTLE AND THE BATTLE ROUNDS
 EVERY ROUND
 Unearthly Power · Magnus the Red
@@ -116,7 +118,7 @@ Imbued Manifestation
 Psychic Maelstrom
 Wrath of the Immaterium
 ABILITIES
-Twisted Sorceries · Sorcerer + Rubric Marines
+Incandaeum · Exalted Sorcerer + Rubric Marines
 Umbralefic Crystal · Sorcerer in Terminator Armour per army
 STRATA­GEMS
 1CP Insane Bravery
@@ -148,17 +150,18 @@ Eldritch Vortex of E’taph
 3
 4+
 205
-Sorcerer
+Exalted Sorcerer
 + Rubric Marines
-215
-Sorcerer
+Incandaeum
+230
+Exalted Sorcerer
 6"
 5
 3+
-4
+5
 6+
 1
-5+
+4+
 Rubric Marine×4
 6"
 5
@@ -166,7 +169,7 @@ Rubric Marine×4
 2
 7+
 2
-5+
+4+
 Aspiring Sorcerer
 6"
 5
@@ -174,7 +177,7 @@ Aspiring Sorcerer
 3
 6+
 2
-5+
+4+
 Sorcerer in Terminator Armour
 + Scarab Occult Terminators
 Umbralefic Crystal
@@ -216,17 +219,7 @@ Tzaangors
 6+
 75
 MOUNTED
-3
-Tzaangor Enlightened
-1× Aviarch, 2× Divining spear Enlightened
-10"
-4
-5+
-2
-7+
-2
-5+
-2×50
+1
 Tzaangor Enlightened with Fatecaster greatbows
 1× Aviarch, 2× Enlightened
 10"
@@ -238,7 +231,7 @@ Tzaangor Enlightened with Fatecaster greatbows
 5+
 55
 VEHICLES
-1
+2
 Defiler
 12"
 11
@@ -248,6 +241,16 @@ Defiler
 5
 5+
 330
+Sekhetar Robots
+×2
+8"
+6
+3+
+4
+7+
+1
+5+
+85
 
 ######## ranged · UNITS Ranged weapons WEAPON RNG A BS S AP D
 Magnus the Red
@@ -295,27 +298,28 @@ After an aetherstride this turn: Dark Blessing has [SUSTAINED HITS D3] (Aetherst
 Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
 STRATAGEMS · GRAND COVEN
 2CP Devastating Sorcery: +9" range, re-roll hit and wound rolls, Psychic weapons, your Shooting phase
-Sorcerer
+Exalted Sorcerer
+Incandaeum
 + Rubric Marines
-SORCERER
-Pandaemonic Delusion
-24"
+EXALTED SORCERER
+Astral Blast
+18"
+D6
+2+
 6
-3+
-5
--1
-1
-PSYCHIC, SUSTAINED HITS 3, LETHAL HITS
+-2
+D3
+BLAST, DEVASTATING WOUNDS, PSYCHIC
 OR
 WHEN USING ANOTHER SHOOTING TYPE
 Inferno bolt pistol
 12"
 1
-3+
+2+
 5
 -2
 1
-PISTOL, LETHAL HITS
+PISTOL
 RUBRIC MARINES
 
 Aspiring Sorcerer can shoot with Warpflame pistol or Malefic Curse, not both (Close-quarters); in close-quarters shooting, Warpflame pistol only.
@@ -329,7 +333,7 @@ Malefic CurseASPIRING SORCERER
 4
 -3
 1
-ANTI-INFANTRY 4+, DEVASTATING WOUNDS, IGNORES COVER, PSYCHIC, LETHAL HITS
+ANTI-INFANTRY 4+, DEVASTATING WOUNDS, IGNORES COVER, PSYCHIC
 Warpflame pistolASPIRING SORCERER
 12"
 D6
@@ -337,7 +341,7 @@ D6
 3
 -1
 1
-IGNORES COVER, PISTOL, TORRENT, LETHAL HITS
+IGNORES COVER, PISTOL, TORRENT
 Soulreaper cannonRUBRIC MARINE
 24"
 6
@@ -345,7 +349,7 @@ Soulreaper cannonRUBRIC MARINE
 6
 -2
 1
-DEVASTATING WOUNDS, IGNORES COVER, LETHAL HITS
+DEVASTATING WOUNDS, IGNORES COVER
 Warpflamer×3
 12"
 D6
@@ -353,8 +357,7 @@ D6
 4
 -1
 1
-IGNORES COVER, TORRENT, LETHAL HITS
-Twisted Sorceries used this phase (your Shooting phase or the Fight phase, once per battle): Sorcerer Psychic weapons +3 S and +3 A
+IGNORES COVER, TORRENT
 Every ranged attack: re-roll wound rolls of 1 (Bringers of Change)
 Target within range of an objective marker you do not control: re-roll the wound roll (Bringers of Change)
 Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
@@ -451,6 +454,30 @@ Heavy reaper autocannon×2
 3
 DEVASTATING WOUNDS, SUSTAINED HITS 1
 Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 wounds remaining)
+Sekhetar Robots
+Heavy warpflamer×2
+12"
+D6
+–
+5
+-2
+1
+IGNORES COVER, TORRENT
+Hellfyre missile rack×2
+36"
+2
+4+
+10
+-2
+3
+Pyreflux meltagun×2
+12"
+1
+4+
+10
+-4
+D6
+MELTA 2
 
 ######## melee · RANGED Melee weapons WEAPON A WS S AP D
 Magnus the Red
@@ -492,24 +519,24 @@ DEVASTATING WOUNDS, PSYCHIC
 vs CHARACTER units: re-roll hit rolls of 1 and wound rolls of 1 (Hunter of Souls)
 vs PSYKER CHARACTER units: re-roll the hit roll and the wound roll (Hunter of Souls)
 Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
-Sorcerer
+Exalted Sorcerer
+Incandaeum
 + Rubric Marines
-SORCERER
+EXALTED SORCERER
 Force weapon
-4
-3+
+5
+2+
 6
 -1
 D3
-PSYCHIC, LETHAL HITS
+PSYCHIC
 OR
 Prosperine khopesh
-3
-3+
+4
+2+
 5
 -2
 2
-LETHAL HITS
 RUBRIC MARINES
 Force weaponASPIRING SORCERER
 3
@@ -517,15 +544,13 @@ Force weaponASPIRING SORCERER
 6
 -1
 D3
-PSYCHIC, LETHAL HITS
+PSYCHIC
 Close combat weapon×4
 2
 3+
 5
 0
 1
-LETHAL HITS
-Twisted Sorceries used this phase (your Shooting phase or the Fight phase, once per battle): Sorcerer Psychic weapons +3 S and +3 A
 Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
 Sorcerer in Terminator Armour
 Umbralefic Crystal
@@ -561,16 +586,6 @@ Tzaangor blades×10
 5
 0
 1
-Tzaangor Enlightened
-×2 units
-Divining spear×3
-3
-4+
-5
--1
-2
-LANCE, PRECISION
-Made a charge move this turn: Divining spear +1 to wound (Lance)
 Tzaangor Enlightened with Fatecaster greatbows
 Close combat weapon×3
 2
@@ -593,6 +608,13 @@ D6+1
 -2
 1
 Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 wounds remaining)
+Sekhetar Robots
+Close combat weapon×2
+3
+4+
+5
+0
+1
 
 ######## abilities · MELEE Abilities
 Magnus the Red
@@ -663,22 +685,32 @@ Enhancement
 
 THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.
 
-Sorcerer
+Exalted Sorcerer
+Incandaeum
 + Rubric Marines
-SORCERER
-Twisted Sorceries
-Once per battle
-Your Shoot · Fight
-
-Psychic · Your Shooting / Fight (either turn)
-
-Once per battle, in your Shooting phase or the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristic of Psychic weapons equipped by this model by 3.
-
-Empyric Guidance
+EXALTED SORCERER
+Arcane Shield
+Already in InSv
 
 Psychic
 
-While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.
+While this model is leading a unit, models in that unit have a 4+ invulnerable save.
+
+Rebind Rubricae
+Your Command
+
+Psychic · Command · Your turn
+
+In your Command phase, if this model is leading a unit, you can roll one D6: on a 1, that unit suffers D3 mortal wounds; on a 2-5, you can return 1 destroyed Bodyguard model to that unit; on a 6, you can return up to 2 destroyed Bodyguard models to that unit.
+
+Incandaeum
+Enhancement
+Once per battle
+Your Shooting
+
+Enhancement · Shooting · Your turn
+
+EXALTED SORCERER model only. Once per battle, when selecting a Ritual for the bearer to attempt, you can select Doombolt, even if a model from your army have already attempted to manifest that Ritual this phase.
 
 RUBRIC MARINES
 Bringers of Change
@@ -745,15 +777,6 @@ Herd banner
 
 While the bearer’s unit is within range of one or more objective markers you control, improve the Leadership characteristic of models in the bearer’s unit by 1.
 
-Tzaangor Enlightened
-×2 units
-Prophesied Doom
-Charge
-
-Charge · Either turn
-
-Each time this unit makes a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound.
-
 Tzaangor Enlightened with Fatecaster greatbows
 Malign Trickery
 Their Movement
@@ -783,6 +806,15 @@ That use does not prevent any uses of that stratagem on other units this phase.
 Damaged: 1-6 wounds remaining
 
 While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+Sekhetar Robots
+Prophetic Sentinels
+Once per turn
+Their Move/Charge
+
+Movement / Charge · Their turn
+
+Once per turn, when you target this unit with the Fire Overwatch/Heroic Intervention stratagem, that use is -1 CP.
 
 ######## rules · ABILITIES Rules
 Thousand Sons · Priority Assets
@@ -846,7 +878,14 @@ Wrath of the Immaterium
 
 Psychic weapons equipped by THOUSAND SONS models from your army have the [DEVASTATING WOUNDS] ability.
 
-APPLIES TOMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+APPLIES TOMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Exalted Sorcerer · Incandaeum, Sorcerer in Terminator Armour · Umbralefic Crystal
+
+Incandaeum
+Enhancement · 15 pts · on Exalted Sorcerer + Rubric Marines
+
+EXALTED SORCERER model only. Once per battle, when selecting a Ritual for the bearer to attempt, you can select Doombolt, even if a model from your army have already attempted to manifest that Ritual this phase.
+
+ONExalted Sorcerer + Rubric Marines
 
 Umbralefic Crystal
 Enhancement · 30 pts · on Sorcerer in Terminator Armour + Scarab Occult Terminators
@@ -867,14 +906,10 @@ THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Ps
 ONDaemon Prince of Tzeentch with wings
 
 Other enhancements
-2 not in this list
+1 not in this list
 Lord of Forbidden Lore 20 pts
 
 THOUSAND SONS model only. Each time the bearer manifests a Ritual, while resolving that Ritual, add 6" to its range.
-
-Incandaeum 15 pts
-
-EXALTED SORCERER model only. Once per battle, when selecting a Ritual for the bearer to attempt, you can select Doombolt, even if a model from your army have already attempted to manifest that Ritual this phase.
 
 STRATAGEMSEgotistical Power, Desecration of Worlds, Arcane Focus, Devastating Sorcery, Psychic Dominion, Destined by Fate
 
@@ -898,17 +933,21 @@ This unit must make an ingress move in your next Movement phase (including in yo
 Hazardous
 Magnus the Red
 Treason of Tzeentch: At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this PSYKER. Until the end of the phase, ranged weapons equipped by models in that unit have the [HAZARDOUS] ability.
+Infiltrators
+Sekhetar Robots
 Leader
-Sorcerer leads Rubric Marines
+Exalted Sorcerer leads Rubric Marines
 Sorcerer in Terminator Armour leads Scarab Occult Terminators
 Scouts
 Tzaangors 6"
+Stealth
+Sekhetar Robots
 
 ######## bases · RULES Bases & proxies
 BASES TO PRINT
 
-15× 32mm
-21× 40mm
+16× 32mm
+16× 40mm
 1× 60mm
 1× 100mm
 1× 160mm
@@ -921,10 +960,10 @@ Magnus the Red · Warlord
 Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph
 1× 60mm
 Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph
-Sorcerer
+Exalted Sorcerer · Incandaeum
 + Rubric Marines
-1× 40mm
-Sorcerer
+1× 32mm
+Exalted Sorcerer · Incandaeum
 1× 32mm
 Aspiring Sorcerer · Force weapon + Malefic Curse + Warpflame pistol
 1× 32mm
@@ -952,12 +991,6 @@ standard Tzaangor blades
 Brayhorn
 1× 32mm
 Herd banner
-Tzaangor Enlightened
-2 units: mark them apart (1, 2)
-1× 40mm
-Aviarch
-2× 40mm
-standard Divining spear
 Tzaangor Enlightened with Fatecaster greatbows
 1× 40mm
 Aviarch
@@ -966,6 +999,9 @@ standard Close combat weapon, Fatecaster greatbow
 Defiler
 1× 160mm
 Defiler
+Sekhetar Robots
+2× 40mm
+standard Close combat weapon, Heavy warpflamer, Hellfyre missile rack, Pyreflux meltagun
 
 From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
 
@@ -1888,12 +1924,12 @@ GRAND COVEN
 CP
 Egotistical Power
 Until the start of your next Command phase, your unit has Imbued Manifestation, Psychic Maelstrom or Wrath of the Immaterium instead of any other Kindred Sorcery ability, even one already selected this battle.
-Your Command Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
+Your Command Magnus the Red, Daemon Prince of Tzeentch with wings, Exalted Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
 1
 CP
 Desecration of Worlds
 An objective marker you control that your unit is within range of stays under your control until your opponent’s Level of Control over it is greater than yours at the end of a phase.
-Your Command Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
+Your Command Magnus the Red, Daemon Prince of Tzeentch with wings, Exalted Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
 1
 CP
 Arcane Focus
@@ -1903,7 +1939,7 @@ Your Shooting Any unit
 CP
 Devastating Sorcery
 Until the end of the phase, your unit’s Psychic weapons have +9" range and can re-roll the hit roll and the wound roll.
-Your Shooting Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
+Your Shooting Magnus the Red, Daemon Prince of Tzeentch with wings, Exalted Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
 1
 CP
 Psychic Dominion
@@ -1913,7 +1949,7 @@ Any phase Any unit
 CP
 Destined by Fate
 Just after a saving throw is failed for your PSYKER model: change the Damage of that attack to 0.
-Any phase Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
+Any phase Magnus the Red, Daemon Prince of Tzeentch with wings, Exalted Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
 CORE STRATAGEMS
 10
 1
@@ -1930,17 +1966,17 @@ End of their Movement Any unit
 CP
 Fire Overwatch
 Your unengaged unit shoots using snap shooting.
-End of their Movement All but Tzaangors, Tzaangor Enlightened ×2
+End of their Movement All but Tzaangors
 1
 CP
 Explosives
 Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
-Your Shooting Sorcerer + Rubric Marines
+Your Shooting Exalted Sorcerer + Rubric Marines
 1
 CP
 Crushing Impact
 After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
-Your Charge Magnus the Red, Daemon Prince of Tzeentch with wings, Defiler
+Your Charge Magnus the Red, Daemon Prince of Tzeentch with wings, Defiler, Sekhetar Robots
 1
 CP
 Heroic Intervention
@@ -1950,7 +1986,7 @@ End of their Charge · Into the Fray +1CP Any unit
 CP
 Epic Challenge
 One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
-Fight Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
+Fight Magnus the Red, Daemon Prince of Tzeentch with wings, Exalted Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
 2
 CP
 Counteroffensive
@@ -1976,7 +2012,7 @@ GRAND COVEN
 1
 CP
 Egotistical Power
-Your Command Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
+Your Command Magnus the Red, Daemon Prince of Tzeentch with wings, Exalted Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
 WHEN
 
 Your Command phase.
@@ -1987,12 +2023,12 @@ EFFECT
 
 Select the Imbued Manifestation, Psychic Maelstrom or Wrath of the Immaterium ability. Until the start of your next Command phase, that ability applies to your unit instead of any other Kindred Sorcery ability, even if you have already selected that ability this battle.
 
-USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators · Umbralefic Crystal
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Exalted Sorcerer + Rubric Marines · Incandaeum, Sorcerer in Terminator Armour + Scarab Occult Terminators · Umbralefic Crystal
 
 1
 CP
 Desecration of Worlds
-Your Command Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
+Your Command Magnus the Red, Daemon Prince of Tzeentch with wings, Exalted Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
 WHEN
 
 Your Command phase.
@@ -2003,7 +2039,7 @@ EFFECT
 
 That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
 
-USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators · Umbralefic Crystal
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Exalted Sorcerer + Rubric Marines · Incandaeum, Sorcerer in Terminator Armour + Scarab Occult Terminators · Umbralefic Crystal
 
 1
 CP
@@ -2024,7 +2060,7 @@ USED BYany unit
 2
 CP
 Devastating Sorcery
-Your Shooting Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
+Your Shooting Magnus the Red, Daemon Prince of Tzeentch with wings, Exalted Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
 WHEN
 
 Your Shooting phase.
@@ -2035,7 +2071,7 @@ EFFECT
 
 Until the end of the phase, add 9" to the Range characteristic of Psychic weapons equipped by models in your unit, and each time a model in your unit makes an attack with a Psychic weapon, you can re-roll the Hit roll and you can re-roll the Wound roll.
 
-USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators · Umbralefic Crystal
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Exalted Sorcerer + Rubric Marines · Incandaeum, Sorcerer in Terminator Armour + Scarab Occult Terminators · Umbralefic Crystal
 
 1
 CP
@@ -2056,7 +2092,7 @@ USED BYany unit
 1
 CP
 Destined by Fate
-Any phase Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
+Any phase Magnus the Red, Daemon Prince of Tzeentch with wings, Exalted Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
 WHEN
 
 Any phase, just after a saving throw is failed for a THOUSAND SONS PSYKER model from your army. If you are using fast dice rolling, this Stratagem can still be used after rolling multiple saving throws at once.
@@ -2067,7 +2103,7 @@ EFFECT
 
 Change the Damage characteristic of that attack to 0. If you are using fast dice rolling, select one of those attacks you failed a saving throw for.
 
-USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators · Umbralefic Crystal
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Exalted Sorcerer + Rubric Marines · Incandaeum, Sorcerer in Terminator Armour + Scarab Occult Terminators · Umbralefic Crystal
 
 CORE STRATAGEMS
 10
@@ -2112,7 +2148,7 @@ USED BYany unit
 1
 CP
 Fire Overwatch
-End of their Movement All but Tzaangors, Tzaangor Enlightened ×2
+End of their Movement All but Tzaangors
 WHEN
 
 End of your opponent’s Movement phase.
@@ -2123,12 +2159,12 @@ EFFECT
 
 Your unit shoots using snap shooting.
 
-USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators · Umbralefic Crystal, Tzaangor Enlightened with Fatecaster greatbows, Defiler
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Exalted Sorcerer + Rubric Marines · Incandaeum, Sorcerer in Terminator Armour + Scarab Occult Terminators · Umbralefic Crystal, Tzaangor Enlightened with Fatecaster greatbows, Defiler, Sekhetar Robots
 
 1
 CP
 Explosives
-Your Shooting Sorcerer + Rubric Marines
+Your Shooting Exalted Sorcerer + Rubric Marines
 WHEN
 
 Your Shooting phase.
@@ -2145,12 +2181,12 @@ Resolve the following sequence:
 
 Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
 
-USED BYSorcerer + Rubric Marines
+USED BYExalted Sorcerer + Rubric Marines · Incandaeum
 
 1
 CP
 Crushing Impact
-Your Charge Magnus the Red, Daemon Prince of Tzeentch with wings, Defiler
+Your Charge Magnus the Red, Daemon Prince of Tzeentch with wings, Defiler, Sekhetar Robots
 WHEN
 
 Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
@@ -2167,7 +2203,7 @@ Resolve the following sequence:
 
 Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
 
-USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Defiler
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Defiler, Sekhetar Robots
 
 1
 CP
@@ -2193,7 +2229,7 @@ USED BYany unit
 1
 CP
 Epic Challenge
-Fight Magnus the Red, Daemon Prince of Tzeentch with wings, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
+Fight Magnus the Red, Daemon Prince of Tzeentch with wings, Exalted Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators
 WHEN
 
 Fight phase, just after a friendly CHARACTER unit is selected to fight.
@@ -2204,7 +2240,7 @@ EFFECT
 
 Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
 
-USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators · Umbralefic Crystal
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Exalted Sorcerer + Rubric Marines · Incandaeum, Sorcerer in Terminator Armour + Scarab Occult Terminators · Umbralefic Crystal
 
 2
 CP
@@ -2528,16 +2564,17 @@ PSYKER
 TZEENTCH
 Ask about this unit
 ‹ Magnus the Red
-Sorcerer ›
+Exalted Sorcerer · Incandaeum ›
 
-######## unit sorcerer-rubric-marines · DAEMON PRINCE OF TZEENTCH WITH WINGS Pubstomper
-SORCERER + RUBRIC MARINES
-215 PTS
-Character · 100 + Rubric Marines 115
+######## unit exalted-sorcerer-rubric-marines · DAEMON PRINCE OF TZEENTCH WITH WINGS Pubstomper
+EXALTED SORCERER + RUBRIC MARINES
+230 PTS
+Character · 115 + Rubric Marines 115
+Incandaeum
 Models
 Options
-1× Sorcerer
-Force weapon, Inferno bolt pistol, Pandaemonic Delusion, Prosperine khopesh
+1× Exalted Sorcerer
+Astral Blast, Force weapon, Inferno bolt pistol, Prosperine khopesh
 Leading Rubric Marines
 1× Aspiring Sorcerer
 Force weapon, Malefic Curse, Warpflame pistol
@@ -2555,15 +2592,15 @@ W
 LD
 OC
 InSv
-Sorcerer
-40mm
+Exalted Sorcerer
+32mm
 6"
 5
 3+
-4
+5
 6+
 1
-5+
+4+
 Rubric Marine
 32mm
 6"
@@ -2572,7 +2609,7 @@ Rubric Marine
 2
 7+
 2
-5+
+4+
 Aspiring Sorcerer
 32mm
 6"
@@ -2581,10 +2618,9 @@ Aspiring Sorcerer
 3
 6+
 2
-5+
+4+
 WHEN TARGETED1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS] · 1CP Destined by Fate: after a failed save for a PSYKER model, that attack’s Damage becomes 0
 ALL ATTACKS · WHOLE UNIT
-Twisted Sorceries used this phase (your Shooting phase or the Fight phase, once per battle): Sorcerer Psychic weapons +3 S and +3 A
 Kindred Sorcery (one ability, picked in your Command phase; each ability only once per battle): Psychic weapons only: Imbued Manifestation +6" range (ranged) · Psychic Maelstrom +1 to wound rolls · Wrath of the Immaterium [DEVASTATING WOUNDS]
 RANGED WEAPONS
 Range
@@ -2593,25 +2629,25 @@ BS
 S
 AP
 D
-SORCERER
-Pandaemonic Delusion
-24"
+EXALTED SORCERER
+Astral Blast
+18"
+D6
+2+
 6
-3+
-5
--1
-1
-PSYCHIC, SUSTAINED HITS 3, LETHAL HITS
+-2
+D3
+BLAST, DEVASTATING WOUNDS, PSYCHIC
 OR
 WHEN USING ANOTHER SHOOTING TYPE
 Inferno bolt pistol
 12"
 1
-3+
+2+
 5
 -2
 1
-PISTOL, LETHAL HITS
+PISTOL
 RUBRIC MARINES
 
 Aspiring Sorcerer can shoot with Warpflame pistol or Malefic Curse, not both (Close-quarters); in close-quarters shooting, Warpflame pistol only.
@@ -2625,7 +2661,7 @@ Malefic CurseASPIRING SORCERER
 4
 -3
 1
-ANTI-INFANTRY 4+, DEVASTATING WOUNDS, IGNORES COVER, PSYCHIC, LETHAL HITS
+ANTI-INFANTRY 4+, DEVASTATING WOUNDS, IGNORES COVER, PSYCHIC
 Warpflame pistolASPIRING SORCERER
 12"
 D6
@@ -2633,7 +2669,7 @@ D6
 3
 -1
 1
-IGNORES COVER, PISTOL, TORRENT, LETHAL HITS
+IGNORES COVER, PISTOL, TORRENT
 Soulreaper cannonRUBRIC MARINE
 24"
 6
@@ -2641,7 +2677,7 @@ Soulreaper cannonRUBRIC MARINE
 6
 -2
 1
-DEVASTATING WOUNDS, IGNORES COVER, LETHAL HITS
+DEVASTATING WOUNDS, IGNORES COVER
 Warpflamer×3
 12"
 D6
@@ -2649,7 +2685,7 @@ D6
 4
 -1
 1
-IGNORES COVER, TORRENT, LETHAL HITS
+IGNORES COVER, TORRENT
 WHOLE UNIT
 Every ranged attack: re-roll wound rolls of 1 (Bringers of Change)
 Target within range of an objective marker you do not control: re-roll the wound roll (Bringers of Change)
@@ -2661,22 +2697,21 @@ WS
 S
 AP
 D
-SORCERER
+EXALTED SORCERER
 Force weapon
-4
-3+
+5
+2+
 6
 -1
 D3
-PSYCHIC, LETHAL HITS
+PSYCHIC
 OR
 Prosperine khopesh
-3
-3+
+4
+2+
 5
 -2
 2
-LETHAL HITS
 RUBRIC MARINES
 Force weaponASPIRING SORCERER
 3
@@ -2684,30 +2719,39 @@ Force weaponASPIRING SORCERER
 6
 -1
 D3
-PSYCHIC, LETHAL HITS
+PSYCHIC
 Close combat weapon×4
 2
 3+
 5
 0
 1
-LETHAL HITS
 ABILITIES
-Twisted Sorceries
-- Sorcerer
-Once per battle
-Your Shoot · Fight
-
-Psychic · Your Shooting / Fight (either turn)
-
-Once per battle, in your Shooting phase or the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristic of Psychic weapons equipped by this model by 3.
-
-Empyric Guidance
-- Sorcerer
+Arcane Shield
+- Exalted Sorcerer
+Already in InSv
 
 Psychic
 
-While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.
+While this model is leading a unit, models in that unit have a 4+ invulnerable save.
+
+Rebind Rubricae
+- Exalted Sorcerer
+Your Command
+
+Psychic · Command · Your turn
+
+In your Command phase, if this model is leading a unit, you can roll one D6: on a 1, that unit suffers D3 mortal wounds; on a 2-5, you can return 1 destroyed Bodyguard model to that unit; on a 6, you can return up to 2 destroyed Bodyguard models to that unit.
+
+Incandaeum
+- Exalted Sorcerer
+Enhancement
+Once per battle
+Your Shooting
+
+Enhancement · Shooting · Your turn
+
+EXALTED SORCERER model only. Once per battle, when selecting a Ritual for the bearer to attempt, you can select Doombolt, even if a model from your army have already attempted to manifest that Ritual this phase.
 
 Bringers of Change
 - Rubric Marines
@@ -2723,7 +2767,7 @@ Icon of Flame
 Ranged weapons equipped by models in the bearer’s unit (excluding CHARACTERS) have the [IGNORES COVER] ability.
 
 Rules
-Leader, Cabal of Sorcerers (Sorcerer and Aspiring Sorcerer), Kindred Sorcery
+Leader, Cabal of Sorcerers (Exalted Sorcerer and Aspiring Sorcerer), Kindred Sorcery
 Stratagems
 
 GRAND COVEN Egotistical Power, Desecration of Worlds, Arcane Focus, Devastating Sorcery, Psychic Dominion, Destined by Fate
@@ -2733,23 +2777,23 @@ CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervent
 Keywords
 CHAOS
 CHARACTER
+EXALTED SORCERER
 FACTION: THOUSAND SONS
 GRENADES
 INFANTRY
-SORCERER
 TZEENTCH
 BATTLELINE*
 RUBRIC*
 RUBRIC MARINES*
 RUBRICAE*
-Sorcerer and Aspiring Sorcerer only:
+Exalted Sorcerer and Aspiring Sorcerer only:
 PSYKER
 *from the led Rubric Marines
 Ask about this unit
 ‹ Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph
 Sorcerer in Terminator Armour · Umbralefic Crystal ›
 
-######## unit sorcerer-in-terminator-armour-scarab-occult-terminators · SORCERER Pubstomper
+######## unit sorcerer-in-terminator-armour-scarab-occult-terminators · EXALTED SORCERER Pubstomper
 SORCERER IN TERMINATOR ARMOUR + SCARAB OCCULT TERMINATORS
 565 PTS
 Character · 140 + Scarab Occult Terminators 425
@@ -2951,7 +2995,7 @@ Sorcerer in Terminator Armour and Scarab Occult Sorcerer only:
 PSYKER
 *from the led Scarab Occult Terminators
 Ask about this unit
-‹ Sorcerer
+‹ Exalted Sorcerer · Incandaeum
 Tzaangors ›
 
 ######## unit tzaangors · SORCERER IN TERMINATOR ARMOUR Pubstomper
@@ -3034,77 +3078,9 @@ TZAANGORS
 TZEENTCH
 Ask about this unit
 ‹ Sorcerer in Terminator Armour · Umbralefic Crystal
-Tzaangor Enlightened ›
-
-######## unit tzaangor-enlightened · TZAANGORS Pubstomper
-TZAANGOR ENLIGHTENED
-50 PTS EACH
-Mounted · ×2 in list
-Models
-Options
-1× Aviarch
-Divining spear
-2× Divining spear Enlightened
-Divining spear
-Unit
-M
-T
-Sv
-W
-LD
-OC
-InSv
-Tzaangor Enlightened
-40mm
-10"
-4
-5+
-2
-7+
-2
-5+
-WHEN TARGETED1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
-MELEE WEAPONS
-A
-WS
-S
-AP
-D
-Divining spear×3
-3
-4+
-5
--1
-2
-LANCE, PRECISION
-Made a charge move this turn: Divining spear +1 to wound (Lance)
-ABILITIES
-Prophesied Doom
-Charge
-
-Charge · Either turn
-
-Each time this unit makes a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound.
-
-Stratagems
-
-GRAND COVEN Arcane Focus, Psychic Dominion
-
-CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
-
-Keywords
-CHAOS
-FACTION: THOUSAND SONS
-FLY
-MOUNTED
-MUTANT
-TZAANGOR ENLIGHTENED
-TZEENTCH
-Ask about this unit
-‹ Tzaangors
 Tzaangor Enlightened with Fatecaster greatbows ›
 
-######## unit tzaangor-enlightened-with-fatecaster-greatbows · TZAANGOR ENLIGHTENED Pubstomper
+######## unit tzaangor-enlightened-with-fatecaster-greatbows · TZAANGORS Pubstomper
 TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS
 55 PTS
 Mounted
@@ -3183,7 +3159,7 @@ TZAANGOR ENLIGHTENED
 TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS
 TZEENTCH
 Ask about this unit
-‹ Tzaangor Enlightened
+‹ Tzaangors
 Defiler ›
 
 ######## unit defiler · TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS Pubstomper
@@ -3299,11 +3275,107 @@ VEHICLE
 WALKER
 Ask about this unit
 ‹ Tzaangor Enlightened with Fatecaster greatbows
+Sekhetar Robots ›
+
+######## unit sekhetar-robots · DEFILER Pubstomper
+SEKHETAR ROBOTS
+85 PTS
+Vehicle
+Models
+Options
+2× Sekhetar Robot w/ pyreflux meltagun
+Close combat weapon, Heavy warpflamer, Hellfyre missile rack, Pyreflux meltagun
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Sekhetar Robots×2
+40mm
+8"
+6
+3+
+4
+7+
+1
+5+
+WHEN TARGETED1CP Psychic Dominion: Feel No Pain 4+ against psychic attacks; attacks against it with Psychic weapons have [HAZARDOUS]
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Heavy warpflamer×2
+12"
+D6
+–
+5
+-2
+1
+IGNORES COVER, TORRENT
+Hellfyre missile rack×2
+36"
+2
+4+
+10
+-2
+3
+Pyreflux meltagun×2
+12"
+1
+4+
+10
+-4
+D6
+MELTA 2
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Close combat weapon×2
+3
+4+
+5
+0
+1
+ABILITIES
+Prophetic Sentinels
+Once per turn
+Their Move/Charge
+
+Movement / Charge · Their turn
+
+Once per turn, when you target this unit with the Fire Overwatch/Heroic Intervention stratagem, that use is -1 CP.
+
+Rules
+Infiltrators, Stealth
+Stratagems
+
+GRAND COVEN Arcane Focus, Psychic Dominion
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
+
+Keywords
+CHAOS
+FACTION: THOUSAND SONS
+SEKHETAR ROBOTS
+TZEENTCH
+VEHICLE
+WALKER
+Ask about this unit
+‹ Defiler
 
 ######## popup ability:pubstomper|Aetherstride|In your Movement phase, when this model is set up on the battlefield using the **Deep Strike** ability, it can perform an aetherstride. If it does:
 - It can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units.
 - Until the end of the turn, its Dark Blessing has the **[SUSTAINED HITS D3]** ability.
-- Until the end of the turn, it is not eligible to declare a charge. · DEFILER Pubstomper
+- Until the end of the turn, it is not eligible to declare a charge. · SEKHETAR ROBOTS Pubstomper
 ABILITY · PSYCHIC · MOVEMENT / SHOOTING / CHARGE · YOUR TURN
 
 Aetherstride
@@ -3325,7 +3397,7 @@ Bringers of Change
 
 Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the attack targets a unit within range of an objective marker you do not control, you can re-roll the Wound roll instead.
 
-UNITSorcerer + Rubric Marines
+UNITExalted Sorcerer + Rubric Marines · Incandaeum
 
 Ask about this ability
 
@@ -3362,6 +3434,17 @@ UNITMagnus the Red
 
 Ask about this ability
 
+######## popup ability:pubstomper|Incandaeum|**EXALTED SORCERER** model only. Once per battle, when selecting a **Ritual** for the bearer to attempt, you can select Doombolt, even if a model from your army have already attempted to manifest that Ritual this phase. · PUBSTOMPER Pubstomper
+ABILITY · ENHANCEMENT · SHOOTING · YOUR TURN
+
+Incandaeum
+
+EXALTED SORCERER model only. Once per battle, when selecting a Ritual for the bearer to attempt, you can select Doombolt, even if a model from your army have already attempted to manifest that Ritual this phase.
+
+UNITExalted Sorcerer + Rubric Marines · Incandaeum
+
+Ask about this ability
+
 ######## popup ability:pubstomper|Marked by Fate|At the start of your Shooting phase, select one enemy unit that is **visible** to this **PSYKER** model. Until the end of the phase, each time a model in this unit makes an attack that targets that enemy unit, add 1 to the **Hit roll**. · PUBSTOMPER Pubstomper
 ABILITY · PSYCHIC · SHOOTING · YOUR TURN
 
@@ -3392,17 +3475,6 @@ Treason of Tzeentch
 At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this PSYKER. Until the end of the phase, ranged weapons equipped by models in that unit have the [HAZARDOUS] ability.
 
 UNITMagnus the Red
-
-Ask about this ability
-
-######## popup ability:pubstomper|Twisted Sorceries|Once per battle, in your Shooting phase or the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristic of Psychic weapons equipped by this model by 3. · PUBSTOMPER Pubstomper
-ABILITY · PSYCHIC · YOUR SHOOTING / FIGHT (EITHER TURN)
-
-Twisted Sorceries
-
-Once per battle, in your Shooting phase or the Fight phase, this model can use this ability. If it does, until the end of the phase, improve the Strength and Attacks characteristic of Psychic weapons equipped by this model by 3.
-
-UNITSorcerer + Rubric Marines
 
 Ask about this ability
 
@@ -3460,6 +3532,17 @@ ONDaemon Prince of Tzeentch with wings
 
 Ask about this enhancement
 
+######## popup enh:grand-coven|Incandaeum · PUBSTOMPER Pubstomper
+ENHANCEMENT · GRAND COVEN · 15 PTS
+
+Incandaeum
+
+EXALTED SORCERER model only. Once per battle, when selecting a Ritual for the bearer to attempt, you can select Doombolt, even if a model from your army have already attempted to manifest that Ritual this phase.
+
+ONExalted Sorcerer + Rubric Marines
+
+Ask about this enhancement
+
 ######## popup enh:grand-coven|Umbralefic Crystal · PUBSTOMPER Pubstomper
 ENHANCEMENT · GRAND COVEN · 30 PTS
 
@@ -3474,6 +3557,17 @@ This unit must make an ingress move in your next Movement phase (including in yo
 ONSorcerer in Terminator Armour + Scarab Occult Terminators
 
 Ask about this enhancement
+
+######## popup grant:["Arcane Shield","exalted-sorcerer-rubric-marines","INV 4+",null] · PUBSTOMPER Pubstomper
+INV 4+ · GRANTED BY
+
+Arcane Shield
+
+Exalted Sorcerer · Psychic
+
+While this model is leading a unit, models in that unit have a 4+ invulnerable save.
+
+Already in the value shown (as New Recruit and BSData list it).
 
 ######## popup grant:["Eldritch Vortex of E’taph","daemon-prince-of-tzeentch-with-wings","D 2",null] · PUBSTOMPER Pubstomper
 D 2 · GRANTED BY
@@ -3547,24 +3641,7 @@ Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, 
 
 Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
 
-######## popup grant:["Empyric Guidance","sorcerer-rubric-marines","LETHAL HITS","LETHAL HITS"] · PUBSTOMPER Pubstomper
-LETHAL HITS · GRANTED BY
-
-Empyric Guidance
-
-Sorcerer · Psychic
-
-While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.
-
-Already in the keywords shown (as New Recruit and BSData list them).
-
-LETHAL HITS Core rule
-
-Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
-
-Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
-
-######## popup grant:["Icon of Flame","sorcerer-rubric-marines","IGNORES COVER","IGNORES COVER"] · PUBSTOMPER Pubstomper
+######## popup grant:["Icon of Flame","exalted-sorcerer-rubric-marines","IGNORES COVER","IGNORES COVER"] · PUBSTOMPER Pubstomper
 IGNORES COVER · GRANTED BY
 
 Icon of Flame
@@ -3588,7 +3665,7 @@ This ability always takes the form [ANTI-X Y+]. Each time an attack is made with
 
 Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
 
-IN THIS ARMYSorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+IN THIS ARMYExalted Sorcerer · Incandaeum, Sorcerer in Terminator Armour · Umbralefic Crystal
 
 Ask about this rule
 
@@ -3601,7 +3678,7 @@ This ability always takes the form [ANTI-X Y+]. Each time an attack is made with
 
 Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
 
-IN THIS ARMYSorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+IN THIS ARMYExalted Sorcerer · Incandaeum, Sorcerer in Terminator Armour · Umbralefic Crystal
 
 Ask about this rule
 
@@ -3614,7 +3691,7 @@ This ability always takes the form [ANTI-X Y+]. Each time an attack is made with
 
 Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a VEHICLE unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a PSYKER unit will result in a critical wound on an unmodified wound roll of 2+.
 
-IN THIS ARMYSorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+IN THIS ARMYExalted Sorcerer · Incandaeum, Sorcerer in Terminator Armour · Umbralefic Crystal
 
 Ask about this rule
 
@@ -3667,7 +3744,32 @@ If this ability takes the form [BLAST X], each time you gather attack dice for s
 
 Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
 
-IN THIS ARMYMagnus the Red, Defiler
+IN THIS ARMYMagnus the Red, Exalted Sorcerer · Incandaeum, Defiler
+
+Ask about this rule
+
+######## popup rule:Bodyguard · PUBSTOMPER Pubstomper
+CORE RULE
+
+Bodyguard
+
+Some units have the Leader or Support ability listed on their datasheet (see below). Such units are known as leader units and support units respectively. Both of these abilities allow such units to lead other friendly units (known as bodyguard units) to form attached units. An attached unit is a single unit for all rules purposes. Leader and support units can only lead specific bodyguard units, as listed in the Warhammer 40,000 app.
+
+19.04 Abilities in Attached Units: Abilities/rules that affect a single specified model (e.g. from an enhancement or an item of wargear) only ever apply to that model, even while part of an attached unit.
+
+Otherwise, abilities/rules that affect a unit (or models in it) apply to every model in an attached unit, until the source of that ability/rule is destroyed, as shown below.
+
+SOURCE OF ABILITY/RULE: APPLIES TO THE ATTACHED UNIT UNTIL
+
+Leader/support unit: The last model in that leader/support unit is destroyed.*
+Bodyguard unit (e.g. from a datasheet ability): The last model in that bodyguard unit is destroyed.
+A specific model (e.g. the bearer of an enhancement or an item of wargear): That model is destroyed.
+
+* This means leader/support units continue to benefit from their own ‘while this model is leading a unit’ abilities even after their bodyguard unit is destroyed, provided they started the battle in an attached unit.
+
+In all of the above cases, if that last model was destroyed as the result of an attack, the ability it was conferring upon the attached unit applies until the attacking unit has resolved all of its attacks.
+
+Wahapedia FAQ: When does a model’s or unit’s ability in an attached unit apply to all models in that unit? A rule that applies to ‘this/that unit’ or ‘models in this/that unit’ applies to all models in an attached unit. Rules that just apply to one model in an attached unit (for example, a rule that grants a model Feel No Pain or Lone Operative) only apply to that model, not to all models in the attached unit.
 
 Ask about this rule
 
@@ -3759,7 +3861,7 @@ One or more of its other ranged weapons.
 
 [PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
 
-IN THIS ARMYSorcerer
+IN THIS ARMYExalted Sorcerer · Incandaeum
 
 Ask about this rule
 
@@ -3772,7 +3874,7 @@ Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critica
 
 Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
 
-IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal, Defiler
+IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Exalted Sorcerer · Incandaeum, Sorcerer in Terminator Armour · Umbralefic Crystal, Defiler
 
 Ask about this rule
 
@@ -3926,7 +4028,18 @@ IGNORES COVER
 
 Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
 
-IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Tzaangor Enlightened with Fatecaster greatbows
+IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Exalted Sorcerer · Incandaeum, Tzaangor Enlightened with Fatecaster greatbows, Sekhetar Robots
+
+Ask about this rule
+
+######## popup rule:Infiltrators · PUBSTOMPER Pubstomper
+CORE RULE
+
+Infiltrators
+
+During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from your opponent’s deployment zone and all enemy units.
+
+IN THIS ARMYSekhetar Robots
 
 Ask about this rule
 
@@ -3949,18 +4062,7 @@ Wrath of the Immaterium
 
 Psychic weapons equipped by THOUSAND SONS models from your army have the [DEVASTATING WOUNDS] ability.
 
-IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
-
-Ask about this rule
-
-######## popup rule:LANCE · PUBSTOMPER Pubstomper
-CORE RULE
-
-LANCE
-
-Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
-
-IN THIS ARMYTzaangor Enlightened
+IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Exalted Sorcerer · Incandaeum, Sorcerer in Terminator Armour · Umbralefic Crystal
 
 Ask about this rule
 
@@ -3973,18 +4075,7 @@ Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, 
 
 Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
 
-IN THIS ARMYSorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal, Tzaangor Enlightened with Fatecaster greatbows
-
-Ask about this rule
-
-######## popup rule:Lance · PUBSTOMPER Pubstomper
-CORE RULE
-
-Lance
-
-Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
-
-IN THIS ARMYTzaangor Enlightened
+IN THIS ARMYSorcerer in Terminator Armour · Umbralefic Crystal, Tzaangor Enlightened with Fatecaster greatbows
 
 Ask about this rule
 
@@ -3997,7 +4088,7 @@ Before the battle, in the Muster Armies step, for each leader and support unit i
 
 Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.
 
-IN THIS ARMYSorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+IN THIS ARMYExalted Sorcerer · Incandaeum, Sorcerer in Terminator Armour · Umbralefic Crystal
 
 Ask about this rule
 
@@ -4015,6 +4106,19 @@ If this ability takes the form Lone Operative X", unless part of an attached uni
 If a unit has Lone Operative, but models in that unit have different range values for Lone Operative, the highest value amongst that unit’s models on the battlefield is applied to the whole unit.
 
 If an attached unit below starting strength only contains models with Lone Operative, Lone Operative becomes active again.
+
+Ask about this rule
+
+######## popup rule:MELTA 2 · PUBSTOMPER Pubstomper
+CORE RULE
+
+MELTA 2
+
+This ability always takes the form [MELTA X]. Each time a model makes an attack with a [MELTA] weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add X to that weapon’s D characteristic.
+
+Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6. While resolving those attacks, that weapon has a D characteristic of D6+2.
+
+IN THIS ARMYSekhetar Robots
 
 Ask about this rule
 
@@ -4064,7 +4168,7 @@ One or more of its other ranged weapons.
 
 [PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
 
-IN THIS ARMYSorcerer
+IN THIS ARMYExalted Sorcerer · Incandaeum
 
 Ask about this rule
 
@@ -4077,7 +4181,7 @@ While resolving attacks made with one or more [PRECISION] weapons, at the start 
 
 24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
 
-IN THIS ARMYTzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows
+IN THIS ARMYTzaangor Enlightened with Fatecaster greatbows
 
 Ask about this rule
 
@@ -4088,7 +4192,7 @@ PSYCHIC
 
 Each time an attack is made with a [PSYCHIC] weapon, you can ignore any or all modifiers to that attack’s BS or WS characteristic and any or all modifiers to the hit roll. Attacks made with [PSYCHIC] weapons are known as psychic attacks (this can be important for the triggering of other rules).
 
-IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Exalted Sorcerer · Incandaeum, Sorcerer in Terminator Armour · Umbralefic Crystal
 
 Ask about this rule
 
@@ -4099,7 +4203,7 @@ Psychic
 
 Each time an attack is made with a [PSYCHIC] weapon, you can ignore any or all modifiers to that attack’s BS or WS characteristic and any or all modifiers to the hit roll. Attacks made with [PSYCHIC] weapons are known as psychic attacks (this can be important for the triggering of other rules).
 
-IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal
+IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Exalted Sorcerer · Incandaeum, Sorcerer in Terminator Armour · Umbralefic Crystal
 
 Ask about this rule
 
@@ -4259,18 +4363,7 @@ SUSTAINED HITS 1
 
 This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
 
-IN THIS ARMYDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Defiler
-
-Ask about this rule
-
-######## popup rule:SUSTAINED HITS 3 · PUBSTOMPER Pubstomper
-CORE RULE
-
-SUSTAINED HITS 3
-
-This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
-
-IN THIS ARMYDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Defiler
+IN THIS ARMYDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Defiler
 
 Ask about this rule
 
@@ -4343,6 +4436,17 @@ Sidearms: Some models are equipped with [CLOSE-QUARTERS] weapons in addition to 
 
 Ask about this rule
 
+######## popup rule:Stealth · PUBSTOMPER Pubstomper
+CORE RULE
+
+Stealth
+
+If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).
+
+IN THIS ARMYSekhetar Robots
+
+Ask about this rule
+
 ######## popup rule:Strategic Reserves · PUBSTOMPER Pubstomper
 CORE RULE
 
@@ -4375,7 +4479,7 @@ TORRENT
 
 Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.
 
-IN THIS ARMYSorcerer
+IN THIS ARMYExalted Sorcerer · Incandaeum, Sekhetar Robots
 
 Ask about this rule
 
@@ -4388,7 +4492,7 @@ Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critica
 
 Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
 
-IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal, Defiler
+IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Exalted Sorcerer · Incandaeum, Sorcerer in Terminator Armour · Umbralefic Crystal, Defiler
 
 Ask about this rule
 
@@ -4410,7 +4514,7 @@ IGNORES COVER
 
 Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
 
-IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Tzaangor Enlightened with Fatecaster greatbows
+IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Exalted Sorcerer · Incandaeum, Tzaangor Enlightened with Fatecaster greatbows, Sekhetar Robots
 
 Ask about this rule
 
@@ -4423,7 +4527,7 @@ Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, 
 
 Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
 
-IN THIS ARMYSorcerer, Sorcerer in Terminator Armour · Umbralefic Crystal, Tzaangor Enlightened with Fatecaster greatbows
+IN THIS ARMYSorcerer in Terminator Armour · Umbralefic Crystal, Tzaangor Enlightened with Fatecaster greatbows
 
 Ask about this rule
 
@@ -4436,7 +4540,7 @@ While resolving attacks made with one or more [PRECISION] weapons, at the start 
 
 24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
 
-IN THIS ARMYTzaangor Enlightened, Tzaangor Enlightened with Fatecaster greatbows
+IN THIS ARMYTzaangor Enlightened with Fatecaster greatbows
 
 Ask about this rule
 
@@ -4447,7 +4551,7 @@ SUSTAINED HITS D3
 
 This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
 
-IN THIS ARMYDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer, Defiler
+IN THIS ARMYDaemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Defiler
 
 Ask about this rule
 
@@ -4816,7 +4920,7 @@ Resolve the following sequence:
 
 Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
 
-USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Defiler
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Defiler, Sekhetar Robots
 
 Ask about this stratagem
 
@@ -4834,7 +4938,7 @@ EFFECT
 
 That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.
 
-USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators · Umbralefic Crystal
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Exalted Sorcerer + Rubric Marines · Incandaeum, Sorcerer in Terminator Armour + Scarab Occult Terminators · Umbralefic Crystal
 
 Ask about this stratagem
 
@@ -4852,7 +4956,7 @@ EFFECT
 
 Change the Damage characteristic of that attack to 0. If you are using fast dice rolling, select one of those attacks you failed a saving throw for.
 
-USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators · Umbralefic Crystal
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Exalted Sorcerer + Rubric Marines · Incandaeum, Sorcerer in Terminator Armour + Scarab Occult Terminators · Umbralefic Crystal
 
 Ask about this stratagem
 
@@ -4870,7 +4974,7 @@ EFFECT
 
 Until the end of the phase, add 9" to the Range characteristic of Psychic weapons equipped by models in your unit, and each time a model in your unit makes an attack with a Psychic weapon, you can re-roll the Hit roll and you can re-roll the Wound roll.
 
-USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators · Umbralefic Crystal
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Exalted Sorcerer + Rubric Marines · Incandaeum, Sorcerer in Terminator Armour + Scarab Occult Terminators · Umbralefic Crystal
 
 Ask about this stratagem
 
@@ -4888,7 +4992,7 @@ EFFECT
 
 Select the Imbued Manifestation, Psychic Maelstrom or Wrath of the Immaterium ability. Until the start of your next Command phase, that ability applies to your unit instead of any other Kindred Sorcery ability, even if you have already selected that ability this battle.
 
-USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators · Umbralefic Crystal
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Exalted Sorcerer + Rubric Marines · Incandaeum, Sorcerer in Terminator Armour + Scarab Occult Terminators · Umbralefic Crystal
 
 Ask about this stratagem
 
@@ -4906,7 +5010,7 @@ EFFECT
 
 Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
 
-USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators · Umbralefic Crystal
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Exalted Sorcerer + Rubric Marines · Incandaeum, Sorcerer in Terminator Armour + Scarab Occult Terminators · Umbralefic Crystal
 
 Ask about this stratagem
 
@@ -4930,7 +5034,7 @@ Resolve the following sequence:
 
 Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
 
-USED BYSorcerer + Rubric Marines
+USED BYExalted Sorcerer + Rubric Marines · Incandaeum
 
 Ask about this stratagem
 
@@ -4948,7 +5052,7 @@ EFFECT
 
 Your unit shoots using snap shooting.
 
-USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Sorcerer + Rubric Marines, Sorcerer in Terminator Armour + Scarab Occult Terminators · Umbralefic Crystal, Tzaangor Enlightened with Fatecaster greatbows, Defiler
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings · Eldritch Vortex of E’taph, Exalted Sorcerer + Rubric Marines · Incandaeum, Sorcerer in Terminator Armour + Scarab Occult Terminators · Umbralefic Crystal, Tzaangor Enlightened with Fatecaster greatbows, Defiler, Sekhetar Robots
 
 Ask about this stratagem
 

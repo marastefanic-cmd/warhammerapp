@@ -3567,12 +3567,17 @@ function askFresh(){
 }
 // the owner's Claude Project for rules questions (project/ in the repo: its files, instructions and skills): the app writes the
 // question with this list, the screen and anything added to it, the player pastes it into a chat there (their subscription)
+let askKeyChat = false;   // "Other ways to ask" → the API key chat, once
 const askProjUrl = () => askCfg().project || 'https://claude.ai/projects';
 function askExport(q){
   const a = cur.army && army();
   const head = a ? 'KODEX · ' + a.name + ' · ' + faction().name + ' · ' + detachments().map(d => d.name).join(' + ') + (a.disposition ? ' · ' + a.disposition : '') + ' · data ' + D.version : 'KODEX · data ' + D.version;
   const about = askRefs.map(askRefText).filter(Boolean);
-  return [head, 'Looking at: ' + askWhere(), about.length ? 'About:\n' + about.join('\n\n') : '', 'Question: ' + q].filter(Boolean).join('\n');
+  // on the Damage tab: the answer the app shows and what it counts (the chips under it), as the player sees them
+  let dm = '';
+  if(cur.s === 'damage'){ const big = document.querySelector('#view .dmans .dmbig'), chips = [...document.querySelectorAll('#view .dmans .dmchips > *')].map(x => x.textContent.trim()).filter(Boolean);
+    if(big) dm = 'Damage tab shows: ' + [...big.children].map(x => x.textContent.replace(/\s+/g, ' ').trim()).filter(Boolean).join(' ') + (chips.length ? ' · counted: ' + chips.join(' · ') : ''); }
+  return [head, 'Looking at: ' + askWhere(), dm, about.length ? 'About:\n' + about.join('\n\n') : '', 'Question: ' + q].filter(Boolean).join('\n');
 }
 function askProject(){
   const a = cur.army ? army() : null, set = !!askCfg().project;
@@ -3589,11 +3594,19 @@ function askCopy(e){
   const q = (($('#askQ') || {}).value || '').trim();
   if(!q && !askRefs.length){ e.preventDefault(); toast('Type your question first'); return; }
   const text = askExport(q || 'What should I know about this?');
-  try { navigator.clipboard.writeText(text).then(() => toast('Copied: paste it into a chat in your Project'), () => toast('Could not copy here: select the question and copy it')); }
-  catch(err){ toast('Could not copy here: select the question and copy it'); }
+  // copied two ways in this tap: the old way first (it works in every browser and finishes before the link opens Claude),
+  // then the clipboard API; the question stays in the sheet to copy by hand if both fail
+  let ok = false;
+  try { const t = document.createElement('textarea'); t.value = text; t.setAttribute('readonly', ''); t.style.cssText = 'position:fixed;top:0;left:0;opacity:0;font-size:16px';
+    document.body.appendChild(t); t.select(); t.setSelectionRange(0, text.length); ok = document.execCommand('copy'); t.remove(); } catch(err){}
+  try { if(navigator.clipboard) navigator.clipboard.writeText(text).catch(() => {}); } catch(err){}
+  if(!ok && !navigator.clipboard){ e.preventDefault(); toast('Could not copy here: select the question and copy it'); }
 }
 function openAsk(){
-  if(!askOn()){ if(EMBEDDED) askChoose(); else askProject(); return; }
+  // outside Claude the Project comes first once its link is saved (Other ways to ask: the API key chat)
+  if(!EMBEDDED && (askCfg().project || !askOn()) && !askKeyChat){ askProject(); return; }
+  askKeyChat = false;
+  if(!askOn()){ askChoose(); return; }
   const a = cur.army ? army() : null, ctx = a ? a.id : '';
   if(!askConv || askConv.ctx !== ctx) askConv = { ctx, messages:[], shown:[] };
   const cfg = askCfg(), m = ASK_MODELS.find(x => x[0] === cfg.model) || ASK_MODELS[0], acct = askVia() === 'account';
@@ -4859,7 +4872,7 @@ document.addEventListener('click', e => {
   if(el.hasAttribute('data-ask')){ askFresh(); openAsk(); return; }
   if(el.hasAttribute('data-asksend')){ askSend(); return; }
   if(el.hasAttribute('data-askcopy')){ askCopy(e); return; }   // the link then opens the Project
-  if(el.hasAttribute('data-askother')){ askChoose(); return; }
+  if(el.hasAttribute('data-askother')){ if(askOn()){ askKeyChat = true; openAsk(); } else askChoose(); return; }
   if(el.hasAttribute('data-askprojsave')){ const v = (($('#askProj') || {}).value || '').trim();
     if(v && !/^https:\/\/claude\.ai\/project\/[\w-]+/.test(v)){ toast('Paste the link of your Project (claude.ai/project/…)'); return; }
     store.set('wh-ask', Object.assign(askCfg(), { project:v })); rerender(); toast(v ? 'Project link saved on this phone' : 'Project link removed'); return; }

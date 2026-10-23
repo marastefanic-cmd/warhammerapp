@@ -1,0 +1,5273 @@
+######## army · BIG DEMONS BABY Mucho Mutantes
+Thousand Sons · 2000 / 2000 pts · Strike Force
+
+Ritual of Regeneration · Warpmeld Pact · Disposition: Purge the Foe
+
+Overview
+Bases & proxies
+66
+Units
+11
+Stratagems
+19
+Ranged weapons
+16
+Melee weapons
+15
+Abilities
+28
+Rules
+Damage calculator
+
+New Recruit, exported 23 Oct 2026
+
+######## pregame · MUCHO MUTANTES Overview
+YOUR LIST
+WARLORD
+Magnus the Red
+ENHANCE­MENTS
+Curse of Life 20 pts on Tzaangor Shaman
+Diamond of Distortion 20 pts on Tzaangor Shaman
+Flowing Flesh 10 pts on Tzaangor Shaman
+ATTACHED
+Ahriman leads Tzaangor Enlightened with Fatecaster greatbows
+Exalted Sorcerer on Disc of Tzeentch leads Tzaangor Enlightened with Fatecaster greatbows ×2 units
+Tzaangor Shaman leads Tzaangor Enlightened
+Tzaangor Shaman leads Tzaangor Enlightened
+Tzaangor Shaman leads Tzaangor Enlightened
+DETACH­MENTS
+Ritual of Regeneration (1 DP), Warpmeld Pact (2 DP)
+Disposition: Purge the Foe
+POINTS
+2000 / 2000 · Strike Force
+ARMY AND DETACHMENT RULES
+Cabal of Sorcerers
+Your Shoot/Charge
+
+If your Army Faction is THOUSAND SONS, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.
+
+Psychic Test Sequence
+
+Roll 2D6
+Channel the Warp (Optional)
+Then, if one or more doubles or triples were rolled during this test, that model’s unit suffers D3 mortal wounds.
+If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects.
+
+FAQ (Faction Pack 1.3): Do I need to sequence all of my Cabal of Sorcerers Rituals at the start of my Shooting phase? No, you just pick a model with the Cabal of Sorcerers rule, pick a Ritual to manifest, and attempt it, then repeat the process until you have run out of models or Rituals or both.
+
+FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, do I have to choose whether to Channel the Warp before rolling any dice? No.
+
+FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, if I roll one or more doubles or triples, does my model only suffer D3 mortal wounds if I chose to Channel the Warp? Yes.
+
+App note, not rules text: Channel the Warp means rolling one more D6 for the test (the printed card shows it as a die).
+
+Destiny’s Ruin (Psychic) · Warp Charge 5
+
+Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, re-roll a Hit roll of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.
+
+Temporal Surge (Psychic) · Warp Charge 6
+
+Select one friendly THOUSAND SONS or SCINTILLATING LEGIONS unit that is not within Engagement Range of one or more enemy units and is within 24" of and visible to the manifesting model. That unit can make a Normal move of up to D6". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.
+
+Doombolt (Psychic) · Warp Charge 7
+
+Select one enemy unit within 24" of and visible to the manifesting model (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12" of the manifesting model); that unit suffers D3 mortal wounds. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.
+
+Twist of Fate (Psychic) · Warp Charge 9
+
+Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead.
+
+Pact of Sorcery
+
+When mustering your army, unless specifically stated otherwise, you cannot select SCINTILLATING LEGIONS as your Army Faction.
+
+Sorcerous Invigoration
+Ritual of Regeneration · Your Shooting
+
+(Once per turn, per unit) When a friendly THOUSAND SONS PSYKER unit (excluding MONSTER units) successfully manifests a Ritual, that unit heals D3 wounds.
+
+APPLIES TOAhriman, Exalted Sorcerer on Disc of Tzeentch, Tzaangor Shaman · Curse of Life, Tzaangor Shaman · Diamond of Distortion, Tzaangor Shaman · Flowing Flesh
+
+Warpmeld Sacrifice
+Warpmeld Pact · Move/Shoot/Fight
+
+Each time an enemy unit is selected to shoot or fight and one or more TZEENTCH MUTANT INFANTRY or TZEENTCH MUTANT MOUNTED units from your army are selected as a target of one or more of those attacks, each of those TZEENTCH MUTANT units can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time an attack targets that unit, subtract 1 from the Wound roll. At the end of the phase, that TZEENTCH MUTANT unit suffers D3 mortal wounds.
+
+Each time a TZEENTCH MUTANT INFANTRY or TZEENTCH MUTANT MOUNTED unit from your army is selected to shoot or fight, before selecting its targets, that unit can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time a model in that unit makes an attack, add 1 to the Wound roll. At the end of the phase, that TZEENTCH MUTANT unit suffers D3 mortal wounds.
+
+KEYWORDS
+
+TZAANGORS units from your army have the BATTLELINE keyword, and while such a unit is not Battle-shocked, add 1 to the Objective Control characteristic of TZAANGOR models in that unit.
+
+APPLIES TOAhriman, Exalted Sorcerer on Disc of Tzeentch, Tzaangor Shaman · Curse of Life, Tzaangor Shaman · Diamond of Distortion, Tzaangor Shaman · Flowing Flesh, Tzaangors
+
+DECLARE BATTLE FORMATIONS
+DEEP STRIKE
+Magnus the Red 455 pts
+Daemon Prince of Tzeentch with wings 170 pts
+All of them: 625 pts
+DEPLOYMENT AND PRE-BATTLE ABILITIES
+SCOUTS AND INFILTRATORS
+Tzaangors Scouts 6"
+Sekhetar Robots Infiltrators
+ABILITIES
+Scryer of Fates · Ahriman
+START OF THE BATTLE AND THE BATTLE ROUNDS
+EVERY ROUND
+Unearthly Power · Magnus the Red
+USES PER BATTLE
+NEW GAME
+STRATA­GEMS
+1CP Insane Bravery
+
+Gathered from this list’s datasheets and rules; each line opens the full text.
+
+######## units · OVERVIEW Units Unit M T Sv W LD OC InSv Pts
+EPIC HEROES
+2
+Magnus the Red
+Warlord
+14"
+11
+2+
+16
+5+
+6
+4+
+455
+Ahriman
++ Tzaangor Enlightened with Fatecaster greatbows
+215
+Ahriman
+10"
+5
+3+
+6
+6+
+2
+4+
+Tzaangor Enlightened with Fatecaster greatbows×6
+10"
+4
+5+
+2
+7+
+2
+5+
+CHARACTERS
+6
+Daemon Prince of Tzeentch with wings
+13"
+9
+2+
+10
+6+
+3
+4+
+170
+Exalted Sorcerer on Disc of Tzeentch
++ Tzaangor Enlightened with Fatecaster greatbows
+2×205
+Exalted Sorcerer on Disc of Tzeentch
+10"
+5
+3+
+6
+6+
+2
+4+
+Tzaangor Enlightened with Fatecaster greatbows×6
+10"
+4
+5+
+2
+7+
+2
+5+
+Tzaangor Shaman
++ Tzaangor Enlightened
+Curse of Life
+175
+Tzaangor Shaman
+10"
+4
+5+
+4
+7+
+2
+5+
+Tzaangor Enlightened×6
+10"
+4
+5+
+2
+7+
+2
+5+
+Tzaangor Shaman
++ Tzaangor Enlightened
+Diamond of Distortion
+175
+Tzaangor Shaman
+10"
+4
+5+
+4
+7+
+2
+5+
+Tzaangor Enlightened×6
+10"
+4
+5+
+2
+7+
+2
+5+
+Tzaangor Shaman
++ Tzaangor Enlightened
+Flowing Flesh
+165
+Tzaangor Shaman
+10"
+4
+5+
+5
+7+
+2
+5+
+Tzaangor Enlightened×6
+10"
+4
+5+
+2
+7+
+2
+5+
+BATTLELINE
+2
+Tzaangors
+1× Twistbray, 9× Tzaangor w/ Tzaangor blades
+6"
+4
+6+
+1
+7+
+1
+6+
+2×75
+VEHICLES
+1
+Sekhetar Robots
+×2
+8"
+6
+3+
+4
+7+
+1
+5+
+85
+
+######## ranged · UNITS Ranged weapons WEAPON RNG A BS S AP D
+Magnus the Red
+Warlord
+Gaze of Magnus
+24"
+3D3
+2+
+11
+-2
+3
+DEVASTATING WOUNDS, PSYCHIC
+Tzeentch’s Firestorm
+24"
+D6+3
+2+
+6
+-1
+2
+BLAST, IGNORES COVER, PSYCHIC
+Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 wounds remaining)
+Ahriman
++ Tzaangor Enlightened with Fatecaster greatbows
+AHRIMAN
+Transmogrifying Blast
+18"
+D6+1
+2+
+6
+-1
+D3
+BLAST, PSYCHIC
+OR
+WHEN USING ANOTHER SHOOTING TYPE
+Inferno bolt pistol
+12"
+1
+2+
+5
+-2
+1
+PISTOL
+TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS
+Fatecaster greatbow×6
+30"
+2
+4+
+5
+-2
+2
+IGNORES COVER, LETHAL HITS, PRECISION
+Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
+Daemon Prince of Tzeentch with wings
+Dark Blessing
+24"
+9
+2+
+4
+-1
+1
+IGNORES COVER, PSYCHIC, SUSTAINED HITS 1
+Infernal cannon
+24"
+3
+2+
+5
+-2
+2
+vs CHARACTER units: re-roll hit rolls of 1 and wound rolls of 1 (Hunter of Souls)
+vs PSYKER CHARACTER units: re-roll the hit roll and the wound roll (Hunter of Souls)
+After an aetherstride this turn: Dark Blessing has [SUSTAINED HITS D3] (Aetherstride)
+Exalted Sorcerer on Disc of Tzeentch
++ Tzaangor Enlightened with Fatecaster greatbows
+×2 units
+EXALTED SORCERER ON DISC OF TZEENTCH
+Arcane Fire
+18"
+D6
+–
+6
+-2
+D3
+IGNORES COVER, PSYCHIC, TORRENT
+OR
+WHEN USING ANOTHER SHOOTING TYPE
+Inferno bolt pistol
+12"
+1
+2+
+5
+-2
+1
+PISTOL
+TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS
+Fatecaster greatbow×6
+30"
+2
+4+
+5
+-2
+2
+IGNORES COVER, LETHAL HITS, PRECISION
+Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
+Tzaangor Shaman
+Curse of Life
++ Tzaangor Enlightened
+Baleful Devolution
+18"
+D6
+3+
+9
+0
+1
+BLAST, DEVASTATING WOUNDS, PSYCHIC
+Every attack (this model leads the unit): +1 to hit rolls (Bestial Prophet)
+Sacrificial Blessing used this phase (your Shooting phase or the Fight phase; one Bodyguard model destroyed): Tzaangor Shaman Psychic weapons +D3 A and +D3 S
+Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
+Tzaangor Shaman
+Diamond of Distortion
++ Tzaangor Enlightened
+Baleful Devolution
+18"
+D6
+3+
+9
+0
+1
+BLAST, DEVASTATING WOUNDS, PSYCHIC
+Every attack (this model leads the unit): +1 to hit rolls (Bestial Prophet)
+Sacrificial Blessing used this phase (your Shooting phase or the Fight phase; one Bodyguard model destroyed): Tzaangor Shaman Psychic weapons +D3 A and +D3 S
+Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
+Tzaangor Shaman
+Flowing Flesh
++ Tzaangor Enlightened
+Baleful Devolution
+18"
+D6
+3+
+9
+0
+1
+BLAST, DEVASTATING WOUNDS, PSYCHIC
+Every attack (this model leads the unit): +1 to hit rolls (Bestial Prophet)
+Sacrificial Blessing used this phase (your Shooting phase or the Fight phase; one Bodyguard model destroyed): Tzaangor Shaman Psychic weapons +D3 A and +D3 S
+Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
+Sekhetar Robots
+Heavy warpflamer×2
+12"
+D6
+–
+5
+-2
+1
+IGNORES COVER, TORRENT
+Hellfyre missile rack×2
+36"
+2
+4+
+10
+-2
+3
+Pyreflux meltagun×2
+12"
+1
+4+
+10
+-4
+D6
+MELTA 2
+
+######## melee · RANGED Melee weapons WEAPON A WS S AP D
+Magnus the Red
+Warlord
+Blade of Magnus
+➤strike
+7
+2+
+16
+-3
+3
+DEVASTATING WOUNDS, PSYCHIC
+➤sweep
+14
+2+
+8
+-1
+2
+PSYCHIC
+Damaged (1-6 wounds left): -1 to hit rolls (Damaged: 1-6 wounds remaining)
+Ahriman
++ Tzaangor Enlightened with Fatecaster greatbows
+AHRIMAN
+Black Staff of Ahriman
+5
+2+
+7
+-1
+3
+PSYCHIC
+TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS
+Close combat weapon×6
+2
+4+
+4
+0
+1
+Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
+Daemon Prince of Tzeentch with wings
+Hellforged weapons
+➤strike
+6
+2+
+8
+-2
+3
+DEVASTATING WOUNDS, PSYCHIC
+➤sweep
+12
+2+
+6
+-1
+1
+DEVASTATING WOUNDS, PSYCHIC
+vs CHARACTER units: re-roll hit rolls of 1 and wound rolls of 1 (Hunter of Souls)
+vs PSYKER CHARACTER units: re-roll the hit roll and the wound roll (Hunter of Souls)
+Exalted Sorcerer on Disc of Tzeentch
++ Tzaangor Enlightened with Fatecaster greatbows
+×2 units
+EXALTED SORCERER ON DISC OF TZEENTCH
+Force weapon
+5
+2+
+6
+-1
+D3
+PSYCHIC
+OR
+Prosperine khopesh
+4
+2+
+5
+-2
+2
+TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS
+Close combat weapon×6
+2
+4+
+4
+0
+1
+Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
+Tzaangor Shaman
+Curse of Life
++ Tzaangor Enlightened
+TZAANGOR SHAMAN
+Force stave
+3
+3+
+5
+-1
+D3
+PSYCHIC
+TZAANGOR ENLIGHTENED
+Divining spear×6
+3
+4+
+5
+-1
+2
+LANCE, PRECISION
+Every attack (this model leads the unit): +1 to hit rolls (Bestial Prophet)
+Sacrificial Blessing used this phase (your Shooting phase or the Fight phase; one Bodyguard model destroyed): Tzaangor Shaman Psychic weapons +D3 A and +D3 S
+Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
+Made a charge move this turn: Divining spear +1 to wound (Lance)
+Tzaangor Shaman
+Diamond of Distortion
++ Tzaangor Enlightened
+TZAANGOR SHAMAN
+Force stave
+3
+3+
+5
+-1
+D3
+PSYCHIC
+TZAANGOR ENLIGHTENED
+Divining spear×6
+3
+4+
+5
+-1
+2
+LANCE, PRECISION
+Every attack (this model leads the unit): +1 to hit rolls (Bestial Prophet)
+Sacrificial Blessing used this phase (your Shooting phase or the Fight phase; one Bodyguard model destroyed): Tzaangor Shaman Psychic weapons +D3 A and +D3 S
+Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
+Made a charge move this turn: Divining spear +1 to wound (Lance)
+Tzaangor Shaman
+Flowing Flesh
++ Tzaangor Enlightened
+TZAANGOR SHAMAN
+Force stave
+3
+3+
+5
+-1
+D3
+PSYCHIC
+TZAANGOR ENLIGHTENED
+Divining spear×6
+3
+4+
+5
+-1
+2
+LANCE, PRECISION
+Every attack (this model leads the unit): +1 to hit rolls (Bestial Prophet)
+Sacrificial Blessing used this phase (your Shooting phase or the Fight phase; one Bodyguard model destroyed): Tzaangor Shaman Psychic weapons +D3 A and +D3 S
+Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
+Made a charge move this turn: Divining spear +1 to wound (Lance)
+Tzaangors
+×2 units
+Tzaangor blades×10
+2
+4+
+5
+0
+1
+Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
+Sekhetar Robots
+Close combat weapon×2
+3
+4+
+5
+0
+1
+
+######## abilities · MELEE Abilities
+Magnus the Red
+Warlord
+Damaged: 1-6 wounds remaining
+
+While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+Unearthly Power
+Start of the battle round
+
+Start of the battle round
+
+At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.
+
+Lord of the Planet of the Sorcerers
+Your Shooting
+
+Psychic · Shooting · Your turn
+
+This model can attempt up to 2 Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.
+
+CRIMSON KING
+Impossible Form
+
+Psychic
+
+Each time an attack is made against this PSYKER (excluding Psychic Attacks), subtract 1 from the Damage characteristic of that attack.
+
+Treason of Tzeentch
+Their Shooting
+
+Psychic · Shooting · Their turn
+
+At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this PSYKER. Until the end of the phase, ranged weapons equipped by models in that unit have the [HAZARDOUS] ability.
+
+Time Flux
+Your Movement
+
+Aura, Psychic · Movement · Your turn
+
+While a friendly THOUSAND SONS unit is within 6" of this PSYKER, add 2" to the Move characteristic of models in that unit.
+
+Ahriman
++ Tzaangor Enlightened with Fatecaster greatbows
+AHRIMAN
+Scryer of Fates
+
+Psychic
+
+If your army includes this model, after both players have deployed their armies, you can select up to three THOUSAND SONS units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.
+
+Arch-Sorcerer of Tzeentch
+Your Shooting
+
+Psychic · Shooting · Your turn
+
+Each time this model attempts a Ritual, add 1 to the Psychic test result.
+
+TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS
+Malign Trickery
+Their Movement
+
+Movement · Their turn
+
+In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6”.
+
+Daemon Prince of Tzeentch with wings
+Aetherstride
+Your Move/Shoot/Charge
+
+Psychic · Movement / Shooting / Charge · Your turn
+
+In your Movement phase, when this model is set up on the battlefield using the Deep Strike ability, it can perform an aetherstride. If it does:
+
+It can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units.
+Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability.
+Until the end of the turn, it is not eligible to declare a charge.
+Hunter of Souls
+Their Move · Your Shoot · Fight
+
+Their Movement / Your Shooting / Fight (either turn)
+
+Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a CHARACTER unit, this model regains up to D3 lost wounds (if that CHARACTER unit was a PSYKER, this model regains up to 3 lost wounds instead).
+
+Exalted Sorcerer on Disc of Tzeentch
++ Tzaangor Enlightened with Fatecaster greatbows
+×2 units
+EXALTED SORCERER ON DISC OF TZEENTCH
+Illusions of Tzeentch
+
+Psychic
+
+While this model is leading a unit, that unit can only be selected as the target of a ranged attack if the attacking model is within 18".
+
+Binding Tendrils
+Your Shooting
+
+Psychic · Shooting · Your turn
+
+In your Shooting phase, after this model has shot, select one enemy INFANTRY unit hit by one or more of those attacks made with Arcane Fire. Until the start of your next turn, that unit is ensnared. While a unit is ensnared, subtract 2" from its Move characteristic and subtract 2 from Charge rolls made for it.
+
+TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS
+Malign Trickery
+Their Movement
+
+Movement · Their turn
+
+In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6”.
+
+Tzaangor Shaman
+Curse of Life
++ Tzaangor Enlightened
+TZAANGOR SHAMAN
+Sacrificial Blessing
+Your Shoot · Fight
+
+Your Shooting / Fight (either turn)
+
+While this model is leading a unit, in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight, this model can use this ability. If it does, select one Bodyguard model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model.
+
+Bestial Prophet
+
+While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll.
+
+Curse of Life
+Enhancement
+Your Shooting
+
+Enhancement · Shooting · Your turn
+
+INFANTRY/MOUNTED THOUSAND SONS PSYKER model only. When this model heals as a result of the Sorcerous Invigoration detachment rule, you can add 3 to the number of wounds healed.
+
+TZAANGOR ENLIGHTENED
+Prophesied Doom
+Charge
+
+Charge · Either turn
+
+Each time this unit makes a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound.
+
+Tzaangor Shaman
+Diamond of Distortion
++ Tzaangor Enlightened
+TZAANGOR SHAMAN
+Sacrificial Blessing
+Your Shoot · Fight
+
+Your Shooting / Fight (either turn)
+
+While this model is leading a unit, in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight, this model can use this ability. If it does, select one Bodyguard model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model.
+
+Bestial Prophet
+
+While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll.
+
+Diamond of Distortion
+Enhancement
+
+Enhancement
+
+TZAANGOR SHAMAN model only. While the bearer is leading a unit, each time an attack targets that unit, subtract 1 from the Hit roll.
+
+TZAANGOR ENLIGHTENED
+Prophesied Doom
+Charge
+
+Charge · Either turn
+
+Each time this unit makes a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound.
+
+Tzaangor Shaman
+Flowing Flesh
++ Tzaangor Enlightened
+TZAANGOR SHAMAN
+Sacrificial Blessing
+Your Shoot · Fight
+
+Your Shooting / Fight (either turn)
+
+While this model is leading a unit, in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight, this model can use this ability. If it does, select one Bodyguard model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model.
+
+Bestial Prophet
+
+While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll.
+
+Flowing Flesh
+Enhancement
+Already in W
+
+Enhancement
+
+TZAANGOR SHAMAN model only. The bearer has the Feel No Pain 4+ ability and a Wounds characteristic of 5.
+
+TZAANGOR ENLIGHTENED
+Prophesied Doom
+Charge
+
+Charge · Either turn
+
+Each time this unit makes a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound.
+
+Tzaangors
+×2 units
+Ambushing Hunters
+End of your opponent’s turn
+
+End of your opponent’s turn
+
+At the end of your opponent’s turn, if this unit is more than 6" horizontally away from all enemy units, you can remove this unit from the battlefield and place it into Strategic Reserves.
+
+Sekhetar Robots
+Prophetic Sentinels
+Once per turn
+Their Move/Charge
+
+Movement / Charge · Their turn
+
+Once per turn, when you target this unit with the Fire Overwatch/Heroic Intervention stratagem, that use is -1 CP.
+
+######## rules · ABILITIES Rules
+Thousand Sons · Purge the Foe
+ARMY RULES
+Cabal of Sorcerers
+Your Shoot/Charge
+
+If your Army Faction is THOUSAND SONS, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.
+
+Psychic Test Sequence
+
+Roll 2D6
+Channel the Warp (Optional)
+Then, if one or more doubles or triples were rolled during this test, that model’s unit suffers D3 mortal wounds.
+If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects.
+
+FAQ (Faction Pack 1.3): Do I need to sequence all of my Cabal of Sorcerers Rituals at the start of my Shooting phase? No, you just pick a model with the Cabal of Sorcerers rule, pick a Ritual to manifest, and attempt it, then repeat the process until you have run out of models or Rituals or both.
+
+FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, do I have to choose whether to Channel the Warp before rolling any dice? No.
+
+FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, if I roll one or more doubles or triples, does my model only suffer D3 mortal wounds if I chose to Channel the Warp? Yes.
+
+App note, not rules text: Channel the Warp means rolling one more D6 for the test (the printed card shows it as a die).
+
+Destiny’s Ruin (Psychic) · Warp Charge 5
+
+Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, re-roll a Hit roll of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.
+
+Temporal Surge (Psychic) · Warp Charge 6
+
+Select one friendly THOUSAND SONS or SCINTILLATING LEGIONS unit that is not within Engagement Range of one or more enemy units and is within 24" of and visible to the manifesting model. That unit can make a Normal move of up to D6". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.
+
+Doombolt (Psychic) · Warp Charge 7
+
+Select one enemy unit within 24" of and visible to the manifesting model (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12" of the manifesting model); that unit suffers D3 mortal wounds. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.
+
+Twist of Fate (Psychic) · Warp Charge 9
+
+Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead.
+
+Pact of Sorcery
+
+When mustering your army, unless specifically stated otherwise, you cannot select SCINTILLATING LEGIONS as your Army Faction.
+
+DETACHMENTS
+RITUAL OF REGENERATION
+Sorcerous Invigoration
+Detachment rule · Your Shooting
+
+(Once per turn, per unit) When a friendly THOUSAND SONS PSYKER unit (excluding MONSTER units) successfully manifests a Ritual, that unit heals D3 wounds.
+
+APPLIES TOAhriman, Exalted Sorcerer on Disc of Tzeentch, Tzaangor Shaman · Curse of Life, Tzaangor Shaman · Diamond of Distortion, Tzaangor Shaman · Flowing Flesh
+
+Curse of Life
+Enhancement · 20 pts · on Tzaangor Shaman + Tzaangor Enlightened
+
+INFANTRY/MOUNTED THOUSAND SONS PSYKER model only. When this model heals as a result of the Sorcerous Invigoration detachment rule, you can add 3 to the number of wounds healed.
+
+ONTzaangor Shaman + Tzaangor Enlightened
+
+Other enhancements
+1 not in this list
+Eruption of Vitality 35 pts
+
+INFANTRY/MOUNTED THOUSAND SONS PSYKER model only. (Once per battle, per army) When this model is destroyed, at the end of the phase, roll one D6:
+
+On a 2+, set up this model on the battlefield, unengaged and as close as possible to where it was destroyed. This model is not part of an attached unit and its unit has a starting strength of 1. This model has 3 wounds remaining.
+
+STRATAGEMSMultitudinous Limbs, Mutagenic Magicks, Relentless Rebirth
+
+WARPMELD PACT
+Warpmeld Sacrifice
+Detachment rule · Move/Shoot/Fight
+
+Each time an enemy unit is selected to shoot or fight and one or more TZEENTCH MUTANT INFANTRY or TZEENTCH MUTANT MOUNTED units from your army are selected as a target of one or more of those attacks, each of those TZEENTCH MUTANT units can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time an attack targets that unit, subtract 1 from the Wound roll. At the end of the phase, that TZEENTCH MUTANT unit suffers D3 mortal wounds.
+
+Each time a TZEENTCH MUTANT INFANTRY or TZEENTCH MUTANT MOUNTED unit from your army is selected to shoot or fight, before selecting its targets, that unit can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time a model in that unit makes an attack, add 1 to the Wound roll. At the end of the phase, that TZEENTCH MUTANT unit suffers D3 mortal wounds.
+
+KEYWORDS
+
+TZAANGORS units from your army have the BATTLELINE keyword, and while such a unit is not Battle-shocked, add 1 to the Objective Control characteristic of TZAANGOR models in that unit.
+
+APPLIES TOAhriman, Exalted Sorcerer on Disc of Tzeentch, Tzaangor Shaman · Curse of Life, Tzaangor Shaman · Diamond of Distortion, Tzaangor Shaman · Flowing Flesh, Tzaangors
+
+Diamond of Distortion
+Enhancement · 20 pts · on Tzaangor Shaman + Tzaangor Enlightened
+
+TZAANGOR SHAMAN model only. While the bearer is leading a unit, each time an attack targets that unit, subtract 1 from the Hit roll.
+
+ONTzaangor Shaman + Tzaangor Enlightened
+
+Flowing Flesh
+Enhancement · 10 pts · on Tzaangor Shaman + Tzaangor Enlightened
+
+TZAANGOR SHAMAN model only. The bearer has the Feel No Pain 4+ ability and a Wounds characteristic of 5.
+
+ONTzaangor Shaman + Tzaangor Enlightened
+
+Other enhancements
+2 not in this list
+Warpmeld Dagger 10 pts
+
+TZAANGOR SHAMAN model only. Each time the bearer attempts a Ritual, just before determining the Psychic test result, the bearer can use this Enhancement. If it does, the bearer suffers D3 mortal wounds; if it is not destroyed as a result, add 1 to that Psychic test result for each of those mortal wounds suffered.
+
+Bray Lord 15 pts
+
+SORCERER or INFERNAL MASTER model only. The bearer has the Scouts 6" ability.
+
+STRATAGEMSBlessed Transmutations, Touched by Tzeentch, Twisted Mirage, Warped Vicissitude, Deranged Ferocity, Gift of Change
+
+UNIT RULES
+Deadly Demise
+Magnus the Red D6
+Daemon Prince of Tzeentch with wings D3
+Deep Strike
+Magnus the Red
+Daemon Prince of Tzeentch with wings
+Aetherstride: In your Movement phase, when this model is set up on the battlefield using the Deep Strike ability, it can perform an aetherstride. If it does:
+It can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units.
+Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability.
+Until the end of the turn, it is not eligible to declare a charge.
+Feel No Pain
+Tzaangor Shaman + Tzaangor Enlightened 4+: Tzaangor Shaman only
+Hazardous
+Magnus the Red
+Treason of Tzeentch: At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this PSYKER. Until the end of the phase, ranged weapons equipped by models in that unit have the [HAZARDOUS] ability.
+Infiltrators
+Sekhetar Robots
+Leader
+Ahriman leads Tzaangor Enlightened with Fatecaster greatbows
+Exalted Sorcerer on Disc of Tzeentch leads Tzaangor Enlightened with Fatecaster greatbows
+Tzaangor Shaman leads Tzaangor Enlightened
+Tzaangor Shaman leads Tzaangor Enlightened
+Tzaangor Shaman leads Tzaangor Enlightened
+Scouts
+Tzaangors 6"
+Stealth
+Sekhetar Robots
+
+######## bases · RULES Bases & proxies
+BASES TO PRINT
+
+20× 32mm
+44× 40mm
+1× 60mm
+1× 100mm
+
+WHAT TO WRITE ON EACH BASE
+
+Magnus the Red
+1× 100mm
+Magnus the Red · Warlord
+Ahriman
++ Tzaangor Enlightened with Fatecaster greatbows
+1× 40mm
+Ahriman
+1× 40mm
+Aviarch
+5× 40mm
+standard Close combat weapon, Fatecaster greatbow
+Daemon Prince of Tzeentch with wings
+1× 60mm
+Daemon Prince of Tzeentch with wings
+Exalted Sorcerer on Disc of Tzeentch
++ Tzaangor Enlightened with Fatecaster greatbows
+2 units: mark them apart (1, 2)
+1× 40mm
+Exalted Sorcerer on Disc of Tzeentch
+1× 40mm
+Aviarch
+5× 40mm
+standard Close combat weapon, Fatecaster greatbow
+Tzaangor Shaman · Curse of Life
++ Tzaangor Enlightened
+1× 40mm
+Tzaangor Shaman · Curse of Life
+1× 40mm
+Aviarch
+5× 40mm
+standard Divining spear
+Tzaangor Shaman · Diamond of Distortion
++ Tzaangor Enlightened
+1× 40mm
+Tzaangor Shaman · Diamond of Distortion
+1× 40mm
+Aviarch
+5× 40mm
+standard Divining spear
+Tzaangor Shaman · Flowing Flesh
++ Tzaangor Enlightened
+1× 40mm
+Tzaangor Shaman · Flowing Flesh
+1× 40mm
+Aviarch
+5× 40mm
+standard Divining spear
+Tzaangors
+2 units: mark them apart (1, 2)
+1× 32mm
+Twistbray
+9× 32mm
+standard Tzaangor blades
+Sekhetar Robots
+2× 40mm
+standard Close combat weapon, Heavy warpflamer, Hellfyre missile rack, Pyreflux meltagun
+
+From the New Recruit list: model counts and loadouts per model, base sizes from the datasheets.
+
+######## damage shooting · BASES Damage
+YOUR
+Magnus the Red
+SHOOT
+FIGHT
+BOTH
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+4.3
+of 5 destroyed
+8.6 wounds lost · wiped in 61% of games
+Nothing ticked: the datasheets as printed
+1 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+SHOOT · BIGGEST FIRST
+
+Effects are on the damage these attacks deal.
+
+RANGED WEAPONS
+Magnus the Red
+Gaze of Magnus
+RNG
+24"
+A
+3D3
+BS
+2+
+S
+11
+AP
+-2
+D
+3
+DEVASTATING WOUNDS, PSYCHIC
+−56% wiped
+−2.2
+MODELS IF UNTICKED
+Tzeentch’s Firestorm
+RNG
+24"
+A
+D6+3
+BS
+2+
+S
+6
+AP
+-1
+D
+2
+BLAST, IGNORES COVER, PSYCHIC
+−46% wiped
+−1.3
+MODELS IF UNTICKED
+SITUATION AND RULES
+Twist of Fate (Cabal of Sorcerers)
+Your Shooting phase, manifested against this target (Warp Charge 9): +1 AP (12+: +2 AP)
+if it applies
++20% wiped
++0.4
+MODELS
+Result 9-11
++0.4
+Result 12+
++0.6
+BEST
+Destiny’s Ruin (Cabal of Sorcerers)
+Your Shooting phase, manifested against this target (Warp Charge 5): re-roll hit rolls of 1 (10+: re-roll hit rolls)
+if it applies
++16% wiped
++0.3
+MODELS
+Result 5-9
++0.3
+Result 10+
++0.3
+Plunging Fire
+BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
+if it applies
+no change: the weapons can ignore modifiers to the hit roll
+0
+ALL ▾
+Close-quarters shooting at another unit
+-1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
+if it applies
+0
+Damaged (1-6 wounds left)
+-1 to hit rolls
+if it applies
+no change: the weapons can ignore modifiers to the hit roll
+0
+ALL ▾
+Close-quarters shooting at a unit it is engaged with
+-1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
+if it applies
+−46% wiped
+−1.3
+MODELS
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
+if it applies
+−46% wiped
+−1.3
+MODELS
+Fire Overwatch (snap shooting)
+the target within 24" (15.09): hits only on an unmodified 6, never critical; no hit re-rolls
+if it applies
+−60% wiped
+−3.3
+MODELS
+STRATAGEMS
+with their CP
+
+None that change these numbers.
+
+NOT FOR THIS STEP, BY THE RULES (3)
+
+Nothing to count: 1CP Mutagenic Magicks, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
+
+NOT COUNTED BY THE CALCULATOR (1)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## damage fight · DAMAGE Damage
+YOUR
+Magnus the Red
+SHOOT
+FIGHT
+BOTH
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+4.2
+of 5 destroyed
+8.4 wounds lost · wiped in 56% of games
+Blade of Magnus: sweep
+Charged this turn
+×
+4 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+FIGHT · BIGGEST FIRST
+
+Effects are on the damage these attacks deal.
+
+The charge is taken to succeed (no charge roll).
+
+MELEE WEAPONS
+Magnus the Red
+Blade of Magnus
+A
+14
+WS
+2+
+S
+8
+AP
+-1
+D
+2
+PSYCHIC
+−56% wiped
+−4.2
+MODELS IF UNTICKED
+PICK ONE PROFILE
+strike
+4.0
+A
+7
+WS
+2+
+S
+16
+AP
+-3
+D
+3
+DEVASTATING WOUNDS, PSYCHIC
+sweep
+4.2
+BEST
+A
+14
+WS
+2+
+S
+8
+AP
+-1
+D
+2
+PSYCHIC
+SITUATION AND RULES
+Charged this turn
+said to hold
+no change: no rule here needs it
+0
+Damaged (1-6 wounds left)
+-1 to hit rolls
+if it applies
+no change: the weapons can ignore modifiers to the hit roll
+0
+ALL ▾
+STRATAGEMS
+with their CP
+
+None that change these numbers.
+
+NOT COUNTED BY THE CALCULATOR (4)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP Mutagenic Magicks
+Your engaged unit: select one enemy unit engaged with it and roll six D6; for each 4+, that enemy unit suffers 1 mortal wound.
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+1CP Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## damage both · DAMAGE Damage
+YOUR
+Magnus the Red
+SHOOT
+FIGHT
+BOTH
+TARGET
+MODELS
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+40
+50
+60
+T
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+SV
+2+
+3+
+4+
+5+
+6+
+7+
+–
+W
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+INSV
+–
+2+
+3+
+4+
+5+
+6+
+FNP
+–
+2+
+3+
+4+
+5+
+6+
+Benefit of cover
+−1 Damage
+5.0
+of 5 destroyed
+10 wounds lost · wiped in 99% of games
+
+Shoot 4.30 · Fight 0.68 · the charge is taken to succeed
+
+Blade of Magnus: sweep
+Charged this turn
+×
+5 NOT COUNTED
+WORKING ›
+WHAT CHANGES THIS
+SHOOT → CHARGE → FIGHT · BIGGEST FIRST
+
+Effects are on the total: models destroyed by the end of the fight, the shooting’s choices and the fight’s alike.
+
+The charge is taken to succeed (no charge roll); “Charged this turn” is ticked for the fight.
+
+THE SHOOTING
+FIRST
+RANGED WEAPONS
+Magnus the Red
+Gaze of Magnus
+RNG
+24"
+A
+3D3
+BS
+2+
+S
+11
+AP
+-2
+D
+3
+DEVASTATING WOUNDS, PSYCHIC
+−12% wiped
+−0.2
+MODELS IF UNTICKED
+Tzeentch’s Firestorm
+RNG
+24"
+A
+D6+3
+BS
+2+
+S
+6
+AP
+-1
+D
+2
+BLAST, IGNORES COVER, PSYCHIC
+−5% wiped
+−0.1
+MODELS IF UNTICKED
+SITUATION AND RULES
+Twist of Fate (Cabal of Sorcerers)
+Your Shooting phase, manifested against this target (Warp Charge 9): +1 AP (12+: +2 AP)
+if it applies
++1% wiped
+≈0
+MODELS
+Result 9-11
++1% wiped
+Result 12+
++1% wiped
+Destiny’s Ruin (Cabal of Sorcerers)
+Your Shooting phase, manifested against this target (Warp Charge 5): re-roll hit rolls of 1 (10+: re-roll hit rolls)
+if it applies
+≈0
+MODELS
+Result 5-9
+≈0
+Result 10+
+≈0
+Plunging Fire
+BS improved by 1: the attacker on terrain 3" up (or TOWERING, the target within 12"), the target on ground level
+if it applies
+no change: the weapons can ignore modifiers to the hit roll
+0
+ALL ▾
+Close-quarters shooting at another unit
+-1 to hit, [CLOSE-QUARTERS] weapons too; [BLAST] can target it (10.06)
+if it applies
+0
+Damaged (1-6 wounds left)
+-1 to hit rolls
+if it applies
+no change: the weapons can ignore modifiers to the hit roll
+0
+ALL ▾
+Close-quarters shooting at a unit it is engaged with
+-1 to hit, except [CLOSE-QUARTERS] weapons; no [BLAST]
+if it applies
+−5% wiped
+−0.1
+MODELS
+Target is an engaged MONSTER/VEHICLE
+-1 to hit, except [CLOSE-QUARTERS] weapons of a unit engaged with it; no [BLAST] (17.03)
+if it applies
+−5% wiped
+−0.1
+MODELS
+STRATAGEMS
+with their CP
+
+None that change these numbers.
+
+NOT FOR THIS STEP, BY THE RULES (3)
+
+Nothing to count: 1CP Mutagenic Magicks, 1CP Epic Challenge, 2CP Counteroffensive (Fight phase only)
+
+NOT COUNTED BY THE CALCULATOR (1)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+THE FIGHT
+THEN, AGAINST WHAT THE SHOOTING LEFT
+MELEE WEAPONS
+Magnus the Red
+
+Against what the shooting left of the target, in each game.
+
+Blade of Magnus
+A
+14
+WS
+2+
+S
+8
+AP
+-1
+D
+2
+PSYCHIC
+−38% wiped
+−0.7
+MODELS IF UNTICKED
+PICK ONE PROFILE
+strike
+5.0
+A
+7
+WS
+2+
+S
+16
+AP
+-3
+D
+3
+DEVASTATING WOUNDS, PSYCHIC
+sweep
+5.0
+A
+14
+WS
+2+
+S
+8
+AP
+-1
+D
+2
+PSYCHIC
+SITUATION AND RULES
+Charged this turn
+holds: Both takes the charge as made (no charge roll)
+no change: no rule here needs it
+0
+Damaged (1-6 wounds left)
+-1 to hit rolls
+if it applies
+no change: the weapons can ignore modifiers to the hit roll
+0
+ALL ▾
+STRATAGEMS
+with their CP
+
+None that change these numbers.
+
+NOT COUNTED BY THE CALCULATOR (4)
+
+They can matter at the table, but the calculator does not play them: what each one says.
+
+1CP Mutagenic Magicks
+Your engaged unit: select one enemy unit engaged with it and roll six D6; for each 4+, that enemy unit suffers 1 mortal wound.
+1CP Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+1CP Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+2CP Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+MODIFIERS · NONE
+Hit roll
+−
+0
++
+Wound roll
+−
+0
++
+AP
+−
+0
++
+Damage
+−
+0
++
+Re-roll hits
+none
+1s
+all
+Re-roll wounds
+none
+1s
+all
+
+######## strats {"folded":true} · DAMAGE Stratagems
+EXPAND ALL
+RITUAL OF REGENERATION
+3
+1
+CP
+Multitudinous Limbs
+Your unit’s advance or fall back move does not prevent it from being eligible to start an action.
+Your Movement Ahriman + Tzaangor Enlightened with Fatecaster greatbows, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened ×3
+1
+CP
+Mutagenic Magicks
+Your engaged unit: select one enemy unit engaged with it and roll six D6; for each 4+, that enemy unit suffers 1 mortal wound.
+Start of Fight All but Tzaangors ×2, Sekhetar Robots
+1
+CP
+Relentless Rebirth
+When your unit suffers a mortal wound: it has Feel No Pain 5+ against mortal wounds.
+Any phase Ahriman + Tzaangor Enlightened with Fatecaster greatbows, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened ×3
+WARPMELD PACT
+6
+1
+CP
+Blessed Transmutations
+Return up to D3+1 destroyed models (excluding CHARACTERS) to a TZAANGORS unit below its Starting Strength within 12" of your PSYKER model.
+Your Command All but Sekhetar Robots
+1
+CP
+Touched by Tzeentch
+Until the end of the turn, your unit is eligible to shoot or declare a charge in a turn in which it Advanced.
+Start of your Movement Ahriman + Tzaangor Enlightened with Fatecaster greatbows, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened ×3, Tzaangors ×2
+1
+CP
+Twisted Mirage
+Your unit arriving from Strategic Reserves can be set up anywhere on the battlefield more than 6" horizontally away from all enemy units (more than 8" for a MONSTER unit); until the end of the turn, it is not eligible to declare a charge.
+Your Movement Ahriman + Tzaangor Enlightened with Fatecaster greatbows, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened ×3, Tzaangors ×2
+1
+CP
+Warped Vicissitude
+Just after an enemy unit selects your unit as a target: until the end of the phase, your unit’s models have a 4+ invulnerable save.
+Their Shoot · Fight Tzaangors ×2
+1
+CP
+Deranged Ferocity
+Until the end of the phase, your unit’s models pile in and consolidate up to 6", and models within 3" of enemy models are eligible to fight (targeting an enemy unit within 3" of them and engaged with their unit).
+Fight Ahriman + Tzaangor Enlightened with Fatecaster greatbows, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened ×3, Tzaangors ×2
+1
+CP
+Gift of Change
+Your CHARACTER model just destroyed: at the end of the phase, add a TZEENTCH CHAOS SPAWN unit of one model to your army, set up as close as possible to where it was destroyed and unengaged (once per battle round).
+Any phase Ahriman + Tzaangor Enlightened with Fatecaster greatbows, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened ×3
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+The battle-shock roll you are about to make for your unit is automatically successful.
+Your Command · Once per battle Any unit
+1
+CP
+Rapid Ingress
+Your unit in strategic reserves makes an ingress move (not in the first battle round).
+End of their Movement Any unit
+1
+CP
+Fire Overwatch
+Your unengaged unit shoots using snap shooting.
+End of their Movement All but Tzaangors ×2
+1
+CP
+Explosives
+Your unengaged unit, eligible to shoot and with no advance move this turn: one EXPLOSIVES/GRENADES model: six D6 at an unengaged enemy unit within 8" of and visible to it, 1 mortal wound for each 4+.
+Your Shooting Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2
+1
+CP
+Crushing Impact
+After the charge: D6 equal to T of your model engaged with an enemy unit; each 5+: 1 mortal wound to it, each 1: 1 to yours…
+Your Charge Magnus the Red, Daemon Prince of Tzeentch with wings, Sekhetar Robots
+1
+CP
+Heroic Intervention
+Your unengaged unit within 12" of an enemy unit resolves a charge, choosing Leap to Defend or Into the Fray (+1CP)…
+End of their Charge · Into the Fray +1CP Any unit
+1
+CP
+Epic Challenge
+One CHARACTER model in your unit: its melee weapons have [PRECISION] until the end of the phase.
+Fight All but Tzaangors ×2, Sekhetar Robots
+2
+CP
+Counteroffensive
+Your unit has Fights First until the end of the phase and must be the next unit you select to fight.
+Their Fight Any unit
+1
+CP
+Command Re-roll
+Re-roll an advance, charge, damage, hazard, hit, save or wound roll, or a roll for a weapon’s number of attacks, just made (one dice of several; a charge roll in full).
+Any phase Any unit
+1
+CP
+Smokescreen
+Until the end of the phase, your SMOKE unit, and a unit not fully visible because of it, has the benefit of cover…
+Start of their Shooting No unit in this list can use it (needs SMOKE)
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## strats {"open":true} · STRATAGEMS Stratagems
+COLLAPSE ALL
+RITUAL OF REGENERATION
+3
+1
+CP
+Multitudinous Limbs
+Your Movement Ahriman + Tzaangor Enlightened with Fatecaster greatbows, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened ×3
+WHEN
+
+Your Movement phase, when a friendly INFANTRY/MOUNTED THOUSAND SONS PSYKER unit is selected to make an advance/fall back move.
+
+TARGETThat INFANTRY/MOUNTED THOUSAND SONS PSYKER unit.
+
+EFFECT
+
+That move does not prevent your unit from being eligible to start an action.
+
+USED BYAhriman + Tzaangor Enlightened with Fatecaster greatbows, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened · Curse of Life, Tzaangor Shaman + Tzaangor Enlightened · Diamond of Distortion, Tzaangor Shaman + Tzaangor Enlightened · Flowing Flesh
+
+1
+CP
+Mutagenic Magicks
+Start of Fight All but Tzaangors ×2, Sekhetar Robots
+WHEN
+
+Start of the Fight phase.
+
+TARGETOne friendly engaged THOUSAND SONS PSYKER unit.
+
+EFFECT
+
+Select one enemy unit engaged with your unit. Roll six D6:
+
+For each 4+, that enemy unit suffers 1 mortal wound.
+
+USED BYMagnus the Red, Ahriman + Tzaangor Enlightened with Fatecaster greatbows, Daemon Prince of Tzeentch with wings, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened · Curse of Life, Tzaangor Shaman + Tzaangor Enlightened · Diamond of Distortion, Tzaangor Shaman + Tzaangor Enlightened · Flowing Flesh
+
+1
+CP
+Relentless Rebirth
+Any phase Ahriman + Tzaangor Enlightened with Fatecaster greatbows, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened ×3
+WHEN
+
+Any phase, when a friendly INFANTRY/MOUNTED THOUSAND SONS PSYKER unit suffers a mortal wound.
+
+TARGETThat INFANTRY/MOUNTED THOUSAND SONS PSYKER unit.
+
+EFFECT
+
+Your unit has Feel No Pain 5+ against mortal wounds.
+
+USED BYAhriman + Tzaangor Enlightened with Fatecaster greatbows, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened · Curse of Life, Tzaangor Shaman + Tzaangor Enlightened · Diamond of Distortion, Tzaangor Shaman + Tzaangor Enlightened · Flowing Flesh
+
+WARPMELD PACT
+6
+1
+CP
+Blessed Transmutations
+Your Command All but Sekhetar Robots
+WHEN
+
+Your Command phase.
+
+TARGETOne THOUSAND SONS PSYKER model from your army, and one friendly TZAANGORS unit that is below its Starting Strength and within 12" of that PSYKER model.
+
+EFFECT
+
+Return up to D3+1 destroyed models (excluding CHARACTERS) to your TZAANGORS unit.
+
+USED BYMagnus the Red, Ahriman + Tzaangor Enlightened with Fatecaster greatbows, Daemon Prince of Tzeentch with wings, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened · Curse of Life, Tzaangor Shaman + Tzaangor Enlightened · Diamond of Distortion, Tzaangor Shaman + Tzaangor Enlightened · Flowing Flesh, Tzaangors
+
+1
+CP
+Touched by Tzeentch
+Start of your Movement Ahriman + Tzaangor Enlightened with Fatecaster greatbows, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened ×3, Tzaangors ×2
+WHEN
+
+Start of your Movement phase.
+
+TARGETOne TZEENTCH MUTANT unit from your army.
+
+EFFECT
+
+Until the end of the turn, your unit is eligible to shoot or declare a charge in a turn in which it Advanced.
+
+FAQ (Faction Pack 1.3): When using the Touched by Tzeentch Stratagem in the Warpmeld Pact Detachment, do I have to declare if my unit will shoot or charge after Advancing as soon as I use the Stratagem? No, you may decide later in the turn.
+
+USED BYAhriman + Tzaangor Enlightened with Fatecaster greatbows, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened · Curse of Life, Tzaangor Shaman + Tzaangor Enlightened · Diamond of Distortion, Tzaangor Shaman + Tzaangor Enlightened · Flowing Flesh, Tzaangors
+
+1
+CP
+Twisted Mirage
+Your Movement Ahriman + Tzaangor Enlightened with Fatecaster greatbows, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened ×3, Tzaangors ×2
+WHEN
+
+Reinforcements step of your Movement phase.
+
+TARGETOne TZEENTCH MUTANT unit from your army that is arriving from Strategic Reserves this phase.
+
+EFFECT
+
+Your unit can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units, or anywhere on the battlefield that is more than 8" horizontally away from all enemy units if it is a MONSTER unit. In either case, until the end of the turn, it is not eligible to declare a charge.
+
+FAQ (Faction Pack 1.3): When going second, can a Tzaangor unit that started the game on the battlefield and was placed into Strategic Reserves by its Ambushing Hunters ability then arrive during my first turn using the Twisted Mirage Stratagem? No.
+
+USED BYAhriman + Tzaangor Enlightened with Fatecaster greatbows, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened · Curse of Life, Tzaangor Shaman + Tzaangor Enlightened · Diamond of Distortion, Tzaangor Shaman + Tzaangor Enlightened · Flowing Flesh, Tzaangors
+
+1
+CP
+Warped Vicissitude
+Their Shoot · Fight Tzaangors ×2
+WHEN
+
+Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.
+
+TARGETOne TZAANGORS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, models in your unit have a 4+ invulnerable save.
+
+USED BYTzaangors
+
+1
+CP
+Deranged Ferocity
+Fight Ahriman + Tzaangor Enlightened with Fatecaster greatbows, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened ×3, Tzaangors ×2
+WHEN
+
+Fight phase, just after a TZEENTCH MUTANT unit from your army is selected to fight.
+
+TARGETThat TZEENTCH MUTANT unit.
+
+EFFECT
+
+Until the end of the phase, each time a model in your unit makes a Pile-in or Consolidation move, it can move up to 6" instead of up to 3", and when determining which models in it are eligible to fight, any models in it that are within 3" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3" of them and within Engagement Range of their unit.
+
+USED BYAhriman + Tzaangor Enlightened with Fatecaster greatbows, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened · Curse of Life, Tzaangor Shaman + Tzaangor Enlightened · Diamond of Distortion, Tzaangor Shaman + Tzaangor Enlightened · Flowing Flesh, Tzaangors
+
+1
+CP
+Gift of Change
+Any phase Ahriman + Tzaangor Enlightened with Fatecaster greatbows, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened ×3
+WHEN
+
+Any phase.
+
+TARGETOne THOUSAND SONS CHARACTER model from your army (excluding MONSTERS) that was just destroyed. You can use this Stratagem on that model even though it was just destroyed.
+
+EFFECT
+
+At the end of the phase, add one TZEENTCH CHAOS SPAWN unit containing one model to your army, and set it up as close as possible to where your model was destroyed and not within Engagement Range of one or more enemy units.
+
+RESTRICTIONSYou can only use this Stratagem once per battle round.
+
+USED BYAhriman + Tzaangor Enlightened with Fatecaster greatbows, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened · Curse of Life, Tzaangor Shaman + Tzaangor Enlightened · Diamond of Distortion, Tzaangor Shaman + Tzaangor Enlightened · Flowing Flesh
+
+CORE STRATAGEMS
+10
+1
+CP
+Insane Bravery
+Your Command · Once per battle Any unit
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+1
+CP
+Rapid Ingress
+End of their Movement Any unit
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+1
+CP
+Fire Overwatch
+End of their Movement All but Tzaangors ×2
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYMagnus the Red, Ahriman + Tzaangor Enlightened with Fatecaster greatbows, Daemon Prince of Tzeentch with wings, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened · Curse of Life, Tzaangor Shaman + Tzaangor Enlightened · Diamond of Distortion, Tzaangor Shaman + Tzaangor Enlightened · Flowing Flesh, Sekhetar Robots
+
+1
+CP
+Explosives
+Your Shooting Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2
+WHEN
+
+Your Shooting phase.
+
+TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one EXPLOSIVES/GRENADES model in your unit.
+2. Select one unengaged enemy unit within 8" of and visible to that model.
+3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
+
+Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+
+USED BYExalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2
+
+1
+CP
+Crushing Impact
+Your Charge Magnus the Red, Daemon Prince of Tzeentch with wings, Sekhetar Robots
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings, Sekhetar Robots
+
+1
+CP
+Heroic Intervention
+End of their Charge · Into the Fray +1CP Any unit
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYany unit
+
+1
+CP
+Epic Challenge
+Fight All but Tzaangors ×2, Sekhetar Robots
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYMagnus the Red, Ahriman + Tzaangor Enlightened with Fatecaster greatbows, Daemon Prince of Tzeentch with wings, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened · Curse of Life, Tzaangor Shaman + Tzaangor Enlightened · Diamond of Distortion, Tzaangor Shaman + Tzaangor Enlightened · Flowing Flesh
+
+2
+CP
+Counteroffensive
+Their Fight Any unit
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+1
+CP
+Command Re-roll
+Any phase Any unit
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+1
+CP
+Smokescreen
+Start of their Shooting No unit in this list can use it (needs SMOKE)
+WHEN
+
+Start of your opponent’s Shooting phase.
+
+TARGETOne friendly SMOKE unit.
+
+EFFECT
+
+Until the end of the phase, each time an attack targets either your SMOKE unit, or a unit that is not fully visible to the attacking model because of one or more models in your SMOKE unit, the target has the benefit of cover against that attack (13.08).
+
+USED BYno unit in this list (needs SMOKE)
+
+Stratagem text: GW’s Faction Pack where it prints the detachment, otherwise Wahapedia; checked word for word.
+
+######## unit magnus-the-red · STRATAGEMS Mucho Mutantes
+MAGNUS THE RED
+455 PTS
+Epic Hero
+Warlord
+Models
+Options
+1× Magnus the Red
+Blade of Magnus, Gaze of Magnus, Tzeentch’s Firestorm
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Magnus the Red
+100mm
+14"
+11
+2+
+16
+5+
+6
+4+
+WHEN TARGETEDImpossible Form (if picked this round): -1 Damage to attacks against Magnus, excluding psychic attacks
+DAMAGED 1-6 W
+-1 TO HIT ROLLS
+([PSYCHIC] WEAPONS CAN IGNORE IT)
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Gaze of Magnus
+24"
+3D3
+2+
+11
+-2
+3
+DEVASTATING WOUNDS, PSYCHIC
+Tzeentch’s Firestorm
+24"
+D6+3
+2+
+6
+-1
+2
+BLAST, IGNORES COVER, PSYCHIC
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Blade of Magnus
+➤strike
+7
+2+
+16
+-3
+3
+DEVASTATING WOUNDS, PSYCHIC
+➤sweep
+14
+2+
+8
+-1
+2
+PSYCHIC
+ABILITIES
+Unearthly Power
+Start of the battle round
+
+Start of the battle round
+
+At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.
+
+Lord of the Planet of the Sorcerers
+Your Shooting
+
+Psychic · Shooting · Your turn
+
+This model can attempt up to 2 Rituals per turn instead of one, and each time this model attempts a Ritual, add 2 to the Psychic test result.
+
+Impossible Form
+- Crimson King
+
+Psychic
+
+Each time an attack is made against this PSYKER (excluding Psychic Attacks), subtract 1 from the Damage characteristic of that attack.
+
+Treason of Tzeentch
+- Crimson King
+Their Shooting
+
+Psychic · Shooting · Their turn
+
+At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this PSYKER. Until the end of the phase, ranged weapons equipped by models in that unit have the [HAZARDOUS] ability.
+
+Time Flux
+- Crimson King
+Your Movement
+
+Aura, Psychic · Movement · Your turn
+
+While a friendly THOUSAND SONS unit is within 6" of this PSYKER, add 2" to the Move characteristic of models in that unit.
+
+Rules
+Deep Strike, Deadly Demise D6, Cabal of Sorcerers
+Stratagems
+
+RITUAL OF REGENERATION Mutagenic Magicks
+
+WARPMELD PACT Blessed Transmutations
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+CHAOS
+CHARACTER
+DAEMON
+EPIC HERO
+FACTION: THOUSAND SONS
+FLY
+MAGNUS THE RED
+MONSTER
+PRIMARCH
+PSYKER
+TZEENTCH
+WARLORD
+Ask about this unit
+Ahriman ›
+
+######## unit ahriman-tzaangor-enlightened-with-fatecaster-greatbows · MAGNUS THE RED Mucho Mutantes
+AHRIMAN + TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS
+215 PTS
+Epic Hero · 105 + Tzaangor Enlightened with Fatecaster greatbows 110
+Models
+Options
+1× Ahriman
+Black Staff of Ahriman, Inferno bolt pistol, Transmogrifying Blast
+Leading Tzaangor Enlightened with Fatecaster greatbows
+1× Aviarch
+Close combat weapon, Fatecaster greatbow
+5× Enlightened
+Close combat weapon, Fatecaster greatbow
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Ahriman
+40mm
+10"
+5
+3+
+6
+6+
+2
+4+
+Tzaangor Enlightened with Fatecaster greatbows
+40mm
+10"
+4
+5+
+2
+7+
+2
+5+
+WHEN TARGETEDWarpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound rolls against it until the end of the phase · 1CP Relentless Rebirth: when it suffers a mortal wound: Feel No Pain 5+ against mortal wounds
+ALL ATTACKS · WHOLE UNIT
+Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+AHRIMAN
+Transmogrifying Blast
+18"
+D6+1
+2+
+6
+-1
+D3
+BLAST, PSYCHIC
+OR
+WHEN USING ANOTHER SHOOTING TYPE
+Inferno bolt pistol
+12"
+1
+2+
+5
+-2
+1
+PISTOL
+TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS
+Fatecaster greatbow×6
+30"
+2
+4+
+5
+-2
+2
+IGNORES COVER, LETHAL HITS, PRECISION
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+AHRIMAN
+Black Staff of Ahriman
+5
+2+
+7
+-1
+3
+PSYCHIC
+TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS
+Close combat weapon×6
+2
+4+
+4
+0
+1
+ABILITIES
+Scryer of Fates
+- Ahriman
+
+Psychic
+
+If your army includes this model, after both players have deployed their armies, you can select up to three THOUSAND SONS units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.
+
+Arch-Sorcerer of Tzeentch
+- Ahriman
+Your Shooting
+
+Psychic · Shooting · Your turn
+
+Each time this model attempts a Ritual, add 1 to the Psychic test result.
+
+Malign Trickery
+- Tzaangor Enlightened with Fatecaster greatbows
+Their Movement
+
+Movement · Their turn
+
+In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6”.
+
+Rules
+Leader, Cabal of Sorcerers (Ahriman), Sorcerous Invigoration, Warpmeld Sacrifice
+Stratagems
+
+RITUAL OF REGENERATION Multitudinous Limbs, Mutagenic Magicks, Relentless Rebirth
+
+WARPMELD PACT Blessed Transmutations, Touched by Tzeentch, Twisted Mirage, Deranged Ferocity, Gift of Change
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+AHRIMAN
+CHAOS
+CHARACTER
+EPIC HERO
+FACTION: THOUSAND SONS
+FLY
+MOUNTED
+TZEENTCH
+MUTANT*
+TZAANGOR ENLIGHTENED*
+TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS*
+Ahriman only:
+INFANTRY
+PSYKER
+*from the led Tzaangor Enlightened with Fatecaster greatbows
+Ask about this unit
+‹ Magnus the Red
+Daemon Prince of Tzeentch with wings ›
+
+######## unit daemon-prince-of-tzeentch-with-wings · AHRIMAN Mucho Mutantes
+DAEMON PRINCE OF TZEENTCH WITH WINGS
+170 PTS
+Character
+Models
+Options
+1× Daemon Prince of Tzeentch with wings
+Dark Blessing, Hellforged weapons, Infernal cannon
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Daemon Prince of Tzeentch with wings
+60mm
+13"
+9
+2+
+10
+6+
+3
+4+
+ALL ATTACKS
+vs CHARACTER units: re-roll hit rolls of 1 and wound rolls of 1 (Hunter of Souls)
+vs PSYKER CHARACTER units: re-roll the hit roll and the wound roll (Hunter of Souls)
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Dark Blessing
+24"
+9
+2+
+4
+-1
+1
+IGNORES COVER, PSYCHIC, SUSTAINED HITS 1
+Infernal cannon
+24"
+3
+2+
+5
+-2
+2
+After an aetherstride this turn: Dark Blessing has [SUSTAINED HITS D3] (Aetherstride)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Hellforged weapons
+➤strike
+6
+2+
+8
+-2
+3
+DEVASTATING WOUNDS, PSYCHIC
+➤sweep
+12
+2+
+6
+-1
+1
+DEVASTATING WOUNDS, PSYCHIC
+ABILITIES
+Aetherstride
+Your Move/Shoot/Charge
+
+Psychic · Movement / Shooting / Charge · Your turn
+
+In your Movement phase, when this model is set up on the battlefield using the Deep Strike ability, it can perform an aetherstride. If it does:
+
+It can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units.
+Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability.
+Until the end of the turn, it is not eligible to declare a charge.
+Hunter of Souls
+Their Move · Your Shoot · Fight
+
+Their Movement / Your Shooting / Fight (either turn)
+
+Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a CHARACTER unit, this model regains up to D3 lost wounds (if that CHARACTER unit was a PSYKER, this model regains up to 3 lost wounds instead).
+
+Rules
+Deadly Demise D3, Cabal of Sorcerers, Deep Strike
+Stratagems
+
+RITUAL OF REGENERATION Mutagenic Magicks
+
+WARPMELD PACT Blessed Transmutations
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+CHAOS
+CHARACTER
+DAEMON
+DAEMON PRINCE
+FACTION: THOUSAND SONS
+FLY
+MONSTER
+PSYKER
+TZEENTCH
+Ask about this unit
+‹ Ahriman
+Exalted Sorcerer on Disc of Tzeentch ›
+
+######## unit exalted-sorcerer-on-disc-of-tzeentch-tzaangor-enlightened-with-fatecaster-greatbows · DAEMON PRINCE OF TZEENTCH WITH WINGS Mucho Mutantes
+EXALTED SORCERER ON DISC OF TZEENTCH + TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS
+205 PTS EACH
+Character · 95 + Tzaangor Enlightened with Fatecaster greatbows 110 · ×2 in list
+Models
+Options
+1× Exalted Sorcerer on Disc of Tzeentch
+Arcane Fire, Force weapon, Inferno bolt pistol, Prosperine khopesh
+Leading Tzaangor Enlightened with Fatecaster greatbows
+1× Aviarch
+Close combat weapon, Fatecaster greatbow
+5× Enlightened
+Close combat weapon, Fatecaster greatbow
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Exalted Sorcerer on Disc of Tzeentch
+40mm
+10"
+5
+3+
+6
+6+
+2
+4+
+Tzaangor Enlightened with Fatecaster greatbows
+40mm
+10"
+4
+5+
+2
+7+
+2
+5+
+WHEN TARGETEDWarpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound rolls against it until the end of the phase · Exalted Sorcerer on Disc of Tzeentch · Illusions of Tzeentch: only by a ranged attack whose attacking model is within 18" · 1CP Relentless Rebirth: when it suffers a mortal wound: Feel No Pain 5+ against mortal wounds
+ALL ATTACKS · WHOLE UNIT
+Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+EXALTED SORCERER ON DISC OF TZEENTCH
+Arcane Fire
+18"
+D6
+–
+6
+-2
+D3
+IGNORES COVER, PSYCHIC, TORRENT
+OR
+WHEN USING ANOTHER SHOOTING TYPE
+Inferno bolt pistol
+12"
+1
+2+
+5
+-2
+1
+PISTOL
+TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS
+Fatecaster greatbow×6
+30"
+2
+4+
+5
+-2
+2
+IGNORES COVER, LETHAL HITS, PRECISION
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+EXALTED SORCERER ON DISC OF TZEENTCH
+Force weapon
+5
+2+
+6
+-1
+D3
+PSYCHIC
+OR
+Prosperine khopesh
+4
+2+
+5
+-2
+2
+TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS
+Close combat weapon×6
+2
+4+
+4
+0
+1
+ABILITIES
+Illusions of Tzeentch
+- Exalted Sorcerer on Disc of Tzeentch
+
+Psychic
+
+While this model is leading a unit, that unit can only be selected as the target of a ranged attack if the attacking model is within 18".
+
+Binding Tendrils
+- Exalted Sorcerer on Disc of Tzeentch
+Your Shooting
+
+Psychic · Shooting · Your turn
+
+In your Shooting phase, after this model has shot, select one enemy INFANTRY unit hit by one or more of those attacks made with Arcane Fire. Until the start of your next turn, that unit is ensnared. While a unit is ensnared, subtract 2" from its Move characteristic and subtract 2 from Charge rolls made for it.
+
+Malign Trickery
+- Tzaangor Enlightened with Fatecaster greatbows
+Their Movement
+
+Movement · Their turn
+
+In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6”.
+
+Rules
+Leader, Cabal of Sorcerers (Exalted Sorcerer on Disc of Tzeentch), Sorcerous Invigoration, Warpmeld Sacrifice
+Stratagems
+
+RITUAL OF REGENERATION Multitudinous Limbs, Mutagenic Magicks, Relentless Rebirth
+
+WARPMELD PACT Blessed Transmutations, Touched by Tzeentch, Twisted Mirage, Deranged Ferocity, Gift of Change
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Explosives, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+CHAOS
+CHARACTER
+EXALTED SORCERER
+FACTION: THOUSAND SONS
+FLY
+MOUNTED
+TZEENTCH
+MUTANT*
+TZAANGOR ENLIGHTENED*
+TZAANGOR ENLIGHTENED WITH FATECASTER GREATBOWS*
+Exalted Sorcerer on Disc of Tzeentch only:
+GRENADES
+INFANTRY
+PSYKER
+*from the led Tzaangor Enlightened with Fatecaster greatbows
+Ask about this unit
+‹ Daemon Prince of Tzeentch with wings
+Tzaangor Shaman · Curse of Life ›
+
+######## unit tzaangor-shaman-tzaangor-enlightened-curse-of-life · EXALTED SORCERER ON DISC OF TZEENTCH Mucho Mutantes
+TZAANGOR SHAMAN + TZAANGOR ENLIGHTENED
+175 PTS
+Character · 85 + Tzaangor Enlightened 90
+Curse of Life
+Models
+Options
+1× Tzaangor Shaman
+Baleful Devolution, Force stave
+Leading Tzaangor Enlightened
+1× Aviarch
+Divining spear
+5× Divining spear Enlightened
+Divining spear
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Tzaangor Shaman
+40mm
+10"
+4
+5+
+4
+7+
+2
+5+
+Tzaangor Enlightened
+40mm
+10"
+4
+5+
+2
+7+
+2
+5+
+WHEN TARGETEDWarpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound rolls against it until the end of the phase · 1CP Relentless Rebirth: when it suffers a mortal wound: Feel No Pain 5+ against mortal wounds
+ALL ATTACKS · WHOLE UNIT
+Every attack (this model leads the unit): +1 to hit rolls (Bestial Prophet)
+Sacrificial Blessing used this phase (your Shooting phase or the Fight phase; one Bodyguard model destroyed): Tzaangor Shaman Psychic weapons +D3 A and +D3 S
+Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Baleful Devolution
+18"
+D6
+3+
+9
+0
+1
+BLAST, DEVASTATING WOUNDS, PSYCHIC
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+TZAANGOR SHAMAN
+Force stave
+3
+3+
+5
+-1
+D3
+PSYCHIC
+TZAANGOR ENLIGHTENED
+Divining spear×6
+3
+4+
+5
+-1
+2
+LANCE, PRECISION
+WHOLE UNIT
+Made a charge move this turn: Divining spear +1 to wound (Lance)
+ABILITIES
+Sacrificial Blessing
+- Tzaangor Shaman
+Your Shoot · Fight
+
+Your Shooting / Fight (either turn)
+
+While this model is leading a unit, in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight, this model can use this ability. If it does, select one Bodyguard model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model.
+
+Bestial Prophet
+- Tzaangor Shaman
+
+While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll.
+
+Curse of Life
+- Tzaangor Shaman
+Enhancement
+Your Shooting
+
+Enhancement · Shooting · Your turn
+
+INFANTRY/MOUNTED THOUSAND SONS PSYKER model only. When this model heals as a result of the Sorcerous Invigoration detachment rule, you can add 3 to the number of wounds healed.
+
+Prophesied Doom
+- Tzaangor Enlightened
+Charge
+
+Charge · Either turn
+
+Each time this unit makes a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound.
+
+Rules
+Leader, Cabal of Sorcerers (Tzaangor Shaman), Sorcerous Invigoration, Warpmeld Sacrifice
+Stratagems
+
+RITUAL OF REGENERATION Multitudinous Limbs, Mutagenic Magicks, Relentless Rebirth
+
+WARPMELD PACT Blessed Transmutations, Touched by Tzeentch, Twisted Mirage, Deranged Ferocity, Gift of Change
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+CHAOS
+CHARACTER
+FACTION: THOUSAND SONS
+FLY
+MOUNTED
+MUTANT
+TZAANGOR SHAMAN
+TZEENTCH
+TZAANGOR ENLIGHTENED*
+Tzaangor Shaman only:
+INFANTRY
+PSYKER
+*from the led Tzaangor Enlightened
+Ask about this unit
+‹ Exalted Sorcerer on Disc of Tzeentch
+Tzaangor Shaman · Diamond of Distortion ›
+
+######## unit tzaangor-shaman-tzaangor-enlightened-diamond-of-distortion · TZAANGOR SHAMAN Mucho Mutantes
+TZAANGOR SHAMAN + TZAANGOR ENLIGHTENED
+175 PTS
+Character · 85 + Tzaangor Enlightened 90
+Diamond of Distortion
+Models
+Options
+1× Tzaangor Shaman
+Baleful Devolution, Force stave
+Leading Tzaangor Enlightened
+1× Aviarch
+Divining spear
+5× Divining spear Enlightened
+Divining spear
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Tzaangor Shaman
+40mm
+10"
+4
+5+
+4
+7+
+2
+5+
+Tzaangor Enlightened
+40mm
+10"
+4
+5+
+2
+7+
+2
+5+
+WHEN TARGETEDWarpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound rolls against it until the end of the phase · Tzaangor Shaman · Diamond of Distortion: -1 to hit rolls against it (while the bearer leads it) · 1CP Relentless Rebirth: when it suffers a mortal wound: Feel No Pain 5+ against mortal wounds
+ALL ATTACKS · WHOLE UNIT
+Every attack (this model leads the unit): +1 to hit rolls (Bestial Prophet)
+Sacrificial Blessing used this phase (your Shooting phase or the Fight phase; one Bodyguard model destroyed): Tzaangor Shaman Psychic weapons +D3 A and +D3 S
+Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Baleful Devolution
+18"
+D6
+3+
+9
+0
+1
+BLAST, DEVASTATING WOUNDS, PSYCHIC
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+TZAANGOR SHAMAN
+Force stave
+3
+3+
+5
+-1
+D3
+PSYCHIC
+TZAANGOR ENLIGHTENED
+Divining spear×6
+3
+4+
+5
+-1
+2
+LANCE, PRECISION
+WHOLE UNIT
+Made a charge move this turn: Divining spear +1 to wound (Lance)
+ABILITIES
+Sacrificial Blessing
+- Tzaangor Shaman
+Your Shoot · Fight
+
+Your Shooting / Fight (either turn)
+
+While this model is leading a unit, in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight, this model can use this ability. If it does, select one Bodyguard model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model.
+
+Bestial Prophet
+- Tzaangor Shaman
+
+While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll.
+
+Diamond of Distortion
+- Tzaangor Shaman
+Enhancement
+
+Enhancement
+
+TZAANGOR SHAMAN model only. While the bearer is leading a unit, each time an attack targets that unit, subtract 1 from the Hit roll.
+
+Prophesied Doom
+- Tzaangor Enlightened
+Charge
+
+Charge · Either turn
+
+Each time this unit makes a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound.
+
+Rules
+Leader, Cabal of Sorcerers (Tzaangor Shaman), Sorcerous Invigoration, Warpmeld Sacrifice
+Stratagems
+
+RITUAL OF REGENERATION Multitudinous Limbs, Mutagenic Magicks, Relentless Rebirth
+
+WARPMELD PACT Blessed Transmutations, Touched by Tzeentch, Twisted Mirage, Deranged Ferocity, Gift of Change
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+CHAOS
+CHARACTER
+FACTION: THOUSAND SONS
+FLY
+MOUNTED
+MUTANT
+TZAANGOR SHAMAN
+TZEENTCH
+TZAANGOR ENLIGHTENED*
+Tzaangor Shaman only:
+INFANTRY
+PSYKER
+*from the led Tzaangor Enlightened
+Ask about this unit
+‹ Tzaangor Shaman · Curse of Life
+Tzaangor Shaman · Flowing Flesh ›
+
+######## unit tzaangor-shaman-tzaangor-enlightened-flowing-flesh · TZAANGOR SHAMAN Mucho Mutantes
+TZAANGOR SHAMAN + TZAANGOR ENLIGHTENED
+165 PTS
+Character · 75 + Tzaangor Enlightened 90
+Flowing Flesh
+Models
+Options
+1× Tzaangor Shaman
+Baleful Devolution, Force stave
+Leading Tzaangor Enlightened
+1× Aviarch
+Divining spear
+5× Divining spear Enlightened
+Divining spear
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Tzaangor Shaman
+40mm
+10"
+4
+5+
+5
+7+
+2
+5+
+Tzaangor Enlightened
+40mm
+10"
+4
+5+
+2
+7+
+2
+5+
+WHEN TARGETEDFeel No Pain 4+ · Warpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound rolls against it until the end of the phase · 1CP Relentless Rebirth: when it suffers a mortal wound: Feel No Pain 5+ against mortal wounds
+ALL ATTACKS · WHOLE UNIT
+Every attack (this model leads the unit): +1 to hit rolls (Bestial Prophet)
+Sacrificial Blessing used this phase (your Shooting phase or the Fight phase; one Bodyguard model destroyed): Tzaangor Shaman Psychic weapons +D3 A and +D3 S
+Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Baleful Devolution
+18"
+D6
+3+
+9
+0
+1
+BLAST, DEVASTATING WOUNDS, PSYCHIC
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+TZAANGOR SHAMAN
+Force stave
+3
+3+
+5
+-1
+D3
+PSYCHIC
+TZAANGOR ENLIGHTENED
+Divining spear×6
+3
+4+
+5
+-1
+2
+LANCE, PRECISION
+WHOLE UNIT
+Made a charge move this turn: Divining spear +1 to wound (Lance)
+ABILITIES
+Sacrificial Blessing
+- Tzaangor Shaman
+Your Shoot · Fight
+
+Your Shooting / Fight (either turn)
+
+While this model is leading a unit, in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight, this model can use this ability. If it does, select one Bodyguard model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model.
+
+Bestial Prophet
+- Tzaangor Shaman
+
+While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll.
+
+Flowing Flesh
+- Tzaangor Shaman
+Enhancement
+Already in W
+
+Enhancement
+
+TZAANGOR SHAMAN model only. The bearer has the Feel No Pain 4+ ability and a Wounds characteristic of 5.
+
+Prophesied Doom
+- Tzaangor Enlightened
+Charge
+
+Charge · Either turn
+
+Each time this unit makes a Charge move, select one enemy unit within Engagement Range of it, then roll one D6 for each model in this unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound.
+
+Rules
+Leader, Cabal of Sorcerers (Tzaangor Shaman), Feel No Pain 4+ (Tzaangor Shaman), Sorcerous Invigoration, Warpmeld Sacrifice
+Stratagems
+
+RITUAL OF REGENERATION Multitudinous Limbs, Mutagenic Magicks, Relentless Rebirth
+
+WARPMELD PACT Blessed Transmutations, Touched by Tzeentch, Twisted Mirage, Deranged Ferocity, Gift of Change
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Epic Challenge, Counteroffensive, Command Re-roll
+
+Keywords
+CHAOS
+CHARACTER
+FACTION: THOUSAND SONS
+FLY
+MOUNTED
+MUTANT
+TZAANGOR SHAMAN
+TZEENTCH
+TZAANGOR ENLIGHTENED*
+Tzaangor Shaman only:
+INFANTRY
+PSYKER
+*from the led Tzaangor Enlightened
+Ask about this unit
+‹ Tzaangor Shaman · Diamond of Distortion
+Tzaangors ›
+
+######## unit tzaangors · TZAANGOR SHAMAN Mucho Mutantes
+TZAANGORS
+75 PTS EACH
+Battleline · ×2 in list
+Models
+Options
+1× Twistbray
+Tzaangor blades
+9× Tzaangor w/ Tzaangor blades
+Tzaangor blades
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Tzaangors
+32mm
+6"
+4
+6+
+1
+7+
+1
+6+
+
+OC +1 for each TZAANGOR model unless Battle-shocked, not in the OC above (Warpmeld Sacrifice)
+
+WHEN TARGETEDWarpmeld Sacrifice (D3 mortal wounds to it at the end of the phase): -1 to wound rolls against it until the end of the phase · 1CP Warped Vicissitude: their Shooting phase or the Fight phase: 4+ invulnerable save (until the end of the phase)
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Tzaangor blades×10
+2
+4+
+5
+0
+1
+Warpmeld Sacrifice made when selected to shoot or fight (D3 mortal wounds to it at the end of the phase): +1 to wound rolls
+ABILITIES
+Ambushing Hunters
+End of your opponent’s turn
+
+End of your opponent’s turn
+
+At the end of your opponent’s turn, if this unit is more than 6" horizontally away from all enemy units, you can remove this unit from the battlefield and place it into Strategic Reserves.
+
+Rules
+Scouts 6", Warpmeld Sacrifice
+Stratagems
+
+WARPMELD PACT Blessed Transmutations, Touched by Tzeentch, Twisted Mirage, Warped Vicissitude, Deranged Ferocity
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Ritual of Regeneration.
+
+Keywords
+BATTLELINE
+CHAOS
+FACTION: THOUSAND SONS
+INFANTRY
+MUTANT
+TZAANGORS
+TZEENTCH
+Ask about this unit
+‹ Tzaangor Shaman · Flowing Flesh
+Sekhetar Robots ›
+
+######## unit sekhetar-robots · TZAANGORS Mucho Mutantes
+SEKHETAR ROBOTS
+85 PTS
+Vehicle
+Models
+Options
+2× Sekhetar Robot w/ pyreflux meltagun
+Close combat weapon, Heavy warpflamer, Hellfyre missile rack, Pyreflux meltagun
+Unit
+M
+T
+Sv
+W
+LD
+OC
+InSv
+Sekhetar Robots×2
+40mm
+8"
+6
+3+
+4
+7+
+1
+5+
+RANGED WEAPONS
+Range
+A
+BS
+S
+AP
+D
+Heavy warpflamer×2
+12"
+D6
+–
+5
+-2
+1
+IGNORES COVER, TORRENT
+Hellfyre missile rack×2
+36"
+2
+4+
+10
+-2
+3
+Pyreflux meltagun×2
+12"
+1
+4+
+10
+-4
+D6
+MELTA 2
+MELEE WEAPONS
+A
+WS
+S
+AP
+D
+Close combat weapon×2
+3
+4+
+5
+0
+1
+ABILITIES
+Prophetic Sentinels
+Once per turn
+Their Move/Charge
+
+Movement / Charge · Their turn
+
+Once per turn, when you target this unit with the Fire Overwatch/Heroic Intervention stratagem, that use is -1 CP.
+
+Rules
+Infiltrators, Stealth
+Stratagems
+
+CORE Insane Bravery, Rapid Ingress, Fire Overwatch, Crushing Impact, Heroic Intervention, Counteroffensive, Command Re-roll
+
+None from Ritual of Regeneration or Warpmeld Pact.
+
+Keywords
+CHAOS
+FACTION: THOUSAND SONS
+SEKHETAR ROBOTS
+TZEENTCH
+VEHICLE
+WALKER
+Ask about this unit
+‹ Tzaangors
+
+######## popup ability:mucho-mutantes|Aetherstride|In your Movement phase, when this model is set up on the battlefield using the **Deep Strike** ability, it can perform an aetherstride. If it does:
+- It can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units.
+- Until the end of the turn, its Dark Blessing has the **[SUSTAINED HITS D3]** ability.
+- Until the end of the turn, it is not eligible to declare a charge. · SEKHETAR ROBOTS Mucho Mutantes
+ABILITY · PSYCHIC · MOVEMENT / SHOOTING / CHARGE · YOUR TURN
+
+Aetherstride
+
+In your Movement phase, when this model is set up on the battlefield using the Deep Strike ability, it can perform an aetherstride. If it does:
+
+It can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units.
+Until the end of the turn, its Dark Blessing has the [SUSTAINED HITS D3] ability.
+Until the end of the turn, it is not eligible to declare a charge.
+
+UNITDaemon Prince of Tzeentch with wings
+
+Ask about this ability
+
+######## popup ability:mucho-mutantes|Bestial Prophet|While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the **Hit roll**. · MUCHO MUTANTES Mucho Mutantes
+ABILITY
+
+Bestial Prophet
+
+While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll.
+
+UNITTzaangor Shaman + Tzaangor Enlightened · Curse of Life, Tzaangor Shaman + Tzaangor Enlightened · Diamond of Distortion, Tzaangor Shaman + Tzaangor Enlightened · Flowing Flesh
+
+Ask about this ability
+
+######## popup ability:mucho-mutantes|Damaged: 1-6 wounds remaining|While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the **Hit roll**. · MUCHO MUTANTES Mucho Mutantes
+ABILITY
+
+Damaged: 1-6 wounds remaining
+
+While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.
+
+UNITMagnus the Red
+
+Ask about this ability
+
+######## popup ability:mucho-mutantes|Diamond of Distortion|**TZAANGOR SHAMAN** model only. While the bearer is leading a unit, each time an attack targets that unit, subtract 1 from the **Hit roll**. · MUCHO MUTANTES Mucho Mutantes
+ABILITY · ENHANCEMENT
+
+Diamond of Distortion
+
+TZAANGOR SHAMAN model only. While the bearer is leading a unit, each time an attack targets that unit, subtract 1 from the Hit roll.
+
+UNITTzaangor Shaman + Tzaangor Enlightened · Diamond of Distortion
+
+Ask about this ability
+
+######## popup ability:mucho-mutantes|Hunter of Souls|Each time this model makes an attack that targets a **CHARACTER** unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a **PSYKER CHARACTER** unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a **CHARACTER** unit, this model regains up to D3 lost wounds (if that **CHARACTER** unit was a **PSYKER**, this model regains up to 3 lost wounds instead). · MUCHO MUTANTES Mucho Mutantes
+ABILITY · THEIR MOVEMENT / YOUR SHOOTING / FIGHT (EITHER TURN)
+
+Hunter of Souls
+
+Each time this model makes an attack that targets a CHARACTER unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1 (if that attack targets a PSYKER CHARACTER unit, you can re-roll the Hit roll and you can re-roll the Wound roll instead). Each time this model destroys a CHARACTER unit, this model regains up to D3 lost wounds (if that CHARACTER unit was a PSYKER, this model regains up to 3 lost wounds instead).
+
+UNITDaemon Prince of Tzeentch with wings
+
+Ask about this ability
+
+######## popup ability:mucho-mutantes|Illusions of Tzeentch|While this model is leading a unit, that unit can only be selected as the target of a ranged attack if the attacking model is within 18". · MUCHO MUTANTES Mucho Mutantes
+ABILITY · PSYCHIC
+
+Illusions of Tzeentch
+
+While this model is leading a unit, that unit can only be selected as the target of a ranged attack if the attacking model is within 18".
+
+UNITExalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2
+
+Ask about this ability
+
+######## popup ability:mucho-mutantes|Impossible Form|Each time an attack is made against this **PSYKER** (excluding **Psychic Attacks**), subtract 1 from the Damage characteristic of that attack. · MUCHO MUTANTES Mucho Mutantes
+ABILITY · PSYCHIC
+
+Impossible Form
+
+Each time an attack is made against this PSYKER (excluding Psychic Attacks), subtract 1 from the Damage characteristic of that attack.
+
+UNITMagnus the Red
+
+Ask about this ability
+
+######## popup ability:mucho-mutantes|Sacrificial Blessing|While this model is leading a unit, in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight, this model can use this ability. If it does, select one **Bodyguard** model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model. · MUCHO MUTANTES Mucho Mutantes
+ABILITY · YOUR SHOOTING / FIGHT (EITHER TURN)
+
+Sacrificial Blessing
+
+While this model is leading a unit, in your Shooting phase and the Fight phase, each time that unit is selected to shoot or fight, this model can use this ability. If it does, select one Bodyguard model in that unit; that Bodyguard model is destroyed and, until the end of the phase, add D3 to the Attacks and Strength characteristics of Psychic weapons equipped by this model.
+
+UNITTzaangor Shaman + Tzaangor Enlightened · Curse of Life, Tzaangor Shaman + Tzaangor Enlightened · Diamond of Distortion, Tzaangor Shaman + Tzaangor Enlightened · Flowing Flesh
+
+Ask about this ability
+
+######## popup ability:mucho-mutantes|Scryer of Fates|If your army includes this model, after both players have deployed their armies, you can select up to three **THOUSAND SONS** units from your army and redeploy them. When doing so, you can set those units up in **Strategic Reserves** if you wish, regardless of how many units are already in Strategic Reserves. · MUCHO MUTANTES Mucho Mutantes
+ABILITY · PSYCHIC
+
+Scryer of Fates
+
+If your army includes this model, after both players have deployed their armies, you can select up to three THOUSAND SONS units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.
+
+UNITAhriman + Tzaangor Enlightened with Fatecaster greatbows
+
+Ask about this ability
+
+######## popup ability:mucho-mutantes|Treason of Tzeentch|At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this **PSYKER**. Until the end of the phase, ranged weapons equipped by models in that unit have the **[HAZARDOUS]** ability. · MUCHO MUTANTES Mucho Mutantes
+ABILITY · PSYCHIC · SHOOTING · THEIR TURN
+
+Treason of Tzeentch
+
+At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this PSYKER. Until the end of the phase, ranged weapons equipped by models in that unit have the [HAZARDOUS] ability.
+
+UNITMagnus the Red
+
+Ask about this ability
+
+######## popup ability:mucho-mutantes|Unearthly Power|At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability. · MUCHO MUTANTES Mucho Mutantes
+ABILITY · START OF THE BATTLE ROUND
+
+Unearthly Power
+
+At the start of the battle round, select one of the abilities in the Crimson King section. Until the start of the next battle round, this model has that ability.
+
+TO PICK FROM: CRIMSON KING
+
+Impossible Form Psychic
+
+Each time an attack is made against this PSYKER (excluding Psychic Attacks), subtract 1 from the Damage characteristic of that attack.
+
+Treason of Tzeentch Psychic
+
+At the start of your opponent’s Shooting phase, select one enemy unit within 24" of this PSYKER. Until the end of the phase, ranged weapons equipped by models in that unit have the [HAZARDOUS] ability.
+
+Time Flux Aura, Psychic
+
+While a friendly THOUSAND SONS unit is within 6" of this PSYKER, add 2" to the Move characteristic of models in that unit.
+
+UNITMagnus the Red
+
+Ask about this ability
+
+######## popup enh:ritual-of-regeneration|Curse of Life · MUCHO MUTANTES Mucho Mutantes
+ENHANCEMENT · RITUAL OF REGENERATION · 20 PTS
+
+Curse of Life
+
+INFANTRY/MOUNTED THOUSAND SONS PSYKER model only. When this model heals as a result of the Sorcerous Invigoration detachment rule, you can add 3 to the number of wounds healed.
+
+ONTzaangor Shaman + Tzaangor Enlightened
+
+Ask about this enhancement
+
+######## popup enh:warpmeld-pact|Diamond of Distortion · MUCHO MUTANTES Mucho Mutantes
+ENHANCEMENT · WARPMELD PACT · 20 PTS
+
+Diamond of Distortion
+
+TZAANGOR SHAMAN model only. While the bearer is leading a unit, each time an attack targets that unit, subtract 1 from the Hit roll.
+
+ONTzaangor Shaman + Tzaangor Enlightened
+
+Ask about this enhancement
+
+######## popup enh:warpmeld-pact|Flowing Flesh · MUCHO MUTANTES Mucho Mutantes
+ENHANCEMENT · WARPMELD PACT · 10 PTS
+
+Flowing Flesh
+
+TZAANGOR SHAMAN model only. The bearer has the Feel No Pain 4+ ability and a Wounds characteristic of 5.
+
+ONTzaangor Shaman + Tzaangor Enlightened
+
+Ask about this enhancement
+
+######## popup grant:["Flowing Flesh","tzaangor-shaman-tzaangor-enlightened-flowing-flesh","W 5",null] · MUCHO MUTANTES Mucho Mutantes
+W 5 · GRANTED BY
+
+Flowing Flesh
+
+Tzaangor Shaman · Enhancement
+
+TZAANGOR SHAMAN model only. The bearer has the Feel No Pain 4+ ability and a Wounds characteristic of 5.
+
+Already in the value shown (as New Recruit and BSData list it).
+
+######## popup rule:Advance roll · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:BLAST · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+BLAST
+
+Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).
+
+If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead.
+
+Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).
+
+IN THIS ARMYMagnus the Red, Ahriman, Tzaangor Shaman · Curse of Life, Tzaangor Shaman · Diamond of Distortion, Tzaangor Shaman · Flowing Flesh
+
+Ask about this rule
+
+######## popup rule:Battle-shocked · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:Bodyguard · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Bodyguard
+
+Some units have the Leader or Support ability listed on their datasheet (see below). Such units are known as leader units and support units respectively. Both of these abilities allow such units to lead other friendly units (known as bodyguard units) to form attached units. An attached unit is a single unit for all rules purposes. Leader and support units can only lead specific bodyguard units, as listed in the Warhammer 40,000 app.
+
+19.04 Abilities in Attached Units: Abilities/rules that affect a single specified model (e.g. from an enhancement or an item of wargear) only ever apply to that model, even while part of an attached unit.
+
+Otherwise, abilities/rules that affect a unit (or models in it) apply to every model in an attached unit, until the source of that ability/rule is destroyed, as shown below.
+
+SOURCE OF ABILITY/RULE: APPLIES TO THE ATTACHED UNIT UNTIL
+
+Leader/support unit: The last model in that leader/support unit is destroyed.*
+Bodyguard unit (e.g. from a datasheet ability): The last model in that bodyguard unit is destroyed.
+A specific model (e.g. the bearer of an enhancement or an item of wargear): That model is destroyed.
+
+* This means leader/support units continue to benefit from their own ‘while this model is leading a unit’ abilities even after their bodyguard unit is destroyed, provided they started the battle in an attached unit.
+
+In all of the above cases, if that last model was destroyed as the result of an attack, the ability it was conferring upon the attached unit applies until the attacking unit has resolved all of its attacks.
+
+Wahapedia FAQ: When does a model’s or unit’s ability in an attached unit apply to all models in that unit? A rule that applies to ‘this/that unit’ or ‘models in this/that unit’ applies to all models in an attached unit. Rules that just apply to one model in an attached unit (for example, a rule that grants a model Feel No Pain or Lone Operative) only apply to that model, not to all models in the attached unit.
+
+Ask about this rule
+
+######## popup rule:Cabal of Sorcerers · MUCHO MUTANTES Mucho Mutantes
+THOUSAND SONS ARMY RULE
+
+Cabal of Sorcerers
+
+If your Army Faction is THOUSAND SONS, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.
+
+Psychic Test Sequence
+
+Roll 2D6
+Channel the Warp (Optional)
+Then, if one or more doubles or triples were rolled during this test, that model’s unit suffers D3 mortal wounds.
+If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects.
+
+FAQ (Faction Pack 1.3): Do I need to sequence all of my Cabal of Sorcerers Rituals at the start of my Shooting phase? No, you just pick a model with the Cabal of Sorcerers rule, pick a Ritual to manifest, and attempt it, then repeat the process until you have run out of models or Rituals or both.
+
+FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, do I have to choose whether to Channel the Warp before rolling any dice? No.
+
+FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, if I roll one or more doubles or triples, does my model only suffer D3 mortal wounds if I chose to Channel the Warp? Yes.
+
+App note, not rules text: Channel the Warp means rolling one more D6 for the test (the printed card shows it as a die).
+
+Destiny’s Ruin (Psychic) · Warp Charge 5
+
+Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, re-roll a Hit roll of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.
+
+Temporal Surge (Psychic) · Warp Charge 6
+
+Select one friendly THOUSAND SONS or SCINTILLATING LEGIONS unit that is not within Engagement Range of one or more enemy units and is within 24" of and visible to the manifesting model. That unit can make a Normal move of up to D6". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.
+
+Doombolt (Psychic) · Warp Charge 7
+
+Select one enemy unit within 24" of and visible to the manifesting model (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12" of the manifesting model); that unit suffers D3 mortal wounds. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.
+
+Twist of Fate (Psychic) · Warp Charge 9
+
+Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead.
+
+Ask about this rule
+
+######## popup rule:Charge roll · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:Charge rolls · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:Close-quarters · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Close-quarters
+
+Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with:
+
+One or more of its [CLOSE-QUARTERS] weapons.
+One or more of its other ranged weapons.
+
+[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
+
+IN THIS ARMYAhriman, Exalted Sorcerer on Disc of Tzeentch
+
+Ask about this rule
+
+######## popup rule:Consolidation move · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Consolidation Move
+
+MAXIMUM DISTANCE: 3"
+
+ELIGIBLE IF: It is the Fight phase and your unit was eligible to fight this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select consolidation mode:
+
+Ongoing Consolidation: If your unit is engaged, you must select this mode and select every enemy unit it is engaged with.
+Engaging Consolidation: Otherwise, if your unit is within 3" of one or more enemy units, you must select this mode and select one or more of those enemy units.
+Objective Consolidation: Otherwise, if your unit is within 3" of one or more objectives, you must select this mode and select one of those objectives.
+
+WHILE MOVING:
+
+Ongoing Consolidation: Models in base-contact with one or more enemy models cannot be moved. Each model that is moved must end its move closer to the closest selected enemy unit, and engaged with it if possible.
+Engaging Consolidation: Each model that is moved must end its move closer to the closest selected enemy unit, and engaged with it if possible.
+Objective Consolidation: Each model that is moved must end its move within range of the selected objective if possible, or closer to it if not.
+
+AFTER MOVING:
+
+Ongoing Consolidation: Each model that started this move engaged with an enemy unit must still be engaged with that enemy unit.
+Engaging Consolidation: Your unit must be engaged with all of the selected enemy units. If one or more enemy units engaged with your unit have not been selected to fight this phase, your opponent must select each of those units, one at a time; when each is selected, it becomes eligible to fight and is selected to fight (12.04).
+Objective Consolidation: Your unit must be within range of the selected objective.
+
+Wahapedia core rules errata (12.08 Consolidation Move, After Moving, Ongoing Consolidation): Each model that started this move engaged with an enemy unit must still be engaged with that enemy unit. If one or more enemy units engaged with your unit have not been selected to fight this phase, your opponent must select each of those units, one at a time; when each is selected, it becomes eligible to fight and is selected to fight
+
+App note, not rules text: the lines above the errata are the printed Core Rules (01/06/2026). GW’s Warhammer 40,000 app, as Wahapedia prints it, changes two After Moving lines: the errata replaces the Ongoing Consolidation line, and the Objective Consolidation line reads “Your unit must be unengaged and within range of the selected objective”. No GW PDF has either change yet (16 Oct 2026).
+
+Ask about this rule
+
+######## popup rule:DEVASTATING WOUNDS · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+DEVASTATING WOUNDS
+
+Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks.
+
+Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost.
+
+IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings, Tzaangor Shaman · Curse of Life, Tzaangor Shaman · Diamond of Distortion, Tzaangor Shaman · Flowing Flesh
+
+Ask about this rule
+
+######## popup rule:Deadly Demise · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Deadly Demise
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings
+
+Ask about this rule
+
+######## popup rule:Deadly Demise D3 · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Deadly Demise D3
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings
+
+Ask about this rule
+
+######## popup rule:Deadly Demise D6 · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Deadly Demise D6
+
+This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6").
+
+IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings
+
+Ask about this rule
+
+######## popup rule:Deep Strike · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Deep Strike
+
+Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from all enemy units, even if that is within your opponent’s deployment zone.
+
+App note, not rules text: unless a rule says otherwise, units in strategic reserves can only make an ingress move from the second battle round onwards, and any that have not made an ingress move by the end of the third battle round are destroyed, except repositioned units and units embarked within a TRANSPORT that has made an ingress move (Strategic Reserves, 20.03).
+
+IN THIS ARMYMagnus the Red, Daemon Prince of Tzeentch with wings
+
+Ask about this rule
+
+######## popup rule:Engagement Range · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
+######## popup rule:Feel No Pain · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Feel No Pain
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYTzaangor Shaman · Flowing Flesh (Tzaangor Shaman only)
+
+Ask about this rule
+
+######## popup rule:Feel No Pain 4+ · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Feel No Pain 4+
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYTzaangor Shaman · Flowing Flesh (Tzaangor Shaman only)
+
+Ask about this rule
+
+######## popup rule:Feel No Pain 5+ · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Feel No Pain 5+
+
+This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.
+
+IN THIS ARMYTzaangor Shaman · Flowing Flesh (Tzaangor Shaman only)
+
+Ask about this rule
+
+######## popup rule:Fights First · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Fights First
+
+While every model in a unit has this ability, that unit is a Fights First unit.
+
+See the Resolve Fights First Combats step in the Fight phase (12.04).
+
+Ask about this rule
+
+######## popup rule:Hazard roll · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Hazard Roll
+
+To make a hazard roll for a unit, roll one D6: on a 1-2, that roll fails and that unit suffers 1 mortal wound (see above), or 3 mortal wounds instead if each model in that unit is a MONSTER/VEHICLE model. If more than one hazard roll is required for a unit, make all of those rolls simultaneously.
+
+06.03.01 Hazardous Test (app): The term ‘Hazardous test’ is the same as hazard roll.
+
+Wahapedia FAQ: If a rule says my unit must make a hazard roll does every model in the unit make a hazard roll? No, the unit would make 1 single hazard roll.
+
+Wahapedia FAQ: I failed hazard rolls from [Hazardous] weapons, do those mortal wounds have to be allocated to the models with the [HAZARDOUS] weapons? No, you allocate the mortal wounds to the unit as per Mortal Wounds (06.02).
+
+Ask about this rule
+
+######## popup rule:Hazardous · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Hazardous
+
+Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.
+
+IN THIS ARMYMagnus the Red (in Treason of Tzeentch)
+
+Ask about this rule
+
+######## popup rule:IGNORES COVER · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+IGNORES COVER
+
+Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).
+
+IN THIS ARMYMagnus the Red, Ahriman, Daemon Prince of Tzeentch with wings, Exalted Sorcerer on Disc of Tzeentch, Sekhetar Robots
+
+Ask about this rule
+
+######## popup rule:Infiltrators · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Infiltrators
+
+During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8" horizontally from your opponent’s deployment zone and all enemy units.
+
+IN THIS ARMYSekhetar Robots
+
+Ask about this rule
+
+######## popup rule:LANCE · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+LANCE
+
+Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
+
+IN THIS ARMYTzaangor Shaman · Curse of Life, Tzaangor Shaman · Diamond of Distortion, Tzaangor Shaman · Flowing Flesh
+
+Ask about this rule
+
+######## popup rule:LETHAL HITS · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+LETHAL HITS
+
+Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target.
+
+Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].
+
+IN THIS ARMYAhriman, Exalted Sorcerer on Disc of Tzeentch
+
+Ask about this rule
+
+######## popup rule:Lance · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Lance
+
+Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.
+
+IN THIS ARMYTzaangor Shaman · Curse of Life, Tzaangor Shaman · Diamond of Distortion, Tzaangor Shaman · Flowing Flesh
+
+Ask about this rule
+
+######## popup rule:Leader · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Leader
+
+Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it.
+
+Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.
+
+IN THIS ARMYAhriman, Exalted Sorcerer on Disc of Tzeentch, Tzaangor Shaman · Curse of Life, Tzaangor Shaman · Diamond of Distortion, Tzaangor Shaman · Flowing Flesh
+
+Ask about this rule
+
+######## popup rule:Lone Operative · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Lone Operative
+
+Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12" of this unit.
+
+If this ability takes the form Lone Operative X", unless part of an attached unit, this unit is not visible to enemy models unless they are within X" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X" of this unit.
+
+24.24.01 Attached units and Lone Operative (app): If all models in an attached unit have Lone Operative, that unit will benefit from Lone Operative.
+
+If a unit has Lone Operative, but models in that unit have different range values for Lone Operative, the highest value amongst that unit’s models on the battlefield is applied to the whole unit.
+
+If an attached unit below starting strength only contains models with Lone Operative, Lone Operative becomes active again.
+
+Ask about this rule
+
+######## popup rule:MELTA 2 · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+MELTA 2
+
+This ability always takes the form [MELTA X]. Each time a model makes an attack with a [MELTA] weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add X to that weapon’s D characteristic.
+
+Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6. While resolving those attacks, that weapon has a D characteristic of D6+2.
+
+IN THIS ARMYSekhetar Robots
+
+Ask about this rule
+
+######## popup rule:Normal move · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Normal Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+AFTER MOVING: Your unit must be unengaged.
+
+09.05.01 More Than One Normal Move in a Phase (app): A unit cannot make more than one Normal Move in a phase.
+
+Ask about this rule
+
+######## popup rule:PISTOL · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+PISTOL
+
+Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with:
+
+One or more of its [CLOSE-QUARTERS] weapons.
+One or more of its other ranged weapons.
+
+[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.
+
+IN THIS ARMYAhriman, Exalted Sorcerer on Disc of Tzeentch
+
+Ask about this rule
+
+######## popup rule:PRECISION · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+PRECISION
+
+While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.
+
+24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
+
+IN THIS ARMYAhriman, Exalted Sorcerer on Disc of Tzeentch, Tzaangor Shaman · Curse of Life, Tzaangor Shaman · Diamond of Distortion, Tzaangor Shaman · Flowing Flesh
+
+Ask about this rule
+
+######## popup rule:PSYCHIC · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+PSYCHIC
+
+Each time an attack is made with a [PSYCHIC] weapon, you can ignore any or all modifiers to that attack’s BS or WS characteristic and any or all modifiers to the hit roll. Attacks made with [PSYCHIC] weapons are known as psychic attacks (this can be important for the triggering of other rules).
+
+IN THIS ARMYMagnus the Red, Ahriman, Daemon Prince of Tzeentch with wings, Exalted Sorcerer on Disc of Tzeentch, Tzaangor Shaman · Curse of Life, Tzaangor Shaman · Diamond of Distortion, Tzaangor Shaman · Flowing Flesh
+
+Ask about this rule
+
+######## popup rule:Psychic · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Psychic
+
+Each time an attack is made with a [PSYCHIC] weapon, you can ignore any or all modifiers to that attack’s BS or WS characteristic and any or all modifiers to the hit roll. Attacks made with [PSYCHIC] weapons are known as psychic attacks (this can be important for the triggering of other rules).
+
+IN THIS ARMYMagnus the Red, Ahriman, Daemon Prince of Tzeentch with wings, Exalted Sorcerer on Disc of Tzeentch, Tzaangor Shaman · Curse of Life, Tzaangor Shaman · Diamond of Distortion, Tzaangor Shaman · Flowing Flesh
+
+Ask about this rule
+
+######## popup rule:Psychic test · MUCHO MUTANTES Mucho Mutantes
+THOUSAND SONS ARMY RULE
+
+Cabal of Sorcerers
+
+If your Army Faction is THOUSAND SONS, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.
+
+Psychic Test Sequence
+
+Roll 2D6
+Channel the Warp (Optional)
+Then, if one or more doubles or triples were rolled during this test, that model’s unit suffers D3 mortal wounds.
+If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects.
+
+FAQ (Faction Pack 1.3): Do I need to sequence all of my Cabal of Sorcerers Rituals at the start of my Shooting phase? No, you just pick a model with the Cabal of Sorcerers rule, pick a Ritual to manifest, and attempt it, then repeat the process until you have run out of models or Rituals or both.
+
+FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, do I have to choose whether to Channel the Warp before rolling any dice? No.
+
+FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, if I roll one or more doubles or triples, does my model only suffer D3 mortal wounds if I chose to Channel the Warp? Yes.
+
+App note, not rules text: Channel the Warp means rolling one more D6 for the test (the printed card shows it as a die).
+
+Destiny’s Ruin (Psychic) · Warp Charge 5
+
+Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, re-roll a Hit roll of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.
+
+Temporal Surge (Psychic) · Warp Charge 6
+
+Select one friendly THOUSAND SONS or SCINTILLATING LEGIONS unit that is not within Engagement Range of one or more enemy units and is within 24" of and visible to the manifesting model. That unit can make a Normal move of up to D6". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.
+
+Doombolt (Psychic) · Warp Charge 7
+
+Select one enemy unit within 24" of and visible to the manifesting model (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12" of the manifesting model); that unit suffers D3 mortal wounds. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.
+
+Twist of Fate (Psychic) · Warp Charge 9
+
+Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead.
+
+Ask about this rule
+
+######## popup rule:Resolve a charge · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:Ritual · MUCHO MUTANTES Mucho Mutantes
+THOUSAND SONS ARMY RULE
+
+Cabal of Sorcerers
+
+If your Army Faction is THOUSAND SONS, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.
+
+Psychic Test Sequence
+
+Roll 2D6
+Channel the Warp (Optional)
+Then, if one or more doubles or triples were rolled during this test, that model’s unit suffers D3 mortal wounds.
+If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects.
+
+FAQ (Faction Pack 1.3): Do I need to sequence all of my Cabal of Sorcerers Rituals at the start of my Shooting phase? No, you just pick a model with the Cabal of Sorcerers rule, pick a Ritual to manifest, and attempt it, then repeat the process until you have run out of models or Rituals or both.
+
+FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, do I have to choose whether to Channel the Warp before rolling any dice? No.
+
+FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, if I roll one or more doubles or triples, does my model only suffer D3 mortal wounds if I chose to Channel the Warp? Yes.
+
+App note, not rules text: Channel the Warp means rolling one more D6 for the test (the printed card shows it as a die).
+
+Destiny’s Ruin (Psychic) · Warp Charge 5
+
+Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, re-roll a Hit roll of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.
+
+Temporal Surge (Psychic) · Warp Charge 6
+
+Select one friendly THOUSAND SONS or SCINTILLATING LEGIONS unit that is not within Engagement Range of one or more enemy units and is within 24" of and visible to the manifesting model. That unit can make a Normal move of up to D6". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.
+
+Doombolt (Psychic) · Warp Charge 7
+
+Select one enemy unit within 24" of and visible to the manifesting model (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12" of the manifesting model); that unit suffers D3 mortal wounds. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.
+
+Twist of Fate (Psychic) · Warp Charge 9
+
+Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead.
+
+Ask about this rule
+
+######## popup rule:Rituals · MUCHO MUTANTES Mucho Mutantes
+THOUSAND SONS ARMY RULE
+
+Cabal of Sorcerers
+
+If your Army Faction is THOUSAND SONS, at the start of your Shooting phase, one or more models from your army with this ability can attempt Rituals from those listed below. To do so, select one model from your army with this ability that has not yet attempted a Ritual this turn and select one Ritual no model from your army has attempted to manifest this turn, then take a Psychic test for that model by following the sequence below.
+
+Psychic Test Sequence
+
+Roll 2D6
+Channel the Warp (Optional)
+Then, if one or more doubles or triples were rolled during this test, that model’s unit suffers D3 mortal wounds.
+If that model is not destroyed, the combined total of all the dice rolled during this test is the Psychic test result. If this equals or exceeds the Warp Charge value of the Ritual being attempted, that model manifests that Ritual and you resolve its effects.
+
+FAQ (Faction Pack 1.3): Do I need to sequence all of my Cabal of Sorcerers Rituals at the start of my Shooting phase? No, you just pick a model with the Cabal of Sorcerers rule, pick a Ritual to manifest, and attempt it, then repeat the process until you have run out of models or Rituals or both.
+
+FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, do I have to choose whether to Channel the Warp before rolling any dice? No.
+
+FAQ (Faction Pack 1.3): When using the Cabal of Sorcerers army rule, if I roll one or more doubles or triples, does my model only suffer D3 mortal wounds if I chose to Channel the Warp? Yes.
+
+App note, not rules text: Channel the Warp means rolling one more D6 for the test (the printed card shows it as a die).
+
+Destiny’s Ruin (Psychic) · Warp Charge 5
+
+Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, re-roll a Hit roll of 1. If the Psychic test result for this Ritual was 10+, you can re-roll the Hit roll instead.
+
+Temporal Surge (Psychic) · Warp Charge 6
+
+Select one friendly THOUSAND SONS or SCINTILLATING LEGIONS unit that is not within Engagement Range of one or more enemy units and is within 24" of and visible to the manifesting model. That unit can make a Normal move of up to D6". If the Psychic test result for this Ritual was 10+, that unit can make a Normal move of up to 6" instead. In either case, until the end of the turn, that unit is not eligible to declare a charge.
+
+Doombolt (Psychic) · Warp Charge 7
+
+Select one enemy unit within 24" of and visible to the manifesting model (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12" of the manifesting model); that unit suffers D3 mortal wounds. If the Psychic test result for this Ritual was 11+, that unit suffers D3+3 mortal wounds instead.
+
+Twist of Fate (Psychic) · Warp Charge 9
+
+Select one enemy unit within 24" of and visible to the manifesting model. Until the end of the phase, each time a THOUSAND SONS or SCINTILLATING LEGIONS model from your army makes an attack that targets that unit, improve the Armour Penetration characteristic of that attack by 1. If the Psychic test result for this Ritual was 12+, improve the Armour Penetration characteristic of that attack by 2 instead.
+
+Ask about this rule
+
+######## popup rule:SUSTAINED HITS 1 · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+SUSTAINED HITS 1
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYDaemon Prince of Tzeentch with wings
+
+Ask about this rule
+
+######## popup rule:Scouts · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Scouts
+
+This ability always takes the form Scouts X". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following:
+
+If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone.
+If that unit is wholly within your deployment zone, it can make a scout move (see below).
+If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.
+
+24.32 Scout Move:
+
+MAXIMUM DISTANCE: The X" in Scouts X".
+
+ELIGIBLE IF: It is the Resolve Pre-battle Abilities step, and your unit is wholly within your deployment zone.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+AFTER MOVING: Your unit must be more than 8" horizontally from all enemy units.
+
+IN THIS ARMYTzaangors
+
+Ask about this rule
+
+######## popup rule:Scouts 6" · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Scouts 6"
+
+This ability always takes the form Scouts X". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following:
+
+If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone.
+If that unit is wholly within your deployment zone, it can make a scout move (see below).
+If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.
+
+24.32 Scout Move:
+
+MAXIMUM DISTANCE: The X" in Scouts X".
+
+ELIGIBLE IF: It is the Resolve Pre-battle Abilities step, and your unit is wholly within your deployment zone.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+AFTER MOVING: Your unit must be more than 8" horizontally from all enemy units.
+
+IN THIS ARMYTzaangors
+
+Ask about this rule
+
+######## popup rule:Select Weapons · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Select Weapons
+
+For each model in the attacking unit, select which weapons that model will make attacks with. Models make ranged attacks with ranged weapons, and make melee attacks with melee weapons.
+
+While shooting: You can select one or more ranged weapons that model has.
+
+While fighting: You must select one melee weapon that model has.
+
+Sidearms: Some models are equipped with [CLOSE-QUARTERS] weapons in addition to other firearms. Such models can be an exception to the rules in this section, as you may not be able to select all of their weapons to make attacks with.
+
+24.11 [EXTRA ATTACKS]: Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others.
+
+04.01.03 Multiple Weapon Profiles (app): In the Select Weapons step (04.01), if a selected weapon has more than one profile, then the controlling player must also select one of those profiles. The selected profile is then used in the Resolve Attacks step (04.03).
+
+Ask about this rule
+
+######## popup rule:Sorcerous Invigoration · MUCHO MUTANTES Mucho Mutantes
+RITUAL OF REGENERATION DETACHMENT RULE
+
+Sorcerous Invigoration
+
+(Once per turn, per unit) When a friendly THOUSAND SONS PSYKER unit (excluding MONSTER units) successfully manifests a Ritual, that unit heals D3 wounds.
+
+IN THIS ARMYAhriman, Exalted Sorcerer on Disc of Tzeentch, Tzaangor Shaman · Curse of Life, Tzaangor Shaman · Diamond of Distortion, Tzaangor Shaman · Flowing Flesh
+
+Ask about this rule
+
+######## popup rule:Stealth · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Stealth
+
+If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).
+
+IN THIS ARMYSekhetar Robots
+
+Ask about this rule
+
+######## popup rule:Strategic Reserves · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Strategic Reserves
+
+Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding FORTIFICATIONS) to place in strategic reserves. Instead of setting up these units on the battlefield during deployment, place them to one side; they are strategic reserves units, and will arrive later in the battle.
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+20.01.01 Reserves (app): The term ‘Reserves’ is the same as strategic reserves.
+
+20.02 Repositioned Units: Some rules allow units to be removed from the battlefield and placed in strategic reserves during the battle. Units that use such rules are known as repositioned units. In addition to any other rules that apply to such units (such as where they can or cannot arrive), all of the following rules apply to them:
+
+If used in the Movement phase, such rules can be used on units that have already moved that phase.
+A repositioned unit that is set up in the same turn in which it made an advance, fall-back or disembark move has still made an advance, fall-back or disembark move that turn.
+When they are removed from the battlefield, any rules that are affecting such units for a specified duration or under specified circumstances continue to affect them while that duration and/or those circumstances apply.
+
+20.03 Arriving from Strategic Reserves: To arrive on the battlefield, each strategic reserves unit must make an ingress move (see below). Unless otherwise stated, they can only do so from the second battle round onwards.
+
+At the end of the third battle round, unless otherwise stated, all strategic reserves units that have not made one or more ingress moves are destroyed, with the following exceptions:
+
+Units embarked within TRANSPORTS that have made an ingress move during the battle.
+Repositioned units (see opposite).
+Ask about this rule
+
+######## popup rule:TORRENT · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+TORRENT
+
+Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.
+
+IN THIS ARMYExalted Sorcerer on Disc of Tzeentch, Sekhetar Robots
+
+Ask about this rule
+
+######## popup rule:Warpmeld Sacrifice · MUCHO MUTANTES Mucho Mutantes
+WARPMELD PACT DETACHMENT RULE
+
+Warpmeld Sacrifice
+
+Each time an enemy unit is selected to shoot or fight and one or more TZEENTCH MUTANT INFANTRY or TZEENTCH MUTANT MOUNTED units from your army are selected as a target of one or more of those attacks, each of those TZEENTCH MUTANT units can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time an attack targets that unit, subtract 1 from the Wound roll. At the end of the phase, that TZEENTCH MUTANT unit suffers D3 mortal wounds.
+
+Each time a TZEENTCH MUTANT INFANTRY or TZEENTCH MUTANT MOUNTED unit from your army is selected to shoot or fight, before selecting its targets, that unit can make a Warpmeld Sacrifice. If it does, until the end of the phase, each time a model in that unit makes an attack, add 1 to the Wound roll. At the end of the phase, that TZEENTCH MUTANT unit suffers D3 mortal wounds.
+
+KEYWORDS
+
+TZAANGORS units from your army have the BATTLELINE keyword, and while such a unit is not Battle-shocked, add 1 to the Objective Control characteristic of TZAANGOR models in that unit.
+
+IN THIS ARMYAhriman, Exalted Sorcerer on Disc of Tzeentch, Tzaangor Shaman · Curse of Life, Tzaangor Shaman · Diamond of Distortion, Tzaangor Shaman · Flowing Flesh, Tzaangors
+
+Ask about this rule
+
+######## popup rule:[HAZARDOUS] · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+HAZARDOUS
+
+Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.
+
+IN THIS ARMYMagnus the Red (in Treason of Tzeentch)
+
+Ask about this rule
+
+######## popup rule:[PRECISION] · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+PRECISION
+
+While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.
+
+24.28.01 Precision and Devastating Wounds (app): Mortal Wounds inflicted by a [PRECISION] attack with the [DEVASTATING WOUNDS] ability are first applied to the CHARACTER group that was selected for those [PRECISION] attacks (if that group is not already destroyed).
+
+IN THIS ARMYAhriman, Exalted Sorcerer on Disc of Tzeentch, Tzaangor Shaman · Curse of Life, Tzaangor Shaman · Diamond of Distortion, Tzaangor Shaman · Flowing Flesh
+
+Ask about this rule
+
+######## popup rule:[SUSTAINED HITS D3] · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+SUSTAINED HITS D3
+
+This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.
+
+IN THIS ARMYDaemon Prince of Tzeentch with wings
+
+Ask about this rule
+
+######## popup rule:advance · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:advance move · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Advance Move
+
+MAXIMUM DISTANCE: Advance roll + your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is on the battlefield and unengaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Make an advance roll by rolling one D6.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to declare a charge or start an action.
+Ask about this rule
+
+######## popup rule:battle-shock roll · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Battle-shock
+
+01.06 Leadership Rolls: To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails.
+
+01.07 Battle-shock Rolls: To make a battle-shock roll for a unit, its controlling player makes a leadership roll for it (see above).
+
+If that roll succeeds, that unit does not become battle-shocked.
+If that roll fails, that unit, and each model in it, is battle-shocked.
+
+While a unit is battle-shocked:
+
+The Objective Control (OC) characteristic of all of its models is modified to ‘-’ (02.02).
+Its controlling player cannot target that unit with stratagems (15).
+It is not eligible to start an action (16), and any action it has started cannot be completed.
+
+01.07.02 Battle-shock Test (app): The term Battle-shock test is the same as battle-shock roll.
+
+08.03 Battle-shock: The active player must now make one battle-shock roll (01.07) for each unit in their army that fulfils one or both of the following conditions:
+
+That unit is currently battle-shocked.
+That unit is at, or below, half-strength.
+
+If a unit was battle-shocked at the start of this step and its battle-shock roll during this step succeeds, it is no longer battle-shocked.
+
+Ask about this rule
+
+######## popup rule:benefit of cover · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Benefit of Cover
+
+Each time a ranged attack targets a unit, if every model in that unit meets one or more of the following conditions, that unit has the benefit of cover against that attack:
+
+That model has the INFANTRY/BEASTS/SWARM keyword and is within a terrain area.
+That model is not fully visible to the attacking model due to one or more intervening terrain features and/or one or more intervening obscuring terrain areas (see below).
+
+Each time a ranged attack targets a unit that has the benefit of cover against it, worsen the BS characteristic of that attack by 1.
+
+Ask about this rule
+
+######## popup rule:charge move · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
+
+######## popup rule:charge roll · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:charge rolls · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Charge
+1. Declare Charge: Select one friendly unit that has not declared a charge this phase and is eligible to declare a charge (see below). That unit declares a charge.
+
+A unit is eligible to declare a charge if it is on the battlefield, unless otherwise stated. Here are some rules that prevent a unit from being eligible to declare a charge:
+
+It is not within 12" of one or more enemy units.
+It is engaged.
+It made an advance or fall-back move this turn.
+2. Make Charge Roll: Make a charge roll by rolling 2D6: the result is the maximum distance for the charge move.
+3. Attempt Charge: If it is possible to make a charge move, and if you still want to, make a charge move with that unit (see opposite). Otherwise, your unit does not make a charge move. In either case, the charge is then resolved.
+
+Wahapedia FAQ: When a rule instructs you to perform a charge outside of the charge phase, do I resolve step 2 and 3 of the Charge step (11.02)? Yes
+
+Ask about this rule
+
+######## popup rule:charge targets · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Charge Move
+
+MAXIMUM DISTANCE: Charge roll.
+
+ELIGIBLE IF: Your unit declared a charge this phase.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select one or more enemy units that are within 12" of your unit and within the maximum distance of your unit; until the end of this move, each of those enemy units is a charge target.
+
+WHILE MOVING:
+
+Each model must end its move closer to one or more charge targets.
+Each model that can end its move within 1" of one or more charge targets must do so.
+Each model that can end its move engaged with one or more charge targets must do so.
+
+AFTER MOVING:
+
+Your unit must be engaged with all of the charge targets.
+Your unit cannot be engaged with one or more enemy units that are not charge targets.
+Until the end of the turn, each model in your unit has the Fights First ability (24.13).
+Ask about this rule
+
+######## popup rule:destroyed · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Destroyed
+
+Throughout a battle, models will suffer damage, lose wounds and be destroyed. When every model in a unit has been destroyed, that unit is destroyed.
+
+When a model is destroyed, first resolve any rules that are triggered when it is destroyed, then it is removed from the battlefield. If any such rules apply, and if the model was destroyed as the result of an attack, unless otherwise stated, those rules are only resolved and that model is only removed after the attacking unit’s attacks have been resolved. Unless otherwise stated, destroyed models and units cannot use abilities or be selected or targeted by rules.
+
+05.04.05 Fight On Death (app): Some rules enable models to attack after they have been destroyed. When a model under such an effect is destroyed, do not remove it from play.
+
+Those models will stay on the battlefield until their unit is selected to attack and has attacked, or until the end of the phase (whichever comes first). Any rules triggered by those models being destroyed are resolved, and then those destroyed models are removed.
+
+Ask about this rule
+
+######## popup rule:engaged · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
+######## popup rule:fall back move · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Fall-back Move
+
+MAXIMUM DISTANCE: Your unit’s M characteristic.
+
+ELIGIBLE IF: Your unit is engaged.
+
+EFFECT: Your unit moves as described in Moving (03).
+
+BEFORE MOVING: Select fall-back mode:
+
+Ordered Retreat: If your unit is not battle-shocked, you can select this mode.
+Desperate Escape: Otherwise, you must select this mode. Make a hazard roll for each model in your unit (06.03).
+
+WHILE MOVING:
+
+Desperate Escape: Each model that is moved can be moved through enemy models.
+
+AFTER MOVING:
+
+Your unit must be unengaged.
+Until the end of the turn, unless otherwise stated, your unit is not eligible to shoot, declare a charge or start an action.
+Desperate Escape: If your unit is not battle-shocked, you must make a battle-shock roll for your unit (01.07).
+
+Desperate Escape Test (app): Some rules may reference the term ‘Desperate Escape test’. In all instances this means the hazard rolls made for the desperate escape mode of a fall-back move.
+
+Abilities that subtract from a unit’s Desperate Escape test instead subtract from those hazard rolls.
+
+If a stratagem or ability instructs a unit to make a Desperate Escape test, that unit:
+
+Must use the desperate escape mode when it is selected to make a fall-back move.
+Must make one hazard roll for each model in that unit.
+Must make a battle-shock roll.
+Ask about this rule
+
+######## popup rule:ingress move · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Ingress Move
+
+SET-UP DISTANCE: 6"
+
+ELIGIBLE IF: Your unit is in strategic reserves (excluding units that are embarked within TRANSPORTS that are themselves in strategic reserves).
+
+EFFECT: Your unit is set up as described in Set Up (03.02).
+
+WHILE MOVING: Set up your unit wholly within the set-up distance of one or more battlefield edges and more than 8" horizontally from all enemy units.
+
+Before the Third Battle Round: While doing so, no models can be set up within your opponent’s deployment zone.
+
+AFTER MOVING: Unless otherwise stated, until the start of the next Charge phase, your unit is not eligible to make any other type of move.
+
+20.03.01 Set Up As Reinforcements (app): If a rule mentions a unit being set up on the battlefield as Reinforcements, it means a unit that made an ingress move.
+
+Ask about this rule
+
+######## popup rule:mortal wound · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+Ask about this rule
+
+######## popup rule:mortal wounds · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Mortal Wounds
+
+Some attacks or rules inflict mortal wounds on units. Each time a unit suffers one or more mortal wounds, its controlling player must resolve the following sequence for each of those mortal wounds, until either all of them have been inflicted or that unit is destroyed:
+
+Select Model: Select one model in that unit by following the first instruction below that applies:
+If a non-CHARACTER model in that unit has lost one or more wounds, you must select that model.
+Otherwise, if that unit contains one or more non-CHARACTER models, you must select one of those models.
+Otherwise, if one or more CHARACTER models in that unit have lost one or more wounds, you must select one of those models.
+Otherwise, you must select one CHARACTER model in that unit.
+Resolve Damage: The selected model loses 1 wound. If this reduces that model’s remaining wounds to 0, it is destroyed.
+
+When resolving attack dice, if those attacks inflict a mixture of both mortal wounds and normal damage, resolve all of the normal damage first, then resolve all of the mortal wounds.
+
+Ask about this rule
+
+######## popup rule:snap shooting · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+snap shooting
+
+ELIGIBLE IF: As stated in the rule allowing this shooting type.
+
+EFFECT: Your unit shoots as described in Making Attacks (04).
+
+WHILE SHOOTING:
+
+You can only target one visible enemy unit within 24" of your unit (and only if it is an eligible target).
+Each attack only hits on an unmodified hit roll of 6 (irrespective of the attacking weapon’s BS characteristic or any modifiers).
+
+Wahapedia core rules (not in GW’s Core Rules PDF, 01-06): Those hits are not critical hits.
+
+You cannot re-roll hit rolls.
+
+AFTER SHOOTING: Until the end of the phase, your unit is not eligible to start an action.
+
+Ask about this rule
+
+######## popup rule:starting strength · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Starting Strength
+
+The number of models a unit contains at the start of the first battle round is its starting strength. The starting strength of an attached unit is the number of models that unit contains at the start of the first battle round.
+
+Some rules refer to units being below starting strength, or at – or below – half-strength. The meaning of these terms varies depending on a unit’s starting strength, as shown below.
+
+Starting strength of 1:
+
+Below starting strength: model’s remaining wounds are less than its W characteristic.
+At half-strength: model’s remaining wounds are half of its W characteristic.
+Below half-strength: model’s remaining wounds are less than half of its W characteristic.
+
+Starting strength of 2 or more:
+
+Below starting strength: number of remaining models in the unit is less than its starting strength.
+At half-strength: number of remaining models in the unit is half of its starting strength.
+Below half-strength: number of remaining models in the unit is less than half of its starting strength.
+
+Some units cannot be at half-strength: If a model’s W characteristic or a unit’s starting strength cannot be evenly divided in half, that model or unit cannot be at half-strength (but can be below half-strength as described above).
+
+Example: A Captain (1 model) is attached to a unit of Intercessors (5 models). This attached unit has a starting strength of 6. If three Intercessors were destroyed, the unit would be at half-strength. If four Intercessors were destroyed, the unit would be below half-strength. If all of the Intercessors were destroyed, the remaining Captain would be below half-strength, despite having his full wounds remaining.
+
+Ask about this rule
+
+######## popup rule:strategic reserves · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Strategic Reserves
+
+Before the battle, in the Declare Battle Formations step, you can select one or more friendly units (excluding FORTIFICATIONS) to place in strategic reserves. Instead of setting up these units on the battlefield during deployment, place them to one side; they are strategic reserves units, and will arrive later in the battle.
+
+Unless otherwise stated, the combined points value of all of your strategic reserves units (including those embarked within TRANSPORTS that are themselves placed in strategic reserves) cannot exceed 50% of your points limit for your battle size.
+
+20.01.01 Reserves (app): The term ‘Reserves’ is the same as strategic reserves.
+
+20.02 Repositioned Units: Some rules allow units to be removed from the battlefield and placed in strategic reserves during the battle. Units that use such rules are known as repositioned units. In addition to any other rules that apply to such units (such as where they can or cannot arrive), all of the following rules apply to them:
+
+If used in the Movement phase, such rules can be used on units that have already moved that phase.
+A repositioned unit that is set up in the same turn in which it made an advance, fall-back or disembark move has still made an advance, fall-back or disembark move that turn.
+When they are removed from the battlefield, any rules that are affecting such units for a specified duration or under specified circumstances continue to affect them while that duration and/or those circumstances apply.
+
+20.03 Arriving from Strategic Reserves: To arrive on the battlefield, each strategic reserves unit must make an ingress move (see below). Unless otherwise stated, they can only do so from the second battle round onwards.
+
+At the end of the third battle round, unless otherwise stated, all strategic reserves units that have not made one or more ingress moves are destroyed, with the following exceptions:
+
+Units embarked within TRANSPORTS that have made an ingress move during the battle.
+Repositioned units (see opposite).
+Ask about this rule
+
+######## popup rule:unengaged · MUCHO MUTANTES Mucho Mutantes
+CORE RULE
+
+Engagement
+
+A model’s engagement range is the area of the battlefield within 2" horizontally and 5" vertically of it.
+
+While a friendly model is within engagement range of one or more enemy models, those models – and the units they belong to – are engaged with each other.
+While a unit contains no engaged models, that unit is unengaged.
+
+Wahapedia FAQ: Does my model or unit become engaged while moving through a enemy units engagement range during a move? No
+
+Ask about this rule
+
+######## popup strat:blessed-transmutations · MUCHO MUTANTES Mucho Mutantes
+1CP · COMMAND · YOUR TURN
+
+Blessed Transmutations
+WHEN
+
+Your Command phase.
+
+TARGETOne THOUSAND SONS PSYKER model from your army, and one friendly TZAANGORS unit that is below its Starting Strength and within 12" of that PSYKER model.
+
+EFFECT
+
+Return up to D3+1 destroyed models (excluding CHARACTERS) to your TZAANGORS unit.
+
+USED BYMagnus the Red, Ahriman + Tzaangor Enlightened with Fatecaster greatbows, Daemon Prince of Tzeentch with wings, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened · Curse of Life, Tzaangor Shaman + Tzaangor Enlightened · Diamond of Distortion, Tzaangor Shaman + Tzaangor Enlightened · Flowing Flesh, Tzaangors
+
+Ask about this stratagem
+
+######## popup strat:command-re-roll · MUCHO MUTANTES Mucho Mutantes
+1CP · ANY PHASE · EITHER TURN
+
+Command Re-roll
+WHEN
+
+Any phase, just after you make one of the following rolls for a friendly unit or model:
+
+Advance roll
+Charge roll
+Damage roll
+Hazard roll
+Hit roll
+Save roll
+Wound roll
+A roll to determine the number of attacks generated with a weapon.
+
+TARGETThat unit or model.
+
+EFFECT
+
+You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:counteroffensive · MUCHO MUTANTES Mucho Mutantes
+2CP · FIGHT · THEIR TURN
+
+Counteroffensive
+WHEN
+
+Fight step of your opponent’s Fight phase, just after an enemy unit has resolved its attacks.
+
+TARGETOne friendly unit that is eligible to fight.
+
+EFFECT
+
+Until the end of the phase, your unit has the Fights First ability and it must be the next unit you select to fight (12.04).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:crushing-impact · MUCHO MUTANTES Mucho Mutantes
+1CP · CHARGE · YOUR TURN
+
+Crushing Impact
+WHEN
+
+Your Charge phase, just after a friendly MONSTER/VEHICLE unit ends a charge move.
+
+TARGETThat MONSTER/VEHICLE unit.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one enemy unit engaged with your unit.
+2. Select one model in your unit engaged with that enemy unit.
+3. Roll a number of D6 equal to the T characteristic of that model: for each 1, your unit suffers 1 mortal wound; for each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds per unit).
+
+Wahapedia errata: The Tank Shock Stratagem is the same as the Crushing Impact stratagem.
+
+USED BYMagnus the Red, Daemon Prince of Tzeentch with wings, Sekhetar Robots
+
+Ask about this stratagem
+
+######## popup strat:deranged-ferocity · MUCHO MUTANTES Mucho Mutantes
+1CP · FIGHT · EITHER TURN
+
+Deranged Ferocity
+WHEN
+
+Fight phase, just after a TZEENTCH MUTANT unit from your army is selected to fight.
+
+TARGETThat TZEENTCH MUTANT unit.
+
+EFFECT
+
+Until the end of the phase, each time a model in your unit makes a Pile-in or Consolidation move, it can move up to 6" instead of up to 3", and when determining which models in it are eligible to fight, any models in it that are within 3" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3" of them and within Engagement Range of their unit.
+
+USED BYAhriman + Tzaangor Enlightened with Fatecaster greatbows, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened · Curse of Life, Tzaangor Shaman + Tzaangor Enlightened · Diamond of Distortion, Tzaangor Shaman + Tzaangor Enlightened · Flowing Flesh, Tzaangors
+
+Ask about this stratagem
+
+######## popup strat:epic-challenge · MUCHO MUTANTES Mucho Mutantes
+1CP · FIGHT · EITHER TURN
+
+Epic Challenge
+WHEN
+
+Fight phase, just after a friendly CHARACTER unit is selected to fight.
+
+TARGETThat CHARACTER unit.
+
+EFFECT
+
+Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.
+
+USED BYMagnus the Red, Ahriman + Tzaangor Enlightened with Fatecaster greatbows, Daemon Prince of Tzeentch with wings, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened · Curse of Life, Tzaangor Shaman + Tzaangor Enlightened · Diamond of Distortion, Tzaangor Shaman + Tzaangor Enlightened · Flowing Flesh
+
+Ask about this stratagem
+
+######## popup strat:explosives · MUCHO MUTANTES Mucho Mutantes
+1CP · SHOOTING · YOUR TURN
+
+Explosives
+WHEN
+
+Your Shooting phase.
+
+TARGETOne friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.
+
+EFFECT
+
+Resolve the following sequence:
+
+1. Select one EXPLOSIVES/GRENADES model in your unit.
+2. Select one unengaged enemy unit within 8" of and visible to that model.
+3. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).
+
+Wahapedia errata: The Grenade Stratagem is the same as the Explosives stratagem.
+
+USED BYExalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2
+
+Ask about this stratagem
+
+######## popup strat:fire-overwatch · MUCHO MUTANTES Mucho Mutantes
+1CP · MOVEMENT · THEIR TURN
+
+Fire Overwatch
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unengaged unit (excluding TITANIC units).
+
+EFFECT
+
+Your unit shoots using snap shooting.
+
+USED BYMagnus the Red, Ahriman + Tzaangor Enlightened with Fatecaster greatbows, Daemon Prince of Tzeentch with wings, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened · Curse of Life, Tzaangor Shaman + Tzaangor Enlightened · Diamond of Distortion, Tzaangor Shaman + Tzaangor Enlightened · Flowing Flesh, Sekhetar Robots
+
+Ask about this stratagem
+
+######## popup strat:gift-of-change · MUCHO MUTANTES Mucho Mutantes
+1CP · ANY PHASE · EITHER TURN
+
+Gift of Change
+WHEN
+
+Any phase.
+
+TARGETOne THOUSAND SONS CHARACTER model from your army (excluding MONSTERS) that was just destroyed. You can use this Stratagem on that model even though it was just destroyed.
+
+EFFECT
+
+At the end of the phase, add one TZEENTCH CHAOS SPAWN unit containing one model to your army, and set it up as close as possible to where your model was destroyed and not within Engagement Range of one or more enemy units.
+
+RESTRICTIONSYou can only use this Stratagem once per battle round.
+
+USED BYAhriman + Tzaangor Enlightened with Fatecaster greatbows, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened · Curse of Life, Tzaangor Shaman + Tzaangor Enlightened · Diamond of Distortion, Tzaangor Shaman + Tzaangor Enlightened · Flowing Flesh
+
+Ask about this stratagem
+
+######## popup strat:heroic-intervention · MUCHO MUTANTES Mucho Mutantes
+1CP · CHARGE · THEIR TURN · INTO THE FRAY +1CP
+
+Heroic Intervention
+WHEN
+
+End of your opponent’s Charge phase.
+
+TARGETOne friendly unengaged unit within 12" of one or more enemy units. You can only select a VEHICLE unit if it is a CHARACTER/WALKER unit.
+
+EFFECT
+
+Resolve a charge with your unit (11.02). While doing so, before making the charge roll, you must select one of the following modes:
+
+Leap to Defend: When selecting charge targets, you can only select enemy units that made a charge move this phase and are within the maximum distance.
+Into the Fray (+1CP): When making the charge roll, if the result is greater than 6 (after modifiers), change it to 6. When selecting charge targets, you can select any enemy units that are within 6" of your unit and within the maximum distance.
+
+Wahapedia FAQ: If a stratagem contains a section that carries an additional CP cost (such as the Into the Fray option of Heroic Intervention), is that additional cost considered to be a modifier? No, a stratagem that costs 1CP and is making use of an optional +1CP section has an original cost of 2CP.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:insane-bravery · MUCHO MUTANTES Mucho Mutantes
+1CP · COMMAND · YOUR TURN · ONCE PER BATTLE
+
+Insane Bravery
+WHEN
+
+Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.
+
+TARGETThat unit.
+
+EFFECT
+
+That battle-shock roll is automatically successful.
+
+RESTRICTIONSYou cannot use this stratagem more than once per battle.
+
+Wahapedia FAQ: Can I use the Insane Bravery stratagem on a battle-shocked unit? No, as a unit’s controlling player cannot target that unit with stratagems (01.07).
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:multitudinous-limbs · MUCHO MUTANTES Mucho Mutantes
+1CP · MOVEMENT · YOUR TURN
+
+Multitudinous Limbs
+WHEN
+
+Your Movement phase, when a friendly INFANTRY/MOUNTED THOUSAND SONS PSYKER unit is selected to make an advance/fall back move.
+
+TARGETThat INFANTRY/MOUNTED THOUSAND SONS PSYKER unit.
+
+EFFECT
+
+That move does not prevent your unit from being eligible to start an action.
+
+USED BYAhriman + Tzaangor Enlightened with Fatecaster greatbows, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened · Curse of Life, Tzaangor Shaman + Tzaangor Enlightened · Diamond of Distortion, Tzaangor Shaman + Tzaangor Enlightened · Flowing Flesh
+
+Ask about this stratagem
+
+######## popup strat:mutagenic-magicks · MUCHO MUTANTES Mucho Mutantes
+1CP · FIGHT · EITHER TURN
+
+Mutagenic Magicks
+WHEN
+
+Start of the Fight phase.
+
+TARGETOne friendly engaged THOUSAND SONS PSYKER unit.
+
+EFFECT
+
+Select one enemy unit engaged with your unit. Roll six D6:
+
+For each 4+, that enemy unit suffers 1 mortal wound.
+
+USED BYMagnus the Red, Ahriman + Tzaangor Enlightened with Fatecaster greatbows, Daemon Prince of Tzeentch with wings, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened · Curse of Life, Tzaangor Shaman + Tzaangor Enlightened · Diamond of Distortion, Tzaangor Shaman + Tzaangor Enlightened · Flowing Flesh
+
+Ask about this stratagem
+
+######## popup strat:rapid-ingress · MUCHO MUTANTES Mucho Mutantes
+1CP · MOVEMENT · THEIR TURN
+
+Rapid Ingress
+WHEN
+
+End of your opponent’s Movement phase.
+
+TARGETOne friendly unit that is in strategic reserves (excluding AIRCRAFT).
+
+EFFECT
+
+Your unit makes an ingress move (20.04).
+
+RESTRICTIONSYou cannot use this stratagem during the first battle round.
+
+USED BYany unit
+
+Ask about this stratagem
+
+######## popup strat:relentless-rebirth · MUCHO MUTANTES Mucho Mutantes
+1CP · ANY PHASE · EITHER TURN
+
+Relentless Rebirth
+WHEN
+
+Any phase, when a friendly INFANTRY/MOUNTED THOUSAND SONS PSYKER unit suffers a mortal wound.
+
+TARGETThat INFANTRY/MOUNTED THOUSAND SONS PSYKER unit.
+
+EFFECT
+
+Your unit has Feel No Pain 5+ against mortal wounds.
+
+USED BYAhriman + Tzaangor Enlightened with Fatecaster greatbows, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened · Curse of Life, Tzaangor Shaman + Tzaangor Enlightened · Diamond of Distortion, Tzaangor Shaman + Tzaangor Enlightened · Flowing Flesh
+
+Ask about this stratagem
+
+######## popup strat:touched-by-tzeentch · MUCHO MUTANTES Mucho Mutantes
+1CP · MOVEMENT · YOUR TURN
+
+Touched by Tzeentch
+WHEN
+
+Start of your Movement phase.
+
+TARGETOne TZEENTCH MUTANT unit from your army.
+
+EFFECT
+
+Until the end of the turn, your unit is eligible to shoot or declare a charge in a turn in which it Advanced.
+
+FAQ (Faction Pack 1.3): When using the Touched by Tzeentch Stratagem in the Warpmeld Pact Detachment, do I have to declare if my unit will shoot or charge after Advancing as soon as I use the Stratagem? No, you may decide later in the turn.
+
+USED BYAhriman + Tzaangor Enlightened with Fatecaster greatbows, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened · Curse of Life, Tzaangor Shaman + Tzaangor Enlightened · Diamond of Distortion, Tzaangor Shaman + Tzaangor Enlightened · Flowing Flesh, Tzaangors
+
+Ask about this stratagem
+
+######## popup strat:twisted-mirage · MUCHO MUTANTES Mucho Mutantes
+1CP · MOVEMENT · YOUR TURN
+
+Twisted Mirage
+WHEN
+
+Reinforcements step of your Movement phase.
+
+TARGETOne TZEENTCH MUTANT unit from your army that is arriving from Strategic Reserves this phase.
+
+EFFECT
+
+Your unit can be set up anywhere on the battlefield that is more than 6" horizontally away from all enemy units, or anywhere on the battlefield that is more than 8" horizontally away from all enemy units if it is a MONSTER unit. In either case, until the end of the turn, it is not eligible to declare a charge.
+
+FAQ (Faction Pack 1.3): When going second, can a Tzaangor unit that started the game on the battlefield and was placed into Strategic Reserves by its Ambushing Hunters ability then arrive during my first turn using the Twisted Mirage Stratagem? No.
+
+USED BYAhriman + Tzaangor Enlightened with Fatecaster greatbows, Exalted Sorcerer on Disc of Tzeentch + Tzaangor Enlightened with Fatecaster greatbows ×2, Tzaangor Shaman + Tzaangor Enlightened · Curse of Life, Tzaangor Shaman + Tzaangor Enlightened · Diamond of Distortion, Tzaangor Shaman + Tzaangor Enlightened · Flowing Flesh, Tzaangors
+
+Ask about this stratagem
+
+######## popup strat:warped-vicissitude · MUCHO MUTANTES Mucho Mutantes
+1CP · THEIR SHOOTING / FIGHT (EITHER TURN)
+
+Warped Vicissitude
+WHEN
+
+Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.
+
+TARGETOne TZAANGORS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+
+EFFECT
+
+Until the end of the phase, models in your unit have a 4+ invulnerable save.
+
+USED BYTzaangors
+
+Ask about this stratagem
