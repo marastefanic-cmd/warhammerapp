@@ -132,14 +132,14 @@ const OTHER = { your:'opp', opp:'your', either:'either' };
 // phases named in the text (table 1, explicit part); null when it names none
 function explicitTiming(text, opts){
   let t = plain(rulesText(text));
-  const reasons = [], out = {};
-  let at;
+  const reasons = [], out = {}, named = new Set();
+  let at, atPh = [];
   for(const r of MOMENT_RULES){
     const m = r.re.exec(t);
     if(!m) continue;
     if(r.id === 'start-battle-round-later' && at) continue;      // already the opening moment
     if(r.id === 'start-battle-round' && at) continue;
-    if(r.at) at = r.at;
+    if(r.at){ at = r.at; atPh = Object.keys(r.ph); }
     for(const [p, o] of Object.entries(r.ph)) addPh(out, p, o);
     reasons.push({ rule:r.id, match:m[0] });
     if(r.id === 'any-phase') t = t.replace(r.re, ' ');
@@ -149,10 +149,11 @@ function explicitTiming(text, opts){
   PHASE_RE.lastIndex = 0;
   for(let m; (m = PHASE_RE.exec(t));){
     const own = OWNER_RULES.find(o => o.re.test(m[1] || ''));
-    for(const p of m[2].toLowerCase().split(/\s*\/\s*|\s*,\s*|\s+or\s+|\s+and\s+/)) addPh(out, p, own.turn);
+    for(const p of m[2].toLowerCase().split(/\s*\/\s*|\s*,\s*|\s+or\s+|\s+and\s+/)){ addPh(out, p, own.turn); named.add(p); }
     reasons.push({ rule:own.id, match:m[0] });
   }
-  return Object.keys(out).length ? { ph:out, at, reasons } : null;
+  // atOnly: the phases only the opening moment gives ("At the start of the battle round": listed with the Command phase)
+  return Object.keys(out).length ? { ph:out, at, reasons, atOnly:atPh.filter(p => !named.has(p)) } : null;
 }
 
 // table 1 in full: where it is triggered (the phases and moments the text names) and where its effect is used
@@ -245,7 +246,7 @@ function timing(text, ctx){
   for(const [p, o] of Object.entries(used.ph)) addPh(ph, p, o);
   const reasons = (trig ? trig.reasons.map(r => Object.assign({ part:'trigger' }, r)) : []).concat(used.reasons.map(r => Object.assign({ part:'used' }, r)));
   const trigLabel = trig ? asLabel(trig.ph, trig.at) : null, usedLabel = Object.keys(used.ph).length ? asLabel(used.ph) : null;
-  if(Object.keys(ph).length || (trig && trig.at)) return { how:trig ? 'explicit' : 'activity', ph, at:trig && trig.at, reasons, trigger:trigLabel, used:usedLabel };
+  if(Object.keys(ph).length || (trig && trig.at)) return { how:trig ? 'explicit' : 'activity', ph, at:trig && trig.at, reasons, trigger:trigLabel, used:usedLabel, trigPh:trig && trig.ph, usedPh:used.ph, atOnly:trig ? trig.atOnly : [] };
   if(used.blocked) return { how:'none', blocked:true, reasons:[used.blocked] };
   if(used.none) return { how:'activity', ph:{}, reasons:[used.none], trigger:null, used:null };   // positively: no phase
   return { how:'none', reasons:[] };
@@ -584,6 +585,52 @@ function commentsNear(src, name){
   return out;
 }
 
+// the options inside a rule or ability: its table's rows, "**Name:** effect" lines, a bullet "**Name**" and the line under it
+// (t: the text without its italic notes, rulesText)
+function optionsOf(t, table){
+  const opts = [];
+  for(const row of table || []) opts.push({ name:String(row[0]).split(' · ')[0].replace(/ \((?:Aura|Psychic)\)$/, ''), text:row[1], how:'table row', row:row[0] });
+  const lines = t.split('\n');
+  lines.forEach((l, i) => {
+    let m = /^(?:- )?\*\*([^*]{3,60}?)(?::\*\*|\*\*:)\s*(.+)$/.exec(l);
+    if(m && !isUpperWord(m[1].replace(/[^A-Za-z]/g, '') || 'a')) { opts.push({ name:m[1].trim(), text:m[2], how:'"**Name:** effect"' }); return; }
+    m = /^- \*\*([^*]{3,60})\*\*\s*$/.exec(l);
+    if(m && lines[i + 1] && !/^\s*- /.test(lines[i + 1]) && !/^\s*\*\*[^*]+\*\*\s*$/.test(lines[i + 1])) opts.push({ name:m[1].replace(/\s*\[[^\]]*\]$/, '').trim(), text:lines[i + 1], how:'bullet "**Name**" and its line' });
+  });
+  // army-building limits ("**Incursion:** Up to 500 pts") are not options
+  for(let i = opts.length - 1; i >= 0; i--) if(/^up to \d+ ?pts\b/i.test(plain(opts[i].text))) opts.splice(i, 1);
+  return opts;
+}
+
+// ---- the checklist table (data.js CHECKLIST) ----
+// a rule's or ability's own text without its options (each option has its own entry)
+const withoutOptions = (text, table) => { const t = rulesText(text); return optionsOf(t, table).reduce((s2, o) => s2.replace(o.text, ''), t); };
+const phStr = m => m ? PH.filter(p => m[p]).map(p => p + ':' + m[p]).join(',') : '';
+// t: where it is triggered (the phases the text names, less those only its opening moment gives), u: where its effect is used,
+// at: the moment it opens with; none: no phase (before the battle, what a unit carries); x: not derivable
+function ckEntry(d){
+  if(d.how === 'none') return { x:1 };
+  const tp = Object.assign({}, d.trigPh || {}); for(const p of d.atOnly || []) delete tp[p];
+  const e = {};
+  if(d.at) e.at = d.at;
+  if(phStr(tp)) e.t = phStr(tp);
+  if(phStr(d.usedPh)) e.u = phStr(d.usedPh);
+  return Object.keys(e).length ? e : { none:1 };
+}
+// an ability's key: a hash of its name and text (the app's ckHash, the same for an imported list's copy of the unit)
+const ckHash = s => { let h = 0x811c9dc5; for(let i = 0; i < s.length; i++){ h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; } return h.toString(36); };
+const abilityCk = ab => 'a|' + ckHash(ab.name + '\n' + ab.text);
+const CK_START = '// ---- CHECKLIST: written by verify/derive.js --write from the rules text (do not edit) ----';
+const CK_END = '// ---- end of CHECKLIST ----';
+function ckBlock(T){
+  return CK_START + '\n' +
+    '// The Clever Know-wotz screen: per army or detachment rule (r|faction|name) and ability (a|hash of its name and text), as the rule\n' +
+    '// tables of verify/derive.js give it: t where it is triggered, u where its effect is used (phase:your|opp|either), at the moment it\n' +
+    '// opens with, none no phase, x not derivable; o its options (n name, row its table row; t and at only when the option names its own),\n' +
+    '// g the abilities it gives to units by keyword (to: the keywords, opt: the option that gives it, while: the condition)\n' +
+    'const CHECKLIST = {\n' + Object.keys(T).map(k => '  ' + JSON.stringify(k) + ':' + JSON.stringify(T[k])).join(',\n') + '\n};\n' + CK_END;
+}
+
 function derive(D){
   const V = vocab(D);
   const src = fs.readFileSync(path.join(ROOT, 'data.js'), 'utf8');
@@ -593,6 +640,17 @@ function derive(D){
   const ctx = { core:D.coreStratagems };
   const items = [];
   const add = it => items.push(it);
+  // the checklist table (data.js CHECKLIST, the Clever Know-wotz screen): per rule and ability, where it is triggered and where its
+  // effect is used, and the same for each of its options; the same words on several units must give the same entry
+  const CK = {}, CKO = {};
+  const ckPut = (k, v) => { if(!CK[k]) CK[k] = v; else if(JSON.stringify(CK[k]) !== JSON.stringify(v)) CK[k] = { x:1 }; };
+  const sinkOf = k => CKO[k] || (CKO[k] = { opts:[], grants:[] });
+  Object.defineProperty(items, 'checklist', { enumerable:false, get:() => Object.fromEntries(Object.keys(CK).sort().map(k => {
+    const e = Object.assign({}, CK[k]), o = CKO[k];
+    if(o && o.opts.length) e.o = o.opts;
+    if(o && o.grants.length) e.g = o.grants;
+    return [k, e];
+  })) });
   const unitsOf = fk => D.armies.filter(a => !fk || a.faction === fk).flatMap(a => a.units.map(u => ({ a, u })));
   // a keyword every unit of the faction's lists has ("ORKS" in an Orks list) selects nothing in the app's matches(): needs may
   // name it or leave it out (data.js does both: Kustom Dakka has Faction: Orks, Dread Power not), so it is not compared
@@ -632,6 +690,7 @@ function derive(D){
     for(const { r, where, det } of rules){
       const comments = commentsNear(src, r.name);
       timingItem('rule-timing', where, r, r.text, { comments });
+      ckPut('r|' + fk + '|' + r.name, ckEntry(timing(withoutOptions(r.text, r.table), ctx)));
       if(det || r.needs){
         const dn = ruleNeeds(V, r);
         const st = canonNeeds(r.needs, everyKw(fk)), dv = dn.needs ? canonNeeds(dn.needs, everyKw(fk)) : null;
@@ -663,12 +722,14 @@ function derive(D){
         let where = a.id + ' · ' + uName + ' · ' + (ab.who ? ab.who + ' · ' : '') + ab.name;
         seen[where] = (seen[where] || 0) + 1; if(seen[where] > 1) where += ' #' + seen[where];
         const comments = commentsNear(src, ab.name);
-        timingItem('ability-timing', where, ab, ab.text, { comments, dedupe:ab.name + '\n' + ab.text }, { core:D.coreStratagems, named:n => {
+        const actx = { core:D.coreStratagems, named:n => {
           const o = u.abilities.find(x => x !== ab && norm(x.name).toLowerCase() === norm(n).toLowerCase());
           if(o) return o.text;
           const r = f.armyRules.concat(a.detachments.map(id => (f.detachments[id] || {}).rule).filter(Boolean)).find(x => norm(x.name).toLowerCase() === norm(n).toLowerCase());
           return r ? r.text : null;
-        } });
+        } };
+        timingItem('ability-timing', where, ab, ab.text, { comments, dedupe:ab.name + '\n' + ab.text }, actx);
+        ckPut(abilityCk(ab), ckEntry(timing(withoutOptions(ab.text, null), actx)));
         const tItem = items[items.length - 1]; Object.defineProperty(tItem, 'ab', { value:ab, enumerable:false });
         const before = items.length;
         tagItem('ability-tag', where, ab, { enh }, comments, ab.name + '\n' + ab.text);
@@ -712,12 +773,12 @@ function derive(D){
   for(const [fk, f] of Object.entries(D.factions)){
     const rules = f.armyRules.map(r => ({ r, where:f.name + ' army rule · ' + r.name }))
       .concat(Object.values(f.detachments).filter(d => d.rule).map(d => ({ r:d.rule, where:f.name + ' · ' + d.name + ' rule · ' + d.rule.name })));
-    for(const { r, where } of rules) optionsAndGrants(where, r, r.text, r.table, storedOptionsOfRule(r), fk);
+    for(const { r, where } of rules) optionsAndGrants(where, r, r.text, r.table, storedOptionsOfRule(r), fk, null, sinkOf('r|' + fk + '|' + r.name));
   }
   { const seen = new Set();
     for(const a of D.armies) for(const u of a.units) for(const ab of u.abilities){
       const k = ab.name + '\n' + ab.text; if(seen.has(k)) continue; seen.add(k);
-      optionsAndGrants(a.id + ' · ' + u.name + ' · ' + ab.name, ab, ab.text, null, storedOptionsOfAbility(u, ab), a.faction, u);
+      optionsAndGrants(a.id + ' · ' + u.name + ' · ' + ab.name, ab, ab.text, null, storedOptionsOfAbility(u, ab), a.faction, u, sinkOf(abilityCk(ab)));
     } }
   function storedOptionsOfRule(r){
     const out = [];
@@ -729,19 +790,9 @@ function derive(D){
   function storedOptionsOfAbility(u, ab){
     return (u.mods || []).concat(u.aura || [], u.guard || []).filter(m => m.from === ab.name).map(m => ({ name:null, what:'footnote (' + m.kind + ')', kind:m.kind, picks:(m.pick || []).map(p => p.name), note:m.note }));
   }
-  function optionsAndGrants(where, x, text, table, stored, fk, self){
+  function optionsAndGrants(where, x, text, table, stored, fk, self, sink){
     const t = rulesText(text);
-    const opts = [];
-    for(const row of table || []) opts.push({ name:String(row[0]).split(' · ')[0].replace(/ \((?:Aura|Psychic)\)$/, ''), text:row[1], how:'table row' });
-    const lines = t.split('\n');
-    lines.forEach((l, i) => {
-      let m = /^(?:- )?\*\*([^*]{3,60}?)(?::\*\*|\*\*:)\s*(.+)$/.exec(l);
-      if(m && !isUpperWord(m[1].replace(/[^A-Za-z]/g, '') || 'a')) { opts.push({ name:m[1].trim(), text:m[2], how:'"**Name:** effect"' }); return; }
-      m = /^- \*\*([^*]{3,60})\*\*\s*$/.exec(l);
-      if(m && lines[i + 1] && !/^\s*- /.test(lines[i + 1]) && !/^\s*\*\*[^*]+\*\*\s*$/.test(lines[i + 1])) opts.push({ name:m[1].replace(/\s*\[[^\]]*\]$/, '').trim(), text:lines[i + 1], how:'bullet "**Name**" and its line' });
-    });
-    // army-building limits ("**Incursion:** Up to 500 pts") are not options
-    for(let i = opts.length - 1; i >= 0; i--) if(/^up to \d+ ?pts\b/i.test(plain(opts[i].text))) opts.splice(i, 1);
+    const opts = optionsOf(t, table);
     // the rule's own trigger: its text without its options
     const parentTrig = explicitTiming(opts.reduce((s2, o) => s2.replace(o.text, ''), t));
     for(const o of opts){
@@ -756,12 +807,21 @@ function derive(D){
         derived:Object.keys(ph).length ? asLabel(ph, trig && trig.at) : null, trigger:trig ? asLabel(trig.ph, trig.at) : null, used:Object.keys(used.ph).length ? asLabel(used.ph) : null,
         how:own ? 'explicit' : 'activity', status, noPerOption:!mine.length || undefined, optionFrom:o.how + (own ? '' : parentTrig ? ', trigger: the rule\'s' : ''),
         reasons:(trig ? trig.reasons.map(r => Object.assign({ part:own ? 'trigger' : 'rule trigger' }, r)) : []).concat(used.reasons.map(r => Object.assign({ part:'used' }, r))), text:o.text });
-      grantsIn(where + ' · ' + o.name, o.text, stored, fk, o.name + ' active', self);
+      // the checklist: an option's own trigger, or none (the rule's is listed with the rule), and where it is used
+      if(sink){
+        const e = { n:o.name };
+        if(o.row) e.row = o.row;
+        if(own){ const tp = Object.assign({}, own.ph); for(const p of own.atOnly || []) delete tp[p]; if(own.at) e.at = own.at; if(phStr(tp)) e.t = phStr(tp); }
+        if(phStr(used.ph)) e.u = phStr(used.ph);
+        if(!Object.keys(ph).length && !(own && own.at)) e.x = 1;
+        sink.opts.push(e);
+      }
+      grantsIn(where + ' · ' + o.name, o.text, stored, fk, o.name + ' active', self, sink, o.name);
     }
-    grantsIn(where, opts.reduce((s2, o) => s2.replace(o.text, ''), t), stored, fk, null, self);
+    grantsIn(where, opts.reduce((s2, o) => s2.replace(o.text, ''), t), stored, fk, null, self, sink, null);
   }
   // "BLOOD LEGIONS units from your army gain the Blessings of Khorne ability", "Friendly X units have the following ability:"
-  function grantsIn(where, text, stored, fk, whileOpt, self){
+  function grantsIn(where, text, stored, fk, whileOpt, self, sink, optName){
     for(const sent of sentences(norm(text))){
       const m = /\b(gains?|have|has)(?: the)? (?:(following) abilit(?:y|ies)|\*\*([^*\[\]]+)\*\*(?: abilit(?:y|ies))?|([A-Z][\w'’ -]+?) abilit(?:y|ies))/.exec(sent);
       if(!m) continue;
@@ -782,6 +842,8 @@ function derive(D){
       const onSheets = forUnits.filter(holds).map(u => u.name);
       const storedG = inParts ? { grants:inParts.grants, to:inParts.needs || null, while:inParts.when || null } : onSheets.length ? 'on the datasheet' + (onSheets.length > 1 ? 's' : '') + ' (Rules line, abilities or keywords): ' + [...new Set(onSheets)].slice(0, 5).join(', ') + (new Set(onSheets).size > 5 ? '…' : '') + (onSheets.length < forUnits.length ? ' (' + onSheets.length + ' of ' + forUnits.length + ' units it is for)' : '') : null;
       const same = inParts ? JSON.stringify(canonNeeds(inParts.needs)) === JSON.stringify(canonNeeds(typeof to === 'object' ? to : null)) : !!onSheets.length;
+      // the checklist: an ability it gives to units by keyword (Might of Khorne: Blessings of Khorne to BLOOD LEGIONS units)
+      if(sink && type === 'ability' && to && typeof to === 'object') sink.grants.push(Object.assign({ name:grantName, to }, optName ? { opt:optName } : {}, wh ? { while:wh } : {}));
       add({ kind:'rule-grant', coverage:true, where:where + ' → ' + grantName, derived:{ grants:grantName, type, to, while:wh }, stored:storedG,
         how:'explicit', status:same ? 'identical' : 'different', noPerOption:!storedG || undefined, reasons:[{ rule:'grant', match:clip(plain(sent), 120) }], text:sent });
     }
@@ -974,6 +1036,19 @@ if(require.main === module){
     writeJSON(AGREED, { note:'labels derived from the text (verify/derive.js) that equal data.js; the gate keeps them equal', items:Object.fromEntries(keys.map(k => [k.key, k.label])) });
     console.log('derive: recorded ' + keys.length + ' agreeing labels in verify/derive-agreed.json');
   }
+  // the checklist table in data.js must be what the rules give (--write puts it there)
+  let ckStale = false;
+  {
+    const file = path.join(ROOT, 'data.js'), src = fs.readFileSync(file, 'utf8'), want = ckBlock(items.checklist);
+    const i = src.indexOf(CK_START), j = src.indexOf(CK_END), have = i >= 0 && j > i ? src.slice(i, j + CK_END.length) : null;
+    if(process.argv.includes('--write')){
+      let out = have ? src.slice(0, i) + want + src.slice(j + CK_END.length) : null;
+      if(!out){ const at = src.indexOf('\nreturn { version:VERSION'); if(at < 0) throw new Error('data.js: return line not found'); out = src.slice(0, at) + '\n' + want + '\n' + src.slice(at); }
+      if(!/checklist:CHECKLIST/.test(out)) out = out.replace(/ \};\n\}\)\(\);/, ', checklist:CHECKLIST };\n})();');
+      fs.writeFileSync(file, out);
+      console.log('derive: wrote CHECKLIST into data.js (' + Object.keys(items.checklist).length + ' entries)');
+    } else if(have !== want){ ckStale = true; console.log('derive: data.js CHECKLIST ' + (have ? 'differs from' : 'is missing;') + ' what the rules text gives. Run: node verify/derive.js --write'); }
+  }
   // the gate: an item that agreed must still agree
   if(!fs.existsSync(AGREED)){ console.log('derive: verify/derive-agreed.json is missing (node verify/derive.js --agree records the labels that agree today)'); process.exit(1); }
   const agreed = (readJSON(AGREED, {}).items) || {};
@@ -989,6 +1064,6 @@ if(require.main === module){
   console.log('derive: ' + Object.keys(agreed).length + ' agreed labels hold' + (drift.length ? ' except ' + drift.length : '') + '; ' + total('different') + ' differ, ' + total('not-derivable') + ' not derivable (not failing; verify/out/derive.md)' + (stale.length ? '; ' + stale.length + ' agreed items no longer exist' : ''));
   console.log('  identical/different/not derivable: ' + KINDS.map(k => k + ' ' + L(k)).join(' · '));
   for(const d of drift) console.log('  DRIFT ' + d);
-  process.exit(drift.length ? 1 : 0);
+  process.exit(drift.length || ckStale ? 1 : 0);
 }
-module.exports = { derive, timing, explicitTiming, stratNeeds, ruleNeeds, canonNeeds, OWNER_RULES, NOT_TIMING, MOMENT_RULES, ACTIVITY_RULES, USED_MODIFIERS, NEEDS_RULES, TAG_RULES, BONUS_RULES, DEF_RULES };
+module.exports = { derive, ckHash, timing, explicitTiming, stratNeeds, ruleNeeds, canonNeeds, OWNER_RULES, NOT_TIMING, MOMENT_RULES, ACTIVITY_RULES, USED_MODIFIERS, NEEDS_RULES, TAG_RULES, BONUS_RULES, DEF_RULES };

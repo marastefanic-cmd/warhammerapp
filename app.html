@@ -125,6 +125,7 @@ b.rl{padding:1px 0 9px; text-decoration:underline dotted; text-decoration-color:
 .pgv{font-size:14.5px; line-height:1.55; min-width:0}
 .pgv .from{color:var(--muted)}
 .pgv .from .link, .pgk .link{color:inherit}
+.ckl .pgv .tg.m{white-space:normal}   /* Clever Know-wotz: a long "not usable here" reason wraps on a small phone */
 
 /* ---------- top bar ---------- */
 .top{position:sticky; top:env(safe-area-inset-top, 0px); z-index:20; background:var(--bg); border-bottom:1px solid var(--line);
@@ -976,12 +977,13 @@ a.btn.askclaude{display:inline-flex; align-items:center; justify-content:center;
     <symbol id="i-book" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17V5a2 2 0 0 0-2-2H4" /> <path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3" /></g></symbol>
     <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M4 12.5l5 5L20 6.5"/></symbol>
+    <symbol id="i-checks" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 2 2 4-4" /> <path d="m3 7 2 2 4-4" /> <path d="M13 6h8" /> <path d="M13 12h8" /> <path d="M13 18h8" /></g></symbol>
     <symbol id="i-flag" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1" /> <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" /> <path d="M12 11h4" /> <path d="M12 16h4" /> <path d="M8 11h.01" /> <path d="M8 16h.01" /></g></symbol>
     <symbol id="i-base" viewBox="0 0 24 24"><ellipse cx="12" cy="15" rx="9" ry="4" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M3 15v-2c0-2.2 4-4 9-4s9 1.8 9 4v2"/></symbol>
     <symbol id="i-back" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></symbol>
     <symbol id="i-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/></symbol>
     <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
-    <!-- The icons clipboard-list, users, zap, scroll, telescope, swords, circle-question-mark, the settings gear, the dice and import are from Lucide, https://lucide.dev
+    <!-- The icons clipboard-list, list-checks, users, zap, scroll, telescope, swords, circle-question-mark, the settings gear, the dice and import are from Lucide, https://lucide.dev
      ISC License. Copyright (c) 2026 Lucide Icons and Contributors. Permission to use, copy, modify, and/or distribute this software for any
      purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
      THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
@@ -1107,8 +1109,8 @@ const ROLE_LABEL = { 'Epic Hero':'Epic Heroes', 'Character':'Characters', 'Battl
   'Monster':'Monsters', 'Vehicle':'Vehicles', 'Dedicated Transport':'Dedicated Transports', 'Fortification':'Fortifications', 'Allies':'Allies', 'Other':'Other' };
 // a unit's group in the Units list: its role, an allied unit's under Allies (New Recruit's role "Allies: Legiones Daemonica")
 const roleGroup = u => ROLE_ORDER.includes(u.role) ? u.role : /^Allies:/.test(u.role || '') ? 'Allies' : 'Other';
-const SCREEN_TITLE = { pregame:'Overview', damage:'Damage', units:'Units', strats:'Stratagems', ranged:'Ranged weapons', melee:'Melee weapons', abilities:'Abilities', rules:'Rules', bases:'Bases & proxies' };
-const BACK_TITLE = { pregame:'Overview', ranged:'Ranged', melee:'Melee', rules:'Rules', bases:'Bases' };
+const SCREEN_TITLE = { pregame:'Overview', damage:'Damage', units:'Units', strats:'Stratagems', ranged:'Ranged weapons', melee:'Melee weapons', abilities:'Abilities', rules:'Rules', bases:'Bases & proxies', checklist:'Clever Know-wotz' };
+const BACK_TITLE = { pregame:'Overview', checklist:'Know-wotz', ranged:'Ranged', melee:'Melee', rules:'Rules', bases:'Bases' };
 const HUNTER_KW = 'HUNTER: MONSTER/VEHICLE';
 const KEY_LABEL = { range:'RNG', A:'A', BS:'BS', WS:'WS', S:'S', AP:'AP', D:'D' };
 // a value or keyword that a rule of the list changes (w.from / s.from, derived from BSData and checked
@@ -1137,7 +1139,7 @@ let focusSearch = false;
 // the tabs, and which one the current screen belongs to
 const TABS = [['army', 'i-telescope', 'Find'], ['units', 'i-units', 'Units'], ['strats', 'i-cards', 'Stratagems'], ['rules', 'i-book', 'Rules'], ['damage', 'i-swords', 'Damage']];
 const isTab = s => TABS.some(([k]) => k === s);
-const tabOf = s => ({ unit:'units', pregame:'army', bases:'army', ranged:'army', melee:'army', abilities:'army' })[s] || s;
+const tabOf = s => ({ unit:'units', pregame:'army', checklist:'army', bases:'army', ranged:'army', melee:'army', abilities:'army' })[s] || s;
 const tabBar = () => '<div class="tabs">' + TABS.map(([s, ic, label]) => '<button data-tab="' + s + '"' + (tabOf(cur.s) === s ? ' class="on" aria-current="page"' : '') + ' aria-label="' + label + '"><svg class="ic" aria-hidden="true"><use href="#' + ic + '"/></svg></button>').join('') + '</div>';   // icons only; the name is the button's label
 // uses per battle ticked off in this game (Bomb Squig: twice per battle, per unit), per army, until New game
 const usedKey = () => 'wh-used-' + (cur.army || '');
@@ -1645,7 +1647,7 @@ function removeImported(id){
   store.set(IMPORT_KEY, importedKept().filter(y => y.id !== id));
   const i = D.armies.findIndex(y => y.id === id && y.imported); if(i >= 0) D.armies.splice(i, 1);
   const j = importStale.findIndex(y => y.id === id); if(j >= 0) importStale.splice(j, 1);
-  try { localStorage.removeItem('wh-used-' + id); } catch(e){}   // its per-battle ticks
+  try { localStorage.removeItem('wh-used-' + id); localStorage.removeItem('wh-check-' + id); } catch(e){}   // its per-battle ticks and its Clever Know-wotz boxes
   ONLY = D.armies.length === 1 ? D.armies[0] : null;
   hideSheet(); go({ s:'home' }, 'replace');
   toast('Removed ' + name);
@@ -1700,6 +1702,7 @@ function screenArmy(){
     '<div id="qres"></div>' +
     '<div id="armyMenu"><div class="list">' +
       row('pregame', 'i-flag', 'Overview', '') +
+      row('checklist', 'i-checks', 'Clever Know-wotz', '') +
       row('bases', 'i-base', 'Bases & proxies', a.units.reduce((t, u) => t + modelCount(u) * (u.copies || 1), 0)) +
       row('units', 'i-units', 'Units', unitCount(a)) +
       row('strats', 'i-cards', 'Stratagems', allStratagems(a).length) +
@@ -4670,6 +4673,95 @@ function screenPregame(){
   return h + '<p class="note">Gathered from this list’s datasheets and rules; each line opens the full text.</p>' + (a.imported ? importedFoot(a) : '');
 }
 
+/* ---------- screen: Clever Know-wotz ----------
+   The list's rules and abilities phase by phase, each phase in your turn and in your opponent's, as data.js CHECKLIST has them
+   (the rule tables of verify/derive.js, read from each text): "To do now" where its text says it is triggered (or the moment
+   before a phase it opens with), "Active now" where its effect is used, and the once-per-battle ones on their own, with the
+   Overview's boxes. Each option of a rule (a Blessing of Khorne) has its own phases; one that names no trigger of its own is
+   triggered with its rule. A rule or ability another rule gives to units by keyword says so (Might of Khorne: Blessings of Khorne
+   to BLOOD LEGIONS units). What the tables cannot place is under When unclear, what has no phase under No phase. No stratagems:
+   the Stratagems tab has them. The boxes are kept on the phone per list; Reset clears them, not the once-per-battle ones. */
+const ckKey = () => 'wh-check-' + (cur.army || '');
+const ckDone = () => new Set(Array.isArray(store.get(ckKey())) ? store.get(ckKey()) : []);
+// an ability's entry: a hash of its name and text (verify/derive.js ckHash), so an imported list's copy of a unit finds it too
+const ckHash = s => { let h = 0x811c9dc5; for(let i = 0; i < s.length; i++){ h ^= s.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; } return h.toString(36); };
+const ckMap = s => Object.fromEntries(String(s || '').split(',').filter(Boolean).map(x => x.split(':')));
+const ckTick = (k, what) => { const on = ckDone().has(k);
+  return '<span class="ticks"><button class="tick' + (on ? ' on' : '') + '" data-ctick="' + esc(k) + '" aria-pressed="' + on + '" aria-label="' + esc(what + ' done') + '">' + (on ? '✓' : '') + '</button></span>'; };
+// keywords as the rules print them ("BLOOD LEGIONS", "NORN EMISSARY or NORN ASSIMILATOR")
+const kwWords = n => [(n.all || []).join(' '), (n.any || []).join(' or ')].filter(Boolean).join(' ').replace(/Faction: /g, '').toUpperCase();
+// an option's phases: its own trigger, or (none named) its rule's when its effect names no phase of its own; via: the rule's
+// trigger, when a once-per-battle option is chosen (Kindred Sorcery's, in your Command phase)
+function ckOption(o, rule){
+  if(o.x) return { x:1 };
+  if(o.t || o.at) return { t:o.t, at:o.at, u:o.u };
+  if(o.u) return { u:o.u, via:{ t:rule.t, at:rule.at } };
+  return rule.t || rule.at ? { t:rule.t, at:rule.at } : { x:1 };
+}
+// a rule or ability the tables cannot place but data.js has a phase tag for (ph, turn, at: when it triggers, as its row shows it)
+const ckStored = (e, x) => e.x && (phasesOf(x).length || x.at) ? Object.assign({}, e, { x:0, at:x.at, t:phasesOf(x).map(p => p + ':' + phTurn(x, p)).join(',') }) : e;
+function screenChecklist(){
+  const a = army(), f = faction(), units = a.units;
+  const entry = k => (D.checklist || {})[k] || { x:1 };
+  const rules = f.armyRules.map(r => ({ r, src:f.name + ' army rule' })).concat(detachments().filter(d => d.rule).map(d => ({ r:d.rule, src:d.name })));
+  // what another rule of the list gives to units by keyword: "Might of Khorne (Blood Tithe) gives it to BLOOD LEGIONS units"
+  const given = name => rules.flatMap(x => (entry('r|' + a.faction + '|' + x.r.name).g || []).filter(g => g.name === name && units.some(u => matches(g.to, u)))
+    .map(g => '; ' + esc((g.opt ? g.opt + ' (' + x.r.name + ')' : x.r.name) + ' gives it to ' + kwWords(g.to) + ' units'))).join('');
+  const from = s => ' <span class="from">· ' + s + '</span>', naTag = t => t ? ' <span class="tg m">' + esc(t) + '</span>' : '';
+  const tl = (boxes, text) => '<div class="tl">' + boxes + '<span>' + text + '</span></div>';
+  const items = [];   // { id, kind, e: its entry, line, what, once: its once-per-battle lines [boxes, text] }
+  for(const x of rules){
+    const r = x.r, e = ckStored(entry('r|' + a.faction + '|' + r.name), r), na = inertRule(r.name) ? 'no unit in this list it applies to' : '';
+    // "You can only select each of these abilities once per battle" (Kindred Sorcery): a box per option, as on the Overview
+    const each = /\beach of these [a-z ]+ once per battle/i.test(r.text) && r.table;
+    const pb = !na && !each && perBattle(r, true) && !/per battle\b(?! round)[^.)]*\bper unit\b/i.test(r.text || '') ? perBattle(r, true) : null;
+    const line = linkTo('rule', r.name, r.name) + from(esc(x.src) + given(r.name)) + naTag(na);
+    items.push({ id:'r:' + r.name, kind:'rules', e, line, what:r.name, once:pb ? [[ticks('r:' + r.name, pb.n, '', r.name), line]] : null });
+    for(const o of e.o || []){
+      if(units.some(u => u.abilities.some(ab => ab.name === o.n))) continue;   // an ability it gives units (Protean Purpose): listed as theirs
+      const row = each && !na && (r.table.find(t => t[0] === o.row) || [])[0];
+      const ol = linkTo('rule', r.name, o.n) + from('option of ' + esc(r.name) + given(o.n)) + naTag(na);
+      items.push({ id:'o:' + r.name + ':' + o.n, kind:'rules', e:ckOption(o, e), line:ol, what:o.n, once:row ? [[ticks('r:' + r.name + ':' + row, 1, '', row), ol]] : null });
+    }
+  }
+  // abilities: the same ability on several units is one line, as on the Overview
+  const groups = new Map();
+  for(const u of units) for(const ab of u.abilities){ const k = ab.name + '|' + ab.text + '|' + (naReason(ab) ? 'na' : ''); if(!groups.has(k)) groups.set(k, { ab, units:[] }); groups.get(k).units.push(u); }
+  for(const { ab, units:us } of groups.values()){
+    const e = ckStored(entry('a|' + ckHash(ab.name + '\n' + ab.text)), ab), na = naReason(ab), pb = !na && perBattle(ab), key = abilityKey(ab);
+    const line = linkTo('ability', key, ab.name) + from(esc(unitNames(us)) + given(ab.name)) + naTag(na);
+    // once per battle: the Overview's boxes, the army's or one set per unit (each copy of a ×N unit)
+    const once = !pb ? null : pb.army ? [[abilityTicks(ab, us[0]), line + ' <span class="tg once">per army</span>']]
+      : us.flatMap(u => Array.from({ length:u.copies || 1 }, (_, i) => [ticks(copyKey(ab, u, i), pb.n, '', ab.name + (u.copies > 1 ? ', Unit ' + (i + 1) : '')),
+        linkTo('ability', key, ab.name) + ' · ' + linkTo('unit', u.id, unitLabel(u)) + (u.copies > 1 ? ' <span class="from">· Unit ' + (i + 1) + '</span>' : '')]));
+    items.push({ id:'a:' + ab.name + '|' + ckHash(ab.text), kind:'abs', e, line, what:ab.name, once });
+    for(const o of e.o || []) items.push({ id:'ao:' + ab.name + '|' + ckHash(ab.text) + ':' + o.n, kind:'abs', e:ckOption(o, e), what:o.n,
+      line:linkTo('ability', key, o.n) + from('option of ' + esc(ab.name) + ' · ' + esc(unitNames(us))) + naTag(na), once:null });
+  }
+  // each to its sections: a moment, or a phase in one player's turn ("command|your")
+  const sec = {}, put = (s, g, html) => { const x = sec[s] = sec[s] || {}; (x[g] = x[g] || []).push(html); };
+  const turns = t => t === 'either' ? ['your', 'opp'] : [t];
+  for(const it of items){
+    const e = it.e;
+    if(e.x || !(e.t || e.u || e.at || e.none)){ put('unclear', it.kind, tl(ckTick('unclear|' + it.id, it.what), it.line)); continue; }
+    if(e.none){ put('none', it.kind, tl(ckTick('none|' + it.id, it.what), it.line)); continue; }
+    const secs = x => (x.at ? [x.at] : []).concat(Object.entries(ckMap(x.t)).flatMap(([p, t]) => turns(t).map(w => p + '|' + w)));
+    const trig = secs(e), act = Object.entries(ckMap(e.u)).flatMap(([p, t]) => turns(t).map(w => p + '|' + w)).filter(s => !trig.includes(s));
+    // once per battle: where it is used from (its trigger, its rule's, or else where its effect is used)
+    if(it.once){ const via = e.via ? secs(e.via) : []; for(const s of trig.length ? trig : via.length ? via : act) for(const [b, l] of it.once) put(s, 'once', tl(b, l)); continue; }
+    for(const s of trig) put(s, 'todo', tl(ckTick(s + '|' + it.id, it.what), it.line));
+    for(const s of act) put(s, 'active', tl(ckTick(s + '|' + it.id, it.what), it.line));
+  }
+  const row = (k, v) => '<div class="pgr"><span class="pgk">' + k + '</span><span class="pgv">' + v + '</span></div>';
+  const GROUPS = [['todo', 'To do now'], ['active', 'Active now'], ['once', 'Once per battle'], ['rules', 'Rules'], ['abs', 'Abilities']];
+  const phaseSecs = PHASES.flatMap(([p]) => [p + '|your', p + '|opp']);
+  const order = ['Start of the first battle round', 'Start of the battle round'].filter(s => sec[s]).concat(phaseSecs, Object.keys(sec).filter(s => s.includes(' ') && !/^Start of the/.test(s)), ['unclear', 'none'].filter(s => sec[s]));
+  const title = s => s === 'unclear' ? 'When unclear' : s === 'none' ? 'No phase' : s.includes('|') ? PHASE_NAME[s.split('|')[0]] + ' · ' + TURN_NAME[s.split('|')[1]] : s;
+  return '<div class="ckl">' + order.map((s, i) => '<div class="sec-h"><h2>' + esc(title(s)) + '</h2>' + (i ? '' : '<button class="textbtn" data-ckreset>Reset</button>') + '</div>' +
+    (sec[s] ? '<div class="pg">' + GROUPS.filter(([g]) => sec[s][g]).map(([g, l]) => row(l, sec[s][g].join(''))).join('') + '</div>' : '<p class="note">Nothing in this list.</p>')).join('') +
+    '<p class="note">Each rule and ability is listed where its words say it is triggered (To do now) and where its effect is used (Active now), read from its text by fixed rules; each option of a rule by its own words. When unclear: its words name no phase those rules can read. Each line opens the full text. Stratagems are on the Stratagems tab. Reset clears the boxes here, not the once-per-battle ones.</p></div>';
+}
+
 /* ---------- screen: rules & keywords ---------- */
 const xp = (name, sub, tags, body, open) => '<details class="xp"' + (open ? ' open' : '') + '><summary><span class="xh"><b>' + esc(name) + '</b>' + (sub ? '<span>' + esc(sub) + '</span>' : '') + '</span>' +
   (tags || '') + chev + '</summary><div class="body">' + body + '</div></details>';
@@ -4781,6 +4873,7 @@ function render(){
   else if(s === 'rules') v.innerHTML = screenRules();
   else if(s === 'bases') v.innerHTML = screenBases();
   else if(s === 'pregame') v.innerHTML = screenPregame();
+  else if(s === 'checklist') v.innerHTML = screenChecklist();
   else if(s === 'settings') v.innerHTML = screenSettings();
   else if(s === 'damage') v.innerHTML = screenDamage();
   if(cur.army) bot = tabBar();
@@ -5067,6 +5160,15 @@ document.addEventListener('click', e => {
     openTab(next); return;
   }
   if(ds.flip){ go({ s:'unit', army:army().id, unit:ds.flip, from:cur.from }, 'replace'); return; }
+  // a box on the Clever Know-wotz screen (kept per list); Reset clears them, not the once-per-battle ones (the Overview's)
+  if(ds.ctick){
+    const u = ckDone(), k = ds.ctick, on = !u.has(k);
+    on ? u.add(k) : u.delete(k); store.set(ckKey(), [...u]);
+    document.querySelectorAll('[data-ctick="' + CSS.escape(k) + '"]').forEach(b => { b.classList.toggle('on', on); b.setAttribute('aria-pressed', on); b.textContent = on ? '✓' : ''; });
+    return;
+  }
+  if(el.hasAttribute('data-ckreset')){ const was = [...ckDone()], key = ckKey(); store.set(key, []); rerender();
+    toastUndo('Reset: ticks cleared', () => { store.set(key, was); rerender(); }); return; }
   if(ds.tick){
     e.preventDefault();   // a box on an ability row must not open or close it
     const u = usedSet(), k = ds.tick, on = !u.has(k);

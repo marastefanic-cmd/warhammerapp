@@ -1,0 +1,74 @@
+[
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "removeImported",
+  "judgement": {
+   "code": "function removeImported(id){\n  const a = armyById(id), x = importedKept().find(y => y.id === id), name = (a || x || {}).name || 'the list';\n  store.set(IMPORT_KEY, importedKept().filter(y => y.id !== id));\n  const i = D.armies.findIndex(y => y.id === id && y.imported); if(i >= 0) D.armies.splice(i, 1);\n  const j = importStale.findIndex(y => y.id === id); if(j >= 0) importStale.splice(j, 1);\n  try { localStorage.removeItem('wh-used-' + id); localStorage.removeItem('wh-check-' + id); } catch(e){}   // its per-battle ticks and its Clever Know-wotz boxes\n  ONLY = D.armies.length === 1 ? D.armies[0] : null;\n  hideSheet(); go({ s:'home' }, 'replace');\n  toast('Removed ' + name);\n}"
+  },
+  "source": {
+   "implements": "Remove: the list leaves the phone (the kept export, the list, its per-battle ticks and its Clever Know-wotz boxes), the app goes to the home screen"
+  },
+  "key": "21a814c51bd19b9b"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "screenChecklist",
+  "judgement": {
+   "code": "function screenChecklist(){\n  const a = army(), f = faction(), units = a.units;\n  const entry = k => (D.checklist || {})[k] || { x:1 };\n  const rules = f.armyRules.map(r => ({ r, src:f.name + ' army rule' })).concat(detachments().filter(d => d.rule).map(d => ({ r:d.rule, src:d.name })));\n  // what another rule of the list gives to units by keyword: \"Might of Khorne (Blood Tithe) gives it to BLOOD LEGIONS units\"\n  const given = name => rules.flatMap(x => (entry('r|' + a.faction + '|' + x.r.name).g || []).filter(g => g.name === name && units.some(u => matches(g.to, u)))\n    .map(g => '; ' + esc((g.opt ? g.opt + ' (' + x.r.name + ')' : x.r.name) + ' gives it to ' + kwWords(g.to) + ' units'))).join('');\n  const from = s => ' <span class=\"from\">· ' + s + '</span>', naTag = t => t ? ' <span class=\"tg m\">' + esc(t) + '</span>' : '';\n  const tl = (boxes, text) => '<div class=\"tl\">' + boxes + '<span>' + text + '</span></div>';\n  const items = [];   // { id, kind, e: its entry, line, what, once: its once-per-battle lines [boxes, text] }\n  for(const x of rules){\n    const r = x.r, e = ckStored(entry('r|' + a.faction + '|' + r.name), r), na = inertRule(r.name) ? 'no unit in this list it applies to' : '';\n    // \"You can only select each of these abilities once per battle\" (Kindred Sorcery): a box per option, as on the Overview\n    const each = /\\beach of these [a-z ]+ once per battle/i.test(r.text) && r.table;\n    const pb = !na && !each && perBattle(r, true) && !/per battle\\b(?! round)[^.)]*\\bper unit\\b/i.test(r.text || '') ? perBattle(r, true) : null;\n    const line = linkTo('rule', r.name, r.name) + from(esc(x.src) + given(r.name)) + naTag(na);\n    items.push({ id:'r:' + r.name, kind:'rules', e, line, what:r.name, once:pb ? [[ticks('r:' + r.name, pb.n, '', r.name), line]] : null });\n    for(const o of e.o || []){\n      if(units.some(u => u.abilities.some(ab => ab.name === o.n))) continue;   // an ability it gives units (Protean Purpose): listed as theirs\n      const row = each && !na && (r.table.find(t => t[0] === o.row) || [])[0];\n      const ol = linkTo('rule', r.name, o.n) + from('option of ' + esc(r.name) + given(o.n)) + naTag(na);\n      items.push({ id:'o:' + r.name + ':' + o.n, kind:'rules', e:ckOption(o, e), line:ol, what:o.n, once:row ? [[ticks('r:' + r.name + ':' + row, 1, '', row), ol]] : null });\n    }\n  }\n  // abilities: the same ability on several units is one line, as on the Overview\n  const groups = new Map();\n  for(const u of units) for(const ab of u.abilities){ const k = ab.name + '|' + ab.text + '|' + (naReason(ab) ? 'na' : ''); if(!groups.has(k)) groups.set(k, { ab, units:[] }); groups.get(k).units.push(u); }\n  for(const { ab, units:us } of groups.values()){\n    const e = ckStored(entry('a|' + ckHash(ab.name + '\\n' + ab.text)), ab), na = naReason(ab), pb = !na && perBattle(ab), key = abilityKey(ab);\n    const line = linkTo('ability', key, ab.name) + from(esc(unitNames(us)) + given(ab.name)) + naTag(na);\n    // once per battle: the Overview's boxes, the army's or one set per unit (each copy of a ×N unit)\n    const once = !pb ? null : pb.army ? [[abilityTicks(ab, us[0]), line + ' <span class=\"tg once\">per army</span>']]\n      : us.flatMap(u => Array.from({ length:u.copies || 1 }, (_, i) => [ticks(copyKey(ab, u, i), pb.n, '', ab.name + (u.copies > 1 ? ', Unit ' + (i + 1) : '')),\n        linkTo('ability', key, ab.name) + ' · ' + linkTo('unit', u.id, unitLabel(u)) + (u.copies > 1 ? ' <span class=\"from\">· Unit ' + (i + 1) + '</span>' : '')]));\n    items.push({ id:'a:' + ab.name + '|' + ckHash(ab.text), kind:'abs', e, line, what:ab.name, once });\n    for(const o of e.o || []) items.push({ id:'ao:' + ab.name + '|' + ckHash(ab.text) + ':' + o.n, kind:'abs', e:ckOption(o, e), what:o.n,\n      line:linkTo('ability', key, o.n) + from('option of ' + esc(ab.name) + ' · ' + esc(unitNames(us))) + naTag(na), once:null });\n  }\n  // each to its sections: a moment, or a phase in one player's turn (\"command|your\")\n  const sec = {}, put = (s, g, html) => { const x = sec[s] = sec[s] || {}; (x[g] = x[g] || []).push(html); };\n  const turns = t => t === 'either' ? ['your', 'opp'] : [t];\n  for(const it of items){\n    const e = it.e;\n    if(e.x || !(e.t || e.u || e.at || e.none)){ put('unclear', it.kind, tl(ckTick('unclear|' + it.id, it.what), it.line)); continue; }\n    if(e.none){ put('none', it.kind, tl(ckTick('none|' + it.id, it.what), it.line)); continue; }\n    const secs = x => (x.at ? [x.at] : []).concat(Object.entries(ckMap(x.t)).flatMap(([p, t]) => turns(t).map(w => p + '|' + w)));\n    const trig = secs(e), act = Object.entries(ckMap(e.u)).flatMap(([p, t]) => turns(t).map(w => p + '|' + w)).filter(s => !trig.includes(s));\n    // once per battle: where it is used from (its trigger, its rule's, or else where its effect is used)\n    if(it.once){ const via = e.via ? secs(e.via) : []; for(const s of trig.length ? trig : via.length ? via : act) for(const [b, l] of it.once) put(s, 'once', tl(b, l)); continue; }\n    for(const s of trig) put(s, 'todo', tl(ckTick(s + '|' + it.id, it.what), it.line));\n    for(const s of act) put(s, 'active', tl(ckTick(s + '|' + it.id, it.what), it.line));\n  }\n  const row = (k, v) => '<div class=\"pgr\"><span class=\"pgk\">' + k + '</span><span class=\"pgv\">' + v + '</span></div>';\n  const GROUPS = [['todo', 'To do now'], ['active', 'Active now'], ['once', 'Once per battle'], ['rules', 'Rules'], ['abs', 'Abilities']];\n  const phaseSecs = PHASES.flatMap(([p]) => [p + '|your', p + '|opp']);\n  const order = ['Start of the first battle round', 'Start of the battle round'].filter(s => sec[s]).concat(phaseSecs, Object.keys(sec).filter(s => s.includes(' ') && !/^Start of the/.test(s)), ['unclear', 'none'].filter(s => sec[s]));\n  const title = s => s === 'unclear' ? 'When unclear' : s === 'none' ? 'No phase' : s.includes('|') ? PHASE_NAME[s.split('|')[0]] + ' · ' + TURN_NAME[s.split('|')[1]] : s;\n  return '<div class=\"ckl\">' + order.map((s, i) => '<div class=\"sec-h\"><h2>' + esc(title(s)) + '</h2>' + (i ? '' : '<button class=\"textbtn\" data-ckreset>Reset</button>') + '</div>' +\n    (sec[s] ? '<div class=\"pg\">' + GROUPS.filter(([g]) => sec[s][g]).map(([g, l]) => row(l, sec[s][g].join(''))).join('') + '</div>' : '<p class=\"note\">Nothing in this list.</p>')).join('') +\n    '<p class=\"note\">Each rule and ability is listed where its words say it is triggered (To do now) and where its effect is used (Active now), read from its text by fixed rules; each option of a rule by its own words. When unclear: its words name no phase those rules can read. Each line opens the full text. Stratagems are on the Stratagems tab. Reset clears the boxes here, not the once-per-battle ones.</p></div>';\n}"
+  },
+  "source": {
+   "implements": "Clever Know-wotz: every army and detachment rule, each option of one (unless a unit of the list has it as an ability: listed as theirs) and every ability of the list (the same one on several units one line), by data.js CHECKLIST (verify/derive.js): To do now in each phase and turn its text says it is triggered (07.02: the phases; either turn: both), or under the moment it opens with (Start of the (first) battle round, End of your opponent's turn); Active now where its effect is used and it is not triggered; once-per-battle ones (perBattle; Kindred Sorcery's options each) under Once per battle, from where they are triggered, with the Overview's boxes; each line names its unit or source and opens the full text; a rule another rule of the list gives to units by keyword (g) says which and to whom; inert rules and abilities the list cannot use are listed, marked; what the table cannot place under When unclear, what has no phase under No phase; no stratagems; a box per line per section, kept per list; Reset clears them (with Undo), not the once-per-battle ones"
+  },
+  "key": "07708f7193752784"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "ckOption",
+  "judgement": {
+   "code": "function ckOption(o, rule){\n  if(o.x) return { x:1 };\n  if(o.t || o.at) return { t:o.t, at:o.at, u:o.u };\n  if(o.u) return { u:o.u, via:{ t:rule.t, at:rule.at } };\n  return rule.t || rule.at ? { t:rule.t, at:rule.at } : { x:1 };\n}"
+  },
+  "source": {
+   "implements": "an option of a rule or ability on the Clever Know-wotz: its own trigger (and where it is used); with none, where its effect is used (chosen when its rule is triggered: a once-per-battle one is listed there); with neither, its rule's trigger; not derivable: When unclear"
+  },
+  "key": "4a429533fab58e9d"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "ckEntry",
+  "judgement": {
+   "code": "function ckEntry(d){\n  if(d.how === 'none') return { x:1 };\n  const tp = Object.assign({}, d.trigPh || {}); for(const p of d.atOnly || []) delete tp[p];\n  const e = {};\n  if(d.at) e.at = d.at;\n  if(phStr(tp)) e.t = phStr(tp);\n  if(phStr(d.usedPh)) e.u = phStr(d.usedPh);\n  return Object.keys(e).length ? e : { none:1 };\n}"
+  },
+  "source": {
+   "implements": "data.js CHECKLIST (verify/derive.js --write), the Clever Know-wotz table: per rule and ability, from its text without its options (withoutOptions): t the phases its text names (table 1's trigger) less those only the moment it opens with gives (Start of the battle round: not also the Command phase), at that moment, u where its effect is used (table 1's used-in); none: positively no phase (pre-battle); x: not derivable (nothing guessed); per option (optionsOf) its own trigger only when it names one, where it is used, x when it has neither and no trigger of its rule; g: an ability it gives units by keyword (grantsIn: to, the option, while); the same words on several units must give one entry, else x"
+  },
+  "key": "1d996f40be0ac3fe"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "withoutOptions",
+  "judgement": {
+   "code": "const withoutOptions = (text, table) => { const t = rulesText(text); return optionsOf(t, table).reduce((s2, o) => s2.replace(o.text, ''), t); };"
+  },
+  "source": {
+   "implements": "a rule's or ability's own words for the Clever Know-wotz table: its text without its italic notes and without the text of each of its options (each option has its own entry)"
+  },
+  "key": "77103c3d085574d5"
+ },
+ {
+  "army": "code",
+  "kind": "code",
+  "where": "ckStored",
+  "judgement": {
+   "code": "const ckStored = (e, x) => e.x && (phasesOf(x).length || x.at) ? Object.assign({}, e, { x:0, at:x.at, t:phasesOf(x).map(p => p + ':' + phTurn(x, p)).join(',') }) : e;"
+  },
+  "source": {
+   "implements": "a rule or ability the derived table cannot place (x) but data.js has a phase tag for (ph, turn, at): listed where the tag says it triggers (the row's own timing), as To do now"
+  },
+  "key": "3e73b663fff4d5a8"
+ }
+]
