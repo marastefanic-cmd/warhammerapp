@@ -160,9 +160,41 @@ Khorne Daemonkin · Vessels of Wrath
 PRIORITY ASSETS
 , CHOSEN
 RECONNAISSANCE
+Import a list from New Recruit
+Its JSON export
 Checked (date of the check) against your New Recruit lists, BSData and GW’s rules
 
 Put it on your home screen: Safari → Share → Add to Home Screen.
+
+######## popup import · KK Kunnin’ Kodex
+NEW RECRUIT
+
+Import a list
+
+In New Recruit, open the list, then Export and JSON. Choose that file here, or paste its text.
+
+CHOOSE THE .JSON FILE
+Import
+
+The list is taken only when every unit, option, enhancement and detachment in it is one that the app’s own checked lists have, exactly. Otherwise nothing is added, and each item the app does not recognize is listed. An imported list is kept on this phone.
+
+######## popup import (not recognized) · KK Kunnin’ Kodex
+NEW RECRUIT
+
+Import a list
+
+In New Recruit, open the list, then Export and JSON. Choose that file here, or paste its text.
+
+CHOOSE THE .JSON FILE
+Import
+
+NOT IMPORTED · 1 ITEM NOT RECOGNIZED
+
+Unit Knight Errant Mk II not recognized
+
+Nothing was added. The app takes a list only when it already has every part of it.
+
+The list is taken only when every unit, option, enhancement and detachment in it is one that the app’s own checked lists have, exactly. Otherwise nothing is added, and each item the app does not recognize is listed. An imported list is kept on this phone.
 
 ######## army · ARMIES Me shooty yer’ booty
 Orks · 2000 / 2000 pts · Strike Force
@@ -181,7 +213,7 @@ Stratagems
 Ranged weapons
 18
 Melee weapons
-17
+16
 Abilities
 29
 Rules
@@ -564,7 +596,7 @@ ASSAULT, IGNORES COVER
 -2
 3
 ASSAULT, IGNORES COVER
-Rokkit pistolNOB
+Rokkit pistol×2
 12"
 1
 4+
@@ -782,20 +814,6 @@ ChoppaNOB
 5
 -1
 1
-OR
-Smash HammerNOB
-➤HunterMON/VEH ONLY
-3
-3+
-12
--2
-3
-➤Standard
-3
-3+
-7
--2
-2
 Gitstikka×5
 3
 3+
@@ -1310,7 +1328,7 @@ Mek
 1× 32mm
 Mek
 1× 32mm
-Nob · Choppa + Rokkit pistol + Smash Hammer
+Nob · Choppa + 2× Rokkit pistol
 1× 32mm
 2× Busta Rokkit Launcha
 4× 32mm
@@ -3199,7 +3217,7 @@ Options
 Kustom Mega-slugga, Mek’s Toolz
 Supporting Tankbustas
 1× Nob
-Choppa, Rokkit pistol, Smash Hammer
+Choppa, 2× Rokkit pistol
 1× Tankbusta w/ Two Busta Rokkit Launchas
 2× Busta Rokkit Launcha, Gitstikka
 4× Tankbusta w/ Busta Rokkit Launcha
@@ -3274,7 +3292,7 @@ ASSAULT, IGNORES COVER
 -2
 3
 ASSAULT, IGNORES COVER
-Rokkit pistolNOB
+Rokkit pistol×2
 12"
 1
 4+
@@ -3309,20 +3327,6 @@ ChoppaNOB
 5
 -1
 1
-OR
-Smash HammerNOB
-➤HunterMON/VEH ONLY
-3
-3+
-12
--2
-3
-➤Standard
-3
-3+
-7
--2
-2
 Gitstikka×5
 3
 3+
