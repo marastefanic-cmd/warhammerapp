@@ -4226,7 +4226,7 @@ function defenceItems(u, ph, opts){
   // an army rule of the unit's Rules line can say it with its condition (def: Aegis of the Emperor, "Feel No Pain 5+ against mortal
   // wounds"); New Recruit's starred "Feel No Pain 5+*" is that one, so it is not said again without its condition
   const fac = factionOf(army()) || {}, armyDefs = (fac.armyRules || []).filter(r => r.def && u.rules.includes(r.name));
-  for(const r of u.rules){ const m = /^feel no pain (\d\+)/i.exec(r); if(m && !u.abilities.some(ab => ab.def && ab.def.includes('Feel No Pain ' + m[1])) && !(/\*$/.test(r) && armyDefs.some(x => x.def.includes('Feel No Pain ' + m[1])))) out.push({ t:'Feel No Pain ' + m[1], a:'rule', v:r, who:(u.rules.filter(x => /^feel no pain/i.test(x)).length > 1 && partialWho(u, r)) || undefined }); }   // (who: one model's, partialRules, where the unit has another Feel No Pain to tell it from)
+  for(const r of u.rules){ const m = /^feel no pain (\d\+)/i.exec(r); if(m && !u.abilities.some(ab => ab.def && ab.def.includes('Feel No Pain ' + m[1])) && !(/\*$/.test(r) && armyDefs.some(x => x.def.includes('Feel No Pain ' + m[1])))) out.push({ t:'Feel No Pain ' + m[1], a:'rule', v:r, who:partialWho(u, r) || undefined }); }   // (who: the one model that has it, partialRules)
   for(const r of armyDefs) out.push({ t:r.def, a:'rule', v:r.name });
   for(const r of unitDetRules(u)) if(r.def && !out.some(x => x.t === r.def)) out.push({ t:r.def, a:'rule', v:r.name });   // e.g. Knights of Legend: FNP 6+
   for(const { rule, part } of unitDetParts(u)) if(part.def) out.push({ t:part.def, a:'rule', v:rule.name });   // a part of it for some units (Boon of Blood)
