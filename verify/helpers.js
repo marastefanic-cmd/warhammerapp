@@ -134,9 +134,16 @@ const CODE_RULES = {
   shortWhen:'the timing tag on an ability or rule row: a moment before any phase (at: "Start of the battle round", 07.01), the phases and whose turn (07.02.02), "Any phase" only when every phase has the same turn',
   ruleParts:'a New Recruit selection under the army name that only names an army rule\'s parts ("Code Chivalric: Deed, Quality": BSData\'s Deed and Quality are fixed sub-entries holding every option), not a pick: left out of the Overview\'s list',
   pickOptions:'the options a "select one of the abilities in the X section" / "select one X ability" asks for: the unit\'s abilities printed under that section, or the ability named X that lists them',
+  // the list import (import.js, and its sheet in app.html)
+  resolve:'the list import (import.js): a New Recruit JSON export becomes a list only when its faction, battle size, detachments, Force Disposition (one its detachments allow), config (Code Chivalric) and every unit are exactly what data.js has: each unit with the characters attached to it (New Recruit\'s Leading/Supporting) has the BSData signature (signature) of a unit of a data.js list with the same faction, detachments and config, the same BSData names and the same points (BS_IDS, written by verify/import-ids.js); then the units are copied as data.js has them (a unit taken again as its copies; import-nr.js\'s order: role, units without a leader, the roster\'s order); otherwise nothing is imported and every item not recognized is listed (unit, option on unit, enhancement, detachment, disposition, warlord, leader attachment, points, faction)',
+  signature:'a unit part\'s identity for the import: every selection below it as a path of BSData entry ids with its count (a models line\'s and a wargear item\'s count; an option holding models counts once), the same for the export and for BS_IDS',
+  runImport:'Import (the sheet): a refused export lists every message, one per line, and nothing is kept; an imported one is kept on the phone as the export (resolved again at every start), gets an id no list has, and opens',
+  importedFoot:'an imported list\'s Overview ends with where it came from and Remove this list (a confirm on the page: Remove / Keep it)',
+  removeImported:'Remove: the list leaves the phone (the kept export and the list), the app goes to the home screen',
 };
 function appFunctions(html){
   const out = {};
+  html += '\n' + fs.readFileSync(path.join(ROOT, 'import.js'), 'utf8');   // the list import's own file, reviewed as code like the app's
   for(const name of Object.keys(CODE_RULES)){
     const m = new RegExp('\\n(function ' + name + '\\(|const ' + name + ' = )').exec(html);
     if(!m){ out[name] = 'MISSING'; continue; }
